@@ -7,7 +7,7 @@ export const logPlayPromiseSuccess = promiseStartTime => {
         `Player promised to play after ${timeDifference}s.`,
         {
             action: 'player',
-            label: 'promise',
+            label: 'play',
             value: timeDifference * 1000,
         },
     )
@@ -19,7 +19,7 @@ export const logPlayPromiseFailure = (promiseStartTime, errorMessage) => {
     logError(
         `Promise to play failed after ${timeDifference}s: ${errorMessage}`,
         {
-            action: 'playerPromise',
+            action: 'player',
             label: errorMessage,
             value: timeDifference * 1000,
         },

@@ -1,10 +1,8 @@
 import {
     getAudioTimeForCurrentTime,
     getEndTimeForVerse,
-    getStartTimeForVerse,
 } from '../../../api/album/time'
 import { getVerseCountForSong } from '../../../api/album/verses'
-import { getFormattedTime } from '../../../helpers/format'
 import { getTimeDifference } from '../../../utils/logger/helpers/time'
 import { AUDIO_OPTIONS, REPEAT } from '../../../constants/options'
 import { getSongsNotLoguesCount } from '../../../api/album/songs'
@@ -14,32 +12,18 @@ export const getCurrentIndicesForTime = ({
     verseIndex,
     time,
     audioOptionIndex,
+
 }) => {
     const
         audioTime = getAudioTimeForCurrentTime(songIndex, time),
-        verseStartTime = getStartTimeForVerse(songIndex, verseIndex),
         verseEndTime = getEndTimeForVerse(songIndex, verseIndex),
         isRepeatOption = AUDIO_OPTIONS[audioOptionIndex] === REPEAT
-
-    /**
-     * Time is before the current verse. But this should never happen from
-     * listen, so log an error!
-     */
-    if (audioTime < verseStartTime) {
-        logError(
-            `Out of sync! Time ${getFormattedTime(audioTime)} is before verse ${verseIndex}!`,
-            {
-                action: 'playListen',
-                label: `song: ${songIndex}, verse: ${verseIndex}, time: ${audioTime}`,
-            },
-        )
-        return null
 
     /**
      * Time is after the current verse. This means it's in the next verse, in
      * the next song, or in the last verse of the last song.
      */
-    } else if (audioTime > verseEndTime) {
+    if (audioTime > verseEndTime) {
 
         // There is a next verse. We're still in the same song.
         if (verseIndex < getVerseCountForSong(songIndex) - 1) {
