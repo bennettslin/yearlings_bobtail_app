@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import AudioPlayerContext from '../../contexts/AudioPlayer'
 import { updateAccessStore } from '../../redux/access/action'
 import { resetSongChange, resetVerseChange } from '../../redux/entrance/action'
+import { updateLyricStore } from '../../redux/lyric/action'
 import { updateSelectedStore } from '../../redux/selected/action'
 import {
     updateEarColumnIndex,
@@ -74,6 +75,9 @@ const SongDispatcher = forwardRef((props, ref) => {
         }
 
         dispatch(resetVerseChange())
+
+        // Prevent popup annotation from persisting upon song change.
+        dispatch(updateLyricStore({ lyricAnnotationIndex: 0 }))
 
         dispatch(updateSelectedStore({
             selectedSongIndex: nextSongIndex,

@@ -1,12 +1,3 @@
-# FIXME
-* Constellation changing to Look Back has failure:
-    * http://localhost:1113/10-constellations/?verse=37&annotation=60
-    * Only happens with popup annotation
-* Solution is to have a popup annotation index
-* After this fix
-    * Confirm that song continue works fine
-    * Confirm that popup wormholes are fine through song change
-
 # TODO:
 * Clarify logState labels?
 * Fix preteen Bennett enraged left sleeve

@@ -21,7 +21,7 @@ const AnnotationPopup = ({ didMount, inMain }) => {
         isPopupAnnotationShown = useSelector(
             getMapIsPopupAnnotationShown(inMain),
         ),
-        [annotationIndex, setAnnotationIndex] = useState(lyricAnnotationIndex)
+        [popupAnnotationIndex, setPopupAnnotationIndex] = useState(0)
 
     const handlePreviousClick = () => {
         dispatchAnnotation.current.direction(-1)
@@ -33,13 +33,13 @@ const AnnotationPopup = ({ didMount, inMain }) => {
 
     const onExited = () => {
         // Only clear annotation index when animation is complete.
-        setAnnotationIndex(0)
+        setPopupAnnotationIndex(0)
     }
 
     useEffect(() => {
         if (isPopupAnnotationShown && lyricAnnotationIndex) {
             // This will persist the popup annotation as it animates out.
-            setAnnotationIndex(lyricAnnotationIndex)
+            setPopupAnnotationIndex(lyricAnnotationIndex)
         }
     }, [isPopupAnnotationShown, lyricAnnotationIndex])
 
@@ -64,7 +64,7 @@ const AnnotationPopup = ({ didMount, inMain }) => {
             <Annotation
                 isAccessed
                 isSelected
-                {...{ annotationIndex }}
+                {...{ annotationIndex: popupAnnotationIndex }}
             />
             <AnnotationDispatcher {...{ ref: dispatchAnnotation }} />
         </Popup>
