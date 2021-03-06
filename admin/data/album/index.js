@@ -16,7 +16,6 @@ import {
     getMaxSceneCount,
     getMaxVerseCount,
 } from './helpers/count'
-import { addSongAlbumTimes } from './helpers/time'
 import { addTip } from './helpers/tips'
 import { addVerseMetadata } from './helpers/verse'
 import { addWormholeMetadata } from './helpers/wormhole'
@@ -74,8 +73,6 @@ const songs = getSongIndicesArray().map(songIndex => {
     annotationsList.push(annotations)
     return song
 })
-
-addSongAlbumTimes(songs)
 
 const album = {
     // Dev sanity check. When compiled, this gets replaced.

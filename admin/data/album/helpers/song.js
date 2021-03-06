@@ -1,3 +1,4 @@
+import { getFloatToHundredth } from '../../../../app/helpers/general'
 import albumLyrics from '../lyrics'
 
 const _addIsLogue = (songIndex, song) => {
@@ -22,10 +23,19 @@ const _addPathAndTitle = (songIndex, song) => {
 }
 
 const _addDuration = (songIndex, song) => {
-    const { duration } = albumLyrics[songIndex]
+    const
+        { playerTime } = albumLyrics[songIndex],
+        { playerTime: nextPlayerTime } = albumLyrics[songIndex + 1],
+        duration = getFloatToHundredth(nextPlayerTime - playerTime)
+
     song.songDuration = duration
 
     return duration
+}
+
+const _addPlayerTime = (songIndex, song) => {
+    const { playerTime } = albumLyrics[songIndex]
+    song.playerTime = playerTime
 }
 
 const _addIsDoublespeaker = (songIndex, song) => {
@@ -46,6 +56,7 @@ export const addSongAndLogueMetadata = (songIndex, song) => {
 
 export const addSongMetadata = (songIndex, song) => {
     const duration = _addDuration(songIndex, song)
+    _addPlayerTime(songIndex, song)
     _addIsDoublespeaker(songIndex, song)
 
     return duration

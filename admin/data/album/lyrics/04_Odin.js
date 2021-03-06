@@ -24,8 +24,7 @@ import {
 export default {
     path: 'odin',
     title: 'Odin',
-    duration: 200.1,
-    // SCRAPS: despair of a binary choice whose differences are illusory, as well as
+    playerTime: 555.3,
     overview: `Taiwan showed me how differently I would have turned out had my parents not immigrated to America. Yet I was still worlds away from what Sasha needed me to be. Life seemed as infinitely fluid as it was immovably fixed, and I wasn't sure which terrified me more. Our house cat Odin died of old age later that summer, just as I was working out my spiritual beliefs. And yet, the eternal life promised by faith seemed no less dreadful to me than the finality of death.`,
     isDoublespeaker: true,
     lyricUnits: [

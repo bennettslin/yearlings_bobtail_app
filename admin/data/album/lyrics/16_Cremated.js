@@ -18,7 +18,7 @@ import {
 export default {
     path: 'cremated',
     title: 'Cremated',
-    duration: 164.1,
+    playerTime: 2926.8,
     overview: `While I can't deny that dating white women helped silence the nagging feeling I had of being genetically inferior, I honestly didn't seek them out. A case in point was Miriam, whom I met at a Yearlings show. She was the storybook ending my ego had been waiting for: cute, hip, and drawn to me through no effort on my part. We lasted a few months. In the end, I had to wonder if she was just slumming it with me.`,
     isDoublespeaker: true,
     lyricUnits: [
