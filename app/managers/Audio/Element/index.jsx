@@ -8,22 +8,18 @@ import ReactAudioPlayer from 'react-audio-player'
 import AudioPlayerContext from '../../../contexts/AudioPlayer'
 import SongDispatcher from '../../../dispatchers/Song'
 import VerseDispatcher from '../../../dispatchers/Verse'
-import { getMp3 } from '../../../api/mp3'
 import {
     getPlayerTimeForVerse,
     getAudioTimeForCurrentTime,
 } from '../../../api/album/time'
+import { getMp3 } from '../../../api/mp3'
 import { getFormattedTime } from '../../../helpers/format'
 import { updateCanPlayThrough } from '../../../redux/players/action'
 import { mapCanPlayThrough } from '../../../redux/players/selector'
 import { mapAudioOptionIndex } from '../../../redux/session/selector'
 import { getCurrentIndicesForTime, logLoaded } from './helper'
-import { AUDIO_OPTIONS, CONTINUE } from '../../../constants/options'
 
-const AudioPlayerElement = forwardRef(({
-    onPlayerLoaded,
-    onPlayerError,
-}, ref) => {
+const AudioPlayerElement = forwardRef(({ onPlayerLoaded }, ref) => {
     const
         { setAudioTime } = useContext(AudioPlayerContext),
         dispatch = useDispatch(),
@@ -123,13 +119,6 @@ const AudioPlayerElement = forwardRef(({
             audioOptionIndex,
         }) || {}
 
-        // Player is out of sync, so pause and tell player manager.
-        if (isNaN(currentSongIndex) && isNaN(currentVerseIndex)) {
-            pause()
-            onPlayerError()
-            return
-        }
-
         // Tell app the new current time.
         setAudioTime(getAudioTimeForCurrentTime(currentSongIndex, currentTime))
 
@@ -169,19 +158,15 @@ const AudioPlayerElement = forwardRef(({
     const onEnded = () => {
         logPlayer(`Player ended itself.`)
 
-        // Advance to epilogue.
-        if (AUDIO_OPTIONS[audioOptionIndex] === CONTINUE) {
-            dispatchSong.current({
-                selectedSongIndex: getCurrentSong() + 1,
-                fromPlayerEnd: true,
-            })
-
-        // Treat as a song repeat.
-        } else {
-            dispatchVerse.current({
-                fromPlayerEnd: true,
-            })
-        }
+        /**
+         * If the player has ended, we will assume the continue option is set,
+         * and advance to the epilogue. If the repeat option is set, the player
+         * will repeat the song before it can end itself.
+         */
+        dispatchSong.current({
+            selectedSongIndex: getCurrentSong() + 1,
+            fromPlayerEnd: true,
+        })
     }
 
     const setRef = node => {
@@ -214,7 +199,6 @@ const AudioPlayerElement = forwardRef(({
 
 AudioPlayerElement.propTypes = {
     onPlayerLoaded: PropTypes.func.isRequired,
-    onPlayerError: PropTypes.func.isRequired,
 }
 
 export default AudioPlayerElement

@@ -1,11 +1,11 @@
+import { getSongsNotLoguesCount } from '../../../api/album/songs'
 import {
     getAudioTimeForCurrentTime,
     getEndTimeForVerse,
 } from '../../../api/album/time'
 import { getVerseCountForSong } from '../../../api/album/verses'
 import { getTimeDifference } from '../../../utils/logger/helpers/time'
-import { AUDIO_OPTIONS, REPEAT } from '../../../constants/options'
-import { getSongsNotLoguesCount } from '../../../api/album/songs'
+import { AUDIO_OPTIONS, CONTINUE } from '../../../constants/options'
 
 export const getCurrentIndicesForTime = ({
     songIndex,
@@ -17,34 +17,40 @@ export const getCurrentIndicesForTime = ({
     const
         audioTime = getAudioTimeForCurrentTime(songIndex, time),
         verseEndTime = getEndTimeForVerse(songIndex, verseIndex),
-        isRepeatOption = AUDIO_OPTIONS[audioOptionIndex] === REPEAT
+        isContinueOption = AUDIO_OPTIONS[audioOptionIndex] === CONTINUE,
+        isLastSong = songIndex === getSongsNotLoguesCount(),
+        isLastVerse = verseIndex === getVerseCountForSong(songIndex) - 1
 
-    /**
-     * Time is after the current verse. This means it's in the next verse, in
-     * the next song, or in the last verse of the last song.
-     */
+    // If the verse is a second away from ending...
+    if (audioTime + 1 > verseEndTime) {
+
+        // If this is the last verse, and we will continue to the next song...
+        if (!isLastSong && isLastVerse && isContinueOption) {
+            return {
+                currentSongIndex: songIndex + 1,
+                currentVerseIndex: 0,
+            }
+        }
+    }
+
+    // If the verse has ended...
     if (audioTime > verseEndTime) {
 
-        // There is a next verse. We're still in the same song.
-        if (verseIndex < getVerseCountForSong(songIndex) - 1) {
+        // If this is not the last verse...
+        if (!isLastVerse) {
+            // Advance to the next one.
             return {
                 currentSongIndex: songIndex,
                 currentVerseIndex: verseIndex + 1,
             }
 
-        // We will repeat this song. Also need to update current time.
-        } else if (isRepeatOption) {
+        // This is the last verse. If we will repeat the song...
+        } else if (!isContinueOption) {
+            // Reset the verse and update the current time.
             return {
                 currentSongIndex: songIndex,
                 currentVerseIndex: 0,
                 shouldUpdateCurrentTime: true,
-            }
-
-        // There is a next song, and we will continue on to it.
-        } else if (songIndex < getSongsNotLoguesCount()) {
-            return {
-                currentSongIndex: songIndex + 1,
-                currentVerseIndex: 0,
             }
         }
     }

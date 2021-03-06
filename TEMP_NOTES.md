@@ -9,7 +9,7 @@
 * Only prolong realistic presence transitions on enter, not exit.
 * Delay cubes for presence transition exit. Need to first calculate presence exit transition times.
 * Don't bother with timing transitions in mobile.
-* Don't stagger opacity transitions.
+* Don't stagger opacity transitions for cubes.
 
 # Performance TODO:
 * Performance. (Redux.)
