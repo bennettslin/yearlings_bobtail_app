@@ -135,7 +135,7 @@ export default {
                     lyric: `Didi left the house this morning`,
                 },
                 {
-                    time: 22,
+                    time: 22.8,
                     lyric: [
                         `wondering to himself, who would`,
                         {
@@ -166,11 +166,11 @@ export default {
                     ],
                 },
                 {
-                    time: 28,
+                    time: 28.5,
                     lyric: `And he left alone because he`,
                 },
                 {
-                    time: 34,
+                    time: 33.4,
                     lyric: `had to finish up all his orange juice.`,
                 },
             ],
@@ -206,7 +206,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 40,
+                    time: 39.8,
                     lyric: [
                         `Didi, you've been following, I`,
                         {
@@ -222,7 +222,7 @@ export default {
                     ],
                 },
                 {
-                    time: 46,
+                    time: 45.8,
                     lyric: `Didi, couldn't you find another sister to be near?`,
                 },
             ],
@@ -233,7 +233,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 52,
+                    time: 51.8,
                     lyric: [
                         `Cause I get sick of hearing,`,
                         {
@@ -308,11 +308,11 @@ export default {
                     ],
                 },
                 {
-                    time: 68,
+                    time: 68.7,
                     lyric: `so the nurse sent him home, snickered the recess crowd.`,
                 },
                 {
-                    time: 74,
+                    time: 74.4,
                     lyric: [
                         `They saw him crying beside a`,
                         {
@@ -341,7 +341,7 @@ export default {
                     ],
                 },
                 {
-                    time: 80,
+                    time: 79.3,
                     lyric: [
                         {
                             anchor: `decked in overalls`,
@@ -371,7 +371,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 85,
+                    time: 85.7,
                     lyric: [
                         `Didi, you've`,
                         {
@@ -388,13 +388,13 @@ export default {
                     ],
                 },
                 {
-                    time: 91,
+                    time: 91.7,
                     lyric: `Didi, come out, you can't soak there all night.`,
                 },
             ],
             subVerse: [
                 {
-                    time: 97,
+                    time: 97.2,
                     lyric: {
                         isItalic: true,
                         lyric: `Don't little raisin fingers need to dry?`,
@@ -408,15 +408,15 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 100,
+                    time: 100.5,
                     lyric: `Didi, someday you will be a hero`,
                 },
                 {
-                    time: 103,
+                    time: 104,
                     lyric: `in the movies, fighting those`,
                 },
                 {
-                    time: 106,
+                    time: 106.1,
                     lyric: [
                         {
                             anchor: `crooked thieves`,
@@ -458,11 +458,11 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 112,
+                    time: 111.8,
                     lyric: `Didi, one day you will be a picture`,
                 },
                 {
-                    time: 115,
+                    time: 115.3,
                     lyric: [
                         `taped to all the`,
                         {
@@ -478,11 +478,11 @@ export default {
                     ],
                 },
                 {
-                    time: 117,
+                    time: 117.1,
                     lyric: `They'll say, who now could have ever figured`,
                 },
                 {
-                    time: 120,
+                    time: 120.1,
                     lyric: [
                         `you'd`,
                         {
@@ -512,7 +512,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 123,
+                    time: 123.1,
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(whistles)`,
@@ -526,11 +526,11 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 129,
+                    time: 128.7,
                     lyric: `Didi dear, I'm sorry that I yelled at you that way.`,
                 },
                 {
-                    time: 135,
+                    time: 134.7,
                     lyric: `Didi dear, I know today just wasn't your day.`,
                 },
             ],
@@ -541,11 +541,11 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 141,
+                    time: 140.3,
                     lyric: `And now I think all I want is my Didi well by tomorrow,`,
                 },
                 {
-                    time: 146,
+                    time: 146.1,
                     lyric: `and there are things I hope my Didi will never know.`,
                 },
             ],
@@ -557,11 +557,11 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 152,
+                    time: 151.2,
                     lyric: `Yes, and now I think all I want is my Didi well by tomorrow,`,
                 },
                 {
-                    time: 158,
+                    time: 157.4,
                     lyric: `and there are things I hope Didi will never have to know.`,
                 },
             ],
@@ -589,7 +589,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 163,
+                    time: 163.3,
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(fade out)`,

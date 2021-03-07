@@ -1,6 +1,7 @@
 # TODO:
 * Clarify logState labels?
 * Fix preteen Bennett enraged left sleeve
+* Reatta lights are off?
 * Pass indices in gatsby browser?
 * Tips and audio options send analytics with desktop to mobile resize?
 * Take care of IP errors. (Maybe it will be fine in production?)
@@ -16,6 +17,10 @@
 * Be smarter about memo.
 
 # Annotation edit TODO:
+* Willy sparkles?
+* M Los Lobos thing?
+* Carpenters thing?
+* Golden Cord Bungalow Bill?
 * Establish what exactly makes for a narrative, backstory, and observation.
 * Make sure backstory and narrative tenses are correct.
 * Reassess what is a wiki anchor.
