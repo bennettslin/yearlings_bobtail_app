@@ -359,7 +359,7 @@ export default {
                                                 anchor: `Big Bang.`,
                                                 wiki: `Big_Bang`,
                                             },
-                                            `I found the thought comforting as it jibes with the Hindu belief that the universe is a living force, helplessly bound like us to an eternal cycle of death and rebirth.`,
+                                            `I found the thought comforting as it jibes with the Hindu belief that the universe is a living force like us, helplessly bound to an eternal cycle of death and rebirth.`,
                                         ],
                                         dotKeys: {
                                             [OBSERVATION]: true,

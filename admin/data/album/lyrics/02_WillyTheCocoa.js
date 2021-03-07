@@ -106,11 +106,11 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 11,
+                    time: 11.1,
                     lyric: `Hilltops gnashing dig out potholes,`,
                 },
                 {
-                    time: 14,
+                    time: 14.7,
                     lyric: [
                         `the`,
                         {
@@ -152,7 +152,7 @@ export default {
                     ],
                 },
                 {
-                    time: 17,
+                    time: 17.7,
                     lyric: [
                         {
                             anchor: `Hydrants burst`,

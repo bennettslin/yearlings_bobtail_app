@@ -513,7 +513,7 @@ export default {
                     time: 84,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(bagpipes)`,
+                        lyric: `(Garry's theme)`,
                     },
                 },
             ],

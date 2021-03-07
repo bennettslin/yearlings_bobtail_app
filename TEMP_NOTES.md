@@ -1,7 +1,14 @@
+# Bugs:
+* Nav buttons in Safari don't show.
+
 # TODO:
 * Clarify logState labels?
+* Remove tooltips in mobile?
+* Audio shortcuts?
+    * Make similar to Spotify.
 * Fix preteen Bennett enraged left sleeve
 * Reatta lights are off?
+* Ghost mother's eyes
 * Pass indices in gatsby browser?
 * Tips and audio options send analytics with desktop to mobile resize?
 * Take care of IP errors. (Maybe it will be fine in production?)

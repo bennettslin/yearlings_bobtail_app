@@ -162,7 +162,7 @@ export default {
                                         anchor: `atavism.`,
                                         wiki: `Atavism`,
                                     },
-                                    `And so I always wondered if those I dated ever had the same thought when judging my desirability as a long-term partner.`,
+                                    `And so I always wondered if the women I dated ever had the same thought when judging my desirability as a long-term partner.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -502,7 +502,7 @@ export default {
                             anchor: `unforeskinned virgin`,
                             todo: true,
                             card: {
-                                description: `I learned a long time ago not to have personal convictions or identity markers that could only serve to limit the size of my dating pool. It's why I don't have any tattoos, for example. I needed to be able to start my character afresh for the next woman to shape me into whatever she liked. And so I imagine that before dating Miriam, I had reset myself to a default state of being sexually inexperienced with my foreskin intact.`,
+                                description: `I learned a long time ago not to have personal convictions or identity markers that could only serve to limit the size of my dating pool. It's why I've never gotten a tattoo, for example. I needed to be able to start my character afresh for the next woman to shape me into whatever she liked. And so I imagine that before dating Miriam, I had reset myself to a default state of being sexually inexperienced with my foreskin intact.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
