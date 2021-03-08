@@ -565,6 +565,20 @@ export default {
                     lyric: `and there are things I hope Didi will never have to know.`,
                 },
             ],
+        },
+        {
+            unitMap: {
+                formType: OUTRO,
+            },
+            mainVerses: [
+                {
+                    time: 163.3,
+                    lyricCentre: {
+                        isItalic: true,
+                        lyric: `(fade out)`,
+                    },
+                },
+            ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 todo: true,
@@ -582,20 +596,6 @@ export default {
                     },
                 },
             },
-        },
-        {
-            unitMap: {
-                formType: OUTRO,
-            },
-            mainVerses: [
-                {
-                    time: 163.3,
-                    lyricCentre: {
-                        isItalic: true,
-                        lyric: `(fade out)`,
-                    },
-                },
-            ],
         },
         {
             unitMap: {},

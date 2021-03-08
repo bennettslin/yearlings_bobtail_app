@@ -47,6 +47,7 @@ import {
     ABOUT_TOGGLE_KEY,
     PITCH_TOGGLE_KEY,
     ERROR_LOG_TOGGLE_KEY,
+    SPACE,
 } from '../../../constants/access'
 import { HIDDEN } from '../../../constants/options'
 import { mapIsOverviewShown } from '../../../redux/overview/selector'
@@ -97,6 +98,7 @@ const LetterManager = forwardRef((props, ref) => {
                 keyWasRegistered = true
                 break
             case AUDIO_PLAY_KEY:
+            case SPACE:
                 keyWasRegistered = dispatchPlay.current()
                 break
             case PREVIOUS_SONG_KEY:
