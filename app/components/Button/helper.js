@@ -1,5 +1,4 @@
 import { getTitleForSong } from '../../api/album/songs'
-
 import {
     ABOUT_BUTTON_KEY,
     AUDIO_NEXT_BUTTON_KEY,
@@ -24,6 +23,7 @@ import {
     WORMHOLE_BUTTON_KEY,
     SCORES_BUTTON_KEY,
 } from '../../constants/buttons'
+import { IS_USER_AGENT_DESKTOP } from '../../constants/device'
 
 import {
     LYRIC_LEFT,
@@ -107,6 +107,11 @@ const TOOLTIP_TEXT_MAP = {
 }
 
 export const getShowTooltip = buttonName => {
+    // Don't show tooltips in mobile, to avoid sticky hover.
+    if (!IS_USER_AGENT_DESKTOP) {
+        return false
+    }
+
     switch (buttonName) {
         case DOTS_SLIDE_SELECT_BUTTON_KEY:
         case NAV_BOOK_BUTTON_KEY:

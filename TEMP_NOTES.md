@@ -1,6 +1,5 @@
 # TODO:
 * Clarify logState labels?
-* Remove tooltips in mobile?
 * Adjust volume?
 * Audio shortcuts?
     * Make similar to Spotify.
@@ -14,6 +13,8 @@
 * Delay cubes for presence transition exit. Need to first calculate presence exit transition times.
 * Don't bother with timing transitions in mobile.
 * Don't stagger opacity transitions for cubes.
+* Don't make menu move.
+* Use bcrypt for IP.
 
 # Performance TODO:
 * Performance. (Redux.)
