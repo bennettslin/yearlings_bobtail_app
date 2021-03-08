@@ -1,5 +1,5 @@
 # Bugs:
-* Nav buttons in Safari don't show.
+* Selected nav button lights up on hover when accessed.
 
 # TODO:
 * Clarify logState labels?
