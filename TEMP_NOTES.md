@@ -24,6 +24,7 @@
 * M Los Lobos thing?
 * Carpenters thing?
 * Golden Cord Bungalow Bill?
+* Uncanny Valley Kinks Wicked Annabella
 * Establish what exactly makes for a narrative, backstory, and observation.
 * Make sure backstory and narrative tenses are correct.
 * Reassess what is a wiki anchor.
