@@ -5091,4 +5091,8 @@ export default [
         taskName: `Move audio to single file.`,
         workedHours: 29,
     },
+    {
+        taskName: `Encryption and small fixes.`,
+        workedHours: 5,
+    },
 ]

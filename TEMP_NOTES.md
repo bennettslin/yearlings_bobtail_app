@@ -14,7 +14,6 @@
 * Don't bother with timing transitions in mobile.
 * Don't stagger opacity transitions for cubes.
 * Don't make menu move.
-* Use bcrypt for IP.
 
 # Performance TODO:
 * Performance. (Redux.)

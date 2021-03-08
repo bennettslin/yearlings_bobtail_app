@@ -4,7 +4,8 @@ import {
     BROWSER_NAME, BROWSER_VERSION, ENGINE_NAME, ENGINE_VERSION, OS_NAME, OS_VERSION, PLATFORM_TYPE, PLATFORM_VENDOR,
 } from '../device'
 import { getDateTimeForGa } from '../build'
-import { getPublicIp } from '../ip'
+import { getHashedIp } from '../ip'
+import { getTimeDifference } from '../logger/helpers/time'
 
 /**
  * NOTE: This is kind of a quick workaround for now, to delay the initial GA
@@ -17,7 +18,29 @@ const isGaUndefined = () => (
     typeof ga === 'undefined'
 )
 
-export const setCustomDimensions = async () => {
+const setAsyncCustomDimensions = async () => {
+    const
+        asyncStartTime = Date.now(),
+        hashedIp = await getHashedIp()
+
+    ga('set', 'dimension1', hashedIp)
+    isAsyncPromiseComplete = true
+
+    const timeDifference = getTimeDifference(asyncStartTime)
+
+    logServe(
+        IS_PRODUCTION ?
+            `Async custom dimensions fetched in ${timeDifference}s.` :
+            `User hash ${hashedIp} fetched in ${timeDifference}s.`,
+        {
+            action: 'ip',
+            label: hashedIp,
+            value: timeDifference * 1000,
+        },
+    )
+}
+
+export const setCustomDimensions = () => {
     if (isGaUndefined()) {
         return
     }
@@ -39,20 +62,7 @@ export const setCustomDimensions = async () => {
     ga('set', 'dimension11', IS_USER_AGENT_DESKTOP)
     ga('set', 'dimension12', IS_TOUCH_SUPPORTED)
 
-    // Set asynchronous custom dimensions.
-    const ip = await getPublicIp()
-    ga('set', 'dimension1', ip)
-    isAsyncPromiseComplete = true
-
-    logServe(
-        IS_PRODUCTION ?
-            `Asynchronous promises complete for custom dimensions.` :
-            `Public IP address is ${ip}.`,
-        {
-            action: 'ip',
-            label: ip,
-        },
-    )
+    setAsyncCustomDimensions()
 }
 
 export const sendToGa = ({

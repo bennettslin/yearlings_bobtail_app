@@ -35,7 +35,7 @@ const _log = ({
         action,
         label,
         value: parseInt(
-            useTimeDifferenceForValue ?
+            useTimeDifferenceForValue && !Number.isFinite(value) ?
                 // Send to analytics as milliseconds.
                 timeDifference * 1000 :
                 value,

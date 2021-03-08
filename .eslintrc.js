@@ -13,11 +13,11 @@ module.exports = {
     'env': {
         'browser': true,
         'commonjs': true,
-        'es6': true
+        'es6': true,
     },
     'extends': [
         'eslint:recommended',
-        'plugin:react/recommended'
+        'plugin:react/recommended',
     ],
     'globals': {
         '__dirname': true,
@@ -41,36 +41,36 @@ module.exports = {
         'logTransition': true,
         'logError': true,
         'logSuccess': true,
-        'process': true
+        'process': true,
     },
     'parser': '@babel/eslint-parser',
     'parserOptions': {
         'ecmaFeatures': {
             'experimentalObjectRestSpread': true,
-            'jsx': true
+            'jsx': true,
         },
         'ecmaVersion': 2020,
-        'sourceType': 'module'
+        'sourceType': 'module',
     },
     'plugins': [
         'import',
-        'react'
+        'react',
     ],
     'settings': {
         'import/resolver': {
             node: {
-                extensions: ['.js', '.jsx', '.mp3', '.pdf', '.scss', '.svg']
-            }
+                extensions: ['.js', '.jsx', '.mp3', '.pdf', '.scss', '.svg'],
+            },
         },
         'react': {
-            ...reactVersion()
-        }
+            ...reactVersion(),
+        },
     },
     'rules': {
         'accessor-pairs': 'error',
         'array-bracket-spacing': [
             'error',
-            'never'
+            'never',
         ],
         'array-callback-return': 'error',
         'arrow-body-style': 'off',
@@ -79,14 +79,14 @@ module.exports = {
             'error',
             {
                 'after': true,
-                'before': true
-            }
+                'before': true,
+            },
         ],
         'block-scoped-var': 'error',
         'block-spacing': 'error',
         'brace-style': [
             'error',
-            '1tbs'
+            '1tbs',
         ],
         'callback-return': 'error',
         'camelcase': 'off',
@@ -94,23 +94,23 @@ module.exports = {
         'class-methods-use-this': 'off',
         'comma-dangle': [
             'error',
-            'always-multiline'
+            'always-multiline',
         ],
         'comma-spacing': [
             'error',
             {
                 'after': true,
-                'before': false
-            }
+                'before': false,
+            },
         ],
         'comma-style': [
             'error',
-            'last'
+            'last',
         ],
         'complexity': 0,
         'computed-property-spacing': [
             'error',
-            'never'
+            'never',
         ],
         'consistent-return': 'off',
         'consistent-this': 'error',
@@ -136,20 +136,20 @@ module.exports = {
         'init-declarations': 'off',
         'jsx-quotes': [
             'error',
-            'prefer-double'
+            'prefer-double',
         ],
         'key-spacing': 'error',
         'keyword-spacing': [
             'error',
             {
                 'after': true,
-                'before': true
-            }
+                'before': true,
+            },
         ],
         'line-comment-position': 'off',
         'linebreak-style': [
             'error',
-            'unix'
+            'unix',
         ],
         'lines-around-comment': 'off',
         'lines-around-directive': 'error',
@@ -164,7 +164,10 @@ module.exports = {
         'new-parens': 'error',
         'newline-after-var': 'off',
         'newline-before-return': 'off',
-        'newline-per-chained-call': 'error',
+        'newline-per-chained-call': [
+            'error',
+            { ignoreChainWithDepth: 3 },
+        ],
         'no-alert': 'error',
         'no-array-constructor': 'error',
         'no-await-in-loop': 'error',
@@ -204,7 +207,7 @@ module.exports = {
         'no-multi-str': 'error',
         'no-multiple-empty-lines': [
             'error',
-            { max: 1 }
+            { max: 1 },
         ],
         'no-native-reassign': 'error',
         'no-negated-condition': 'off',
@@ -250,8 +253,8 @@ module.exports = {
         'no-unneeded-ternary': [
             'error',
             {
-                'defaultAssignment': true
-            }
+                'defaultAssignment': true,
+            },
         ],
         'no-unused-expressions': 'error',
         'no-use-before-define': 'off',
@@ -270,25 +273,25 @@ module.exports = {
         'object-curly-newline': [
             'error', {
                 'minProperties': 6,
-                'consistent': true
-            }
+                'consistent': true,
+            },
         ],
         'object-curly-spacing': [
             'error',
-            'always'
+            'always',
         ],
         'object-property-newline': [
             'error',
             {
-                'allowMultiplePropertiesPerLine': true
-            }
+                'allowMultiplePropertiesPerLine': true,
+            },
         ],
         'object-shorthand': ['error', 'always'],
         'one-var': 'off',
         'one-var-declaration-per-line': 'error',
         'operator-assignment': 'off',
         'operator-linebreak': [
-            'off'
+            'off',
         ],
         'padded-blocks': 'off',
         'prefer-arrow-callback': 'error',
@@ -302,7 +305,7 @@ module.exports = {
         'quotes': ['error', 'single', { allowTemplateLiterals: true }],
         'radix': [
             'error',
-            'as-needed'
+            'as-needed',
         ],
         'react/display-name': 'off',
         'react/jsx-key': 'off',
@@ -311,7 +314,7 @@ module.exports = {
         'require-await': 'error',
         'rest-spread-spacing': [
             'error',
-            'never'
+            'never',
         ],
         'semi': ['error', 'never'],
         'semi-spacing': 'error',
@@ -322,7 +325,7 @@ module.exports = {
         'space-before-function-paren': 'off',
         'space-in-parens': [
             'error',
-            'never'
+            'never',
         ],
         'space-infix-ops': 'error',
         'space-unary-ops': 'error',
@@ -331,11 +334,11 @@ module.exports = {
         'symbol-description': 'error',
         'template-curly-spacing': [
             'error',
-            'never'
+            'never',
         ],
         'unicode-bom': [
             'error',
-            'never'
+            'never',
         ],
         'valid-jsdoc': 'off',
         'vars-on-top': 'error',
@@ -344,7 +347,7 @@ module.exports = {
         'yield-star-spacing': 'error',
         'yoda': [
             'error',
-            'never'
-        ]
-    }
-};
+            'never',
+        ],
+    },
+}
