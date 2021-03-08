@@ -69,12 +69,12 @@
   <g class="eye">
     <circle class="sclera" cx="171.98" cy="60.08" r="14.18"/>
     <g class="irisDarkBrown">
-      <ellipse cx="166.51" cy="59.97" rx="3.4" ry="2.63" transform="translate(66.88 206.24) rotate(-75.55)"/>
-      <ellipse cx="183.16" cy="64.26" rx="3.4" ry="2.34" transform="translate(75.22 225.59) rotate(-75.55)"/>
+      <ellipse cx="165.58" cy="59.65" rx="3.4" ry="3.1" transform="translate(70.12 207.51) rotate(-76.96)"/>
+      <ellipse cx="182.52" cy="63.64" rx="3.4" ry="2.76" transform="translate(79.35 227.1) rotate(-76.96)"/>
     </g>
     <g class="pupil">
-      <ellipse cx="166.99" cy="60.1" rx="1.32" ry="1.02" transform="translate(67.12 206.8) rotate(-75.55)"/>
-      <ellipse cx="183.66" cy="64.39" rx="1.32" ry="0.91" transform="translate(75.47 226.18) rotate(-75.55)"/>
+      <ellipse cx="165.64" cy="59.68" rx="1.32" ry="1.21" transform="translate(70.14 207.59) rotate(-76.96)"/>
+      <ellipse cx="182.6" cy="63.67" rx="1.32" ry="1.07" transform="translate(79.39 227.2) rotate(-76.96)"/>
     </g>
   </g>
   <g class="skinEastAsian">
