@@ -1,6 +1,3 @@
-# Bugs:
-* Selected nav button lights up on hover when accessed.
-
 # TODO:
 * Clarify logState labels?
 * Remove tooltips in mobile?

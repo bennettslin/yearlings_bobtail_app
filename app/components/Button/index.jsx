@@ -118,7 +118,8 @@ const Button = ({
                         hoverOnParent && !isClickDisabled &&
                             'ButtonAnimatable__hoverOnParent',
 
-                        isAccessEnter && showIfAccessOn && 'dropShadow__accessed',
+                        isAccessEnter && showIfAccessOn && !isClickDisabled &&
+                            'dropShadow__accessed',
                         isPopupButton && 'ButtonAnimatable__popup',
                         'abF',
                     ),
