@@ -4,7 +4,6 @@ import cx from 'classnames'
 import { useDispatch, useSelector } from 'react-redux'
 import { Helmet } from 'react-helmet'
 import { navigate } from 'gatsby'
-import getDidMountHoc from '../../components/DidMountHoc'
 import AccessStylesheet from '../../components/Stylesheets/Access'
 import Pitch from '../../components/Pitch'
 import PitchNav from '../../components/PitchNav'
@@ -21,7 +20,7 @@ import AccessWrapper from '../../wrappers/AccessWrapper'
 import ResizeManager from '../../managers/Resize'
 import './style'
 
-const PitchContainer = ({ didMount, children }) => {
+const PitchContainer = ({ children }) => {
     const
         dispatch = useDispatch(),
         pitchContainerElement = useRef(),
@@ -98,7 +97,7 @@ const PitchContainer = ({ didMount, children }) => {
         focusElement()
     }, [pitchSegmentIndex])
 
-    return didMount && (
+    return (
         <div
             {...{
                 ref: pitchContainerElement,
@@ -143,13 +142,12 @@ const PitchContainer = ({ didMount, children }) => {
 
 PitchContainer.propTypes = {
     children: PropTypes.node.isRequired,
-    didMount: PropTypes.bool.isRequired,
 }
 
-const ParentPitchContainer = ({ didMount, children }) => (
+const ParentPitchContainer = ({ children }) => (
     <DeviceWrapper>
         <AccessWrapper>
-            <PitchContainer {...{ didMount }}>
+            <PitchContainer>
                 {children}
             </PitchContainer>
             <AccessStylesheet />
@@ -159,8 +157,7 @@ const ParentPitchContainer = ({ didMount, children }) => (
 
 ParentPitchContainer.propTypes = {
     children: PropTypes.node.isRequired,
-    didMount: PropTypes.bool.isRequired,
 }
 
-// Eyeballed timeout duration to prevent wonky loading in local development.
-export default getDidMountHoc(ParentPitchContainer, 100)
+export default ParentPitchContainer
+

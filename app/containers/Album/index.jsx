@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
-import getDidMountHoc from '../../components/DidMountHoc'
 import AlbumPageElementContext from '../../contexts/AlbumPageElement'
 import AudioPlayerContext from '../../contexts/AudioPlayer'
 import AudioContainer from '../Audio'
@@ -9,7 +8,7 @@ import RootContainer from '../Root'
 import StylesheetContainer from '../Stylesheet'
 import { setIsAlbumSession } from '../../utils/browser'
 
-const AlbumContainer = ({ didMount, children }) => {
+const AlbumContainer = ({ children }) => {
     const
         audioContainer = useRef(),
         [audioTime, setAudioTime] = useState(0)
@@ -31,7 +30,7 @@ const AlbumContainer = ({ didMount, children }) => {
         )
     }, [])
 
-    return didMount && (
+    return (
         <AlbumPageElementContext.Provider {...{ value: children }}>
             <AudioPlayerContext.Provider
                 {...{
@@ -54,8 +53,6 @@ const AlbumContainer = ({ didMount, children }) => {
 
 AlbumContainer.propTypes = {
     children: PropTypes.node.isRequired,
-    didMount: PropTypes.bool.isRequired,
 }
 
-// Eyeballed timeout duration to prevent wonky loading in local development.
-export default getDidMountHoc(AlbumContainer, 100)
+export default AlbumContainer
