@@ -12,15 +12,32 @@ import {
     getNeedsAlbumContext,
     getNeedsStoreProvider,
 } from './helper'
-import { getIsServerSide } from '../browser'
+import { getIsServerSide, getWindow } from '../browser'
 import { getParsedLocation } from '../routing/path'
 
-export const getWrapRootElement = window => ({ element }) => {
-    const { pathname, search } = getParsedLocation({ element, window })
+export const wrapRootElement = ({ element }) => {
+    const
+        window = getWindow(),
+        {
+            innerHeight = 0,
+            innerWidth = 0,
+        } = window,
+        {
+            pathname,
+            search,
+        } = getParsedLocation({
+            element,
+            window,
+        })
 
     if (getNeedsStoreProvider(pathname)) {
         const store = createStore(
-            getReducers(pathname, search),
+            getReducers({
+                innerHeight,
+                innerWidth,
+                pathname,
+                search,
+            }),
             getIsServerSide() ?
                 undefined :
                 devToolsEnhancer(),
@@ -38,8 +55,13 @@ export const getWrapRootElement = window => ({ element }) => {
     }
 }
 
-export const getWrapPageElement = window => ({ element }) => {
-    const { pathname } = getParsedLocation({ element, window })
+export const wrapPageElement = ({ element }) => {
+    const
+        window = getWindow(),
+        { pathname } = getParsedLocation({
+            element,
+            window,
+        })
 
     if (getNeedsAlbumContext(pathname)) {
         return (

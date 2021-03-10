@@ -24,7 +24,7 @@ const accessPresenceType = ({
     const typesList = isActor ? WHOLE_ACTORS_LIST : THINGS_LIST
 
     const selectedIndex = typesList.findIndex(
-        type => type === presenceType
+        type => type === presenceType,
     )
 
     let direction = 0
@@ -55,7 +55,7 @@ const accessPresenceKey = ({
         mapGetter = isActor ? getPreviewerSvgMapForActor : getPreviewerSvgMapForThing,
         svgArray = Object.keys(mapGetter(presenceType)),
         selectedIndex = svgArray.findIndex(
-            key => key === presenceKey
+            key => key === presenceKey,
         )
 
     let direction = 0

@@ -34,10 +34,24 @@ export const getNeedsStoreProvider = pathname => {
     return getIsStorePath(pathname)
 }
 
-export const getReducers = (pathname, search) => (
+export const getReducers = ({
+    innerHeight,
+    innerWidth,
+    pathname,
+    search,
+}) => (
     getIsPitchPage(pathname) ?
-        getPitchReducers(pathname) :
-        getAlbumReducers(pathname, search)
+        getPitchReducers({
+            innerHeight,
+            innerWidth,
+            pathname,
+        }) :
+        getAlbumReducers({
+            innerHeight,
+            innerWidth,
+            pathname,
+            search,
+        })
 )
 
 export const getNeedsAlbumContext = pathname => (

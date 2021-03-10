@@ -1,5 +1,4 @@
 # TODO:
-* Server-side source code is just prologue. Because it just redirects to root.
 * Clarify logState labels?
 * Adjust volume?
 * Audio shortcuts?

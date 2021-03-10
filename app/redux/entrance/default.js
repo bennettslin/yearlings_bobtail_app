@@ -14,11 +14,7 @@ export const getSceneChangeDefaults = done => ({
 })
 
 export const ENTRANCE_DEFAULTS = {
-    /**
-     * The client side still needs to update the viewport store upon app load,
-     * as it doesn't have access to the window object until then.
-     */
-    isWindowResizeDone: false,
+    isWindowResizeDone: true,
 
     ...getSongChangeDefaults(true),
     ...getSceneChangeDefaults(true),

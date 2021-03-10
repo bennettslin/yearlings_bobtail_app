@@ -38,15 +38,11 @@ export const getDocument = () => (
         document
 )
 
-export const getWindow = () => {
-    const safeWindow = (
-        getIsServerSide() ?
-            SAFE_WINDOW :
-            window
-    )
-    safeWindow.dataLayer = safeWindow.dataLayer || []
-    return safeWindow
-}
+export const getWindow = () => (
+    getIsServerSide() ?
+        SAFE_WINDOW :
+        window
+)
 
 export const setIsAlbumSession = () => {
     /**

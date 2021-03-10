@@ -1,27 +1,30 @@
 // Reducers for viewport size.
 import { VIEWPORT_STORE } from '../../constants/store'
-import {
-    VIEWPORT_DEFAULTS,
-    VIEWPORT_PITCH_PAGE_DEFAULTS,
-} from './default'
+import { getViewportStore } from '../../helpers/resize/store'
 
-export default (
-    state = VIEWPORT_DEFAULTS,
-    action,
+export const getViewportReducer = ({
+    innerHeight,
+    innerWidth,
+}) => (
+    state = getViewportStore(innerHeight, innerWidth),
+    { type, payload },
 ) => {
-    switch (action.type) {
+    switch (type) {
         case VIEWPORT_STORE:
             return {
                 ...state,
-                ...action.payload,
+                ...payload,
             }
         default:
             return state
     }
 }
 
-export const ViewportPitchPageReducer = (
-    state = VIEWPORT_PITCH_PAGE_DEFAULTS,
+export const getViewportPitchPageReducer = ({
+    innerHeight,
+    innerWidth,
+}) => (
+    state = getViewportStore(innerHeight, innerWidth, true),
     { type, payload },
 ) => {
     switch (type) {

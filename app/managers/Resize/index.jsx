@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { updateIsWindowResizeDone } from '../../redux/entrance/action'
 import {
     updateViewportStore,
-    updateViewportPitchStore,
+    updateViewportPitchPageStore,
 } from '../../redux/viewport/action'
 import { getWindowDimensions } from '../../helpers/resize/device'
 import { getWindow } from '../../utils/browser'
@@ -37,7 +37,7 @@ const ResizeManager = ({
         } = getWindowDimensions(getResizeContainerElement())
 
         if (isInPitch) {
-            dispatch(updateViewportPitchStore({
+            dispatch(updateViewportPitchPageStore({
                 windowWidth,
                 windowHeight,
             }))
@@ -81,9 +81,6 @@ const ResizeManager = ({
     }
 
     useEffect(() => {
-        // Once we have access to the window object, update the viewport store.
-        beginEnterTransition()
-
         getWindow().onresize = beginExitTransition
         return () => {
             getWindow().onresize = null

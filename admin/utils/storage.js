@@ -43,7 +43,7 @@ const getPresenceOrDefaultPresence = ({
     return {
         presenceType: typesList[0],
         presenceKey: Object.keys(
-            mapGetter(typesList[0])
+            mapGetter(typesList[0]),
         )[0],
     }
 }
@@ -87,7 +87,7 @@ export const setPresenceInStorage = ({
     }
     if (presenceKey) {
         setInStorage(
-            `${prefix}Key`, presenceKey
+            `${prefix}Key`, presenceKey,
         )
     }
 }

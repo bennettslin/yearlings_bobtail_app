@@ -9,11 +9,6 @@ import {
     globaliseLogs,
 } from './app/utils/global'
 import './app/scss/app'
-// App styles must be imported after global styles.
-import {
-    getWrapRootElement,
-    getWrapPageElement,
-} from './app/utils/gatsby'
 
 initialiseGlobalAdminObjects()
 globaliseLogs()
@@ -23,5 +18,7 @@ logBuild()
 logDevice()
 logGa()
 
-export const wrapRootElement = getWrapRootElement(window)
-export const wrapPageElement = getWrapPageElement(window)
+export {
+    wrapRootElement,
+    wrapPageElement,
+} from './app/utils/gatsby'

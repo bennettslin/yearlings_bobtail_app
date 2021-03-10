@@ -5095,4 +5095,8 @@ export default [
         taskName: `Encryption and small fixes.`,
         workedHours: 5,
     },
+    {
+        taskName: `Fix issue where source code doesn't show album and pitch content.`,
+        workedHours: 4,
+    },
 ]

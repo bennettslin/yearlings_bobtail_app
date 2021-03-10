@@ -1,5 +1,8 @@
 import { combineReducers } from 'redux'
-import { getAccessReducer, AccessPitchPageReducer } from './access/reducer'
+import {
+    getAccessReducer,
+    AccessPitchPageReducer,
+} from './access/reducer'
 import ActivatedReducer from './activated/reducer'
 import AnnotationReducer from './annotation/reducer'
 import AudioReducer from './audio/reducer'
@@ -22,7 +25,10 @@ import { getSessionReducer } from './session/reducer'
 import SliderReducer from './slider/reducer'
 import ToggleReducer from './toggle/reducer'
 import VerseBarsReducer from './verseBars/reducer'
-import ViewportReducer, { ViewportPitchPageReducer } from './viewport/reducer'
+import {
+    getViewportReducer,
+    getViewportPitchPageReducer,
+} from './viewport/reducer'
 
 import {
     ACCESS_STORE,
@@ -55,7 +61,12 @@ import {
     getInitialPitchIndex,
 } from '../utils/routing/indices'
 
-export const getAlbumReducers = (pathname, search) => {
+export const getAlbumReducers = ({
+    innerHeight,
+    innerWidth,
+    pathname,
+    search,
+}) => {
     const {
             initialSongIndex,
             initialVerseIndex,
@@ -101,17 +112,27 @@ export const getAlbumReducers = (pathname, search) => {
         [SLIDER_STORE]: SliderReducer,
         [TOGGLE_STORE]: ToggleReducer,
         [VERSE_BARS_STORE]: VerseBarsReducer,
-        [VIEWPORT_STORE]: ViewportReducer,
+        [VIEWPORT_STORE]: getViewportReducer({
+            innerHeight,
+            innerWidth,
+        }),
     })
 }
 
-export const getPitchReducers = pathname => {
+export const getPitchReducers = ({
+    innerHeight,
+    innerWidth,
+    pathname,
+}) => {
     const initialPitchIndex = getInitialPitchIndex(pathname)
 
     return combineReducers({
         [DOTS_STORE]: getDotsReducer(0),
         [ACCESS_STORE]: AccessPitchPageReducer,
         [PITCH_STORE]: getPitchReducer(initialPitchIndex),
-        [VIEWPORT_STORE]: ViewportPitchPageReducer,
+        [VIEWPORT_STORE]: getViewportPitchPageReducer({
+            innerHeight,
+            innerWidth,
+        }),
     })
 }
