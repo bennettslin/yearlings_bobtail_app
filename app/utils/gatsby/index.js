@@ -13,11 +13,11 @@ import {
     getNeedsStoreProvider,
 } from './helper'
 import { getIsServerSide } from '../browser'
+import { getParsedLocation } from '../routing/path'
 
-export const getWrapRootElement = (
-    pathname = '',
-    search = '',
-) => ({ element }) => {
+export const getWrapRootElement = window => ({ element }) => {
+    const { pathname, search } = getParsedLocation({ element, window })
+
     if (getNeedsStoreProvider(pathname)) {
         const store = createStore(
             getReducers(pathname, search),
@@ -38,9 +38,9 @@ export const getWrapRootElement = (
     }
 }
 
-export const getWrapPageElement = (
-    pathname = '',
-) => ({ element }) => {
+export const getWrapPageElement = window => ({ element }) => {
+    const { pathname } = getParsedLocation({ element, window })
+
     if (getNeedsAlbumContext(pathname)) {
         return (
             <AlbumContainer>

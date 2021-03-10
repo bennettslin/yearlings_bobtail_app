@@ -10,14 +10,28 @@ const VALID_ADMIN_PATHS = {
     things: true,
 }
 
-export const getPathname = rawPathname => (
-    rawPathname
+const getPathname = (pathname = '') => (
+    pathname
         // Split by slashes and remove empty strings.
         .split('/')
         .filter(name => Boolean(name))
         // Get rid of beginning and end slashes.
         .join('/')
 )
+
+export const getParsedLocation = ({
+    element: { props: { location: {
+        pathname: elementPathname,
+        search: elementSearch,
+    } = {} } = {} } = {},
+    window: { location: {
+        pathname: windowPathname,
+        search: windowSearch,
+    } = {} } = {},
+}) => ({
+    pathname: getPathname(elementPathname || windowPathname),
+    search: elementSearch || windowSearch,
+})
 
 export const getIndexFromPath = pathname => (
     // Remove all non-digits.
