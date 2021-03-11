@@ -1009,6 +1009,34 @@ export default {
                     },
                 },
             ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        `My original plan was to take the puns one level further by recording this song in a`,
+                        {
+                            anchor: `"Mara-iachi"`,
+                            wiki: `Mariachi`,
+                        },
+                        `style. But I decided it wouldn't fit the song's tempo and quickly scrapped it. However, I then got the idea to model an outro after the`,
+                        {
+                            anchor: `Los Lobos`,
+                            wiki: `Los_Lobos`,
+                        },
+                        `cover version of`,
+                        {
+                            anchor: `"La Bamba,"`,
+                            wiki: `La_Bamba_(song)`,
+                        },
+                        `which ends with an uptempo rendition played on Mexican folk instruments.`,
+                    ],
+                    dotKeys: {
+                        [PUN]: true,
+                        [SONGCRAFT]: true,
+                    },
+                },
+            },
         },
     ],
 }

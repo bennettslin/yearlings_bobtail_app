@@ -22,7 +22,7 @@ import {
 export default {
     path: 'willy-the-cocoa',
     title: 'Willy the Cocoa',
-    playerTime: 177.3,
+    playerTime: 177.1,
     overview: `Willy the Cocoa was a mentally disabled man who wandered the streets collecting recyclables for a living. One day, some gangsters decided to pick a fight and smashed his head open with a bottle, killing him instantly. My younger brother was diagnosed with severe autism at around this time, and in light of Willy's murder, I would lie awake in fear of what lay in my brother's future.`,
     lyricUnits: [
         {
@@ -152,7 +152,7 @@ export default {
                     ],
                 },
                 {
-                    time: 17.7,
+                    time: 17.9,
                     lyric: [
                         {
                             anchor: `Hydrants burst`,
@@ -205,7 +205,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 23,
+                    time: 23.1,
                     lyric: [
                         `Swill pop poured from`,
                         {
@@ -221,7 +221,7 @@ export default {
                     ],
                 },
                 {
-                    time: 26,
+                    time: 26.7,
                     lyric: [
                         `his`,
                         {
@@ -260,7 +260,7 @@ export default {
             ],
             subVerse: [
                 {
-                    time: 30,
+                    time: 30.2,
                     lyric: {
                         isItalic: true,
                         lyric: [
@@ -287,7 +287,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 32,
+                    time: 32.9,
                     lyric: [
                         `licking lips`,
                         {
@@ -311,11 +311,11 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 35,
+                    time: 35.1,
                     lyric: `Oh, has Willy the Cocoa come`,
                 },
                 {
-                    time: 38,
+                    time: 39.3,
                     lyric: [
                         `for`,
                         {
@@ -332,7 +332,7 @@ export default {
                     ],
                 },
                 {
-                    time: 41,
+                    time: 41.6,
                     lyric: [
                         `Saluting Mummy doing some`,
                         {
@@ -349,7 +349,7 @@ export default {
                     ],
                 },
                 {
-                    time: 45,
+                    time: 45.5,
                     lyric: [
                         `when`,
                         {
@@ -390,7 +390,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 47,
+                    time: 47.7,
                     lyric: [
                         `As`,
                         {
@@ -410,7 +410,7 @@ export default {
                     ],
                 },
                 {
-                    time: 50,
+                    time: 50.9,
                     lyric: [
                         `launching`,
                         {
@@ -428,11 +428,11 @@ export default {
                     ],
                 },
                 {
-                    time: 53,
+                    time: 53.9,
                     lyric: `Willy ducks behind the porch steps and laughs.`,
                 },
                 {
-                    time: 59,
+                    time: 59.5,
                     lyric: [
                         `Oh ma'am, I`,
                         {
@@ -449,7 +449,7 @@ export default {
                     ],
                 },
                 {
-                    time: 62,
+                    time: 62.9,
                     lyric: [
                         `he croaks, stroking`,
                         {
@@ -466,7 +466,7 @@ export default {
                     ],
                 },
                 {
-                    time: 65,
+                    time: 65.7,
                     lyric: [
                         `And three years howling is the`,
                         {
@@ -530,7 +530,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 71,
+                    time: 71.5,
                     lyric: [
                         `Prying`,
                         {
@@ -573,7 +573,7 @@ export default {
                     ],
                 },
                 {
-                    time: 74,
+                    time: 74.5,
                     lyric: [
                         `a`,
                         {
@@ -602,7 +602,7 @@ export default {
                     ],
                 },
                 {
-                    time: 77,
+                    time: 77.4,
                     lyric: [
                         `with his tummy clenched, muffling`,
                         {
@@ -618,7 +618,7 @@ export default {
                     ],
                 },
                 {
-                    time: 80,
+                    time: 80.9,
                     lyric: `Papa storms in roaring, Boy, are you proud?`,
                 },
                 {

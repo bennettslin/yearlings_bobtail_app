@@ -12,14 +12,14 @@ export default [
     },
     {
         taskName: `Refine song times.`,
-        workedHours: 1,
+        workedHours: 2,
         neededHours: 10,
     },
 
     // Needed.
     {
         taskName: `Finish annotation edits.`,
-        workedHours: 5,
+        workedHours: 8,
         neededHours: 25,
     },
 

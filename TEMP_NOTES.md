@@ -4,7 +4,6 @@
 * Audio shortcuts?
     * Make similar to Spotify.
 * Preteen Bennett enraged comics page.
-* Pass indices in gatsby browser?
 * Tips and audio options send analytics with desktop to mobile resize?
 * Take care of IP errors. (Maybe it will be fine in production?)
 * Freeway panel.
@@ -21,7 +20,6 @@
 
 # Annotation edit TODO:
 * Willy sparkles?
-* M Los Lobos thing?
 * Carpenters thing?
 * Golden Cord Bungalow Bill?
 * Uncanny Valley Kinks Wicked Annabella
