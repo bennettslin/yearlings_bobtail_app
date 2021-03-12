@@ -22,7 +22,8 @@ import {
 export default {
     path: 'willy-the-cocoa',
     title: 'Willy the Cocoa',
-    playerTime: 177.1,
+    playerTime: 177.396,
+    mixTime: `0:01:03.00`,
     overview: `Willy the Cocoa was a mentally disabled man who wandered the streets collecting recyclables for a living. One day, some gangsters decided to pick a fight and smashed his head open with a bottle, killing him instantly. My younger brother was diagnosed with severe autism at around this time, and in light of Willy's murder, I would lie awake in fear of what lay in my brother's future.`,
     lyricUnits: [
         {
@@ -61,7 +62,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 0,
+                    mixTime: `0:01:03.00`,
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(Willy's theme)`,
@@ -106,11 +107,11 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 11.1,
+                    mixTime: `0:12:00.00`,
                     lyric: `Hilltops gnashing dig out potholes,`,
                 },
                 {
-                    time: 14.7,
+                    mixTime: `0:15:11.25`,
                     lyric: [
                         `the`,
                         {
@@ -152,7 +153,7 @@ export default {
                     ],
                 },
                 {
-                    time: 17.9,
+                    mixTime: `0:18:11.25`,
                     lyric: [
                         {
                             anchor: `Hydrants burst`,
@@ -205,7 +206,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 23.1,
+                    mixTime: `0:24:00.00`,
                     lyric: [
                         `Swill pop poured from`,
                         {
@@ -221,7 +222,7 @@ export default {
                     ],
                 },
                 {
-                    time: 26.7,
+                    mixTime: `0:27:11.25`,
                     lyric: [
                         `his`,
                         {
@@ -260,7 +261,7 @@ export default {
             ],
             subVerse: [
                 {
-                    time: 30.2,
+                    mixTime: `0:31:03.75`,
                     lyric: {
                         isItalic: true,
                         lyric: [
@@ -287,7 +288,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 32.9,
+                    mixTime: `0:33:22.50`,
                     lyric: [
                         `licking lips`,
                         {
@@ -311,11 +312,11 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 35.1,
+                    mixTime: `0:36:00.00`,
                     lyric: `Oh, has Willy the Cocoa come`,
                 },
                 {
-                    time: 39.3,
+                    mixTime: `0:40:03.75`,
                     lyric: [
                         `for`,
                         {
@@ -332,7 +333,7 @@ export default {
                     ],
                 },
                 {
-                    time: 41.6,
+                    mixTime: `0:42:11.25`,
                     lyric: [
                         `Saluting Mummy doing some`,
                         {
@@ -349,7 +350,7 @@ export default {
                     ],
                 },
                 {
-                    time: 45.5,
+                    mixTime: `0:46:03.75`,
                     lyric: [
                         `when`,
                         {
@@ -390,7 +391,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 47.7,
+                    mixTime: `0:48:11.25`,
                     lyric: [
                         `As`,
                         {
@@ -410,7 +411,7 @@ export default {
                     ],
                 },
                 {
-                    time: 50.9,
+                    mixTime: `0:51:22.50`,
                     lyric: [
                         `launching`,
                         {
@@ -428,11 +429,11 @@ export default {
                     ],
                 },
                 {
-                    time: 53.9,
+                    mixTime: `0:54:22.50`,
                     lyric: `Willy ducks behind the porch steps and laughs.`,
                 },
                 {
-                    time: 59.5,
+                    mixTime: `1:00:00.00`,
                     lyric: [
                         `Oh ma'am, I`,
                         {
@@ -449,7 +450,7 @@ export default {
                     ],
                 },
                 {
-                    time: 62.9,
+                    mixTime: `1:03:22.50`,
                     lyric: [
                         `he croaks, stroking`,
                         {
@@ -466,7 +467,7 @@ export default {
                     ],
                 },
                 {
-                    time: 65.7,
+                    mixTime: `1:06:11.25`,
                     lyric: [
                         `And three years howling is the`,
                         {
@@ -530,7 +531,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 71.5,
+                    mixTime: `1:12:00.00`,
                     lyric: [
                         `Prying`,
                         {
@@ -573,7 +574,7 @@ export default {
                     ],
                 },
                 {
-                    time: 74.5,
+                    mixTime: `1:15:11.25`,
                     lyric: [
                         `a`,
                         {
@@ -602,7 +603,7 @@ export default {
                     ],
                 },
                 {
-                    time: 77.4,
+                    mixTime: `1:18:11.25`,
                     lyric: [
                         `with his tummy clenched, muffling`,
                         {
@@ -618,11 +619,11 @@ export default {
                     ],
                 },
                 {
-                    time: 80.9,
+                    mixTime: `1:21:22.50`,
                     lyric: `Papa storms in roaring, Boy, are you proud?`,
                 },
                 {
-                    time: 83,
+                    mixTime: `1:24:11.25`,
                     lyric: [
                         `You'd learn him good, when`,
                         {
@@ -647,11 +648,11 @@ export default {
                     ],
                 },
                 {
-                    time: 86,
+                    mixTime: `1:27:11.25`,
                     lyric: `all went instead to this clever head of yours.`,
                 },
                 {
-                    time: 89,
+                    mixTime: `1:30:11.25`,
                     lyric: `So to baby— to your brother— you'll say sorry for the world!`,
                 },
             ],
@@ -662,7 +663,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 96,
+                    mixTime: `1:37:15.00`,
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(Willy's theme)`,
@@ -676,7 +677,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 106,
+                    mixTime: `1:48:00.00`,
                     lyric: [
                         {
                             anchor: `Killcrop`,
@@ -692,7 +693,7 @@ export default {
                     ],
                 },
                 {
-                    time: 110,
+                    mixTime: `1:51:22.50`,
                     lyric: [
                         {
                             anchor: `soused loafers`,
@@ -716,7 +717,7 @@ export default {
                     ],
                 },
                 {
-                    time: 113,
+                    mixTime: `1:54:22.50`,
                     lyric: [
                         {
                             anchor: `Hit this witch`,
@@ -761,11 +762,11 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 119,
+                    mixTime: `2:00:00.00`,
                     lyric: `Milksop cornered into scuffle,`,
                 },
                 {
-                    time: 122,
+                    mixTime: `2:03:11.25`,
                     lyric: [
                         `a`,
                         {
@@ -795,7 +796,7 @@ export default {
             ],
             subVerse: [
                 {
-                    time: 126,
+                    mixTime: `2:07:03.75`,
                     lyric: {
                         isItalic: true,
                         lyric: [
@@ -827,7 +828,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 128,
+                    mixTime: `2:09:22.50`,
                     lyric: [
                         `dripping`,
                         {
@@ -859,7 +860,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 131,
+                    mixTime: `2:12:00.00`,
                     lyric: [
                         `Oh, and`,
                         {
@@ -888,7 +889,7 @@ export default {
                     ],
                 },
                 {
-                    time: 134,
+                    mixTime: `2:15:22.50`,
                     lyric: [
                         `that saw this`,
                         {
@@ -922,7 +923,7 @@ export default {
                     ],
                 },
                 {
-                    time: 137,
+                    mixTime: `2:18:22.50`,
                     lyric: [
                         {
                             anchor: `Baby bluebonnets`,
@@ -946,7 +947,7 @@ export default {
                     ],
                 },
                 {
-                    time: 140,
+                    mixTime: `2:21:22.50`,
                     lyric: [
                         `lay`,
                         {
@@ -980,7 +981,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 143,
+                    mixTime: `2:24:22.50`,
                     lyric: [
                         `But`,
                         {
@@ -998,7 +999,7 @@ export default {
                     ],
                 },
                 {
-                    time: 146,
+                    mixTime: `2:27:22.50`,
                     lyric: [
                         `being ever stuck in`,
                         {
@@ -1041,7 +1042,7 @@ export default {
                     ],
                 },
                 {
-                    time: 149,
+                    mixTime: `2:30:22.50`,
                     lyric: [
                         `Are you sick?`,
                         {
@@ -1060,15 +1061,15 @@ export default {
                     ],
                 },
                 {
-                    time: 155,
+                    mixTime: `2:36:00.00`,
                     lyric: `And do we speak in winded whimpers`,
                 },
                 {
-                    time: 158,
+                    mixTime: `2:39:22.50`,
                     lyric: `or squelch shreds of a summer gone,`,
                 },
                 {
-                    time: 161,
+                    mixTime: `2:42:22.50`,
                     lyric: `ever conscious of days past forever wrong?`,
                 },
             ],
@@ -1079,7 +1080,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 167,
+                    mixTime: `2:48:00.00`,
                     lyric: [
                         `Such`,
                         {
@@ -1096,7 +1097,7 @@ export default {
                     ],
                 },
                 {
-                    time: 171,
+                    mixTime: `2:51:22.50`,
                     lyric: [
                         `for a cub`,
                         {
@@ -1125,7 +1126,7 @@ export default {
                     ],
                 },
                 {
-                    time: 173,
+                    mixTime: `2:54:11.25`,
                     lyric: [
                         `Son,`,
                         {
@@ -1142,15 +1143,15 @@ export default {
                     ],
                 },
                 {
-                    time: 177,
+                    mixTime: `2:57:22.50`,
                     lyric: `to finally rest those creaking bones!`,
                 },
                 {
-                    time: 179,
+                    mixTime: `3:00:11.25`,
                     lyric: `Life's like this quilt: patchy, then it fills…`,
                 },
                 {
-                    time: 183,
+                    mixTime: `3:03:11.25`,
                     lyric: [
                         `In time, with`,
                         {
@@ -1194,7 +1195,7 @@ export default {
                     ],
                 },
                 {
-                    time: 185,
+                    mixTime: `3:06:11.25`,
                     lyric: `Then to Willy, in the cover could say sorry for the world!`,
                 },
             ],
@@ -1206,7 +1207,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 191,
+                    mixTime: `3:12:00.00`,
                     lyric: [
                         {
                             anchor: [
@@ -1240,7 +1241,7 @@ export default {
                     ],
                 },
                 {
-                    time: 197,
+                    mixTime: `3:18:00.00`,
                     lyric: [
                         `Oh,`,
                         {
