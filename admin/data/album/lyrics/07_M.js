@@ -1019,7 +1019,7 @@ export default {
                             anchor: `"Mara-iachi"`,
                             wiki: `Mariachi`,
                         },
-                        `style. But I decided it wouldn't fit the song's tempo and quickly scrapped it. However, I then got the idea to model an outro after the`,
+                        `style. But I decided it wouldn't fit the song's tempo and quickly scrapped it. Still, it gave me an idea to model the outro after the`,
                         {
                             anchor: `Los Lobos`,
                             wiki: `Los_Lobos`,

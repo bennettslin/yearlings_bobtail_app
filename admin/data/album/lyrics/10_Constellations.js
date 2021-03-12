@@ -1862,12 +1862,12 @@ export default {
                 todo: true,
                 card: {
                     description: [
-                        `For a song about recreational drug use, I naturally sought counsel from the Beatles during their`,
+                        `For a song about recreational drug use, I naturally turned to the Beatles in their`,
                         {
                             anchor: `psychedelic`,
                             wiki: `Psychedelic_rock`,
                         },
-                        `period.`,
+                        `period for ideas.`,
                         {
                             anchor: `"Tomorrow Never Knows"`,
                             wiki: `Tomorrow_Never_Knows`,
@@ -1877,7 +1877,7 @@ export default {
                             anchor: `seagull's`,
                             wiki: `Gull`,
                         },
-                        `cry, which I tried to recreate by pinching off the airstream blown through the window of a recorder. The result wasn't what I had hoped for, but kept in the background, it contributes nicely to the overall atmosphere.`,
+                        `cry, which I tried to recreate by pinching off the airstream blown through the window of a recorder. The result wasn't what I'd hoped for. But kept in the background, it contributes nicely to the overall atmosphere.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
