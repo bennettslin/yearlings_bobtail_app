@@ -12,7 +12,7 @@ export default [
     },
     {
         taskName: `Refine song times.`,
-        workedHours: 5,
+        workedHours: 7,
         neededHours: 10,
     },
 
