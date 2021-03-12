@@ -1,4 +1,5 @@
 import albumLyrics from '../lyrics'
+import { getVerseTimeFromMixTimes } from './time'
 
 import { addVerseDurations } from './verse'
 
@@ -19,7 +20,7 @@ const _getIndexedVersesForUnit = (unit) => {
 }
 
 const _addUnitVerseLists = (songIndex, song) => {
-    const { lyricUnits } = albumLyrics[songIndex]
+    const { lyricUnits, mixTime: songMixTime } = albumLyrics[songIndex]
 
     const
         unitVerseIndicesList = [],
@@ -36,7 +37,12 @@ const _addUnitVerseLists = (songIndex, song) => {
 
             // Also tell verse its index.
             verse.verseIndex = verseIndex
-            verseStartTimes.push(verse.time)
+            verseStartTimes.push(
+                // TODO: Eventually all of the songs will have mix times.
+                verse.mixTime ?
+                    getVerseTimeFromMixTimes(songMixTime, verse.mixTime) :
+                    verse.time,
+            )
             verseIndex++
         })
 
@@ -89,7 +95,7 @@ const _addUnitLists = (songIndex, song) => {
         if (subVerse) {
             withUnitSubVerseIndices = withUnitSubVerseIndices || {}
             withUnitSubVerseIndices[unitIndex] = subVerse.map(
-                verse => verse.verseIndex
+                verse => verse.verseIndex,
             )
         }
         if (sideCard) {

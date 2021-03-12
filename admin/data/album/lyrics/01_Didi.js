@@ -23,7 +23,8 @@ import {
 export default {
     path: 'didi',
     title: 'Didi (弟弟)',
-    playerTime: 0,
+    playerTime: 0.014,
+    mixTime: '0:01:09.54',
     overview: `As a child, I depended on my older sister to do most everything for me, like zipping up my jacket. One day when she wasn't around to help, I pooped in my pants and had to be sent home from school.`,
     lyricUnits: [
         {
@@ -71,7 +72,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 0,
+                    mixTime: '0:01:09.54',
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(Bennett's theme)`,
@@ -117,7 +118,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 11.5,
+                    mixTime: '0:12:28.81',
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(whistles)`,
@@ -131,11 +132,11 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 17.2,
+                    mixTime: '0:18:18.30',
                     lyric: `Didi left the house this morning`,
                 },
                 {
-                    time: 22.8,
+                    mixTime: '0:24:07.70',
                     lyric: [
                         `wondering to himself, who would`,
                         {
@@ -166,11 +167,11 @@ export default {
                     ],
                 },
                 {
-                    time: 28.5,
+                    mixTime: '0:29:27.13',
                     lyric: `And he left alone because he`,
                 },
                 {
-                    time: 33.4,
+                    mixTime: '0:34:04.19',
                     lyric: `had to finish up all his orange juice.`,
                 },
             ],
@@ -206,7 +207,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 39.8,
+                    mixTime: '0:41:06.20',
                     lyric: [
                         `Didi, you've been following, I`,
                         {
@@ -222,7 +223,7 @@ export default {
                     ],
                 },
                 {
-                    time: 45.8,
+                    mixTime: '0:47:06.32',
                     lyric: `Didi, couldn't you find another sister to be near?`,
                 },
             ],
@@ -233,7 +234,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 51.8,
+                    mixTime: '0:53:04.78',
                     lyric: [
                         `Cause I get sick of hearing,`,
                         {
@@ -258,7 +259,7 @@ export default {
                     ],
                 },
                 {
-                    time: 57,
+                    mixTime: '0:58:03.10',
                     lyric: `And I tire of saying, "My Didi wants to come too."`,
                 },
             ],
@@ -291,7 +292,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 63,
+                    mixTime: '1:04:13.80',
                     lyric: [
                         `Didi`,
                         {
@@ -308,11 +309,11 @@ export default {
                     ],
                 },
                 {
-                    time: 68.7,
+                    mixTime: '1:10:03.25',
                     lyric: `so the nurse sent him home, snickered the recess crowd.`,
                 },
                 {
-                    time: 74.4,
+                    mixTime: '1:15:22.67',
                     lyric: [
                         `They saw him crying beside a`,
                         {
@@ -341,7 +342,7 @@ export default {
                     ],
                 },
                 {
-                    time: 79.3,
+                    mixTime: '1:19:29.75',
                     lyric: [
                         {
                             anchor: `decked in overalls`,
@@ -371,7 +372,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 85.7,
+                    mixTime: '1:27:01.64',
                     lyric: [
                         `Didi, you've`,
                         {
@@ -388,13 +389,13 @@ export default {
                     ],
                 },
                 {
-                    time: 91.7,
+                    mixTime: '1:33:01.64',
                     lyric: `Didi, come out, you can't soak there all night.`,
                 },
             ],
             subVerse: [
                 {
-                    time: 97.2,
+                    mixTime: '1:38:08.86',
                     lyric: {
                         isItalic: true,
                         lyric: `Don't little raisin fingers need to dry?`,
@@ -408,15 +409,15 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 100.5,
+                    mixTime: '1:41:26.57',
                     lyric: `Didi, someday you will be a hero`,
                 },
                 {
-                    time: 104,
+                    mixTime: '1:45:12.45',
                     lyric: `in the movies, fighting those`,
                 },
                 {
-                    time: 106.1,
+                    mixTime: '1:47:15.98',
                     lyric: [
                         {
                             anchor: `crooked thieves`,
@@ -458,11 +459,11 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 111.8,
+                    mixTime: '1:53:05.40',
                     lyric: `Didi, one day you will be a picture`,
                 },
                 {
-                    time: 115.3,
+                    mixTime: '1:56:21.32',
                     lyric: [
                         `taped to all the`,
                         {
@@ -478,11 +479,11 @@ export default {
                     ],
                 },
                 {
-                    time: 117.1,
+                    mixTime: '1:58:14.30',
                     lyric: `They'll say, who now could have ever figured`,
                 },
                 {
-                    time: 120.1,
+                    mixTime: '2:01:09.04',
                     lyric: [
                         `you'd`,
                         {
@@ -512,7 +513,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 123.1,
+                    mixTime: '2:04:14.40',
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(whistles)`,
@@ -526,11 +527,11 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 128.7,
+                    mixTime: '2:10:03.91',
                     lyric: `Didi dear, I'm sorry that I yelled at you that way.`,
                 },
                 {
-                    time: 134.7,
+                    mixTime: '2:16:03.92',
                     lyric: `Didi dear, I know today just wasn't your day.`,
                 },
             ],
@@ -541,11 +542,11 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 140.3,
+                    mixTime: '2:21:10.63',
                     lyric: `And now I think all I want is my Didi well by tomorrow,`,
                 },
                 {
-                    time: 146.1,
+                    mixTime: '2:27:11.25',
                     lyric: `and there are things I hope my Didi will never know.`,
                 },
             ],
@@ -557,11 +558,11 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 151.2,
+                    mixTime: '2:31:28.97',
                     lyric: `Yes, and now I think all I want is my Didi well by tomorrow,`,
                 },
                 {
-                    time: 157.4,
+                    mixTime: '2:38:20.27',
                     lyric: `and there are things I hope Didi will never have to know.`,
                 },
             ],
@@ -572,7 +573,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 163.3,
+                    mixTime: '2:44:20.26',
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(fade out)`,

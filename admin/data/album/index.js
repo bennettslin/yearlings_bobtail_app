@@ -45,6 +45,17 @@ const songs = getSongIndicesArray().map(songIndex => {
             song,
         })
 
+        // TODO: Eventually delete this when all times are safely established.
+        verseStartTimes.forEach((startTime, index) => {
+            if (!index) {
+                return true
+            }
+
+            if (startTime < verseStartTimes[index - 1]) {
+                throw new Error(`Verse ${index} has an earlier start time than the previous verse!`)
+            }
+        })
+
         addStanzaMetadata({
             songIndex,
             songDuration,
