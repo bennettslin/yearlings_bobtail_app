@@ -16,7 +16,8 @@ import {
 export default {
     path: 'good-night-sita',
     title: 'Good Night, Sita',
-    playerTime: 1346.4,
+    playerTime: 1346.412,
+    mixTime: `0:01:11.82`,
     overview: `Sometime after dating Catherine and a while before meeting Mara, I tried to hit on a university student named Sita. Nothing came of the few dates that followed, however, and I quickly scurried away in disappointment.`,
     lyricUnits: [
         {
@@ -38,7 +39,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 0,
+                    mixTime: `0:01:11.82`,
                     lyric: `"Good night," she says`,
                 },
             ],
@@ -72,7 +73,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 3,
+                    mixTime: `0:04:21.72`,
                     lyric: [
                         `or`,
                         {
@@ -89,15 +90,15 @@ export default {
                     ],
                 },
                 {
-                    time: 5,
+                    mixTime: `0:06:18.42`,
                     lyric: `by a gutter gurgling then we'll choose`,
                 },
                 {
-                    time: 7,
+                    mixTime: `0:08:15.10`,
                     lyric: `either never live yet live on or to`,
                 },
                 {
-                    time: 9,
+                    mixTime: `0:10:11.80`,
                     lyric: [
                         `love first`,
                         {
@@ -139,15 +140,15 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 11,
+                    mixTime: `0:12:08.51`,
                     lyric: `when cesspit dead ends for further speech`,
                 },
                 {
-                    time: 12,
+                    mixTime: `0:14:05.19`,
                     lyric: `are these stuttered sentences we speak`,
                 },
                 {
-                    time: 14,
+                    mixTime: `0:16:01.89`,
                     lyric: [
                         `for this kid wearing no`,
                         {
@@ -170,7 +171,7 @@ export default {
                     ],
                 },
                 {
-                    time: 16,
+                    mixTime: `0:17:28.58`,
                     lyric: [
                         {
                             anchor: `Dutch courage`,
@@ -260,11 +261,11 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 18,
+                    mixTime: `0:19:25.27`,
                     lyric: `but even no sponge`,
                 },
                 {
-                    time: 20,
+                    mixTime: `0:21:21.96`,
                     lyric: [
                         {
                             anchor: `nor a barnacle`,
@@ -296,7 +297,7 @@ export default {
                     ],
                 },
                 {
-                    time: 22,
+                    mixTime: `0:23:18.66`,
                     lyric: {
                         anchor: `swept in unchartable tides`,
                         todo: true,
@@ -326,7 +327,7 @@ export default {
                     },
                 },
                 {
-                    time: 24,
+                    mixTime: `0:25:29.53`,
                     lyric: [
                         `they just`,
                         {
@@ -342,7 +343,7 @@ export default {
                     ],
                 },
                 {
-                    time: 26,
+                    mixTime: `0:27:26.21`,
                     lyric: [
                         `for the`,
                         {
@@ -365,7 +366,7 @@ export default {
                     ],
                 },
                 {
-                    time: 28,
+                    mixTime: `0:30:07.08`,
                     lyric: {
                         anchor: `heart of gold inside`,
                         todo: true,
@@ -385,7 +386,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 29,
+                    mixTime: `0:31:05.42`,
                     lyric: [
                         `till then`,
                         {
@@ -402,7 +403,7 @@ export default {
                     ],
                 },
                 {
-                    time: 32,
+                    mixTime: `0:34:00.46`,
                     lyric: [
                         `to find the`,
                         {
@@ -423,7 +424,7 @@ export default {
                     ],
                 },
                 {
-                    time: 36,
+                    mixTime: `0:37:23.85`,
                     lyric: [
                         `who'd buy this`,
                         {
@@ -453,7 +454,7 @@ export default {
                     ],
                 },
                 {
-                    time: 40,
+                    mixTime: `0:41:17.23`,
                     lyric: `swaggering down these barren exhibit halls`,
                 },
             ],
@@ -464,11 +465,11 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 45,
+                    mixTime: `0:46:08.97`,
                     lyric: `but totems so revered`,
                 },
                 {
-                    time: 47,
+                    mixTime: `0:48:05.66`,
                     lyric: [
                         `when`,
                         {
@@ -513,7 +514,7 @@ export default {
                     ],
                 },
                 {
-                    time: 48,
+                    mixTime: `0:50:02.35`,
                     lyric: [
                         `in time are seen with`,
                         {
@@ -537,7 +538,7 @@ export default {
                     ],
                 },
                 {
-                    time: 50,
+                    mixTime: `0:51:29.05`,
                     lyric: `and slowly the story erodes`,
                 },
             ],
@@ -549,7 +550,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 52,
+                    mixTime: `0:53:25.73`,
                     lyric: [
                         {
                             anchor: `pidgin palaver`,
@@ -575,11 +576,11 @@ export default {
                     ],
                 },
                 {
-                    time: 54,
+                    mixTime: `0:55:22.44`,
                     lyric: `can only transfer good faith`,
                 },
                 {
-                    time: 56,
+                    mixTime: `0:57:19.14`,
                     lyric: [
                         `hyped up like some`,
                         {
@@ -596,7 +597,7 @@ export default {
                     ],
                 },
                 {
-                    time: 58,
+                    mixTime: `0:59:15.82`,
                     lyric: [
                         `that starts with a`,
                         {
@@ -619,15 +620,15 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 60,
+                    mixTime: `1:01:12.52`,
                     lyric: `but even so`,
                 },
                 {
-                    time: 62,
+                    mixTime: `1:03:09.21`,
                     lyric: `just that it ever rang at all`,
                 },
                 {
-                    time: 64,
+                    mixTime: `1:05:05.90`,
                     lyric: [
                         `for if the`,
                         {
@@ -644,11 +645,11 @@ export default {
                     ],
                 },
                 {
-                    time: 66,
+                    mixTime: `1:07:02.59`,
                     lyric: `you're just ecstatic she called`,
                 },
                 {
-                    time: 68,
+                    mixTime: `1:09:13.46`,
                     lyric: [
                         `what this`,
                         {
@@ -673,7 +674,7 @@ export default {
                     ],
                 },
                 {
-                    time: 70,
+                    mixTime: `1:11:24.33`,
                     lyric: `strutting on the wall`,
                 },
             ],
@@ -684,11 +685,11 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 71,
+                    mixTime: `1:12:22.67`,
                     lyric: `we whine when first we got shunned`,
                 },
                 {
-                    time: 73,
+                    mixTime: `1:15:03.54`,
                     lyric: [
                         `then wise up and`,
                         {
@@ -705,11 +706,11 @@ export default {
                     ],
                 },
                 {
-                    time: 75,
+                    mixTime: `1:17:00.22`,
                     lyric: `last show's set still propped up`,
                 },
                 {
-                    time: 77,
+                    mixTime: `1:18:26.92`,
                     lyric: [
                         `so we'll`,
                         {
@@ -755,7 +756,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 79,
+                    mixTime: `1:20:09.45`,
                     lyric: [
                         `though each`,
                         {
@@ -772,15 +773,15 @@ export default {
                     ],
                 },
                 {
-                    time: 81,
+                    mixTime: `1:22:20.31`,
                     lyric: `to his tribe left old and jaded`,
                 },
                 {
-                    time: 83,
+                    mixTime: `1:24:17.01`,
                     lyric: `the boy brave who cultivated`,
                 },
                 {
-                    time: 84,
+                    mixTime: `1:26:13.70`,
                     lyric: [
                         `brave`,
                         {
@@ -811,7 +812,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 86,
+                    mixTime: `1:27:26.21`,
                     lyric: [
                         `but`,
                         {
@@ -828,15 +829,15 @@ export default {
                     ],
                 },
                 {
-                    time: 88,
+                    mixTime: `1:29:22.91`,
                     lyric: `hotlines get busy just as`,
                 },
                 {
-                    time: 90,
+                    mixTime: `1:31:19.60`,
                     lyric: `thoughts slide to slitting wrists that`,
                 },
                 {
-                    time: 92,
+                    mixTime: `1:33:16.29`,
                     lyric: [
                         `hint of`,
                         {
@@ -860,11 +861,11 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 94,
+                    mixTime: `1:35:12.98`,
                     lyric: `and a lass sniffing out these rote charms`,
                 },
                 {
-                    time: 96,
+                    mixTime: `1:37:09.68`,
                     lyric: [
                         `always rides in`,
                         {
@@ -887,7 +888,7 @@ export default {
                     ],
                 },
                 {
-                    time: 98,
+                    mixTime: `1:39:06.38`,
                     lyric: [
                         `as we wind an`,
                         {
@@ -910,7 +911,7 @@ export default {
                     ],
                 },
                 {
-                    time: 99,
+                    mixTime: `1:41:03.07`,
                     lyric: [
                         `with every given`,
                         {
@@ -940,7 +941,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 101,
+                    mixTime: `1:42:29.77`,
                     lyric: [
                         `and her`,
                         {
@@ -973,15 +974,15 @@ export default {
                     ],
                 },
                 {
-                    time: 103,
+                    mixTime: `1:44:26.45`,
                     lyric: `in these clutching fingers of steel`,
                 },
                 {
-                    time: 105,
+                    mixTime: `1:46:23.15`,
                     lyric: `too untrusting to ever unpeel`,
                 },
                 {
-                    time: 107,
+                    mixTime: `1:49:04.02`,
                     lyric: [
                         `from a`,
                         {
@@ -997,11 +998,11 @@ export default {
                     ],
                 },
                 {
-                    time: 109,
+                    mixTime: `1:51:00.70`,
                     lyric: `settled for hugging only curbs`,
                 },
                 {
-                    time: 111,
+                    mixTime: `1:52:13.22`,
                     lyric: `and having only tires squeal`,
                 },
             ],
@@ -1039,15 +1040,15 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 113,
+                    mixTime: `1:54:09.92`,
                     lyric: `when boys who mope`,
                 },
                 {
-                    time: 114,
+                    mixTime: `1:55:22.44`,
                     lyric: `know the beauty of simply limping away blind`,
                 },
                 {
-                    time: 116,
+                    mixTime: `1:58:03.30`,
                     lyric: [
                         `as the`,
                         {
@@ -1071,15 +1072,15 @@ export default {
                     ],
                 },
                 {
-                    time: 118,
+                    mixTime: `2:00:00.00`,
                     lyric: `where willows softly conspire`,
                 },
                 {
-                    time: 120,
+                    mixTime: `2:01:26.69`,
                     lyric: `when boys who cope`,
                 },
                 {
-                    time: 121,
+                    mixTime: `2:02:25.03`,
                     lyric: `only risk invites denied`,
                 },
             ],
@@ -1091,7 +1092,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 123,
+                    mixTime: `2:04:21.72`,
                     lyric: {
                         anchor: `I sigh, "Good night."`,
                         todo: true,
