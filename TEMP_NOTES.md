@@ -1,4 +1,7 @@
 # TODO:
+* Fix Sasha timing.
+* Establish where the timing went off.
+
 * Clarify logState labels?
 * Adjust volume?
 * Audio shortcuts?
