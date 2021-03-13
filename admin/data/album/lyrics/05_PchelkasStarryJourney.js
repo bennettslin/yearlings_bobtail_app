@@ -27,7 +27,8 @@ import {
 export default {
     path: `pchelkas-starry-journey`,
     title: `Pchelka's Starry Journey`,
-    playerTime: 756,
+    playerTime: 755.651,
+    mixTime: `0:01:26.72`,
     overview: `At the height of my years of getting bullied, a strange letter arrived with the promise of spiritual answers. After I sent numerous payments, it was finally revealed to me that I belonged to a race of interstellar beings, and my mission was to shut myself off from the world. I did so by becoming unresponsive in an autistic manner like my brother, which made me feel a psychic bond with him. But as my sanity chipped away, I gradually came to see that I was in a mail-order cult.`,
     lyricUnits: [
         {
@@ -56,7 +57,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 0,
+                    mixTime: `0:01:26.72`,
                     lyric: {
                         isEmphasis: true,
                         lyric: [
@@ -108,7 +109,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 5,
+                    mixTime: `0:07:05.56`,
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(Christopher's theme)`,
@@ -155,15 +156,15 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 11,
+                    mixTime: `0:13:19.13`,
                     lyric: `Mother, woken from her nap,`,
                 },
                 {
-                    time: 13,
+                    mixTime: `0:15:28.25`,
                     lyric: `hears a piercing scream and thunders,`,
                 },
                 {
-                    time: 15,
+                    mixTime: `0:17:23.54`,
                     lyric: [
                         `"Why'd you`,
                         {
@@ -179,7 +180,7 @@ export default {
                     ],
                 },
                 {
-                    time: 17,
+                    mixTime: `0:19:18.84`,
                     lyric: `when he so looks up to you!`,
                 },
             ],
@@ -191,11 +192,11 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 19,
+                    mixTime: `0:21:00.31`,
                     lyric: `Don't you remember days past,`,
                 },
                 {
-                    time: 21,
+                    mixTime: `0:23:09.44`,
                     lyric: [
                         `when you wanted to`,
                         {
@@ -212,11 +213,11 @@ export default {
                     ],
                 },
                 {
-                    time: 23,
+                    mixTime: `0:25:04.75`,
                     lyric: `but your daddy couldn't afford it,`,
                 },
                 {
-                    time: 25,
+                    mixTime: `0:27:00.04`,
                     lyric: `so you brought him into your room?`,
                 },
             ],
@@ -228,7 +229,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 27,
+                    mixTime: `0:28:25.34`,
                     lyric: [
                         `You stowed away`,
                         {
@@ -244,7 +245,7 @@ export default {
                     ],
                 },
                 {
-                    time: 30,
+                    mixTime: `0:32:15.93`,
                     lyric: [
                         `We`,
                         {
@@ -264,7 +265,7 @@ export default {
             ],
             subVerse: [
                 {
-                    time: 34,
+                    mixTime: `0:36:20.36`,
                     lyric: {
                         isEmphasis: true,
                         lyric: {
@@ -299,7 +300,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 38,
+                    mixTime: `0:40:08.16`,
                     lyric: [
                         `Oh brother, when all you`,
                         {
@@ -320,7 +321,7 @@ export default {
                     ],
                 },
                 {
-                    time: 40,
+                    mixTime: `0:42:11.73`,
                     lyric: [
                         `they'll catch you by`,
                         {
@@ -338,11 +339,11 @@ export default {
                     ],
                 },
                 {
-                    time: 42,
+                    mixTime: `0:44:20.86`,
                     lyric: `threatening never to release you`,
                 },
                 {
-                    time: 44,
+                    mixTime: `0:46:16.16`,
                     lyric: [
                         `till you`,
                         {
@@ -366,7 +367,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 46,
+                    mixTime: `0:47:27.64`,
                     lyric: [
                         {
                             anchor: `Feigning sick,`,
@@ -382,11 +383,11 @@ export default {
                     ],
                 },
                 {
-                    time: 48,
+                    mixTime: `0:49:22.93`,
                     lyric: `these words in a comic to me speaking:`,
                 },
                 {
-                    time: 50,
+                    mixTime: `0:52:02.06`,
                     lyric: [
                         `"Are you`,
                         {
@@ -411,7 +412,7 @@ export default {
                     ],
                 },
                 {
-                    time: 52,
+                    mixTime: `0:53:27.36`,
                     lyric: `I clipped and mailed the ad.`,
                 },
             ],
@@ -422,7 +423,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 54,
+                    mixTime: `0:55:22.66`,
                     lyric: [
                         `Soon`,
                         {
@@ -439,11 +440,11 @@ export default {
                     ],
                 },
                 {
-                    time: 57,
+                    mixTime: `0:59:13.26`,
                     lyric: `and then one day one came and made me cry and cry.`,
                 },
                 {
-                    time: 61,
+                    mixTime: `1:03:03.85`,
                     lyric: [
                         {
                             anchor: `Red pouches unspent`,
@@ -466,7 +467,7 @@ export default {
                     ],
                 },
                 {
-                    time: 64,
+                    mixTime: `1:06:24.45`,
                     lyric: `while all the weeks I waited, weighing those words in bold text:`,
                 },
             ],
@@ -477,7 +478,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 68,
+                    mixTime: `1:10:28.89`,
                     lyric: [
                         {
                             anchor: `"Are you a Beyonder`,
@@ -493,7 +494,7 @@ export default {
                     ],
                 },
                 {
-                    time: 71,
+                    mixTime: `1:14:05.66`,
                     lyric: [
                         `Do you often feel like a`,
                         {
@@ -509,7 +510,7 @@ export default {
                     ],
                 },
                 {
-                    time: 76,
+                    mixTime: `1:17:26.26`,
                     lyric: [
                         `But`,
                         {
@@ -565,7 +566,7 @@ export default {
                     ],
                 },
                 {
-                    time: 79,
+                    mixTime: `1:21:16.85`,
                     lyric: [
                         {
                             anchor: `Gogo and his Didi,`,
@@ -607,7 +608,7 @@ export default {
                     ],
                 },
                 {
-                    time: 83,
+                    mixTime: `1:24:23.63`,
                     lyric: [
                         `Till`,
                         {
@@ -651,7 +652,7 @@ export default {
                     ],
                 },
                 {
-                    time: 86,
+                    mixTime: `1:28:28.05`,
                     lyric: [
                         `dragged to sled by`,
                         {
@@ -697,11 +698,11 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 90,
+                    mixTime: `1:32:04.82`,
                     lyric: `"Far from home and shaped like common men,`,
                 },
                 {
-                    time: 93,
+                    mixTime: `1:35:25.43`,
                     lyric: [
                         `Beyonders bleed the most, their`,
                         {
@@ -729,11 +730,11 @@ export default {
                     ],
                 },
                 {
-                    time: 98,
+                    mixTime: `1:39:29.84`,
                     lyric: `We've received your fee, and per the tests,`,
                 },
                 {
-                    time: 101,
+                    mixTime: `1:43:06.63`,
                     lyric: `you are indeed a seed from that nebular nest.`,
                 },
             ],
@@ -755,7 +756,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 105,
+                    mixTime: `1:46:27.21`,
                     lyric: [
                         `Is this`,
                         {
@@ -779,11 +780,11 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 112,
+                    mixTime: `1:54:08.42`,
                     lyric: `Beyonders pine for a love no mortals give,`,
                 },
                 {
-                    time: 116,
+                    mixTime: `1:57:29.02`,
                     lyric: [
                         `one they'll find only once we build the`,
                         {
@@ -799,11 +800,11 @@ export default {
                     ],
                 },
                 {
-                    time: 119,
+                    mixTime: `2:01:19.63`,
                     lyric: `Your monthly tithe shall fund good tidings soon to come.`,
                 },
                 {
-                    time: 123,
+                    mixTime: `2:05:24.04`,
                     lyric: [
                         `But till then, here's`,
                         {
@@ -847,7 +848,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 128,
+                    mixTime: `2:09:28.46`,
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(Christopher's theme)`,
@@ -861,7 +862,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 134,
+                    mixTime: `2:16:12.02`,
                     lyric: [
                         `So thus we learned to`,
                         {
@@ -877,11 +878,11 @@ export default {
                     ],
                 },
                 {
-                    time: 136,
+                    mixTime: `2:18:07.31`,
                     lyric: `as spies among the carnal fallen,`,
                 },
                 {
-                    time: 138,
+                    mixTime: `2:20:16.44`,
                     lyric: [
                         `twin friars`,
                         {
@@ -911,7 +912,7 @@ export default {
                     ],
                 },
                 {
-                    time: 140,
+                    mixTime: `2:22:11.73`,
                     lyric: `from a star's placenta sac.`,
                 },
             ],
@@ -923,11 +924,11 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 141,
+                    mixTime: `2:23:23.21`,
                     lyric: `Braced for an earth stay unloved,`,
                 },
                 {
-                    time: 143,
+                    mixTime: `2:25:18.52`,
                     lyric: [
                         `twits daily`,
                         {
@@ -943,11 +944,11 @@ export default {
                     ],
                 },
                 {
-                    time: 145,
+                    mixTime: `2:27:27.64`,
                     lyric: `Mirthful, the merciless would hurt you,`,
                 },
                 {
-                    time: 147,
+                    mixTime: `2:29:22.93`,
                     lyric: [
                         `as`,
                         {
@@ -982,11 +983,11 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 149,
+                    mixTime: `2:31:18.23`,
                     lyric: `Stung by venomous vipers, our muted youths lapsed.`,
                 },
                 {
-                    time: 153,
+                    mixTime: `2:35:08.83`,
                     lyric: [
                         `We knew the`,
                         {
@@ -1010,7 +1011,7 @@ export default {
                     ],
                 },
                 {
-                    time: 156,
+                    mixTime: `2:38:29.44`,
                     lyric: [
                         `But`,
                         {
@@ -1034,7 +1035,7 @@ export default {
                     ],
                 },
                 {
-                    time: 160,
+                    mixTime: `2:42:06.21`,
                     lyric: [
                         `The only`,
                         {
@@ -1083,7 +1084,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 164,
+                    mixTime: `2:46:24.45`,
                     lyric: [
                         {
                             anchor: `Mushing onward,`,
@@ -1154,7 +1155,7 @@ export default {
                     ],
                 },
                 {
-                    time: 167,
+                    mixTime: `2:50:01.22`,
                     lyric: [
                         `to`,
                         {
@@ -1202,7 +1203,7 @@ export default {
                     ],
                 },
                 {
-                    time: 171,
+                    mixTime: `2:53:08.01`,
                     lyric: [
                         `Choked, he's soon a goner,`,
                         {
@@ -1218,7 +1219,7 @@ export default {
                     ],
                 },
                 {
-                    time: 175,
+                    mixTime: `2:57:12.43`,
                     lyric: [
                         `this pack honors only the`,
                         {
@@ -1246,7 +1247,7 @@ export default {
                     ],
                 },
                 {
-                    time: 178,
+                    mixTime: `3:00:19.20`,
                     lyric: [
                         `Next cabins come equipped with`,
                         {
@@ -1271,7 +1272,7 @@ export default {
                     ],
                 },
                 {
-                    time: 182,
+                    mixTime: `3:04:09.80`,
                     lyric: `nothing too rich for glorious cosmonauts!`,
                 },
             ],
@@ -1282,7 +1283,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 186,
+                    mixTime: `3:08:00.41`,
                     lyric: [
                         `I'm`,
                         {
@@ -1312,7 +1313,7 @@ export default {
                     ],
                 },
                 {
-                    time: 189,
+                    mixTime: `3:11:21.00`,
                     lyric: [
                         `I couldn't ditch my wails, I`,
                         {
@@ -1365,7 +1366,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 193,
+                    mixTime: `3:15:11.59`,
                     lyric: [
                         `"Kids say you're`,
                         {
@@ -1382,7 +1383,7 @@ export default {
                     ],
                 },
                 {
-                    time: 200,
+                    mixTime: `3:22:22.80`,
                     lyric: [
                         `Mushka,`,
                         {

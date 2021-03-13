@@ -24,7 +24,8 @@ import {
 export default {
     path: 'odin',
     title: 'Odin',
-    playerTime: 555.3,
+    playerTime: 555.371,
+    // mixTime: `0:00:00.00`,
     overview: `Taiwan showed me how differently I would have turned out had my parents not immigrated to America. Yet I was still worlds away from what Sasha needed me to be. Life seemed as infinitely fluid as it was immovably fixed, and I wasn't sure which terrified me more. Our house cat Odin died of old age later that summer, just as I was working out my spiritual beliefs. And yet, the eternal life promised by faith seemed no less dreadful to me than the finality of death.`,
     isDoublespeaker: true,
     lyricUnits: [
@@ -55,6 +56,7 @@ export default {
             mainVerses: [
                 {
                     time: 0,
+                    // mixTime: `0:00:00.00`,
                     lyricCentre: `Mr. Odin died today.`,
                 },
             ],
@@ -66,6 +68,7 @@ export default {
             mainVerses: [
                 {
                     time: 8,
+                    // mixTime: `0:00:00.00`,
                     lyricLeft: `Lights off, from your`,
                     lyricRight: [
                         {
@@ -112,6 +115,7 @@ export default {
                 },
                 {
                     time: 10,
+                    // mixTime: `0:00:00.00`,
                     lyricLeft: [
                         {
                             anchor: `hiding place of retreat`,
@@ -157,6 +161,7 @@ export default {
                 },
                 {
                     time: 14,
+                    // mixTime: `0:00:00.00`,
                     lyricLeft: [
                         `This`,
                         {
@@ -195,6 +200,7 @@ export default {
                 },
                 {
                     time: 17,
+                    // mixTime: `0:00:00.00`,
                     lyricLeft: `silent poll of colors overused.`,
                     lyricRight: `sigh and pull the covers over you.`,
                 },
@@ -224,11 +230,13 @@ export default {
             mainVerses: [
                 {
                     time: 20,
+                    // mixTime: `0:00:00.00`,
                     lyricLeft: `This latest piece`,
                     lyricRight: `In safest sleep,`,
                 },
                 {
                     time: 23,
+                    // mixTime: `0:00:00.00`,
                     lyricLeft: [
                         `you drew with`,
                         {
@@ -274,6 +282,7 @@ export default {
             mainVerses: [
                 {
                     time: 26,
+                    // mixTime: `0:00:00.00`,
                     lyricLeft: [
                         `The`,
                         {
@@ -293,6 +302,7 @@ export default {
                 },
                 {
                     time: 28,
+                    // mixTime: `0:00:00.00`,
                     lyricLeft: `you swing the iron screen.`,
                     lyricRight: [
                         `do`,
@@ -324,6 +334,7 @@ export default {
                 },
                 {
                     time: 32,
+                    // mixTime: `0:00:00.00`,
                     lyricLeft: [
                         `By the`,
                         {
@@ -373,6 +384,7 @@ export default {
                 },
                 {
                     time: 35,
+                    // mixTime: `0:00:00.00`,
                     lyricLeft: [
                         `baby steps inch towards`,
                         {
@@ -426,6 +438,7 @@ export default {
             mainVerses: [
                 {
                     time: 38,
+                    // mixTime: `0:00:00.00`,
                     lyricLeft: [
                         `Then down`,
                         {
@@ -450,6 +463,7 @@ export default {
                 },
                 {
                     time: 40,
+                    // mixTime: `0:00:00.00`,
                     lyricLeft: [
                         `through`,
                         {
@@ -556,6 +570,7 @@ export default {
                 },
                 {
                     time: 44,
+                    // mixTime: `0:00:00.00`,
                     lyricLeft: `Raccoons rummage round some rubbish bags,`,
                     lyricRight: [
                         `As you plummet down from`,
@@ -580,6 +595,7 @@ export default {
                 },
                 {
                     time: 47,
+                    // mixTime: `0:00:00.00`,
                     lyricLeft: [
                         `till a`,
                         {
@@ -643,6 +659,7 @@ export default {
             mainVerses: [
                 {
                     time: 50,
+                    // mixTime: `0:00:00.00`,
                     lyricLeft: [
                         `You seek the`,
                         {
@@ -697,6 +714,7 @@ export default {
                 },
                 {
                     time: 53,
+                    // mixTime: `0:00:00.00`,
                     lyricLeft: [
                         `that was`,
                         {
@@ -722,6 +740,7 @@ export default {
             mainVerses: [
                 {
                     time: 59,
+                    // mixTime: `0:00:00.00`,
                     lyricLeft: `And if flutters with the fairest`,
                     lyricRight: [
                         `And if`,
@@ -780,6 +799,7 @@ export default {
                 },
                 {
                     time: 63,
+                    // mixTime: `0:00:00.00`,
                     lyricLeft: `were just sins simply dreamt,`,
                     lyricRight: `weren't just myths between friends,`,
                 },
@@ -803,6 +823,7 @@ export default {
             mainVerses: [
                 {
                     time: 67,
+                    // mixTime: `0:00:00.00`,
                     // CONSIDER: Wormhole: Reference to insect in jar in Vegan Proclamation?
                     lyricLeft: `could some bottled butterfly`,
                     lyricRight: [
@@ -843,6 +864,7 @@ export default {
                 },
                 {
                     time: 70,
+                    // mixTime: `0:00:00.00`,
                     lyricLeft: {
                         anchor: `dream your whims instead?`,
                         todo: true,
@@ -911,6 +933,7 @@ export default {
             mainVerses: [
                 {
                     time: 73,
+                    // mixTime: `0:00:00.00`,
                     lyricLeft: `What's more, if all you live for`,
                     lyricRight: [
                         `But`,
@@ -936,6 +959,7 @@ export default {
                 },
                 {
                     time: 76,
+                    // mixTime: `0:00:00.00`,
                     lyricLeft: `still die at the end—`,
                     lyricRight: `till lives acquiesce,`,
                 },
@@ -949,6 +973,7 @@ export default {
             mainVerses: [
                 {
                     time: 79,
+                    // mixTime: `0:00:00.00`,
                     lyricLeft: [
                         `like Odin's ashes back from`,
                         {
@@ -1019,16 +1044,19 @@ export default {
                 },
                 {
                     time: 84,
+                    // mixTime: `0:00:00.00`,
                     lyricLeft: `which filled a chasm dug up underneath—`,
                     lyricRight: `which spilled a basket among other things—`,
                 },
                 {
                     time: 87,
+                    // mixTime: `0:00:00.00`,
                     lyricLeft: `can that which kills a cat`,
                     lyricRight: `a casket tilted back`,
                 },
                 {
                     time: 90,
+                    // mixTime: `0:00:00.00`,
                     lyricLeft: `spare his home if spread?`,
                     lyricRight: [
                         `where its`,
@@ -1055,6 +1083,7 @@ export default {
             mainVerses: [
                 {
                     time: 93,
+                    // mixTime: `0:00:00.00`,
                     lyricLeft: `You researched a gleam`,
                     lyricRight: [
                         `Your`,
@@ -1079,6 +1108,7 @@ export default {
                 },
                 {
                     time: 95,
+                    // mixTime: `0:00:00.00`,
                     lyricLeft: [
                         `to be a`,
                         {
@@ -1135,6 +1165,7 @@ export default {
                 },
                 {
                     time: 99,
+                    // mixTime: `0:00:00.00`,
                     lyricLeft: [
                         `and brought your raft behind the`,
                         {
@@ -1187,6 +1218,7 @@ export default {
                 },
                 {
                     time: 102,
+                    // mixTime: `0:00:00.00`,
                     lyricLeft: [
                         `to`,
                         {
@@ -1202,6 +1234,7 @@ export default {
                 },
                 {
                     time: 103,
+                    // mixTime: `0:00:00.00`,
                     lyricLeft: [
                         `if shark swarms withheld.`,
                     ],
@@ -1246,6 +1279,7 @@ export default {
             mainVerses: [
                 {
                     time: 105,
+                    // mixTime: `0:00:00.00`,
                     lyricLeft: [
                         {
                             anchor: `Buoy bobs`,
@@ -1264,6 +1298,7 @@ export default {
                 },
                 {
                     time: 107,
+                    // mixTime: `0:00:00.00`,
                     lyricLeft: {
                         anchor: `shivering for shivs unsheathed.`,
                         todo: true,
@@ -1316,6 +1351,7 @@ export default {
                 },
                 {
                     time: 111,
+                    // mixTime: `0:00:00.00`,
                     lyricLeft: `As roller coasters of waves comfort sighs,`,
                     lyricRight: [
                         `has`,
@@ -1341,6 +1377,7 @@ export default {
                 },
                 {
                     time: 114,
+                    // mixTime: `0:00:00.00`,
                     lyricLeft: [
                         `you frame`,
                         {
@@ -1373,11 +1410,13 @@ export default {
             mainVerses: [
                 {
                     time: 117,
+                    // mixTime: `0:00:00.00`,
                     lyricLeft: `in your dim, lingering gaze,`,
                     lyricRight: `with your beleaguered remains,`,
                 },
                 {
                     time: 120,
+                    // mixTime: `0:00:00.00`,
                     lyricLeft: `a victim of erosion.`,
                     lyricRight: `amidst dustbunnies frozen.`,
                 },
@@ -1391,10 +1430,12 @@ export default {
             mainVerses: [
                 {
                     time: 123,
+                    // mixTime: `0:00:00.00`,
                     lyric: `Should you hide, or could you fight,`,
                 },
                 {
                     time: 132,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `when your`,
                         {
@@ -1432,6 +1473,7 @@ export default {
             subVerse: [
                 {
                     time: 135,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `Can a`,
                         {
@@ -1449,6 +1491,7 @@ export default {
                 },
                 {
                     time: 137,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `pray for`,
                         {
@@ -1486,10 +1529,12 @@ export default {
             mainVerses: [
                 {
                     time: 141,
+                    // mixTime: `0:00:00.00`,
                     lyric: `But in time, wouldn't you find`,
                 },
                 {
                     time: 144,
+                    // mixTime: `0:00:00.00`,
                     lyric: `life is simply much too long?`,
                 },
             ],
@@ -1502,6 +1547,7 @@ export default {
             mainVerses: [
                 {
                     time: 147,
+                    // mixTime: `0:00:00.00`,
                     lyricLeft: [
                         `But for a`,
                         {
@@ -1546,6 +1592,7 @@ export default {
                 },
                 {
                     time: 150,
+                    // mixTime: `0:00:00.00`,
                     lyricLeft: `your ouija board said, "Son, just hum along."`,
                     lyricRight: `sworn feat aforesaid, doesn't come anon.`,
                 },
@@ -1558,6 +1605,7 @@ export default {
             mainVerses: [
                 {
                     time: 153,
+                    // mixTime: `0:00:00.00`,
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(electric mandolin)`,
@@ -1572,6 +1620,7 @@ export default {
             mainVerses: [
                 {
                     time: 166,
+                    // mixTime: `0:00:00.00`,
                     lyricLeft: [
                         `Though no`,
                         {
@@ -1611,6 +1660,7 @@ export default {
                 },
                 {
                     time: 168,
+                    // mixTime: `0:00:00.00`,
                     lyricLeft: [
                         `then returns them as a`,
                         {
@@ -1638,6 +1688,7 @@ export default {
             mainVerses: [
                 {
                     time: 173,
+                    // mixTime: `0:00:00.00`,
                     lyricLeft: [
                         `The sudsy ocean shapes its`,
                         {
@@ -1655,6 +1706,7 @@ export default {
                 },
                 {
                     time: 177,
+                    // mixTime: `0:00:00.00`,
                     lyricLeft: `which hitherto snubbed and spurned a wreck,`,
                     lyricRight: [
                         {
@@ -1685,6 +1737,7 @@ export default {
                 },
                 {
                     time: 180,
+                    // mixTime: `0:00:00.00`,
                     lyricLeft: [
                         `while`,
                         {
@@ -1735,6 +1788,7 @@ export default {
                 },
                 {
                     time: 183,
+                    // mixTime: `0:00:00.00`,
                     lyricLeft: [
                         `past a`,
                         {
@@ -1798,6 +1852,7 @@ export default {
             mainVerses: [
                 {
                     time: 186,
+                    // mixTime: `0:00:00.00`,
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(Odin's theme)`,
