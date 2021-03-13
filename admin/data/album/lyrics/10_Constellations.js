@@ -24,7 +24,8 @@ import {
 export default {
     path: 'constellations',
     title: 'Constellations!',
-    playerTime: 1751.1,
+    playerTime: 1751.193,
+    mixTime: `0:01:18.56`,
     overview: `One night I went with my bassist Ana and her friends to explore the steam tunnels under UCLA while high on Robitussin. I got us to pretend we were Vikings and Mongols and other waves of human migration throughout world history. In hindsight, they were probably just humoring me. I wound up doing a lot of Robitussin that summer. It took a while for me to regain my grip on reality.`,
     lyricUnits: [
         {
@@ -66,7 +67,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 0,
+                    mixTime: `0:01:18.56`,
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(refrain)`,
@@ -80,7 +81,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 4,
+                    mixTime: `0:05:18.75`,
                     lyric: [
                         {
                             anchor: `reverends, paused`,
@@ -125,7 +126,7 @@ export default {
                     ],
                 },
                 {
-                    time: 7,
+                    mixTime: `0:09:11.25`,
                     lyric: [
                         {
                             anchor: `Heavin' some, Ana`,
@@ -165,7 +166,7 @@ export default {
                     ],
                 },
                 {
-                    time: 11,
+                    mixTime: `0:13:03.75`,
                     lyric: [
                         `of`,
                         {
@@ -285,7 +286,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 19,
+                    mixTime: `0:20:18.75`,
                     lyric: [
                         {
                             anchor: `Walkyriens:`,
@@ -374,7 +375,7 @@ export default {
                     ],
                 },
                 {
-                    time: 22,
+                    mixTime: `0:24:11.25`,
                     lyric: [
                         {
                             anchor: `Quouffs uppraissed,`,
@@ -428,7 +429,7 @@ export default {
                     ],
                 },
                 {
-                    time: 26,
+                    mixTime: `0:28:03.75`,
                     lyric: [
                         `We ride as`,
                         {
@@ -503,7 +504,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 34,
+                    mixTime: `0:35:18.75`,
                     lyric: [
                         {
                             anchor: `Makeyars mygrate,`,
@@ -629,7 +630,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 41,
+                    mixTime: `0:43:03.75`,
                     lyric: [
                         `Then`,
                         {
@@ -659,7 +660,7 @@ export default {
                     ],
                 },
                 {
-                    time: 45,
+                    mixTime: `0:46:12.19`,
                     lyric: [
                         {
                             anchor: `Drinkhis Khan, once Toomujin,`,
@@ -726,7 +727,7 @@ export default {
                     ],
                 },
                 {
-                    time: 49,
+                    mixTime: `0:50:04.69`,
                     lyric: [
                         {
                             anchor: `Tomer-layin' the seed,`,
@@ -821,7 +822,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 52,
+                    mixTime: `0:54:11.25`,
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(refrain)`,
@@ -835,7 +836,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 56,
+                    mixTime: `0:58:03.75`,
                     lyric: [
                         {
                             anchor: `Indus-trail sewerce,`,
@@ -887,7 +888,7 @@ export default {
                     ],
                 },
                 {
-                    time: 60,
+                    mixTime: `1:01:26.25`,
                     lyric: [
                         {
                             anchor: `Forsi ahuro`,
@@ -976,7 +977,7 @@ export default {
                     ],
                 },
                 {
-                    time: 64,
+                    mixTime: `1:05:18.75`,
                     lyric: [
                         {
                             anchor: `To soma up,`,
@@ -1063,7 +1064,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 70,
+                    mixTime: `1:12:05.61`,
                     lyric: [
                         {
                             anchor: `Ourevian battles spent,`,
@@ -1125,7 +1126,7 @@ export default {
                     ],
                 },
                 {
-                    time: 75,
+                    mixTime: `1:16:12.18`,
                     lyric: [
                         {
                             anchor: `Are Melee tapirs`,
@@ -1167,7 +1168,7 @@ export default {
                     ],
                 },
                 {
-                    time: 79,
+                    mixTime: `1:20:18.75`,
                     lyric: [
                         `From the`,
                         {
@@ -1235,7 +1236,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 86,
+                    mixTime: `1:28:03.75`,
                     lyric: [
                         {
                             anchor: `Pour sod, fourfeit tundr's`,
@@ -1274,7 +1275,7 @@ export default {
                     ],
                 },
                 {
-                    time: 94,
+                    mixTime: `1:35:18.75`,
                     lyric: [
                         {
                             anchor: `Upridge o' lawn`,
@@ -1323,7 +1324,7 @@ export default {
                     ],
                 },
                 {
-                    time: 101,
+                    mixTime: `1:43:03.75`,
                     lyric: [
                         `But`,
                         {
@@ -1346,7 +1347,7 @@ export default {
                     ],
                 },
                 {
-                    time: 103,
+                    mixTime: `1:44:15.93`,
                     lyric: [
                         {
                             anchor: `herows— ourauras left—`,
@@ -1421,15 +1422,15 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 109,
+                    mixTime: `1:50:18.75`,
                     lyric: `And now without a chart,`,
                 },
                 {
-                    time: 112,
+                    mixTime: `1:53:27.19`,
                     lyric: `just the winds and the constellations known by heart,`,
                 },
                 {
-                    time: 116,
+                    mixTime: `1:57:19.69`,
                     lyric: [
                         {
                             anchor: `I'll sail this sea,`,
@@ -1459,7 +1460,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 120,
+                    mixTime: `2:01:26.25`,
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(refrain)`,
@@ -1474,7 +1475,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 124,
+                    mixTime: `2:05:18.75`,
                     lyric: [
                         `The`,
                         {
@@ -1517,7 +1518,7 @@ export default {
             ],
             subVerse: [
                 {
-                    time: 128,
+                    mixTime: `2:09:11.25`,
                     lyric: {
                         isItalic: true,
                         lyric: {
@@ -1557,7 +1558,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 131,
+                    mixTime: `2:13:03.75`,
                     lyric: [
                         `In`,
                         {
@@ -1628,7 +1629,7 @@ export default {
             ],
             subVerse: [
                 {
-                    time: 135,
+                    mixTime: `2:16:26.25`,
                     lyric: {
                         isItalic: true,
                         lyric: [
@@ -1669,7 +1670,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 139,
+                    mixTime: `2:20:18.75`,
                     lyric: [
                         {
                             anchor: `Noworse and Nunavutter`,
@@ -1695,7 +1696,7 @@ export default {
                     ],
                 },
                 {
-                    time: 142,
+                    mixTime: `2:24:11.25`,
                     lyric: {
                         isItalic: true,
                         lyric: [
@@ -1744,7 +1745,7 @@ export default {
                     },
                 },
                 {
-                    time: 147,
+                    mixTime: `2:28:03.75`,
                     lyric: [
                         `How old are`,
                         {
@@ -1797,7 +1798,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 154,
+                    mixTime: `2:35:18.75`,
                     lyric: [
                         {
                             anchor: `Pullar switch,`,
@@ -1891,7 +1892,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 161,
+                    mixTime: `2:43:03.75`,
                     lyric: [
                         `Then pounds`,
                         {
@@ -1914,7 +1915,7 @@ export default {
                     ],
                 },
                 {
-                    time: 165,
+                    mixTime: `2:46:12.19`,
                     lyric: [
                         {
                             anchor: `Enguished buzzereds`,
@@ -1986,7 +1987,7 @@ export default {
                     ],
                 },
                 {
-                    time: 169,
+                    mixTime: `2:50:04.69`,
                     lyric: [
                         {
                             anchor: `In mouth Deseret,`,
@@ -2099,7 +2100,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 172,
+                    mixTime: `2:56:07.50`,
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(refrain)`,
