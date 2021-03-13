@@ -18,7 +18,8 @@ import {
 export default {
     path: 'ash-wednesday',
     title: 'Ash Wednesday',
-    playerTime: 967.5,
+    playerTime: 967.569,
+    mixTime: `0:01:03.50`,
     overview: `In college, I met my first girlfriend. Catherine was a nice Catholic girl and former valedictorian, who didn't think much of my nonexistent reading habit and broke up with me right before Ash Wednesday. So I ashed my forehead and tried to bump into her that day, thinking if she could picture me as a good Catholic boy, then I might get another chance. It didn't work, but I did grow into a faithful reader, and I have Catherine to thank for that.`,
     lyricUnits: [
         {
@@ -53,7 +54,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 0,
+                    mixTime: `0:01:03.50`,
                     lyric: [
                         {
                             anchor: `O Catherine! My Catherine!`,
@@ -104,7 +105,7 @@ export default {
                     ],
                 },
                 {
-                    time: 6,
+                    mixTime: `0:07:04.36`,
                     lyric: [
                         {
                             anchor: `where it commenced:`,
@@ -130,7 +131,7 @@ export default {
                     ],
                 },
                 {
-                    time: 10,
+                    mixTime: `0:10:14.39`,
                     lyric: [
                         {
                             anchor: `Ulysses' tomb,`,
@@ -193,7 +194,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 16,
+                    mixTime: `0:16:05.86`,
                     lyric: [
                         `First we`,
                         {
@@ -223,7 +224,7 @@ export default {
                     ],
                 },
                 {
-                    time: 18,
+                    mixTime: `0:19:15.93`,
                     lyric: [
                         `the`,
                         {
@@ -251,7 +252,7 @@ export default {
                     ],
                 },
                 {
-                    time: 23,
+                    mixTime: `0:24:08.82`,
                     lyric: `But saving herself strictly for marriage, or really from me?`,
                 },
             ],
@@ -279,12 +280,12 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 30,
+                    mixTime: `0:30:14.55`,
                     // Note: I'm spelling out Saint, from St.
                     lyric: `Oh and for Catherine, Saint Catherine of God,`,
                 },
                 {
-                    time: 34,
+                    mixTime: `0:35:21.79`,
                     lyric: [
                         `I purge, with a`,
                         {
@@ -312,11 +313,11 @@ export default {
                     ],
                 },
                 {
-                    time: 38,
+                    mixTime: `0:39:01.79`,
                     lyric: `with sadness, sad for what I am not:`,
                 },
                 {
-                    time: 42,
+                    mixTime: `0:43:10.44`,
                     lyric: `a soul to share in her eternal life.`,
                 },
             ],
@@ -327,7 +328,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 46,
+                    mixTime: `0:47:19.03`,
                     lyric: [
                         `Oh Catherine,`,
                         {
@@ -352,7 +353,7 @@ export default {
                     ],
                 },
                 {
-                    time: 50,
+                    mixTime: `0:50:29.04`,
                     lyric: [
                         {
                             anchor: `"My, what wit, man,"`,
@@ -386,7 +387,7 @@ export default {
                     ],
                 },
                 {
-                    time: 54,
+                    mixTime: `0:54:23.40`,
                     lyric: [
                         `with`,
                         {
@@ -446,15 +447,15 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 62,
+                    mixTime: `1:02:26.32`,
                     lyric: `Couldn't heaven, her heaven,`,
                 },
                 {
-                    time: 65,
+                    mixTime: `1:05:07.80`,
                     lyric: `brimming over with smart boys, fit just one art boy`,
                 },
                 {
-                    time: 69,
+                    mixTime: `1:10:00.66`,
                     lyric: [
                         `who tried but failed to win her heart`,
                         {
@@ -494,7 +495,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 76,
+                    mixTime: `1:16:06.46`,
                     lyric: [
                         `And as I pace, stranded here`,
                         {
@@ -528,7 +529,7 @@ export default {
                     ],
                 },
                 {
-                    time: 80,
+                    mixTime: `1:20:29.36`,
                     lyric: [
                         `in`,
                         {
@@ -594,7 +595,7 @@ export default {
                     ],
                 },
                 {
-                    time: 84,
+                    mixTime: `1:24:23.65`,
                     lyric: [
                         `my`,
                         {
@@ -667,7 +668,7 @@ export default {
                     ],
                 },
                 {
-                    time: 88,
+                    mixTime: `1:29:02.31`,
                     lyric: [
                         `for I lack the wit to spare a`,
                         {
@@ -707,7 +708,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 95,
+                    mixTime: `1:36:06.66`,
                     lyric: [
                         `Well yes, I`,
                         {
@@ -734,15 +735,15 @@ export default {
                     ],
                 },
                 {
-                    time: 99,
+                    mixTime: `1:40:15.23`,
                     lyric: `using some old used cigarette.`,
                 },
                 {
-                    time: 104,
+                    mixTime: `1:43:25.27`,
                     lyric: `"So you'd cheat your way into heaven," she might protest.`,
                 },
                 {
-                    time: 111,
+                    mixTime: `1:51:13.93`,
                     lyric: [
                         `Well no, I know it's wrong, but I did`,
                         {
@@ -766,11 +767,11 @@ export default {
                     ],
                 },
                 {
-                    time: 115,
+                    mixTime: `1:55:22.54`,
                     lyric: `I guess that butt was still fresh.`,
                 },
                 {
-                    time: 119,
+                    mixTime: `1:59:02.56`,
                     lyric: [
                         {
                             isItalic: true,
@@ -832,11 +833,11 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 123,
+                    mixTime: `2:03:25.48`,
                     lyric: `On this sad day to mourn`,
                 },
                 {
-                    time: 125,
+                    mixTime: `2:05:22.63`,
                     lyric: [
                         `us wretched souls`,
                         {
@@ -864,7 +865,7 @@ export default {
                     ],
                 },
                 {
-                    time: 128,
+                    mixTime: `2:08:18.38`,
                     lyric: [
                         `a`,
                         {
@@ -878,11 +879,11 @@ export default {
                     ],
                 },
                 {
-                    time: 130,
+                    mixTime: `2:11:14.11`,
                     lyric: `mistaken for Catholic with some smeared ash;`,
                 },
                 {
-                    time: 136,
+                    mixTime: `2:16:07.02`,
                     lyric: [
                         `to wear it like a`,
                         {
@@ -936,11 +937,11 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 138,
+                    mixTime: `2:19:02.73`,
                     lyric: `On this Ash Wednesday morn,`,
                 },
                 {
-                    time: 140,
+                    mixTime: `2:20:29.93`,
                     lyric: [
                         `in`,
                         {
@@ -965,15 +966,15 @@ export default {
                     ],
                 },
                 {
-                    time: 143,
+                    mixTime: `2:23:25.65`,
                     lyric: `upon this head for all to see.`,
                 },
                 {
-                    time: 146,
+                    mixTime: `2:26:21.42`,
                     lyric: `And maybe if Catherine sees, she'll ask,`,
                 },
                 {
-                    time: 151,
+                    mixTime: `2:31:14.31`,
                     lyric: `"So where'd you attend Mass?"`,
                 },
             ],

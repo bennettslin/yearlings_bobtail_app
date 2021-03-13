@@ -18,7 +18,8 @@ import {
 export default {
     path: 'm',
     title: 'M',
-    playerTime: 1131.2,
+    playerTime: 1131.213,
+    mixTime: `0:02:12.00`,
     overview: `After the breakup with Catherine, I vowed to spend the next five years shaping myself into the ideal romantic prospect. I started attending local shows, and by year five, I had cobbled together my own band, the Yearlings. I kept running into a fellow scenester named Mara, and I soon grew infatuated. But Mara ended up going out with my drummer Jacob, which made band practice awkward.`,
     lyricUnits: [
         {
@@ -41,7 +42,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 0,
+                    mixTime: `0:02:12.00`,
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(Mara's theme)`,
@@ -50,7 +51,7 @@ export default {
             ],
             subVerse: [
                 {
-                    time: 33,
+                    mixTime: `0:35:03.13`,
                     lyricCentre: {
                         anchor: `Maravijaya…`,
                         properNoun: true,
@@ -106,7 +107,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 35,
+                    mixTime: `0:37:22.81`,
                     lyric: [
                         `I was a lad bent on`,
                         {
@@ -122,11 +123,11 @@ export default {
                     ],
                 },
                 {
-                    time: 40,
+                    mixTime: `0:42:11.28`,
                     lyric: `that all clever girls need to see.`,
                 },
                 {
-                    time: 44,
+                    mixTime: `0:46:11.28`,
                     lyric: [
                         `Bit my`,
                         {
@@ -142,11 +143,11 @@ export default {
                     ],
                 },
                 {
-                    time: 47,
+                    mixTime: `0:49:22.81`,
                     lyric: `with practice each day, then`,
                 },
                 {
-                    time: 50,
+                    mixTime: `0:52:06.66`,
                     lyric: [
                         `in`,
                         {
@@ -178,11 +179,11 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 54,
+                    mixTime: `0:56:25.13`,
                     lyric: `This moron marooned, a method mapped in my cocoon`,
                 },
                 {
-                    time: 59,
+                    mixTime: `1:01:22.81`,
                     lyric: [
                         `to mold me into a`,
                         {
@@ -198,7 +199,7 @@ export default {
                     ],
                 },
                 {
-                    time: 64,
+                    mixTime: `1:06:02.05`,
                     lyric: {
                         anchor: `No minutiae left unmastered,`,
                         todo: true,
@@ -217,7 +218,7 @@ export default {
                     },
                 },
                 {
-                    time: 67,
+                    mixTime: `1:09:13.58`,
                     lyric: [
                         {
                             anchor: `music cred`,
@@ -244,7 +245,7 @@ export default {
                     ],
                 },
                 {
-                    time: 69,
+                    mixTime: `1:11:27.43`,
                     lyric: [
                         {
                             anchor: `Once I metamorphose,`,
@@ -277,7 +278,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 75,
+                    mixTime: `1:17:04.35`,
                     lyric: [
                         {
                             anchor: `Year five,`,
@@ -300,7 +301,7 @@ export default {
                     ],
                 },
                 {
-                    time: 77,
+                    mixTime: `1:19:18.20`,
                     lyric: [
                         `spent her`,
                         {
@@ -324,7 +325,7 @@ export default {
                     ],
                 },
                 {
-                    time: 80,
+                    mixTime: `1:22:02.05`,
                     lyric: [
                         `while forever I'll`,
                         {
@@ -340,7 +341,7 @@ export default {
                     ],
                 },
                 {
-                    time: 82,
+                    mixTime: `1:23:27.43`,
                     lyric: `these words unsaid.`,
                 },
             ],
@@ -370,7 +371,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 84,
+                    mixTime: `1:26:29.75`,
                     lyric: [
                         `Hopes wrapped in`,
                         {
@@ -387,7 +388,7 @@ export default {
                     ],
                 },
                 {
-                    time: 87,
+                    mixTime: `1:29:13.58`,
                     lyric: [
                         `before`,
                         {
@@ -403,7 +404,7 @@ export default {
                     ],
                 },
                 {
-                    time: 89,
+                    mixTime: `1:31:27.43`,
                     lyric: [
                         {
                             anchor: `Signed off "love me"`,
@@ -419,7 +420,7 @@ export default {
                     ],
                 },
                 {
-                    time: 91,
+                    mixTime: `1:34:02.05`,
                     lyric: `my life and letters end.`,
                 },
             ],
@@ -440,7 +441,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 94,
+                    mixTime: `1:36:06.66`,
                     lyric: [
                         {
                             anchor: `Morphined,`,
@@ -467,7 +468,7 @@ export default {
                     ],
                 },
                 {
-                    time: 99,
+                    mixTime: `1:41:04.35`,
                     lyric: [
                         `to a`,
                         {
@@ -487,18 +488,18 @@ export default {
                     /**
                      * 33 perfect age.
                      */
-                    time: 103,
+                    mixTime: `1:45:13.58`,
                     lyric: `Far too old to be martyred,`,
                 },
                 {
-                    time: 106,
+                    mixTime: `1:48:25.13`,
                     lyric: `too young to grow smarter,`,
                 },
                 {
                     /**
                      * Mara nursed child. Job, tie
                      */
-                    time: 109,
+                    mixTime: `1:51:08.97`,
                     lyric: [
                         `a`,
                         {
@@ -523,7 +524,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 114,
+                    mixTime: `1:56:15.89`,
                     lyric: [
                         `Panoramic prints pending my soon-to-be`,
                         {
@@ -562,7 +563,7 @@ export default {
                     ],
                 },
                 {
-                    time: 118,
+                    mixTime: `2:01:04.35`,
                     lyric: [
                         `fools once expecting their`,
                         {
@@ -580,7 +581,7 @@ export default {
                     ],
                 },
                 {
-                    time: 123,
+                    mixTime: `2:5:04.35`,
                     lyric: [
                         `In a`,
                         {
@@ -605,11 +606,11 @@ export default {
                     ],
                 },
                 {
-                    time: 125,
+                    mixTime: `2:08:06.66`,
                     lyric: `with pages of defeated spiels`,
                 },
                 {
-                    time: 128,
+                    mixTime: `2:10:20.52`,
                     lyric: [
                         {
                             anchor: `lies that marionette`,
@@ -650,11 +651,11 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 133,
+                    mixTime: `2:16:06.66`,
                     lyric: `All I know is that whoever finds me`,
                 },
                 {
-                    time: 136,
+                    mixTime: `2:18:20.52`,
                     lyric: [
                         `keeps me`,
                         {
@@ -670,7 +671,7 @@ export default {
                     ],
                 },
                 {
-                    time: 138,
+                    mixTime: `2:21:04.35`,
                     lyric: [
                         `With her "I do,"`,
                         {
@@ -687,7 +688,7 @@ export default {
                     ],
                 },
                 {
-                    time: 140,
+                    mixTime: `2:22:20.52`,
                     lyric: [
                         `is choked down my`,
                         {
@@ -722,7 +723,7 @@ export default {
                     /**
                      * TODO: link to urchin in Odin?
                      */
-                    time: 143,
+                    mixTime: `2:26:02.05`,
                     lyric: [
                         `Her lispy kiss unlucky for this`,
                         {
@@ -755,7 +756,7 @@ export default {
                     ],
                 },
                 {
-                    time: 146,
+                    mixTime: `2:28:15.89`,
                     lyric: [
                         {
                             anchor: `indentures dumbed`,
@@ -779,7 +780,7 @@ export default {
                     ],
                 },
                 {
-                    time: 148,
+                    mixTime: `2:30:29.75`,
                     lyric: [
                         `Whispered`,
                         {
@@ -801,7 +802,7 @@ export default {
                     ],
                 },
                 {
-                    time: 150,
+                    mixTime: `2:32:25.13`,
                     lyric: `then turned to hug the void.`,
                 },
             ],
@@ -812,7 +813,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 153,
+                    mixTime: `2:35:27.43`,
                     lyric: [
                         `But then I saw the`,
                         {
@@ -828,15 +829,15 @@ export default {
                     ],
                 },
                 {
-                    time: 156,
+                    mixTime: `2:38:11.28`,
                     lyric: `cradled safely in my lap.`,
                 },
                 {
-                    time: 158,
+                    mixTime: `2:40:25.13`,
                     lyric: `It dropped a poop, but somehow I knew`,
                 },
                 {
-                    time: 160,
+                    mixTime: `2:42:20.52`,
                     lyric: {
                         anchor: `to have a merry ol' laugh.`,
                         todo: true,
@@ -858,15 +859,15 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 163,
+                    mixTime: `2:45:22.81`,
                     lyric: `And now I wonder if the answer might be`,
                 },
                 {
-                    time: 166,
+                    mixTime: `2:48:06.66`,
                     lyric: `to know: the rule for a girl`,
                 },
                 {
-                    time: 168,
+                    mixTime: `2:50:20.52`,
                     lyric: [
                         `is that the`,
                         {
@@ -882,7 +883,7 @@ export default {
                     ],
                 },
                 {
-                    time: 170,
+                    mixTime: `2:52:25.13`,
                     lyric: `should first love the world.`,
                 },
             ],
@@ -893,7 +894,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 173,
+                    mixTime: `2:55:18.20`,
                     lyric: [
                         {
                             anchor: `Moral is`,
@@ -919,15 +920,15 @@ export default {
                     ],
                 },
                 {
-                    time: 176,
+                    mixTime: `2:58:02.05`,
                     lyric: `nothing comes a pure surprise.`,
                 },
                 {
-                    time: 178,
+                    mixTime: `3:00:15.89`,
                     lyric: `Sometimes if it's all to work`,
                 },
                 {
-                    time: 180,
+                    mixTime: `3:02:11.28`,
                     lyric: {
                         anchor: `friends have to lie.`,
                         todo: true,
@@ -948,15 +949,15 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 183,
+                    mixTime: `3:05:13.58`,
                     lyric: `And sometimes situations seem the worst,`,
                 },
                 {
-                    time: 185,
+                    mixTime: `3:07:27.43`,
                     lyric: `but in a year, they're never bad.`,
                 },
                 {
-                    time: 188,
+                    mixTime: `3:10:11.28`,
                     lyric: [
                         `Five more, she'll dig up`,
                         {
@@ -991,7 +992,7 @@ export default {
                     ],
                 },
                 {
-                    time: 190,
+                    mixTime: `3:12:15.89`,
                     lyric: `I'm not sad!`,
                 },
             ],
@@ -1002,7 +1003,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 192,
+                    mixTime: `3:15:08.97`,
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(glockenspiel)`,
