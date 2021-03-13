@@ -29,7 +29,7 @@ export const getVerseTimeFromMixTimes = (songMixTime, verseMixTime) => (
          */
         getSecondsFromMixTime(verseMixTime) -
         /**
-         * This is the time that the song begins in the mix. Once it is lined
+         * This is the time that the sound begins in the mix. Once it is lined
          * up with the song's player time, then the mix time for each verse
          * will also line up with that verse's player time.
          */

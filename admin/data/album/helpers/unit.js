@@ -20,7 +20,7 @@ const _getIndexedVersesForUnit = (unit) => {
 }
 
 const _addUnitVerseLists = (songIndex, song) => {
-    const { lyricUnits, mixTime: songMixTime } = albumLyrics[songIndex]
+    const { lyricUnits, songMixTime } = albumLyrics[songIndex]
 
     const
         unitVerseIndicesList = [],

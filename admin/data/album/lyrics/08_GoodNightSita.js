@@ -17,7 +17,7 @@ export default {
     path: 'good-night-sita',
     title: 'Good Night, Sita',
     playerTime: 1346.412,
-    mixTime: `0:01:11.82`,
+    songMixTime: `0:01:11.82`,
     overview: `Sometime after dating Catherine and a while before meeting Mara, I tried to hit on a university student named Sita. Nothing came of the few dates that followed, however, and I quickly scurried away in disappointment.`,
     lyricUnits: [
         {
