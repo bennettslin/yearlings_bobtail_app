@@ -21,7 +21,8 @@ import {
 export default {
     path: 'look-back-in-anger',
     title: 'Look Back in Anger',
-    playerTime: 1932.1,
+    playerTime: 1932.099,
+    // songMixTime: `0:02:28.36`,
     overview: `With the Yearlings becoming a fixture in the local scene, I started to command more attention than I'd ever known, particularly from women. And yet, my misery didn't abate, but instead simmered into a hard-boiled resentment. I also began to regret my relationship with Sita, which now felt like a decision I'd been coerced to make, under deprived conditions from which I was now freed.`,
     lyricUnits: [
         {
@@ -58,6 +59,7 @@ export default {
             mainVerses: [
                 {
                     time: 0,
+                    // mixTime: `0:02:28.36`,
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(intro)`,
@@ -90,6 +92,7 @@ export default {
             mainVerses: [
                 {
                     time: 10,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `Scrambled past this hell, where`,
                         {
@@ -118,6 +121,7 @@ export default {
                 },
                 {
                     time: 13,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         {
                             anchor: `dragging aglets held`,
@@ -149,6 +153,7 @@ export default {
                 },
                 {
                     time: 16,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `as the`,
                         {
@@ -223,6 +228,7 @@ export default {
             mainVerses: [
                 {
                     time: 22,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `Now your`,
                         {
@@ -255,6 +261,7 @@ export default {
                 },
                 {
                     time: 25,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `yet— if adding up— then`,
                         {
@@ -271,6 +278,7 @@ export default {
                 },
                 {
                     time: 28,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `From the`,
                         {
@@ -351,6 +359,7 @@ export default {
             mainVerses: [
                 {
                     time: 33,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         {
                             anchor: `Feeble feeder fish`,
@@ -375,10 +384,12 @@ export default {
                 },
                 {
                     time: 36,
+                    // mixTime: `0:00:00.00`,
                     lyric: `these spluttered fits found fit for show.`,
                 },
                 {
                     time: 39,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `You wished a`,
                         {
@@ -396,6 +407,7 @@ export default {
                 },
                 {
                     time: 42,
+                    // mixTime: `0:00:00.00`,
                     lyric: `and laid down on the public trough.`,
                 },
             ],
@@ -408,6 +420,7 @@ export default {
             mainVerses: [
                 {
                     time: 45,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `She braves the crowd`,
                         {
@@ -432,6 +445,7 @@ export default {
                 },
                 {
                     time: 48,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `She might complete your`,
                         {
@@ -456,6 +470,7 @@ export default {
                 },
                 {
                     time: 51,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `With hair of`,
                         {
@@ -479,6 +494,7 @@ export default {
                 },
                 {
                     time: 54,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         {
                             anchor: `"Great show,"`,
@@ -503,10 +519,12 @@ export default {
             mainVerses: [
                 {
                     time: 56,
+                    // mixTime: `0:00:00.00`,
                     lyric: `Well there are ways to make a treat of life,`,
                 },
                 {
                     time: 63,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `and you were`,
                         {
@@ -524,10 +542,12 @@ export default {
                 },
                 {
                     time: 69,
+                    // mixTime: `0:00:00.00`,
                     lyric: `But knowing now what you'd missed out on, you find,`,
                 },
                 {
                     time: 75,
+                    // mixTime: `0:00:00.00`,
                     lyric: `you look back in anger that it's done.`,
                 },
             ],
@@ -556,6 +576,7 @@ export default {
             mainVerses: [
                 {
                     time: 81,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `When`,
                         {
@@ -573,10 +594,12 @@ export default {
                 },
                 {
                     time: 84,
+                    // mixTime: `0:00:00.00`,
                     lyric: `would just acquit God of further need;`,
                 },
                 {
                     time: 87,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `reading`,
                         {
@@ -603,10 +626,12 @@ export default {
             mainVerses: [
                 {
                     time: 91,
+                    // mixTime: `0:00:00.00`,
                     lyric: `Now each new concession sees this`,
                 },
                 {
                     time: 94,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         {
                             anchor: `peasant discontented`,
@@ -630,6 +655,7 @@ export default {
                 },
                 {
                     time: 97,
+                    // mixTime: `0:00:00.00`,
                     lyric: `with his ignorance lessened of his plight before…`,
                 },
             ],
@@ -641,10 +667,12 @@ export default {
             mainVerses: [
                 {
                     time: 103,
+                    // mixTime: `0:00:00.00`,
                     lyric: `Beyonders prevail, the letters preached,`,
                 },
                 {
                     time: 106,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `and thus secure,`,
                         {
@@ -661,10 +689,12 @@ export default {
                 },
                 {
                     time: 109,
+                    // mixTime: `0:00:00.00`,
                     lyric: `You waved your pledge to this godly good,`,
                 },
                 {
                     time: 112,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         {
                             anchor: `only to crack,`,
@@ -698,10 +728,12 @@ export default {
             mainVerses: [
                 {
                     time: 115,
+                    // mixTime: `0:00:00.00`,
                     lyric: `Though, if you're right to want what's yours,`,
                 },
                 {
                     time: 118,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `weren't they`,
                         {
@@ -719,6 +751,7 @@ export default {
                 },
                 {
                     time: 121,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `So if you're weeping for`,
                         {
@@ -742,6 +775,7 @@ export default {
                 },
                 {
                     time: 124,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `also weep for`,
                         {
@@ -766,6 +800,7 @@ export default {
             mainVerses: [
                 {
                     time: 127,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         {
                             anchor: `Red and friends,`,
@@ -783,10 +818,12 @@ export default {
                 },
                 {
                     time: 130,
+                    // mixTime: `0:00:00.00`,
                     lyric: `lift you on angel stares.`,
                 },
                 {
                     time: 133,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `Drunk, you'd`,
                         {
@@ -804,6 +841,7 @@ export default {
                 },
                 {
                     time: 136,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `but it's too late to`,
                         {
@@ -840,10 +878,12 @@ export default {
             mainVerses: [
                 {
                     time: 139,
+                    // mixTime: `0:00:00.00`,
                     lyric: `Yes, you were wrong to make demands on life,`,
                 },
                 {
                     time: 145,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `'cause when you`,
                         {
@@ -873,10 +913,12 @@ export default {
                 },
                 {
                     time: 151,
+                    // mixTime: `0:00:00.00`,
                     lyric: `And we all find this out on our own time…`,
                 },
                 {
                     time: 157,
+                    // mixTime: `0:00:00.00`,
                     lyric: `Look back in anger to have won.`,
                 },
             ],
@@ -888,6 +930,7 @@ export default {
             mainVerses: [
                 {
                     time: 161,
+                    // mixTime: `0:00:00.00`,
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(outro)`,

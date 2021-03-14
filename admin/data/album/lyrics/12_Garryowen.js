@@ -21,7 +21,8 @@ import {
 export default {
     path: 'garryowen',
     title: 'Garryowen',
-    playerTime: 2107.9,
+    playerTime: 2107.996,
+    songMixTime: `0:01:01.40`,
     overview: `My mood changed for the worse when I drank, leading friends to joke that I had a sinister alter ego. It wasn't far from the truth. I was souring on my relationship with Sita by this point, and being drunk provided both an escape and an excuse to act out. But I really didn't like myself during such moments. I missed being the hapless kid that I still was in my head, and knowing now how to get it right, I longed for a do-over, without the mess this time. And without Sita.`,
     lyricUnits: [
         {
@@ -51,7 +52,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 0,
+                    mixTime: `0:01:01.40`,
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(Garry's theme)`,
@@ -87,7 +88,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 17,
+                    mixTime: `0:17:13.26`,
                     lyric: [
                         {
                             anchor: `Brushed her off`,
@@ -103,7 +104,7 @@ export default {
                     ],
                 },
                 {
-                    time: 20,
+                    mixTime: `0:20:17.44`,
                     lyric: [
                         `with your`,
                         {
@@ -124,7 +125,7 @@ export default {
                     ],
                 },
                 {
-                    time: 22,
+                    mixTime: `0:23:00.69`,
                     lyric: [
                         `Tonight the`,
                         {
@@ -141,7 +142,7 @@ export default {
                     ],
                 },
                 {
-                    time: 25,
+                    mixTime: `0:25:24.41`,
                     lyric: [
                         `if you would`,
                         {
@@ -164,7 +165,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 28,
+                    mixTime: `0:28:07.67`,
                     lyric: [
                         `Well`,
                         {
@@ -181,7 +182,7 @@ export default {
                     ],
                 },
                 {
-                    time: 33,
+                    mixTime: `0:34:26.51`,
                     lyric: [
                         {
                             anchor: `I can't speak`,
@@ -205,7 +206,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 39,
+                    mixTime: `0:39:02.09`,
                     lyric: [
                         `Drunk pissed punks tryst,`,
                         {
@@ -221,7 +222,7 @@ export default {
                     ],
                 },
                 {
-                    time: 42,
+                    mixTime: `0:42:16.73`,
                     lyric: [
                         `the`,
                         {
@@ -244,7 +245,7 @@ export default {
                     ],
                 },
                 {
-                    time: 44,
+                    mixTime: `0:45:10.46`,
                     lyric: [
                         `In you come, piss drunk, smug in`,
                         {
@@ -271,7 +272,7 @@ export default {
                     ],
                 },
                 {
-                    time: 47,
+                    mixTime: `0:48:04.18`,
                     lyric: [
                         `since`,
                         {
@@ -312,11 +313,11 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 50,
+                    mixTime: `0:51:08.36`,
                     lyric: `Well see, Garryowen, now no one,`,
                 },
                 {
-                    time: 56,
+                    mixTime: `0:57:06.28`,
                     lyric: [
                         {
                             anchor: `buys your grief`,
@@ -339,7 +340,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 61,
+                    mixTime: `1:01:11.85`,
                     lyric: [
                         `So the`,
                         {
@@ -357,11 +358,11 @@ export default {
                     ],
                 },
                 {
-                    time: 64,
+                    mixTime: `1:05:17.43`,
                     lyric: `stewing in hatred for the world.`,
                 },
                 {
-                    time: 67,
+                    mixTime: `1:08:00.70`,
                     lyric: [
                         {
                             anchor: `Slammed in the well,`,
@@ -378,7 +379,7 @@ export default {
                     ],
                 },
                 {
-                    time: 70,
+                    mixTime: `1:10:13.95`,
                     lyric: [
                         `with`,
                         {
@@ -436,7 +437,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 73,
+                    mixTime: `1:13:07.67`,
                     lyric: [
                         `As`,
                         {
@@ -454,7 +455,7 @@ export default {
                     ],
                 },
                 {
-                    time: 75,
+                    mixTime: `1:16:11.85`,
                     lyric: [
                         `fill up a package strapped to your`,
                         {
@@ -478,11 +479,11 @@ export default {
                     ],
                 },
                 {
-                    time: 78,
+                    mixTime: `1:19:05.57`,
                     lyric: `You'll slap her down, and push her out,`,
                 },
                 {
-                    time: 81,
+                    mixTime: `1:21:18.83`,
                     lyric: `a crumpled castaway!`,
                 },
             ],
@@ -510,7 +511,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 84,
+                    mixTime: `1:25:03.48`,
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(Garry's theme)`,
@@ -524,11 +525,11 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 93,
+                    mixTime: `1:34:05.58`,
                     lyric: `Your rabid wit unleashed, Garryowen, to no end,`,
                 },
                 {
-                    time: 100,
+                    mixTime: `1:41:15.34`,
                     lyric: [
                         `you'd`,
                         {
@@ -552,7 +553,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 106,
+                    mixTime: `1:47:13.25`,
                     lyric: [
                         `You won't always`,
                         {
@@ -568,7 +569,7 @@ export default {
                     ],
                 },
                 {
-                    time: 111,
+                    mixTime: `1:53:00.69`,
                     lyric: [
                         `Someday`,
                         {
@@ -609,7 +610,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 116,
+                    mixTime: `1:57:16.73`,
                     lyric: [
                         {
                             anchor: `Final trip on a tanker,`,
@@ -651,15 +652,15 @@ export default {
                     ],
                 },
                 {
-                    time: 120,
+                    mixTime: `2:01:01.39`,
                     lyric: `to which you've chained her; she'll sink into`,
                 },
                 {
-                    time: 123,
+                    mixTime: `2:03:25.11`,
                     lyric: `the briny end. Now that you're cleansed,`,
                 },
                 {
-                    time: 126,
+                    mixTime: `2:06:18.83`,
                     lyric: [
                         `aren't you the`,
                         {
@@ -683,7 +684,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 128,
+                    mixTime: `2:09:02.09`,
                     lyric: [
                         `They told her, "Never help a`,
                         {
@@ -728,7 +729,7 @@ export default {
                     ],
                 },
                 {
-                    time: 131,
+                    mixTime: `2:12:16.75`,
                     lyric: [
                         [
                             `see himself`,
@@ -746,11 +747,11 @@ export default {
                     ],
                 },
                 {
-                    time: 134,
+                    mixTime: `2:15:00.00`,
                     lyric: `You'd smite your kitten good, galled that smitten`,
                 },
                 {
-                    time: 137,
+                    mixTime: `2:17:13.26`,
                     lyric: `she would opt just not to hear!`,
                 },
             ],
@@ -771,7 +772,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 139,
+                    mixTime: `2:19:26.51`,
                     lyric: [
                         {
                             anchor: `Toora-loora-li,`,
@@ -787,7 +788,7 @@ export default {
                     ],
                 },
                 {
-                    time: 145,
+                    mixTime: `2:26:15.34`,
                     lyric: [
                         `becomes someone's`,
                         {
@@ -812,7 +813,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 150,
+                    mixTime: `2:30:20.93`,
                     lyric: `You're a purer lie…`,
                 },
             ],
@@ -823,7 +824,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 162,
+                    mixTime: `2:43:07.67`,
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(Garry's theme)`,
