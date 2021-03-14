@@ -21,6 +21,7 @@ export default {
     path: 'on-a-golden-cord',
     title: 'On a Golden Cord',
     playerTime: 2295.2,
+    songMixTime: `0:03:11.00`,
     overview: `After a long night out with friends, I might shuffle on to Sita's place, slip into bed with her, and quickly doze off. But one night, Sita was waiting to confront me, having discovered my plans to break up with her. In tears, she returned the gold bracelet I had given her at the start of our relationship, and then she kicked me out. With nowhere to go, I wandered the streets until sunrise. And so began the first of our many breakups…`,
     isDoublespeaker: true,
     lyricUnits: [
@@ -54,7 +55,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 0,
+                    mixTime: `0:03:11.00`,
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(white-throated sparrow)`,
@@ -79,15 +80,15 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 4,
+                    mixTime: `0:06:25.70`,
                     lyricCentre: `On a golden cord,`,
                 },
                 {
-                    time: 7,
+                    mixTime: `0:10:08.56`,
                     lyricCentre: `once worn, now shorn,`,
                 },
                 {
-                    time: 9,
+                    mixTime: `0:13:00.84`,
                     lyricCentre: [
                         `safely kept with`,
                         {
@@ -103,11 +104,11 @@ export default {
                     ],
                 },
                 {
-                    time: 12,
+                    mixTime: `0:15:02.56`,
                     lyricCentre: `Not of its own accord,`,
                 },
                 {
-                    time: 15,
+                    mixTime: `0:18:05.14`,
                     lyricCentre: [
                         `but`,
                         {
@@ -124,7 +125,7 @@ export default {
                     ],
                 },
                 {
-                    time: 18,
+                    mixTime: `0:21:28.28`,
                     lyricCentre: `And so she said, "Now it's yours again…`,
                 },
             ],
@@ -154,11 +155,11 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 26,
+                    mixTime: `0:28:03.42`,
                     lyricCentre: `And how you look tonight!`,
                 },
                 {
-                    time: 28,
+                    mixTime: `0:31:16.28`,
                     lyricCentre: [
                         `So`,
                         {
@@ -174,23 +175,23 @@ export default {
                     ],
                 },
                 {
-                    time: 31,
+                    mixTime: `0:34:08.56`,
                     lyricCentre: `with wounds dressed and feelings put away.`,
                 },
                 {
-                    time: 33,
+                    mixTime: `0:36:10.28`,
                     lyricCentre: `Full of patient replies…`,
                 },
                 {
-                    time: 36,
+                    mixTime: `0:39:12.84`,
                     lyricCentre: `But how can I trust a word you say?`,
                 },
                 {
-                    time: 40,
+                    mixTime: `0:43:06.00`,
                     lyricCentre: `So spill away… and please, dear, you have no more secrets saved.`,
                 },
                 {
-                    time: 47,
+                    mixTime: `0:50:22.28`,
                     lyricCentre: [
                         `I'm sorry, but I`,
                         {
@@ -236,7 +237,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 54,
+                    mixTime: `0:57:18.00`,
                     lyricLeft: [
                         {
                             anchor: `Immerse the molted form`,
@@ -265,7 +266,7 @@ export default {
                     ],
                 },
                 {
-                    time: 57,
+                    mixTime: `1:00:20.56`,
                     lyricLeft: [
                         `emerged beside a`,
                         {
@@ -292,12 +293,12 @@ export default {
                     lyricRight: `Leave early, time's up, cross your date released.`,
                 },
                 {
-                    time: 61,
+                    mixTime: `1:04:03.42`,
                     lyricLeft: `The wraith surveys the widow on his pyre;`,
                     lyricRight: `The jailer waves a bit, though uninspired,`,
                 },
                 {
-                    time: 64,
+                    mixTime: `1:07:16.28`,
                     lyricLeft: [
                         `torched the`,
                         {
@@ -374,7 +375,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 65,
+                    mixTime: `1:08:27.42`,
                     lyricLeft: `Had I grown dispirited in all this act,`,
                     lyricRight: [
                         `As I soak in spirits amidst`,
@@ -404,12 +405,12 @@ export default {
                     ],
                 },
                 {
-                    time: 68,
+                    mixTime: `1:11:19.70`,
                     lyricLeft: `by disparate elements, like kindling gathered up?`,
                     lyricRight: `my desperate ailments tied in this shambler's dusk—`,
                 },
                 {
-                    time: 72,
+                    mixTime: `1:15:02.56`,
                     lyricLeft: [
                         {
                             anchor: `Guilt pardons`,
@@ -448,7 +449,7 @@ export default {
                     ],
                 },
                 {
-                    time: 75,
+                    mixTime: `1:18:15.42`,
                     lyricLeft: [
                         {
                             anchor: `hatchet man`,
@@ -501,17 +502,17 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 76,
+                    mixTime: `1:19:26.56`,
                     lyricLeft: `But a precious gift as a shedded chain,`,
                     lyricRight: `But the present slips past a debt unpaid,`,
                 },
                 {
-                    time: 79,
+                    mixTime: `1:22:18.84`,
                     lyricLeft: `has lain to rust, one more cruel memento.`,
                     lyricRight: `that slays you once before you'll let it go.`,
                 },
                 {
-                    time: 83,
+                    mixTime: `1:26:12.00`,
                     lyricLeft: [
                         `Then if`,
                         {
@@ -555,7 +556,7 @@ export default {
                     ],
                 },
                 {
-                    time: 86,
+                    mixTime: `1:29:04.28`,
                     lyricCentre: `But what do I know?`,
                 },
             ],
@@ -567,7 +568,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 87,
+                    mixTime: `1:30:15.42`,
                     lyricCentre: [
                         `Just that those playful`,
                         {
@@ -584,11 +585,11 @@ export default {
                     ],
                 },
                 {
-                    time: 90,
+                    mixTime: `1:33:07.70`,
                     lyricCentre: `knew the restraint of those born as hunters,`,
                 },
                 {
-                    time: 93,
+                    mixTime: `1:36:00.00`,
                     lyricCentre: [
                         `while this supposed`,
                         {
@@ -605,7 +606,7 @@ export default {
                     ],
                 },
                 {
-                    time: 96,
+                    mixTime: `1:38:22.28`,
                     lyricCentre: `just learned he's pecked to death his precious other.`,
                 },
             ],
@@ -637,19 +638,19 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 98,
+                    mixTime: `1:41:24.84`,
                     lyricCentre: `But should it matter since you loved her once,`,
                 },
                 {
-                    time: 101,
+                    mixTime: `1:44:17.14`,
                     lyricCentre: `when you really thought the world that simple?`,
                 },
                 {
-                    time: 104,
+                    mixTime: `1:46:29.14`,
                     lyricCentre: `And who's to judge how much you cared because`,
                 },
                 {
-                    time: 107,
+                    mixTime: `1:50:01.70`,
                     lyricCentre: [
                         `the`,
                         {
@@ -666,7 +667,7 @@ export default {
                     ],
                 },
                 {
-                    time: 113,
+                    mixTime: `1:56:17.14`,
                     lyricCentre: `Now the jester teeters towards…`,
                 },
             ],
@@ -703,7 +704,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 116,
+                    mixTime: `1:58:18.84`,
                     lyricCentre: [
                         `the taunting,`,
                         {
@@ -726,11 +727,11 @@ export default {
                     ],
                 },
                 {
-                    time: 118,
+                    mixTime: `2:02:01.70`,
                     lyricCentre: `Thoughts spawned then dropped,`,
                 },
                 {
-                    time: 121,
+                    mixTime: `2:04:13.70`,
                     lyricCentre: [
                         `of gathering up the`,
                         {
@@ -751,19 +752,19 @@ export default {
                     ],
                 },
                 {
-                    time: 123,
+                    mixTime: `2:06:25.70`,
                     lyricCentre: `Some things just come to loss:`,
                 },
                 {
-                    time: 126,
+                    mixTime: `2:09:28.28`,
                     lyricCentre: `this bracelet, its luster; me, my lust.`,
                 },
                 {
-                    time: 130,
+                    mixTime: `2:13:21.42`,
                     lyricCentre: `Or was I once, something not what I've become?`,
                 },
                 {
-                    time: 137,
+                    mixTime: `2:21:07.70`,
                     lyricCentre: [
                         `Have I just`,
                         {
@@ -795,12 +796,12 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 144,
+                    mixTime: `2:27:12.84`,
                     lyricLeft: `Of fateful thoughts hung on a gilded clasp,`,
                     lyricRight: `Once navels locked upon the wilted grass,`,
                 },
                 {
-                    time: 147,
+                    mixTime: `2:30:15.42`,
                     lyricLeft: [
                         `which this`,
                         {
@@ -857,7 +858,7 @@ export default {
                     ],
                 },
                 {
-                    time: 150,
+                    mixTime: `2:33:28.28`,
                     lyricLeft: `And a smarting head throbs once his brain's warring halves,`,
                     lyricRight: [
                         `Then the`,
@@ -905,7 +906,7 @@ export default {
                     ],
                 },
                 {
-                    time: 154,
+                    mixTime: `2:37:11.14`,
                     lyricLeft: [
                         `each`,
                         {
@@ -950,12 +951,12 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 155,
+                    mixTime: `2:38:22.28`,
                     lyricLeft: `A sober plea finds the present you,`,
                     lyricRight: `The former me might have left a clue`,
                 },
                 {
-                    time: 158,
+                    mixTime: `2:41:14.56`,
                     lyricLeft: [
                         `my`,
                         {
@@ -995,12 +996,12 @@ export default {
                     ],
                 },
                 {
-                    time: 161,
+                    mixTime: `2:44:27.42`,
                     lyricLeft: `And will she label lies oaths we vowed we could,`,
                     lyricRight: `Until we strangle cries knowing how we stood,`,
                 },
                 {
-                    time: 164,
+                    mixTime: `2:48:00.00`,
                     lyricLeft: [
                         `with`,
                         {
@@ -1028,7 +1029,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 166,
+                    mixTime: `2:49:21.42`,
                     lyricLeft: `So a plan devised divides a slave once wed;`,
                     lyricRight: [
                         `Though, the`,
@@ -1054,7 +1055,7 @@ export default {
                     ],
                 },
                 {
-                    time: 169,
+                    mixTime: `2:52:03.42`,
                     lyricLeft: [
                         `a bid for greatness' sake, he's sold on as`,
                         {
@@ -1079,12 +1080,12 @@ export default {
                     lyricRight: `a bigger plate awaiting nulls one half full before.`,
                 },
                 {
-                    time: 172,
+                    mixTime: `2:55:26.56`,
                     lyricLeft: `When longed by nothing you then fight the best,`,
                     lyricRight: `And fond sighs of reunion I must rest;`,
                 },
                 {
-                    time: 176,
+                    mixTime: `2:58:29.14`,
                     lyricLeft: [
                         `for`,
                         {
@@ -1147,7 +1148,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 177,
+                    mixTime: `3:01:00.84`,
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(chorale)`,
