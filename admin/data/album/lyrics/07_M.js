@@ -18,8 +18,8 @@ import {
 export default {
     path: 'm',
     title: 'M',
-    playerTime: 1131.213,
-    songMixTime: `0:02:12.00`,
+    playerStartTime: 1131.213,
+    mixStartTime: `0:02:12.00`,
     overview: `After the breakup with Catherine, I vowed to spend the next five years shaping myself into the ideal romantic prospect. I started attending local shows, and by year five, I had cobbled together my own band, the Yearlings. I kept running into a fellow scenester named Mara, and I soon grew infatuated. But Mara ended up going out with my drummer Jacob, which made band practice awkward.`,
     lyricUnits: [
         {

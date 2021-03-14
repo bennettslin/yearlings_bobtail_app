@@ -27,8 +27,8 @@ import {
 export default {
     path: `pchelkas-starry-journey`,
     title: `Pchelka's Starry Journey`,
-    playerTime: 755.651,
-    songMixTime: `0:01:26.72`,
+    playerStartTime: 755.651,
+    mixStartTime: `0:01:26.72`,
     overview: `At the height of my years of getting bullied, a strange letter arrived with the promise of spiritual answers. After I sent numerous payments, it was finally revealed to me that I belonged to a race of interstellar beings, and my mission was to shut myself off from the world. I did so by becoming unresponsive in an autistic manner like my brother, which made me feel a psychic bond with him. But as my sanity chipped away, I gradually came to see that I was in a mail-order cult.`,
     lyricUnits: [
         {

@@ -22,8 +22,8 @@ import {
 export default {
     path: 'willy-the-cocoa',
     title: 'Willy the Cocoa',
-    playerTime: 177.396,
-    songMixTime: `0:01:03.00`,
+    playerStartTime: 177.396,
+    mixStartTime: `0:01:03.00`,
     overview: `Willy the Cocoa was a mentally disabled man who wandered the streets collecting recyclables for a living. One day, some gangsters decided to pick a fight and smashed his head open with a bottle, killing him instantly. My younger brother was diagnosed with severe autism at around this time, and in light of Willy's murder, I would lie awake in fear of what lay in my brother's future.`,
     lyricUnits: [
         {

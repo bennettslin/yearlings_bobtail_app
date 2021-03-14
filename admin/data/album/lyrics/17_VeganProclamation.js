@@ -21,7 +21,7 @@ import {
 export default {
     path: 'vegan-proclamation',
     title: 'Vegan Proclamation',
-    playerTime: 3091.4,
+    playerStartTime: 3091.4,
     overview: `Having doubled down on writing and recording all the songs for my next album, I'd been burning bridges with my bandmates for some time. Since we'd stopped playing shows as a result, I had no new opportunities to meet women after Miriam left me. Most devastating of all, Sita had fallen in love with someone else. I wasn't to win her back, ever again. All I had now was myself, but I really didn't like myself. And I had no idea how to be a good person again.`,
     lyricUnits: [
         {
@@ -52,6 +52,7 @@ export default {
             mainVerses: [
                 {
                     time: 0,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         {
                             isItalic: true,
@@ -92,6 +93,7 @@ export default {
             mainVerses: [
                 {
                     time: 15,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `So shall we,`,
                         {
@@ -111,6 +113,7 @@ export default {
                 },
                 {
                     time: 19,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `past the`,
                         {
@@ -168,6 +171,7 @@ export default {
                 },
                 {
                     time: 23,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `to a soiled girl fouled on the`,
                         {
@@ -242,10 +246,12 @@ export default {
             mainVerses: [
                 {
                     time: 30,
+                    // mixTime: `0:00:00.00`,
                     lyric: `We balked at our lives born unfair,`,
                 },
                 {
                     time: 35,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `set to rock this pout from`,
                         {
@@ -262,6 +268,7 @@ export default {
                 },
                 {
                     time: 39,
+                    // mixTime: `0:00:00.00`,
                     lyric: `as a tempered hammer cooled by striking the smoldering air…`,
                 },
             ],
@@ -273,6 +280,7 @@ export default {
             mainVerses: [
                 {
                     time: 46,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `Well,`,
                         {
@@ -291,10 +299,12 @@ export default {
                 },
                 {
                     time: 50,
+                    // mixTime: `0:00:00.00`,
                     lyric: `mere primers on how not to hurt,`,
                 },
                 {
                     time: 55,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `and now I know why the`,
                         {
@@ -338,6 +348,7 @@ export default {
             mainVerses: [
                 {
                     time: 60,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         {
                             isItalic: true,
@@ -427,6 +438,7 @@ export default {
             mainVerses: [
                 {
                     time: 74,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `Torn straps`,
                         {
@@ -455,6 +467,7 @@ export default {
                 },
                 {
                     time: 78,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `form a trail which leads to a`,
                         {
@@ -472,6 +485,7 @@ export default {
                 },
                 {
                     time: 82,
+                    // mixTime: `0:00:00.00`,
                     lyric: `its bristles scrape discharge encrusted on leather boots.`,
                 },
             ],
@@ -484,6 +498,7 @@ export default {
             mainVerses: [
                 {
                     time: 90,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `Through an alley strewn with`,
                         {
@@ -501,6 +516,7 @@ export default {
                 },
                 {
                     time: 94,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `a`,
                         {
@@ -550,6 +566,7 @@ export default {
                 },
                 {
                     time: 98,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         {
                             anchor: `reversing his stomach`,
@@ -594,10 +611,12 @@ export default {
             mainVerses: [
                 {
                     time: 106,
+                    // mixTime: `0:00:00.00`,
                     lyric: `Well, if first cuts are the worst ones bled…`,
                 },
                 {
                     time: 110,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `then`,
                         {
@@ -615,10 +634,12 @@ export default {
                 },
                 {
                     time: 114,
+                    // mixTime: `0:00:00.00`,
                     lyric: `This shipwrecked world is large enough for us to make amends…`,
                 },
                 {
                     time: 120,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `and to be`,
                         {
@@ -649,6 +670,7 @@ export default {
             mainVerses: [
                 {
                     time: 123,
+                    // mixTime: `0:00:00.00`,
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(solo)`,
@@ -674,6 +696,7 @@ export default {
             mainVerses: [
                 {
                     time: 138,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `"So all your`,
                         {
@@ -691,6 +714,7 @@ export default {
                 },
                 {
                     time: 146,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `Someday you'll breathe again; for one,`,
                         {
@@ -707,10 +731,12 @@ export default {
                 },
                 {
                     time: 154,
+                    // mixTime: `0:00:00.00`,
                     lyric: `I don't know how where once I cowered I now could fly.`,
                 },
                 {
                     time: 161,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `I still love you for the`,
                         {
@@ -743,6 +769,7 @@ export default {
             mainVerses: [
                 {
                     time: 170,
+                    // mixTime: `0:00:00.00`,
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(refrain)`,
@@ -757,6 +784,7 @@ export default {
             mainVerses: [
                 {
                     time: 186,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `The stardust marks us, Odin,`,
                         {
@@ -785,10 +813,12 @@ export default {
                 },
                 {
                     time: 194,
+                    // mixTime: `0:00:00.00`,
                     lyric: `And can we start as children? Would we want to then?`,
                 },
                 {
                     time: 201,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `The`,
                         {
@@ -840,6 +870,7 @@ export default {
                 },
                 {
                     time: 209,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `Our ashed heads bow from`,
                         {
@@ -881,6 +912,7 @@ export default {
             mainVerses: [
                 {
                     time: 218,
+                    // mixTime: `0:00:00.00`,
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(refrain)`,

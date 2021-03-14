@@ -20,8 +20,8 @@ import {
 export default {
     path: 'kyon',
     title: 'Kyon? (क्यों?)',
-    playerTime: 2496.293,
-    songMixTime: `0:00:00.27`,
+    playerStartTime: 2496.293,
+    mixStartTime: `0:00:00.27`,
     overview: `The on-again, off-again years gave me enough distance from my misdeeds to see how emotionally abusive I'd become. But I was baffled by why Sita so willingly endured my cruelty. I tried hard to understand her psyche, and eventually came to see just how thoroughly she had tied her sense of worth to our relationship. I was fighting for me. She was fighting for us.`,
     lyricUnits: [
         {

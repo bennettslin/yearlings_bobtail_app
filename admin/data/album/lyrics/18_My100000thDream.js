@@ -19,7 +19,7 @@ import {
 export default {
     path: 'my-100000th-dream',
     title: 'My 100,000th Dream',
-    playerTime: 3332.8,
+    playerStartTime: 3332.8,
     overview: `Every night I dreamt of reuniting with Sita, only to wake up in a panicked sweat as the reality came roaring back that I'd lost her forever. I would slog through the day under a crushing blanket of despair, then crawl back into bed with dread, awaiting the cruel tricks soon to be played by my subconscious mind. I had no idea when this torment would end. The answer, I feared, was never.`,
     lyricUnits: [
         {
@@ -42,6 +42,7 @@ export default {
             mainVerses: [
                 {
                     time: 0,
+                    // mixTime: `0:00:00.00`,
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(recorders)`,
@@ -67,18 +68,22 @@ export default {
             mainVerses: [
                 {
                     time: 13,
+                    // mixTime: `0:00:00.00`,
                     lyric: `My hundred thousandth dream, I bumped into my Sita.`,
                 },
                 {
                     time: 19,
+                    // mixTime: `0:00:00.00`,
                     lyric: `Silent for a while, we searched our eyes,`,
                 },
                 {
                     time: 23,
+                    // mixTime: `0:00:00.00`,
                     lyric: `then we smiled and like old times,`,
                 },
                 {
                     time: 27,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `I took her shoulder as we drove from`,
                         {
@@ -103,6 +108,7 @@ export default {
                 },
                 {
                     time: 34,
+                    // mixTime: `0:00:00.00`,
                     lyric: `I said never again we'll slave our whole lives away!`,
                 },
             ],
@@ -132,10 +138,12 @@ export default {
             mainVerses: [
                 {
                     time: 43,
+                    // mixTime: `0:00:00.00`,
                     lyric: `As pretty as the rainbow, Sita! Sita!`,
                 },
                 {
                     time: 49,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `Did I`,
                         {
@@ -153,14 +161,17 @@ export default {
                 },
                 {
                     time: 56,
+                    // mixTime: `0:00:00.00`,
                     lyric: `As precious as a summer, Sita! Sita!`,
                 },
                 {
                     time: 63,
+                    // mixTime: `0:00:00.00`,
                     lyric: `Did I ever live another life?`,
                 },
                 {
                     time: 70,
+                    // mixTime: `0:00:00.00`,
                     lyric: `And were you mine?`,
                 },
             ],
@@ -182,10 +193,12 @@ export default {
             mainVerses: [
                 {
                     time: 74,
+                    // mixTime: `0:00:00.00`,
                     lyric: `My hundred thousandth dream, I kissed my señorita,`,
                 },
                 {
                     time: 80,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `on the`,
                         {
@@ -249,14 +262,17 @@ export default {
                 },
                 {
                     time: 84,
+                    // mixTime: `0:00:00.00`,
                     lyric: `and the seasons glide away.`,
                 },
                 {
                     time: 89,
+                    // mixTime: `0:00:00.00`,
                     lyric: `I can't remember how or when my heart was Sita's.`,
                 },
                 {
                     time: 94,
+                    // mixTime: `0:00:00.00`,
                     lyric: `We were young, so sure of life, never knowing time unkind!`,
                 },
             ],
@@ -278,22 +294,27 @@ export default {
             mainVerses: [
                 {
                     time: 103,
+                    // mixTime: `0:00:00.00`,
                     lyric: `I spent a lifetime waiting, Sita! Sita!`,
                 },
                 {
                     time: 110,
+                    // mixTime: `0:00:00.00`,
                     lyric: `Did I ever live another life?`,
                 },
                 {
                     time: 117,
+                    // mixTime: `0:00:00.00`,
                     lyric: `We blow the wind in whistles, Sita! Sita!`,
                 },
                 {
                     time: 124,
+                    // mixTime: `0:00:00.00`,
                     lyric: `Did I ever live another life?`,
                 },
                 {
                     time: 131,
+                    // mixTime: `0:00:00.00`,
                     lyric: `When you were mine?`,
                 },
             ],
@@ -315,6 +336,7 @@ export default {
             mainVerses: [
                 {
                     time: 135,
+                    // mixTime: `0:00:00.00`,
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(Sita's theme)`,
@@ -340,6 +362,7 @@ export default {
             mainVerses: [
                 {
                     time: 149,
+                    // mixTime: `0:00:00.00`,
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(Sita's theme)`,
@@ -354,6 +377,7 @@ export default {
             mainVerses: [
                 {
                     time: 163,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `My hundred thousandth dream, on the`,
                         {
@@ -377,14 +401,17 @@ export default {
                 },
                 {
                     time: 169,
+                    // mixTime: `0:00:00.00`,
                     lyric: `she says now it's dark and getting late,`,
                 },
                 {
                     time: 174,
+                    // mixTime: `0:00:00.00`,
                     lyric: `but we'll always have today.`,
                 },
                 {
                     time: 178,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `Why does my`,
                         {
@@ -402,6 +429,7 @@ export default {
                 },
                 {
                     time: 183,
+                    // mixTime: `0:00:00.00`,
                     lyric: `Now the light spills warm and bright… gently fills these eyes…`,
                 },
             ],
@@ -423,6 +451,7 @@ export default {
             mainVerses: [
                 {
                     time: 192,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `She'll always`,
                         {
@@ -449,18 +478,22 @@ export default {
                 },
                 {
                     time: 199,
+                    // mixTime: `0:00:00.00`,
                     lyric: `Will I ever live another life?`,
                 },
                 {
                     time: 206,
+                    // mixTime: `0:00:00.00`,
                     lyric: `Real or imaginary, Sita! Sita!`,
                 },
                 {
                     time: 213,
+                    // mixTime: `0:00:00.00`,
                     lyric: `Will I ever live another life?`,
                 },
                 {
                     time: 220,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         {
                             anchor: `When you'll be mine?`,
@@ -494,6 +527,7 @@ export default {
             mainVerses: [
                 {
                     time: 223,
+                    // mixTime: `0:00:00.00`,
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(Bennett's theme)`,

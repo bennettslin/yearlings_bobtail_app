@@ -21,7 +21,7 @@ import {
 export default {
     path: 'grasshoppers-lie-heavy',
     title: 'Grasshoppers Lie Heavy',
-    playerTime: 1478.2,
+    playerStartTime: 1478.2,
     overview: `I worked my way through college as a dishwasher in a cafeteria, which is how I met Sita. After I scared her off, we didn't speak for several months, but she eventually reached out again, and we became friends. Throughout my continued struggles with dating, as well as my rough start in playing live shows, Sita lent her moral support, though I always wanted something more. At some point, she started to like me back. I'm still not sure how.`,
     isDoublespeaker: true,
     lyricUnits: [
@@ -88,6 +88,7 @@ export default {
             mainVerses: [
                 {
                     time: 0,
+                    // mixTime: `0:00:00.00`,
                     lyric: {
                         isItalic: true,
                         lyric: [
@@ -142,14 +143,17 @@ export default {
             mainVerses: [
                 {
                     time: 10,
+                    // mixTime: `0:00:00.00`,
                     lyric: `Uprooted, then en route,`,
                 },
                 {
                     time: 12,
+                    // mixTime: `0:00:00.00`,
                     lyric: `eighteen threw off the brutes`,
                 },
                 {
                     time: 14,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `and their`,
                         {
@@ -172,6 +176,7 @@ export default {
                 },
                 {
                     time: 17,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `noses in`,
                         {
@@ -223,10 +228,12 @@ export default {
             mainVerses: [
                 {
                     time: 19,
+                    // mixTime: `0:00:00.00`,
                     lyric: `For a cafeteria's wage,`,
                 },
                 {
                     time: 22,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `death of`,
                         {
@@ -243,6 +250,7 @@ export default {
                 },
                 {
                     time: 24,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `stalled by`,
                         {
@@ -266,6 +274,7 @@ export default {
             mainVerses: [
                 {
                     time: 29,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         {
                             anchor: `Down the steps`,
@@ -301,6 +310,7 @@ export default {
                 },
                 {
                     time: 34,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `and stunned, by`,
                         {
@@ -325,6 +335,7 @@ export default {
                 },
                 {
                     time: 38,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `At first she hedged, but then`,
                         {
@@ -353,6 +364,7 @@ export default {
                 },
                 {
                     time: 43,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         {
                             anchor: `Schwa stickers`,
@@ -404,6 +416,7 @@ export default {
             mainVerses: [
                 {
                     time: 48,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `First date`,
                         {
@@ -448,14 +461,17 @@ export default {
             mainVerses: [
                 {
                     time: 58,
+                    // mixTime: `0:00:00.00`,
                     lyric: `Snowflakes in time come to see off the year.`,
                 },
                 {
                     time: 63,
+                    // mixTime: `0:00:00.00`,
                     lyric: `You cried for one to sit; it kissed your ear.`,
                 },
                 {
                     time: 67,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `Her`,
                         {
@@ -474,6 +490,7 @@ export default {
                 },
                 {
                     time: 72,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `Then just like the drift,`,
                         {
@@ -497,6 +514,7 @@ export default {
             mainVerses: [
                 {
                     time: 77,
+                    // mixTime: `0:00:00.00`,
                     lyricLeft: [
                         `Alone his first gig,`,
                         {
@@ -567,6 +585,7 @@ export default {
                 },
                 {
                     time: 87,
+                    // mixTime: `0:00:00.00`,
                     lyricLeft: [
                         `But`,
                         {
@@ -618,10 +637,12 @@ export default {
             mainVerses: [
                 {
                     time: 96,
+                    // mixTime: `0:00:00.00`,
                     lyric: `Homeward, mop-sopped to your knees.`,
                 },
                 {
                     time: 98,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `Tonight, just`,
                         {
@@ -638,10 +659,12 @@ export default {
                 },
                 {
                     time: 101,
+                    // mixTime: `0:00:00.00`,
                     lyric: `left to brave February's brutal gust;`,
                 },
                 {
                     time: 104,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         {
                             anchor: `chimneys weep`,
@@ -669,6 +692,7 @@ export default {
             mainVerses: [
                 {
                     time: 106,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         {
                             anchor: `Phantom limbs`,
@@ -693,6 +717,7 @@ export default {
                 },
                 {
                     time: 108,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `them`,
                         {
@@ -716,6 +741,7 @@ export default {
                 },
                 {
                     time: 110,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `Below the`,
                         {
@@ -748,6 +774,7 @@ export default {
             mainVerses: [
                 {
                     time: 115,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `Your gate code punched, when a`,
                         {
@@ -764,6 +791,7 @@ export default {
                 },
                 {
                     time: 120,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `as your`,
                         {
@@ -778,10 +806,12 @@ export default {
                 },
                 {
                     time: 125,
+                    // mixTime: `0:00:00.00`,
                     lyric: `And she deftly thrusts through the shield of your sneer:`,
                 },
                 {
                     time: 130,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `"Hey, you know`,
                         {
@@ -798,6 +828,7 @@ export default {
                 },
                 {
                     time: 132,
+                    // mixTime: `0:00:00.00`,
                     lyric: `I am? "Well, you're backward…"`,
                 },
             ],
@@ -810,6 +841,7 @@ export default {
             mainVerses: [
                 {
                     time: 135,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `She`,
                         {
@@ -860,6 +892,7 @@ export default {
             mainVerses: [
                 {
                     time: 144,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `In her`,
                         {
@@ -878,6 +911,7 @@ export default {
                 },
                 {
                     time: 149,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `Though`,
                         {
@@ -911,6 +945,7 @@ export default {
                 },
                 {
                     time: 153,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `On your bed's rumpled linens, a`,
                         {
@@ -939,6 +974,7 @@ export default {
                 },
                 {
                     time: 158,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `"Shall I leave you," she says,`,
                         {
@@ -992,6 +1028,7 @@ export default {
             mainVerses: [
                 {
                     time: 164,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `Thoughts sift in the`,
                         {
@@ -1024,6 +1061,7 @@ export default {
                 },
                 {
                     time: 166,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `Why does she play`,
                         {
@@ -1048,6 +1086,7 @@ export default {
                 },
                 {
                     time: 169,
+                    // mixTime: `0:00:00.00`,
                     lyric: `past a year on a stalled friendship's sails?`,
                 },
             ],
@@ -1070,12 +1109,14 @@ export default {
             mainVerses: [
                 {
                     time: 174,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `On a malady your thoughts are stuck,`,
                     ],
                 },
                 {
                     time: 176,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `and the`,
                         {
@@ -1100,6 +1141,7 @@ export default {
                 },
                 {
                     time: 178,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `in the`,
                         {
@@ -1123,6 +1165,7 @@ export default {
             mainVerses: [
                 {
                     time: 183,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `Then you`,
                         {
@@ -1158,6 +1201,7 @@ export default {
                 },
                 {
                     time: 185,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `In her`,
                         {
@@ -1175,6 +1219,7 @@ export default {
                 },
                 {
                     time: 187,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `and you marvel, glimmer of her`,
                         {
@@ -1208,6 +1253,7 @@ export default {
             mainVerses: [
                 {
                     time: 193,
+                    // mixTime: `0:00:00.00`,
                     lyric: {
                         anchor: `She loves you…`,
                         todo: true,
@@ -1221,14 +1267,17 @@ export default {
                 },
                 {
                     time: 196,
+                    // mixTime: `0:00:00.00`,
                     lyric: `…and now you're left with no defenses.`,
                 },
                 {
                     time: 201,
+                    // mixTime: `0:00:00.00`,
                     lyric: `Well, who'd have guessed this?`,
                 },
                 {
                     time: 204,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `You`,
                         {
@@ -1251,10 +1300,12 @@ export default {
                 },
                 {
                     time: 207,
+                    // mixTime: `0:00:00.00`,
                     lyric: `"Oh sweetie, you're right:`,
                 },
                 {
                     time: 209,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `you wear your`,
                         {
@@ -1272,6 +1323,7 @@ export default {
                 },
                 {
                     time: 212,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `So`,
                         {
@@ -1307,14 +1359,17 @@ export default {
             mainVerses: [
                 {
                     time: 216,
+                    // mixTime: `0:00:00.00`,
                     lyric: `And dude, you love her…`,
                 },
                 {
                     time: 218,
+                    // mixTime: `0:00:00.00`,
                     lyric: `…when your paws were thrashed sparring with the tide,`,
                 },
                 {
                     time: 221,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `from your`,
                         {
@@ -1374,6 +1429,7 @@ export default {
                 },
                 {
                     time: 225,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `Let`,
                         {
@@ -1399,6 +1455,7 @@ export default {
             mainVerses: [
                 {
                     time: 229,
+                    // mixTime: `0:00:00.00`,
                     lyric: [
                         `You`,
                         {
@@ -1424,6 +1481,7 @@ export default {
                 },
                 {
                     time: 233,
+                    // mixTime: `0:00:00.00`,
                     lyric: `and pulls you up inside her thighs.`,
                 },
             ],
@@ -1435,6 +1493,7 @@ export default {
             mainVerses: [
                 {
                     time: 245,
+                    // mixTime: `0:00:00.00`,
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(Odin's theme)`,

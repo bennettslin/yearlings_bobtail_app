@@ -24,9 +24,9 @@ const _addPathAndTitle = (songIndex, song) => {
 
 const _addDuration = (songIndex, song) => {
     const
-        { playerTime } = albumLyrics[songIndex],
-        { playerTime: nextPlayerTime } = albumLyrics[songIndex + 1],
-        duration = getFloatToHundredth(nextPlayerTime - playerTime)
+        { playerStartTime } = albumLyrics[songIndex],
+        { playerStartTime: nextPlayerTime } = albumLyrics[songIndex + 1],
+        duration = getFloatToHundredth(nextPlayerTime - playerStartTime)
 
     song.songDuration = duration
 
@@ -34,8 +34,8 @@ const _addDuration = (songIndex, song) => {
 }
 
 const _addPlayerTime = (songIndex, song) => {
-    const { playerTime } = albumLyrics[songIndex]
-    song.playerTime = playerTime
+    const { playerStartTime } = albumLyrics[songIndex]
+    song.playerTime = playerStartTime
 }
 
 const _addIsDoublespeaker = (songIndex, song) => {

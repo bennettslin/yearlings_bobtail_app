@@ -20,7 +20,7 @@ const _getIndexedVersesForUnit = (unit) => {
 }
 
 const _addUnitVerseLists = (songIndex, song) => {
-    const { lyricUnits, songMixTime } = albumLyrics[songIndex]
+    const { lyricUnits, mixStartTime } = albumLyrics[songIndex]
 
     const
         unitVerseIndicesList = [],
@@ -40,7 +40,7 @@ const _addUnitVerseLists = (songIndex, song) => {
             verseStartTimes.push(
                 // TODO: Eventually all of the songs will have mix times.
                 verse.mixTime ?
-                    getVerseTimeFromMixTimes(songMixTime, verse.mixTime) :
+                    getVerseTimeFromMixTimes(mixStartTime, verse.mixTime) :
                     verse.time,
             )
             verseIndex++
