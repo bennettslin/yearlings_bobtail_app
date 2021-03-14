@@ -24,7 +24,11 @@ import {
 export default {
     path: 'uncanny-valley-boy',
     title: 'Uncanny Valley Boy',
-    playerTime: 2722.6,
+    playerTime: 2722.629,
+    songMixTime: `0:01:18.46`,
+    // For recalibration if the mix is ever redone.
+    referenceMixTime: `0:01:18.46`,
+    referenceMixDescription: `Acoustic guitar, measure 1`,
     overview: `Upon learning of my brother's autism, my parents were too harried to notice I was being bullied at school. In guilt, they later indulged every whim I had to find my own path. But as I got older, they grew concerned that I wasn't maturing as I went. On top of this, they were devastated when I left Sita, whom they adored. Naturally, I felt crushed by the weight of disappointing them. Still, I had a master plan to follow, and I wasn't about to change my ways.`,
     lyricUnits: [
         {
@@ -69,7 +73,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 0,
+                    mixTime: `0:01:18.46`,
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(intro)`,
@@ -94,7 +98,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 14,
+                    mixTime: `0:14:23.07`,
                     lyric: [
                         {
                             anchor: `Beta,`,
@@ -149,7 +153,7 @@ export default {
                     ],
                 },
                 {
-                    time: 17,
+                    mixTime: `0:18:20.97`,
                     lyric: [
                         `Rest your rump, boy, by your old`,
                         {
@@ -175,7 +179,7 @@ export default {
                     ],
                 },
                 {
-                    time: 21,
+                    mixTime: `0:23:08.46`,
                     lyric: [
                         {
                             anchor: `Stumped,`,
@@ -274,7 +278,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 27,
+                    mixTime: `0:28:20.96`,
                     lyric: [
                         `And you, for a future,`,
                         {
@@ -298,7 +302,7 @@ export default {
                     ],
                 },
                 {
-                    time: 31,
+                    mixTime: `0:32:00.97`,
                     lyric: [
                         `to live neutered, blissfully`,
                         {
@@ -322,7 +326,7 @@ export default {
                     ],
                 },
                 {
-                    time: 35,
+                    mixTime: `0:36:18.46`,
                     lyric: [
                         {
                             anchor: `Upon purchase of a queen's ship,`,
@@ -385,15 +389,15 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 40,
+                    mixTime: `0:41:18.47`,
                     lyric: `But distracted by your brother's tantrums,`,
                 },
                 {
-                    time: 44,
+                    mixTime: `0:45:10.97`,
                     lyric: `we couldn't imagine your mail-order cult,`,
                 },
                 {
-                    time: 47,
+                    mixTime: `0:48:20.96`,
                     lyric: [
                         `till they called,`,
                         {
@@ -416,7 +420,7 @@ export default {
                     ],
                 },
                 {
-                    time: 50,
+                    mixTime: `0:52:00.97`,
                     lyric: [
                         `then we caught you`,
                         {
@@ -448,7 +452,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 54,
+                    mixTime: `0:55:23.47`,
                     lyric: [
                         `So do you believe`,
                         {
@@ -494,15 +498,15 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 61,
+                    mixTime: `1:03:03.06`,
                     lyric: `Mowed down by the tides,`,
                 },
                 {
-                    time: 63,
+                    mixTime: `1:05:03.88`,
                     lyric: `and inundated under in unfair fights,`,
                 },
                 {
-                    time: 67,
+                    mixTime: `1:08:23.32`,
                     lyric: [
                         `you made a`,
                         {
@@ -520,7 +524,7 @@ export default {
             ],
             subVerse: [
                 {
-                    time: 70,
+                    mixTime: `1:11:18.46`,
                     lyric: {
                         isItalic: true,
                         lyric: `to seal out their floods.`,
@@ -568,7 +572,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 74,
+                    mixTime: `1:16:02.26`,
                     lyric: [
                         `But then, my`,
                         {
@@ -594,7 +598,7 @@ export default {
                     ],
                 },
                 {
-                    time: 76,
+                    mixTime: `1:18:03.06`,
                     lyric: [
                         `safe on your`,
                         {
@@ -611,7 +615,7 @@ export default {
                     ],
                 },
                 {
-                    time: 80,
+                    mixTime: `1:21:22.52`,
                     lyric: [
                         `you finally granted their`,
                         {
@@ -642,7 +646,7 @@ export default {
             ],
             subVerse: [
                 {
-                    time: 82,
+                    mixTime: `1:24:17.66`,
                     lyric: {
                         isItalic: true,
                         lyric: `and healed round your grudge…`,
@@ -684,7 +688,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 86,
+                    mixTime: `1:27:12.79`,
                     lyric: [
                         `Now suddenly dressed to play, you`,
                         {
@@ -700,7 +704,7 @@ export default {
                     ],
                 },
                 {
-                    time: 89,
+                    mixTime: `1:31:03.94`,
                     lyric: [
                         `smugly prepped to`,
                         {
@@ -723,7 +727,7 @@ export default {
                     ],
                 },
                 {
-                    time: 94,
+                    mixTime: `1:35:08.94`,
                     lyric: `This scheming crackpot vowed to clean the jackpot out this time around…`,
                 },
             ],
@@ -765,7 +769,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 100,
+                    mixTime: `1:41:16.44`,
                     lyric: [
                         `But have you heard, my beloved`,
                         {
@@ -834,7 +838,7 @@ export default {
                     ],
                 },
                 {
-                    time: 106,
+                    mixTime: `1:47:23.94`,
                     lyric: [
                         `A`,
                         {
@@ -896,11 +900,11 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 111,
+                    mixTime: `1:54:26.44`,
                     lyric: `Did you find a rival in the goddess you once sought as prize—`,
                 },
                 {
-                    time: 119,
+                    mixTime: `2:00:29.55`,
                     lyric: [
                         `your idol who riled you when you saw that you`,
                         {
@@ -924,7 +928,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 127,
+                    mixTime: `2:07:01.98`,
                     lyric: [
                         `With bride you bridled in this perfect`,
                         {
@@ -942,7 +946,7 @@ export default {
                     ],
                 },
                 {
-                    time: 132,
+                    mixTime: `2:13:16.57`,
                     lyric: [
                         `and so one night you`,
                         {
@@ -983,7 +987,7 @@ export default {
                     ],
                 },
                 {
-                    time: 138,
+                    mixTime: `2:20:01.17`,
                     lyric: [
                         `When`,
                         {
@@ -1057,7 +1061,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 145,
+                    mixTime: `2:26:15.77`,
                     lyric: [
                         `No`,
                         {
@@ -1111,7 +1115,7 @@ export default {
             ],
             subVerse: [
                 {
-                    time: 150,
+                    mixTime: `2:32:09.42`,
                     lyric: {
                         isItalic: true,
                         lyric: [
@@ -1140,7 +1144,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 152,
+                    mixTime: `2:33:29.42`,
                     lyric: [
                         `Stubborn`,
                         {
@@ -1178,7 +1182,7 @@ export default {
             ],
             subVerse: [
                 {
-                    time: 157,
+                    mixTime: `2:38:29.42`,
                     lyric: {
                         isItalic: true,
                         lyric: [
@@ -1218,11 +1222,11 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 160,
+                    mixTime: `2:41:14.41`,
                     lyric: `Oh child of mine,`,
                 },
                 {
-                    time: 162,
+                    mixTime: `2:43:15.22`,
                     lyric: [
                         `what's left of what these`,
                         {
@@ -1238,7 +1242,7 @@ export default {
                     ],
                 },
                 {
-                    time: 165,
+                    mixTime: `2:47:04.68`,
                     lyric: [
                         `and all these`,
                         {
@@ -1258,7 +1262,7 @@ export default {
             ],
             subVerse: [
                 {
-                    time: 168,
+                    mixTime: `2:49:29.82`,
                     lyric: {
                         isItalic: true,
                         lyric: `to find a cleared path`,
@@ -1314,15 +1318,15 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 172,
+                    mixTime: `2:54:13.60`,
                     lyric: `in life's unbearable maze?`,
                 },
                 {
-                    time: 174,
+                    mixTime: `2:56:14.41`,
                     lyric: `Then once for all to render it all fail-safe,`,
                 },
                 {
-                    time: 178,
+                    mixTime: `3:00:03.88`,
                     lyric: [
                         `your thoughts`,
                         {
@@ -1348,7 +1352,7 @@ export default {
             ],
             subVerse: [
                 {
-                    time: 181,
+                    mixTime: `3:02:29.02`,
                     lyric: {
                         isItalic: true,
                         lyric: `to five-year plans.`,
@@ -1390,7 +1394,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 184,
+                    mixTime: `3:05:24.14`,
                     lyric: [
                         `Now son, before you embark on your`,
                         {
@@ -1432,7 +1436,7 @@ export default {
                     ],
                 },
                 {
-                    time: 191,
+                    mixTime: `3:12:20.90`,
                     lyric: [
                         `shouldn't you first be sure you've`,
                         {
@@ -1534,7 +1538,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 199,
+                    mixTime: `3:20:22.26`,
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(Mara's theme)`,
