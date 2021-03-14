@@ -1,6 +1,5 @@
 # TODO:
-* Fix Sasha timing.
-* Establish where the timing went off.
+* Fix Sasha and Look Back mix times.
 
 * Clarify logState labels?
 * Adjust volume?

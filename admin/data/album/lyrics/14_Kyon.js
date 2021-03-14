@@ -20,8 +20,8 @@ import {
 export default {
     path: 'kyon',
     title: 'Kyon? (क्यों?)',
-    playerTime: 2497.159,
-    // songMixTime: `0:00:00.21`,
+    playerTime: 2496.293,
+    songMixTime: `0:00:00.27`,
     overview: `The on-again, off-again years gave me enough distance from my misdeeds to see how emotionally abusive I'd become. But I was baffled by why Sita so willingly endured my cruelty. I tried hard to understand her psyche, and eventually came to see just how thoroughly she had tied her sense of worth to our relationship. I was fighting for me. She was fighting for us.`,
     lyricUnits: [
         {
@@ -54,8 +54,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 0,
-                    // mixTime: `0:00:00.00`,
+                    mixTime: `0:00:00.27`,
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(hums)`,
@@ -80,8 +79,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 12,
-                    // mixTime: `0:00:00.00`,
+                    mixTime: `0:12:25.71`,
                     lyric: [
                         `So you fled to her`,
                         {
@@ -104,8 +102,7 @@ export default {
                     ],
                 },
                 {
-                    time: 17,
-                    // mixTime: `0:00:00.00`,
+                    mixTime: `0:17:14.56`,
                     lyric: [
                         `history shed, having`,
                         {
@@ -122,8 +119,7 @@ export default {
                     ],
                 },
                 {
-                    time: 22,
-                    // mixTime: `0:00:00.00`,
+                    mixTime: `0:22:20.57`,
                     lyric: [
                         `A`,
                         {
@@ -156,8 +152,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 26,
-                    // mixTime: `0:00:00.00`,
+                    mixTime: `0:26:20.57`,
                     lyric: [
                         `So baby, tell me then, when you`,
                         {
@@ -174,13 +169,11 @@ export default {
                     ],
                 },
                 {
-                    time: 31,
-                    // mixTime: `0:00:00.00`,
+                    mixTime: `0:31:26.56`,
                     lyric: `are you suckling to be fed?`,
                 },
                 {
-                    time: 36,
-                    // mixTime: `0:00:00.00`,
+                    mixTime: `0:36:20.56`,
                     lyric: [
                         `Is it just her`,
                         {
@@ -196,8 +189,7 @@ export default {
                     ],
                 },
                 {
-                    time: 40,
-                    // mixTime: `0:00:00.00`,
+                    mixTime: `0:41:04.86`,
                     lyric: `Well, have some more…`,
                 },
             ],
@@ -236,13 +228,11 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 47,
-                    // mixTime: `0:00:00.00`,
+                    mixTime: `0:48:08.67`,
                     lyric: `And how you always burned, for the slight;`,
                 },
                 {
-                    time: 50,
-                    // mixTime: `0:00:00.00`,
+                    mixTime: `0:51:11.31`,
                     lyric: [
                         {
                             anchor: `spurned at first,`,
@@ -258,13 +248,11 @@ export default {
                     ],
                 },
                 {
-                    time: 53,
-                    // mixTime: `0:00:00.00`,
+                    mixTime: `0:53:17.48`,
                     lyric: `You'd nurse your bruises: why, the nerve of me to lie`,
                 },
                 {
-                    time: 56,
-                    // mixTime: `0:00:00.00`,
+                    mixTime: `0:56:20.14`,
                     lyric: `in reserve, while I had to learn to find`,
                 },
             ],
@@ -294,8 +282,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 58,
-                    // mixTime: `0:00:00.00`,
+                    mixTime: `0:59:09.55`,
                     lyric: [
                         {
                             anchor: `all the points`,
@@ -312,8 +299,7 @@ export default {
                     ],
                 },
                 {
-                    time: 61,
-                    // mixTime: `0:00:00.00`,
+                    mixTime: `1:01:28.96`,
                     lyric: [
                         {
                             anchor: `plunders past`,
@@ -330,8 +316,7 @@ export default {
                     ],
                 },
                 {
-                    time: 63,
-                    // mixTime: `0:00:00.00`,
+                    mixTime: `1:04:05.14`,
                     lyric: [
                         `But dear,`,
                         {
@@ -348,8 +333,7 @@ export default {
                     ],
                 },
                 {
-                    time: 66,
-                    // mixTime: `0:00:00.00`,
+                    mixTime: `1:07:07.79`,
                     lyric: `I get you back? And…`,
                 },
             ],
@@ -360,8 +344,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 68,
-                    // mixTime: `0:00:00.00`,
+                    mixTime: `1:09:00.72`,
                     lyric: [
                         {
                             anchor: `I'll be stronger—`,
@@ -378,8 +361,7 @@ export default {
                     ],
                 },
                 {
-                    time: 73,
-                    // mixTime: `0:00:00.00`,
+                    mixTime: `1:14:09.55`,
                     lyric: [
                         `to parent my`,
                         {
@@ -418,8 +400,7 @@ export default {
                     ],
                 },
                 {
-                    time: 78,
-                    // mixTime: `0:00:00.00`,
+                    mixTime: `1:19:18.38`,
                     lyric: [
                         `And when sobered by the`,
                         {
@@ -480,8 +461,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 85,
-                    // mixTime: `0:00:00.00`,
+                    mixTime: `1:25:10.44`,
                     lyric: [
                         // NOTE: I made "My" capitalised.
                         `My`,
@@ -499,8 +479,7 @@ export default {
                     ],
                 },
                 {
-                    time: 93,
-                    // mixTime: `0:00:00.00`,
+                    mixTime: `1:33:02.27`,
                     lyric: [
                         `Bursting belly told by`,
                         {
@@ -524,8 +503,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 104,
-                    // mixTime: `0:00:00.00`,
+                    mixTime: `1:43:27.63`,
                     lyric: [
                         `A`,
                         {
@@ -551,8 +529,7 @@ export default {
                     ],
                 },
                 {
-                    time: 109,
-                    // mixTime: `0:00:00.00`,
+                    mixTime: `1:49:25.35`,
                     lyric: [
                         `your`,
                         {
@@ -576,8 +553,7 @@ export default {
                     ],
                 },
                 {
-                    time: 116,
-                    // mixTime: `0:00:00.00`,
+                    mixTime: `1:56:29.65`,
                     lyric: [
                         `But other nights you'd`,
                         {
@@ -618,13 +594,11 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 121,
-                    // mixTime: `0:00:00.00`,
+                    mixTime: `2:01:08.21`,
                     lyric: `to leave me as before, with only instinct to adore.`,
                 },
                 {
-                    time: 127,
-                    // mixTime: `0:00:00.00`,
+                    mixTime: `2:07:21.07`,
                     lyric: [
                         `Besides, a`,
                         {
@@ -641,8 +615,7 @@ export default {
                     ],
                 },
                 {
-                    time: 132,
-                    // mixTime: `0:00:00.00`,
+                    mixTime: `2:13:12.51`,
                     lyric: [
                         {
                             anchor: `bleeds just once,`,
@@ -659,8 +632,7 @@ export default {
                     ],
                 },
                 {
-                    time: 138,
-                    // mixTime: `0:00:00.00`,
+                    mixTime: `2:18:16.47`,
                     lyric: [
                         `So are we agreed,`,
                         {
@@ -697,8 +669,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 150,
-                    // mixTime: `0:00:00.00`,
+                    mixTime: `2:30:23.15`,
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(hums)`,
@@ -712,13 +683,11 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 174,
-                    // mixTime: `0:00:00.00`,
+                    mixTime: `2:55:01.71`,
                     lyric: `You say you woke one crystal morning, to find all those thoughts had gone away:`,
                 },
                 {
-                    time: 180,
-                    // mixTime: `0:00:00.00`,
+                    mixTime: `3:01:03.86`,
                     lyric: [
                         `your`,
                         {
@@ -757,8 +726,7 @@ export default {
                     ],
                 },
                 {
-                    time: 186,
-                    // mixTime: `0:00:00.00`,
+                    mixTime: `3:06:25.29`,
                     lyric: [
                         `You just knew`,
                         {
@@ -804,8 +772,7 @@ export default {
                     ],
                 },
                 {
-                    time: 192,
-                    // mixTime: `0:00:00.00`,
+                    mixTime: `3:12:27.43`,
                     lyric: [
                         `And darling, don't you worry, these were only`,
                         {
@@ -828,8 +795,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 197,
-                    // mixTime: `0:00:00.00`,
+                    mixTime: `3:17:27.43`,
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(peafowl)`,
