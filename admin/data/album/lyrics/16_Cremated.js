@@ -24,14 +24,13 @@ export default {
      * mix start time, rather than the other way around.
      *
      * pST - pRT + mRT = mST
-     * 2951.729 - 2926.829 + 24.804 = 0.096 => 0:00:02.88
      * 2926.829 - 2951.729 + 24.804 => -0.096 => -0:00:02.88
      */
     referenceDescription: `"Atavist" in measure 12`,
-    playerReferenceTime: 2951.729,
-    playerStartTime: 2926.829,
     mixReferenceTime: `0:24:24.13`,
     mixStartTime: `-0:00:02.88`,
+    playerReferenceTime: 2951.729,
+    playerStartTime: 2926.829,
     overview: `While I can't deny that dating white women helped silence the nagging feeling I had of being genetically inferior, I honestly didn't seek them out. A case in point was Miriam, whom I met at a Yearlings show. She was the storybook ending my ego had been waiting for: cute, hip, and drawn to me through no effort on my part. We lasted a few months. In the end, I had to wonder if she was just slumming it with me.`,
     isDoublespeaker: true,
     lyricUnits: [
@@ -55,8 +54,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 0,
-                    mixTime: `0:00:00.00`,
+                    mixTime: `-0:00:02.88`,
                     lyricCentre: {
                         anchor: `Or another…`,
                         todo: true,
@@ -102,8 +100,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 4,
-                    mixTime: `0:00:00.00`,
+                    mixTime: `0:04:10.13`,
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(Miriam's theme)`,
@@ -134,8 +131,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 24,
-                    mixTime: `0:00:00.00`,
+                    mixTime: `0:24:10.63`,
                     lyricLeft: [
                         {
                             anchor: `At a vista,`,
@@ -207,8 +203,7 @@ export default {
                     ],
                 },
                 {
-                    time: 27,
-                    mixTime: `0:00:00.00`,
+                    mixTime: `0:27:02.57`,
                     lyricLeft: [
                         `to`,
                         {
@@ -255,8 +250,7 @@ export default {
                     ],
                 },
                 {
-                    time: 30,
-                    mixTime: `0:00:00.00`,
+                    mixTime: `0:30:21.83`,
                     lyricLeft: `and deaf from blasting frontal speakers,`,
                     lyricRight: [
                         `an everlasting`,
@@ -273,8 +267,7 @@ export default {
                     ],
                 },
                 {
-                    time: 34,
-                    mixTime: `0:00:00.00`,
+                    mixTime: `0:33:27.43`,
                     lyricLeft: [
                         `this`,
                         {
@@ -330,8 +323,7 @@ export default {
                     ],
                 },
                 {
-                    time: 37,
-                    mixTime: `0:00:00.00`,
+                    mixTime: `0:36:19.38`,
                     lyricLeft: [
                         {
                             anchor: `pinkish slip,`,
@@ -388,8 +380,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 39,
-                    mixTime: `0:00:00.00`,
+                    mixTime: `0:39:11.31`,
                     lyricLeft: [
                         {
                             anchor: `His god humming "Freebird,"`,
@@ -417,8 +408,7 @@ export default {
                     lyricRight: `As comedy teams work, a hoot the times`,
                 },
                 {
-                    time: 42,
-                    mixTime: `0:00:00.00`,
+                    mixTime: `0:42:16.91`,
                     lyricLeft: [
                         `nods as`,
                         {
@@ -468,8 +458,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 46,
-                    mixTime: `0:00:00.00`,
+                    mixTime: `0:46:06.17`,
                     lyricLeft: `Though, she ponders the children`,
                     lyricRight: [
                         {
@@ -497,8 +486,7 @@ export default {
                     ],
                 },
                 {
-                    time: 49,
-                    mixTime: `0:00:00.00`,
+                    mixTime: `0:48:28.09`,
                     lyricLeft: [
                         `born from a`,
                         {
@@ -536,8 +524,7 @@ export default {
                     ],
                 },
                 {
-                    time: 52,
-                    mixTime: `0:00:00.00`,
+                    mixTime: `0:52:17.27`,
                     lyricLeft: [
                         `on a`,
                         {
@@ -561,8 +548,7 @@ export default {
                     lyricRight: `on the shelf, serves his declared assertion:`,
                 },
                 {
-                    time: 56,
-                    mixTime: `0:00:00.00`,
+                    mixTime: `0:56:06.44`,
                     lyricLeft: `duly may inherit his burdens.`,
                     lyricRight: [
                         `to remain`,
@@ -580,8 +566,7 @@ export default {
                     ],
                 },
                 {
-                    time: 59,
-                    mixTime: `0:00:00.00`,
+                    mixTime: `0:58:14.68`,
                     lyricLeft: [
                         `This swarm pumped and`,
                         {
@@ -638,14 +623,12 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 61,
-                    mixTime: `0:00:00.00`,
+                    mixTime: `1:01:06.55`,
                     lyricLeft: `Despite once promising forever,`,
                     lyricRight: `His silent dramedy works better;`,
                 },
                 {
-                    time: 64,
-                    mixTime: `0:00:00.00`,
+                    mixTime: `1:03:28.43`,
                     lyricLeft: [
                         `which she swore when scarcely`,
                         {
@@ -694,8 +677,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 70,
-                    mixTime: `0:00:00.00`,
+                    mixTime: `1:09:25.83`,
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(Miriam's theme)`,
@@ -709,8 +691,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 90,
-                    mixTime: `0:00:00.00`,
+                    mixTime: `1:29:26.39`,
                     lyricCentre: [
                         {
                             anchor: `Needle done`,
@@ -744,8 +725,7 @@ export default {
                     ],
                 },
                 {
-                    time: 94,
-                    mixTime: `0:00:00.00`,
+                    mixTime: `1:33:29.30`,
                     lyricCentre: [
                         `it`,
                         {
@@ -788,8 +768,7 @@ export default {
                     ],
                 },
                 {
-                    time: 98,
-                    mixTime: `0:00:00.00`,
+                    mixTime: `1:38:02.19`,
                     lyricCentre: [
                         `With his`,
                         {
@@ -814,8 +793,7 @@ export default {
                     ],
                 },
                 {
-                    time: 102,
-                    mixTime: `0:00:00.00`,
+                    mixTime: `1:41:21.36`,
                     lyricCentre: [
                         `Undeluded, she'll bask in`,
                         {
@@ -846,8 +824,7 @@ export default {
                     ],
                 },
                 {
-                    time: 106,
-                    mixTime: `0:00:00.00`,
+                    mixTime: `1:45:24.19`,
                     lyricCentre: [
                         `and`,
                         {
@@ -940,8 +917,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 112,
-                    mixTime: `0:00:00.00`,
+                    mixTime: `1:51:21.59`,
                     lyricLeft: [
                         `The`,
                         {
@@ -959,8 +935,7 @@ export default {
                     lyricRight: `The key turned and she floors it,`,
                 },
                 {
-                    time: 115,
-                    mixTime: `0:00:00.00`,
+                    mixTime: `1:54:13.48`,
                     lyricLeft: [
                         `though no worse but for`,
                         {
@@ -989,8 +964,7 @@ export default {
                     ],
                 },
                 {
-                    time: 118,
-                    mixTime: `0:00:00.00`,
+                    mixTime: `1:58:02.65`,
                     lyricLeft: [
                         `this geezer's`,
                         {
@@ -1028,8 +1002,7 @@ export default {
                     ],
                 },
                 {
-                    time: 121,
-                    mixTime: `0:00:00.00`,
+                    mixTime: `2:01:08.17`,
                     lyricLeft: [
                         `He's`,
                         {
@@ -1064,8 +1037,7 @@ export default {
                     ],
                 },
                 {
-                    time: 124,
-                    mixTime: `0:00:00.00`,
+                    mixTime: `2:04:00.06`,
                     lyricLeft: [
                         `a pop, and she`,
                         {
@@ -1091,8 +1063,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 127,
-                    mixTime: `0:00:00.00`,
+                    mixTime: `2:07:05.58`,
                     lyricLeft: `Lights one up then draws a daring`,
                     lyricRight: [
                         `Life's a dumb`,
@@ -1118,8 +1089,7 @@ export default {
                     ],
                 },
                 {
-                    time: 130,
-                    mixTime: `0:00:00.00`,
+                    mixTime: `2:09:13.85`,
                     lyricLeft: [
                         `puff,`,
                         {
@@ -1160,8 +1130,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 135,
-                    mixTime: `0:00:00.00`,
+                    mixTime: `2:15:11.39`,
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(Miriam's theme)`,
