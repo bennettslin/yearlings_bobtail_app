@@ -1,6 +1,8 @@
 # TODO:
-* Fix Sasha and Look Back mix times.
+* Establish mix times for remaining songs.
+* Make sure Sasha and Look Back mix times are correct.
 * Add IDE song info.
+* Get rid of mix times for first verse.
 
 * Clarify logState labels?
 * Adjust volume?
