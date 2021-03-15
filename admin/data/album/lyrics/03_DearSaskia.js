@@ -35,7 +35,7 @@ export default {
     title: 'Dear Saskia',
     playerStartTime: 384.24,
     mixStartTime: `0:00:03.00`,
-    songMixSpeed: 44.96,
+    mixSamplingFrequency: 44.96,
     overview: `Sasha was a childhood friend, as well as my first crush. The strength she drew from her Jewish identity fascinated me, but it also clued me in on a cruel paradox. Namely, that nothing can come from longing to share in someone else's faith and roots, which stay strong precisely by not being shared. Sasha moved away during middle school, at the peak of my troubles with bullies. That summer, I wrote her a letter on a family trip to Taiwan.`,
     lyricUnits: [
         {

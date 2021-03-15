@@ -23,7 +23,7 @@ export default {
     title: 'Look Back in Anger',
     playerStartTime: 1932.099,
     mixStartTime: `0:02:23.33`,
-    songMixSpeed: 41.66,
+    mixSamplingFrequency: 41.66,
     overview: `With the Yearlings becoming a fixture in the local scene, I started to command more attention than I'd ever known, particularly from women. And yet, my misery didn't abate, but instead simmered into a hard-boiled resentment. I also began to regret my relationship with Sita, which now felt like a decision I'd been coerced to make, under deprived conditions from which I was now freed.`,
     lyricUnits: [
         {
