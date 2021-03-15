@@ -1,5 +1,6 @@
 # TODO:
 * Fix Sasha and Look Back mix times.
+* Add IDE song info.
 
 * Clarify logState labels?
 * Adjust volume?

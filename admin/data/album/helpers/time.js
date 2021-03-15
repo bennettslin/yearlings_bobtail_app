@@ -2,13 +2,21 @@ import { getFloatToHundredth } from '../../../../app/helpers/general'
 
 const getSecondsFromMixTime = mixTimeString => {
     // Mix time string looks like 1:15:22.67.
+    let sign = 1
+
+    // If mix start time is negative.
+    if (mixTimeString[0] === '-') {
+        mixTimeString = mixTimeString.replace('-', '')
+        sign = -1
+    }
+
     const
         mixTimeArray = mixTimeString.split(':'),
         minutes = parseInt(mixTimeArray[0]),
         seconds = parseInt(mixTimeArray[1]),
         frames = parseFloat(mixTimeArray[2])
 
-    return (
+    return sign * (
         minutes * 60 +
         seconds +
         // A frame is a thirtieth of a second.
