@@ -15,27 +15,22 @@ import {
     IS_UNIT_DOT,
 } from '../../../../app/constants/lyrics'
 
-// FIXME!
-
-// "Dearest"
-// 389.90
-// 0:05:22.80 = 5.76
-// Difference: 384.14
-
-// "Anyway"
-// 519.22
-// 2:18.28.82 = 138.96
-// Difference: 380.26
-
-// 519.22 - 389.9 = 129.32
-// 138.96 - 5.76 = 133.2
-
 export default {
     path: 'dear-saskia',
     title: 'Dear Saskia',
-    playerStartTime: 384.24,
+    /**
+     * This is for recalibrating the player start time after redoing the mix.
+     *
+     * mST - mRT + pRT = pST
+     * 0.1 - 5.762 + 389.901 => 384.329
+     */
+    referenceDescription: `"Dearest" in measure 3`,
+    mixReferenceTime: `0:05:22.86`,
     mixStartTime: `0:00:03.00`,
-    mixSamplingFrequency: 44.96,
+    playerReferenceTime: 389.901,
+    playerStartTime: 384.329,
+    // This is a magic number adjusted by ear. In the mix, it's actually 44.96.
+    mixSamplingFrequency: 45.39,
     overview: `Sasha was a childhood friend, as well as my first crush. The strength she drew from her Jewish identity fascinated me, but it also clued me in on a cruel paradox. Namely, that nothing can come from longing to share in someone else's faith and roots, which stay strong precisely by not being shared. Sasha moved away during middle school, at the peak of my troubles with bullies. That summer, I wrote her a letter on a family trip to Taiwan.`,
     lyricUnits: [
         {
@@ -57,7 +52,6 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 0,
                     mixTime: `0:00:03.00`,
                     lyricCentre: {
                         isItalic: true,
@@ -89,7 +83,6 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 5,
                     mixTime: `0:05:23.34`,
                     lyricCentre: `Dearest Sasha,`,
                 },
@@ -102,7 +95,6 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 7,
                     mixTime: `0:07:06.69`,
                     lyric: [
                         `It's nearing autumn here with`,
@@ -119,12 +111,10 @@ export default {
                     ],
                 },
                 {
-                    time: 10,
                     mixTime: `0:11:02.26`,
                     lyric: `Is it searing in Boston? Hope this letter finds`,
                 },
                 {
-                    time: 13,
                     mixTime: `0:14:13.39`,
                     lyric: [
                         `your`,
@@ -160,7 +150,6 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 18,
                     mixTime: `0:19:07.84`,
                     lyric: [
                         {
@@ -178,17 +167,14 @@ export default {
                     ],
                 },
                 {
-                    time: 22,
                     mixTime: `0:24:16.76`,
                     lyric: `their peaks sealed and shielded by foggy clouds.`,
                 },
                 {
-                    time: 26,
                     mixTime: `0:27:27.88`,
                     lyric: `Beneath this ceiling yields the scene a reeling feel`,
                 },
                 {
-                    time: 30,
                     mixTime: `0:31:23.45`,
                     lyric: [
                         `of some`,
@@ -212,12 +198,10 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 33,
                     mixTime: `0:34:20.13`,
                     lyric: `So… before I left, you said`,
                 },
                 {
-                    time: 37,
                     mixTime: `0:39:00.25`,
                     lyric: [
                         `I should`,
@@ -235,7 +219,6 @@ export default {
                     ],
                 },
                 {
-                    time: 41,
                     mixTime: `0:42:25.85`,
                     lyric: [
                         `But then in`,
@@ -279,7 +262,6 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 48,
                     mixTime: `0:50:02.54`,
                     lyric: [
                         `And I'd reflect inside`,
@@ -310,7 +292,6 @@ export default {
                     ],
                 },
                 {
-                    time: 52,
                     mixTime: `0:54:27.01`,
                     lyric: [
                         {
@@ -353,7 +334,6 @@ export default {
                     ],
                 },
                 {
-                    time: 56,
                     mixTime: `0:58:22.58`,
                     lyric: [
                         `with you raving over how`,
@@ -379,7 +359,6 @@ export default {
                     ],
                 },
                 {
-                    time: 64,
                     mixTime: `1:07:12.60`,
                     lyric: [
                         `staying kosher. Though, you know,`,
@@ -420,7 +399,6 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 70,
                     mixTime: `1:13:15.03`,
                     lyricCentre: {
                         isItalic: true,
@@ -435,7 +413,6 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 74,
                     mixTime: `1:16:11.71`,
                     lyric: [
                         `And I sniffled daily when you`,
@@ -459,7 +436,6 @@ export default {
                     ],
                 },
                 {
-                    time: 77,
                     mixTime: `1:20:07.28`,
                     lyric: [
                         `One`,
@@ -489,7 +465,6 @@ export default {
                     ],
                 },
                 {
-                    time: 80,
                     mixTime: `1:24:02.85`,
                     lyric: [
                         `caress, sun-streaked and loose, a`,
@@ -514,7 +489,6 @@ export default {
                     ],
                 },
                 {
-                    time: 84,
                     mixTime: `1:27:28.42`,
                     lyric: `sadly weaned from you…`,
                 },
@@ -526,17 +500,14 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 88,
                     mixTime: `1:30:25.09`,
                     lyric: `Whom I knew I'd lose the day`,
                 },
                 {
-                    time: 92,
                     mixTime: `1:35:05.11`,
                     lyric: `you flew enraged and shooed them from their game;`,
                 },
                 {
-                    time: 95,
                     mixTime: `1:39:00.69`,
                     lyric: [
                         `untied this`,
@@ -585,7 +556,6 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 103,
                     mixTime: `1:46:07.38`,
                     lyric: [
                         `Oh but Sasha, if`,
@@ -603,7 +573,6 @@ export default {
                     ],
                 },
                 {
-                    time: 107,
                     mixTime: `1:50:17.41`,
                     lyric: [
                         `then no one lives when`,
@@ -624,7 +593,6 @@ export default {
                     ],
                 },
                 {
-                    time: 110,
                     mixTime: `1:54:13.07`,
                     lyric: [
                         `who shrug when thus annoyed, yawning,`,
@@ -656,12 +624,10 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 118,
                     mixTime: `2:02:18.69`,
                     lyric: `Well Sasha… okay, you saw the cuts.`,
                 },
                 {
-                    time: 122,
                     mixTime: `2:06:14.27`,
                     lyric: [
                         `But though my`,
@@ -705,12 +671,10 @@ export default {
                     ],
                 },
                 {
-                    time: 126,
                     mixTime: `2:10:09.83`,
                     lyric: `there's been plenty days I've really been through worse.`,
                 },
                 {
-                    time: 134,
                     mixTime: `2:18:29.86`,
                     lyric: [
                         `Anyway, I'm feeling healed. Still,`,
@@ -744,7 +708,6 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 138,
                     mixTime: `2:25:02.29`,
                     lyricCentre: {
                         isItalic: true,
@@ -759,12 +722,10 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 143,
                     mixTime: `2:27:28.96`,
                     lyric: `And Sasha, I know you'll have them all,`,
                 },
                 {
-                    time: 147,
                     mixTime: `2:31:24.54`,
                     lyric: [
                         `while if I last the fall`,
@@ -793,7 +754,6 @@ export default {
                     ],
                 },
                 {
-                    time: 151,
                     mixTime: `2:35:20.10`,
                     lyric: [
                         `is a toss-up. But where some`,
@@ -813,17 +773,14 @@ export default {
                     ],
                 },
                 {
-                    time: 154,
                     mixTime: `2:39:15.68`,
                     lyric: `might bleed the Nile to nausea,`,
                 },
                 {
-                    time: 158,
                     mixTime: `2:43:11.25`,
                     lyric: `I can wash up, and hope the bastards croak,`,
                 },
                 {
-                    time: 162,
                     mixTime: `2:47:21.26`,
                     lyric: [
                         `on`,
