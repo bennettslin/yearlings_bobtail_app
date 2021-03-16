@@ -5099,4 +5099,8 @@ export default [
         taskName: `Fix issue where source code doesn't show album and pitch content.`,
         workedHours: 4,
     },
+    {
+        taskName: `Refine song times.`,
+        workedHours: 28,
+    },
 ]
