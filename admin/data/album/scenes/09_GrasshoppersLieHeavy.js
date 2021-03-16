@@ -580,7 +580,7 @@ export default [
         sky: { season: SEASON_LOVE },
     },
     {
-        unitIndex: 19,
+        unitIndex: 20,
         description: `Same scene. Bennett and Sita are together in bed, having just had sex, a look that is a mixture of serenity and uncertainty on both their faces.`,
         presences: {
             [ACTOR]: {
