@@ -18,8 +18,13 @@ import {
 export default {
     path: 'ash-wednesday',
     title: 'Ash Wednesday',
+    /**
+     * This is for recalibrating the player start time after redoing the mix.
+     * For this song, the reference and start times are the same.
+     */
+    referenceDescription: `Darbuka in anacrusis`,
     playerStartTime: 967.569,
-    mixStartTime: `0:01:03.50`,
+    mixStartTime: `0:01:03.51`,
     overview: `In college, I met my first girlfriend. Catherine was a nice Catholic girl and former valedictorian, who didn't think much of my nonexistent reading habit and broke up with me right before Ash Wednesday. So I ashed my forehead and tried to bump into her that day, thinking if she could picture me as a good Catholic boy, then I might get another chance. It didn't work, but I did grow into a faithful reader, and I have Catherine to thank for that.`,
     lyricUnits: [
         {

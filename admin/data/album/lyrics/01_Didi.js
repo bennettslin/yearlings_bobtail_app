@@ -23,8 +23,17 @@ import {
 export default {
     path: 'didi',
     title: 'Didi (弟弟)',
-    playerStartTime: 0.014,
-    mixStartTime: `0:01:09.54`,
+    /**
+     * This is for recalibrating the player start time after redoing the mix.
+     *
+     * mST - mRT + pRT = pST
+     * 1.399 - 1.654 + 0.282 => 0.027
+     */
+    referenceDescription: `Glockenspiel in measure 1`,
+    mixReferenceTime: `0:01:19.61`,
+    mixStartTime: `0:01:11.97`,
+    playerReferenceTime: 0.282,
+    playerStartTime: 0.027,
     overview: `As a child, I depended on my older sister to do most everything for me, like zipping up my jacket. One day when she wasn't around to help, I pooped in my pants and had to be sent home from school.`,
     lyricUnits: [
         {

@@ -1,5 +1,4 @@
 # TODO:
-* Add reference times.
 * Review parentheses lyrics
 
 * Clarify logState labels?

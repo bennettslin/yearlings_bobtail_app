@@ -18,7 +18,12 @@ import {
 export default {
     path: 'm',
     title: 'M',
-    playerStartTime: 1131.213,
+    /**
+     * This is for recalibrating the player start time after redoing the mix.
+     * For this song, the reference and start times are the same.
+     */
+    referenceDescription: `Spanish guitar in measure 1`,
+    playerStartTime: 1131.214,
     mixStartTime: `0:02:12.00`,
     overview: `After the breakup with Catherine, I vowed to spend the next five years shaping myself into the ideal romantic prospect. I started attending local shows, and by year five, I had cobbled together my own band, the Yearlings. I kept running into a fellow scenester named Mara, and I soon grew infatuated. But Mara ended up going out with my drummer Jacob, which made band practice awkward.`,
     lyricUnits: [

@@ -20,8 +20,17 @@ import {
 export default {
     path: 'kyon',
     title: 'Kyon? (क्यों?)',
-    playerStartTime: 2496.293,
+    /**
+     * This is for recalibrating the player start time after redoing the mix.
+     *
+     * mST - mRT + pRT = pST
+     * 0.009 - 2.123 + 2498.410 => 0
+     */
+    referenceDescription: `Hum in anacrusis`,
+    mixReferenceTime: `0:02:03.69`,
     mixStartTime: `0:00:00.27`,
+    playerReferenceTime: 2498.410,
+    playerStartTime: 2496.296,
     overview: `The on-again, off-again years gave me enough distance from my misdeeds to see how emotionally abusive I'd become. But I was baffled by why Sita so willingly endured my cruelty. I tried hard to understand her psyche, and eventually came to see just how thoroughly she had tied her sense of worth to our relationship. I was fighting for me. She was fighting for us.`,
     lyricUnits: [
         {

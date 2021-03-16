@@ -16,8 +16,13 @@ import {
 export default {
     path: 'good-night-sita',
     title: 'Good Night, Sita',
+    /**
+     * This is for recalibrating the player start time after redoing the mix.
+     * For this song, the reference and start times are the same.
+     */
+    referenceDescription: `"Good" in anacrusis`,
     playerStartTime: 1346.412,
-    mixStartTime: `0:01:11.82`,
+    mixStartTime: `0:01:11.89`,
     overview: `Sometime after dating Catherine and a while before meeting Mara, I tried to hit on a university student named Sita. Nothing came of the few dates that followed, however, and I quickly scurried away in disappointment.`,
     lyricUnits: [
         {
