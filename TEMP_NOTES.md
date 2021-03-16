@@ -2,6 +2,7 @@
 * Establish mix times for remaining songs.
 * Add reference times.
 * Get rid of mix times for first verse.
+* Review parentheses lyrics
 
 * Clarify logState labels?
 * Adjust volume?
