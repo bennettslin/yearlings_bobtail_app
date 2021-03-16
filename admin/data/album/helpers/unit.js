@@ -42,14 +42,11 @@ const _addUnitVerseLists = (songIndex, song) => {
             // Also tell verse its index.
             verse.verseIndex = verseIndex
             verseStartTimes.push(
-                // TODO: Eventually all of the songs will have mix times.
-                verse.mixTime ?
-                    getVerseTimeFromMixTimes({
-                        songMixTime: mixStartTime,
-                        verseMixTime: verse.mixTime,
-                        mixSamplingFrequency,
-                    }) :
-                    verse.time,
+                getVerseTimeFromMixTimes({
+                    songMixTime: mixStartTime,
+                    verseMixTime: verse.mixTime,
+                    mixSamplingFrequency,
+                }),
             )
             verseIndex++
         })

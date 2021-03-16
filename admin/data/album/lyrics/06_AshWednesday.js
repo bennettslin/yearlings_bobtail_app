@@ -54,7 +54,7 @@ export default {
             },
             mainVerses: [
                 {
-                    mixTime: `0:01:03.50`,
+                    mixTime: null,
                     lyric: [
                         {
                             anchor: `O Catherine! My Catherine!`,

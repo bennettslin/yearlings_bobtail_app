@@ -54,7 +54,7 @@ export default {
             },
             mainVerses: [
                 {
-                    mixTime: `-0:00:02.88`,
+                    mixTime: null,
                     lyricCentre: {
                         anchor: `Or another…`,
                         todo: true,

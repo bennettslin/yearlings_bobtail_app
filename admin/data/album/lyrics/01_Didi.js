@@ -72,7 +72,7 @@ export default {
             },
             mainVerses: [
                 {
-                    mixTime: `0:01:09.54`,
+                    mixTime: null,
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(Bennett's theme)`,

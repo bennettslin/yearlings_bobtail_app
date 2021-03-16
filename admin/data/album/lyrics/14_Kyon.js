@@ -54,7 +54,7 @@ export default {
             },
             mainVerses: [
                 {
-                    mixTime: `0:00:00.27`,
+                    mixTime: null,
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(hums)`,

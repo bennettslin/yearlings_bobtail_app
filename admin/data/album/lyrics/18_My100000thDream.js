@@ -47,7 +47,7 @@ export default {
             },
             mainVerses: [
                 {
-                    mixTime: `0:01:21.58`,
+                    mixTime: null,
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(recorders)`,

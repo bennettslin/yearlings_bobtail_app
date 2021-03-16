@@ -57,7 +57,7 @@ export default {
             },
             mainVerses: [
                 {
-                    mixTime: `0:01:26.72`,
+                    mixTime: null,
                     lyric: {
                         isEmphasis: true,
                         lyric: [

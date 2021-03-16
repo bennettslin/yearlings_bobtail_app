@@ -64,7 +64,7 @@ export default {
             },
             mainVerses: [
                 {
-                    mixTime: `0:02:06.00`,
+                    mixTime: null,
                     lyricCentre: `Mr. Odin died today.`,
                 },
             ],

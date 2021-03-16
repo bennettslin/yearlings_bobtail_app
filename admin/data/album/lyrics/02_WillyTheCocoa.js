@@ -62,7 +62,7 @@ export default {
             },
             mainVerses: [
                 {
-                    mixTime: `0:01:03.00`,
+                    mixTime: null,
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(Willy's theme)`,

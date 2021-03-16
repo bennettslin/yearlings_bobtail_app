@@ -1,6 +1,5 @@
 # TODO:
 * Add reference times.
-* Get rid of mix times for first verse.
 * Review parentheses lyrics
 
 * Clarify logState labels?

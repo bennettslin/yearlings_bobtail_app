@@ -52,7 +52,7 @@ export default {
             },
             mainVerses: [
                 {
-                    mixTime: `0:00:03.00`,
+                    mixTime: null,
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(Sasha's theme)`,

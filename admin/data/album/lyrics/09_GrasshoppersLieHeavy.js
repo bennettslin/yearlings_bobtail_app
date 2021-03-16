@@ -94,7 +94,7 @@ export default {
             },
             mainVerses: [
                 {
-                    mixTime: `0:01:29.52`,
+                    mixTime: null,
                     lyric: {
                         isItalic: true,
                         lyric: [

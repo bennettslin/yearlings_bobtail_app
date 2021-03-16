@@ -42,7 +42,7 @@ export default {
             },
             mainVerses: [
                 {
-                    mixTime: `0:02:12.00`,
+                    mixTime: null,
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(Mara's theme)`,

@@ -75,7 +75,7 @@ export default {
             },
             mainVerses: [
                 {
-                    mixTime: `0:01:18.46`,
+                    mixTime: null,
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(intro)`,

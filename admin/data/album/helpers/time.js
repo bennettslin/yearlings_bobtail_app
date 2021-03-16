@@ -41,9 +41,9 @@ export const getVerseTimeFromMixTimes = ({
              * This is the time that the verse begins in the mix. Default
              * priority goes to the start of the bar, then halfway, then a
              * quarter way. Use the score to determine when there is a vocal
-             * rest.
+             * rest. If verse mix time is null, then it's the first verse.
              */
-            getSecondsFromMixTime(verseMixTime) -
+            getSecondsFromMixTime(verseMixTime || songMixTime) -
             /**
              * This is the time that the sound begins in the mix. Once it is
              * lined up with the song's player time, then the mix time for each

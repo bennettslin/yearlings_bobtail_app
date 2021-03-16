@@ -39,7 +39,7 @@ export default {
             },
             mainVerses: [
                 {
-                    mixTime: `0:01:11.82`,
+                    mixTime: null,
                     lyric: `"Good night," she says`,
                 },
             ],

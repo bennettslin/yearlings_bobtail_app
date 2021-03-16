@@ -55,7 +55,7 @@ export default {
             },
             mainVerses: [
                 {
-                    mixTime: `0:03:11.00`,
+                    mixTime: null,
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(white-throated sparrow)`,

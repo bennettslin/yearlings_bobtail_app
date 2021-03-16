@@ -52,7 +52,7 @@ export default {
             },
             mainVerses: [
                 {
-                    mixTime: `0:01:01.40`,
+                    mixTime: null,
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(Garry's theme)`,
