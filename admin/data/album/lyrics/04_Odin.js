@@ -1824,7 +1824,7 @@ export default {
                     mixTime: `3:08:27.40`,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(Odin's theme)`,
+                        lyric: `(fade out, Odin's theme)`,
                     },
                 },
             ],

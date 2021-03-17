@@ -60,7 +60,7 @@ export default {
                     mixTime: null,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(Garry's theme)`,
+                        lyric: `(fiddle and banjo)`,
                     },
                 },
             ],
@@ -519,7 +519,7 @@ export default {
                     mixTime: `1:25:03.48`,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(Garry's theme)`,
+                        lyric: `(tin whistle, fiddle, and mandolin)`,
                     },
                 },
             ],
@@ -832,7 +832,7 @@ export default {
                     mixTime: `2:43:07.67`,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(Garry's theme)`,
+                        lyric: `(fiddle and dobro)`,
                     },
                 },
             ],

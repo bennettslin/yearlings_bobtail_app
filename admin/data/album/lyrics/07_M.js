@@ -50,7 +50,7 @@ export default {
                     mixTime: null,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(Mara's theme)`,
+                        lyric: `(electric guitar, Mara's theme)`,
                     },
                 },
             ],
@@ -1011,7 +1011,7 @@ export default {
                     mixTime: `3:15:08.97`,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(glockenspiel)`,
+                        lyric: `(glockenspiel and acoustic guitar)`,
                     },
                 },
             ],

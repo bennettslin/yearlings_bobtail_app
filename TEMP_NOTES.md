@@ -1,6 +1,3 @@
-# TODO:
-* Review parentheses lyrics
-
 * Clarify logState labels?
 * Adjust volume?
 * Audio shortcuts?

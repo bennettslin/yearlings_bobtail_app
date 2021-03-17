@@ -55,7 +55,7 @@ export default {
                     mixTime: null,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(Sasha's theme)`,
+                        lyric: `(bowed dobro and piano, Sasha's theme)`,
                     },
                 },
             ],
@@ -402,7 +402,7 @@ export default {
                     mixTime: `1:13:15.03`,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(Sasha's theme)`,
+                        lyric: `(piano and violins, Sasha's theme)`,
                     },
                 },
             ],
@@ -711,7 +711,7 @@ export default {
                     mixTime: `2:25:02.29`,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(Sasha's theme)`,
+                        lyric: `(alto melodica and soprano recorder, Sasha's theme)`,
                     },
                 },
             ],

@@ -66,7 +66,7 @@ export default {
                     mixTime: null,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(hums)`,
+                        lyric: `(humming and slide mandolins)`,
                     },
                 },
             ],
@@ -681,7 +681,7 @@ export default {
                     mixTime: `2:30:23.15`,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(hums)`,
+                        lyric: `(humming and slide mandolins)`,
                     },
                 },
             ],
@@ -807,7 +807,7 @@ export default {
                     mixTime: `3:17:27.43`,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(peafowl)`,
+                        lyric: `(peafowl, acoustic guitar, and piano)`,
                     },
                 },
             ],

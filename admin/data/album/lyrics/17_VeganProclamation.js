@@ -14,6 +14,7 @@ import {
     CHORUS,
     REFRAIN,
     SOLO,
+    OUTRO,
     FORESHADOW_OF_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../app/constants/lyrics'
@@ -663,7 +664,7 @@ export default {
                     mixTime: `2:12:08.65`,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(solo)`,
+                        lyric: `(dobro and pitch-shifted choir)`,
                     },
                 },
             ],
@@ -750,14 +751,14 @@ export default {
         },
         {
             unitMap: {
-                formType: REFRAIN,
+                formType: SOLO,
             },
             mainVerses: [
                 {
                     mixTime: `2:59:23.17`,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(refrain)`,
+                        lyric: `(piano and dobro)`,
                     },
                 },
             ],
@@ -888,14 +889,14 @@ export default {
         },
         {
             unitMap: {
-                formType: REFRAIN,
+                formType: OUTRO,
             },
             mainVerses: [
                 {
                     mixTime: `3:47:07.73`,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(refrain)`,
+                        lyric: `(dobro)`,
                     },
                 },
             ],

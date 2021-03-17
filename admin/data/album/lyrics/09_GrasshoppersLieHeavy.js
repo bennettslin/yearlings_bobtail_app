@@ -1458,7 +1458,7 @@ export default {
                     mixTime: `4:06:26.08`,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(Odin's theme)`,
+                        lyric: `(acoustic guitar, Odin's theme)`,
                     },
                 },
             ],

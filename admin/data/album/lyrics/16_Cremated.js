@@ -11,7 +11,8 @@ import {
     VERSES,
     BRIDGE,
     INTRO,
-    REFRAIN,
+    SOLO,
+    OUTRO,
     IS_UNIT_DOT,
 } from '../../../../app/constants/lyrics'
 
@@ -96,14 +97,14 @@ export default {
         },
         {
             unitMap: {
-                formType: REFRAIN,
+                formType: SOLO,
             },
             mainVerses: [
                 {
                     mixTime: `0:04:10.13`,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(Miriam's theme)`,
+                        lyric: `(electric guitar and acoustic guitar)`,
                     },
                 },
             ],
@@ -673,14 +674,14 @@ export default {
         },
         {
             unitMap: {
-                formType: REFRAIN,
+                formType: SOLO,
             },
             mainVerses: [
                 {
                     mixTime: `1:09:25.83`,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(Miriam's theme)`,
+                        lyric: `(organ and acoustic guitar)`,
                     },
                 },
             ],
@@ -1126,14 +1127,14 @@ export default {
         },
         {
             unitMap: {
-                formType: REFRAIN,
+                formType: OUTRO,
             },
             mainVerses: [
                 {
                     mixTime: `2:15:11.39`,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(Miriam's theme)`,
+                        lyric: `(electric piano and electric guitar)`,
                     },
                 },
             ],

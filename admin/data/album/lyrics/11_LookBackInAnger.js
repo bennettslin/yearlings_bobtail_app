@@ -68,7 +68,7 @@ export default {
                     mixTime: null,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(intro)`,
+                        lyric: `(soprano recorder)`,
                     },
                 },
             ],
@@ -898,7 +898,7 @@ export default {
                     mixTime: `2:35:08.90`,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(outro)`,
+                        lyric: `(soprano recorder)`,
                     },
                 },
             ],

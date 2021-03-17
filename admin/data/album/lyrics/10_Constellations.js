@@ -18,6 +18,7 @@ import {
     BRIDGE,
     RESPONSE,
     REFRAIN,
+    OUTRO,
     IS_UNIT_DOT,
 } from '../../../../app/constants/lyrics'
 
@@ -79,7 +80,7 @@ export default {
                     mixTime: null,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(refrain)`,
+                        lyric: `(string synthesizer)`,
                     },
                 },
             ],
@@ -834,7 +835,7 @@ export default {
                     mixTime: `0:54:11.25`,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(refrain)`,
+                        lyric: `(string synthesizer)`,
                     },
                 },
             ],
@@ -1472,7 +1473,7 @@ export default {
                     mixTime: `2:01:26.25`,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(refrain)`,
+                        lyric: `(electric guitar)`,
                     },
                 },
             ],
@@ -2105,14 +2106,14 @@ export default {
         },
         {
             unitMap: {
-                formType: REFRAIN,
+                formType: OUTRO,
             },
             mainVerses: [
                 {
                     mixTime: `2:56:07.50`,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(refrain)`,
+                        lyric: `(arcade synthesizer)`,
                     },
                 },
             ],

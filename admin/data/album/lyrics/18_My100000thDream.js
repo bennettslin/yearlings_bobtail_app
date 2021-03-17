@@ -50,7 +50,7 @@ export default {
                     mixTime: null,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(recorders)`,
+                        lyric: `(tin whistle and piano)`,
                     },
                 },
             ],
@@ -323,7 +323,7 @@ export default {
                     mixTime: `2:16:26.66`,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(Sita's theme)`,
+                        lyric: `(voice synthesizer, Sita's theme)`,
                     },
                 },
             ],
@@ -348,7 +348,7 @@ export default {
                     mixTime: `2:31:03.32`,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(Sita's theme)`,
+                        lyric: `(choir, Sita's theme)`,
                     },
                 },
             ],
@@ -415,7 +415,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: true,
                 card: {
-                    description: `The third verse revisits the bowed guitars ending on scratch tones first heard in "Dear Saskia," along with the four-note motif that I call Sasha's theme. These are then followed by the shrieking whistles and pitch-shifted instruments from "Ash Wednesday."`,
+                    description: `The third verse revisits the bowed guitars ending on scratch tones first heard in "Dear Saskia," along with the four-note motif of its refrain. These are then followed by the shrieking whistles and pitch-shifted instruments from "Ash Wednesday."`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
@@ -502,7 +502,7 @@ export default {
                     mixTime: `3:45:23.32`,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(Bennett's theme)`,
+                        lyric: `(glockenspiel and acoustic guitar, Bennett's theme)`,
                     },
                 },
             ],

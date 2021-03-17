@@ -70,7 +70,7 @@ export default {
                     mixTime: null,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(Willy's theme)`,
+                        lyric: `(acoustic guitar, Willy's theme)`,
                     },
                 },
             ],
@@ -671,7 +671,7 @@ export default {
                     mixTime: `1:37:15.00`,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(Willy's theme)`,
+                        lyric: `(mandolin, Willy's theme)`,
                     },
                 },
             ],

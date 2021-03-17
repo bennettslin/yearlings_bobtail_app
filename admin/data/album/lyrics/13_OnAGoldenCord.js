@@ -1160,7 +1160,7 @@ export default {
                     mixTime: `3:01:00.84`,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(chorale)`,
+                        lyric: `(choir)`,
                     },
                 },
             ],

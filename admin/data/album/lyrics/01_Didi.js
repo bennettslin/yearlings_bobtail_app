@@ -84,7 +84,7 @@ export default {
                     mixTime: null,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(Bennett's theme)`,
+                        lyric: `(glockenspiel and banjo, Bennett's theme)`,
                     },
                 },
             ],
@@ -130,7 +130,7 @@ export default {
                     mixTime: `0:12:28.81`,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(whistles)`,
+                        lyric: `(whistling)`,
                     },
                 },
             ],
@@ -525,7 +525,7 @@ export default {
                     mixTime: `2:04:14.40`,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(whistles)`,
+                        lyric: `(whistling)`,
                     },
                 },
             ],
@@ -585,7 +585,7 @@ export default {
                     mixTime: `2:44:20.26`,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(fade out)`,
+                        lyric: `(dampened acoustic guitars)`,
                     },
                 },
             ],
