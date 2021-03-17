@@ -428,7 +428,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `The San Fernando Valley, which I hated in my youth, is the quintessential "Cali valley." The days before I could leave were painfully endless. On this summer break back home, however, my newfound independence combines with the magic of Robitussin to render escape instantaneous.`,
+                                    description: `The San Fernando Valley, which I hated in my youth, is the quintessential "Cali valley." The days before I hightailed it out of there were painfully endless. On this summer break back home, however, my newfound independence combines with the magic of Robitussin to render escape instantaneous.`,
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                         [PUN]: true,

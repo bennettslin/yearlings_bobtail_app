@@ -64,7 +64,7 @@ export default [
     {
         // Grasshoppers Lie Heavy
         type: WORMHOLES,
-        description: `A wormhole is a thematic connection between two songs. First turn on the "wormhole" category to show all wormhole annotations. To have the audio jump through a wormhole, click the annotation, then click the wormhole button.`,
+        description: `A wormhole is a thematic connection between two songs. To jump through a wormhole, first turn on the "wormhole" category. Then select any annotation showing a wormhole icon, and click the wormhole button.`,
     },
     {
         // Constellations!

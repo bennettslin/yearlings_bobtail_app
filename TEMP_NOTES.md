@@ -1,5 +1,9 @@
+# Bug
+* Wormhole finger jumps when fading out.
+
 * Clarify logState labels?
 * Adjust volume?
+* Don't make menu move.
 * Audio shortcuts?
     * Make similar to Spotify.
 * Preteen Bennett enraged comics page.
@@ -11,7 +15,6 @@
 * Delay cubes for presence transition exit. Need to first calculate presence exit transition times.
 * Don't bother with timing transitions in mobile.
 * Don't stagger opacity transitions for cubes.
-* Don't make menu move.
 
 # Performance TODO:
 * Performance. (Redux.)

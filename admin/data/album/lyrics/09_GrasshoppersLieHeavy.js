@@ -36,7 +36,6 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 cards: [
                     {
                         description: [
@@ -80,7 +79,7 @@ export default {
                         },
                     },
                     {
-                        description: `I liked the image of two grasshoppers hidden in the tall grass, each sending hesitant signals to the other, with neither wishing to be the first to reveal itself.`,
+                        description: `I chose this song title because I liked the idea of two grasshoppers hidden in the tall grass, each hesitantly signaling to the other, as neither one wishes to reveal itself first.`,
                         dotKeys: {
                             [OBSERVATION]: true,
                         },
@@ -101,10 +100,9 @@ export default {
                             `L.A. to the Bay,`,
                             {
                                 anchor: `pompous autumn waits.`,
-                                todo: true,
                                 cards: [
                                     {
-                                        description: `In high school, I continued on as the same unwelcome nobody I had been in middle school. It just didn't seem possible to remake myself into a whole new person while surrounded by all the same classmates. But in my head, I was busy crafting a future persona as an artist of superior ability and judgment, which was raring to go the minute I could hightail it out of Los Angeles.`,
+                                        description: `In high school, I continued on as the same unlikable nobody I'd been in middle school. It just didn't seem possible to remake myself into someone new while surrounded by all the same classmates. But all the while I was crafting a future persona of a self-assured artist. And it was raring to go as soon as I could leave Los Angeles.`,
                                         dotKeys: {
                                             [BACKSTORY]: true,
                                             [OBSERVATION]: true,
@@ -121,7 +119,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `Just as`,
@@ -134,7 +131,7 @@ export default {
                             anchor: `meta-referential`,
                             wiki: `Meta-reference`,
                         },
-                        `possibilities of a story within a story. And so this song contains subtle lyrical references to all the other songs on the album. I call these wormholes.`,
+                        `possibilities of a story within a story. And so hidden in this song's lyrics are references to every other song on the album. On this website, the links connecting two songs through such a reference are called wormholes.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -161,14 +158,13 @@ export default {
                         `and their`,
                         {
                             anchor: `molls perched on pedestals,`,
-                            todo: true,
                             card: {
                                 description: [
                                     {
                                         anchor: `Gun molls,`,
                                         wiki: `Gun_moll`,
                                     },
-                                    `the female companions of famous mobsters, were both romanticized and feared for their exploits. Likewise, I desired the girls who hung out with the boys who bullied me, but this also made their contempt for me harder to stomach.`,
+                                    `the female companions of famous mobsters, were both romanticized by society and feared for their exploits. Likewise, I desired the girls who hung out with the boys who bullied me, which made their contempt for me harder to stomach.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -195,7 +191,7 @@ export default {
                                     ],
                                 },
                                 {
-                                    description: `But I could even the score by showing the same disdain for the tacky books and songs they consumed.`,
+                                    description: `But I could even the score by showing the same disdain for the tacky books and music they consumed.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
