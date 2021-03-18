@@ -7,36 +7,8 @@
     height: $LENGTH_ICON_LARGE;
     top: 50%;
 
-    .ShW__tips__activatedVerse
-    & {
-        top: 62.5%;
-    }
-    .ShW__tips__stanzaTab
-    & {
-        top: 22.5%;
-    }
-    .ShW__tips__wormholes.ShW__tips__isPointedAtLyrics
-    & {
-        top: 72.5%;
-    }
-    .ShW__tips__wiki.ShW__tips__isPointedAtLyrics
-    & {
-        top: 40%;
-    }
-
     left: 100%;
     transform: translate(5%, -25%);
-
-    .ShW__tips__lyricExpand
-    &,
-    .DW__desktopWidth
-    .ShW__tips__carousel
-    &,
-    .DW__desktopWidth
-    .ShW__tips__nav
-    & {
-        transform: translate(5%, -50%);
-    }
 
     z-index: $zIndex__tipsHand;
 
@@ -64,11 +36,6 @@
     left: auto;
     right: 100%;
     transform: translate(-5%, -25%);
-
-    .ShW__tips__autoscroll
-    & {
-        transform: translate(-5%, -50%);
-    }
 }
 
 .TipsHand__shown {
@@ -89,4 +56,30 @@
 .TipsHand__animatable {
     // TODO: Improve styling.
     filter: drop-shadow(0 0 5px hsla(0, 0, 0, 0.5));
+}
+
+.TipsHand__carousel,
+.TipsHand__lyricExpand,
+.TipsHand__nav {
+    transform: translate(5%, -50%);
+}
+
+.TipsHand__activatedVerse {
+    top: 62.5%;
+}
+
+.TipsHand__autoscroll {
+    transform: translate(-5%, -50%);
+}
+
+.TipsHand__stanzaTab {
+    top: 22.5%;
+}
+
+.TipsHand__wormholes {
+    top: 72.5%;
+}
+
+.TipsHand__wiki {
+    top: 40%;
 }

@@ -39,8 +39,8 @@ const DotsSlideToggle = ({ className }) => {
                 }}
             />
             <TipsHand {...{ tipType: DOTS }} />
-            <TipsHand isPointedAtDots {...{ tipType: WORMHOLES }} />
-            <TipsHand isPointedAtDots {...{ tipType: WIKI }} />
+            <TipsHand isPointedAtDotsSlide {...{ tipType: WORMHOLES }} />
+            <TipsHand isPointedAtDotsSlide {...{ tipType: WIKI }} />
             <DotsSlideDispatcher {...{ ref: dispatchDotsSlide }} />
         </div>
     )

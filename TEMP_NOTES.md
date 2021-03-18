@@ -1,5 +1,5 @@
 # Bug
-* Wormhole finger jumps when fading out.
+* Didi tips hand should point at dots slide if no dot for annotation is selected.
 * Adjust volume?
 
 * Clarify logState labels?

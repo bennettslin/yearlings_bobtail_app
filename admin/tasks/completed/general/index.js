@@ -5103,4 +5103,8 @@ export default [
         taskName: `Refine song times.`,
         workedHours: 28,
     },
+    {
+        taskName: `Fix tips hand bugs.`,
+        workedHours: 2,
+    },
 ]

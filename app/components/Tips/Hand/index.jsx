@@ -22,7 +22,7 @@ import './style'
 
 const TipsHand = ({
     tipType,
-    isPointedAtDots = false,
+    isPointedAtDotsSlide = false,
     reverse,
 
 }) => {
@@ -43,9 +43,10 @@ const TipsHand = ({
 
         // If dot is selected, render the one not pointed at dots toggle.
     } else if (tipType === WORMHOLES) {
-        canRender = wormhole !== isPointedAtDots
+        canRender = wormhole !== isPointedAtDotsSlide
+
     } else if (tipType === WIKI) {
-        canRender = reference !== isPointedAtDots
+        canRender = reference !== isPointedAtDotsSlide
     }
 
     return (
@@ -72,7 +73,6 @@ const TipsHand = ({
                     className: cx(
                         'TipsHand',
                         `TipsHand__${tipType}`,
-                        isPointedAtDots && 'TipsHand__pointedAtDots',
                         reverse && 'TipsHand__reverse',
                         'abF',
                     ),
@@ -98,7 +98,7 @@ const TipsHand = ({
 
 TipsHand.propTypes = {
     tipType: PropTypes.string.isRequired,
-    isPointedAtDots: PropTypes.bool,
+    isPointedAtDotsSlide: PropTypes.bool,
     reverse: PropTypes.bool,
 }
 
