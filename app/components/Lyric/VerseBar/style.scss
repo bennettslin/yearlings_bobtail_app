@@ -45,7 +45,7 @@
 
     .VerseBar:hover
     & {
-        animation: bounceHover $transitionDuration__default;
+        animation: bounceHoverMild $transitionDuration__default;
     }
 
     .VerseBar:active
