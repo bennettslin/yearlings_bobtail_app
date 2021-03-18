@@ -11,7 +11,8 @@ import { setIsAlbumSession } from '../../utils/browser'
 const AlbumContainer = ({ children }) => {
     const
         audioContainer = useRef(),
-        [audioTime, setAudioTime] = useState(0)
+        [audioTime, setAudioTime] = useState(0),
+        [didRuntimeTimeout, setDidRuntimeTimeout] = useState(false)
 
     const callAudioManager = props => {
         audioContainer.current.callAudioManager(props)
@@ -28,9 +29,15 @@ const AlbumContainer = ({ children }) => {
                 label: 'album',
             },
         )
+
+        /**
+         * Workaround because latest version of Gatsby doesn't have the correct
+         * window dimensions upon load, for some reason.
+         */
+        setTimeout(() => setDidRuntimeTimeout(true), 100)
     }, [])
 
-    return (
+    return (didRuntimeTimeout || !IS_RUNTIME) && (
         <AlbumPageElementContext.Provider {...{ value: children }}>
             <AudioPlayerContext.Provider
                 {...{

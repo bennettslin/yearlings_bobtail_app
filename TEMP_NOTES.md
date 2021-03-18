@@ -1,6 +1,5 @@
 # Bug
 * Wormhole finger jumps when fading out.
-* Verse bars are messed up in run time.
 * Adjust volume?
 
 * Clarify logState labels?
