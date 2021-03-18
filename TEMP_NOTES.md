@@ -1,8 +1,9 @@
 # Bug
 * Wormhole finger jumps when fading out.
+* Verse bars are messed up in run time.
+* Adjust volume?
 
 * Clarify logState labels?
-* Adjust volume?
 * Don't make menu move.
 * Audio shortcuts?
     * Make similar to Spotify.
