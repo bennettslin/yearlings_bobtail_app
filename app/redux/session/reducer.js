@@ -19,7 +19,10 @@ export const getSessionReducer = ({
 ) => {
     switch (type) {
         case SESSION_STORE: {
-            const { toggledIsSongRepeatOn } = payload
+            const {
+                toggledIsSongRepeatOn,
+                ...remainingPayload
+            } = payload
 
             if (hasKey(toggledIsSongRepeatOn)) {
                 const
@@ -30,7 +33,7 @@ export const getSessionReducer = ({
 
                 return {
                     ...state,
-                    ...payload,
+                    ...remainingPayload,
                     isSongRepeatOn,
                 }
             } else {

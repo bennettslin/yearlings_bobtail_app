@@ -11,6 +11,8 @@ import {
     updateIsAutoScroll,
     toggleIsPitchShown,
     updateIsPitchShown,
+    toggleIsAudioOptionsExpanded,
+    updateIsAudioOptionsExpanded,
 } from '../../../redux/toggle/action'
 import {
     updateWikiIndices,
@@ -46,7 +48,7 @@ import {
     TIPS_TOGGLE_KEY,
     ABOUT_TOGGLE_KEY,
     PITCH_TOGGLE_KEY,
-    ERROR_LOG_TOGGLE_KEY,
+    TEMP_TOGGLE_KEY,
     SPACE,
 } from '../../../constants/access'
 import { HIDDEN } from '../../../constants/options'
@@ -60,6 +62,7 @@ import {
     mapIsScoreShown,
     mapIsAboutShown,
     mapIsPitchShown,
+    mapIsAudioOptionsExpanded,
 } from '../../../redux/toggle/selector'
 import { mapIsWikiShown } from '../../../redux/wiki/selector'
 
@@ -81,6 +84,7 @@ const LetterManager = forwardRef((props, ref) => {
         isTipsShown = useSelector(mapIsTipsShown),
         isAnnotationShown = useSelector(mapIsAnnotationShown),
         isWikiShown = useSelector(mapIsWikiShown),
+        isAudioOptionsExpanded = useSelector(mapIsAudioOptionsExpanded),
         isNavExpanded = useSelector(mapIsNavExpanded),
         isDotsSlideShown = useSelector(mapIsDotsSlideShown),
         isLyricExpanded = useSelector(mapIsLyricExpanded),
@@ -155,8 +159,9 @@ const LetterManager = forwardRef((props, ref) => {
                 dispatch(toggleIsPitchShown())
                 keyWasRegistered = true
                 break
-            case ERROR_LOG_TOGGLE_KEY:
+            case TEMP_TOGGLE_KEY:
                 logError('Error log for debugging!')
+                dispatch(toggleIsAudioOptionsExpanded())
                 keyWasRegistered = true
                 break
             default:
@@ -176,9 +181,12 @@ const LetterManager = forwardRef((props, ref) => {
     }
 
     const handleEscape = () => {
+        // Audio options.
+        if (isAudioOptionsExpanded) {
+            dispatch(updateIsAudioOptionsExpanded())
 
         // Close score popup.
-        if (isScoreShown) {
+        } else if (isScoreShown) {
             dispatchScore.current(false)
 
         // Close about popup.

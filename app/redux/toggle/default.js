@@ -5,6 +5,7 @@ const IS_STORED_CAROUSEL_EXPANDED = getBoolFromStorage(IS_CAROUSEL_EXPANDED)
 
 export const TOGGLE_DEFAULTS = {
     isAboutShown: false,
+    isAudioOptionsExpanded: false,
     isAutoScroll: true,
     isCarouselExpanded: IS_STORED_CAROUSEL_EXPANDED,
     isNavExpanded: false,

@@ -41,3 +41,7 @@ export const mapIsPitchShown = (
 export const mapIsAboutShown = (
     { [TOGGLE_STORE]: { isAboutShown } },
 ) => isAboutShown
+
+export const mapIsAudioOptionsExpanded = (
+    { [TOGGLE_STORE]: { isAudioOptionsExpanded } },
+) => isAudioOptionsExpanded

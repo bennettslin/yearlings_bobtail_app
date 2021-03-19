@@ -15,6 +15,18 @@ export const updateIsAboutShown = (isAboutShown = false) => ({
     payload: { isAboutShown },
 })
 
+export const toggleIsAudioOptionsExpanded = () => ({
+    type: TOGGLE_STORE,
+    payload: { toggledIsAudioOptionsExpanded: true },
+})
+
+export const updateIsAudioOptionsExpanded = (
+    isAudioOptionsExpanded = false,
+) => ({
+    type: TOGGLE_STORE,
+    payload: { isAudioOptionsExpanded },
+})
+
 export const toggleIsPitchShown = () => ({
     type: TOGGLE_STORE,
     payload: { toggledIsPitchShown: true },

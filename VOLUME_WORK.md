@@ -3,10 +3,12 @@
 ## State and keyboard access
 * Rename options button to repeat everywhere [x]
     * Make it a boolean [x]
-* Have state where options field is shown
+* Have state where options field is shown [x]
+    * Control with temporary access key [x]
     * Only toggled by click
 * Have volume state
-    * Control with access key
+    * Control with access key, Command up and down
+        * Make sure it works with PC as well
     * Access key works regardless of options field
 * Ensure repeat access key continues to work
     * Access key works regardless of options field
@@ -35,3 +37,8 @@
 
 ## Icons
 * Create svg icons
+
+## Closing
+* Collapse audio options field upon clicking body, or opening or closing anything else.
+    * Not currently set up this way.
+* Test closing logic.

@@ -9,13 +9,14 @@ import { updateOptionStore } from '../../redux/option/action'
 import { updateWikiIndices } from '../../redux/session/action'
 import { updateSelectedStore } from '../../redux/selected/action'
 import {
-    updateIsLyricExpanded,
     updateIsAboutShown,
-    updateIsDotsSlideShown,
+    updateIsAudioOptionsExpanded,
     updateIsCarouselExpanded,
+    updateIsDotsSlideShown,
+    updateIsLyricExpanded,
     updateIsNavExpanded,
-    updateIsScoreShown,
     updateIsPitchShown,
+    updateIsScoreShown,
 } from '../../redux/toggle/action'
 import { HIDDEN } from '../../constants/options'
 import { mapIsActivated } from '../../redux/activated/selector'
@@ -24,13 +25,14 @@ import { mapIsAnnotationShown } from '../../redux/selected/selector'
 import { mapIsSliderMoving } from '../../redux/slider/selector'
 import { mapIsTipsShown } from '../../redux/tips/selector'
 import {
+    mapIsAboutShown,
+    mapIsAudioOptionsExpanded,
     mapIsCarouselExpanded,
-    mapIsNavExpanded,
     mapIsDotsSlideShown,
     mapIsLyricExpanded,
-    mapIsScoreShown,
-    mapIsAboutShown,
+    mapIsNavExpanded,
     mapIsPitchShown,
+    mapIsScoreShown,
 } from '../../redux/toggle/selector'
 import { mapIsWikiShown } from '../../redux/wiki/selector'
 
@@ -43,24 +45,29 @@ const CloseHandler = forwardRef((props, ref) => {
         isAnnotationShown = useSelector(mapIsAnnotationShown),
         isWikiShown = useSelector(mapIsWikiShown),
         isSliderMoving = useSelector(mapIsSliderMoving),
+        isAboutShown = useSelector(mapIsAboutShown),
+        isAudioOptionsExpanded = useSelector(mapIsAudioOptionsExpanded),
         isCarouselExpanded = useSelector(mapIsCarouselExpanded),
-        isNavExpanded = useSelector(mapIsNavExpanded),
         isDotsSlideShown = useSelector(mapIsDotsSlideShown),
         isLyricExpanded = useSelector(mapIsLyricExpanded),
-        isScoreShown = useSelector(mapIsScoreShown),
-        isAboutShown = useSelector(mapIsAboutShown),
+        isNavExpanded = useSelector(mapIsNavExpanded),
         isPitchShown = useSelector(mapIsPitchShown),
+        isScoreShown = useSelector(mapIsScoreShown),
         [didMount, setDidMount] = useState(false)
 
-    const closeMainPopups = ({
-        exemptScore,
+    const closeJustTopmost = ({
+        exemptAudioOptions,
         exemptAbout,
         exemptPitch,
+        exemptScore,
         exemptWiki,
 
     } = {}) => {
-        // If popup is open, close it and do nothing else.
-        if (isWikiShown && !exemptWiki) {
+        // Close or collapse just one and do nothing else.
+        if (isAudioOptionsExpanded && !exemptAudioOptions) {
+            dispatch(updateIsAudioOptionsExpanded())
+
+        } else if (isWikiShown && !exemptWiki) {
             dispatch(updateWikiIndices())
 
         } else if (isScoreShown && !exemptScore) {
@@ -136,7 +143,7 @@ const CloseHandler = forwardRef((props, ref) => {
     useEffect(() => {
         if (didMount) {
             if (isAnnotationShown) {
-                closeMainPopups()
+                closeJustTopmost()
                 closeMainSections({
                     exemptAnnotation: true,
                     exemptLyric: true,
@@ -150,7 +157,7 @@ const CloseHandler = forwardRef((props, ref) => {
     useEffect(() => {
         if (didMount) {
             if (isCarouselExpanded) {
-                closeMainPopups()
+                closeJustTopmost()
                 closeMainSections({
                     exemptAnnotation: true,
                     exemptDots: true,
@@ -169,7 +176,7 @@ const CloseHandler = forwardRef((props, ref) => {
 
     useEffect(() => {
         if (isDotsSlideShown) {
-            closeMainPopups()
+            closeJustTopmost()
             closeMainSections({
                 exemptDots: true,
             })
@@ -178,7 +185,7 @@ const CloseHandler = forwardRef((props, ref) => {
 
     useEffect(() => {
         if (isLyricExpanded) {
-            closeMainPopups()
+            closeJustTopmost()
             closeMainSections({
                 // Continue to show selected annotation in overlay.
                 exemptAnnotation: true,
@@ -190,7 +197,7 @@ const CloseHandler = forwardRef((props, ref) => {
 
     useEffect(() => {
         if (isSliderMoving || isActivated) {
-            closeMainPopups()
+            closeJustTopmost()
             closeMainSections({
                 exemptActivatedVerse: true,
                 exemptLyric: true,
@@ -200,7 +207,7 @@ const CloseHandler = forwardRef((props, ref) => {
 
     useEffect(() => {
         if (isNavExpanded) {
-            closeMainPopups()
+            closeJustTopmost()
             closeMainSections({
                 exemptNav: true,
             })
@@ -211,7 +218,7 @@ const CloseHandler = forwardRef((props, ref) => {
 
     useEffect(() => {
         if (isOverviewShown) {
-            closeMainPopups()
+            closeJustTopmost()
             closeMainSections({
                 exemptOverview: true,
                 exemptTips: true,
@@ -221,7 +228,7 @@ const CloseHandler = forwardRef((props, ref) => {
 
     useEffect(() => {
         if (isTipsShown) {
-            closeMainPopups()
+            closeJustTopmost()
             closeMainSections({
                 exemptTips: true,
                 exemptOverview: true,
@@ -231,34 +238,34 @@ const CloseHandler = forwardRef((props, ref) => {
 
     useEffect(() => {
         if (isScoreShown) {
-            closeMainPopups({ exemptScore: true })
+            closeJustTopmost({ exemptScore: true })
             closeMainSections({ exemptAnnotation: true })
         }
     }, [isScoreShown])
 
     useEffect(() => {
         if (isAboutShown) {
-            closeMainPopups({ exemptAbout: true })
+            closeJustTopmost({ exemptAbout: true })
             closeMainSections({ exemptAnnotation: true })
         }
     }, [isAboutShown])
 
     useEffect(() => {
         if (isPitchShown) {
-            closeMainPopups({ exemptPitch: true })
+            closeJustTopmost({ exemptPitch: true })
             closeMainSections({ exemptAnnotation: true })
         }
     }, [isPitchShown])
 
     useEffect(() => {
         if (isWikiShown) {
-            closeMainPopups({ exemptWiki: true })
+            closeJustTopmost({ exemptWiki: true })
             closeMainSections({ exemptAnnotation: true })
         }
     }, [isWikiShown])
 
     const closeForBodyClick = () => {
-        if (!closeMainPopups()) {
+        if (!closeJustTopmost()) {
             closeMainSections({
                 // When nav is expanded, collapse both carousel and nav.
                 exemptCarousel: !isNavExpanded,
