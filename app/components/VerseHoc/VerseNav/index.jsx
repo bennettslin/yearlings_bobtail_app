@@ -38,6 +38,7 @@ const VerseNav = ({
             'fCC',
         )}>
             <Button
+                isAccessed
                 isSmallSize
                 {...{
                     buttonName:

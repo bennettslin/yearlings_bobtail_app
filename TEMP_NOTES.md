@@ -1,6 +1,5 @@
 # Bug
 * Didi tips hand should point at dots slide if no dot for annotation is selected.
-* Enter access key on audio fast forward or rewind button
 
 * Clarify logState labels?
 * Don't make menu move.
