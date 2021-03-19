@@ -56,6 +56,9 @@ export const getShouldHandleOnKeyDown = keyName => {
         keyName === PREVIOUS_VERSE_KEY ||
         keyName === NEXT_VERSE_KEY ||
         keyName === PREVIOUS_SCENE_KEY ||
-        keyName === NEXT_SCENE_KEY
+        keyName === NEXT_SCENE_KEY ||
+
+        // This is here just to prevent default.
+        keyName === SPACE
     )
 }

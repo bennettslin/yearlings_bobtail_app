@@ -1,6 +1,5 @@
 # Bug
 * Didi tips hand should point at dots slide if no dot for annotation is selected.
-* Space key scrolls lyric when pausing.
 * Enter access key on audio fast forward or rewind button
 
 * Clarify logState labels?

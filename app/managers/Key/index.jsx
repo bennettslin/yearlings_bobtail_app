@@ -19,7 +19,6 @@ import {
     PAGE_DOWN,
     CAPS_LOCK,
     ESCAPE,
-    // SPACE,
     TAB,
 } from '../../constants/access'
 
@@ -59,7 +58,6 @@ const KeyManager = forwardRef((props, ref) => {
         } else if (
             keyName === ARROW_UP ||
             keyName === ARROW_DOWN ||
-            // keyName === SPACE ||
             keyName === PAGE_UP ||
             keyName === PAGE_DOWN
         ) {
@@ -100,7 +98,6 @@ const KeyManager = forwardRef((props, ref) => {
          * While these keys do not register, they do scroll the lyric.
          */
         if (
-            // keyName === SPACE ||
             keyName === PAGE_UP ||
             keyName === PAGE_DOWN
         ) {
