@@ -42,7 +42,7 @@ import {
 
 const TOOLTIP_TEXT_MAP = {
     [ABOUT_BUTTON_KEY]: 'about this album',
-    get audioOptions() {
+    get songRepeat() {
         return {
             0: 'continued play',
             1: 'repeated play',

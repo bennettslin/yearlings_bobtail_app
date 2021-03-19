@@ -4,9 +4,9 @@ export const mapShownNavBookIndex = (
     { [SESSION_STORE]: { shownNavBookIndex } },
 ) => shownNavBookIndex
 
-export const mapAudioOptionIndex = (
-    { [SESSION_STORE]: { audioOptionIndex } },
-) => audioOptionIndex
+export const mapIsSongRepeatOn = (
+    { [SESSION_STORE]: { isSongRepeatOn } },
+) => isSongRepeatOn
 
 export const mapSelectedWikiIndex = (
     { [SESSION_STORE]: { selectedWikiIndex } },

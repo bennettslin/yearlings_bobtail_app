@@ -1,7 +1,7 @@
 import {
     ABOUT_BUTTON_KEY,
     AUDIO_NEXT_BUTTON_KEY,
-    AUDIO_OPTIONS_BUTTON_KEY,
+    SONG_REPEAT_BUTTON_KEY,
     AUDIO_PLAY_BUTTON_KEY,
     AUDIO_PREVIOUS_BUTTON_KEY,
     AUDIO_FAST_FORWARD_BUTTON_KEY,
@@ -31,7 +31,7 @@ export const getTooltipPlacement = ({
             case AUDIO_PREVIOUS_BUTTON_KEY:
             case AUDIO_PLAY_BUTTON_KEY:
             case AUDIO_NEXT_BUTTON_KEY:
-            case AUDIO_OPTIONS_BUTTON_KEY:
+            case SONG_REPEAT_BUTTON_KEY:
             case SCORES_BUTTON_KEY:
             case TIPS_BUTTON_KEY:
                 return TOOLTIP_RIGHT
@@ -42,7 +42,7 @@ export const getTooltipPlacement = ({
         case AUDIO_PREVIOUS_BUTTON_KEY:
         case AUDIO_PLAY_BUTTON_KEY:
         case AUDIO_NEXT_BUTTON_KEY:
-        case AUDIO_OPTIONS_BUTTON_KEY:
+        case SONG_REPEAT_BUTTON_KEY:
         case LYRIC_SCROLL_BUTTON_KEY:
         case SCORES_BUTTON_KEY:
         case TIPS_BUTTON_KEY:

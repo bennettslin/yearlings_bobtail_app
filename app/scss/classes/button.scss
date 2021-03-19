@@ -10,10 +10,6 @@
     transform: scaleX(-1);
 }
 
-.ButtonIcon__audioOptions {
-    fill: $colour__interact__bold;
-}
-
 .ButtonIcon__audioPlay {
     .PlW__isPlaying
     & {
@@ -32,6 +28,10 @@
 
 .ButtonIcon__audioRewind {
     fill: $colour__past__bold;
+}
+
+.ButtonIcon__songRepeat {
+    fill: $colour__interact__bold;
 }
 
 .ButtonIcon__carouselNav {

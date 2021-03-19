@@ -10,7 +10,7 @@ export const NEXT_VERSE_KEY = 'k'
 export const LYRIC_EXPAND_KEY = 'l'
 export const NEXT_SCENE_KEY = 'm'
 export const PREVIOUS_SCENE_KEY = 'n'
-export const AUDIO_OPTIONS_TOGGLE_KEY = 'o'
+export const SONG_REPEAT_TOGGLE_KEY = 'o'
 export const AUDIO_PLAY_KEY = 'p'
 export const PREVIOUS_SONG_KEY = 'r'
 export const SCORE_TOGGLE_KEY = 's'
@@ -44,7 +44,7 @@ export const STYLE_LOGIC_ACCESS_LETTERS = [
     ARROW_UP,
     ARROW_DOWN,
     AUDIO_PLAY_KEY,
-    AUDIO_OPTIONS_TOGGLE_KEY,
+    SONG_REPEAT_TOGGLE_KEY,
     PREVIOUS_SONG_KEY,
     NEXT_SONG_KEY,
     PITCH_TOGGLE_KEY,

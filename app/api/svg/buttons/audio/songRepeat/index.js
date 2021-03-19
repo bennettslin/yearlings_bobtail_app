@@ -1,11 +1,11 @@
 import audioContinue from '../../../../../../assets/svgs/app/audio/audioContinue'
 import audioRepeat from '../../../../../../assets/svgs/app/audio/audioRepeat'
 
-const AUDIO_OPTIONS_MAP = {
+const SONG_REPEAT_MAP = {
     0: audioContinue,
     1: audioRepeat,
 }
 
-export default ({ buttonIdentifier: audioOptionIndex }) => {
-    return AUDIO_OPTIONS_MAP[audioOptionIndex]
+export default ({ buttonIdentifier: isSongRepeatOn }) => {
+    return SONG_REPEAT_MAP[isSongRepeatOn]
 }

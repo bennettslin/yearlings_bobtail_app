@@ -34,6 +34,6 @@ export const SELECTED_SONG_INDEX = 'selectedSongIndex'
 export const SELECTED_VERSE_INDEX = 'selectedVerseIndex'
 export const SELECTED_ANNOTATION_INDEX = 'selectedAnnotationIndex'
 
-export const AUDIO_OPTION_INDEX = 'audioOptionIndex'
+export const IS_SONG_REPEAT_ON = 'isSongRepeatOn'
 export const SELECTED_OVERVIEW_OPTION = 'selectedOverviewOption'
 export const SELECTED_TIPS_OPTION = 'selectedTipsOption'

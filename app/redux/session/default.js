@@ -1,8 +1,8 @@
 import { getColumnIndexForAnnotation } from '../../api/album/annotations'
 import { getBookForSongIndex } from '../../api/album/songs'
-import { getAudioOptionFromStorage } from '../../utils/storage'
+import { getSongRepeatFromStorage } from '../../utils/storage'
 
-const STORED_AUDIO_OPTION_INDEX = getAudioOptionFromStorage()
+const IS_STORED_SONG_REPEAT_ON = getSongRepeatFromStorage()
 
 export const SESSION_WIKI_DEFAULTS = {
     selectedWikiIndex: 0,
@@ -14,7 +14,7 @@ export const getSessionDefaults = ({
     initialAnnotationIndex,
 }) => ({
     ...SESSION_WIKI_DEFAULTS,
-    audioOptionIndex: STORED_AUDIO_OPTION_INDEX,
+    isSongRepeatOn: IS_STORED_SONG_REPEAT_ON,
     shownNavBookIndex: getBookForSongIndex(initialSongIndex),
     earColumnIndex: getColumnIndexForAnnotation(
         initialSongIndex,

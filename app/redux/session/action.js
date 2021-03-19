@@ -2,9 +2,9 @@
 import { SESSION_STORE } from '../../constants/store'
 import { SESSION_WIKI_DEFAULTS } from './default'
 
-export const toggleAudioOptionIndex = () => ({
+export const toggleIsSongRepeatOn = () => ({
     type: SESSION_STORE,
-    payload: { toggledAudioOptionIndex: true },
+    payload: { toggledIsSongRepeatOn: true },
 })
 
 export const updateShownNavBookIndex = shownNavBookIndex => ({

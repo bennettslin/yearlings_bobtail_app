@@ -18,7 +18,7 @@ import {
     SELECTED_SONG_INDEX,
     SELECTED_VERSE_INDEX,
     SELECTED_ANNOTATION_INDEX,
-    AUDIO_OPTION_INDEX,
+    IS_SONG_REPEAT_ON,
 } from '../../constants/store'
 
 export const getWindowStorage = () => {
@@ -65,10 +65,10 @@ export const getStoredAnnotationIndex = songIndex => (
     )
 )
 
-export const getAudioOptionFromStorage = () => {
+export const getSongRepeatFromStorage = () => {
     const
         storedOptionIndex =
-            _getParsedStoredInteger(AUDIO_OPTION_INDEX),
+            _getParsedStoredInteger(IS_SONG_REPEAT_ON),
 
         savedOptionIndex =
             getArrayOfLength(AUDIO_OPTIONS.length).some(
@@ -78,7 +78,7 @@ export const getAudioOptionFromStorage = () => {
                 0
 
     // This only saves upon initial retrieval.
-    setInStorage(AUDIO_OPTION_INDEX, savedOptionIndex)
+    setInStorage(IS_SONG_REPEAT_ON, savedOptionIndex)
     return savedOptionIndex
 }
 

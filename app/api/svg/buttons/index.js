@@ -1,10 +1,10 @@
 import about from './main/about'
-import audioOptions from './audio/audioOptions'
 import audioPlay from './audio/audioPlay'
 import audioPrevious from './audio/audioPrevious'
 import audioNext from './audio/audioNext'
 import audioRewind from './audio/audioRewind'
 import audioFastForward from './audio/audioFastForward'
+import songRepeat from './audio/songRepeat'
 import carouselNav from './carousel/carouselNav'
 import carouselPrevious from './carousel/carouselPrevious'
 import carouselNext from './carousel/carouselNext'
@@ -29,12 +29,12 @@ import tips from './main/tips'
 
 import {
     ABOUT_BUTTON_KEY,
-    AUDIO_OPTIONS_BUTTON_KEY,
     AUDIO_PLAY_BUTTON_KEY,
     AUDIO_PREVIOUS_BUTTON_KEY,
     AUDIO_NEXT_BUTTON_KEY,
     AUDIO_REWIND_BUTTON_KEY,
     AUDIO_FAST_FORWARD_BUTTON_KEY,
+    SONG_REPEAT_BUTTON_KEY,
     CAROUSEL_NAV_BUTTON_KEY,
     CAROUSEL_PREVIOUS_BUTTON_KEY,
     CAROUSEL_NEXT_BUTTON_KEY,
@@ -60,12 +60,12 @@ import {
 
 export default {
     [ABOUT_BUTTON_KEY]: about,
-    [AUDIO_OPTIONS_BUTTON_KEY]: audioOptions,
     [AUDIO_PLAY_BUTTON_KEY]: audioPlay,
     [AUDIO_PREVIOUS_BUTTON_KEY]: audioPrevious,
     [AUDIO_NEXT_BUTTON_KEY]: audioNext,
     [AUDIO_REWIND_BUTTON_KEY]: audioRewind,
     [AUDIO_FAST_FORWARD_BUTTON_KEY]: audioFastForward,
+    [SONG_REPEAT_BUTTON_KEY]: songRepeat,
     [CAROUSEL_NAV_BUTTON_KEY]: carouselNav,
     [CAROUSEL_PREVIOUS_BUTTON_KEY]: carouselPrevious,
     [CAROUSEL_NEXT_BUTTON_KEY]: carouselNext,

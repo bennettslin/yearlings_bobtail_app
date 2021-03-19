@@ -5,7 +5,7 @@ import { getSessionDefaults } from './default'
 import { AUDIO_OPTIONS } from '../../constants/options'
 import {
     SESSION_STORE,
-    AUDIO_OPTION_INDEX,
+    IS_SONG_REPEAT_ON,
 } from '../../constants/store'
 
 export const getSessionReducer = ({
@@ -20,20 +20,20 @@ export const getSessionReducer = ({
 ) => {
     switch (type) {
         case SESSION_STORE: {
-            const { toggledAudioOptionIndex } = payload
+            const { toggledIsSongRepeatOn } = payload
 
-            if (hasKey(toggledAudioOptionIndex)) {
+            if (hasKey(toggledIsSongRepeatOn)) {
                 const
-                    { audioOptionIndex: prevAudioOptionIndex } = state,
-                    audioOptionIndex =
-                        (prevAudioOptionIndex + 1) % AUDIO_OPTIONS.length
+                    { isSongRepeatOn: prevIsSongRepeatOn } = state,
+                    isSongRepeatOn =
+                        (prevIsSongRepeatOn + 1) % AUDIO_OPTIONS.length
 
-                setInStorage(AUDIO_OPTION_INDEX, audioOptionIndex)
+                setInStorage(IS_SONG_REPEAT_ON, isSongRepeatOn)
 
                 return {
                     ...state,
                     ...payload,
-                    audioOptionIndex,
+                    isSongRepeatOn,
                 }
             } else {
                 return {

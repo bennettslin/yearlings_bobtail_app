@@ -6,17 +6,17 @@ import SongDispatcher from '../../dispatchers/Song'
 import Button from '../Button'
 import {
     AUDIO_PLAY_KEY,
-    AUDIO_OPTIONS_TOGGLE_KEY,
+    SONG_REPEAT_TOGGLE_KEY,
     PREVIOUS_SONG_KEY,
     NEXT_SONG_KEY,
 } from '../../constants/access'
 import {
     AUDIO_NEXT_BUTTON_KEY,
-    AUDIO_OPTIONS_BUTTON_KEY,
+    SONG_REPEAT_BUTTON_KEY,
     AUDIO_PLAY_BUTTON_KEY,
     AUDIO_PREVIOUS_BUTTON_KEY,
 } from '../../constants/buttons'
-import { toggleAudioOptionIndex } from '../../redux/session/action'
+import { toggleIsSongRepeatOn } from '../../redux/session/action'
 import {
     mapIsPlaying,
     mapIsPlayButtonEnabled,
@@ -26,7 +26,7 @@ import {
     mapIsSelectedPrologue,
     mapIsSelectedEpilogue,
 } from '../../redux/selected/selector'
-import { mapAudioOptionIndex } from '../../redux/session/selector'
+import { mapIsSongRepeatOn } from '../../redux/session/selector'
 import { mapIsTwoRowMenu } from '../../redux/viewport/selector'
 import './style'
 
@@ -54,10 +54,10 @@ const STATIC_BUTTON_CONFIGS = [
         accessKey: NEXT_SONG_KEY,
     },
     {
-        key: AUDIO_OPTIONS_BUTTON_KEY,
-        buttonName: AUDIO_OPTIONS_BUTTON_KEY,
+        key: SONG_REPEAT_BUTTON_KEY,
+        buttonName: SONG_REPEAT_BUTTON_KEY,
         className: BUTTON_CLASS_NAME,
-        accessKey: AUDIO_OPTIONS_TOGGLE_KEY,
+        accessKey: SONG_REPEAT_TOGGLE_KEY,
     },
 ]
 
@@ -71,11 +71,11 @@ const Audio = () => {
         isPlayButtonEnabled = useSelector(mapIsPlayButtonEnabled),
         isPrologue = useSelector(mapIsSelectedPrologue),
         isEpilogue = useSelector(mapIsSelectedEpilogue),
-        audioOptionIndex = useSelector(mapAudioOptionIndex),
+        isSongRepeatOn = useSelector(mapIsSongRepeatOn),
         isDesktopWidth = useSelector(mapIsDesktopWidth)
 
-    const _handleAudioOptionClick = () => {
-        dispatch(toggleAudioOptionIndex())
+    const _handleSongRepeatClick = () => {
+        dispatch(toggleIsSongRepeatOn())
     }
 
     const _handlePlayClick = () => {
@@ -107,8 +107,8 @@ const Audio = () => {
                 handleButtonClick: _handleNextClick,
             },
             {
-                buttonIdentifier: audioOptionIndex,
-                handleButtonClick: _handleAudioOptionClick,
+                buttonIdentifier: isSongRepeatOn,
+                handleButtonClick: _handleSongRepeatClick,
             },
         ]
 
@@ -121,8 +121,8 @@ const Audio = () => {
     }
 
     useEffect(() => {
-        logState('audioOptionIndex', audioOptionIndex)
-    }, [audioOptionIndex])
+        logState('isSongRepeatOn', isSongRepeatOn)
+    }, [isSongRepeatOn])
 
     return (
         <div {...{ className: 'Audio' }}>

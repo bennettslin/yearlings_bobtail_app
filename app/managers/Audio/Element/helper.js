@@ -11,13 +11,13 @@ export const getCurrentIndicesForTime = ({
     songIndex,
     verseIndex,
     time,
-    audioOptionIndex,
+    isSongRepeatOn,
 
 }) => {
     const
         audioTime = getAudioTimeForCurrentTime(songIndex, time),
         verseEndTime = getEndTimeForVerse(songIndex, verseIndex),
-        isContinueOption = AUDIO_OPTIONS[audioOptionIndex] === CONTINUE,
+        isContinueOption = AUDIO_OPTIONS[isSongRepeatOn] === CONTINUE,
         isLastSong = songIndex === getSongsNotLoguesCount(),
         isLastVerse = verseIndex === getVerseCountForSong(songIndex) - 1
 

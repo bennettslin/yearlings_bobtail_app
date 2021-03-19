@@ -14,7 +14,7 @@ import {
 } from '../../../redux/toggle/action'
 import {
     updateWikiIndices,
-    toggleAudioOptionIndex,
+    toggleIsSongRepeatOn,
 } from '../../../redux/session/action'
 import CarouselNavDispatcher from '../../../dispatchers/CarouselNav'
 import DotsSlideDispatcher from '../../../dispatchers/DotsSlide'
@@ -31,7 +31,7 @@ import {
     PREVIOUS_VERSE_KEY,
     NEXT_VERSE_KEY,
     AUDIO_PLAY_KEY,
-    AUDIO_OPTIONS_TOGGLE_KEY,
+    SONG_REPEAT_TOGGLE_KEY,
     PREVIOUS_SONG_KEY,
     NEXT_SONG_KEY,
     CAROUSEL_TOGGLE_KEY,
@@ -93,8 +93,8 @@ const LetterManager = forwardRef((props, ref) => {
             keyWasRegistered
 
         switch (keyName) {
-            case AUDIO_OPTIONS_TOGGLE_KEY:
-                dispatch(toggleAudioOptionIndex())
+            case SONG_REPEAT_TOGGLE_KEY:
+                dispatch(toggleIsSongRepeatOn())
                 keyWasRegistered = true
                 break
             case AUDIO_PLAY_KEY:
