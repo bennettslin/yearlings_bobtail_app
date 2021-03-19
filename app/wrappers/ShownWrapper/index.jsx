@@ -4,8 +4,9 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import getDidMountHoc from '../../components/DidMountHoc'
 import { getSongTipType } from '../../api/album/tips'
-import { WIKI, WORMHOLES } from '../../constants/tips'
+import { ANNOTATION, WIKI, WORMHOLES } from '../../constants/tips'
 import {
+    mapBackstoryDot,
     mapReferenceDot,
     mapWormholeDot,
 } from '../../redux/dots/selector'
@@ -31,6 +32,7 @@ import {
 
 const ShownWrapper = ({ didMount, children }) => {
     const
+        backstory = useSelector(mapBackstoryDot),
         reference = useSelector(mapReferenceDot),
         wormhole = useSelector(mapWormholeDot),
         isSongChangeDone = useSelector(mapIsSongChangeDone),
@@ -106,6 +108,7 @@ const ShownWrapper = ({ didMount, children }) => {
                                  * If dot is not selected, render the tips hand
                                  * that is pointed at dots toggle.
                                  */
+                                (tipType === ANNOTATION && !backstory && !reference && !wormhole) ||
                                 (tipType === WIKI && !reference) ||
                                 (tipType === WORMHOLES && !wormhole)
                             ) ?

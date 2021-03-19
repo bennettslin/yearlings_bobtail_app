@@ -77,7 +77,7 @@
     &,
     .Button__enabled:hover
     & {
-        animation: bounceHover $transitionDuration__default;
+        animation: bounceHover $transitionDuration__slow;
     }
 
     // "Root accessed letter Enter."

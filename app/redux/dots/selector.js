@@ -29,6 +29,10 @@ export const getMapIsSelectedDot = dotKey => (
     { [DOTS_STORE]: { [dotKey]: value } },
 ) => value
 
+export const mapBackstoryDot = (
+    { [DOTS_STORE]: { backstory } },
+) => backstory
+
 export const mapReferenceDot = (
     { [DOTS_STORE]: { reference } },
 ) => reference

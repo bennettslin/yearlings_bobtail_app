@@ -8,9 +8,10 @@ import TipsHand from '../../Tips/Hand'
 import { DOTS_SLIDE_TOGGLE_KEY } from '../../../constants/access'
 import { DOTS_SLIDE_BUTTON_KEY } from '../../../constants/buttons'
 import {
+    ANNOTATION,
     DOTS,
-    WORMHOLES,
     WIKI,
+    WORMHOLES,
 } from '../../../constants/tips'
 import './style'
 
@@ -39,8 +40,9 @@ const DotsSlideToggle = ({ className }) => {
                 }}
             />
             <TipsHand {...{ tipType: DOTS }} />
-            <TipsHand isPointedAtDotsSlide {...{ tipType: WORMHOLES }} />
+            <TipsHand isPointedAtDotsSlide {...{ tipType: ANNOTATION }} />
             <TipsHand isPointedAtDotsSlide {...{ tipType: WIKI }} />
+            <TipsHand isPointedAtDotsSlide {...{ tipType: WORMHOLES }} />
             <DotsSlideDispatcher {...{ ref: dispatchDotsSlide }} />
         </div>
     )

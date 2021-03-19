@@ -7,11 +7,13 @@ import InlineSvg from '../../../modules/InlineSvg'
 import tipsHand from '../../../../assets/svgs/app/tips/tipsHand'
 import { getSongTipType } from '../../../api/album/tips'
 import {
+    ANNOTATION,
     WORMHOLES,
     WIKI,
 } from '../../../constants/tips'
 import { mapIsPhoneWidth } from '../../../redux/device/selector'
 import {
+    mapBackstoryDot,
     mapReferenceDot,
     mapWormholeDot,
 } from '../../../redux/dots/selector'
@@ -27,6 +29,7 @@ const TipsHand = ({
 
 }) => {
     const
+        backstory = useSelector(mapBackstoryDot),
         reference = useSelector(mapReferenceDot),
         wormhole = useSelector(mapWormholeDot),
         isSongChangeDone = useSelector(mapIsSongChangeDone),
@@ -41,12 +44,16 @@ const TipsHand = ({
     if (isPhoneWidth) {
         canRender = false
 
-        // If dot is selected, render the one not pointed at dots toggle.
-    } else if (tipType === WORMHOLES) {
-        canRender = wormhole !== isPointedAtDotsSlide
+    // If dot is selected, render the one not pointed at dots slide toggle.
+    } else if (tipType === ANNOTATION) {
+        canRender =
+            (backstory || reference || wormhole) !== isPointedAtDotsSlide
 
     } else if (tipType === WIKI) {
         canRender = reference !== isPointedAtDotsSlide
+
+    } else if (tipType === WORMHOLES) {
+        canRender = wormhole !== isPointedAtDotsSlide
     }
 
     return (

@@ -1,5 +1,4 @@
 # Bug
-* Didi tips hand should point at dots slide if no dot for annotation is selected.
 
 * Clarify logState labels?
 * Don't make menu move.

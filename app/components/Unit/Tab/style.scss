@@ -61,7 +61,7 @@
     padding-right: $MARGIN_THIN * 1.5;
 
     &:hover {
-        animation: bounceHover $transitionDuration__default;
+        animation: bounceHover $transitionDuration__slow;
     }
 
     &:active {
