@@ -1,8 +1,8 @@
 # Volume work
 
 ## State and keyboard access
-* Rename options button to repeat everywhere
-    * Make it a boolean
+* Rename options button to repeat everywhere [x]
+    * Make it a boolean [x]
 * Have state where options field is shown
     * Only toggled by click
 * Have volume state

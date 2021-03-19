@@ -2,7 +2,6 @@
 import { hasKey } from '../../helpers/action'
 import { setInStorage } from '../../utils/storage'
 import { getSessionDefaults } from './default'
-import { AUDIO_OPTIONS } from '../../constants/options'
 import {
     SESSION_STORE,
     IS_SONG_REPEAT_ON,
@@ -25,8 +24,7 @@ export const getSessionReducer = ({
             if (hasKey(toggledIsSongRepeatOn)) {
                 const
                     { isSongRepeatOn: prevIsSongRepeatOn } = state,
-                    isSongRepeatOn =
-                        (prevIsSongRepeatOn + 1) % AUDIO_OPTIONS.length
+                    isSongRepeatOn = !prevIsSongRepeatOn
 
                 setInStorage(IS_SONG_REPEAT_ON, isSongRepeatOn)
 

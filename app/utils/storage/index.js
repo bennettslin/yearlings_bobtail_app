@@ -3,13 +3,11 @@ import { getValidSongIndex } from '../../api/album/songs'
 import { getValidVerseIndex } from '../../api/album/verses'
 import { getValidAnnotationIndex } from '../../api/album/annotations'
 import { getValidPitchSegmentIndex } from '../../api/pitch/segments'
-import { getArrayOfLength } from '../../helpers/general'
 import { getWindow } from '../browser'
 import { INITIAL_DOTS_BIT } from '../../helpers/dot'
 import { FULL_DOTS_BIT } from '../../constants/dots'
 import {
     SHOWN,
-    AUDIO_OPTIONS,
     GENERAL_OPTIONS,
 } from '../../constants/options'
 import {
@@ -18,7 +16,6 @@ import {
     SELECTED_SONG_INDEX,
     SELECTED_VERSE_INDEX,
     SELECTED_ANNOTATION_INDEX,
-    IS_SONG_REPEAT_ON,
 } from '../../constants/store'
 
 export const getWindowStorage = () => {
@@ -64,23 +61,6 @@ export const getStoredAnnotationIndex = songIndex => (
         _getParsedStoredInteger(SELECTED_ANNOTATION_INDEX),
     )
 )
-
-export const getSongRepeatFromStorage = () => {
-    const
-        storedOptionIndex =
-            _getParsedStoredInteger(IS_SONG_REPEAT_ON),
-
-        savedOptionIndex =
-            getArrayOfLength(AUDIO_OPTIONS.length).some(
-                index => index === storedOptionIndex,
-            ) ?
-                storedOptionIndex :
-                0
-
-    // This only saves upon initial retrieval.
-    setInStorage(IS_SONG_REPEAT_ON, savedOptionIndex)
-    return savedOptionIndex
-}
 
 export const getOptionFromStorage = key => {
     const

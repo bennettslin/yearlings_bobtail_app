@@ -1,13 +1,6 @@
-export const CONTINUE = 'continue'
-export const REPEAT = 'repeat'
 export const SHOWN = 'shown'
 export const HIDDEN = 'hidden'
 export const DISABLED = 'disabled'
-
-export const AUDIO_OPTIONS = [
-    CONTINUE,
-    REPEAT,
-]
 
 export const GENERAL_OPTIONS = [
     SHOWN,

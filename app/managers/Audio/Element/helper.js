@@ -5,7 +5,6 @@ import {
 } from '../../../api/album/time'
 import { getVerseCountForSong } from '../../../api/album/verses'
 import { getTimeDifference } from '../../../utils/logger/helpers/time'
-import { AUDIO_OPTIONS, CONTINUE } from '../../../constants/options'
 
 export const getCurrentIndicesForTime = ({
     songIndex,
@@ -17,7 +16,6 @@ export const getCurrentIndicesForTime = ({
     const
         audioTime = getAudioTimeForCurrentTime(songIndex, time),
         verseEndTime = getEndTimeForVerse(songIndex, verseIndex),
-        isContinueOption = AUDIO_OPTIONS[isSongRepeatOn] === CONTINUE,
         isLastSong = songIndex === getSongsNotLoguesCount(),
         isLastVerse = verseIndex === getVerseCountForSong(songIndex) - 1
 
@@ -25,7 +23,7 @@ export const getCurrentIndicesForTime = ({
     if (audioTime + 1 > verseEndTime) {
 
         // If this is the last verse, and we will continue to the next song...
-        if (!isLastSong && isLastVerse && isContinueOption) {
+        if (!isLastSong && isLastVerse && !isSongRepeatOn) {
             return {
                 currentSongIndex: songIndex + 1,
                 currentVerseIndex: 0,
@@ -45,7 +43,7 @@ export const getCurrentIndicesForTime = ({
             }
 
         // This is the last verse. If we will repeat the song...
-        } else if (!isContinueOption) {
+        } else if (isSongRepeatOn) {
             // Reset the verse and update the current time.
             return {
                 currentSongIndex: songIndex,
