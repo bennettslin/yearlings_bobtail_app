@@ -50,6 +50,8 @@ import {
     PITCH_TOGGLE_KEY,
     TEMP_TOGGLE_KEY,
     SPACE,
+    META_ARROW_UP,
+    META_ARROW_DOWN,
 } from '../../../constants/access'
 import { HIDDEN } from '../../../constants/options'
 import { mapIsOverviewShown } from '../../../redux/overview/selector'
@@ -113,6 +115,10 @@ const LetterManager = forwardRef((props, ref) => {
                 keyWasRegistered = dispatchSong.current({ direction: 1 })
                 annotationIndexWasAccessed = keyWasRegistered
                 break
+            case META_ARROW_UP:
+            case META_ARROW_DOWN:
+                keyWasRegistered = true
+                break
             case PREVIOUS_VERSE_KEY:
                 keyWasRegistered = activateVerse.current.direction(-1)
                 break
@@ -168,11 +174,6 @@ const LetterManager = forwardRef((props, ref) => {
                 keyWasRegistered = false
                 break
         }
-
-        logAccess(
-            `Key "${keyName}" was ${keyWasRegistered ? '' : 'NOT '}registered.`,
-            keyWasRegistered && keyName,
-        )
 
         return {
             annotationIndexWasAccessed,

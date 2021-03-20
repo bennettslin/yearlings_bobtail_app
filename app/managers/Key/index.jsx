@@ -49,6 +49,11 @@ const KeyManager = forwardRef((props, ref) => {
 
         // Prevent default for registered key.
         if (keyWasRegistered) {
+            logAccess(
+                `Key "${keyName}" was registered.`,
+                keyName,
+            )
+
             e.preventDefault()
 
         /**

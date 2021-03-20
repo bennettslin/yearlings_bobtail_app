@@ -23,6 +23,9 @@ export const ARROW_RIGHT = 'ArrowRight'
 export const ARROW_UP = 'ArrowUp'
 export const ARROW_DOWN = 'ArrowDown'
 
+export const META_ARROW_UP = 'MetaArrowUp'
+export const META_ARROW_DOWN = 'MetaArrowDown'
+
 export const CAPS_LOCK = 'CapsLock'
 export const PAGE_UP = 'PageUp'
 export const PAGE_DOWN = 'PageDown'

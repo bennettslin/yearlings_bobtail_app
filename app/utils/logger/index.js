@@ -48,13 +48,10 @@ export const logAccess = (log, keyName) => {
     _log({
         log,
         styleCategory: ACCESS,
-        // Only send to GA if the key was registered.
-        ...Boolean(keyName) && {
-            // Send to GA as an event category.
-            category: EVENT,
-            action: 'Key',
-            label: keyName,
-        },
+        // Send to GA as an event category.
+        category: EVENT,
+        action: 'Key',
+        label: keyName,
     })
 }
 export const logEvent = (componentName, label) => {
