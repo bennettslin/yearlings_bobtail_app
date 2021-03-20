@@ -5,7 +5,9 @@ import { getSessionDefaults } from './default'
 import {
     SESSION_STORE,
     IS_SONG_REPEAT_ON,
+    VOLUME_INDEX,
 } from '../../constants/store'
+import { VOLUME_MAX, VOLUME_MIN } from '../../constants/options'
 
 export const getSessionReducer = ({
     initialSongIndex,
@@ -20,9 +22,12 @@ export const getSessionReducer = ({
     switch (type) {
         case SESSION_STORE: {
             const {
-                toggledIsSongRepeatOn,
-                ...remainingPayload
-            } = payload
+                    toggledIsSongRepeatOn,
+                    incrementedVolumeIndex,
+                    decrementedVolumeIndex,
+                    ...remainingPayload
+                } = payload,
+                newPayload = {}
 
             if (hasKey(toggledIsSongRepeatOn)) {
                 const
@@ -30,17 +35,32 @@ export const getSessionReducer = ({
                     isSongRepeatOn = !prevIsSongRepeatOn
 
                 setInStorage(IS_SONG_REPEAT_ON, isSongRepeatOn)
+                newPayload.isSongRepeatOn = isSongRepeatOn
+            }
 
-                return {
-                    ...state,
-                    ...remainingPayload,
-                    isSongRepeatOn,
+            if (
+                hasKey(incrementedVolumeIndex) ||
+                hasKey(decrementedVolumeIndex)
+            ) {
+                const { volumeIndex: prevVolumeIndex } = state
+                let volumeIndex = prevVolumeIndex
+
+                if (incrementedVolumeIndex) {
+                    volumeIndex = Math.min(prevVolumeIndex + 1, VOLUME_MAX)
                 }
-            } else {
-                return {
-                    ...state,
-                    ...payload,
+
+                if (decrementedVolumeIndex) {
+                    volumeIndex = Math.max(prevVolumeIndex - 1, VOLUME_MIN)
                 }
+
+                setInStorage(VOLUME_INDEX, volumeIndex)
+                newPayload.volumeIndex = volumeIndex
+            }
+
+            return {
+                ...state,
+                ...remainingPayload,
+                ...newPayload,
             }
         }
         default:

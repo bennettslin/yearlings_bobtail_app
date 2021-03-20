@@ -9,6 +9,9 @@ import { FULL_DOTS_BIT } from '../../constants/dots'
 import {
     SHOWN,
     GENERAL_OPTIONS,
+    VOLUME_DEFAULT,
+    VOLUME_MIN,
+    VOLUME_MAX,
 } from '../../constants/options'
 import {
     PITCH_SEGMENT_INDEX,
@@ -16,6 +19,7 @@ import {
     SELECTED_SONG_INDEX,
     SELECTED_VERSE_INDEX,
     SELECTED_ANNOTATION_INDEX,
+    VOLUME_INDEX,
 } from '../../constants/store'
 
 export const getWindowStorage = () => {
@@ -61,6 +65,21 @@ export const getStoredAnnotationIndex = songIndex => (
         _getParsedStoredInteger(SELECTED_ANNOTATION_INDEX),
     )
 )
+
+export const getStoredVolumeIndex = () => {
+    const
+        storedVolumeIndex = _getParsedStoredInteger(VOLUME_INDEX),
+        savedVolumeIndex =
+            Number.isFinite(storedVolumeIndex) &&
+            storedVolumeIndex >= VOLUME_MIN &&
+            storedVolumeIndex <= VOLUME_MAX ?
+                storedVolumeIndex :
+                VOLUME_DEFAULT
+
+    // This only saves upon initial retrieval.
+    setInStorage(VOLUME_INDEX, savedVolumeIndex)
+    return savedVolumeIndex
+}
 
 export const getOptionFromStorage = key => {
     const

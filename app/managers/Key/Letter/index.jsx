@@ -17,6 +17,8 @@ import {
 import {
     updateWikiIndices,
     toggleIsSongRepeatOn,
+    incrementVolumeIndex,
+    decrementVolumeIndex,
 } from '../../../redux/session/action'
 import CarouselNavDispatcher from '../../../dispatchers/CarouselNav'
 import DotsSlideDispatcher from '../../../dispatchers/DotsSlide'
@@ -116,8 +118,14 @@ const LetterManager = forwardRef((props, ref) => {
                 annotationIndexWasAccessed = keyWasRegistered
                 break
             case META_ARROW_UP:
-            case META_ARROW_DOWN:
+                // Prevent propagation even if volume reached limit.
                 keyWasRegistered = true
+                dispatch(incrementVolumeIndex())
+                break
+            case META_ARROW_DOWN:
+                // Prevent propagation even if volume reached limit.
+                keyWasRegistered = true
+                dispatch(decrementVolumeIndex())
                 break
             case PREVIOUS_VERSE_KEY:
                 keyWasRegistered = activateVerse.current.direction(-1)

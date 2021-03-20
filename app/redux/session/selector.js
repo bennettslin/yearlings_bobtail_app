@@ -8,6 +8,10 @@ export const mapIsSongRepeatOn = (
     { [SESSION_STORE]: { isSongRepeatOn } },
 ) => isSongRepeatOn
 
+export const mapVolumeIndex = (
+    { [SESSION_STORE]: { volumeIndex } },
+) => volumeIndex
+
 export const mapSelectedWikiIndex = (
     { [SESSION_STORE]: { selectedWikiIndex } },
 ) => selectedWikiIndex

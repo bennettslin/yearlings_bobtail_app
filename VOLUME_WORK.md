@@ -7,11 +7,13 @@
     * Control with temporary access key [x]
     * Only toggled by click
 * Have volume state
-    * Control with access key, Command up and down
+    * Control with access key, Command up and down [x]
         * Make sure it works with PC as well
-    * Access key works regardless of options field
-* Ensure repeat access key continues to work
-    * Access key works regardless of options field
+    * Access key works regardless of options field [x]
+    * Gets and sets in storage [x]
+        * Handles error cases
+* Ensure repeat access key continues to work [x]
+    * Access key works regardless of options field [x]
 
 ## Basic layout
 * Have options field, twice width of icon length
@@ -28,6 +30,8 @@
 * Show inverse icons in collapsed mode
 * Have solid button and range input in expanded mode
 * Show access keys
+    * Show command and arrows separately
+    * Separate Access Keys
 
 ## Interaction
 * Clicking on repeat button

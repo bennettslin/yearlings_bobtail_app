@@ -7,6 +7,16 @@ export const toggleIsSongRepeatOn = () => ({
     payload: { toggledIsSongRepeatOn: true },
 })
 
+export const incrementVolumeIndex = () => ({
+    type: SESSION_STORE,
+    payload: { incrementedVolumeIndex: true },
+})
+
+export const decrementVolumeIndex = () => ({
+    type: SESSION_STORE,
+    payload: { decrementedVolumeIndex: true },
+})
+
 export const updateShownNavBookIndex = shownNavBookIndex => ({
     type: SESSION_STORE,
     payload: { shownNavBookIndex },
