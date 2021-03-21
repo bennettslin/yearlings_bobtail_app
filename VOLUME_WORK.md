@@ -24,6 +24,10 @@
 * When clicked outside, it collapses
     * Other audio buttons reappear
 
+## Audio
+* Connect to audio volume
+    * Determine if default of 15 is best.
+
 ## Icons
 * Plan out designs
 * Just use placeholders for now

@@ -21,7 +21,6 @@ import {
     mapIsPlaying,
     mapIsPlayButtonEnabled,
 } from '../../redux/audio/selector'
-import { mapIsDesktopWidth } from '../../redux/device/selector'
 import {
     mapIsSelectedPrologue,
     mapIsSelectedEpilogue,
@@ -71,22 +70,21 @@ const Audio = () => {
         isPlayButtonEnabled = useSelector(mapIsPlayButtonEnabled),
         isPrologue = useSelector(mapIsSelectedPrologue),
         isEpilogue = useSelector(mapIsSelectedEpilogue),
-        isSongRepeatOn = useSelector(mapIsSongRepeatOn),
-        isDesktopWidth = useSelector(mapIsDesktopWidth)
+        isSongRepeatOn = useSelector(mapIsSongRepeatOn)
 
-    const _handleSongRepeatClick = () => {
+    const handleSongRepeatClick = () => {
         dispatch(toggleIsSongRepeatOn())
     }
 
-    const _handlePlayClick = () => {
+    const handlePlayClick = () => {
         dispatchPlay.current()
     }
 
-    const _handlePreviousClick = () => {
+    const handlePreviousClick = () => {
         dispatchSong.current({ direction: -1 })
     }
 
-    const _handleNextClick = () => {
+    const handleNextClick = () => {
         dispatchSong.current({ direction: 1 })
     }
 
@@ -94,29 +92,27 @@ const Audio = () => {
         const dynamicButtonConfigs = [
             {
                 isDisabled: isPrologue,
-                handleButtonClick: _handlePreviousClick,
+                handleButtonClick: handlePreviousClick,
             },
             {
                 isPulsateAnimated: isPrologue,
                 buttonIdentifier: isPlaying,
                 isDisabled: !isPlayButtonEnabled,
-                handleButtonClick: _handlePlayClick,
+                handleButtonClick: handlePlayClick,
             },
             {
                 isDisabled: isEpilogue,
-                handleButtonClick: _handleNextClick,
+                handleButtonClick: handleNextClick,
             },
             {
                 buttonIdentifier: isSongRepeatOn,
-                handleButtonClick: _handleSongRepeatClick,
+                handleButtonClick: handleSongRepeatClick,
             },
         ]
 
         // If desktop width, reverse order to keep tooltips on top.
         return (
-            isDesktopWidth ?
-                dynamicButtonConfigs.reverse() :
-                dynamicButtonConfigs
+            dynamicButtonConfigs.reverse()
         )
     }
 
@@ -133,9 +129,7 @@ const Audio = () => {
             {getDynamicButtonConfigs().map((dynamicConfig, index) => {
                 // If desktop width, reverse order to keep tooltips on top.
                 const staticConfig = STATIC_BUTTON_CONFIGS[
-                    isDesktopWidth ?
-                        STATIC_BUTTON_CONFIGS.length - index - 1 :
-                        index
+                    STATIC_BUTTON_CONFIGS.length - index - 1
                 ]
 
                 return (
