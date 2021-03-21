@@ -3,17 +3,17 @@ import path from 'path'
 import scene from './admin/data/scene'
 import album from './admin/data/album'
 import pitch from './admin/data/pitch'
-
 import {
     getIsRuntimeBuild,
     getIsProductionBuild,
-} from './app/utils/node'
+} from './app/utils/server'
+import { COMPILED } from './app/constants/server'
 
 export const onCreateWebpackConfig = ({ actions }) => {
     // Dev sanity check.
-    scene._build = 'compiled'
-    album._build = 'compiled'
-    pitch._build = 'compiled'
+    scene._build = COMPILED
+    album._build = COMPILED
+    pitch._build = COMPILED
 
     // Get primitive value of current date and time.
     const buildDateTime = new Date().valueOf()

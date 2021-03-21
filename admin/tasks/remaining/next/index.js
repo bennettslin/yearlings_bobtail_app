@@ -12,8 +12,7 @@ export default [
     },
     {
         taskName: `Volume work.`,
-        workedHours: 11,
-        neededHours: 20,
+        workedHours: 15,
     },
 
     // Needed.

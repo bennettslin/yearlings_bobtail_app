@@ -15,6 +15,10 @@
 * Ensure repeat access key continues to work [x]
     * Access key works regardless of options field [x]
 
+## Audio
+* Connect to audio volume [x]
+* Determine if default of 15 is best.
+
 ## Basic layout
 * Have options field, twice width of icon length
     * In place where audio option currently sits
@@ -23,10 +27,6 @@
 * Behaves like a button. Light hover and bounce.
 * When clicked outside, it collapses
     * Other audio buttons reappear
-
-## Audio
-* Connect to audio volume
-    * Determine if default of 15 is best.
 
 ## Icons
 * Plan out designs

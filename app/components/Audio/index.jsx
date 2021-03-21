@@ -5,6 +5,7 @@ import NextButton from './NextButton'
 import PlayButton from './PlayButton'
 import RepeatButton from './RepeatButton'
 import PreviousButton from './PreviousButton'
+// import OptionsButton from './OptionsButton'
 import { mapIsTwoRowMenu } from '../../redux/viewport/selector'
 import './style'
 
@@ -17,6 +18,7 @@ const Audio = () => {
             {isTwoRowMenu && (
                 <div {...{ className: 'Audio__flexPlaceholder' }} />
             )}
+            {/* <OptionsButton /> */}
             <RepeatButton />
             <NextButton />
             <PlayButton />

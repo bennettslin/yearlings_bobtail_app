@@ -1,0 +1,15 @@
+@import '../../../scss/constants/border';
+@import '../../../scss/constants/icon';
+
+.Button__audioOptionsSize {
+    height: $LENGTH_ICON + $MARGIN_THIN * 2;
+    width: $LENGTH_ICON * 2 + $MARGIN_THIN * 3;
+    border-radius: $borderRadius__wide;
+
+    &.expanded {
+        background-color: hsl(240, 50%, 50%);
+    }
+    &.collapsed {
+        background-color: hsl(0, 50%, 50%);
+    }
+}

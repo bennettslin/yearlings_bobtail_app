@@ -1,7 +1,7 @@
 import {
     getFaviconFileName,
     getIsProductionBuild,
-} from './app/utils/node'
+} from './app/utils/server'
 import {
     GA_ACCOUNT__STAGING,
     GA_ACCOUNT__PRODUCTION,

@@ -25,7 +25,7 @@ export const getSvgForButton = ({
     buttonName,
     buttonIdentifier,
 }) => (
-    BUTTON_ICONS_MAP[buttonName]({ buttonIdentifier })
+    BUTTON_ICONS_MAP?.[buttonName]?.({ buttonIdentifier })
 )
 
 export const getSvgForDot = dotKey => DOT_ICONS_MAP[dotKey]

@@ -19,6 +19,7 @@ import {
 import { addTip } from './helpers/tips'
 import { addVerseMetadata } from './helpers/verse'
 import { addWormholeMetadata } from './helpers/wormhole'
+import { RUNTIME } from '../../../app/constants/server'
 
 const annotationsList = []
 
@@ -87,7 +88,7 @@ const songs = getSongIndicesArray().map(songIndex => {
 
 const album = {
     // Dev sanity check. When compiled, this gets replaced.
-    _build: 'runtime',
+    _build: RUNTIME,
     songs,
     maxSceneCount: getMaxSceneCount(songs),
     maxVerseCount: getMaxVerseCount(songs),

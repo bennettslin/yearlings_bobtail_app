@@ -16,7 +16,10 @@ import { getMp3 } from '../../../api/mp3'
 import { getFormattedTime } from '../../../helpers/format'
 import { updateCanPlayThrough } from '../../../redux/players/action'
 import { mapCanPlayThrough } from '../../../redux/players/selector'
-import { mapIsSongRepeatOn } from '../../../redux/session/selector'
+import {
+    mapIsSongRepeatOn,
+    mapVolumeIndex,
+} from '../../../redux/session/selector'
 import { getCurrentIndicesForTime, logLoaded } from './helper'
 
 const AudioPlayerElement = forwardRef(({ onPlayerLoaded }, ref) => {
@@ -28,6 +31,7 @@ const AudioPlayerElement = forwardRef(({ onPlayerLoaded }, ref) => {
         dispatchVerse = useRef(),
         canPlayThrough = useSelector(mapCanPlayThrough),
         isSongRepeatOn = useSelector(mapIsSongRepeatOn),
+        volumeIndex = useSelector(mapVolumeIndex),
         [loadStartTime, setLoadStartTime] = useState(null)
 
     const getIsPaused = () => audioPlayerElement.current.paused
@@ -185,6 +189,7 @@ const AudioPlayerElement = forwardRef(({ onPlayerLoaded }, ref) => {
                 {...{
                     ref: setRef,
                     listenInterval: 50,
+                    volume: volumeIndex * 0.05,
                     onLoadedMetadata,
                     onListen,
                     onEnded,

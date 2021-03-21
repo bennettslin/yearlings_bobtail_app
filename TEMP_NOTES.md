@@ -1,5 +1,6 @@
 # Bug
 
+# TODO
 * Clarify logState labels?
 * Don't make menu move.
 * Audio shortcuts?

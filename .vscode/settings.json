@@ -17,27 +17,7 @@
          * List of VS Code commands.
          * https://gist.github.com/skfarhat/4e88ef386c93b9dceb98121d9457edbf
          */
-        "testMacro": [
-            "workbench.action.focusFirstEditorGroup",
-            "cursorTop",
-            "editor.action.insertLineBefore",
-            {"command": "type", "args": {"text": "    card"}},
-            "cursorWordLeft",
-            "cursorLeft",
-            "cursorLeft",
-            "cursorRightSelect",
-            "cursorRightSelect",
-            "cursorWordRightSelect",
-            "editor.action.selectHighlights",
-            "cursorRight",
-            "cursorWordLeft",
-            {"command": "type", "args": {"text": "\n"}},
-            "cursorUp",
-            {"command": "type", "args": {"text": "todo: true,"}},
-            "cursorTop",
-            "editor.action.deleteLines",
-            "editor.action.deleteLines",
-        ],
+        "testMacro": [],
         "prepSvg": [
             /**
              * Focus in text editor.
