@@ -9,4 +9,9 @@ export default [
         workedHours: 0,
         neededHours: 30,
     },
+    {
+        taskName: `Continue volume work.`,
+        workedHours: 0,
+        neededHours: 30,
+    },
 ]

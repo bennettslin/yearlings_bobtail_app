@@ -108,4 +108,9 @@ export default [
         workedHours: 0,
         neededHours: 5,
     },
+    {
+        taskName: `Make use of error message store in Redux.`,
+        workedHours: 0,
+        neededHours: 5,
+    },
 ]

@@ -50,7 +50,7 @@ import {
     TIPS_TOGGLE_KEY,
     ABOUT_TOGGLE_KEY,
     PITCH_TOGGLE_KEY,
-    TEMP_TOGGLE_KEY,
+    AUDIO_OPTIONS_TOGGLE_KEY,
     SPACE,
     META_ARROW_UP,
     META_ARROW_DOWN,
@@ -173,8 +173,7 @@ const LetterManager = forwardRef((props, ref) => {
                 dispatch(toggleIsPitchShown())
                 keyWasRegistered = true
                 break
-            case TEMP_TOGGLE_KEY:
-                logError('Error log for debugging!')
+            case AUDIO_OPTIONS_TOGGLE_KEY:
                 dispatch(toggleIsAudioOptionsExpanded())
                 keyWasRegistered = true
                 break

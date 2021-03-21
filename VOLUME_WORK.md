@@ -1,5 +1,5 @@
+<!-- TODO: Putting this on hold. -->
 # Volume work
-
 ## State and keyboard access
 * Rename options button to repeat everywhere [x]
     * Make it a boolean [x]
@@ -11,7 +11,7 @@
         * Make sure it works with PC as well
     * Access key works regardless of options field [x]
     * Gets and sets in storage [x]
-        * Handles error cases
+        * Handles error cases [x]
 * Ensure repeat access key continues to work [x]
     * Access key works regardless of options field [x]
 

@@ -5107,4 +5107,8 @@ export default [
         taskName: `Fix tips hand bugs.`,
         workedHours: 2,
     },
+    {
+        taskName: `Initial volume work.`,
+        workedHours: 15,
+    },
 ]
