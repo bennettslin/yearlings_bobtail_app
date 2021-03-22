@@ -35,7 +35,7 @@ const Skies = () => {
                 className: cx(
                     'Skies',
                     'abF',
-                    'fCC'
+                    'fCC',
                 ),
             }}
         >
@@ -45,7 +45,7 @@ const Skies = () => {
             <SkyDay {...{ sceneSeason: SEASON_WINTER }} />
             <div className={cx(
                 'SkyDay',
-                'fCC'
+                'fCC',
             )}>
                 <Sky {...{ sceneSeason: SEASON_PAST }} />
                 <Sky {...{ sceneSeason: SEASON_PRESENT }} />
@@ -55,7 +55,7 @@ const Skies = () => {
             </div>
             <div className={cx(
                 'SkyDay',
-                'fCC'
+                'fCC',
             )}>
                 <Sky {...{ sceneSeason: SEASON_STAGE }} />
                 <Sky {...{ sceneSeason: SEASON_OCEAN_TOP }} />

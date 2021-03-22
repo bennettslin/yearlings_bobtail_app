@@ -23,7 +23,7 @@ const AdminNav = () => {
         <div
             className={cx(
                 'AdminNav',
-                'Admin__column'
+                'Admin__column',
             )}
         >
             <h2>progress</h2>

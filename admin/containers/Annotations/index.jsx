@@ -11,11 +11,11 @@ import { getTitleForAnnotation } from '../../../app/api/album/annotations'
 import { getArrayOfLength } from '../../../app/helpers/general'
 import './style'
 
-const INTERVALS_COUNT = 4
+const INTERVALS_COUNT = 5
 
 const TempGlobalAnnotationsCounter = () => {
     const percentageDone = parseInt(
-        getGlobalAnnotationDoneCount() / getGlobalAnnotationCount() * 100
+        getGlobalAnnotationDoneCount() / getGlobalAnnotationCount() * 100,
     )
     return (
         <div className="TempGlobalAnnotationsCounter">
@@ -66,7 +66,7 @@ const TempGlobalAnnotations = () => {
             {...{
                 className: cx(
                     'TempGlobalAnnotations',
-                    'PtSansNarrow'
+                    'PtSansNarrow',
                 ),
             }}
         >

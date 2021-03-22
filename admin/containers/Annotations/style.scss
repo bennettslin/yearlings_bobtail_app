@@ -35,3 +35,10 @@
 .Button__reset {
     background-color: #7ae;
 }
+
+.Underline {
+    .TempGlobalAnnotation
+    & {
+        display: none;
+    }
+}

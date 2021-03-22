@@ -125,7 +125,7 @@ class LegacyPreviewer extends PureComponent {
                     className: cx(
                         'LegacyPreviewer',
                         'abF',
-                        'PtSansNarrow'
+                        'PtSansNarrow',
                     ),
                     tabIndex: -1,
                     onKeyDown: this.handleKeyDown,
@@ -144,7 +144,7 @@ class LegacyPreviewer extends PureComponent {
                     {...{
                         className: cx(
                             'Previewer__main',
-                            heightAspectRatio && 'Previewer__mainFullHeight'
+                            heightAspectRatio && 'Previewer__mainFullHeight',
                         ),
                     }}
                 >

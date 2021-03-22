@@ -1,7 +1,7 @@
 const _getAnnotation = (
     annotationsList,
     songIndex,
-    annotationIndex
+    annotationIndex,
 ) => {
     const annotations = annotationsList[songIndex]
     return annotations ? annotations[annotationIndex - 1] : null
@@ -9,7 +9,7 @@ const _getAnnotation = (
 
 export const tellEachSourceLinkItsDestination = (
     annotationsList,
-    tempWormholeLinks
+    tempWormholeLinks,
 ) => {
     /**
      * For each annotation with a wormhole, add an array of links to all
@@ -29,7 +29,7 @@ export const tellEachSourceLinkItsDestination = (
                 { cards } = _getAnnotation(
                     annotationsList,
                     songIndex,
-                    annotationIndex
+                    annotationIndex,
                 ),
                 card = cards[cardIndex]
 
@@ -71,7 +71,7 @@ export const addWormholeLinksToCard = (annotationsList, tempWormholeLinks) => {
                 } = _getAnnotation(
                     annotationsList,
                     songIndex,
-                    annotationIndex
+                    annotationIndex,
                 ),
                 card = cards[cardIndex]
 

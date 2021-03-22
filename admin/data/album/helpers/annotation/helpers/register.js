@@ -37,7 +37,7 @@ const _getHasWikiAnchor = (description) => {
         return description.find(
             childEntity => (
                 _getHasWikiAnchor(childEntity)
-            )
+            ),
         )
 
     } else {
@@ -45,7 +45,7 @@ const _getHasWikiAnchor = (description) => {
             currentKey => {
                 const hasWiki = Boolean(description[WIKI])
                 return hasWiki || _getHasWikiAnchor(description[currentKey])
-            }
+            },
         )
     }
 }

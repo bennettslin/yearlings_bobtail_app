@@ -16,7 +16,7 @@ const AdminSky = ({
                     'TimeOfDay__space',
                     'Sky__filter',
                     'abF',
-                    sceneSkyTime
+                    sceneSkyTime,
                 ),
             }}
         />
@@ -27,7 +27,7 @@ const AdminSky = ({
                     'TimeOfDay__horizon',
                     'Sky__filter',
                     'abF',
-                    sceneSkyTime
+                    sceneSkyTime,
                 ),
             }}
         />
@@ -38,7 +38,7 @@ const AdminSky = ({
                     'Season__space',
                     'Sky__filter',
                     'abF',
-                    sceneSeason
+                    sceneSeason,
                 ),
             }}
         />
@@ -49,7 +49,7 @@ const AdminSky = ({
                     'Season__horizon',
                     'Sky__filter',
                     'abF',
-                    sceneSeason
+                    sceneSeason,
                 ),
             }}
         />
@@ -58,7 +58,7 @@ const AdminSky = ({
                 className: cx(
                     'AdminSky__text',
                     'PtSansNarrow',
-                    'textShadow__light'
+                    'textShadow__light',
                 ),
             }}
         >

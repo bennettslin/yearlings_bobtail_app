@@ -8,7 +8,7 @@ const AnnotationCards = ({ songIndex, annotationIndex }) => (
     <div className="TempGlobalAnnotationCards">
         {getAnnotationCardIndices(
             songIndex,
-            annotationIndex
+            annotationIndex,
 
         ).map(cardIndex => (
             <AnnotationCard

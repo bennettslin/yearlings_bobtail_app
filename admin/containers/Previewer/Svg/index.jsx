@@ -71,7 +71,7 @@ class PreviewerSvg extends PureComponent {
         const { presenceKey } = this.props,
 
             element = getDocument().getElementsByClassName(
-                presenceKey
+                presenceKey,
             )[0]
 
         if (element) {
@@ -117,7 +117,7 @@ class PreviewerSvg extends PureComponent {
         if (isActor || instanceList[presenceType]) {
             customType = instanceList[presenceType][
                 instanceList[presenceType].findIndex(
-                    object => object.instance === presenceKey
+                    object => object.instance === presenceKey,
                 )
 
             ].type
@@ -154,7 +154,7 @@ class PreviewerSvg extends PureComponent {
                 getSharedStyleForActor({
                     actorKey: this.getCustomType(),
                     presenceKey,
-                })
+                }),
             )
 
         } else {
@@ -200,7 +200,7 @@ class PreviewerSvg extends PureComponent {
                             didLoad && 'Presence__loaded',
                             showKilobytes && 'Presence__kilobytes',
                             isActor && capitaliseForClassName(ACTOR),
-                            capitaliseForClassName(presenceType)
+                            capitaliseForClassName(presenceType),
                         ),
                         style: {
                             height: `${previewerHeight.toFixed(2)}%`,
@@ -208,7 +208,7 @@ class PreviewerSvg extends PureComponent {
                         svgClassName: cx(
                             presenceKey,
                             convertPresenceKeyToClassName(presenceKey),
-                            getSharedClassNames(sharedStyle)
+                            getSharedClassNames(sharedStyle),
                         ),
                         title: convertPresenceKeyToTitle(presenceKey),
                         preProcessor: this.processSvg,
@@ -224,7 +224,7 @@ class PreviewerSvg extends PureComponent {
                 {...{
                     className: cx(
                         'Previewer__scrollChild',
-                        'PresenceContainer__shown'
+                        'PresenceContainer__shown',
                     ),
                 }}
             >

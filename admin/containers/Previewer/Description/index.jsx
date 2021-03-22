@@ -22,7 +22,7 @@ const PreviewerDescription = ({
                     'PreviewerDescription',
                     hideInMobile && 'PreviewerDescription__hideInMobile',
                     'fCC',
-                    className
+                    className,
                 ),
             }}
         >
@@ -30,7 +30,7 @@ const PreviewerDescription = ({
                 {...{
                     className: cx(
                         'PreviewerDescription__name',
-                        'PreviewerDescription__child'
+                        'PreviewerDescription__child',
                     ),
                 }}
             >
@@ -40,7 +40,7 @@ const PreviewerDescription = ({
                 {...{
                     className: cx(
                         'PreviewerDescription__sharedStyles',
-                        'PreviewerDescription__child'
+                        'PreviewerDescription__child',
                     ),
                 }}
             >
@@ -59,7 +59,7 @@ const PreviewerDescription = ({
                     {...{
                         className: cx(
                             'PreviewerDescription__scaleFactor',
-                            'PreviewerDescription__child'
+                            'PreviewerDescription__child',
                         ),
                     }}
                 >
@@ -70,7 +70,7 @@ const PreviewerDescription = ({
                 {...{
                     className: cx(
                         'PreviewerDescription__data',
-                        'PreviewerDescription__child'
+                        'PreviewerDescription__child',
                     ),
                 }}
             >

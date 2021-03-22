@@ -15,7 +15,7 @@ import {
 const SkyDay = ({ sceneSeason }) => (
     <div className={cx(
         'SkyDay',
-        'fCC'
+        'fCC',
     )}>
         <Sky {...{ sceneSkyTime: TIME_TWILIGHT, sceneSeason }} />
         <Sky {...{ sceneSkyTime: TIME_DAWN, sceneSeason }} />

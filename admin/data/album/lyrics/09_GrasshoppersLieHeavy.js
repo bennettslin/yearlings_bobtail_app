@@ -102,7 +102,7 @@ export default {
                                 anchor: `pompous autumn waits.`,
                                 cards: [
                                     {
-                                        description: `In high school, I continued on as the same unlikable nobody I'd been in middle school. It just didn't seem possible to remake myself into someone new while surrounded by all the same classmates. But all the while I was crafting a future persona of a self-assured artist. And it was raring to go as soon as I could leave Los Angeles.`,
+                                        description: `In high school, I continued on as the same unlikable nobody I'd been in middle school. It just didn't seem possible to remake myself into someone new while surrounded by all the same classmates. But all the while I was crafting a future persona of a self-assured artist that was raring to go as soon as I could leave Los Angeles.`,
                                         dotKeys: {
                                             [BACKSTORY]: true,
                                             [OBSERVATION]: true,

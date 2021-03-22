@@ -96,26 +96,26 @@ const _addAnnotationLists = (annotations, song) => {
         annotationColumnIndices.push(
             Number.isFinite(annotation.columnIndex) ?
                 annotation.columnIndex :
-                -1
+                -1,
         )
         annotationVerseIndices.push(
             Number.isFinite(annotation.verseIndex) ?
                 annotation.verseIndex :
-                -1
+                -1,
         )
         annotationDotsBits.push(getDotsBitFromKeys(annotation.dotKeys))
         annotationCardsDescriptionsList.push(
-            annotation.cards.map(card => card.description || null)
+            annotation.cards.map(card => card.description || null),
         )
         annotationCardsDotsBitsList.push(
             // If single card, push individual dot keys for dev clarity.
             annotation.cards.length === 1 ?
                 getDotsBitFromKeys(
-                    annotation.cards[0].dotKeys
+                    annotation.cards[0].dotKeys,
                 ) || null :
                 annotation.cards.map(card => getDotsBitFromKeys(
-                    card.dotKeys
-                ) || null)
+                    card.dotKeys,
+                ) || null),
         )
     })
 

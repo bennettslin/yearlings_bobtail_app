@@ -18,12 +18,12 @@ const AnnotationCard = ({
         description = getDescriptionForAnnotationCard(
             songIndex,
             annotationIndex,
-            cardIndex
+            cardIndex,
         ),
         dotKeys = getDotKeysForAnnotationCard(
             songIndex,
             annotationIndex,
-            cardIndex
+            cardIndex,
         )
 
     return (

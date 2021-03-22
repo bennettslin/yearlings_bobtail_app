@@ -28,7 +28,7 @@ const ProgressFooter = ({
             'ProgressFooter',
             'text-cell-wrapper',
             isV2 && 'ProgressFooter__v2',
-            Boolean(thing) && 'ProgressFooter__illustrator'
+            Boolean(thing) && 'ProgressFooter__illustrator',
         )}>
             {neededHours &&
                 <div className="text-cell footer">

@@ -125,7 +125,7 @@ class Previewer extends PureComponent {
         presenceKey = this.state.presenceKey,
     } = {}) => {
         const element = getDocument().querySelector(
-            `.${capitaliseForClassName(presenceType)} .${presenceKey}`
+            `.${capitaliseForClassName(presenceType)} .${presenceKey}`,
         )
 
         scrollIntoView(element, { time: 100 })
@@ -159,7 +159,7 @@ class Previewer extends PureComponent {
                     className: cx(
                         'Previewer',
                         'abF',
-                        'PtSansNarrow'
+                        'PtSansNarrow',
                     ),
                     tabIndex: -1,
                     onKeyDown: this.handleKeyDown,
@@ -180,7 +180,7 @@ class Previewer extends PureComponent {
                             'Previewer__mainFullHeight',
                             this.getScrollVertical() ?
                                 'Previewer__mainScrollVertical' :
-                                'Previewer__mainScrollHorizontal'
+                                'Previewer__mainScrollHorizontal',
                         ),
                     }}
                 >

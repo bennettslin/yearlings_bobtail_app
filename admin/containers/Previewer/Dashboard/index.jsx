@@ -82,7 +82,7 @@ const PreviewerDashboard = ({
                 {...{
                     className: cx(
                         'PreviewerDashboard__child',
-                        'fCC'
+                        'fCC',
                     ),
                     kilobytes,
                     hideInMobile: hideKilobytesInMobile,

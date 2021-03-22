@@ -85,7 +85,7 @@ const _addPresenceToSceneLayer = ({
         zIndex = getValueInAbridgedMatrix(
             cubes[cubesKey].floor.zIndices,
             arrangedYIndex,
-            getNearestXIndex(xPosition)
+            getNearestXIndex(xPosition),
         )
 
     // Allow presence to have different zIndices for different scenes.
@@ -177,7 +177,7 @@ const _addPresenceToSceneLayerByType = ({
 
 const _getLayeredScenes = (
     albumScenes,
-    layerPresencesList
+    layerPresencesList,
 
 ) => {
     albumScenes.forEach(songScenes => {

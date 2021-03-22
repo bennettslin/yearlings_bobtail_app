@@ -46,7 +46,7 @@ const _addCardWormholeLinksToTempAlbumLinks = ({
 
 export const initialiseTempWormholeLinks = (
     annotationsList,
-    tempWormholeLinks
+    tempWormholeLinks,
 ) => {
     annotationsList.forEach((annotations, songIndex) => {
         if (annotations) {

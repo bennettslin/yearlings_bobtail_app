@@ -45,7 +45,7 @@ const DrawingActor = ({
                                                 'role-row',
                                                 'flex-row',
                                                 doneForNow && 'done',
-                                                halfDoneForNow && 'halfDone'
+                                                halfDoneForNow && 'halfDone',
                                             ),
                                         }}
                                     >
@@ -53,7 +53,7 @@ const DrawingActor = ({
                                             {...{
                                                 className: cx(
                                                     'role-info',
-                                                    'song-index-column'
+                                                    'song-index-column',
                                                 ),
                                             }}
                                         >
@@ -63,7 +63,7 @@ const DrawingActor = ({
                                             {...{
                                                 className: cx(
                                                     'role-info',
-                                                    'scene-index-column'
+                                                    'scene-index-column',
                                                 ),
                                             }}
                                         >
@@ -73,7 +73,7 @@ const DrawingActor = ({
                                             {...{
                                                 className: cx(
                                                     'role-info',
-                                                    'worked-hours-column'
+                                                    'worked-hours-column',
                                                 ),
                                             }}
                                         >
@@ -83,7 +83,7 @@ const DrawingActor = ({
                                             {...{
                                                 className: cx(
                                                     'role-info',
-                                                    'instance-column'
+                                                    'instance-column',
                                                 ),
                                             }}
                                         >
