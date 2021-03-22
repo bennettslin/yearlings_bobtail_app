@@ -34,6 +34,7 @@ export default {
     mixStartTime: `0:01:11.97`,
     playerReferenceTime: 0.282,
     playerStartTime: 0.027,
+    todo: true,
     overview: `As a child, I depended on my older sister to do most everything for me, like zipping up my jacket. One day when she wasn't around to help, I pooped in my pants and had to be sent home from school.`,
     lyricUnits: [
         {

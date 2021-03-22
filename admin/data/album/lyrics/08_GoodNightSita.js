@@ -23,6 +23,7 @@ export default {
     referenceDescription: `"Good" in anacrusis`,
     playerStartTime: 1346.412,
     mixStartTime: `0:01:11.89`,
+    todo: true,
     overview: `Sometime after dating Catherine and a while before meeting Mara, I tried to hit on a university student named Sita. Nothing came of the few dates that followed, however, and I quickly scurried away in disappointment.`,
     lyricUnits: [
         {
