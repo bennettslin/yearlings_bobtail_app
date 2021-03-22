@@ -430,7 +430,6 @@ export default {
                     lyric: [
                         {
                             anchor: `crooked thieves`,
-                            todo: true,
                             card: {
                                 description: ``,
                                 wormhole: `crooked_thieves`,
@@ -497,7 +496,6 @@ export default {
                         `you'd`,
                         {
                             anchor: `finally become someone?`,
-                            todo: true,
                             card: {
                                 wormhole: `finally_become_someone`,
                             },

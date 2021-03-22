@@ -272,7 +272,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Down the steps`,
-                            todo: true,
                             card: {
                                 wormhole: `down_the_steppes`,
                             },
@@ -648,14 +647,12 @@ export default {
                     lyric: [
                         {
                             anchor: `chimneys weep`,
-                            todo: true,
                             card: {
                                 wormhole: `chimney_sweep`,
                             },
                         },
                         {
                             anchor: `sooty dust.`,
-                            todo: true,
                             card: {
                                 wormhole: `suttee_dust`,
                             },
@@ -771,7 +768,6 @@ export default {
                         `as your`,
                         {
                             anchor: `heartbeats,`,
-                            todo: true,
                             card: {
                                 wormhole: `harpies`,
                             },
@@ -1107,7 +1103,6 @@ export default {
                         `in the`,
                         {
                             anchor: `ever-present scent`,
-                            todo: true,
                             card: {
                                 wormhole: 'present_sent',
                             },
@@ -1130,7 +1125,6 @@ export default {
                         `Then you`,
                         {
                             anchor: `wake by a bell`,
-                            todo: true,
                             card: {
                                 wormhole: `belle`,
                             },

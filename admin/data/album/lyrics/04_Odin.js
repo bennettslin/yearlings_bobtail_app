@@ -694,7 +694,6 @@ export default {
                         `To`,
                         {
                             anchor: `dreams of whom`,
-                            todo: true,
                             card: {
                                 wormhole: {
                                     wormholeKey: `dreams_of_whom`,
@@ -1201,7 +1200,6 @@ export default {
                         `to`,
                         {
                             anchor: `stand onshore`,
-                            todo: true,
                             card: {
                                 wormhole: `stand_onshore`,
                             },
@@ -1626,7 +1624,6 @@ export default {
                         `Though, no`,
                         {
                             anchor: `gray starling's beak`,
-                            todo: true,
                             card: {
                                 wormhole: `gray_starling`,
                             },
