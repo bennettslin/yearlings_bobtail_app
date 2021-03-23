@@ -5,7 +5,6 @@
 * Don't make menu move.
 * Audio shortcuts?
     * Make similar to Spotify.
-* Preteen Bennett enraged comics page.
 * Tips and audio options send analytics with desktop to mobile resize?
 * Take care of IP errors. (Maybe it will be fine in production?)
 * Freeway panel.
