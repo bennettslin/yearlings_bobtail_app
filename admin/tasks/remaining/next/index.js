@@ -25,6 +25,6 @@ export default [
     },
     {
         taskName: `Face fixes. (Do Anita exasperated next.)`,
-        workedHours: 4,
+        workedHours: 5,
     },
 ]
