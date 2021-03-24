@@ -25,14 +25,12 @@ export default {
     referenceDescription: `Darbuka in anacrusis`,
     playerStartTime: 967.569,
     mixStartTime: `0:01:03.51`,
-    todo: true,
-    overview: `In college, I met my first girlfriend. Catherine was a nice Catholic girl and former valedictorian, who didn't think much of my nonexistent reading habit and broke up with me right before Ash Wednesday. So I ashed my forehead and tried to bump into her that day, thinking if she could picture me as a good Catholic boy, then I might get another chance. It didn't work, but I did grow into a faithful reader, and I have Catherine to thank for that.`,
+    overview: `In college, I met my first girlfriend. Catherine was a nice Catholic girl and former valedictorian, who didn't take kindly to my lack of reading habit and broke up with me right before Ash Wednesday. So I ashed my own forehead and tried to bump into her that day, hoping that if she could picture me as a good Catholic boy, then I might get another chance. It didn't work, but I did grow into a faithful reader, and I have Catherine to thank for that.`,
     lyricUnits: [
         {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         {
@@ -65,7 +63,6 @@ export default {
                         {
                             anchor: `O Catherine! My Catherine!`,
                             properNoun: true,
-                            todo: true,
                             card: {
                                 description: [
                                     {
@@ -92,10 +89,9 @@ export default {
                         `our`,
                         {
                             anchor: `futile trip`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `I headed for the`,
+                                    `I moved to the`,
                                     {
                                         anchor: `San Francisco Bay Area`,
                                         wiki: `San_Francisco_Bay_Area`,
@@ -115,9 +111,9 @@ export default {
                     lyric: [
                         {
                             anchor: `where it commenced:`,
-                            todo: true,
+                            phrasingTodo: true,
                             card: {
-                                description: `My relationship with Catherine began the same way my friendship with Sasha had a decade earlier. Which is to say, I latched onto the first cute person to show me any small kindness in a new environment, and then I tried to make myself indispensable in small ways.`,
+                                description: `My relationship with Catherine began much like my friendship with Sasha had a decade earlier. I latched onto the first cute person to show me any small kindness in a new environment, and then I tried to make myself indispensable in small ways.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -126,7 +122,6 @@ export default {
                         `in my`,
                         {
                             anchor: `bookless room,`,
-                            todo: true,
                             card: {
                                 description: `Glancing around my room one night, Catherine remarked that she didn't see any books. "I don't read," I explained, only partly in jest.`,
                                 dotKeys: {
@@ -142,7 +137,7 @@ export default {
                         {
                             anchor: `Ulysses' tomb,`,
                             properNoun: true,
-                            todo: true,
+                            phrasingTodo: true,
                             card: {
                                 description: [
                                     `A reference to the classic`,
@@ -158,7 +153,7 @@ export default {
                                             wiki: `Ulysses_(novel)`,
                                         },
                                     },
-                                    `which Catherine was reading at the time. In hindsight, that night was probably the beginning of the end, as Catherine surmised that a boyfriend who didn't read for pleasure would be the death of her.`,
+                                    `which Catherine was reading at the time. That night was probably the beginning of the end, as Catherine surmised that a boyfriend who didn't read for pleasure would be the death of her.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -172,15 +167,14 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `For a song about two people who couldn't be more different, I juxtaposed`,
+                        `For this song about two people who couldn't be more different, I placed`,
                         {
                             anchor: `Arabic maqam`,
                             wiki: `Arabic_maqam`,
                         },
-                        `in the verses with`,
+                        `in the verses against`,
                         {
                             anchor: `Renaissance polyphony`,
                             wiki: `Polyphony`,
@@ -205,7 +199,7 @@ export default {
                         `First we`,
                         {
                             anchor: `laid Tourette's,`,
-                            todo: true,
+                            phrasingTodo: true,
                             cards: [
                                 {
                                     description: [
@@ -214,7 +208,7 @@ export default {
                                             anchor: `Tourette syndrome`,
                                             wiki: `Tourette_syndrome`,
                                         },
-                                        `who suffer from involuntary tics, Catherine and I might have said some things on impulse during the breakup. Also, Jesus was laid "to rest" on the day of his crucifixion.`,
+                                        `who suffer from involuntary tics, Catherine and I might have impulsively said unpleasant things to each other during the breakup. Also, Jesus was laid "to rest" on the day of his crucifixion.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -235,7 +229,6 @@ export default {
                         `the`,
                         {
                             anchor: `last day she rose`,
-                            todo: true,
                             card: {
                                 description: `Jesus rose as well on the third day.`,
                                 dotKeys: {
@@ -246,9 +239,8 @@ export default {
                         `up and left, hers the`,
                         {
                             anchor: `sole assent…`,
-                            todo: true,
                             card: {
-                                description: `Catherine wanted to break up; I didn't. But she was leaving me behind in another sense, given that hers was the only "soul" awaiting "ascent."`,
+                                description: `It was Catherine who wanted the breakup, not me. But she was also leaving me behind in another sense, since her "soul" was the only one awaiting "ascent."`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -264,7 +256,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `The shrieking recorders mimic the sound of`,
@@ -272,7 +263,7 @@ export default {
                             anchor: `BART`,
                             wiki: `Bay_Area_Rapid_Transit`,
                         },
-                        `trains braking in a subway tunnel beneath the sidewalk. They were made by overblowing individual pitches that were then spliced together to form descending arpeggios— triplets for the soprano recorder, quadruplets for the tenor.`,
+                        `trains braking in a subway tunnel beneath the sidewalk. I made the tracks by overblowing individual pitches and then splicing those together to form descending arpeggios— triplets for the soprano recorder, quadruplets for the tenor.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -296,7 +287,7 @@ export default {
                         `I purge, with a`,
                         {
                             anchor: `dirge she'd deride,`,
-                            todo: true,
+                            phrasingTodo: true,
                             cards: [
                                 {
                                     description: [
@@ -309,7 +300,7 @@ export default {
                                     ],
                                 },
                                 {
-                                    description: `Up to that point, I had only devoted serious thought to writing melodies and chord progressions. It had never occurred to me that anyone could listen to music differently. But Catherine appreciated music for its lyrics, and because mine were of the nonsensical variety, she wasn't impressed by the kind of songs I wrote.`,
+                                    description: `Up to that point, I had only devoted serious thought to writing melodies and chord progressions. It had never occurred to me that anyone could listen to music differently. But Catherine appreciated music for its lyrics, and because mine were of the nonsensical variety, she wasn't impressed by any of the songs I wrote.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
