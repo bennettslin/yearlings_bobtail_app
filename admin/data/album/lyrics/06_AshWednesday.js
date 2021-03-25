@@ -451,9 +451,8 @@ export default {
                         `who tried but failed to win her heart`,
                         {
                             anchor: `poised with brains?`,
-                            todo: true,
                             card: {
-                                description: `Catherine didn't value the artistic strengths I'd always counted on to make up for my many weaknesses. Which made me realize that if I were ever to be worth keeping one day, then I simply couldn't have any weaknesses.`,
+                                description: `Catherine didn't value the artistic strengths I'd always counted on to cover up my many weaknesses. Which made me realize that if I were ever to be worth keeping one day, then I simply couldn't have any weaknesses.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -465,10 +464,9 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `In Western music, a minor third can only be divided into unequal steps, whole and half, while a major third can be divided into equal whole steps. But a quarter tone placed exactly halfway across a minor third allows it to be traversed in two equal steps. This creates the confusing sensation of a squished major third, which fascinated my ears. As a result, I possibly went overboard with all the rapid-fire minor third runs played here on the`,
+                        `While a major third can be divided into equal whole steps in Western music, a minor third can only be divided unequally, between whole and half. But quarter tones allow a minor third to be traversed in two equal steps, creating the sensation of a squished major third. I liked how this confused my ears so much, I went overboard with these rapid-fire minor-third runs on the`,
                         {
                             anchor: `Dobro.`,
                             wiki: `Dobro`,
@@ -491,7 +489,6 @@ export default {
                         `And as I pace, stranded here`,
                         {
                             anchor: `outside her Shelta,`,
-                            todo: true,
                             card: {
                                 description: [
                                     `The`,
@@ -504,12 +501,12 @@ export default {
                                         anchor: `Catholic`,
                                         wiki: `Catholic_Church`,
                                     },
-                                    `ethnic group. They speak a cryptic language known as`,
+                                    `ethnic group. They speak`,
                                     {
-                                        anchor: `Shelta`,
+                                        anchor: `Shelta,`,
                                         wiki: `Shelta`,
                                     },
-                                    `that is intended to exclude outsiders from comprehension. Catherine wasn't actually a Traveller, but either way, I was stuck outside her "shelter."`,
+                                    `a cryptic language intended to exclude outsiders from comprehension. Catherine was part Irish, though not a Traveller. Either way, I was stuck outside her "shelter."`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -525,7 +522,6 @@ export default {
                         `in`,
                         {
                             anchor: `famous raincoat`,
-                            todo: true,
                             card: {
                                 description: [
                                     `Catherine was the one who introduced me to the music of Leonard Cohen. It was her impassioned reading of his song`,
@@ -543,7 +539,6 @@ export default {
                         },
                         {
                             anchor: `unknown to roam,`,
-                            todo: true,
                             cards: [
                                 {
                                     description: `If Catherine is a figurative Traveller, then I am unwelcome to follow her itinerant community that is well-known to roam.`,
@@ -553,22 +548,22 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `"Raincoat" is a euphemism for`,
+                                        `"Raincoat" is a slang term for`,
                                         {
                                             anchor: `condoms,`,
                                             wiki: `Condom`,
                                         },
-                                        `which are famously unknown to`,
+                                        `which might be unknown to`,
                                         {
                                             anchor: `"Rome"`,
                                             wiki: `Rome`,
                                         },
-                                        `due to the Catholic Church's stance against`,
+                                        `given the Catholic Church's stance against`,
                                         {
                                             anchor: `birth control.`,
                                             wiki: `Birth_control`,
                                         },
-                                        `Catherine and I never went all the way due to her vow not to engage in`,
+                                        `We never needed them since Catherine had vowed not to engage in`,
                                         {
                                             anchor: `premarital sex,`,
                                             wiki: `Premarital_sex`,
@@ -591,7 +586,6 @@ export default {
                         `my`,
                         {
                             anchor: `girl in glasses`,
-                            todo: true,
                             card: {
                                 description: [
                                     `The critic`,
@@ -608,10 +602,10 @@ export default {
                         },
                         {
                             anchor: `went clear—`,
-                            todo: true,
+                            phrasingTodo: true,
                             card: {
                                 description: [
-                                    `Having decided to win Catherine back by reading more books, I began with those we'd discussed. Catherine had mentioned that "Famous Blue Raincoat" echoes a similar theme of purification through betrayal found in Cohen's novel`,
+                                    `After Catherine cleared her life of me, I tried to win her back by reading lots of books, beginning with the ones we'd discussed. Catherine had mentioned that "Famous Blue Raincoat" echoes a similar theme of purification through betrayal found in Cohen's novel`,
                                     {
                                         isItalic: true,
                                         lyric: `Beautiful Losers,`,
@@ -626,7 +620,6 @@ export default {
                         },
                         {
                             anchor: `my Tekakwitha—`,
-                            todo: true,
                             card: {
                                 description: [
                                     {
@@ -643,7 +636,7 @@ export default {
                                         isItalic: true,
                                         lyric: `Beautiful Losers,`,
                                     },
-                                    `and so I always assumed that "going clear" was a reference to the legend that her`,
+                                    `so I always assumed that "going clear" was a reference to the legend that her`,
                                     {
                                         anchor: `smallpox`,
                                         wiki: `Smallpox`,
@@ -664,7 +657,6 @@ export default {
                         `for I lack the wit to spare a`,
                         {
                             anchor: `safe Algonquin abode.`,
-                            todo: true,
                             card: {
                                 description: [
                                     `Kateri Tekakwitha was born to a`,
@@ -672,17 +664,17 @@ export default {
                                         anchor: `Mohawk`,
                                         wiki: `Mohawk_people`,
                                     },
-                                    `chief and an`,
+                                    `chief and a captured`,
                                     {
                                         anchor: `Algonquin`,
                                         wiki: `Algonquin_people`,
                                     },
-                                    `woman he had captured in a raid upon her village. Dorothy Parker belonged to the`,
+                                    `woman whose village he raided. Dorothy Parker was a member of the`,
                                     {
                                         anchor: `Algonquin Round Table,`,
                                         wiki: `Algonquin_Round_Table`,
                                     },
-                                    `a social circle of New York City writers known for their clever wordplay and wit. To answer why Catherine left me, then, this metaphor humorously suggests it was out of fear I would take her away from her friends, being too dim-witted as I was to socialize with them.`,
+                                    `a social circle of New York City writers known for their clever wit and wordplay. And so here I joke that Catherine must have feared I would take her away from her friends, being too dimwitted as I was to ever be allowed to meet them.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -704,17 +696,16 @@ export default {
                         `Well yes, I`,
                         {
                             anchor: `faked this X,`,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `On Ash Wednesday, the priest smears ash in the shape of a cross on each parishioner's forehead. But I had ashed myself without the benefit of a mirror, so my cross was slanted like the letter X.`,
+                                    description: `On Ash Wednesday, the priest smears ash in the shape of a cross on each parishioner's forehead. But since I'd ashed myself without the benefit of a mirror, mine was slanted like the letter X.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [REFERENCE]: true,
                                     },
                                 },
                                 {
-                                    description: `Since Catherine insisted on going no further than heavy petting, I would fake "the sex" for myself by masturbating afterward.`,
+                                    description: `Catherine insisted on going no further than heavy petting, so I would fake "the sex" for myself by masturbating afterward.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [PUN]: true,
@@ -739,7 +730,6 @@ export default {
                         `Well no, I know it's wrong, but I did`,
                         {
                             anchor: `burn my palms,`,
-                            todo: true,
                             card: {
                                 description: [
                                     `The ash used on Ash Wednesday comes from burning the palm branches that were blessed on the previous year's`,
@@ -747,7 +737,7 @@ export default {
                                         anchor: `Palm Sunday.`,
                                         wiki: `Palm_Sunday`,
                                     },
-                                    `But mine had come from a cigarette butt that had been recently put out in an outdoor ashtray, so the palms I speak of here are actually my hands.`,
+                                    `But my ash came from a discarded cigarette that was still lit, so the palms I burned were the literal palms of my hands.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -771,24 +761,24 @@ export default {
                                 {
                                     anchor: `Catherine vaut bien une messe…`,
                                     properNoun: true,
-                                    todo: true,
+                                    phrasingTodo: true,
                                     card: {
                                         description: [
                                             {
-                                                anchor: `Henry IV`,
+                                                anchor: `Henry IV of France`,
                                                 wiki: `Henry_IV_of_France`,
                                             },
-                                            `of France was born a`,
+                                            `was born a`,
                                             {
                                                 anchor: `Protestant`,
                                                 wiki: `Protestantism`,
                                             },
-                                            `but converted to Catholicism to gain the French royal crown. He is reputed to have remarked,`,
+                                            `but converted to Catholicism to gain the French royal crown. He is reputed to have said,`,
                                             {
                                                 isItalic: true,
                                                 lyric: `"Paris vaut bien une messe,"`,
                                             },
-                                            `or "Paris is well worth a Mass," implying that spiritual allegiances are superseded by earthly ambitions. Similarly, I would have happily turned Catholic if that could get Catherine to stay.`,
+                                            `or "Paris is well worth a Mass," implying that spiritual allegiances can readily be dictated by earthly ambitions. Similarly, I would have happily turned Catholic if it meant getting to stay with Catherine.`,
                                         ],
                                         dotKeys: {
                                             [OBSERVATION]: true,
@@ -802,10 +792,9 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `The rainstick, rustling papers, and tambourine create the setting of a wet and windy`,
+                        `The rainstick, rustling papers, and tambourine mimic the sound of a wet and windy`,
                         {
                             anchor: `Oakland`,
                             wiki: `Oakland,_California`,
@@ -833,10 +822,9 @@ export default {
                         `us wretched souls`,
                         {
                             anchor: `cursed to be born,`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `It always confused me why the Catholic Church extends its`,
+                                    `It always confused me why the Catholic Church should extend its`,
                                     {
                                         anchor: `pro-life stance`,
                                         wiki: `Catholic_Church_and_abortion`,
@@ -846,7 +834,7 @@ export default {
                                         anchor: `aborted fetus`,
                                         wiki: `Abortion`,
                                     },
-                                    `going to heaven for the living child's likelihood of going to hell.`,
+                                    `going to heaven for the likelihood of a living child going to hell.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -878,7 +866,7 @@ export default {
                         `to wear it like a`,
                         {
                             anchor: `tragic mask.`,
-                            todo: true,
+                            phrasingTodo: true,
                             card: {
                                 description: [
                                     `At some point, I learned to see`,
@@ -904,15 +892,14 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `When I wrote this three-part counterpoint for mandolins and banjo, I wasn't aware that they would drown out the vocals by occupying the same register. I solved the problem by`,
+                        `Originally, this three-part counterpoint for mandolins and banjo kept drowning out the vocals because they shared the same register. I solved the problem by`,
                         {
                             anchor: `pitch shifting`,
                             wiki: `Pitch_shift`,
                         },
-                        `some tracks up an octave, giving them a metallic sheen that suits the ambience of a rainy evening.`,
+                        `the instruments up an octave. This also gave the sound a metallic sheen, which suits the ambience of a rain-soaked evening.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -936,7 +923,6 @@ export default {
                         `in`,
                         {
                             anchor: `spreading mole`,
-                            todo: true,
                             card: {
                                 description: [
                                     `My ash was smudged by day's end, resembling the kind of large, amorphous mole that can develop into`,
@@ -970,7 +956,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `While fleshing out the lyrics in this chorus, I noticed that a handful of words in the first stanza are`,
@@ -978,7 +963,7 @@ export default {
                             anchor: `homophones`,
                             wiki: `Homophone`,
                         },
-                        `of their counterparts in the second, like "mourn" with "morn," and "born" with "borne." So I challenged myself to make the two stanzas match phonetically wherever possible. This later gave me the idea for doublespeaker rhyme.`,
+                        `of their counterparts in the second. Like "mourn" with "morn," and "born" with "borne." So I challenged myself to make the two stanzas match phonetically when possible, which later gave me the idea for doublespeaker rhyme.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
