@@ -287,7 +287,6 @@ export default {
                         `I purge, with a`,
                         {
                             anchor: `dirge she'd deride,`,
-                            phrasingTodo: true,
                             cards: [
                                 {
                                     description: [
@@ -300,7 +299,7 @@ export default {
                                     ],
                                 },
                                 {
-                                    description: `Up to that point, I had only devoted serious thought to writing melodies and chord progressions. It had never occurred to me that anyone could listen to music differently. But Catherine appreciated music for its lyrics, and because mine were of the nonsensical variety, she wasn't impressed by any of the songs I wrote.`,
+                                    description: `For me up to that point, songwriting was just a matter of coming up with melodies and chords. But Catherine appreciated music for its lyrics, and because my lyrics were mostly nonsensical, she wasn't impressed by any of my songs that I played for her.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -330,16 +329,15 @@ export default {
                         `Oh Catherine,`,
                         {
                             anchor: `pressed for an opinion,`,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `Wanting to write the kind of song that could tug on Catherine's heartstrings, I would sometimes ask her for honest feedback.`,
+                                    description: `I would sometimes ask Catherine for honest feedback of my lyrics, hoping that one day I could write a song to tug on her heartstrings.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
                                 },
                                 {
-                                    description: `In this imagined scenario, I picture myself asking Catherine for a critique of the lyrics in this very song.`,
+                                    description: `In this scenario, I imagine myself asking Catherine for a critique of the very lyrics I'm writing for this song.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -354,9 +352,8 @@ export default {
                     lyric: [
                         {
                             anchor: `"My, what wit, man,"`,
-                            todo: true,
                             card: {
-                                description: `I imagine Catherine responding, in typical droll fashion, with a pun that both salutes my attempts at being witty and also compliments my effort to channel "Walt Whitman."`,
+                                description: `I picture Catherine responding in her usual droll manner, with a pun that salutes my effort to channel "Walt Whitman."`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -365,15 +362,14 @@ export default {
                         },
                         {
                             anchor: `putting down her Joyce,`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `Her compliment is less than sincere, however, since referencing a poet studied by middle schoolers is hardly an artistic feat. And so, having being made to put down the Joyce novel she was reading, Catherine amuses herself by figuratively putting`,
+                                    `Her compliment is less than sincere, however, since referencing a poet studied by middle schoolers is hardly an impressive feat. And so, having being made to put down the Joyce novel she was reading, Catherine amuses herself by figuratively putting`,
                                     {
                                         isItalic: true,
                                         lyric: `me`,
                                     },
-                                    `down, for naively thinking that I can be the James Joyce of song lyricists.`,
+                                    `down, for naively thinking that I can be the James Joyce of lyricists.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -389,15 +385,14 @@ export default {
                         `with`,
                         {
                             anchor: `"Joyce" oblivious`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `Of course, not knowing that I couldn't be the next Joyce is precisely why I dared to try. And so the idea began to congeal in my head that I could do for rock music what`,
+                                    `Of course, not knowing I couldn't be the next Joyce is precisely why I dared to try. And so the idea began to congeal in my head that I could do for rock music what`,
                                     {
                                         isItalic: true,
                                         lyric: `Ulysses`,
                                     },
-                                    `had done for English literature.`,
+                                    `had once done for English literature.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -411,7 +406,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `Maqam is distinguished by its use of`,
@@ -424,12 +418,12 @@ export default {
                             anchor: `chromatic scale.`,
                             wiki: `Chromatic_scale`,
                         },
-                        `Since I didn't own any Arabic instruments, I sounded the quarter tones by detuning each instrument and then`,
+                        `For each quarter-tone melody, I scored parts for two separate takes, the second one with the instrument detuned by a quarter step. I then recorded each take and`,
                         {
                             anchor: `overdubbed`,
                             wiki: `Overdubbing`,
                         },
-                        `them in as a separate take.`,
+                        `them into a single track.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -459,7 +453,7 @@ export default {
                             anchor: `poised with brains?`,
                             todo: true,
                             card: {
-                                description: `Catherine didn't value the artistic strengths I had always counted on to cover up my weaknesses. Which made me realize that if I hoped to be good at keeping someone, then I simply couldn't have any weaknesses.`,
+                                description: `Catherine didn't value the artistic strengths I'd always counted on to make up for my many weaknesses. Which made me realize that if I were ever to be worth keeping one day, then I simply couldn't have any weaknesses.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
