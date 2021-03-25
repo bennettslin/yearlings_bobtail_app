@@ -28,14 +28,12 @@ export default {
     referenceDescription: `Banjo in anacrusis`,
     playerStartTime: 2107.996,
     mixStartTime: `0:01:01.40`,
-    todo: true,
-    overview: `My mood changed for the worse when I drank, leading friends to joke that I had a sinister alter ego. It wasn't far from the truth. I was souring on my relationship with Sita by this point, and being drunk provided both an escape and an excuse to act out. But I really didn't like myself during such moments. I missed being the hapless kid that I still was in my head, and knowing now how to get it right, I longed for a do-over, without the mess this time. And without Sita.`,
+    overview: `My mood changed for the worse when I drank, leading friends to joke that I had a sinister alter ego. It wasn't far from the truth. I was souring on my relationship with Sita by this point, and being drunk provided both an escape and an excuse to act out. But I really didn't like myself during such moments. I missed being the hapless kid I still was in my head. Knowing now how to get it right, I longed for a do-over, without the mess this time. And without Sita.`,
     lyricUnits: [
         {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `In`,
@@ -67,7 +65,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `Since I took the name of my drunken personality from James Joyce's`,
@@ -75,12 +72,12 @@ export default {
                             isItalic: true,
                             lyric: `Ulysses,`,
                         },
-                        `I went for the feel of an`,
+                        `I went with the feel of an`,
                         {
                             anchor: `Irish reel`,
                             wiki: `Reel_(dance)`,
                         },
-                        `here.`,
+                        `for this song.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -98,7 +95,7 @@ export default {
                     lyric: [
                         {
                             anchor: `Brushed her off`,
-                            todo: true,
+                            phrasingTodo: true,
                             card: {
                                 description: `As I began to withdraw from the relationship, Sita would reach out by groveling. And stung by my conscience, I would rush to comfort her. But as my patience wore thin over time, I would lash out in passive-aggressive ways, whereupon she would grovel even further. It became all we knew of how to speak for ourselves.`,
                                 dotKeys: {
@@ -115,7 +112,7 @@ export default {
                         `with your`,
                         {
                             anchor: `crew of chefs and thieves.`,
-                            todo: true,
+                            contentTodo: true,
                             cards: [
                                 {
                                     description: `During this time, I was staying with some crust punks who were friends of Ana's. Every so often, half of us would go out to shoplift groceries, which the other half would then cook into a meal for all to share. I was always in the thieving group.`,
