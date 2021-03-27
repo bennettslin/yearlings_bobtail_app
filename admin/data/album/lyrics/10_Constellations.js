@@ -36,14 +36,12 @@ export default {
     mixStartTime: `0:01:18.60`,
     playerReferenceTime: 1751.447,
     playerStartTime: 1751.191,
-    todo: true,
-    overview: `One night I went with my bassist Ana and her friends to explore the steam tunnels under UCLA while high on Robitussin. I got us to pretend we were Vikings and Mongols and other waves of human migration throughout world history. In hindsight, they were probably just humoring me. I wound up doing a lot of Robitussin that summer. It took a while for me to regain my grip on reality.`,
+    overview: `One night I went with my bassist Ana and her friends to explore the steam tunnels under UCLA while high on Robitussin. I got us to pretend we were Vikings and Mongols and other waves of human migration throughout world history. In hindsight, the others were probably just humoring me. I wound up doing a lot of Robitussin that summer. It took a while for me to regain my grip on reality.`,
     lyricUnits: [
         {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `I first tried Robitussin earlier that summer after reading of its narcotic effects in`,
@@ -58,12 +56,12 @@ export default {
                                 wiki: `The_Basketball_Diaries_(book)`,
                             },
                         },
-                        `It instantly became my drug of choice, since I didn't need to know any dealers. The best thing about a Robitussin trip is the`,
+                        `It quickly became my drug of choice, since I didn't need to go through any dealers. The best thing about a Robitussin trip is the`,
                         {
                             anchor: `closed-eye hallucinations,`,
                             wiki: `Closed-eye_hallucination`,
                         },
-                        `which are vivid images that seem to be projected onto the backdrop of your eyelids. If they ever get too intense, you simply open your eyes, and they instantly vanish. At the time, I called them "constellations."`,
+                        `which are vivid images projected onto the backdrop of your eyelids. If they get too intense, you simply open your eyes, and they vanish. At the time, I called them "constellations."`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -96,10 +94,9 @@ export default {
                     lyric: [
                         {
                             anchor: `reverends, paused`,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `We tread with "reverence" through the UCLA campus. Since I am the experienced Robitussin user of the group, the others follow my lead in treating it as a mystical journey.`,
+                                    description: `We tread with "reverence" through the UCLA campus. Since I'm the experienced Robitussin user of the group, the others follow my lead in treating it as a mystical journey.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true,
@@ -125,7 +122,6 @@ export default {
                         },
                         {
                             anchor: `stiff in tandem.`,
-                            todo: true,
                             card: {
                                 description: `Robitussin in its early stages will make your limbs feel stiff and mechanical. Having taken it an hour prior, we enjoy these effects and deliberately exaggerate them.`,
                                 dotKeys: {
@@ -141,7 +137,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Heavin' some, Ana`,
-                            todo: true,
                             card: {
                                 description: `"Heaving some, Ana whispers a low sigh." The others have just learned that when you first down a whole bottle of Robitussin, you'll likely want to retch. Within a moment, though, you'll feel your lungs shrivel away, and it's like you're peacefully breathing through gills underwater.`,
                                 dotKeys: {
@@ -153,10 +148,14 @@ export default {
                         },
                         {
                             anchor: `whispures a low sigh, bein'…`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `"Heaven's manna was pure psilocybin." At the time, I was intrigued by the role played by psychedelic drugs in world history. Though textbooks naturally failed to provide this information, it was readily available in the alternative bookstores around Berkeley. One theory is that`,
+                                    `"Heaven's manna was pure psilocybin." During this time, I was intrigued by the role played by`,
+                                    {
+                                        anchor: `psychedelic drugs`,
+                                        wiki: `Psychedelic_drug`,
+                                    },
+                                    `throughout history. Though textbooks naturally failed to provide this information, it was readily available in the alternative bookstores around Berkeley. One theory is that`,
                                     {
                                         anchor: `manna`,
                                         wiki: `Manna`,
@@ -182,8 +181,21 @@ export default {
                         `of`,
                         {
                             anchor: `de exempt,`,
-                            todo: true,
                             cards: [
+                                {
+                                    description: [
+                                        `The Israelites, being of "the" exempt, were spared the`,
+                                        {
+                                            anchor: `plagues`,
+                                            wiki: `Plagues_of_Egypt`,
+                                        },
+                                        `that God visited upon Egypt. And with our stomachs full of Robitussin, we are spared any chance of having flu symptoms.`,
+                                    ],
+                                    dotKeys: {
+                                        [NARRATIVE]: true,
+                                        [PUN]: true,
+                                    },
+                                },
                                 {
                                     description: [
                                         {
@@ -196,25 +208,12 @@ export default {
                                         [PUN]: true,
                                     },
                                 },
-                                {
-                                    description: [
-                                        `The Israelites, being of "the" exempt, were spared the`,
-                                        {
-                                            anchor: `plagues`,
-                                            wiki: `Plagues_of_Egypt`,
-                                        },
-                                        `that God visited upon Egypt. And with stomachs full of Robitussin, we were spared any chance of showing flu symptoms.`,
-                                    ],
-                                    dotKeys: {
-                                        [OBSERVATION]: true,
-                                        [PUN]: true,
-                                    },
-                                },
                             ],
                         },
                         {
                             anchor: `exit us`,
-                            todo: true,
+                            // Should be about leaving our homes, not the drugstore.
+                            contentTodo: true,
                             card: {
                                 description: `As the Book of "Exodus" recounts how the Israelites found manna during their trek out of Egypt, so too do we leave the drugstore with spiritual sustenance in hand.`,
                                 dotKeys: {
@@ -227,27 +226,7 @@ export default {
                         {
                             anchor: `Viking den…`,
                             properNoun: true,
-                            todo: true,
                             cards: [
-                                {
-                                    description: [
-                                        `Ana's friends Howie and Tomer were seasoned drug users but had never taken Robitussin before. Given that it is sold`,
-                                        {
-                                            anchor: `over the counter,`,
-                                            wiki: `Over-the-counter_drug`,
-                                        },
-                                        `they had assumed its effects would be weaker than those of prescribed painkillers like`,
-                                        {
-                                            anchor: `"Vicodin."`,
-                                            wiki: `Hydrocodone/paracetamol`,
-                                        },
-                                        `That night proved them very wrong.`,
-                                    ],
-                                    dotKeys: {
-                                        [BACKSTORY]: true,
-                                        [PUN]: true,
-                                    },
-                                },
                                 {
                                     description: [
                                         `The`,
@@ -260,10 +239,29 @@ export default {
                                             anchor: `Scandinavia`,
                                             wiki: `Scandinavia`,
                                         },
-                                        `beginning in the 8th century. Like them, we have left the comfort of our dens to explore new vistas.`,
+                                        `beginning in the 8th century. Like them, we've left the comfort of our dens to explore new vistas.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
+                                    },
+                                },
+                                {
+                                    description: [
+                                        `Ana's friends Howie and Tomer were seasoned drug users but had never taken Robitussin before. Given that it's sold`,
+                                        {
+                                            anchor: `over the counter,`,
+                                            wiki: `Over-the-counter_drug`,
+                                        },
+                                        `they'd assumed its effects would be weaker than those of prescribed painkillers like`,
+                                        {
+                                            anchor: `"Vicodin."`,
+                                            wiki: `Hydrocodone/paracetamol`,
+                                        },
+                                        `That night proved them very wrong.`,
+                                    ],
+                                    dotKeys: {
+                                        [BACKSTORY]: true,
+                                        [PUN]: true,
                                     },
                                 },
                             ],
@@ -273,7 +271,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `To be honest, I never got past the first fifty pages of`,
@@ -281,7 +278,7 @@ export default {
                             isItalic: true,
                             lyric: `Finnegans Wake.`,
                         },
-                        `Still, I took note of how Joyce used literary puns to create multiple layers of meaning within a dreamlike setting. It seemed like the perfect device for conveying a Robitussin trip, in which worlds of meaning build up and then fade within the briefest of moments, and everything feels at once epic and unreal.`,
+                        `Still, I took note of how Joyce used literary puns to create multiple layers of meaning within a dreamlike setting. It seemed like the perfect device to convey a Robitussin trip, during which worlds of meaning build up and fade within the briefest of moments, and everything feels at once epic and unreal.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -302,11 +299,10 @@ export default {
                         {
                             anchor: `Walkyriens:`,
                             properNoun: true,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
-                                        `Flashback to earlier that night. We have arrived at a`,
+                                        `Flashback to earlier that night, when we've arrived at a`,
                                         {
                                             anchor: `"Walgreens"`,
                                             wiki: `Walgreens`,
@@ -343,7 +339,6 @@ export default {
                             // NOTE: I changed from 'Walhall.'
                             anchor: `Wal-hall o'`,
                             properNoun: true,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -359,7 +354,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `The Walgreens aisles might be referred to as "Wal-halls," as they are stocked with generic versions of brand-name drugs, each with the prefix "Wal" in its name: Wal-Dryl, Wal-Phed… and so forth.`,
+                                    description: `The Walgreens aisles might be referred to as "Wal-halls," as they're stocked with generic versions of brand-name drugs, each with the prefix "Wal" in its name: Wal-Dryl, Wal-Phed… and so forth.`,
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                     },
@@ -368,7 +363,6 @@ export default {
                         },
                         {
                             anchor: `mead-Tussin!`,
-                            todo: true,
                             card: {
                                 description: [
                                     {
@@ -390,15 +384,14 @@ export default {
                     lyric: [
                         {
                             anchor: `Quouffs uppraissed,`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `Not all bottles of Robitussin will get you high. The ones to avoid are those that contain`,
+                                    `Not all bottles of Robitussin will get you high. The ones to avoid are those containing`,
                                     {
                                         anchor: `guaifenesin,`,
                                         wiki: `Guaifenesin`,
                                     },
-                                    `which reduces congestion. So we "upraise" our "quaffs" to "appraise" them, looking specifically for the medicinal property of keeping "coughs suppressed."`,
+                                    `which is an expectorant. So we "upraise" our "quaffs" to "appraise" them, looking specifically for the medicinal property of keeping "coughs suppressed."`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -409,8 +402,14 @@ export default {
                         `this`,
                         {
                             anchor: `boundless Kalevalley ends.`,
-                            todo: true,
                             cards: [
+                                {
+                                    description: `The San Fernando Valley, which I hated in my youth, is the quintessential "Cali valley." The days before I hightailed it out of that sprawling wasteland were painfully endless. On this summer break back home, however, the magic of Robitussin renders escape instantaneous.`,
+                                    dotKeys: {
+                                        [NARRATIVE]: true,
+                                        [PUN]: true,
+                                    },
+                                },
                                 {
                                     description: [
                                         `The`,
@@ -428,13 +427,6 @@ export default {
                                         [PUN]: true,
                                     },
                                 },
-                                {
-                                    description: `The San Fernando Valley, which I hated in my youth, is the quintessential "Cali valley." The days before I hightailed it out of there were painfully endless. On this summer break back home, however, my newfound independence combines with the magic of Robitussin to render escape instantaneous.`,
-                                    dotKeys: {
-                                        [OBSERVATION]: true,
-                                        [PUN]: true,
-                                    },
-                                },
                             ],
                         },
                     ],
@@ -444,28 +436,10 @@ export default {
                     lyric: [
                         `We ride as`,
                         {
-                            anchor: `Finnugreec tongue`,
+                            // NOTE: I changed from "Finnugreec tongue."
+                            anchor: `Finnugreec-tongue`,
                             properNoun: true,
-                            todo: true,
                             cards: [
-                                {
-                                    description: [
-                                        `The`,
-                                        {
-                                            anchor: `Finnish`,
-                                            wiki: `Finnish_language`,
-                                        },
-                                        `language belongs to the`,
-                                        {
-                                            anchor: `"Finno-Ugric"`,
-                                            wiki: `Finno-Ugric_languages`,
-                                        },
-                                        `family.`,
-                                    ],
-                                    dotKeys: {
-                                        [PUN]: true,
-                                    },
-                                },
                                 {
                                     description: [
                                         `The licorice taste of Robitussin, which lingers on our tongues, is reminiscent of the spice`,
@@ -475,7 +449,24 @@ export default {
                                         },
                                     ],
                                     dotKeys: {
-                                        [OBSERVATION]: true,
+                                        [NARRATIVE]: true,
+                                        [PUN]: true,
+                                    },
+                                },
+                                {
+                                    description: [
+                                        {
+                                            anchor: `Finnish`,
+                                            wiki: `Finnish_language`,
+                                        },
+                                        `belongs to the`,
+                                        {
+                                            anchor: `"Finno-Ugric"`,
+                                            wiki: `Finno-Ugric_languages`,
+                                        },
+                                        `language family.`,
+                                    ],
+                                    dotKeys: {
                                         [PUN]: true,
                                     },
                                 },
@@ -484,8 +475,14 @@ export default {
                         {
                             anchor: `Lapps are highmen.`,
                             properNoun: true,
-                            todo: true,
                             cards: [
+                                {
+                                    description: `We are literally "high men," and since the others are trying Robitussin for the first time, it also "laps our hymen."`,
+                                    dotKeys: {
+                                        [NARRATIVE]: true,
+                                        [PUN]: true,
+                                    },
+                                },
                                 {
                                     description: [
                                         `The`,
@@ -495,13 +492,6 @@ export default {
                                         },
                                         `are a Finno-Ugric people indigenous to the northern regions of Scandinavia.`,
                                     ],
-                                },
-                                {
-                                    description: `We are literally "high men," and since the others are trying Robitussin for the first time, it also "laps our hymen."`,
-                                    dotKeys: {
-                                        [OBSERVATION]: true,
-                                        [PUN]: true,
-                                    },
                                 },
                             ],
                         },
@@ -520,10 +510,9 @@ export default {
                         {
                             anchor: `Makeyars mygrate,`,
                             properNoun: true,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `Cut back to the present scene. Howie and Tomer promise to "make yours my grate," as they share their knowledge of the hidden grates that lead down to the steam tunnels.`,
+                                    description: `Cut back to the present scene. Howie and Tomer promise to "make yours my grate," as they share their knowledge of the hidden grates that lead down to the UCLA steam tunnels.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true,
@@ -541,7 +530,7 @@ export default {
                                             anchor: `Ural Mountains`,
                                             wiki: `Ural_Mountains`,
                                         },
-                                        `and established the state of`,
+                                        `and established the nation of`,
                                         {
                                             anchor: `Hungary.`,
                                             wiki: `Hungary`,
@@ -556,7 +545,6 @@ export default {
                         `from`,
                         {
                             anchor: `among ol'`,
-                            todo: true,
                             card: {
                                 description: [
                                     `The Magyars share genetic ancestry with the`,
@@ -573,8 +561,14 @@ export default {
                         },
                         {
                             anchor: `psealed off drains.`,
-                            todo: true,
                             cards: [
+                                {
+                                    description: `The entrance to the steam tunnels is hidden "among old, sealed-off drains."`,
+                                    dotKeys: {
+                                        [NARRATIVE]: true,
+                                        [PUN]: true,
+                                    },
+                                },
                                 {
                                     description: [
                                         `Back in the day, the Robitussin we took also contained`,
@@ -582,7 +576,7 @@ export default {
                                             anchor: `"pseudoephedrine,"`,
                                             wiki: `Pseudoephedrine`,
                                         },
-                                        `a nasal decongestant. Because it is the main ingredient used to make`,
+                                        `a nasal decongestant. Because this is the main ingredient used to make`,
                                         {
                                             anchor: `crystal meth,`,
                                             wiki: `Methamphetamine`,
@@ -590,13 +584,6 @@ export default {
                                         `however, pseudoephedrine is no longer available over the counter.`,
                                     ],
                                     dotKeys: {
-                                        [PUN]: true,
-                                    },
-                                },
-                                {
-                                    description: `The entrance to the steam tunnels is hidden "among old, sealed-off drains."`,
-                                    dotKeys: {
-                                        [NARRATIVE]: true,
                                         [PUN]: true,
                                     },
                                 },

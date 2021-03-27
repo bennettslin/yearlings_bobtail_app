@@ -230,7 +230,14 @@ export default {
                             anchor: `music cred`,
                             todo: true,
                             card: {
-                                description: `I'd always detected a whiff of disdain from the Berkeley record store clerks who rang up my purchases. With my quest for self-betterment, I overcame my feelings of intimidation and began to ask them for recommended listening.`,
+                                description: [
+                                    `I'd always detected a whiff of disdain from the`,
+                                    {
+                                        anchor: `Berkeley`,
+                                        wiki: `Berkeley,_California`,
+                                    },
+                                    `record store clerks who rang up my purchases. With my quest for self-betterment, I overcame my feelings of intimidation and began to ask them for recommended listening.`,
+                                ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
