@@ -150,6 +150,8 @@ export default {
                         `if you would`,
                         {
                             anchor: `opt for bed not street.`,
+                            // To avoid having to work to pay rent.
+                            contentTodo: true,
                             card: {
                                 description: `To save money after my lease ended, I would alternate between spending the night with Sita and crashing in the punk house basement. This gave me the regular comfort of Sita's bed, while also ensuring she never held too much leverage over me.`,
                                 dotKeys: {
