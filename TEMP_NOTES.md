@@ -20,6 +20,7 @@
 * Be smarter about memo.
 
 # Annotation edit TODO:
+* Mention being a religious studies major.
 * Willy sparkles?
 * Carpenters thing?
 * Golden Cord Bungalow Bill?
