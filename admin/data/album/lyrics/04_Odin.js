@@ -36,7 +36,8 @@ export default {
     playerReferenceTime: 559.438,
     playerStartTime: 555.277,
     phrasingTodo: true,
-    overview: `Taiwan showed me how differently I would have turned out had my parents not immigrated to America. Yet I was still worlds away from what Sasha needed me to be. Life seemed as infinitely fluid as it was immovably fixed, and I wasn't sure which extreme terrified me more. Our house cat Odin died of old age later that summer, just as I was working out my spiritual beliefs. And yet, the eternal life promised by faith seemed no less dreadful to me than the finality of death.`,
+    // Talk of permanence of death
+    overview: `Taiwan showed me how differently I would have turned out had my parents not immigrated to America. Yet I was still worlds away from what Sasha needed me to be. Life seemed as infinitely fluid as it was immovably fixed, and I wasn't sure which extreme terrified me more. Our house cat Odin died of old age later that summer, just as I was working out my spiritual beliefs. And yet, the eternal life promised by faith seemed no less awful to me than the finality of death.`,
     isDoublespeaker: true,
     lyricUnits: [
         {
@@ -81,7 +82,6 @@ export default {
                     lyricRight: [
                         {
                             anchor: `By lot,`,
-                            phrasingTodo: true,
                             cards: [
                                 {
                                     description: `Lots are drawn by chance to decide an outcome, and it was my lot not to be born a Jew.`,
@@ -110,7 +110,7 @@ export default {
                                             anchor: `his wife`,
                                             wiki: `Lot's_wife`,
                                         },
-                                        `looked back, she was turned into a pillar of salt. This story is understood by some to suggest that the faithful shall not cohabit with the fallen.`,
+                                        `looked back, she was turned into a pillar of salt. This story can be interpreted as a cautionary tale warning the faithful not to cohabit with the fallen.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -128,7 +128,7 @@ export default {
                             anchor: `hiding place of retreat`,
                             phrasingTodo: true,
                             card: {
-                                description: `The "asleep" voice in the doublespeaker set narrates a dream that confusedly melds the familiar setting of Los Angeles with the foreign sights of Taiwan. The dream begins with me coming out from the dusty crawl space beneath my bed at home. Having been absorbed in my drawings, I didn't realize I'd stayed down there well into nighttime.`,
+                                description: `The "asleep" voice in the doublespeaker set narrates a dream that confusedly melds the familiar setting of Los Angeles with the foreign sights of Taiwan. The dream begins with me crawling out from the dusty space beneath my bed at home. Having been absorbed in my drawings, I didn't realize I'd stayed down there well into nighttime.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -211,10 +211,9 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                phrasingTodo: true,
                 card: {
                     description: [
-                        `I wanted this song to capture the disorienting cycle of days spent living among the foreign and nights spent dreaming of the familiar. So I used a literary technique I invented called doublespeaker rhyme, in which two sets of lyrics that rhyme syllable for syllable are sung in harmony, one in each audio speaker. It's the musical version of a cinematic`,
+                        `For this song, I wanted to capture the disorienting cycle between days spent living among the foreign and nights spent dreaming of the familiar. So I used a literary technique I invented called doublespeaker rhyme, in which two sets of lyrics that rhyme syllable for syllable are panned hard into separate speakers in the recording. It's the audio version of a cinematic`,
                         {
                             anchor: `split screen.`,
                             wiki: `Split_screen_(video_production)`,
@@ -251,7 +250,7 @@ export default {
                                         anchor: `pastels`,
                                         wiki: `Pastel`,
                                     },
-                                    `as a gift. They were more powdery than crayons, and so they ran out quickly. By the end of our trip, I was left with the least used colors. Similarly, being in Taiwan forced me to work on underused skills, like speaking Taiwanese.`,
+                                    `as a gift. They were more powdery than crayons, and so they ran out quickly. By the end of our trip, I had to make do with the least used colors. Similarly, being in Taiwan forced me to work on underused skills, like speaking Taiwanese.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -266,7 +265,7 @@ export default {
                             anchor: `ruminate on these riddles…`,
                             phrasingTodo: true,
                             card: {
-                                description: `The "awake" voice in the doublespeaker set echoes my thoughts as I lie on the floor mat, unable to sleep. While the vastness of the universe terrifies me, it also suggests unlimited possibilities. Yet somehow, being with Sasha is not one of them.`,
+                                description: `The "awake" voice in the doublespeaker set echoes my thoughts as I lie on the floor mat, unable to sleep. Though the vastness of the universe terrifies me, it also suggests unlimited possibilities. Yet somehow, being with Sasha is not one of them.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -308,8 +307,14 @@ export default {
                         `do`,
                         {
                             anchor: `sweet dream's ichors`,
-                            phrasingTodo: true,
                             cards: [
+                                {
+                                    description: `As a child, I dreaded sleep. The nightly ordeal of swapping out my reasoned thoughts for irrational dreams felt as burdensome and frightening as a blood transfusion. And yet, things always seemed better in the morning because of it.`,
+                                    dotKeys: {
+                                        [BACKSTORY]: true,
+                                        [OBSERVATION]: true,
+                                    },
+                                },
                                 {
                                     description: [
                                         `In Greek mythology,`,
@@ -319,13 +324,6 @@ export default {
                                         },
                                         `is the golden blood of the gods.`,
                                     ],
-                                },
-                                {
-                                    description: `As a child, I dreaded sleep. The nightly ordeal of swapping out my reasoned thoughts for irrational dreams felt as burdensome and frightening as a blood transfusion. And yet, things always seemed better in the morning because of it.`,
-                                    dotKeys: {
-                                        [BACKSTORY]: true,
-                                        [OBSERVATION]: true,
-                                    },
                                 },
                             ],
                         },
@@ -341,7 +339,7 @@ export default {
                             phrasingTodo: true,
                             card: {
                                 description: [
-                                    `My impression of Taiwanese buildings at the time is their heavy use of iron grates and stone slabs. Even ordinary living quarters had the feel of a mausoleum adorned with`,
+                                    `As far as my impression goes, Taiwanese buildings at the time made heavy use of iron grates and stone slabs. Even ordinary living quarters had the feel of a mausoleum adorned with`,
                                     {
                                         anchor: `alabaster`,
                                         wiki: `Alabaster`,
@@ -389,7 +387,7 @@ export default {
                             anchor: `crevice rays.`,
                             phrasingTodo: true,
                             card: {
-                                description: `I especially dreaded bedtime in Taiwan because the lack of ambient light kept my grandmother's house pitch black all through the night. If I woke to use the bathroom, I had to tiptoe with only a sliver of moonlight peeking in from underneath the door to guide me.`,
+                                description: `I especially dreaded bedtime in Taiwan because the lack of ambient light kept my grandmother's house pitch black all through the night. If I woke to use the bathroom, I had to tiptoe with only a sliver of moonlight peeking in from beneath the door to guide me.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -417,7 +415,7 @@ export default {
                                         anchor: `metamorphosis`,
                                         wiki: `Metamorphosis`,
                                     },
-                                    `feels as harrowing as it sounds, when breathing becomes the new drowning with no explanation or warning. Because that's what falling asleep seemed like to me.`,
+                                    `feels as harrowing as it sounds, where breathing becomes the new drowning with no explanation or warning. Because that's what falling asleep always seemed like to me.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -534,7 +532,7 @@ export default {
                                             anchor: `Israelite`,
                                             wiki: `Israelites`,
                                         },
-                                        `warriors scoured the plains after their victory and asked stragglers to pronounce the Hebrew word for a stream. Because the enemy tribe lacked the "sh" sound in their dialect, they would out themselves by pronouncing the word as "sibboleth," just as I do in the recording.`,
+                                        `warriors scoured the plains after their victory, demanding stragglers to pronounce the Hebrew word for a stream. Because the enemy tribe lacked the "sh" sound in their dialect, they would out themselves by pronouncing the word as "sibboleth," just as I do here in the recording.`,
                                     ],
                                 ],
                                 dotKeys: {
@@ -847,7 +845,7 @@ export default {
                         phrasingTodo: true,
                         card: {
                             description: [
-                                `Uncertain of whether I'm asleep or awake, I channel the ancient`,
+                                `Uncertain of whether I'm asleep or awake, I recall the musing of ancient`,
                                 {
                                     anchor: `Taoist`,
                                     wiki: `Taoism`,
@@ -857,7 +855,7 @@ export default {
                                     anchor: `Zhuangzi,`,
                                     wiki: `Zhuang_Zhou`,
                                 },
-                                `who once mused that he couldn't be sure if he was a man who dreamt he was a butterfly, or a butterfly dreaming he is a man.`,
+                                `who upon waking couldn't be sure if he was then a man dreaming he was a butterfly, or now a butterfly dreaming he is a man.`,
                             ],
                             dotKeys: {
                                 [NARRATIVE]: true,
@@ -1081,12 +1079,12 @@ export default {
                             phrasingTodo: true,
                             card: {
                                 description: [
-                                    `Standing on the ocean beach in my dream, I notice a steel whistle half buried in the sand, perhaps having been dropped by a`,
+                                    `Wandering the beach in my dream, I notice a steel whistle half buried in the sand, possibly dropped by a`,
                                     {
                                         anchor: `lifeguard`,
                                         wiki: `Lifeguard`,
                                     },
-                                    `earlier in the day. Its shrill cry once warned of danger, but now it lies forever silent. Which may be just as well, since some dangers come with no warning.`,
+                                    `earlier in the day. Its shrill cry, which once warned of danger, now lies forever silent. Perhaps this is to say that some dangers come with no warning.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1458,7 +1456,7 @@ export default {
                             // But as a child, I came to a slightly different conclusion. If my brother and I could be so alike in physical makeup yet so different in mental presence, then it made more sense to believe that no one has a soul.
                             phrasingTodo: true,
                             card: {
-                                description: `I just didn't understand why consciousness is even necessary. Yes, living creatures must fear death to ensure their survival. But why the need to do so consciously? Why can't they just fear it the way oil is said to fear water?`,
+                                description: `I just didn't understand why consciousness is even necessary. Sure, as living creatures, we need to fear death to ensure our survival. But why must we do so consciously? Why can't we just fear it the way oil is said to fear water?`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },

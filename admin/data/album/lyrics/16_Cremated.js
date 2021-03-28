@@ -570,7 +570,7 @@ export default {
                             anchor: `kissed off, she purges up.`,
                             phrasingTodo: true,
                             card: {
-                                description: `Upon bringing me to orgasm, Miriam sucks up the ejaculate before leaning over the car door to spit it out. But this act seems to convey a hidden message that the sperm carrying my defective genes must never be allowed to mingle with hers.`,
+                                description: `Upon bringing me to orgasm, Miriam sucks up the ejaculate before leaning over the car door to spit it out. But this act seems to carry a symbolic message, that the sperm carrying my defective genes must never be allowed to mingle with hers.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,

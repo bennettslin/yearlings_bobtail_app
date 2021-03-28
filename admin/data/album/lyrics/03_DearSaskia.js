@@ -137,7 +137,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: true,
                 card: {
-                    description: `I wanted the vocals to sound sickly here, and so I held off on recording them until I came down with an awful cold, which was guaranteed to happen at some point during the five years that I worked on this album.`,
+                    description: `I wanted the vocals to sound sickly here, so I held off on recording them until I came down with a cold, which was guaranteed to happen at some point during the five years I worked on this album.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },

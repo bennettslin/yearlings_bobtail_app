@@ -14,7 +14,7 @@ export default [
     // Needed.
     {
         taskName: `Finish annotation edits.`,
-        workedHours: 31,
+        workedHours: 41,
         neededHours: 100,
     },
 
