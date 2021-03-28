@@ -441,6 +441,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: true,
                 card: {
+                    // Power trio.
                     description: `As the Yearlings, we would perform this song at breakneck speed, but in this recording I moderated the tempo to make the lyrics intelligible. Even so, my drumming skills were still not up to par, so I recorded the drum tracks at a lower tape speed, which brought them to the proper tempo upon normal playback.`,
                     dotKeys: {
                         [SONGCRAFT]: true,

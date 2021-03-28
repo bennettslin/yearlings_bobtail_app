@@ -79,7 +79,7 @@ export default {
                     mixTime: null,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(string synthesizer)`,
+                        lyric: `(string synth)`,
                     },
                 },
             ],
@@ -817,7 +817,7 @@ export default {
                     mixTime: `0:54:11.25`,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(string synthesizer)`,
+                        lyric: `(string synth)`,
                     },
                 },
             ],
@@ -2067,7 +2067,7 @@ export default {
                     mixTime: `2:56:07.50`,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(arcade synthesizer)`,
+                        lyric: `(arcade synth)`,
                     },
                 },
             ],
