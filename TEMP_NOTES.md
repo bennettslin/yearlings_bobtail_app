@@ -1,6 +1,7 @@
 # Bug
 
 # TODO
+* Hawaiian ornament
 * Clarify logState labels?
 * Don't make menu move.
 * Audio shortcuts?
