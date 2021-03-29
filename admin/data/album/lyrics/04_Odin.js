@@ -37,7 +37,7 @@ export default {
     playerStartTime: 555.277,
     phrasingTodo: true,
     // Talk of permanence of death
-    overview: `Taiwan showed me how differently I would have turned out had my parents not immigrated to America. Yet I was still worlds away from what Sasha needed me to be. Life seemed as infinitely fluid as it was immovably fixed, and I wasn't sure which extreme terrified me more. Our house cat Odin died of old age later that summer, just as I was working out my spiritual beliefs. And yet, the eternal life promised by faith seemed no less awful to me than the finality of death.`,
+    overview: `Taiwan showed me how differently I would have turned out had my parents not immigrated to America. Yet I was still worlds away from what Sasha needed me to be. Life seemed as infinitely fluid as it was immovably fixed, and I wasn't sure which extreme terrified me more. Our house cat Odin died of old age later that summer, just as I was seeking spiritual answers to my fear of death. And yet, the eternal life promised by faith seemed no less awful than the finality of death.`,
     isDoublespeaker: true,
     lyricUnits: [
         {
@@ -156,7 +156,7 @@ export default {
                                         anchor: `kosher.`,
                                         wiki: `Kashrut`,
                                     },
-                                    `In Sasha's world, certain everyday foods weren't meant to be eaten. So it could just as well be inferred that certain boys in her everyday life weren't meant for dating.`,
+                                    `In Sasha's world, certain everyday foods weren't meant to be eaten. So it could be inferred that certain boys in her everyday life also weren't meant to be dated.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -183,7 +183,6 @@ export default {
                     lyricRight: [
                         {
                             anchor: `Indifferent galaxies`,
-                            phrasingTodo: true,
                             card: {
                                 description: [
                                     `The`,
@@ -285,13 +284,11 @@ export default {
                         `The`,
                         {
                             anchor: `house settled in sheets,`,
-                            phrasingTodo: true,
                             card: {
-                                description: `The rest of the house is asleep, snug under their blankets. Of course, sheets are also used to cover the deceased.`,
+                                description: `Everyone else in the house is asleep, snug under their blankets. Of course, sheets are also used to cover the deceased.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
-                                    [PUN]: true,
                                 },
                             },
                         },
@@ -528,7 +525,7 @@ export default {
                                             anchor: `Israelite`,
                                             wiki: `Israelites`,
                                         },
-                                        `warriors scoured the plains after their victory, demanding stragglers to pronounce the Hebrew word for a stream. Because the enemy tribe lacked the "sh" sound in their dialect, they would out themselves by pronouncing the word as "sibboleth," just as I do here in the recording.`,
+                                        `warriors scoured the plains after their victory, asking stragglers to pronounce the Hebrew word for a stream. Because the enemy tribe lacked the "sh" sound in their dialect, they would out themselves by pronouncing the word as "sibboleth," just as I do here in the recording.`,
                                     ],
                                 ],
                                 dotKeys: {
@@ -638,7 +635,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 phrasingTodo: true,
                 card: {
-                    description: `While the two doublespeaker voices seem to proceed independently, each also plants subtle ideas along the path of the other, much as our conscious thoughts affect our dreams and vice versa. In this stanza, for example, the mention of a staircase by the "asleep" voice precedes the plummeting spoken of by the "awake" voice.`,
+                    description: `While the two doublespeaker voices seem to proceed independently, they also plant subtle ideas along each other's path, much as our conscious thoughts affect our dreams and vice versa. In this stanza, for example, the mention of a staircase by the "asleep" voice precedes the plummeting spoken of by the "awake" voice.`,
                     dotKeys: {
                         [OBSERVATION]: true,
                         [SONGCRAFT]: true,
@@ -852,7 +849,7 @@ export default {
                         phrasingTodo: true,
                         card: {
                             description: [
-                                `Uncertain of whether I'm asleep or awake, I recall the ancient`,
+                                `Uncertain of whether I'm asleep or awake, I recall the musings of ancient`,
                                 {
                                     anchor: `Taoist`,
                                     wiki: `Taoism`,
@@ -862,7 +859,7 @@ export default {
                                     anchor: `Zhuangzi.`,
                                     wiki: `Zhuang_Zhou`,
                                 },
-                                `Upon waking from a dream, Zhuangzi mused that he couldn't be sure if he was then a man dreaming he was a butterfly, or now a butterfly dreaming he is a man.`,
+                                `Upon waking from a dream, Zhuangzi couldn't be sure if he was then a man dreaming he was a butterfly, or now a butterfly dreaming he is a man.`,
                             ],
                             dotKeys: {
                                 [NARRATIVE]: true,

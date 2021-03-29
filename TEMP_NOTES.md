@@ -2,6 +2,8 @@
 
 # TODO
 * Hawaiian ornament
+* Beards on trolls
+* Potted plants in bedroom
 * Clarify logState labels?
 * Don't make menu move.
 * Audio shortcuts?
