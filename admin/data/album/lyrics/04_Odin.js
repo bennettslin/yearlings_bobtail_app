@@ -126,9 +126,8 @@ export default {
                     lyricLeft: [
                         {
                             anchor: `hiding place of retreat`,
-                            phrasingTodo: true,
                             card: {
-                                description: `The "asleep" voice in the doublespeaker set narrates a dream that confusedly melds the familiar setting of Los Angeles with the foreign sights of Taiwan. The dream begins with me crawling out from the dusty space beneath my bed at home. Having been absorbed in my drawings, I didn't realize I'd stayed down there well into nighttime.`,
+                                description: `The "asleep" voice in the doublespeaker set narrates a dream that confusedly melds the familiar setting of Los Angeles with the foreign sights of Taiwan. The dream begins with me crawling out from the dusty space beneath my bed at home. Having been absorbed in my drawings, I'd stayed down there well into nighttime.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -242,7 +241,6 @@ export default {
                         `you drew with`,
                         {
                             anchor: `crayons least whittled…`,
-                            phrasingTodo: true,
                             card: {
                                 description: [
                                     `When we landed in Taiwan, my aunt gave me a set of`,
@@ -250,7 +248,7 @@ export default {
                                         anchor: `pastels`,
                                         wiki: `Pastel`,
                                     },
-                                    `as a gift. They were more powdery than crayons, and so they ran out quickly. By the end of our trip, I had to make do with the least used colors. Similarly, being in Taiwan forced me to work on underused skills, like speaking Taiwanese.`,
+                                    `as a gift. They were more powdery than crayons and thus ran out quickly. By the end of our trip, I had to make do with the least used colors. Similarly, being in Taiwan kept me in a perpetual state of discomfort, as I was forced to rely on underused skills like speaking Taiwanese.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -336,10 +334,9 @@ export default {
                         `By the`,
                         {
                             anchor: `alabaster balustrade,`,
-                            phrasingTodo: true,
                             card: {
                                 description: [
-                                    `As far as my impression goes, Taiwanese buildings at the time made heavy use of iron grates and stone slabs. Even ordinary living quarters had the feel of a mausoleum adorned with`,
+                                    `Taiwanese buildings at the time made heavy use of iron bars and stone slabs, as far as my impression goes. Even ordinary living quarters had the feel of a mausoleum adorned with`,
                                     {
                                         anchor: `alabaster`,
                                         wiki: `Alabaster`,
@@ -361,10 +358,10 @@ export default {
                                 description: [
                                     `Since writing doublespeaker rhyme could be daunting, I would create random challenges for myself, such as mentioning each of the four elementals of`,
                                     {
-                                        anchor: `Paracelsus.`,
+                                        anchor: `Paracelsus,`,
                                         wiki: `Paracelsus`,
                                     },
-                                    `A 16th-century alchemist, Paracelsus believed that nature is made up of four elements, each personified by a mythical creature. The`,
+                                    `the 16th-century alchemist. Paracelsus believed that nature is made up of four elements, each personified by a mythical creature. The`,
                                     {
                                         anchor: `salamander`,
                                         wiki: `Salamanders_in_folklore_and_legend`,
@@ -387,7 +384,7 @@ export default {
                             anchor: `crevice rays.`,
                             phrasingTodo: true,
                             card: {
-                                description: `I especially dreaded bedtime in Taiwan because the lack of ambient light kept my grandmother's house pitch black all through the night. If I woke to use the bathroom, I had to tiptoe with only a sliver of moonlight peeking in from beneath the door to guide me.`,
+                                description: `The lack of ambient light kept my grandmother's house pitch black all through the night. When I woke to use the bathroom, I had to tiptoe with only a sliver of moonlight peeking in through the crack beneath the door to guide me.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -398,7 +395,6 @@ export default {
                         {
                             // TODO: Metamorphosis wormhole?
                             anchor: `trading breath's bliss`,
-                            phrasingTodo: true,
                             card: {
                                 description: [
                                     `Like most`,
@@ -415,7 +411,7 @@ export default {
                                         anchor: `metamorphosis`,
                                         wiki: `Metamorphosis`,
                                     },
-                                    `feels as harrowing as it sounds, where breathing becomes the new drowning with no explanation or warning. Because that's what falling asleep always seemed like to me.`,
+                                    `feels as harrowing as it sounds, when breathing becomes the new drowning with no explanation or warning. Because that's what falling asleep always seemed like to me.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -608,20 +604,31 @@ export default {
                         `still, but`,
                         {
                             anchor: `missed bat mitzvahs`,
-                            phrasingTodo: true,
-                            card: {
-                                description: [
-                                    `Being in Taiwan at the time, I was unable to attend Sasha's`,
-                                    {
-                                        anchor: `bat mitzvah`,
-                                        wiki: `Bar_and_Bat_Mitzvah`,
+                            cards: [
+                                {
+                                    description: [
+                                        `Being in Taiwan at the time, I was unable to attend Sasha's`,
+                                        {
+                                            anchor: `bat mitzvah`,
+                                            wiki: `Bar_and_Bat_Mitzvah`,
+                                        },
+                                        `party.`,
+                                    ],
+                                    dotKeys: {
+                                        [BACKSTORY]: true,
                                     },
-                                    `ceremony, a coming-of-age ritual for Jewish girls at twelve years of age.`,
-                                ],
-                                dotKeys: {
-                                    [BACKSTORY]: true,
                                 },
-                            },
+                                {
+                                    description: [
+                                        `The`,
+                                        {
+                                            anchor: `bat mitzvah`,
+                                            wiki: `Bar_and_Bat_Mitzvah`,
+                                        },
+                                        `is a coming-of-age ritual for Jewish girls who've reached twelve years of age.`,
+                                    ],
+                                },
+                            ],
                         },
                         `come racing back.`,
                     ],
@@ -631,7 +638,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 phrasingTodo: true,
                 card: {
-                    description: `While the two doublespeaker voices seem to proceed independently, each plants subtle ideas along the path of the other, much as our conscious thoughts affect our dreams and vice versa. In this stanza, for example, the mention of a staircase by the "asleep" voice precedes the plummeting spoken of by the "awake" voice.`,
+                    description: `While the two doublespeaker voices seem to proceed independently, each also plants subtle ideas along the path of the other, much as our conscious thoughts affect our dreams and vice versa. In this stanza, for example, the mention of a staircase by the "asleep" voice precedes the plummeting spoken of by the "awake" voice.`,
                     dotKeys: {
                         [OBSERVATION]: true,
                         [SONGCRAFT]: true,
@@ -845,17 +852,17 @@ export default {
                         phrasingTodo: true,
                         card: {
                             description: [
-                                `Uncertain of whether I'm asleep or awake, I recall the musing of ancient`,
+                                `Uncertain of whether I'm asleep or awake, I recall the ancient`,
                                 {
                                     anchor: `Taoist`,
                                     wiki: `Taoism`,
                                 },
                                 `philosopher`,
                                 {
-                                    anchor: `Zhuangzi,`,
+                                    anchor: `Zhuangzi.`,
                                     wiki: `Zhuang_Zhou`,
                                 },
-                                `who upon waking couldn't be sure if he was then a man dreaming he was a butterfly, or now a butterfly dreaming he is a man.`,
+                                `Upon waking from a dream, Zhuangzi mused that he couldn't be sure if he was then a man dreaming he was a butterfly, or now a butterfly dreaming he is a man.`,
                             ],
                             dotKeys: {
                                 [NARRATIVE]: true,
@@ -1079,12 +1086,12 @@ export default {
                             phrasingTodo: true,
                             card: {
                                 description: [
-                                    `Wandering the beach in my dream, I notice a steel whistle half buried in the sand, possibly dropped by a`,
+                                    `Wandering the beach, I notice a steel whistle half buried in the sand, possibly dropped by a`,
                                     {
                                         anchor: `lifeguard`,
                                         wiki: `Lifeguard`,
                                     },
-                                    `earlier in the day. Its shrill cry, which once warned of danger, now lies forever silent. Perhaps this is to say that some dangers come with no warning.`,
+                                    `earlier in the day. Its shrill cry, which once warned of danger, now lies forever silent. Perhaps my dream is telling me that some dangers come with no warning?`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1201,7 +1208,7 @@ export default {
                             // CONSIDER: Wormhole Foreshadow M?
                             phrasingTodo: true,
                             card: {
-                                description: `But also like cellophane, Sasha couldn't return warmth where none was present. If I couldn't be the better person in dealing with the bullies, then there came a point where she needed to keep her distance from me as well.`,
+                                description: `But also like cellophane, Sasha couldn't reflect warmth where none was present. If I couldn't be the better person in dealing with the bullies, then there came a point where she needed to keep her distance from me as well.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -1277,7 +1284,6 @@ export default {
                     },
                     lyricRight: {
                         anchor: `shivaree towards shivah seat`,
-                        phrasingTodo: true,
                         cards: [
                             {
                                 description: [
@@ -1285,7 +1291,7 @@ export default {
                                         anchor: `Shivaree`,
                                         wiki: `Charivari`,
                                     },
-                                    `is a European folk custom in which a raucous crowd serenades a newlywed couple. Meanwhile, sitting`,
+                                    `is a European folk custom in which a raucous crowd serenades a newlywed couple. And sitting`,
                                     {
                                         anchor: `shivah`,
                                         wiki: `Shiva_(Judaism)`,
@@ -1509,7 +1515,7 @@ export default {
                             anchor: `fetus force-fed,`,
                             phrasingTodo: true,
                             card: {
-                                description: `Most maddening of all was that no one has any say in being brought into this world. Given how distressing the certainty of death must always be, it seemed like there should be an option to just opt out of life to begin with.`,
+                                description: `Most maddening of all was that one has no say in being brought into this world. Given how distressing the certainty of death must always be, it seemed like there should be an option to opt out of life in the first place.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },

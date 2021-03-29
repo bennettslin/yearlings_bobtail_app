@@ -39,9 +39,8 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                phrasingTodo: true,
                 card: {
-                    description: `A childhood playmate once asked me if I knew what cremation was. I didn't but assumed it must be fun and tasty. Of course, the horrifying truth was revealed to me just a moment later. I thought this was a perfect metaphor for a song about the seemingly innocent day trip that ended with Miriam breaking up with me.`,
+                    description: `A childhood playmate once asked me if I knew what cremation was. I didn't but assumed it must be fun and tasty. Of course, the horrifying truth was revealed to me a moment later. I thought this was a perfect metaphor for a song about the seemingly innocent day trip that ended with Miriam breaking up with me.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [OBSERVATION]: true,
@@ -162,20 +161,19 @@ export default {
                     lyricRight: [
                         {
                             anchor: `Atavist`,
-                            phrasingTodo: true,
                             card: {
                                 description: [
-                                    `Given my brother's autism and my father's`,
+                                    `My mother once advised me not to have children, given my brother's autism and my father's`,
                                     {
-                                        anchor: `Asperger syndrome,`,
+                                        anchor: `Asperger syndrome.`,
                                         wiki: `Asperger_syndrome`,
                                     },
-                                    `my mother once advised me not to have children. After all, even if I didn't display autistic traits myself, they might`,
+                                    `After all, even if I didn't display similar traits myself, they might reappear generations later, like an`,
                                     {
-                                        anchor: `atavistically`,
+                                        anchor: `atavism.`,
                                         wiki: `Atavism`,
                                     },
-                                    `reappear a generation later. I often wondered if the women I dated had the same thought when judging my desirability as a long-term partner.`,
+                                    `I often wondered if the women I dated had this same thought when judging my desirability as a long-term partner.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -186,7 +184,6 @@ export default {
                         `stuck`,
                         {
                             anchor: `feet first,`,
-                            phrasingTodo: true,
                             card: {
                                 description: [
                                     `My brother was a`,
@@ -194,7 +191,7 @@ export default {
                                         anchor: `breech baby,`,
                                         wiki: `Breech_birth`,
                                     },
-                                    `having exited the womb bottom first rather than head first. This complicated the delivery, which my mother hypothesizes to have been the cause of his autism.`,
+                                    `having exited the womb bottom first rather than head first. This complicated the delivery, which my mother once hypothesized to be the cause of his autism.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -279,7 +276,7 @@ export default {
                                         anchor: `phoenix`,
                                         wiki: `Phoenix_(mythology)`,
                                     },
-                                    `is a bird reborn from its own ashes. Having broken up with Sita to date Miriam, I also await my triumphant rebirth. But with Miriam now seated on my lap as we make out, I'm suddenly overcome with self-doubt, and my "penis" rises limply, unable to reach a full erection.`,
+                                    `is a bird reborn from its own ashes. And having broken up with Sita to date Miriam, I also await my triumphant rebirth. But with Miriam seated on my lap now as we make out, I'm suddenly overcome with self-doubt, and my "penis" rises limply, unable to reach a full erection.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -570,7 +567,7 @@ export default {
                             anchor: `kissed off, she purges up.`,
                             phrasingTodo: true,
                             card: {
-                                description: `Upon bringing me to orgasm, Miriam sucks up the ejaculate before leaning over the car door to spit it out. But this act seems to carry a symbolic message, that the sperm carrying my defective genes must never be allowed to mingle with hers.`,
+                                description: `Upon bringing me to orgasm, Miriam sucks up the ejaculate and leans over the car door to spit it out. But this act seems to carry a symbolic message, that the sperm carrying my defective genes must never be allowed to mingle with hers.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -601,9 +598,8 @@ export default {
                         `his`,
                         {
                             anchor: `offscreen person dubs.`,
-                            phrasingTodo: true,
                             card: {
-                                description: `Of course, it wasn't always obvious that my drunken self was the dummy whose words and actions were being dictated by my sober half, rather than the other way around.`,
+                                description: `Of course, it wasn't always obvious that my drunken self was the dummy whose words and actions were dictated by his sober half, rather than the other way around.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -654,7 +650,7 @@ export default {
                                         anchor: `conferring knighthood.`,
                                         wiki: `Accolade`,
                                     },
-                                    `And so I imagine my drunken self, confused by the orders he has been given to confess to the crimes of my sober self, instead erratically patting him on the shoulder with a sharp sword.`,
+                                    `And so I imagine my drunken self, confused by the orders given to confess to the crimes of his sober half, instead erratically patting him on the shoulder with a sharp sword.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -873,7 +869,7 @@ export default {
                             phrasingTodo: true,
                             cards: [
                                 {
-                                    description: `To compound the insecurities I felt about being raised Buddhist, my complexion was also different from that of everyone else in Sasha's world. And so my inferiority complex failed to distinguish between carrying faulty genes, following a faulty faith, and being of a faulty race. They all seemed to derive from a single congenital defect at the core of my being.`,
+                                    description: `To further compound my insecurities in being raised Buddhist, my complexion was also different from that of everyone else in Sasha's world. And so my inferiority complex failed to distinguish between carrying faulty genes, following a faulty faith, and being of a faulty race. They all seemed to derive from a single congenital defect at the core of my being.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [OBSERVATION]: true,

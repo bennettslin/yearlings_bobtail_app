@@ -112,10 +112,16 @@ export default {
                         `with your`,
                         {
                             anchor: `crew of chefs and thieves.`,
-                            contentTodo: true,
                             cards: [
                                 {
-                                    description: `During this time, I was staying with some crust punks who were friends of Ana's. Every so often, half of us would go out to shoplift groceries, while the other half would stay home and cook whatever was brought back into a meal for all to share. I was always in the thieving half.`,
+                                    description: [
+                                        `During this time, I was staying with some`,
+                                        {
+                                            anchor: `crust punks`,
+                                            wiki: `Gutter_punk`,
+                                        },
+                                        `who were friends of Ana's. Every so often, half of us would go out to pilfer groceries, while the other half would cook whatever was brought back into a meal for all to share. I was always in the thieving group.`,
+                                    ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -153,7 +159,14 @@ export default {
                             // To avoid having to work to pay rent.
                             contentTodo: true,
                             card: {
-                                description: `To save money after my lease ended, I would alternate between spending the night with Sita and crashing in the punk house basement. This gave me the regular comfort of Sita's bed, while also ensuring she never held too much leverage over me.`,
+                                description: [
+                                    `To save money after my lease ended, I would alternate between spending the night with Sita and crashing in the`,
+                                    {
+                                        anchor: `punk house`,
+                                        wiki: `Punk_house`,
+                                    },
+                                    `basement. This gave me the regular comfort of Sita's bed, while also ensuring she never held too much leverage over me.`,
+                                ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
