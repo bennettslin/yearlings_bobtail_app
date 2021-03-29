@@ -1067,7 +1067,7 @@ export default {
                         {
                             anchor: `heavy fears,`,
                             card: {
-                                description: `One night after Willy's murder, I woke up screaming in fear of my mortality. My mother sat by my bedside to comfort me.`,
+                                description: `One night soon after Willy's murder, I woke up screaming in fear of my mortality. My mother sat by my bedside to comfort me.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

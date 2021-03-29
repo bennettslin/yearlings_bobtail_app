@@ -37,7 +37,7 @@ export default {
     playerStartTime: 555.277,
     phrasingTodo: true,
     // Talk of permanence of death
-    overview: `Taiwan showed me how differently I would have turned out had my parents not immigrated to America. Yet I was still worlds away from what Sasha needed me to be. Life seemed as infinitely fluid as it was immovably fixed, and I wasn't sure which extreme terrified me more. Our house cat Odin died of old age later that summer, just as I was seeking spiritual answers to my fear of death. And yet, the eternal life promised by faith seemed no less awful than the finality of death.`,
+    overview: `Taiwan showed me how differently I would have turned out had my parents not immigrated to America. Yet I was still worlds away from what Sasha needed me to be. Life seemed as infinitely fluid as it was immovably fixed, and I wasn't sure which extreme terrified me more. Our house cat Odin died of old age later that summer, just as I was seeking spiritual answers. And yet, the eternal life promised by faith seemed no less awful than the finality of death.`,
     isDoublespeaker: true,
     lyricUnits: [
         {
@@ -156,7 +156,7 @@ export default {
                                         anchor: `kosher.`,
                                         wiki: `Kashrut`,
                                     },
-                                    `In Sasha's world, certain everyday foods weren't meant to be eaten. So it could be inferred that certain boys in her everyday life also weren't meant to be dated.`,
+                                    `In Sasha's world, certain everyday foods weren't meant to be eaten. It could then be inferred that certain boys in her everyday life also weren't meant to be dated.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -262,7 +262,7 @@ export default {
                             anchor: `ruminate on these riddles…`,
                             phrasingTodo: true,
                             card: {
-                                description: `The "awake" voice in the doublespeaker set echoes my thoughts as I lie on the floor mat, unable to sleep. Though the vastness of the universe terrifies me, it also suggests unlimited possibilities. Yet somehow, being with Sasha is not one of them.`,
+                                description: `The "awake" voice in the doublespeaker set echoes my thoughts as I lie on the floor mat, unable to sleep. Though the vastness of the universe terrifies me, it also suggests unlimited possibilities. And yet somehow, being with Sasha is not one of them.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -350,18 +350,17 @@ export default {
                         `Like a`,
                         {
                             anchor: `salamander`,
-                            phrasingTodo: true,
                             card: {
                                 description: [
-                                    `Since writing doublespeaker rhyme could be daunting, I would create random challenges for myself, such as mentioning each of the four elementals of`,
+                                    `Writing doublespeaker rhyme was pretty daunting, so I would come up with random challenges for myself. One challenge for this song was to mention each of the four elementals of`,
                                     {
                                         anchor: `Paracelsus,`,
                                         wiki: `Paracelsus`,
                                     },
-                                    `the 16th-century alchemist. Paracelsus believed that nature is made up of four elements, each personified by a mythical creature. The`,
+                                    `the 16th-century alchemist who believed that nature is made up of four elements, each personified by a mythical creature. The`,
                                     {
                                         anchor: `salamander`,
-                                        wiki: `Salamanders_in_folklore_and_legend`,
+                                        wiki: `Salamanders_in_folklore`,
                                     },
                                     `is the elemental of fire.`,
                                 ],
@@ -381,7 +380,7 @@ export default {
                             anchor: `crevice rays.`,
                             phrasingTodo: true,
                             card: {
-                                description: `The lack of ambient light kept my grandmother's house pitch black all through the night. When I woke to use the bathroom, I had to tiptoe with only a sliver of moonlight peeking in through the crack beneath the door to guide me.`,
+                                description: `The lack of ambient light kept my grandmother's house pitch black all through the night. When I woke to use the bathroom, I would tiptoe with only a sliver of moonlight peeking in from beneath the door to guide me.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -604,12 +603,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `Being in Taiwan at the time, I was unable to attend Sasha's`,
-                                        {
-                                            anchor: `bat mitzvah`,
-                                            wiki: `Bar_and_Bat_Mitzvah`,
-                                        },
-                                        `party.`,
+                                        `Being in Taiwan at the time, I was unable to attend Sasha's bat mitzvah party.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -635,7 +629,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 phrasingTodo: true,
                 card: {
-                    description: `While the two doublespeaker voices seem to proceed independently, they also plant subtle ideas along each other's path, much as our conscious thoughts affect our dreams and vice versa. In this stanza, for example, the mention of a staircase by the "asleep" voice precedes the plummeting spoken of by the "awake" voice.`,
+                    description: `While the two doublespeaker voices proceed independently, they do plant subtle ideas along each other's path, much as our conscious thoughts affect our dreams and vice versa. In this stanza, for example, the mention of a staircase by the "asleep" voice precedes the plummeting spoken of by the "awake" voice.`,
                     dotKeys: {
                         [OBSERVATION]: true,
                         [SONGCRAFT]: true,
@@ -810,7 +804,6 @@ export default {
                         `would the`,
                         {
                             anchor: `rondel of her eye`,
-                            phrasingTodo: true,
                             card: {
                                 description: [
                                     `A`,
@@ -818,9 +811,9 @@ export default {
                                         anchor: `rondel`,
                                         wiki: `Rondel_(poem)`,
                                     },
-                                    `is a verse form that originated in French poetry, but it can also refer to anything round, such as a ball.`,
+                                    `is a verse form that originated in French poetry, but it can also refer to any round object, like a ball.`,
                                     {
-                                        anchor: `"Apple of one's eye"`,
+                                        anchor: `"The apple of one's eye"`,
                                         wiki: `Apple_of_my_eye`,
                                     },
                                     `is an`,
@@ -833,7 +826,7 @@ export default {
                                         anchor: `Biblical Hebrew`,
                                         wiki: `Biblical_Hebrew`,
                                     },
-                                    `idiom that more accurately translates to "ball of one's eye." My hope that I could be the object of Sasha's affection was based on a similar misreading.`,
+                                    `idiom that more accurately translates to "the ball of one's eye." My hope that I could be the object of Sasha's affection was based on a similar misreading.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -846,20 +839,19 @@ export default {
                     mixTime: `1:12:09.29`,
                     lyricLeft: {
                         anchor: `dream your whims instead?`,
-                        phrasingTodo: true,
                         card: {
                             description: [
-                                `Uncertain of whether I'm asleep or awake, I recall the musings of ancient`,
+                                `Uncertain of whether I'm asleep or awake, I recall the`,
                                 {
                                     anchor: `Taoist`,
                                     wiki: `Taoism`,
                                 },
                                 `philosopher`,
                                 {
-                                    anchor: `Zhuangzi.`,
+                                    anchor: `Zhuangzi,`,
                                     wiki: `Zhuang_Zhou`,
                                 },
-                                `Upon waking from a dream, Zhuangzi couldn't be sure if he was then a man dreaming he was a butterfly, or now a butterfly dreaming he is a man.`,
+                                `who couldn't be sure upon waking from a dream if he was then a man dreaming he was a butterfly, or now a butterfly dreaming he is a man.`,
                             ],
                             dotKeys: {
                                 [NARRATIVE]: true,
@@ -870,15 +862,14 @@ export default {
                         `be`,
                         {
                             anchor: `stored in this neck?`,
-                            phrasingTodo: true,
                             card: {
                                 description: [
-                                    `Due to another mistranslation, the phrase "man's swelling" in Biblical Hebrew entered the Western lexicon as`,
+                                    `Due to another misreading, the phrase "man's swelling" in Biblical Hebrew entered the Western lexicon as`,
                                     {
                                         anchor: `"Adam's apple."`,
                                         wiki: `Adam's_apple`,
                                     },
-                                    `And so an apocryphal tale was born that when`,
+                                    `And so an apocryphal tale began that when`,
                                     {
                                         anchor: `Adam`,
                                         wiki: `Adam`,
@@ -1263,7 +1254,7 @@ export default {
                             {
                                 // CONSIDER: Wormhole Kyon for shank?
                                 description: [
-                                    `To wander a prison yard is to heed the constant danger of getting`,
+                                    `To wander a prison yard is to be in constant danger of getting`,
                                     {
                                         anchor: 'shivved,',
                                         wiki: `Shiv_(weapon)`,
@@ -1405,22 +1396,22 @@ export default {
                             phrasingTodo: true,
                             card: {
                                 description: [
-                                    `As a child, I experienced`,
+                                    `As a child, I suffered from`,
                                     {
                                         anchor: `night terrors`,
                                         wiki: `Night_terror`,
                                     },
-                                    `related to my fear of death. Whenever I woke up screaming, my mother would comfort me with the promise of`,
+                                    `related to my fear of death. My mother would try to comfort me with the promise of`,
                                     {
-                                        anchor: `reincarnation.`,
+                                        anchor: `reincarnation,`,
                                         wiki: `Reincarnation`,
                                     },
-                                    `But this confused me, since the end goal of Buddhism is`,
+                                    `which just confused me further, since the end goal of Buddhism is to`,
                                     {
-                                        anchor: `nirvana,`,
-                                        wiki: `Nirvana_(Buddhism)`,
+                                        isEmphasis: true,
+                                        lyric: `escape`,
                                     },
-                                    `when the soul is annihilated and released from its cycle of rebirth. So being reborn again and again, but only up until my last life, just seemed like aging and dying on a grander scale.`,
+                                    `this cycle of rebirth. Being reborn again and again, but only up until my last life, was just aging and dying on a grander scale.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -1440,7 +1431,7 @@ export default {
                         {
                             anchor: `holed up hostage`,
                             card: {
-                                description: `And yet the thought of being stuck with a soul forever, an inescapable fate promised by the faiths of my classmates, seemed every bit as dreadful.`,
+                                description: `And yet the thought of being stuck with a soul forever, an inescapable fate promised by the faiths of my classmates, seemed no less dreadful.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -1471,7 +1462,14 @@ export default {
                             // This needs to be more about me wanting to be able to be stupid and still just know the correct spiritual path.
                             contentTodo: true,
                             card: {
-                                description: `Neither heaven nor nirvana sounded all that pleasant, and yet they were the best that centuries of humanity could dream up. It seemed to me that if a true spiritual reward existed out there, its allure should be so self-evident that wanting to strive for it would be a no-brainer.`,
+                                description: [
+                                    `Neither heaven nor`,
+                                    {
+                                        anchor: `nirvana`,
+                                        wiki: `Nirvana`,
+                                    },
+                                    `sounded all that pleasant, and yet they were the best that centuries of humanity could dream up. It seemed to me that if a true spiritual reward existed out there, its allure should be so self-evident that wanting to strive for it would be a no-brainer.`,
+                                ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
