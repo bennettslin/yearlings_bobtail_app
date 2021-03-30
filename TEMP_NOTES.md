@@ -38,6 +38,7 @@
 * When to use "that."
 * When to use "you" versus "one."
 * When to use "help" without "to."
+* "I would" into "I'd." "I'd be" works better, any others?
 * When to use commas.
 * When to use contractions.
 

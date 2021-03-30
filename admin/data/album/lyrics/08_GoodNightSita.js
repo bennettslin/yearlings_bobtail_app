@@ -702,7 +702,7 @@ export default {
                         {
                             anchor: `breeze through our parts`,
                             card: {
-                                description: `Any time I made a witty remark that got a good response, I would be sure to use it again on future dates, like an actor reprising a role. This also lessened the sting of rejection, since the less I needed to prepare, the less invested I felt in any one particular date.`,
+                                description: `Any time I made a witty remark that got a good response, I'd be sure to use it again on future dates, like an actor reprising a role. This also lessened the sting of rejection, since the less I needed to prepare, the less invested I felt in any one particular date.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -903,7 +903,7 @@ export default {
                             phrasingTodo: true,
                             card: {
                                 description: [
-                                    `Of course, if I were never given an opening to take these optimal actions, then each date would end with me going right back to the beginning of my flowchart. And I would be doomed to spend my life cycling through an`,
+                                    `Of course, if I were never given an opening to take these optimal actions, then each date would end with me going right back to the beginning of my flowchart. And I'd be doomed to spend my life cycling through an`,
                                     {
                                         anchor: `infinite loop`,
                                         wiki: `Infinite_loop`,

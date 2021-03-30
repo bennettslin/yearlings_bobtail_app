@@ -25,16 +25,14 @@ export default {
     referenceDescription: `Spanish guitar in measure 1`,
     playerStartTime: 1131.214,
     mixStartTime: `0:02:12.00`,
-    todo: true,
-    overview: `After the breakup with Catherine, I vowed to spend the next five years shaping myself into the ideal romantic prospect. I started attending local shows, and by year five, I had cobbled together my own band, the Yearlings. I kept running into a fellow scenester named Mara, and I soon grew infatuated. But Mara ended up going out with my drummer Jacob, which made band practice awkward.`,
+    overview: `After the breakup with Catherine, I vowed to spend the next five years shaping myself into the ideal romantic prospect. I started attending local shows and eventually cobbled together my own band, the Yearlings. I kept running into a fellow scenester named Mara and soon grew infatuated. But Mara ended up going out with my drummer Jacob, which made band practice awkward.`,
     lyricUnits: [
         {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
-                    description: `To avoid mentioning Mara by name, I entitled this song "M," which I planned to explain by packing the lyrics with words that start with the letter M. Deep down, I probably knew I wasn't fooling anyone.`,
+                    description: `To avoid mentioning Mara by name, I came up with the song title "M," which I planned to explain by packing the lyrics with words that start with the letter M. I probably wasn't fooling anyone.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                     },
@@ -61,7 +59,6 @@ export default {
                     lyricCentre: {
                         anchor: `Maravijaya…`,
                         properNoun: true,
-                        todo: true,
                         card: {
                             description: [
                                 {
@@ -81,12 +78,12 @@ export default {
                                     anchor: `Buddha`,
                                     wiki: `Gautama_Buddha`,
                                 },
-                                `as he fended off temptation from the demon`,
+                                `as he fends off temptation from the demon`,
                                 {
                                     anchor: `Mara,`,
                                     wiki: `Mara_(demon)`,
                                 },
-                                `who personifies fear and death. Like the Buddha, I had to summon otherworldly reserves of self-denial to get through band practice after Jacob and Mara started dating.`,
+                                `who personifies death. Like the Buddha, I had to summon otherworldly reserves of self-denial to get through band practice after Jacob and Mara started dating.`,
                             ],
                             dotKeys: {
                                 [OBSERVATION]: true,
@@ -97,9 +94,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
-                    description: `This song is one of two on this album that was originally performed by the Yearlings. At the time, I kept its meaning a secret by disguising Mara's name in various puns. In this recording, of course, I exaggerated my enunciations to make the puns obvious.`,
+                    description: `This song is one of two on this album that was originally performed by the Yearlings. At the time, I kept its meaning a secret by disguising Mara's name in various puns. In this recording, my enunciations are exaggerated to make the puns obvious.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGCRAFT]: true,
@@ -118,9 +114,8 @@ export default {
                         `I was a lad bent on`,
                         {
                             anchor: `learning the talents`,
-                            todo: true,
                             card: {
-                                description: `It's not that I'd done anything wrong to cause the breakup with Catherine. I just didn't have all that much to offer. So it seemed illogical to keep trying the same approach, as if one day I should see a dramatically different result. To secure my future chances with women, what I needed was to take time off and build up a surplus of attractive traits. So I started with the ones that Catherine valued most.`,
+                                description: `It's not that I'd done anything wrong to cause the breakup with Catherine. I just didn't have much to offer. So it seemed illogical to keep trying the same approach, as if one day I should see a dramatically different result. To secure my future chances with women, what I needed was to take time off and build up a surplus of attractive traits. So I started with the ones that Catherine valued most.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -138,7 +133,6 @@ export default {
                         `Bit my`,
                         {
                             anchor: `sadness with patience,`,
-                            todo: true,
                             card: {
                                 description: `I'd spent my formative years as a child channeling my misery into various art projects, so this was all familiar terrain for me. Building yourself up into a desirable person, after all, is really just the ultimate art project.`,
                                 dotKeys: {
@@ -158,7 +152,7 @@ export default {
                         `in`,
                         {
                             anchor: `five years`,
-                            todo: true,
+                            phrasingTodo: true,
                             card: {
                                 description: [
                                     `The`,
@@ -166,7 +160,7 @@ export default {
                                         anchor: `five-year plans`,
                                         wiki: `Five-year_plans_for_the_national_economy_of_the_Soviet_Union`,
                                     },
-                                    `of the Soviet Union were centrally organized mandates for rapid economic development. Five years thus seemed like the optimal time frame for my own plan for rapid character growth.`,
+                                    `of the Soviet Union were centrally organized mandates for rapid economic development. Five years thus seemed like the optimal time frame for my own plan to enact rapid character growth.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -194,9 +188,8 @@ export default {
                         `to mold me into a`,
                         {
                             anchor: `mystery mensch.`,
-                            todo: true,
                             card: {
-                                description: `There was an obvious lesson to draw from the smattering of women I had somehow managed to attract up to this point in my life. All of them had been taken in by my appearance as an artsy loner, only to be turned off after finding that nothing of greater substance lay beneath. So my mission was to take this mistaken assumption that already existed and simply turn it into a correct one.`,
+                                description: `There was an obvious lesson to draw from the smattering of women I'd somehow managed to attract up to this point in my life. All of them had been taken in by my appearance as an artsy loner, only to be turned off after finding that nothing of greater substance lay beneath. So my mission was to take this mistaken assumption that already existed and simply turn it into a correct one.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -208,7 +201,7 @@ export default {
                     mixTime: `1:06:02.05`,
                     lyric: {
                         anchor: `No minutiae left unmastered,`,
-                        todo: true,
+                        phrasingTodo: true,
                         card: {
                             description: [
                                 `Though the main goal was to be well versed in all the important subjects, I derived the most satisfaction from being able to display some random skill with seeming nonchalance. So I made sure to set aside time for purely fanciful pursuits, like learning to solve the`,
@@ -228,7 +221,7 @@ export default {
                     lyric: [
                         {
                             anchor: `music cred`,
-                            todo: true,
+                            phrasingTodo: true,
                             card: {
                                 description: [
                                     `I'd always detected a whiff of disdain from the`,
@@ -246,7 +239,6 @@ export default {
                         `with`,
                         {
                             anchor: `mindful manners`,
-                            todo: true,
                             card: {
                                 description: `I also decided to stop using swear words. I figured it would be a definite win with any woman who didn't curse, while all others would find its quaintness charming.`,
                                 dotKeys: {
@@ -262,9 +254,8 @@ export default {
                     lyric: [
                         {
                             anchor: `Once I metamorphose,`,
-                            todo: true,
                             card: {
-                                description: `In other words, upon completion of my metamorphosis, it would then be the case that once I "met a Mara, for" certain I was to impress her.`,
+                                description: `Upon completion of my metamorphosis, once I "met a Mara, for" certain I was to impress her.`,
                                 dotKeys: {
                                     [PUN]: true,
                                 },
@@ -276,9 +267,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
-                    description: `I quickly abandoned my original plan to pack the lyrics with M words after this stanza proved how unfeasible an entire song written in this manner would be.`,
+                    description: `I quickly abandoned my original plan to pack the lyrics with M words, after this stanza proved how unfeasible an entire song written in this manner would be.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
@@ -295,7 +285,7 @@ export default {
                     lyric: [
                         {
                             anchor: `Year five,`,
-                            todo: true,
+                            phrasingTodo: true,
                             card: {
                                 description: [
                                     `The Soviet Union's`,
@@ -303,7 +293,7 @@ export default {
                                         anchor: `first five-year plan`,
                                         wiki: `First_five-year_plan`,
                                     },
-                                    `was also its most brutal, as the disruptive shock of forcibly industrializing an agrarian society led to widespread famine and death. Similarly, given how far behind I was starting out and how much ground I needed to cover, it was naive to think that my own five-year plan for accelerated growth could be free of unintended effects.`,
+                                    `was also its most brutal, as the disruptive shock of forcibly industrializing an agrarian society led to widespread famine and death. Similarly, given how far behind I was starting out and how much ground I needed to cover, it was naive to think my own five-year plan for accelerated growth would be free of unintended side effects.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -319,10 +309,9 @@ export default {
                         `spent her`,
                         {
                             anchor: `wishes on a friend,`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `Toward the end of my five-year plan, the Yearlings were regularly playing local shows. I was thrilled when I first spotted Mara in the audience, thinking that all my hard work putting this band together was about to pay off. But it was Jacob who caught her eye. I felt like the`,
+                                    `Toward the end of my five-year plan, the Yearlings were regularly playing local shows. I was thrilled when I first spotted Mara in the audience, thinking my hard work putting this band together was about to pay off. But it was Jacob who caught her eye. I felt like the`,
                                     {
                                         anchor: `bottled genie`,
                                         wiki: `Jinn`,
@@ -343,9 +332,8 @@ export default {
                         `while forever I'll`,
                         {
                             anchor: `hold in peace`,
-                            todo: true,
                             card: {
-                                description: `So Jacob got together with Mara without any effort, while romance for me felt no less elusive than ever. I had to come to terms with the reality that my five-year plan was a total washout.`,
+                                description: `So Jacob got together with Mara without any effort, while romance for me felt no less elusive than ever. I had to come to terms with the realization that my five-year plan was a washout.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -360,15 +348,14 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `Back when I first started to play the banjo, I would strum the motions of Earl Scruggs's`,
+                        `Back when I was first learning to play the banjo, I would strum the motions of Earl Scruggs's`,
                         {
                             anchor: `three-finger roll`,
                             wiki: `Scruggs_style`,
                         },
-                        `on my kneecap day and night. From there, it naturally crossed over to my guitar fingerpicking technique, as can be heard on the Spanish guitar here.`,
+                        `on my kneecap throughout the day. From there, it crossed over to my guitar fingerpicking technique, as can be heard on the Spanish guitar here.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -389,7 +376,6 @@ export default {
                         `Hopes wrapped in`,
                         {
                             anchor: `marinaded confections,`,
-                            todo: true,
                             card: {
                                 description: `Or they were wrapped in my "Mara-needed confessions."`,
                                 dotKeys: {
@@ -406,7 +392,6 @@ export default {
                         `before`,
                         {
                             anchor: `tomorrow never sent.`,
-                            todo: true,
                             card: {
                                 description: `Or else, these hopes were never before sent "to Mara."`,
                                 dotKeys: {
@@ -421,9 +406,9 @@ export default {
                     lyric: [
                         {
                             anchor: `Signed off "love me"`,
-                            todo: true,
+                            phrasingTodo: true,
                             card: {
-                                description: `Back when emails were still treated like personal letters, I would sign off with "love Bennett," absent a comma after the valediction out of laziness. Catherine once joked that it sounded like a command spoken in desperation.`,
+                                description: `Back when we all still treated emails like personal letters, I would close with the valediction "love Bennett," absent a comma out of laziness. Catherine once joked that this sounded like a command spoken in desperation.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -439,10 +424,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
-                    // Power trio.
-                    description: `As the Yearlings, we would perform this song at breakneck speed, but in this recording I moderated the tempo to make the lyrics intelligible. Even so, my drumming skills were still not up to par, so I recorded the drum tracks at a lower tape speed, which brought them to the proper tempo upon normal playback.`,
+                    description: `As the Yearlings, we performed this song at breakneck speed, but in this recording I moderated the tempo to make the lyrics intelligible. Even so, my drumming skills still weren't up to par. So I recorded the drum tracks at a lower tape speed, which brought them to the proper tempo upon normal playback.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
@@ -459,9 +442,8 @@ export default {
                     lyric: [
                         {
                             anchor: `Morphined,`,
-                            todo: true,
                             card: {
-                                description: `Or I would be a "Mara fiend," which is a slightly different kind of addict.`,
+                                description: `Or I'd be a "Mara fiend," a slightly different kind of addict.`,
                                 dotKeys: {
                                     [PUN]: true,
                                 },
@@ -470,7 +452,6 @@ export default {
                         `I'll probably`,
                         {
                             anchor: `die pushing forty,`,
-                            todo: true,
                             card: {
                                 description: `Like the Soviets, I needed to take in stride the failures of my first five-year plan. Having banked on rapid character growth, I couldn't cut my losses now. I had nothing to my name other than what the next five-year plan might gain for me. Or failing that, the next one after. Yet five years is a huge chunk of lifetime to mete out all at once, and I only had so many decades remaining. The occasion became ripe to reflect on my mortality.`,
                                 dotKeys: {
@@ -487,9 +468,8 @@ export default {
                         `to a`,
                         {
                             anchor: `sand castle built by low tide.`,
-                            todo: true,
                             card: {
-                                description: `To compound the failures of my first five-year plan, it was clear that in the interim I had missed out on some crucial personal development that Jacob and others had naturally come by. And there was no guarantee another five-year plan wouldn't blindside me in the same manner. I feared a future as a stunted man-child, forever chasing ambitions at once both infantile and futile, like building castles out of sand.`,
+                                description: `To compound the failures of my first five-year plan, it was clear that in the interim I'd missed out on some crucial personal development that Jacob and others had naturally come by. And there was no guarantee another five-year plan wouldn't blindside me in the same manner. I feared a future as a stunted man-child, forever chasing ambitions both infantile and futile, like building castles out of sand.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -518,7 +498,6 @@ export default {
                         `a`,
                         {
                             anchor: `mariner's child`,
-                            todo: true,
                             card: {
                                 description: `Or else, I would die as a "Mara-nursed" child.`,
                                 dotKeys: {
@@ -544,7 +523,7 @@ export default {
                         {
                             anchor: `Moonie wedding,`,
                             properNoun: true,
-                            todo: true,
+                            phrasingTodo: true,
                             card: {
                                 description: [
                                     `The`,
@@ -562,7 +541,7 @@ export default {
                                         anchor: `proselytism.`,
                                         wiki: `Proselytism`,
                                     },
-                                    `It is perhaps best known for its`,
+                                    `It's perhaps best known for its`,
                                     {
                                         anchor: `mass weddings`,
                                         wiki: `Blessing_ceremony_of_the_Unification_Church`,
@@ -583,9 +562,9 @@ export default {
                         {
                             anchor: `"Made in America" signs.`,
                             properNoun: true,
-                            todo: true,
+                            phrasingTodo: true,
                             card: {
-                                description: `To promote cross-cultural harmony, the pairings in these mass weddings are often international by design. So my Moonie bride might possibly be a foreigner, one who was foolish enough to choose this venture solely for the chance to raise a family of native-born American children. Of course, I would be just as foolish to believe that my "maiden Mara co-signs" the marriage license in good faith.`,
+                                description: `To promote cross-cultural harmony, the pairings in these mass weddings are often international by design. So my Moonie bride would likely be a foreigner, one who was foolish enough to choose this venture solely for the chance to raise a family of native-born American children. Of course, I would be just as foolish to believe that my "maiden Mara co-signs" the marriage license in good faith.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [PUN]: true,
@@ -600,7 +579,7 @@ export default {
                         `In a`,
                         {
                             anchor: `time capsule`,
-                            todo: true,
+                            phrasingTodo: true,
                             card: {
                                 description: [
                                     `A`,
@@ -628,15 +607,15 @@ export default {
                     lyric: [
                         {
                             anchor: `lies that marionette`,
-                            todo: true,
                             card: {
+                                // CONSIDER: wormhole to Cremated puppet?
                                 description: [
                                     `There was a comfort in having all my priorities settled in advance by the five-year plan. Since I always knew with certainty the right course of action, I could undertake it with conviction. I was like a`,
                                     {
                                         anchor: `marionette`,
                                         wiki: `Marionette`,
                                     },
-                                    `being made to posture by the hidden hand of my naive younger self. Of course, I eagerly donned these strings only because I believed my younger self's lies, namely that "Mara you'll net" by doing so.`,
+                                    `being made to posture by the hidden hand of my younger self. Of course, I eagerly donned these strings only because I believed my younger self's lies, that a "Mara you'll net" by doing so.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -647,7 +626,7 @@ export default {
                         `in this`,
                         {
                             anchor: `heap of twisted twine.`,
-                            todo: true,
+                            phrasingTodo: true,
                             card: {
                                 description: `With no results to show after five years of diligent effort, I was paralyzed by doubt. There were no more actions I could confidently prescribe to better my circumstances. And so the puppet of my future self could only lie there motionless.`,
                                 dotKeys: {
@@ -674,9 +653,8 @@ export default {
                         `keeps me`,
                         {
                             anchor: `solely for a pet.`,
-                            todo: true,
                             card: {
-                                description: `After Mara started dating Jacob, she continued to interact with me in the same flirtatious manner, which made me realize that I had misread her intentions all along.`,
+                                description: `After Mara started dating Jacob, she continued to interact with me in the same flirtatious manner, which made me realize I'd misread her intentions all along.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -690,9 +668,8 @@ export default {
                         `With her "I do,"`,
                         {
                             anchor: `my life in marriage`,
-                            todo: true,
                             card: {
-                                description: `Or else, my life in "Mara." I thought I had chosen to leave out this particular pun, but the exaggerated pronunciation is distinctly there in the recording…`,
+                                description: `Or else, my life in "Mara." I thought I'd chosen to leave out this particular pun, but the exaggerated pronunciation is distinctly there in the recording…`,
                                 dotKeys: {
                                     [SONGCRAFT]: true,
                                     [PUN]: true,
@@ -707,7 +684,6 @@ export default {
                         `is choked down my`,
                         {
                             anchor: `no-hope chest.`,
-                            todo: true,
                             card: {
                                 description: [
                                     `Traditionally, a`,
@@ -742,7 +718,6 @@ export default {
                         `Her lispy kiss unlucky for this`,
                         {
                             anchor: `chimney sweep,`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -756,7 +731,7 @@ export default {
                                             anchor: `Victorian era,`,
                                             wiki: `Victorian_era`,
                                         },
-                                        `the children who cleared soot from chimneys were neglected orphans. Whatever fortunes they imparted to others, only a lifetime of ill health awaited for themselves. Likewise, having introduced Mara to Jacob, it was now on me to get on with my lonely life.`,
+                                        `the children who cleared soot from chimneys were neglected orphans. Whatever fortunes they imparted to others, only a lifetime of ill health awaited themselves. Likewise, having helped introduce Mara to Jacob, it was now on me to get on with my wretched life.`,
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
@@ -774,10 +749,10 @@ export default {
                     lyric: [
                         {
                             anchor: `indentures dumbed`,
-                            todo: true,
+                            phrasingTodo: true,
                             card: {
                                 description: [
-                                    `Chimney sweep apprentices were typically employed as`,
+                                    `Chimney sweeps were typically apprenticed as`,
                                     {
                                         anchor: `indentured servants`,
                                         wiki: `Indentured_servant`,
@@ -804,9 +779,9 @@ export default {
                         `I bade them`,
                         {
                             anchor: `to fare well,`,
-                            todo: true,
+                            phrasingTodo: true,
                             card: {
-                                description: `Jacob was my friend, of course, and I was happy that he had found Mara. But I also wasn't eager to stick around. So as I imagined them exchanging their vows of "I do," I silently offered a vow of my own to bid them "two farewell."`,
+                                description: `Jacob was my friend, and I was happy he'd found Mara. But I also wasn't eager to stick around. So as I imagined them exchanging vows of "I do," I silently offered a vow of my own to bid them "two farewell."`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -832,7 +807,7 @@ export default {
                         `But then I saw the`,
                         {
                             anchor: `world's a naked baby,`,
-                            todo: true,
+                            contentTodo: true,
                             card: {
                                 description: `At some point, I realized that the world does what it does simply because it is what it is. Nothing is hidden from view, and any situation can be understood by reading it closely, no differently than learning from a textbook.`,
                                 dotKeys: {
@@ -854,9 +829,8 @@ export default {
                     mixTime: `2:42:20.52`,
                     lyric: {
                         anchor: `to have a merry ol' laugh.`,
-                        todo: true,
                         card: {
-                            description: `Or to have a "Mara, you'll" laugh. After all, if the world is as guileless as a newborn, then it makes no sense to get upset when it unwittingly makes a mess of things.`,
+                            description: `Or to have a "Mara, you'll" laugh. After all, if the world is as guileless and unwitting as a newborn, then it makes no sense to get upset when it makes a mess of things.`,
                             dotKeys: {
                                 [OBSERVATION]: true,
                                 [PUN]: true,
@@ -878,7 +852,8 @@ export default {
                 },
                 {
                     mixTime: `2:48:06.66`,
-                    lyric: `to know: the rule for a girl`,
+                    // NOTE: I removed the colon.
+                    lyric: `to know the rule for a girl`,
                 },
                 {
                     mixTime: `2:50:20.52`,
@@ -886,9 +861,8 @@ export default {
                         `is that the`,
                         {
                             anchor: `boy who's to love her baby`,
-                            todo: true,
                             card: {
-                                description: `And if a woman's list of ideal traits in a man includes what kind of father he'll be to her child, then she's likely to judge him by how he interacts with the world at large.`,
+                                description: `And if a woman's list of ideal traits in a man includes what kind of father he'll be to her child, then she's likely to judge him by how he treats the world at large.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -912,7 +886,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Moral is`,
-                            todo: true,
                             card: {
                                 description: `Or else, while I'm "Mara-less."`,
                                 dotKeys: {
@@ -923,9 +896,8 @@ export default {
                         `it's up to me to`,
                         {
                             anchor: `be alert;`,
-                            todo: true,
                             card: {
-                                description: `In short, it was no mystery why the situation with Mara had transpired the way it had. I found this thought to be empowering, because it meant that the Maras of the world might still be attainable. It was just on me to figure out what they wanted. And once I knew, I could build myself up to be exactly that.`,
+                                description: `In short, it was no mystery why the situation with Mara had transpired the way it had. I found this thought to be empowering, because it meant that the Maras of the world were still attainable. It was just on me to figure out what they wanted. And once I knew, I could build myself up to be exactly that.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -945,9 +917,8 @@ export default {
                     mixTime: `3:02:11.28`,
                     lyric: {
                         anchor: `friends have to lie.`,
-                        todo: true,
                         card: {
-                            description: `But I couldn't rely on my friends for the truth. As dear as they all were to me, they each had their own agenda.`,
+                            description: `But I couldn't rely on my friends to tell me the truth. As dear as they were to me, they each had their own agenda.`,
                             dotKeys: {
                                 [OBSERVATION]: true,
                             },
@@ -983,10 +954,9 @@ export default {
                                 `'s words—`,
                             ],
                             properNoun: true,
-                            todo: true,
                             card: {
                                 description: [
-                                    `Recognizing that what I wanted was Mara or someone like Mara, and taking stock of where I needed to be to fulfill this wish, I decided to return to what I do best. I would hole up in emotional seclusion, this time to work on an ambitious magnum opus. My next five-year plan would have me score all the parts and play all the instruments on`,
+                                    `Recognizing that what I wanted was someone like Mara, and taking stock of what I needed to fulfill this wish, I decided to return to what I do best. I would hole up in emotional seclusion, this time to work on an ambitious magnum opus. My next five-year plan would have me write all the lyrics, score all the parts, and play all the instruments on`,
                                     {
                                         isItalic: true,
                                         lyric: `Bobtail,`,
@@ -1026,7 +996,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `My original plan was to take the puns one level further by recording this song in a`,
