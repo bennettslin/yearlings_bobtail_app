@@ -49,7 +49,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                phrasingTodo: true,
                 card: {
                     description: [
                         `In the final chapter of`,
@@ -156,7 +155,6 @@ export default {
                         `for this kid wearing no`,
                         {
                             anchor: `decoder ring`,
-                            phrasingTodo: true,
                             card: {
                                 description: [
                                     `A`,
@@ -164,7 +162,7 @@ export default {
                                         anchor: `secret decoder ring`,
                                         wiki: `Secret_decoder_ring`,
                                     },
-                                    `is a toy purchased through the mail that allows children to decipher encrypted messages. It would've been handy to wear one on a date, since I was constantly teasing out hidden meaning in the most basic exchanges.`,
+                                    `is a toy purchased through the mail that allows children to decipher encrypted messages. It would've been handy to wear one on a date, since I was constantly teasing out hidden meanings in the most basic exchanges.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -508,10 +506,9 @@ export default {
                         `in time are seen with`,
                         {
                             anchor: `a focus grown clear`,
-                            phrasingTodo: true,
                             card: {
                                 description: [
-                                    `A few hours into a date, my buzz would wear off enough for me to realize I'd just constructed an exaggerated backstory that could only topple under scrutiny, like a`,
+                                    `A few hours into a date, my buzz would wear off, and I would realize I'd just constructed an elaborate backstory that could only topple under scrutiny, like a`,
                                     {
                                         anchor: `totem pole`,
                                         wiki: `Totem_pole`,
@@ -640,7 +637,6 @@ export default {
                         `what this`,
                         {
                             anchor: `understudy sought`,
-                            phrasingTodo: true,
                             card: {
                                 description: [
                                     `Dating as a low-status male is like being an`,
@@ -648,7 +644,7 @@ export default {
                                         anchor: `understudy,`,
                                         wiki: `Understudy`,
                                     },
-                                    `a performer in theater who serves as a replacement on short notice. You undertake all the same preparation while likely seeing none of the action. And so I decided I needed to be proactive and branch out, like a freelancer without steady gigs advertising on a cork board.`,
+                                    `a performer in theater who can serve as a replacement on short notice. You undertake all the same preparation while likely seeing none of the action. So I decided I needed to be proactive and branch out, like a freelancer without a steady gig advertising on a cork board.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -682,7 +678,7 @@ export default {
                             anchor: `learn to shotgun`,
                             phrasingTodo: true,
                             card: {
-                                description: `In time I came to adopt the shotgun approach to dating, which involves hitting on anyone at any moment. It works simply because math works. Even if the success rate remains dismal, you're increasing the sample size, which improves your chances overall.`,
+                                description: `In time I came to adopt the shotgun approach to dating, which involves hitting on anyone at any moment. It works because the math is on your side. Even if your success rate remains dismal, you're increasing the sample size, which improves your chances overall.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -825,9 +821,8 @@ export default {
                         `hint of`,
                         {
                             anchor: `sampler cologne`,
-                            phrasingTodo: true,
                             card: {
-                                description: `Whenever I spotted a discarded men's magazine, I would tear out the scent strips from its cologne advertisements and add them to my pile. Then right before a date, I would rub a few strips on my neck and wrists.`,
+                                description: `Whenever I spotted a men's magazine that had been thrown out, I would tear out the scent strips from its cologne advertisements and add them to my pile. Then right before a date, I would rub a few strips on my neck and wrists.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -861,7 +856,7 @@ export default {
                                         anchor: `go-kart raceway.`,
                                         wiki: `Kart_racing`,
                                     },
-                                    `There was a twin go-kart available that presumably seated a parent and child side by side. I gestured as if inviting her to hop in. She laughed and declined.`,
+                                    `There was a twin go-kart available that presumably seated a parent and child side by side. In jest, I gestured for Sita to hop in. She laughed and declined.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -876,7 +871,6 @@ export default {
                         `as we wind an`,
                         {
                             anchor: `endless flowchart`,
-                            // Optimal response.
                             contentTodo: true,
                             card: {
                                 description: [
@@ -885,7 +879,7 @@ export default {
                                         anchor: `flowchart`,
                                         wiki: `Flowchart`,
                                     },
-                                    `of all the myriad ways a date might unfold. I could then take one optimal action after another to nudge the events of the evening toward my desired outcome.`,
+                                    `of all the myriad ways a date might unfold. I could then react with one optimal action after another to nudge the events of the evening toward my desired outcome.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -903,7 +897,7 @@ export default {
                             phrasingTodo: true,
                             card: {
                                 description: [
-                                    `Of course, if I were never given an opening to take these optimal actions, then each date would end with me going right back to the beginning of my flowchart. And I'd be doomed to spend my life cycling through an`,
+                                    `Of course, if I were never given an opening to take any optimal actions, then each date would end with me going right back to the beginning of my flowchart. And I'd be doomed to spend my life cycling through an`,
                                     {
                                         anchor: `infinite loop`,
                                         wiki: `Infinite_loop`,
@@ -1035,10 +1029,9 @@ export default {
                         `as the`,
                         {
                             anchor: `chirping crosswalks`,
-                            phrasingTodo: true,
                             card: {
                                 description: [
-                                    `Sita and I are still standing on the sidewalk outside her boarding house. In the distance, an electronic cuckoo informs the`,
+                                    `Sita and I are still standing on the sidewalk outside her boarding house. In the distance, an electronic bird call informs the`,
                                     {
                                         anchor: `visually impaired`,
                                         wiki: `Visual_impairment`,

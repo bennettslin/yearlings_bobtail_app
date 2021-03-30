@@ -38,6 +38,8 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                // Best place to mention religious studies major?
+                contentTodo: true,
                 card: {
                     description: [
                         {
@@ -49,7 +51,7 @@ export default {
                             anchor: `Hindi`,
                             wiki: `Hindi`,
                         },
-                        `word for "why." After Sita and I started dating, I studied Hindi for several years so as to converse with her family in their native language.`,
+                        `word for "why." After Sita and I started dating, I studied Hindi for several years. Both for course credit as a religious studies major, as well as to converse with her family in their native language.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -294,7 +296,7 @@ export default {
                         {
                             anchor: `all the points`,
                             card: {
-                                description: `After Sita's initial rejection of me, we spent a year getting to know each other as friends, during which time I still tried to impress her without appearing as such. One day I solved her friend's Rubik's Cube, a skill I'd picked up during my first five-year plan. While her friend raved, I humbly shrugged, as Sita sat and smiled. I'd become a puzzle for her to solve.`,
+                                description: `After Sita's initial rejection of me, we spent a year getting to know each other as friends, during which time I still tried to impress her without appearing as such. One day I solved her friend's Rubik's Cube, a skill I'd picked up during my first five-year plan. While her friend raved, I meekly shrugged, as Sita sat and smiled. I'd become a puzzle for her to solve.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -698,10 +700,9 @@ export default {
                         `your`,
                         {
                             anchor: `fear of never dying,`,
-                            // Mention religious studies here?
                             contentTodo: true,
                             card: {
-                                description: `Sita could relate to my fear of immortality. Growing up Hindu in America, she'd compared nirvana with heaven herself and found both to be lacking. Though she had no ready answers, she invited me to attend Hindu services with her. I learned all about Hinduism's sprawling pantheon of deities and avatars, which I found to be comforting. It just seemed like the more details there are to learn, the more room there is to get lost in the divine.`,
+                                description: `Sita could relate to my fear of immortality. Growing up Hindu in America, she'd compared nirvana with heaven herself and found both lacking. Though she had no ready answers, she invited me to attend Hindu services with her. I was attracted to Hinduism's sprawling pantheon of deities and avatars, which I found to be comforting. It just seemed like the more details there are to learn, the more room there is to get lost in the divine.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

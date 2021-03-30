@@ -1,6 +1,5 @@
 import {
     BACKSTORY,
-    NARRATIVE,
     OBSERVATION,
     PUN,
     SONGCRAFT,
@@ -117,7 +116,7 @@ export default {
                             card: {
                                 description: `It's not that I'd done anything wrong to cause the breakup with Catherine. I just didn't have much to offer. So it seemed illogical to keep trying the same approach, as if one day I should see a dramatically different result. To secure my future chances with women, what I needed was to take time off and build up a surplus of attractive traits. So I started with the ones that Catherine valued most.`,
                                 dotKeys: {
-                                    [NARRATIVE]: true,
+                                    [BACKSTORY]: true,
                                 },
                             },
                         },
@@ -152,7 +151,6 @@ export default {
                         `in`,
                         {
                             anchor: `five years`,
-                            phrasingTodo: true,
                             card: {
                                 description: [
                                     `The`,
@@ -160,10 +158,10 @@ export default {
                                         anchor: `five-year plans`,
                                         wiki: `Five-year_plans_for_the_national_economy_of_the_Soviet_Union`,
                                     },
-                                    `of the Soviet Union were centrally organized mandates for rapid economic development. Five years thus seemed like the optimal time frame for my own plan to enact rapid character growth.`,
+                                    `of the Soviet Union were centrally organized mandates for rapid economic development. Five years thus seemed like the optimal time frame to carry out my own plan for rapid character growth.`,
                                 ],
                                 dotKeys: {
-                                    [NARRATIVE]: true,
+                                    [BACKSTORY]: true,
                                 },
                             },
                         },
@@ -204,11 +202,12 @@ export default {
                         phrasingTodo: true,
                         card: {
                             description: [
-                                `Though the main goal was to be well versed in all the important subjects, I derived the most satisfaction from being able to display some random skill with seeming nonchalance. So I made sure to set aside time for purely fanciful pursuits, like learning to solve the`,
+                                `Though my main goal was to be well versed in all the important subjects, I derived the most satisfaction from being able to display some random skill with seeming nonchalance, like solving a`,
                                 {
                                     anchor: `Rubik's Cube.`,
                                     wiki: `Rubik's_Cube`,
                                 },
+                                `So I made sure to set aside time for purely fanciful pursuits.`,
                             ],
                             dotKeys: {
                                 [BACKSTORY]: true,
@@ -285,7 +284,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Year five,`,
-                            phrasingTodo: true,
                             card: {
                                 description: [
                                     `The Soviet Union's`,
@@ -293,7 +291,7 @@ export default {
                                         anchor: `first five-year plan`,
                                         wiki: `First_five-year_plan`,
                                     },
-                                    `was also its most brutal, as the disruptive shock of forcibly industrializing an agrarian society led to widespread famine and death. Similarly, given how far behind I was starting out and how much ground I needed to cover, it was naive to think my own five-year plan for accelerated growth would be free of unintended side effects.`,
+                                    `was also its most brutal, as the disruptive shock of forcibly industrializing an agrarian society led to widespread famine and death. Similarly, given how far behind I was starting out and how much ground I needed to cover, it was naive to think that my own five-year plan for accelerated growth could be free of unintended consequences.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -405,10 +403,10 @@ export default {
                     mixTime: `1:31:27.43`,
                     lyric: [
                         {
-                            anchor: `Signed off "love me"`,
-                            phrasingTodo: true,
+                            // NOTE: I changed to capitalised.
+                            anchor: `Signed off "Love me"`,
                             card: {
-                                description: `Back when we all still treated emails like personal letters, I would close with the valediction "love Bennett," absent a comma out of laziness. Catherine once joked that this sounded like a command spoken in desperation.`,
+                                description: `Back when we all still treated emails like personal letters, I would close with "Love Bennett," absent a comma out of laziness. Catherine once joked that this sounded like a command spoken in desperation.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -536,17 +534,17 @@ export default {
                                         anchor: `Sun Myung Moon`,
                                         wiki: `Sun_Myung_Moon`,
                                     },
-                                    `is widely seen as a cult due to its aggressive`,
+                                    `is known for both its aggressive`,
                                     {
-                                        anchor: `proselytism.`,
+                                        anchor: `proselytism`,
                                         wiki: `Proselytism`,
                                     },
-                                    `It's perhaps best known for its`,
+                                    `and its`,
                                     {
-                                        anchor: `mass weddings`,
+                                        anchor: `mass weddings,`,
                                         wiki: `Blessing_ceremony_of_the_Unification_Church`,
                                     },
-                                    `in which thousands of congregants, informally known as Moonies, are paired off with perfect strangers. I found the thought humorously enticing that I could simply accept a campus Moonie's pamphlet, and my long, hard struggle to find a romantic partner would be over in an instant.`,
+                                    `in which thousands of congregants are paired off with perfect strangers. Whenever I encountered a Moonie on campus, I would amuse myself with the thought that I could just accept their pamphlet and end my struggle to find a romantic partner in an instant.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -564,7 +562,7 @@ export default {
                             properNoun: true,
                             phrasingTodo: true,
                             card: {
-                                description: `To promote cross-cultural harmony, the pairings in these mass weddings are often international by design. So my Moonie bride would likely be a foreigner, one who was foolish enough to choose this venture solely for the chance to raise a family of native-born American children. Of course, I would be just as foolish to believe that my "maiden Mara co-signs" the marriage license in good faith.`,
+                                description: `To promote cross-cultural harmony, the pairings in these mass weddings are often international by design. So my Moonie bride would likely be a foreigner, one who possibly chose this venture solely for the chance to raise a family of native-born American children. I would thus be foolish to believe that my "maiden Mara co-signs" the marriage license in good faith.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [PUN]: true,
@@ -615,7 +613,7 @@ export default {
                                         anchor: `marionette`,
                                         wiki: `Marionette`,
                                     },
-                                    `being made to posture by the hidden hand of my younger self. Of course, I eagerly donned these strings only because I believed my younger self's lies, that a "Mara you'll net" by doing so.`,
+                                    `being made to posture by the hidden hand of my younger self. Of course, I eagerly donned these strings because I believed my younger self's lies, that a "Mara you'll net" by doing so.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -628,7 +626,7 @@ export default {
                             anchor: `heap of twisted twine.`,
                             phrasingTodo: true,
                             card: {
-                                description: `With no results to show after five years of diligent effort, I was paralyzed by doubt. There were no more actions I could confidently prescribe to better my circumstances. And so the puppet of my future self could only lie there motionless.`,
+                                description: `But with nothing to show for five years of diligent effort, I was now paralyzed by doubt. There were no more actions I could confidently prescribe to better my circumstances. And so the puppet of my future self could only lie there motionless.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
