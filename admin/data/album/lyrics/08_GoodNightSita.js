@@ -23,14 +23,12 @@ export default {
     referenceDescription: `"Good" in anacrusis`,
     playerStartTime: 1346.412,
     mixStartTime: `0:01:11.89`,
-    todo: true,
-    overview: `Sometime after dating Catherine and a while before meeting Mara, I tried to hit on a university student named Sita. Nothing came of the few dates that followed, however, and I quickly scurried away in disappointment.`,
+    overview: `Sometime after dating Catherine and a while before meeting Mara, I hit on a university student named Sita. Nothing came of the few dates that followed, however, and I quickly scurried away in disappointment.`,
     lyricUnits: [
         {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: `Sita and I have just walked back to her boarding house after a date. We stand in front of her gate, facing each other awkwardly. It's early in the evening, with the sky beginning to clear from a midday shower.`,
                     dotKeys: {
@@ -51,7 +49,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
+                phrasingTodo: true,
                 card: {
                     description: [
                         `In the final chapter of`,
@@ -64,7 +62,7 @@ export default {
                             anchor: `stream of consciousness.`,
                             wiki: `Stream_of_consciousness`,
                         },
-                        `I borrowed this literary technique to capture the torrent of unspoken thoughts that rushes through my head as Sita extends her good wishes before I depart.`,
+                        `I borrowed this literary technique to capture the torrent of unspoken thoughts rushing through my head as Sita extends her good wishes before I depart.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -84,9 +82,9 @@ export default {
                         `or`,
                         {
                             anchor: `should I should you`,
-                            todo: true,
+                            phrasingTodo: true,
                             card: {
-                                description: `At this point, I'm too flustered to form complete thoughts, let alone complete sentences.`,
+                                description: `At this point, I'm too flustered to form complete thoughts, let alone to speak in complete sentences.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -109,7 +107,7 @@ export default {
                         `love first`,
                         {
                             anchor: `without once knowing love`,
-                            todo: true,
+                            phrasingTodo: true,
                             card: {
                                 description: `The women I tried to date always preferred someone with past relationship experience, which seemed like a bizarre provision to me. If everyone thought this way, then no one could ever be in a relationship, just like no one could ever get a job if they always needed previous work experience.`,
                                 dotKeys: {
@@ -123,7 +121,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `My inability to process my thoughts into coherent speech is reflected in the herky-jerky,`,
@@ -131,7 +128,7 @@ export default {
                             anchor: `syncopated`,
                             wiki: `Syncopation`,
                         },
-                        `rhythm played by the drums.`,
+                        `rhythm played on the drums here.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -159,7 +156,7 @@ export default {
                         `for this kid wearing no`,
                         {
                             anchor: `decoder ring`,
-                            todo: true,
+                            phrasingTodo: true,
                             card: {
                                 description: [
                                     `A`,
@@ -167,7 +164,7 @@ export default {
                                         anchor: `secret decoder ring`,
                                         wiki: `Secret_decoder_ring`,
                                     },
-                                    `is a toy purchased through the mail that allows children to decipher encrypted messages. It would have been handy to wear one on a date, since I was constantly teasing out hidden meanings in the most basic exchanges.`,
+                                    `is a toy purchased through the mail that allows children to decipher encrypted messages. It would've been handy to wear one on a date, since I was constantly teasing out hidden meaning in the most basic exchanges.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -182,8 +179,13 @@ export default {
                         {
                             anchor: `Dutch courage`,
                             properNoun: true,
-                            todo: true,
                             cards: [
+                                {
+                                    description: `I had an older coworker who faithfully supplied me with cheap twelve-packs. Before every date, I would down a few cans.`,
+                                    dotKeys: {
+                                        [BACKSTORY]: true,
+                                    },
+                                },
                                 {
                                     description: [
                                         `Due to trade rivalries between the`,
@@ -201,22 +203,21 @@ export default {
                                             anchor: `Dutch courage`,
                                             wiki: `Dutch_courage`,
                                         },
-                                        `refers to misplaced confidence gained from alcohol.`,
+                                        `refers to misplaced confidence gained from drinking alcohol.`,
                                     ],
-                                },
-                                {
-                                    description: `I had an older coworker who faithfully plied me with cheap twelve-packs. Before every date, I would down a couple of cans.`,
-                                    dotKeys: {
-                                        [BACKSTORY]: true,
-                                    },
                                 },
                             ],
                         },
                         `wimped out to`,
                         {
                             anchor: `going Dutch`,
-                            todo: true,
                             cards: [
+                                {
+                                    description: `Sita would insist on getting separate checks, despite my repeated efforts to pay for the entire date. This made me feel inadequate and no better than a sponge, based on my understanding of dating etiquette.`,
+                                    dotKeys: {
+                                        [BACKSTORY]: true,
+                                    },
+                                },
                                 {
                                     description: [
                                         `To`,
@@ -227,12 +228,6 @@ export default {
                                         `means to split the cost of a meal. After all, stinginess was another intrinsic failing ascribed to the Dutch.`,
                                     ],
                                 },
-                                {
-                                    description: `Sita would insist on separate checks, despite my repeated efforts to pay for the entire date. This made me feel inadequate, and no better than a "sponge" based on my understanding of dating etiquette.`,
-                                    dotKeys: {
-                                        [BACKSTORY]: true,
-                                    },
-                                },
                             ],
                         },
                     ],
@@ -240,7 +235,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `I once had a supervisor who would blast`,
@@ -252,7 +246,7 @@ export default {
                             anchor: `"Don't Stop 'Til You Get Enough"`,
                             wiki: `Don't_Stop_'Til_You_Get_Enough`,
                         },
-                        `in the home stretch of every dishroom shift. Ever since, I've associated this song with the idea of psyching myself up to have fun when I'm not really having fun, so I borrowed its sound to convey where my head was at during those first few dates with Sita. Hence the dual palm-muted electric guitars, occasional rubbery bass trills, and ample cowbell.`,
+                        `in the home stretch of every dishroom shift. Ever since, I've associated this song with the idea of psyching myself up to have fun when I'm not really having fun. So I borrowed its sound to convey where my head was at during those first few dates with Sita. Hence the palm-muted electric guitars, rubbery bass trills, and ample cowbell.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -275,7 +269,6 @@ export default {
                     lyric: [
                         {
                             anchor: `nor a barnacle`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -283,12 +276,7 @@ export default {
                                             anchor: `"Nora Barnacle"`,
                                             wiki: `Nora_Barnacle`,
                                         },
-                                        `was the wife of James Joyce and his inspiration for the Molly Bloom character, whose interior monologue in`,
-                                        {
-                                            isItalic: true,
-                                            lyric: `Ulysses`,
-                                        },
-                                        `in turn served as my inspiration for this song.`,
+                                        `was the wife of James Joyce and his inspiration for the Molly Bloom character, whose interior monologue in turn served as an inspiration for this song.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -306,7 +294,7 @@ export default {
                     mixTime: `0:23:18.66`,
                     lyric: {
                         anchor: `swept in unchartable tides`,
-                        todo: true,
+                        phrasingTodo: true,
                         card: {
                             description: [
                                 `The constant peril of being steered in directions for which I'm ill-prepared has kept me on edge throughout this date. But nearby is a`,
@@ -323,7 +311,7 @@ export default {
                                     anchor: `barnacles,`,
                                     wiki: `Barnacle`,
                                 },
-                                `and other sea creatures that live to be carried by the current to unknown places. And they don't sweat it.`,
+                                `and other sea creatures that live to be carried away by the current to unknown places. And they don't sweat it.`,
                             ],
                             dotKeys: {
                                 [NARRATIVE]: true,
@@ -338,9 +326,8 @@ export default {
                         `they just`,
                         {
                             anchor: `always know to pry`,
-                            todo: true,
                             card: {
-                                description: `And no one else seems to sweat the risk of coming on too strong either. They just keep the conversation flowing by pressing their date for more and more details, the way a starfish will pry open an oyster resting on the seafloor.`,
+                                description: `And no one else seems to sweat the risk of coming on too strong either. They just keep the conversation flowing by pressing their date for more details, the way a starfish pries open an oyster resting on the seafloor.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -354,15 +341,14 @@ export default {
                         `for the`,
                         {
                             anchor: `innermost matryoshka's`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `On our first date, I took Sita to a natural history museum with some ethnological exhibits. We spent some time gawking at the wooden dolls from Russia known as`,
+                                    `On our first date, I took Sita to a natural history museum. We spent some time gawking at the Russian wooden dolls known as`,
                                     {
-                                        anchor: `matryoshkas,`,
+                                        anchor: `matryoshkas`,
                                         wiki: `Matryoshka_doll`,
                                     },
-                                    `which nest one inside another.`,
+                                    `that nest one inside another.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -375,9 +361,8 @@ export default {
                     mixTime: `0:30:07.08`,
                     lyric: {
                         anchor: `heart of gold inside`,
-                        todo: true,
                         card: {
-                            description: `Mistakes made with one woman still offered lessons that could be applied toward the next. So each date felt like prying open one nesting doll to get to another, with the ultimate goal of reaching the last one whose promise proved not to be hollow.`,
+                            description: `Mistakes I made on one date still offered lessons I could apply toward the next. So each date felt like prying open one nesting doll to get to another, with the ultimate goal of reaching the last one whose promise proved not to be hollow.`,
                             dotKeys: {
                                 [OBSERVATION]: true,
                             },
@@ -397,9 +382,8 @@ export default {
                         `till then`,
                         {
                             anchor: `crack up another doll`,
-                            todo: true,
                             card: {
-                                description: `Someone had told me that if I can keep a woman cracking up at my jokes all night, then I'll always be good for another date. Not being very funny, I tried my best with clever quips and goofy mannerisms.`,
+                                description: `A friend once told me that if I can keep a woman cracking up at my jokes all night, then I'll always be good for another date. Not being very funny, I tried my best with clever quips and goofy mannerisms.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -415,7 +399,7 @@ export default {
                         {
                             anchor: `chrysalis unchristened`,
 
-                            todo: true,
+                            phrasingTodo: true,
                             cards: [
                                 {
                                     description: `As we pass a display on the butterfly lifecycle, it occurs to me that what I seek is a chrysalis. That is, a rare specimen of female so new to this world that my own lack of worldly ways is rendered moot. Of course, every other low-status male out there has the same idea.`,
@@ -435,7 +419,7 @@ export default {
                         `who'd buy this`,
                         {
                             anchor: `aping jaw`,
-                            todo: true,
+                            phrasingTodo: true,
                             card: {
                                 description: [
                                     `We pause for a minute to learn about`,
@@ -480,7 +464,6 @@ export default {
                         `when`,
                         {
                             anchor: `defined by ambrosia beers`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -488,7 +471,7 @@ export default {
                                             anchor: `Ambrosia`,
                                             wiki: `Ambrosia`,
                                         },
-                                        `was the food of the Greek gods, just as beer temporarily made me feel omnipotent.`,
+                                        `was the food of the Greek gods, just as beer made me feel omnipotent.`,
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
@@ -508,7 +491,7 @@ export default {
                                                 wiki: `The_Devil's_Dictionary`,
                                             },
                                         },
-                                        `In hindsight, it probably wasn't the wisest idea to base my sense of humor on the work of a 19th-century American satirist.`,
+                                        `In hindsight, it probably wasn't the best idea to base my sense of humor on the work of a 19th-century American satirist.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -525,15 +508,15 @@ export default {
                         `in time are seen with`,
                         {
                             anchor: `a focus grown clear`,
-                            todo: true,
+                            phrasingTodo: true,
                             card: {
                                 description: [
-                                    `After my buzz wore off a few hours into a date, I would realize that I'd just constructed an elaborate backstory that could only topple under scrutiny, like a`,
+                                    `A few hours into a date, my buzz would wear off enough for me to realize I'd just constructed an exaggerated backstory that could only topple under scrutiny, like a`,
                                     {
                                         anchor: `totem pole`,
                                         wiki: `Totem_pole`,
                                     },
-                                    `carved from a stack of stumps rather than a single trunk.`,
+                                    `carved from a stack of stumps.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -560,7 +543,6 @@ export default {
                     lyric: [
                         {
                             anchor: `pidgin palaver`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -591,9 +573,9 @@ export default {
                         `hyped up like some`,
                         {
                             anchor: `disastrous play`,
-                            todo: true,
+                            phrasingTodo: true,
                             card: {
-                                description: `On our second date, Sita invited me to see her friend perform in a play, which I wound up hating. In all fairness, it probably wasn't bad. My impression of the night was just colored by my insecurities, given the warm rapport between Sita and her friend backstage, in contrast to my own inability to get a word in edgewise.`,
+                                description: `On our second date, Sita invited me to see her friend act in a play, which I wound up hating. In all fairness, it probably wasn't bad. My impression of the night was just colored by my insecurities, given the warm rapport between Sita and her friend backstage, in contrast to my own inability to get a word in edgewise.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -608,9 +590,8 @@ export default {
                         `that starts with a`,
                         {
                             anchor: `lone ringing phone`,
-                            todo: true,
                             card: {
-                                description: `The play begins with the theatre going pitch black. As the audience falls to a hush, a rotary telephone onstage starts to ring.`,
+                                description: `The theater goes pitch black to signal that the play has begun. As the audience falls to a hush, a rotary telephone rings onstage.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -639,9 +620,8 @@ export default {
                         `for if the`,
                         {
                             anchor: `tactic is to stall`,
-                            todo: true,
                             card: {
-                                description: `I was often advised to wait three days before calling a woman back. Yet it was always agony when she invariably did the same with me.`,
+                                description: `I was advised to wait three days before calling a woman back. Yet it was always agony when she invariably did the same to me.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -660,7 +640,7 @@ export default {
                         `what this`,
                         {
                             anchor: `understudy sought`,
-                            todo: true,
+                            phrasingTodo: true,
                             card: {
                                 description: [
                                     `Dating as a low-status male is like being an`,
@@ -668,7 +648,7 @@ export default {
                                         anchor: `understudy,`,
                                         wiki: `Understudy`,
                                     },
-                                    `a performer in theatre who serves as a replacement on short notice. You undertake all the same preparation while likely seeing none of the action. And so I finally accepted that I had to be proactive and branch out, like a freelancer without a steady gig advertising on a cork board.`,
+                                    `a performer in theater who serves as a replacement on short notice. You undertake all the same preparation while likely seeing none of the action. And so I decided I needed to be proactive and branch out, like a freelancer without steady gigs advertising on a cork board.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -700,7 +680,7 @@ export default {
                         `then wise up and`,
                         {
                             anchor: `learn to shotgun`,
-                            todo: true,
+                            phrasingTodo: true,
                             card: {
                                 description: `In time I came to adopt the shotgun approach to dating, which involves hitting on anyone at any moment. It works simply because math works. Even if the success rate remains dismal, you're increasing the sample size, which improves your chances overall.`,
                                 dotKeys: {
@@ -721,9 +701,8 @@ export default {
                         `so we'll`,
                         {
                             anchor: `breeze through our parts`,
-                            todo: true,
                             card: {
-                                description: `Any time I made a witty remark that got a good response, I would be sure to use it again on future dates, like an actor reprising a role. This also lessened the sting of rejection, since the less I prepared, the less I felt invested.`,
+                                description: `Any time I made a witty remark that got a good response, I would be sure to use it again on future dates, like an actor reprising a role. This also lessened the sting of rejection, since the less I needed to prepare, the less invested I felt in any one particular date.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -735,15 +714,14 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `To continue with the 70s feel, I gathered ideas from the band`,
+                        `To continue with the 70s feel for this song, I gathered ideas from the band`,
                         {
                             anchor: `Television,`,
                             wiki: `Television_(band)`,
                         },
-                        `who are well known for the complex interplay between their two lead guitars. The lick of tumbling triplets heard here was stolen note for note from the song "Friction" off of their album`,
+                        `who are well known for the complex interplay between their two lead guitars. The lick of tumbling triplets heard here was stolen note for note from the song "Friction" off their album`,
                         {
                             anchor: `Marquee Moon.`,
                             wiki: `Marquee_Moon`,
@@ -767,9 +745,8 @@ export default {
                         `though each`,
                         {
                             anchor: `kind new ultimatum`,
-                            todo: true,
                             card: {
-                                description: `Like the deals that natives were forced to make with settlers at gunpoint, Sita's proposition for us to see her friend's play offered only an illusion of choice. She was going either way. I could either tag along or stay home.`,
+                                description: `Like the deals that natives were forced at gunpoint to make with settlers, Sita's proposition for us to see her friend's play offered only the illusion of choice. She was going either way. I could either tag along or stay home.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -792,10 +769,10 @@ export default {
                         `brave`,
                         {
                             anchor: `rejection into art`,
-                            todo: true,
+                            phrasingTodo: true,
                             card: {
                                 description: [
-                                    `I learned to accept and even welcome each latest bout of rejection by turning it into subject matter for new songs. So at some point, I naturally came to see a life of getting rejected as`,
+                                    `I learned to accept and even welcome the latest rejection by turning it into subject matter for new songs. And so in time I came to see a life of getting rejected as`,
                                     {
                                         isItalic: true,
                                         lyric: `itself`,
@@ -823,9 +800,9 @@ export default {
                         `but`,
                         {
                             anchor: `died unfinished`,
-                            todo: true,
+                            phrasingTodo: true,
                             card: {
-                                description: `Of course, there's no guarantee that such a work can ever be completed in the artist's lifetime, since the guarantee of a satisfactory ending isn't really within their control.`,
+                                description: `Of course, there's no guarantee that such a work will ever be completed in the artist's lifetime, since a satisfying ending isn't really under their control.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -848,9 +825,9 @@ export default {
                         `hint of`,
                         {
                             anchor: `sampler cologne`,
-                            todo: true,
+                            phrasingTodo: true,
                             card: {
-                                description: `Whenever I spotted a men's magazine lying in a recycling bin, I would tear out the scent strips from its cologne advertisements and add them to my pile. Then right before a date, I would rub a few strips onto my wrists.`,
+                                description: `Whenever I spotted a discarded men's magazine, I would tear out the scent strips from its cologne advertisements and add them to my pile. Then right before a date, I would rub a few strips on my neck and wrists.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -876,15 +853,15 @@ export default {
                         `always rides in`,
                         {
                             anchor: `single go-karts`,
-                            todo: true,
+                            phrasingTodo: true,
                             card: {
                                 description: [
-                                    `On our third date, we visited a`,
+                                    `On our third date, Sita and I visited a`,
                                     {
                                         anchor: `go-kart raceway.`,
                                         wiki: `Kart_racing`,
                                     },
-                                    `There was a twin go-kart available that presumably seated a parent and child side by side. In jest, I gestured as if inviting Sita to hop in. She laughed and declined.`,
+                                    `There was a twin go-kart available that presumably seated a parent and child side by side. I gestured as if inviting her to hop in. She laughed and declined.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -899,10 +876,11 @@ export default {
                         `as we wind an`,
                         {
                             anchor: `endless flowchart`,
-                            todo: true,
+                            // Optimal response.
+                            contentTodo: true,
                             card: {
                                 description: [
-                                    `I often wondered at the time if it was possible to prepare a mental`,
+                                    `At the time, I often wondered if it would be possible to prepare a mental`,
                                     {
                                         anchor: `flowchart`,
                                         wiki: `Flowchart`,
@@ -922,10 +900,10 @@ export default {
                         `with every given`,
                         {
                             anchor: `answer a no`,
-                            todo: true,
+                            phrasingTodo: true,
                             card: {
                                 description: [
-                                    `Of course, if I were never given an opening to take further action, then each date would end with me going right back to the beginning of the flowchart. And I would be doomed to spend my life cycling through an`,
+                                    `Of course, if I were never given an opening to take these optimal actions, then each date would end with me going right back to the beginning of my flowchart. And I would be doomed to spend my life cycling through an`,
                                     {
                                         anchor: `infinite loop`,
                                         wiki: `Infinite_loop`,
@@ -952,21 +930,20 @@ export default {
                         `and her`,
                         {
                             anchor: `veggie wishbone's short end`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
-                                        `We started the date at a`,
+                                        `The date started at a`,
                                         {
                                             anchor: `vegetarian`,
                                             wiki: `Vegetarianism`,
                                         },
-                                        `restaurant, where I ordered a dish that resembled a breast of chicken. When we cracked the sesame-stick`,
+                                        `restaurant, where I ordered a dish that resembled a breast of chicken. When we cracked its sesame-stick`,
                                         {
-                                            anchor: `wishbone`,
+                                            anchor: `wishbone,`,
                                             wiki: `Furcula`,
                                         },
-                                        `that was inside, Sita got the longer end. Needless to say, my wish wasn't granted.`,
+                                        `Sita got the longer end. Needless to say, my wish wasn't granted.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -993,9 +970,9 @@ export default {
                         `from a`,
                         {
                             anchor: `dummy steering wheel`,
-                            todo: true,
+                            phrasingTodo: true,
                             card: {
-                                description: `A child seated in a twin go-kart might turn the passenger steering wheel this way and that, but they are driving only in their imagination. Similarly, any semblance of control I felt on a date was an illusion. But even so, I had to cling on tightly. There was just too much at stake for me to let go and embrace spontaneity.`,
+                                description: `The passenger steering wheel in a twin go-kart is only there for the child's imagination. Similarly, any semblance of control I felt on a date was an illusion. But even so, I had to cling tightly. There was just too much at stake for me to let go and embrace spontaneity.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -1014,7 +991,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         {
@@ -1059,15 +1035,15 @@ export default {
                         `as the`,
                         {
                             anchor: `chirping crosswalks`,
-                            todo: true,
+                            phrasingTodo: true,
                             card: {
                                 description: [
-                                    `Sita and I are still standing on the sidewalk outside her boarding house. In the distance, a mechanical cuckoo call informs the`,
+                                    `Sita and I are still standing on the sidewalk outside her boarding house. In the distance, an electronic cuckoo informs the`,
                                     {
                                         anchor: `visually impaired`,
                                         wiki: `Visual_impairment`,
                                     },
-                                    `that the street is now safe to cross.`,
+                                    `that the street is safe to cross.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1101,7 +1077,6 @@ export default {
                     mixTime: `2:04:21.72`,
                     lyric: {
                         anchor: `I sigh, "Good night."`,
-                        todo: true,
                         cards: [
                             {
                                 description: `I walked home that night determined not to let another opportunity pass without confessing my feelings to Sita. I did exactly that in a phone call a few days later. It went horribly, and I didn't hear from her again for months.`,
@@ -1121,7 +1096,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `Ambrose Bierce also wrote the short story`,
@@ -1129,7 +1103,7 @@ export default {
                             anchor: `"An Occurrence at Owl Creek Bridge,"`,
                             wiki: `An_Occurrence_at_Owl_Creek_Bridge`,
                         },
-                        `in which a seemingly long span of time is revealed to have passed in an instant. Similarly, the near entirety of this song, during which I have recollected every date with Sita thus far, turns out to have been sandwiched between the briefest exchange of farewells.`,
+                        `in which a seemingly long span of time is revealed to have passed in an instant. Similarly, the near entirety of this song, during which I've recollected every date with Sita thus far, turns out to have been sandwiched between the briefest exchange of farewells.`,
                     ],
                     dotKeys: {
                         [NARRATIVE]: true,
