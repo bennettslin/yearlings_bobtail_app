@@ -848,7 +848,6 @@ export default {
                         `always rides in`,
                         {
                             anchor: `single go-karts`,
-                            phrasingTodo: true,
                             card: {
                                 description: [
                                     `On our third date, Sita and I visited a`,
@@ -856,7 +855,7 @@ export default {
                                         anchor: `go-kart raceway.`,
                                         wiki: `Kart_racing`,
                                     },
-                                    `There was a twin go-kart available that presumably seated a parent and child side by side. In jest, I gestured for Sita to hop in. She laughed and declined.`,
+                                    `There was a twin go-kart available, presumably to seat a parent and child side by side. In jest, I gestured for Sita to hop in. She laughed and declined.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -966,7 +965,7 @@ export default {
                             anchor: `dummy steering wheel`,
                             phrasingTodo: true,
                             card: {
-                                description: `The passenger steering wheel in a twin go-kart is only there for the child's imagination. Similarly, any semblance of control I felt on a date was an illusion. But even so, I had to cling tightly. There was just too much at stake for me to let go and embrace spontaneity.`,
+                                description: `The passenger steering wheel in a twin go-kart only functions to indulge a child's imagination. Similarly, any semblance of control I felt on a date was an illusion. But even so, I had to cling tightly. There was just too much at stake for me to let go and embrace spontaneity.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },

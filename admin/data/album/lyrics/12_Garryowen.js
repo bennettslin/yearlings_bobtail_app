@@ -95,7 +95,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Brushed her off`,
-                            phrasingTodo: true,
                             card: {
                                 description: `As I began to withdraw from the relationship, Sita would reach out by groveling. And stung by my conscience, I would rush to comfort her. But as my patience wore thin over time, I would lash out in passive-aggressive ways, whereupon she would grovel even further. It became all we knew of how to speak for ourselves.`,
                                 dotKeys: {
@@ -139,9 +138,8 @@ export default {
                         `Tonight the`,
                         {
                             anchor: `rubber off,`,
-                            phrasingTodo: true,
                             card: {
-                                description: `As our relationship went south, sex became the last bargaining chip that Sita held in the power struggle between us. Since I didn't like the feeling of wearing a condom, she would offer to have unprotected sex just to coax any small kindness out of me.`,
+                                description: `As our relationship went south, sex became the last bargaining chip that Sita held in the power struggle between us. Since I didn't like the feeling of wearing a condom, she would offer to go without one just to coax any small kindness out of me.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -540,9 +538,8 @@ export default {
                         `you'd`,
                         {
                             anchor: `make her strip bare`,
-                            phrasingTodo: true,
                             card: {
-                                description: `Sita learned early on that she could always whisk me away for some lovemaking by hovering naked beside me and shivering dramatically from the cold. But as our relationship soured, I grew tired of this brazen appeal to my primal and protective instincts, and drew some cruel pleasure in letting her shiver for just a bit longer.`,
+                                description: `Sita learned early on that she could always whisk me away for some lovemaking by hovering naked beside me and shivering dramatically from the cold. But as our relationship soured, this brazen appeal to my primal and protective instincts grew tiresome, and I drew some cruel pleasure in letting her shiver for just a bit longer.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -692,7 +689,6 @@ export default {
                         `They told her, "Never help a`,
                         {
                             anchor: `self-abuser`,
-                            phrasingTodo: true,
                             cards: [
                                 {
                                     description: [
@@ -701,7 +697,7 @@ export default {
                                             anchor: `cutting myself`,
                                             wiki: `Self-harm`,
                                         },
-                                        `to deal with distress. Early in our friendship, Sita took interest in my scars, which I interpreted to be a morbid fascination with my troubled past. I later came to see that she was just sympathizing with a fellow depressive, one whose coping mechanisms were curiously different from her own.`,
+                                        `to deal with depression. Early in our friendship, Sita took interest in my scars, which I interpreted to be a morbid fascination with my troubled past. I later came to see that she was just sympathizing with a fellow depressive, one whose coping mechanisms were curiously different from her own.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -738,9 +734,8 @@ export default {
                             `see himself`,
                             {
                                 anchor: `as well in you."`,
-                                phrasingTodo: true,
                                 card: {
-                                    description: `But if I was capable of injuring myself, then I was unlikely to feel any compunction about hurting anyone close to me, who now knew the worst side of me as only I once did.`,
+                                    description: `But if I was capable of injuring myself, then I was also unlikely to feel any compunction about hurting anyone close to me, who now knew the worst side of me as only I once did.`,
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                     },

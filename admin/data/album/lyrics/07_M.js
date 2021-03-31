@@ -544,7 +544,7 @@ export default {
                                         anchor: `mass weddings,`,
                                         wiki: `Blessing_ceremony_of_the_Unification_Church`,
                                     },
-                                    `in which thousands of congregants are paired off with perfect strangers. Whenever I encountered a Moonie on campus, I would amuse myself with the thought that I could just accept their pamphlet and end my struggle to find a romantic partner in an instant.`,
+                                    `in which thousands of congregants are paired off with perfect strangers. Whenever I encountered a Moonie on campus, I would amuse myself with the thought that I could just accept their pamphlet, and my struggle to find a romantic partner would be over in an instant.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,

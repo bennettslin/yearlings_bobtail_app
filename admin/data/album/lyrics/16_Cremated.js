@@ -650,7 +650,7 @@ export default {
                                         anchor: `conferring knighthood.`,
                                         wiki: `Accolade`,
                                     },
-                                    `And so I imagine my drunken self, confused by the orders given to confess to the crimes of his sober half, instead erratically patting him on the shoulder with a sharp sword.`,
+                                    `And so I imagine my drunken self, confused by the orders given to confess to the crimes of his sober half, instead patting him erratically on the shoulder with a sharp sword.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,

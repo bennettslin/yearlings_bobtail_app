@@ -35,6 +35,7 @@
 * Change more similarlys to likewises, and other phrases.
 
 # Things to look out for.
+* Change doublespeaker set to pair in Odin.
 * When to use "that."
 * When to use "you" versus "one."
 * When to use "help" without "to."

@@ -487,9 +487,8 @@ export default {
                         `Bursting belly told by`,
                         {
                             anchor: `extra holes`,
-                            phrasingTodo: true,
                             card: {
-                                description: `Notches might be carved in one's belt to support a girth distended from overfeeding. Or else, they might serve to tally sexual conquests.`,
+                                description: `Notches can be carved in one's belt to support a girth distended from overfeeding. They might also tally sexual conquests.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },

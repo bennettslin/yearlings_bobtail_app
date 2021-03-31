@@ -951,7 +951,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 phrasingTodo: true,
                 card: {
-                    description: `To play the electric guitar riff here, I used both a glass slide and the whammy bar simultaneously. Since either of these can bend pitch on its own, it makes no sense to combine them. Which is exactly why a troll musician would.`,
+                    description: `To play the electric guitar riff here, I used both a glass slide and the whammy bar at the same time. Since either of these can bend pitch on its own, it makes no sense to combine them. Which is exactly why a troll musician would.`,
                     dotKeys: {
                         [OBSERVATION]: true,
                         [SONGCRAFT]: true,

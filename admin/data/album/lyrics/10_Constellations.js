@@ -2030,7 +2030,7 @@ export default {
                                             anchor: `televangelists,`,
                                             wiki: `Televangelism`,
                                         },
-                                        `I observe that every religion's early spirit eventually degrades into orthodoxy and routine, as does every person's youthful spirit in later years. But in the meantime, we're just halfway through summer, and more nights of Robitussin await…`,
+                                        `I notice that every religion's early spirit eventually degrades into orthodoxy and routine, as does every person's youthful spirit in their later years. But in the meantime, we're just halfway through summer, and more nights of Robitussin await…`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
