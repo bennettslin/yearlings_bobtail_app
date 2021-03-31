@@ -1833,17 +1833,17 @@ export default {
                             anchor: `psychedelic`,
                             wiki: `Psychedelic_rock`,
                         },
-                        `period for ideas.`,
+                        `period for ideas. The song`,
                         {
                             anchor: `"Tomorrow Never Knows"`,
                             wiki: `Tomorrow_Never_Knows`,
                         },
-                        `makes use of a tape loop that imitates a`,
+                        ` uses a tape loop to imitate a`,
                         {
                             anchor: `seagull's`,
                             wiki: `Gull`,
                         },
-                        `cry, which I tried to recreate by pinching off the airstream blown through the window of a recorder. The result wasn't what I'd hoped for. But kept in the background, it contributes nicely to the overall atmosphere.`,
+                        `cry, which I tried to recreate by pinching off the airstream blown through the window of a recorder. The result wasn't what I'd hoped for, but kept in the background, it contributes nicely to the overall atmosphere.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,

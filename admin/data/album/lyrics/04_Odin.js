@@ -1669,7 +1669,7 @@ export default {
                                         anchor: `litter`,
                                         wiki: `Litter_(zoology)`,
                                     },
-                                    `of his own. And so that makes two of us, given how unlikely I am to be made into a great nation any time soon.`,
+                                    `of his own. Which makes two of us, given how unlikely I am to be made into a great nation any time soon.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

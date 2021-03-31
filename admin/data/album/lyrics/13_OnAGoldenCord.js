@@ -307,6 +307,7 @@ export default {
                         `torched the`,
                         {
                             anchor: `bellyaches on suttee.`,
+                            // Separate cards.
                             phrasingTodo: true,
                             card: {
                                 description: [
@@ -470,7 +471,6 @@ export default {
                         `past this`,
                         {
                             anchor: `avenue Möbius.`,
-                            phrasingTodo: true,
                             cards: [
                                 {
                                     description: [
@@ -479,11 +479,11 @@ export default {
                                             anchor: `Möbius strip`,
                                             wiki: `Möbius_strip`,
                                         },
-                                        `is a surface with only one side, and can be created by joining the ends of a half-twisted paper strip.`,
+                                        `is a surface with only one side. It can be created by joining the ends of a half-twisted paper strip.`,
                                     ],
                                 },
                                 {
-                                    description: `As drunken me ambles along the twisting sidewalks, rehashing all the half-truths that supported his defense, it occurs to him that perhaps there really aren't two sides to this story. Or two sides to his mind…`,
+                                    description: `As drunken me ambles along twisting sidewalks, revisiting the half-truths that once supported his defense, it occurs to him that perhaps there really aren't two sides to this story. Or two sides to his mind…`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -570,9 +570,8 @@ export default {
                         `Just that those playful`,
                         {
                             anchor: `pups with their hateful fangs`,
-                            phrasingTodo: true,
                             card: {
-                                description: `Predatory animals are born to tear flesh with their jaws, and so they instinctively soften their bites during rough play. And knowing now what it truly means to inflict harm, I realized the bullies held back their blows in the same way, believing their cruelty to be in good fun.`,
+                                description: `Young carnivores have an instinct to tear flesh with their jaws, so they reflexively soften their bites during rough play. And knowing as I did now what it truly means to inflict harm, I realized the bullies held back their blows in the same way, believing their cruelty to be in good fun.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [REFERENCE]: true,
@@ -591,9 +590,8 @@ export default {
                         `while this supposed`,
                         {
                             anchor: `dove chafing in his cage,`,
-                            phrasingTodo: true,
                             card: {
-                                description: `Meanwhile, a stressed dove will peck a cagemate to death, oblivious to the deadly potential of its beak. And similarly, in seeing myself as the victim and tending only to my needs, I ended up causing far more trauma to Sita than I myself had ever received at the hands of the bullies.`,
+                                description: `Meanwhile, a stressed dove will peck a cagemate to death, oblivious to the deadly nature of its beak. And similarly, in seeing myself as the victim and tending only to my needs, I ended up causing far more trauma to Sita than I myself had ever received at the hands of the bullies.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [REFERENCE]: true,
@@ -651,7 +649,8 @@ export default {
                         `the`,
                         {
                             anchor: `gesture then`,
-                            phrasingTodo: true,
+                            // I was too naive to know how to give love, and she to receive it.
+                            contentTodo: true,
                             card: {
                                 description: `I'd bought the bracelet from a jewelry store at the local mall. It cost a lot relative to my hourly wage at the time, which made its underlying meaning all the more potent to Sita.`,
                                 dotKeys: {
@@ -1028,12 +1027,12 @@ export default {
                             phrasingTodo: true,
                             card: {
                                 description: [
-                                    `In college, I discovered that being drunk made it easy to single-mindedly perform arduous tasks like writing`,
+                                    `In college, I discovered that being drunk made it easier to perform arduous tasks like writing`,
                                     {
                                         anchor: `term papers.`,
                                         wiki: `Term_paper`,
                                     },
-                                    `mainly by making it easier not to care about the results. I would humorously compare my drunken self to a slave taking orders from his sober master. It was this same strategy that I later used to break up with Sita.`,
+                                    `Mainly by making it easier not to care about the results. I would humorously compare my drunken self to a slave taking orders from his sober master. This was the same strategy I later used to break up with Sita.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
