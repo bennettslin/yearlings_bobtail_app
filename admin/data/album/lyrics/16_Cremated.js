@@ -508,7 +508,7 @@ export default {
                             anchor: `unforeskinned virgin`,
                             phrasingTodo: true,
                             card: {
-                                description: `I learned a long time ago not to have personal convictions or identity markers that could only serve to limit the size of my dating pool. It's why I've never gotten a tattoo. I needed to be able to start my character afresh for the next woman to shape me into whatever she liked. And so I imagine that before dating Miriam, I had reset myself to a default state of being sexually inexperienced with my foreskin intact.`,
+                                description: `I learned a long time ago not to have personal convictions or identity markers that would only serve to limit the size of my dating pool. It's why I've never gotten a tattoo, for example. I needed to start my character afresh for each new woman to shape me into whatever she liked. And so I imagine that before dating Miriam, I'd reset myself to a default state of being sexually inexperienced with my foreskin intact.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -567,7 +567,7 @@ export default {
                             anchor: `kissed off, she purges up.`,
                             phrasingTodo: true,
                             card: {
-                                description: `Upon bringing me to orgasm, Miriam sucks up the ejaculate and leans over the car door to spit it out. But this act seems to carry a symbolic message, that the sperm carrying my defective genes must never be allowed to mingle with hers.`,
+                                description: `Upon bringing me to orgasm, Miriam sucks up the ejaculate and leans over the car door to spit it out. But this act seems to carry a hidden message that the genes in my defective sperm must never be allowed to mingle with hers.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -645,12 +645,12 @@ export default {
                                         anchor: `dubbing`,
                                         wiki: `Dubbing_(filmmaking)`,
                                     },
-                                    `may refer to the replacement of an actor's voice in post-production, it also refers to the ritual of`,
+                                    `refers to the replacement of an actor's voice in film, it can also refer to the ritual of`,
                                     {
                                         anchor: `conferring knighthood.`,
                                         wiki: `Accolade`,
                                     },
-                                    `And so I imagine my drunken self, confused by the orders given to confess to the crimes of his sober half, instead patting him erratically on the shoulder with a sharp sword.`,
+                                    `And so I imagine my drunken self, confused by the orders given to speak for the crimes of his sober half, instead patting him erratically on the shoulder with a sharp sword.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -840,7 +840,6 @@ export default {
                         },
                         {
                             anchor: `"Bless her,`,
-                            phrasingTodo: true,
                             card: {
                                 description: [
                                     `The title of the play`,
@@ -851,12 +850,12 @@ export default {
                                             wiki: `Children_of_a_Lesser_God_(play)`,
                                         },
                                     },
-                                    `which centers on a deaf woman, suggests that being disabled is like living in a world created by an inferior deity. But I interpreted it differently as a child. Given the autism that ran in my family's genes, which seemed to correlate with our different manner of worship, I assumed it meant the disabled`,
+                                    `which centers on a deaf woman, suggests that being disabled is like living in a world created by an inferior deity. But I interpreted it differently as a child. Given the autism that ran in my family, which correlated in my mind with our foreign way of worship, I assumed it meant the disabled`,
                                     {
                                         isEmphasis: true,
                                         lyric: `themselves`,
                                     },
-                                    `must be the inferior creations.`,
+                                    `are the inferior creations.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -866,7 +865,6 @@ export default {
                         {
                             anchor: `Godspeed…"`,
                             properNoun: true,
-                            phrasingTodo: true,
                             cards: [
                                 {
                                     description: `To further compound my insecurities in being raised Buddhist, my complexion was also different from that of everyone else in Sasha's world. And so my inferiority complex failed to distinguish between carrying faulty genes, following a faulty faith, and being of a faulty race. They all seemed to derive from a single congenital defect at the core of my being.`,
@@ -876,7 +874,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `My imagined scenario ends with Miriam feeling mightily relieved, knowing that in her gene pool, "here's not where some lesser god has peed."`,
+                                    description: `My imagined scenario ends with Miriam feeling mightily relieved to know that in her gene pool, "here's not where some lesser god has peed."`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true,

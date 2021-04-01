@@ -168,7 +168,6 @@ export default {
                         `So baby, tell me then, when you`,
                         {
                             anchor: `take in her breasts,`,
-                            phrasingTodo: true,
                             card: {
                                 description: `It scared me, far more than I let on, to gamble away the familiar warmth of Sita's love for a mere chance at romance with some new woman. I often wondered if this fear then manifested in a hormonal craving for nurture over pleasure, because I was always struck by how motherly these women's naked bodies initially felt to me.`,
                                 dotKeys: {
@@ -208,12 +207,12 @@ export default {
                 phrasingTodo: true,
                 card: {
                     description: [
-                        `Our relationship was like a ship swaying perilously in tumultuous waters, a notion captured by the`,
+                        `Our relationship was like a ship swaying perilously in dangerous waters, a notion captured by the`,
                         {
                             anchor: `compound meter`,
                             wiki: `Metre_(music)`,
                         },
-                        `and the unrelated chords separated by a`,
+                        `as well as the unrelated chords separated by a`,
                         {
                             anchor: `tritone`,
                             wiki: `Tritone`,
@@ -223,7 +222,7 @@ export default {
                             anchor: `tuplets`,
                             wiki: `Tuplet`,
                         },
-                        `symbolize our inability to find common ground, with one carrying eight notes per beat, the other nine. I created them by splicing together single notes plucked on a mandolin.`,
+                        `symbolize our inability to find common ground, with one carrying eight notes per beat, the other nine. I created the tracks by splicing together single notes plucked on a mandolin.`,
                     ],
                     dotKeys: {
                         [OBSERVATION]: true,
@@ -386,15 +385,14 @@ export default {
                         `as the sole`,
                         {
                             anchor: `keeper of his sheep herd.`,
-                            phrasingTodo: true,
                             card: {
                                 description: [
-                                    `A keeper, in the sense of being the one who tends to the herd, as well as the only one to keep from`,
+                                    `A keeper, in the sense of being both the one who tends to the herd, as well as the only one to keep from`,
                                     {
                                         isEmphasis: true,
                                         lyric: `among`,
                                     },
-                                    `the herd. Resigned to my infidelity, Sita could only hope that her permissiveness earned her a privileged place amid all the other women I desired.`,
+                                    `the herd. Resigned to my infidelity, Sita could only hope that her permissiveness would earn her a privileged position amid all the other women I desired.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -470,9 +468,8 @@ export default {
                         `My`,
                         {
                             anchor: `ticklish piglet,`,
-                            phrasingTodo: true,
                             card: {
-                                description: `Perversely, Sita and I were at our best during the months immediately after getting back together. She could enjoy the knowledge of being the better woman, while I got to bask in the afterglow of my latest sexual exploit.`,
+                                description: `Perversely, Sita and I were at our best during the months right after getting back together. She could enjoy the knowledge of being the better woman, while I got to bask in the afterglow of my latest sexual exploit.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -798,7 +795,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                phrasingTodo: true,
                 card: {
                     description: [
                         `The cry of a peacock has always sounded to me like it's pleading in Hindi,`,
@@ -806,7 +802,7 @@ export default {
                             isItalic: true,
                             lyric: `"kyon?"`,
                         },
-                        `My heart still breaks somewhat to hear it for that reason.`,
+                        `My heart still breaks somewhat to hear it, for this reason.`,
                     ],
                     dotKeys: {
                         [OBSERVATION]: true,

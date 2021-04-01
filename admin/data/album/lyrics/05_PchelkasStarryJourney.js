@@ -134,12 +134,12 @@ export default {
                             anchor: `Russian`,
                             wiki: `Russia`,
                         },
-                        `theme of dogs in space, I tried to evoke the feeling of the`,
+                        `theme of dogs in space for this song, the feeling of the`,
                         {
                             anchor: `balalaika`,
                             wiki: `Balalaika`,
                         },
-                        `through frenetically plucked mandolins. Since`,
+                        `is evoked by frenetically plucked mandolins. Since`,
                         {
                             anchor: `Tuva`,
                             wiki: `Tuva`,
