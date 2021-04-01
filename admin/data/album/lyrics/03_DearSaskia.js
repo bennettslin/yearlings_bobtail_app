@@ -153,7 +153,7 @@ export default {
                             anchor: `You'd love Taiwan,`,
                             phrasingTodo: true,
                             card: {
-                                description: `During a tour of the Taiwanese countryside with our cousins, I mentally noted all the things I might show to Sasha one day. As a child, the only time I cared much for being Taiwanese was when I thought that having a heritage to share could help me win over a crush.`,
+                                description: `During a tour of the Taiwanese countryside with our cousins, I mentally noted all the things I could show to Sasha one day. As a child, the only time I cared much for being Taiwanese was when I thought that having a heritage to share could help me win over a crush.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -179,7 +179,7 @@ export default {
                             anchor: `giant's house.`,
                             phrasingTodo: true,
                             card: {
-                                description: `My most vivid memory of that trip is when we stood in the middle of a lush valley. While the ground was completely level, the enclosing mountains were nearly vertical, with their peaks hidden by a translucent blanket of clouds stretched across the sky. I felt like a tiny guest in a giant's house.`,
+                                description: `My most vivid memory of that trip is when we stood in the middle of a lush valley. With the ground around us completely level, the enclosing mountains were nearly vertical, as their peaks disappeared into a translucent blanket of clouds stretched across the sky. I felt like a tiny guest in a giant's house.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -505,12 +505,12 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `As I continue to write the letter, I also recall an incident where Sasha came to my rescue after some bullies tied me to a`,
+                                        `As I continue writing the letter, I also recall an incident where Sasha came to my rescue after some bullies had tied me to a`,
                                         {
                                             anchor: `"tetherball"`,
                                             wiki: `Tetherball`,
                                         },
-                                        `pole using the rope attached to the ball.`,
+                                        `pole.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -519,12 +519,12 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `Some overprotective parents tether their toddlers to a`,
+                                        `Some overprotective parents strap their toddlers into a`,
                                         {
-                                            anchor: `child harness`,
+                                            anchor: `harness`,
                                             wiki: `Child_harness`,
                                         },
-                                        `to keep them close by. As such, older children who are unable to fend for themselves might be mocked by their peers as having been kept on a tether their whole lives.`,
+                                        `for safety. As such, older children who are unable to fend for themselves might be mocked by their peers as having been kept on a tether their whole lives.`,
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
