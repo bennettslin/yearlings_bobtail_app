@@ -1,6 +1,7 @@
 # Bug
 
 # TODO
+* Make quotes smart.
 * Hawaiian ornament
 * Beards on trolls
 * Potted plants in bedroom
@@ -22,7 +23,6 @@
 * Be smarter about memo.
 
 # Annotation edit TODO:
-* Mention being a religious studies major.
 * Willy sparkles?
 * Carpenters thing?
 * Golden Cord Bungalow Bill?
