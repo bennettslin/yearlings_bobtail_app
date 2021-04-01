@@ -499,7 +499,7 @@ export default {
                             anchor: `wanderer lost?"`,
                             phrasingTodo: true,
                             card: {
-                                description: `Hitting all the right nerves, the letter addressed my yearning for acceptance, while speaking to my frustration that this desired end should elude me. It then shared its hopeful news. RI Research believed I might be a Beyonder, and after searching for so long, they'd finally found me.`,
+                                description: `Hitting all the right nerves, the letter addressed my yearning for acceptance and spoke to my frustration that this desire should so elude me. It then shared some hopeful news. RI Research believed I might be a Beyonder, and after searching for so long, they'd finally found me.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -921,7 +921,7 @@ export default {
                             anchor: `murdered for their virtue.`,
                             phrasingTodo: true,
                             card: {
-                                description: `Like all ordeals, mine was more bearable because I could tie it to a greater purpose. But ironically, behaving as such only invited more abuse.`,
+                                description: `Like all ordeals, mine was made more bearable because I could tie it to a greater purpose. But ironically, behaving as such only invited more abuse.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -939,7 +939,6 @@ export default {
                         `as`,
                         {
                             anchor: `omerta`,
-                            phrasingTodo: true,
                             card: {
                                 description: [
                                     {
@@ -951,7 +950,7 @@ export default {
                                         anchor: `Mafia's`,
                                         wiki: `American_Mafia`,
                                     },
-                                    `code of silence that discourages cooperation with authorities. Of course, I wasn't the first kid who noticed parallels between the unspoken rules of the schoolyard and those of the criminal world.`,
+                                    `code of silence that discourages cooperation with authorities. I'm sure I wasn't the first kid who noticed parallels between the unspoken rules of the schoolyard and those of the criminal world.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -978,15 +977,14 @@ export default {
                         `We knew the`,
                         {
                             anchor: `shortest ciphers`,
-                            phrasingTodo: true,
                             card: {
                                 description: [
-                                    `The lengthier a`,
+                                    `A shorter`,
                                     {
-                                        anchor: `cryptogram,`,
+                                        anchor: `cryptogram`,
                                         wiki: `Cryptogram`,
                                     },
-                                    `the more clues it gives away, and thus the easier it is to solve. On the other hand, by not speaking or expressing emotion, I gave the bullies fewer openings to provoke a response from me. And the less they then bothered to try.`,
+                                    `gives away fewer clues and is thus more difficult to solve. In the same vein, by not speaking or expressing emotion, I gave the bullies fewer openings to provoke a response from me, and the less they then bothered to try.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1030,12 +1028,12 @@ export default {
                             phrasingTodo: true,
                             card: {
                                 description: [
-                                    `A`,
+                                    `Since a`,
                                     {
                                         anchor: `spy's`,
                                         wiki: `Espionage`,
                                     },
-                                    `success hinges upon staying hidden. Their exploits will never be appreciated until they're caught and made to face the`,
+                                    `success hinges upon staying hidden, their exploits can never be appreciated until they're caught and made to face the`,
                                     {
                                         anchor: `firing squad.`,
                                         wiki: `Execution_by_firing_squad`,
@@ -1316,7 +1314,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                phrasingTodo: true,
                 card: {
                     description: [
                         {
@@ -1347,9 +1344,8 @@ export default {
                         `"Kids say you're`,
                         {
                             anchor: `hopped on drugs,`,
-                            phrasingTodo: true,
                             card: {
-                                description: `Eventually a classmate suspected me of taking drugs, and I was sent to the principal's office. When my mother came to pick me up, she chewed out the principal for even suspecting I could do such a thing. Since I was more responsive around authority figures, he agreed that the accusation didn't make sense and let me go.`,
+                                description: `Eventually a classmate suspected me of taking drugs, and I was sent to the principal's office. When my mother came to pick me up, she chewed out the principal for suspecting I could do such a thing. Since I was more responsive around authority figures, he agreed that the accusation didn't make sense and dropped it.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
