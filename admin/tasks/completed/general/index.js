@@ -5115,4 +5115,8 @@ export default [
         taskName: `Revive deprecated page.`,
         workedHours: 1,
     },
+    {
+        taskName: `Use local fonts again.`,
+        workedHours: 1,
+    },
 ]

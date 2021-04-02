@@ -52,18 +52,6 @@ export default {
         `gatsby-plugin-react-helmet`,
         `gatsby-plugin-remove-trailing-slashes`,
         `gatsby-plugin-sass`,
-        // {
-        //     resolve: `gatsby-plugin-web-font-loader`,
-        //     options: {
-        //         google: {
-        //             families: [
-        //                 'Rancho',
-        //                 'PT Sans Narrow',
-        //                 'Neuton',
-        //             ],
-        //         },
-        //     },
-        // },
         {
             resolve: `gatsby-plugin-webpack-bundle-analyzer`,
             options: {

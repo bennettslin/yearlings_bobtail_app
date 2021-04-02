@@ -85,7 +85,6 @@
     "gatsby-plugin-react-helmet": "^3.10.0",
     "gatsby-plugin-remove-trailing-slashes": "^2.10.0",
     "gatsby-plugin-sass": "^3.2.0",
-    "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-plugin-webpack-bundle-analyzer": "^1.0.5",
     "jsdom": "^16.2.0",
     "node-sass": "^4.14.1",
