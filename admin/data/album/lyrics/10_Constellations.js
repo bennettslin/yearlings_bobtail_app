@@ -1833,7 +1833,7 @@ export default {
                             anchor: `psychedelic`,
                             wiki: `Psychedelic_rock`,
                         },
-                        `period for ideas. The song`,
+                        `period for ideas.`,
                         {
                             anchor: `"Tomorrow Never Knows"`,
                             wiki: `Tomorrow_Never_Knows`,
@@ -1843,7 +1843,7 @@ export default {
                             anchor: `seagull's`,
                             wiki: `Gull`,
                         },
-                        `cry, which I tried to recreate by pinching off the airstream blown through the window of a recorder. The result wasn't what I'd hoped for, but kept in the background, it contributes nicely to the overall atmosphere.`,
+                        `cry, which I tried to recreate by pinching off the airstream blown through the window of a recorder. The result wasn't what I'd hoped for, but here as background texture, it contributes nicely to the overall atmosphere.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -1924,24 +1924,23 @@ export default {
                         {
                             anchor: `Rumspring`,
                             properNoun: true,
-                            phrasingTodo: true,
                             card: {
                                 description: [
                                     {
                                         anchor: `"Rumspringa"`,
                                         wiki: `Rumspringa`,
                                     },
-                                    `is a period of adolescence during which`,
+                                    `is a rite of passage during which`,
                                     {
                                         anchor: `Amish`,
                                         wiki: `Amish`,
                                     },
-                                    `teenagers are permitted to explore the outside world. This way, their decision to remain in the Amish community is not rooted in ignorance. Though it means "running around" in`,
+                                    `teenagers are encouraged to explore the secular world of the "English," as the non-Amish are called, in the hope that this will strengthen their faith. Though it means "running around" in`,
                                     {
                                         anchor: `Pennsylvania Dutch,`,
-                                        wiki: `Pennsylvania_Dutch`,
+                                        wiki: `Pennsylvania_German_language`,
                                     },
-                                    `I liked the image of an actual "rum spring." In any case, the spring of our youth, in both the literal and metaphorical sense, is running dry.`,
+                                    `I liked the mental picture of us dipping into a literal "rum spring." In any case, the spring of our youth, in both the literal and metaphorical sense, is running dry.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1956,11 +1955,12 @@ export default {
                     mixTime: `2:50:04.69`,
                     lyric: [
                         {
-                            anchor: `In mouth Deseret,`,
+                            // NOTE: I made this lowercase.
+                            anchor: `In mouth deseret,`,
                             card: {
                                 description: [
                                     {
-                                        anchor: `Deseret`,
+                                        anchor: `"Deseret"`,
                                         wiki: `Deseret_alphabet`,
                                     },
                                     `is an alphabet developed by the early`,
@@ -2021,7 +2021,6 @@ export default {
                         },
                         {
                             anchor: `"Rejoyce!" bellow the`,
-                            phrasingTodo: true,
                             cards: [
                                 {
                                     description: [
@@ -2030,7 +2029,7 @@ export default {
                                             anchor: `televangelists,`,
                                             wiki: `Televangelism`,
                                         },
-                                        `I notice that every religion's early spirit eventually degrades into orthodoxy and routine, as does every person's youthful spirit in their later years. But in the meantime, we're just halfway through summer, and more nights of Robitussin await…`,
+                                        `it occurs to me that every religion's early spirit eventually degrades into orthodoxy and routine, as does every person's youthful spirit in their later years. But in the meantime, we're just halfway through summer, and more nights of Robitussin await…`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,

@@ -430,7 +430,7 @@ export default {
                                         anchor: `orangutan`,
                                         wiki: `Orangutan`,
                                     },
-                                    `was attached to the cranium of a modern human. But I'm a comparable fraud, as the things that come out of my mouth inflate the perceived volume of wisdom in my head.`,
+                                    `was attached to the cranium of a modern human. Meanwhile, I'm hoping that the words coming out of my mouth don't betray the lack of volume in my head.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

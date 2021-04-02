@@ -57,12 +57,12 @@ export default {
                             anchor: `their language`,
                             wiki: `Chinese_language`,
                         },
-                        `on the population. So the`,
+                        `on the native population. So the`,
                         {
                             anchor: `Taiwanese`,
                             wiki: `Taiwanese_Hokkien`,
                         },
-                        `my family spoke at home was always mixed with Chinese words, such as`,
+                        `we spoke at home had a lot of Chinese words mixed in, such as`,
                         {
                             isItalic: true,
                             lyric: `didi,`,
