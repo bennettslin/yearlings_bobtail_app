@@ -5111,4 +5111,8 @@ export default [
         taskName: `Initial volume work.`,
         workedHours: 15,
     },
+    {
+        taskName: `Revive deprecated page.`,
+        workedHours: 1,
+    },
 ]

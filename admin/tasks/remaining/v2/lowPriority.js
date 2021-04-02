@@ -44,11 +44,6 @@ export default [
         neededHours: 2,
     },
     {
-        taskName: `Internet Explorer is too broken to even reach the deprecated page.`,
-        workedHours: 0,
-        neededHours: 2,
-    },
-    {
         taskName: `Put mapWormholeLinkForDispatch in own dispatch called dispatchWormhole.`,
         workedHours: 0,
         neededHours: 1,
