@@ -87,7 +87,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: true,
                 card: {
-                    description: `I first wrote the music heard here a long while back, upon waking from a horrid nightmare that I badly needed to retell. I quickly shelved it after all my attempts to describe the nightmare to others only elicited laughter. But years later, I realized its gloomy chords and disjointed tempo changes could be repurposed into this song, which plays out as a lecture delivered by a nightmarish version of my parents.`,
+                    description: `I wrote the music for this song a while back, upon waking from a horrid nightmare that I badly needed to retell. I quickly shelved it after all my attempts to describe the nightmare only elicited laughter. Years later, I realized its gloomy chords and disjointed tempo changes could be repurposed for a song that plays out as a lecture delivered by a nightmarish version of my parents.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGCRAFT]: true,
@@ -114,7 +114,7 @@ export default {
                                         isItalic: true,
                                         lyric: `beta`,
                                     },
-                                    `means "son." Having unequivocally taken Sita's side, my parents address me in my nightmare as an Indian parent would.`,
+                                    `means "son." Having unequivocally taken Sita's side, my parents in the nightmare address me as an Indian parent would.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -235,7 +235,7 @@ export default {
                             todo: true,
                             card: {
                                 description: [
-                                    `Like Grover, I was trapped inside a self-referential work, hoping to shape in real time the outcome toward which I was being relentlessly thrust. But unlike Grover, I already had an inkling of who the monster at the end of`,
+                                    `Like Grover, I was trapped inside a self-referential work, hoping to shape in real time the outcome toward which I was being relentlessly thrust. But unlike Grover, I had an inkling of who the monster at the end of`,
                                     {
                                         isItalic: true,
                                         lyric: `Bobtail`,
@@ -336,7 +336,7 @@ export default {
                             todo: true,
                             card: {
                                 description: [
-                                    `The mail-order cult had promised that I could rise above the bullies once a spaceship was acquired through my efforts. And so I learned to bide my time awaiting this corrective justice. I was like "a pawn" in`,
+                                    `The mail-order cult promised I would rise above the bullies once a spaceship was acquired through my efforts. And so I learned to bide my time as I awaited corrective justice. I was like "a pawn" in`,
                                     {
                                         anchor: `chess`,
                                         wiki: `Chess`,
@@ -368,12 +368,12 @@ export default {
                 todo: true,
                 card: {
                     description: [
-                        `My original hope for some of these puns was for listeners to believe they had stumbled upon a`,
+                        `My original hope for some of these puns was for listeners to believe they'd stumbled upon a`,
                         {
                             anchor: `mondegreen,`,
                             wiki: `Mondegreen`,
                         },
-                        `after reading the lyric and discovering it was not what they thought they had heard. But upon further reflection, they would realize that the mishearing made too much sense and was likely an`,
+                        `after reading the lyric and discovering it was not what they thought they had heard. But upon further reflection, they would realize the mishearing made too much sense and was likely an`,
                         {
                             anchor: `Easter egg`,
                             wiki: `Easter_egg_(media)`,
@@ -514,9 +514,8 @@ export default {
                         `you made a`,
                         {
                             anchor: `bunker that shuts airtight`,
-                            todo: true,
                             card: {
-                                description: `I learned early on to deal with problems by locking myself away, both physically and mentally. Once sheltered, I could then calmly and patiently study my situation to plot the best way forward.`,
+                                description: `I learned early on to deal with problems by locking myself away, both physically and mentally. Then once sheltered, I could calmly and patiently study my situation to plot the best way forward.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -663,7 +662,7 @@ export default {
                         todo: true,
                         card: {
                             description: [
-                                `As I recall, the nightmare began with me scattering magic beans all around my neighborhood. It was clearly based on the English`,
+                                `The nightmare began with me scattering magic beans all around my neighborhood. It was clearly based on the English`,
                                 {
                                     anchor: `fairy tale`,
                                     wiki: `Fairy_tale`,
@@ -720,7 +719,7 @@ export default {
                                         anchor: `hazing rituals`,
                                         wiki: `Hazing`,
                                     },
-                                    `that new recruits are made to go through. Having endured such abuse for so long myself, I finally concluded that I couldn't have toughened up any other way. And now I had no qualms about doling it out to others.`,
+                                    `that new recruits are made to go through. Having endured such abuse for so long myself, I finally concluded that I would't have toughened up any other way. And now I had no qualms about doling it out to others.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -868,7 +867,7 @@ export default {
                             anchor: `fail your Sita`,
                             todo: true,
                             card: {
-                                description: `Contemporary audiences tend to find it problematic that Rama's first act upon reuniting with Sita was to demand proof of her purity. But the same chauvinism is what prompted my need to be the more sexually experienced partner. I couldn't simply hold Sita with gratitude and accept whatever circumstances led up to such a moment.`,
+                                description: `Contemporary audiences tend to find it problematic that Rama's first act upon reuniting with Sita was to demand proof of her purity. But this same chauvinism is what prompted my need to be the more sexually experienced partner. I couldn't simply accept with gratitude the given circumstances that had to transpire for us to find each other.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -879,14 +878,7 @@ export default {
                             anchor: `repeat forevermore!`,
                             todo: true,
                             card: {
-                                description: [
-                                    `As I was making this album, a thought occurred to me. Like Rama, I too was now doomed to endlessly repeat my failures, as the story of how I betrayed my Sita, much like the`,
-                                    {
-                                        isItalic: true,
-                                        lyric: `Ramayana,`,
-                                    },
-                                    `would forever be retold.`,
-                                ],
+                                description: `As I was making this album, a thought occurred to me. Like Rama, I too was now doomed to endlessly repeat my failures, as the story of how I betrayed my Sita would also forever be retold.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -1107,7 +1099,6 @@ export default {
                                 {
                                     description: `"Marathon" sounds like Mara's full name spoken with a lisp.`,
                                     dotKeys: {
-                                        [BACKSTORY]: true,
                                         [PUN]: true,
                                     },
                                 },
@@ -1527,7 +1518,7 @@ export default {
                             anchor: `click track`,
                             wiki: `Click_track`,
                         },
-                        `of quarter-note beats that would arrive an eighth note ahead of the mix after seven measures. I then overlaid multiple vocal tracks in which I quietly took a breath at different points to give the impression of an uninterrupted take.`,
+                        `of quarter-note beats that would arrive an eighth note ahead of the mix after seven measures. I then overlaid multiple vocal tracks in which I quietly took a breath at different points to give the impression of a single uninterrupted take.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,

@@ -986,11 +986,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        {
-                            anchor: `Children's songs`,
-                            wiki: `Children's_music`,
-                        },
-                        `from the 70s are a treasure trove of musical wisdom. They were composed by professionals, but then arranged for the popular styles of that time. A great example is the soundtrack for`,
+                        `Children's songs from the 70s are a treasure trove of musical wisdom. They were composed by professionals, but then arranged for the popular styles of that time. A great example is the soundtrack for`,
                         {
                             anchor: `The New Mickey Mouse Club,`,
                             wiki: `The_Mickey_Mouse_Club`,

@@ -1,7 +1,7 @@
 # Bug
 
 # TODO
-* Make quotes smart.
+* Logic to make all quotes smart.
 * Hawaiian ornament
 * Beards on trolls
 * Potted plants in bedroom

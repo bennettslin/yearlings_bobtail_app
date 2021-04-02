@@ -30,7 +30,7 @@ export default {
     mixStartTime: `0:01:29.52`,
     playerStartTime: 1478.233,
     todo: true,
-    overview: `I worked my way through college as a dishwasher in a cafeteria, which is how I met Sita. After I scared her off, we didn't speak for several months, but she eventually reached out again, and we became friends. Throughout my continued struggles with dating, as well as my rough start in playing live shows, Sita lent her moral support, though I always wanted something more. At some point, she started to like me back. I'm still not sure how.`,
+    overview: `I worked my way through college as a dishwasher in a cafeteria, which is how I met Sita. After I scared her off, we didn't speak for several months, but she eventually reached out again, and we became friends. Throughout my continued struggles with dating, as well as my rough start in playing live shows, Sita lent her moral support, though all the while I wanted something more. At some point, she started to like me back. I'm still not sure how.`,
     isDoublespeaker: true,
     lyricUnits: [
         {
