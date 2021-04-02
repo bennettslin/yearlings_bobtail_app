@@ -14,8 +14,13 @@ export default [
     // Needed.
     {
         taskName: `Finish annotation edits.`,
-        workedHours: 81,
+        workedHours: 84,
         neededHours: 100,
+    },
+    {
+        taskName: `Smart quotes work.`,
+        workedHours: 1,
+        neededHours: 3,
     },
 
     // Ongoing, only nice to have.

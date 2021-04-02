@@ -18,6 +18,7 @@ import { ESCAPE, PITCH_TOGGLE_KEY } from '../../constants/access'
 import DeviceWrapper from '../../wrappers/DeviceWrapper'
 import AccessWrapper from '../../wrappers/AccessWrapper'
 import ResizeManager from '../../managers/Resize'
+import { ALBUM_TITLE } from '../../constants/paths'
 import './style'
 
 const PitchContainer = ({ children }) => {
@@ -116,7 +117,7 @@ const PitchContainer = ({ children }) => {
             }}
         >
             <Helmet>
-                <title>{`Pitch | Yearling's Bobtail`}</title>
+                <title>{`Pitch | ${ALBUM_TITLE}`}</title>
                 <meta
                     {...{
                         name: 'description',

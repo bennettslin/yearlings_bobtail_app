@@ -16,6 +16,7 @@ import {
     getMaxSceneCount,
     getMaxVerseCount,
 } from './helpers/count'
+import { formatLyricMetadata } from './helpers/format'
 import { addTip } from './helpers/tips'
 import { addVerseMetadata } from './helpers/verse'
 import { addWormholeMetadata } from './helpers/wormhole'
@@ -26,6 +27,8 @@ const annotationsList = []
 const songs = getSongIndicesArray().map(songIndex => {
     const song = {}
     let annotations
+
+    formatLyricMetadata(songIndex)
 
     const isLogue =
         addSongAndLogueMetadata(songIndex, song)
@@ -46,12 +49,8 @@ const songs = getSongIndicesArray().map(songIndex => {
             song,
         })
 
-        // TODO: Eventually delete this when all times are safely established.
+        // Safety check.
         verseStartTimes.forEach((startTime, index) => {
-            if (!index) {
-                return true
-            }
-
             if (startTime < verseStartTimes[index - 1]) {
                 throw new Error(`Verse ${index} has an earlier start time than the previous verse!`)
             }

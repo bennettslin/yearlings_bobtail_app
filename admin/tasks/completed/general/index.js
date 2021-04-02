@@ -4892,7 +4892,7 @@ export default [
         workedHours: 1,
     },
     {
-        taskName: `Have Bobtail Yearlings website use Gatsby, do the same as Yearling's Bobtail website.`,
+        taskName: `Have Bobtail Yearlings website use Gatsby, do the same as album website.`,
         workedHours: 5,
     },
     {

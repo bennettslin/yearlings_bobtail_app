@@ -68,7 +68,7 @@ export default {
                 {
                     mixTime: null,
                     lyric: {
-                        isEmphasis: true,
+                        isItalic: true,
                         lyric: [
                             `But F., that man is the`,
                             {
@@ -273,7 +273,7 @@ export default {
                 {
                     mixTime: `0:36:20.36`,
                     lyric: {
-                        isEmphasis: true,
+                        isItalic: true,
                         lyric: {
                             anchor: `Poor Sam Peabody!`,
                             card: {
