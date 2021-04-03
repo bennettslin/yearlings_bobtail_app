@@ -1,6 +1,7 @@
 # Bug
 
 # TODO
+* Make Garryowen a ghost?
 * Hawaiian ornament
 * Beards on trolls
 * Potted plants in bedroom
