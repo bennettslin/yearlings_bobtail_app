@@ -1,6 +1,7 @@
 # Bug
 
 # TODO
+* Position em and italic to left
 * Logic to make all quotes smart.
 * Hawaiian ornament
 * Beards on trolls
