@@ -1,7 +1,6 @@
 # Bug
 
 # TODO
-* Logic to make all quotes smart.
 * Hawaiian ornament
 * Beards on trolls
 * Potted plants in bedroom
@@ -23,6 +22,7 @@
 * Be smarter about memo.
 
 # Annotation edit TODO:
+* Cowpunk.
 * Constellation second chorus
 * Willy sparkles?
 * Carpenters thing?

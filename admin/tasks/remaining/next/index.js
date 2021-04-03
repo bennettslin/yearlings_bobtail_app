@@ -17,11 +17,6 @@ export default [
         workedHours: 90,
         neededHours: 100,
     },
-    {
-        taskName: `Smart quotes work.`,
-        workedHours: 1,
-        neededHours: 3,
-    },
 
     // Ongoing, only nice to have.
     {

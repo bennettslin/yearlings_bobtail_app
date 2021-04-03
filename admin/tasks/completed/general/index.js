@@ -5119,4 +5119,8 @@ export default [
         taskName: `Use local fonts again.`,
         workedHours: 1,
     },
+    {
+        taskName: `Smart quotes work.`,
+        workedHours: 3,
+    },
 ]

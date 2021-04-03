@@ -48,7 +48,7 @@ const TextSpan = ({
     if (
         !beginsVerse &&
         !isWikiTextAnchor &&
-        text.indexOf('\'s') !== 0
+        text.indexOf(`’s`) !== 0
     ) {
         formattedText = ` ${formattedText}`
     }

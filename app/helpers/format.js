@@ -104,7 +104,7 @@ const _getStringFromObject = textEntity => {
          */
         return textEntity.reduce((textString, textObject) => {
             const objectString = _getStringFromObject(textObject),
-                whiteSpace = objectString.indexOf('\'s') === 0 ? '' : ' '
+                whiteSpace = objectString.indexOf(`’s`) === 0 ? '' : ' '
 
             return textString + whiteSpace + objectString
         }, '')
@@ -124,7 +124,7 @@ const _getUncapitalisedText = text => {
 }
 
 const _beginsWithPronounI = text => {
-    return text.indexOf('I ') === 0 || text.indexOf('I\'') === 0
+    return text.indexOf(`I `) === 0 || text.indexOf(`I’`) === 0
 }
 
 const _getDeletedSpecialCharactersText = text => {
@@ -133,7 +133,7 @@ const _getDeletedSpecialCharactersText = text => {
         text = _getDeletedSpecialCharactersText(text.slice(0, text.length - 1))
 
     // Also eliminate special character right before a double quote.
-    } else if (text.charAt(text.length - 1) === '"' &&
+    } else if (text.charAt(text.length - 1) === `”` &&
                _hasSpecialCharacterAtIndex(text, text.length - 2)) {
         text = _getDeletedSpecialCharactersText(text.slice(0, text.length - 2) + text.slice(text.length - 1))
     }
@@ -142,6 +142,10 @@ const _getDeletedSpecialCharactersText = text => {
 }
 
 const _getDeletedWrappingCharactersText = text => {
+
+    // First replace all smart double quotes with straight quotes.
+    text = text.replace(/[\u201C\u201D]/g, '"')
+
     /**
      * Note that this only knows how to differentiate between one wrapping
      * character versus two.
@@ -182,7 +186,6 @@ const _hasSpecialCharacterAtIndex = (text, index) => {
         indexedChar === '!' ||
         indexedChar === ':' ||
         indexedChar === ';' ||
-        indexedChar === '—' ||
         indexedChar === '…'
 }
 

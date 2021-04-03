@@ -572,7 +572,7 @@ export default {
                                         anchor: `informant`,
                                         wiki: `Informant`,
                                     },
-                                    `would in a narcotics investigation.`,
+                                    `does in a narcotics investigation.`,
                                 ],
                             },
                         },
