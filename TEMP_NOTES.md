@@ -23,6 +23,7 @@
 * Be smarter about memo.
 
 # Annotation edit TODO:
+* Constellation second chorus
 * Willy sparkles?
 * Carpenters thing?
 * Golden Cord Bungalow Bill?
