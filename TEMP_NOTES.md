@@ -1,4 +1,5 @@
 # Bug
+* Grasshoppers Lie Heavy repeat includes some Constellations. Are there others?
 
 # TODO
 * Make Garryowen a ghost?

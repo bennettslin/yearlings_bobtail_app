@@ -29,8 +29,8 @@ export default {
     referenceDescription: `"L." in anacrusis`,
     mixStartTime: `0:01:29.52`,
     playerStartTime: 1478.233,
-    todo: true,
-    overview: `I worked my way through college as a dishwasher in a cafeteria, which is how I met Sita. After I scared her off, we didn't speak for several months, but she eventually reached out again, and we became friends. Throughout my continued struggles with dating, as well as my rough start in playing live shows, Sita lent her moral support, though all the while I wanted something more. At some point, she started to like me back. I'm still not sure how.`,
+    phrasingTodo: true,
+    overview: `I worked my way through college as a dishwasher, which is how I met Sita. After I scared her off, we didn't speak for months, but she then reached out again, and we became friends. Throughout my continued struggles with dating, as well as my rough start in playing live shows, Sita lent her moral support, though all the while I wanted something more. At some point, she started to like me back. I'm still not sure how.`,
     isDoublespeaker: true,
     lyricUnits: [
         {
@@ -103,7 +103,7 @@ export default {
                                 anchor: `pompous autumn waits.`,
                                 cards: [
                                     {
-                                        description: `In high school, I continued on as the same unlikable nobody I'd been in middle school. It just didn't seem possible to remake myself into someone new while surrounded by all the same classmates. But all the while I was crafting a future persona of a self-assured artist that was raring to go as soon as I could leave Los Angeles.`,
+                                        description: `In high school, I continued on as the same unliked nobody I'd been in middle school. It just didn't seem possible to remake myself into someone new while surrounded by all the same classmates. But all the while I was crafting a future persona of a self-assured artist that was raring to go as soon as I could leave Los Angeles.`,
                                         dotKeys: {
                                             [BACKSTORY]: true,
                                             [OBSERVATION]: true,
@@ -180,8 +180,14 @@ export default {
                         `noses in`,
                         {
                             anchor: `penny dreadfuls.`,
-                            todo: true,
+                            phrasingTodo: true,
                             cards: [
+                                {
+                                    description: `The only way for me to even the score was to feel disdain for the popular books and music they consumed.`,
+                                    dotKeys: {
+                                        [BACKSTORY]: true,
+                                    },
+                                },
                                 {
                                     description: [
                                         `In 19th-century England, a market emerged for cheap, sensational novellas, which the highbrow derided as`,
@@ -191,12 +197,6 @@ export default {
                                         },
                                     ],
                                 },
-                                {
-                                    description: `But I could even the score by showing the same disdain for the tacky books and music they consumed.`,
-                                    dotKeys: {
-                                        [BACKSTORY]: true,
-                                    },
-                                },
                             ],
                         },
                     ],
@@ -204,7 +204,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
+                contentTodo: true,
                 card: {
                     description: [
                         {
@@ -235,9 +235,8 @@ export default {
                         `death of`,
                         {
                             anchor: `dull dishroom days`,
-                            todo: true,
                             card: {
-                                description: `I got a job washing dishes at a dormitory cafeteria. The work was uneventful and offered no social interaction, but that was its appeal to me. I could sit and read while the dishes piled up, then in a mad rush I would clean them all at once. During the busiest times, I would switch to writing song lyrics in my head.`,
+                                description: `I got a job washing dishes at a university cafeteria. The work was uneventful and offered no social interaction, but that was its appeal to me. At the start of the shift, I would sit and read while the dishes piled up, then clean them all at once in a mad rush. As it got busy, I would switch to writing song lyrics in my head.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -251,9 +250,9 @@ export default {
                         `stalled by`,
                         {
                             anchor: `keys left on dumbwaiter trays.`,
-                            todo: true,
+                            phrasingTodo: true,
                             card: {
-                                description: `The students would bus their trays, which were then transported by conveyor belt to the dishroom. Every so often, someone would accidentally leave a personal item on their tray and come down to retrieve it. I always got a kick when that happened. They were always grateful, and sometimes they were cute.`,
+                                description: `The students would bus their trays in carriages attached to a conveyor system, which would then transport the trays down into the dishroom. Every so often, someone would accidentally leave a personal item and come downstairs to retrieve it. The dishroom workers would get a kick when that happened, since the students were always grateful.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -280,7 +279,6 @@ export default {
                         `to`,
                         {
                             anchor: `fetch her lancet pen,`,
-                            todo: true,
                             card: {
                                 description: [
                                     `As a`,
@@ -308,18 +306,12 @@ export default {
                         `and stunned, by`,
                         {
                             anchor: `reflex you asked.`,
-                            todo: true,
+                            phrasingTodo: true,
                             cards: [
                                 {
-                                    description: `By then, I was mostly on autopilot when it came to hitting on random women in random situations.`,
+                                    description: `By then, I was mostly on autopilot when it came to hitting on random women in random situations. But stunned by Sita's beauty, I made a particular effort to succeed. So after handing her the lancet pen, I began to engage in conversation.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
-                                    },
-                                },
-                                {
-                                    description: `Taken aback by her beauty, I hand Sita the lancet pen and begin to engage her in conversation.`,
-                                    dotKeys: {
-                                        [NARRATIVE]: true,
                                     },
                                 },
                             ],
@@ -332,7 +324,6 @@ export default {
                         `At first she hedged, but then`,
                         {
                             anchor: `laying qualms to rest:`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -341,7 +332,7 @@ export default {
                                             anchor: `vocational rehabilitation`,
                                             wiki: `Vocational_rehabilitation`,
                                         },
-                                        `program. For this reason, along with feeling unfairly ambushed, Sita was hesitant to say yes to a date. But as we chatted, my taste in literature and knowledge of the alternative culture ultimately won her over.`,
+                                        `program. For this reason, along with feeling somewhat ambushed, Sita was hesitant to say yes to a date. But as we chatted, I won her over with my taste in literature and familiarity with the alternative culture.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -360,7 +351,6 @@ export default {
                         {
                             anchor: `Schwa stickers`,
                             properNoun: true,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -368,7 +358,7 @@ export default {
                                             anchor: `Schwa`,
                                             wiki: `Schwa_(art)`,
                                         },
-                                        `is the underground artwork of William Barker. In the late 90s, his oblong alien heads popped up on print media everywhere. A friend who worked in a record store gave me a few stickers, though at the time I had no idea what they were.`,
+                                        `is the artwork of William Barker. In the 90s, his oblong alien heads began popping up in the underground press. A friend who worked at a record store gave me a few stickers, which I randomly affixed to my belongings.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -382,10 +372,9 @@ export default {
                         `attached to your`,
                         {
                             anchor: `sci-fi paperback.`,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `At the time, I was obsessed with Philip K. Dick's stories of altered states and dystopian worlds, and I never left home without one of his novels under my arm.`,
+                                    description: `At the time, I was obsessed with Dick's stories of altered states and dystopian worlds. I never left home without one of his novels under my arm.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -411,10 +400,9 @@ export default {
                         `First date`,
                         {
                             anchor: `nosebleed`,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `As I was picking Sita up on our first date, my nose started to bleed. This prompted me to recount some fights in middle school that ended with me suffering a bloody nose.`,
+                                    description: `When I picked Sita up on our first date, my nose started to bleed. This prompted me to recount some fights in middle school that ended with me suffering a bloody nose.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -427,7 +415,6 @@ export default {
                         `spurs tales of`,
                         {
                             anchor: `bare-knuckle defeats…`,
-                            todo: true,
                             cards: [
                                 {
                                     description: `Sita seemed intrigued by my rough-and-tumble past, despite my honest admission that these were literal beatdowns in which I never threw a single punch.`,
@@ -463,9 +450,8 @@ export default {
                         `Her`,
                         {
                             anchor: `show played in mimes,`,
-                            todo: true,
                             card: {
-                                description: `The world of dating was awash in silent cues that, as far as I knew, no one could be expected to deduce or understand. So I desperately wanted everything to be plainly spelled out, and it baffled me that I was alone in feeling this way.`,
+                                description: `The world of dating was awash in silent cues that, as far as I knew, no one could be expected to understand or deduce. I desperately wanted everything to be spelled out, and it baffled me that I was alone in feeling this way.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -481,9 +467,8 @@ export default {
                         `Then just like the drift,`,
                         {
                             anchor: `she disappeared…`,
-                            todo: true,
                             card: {
-                                description: `Shortly after our third date, I called Sita to tell her I was in love with her. She admitted that she didn't feel the same way, yet wanted to remain friends. We hung up with the understanding that I would continue to invite her out for casual excursions. But I felt so dejected and embarrassed that I gave up altogether on seeing her again.`,
+                                description: `Shortly after our third date, I called Sita to tell her I was in love with her. She admitted that she didn't feel the same way, yet wanted to remain friends. We hung up with the understanding that I would continue to invite her out for casual excursions. But I felt so dejected that I gave up altogether on seeing her again.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -504,10 +489,9 @@ export default {
                         `Alone his first gig,`,
                         {
                             anchor: `stagefright ignites.`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `During this time, I began to perform at local`,
+                                    `During this time, I began performing at local`,
                                     {
                                         anchor: `coffee shops`,
                                         wiki: `Coffeehouse`,
@@ -517,10 +501,10 @@ export default {
                                         anchor: `singer-songwriter`,
                                         wiki: `Singer-songwriter`,
                                     },
-                                    `nights. My first few attempts were a disaster, but I eventually learned to conquer my stagefright with just the right amount of alcohol.`,
+                                    `nights. My first few attempts were a disaster, but I learned to conquer my stagefright with just the right amount of alcohol.`,
                                 ],
                                 dotKeys: {
-                                    [NARRATIVE]: true,
+                                    [BACKSTORY]: true,
                                 },
                             },
                         },
@@ -529,7 +513,7 @@ export default {
                         `With no`,
                         {
                             anchor: `sister ship`,
-                            todo: true,
+                            phrasingTodo: true,
                             card: {
                                 description: [
                                     `The`,
@@ -553,7 +537,7 @@ export default {
                                         anchor: `German navy`,
                                         wiki: `Kriegsmarine`,
                                     },
-                                    `in World War II. Sita and I are fighting for the Axis in this analogy, since they were history's heroes in`,
+                                    `in World War II. In this analogy, Sita and I fight for the Axis, who were history's heroes in`,
                                     {
                                         isItalic: true,
                                         lyric: `The Man in the High Castle,`,
@@ -574,9 +558,9 @@ export default {
                         `But`,
                         {
                             anchor: `no convert's missed,`,
-                            todo: true,
+                            phrasingTodo: true,
                             card: {
-                                description: `In asking for the largest payments upfront, the mail-order cult correctly guessed that I would grow disillusioned sooner rather than later. Sita's abrupt departure from my life, after she had profoundly made an impact, seemed like evidence that I was once again a sucker for the perfect scam.`,
+                                description: `In asking for the largest payments upfront, RI Research correctly guessed that I would grow disillusioned sooner rather than later. Sita's abrupt departure from my life, after making such a profound impact, seemed like evidence that I was once again a sucker for the perfect scam.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -595,7 +579,6 @@ export default {
                                 },
                                 `lies.`,
                             ],
-                            todo: true,
                             card: {
                                 wormhole: `sunken_tirpitz`,
                             },
@@ -605,7 +588,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: `Since the lyrics in this song are a microcosm of the whole album, I threw in some doublespeaker rhyme here.`,
                     dotKeys: {
@@ -629,9 +611,8 @@ export default {
                         `Tonight, just`,
                         {
                             anchor: `sour grapes, bitter sweets`,
-                            todo: true,
                             card: {
-                                description: `At the end of each shift, I would head to the dining area to scavenge enough leftovers for my next meal. Busy days were doubly cruel because after staying late and working myself to exhaustion, I could only pick from the dried-out scraps that no one else wanted.`,
+                                description: `At the end of each shift, I would head to the dining area to scavenge enough leftovers for my next meal. Busy days were doubly cruel because after staying late and working myself to exhaustion, all that was left to pick through were the dried-out scraps that no one else wanted.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -673,7 +654,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Phantom limbs`,
-                            todo: true,
                             card: {
                                 description: [
                                     `A`,
@@ -681,7 +661,7 @@ export default {
                                         anchor: `phantom limb`,
                                         wiki: `Phantom_limb`,
                                     },
-                                    `is the sensation that a missing limb is still attached and responsive. And an amputation is what it feels like to spend my weekends alone, with no prospects on the horizon, after several weeks of giddy hope.`,
+                                    `is the sensation that a missing limb is still attached and responsive. As I walk home from the cafeteria, an amputation is what it feels like to spend the coming weekend alone after several weeks of giddy hope.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -698,10 +678,9 @@ export default {
                         `them`,
                         {
                             anchor: `tripped on runner's high.`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `After a grueling shift, all I could look forward to was the long slog back home. So it would have been hard to feel gracious toward any nighttime jogger passing me by and feeling the euphoria of a`,
+                                    `After a grueling shift, I then had to make the long slog back home. So it would have been hard to feel gracious toward any nighttime jogger passing me by and feeling the euphoria of a`,
                                     {
                                         anchor: `runner's high.`,
                                         wiki: `Neurobiological_effects_of_physical_exercise`,
@@ -721,7 +700,6 @@ export default {
                         `Below the`,
                         {
                             anchor: `window of your Walkman`,
-                            todo: true,
                             card: {
                                 description: [
                                     `In those days, I was almost never without my`,
@@ -753,13 +731,20 @@ export default {
                         `Your gate code punched, when a`,
                         {
                             anchor: `looming shadow nears,`,
-                            todo: true,
-                            card: {
-                                description: `My apartment lies along the path between the campus and Sita's boarding house. As it so happens, Sita has also been heading home at this time. Having spotted me from a short distance behind, she debates whether to flag me down. As I turn to unlock the apartment gate, I notice her presence. A few seconds awkwardly pass, as neither of us is sure what to say next.`,
-                                dotKeys: {
-                                    [NARRATIVE]: true,
+                            cards: [
+                                {
+                                    description: `There was a common path to the campus between my apartment and Sita's boarding house.`,
+                                    dotKeys: {
+                                        [BACKSTORY]: true,
+                                    },
                                 },
-                            },
+                                {
+                                    description: `As it happens, Sita has also been heading home at this time. Having spotted me from a distance behind, she debates whether to flag me down. As I turn to face the apartment gate, I notice her presence. A few seconds awkwardly pass, with neither of us sure what to say next.`,
+                                    dotKeys: {
+                                        [NARRATIVE]: true,
+                                    },
+                                },
+                            ],
                         },
                     ],
                 },
@@ -786,9 +771,8 @@ export default {
                         `"Hey, you know`,
                         {
                             anchor: `you're my password?"`,
-                            todo: true,
                             card: {
-                                description: `Watching as I enter the passcode for the gate, Sita breaks the ice by mentioning that a topic we once discussed became the basis of a password she recently created.`,
+                                description: `As I enter the passcode for the gate, Sita breaks the ice by mentioning that a topic we once discussed was the basis for a password she recently created.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -814,9 +798,8 @@ export default {
                         `She`,
                         {
                             anchor: `locks your arm.`,
-                            todo: true,
                             card: {
-                                description: `Upon my invitation to warm up inside my apartment, Sita shivers and gladly tucks her hand underneath my arm. Of course, it doesn't mean what I so badly want it to mean. And so I feel like an escaped convict who has just been captured and locked in handcuffs.`,
+                                description: `Seeing Sita shiver from the cold, I invite her to warm up inside my apartment. In response, she gladly tucks her hand under my arm. Of course, it doesn't mean what I so badly want it to mean. And so it feels like I'm an escaped convict who's just been recaptured and put in handcuffs.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -825,7 +808,6 @@ export default {
                         },
                         {
                             anchor: `Key turned,`,
-                            todo: true,
                             cards: [
                                 {
                                     description: `As we catch up on recent happenings, I unlock the door to my apartment. But with Sita clinging tightly to my arm, it feels more like I'm being directed into a holding cell.`,
@@ -840,9 +822,8 @@ export default {
                         },
                         {
                             anchor: `returned to your guard…`,
-                            todo: true,
                             card: {
-                                description: `And just like that, I am once again on guard. I have to second-guess everything I say and do around Sita, like a prisoner conversing with a jail guard.`,
+                                description: `Just like that, I'm once again on guard, second-guessing everything I say to Sita like a prisoner conversing with a jail guard.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -864,9 +845,8 @@ export default {
                         `In her`,
                         {
                             anchor: `gingerbread prison,`,
-                            todo: true,
                             card: {
-                                description: `While being stuck in a platonic friendship with Sita will never fulfill me, it might still be sweet to nibble on.`,
+                                description: `But while being stuck in a platonic friendship with Sita will never fulfill me, it might still be sweet to nibble on.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -882,9 +862,8 @@ export default {
                         `Though`,
                         {
                             anchor: `never full, you're fed;`,
-                            todo: true,
                             card: {
-                                description: `Like a tired fugitive relieved to come back to a warm bed and regular meals, I have to concede that being just friends with Sita is still better than the cold, bleak alternative.`,
+                                description: `Like a tired fugitive relieved to come back to a warm bed and regular meals, I have to concede that being just friends is still better than the cold, bleak alternative.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -894,10 +873,9 @@ export default {
                         `so you`,
                         {
                             anchor: `hit the switch.`,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `As these thoughts swirl in my head, I turn on the light switch in my apartment.`,
+                                    description: `With these thoughts swirling in my head, I flip on the light switch in my apartment.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -915,11 +893,10 @@ export default {
                         `On your bed's rumpled linens, a`,
                         {
                             anchor: `lidless Vaseline sits.`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
-                                        `On my bed is an open jar of`,
+                                        `Lying on my bed is an open jar of`,
                                         {
                                             anchor: `Vaseline,`,
                                             wiki: `Vaseline`,
@@ -943,7 +920,6 @@ export default {
                         `"Shall I leave you," she says,`,
                         {
                             anchor: `"here to Philip Dick?"`,
-                            todo: true,
                             card: {
                                 description: `Or else, to "feel up dick." Sita lightens the awkwardness by joking that I might prefer to continue masturbating alone. At the same time, she takes a gentle jab at the bookish exterior I've carefully crafted.`,
                                 dotKeys: {
@@ -957,7 +933,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `For me, the highlight of`,
@@ -977,7 +952,7 @@ export default {
                             anchor: `Kurt Cobain`,
                             wiki: `Kurt_Cobain`,
                         },
-                        `kicks the last third of "Lounge Act" into high gear by singing the same melody an octave higher. I'd always wanted to recreate this effect but could never do so, because the melodies I write tend to span my whole vocal range. So when I realized the chorus melody for this song stays within a single register throughout, I made it work.`,
+                        `kicks the last third of "Lounge Act" into high gear by singing the same melody an octave higher. I'd always wanted to recreate this effect but could never do so, since the melodies I write tend to span my whole vocal range. So when I realized the chorus melody for this song stays within a single register throughout, I made it work.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -996,7 +971,6 @@ export default {
                         `Thoughts sift in the`,
                         {
                             anchor: `waiting room:`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -1005,7 +979,7 @@ export default {
                                             anchor: `hypoglycemic`,
                                             wiki: `Hypoglycemia`,
                                         },
-                                        `episode. I drove her to the hospital and sat in the waiting area while she was being examined.`,
+                                        `episode. I drove her to the hospital and sat in the waiting area as she was being examined.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -1015,7 +989,6 @@ export default {
                                     description: `Traditionally, the groom's entrance into the "wedding" room begins the ceremony. He then stands and waits for the bride to close the procession.`,
                                     dotKeys: {
                                         [PUN]: true,
-                                        [REFERENCE]: true,
                                     },
                                 },
                             ],
@@ -1028,10 +1001,9 @@ export default {
                         `Why does she play`,
                         {
                             anchor: `bright to your gloom`,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `When we first met, what I stood to gain from Sita was obvious. Less so was what she gained from me, given my moody temperament. But as our friendship grew, I came to see that her cheery nature actually masked a lingering depression, which gave me an opening to win her over with simple, kind gestures.`,
+                                    description: `As we became friends, what I stood to gain from Sita was obvious. Less so was what she gained from me, given my moody temperament. But in time I came to see that her cheery nature actually masked a lingering depression, which gave me an opening to win her over with simple, kind gestures.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -1053,9 +1025,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
-                    description: `To faithfully represent in miniature the lyrics of the album as a whole, this song also couldn't have gone without an entire section of groan-inducing puns.`,
+                    description: `To faithfully represent in miniature the lyrics of the album as a whole, this song couldn't have gone without a section of groan-inducing puns.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
@@ -1080,10 +1051,9 @@ export default {
                         `and the`,
                         {
                             anchor: `organ on which it struck,`,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `As the minutes tick away, I become worried that Sita's diagnosis might be as severe as organ failure.`,
+                                    description: `As the minutes tick away, I worry that Sita's diagnosis might be as severe as organ failure.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -1132,10 +1102,9 @@ export default {
                         },
                         {
                             anchor: `with a ring.`,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `Having dozed off, I am roused by the ringing of a bell to indicate that a patient has been released from care and is returning to the waiting area.`,
+                                    description: `Having dozed off, I'm roused by the ringing of a bell to indicate that a patient has been released from care and is returning to the waiting area.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -1160,7 +1129,6 @@ export default {
                         `In her`,
                         {
                             anchor: `white gown,`,
-                            todo: true,
                             card: {
                                 description: `White gowns are common attire in both wedding ceremonies and hospitals.`,
                                 dotKeys: {
@@ -1177,7 +1145,6 @@ export default {
                         `and you marvel, glimmer of her`,
                         {
                             anchor: `cheek unveiled.`,
-                            todo: true,
                             cards: [
                                 {
                                     description: `Glancing up, I'm startled to find Sita hovering over me with a cheeky smile. Having quietly unclasped her purse from my grip, she returns to the treatment area, but not before inadvertently flashing some "cheek" from beneath her revealing hospital gown.`,
@@ -1208,9 +1175,8 @@ export default {
                     mixTime: `3:15:03.58`,
                     lyric: {
                         anchor: `She loves you…`,
-                        todo: true,
                         card: {
-                            description: `It took a long, long while for Sita and I to become fully comfortable with each other. At the start of our yearlong friendship, we mostly just studied together at the library. Then slowly, short treks through campus progressed into long strolls around the neighborhood, which soon led up to leaning in closer on the couch. It all happened so fast toward the end that I was still processing what exactly had triggered it.`,
+                            description: `It took a long while for Sita and I to be fully comfortable with each other. At the start of our yearlong friendship, we mostly just studied together at the library. Then slowly, short treks through campus progressed into long strolls around the neighborhood, which soon led up to leaning in closer on the couch. It all happened so fast toward the end that I was still processing what exactly had triggered it.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                             },
@@ -1231,10 +1197,9 @@ export default {
                         `You`,
                         {
                             anchor: `stand unsure.`,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `The night we decided to have sex, I was overcome with a weary unease that I couldn't explain. As Sita lay naked while comforting me with her gaze, I stood forlornly by the bedside for what seemed like several minutes.`,
+                                    description: `The night we decided to have sex, I was overcome with a wary unease that I couldn't explain. As Sita lay naked while comforting me with her gaze, I stood forlornly by the bedside for what seemed like several minutes.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -1257,7 +1222,6 @@ export default {
                         `you wear your`,
                         {
                             anchor: `hard-on in a sleeve."`,
-                            todo: true,
                             card: {
                                 description: `Pointing to the condom on my erection, Sita lightens the mood by feigning to agree with a past self-assessment of mine that I wear my "heart on" my sleeve.`,
                                 dotKeys: {
@@ -1274,7 +1238,6 @@ export default {
                         `So`,
                         {
                             anchor: `how's that compromise?`,
-                            todo: true,
                             card: {
                                 description: `Having taken such pains to tuck away my emotions for so long, I was suddenly hesitant to compromise the safety of this position. I just didn't want to be vulnerable again, and I had so little faith that my desires wouldn't backfire on me as they had the first time I revealed them.`,
                                 dotKeys: {
@@ -1288,9 +1251,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
-                    description: `The ascending chord progression initially signifies a blossoming relationship. Toward the end, it symbolizes sexual climax.`,
+                    description: `The ascending chord progression of this coda initially suggests a blossoming relationship. Toward the end, it symbolizes sexual climax.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
@@ -1318,7 +1280,7 @@ export default {
                         {
                             anchor: `Grace Darling's beacon`,
                             properNoun: true,
-                            todo: true,
+                            phrasingTodo: true,
                             cards: [
                                 {
                                     description: [
@@ -1326,15 +1288,13 @@ export default {
                                             anchor: `Grace Darling`,
                                             wiki: `Grace_Darling`,
                                         },
-                                        `was a lighthouse keeper's daughter who rescued the survivors of a shipwreck by paddling out to sea in a rowboat. This brave feat won her renown in the Victoria era, but the consequent public exposure led to her early death by`,
+                                        `was a lighthouse keeper's daughter who rescued the survivors of a shipwreck by paddling out to sea in a rowboat. This brave feat won her renown in the Victorian era, but the consequent public exposure led to her early death by`,
                                         {
                                             anchor: `tuberculosis.`,
                                             wiki: `Tuberculosis`,
                                         },
+                                        `And as Sita comforts me, I'm reminded that she's my "grace darling," having rescued me from a sea of loneliness.`,
                                     ],
-                                },
-                                {
-                                    description: `I'm reminded that Sita is my "grace darling," having rescued me from a sea of loneliness.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true,
@@ -1348,7 +1308,6 @@ export default {
                         `light`,
                         {
                             anchor: `fell an oar.`,
-                            todo: true,
                             card: {
                                 description: [
                                     `Or else, fell "Lenore."`,
@@ -1376,9 +1335,8 @@ export default {
                         `Let`,
                         {
                             anchor: `pure lose to pure…`,
-                            todo: true,
                             card: {
-                                description: `Sita and I were both virgins, which ultimately made it easier to lower my defenses. I had to remind myself that neither of us really knew what we were doing.`,
+                                description: `Sita and I were both virgins, which made it easier to lower my defenses. I had to remind myself that neither of us really knew what we were doing.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -1401,7 +1359,6 @@ export default {
                         `You`,
                         {
                             anchor: `stroke her temples.`,
-                            todo: true,
                             card: {
                                 description: [
                                     `Referring to her literal`,
@@ -1409,7 +1366,7 @@ export default {
                                         anchor: `temples.`,
                                         wiki: `Temple_(anatomy)`,
                                     },
-                                    `But possibly her figurative ones as well.`,
+                                    `But possibly to her figurative ones as well.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1455,7 +1412,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `The French expression`,
@@ -1466,7 +1422,7 @@ export default {
                                 wiki: `La_petite_mort`,
                             },
                         },
-                        `which translates to "the little death," refers to a feeling of melancholic transcendence after orgasm. As such, even as the chords continue to rise, the lead guitar plays a falling riff, before everything cuts away to Odin's theme, a reminder of the house cat who died in my youth.`,
+                        `which translates to "the little death," refers to a feeling of melancholic transcendence after orgasm. So as the chords continue to rise, the lead guitar plays a falling riff, before everything cuts away to Odin's theme, a reminder of the house cat that died in my youth.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
