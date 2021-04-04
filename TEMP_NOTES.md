@@ -2,6 +2,7 @@
 
 # TODO
 * Make Garryowen a ghost?
+* Miriam breast in banjo scene weird?
 * Hawaiian ornament
 * Beards on trolls
 * Potted plants in bedroom
