@@ -228,15 +228,14 @@ export default {
                         `Now your`,
                         {
                             anchor: `sapling cut`,
-                            phrasingTodo: true,
                             card: {
                                 description: [
-                                    `A sapling that survives its first winter will have earned its first`,
+                                    `If a sapling survives the winter, it's rewarded with its first`,
                                     {
-                                        anchor: `tree ring.`,
+                                        anchor: `tree ring,`,
                                         wiki: `Dendrochronology`,
                                     },
-                                    `While normally hidden from view, this ring would be plainly revealed by any deep, gaping cuts the sapling has endured along the way.`,
+                                    `which will be visible to all through any gaping wounds it has endured along the way.`,
                                 ],
                             },
                         },
@@ -297,9 +296,8 @@ export default {
                         `you rode, so on`,
                         {
                             anchor: `spite you thrive.`,
-                            phrasingTodo: true,
                             card: {
-                                description: `This casual view of hardship is what later prompted me to justify the pain my ambitions brought upon Sita.`,
+                                description: `But this casual view of hardship is what later enabled me to justify the pain I caused Sita.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -313,7 +311,7 @@ export default {
                 phrasingTodo: true,
                 card: {
                     description: [
-                        `When I asked Owen to recommend some great lyricists, he pointed me to`,
+                        `When I asked Owen to recommend some good lyricists, he pointed me to`,
                         {
                             anchor: `Nas.`,
                             wiki: `Nas`,
@@ -412,7 +410,7 @@ export default {
                             phrasingTodo: true,
                             cards: [
                                 {
-                                    description: `A few songs into my band's set, I watch as an attractive latecomer and her friends make their way through a packed room.`,
+                                    description: `A few songs into my band's set, I watch from onstage as an attractive latecomer and her friends make their way through a packed room.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -477,9 +475,8 @@ export default {
                     lyric: [
                         {
                             anchor: `"Great show,"`,
-                            phrasingTodo: true,
                             card: {
-                                description: `The best time to hit on someone is right after you've played your set. They've just spent the last half hour of their life making you the center of their universe, while surrounded by numerous others doing the same. So as expected, I find the redheaded woman to be warm and flirtatious when we finally chat.`,
+                                description: `The best time to hit on someone is right after you've played a set. They've just spent the last half hour making you the center of their universe, in a crowd of others who've just done the same. So as expected, I find the redheaded woman to be flirtatious when we chat.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -739,7 +736,7 @@ export default {
                             anchor: `poor, poor bears.`,
                             phrasingTodo: true,
                             card: {
-                                description: `His wife Alison then sighs in response, "Poor, poor bears," recognizing that he, a bear in their mutual fantasy, is also a victim complying helplessly within the same power dynamic, over which neither possesses much control.`,
+                                description: `His wife Alison then sighs in response, "Poor, poor bears," recognizing that he, a bear in their mutual fantasy, is just as much a victim in their unequal power dynamic over which neither possesses control.`,
                                 dotKeys: {
                                     [REFERENCE]: true,
                                 },
@@ -801,7 +798,7 @@ export default {
                             phrasingTodo: true,
                             card: {
                                 description: [
-                                    `I relinquish my chance to get to know the redhead. Not just because it's past`,
+                                    `I relinquish my chance to know the redhead. Not just because it's past`,
                                     {
                                         anchor: `last call,`,
                                         wiki: `Last_call_(bar_term)`,
@@ -811,7 +808,7 @@ export default {
                                         anchor: `Budweisers`,
                                         wiki: `Budweiser`,
                                     },
-                                    `in me to reach the desired level of affability. It's also too late for me to present myself as someone who isn't in a sexual relationship with his best friend. I can't just unscrew a "bud" at will.`,
+                                    `in me to reach the desired level of affability. It's also too late to present myself as someone who isn't already in a relationship with his best friend. I can't just unscrew a "bud" at will.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

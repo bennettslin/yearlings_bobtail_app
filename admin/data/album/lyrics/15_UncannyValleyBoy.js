@@ -86,7 +86,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 phrasingTodo: true,
                 card: {
-                    description: `I wrote the music for this song a while back, upon waking from a horrid nightmare that I badly needed to retell. I quickly shelved it after all my attempts to describe the nightmare only elicited laughter. Years later, I realized its gloomy chords and disjointed tempo changes could be repurposed for a song that plays out as a lecture delivered by a nightmarish version of my parents.`,
+                    description: `I wrote the music for this song a while back after waking from a horrid nightmare that I badly needed to retell. But I shelved it after all my attempts to describe the nightmare only elicited laughter. Years later, I realized its gloomy chords and disjointed tempo changes could be repurposed into a song about a lecture from a nightmarish version of my parents, and I brought it back out.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGCRAFT]: true,
@@ -123,7 +123,6 @@ export default {
                         `come`,
                         {
                             anchor: `wax prophetic`,
-                            phrasingTodo: true,
                             cards: [
                                 {
                                     description: [
@@ -136,7 +135,7 @@ export default {
                                             anchor: `A Christmas Carol,`,
                                             wiki: `A_Christmas_Carol`,
                                         },
-                                        `my parents invite me on a magical night journey to witness the painful ordeals of my past, my self-serving ways in the present, and the emotional devastation that will soon come of it all.`,
+                                        `my parents invite me on a magical night journey to witness the ordeals of my past, my self-serving ways at present, and the emotional devastation soon to come of it all.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -311,7 +310,7 @@ export default {
                                         anchor: `"endorphined"`,
                                         wiki: `Endorphins`,
                                     },
-                                    `in my perpetually inebriated state, I can live as a virtual orphan, in denial of having parents whose high expectations I fail to meet.`,
+                                    `in my perpetually inebriated state allows me to live as a virtual orphan, in denial of having parents whose high expectations I fail to meet.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -345,7 +344,7 @@ export default {
                             anchor: `earth right now your tourist store…`,
                             phrasingTodo: true,
                             card: {
-                                description: `My mother once filled my head with visions of being a great artist. The mail-order cult then piled on the belief that I was a mere visitor to this planet. The lasting effect on my psyche is that I would be unaffected by earthly concerns, preferring instead to work tirelessly "to restore" my "birthright" of artistic renown.`,
+                                description: `My mother once filled my head with visions of being a great artist. The mail-order cult then piled on the belief that I was a mere visitor to this planet. The lasting effect on my psyche was that I became unaffected by earthly concerns, preferring instead to work tirelessly "to restore" my "birthright" of artistic renown.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -402,7 +401,7 @@ export default {
                                         anchor: `Inhalants`,
                                         wiki: `Inhalant`,
                                     },
-                                    `were the scary youth trend of my middle school years. To remain unresponsive to the bullies' threats, I had to keep that way in general. Eventually, someone thought I must be huffing paint, and I got called into the principal's office.`,
+                                    `were the scary youth trend of my middle school years. To remain unresponsive to the bullies' threats, I had to be slow to respond in general. Eventually, someone thought I must be huffing paint, and I got called into the principal's office.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -565,7 +564,6 @@ export default {
                         `But then, my`,
                         {
                             anchor: `little prince,`,
-                            phrasingTodo: true,
                             card: {
                                 description: [
                                     {
@@ -579,7 +577,7 @@ export default {
                                             wiki: `The_Little_Prince`,
                                         },
                                     },
-                                    `is about a young prince who lives on a small planet. On his journey to Earth, the prince keenly observes the absurdities of the adult world, and learns a poignant lesson of his own on love and loss.`,
+                                    `is about a young prince who lives with a rose on a small planet. On his journey to Earth, the prince keenly observes the foibles of the adults he encounters. Then during his stay, a fox teaches him a poignant lesson on love and loss.`,
                                 ],
                             },
                         },
@@ -615,12 +613,12 @@ export default {
                                         anchor: `shell game`,
                                         wiki: `Shell_game`,
                                     },
-                                    `is a classic swindle in which a ball is placed under three nutshells, which are then shuffled in plain view. Typically,`,
+                                    `is a classic swindle in which a ball is placed under one of three nutshells that are then shuffled in plain view. Having recognized life to be an endless series of shell games, I vowed to never get suckered again. And knowing now how the ball is misplaced through`,
                                     {
-                                        anchor: `sleight of hand`,
+                                        anchor: `sleight of hand,`,
                                         wiki: `Sleight_of_hand`,
                                     },
-                                    `is used to misplace the ball. Having recognized life to be an endless series of shell games, I vowed to never get suckered again. And now, maybe I could be the one to do some grifting myself.`,
+                                    `I could even do some grifting myself.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -644,7 +642,6 @@ export default {
                 {
                     lyric: {
                         anchor: `Scattered your beans`,
-                        phrasingTodo: true,
                         card: {
                             description: [
                                 `The nightmare began with me scattering magic beans all around the neighborhood. It was clearly based on the English`,
@@ -698,12 +695,12 @@ export default {
                             phrasingTodo: true,
                             card: {
                                 description: [
-                                    `Some organizations are infamous for the degrading`,
+                                    `Some organizations make their new recruits go through degrading`,
                                     {
-                                        anchor: `hazing rituals`,
+                                        anchor: `hazing rituals.`,
                                         wiki: `Hazing`,
                                     },
-                                    `that new recruits are made to go through. Having endured such abuse for so long myself, I finally conceded that I could't have toughened up any other way. And now I had no qualms about doling it out to others.`,
+                                    `Having endured such abuse for so long myself, I finally conceded that I could't have toughened up any other way. And now I had no qualms about doling it out to others.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -719,10 +716,9 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                phrasingTodo: true,
                 card: {
                     description: [
-                        `I wanted to recreate the`,
+                        `I wanted to mimic the`,
                         {
                             anchor: `tremolo`,
                             wiki: `Tremolo`,
@@ -741,7 +737,7 @@ export default {
                             anchor: `OK Computer.`,
                             wiki: `OK_Computer`,
                         },
-                        `So I recorded several takes of steady eighth notes on the banjo, each one offset further by a fraction of a beat, then overlaid them to create the impression of tremolo picking. In the last few measures they separate in the balance, like a rope fraying at one end.`,
+                        `So I recorded several takes of steady eighth notes on the banjo, each one offset further in the mix by a fraction of a beat, to create the impression of steady tremolo picking. In the last few measures they separate in the balance, like a rope fraying at one end.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -849,7 +845,7 @@ export default {
                             anchor: `fail your Sita`,
                             phrasingTodo: true,
                             card: {
-                                description: `Contemporary audiences may find it problematic that Rama's first act upon reuniting with Sita was to demand proof of her purity. But my need to be the more sexually experienced partner derived from the same chauvinism. I couldn't simply accept with gratitude whatever circumstance had to transpire for me to be with Sita.`,
+                                description: `Contemporary audiences may find it disgraceful that Rama's first act upon reuniting with Sita was to demand proof of her purity. My reaction is similar when revisiting my need to be the more sexually experienced partner at the time. Why couldn't I simply accept with gratitude whatever circumstances first had to happen for Sita to finally be with me?`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -887,7 +883,7 @@ export default {
                             anchor: `two were tied?`,
                             phrasingTodo: true,
                             card: {
-                                description: `While Sita had hoped for us to be tied in a matrimonial sense, I chafed that we were also tied in a competitive sense. Between the two of us, I wasn't the one who could count more romantic partners in my past, and this felt like a threat.`,
+                                description: `While Sita had hoped for us to be tied in a matrimonial sense, I chafed that we were also tied in a competitive sense. Between the two of us, I counted fewer romantic partners in my past, and this felt like a threat.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -1065,7 +1061,14 @@ export default {
                             phrasingTodo: true,
                             cards: [
                                 {
-                                    description: `The constant one-upmanship wasn't just petty. It was exhausting to keep an inner tally of every time I felt slighted. I wanted life to be more like a marathon that rewards patience and resolve. Since I possessed those traits in spades, that seemed most fair to me.`,
+                                    description: [
+                                        `The constant one-upmanship wasn't just petty. It was exhausting to keep an inner tally of all the times I felt slighted. I wanted life to be more like a`,
+                                        {
+                                            anchor: `marathon`,
+                                            wiki: `Marathon`,
+                                        },
+                                        `that rewards patience and resolve, the traits that I happened to possess in spades.`,
+                                    ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                     },
@@ -1196,9 +1199,9 @@ export default {
                         `what's left of what these`,
                         {
                             anchor: `faces you flip override,`,
-                            phrasingTodo: true,
+                            contentTodo: true,
                             card: {
-                                description: `At some point, I noticed I wore very different faces for different people. This wasn't the case when I was younger, which could only mean there was once a true me, and now there wasn't.`,
+                                description: `At some point, I noticed that I wore different faces for different people. This wasn't the case when I was younger, which could only mean there was once a true me, and now there wasn't.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -1214,7 +1217,7 @@ export default {
                             anchor: `pages you've ripped`,
                             phrasingTodo: true,
                             card: {
-                                description: `My parents lament my eagerness to ditch past sentiments for present ambitions, as if I were tearing out old pages from a scrapbook to free up room for new inserts.`,
+                                description: `My parents lament my eagerness to ditch past sentiments for present ambitions, as if I'm tearing out old pages from the scrapbook of my life to free up room for new inserts.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -1333,7 +1336,7 @@ export default {
                         phrasingTodo: true,
                         cards: [
                             {
-                                description: `It wasn't until college that I learned to appreciate the sacrifices my parents had made for me and my siblings to lead better lives than their own. But that this awareness had to come about through assigned coursework on the history of immigration, rather than through my own lived experiences, only further added to my guilt.`,
+                                description: `It wasn't until college that I learned to appreciate the sacrifices my parents had made for me and my siblings to lead lives better than their own. But that this awareness came about through my coursework, rather than through my own lived experiences, only added to my guilt.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -1485,7 +1488,7 @@ export default {
                             anchor: `click track`,
                             wiki: `Click_track`,
                         },
-                        `of quarter-note beats that would arrive an eighth note ahead of the mix after seven measures. I then overlaid multiple vocal tracks in which I quietly took a breath at different points to give the impression of a single uninterrupted take.`,
+                        `at a slightly increased tempo that would arrive an eighth note ahead of the mix after seven measures. I then overlaid multiple vocal tracks in which I quietly took a breath at different points to create the impression of a single uninterrupted take.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
