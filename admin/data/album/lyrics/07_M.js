@@ -423,7 +423,14 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: `As the Yearlings, we performed this song at breakneck speed, but in this recording I moderated the tempo to make the lyrics intelligible. Even so, my drumming skills still weren't up to par. So I recorded the drum tracks at a lower tape speed, which brought them to the proper tempo upon normal playback.`,
+                    description: [
+                        `Being a`,
+                        {
+                            anchor: `cowpunk`,
+                            wiki: `Cowpunk`,
+                        },
+                        `band, the Yearlings would perform this song at breakneck speed. But I moderated the tempo for this recording to make the lyrics intelligible. Even so, my drumming skills still weren't up to par. So I recorded the drum tracks at a lower tape speed, which brought them to the proper tempo upon normal playback.`,
+                    ],
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },

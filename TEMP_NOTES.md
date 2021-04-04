@@ -24,7 +24,6 @@
 * Be smarter about memo.
 
 # Annotation edit TODO:
-* Cowpunk.
 * Constellation second chorus
 * Willy sparkles?
 * Carpenters thing?

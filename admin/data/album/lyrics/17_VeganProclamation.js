@@ -882,7 +882,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: `I stayed vegan for about five years. Then I quit after moving to New York City, since Sasha ate meat. I guess it's just the nature of who I am that my social identity is the first thing I'll jettison whenever a chance for romance is at stake. Still, these days I'm mostly vegetarian. It's just easier and healthier.`,
+                    description: `I stayed vegan for about five years. I quit after moving to New York City, since Sasha ate meat. I guess it's just the nature of who I am that my social identity is the first thing I'll jettison whenever a chance for romance is at stake. Still, these days I'm mostly vegetarian. It's just easier and healthier.`,
                     dotKeys: {
                         [AFTERWORD]: true,
                     },
