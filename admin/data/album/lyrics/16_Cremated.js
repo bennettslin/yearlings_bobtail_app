@@ -507,7 +507,7 @@ export default {
                             anchor: `unforeskinned virgin`,
                             phrasingTodo: true,
                             card: {
-                                description: `I learned a long time ago not to have personal convictions or identity markers that would only limit the size of my dating pool. It's why I've never gotten a tattoo, for example. I needed to start as a blank slab for each new woman to shape me into whatever she liked. And so I imagine that before dating Miriam, I'd reset myself to a default state of being sexually inexperienced with an intact foreskin.`,
+                                description: `I learned a long time ago not to have personal convictions or identity markers that would only limit the size of my dating pool. It's why I've never gotten a tattoo, for example. I needed to be a blank slab for each new woman to shape me into whatever she liked. And so I imagine that before dating Miriam, I'd reset myself to a default state of being sexually inexperienced and having an intact foreskin.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -714,9 +714,9 @@ export default {
                 {
                     mixTime: `1:33:29.30`,
                     lyricCentre: [
-                        `it`,
+                        `it hums`,
                         {
-                            anchor: `hums a typo`,
+                            anchor: `a typo`,
                             // Specify that universal donor cannot receive.
                             contentTodo: true,
                             card: {
@@ -1007,7 +1007,7 @@ export default {
                             anchor: `Redressed,`,
                             phrasingTodo: true,
                             card: {
-                                description: `As I redress by pulling my pants back up, I'm about to learn that this latest sexual escapade was really meant to serve as redress for the bad news that Miriam has forthcoming.`,
+                                description: `As I redress by pulling my pants back up, I'm about to learn that this latest sexual escapade was really meant as redress for the bad news that Miriam has forthcoming.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
