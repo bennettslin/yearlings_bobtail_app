@@ -27,7 +27,7 @@ export default {
     mixStartTime: `0:01:22.94`,
     playerStartTime: 3332.826,
     phrasingTodo: true,
-    overview: `Every night, I dreamt of reuniting with Sita only to wake up in a panicked sweat, as the reality came roaring back that I'd lost her forever. I would slog through the day under a crushing blanket of despair, then crawl back into bed with dread, awaiting the cruel tricks to be played by my subconscious mind. I had no idea when this torment would end. The answer, I feared, was never.`,
+    overview: `Every night I dreamt of reuniting with Sita, only to wake up in a panicked sweat as the reality came roaring back that I'd lost her forever. I would slog through the day under a crushing blanket of despair, then crawl back to bed in dread of the cruel tricks soon to be played once again by my subconscious mind. I had no idea when this torment would end. The answer, I feared, was never.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -56,9 +56,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                phrasingTodo: true,
                 card: {
-                    description: `This is the second song on the album that was an original Yearlings staple. It might be telling that during the time Sita and I were together, the one song I wrote for her was about the regret I'd feel as an old man for having lost her. As with "M," I changed the orchestration but kept the original lyrics.`,
+                    description: `This is the second song on the album that was an original Yearlings staple. It might be telling that during the time Sita and I were together, the one song I wrote for her was about the regret I'd feel as an old man for having lost her. As with "M," I changed the musical arrangement but kept the original lyrics.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGCRAFT]: true,
@@ -137,9 +136,8 @@ export default {
                         `Did I`,
                         {
                             anchor: `ever live another life?`,
-                            phrasingTodo: true,
                             card: {
-                                description: `As dreams often go, I have no memory or even awareness of having lived another life in the intervening years. It's obvious Sita and I hadn't stayed together, yet I don't recall any time spent apart. Of course, according to the Buddhist and Hindu faiths, I've lived many other lives quite literally, in past incarnations.`,
+                                description: `As dreams often go, I have no memory or even awareness of having lived another life in the intervening years. It's obvious Sita and I hadn't stayed together, yet I can't recall any time spent apart. Of course, according to the Buddhist and Hindu faiths, I've lived many other lives quite literally, in past incarnations.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
