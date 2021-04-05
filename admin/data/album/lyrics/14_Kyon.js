@@ -147,9 +147,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                phrasingTodo: true,
                 card: {
-                    description: `I wanted this song to speak from Sita's perspective, but in retrospect, my portrayal might be a bit one-dimensional. I was just too self-absorbed in my guilt when I wrote it, and my primary purpose was to beat myself up over what my stupidity had cost me.`,
+                    description: `I wanted this song to speak from Sita's perspective, but in retrospect, my portrayal might be a bit one-dimensional. I was just self-absorbed in my guilt when I wrote it, and my primary purpose was to beat myself up over what my stupidity had cost me.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
@@ -204,20 +203,19 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                phrasingTodo: true,
                 card: {
                     description: [
-                        `Our relationship was like a ship swaying perilously in dangerous waters, a notion captured by the`,
+                        `My relationship with Sita was like a ship swaying in perilous waters. This notion is captured in the music by the`,
                         {
-                            anchor: `compound meter`,
+                            anchor: `compound meter,`,
                             wiki: `Metre_(music)`,
                         },
-                        `as well as the unrelated chords separated by a`,
+                        `as well as by the back-and-forth between unrelated chords separated by a`,
                         {
-                            anchor: `tritone`,
+                            anchor: `tritone.`,
                             wiki: `Tritone`,
                         },
-                        `alternating back and forth. The two strands of meandering`,
+                        `The two strands of meandering`,
                         {
                             anchor: `tuplets`,
                             wiki: `Tuplet`,
@@ -245,9 +243,8 @@ export default {
                     lyric: [
                         {
                             anchor: `spurned at first,`,
-                            phrasingTodo: true,
                             card: {
-                                description: `Given the seeming ease by which I could now attract other women, I grew increasingly indignant about the endless hoops I'd been made to jump through before finally winning Sita over.`,
+                                description: `Given the seeming ease with which I could now attract other women, I grew further indignant about the endless hoops I'd been made to jump through to win Sita over.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -310,9 +307,8 @@ export default {
                     lyric: [
                         {
                             anchor: `plunders past`,
-                            phrasingTodo: true,
                             card: {
-                                description: `The sting I felt in being rejected by Sita was aggravated by the later revelation of her sexual past. And all the more so since it was precisely the painful lessons she learned from these past encounters that made her wary of my earlier advances. Of course, I missed the irony in being the one who would surely end up providing the most painful lesson by far.`,
+                                description: `The sting I felt in having been initially rejected by Sita was aggravated by the later revelation of her sexual past. And all the more so since it was precisely the painful lessons she took away from these past encounters that made her wary of my initial advances. Of course, I missed the irony of being the one who would surely end up providing the most painful lesson by far.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -507,19 +503,18 @@ export default {
                         `A`,
                         {
                             anchor: `shank's dustless silhouette`,
-                            phrasingTodo: true,
                             cards: [
+                                {
+                                    description: `During our on-and-off years, I would habitually return to Sita, promising to mend my ways. Things would be peachy for a while, after which I would run off yet again with another woman. I was like a reformed convict who might any day relapse without warning, taking with him the shank he'd left on the windowsill to collect dust.`,
+                                    dotKeys: {
+                                        [BACKSTORY]: true,
+                                        [OBSERVATION]: true,
+                                    },
+                                },
                                 {
                                     description: `A shank is a stabbing weapon improvised by prison inmates.`,
                                     dotKeys: {
                                         [REFERENCE]: true,
-                                    },
-                                },
-                                {
-                                    description: `During our on-and-off years, I would habitually return to Sita, promising to mend my ways. Things would be peachy for a while, after which I would run off yet again with another woman. I was like a reformed convict who leaves his shank to collect dust on the windowsill, then relapses without warning, taking it with him.`,
-                                    dotKeys: {
-                                        [BACKSTORY]: true,
-                                        [OBSERVATION]: true,
                                     },
                                 },
                             ],
@@ -646,7 +641,14 @@ export default {
                             anchor: `thirty-three?`,
                             phrasingTodo: true,
                             card: {
-                                description: `I hated the idea of getting older and often joked about killing myself at thirty-three, the age at which Jesus was crucified. Since clearly, this is all the time one needs to change the world. So when Sita asked me to specify the age at which I would come back for her in accordance with our little pact, and I answered thirty-three, the subtext was understood.`,
+                                description: [
+                                    `I hated the idea of getting older and often joked about killing myself at thirty-three, the age at which`,
+                                    {
+                                        anchor: `Jesus was crucified.`,
+                                        wiki: `Crucifixion_of_Jesus`,
+                                    },
+                                    `Since clearly, this is all the time one needs to change the world. So when Sita asked me to specify the age at which I would come back for her in accordance with our little pact, and I answered thirty-three, the subtext was understood.`,
+                                ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [REFERENCE]: true,
@@ -730,7 +732,6 @@ export default {
                                 `'s your priority,`,
                             ],
                             properNoun: true,
-                            phrasingTodo: true,
                             card: {
                                 description: [
                                     `As I continued to work on`,
@@ -738,7 +739,7 @@ export default {
                                         isItalic: true,
                                         lyric: `Bobtail,`,
                                     },
-                                    `my night terrors grew less frequent, and my misery subsided. Recognizing this boon for what it was, I chose to further subsume myself in my ambitions, which made me even more inattentive to Sita's needs.`,
+                                    `my night terrors grew less frequent, and my misery subsided. Recognizing this boon for what it was, I became further subsumed in my ambitions, which made me even more inattentive to Sita's needs.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -754,7 +755,7 @@ export default {
                         {
                             anchor: `I'll gladly wait.`,
                             card: {
-                                description: `But Sita encouraged my artistic pretensions, believing them to reflect positively on her as well. Though she was uninterested in the local scene, she still enjoyed being the one to go home with me after a show.`,
+                                description: `But Sita encouraged my artistic pretensions, believing them to reflect positively on her as well. Though she was uninterested in the local scene, she still enjoyed being seen as the one going home with me after a show.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -802,7 +803,7 @@ export default {
                             isItalic: true,
                             lyric: `"kyon?"`,
                         },
-                        `My heart still breaks somewhat to hear it, for this reason.`,
+                        `My heart still breaks somewhat to hear it for this reason.`,
                     ],
                     dotKeys: {
                         [OBSERVATION]: true,

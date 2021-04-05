@@ -276,7 +276,7 @@ export default {
                                         anchor: `phoenix`,
                                         wiki: `Phoenix_(mythology)`,
                                     },
-                                    `is a bird reborn from its own ashes. And having broken up with Sita to date Miriam, I also await my triumphant rebirth. But with Miriam seated on my lap now as we make out, I'm suddenly overcome with self-doubt, and my "penis" rises limply, unable to reach a full erection.`,
+                                    `is a bird reborn from its own ashes. And having broken up with Sita to date Miriam, I also await my triumphant rebirth. But now with Miriam seated on my lap as we make out, I'm suddenly overcome with self-doubt, and my "penis" rises limply, unable to reach a full erection.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -485,7 +485,6 @@ export default {
                         `born from a`,
                         {
                             anchor: `forced conversion`,
-                            phrasingTodo: true,
                             card: {
                                 description: [
                                     `Historically, conquered peoples were`,
@@ -493,7 +492,7 @@ export default {
                                         anchor: `forced to adopt`,
                                         wiki: `Forced_conversion`,
                                     },
-                                    `the religious beliefs of their conquerors. More often than not, however, they simply repurposed old customs and deities to fit their new faith. And so I imagine Miriam skeptically eyeing my own attempts to assimilate, as she recognizes that corrupt traces of my past ways must surely remain.`,
+                                    `the religious beliefs of their conquerors. More often than not, however, they simply repurposed old customs and deities to fit their new faith. And so I imagine Miriam skeptically eyeing my attempts to assimilate into her world, as traces of my corrupt ways must surely remain.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -508,7 +507,7 @@ export default {
                             anchor: `unforeskinned virgin`,
                             phrasingTodo: true,
                             card: {
-                                description: `I learned a long time ago not to have personal convictions or identity markers that would only serve to limit the size of my dating pool. It's why I've never gotten a tattoo, for example. I needed to start my character afresh for each new woman to shape me into whatever she liked. And so I imagine that before dating Miriam, I'd reset myself to a default state of being sexually inexperienced with my foreskin intact.`,
+                                description: `I learned a long time ago not to have personal convictions or identity markers that would only limit the size of my dating pool. It's why I've never gotten a tattoo, for example. I needed to start as a blank slab for each new woman to shape me into whatever she liked. And so I imagine that before dating Miriam, I'd reset myself to a default state of being sexually inexperienced with an intact foreskin.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -567,7 +566,7 @@ export default {
                             anchor: `kissed off, she purges up.`,
                             phrasingTodo: true,
                             card: {
-                                description: `Upon bringing me to orgasm, Miriam sucks up the ejaculate and leans over the car door to spit it out. But this act seems to carry a hidden message that the genes in my defective sperm must never be allowed to mingle with hers.`,
+                                description: `Upon bringing me to orgasm, Miriam sucks up the ejaculate and leans over the car door to spit it out. But this innocent act seems to carry a hidden message, that the genes in my defective sperm must never be allowed to mingle with hers.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -637,20 +636,18 @@ export default {
                     lyricRight: [
                         {
                             anchor: `twitching sword`,
-                            phrasingTodo: true,
                             card: {
                                 description: [
-                                    `While`,
                                     {
-                                        anchor: `dubbing`,
+                                        anchor: `Dubbing`,
                                         wiki: `Dubbing_(filmmaking)`,
                                     },
-                                    `refers to the replacement of an actor's voice in film, it can also refer to the ritual of`,
+                                    `is the replacement of an actor's voice in film, but it can also refer to the ritual of`,
                                     {
                                         anchor: `conferring knighthood.`,
                                         wiki: `Accolade`,
                                     },
-                                    `And so I imagine my drunken self, confused by the orders given to speak for the crimes of his sober half, instead patting him erratically on the shoulder with a sharp sword.`,
+                                    `And so I imagine my drunken self, confused by the orders he's been given to speak for his sober half's crimes, instead erratically patting his sober half on the shoulder with a sharp sword.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -788,7 +785,6 @@ export default {
                         `Undeluded, she'll bask in`,
                         {
                             anchor: `selfish cut-off jeans,`,
-                            phrasingTodo: true,
                             card: {
                                 description: [
                                     `In`,
