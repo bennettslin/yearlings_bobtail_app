@@ -378,9 +378,8 @@ export default {
                         `baby steps inch towards`,
                         {
                             anchor: `crevice rays.`,
-                            phrasingTodo: true,
                             card: {
-                                description: `The lack of ambient light kept my grandmother's house pitch black all through the night. When I woke to use the bathroom, I would tiptoe with only a sliver of moonlight peeking in from beneath the door to guide me.`,
+                                description: `My grandmother's house at night was pitch black. When I woke to use the bathroom, I had to tiptoe to the door with only a sliver of moonlight peeking in from underneath to guide me.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

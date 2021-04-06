@@ -1,6 +1,10 @@
 # Bug
 * Grasshoppers Lie Heavy repeat includes some Constellations. Are there others?
 
+# Annotation
+* wordingTodo: Content is perfectly fine, wording is just off.
+* 
+
 # TODO
 * Make Garryowen a ghost?
 * Miriam breast in banjo scene weird?

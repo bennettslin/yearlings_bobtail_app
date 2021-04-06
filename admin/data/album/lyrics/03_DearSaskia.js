@@ -68,7 +68,7 @@ export default {
                             anchor: `Beatles`,
                             wiki: `The_Beatles`,
                         },
-                        `weaved melodies into chord progressions so seamlessly, and I vowed to figure out their songwriting methods once and for all. The music heard in this song was one result of my studies. At the time, I found it too treacly to develop further and put it away. Some time later as I was planning out this album, I realized that treacle was exactly what an overwrought letter to Sasha called for, and I trotted it back out.`,
+                        `weaved melodies into chord progressions so seamlessly, and I vowed to learn from their songwriting methods once and for all. The result was a grab bag of musical ideas that were just a bit too treacly for me to know what to do with. But years later when planning out this album, I realized that treacle was exactly what an overwrought letter to Sasha called for.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -330,7 +330,8 @@ export default {
                         `with you raving over how`,
                         {
                             anchor: `he's getting you`,
-                            phrasingTodo: true,
+                            // Comment on positive feedback loop.
+                            contentTodo: true,
                             card: {
                                 description: [
                                     `Every boy that Sasha ever crushed on was`,
@@ -338,7 +339,7 @@ export default {
                                         anchor: `Jewish,`,
                                         wiki: `Jews`,
                                     },
-                                    `which in turn motivated her to be a better Jew. It frustrated me that anyone who could be part of this positive feedback loop instantly had the winning advantage in "getting her."`,
+                                    `which in turn motivated her to be a better Jew. It frustrated me that without any effort, someone else always had the winning advantage in "getting her."`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -355,15 +356,14 @@ export default {
                         `staying kosher. Though, you know,`,
                         {
                             anchor: `I would have too…`,
-                            phrasingTodo: true,
                             card: {
                                 description: [
-                                    `Because if Sasha were to want me, then of course I would glady convert to`,
+                                    `Because if Sasha were to want me, then of course I would convert to`,
                                     {
                                         anchor: `Judaism.`,
                                         wiki: `Judaism`,
                                     },
-                                    `It seemed odd to assume that I should be loyal to my current identity, which I had no hand in deciding.`,
+                                    `It made no sense to be loyal to my own cultural identity, which I had no hand in deciding.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -375,9 +375,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                phrasingTodo: true,
                 card: {
-                    description: `To match the passive-aggressive tone of the lyrics, the sentimental string harmonies of the chorus suddenly give way to scratch tones and woodwind screeches.`,
+                    description: `To match the passive-aggressive mood of the lyrics, the sentimental string harmonies in the chorus abruptly give way to scratch tones and woodwind screeches.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
@@ -501,7 +500,6 @@ export default {
                         `untied this`,
                         {
                             anchor: `"tetherboy,"`,
-                            phrasingTodo: true,
                             cards: [
                                 {
                                     description: [
@@ -619,7 +617,7 @@ export default {
                         {
                             anchor: `jaw was stuck,`,
                             card: {
-                                description: `Here, I recall another incident when a bully snuck up from behind and put me in a chokehold as I waited for the school bus.`,
+                                description: `Here, I refer to another incident where a bully snuck up from behind and put me in a chokehold as I waited for the school bus.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -664,7 +662,7 @@ export default {
                             anchor: `hugging hurts…`,
                             phrasingTodo: true,
                             card: {
-                                description: `To spare myself the humiliation of having been beaten up, I would downplay my injuries. But here I'm downplaying my emotional hurt, as I explain to Sasha why I winced when we hugged on that last day.`,
+                                description: `After downplaying my injuries to avoid the humiliation of getting beaten up, I suddenly play them up here to hide my emotional hurt, as I explain to Sasha why I winced when we hugged on that last day.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -676,7 +674,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: `Back in the day, I noticed that every other band would write songs by coming up with the chords up front, then layering a vocal melody on top. But my theory was that the Beatles wrote the melody and chords together, so I aimed to do the same. I was always happiest with results like the chorus here, where the music meanders for a stretch rather than repeating every four measures. Such songs are never fan favorites, but they're the hardest to write, which I found satisfying.`,
+                    description: `Back in the day, I noticed that every other band would write songs by coming up with the chords up front, then layering a vocal melody on top. But my theory was that the Beatles wrote the melody and chords together, so I aimed to do the same. I was always happiest with results like the chorus here, where the music meanders for a stretch rather than repeating every four measures. Such songs are never fan favorites, but they're the hardest to write, which was satisfying.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
@@ -790,7 +788,6 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                phrasingTodo: true,
                 card: {
                     description: [
                         `After releasing`,
@@ -803,12 +800,12 @@ export default {
                             isItalic: true,
                             lyric: `Bobtail Method`,
                         },
-                        `that distilled all the wisdom I'd gathered over the years about combining chords and melodies. Unfortunately, the promo copies I sent out were met with the same radio silence. When you're an unknown artist, I've now learned, nothing you do is worth anything. I still plan to turn`,
+                        `that distilled all the wisdom I'd gathered over the years about combining chords and melodies. My hope was that this would help me be taken seriously. Unfortunately, the promo copies I sent out were met with the same radio silence. I'll still release`,
                         {
                             isItalic: true,
                             lyric: `Bobtail Method`,
                         },
-                        `into an app one day.`,
+                        `as an app one day.`,
                     ],
                     dotKeys: {
                         [AFTERWORD]: true,

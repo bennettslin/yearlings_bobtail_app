@@ -30,7 +30,7 @@ export default {
     playerStartTime: 177.396,
     mixStartTime: `0:01:03.00`,
     phrasingTodo: true,
-    overview: `Willy the Cocoa was a mentally disabled man who wandered our streets collecting recyclables. One day, some gangsters decided to pick a fight and smashed his head open with a bottle, killing him instantly. My younger brother was diagnosed with autism at around this time, and in light of Willy's murder, I would lie awake fearful of what lay in my brother's future.`,
+    overview: `Willy the Cocoa was a mentally disabled man who wandered the neighborhood collecting recyclables. One day, some gangsters decided to pick a fight and smashed his head open with a bottle, killing him instantly. My younger brother was diagnosed with autism at around this time, and in light of Willy's murder, I would lie awake fearful of what lay in my brother's future.`,
     lyricUnits: [
         {
             unitMap: {},
