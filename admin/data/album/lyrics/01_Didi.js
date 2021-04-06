@@ -39,20 +39,19 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                phrasingTodo: true,
                 card: {
                     description: [
-                        `My parents immigrated to the United States from`,
+                        `My parents immigrated to the United States from the island of`,
                         {
-                            anchor: `Taiwan,`,
+                            anchor: `Taiwan.`,
                             wiki: `Taiwan`,
                         },
-                        `an island invaded by the`,
+                        `When the`,
                         {
                             anchor: `Chinese`,
                             wiki: `China`,
                         },
-                        `in 1949. After the Chinese took over, they imposed`,
+                        `invaded Taiwan in 1949, they took over and imposed`,
                         {
                             anchor: `their language`,
                             wiki: `Chinese_language`,
@@ -62,7 +61,7 @@ export default {
                             anchor: `Taiwanese`,
                             wiki: `Taiwanese_Hokkien`,
                         },
-                        `we spoke at home had a lot of Chinese words mixed in, such as`,
+                        `we grew up speaking at home included many Chinese words, such as`,
                         {
                             isItalic: true,
                             lyric: `didi,`,
@@ -93,7 +92,7 @@ export default {
                 phrasingTodo: true,
                 card: {
                     description: [
-                        `This song is sung from the perspective of my sister as a child, and so it abounds with toy instruments. Here, autoharp and glockenspiel begin an intro that recalls the first few measures of`,
+                        `Since this song is sung from the perspective of my sister as a child, I wanted it to abound with toy instruments. So the intro begins with a strummed autoharp leading into a glockenspiel melody, which evokes the first few measures of`,
                         {
                             anchor: `"Wouldn't It Be Nice,"`,
                             wiki: `Wouldn't_It_Be_Nice`,

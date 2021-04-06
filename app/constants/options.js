@@ -14,7 +14,7 @@ export const SHOW_CAROUSEL_FROM_NAV = 'showCarouselFromNav'
 export const SHOW_CAROUSEL_NAV_NEXT = 'showCarouselNavNext'
 
 export const VOLUME_MIN = 0
-export const VOLUME_DEFAULT = 15
+export const VOLUME_DEFAULT = 10
 export const VOLUME_MAX = 20
 
 export const getCarouselNavIdentifier = ({
