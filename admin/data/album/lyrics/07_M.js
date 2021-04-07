@@ -566,6 +566,7 @@ export default {
                         {
                             anchor: `"Made in America" signs.`,
                             properNoun: true,
+                            // Avoid "venture"
                             iffyTodo: true,
                             card: {
                                 description: `To promote cross-cultural harmony, the pairings in these mass weddings are often international by design. So my Moonie bride might be a foreigner who just as cynically chose this venture to raise a family in America. I would be foolish to believe that my "maiden Mara co-signs" the marriage license in good faith.`,

@@ -213,7 +213,7 @@ export default {
                         {
                             anchor: `exit us`,
                             // Should be about leaving our homes, not the drugstore.
-                            contentTodo: true,
+                            pointTodo: true,
                             card: {
                                 description: `As the Book of "Exodus" recounts how the Israelites found manna during their trek out of Egypt, so too do we leave the drugstore with spiritual sustenance in hand.`,
                                 dotKeys: {
@@ -594,7 +594,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                phrasingTodo: true,
+                awkwardTodo: true,
                 card: {
                     description: [
                         {
@@ -608,12 +608,12 @@ export default {
                                 wiki: `Ghost_in_the_Machine_(album)`,
                             },
                         },
-                        `was my soundtrack of choice for a Robitussin trip, so I tried to recreate its ambience here. Taking a cue from the song`,
+                        `was my soundtrack of choice for a Robitussin trip, so I tried to recreate its ambience. Taking a cue from the song`,
                         {
                             anchor: `"Secret Journey,"`,
                             wiki: `Secret_Journey_(song)`,
                         },
-                        `for example, I left the drum kick off the downbeat in the prechorus, which does wonders for letting the other instruments breathe before they get submerged again in the chorus.`,
+                        `I left the drum kick off the downbeat in the prechorus, which does wonders for letting the other instruments breathe before they get submerged again in the chorus.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -1007,7 +1007,8 @@ export default {
                         },
                         {
                             anchor: `unsolft quarry rest…`,
-                            phrasingTodo: true,
+                            // Not sure if that's the best description.
+                            pointTodo: true,
                             card: {
                                 description: `"Our young invaders" have now arrived at a clearing where dirt from the ground has been pushed against the walls and shaped into makeshift benches. Pausing for a breather, on this "soft quarry" we rest.`,
                                 dotKeys: {
@@ -1114,7 +1115,7 @@ export default {
                     lyric: [
                         {
                             anchor: `Are Melee tapirs`,
-                            phrasingTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: `"Our melee tapers the discourse." Having scavenged materials to make swords and shields, we could only brandish them with playful menace within the narrow corridors of the steam tunnels. Now out in the open, we stop chattering and start battling as we make our way back to the car.`,
                                 dotKeys: {
@@ -1125,7 +1126,8 @@ export default {
                         },
                         {
                             anchor: `the dusc-horse yet…?`,
-                            contentTodo: true,
+                            // Last sentence is particularly weird.
+                            awkwardTodo: true,
                             card: {
                                 description: [
                                     `"Are Malay tapirs the dusk horse yet?" Through conquest and migration, exotic new species were discovered. Native to the Malay peninsula, the`,
@@ -1307,7 +1309,8 @@ export default {
                         `But`,
                         {
                             anchor: `past a cross Bearing Straight,`,
-                            phrasingTodo: true,
+                            // Make clear that bearing is about navigation. Avoid "venture."
+                            pointTodo: true,
                             card: {
                                 description: [
                                     `We venture past a cross-shaped headstone, "bearing straight," just as those before us had "passed across the`,
@@ -1375,7 +1378,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                contentTodo: true,
+                // Make sure these ideas connect.
+                connectTodo: true,
                 card: {
                     description: [
                         `I treated every Robitussin trip as a time to explore metaphysical truths in my head. But since I typically tripped solo, I would also occupy myself by playing video games on my`,
@@ -1430,7 +1434,7 @@ export default {
             ],
             // unitDot: {
             //     anchor: IS_UNIT_DOT,
-            //     contentTodo: true,
+            //     todo: true,
             //     card: {
             //         description: ``,
             //         dotKeys: {
@@ -1476,7 +1480,8 @@ export default {
                         },
                         {
                             anchor: `ha'nt'd by sober-trooth tiedgirl`,
-                            contentTodo: true,
+                            // Just needs to be worded right.
+                            awkwardTodo: true,
                             card: {
                                 description: [
                                     `Encountering the vision of a`,
@@ -1489,7 +1494,7 @@ export default {
                                         anchor: `saber-toothed tiger,"`,
                                         wiki: `Smilodon`,
                                     },
-                                    `I am subconsciously "haunted by the sober truth" that I continue to keep Sita captive in a codependent relationship of which I am beginning to tire.`,
+                                    `I'm subconsciously "haunted by the sober truth" that I continue to keep Sita captive in a codependent relationship of which I'm beginning to tire.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1508,7 +1513,8 @@ export default {
                         isItalic: true,
                         lyric: {
                             anchor: `sunk in tarpid lies!`,
-                            contentTodo: true,
+                            // Just needs time to think through.
+                            awkwardTodo: true,
                             cards: [
                                 {
                                     description: `My mastodon lies sunk in a "tar pit," just as I've sunk too far in all my "torpid" lies to Sita explaining why I can't spend more nights with her.`,
@@ -1598,7 +1604,8 @@ export default {
                         },
                         {
                             anchor: `toughtim rite…`,
-                            phrasingTodo: true,
+                            // General idea is all there, it just feels weird.
+                            iffyTodo: true,
                             card: {
                                 description: `Having now achieved a full out-of-body experience, I gaze down upon my drugged-out self. Set against the familiar backdrop of Los Angeles, this degrading sight reminds me that in having scuttled off to the Bay Area, I'm shirking my obligation to care for my autistic brother. My sister, on the other hand, still lives nearby. Guilt-ridden, I sarcastically note that "brother and sister taught him right."`,
                                 dotKeys: {
@@ -1657,7 +1664,8 @@ export default {
                         {
                             anchor: `Noworse and Nunavutter`,
                             properNoun: true,
-                            phrasingTodo: true,
+                            // Just confirm. This may be the best it will be.
+                            awkwardTodo: true,
                             card: {
                                 description: [
                                     `Our Inuit tribe has now ventured all the way to`,
@@ -1836,7 +1844,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                phrasingTodo: true,
                 card: {
                     description: [
                         `For a song about recreational drug use, I naturally turned to the Beatles during their`,
@@ -1849,7 +1856,12 @@ export default {
                             anchor: `"Tomorrow Never Knows"`,
                             wiki: `Tomorrow_Never_Knows`,
                         },
-                        ` uses a tape loop to imitate a`,
+                        ` uses a`,
+                        {
+                            anchor: `tape loop`,
+                            wiki: `Tape_loop`,
+                        },
+                        `to imitate a`,
                         {
                             anchor: `seagull's`,
                             wiki: `Gull`,

@@ -264,7 +264,12 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `The shrieking recorders mimic the sound of`,
+                        `The shrieking`,
+                        {
+                            anchor: `recorders`,
+                            wiki: `Recorder_(musical_instrument)`,
+                        },
+                        `mimic the sound of`,
                         {
                             anchor: `BART`,
                             wiki: `Bay_Area_Rapid_Transit`,

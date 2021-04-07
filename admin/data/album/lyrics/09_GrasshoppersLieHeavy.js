@@ -29,7 +29,8 @@ export default {
     referenceDescription: `"L." in anacrusis`,
     mixStartTime: `0:01:29.52`,
     playerStartTime: 1478.233,
-    phrasingTodo: true,
+    // Maybe need to clarify how I met Sita.
+    connectTodo: true,
     overview: `I worked my way through college as a dishwasher, which is how I met Sita. After I scared her off, we didn't speak for months, but she then reached out again, and we became friends. Throughout my continued struggles with dating, as well as my rough start in playing live shows, Sita lent her moral support, though all the while I wanted something more. At some point, she started to like me back. I'm still not sure how.`,
     isDoublespeaker: true,
     lyricUnits: [
@@ -180,7 +181,7 @@ export default {
                         `noses in`,
                         {
                             anchor: `penny dreadfuls.`,
-                            phrasingTodo: true,
+                            awkwardTodo: true,
                             cards: [
                                 {
                                     description: `The only way for me to even the score was to feel disdain for the popular books and music they consumed.`,
@@ -204,14 +205,13 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                contentTodo: true,
                 card: {
                     description: [
                         {
                             anchor: `Simon & Garfunkel`,
                             wiki: `Simon_&_Garfunkel`,
                         },
-                        `always manage to sound sentimental without being sappy, so I thought their style would be a good fit here.`,
+                        `always manage to sound sentimental without being sappy, so I thought their style would be a good fit for this song.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -250,7 +250,8 @@ export default {
                         `stalled by`,
                         {
                             anchor: `keys left on dumbwaiter trays.`,
-                            phrasingTodo: true,
+                            // Should I make it just about me? And that they were cute.
+                            pointTodo: true,
                             card: {
                                 description: `The students would bus their trays in carriages attached to a conveyor system, which would then transport the trays down into the dishroom. Every so often, someone would accidentally leave a personal item and come downstairs to retrieve it. The dishroom workers would get a kick when that happened, since the students were always grateful.`,
                                 dotKeys: {
@@ -306,7 +307,7 @@ export default {
                         `and stunned, by`,
                         {
                             anchor: `reflex you asked.`,
-                            phrasingTodo: true,
+                            awkwardTodo: true,
                             cards: [
                                 {
                                     description: `By then, I was mostly on autopilot when it came to hitting on random women in random situations. But stunned by Sita's beauty, I made a particular effort to succeed. So after handing her the lancet pen, I began to engage in conversation.`,
@@ -513,7 +514,7 @@ export default {
                         `With no`,
                         {
                             anchor: `sister ship`,
-                            phrasingTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: [
                                     `The`,
@@ -537,7 +538,7 @@ export default {
                                         anchor: `German navy`,
                                         wiki: `Kriegsmarine`,
                                     },
-                                    `in World War II. In this analogy, Sita and I fight for the Axis, who were history's heroes in`,
+                                    `in World War II. In this analogy, Sita and I fight for the Axis. They were history's heroes in`,
                                     {
                                         isItalic: true,
                                         lyric: `The Man in the High Castle,`,
@@ -558,7 +559,7 @@ export default {
                         `But`,
                         {
                             anchor: `no convert's missed,`,
-                            phrasingTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: `In asking for the largest payments upfront, RI Research correctly guessed that I would grow disillusioned sooner rather than later. Sita's abrupt departure from my life, after making such a profound impact, seemed like evidence that I was once again a sucker for the perfect scam.`,
                                 dotKeys: {
@@ -1280,7 +1281,8 @@ export default {
                         {
                             anchor: `Grace Darling's beacon`,
                             properNoun: true,
-                            phrasingTodo: true,
+                            // Not sure if these should be separate cards.
+                            awkwardTodo: true,
                             cards: [
                                 {
                                     description: [
