@@ -211,7 +211,7 @@ export default {
                             anchor: `buy a fortress`,
                             awkwardTodo: true,
                             card: {
-                                description: `As a child, I liked holing up somewhere to work on projects undisturbed. So one year, I asked my parents for a lifesize wooden fort as a combined birthday and Christmas gift, since my birthday is in November. Unfortunately, I learned that some things were too pricey even to count for two gifts.`,
+                                description: `As a child, I liked to hole up somewhere and work on projects undisturbed. So one year, I asked my parents for a lifesize wooden fort as a combined birthday and Christmas gift, since my birthday is in November. Unfortunately, I learned that some things were too pricey even to count for two gifts.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

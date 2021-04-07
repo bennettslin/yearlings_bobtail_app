@@ -308,7 +308,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                phrasingTodo: true,
+                // Just needs a little work.
+                awkwardTodo: true,
                 card: {
                     description: [
                         `When I asked Owen to recommend some good lyricists, he pointed me to`,
@@ -350,7 +351,8 @@ export default {
                     lyric: [
                         {
                             anchor: `Feeble feeder fish`,
-                            phrasingTodo: true,
+                            // Could be much better than it is.
+                            iffyTodo: true,
                             card: {
                                 description: [
                                     `The pecking order in a tank of`,
@@ -407,7 +409,8 @@ export default {
                         `She braves the crowd`,
                         {
                             anchor: `filled first from sides.`,
-                            phrasingTodo: true,
+                            // Adequately points out that I'm playing a show?
+                            connectTodo: true,
                             cards: [
                                 {
                                     description: `A few songs into my band's set, I watch from onstage as an attractive latecomer and her friends make their way through a packed room.`,
@@ -503,9 +506,9 @@ export default {
                         `and you were`,
                         {
                             anchor: `fine when you had none.`,
-                            phrasingTodo: true,
+                            awkwardTodo: true,
                             card: {
-                                description: `Things were finally looking up, so it baffled me to feel as bitter as ever. I suspect I was indignant for my younger self, who'd been kept in the dark for so long about how much better life could be.`,
+                                description: `Things were finally looking up, so it baffled me to be as bitter as ever. I suspect I felt indignant for my younger self, who'd been kept in the dark for so long about how much better life could be.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -600,7 +603,7 @@ export default {
                     lyric: [
                         {
                             anchor: `peasant discontented`,
-                            phrasingTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: [
                                     `The better life got, the more unsatisfied I became. I was like the peasants of the`,
@@ -667,7 +670,8 @@ export default {
                         },
                         {
                             anchor: `sprawled where they stood…`,
-                            phrasingTodo: true,
+                            // General idea is all there, just needs better wording.
+                            iffyTodo: true,
                             card: {
                                 description: `And while I could only look forward to a lifetime of setbacks and letdowns, the bullies would continue to enjoy greater happiness and social standing. I had no belief left to counter the harsh reality that nature favors bullies. I just had to accept it.`,
                                 dotKeys: {
@@ -695,7 +699,7 @@ export default {
                         `weren't they`,
                         {
                             anchor: `right to take what's theirs?`,
-                            phrasingTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: `As opportunities for social advancement opened up for me, I could put myself in the bullies' shoes and even sympathize. In a world that roots for the strong, you don't question whatever means you've been given to avoid being weak. You just take them.`,
                                 dotKeys: {
@@ -734,7 +738,8 @@ export default {
                         `also weep for`,
                         {
                             anchor: `poor, poor bears.`,
-                            phrasingTodo: true,
+                            // Needs to be phrased a lot better.
+                            iffyTodo: true,
                             card: {
                                 description: `His wife Alison then sighs in response, "Poor, poor bears," recognizing that he, a bear in their mutual fantasy, is just as much a victim in their unequal power dynamic over which neither possesses control.`,
                                 dotKeys: {
@@ -778,7 +783,8 @@ export default {
                         `Drunk, you'd`,
                         {
                             anchor: `claim you've never loved,`,
-                            phrasingTodo: true,
+                            // Too wordy.
+                            awkwardTodo: true,
                             card: {
                                 description: `My songs projected the image of an inexperienced kid forever unlucky in love. But as the misfortunes of my past receded into the distance, I needed greater quantities of alcohol to carry on with the lie that my life hadn't substantially improved.`,
                                 dotKeys: {
@@ -795,7 +801,8 @@ export default {
                         `but it's too late to`,
                         {
                             anchor: `unscrew a Bud…`,
-                            phrasingTodo: true,
+                            // I'm still not getting the right wording.
+                            awkwardTodo: true,
                             card: {
                                 description: [
                                     `I relinquish my chance to know the redhead. Not just because it's past`,

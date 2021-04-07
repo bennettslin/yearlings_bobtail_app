@@ -155,7 +155,7 @@ export default {
                         {
                             anchor: `opt for bed not street.`,
                             // To avoid having to work to pay rent.
-                            contentTodo: true,
+                            pointTodo: true,
                             card: {
                                 description: [
                                     `To save money after my lease ended, I would alternate between spending the night with Sita and crashing in the`,
@@ -329,7 +329,8 @@ export default {
                     lyric: [
                         {
                             anchor: `buys your grief`,
-                            contentTodo: true,
+                            // It's generally all there. I just don't really like it.
+                            iffyTodo: true,
                             card: {
                                 description: `My worlds collided one night when I smashed a random bike in a fit of drunken rage. As it turned out, the bike belonged to a neighborhood kid who liked my music from my earliest days of playing out. He had related so strongly to my songs about unfulfilled hopes. I was disgusted with myself for disappointing him.`,
                                 dotKeys: {
@@ -353,7 +354,7 @@ export default {
                         `So the`,
                         {
                             anchor: `celibate you'll play,`,
-                            phrasingTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: `Drinking made me impotent and thus impervious to Sita's advances, and so I gladly drank to excess. But not having sex was also purifying in its own right, since this lent the familiar comfort of being my old lovelorn self again.`,
                                 dotKeys: {
@@ -391,7 +392,7 @@ export default {
                         `with`,
                         {
                             anchor: `choler turned up,`,
-                            phrasingTodo: true,
+                            awkwardTodo: true,
                             cards: [
                                 {
                                     description: `In Hippocratic medicine, choler, or yellow bile, is the humor that induces aggression.`,
@@ -421,7 +422,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                phrasingTodo: true,
+                // Need to confirm that this makes sense?
+                connectTodo: true,
                 card: {
                     description: [
                         `In traditional`,
@@ -614,7 +616,8 @@ export default {
                     lyric: [
                         {
                             anchor: `Final trip on a tanker,`,
-                            contentTodo: true,
+                            // Not sure this makes sense.
+                            pointTodo: true,
                             cards: [
                                 {
                                     description: [
@@ -640,7 +643,7 @@ export default {
                         `you'll`,
                         {
                             anchor: `drop your anchor`,
-                            phrasingTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: `I'd ascribed every last one of my grievances to Sita for so long that all I felt after the breakup was an eerie serenity. I could finally drop my "anger," and that was tantamount to being happy.`,
                                 dotKeys: {
@@ -665,7 +668,8 @@ export default {
                         `aren't you the`,
                         {
                             anchor: `faltering dear?`,
-                            contentTodo: true,
+                            /// Make sure these ideas actually do connect.
+                            connectTodo: true,
                             card: {
                                 description: `With my slate now wiped clean, I took pains to affect an endearingly awkward persona. As phony as it was, I'd been switching social identities for so long that feeling phony was how I knew I was being genuine.`,
                                 dotKeys: {
@@ -755,9 +759,10 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                phrasingTodo: true,
+                // Just confirm.
+                awkwardTodo: true,
                 card: {
-                    description: `After some trial and error, I decided the counterpoint in this song sounded best with the melodies occupying the same register, as this allows them to blend together as a single harmonic layer. At the same time, the ear can still tease the instruments apart due to their different timbres, as is the case with the banjo, fiddle, and tin whistle heard here.`,
+                    description: `After some trial and error, I decided the counterpoint in this song sounded best with the melodies occupying the same register, as this allows them to blend together into a single harmonic layer. At the same time, the ear can still tease apart the different timbres of each instrument, as is the case with the banjo, fiddle, and tin whistle heard here.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
@@ -790,9 +795,10 @@ export default {
                         `becomes someone's`,
                         {
                             anchor: `last-ditch alibi.`,
-                            phrasingTodo: true,
+                            // Clarify accepting it as the truth?
+                            connectTodo: true,
                             card: {
-                                description: `While my friends and I were clearly joking to say it was Garry and not me who'd committed this or that act of vandalism, on some level I accepted it as the truth. And now it also wasn't me who'd sapped Sita of her confidence over the years, only finally to leave her a crumbled wreck. It must have been Garry. I wasn't there.`,
+                                description: `While my friends and I were clearly joking to say it was Garry and not me who'd committed this or that act of vandalism, on some level I accepted it as the truth. And now it also wasn't me who'd sapped Sita of her confidence over the years, only to leave her a crumbled wreck. It must have been Garry. I wasn't there.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -833,7 +839,8 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                phrasingTodo: true,
+                // Make sure the sensed my bedroom walls sentence makes sense.
+                awkwardTodo: true,
                 card: {
                     description: [
                         `After`,
@@ -841,7 +848,7 @@ export default {
                             isItalic: true,
                             lyric: `Yearling's Bobtail`,
                         },
-                        `was rejected by every last record label, I got so depressed I went on a months-long bender. I eventually kept a box of wine by my bed to calm my nerves in the middle of the night. One day upon skipping my morning beers, I sensed my bedroom walls conspiring to attack me. I realized this was the first stage of`,
+                        `was rejected by every last record label, I got so depressed I went on a months-long bender. I eventually kept a box of wine by my bed to calm my nerves in the middle of the night. One day upon skipping my morning beers, I sensed my bedroom walls conspiring to attack me. I learned this was the first stage of`,
                         {
                             anchor: `delirium tremens`,
                             wiki: `Delirium_tremens`,
