@@ -29,8 +29,7 @@ export default {
     referenceDescription: `Keyboards in anacrusis`,
     playerStartTime: 177.396,
     mixStartTime: `0:01:03.00`,
-    phrasingTodo: true,
-    overview: `Willy the Cocoa was a mentally disabled man who wandered the neighborhood collecting recyclables. One day, some gangsters decided to pick a fight and smashed his head open with a bottle, killing him instantly. My younger brother was diagnosed with autism at around this time, and in light of Willy's murder, I would lie awake fearful of what lay in my brother's future.`,
+    overview: `Willy was a mentally disabled man who wandered our neighborhood collecting recyclables. One day, some gangsters decided to pick a fight and smashed his head open with a bottle, killing him instantly. My younger brother was diagnosed with autism at this time, and in light of Willy's murder, I would lie awake fearful of what lay in my brother's future.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -43,7 +42,7 @@ export default {
                             anchor: `Coke`,
                             wiki: `Coca-Cola`,
                         },
-                        `bottles he collected and to his seeming a bit`,
+                        `bottles he collected and to his seeming a bit cuckoo and`,
                         {
                             isItalic: true,
                             lyric: `loco,`,
@@ -76,7 +75,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                phrasingTodo: true,
+                awkwardTodo: true,
                 card: {
                     description: [
                         `In the past, a disabled child was sometimes thought to be a troll in disguise known as a`,
@@ -89,7 +88,7 @@ export default {
                             anchor: `Creedence Clearwater Revival,`,
                             wiki: `Creedence_Clearwater_Revival`,
                         },
-                        `with`,
+                        `and I used`,
                         {
                             anchor: `melodicas`,
                             wiki: `Melodica`,
@@ -416,9 +415,8 @@ export default {
                         `launching`,
                         {
                             anchor: `pair of seizures`,
-                            phrasingTodo: true,
                             card: {
-                                description: `My brother's sudden outburst knocks the "scissors" from my mother's hand and sends them flying onto the lawn.`,
+                                description: `My brother's sudden outburst knocks the "scissors" from my mother's hand and sends them flying across the lawn.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -1192,7 +1190,8 @@ export default {
                                 },
                                 `'s cover`,
                             ],
-                            phrasingTodo: true,
+                            // Actually has meaning part.
+                            awkwardTodo: true,
                             card: {
                                 description: [
                                     `My favorite word as a child was "bobtail." I was just so proud of myself the day I realized that the line "bells on bobtail ring," from the song`,

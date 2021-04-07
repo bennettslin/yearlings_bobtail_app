@@ -89,7 +89,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                phrasingTodo: true,
+                // Wouldn't It Be Nice sounds unrelated as is.
+                connectTodo: true,
                 card: {
                     description: [
                         `Since this song is sung from the perspective of my sister as a child, I wanted it to abound with toy instruments. So the intro begins with a strummed autoharp leading into a glockenspiel melody, which evokes the first few measures of`,

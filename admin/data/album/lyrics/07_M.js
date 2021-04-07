@@ -199,7 +199,7 @@ export default {
                     mixTime: `1:06:02.05`,
                     lyric: {
                         anchor: `No minutiae left unmastered,`,
-                        phrasingTodo: true,
+                        awkwardTodo: true,
                         card: {
                             description: [
                                 `Though my main goal was to be well versed in all the important subjects, I derived the most satisfaction from being able to display some random skill with seeming nonchalance, like solving a`,
@@ -220,15 +220,14 @@ export default {
                     lyric: [
                         {
                             anchor: `music cred`,
-                            phrasingTodo: true,
                             card: {
                                 description: [
-                                    `I'd always detected a whiff of disdain from the`,
+                                    `I always detected a whiff of disdain from the`,
                                     {
                                         anchor: `Berkeley`,
                                         wiki: `Berkeley,_California`,
                                     },
-                                    `record store clerks who rang up my purchases. With my quest for self-betterment, I overcame my feelings of intimidation and began to ask them for recommended listening.`,
+                                    `record store clerks who rang up my purchases. With my quest for self-betterment, I overcame my intimidation and started asking them for recommended listening.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -528,7 +527,7 @@ export default {
                         {
                             anchor: `Moonie wedding,`,
                             properNoun: true,
-                            phrasingTodo: true,
+                            iffyTodo: true,
                             card: {
                                 description: [
                                     `The`,
@@ -546,12 +545,12 @@ export default {
                                         anchor: `proselytism`,
                                         wiki: `Proselytism`,
                                     },
-                                    `and its`,
+                                    `and`,
                                     {
                                         anchor: `mass weddings,`,
                                         wiki: `Blessing_ceremony_of_the_Unification_Church`,
                                     },
-                                    `in which thousands of congregants are paired off with perfect strangers. Whenever I encountered a Moonie on campus, I would amuse myself with the thought that I could just accept their pamphlet, and my struggle to find a romantic partner would be over in an instant.`,
+                                    `in which thousands of congregants are paired off with perfect strangers. Whenever I encountered a Moonie on campus, I would amuse myself with the thought that I could cynically accept their pamphlet, and my struggle to find a romantic partner would be over in an instant.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -567,9 +566,9 @@ export default {
                         {
                             anchor: `"Made in America" signs.`,
                             properNoun: true,
-                            phrasingTodo: true,
+                            iffyTodo: true,
                             card: {
-                                description: `To promote cross-cultural harmony, the pairings in these mass weddings are often international by design. So my Moonie bride would likely be a foreigner, one who possibly chose this venture solely for the chance to raise a family of native-born American children. I would thus be foolish to believe that my "maiden Mara co-signs" the marriage license in good faith.`,
+                                description: `To promote cross-cultural harmony, the pairings in these mass weddings are often international by design. So my Moonie bride might be a foreigner who just as cynically chose this venture to raise a family in America. I would be foolish to believe that my "maiden Mara co-signs" the marriage license in good faith.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [PUN]: true,
@@ -584,7 +583,7 @@ export default {
                         `In a`,
                         {
                             anchor: `time capsule`,
-                            phrasingTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: [
                                     `A`,
@@ -631,7 +630,7 @@ export default {
                         `in this`,
                         {
                             anchor: `heap of twisted twine.`,
-                            phrasingTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: `But with nothing to show for five years of diligent effort, I was now paralyzed by doubt. There were no more actions I could confidently prescribe to better my circumstances. And so the puppet of my future self could only lie there motionless.`,
                                 dotKeys: {
@@ -754,7 +753,8 @@ export default {
                     lyric: [
                         {
                             anchor: `indentures dumbed`,
-                            phrasingTodo: true,
+                            // Need to make the point more clearly that being in dentures means being old. Separate from being unable to speak.
+                            pointTodo: true,
                             card: {
                                 description: [
                                     `Chimney sweeps were typically apprenticed as`,
@@ -784,9 +784,8 @@ export default {
                         `I bade them`,
                         {
                             anchor: `to fare well,`,
-                            phrasingTodo: true,
                             card: {
-                                description: `Jacob was my friend, and I was happy he'd found Mara. But I also wasn't eager to stick around. So as I imagined them exchanging vows of "I do," I silently offered a vow of my own to bid them "two farewell."`,
+                                description: `Jacob was my friend, and I was happy for him that he'd found Mara. But I also wasn't eager to stick around. So as I imagined them exchanging vows of "I do," I silently offered a vow of my own to bid them "two farewell."`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -812,7 +811,8 @@ export default {
                         `But then I saw the`,
                         {
                             anchor: `world's a naked baby,`,
-                            contentTodo: true,
+                            // Establish exactly what I want to say. I don't think this is really it.
+                            pointTodo: true,
                             card: {
                                 description: `At some point, I realized that the world does what it does simply because it is what it is. Nothing is hidden from view, and any situation can be understood by reading it closely, no differently than learning from a textbook.`,
                                 dotKeys: {

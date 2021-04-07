@@ -38,7 +38,8 @@ export default {
     mixStartTime: `0:01:27.02`,
     playerReferenceTime: 756.159,
     playerStartTime: 755.661,
-    phrasingTodo: true,
+    // Needs to mention that it asked for payments.
+    pointTodo: true,
     overview: `At the height of my years of getting bullied, a strange letter arrived with the promise of spiritual answers. After I sent numerous payments, it was finally revealed to me that I belonged to a race of interstellar beings, and my mission was to shut myself off from the world. I did so by becoming unresponsive in an autistic manner like my brother, which made me feel a psychic bond with him. But as my sanity chipped away, I gradually came to see that I was in a mail-order cult.`,
     lyricUnits: [
         {
@@ -73,7 +74,7 @@ export default {
                             `But F., that man is the`,
                             {
                                 anchor: `worst nuisance on the beach.`,
-                                phrasingTodo: true,
+                                iffyTodo: true,
                                 card: {
                                     description: [
                                         `Being in a mail-order cult was a traumatic experience, but there was a comic absurdity to it as well. When I read this line from`,
@@ -126,7 +127,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                phrasingTodo: true,
+                awkwardTodo: true,
                 card: {
                     description: [
                         `In keeping with the`,
@@ -208,9 +209,9 @@ export default {
                         `when you wanted to`,
                         {
                             anchor: `buy a fortress`,
-                            phrasingTodo: true,
+                            awkwardTodo: true,
                             card: {
-                                description: `As a child, I liked holing up somewhere to work on projects undisturbed. So one year, I asked my parents for a lifesize wooden fort as a combined birthday and Christmas gift, since my birthday is in November. Unfortunately, I learned that some things are too pricey even to count for two gifts.`,
+                                description: `As a child, I liked holing up somewhere to work on projects undisturbed. So one year, I asked my parents for a lifesize wooden fort as a combined birthday and Christmas gift, since my birthday is in November. Unfortunately, I learned that some things were too pricey even to count for two gifts.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -241,7 +242,7 @@ export default {
                         `You stowed away`,
                         {
                             anchor: `beneath your captain bed.`,
-                            phrasingTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: `I slept in a captain bed that rested atop a dresser on one side, with the other side flush against the wall. By entering through a side panel, I could squeeze into the space underneath and stay hidden.`,
                                 dotKeys: {
@@ -428,9 +429,8 @@ export default {
                         `Soon`,
                         {
                             anchor: `send-away offers`,
-                            phrasingTodo: true,
                             card: {
-                                description: `Since I had few friends in middle school, I would amuse myself by sending away for free samples and small purchases. As a result, I got flooded with junk mail, which exposed me to even more advertisements. Then one day, I received a letter from RI Research, Special Human Being Laboratory.`,
+                                description: `Since I had few friends in middle school, I would amuse myself by sending away for free samples. As a result, I got flooded with junk mail, which exposed me to even more offers. Then one day, I received a letter from RI Research, Special Human Being Laboratory.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -497,9 +497,9 @@ export default {
                         `Do you often feel like a`,
                         {
                             anchor: `wanderer lost?"`,
-                            phrasingTodo: true,
+                            awkwardTodo: true,
                             card: {
-                                description: `Hitting all the right nerves, the letter addressed my yearning for acceptance and spoke to my frustration that this desire should so elude me. It then shared some hopeful news. RI Research believed I might be a Beyonder, and after searching for so long, they'd finally found me.`,
+                                description: `Hitting all the right nerves, the letter addressed my yearning for acceptance and spoke to my frustration that this desire should so elude me. It then shared some hopeful news. RI Research believed that I might be a Beyonder, and after searching for so long, they'd finally found me.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -651,8 +651,13 @@ export default {
                         `dragged to sled by`,
                         {
                             anchor: `hunter's belt`,
-                            phrasingTodo: true,
                             cards: [
+                                {
+                                    description: `Sadly, a belt can be used to instill obedience in wayward animals.`,
+                                    dotKeys: {
+                                        [OBSERVATION]: true,
+                                    },
+                                },
                                 {
                                     description: [
                                         `The constellations`,
@@ -670,14 +675,13 @@ export default {
                                             anchor: `Orion,`,
                                             wiki: `Orion_(constellation)`,
                                         },
-                                        `named after the hunter in Greek mythology. Orion can be identified by three stars in a row that represent his belt.`,
+                                        `named after`,
+                                        {
+                                            anchor: `the hunter`,
+                                            wiki: `Orion_(mythology)`,
+                                        },
+                                        `in Greek mythology. Orion can be identified in the sky by three stars in a row that represent the hunter's belt.`,
                                     ],
-                                },
-                                {
-                                    description: `Sadly, a belt can be used to instill obedience in wayward animals.`,
-                                    dotKeys: {
-                                        [OBSERVATION]: true,
-                                    },
                                 },
                             ],
                         },
@@ -919,7 +923,7 @@ export default {
                         `twits daily`,
                         {
                             anchor: `murdered for their virtue.`,
-                            phrasingTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: `Like all ordeals, mine was made more bearable because I could tie it to a greater purpose. But ironically, behaving as such only invited more abuse.`,
                                 dotKeys: {
@@ -1001,7 +1005,7 @@ export default {
                         {
                             anchor: `every hero has a heel,`,
                             // Mention power to remain stoic.
-                            contentTodo: true,
+                            pointTodo: true,
                             card: {
                                 description: [
                                     `The Greek hero`,
@@ -1025,7 +1029,7 @@ export default {
                         `The only`,
                         {
                             anchor: `spies who get to feel love`,
-                            phrasingTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: [
                                     `Since a`,

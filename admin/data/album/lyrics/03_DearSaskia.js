@@ -60,7 +60,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                phrasingTodo: true,
+                // Need to connect learning with grab bag of results.
+                connectTodo: true,
                 card: {
                     description: [
                         `Years ago, I marveled at how the`,
@@ -118,9 +119,9 @@ export default {
                         `your`,
                         {
                             anchor: `first semester`,
-                            phrasingTodo: true,
+                            awkwardTodo: true,
                             card: {
-                                description: `My family was spending the entire summer in Taiwan. By the time we were to get back to the States, Sasha would have already moved to Boston and begun the new school year.`,
+                                description: `My family was spending the entire summer in Taiwan. We weren't getting back to the States until after Sasha was to have left for Boston and begun the new school year.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -151,9 +152,9 @@ export default {
                     lyric: [
                         {
                             anchor: `You'd love Taiwan,`,
-                            phrasingTodo: true,
+                            awkwardTodo: true,
                             card: {
-                                description: `During a tour of the Taiwanese countryside with our cousins, I mentally noted all the things I could show to Sasha one day. As a child, the only time I cared much for being Taiwanese was when I thought that having a heritage to share could help me win over a crush.`,
+                                description: `During a tour of the Taiwanese countryside with our cousins, I mentally noted all the things I could show to Sasha one day. As a child, the only time I cared much for my heritage was when I thought there was something to gain by sharing it with someone else.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -177,7 +178,7 @@ export default {
                         `of some`,
                         {
                             anchor: `giant's house.`,
-                            phrasingTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: `My most vivid memory of that trip is when we stood in the middle of a lush valley. With the ground around us completely level, the enclosing mountains were nearly vertical, as their peaks disappeared into a translucent blanket of clouds stretched across the sky. I felt like a tiny guest in a giant's house.`,
                                 dotKeys: {
@@ -288,7 +289,7 @@ export default {
                     lyric: [
                         {
                             anchor: `your pupil's pupal fly,`,
-                            phrasingTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: [
                                     `As I reflect on my feelings for Sasha, I recall our last day together, when I caught my reflection in the`,
@@ -296,7 +297,7 @@ export default {
                                         anchor: `pupil`,
                                         wiki: `Pupil`,
                                     },
-                                    `of her eye. As she looked at me the way a teacher looks upon a pupil, I could see we were no longer on the same footing, if we ever were.`,
+                                    `of her eye. She looked at me the way a teacher looks upon a pupil, and I could see we were no longer on the same footing, if we ever were.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -331,7 +332,7 @@ export default {
                         {
                             anchor: `he's getting you`,
                             // Comment on positive feedback loop.
-                            contentTodo: true,
+                            pointTodo: true,
                             card: {
                                 description: [
                                     `Every boy that Sasha ever crushed on was`,
@@ -660,7 +661,7 @@ export default {
                         `Anyway, I'm feeling healed. Still,`,
                         {
                             anchor: `hugging hurts…`,
-                            phrasingTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: `After downplaying my injuries to avoid the humiliation of getting beaten up, I suddenly play them up here to hide my emotional hurt, as I explain to Sasha why I winced when we hugged on that last day.`,
                                 dotKeys: {

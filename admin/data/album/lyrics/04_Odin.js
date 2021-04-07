@@ -35,8 +35,8 @@ export default {
     mixStartTime: `0:02:06.00`,
     playerReferenceTime: 559.438,
     playerStartTime: 555.277,
-    phrasingTodo: true,
     // Talk of permanence of death
+    connectTodo: true,
     overview: `Taiwan showed me how differently I would have turned out had my parents not immigrated to America. Yet I was still worlds away from what Sasha needed me to be. Life seemed as infinitely fluid as it was immovably fixed, and I wasn't sure which extreme terrified me more. Our house cat Odin died of old age later that summer, just as I was seeking spiritual answers. And yet, the eternal life promised by faith seemed no less awful than the finality of death.`,
     isDoublespeaker: true,
     lyricUnits: [
@@ -44,7 +44,7 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                contentTodo: true,
+                awkwardTodo: true,
                 card: {
                     description: [
                         `Odin, who was around before I was born, originally had a Taiwanese name. My sister and I anglicized it into the name of the`,
@@ -139,7 +139,7 @@ export default {
                         `trifling`,
                         {
                             anchor: `tref must reseed the earth.`,
-                            phrasingTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: [
                                     {
@@ -260,9 +260,9 @@ export default {
                         `you`,
                         {
                             anchor: `ruminate on these riddles…`,
-                            phrasingTodo: true,
+                            awkwardTodo: true,
                             card: {
-                                description: `The "awake" voice in the doublespeaker set echoes my thoughts as I lie on the floor mat, unable to sleep. Though the vastness of the universe terrifies me, it also suggests unlimited possibilities. And yet somehow, being with Sasha is not one of them.`,
+                                description: `The "awake" voice in the doublespeaker set echoes my thoughts as I lie on the floor mat, unable to sleep. The terrifying vastness of the universe suggests unlimited possibilities. And yet somehow, being with Sasha is not one of them.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -504,7 +504,7 @@ export default {
                         `proves`,
                         {
                             anchor: `shibboleth`,
-                            phrasingTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: [
                                     [
@@ -626,9 +626,9 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                phrasingTodo: true,
+                awkwardTodo: true,
                 card: {
-                    description: `While the two doublespeaker voices proceed independently, they do plant subtle ideas along each other's path, much as our conscious thoughts affect our dreams and vice versa. In this stanza, for example, the mention of a staircase by the "asleep" voice precedes the plummeting spoken of by the "awake" voice.`,
+                    description: `While the two doublespeaker voices proceed independently, they plant subtle ideas along each other's path, much as our conscious thoughts affect our dreams and vice versa. In this stanza, for example, the mention of a staircase by the "asleep" voice precedes the plummeting spoken of by the "awake" voice.`,
                     dotKeys: {
                         [OBSERVATION]: true,
                         [SONGCRAFT]: true,
@@ -726,7 +726,6 @@ export default {
                         `And if`,
                         {
                             anchor: `summer trips to Paris`,
-                            phrasingTodo: true,
                             cards: [
                                 {
                                     description: [
@@ -1022,7 +1021,7 @@ export default {
                         {
                             // CONSIDER: wormhole: Hope chest in M?
                             anchor: `hopeless rests.`,
-                            contentTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: `Hope was all that remained in Pandora's box. But upon having the hard truths of the world revealed to me by Sasha, I'm just left to feel as hopeless as ever.`,
                                 dotKeys: {
@@ -1047,7 +1046,7 @@ export default {
                         `Your`,
                         {
                             anchor: `seizures of spleen,`,
-                            contentTodo: true,
+                            iffyTodo: true,
                             card: {
                                 description: [
                                     `In`,
@@ -1070,7 +1069,8 @@ export default {
                         `to be a`,
                         {
                             anchor: `guard's whistle`,
-                            phrasingTodo: true,
+                            // Make last sentence connect better.
+                            connectTodo: true,
                             card: {
                                 description: [
                                     `Wandering the beach, I notice a steel whistle half buried in the sand, possibly dropped by a`,
@@ -1193,7 +1193,7 @@ export default {
                         {
                             anchor: `didn't impart warmth`,
                             // CONSIDER: Wormhole Foreshadow M?
-                            phrasingTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: `But also like cellophane, Sasha couldn't reflect warmth where none was present. If I couldn't be the better person in dealing with the bullies, then there came a point where she needed to keep her distance from me as well.`,
                                 dotKeys: {
@@ -1248,7 +1248,8 @@ export default {
                     mixTime: `1:49:20.04`,
                     lyricLeft: {
                         anchor: `shivering for shivs unsheathed.`,
-                        phrasingTodo: true,
+                        // Needs to connect prison yard with school yard.
+                        pointTodo: true,
                         cards: [
                             {
                                 // CONSIDER: Wormhole Kyon for shank?
@@ -1392,7 +1393,7 @@ export default {
                         `when your`,
                         {
                             anchor: `day to die`,
-                            phrasingTodo: true,
+                            iffyTodo: true,
                             card: {
                                 description: [
                                     `As a child, I suffered from`,
@@ -1447,7 +1448,8 @@ export default {
                             anchor: `soulless solace`,
                             // From Willy the Cocoa ("unsalvaged souls")
                             // But as a child, I came to a slightly different conclusion. If my brother and I could be so alike in physical makeup yet so different in mental presence, then it made more sense to believe that no one has a soul.
-                            phrasingTodo: true,
+                            // I know what I'm trying to say, but I'm somehow not finding the way to say it...
+                            hardTodo: true,
                             card: {
                                 description: `I just didn't understand why consciousness is even necessary. Sure, as living creatures, we need to fear death to ensure our survival. But why must we do so consciously? Why can't we just fear it the way oil is said to fear water?`,
                                 dotKeys: {
@@ -1459,7 +1461,7 @@ export default {
                         {
                             anchor: `just play dumb?`,
                             // This needs to be more about me wanting to be able to be stupid and still just know the correct spiritual path.
-                            contentTodo: true,
+                            hardTodo: true,
                             card: {
                                 description: [
                                     `Neither heaven nor`,
@@ -1507,7 +1509,8 @@ export default {
                         {
                             // CONSIDER: Wormhole to Ash Wednesday?
                             anchor: `fetus force-fed,`,
-                            phrasingTodo: true,
+                            // The point being, *if* there is a God, it would be like this.
+                            pointTodo: true,
                             card: {
                                 description: `Most maddening of all was that one has no say in being brought into this world. Given how distressing the certainty of death must always be, it seemed like there should be an option to opt out of life in the first place.`,
                                 dotKeys: {
@@ -1655,7 +1658,8 @@ export default {
                     lyricRight: [
                         {
                             anchor: `his litter`,
-                            phrasingTodo: true,
+                            // General point is all there, it just feels really awkward.
+                            iffyTodo: true,
                             card: {
                                 description: [
                                     `It isn't just Odin's unused`,
@@ -1685,7 +1689,7 @@ export default {
                         `while`,
                         {
                             anchor: `mermaids smile`,
-                            phrasingTodo: true,
+                            iffyTodo: true,
                             card: {
                                 description: [
                                     `T.S. Eliot's`,

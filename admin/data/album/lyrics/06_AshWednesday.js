@@ -111,9 +111,10 @@ export default {
                     lyric: [
                         {
                             anchor: `where it commenced:`,
-                            phrasingTodo: true,
+                            // Just confirm first sentence.
+                            awkwardTodo: true,
                             card: {
-                                description: `My relationship with Catherine began much like my friendship with Sasha had a decade earlier. I latched onto the first cute person to show me any small kindness in a new environment, and then I tried to make myself indispensable in small ways.`,
+                                description: `My relationship with Catherine began much like my friendship with Sasha had years earlier. I latched onto the first person to show me kindness in a new environment, and then I tried to make myself indispensable in small ways.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -137,7 +138,7 @@ export default {
                         {
                             anchor: `Ulysses' tomb,`,
                             properNoun: true,
-                            phrasingTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: [
                                     `A reference to the classic`,
@@ -153,7 +154,7 @@ export default {
                                             wiki: `Ulysses_(novel)`,
                                         },
                                     },
-                                    `which Catherine was reading at the time. That night was probably the beginning of the end, as Catherine surmised that a boyfriend who didn't read for pleasure would be the death of her.`,
+                                    `which Catherine was reading at the time. That night was probably the beginning of the end, as Catherine figured that a boyfriend who didn't read for pleasure would be the death of her.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -199,7 +200,7 @@ export default {
                         `First we`,
                         {
                             anchor: `laid Tourette's,`,
-                            phrasingTodo: true,
+                            awkwardTodo: true,
                             cards: [
                                 {
                                     description: [
@@ -208,10 +209,15 @@ export default {
                                             anchor: `Tourette syndrome`,
                                             wiki: `Tourette_syndrome`,
                                         },
-                                        `who suffer from involuntary tics, Catherine and I might have impulsively said unpleasant things to each other during the breakup. Also, Jesus was laid "to rest" on the day of his crucifixion.`,
+                                        `who suffer from involuntary tics, Catherine and I might have impulsively said unpleasant things to each other during the breakup.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
+                                    },
+                                },
+                                {
+                                    description: `Jesus was laid "to rest" on the day of his crucifixion.`,
+                                    dotKeys: {
                                         [PUN]: true,
                                     },
                                 },
@@ -602,7 +608,8 @@ export default {
                         },
                         {
                             anchor: `went clear—`,
-                            phrasingTodo: true,
+                            // Reconcile that part of clearing me from her life.
+                            awkwardTodo: true,
                             card: {
                                 description: [
                                     `After Catherine cleared me from her life, I tried to win her back by reading lots of books, beginning with the ones we'd discussed. Catherine had mentioned that "Famous Blue Raincoat" echoes a similar theme of purification through betrayal found in Cohen's novel`,
@@ -761,7 +768,7 @@ export default {
                                 {
                                     anchor: `Catherine vaut bien une messe…`,
                                     properNoun: true,
-                                    phrasingTodo: true,
+                                    awkwardTodo: true,
                                     card: {
                                         description: [
                                             {
@@ -778,7 +785,7 @@ export default {
                                                 isItalic: true,
                                                 lyric: `"Paris vaut bien une messe,"`,
                                             },
-                                            `or "Paris is well worth a Mass," implying that spiritual allegiances can readily be dictated by earthly ambitions. Similarly, I would have happily turned Catholic if it meant getting to stay with Catherine.`,
+                                            `or "Paris is well worth a Mass," implying that spiritual allegiances are preceded by earthly ambitions. Similarly, I would have happily turned Catholic if it meant getting to stay with Catherine.`,
                                         ],
                                         dotKeys: {
                                             [OBSERVATION]: true,
@@ -866,7 +873,7 @@ export default {
                         `to wear it like a`,
                         {
                             anchor: `tragic mask.`,
-                            phrasingTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: [
                                     `At some point, I learned to see`,
