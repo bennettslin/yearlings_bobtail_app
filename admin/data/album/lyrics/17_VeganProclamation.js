@@ -71,7 +71,7 @@ export default {
                                 `"If you're just starting out, you need to decide right now: Either you stick with quality vinyl, or you buy only the bargain bin LPs. You`,
                                 {
                                     anchor: `can't have both.`,
-                                    phrasingTodo: true,
+                                    awkwardTodo: true,
                                     card: {
                                         description: `This advice was offered by a friend when I bought a used turntable. And as it turns out, what he had to say about vinyl records holds just as well for life decisions. I learned this the hard way when I saw that my thoughtful deeds were always being negated by my hurtful ones. I couldn't keep two separate selves, where one gets praised for my kindness and the other takes the blame for all my selfish desires. I couldn't be both kinds of people.`,
                                         dotKeys: {
@@ -88,7 +88,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                phrasingTodo: true,
+                // Mention infirm part of last song.
+                connectTodo: true,
                 card: {
                     description: `With the previous song having provided a glimpse of me fading away while listening to old records, the crackle of a needle on vinyl now introduces the third and final song of the medley.`,
                     dotKeys: {
@@ -109,7 +110,8 @@ export default {
                         {
                             anchor: `Odin,`,
                             properNoun: true,
-                            phrasingTodo: true,
+                            // General point is there, just needs better wording and phrasing.
+                            iffyTodo: true,
                             card: {
                                 description: `As a child, I never paid much thought to our pet cat Odin. It was like he came with the house. So after Sita and I adopted a cat together, I marveled at how this instinct to nurture a pet just seemed to turn on inside me at the flick of a switch. Years later when my failure to nurture the relationship with Sita led to our final breakup, I thought of Odin often.`,
                                 dotKeys: {
@@ -127,7 +129,8 @@ export default {
                         `past the`,
                         {
                             anchor: `rape racks`,
-                            phrasingTodo: true,
+                            // Establish why it's called that.
+                            connectTodo: true,
                             card: {
                                 description: [
                                     {
@@ -258,9 +261,9 @@ export default {
                         `set to rock this pout from`,
                         {
                             anchor: `horse to chair,`,
-                            phrasingTodo: true,
+                            awkwardTodo: true,
                             card: {
-                                description: `I was prepared to brim with resentment for the entirety of my life, from rocking horse to rocking chair.`,
+                                description: `In other words, for the duration of my entire life, from rocking horse to rocking chair.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -285,7 +288,8 @@ export default {
                         `Well,`,
                         {
                             anchor: `first pets`,
-                            phrasingTodo: true,
+                            // Already spent a while on this...
+                            iffyTodo: true,
                             card: {
                                 description: `It blew my mind that I could hurt Sita for so long and still live with myself. But in hindsight, it's because I accepted at face value the facade of sanity she'd constructed as a means to cope. I allowed myself to believe that our recurring moments of intimacy, which she clung to and cherished as if that's how it always was, were truly all she needed.`,
                                 dotKeys: {
@@ -307,7 +311,8 @@ export default {
                         `and now I know why the`,
                         {
                             anchor: `battered kitten purrs…`,
-                            phrasingTodo: true,
+                            // Maybe this is already good enough?
+                            awkwardTodo: true,
                             cards: [
                                 {
                                     description: `Sita had her own story to tell about mistreating her first pet. Upon receiving a kitten as a child, she hugged it so hard that it began to purr. Taking this as a sign of its contentment, she hugged it even harder. Years later, she learned that cats also purr to cope with distress, and looking back, she realized her kitten had believed it was being crushed to death. She lived in guilt over this ever since.`,
@@ -834,7 +839,7 @@ export default {
                             // NOTE: I added an "h" to Shiva.
                             anchor: `chivalry to our Shiva's feet…`,
                             properNoun: true,
-                            phrasingTodo: true,
+                            awkwardTodo: true,
                             cards: [
                                 {
                                     description: [
