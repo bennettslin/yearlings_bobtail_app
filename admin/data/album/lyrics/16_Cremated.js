@@ -252,7 +252,7 @@ export default {
                         `an everlasting`,
                         {
                             anchor: `doublespeaker,`,
-                            contentTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: `That first month with Miriam was one of the happiest of my life, as all my efforts to improve myself during my first five-year plan finally came to fruition. Everything I did seemed to impress her, including doublespeaker rhyme, which I came up with while we were together. So Miriam became my sounding board for how I would use it in a song to juxtapose my sober and drunken thoughts.`,
                                 dotKeys: {
@@ -268,7 +268,8 @@ export default {
                         `this`,
                         {
                             anchor: `phoenix risen limp`,
-                            phrasingTodo: true,
+                            // Just can't get that third sentence right.
+                            awkwardTodo: true,
                             card: {
                                 description: [
                                     `In Greek mythology, the`,
@@ -290,7 +291,8 @@ export default {
                         `his`,
                         {
                             anchor: `beaten wit and id`,
-                            contentTodo: true,
+                            // Sober self plotted and planned, drunken self spontaneous.
+                            pointTodo: true,
                             cards: [
                                 {
                                     description: `The rational thinking of my sober self didn't always triumph, of course. Sometimes, letting my drunken id get his way was the key to making good creative decisions and life choices.`,
@@ -344,7 +346,7 @@ export default {
                         `sinking ship, maybe`,
                         {
                             anchor: `good for anecdotes.`,
-                            phrasingTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: `Though Miriam was entertained by my character, it wasn't in any way that one should hope for, which blew apart my theory that being interesting is the key to dating. I was to be the oddball ex-boyfriend providing her with a lifetime of amusing tales to share, not the future companion who would someday hear them.`,
                                 dotKeys: {
@@ -360,7 +362,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 phrasingTodo: true,
                 card: {
-                    description: `This song uses doublespeaker rhyme because my original plan was to contrast Miriam's inner thoughts with mine. I gave up after I kept forgetting which column of lyrics corresponded with which person, making me realize that no such contrast existed. We were both of the same mind in thinking the relationship was doomed to fail. One of us just had a better idea of when.`,
+                    description: `My original plan for this song was to use doublespeaker rhyme to contrast Miriam's inner thoughts with mine. I gave up after I kept forgetting which column of lyrics corresponded with which person, making me realize that no such distinction existed. We were both of the same mind in thinking the relationship was doomed to fail. One of us just had a better idea of when.`,
                     dotKeys: {
                         [OBSERVATION]: true,
                         [SONGCRAFT]: true,

@@ -72,7 +72,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                contentTodo: true,
+                // This point should be better.
+                pointTodo: true,
                 card: {
                     description: `With the breakup, I was now free to rebuild my life from scratch. I could reclaim not just my time spent with Sita, but the years of discontent that had taken their toll long before. And so here we hear the song of the white-throated sparrow, as I harken back to the happier days of my youth.`,
                     dotKeys: {
@@ -102,7 +103,7 @@ export default {
                         {
                             anchor: `bread and pocket lint.`,
                             // Mention tucking hands in.
-                            contentTodo: true,
+                            connectTodo: true,
                             card: {
                                 description: `Before leaving the cafeteria after a long shift, I would sometimes stash a bread roll in the front pocket of my jacket for munching on the go.`,
                                 dotKeys: {
@@ -171,7 +172,7 @@ export default {
                         `So`,
                         {
                             anchor: `polite, yet resigned,`,
-                            phrasingTodo: true,
+                            iffyTodo: true,
                             card: {
                                 description: `Sita had spent the day bottling up her emotions, braced for that night's confrontation. Meanwhile, I was drunk and ready to pass out. So even as she exploded in anger, I was still processing the situation. As such, all my responses were calm and curt, which just added to her fluster.`,
                                 dotKeys: {
@@ -203,7 +204,8 @@ export default {
                         `I'm sorry, but I`,
                         {
                             anchor: `went through your mail`,
-                            contentTodo: true,
+                            // Need better explanation of my computer.
+                            pointTodo: true,
                             card: {
                                 description: `Confused about why I'd grown distant, Sita caved in that day and snooped around on my desktop computer, which I kept at her place. In doing so, she stumbled upon some emails in which I spoke of a crush while soliciting advice from friends on how to break up gently.`,
                                 dotKeys: {
@@ -275,7 +277,8 @@ export default {
                         `emerged beside a`,
                         {
                             anchor: `paupers' grave`,
-                            phrasingTodo: true,
+                            // General idea is there, just needs work.
+                            iffyTodo: true,
                             card: {
                                 // NOTE: I changed "pauper's" to "paupers'."
                                 description: [
@@ -307,8 +310,8 @@ export default {
                         `torched the`,
                         {
                             anchor: `bellyaches on suttee.`,
-                            // Separate cards.
-                            phrasingTodo: true,
+                            // Separate cards?
+                            connectTodo: true,
                             card: {
                                 description: [
                                     {
@@ -416,7 +419,7 @@ export default {
                     lyricLeft: [
                         {
                             anchor: `Guilt pardons`,
-                            phrasingTodo: true,
+                            iffyTodo: true,
                             card: {
                                 description: `My sober self forgives his drunken accomplice's lack of remorse, aware of the trauma that must surely linger after performing such heinous acts.`,
                                 dotKeys: {
@@ -427,7 +430,7 @@ export default {
                         `the`,
                         {
                             anchor: `specter taunting twin streetlamps;`,
-                            phrasingTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: `Sober me observes his drunken half defiantly lashing out at twin streetlamps, whose misty glow has revived the vision of Sita's fearful gaze moments before he committed his crime.`,
                                 dotKeys: {
@@ -440,7 +443,7 @@ export default {
                         `still hardened against her`,
                         {
                             anchor: `fawning, misty glance,`,
-                            phrasingTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: `Sensing that Sita gazes down on him from the night sky, drunken me still refuses to flinch, as remnants of his past bitterness rumble deep within.`,
                                 dotKeys: {
@@ -651,7 +654,7 @@ export default {
                         {
                             anchor: `gesture then`,
                             // I was too naive to know how to give love, and she to receive it.
-                            contentTodo: true,
+                            pointTodo: true,
                             card: {
                                 description: `I'd bought the bracelet from a jewelry store at the local mall. It cost a lot relative to my hourly wage at the time, which made its underlying meaning all the more potent to Sita.`,
                                 dotKeys: {
@@ -674,7 +677,7 @@ export default {
                         lyric: {
                             anchor: `Mush! Mush!`,
                             properNoun: true,
-                            phrasingTodo: true,
+                            pointTodo: true,
                             card: {
                                 description: [
                                     `Marching onward without sleep, I keep shoveling away at my past, hoping to reveal the last time I'd ever known untroubled bliss. And so I arrive at the first song I loved as a child, Johnny Horton's`,
@@ -804,7 +807,8 @@ export default {
                                 lyric: `Übermensch`,
                             },
                             properNoun: true,
-                            phrasingTodo: true,
+                            // Point there, just really awkward phrasing.
+                            iffyTodo: true,
                             card: {
                                 description: [
                                     `The German philosopher`,
@@ -857,7 +861,7 @@ export default {
                         `Then the`,
                         {
                             anchor: `guardian knot`,
-                            phrasingTodo: true,
+                            iffyTodo: true,
                             card: {
                                 description: [
                                     `While the`,
@@ -903,7 +907,8 @@ export default {
                         `each`,
                         {
                             anchor: `attack with the proper fist.`,
-                            phrasingTodo: true,
+                            // General idea is there, just organise better.
+                            iffyTodo: true,
                             card: {
                                 description: [
                                     `The right hemisphere of the brain`,
@@ -973,7 +978,7 @@ export default {
                         `by`,
                         {
                             anchor: `trail of crumbs,`,
-                            phrasingTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: `Fearing the emotional upheaval ahead, I wonder if it's too late to walk back the damage I've done. But even if I wanted to, I couldn't find my way back. All night I've been nibbling on the bread in my pocket rather than pinching off crumbs for a trail. trading away long-term security to satisfy my short-term hunger.`,
                                 dotKeys: {
@@ -997,7 +1002,7 @@ export default {
                         {
                             anchor: `Garry's sole witness`,
                             properNoun: true,
-                            phrasingTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: `While all my promises to Sita have proven to be lies, I didn't intend them to be. Still, while I really wish to argue my case, I realize the breakup will be done with sooner if I just accept my role as the villain. And so the sober me, called up to testify for his drunken half, stays silent.`,
                                 dotKeys: {
@@ -1025,7 +1030,7 @@ export default {
                         `Though, the`,
                         {
                             anchor: `master mind`,
-                            phrasingTodo: true,
+                            iffyTodo: true,
                             card: {
                                 description: [
                                     `In college, I discovered that being drunk made it easier to perform arduous tasks like writing`,
@@ -1050,7 +1055,7 @@ export default {
                         `a bid for greatness' sake, he's sold on as`,
                         {
                             anchor: `holy war.`,
-                            phrasingTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: [
                                     `Most of the`,

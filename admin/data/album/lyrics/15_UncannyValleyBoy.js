@@ -37,7 +37,8 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                phrasingTodo: true,
+                // Make point instead that we didn't know what stereotype involved.
+                pointTodo: true,
                 cards: [
                     {
                         description: [
@@ -84,7 +85,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                phrasingTodo: true,
+                awkwardTodo: true,
                 card: {
                     description: `I wrote the music for this song a while back after waking from a horrid nightmare that I badly needed to retell. But I shelved it after all my attempts to describe the nightmare only elicited laughter. Years later, I realized its gloomy chords and disjointed tempo changes could be repurposed into a song about a lecture from a nightmarish version of my parents, and I brought it back out.`,
                     dotKeys: {
@@ -245,7 +246,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                contentTodo: true,
+                // Make about Wicked Annabella instead.
+                pointTodo: true,
                 card: {
                     description: [
                         `I never liked being a baritone, as it always seemed weird to hear this deep, sonorous tone coming from my small frame. So in recording this album, I would alter my singing voice by channeling`,
@@ -302,7 +304,7 @@ export default {
                         `to live neutered, blissfully`,
                         {
                             anchor: `and orphaned.`,
-                            phrasingTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: [
                                     `Being`,
@@ -342,7 +344,7 @@ export default {
                         },
                         {
                             anchor: `earth right now your tourist store…`,
-                            phrasingTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: `My mother once filled my head with visions of being a great artist. The mail-order cult then piled on the belief that I was a mere visitor to this planet. The lasting effect on my psyche was that I became unaffected by earthly concerns, preferring instead to work tirelessly "to restore" my "birthright" of artistic renown.`,
                                 dotKeys: {
@@ -605,7 +607,8 @@ export default {
                         `you finally granted their`,
                         {
                             anchor: `nutshells are rigged,`,
-                            phrasingTodo: true,
+                            // Move sleight of hand back where it was.
+                            awkwardTodo: true,
                             card: {
                                 description: [
                                     `The`,
@@ -692,7 +695,7 @@ export default {
                         `smugly prepped to`,
                         {
                             anchor: `haze the new latecomers.`,
-                            phrasingTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: [
                                     `Some organizations make their new recruits go through degrading`,
@@ -823,7 +826,8 @@ export default {
                         `A`,
                         {
                             anchor: `nation paused`,
-                            contentTodo: true,
+                            // Talk about normal bustle coming to a standstill.
+                            pointTodo: true,
                             card: {
                                 description: [
                                     `In 1987, a`,
@@ -843,7 +847,7 @@ export default {
                         `to watch you`,
                         {
                             anchor: `fail your Sita`,
-                            phrasingTodo: true,
+                            iffyTodo: true,
                             card: {
                                 description: `Contemporary audiences may find it disgraceful that Rama's first act upon reuniting with Sita was to demand proof of her purity. My reaction is similar when revisiting my need to be the more sexually experienced partner at the time. Why couldn't I simply accept with gratitude whatever circumstances first had to happen for Sita to finally be with me?`,
                                 dotKeys: {
@@ -881,7 +885,7 @@ export default {
                         `your idol who riled you when you saw that you`,
                         {
                             anchor: `two were tied?`,
-                            phrasingTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: `While Sita had hoped for us to be tied in a matrimonial sense, I chafed that we were also tied in a competitive sense. Between the two of us, I counted fewer romantic partners in my past, and this felt like a threat.`,
                                 dotKeys: {
@@ -1058,7 +1062,7 @@ export default {
                         `could sway you from a`,
                         {
                             anchor: `fairer marathon!`,
-                            phrasingTodo: true,
+                            awkwardTodo: true,
                             cards: [
                                 {
                                     description: [
@@ -1157,7 +1161,7 @@ export default {
                             `…traded in for the`,
                             {
                                 anchor: `trophy blondes.`,
-                                phrasingTodo: true,
+                                awkwardTodo: true,
                                 cards: [
                                     {
                                         description: `To add insult to injury, the women I left Sita for were usually white, which bothered her greatly. In my defense, this wasn't by design, but seeing her loss as my gain, I let her believe the worst.`,
@@ -1199,7 +1203,8 @@ export default {
                         `what's left of what these`,
                         {
                             anchor: `faces you flip override,`,
-                            contentTodo: true,
+                            // Not sure if this one will get better.
+                            pointTodo: true,
                             card: {
                                 description: `At some point, I noticed that I wore different faces for different people. This wasn't the case when I was younger, which could only mean there was once a true me, and now there wasn't.`,
                                 dotKeys: {
@@ -1215,7 +1220,7 @@ export default {
                         `and all these`,
                         {
                             anchor: `pages you've ripped`,
-                            phrasingTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: `My parents lament my eagerness to ditch past sentiments for present ambitions, as if I'm tearing out old pages from the scrapbook of my life to free up room for new inserts.`,
                                 dotKeys: {
@@ -1246,7 +1251,7 @@ export default {
                         `their`,
                         {
                             anchor: `sun tinkles light`,
-                            phrasingTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: `In the nightmare, I was now ruler of the neighborhood, as I showered my subjects in urine, their sole means of subsistence. In hindsight, my brain was probably telling me to wake up and use the bathroom.`,
                                 dotKeys: {
@@ -1305,9 +1310,9 @@ export default {
                                 },
                                 `'s sake,`,
                             ],
-                            phrasingTodo: true,
+                            awkwardTodo: true,
                             card: {
-                                description: `My latest five-year plan, like the one before it, was meant to dramatically improve my life through a major overhaul of the underlying system. Since it couldn't be left half completed, there was nothing to question while the work was in progress.`,
+                                description: `My latest five-year plan, like the one before it, was meant to dramatically improve my life through a major overhaul of the underlying system. Since it couldn't be left half completed, there was no point in questioning it while the work was in progress.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -1333,7 +1338,7 @@ export default {
                 {
                     lyric: {
                         anchor: `old and subservient.`,
-                        phrasingTodo: true,
+                        iffyTodo: true,
                         cards: [
                             {
                                 description: `It wasn't until college that I learned to appreciate the sacrifices my parents had made for me and my siblings to lead lives better than their own. But that this awareness came about through my coursework, rather than through my own lived experiences, only added to my guilt.`,
@@ -1436,7 +1441,7 @@ export default {
                         anchor: `Rama, Rama…`,
                         properNoun: true,
                         card: {
-                            description: `Like Valmiki as he chanted Rama's name, I desperately wanted to be good again.`,
+                            description: `Like Valmiki as he chanted Rama's name, I desperately want to be good again.`,
                             dotKeys: {
                                 [NARRATIVE]: true,
                             },
@@ -1448,10 +1453,10 @@ export default {
                 {
                     lyric: {
                         anchor: `…Maranatha!`,
-                        phrasingTodo: true,
+                        awkwardTodo: true,
                         card: {
                             description: [
-                                `In my chant, however, the syllables gradually shift to form the holy name of Mara. And unlike Valmiki, who embraced Eastern spirituality, I find salvation in the embrace of Western women, as represented here by an expression of their faith. In the`,
+                                `In my chant, however, the syllables gradually shift to form the holy name of Mara. Unlike Valmiki, who embraced Eastern spirituality, I find salvation in the embrace of Western women. And so my chant ends here with an expression of Western faith. In the`,
                                 {
                                     anchor: `New Testament,`,
                                     wiki: `New_Testament`,
@@ -1480,7 +1485,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                phrasingTodo: true,
+                // Make the point that I used the click track to record the vocals.
+                connectTodo: true,
                 card: {
                     description: [
                         `To record the gradual shift from "Rama" to "Mara" in the backing vocals, I made a`,
