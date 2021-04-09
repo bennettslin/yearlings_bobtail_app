@@ -37,22 +37,7 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                // Make point instead that we didn't know what stereotype involved.
-                pointTodo: true,
                 cards: [
-                    {
-                        description: [
-                            `Growing up in the San Fernando Valley in the 80s meant that you represented the region that popularized the`,
-                            {
-                                anchor: `Valley girl`,
-                                wiki: `Valley_girl`,
-                            },
-                            `stereotype, whether or not you embodied it yourself.`,
-                        ],
-                        dotKeys: {
-                            [OBSERVATION]: true,
-                        },
-                    },
                     {
                         description: [
                             `The`,
@@ -60,11 +45,24 @@ export default {
                                 anchor: `uncanny valley`,
                                 wiki: `Uncanny_valley`,
                             },
-                            `is a theory that human replicas only repulse us further as they grow more lifelike, insofar as they remain less than convincingly so. And as I grew older while remaining less than convincing as a grownup, I had to wonder if this Valley boy elicited a similar revulsion from others.`,
+                            `is a theory that human replicas only repulse us further as they grow more lifelike, insofar as they remain less than convincingly so. And as I grew older while remaining less than convincing as a grownup, it was reasonable to wonder if this "valley boy" now elicited the same revulsion.`,
                         ],
                         dotKeys: {
                             [OBSERVATION]: true,
                             [PUN]: true,
+                        },
+                    },
+                    {
+                        description: [
+                            `The San Fernando Valley is known to the world for having popularized the`,
+                            {
+                                anchor: `Valley girl`,
+                                wiki: `Valley_girl`,
+                            },
+                            `stereotype. So the kids I grew up with were proud to self-identify with the label, even if they didn't embody its traits.`,
+                        ],
+                        dotKeys: {
+                            [OBSERVATION]: true,
                         },
                     },
                 ],
@@ -826,8 +824,6 @@ export default {
                         `A`,
                         {
                             anchor: `nation paused`,
-                            // Talk about normal bustle coming to a standstill.
-                            pointTodo: true,
                             card: {
                                 description: [
                                     `In 1987, a`,
@@ -840,7 +836,7 @@ export default {
                                         isItalic: true,
                                         lyric: `Ramayana`,
                                     },
-                                    `began to broadcast throughout India. Street markets and train stations came to a standstill each week as the entire population sat glued to their television screens.`,
+                                    `began to broadcast throughout India. Each week, street markets and train stations came to a standstill as so many people dropped what they were doing to glue themselves to the closest television screen.`,
                                 ],
                             },
                         },
@@ -1206,7 +1202,7 @@ export default {
                             // Not sure if this one will get better.
                             pointTodo: true,
                             card: {
-                                description: `At some point, I noticed that I wore different faces for different people. This wasn't the case when I was younger, which could only mean there was once a true me, and now there wasn't.`,
+                                description: `At some point, I noticed that I wore different faces around different people. This wasn't the case when I was younger, which could only mean there was once a true me, and now there wasn't.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },

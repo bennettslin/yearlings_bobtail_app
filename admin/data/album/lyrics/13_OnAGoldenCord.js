@@ -204,10 +204,9 @@ export default {
                         `I'm sorry, but I`,
                         {
                             anchor: `went through your mail`,
-                            // Need better explanation of my computer.
-                            pointTodo: true,
+                            awkwardTodo: true,
                             card: {
-                                description: `Confused about why I'd grown distant, Sita caved in that day and snooped around on my desktop computer, which I kept at her place. In doing so, she stumbled upon some emails in which I spoke of a crush while soliciting advice from friends on how to break up gently.`,
+                                description: `Confused about why I'd grown distant, Sita caved in that day and snooped around on my computer, which was a desktop I kept at her place. In doing so, she stumbled upon my emails, one of which spoke of a crush, and another soliciting advice from friends on how to break up gently.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -656,7 +655,7 @@ export default {
                             // I was too naive to know how to give love, and she to receive it.
                             pointTodo: true,
                             card: {
-                                description: `I'd bought the bracelet from a jewelry store at the local mall. It cost a lot relative to my hourly wage at the time, which made its underlying meaning all the more potent to Sita.`,
+                                description: `I'd bought the bracelet from a jewelry store at the local mall. It cost a lot relative to my hourly wage at the time, which made it all the more dear to Sita.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

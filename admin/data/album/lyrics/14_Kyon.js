@@ -31,9 +31,8 @@ export default {
     mixStartTime: `0:00:00.27`,
     playerReferenceTime: 2498.410,
     playerStartTime: 2496.296,
-    // Mention how it got that far to begin with.
-    pointTodo: true,
-    overview: `The on-again, off-again years gave me enough distance from my misdeeds to see how emotionally abusive I'd become. But I was baffled by why Sita so willingly endured my cruelty. I tried hard to understand her psyche and eventually came to see just how thoroughly she'd tied her sense of worth to our relationship. I was fighting for me. She was fighting for us.`,
+    awkwardTodo: true,
+    overview: `The on-again, off-again years gave me enough distance from my misdeeds to see how emotionally abusive I'd become. But what baffled me is how it had gotten that far to begin with. I tried hard to understand why Sita so willingly endured my cruelty, and I came to see just how thoroughly she'd tied her sense of worth to our relationship. I was fighting for me. She was fighting for us.`,
     lyricUnits: [
         {
             unitMap: {},

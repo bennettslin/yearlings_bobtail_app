@@ -158,7 +158,7 @@ export default {
                             pointTodo: true,
                             card: {
                                 description: [
-                                    `To save money after my lease ended, I would alternate between spending the night with Sita and crashing in the`,
+                                    `To save money after my lease ended, I would alternate between spending a few nights with Sita and crashing in the`,
                                     {
                                         anchor: `punk house`,
                                         wiki: `Punk_house`,

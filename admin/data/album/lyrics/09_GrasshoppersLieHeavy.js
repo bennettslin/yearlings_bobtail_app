@@ -250,10 +250,8 @@ export default {
                         `stalled by`,
                         {
                             anchor: `keys left on dumbwaiter trays.`,
-                            // Should I make it just about me? And that they were cute.
-                            pointTodo: true,
                             card: {
-                                description: `The students would bus their trays in carriages attached to a conveyor system, which would then transport the trays down into the dishroom. Every so often, someone would accidentally leave a personal item and come downstairs to retrieve it. The dishroom workers would get a kick when that happened, since the students were always grateful.`,
+                                description: `The students would bus their trays in carriages attached to a conveyor, which would then transport the trays into the dishroom. Every so often, someone would accidentally leave a personal item and come downstairs to retrieve it. I got a kick when that happened. The students were always grateful, and sometimes they were cute.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

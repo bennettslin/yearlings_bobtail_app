@@ -1448,10 +1448,9 @@ export default {
                             anchor: `soulless solace`,
                             // From Willy the Cocoa ("unsalvaged souls")
                             // But as a child, I came to a slightly different conclusion. If my brother and I could be so alike in physical makeup yet so different in mental presence, then it made more sense to believe that no one has a soul.
-                            // I know what I'm trying to say, but I'm somehow not finding the way to say it...
-                            hardTodo: true,
+                            awkwardTodo: true,
                             card: {
-                                description: `I just didn't understand why consciousness is even necessary. Sure, as living creatures, we need to fear death to ensure our survival. But why must we do so consciously? Why can't we just fear it the way oil is said to fear water?`,
+                                description: `Of course, I knew that humans need to fear death to ensure their survival. What I didn't understand is why it has to be done consciously. Why couldn't we just fear death the same way that oil is said to fear water?`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -1469,7 +1468,7 @@ export default {
                                         anchor: `nirvana`,
                                         wiki: `Nirvana`,
                                     },
-                                    `sounded all that pleasant, and yet they were the best that centuries of humanity could dream up. It seemed to me that if a true spiritual reward existed out there, its allure should be so self-evident that wanting to strive for it would be a no-brainer.`,
+                                    `sounded all that pleasant, and yet they were the best offers available. It just seemed to me that if a spiritual reward really did await us in the afterlife, then its allure would be self-evident.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,

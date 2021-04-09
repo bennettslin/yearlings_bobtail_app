@@ -331,20 +331,18 @@ export default {
                         `with you raving over how`,
                         {
                             anchor: `he's getting you`,
-                            // Comment on positive feedback loop.
-                            pointTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: [
-                                    `Every boy that Sasha ever crushed on was`,
+                                    `Every boy that Sasha crushed on was`,
                                     {
                                         anchor: `Jewish,`,
                                         wiki: `Jews`,
                                     },
-                                    `which in turn motivated her to be a better Jew. It frustrated me that without any effort, someone else always had the winning advantage in "getting her."`,
+                                    `which in turn motivated her to be a better Jew. It frustrated me that since I could never help strengthen her faith, I would always be at a disadvantage in "getting her."`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
-                                    [OBSERVATION]: true,
                                     [PUN]: true,
                                 },
                             },

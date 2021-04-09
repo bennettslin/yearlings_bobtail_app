@@ -136,6 +136,17 @@ export default {
                     mixTime: `0:09:11.25`,
                     lyric: [
                         {
+                            anchor: `Heavin' some, Ana`,
+                            card: {
+                                description: `"Heaving some, Ana whispers a low sigh." The others have just learned that when you first down a whole bottle of Robitussin, you'll likely want to retch. Within a moment, though, you'll feel your lungs shrivel away, and it's like you're peacefully breathing through gills underwater.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [OBSERVATION]: true,
+                                    [PUN]: true,
+                                },
+                            },
+                        },
+                        {
                             anchor: `whispures a low sigh, bein'…`,
                             card: {
                                 description: [
@@ -158,17 +169,6 @@ export default {
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
-                                    [PUN]: true,
-                                },
-                            },
-                        },
-                        {
-                            anchor: `Heavin' some, Ana`,
-                            card: {
-                                description: `"Heaving some, Ana whispers a low sigh." The others have just learned that when you first down a whole bottle of Robitussin, you'll likely want to retch. Within a moment, though, you'll feel your lungs shrivel away, and it's like you're peacefully breathing through gills underwater.`,
-                                dotKeys: {
-                                    [NARRATIVE]: true,
-                                    [OBSERVATION]: true,
                                     [PUN]: true,
                                 },
                             },
@@ -212,10 +212,8 @@ export default {
                         },
                         {
                             anchor: `exit us`,
-                            // Should be about leaving our homes, not the drugstore.
-                            pointTodo: true,
                             card: {
-                                description: `As the Book of "Exodus" recounts how the Israelites found manna during their trek out of Egypt, so too do we leave the drugstore with spiritual sustenance in hand.`,
+                                description: `As the Book of "Exodus" recounts how the Israelites found manna during their trek out of Egypt, so too do we leave the drudgery of our homes seeking spiritual sustenance.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -1007,10 +1005,8 @@ export default {
                         },
                         {
                             anchor: `unsolft quarry rest…`,
-                            // Not sure if that's the best description.
-                            pointTodo: true,
                             card: {
-                                description: `"Our young invaders" have now arrived at a clearing where dirt from the ground has been pushed against the walls and shaped into makeshift benches. Pausing for a breather, on this "soft quarry" we rest.`,
+                                description: `"Our young invaders" arrive at a clearing where dirt from the ground has been shaped into makeshift benches. Pausing for a breather, on this "soft quarry" we rest.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -1309,11 +1305,9 @@ export default {
                         `But`,
                         {
                             anchor: `past a cross Bearing Straight,`,
-                            // Make clear that bearing is about navigation. Avoid "venture."
-                            pointTodo: true,
                             card: {
                                 description: [
-                                    `We venture past a cross-shaped headstone, "bearing straight," just as those before us had "passed across the`,
+                                    `We navigate by "bearing straight" past a cross-shaped headstone, just as those before us had "passed across the`,
                                     {
                                         anchor: `Bering Strait."`,
                                         wiki: `Bering_Strait`,

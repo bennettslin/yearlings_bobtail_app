@@ -291,11 +291,10 @@ export default {
                         `his`,
                         {
                             anchor: `beaten wit and id`,
-                            // Sober self plotted and planned, drunken self spontaneous.
-                            pointTodo: true,
+                            awkwardTodo: true,
                             cards: [
                                 {
-                                    description: `The rational thinking of my sober self didn't always triumph, of course. Sometimes, letting my drunken id get his way was the key to making good creative decisions and life choices.`,
+                                    description: `The rational schemes of my sober self didn't always win out, of course. Sometimes the best decisions came from indulging the whims of my drunken self.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -892,7 +891,7 @@ export default {
                 pointTodo: true,
                 card: {
                     // NOTE: Change in recording? Connect to Uncanny Valley?
-                    description: `The bouncing ping pong ball here evokes the ticking of a wall clock by my deathbed. As I fade away in my infirm state, the echoes reverberate like the sound of a ball being volleyed back and forth, and I picture Miriam in a leisurely tennis match with her new beau.`,
+                    description: `The bouncing ping pong ball here evokes the ticking of a wall clock by my deathbed. As I fade away in my infirm state, the echoes reverberate like the sound of a tennis ball being volleyed back and forth, and I picture Miriam in a leisurely match with her new beau.`,
                     dotKeys: {
                         [NARRATIVE]: true,
                         [SONGCRAFT]: true,

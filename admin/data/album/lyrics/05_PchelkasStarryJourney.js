@@ -38,9 +38,7 @@ export default {
     mixStartTime: `0:01:27.02`,
     playerReferenceTime: 756.159,
     playerStartTime: 755.661,
-    // Needs to mention that it asked for payments.
-    pointTodo: true,
-    overview: `At the height of my years of getting bullied, a strange letter arrived with the promise of spiritual answers. After I sent numerous payments, it was finally revealed to me that I belonged to a race of interstellar beings, and my mission was to shut myself off from the world. I did so by becoming unresponsive in an autistic manner like my brother, which made me feel a psychic bond with him. But as my sanity chipped away, I gradually came to see that I was in a mail-order cult.`,
+    overview: `At the height of my years of getting bullied, a strange letter arrived with the promise of spiritual answers. After I sent the requested payments, it was revealed to me that I belonged to a race of interstellar beings, and my mission was to shut myself off from the world. I did so by adopting an unresponsive manner like my brother, which made me feel a psychic bond with him. But as my sanity chipped away, I gradually realized I was in a mail-order cult.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -1004,8 +1002,6 @@ export default {
                         `But`,
                         {
                             anchor: `every hero has a heel,`,
-                            // Mention power to remain stoic.
-                            pointTodo: true,
                             card: {
                                 description: [
                                     `The Greek hero`,
@@ -1013,7 +1009,7 @@ export default {
                                         anchor: `Achilles`,
                                         wiki: `Achilles`,
                                     },
-                                    `was invulnerable everywhere on his body except for his heel. Meanwhile, my weakness was that I genuinely craved acceptance from others.`,
+                                    `was invulnerable everywhere on his body except for his heel. In the same way, I might have had the strength to remain stoic forever, if not for my one weakness of craving acceptance by others.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
