@@ -762,7 +762,7 @@ export default {
                 // Just confirm.
                 awkwardTodo: true,
                 card: {
-                    description: `After some trial and error, I decided the counterpoint in this song sounded best with the melodies occupying the same register, as this allows them to blend together into a single harmonic layer. At the same time, the ear can still tease apart the different timbres of each instrument, as is the case with the banjo, fiddle, and tin whistle heard here.`,
+                    description: `After some trial and error, I decided the counterpoint in this song sounded best with each part occupying the same register, which allows them to blend together into a single harmonic layer. At the same time, the ear can tease apart the different timbres of each instrument, as is the case with the banjo, fiddle, and tin whistle heard here.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
@@ -795,10 +795,10 @@ export default {
                         `becomes someone's`,
                         {
                             anchor: `last-ditch alibi.`,
-                            // Clarify accepting it as the truth?
-                            connectTodo: true,
+                            // Clarify which meaning of leaving in to leave her.
+                            awkwardTodo: true,
                             card: {
-                                description: `While my friends and I were clearly joking to say it was Garry and not me who'd committed this or that act of vandalism, on some level I accepted it as the truth. And now it also wasn't me who'd sapped Sita of her confidence over the years, only to leave her a crumbled wreck. It must have been Garry. I wasn't there.`,
+                                description: `Though my friends were clearly joking to say it was Garry and not me who'd committed this or that act of vandalism, on some level I accepted it as the truth. And now it also wasn't me who'd sapped Sita of her confidence through the years, finally to leave her a crumbled wreck. It must have been Garry. I wasn't there.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

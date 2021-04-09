@@ -409,11 +409,9 @@ export default {
                         `She braves the crowd`,
                         {
                             anchor: `filled first from sides.`,
-                            // Adequately points out that I'm playing a show?
-                            connectTodo: true,
                             cards: [
                                 {
-                                    description: `A few songs into my band's set, I watch from onstage as an attractive latecomer and her friends make their way through a packed room.`,
+                                    description: `A few songs into my band's set, I watch from onstage as an attractive woman and her friends make their way through a packed room.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -441,7 +439,7 @@ export default {
                                         anchor: `jigsaw puzzle`,
                                         wiki: `Jigsaw_puzzle`,
                                     },
-                                    `by first connecting the edge pieces, then building inward. So as this latecomer squeezes her way into the center of the crowd, I wonder if she's the long-awaited final piece to the sprawling puzzle of my life.`,
+                                    `by first connecting the edge pieces, then building inward. So as the latecomer squeezes her way into the center of the crowd, I wonder if she's the long-awaited final piece to the sprawling puzzle of my life.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

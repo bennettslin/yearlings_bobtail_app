@@ -50,7 +50,7 @@ export default {
                             anchor: `Hindi`,
                             wiki: `Hindi`,
                         },
-                        `word for "why." After Sita and I started dating, I studied Hindi for several years. Both for course credit as a religious studies major, as well as to converse with her family in their native language.`,
+                        `word for "why." After Sita and I started dating, I studied Hindi for several years. I got course credit for it as a religious studies major, and it allowed me to converse with her family in their native language.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,

@@ -1069,8 +1069,7 @@ export default {
                         `to be a`,
                         {
                             anchor: `guard's whistle`,
-                            // Make last sentence connect better.
-                            connectTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: [
                                     `Wandering the beach, I notice a steel whistle half buried in the sand, possibly dropped by a`,
@@ -1078,7 +1077,7 @@ export default {
                                         anchor: `lifeguard`,
                                         wiki: `Lifeguard`,
                                     },
-                                    `earlier in the day. Its shrill cry, which once warned of danger, now lies forever silent. Perhaps my dream is telling me that some dangers come with no warning?`,
+                                    `earlier in the day. Its shrill cry once warned of danger, but now it lies forever silent. Even in dreams, some dangers must come without warning.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

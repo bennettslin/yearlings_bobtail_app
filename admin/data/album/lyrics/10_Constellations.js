@@ -1376,12 +1376,12 @@ export default {
                 connectTodo: true,
                 card: {
                     description: [
-                        `I treated every Robitussin trip as a time to explore metaphysical truths in my head. But since I typically tripped solo, I would also occupy myself by playing video games on my`,
+                        `On my solo Robitussin trips, I would explore metaphysical truths in my head while playing video games on my`,
                         {
                             anchor: `Super Nintendo.`,
                             wiki: `Super_Nintendo_Entertainment_System`,
                         },
-                        `For a while afterward, every vintage arcade sound seemed to hide a profound spiritual message that my sober ears just couldn't suss out.`,
+                        `For a while afterward, every vintage arcade sound I heard seemed to hide a profound spiritual message that my sober ears just couldn't suss out. So I included some here in case they have the same effect on others.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,

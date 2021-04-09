@@ -537,10 +537,10 @@ export default {
                                 description: [
                                     `Every now and then, I would have a Robitussin`,
                                     {
-                                        anchor: `flashback,`,
+                                        anchor: `flashback`,
                                         wiki: `Flashback_(psychology)`,
                                     },
-                                    `and I would trail off and stare into the distance. When a friend asked what it was like, I said it was like`,
+                                    `where I would trail off and stare into the distance. When a friend asked what it was like, I said it was like`,
                                     {
                                         anchor: `Colorforms`,
                                         wiki: `Colorforms`,
@@ -574,7 +574,7 @@ export default {
                         {
                             anchor: `pups with their hateful fangs`,
                             card: {
-                                description: `Young carnivores have an instinct to tear flesh with their jaws, so they reflexively soften their bites during rough play. And knowing as I did now what it truly means to inflict harm, I realized the bullies held back their blows in the same way, believing their cruelty to be in good fun.`,
+                                description: `Young carnivores have an instinct to tear flesh with their jaws, so they reflexively soften their bites during rough play. And knowing as I did now what it truly means to inflict harm, I realized the bullies held back their blows the same way, believing their cruelty to be in good fun.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [REFERENCE]: true,

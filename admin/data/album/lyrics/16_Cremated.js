@@ -456,27 +456,30 @@ export default {
                     lyricLeft: `Though, she ponders the children`,
                     lyricRight: [
                         {
-                            anchor: `Trophy bronzed from a Trojan`,
+                            anchor: `Trophy bronzed`,
                             // Mention something come out of me.
                             pointTodo: true,
                             cards: [
                                 {
-                                    description: `The first time I had sex with a woman other than Sita, I left the used condom on my nightstand for days. I was just so amazed, like a proud parent might bronze their baby's first pair of shoes.`,
+                                    description: `The first time I had sex with a woman other than Sita, I left the used condom on my nightstand for days. I was so amazed by what came out of me that I needed, like a proud parent might bronze their baby's first pair of shoes.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [OBSERVATION]: true,
                                     },
                                 },
                                 {
-                                    description: `Having climaxed first, Miriam wraps up our little tryst by peeling off the condom and giving me a blowjob.`,
-                                    dotKeys: {
-                                        [NARRATIVE]: true,
-                                    },
-                                },
-                                {
                                     wormhole: `trophy_bronze`,
                                 },
                             ],
+                        },
+                        {
+                            anchor: `from a Trojan`,
+                            card: {
+                                description: `Having climaxed first, Miriam wraps up our little tryst by peeling off the condom and giving me a blowjob.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                },
+                            },
                         },
                     ],
                 },
@@ -688,7 +691,7 @@ export default {
                             anchor: `Needle done`,
                             cards: [
                                 {
-                                    description: `Having gone all the way with Miriam, I'm at peace with our inevitable breakup. As I bask in my post-coital glow, a scenario plays out in my mind of how things will end. I picture myself as a terminally ill patient, being put to sleep just as a cherished record finishes playing in the background.`,
+                                    description: `Having gone all the way with Miriam, I'm at peace with our inevitable breakup. As I bask in my post-coital glow, a scenario plays out in my mind of how things will end. I picture myself as a terminally ill patient being put to sleep while an old record finishes playing in the background.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },

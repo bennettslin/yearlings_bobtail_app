@@ -1481,8 +1481,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                // Make the point that I used the click track to record the vocals.
-                connectTodo: true,
+                awkwardTodo: true,
                 card: {
                     description: [
                         `To record the gradual shift from "Rama" to "Mara" in the backing vocals, I made a`,
@@ -1490,7 +1489,7 @@ export default {
                             anchor: `click track`,
                             wiki: `Click_track`,
                         },
-                        `at a slightly increased tempo that would arrive an eighth note ahead of the mix after seven measures. I then overlaid multiple vocal tracks in which I quietly took a breath at different points to create the impression of a single uninterrupted take.`,
+                        `at a tempo that was calculated to arrive an eighth note ahead of the mix after seven measures. I then recorded multiple vocal tracks along to it, taking breaths at different points on each one. Overlaid together, they create the impression of a single uninterrupted take.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,

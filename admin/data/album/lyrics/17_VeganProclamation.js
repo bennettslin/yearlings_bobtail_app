@@ -91,7 +91,7 @@ export default {
                 // Mention infirm part of last song.
                 connectTodo: true,
                 card: {
-                    description: `With the previous song having provided a glimpse of me fading away while listening to old records, the crackle of a needle on vinyl now introduces the third and final song of the medley.`,
+                    description: `In the previous song, I imagined myself as an infirm patient, fading away while listening to old records. The crackle of a needle on vinyl now introduces the third and final song of the medley.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
@@ -129,15 +129,13 @@ export default {
                         `past the`,
                         {
                             anchor: `rape racks`,
-                            // Establish why it's called that.
-                            connectTodo: true,
                             card: {
                                 description: [
                                     {
                                         anchor: `Dairy cows`,
                                         wiki: `Dairy_cattle`,
                                     },
-                                    `are impregnated every year to keep them at peak lactation. This is done by restraining them in an apparatus once known as a "rape rack," where they are then forcibly inseminated.`,
+                                    `are impregnated every year to keep them at peak lactation. This is done by restraining them in an apparatus once known in the dairy industry as a "rape rack," where they're then forcibly inseminated.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
