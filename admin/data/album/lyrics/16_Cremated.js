@@ -721,7 +721,7 @@ export default {
                         `it hums`,
                         {
                             anchor: `a typo`,
-                            // Specify that universal donor cannot receive.
+                            // Specify what it means to be other types.
                             pointTodo: true,
                             card: {
                                 description: [
@@ -730,7 +730,7 @@ export default {
                                         anchor: `"Type O,"`,
                                         wiki: `Blood_type`,
                                     },
-                                    `the universal blood donor, I was ever eager to give of myself to all other types, in a world where I wasn't meant to get back from any but my own.`,
+                                    `the universal blood donor, I was eager to give of myself to all other types, yet I could only expect to get the same back from my own.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -893,7 +893,7 @@ export default {
                 pointTodo: true,
                 card: {
                     // NOTE: Change in recording? Connect to Uncanny Valley?
-                    description: `The bouncing ping pong ball here evokes the ticking of a wall clock by my deathbed. As I fade away in my infirm state, the echoes reverberate like the sound of a tennis ball being volleyed back and forth, and I picture Miriam in a leisurely match with her new beau.`,
+                    description: `I recorded the sound of a bouncing ping pong ball to evoke the ticking of a wall clock by my deathbed. As I fade away in my infirm state, the echoes reverberate like the sound of a tennis ball being volleyed back and forth, and I picture Miriam in a leisurely match with her new beau.`,
                     dotKeys: {
                         [NARRATIVE]: true,
                         [SONGCRAFT]: true,
@@ -912,10 +912,9 @@ export default {
                         `The`,
                         {
                             anchor: `seat hurt`,
-                            // Include my feelings of being infirm.
-                            pointTodo: true,
+                            awkwardTrue: true,
                             card: {
-                                description: `I somehow threw out my back while my seat was reclined with Miriam on top of me. I fancy that it's because I'm getting on in my years.`,
+                                description: `I somehow threw out my back while reclining the seat with Miriam on top of me. Perhaps it's a sign that I'm getting on in my years.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -931,10 +930,9 @@ export default {
                         `though no worse but for`,
                         {
                             anchor: `his soreness,`,
-                            // Make it about old age.
-                            pointTodo: true,
+                            awkwardTodo: true,
                             card: {
-                                description: `Miriam's vigorous lovemaking today has left me chafed in certain areas.`,
+                                description: `Miriam's vigorous lovemaking has left me chafed in certain areas. But of course, it gets harder to keep up in old age.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },

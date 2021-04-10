@@ -1663,12 +1663,12 @@ export default {
                                         anchor: `cat litter`,
                                         wiki: `Litter_box`,
                                     },
-                                    `that was swept aside; gone is any chance for him to sire a`,
+                                    `that was swept aside. Gone is any chance for him to sire a`,
                                     {
                                         anchor: `litter`,
                                         wiki: `Litter_(zoology)`,
                                     },
-                                    `of his own. Which makes two of us, given how unlikely I am to be made into a great nation any time soon.`,
+                                    `of his own.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

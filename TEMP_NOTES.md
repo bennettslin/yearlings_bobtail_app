@@ -1,5 +1,7 @@
 # Bug
 * Grasshoppers Lie Heavy repeat includes some Constellations. Are there others?
+* Shivved annotation card width
+* "Typo" is too short for dots
 
 # Annotation
 * awkwardTodo: Content is perfectly fine, wording or grammar just sounds off. Fix now, if possible.
@@ -9,7 +11,6 @@
 * hardTodo: Missing... a lot, ha.
 
 # TODO
-* Shivved annotation card width
 * Make Garryowen a ghost?
 * Miriam breast in banjo scene weird?
 * Hawaiian ornament

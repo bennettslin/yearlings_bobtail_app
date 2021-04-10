@@ -107,10 +107,8 @@ export default {
                         `love first`,
                         {
                             anchor: `without once knowing love`,
-                            // It's all there, just needs better wording.
-                            iffyTodo: true,
                             card: {
-                                description: `The women I tried to date always preferred someone with past relationship experience, which seemed like a bizarre provision to me. If everyone thought this way, then no one could ever be in a relationship, just like no one could ever get a job if they always needed previous work experience.`,
+                                description: `The women I tried to date always preferred men with past relationship experience, which seemed bizarre to me. If everyone thought this way, then no one could ever be in a relationship. Just like no one could ever get a job if previous work experience was always needed.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -876,16 +874,14 @@ export default {
                         `as we wind an`,
                         {
                             anchor: `endless flowchart`,
-                            // Clarify reacting to a situation.
-                            iffyTodo: true,
                             card: {
                                 description: [
-                                    `At the time, I often wondered if it would be possible to prepare a mental`,
+                                    `At the time, I wondered if it would be possible to prepare a mental`,
                                     {
                                         anchor: `flowchart`,
                                         wiki: `Flowchart`,
                                     },
-                                    `of all the myriad ways a date might unfold. I could then react with one optimal action after another to nudge the events of the evening toward my desired outcome.`,
+                                    `of all the myriad ways a date might unfold. I could then make one optimal decision after another to nudge the events of the evening toward my desired outcome.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -903,7 +899,7 @@ export default {
                             awkwardTodo: true,
                             card: {
                                 description: [
-                                    `Of course, if I were never given an opening to take any optimal actions, then each date would end with me going right back to the beginning of my flowchart. And I'd be doomed to spend my life cycling through an`,
+                                    `Of course, if I were never given an opening to make any decisions at all, then each date would end with me going right back to the beginning of my flowchart. And I'd be doomed to spend my life cycling through an`,
                                     {
                                         anchor: `infinite loop`,
                                         wiki: `Infinite_loop`,

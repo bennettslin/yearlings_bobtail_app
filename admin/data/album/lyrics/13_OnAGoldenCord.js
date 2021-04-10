@@ -172,9 +172,9 @@ export default {
                         `So`,
                         {
                             anchor: `polite, yet resigned,`,
-                            iffyTodo: true,
+                            awkwardTodo: true,
                             card: {
-                                description: `Sita had spent the day bottling up her emotions, braced for that night's confrontation. Meanwhile, I was drunk and ready to pass out. So even as she exploded in anger, I was still processing the situation. As such, all my responses were calm and curt, which just added to her fluster.`,
+                                description: `While Sita had spent the day bottling up her emotions to brace for that night's confrontation, I was drunk and ready to pass out. So as she lobbed her accusations, I was still processing the situation and could only respond calmly and curtly, which just added to her fluster.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -206,7 +206,7 @@ export default {
                             anchor: `went through your mail`,
                             awkwardTodo: true,
                             card: {
-                                description: `Confused about why I'd grown distant, Sita caved in that day and snooped around on my computer, which was a desktop I kept at her place. In doing so, she stumbled upon my emails, one of which spoke of a crush, and another soliciting advice from friends on how to break up gently.`,
+                                description: `Confused about why I'd grown distant, Sita caved in that day and snooped around on my computer. In doing so, she stumbled upon my emails, one of which spoke of a crush, and another soliciting advice from friends on how to break up gently.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -281,12 +281,12 @@ export default {
                             card: {
                                 // NOTE: I changed "pauper's" to "paupers'."
                                 description: [
-                                    `Though the breakup was successful, its arrival was unexpected, forcing my sober self to scrap his plans for a clean getaway. And so he now finds himself beside the`,
+                                    `Though the breakup was successful, it wasn't expected to happen as soon as it did, forcing my sober self to scrap his plans for a clean getaway. He now returns to the scene where he'd earlier tossed the body of his drunken half in haste, a`,
                                     {
                                         anchor: `paupers' grave`,
                                         wiki: `Potter's_field`,
                                     },
-                                    `where his drunken half's body was earlier tossed in haste, among all the other deceased who died unknown or couldn't afford a proper burial.`,
+                                    `that is the final resting place of all those who died unknown or couldn't afford a proper burial.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -806,8 +806,7 @@ export default {
                                 lyric: `Übermensch`,
                             },
                             properNoun: true,
-                            // Point there, just really awkward phrasing.
-                            iffyTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: [
                                     `The German philosopher`,
@@ -823,7 +822,7 @@ export default {
                                             wiki: `Übermensch`,
                                         },
                                     },
-                                    `or "overhuman," as an ideal of perfection toward which each of us might strive, which I understood to be a precondition for creating great works. But since my underlying motive for being a great artist was to attract women, it then followed that the best version of myself could only be realized by having a cheating heart.`,
+                                    `or "overhuman," as an ideal of perfection toward which humanity might strive. I equated this with my goal to become a great artist. But since my underlying motive for creating great works was to be loved by scores of women, it then followed that the perfect version of myself could only be realized by having a cheating heart.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -860,7 +859,7 @@ export default {
                         `Then the`,
                         {
                             anchor: `guardian knot`,
-                            iffyTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: [
                                     `While the`,
@@ -868,7 +867,7 @@ export default {
                                         anchor: `umbilical cord`,
                                         wiki: `Umbilical_cord`,
                                     },
-                                    `passes sustenance from the mother to the child, outside the womb it shrivels and falls off to reveal the navel. So in sustaining each other through locked navels, Sita became my guardian, and I hers.`,
+                                    `passes sustenance from a mother to the child inside her womb, after birth it shrivels and falls off to reveal the navel. So in sustaining each other by locking our navels, Sita became my guardian, and I hers.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -906,16 +905,15 @@ export default {
                         `each`,
                         {
                             anchor: `attack with the proper fist.`,
-                            // General idea is there, just organise better.
-                            iffyTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: [
-                                    `The right hemisphere of the brain`,
+                                    `Out of frustration over conflicting desires, I start punching myself in the head, as if each half of my brain is attacking the other using the one fist under its command. Since the right hemisphere`,
                                     {
-                                        anchor: `controls the left side`,
+                                        anchor: `controls the left side,`,
                                         wiki: `Contralateral_brain`,
                                     },
-                                    `of the body, and the left hemisphere, the right. So when I start punching myself in the head out of frustration over conflicting desires, it's as if each hemisphere is attacking the other using the one fist under its command.`,
+                                    `of course, and the left one the right.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1029,15 +1027,15 @@ export default {
                         `Though, the`,
                         {
                             anchor: `master mind`,
-                            iffyTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: [
-                                    `In college, I discovered that being drunk made it easier to perform arduous tasks like writing`,
+                                    `In college, I discovered that being drunk made it easier to do arduous tasks like writing`,
                                     {
-                                        anchor: `term papers.`,
+                                        anchor: `term papers,`,
                                         wiki: `Term_paper`,
                                     },
-                                    `Mainly by making it easier not to care about the results. I would humorously compare my drunken self to a slave taking orders from his sober master. This was the same strategy I later used to break up with Sita.`,
+                                    `and so I would shunt the work to my drunken self. But once drunk, I felt like a slave having to take orders from his sober master, and I would do the work poorly or not at all. Somehow this became the strategy I used to deal with the arduous task of breaking up with Sita.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
