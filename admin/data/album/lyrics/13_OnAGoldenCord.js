@@ -639,7 +639,20 @@ export default {
                 },
                 {
                     mixTime: `1:44:17.14`,
-                    lyricCentre: `when you really thought the world that simple?`,
+                    lyricCentre: [
+                        `when you really thought the`,
+                        {
+                            anchor: `world that simple?`,
+                            // I was too inexperienced to know how to show love, and she to receive it.
+                            pointTodo: true,
+                            card: {
+                                description: `I gave Sita the bracelet during the first few weeks of our relationship. I was just too inexperienced at the time to show my love in any more meaningful way. Of course, she was too inexperienced to know any other way to validate it.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                },
+                            },
+                        },
+                    ],
                 },
                 {
                     mixTime: `1:46:29.14`,
@@ -654,7 +667,7 @@ export default {
                             // I was too inexperienced to know how to show love, and she to receive it.
                             pointTodo: true,
                             card: {
-                                description: `I'd bought the bracelet from a jewelry store at the local mall. It cost a lot relative to my hourly wage at the time, which made it all the more dear to Sita.`,
+                                description: `I bought the bracelet from a jewelry store at the local mall. It cost a lot relative to my hourly wage at the time, which was all it took for Sita to recognize my earnest intentions.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
