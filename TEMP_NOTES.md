@@ -9,6 +9,7 @@
 * hardTodo: Missing... a lot, ha.
 
 # TODO
+* Shivved annotation card width
 * Make Garryowen a ghost?
 * Miriam breast in banjo scene weird?
 * Hawaiian ornament

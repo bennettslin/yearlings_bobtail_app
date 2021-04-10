@@ -457,11 +457,10 @@ export default {
                     lyricRight: [
                         {
                             anchor: `Trophy bronzed`,
-                            // Mention something come out of me.
-                            pointTodo: true,
+                            awkwardTodo: true,
                             cards: [
                                 {
-                                    description: `The first time I had sex with a woman other than Sita, I left the used condom on my nightstand for days. I was so amazed by what came out of me that I needed, like a proud parent might bronze their baby's first pair of shoes.`,
+                                    description: `The first time I had sex with a woman other than Sita, I left the used condom on my nightstand for days. Like a proud parent bronzing their baby's shoes, I was just awestruck that this tiny thing I'd squirted out had grown into something much bigger.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [OBSERVATION]: true,
@@ -731,7 +730,7 @@ export default {
                                         anchor: `"Type O,"`,
                                         wiki: `Blood_type`,
                                     },
-                                    `the universal blood donor, I was eager to give of myself to her, even as she could do nothing to save me in return.`,
+                                    `the universal blood donor, I was ever eager to give of myself to all other types, in a world where I wasn't meant to get back from any but my own.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,

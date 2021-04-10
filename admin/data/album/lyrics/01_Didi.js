@@ -89,16 +89,15 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                // Wouldn't It Be Nice sounds unrelated as is.
-                connectTodo: true,
+                awkwardTodo: true,
                 card: {
                     description: [
-                        `Since this song is sung from the perspective of my sister as a child, I wanted it to abound with toy instruments. So the intro begins with a strummed autoharp leading into a glockenspiel melody, which evokes the first few measures of`,
+                        `Since this song is sung from the perspective of my sister as a child, I wanted toy instruments to abound. And so the intro begins with a strummed autoharp leading into a glockenspiel melody. I was also hoping to recreate the atmosphere of childlike wonder heard in the opening measures of`,
                         {
                             anchor: `"Wouldn't It Be Nice,"`,
                             wiki: `Wouldn't_It_Be_Nice`,
                         },
-                        `the opening song of the 1966`,
+                        `the first song of the`,
                         {
                             anchor: `Beach Boys`,
                             wiki: `The_Beach_Boys`,
@@ -107,10 +106,11 @@ export default {
                         {
                             isItalic: true,
                             lyric: {
-                                anchor: `Pet Sounds.`,
+                                anchor: `Pet Sounds,`,
                                 wiki: `Pet_Sounds`,
                             },
                         },
+                        `which explores the theme of youthful innocence.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,

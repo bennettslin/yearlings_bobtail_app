@@ -60,16 +60,15 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                // Need to connect learning with grab bag of results.
-                connectTodo: true,
+                awkwardTodo: true,
                 card: {
                     description: [
-                        `Years ago, I marveled at how the`,
+                        `I always marveled at how the`,
                         {
                             anchor: `Beatles`,
                             wiki: `The_Beatles`,
                         },
-                        `weaved melodies into chord progressions so seamlessly, and I vowed to learn from their songwriting methods once and for all. The result was a grab bag of musical ideas that were just a bit too treacly for me to know what to do with. But years later when planning out this album, I realized that treacle was exactly what an overwrought letter to Sasha called for.`,
+                        `weaved melodies and chords so seamlessly, and years ago I vowed to figure out their songwriting methods once and for all. The result of my studies was a notebook filled with musical ideas that were just a bit too treacly for me to do anything with. But years later when planning out this album, I realized that treacle was exactly what an overwrought letter to Sasha called for.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,

@@ -1372,8 +1372,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                // Make sure these ideas connect.
-                connectTodo: true,
+                awkwardTodo: true,
                 card: {
                     description: [
                         `On my solo Robitussin trips, I would explore metaphysical truths in my head while playing video games on my`,
@@ -1381,7 +1380,7 @@ export default {
                             anchor: `Super Nintendo.`,
                             wiki: `Super_Nintendo_Entertainment_System`,
                         },
-                        `For a while afterward, every vintage arcade sound I heard seemed to hide a profound spiritual message that my sober ears just couldn't suss out. So I included some here in case they have the same effect on others.`,
+                        `This probably messed with the wiring in my head, because for a while afterward, every vintage arcade sound seemed to hide a profound spiritual message that my sober ears just couldn't suss out. I doubt this is the case for most other people, so the arcade synth here was probably just for my own amusement.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,

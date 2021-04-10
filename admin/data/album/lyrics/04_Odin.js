@@ -35,9 +35,7 @@ export default {
     mixStartTime: `0:02:06.00`,
     playerReferenceTime: 559.438,
     playerStartTime: 555.277,
-    // Talk of permanence of death
-    connectTodo: true,
-    overview: `Taiwan showed me how differently I would have turned out had my parents not immigrated to America. Yet I was still worlds away from what Sasha needed me to be. Life seemed as infinitely fluid as it was immovably fixed, and I wasn't sure which extreme terrified me more. Our house cat Odin died of old age later that summer, just as I was seeking spiritual answers. And yet, the eternal life promised by faith seemed no less awful than the finality of death.`,
+    overview: `Taiwan showed me how different life would have been had my parents not immigrated to America. Yet I was still worlds away from what Sasha needed me to be. Life seemed as infinitely fluid as it was immovably fixed, and I wasn't sure which extreme terrified me more. Our house cat Odin died of old age later that summer, just as I was seeking spiritual answers for my mortality. And yet, the eternal life promised by faith seemed no less terrifying than the finality of death.`,
     isDoublespeaker: true,
     lyricUnits: [
         {
@@ -1247,18 +1245,18 @@ export default {
                     mixTime: `1:49:20.04`,
                     lyricLeft: {
                         anchor: `shivering for shivs unsheathed.`,
-                        // Needs to connect prison yard with school yard.
-                        pointTodo: true,
+                        // Should it be already preparing?
+                        awkwardTodo: true,
                         cards: [
                             {
                                 // CONSIDER: Wormhole Kyon for shank?
                                 description: [
-                                    `To wander a prison yard is to be in constant danger of getting`,
+                                    `To wander a prison yard is to be on constant guard against getting`,
                                     {
                                         anchor: 'shivved,',
                                         wiki: `Shiv_(weapon)`,
                                     },
-                                    `or stabbed by a makeshift weapon. But I had to wonder if this was a universal rule, given that the schoolyard was already preparing me for a lifetime of such vigilance.`,
+                                    `or stabbed by a makeshift weapon. Lucky for me, the schoolyard was preparing me for a lifetime of such vigilance.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
