@@ -754,22 +754,28 @@ export default {
                     lyric: [
                         {
                             anchor: `indentures dumbed`,
-                            // Need to make the point more clearly that being in dentures means being old. Separate from being unable to speak.
-                            pointTodo: true,
-                            card: {
-                                description: [
-                                    `Chimney sweeps were typically apprenticed as`,
-                                    {
-                                        anchor: `indentured servants`,
-                                        wiki: `Indentured_servant`,
+                            awkwardTodo: true,
+                            cards: [
+                                {
+                                    description: [
+                                        `Given all the years I might have to spend in servitude to my five-year plans, I was effectively an old man already. And being "in dentures," I was unable to speak.`,
+                                    ],
+                                    dotKeys: {
+                                        [OBSERVATION]: true,
+                                        [PUN]: true,
                                     },
-                                    `at a young age. But given that I might have to spend countless years in servitude to my five-year plans before I could be my own person again, I was effectively "in dentures" already, and thus unable to speak.`,
-                                ],
-                                dotKeys: {
-                                    [OBSERVATION]: true,
-                                    [PUN]: true,
                                 },
-                            },
+                                {
+                                    description: [
+                                        `Chimney sweeps were typically apprenticed as`,
+                                        {
+                                            anchor: `indentured servants`,
+                                            wiki: `Indentured_servant`,
+                                        },
+                                        `at a young age.`,
+                                    ],
+                                },
+                            ],
                         },
                         `as a boy.`,
                     ],

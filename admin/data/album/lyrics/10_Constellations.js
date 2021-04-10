@@ -1380,7 +1380,7 @@ export default {
                             anchor: `Super Nintendo.`,
                             wiki: `Super_Nintendo_Entertainment_System`,
                         },
-                        `This probably messed with the wiring in my head, because for a while afterward, every vintage arcade sound seemed to hide a profound spiritual message that my sober ears just couldn't suss out. I doubt this is the case for most other people, so the arcade synth here was probably just for my own amusement.`,
+                        `This probably messed with the wiring in my head, because for a while afterward, every vintage arcade sound seemed to hide a profound spiritual message that my sober ears just couldn't suss out. I doubt other people are affected the same way, so the arcade synth here was probably just for my own amusement.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -1425,17 +1425,17 @@ export default {
                     ],
                 },
             ],
-            // unitDot: {
-            //     anchor: IS_UNIT_DOT,
-            //     todo: true,
-            //     card: {
-            //         description: ``,
-            //         dotKeys: {
-            //             [BACKSTORY]: true,
-            //             [SONGCRAFT]: true,
-            //         },
-            //     },
-            // },
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                awkwardTodo: true,
+                card: {
+                    description: `If the lyrics for this second chorus seem out of place given their noticeable lack of literary puns, it's because they're a carryover from the song's previous incarnation. But I liked them enough to keep them, and they coincide perfectly with my moment of clarity at the cemetery.`,
+                    dotKeys: {
+                        [BACKSTORY]: true,
+                        [SONGCRAFT]: true,
+                    },
+                },
+            },
         },
         {
             unitMap: {

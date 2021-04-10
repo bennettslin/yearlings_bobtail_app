@@ -730,7 +730,7 @@ export default {
                                         anchor: `"Type O,"`,
                                         wiki: `Blood_type`,
                                     },
-                                    `the universal blood donor, I was eager to give of myself to all other types, yet I could only expect to get the same back from my own.`,
+                                    `the universal blood donor, I was eager to give of myself to all other types, yet I could only expect to get back the same from my own.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,

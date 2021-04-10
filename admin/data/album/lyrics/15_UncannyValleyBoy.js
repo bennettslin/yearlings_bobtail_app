@@ -83,9 +83,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                awkwardTodo: true,
                 card: {
-                    description: `I wrote the music for this song a while back after waking from a horrid nightmare that I badly needed to retell. But I shelved it after all my attempts to describe the nightmare only elicited laughter. Years later, I realized its gloomy chords and disjointed tempo changes could be repurposed into a song about a lecture from a nightmarish version of my parents, and I brought it back out.`,
+                    description: `I wrote the music for this song a while back after waking from a horrid nightmare that I badly needed to retell. But I quietly shelved it after all my attempts to describe the nightmare only elicited laughter. Years later, I realized its gloomy chords and disjointed tempo changes could be repurposed into this song about a lecture delivered by a nightmarish version of my parents.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGCRAFT]: true,
@@ -141,7 +140,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `It's more common to "wax poetic," meaning to become eloquent in speech. But my parents use this highbrow expression ironically, as a commentary on the artificial persona I've created.`,
+                                    description: `It's more common to "wax poetic," meaning to become eloquent in speech. But my parents use this highbrow expression ironically, as commentary on the artificial persona I've created.`,
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                     },
@@ -242,30 +241,6 @@ export default {
                     ],
                 },
             ],
-            unitDot: {
-                anchor: IS_UNIT_DOT,
-                // Make about Wicked Annabella instead.
-                pointTodo: true,
-                card: {
-                    description: [
-                        `I never liked being a baritone, as it always seemed weird to hear this deep, sonorous tone coming from my small frame. So in recording this album, I would alter my singing voice by channeling`,
-                        {
-                            anchor: `Ray Davies`,
-                            wiki: `Ray_Davies`,
-                        },
-                        `of the`,
-                        {
-                            anchor: `Kinks,`,
-                            wiki: `The_Kinks`,
-                        },
-                        `whose nasal vocals conjure the right blend of tenderness and irony. On this song, I changed it up for each section, as I liked the idea of ghosts not having any fixed way of speaking.`,
-                    ],
-                    dotKeys: {
-                        [BACKSTORY]: true,
-                        [SONGCRAFT]: true,
-                    },
-                },
-            },
         },
         {
             unitMap: {
@@ -434,6 +409,33 @@ export default {
                     ],
                 },
             ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                awkwardTodo: true,
+                card: {
+                    description: [
+                        `As I was making this album, I kept in mind the`,
+                        {
+                            anchor: `Kinks'`,
+                            wiki: `The_Kinks`,
+                        },
+                        {
+                            anchor: `Village Green Preservation Society`,
+                            wiki: `The_Kinks_Are_the_Village_Green_Preservation_Society`,
+                        },
+                        `as my model. The songs all had to be catchy pop tunes, contain zero filler, and represent a diversity of musical styles. And each one would clock in at three minutes or so, with none over four. While there was no one-to-one mapping, this song was clearly the`,
+                        {
+                            anchor: `"Wicked Annabella"`,
+                            wiki: `Wicked_Annabella`,
+                        },
+                        `of the lot. So I borrowed its sound of low notes played on distorted electric guitars.`,
+                    ],
+                    dotKeys: {
+                        [BACKSTORY]: true,
+                        [SONGCRAFT]: true,
+                    },
+                },
+            },
         },
         {
             unitMap: {
@@ -459,7 +461,7 @@ export default {
                                             anchor: `hamartia`,
                                             wiki: `Hamartia`,
                                         },
-                                        `is the tragic flaw that leads to a hero's downfall. Here, my parents ask if I recognize the telltale signs pointing to mine. (I've since learned it has four syllables. But my English teacher pronounced it as I have here, so I plead miseducation.)`,
+                                        `is the tragic flaw that leads to a hero's downfall. Here, my parents ask if I recognize the telltale signs that point to mine. (I've since learned there are four syllables in the word. But my English teacher pronounced it as I have here, so I plead miseducation.)`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,

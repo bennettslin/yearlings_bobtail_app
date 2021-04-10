@@ -72,10 +72,9 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                // This point should be better.
-                pointTodo: true,
+                awkwardTodo: true,
                 card: {
-                    description: `With the breakup, I was now free to rebuild my life from scratch. I could reclaim not just my time spent with Sita, but the years of discontent that had taken their toll long before. And so here we hear the song of the white-throated sparrow, as I harken back to the happier days of my youth.`,
+                    description: `With the breakup, I was now free to rebuild my life from scratch. I could revert to the state of childlike innocence that I'd known before my relationship with Sita, before even the bullying and the mail-order cult. And so here we hear the song of the white-throated sparrow, harkening back to the happier days of my youth.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGCRAFT]: true,
@@ -676,15 +675,14 @@ export default {
                         lyric: {
                             anchor: `Mush! Mush!`,
                             properNoun: true,
-                            pointTodo: true,
                             card: {
                                 description: [
-                                    `Marching onward without sleep, I keep shoveling away at my past, hoping to reveal the last time I'd ever known untroubled bliss. And so I arrive at the first song I loved as a child, Johnny Horton's`,
+                                    `Marching onward without sleep, I continue to strip away the intervening years, hoping to return to the last time I'd known untroubled bliss. And so I arrive at the first song I loved as a child, Johnny Horton's`,
                                     {
                                         anchor: `"North to Alaska,"`,
                                         wiki: `North_to_Alaska_(song)`,
                                     },
-                                    `in which the backup singers mush on their sled dogs, and wooden bowls evoke the clip-clopping of a horse's gait.`,
+                                    `in which backup singers call out to their sled dogs, and wooden bowls evoke the clip-clopping of a horse's gait.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

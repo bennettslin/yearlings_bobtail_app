@@ -1390,7 +1390,7 @@ export default {
                         `when your`,
                         {
                             anchor: `day to die`,
-                            iffyTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: [
                                     `As a child, I suffered from`,
@@ -1400,15 +1400,15 @@ export default {
                                     },
                                     `related to my fear of death. My mother would try to comfort me with the promise of`,
                                     {
-                                        anchor: `reincarnation,`,
+                                        anchor: `reincarnation.`,
                                         wiki: `Reincarnation`,
                                     },
-                                    `which just confused me further, since the end goal of Buddhism is to`,
+                                    `But this just scared me further, since the end goal of Buddhism is to`,
                                     {
                                         isEmphasis: true,
                                         lyric: `escape`,
                                     },
-                                    `this cycle of rebirth. Being reborn again and again, but only up until my last life, was just aging and dying on a grander scale.`,
+                                    `the cycle of rebirth. Being reborn again and again, but only up until my last life, was just aging and dying on a grander scale.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -1447,7 +1447,7 @@ export default {
                             // But as a child, I came to a slightly different conclusion. If my brother and I could be so alike in physical makeup yet so different in mental presence, then it made more sense to believe that no one has a soul.
                             awkwardTodo: true,
                             card: {
-                                description: `Of course, I knew that humans need to fear death to ensure their survival. What I didn't understand is why it has to be done consciously. Why couldn't we just fear death the same way that oil is said to fear water?`,
+                                description: `I knew that humans need to fear death to ensure their survival. But what I didn't understand is why it has to be done consciously. Why couldn't we just fear death the same way that oil is said to fear water?`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -1456,8 +1456,7 @@ export default {
                         `and`,
                         {
                             anchor: `just play dumb?`,
-                            // This needs to be more about me wanting to be able to be stupid and still just know the correct spiritual path.
-                            hardTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: [
                                     `Neither heaven nor`,
@@ -1465,7 +1464,7 @@ export default {
                                         anchor: `nirvana`,
                                         wiki: `Nirvana`,
                                     },
-                                    `sounded all that pleasant, and yet they were the best offers available. It just seemed to me that if a spiritual reward really did await us in the afterlife, then its allure would be self-evident.`,
+                                    `sounded all that pleasant, and yet they were the best offers available. It just seemed to me that if we were meant to know which afterlife to strive for, then its appeal would be self-evident. Why wouldn't the correct spiritual path be obvious to even the most thickheaded child?`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1505,10 +1504,9 @@ export default {
                         {
                             // CONSIDER: Wormhole to Ash Wednesday?
                             anchor: `fetus force-fed,`,
-                            // The point being, *if* there is a God, it would be like this.
-                            pointTodo: true,
+                            awkwardTodo: true,
                             card: {
-                                description: `Most maddening of all was that one has no say in being brought into this world. Given how distressing the certainty of death must always be, it seemed like there should be an option to opt out of life in the first place.`,
+                                description: `Most maddening of all was that one has no say in being brought into this world. Given how distressing the certainty of death must always be, it seemed like there should be an option to opt out to begin with.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
