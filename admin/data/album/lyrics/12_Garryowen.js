@@ -154,11 +154,10 @@ export default {
                         `if you would`,
                         {
                             anchor: `opt for bed not street.`,
-                            // To avoid having to work to pay rent.
-                            pointTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: [
-                                    `To save money after my lease ended, I would alternate between spending a few nights with Sita and crashing in the`,
+                                    `I was tired of working countless shifts at the cafeteria, so I decided to stop paying rent for a while by moving out after my lease ended. Instead, I would alternate between spending a few nights with Sita and crashing in the`,
                                     {
                                         anchor: `punk house`,
                                         wiki: `Punk_house`,
@@ -620,6 +619,12 @@ export default {
                             pointTodo: true,
                             cards: [
                                 {
+                                    description: `As part of my plan to start afresh with someone new, I wanted to stay sober for a while, but that was unlikely to happen unless my drinking brought me to the point of sickness. I also needed plenty of alcohol to muster the courage to break up with Sita. So I drank to oblivion each night, hoping to provide the necessary conditions for both purposes.`,
+                                    dotKeys: {
+                                        [BACKSTORY]: true,
+                                    },
+                                },
+                                {
                                     description: [
                                         `A`,
                                         {
@@ -630,12 +635,6 @@ export default {
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
-                                    },
-                                },
-                                {
-                                    description: `As part of my plan to start afresh with someone new, I wanted to stay sober for a while, but that was unlikely to happen unless my drinking brought me to the point of sickness. I also needed plenty of alcohol to muster the courage to break up with Sita. So I drank to oblivion each night, hoping to provide the necessary conditions for both purposes.`,
-                                    dotKeys: {
-                                        [BACKSTORY]: true,
                                     },
                                 },
                             ],

@@ -690,7 +690,7 @@ export default {
                             anchor: `Needle done`,
                             cards: [
                                 {
-                                    description: `Having gone all the way with Miriam, I'm at peace with our inevitable breakup. As I bask in my post-coital glow, a scenario plays out in my mind of how things will end. I picture myself as a terminally ill patient being put to sleep while an old record finishes playing in the background.`,
+                                    description: `Having gone all the way with Miriam, I'm at peace with our inevitable breakup. As I bask in my post-coital glow, a scenario plays out in my mind of how things will end. I see myself as a terminally ill patient being put to sleep while an old record finishes playing in the background.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -721,8 +721,7 @@ export default {
                         `it hums`,
                         {
                             anchor: `a typo`,
-                            // Specify what it means to be other types.
-                            pointTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: [
                                     `Like a typo, Miriam's involvement with me was a simple mistake that she could easily correct. And like a`,
@@ -730,7 +729,7 @@ export default {
                                         anchor: `"Type O,"`,
                                         wiki: `Blood_type`,
                                     },
-                                    `the universal blood donor, I was eager to give of myself to all other types, yet I could only expect to get back the same from my own.`,
+                                    `the universal blood donor, I was eager to give of myself to all other types of women, yet only one of my own type was able to give as much back.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -740,11 +739,10 @@ export default {
                         },
                         {
                             anchor: `fragile ex`,
-                            // General point is all there, just needs major rewording.
-                            iffyTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: [
-                                    `Knowing the kind of fragile ex-boyfriend I was sure to be, Miriam must have dreaded the breakup. But of course she had no choice, since who knew what horrors lurk in my genetic makeup? Perhaps I'm a carrier of`,
+                                    `Knowing the kind of fragile ex-boyfriend I was sure to be, Miriam must have dreaded the breakup. But of course she had no choice, since who knew what horrors lurked in my genetic makeup? Perhaps I was a carrier of`,
                                     {
                                         anchor: `"Fragile X,"`,
                                         wiki: `Fragile_X_syndrome`,
@@ -889,11 +887,10 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                // Does this actually connect?
-                pointTodo: true,
+                awkwardTodo: true,
                 card: {
                     // NOTE: Change in recording? Connect to Uncanny Valley?
-                    description: `I recorded the sound of a bouncing ping pong ball to evoke the ticking of a wall clock by my deathbed. As I fade away in my infirm state, the echoes reverberate like the sound of a tennis ball being volleyed back and forth, and I picture Miriam in a leisurely match with her new beau.`,
+                    description: `The bouncing ping pong ball heard here mimics the ticking of a wall clock by my deathbed. As I fade away in my infirm state, its echoes reverberate like the sound of a tennis ball being volleyed back and forth, and I picture Miriam in a leisurely match with her new beau.`,
                     dotKeys: {
                         [NARRATIVE]: true,
                         [SONGCRAFT]: true,

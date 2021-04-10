@@ -651,7 +651,7 @@ export default {
                         `the`,
                         {
                             anchor: `gesture then`,
-                            // I was too naive to know how to give love, and she to receive it.
+                            // I was too inexperienced to know how to show love, and she to receive it.
                             pointTodo: true,
                             card: {
                                 description: `I'd bought the bracelet from a jewelry store at the local mall. It cost a lot relative to my hourly wage at the time, which made it all the more dear to Sita.`,
