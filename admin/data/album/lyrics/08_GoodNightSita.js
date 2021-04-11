@@ -679,10 +679,9 @@ export default {
                         `then wise up and`,
                         {
                             anchor: `learn to shotgun`,
-                            // General idea is already there, but needs much better wording.
-                            iffyTodo: true,
+                            awkwardTodo: true,
                             card: {
-                                description: `In time I came to adopt the shotgun approach to dating, which involves hitting on anyone at any moment. It works because the math is on your side. Even if your success rate remains dismal, you're increasing the sample size, which improves your chances overall.`,
+                                description: `In time I came to adopt the shotgun approach to dating, which involves hitting on anyone at any moment. It works because the math is on your side. Even if your success rate remains dismal, you're expanding the sample size, which increases your chances of getting at least one positive result. And one person saying yes to a date is really all you were hoping for.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -702,7 +701,7 @@ export default {
                         {
                             anchor: `breeze through our parts`,
                             card: {
-                                description: `Any time I made a witty remark that got a good response, I'd be sure to use it again on future dates, like an actor reprising a role. This also lessened the sting of rejection, since the less I needed to prepare, the less invested I felt in any one particular date.`,
+                                description: `Any time I made a witty remark that got a good response, I'd be sure to use it again on future attempts at hitting on someone, like an actor reprising a role. This also lessened the sting of rejection, since the less I needed to prepare, the less invested I felt in any one particular attempt.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -966,10 +965,9 @@ export default {
                         `from a`,
                         {
                             anchor: `dummy steering wheel`,
-                            // Still hard to get right...
-                            iffyTodo: true,
+                            awkwardTodo: true,
                             card: {
-                                description: `The passenger steering wheel in a twin go-kart only functions to indulge a child's imagination. Similarly, any semblance of control I felt on a date was an illusion. But even so, I had to cling tightly. There was just too much at stake for me to let go and embrace spontaneity.`,
+                                description: `Any semblance of control I felt on a date was an illusion. And yet I would still cling tightly, like a child clutching the passenger steering wheel in a twin go-kart. There was too much at stake for me to ever just let go and embrace spontaneity.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },

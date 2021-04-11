@@ -42,7 +42,6 @@ export default {
                             anchor: `John Osborne's`,
                             wiki: `John_Osborne`,
                         },
-                        `play`,
                         {
                             isItalic: true,
                             lyric: {
@@ -50,7 +49,7 @@ export default {
                                 wiki: `Look_Back_in_Anger`,
                             },
                         },
-                        `is about a disgruntled young man of the working class in postwar England who hurls rage at his long-suffering wife. It hit unnervingly close to home when I read it.`,
+                        `is a theatrical play, set in postwar England, about a disgruntled young man of the working class who hurls rage at his long-suffering wife. It hit unnervingly close to home when I read it.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -611,7 +610,7 @@ export default {
                                     `who were so downtrodden that every attempt made by the ruling elite to appease them only backfired. Not only did they grumble at such paltry improvements to their lives, but they were then emboldened to make further demands.`,
                                 ],
                                 dotKeys: {
-                                    [NARRATIVE]: true,
+                                    [BACKSTORY]: true,
                                 },
                             },
                         },
@@ -667,10 +666,9 @@ export default {
                         },
                         {
                             anchor: `sprawled where they stood…`,
-                            // General idea is all there, just needs better wording.
-                            iffyTodo: true,
+                            awkwardTodo: true,
                             card: {
-                                description: `And while I could only look forward to a lifetime of setbacks and letdowns, the bullies would continue to enjoy greater happiness and social standing. I had no belief left to counter the harsh reality that nature favors bullies. I just had to accept it.`,
+                                description: `And while every beatdown I suffered was a serious blow to my mental health and emotional state, the bullies only continued to enjoy greater happiness and social standing. My belief as a Beyonder ultimately couldn't counter the harsh reality that nature favors its bullies.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -698,7 +696,7 @@ export default {
                             anchor: `right to take what's theirs?`,
                             awkwardTodo: true,
                             card: {
-                                description: `As opportunities for social advancement opened up for me, I could put myself in the bullies' shoes and even sympathize. In a world that roots for the strong, you readily take whatever means you've been given to avoid being weak.`,
+                                description: `As opportunities for social advancement later opened up for me, I could look back, put myself in the bullies' shoes, and even sympathize with them. In a world that roots for the strong, who wouldn't readily take all the means available to avoid being weak?`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -806,7 +804,7 @@ export default {
                                         anchor: `last call,`,
                                         wiki: `Last_call_(bar_term)`,
                                     },
-                                    `and I would need a few`,
+                                    `and I would need a few more`,
                                     {
                                         anchor: `Budweisers`,
                                         wiki: `Budweiser`,

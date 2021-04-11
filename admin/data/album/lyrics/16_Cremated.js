@@ -40,7 +40,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: `A childhood playmate once asked me if I knew what cremation was. I didn't but assumed it must be fun and tasty. Of course, the horrifying truth was revealed to me a moment later. I thought this was a perfect metaphor for a song about the seemingly innocent day trip that ended with Miriam breaking up with me.`,
+                    description: `A childhood playmate once asked if I knew what cremation was. I didn't but assumed it must be fun and tasty. Of course, the horrifying truth was revealed to me a moment later. I thought this was a perfect metaphor for a song about the seemingly innocent day trip that ended with Miriam breaking up with me.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [OBSERVATION]: true,
@@ -829,7 +829,7 @@ export default {
                         {
                             anchor: `worrisome`,
                             // I really just don't like this point to begin with.
-                            hardTodo: true,
+                            pointTodo: true,
                             card: {
                                 description: `After the breakup with Miriam, I continued to care about her well-being and would ask mutual friends about her. This surprised me, given how selfishly I behaved every time I broke up with Sita. But I still came away knowing that someone like Miriam could want me, even if just for a while. As far as I was concerned, then, I got a pretty good deal.`,
                                 dotKeys: {
@@ -1075,10 +1075,16 @@ export default {
                         `puff,`,
                         {
                             anchor: `preparing the scoop,`,
-                            // Just needs much better phrasing.
-                            iffyTodo: true,
+                            awkwardTodo: true,
                             card: {
-                                description: `Miriam searches for a way to deliver the bad news in the least messy way possible. It's as if she stands ready with scoop in hand, in case her pet loses control and takes a dump on her freshly manicured lawn.`,
+                                description: [
+                                    `Miriam searches for a way to deliver the bad news in the least messy way possible, like a pet owner getting the`,
+                                    {
+                                        anchor: `pooper scooper`,
+                                        wiki: `Pooper-scooper`,
+                                    },
+                                    `ready in case her pet makes a mess on some freshly manicured lawn.`,
+                                ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -1092,10 +1098,9 @@ export default {
                         `hungry carrying this groovy`,
                         {
                             anchor: `second hump.`,
-                            // Also just needs much better phrasing.
-                            iffyTodo: true,
+                            awkwardTodo: true,
                             card: {
-                                description: `A camel stores fat in its hump, allowing it to travel for days without eating. So in trading away Sita's love for the ego boost I gained from humping other women, I was like a senseless camel who forwent a lifetime of satisfying meals just to wear a flashy new adornment on his back.`,
+                                description: `A camel stores fat in its hump, allowing it to travel for days without eating. And in trading away Sita's love for the ego boost I gained from humping other women, I was as senseless as a camel who chooses to go hungry just to wear a flashy adornment on his back.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [PUN]: true,

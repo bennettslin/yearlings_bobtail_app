@@ -72,7 +72,7 @@ export default {
                             `But F., that man is the`,
                             {
                                 anchor: `worst nuisance on the beach.`,
-                                iffyTodo: true,
+                                pointTodo: true,
                                 card: {
                                     description: [
                                         `Being in a mail-order cult was a traumatic experience, but there was a comic absurdity to it as well. When I read this line from`,

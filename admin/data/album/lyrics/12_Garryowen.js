@@ -328,10 +328,9 @@ export default {
                     lyric: [
                         {
                             anchor: `buys your grief`,
-                            // It's generally all there. I just don't really like it.
-                            iffyTodo: true,
+                            awkwardTodo: true,
                             card: {
-                                description: `My worlds collided one night when I smashed a random bike in a fit of drunken rage. As it turned out, the bike belonged to a neighborhood kid who liked my music from my earliest days of playing out. He had related so strongly to my songs about unfulfilled hopes. I was disgusted with myself for disappointing him.`,
+                                description: `My worlds collided one night when I smashed a random bike in a fit of drunken rage. The bike turned out to belong to a scene kid who liked my music from my earliest days of playing out. He'd related so strongly to my songs about unfulfilled hopes. I was disgusted with myself for having disappointed him.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
