@@ -101,12 +101,11 @@ export default {
                         `safely kept with`,
                         {
                             anchor: `bread and pocket lint.`,
-                            // Mention tucking hands in.
-                            connectTodo: true,
+                            awkwardTodo: true,
                             card: {
-                                description: `Before leaving the cafeteria after a long shift, I would sometimes stash a bread roll in the front pocket of my jacket for munching on the go.`,
+                                description: `Before leaving the cafeteria after a long shift, I might stash some bread rolls in the front pockets of my jacket for munching on the go. Still holding the bracelet, I now tuck my hands in as well to keep warm.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true,
+                                    [NARRATIVE]: true,
                                 },
                             },
                         },
@@ -308,15 +307,14 @@ export default {
                         `torched the`,
                         {
                             anchor: `bellyaches on suttee.`,
-                            // Separate cards?
-                            connectTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: [
                                     {
                                         anchor: `Suttee`,
                                         wiki: `Sati_(practice)`,
                                     },
-                                    `is an outlawed Hindu custom in which a widow commits suicide by throwing herself on her husband's funeral pyre. Likewise, sober me knew he could be rid of Sita forever if he just killed off bit by bit the one she loved, pushing her to venture further into the darkness to chase after the less and less of him that remained.`,
+                                    `is an outlawed Hindu custom in which a widow commits suicide by throwing herself on her husband's funeral pyre. Likewise, sober me knew he could be rid of Sita forever if he just killed off bit by bit the one she loved, pushing her to venture further into the darkness to chase after the less and less of their relationship that remained.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -593,7 +591,7 @@ export default {
                         {
                             anchor: `dove chafing in his cage,`,
                             card: {
-                                description: `Meanwhile, a stressed dove will peck a cagemate to death, oblivious to the deadly nature of its beak. And similarly, in seeing myself as the victim and tending only to my needs, I ended up causing far more trauma to Sita than I myself had ever received at the hands of the bullies.`,
+                                description: `Meanwhile, a stressed dove will peck a cagemate to death, oblivious to the deadly nature of its beak. And similarly, in seeing myself as the victim and tending only to my needs, I ended up causing Sita far more trauma than I myself had ever received at the hands of the bullies.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [REFERENCE]: true,
@@ -643,10 +641,9 @@ export default {
                         `when you really thought the`,
                         {
                             anchor: `world that simple?`,
-                            // I was too inexperienced to know how to show love, and she to receive it.
-                            pointTodo: true,
+                            awkwardTodo: true,
                             card: {
-                                description: `I gave Sita the bracelet during the first few weeks of our relationship. I was just too inexperienced at the time to show my love in any more meaningful way. Of course, she was too inexperienced to know any other way to validate it.`,
+                                description: `I gave the bracelet to Sita during the first few weeks of our relationship. I was just too inexperienced at the time to show my love in any more meaningful way. Of course, she was just as inexperienced and knew no other way to validate it.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -664,8 +661,7 @@ export default {
                         `the`,
                         {
                             anchor: `gesture then`,
-                            // I was too inexperienced to know how to show love, and she to receive it.
-                            pointTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: `I bought the bracelet from a jewelry store at the local mall. It cost a lot relative to my hourly wage at the time, which was all it took for Sita to recognize my earnest intentions.`,
                                 dotKeys: {

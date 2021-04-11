@@ -38,7 +38,7 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                connectTodo: true,
+                awkwardTodo: true,
                 card: {
                     description: [
                         {
@@ -50,7 +50,7 @@ export default {
                             anchor: `Hindi`,
                             wiki: `Hindi`,
                         },
-                        `word for "why." After Sita and I started dating, I studied Hindi for several years. I got course credit for it as a religious studies major, and it allowed me to converse with her family in their native language.`,
+                        `word for "why." After Sita and I started dating, I studied Hindi for several years. It was an easy decision to make, since I got course credit for it as a religious studies major, and it allowed me to converse with her family in their native language.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -769,10 +769,9 @@ export default {
                         `And darling, don't you worry, these were only`,
                         {
                             anchor: `practice cuts…`,
-                            // Just need to connect the one with the other.
-                            connectTodo: true,
+                            awkwardTodo: true,
                             card: {
-                                description: `When Sita first asked about the scars on my forearm, I replied drolly that they were just for practice. When I later expressed concern after she first tried cutting for herself, she sweetly replied with the same assurance. The message was clear that I was responsible in more ways than one.`,
+                                description: `When Sita first noticed the scars on my forearm and asked about them, I replied dryly that they were just for practice. Years later when I expressed concern that she'd tried cutting for herself, she gave me the same assurance. The message was clear that I was the cause in more ways than one.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

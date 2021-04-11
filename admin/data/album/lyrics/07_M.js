@@ -818,10 +818,9 @@ export default {
                         `But then I saw the`,
                         {
                             anchor: `world's a naked baby,`,
-                            // Establish exactly what I want to say. I don't think this is really it.
-                            pointTodo: true,
+                            awkwardTodo: true,
                             card: {
-                                description: `At some point, I realized that the world does what it does simply because it is what it is. Nothing is hidden from view, and any situation can be understood by reading it closely, no differently than learning from a textbook.`,
+                                description: `At some point, I realized that the social world is just one more part of the world at large. And so it too behaves as it does because of the sum total of what it is. Nothing is hidden from view, and every situation can be understood by reading it closely, no less than world events can be learned about by studying history textbooks.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },

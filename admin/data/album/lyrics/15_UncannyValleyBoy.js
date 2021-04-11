@@ -1202,6 +1202,7 @@ export default {
                         {
                             anchor: `faces you flip override,`,
                             // Not sure if this one will get better.
+                            // As phony as it was, I'd been switching social identities for so long that feeling phony was how I knew I was being genuine
                             pointTodo: true,
                             card: {
                                 description: `At some point, I noticed that I wore different faces around different people. This wasn't the case when I was younger, which could only mean there was once a true me, and now there wasn't.`,

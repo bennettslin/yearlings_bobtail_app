@@ -88,10 +88,9 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                // Mention infirm part of last song.
-                connectTodo: true,
+                awkwardTodo: true,
                 card: {
-                    description: `In the previous song, I imagined myself as an infirm patient, fading away while listening to old records. The crackle of a needle on vinyl now introduces the third and final song of the medley.`,
+                    description: `The previous song offered a glimpse of me as an infirm patient, fading away while listening to old records. The crackle of a needle on vinyl now introduces the third and final song of the medley.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },

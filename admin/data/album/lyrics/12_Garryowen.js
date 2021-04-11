@@ -421,8 +421,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                // Need to confirm that this makes sense?
-                connectTodo: true,
+                awkwardTodo: true,
                 card: {
                     description: [
                         `In traditional`,
@@ -430,7 +429,7 @@ export default {
                             anchor: `counterpoint,`,
                             wiki: `Counterpoint`,
                         },
-                        `melodies are laid one atop another, and the chord progression is simply a byproduct of the harmonies they form in sequence. But since the chord progression for this song was already written, I took the reverse approach. I separated the individual notes of each harmony and distributed them among the various instrumental parts, to create coherent but unassuming melodic lines.`,
+                        `melodies are laid one atop another, and the chord progression is simply a byproduct of the harmonies they form in sequence. But since the chords for this song were already established, I took the reverse approach. Starting with the progression written out in block chords, I would assign each of the notes in a chord to a different part. Then for each part, I would write a cohesive but unassuming melodic line that sounded every one of its assigned notes.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -667,10 +666,8 @@ export default {
                         `aren't you the`,
                         {
                             anchor: `faltering dear?`,
-                            /// Make sure these ideas actually do connect.
-                            connectTodo: true,
                             card: {
-                                description: `With my slate now wiped clean, I took pains to affect an endearingly awkward persona. As phony as it was, I'd been switching social identities for so long that feeling phony was how I knew I was being genuine.`,
+                                description: `With my slate now wiped clean, I took pains to affect an endearingly awkward persona.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
