@@ -1052,7 +1052,7 @@ export default {
                                         anchor: `Hippocratic medicine,`,
                                         wiki: `Humorism`,
                                     },
-                                    `the spleen was thought to secrete black bile, the humor that induces melancholy. In modern parlance, however, the spleen is associated with a foul temper. My expressions of resentment toward the bullies, which I confided to Sasha, contained a bit of both.`,
+                                    `the spleen was thought to secrete black bile, the humor that induces melancholy. In modern parlance, however, the spleen is associated with a foul temper. My expressions of resentment toward the bullies, which I confided to Sasha, probably contained a bit of both.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -1652,8 +1652,7 @@ export default {
                     lyricRight: [
                         {
                             anchor: `his litter`,
-                            // General point is all there, it just feels really awkward.
-                            iffyTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: [
                                     `It isn't just Odin's unused`,
@@ -1666,7 +1665,7 @@ export default {
                                         anchor: `litter`,
                                         wiki: `Litter_(zoology)`,
                                     },
-                                    `of his own.`,
+                                    `of his own, in a world that remembers only those who were made into a great nation.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1683,7 +1682,7 @@ export default {
                         `while`,
                         {
                             anchor: `mermaids smile`,
-                            iffyTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: [
                                     `T.S. Eliot's`,
@@ -1691,7 +1690,7 @@ export default {
                                         anchor: `"The Love Song of J. Alfred Prufrock"`,
                                         wiki: `The_Love_Song_of_J._Alfred_Prufrock`,
                                     },
-                                    `examines themes of stunted growth and missed opportunities. The poem ends with the narrator bemoaning that while the mermaids may sing, they won't sing for him. Similarly, while my resignation has turned the fearsome sea serpents into smiling mermaids, they don't smile for me.`,
+                                    `examines themes of stunted growth and missed opportunities. The poem ends with the narrator bemoaning that while the mermaids may sing, they won't sing for him. And while my resignation has turned the fearsome sea serpents into smiling mermaids, they still don't smile for me.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
