@@ -11,10 +11,9 @@
 * hardTodo: Missing... a lot, ha.
 
 # TODO
+* Bennett head behind Miriam sleeping
 * Make Garryowen a ghost?
-* Miriam breast in banjo scene weird?
 * Hawaiian ornament
-* Beards on trolls
 * Potted plants in bedroom
 * Clarify logState labels?
 * Don't make menu move.

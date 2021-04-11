@@ -50,7 +50,7 @@ export default {
                                 wiki: `Look_Back_in_Anger`,
                             },
                         },
-                        `is about a disgruntled young man of the postwar English working class who hurls his rage at his long-suffering wife. It hit unnervingly close to home when I read it.`,
+                        `is about a disgruntled young man of the working class in postwar England who hurls rage at his long-suffering wife. It hit unnervingly close to home when I read it.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -161,7 +161,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `I went to high school in`,
+                                        `I attended high school in`,
                                         {
                                             anchor: `Van Nuys,`,
                                             wiki: `Van_Nuys`,
@@ -351,8 +351,7 @@ export default {
                     lyric: [
                         {
                             anchor: `Feeble feeder fish`,
-                            // Could be much better than it is.
-                            iffyTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: [
                                     `The pecking order in a tank of`,
@@ -360,7 +359,7 @@ export default {
                                         anchor: `feeder fish`,
                                         wiki: `Feeder_fish`,
                                     },
-                                    `is deceptive, since the ones least fit to be sold as prey end up living the longest. In hindsight, high school worked the same way. All my time spent focusing on pet projects had left me unfit to defend my place in the social hierarchy, but the artistic skills I'd developed as a result are what kept me from being eaten alive in the real world.`,
+                                    `is deceptive, since the ones least fit to be sold as prey end up living the longest. In retrospect, high school worked the same way. All the time I spent focusing on pet projects had left me unfit to defend my place in the social hierarchy, but the artistic skills I developed as a result were what kept me from being eaten alive in the real world.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -699,7 +698,7 @@ export default {
                             anchor: `right to take what's theirs?`,
                             awkwardTodo: true,
                             card: {
-                                description: `As opportunities for social advancement opened up for me, I could put myself in the bullies' shoes and even sympathize. In a world that roots for the strong, you don't question whatever means you've been given to avoid being weak. You just take them.`,
+                                description: `As opportunities for social advancement opened up for me, I could put myself in the bullies' shoes and even sympathize. In a world that roots for the strong, you readily take whatever means you've been given to avoid being weak.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -716,12 +715,12 @@ export default {
                             anchor: `poor squirrels,`,
                             card: {
                                 description: [
-                                    `In the last scene of `,
+                                    `In the final scene of `,
                                     {
                                         isItalic: true,
                                         lyric: `Look Back in Anger,`,
                                     },
-                                    `the main character Jimmy pictures his wife as a squirrel and sighs, "Poor squirrels," acknowledging that his abusive tirades keep her in a neurotic and submissive state.`,
+                                    `the protagonist Jimmy pictures his wife as a squirrel and sighs, "Poor squirrels," acknowledging that his abusive tirades keep her in a neurotic and submissive state.`,
                                 ],
                                 dotKeys: {
                                     [REFERENCE]: true,
@@ -736,10 +735,9 @@ export default {
                         `also weep for`,
                         {
                             anchor: `poor, poor bears.`,
-                            // Needs to be phrased a lot better.
-                            iffyTodo: true,
+                            awkwardTodo: true,
                             card: {
-                                description: `His wife Alison then sighs in response, "Poor, poor bears," recognizing that he, a bear in their mutual fantasy, is just as much a victim in their unequal power dynamic over which neither possesses control.`,
+                                description: `His wife Alison then sighs in response, "Poor, poor bears," recognizing that he, a bear in their mutual fantasy, is just as much a victim complying within a power dynamic over which neither possesses much control.`,
                                 dotKeys: {
                                     [REFERENCE]: true,
                                 },

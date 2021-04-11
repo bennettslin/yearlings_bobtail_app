@@ -659,7 +659,7 @@ export default {
                                 `though I'm not sure why.`,
                             ],
                             dotKeys: {
-                                [BACKSTORY]: true,
+                                [NARRATIVE]: true,
                             },
                         },
                     },
@@ -845,9 +845,9 @@ export default {
                         `to watch you`,
                         {
                             anchor: `fail your Sita`,
-                            iffyTodo: true,
+                            awkwardTodo: true,
                             card: {
-                                description: `Contemporary audiences may find it disgraceful that Rama's first act upon reuniting with Sita was to demand proof of her purity. My reaction is similar when revisiting my need to be the more sexually experienced partner at the time. Why couldn't I simply accept with gratitude whatever circumstances first had to happen for Sita to finally be with me?`,
+                                description: `Modern audiences may find it disgraceful that Rama's first act upon reuniting with Sita was to demand proof of her purity. My reaction is similar when I look back on my need at the time to be the more sexually experienced partner in the relationship. It baffles me now why I couldn't just be grateful for whatever circumstances first had to happen before Sita finally chose me.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -885,7 +885,7 @@ export default {
                             anchor: `two were tied?`,
                             awkwardTodo: true,
                             card: {
-                                description: `While Sita had hoped for us to be tied in a matrimonial sense, I chafed that we were also tied in a competitive sense. Between the two of us, I counted fewer romantic partners in my past, and this felt like a threat.`,
+                                description: `While Sita had hoped for us to be tied in a matrimonial sense, I chafed that we were also tied in a competitive sense. Between the two of us, there were fewer romantic partners in my past, and this felt to me like a threat.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -1254,7 +1254,7 @@ export default {
                             card: {
                                 description: `In the nightmare, I was now ruler of the neighborhood, as I showered my subjects in urine, their sole means of subsistence. In hindsight, my brain was probably telling me to wake up and use the bathroom.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true,
+                                    [NARRATIVE]: true,
                                     [OBSERVATION]: true,
                                 },
                             },
@@ -1272,7 +1272,7 @@ export default {
                             card: {
                                 description: `The magic beans had sprouted into thick, twisting vines that blocked out the sky as far as my helpless subjects could see.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true,
+                                    [NARRATIVE]: true,
                                 },
                             },
                         },
@@ -1311,9 +1311,9 @@ export default {
                             ],
                             awkwardTodo: true,
                             card: {
-                                description: `My latest five-year plan, like the one before it, was meant to dramatically improve my life through a major overhaul of the underlying system. Since it couldn't be left half completed, there was no point in questioning it while the work was in progress.`,
+                                description: `My next five-year plan, like the one before it, was meant to dramatically improve my life through a major overhaul of the underlying system. Since it couldn't be left half completed, there was no point in questioning it while the work was in progress.`,
                                 dotKeys: {
-                                    [NARRATIVE]: true,
+                                    [BACKSTORY]: true,
                                     [OBSERVATION]: true,
                                 },
                             },
@@ -1337,10 +1337,10 @@ export default {
                 {
                     lyric: {
                         anchor: `old and subservient.`,
-                        iffyTodo: true,
+                        awkwardTodo: true,
                         cards: [
                             {
-                                description: `It wasn't until college that I learned to appreciate the sacrifices my parents had made for me and my siblings to lead lives better than their own. But that this awareness came about through my coursework, rather than through my own lived experiences, only added to my guilt.`,
+                                description: `It wasn't until college that I learned to appreciate the sacrifices my parents had made for me and my siblings to lead better lives than their own. But that this awareness had to come about through assigned coursework, rather than my own lived experiences, only added to my guilt.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

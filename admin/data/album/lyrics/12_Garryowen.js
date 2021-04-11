@@ -429,7 +429,7 @@ export default {
                             anchor: `counterpoint,`,
                             wiki: `Counterpoint`,
                         },
-                        `melodies are laid one atop another, and the chord progression is simply a byproduct of the harmonies they form in sequence. But since the chords for this song were already established, I took the reverse approach. Starting with the progression written out in block chords, I would assign each of the notes in a chord to a different part. Then for each part, I would write a cohesive but unassuming melodic line that sounded every one of its assigned notes.`,
+                        `melodies are laid one atop another, and the chord progression is simply a byproduct of the harmonies they form in sequence. But since the chords for this song were already established, I took the reverse approach. Starting with the progression written out as block chords, I assigned each note in a chord to a different part. Then for each part, I wrote a cohesive but unassuming melody that sounded out every one of its assigned notes.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
