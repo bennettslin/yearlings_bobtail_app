@@ -109,10 +109,9 @@ export default {
                         {
                             anchor: `Odin,`,
                             properNoun: true,
-                            // General point is there, just needs better wording and phrasing.
-                            iffyTodo: true,
+                            awkwardTodo: true,
                             card: {
-                                description: `As a child, I never paid much attention to our pet cat Odin. He just seemed to come with the house. So when Sita and I adopted a cat together, I marveled at how this instinct to nurture a pet just seemed to turn on inside me at the flick of a switch. Years later when my failure to nurture the relationship with Sita led to our final breakup, I thought of Odin often.`,
+                                description: `As a child, I never paid much attention to our pet cat Odin. He just seemed to come with the house. So when Sita and I adopted a cat together, it surprised me just how naturally the instinct came to me to nurture a pet. Years later when my failure to nurture the relationship with Sita led to our final breakup, I thought of Odin often.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -285,10 +284,9 @@ export default {
                         `Well,`,
                         {
                             anchor: `first pets`,
-                            // Already spent a while on this...
-                            iffyTodo: true,
+                            awkwardTodo: true,
                             card: {
-                                description: `It blew my mind that I could hurt Sita for so long and still live with myself. But in hindsight, it's because I accepted at face value the facade of sanity she'd constructed as a means to cope. I allowed myself to believe that our recurring moments of intimacy, which she clung to and cherished as if that's how it always was, were truly all she needed.`,
+                                description: `It blew my mind that I could hurt Sita for so long and still live with myself. In hindsight, it's because I didn't question the facade of sanity she'd constructed as a means to cope. I allowed myself to believe that our recurring moments of intimacy, which she clung to and cherished as if that's how it always was, were truly all she needed.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

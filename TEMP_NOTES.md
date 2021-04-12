@@ -11,7 +11,6 @@
 * hardTodo: Missing... a lot, ha.
 
 # TODO
-* Bennett head behind Miriam sleeping
 * Make Garryowen a ghost?
 * Hawaiian ornament
 * Potted plants in bedroom

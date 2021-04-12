@@ -72,10 +72,10 @@ export default {
                             `But F., that man is the`,
                             {
                                 anchor: `worst nuisance on the beach.`,
-                                pointTodo: true,
+                                awkwardTodo: true,
                                 card: {
                                     description: [
-                                        `Being in a mail-order cult was a traumatic experience, but there was a comic absurdity to it as well. When I read this line from`,
+                                        `In`,
                                         {
                                             anchor: `Leonard Cohen's`,
                                             wiki: `Leonard_Cohen`,
@@ -88,7 +88,7 @@ export default {
                                                 wiki: `Beautiful_Losers`,
                                             },
                                         },
-                                        `I thought it captured the sentiment perfectly. In one scene, the character F. tires of getting bullied at the beach and signs up for the Charles Axis bodybuilding course advertised in a comic book. Only later does he discover that Charles Axis is the one who bullies him.`,
+                                        `the character F. tires of getting bullied at the beach and signs up for the Charles Axis bodybuilding course advertised in a comic book. Only then does he discover that it's Charles Axis who bullies him. I thought this passage perfectly captured the comic absurdity of being in a mail-order cult.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,

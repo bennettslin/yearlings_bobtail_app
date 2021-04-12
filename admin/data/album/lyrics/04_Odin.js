@@ -1044,7 +1044,7 @@ export default {
                         `Your`,
                         {
                             anchor: `seizures of spleen,`,
-                            iffyTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: [
                                     `In`,
@@ -1052,7 +1052,7 @@ export default {
                                         anchor: `Hippocratic medicine,`,
                                         wiki: `Humorism`,
                                     },
-                                    `the spleen was thought to secrete black bile, the humor that induces melancholy. In modern parlance, however, the spleen is associated with a foul temper. My expressions of resentment toward the bullies, which I confided to Sasha, probably contained a bit of both.`,
+                                    `the spleen was thought to secrete black bile, the humor that induces melancholy. In modern parlance, however, the spleen is associated with a foul temper. The expressions of resentment toward the bullies that I confided to Sasha were both sad and bitter in nature.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,

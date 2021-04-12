@@ -273,24 +273,29 @@ export default {
                     lyricLeft: [
                         `emerged beside a`,
                         {
+                            // NOTE: I changed "pauper's" to "paupers'."
                             anchor: `paupers' grave`,
-                            // General idea is there, just needs work.
-                            iffyTodo: true,
-                            card: {
-                                // NOTE: I changed "pauper's" to "paupers'."
-                                description: [
-                                    `Though the breakup was successful, it wasn't expected to happen as soon as it did, forcing my sober self to scrap his plans for a clean getaway. He now returns to the scene where he'd earlier tossed the body of his drunken half in haste, a`,
-                                    {
-                                        anchor: `paupers' grave`,
-                                        wiki: `Potter's_field`,
+                            awkwardTodo: true,
+                            cards: [
+                                {
+                                    description: [
+                                        `Though the breakup was successful, it happened sooner than expected, forcing my sober self to scrap his plans for a clean getaway. He now returns to the scene where he'd earlier tossed the body of his drunken half in haste.`,
+                                    ],
+                                    dotKeys: {
+                                        [NARRATIVE]: true,
                                     },
-                                    `that is the final resting place of all those who died unknown or couldn't afford a proper burial.`,
-                                ],
-                                dotKeys: {
-                                    [NARRATIVE]: true,
-                                    [OBSERVATION]: true,
                                 },
-                            },
+                                {
+                                    description: [
+                                        `A`,
+                                        {
+                                            anchor: `paupers' grave`,
+                                            wiki: `Potter's_field`,
+                                        },
+                                        `is a burial ground for all those who die penniless or unknown.`,
+                                    ],
+                                },
+                            ],
                         },
                         `from dreams.`,
                     ],
@@ -415,7 +420,7 @@ export default {
                     lyricLeft: [
                         {
                             anchor: `Guilt pardons`,
-                            iffyTodo: true,
+                            finalTodo: true,
                             card: {
                                 description: `My sober self forgives his drunken accomplice's lack of remorse, aware of the trauma that must surely linger after performing such heinous acts.`,
                                 dotKeys: {

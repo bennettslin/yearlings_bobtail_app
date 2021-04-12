@@ -582,7 +582,7 @@ export default {
                         {
                             anchor: `worn puppet`,
                             // General point is there, just needs major rewording.
-                            iffyTodo: true,
+                            finalTodo: true,
                             card: {
                                 description: [
                                     `Picturing the discarded condom as a lifeless puppet, I realize I'm like a`,
@@ -640,6 +640,7 @@ export default {
                     lyricRight: [
                         {
                             anchor: `twitching sword`,
+                            awkwardTodo: true,
                             card: {
                                 description: [
                                     {
@@ -828,10 +829,9 @@ export default {
                         `hears not a`,
                         {
                             anchor: `worrisome`,
-                            // I really just don't like this point to begin with.
-                            pointTodo: true,
+                            awkwardTodo: true,
                             card: {
-                                description: `After the breakup with Miriam, I continued to care about her well-being and would ask mutual friends about her. This surprised me, given how selfishly I behaved every time I broke up with Sita. But I still came away knowing that someone like Miriam could want me, even if just for a while. As far as I was concerned, then, I got a pretty good deal.`,
+                                description: `After the breakup with Miriam, I only had good wishes for her, which surprised me given how competitive and selfish I was around Sita. But I came away knowing that someone like Miriam could want me, even if just for a while. So as far as I was concerned, it was a pretty good bargain.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

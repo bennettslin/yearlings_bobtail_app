@@ -527,7 +527,7 @@ export default {
                         {
                             anchor: `Moonie wedding,`,
                             properNoun: true,
-                            iffyTodo: true,
+                            awkwardTodo: true,
                             card: {
                                 description: [
                                     `The`,
@@ -545,12 +545,12 @@ export default {
                                         anchor: `proselytism`,
                                         wiki: `Proselytism`,
                                     },
-                                    `and`,
+                                    `and its`,
                                     {
                                         anchor: `mass weddings,`,
                                         wiki: `Blessing_ceremony_of_the_Unification_Church`,
                                     },
-                                    `in which thousands of congregants are paired off with perfect strangers. Whenever I encountered a Moonie on campus, I would amuse myself with the thought that I could cynically accept their pamphlet, and my struggle to find a romantic partner would be over in an instant.`,
+                                    `in which thousands of congregants are paired off with perfect strangers. Whenever a Moonie accosted me on campus, I would amuse myself with the thought that if I just listened to their spiel and accepted their pamphlet, then my struggle to find a romantic partner would be over in an instant.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -566,10 +566,9 @@ export default {
                         {
                             anchor: `"Made in America" signs.`,
                             properNoun: true,
-                            // Avoid "venture"
-                            iffyTodo: true,
+                            awkwardTodo: true,
                             card: {
-                                description: `To promote cross-cultural harmony, the pairings in these mass weddings are often international by design. So my Moonie bride might be a foreigner who just as cynically chose this venture to raise a family in America. I would be foolish to believe that my "maiden Mara co-signs" the marriage license in good faith.`,
+                                description: `As a way to promote cross-cultural harmony, the pairings in these mass weddings are often international by design. So my Moonie bride might be a foreigner who cynically chose the church just to raise a family in America. And I would be foolish to believe my "maiden Mara co-signs" the marriage license in good faith.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [PUN]: true,
