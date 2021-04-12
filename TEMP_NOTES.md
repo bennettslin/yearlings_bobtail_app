@@ -5,10 +5,6 @@
 
 # Annotation
 * awkwardTodo: Content is perfectly fine, wording or grammar just sounds off. Fix now, if possible.
-* iffyTodo: Technically just awkward, but in a way that feels really bad.
-* connectTodo: The ideas don't quite connect, but this can be fixed by wording and grammar. (/)
-* pointTodo: Missing an essential point of the annotation.
-* hardTodo: Missing... a lot, ha.
 
 # TODO
 * Make Garryowen a ghost?
