@@ -422,23 +422,13 @@ export default {
                             anchor: `Guilt pardons`,
                             finalTodo: true,
                             card: {
-                                description: `My sober self forgives his drunken accomplice's lack of remorse, aware of the trauma that must surely linger after performing such heinous acts.`,
+                                description: `Observing his drunken accomplice's lack of remorse, my sober self can only feel pity, aware of the trauma that must surely linger after being made to perform such a heinous act.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
                             },
                         },
-                        `the`,
-                        {
-                            anchor: `specter taunting twin streetlamps;`,
-                            awkwardTodo: true,
-                            card: {
-                                description: `Sober me observes his drunken half defiantly lashing out at twin streetlamps, whose misty glow has revived the vision of Sita's fearful gaze moments before he committed his crime.`,
-                                dotKeys: {
-                                    [NARRATIVE]: true,
-                                },
-                            },
-                        },
+                        `the specter taunting twin streetlamps;`,
                     ],
                     lyricRight: [
                         `still hardened against her`,
@@ -446,7 +436,7 @@ export default {
                             anchor: `fawning, misty glance,`,
                             awkwardTodo: true,
                             card: {
-                                description: `Sensing that Sita gazes down on him from the night sky, drunken me still refuses to flinch, as remnants of his past bitterness rumble deep within.`,
+                                description: `Stirred by a strange bitterness rumbling within, drunken me defiantly lashes out at the twin streetlamps lining the boulevard, whose misty glow has revived the vision of Sita's fearful gaze moments before he committed his crime.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
