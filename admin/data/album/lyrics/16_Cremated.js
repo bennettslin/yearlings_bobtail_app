@@ -114,7 +114,7 @@ export default {
                             anchor: `Shepard tone`,
                             wiki: `Shepard_tone`,
                         },
-                        `is an auditory illusion in which a tone moves steadily up or down in pitch yet remains fixed within the same register. A steady move downward seemed an apt metaphor for my breakup with Miriam, so I included two Shepard tones here. One is a low bass that descends in discrete half steps, while the other is a high treble that does so in a perpetual glissando. Since I didn't know how to code at the time, both were made by splicing together`,
+                        `is an auditory illusion in which a tone moves steadily up or down in pitch yet remains fixed within the same register. A steady move downward seemed like an apt metaphor for my breakup with Miriam, so I included two Shepard tones here. One is a low bass that descends in discrete half steps, while the other is a high treble that does so in a perpetual glissando. Since I didn't know how to code at the time, both were made by splicing together`,
                         {
                             anchor: `pure tones`,
                             wiki: `Pure_tone`,
@@ -460,7 +460,7 @@ export default {
                             awkwardTodo: true,
                             cards: [
                                 {
-                                    description: `The first time I had sex with a woman other than Sita, I left the used condom on my nightstand for days. Like a proud parent bronzing their baby's shoes, I was just awestruck that this tiny thing I'd squirted out had grown into something much bigger.`,
+                                    description: `The first time I had sex with a woman other than Sita, I left the used condom on my nightstand for days. Like a proud parent bronzing their baby's shoes, I was just awestruck that this tiny thing I'd squirted out had grown into something so much bigger.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [OBSERVATION]: true,
@@ -510,7 +510,7 @@ export default {
                             anchor: `unforeskinned virgin`,
                             awkwardTodo: true,
                             card: {
-                                description: `I learned a long time ago not to have personal convictions or identity markers that would only limit the size of my dating pool. It's why I've never gotten a tattoo, for example. I needed to be a blank slab for each new woman to shape me into whatever she liked. And so I imagine that before dating Miriam, I'd reset myself to a default state of being sexually inexperienced and having an intact foreskin.`,
+                                description: `I learned a long time ago not to wear identity markers or hold personal convictions that would only limit the size of my dating pool. It's partly why I've never gotten a tattoo. I needed to be a blank slab for each new woman to shape me into whatever she liked. And so I imagine that before dating Miriam, I'd reset myself to a default state of being sexually inexperienced and having an intact foreskin.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -652,7 +652,7 @@ export default {
                                         anchor: `conferring knighthood.`,
                                         wiki: `Accolade`,
                                     },
-                                    `And so I imagine my drunken self, confused by the orders he's been given to speak for his sober half's crimes, instead erratically patting his sober half on the shoulder with a sharp sword.`,
+                                    `And so we find my drunken self, confused by the orders he's been given to speak for his sober half's crimes, instead erratically patting his sober half on the shoulder with a sharp sword.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1083,7 +1083,7 @@ export default {
                                         anchor: `pooper scooper`,
                                         wiki: `Pooper-scooper`,
                                     },
-                                    `ready in case her pet makes a mess on some freshly manicured lawn.`,
+                                    `ready in case her pet makes its mess on a freshly manicured lawn.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

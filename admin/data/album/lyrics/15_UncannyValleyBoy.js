@@ -1156,7 +1156,18 @@ export default {
                     lyric: {
                         isItalic: true,
                         lyric: [
-                            `…traded in for the`,
+                            {
+                                anchor: `…traded in`,
+                                awkwardTodo: true,
+                                card: {
+                                    description: `Like shiny new "bronzes" placed next to a gold trophy from the past, these other women were never more desirable than Sita in hindsight. They thrilled me most only because I'd won them more recently.`,
+                                    dotKeys: {
+                                        [OBSERVATION]: true,
+                                        [PUN]: true,
+                                    },
+                                },
+                            },
+                            `for the`,
                             {
                                 anchor: `trophy blondes.`,
                                 awkwardTodo: true,
@@ -1165,13 +1176,6 @@ export default {
                                         description: `To add insult to injury, the women I left Sita for were usually white, which bothered her greatly. In my defense, this wasn't by design, but seeing her loss as my gain, I let her believe the worst.`,
                                         dotKeys: {
                                             [BACKSTORY]: true,
-                                        },
-                                    },
-                                    {
-                                        description: `Like shiny new "bronzes" placed next to a gold trophy from the past, these other women were never more desirable than Sita in hindsight. They thrilled me most only because I'd won them more recently.`,
-                                        dotKeys: {
-                                            [OBSERVATION]: true,
-                                            [PUN]: true,
                                         },
                                     },
                                     {
