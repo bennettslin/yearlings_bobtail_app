@@ -613,11 +613,10 @@ export default {
                     lyric: [
                         {
                             anchor: `Final trip on a tanker,`,
-                            // Not sure this makes sense.
-                            finalTodo: true,
+                            awkwardTodo: true,
                             cards: [
                                 {
-                                    description: `As part of my plan to start afresh with someone new, I wanted to stay sober for a while, but that wasn't going to happen until my drinking brought me to the point of sickness. I also needed plenty of alcohol to muster the courage to break up with Sita. So I drank to oblivion each night, hoping to provide the necessary conditions for both purposes.`,
+                                    description: `I knew that upon starting afresh with someone new, I would need to stay sober for a while. But short of being completely drunk, I could never muster the courage to break up with Sita. So I drank to oblivion each night, hoping to wake up one morning and discover that by some unexplained miracle, I was now both single and utterly repulsed by the taste of alcohol.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
