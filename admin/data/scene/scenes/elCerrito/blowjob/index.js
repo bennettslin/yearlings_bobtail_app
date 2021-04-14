@@ -6,7 +6,7 @@ export default {
         [BLOWJOB]: {
             yIndex: 3,
             xPosition: 1.9,
-            zOffset: -0.8,
+            zOffset: -0.85,
             layerYIndex: 4,
         },
     },

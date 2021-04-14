@@ -204,7 +204,7 @@ export default {
                             anchor: `went through your mail`,
                             awkwardTodo: true,
                             card: {
-                                description: `Confused about why I'd grown distant, Sita caved in that day and snooped around on my computer. In doing so, she stumbled upon my emails, one of which spoke of a crush, and another soliciting advice from friends on how to break up gently.`,
+                                description: `Confused about why I'd grown distant, Sita caved in that day and snooped around on my desktop computer. In so doing, she stumbled upon my emails, one of which spoke of a crush, and another soliciting advice from friends on how to break up gently.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -279,7 +279,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `Though the breakup was successful, it happened sooner than expected, forcing my sober self to scrap his plans for a clean getaway. He now returns to the scene where he'd earlier tossed the body of his drunken half in haste.`,
+                                        `Though the breakup was successful, it happened sooner than expected, forcing my sober self to scrap his plans for a clean getaway. He's now back at the scene where earlier he tossed the body of his drunken half in haste.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -332,7 +332,7 @@ export default {
                         {
                             anchor: `well-behaved on the wing.`,
                             card: {
-                                description: `Feeling no malice, drunken me can only surmise that after serving out his sentence without complaint, he was granted early release for good behavior.`,
+                                description: `Feeling no malice, drunken me can only surmise that after serving out his sentence without complaint, he's been granted early release for good behavior.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -420,9 +420,9 @@ export default {
                     lyricLeft: [
                         {
                             anchor: `Guilt pardons`,
-                            finalTodo: true,
+                            awkwardTodo: true,
                             card: {
-                                description: `Observing his drunken accomplice's lack of remorse, my sober self can only feel pity, aware of the trauma that must surely linger after being made to perform such a heinous act.`,
+                                description: `My sober self observes his drunken accomplice's lack of remorse yet can only feel pity, aware of the trauma that must surely linger after performing such a heinous act. After all, avoiding such trauma was precisely the reason he chose not to carry out the hit himself.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },

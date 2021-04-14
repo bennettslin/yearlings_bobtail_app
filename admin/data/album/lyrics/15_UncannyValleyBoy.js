@@ -1205,7 +1205,6 @@ export default {
                         `what's left of what these`,
                         {
                             anchor: `faces you flip override,`,
-                            // Not sure if this one will get better.
                             // As phony as it was, I'd been switching social identities for so long that feeling phony was how I knew I was being genuine
                             finalTodo: true,
                             card: {

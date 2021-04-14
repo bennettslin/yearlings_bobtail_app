@@ -7,6 +7,8 @@
 * awkwardTodo: Content is perfectly fine, wording or grammar just sounds off. Fix now, if possible.
 
 # TODO
+* Mother present head
+* Miriam hand too high in blowjob?
 * Make Garryowen a ghost?
 * Hawaiian ornament
 * Potted plants in bedroom

@@ -581,7 +581,6 @@ export default {
                         `as`,
                         {
                             anchor: `worn puppet`,
-                            // General point is there, just needs major rewording.
                             finalTodo: true,
                             card: {
                                 description: [
@@ -590,7 +589,7 @@ export default {
                                         anchor: `ventriloquist.`,
                                         wiki: `Ventriloquism`,
                                     },
-                                    `The dummy of my drunken self can be made to say and do all the questionable things needed to get what I want, while I, an innocent onlooker, just sit there looking appalled.`,
+                                    `As the dummy of my drunken self said and did all the questionable things needed to get what I want, I just sat there looking appalled as an innocent onlooker.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -647,12 +646,12 @@ export default {
                                         anchor: `Dubbing`,
                                         wiki: `Dubbing_(filmmaking)`,
                                     },
-                                    `is the replacement of an actor's voice in film, but it can also refer to the ritual of`,
+                                    `can refer to the replacement of an actor's voice in film, but also to the ritual of`,
                                     {
                                         anchor: `conferring knighthood.`,
                                         wiki: `Accolade`,
                                     },
-                                    `And so we find my drunken self, confused by the orders he's been given to speak for his sober half's crimes, instead erratically patting his sober half on the shoulder with a sharp sword.`,
+                                    `And so we find my drunken self, confused by the orders he's been given to speak for the crimes of his sober half, patting him erratically on the shoulder with a sharp sword instead.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -803,7 +802,7 @@ export default {
                                         anchor: `Richard Dawkins`,
                                         wiki: `Richard_Dawkins`,
                                     },
-                                    `explains natural selection from the vantage point of genes themselves, rather than the individuals who carry them. So as Miriam blocks me from getting under her cutoffs ever again, I imagine it's because her "genes," wishing to remain "undiluted," have conspired to "cut off" any chance of mixing with mine.`,
+                                    `explains natural selection from the vantage point of genes themselves, rather than the organisms that carry them. So as Miriam blocks me from getting under her cut-offs ever again, perhaps it's really her "genes," wishing to stay "undiluted," that have selfishly conspired to "cut off" any chance of mixing with mine.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
