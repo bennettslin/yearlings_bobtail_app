@@ -589,20 +589,20 @@ export default {
                                         anchor: `ventriloquist.`,
                                         wiki: `Ventriloquism`,
                                     },
-                                    `As the dummy of my drunken self said and did all the questionable things needed to get what I want, I just sat there looking appalled as an innocent onlooker.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
-                                    [OBSERVATION]: true,
                                 },
                             },
                         },
                         `his`,
                         {
                             anchor: `offscreen person dubs.`,
+                            finalTodo: true,
                             card: {
-                                description: `Of course, it wasn't always obvious that my drunken self was the dummy whose words and actions were dictated by his sober half, rather than the other way around.`,
+                                description: `As the dummy of my drunken self said and did all the questionable things needed to get what I want, I just sat there looking appalled as an innocent onlooker.`,
                                 dotKeys: {
+                                    [NARRATIVE]: true,
                                     [OBSERVATION]: true,
                                 },
                             },
@@ -654,12 +654,22 @@ export default {
                                     `And so we find my drunken self, confused by the orders he's been given to speak for the crimes of his sober half, patting him erratically on the shoulder with a sharp sword instead.`,
                                 ],
                                 dotKeys: {
-                                    [OBSERVATION]: true,
+                                    [NARRATIVE]: true,
                                     [PUN]: true,
                                 },
                             },
                         },
-                        `in care, he's anyone.`,
+                        `in care,`,
+                        {
+                            anchor: `he's anyone.`,
+                            card: {
+                                description: `Of course, it wasn't always obvious that my drunken self was the dummy whose words and actions were dictated by his sober half, rather than the other way around.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [OBSERVATION]: true,
+                                },
+                            },
+                        },
                     ],
                 },
             ],

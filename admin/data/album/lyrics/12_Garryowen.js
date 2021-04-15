@@ -616,7 +616,7 @@ export default {
                             awkwardTodo: true,
                             cards: [
                                 {
-                                    description: `I knew that upon starting afresh with someone new, I would need to stay sober for a while. But short of being completely drunk, I could never muster the courage to break up with Sita. So I drank to oblivion each night, hoping to wake up one morning and discover that by some unexplained miracle, I was now both single and utterly repulsed by the taste of alcohol.`,
+                                    description: `I knew that upon starting afresh with someone new, I would need to stay sober for a while. But short of being completely drunk, I could never muster the courage to break up with Sita. So I drank to oblivion each night, hoping to wake up one morning and discover that by some unknown miracle, I was now both newly single and utterly repulsed by the taste of alcohol.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
