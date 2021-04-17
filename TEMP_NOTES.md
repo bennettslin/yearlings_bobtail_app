@@ -1,5 +1,4 @@
 # Bug
-* "Typo" is too short for dots
 
 # Annotation
 * awkwardTodo: Content is perfectly fine, wording or grammar just sounds off. Fix now, if possible.

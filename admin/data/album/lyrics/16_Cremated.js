@@ -741,9 +741,9 @@ export default {
                 {
                     mixTime: `1:33:29.30`,
                     lyricCentre: [
-                        `it hums`,
+                        `it`,
                         {
-                            anchor: `a typo`,
+                            anchor: `hums a typo`,
                             awkwardTodo: true,
                             card: {
                                 description: [
