@@ -1,5 +1,4 @@
 # Bug
-* Shivved annotation card width
 * "Typo" is too short for dots
 
 # Annotation

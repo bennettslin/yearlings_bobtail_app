@@ -3,6 +3,8 @@
 @import '../../../scss/constants/popup';
 @import '../../../scss/constants/transition';
 
+$MARGIN_CAROUSEL_ANNOTATION: $MARGIN_THIN * 2.5;
+
 .CarouselAnnotation {
     display: flex;
     flex-direction: column-reverse;
@@ -39,11 +41,12 @@
 
 .CarouselAnnotation__shown {
     min-width:
-    $width__annotation
-    + $PADDING_POPUP_CONTENT_WIDE * 2;
+        $width__annotationCard
+        + $PADDING_POPUP_CONTENT_WIDE * 2
+        + $MARGIN_CAROUSEL_ANNOTATION * 2;
 
-    padding-left: $MARGIN_THIN * 2.5;
-    padding-right: $MARGIN_THIN * 2.5;
+    padding-left: $MARGIN_CAROUSEL_ANNOTATION;
+    padding-right: $MARGIN_CAROUSEL_ANNOTATION;
 }
 
 /**
