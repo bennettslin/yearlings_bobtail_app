@@ -540,7 +540,7 @@ export default {
                             awkwardTodo: true,
                             card: {
                                 description: [
-                                    `But though my drunken self is forced to adopt the faith of his sober half, this internal conflict remains invisible to onlookers, who can only watch in bewilderment as I perform my own`,
+                                    `But though my drunken self is forced to adopt the faith of his sober half, this internal conflict remains invisible to onlookers, who must watch in bewilderment as I perform my own`,
                                     {
                                         anchor: `circumcision.`,
                                         wiki: `Circumcision`,
@@ -564,7 +564,7 @@ export default {
                             anchor: `inherently perfect,`,
                             awkwardTodo: true,
                             card: {
-                                description: `The real purpose for my drunken personality was to blame it for all the things I selfishly desired, while remaining above reproach myself. I didn't tell Miriam this, of course, since the latest thing I selfishly desired was her.`,
+                                description: `The real purpose of my drunken personality was to blame it for all my selfish desires, allowing me to remain above reproach myself. I didn't tell Miriam this, of course, since the latest thing I selfishly desired was her.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

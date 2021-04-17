@@ -5123,4 +5123,8 @@ export default [
         taskName: `Smart quotes work.`,
         workedHours: 3,
     },
+    {
+        taskName: `Finish pressing annotation edits.`,
+        workedHours: 168,
+    },
 ]

@@ -12,11 +12,6 @@ export default [
     },
 
     // Needed.
-    {
-        taskName: `Finish annotation edits.`,
-        workedHours: 158,
-        neededHours: 165,
-    },
 
     // Ongoing, only nice to have.
     {
@@ -26,5 +21,9 @@ export default [
     {
         taskName: `Face fixes.`,
         workedHours: 10,
+    },
+    {
+        taskName: `Awkward annotation edits.`,
+        workedHours: 0,
     },
 ]
