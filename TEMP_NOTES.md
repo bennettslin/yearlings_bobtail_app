@@ -1,4 +1,5 @@
 # Bug
+* Verse bar weirdness when mounting.
 * Grasshoppers Lie Heavy repeat includes some Constellations. Are there others?
 * Shivved annotation card width
 * "Typo" is too short for dots

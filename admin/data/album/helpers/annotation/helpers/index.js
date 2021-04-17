@@ -1,6 +1,6 @@
 import { registerCardsDotKeys } from './register'
 import { getDotsBitFromKeys } from '../../../../../../app/helpers/dot'
-import { getFormattedAnnotationTitle } from '../../../../../../app/helpers/format'
+import { getFormattedAnnotationTitle } from '../../../../../../app/helpers/format/annotation'
 import {
     LYRIC_LEFT,
     LYRIC_RIGHT,
