@@ -6,6 +6,9 @@ import {
 import { getVerseCountForSong } from '../../../api/album/verses'
 import { getTimeDifference } from '../../../utils/logger/helpers/time'
 
+const SONG_CONTINUE_BUFFER_TIME = 1
+const SONG_REPEAT_BUFFER_TIME = 0.75
+
 export const getCurrentIndicesForTime = ({
     songIndex,
     verseIndex,
@@ -19,37 +22,42 @@ export const getCurrentIndicesForTime = ({
         isLastSong = songIndex === getSongsNotLoguesCount(),
         isLastVerse = verseIndex === getVerseCountForSong(songIndex) - 1
 
-    // If the verse is a second away from ending...
-    if (audioTime + 1 > verseEndTime) {
-
-        // If this is the last verse, and we will continue to the next song...
-        if (!isLastSong && isLastVerse && !isSongRepeatOn) {
-            return {
-                currentSongIndex: songIndex + 1,
-                currentVerseIndex: 0,
-            }
+    // If the last verse has ended and we are continuing to the next song...
+    if (
+        isLastVerse &&
+        !isLastSong &&
+        !isSongRepeatOn &&
+        audioTime + SONG_CONTINUE_BUFFER_TIME > verseEndTime
+    ) {
+        return {
+            currentSongIndex: songIndex + 1,
+            currentVerseIndex: 0,
         }
     }
 
-    // If the verse has ended...
-    if (audioTime > verseEndTime) {
+    // If the last verse has ended and we are repeating the song...
+    if (
+        isLastVerse &&
+        isSongRepeatOn &&
+        audioTime + SONG_REPEAT_BUFFER_TIME > verseEndTime
+    ) {
+        // Reset the verse and update the current time.
+        return {
+            currentSongIndex: songIndex,
+            currentVerseIndex: 0,
+            shouldUpdateCurrentTime: true,
+        }
+    }
 
-        // If this is not the last verse...
-        if (!isLastVerse) {
-            // Advance to the next one.
-            return {
-                currentSongIndex: songIndex,
-                currentVerseIndex: verseIndex + 1,
-            }
-
-        // This is the last verse. If we will repeat the song...
-        } else if (isSongRepeatOn) {
-            // Reset the verse and update the current time.
-            return {
-                currentSongIndex: songIndex,
-                currentVerseIndex: 0,
-                shouldUpdateCurrentTime: true,
-            }
+    // If a verse in the middle of the song has ended...
+    if (
+        !isLastVerse &&
+        audioTime > verseEndTime
+    ) {
+        // Advance to the next one.
+        return {
+            currentSongIndex: songIndex,
+            currentVerseIndex: verseIndex + 1,
         }
     }
 
