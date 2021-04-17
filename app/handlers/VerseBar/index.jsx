@@ -1,6 +1,7 @@
-import { forwardRef, useImperativeHandle, useEffect, memo } from 'react'
+import { forwardRef, useImperativeHandle, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
+import getDidMountHoc from '../../components/DidMountHoc'
 import { updateVerseBarsStatus } from '../../redux/verseBars/action'
 import { getVerseBarsStatus } from './helper'
 import { getMapVerseCursorIndex } from '../../redux/cursor/selector'
@@ -9,7 +10,7 @@ import { mapIsLyricExpanded } from '../../redux/toggle/selector'
 import { mapVerseBarsStatus } from '../../redux/verseBars/selector'
 import { mapIsHeightlessLyric } from '../../redux/viewport/selector'
 
-const VerseBarHandler = forwardRef(({ getScrollVerseChild }, ref) => {
+const VerseBarHandler = forwardRef(({ didMount, getScrollVerseChild }, ref) => {
     const
         dispatch = useDispatch(),
         verseCursorIndex = useSelector(getMapVerseCursorIndex(true)),
@@ -39,7 +40,9 @@ const VerseBarHandler = forwardRef(({ getScrollVerseChild }, ref) => {
 
     useEffect(() => {
         // Also determine verse bars when verse cursor index has changed.
-        determineVerseBars()
+        if (didMount) {
+            determineVerseBars()
+        }
     }, [verseCursorIndex])
 
     useImperativeHandle(ref, () => determineVerseBars)
@@ -48,7 +51,8 @@ const VerseBarHandler = forwardRef(({ getScrollVerseChild }, ref) => {
 )
 
 VerseBarHandler.propTypes = {
+    didMount: PropTypes.bool.isRequired,
     getScrollVerseChild: PropTypes.func.isRequired,
 }
 
-export default memo(VerseBarHandler)
+export default getDidMountHoc(VerseBarHandler)
