@@ -668,7 +668,7 @@ export default {
                             anchor: `sprawled where they stood…`,
                             awkwardTodo: true,
                             card: {
-                                description: `And while every beatdown I suffered was a serious blow to my mental health and emotional state, the bullies only continued to enjoy greater happiness and social standing. My belief as a Beyonder ultimately couldn't counter the harsh reality that nature favors its bullies.`,
+                                description: `And while every beatdown I suffered was a serious blow to my mental health and emotional state, the bullies only continued to enjoy greater happiness and social standing. My belief as a Beyonder couldn't counter the harsh reality that nature favors its bullies.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -799,7 +799,7 @@ export default {
                             awkwardTodo: true,
                             card: {
                                 description: [
-                                    `I relinquish my chance to know the redhead. Not just because it's past`,
+                                    `But I relinquish my chance to know the redhead. Not just because it's past`,
                                     {
                                         anchor: `last call,`,
                                         wiki: `Last_call_(bar_term)`,

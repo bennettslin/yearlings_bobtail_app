@@ -414,7 +414,7 @@ export default {
                 awkwardTodo: true,
                 card: {
                     description: [
-                        `As I was making this album, I kept in mind the`,
+                        `I made this album keeping in mind the`,
                         {
                             anchor: `Kinks'`,
                             wiki: `The_Kinks`,
@@ -423,12 +423,12 @@ export default {
                             anchor: `Village Green Preservation Society`,
                             wiki: `The_Kinks_Are_the_Village_Green_Preservation_Society`,
                         },
-                        `as my model. The songs all had to be catchy pop tunes, contain zero filler, and represent a diversity of musical styles. And each one would clock in at three minutes or so, with none over four. While there was no one-to-one mapping, this song was clearly the`,
+                        `as my model. The songs had to be memorable pop tunes, contain zero filler, and represent a diversity of musical styles. And each one would clock in at three minutes or so, with none over four. While there was no one-to-one mapping, this song was clearly the`,
                         {
                             anchor: `"Wicked Annabella"`,
                             wiki: `Wicked_Annabella`,
                         },
-                        `of the lot. So I borrowed its sound of low notes played on distorted electric guitars.`,
+                        `of the bunch. So I borrowed its sound of low notes played on distorted electric guitars.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -1205,12 +1205,11 @@ export default {
                         `what's left of what these`,
                         {
                             anchor: `faces you flip override,`,
-                            // As phony as it was, I'd been switching social identities for so long that feeling phony was how I knew I was being genuine
-                            finalTodo: true,
+                            awkwardTodo: true,
                             card: {
-                                description: `At some point, I noticed that I wore different faces around different people. This wasn't the case when I was younger, which could only mean there was once a true me, and now there wasn't.`,
+                                description: `My mother would sometimes ask me what happened to the playful little boy she once knew, which made me wonder myself. I think I just learned early on that for any given situation, there's an optimal person to be. Different situations call for being different people, and each new person takes up valuable mental space. At some point, it just didn't make sense to keep an original identity that served no other purpose.`,
                                 dotKeys: {
-                                    [OBSERVATION]: true,
+                                    [BACKSTORY]: true,
                                 },
                             },
                         },
@@ -1255,7 +1254,7 @@ export default {
                             anchor: `sun tinkles light`,
                             awkwardTodo: true,
                             card: {
-                                description: `In the nightmare, I was now ruler of the neighborhood, as I showered my subjects in urine, their sole means of subsistence. In hindsight, my brain was probably telling me to wake up and use the bathroom.`,
+                                description: `In the nightmare, I was now ruler of the neighborhood. I would shower my subjects in urine, their sole means of subsistence. In hindsight, my brain was probably telling me to wake up and use the bathroom.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -1343,7 +1342,7 @@ export default {
                         awkwardTodo: true,
                         cards: [
                             {
-                                description: `It wasn't until college that I learned to appreciate the sacrifices my parents had made for me and my siblings to lead better lives than their own. But that this awareness had to come about through assigned coursework, rather than my own lived experiences, only added to my guilt.`,
+                                description: `It wasn't until college that I learned to appreciate the sacrifices my parents had made for me and my siblings to lead better lives than their own. But knowing that this awareness came about through assigned coursework, rather than my own lived experiences, only added to my guilt.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

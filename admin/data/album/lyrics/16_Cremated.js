@@ -163,17 +163,12 @@ export default {
                             anchor: `Atavist`,
                             card: {
                                 description: [
-                                    `My mother once advised me not to have children, given my brother's autism and my father's`,
+                                    `An`,
                                     {
-                                        anchor: `Asperger syndrome.`,
-                                        wiki: `Asperger_syndrome`,
-                                    },
-                                    `After all, even if I didn't display similar traits myself, they might reappear generations later, like an`,
-                                    {
-                                        anchor: `atavism.`,
+                                        anchor: `atavism`,
                                         wiki: `Atavism`,
                                     },
-                                    `I often wondered if the women I dated had this same thought when judging my desirability as a long-term partner.`,
+                                    `is a genetic trait that resurfaces after several generations. Though I wasn't autistic myself, it still lurked in my genes, ready to spring at any time on my children, on my grandchildren, on my grandchildren's children…`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -268,8 +263,6 @@ export default {
                         `this`,
                         {
                             anchor: `phoenix risen limp`,
-                            // Just can't get that third sentence right.
-                            awkwardTodo: true,
                             card: {
                                 description: [
                                     `In Greek mythology, the`,
@@ -277,7 +270,7 @@ export default {
                                         anchor: `phoenix`,
                                         wiki: `Phoenix_(mythology)`,
                                     },
-                                    `is a bird reborn from its own ashes. And having broken up with Sita to date Miriam, I also await my triumphant rebirth. But now with Miriam seated on my lap as we make out, I'm suddenly overcome with self-doubt, and my "penis" rises limply, unable to reach a full erection.`,
+                                    `is a bird reborn from its own ashes. And having broken up with Sita, I also await my triumphant rebirth. But with Miriam seated on my lap as we make out, I'm suddenly overcome with self-doubt, and my "penis" rises limply, unable to reach a full erection.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -294,7 +287,7 @@ export default {
                             awkwardTodo: true,
                             cards: [
                                 {
-                                    description: `The rational schemes of my sober self didn't always win out, of course. Sometimes the best decisions came from indulging the whims of my drunken self.`,
+                                    description: `The rational schemes of my sober self didn't always win out. Sometimes the best decisions came from indulging the whims of my drunken half.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -434,7 +427,7 @@ export default {
                                         anchor: `Abbott and Costello`,
                                         wiki: `Abbott_and_Costello`,
                                     },
-                                    `famously did not get along. This enlivened the dynamic between them onstage, but it also made for tense moments when the tape stopped rolling. Similarly, while Miriam was delighted to hear my two personalities befuddle and vex each other in doublespeaker rhyme, she surely wanted no lasting part of the emotional turmoil underlying this spectacle.`,
+                                    `famously did not get along. This enlivened the dynamic between them onstage, but it also made for tense moments when the tape stopped rolling. Similarly, while Miriam was delighted to hear how my two personalities would befuddle and vex each other in doublespeaker rhyme, she surely wanted no part of the underlying drama that inspired this idea.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -453,7 +446,26 @@ export default {
             mainVerses: [
                 {
                     mixTime: `0:46:06.17`,
-                    lyricLeft: `Though, she ponders the children`,
+                    lyricLeft: [
+                        `Though, she`,
+                        {
+                            anchor: `ponders the children`,
+                            card: {
+                                description: [
+                                    `My mother once advised me not to have children, given my brother's autism and my father's`,
+                                    {
+                                        anchor: `Asperger syndrome.`,
+                                        wiki: `Asperger_syndrome`,
+                                    },
+                                    `I often wondered if the women I dated had this same thought when judging my desirability as a long-term partner.`,
+                                ],
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                    [OBSERVATION]: true,
+                                },
+                            },
+                        },
+                    ],
                     lyricRight: [
                         {
                             anchor: `Trophy bronzed`,
@@ -528,9 +540,9 @@ export default {
                             awkwardTodo: true,
                             card: {
                                 description: [
-                                    `Of course, while my drunken self is forced to adopt the faith of his sober half, this internal conflict remains hidden from bystanders. All they can see is me presiding over my own conversion ritual and surgically`,
+                                    `But though my drunken self is forced to adopt the faith of his sober half, this internal conflict remains invisible to onlookers, who can only watch in bewilderment as I perform my own`,
                                     {
-                                        anchor: `removing my own foreskin.`,
+                                        anchor: `circumcision.`,
                                         wiki: `Circumcision`,
                                     },
                                 ],
@@ -552,7 +564,7 @@ export default {
                             anchor: `inherently perfect,`,
                             awkwardTodo: true,
                             card: {
-                                description: `Of course, the real purpose for my drunken personality was to blame it for all the things I selfishly desired, while remaining above reproach myself. I didn't tell Miriam this, which makes sense, since the most recent thing I selfishly desired was her.`,
+                                description: `The real purpose for my drunken personality was to blame it for all the things I selfishly desired, while remaining above reproach myself. I didn't tell Miriam this, of course, since the latest thing I selfishly desired was her.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -581,15 +593,9 @@ export default {
                         `as`,
                         {
                             anchor: `worn puppet`,
-                            finalTodo: true,
+                            awkwardTodo: true,
                             card: {
-                                description: [
-                                    `Picturing the discarded condom as a lifeless puppet, I realize I'm like a`,
-                                    {
-                                        anchor: `ventriloquist.`,
-                                        wiki: `Ventriloquism`,
-                                    },
-                                ],
+                                description: `The condom sits strangely motionless on the car seat, like a puppet that was so full of life just moments before. But having gotten me into a place I otherwise wouldn't have gone, it has no other use and can now be discarded at will.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -598,9 +604,16 @@ export default {
                         `his`,
                         {
                             anchor: `offscreen person dubs.`,
-                            finalTodo: true,
+                            awkwardTodo: true,
                             card: {
-                                description: `As the dummy of my drunken self said and did all the questionable things needed to get what I want, I just sat there looking appalled as an innocent onlooker.`,
+                                description: [
+                                    `Of course, this won't be the first time I've tossed a puppet aside after it served my purpose. Like a`,
+                                    {
+                                        anchor: `ventriloquist`,
+                                        wiki: `Ventriloquism`,
+                                    },
+                                    `with a dummy on his lap, I made my drunken half say all the questionable things needed to get what I wanted, while I just sat there looking appalled.`,
+                                ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -651,7 +664,7 @@ export default {
                                         anchor: `conferring knighthood.`,
                                         wiki: `Accolade`,
                                     },
-                                    `And so we find my drunken self, confused by the orders he's been given to speak for the crimes of his sober half, patting him erratically on the shoulder with a sharp sword instead.`,
+                                    `And so we find the dummy of my drunken half, confused by the orders he's been given to speak for my crimes, instead patting me erratically on the shoulder with a sharp sword.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -663,7 +676,7 @@ export default {
                         {
                             anchor: `he's anyone.`,
                             card: {
-                                description: `Of course, it wasn't always obvious that my drunken self was the dummy whose words and actions were dictated by his sober half, rather than the other way around.`,
+                                description: `After all, it isn't obvious at all to my drunken self that he's the dummy whose words and actions are dictated by his sober half, rather than the other way around.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
