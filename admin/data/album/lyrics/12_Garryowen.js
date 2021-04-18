@@ -41,11 +41,15 @@ export default {
                             isItalic: true,
                             lyric: `Ulysses,`,
                         },
-                        `Garryowen is a menacing dog owned by a vulgar Irish nationalist. It seemed like a fitting eponym for my drunken self at the time.`,
+                        `Garryowen is a menacing dog owned by a vulgar`,
+                        {
+                            anchor: `Irish nationalist.`,
+                            wiki: `Irish_nationalism`,
+                        },
+                        `It seemed like a fitting eponym for my drunken self at the time.`,
                     ],
                     dotKeys: {
                         [OBSERVATION]: true,
-                        [REFERENCE]: true,
                     },
                 },
             },
@@ -756,7 +760,14 @@ export default {
                 // Just confirm.
                 awkwardTodo: true,
                 card: {
-                    description: `After some trial and error, I decided the counterpoint in this song sounded best with each part occupying the same register, which allows them to blend together into a single harmonic layer. At the same time, the ear can tease apart the different timbres of each instrument, as is the case with the banjo, fiddle, and tin whistle heard here.`,
+                    description: [
+                        `After some trial and error, I decided the counterpoint in this song sounded best with each part occupying the same register, which allows them to blend together into a single harmonic layer. At the same time, the ear can tease apart the different timbres of each instrument, as is the case with the banjo, fiddle, and`,
+                        {
+                            anchor: `tin whistle`,
+                            wiki: `Tin_whistle`,
+                        },
+                        `heard here.`,
+                    ],
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
@@ -774,10 +785,13 @@ export default {
                         {
                             anchor: `Toora-loora-li,`,
                             card: {
-                                description: `Related to the English "toodle-oo," the Irish "tooraloo" carries the same meaning of "goodbye." Nonsensical variants are prevalent in Irish drinking songs and lullabies.`,
-                                dotKeys: {
-                                    [REFERENCE]: true,
-                                },
+                                description: [
+                                    `Related to the English "toodle-oo," the Irish "tooraloo" carries the same meaning of "goodbye." Nonsensical variants are prevalent in drinking songs and`,
+                                    {
+                                        anchor: `lullabies.`,
+                                        wiki: `Too_Ra_Loo_Ra_Loo_Ral`,
+                                    },
+                                ],
                             },
                         },
                         `Garryowen, who owes no one,`,

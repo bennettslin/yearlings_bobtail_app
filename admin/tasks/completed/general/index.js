@@ -5127,4 +5127,8 @@ export default [
         taskName: `Finish pressing annotation edits.`,
         workedHours: 168,
     },
+    {
+        taskName: `Latest bug fixes.`,
+        workedHours: 4,
+    },
 ]

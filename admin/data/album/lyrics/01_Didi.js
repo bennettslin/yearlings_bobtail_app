@@ -92,7 +92,17 @@ export default {
                 awkwardTodo: true,
                 card: {
                     description: [
-                        `Since this song is sung from the perspective of my sister as a child, I wanted toy instruments to abound. And so the intro begins with a strummed autoharp leading into a glockenspiel melody. I was also hoping to recreate the atmosphere of childlike wonder heard in the opening measures of`,
+                        `Since this song is sung from the perspective of my sister as a child, I wanted toy instruments to abound. And so the intro begins with a strummed`,
+                        {
+                            anchor: `autoharp`,
+                            wiki: `Autoharp`,
+                        },
+                        `leading into a`,
+                        {
+                            anchor: `glockenspiel`,
+                            wiki: `Glockenspiel`,
+                        },
+                        `melody. I was also hoping to recreate the atmosphere of childlike wonder heard in the opening measures of`,
                         {
                             anchor: `"Wouldn't It Be Nice,"`,
                             wiki: `Wouldn't_It_Be_Nice`,
@@ -155,7 +165,12 @@ export default {
                                             anchor: `bunny criss-cross the tree.`,
                                             wiki: `Shoelace_knot`,
                                         },
-                                        `But being left-handed, I was never clear on which hand holds the bunny. My shoelaces always came undone as a result.`,
+                                        `But being`,
+                                        {
+                                            anchor: `left-handed,`,
+                                            wiki: `Handedness`,
+                                        },
+                                        `I was never clear on which hand should hold the bunny. My shoelaces always came undone as a result.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -184,7 +199,12 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `My ambition for this album was to do for rock music what`,
+                        `My ambition for this album was to do for`,
+                        {
+                            anchor: `rock music`,
+                            wiki: `Rock_music`,
+                        },
+                        `what`,
                         {
                             anchor: `James Joyce`,
                             wiki: `James_Joyce`,
@@ -433,7 +453,18 @@ export default {
                         {
                             anchor: `sheriff's badge and gun…`,
                             card: {
-                                description: `Though my mother and other Taiwanese teenagers of her generation prized all things labeled American, their only exposure was through a local bootleg industry that mainly recycled the relics of America's past. And so my sister and I grew up listening to my mother's old country records and sharing her fondness for old Westerns.`,
+                                description: [
+                                    `Though my mother and other Taiwanese teenagers of her generation prized all things labeled American, their only exposure was through a local bootleg industry that mainly recycled the relics of America's past. And so my sister and I grew up listening to my mother's old`,
+                                    {
+                                        anchor: `country`,
+                                        wiki: `Country_music`,
+                                    },
+                                    `records and sharing her fondness for old`,
+                                    {
+                                        anchor: `Westerns.`,
+                                        wiki: `Western_(genre)`,
+                                    },
+                                ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -489,12 +520,27 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `To mimic the subdued twangs of music boxes and thumb pianos that characterize`,
+                        `To mimic the subdued twangs of`,
+                        {
+                            anchor: `music boxes`,
+                            wiki: `Music_box`,
+                        },
+                        `and`,
+                        {
+                            anchor: `thumb pianos`,
+                            wiki: `Mbira`,
+                        },
+                        `that characterize`,
                         {
                             anchor: `children's music,`,
                             wiki: `Children's_music`,
                         },
-                        `I dampened the lead guitar strings by wrapping strips of tissue around them near the bridge.`,
+                        `I dampened the lead`,
+                        {
+                            anchor: `guitar`,
+                            wiki: `Guitar`,
+                        },
+                        `strings by wrapping strips of tissue around them near the bridge.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,

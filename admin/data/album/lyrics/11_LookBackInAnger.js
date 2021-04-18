@@ -242,10 +242,16 @@ export default {
                         {
                             anchor: `past ring one,`,
                             card: {
-                                description: `A ring signifies long-term commitment to another person. And of course, after years of struggle, I'm finally in my first committed relationship.`,
+                                description: [
+                                    `A`,
+                                    {
+                                        anchor: `promise ring`,
+                                        wiki: `Pre-engagement_ring`,
+                                    },
+                                    `signifies long-term commitment to another person. And of course, after years of struggle, I'm finally in my first committed relationship.`,
+                                ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
-                                    [REFERENCE]: true,
                                 },
                             },
                         },

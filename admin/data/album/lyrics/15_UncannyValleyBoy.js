@@ -59,7 +59,7 @@ export default {
                                 anchor: `Valley girl`,
                                 wiki: `Valley_girl`,
                             },
-                            `stereotype. So the kids I grew up with were proud to self-identify with the label, even if they didn't embody its traits.`,
+                            `stereotype. So the kids I grew up with proudly self-identified with the label, even if they didn't embody its traits.`,
                         ],
                         dotKeys: {
                             [OBSERVATION]: true,
@@ -721,26 +721,31 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `I wanted to mimic the`,
+                        `I wanted to mimic`,
+                        {
+                            anchor: `Radiohead`,
+                            wiki: `Radiohead`,
+                        },
+                        `guitarist`,
+                        {
+                            anchor: `Jonny Greenwood's`,
+                            wiki: `Jonny_Greenwood`,
+                        },
                         {
                             anchor: `tremolo`,
                             wiki: `Tremolo`,
                         },
-                        `effect used by guitarist`,
-                        {
-                            anchor: `Jonny Greenwood`,
-                            wiki: `Jonny_Greenwood`,
-                        },
-                        `on the song "Airbag" from`,
-                        {
-                            anchor: `Radiohead's`,
-                            wiki: `Radiohead`,
-                        },
+                        `picking on the song "Airbag" from their album`,
                         {
                             anchor: `OK Computer.`,
                             wiki: `OK_Computer`,
                         },
-                        `So I recorded several takes of steady eighth notes on the banjo, each one offset further in the mix by a fraction of a beat, to create the impression of steady tremolo picking. In the last few measures they separate in the balance, like a rope fraying at one end.`,
+                        `But as a left-hander who plays right-handed, I've always struggled with`,
+                        {
+                            anchor: `alternate picking.`,
+                            wiki: `Alternate_picking`,
+                        },
+                        `So I recorded several takes of steady eighth notes on the banjo, each one offset further in the mix by a fraction of a beat. In the last few measures they separate in the balance, like a rope fraying at one end.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -1002,10 +1007,14 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `While chanting Rama's name, Ratnakar's concentration was so intense that an anthill formed over him, and he remained undisturbed for years. And so he came to be known as Valmiki, from the Sanskrit word for "anthill."`,
-                                    dotKeys: {
-                                        [REFERENCE]: true,
-                                    },
+                                    description: [
+                                        `While chanting Rama's name, Ratnakar's concentration was so intense that an`,
+                                        {
+                                            anchor: `anthill`,
+                                            wiki: `Ant_colony`,
+                                        },
+                                        `formed over him, and he remained undisturbed for years. And so he came to be known as Valmiki, from the Sanskrit word for "anthill."`,
+                                    ],
                                 },
                             ],
                         },

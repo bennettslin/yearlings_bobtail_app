@@ -347,12 +347,21 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `Back when I was first learning to play the banjo, I would strum the motions of Earl Scruggs's`,
+                        `Back when I was first learning to play the banjo, I would strum the motions of`,
+                        {
+                            anchor: `Earl Scruggs's`,
+                            wiki: `Earl_Scruggs`,
+                        },
                         {
                             anchor: `three-finger roll`,
                             wiki: `Scruggs_style`,
                         },
-                        `on my kneecap throughout the day. From there, it crossed over to my guitar fingerpicking technique, as can be heard on the Spanish guitar here.`,
+                        `on my kneecap throughout the day. From there, it crossed over to my guitar fingerpicking technique, as can be heard on the`,
+                        {
+                            anchor: `Spanish guitar`,
+                            wiki: `Classical_guitar`,
+                        },
+                        `here.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,

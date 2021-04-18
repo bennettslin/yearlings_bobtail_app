@@ -244,7 +244,16 @@ export default {
                             anchor: `"Don't Stop 'Til You Get Enough"`,
                             wiki: `Don't_Stop_'Til_You_Get_Enough`,
                         },
-                        `in the home stretch of every dishroom shift. Ever since, I've associated this song with the idea of psyching myself up to have fun when I'm not really having fun. So I borrowed its sound to convey where my head was at during those first few dates with Sita. Hence the palm-muted electric guitars, rubbery bass trills, and ample cowbell.`,
+                        `in the home stretch of every dishroom shift. Ever since, I've associated this song with the idea of psyching myself up to have fun when I'm not really having fun. So I borrowed its sound to convey where my head was at during those first few dates with Sita. Hence the palm-muted electric guitars, rubbery`,
+                        {
+                            anchor: `bass`,
+                            wiki: `Bass_guitar`,
+                        },
+                        `trills, and ample`,
+                        {
+                            anchor: `cowbell.`,
+                            wiki: `Cowbell_(instrument)`,
+                        },
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -993,7 +1002,12 @@ export default {
                             anchor: `The New Mickey Mouse Club,`,
                             wiki: `The_Mickey_Mouse_Club`,
                         },
-                        `a disco-inflected 70s revival of the original 50s show. In particular, the song "Let's Go Day" gave me the idea to play portamento quarter notes on an`,
+                        `a`,
+                        {
+                            anchor: `disco-inflected`,
+                            wiki: `Disco`,
+                        },
+                        `70s revival of the original 50s show. In particular, the song "Let's Go Day" gave me the idea to play portamento quarter notes on an`,
                         {
                             anchor: `analog synthesizer.`,
                             wiki: `Analog_synthesizer`,

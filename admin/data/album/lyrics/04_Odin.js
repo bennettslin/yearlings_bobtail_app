@@ -521,7 +521,12 @@ export default {
                                             anchor: `Israelite`,
                                             wiki: `Israelites`,
                                         },
-                                        `warriors scoured the plains after their victory, asking stragglers to pronounce the Hebrew word for a stream. Because the enemy tribe lacked the "sh" sound in their dialect, they would out themselves by pronouncing the word as "sibboleth," just as I do here in the recording.`,
+                                        `warriors scoured the plains after their victory, asking stragglers to pronounce the`,
+                                        {
+                                            anchor: `Hebrew`,
+                                            wiki: `Hebrew_language`,
+                                        },
+                                        `word for a stream. Because the enemy tribe lacked the "sh" sound in their dialect, they would out themselves by pronouncing the word as "sibboleth," just as I do here in the recording.`,
                                     ],
                                 ],
                                 dotKeys: {
@@ -703,7 +708,6 @@ export default {
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
-                                    [REFERENCE]: true,
                                 },
                             },
                         },
@@ -779,7 +783,14 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: `Since the drum parts I scored for this song were far more advanced than what I could play, I had to try several workarounds. I ended up recording the kick, snare, and toms in separate takes from the cymbals.`,
+                    description: [
+                        `Since the`,
+                        {
+                            anchor: `drum`,
+                            wiki: `Drum_kit`,
+                        },
+                        `parts I scored for this song were far more advanced than what I could play, I had to try several workarounds. I ended up recording the kick, snare, and toms in separate takes from the cymbals.`,
+                    ],
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },

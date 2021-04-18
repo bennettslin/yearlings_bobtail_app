@@ -475,7 +475,14 @@ export default {
                             properNoun: true,
                             cards: [
                                 {
-                                    description: `We are literally "high men," and since the others are trying Robitussin for the first time, it also "laps our hymen."`,
+                                    description: [
+                                        `We are literally "high men," and since the others are trying Robitussin for the`,
+                                        {
+                                            anchor: `first time,`,
+                                            wiki: `Virginity`,
+                                        },
+                                        `it also "laps our hymen."`,
+                                    ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true,
@@ -770,7 +777,11 @@ export default {
                                             anchor: `Mughals,`,
                                             wiki: `Mughal_Empire`,
                                         },
-                                        `Muslim descendants of Tamerlane, must have regaled themselves with tales of "how he" led the feat that precipitated their`,
+                                        {
+                                            anchor: `Muslim`,
+                                            wiki: `Islam`,
+                                        },
+                                        `descendants of Tamerlane, must have regaled themselves with tales of "how he" led the feat that precipitated their`,
                                         {
                                             anchor: `conquest of South Asia`,
                                             wiki: `Muslim_conquests_in_the_Indian_subcontinent`,

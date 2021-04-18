@@ -368,7 +368,12 @@ export default {
                             anchor: `knight-errant`,
                             card: {
                                 description: [
-                                    `In medieval romance, a`,
+                                    `In`,
+                                    {
+                                        anchor: `medieval romance,`,
+                                        wiki: `Chivalric_romance`,
+                                    },
+                                    `a`,
                                     {
                                         anchor: `knight-errant`,
                                         wiki: `Knight-errant`,
@@ -603,10 +608,16 @@ export default {
                         {
                             anchor: `bleeds just once,`,
                             card: {
-                                description: `Much like a vagina only bleeds the first time when the hymen is ruptured, every subsequent breakup felt less like a piercing stab and more like an irritant on an already festering wound.`,
+                                description: [
+                                    `Much like a vagina only bleeds the first time when the`,
+                                    {
+                                        anchor: `hymen`,
+                                        wiki: `Hymen`,
+                                    },
+                                    `is ruptured, every subsequent breakup felt less like a piercing stab and more like an irritant on an already festering wound.`,
+                                ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
-                                    [REFERENCE]: true,
                                 },
                             },
                         },
@@ -631,7 +642,6 @@ export default {
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
-                                    [REFERENCE]: true,
                                 },
                             },
                         },
@@ -641,16 +651,15 @@ export default {
                             awkwardTodo: true,
                             card: {
                                 description: [
-                                    `I hated the idea of getting older and often joked about killing myself at thirty-three, the age at which`,
+                                    `I hated the idea of getting older and often joked about killing myself at`,
                                     {
-                                        anchor: `Jesus was crucified.`,
-                                        wiki: `Crucifixion_of_Jesus`,
+                                        anchor: `thirty-three,`,
+                                        wiki: `Chronology_of_Jesus`,
                                     },
-                                    `Since clearly, this is all the time one needs to change the world. So when Sita asked me to specify the age at which I would come back for her in accordance with our little pact, and I answered thirty-three, the subtext was understood.`,
+                                    `the age at which Jesus was crucified. Since clearly, this is all the time one needs to change the world. So when Sita asked me to specify the age at which I would come back for her in accordance with our little pact, and I answered thirty-three, the subtext was understood.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
-                                    [REFERENCE]: true,
                                 },
                             },
                         },
@@ -798,7 +807,12 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `The cry of a peacock has always sounded to me like it's pleading in Hindi,`,
+                        `The cry of a`,
+                        {
+                            anchor: `peacock`,
+                            wiki: `Peafowl`,
+                        },
+                        `has always sounded to me like it's pleading in Hindi,`,
                         {
                             isItalic: true,
                             lyric: `"kyon?"`,

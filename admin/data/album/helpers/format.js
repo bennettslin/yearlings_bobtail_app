@@ -80,9 +80,11 @@ export const _recurseForFormat = lyricEntity => {
     } else if (lyricEntity && typeof lyricEntity === 'object') {
         const newEntity = {}
 
-        // TODO: Be smarter about only formatting certain strings?
         for (const key in lyricEntity) {
-            newEntity[key] = _recurseForFormat(lyricEntity[key])
+            // TODO: Be smarter about only formatting certain strings?
+            newEntity[key] = key === 'wiki' ?
+                lyricEntity[key] :
+                _recurseForFormat(lyricEntity[key])
         }
 
         return newEntity
