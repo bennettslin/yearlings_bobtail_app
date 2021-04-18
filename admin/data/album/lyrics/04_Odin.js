@@ -631,6 +631,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 awkwardTodo: true,
                 card: {
+                    // TODO: Or bottled butterfly and jarred sibyl.
                     description: `While the two doublespeaker voices proceed independently, they plant subtle ideas along each other's path, much as our conscious thoughts affect our dreams and vice versa. In this stanza, for example, the mention of a staircase by the "asleep" voice precedes the plummeting spoken of by the "awake" voice.`,
                     dotKeys: {
                         [OBSERVATION]: true,
@@ -805,8 +806,18 @@ export default {
             mainVerses: [
                 {
                     mixTime: `1:08:27.40`,
-                    // CONSIDER: Wormhole: Reference to insect in jar in Vegan Proclamation?
-                    lyricLeft: `could some bottled butterfly`,
+                    lyricLeft: [
+                        `could some`,
+                        {
+                            anchor: `bottled butterfly`,
+                            card: {
+                                wormhole: {
+                                    wormholeKey: `bottled_insect`,
+                                    wormholePrefix: FLASHBACK_TO_WORMHOLE_PREFIX,
+                                },
+                            },
+                        },
+                    ],
                     lyricRight: [
                         `would the`,
                         {
@@ -1028,16 +1039,23 @@ export default {
                     lyricRight: [
                         `where its`,
                         {
-                            // CONSIDER: wormhole: Hope chest in M?
                             anchor: `hopeless rests.`,
                             awkwardTodo: true,
-                            card: {
-                                description: `Hope was all that remained in Pandora's box. But upon having the hard truths of the world revealed to me by Sasha, I'm just left to feel as hopeless as ever.`,
-                                dotKeys: {
-                                    [NARRATIVE]: true,
-                                    [REFERENCE]: true,
+                            cards: [
+                                {
+                                    description: `Hope was all that remained in Pandora's box. But upon having the hard truths of the world revealed to me by Sasha, I'm just left to feel as hopeless as ever.`,
+                                    dotKeys: {
+                                        [NARRATIVE]: true,
+                                        [REFERENCE]: true,
+                                    },
                                 },
-                            },
+                                {
+                                    wormhole: {
+                                        wormholeKey: `hope_chest`,
+                                        wormholePrefix: FLASHBACK_TO_WORMHOLE_PREFIX,
+                                    },
+                                },
+                            ],
                         },
                     ],
                 },
@@ -1200,7 +1218,6 @@ export default {
                     lyricRight: [
                         {
                             anchor: `didn't impart warmth`,
-                            // CONSIDER: Wormhole Foreshadow M?
                             awkwardTodo: true,
                             card: {
                                 description: `But also like cellophane, Sasha couldn't reflect warmth where none was present. If I couldn't be the better person in dealing with the bullies, then there came a point where she needed to keep her distance from me as well.`,
@@ -1256,18 +1273,17 @@ export default {
                     mixTime: `1:49:20.04`,
                     lyricLeft: {
                         anchor: `shivering for shivs unsheathed.`,
-                        // Should it be already preparing?
                         awkwardTodo: true,
                         cards: [
                             {
-                                // CONSIDER: Wormhole Kyon for shank?
+                                // CONSIDER: Wormhole Kyon for shank? Needs to allow for multiple wormhole keys first.
                                 description: [
-                                    `To wander a prison yard is to be on constant guard against getting`,
+                                    `Those who wander a prison yard must be on constant guard against getting`,
                                     {
                                         anchor: 'shivved,',
                                         wiki: `Shiv_(weapon)`,
                                     },
-                                    `or stabbed by a makeshift weapon. Lucky for me, the schoolyard was preparing me for a lifetime of such vigilance.`,
+                                    `or stabbed by a makeshift weapon. Lucky for me, the schoolyard was already preparing me for a lifetime of such vigilance.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1513,15 +1529,22 @@ export default {
                     lyricLeft: [
                         `But for a`,
                         {
-                            // CONSIDER: Wormhole to Ash Wednesday?
                             anchor: `fetus force-fed,`,
                             awkwardTodo: true,
-                            card: {
-                                description: `Most maddening of all was that one has no say in being brought into this world. Given how distressing the certainty of death must always be, it seemed like there should be an option to opt out to begin with.`,
-                                dotKeys: {
-                                    [OBSERVATION]: true,
+                            cards: [
+                                {
+                                    description: `Most maddening of all was that one has no say in being brought into this world. Given how distressing the certainty of death must always be, it seemed like there should be an option to opt out to begin with.`,
+                                    dotKeys: {
+                                        [OBSERVATION]: true,
+                                    },
                                 },
-                            },
+                                {
+                                    wormhole: {
+                                        wormholeKey: `born_cursed`,
+                                        wormholePrefix: FLASHBACK_TO_WORMHOLE_PREFIX,
+                                    },
+                                },
+                            ],
                         },
                         `born preaborted,`,
                     ],

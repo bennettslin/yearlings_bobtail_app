@@ -14,6 +14,7 @@ import {
     SOLO,
     OUTRO,
     IS_UNIT_DOT,
+    FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../app/constants/lyrics'
 
 export default {
@@ -594,12 +595,20 @@ export default {
                         {
                             anchor: `worn puppet`,
                             awkwardTodo: true,
-                            card: {
-                                description: `The condom sits strangely motionless on the car seat, like a puppet that was so full of life just moments before. But having gotten me into a place I otherwise wouldn't have gone, it has no other use and can now be discarded at will.`,
-                                dotKeys: {
-                                    [NARRATIVE]: true,
+                            cards: [
+                                {
+                                    description: `The condom sits strangely motionless on the car seat, like a puppet that was so full of life just moments before. But having gotten me to a place I otherwise wouldn't have gone, it has no other use and can now be discarded at will.`,
+                                    dotKeys: {
+                                        [NARRATIVE]: true,
+                                    },
                                 },
-                            },
+                                {
+                                    wormhole: {
+                                        wormholeKey: `puppet`,
+                                        wormholePrefix: FORESHADOW_OF_WORMHOLE_PREFIX,
+                                    },
+                                },
+                            ],
                         },
                         `his`,
                         {

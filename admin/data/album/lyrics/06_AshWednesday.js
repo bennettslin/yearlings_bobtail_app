@@ -12,6 +12,7 @@ import {
     CHORUS,
     BRIDGE,
     IS_UNIT_DOT,
+    FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../app/constants/lyrics'
 
 export default {
@@ -866,24 +867,32 @@ export default {
                         `us wretched souls`,
                         {
                             anchor: `cursed to be born,`,
-                            card: {
-                                description: [
-                                    `It always confused me why the Catholic Church should extend its`,
-                                    {
-                                        anchor: `pro-life stance`,
-                                        wiki: `Catholic_Church_and_abortion`,
+                            cards: [
+                                {
+                                    description: [
+                                        `It always confused me why the Catholic Church should extend its`,
+                                        {
+                                            anchor: `pro-life stance`,
+                                            wiki: `Catholic_Church_and_abortion`,
+                                        },
+                                        `to the unborn of other faiths. After all, this just ends up trading the certainty of an`,
+                                        {
+                                            anchor: `aborted fetus`,
+                                            wiki: `Abortion`,
+                                        },
+                                        `going to heaven for the likelihood of a living child going to hell.`,
+                                    ],
+                                    dotKeys: {
+                                        [OBSERVATION]: true,
                                     },
-                                    `to the unborn of other faiths. After all, this just ends up trading the certainty of an`,
-                                    {
-                                        anchor: `aborted fetus`,
-                                        wiki: `Abortion`,
-                                    },
-                                    `going to heaven for the likelihood of a living child going to hell.`,
-                                ],
-                                dotKeys: {
-                                    [OBSERVATION]: true,
                                 },
-                            },
+                                {
+                                    wormhole: {
+                                        wormholeKey: `born_cursed`,
+                                        wormholePrefix: FORESHADOW_OF_WORMHOLE_PREFIX,
+                                    },
+                                },
+                            ],
                         },
                     ],
                 },

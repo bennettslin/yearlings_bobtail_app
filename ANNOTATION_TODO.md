@@ -2,7 +2,6 @@
 * Annotations have correct dots
 
 # Correct wormholes
-* Look at CONSIDERS for new wormholes
 * Wormholes all work
 * Have correct destination text
 

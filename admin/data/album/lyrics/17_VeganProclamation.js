@@ -710,23 +710,31 @@ export default {
                 {
                     mixTime: `2:50:26.06`,
                     lyric: [
-                        `I still love you for the`,
+                        `I still`,
                         {
-                            anchor: `airholes,`,
-                            card: {
-                                description: [
-                                    `In Nirvana's`,
-                                    {
-                                        anchor: `"Sappy,"`,
-                                        wiki: `Sappy`,
+                            anchor: `love you for the airholes,`,
+                            cards: [
+                                {
+                                    description: [
+                                        `In Nirvana's`,
+                                        {
+                                            anchor: `"Sappy,"`,
+                                            wiki: `Sappy`,
+                                        },
+                                        `Kurt Cobain compares the victim of an abusive relationship to a small creature kept in a jar with breathing holes punched in the lid. I liked this imagery, so I took it.`,
+                                    ],
+                                    dotKeys: {
+                                        [OBSERVATION]: true,
+                                        [SONGCRAFT]: true,
                                     },
-                                    `Kurt Cobain compares the victim of an abusive relationship to a small creature kept in a jar with breathing holes punched in the lid. I liked this imagery, so I took it.`,
-                                ],
-                                dotKeys: {
-                                    [OBSERVATION]: true,
-                                    [SONGCRAFT]: true,
                                 },
-                            },
+                                {
+                                    wormhole: {
+                                        wormholeKey: `bottled_insect`,
+                                        wormholePrefix: FORESHADOW_OF_WORMHOLE_PREFIX,
+                                    },
+                                },
+                            ],
                         },
                         `dear; and now, good night."`,
                     ],

@@ -12,6 +12,8 @@ import {
     RESPONSE,
     OUTRO,
     IS_UNIT_DOT,
+    FLASHBACK_TO_WORMHOLE_PREFIX,
+    FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../app/constants/lyrics'
 
 export default {
@@ -620,21 +622,28 @@ export default {
                     lyric: [
                         {
                             anchor: `lies that marionette`,
-                            card: {
-                                // CONSIDER: wormhole to Cremated puppet?
-                                description: [
-                                    `There was a comfort in having all my priorities settled in advance by the five-year plan. Since I always knew with certainty the right course of action, I could undertake it with conviction. I was like a`,
-                                    {
-                                        anchor: `marionette`,
-                                        wiki: `Marionette`,
+                            cards: [
+                                {
+                                    description: [
+                                        `There was a comfort in having all my priorities settled in advance by the five-year plan. Since I always knew with certainty the right course of action, I could undertake it with conviction. I was like a`,
+                                        {
+                                            anchor: `marionette`,
+                                            wiki: `Marionette`,
+                                        },
+                                        `being made to posture by the hidden hand of my younger self. Of course, I eagerly donned these strings because I believed my younger self's lies, that a "Mara you'll net" by doing so.`,
+                                    ],
+                                    dotKeys: {
+                                        [OBSERVATION]: true,
+                                        [PUN]: true,
                                     },
-                                    `being made to posture by the hidden hand of my younger self. Of course, I eagerly donned these strings because I believed my younger self's lies, that a "Mara you'll net" by doing so.`,
-                                ],
-                                dotKeys: {
-                                    [OBSERVATION]: true,
-                                    [PUN]: true,
                                 },
-                            },
+                                {
+                                    wormhole: {
+                                        wormholeKey: `puppet`,
+                                        wormholePrefix: FLASHBACK_TO_WORMHOLE_PREFIX,
+                                    },
+                                },
+                            ],
                         },
                         `in this`,
                         {
@@ -697,20 +706,28 @@ export default {
                         `is choked down my`,
                         {
                             anchor: `no-hope chest.`,
-                            card: {
-                                description: [
-                                    `Traditionally, a`,
-                                    {
-                                        anchor: `hope chest`,
-                                        wiki: `Hope_chest`,
+                            cards: [
+                                {
+                                    description: [
+                                        `Traditionally, a`,
+                                        {
+                                            anchor: `hope chest`,
+                                            wiki: `Hope_chest`,
+                                        },
+                                        `was a piece of furniture for storing the assorted dishware and linens gathered by a young woman in preparation for married life. By keeping my feelings of hopelessness close to my literal chest, I was also sealing this figurative chest of mine.`,
+                                    ],
+                                    dotKeys: {
+                                        [OBSERVATION]: true,
+                                        [PUN]: true,
                                     },
-                                    `was a piece of furniture for storing the assorted dishware and linens gathered by a young woman in preparation for married life. By keeping my feelings of hopelessness close to my literal chest, I was also sealing this figurative chest of mine.`,
-                                ],
-                                dotKeys: {
-                                    [OBSERVATION]: true,
-                                    [PUN]: true,
                                 },
-                            },
+                                {
+                                    wormhole: {
+                                        wormholeKey: `hope_chest`,
+                                        wormholePrefix: FORESHADOW_OF_WORMHOLE_PREFIX,
+                                    },
+                                },
+                            ],
                         },
                     ],
                 },
