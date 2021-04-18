@@ -1250,7 +1250,13 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: `The ascending chord progression of this coda initially suggests a blossoming relationship. Toward the end, it symbolizes sexual climax.`,
+                    description: [
+                        `The ascending chord progression of this coda initially suggests a blossoming relationship. Toward the end, it symbolizes`,
+                        {
+                            anchor: `sexual climax.`,
+                            wiki: `Orgasm`,
+                        },
+                    ],
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },

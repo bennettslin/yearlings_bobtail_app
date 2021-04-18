@@ -3,7 +3,6 @@ import {
     NARRATIVE,
     OBSERVATION,
     PUN,
-    REFERENCE,
     SONGCRAFT,
 } from '../../../../app/constants/dots'
 
@@ -566,10 +565,16 @@ export default {
                         {
                             anchor: `pups with their hateful fangs`,
                             card: {
-                                description: `Young carnivores have an instinct to tear flesh with their jaws, so they reflexively soften their bites during rough play. And knowing as I did now what it truly means to inflict harm, I realized the bullies held back their blows the same way, believing their cruelty to be in good fun.`,
+                                description: [
+                                    `Young`,
+                                    {
+                                        anchor: `carnivores`,
+                                        wiki: `Carnivore`,
+                                    },
+                                    `have an instinct to tear flesh with their jaws, so they reflexively soften their bites during rough play. And knowing as I did now what it truly means to inflict harm, I realized the bullies held back their blows the same way, believing their cruelty to be in good fun.`,
+                                ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
-                                    [REFERENCE]: true,
                                 },
                             },
                         },
@@ -586,10 +591,16 @@ export default {
                         {
                             anchor: `dove chafing in his cage,`,
                             card: {
-                                description: `Meanwhile, a stressed dove will peck a cagemate to death, oblivious to the deadly nature of its beak. And similarly, in seeing myself as the victim and tending only to my needs, I ended up causing Sita far more trauma than I myself had ever received at the hands of the bullies.`,
+                                description: [
+                                    `Meanwhile, a stressed`,
+                                    {
+                                        anchor: `dove`,
+                                        wiki: `Columbidae`,
+                                    },
+                                    `will peck a cagemate to death, oblivious to the deadly nature of its beak. And similarly, in seeing myself as the victim and tending only to my needs, I ended up causing Sita far more trauma than I myself had ever received at the hands of the bullies.`,
+                                ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
-                                    [REFERENCE]: true,
                                 },
                             },
                         },
@@ -607,7 +618,14 @@ export default {
                         lyric: {
                             anchor: `Odelay!`,
                             card: {
-                                description: `Sometime around twilight, a strange euphoria came over me that was likely caused by dehydration. Hence the bad yodeling heard here.`,
+                                description: [
+                                    `Sometime around twilight, a strange euphoria came over me that was likely caused by dehydration. Hence the bad`,
+                                    {
+                                        anchor: `yodeling`,
+                                        wiki: `Yodeling`,
+                                    },
+                                    `heard here.`,
+                                ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [SONGCRAFT]: true,

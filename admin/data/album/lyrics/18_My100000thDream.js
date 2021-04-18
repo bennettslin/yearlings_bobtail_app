@@ -113,7 +113,14 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: `During the years afterward when I was trying to be good again, I kept digging further into my past to figure out where things went wrong. So for this song, I decided to revisit the sonic textures of all the other songs on the album in reverse. We start with the piano from "Vegan Proclamation," then segue into the arpeggiated chords from "Cremated," followed by the slide guitar and natural harmonics from "On a Golden Cord."`,
+                    description: [
+                        `During the years afterward when I was trying to be good again, I kept digging further into my past to figure out where things went wrong. So for this song, I decided to revisit the sonic textures of all the other songs on the album in reverse. We start with the`,
+                        {
+                            anchor: `piano`,
+                            wiki: `Piano`,
+                        },
+                        `from "Vegan Proclamation," then segue into the arpeggiated chords from "Cremated," followed by the slide guitar and natural harmonics from "On a Golden Cord."`,
+                    ],
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGCRAFT]: true,
@@ -162,7 +169,19 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: `The pulsating organ and slide mandolin from "Kyon?" make a reappearance here, along with the tremolo banjo and rubato recorders from "Uncanny Valley Boy."`,
+                    description: [
+                        `The pulsating`,
+                        {
+                            anchor: `organ`,
+                            wiki: `Electric_organ`,
+                        },
+                        `and slide mandolin from "Kyon?" make a reappearance here, along with the tremolo banjo and`,
+                        {
+                            anchor: `rubato`,
+                            wiki: `Tempo_rubato`,
+                        },
+                        `recorders from "Uncanny Valley Boy."`,
+                    ],
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
@@ -291,7 +310,24 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: `In the second chorus, we hear the electric sitar and vintage arcade sound from "Constellations!" and the carillon and wah-wah pedal from "Good Night, Sita."`,
+                    description: [
+                        `In the second chorus, we hear the`,
+                        {
+                            anchor: `electric sitar`,
+                            wiki: `Electric_sitar`,
+                        },
+                        `and vintage arcade sound from "Constellations!" and the`,
+                        {
+                            anchor: `carillon`,
+                            wiki: `Carillon`,
+                        },
+                        `and`,
+                        {
+                            anchor: `wah-wah pedal`,
+                            wiki: `Wah-wah_pedal`,
+                        },
+                        `from "Good Night, Sita."`,
+                    ],
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
@@ -463,7 +499,14 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: `The electric mandolin and saturated tape effect from "Odin" return in the third and final chorus, as well as the legato slides on palm-muted instruments from "Willy the Cocoa."`,
+                    description: [
+                        `The`,
+                        {
+                            anchor: `electric mandolin`,
+                            wiki: `Electric_mandolin`,
+                        },
+                        `and saturated tape effect from "Odin" return in the third and final chorus, as well as the legato slides on palm-muted instruments from "Willy the Cocoa."`,
+                    ],
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },

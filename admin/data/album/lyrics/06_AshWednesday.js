@@ -3,7 +3,6 @@ import {
     NARRATIVE,
     OBSERVATION,
     PUN,
-    REFERENCE,
     SONGCRAFT,
 } from '../../../../app/constants/dots'
 
@@ -216,7 +215,13 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `Jesus was laid "to rest" on the day of his crucifixion.`,
+                                    description: [
+                                        `Jesus was laid "to rest" on the day of`,
+                                        {
+                                            anchor: `his crucifixion.`,
+                                            wiki: `Crucifixion_of_Jesus`,
+                                        },
+                                    ],
                                     dotKeys: {
                                         [PUN]: true,
                                     },
@@ -236,10 +241,13 @@ export default {
                         {
                             anchor: `last day she rose`,
                             card: {
-                                description: `Jesus rose as well on the third day.`,
-                                dotKeys: {
-                                    [REFERENCE]: true,
-                                },
+                                description: [
+                                    {
+                                        anchor: `Jesus rose`,
+                                        wiki: `Resurrection_of_Jesus`,
+                                    },
+                                    `as well on the third day.`,
+                                ],
                             },
                         },
                         `up and left, hers the`,
@@ -274,7 +282,12 @@ export default {
                             anchor: `BART`,
                             wiki: `Bay_Area_Rapid_Transit`,
                         },
-                        `trains braking in a subway tunnel beneath the sidewalk. I made the tracks by overblowing individual pitches and then splicing those together to form descending arpeggios— triplets for the soprano recorder, quadruplets for the tenor.`,
+                        `trains braking in a subway tunnel beneath the sidewalk. I made the tracks by overblowing individual pitches and then splicing those together to form descending`,
+                        {
+                            anchor: `arpeggios—`,
+                            wiki: `Arpeggio`,
+                        },
+                        `triplets for the soprano recorder, quadruplets for the tenor.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -310,7 +323,7 @@ export default {
                                     ],
                                 },
                                 {
-                                    description: `For me up to that point, songwriting was just a matter of coming up with melodies and chords. But Catherine appreciated music for its lyrics, and because my lyrics were mostly nonsensical, she wasn't impressed by any of my songs that I played for her.`,
+                                    description: `Up to that point, songwriting for me was just a matter of coming up with melodies and chords. But Catherine appreciated music for its lyrics, and because my lyrics were mostly nonsensical, she wasn't impressed by any of the songs I played for her.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -342,7 +355,7 @@ export default {
                             anchor: `pressed for an opinion,`,
                             cards: [
                                 {
-                                    description: `I would sometimes ask Catherine for honest feedback of my lyrics, hoping that one day I could write a song to tug on her heartstrings.`,
+                                    description: `I would sometimes ask Catherine for honest feedback on my lyrics, hoping that one day I could write a song to tug on her heartstrings.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -517,7 +530,12 @@ export default {
                                         anchor: `Shelta,`,
                                         wiki: `Shelta`,
                                     },
-                                    `a cryptic language intended to exclude outsiders from comprehension. Catherine was part Irish, though not a Traveller. Either way, I was stuck outside her "shelter."`,
+                                    `a cryptic language intended to exclude outsiders from comprehension. Catherine was part`,
+                                    {
+                                        anchor: `Irish,`,
+                                        wiki: `Ireland`,
+                                    },
+                                    `though not a Traveller. Either way, I was stuck outside her "shelter."`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -584,7 +602,6 @@ export default {
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [PUN]: true,
-                                        [REFERENCE]: true,
                                     },
                                 },
                             ],
@@ -617,16 +634,25 @@ export default {
                             awkwardTodo: true,
                             card: {
                                 description: [
-                                    `After Catherine cleared me from her life, I tried to win her back by reading lots of books, beginning with the ones we'd discussed. Catherine had mentioned that "Famous Blue Raincoat" echoes a similar theme of purification through betrayal found in Cohen's novel`,
+                                    `After Catherine cleared her life of me, I tried to win her back by reading lots of books, beginning with the ones we'd discussed. Catherine had mentioned that "Famous Blue Raincoat" echoes a similar theme of purification through betrayal found in Cohen's novel`,
                                     {
                                         isItalic: true,
                                         lyric: `Beautiful Losers,`,
                                     },
-                                    `particularly in its line, "Did you ever go clear?"`,
+                                    `particularly in its line, "Did you ever go clear?" (I later found out that`,
+                                    {
+                                        anchor: `"going clear"`,
+                                        wiki: `Clear_(Scientology)`,
+                                    },
+                                    `is a`,
+                                    {
+                                        anchor: `Scientology`,
+                                        wiki: `Scientology`,
+                                    },
+                                    `thing.)`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
-                                    [REFERENCE]: true,
                                 },
                             },
                         },
@@ -710,10 +736,16 @@ export default {
                             anchor: `faked this X,`,
                             cards: [
                                 {
-                                    description: `On Ash Wednesday, the priest smears ash in the shape of a cross on each parishioner's forehead. But since I'd ashed myself without the benefit of a mirror, mine was slanted like the letter X.`,
+                                    description: [
+                                        `On Ash Wednesday, the priest smears ash in the shape of a`,
+                                        {
+                                            anchor: `cross`,
+                                            wiki: `Cross`,
+                                        },
+                                        `on each parishioner's forehead. But since I'd ashed myself without the benefit of a mirror, mine was slanted like the letter X.`,
+                                    ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
-                                        [REFERENCE]: true,
                                     },
                                 },
                                 {
@@ -906,7 +938,12 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `Originally, this three-part counterpoint for mandolins and banjo kept drowning out the vocals because they shared the same register. I solved the problem by`,
+                        `Originally, this three-part counterpoint for mandolins and`,
+                        {
+                            anchor: `banjo`,
+                            wiki: `Banjo`,
+                        },
+                        `kept drowning out the vocals because they shared the same register. I solved the problem by`,
                         {
                             anchor: `pitch shifting`,
                             wiki: `Pitch_shift`,

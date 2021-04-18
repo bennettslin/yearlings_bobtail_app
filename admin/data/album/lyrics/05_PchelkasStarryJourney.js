@@ -591,10 +591,19 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `Didi and Gogo are the respective pet names of Vladimir and Estragon, the two tramps who are still waiting for Godot at the end of Beckett's play.`,
-                                    dotKeys: {
-                                        [REFERENCE]: true,
-                                    },
+                                    description: [
+                                        `Didi and Gogo are the respective pet names of`,
+                                        {
+                                            anchor: `Vladimir`,
+                                            wiki: `Vladimir_(Waiting_for_Godot)`,
+                                        },
+                                        `and`,
+                                        {
+                                            anchor: `Estragon,`,
+                                            wiki: `Estragon`,
+                                        },
+                                        `the two tramps who are still waiting for Godot at the end of Beckett's play.`,
+                                    ],
                                 },
                             ],
                         },
@@ -1305,7 +1314,6 @@ export default {
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
-                                    [REFERENCE]: true,
                                 },
                             },
                         },

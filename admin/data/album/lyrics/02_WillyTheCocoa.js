@@ -376,7 +376,12 @@ export default {
                             anchor: `palm mutes`,
                             wiki: `Palm_mute`,
                         },
-                        `with legato slides on the lead guitar and mandolin here.`,
+                        `with legato slides on the lead guitar and`,
+                        {
+                            anchor: `mandolin`,
+                            wiki: `Mandolin`,
+                        },
+                        `here.`,
                     ],
                     dotKeys: {
                         [OBSERVATION]: true,
@@ -948,7 +953,24 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: `To play the electric guitar riff here, I used both a glass slide and the whammy bar at the same time. Since either of these can bend pitch on its own, it makes no sense to combine them. Which is exactly why a troll musician would.`,
+                    description: [
+                        `To play the`,
+                        {
+                            anchor: `electric guitar`,
+                            wiki: `Electric_guitar`,
+                        },
+                        `riff here, I used both a`,
+                        {
+                            anchor: `slide`,
+                            wiki: `Steel_bar`,
+                        },
+                        `and the`,
+                        {
+                            anchor: `whammy bar`,
+                            wiki: `Vibrato_systems_for_guitar`,
+                        },
+                        `at the same time. Since either of these can bend pitch on its own, it makes no sense to combine them. Which is exactly why a troll musician would.`,
+                    ],
                     dotKeys: {
                         [OBSERVATION]: true,
                         [SONGCRAFT]: true,
@@ -1094,7 +1116,7 @@ export default {
                                             anchor: `Cub Scouts,`,
                                             wiki: `Cub_Scouting_(Boy_Scouts_of_America)`,
                                         },
-                                        `Webelos is the eldest rank, and is earned by boys in the fourth or fifth grade. It stands for "We'll Be Loyal Scouts."`,
+                                        `Webelos is the eldest rank and is earned by boys in the fourth or fifth grade. It stands for "We'll Be Loyal Scouts."`,
                                     ],
                                 },
                             ],

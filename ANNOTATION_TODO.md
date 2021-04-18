@@ -1,9 +1,6 @@
 # Correct dot categories
 * Annotations have correct dots
 
-# Correct wikis
-* Wikis all work
-
 # Correct wormholes
 * Look at CONSIDERS for new wormholes
 * Wormholes all work

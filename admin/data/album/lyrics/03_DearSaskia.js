@@ -336,7 +336,7 @@ export default {
                                     `Every boy that Sasha crushed on was`,
                                     {
                                         anchor: `Jewish,`,
-                                        wiki: `Jews`,
+                                        wiki: `Judaism`,
                                     },
                                     `which in turn motivated her to be a better Jew. It frustrated me that since I could never help strengthen her faith, I would always be at a disadvantage in "getting her."`,
                                 ],
@@ -355,14 +355,7 @@ export default {
                         {
                             anchor: `I would have too…`,
                             card: {
-                                description: [
-                                    `Because if Sasha were to want me, then of course I would convert to`,
-                                    {
-                                        anchor: `Judaism.`,
-                                        wiki: `Judaism`,
-                                    },
-                                    `It made no sense to be loyal to my own cultural identity, which I had no hand in deciding.`,
-                                ],
+                                description: `Because if Sasha were to want me, then of course I would convert to Judaism. It made no sense to be loyal to my own cultural identity, which I had no hand in deciding.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -374,7 +367,18 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: `To match the passive-aggressive mood of the lyrics, the sentimental string harmonies in the chorus abruptly give way to scratch tones and woodwind screeches.`,
+                    description: [
+                        `To match the passive-aggressive mood of the lyrics, the sentimental string harmonies in the chorus abruptly give way to`,
+                        {
+                            anchor: `scratch tones`,
+                            wiki: `Bowed_string_instrument_extended_technique`,
+                        },
+                        `and`,
+                        {
+                            anchor: `woodwind screeches.`,
+                            wiki: `Overblowing`,
+                        },
+                    ],
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },

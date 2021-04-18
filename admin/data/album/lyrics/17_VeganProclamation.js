@@ -310,10 +310,16 @@ export default {
                             awkwardTodo: true,
                             cards: [
                                 {
-                                    description: `Sita had her own story to tell about mistreating her first pet. Upon receiving a kitten as a child, she hugged it so hard that it began to purr. Taking this as a sign of its contentment, she hugged it even harder. Years later, she learned that cats also purr to cope with distress, and looking back, she realized her kitten had believed it was being crushed to death. She lived in guilt over this ever since.`,
+                                    description: [
+                                        `Sita had her own story to tell about mistreating her first pet. Upon receiving a kitten as a child, she hugged it so hard that it began to purr. Taking this as a sign of its contentment, she hugged it even harder. Years later, she learned that cats also`,
+                                        {
+                                            anchor: `purr to cope`,
+                                            wiki: `Purr`,
+                                        },
+                                        `with distress, and looking back, she realized her kitten had believed it was being crushed to death. She lived in guilt over this ever since.`,
+                                    ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
-                                        [REFERENCE]: true,
                                     },
                                 },
                                 {
