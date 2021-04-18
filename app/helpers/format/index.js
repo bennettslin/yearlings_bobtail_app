@@ -65,6 +65,7 @@ export const hasSpecialCharacterAtIndex = (text, index) => {
         indexedChar === '!' ||
         indexedChar === ':' ||
         indexedChar === ';' ||
+        indexedChar === '—' ||
         indexedChar === '…'
 }
 

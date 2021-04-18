@@ -29,7 +29,7 @@ const _getStringText = textEntity => {
     }
 }
 
-const _getDeletedSpecialCharactersText = text => {
+const _getDeletedEndSpecialCharactersText = text => {
     // Eliminate all special characters at end.
     const lastCharacter = text.charAt(text.length - 1)
 
@@ -41,7 +41,7 @@ const _getDeletedSpecialCharactersText = text => {
                 text.indexOf('!') !== text.length - 1
             )
         ) {
-            text = _getDeletedSpecialCharactersText(
+            text = _getDeletedEndSpecialCharactersText(
                 text.slice(0, text.length - 1),
             )
         }
@@ -51,7 +51,7 @@ const _getDeletedSpecialCharactersText = text => {
         lastCharacter === `”` &&
         hasSpecialCharacterAtIndex(text, text.length - 2)
     ) {
-        text = _getDeletedSpecialCharactersText(text.slice(0, text.length - 2) + text.slice(text.length - 1))
+        text = _getDeletedEndSpecialCharactersText(text.slice(0, text.length - 2) + text.slice(text.length - 1))
     }
 
     return text
@@ -62,20 +62,15 @@ const _getDeletedWrappingCharactersText = text => {
         firstCharacter = text[0],
         lastCharacter = text[text.length - 1]
 
-    // If ends in ellipsis, delete ellipsis.
-    if (firstCharacter === '…' || lastCharacter === '…') {
+    // If it begins with ellipsis, delete ellipsis.
+    if (firstCharacter === '…') {
         text = text.replace('…', '')
     }
 
-    // If ends in em-dash...
-    if (lastCharacter === '—') {
-        // If there is another, convert first to comma and delete second.
-        if (text.indexOf('—') !== text.length - 1) {
-            // e.g. 'heroes— ourauras left—'
-            text = text.replace('—', ',').replace('—', '')
-        } else {
-            text = text.replace('—', '')
-        }
+    // If there's an em-dash in the middle, replace with comma.
+    if (text.indexOf('—') !== text.length - 1) {
+        // e.g. 'heroes— ourauras left—'
+        text = text.replace('—', ',')
     }
 
     // Delete both double quotes if entire text is wrapped between them.
@@ -118,7 +113,7 @@ export const getFormattedAnnotationTitle = ({
 }) => {
     let title = _getStringText(anchor)
 
-    title = _getDeletedSpecialCharactersText(title)
+    title = _getDeletedEndSpecialCharactersText(title)
     title = _getDeletedWrappingCharactersText(title)
     title = _getUncapitalisedText(title, properNoun)
     title = _getSingleQuotedFromDoubleQuotedText(title)

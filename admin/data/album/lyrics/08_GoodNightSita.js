@@ -942,7 +942,7 @@ export default {
                                             anchor: `vegetarian`,
                                             wiki: `Vegetarianism`,
                                         },
-                                        `restaurant, where I ordered a dish that resembled a breast of chicken. When we cracked its sesame-stick`,
+                                        `restaurant, where Sita ordered a dish that resembled a chicken breast. When we cracked its sesame-stick`,
                                         {
                                             anchor: `wishbone,`,
                                             wiki: `Furcula`,

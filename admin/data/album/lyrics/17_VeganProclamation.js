@@ -440,7 +440,7 @@ export default {
                     lyric: [
                         `Torn straps`,
                         {
-                            anchor: `unsalvaged sows have chewed,`,
+                            anchor: `unsalvaged sows`,
                             cards: [
                                 {
                                     description: [
@@ -460,6 +460,7 @@ export default {
                                 },
                             ],
                         },
+                        `have chewed,`,
                     ],
                 },
                 {

@@ -111,10 +111,8 @@ export default {
                     lyric: [
                         {
                             anchor: `where it commenced:`,
-                            // Just confirm first sentence.
-                            awkwardTodo: true,
                             card: {
-                                description: `My relationship with Catherine began much like my friendship with Sasha had years earlier. I latched onto the first person to show me kindness in a new environment, and then I tried to make myself indispensable in small ways.`,
+                                description: `The relationship with Catherine began much like my friendship with Sasha had years earlier. I latched onto the first person to show me kindness in a new environment, and then I tried to make myself indispensable in small ways.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
