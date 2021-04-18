@@ -1076,7 +1076,7 @@ export default {
                 {
                     mixTime: `2:51:22.50`,
                     lyric: [
-                        `for a cub`,
+                        `for a`,
                         {
                             anchor: `cub not yet Webelos!`,
                             cards: [
