@@ -541,7 +541,7 @@ export default {
                             awkwardTodo: true,
                             card: {
                                 description: [
-                                    `But though my drunken self is forced to adopt the faith of his sober half, this internal conflict remains invisible to onlookers, who must watch in bewilderment as I perform my own`,
+                                    `But though my drunken self is forced to adopt the faith of his sober half, this internal conflict remains invisible to onlookers, who can only watch in bewilderment as I perform my own`,
                                     {
                                         anchor: `circumcision.`,
                                         wiki: `Circumcision`,

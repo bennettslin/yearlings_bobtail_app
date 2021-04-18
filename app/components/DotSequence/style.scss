@@ -12,12 +12,12 @@
     left: -$length__lyricSequenceDot * 0.2;
 
     // Expose more when in lyric.
-    top: -50%;
+    top: -60%;
 
     .AnnotationTitle
     & {
         // Expose less when in annotation title.
-        top: -30%;
+        top: -25%;
     }
 
     .VerseLine__lyricRight
@@ -33,11 +33,18 @@
 }
 
 .gradientMask__dotSequence {
-    $gradient__dotSequence: linear-gradient(
+    mask-image: linear-gradient(
         hsl(0, 0%, 0%),
-        hsl(0, 0%, 0%) 45%,
-        hsla(0, 0%, 0%, 0) 85%
+        hsl(0, 0%, 0%) 65%,
+        hsla(0, 0%, 0%, 0) 100%
     );
 
-    mask-image: $gradient__dotSequence;
+    .AnnotationTitle
+    & {
+        mask-image: linear-gradient(
+            hsl(0, 0%, 0%),
+            hsl(0, 0%, 0%) 35%,
+            hsla(0, 0%, 0%, 0) 70%
+        );
+    }
 }

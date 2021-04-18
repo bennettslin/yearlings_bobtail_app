@@ -7,6 +7,4 @@
 # Awkward assessment
 * Annotations read correctly
 * Are there more?
-
-# Things to consider
-* "Mush!" is too short, dots run over
+* Put awkward annotations in annotations todo?
