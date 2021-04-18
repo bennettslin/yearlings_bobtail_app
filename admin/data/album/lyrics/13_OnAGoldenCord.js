@@ -676,24 +676,26 @@ export default {
                 {
                     lyric: {
                         isItalic: true,
-                        lyric: {
-                            anchor: `Mush! Mush!`,
-                            properNoun: true,
-                            card: {
-                                description: [
-                                    `Marching onward without sleep, I continue to strip away the intervening years, hoping to return to the last time I'd known untroubled bliss. And so I arrive at the first song I loved as a child, Johnny Horton's`,
-                                    {
-                                        anchor: `"North to Alaska,"`,
-                                        wiki: `North_to_Alaska_(song)`,
+                        lyric: [
+                            {
+                                anchor: `Mush!`,
+                                card: {
+                                    description: [
+                                        `Marching onward without sleep, I continue to strip away the intervening years, hoping to return to the last time I'd known untroubled bliss. And so I arrive at the first song I loved as a child, Johnny Horton's`,
+                                        {
+                                            anchor: `"North to Alaska,"`,
+                                            wiki: `North_to_Alaska_(song)`,
+                                        },
+                                        `in which backup singers call out to their sled dogs, and wooden bowls evoke the clip-clopping of a horse's gait.`,
+                                    ],
+                                    dotKeys: {
+                                        [NARRATIVE]: true,
+                                        [SONGCRAFT]: true,
                                     },
-                                    `in which backup singers call out to their sled dogs, and wooden bowls evoke the clip-clopping of a horse's gait.`,
-                                ],
-                                dotKeys: {
-                                    [NARRATIVE]: true,
-                                    [SONGCRAFT]: true,
                                 },
                             },
-                        },
+                            `Mush!`,
+                        ],
                     },
                 },
             ],

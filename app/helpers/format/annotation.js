@@ -1,7 +1,7 @@
 import { hasSpecialCharacterAtIndex } from '.'
 import { LYRIC_TEXT_KEYS } from '../../constants/lyrics'
 
-const _getStringFromObject = textEntity => {
+const _getStringText = textEntity => {
 
     if (Array.isArray(textEntity)) {
         /**
@@ -10,7 +10,8 @@ const _getStringFromObject = textEntity => {
          * Uncanny Valley.
          */
         return textEntity.reduce((textString, textObject) => {
-            const objectString = _getStringFromObject(textObject),
+            const
+                objectString = _getStringText(textObject),
                 whiteSpace = objectString.indexOf(`’s`) === 0 ? '' : ' '
 
             return textString + whiteSpace + objectString
@@ -18,7 +19,9 @@ const _getStringFromObject = textEntity => {
 
     } else if (typeof textEntity === 'object') {
         return LYRIC_TEXT_KEYS.reduce((prevString, textKey) => {
-            return textEntity[textKey] ? _getStringFromObject(textEntity[textKey]) : prevString
+            return textEntity[textKey] ?
+                _getStringText(textEntity[textKey]) :
+                prevString
         }, '')
 
     } else {
@@ -26,22 +29,28 @@ const _getStringFromObject = textEntity => {
     }
 }
 
-const _getUncapitalisedText = text => {
-    return text.charAt(0).toLowerCase() + text.slice(1)
-}
-
-const _beginsWithPronounI = text => {
-    return text.indexOf(`I `) === 0 || text.indexOf(`I’`) === 0
-}
-
 const _getDeletedSpecialCharactersText = text => {
     // Eliminate all special characters at end.
+    const lastCharacter = text.charAt(text.length - 1)
+
     if (hasSpecialCharacterAtIndex(text, text.length - 1)) {
-        text = _getDeletedSpecialCharactersText(text.slice(0, text.length - 1))
+        if (
+            // Don't remove exclamation if there are two, e.g. 'O Catherine!'
+            !(
+                lastCharacter === '!' &&
+                text.indexOf('!') !== text.length - 1
+            )
+        ) {
+            text = _getDeletedSpecialCharactersText(
+                text.slice(0, text.length - 1),
+            )
+        }
 
     // Also eliminate special character right before a double quote.
-    } else if (text.charAt(text.length - 1) === `”` &&
-               hasSpecialCharacterAtIndex(text, text.length - 2)) {
+    } else if (
+        lastCharacter === `”` &&
+        hasSpecialCharacterAtIndex(text, text.length - 2)
+    ) {
         text = _getDeletedSpecialCharactersText(text.slice(0, text.length - 2) + text.slice(text.length - 1))
     }
 
@@ -49,10 +58,12 @@ const _getDeletedSpecialCharactersText = text => {
 }
 
 const _getDeletedWrappingCharactersText = text => {
-    const lastCharacter = text[text.length - 1]
+    const
+        firstCharacter = text[0],
+        lastCharacter = text[text.length - 1]
 
     // If ends in ellipsis, delete ellipsis.
-    if (lastCharacter === '…') {
+    if (firstCharacter === '…' || lastCharacter === '…') {
         text = text.replace('…', '')
     }
 
@@ -68,12 +79,12 @@ const _getDeletedWrappingCharactersText = text => {
     }
 
     // Delete both double quotes if entire text is wrapped between them.
-    if (text[0] === `“` && lastCharacter === `”`) {
+    if (firstCharacter === `“` && lastCharacter === `”`) {
         // e.g. '"tetherboy"'
         text = text.slice(1, -1)
 
     // Delete if there's only a leading double quote.
-    } else if (text[0] === `“` && text.indexOf(`”`) === -1) {
+    } else if (firstCharacter === `“` && text.indexOf(`”`) === -1) {
         text = text.replace(`“`, '')
 
     // Delete if there's only a trailing double quote.
@@ -84,37 +95,33 @@ const _getDeletedWrappingCharactersText = text => {
     return text
 }
 
+const _getUncapitalisedText = (text, properNoun) => (
+    (
+        // Uncapitalise only if not a proper noun or the pronoun I.
+        properNoun ||
+        text.indexOf(`I `) === 0 ||
+        text.indexOf(`I’`) === 0
+    ) ?
+        text :
+        text.charAt(0).toLowerCase() + text.slice(1)
+)
+
+export const _getSingleQuotedFromDoubleQuotedText = text => (
+    text.replace(/\u201C/g, `‘`).replace(/\u201D/g, `’`).trim()
+)
+
 // Parses text in anchor tag into annotation header.
 export const getFormattedAnnotationTitle = ({
     anchor,
     properNoun,
-    keepEndCharacter,
 
 }) => {
-    /**
-     * Get annotation title from anchor text. Convert from object if
-     * necessary, and also uncapitalise if not a proper noun.
-     */
-    let title = anchor
+    let title = _getStringText(anchor)
 
-    // Convert from object if necessary.
-    if (typeof anchor === 'object') {
-        title = _getStringFromObject(title)
-    }
-
-    // This flag exists solely for "Constellations!" title.
-    if (!keepEndCharacter) {
-        title = _getDeletedSpecialCharactersText(title)
-    }
+    title = _getDeletedSpecialCharactersText(title)
     title = _getDeletedWrappingCharactersText(title)
+    title = _getUncapitalisedText(title, properNoun)
+    title = _getSingleQuotedFromDoubleQuotedText(title)
 
-    // Uncapitalise if not a proper noun.
-    if (!properNoun) {
-        if (!_beginsWithPronounI(title)) {
-            title = _getUncapitalisedText(title)
-        }
-    }
-
-    // Finally, replace double quotes with single quotes.
-    return title.replace(/\u201C/g, `‘`).replace(/\u201D/g, `’`).trim()
+    return title
 }

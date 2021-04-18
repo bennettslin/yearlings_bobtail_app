@@ -1,9 +1,3 @@
-# Correct annotation titles
-* Titles read correctly
-
-# Correct annotations
-* Annotations read correctly
-
 # Correct dot categories
 * Annotations have correct dots
 
@@ -19,4 +13,8 @@
 * Program to add all to temporary list for audit.
 
 # Awkward assessment
+* Annotations read correctly
 * Are there more?
+
+# Things to consider
+* "Mush!" is too short, dots run over

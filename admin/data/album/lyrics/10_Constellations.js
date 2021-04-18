@@ -1472,7 +1472,8 @@ export default {
                             },
                         },
                         {
-                            anchor: `ha'nt'd by sober-trooth tiedgirl`,
+                            // NOTE: I changed from ha'nt.
+                            anchor: `hant'd by sober-trooth tiedgirl`,
                             // Just needs to be worded right.
                             awkwardTodo: true,
                             card: {
