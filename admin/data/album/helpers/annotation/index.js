@@ -77,6 +77,7 @@ const _recurseThroughVerse = ({
 
 const _addAnnotationLists = (annotations, song) => {
     const
+        annotationTodos = [],
         annotationTitles = [],
         annotationColumnIndices = [],
         annotationVerseIndices = [],
@@ -93,6 +94,7 @@ const _addAnnotationLists = (annotations, song) => {
      */
     annotations.forEach(annotation => {
         annotationTitles.push(annotation.title)
+        annotationTodos.push(annotation.todo)
         annotationColumnIndices.push(
             Number.isFinite(annotation.columnIndex) ?
                 annotation.columnIndex :
@@ -124,6 +126,7 @@ const _addAnnotationLists = (annotations, song) => {
         song.annotationColumnIndices = annotationColumnIndices
     }
     song.annotationTitles = annotationTitles
+    song.annotationTodos = annotationTodos
     song.annotationDotsBits = annotationDotsBits
     song.annotationVerseIndices = annotationVerseIndices
     song.annotationCardsDescriptionsList = annotationCardsDescriptionsList

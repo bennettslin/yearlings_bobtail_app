@@ -3,45 +3,101 @@
 
 $multiplier__tempGlobal: 1.8;
 
-// Eyeballed value.
-$bufferWidth__tempGlobal: 0.5px;
+$fontSize__tempGlobal: $fontSize__verse * $multiplier__tempGlobal;
 
-$width__tempGlobal:
+// Eyeballed value.
+$bufferWidth__tempGlobal: 0.86px;
+
+$height__globalHeader: 50px;
+
+$width__tempGlobalAnnotationCard:
     $baseWidth__annotationCard
     * $multiplier__tempGlobal
     + $padding__annotationCard * 2;
 
+$padding__tempGlobalAnnotation: 10px;
+$padding__tempGlobalAnnotationSongColumn: 15px;
+
+$width__tempGlobalAnnotation:
+    $width__tempGlobalAnnotationCard + $padding__tempGlobalAnnotation * 2;
+
+$width__tempGlobalAnnotationColumn:
+    $width__tempGlobalAnnotation + $padding__tempGlobalAnnotationSongColumn * 2;
+
 .TempGlobalAnnotations {
     font-size: 1.1em; // Same as root container
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
-    background-color: #bbb;
 }
 
-.TempGlobalAnnotation,
-.TempGlobalAnnotationsCounter {
-    font-size: $fontSize__verse * $multiplier__tempGlobal;
-    background-color: #fafafa;
+.TempGlobalAnnotations__row {
+    display: flex;
+}
+
+.TempGlobalCounter {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: hsla(0, 0%, 80%, 0.9);
+    padding: $padding__tempGlobalAnnotation;
+    border-top-left-radius: $padding__tempGlobalAnnotation;
+    font-size: $fontSize__tempGlobal;
+}
+
+.TempGlobalHeader {
+    height: $height__globalHeader;
+    font-size: $fontSize__tempGlobal;
+    z-index: 100;
+}
+
+.TempGlobalColumns {
+    width: $width__tempGlobalAnnotationColumn * 18;
+    overflow-y: hidden;
+}
+
+.TempGlobalAnnotationSongHeader {
+    min-width: $width__tempGlobalAnnotationColumn;
+    justify-content: space-around;
+}
+
+.TempGlobalAnnotationSongColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: $padding__tempGlobalAnnotationSongColumn;
+    padding-top:
+        $height__globalHeader
+        + $padding__tempGlobalAnnotationSongColumn;
+    overflow-y: scroll;
+}
+
+.TempGlobalAnnotation {
+    background-color: #cec;
     border-radius: $padding__annotationCard;
-    // margin: $padding__annotationCard;
-    padding: 10px;
-    width: $width__tempGlobal + 10px * 2;
+    padding: $padding__tempGlobalAnnotation;
+    width: $width__tempGlobalAnnotation;
     box-shadow: 0 2px 2px 2px rgba(75, 75, 100, 0.4);
+
+    &:not(:first-child) {
+        margin-top: $padding__tempGlobalAnnotation;
+    }
 }
 
-.TempGlobalAnnotation__header,
+.TempGlobalAnnotation__todo {
+    background-color: #ecc;
+}
+
+.TempGlobalAnnotationHeader,
 .TempGlobalAnnotationCard {
     border-radius: $padding__annotationCard;
     padding: $padding__annotationCard;
-    width: $width__tempGlobal - $bufferWidth__tempGlobal;
+    width: $width__tempGlobalAnnotationCard - $bufferWidth__tempGlobal;
     box-shadow: 0 1px 1px 1px rgba(75, 75, 100, 0.4);
 }
 
-.TempGlobalAnnotation__header {
+.TempGlobalAnnotationHeader {
     display: flex;
     justify-content: space-between;
     background-color: #ffe;
+    font-size: $fontSize__tempGlobal;
 }
 
 .TempGlobalAnnotationCard {
@@ -51,6 +107,17 @@ $width__tempGlobal:
 
 .TempGlobalAnnotationCard__dotKeys {
     font-size: 0.75em;
+}
+
+.TempGlobalAnnotationCard__description {
+    font-size: $fontSize__tempGlobal;
+}
+
+.TextAnchor__linkText {
+    .TempGlobalAnnotations
+    & {
+        color: #a66;
+    }
 }
 
 .Underline {

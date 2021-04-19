@@ -11,6 +11,9 @@ export const getAnnotationIndices = (songIndex = 0) => (
         getArrayOfLength(
             // Which annotation array we use is arbitrary.
             getSong(songIndex).annotationDotsBits.length,
+
+            // Annotations start with base 1.
+            1,
         )
 )
 
@@ -20,7 +23,7 @@ export const getAnnotationCountForSong = songIndex => (
 
 export const getIsAnnotationValid = (songIndex, annotationIndex) => {
     const annotationIndicesArray = getAnnotationIndices(songIndex)
-    return annotationIndicesArray.some(index => index === annotationIndex - 1)
+    return annotationIndicesArray.some(index => index === annotationIndex)
 }
 
 export const getValidAnnotationIndex = (songIndex, annotationIndex) => (
@@ -44,9 +47,14 @@ export const getTitleForAnnotation = (songIndex, annotationIndex) => {
     return annotationTitles[annotationIndex - 1]
 }
 
-export const getTodosForAnnotation = (songIndex, annotationIndex) => {
+export const getTodoForAnnotation = (songIndex, annotationIndex) => {
     const { annotationTodos } = getSong(songIndex)
     return annotationTodos[annotationIndex - 1]
+}
+
+export const getAnnotationTodoCountForSong = songIndex => {
+    const { annotationTodos } = getSong(songIndex)
+    return annotationTodos.filter(todo => todo).length
 }
 
 export const getVerseIndexForAnnotation = (songIndex, annotationIndex) => {

@@ -1,33 +1,33 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
+import cx from 'classnames'
 import AnnotationCard from '../AnnotationCard'
-import { getNextGlobalAnnotation } from '../../../api/album/globalAnnotation'
-import { getTitleForAnnotation } from '../../../../app/api/album/annotations'
+import {
+    getTitleForAnnotation,
+    getTodoForAnnotation,
+} from '../../../../app/api/album/annotations'
 import { getAnnotationCardIndices } from '../../../../app/api/album/cards'
 
-const INTERVALS_COUNT = 5
-
-const TempGlobalAnnotation = ({ intervalIndex }) => {
-    const {
-        songIndex,
-        annotationIndex,
-        globalIndex,
-
-    } = getNextGlobalAnnotation({
-        intervalIndex,
-        count: INTERVALS_COUNT,
-    })
-
+const Annotation = ({ songIndex, annotationIndex }) => {
     if (!songIndex || !annotationIndex) {
         return null
     }
 
-    const annotationTitle = getTitleForAnnotation(songIndex, annotationIndex)
+    const
+        annotationTitle = getTitleForAnnotation(songIndex, annotationIndex),
+        annotationTodo = getTodoForAnnotation(songIndex, annotationIndex)
 
     return (
-        <div className="TempGlobalAnnotation">
-            <div className="TempGlobalAnnotation__header">
-                {globalIndex}. {annotationTitle}
+        <div
+            {...{
+                className: cx(
+                    'TempGlobalAnnotation',
+                    annotationTodo && 'TempGlobalAnnotation__todo',
+                ),
+            }}
+        >
+            <div className="TempGlobalAnnotationHeader">
+                {annotationIndex}. {annotationTitle}
             </div>
             {getAnnotationCardIndices(
                 songIndex,
@@ -47,4 +47,4 @@ const TempGlobalAnnotation = ({ intervalIndex }) => {
     )
 }
 
-export default TempGlobalAnnotation
+export default Annotation

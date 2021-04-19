@@ -35,19 +35,17 @@ const CarouselScroll = ({ serverClientSongIndex }) => {
                 getCarouselScrollElement,
                 getCarouselScrollChild,
             }} />
-            {getAnnotationIndices(serverClientSongIndex).map(index => {
-                const annotationIndex = index + 1
-
-                return (
+            {getAnnotationIndices(serverClientSongIndex)
+                .map(annotationIndex => (
                     <CarouselAnnotation
                         {...{
-                            key: index,
+                            key: annotationIndex,
                             ref: carouselScrollChildren,
                             annotationIndex,
                         }}
                     />
-                )
-            })}
+                ))
+            }
         </div>
     )
 }

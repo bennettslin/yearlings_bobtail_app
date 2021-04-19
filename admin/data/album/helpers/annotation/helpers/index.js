@@ -49,6 +49,8 @@ export const registerAnnotation = ({
     // Add formatted title to annotation.
     annotation.title = getFormattedAnnotationTitle(anchoredLyric)
 
+    annotation.todo = anchoredLyric.todo
+
     if (
         // Let annotation know if it's in a doublespeaker column.
         textKey === LYRIC_LEFT ||

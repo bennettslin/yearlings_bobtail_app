@@ -1,11 +1,9 @@
 import React, { useEffect } from 'react'
 import cx from 'classnames'
-import TempGlobalAnnotation from './Annotation'
-// import TempGlobalAnnotationsCounter from './AnnotationsCounter'
-import { getArrayOfLength } from '../../../app/helpers/general'
+import GlobalCounter from './GlobalCounter'
+import GlobalHeader from './GlobalHeader'
+import GlobalColumns from './GlobalColumns'
 import './style'
-
-const INTERVALS_COUNT = 5
 
 const TempGlobalAnnotations = () => {
     useEffect(() => {
@@ -21,15 +19,9 @@ const TempGlobalAnnotations = () => {
                 ),
             }}
         >
-            {/* <TempGlobalAnnotationsCounter /> */}
-            {getArrayOfLength(INTERVALS_COUNT).map(intervalIndex => (
-                <TempGlobalAnnotation
-                    {...{
-                        key: intervalIndex,
-                        intervalIndex,
-                    }}
-                />
-            ))}
+            <GlobalColumns />
+            <GlobalHeader />
+            <GlobalCounter />
         </div>
     )
 }
