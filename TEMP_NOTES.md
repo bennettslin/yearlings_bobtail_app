@@ -1,6 +1,7 @@
 # Bug
 
 # TODO
+* Figure out AWS S3 buckets.
 * Make Garryowen a ghost?
 * Hawaiian ornament
 * Potted plants in bedroom
