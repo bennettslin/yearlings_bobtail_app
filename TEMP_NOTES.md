@@ -1,4 +1,5 @@
 # Bug
+* Loading pitch page is broken in production.
 
 # TODO
 * Figure out AWS S3 buckets.
