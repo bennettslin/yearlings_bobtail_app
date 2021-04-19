@@ -314,7 +314,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 // Just needs a little work.
-                awkwardTodo: true,
+                todo: true,
                 card: {
                     description: [
                         `When I asked Owen to recommend some good lyricists, he pointed me to`,
@@ -356,7 +356,7 @@ export default {
                     lyric: [
                         {
                             anchor: `Feeble feeder fish`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: [
                                     `The pecking order in a tank of`,
@@ -508,7 +508,7 @@ export default {
                         `and you were`,
                         {
                             anchor: `fine when you had none.`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: `Things were finally looking up, so it baffled me to be as bitter as ever. I suspect I felt indignant for my younger self, who'd been kept in the dark for so long about how much better life could be.`,
                                 dotKeys: {
@@ -605,7 +605,7 @@ export default {
                     lyric: [
                         {
                             anchor: `peasant discontented`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: [
                                     `The better life got, the more unsatisfied I became. I was like the peasants of the`,
@@ -672,7 +672,7 @@ export default {
                         },
                         {
                             anchor: `sprawled where they stood…`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: `And while every beatdown I suffered was a serious blow to my mental health and emotional state, the bullies only continued to enjoy greater happiness and social standing. My belief as a Beyonder couldn't counter the harsh reality that nature favors its bullies.`,
                                 dotKeys: {
@@ -700,7 +700,7 @@ export default {
                         `weren't they`,
                         {
                             anchor: `right to take what's theirs?`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: `As opportunities for social advancement later opened up for me, I could look back, put myself in the bullies' shoes, and even sympathize with them. In a world that roots for the strong, who wouldn't readily take all the means available to avoid being weak?`,
                                 dotKeys: {
@@ -739,7 +739,7 @@ export default {
                         `also weep for`,
                         {
                             anchor: `poor, poor bears.`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: `His wife Alison then sighs in response, "Poor, poor bears," recognizing that he, a bear in their mutual fantasy, is just as much a victim complying within a power dynamic over which neither possesses much control.`,
                                 dotKeys: {
@@ -784,7 +784,7 @@ export default {
                         {
                             anchor: `claim you've never loved,`,
                             // Too wordy.
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: `My songs projected the image of an inexperienced kid forever unlucky in love. But as the misfortunes of my past receded into the distance, I needed greater quantities of alcohol to carry on with the lie that my life hadn't substantially improved.`,
                                 dotKeys: {
@@ -802,7 +802,7 @@ export default {
                         {
                             anchor: `unscrew a Bud…`,
                             // I'm still not getting the right wording.
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: [
                                     `But I relinquish my chance to know the redhead. Not just because it's past`,

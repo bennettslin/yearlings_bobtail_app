@@ -72,7 +72,7 @@ export default {
                             `But F., that man is the`,
                             {
                                 anchor: `worst nuisance on the beach.`,
-                                awkwardTodo: true,
+                                todo: true,
                                 card: {
                                     description: [
                                         `In`,
@@ -125,7 +125,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                awkwardTodo: true,
+                todo: true,
                 card: {
                     description: [
                         `In keeping with the`,
@@ -207,7 +207,7 @@ export default {
                         `when you wanted to`,
                         {
                             anchor: `buy a fortress`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: `As a child, I liked to hole up somewhere and work on projects undisturbed. So one year, I asked my parents for a lifesize wooden fort as a combined birthday and Christmas gift, since my birthday is in November. Unfortunately, I learned that some things were too pricey even to count for two gifts.`,
                                 dotKeys: {
@@ -240,7 +240,7 @@ export default {
                         `You stowed away`,
                         {
                             anchor: `beneath your captain bed.`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: `I slept in a captain bed that rested atop a dresser on one side, with the other side flush against the wall. By entering through a side panel, I could squeeze into the space underneath and stay hidden.`,
                                 dotKeys: {
@@ -495,7 +495,7 @@ export default {
                         `Do you often feel like a`,
                         {
                             anchor: `wanderer lost?"`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: `Hitting all the right nerves, the letter addressed my yearning for acceptance and spoke to my frustration that this desire should so elude me. It then shared some hopeful news. RI Research believed that I might be a Beyonder, and after searching for so long, they'd finally found me.`,
                                 dotKeys: {
@@ -930,7 +930,7 @@ export default {
                         `twits daily`,
                         {
                             anchor: `murdered for their virtue.`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: `Like all ordeals, mine was made more bearable because I could tie it to a greater purpose. But ironically, behaving as such only invited more abuse.`,
                                 dotKeys: {
@@ -1034,7 +1034,7 @@ export default {
                         `The only`,
                         {
                             anchor: `spies who get to feel love`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: [
                                     `Since a`,

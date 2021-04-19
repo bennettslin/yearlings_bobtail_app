@@ -89,7 +89,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                awkwardTodo: true,
+                todo: true,
                 card: {
                     description: [
                         `Since this song is sung from the perspective of my sister as a child, I wanted toy instruments to abound. And so the intro begins with a strummed`,

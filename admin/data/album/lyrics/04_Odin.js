@@ -42,7 +42,7 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                awkwardTodo: true,
+                todo: true,
                 card: {
                     description: [
                         `Odin, who was around before I was born, originally had a Taiwanese name. My sister and I anglicized it into the name of the`,
@@ -137,7 +137,7 @@ export default {
                         `trifling`,
                         {
                             anchor: `tref must reseed the earth.`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: [
                                     {
@@ -258,7 +258,7 @@ export default {
                         `you`,
                         {
                             anchor: `ruminate on these riddles…`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: `The "awake" voice in the doublespeaker set echoes my thoughts as I lie on the floor mat, unable to sleep. The terrifying vastness of the universe suggests unlimited possibilities. And yet somehow, being with Sasha is not one of them.`,
                                 dotKeys: {
@@ -502,7 +502,7 @@ export default {
                         `proves`,
                         {
                             anchor: `shibboleth`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: [
                                     [
@@ -629,7 +629,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                awkwardTodo: true,
+                todo: true,
                 card: {
                     // TODO: Or bottled butterfly and jarred sibyl.
                     description: `While the two doublespeaker voices proceed independently, they plant subtle ideas along each other's path, much as our conscious thoughts affect our dreams and vice versa. In this stanza, for example, the mention of a staircase by the "asleep" voice precedes the plummeting spoken of by the "awake" voice.`,
@@ -1040,7 +1040,7 @@ export default {
                         `where its`,
                         {
                             anchor: `hopeless rests.`,
-                            awkwardTodo: true,
+                            todo: true,
                             cards: [
                                 {
                                     description: `Hope was all that remained in Pandora's box. But upon having the hard truths of the world revealed to me by Sasha, I'm just left to feel as hopeless as ever.`,
@@ -1073,7 +1073,7 @@ export default {
                         `Your`,
                         {
                             anchor: `seizures of spleen,`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: [
                                     `In`,
@@ -1096,7 +1096,7 @@ export default {
                         `to be a`,
                         {
                             anchor: `guard's whistle`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: [
                                     `Wandering the beach, I notice a steel whistle half buried in the sand, possibly dropped by a`,
@@ -1218,7 +1218,7 @@ export default {
                     lyricRight: [
                         {
                             anchor: `didn't impart warmth`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: `But also like cellophane, Sasha couldn't reflect warmth where none was present. If I couldn't be the better person in dealing with the bullies, then there came a point where she needed to keep her distance from me as well.`,
                                 dotKeys: {
@@ -1273,7 +1273,7 @@ export default {
                     mixTime: `1:49:20.04`,
                     lyricLeft: {
                         anchor: `shivering for shivs unsheathed.`,
-                        awkwardTodo: true,
+                        todo: true,
                         cards: [
                             {
                                 // CONSIDER: Wormhole Kyon for shank? Needs to allow for multiple wormhole keys first.
@@ -1417,7 +1417,7 @@ export default {
                         `when your`,
                         {
                             anchor: `day to die`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: [
                                     `As a child, I suffered from`,
@@ -1472,7 +1472,7 @@ export default {
                             anchor: `soulless solace`,
                             // From Willy the Cocoa ("unsalvaged souls")
                             // But as a child, I came to a slightly different conclusion. If my brother and I could be so alike in physical makeup yet so different in mental presence, then it made more sense to believe that no one has a soul.
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: `I knew that humans need to fear death to ensure their survival. But what I didn't understand is why it has to be done consciously. Why couldn't we just fear death the same way that oil is said to fear water?`,
                                 dotKeys: {
@@ -1483,7 +1483,7 @@ export default {
                         `and`,
                         {
                             anchor: `just play dumb?`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: [
                                     `Neither heaven nor`,
@@ -1530,7 +1530,7 @@ export default {
                         `But for a`,
                         {
                             anchor: `fetus force-fed,`,
-                            awkwardTodo: true,
+                            todo: true,
                             cards: [
                                 {
                                     description: `Most maddening of all was that one has no say in being brought into this world. Given how distressing the certainty of death must always be, it seemed like there should be an option to opt out to begin with.`,
@@ -1686,7 +1686,7 @@ export default {
                     lyricRight: [
                         {
                             anchor: `his litter`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: [
                                     `It isn't just Odin's unused`,
@@ -1716,7 +1716,7 @@ export default {
                         `while`,
                         {
                             anchor: `mermaids smile`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: [
                                     `T.S. Eliot's`,

@@ -71,7 +71,7 @@ export default {
                                 `"If you're just starting out, you need to decide right now: Either you stick with quality vinyl, or you buy only the bargain bin LPs. You`,
                                 {
                                     anchor: `can't have both.`,
-                                    awkwardTodo: true,
+                                    todo: true,
                                     card: {
                                         description: `This advice was offered by a friend when I bought a used turntable. And as it turns out, what he had to say about vinyl records holds just as well for life decisions. I learned this the hard way when I saw that my thoughtful deeds were always being negated by my hurtful ones. I couldn't keep two separate selves, where one gets praised for my kindness and the other takes the blame for all my selfish desires. I couldn't be both kinds of people.`,
                                         dotKeys: {
@@ -88,7 +88,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                awkwardTodo: true,
+                todo: true,
                 card: {
                     description: `The previous song offered a glimpse of me as an infirm patient, fading away while listening to old records. The crackle of a needle on vinyl now introduces the third and final song of the medley.`,
                     dotKeys: {
@@ -109,7 +109,7 @@ export default {
                         {
                             anchor: `Odin,`,
                             properNoun: true,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: `As a child, I never paid much attention to our pet cat Odin. He just seemed to come with the house. So when Sita and I adopted a cat together, it surprised me just how naturally the instinct came to me to nurture a pet. Years later when my failure to nurture the relationship with Sita led to our final breakup, I thought of Odin often.`,
                                 dotKeys: {
@@ -257,7 +257,7 @@ export default {
                         `set to rock this pout from`,
                         {
                             anchor: `horse to chair,`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: `In other words, for the duration of my entire life, from rocking horse to rocking chair.`,
                                 dotKeys: {
@@ -284,7 +284,7 @@ export default {
                         `Well,`,
                         {
                             anchor: `first pets`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: `It blew my mind that I could hurt Sita for so long and still live with myself. In hindsight, it's because I didn't question the facade of sanity she'd constructed as a means to cope. I allowed myself to believe that our recurring moments of intimacy, which she clung to and cherished as if that's how it always was, were truly all she needed.`,
                                 dotKeys: {
@@ -307,7 +307,7 @@ export default {
                         {
                             anchor: `battered kitten purrs…`,
                             // Maybe this is already good enough?
-                            awkwardTodo: true,
+                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -849,7 +849,7 @@ export default {
                             // NOTE: I added an "h" to Shiva.
                             anchor: `chivalry to our Shiva's feet…`,
                             properNoun: true,
-                            awkwardTodo: true,
+                            todo: true,
                             cards: [
                                 {
                                     description: [

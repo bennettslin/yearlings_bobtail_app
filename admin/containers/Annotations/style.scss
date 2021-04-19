@@ -1,3 +1,12 @@
+@import '../../../app/scss/constants/annotation';
+@import '../../../app/scss/constants/font';
+
+$multiplier__tempGlobal: 1.5;
+
+.TempGlobalAnnotations {
+    font-size: 1.1em; // Same as root container
+}
+
 .TempGlobalAnnotation,
 .TempGlobalAnnotationsCounter {
     background-color: #fafafa;
@@ -9,7 +18,7 @@
 }
 
 .TempGlobalAnnotation__header {
-    font-size: 1.5em;
+    font-size: $fontSize__verse * $multiplier__tempGlobal;
     border-radius: 5px;
     border: 1px solid #cca;
     background-color: #ffe;
@@ -20,12 +29,20 @@
 }
 
 .TempGlobalAnnotationCard {
-    font-size: 1.25em;
     border: 1px solid #acc;
     background-color: #eff;
     border-radius: 5px;
     padding: 5px;
     margin-top: 5px;
+}
+
+.TempGlobalAnnotationCard__description {
+    font-size: $fontSize__verse * $multiplier__tempGlobal;
+    padding: $padding__annotationCard;
+    width: 
+        $baseWidth__annotationCard
+        * $multiplier__tempGlobal
+        + $padding__annotationCard * 2;
 }
 
 .Button__increment {

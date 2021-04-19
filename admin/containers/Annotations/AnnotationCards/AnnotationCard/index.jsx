@@ -34,7 +34,9 @@ const AnnotationCard = ({
                 )).join(', ')}
             </div>
             {description && (
-                <Texts {...{ text: description }} />
+                <div className="TempGlobalAnnotationCard__description">
+                    <Texts {...{ text: description }} />
+                </div>
             )}
         </div>
     )

@@ -82,7 +82,7 @@ export default {
                         {
                             anchor: `should I should you`,
                             // Can't tell if second "to" is needed.
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: `At this point, I'm too flustered to form complete thoughts, let alone to speak in complete sentences.`,
                                 dotKeys: {
@@ -302,7 +302,7 @@ export default {
                     lyric: {
                         anchor: `swept in unchartable tides`,
                         // Just needs better phrasing.
-                        awkwardTodo: true,
+                        todo: true,
                         card: {
                             description: [
                                 `The constant peril of being steered in directions for which I'm ill-prepared has kept me on edge throughout this date. But nearby is a`,
@@ -407,7 +407,7 @@ export default {
                         {
                             anchor: `chrysalis unchristened`,
                             // This also needs much better phrasing.
-                            awkwardTodo: true,
+                            todo: true,
                             cards: [
                                 {
                                     description: `As we pass a display on the butterfly lifecycle, it occurs to me that what I seek is a chrysalis. That is, a rare specimen of female so new to this world that my own lack of worldly ways is rendered moot. Of course, every other low-status male out there has the same idea.`,
@@ -428,7 +428,7 @@ export default {
                         {
                             anchor: `aping jaw`,
                             // Also just needs to be phrased better.
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: [
                                     `We pause for a minute to learn about`,
@@ -582,7 +582,7 @@ export default {
                         {
                             anchor: `disastrous play`,
                             // Just confirm it sounds okay.
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: `On our second date, Sita invited me to see her friend act in a play, which I hated. In all fairness, it probably wasn't bad. My impression of the night was just colored by my insecurities, given the warm rapport between Sita and her friend backstage, in contrast to my own inability to get a word in edgewise.`,
                                 dotKeys: {
@@ -688,7 +688,7 @@ export default {
                         `then wise up and`,
                         {
                             anchor: `learn to shotgun`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: `In time I came to adopt the shotgun approach to dating, which involves hitting on anyone at any moment. It works because the math is on your side. Even if your success rate remains dismal, you're expanding the sample size, which increases your chances of getting at least one positive result. And one person saying yes to a date is really all you were hoping for.`,
                                 dotKeys: {
@@ -777,7 +777,7 @@ export default {
                         `brave`,
                         {
                             anchor: `rejection into art`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: [
                                     `I learned to accept and even welcome the latest rejection by turning it into subject matter for new songs. And so in time I came to see a life of getting rejected as`,
@@ -808,7 +808,7 @@ export default {
                         `but`,
                         {
                             anchor: `died unfinished`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: `Of course, there's no guarantee that such a work will ever be completed in the artist's lifetime, since a satisfying ending isn't really under their control.`,
                                 dotKeys: {
@@ -904,7 +904,7 @@ export default {
                         `with every given`,
                         {
                             anchor: `answer a no`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: [
                                     `Of course, if I were never given an opening to make any decisions at all, then each date would end with me going right back to the beginning of my flowchart. And I'd be doomed to spend my life cycling through an`,
@@ -974,7 +974,7 @@ export default {
                         `from a`,
                         {
                             anchor: `dummy steering wheel`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: `Any semblance of control I felt on a date was an illusion. And yet I would still cling tightly, like a child clutching the passenger steering wheel in a twin go-kart. There was too much at stake for me to ever just let go and embrace spontaneity.`,
                                 dotKeys: {

@@ -599,7 +599,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                awkwardTodo: true,
+                todo: true,
                 card: {
                     description: [
                         {
@@ -1122,7 +1122,7 @@ export default {
                     lyric: [
                         {
                             anchor: `Are Melee tapirs`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: `"Our melee tapers the discourse." Having scavenged materials to make swords and shields, we could only brandish them with playful menace within the narrow corridors of the steam tunnels. Now out in the open, we stop chattering and start battling as we make our way back to the car.`,
                                 dotKeys: {
@@ -1134,7 +1134,7 @@ export default {
                         {
                             anchor: `the dusc-horse yet…?`,
                             // Last sentence is particularly weird.
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: [
                                     `"Are Malay tapirs the dusk horse yet?" Through conquest and migration, exotic new species were discovered. Native to the Malay peninsula, the`,
@@ -1383,7 +1383,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                awkwardTodo: true,
+                todo: true,
                 card: {
                     description: [
                         `On my solo Robitussin trips, I would explore metaphysical truths in my head while playing video games on my`,
@@ -1438,7 +1438,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                awkwardTodo: true,
+                todo: true,
                 card: {
                     description: `If the lyrics for this second chorus seem out of place given their noticeable lack of literary puns, it's because they're a carryover from the song's previous incarnation. But I liked them enough to keep them, and they coincide perfectly with my moment of clarity at the cemetery.`,
                     dotKeys: {
@@ -1486,7 +1486,7 @@ export default {
                             // NOTE: I changed from ha'nt.
                             anchor: `hant'd by sober-trooth tiedgirl`,
                             // Just needs to be worded right.
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: [
                                     `Encountering the vision of a`,
@@ -1519,7 +1519,7 @@ export default {
                         lyric: {
                             anchor: `sunk in tarpid lies!`,
                             // Just needs time to think through.
-                            awkwardTodo: true,
+                            todo: true,
                             cards: [
                                 {
                                     description: `My mastodon lies sunk in a "tar pit," just as I've sunk too far in all my "torpid" lies to Sita explaining why I can't spend more nights with her.`,
@@ -1609,7 +1609,7 @@ export default {
                         },
                         {
                             anchor: `toughtim rite…`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: `Having now achieved a full out-of-body experience, I gaze down upon my drugged-out self. Set against the familiar backdrop of Los Angeles, this degrading sight reminds me that in having scuttled off to the Bay Area, I'm shirking my obligation to care for my autistic brother. My sister, on the other hand, still lives nearby. Guilt-ridden, I sarcastically note that "brother and sister taught him right."`,
                                 dotKeys: {
@@ -1669,7 +1669,7 @@ export default {
                             anchor: `Noworse and Nunavutter`,
                             properNoun: true,
                             // Just confirm. This may be the best it will be.
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: [
                                     `Our Inuit tribe has now ventured all the way to`,

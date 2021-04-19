@@ -136,7 +136,7 @@ export default {
                         {
                             anchor: `Ulysses' tomb,`,
                             properNoun: true,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: [
                                     `A reference to the classic`,
@@ -198,7 +198,7 @@ export default {
                         `First we`,
                         {
                             anchor: `laid Tourette's,`,
-                            awkwardTodo: true,
+                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -630,7 +630,7 @@ export default {
                         {
                             anchor: `went clear—`,
                             // Reconcile that part of clearing me from her life.
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: [
                                     `After Catherine cleared her life of me, I tried to win her back by reading lots of books, beginning with the ones we'd discussed. Catherine had mentioned that "Famous Blue Raincoat" echoes a similar theme of purification through betrayal found in Cohen's novel`,
@@ -804,7 +804,7 @@ export default {
                                 {
                                     anchor: `Catherine vaut bien une messe…`,
                                     properNoun: true,
-                                    awkwardTodo: true,
+                                    todo: true,
                                     card: {
                                         description: [
                                             {
@@ -917,7 +917,7 @@ export default {
                         `to wear it like a`,
                         {
                             anchor: `tragic mask.`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: [
                                     `At some point, I learned to see`,

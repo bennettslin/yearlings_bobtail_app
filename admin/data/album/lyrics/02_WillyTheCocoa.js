@@ -75,7 +75,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                awkwardTodo: true,
+                todo: true,
                 card: {
                     description: [
                         `In the past, a disabled child was sometimes thought to be a troll in disguise known as a`,
@@ -1213,7 +1213,7 @@ export default {
                                 `'s cover`,
                             ],
                             // Actually has meaning part.
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: [
                                     `My favorite word as a child was "bobtail." I was just so proud of myself the day I realized that the line "bells on bobtail ring," from the song`,

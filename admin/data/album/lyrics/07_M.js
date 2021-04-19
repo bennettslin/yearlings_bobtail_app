@@ -201,7 +201,7 @@ export default {
                     mixTime: `1:06:02.05`,
                     lyric: {
                         anchor: `No minutiae left unmastered,`,
-                        awkwardTodo: true,
+                        todo: true,
                         card: {
                             description: [
                                 `Though my main goal was to be well versed in all the important subjects, I derived the most satisfaction from being able to display some random skill with seeming nonchalance, like solving a`,
@@ -538,7 +538,7 @@ export default {
                         {
                             anchor: `Moonie wedding,`,
                             properNoun: true,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: [
                                     `The`,
@@ -577,7 +577,7 @@ export default {
                         {
                             anchor: `"Made in America" signs.`,
                             properNoun: true,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: `As a way to promote cross-cultural harmony, the pairings in these mass weddings are often international by design. So my Moonie bride might be a foreigner who cynically chose the church just to raise a family in America. And I would be foolish to believe my "maiden Mara co-signs" the marriage license in good faith.`,
                                 dotKeys: {
@@ -594,7 +594,7 @@ export default {
                         `In a`,
                         {
                             anchor: `time capsule`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: [
                                     `A`,
@@ -648,7 +648,7 @@ export default {
                         `in this`,
                         {
                             anchor: `heap of twisted twine.`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: `But with nothing to show for five years of diligent effort, I was now paralyzed by doubt. There were no more actions I could confidently prescribe to better my circumstances. And so the puppet of my future self could only lie there motionless.`,
                                 dotKeys: {
@@ -779,7 +779,7 @@ export default {
                     lyric: [
                         {
                             anchor: `indentures dumbed`,
-                            awkwardTodo: true,
+                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -843,7 +843,7 @@ export default {
                         `But then I saw the`,
                         {
                             anchor: `world's a naked baby,`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: `At some point, I realized that the social world is just one more part of the world at large. And so it too behaves as it does because of the sum total of what it is. Nothing is hidden from view, and every situation can be understood by reading it closely, no less than world events can be learned about by studying history textbooks.`,
                                 dotKeys: {

@@ -71,7 +71,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                awkwardTodo: true,
+                todo: true,
                 card: {
                     description: `With the breakup, I was now free to rebuild my life from scratch. I could revert to the state of childlike innocence that I'd known before my relationship with Sita, before even the bullying and the mail-order cult. And so here we hear the song of the white-throated sparrow, harkening back to the happier days of my youth.`,
                     dotKeys: {
@@ -100,7 +100,7 @@ export default {
                         `safely kept with`,
                         {
                             anchor: `bread and pocket lint.`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: `Before leaving the cafeteria after a long shift, I might stash some bread rolls in the front pockets of my jacket for munching on the go. Still holding the bracelet, I now tuck my hands in as well to keep warm.`,
                                 dotKeys: {
@@ -169,7 +169,7 @@ export default {
                         `So`,
                         {
                             anchor: `polite, yet resigned,`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: `While Sita had spent the day bottling up her emotions to brace for that night's confrontation, I was drunk and ready to pass out. So as she lobbed her accusations, I was still processing the situation and could only respond calmly and curtly, which just added to her fluster.`,
                                 dotKeys: {
@@ -201,7 +201,7 @@ export default {
                         `I'm sorry, but I`,
                         {
                             anchor: `went through your mail`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: `Confused about why I'd grown distant, Sita caved in that day and snooped around on my desktop computer. In so doing, she stumbled upon my emails, one of which spoke of a crush, and another soliciting advice from friends on how to break up gently.`,
                                 dotKeys: {
@@ -274,7 +274,7 @@ export default {
                         {
                             // NOTE: I changed "pauper's" to "paupers'."
                             anchor: `paupers' grave`,
-                            awkwardTodo: true,
+                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -311,7 +311,7 @@ export default {
                         `torched the`,
                         {
                             anchor: `bellyaches on suttee.`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: [
                                     {
@@ -419,7 +419,7 @@ export default {
                     lyricLeft: [
                         {
                             anchor: `Guilt pardons`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: `My sober self observes his drunken accomplice's lack of remorse yet can only feel pity, aware of the trauma that must surely linger after performing such a heinous act. After all, avoiding such trauma was precisely the reason he chose not to carry out the hit himself.`,
                                 dotKeys: {
@@ -433,7 +433,7 @@ export default {
                         `still hardened against her`,
                         {
                             anchor: `fawning, misty glance,`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: `Stirred by a strange bitterness rumbling within, drunken me defiantly lashes out at the twin streetlamps lining the boulevard, whose misty glow has revived the vision of Sita's fearful gaze moments before he committed his crime.`,
                                 dotKeys: {
@@ -654,7 +654,7 @@ export default {
                         `when you really thought the`,
                         {
                             anchor: `world that simple?`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: `I gave the bracelet to Sita during the first few weeks of our relationship. I was just too inexperienced at the time to show my love in any more meaningful way. Of course, she was just as inexperienced and knew no other way to validate it.`,
                                 dotKeys: {
@@ -674,7 +674,7 @@ export default {
                         `the`,
                         {
                             anchor: `gesture then`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: `I bought the bracelet from a jewelry store at the local mall. It cost a lot relative to my hourly wage at the time, which was all it took for Sita to recognize my earnest intentions.`,
                                 dotKeys: {
@@ -828,7 +828,7 @@ export default {
                                 lyric: `Übermensch`,
                             },
                             properNoun: true,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: [
                                     `The German philosopher`,
@@ -881,7 +881,7 @@ export default {
                         `Then the`,
                         {
                             anchor: `guardian knot`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: [
                                     `While the`,
@@ -927,7 +927,7 @@ export default {
                         `each`,
                         {
                             anchor: `attack with the proper fist.`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: [
                                     `Out of frustration over conflicting desires, I start punching myself in the head, as if each half of my brain is attacking the other using the one fist under its command. Since the right hemisphere`,
@@ -997,7 +997,7 @@ export default {
                         `by`,
                         {
                             anchor: `trail of crumbs,`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: `Fearing the emotional upheaval ahead, I wonder if it's too late to walk back the damage I've done. But even if I wanted to, I couldn't find my way back. All night I've been nibbling on the bread in my pocket rather than pinching off crumbs for a trail. trading away long-term security to satisfy my short-term hunger.`,
                                 dotKeys: {
@@ -1021,7 +1021,7 @@ export default {
                         {
                             anchor: `Garry's sole witness`,
                             properNoun: true,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: `While all my promises to Sita have proven to be lies, I didn't intend them to be. Still, while I really wish to argue my case, I realize the breakup will be done with sooner if I just accept my role as the villain. And so the sober me, called up to testify for his drunken half, stays silent.`,
                                 dotKeys: {
@@ -1049,7 +1049,7 @@ export default {
                         `Though, the`,
                         {
                             anchor: `master mind`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: [
                                     `In college, I discovered that being drunk made it easier to do arduous tasks like writing`,
@@ -1074,7 +1074,7 @@ export default {
                         `a bid for greatness' sake, he's sold on as`,
                         {
                             anchor: `holy war.`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: [
                                     `Most of the`,

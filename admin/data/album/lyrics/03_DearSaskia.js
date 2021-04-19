@@ -60,7 +60,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                awkwardTodo: true,
+                todo: true,
                 card: {
                     description: [
                         `I always marveled at how the`,
@@ -118,7 +118,7 @@ export default {
                         `your`,
                         {
                             anchor: `first semester`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: `My family was spending the entire summer in Taiwan. We weren't getting back to the States until after Sasha was to have left for Boston and begun the new school year.`,
                                 dotKeys: {
@@ -151,7 +151,7 @@ export default {
                     lyric: [
                         {
                             anchor: `You'd love Taiwan,`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: `During a tour of the Taiwanese countryside with our cousins, I mentally noted all the things I could show to Sasha one day. As a child, the only time I cared much for my heritage was when I thought there was something to gain by sharing it with someone else.`,
                                 dotKeys: {
@@ -177,7 +177,7 @@ export default {
                         `of some`,
                         {
                             anchor: `giant's house.`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: `My most vivid memory of that trip is when we stood in the middle of a lush valley. With the ground around us completely level, the enclosing mountains were nearly vertical, as their peaks disappeared into a translucent blanket of clouds stretched across the sky. I felt like a tiny guest in a giant's house.`,
                                 dotKeys: {
@@ -288,7 +288,7 @@ export default {
                     lyric: [
                         {
                             anchor: `your pupil's pupal fly,`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: [
                                     `As I reflect on my feelings for Sasha, I recall our last day together, when I caught my reflection in the`,
@@ -330,7 +330,7 @@ export default {
                         `with you raving over how`,
                         {
                             anchor: `he's getting you`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: [
                                     `Every boy that Sasha crushed on was`,
@@ -662,7 +662,7 @@ export default {
                         `Anyway, I'm feeling healed. Still,`,
                         {
                             anchor: `hugging hurts…`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: `After downplaying my injuries to avoid the humiliation of getting beaten up, I suddenly play them up here to hide my emotional hurt, as I explain to Sasha why I winced when we hugged on that last day.`,
                                 dotKeys: {

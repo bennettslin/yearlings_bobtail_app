@@ -31,14 +31,14 @@ export default {
     mixStartTime: `0:00:00.27`,
     playerReferenceTime: 2498.410,
     playerStartTime: 2496.296,
-    awkwardTodo: true,
+    todo: true,
     overview: `The on-again, off-again years gave me enough distance from my misdeeds to see how emotionally abusive I'd become. But what baffled me is how it had gotten that far to begin with. I tried hard to understand why Sita so willingly endured my cruelty, and I came to see just how thoroughly she'd tied her sense of worth to our relationship. I was fighting for me. She was fighting for us.`,
     lyricUnits: [
         {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                awkwardTodo: true,
+                todo: true,
                 card: {
                     description: [
                         {
@@ -648,7 +648,7 @@ export default {
                         `Come for me? At`,
                         {
                             anchor: `thirty-three?`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: [
                                     `I hated the idea of getting older and often joked about killing myself at`,
@@ -707,7 +707,7 @@ export default {
                         {
                             anchor: `fear of never dying,`,
                             // This might be all I want to say. Just phrase better?
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: `Sita could relate to my fear of immortality. Growing up Hindu in America, she'd compared nirvana with heaven herself and found both lacking. Though she had no ready answers, she invited me to attend Hindu services with her. I was attracted to Hinduism's sprawling pantheon of deities and avatars, which I found to be comforting. It just seemed like the more details there are to learn, the more room there is to get lost in the divine.`,
                                 dotKeys: {
@@ -778,7 +778,7 @@ export default {
                         `And darling, don't you worry, these were only`,
                         {
                             anchor: `practice cuts…`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: `When Sita first noticed the scars on my forearm and asked about them, I replied dryly that they were just for practice. Years later when I expressed concern that she'd tried cutting for herself, she gave me the same assurance. The message was clear that I was the cause in more ways than one.`,
                                 dotKeys: {

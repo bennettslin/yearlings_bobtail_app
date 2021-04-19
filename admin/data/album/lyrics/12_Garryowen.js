@@ -158,7 +158,7 @@ export default {
                         `if you would`,
                         {
                             anchor: `opt for bed not street.`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: [
                                     `I was tired of working countless shifts at the cafeteria, so I decided to stop paying rent for a while by moving out after my lease ended. Instead, I would alternate between spending a few nights with Sita and crashing in the`,
@@ -332,7 +332,7 @@ export default {
                     lyric: [
                         {
                             anchor: `buys your grief`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: `My worlds collided one night when I smashed a random bike in a fit of drunken rage. The bike turned out to belong to a scene kid who liked my music from my earliest days of playing out. He'd related so strongly to my songs about unfulfilled hopes. I was disgusted with myself for having disappointed him.`,
                                 dotKeys: {
@@ -356,7 +356,7 @@ export default {
                         `So the`,
                         {
                             anchor: `celibate you'll play,`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: `Drinking made me impotent and thus impervious to Sita's advances, and so I gladly drank to excess. But not having sex was also purifying in its own right, since this lent the familiar comfort of being my old lovelorn self again.`,
                                 dotKeys: {
@@ -394,7 +394,7 @@ export default {
                         `with`,
                         {
                             anchor: `choler turned up,`,
-                            awkwardTodo: true,
+                            todo: true,
                             cards: [
                                 {
                                     description: `In Hippocratic medicine, choler, or yellow bile, is the humor that induces aggression.`,
@@ -424,7 +424,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                awkwardTodo: true,
+                todo: true,
                 card: {
                     description: [
                         `In traditional`,
@@ -617,7 +617,7 @@ export default {
                     lyric: [
                         {
                             anchor: `Final trip on a tanker,`,
-                            awkwardTodo: true,
+                            todo: true,
                             cards: [
                                 {
                                     description: `I knew that upon starting afresh with someone new, I would need to stay sober for a while. But short of being completely drunk, I could never muster the courage to break up with Sita. So I drank to oblivion each night, hoping to wake up one morning and discover that by some unknown miracle, I was now both newly single and utterly repulsed by the taste of alcohol.`,
@@ -643,7 +643,7 @@ export default {
                         `you'll`,
                         {
                             anchor: `drop your anchor`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: `I'd ascribed every last one of my grievances to Sita for so long that all I felt after the breakup was an eerie serenity. I could finally drop my "anger," and that was tantamount to being happy.`,
                                 dotKeys: {
@@ -758,7 +758,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 // Just confirm.
-                awkwardTodo: true,
+                todo: true,
                 card: {
                     description: [
                         `After some trial and error, I decided the counterpoint in this song sounded best with each part occupying the same register, which allows them to blend together into a single harmonic layer. At the same time, the ear can tease apart the different timbres of each instrument, as is the case with the banjo, fiddle, and`,
@@ -804,7 +804,7 @@ export default {
                         {
                             anchor: `last-ditch alibi.`,
                             // Clarify which meaning of leaving in to leave her.
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: `Though my friends were clearly joking to say it was Garry and not me who'd committed this or that act of vandalism, on some level I accepted it as the truth. And now it also wasn't me who'd sapped Sita of her confidence through the years, finally to leave her a crumbled wreck. It must have been Garry. I wasn't there.`,
                                 dotKeys: {
@@ -848,7 +848,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 // Make sure the sensed my bedroom walls sentence makes sense.
-                awkwardTodo: true,
+                todo: true,
                 card: {
                     description: [
                         `After`,

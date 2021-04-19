@@ -277,7 +277,7 @@ export default {
                         `to live neutered, blissfully`,
                         {
                             anchor: `and orphaned.`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: [
                                     `Being`,
@@ -317,7 +317,7 @@ export default {
                         },
                         {
                             anchor: `earth right now your tourist store…`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: `My mother once filled my head with visions of being a great artist. The mail-order cult then piled on the belief that I was a mere visitor to this planet. The lasting effect on my psyche was that I became unaffected by earthly concerns, preferring instead to work tirelessly "to restore" my "birthright" of artistic renown.`,
                                 dotKeys: {
@@ -411,7 +411,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                awkwardTodo: true,
+                todo: true,
                 card: {
                     description: [
                         `I made this album keeping in mind the`,
@@ -608,7 +608,7 @@ export default {
                         {
                             anchor: `nutshells are rigged,`,
                             // Move sleight of hand back where it was.
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: [
                                     `The`,
@@ -695,7 +695,7 @@ export default {
                         `smugly prepped to`,
                         {
                             anchor: `haze the new latecomers.`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: [
                                     `Some organizations make their new recruits go through degrading`,
@@ -850,7 +850,7 @@ export default {
                         `to watch you`,
                         {
                             anchor: `fail your Sita`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: `Modern audiences may find it disgraceful that Rama's first act upon reuniting with Sita was to demand proof of her purity. My reaction is similar when I look back on my need at the time to be the more sexually experienced partner in the relationship. It baffles me now why I couldn't just be grateful for whatever circumstances first had to happen before Sita finally chose me.`,
                                 dotKeys: {
@@ -888,7 +888,7 @@ export default {
                         `your idol who riled you when you saw that you`,
                         {
                             anchor: `two were tied?`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: `While Sita had hoped for us to be tied in a matrimonial sense, I chafed that we were also tied in a competitive sense. Between the two of us, there were fewer romantic partners in my past, and this felt to me like a threat.`,
                                 dotKeys: {
@@ -1069,7 +1069,7 @@ export default {
                         `could sway you from a`,
                         {
                             anchor: `fairer marathon!`,
-                            awkwardTodo: true,
+                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -1167,7 +1167,7 @@ export default {
                         lyric: [
                             {
                                 anchor: `…traded in`,
-                                awkwardTodo: true,
+                                todo: true,
                                 card: {
                                     description: `Like shiny new "bronzes" placed next to a gold trophy from the past, these other women were never more desirable than Sita in hindsight. They thrilled me most only because I'd won them more recently.`,
                                     dotKeys: {
@@ -1179,7 +1179,7 @@ export default {
                             `for the`,
                             {
                                 anchor: `trophy blondes.`,
-                                awkwardTodo: true,
+                                todo: true,
                                 cards: [
                                     {
                                         description: `To add insult to injury, the women I left Sita for were usually white, which bothered her greatly. In my defense, this wasn't by design, but seeing her loss as my gain, I let her believe the worst.`,
@@ -1214,7 +1214,7 @@ export default {
                         `what's left of what these`,
                         {
                             anchor: `faces you flip override,`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: `My mother would sometimes ask me what happened to the playful little boy she once knew, which made me wonder myself. I think I just learned early on that for any given situation, there's an optimal person to be. Different situations call for being different people, and each new person takes up valuable mental space. At some point, it just didn't make sense to keep an original identity that served no other purpose.`,
                                 dotKeys: {
@@ -1230,7 +1230,7 @@ export default {
                         `and all these`,
                         {
                             anchor: `pages you've ripped`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: `My parents lament my eagerness to ditch past sentiments for present ambitions, as if I'm tearing out old pages from the scrapbook of my life to free up room for new inserts.`,
                                 dotKeys: {
@@ -1261,7 +1261,7 @@ export default {
                         `their`,
                         {
                             anchor: `sun tinkles light`,
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: `In the nightmare, I was now ruler of the neighborhood. I would shower my subjects in urine, their sole means of subsistence. In hindsight, my brain was probably telling me to wake up and use the bathroom.`,
                                 dotKeys: {
@@ -1320,7 +1320,7 @@ export default {
                                 },
                                 `'s sake,`,
                             ],
-                            awkwardTodo: true,
+                            todo: true,
                             card: {
                                 description: `My next five-year plan, like the one before it, was meant to dramatically improve my life through a major overhaul of the underlying system. Since it couldn't be left half completed, there was no point in questioning it while the work was in progress.`,
                                 dotKeys: {
@@ -1348,7 +1348,7 @@ export default {
                 {
                     lyric: {
                         anchor: `old and subservient.`,
-                        awkwardTodo: true,
+                        todo: true,
                         cards: [
                             {
                                 description: `It wasn't until college that I learned to appreciate the sacrifices my parents had made for me and my siblings to lead better lives than their own. But knowing that this awareness came about through assigned coursework, rather than my own lived experiences, only added to my guilt.`,
@@ -1463,7 +1463,7 @@ export default {
                 {
                     lyric: {
                         anchor: `…Maranatha!`,
-                        awkwardTodo: true,
+                        todo: true,
                         card: {
                             description: [
                                 `In my chant, however, the syllables gradually shift to form the holy name of Mara. Unlike Valmiki, who embraced Eastern spirituality, I find salvation in the embrace of Western women. And so my chant ends here with an expression of Western faith. In the`,
@@ -1495,7 +1495,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                awkwardTodo: true,
+                todo: true,
                 card: {
                     description: [
                         `To record the gradual shift from "Rama" to "Mara" in the backing vocals, I made a`,
