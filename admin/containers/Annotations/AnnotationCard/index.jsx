@@ -1,12 +1,12 @@
 // Component to show individual annotation note or all wormholes.
 import React from 'react'
 import PropTypes from 'prop-types'
-import Texts from '../../../../../app/components/Texts'
-import { ORDERED_DOT_KEYS } from '../../../../../app/constants/dots'
+import Texts from '../../../../app/components/Texts'
+import { ORDERED_DOT_KEYS } from '../../../../app/constants/dots'
 import {
     getDescriptionForAnnotationCard,
     getDotKeysForAnnotationCard,
-} from '../../../../../app/api/album/cards'
+} from '../../../../app/api/album/cards'
 
 const AnnotationCard = ({
     songIndex,

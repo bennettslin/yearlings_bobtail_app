@@ -1,60 +1,11 @@
-/* eslint-disable react/prop-types */
 import React, { useEffect } from 'react'
 import cx from 'classnames'
-import AnnotationCards from './AnnotationCards'
-import {
-    getNextGlobalAnnotation,
-    getGlobalAnnotationCount,
-    getGlobalAnnotationDoneCount,
-} from '../../api/album/globalAnnotation'
-import { getTitleForAnnotation } from '../../../app/api/album/annotations'
+import TempGlobalAnnotation from './Annotation'
+// import TempGlobalAnnotationsCounter from './AnnotationsCounter'
 import { getArrayOfLength } from '../../../app/helpers/general'
 import './style'
 
 const INTERVALS_COUNT = 5
-
-const TempGlobalAnnotationsCounter = () => {
-    const percentageDone = parseInt(
-        getGlobalAnnotationDoneCount() / getGlobalAnnotationCount() * 100,
-    )
-    return (
-        <div className="TempGlobalAnnotationsCounter">
-            <div className="TempGlobalAnnotation__header">
-                {getGlobalAnnotationDoneCount()} / {getGlobalAnnotationCount()} ({percentageDone}%) done!
-            </div>
-        </div>
-    )
-}
-
-const TempGlobalAnnotation = ({ intervalIndex }) => {
-    const {
-        songIndex,
-        annotationIndex,
-        globalIndex,
-
-    } = getNextGlobalAnnotation({
-        intervalIndex,
-        count: INTERVALS_COUNT,
-    })
-
-    if (!songIndex || !annotationIndex) {
-        return null
-    }
-
-    const annotationTitle = getTitleForAnnotation(songIndex, annotationIndex)
-
-    return (
-        <div className="TempGlobalAnnotation">
-            {/* {true && JSON.stringify(annotationObject)} */}
-
-            <div className="TempGlobalAnnotation__header">
-                {globalIndex}. {annotationTitle}
-            </div>
-
-            <AnnotationCards {...{ songIndex, annotationIndex }} />
-        </div>
-    )
-}
 
 const TempGlobalAnnotations = () => {
     useEffect(() => {
@@ -70,7 +21,7 @@ const TempGlobalAnnotations = () => {
                 ),
             }}
         >
-            <TempGlobalAnnotationsCounter />
+            {/* <TempGlobalAnnotationsCounter /> */}
             {getArrayOfLength(INTERVALS_COUNT).map(intervalIndex => (
                 <TempGlobalAnnotation
                     {...{
