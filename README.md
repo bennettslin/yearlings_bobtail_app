@@ -18,7 +18,7 @@ npm run stage
 
 ## Release
 
-Build and deploy candidate release. Includes admin routes.
+Build and deploy candidate release. Includes admin pages.
 
 ```
 npm run release:candidate
@@ -30,7 +30,7 @@ Build and deploy delivery release. Reflects production.
 npm run release:delivery
 ```
 
-Build and deploy production release. This script does not empty the S3 bucket prior to deployment because the previous files may still be needed while CloudFront takes its time to propagate.
+Build and deploy production release.
 
 ```
 npm run release:production

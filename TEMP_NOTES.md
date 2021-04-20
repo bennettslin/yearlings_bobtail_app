@@ -1,8 +1,7 @@
 # Bug
-* Loading pitch page is broken in production.
+* Loading pitch page is broken in production? Check after CloudFront updates.
 
 # TODO
-* Figure out AWS S3 buckets.
 * Make Garryowen a ghost?
 * Hawaiian ornament
 * Potted plants in bedroom
