@@ -1,17 +1,20 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import cx from 'classnames'
+import Button from '../../../../app/components/Button'
 import {
     getGlobalAnnotationCount,
     getGlobalAnnotationDoneCount,
 } from '../../../api/album/globalAnnotation'
 
-const GlobalCounter = () => {
+const GlobalCounter = ({ toggleShowTodos }) => {
     const
         totalCount = getGlobalAnnotationCount(),
         todoCount = totalCount - getGlobalAnnotationDoneCount(),
         percentage = parseInt(
             todoCount / totalCount * 100,
         )
+
     return (
         <div
             {...{
@@ -19,12 +22,27 @@ const GlobalCounter = () => {
                     'TempGlobalCounter',
                     'textShadow__light',
                     'Rancho',
+                    'fCC',
                 ),
             }}
         >
-            {todoCount} / {totalCount} ({percentage}%)
+            <span>
+                {todoCount} / {totalCount} ({percentage}%)
+            </span>
+            <Button
+                {...{
+                    // This gives it the wormhole colour styling.
+                    className: 'TempGlobalCounter__button',
+                    buttonName: 'TempGlobalCounter__button',
+                    handleButtonClick: toggleShowTodos,
+                }}
+            />
         </div>
     )
+}
+
+GlobalCounter.propTypes = {
+    toggleShowTodos: PropTypes.func.isRequired,
 }
 
 export default GlobalCounter

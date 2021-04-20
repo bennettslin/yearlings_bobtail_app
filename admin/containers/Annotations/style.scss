@@ -32,6 +32,11 @@ $width__tempGlobalAnnotationColumn:
     display: flex;
 }
 
+.TempGlobalCounter,
+.TempGlobalHeader {
+    z-index: 100;
+}
+
 .TempGlobalCounter {
     position: fixed;
     bottom: 0;
@@ -42,10 +47,14 @@ $width__tempGlobalAnnotationColumn:
     font-size: $fontSize__tempGlobal;
 }
 
+.TempGlobalCounter__button {
+    margin-left: 5px;
+    background-color: #bff;
+}
+
 .TempGlobalHeader {
     height: $height__globalHeader;
     font-size: $fontSize__tempGlobal;
-    z-index: 100;
 }
 
 .TempGlobalColumns {
@@ -62,6 +71,7 @@ $width__tempGlobalAnnotationColumn:
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-width: $width__tempGlobalAnnotationColumn;
     padding: $padding__tempGlobalAnnotationSongColumn;
     padding-top:
         $height__globalHeader

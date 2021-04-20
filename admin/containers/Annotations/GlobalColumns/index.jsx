@@ -1,10 +1,11 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import cx from 'classnames'
 import AnnotationSongColumn from '../AnnotationSongColumn'
 import { getArrayOfLength } from '../../../../app/helpers/general'
 import { getSongsNotLoguesCount } from '../../../../app/api/album/songs'
 
-const TempGlobalColumns = () => {
+const TempGlobalColumns = ({ showTodos }) => {
     return (
         <div
             {...{
@@ -20,11 +21,16 @@ const TempGlobalColumns = () => {
                     {...{
                         key: index,
                         songIndex: index + 1,
+                        showTodos,
                     }}
                 />
             ))}
         </div>
     )
+}
+
+TempGlobalColumns.propTypes = {
+    showTodos: PropTypes.bool.isRequired,
 }
 
 export default TempGlobalColumns

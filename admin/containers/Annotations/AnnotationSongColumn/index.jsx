@@ -8,7 +8,7 @@ import {
 import { getSongsNotLoguesCount } from '../../../../app/api/album/songs'
 import { getWindowStorage } from '../../../../app/utils/storage'
 
-const AnnotationSongColumn = ({ songIndex }) => {
+const AnnotationSongColumn = ({ songIndex, showTodos }) => {
     const
         songColumnElement = useRef(),
         hue = (songIndex - 1) / getSongsNotLoguesCount() * 360
@@ -54,6 +54,7 @@ const AnnotationSongColumn = ({ songIndex }) => {
             {getAnnotationIndices(songIndex)
                 .filter(annotationIndex => (
                     // Only show annotations left todo.
+                    showTodos ||
                     getTodoForAnnotation(songIndex, annotationIndex)
                 ))
                 .map(annotationIndex => (
@@ -72,6 +73,7 @@ const AnnotationSongColumn = ({ songIndex }) => {
 
 AnnotationSongColumn.propTypes = {
     songIndex: PropTypes.number.isRequired,
+    showTodos: PropTypes.bool.isRequired,
 }
 
 export default AnnotationSongColumn

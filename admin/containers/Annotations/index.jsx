@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import cx from 'classnames'
 import GlobalCounter from './GlobalCounter'
 import GlobalHeader from './GlobalHeader'
@@ -6,6 +6,12 @@ import GlobalColumns from './GlobalColumns'
 import './style'
 
 const TempGlobalAnnotations = () => {
+    const [showTodos, setShowTodos] = useState(false)
+
+    const toggleShowTodos = () => {
+        setShowTodos(!showTodos)
+    }
+
     useEffect(() => {
         logMount('Annotations')
     }, [])
@@ -19,9 +25,9 @@ const TempGlobalAnnotations = () => {
                 ),
             }}
         >
-            <GlobalColumns />
+            <GlobalColumns {...{ showTodos }} />
             <GlobalHeader />
-            <GlobalCounter />
+            <GlobalCounter {...{ toggleShowTodos }} />
         </div>
     )
 }
