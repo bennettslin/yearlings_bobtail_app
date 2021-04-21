@@ -1,5 +1,6 @@
 # Bug
-* Loading pitch page is broken in production? Check after CloudFront updates.
+* All page paths are broken in CloudFront.
+    * Changed candidate default root object from index.html to blank.
 
 # TODO
 * Make Garryowen a ghost?
