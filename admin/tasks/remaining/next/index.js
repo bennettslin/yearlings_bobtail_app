@@ -1,6 +1,12 @@
 export default [
     // Next.
     {
+        taskName: `S3, CloudFront, Gatsby work.`,
+        workedHours: 2,
+        neededHours: 10,
+    },
+
+    {
         taskName: `Audit scenes.`,
         workedHours: 2,
         neededHours: 3,
