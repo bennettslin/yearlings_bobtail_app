@@ -38,6 +38,10 @@ export const wrapRootElement = ({ element }) => {
             window,
         })
 
+    console.log('wrap root element')
+    console.log('pathname', pathname)
+    console.log('search', search)
+
     if (getNeedsStoreProvider(pathname)) {
         const store = createStore(
             getReducers({
@@ -70,6 +74,9 @@ export const wrapPageElement = ({ element }) => {
             element,
             window,
         })
+
+    console.log('wrap page element')
+    console.log('pathname', pathname)
 
     if (getNeedsAlbumContext(pathname)) {
         return (

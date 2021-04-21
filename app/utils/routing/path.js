@@ -28,10 +28,17 @@ export const getParsedLocation = ({
         pathname: windowPathname,
         search: windowSearch,
     } = {} } = {},
-}) => ({
-    pathname: getPathname(elementPathname || windowPathname),
-    search: elementSearch || windowSearch,
-})
+}) => {
+    console.log('elementPathname', elementPathname)
+    console.log('elementSearch', elementSearch)
+    console.log('windowPathname', windowPathname)
+    console.log('windowSearch', windowSearch)
+
+    return ({
+        pathname: getPathname(elementPathname || windowPathname),
+        search: elementSearch || windowSearch,
+    })
+}
 
 export const getIndexFromPath = pathname => (
     // Remove all non-digits.
