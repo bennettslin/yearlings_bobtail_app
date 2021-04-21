@@ -1,12 +1,21 @@
 import React, { useEffect, useState } from 'react'
 import cx from 'classnames'
+import { useSelector } from 'react-redux'
+import scrollIntoView from 'scroll-into-view'
 import GlobalCounter from './GlobalCounter'
 import GlobalHeader from './GlobalHeader'
 import GlobalColumns from './GlobalColumns'
+import {
+    mapSelectedAnnotationIndex,
+    mapSelectedSongIndex,
+} from '../../../app/redux/selected/selector'
 import './style'
 
 const TempGlobalAnnotations = () => {
-    const [showTodos, setShowTodos] = useState(false)
+    const
+        selectedSongIndex = useSelector(mapSelectedSongIndex),
+        selectedAnnotationIndex = useSelector(mapSelectedAnnotationIndex),
+        [showTodos, setShowTodos] = useState(false)
 
     const toggleShowTodos = () => {
         setShowTodos(!showTodos)
@@ -14,6 +23,16 @@ const TempGlobalAnnotations = () => {
 
     useEffect(() => {
         logMount('Annotations')
+
+        if (selectedSongIndex && selectedAnnotationIndex) {
+            const element = document.querySelector(
+                `.TempGlobalAnnotation-${selectedSongIndex}-${selectedAnnotationIndex}`,
+            )
+
+            setTimeout(() => {
+                scrollIntoView(element, { time: 100 })
+            }, 1000)
+        }
     }, [])
 
     return (
