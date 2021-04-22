@@ -128,6 +128,7 @@ export const THINGS_BENNETT_COUCH_RUBIKS = {
             yIndex: 1,
             xPosition: 8.5,
             zOffset: 1.5,
+            counterpart: PROGRESS_CHART_LATE,
         },
     },
 }
@@ -138,6 +139,7 @@ export const THINGS_BENNETT_COUCH_READING = {
             yIndex: 1,
             xPosition: 8.5,
             zOffset: 1.5,
+            counterpart: PROGRESS_CHART_EARLY,
         },
     },
     [FIXTURE]: {
