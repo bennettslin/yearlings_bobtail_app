@@ -1,6 +1,7 @@
 # Bug
 * All page paths are broken in CloudFront.
     * Changed candidate default root object from index.html to blank.
+* Annotation title selected loses drop shadow
 
 # TODO
 * Make Garryowen a ghost?
@@ -24,7 +25,6 @@
 * Be smarter about memo.
 
 # Annotation edit TODO:
-* Match seventy years to 100,000th dream
 * Whimpering Oh Catherine?
 * Willy sparkles?
 * Carpenters thing?

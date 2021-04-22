@@ -33,10 +33,12 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
-                    description: `I read once that we typically have four dreams per night. Over a lifetime, that's about a hundred thousand dreams. So this song is about the very last dream I'll ever dream.`,
+                    description: `This is the second song on the album that was an original Yearlings staple, and also the only one I ever wrote for Sita while we were together. I suppose it's telling of our relationship that my one romantic song for her was about the dreams that would plague me as an old man filled with regret for having lost her. Anyway, as with "M," I changed the musical arrangement but kept the original lyrics.`,
                     dotKeys: {
-                        [OBSERVATION]: true,
+                        [BACKSTORY]: true,
+                        [SONGCRAFT]: true,
                     },
                 },
             },
@@ -57,7 +59,14 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: `This is the second song on the album that was an original Yearlings staple. It might be telling that during the time Sita and I were together, the one song I wrote for her was about the regret I'd feel as an old man for having lost her. As with "M," I changed the musical arrangement but kept the original lyrics.`,
+                    description: [
+                        `During the years afterward when I was trying to be good again, I kept digging further into my past to figure out where things went wrong. So for this song, I decided to revisit the sonic textures of all the other songs on the album in reverse, starting with the`,
+                        {
+                            anchor: `piano`,
+                            wiki: `Piano`,
+                        },
+                        `from "Vegan Proclamation."`,
+                    ],
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGCRAFT]: true,
@@ -72,7 +81,28 @@ export default {
             mainVerses: [
                 {
                     mixTime: `0:16:00.00`,
-                    lyric: `My hundred thousandth dream, I bumped into my Sita.`,
+                    lyric: [
+                        `My`,
+                        {
+                            anchor: `hundred thousandth dream,`,
+                            cards: [
+                                {
+                                    description: `I read once that we typically have four dreams per night. Over a lifetime of seventy years, that's about a hundred thousand dreams. So here I am, dreaming the very last dream I'll ever dream.`,
+                                    dotKeys: {
+                                        [NARRATIVE]: true,
+                                        [OBSERVATION]: true,
+                                    },
+                                },
+                                {
+                                    wormhole: {
+                                        wormholeKey: `seventy_years`,
+                                        wormholePrefix: FORESHADOW_OF_WORMHOLE_PREFIX,
+                                    },
+                                },
+                            ],
+                        },
+                        `I bumped into my Sita.`,
+                    ],
                 },
                 {
                     mixTime: `0:22:06.66`,
@@ -114,15 +144,9 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `During the years afterward when I was trying to be good again, I kept digging further into my past to figure out where things went wrong. So for this song, I decided to revisit the sonic textures of all the other songs on the album in reverse. We start with the`,
-                        {
-                            anchor: `piano`,
-                            wiki: `Piano`,
-                        },
-                        `from "Vegan Proclamation," then segue into the arpeggiated chords from "Cremated," followed by the slide guitar and natural harmonics from "On a Golden Cord."`,
+                        `We segue into the arpeggiated chords from "Cremated," followed by the slide guitar and natural harmonics from "On a Golden Cord."`,
                     ],
                     dotKeys: {
-                        [BACKSTORY]: true,
                         [SONGCRAFT]: true,
                     },
                 },
