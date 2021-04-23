@@ -414,7 +414,7 @@ export default {
                 todo: true,
                 card: {
                     description: [
-                        `I made this album keeping in mind the`,
+                        `For this album, I kept in mind the`,
                         {
                             anchor: `Kinks'`,
                             wiki: `The_Kinks`,
@@ -423,7 +423,7 @@ export default {
                             anchor: `Village Green Preservation Society`,
                             wiki: `The_Kinks_Are_the_Village_Green_Preservation_Society`,
                         },
-                        `as my model. The songs had to be memorable pop tunes, contain zero filler, and represent a diversity of musical styles. And each one would clock in at three minutes or so, with none over four. While there was no one-to-one mapping, this song was clearly the`,
+                        `as my model. The songs needed to be memorable pop tunes, contain zero filler, and represent a diversity of musical styles. And each one would clock in at three minutes or so, with none over four. While there was no one-to-one mapping, this song was clearly the`,
                         {
                             anchor: `"Wicked Annabella"`,
                             wiki: `Wicked_Annabella`,
