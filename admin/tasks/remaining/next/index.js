@@ -6,8 +6,7 @@ export default [
     },
     {
         taskName: `S3, CloudFront, Gatsby work.`,
-        workedHours: 2,
-        neededHours: 10,
+        workedHours: 5,
     },
 
     {
@@ -30,7 +29,7 @@ export default [
     },
     {
         taskName: `Face fixes.`,
-        workedHours: 11,
+        workedHours: 12,
     },
     {
         taskName: `Lyric and annotation audits.`,

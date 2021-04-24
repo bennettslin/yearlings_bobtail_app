@@ -19,11 +19,6 @@ export default [
         neededHours: 5,
     },
     {
-        taskName: `Look into s3 versioning.`,
-        workedHours: 0,
-        neededHours: 3,
-    },
-    {
         taskName: `Handle slider hover through state?`,
         workedHours: 0,
         neededHours: 10,

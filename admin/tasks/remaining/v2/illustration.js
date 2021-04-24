@@ -15,11 +15,6 @@ export default [
         neededHours: 1,
     },
     {
-        taskName: `Young children heads and other edits.`,
-        workedHours: 1,
-        neededHours: 5,
-    },
-    {
         taskName: `Make road floors have path colour?`,
         workedHours: 0,
         neededHours: 1,

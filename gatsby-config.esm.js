@@ -1,6 +1,7 @@
 import {
     getFaviconFileName,
     getIsProductionBuild,
+    getS3BucketName,
 } from './app/utils/server'
 import {
     GA_ACCOUNT__STAGING,
@@ -52,6 +53,12 @@ export default {
         `gatsby-plugin-react-helmet`,
         `gatsby-plugin-remove-trailing-slashes`,
         `gatsby-plugin-sass`,
+        {
+            resolve: `gatsby-plugin-s3`,
+            options: {
+                bucketName: getS3BucketName(),
+            },
+        },
         {
             resolve: `gatsby-plugin-webpack-bundle-analyzer`,
             options: {
