@@ -6,7 +6,7 @@ const PreviewerDescription = ({
     kilobytes,
     presenceKey,
     scaleFactor,
-    sharedStyle,
+    // sharedStyle,
     hideInMobile,
     className,
 
@@ -36,7 +36,7 @@ const PreviewerDescription = ({
             >
                 {presenceKey}
             </div>
-            <div
+            {/* <div
                 {...{
                     className: cx(
                         'PreviewerDescription__sharedStyles',
@@ -53,7 +53,7 @@ const PreviewerDescription = ({
                         </div>
                     ))
                 )}
-            </div>
+            </div> */}
             {Boolean(scaleFactor) && (
                 <div
                     {...{

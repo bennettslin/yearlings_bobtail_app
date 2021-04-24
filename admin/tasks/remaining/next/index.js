@@ -30,7 +30,7 @@ export default [
     },
     {
         taskName: `Face fixes.`,
-        workedHours: 10,
+        workedHours: 11,
     },
     {
         taskName: `Lyric and annotation audits.`,

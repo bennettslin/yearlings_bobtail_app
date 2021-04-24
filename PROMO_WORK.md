@@ -1,12 +1,5 @@
 # Promo work!
 
-## Proofread
-* Make Word document for Wade
-
-## Grounding
-* Review all Goodreads books (/)
-* Browse Internet for general wisdom
-
 ## Personal contacts
 * Friends
     * Adam Cohn
