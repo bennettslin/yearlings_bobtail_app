@@ -1,7 +1,5 @@
 # Promo work!
 
-## Separate notes folder
-
 ## Scrub identity
 
 ## Feedback
