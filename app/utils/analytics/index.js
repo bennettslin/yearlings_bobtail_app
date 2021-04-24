@@ -1,11 +1,11 @@
+import { getDateTimeForGa } from '../build'
+import { getHashedIp } from '../ip'
+import { getTimeDifference } from '../logger/helpers/time'
 import { GA_ACCOUNT__STAGING } from '../../constants/analytics'
 import { IS_TOUCH_SUPPORTED, IS_USER_AGENT_DESKTOP } from '../../constants/device'
 import {
     BROWSER_NAME, BROWSER_VERSION, ENGINE_NAME, ENGINE_VERSION, OS_NAME, OS_VERSION, PLATFORM_TYPE, PLATFORM_VENDOR,
 } from '../device'
-import { getDateTimeForGa } from '../build'
-import { getHashedIp } from '../ip'
-import { getTimeDifference } from '../logger/helpers/time'
 
 /**
  * NOTE: This is kind of a quick workaround for now, to delay the initial GA

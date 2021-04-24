@@ -77,9 +77,7 @@ const AnnotationTitle = ({
                     'bgColour__annotation__pattern__reverse',
 
                     isSelected && 'bgColour__annotation__selected',
-                    isSelected ?
-                        'boxShadow__annotationTab__selected' :
-                        'boxShadow__annotationTab',
+                    'boxShadow__annotationTab',
                 ),
             }}
         >

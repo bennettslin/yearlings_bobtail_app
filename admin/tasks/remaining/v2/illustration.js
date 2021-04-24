@@ -1,5 +1,15 @@
 export default [
     {
+        taskName: `Hawaiian ornament.`,
+        workedHours: 0,
+        neededHours: 2,
+    },
+    {
+        taskName: `Potted plants and potting tools in bedroom.`,
+        workedHours: 0,
+        neededHours: 4,
+    },
+    {
         taskName: `Constellation shadows.`,
         workedHours: 0,
         neededHours: 10,

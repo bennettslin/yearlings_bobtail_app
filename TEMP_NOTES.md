@@ -1,19 +1,12 @@
 # Bug
-* All page paths are broken in CloudFront.
-    * Changed candidate default root object from index.html to blank.
-* Annotation title selected loses drop shadow
 
 # TODO
-* Make Garryowen a ghost?
-* Hawaiian ornament
-* Potted plants in bedroom
 * Clarify logState labels?
 * Don't make menu move.
 * Audio shortcuts?
     * Make similar to Spotify.
 * Tips and audio options send analytics with desktop to mobile resize?
 * Take care of IP errors. (Maybe it will be fine in production?)
-* Freeway panel.
 * Delay presence exit opacity transitions for non-opacity transitions.
 * Only prolong realistic presence transitions on enter, not exit.
 * Delay cubes for presence transition exit. Need to first calculate presence exit transition times.

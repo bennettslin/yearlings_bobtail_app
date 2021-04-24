@@ -5131,4 +5131,8 @@ export default [
         taskName: `Latest bug fixes.`,
         workedHours: 4,
     },
+    {
+        taskName: `Update BY website with YB work.`,
+        workedHours: 1,
+    },
 ]

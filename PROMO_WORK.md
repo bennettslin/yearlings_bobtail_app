@@ -1,5 +1,14 @@
 # Promo work!
 
+## Separate notes folder
+
+## Scrub identity
+
+## Feedback
+* Wade, Chris, Stephanie
+* Ashley
+* Jeff
+
 ## Personal contacts
 * Friends
     * Adam Cohn
