@@ -473,7 +473,7 @@ export default {
                             todo: true,
                             cards: [
                                 {
-                                    description: `The first time I had sex with a woman other than Sita, I left the used condom on my nightstand for days. Like a proud parent bronzing their baby's shoes, I was just awestruck that this tiny thing I'd squirted out had grown into something so much bigger.`,
+                                    description: `The first time I had sex with a woman other than Sita, I left the used condom on my nightstand for days. Like a proud parent who bronzes their baby's shoes, I was just awestruck that this tiny thing I'd squirted out had grown into something so much bigger.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [OBSERVATION]: true,

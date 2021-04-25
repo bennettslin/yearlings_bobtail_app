@@ -364,7 +364,7 @@ export default {
                                         anchor: `feeder fish`,
                                         wiki: `Feeder_fish`,
                                     },
-                                    `is deceptive, since the ones least fit to be sold as prey end up living the longest. In retrospect, high school worked the same way. All the time I spent focusing on pet projects had left me unfit to defend my place in the social hierarchy, but the artistic skills I developed as a result were what kept me from being eaten alive in the real world.`,
+                                    `is deceptive, since the ones least fit to be sold as prey end up living the longest. In retrospect, high school worked the same way. All the time I spent focusing on pet projects had left me unfit to defend my place in the social hierarchy, but the artistic skills I developed as a result are what kept me from being eaten alive in the real world.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -510,7 +510,7 @@ export default {
                             anchor: `fine when you had none.`,
                             todo: true,
                             card: {
-                                description: `Things were finally looking up, so it baffled me to be as bitter as ever. I suspect I felt indignant for my younger self, who'd been kept in the dark for so long about how much better life could be.`,
+                                description: `Things were finally looking up, so it baffled me to be more bitter than ever. I suspect it's because I felt indignant for my younger self, who'd been kept in the dark for so long about how much better life could be.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -605,7 +605,6 @@ export default {
                     lyric: [
                         {
                             anchor: `peasant discontented`,
-                            todo: true,
                             card: {
                                 description: [
                                     `The better life got, the more unsatisfied I became. I was like the peasants of the`,
@@ -613,7 +612,7 @@ export default {
                                         anchor: `French Revolution,`,
                                         wiki: `French_Revolution`,
                                     },
-                                    `who were so downtrodden that every attempt made by the ruling elite to appease them only backfired. Not only did they grumble at such paltry improvements to their lives, but they were then emboldened to make further demands.`,
+                                    `who were so downtrodden that every attempt by the ruling elite to appease them only backfired. Not only did they grumble at such paltry improvements to their lives, but they were then further emboldened to make demands.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,

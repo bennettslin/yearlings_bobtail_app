@@ -15,15 +15,19 @@
 
 ## Gathering leads
 * Previous contacts
-* Individuals
-    * Steven Hyden
-    * Ryan Holiday
 * Record labels
 * Music press (every reporter)
+    * Individuals
+        * Steven Hyden
 * Other press (every reporter)
+    * Individuals
+        * Matt Yglesias
 * Asian-American
 * Literature
 * Frontend development
+* PR firms
+    * Individuals
+        * Ryan Holiday
 
 ## Email
 * General wording

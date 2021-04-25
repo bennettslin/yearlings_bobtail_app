@@ -286,7 +286,7 @@ export default {
                             anchor: `first pets`,
                             todo: true,
                             card: {
-                                description: `It blew my mind that I could hurt Sita for so long and still live with myself. In hindsight, it's because I didn't question the facade of sanity she'd constructed as a means to cope. I allowed myself to believe that our recurring moments of intimacy, which she clung to and cherished as if that's how it always was, were truly all she needed.`,
+                                description: `It blew my mind that I could hurt Sita for so long and still live with myself. In hindsight, it's because I never questioned the facade of sanity she'd constructed as a means to cope. I'd allowed myself to believe that our recurring moments of intimacy, which she clung to and cherished as if that's how it always was, were truly all she needed.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

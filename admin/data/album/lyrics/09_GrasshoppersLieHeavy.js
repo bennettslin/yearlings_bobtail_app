@@ -558,7 +558,7 @@ export default {
                             anchor: `no convert's missed,`,
                             todo: true,
                             card: {
-                                description: `In asking for the largest payments upfront, RI Research correctly guessed that I would grow disillusioned sooner rather than later. Sita's abrupt departure from my life, after making such a profound impact, seemed like evidence that I was once again a sucker for the perfect scam.`,
+                                description: `In asking for the largest payments upfront, RI Research correctly guessed that I would grow disillusioned sooner rather than later. Sita's abrupt departure from my life, after having made such a profound impact, seemed like evidence that I was once again a sucker for the perfect scam.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
