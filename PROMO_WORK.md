@@ -1,7 +1,5 @@
 # Promo work!
 
-## Scrub identity
-
 ## Feedback
 * Wade, Chris, Stephanie
 * Ashley

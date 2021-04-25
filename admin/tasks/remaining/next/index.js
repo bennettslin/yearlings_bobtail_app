@@ -2,11 +2,7 @@ export default [
     // Next.
     {
         taskName: `Promo work.`,
-        workedHours: 5,
-    },
-    {
-        taskName: `S3, CloudFront, Gatsby work.`,
-        workedHours: 5,
+        workedHours: 10,
     },
 
     {

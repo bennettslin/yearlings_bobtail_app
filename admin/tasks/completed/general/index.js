@@ -5135,4 +5135,8 @@ export default [
         taskName: `Update BY website with YB work.`,
         workedHours: 1,
     },
+    {
+        taskName: `S3, CloudFront, Gatsby work.`,
+        workedHours: 5,
+    },
 ]
