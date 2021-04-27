@@ -1,36 +1,7 @@
-# Promo work!
+# Promo work
+* Create promo pages
+    * Onesheet
+    * Reviews
+* Create promo paths
 
-## Feedback
-* Wade, Chris, Stephanie
-* Ashley
-* Jeff
-
-## Personal contacts
-* Friends
-    * Adam Cohn
-    * Charles Yu
-    * Thomas Deneuville
-    * Louise Barder
-* Facebook
-
-## Gathering leads
-* Previous contacts
-* Record labels
-* Music press (every reporter)
-    * Individuals
-        * Steven Hyden
-* Other press (every reporter)
-    * Individuals
-        * Matt Yglesias
-* Asian-American
-* Literature
-* Frontend development
-* PR firms
-    * Individuals
-        * Ryan Holiday
-
-## Email
-* General wording
-
-## Further PR?
-* PR firms
+* Best way to show pitch and promo.
