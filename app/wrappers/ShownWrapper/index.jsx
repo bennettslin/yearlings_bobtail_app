@@ -29,6 +29,7 @@ import {
     mapIsLyricExpanded,
     mapIsDotsSlideShown,
 } from '../../redux/toggle/selector'
+import './style'
 
 const ShownWrapper = ({ didMount, children }) => {
     const

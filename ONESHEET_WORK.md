@@ -7,7 +7,8 @@
 # One page
 * 500 words
 
-* Intro
+* Ambition
+    * Hip hop, Pulitzer
 
 * Narrative
     * Coming-of-age story
@@ -19,13 +20,13 @@
     * Five-year plan, first love
     * Local band, ego, losing love
 
-* Ambition to be a literary masterpiece.
+* Literary ambition
     * James Joyce's *Ulysses*
     * Doublespeaker rhyme ("Odin", "On a Golden Cord," and "Cremated")
     * Stream of consciousness ("Good Night, Sita" and "Constellations!")
     * Meta-reference ("Grasshoppers Lie Heavy")
 
-* Ambition to be a musical masterpiece.
+* Musical ambition
     * *Pet Sounds*, *Sgt. Pepper's*, *Village Green Preservation Society*
     * Double album, diversity of musical styles
     * Melody and harmony, pop tunes

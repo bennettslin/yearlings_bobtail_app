@@ -22,7 +22,6 @@ import {
 } from '../../redux/focus/selector'
 import { mapIsAboutShown, mapIsPitchShown } from '../../redux/toggle/selector'
 import { mapCanSliderMount } from '../../redux/viewport/selector'
-import './style'
 
 const RootContainer = () => {
     const
@@ -90,9 +89,10 @@ const RootContainer = () => {
                 ref: rootContainerElement,
                 className: cx(
                     'RootContainer',
+                    'rootContainer',
+                    'PtSansNarrow',
                     'abF',
                     'ovH',
-                    'PtSansNarrow',
                 ),
                 tabIndex: -1,
                 onClick,

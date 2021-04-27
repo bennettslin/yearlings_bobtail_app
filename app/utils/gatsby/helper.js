@@ -3,9 +3,10 @@ import {
     getPitchReducers,
 } from '../../redux'
 import {
+    getIsStorePath,
     getIsValidAdminPath,
     getIsValidPitchPagePath,
-    getIsStorePath,
+    getIsValidPromoPagePath,
 } from '../routing/path'
 import {
     getIsServerSide,
@@ -18,6 +19,16 @@ export const getIsPitchPage = pathname => (
     /**
      * Ensure that we are not in the pitch popup, since it will also show the
      * Pitch pathname while it is open.
+     */
+    !getIsAlbumSession()
+)
+
+export const getIsPromoPage = pathname => (
+    getIsValidPromoPagePath(pathname) &&
+
+    /**
+     * Ensure that we are not in the promo popup, since it will also show the
+     * Promo pathname while it is open.
      */
     !getIsAlbumSession()
 )
@@ -56,5 +67,6 @@ export const getReducers = ({
 
 export const getNeedsAlbumContext = pathname => (
     !getIsPitchPage(pathname) &&
+    !getIsPromoPage(pathname) &&
     !getIsValidAdminPath(pathname)
 )

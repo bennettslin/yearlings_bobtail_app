@@ -1,14 +1,10 @@
 import { getIsPitchSegmentValid } from '../../api/pitch/segments'
-import { PITCH_PATH } from '../../constants/routing'
-
-const VALID_ADMIN_PATHS = {
-    actors: true,
-    annotations: true,
-    previewer: true,
-    progress: true,
-    skies: true,
-    things: true,
-}
+import {
+    PITCH_PATH,
+    PROMO_PATH,
+    VALID_ADMIN_PATHS,
+    VALID_PROMO_CHILD_PATHS,
+} from '../../constants/routing'
 
 const getPathname = (pathname = '') => (
     pathname
@@ -74,4 +70,12 @@ export const getIsValidPitchPagePath = pathname => (
 
     // Or if it's a valid pitch index path.
     Number.isFinite(getValidPitchIndex(pathname))
+)
+
+export const getIsValidPromoPagePath = pathname => (
+    // It's valid if it's the promo root path...
+    pathname === PROMO_PATH ||
+
+    // Or if it's a promo child page.
+    VALID_PROMO_CHILD_PATHS[pathname.replace(`${PROMO_PATH}/`, '')]
 )

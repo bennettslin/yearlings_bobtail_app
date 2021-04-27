@@ -7,10 +7,11 @@ import AlbumContainer from '../../containers/Album'
 import LoadingContainer from '../../containers/Loading'
 import PitchContainer from '../../containers/Pitch'
 import {
-    getReducers,
     getIsPitchPage,
+    getIsPromoPage,
     getNeedsAlbumContext,
     getNeedsStoreProvider,
+    getReducers,
 } from './helper'
 import { getIsServerSide, getWindow } from '../browser'
 import { getParsedLocation } from '../routing/path'
@@ -78,6 +79,12 @@ export const wrapPageElement = ({ element }) => {
             </AlbumContainer>
         )
     } else if (getIsPitchPage(pathname)) {
+        return (
+            <PitchContainer>
+                {element}
+            </PitchContainer>
+        )
+    } else if (getIsPromoPage(pathname)) {
         return (
             <PitchContainer>
                 {element}

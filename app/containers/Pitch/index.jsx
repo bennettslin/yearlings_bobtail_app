@@ -19,7 +19,6 @@ import DeviceWrapper from '../../wrappers/DeviceWrapper'
 import AccessWrapper from '../../wrappers/AccessWrapper'
 import ResizeManager from '../../managers/Resize'
 import { ALBUM_TITLE } from '../../constants/paths'
-import './style'
 
 const PitchContainer = ({ children }) => {
     const
@@ -104,12 +103,11 @@ const PitchContainer = ({ children }) => {
                 ref: pitchContainerElement,
                 className: cx(
                     'PitchContainer',
-
-                    // Inherit root container styling.
-                    'RootContainer',
+                    'hybridContainer',
+                    'rootContainer',
+                    'PtSansNarrow',
                     'abF',
                     'fCC',
-                    'PtSansNarrow',
                 ),
                 onClick,
                 onKeyDown,

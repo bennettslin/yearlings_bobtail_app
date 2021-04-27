@@ -1,7 +1,7 @@
-@import '../../scss/constants/colour';
-@import '../../scss/constants/icon';
+@import '../constants/colour';
+@import '../constants/icon';
 
-.PitchContainer {
+.hybridContainer {
     flex-direction: column;
 
     padding-left: $margin__thick;
