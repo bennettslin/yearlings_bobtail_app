@@ -122,7 +122,7 @@ export default {
                         {
                             anchor: `bookless room,`,
                             card: {
-                                description: `Glancing around my room one night, Catherine remarked that she didn't see any books. "I don't read," I explained, only partly in jest.`,
+                                description: `When Catherine visited my apartment for the first time, she glanced around and remarked that she didn't see any books. "I don't read," I explained, only partly in jest.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -152,7 +152,7 @@ export default {
                                             wiki: `Ulysses_(novel)`,
                                         },
                                     },
-                                    `which Catherine was reading at the time. That night was probably the beginning of the end, as Catherine figured that a boyfriend who didn't read for pleasure would be the death of her.`,
+                                    `which Catherine was reading at the time. My playful comment about not reading probably doomed the relationship, as Catherine figured that an illiterate boyfriend would surely be the death of her.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
