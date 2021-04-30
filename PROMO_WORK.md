@@ -1,4 +1,5 @@
 # Promo work
+* Figure out state
 * Extract Hybrid Header
 * Make hybrid popup
 * Make hybrid scroll container
@@ -11,6 +12,5 @@
 * Create onesheet page
     * Selects song in popup
     * Opens song in new tab in page
-    * 
 
 * Redo PitchAnchor
