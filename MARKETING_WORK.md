@@ -10,7 +10,7 @@
 
 ## Personal contacts
 * Friends
-    * Adam Cohn (respond)
+    * Adam Cohn
     * Charles Yu
     * Louise Barder
 * Facebook

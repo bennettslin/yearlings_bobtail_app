@@ -209,7 +209,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `For this song, I wanted to capture the disorienting cycle between days spent living among the foreign and nights spent dreaming of the familiar. So I used a literary technique I invented called doublespeaker rhyme, in which two sets of lyrics that rhyme syllable for syllable are panned hard into separate speakers in the recording. It's the audio version of a cinematic`,
+                        `For this song, I wanted to capture the disorienting cycle between days spent living among the foreign and nights spent dreaming of the familiar. So I used a literary technique I invented called doublespeaker rhyme, in which two sets of lyrics that rhyme syllable for syllable are panned hard to separate speakers in the recording. It's the audio version of a cinematic`,
                         {
                             anchor: `split screen.`,
                             wiki: `Split_screen_(video_production)`,
