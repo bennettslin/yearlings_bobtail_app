@@ -56,12 +56,12 @@ export default {
                                 wiki: `The_Basketball_Diaries_(book)`,
                             },
                         },
-                        `It quickly became my drug of choice, since I didn't need to go through any dealers. The best thing about a Robitussin trip is the`,
+                        `It quickly became my drug of choice, since I didn't need to know any dealers. The best thing about a Robitussin trip is the`,
                         {
                             anchor: `closed-eye hallucinations,`,
                             wiki: `Closed-eye_hallucination`,
                         },
-                        `which are vivid images projected onto the backdrop of your eyelids. If they get too intense, you simply open your eyes, and they vanish. At the time, I called them "constellations."`,
+                        `which are vivid images projected onto the backdrop of your eyelids. When they get too intense, you simply open your eyes, and they vanish. At the time, I called them "constellations."`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
