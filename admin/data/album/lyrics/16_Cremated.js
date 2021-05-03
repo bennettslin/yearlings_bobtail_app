@@ -523,7 +523,7 @@ export default {
                             anchor: `unforeskinned virgin`,
                             todo: true,
                             card: {
-                                description: `I learned a long time ago not to wear identity markers or hold personal convictions that would only limit the size of my dating pool. It's partly why I've never gotten a tattoo. I needed to be a blank slab for each new woman to shape me into whatever she liked. And so I imagine that before dating Miriam, I'd reset myself to a default state of being sexually inexperienced and having an intact foreskin.`,
+                                description: `I learned a long time ago not to wear identity markers or hold personal convictions that would limit the size of my dating pool. It's why I've never gotten a tattoo. I needed to be a blank slab for each new woman to shape me into whatever she liked. And so I imagine that before dating Miriam, I'd reset myself to a default state of being sexually inexperienced and having an intact foreskin.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
