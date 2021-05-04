@@ -9,7 +9,7 @@ export default {
      */
     playerStartTime: 3576.7,
     overview: [
-        `Thanks for listening! It really means a lot. So what do I hope to gain by creating this audio webcomic, a decade after the album's release? In short, I'm still looking for help, whether in the form of a traditional record deal, or some modern arrangement devised by forward-thinking Zoomers. The notion that an artist can start by realizing a bold vision, and`,
+        `Thanks for listening! It really means a lot. So what do I hope to gain by creating this audio webcomic, a decade after the album was finished? In short, I'm still looking for help, whether in the form of a traditional record deal, or some modern arrangement devised by forward-thinking Zoomers. The notion that an artist can start by realizing a bold vision, and`,
         {
             isEmphasis: true,
             lyric: `then`,

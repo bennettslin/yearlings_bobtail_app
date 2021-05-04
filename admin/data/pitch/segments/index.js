@@ -140,7 +140,7 @@ export default [
                     isItalic: true,
                     lyric: `Ulysses`,
                 },
-                `of rock albums. Unfortunately, its complex lyrics only make sense after careful study, which we as an unknown band had no right to ask of anyone. So upon its initial release, no one bothered to understand it. One reviewer even mistook the lyrics for Engrish!`,
+                `of rock albums. Unfortunately, its complex lyrics only make sense after careful study, which we as an unknown band had no right to ask of anyone. So when I sent out the promos, no one bothered to understand them. One reviewer even mistook the lyrics for Engrish!`,
             ],
             [
                 `And with the depth of arrangements on`,

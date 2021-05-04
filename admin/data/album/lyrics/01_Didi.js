@@ -659,7 +659,7 @@ export default {
                             isItalic: true,
                             lyric: `Pet Sounds.`,
                         },
-                        `And like Wilson, these artists would succeed by holding off concerns about recreating their sound onstage. But the indie labels stood firm, insisting that serious artists build their careers on live shows. So upon its release,`,
+                        `And like Wilson, these artists would succeed by holding off concerns about recreating their sound onstage. But the indie labels stood firm, insisting that serious artists build their careers on live shows. So upon completion,`,
                         {
                             isItalic: true,
                             lyric: `Yearling's Bobtail`,
