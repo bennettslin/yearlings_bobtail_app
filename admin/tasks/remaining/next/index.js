@@ -1,10 +1,10 @@
 export default [
     // Next.
     {
-        taskName: `Promo work.`,
-        workedHours: 52,
+        taskName: `Promo pages.`,
+        workedHours: 0,
+        neededHours: 50,
     },
-
     {
         taskName: `Audit scenes.`,
         workedHours: 2,

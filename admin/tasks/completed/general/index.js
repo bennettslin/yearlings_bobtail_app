@@ -5139,4 +5139,8 @@ export default [
         taskName: `S3, CloudFront, Gatsby work.`,
         workedHours: 5,
     },
+    {
+        taskName: `Promo content.`,
+        workedHours: 56,
+    },
 ]
