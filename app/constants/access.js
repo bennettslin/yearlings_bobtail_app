@@ -16,7 +16,7 @@ export const PREVIOUS_SONG_KEY = 'r'
 export const SCORE_TOGGLE_KEY = 's'
 export const TIPS_TOGGLE_KEY = 't'
 export const LYRIC_SCROLL_TOGGLE_KEY = 'v'
-export const AUDIO_OPTIONS_TOGGLE_KEY = 'z'
+export const MARKETING_TOGGLE_KEY = 'z'
 
 export const ARROW_LEFT = 'ArrowLeft'
 export const ARROW_RIGHT = 'ArrowRight'

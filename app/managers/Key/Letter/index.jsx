@@ -11,7 +11,6 @@ import {
     updateIsAutoScroll,
     toggleIsMarketingShown,
     updateIsMarketingShown,
-    toggleIsAudioOptionsExpanded,
     updateIsAudioOptionsExpanded,
 } from '../../../redux/toggle/action'
 import {
@@ -49,7 +48,7 @@ import {
     NEXT_SCENE_KEY,
     TIPS_TOGGLE_KEY,
     ABOUT_TOGGLE_KEY,
-    AUDIO_OPTIONS_TOGGLE_KEY,
+    MARKETING_TOGGLE_KEY,
     MARKETING_HOME_KEY,
     SPACE,
     META_ARROW_UP,
@@ -169,8 +168,8 @@ const LetterManager = forwardRef((props, ref) => {
                 dispatch(toggleIsAboutShown())
                 keyWasRegistered = true
                 break
-            case AUDIO_OPTIONS_TOGGLE_KEY:
-                dispatch(toggleIsAudioOptionsExpanded())
+            case MARKETING_TOGGLE_KEY:
+                dispatch(toggleIsMarketingShown())
                 keyWasRegistered = true
                 break
             case MARKETING_HOME_KEY:
