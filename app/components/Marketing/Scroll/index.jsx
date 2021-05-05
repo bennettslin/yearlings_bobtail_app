@@ -21,7 +21,7 @@ const MarketingScroll = forwardRef((props, ref) => {
             {...{
                 className: cx(
                     // Box shadow and gradient mask cannot be on same element.
-                    'PitchScroll__container',
+                    'MarketingScroll__container',
                     'abF',
                 ),
             }}
@@ -41,7 +41,7 @@ const MarketingScroll = forwardRef((props, ref) => {
                 <div
                     {...{
                         className: cx(
-                            'PitchScroll__content',
+                            'MarketingScroll__content',
                         ),
                     }}
                 >

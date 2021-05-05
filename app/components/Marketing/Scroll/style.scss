@@ -3,7 +3,7 @@
 @import '../../../scss/constants/icon';
 @import '../../../scss/constants/shadow';
 
-.PitchScroll__container {
+.MarketingScroll__container {
     background-color: $colour__foreground;
     box-shadow: $boxShadow__popupView;
     border-radius: $borderRadius__wide;
@@ -24,7 +24,7 @@
     }
 }
 
-.PitchScroll__content {
+.MarketingScroll__content {
     // Needed for Safari.
     flex-direction: column;
     flex-grow: 1;
