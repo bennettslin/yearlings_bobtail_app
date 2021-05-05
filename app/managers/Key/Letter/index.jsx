@@ -49,8 +49,8 @@ import {
     NEXT_SCENE_KEY,
     TIPS_TOGGLE_KEY,
     ABOUT_TOGGLE_KEY,
-    PITCH_TOGGLE_KEY,
     AUDIO_OPTIONS_TOGGLE_KEY,
+    MARKETING_HOME_KEY,
     SPACE,
     META_ARROW_UP,
     META_ARROW_DOWN,
@@ -169,12 +169,12 @@ const LetterManager = forwardRef((props, ref) => {
                 dispatch(toggleIsAboutShown())
                 keyWasRegistered = true
                 break
-            case PITCH_TOGGLE_KEY:
-                dispatch(toggleIsMarketingShown())
-                keyWasRegistered = true
-                break
             case AUDIO_OPTIONS_TOGGLE_KEY:
                 dispatch(toggleIsAudioOptionsExpanded())
+                keyWasRegistered = true
+                break
+            case MARKETING_HOME_KEY:
+                dispatch(toggleIsMarketingShown())
                 keyWasRegistered = true
                 break
             default:

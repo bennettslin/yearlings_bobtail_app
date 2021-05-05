@@ -5,7 +5,7 @@ import { Provider } from 'react-redux'
 import { devToolsEnhancer } from 'redux-devtools-extension'
 import AlbumContainer from '../../containers/Album'
 import LoadingContainer from '../../containers/Loading'
-import PitchContainer from '../../containers/Pitch'
+import MarketingContainer from '../../containers/Marketing'
 import {
     getIsMarketingPage,
     getNeedsAlbumContext,
@@ -79,9 +79,9 @@ export const wrapPageElement = ({ element }) => {
         )
     } else if (getIsMarketingPage(pathname)) {
         return (
-            <PitchContainer>
+            <MarketingContainer>
                 {element}
-            </PitchContainer>
+            </MarketingContainer>
         )
     }
 

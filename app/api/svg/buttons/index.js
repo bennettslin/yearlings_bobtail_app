@@ -18,7 +18,7 @@ import overview from './main/overview'
 import pitchHome from './pitch/pitchHome'
 import pitchPrevious from './pitch/pitchPrevious'
 import pitchNext from './pitch/pitchNext'
-import pitchReturn from './pitch/pitchReturn'
+import marketingReturn from './marketing/marketingReturn'
 import pitchSegment from './pitch/pitchSegment'
 import popupClose from './popup/popupClose'
 import popupPrevious from './popup/popupPrevious'
@@ -42,13 +42,13 @@ import {
     LYRIC_EAR_BUTTON_KEY,
     LYRIC_EXPAND_BUTTON_KEY,
     LYRIC_SCROLL_BUTTON_KEY,
+    MARKETING_RETURN_BUTTON_KEY,
     NAV_BOOK_BUTTON_KEY,
     NAV_SONG_BUTTON_KEY,
     OVERVIEW_BUTTON_KEY,
     PITCH_HOME_BUTTON_KEY,
     PITCH_PREVIOUS_BUTTON_KEY,
     PITCH_NEXT_BUTTON_KEY,
-    PITCH_RETURN_BUTTON_KEY,
     PITCH_SEGMENT_BUTTON_KEY,
     POPUP_CLOSE_BUTTON_KEY,
     POPUP_PREVIOUS_BUTTON_KEY,
@@ -73,13 +73,13 @@ export default {
     [LYRIC_EAR_BUTTON_KEY]: lyricEar,
     [LYRIC_EXPAND_BUTTON_KEY]: lyricExpand,
     [LYRIC_SCROLL_BUTTON_KEY]: lyricScroll,
+    [MARKETING_RETURN_BUTTON_KEY]: marketingReturn,
     [NAV_BOOK_BUTTON_KEY]: navBook,
     [NAV_SONG_BUTTON_KEY]: navSong,
     [OVERVIEW_BUTTON_KEY]: overview,
     [PITCH_HOME_BUTTON_KEY]: pitchHome,
     [PITCH_PREVIOUS_BUTTON_KEY]: pitchPrevious,
     [PITCH_NEXT_BUTTON_KEY]: pitchNext,
-    [PITCH_RETURN_BUTTON_KEY]: pitchReturn,
     [PITCH_SEGMENT_BUTTON_KEY]: pitchSegment,
     [POPUP_CLOSE_BUTTON_KEY]: popupClose,
     [POPUP_PREVIOUS_BUTTON_KEY]: popupPrevious,

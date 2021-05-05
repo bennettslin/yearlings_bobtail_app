@@ -9,10 +9,10 @@
 
     font-size: 0.9em;
 
-    .PitchContainer
+    .MarketingContainer
     & {
-        max-width: $width__pitchContainer;
-        height: calc(100% - #{$height__pitchHeader + $height__pitchNav});
+        max-width: $width__marketingContainer;
+        height: calc(100% - #{$height__marketingHeader + $height__pitchNav});
 
         .DW__tabletOrDesktopWidth
         & {

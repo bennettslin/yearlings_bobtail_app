@@ -1,5 +1,4 @@
 # Promo work
-* Figure out state
 * Extract Hybrid Header
 * Make hybrid popup
 * Make hybrid scroll container

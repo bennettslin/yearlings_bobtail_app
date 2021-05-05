@@ -18,7 +18,7 @@ const AlbumContainer = ({ children }) => {
         audioContainer.current.callAudioManager(props)
     }
 
-    // Establish that session started from album, not pitch page.
+    // Establish that session started from album, not marketing page.
     setIsAlbumSession()
 
     useEffect(() => {

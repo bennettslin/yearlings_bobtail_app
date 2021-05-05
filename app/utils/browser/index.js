@@ -47,8 +47,8 @@ export const getWindow = () => (
 export const setIsAlbumSession = () => {
     /**
      * Called by album container to register that the session started from the
-     * album, not the pitch page. Obviously, it persists only for the length of
-     * the session.
+     * album, not a marketing page. Obviously, it persists only for the length
+     * of the session.
      */
     if (!getIsServerSide()) {
         getWindow().isAlbumSession = true
@@ -57,8 +57,8 @@ export const setIsAlbumSession = () => {
 
 export const getIsAlbumSession = () => (
     /**
-     * This gets called to determine whether navigation to the pitch path
-     * started from the album or the pitch page.
+     * This gets called to determine whether navigation to the marketing path
+     * started from the album or a marketing page.
      */
     !getIsServerSide() &&
     Boolean(getWindow().isAlbumSession)

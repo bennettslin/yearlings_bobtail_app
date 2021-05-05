@@ -8,27 +8,27 @@ import AccessStylesheet from '../../components/Stylesheets/Access'
 import Pitch from '../../components/Pitch'
 import PitchNav from '../../components/PitchNav'
 import PitchNavigation from '../../managers/Key/Navigation/Pitch'
-import PitchHeader from './Header'
+import MarketingHeader from './Header'
 import { getKeyName } from '../../managers/Key/helper'
 import { getPathForPitchPage } from '../../helpers/url'
 import { updateAccessStore } from '../../redux/access/action'
 import { mapPitchSegmentIndex } from '../../redux/pitch/selector'
 import { getIsServerSide, getWindow } from '../../utils/browser'
-import { ESCAPE, PITCH_TOGGLE_KEY } from '../../constants/access'
+import { ESCAPE, MARKETING_HOME_KEY } from '../../constants/access'
 import DeviceWrapper from '../../wrappers/DeviceWrapper'
 import AccessWrapper from '../../wrappers/AccessWrapper'
 import ResizeManager from '../../managers/Resize'
 import { ALBUM_TITLE } from '../../constants/paths'
 
-const PitchContainer = ({ children }) => {
+const MarketingContainer = ({ children }) => {
     const
         dispatch = useDispatch(),
-        pitchContainerElement = useRef(),
-        pitchScrollElement = useRef(),
+        marketingContainerElement = useRef(),
+        marketingScrollElement = useRef(),
         navigatePitch = useRef(),
         pitchSegmentIndex = useSelector(mapPitchSegmentIndex)
 
-    const getResizeContainerElement = () => pitchContainerElement.current
+    const getResizeContainerElement = () => marketingContainerElement.current
 
     const returnToAlbum = () => {
         /**
@@ -39,8 +39,8 @@ const PitchContainer = ({ children }) => {
     }
 
     const focusElement = () => {
-        if (pitchScrollElement.current) {
-            pitchScrollElement.current.focus()
+        if (marketingScrollElement.current) {
+            marketingScrollElement.current.focus()
         }
     }
 
@@ -60,7 +60,7 @@ const PitchContainer = ({ children }) => {
         navigatePitch.current(keyName)
 
         // Handle return home to album.
-        if (keyName === PITCH_TOGGLE_KEY) {
+        if (keyName === MARKETING_HOME_KEY) {
             returnToAlbum()
         }
 
@@ -80,10 +80,10 @@ const PitchContainer = ({ children }) => {
 
     useEffect(() => {
         logServe(
-            'Pitch container loaded.',
+            'Marketing container loaded.',
             {
                 action: 'container',
-                label: 'pitch',
+                label: 'marketing',
             },
         )
     }, [])
@@ -100,9 +100,9 @@ const PitchContainer = ({ children }) => {
     return (
         <div
             {...{
-                ref: pitchContainerElement,
+                ref: marketingContainerElement,
                 className: cx(
-                    'PitchContainer',
+                    'MarketingContainer',
                     'hybridContainer',
                     'rootContainer',
                     'PtSansNarrow',
@@ -127,11 +127,11 @@ const PitchContainer = ({ children }) => {
                 isInPitch
                 {...{ getResizeContainerElement }}
             />
-            <PitchHeader {...{ returnToAlbum }} />
+            <MarketingHeader {...{ returnToAlbum }} />
             {getIsServerSide() ? (
                 children
             ) : (
-                <Pitch {...{ ref: pitchScrollElement }} />
+                <Pitch {...{ ref: marketingScrollElement }} />
             )}
             <PitchNav />
             <PitchNavigation {...{ ref: navigatePitch }} />
@@ -139,24 +139,24 @@ const PitchContainer = ({ children }) => {
     )
 }
 
-PitchContainer.propTypes = {
+MarketingContainer.propTypes = {
     children: PropTypes.node.isRequired,
 }
 
-const ParentPitchContainer = ({ children }) => (
+const ParentMarketingContainer = ({ children }) => (
     <DeviceWrapper>
         <AccessWrapper>
-            <PitchContainer>
+            <MarketingContainer>
                 {children}
-            </PitchContainer>
+            </MarketingContainer>
             <AccessStylesheet />
         </AccessWrapper>
     </DeviceWrapper>
 )
 
-ParentPitchContainer.propTypes = {
+ParentMarketingContainer.propTypes = {
     children: PropTypes.node.isRequired,
 }
 
-export default ParentPitchContainer
+export default ParentMarketingContainer
 
