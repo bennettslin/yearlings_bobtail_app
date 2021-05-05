@@ -1,14 +1,14 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import Anchor from '../Anchor'
-import { toggleIsPitchShown } from '../../redux/toggle/action'
+import { toggleIsMarketingShown } from '../../redux/toggle/action'
 import './style'
 
 const PitchAnchor = () => {
     const dispatch = useDispatch()
 
     const handleAnchorClick = () => {
-        dispatch(toggleIsPitchShown())
+        dispatch(toggleIsMarketingShown())
     }
 
     return (

@@ -19,13 +19,13 @@ export default (
                 {
                     toggledIsAboutShown,
                     toggledIsAudioOptionsExpanded,
-                    toggledIsPitchShown,
+                    toggledIsMarketingShown,
                     ...remainingPayload
                 } = payload,
                 {
                     isAboutShown: prevAboutShown,
                     isAudioOptionsExpanded: prevIsAudioOptionsExpanded,
-                    isPitchShown: prevIsPitchShown,
+                    isMarketingShown: prevIsMarketingShown,
                 } = state
             return {
                 ...state,
@@ -36,8 +36,8 @@ export default (
                 ...hasKey(toggledIsAudioOptionsExpanded) && {
                     isAudioOptionsExpanded: !prevIsAudioOptionsExpanded,
                 },
-                ...hasKey(toggledIsPitchShown) && {
-                    isPitchShown: !prevIsPitchShown,
+                ...hasKey(toggledIsMarketingShown) && {
+                    isMarketingShown: !prevIsMarketingShown,
                 },
             }
         }

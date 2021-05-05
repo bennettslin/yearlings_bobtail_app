@@ -3,27 +3,27 @@ import React, { forwardRef, memo, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
 import getDidMountHoc from '../../DidMountHoc'
-import { updateIsPitchShown } from '../../../redux/toggle/action'
+import { updateIsMarketingShown } from '../../../redux/toggle/action'
 import Popup from '../../Popup'
 import Pitch from '../../Pitch'
 import PitchNav from '../../PitchNav'
-import { mapIsPitchShown } from '../../../redux/toggle/selector'
+import { mapIsMarketingShown } from '../../../redux/toggle/selector'
 import './style'
 
 const PitchPopup = forwardRef(({ didMount }, ref) => {
     const
         dispatch = useDispatch(),
-        isPitchShown = useSelector(mapIsPitchShown)
+        isMarketingShown = useSelector(mapIsMarketingShown)
 
     const handleCloseClick = () => {
-        dispatch(updateIsPitchShown())
+        dispatch(updateIsMarketingShown())
     }
 
     useEffect(() => {
-        if (isPitchShown) {
-            logState('isPitchShown')
+        if (isMarketingShown) {
+            logState('isMarketingShown')
         }
-    }, [isPitchShown])
+    }, [isMarketingShown])
 
     return didMount && (
         <Popup
@@ -35,7 +35,7 @@ const PitchPopup = forwardRef(({ didMount }, ref) => {
             displaysInOverlay
             {...{
                 popupName: 'PitchPopup',
-                isVisible: isPitchShown,
+                isVisible: isMarketingShown,
                 handleCloseClick,
             }}
         >

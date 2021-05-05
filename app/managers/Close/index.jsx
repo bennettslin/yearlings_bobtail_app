@@ -15,7 +15,7 @@ import {
     updateIsDotsSlideShown,
     updateIsLyricExpanded,
     updateIsNavExpanded,
-    updateIsPitchShown,
+    updateIsMarketingShown,
     updateIsScoreShown,
 } from '../../redux/toggle/action'
 import { HIDDEN } from '../../constants/options'
@@ -31,7 +31,7 @@ import {
     mapIsDotsSlideShown,
     mapIsLyricExpanded,
     mapIsNavExpanded,
-    mapIsPitchShown,
+    mapIsMarketingShown,
     mapIsScoreShown,
 } from '../../redux/toggle/selector'
 import { mapIsWikiShown } from '../../redux/wiki/selector'
@@ -51,7 +51,7 @@ const CloseHandler = forwardRef((props, ref) => {
         isDotsSlideShown = useSelector(mapIsDotsSlideShown),
         isLyricExpanded = useSelector(mapIsLyricExpanded),
         isNavExpanded = useSelector(mapIsNavExpanded),
-        isPitchShown = useSelector(mapIsPitchShown),
+        isMarketingShown = useSelector(mapIsMarketingShown),
         isScoreShown = useSelector(mapIsScoreShown),
         [didMount, setDidMount] = useState(false)
 
@@ -76,8 +76,8 @@ const CloseHandler = forwardRef((props, ref) => {
         } else if (isAboutShown && !exemptAbout) {
             dispatch(updateIsAboutShown())
 
-        } else if (isPitchShown && !exemptPitch) {
-            dispatch(updateIsPitchShown())
+        } else if (isMarketingShown && !exemptPitch) {
+            dispatch(updateIsMarketingShown())
 
         } else {
             return false
@@ -251,11 +251,11 @@ const CloseHandler = forwardRef((props, ref) => {
     }, [isAboutShown])
 
     useEffect(() => {
-        if (isPitchShown) {
+        if (isMarketingShown) {
             closeJustTopmost({ exemptPitch: true })
             closeMainSections({ exemptAnnotation: true })
         }
-    }, [isPitchShown])
+    }, [isMarketingShown])
 
     useEffect(() => {
         if (isWikiShown) {

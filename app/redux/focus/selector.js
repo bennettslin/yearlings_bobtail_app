@@ -7,7 +7,7 @@ import {
     mapIsAboutShown,
     mapIsLyricExpanded,
     mapIsNavExpanded,
-    mapIsPitchShown,
+    mapIsMarketingShown,
     mapIsScoreShown,
 } from '../toggle/selector'
 import { mapIsWikiShown } from '../wiki/selector'
@@ -20,19 +20,19 @@ export const mapQueuedFocus = (
 export const mapCanNavigateByKey = createSelector(
     mapIsSelectedLogue,
     mapIsAboutShown,
-    mapIsPitchShown,
+    mapIsMarketingShown,
     mapIsScoreShown,
     mapIsWikiShown,
     (
         isSelectedLogue,
         isAboutShown,
-        isPitchShown,
+        isMarketingShown,
         isScoreShown,
         isWikiShown,
     ) => getCanNavigateByKey({
         isSelectedLogue,
         isAboutShown,
-        isPitchShown,
+        isMarketingShown,
         isScoreShown,
         isWikiShown,
     }),

@@ -27,14 +27,14 @@ export const updateIsAudioOptionsExpanded = (
     payload: { isAudioOptionsExpanded },
 })
 
-export const toggleIsPitchShown = () => ({
+export const toggleIsMarketingShown = () => ({
     type: TOGGLE_STORE,
-    payload: { toggledIsPitchShown: true },
+    payload: { toggledIsMarketingShown: true },
 })
 
-export const updateIsPitchShown = (isPitchShown = false) => ({
+export const updateIsMarketingShown = (isMarketingShown = false) => ({
     type: TOGGLE_STORE,
-    payload: { isPitchShown },
+    payload: { isMarketingShown },
 })
 
 export const updateIsCarouselExpanded = (isCarouselExpanded = false) => {

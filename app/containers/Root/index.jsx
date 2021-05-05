@@ -20,7 +20,7 @@ import {
     mapQueuedFocus,
     mapShouldNavigateLyric,
 } from '../../redux/focus/selector'
-import { mapIsAboutShown, mapIsPitchShown } from '../../redux/toggle/selector'
+import { mapIsAboutShown, mapIsMarketingShown } from '../../redux/toggle/selector'
 import { mapCanSliderMount } from '../../redux/viewport/selector'
 
 const RootContainer = () => {
@@ -34,7 +34,7 @@ const RootContainer = () => {
         queuedFocus = useSelector(mapQueuedFocus),
         shouldNavigateLyric = useSelector(mapShouldNavigateLyric),
         isAboutShown = useSelector(mapIsAboutShown),
-        isPitchShown = useSelector(mapIsPitchShown),
+        isMarketingShown = useSelector(mapIsMarketingShown),
         canSliderMount = useSelector(mapCanSliderMount)
 
     const getResizeContainerElement = () => rootContainerElement.current
@@ -47,7 +47,7 @@ const RootContainer = () => {
         let currentElement = rootContainerElement?.current,
             logString = 'root'
 
-        if (isPitchShown) {
+        if (isMarketingShown) {
             currentElement = pitchScrollElement?.current
             logString = 'pitch'
 
@@ -81,7 +81,7 @@ const RootContainer = () => {
 
     useEffect(() => {
         _focusElementForAccess()
-    }, [isAboutShown, isPitchShown, shouldNavigateLyric])
+    }, [isAboutShown, isMarketingShown, shouldNavigateLyric])
 
     return (
         <div

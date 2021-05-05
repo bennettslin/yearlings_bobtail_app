@@ -7,7 +7,7 @@ import {
     mapLyricAnnotationIndex,
 } from '../../redux/lyric/selector'
 import { mapPitchSegmentIndex } from '../../redux/pitch/selector'
-import { mapIsPitchShown } from '../../redux/toggle/selector'
+import { mapIsMarketingShown } from '../../redux/toggle/selector'
 import {
     getPathForIndices,
     getPathForPitchPage,
@@ -18,7 +18,7 @@ const UrlManager = () => {
         lyricSongIndex = useSelector(mapLyricSongIndex),
         lyricVerseIndex = useSelector(mapLyricVerseIndex),
         lyricAnnotationIndex = useSelector(mapLyricAnnotationIndex),
-        isPitchShown = useSelector(mapIsPitchShown),
+        isMarketingShown = useSelector(mapIsMarketingShown),
         pitchSegmentIndex = useSelector(mapPitchSegmentIndex)
 
     useEffect(() => {
@@ -31,7 +31,7 @@ const UrlManager = () => {
     }, [])
 
     useEffect(() => {
-        if (!isPitchShown) {
+        if (!isMarketingShown) {
             navigate(
                 getPathForIndices(
                     lyricSongIndex,
@@ -42,16 +42,16 @@ const UrlManager = () => {
                 { replace: true },
             )
         }
-    }, [lyricSongIndex, lyricVerseIndex, lyricAnnotationIndex, isPitchShown])
+    }, [lyricSongIndex, lyricVerseIndex, lyricAnnotationIndex, isMarketingShown])
 
     useEffect(() => {
-        if (isPitchShown) {
+        if (isMarketingShown) {
             navigate(
                 getPathForPitchPage(pitchSegmentIndex),
                 { replace: true },
             )
         }
-    }, [isPitchShown, pitchSegmentIndex])
+    }, [isMarketingShown, pitchSegmentIndex])
 
     return null
 }

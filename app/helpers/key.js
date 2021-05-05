@@ -1,11 +1,11 @@
 export const getCanNavigateByKey = ({
     isSelectedLogue,
     isAboutShown,
-    isPitchShown,
+    isMarketingShown,
     isScoreShown,
     isWikiShown,
 }) => {
-    if (isPitchShown) {
+    if (isMarketingShown) {
         return true
     }
 

@@ -9,8 +9,8 @@ import {
     toggleIsAboutShown,
     updateIsAboutShown,
     updateIsAutoScroll,
-    toggleIsPitchShown,
-    updateIsPitchShown,
+    toggleIsMarketingShown,
+    updateIsMarketingShown,
     toggleIsAudioOptionsExpanded,
     updateIsAudioOptionsExpanded,
 } from '../../../redux/toggle/action'
@@ -65,7 +65,7 @@ import {
     mapIsLyricExpanded,
     mapIsScoreShown,
     mapIsAboutShown,
-    mapIsPitchShown,
+    mapIsMarketingShown,
     mapIsAudioOptionsExpanded,
 } from '../../../redux/toggle/selector'
 import { mapIsWikiShown } from '../../../redux/wiki/selector'
@@ -94,7 +94,7 @@ const LetterManager = forwardRef((props, ref) => {
         isLyricExpanded = useSelector(mapIsLyricExpanded),
         isScoreShown = useSelector(mapIsScoreShown),
         isAboutShown = useSelector(mapIsAboutShown),
-        isPitchShown = useSelector(mapIsPitchShown)
+        isMarketingShown = useSelector(mapIsMarketingShown)
 
     const handleLetter = keyName => {
         let annotationIndexWasAccessed = false,
@@ -170,7 +170,7 @@ const LetterManager = forwardRef((props, ref) => {
                 keyWasRegistered = true
                 break
             case PITCH_TOGGLE_KEY:
-                dispatch(toggleIsPitchShown())
+                dispatch(toggleIsMarketingShown())
                 keyWasRegistered = true
                 break
             case AUDIO_OPTIONS_TOGGLE_KEY:
@@ -202,8 +202,8 @@ const LetterManager = forwardRef((props, ref) => {
             dispatch(updateIsAboutShown())
 
         // Close pitch popup.
-        } else if (isPitchShown) {
-            dispatch(updateIsPitchShown())
+        } else if (isMarketingShown) {
+            dispatch(updateIsMarketingShown())
 
         // Close wiki popup.
         } else if (isWikiShown) {

@@ -3,7 +3,7 @@ export const getIsPopupAnnotationShown = ({
     isSongChangeDone,
     lyricAnnotationIndex,
     isAboutShown,
-    isPitchShown,
+    isMarketingShown,
     isScoreShown,
     isCarouselShown,
     canCarouselNavMount,
@@ -32,7 +32,7 @@ export const getIsPopupAnnotationShown = ({
          */
         !isScoreShown &&
         !isAboutShown &&
-        !isPitchShown &&
+        !isMarketingShown &&
         !isWikiShown
 
     /**
