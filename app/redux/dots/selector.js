@@ -6,7 +6,7 @@ import {
 import { DOTS_STORE } from '../../constants/store'
 
 export const mapSelectedDotsBit = (
-    { [DOTS_STORE]: { selectedDotsBit } },
+    { [DOTS_STORE]: { selectedDotsBit } = {} },
 ) => selectedDotsBit
 
 export const getMapFirstSelectedDotKey = dotsBit => createSelector(

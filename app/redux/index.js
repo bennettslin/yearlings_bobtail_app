@@ -1,8 +1,5 @@
 import { combineReducers } from 'redux'
-import {
-    getAccessReducer,
-    AccessMarketingPageReducer,
-} from './access/reducer'
+import { getAccessReducer } from './access/reducer'
 import ActivatedReducer from './activated/reducer'
 import AnnotationReducer from './annotation/reducer'
 import AudioReducer from './audio/reducer'
@@ -124,8 +121,6 @@ export const getMarketingReducers = ({
     const initialPitchIndex = getInitialPitchIndex(pathname)
 
     return combineReducers({
-        [DOTS_STORE]: getDotsReducer(0),
-        [ACCESS_STORE]: AccessMarketingPageReducer,
         [PITCH_STORE]: getPitchReducer(initialPitchIndex),
         [VIEWPORT_STORE]: getViewportReducer({
             windowHeight,
