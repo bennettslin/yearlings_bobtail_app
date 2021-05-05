@@ -1,6 +1,6 @@
 import {
     getAlbumReducers,
-    getPitchReducers,
+    getMarketingReducers,
 } from '../../redux'
 import {
     getIsStorePath,
@@ -13,22 +13,15 @@ import {
     getIsAlbumSession,
 } from '../browser'
 
-export const getIsPitchPage = pathname => (
-    getIsValidPitchPagePath(pathname) &&
+export const getIsMarketingPage = pathname => (
+    (
+        getIsValidPitchPagePath(pathname) ||
+        getIsValidPromoPagePath(pathname)
+    ) &&
 
     /**
-     * Ensure that we are not in the pitch popup, since it will also show the
-     * Pitch pathname while it is open.
-     */
-    !getIsAlbumSession()
-)
-
-export const getIsPromoPage = pathname => (
-    getIsValidPromoPagePath(pathname) &&
-
-    /**
-     * Ensure that we are not in the promo popup, since it will also show the
-     * Promo pathname while it is open.
+     * Ensure that we are not in a marketing popup, since it will also show a
+     * marketing pathname while it is open.
      */
     !getIsAlbumSession()
 )
@@ -46,27 +39,26 @@ export const getNeedsStoreProvider = pathname => {
 }
 
 export const getReducers = ({
-    innerHeight,
-    innerWidth,
+    windowHeight,
+    windowWidth,
     pathname,
     search,
 }) => (
-    getIsPitchPage(pathname) ?
-        getPitchReducers({
-            innerHeight,
-            innerWidth,
+    getIsMarketingPage(pathname) ?
+        getMarketingReducers({
+            windowHeight,
+            windowWidth,
             pathname,
         }) :
         getAlbumReducers({
-            innerHeight,
-            innerWidth,
+            windowHeight,
+            windowWidth,
             pathname,
             search,
         })
 )
 
 export const getNeedsAlbumContext = pathname => (
-    !getIsPitchPage(pathname) &&
-    !getIsPromoPage(pathname) &&
+    !getIsMarketingPage(pathname) &&
     !getIsValidAdminPath(pathname)
 )

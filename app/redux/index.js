@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
 import {
     getAccessReducer,
-    AccessPitchPageReducer,
+    AccessMarketingPageReducer,
 } from './access/reducer'
 import ActivatedReducer from './activated/reducer'
 import AnnotationReducer from './annotation/reducer'
@@ -25,10 +25,7 @@ import { getSessionReducer } from './session/reducer'
 import SliderReducer from './slider/reducer'
 import ToggleReducer from './toggle/reducer'
 import VerseBarsReducer from './verseBars/reducer'
-import {
-    getViewportReducer,
-    getViewportPitchPageReducer,
-} from './viewport/reducer'
+import { getViewportReducer } from './viewport/reducer'
 
 import {
     ACCESS_STORE,
@@ -62,8 +59,8 @@ import {
 } from '../utils/routing/indices'
 
 export const getAlbumReducers = ({
-    innerHeight,
-    innerWidth,
+    windowHeight,
+    windowWidth,
     pathname,
     search,
 }) => {
@@ -113,26 +110,27 @@ export const getAlbumReducers = ({
         [TOGGLE_STORE]: ToggleReducer,
         [VERSE_BARS_STORE]: VerseBarsReducer,
         [VIEWPORT_STORE]: getViewportReducer({
-            innerHeight,
-            innerWidth,
+            windowHeight,
+            windowWidth,
         }),
     })
 }
 
-export const getPitchReducers = ({
-    innerHeight,
-    innerWidth,
+export const getMarketingReducers = ({
+    windowHeight,
+    windowWidth,
     pathname,
 }) => {
     const initialPitchIndex = getInitialPitchIndex(pathname)
 
     return combineReducers({
         [DOTS_STORE]: getDotsReducer(0),
-        [ACCESS_STORE]: AccessPitchPageReducer,
+        [ACCESS_STORE]: AccessMarketingPageReducer,
         [PITCH_STORE]: getPitchReducer(initialPitchIndex),
-        [VIEWPORT_STORE]: getViewportPitchPageReducer({
-            innerHeight,
-            innerWidth,
+        [VIEWPORT_STORE]: getViewportReducer({
+            windowHeight,
+            windowWidth,
+            isMarketingPage: true,
         }),
     })
 }

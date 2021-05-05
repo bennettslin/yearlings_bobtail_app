@@ -7,8 +7,7 @@ import AlbumContainer from '../../containers/Album'
 import LoadingContainer from '../../containers/Loading'
 import PitchContainer from '../../containers/Pitch'
 import {
-    getIsPitchPage,
-    getIsPromoPage,
+    getIsMarketingPage,
     getNeedsAlbumContext,
     getNeedsStoreProvider,
     getReducers,
@@ -28,8 +27,8 @@ export const wrapRootElement = ({ element }) => {
     const
         window = getWindow(),
         {
-            innerHeight = 0,
-            innerWidth = 0,
+            innerHeight: windowHeight = 0,
+            innerWidth: windowWidth = 0,
         } = window,
         {
             pathname,
@@ -42,8 +41,8 @@ export const wrapRootElement = ({ element }) => {
     if (getNeedsStoreProvider(pathname)) {
         const store = createStore(
             getReducers({
-                innerHeight,
-                innerWidth,
+                windowHeight,
+                windowWidth,
                 pathname,
                 search,
             }),
@@ -78,13 +77,7 @@ export const wrapPageElement = ({ element }) => {
                 {element}
             </AlbumContainer>
         )
-    } else if (getIsPitchPage(pathname)) {
-        return (
-            <PitchContainer>
-                {element}
-            </PitchContainer>
-        )
-    } else if (getIsPromoPage(pathname)) {
+    } else if (getIsMarketingPage(pathname)) {
         return (
             <PitchContainer>
                 {element}

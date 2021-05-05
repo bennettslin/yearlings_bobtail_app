@@ -2,10 +2,7 @@ import { useEffect, useRef, useState, memo } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateIsWindowResizeDone } from '../../redux/entrance/action'
-import {
-    updateViewportStore,
-    updateViewportPitchPageStore,
-} from '../../redux/viewport/action'
+import { updateViewportStore } from '../../redux/viewport/action'
 import { getWindowDimensions } from '../../helpers/resize/device'
 import { getWindow } from '../../utils/browser'
 import {
@@ -36,17 +33,11 @@ const ResizeManager = ({
             windowWidth,
         } = getWindowDimensions(getResizeContainerElement())
 
-        if (isInPitch) {
-            dispatch(updateViewportPitchPageStore({
-                windowWidth,
-                windowHeight,
-            }))
-        } else {
-            dispatch(updateViewportStore({
-                windowWidth,
-                windowHeight,
-            }))
-        }
+        dispatch(updateViewportStore({
+            windowWidth,
+            windowHeight,
+            isMarketingPage: isInPitch,
+        }))
 
         dispatch(updateIsWindowResizeDone(true))
     }

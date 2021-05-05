@@ -60,7 +60,7 @@ export const getAccessReducer = initialAnnotationIndex => (
     }
 }
 
-export const AccessPitchPageReducer = (
+export const AccessMarketingPageReducer = (
     state = ACCESS_PITCH_PAGE_DEFAULTS,
     { type, payload },
 ) => {

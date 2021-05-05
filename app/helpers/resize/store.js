@@ -9,11 +9,11 @@ import { getStageDimensionCoordinates } from './stage'
 import { getProsceniumDimensionCoordinates } from './proscenium'
 import { getCeilingFloorHeight } from './theatre'
 
-export const getViewportStore = (
+export const getViewportStore = ({
     windowHeight,
     windowWidth,
-    isPitchPage,
-) => {
+    isMarketingPage,
+}) => {
     const
         deviceWidthIndex = getDeviceWidthIndex(windowWidth),
         isHeightlessLyric = getIsHeightlessLyric({
@@ -56,10 +56,11 @@ export const getViewportStore = (
         })
 
     return {
-        // Pitch page just returns device width index.
+        // Marketing page just returns device width index.
         deviceWidthIndex,
 
-        ...!isPitchPage && {
+        // TODO: Don't bother to calculate if marketing page.
+        ...!isMarketingPage && {
             windowWidth,
             windowHeight,
             isHeightlessLyric,
