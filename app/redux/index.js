@@ -69,7 +69,7 @@ export const getAlbumReducers = ({
         initialPitchIndex = getInitialPitchIndex(pathname)
 
     return combineReducers({
-        [ACCESS_STORE]: getAccessReducer(initialAnnotationIndex),
+        [ACCESS_STORE]: getAccessReducer({ initialAnnotationIndex }),
         [ACTIVATED_STORE]: ActivatedReducer,
         [ANNOTATION_STORE]: AnnotationReducer,
         [AUDIO_STORE]: AudioReducer,
@@ -121,6 +121,7 @@ export const getMarketingReducers = ({
     const initialPitchIndex = getInitialPitchIndex(pathname)
 
     return combineReducers({
+        [ACCESS_STORE]: getAccessReducer({ isMarketingPage: true }),
         [PITCH_STORE]: getPitchReducer(initialPitchIndex),
         [VIEWPORT_STORE]: getViewportReducer({
             windowHeight,

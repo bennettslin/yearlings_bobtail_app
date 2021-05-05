@@ -1,7 +1,4 @@
 # Promo work
-* Change pages to folders
-* Re-add access store
-
 * Make hybrid scroll container
 * Make hybrid nav container
 * Helmet
@@ -11,5 +8,7 @@
 * Create onesheet page
     * Selects song in popup
     * Opens song in new tab in page
+
+* Pitch page needs back navigation
 
 * Redo PitchAnchor
