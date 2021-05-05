@@ -1,4 +1,4 @@
-// Popup container for pitch section.
+// Popup container for marketing section.
 import React, { forwardRef, memo, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
@@ -10,7 +10,7 @@ import PitchNav from '../../PitchNav'
 import { mapIsMarketingShown } from '../../../redux/toggle/selector'
 import './style'
 
-const PitchPopup = forwardRef(({ didMount }, ref) => {
+const MarketingPopup = forwardRef(({ didMount }, ref) => {
     const
         dispatch = useDispatch(),
         isMarketingShown = useSelector(mapIsMarketingShown)
@@ -30,11 +30,11 @@ const PitchPopup = forwardRef(({ didMount }, ref) => {
             mountOnEnter
             unmountOnExit
             isFullPopup
-            isPitchPopup
+            isMarketingPopup
             shrinkAnimate
             displaysInOverlay
             {...{
-                popupName: 'PitchPopup',
+                popupName: 'MarketingPopup',
                 isVisible: isMarketingShown,
                 handleCloseClick,
             }}
@@ -45,8 +45,8 @@ const PitchPopup = forwardRef(({ didMount }, ref) => {
     )
 })
 
-PitchPopup.propTypes = {
+MarketingPopup.propTypes = {
     didMount: PropTypes.bool.isRequired,
 }
 
-export default memo(getDidMountHoc(PitchPopup))
+export default memo(getDidMountHoc(MarketingPopup))

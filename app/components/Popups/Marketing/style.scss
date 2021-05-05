@@ -1,11 +1,11 @@
 @import '../../../scss/constants/icon';
-@import '../../../scss/constants/pitch';
+@import '../../../scss/constants/marketing';
 
-.popupView__pitchWidth {
+.popupView__marketingWidth {
     max-width: $width__marketingContainer + $margin__thick * 2;
 }
 
-.PitchPopupViewContent {
+.MarketingPopupViewContent {
     background-color: hsl(47, 21%, 61%);
     padding: $margin__thick $margin__thick 0;
 

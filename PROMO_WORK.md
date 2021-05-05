@@ -1,5 +1,4 @@
 # Promo work
-* Make hybrid popup
 * Make hybrid scroll container
 * Make hybrid nav container
 * Helmet

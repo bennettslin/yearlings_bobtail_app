@@ -1,18 +1,18 @@
 @import '../../scss/constants/icon';
-@import '../../scss/constants/pitch';
+@import '../../scss/constants/marketing';
 @import '../../scss/constants/popup';
 
 .Pitch {
     position: relative;
     width: 100%;
-    height: calc(100% - #{$height__pitchNav});
+    height: calc(100% - #{$height__marketingNav});
 
     font-size: 0.9em;
 
     .MarketingContainer
     & {
         max-width: $width__marketingContainer;
-        height: calc(100% - #{$height__marketingHeader + $height__pitchNav});
+        height: calc(100% - #{$height__marketingHeader + $height__marketingNav});
 
         .DW__tabletOrDesktopWidth
         & {
