@@ -10,7 +10,7 @@ import {
 import { ACCESS_STORE } from '../../constants/store'
 
 export const mapIsAccessOn = (
-    { [ACCESS_STORE]: { isAccessOn } = {} },
+    { [ACCESS_STORE]: { isAccessOn } },
 ) => isAccessOn
 
 export const mapAccessedDotIndex = (
@@ -22,7 +22,7 @@ export const mapAccessedNavIndex = (
 ) => accessedNavIndex
 
 export const mapAccessedKey = (
-    { [ACCESS_STORE]: { accessedKey } = {} },
+    { [ACCESS_STORE]: { accessedKey } },
 ) => accessedKey
 
 export const mapAccessedAnnotationIndex = (
