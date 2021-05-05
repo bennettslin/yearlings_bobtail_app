@@ -5,8 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Helmet } from 'react-helmet'
 import { navigate } from 'gatsby'
 import AccessStylesheet from '../../components/Stylesheets/Access'
-import Pitch from '../../components/Pitch'
-import PitchNav from '../../components/PitchNav'
+import Marketing from '../../components/Marketing'
 import PitchNavigation from '../../managers/Key/Navigation/Pitch'
 import MarketingHeader from './Header'
 import { getKeyName } from '../../managers/Key/helper'
@@ -124,16 +123,15 @@ const MarketingContainer = ({ children }) => {
                 />
             </Helmet>
             <ResizeManager
-                isInPitch
+                isMarketingPage
                 {...{ getResizeContainerElement }}
             />
             <MarketingHeader {...{ returnToAlbum }} />
             {getIsServerSide() ? (
                 children
             ) : (
-                <Pitch {...{ ref: marketingScrollElement }} />
+                <Marketing {...{ ref: marketingScrollElement }} />
             )}
-            <PitchNav />
             <PitchNavigation {...{ ref: navigatePitch }} />
         </div>
     )

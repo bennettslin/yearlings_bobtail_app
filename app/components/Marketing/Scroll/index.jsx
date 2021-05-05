@@ -7,7 +7,7 @@ import PitchDescription from './Description'
 import { mapPitchSegmentIndex } from '../../../redux/pitch/selector'
 import './style'
 
-const PitchScroll = forwardRef((props, ref) => {
+const MarketingScroll = forwardRef((props, ref) => {
     const pitchSegmentIndex = useSelector(mapPitchSegmentIndex)
 
     useEffect(() => {
@@ -30,7 +30,7 @@ const PitchScroll = forwardRef((props, ref) => {
                 {...{
                     ref,
                     className: cx(
-                        'PitchScroll',
+                        'MarketingScroll',
                         'foN',
                         'gradientMask__scrollBottom',
                     ),
@@ -52,4 +52,4 @@ const PitchScroll = forwardRef((props, ref) => {
     )
 })
 
-export default PitchScroll
+export default MarketingScroll

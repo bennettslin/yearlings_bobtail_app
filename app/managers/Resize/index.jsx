@@ -11,7 +11,7 @@ import {
 } from '../../redux/viewport/selector'
 
 const ResizeManager = ({
-    isInPitch,
+    isMarketingPage,
     getResizeContainerElement,
 }) => {
     const
@@ -36,7 +36,7 @@ const ResizeManager = ({
         dispatch(updateViewportStore({
             windowWidth,
             windowHeight,
-            isMarketingPage: isInPitch,
+            isMarketingPage,
         }))
 
         dispatch(updateIsWindowResizeDone(true))
@@ -82,7 +82,7 @@ const ResizeManager = ({
 }
 
 ResizeManager.propTypes = {
-    isInPitch: PropTypes.bool,
+    isMarketingPage: PropTypes.bool,
     getResizeContainerElement: PropTypes.func.isRequired,
 }
 

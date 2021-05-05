@@ -5,8 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import getDidMountHoc from '../../DidMountHoc'
 import { updateIsMarketingShown } from '../../../redux/toggle/action'
 import Popup from '../../Popup'
-import Pitch from '../../Pitch'
-import PitchNav from '../../PitchNav'
+import Marketing from '../../Marketing'
 import { mapIsMarketingShown } from '../../../redux/toggle/selector'
 import './style'
 
@@ -39,8 +38,7 @@ const MarketingPopup = forwardRef(({ didMount }, ref) => {
                 handleCloseClick,
             }}
         >
-            <Pitch {...{ ref }} />
-            <PitchNav />
+            <Marketing {...{ ref }} />
         </Popup>
     )
 })

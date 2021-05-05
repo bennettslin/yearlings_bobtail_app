@@ -1,4 +1,8 @@
 # Promo work
+* Change pitch nav to marketing nav
+* Move marketing nav under marketing
+* Re-add access store
+
 * Make hybrid scroll container
 * Make hybrid nav container
 * Helmet

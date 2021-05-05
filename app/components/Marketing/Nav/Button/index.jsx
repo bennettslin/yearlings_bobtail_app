@@ -1,18 +1,17 @@
-// Pitch navigation button.
 import React from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
-import Button from '../../Button'
-import ButtonCharacter from '../../Button/Character'
-import { mapPitchSegmentIndex } from '../../../redux/pitch/selector'
+import Button from '../../../Button'
+import ButtonCharacter from '../../../Button/Character'
+import { mapPitchSegmentIndex } from '../../../../redux/pitch/selector'
 import {
     PITCH_HOME_BUTTON_KEY,
     PITCH_SEGMENT_BUTTON_KEY,
-} from '../../../constants/buttons'
+} from '../../../../constants/buttons'
 import {
     mapIsMonitorWidth,
     mapIsPhoneOrMiniWidth,
-} from '../../../redux/device/selector'
+} from '../../../../redux/device/selector'
 
 const PitchNavButton = ({
     pitchIndex,

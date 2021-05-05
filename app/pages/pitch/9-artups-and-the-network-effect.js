@@ -1,2 +1,2 @@
-import getPitchPageComponent from '../../containers/Page/Pitch'
-export default getPitchPageComponent(9)
+import getMarketingPageComponent from '../../containers/Page/Marketing'
+export default getMarketingPageComponent(9)

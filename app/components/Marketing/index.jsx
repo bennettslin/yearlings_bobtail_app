@@ -3,26 +3,28 @@ import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import PagePitchIndexContext from '../../contexts/PagePitchIndex'
-import PitchScroll from './Scroll'
+import MarketingNav from './Nav'
+import MarketingScroll from './Scroll'
 import './style'
 
-const Pitch = forwardRef(({ pagePitchIndex }, ref) => (
+const Marketing = forwardRef(({ pagePitchIndex }, ref) => (
     <PagePitchIndexContext.Provider {...{ value: pagePitchIndex }}>
         <div
             {...{
                 className: cx(
-                    'Pitch',
+                    'Marketing',
                     'fCC',
                 ),
             }}
         >
-            <PitchScroll {...{ ref }} />
+            <MarketingScroll {...{ ref }} />
         </div>
+        <MarketingNav />
     </PagePitchIndexContext.Provider>
 ))
 
-Pitch.propTypes = {
+Marketing.propTypes = {
     pagePitchIndex: PropTypes.number,
 }
 
-export default Pitch
+export default Marketing
