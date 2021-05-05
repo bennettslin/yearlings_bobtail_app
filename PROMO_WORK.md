@@ -1,6 +1,5 @@
 # Promo work
-* Change pitch nav to marketing nav
-* Move marketing nav under marketing
+* Change pages to folders
 * Re-add access store
 
 * Make hybrid scroll container
