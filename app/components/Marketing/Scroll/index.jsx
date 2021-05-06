@@ -2,14 +2,14 @@
 import React, { forwardRef, useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
-import PitchTitle from './Title'
-import PitchDescription from './Description'
+import Pitch from '../../../components/Pitch'
 import { mapPitchSegmentIndex } from '../../../redux/pitch/selector'
 import './style'
 
 const MarketingScroll = forwardRef((props, ref) => {
     const pitchSegmentIndex = useSelector(mapPitchSegmentIndex)
 
+    // TODO: Only in pitch page.
     useEffect(() => {
         // Scroll back to top upon page change.
         ref.current.scrollTop = 0
@@ -20,32 +20,32 @@ const MarketingScroll = forwardRef((props, ref) => {
         <div
             {...{
                 className: cx(
-                    // Box shadow and gradient mask cannot be on same element.
-                    'MarketingScroll__container',
-                    'abF',
+                    'MarketingScroll',
+                    'fCC',
                 ),
             }}
         >
             <div
                 {...{
-                    ref,
                     className: cx(
-                        'MarketingScroll',
-                        'foN',
-                        'gradientMask__scrollBottom',
+                        // Box shadow and gradient mask cannot be on same element.
+                        'MarketingScroll__child',
+                        'abF',
                     ),
-                    tabIndex: -1,
                 }}
             >
-                <PitchTitle />
                 <div
                     {...{
+                        ref,
                         className: cx(
-                            'MarketingScroll__content',
+                            'MarketingScroll__grandchild',
+                            'foN',
+                            'gradientMask__scrollBottom',
                         ),
+                        tabIndex: -1,
                     }}
                 >
-                    <PitchDescription />
+                    <Pitch />
                 </div>
             </div>
         </div>

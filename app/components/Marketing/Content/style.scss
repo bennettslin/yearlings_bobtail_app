@@ -1,7 +1,7 @@
-@import '../../../../scss/constants/colour';
-@import '../../../../scss/constants/icon';
+@import '../../../scss/constants/colour';
+@import '../../../scss/constants/icon';
 
-.PitchDescription {
+.MarketingContent {
     height: 100%;
     width: 100%;
 
@@ -14,12 +14,12 @@
     }
 }
 
-.PitchText__segment {
+.MarketingContent__body {
     & > :not(:last-child) {
         margin-bottom: $margin__thick * 2;
     }
 }
 
-.PitchText__footnote {
+.MarketingContent__footnote {
     font-size: 0.66em;
 }

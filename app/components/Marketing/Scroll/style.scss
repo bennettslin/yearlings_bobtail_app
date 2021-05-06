@@ -1,15 +1,38 @@
 @import '../../../scss/constants/border';
 @import '../../../scss/constants/colour';
 @import '../../../scss/constants/icon';
+@import '../../../scss/constants/marketing';
+@import '../../../scss/constants/popup';
 @import '../../../scss/constants/shadow';
 
-.MarketingScroll__container {
+.MarketingScroll {
+    position: relative;
+    width: 100%;
+    height: calc(100% - #{$height__marketingNav});
+    font-size: 0.9em;
+
+    .MarketingContainer
+    & {
+        max-width: $width__marketingContainer;
+        height: calc(100% - #{$height__marketingHeader + $height__marketingNav});
+
+        .DW__tabletOrDesktopWidth
+        & {
+            width: calc(
+                100% -
+                #{$LENGTH_ICON_LARGE * 2 + $PADDING_POPUP_CONTENT_WIDE * 2}
+            );
+        }
+    }
+}
+
+.MarketingScroll__child {
     background-color: $colour__foreground;
     box-shadow: $boxShadow__popupView;
     border-radius: $borderRadius__wide;
 }
 
-.MarketingScroll {
+.MarketingScroll__grandchild {
     position: relative;
     width: 100%;
     height: 100%;
@@ -22,12 +45,4 @@
     & > :not(:last-child) {
         margin-bottom: $margin__thick * 2;
     }
-}
-
-.MarketingScroll__content {
-    // Needed for Safari.
-    flex-direction: column;
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
 }

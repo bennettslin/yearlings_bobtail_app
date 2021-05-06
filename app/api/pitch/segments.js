@@ -33,7 +33,7 @@ export const getShowContactEmailForPitch = pitchSegmentIndex => (
     Boolean(SEGMENTS[pitchSegmentIndex - 1].contactEmail)
 )
 
-export const getPitchDescriptionForIndex = pitchSegmentIndex => (
+export const getPitchBodyForIndex = pitchSegmentIndex => (
     SEGMENTS[pitchSegmentIndex - 1].description
 )
 
