@@ -3,9 +3,8 @@ import { useSelector } from 'react-redux'
 import { mapMainHeightStyle } from '../../redux/main/selector'
 import { mapMenuHeight } from '../../redux/viewport/selector'
 
-const getMainHoc = MainComponent => {
-
-    const MainHoc = props => {
+const getMainHoc = MainComponent => (
+    props => {
         const
             mainHeightStyle = useSelector(mapMainHeightStyle),
             menuHeight = useSelector(mapMenuHeight)
@@ -22,8 +21,6 @@ const getMainHoc = MainComponent => {
             />
         )
     }
-
-    return MainHoc
-}
+)
 
 export default getMainHoc

@@ -2,9 +2,8 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import { mapStageDimensionCoordinates } from '../../redux/viewport/selector'
 
-const getStageHoc = StageComponent => {
-
-    const StageHoc = () => {
+const getStageHoc = StageComponent => (
+    () => {
         const {
             stageTop,
             stageLeft,
@@ -25,8 +24,6 @@ const getStageHoc = StageComponent => {
             />
         )
     }
-
-    return StageHoc
-}
+)
 
 export default getStageHoc
