@@ -6,7 +6,7 @@ import {
     mapLyricVerseIndex,
     mapLyricAnnotationIndex,
 } from '../../redux/lyric/selector'
-import { mapPitchSegmentIndex } from '../../redux/pitch/selector'
+import { mapPitchSegmentIndex } from '../../redux/marketing/selector'
 import { mapIsMarketingShown } from '../../redux/toggle/selector'
 import {
     getPathForIndices,

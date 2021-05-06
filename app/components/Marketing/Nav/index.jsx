@@ -10,7 +10,7 @@ import {
     mapIsMonitorWidth,
     mapIsPhoneWidth,
 } from '../../../redux/device/selector'
-import { mapPitchSegmentIndex } from '../../../redux/pitch/selector'
+import { mapPitchSegmentIndex } from '../../../redux/marketing/selector'
 import {
     getPitchSegmentIndices,
     getPitchSegmentsCount,

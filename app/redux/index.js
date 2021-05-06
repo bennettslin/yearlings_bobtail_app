@@ -11,8 +11,8 @@ import ErrorReducer from './error/reducer'
 import FocusReducer from './focus/reducer'
 import HoverReducer from './hover/reducer'
 import { getLyricReducer } from './lyric/reducer'
+import { getMarketingReducer } from './marketing/reducer'
 import { getOptionReducer } from './option/reducer'
-import { getPitchReducer } from './pitch/reducer'
 import PlayersReducer from './players/reducer'
 import { getSceneReducer } from './scene/reducer'
 import ScrollCarouselReducer from './scrollCarousel/reducer'
@@ -37,8 +37,8 @@ import {
     FOCUS_STORE,
     HOVER_STORE,
     LYRIC_STORE,
+    MARKETING_STORE,
     OPTION_STORE,
-    PITCH_STORE,
     PLAYERS_STORE,
     SCENE_STORE,
     SCROLL_CAROUSEL_STORE,
@@ -85,8 +85,8 @@ export const getAlbumReducers = ({
             initialVerseIndex,
             initialAnnotationIndex,
         }),
+        [MARKETING_STORE]: getMarketingReducer(initialPitchIndex),
         [OPTION_STORE]: getOptionReducer(initialSongIndex),
-        [PITCH_STORE]: getPitchReducer(initialPitchIndex),
         [PLAYERS_STORE]: PlayersReducer,
         [SCENE_STORE]: getSceneReducer({
             initialSongIndex,
@@ -122,7 +122,7 @@ export const getMarketingReducers = ({
 
     return combineReducers({
         [ACCESS_STORE]: getAccessReducer({ isMarketingPage: true }),
-        [PITCH_STORE]: getPitchReducer(initialPitchIndex),
+        [MARKETING_STORE]: getMarketingReducer(initialPitchIndex),
         [VIEWPORT_STORE]: getViewportReducer({
             windowHeight,
             windowWidth,

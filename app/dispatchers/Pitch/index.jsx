@@ -1,8 +1,8 @@
 import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getPitchSegmentsCount } from '../../api/pitch/segments'
-import { setPitchSegmentIndex } from '../../redux/pitch/action'
-import { mapPitchSegmentIndex } from '../../redux/pitch/selector'
+import { setPitchSegmentIndex } from '../../redux/marketing/action'
+import { mapPitchSegmentIndex } from '../../redux/marketing/selector'
 
 const PitchDispatcher = forwardRef((props, ref) => {
     const

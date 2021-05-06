@@ -3,7 +3,7 @@ import React, { forwardRef, useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
 import Pitch from '../../../components/Pitch'
-import { mapPitchSegmentIndex } from '../../../redux/pitch/selector'
+import { mapPitchSegmentIndex } from '../../../redux/marketing/selector'
 import './style'
 
 const MarketingScroll = forwardRef((props, ref) => {

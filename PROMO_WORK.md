@@ -1,9 +1,10 @@
 # Promo work
 * Create placeholder promo content
 * Create placeholder onesheet content
-* Change pitch to marketing store
-    * Have promo page (string) in store
-        * No page is root
+* Store changes
+    * Change to selected pitch index
+    * Have selected marketing page in store
+        * No page is promo
         * Pitch
         * Onesheet
     * Just test by hardcoding string for now

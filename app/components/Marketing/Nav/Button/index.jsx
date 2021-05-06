@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import Button from '../../../Button'
 import ButtonCharacter from '../../../Button/Character'
-import { mapPitchSegmentIndex } from '../../../../redux/pitch/selector'
+import { mapPitchSegmentIndex } from '../../../../redux/marketing/selector'
 import {
     PITCH_HOME_BUTTON_KEY,
     PITCH_SEGMENT_BUTTON_KEY,
