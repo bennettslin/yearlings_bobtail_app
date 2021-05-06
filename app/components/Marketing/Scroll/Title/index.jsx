@@ -3,7 +3,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import Texts from '../../../Texts'
-import getPitchServerClientHoc from '../../../PitchHoc'
+import getPitchServerClientHoc from '../../../../hocs/PitchHoc'
 import { getPitchTitleForIndex } from '../../../../api/pitch/segments'
 import './style'
 

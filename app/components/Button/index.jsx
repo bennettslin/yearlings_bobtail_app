@@ -1,7 +1,7 @@
 import React, { memo, useRef } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import getDidMountHoc from '../DidMountHoc'
+import getDidMountHoc from '../../hocs/DidMountHoc'
 import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
 import ButtonIcon from './Icon'
 import Tooltip from './Tooltip'

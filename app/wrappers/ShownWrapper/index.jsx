@@ -2,7 +2,7 @@ import React, { memo, useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import getDidMountHoc from '../../components/DidMountHoc'
+import getDidMountHoc from '../../hocs/DidMountHoc'
 import { getSongTipType } from '../../api/album/tips'
 import { ANNOTATION, WIKI, WORMHOLES } from '../../constants/tips'
 import {

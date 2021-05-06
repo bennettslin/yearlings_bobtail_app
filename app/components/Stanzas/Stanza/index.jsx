@@ -5,7 +5,7 @@
 import React, { forwardRef, memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import getSongServerClientHoc from '../../SongHoc'
+import getSongServerClientHoc from '../../../hocs/SongHoc'
 import Unit from '../../Unit'
 import { getUnitIndicesForStanza } from '../../../api/album/stanzas'
 import './style'

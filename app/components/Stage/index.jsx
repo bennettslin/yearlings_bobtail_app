@@ -1,7 +1,7 @@
 import React, { useEffect, memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import getStageHoc from '../StageHoc'
+import getStageHoc from '../../hocs/StageHoc'
 import Scene from '../Scene'
 import Sky from '../Scene/Sky'
 import Wood from '../Scene/Wood'

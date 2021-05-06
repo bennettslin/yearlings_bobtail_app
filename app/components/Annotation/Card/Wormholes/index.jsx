@@ -2,7 +2,7 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
-import getDidMountHoc from '../../../DidMountHoc'
+import getDidMountHoc from '../../../../hocs/DidMountHoc'
 import AnnotationWormhole from './Wormhole'
 import { getSourceWormholeIndices } from '../../../../api/album/wormholes'
 import { mapAccessedWikiWormholeIndex } from '../../../../redux/access/selector'

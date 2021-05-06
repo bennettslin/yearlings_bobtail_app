@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import * as EmailValidator from 'email-validator'
-import getDidMountHoc from '../../DidMountHoc'
+import getDidMountHoc from '../../../hocs/DidMountHoc'
 import {
     EMAIL_ACTION,
     EMAIL_NAME,

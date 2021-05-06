@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import CSSTransition from 'react-transition-group/CSSTransition'
-import getDidMountHoc from '../../DidMountHoc'
+import getDidMountHoc from '../../../hocs/DidMountHoc'
 import { mapIsOverlayShown } from '../../../redux/overlay/selector'
 import './style'
 

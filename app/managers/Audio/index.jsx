@@ -3,7 +3,7 @@ import React, { forwardRef, useImperativeHandle, useRef } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
-import getDidMountHoc from '../../components/DidMountHoc'
+import getDidMountHoc from '../../hocs/DidMountHoc'
 import AudioPlayer from './Player'
 import { mapIsPlaying } from '../../redux/audio/selector'
 import {

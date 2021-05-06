@@ -1,7 +1,7 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import getDidMountHoc from '../DidMountHoc'
+import getDidMountHoc from '../../hocs/DidMountHoc'
 import InlineSvg from '../../modules/InlineSvg'
 import { getSvgForDot } from '../../api/svg'
 import './style'

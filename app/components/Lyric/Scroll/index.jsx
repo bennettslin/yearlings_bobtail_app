@@ -1,7 +1,7 @@
 import React, { forwardRef, useEffect, useRef, memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import getDidMountHoc from '../../DidMountHoc'
+import getDidMountHoc from '../../../hocs/DidMountHoc'
 import VerseBar from '../VerseBar'
 import AutoScrollDispatcher from '../../../dispatchers/AutoScroll'
 import ScrollLyricListener from '../../../handlers/Scroll/Lyric'

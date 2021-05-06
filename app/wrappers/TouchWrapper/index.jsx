@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import getDidMountHoc from '../../components/DidMountHoc'
+import getDidMountHoc from '../../hocs/DidMountHoc'
 import { mapIsActivated } from '../../redux/activated/selector'
 import { mapIsBannerHovering } from '../../redux/banner/selector'
 import {

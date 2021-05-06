@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState, memo } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
-import getDidMountHoc from '../../DidMountHoc'
+import getDidMountHoc from '../../../hocs/DidMountHoc'
 import AnnotationDispatcher from '../../../handlers/Annotation/Dispatcher'
 import Annotation from '../../Annotation'
 import Popup from '../../Popup'

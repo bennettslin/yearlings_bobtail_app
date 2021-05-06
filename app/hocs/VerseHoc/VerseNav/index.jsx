@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
 import CSSTransition from 'react-transition-group/CSSTransition'
-import Button from '../../Button'
+import Button from '../../../components/Button'
 import { ENTER } from '../../../constants/access'
 import {
     AUDIO_FAST_FORWARD_BUTTON_KEY,

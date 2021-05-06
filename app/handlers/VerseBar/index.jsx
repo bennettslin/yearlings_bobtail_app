@@ -1,7 +1,7 @@
 import { forwardRef, useImperativeHandle, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
-import getDidMountHoc from '../../components/DidMountHoc'
+import getDidMountHoc from '../../hocs/DidMountHoc'
 import { updateVerseBarsStatus } from '../../redux/verseBars/action'
 import { getVerseBarsStatus } from './helper'
 import { getMapVerseCursorIndex } from '../../redux/cursor/selector'

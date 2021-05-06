@@ -1,7 +1,7 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
-import getDidMountHoc from '../../DidMountHoc'
+import getDidMountHoc from '../../../hocs/DidMountHoc'
 import TipsHand from '../../Tips/Hand'
 import {
     getShowAnnotationTip,

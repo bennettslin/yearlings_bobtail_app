@@ -2,7 +2,7 @@
 import React, { forwardRef, memo } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
-import getDidMountHoc from '../../../DidMountHoc'
+import getDidMountHoc from '../../../../hocs/DidMountHoc'
 import { getDotForUnit } from '../../../../api/album/units'
 import { mapLyricSongIndex } from '../../../../redux/lyric/selector'
 import { UnitDot } from '..'

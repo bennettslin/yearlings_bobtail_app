@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
-import getDidMountHoc from '../../components/DidMountHoc'
+import getDidMountHoc from '../../hocs/DidMountHoc'
 import { mapIsPlaying } from '../../redux/audio/selector'
 import { mapIsLyricLogue } from '../../redux/lyric/selector'
 

@@ -3,7 +3,7 @@ import React, { memo, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
-import getDidMountHoc from '../../components/DidMountHoc'
+import getDidMountHoc from '../../hocs/DidMountHoc'
 import { DEVICE_WIDTH_CONFIGS } from '../../constants/responsive/deviceWidth'
 import {
     mapIsDesktopWidth,

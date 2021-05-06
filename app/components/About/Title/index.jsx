@@ -1,7 +1,7 @@
 import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
-import getDidMountHoc from '../../DidMountHoc'
+import getDidMountHoc from '../../../hocs/DidMountHoc'
 import Anchor from '../../Anchor'
 import { ALBUM_TITLE } from '../../../constants/paths'
 import { BOBTAIL_YEARLINGS_WEBSITE } from '../../../constants/website'

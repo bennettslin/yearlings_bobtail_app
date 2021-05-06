@@ -1,7 +1,7 @@
 import React, { memo, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import getDidMountHoc from '../../DidMountHoc'
+import getDidMountHoc from '../../../hocs/DidMountHoc'
 import Texts from '../../Texts'
 import Underline from '../Underline'
 import { getSpaceIfNeeded, getWordsForWikiAnchor } from './helper'

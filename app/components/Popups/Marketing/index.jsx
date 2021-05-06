@@ -2,7 +2,7 @@
 import React, { forwardRef, memo, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
-import getDidMountHoc from '../../DidMountHoc'
+import getDidMountHoc from '../../../hocs/DidMountHoc'
 import { updateIsMarketingShown } from '../../../redux/toggle/action'
 import Popup from '../../Popup'
 import Marketing from '../../Marketing'

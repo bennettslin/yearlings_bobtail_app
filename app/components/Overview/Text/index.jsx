@@ -1,13 +1,13 @@
 // Section to show song overview.
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
-import PitchAnchor from '../../PitchAnchor'
+import MarketingAnchor from '../../MarketingAnchor'
 import Texts from '../../Texts'
 import {
     getOverviewForSong,
     getSongIsLogue,
 } from '../../../api/album/songs'
-import getSongServerClientHoc from '../../SongHoc'
+import getSongServerClientHoc from '../../../hocs/SongHoc'
 
 const OverviewText = ({ serverClientSongIndex }) => (
     <>
@@ -17,7 +17,7 @@ const OverviewText = ({ serverClientSongIndex }) => (
             }}
         />
         {getSongIsLogue(serverClientSongIndex) && (
-            <PitchAnchor />
+            <MarketingAnchor />
         )}
     </>
 )

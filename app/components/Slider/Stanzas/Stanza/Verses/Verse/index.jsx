@@ -2,7 +2,7 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import getVerseHoc from '../../../../../VerseHoc'
+import getVerseHoc from '../../../../../../hocs/VerseHoc'
 import './style'
 
 const SliderVerse = ({

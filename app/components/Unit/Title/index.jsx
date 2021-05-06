@@ -2,8 +2,8 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import getDidMountHoc from '../../DidMountHoc'
-import getSongServerClientHoc from '../../SongHoc'
+import getDidMountHoc from '../../../hocs/DidMountHoc'
+import getSongServerClientHoc from '../../../hocs/SongHoc'
 import { getIndexedTitleForSong } from '../../../api/album/songs'
 import './style'
 

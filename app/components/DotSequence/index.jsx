@@ -2,7 +2,7 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import getDidMountHoc from '../DidMountHoc'
+import getDidMountHoc from '../../hocs/DidMountHoc'
 import SequenceDot from './SequenceDot'
 import { getDotKeysFromBit } from '../../helpers/dot'
 import { ORDERED_DOT_KEYS } from '../../constants/dots'

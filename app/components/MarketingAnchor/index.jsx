@@ -4,7 +4,7 @@ import Anchor from '../Anchor'
 import { toggleIsMarketingShown } from '../../redux/toggle/action'
 import './style'
 
-const PitchAnchor = () => {
+const MarketingAnchor = () => {
     const dispatch = useDispatch()
 
     const handleAnchorClick = () => {
@@ -12,7 +12,7 @@ const PitchAnchor = () => {
     }
 
     return (
-        <div {...{ className: 'PitchAnchor' }}>
+        <div {...{ className: 'MarketingAnchor' }}>
             {`Interested in working with us? Read `}
             <Anchor
                 {...{
@@ -25,4 +25,4 @@ const PitchAnchor = () => {
     )
 }
 
-export default PitchAnchor
+export default MarketingAnchor

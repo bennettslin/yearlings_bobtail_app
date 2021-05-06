@@ -5,7 +5,7 @@
 import React, { forwardRef, memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import getDidMountHoc from '../../DidMountHoc'
+import getDidMountHoc from '../../../hocs/DidMountHoc'
 import VerseColumnLine from './ColumnLine'
 import { EAR_COLUMN_KEYS } from '../../../constants/lyrics'
 import './style'

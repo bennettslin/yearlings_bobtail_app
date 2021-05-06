@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
-import getSongServerClientHoc from '../../SongHoc'
+import getSongServerClientHoc from '../../../hocs/SongHoc'
 import { getOverviewForSong } from '../../../api/album/songs'
 import { getDocumentHead } from './helper'
 

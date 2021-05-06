@@ -4,7 +4,7 @@
  */
 import React, { forwardRef, memo, useRef } from 'react'
 import PropTypes from 'prop-types'
-import getSongServerClientHoc from '../SongHoc'
+import getSongServerClientHoc from '../../hocs/SongHoc'
 import VerseDispatcher from '../../dispatchers/Verse'
 import Stanza from './Stanza'
 import Unit from '../Unit'

@@ -2,7 +2,7 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
-import getDidMountHoc from '../../DidMountHoc'
+import getDidMountHoc from '../../../hocs/DidMountHoc'
 import Wiki from '../../Wiki'
 import Popup from '../../Popup'
 import { updateWikiIndices } from '../../../redux/session/action'
