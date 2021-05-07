@@ -49,7 +49,7 @@ const RootContainer = () => {
 
         if (isMarketingShown) {
             currentElement = marketingScrollElement?.current
-            logString = 'pitch'
+            logString = 'marketing'
 
         } else if (shouldNavigateLyric) {
             currentElement = lyricScrollElement?.current

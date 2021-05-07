@@ -3,7 +3,6 @@
     * Accommodate pitch under promo path
     * Check if this fixes the blank white pitch page issue
 
-* Helmet
 * Location replace
 
 * Handle default pitch page

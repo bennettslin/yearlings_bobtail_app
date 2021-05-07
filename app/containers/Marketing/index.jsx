@@ -114,11 +114,11 @@ const MarketingContainer = ({ children }) => {
             }}
         >
             <Helmet>
-                <title>{`Artup | ${ALBUM_TITLE}`}</title>
+                <title>{`Promo | ${ALBUM_TITLE}`}</title>
                 <meta
                     {...{
                         name: 'description',
-                        content: 'Artup pitch for the Bobtail Yearlings album.',
+                        content: 'Promo material for the Bobtail Yearlings album.',
                     }}
                 />
             </Helmet>

@@ -17,7 +17,7 @@ const MarketingAnchor = () => {
             <Anchor
                 {...{
                     text: 'our pitch!',
-                    analyticsLabel: 'pitch',
+                    analyticsLabel: 'marketing',
                     handleAnchorClick,
                 }}
             />
