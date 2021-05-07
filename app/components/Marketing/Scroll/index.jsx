@@ -1,4 +1,3 @@
-// Section to show pitch to labels and press.
 import React, { forwardRef, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'

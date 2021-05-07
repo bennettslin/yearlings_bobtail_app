@@ -1,7 +1,11 @@
 import React, { forwardRef, useContext } from 'react'
 import { useSelector } from 'react-redux'
 import PagePitchIndexContext from '../../contexts/PagePitchIndex'
-import { mapPitchSegmentIndex } from '../../redux/marketing/selector'
+import PagePromoPathContext from '../../contexts/PagePromoPath'
+import {
+    mapPitchSegmentIndex,
+    mapSelectedPromoPath,
+} from '../../redux/marketing/selector'
 import { getIsServerSide } from '../../utils/browser'
 
 const getMarketingServerClientHoc = ServerClientComponent => (
@@ -13,16 +17,22 @@ const getMarketingServerClientHoc = ServerClientComponent => (
     forwardRef((props, ref) => {
         const
             pagePitchIndex = useContext(PagePitchIndexContext),
+            pagePromoPath = useContext(PagePromoPathContext),
             pitchSegmentIndex = useSelector(mapPitchSegmentIndex),
+            selectedPromoPath = useSelector(mapSelectedPromoPath),
             serverClientPitchIndex = getIsServerSide() ?
                 pagePitchIndex :
-                pitchSegmentIndex
+                pitchSegmentIndex,
+            serverClientPromoPath = getIsServerSide() ?
+                pagePromoPath :
+                selectedPromoPath
 
         return (
             <ServerClientComponent
                 {...{
                     ref,
                     serverClientPitchIndex,
+                    serverClientPromoPath,
                     ...props,
                 }}
             />

@@ -1,4 +1,6 @@
 # Promo work
+* Move pitch under promo path
+
 * Create placeholder promo content
 * Create placeholder onesheet content
 * Store changes

@@ -75,7 +75,9 @@ export const getIsValidPitchPagePath = pathname => (
 export const getIsValidPromoPagePath = pathname => (
     // It's valid if it's the promo root path...
     pathname === PROMO_PATH ||
-
-    // Or if it's a promo child page.
-    VALID_PROMO_CHILD_PATHS[pathname.replace(`${PROMO_PATH}/`, '')]
+    (
+        // Or if it's a promo child page.
+        pathname.includes(`${PROMO_PATH}/`) &&
+        VALID_PROMO_CHILD_PATHS[pathname.replace(`${PROMO_PATH}/`, '')]
+    )
 )

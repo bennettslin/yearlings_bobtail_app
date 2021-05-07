@@ -53,6 +53,7 @@ import {
 import {
     getInitialSelectedIndices,
     getInitialPitchIndex,
+    getInitialPromoPage,
 } from '../utils/routing/indices'
 
 export const getAlbumReducers = ({
@@ -85,7 +86,7 @@ export const getAlbumReducers = ({
             initialVerseIndex,
             initialAnnotationIndex,
         }),
-        [MARKETING_STORE]: getMarketingReducer(initialPitchIndex),
+        [MARKETING_STORE]: getMarketingReducer({ initialPitchIndex }),
         [OPTION_STORE]: getOptionReducer(initialSongIndex),
         [PLAYERS_STORE]: PlayersReducer,
         [SCENE_STORE]: getSceneReducer({
@@ -118,11 +119,16 @@ export const getMarketingReducers = ({
     windowWidth,
     pathname,
 }) => {
-    const initialPitchIndex = getInitialPitchIndex(pathname)
+    const
+        initialPitchIndex = getInitialPitchIndex(pathname),
+        initialPromoPage = getInitialPromoPage(pathname)
 
     return combineReducers({
         [ACCESS_STORE]: getAccessReducer({ isMarketingPage: true }),
-        [MARKETING_STORE]: getMarketingReducer(initialPitchIndex),
+        [MARKETING_STORE]: getMarketingReducer({
+            initialPitchIndex,
+            initialPromoPage,
+        }),
         [VIEWPORT_STORE]: getViewportReducer({
             windowHeight,
             windowWidth,

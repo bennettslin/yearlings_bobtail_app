@@ -1,4 +1,7 @@
-export const getMarketingDefaults = initialPitchIndex => ({
+export const getMarketingDefaults = ({
+    initialPitchIndex,
+    initialPromoPage = '',
+}) => ({
     pitchSegmentIndex: initialPitchIndex,
-    selectedPromoPath: '',
+    selectedPromoPath: initialPromoPage,
 })

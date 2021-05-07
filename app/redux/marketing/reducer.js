@@ -2,8 +2,14 @@
 import { MARKETING_STORE } from '../../constants/store'
 import { getMarketingDefaults } from './default'
 
-export const getMarketingReducer = initialPitchIndex => (
-    state = getMarketingDefaults(initialPitchIndex),
+export const getMarketingReducer = ({
+    initialPitchIndex,
+    initialPromoPage,
+}) => (
+    state = getMarketingDefaults({
+        initialPitchIndex,
+        initialPromoPage,
+    }),
     { type, payload },
 ) => {
     switch (type) {

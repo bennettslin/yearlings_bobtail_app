@@ -15,6 +15,7 @@ import {
 } from '../storage'
 import {
     ANNOTATION_QUERY_FIELD,
+    PROMO_PATH,
     VERSE_QUERY_FIELD,
 } from '../../constants/routing'
 import {
@@ -138,3 +139,7 @@ export const getInitialPitchIndex = (pathname = '') => {
 
     return initialPitchIndex
 }
+
+export const getInitialPromoPage = (pathname = '') => (
+    pathname === PROMO_PATH ? '' : pathname.replace(`${PROMO_PATH}/`, '')
+)
