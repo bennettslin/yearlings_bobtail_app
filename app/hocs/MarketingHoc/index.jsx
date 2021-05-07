@@ -1,28 +1,28 @@
 import React, { forwardRef, useContext } from 'react'
 import { useSelector } from 'react-redux'
-import PagePitchIndexContext from '../../contexts/PagePitchIndex'
+import PageArtupIndexContext from '../../contexts/PageArtupIndex'
 import PagePromoPathContext from '../../contexts/PagePromoPath'
 import {
-    mapPitchSegmentIndex,
+    mapArtupSlideIndex,
     mapSelectedPromoPath,
 } from '../../redux/marketing/selector'
 import { getIsServerSide } from '../../utils/browser'
 
 const getMarketingServerClientHoc = ServerClientComponent => (
     /**
-     * This hoc passes to its child component either the page pitch index that
-     * is relevant only on the server side, or the pitch segment index that is
+     * This hoc passes to its child component either the page values that are
+     * relevant only on the server side, or the selected values that are
      * relevant only on the client side.
      */
     forwardRef((props, ref) => {
         const
-            pagePitchIndex = useContext(PagePitchIndexContext),
+            pageArtupIndex = useContext(PageArtupIndexContext),
             pagePromoPath = useContext(PagePromoPathContext),
-            pitchSegmentIndex = useSelector(mapPitchSegmentIndex),
+            artupSlideIndex = useSelector(mapArtupSlideIndex),
             selectedPromoPath = useSelector(mapSelectedPromoPath),
-            serverClientPitchIndex = getIsServerSide() ?
-                pagePitchIndex :
-                pitchSegmentIndex,
+            serverClientArtupIndex = getIsServerSide() ?
+                pageArtupIndex :
+                artupSlideIndex,
             serverClientPromoPath = getIsServerSide() ?
                 pagePromoPath :
                 selectedPromoPath
@@ -31,7 +31,7 @@ const getMarketingServerClientHoc = ServerClientComponent => (
             <ServerClientComponent
                 {...{
                     ref,
-                    serverClientPitchIndex,
+                    serverClientArtupIndex,
                     serverClientPromoPath,
                     ...props,
                 }}

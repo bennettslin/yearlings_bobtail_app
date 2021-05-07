@@ -1,14 +1,14 @@
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
-import PagePitchIndexContext from '../../contexts/PagePitchIndex'
+import PageArtupIndexContext from '../../contexts/PageArtupIndex'
 import PagePromoPathContext from '../../contexts/PagePromoPath'
 import MarketingNav from './Nav'
 import MarketingScroll from './Scroll'
 import PitchScroll from '../Pitch/Scroll'
 import PitchNav from '../Pitch/Nav'
 
-const Marketing = forwardRef(({ pagePitchIndex, pagePromoPath }, ref) => (
-    <PagePitchIndexContext.Provider {...{ value: pagePitchIndex }}>
+const Marketing = forwardRef(({ pageArtupIndex, pagePromoPath }, ref) => (
+    <PageArtupIndexContext.Provider {...{ value: pageArtupIndex }}>
         <PagePromoPathContext.Provider {...{ value: pagePromoPath }}>
             <MarketingScroll {...{ ref }}>
                 <PitchScroll />
@@ -17,11 +17,11 @@ const Marketing = forwardRef(({ pagePitchIndex, pagePromoPath }, ref) => (
                 <PitchNav />
             </MarketingNav>
         </PagePromoPathContext.Provider>
-    </PagePitchIndexContext.Provider>
+    </PageArtupIndexContext.Provider>
 ))
 
 Marketing.propTypes = {
-    pagePitchIndex: PropTypes.number,
+    pageArtupIndex: PropTypes.number,
     pagePromoPath: PropTypes.string,
 }
 

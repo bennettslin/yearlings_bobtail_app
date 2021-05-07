@@ -1,8 +1,8 @@
 import { MARKETING_STORE } from '../../constants/store'
 
-export const mapPitchSegmentIndex = (
-    { [MARKETING_STORE]: { pitchSegmentIndex } },
-) => pitchSegmentIndex
+export const mapArtupSlideIndex = (
+    { [MARKETING_STORE]: { artupSlideIndex } },
+) => artupSlideIndex
 
 export const mapSelectedPromoPath = (
     { [MARKETING_STORE]: { selectedPromoPath } },

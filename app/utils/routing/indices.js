@@ -4,13 +4,13 @@ import { getIsVerseValid } from '../../api/album/verses'
 import { getIsAnnotationValid } from '../../api/album/annotations'
 import {
     getIndexFromPath,
-    getValidPitchIndex,
+    getValidArtupIndex,
 } from './path'
 import {
     getStoredAnnotationIndex,
     getStoredSongIndex,
     getStoredVerseIndex,
-    getStoredPitchIndex,
+    getStoredArtupIndex,
     setInStorage,
 } from '../storage'
 import {
@@ -19,7 +19,7 @@ import {
     VERSE_QUERY_FIELD,
 } from '../../constants/routing'
 import {
-    PITCH_SEGMENT_INDEX,
+    ARTUP_SLIDE_INDEX,
     SELECTED_ANNOTATION_INDEX,
     SELECTED_SONG_INDEX,
     SELECTED_VERSE_INDEX,
@@ -59,8 +59,8 @@ const getRoutingAnnotationIndex = (search, songIndex) => {
     ) ? routingAnnotationIndex : NaN
 }
 
-const getRoutingPitchIndex = pathname => (
-    getValidPitchIndex(pathname)
+const getRoutingArtupIndex = pathname => (
+    getValidArtupIndex(pathname)
 )
 
 export const getInitialSelectedIndices = (pathname, search) => {
@@ -121,23 +121,23 @@ export const getInitialSelectedIndices = (pathname, search) => {
     }
 }
 
-export const getInitialPitchIndex = (pathname = '') => {
+export const getInitialArtupIndex = (pathname = '') => {
     const
         /**
          * When called by album reducer, the pathname is obviously not passed,
          * so we default to the stored index.
          */
-        routingPitchIndex = getRoutingPitchIndex(pathname),
-        storedPitchIndex = getStoredPitchIndex(),
-        isRoutingPitchValid = Number.isFinite(routingPitchIndex),
-        initialPitchIndex = isRoutingPitchValid ?
-            routingPitchIndex :
-            storedPitchIndex
+        routingArtupIndex = getRoutingArtupIndex(pathname),
+        storedArtupIndex = getStoredArtupIndex(),
+        isRoutingArtupValid = Number.isFinite(routingArtupIndex),
+        initialArtupIndex = isRoutingArtupValid ?
+            routingArtupIndex :
+            storedArtupIndex
 
     // Save once upon initial retrieval.
-    setInStorage(PITCH_SEGMENT_INDEX, initialPitchIndex)
+    setInStorage(ARTUP_SLIDE_INDEX, initialArtupIndex)
 
-    return initialPitchIndex
+    return initialArtupIndex
 }
 
 export const getInitialPromoPage = (pathname = '') => (

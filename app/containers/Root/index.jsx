@@ -28,7 +28,7 @@ const RootContainer = () => {
         dispatch = useDispatch(),
         rootContainerElement = useRef(),
         lyricScrollElement = useRef(),
-        pitchScrollElement = useRef(),
+        marketingScrollElement = useRef(),
         dispatchRootTouch = useRef(),
         handleKey = useRef(),
         queuedFocus = useSelector(mapQueuedFocus),
@@ -48,7 +48,7 @@ const RootContainer = () => {
             logString = 'root'
 
         if (isMarketingShown) {
-            currentElement = pitchScrollElement?.current
+            currentElement = marketingScrollElement?.current
             logString = 'pitch'
 
         } else if (shouldNavigateLyric) {
@@ -118,7 +118,7 @@ const RootContainer = () => {
                 <Main />
                 <LyricOverview {...{ ref: lyricScrollElement }} />
                 <PopupOverlay />
-                <MainPopups {...{ ref: pitchScrollElement }} />
+                <MainPopups {...{ ref: marketingScrollElement }} />
                 <Menu />
                 <TouchOverlay />
             </WrapperContainer>

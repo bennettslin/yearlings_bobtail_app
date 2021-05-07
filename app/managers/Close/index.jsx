@@ -58,7 +58,7 @@ const CloseHandler = forwardRef((props, ref) => {
     const closeJustTopmost = ({
         exemptAudioOptions,
         exemptAbout,
-        exemptPitch,
+        exemptMarketing,
         exemptScore,
         exemptWiki,
 
@@ -76,7 +76,7 @@ const CloseHandler = forwardRef((props, ref) => {
         } else if (isAboutShown && !exemptAbout) {
             dispatch(updateIsAboutShown())
 
-        } else if (isMarketingShown && !exemptPitch) {
+        } else if (isMarketingShown && !exemptMarketing) {
             dispatch(updateIsMarketingShown())
 
         } else {
@@ -252,7 +252,7 @@ const CloseHandler = forwardRef((props, ref) => {
 
     useEffect(() => {
         if (isMarketingShown) {
-            closeJustTopmost({ exemptPitch: true })
+            closeJustTopmost({ exemptMarketing: true })
             closeMainSections({ exemptAnnotation: true })
         }
     }, [isMarketingShown])

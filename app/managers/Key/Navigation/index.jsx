@@ -5,7 +5,7 @@ import AnnotationNavigation from './Annotation'
 import DotsSlideNavigation from './DotsSlide'
 import LyricNavigation from './Lyric'
 import NavNavigation from './Nav'
-import PitchNavigation from './Pitch'
+import ArtupNavigation from './Artup'
 import { ENTER } from '../../../constants/access'
 import {
     mapActivatedVerseIndex,
@@ -28,7 +28,7 @@ const NavigationManager = forwardRef((props, ref) => {
         navigateDotsSlide = useRef(),
         navigateLyric = useRef(),
         navigateNav = useRef(),
-        navigatePitch = useRef(),
+        navigateArtup = useRef(),
         dispatchVerse = useRef(),
         isActivated = useSelector(mapIsActivated),
         activatedVerseIndex = useSelector(mapActivatedVerseIndex),
@@ -46,7 +46,7 @@ const NavigationManager = forwardRef((props, ref) => {
         if (canNavigateByKey) {
             // We're in pitch.
             if (isMarketingShown) {
-                keyWasRegistered = navigatePitch.current(keyName)
+                keyWasRegistered = navigateArtup.current(keyName)
 
             // We're selecting the activated verse.
             } else if (isActivated && keyName === ENTER) {
@@ -101,7 +101,7 @@ const NavigationManager = forwardRef((props, ref) => {
             <DotsSlideNavigation {...{ ref: navigateDotsSlide }} />
             <LyricNavigation {...{ ref: navigateLyric }} />
             <NavNavigation {...{ ref: navigateNav }} />
-            <PitchNavigation {...{ ref: navigatePitch }} />
+            <ArtupNavigation {...{ ref: navigateArtup }} />
             <VerseDispatcher {...{ ref: dispatchVerse }} />
         </>
     )

@@ -16,7 +16,7 @@ import {
     PITCH_HOME_BUTTON_KEY,
     PITCH_PREVIOUS_BUTTON_KEY,
     PITCH_NEXT_BUTTON_KEY,
-    PITCH_SEGMENT_BUTTON_KEY,
+    PITCH_SLIDE_BUTTON_KEY,
     POPUP_CLOSE_BUTTON_KEY,
     POPUP_PREVIOUS_BUTTON_KEY,
     POPUP_NEXT_BUTTON_KEY,
@@ -117,7 +117,7 @@ export const getShowTooltip = buttonName => {
         case NAV_BOOK_BUTTON_KEY:
         case NAV_SONG_BUTTON_KEY:
         case PITCH_HOME_BUTTON_KEY:
-        case PITCH_SEGMENT_BUTTON_KEY:
+        case PITCH_SLIDE_BUTTON_KEY:
         case WORMHOLE_BUTTON_KEY:
             return false
     }

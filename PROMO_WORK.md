@@ -1,17 +1,8 @@
 # Promo work
-* Move pitch under promo path
+* getRootElement and getPageElement should use same validators
+    * Accommodate pitch under promo path
+    * Check if this fixes the blank white pitch page issue
 
-* Create placeholder promo content
-* Create placeholder onesheet content
-* Store changes
-    * Change to selected pitch index
-    * Have selected marketing page in store
-        * No page is promo
-        * Pitch
-        * Onesheet
-    * Just test by hardcoding string for now
-* Do all the same for pitch nav
-* Allow for server side render of all marketing pages
 * Helmet
 * Location replace
 
@@ -29,3 +20,7 @@
 * Pitch page needs back navigation
 
 * Redo PitchAnchor
+
+# Bonus
+* Distinguish between pitch and artup
+    * Allow for there to be multiple pitches

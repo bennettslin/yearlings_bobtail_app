@@ -1,8 +1,9 @@
 import qs from 'qs'
 import { getPathForSong } from '../api/album/songs'
-import { getPathForPitchSegment } from '../api/pitch/segments'
+import { getPathForArtupSlide } from '../api/artup/slides'
 import {
     ANNOTATION_QUERY_FIELD,
+    ARTUP_PATH_KEY,
     VERSE_QUERY_FIELD,
 } from '../constants/routing'
 
@@ -10,8 +11,8 @@ const getPathForSongPage = songIndex => (
     `/${songIndex}-${getPathForSong(songIndex)}`
 )
 
-export const getPathForPitchPage = pitchSegmentIndex => (
-    `/pitch/${pitchSegmentIndex}-${getPathForPitchSegment(pitchSegmentIndex)}`
+export const getPathForArtupPage = artupSlideIndex => (
+    `/${ARTUP_PATH_KEY}/${artupSlideIndex}-${getPathForArtupSlide(artupSlideIndex)}`
 )
 
 export const getPathForIndices = (songIndex, verseIndex, annotationIndex) => {

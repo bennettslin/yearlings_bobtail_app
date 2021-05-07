@@ -3,10 +3,10 @@ import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import Button from '../../../Button'
 import ButtonCharacter from '../../../Button/Character'
-import { mapPitchSegmentIndex } from '../../../../redux/marketing/selector'
+import { mapArtupSlideIndex } from '../../../../redux/marketing/selector'
 import {
     PITCH_HOME_BUTTON_KEY,
-    PITCH_SEGMENT_BUTTON_KEY,
+    PITCH_SLIDE_BUTTON_KEY,
 } from '../../../../constants/buttons'
 import {
     mapIsMonitorWidth,
@@ -20,8 +20,8 @@ const PitchNavButton = ({
     const
         isMonitorWidth = useSelector(mapIsMonitorWidth),
         isPhoneOrMiniWidth = useSelector(mapIsPhoneOrMiniWidth),
-        pitchSegmentIndex = useSelector(mapPitchSegmentIndex),
-        isSelected = pitchIndex === pitchSegmentIndex
+        artupSlideIndex = useSelector(mapArtupSlideIndex),
+        isSelected = pitchIndex === artupSlideIndex
 
     const _handleButtonClick = () => {
         handleButtonClick(pitchIndex)
@@ -35,7 +35,7 @@ const PitchNavButton = ({
                 isSmallSize: isPhoneOrMiniWidth,
                 buttonName: pitchIndex === 1 ?
                     PITCH_HOME_BUTTON_KEY :
-                    PITCH_SEGMENT_BUTTON_KEY,
+                    PITCH_SLIDE_BUTTON_KEY,
                 isClickDisabled: isSelected,
                 handleButtonClick: _handleButtonClick,
             }}

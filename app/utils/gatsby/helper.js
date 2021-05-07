@@ -5,7 +5,7 @@ import {
 import {
     getIsStorePath,
     getIsValidAdminPath,
-    getIsValidPitchPagePath,
+    getIsValidArtupPagePath,
     getIsValidPromoPagePath,
 } from '../routing/path'
 import {
@@ -15,7 +15,7 @@ import {
 
 export const getIsMarketingPage = pathname => (
     (
-        getIsValidPitchPagePath(pathname) ||
+        getIsValidArtupPagePath(pathname) ||
         getIsValidPromoPagePath(pathname)
     ) &&
 

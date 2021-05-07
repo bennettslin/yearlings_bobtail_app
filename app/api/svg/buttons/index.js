@@ -12,14 +12,14 @@ import dotsSlide from './main/dotsSlide'
 import lyricEar from './lyric/lyricEar'
 import lyricExpand from './lyric/lyricExpand'
 import lyricScroll from './lyric/lyricScroll'
+import marketingReturn from './marketing/marketingReturn'
 import navBook from './nav/navBook'
 import navSong from './nav/navSong'
 import overview from './main/overview'
 import pitchHome from './pitch/pitchHome'
 import pitchPrevious from './pitch/pitchPrevious'
 import pitchNext from './pitch/pitchNext'
-import marketingReturn from './marketing/marketingReturn'
-import pitchSegment from './pitch/pitchSegment'
+import pitchSlide from './pitch/pitchSlide'
 import popupClose from './popup/popupClose'
 import popupPrevious from './popup/popupPrevious'
 import popupNext from './popup/popupNext'
@@ -49,7 +49,7 @@ import {
     PITCH_HOME_BUTTON_KEY,
     PITCH_PREVIOUS_BUTTON_KEY,
     PITCH_NEXT_BUTTON_KEY,
-    PITCH_SEGMENT_BUTTON_KEY,
+    PITCH_SLIDE_BUTTON_KEY,
     POPUP_CLOSE_BUTTON_KEY,
     POPUP_PREVIOUS_BUTTON_KEY,
     POPUP_NEXT_BUTTON_KEY,
@@ -80,7 +80,7 @@ export default {
     [PITCH_HOME_BUTTON_KEY]: pitchHome,
     [PITCH_PREVIOUS_BUTTON_KEY]: pitchPrevious,
     [PITCH_NEXT_BUTTON_KEY]: pitchNext,
-    [PITCH_SEGMENT_BUTTON_KEY]: pitchSegment,
+    [PITCH_SLIDE_BUTTON_KEY]: pitchSlide,
     [POPUP_CLOSE_BUTTON_KEY]: popupClose,
     [POPUP_PREVIOUS_BUTTON_KEY]: popupPrevious,
     [POPUP_NEXT_BUTTON_KEY]: popupNext,

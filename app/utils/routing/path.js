@@ -1,6 +1,6 @@
-import { getIsPitchSegmentValid } from '../../api/pitch/segments'
+import { getIsArtupSlideValid } from '../../api/artup/slides'
 import {
-    PITCH_PATH,
+    ARTUP_PATH_KEY,
     PROMO_PATH,
     VALID_ADMIN_PATHS,
     VALID_PROMO_CHILD_PATHS,
@@ -50,26 +50,26 @@ export const getIsStorePath = pathname => (
     )
 )
 
-export const getValidPitchIndex = pathname => {
-    if (pathname.includes(`${PITCH_PATH}/`)) {
+export const getValidArtupIndex = pathname => {
+    if (pathname.includes(`${ARTUP_PATH_KEY}/`)) {
 
         // Ensure index is numeric.
-        const pagePitchIndex = getIndexFromPath(pathname)
+        const pageArtupIndex = getIndexFromPath(pathname)
 
-        if (getIsPitchSegmentValid(pagePitchIndex)) {
-            return pagePitchIndex
+        if (getIsArtupSlideValid(pageArtupIndex)) {
+            return pageArtupIndex
         }
     }
 
     return NaN
 }
 
-export const getIsValidPitchPagePath = pathname => (
+export const getIsValidArtupPagePath = pathname => (
     // It's valid if it's the pitch root path...
-    pathname === PITCH_PATH ||
+    pathname === ARTUP_PATH_KEY ||
 
     // Or if it's a valid pitch index path.
-    Number.isFinite(getValidPitchIndex(pathname))
+    Number.isFinite(getValidArtupIndex(pathname))
 )
 
 export const getIsValidPromoPagePath = pathname => (

@@ -2,7 +2,7 @@
 import { getValidSongIndex } from '../../api/album/songs'
 import { getValidVerseIndex } from '../../api/album/verses'
 import { getValidAnnotationIndex } from '../../api/album/annotations'
-import { getValidPitchSegmentIndex } from '../../api/pitch/segments'
+import { getValidArtupSlideIndex } from '../../api/artup/slides'
 import { getWindow } from '../browser'
 import { INITIAL_DOTS_BIT } from '../../helpers/dot'
 import { FULL_DOTS_BIT } from '../../constants/dots'
@@ -14,7 +14,7 @@ import {
     VOLUME_MAX,
 } from '../../constants/options'
 import {
-    PITCH_SEGMENT_INDEX,
+    ARTUP_SLIDE_INDEX,
     SELECTED_DOTS_BIT,
     SELECTED_SONG_INDEX,
     SELECTED_VERSE_INDEX,
@@ -116,10 +116,8 @@ export const getDotsBitFromStorage = (initialAnnotationIndex) => {
     return savedDotsBit
 }
 
-export const getStoredPitchIndex = () => {
-    const storedPitchSegmentIndex = getValidPitchSegmentIndex(
-        _getParsedStoredInteger(PITCH_SEGMENT_INDEX),
+export const getStoredArtupIndex = () => (
+    getValidArtupSlideIndex(
+        _getParsedStoredInteger(ARTUP_SLIDE_INDEX),
     )
-
-    return storedPitchSegmentIndex
-}
+)

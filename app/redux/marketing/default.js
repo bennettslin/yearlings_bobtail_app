@@ -1,7 +1,7 @@
 export const getMarketingDefaults = ({
-    initialPitchIndex,
+    initialArtupIndex,
     initialPromoPage = '',
 }) => ({
-    pitchSegmentIndex: initialPitchIndex,
+    artupSlideIndex: initialArtupIndex,
     selectedPromoPath: initialPromoPage,
 })

@@ -1,16 +1,16 @@
-// Actions for pitch.
+// Actions for marketing.
 import { setInStorage } from '../../utils/storage'
 import {
-    PITCH_SEGMENT_INDEX,
+    ARTUP_SLIDE_INDEX,
     MARKETING_STORE,
 } from '../../constants/store'
 
-export const setPitchSegmentIndex = (pitchSegmentIndex = 0) => {
-    setInStorage(PITCH_SEGMENT_INDEX, pitchSegmentIndex)
+export const setArtupSlideIndex = (artupSlideIndex = 0) => {
+    setInStorage(ARTUP_SLIDE_INDEX, artupSlideIndex)
 
     return {
         type: MARKETING_STORE,
-        payload: { pitchSegmentIndex },
+        payload: { artupSlideIndex },
     }
 }
 

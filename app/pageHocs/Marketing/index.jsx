@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Marketing from '../../components/Marketing'
 
 const getMarketingPageComponent = ({
-    pagePitchIndex = 1,
+    pageArtupIndex = 1,
     pagePromoPath,
 
 } = {}) => {
@@ -15,14 +15,14 @@ const getMarketingPageComponent = ({
     const MarketingPageComponent = () => (
         <Marketing
             {...{
-                pagePitchIndex,
+                pageArtupIndex,
                 pagePromoPath,
             }}
         />
     )
 
     MarketingPageComponent.propTypes = {
-        pagePitchIndex: PropTypes.number,
+        pageArtupIndex: PropTypes.number,
         pagePromoPath: PropTypes.string,
     }
 

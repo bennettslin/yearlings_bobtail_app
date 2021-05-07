@@ -23,7 +23,7 @@ module.exports = {
         '__dirname': true,
         'ALBUM': true,
         'SCENE': true,
-        'PITCH': true,
+        'ARTUP': true,
         'BUILD_DATE_TIME': true,
         'IS_RUNTIME': true,
         'IS_PRODUCTION': true,

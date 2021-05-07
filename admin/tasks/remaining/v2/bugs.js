@@ -1,5 +1,10 @@
 export default [
     {
+        taskName: `Small presences are positioned weird on mobile screens.`,
+        workedHours: 0,
+        neededHours: 1,
+    },
+    {
         taskName: `Pitch page doesn't allow just correct indices, without correct paths.`,
         workedHours: 0,
         neededHours: 1,
@@ -16,11 +21,6 @@ export default [
     },
     {
         taskName: `Ellipsis is too short when only right column is shown.`,
-        workedHours: 0,
-        neededHours: 1,
-    },
-    {
-        taskName: `Small presences are positioned weird on mobile screens.`,
         workedHours: 0,
         neededHours: 1,
     },

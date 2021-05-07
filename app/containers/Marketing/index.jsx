@@ -6,12 +6,12 @@ import { Helmet } from 'react-helmet'
 import { navigate } from 'gatsby'
 import AccessStylesheet from '../../components/Stylesheets/Access'
 import Marketing from '../../components/Marketing'
-import PitchNavigation from '../../managers/Key/Navigation/Pitch'
+import ArtupNavigation from '../../managers/Key/Navigation/Artup'
 import MarketingHeader from './Header'
 import { getKeyName } from '../../managers/Key/helper'
-import { getPathForPitchPage } from '../../helpers/url'
+import { getPathForArtupPage } from '../../helpers/url'
 import { updateAccessStore } from '../../redux/access/action'
-import { mapPitchSegmentIndex } from '../../redux/marketing/selector'
+import { mapArtupSlideIndex } from '../../redux/marketing/selector'
 import { getIsServerSide, getWindow } from '../../utils/browser'
 import { ESCAPE, MARKETING_HOME_KEY } from '../../constants/access'
 import DeviceWrapper from '../../wrappers/DeviceWrapper'
@@ -24,8 +24,8 @@ const MarketingContainer = ({ children }) => {
         dispatch = useDispatch(),
         marketingContainerElement = useRef(),
         marketingScrollElement = useRef(),
-        navigatePitch = useRef(),
-        pitchSegmentIndex = useSelector(mapPitchSegmentIndex)
+        navigateArtup = useRef(),
+        artupSlideIndex = useSelector(mapArtupSlideIndex)
 
     const getResizeContainerElement = () => marketingContainerElement.current
 
@@ -56,7 +56,7 @@ const MarketingContainer = ({ children }) => {
         const keyName = getKeyName(e)
 
         // Handle pitch navigation.
-        navigatePitch.current(keyName)
+        navigateArtup.current(keyName)
 
         // Handle return home to album.
         if (keyName === MARKETING_HOME_KEY) {
@@ -89,12 +89,12 @@ const MarketingContainer = ({ children }) => {
 
     useEffect(() => {
         navigate(
-            getPathForPitchPage(pitchSegmentIndex),
+            getPathForArtupPage(artupSlideIndex),
             { replace: true },
         )
 
         focusElement()
-    }, [pitchSegmentIndex])
+    }, [artupSlideIndex])
 
     return (
         <div
@@ -114,11 +114,11 @@ const MarketingContainer = ({ children }) => {
             }}
         >
             <Helmet>
-                <title>{`Pitch | ${ALBUM_TITLE}`}</title>
+                <title>{`Artup | ${ALBUM_TITLE}`}</title>
                 <meta
                     {...{
                         name: 'description',
-                        content: 'Pitch for the Bobtail Yearlings album.',
+                        content: 'Artup pitch for the Bobtail Yearlings album.',
                     }}
                 />
             </Helmet>
@@ -132,7 +132,7 @@ const MarketingContainer = ({ children }) => {
             ) : (
                 <Marketing {...{ ref: marketingScrollElement }} />
             )}
-            <PitchNavigation {...{ ref: navigatePitch }} />
+            <ArtupNavigation {...{ ref: navigateArtup }} />
         </div>
     )
 }

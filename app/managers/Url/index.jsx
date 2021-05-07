@@ -6,11 +6,11 @@ import {
     mapLyricVerseIndex,
     mapLyricAnnotationIndex,
 } from '../../redux/lyric/selector'
-import { mapPitchSegmentIndex } from '../../redux/marketing/selector'
+import { mapArtupSlideIndex } from '../../redux/marketing/selector'
 import { mapIsMarketingShown } from '../../redux/toggle/selector'
 import {
     getPathForIndices,
-    getPathForPitchPage,
+    getPathForArtupPage,
 } from '../../helpers/url'
 
 const UrlManager = () => {
@@ -19,7 +19,7 @@ const UrlManager = () => {
         lyricVerseIndex = useSelector(mapLyricVerseIndex),
         lyricAnnotationIndex = useSelector(mapLyricAnnotationIndex),
         isMarketingShown = useSelector(mapIsMarketingShown),
-        pitchSegmentIndex = useSelector(mapPitchSegmentIndex)
+        artupSlideIndex = useSelector(mapArtupSlideIndex)
 
     useEffect(() => {
         logSelect({
@@ -47,11 +47,11 @@ const UrlManager = () => {
     useEffect(() => {
         if (isMarketingShown) {
             navigate(
-                getPathForPitchPage(pitchSegmentIndex),
+                getPathForArtupPage(artupSlideIndex),
                 { replace: true },
             )
         }
-    }, [isMarketingShown, pitchSegmentIndex])
+    }, [isMarketingShown, artupSlideIndex])
 
     return null
 }

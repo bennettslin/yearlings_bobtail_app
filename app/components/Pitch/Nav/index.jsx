@@ -5,14 +5,14 @@ import {
     mapIsMonitorWidth,
     mapIsPhoneWidth,
 } from '../../../redux/device/selector'
-import { mapPitchSegmentIndex } from '../../../redux/marketing/selector'
+import { mapArtupSlideIndex } from '../../../redux/marketing/selector'
 import Button from '../../Button'
-import PitchDispatcher from '../../../dispatchers/Pitch'
+import ArtupDispatcher from '../../../dispatchers/Artup'
 import PitchNavButton from './Button'
 import {
-    getPitchSegmentIndices,
-    getPitchSegmentsCount,
-} from '../../../api/pitch/segments'
+    getArtupSlideIndices,
+    getArtupSlidesCount,
+} from '../../../api/artup/slides'
 import {
     ARROW_LEFT,
     ARROW_RIGHT,
@@ -25,20 +25,20 @@ import './style'
 
 const PitchNav = () => {
     const
-        dispatchPitch = useRef(),
+        dispatchArtup = useRef(),
         isMonitorWidth = useSelector(mapIsMonitorWidth),
         isMiniWidth = useSelector(mapIsMiniWidth),
         isPhoneWidth = useSelector(mapIsPhoneWidth),
-        pitchSegmentIndex = useSelector(mapPitchSegmentIndex)
+        artupSlideIndex = useSelector(mapArtupSlideIndex)
 
     const handlePreviousClick = () => {
-        dispatchPitch.current({ direction: -1 })
+        dispatchArtup.current({ direction: -1 })
     }
     const handleNextClick = () => {
-        dispatchPitch.current({ direction: 1 })
+        dispatchArtup.current({ direction: 1 })
     }
     const handleButtonClick = pitchIndex => {
-        dispatchPitch.current({ pitchSegmentIndex: pitchIndex })
+        dispatchArtup.current({ artupSlideIndex: pitchIndex })
     }
 
     return (
@@ -49,11 +49,11 @@ const PitchNav = () => {
                     isSmallSize: isMiniWidth,
                     buttonName: PITCH_PREVIOUS_BUTTON_KEY,
                     accessKey: ARROW_LEFT,
-                    isDisabled: pitchSegmentIndex === 1,
+                    isDisabled: artupSlideIndex === 1,
                     handleButtonClick: handlePreviousClick,
                 }}
             />
-            {!isPhoneWidth && getPitchSegmentIndices().map(pitchIndex => (
+            {!isPhoneWidth && getArtupSlideIndices().map(pitchIndex => (
                 <PitchNavButton
                     {...{
                         key: pitchIndex,
@@ -68,11 +68,11 @@ const PitchNav = () => {
                     isSmallSize: isMiniWidth,
                     buttonName: PITCH_NEXT_BUTTON_KEY,
                     accessKey: ARROW_RIGHT,
-                    isDisabled: pitchSegmentIndex === getPitchSegmentsCount(),
+                    isDisabled: artupSlideIndex === getArtupSlidesCount(),
                     handleButtonClick: handleNextClick,
                 }}
             />
-            <PitchDispatcher {...{ ref: dispatchPitch }} />
+            <ArtupDispatcher {...{ ref: dispatchArtup }} />
         </>
     )
 }

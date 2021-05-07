@@ -3,11 +3,11 @@ import { MARKETING_STORE } from '../../constants/store'
 import { getMarketingDefaults } from './default'
 
 export const getMarketingReducer = ({
-    initialPitchIndex,
+    initialArtupIndex,
     initialPromoPage,
 }) => (
     state = getMarketingDefaults({
-        initialPitchIndex,
+        initialArtupIndex,
         initialPromoPage,
     }),
     { type, payload },

@@ -2,26 +2,26 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {
-    getPitchBodyForIndex,
-    getPitchFootnoteForIndex,
-    getPitchTitleForIndex,
-    getShowContactEmailForPitch,
-} from '../../../api/pitch/segments'
+    getBodyForArtupSlide,
+    getFootnoteForArtupSlide,
+    getTitleForArtupSlide,
+    getShowContactEmailForArtupSlide,
+} from '../../../api/artup/slides'
 import getMarketingServerClientHoc from '../../../hocs/MarketingHoc'
 import Contact from '../../Contact'
 import MarketingTitle from '../../Marketing/Scroll/Title'
 import MarketingContent from '../../Marketing/Scroll/Content'
 import Texts from '../../Texts'
 
-const PitchScroll = ({ serverClientPitchIndex }) => {
+const PitchScroll = ({ serverClientArtupIndex }) => {
     const
-        body = getPitchBodyForIndex(serverClientPitchIndex),
-        footnote = getPitchFootnoteForIndex(serverClientPitchIndex)
+        body = getBodyForArtupSlide(serverClientArtupIndex),
+        footnote = getFootnoteForArtupSlide(serverClientArtupIndex)
 
     return (
         <>
             <MarketingTitle
-                {...{ text: getPitchTitleForIndex(serverClientPitchIndex) }}
+                {...{ text: getTitleForArtupSlide(serverClientArtupIndex) }}
             />
             <MarketingContent {...{ footnote }}>
                 {body.map((text, index) => (
@@ -29,7 +29,7 @@ const PitchScroll = ({ serverClientPitchIndex }) => {
                         <Texts {...{ text }} />
                     </p>
                 ))}
-                {getShowContactEmailForPitch(serverClientPitchIndex) && (
+                {getShowContactEmailForArtupSlide(serverClientArtupIndex) && (
                     <Contact />
                 )}
             </MarketingContent>
@@ -38,7 +38,7 @@ const PitchScroll = ({ serverClientPitchIndex }) => {
 }
 
 PitchScroll.propTypes = {
-    serverClientPitchIndex: PropTypes.number.isRequired,
+    serverClientArtupIndex: PropTypes.number.isRequired,
 }
 
 export default getMarketingServerClientHoc(PitchScroll)

@@ -52,7 +52,7 @@ import {
 } from '../constants/store'
 import {
     getInitialSelectedIndices,
-    getInitialPitchIndex,
+    getInitialArtupIndex,
     getInitialPromoPage,
 } from '../utils/routing/indices'
 
@@ -67,7 +67,7 @@ export const getAlbumReducers = ({
             initialVerseIndex,
             initialAnnotationIndex,
         } = getInitialSelectedIndices(pathname, search),
-        initialPitchIndex = getInitialPitchIndex(pathname)
+        initialArtupIndex = getInitialArtupIndex(pathname)
 
     return combineReducers({
         [ACCESS_STORE]: getAccessReducer({ initialAnnotationIndex }),
@@ -86,7 +86,7 @@ export const getAlbumReducers = ({
             initialVerseIndex,
             initialAnnotationIndex,
         }),
-        [MARKETING_STORE]: getMarketingReducer({ initialPitchIndex }),
+        [MARKETING_STORE]: getMarketingReducer({ initialArtupIndex }),
         [OPTION_STORE]: getOptionReducer(initialSongIndex),
         [PLAYERS_STORE]: PlayersReducer,
         [SCENE_STORE]: getSceneReducer({
@@ -120,13 +120,13 @@ export const getMarketingReducers = ({
     pathname,
 }) => {
     const
-        initialPitchIndex = getInitialPitchIndex(pathname),
+        initialArtupIndex = getInitialArtupIndex(pathname),
         initialPromoPage = getInitialPromoPage(pathname)
 
     return combineReducers({
         [ACCESS_STORE]: getAccessReducer({ isMarketingPage: true }),
         [MARKETING_STORE]: getMarketingReducer({
-            initialPitchIndex,
+            initialArtupIndex,
             initialPromoPage,
         }),
         [VIEWPORT_STORE]: getViewportReducer({

@@ -2,18 +2,18 @@ import React, { forwardRef, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
-import { mapPitchSegmentIndex } from '../../../redux/marketing/selector'
+import { mapArtupSlideIndex } from '../../../redux/marketing/selector'
 import './style'
 
 const MarketingScroll = forwardRef(({ children }, ref) => {
-    const pitchSegmentIndex = useSelector(mapPitchSegmentIndex)
+    const artupSlideIndex = useSelector(mapArtupSlideIndex)
 
     // TODO: Only in pitch page.
     useEffect(() => {
         // Scroll back to top upon page change.
         ref.current.scrollTop = 0
-        logState('pitchSegmentIndex', pitchSegmentIndex)
-    }, [pitchSegmentIndex])
+        logState('artupSlideIndex', artupSlideIndex)
+    }, [artupSlideIndex])
 
     return (
         <div
