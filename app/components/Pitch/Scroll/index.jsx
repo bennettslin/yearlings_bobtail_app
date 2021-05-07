@@ -6,14 +6,14 @@ import {
     getPitchFootnoteForIndex,
     getPitchTitleForIndex,
     getShowContactEmailForPitch,
-} from '../../api/pitch/segments'
-import getPitchServerClientHoc from '../../hocs/PitchHoc'
-import Contact from '../Contact'
-import MarketingTitle from '../Marketing/Title'
-import MarketingContent from '../Marketing/Content'
-import Texts from '../Texts'
+} from '../../../api/pitch/segments'
+import getMarketingServerClientHoc from '../../../hocs/MarketingHoc'
+import Contact from '../../Contact'
+import MarketingTitle from '../../Marketing/Scroll/Title'
+import MarketingContent from '../../Marketing/Scroll/Content'
+import Texts from '../../Texts'
 
-const Pitch = ({ serverClientPitchIndex }) => {
+const PitchScroll = ({ serverClientPitchIndex }) => {
     const
         body = getPitchBodyForIndex(serverClientPitchIndex),
         footnote = getPitchFootnoteForIndex(serverClientPitchIndex)
@@ -37,8 +37,8 @@ const Pitch = ({ serverClientPitchIndex }) => {
     )
 }
 
-Pitch.propTypes = {
+PitchScroll.propTypes = {
     serverClientPitchIndex: PropTypes.number.isRequired,
 }
 
-export default getPitchServerClientHoc(Pitch)
+export default getMarketingServerClientHoc(PitchScroll)

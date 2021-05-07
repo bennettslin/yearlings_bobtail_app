@@ -1,12 +1,12 @@
 // Section to show pitch to labels and press.
 import React, { forwardRef, useEffect } from 'react'
+import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
-import Pitch from '../../../components/Pitch'
 import { mapPitchSegmentIndex } from '../../../redux/marketing/selector'
 import './style'
 
-const MarketingScroll = forwardRef((props, ref) => {
+const MarketingScroll = forwardRef(({ children }, ref) => {
     const pitchSegmentIndex = useSelector(mapPitchSegmentIndex)
 
     // TODO: Only in pitch page.
@@ -45,11 +45,15 @@ const MarketingScroll = forwardRef((props, ref) => {
                         tabIndex: -1,
                     }}
                 >
-                    <Pitch />
+                    {children}
                 </div>
             </div>
         </div>
     )
 })
+
+MarketingScroll.propTypes = {
+    children: PropTypes.node.isRequired,
+}
 
 export default MarketingScroll

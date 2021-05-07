@@ -4,7 +4,7 @@ import PagePitchIndexContext from '../../contexts/PagePitchIndex'
 import { mapPitchSegmentIndex } from '../../redux/marketing/selector'
 import { getIsServerSide } from '../../utils/browser'
 
-const getPitchServerClientHoc = ServerClientComponent => (
+const getMarketingServerClientHoc = ServerClientComponent => (
     /**
      * This hoc passes to its child component either the page pitch index that
      * is relevant only on the server side, or the pitch segment index that is
@@ -30,4 +30,4 @@ const getPitchServerClientHoc = ServerClientComponent => (
     })
 )
 
-export default getPitchServerClientHoc
+export default getMarketingServerClientHoc

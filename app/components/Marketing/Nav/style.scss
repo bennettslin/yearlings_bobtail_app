@@ -1,15 +1,6 @@
-@import '../../../scss/constants/icon';
 @import '../../../scss/constants/marketing';
 
-.PitchNav {
+.MarketingNav {
     height: $height__marketingNav;
     width: 100%;
-
-    & > :first-child {
-        margin-right: $MARGIN_THIN * 1.5;
-    }
-
-    & > :last-child {
-        margin-left: $MARGIN_THIN * 1.5;
-    }
 }

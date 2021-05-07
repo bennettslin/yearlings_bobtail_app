@@ -29,18 +29,18 @@ export const getPathForPitchSegment = pitchSegmentIndex => (
     SEGMENTS[pitchSegmentIndex - 1].path
 )
 
-export const getShowContactEmailForPitch = pitchSegmentIndex => (
-    Boolean(SEGMENTS[pitchSegmentIndex - 1].contactEmail)
+export const getPitchTitleForIndex = pitchSegmentIndex => (
+    SEGMENTS[pitchSegmentIndex - 1].title
 )
 
 export const getPitchBodyForIndex = pitchSegmentIndex => (
-    SEGMENTS[pitchSegmentIndex - 1].description
+    SEGMENTS[pitchSegmentIndex - 1].body
 )
 
 export const getPitchFootnoteForIndex = pitchSegmentIndex => (
     SEGMENTS[pitchSegmentIndex - 1].footnote
 )
 
-export const getPitchTitleForIndex = pitchSegmentIndex => (
-    SEGMENTS[pitchSegmentIndex - 1].title
+export const getShowContactEmailForPitch = pitchSegmentIndex => (
+    Boolean(SEGMENTS[pitchSegmentIndex - 1].contactEmail)
 )

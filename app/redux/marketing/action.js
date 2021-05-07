@@ -13,3 +13,8 @@ export const setPitchSegmentIndex = (pitchSegmentIndex = 0) => {
         payload: { pitchSegmentIndex },
     }
 }
+
+export const setSelectedPromoPath = (selectedPromoPath = '') => ({
+    type: MARKETING_STORE,
+    payload: { selectedPromoPath },
+})

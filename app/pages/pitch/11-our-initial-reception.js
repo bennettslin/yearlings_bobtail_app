@@ -1,2 +1,2 @@
-import getMarketingPageComponent from '../../containers/Page/Marketing'
-export default getMarketingPageComponent(11)
+import getMarketingPageComponent from '../../pageHocs/Marketing'
+export default getMarketingPageComponent({ pagePitchIndex: 11 })

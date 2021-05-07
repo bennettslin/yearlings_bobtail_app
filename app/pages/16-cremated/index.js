@@ -1,2 +1,2 @@
-import getAlbumPageComponent from '../../containers/Page/Album'
+import getAlbumPageComponent from '../../pageHocs/Album'
 export default getAlbumPageComponent(16)
