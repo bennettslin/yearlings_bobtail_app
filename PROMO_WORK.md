@@ -2,6 +2,7 @@
 * getRootElement and getPageElement should use same validators
     * Accommodate pitch under promo path
     * Check if this fixes the blank white pitch page issue
+    * Check if this fixes the error when opening from album
 
 * Location replace
 
