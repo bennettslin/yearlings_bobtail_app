@@ -2,6 +2,7 @@ import { getIsSongValid } from '../../../api/album/songs'
 import { getIsVerseValid } from '../../../api/album/verses'
 import { getIsAnnotationValid } from '../../../api/album/annotations'
 import { getIsArtupSlideValid } from '../../../api/artup/slides'
+import { getArtupFullPath } from '../marketing'
 import {
     getIndexFromPath,
     getIndexFromQueryString,
@@ -12,7 +13,7 @@ import {
 } from '../../../constants/routing'
 
 export const getRoutingSongIndex = pathname => {
-    const routingSongIndex = getIndexFromPath(pathname)
+    const routingSongIndex = getIndexFromPath({ pathname })
     return getIsSongValid(routingSongIndex) ? routingSongIndex : NaN
 }
 
@@ -39,6 +40,9 @@ export const getRoutingAnnotationIndex = (search, songIndex) => {
 }
 
 export const getRoutingArtupIndex = pathname => {
-    const routingArtupIndex = getIndexFromPath(pathname)
+    const routingArtupIndex = getIndexFromPath({
+        pathname,
+        rootPath: getArtupFullPath(),
+    })
     return getIsArtupSlideValid(routingArtupIndex) ? routingArtupIndex : NaN
 }

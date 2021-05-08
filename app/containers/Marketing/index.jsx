@@ -9,7 +9,7 @@ import Marketing from '../../components/Marketing'
 import ArtupNavigation from '../../managers/Key/Navigation/Artup'
 import MarketingHeader from './Header'
 import { getKeyName } from '../../managers/Key/helper'
-import { getPathForArtupPage } from '../../helpers/url'
+import { getUrlPathForArtupPage } from '../../helpers/url'
 import { updateAccessStore } from '../../redux/access/action'
 import { mapArtupSlideIndex } from '../../redux/marketing/selector'
 import { getIsServerSide, getWindow } from '../../utils/browser'
@@ -89,7 +89,7 @@ const MarketingContainer = ({ children }) => {
 
     useEffect(() => {
         navigate(
-            getPathForArtupPage(artupSlideIndex),
+            getUrlPathForArtupPage(artupSlideIndex),
             { replace: true },
         )
 

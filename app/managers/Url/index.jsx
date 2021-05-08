@@ -10,7 +10,7 @@ import { mapArtupSlideIndex } from '../../redux/marketing/selector'
 import { mapIsMarketingShown } from '../../redux/toggle/selector'
 import {
     getPathForIndices,
-    getPathForArtupPage,
+    getUrlPathForArtupPage,
 } from '../../helpers/url'
 
 const UrlManager = () => {
@@ -47,7 +47,7 @@ const UrlManager = () => {
     useEffect(() => {
         if (isMarketingShown) {
             navigate(
-                getPathForArtupPage(artupSlideIndex),
+                getUrlPathForArtupPage(artupSlideIndex),
                 { replace: true },
             )
         }

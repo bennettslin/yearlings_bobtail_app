@@ -1,19 +1,18 @@
 import qs from 'qs'
 import { getPathForSong } from '../api/album/songs'
 import { getPathForArtupSlide } from '../api/artup/slides'
+import { getArtupFullPath } from '../utils/gatsby/marketing'
 import {
     ANNOTATION_QUERY_FIELD,
-    ARTUP_SUBPATH,
-    PROMO_PATH,
     VERSE_QUERY_FIELD,
 } from '../constants/routing'
 
-const getPathForSongPage = songIndex => (
+const getUrlPathForSongPage = songIndex => (
     `/${songIndex}-${getPathForSong(songIndex)}`
 )
 
-export const getPathForArtupPage = artupSlideIndex => (
-    `/${PROMO_PATH}/${ARTUP_SUBPATH}/${artupSlideIndex}-${getPathForArtupSlide(artupSlideIndex)}`
+export const getUrlPathForArtupPage = artupSlideIndex => (
+    `/${getArtupFullPath()}/${artupSlideIndex}-${getPathForArtupSlide(artupSlideIndex)}`
 )
 
 export const getPathForIndices = (songIndex, verseIndex, annotationIndex) => {
@@ -37,7 +36,7 @@ export const getPathForIndices = (songIndex, verseIndex, annotationIndex) => {
          * being removed by the plugin that removes trailing slashes.
          */
         `${
-            getPathForSongPage(songIndex)
+            getUrlPathForSongPage(songIndex)
         }${
             queryStrings ? '/' : ''
         }${

@@ -1,9 +1,12 @@
 import qs from 'qs'
 import { getWindow } from '../../browser'
 
-export const getIndexFromPath = pathname => (
-    // Remove all non-digits.
-    parseInt(pathname.replace(/\D/g, ''))
+export const getIndexFromPath = ({ pathname, rootPath }) => (
+    parseInt(
+        pathname
+            .replace(rootPath ? '' : `${rootPath}/`, '')
+            .split('-')[0],
+    )
 )
 
 export const getIndexFromQueryString = (search, key) => (
