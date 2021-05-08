@@ -3,7 +3,8 @@ import { getPathForSong } from '../api/album/songs'
 import { getPathForArtupSlide } from '../api/artup/slides'
 import {
     ANNOTATION_QUERY_FIELD,
-    ARTUP_PATH_KEY,
+    ARTUP_SUBPATH,
+    PROMO_PATH,
     VERSE_QUERY_FIELD,
 } from '../constants/routing'
 
@@ -12,7 +13,7 @@ const getPathForSongPage = songIndex => (
 )
 
 export const getPathForArtupPage = artupSlideIndex => (
-    `/${ARTUP_PATH_KEY}/${artupSlideIndex}-${getPathForArtupSlide(artupSlideIndex)}`
+    `/${PROMO_PATH}/${ARTUP_SUBPATH}/${artupSlideIndex}-${getPathForArtupSlide(artupSlideIndex)}`
 )
 
 export const getPathForIndices = (songIndex, verseIndex, annotationIndex) => {

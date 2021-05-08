@@ -1,69 +1,29 @@
-import qs from 'qs'
-import { getIsSongValid } from '../../api/album/songs'
-import { getIsVerseValid } from '../../api/album/verses'
-import { getIsAnnotationValid } from '../../api/album/annotations'
+
 import {
-    getIndexFromPath,
-    getValidArtupIndex,
-} from './path'
+    getRoutingAnnotationIndex,
+    getRoutingArtupIndex,
+    getRoutingSongIndex,
+    getRoutingVerseIndex,
+} from '../routing'
 import {
     getStoredAnnotationIndex,
     getStoredSongIndex,
     getStoredVerseIndex,
     getStoredArtupIndex,
     setInStorage,
-} from '../storage'
+} from '../../storage'
 import {
-    ANNOTATION_QUERY_FIELD,
-    PROMO_PATH,
-    VERSE_QUERY_FIELD,
-} from '../../constants/routing'
+    ARTUP_SUBPATH,
+    ONESHEET_SUBPATH,
+} from '../../../constants/routing'
 import {
     ARTUP_SLIDE_INDEX,
     SELECTED_ANNOTATION_INDEX,
     SELECTED_SONG_INDEX,
     SELECTED_VERSE_INDEX,
-} from '../../constants/store'
+} from '../../../constants/store'
 
-const getRoutingSongIndex = pathname => {
-    const routingSongIndex = getIndexFromPath(pathname)
-
-    return getIsSongValid(routingSongIndex) ? routingSongIndex : NaN
-}
-
-const getQueryStringIndex = (search, key) => {
-    return search ?
-        parseInt(qs.parse(search, { ignoreQueryPrefix: true })[key]) :
-        NaN
-}
-
-const getRoutingVerseIndex = (search, songIndex) => {
-    const routingVerseIndex = getQueryStringIndex(
-        search,
-        VERSE_QUERY_FIELD,
-    )
-    return getIsVerseValid(
-        songIndex,
-        routingVerseIndex,
-    ) ? routingVerseIndex : NaN
-}
-
-const getRoutingAnnotationIndex = (search, songIndex) => {
-    const routingAnnotationIndex = getQueryStringIndex(
-        search,
-        ANNOTATION_QUERY_FIELD,
-    )
-    return getIsAnnotationValid(
-        songIndex,
-        routingAnnotationIndex,
-    ) ? routingAnnotationIndex : NaN
-}
-
-const getRoutingArtupIndex = pathname => (
-    getValidArtupIndex(pathname)
-)
-
-export const getInitialSelectedIndices = (pathname, search) => {
+export const getInitialAlbumIndices = (pathname, search) => {
     const
         routingSongIndex = getRoutingSongIndex(pathname),
         storedSongIndex = getStoredSongIndex(),
@@ -140,6 +100,12 @@ export const getInitialArtupIndex = (pathname = '') => {
     return initialArtupIndex
 }
 
-export const getInitialPromoPage = (pathname = '') => (
-    pathname === PROMO_PATH ? '' : pathname.replace(`${PROMO_PATH}/`, '')
-)
+export const getInitialPromoPageKey = (pathname = '') => {
+    if (pathname.includes(ONESHEET_SUBPATH)) {
+        return ONESHEET_SUBPATH
+    } else if (pathname.includes(ARTUP_SUBPATH)) {
+        return ARTUP_SUBPATH
+    } else {
+        return ''
+    }
+}

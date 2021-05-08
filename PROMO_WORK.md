@@ -1,12 +1,10 @@
 # Promo work
+* Just never accept indexes. Only accept exact paths.
 * getRootElement and getPageElement should use same validators
-    * Accommodate pitch under promo path
-    * Check if this fixes the blank white pitch page issue
-    * Check if this fixes the error when opening from album
+    * In runtime, just index is fine in artup, but screws up in album
+    * In compiled, just index screws up in artup, but is fine in album
 
 * Location replace
-
-* Handle default pitch page
 
 * Marketing scroll useEffect is really just for pitch
     * Change from being marketing children to scroll and nav children

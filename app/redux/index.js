@@ -51,10 +51,10 @@ import {
     VIEWPORT_STORE,
 } from '../constants/store'
 import {
-    getInitialSelectedIndices,
+    getInitialAlbumIndices,
     getInitialArtupIndex,
-    getInitialPromoPage,
-} from '../utils/routing/indices'
+    getInitialPromoPageKey,
+} from '../utils/gatsby/initial'
 
 export const getAlbumReducers = ({
     windowHeight,
@@ -66,7 +66,7 @@ export const getAlbumReducers = ({
             initialSongIndex,
             initialVerseIndex,
             initialAnnotationIndex,
-        } = getInitialSelectedIndices(pathname, search),
+        } = getInitialAlbumIndices(pathname, search),
         initialArtupIndex = getInitialArtupIndex(pathname)
 
     return combineReducers({
@@ -121,7 +121,7 @@ export const getMarketingReducers = ({
 }) => {
     const
         initialArtupIndex = getInitialArtupIndex(pathname),
-        initialPromoPage = getInitialPromoPage(pathname)
+        initialPromoPage = getInitialPromoPageKey(pathname)
 
     return combineReducers({
         [ACCESS_STORE]: getAccessReducer({ isMarketingPage: true }),
