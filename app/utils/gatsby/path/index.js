@@ -4,7 +4,7 @@ import { getWindow } from '../../browser'
 export const getIndexFromPath = ({ pathname, rootPath }) => (
     parseInt(
         pathname
-            .replace(rootPath ? '' : `${rootPath}/`, '')
+            .replace(rootPath ? `${rootPath}/` : '', '')
             .split('-')[0],
     )
 )

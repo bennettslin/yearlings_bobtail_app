@@ -1,8 +1,7 @@
 # Promo work
-* Promo ref breaks
 * 404 page has link
 
-* Helmet
+* Helmet for new promo pages
 * Location replace for 404, deprecated, and new promo pages
 
 
