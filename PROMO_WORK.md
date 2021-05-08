@@ -8,7 +8,7 @@
 
 * Marketing scroll useEffect is really just for pitch
     * Change from being marketing children to scroll and nav children
-* Bottom of marketing content has no minimum margin in low height screens.
+* Bottom of marketing content has no minimum margin in low height screens. (Can't really fix.)
 
 * Create promo page
 * Create onesheet page
