@@ -5,15 +5,15 @@ import Texts from '../../components/Texts'
 import { ALBUM_TITLE } from '../../constants/paths'
 import './style'
 
-const DEPRECATED_TEXT = 'Sorry, this browser is not supported.'
+const NOT_FOUND_TEXT = 'Sorry, this page is not found.'
 
-const DeprecatedContainer = () => {
+const NotFoundContainer = () => {
     useEffect(() => {
         logServe(
-            'Deprecated container loaded.',
+            'Not found container loaded.',
             {
                 action: 'container',
-                label: 'deprecated',
+                label: 'notFound',
             },
         )
     }, [])
@@ -22,7 +22,7 @@ const DeprecatedContainer = () => {
         <div
             {...{
                 className: cx(
-                    'DeprecatedContainer',
+                    'NotFoundContainer',
                     'fontColour__title',
                     'fontSize__largeTitle',
                     'Rancho',
@@ -32,17 +32,17 @@ const DeprecatedContainer = () => {
             }}
         >
             <Helmet>
-                <title>{`Deprecated | ${ALBUM_TITLE}`}</title>
+                <title>{`404 | ${ALBUM_TITLE}`}</title>
                 <meta
                     {...{
                         name: 'description',
-                        content: DEPRECATED_TEXT,
+                        content: NOT_FOUND_TEXT,
                     }}
                 />
             </Helmet>
-            <Texts {...{ text: DEPRECATED_TEXT }} />
+            <Texts {...{ text: NOT_FOUND_TEXT }} />
         </div >
     )
 }
 
-export default DeprecatedContainer
+export default NotFoundContainer

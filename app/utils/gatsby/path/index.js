@@ -23,9 +23,9 @@ const _getPathname = (pathname = '') => (
 
 export const getParsedLocation = ({
     props: {
+        url: rootElementPathname,
         location: {
-            pathname: elementPathname,
-            search: elementSearch,
+            pathname: pageElementPathname,
         } = {},
     } = {},
 } = {}) => {
@@ -37,7 +37,11 @@ export const getParsedLocation = ({
     } = getWindow()
 
     return {
-        pathname: _getPathname(elementPathname || windowPathname),
-        search: elementSearch || windowSearch,
+        pathname: _getPathname(
+            rootElementPathname ||
+            pageElementPathname ||
+            windowPathname,
+        ),
+        search: windowSearch,
     }
 }

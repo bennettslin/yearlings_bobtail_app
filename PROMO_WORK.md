@@ -1,14 +1,15 @@
 # Promo work
-* Just never accept indexes. Only accept exact paths.
-* getRootElement and getPageElement should use same validators
-    * In runtime, just index is fine in artup, but screws up in album
-    * In compiled, just index screws up in artup, but is fine in album
+* My 100,000th Dream breaks with new logic.
 
-* Location replace
+* 404 page has link
+
+* Helmet
+* Location replace for 404, deprecated, and new promo pages
+
 
 * Marketing scroll useEffect is really just for pitch
     * Change from being marketing children to scroll and nav children
-* Bottom of marketing content has no minimum margin in low height screens. (Can't really fix.)
+* Bottom of marketing content has no minimum margin in low height screens. (Maybe don't bother to fix.)
 
 * Create promo page
 * Create onesheet page

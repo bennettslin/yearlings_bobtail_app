@@ -1,12 +1,11 @@
-import {
-    getIsAlbumSession,
-} from '../../browser'
+import { getIsAlbumSession } from '../../browser'
+import { getRoutingArtupIndex } from '../routing'
+import { getPathForArtupSlide } from '../../../api/artup/slides'
 import {
     ARTUP_SUBPATH,
     ONESHEET_SUBPATH,
     PROMO_PATH,
 } from '../../../constants/routing'
-import { getRoutingArtupIndex } from '../routing'
 
 const _getIsValidPromoRootPath = pathname => (
     pathname === PROMO_PATH
@@ -16,12 +15,20 @@ const _getIsValidOnesheetPath = pathname => (
     pathname === `${PROMO_PATH}/${ONESHEET_SUBPATH}`
 )
 
-const _getIsValidArtupPath = pathname => (
-    pathname === `${PROMO_PATH}/${ARTUP_SUBPATH}` || (
-        pathname.includes(`${PROMO_PATH}/${ARTUP_SUBPATH}/`) &&
-        Number.isFinite(getRoutingArtupIndex(pathname))
-    )
-)
+const _getIsValidArtupPath = pathname => {
+    // Check if it's a valid artup root path.
+    if (pathname === `${PROMO_PATH}/${ARTUP_SUBPATH}`) {
+        return true
+    }
+
+    // Check if it's a valid artup page path.
+    const routingArtupIndex = getRoutingArtupIndex(pathname)
+    if (Number.isFinite(routingArtupIndex)) {
+        return pathname === `${PROMO_PATH}/${ARTUP_SUBPATH}/${routingArtupIndex}-${getPathForArtupSlide(routingArtupIndex)}`
+    }
+
+    return false
+}
 
 export const getIsMarketingPage = pathname => (
     /**

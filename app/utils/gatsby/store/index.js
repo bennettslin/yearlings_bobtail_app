@@ -7,69 +7,59 @@ import {
     getAlbumReducers,
     getMarketingReducers,
 } from '../../../redux'
-import { VALID_ADMIN_PATHS } from '../../../constants/routing'
+import { getIsAlbumPage } from '../album'
+import { getIsAdminPageWithStore } from '../admin'
 
-const getNeedsStoreProvider = pathname => (
-    /**
-     * If we're on the server side, then we don't have access to the pathname,
-     * so just always wrap it in the store provider.
-     */
-    getIsServerSide() || (
-        // It's a store path if it's not an admin page...
-        !VALID_ADMIN_PATHS[pathname] ||
-
-        // Or if it's the admin annotations page and not in production build.
-        (
-            !IS_PRODUCTION &&
-            pathname === 'annotations'
-        )
-    )
-)
-
-const getReducers = ({
+const _getReducersIfNeeded = ({
     windowHeight,
     windowWidth,
     pathname,
     search,
-}) => (
-    getIsMarketingPage(pathname) ?
-        getMarketingReducers({
-            windowHeight,
-            windowWidth,
-            pathname,
-        }) :
-        getAlbumReducers({
+
+}) => {
+    if (
+        // For some reason, server side needs store for all pages.
+        getIsServerSide() ||
+        getIsAlbumPage(pathname) ||
+        getIsAdminPageWithStore(pathname)
+    ) {
+        return getAlbumReducers({
             windowHeight,
             windowWidth,
             pathname,
             search,
         })
-)
+    } else if (getIsMarketingPage(pathname)) {
+        return getMarketingReducers({
+            windowHeight,
+            windowWidth,
+            pathname,
+        })
+    } else {
+        return null
+    }
+}
 
 export const getStoreIfNeeded = element => {
     const {
-        pathname,
-        search,
-    } = getParsedLocation(element)
-
-    if (!getNeedsStoreProvider(pathname)) {
-        return null
-    }
-
-    const {
-        innerHeight: windowHeight = 0,
-        innerWidth: windowWidth = 0,
-    } = getWindow()
-
-    return createStore(
-        getReducers({
+            pathname,
+            search,
+        } = getParsedLocation(element),
+        {
+            innerHeight: windowHeight = 0,
+            innerWidth: windowWidth = 0,
+        } = getWindow(),
+        reducers = _getReducersIfNeeded({
             windowHeight,
             windowWidth,
             pathname,
             search,
-        }),
+        })
+
+    return reducers ? createStore(
+        reducers,
         getIsServerSide() ?
             undefined :
             devToolsEnhancer(),
-    )
+    ) : null
 }

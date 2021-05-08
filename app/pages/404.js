@@ -1,2 +1,2 @@
-import getAlbumPageComponent from '../pageHocs/Album'
-export default getAlbumPageComponent()
+import NotFoundContainer from '../containers/NotFound'
+export default NotFoundContainer
