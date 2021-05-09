@@ -1,7 +1,7 @@
-@import '../constants/colour';
-@import '../constants/icon';
+@import '../../scss/constants/colour';
+@import '../../scss/constants/icon';
 
-.hybridContainer {
+.MarketingContainer {
     flex-direction: column;
 
     padding-left: $margin__thick;

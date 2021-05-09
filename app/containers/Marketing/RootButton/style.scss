@@ -1,11 +1,10 @@
 @import '../../../scss/constants/icon';
 
 .ButtonTitle {
-    .RootButton__alignHorizontal
+    .RootButton
     & {
         left: 100%;
         display: flex;
-        margin-left: $MARGIN_THIN;
     }
 }
 

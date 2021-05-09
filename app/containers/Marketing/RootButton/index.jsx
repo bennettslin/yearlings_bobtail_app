@@ -14,7 +14,7 @@ const RootButton = () => (
         {...{
             className: cx(
                 'dramaMasks',
-                'RootButton__alignHorizontal',
+                'RootButton',
             ),
             buttonName: ROOT_HOME_BUTTON_KEY,
             accessKey: ROOT_HOME_KEY,
@@ -22,7 +22,7 @@ const RootButton = () => (
             inanimateChild: (
                 <ButtonTitle
                     {...{
-                        title: 'back to album',
+                        title: '\u00a0back to album',
                     }}
                 />
             ),

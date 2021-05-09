@@ -17,6 +17,7 @@ import DeviceWrapper from '../../wrappers/DeviceWrapper'
 import AccessWrapper from '../../wrappers/AccessWrapper'
 import ResizeManager from '../../managers/Resize'
 import { ALBUM_TITLE } from '../../constants/paths'
+import './style'
 
 const MarketingContainer = ({ children }) => {
     const
@@ -90,7 +91,6 @@ const MarketingContainer = ({ children }) => {
                 ref: marketingContainerElement,
                 className: cx(
                     'MarketingContainer',
-                    'hybridContainer',
                     'rootContainer',
                     'PtSansNarrow',
                     'abF',
