@@ -1,24 +1,27 @@
-import { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { useSelector } from 'react-redux'
+import MarketingUrlManager from './Marketing'
 import {
     mapLyricSongIndex,
     mapLyricVerseIndex,
     mapLyricAnnotationIndex,
 } from '../../redux/lyric/selector'
-import { mapArtupSlideIndex } from '../../redux/marketing/selector'
 import { mapIsMarketingShown } from '../../redux/toggle/selector'
-import {
-    navigateToAlbumPage,
-    navigateToArtupPage,
-} from '../../helpers/navigate'
+import { navigateToAlbumPage } from '../../helpers/navigate'
 
 const UrlManager = () => {
     const
+        navigateToMarketingPage = useRef(),
         lyricSongIndex = useSelector(mapLyricSongIndex),
         lyricVerseIndex = useSelector(mapLyricVerseIndex),
         lyricAnnotationIndex = useSelector(mapLyricAnnotationIndex),
-        isMarketingShown = useSelector(mapIsMarketingShown),
-        artupSlideIndex = useSelector(mapArtupSlideIndex)
+        isMarketingShown = useSelector(mapIsMarketingShown)
+
+    const verifyBeforeNavigation = navigateCallback => {
+        if (isMarketingShown) {
+            navigateCallback()
+        }
+    }
 
     useEffect(() => {
         logSelect({
@@ -36,6 +39,8 @@ const UrlManager = () => {
                 lyricVerseIndex,
                 lyricAnnotationIndex,
             )
+        } else {
+            navigateToMarketingPage.current()
         }
     }, [
         lyricSongIndex,
@@ -44,14 +49,14 @@ const UrlManager = () => {
         isMarketingShown,
     ])
 
-    useEffect(() => {
-        // TODO: Do for promo, onesheet, and artup.
-        if (isMarketingShown) {
-            navigateToArtupPage(artupSlideIndex)
-        }
-    }, [isMarketingShown, artupSlideIndex])
-
-    return null
+    return (
+        <MarketingUrlManager
+            {...{
+                ref: navigateToMarketingPage,
+                verifyBeforeNavigation,
+            }}
+        />
+    )
 }
 
 export default UrlManager

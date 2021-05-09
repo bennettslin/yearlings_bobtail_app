@@ -7,53 +7,46 @@ import { ALBUM_TITLE } from '../../../constants/paths'
 import { BOBTAIL_YEARLINGS_WEBSITE } from '../../../constants/website'
 import './style'
 
-const AboutTitle = ({ didMount }) => {
-    const handleAnchorClick = () => {
-        // TODO: Analytics.
-    }
-
-    return (
-        <>
-            <i
+const AboutTitle = ({ didMount }) => (
+    <>
+        <i
+            {...{
+                ...didMount && {
+                    className: cx(
+                        'About__albumTitle',
+                        'fontColour__title',
+                        'fontSize__largeTitle',
+                        'Rancho',
+                    ),
+                },
+            }}
+        >
+            {ALBUM_TITLE}
+        </i>
+        <div>
+            {'by '}
+            <span
                 {...{
                     ...didMount && {
                         className: cx(
-                            'About__albumTitle',
+                            'About__bandName',
                             'fontColour__title',
-                            'fontSize__largeTitle',
                             'Rancho',
                         ),
                     },
                 }}
             >
-                {ALBUM_TITLE}
-            </i>
-            <div>
-                {'by '}
-                <span
+                <Anchor
                     {...{
-                        ...didMount && {
-                            className: cx(
-                                'About__bandName',
-                                'fontColour__title',
-                                'Rancho',
-                            ),
-                        },
+                        href: BOBTAIL_YEARLINGS_WEBSITE,
+                        text: 'Bobtail Yearlings',
+                        analyticsLabel: 'band',
                     }}
-                >
-                    <Anchor
-                        {...{
-                            href: BOBTAIL_YEARLINGS_WEBSITE,
-                            text: 'Bobtail Yearlings',
-                            analyticsLabel: 'band',
-                            handleAnchorClick,
-                        }}
-                    />
-                </span>
-            </div>
-        </>
-    )
-}
+                />
+            </span>
+        </div>
+    </>
+)
 
 AboutTitle.propTypes = {
     didMount: PropTypes.bool.isRequired,

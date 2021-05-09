@@ -7,10 +7,10 @@ export const getIsPromoRootPath = promoPath => (
     promoPath === ''
 )
 
-export const getShowArtupPage = promoPath => (
+export const getIsArtupPage = promoPath => (
     promoPath === ARTUP_SUBPATH
 )
 
-export const getShowOnesheetPage = promoPath => (
+export const getIsOnesheetPage = promoPath => (
     promoPath === ONESHEET_SUBPATH
 )

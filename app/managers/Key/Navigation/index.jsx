@@ -4,8 +4,8 @@ import VerseDispatcher from '../../../dispatchers/Verse'
 import AnnotationNavigation from './Annotation'
 import DotsSlideNavigation from './DotsSlide'
 import LyricNavigation from './Lyric'
+import MarketingNavigation from './Marketing'
 import NavNavigation from './Nav'
-import ArtupNavigation from './Artup'
 import { ENTER } from '../../../constants/access'
 import {
     mapActivatedVerseIndex,
@@ -28,7 +28,7 @@ const NavigationManager = forwardRef((props, ref) => {
         navigateDotsSlide = useRef(),
         navigateLyric = useRef(),
         navigateNav = useRef(),
-        navigateArtup = useRef(),
+        navigateMarketing = useRef(),
         dispatchVerse = useRef(),
         isActivated = useSelector(mapIsActivated),
         activatedVerseIndex = useSelector(mapActivatedVerseIndex),
@@ -44,9 +44,9 @@ const NavigationManager = forwardRef((props, ref) => {
             keyWasRegistered = false
 
         if (canNavigateByKey) {
-            // We're in pitch.
+            // We're in marketing popup.
             if (isMarketingShown) {
-                keyWasRegistered = navigateArtup.current(keyName)
+                keyWasRegistered = navigateMarketing.current(keyName)
 
             // We're selecting the activated verse.
             } else if (isActivated && keyName === ENTER) {
@@ -101,7 +101,7 @@ const NavigationManager = forwardRef((props, ref) => {
             <DotsSlideNavigation {...{ ref: navigateDotsSlide }} />
             <LyricNavigation {...{ ref: navigateLyric }} />
             <NavNavigation {...{ ref: navigateNav }} />
-            <ArtupNavigation {...{ ref: navigateArtup }} />
+            <MarketingNavigation {...{ ref: navigateMarketing }} />
             <VerseDispatcher {...{ ref: dispatchVerse }} />
         </>
     )

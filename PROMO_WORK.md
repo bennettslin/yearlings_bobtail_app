@@ -1,10 +1,9 @@
 # Promo work
-* Helmet for new promo pages
-* Location replace for new promo pages
-* Callback for container focus
-
 * Create promo page
 * Create onesheet page
+* Create test other pitch page
+
+* Verify helmet and location change
 
 * Redo PitchAnchor
 * Breadcrumb

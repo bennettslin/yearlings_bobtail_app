@@ -2,7 +2,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { getShowArtupPage } from '../../../helpers/marketing'
+import { getIsArtupPage } from '../../../helpers/marketing'
 import getMarketingServerClientHoc from '../../../hocs/MarketingHoc'
 import PitchNav from '../../Pitch/Nav'
 import './style'
@@ -17,7 +17,7 @@ const MarketingNav = ({ serverClientPromoPath }) => {
                 ),
             }}
         >
-            {getShowArtupPage(serverClientPromoPath) && (
+            {getIsArtupPage(serverClientPromoPath) && (
                 <PitchNav />
             )}
         </div>

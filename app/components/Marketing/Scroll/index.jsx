@@ -1,19 +1,21 @@
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { getShowArtupPage } from '../../../helpers/marketing'
+import { getIsArtupPage } from '../../../helpers/marketing'
 import getMarketingServerClientHoc from '../../../hocs/MarketingHoc'
 import PitchScroll from '../../Pitch/Scroll'
 import './style'
 
 const MarketingScroll = forwardRef(({
     serverClientPromoPath,
+    handlePageChange = () => {},
 
 }, ref) => {
-    const resetScrollTop = () => {
+    const handlePitchPageChange = () => {
         if (ref) {
             // Allow child to scroll back to top.
             ref.current.scrollTop = 0
+            handlePageChange()
         }
     }
 
@@ -29,7 +31,7 @@ const MarketingScroll = forwardRef(({
             <div
                 {...{
                     className: cx(
-                        // Box shadow and gradient mask cannot be on same element.
+                        // Box shadow and gradient mask can't be on same element.
                         'MarketingScroll__child',
                         'abF',
                     ),
@@ -40,14 +42,14 @@ const MarketingScroll = forwardRef(({
                         ref,
                         className: cx(
                             'MarketingScroll__grandchild',
-                            'foN',
                             'gradientMask__scrollBottom',
+                            'foN',
                         ),
                         tabIndex: -1,
                     }}
                 >
-                    {getShowArtupPage(serverClientPromoPath) && (
-                        <PitchScroll {...{ resetScrollTop }} />
+                    {getIsArtupPage(serverClientPromoPath) && (
+                        <PitchScroll {...{ handlePitchPageChange }} />
                     )}
                 </div>
             </div>
@@ -57,6 +59,7 @@ const MarketingScroll = forwardRef(({
 
 MarketingScroll.propTypes = {
     serverClientPromoPath: PropTypes.string.isRequired,
+    handlePageChange: PropTypes.func,
 }
 
 export default getMarketingServerClientHoc(MarketingScroll)

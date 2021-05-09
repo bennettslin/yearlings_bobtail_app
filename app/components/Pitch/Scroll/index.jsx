@@ -2,6 +2,10 @@
 import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
+import Contact from '../../Contact'
+import MarketingTitle from '../../Marketing/Scroll/Title'
+import MarketingContent from '../../Marketing/Scroll/Content'
+import Texts from '../../Texts'
 import {
     getBodyForArtupSlide,
     getFootnoteForArtupSlide,
@@ -10,12 +14,8 @@ import {
 } from '../../../api/artup/slides'
 import getMarketingServerClientHoc from '../../../hocs/MarketingHoc'
 import { mapArtupSlideIndex } from '../../../redux/marketing/selector'
-import Contact from '../../Contact'
-import MarketingTitle from '../../Marketing/Scroll/Title'
-import MarketingContent from '../../Marketing/Scroll/Content'
-import Texts from '../../Texts'
 
-const PitchScroll = ({ serverClientArtupIndex, resetScrollTop }) => {
+const PitchScroll = ({ serverClientArtupIndex, handlePitchPageChange }) => {
     const
         artupSlideIndex = useSelector(mapArtupSlideIndex),
         body = getBodyForArtupSlide(serverClientArtupIndex),
@@ -23,7 +23,7 @@ const PitchScroll = ({ serverClientArtupIndex, resetScrollTop }) => {
 
     useEffect(() => {
         // Scroll back to top upon slide change.
-        resetScrollTop()
+        handlePitchPageChange()
         logState('artupSlideIndex', artupSlideIndex)
     }, [artupSlideIndex])
 
@@ -48,7 +48,7 @@ const PitchScroll = ({ serverClientArtupIndex, resetScrollTop }) => {
 
 PitchScroll.propTypes = {
     serverClientArtupIndex: PropTypes.number.isRequired,
-    resetScrollTop: PropTypes.func.isRequired,
+    handlePitchPageChange: PropTypes.func.isRequired,
 }
 
 export default getMarketingServerClientHoc(PitchScroll)

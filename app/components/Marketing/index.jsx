@@ -5,10 +5,20 @@ import PagePromoPathContext from '../../contexts/PagePromoPath'
 import MarketingNav from './Nav'
 import MarketingScroll from './Scroll'
 
-const Marketing = forwardRef(({ pageArtupIndex, pagePromoPath }, ref) => (
+const Marketing = forwardRef(({
+    pageArtupIndex,
+    pagePromoPath,
+    handlePageChange,
+
+}, ref) => (
     <PageArtupIndexContext.Provider {...{ value: pageArtupIndex }}>
         <PagePromoPathContext.Provider {...{ value: pagePromoPath }}>
-            <MarketingScroll {...{ ref }} />
+            <MarketingScroll
+                {...{
+                    ref,
+                    handlePageChange,
+                }}
+            />
             <MarketingNav />
         </PagePromoPathContext.Provider>
     </PageArtupIndexContext.Provider>
@@ -17,6 +27,7 @@ const Marketing = forwardRef(({ pageArtupIndex, pagePromoPath }, ref) => (
 Marketing.propTypes = {
     pageArtupIndex: PropTypes.number,
     pagePromoPath: PropTypes.string,
+    handlePageChange: PropTypes.func,
 }
 
 export default Marketing
