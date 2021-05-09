@@ -9,6 +9,7 @@ import {
 } from '../../../redux'
 import { getIsAlbumPage } from '../album'
 import { getIsAdminPageWithStore } from '../admin'
+import { getIsNotFoundPage } from '../session'
 
 const _getReducersIfNeeded = ({
     windowHeight,
@@ -29,7 +30,10 @@ const _getReducersIfNeeded = ({
             pathname,
             search,
         })
-    } else if (getIsMarketingPage(pathname)) {
+    } else if (
+        getIsMarketingPage(pathname) ||
+        getIsNotFoundPage(pathname)
+    ) {
         return getMarketingReducers({
             windowHeight,
             windowWidth,

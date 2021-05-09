@@ -1,11 +1,10 @@
 # Promo work
-* Have button text hover based on light or dark text colour
-* 404 page has link
+* Button text hover and selected colours.
 
 * Helmet for new promo pages
 * Location replace for 404, deprecated, and new promo pages
 
-* Marketing toggle and root home key are the same
+* Marketing toggle and root home key are the same?!
 
 * Marketing scroll useEffect is really just for pitch
     * Change from being marketing children to scroll and nav children

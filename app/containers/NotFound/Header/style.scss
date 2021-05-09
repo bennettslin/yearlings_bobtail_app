@@ -1,0 +1,14 @@
+@import '../../../scss/constants/icon';
+@import '../../../scss/constants/marketing';
+
+.NotFoundHeader {
+    position: fixed;
+    top: 0;
+    left: $margin__thick;
+
+    width: 100%;
+    height: $height__marketingHeader;
+
+    display: flex;
+    align-items: center;
+}

@@ -1,4 +1,5 @@
 import { getDocument, getIsServerSide } from '../../browser'
+import { getIsAdminPage } from '../admin'
 import { getIsAlbumPage } from '../album'
 import { getIsMarketingPage } from '../marketing'
 
@@ -15,4 +16,10 @@ export const getIsAlbumClientSession = () => (
 
     // This approach is fragile, but it works for now.
     getDocument().getElementsByClassName('RootContainer').length
+)
+
+export const getIsNotFoundPage = pathname => (
+    !getIsAdminPage(pathname) &&
+    !getIsAlbumPage(pathname) &&
+    !getIsMarketingPage(pathname)
 )
