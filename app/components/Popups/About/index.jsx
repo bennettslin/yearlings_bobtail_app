@@ -30,6 +30,7 @@ const AboutPopup = () => {
             isCardSize
             canBeFullHeight
             hasWidePadding
+            overflowScroll
             {...{
                 popupName: 'AboutPopup',
                 isVisible: isAboutShown,

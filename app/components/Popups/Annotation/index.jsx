@@ -51,6 +51,7 @@ const AnnotationPopup = ({ didMount, inMain }) => {
             showArrows
             bounceAnimate
             noBoxShadow
+            overflowScroll
             {...{
                 popupName: 'AnnotationPopup',
                 isVisible: isPopupAnnotationShown,

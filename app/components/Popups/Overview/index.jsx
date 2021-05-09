@@ -24,6 +24,7 @@ const OverviewPopup = ({ inMain = false }) => {
             bounceAnimate
             hasNarrowPadding
             noAbsoluteFull
+            noOverflowHidden
             {...{
                 popupName: 'OverviewPopup',
                 isVisible: isOverviewPopupVisible,

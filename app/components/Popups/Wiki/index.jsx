@@ -24,6 +24,7 @@ const WikiPopup = ({ didMount }) => {
             isFullPopup
             shrinkAnimate
             displaysInOverlay
+            noOverflowHidden
             {...{
                 isVisible: isWikiShown,
                 popupName: 'WikiPopup',

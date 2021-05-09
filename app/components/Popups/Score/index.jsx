@@ -23,6 +23,7 @@ const ScorePopup = ({ didMount }) => {
         <Popup
             isFullPopup
             displaysInOverlay
+            noOverflowHidden
             {...{
                 popupName: 'ScorePopup',
                 isVisible: isScoreShown,

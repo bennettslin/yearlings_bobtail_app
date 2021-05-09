@@ -118,6 +118,6 @@
     padding: $PADDING_POPUP_CONTENT_WIDE;
 }
 
-.PopupViewContent__noOverflowHidden {
+.PopupViewContent__overflowScroll {
     overflow-y: scroll;
 }

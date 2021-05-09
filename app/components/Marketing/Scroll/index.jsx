@@ -34,6 +34,7 @@ const MarketingScroll = forwardRef(({
                         // Box shadow and gradient mask can't be on same element.
                         'MarketingScroll__child',
                         'abF',
+                        'ovH', // Rounds scrollbar.
                     ),
                 }}
             >

@@ -32,6 +32,7 @@ const MarketingPopup = forwardRef(({ didMount }, ref) => {
             isMarketingPopup
             shrinkAnimate
             displaysInOverlay
+            noOverflowHidden
             {...{
                 popupName: 'MarketingPopup',
                 isVisible: isMarketingShown,
