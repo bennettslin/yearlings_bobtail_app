@@ -15,7 +15,7 @@ import {
 import getMarketingServerClientHoc from '../../../hocs/MarketingHoc'
 import { mapArtupSlideIndex } from '../../../redux/marketing/selector'
 
-const PitchScroll = ({ serverClientArtupIndex, handlePitchPageChange }) => {
+const ArtupScroll = ({ serverClientArtupIndex, handlePitchPageChange }) => {
     const
         artupSlideIndex = useSelector(mapArtupSlideIndex),
         body = getBodyForArtupSlide(serverClientArtupIndex),
@@ -46,9 +46,9 @@ const PitchScroll = ({ serverClientArtupIndex, handlePitchPageChange }) => {
     )
 }
 
-PitchScroll.propTypes = {
+ArtupScroll.propTypes = {
     serverClientArtupIndex: PropTypes.number.isRequired,
     handlePitchPageChange: PropTypes.func.isRequired,
 }
 
-export default getMarketingServerClientHoc(PitchScroll)
+export default getMarketingServerClientHoc(ArtupScroll)

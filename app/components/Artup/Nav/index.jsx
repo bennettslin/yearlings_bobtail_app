@@ -23,7 +23,7 @@ import {
 } from '../../../constants/buttons'
 import './style'
 
-const PitchNav = () => {
+const ArtupNav = () => {
     const
         dispatchArtup = useRef(),
         isMonitorWidth = useSelector(mapIsMonitorWidth),
@@ -77,4 +77,4 @@ const PitchNav = () => {
     )
 }
 
-export default PitchNav
+export default ArtupNav

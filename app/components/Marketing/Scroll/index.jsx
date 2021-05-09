@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { getIsArtupPage } from '../../../helpers/marketing'
 import getMarketingServerClientHoc from '../../../hocs/MarketingHoc'
-import PitchScroll from '../../Pitch/Scroll'
+import ArtupScroll from '../../Artup/Scroll'
 import './style'
 
 const MarketingScroll = forwardRef(({
@@ -49,7 +49,7 @@ const MarketingScroll = forwardRef(({
                     }}
                 >
                     {getIsArtupPage(serverClientPromoPath) && (
-                        <PitchScroll {...{ handlePitchPageChange }} />
+                        <ArtupScroll {...{ handlePitchPageChange }} />
                     )}
                 </div>
             </div>

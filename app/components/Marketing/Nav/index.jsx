@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { getIsArtupPage } from '../../../helpers/marketing'
 import getMarketingServerClientHoc from '../../../hocs/MarketingHoc'
-import PitchNav from '../../Pitch/Nav'
+import ArtupNav from '../../Artup/Nav'
 import './style'
 
 const MarketingNav = ({ serverClientPromoPath }) => {
@@ -18,7 +18,7 @@ const MarketingNav = ({ serverClientPromoPath }) => {
             }}
         >
             {getIsArtupPage(serverClientPromoPath) && (
-                <PitchNav />
+                <ArtupNav />
             )}
         </div>
     )
