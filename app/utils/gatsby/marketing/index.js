@@ -1,5 +1,5 @@
-import { getIsAlbumSession } from '../../browser'
 import { getRoutingArtupIndex } from '../routing'
+import { getIsAlbumClientSession } from '../session'
 import { getPathForArtupSlide } from '../../../api/artup/slides'
 import {
     ARTUP_SUBPATH,
@@ -38,7 +38,7 @@ export const getIsMarketingPage = pathname => (
      * Ensure that we are not in a marketing popup, since it will also show a
      * marketing pathname while it is open.
      */
-    !getIsAlbumSession() && (
+    !getIsAlbumClientSession() && (
         _getIsValidPromoRootPath(pathname) ||
         _getIsValidOnesheetPath(pathname) ||
         _getIsValidArtupPath(pathname)

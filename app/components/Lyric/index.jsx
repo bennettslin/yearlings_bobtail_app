@@ -12,7 +12,6 @@ import LyricToggles from './Toggles'
 import CarouselAccess from '../Carousel/Access'
 import { scrollLyricForSongSelect } from '../../redux/scrollLyric/action'
 import { mapIsSongChangeDone } from '../../redux/entrance/selector'
-import { getFinalSideKey } from '../../utils/browser'
 import { CAROUSEL_LYRICS_ENTERED_AFTER_SONG_CHANGE_DONE_DURATION } from '../../constants/entrance'
 import './style'
 
@@ -56,7 +55,6 @@ const Lyric = forwardRef(({ didMount, pageSongIndex }, ref) => {
                                 'abF',
                                 'ovH',
                             ],
-                            getFinalSideKey(),
                         ),
                     }}
                 >

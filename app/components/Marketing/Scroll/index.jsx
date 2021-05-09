@@ -11,7 +11,9 @@ const MarketingScroll = forwardRef(({ children }, ref) => {
     // TODO: Only in pitch page.
     useEffect(() => {
         // Scroll back to top upon page change.
-        ref.current.scrollTop = 0
+        if (ref) {
+            ref.current.scrollTop = 0
+        }
         logState('artupSlideIndex', artupSlideIndex)
     }, [artupSlideIndex])
 

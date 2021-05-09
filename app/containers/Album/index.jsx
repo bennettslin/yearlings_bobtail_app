@@ -6,7 +6,6 @@ import AudioContainer from '../Audio'
 import ListenerContainer from '../Listener'
 import RootContainer from '../Root'
 import StylesheetContainer from '../Stylesheet'
-import { setIsAlbumSession } from '../../utils/browser'
 
 const AlbumContainer = ({ children }) => {
     const
@@ -17,9 +16,6 @@ const AlbumContainer = ({ children }) => {
     const callAudioManager = props => {
         audioContainer.current.callAudioManager(props)
     }
-
-    // Establish that session started from album, not marketing page.
-    setIsAlbumSession()
 
     useEffect(() => {
         logServe(

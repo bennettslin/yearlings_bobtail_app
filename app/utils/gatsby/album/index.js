@@ -1,5 +1,6 @@
 import { getPathForSong } from '../../../api/album/songs'
 import { getRoutingSongIndex } from '../routing'
+import { getIsAlbumClientSession } from '../session'
 
 const _getIsValidSongPath = pathname => {
     // Check if it's a valid album root path.
@@ -17,5 +18,10 @@ const _getIsValidSongPath = pathname => {
 }
 
 export const getIsAlbumPage = pathname => (
-    _getIsValidSongPath(pathname)
+    _getIsValidSongPath(pathname) ||
+    /**
+     * Also check if we are in a marketing popup, since it will show a
+     * marketing pathname while it is open.
+     */
+    getIsAlbumClientSession()
 )
