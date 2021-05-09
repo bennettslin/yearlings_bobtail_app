@@ -1,3 +1,4 @@
+@import '../../../scss/constants/hue';
 @import '../../../scss/constants/zIndex';
 
 .DramaMasks {
@@ -9,7 +10,7 @@
 
 .dramaMasks {
     .mask {
-        fill: hsl(48, 25%, 72%);
-        .PlW__song & { fill: hsl(48, 25%, 52%); }
+        fill: hsl($hue__masks, 25%, 72%);
+        .PlW__song & { fill: hsl($hue__masks, 25%, 52%); }
     }
 }

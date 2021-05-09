@@ -1,6 +1,4 @@
 # Promo work
-* Button text hover and selected colours.
-
 * Helmet for new promo pages
 * Location replace for 404, deprecated, and new promo pages
 

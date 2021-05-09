@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import cx from 'classnames'
 import Button from '../../../components/Button'
 import ButtonTitle from '../../../components/Button/Title'
@@ -7,7 +8,7 @@ import { ROOT_HOME_KEY } from '../../../constants/access'
 import { ROOT_HOME_BUTTON_KEY } from '../../../constants/buttons'
 import './style'
 
-const RootButton = () => (
+const RootButton = ({ hasTextShadowLight }) => (
     <Button
         isCustomSize
         hoverOnParent
@@ -22,6 +23,7 @@ const RootButton = () => (
             inanimateChild: (
                 <ButtonTitle
                     {...{
+                        hasTextShadowLight,
                         title: '\u00a0back to album',
                     }}
                 />
@@ -29,5 +31,9 @@ const RootButton = () => (
         }}
     />
 )
+
+RootButton.propTypes = {
+    hasTextShadowLight: PropTypes.bool,
+}
 
 export default RootButton

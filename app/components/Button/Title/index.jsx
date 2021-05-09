@@ -7,6 +7,7 @@ import './style'
 const ButtonTitle = ({
     title,
     isSelected,
+    hasTextShadowLight,
 
 }) => {
     return Boolean(title) && (
@@ -26,7 +27,9 @@ const ButtonTitle = ({
                             'button__text__selected' :
                             'button__text__interactable',
                         'Rancho',
-                        'textShadow__dark',
+                        hasTextShadowLight ?
+                            'textShadow__light' :
+                            'textShadow__dark',
                         'fCC',
                     ),
                 }}
@@ -40,6 +43,7 @@ const ButtonTitle = ({
 ButtonTitle.propTypes = {
     title: PropTypes.string,
     isSelected: PropTypes.bool,
+    hasTextShadowLight: PropTypes.bool,
 }
 
 export default memo(ButtonTitle)

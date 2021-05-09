@@ -1,4 +1,5 @@
 @import '../constants/colour';
+@import '../constants/hue';
 
 .ButtonIcon__audioFastForward {
     fill: $colour__future__bold;
@@ -75,7 +76,7 @@
 }
 
 .ButtonIcon__pitchHome {
-    .house { fill: hsl(47, 21%, 61%); }
+    .house { fill: hsl($hue__masks, 21%, 71%); }
 }
 
 .ButtonIcon__scores {

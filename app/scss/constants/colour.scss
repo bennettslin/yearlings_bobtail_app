@@ -15,6 +15,7 @@ $sat__medLight: 56%;
 $sat__medium: 52%;
 $sat__dark: 38%;
 $sat__darker: 34%;
+$sat__darkest: 21%;
 
 $lum__lightest: 96%;
 $lum__lighter: 94%;
@@ -25,6 +26,7 @@ $lum__medLight: 78%;
 $lum__medium: 73%;
 $lum__dark: 63%;
 $lum__darker: 59%;
+$lum__darkest: 54%;
 
 $colour__foreground: hsl(47, 21%, $lum__lighter);
 $colour__background: hsl(47, 21%, $lum__darker);
@@ -85,9 +87,17 @@ $colour__select__dark: hsl($hue__select, $sat__darker, $lum__link__dark);
 $colour__select__medium: hsl($hue__select, $sat__medium, $lum__active);
 $colour__select__light: hsl($hue__select, $sat__light, $lum__link__light);
 
-// Just used by button text
-$colour__buttonTextActive: hsl($hue__select, $sat__lighter, $lum__hover__light);
-$colour__buttonTextHover__light: hsl($hue__select, $sat__bold, $lum__link__light);
+// Just used by button text. (Nav song, pitch slide, and root home.)
+$colour__buttonTextSelect__dark: hsl($hue__paused, $sat__dark, $lum__dark);
+$colour__buttonTextSelect__light: hsl($hue__paused, $sat__medLight, $lum__medLight);
+
+$colour__buttonText__dark: hsl($hue__link, $sat__darkest, $lum__darkest);
+
+$colour__buttonTextHover__dark: hsl($hue__masks, $sat__dark, $lum__dark);
+$colour__buttonTextActive__dark: hsl($hue__masks, $sat__medium, $lum__medium);
+
+$colour__buttonTextHover__light: hsl($hue__masks, $sat__medLight, $lum__medLighter);
+$colour__buttonTextActive__light: hsl($hue__masks, $sat__medium, $lum__medium);
 
 // Underline colours.
 $colour__underline: hsl($hue__link, $sat__darker, $lum__medium);

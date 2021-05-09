@@ -11,7 +11,7 @@ const NotFoundHeader = () => (
             ),
         }}
     >
-        <RootButton />
+        <RootButton hasTextShadowLight />
     </div>
 )
 

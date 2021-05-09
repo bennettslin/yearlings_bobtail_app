@@ -20,8 +20,9 @@ const ButtonCharacter = ({
                 'Rancho',
                 'abF',
                 'fCC',
-                'textShadow__dark',
-                hasTextShadowLight && 'textShadow__light',
+                hasTextShadowLight ?
+                    'textShadow__light' :
+                    'textShadow__dark',
             ),
         }}
     >

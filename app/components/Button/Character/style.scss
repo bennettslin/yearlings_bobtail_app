@@ -6,14 +6,19 @@
 }
 
 .button__text__selected {
-    color: $colour__select__medium;
+    color: $colour__buttonTextSelect__light;
 
     &.textShadow__light {
-        color: $colour__select__dark;
+        color: $colour__buttonTextSelect__dark;
     }
 }
 
 .button__text__interactable {
+    // color: $colour__buttonText__light;
+
+    &.textShadow__light {
+        color: $colour__buttonText__dark;
+    }
 
     .Button__enabled:hover
     & {
@@ -22,7 +27,17 @@
 
     .Button__enabled:active
     & {
-        color: $colour__buttonTextActive;
+        color: $colour__buttonTextActive__light;
+    }
+
+    .Button__enabled:hover
+    &.textShadow__light {
+        color: $colour__buttonTextHover__dark;
+    }
+
+    .Button__enabled:active
+    &.textShadow__light {
+        color: $colour__buttonTextActive__dark;
     }
 
     .Button__accessed
