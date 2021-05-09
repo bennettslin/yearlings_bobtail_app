@@ -1,4 +1,5 @@
 # Promo work
+* Have button text hover based on light or dark text colour
 * 404 page has link
 
 * Helmet for new promo pages

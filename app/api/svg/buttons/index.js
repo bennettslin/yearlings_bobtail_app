@@ -12,7 +12,7 @@ import dotsSlide from './main/dotsSlide'
 import lyricEar from './lyric/lyricEar'
 import lyricExpand from './lyric/lyricExpand'
 import lyricScroll from './lyric/lyricScroll'
-import marketingReturn from './marketing/marketingReturn'
+import rootHome from './marketing/rootHome'
 import navBook from './nav/navBook'
 import navSong from './nav/navSong'
 import overview from './main/overview'
@@ -83,7 +83,7 @@ export default {
     [POPUP_CLOSE_BUTTON_KEY]: popupClose,
     [POPUP_PREVIOUS_BUTTON_KEY]: popupPrevious,
     [POPUP_NEXT_BUTTON_KEY]: popupNext,
-    [ROOT_HOME_BUTTON_KEY]: marketingReturn,
+    [ROOT_HOME_BUTTON_KEY]: rootHome,
     [WORMHOLE_BUTTON_KEY]: wormhole,
     [SCORES_BUTTON_KEY]: scores,
     [TIPS_BUTTON_KEY]: tips,

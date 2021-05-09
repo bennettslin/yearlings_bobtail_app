@@ -9,28 +9,25 @@ const ButtonCharacter = ({
     character,
     hasTextShadowLight,
 
-}) => {
-
-    return (
-        <div
-            {...{
-                className: cx(
-                    'ButtonCharacter',
-                    isSelected ?
-                        'button__text__selected' :
-                        'button__text__interactable',
-                    'Rancho',
-                    'abF',
-                    'fCC',
-                    'textShadow__dark',
-                    hasTextShadowLight && 'textShadow__light',
-                ),
-            }}
-        >
-            {character}
-        </div>
-    )
-}
+}) => (
+    <div
+        {...{
+            className: cx(
+                'ButtonCharacter',
+                isSelected ?
+                    'button__text__selected' :
+                    'button__text__interactable',
+                'Rancho',
+                'abF',
+                'fCC',
+                'textShadow__dark',
+                hasTextShadowLight && 'textShadow__light',
+            ),
+        }}
+    >
+        {character}
+    </div>
+)
 
 ButtonCharacter.propTypes = {
     isSelected: PropTypes.bool,

@@ -17,12 +17,12 @@
 
     .Button__enabled:hover
     & {
-        color: $colour__linkHover__light;
+        color: $colour__buttonTextHover__light;
     }
 
     .Button__enabled:active
     & {
-        color: $colour__linkActive;
+        color: $colour__buttonTextActive;
     }
 
     .Button__accessed

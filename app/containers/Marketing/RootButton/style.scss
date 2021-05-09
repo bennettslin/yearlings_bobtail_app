@@ -1,0 +1,16 @@
+@import '../../../scss/constants/icon';
+
+.ButtonTitle {
+    .RootButton__alignHorizontal
+    & {
+        left: 100%;
+        display: flex;
+        margin-left: $MARGIN_THIN;
+    }
+}
+
+.Button__rootHomeSize {
+    height: $LENGTH_ICON_LARGE;
+    width: $LENGTH_ICON_LARGE * 1.77;
+    min-width: $LENGTH_ICON_LARGE * 1.77;
+}

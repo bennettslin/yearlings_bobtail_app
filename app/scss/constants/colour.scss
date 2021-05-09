@@ -85,6 +85,10 @@ $colour__select__dark: hsl($hue__select, $sat__darker, $lum__link__dark);
 $colour__select__medium: hsl($hue__select, $sat__medium, $lum__active);
 $colour__select__light: hsl($hue__select, $sat__light, $lum__link__light);
 
+// Just used by button text
+$colour__buttonTextActive: hsl($hue__select, $sat__lighter, $lum__hover__light);
+$colour__buttonTextHover__light: hsl($hue__select, $sat__bold, $lum__link__light);
+
 // Underline colours.
 $colour__underline: hsl($hue__link, $sat__darker, $lum__medium);
 $colour__underlineAccess: hsl($hue__access, $sat__darker, $lum__medium);
