@@ -80,8 +80,10 @@ const MarketingContainer = ({ children }) => {
     }, [])
 
     useEffect(() => {
+        // TODO: Put this in pitch scroll.
         navigateToArtupPage(artupSlideIndex)
 
+        // TODO: Make this a callback called by pitch.
         focusElement()
     }, [artupSlideIndex])
 

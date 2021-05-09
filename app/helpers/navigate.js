@@ -70,3 +70,11 @@ export const navigateToArtupPage = artupSlideIndex => {
         { replace: true },
     )
 }
+
+export const navigateToPathname = pathname => {
+    navigate(
+        `/${pathname}`,
+        // Replace, not push, in history.
+        { replace: true },
+    )
+}

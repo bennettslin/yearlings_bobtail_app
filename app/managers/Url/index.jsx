@@ -45,6 +45,7 @@ const UrlManager = () => {
     ])
 
     useEffect(() => {
+        // TODO: Do for promo, onesheet, and artup.
         if (isMarketingShown) {
             navigateToArtupPage(artupSlideIndex)
         }

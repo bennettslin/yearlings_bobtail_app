@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import cx from 'classnames'
 import { Helmet } from 'react-helmet'
 import Texts from '../../components/Texts'
+import { navigateToPathname } from '../../helpers/navigate'
 import { ALBUM_TITLE } from '../../constants/paths'
 import './style'
 
@@ -16,6 +17,7 @@ const DeprecatedContainer = () => {
                 label: 'deprecated',
             },
         )
+        navigateToPathname('deprecated')
     }, [])
 
     return (

@@ -1,21 +1,21 @@
-import React, { forwardRef, useEffect } from 'react'
+import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
-import { useSelector } from 'react-redux'
 import cx from 'classnames'
-import { mapArtupSlideIndex } from '../../../redux/marketing/selector'
+import { getShowArtupPage } from '../../../helpers/marketing'
+import getMarketingServerClientHoc from '../../../hocs/MarketingHoc'
+import PitchScroll from '../../Pitch/Scroll'
 import './style'
 
-const MarketingScroll = forwardRef(({ children }, ref) => {
-    const artupSlideIndex = useSelector(mapArtupSlideIndex)
+const MarketingScroll = forwardRef(({
+    serverClientPromoPath,
 
-    // TODO: Only in pitch page.
-    useEffect(() => {
-        // Scroll back to top upon page change.
+}, ref) => {
+    const resetScrollTop = () => {
         if (ref) {
+            // Allow child to scroll back to top.
             ref.current.scrollTop = 0
         }
-        logState('artupSlideIndex', artupSlideIndex)
-    }, [artupSlideIndex])
+    }
 
     return (
         <div
@@ -46,7 +46,9 @@ const MarketingScroll = forwardRef(({ children }, ref) => {
                         tabIndex: -1,
                     }}
                 >
-                    {children}
+                    {getShowArtupPage(serverClientPromoPath) && (
+                        <PitchScroll {...{ resetScrollTop }} />
+                    )}
                 </div>
             </div>
         </div>
@@ -54,7 +56,7 @@ const MarketingScroll = forwardRef(({ children }, ref) => {
 })
 
 MarketingScroll.propTypes = {
-    children: PropTypes.node.isRequired,
+    serverClientPromoPath: PropTypes.string.isRequired,
 }
 
-export default MarketingScroll
+export default getMarketingServerClientHoc(MarketingScroll)

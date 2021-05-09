@@ -2,23 +2,30 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import { getShowArtupPage } from '../../../helpers/marketing'
+import getMarketingServerClientHoc from '../../../hocs/MarketingHoc'
+import PitchNav from '../../Pitch/Nav'
 import './style'
 
-const MarketingNav = ({ children }) => (
-    <div
-        {...{
-            className: cx(
-                'MarketingNav',
-                'fCC',
-            ),
-        }}
-    >
-        {children}
-    </div>
-)
-
-MarketingNav.propTypes = {
-    children: PropTypes.node.isRequired,
+const MarketingNav = ({ serverClientPromoPath }) => {
+    return (
+        <div
+            {...{
+                className: cx(
+                    'MarketingNav',
+                    'fCC',
+                ),
+            }}
+        >
+            {getShowArtupPage(serverClientPromoPath) && (
+                <PitchNav />
+            )}
+        </div>
+    )
 }
 
-export default MarketingNav
+MarketingNav.propTypes = {
+    serverClientPromoPath: PropTypes.string.isRequired,
+}
+
+export default getMarketingServerClientHoc(MarketingNav)

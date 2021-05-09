@@ -4,18 +4,12 @@ import PageArtupIndexContext from '../../contexts/PageArtupIndex'
 import PagePromoPathContext from '../../contexts/PagePromoPath'
 import MarketingNav from './Nav'
 import MarketingScroll from './Scroll'
-import PitchScroll from '../Pitch/Scroll'
-import PitchNav from '../Pitch/Nav'
 
 const Marketing = forwardRef(({ pageArtupIndex, pagePromoPath }, ref) => (
     <PageArtupIndexContext.Provider {...{ value: pageArtupIndex }}>
         <PagePromoPathContext.Provider {...{ value: pagePromoPath }}>
-            <MarketingScroll {...{ ref }}>
-                <PitchScroll />
-            </MarketingScroll>
-            <MarketingNav>
-                <PitchNav />
-            </MarketingNav>
+            <MarketingScroll {...{ ref }} />
+            <MarketingNav />
         </PagePromoPathContext.Provider>
     </PageArtupIndexContext.Provider>
 ))

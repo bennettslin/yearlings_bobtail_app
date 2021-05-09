@@ -1,22 +1,23 @@
 # Promo work
 * Helmet for new promo pages
-* Location replace for 404, deprecated, and new promo pages
+* Location replace for new promo pages
+* Callback for container focus
 
-* Marketing toggle and root home key are the same?!
-
-* Marketing scroll useEffect is really just for pitch
-    * Change from being marketing children to scroll and nav children
-* Bottom of marketing content has no minimum margin in low height screens. (Maybe don't bother to fix.)
+* Change to "back to Yearling's Bobtail"
 
 * Create promo page
 * Create onesheet page
-    * Selects song in popup
-    * Opens song in new tab in page
-
-* Pitch page needs back navigation
 
 * Redo PitchAnchor
+* Breadcrumb
+* Pagination
 
 # Bonus
 * Distinguish between pitch and artup
     * Allow for there to be multiple pitches
+
+* Onesheet add-ons
+    * Selects song when in album
+    * Opens song in new tab when in marketing container
+
+* Bottom of marketing content has no minimum margin in low height screens. (Maybe don't bother to fix.)

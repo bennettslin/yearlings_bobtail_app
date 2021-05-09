@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet'
 import NotFoundHeader from './Header'
 import Texts from '../../components/Texts'
 import { ALBUM_TITLE } from '../../constants/paths'
+import { navigateToPathname } from '../../helpers/navigate'
 import './style'
 
 const NOT_FOUND_TEXT = 'Oops! Page not found.'
@@ -17,6 +18,7 @@ const NotFoundContainer = () => {
                 label: 'notFound',
             },
         )
+        navigateToPathname('404')
     }, [])
 
     return (

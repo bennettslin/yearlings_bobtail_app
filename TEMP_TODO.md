@@ -1,6 +1,7 @@
 # Bug
 
 # TODO
+* Write down Wade concerns
 * Try to remove extraneous tags (divs, spans, anchors) in server side
 * Bennett cemetery, disposingCondom
 * Abbey Road side faces
