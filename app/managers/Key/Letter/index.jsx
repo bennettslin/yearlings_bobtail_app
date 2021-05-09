@@ -49,7 +49,7 @@ import {
     TIPS_TOGGLE_KEY,
     ABOUT_TOGGLE_KEY,
     MARKETING_TOGGLE_KEY,
-    MARKETING_HOME_KEY,
+    ROOT_HOME_KEY,
     SPACE,
     META_ARROW_UP,
     META_ARROW_DOWN,
@@ -172,7 +172,7 @@ const LetterManager = forwardRef((props, ref) => {
                 dispatch(toggleIsMarketingShown())
                 keyWasRegistered = true
                 break
-            case MARKETING_HOME_KEY:
+            case ROOT_HOME_KEY:
                 dispatch(toggleIsMarketingShown())
                 keyWasRegistered = true
                 break

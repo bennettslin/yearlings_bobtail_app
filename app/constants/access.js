@@ -4,7 +4,7 @@ export const CAROUSEL_TOGGLE_KEY = 'c'
 export const DOTS_SLIDE_TOGGLE_KEY = 'd'
 export const LYRIC_COLUMN_TOGGLE_KEY = 'e'
 export const NEXT_SONG_KEY = 'f'
-export const MARKETING_HOME_KEY = 'h'
+export const ROOT_HOME_KEY = 'h'
 export const PREVIOUS_VERSE_KEY = 'j'
 export const NEXT_VERSE_KEY = 'k'
 export const LYRIC_EXPAND_KEY = 'l'
@@ -50,7 +50,7 @@ export const STYLE_LOGIC_ACCESS_LETTERS = [
     SONG_REPEAT_TOGGLE_KEY,
     PREVIOUS_SONG_KEY,
     NEXT_SONG_KEY,
-    MARKETING_HOME_KEY,
+    ROOT_HOME_KEY,
     PREVIOUS_VERSE_KEY,
     NEXT_VERSE_KEY,
     CAROUSEL_TOGGLE_KEY,

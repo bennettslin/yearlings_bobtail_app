@@ -1,5 +1,4 @@
 import { useEffect } from 'react'
-import { navigate } from 'gatsby'
 import { useSelector } from 'react-redux'
 import {
     mapLyricSongIndex,
@@ -9,9 +8,9 @@ import {
 import { mapArtupSlideIndex } from '../../redux/marketing/selector'
 import { mapIsMarketingShown } from '../../redux/toggle/selector'
 import {
-    getPathForIndices,
-    getUrlPathForArtupPage,
-} from '../../helpers/url'
+    navigateToAlbumPage,
+    navigateToArtupPage,
+} from '../../helpers/navigate'
 
 const UrlManager = () => {
     const
@@ -32,24 +31,22 @@ const UrlManager = () => {
 
     useEffect(() => {
         if (!isMarketingShown) {
-            navigate(
-                getPathForIndices(
-                    lyricSongIndex,
-                    lyricVerseIndex,
-                    lyricAnnotationIndex,
-                ),
-                // Replace, not push, in history.
-                { replace: true },
+            navigateToAlbumPage(
+                lyricSongIndex,
+                lyricVerseIndex,
+                lyricAnnotationIndex,
             )
         }
-    }, [lyricSongIndex, lyricVerseIndex, lyricAnnotationIndex, isMarketingShown])
+    }, [
+        lyricSongIndex,
+        lyricVerseIndex,
+        lyricAnnotationIndex,
+        isMarketingShown,
+    ])
 
     useEffect(() => {
         if (isMarketingShown) {
-            navigate(
-                getUrlPathForArtupPage(artupSlideIndex),
-                { replace: true },
-            )
+            navigateToArtupPage(artupSlideIndex)
         }
     }, [isMarketingShown, artupSlideIndex])
 

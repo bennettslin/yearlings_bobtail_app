@@ -3,17 +3,16 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useDispatch, useSelector } from 'react-redux'
 import { Helmet } from 'react-helmet'
-import { navigate } from 'gatsby'
 import AccessStylesheet from '../../components/Stylesheets/Access'
 import Marketing from '../../components/Marketing'
 import ArtupNavigation from '../../managers/Key/Navigation/Artup'
 import MarketingHeader from './Header'
 import { getKeyName } from '../../managers/Key/helper'
-import { getUrlPathForArtupPage } from '../../helpers/url'
+import { navigateToArtupPage, reloadFromRoot } from '../../helpers/navigate'
 import { updateAccessStore } from '../../redux/access/action'
 import { mapArtupSlideIndex } from '../../redux/marketing/selector'
-import { getIsServerSide, getWindow } from '../../utils/browser'
-import { ESCAPE, MARKETING_HOME_KEY } from '../../constants/access'
+import { getIsServerSide } from '../../utils/browser'
+import { ESCAPE, ROOT_HOME_KEY } from '../../constants/access'
 import DeviceWrapper from '../../wrappers/DeviceWrapper'
 import AccessWrapper from '../../wrappers/AccessWrapper'
 import ResizeManager from '../../managers/Resize'
@@ -28,14 +27,6 @@ const MarketingContainer = ({ children }) => {
         artupSlideIndex = useSelector(mapArtupSlideIndex)
 
     const getResizeContainerElement = () => marketingContainerElement.current
-
-    const returnToAlbum = () => {
-        /**
-         * Navigation cannot be done through gatsby, since it does not
-         * change store provider. Push, not replace, in history.
-         */
-        getWindow().location.href = '/'
-    }
 
     const focusElement = () => {
         if (marketingScrollElement.current) {
@@ -59,8 +50,8 @@ const MarketingContainer = ({ children }) => {
         navigateArtup.current(keyName)
 
         // Handle return home to album.
-        if (keyName === MARKETING_HOME_KEY) {
-            returnToAlbum()
+        if (keyName === ROOT_HOME_KEY) {
+            reloadFromRoot()
         }
 
         dispatch(updateAccessStore({
@@ -88,10 +79,7 @@ const MarketingContainer = ({ children }) => {
     }, [])
 
     useEffect(() => {
-        navigate(
-            getUrlPathForArtupPage(artupSlideIndex),
-            { replace: true },
-        )
+        navigateToArtupPage(artupSlideIndex)
 
         focusElement()
     }, [artupSlideIndex])
@@ -126,7 +114,7 @@ const MarketingContainer = ({ children }) => {
                 isMarketingPage
                 {...{ getResizeContainerElement }}
             />
-            <MarketingHeader {...{ returnToAlbum }} />
+            <MarketingHeader />
             {getIsServerSide() ? (
                 children
             ) : (
