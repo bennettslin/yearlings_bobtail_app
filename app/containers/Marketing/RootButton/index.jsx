@@ -6,6 +6,7 @@ import ButtonTitle from '../../../components/Button/Title'
 import { reloadFromRoot } from '../../../helpers/navigate'
 import { ROOT_HOME_KEY } from '../../../constants/access'
 import { ROOT_HOME_BUTTON_KEY } from '../../../constants/buttons'
+import { ALBUM_TITLE } from '../../../constants/paths'
 import './style'
 
 const RootButton = ({ hasTextShadowLight }) => (
@@ -24,7 +25,13 @@ const RootButton = ({ hasTextShadowLight }) => (
                 <ButtonTitle
                     {...{
                         hasTextShadowLight,
-                        title: '\u00a0back to album',
+                        title: (
+                            <>
+                                <span>{'\u00a0back to\u00a0'}</span>
+                                <i>{ALBUM_TITLE}</i>
+                                <span>{'\u00a0album'}</span>
+                            </>
+                        ),
                     }}
                 />
             ),

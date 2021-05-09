@@ -41,7 +41,7 @@ const ButtonTitle = ({
 }
 
 ButtonTitle.propTypes = {
-    title: PropTypes.string,
+    title: PropTypes.node,
     isSelected: PropTypes.bool,
     hasTextShadowLight: PropTypes.bool,
 }

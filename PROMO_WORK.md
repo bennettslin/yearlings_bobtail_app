@@ -3,8 +3,6 @@
 * Location replace for new promo pages
 * Callback for container focus
 
-* Change to "back to Yearling's Bobtail"
-
 * Create promo page
 * Create onesheet page
 
