@@ -8,4 +8,8 @@
     padding-right: $margin__thick;
 
     background-color: $colour__background;
+
+    & > :last-child {
+        margin-bottom: $margin__thick;
+    }
 }

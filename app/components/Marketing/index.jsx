@@ -2,8 +2,8 @@ import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
 import PageArtupIndexContext from '../../contexts/PageArtupIndex'
 import PagePromoPathContext from '../../contexts/PagePromoPath'
-import MarketingNav from './Nav'
-import MarketingScroll from './Scroll'
+import MarketingBody from './Body'
+import MarketingFooter from './Footer'
 
 const Marketing = forwardRef(({
     pageArtupIndex,
@@ -13,13 +13,8 @@ const Marketing = forwardRef(({
 }, ref) => (
     <PageArtupIndexContext.Provider {...{ value: pageArtupIndex }}>
         <PagePromoPathContext.Provider {...{ value: pagePromoPath }}>
-            <MarketingScroll
-                {...{
-                    ref,
-                    handlePageChange,
-                }}
-            />
-            <MarketingNav />
+            <MarketingBody {...{ ref, handlePageChange }} />
+            <MarketingFooter />
         </PagePromoPathContext.Provider>
     </PageArtupIndexContext.Provider>
 ))

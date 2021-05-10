@@ -4,28 +4,32 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { getIsArtupPage } from '../../../helpers/marketing'
 import getMarketingServerClientHoc from '../../../hocs/MarketingHoc'
-import ArtupNav from '../../Marketings/Artup/Nav'
+import ArtupFooter from '../../Marketings/Artup/Footer'
 import './style'
 
-const MarketingNav = ({ serverClientPromoPath }) => {
-    return (
+const MarketingFooter = ({ serverClientPromoPath }) => {
+    let renderedNav = null
+
+    if (getIsArtupPage(serverClientPromoPath)) {
+        renderedNav = <ArtupFooter />
+    }
+
+    return renderedNav && (
         <div
             {...{
                 className: cx(
-                    'MarketingNav',
+                    'MarketingFooter',
                     'fCC',
                 ),
             }}
         >
-            {getIsArtupPage(serverClientPromoPath) && (
-                <ArtupNav />
-            )}
+            {renderedNav}
         </div>
     )
 }
 
-MarketingNav.propTypes = {
+MarketingFooter.propTypes = {
     serverClientPromoPath: PropTypes.string.isRequired,
 }
 
-export default getMarketingServerClientHoc(MarketingNav)
+export default getMarketingServerClientHoc(MarketingFooter)

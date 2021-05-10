@@ -1,6 +1,6 @@
 import React from 'react'
 import Contact from '../../Contact'
-import MarketingAnchor from '../../MarketingAnchor'
+import PromoAnchor from '../../PromoAnchor'
 import './style'
 
 const AboutContact = () => (
@@ -10,7 +10,7 @@ const AboutContact = () => (
         <Contact />
         {`. Thanks!`}
         {/* {`. We'll respond if it matches our interests.`} */}
-        <MarketingAnchor />
+        <PromoAnchor />
     </span>
 )
 

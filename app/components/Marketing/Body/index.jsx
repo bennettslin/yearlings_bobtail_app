@@ -1,12 +1,18 @@
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { getIsArtupPage } from '../../../helpers/marketing'
+import {
+    getIsArtupPage,
+    getIsOnesheetPage,
+    getIsPromoRootPath,
+} from '../../../helpers/marketing'
 import getMarketingServerClientHoc from '../../../hocs/MarketingHoc'
-import ArtupScroll from '../../Marketings/Artup/Scroll'
+import PromoBody from '../../Marketings/Promo/Body'
+import OnesheetBody from '../../Marketings/Onesheet/Body'
+import ArtupBody from '../../Marketings/Artup/Body'
 import './style'
 
-const MarketingScroll = forwardRef(({
+const MarketingBody = forwardRef(({
     serverClientPromoPath,
     handlePageChange = () => {},
 
@@ -23,7 +29,7 @@ const MarketingScroll = forwardRef(({
         <div
             {...{
                 className: cx(
-                    'MarketingScroll',
+                    'MarketingBody',
                     'fCC',
                 ),
             }}
@@ -49,8 +55,14 @@ const MarketingScroll = forwardRef(({
                         tabIndex: -1,
                     }}
                 >
+                    {getIsPromoRootPath(serverClientPromoPath) && (
+                        <PromoBody {...{ handlePitchPageChange }} />
+                    )}
+                    {getIsOnesheetPage(serverClientPromoPath) && (
+                        <OnesheetBody {...{ handlePitchPageChange }} />
+                    )}
                     {getIsArtupPage(serverClientPromoPath) && (
-                        <ArtupScroll {...{ handlePitchPageChange }} />
+                        <ArtupBody {...{ handlePitchPageChange }} />
                     )}
                 </div>
             </div>
@@ -58,9 +70,9 @@ const MarketingScroll = forwardRef(({
     )
 })
 
-MarketingScroll.propTypes = {
+MarketingBody.propTypes = {
     serverClientPromoPath: PropTypes.string.isRequired,
     handlePageChange: PropTypes.func,
 }
 
-export default getMarketingServerClientHoc(MarketingScroll)
+export default getMarketingServerClientHoc(MarketingBody)

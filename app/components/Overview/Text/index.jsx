@@ -1,7 +1,7 @@
 // Section to show song overview.
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
-import MarketingAnchor from '../../MarketingAnchor'
+import PromoAnchor from '../../PromoAnchor'
 import Texts from '../../Texts'
 import {
     getOverviewForSong,
@@ -17,7 +17,7 @@ const OverviewText = ({ serverClientSongIndex }) => (
             }}
         />
         {getSongIsLogue(serverClientSongIndex) && (
-            <MarketingAnchor />
+            <PromoAnchor />
         )}
     </>
 )

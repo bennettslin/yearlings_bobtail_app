@@ -5,16 +5,15 @@
 @import '../../../scss/constants/popup';
 @import '../../../scss/constants/shadow';
 
-.MarketingScroll {
+.MarketingBody {
     position: relative;
     width: 100%;
-    height: calc(100% - #{$height__marketingNav});
     font-size: 0.9em;
+    flex-grow: 1;
 
     .MarketingContainer
     & {
         max-width: $width__marketingContainer;
-        height: calc(100% - #{$height__marketingHeader + $height__marketingNav});
 
         .DW__tabletOrDesktopWidth
         & {

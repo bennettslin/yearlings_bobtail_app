@@ -1,10 +1,10 @@
-// Section to show pitch.
+// Section to show artup presentation.
 import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import Contact from '../../../Contact'
-import MarketingTitle from '../../../Marketing/Scroll/Title'
-import MarketingContent from '../../../Marketing/Scroll/Content'
+import MarketingTitle from '../../../Marketing/Body/Title'
+import MarketingContent from '../../../Marketing/Body/Content'
 import Texts from '../../../Texts'
 import {
     getBodyForArtupSlide,
@@ -15,7 +15,7 @@ import {
 import getMarketingServerClientHoc from '../../../../hocs/MarketingHoc'
 import { mapArtupSlideIndex } from '../../../../redux/marketing/selector'
 
-const ArtupScroll = ({ serverClientArtupIndex, handlePitchPageChange }) => {
+const ArtupBody = ({ serverClientArtupIndex, handlePitchPageChange }) => {
     const
         artupSlideIndex = useSelector(mapArtupSlideIndex),
         body = getBodyForArtupSlide(serverClientArtupIndex),
@@ -46,9 +46,9 @@ const ArtupScroll = ({ serverClientArtupIndex, handlePitchPageChange }) => {
     )
 }
 
-ArtupScroll.propTypes = {
+ArtupBody.propTypes = {
     serverClientArtupIndex: PropTypes.number.isRequired,
     handlePitchPageChange: PropTypes.func.isRequired,
 }
 
-export default getMarketingServerClientHoc(ArtupScroll)
+export default getMarketingServerClientHoc(ArtupBody)
