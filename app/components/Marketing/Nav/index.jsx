@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { getIsArtupPage } from '../../../helpers/marketing'
 import getMarketingServerClientHoc from '../../../hocs/MarketingHoc'
-import ArtupNav from '../../Artup/Nav'
+import ArtupNav from '../../Marketings/Artup/Nav'
 import './style'
 
 const MarketingNav = ({ serverClientPromoPath }) => {

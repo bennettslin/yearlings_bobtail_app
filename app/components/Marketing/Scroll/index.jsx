@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { getIsArtupPage } from '../../../helpers/marketing'
 import getMarketingServerClientHoc from '../../../hocs/MarketingHoc'
-import ArtupScroll from '../../Artup/Scroll'
+import ArtupScroll from '../../Marketings/Artup/Scroll'
 import './style'
 
 const MarketingScroll = forwardRef(({

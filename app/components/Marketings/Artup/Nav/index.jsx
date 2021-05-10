@@ -4,23 +4,23 @@ import {
     mapIsMiniWidth,
     mapIsMonitorWidth,
     mapIsPhoneWidth,
-} from '../../../redux/device/selector'
-import { mapArtupSlideIndex } from '../../../redux/marketing/selector'
-import Button from '../../Button'
-import ArtupDispatcher from '../../../dispatchers/Artup'
+} from '../../../../redux/device/selector'
+import { mapArtupSlideIndex } from '../../../../redux/marketing/selector'
+import Button from '../../../Button'
+import ArtupDispatcher from '../../../../dispatchers/Artup'
 import PitchNavButton from './Button'
 import {
     getArtupSlideIndices,
     getArtupSlidesCount,
-} from '../../../api/artup/slides'
+} from '../../../../api/artup/slides'
 import {
     ARROW_LEFT,
     ARROW_RIGHT,
-} from '../../../constants/access'
+} from '../../../../constants/access'
 import {
     PITCH_NEXT_BUTTON_KEY,
     PITCH_PREVIOUS_BUTTON_KEY,
-} from '../../../constants/buttons'
+} from '../../../../constants/buttons'
 import './style'
 
 const ArtupNav = () => {

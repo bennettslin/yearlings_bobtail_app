@@ -2,18 +2,18 @@
 import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
-import Contact from '../../Contact'
-import MarketingTitle from '../../Marketing/Scroll/Title'
-import MarketingContent from '../../Marketing/Scroll/Content'
-import Texts from '../../Texts'
+import Contact from '../../../Contact'
+import MarketingTitle from '../../../Marketing/Scroll/Title'
+import MarketingContent from '../../../Marketing/Scroll/Content'
+import Texts from '../../../Texts'
 import {
     getBodyForArtupSlide,
     getFootnoteForArtupSlide,
     getTitleForArtupSlide,
     getShowContactEmailForArtupSlide,
-} from '../../../api/artup/slides'
-import getMarketingServerClientHoc from '../../../hocs/MarketingHoc'
-import { mapArtupSlideIndex } from '../../../redux/marketing/selector'
+} from '../../../../api/artup/slides'
+import getMarketingServerClientHoc from '../../../../hocs/MarketingHoc'
+import { mapArtupSlideIndex } from '../../../../redux/marketing/selector'
 
 const ArtupScroll = ({ serverClientArtupIndex, handlePitchPageChange }) => {
     const

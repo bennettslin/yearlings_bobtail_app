@@ -1,17 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
-import Button from '../../../Button'
-import ButtonCharacter from '../../../Button/Character'
-import { mapArtupSlideIndex } from '../../../../redux/marketing/selector'
+import Button from '../../../../Button'
+import ButtonCharacter from '../../../../Button/Character'
+import { mapArtupSlideIndex } from '../../../../../redux/marketing/selector'
 import {
     PITCH_HOME_BUTTON_KEY,
     PITCH_SLIDE_BUTTON_KEY,
-} from '../../../../constants/buttons'
+} from '../../../../../constants/buttons'
 import {
     mapIsMonitorWidth,
     mapIsPhoneOrMiniWidth,
-} from '../../../../redux/device/selector'
+} from '../../../../../redux/device/selector'
 
 const PitchNavButton = ({
     pitchIndex,
