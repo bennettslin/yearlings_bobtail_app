@@ -20,6 +20,7 @@ import {
     SELECTED_VERSE_INDEX,
     SELECTED_ANNOTATION_INDEX,
     VOLUME_INDEX,
+    SELECTED_PROMO_PATH,
 } from '../../constants/store'
 
 export const getWindowStorage = () => {
@@ -121,3 +122,9 @@ export const getStoredArtupIndex = () => (
         _getParsedStoredInteger(ARTUP_SLIDE_INDEX),
     )
 )
+
+export const getStoredPromoPath = () => {
+    // TODO: Get stored.
+    const storedPromoPath = getWindowStorage()[SELECTED_PROMO_PATH]
+    return storedPromoPath
+}

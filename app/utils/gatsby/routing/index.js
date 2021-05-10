@@ -9,6 +9,8 @@ import {
 } from '../path'
 import {
     ANNOTATION_QUERY_FIELD,
+    ARTUP_SUBPATH,
+    ONESHEET_SUBPATH,
     VERSE_QUERY_FIELD,
 } from '../../../constants/routing'
 
@@ -45,4 +47,14 @@ export const getRoutingArtupIndex = pathname => {
         rootPath: getArtupFullPath(),
     })
     return getIsArtupSlideValid(routingArtupIndex) ? routingArtupIndex : NaN
+}
+
+export const getRoutingPromoPath = pathname => {
+    if (pathname.includes(ONESHEET_SUBPATH)) {
+        return ONESHEET_SUBPATH
+    } else if (pathname.includes(ARTUP_SUBPATH)) {
+        return ARTUP_SUBPATH
+    } else {
+        return ''
+    }
 }

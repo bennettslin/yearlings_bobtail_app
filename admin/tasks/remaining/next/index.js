@@ -2,7 +2,7 @@ export default [
     // Next.
     {
         taskName: `Promo pages.`,
-        workedHours: 40,
+        workedHours: 42,
         neededHours: 50,
     },
     {

@@ -1,10 +1,9 @@
 # Promo work
-* Create placeholder promo page with links
-    * Verify helmet and location change
 
-* Redo PitchAnchor
-* Breadcrumb
+* Make return to promo page in footer
+
 * Pagination
+* Redo PromoAnchor
 
 * Create promo page
 * Create onesheet page

@@ -1,4 +1,5 @@
 # Bug
+* Look at routing and storage methods. Are they extraneous, now that we're only accepting exact paths?
 
 # TODO
 * Make turning off popups more obvious.

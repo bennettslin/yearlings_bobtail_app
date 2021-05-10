@@ -2,6 +2,7 @@
 import {
     getRoutingAnnotationIndex,
     getRoutingArtupIndex,
+    getRoutingPromoPath,
     getRoutingSongIndex,
     getRoutingVerseIndex,
 } from '../routing'
@@ -12,10 +13,6 @@ import {
     getStoredArtupIndex,
     setInStorage,
 } from '../../storage'
-import {
-    ARTUP_SUBPATH,
-    ONESHEET_SUBPATH,
-} from '../../../constants/routing'
 import {
     ARTUP_SLIDE_INDEX,
     SELECTED_ANNOTATION_INDEX,
@@ -101,11 +98,6 @@ export const getInitialArtupIndex = (pathname = '') => {
 }
 
 export const getInitialPromoPageKey = (pathname = '') => {
-    if (pathname.includes(ONESHEET_SUBPATH)) {
-        return ONESHEET_SUBPATH
-    } else if (pathname.includes(ARTUP_SUBPATH)) {
-        return ARTUP_SUBPATH
-    } else {
-        return ''
-    }
+    // TODO: Get routing or stored. Set initial storage.
+    return getRoutingPromoPath(pathname)
 }
