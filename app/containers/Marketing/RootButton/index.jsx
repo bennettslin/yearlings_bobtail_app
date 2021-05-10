@@ -27,9 +27,9 @@ const RootButton = ({ hasTextShadowLight }) => (
                         hasTextShadowLight,
                         title: (
                             <>
-                                <span>{'\u00a0back to\u00a0'}</span>
+                                {'\u00a0back to\u00a0'}
                                 <i>{ALBUM_TITLE}</i>
-                                <span>{'\u00a0album'}</span>
+                                {'\u00a0album'}
                             </>
                         ),
                     }}

@@ -22,7 +22,7 @@ const Contact = ({ didMount }) => (
                             character.charCodeAt(0) + 1,
                         )}
                     </span>
-                    <span>{character}</span>
+                    {character}
                 </Fragment>
             ))}
         </span>

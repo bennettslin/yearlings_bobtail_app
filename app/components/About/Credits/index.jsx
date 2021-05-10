@@ -7,13 +7,9 @@ const AboutCredits = () => (
             className: 'AboutCredits',
         }}
     >
-        <span>
-            {`Album written, composed, and performed by Bennett Lin.`}
-        </span>
+        {`Album written, composed, and performed by Bennett Lin.`}
         <br />
-        <span>
-            {'Website annotated, illustrated, and coded by Bennett Lin.'}
-        </span>
+        {'Website annotated, illustrated, and coded by Bennett Lin.'}
     </div>
 )
 

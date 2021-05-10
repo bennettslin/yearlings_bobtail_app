@@ -1,13 +1,14 @@
 # Promo work
-* Create promo page
-* Create onesheet page
-* Create test other pitch page
-
-* Verify helmet and location change
+* Create placeholder promo page with links
+    * Verify helmet and location change
 
 * Redo PitchAnchor
 * Breadcrumb
 * Pagination
+
+* Create promo page
+* Create onesheet page
+* Create test other pitch page
 
 # Bonus
 * Distinguish between pitch and artup
@@ -18,3 +19,5 @@
     * Opens song in new tab when in marketing container
 
 * Bottom of marketing content has no minimum margin in low height screens. (Maybe don't bother to fix.)
+
+* Store promo page in local storage

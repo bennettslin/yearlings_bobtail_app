@@ -85,7 +85,7 @@ const AnnotationWormhole = ({
                 </div>
 
                 <div className="AnnotationWormhole__verse">
-                    <span>{'\u201c'}</span>
+                    {'\u201c'}
                     <Texts
                         isWormholeDestinationVerse
                         {...{
@@ -93,7 +93,7 @@ const AnnotationWormhole = ({
                             wormholeAnnotationIndex,
                         }}
                     />
-                    <span>{'\u201d'}</span>
+                    {'\u201d'}
                 </div>
             </div>
             <SongDispatcher {...{ ref: dispatchSong }} />
