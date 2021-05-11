@@ -4,7 +4,10 @@ import { useSelector } from 'react-redux'
 import Button from '../../../../Button'
 import ButtonCharacter from '../../../../Button/Character'
 import { mapArtupSlideIndex } from '../../../../../redux/marketing/selector'
-import { PITCH_SLIDE_BUTTON_KEY } from '../../../../../constants/buttons'
+import {
+    PROMO_PAGE_BUTTON_KEY,
+    PITCH_SLIDE_BUTTON_KEY,
+} from '../../../../../constants/buttons'
 import {
     mapIsMonitorWidth,
     mapIsPhoneOrMiniWidth,
@@ -30,7 +33,9 @@ const PitchNavButton = ({
             {...{
                 isLargeSize: isMonitorWidth,
                 isSmallSize: isPhoneOrMiniWidth,
-                buttonName: PITCH_SLIDE_BUTTON_KEY,
+                buttonName: pitchIndex === 1 ?
+                    PROMO_PAGE_BUTTON_KEY :
+                    PITCH_SLIDE_BUTTON_KEY,
                 isClickDisabled: isSelected,
                 handleButtonClick: _handleButtonClick,
             }}

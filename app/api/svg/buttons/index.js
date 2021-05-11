@@ -16,10 +16,10 @@ import rootHome from './marketing/rootHome'
 import navBook from './nav/navBook'
 import navSong from './nav/navSong'
 import overview from './main/overview'
-import pitchHome from './pitch/pitchHome'
+import promoPage from './marketing/promoPage'
+import pitchSlide from './marketing/pitchSlide'
 import pitchPrevious from './pitch/pitchPrevious'
 import pitchNext from './pitch/pitchNext'
-import pitchSlide from './pitch/pitchSlide'
 import popupClose from './popup/popupClose'
 import popupPrevious from './popup/popupPrevious'
 import popupNext from './popup/popupNext'
@@ -45,7 +45,7 @@ import {
     NAV_BOOK_BUTTON_KEY,
     NAV_SONG_BUTTON_KEY,
     OVERVIEW_BUTTON_KEY,
-    PITCH_HOME_BUTTON_KEY,
+    PROMO_PAGE_BUTTON_KEY,
     PITCH_PREVIOUS_BUTTON_KEY,
     PITCH_NEXT_BUTTON_KEY,
     PITCH_SLIDE_BUTTON_KEY,
@@ -76,7 +76,7 @@ export default {
     [NAV_BOOK_BUTTON_KEY]: navBook,
     [NAV_SONG_BUTTON_KEY]: navSong,
     [OVERVIEW_BUTTON_KEY]: overview,
-    [PITCH_HOME_BUTTON_KEY]: pitchHome,
+    [PROMO_PAGE_BUTTON_KEY]: promoPage,
     [PITCH_PREVIOUS_BUTTON_KEY]: pitchPrevious,
     [PITCH_NEXT_BUTTON_KEY]: pitchNext,
     [PITCH_SLIDE_BUTTON_KEY]: pitchSlide,

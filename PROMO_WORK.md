@@ -1,6 +1,6 @@
 # Promo work
-
-* Make return to promo page in footer
+* Make button title just a prop
+* Make promo page button have promo page icon
 
 * Pagination
 * Redo PromoAnchor

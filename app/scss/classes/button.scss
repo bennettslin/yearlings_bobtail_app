@@ -75,10 +75,6 @@
     stroke: hsla(0, 0%, 20%, 0.5);
 }
 
-.ButtonIcon__pitchHome {
-    .house { fill: hsl($hue__masks, 21%, 71%); }
-}
-
 .ButtonIcon__scores {
     fill: $colour__interact__bold;
 }
@@ -98,8 +94,9 @@
     transform: scaleX(-1);
 }
 
-.ButtonIcon__pitchHome {
+.ButtonIcon__promoPage {
     fill: $colour__navigation;
+    .house { fill: hsl($hue__masks, 21%, 71%); }
 }
 
 .ButtonIcon__pitchNext {

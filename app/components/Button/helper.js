@@ -13,7 +13,7 @@ import {
     LYRIC_SCROLL_BUTTON_KEY,
     NAV_BOOK_BUTTON_KEY,
     NAV_SONG_BUTTON_KEY,
-    PITCH_HOME_BUTTON_KEY,
+    PROMO_PAGE_BUTTON_KEY,
     PITCH_PREVIOUS_BUTTON_KEY,
     PITCH_NEXT_BUTTON_KEY,
     PITCH_SLIDE_BUTTON_KEY,
@@ -116,7 +116,7 @@ export const getShowTooltip = buttonName => {
         case DOTS_SLIDE_SELECT_BUTTON_KEY:
         case NAV_BOOK_BUTTON_KEY:
         case NAV_SONG_BUTTON_KEY:
-        case PITCH_HOME_BUTTON_KEY:
+        case PROMO_PAGE_BUTTON_KEY:
         case PITCH_SLIDE_BUTTON_KEY:
         case WORMHOLE_BUTTON_KEY:
             return false
