@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import Button from '../../../../Button'
-import ButtonCharacter from '../../../../Button/Character'
 import { mapArtupSlideIndex } from '../../../../../redux/marketing/selector'
 import { PITCH_SLIDE_BUTTON_KEY } from '../../../../../constants/buttons'
 import {
@@ -26,22 +25,16 @@ const PitchNavButton = ({
 
     return (
         <Button
+            hasCharacterShadowLight
             {...{
                 isLargeSize: isMonitorWidth,
                 isSmallSize: isPhoneOrMiniWidth,
                 buttonName: PITCH_SLIDE_BUTTON_KEY,
                 isSelectedDisabled: isSelected,
                 handleButtonClick: _handleButtonClick,
+                buttonCharacter: pitchIndex,
             }}
-        >
-            <ButtonCharacter
-                {...{
-                    isSelected,
-                    hasTextShadowLight: true,
-                    character: pitchIndex,
-                }}
-            />
-        </Button>
+        />
     )
 }
 

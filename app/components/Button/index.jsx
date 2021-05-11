@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import getDidMountHoc from '../../hocs/DidMountHoc'
 import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
+import ButtonCharacter from './Character'
 import ButtonIcon from './Icon'
 import ButtonTitle from './Title'
 import Tooltip from './Tooltip'
@@ -30,6 +31,8 @@ const Button = ({
     isBrightHover,
     buttonIdentifier,
     handleButtonClick,
+    hasCharacterShadowLight,
+    buttonCharacter,
     hasTitleShadowLight,
     accessKey,
     buttonTitle,
@@ -77,7 +80,7 @@ const Button = ({
                     accessKey && `${CHILD_ACCESS_PREFIX}${accessKey}`,
                     {
                         'Button__enabled': !isDisabled && !isSelectedDisabled,
-                        'Button__clickDisabled': isSelectedDisabled,
+                        'Button__selectDisabled': isSelectedDisabled,
                         'Button__defaultSize':
                             !isLargeSize && !isSmallSize && !isCustomSize,
                         'Button__smallSize': isSmallSize,
@@ -110,29 +113,32 @@ const Button = ({
                         'ButtonAnimatable',
                         'dropShadow',
 
-                        buttonTitle ? (
-                            !isSelectedDisabled &&
-                            'ButtonAnimatable__hoverOnParent'
-                        ) : (
-                            !isDisabled && (
-                                isBrightHover ?
-                                    'dropShadow__brightHover' :
-                                    'dropShadow__lightHover'
-                            )
+                        !buttonTitle && !isDisabled && !isSelectedDisabled && (
+                            isBrightHover ?
+                                'dropShadow__brightHover' :
+                                'dropShadow__lightHover'
                         ),
+
+                        buttonTitle && !isSelectedDisabled &&
+                            'ButtonAnimatable__hoverOnParent',
 
                         isAccessEnter &&
                         showIfAccessOn &&
                         !isSelectedDisabled &&
                             'dropShadow__accessed',
-
-                        isPopupButton && 'ButtonAnimatable__popup',
                         'abF',
                     ),
                 }}
             >
                 <ButtonIcon {...{ buttonName, buttonIdentifier }} />
-
+                <ButtonCharacter
+                    {...{
+                        buttonName,
+                        isSelected: isSelectedDisabled,
+                        hasCharacterShadowLight,
+                        character: buttonCharacter,
+                    }}
+                />
                 {children}
 
                 {accessKey && !isDisabled && !isSelectedDisabled && (
@@ -168,6 +174,8 @@ Button.propTypes = {
     isBrightHover: PropTypes.bool,
     buttonIdentifier: PropTypes.any,
     accessKey: PropTypes.string,
+    hasCharacterShadowLight: PropTypes.bool,
+    buttonCharacter: PropTypes.string,
     hasTitleShadowLight: PropTypes.bool,
     buttonTitle: PropTypes.any,
     handleButtonClick: PropTypes.func.isRequired,

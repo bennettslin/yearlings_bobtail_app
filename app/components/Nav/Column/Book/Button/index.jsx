@@ -4,7 +4,6 @@ import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import Button from '../../../../Button'
-import ButtonCharacter from '../../../../Button/Character'
 import { getSongIsLogue } from '../../../../../api/album/songs'
 import { mapIsNavShowable } from '../../../../../redux/carousel/selector'
 import { getButtonTitle, getIndexCharacter } from './helper'
@@ -90,19 +89,13 @@ const NavButton = ({
                         isNavigable,
                     handleButtonClick: _handleButtonClick,
                     buttonTitle: getButtonTitle(bookIndex, songIndex),
+                    hasCharacterShadowLight: getSongIsLogue(songIndex),
+                    buttonCharacter: getIndexCharacter({
+                        bookIndex,
+                        songIndex,
+                    }),
                 }}
-            >
-                <ButtonCharacter
-                    {...{
-                        isSelected,
-                        character: getIndexCharacter({
-                            bookIndex,
-                            songIndex,
-                        }),
-                        hasTextShadowLight: getSongIsLogue(songIndex),
-                    }}
-                />
-            </Button>
+            />
         </div>
     )
 }

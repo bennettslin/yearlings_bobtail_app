@@ -51,11 +51,8 @@
     height: 100%;
 }
 
-.ButtonCharacter {
-    .NavButton
-    & {
-        padding-bottom: 15%;
-    }
+[class*=ButtonCharacter__nav] {
+    padding-bottom: 15%;
 }
 
 [class*=ButtonTitle__nav] {

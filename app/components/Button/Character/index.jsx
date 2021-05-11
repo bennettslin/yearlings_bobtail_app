@@ -5,22 +5,24 @@ import cx from 'classnames'
 import './style'
 
 const ButtonCharacter = ({
+    buttonName,
     isSelected,
     character,
-    hasTextShadowLight,
+    hasCharacterShadowLight,
 
-}) => (
+}) => Boolean(character) && (
     <div
         {...{
             className: cx(
                 'ButtonCharacter',
+                `ButtonCharacter__${buttonName}`,
                 isSelected ?
                     'button__text__selected' :
                     'button__text__interactable',
                 'Rancho',
                 'abF',
                 'fCC',
-                hasTextShadowLight ?
+                hasCharacterShadowLight ?
                     'textShadow__light' :
                     'textShadow__dark',
             ),
@@ -31,12 +33,13 @@ const ButtonCharacter = ({
 )
 
 ButtonCharacter.propTypes = {
+    buttonName: PropTypes.string.isRequired,
     isSelected: PropTypes.bool,
     character: PropTypes.oneOfType([
         PropTypes.number,
         PropTypes.string,
     ]),
-    hasTextShadowLight: PropTypes.bool,
+    hasCharacterShadowLight: PropTypes.bool,
 }
 
 export default memo(ButtonCharacter)
