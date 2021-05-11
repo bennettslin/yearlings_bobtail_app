@@ -1,16 +1,22 @@
 # Promo work
 * All marketing child pages have back to promo page button
-* Create pagination component
-* Can have additional pagination component
-* Redo PromoAnchor
+* Create universal pagination component
+    * Responsive button sizes
+    * Artup passes values into pagination component
 
 * Create onesheet page
 * Create promo page
-* Create test other pitch page
+* Redo PromoAnchor
+
+* Need to reset scroll upon promo path change?
+* Smart quotes in marketing material
 
 # Bonus
+* Copy to clipboard functionality
+
 * Distinguish between pitch and artup
     * Allow for there to be multiple pitches
+    * Create test other pitch page
 
 * Onesheet add-ons
     * Selects song when in album
