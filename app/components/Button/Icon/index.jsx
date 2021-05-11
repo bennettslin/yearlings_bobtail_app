@@ -3,7 +3,10 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import InlineSvg from '../../../modules/InlineSvg'
 import { getSvgForButton } from '../../../api/svg'
-import { getButtonIconClassNames } from './helper'
+import {
+    getButtonIconClassNames,
+    getShowButtonIcon,
+} from './helper'
 import { NAV_SONG_BUTTON_KEY } from '../../../constants/buttons'
 import './style'
 
@@ -17,7 +20,7 @@ const ButtonIcon = ({
         buttonIdentifier,
     })
 
-    return Boolean(buttonIconSvg) && (
+    return getShowButtonIcon(buttonName) && Boolean(buttonIconSvg) && (
         <InlineSvg
             {...{
                 className: cx(

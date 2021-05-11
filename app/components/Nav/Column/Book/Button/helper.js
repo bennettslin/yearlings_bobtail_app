@@ -1,3 +1,5 @@
+import { getTitleForSong } from '../../../../../api/album/songs'
+
 export const getIndexCharacter = ({ bookIndex, songIndex }) => {
     if (Number.isFinite(bookIndex)) {
         return bookIndex === 0 ? 'I' : 'II'
@@ -14,3 +16,9 @@ export const getIndexCharacter = ({ bookIndex, songIndex }) => {
 
     return characterIndex
 }
+
+export const getButtonTitle = (bookIndex, songIndex) => (
+    Number.isFinite(bookIndex) ?
+        `Book ${getIndexCharacter({ bookIndex })}` :
+        getTitleForSong(songIndex)
+)

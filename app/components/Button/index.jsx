@@ -4,12 +4,12 @@ import cx from 'classnames'
 import getDidMountHoc from '../../hocs/DidMountHoc'
 import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
 import ButtonIcon from './Icon'
+import ButtonTitle from './Title'
 import Tooltip from './Tooltip'
 import AccessLetter from '../Access/Letter'
 import { ENTER } from '../../constants/access'
 import { CHILD_ACCESS_PREFIX } from '../../constants/prefixes'
 import {
-    getShowButtonIcon,
     getShowTooltip,
     getTooltipText,
 } from './helper'
@@ -24,28 +24,21 @@ const Button = ({
     isSmallSize,
     isLargeSize,
     isDisabled,
-    isClickDisabled,
+    isSelectedDisabled,
     isPopupButton,
     isAccessed,
     isBrightHover,
-    hoverOnParent,
     buttonIdentifier,
-    accessKey,
     handleButtonClick,
-    inanimateChild,
+    hasTitleShadowLight,
+    accessKey,
+    buttonTitle,
     children,
 
 }) => {
     const
         stopPropagation = useRef(),
-
-        isDefaultSize =
-            !isLargeSize &&
-            !isSmallSize &&
-            !isCustomSize,
-
         isAccessEnter = accessKey === ENTER,
-
         showIfAccessOn = !isDisabled && (
 
             // If its access key is not Enter, always show if access is on.
@@ -61,7 +54,7 @@ const Button = ({
         if (!isDisabled) {
             stopPropagation.current(e)
 
-            if (!isClickDisabled) {
+            if (!isSelectedDisabled) {
                 logEvent(
                     `Button`,
                     buttonName,
@@ -80,15 +73,13 @@ const Button = ({
                     `Button__${buttonName}`,
                     isPopupButton && 'Button__popup',
                     isCustomSize && `Button__${buttonName}Size`,
-
                     isAccessEnter && showIfAccessOn && 'Button__accessed',
-
                     accessKey && `${CHILD_ACCESS_PREFIX}${accessKey}`,
-
                     {
-                        'Button__enabled': !isDisabled && !isClickDisabled,
-                        'Button__clickDisabled': isClickDisabled,
-                        'Button__defaultSize': isDefaultSize,
+                        'Button__enabled': !isDisabled && !isSelectedDisabled,
+                        'Button__clickDisabled': isSelectedDisabled,
+                        'Button__defaultSize':
+                            !isLargeSize && !isSmallSize && !isCustomSize,
                         'Button__smallSize': isSmallSize,
                         'Button__largeSize': isLargeSize,
                     },
@@ -97,46 +88,54 @@ const Button = ({
                 ),
                 ...showTooltip && {
                     'data-for': buttonName,
-                    'data-tip': getTooltipText({ buttonName, buttonIdentifier }),
+                    'data-tip': getTooltipText({
+                        buttonName,
+                        buttonIdentifier,
+                    }),
                 },
                 onClick,
             }}
         >
-            {inanimateChild}
+            <ButtonTitle
+                {...{
+                    buttonName,
+                    isSelected: isSelectedDisabled,
+                    hasTitleShadowLight,
+                    title: buttonTitle,
+                }}
+            />
             <div
                 {...{
                     className: cx(
                         'ButtonAnimatable',
                         'dropShadow',
 
-                        !hoverOnParent && !isDisabled && (
-                            isBrightHover ?
-                                'dropShadow__brightHover' :
-                                'dropShadow__lightHover'
+                        buttonTitle ? (
+                            !isSelectedDisabled &&
+                            'ButtonAnimatable__hoverOnParent'
+                        ) : (
+                            !isDisabled && (
+                                isBrightHover ?
+                                    'dropShadow__brightHover' :
+                                    'dropShadow__lightHover'
+                            )
                         ),
 
-                        hoverOnParent && !isClickDisabled &&
-                            'ButtonAnimatable__hoverOnParent',
-
-                        isAccessEnter && showIfAccessOn && !isClickDisabled &&
+                        isAccessEnter &&
+                        showIfAccessOn &&
+                        !isSelectedDisabled &&
                             'dropShadow__accessed',
+
                         isPopupButton && 'ButtonAnimatable__popup',
                         'abF',
                     ),
                 }}
             >
-                {getShowButtonIcon(buttonName) && (
-                    <ButtonIcon
-                        {...{
-                            buttonName,
-                            buttonIdentifier,
-                        }}
-                    />
-                )}
+                <ButtonIcon {...{ buttonName, buttonIdentifier }} />
 
                 {children}
 
-                {accessKey && !isDisabled && !isClickDisabled && (
+                {accessKey && !isDisabled && !isSelectedDisabled && (
                     <AccessLetter
                         inButtonOrDotAnchor
                         {...{
@@ -163,15 +162,15 @@ Button.propTypes = {
     isSmallSize: PropTypes.bool,
     isLargeSize: PropTypes.bool,
     isDisabled: PropTypes.bool,
-    isClickDisabled: PropTypes.bool,
+    isSelectedDisabled: PropTypes.bool,
     isPopupButton: PropTypes.bool,
     isAccessed: PropTypes.bool,
     isBrightHover: PropTypes.bool,
-    hoverOnParent: PropTypes.bool,
     buttonIdentifier: PropTypes.any,
     accessKey: PropTypes.string,
+    hasTitleShadowLight: PropTypes.bool,
+    buttonTitle: PropTypes.any,
     handleButtonClick: PropTypes.func.isRequired,
-    inanimateChild: PropTypes.any,
     children: PropTypes.any,
 }
 

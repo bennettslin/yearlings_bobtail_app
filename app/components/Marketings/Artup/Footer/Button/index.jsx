@@ -26,12 +26,11 @@ const PitchNavButton = ({
 
     return (
         <Button
-            hoverOnParent
             {...{
                 isLargeSize: isMonitorWidth,
                 isSmallSize: isPhoneOrMiniWidth,
                 buttonName: PITCH_SLIDE_BUTTON_KEY,
-                isClickDisabled: isSelected,
+                isSelectedDisabled: isSelected,
                 handleButtonClick: _handleButtonClick,
             }}
         >

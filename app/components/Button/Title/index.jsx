@@ -5,45 +5,47 @@ import cx from 'classnames'
 import './style'
 
 const ButtonTitle = ({
+    buttonName,
     title,
     isSelected,
-    hasTextShadowLight,
+    hasTitleShadowLight,
 
-}) => {
-    return Boolean(title) && (
+}) => Boolean(title) && (
+    <div
+        {...{
+            className: cx(
+                'ButtonTitle',
+                `ButtonTitle__${buttonName}`,
+                'abF',
+            ),
+        }}
+    >
         <div
             {...{
                 className: cx(
-                    'ButtonTitle',
-                    'abF',
+                    'ButtonTitleText',
+                    `ButtonTitleText__${buttonName}`,
+                    isSelected ?
+                        'button__text__selected' :
+                        'button__text__interactable',
+                    'Rancho',
+                    hasTitleShadowLight ?
+                        'textShadow__light' :
+                        'textShadow__dark',
+                    'fCC',
                 ),
             }}
         >
-            <div
-                {...{
-                    className: cx(
-                        'ButtonTitle__text',
-                        isSelected ?
-                            'button__text__selected' :
-                            'button__text__interactable',
-                        'Rancho',
-                        hasTextShadowLight ?
-                            'textShadow__light' :
-                            'textShadow__dark',
-                        'fCC',
-                    ),
-                }}
-            >
-                {title}
-            </div>
+            {title}
         </div>
-    )
-}
+    </div>
+)
 
 ButtonTitle.propTypes = {
-    title: PropTypes.node,
+    buttonName: PropTypes.string.isRequired,
+    title: PropTypes.node.isRequired,
     isSelected: PropTypes.bool,
-    hasTextShadowLight: PropTypes.bool,
+    hasTitleShadowLight: PropTypes.bool,
 }
 
 export default memo(ButtonTitle)

@@ -1,7 +1,4 @@
 # Promo work
-* Make button title just a prop
-* Make promo page button have promo page icon
-
 * Pagination
 * Redo PromoAnchor
 

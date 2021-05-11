@@ -5,10 +5,9 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import Button from '../../../../Button'
 import ButtonCharacter from '../../../../Button/Character'
-import NavButtonTitle from './Title'
 import { getSongIsLogue } from '../../../../../api/album/songs'
 import { mapIsNavShowable } from '../../../../../redux/carousel/selector'
-import { getIndexCharacter } from './helper'
+import { getButtonTitle, getIndexCharacter } from './helper'
 import { mapSelectedAnnotationIndex } from '../../../../../redux/selected/selector'
 import { ENTER } from '../../../../../constants/access'
 import {
@@ -78,26 +77,19 @@ const NavButton = ({
             }}
         >
             <Button
-                hoverOnParent
                 {...{
                     buttonName: isBook ?
                         NAV_BOOK_BUTTON_KEY :
                         NAV_SONG_BUTTON_KEY,
                     buttonIdentifier,
                     isDisabled: !isEnabled,
-                    isClickDisabled: isSelected,
+                    isSelectedDisabled: isSelected,
                     accessKey: isToggle ? '' : ENTER,
                     isAccessed:
                         isAccessed &&
                         isNavigable,
                     handleButtonClick: _handleButtonClick,
-                    inanimateChild: (
-                        <NavButtonTitle {...{
-                            bookIndex,
-                            songIndex,
-                            isSelected,
-                        }} />
-                    ),
+                    buttonTitle: getButtonTitle(bookIndex, songIndex),
                 }}
             >
                 <ButtonCharacter

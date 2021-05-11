@@ -1,4 +1,5 @@
 @import '../../../../../scss/constants/icon';
+@import '../../../../../scss/constants/responsive';
 @import '../../../../../scss/constants/transition';
 
 .NavButton {
@@ -45,17 +46,51 @@
     }
 }
 
-.Button {
-    .NavButton
-    & {
-        width: 100%;
-        height: 100%;
-    }
+[class*=Button__nav] {
+    width: 100%;
+    height: 100%;
 }
 
 .ButtonCharacter {
     .NavButton
     & {
         padding-bottom: 15%;
+    }
+}
+
+[class*=ButtonTitle__nav] {
+    top: $height__chivalry;
+    opacity: 0;
+
+    .DW__userAgentDesktop
+    & {
+        transition:
+            top $transitionDuration__default,
+            opacity $transitionDuration__default;
+    }
+
+    .DW__mobileWidth
+    & {
+        top: -$height__chivalry;
+    }
+
+    .ShW__navExpanded
+    & {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+[class*=ButtonTitleText__nav] {
+    float: left;
+    padding-left: $margin__thick / 2;
+    transform: rotate(270deg);
+    transform-origin: left top 0;
+
+    .DW__mobileWidth
+    & {
+        padding-left: $margin__thick;
+        transform: rotate(90deg);
+        transform-origin: left bottom 0;
     }
 }
