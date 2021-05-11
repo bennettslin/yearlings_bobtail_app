@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import getDidMountHoc from '../../hocs/DidMountHoc'
 import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
+import ButtonAnimatable from './Animatable'
 import ButtonCharacter from './Character'
 import ButtonIcon from './Icon'
 import ButtonTitle from './Title'
@@ -107,27 +108,14 @@ const Button = ({
                     title: buttonTitle,
                 }}
             />
-            <div
+            <ButtonAnimatable
                 {...{
-                    className: cx(
-                        'ButtonAnimatable',
-                        'dropShadow',
-
-                        !buttonTitle && !isDisabled && !isSelectedDisabled && (
-                            isBrightHover ?
-                                'dropShadow__brightHover' :
-                                'dropShadow__lightHover'
-                        ),
-
-                        buttonTitle && !isSelectedDisabled &&
-                            'ButtonAnimatable__hoverOnParent',
-
-                        isAccessEnter &&
-                        showIfAccessOn &&
-                        !isSelectedDisabled &&
-                            'dropShadow__accessed',
-                        'abF',
-                    ),
+                    isAccessEnter,
+                    showIfAccessOn,
+                    isDisabled,
+                    isSelectedDisabled,
+                    isBrightHover,
+                    buttonTitle,
                 }}
             >
                 <ButtonIcon {...{ buttonName, buttonIdentifier }} />
@@ -140,7 +128,6 @@ const Button = ({
                     }}
                 />
                 {children}
-
                 {accessKey && !isDisabled && !isSelectedDisabled && (
                     <AccessLetter
                         inButtonOrDotAnchor
@@ -150,7 +137,7 @@ const Button = ({
                         }}
                     />
                 )}
-            </div>
+            </ButtonAnimatable>
             {showTooltip && (
                 <Tooltip {...{ buttonName }} />
             )}
@@ -175,7 +162,10 @@ Button.propTypes = {
     buttonIdentifier: PropTypes.any,
     accessKey: PropTypes.string,
     hasCharacterShadowLight: PropTypes.bool,
-    buttonCharacter: PropTypes.string,
+    buttonCharacter: PropTypes.oneOfType([
+        PropTypes.number,
+        PropTypes.string,
+    ]),
     hasTitleShadowLight: PropTypes.bool,
     buttonTitle: PropTypes.any,
     handleButtonClick: PropTypes.func.isRequired,

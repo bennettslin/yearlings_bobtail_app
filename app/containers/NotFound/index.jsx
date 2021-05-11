@@ -3,6 +3,7 @@ import cx from 'classnames'
 import { Helmet } from 'react-helmet'
 import NotFoundHeader from './Header'
 import Texts from '../../components/Texts'
+import DeviceWrapper from '../../wrappers/DeviceWrapper'
 import { ALBUM_TITLE } from '../../constants/paths'
 import { navigateToPathname } from '../../helpers/navigate'
 import './style'
@@ -22,7 +23,7 @@ const NotFoundContainer = () => {
     }, [])
 
     return (
-        <>
+        <DeviceWrapper>
             <div
                 {...{
                     className: cx(
@@ -47,7 +48,7 @@ const NotFoundContainer = () => {
                 <Texts {...{ text: NOT_FOUND_TEXT }} />
             </div >
             <NotFoundHeader />
-        </>
+        </DeviceWrapper>
     )
 }
 

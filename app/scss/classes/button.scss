@@ -95,7 +95,6 @@
 }
 
 .ButtonIcon__promoPage {
-    fill: $colour__navigation;
     .house { fill: hsl($hue__masks, 25%, 62%); }
 }
 
@@ -108,10 +107,6 @@
     fill:$colour__navigation;
 }
 
-.ButtonIcon__popupClose {
-    fill: $colour__close;
-}
-
 .ButtonIcon__popupNext {
     fill:$colour__navigation;
     transform: scaleX(-1);
@@ -119,4 +114,8 @@
 
 .ButtonIcon__popupPrevious {
     fill:$colour__navigation;
+}
+
+.ButtonIcon__popupClose {
+    fill: $colour__close;
 }

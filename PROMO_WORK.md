@@ -1,10 +1,11 @@
 # Promo work
-* 
-* Pagination
+* All marketing child pages have back to promo page button
+* Create pagination component
+* Can have additional pagination component
 * Redo PromoAnchor
 
-* Create promo page
 * Create onesheet page
+* Create promo page
 * Create test other pitch page
 
 # Bonus
