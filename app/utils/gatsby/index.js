@@ -5,7 +5,7 @@ import AlbumContainer from '../../containers/Album'
 import LoadingContainer from '../../containers/Loading'
 import MarketingContainer from '../../containers/Marketing'
 import { getIsAlbumPage } from './album'
-import { getIsMarketingPage } from './marketing'
+import { getIsPromoPage } from './marketing'
 import { getParsedLocation } from './path'
 import { getShowLoadingContainer } from './session'
 import { getStoreIfNeeded } from './store'
@@ -42,7 +42,7 @@ export const wrapPageElement = ({ element }) => {
                 {element}
             </AlbumContainer>
         )
-    } else if (getIsMarketingPage(pathname)) {
+    } else if (getIsPromoPage(pathname)) {
         return (
             <MarketingContainer>
                 {element}

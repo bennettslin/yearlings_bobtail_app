@@ -52,13 +52,13 @@ export const getIsOverlayShown = ({
     lyricAnnotationIndex,
     isScoreShown,
     isAboutShown,
-    isMarketingShown,
+    isPromoShown,
     isWikiShown,
 
 }) => {
     return (
         isAboutShown ||
-        isMarketingShown ||
+        isPromoShown ||
         isScoreShown ||
         isWikiShown ||
         (

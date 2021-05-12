@@ -5,13 +5,13 @@
 @import '../../scss/constants/popup';
 @import '../../scss/constants/shadow';
 
-.marketing__child {
+.promo__child {
     position: relative;
     width: 100%;
 
     .MarketingContainer
     & {
-        max-width: $width__marketingContainer;
+        max-width: $width__promoContainer;
 
         .DW__tabletOrDesktopWidth
         & {

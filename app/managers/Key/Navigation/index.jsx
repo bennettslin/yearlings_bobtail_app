@@ -19,7 +19,7 @@ import {
 import { mapSelectedAnnotationIndex } from '../../../redux/selected/selector'
 import {
     mapIsDotsSlideShown,
-    mapIsMarketingShown,
+    mapIsPromoShown,
 } from '../../../redux/toggle/selector'
 
 const NavigationManager = forwardRef((props, ref) => {
@@ -34,7 +34,7 @@ const NavigationManager = forwardRef((props, ref) => {
         activatedVerseIndex = useSelector(mapActivatedVerseIndex),
         selectedAnnotationIndex = useSelector(mapSelectedAnnotationIndex),
         isDotsSlideShown = useSelector(mapIsDotsSlideShown),
-        isMarketingShown = useSelector(mapIsMarketingShown),
+        isPromoShown = useSelector(mapIsPromoShown),
         canNavigateByKey = useSelector(mapCanNavigateByKey),
         shouldNavigateLyric = useSelector(mapShouldNavigateLyric),
         shouldNavigateNav = useSelector(mapShouldNavigateNav)
@@ -45,7 +45,7 @@ const NavigationManager = forwardRef((props, ref) => {
 
         if (canNavigateByKey) {
             // We're in marketing popup.
-            if (isMarketingShown) {
+            if (isPromoShown) {
                 keyWasRegistered = navigateMarketing.current(keyName)
 
             // We're selecting the activated verse.

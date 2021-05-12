@@ -63,7 +63,7 @@ import {
     mapIsLyricExpanded,
     mapIsScoreShown,
     mapIsAboutShown,
-    mapIsMarketingShown,
+    mapIsPromoShown,
     mapIsAudioOptionsExpanded,
 } from '../../../redux/toggle/selector'
 import { mapIsWikiShown } from '../../../redux/wiki/selector'
@@ -92,7 +92,7 @@ const LetterManager = forwardRef((props, ref) => {
         isLyricExpanded = useSelector(mapIsLyricExpanded),
         isScoreShown = useSelector(mapIsScoreShown),
         isAboutShown = useSelector(mapIsAboutShown),
-        isMarketingShown = useSelector(mapIsMarketingShown)
+        isPromoShown = useSelector(mapIsPromoShown)
 
     const handleLetter = keyName => {
         let annotationIndexWasAccessed = false,
@@ -196,7 +196,7 @@ const LetterManager = forwardRef((props, ref) => {
             dispatch(updateIsAboutShown())
 
         // Close pitch popup.
-        } else if (isMarketingShown) {
+        } else if (isPromoShown) {
             dispatch(updateIsMarketingShown())
 
         // Close wiki popup.

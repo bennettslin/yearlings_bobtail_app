@@ -30,7 +30,7 @@ const MarketingScroll = forwardRef(({
             {...{
                 className: cx(
                     'MarketingScroll',
-                    'marketing__child',
+                    'promo__child',
                     'fCC',
                 ),
             }}

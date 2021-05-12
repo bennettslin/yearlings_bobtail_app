@@ -34,9 +34,9 @@ export const mapIsScoreShown = (
     { [TOGGLE_STORE]: { isScoreShown } },
 ) => isScoreShown
 
-export const mapIsMarketingShown = (
-    { [TOGGLE_STORE]: { isMarketingShown } },
-) => isMarketingShown
+export const mapIsPromoShown = (
+    { [TOGGLE_STORE]: { isPromoShown } },
+) => isPromoShown
 
 export const mapIsAboutShown = (
     { [TOGGLE_STORE]: { isAboutShown } },

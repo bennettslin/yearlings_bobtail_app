@@ -19,7 +19,7 @@ const MarketingFooter = ({ serverClientPromoPath }) => {
             {...{
                 className: cx(
                     'MarketingFooter',
-                    'marketing__child',
+                    'promo__child',
                     'fCC',
                 ),
             }}

@@ -6,7 +6,7 @@ import {
     mapLyricVerseIndex,
     mapLyricAnnotationIndex,
 } from '../../redux/lyric/selector'
-import { mapIsMarketingShown } from '../../redux/toggle/selector'
+import { mapIsPromoShown } from '../../redux/toggle/selector'
 import { navigateToAlbumPage } from '../../helpers/navigate'
 
 const UrlManager = () => {
@@ -15,10 +15,10 @@ const UrlManager = () => {
         lyricSongIndex = useSelector(mapLyricSongIndex),
         lyricVerseIndex = useSelector(mapLyricVerseIndex),
         lyricAnnotationIndex = useSelector(mapLyricAnnotationIndex),
-        isMarketingShown = useSelector(mapIsMarketingShown)
+        isPromoShown = useSelector(mapIsPromoShown)
 
     const verifyBeforeNavigation = navigateCallback => {
-        if (isMarketingShown) {
+        if (isPromoShown) {
             navigateCallback()
         }
     }
@@ -33,7 +33,7 @@ const UrlManager = () => {
     }, [])
 
     useEffect(() => {
-        if (!isMarketingShown) {
+        if (!isPromoShown) {
             navigateToAlbumPage(
                 lyricSongIndex,
                 lyricVerseIndex,
@@ -46,7 +46,7 @@ const UrlManager = () => {
         lyricSongIndex,
         lyricVerseIndex,
         lyricAnnotationIndex,
-        isMarketingShown,
+        isPromoShown,
     ])
 
     return (

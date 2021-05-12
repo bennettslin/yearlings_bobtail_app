@@ -1,5 +1,5 @@
 # Promo work
-* Make pagination placeholder same as pagination button.
+* Make pagination placeholder same as pagination button to avoid jumpiness.
 
 * Create onesheet page
 * Create promo page

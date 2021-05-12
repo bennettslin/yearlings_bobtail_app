@@ -6,23 +6,23 @@ import getDidMountHoc from '../../../hocs/DidMountHoc'
 import { updateIsMarketingShown } from '../../../redux/toggle/action'
 import Popup from '../../Popup'
 import Marketing from '../../Marketing'
-import { mapIsMarketingShown } from '../../../redux/toggle/selector'
+import { mapIsPromoShown } from '../../../redux/toggle/selector'
 import './style'
 
 const MarketingPopup = forwardRef(({ didMount }, ref) => {
     const
         dispatch = useDispatch(),
-        isMarketingShown = useSelector(mapIsMarketingShown)
+        isPromoShown = useSelector(mapIsPromoShown)
 
     const handleCloseClick = () => {
         dispatch(updateIsMarketingShown())
     }
 
     useEffect(() => {
-        if (isMarketingShown) {
-            logState('isMarketingShown')
+        if (isPromoShown) {
+            logState('isPromoShown')
         }
-    }, [isMarketingShown])
+    }, [isPromoShown])
 
     return didMount && (
         <Popup
@@ -35,7 +35,7 @@ const MarketingPopup = forwardRef(({ didMount }, ref) => {
             noOverflowHidden
             {...{
                 popupName: 'MarketingPopup',
-                isVisible: isMarketingShown,
+                isVisible: isPromoShown,
                 handleCloseClick,
             }}
         >

@@ -1,6 +1,6 @@
 import { createStore } from 'redux'
 import { devToolsEnhancer } from 'redux-devtools-extension'
-import { getIsMarketingPage } from '../marketing'
+import { getIsPromoPage } from '../marketing'
 import { getParsedLocation } from '../path'
 import { getIsServerSide, getWindow } from '../../browser'
 import {
@@ -31,7 +31,7 @@ const _getReducersIfNeeded = ({
             search,
         })
     } else if (
-        getIsMarketingPage(pathname) ||
+        getIsPromoPage(pathname) ||
         getIsNotFoundPage(pathname)
     ) {
         return getMarketingReducers({
