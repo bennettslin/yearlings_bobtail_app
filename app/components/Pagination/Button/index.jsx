@@ -5,6 +5,8 @@ import { PAGINATION_SLIDE_BUTTON_KEY } from '../../../constants/buttons'
 
 const PaginationButton = ({
     pitchSlideIndex,
+    isLargeSize,
+    isSmallSize,
     isSelected,
     handleButtonClick,
 }) => {
@@ -16,8 +18,8 @@ const PaginationButton = ({
         <Button
             hasCharacterShadowLight
             {...{
-                // isLargeSize,
-                // isSmallSize,
+                isLargeSize,
+                isSmallSize,
                 buttonName: PAGINATION_SLIDE_BUTTON_KEY,
                 isSelectedDisabled: isSelected,
                 handleButtonClick: _handleButtonClick,
@@ -29,6 +31,8 @@ const PaginationButton = ({
 
 PaginationButton.propTypes = {
     pitchSlideIndex: PropTypes.number.isRequired,
+    isLargeSize: PropTypes.bool.isRequired,
+    isSmallSize: PropTypes.bool.isRequired,
     isSelected: PropTypes.bool.isRequired,
     handleButtonClick: PropTypes.func.isRequired,
 }

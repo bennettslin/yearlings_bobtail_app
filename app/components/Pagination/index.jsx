@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import {
+    mapIsDesktopWidth,
     mapIsMiniWidth,
-    mapIsMonitorWidth,
     mapIsPhoneWidth,
 } from '../../redux/device/selector'
 import Button from '../Button'
@@ -18,6 +18,7 @@ import {
     PAGINATION_PREVIOUS_BUTTON_KEY,
 } from '../../constants/buttons'
 import { getMiddlePitchIndices } from './helper'
+import './style'
 
 const Pagination = ({
     dispatchPitch,
@@ -25,9 +26,20 @@ const Pagination = ({
     pitchSlideCount,
 }) => {
     const
-        isMonitorWidth = useSelector(mapIsMonitorWidth),
+        isDesktopWidth = useSelector(mapIsDesktopWidth),
         isMiniWidth = useSelector(mapIsMiniWidth),
-        isPhoneWidth = useSelector(mapIsPhoneWidth)
+        isPhoneWidth = useSelector(mapIsPhoneWidth),
+
+        // In phone, there's enough space for buttons to be large again.
+        isLargeSize = isDesktopWidth || isPhoneWidth,
+        isSmallSize = isMiniWidth,
+
+        // In narrow viewport widths, there's only one middle index.
+        isSingleMiddleIndex = !isDesktopWidth,
+        increment = isSingleMiddleIndex ? 1 : 0,
+
+        // In phone, there's only the single, selected index.
+        isOnlyIndex = isPhoneWidth
 
     const handlePreviousClick = () => {
         dispatchPitch(selectedPitchIndex - 1)
@@ -48,74 +60,112 @@ const Pagination = ({
                 ),
             }}
         >
-            {/* First slide. */}
-            <PaginationButton
+            <Button
                 {...{
-                    pitchSlideIndex: 1,
-                    isSelected: selectedPitchIndex === 1,
-                    handleButtonClick,
+                    buttonName: PAGINATION_PREVIOUS_BUTTON_KEY,
+                    isLargeSize,
+                    isSmallSize,
+                    accessKey: ARROW_LEFT,
+                    handleButtonClick: handlePreviousClick,
+                    isDisabled: selectedPitchIndex === 1,
                 }}
             />
-            {/* Second slide or previous arrow. */}
-            {selectedPitchIndex <= 4 ? (
-                <PaginationButton
-                    {...{
-                        pitchSlideIndex: 2,
-                        isSelected: selectedPitchIndex === 2,
-                        handleButtonClick,
-                    }}
-                />
-            ) : (
-                <Button
-                    {...{
-                        // isLargeSize: isMonitorWidth || isPhoneWidth,
-                        // isSmallSize: isMiniWidth,
-                        buttonName: PAGINATION_PREVIOUS_BUTTON_KEY,
-                        accessKey: ARROW_LEFT,
-                        handleButtonClick: handlePreviousClick,
-                    }}
-                />
+            {!isOnlyIndex && (
+                <>
+                    {/* First slide. */}
+                    <PaginationButton
+                        {...{
+                            pitchSlideIndex: 1,
+                            isLargeSize,
+                            isSmallSize,
+                            isSelected: selectedPitchIndex === 1,
+                            handleButtonClick,
+                        }}
+                    />
+                    {/* Second slide or ellipsis placeholder. */}
+                    {selectedPitchIndex <= 4 - increment ? (
+                        <PaginationButton
+                            {...{
+                                pitchSlideIndex: 2,
+                                isLargeSize,
+                                isSmallSize,
+                                isSelected: selectedPitchIndex === 2,
+                                handleButtonClick,
+                            }}
+                        />
+                    ) : (
+                        <Button
+                            isDisabled
+                            {...{
+                                isLargeSize,
+                                isSmallSize,
+                                buttonCharacter: '…',
+                            }}
+                        />
+                    )}
+                </>
             )}
-            {/* This component assumes at least 7 pitch slides! */}
             {getMiddlePitchIndices({
                 selectedPitchIndex,
                 pitchSlideCount,
-            }).map(index => (
+                isSingleMiddleIndex,
+                isOnlyIndex,
+
+            }).map((pitchSlideIndex, index) => (
                 <PaginationButton
                     {...{
                         key: index,
-                        pitchSlideIndex: index,
-                        isSelected: selectedPitchIndex === index,
+                        pitchSlideIndex,
+                        isLargeSize,
+                        isSmallSize,
+                        isSelected: selectedPitchIndex === pitchSlideIndex,
                         handleButtonClick,
                     }}
                 />
             ))}
-            {/* Second to last slide or next arrow. */}
-            {selectedPitchIndex >= pitchSlideCount - 3 ? (
-                <PaginationButton
-                    {...{
-                        pitchSlideIndex: pitchSlideCount - 1,
-                        isSelected: selectedPitchIndex === pitchSlideCount - 1,
-                        handleButtonClick,
-                    }}
-                />
-            ) : (
-                <Button
-                    {...{
-                        // isLargeSize: isMonitorWidth || isPhoneWidth,
-                        // isSmallSize: isMiniWidth,
-                        buttonName: PAGINATION_NEXT_BUTTON_KEY,
-                        accessKey: ARROW_RIGHT,
-                        handleButtonClick: handleNextClick,
-                    }}
-                />
+            {!isOnlyIndex && (
+                <>
+                    {/* Second to last slide or ellipsis placeholder. */}
+                    {selectedPitchIndex >= pitchSlideCount - 3 + increment ? (
+                        <PaginationButton
+                            {...{
+                                pitchSlideIndex: pitchSlideCount - 1,
+                                isLargeSize,
+                                isSmallSize,
+                                isSelected: selectedPitchIndex === pitchSlideCount - 1,
+                                handleButtonClick,
+                            }}
+                        />
+                    ) : (
+                        <Button
+                            isDisabled
+                            {...{
+                                isLargeSize,
+                                isSmallSize,
+                                buttonCharacter: '…',
+                            }}
+                        />
+                    )}
+                    {/* Last slide */}
+                    <PaginationButton
+                        {...{
+                            pitchSlideIndex: pitchSlideCount,
+                            isLargeSize,
+                            isSmallSize,
+                            isSelected: selectedPitchIndex === pitchSlideCount,
+                            handleButtonClick,
+                        }}
+                    />
+                </>
             )}
-            {/* Last slide */}
-            <PaginationButton
+            <Button
                 {...{
-                    pitchSlideIndex: pitchSlideCount,
-                    isSelected: selectedPitchIndex === pitchSlideCount,
-                    handleButtonClick,
+                    isLargeSize,
+                    isSmallSize,
+                    buttonName: PAGINATION_NEXT_BUTTON_KEY,
+                    accessKey: ARROW_RIGHT,
+                    handleButtonClick: handleNextClick,
+                    isDisabled: selectedPitchIndex === pitchSlideCount,
                 }}
             />
         </div>

@@ -2,15 +2,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { getIsArtupPage, getIsPromoRootPath } from '../../../helpers/marketing'
+import { getIsArtupPage, getIsPromoHomepage } from '../../../helpers/marketing'
 import getMarketingServerClientHoc from '../../../hocs/MarketingHoc'
 import ArtupPagination from '../../Marketings/Artup/Pagination'
-import PromoPageButton from './PromoPageButton'
+import HomepageButton from './HomepageButton'
 import './style'
 
 const MarketingFooter = ({ serverClientPromoPath }) => {
-    // Promo root page doesn't need footer.
-    if (getIsPromoRootPath(serverClientPromoPath)) {
+    // Promo homepage doesn't need footer.
+    if (getIsPromoHomepage(serverClientPromoPath)) {
         return null
     }
 
@@ -24,7 +24,7 @@ const MarketingFooter = ({ serverClientPromoPath }) => {
                 ),
             }}
         >
-            <PromoPageButton />
+            <HomepageButton />
             {getIsArtupPage(serverClientPromoPath) && (
                 <ArtupPagination />
             )}

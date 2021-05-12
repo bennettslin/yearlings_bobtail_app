@@ -4,15 +4,15 @@ import cx from 'classnames'
 import {
     getIsArtupPage,
     getIsOnesheetPage,
-    getIsPromoRootPath,
+    getIsPromoHomepage,
 } from '../../../helpers/marketing'
 import getMarketingServerClientHoc from '../../../hocs/MarketingHoc'
-import PromoBody from '../../Marketings/Promo/Body'
-import OnesheetBody from '../../Marketings/Onesheet/Body'
-import ArtupBody from '../../Marketings/Artup/Body'
+import PromoMarketing from '../../Marketings/Promo'
+import OnesheetMarketing from '../../Marketings/Onesheet'
+import ArtupMarketing from '../../Marketings/Artup'
 import './style'
 
-const MarketingBody = forwardRef(({
+const MarketingScroll = forwardRef(({
     serverClientPromoPath,
     handlePageChange = () => {},
 
@@ -29,7 +29,7 @@ const MarketingBody = forwardRef(({
         <div
             {...{
                 className: cx(
-                    'MarketingBody',
+                    'MarketingScroll',
                     'marketing__child',
                     'fCC',
                 ),
@@ -56,14 +56,14 @@ const MarketingBody = forwardRef(({
                         tabIndex: -1,
                     }}
                 >
-                    {getIsPromoRootPath(serverClientPromoPath) && (
-                        <PromoBody {...{ handlePitchPageChange }} />
+                    {getIsPromoHomepage(serverClientPromoPath) && (
+                        <PromoMarketing {...{ handlePitchPageChange }} />
                     )}
                     {getIsOnesheetPage(serverClientPromoPath) && (
-                        <OnesheetBody {...{ handlePitchPageChange }} />
+                        <OnesheetMarketing {...{ handlePitchPageChange }} />
                     )}
                     {getIsArtupPage(serverClientPromoPath) && (
-                        <ArtupBody {...{ handlePitchPageChange }} />
+                        <ArtupMarketing {...{ handlePitchPageChange }} />
                     )}
                 </div>
             </div>
@@ -71,9 +71,9 @@ const MarketingBody = forwardRef(({
     )
 })
 
-MarketingBody.propTypes = {
+MarketingScroll.propTypes = {
     serverClientPromoPath: PropTypes.string.isRequired,
     handlePageChange: PropTypes.func,
 }
 
-export default getMarketingServerClientHoc(MarketingBody)
+export default getMarketingServerClientHoc(MarketingScroll)

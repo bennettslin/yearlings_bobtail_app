@@ -3,7 +3,7 @@ import {
     ONESHEET_SUBPATH,
 } from '../constants/routing'
 
-export const getIsPromoRootPath = promoPath => (
+export const getIsPromoHomepage = promoPath => (
     promoPath === ''
 )
 

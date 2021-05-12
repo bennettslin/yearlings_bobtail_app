@@ -1,20 +1,14 @@
 # Promo work
-* Rename to promo homepage everywhere
-* Key up for promo homepage from marketing child
-* Have marketings render single marketing view
-    * Have single index file for each marketing
-    * titles, pagination, and so forth are passed as props
-
-* Refine pagination component
-    * Placeholder ellipsis button characters
-    * Rearrange arrows to outside
-    * Make buttons never shift.
-    * Responsive button sizes owned by parent
+* Make pagination placeholder same as pagination button.
 
 * Create onesheet page
 * Create promo page
 * Redo PromoAnchor
 
+* Rename all marketing to promo
+* Rename promo to homepage
+
+* Key up for promo homepage from marketing child
 * Need to reset scroll upon promo path change?
 * Smart quotes in marketing material
 

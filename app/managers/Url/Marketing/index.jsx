@@ -12,7 +12,7 @@ import {
 import {
     getIsArtupPage,
     getIsOnesheetPage,
-    getIsPromoRootPath,
+    getIsPromoHomepage,
 } from '../../../helpers/marketing'
 import { getOnesheetFullPath } from '../../../utils/gatsby/marketing'
 import { PROMO_PATH } from '../../../constants/routing'
@@ -23,7 +23,7 @@ const MarketingUrlManager = forwardRef(({ verifyBeforeNavigation }, ref) => {
         selectedPromoPath = useSelector(mapSelectedPromoPath)
 
     const navigateToMarketingPage = () => {
-        if (getIsPromoRootPath(selectedPromoPath)) {
+        if (getIsPromoHomepage(selectedPromoPath)) {
             navigateToPathname(PROMO_PATH)
         } else if (getIsOnesheetPage(selectedPromoPath)) {
             navigateToPathname(getOnesheetFullPath())

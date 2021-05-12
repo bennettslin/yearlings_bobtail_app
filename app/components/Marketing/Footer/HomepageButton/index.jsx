@@ -1,12 +1,15 @@
 import React from 'react'
 import cx from 'classnames'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import Button from '../../../Button'
+import { mapIsPhoneWidth } from '../../../../redux/device/selector'
 import { setSelectedPromoPath } from '../../../../redux/marketing/action'
 import { PROMO_PAGE_BUTTON_KEY } from '../../../../constants/buttons'
 
 const PromoPageButton = () => {
-    const dispatch = useDispatch()
+    const
+        dispatch = useDispatch(),
+        isPhoneWidth = useSelector(mapIsPhoneWidth)
 
     const handleButtonClick = () => {
         dispatch(setSelectedPromoPath())
@@ -21,7 +24,10 @@ const PromoPageButton = () => {
                 ),
                 buttonName: PROMO_PAGE_BUTTON_KEY,
                 handleButtonClick,
-                buttonTitle: 'back to promo homepage',
+
+                ...!isPhoneWidth && {
+                    buttonTitle: 'back to promo homepage',
+                },
             }}
         />
     )

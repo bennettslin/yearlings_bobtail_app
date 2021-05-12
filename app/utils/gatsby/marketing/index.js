@@ -10,7 +10,7 @@ import {
 export const getOnesheetFullPath = () => `${PROMO_PATH}/${ONESHEET_SUBPATH}`
 export const getArtupFullPath = () => `${PROMO_PATH}/${ARTUP_SUBPATH}`
 
-const _getIsValidPromoRootPath = pathname => (
+const _getIsValidPromoPath = pathname => (
     pathname === PROMO_PATH
 )
 
@@ -39,7 +39,7 @@ export const getIsMarketingPage = pathname => (
      * marketing pathname while it is open.
      */
     !getIsAlbumClientSession() && (
-        _getIsValidPromoRootPath(pathname) ||
+        _getIsValidPromoPath(pathname) ||
         _getIsValidOnesheetPath(pathname) ||
         _getIsValidArtupPath(pathname)
     )

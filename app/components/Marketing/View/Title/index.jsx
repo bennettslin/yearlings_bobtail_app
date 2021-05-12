@@ -4,7 +4,7 @@ import cx from 'classnames'
 import Texts from '../../../Texts'
 import './style'
 
-const MarketingTitle = ({ text }) => (
+const MarketingTitle = ({ title }) => (
     <div
         {...{
             className: cx(
@@ -15,12 +15,12 @@ const MarketingTitle = ({ text }) => (
             ),
         }}
     >
-        <Texts {...{ text }} />
+        <Texts {...{ text: title }} />
     </div>
 )
 
 MarketingTitle.propTypes = {
-    text: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
 }
 
 export default MarketingTitle
