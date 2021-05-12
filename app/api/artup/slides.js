@@ -7,7 +7,7 @@ const {
 
 export const getArtupSlidesCount = () => SLIDES.length
 
-export const getArtupSlideIndices = () => (
+const getArtupSlideIndices = () => (
     getArrayOfLength(getArtupSlidesCount(), 1)
 )
 
@@ -20,10 +20,6 @@ export const getIsArtupSlideValid = artupSlideIndex => (
 export const getValidArtupSlideIndex = artupSlideIndex => (
     getIsArtupSlideValid(artupSlideIndex) ? artupSlideIndex : 1
 )
-
-export const getNextArtupSlideIndex = artupSlideIndex => (
-    getArtupSlidesCount() + artupSlideIndex
-) % getArtupSlidesCount()
 
 export const getPathForArtupSlide = artupSlideIndex => (
     SLIDES[artupSlideIndex - 1].path

@@ -1,0 +1,25 @@
+@import '../../scss/constants/border';
+@import '../../scss/constants/colour';
+@import '../../scss/constants/icon';
+@import '../../scss/constants/marketing';
+@import '../../scss/constants/popup';
+@import '../../scss/constants/shadow';
+
+.marketing__child {
+    position: relative;
+    width: 100%;
+
+    .MarketingContainer
+    & {
+        max-width: $width__marketingContainer;
+
+        .DW__tabletOrDesktopWidth
+        & {
+            width: calc(
+                100% -
+                #{$LENGTH_ICON_LARGE * 2 + $PADDING_POPUP_CONTENT_WIDE * 2}
+            );
+        }
+    }
+}
+

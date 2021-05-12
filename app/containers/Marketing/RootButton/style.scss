@@ -1,13 +1,5 @@
 @import '../../../scss/constants/icon';
 
-.ButtonTitle {
-    .RootButton
-    & {
-        left: 100%;
-        display: flex;
-    }
-}
-
 .Button__rootHomeSize {
     height: $LENGTH_ICON_LARGE;
     width: $LENGTH_ICON_LARGE * 1.77;

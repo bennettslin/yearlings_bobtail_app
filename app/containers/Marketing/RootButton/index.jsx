@@ -14,7 +14,6 @@ const RootButton = ({ hasTitleShadowLight }) => (
         {...{
             className: cx(
                 'dramaMasks',
-                'RootButton',
             ),
             buttonName: ROOT_HOME_BUTTON_KEY,
             accessKey: ROOT_HOME_KEY,

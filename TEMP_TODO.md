@@ -2,8 +2,8 @@
 * Look at routing and storage methods. Are they extraneous, now that we're only accepting exact paths?
 
 # TODO
-* Make turning off popups more obvious.
-* Tweak breakpoints?
+* Make turning off popups more obvious. (Wade brought this up.)
+* Tweak breakpoints? (Wade brought this up.)
 * Try to remove extraneous tags (divs, spans, anchors) in server side
 * Bennett cemetery, disposingCondom
 * Abbey Road side faces

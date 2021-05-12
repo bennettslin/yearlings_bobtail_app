@@ -17,9 +17,9 @@ import navBook from './nav/navBook'
 import navSong from './nav/navSong'
 import overview from './main/overview'
 import promoPage from './marketing/promoPage'
-import pitchSlide from './marketing/pitchSlide'
-import pitchPrevious from './pitch/pitchPrevious'
-import pitchNext from './pitch/pitchNext'
+import paginationNext from './marketing/paginationNext'
+import paginationPrevious from './marketing/paginationPrevious'
+import paginationSlide from './marketing/paginationSlide'
 import popupClose from './popup/popupClose'
 import popupPrevious from './popup/popupPrevious'
 import popupNext from './popup/popupNext'
@@ -46,9 +46,9 @@ import {
     NAV_SONG_BUTTON_KEY,
     OVERVIEW_BUTTON_KEY,
     PROMO_PAGE_BUTTON_KEY,
-    PITCH_PREVIOUS_BUTTON_KEY,
-    PITCH_NEXT_BUTTON_KEY,
-    PITCH_SLIDE_BUTTON_KEY,
+    PAGINATION_NEXT_BUTTON_KEY,
+    PAGINATION_PREVIOUS_BUTTON_KEY,
+    PAGINATION_SLIDE_BUTTON_KEY,
     POPUP_CLOSE_BUTTON_KEY,
     POPUP_PREVIOUS_BUTTON_KEY,
     POPUP_NEXT_BUTTON_KEY,
@@ -77,9 +77,9 @@ export default {
     [NAV_SONG_BUTTON_KEY]: navSong,
     [OVERVIEW_BUTTON_KEY]: overview,
     [PROMO_PAGE_BUTTON_KEY]: promoPage,
-    [PITCH_PREVIOUS_BUTTON_KEY]: pitchPrevious,
-    [PITCH_NEXT_BUTTON_KEY]: pitchNext,
-    [PITCH_SLIDE_BUTTON_KEY]: pitchSlide,
+    [PAGINATION_NEXT_BUTTON_KEY]: paginationNext,
+    [PAGINATION_PREVIOUS_BUTTON_KEY]: paginationPrevious,
+    [PAGINATION_SLIDE_BUTTON_KEY]: paginationSlide,
     [POPUP_CLOSE_BUTTON_KEY]: popupClose,
     [POPUP_PREVIOUS_BUTTON_KEY]: popupPrevious,
     [POPUP_NEXT_BUTTON_KEY]: popupNext,

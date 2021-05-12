@@ -2,33 +2,32 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { getIsArtupPage, getIsOnesheetPage } from '../../../helpers/marketing'
+import { getIsArtupPage, getIsPromoRootPath } from '../../../helpers/marketing'
 import getMarketingServerClientHoc from '../../../hocs/MarketingHoc'
-import ArtupFooter from '../../Marketings/Artup/Footer'
-import OnesheetFooter from '../../Marketings/Onesheet/Footer'
+import ArtupPagination from '../../Marketings/Artup/Pagination'
+import PromoPageButton from './PromoPageButton'
 import './style'
 
 const MarketingFooter = ({ serverClientPromoPath }) => {
-    let renderedNav = null
-
-    if (getIsArtupPage(serverClientPromoPath)) {
-        renderedNav = <ArtupFooter />
+    // Promo root page doesn't need footer.
+    if (getIsPromoRootPath(serverClientPromoPath)) {
+        return null
     }
 
-    if (getIsOnesheetPage(serverClientPromoPath)) {
-        renderedNav = <OnesheetFooter />
-    }
-
-    return renderedNav && (
+    return (
         <div
             {...{
                 className: cx(
                     'MarketingFooter',
+                    'marketing__child',
                     'fCC',
                 ),
             }}
         >
-            {renderedNav}
+            <PromoPageButton />
+            {getIsArtupPage(serverClientPromoPath) && (
+                <ArtupPagination />
+            )}
         </div>
     )
 }

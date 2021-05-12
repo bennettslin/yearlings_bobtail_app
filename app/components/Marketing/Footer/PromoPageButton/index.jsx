@@ -5,7 +5,7 @@ import Button from '../../../Button'
 import { setSelectedPromoPath } from '../../../../redux/marketing/action'
 import { PROMO_PAGE_BUTTON_KEY } from '../../../../constants/buttons'
 
-const OnesheetFooter = () => {
+const PromoPageButton = () => {
     const dispatch = useDispatch()
 
     const handleButtonClick = () => {
@@ -18,14 +18,13 @@ const OnesheetFooter = () => {
             {...{
                 className: cx(
                     'dramaMasks',
-                    'RootButton',
                 ),
                 buttonName: PROMO_PAGE_BUTTON_KEY,
                 handleButtonClick,
-                buttonTitle: 'back to promo page',
+                buttonTitle: 'back to promo homepage',
             }}
         />
     )
 }
 
-export default OnesheetFooter
+export default PromoPageButton

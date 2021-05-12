@@ -14,9 +14,9 @@ import {
     NAV_BOOK_BUTTON_KEY,
     NAV_SONG_BUTTON_KEY,
     PROMO_PAGE_BUTTON_KEY,
-    PITCH_PREVIOUS_BUTTON_KEY,
-    PITCH_NEXT_BUTTON_KEY,
-    PITCH_SLIDE_BUTTON_KEY,
+    PAGINATION_PREVIOUS_BUTTON_KEY,
+    PAGINATION_NEXT_BUTTON_KEY,
+    PAGINATION_SLIDE_BUTTON_KEY,
     POPUP_CLOSE_BUTTON_KEY,
     POPUP_PREVIOUS_BUTTON_KEY,
     POPUP_NEXT_BUTTON_KEY,
@@ -91,8 +91,8 @@ const TOOLTIP_TEXT_MAP = {
             [DISABLED]: 'song overviews disabled',
         }
     },
-    [PITCH_PREVIOUS_BUTTON_KEY]: 'previous pitch page',
-    [PITCH_NEXT_BUTTON_KEY]: 'next pitch page',
+    [PAGINATION_PREVIOUS_BUTTON_KEY]: 'previous pitch page',
+    [PAGINATION_NEXT_BUTTON_KEY]: 'next pitch page',
     [POPUP_CLOSE_BUTTON_KEY]: 'close popup',
     [POPUP_PREVIOUS_BUTTON_KEY]: 'previous annotation',
     [POPUP_NEXT_BUTTON_KEY]: 'next annotation',
@@ -117,7 +117,7 @@ export const getShowTooltip = buttonName => {
         case NAV_BOOK_BUTTON_KEY:
         case NAV_SONG_BUTTON_KEY:
         case PROMO_PAGE_BUTTON_KEY:
-        case PITCH_SLIDE_BUTTON_KEY:
+        case PAGINATION_SLIDE_BUTTON_KEY:
         case WORMHOLE_BUTTON_KEY:
             return false
     }

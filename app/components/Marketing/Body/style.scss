@@ -6,23 +6,8 @@
 @import '../../../scss/constants/shadow';
 
 .MarketingBody {
-    position: relative;
-    width: 100%;
     font-size: 0.9em;
     flex-grow: 1;
-
-    .MarketingContainer
-    & {
-        max-width: $width__marketingContainer;
-
-        .DW__tabletOrDesktopWidth
-        & {
-            width: calc(
-                100% -
-                #{$LENGTH_ICON_LARGE * 2 + $PADDING_POPUP_CONTENT_WIDE * 2}
-            );
-        }
-    }
 }
 
 .MarketingScroll__child {

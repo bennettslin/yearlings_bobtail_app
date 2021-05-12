@@ -30,6 +30,7 @@ const MarketingBody = forwardRef(({
             {...{
                 className: cx(
                     'MarketingBody',
+                    'marketing__child',
                     'fCC',
                 ),
             }}

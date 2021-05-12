@@ -4,6 +4,7 @@ import PageArtupIndexContext from '../../contexts/PageArtupIndex'
 import PagePromoPathContext from '../../contexts/PagePromoPath'
 import MarketingBody from './Body'
 import MarketingFooter from './Footer'
+import './style'
 
 const Marketing = forwardRef(({
     pageArtupIndex,

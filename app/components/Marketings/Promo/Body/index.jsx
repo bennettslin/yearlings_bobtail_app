@@ -20,7 +20,7 @@ const PromoBody = () => {
 
     return (
         <>
-            <MarketingTitle {...{ text: 'Promo' }} />
+            <MarketingTitle {...{ text: 'Promo Homepage' }} />
             <MarketingContent>
                 <Anchor
                     {...{

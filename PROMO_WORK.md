@@ -1,8 +1,9 @@
 # Promo work
-* All marketing child pages have back to promo page button
-* Create universal pagination component
-    * Responsive button sizes
-    * Artup passes values into pagination component
+* Refine pagination component
+    * Placeholder ellipsis button characters
+    * Rearrange arrows to outside
+    * Make buttons never shift.
+    * Responsive button sizes owned by parent
 
 * Create onesheet page
 * Create promo page
