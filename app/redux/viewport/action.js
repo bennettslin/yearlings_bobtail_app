@@ -7,13 +7,13 @@ import { VIEWPORT_STORE } from '../../constants/store'
 import { getViewportStore } from '../../helpers/resize/store'
 
 export const updateViewportStore = payload => {
-    const { windowWidth, windowHeight, isMarketingPage } = payload
+    const { windowWidth, windowHeight, isPromoPage } = payload
 
     if (hasKey(windowWidth) && hasKey(windowHeight)) {
         payload = getViewportStore({
             windowHeight,
             windowWidth,
-            isMarketingPage,
+            isPromoPage,
         })
     }
 

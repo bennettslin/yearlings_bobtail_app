@@ -20,8 +20,8 @@ const _getIsValidSongPath = pathname => {
 export const getIsAlbumPage = pathname => (
     _getIsValidSongPath(pathname) ||
     /**
-     * Also check if we are in a marketing popup, since it will show a
-     * marketing pathname while it is open.
+     * Also check if we are in a promo popup, since it will show a promo
+     * pathname while it is open.
      */
     getIsAlbumClientSession()
 )

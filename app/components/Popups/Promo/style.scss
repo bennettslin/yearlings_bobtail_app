@@ -1,0 +1,18 @@
+@import '../../../scss/constants/icon';
+@import '../../../scss/constants/promo';
+
+.popupView__promoWidth {
+    max-width: $width__promoContainer + $margin__thick * 2;
+}
+
+.PromoPopupViewContent {
+    background-color: hsl(47, 21%, 61%);
+    padding: $margin__thick $margin__thick 0;
+
+    display: flex;
+    flex-direction: column;
+
+    & > :last-child {
+        margin-bottom: $margin__thick;
+    }
+}

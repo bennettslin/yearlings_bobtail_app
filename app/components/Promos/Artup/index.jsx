@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
-import MarketingView from '../../Marketing/View'
+import PromoView from '../../Promo/View'
 import Contact from '../../Contact'
 import Texts from '../../Texts'
 import {
@@ -24,7 +24,7 @@ const ArtupPromo = ({ serverClientArtupIndex, handlePitchPageChange }) => {
     }, [artupSlideIndex])
 
     return (
-        <MarketingView
+        <PromoView
             {...{
                 title: getTitleForArtupSlide(serverClientArtupIndex),
                 footnote: getFootnoteForArtupSlide(serverClientArtupIndex),
@@ -38,7 +38,7 @@ const ArtupPromo = ({ serverClientArtupIndex, handlePitchPageChange }) => {
             {getShowContactEmailForArtupSlide(serverClientArtupIndex) && (
                 <Contact />
             )}
-        </MarketingView>
+        </PromoView>
     )
 }
 

@@ -3,7 +3,7 @@ import React from 'react'
 import { Provider } from 'react-redux'
 import AlbumContainer from '../../containers/Album'
 import LoadingContainer from '../../containers/Loading'
-import MarketingContainer from '../../containers/Marketing'
+import PromoContainer from '../../containers/Promo'
 import { getIsAlbumPage } from './album'
 import { getIsPromoPage } from './marketing'
 import { getParsedLocation } from './path'
@@ -44,9 +44,9 @@ export const wrapPageElement = ({ element }) => {
         )
     } else if (getIsPromoPage(pathname)) {
         return (
-            <MarketingContainer>
+            <PromoContainer>
                 {element}
-            </MarketingContainer>
+            </PromoContainer>
         )
     }
 

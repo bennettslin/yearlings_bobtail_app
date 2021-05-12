@@ -11,9 +11,9 @@ import ErrorReducer from './error/reducer'
 import FocusReducer from './focus/reducer'
 import HoverReducer from './hover/reducer'
 import { getLyricReducer } from './lyric/reducer'
-import { getMarketingReducer } from './marketing/reducer'
 import { getOptionReducer } from './option/reducer'
 import PlayersReducer from './players/reducer'
+import { getPromoReducer } from './marketing/reducer'
 import { getSceneReducer } from './scene/reducer'
 import ScrollCarouselReducer from './scrollCarousel/reducer'
 import ScrollLyricReducer from './scrollLyric/reducer'
@@ -37,9 +37,9 @@ import {
     FOCUS_STORE,
     HOVER_STORE,
     LYRIC_STORE,
-    MARKETING_STORE,
     OPTION_STORE,
     PLAYERS_STORE,
+    PROMO_STORE,
     SCENE_STORE,
     SCROLL_CAROUSEL_STORE,
     SCROLL_LYRIC_STORE,
@@ -86,9 +86,9 @@ export const getAlbumReducers = ({
             initialVerseIndex,
             initialAnnotationIndex,
         }),
-        [MARKETING_STORE]: getMarketingReducer({ initialArtupIndex }),
         [OPTION_STORE]: getOptionReducer(initialSongIndex),
         [PLAYERS_STORE]: PlayersReducer,
+        [PROMO_STORE]: getPromoReducer({ initialArtupIndex }),
         [SCENE_STORE]: getSceneReducer({
             initialSongIndex,
             initialVerseIndex,
@@ -114,7 +114,7 @@ export const getAlbumReducers = ({
     })
 }
 
-export const getMarketingReducers = ({
+export const getPromoReducers = ({
     windowHeight,
     windowWidth,
     pathname,
@@ -124,15 +124,15 @@ export const getMarketingReducers = ({
         initialPromoPage = getInitialPromoPageKey(pathname)
 
     return combineReducers({
-        [ACCESS_STORE]: getAccessReducer({ isMarketingPage: true }),
-        [MARKETING_STORE]: getMarketingReducer({
+        [ACCESS_STORE]: getAccessReducer({ isPromoPage: true }),
+        [PROMO_STORE]: getPromoReducer({
             initialArtupIndex,
             initialPromoPage,
         }),
         [VIEWPORT_STORE]: getViewportReducer({
             windowHeight,
             windowWidth,
-            isMarketingPage: true,
+            isPromoPage: true,
         }),
     })
 }

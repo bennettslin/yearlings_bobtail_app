@@ -15,7 +15,7 @@ import {
     updateIsDotsSlideShown,
     updateIsLyricExpanded,
     updateIsNavExpanded,
-    updateIsMarketingShown,
+    updateIsPromoShown,
     updateIsScoreShown,
 } from '../../redux/toggle/action'
 import { HIDDEN } from '../../constants/options'
@@ -58,7 +58,7 @@ const CloseHandler = forwardRef((props, ref) => {
     const closeJustTopmost = ({
         exemptAudioOptions,
         exemptAbout,
-        exemptMarketing,
+        exemptPromo,
         exemptScore,
         exemptWiki,
 
@@ -76,8 +76,8 @@ const CloseHandler = forwardRef((props, ref) => {
         } else if (isAboutShown && !exemptAbout) {
             dispatch(updateIsAboutShown())
 
-        } else if (isPromoShown && !exemptMarketing) {
-            dispatch(updateIsMarketingShown())
+        } else if (isPromoShown && !exemptPromo) {
+            dispatch(updateIsPromoShown())
 
         } else {
             return false
@@ -252,7 +252,7 @@ const CloseHandler = forwardRef((props, ref) => {
 
     useEffect(() => {
         if (isPromoShown) {
-            closeJustTopmost({ exemptMarketing: true })
+            closeJustTopmost({ exemptPromo: true })
             closeMainSections({ exemptAnnotation: true })
         }
     }, [isPromoShown])

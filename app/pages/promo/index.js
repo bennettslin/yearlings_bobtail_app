@@ -1,2 +1,2 @@
-import getMarketingPageComponent from '../../pageHocs/Marketing'
-export default getMarketingPageComponent()
+import getPromoPageComponent from '../../pageHocs/Promo'
+export default getPromoPageComponent()

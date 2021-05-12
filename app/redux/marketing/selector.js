@@ -1,9 +1,9 @@
-import { MARKETING_STORE } from '../../constants/store'
+import { PROMO_STORE } from '../../constants/store'
 
 export const mapArtupSlideIndex = (
-    { [MARKETING_STORE]: { artupSlideIndex } },
+    { [PROMO_STORE]: { artupSlideIndex } },
 ) => artupSlideIndex
 
 export const mapSelectedPromoPath = (
-    { [MARKETING_STORE]: { selectedPromoPath } },
+    { [PROMO_STORE]: { selectedPromoPath } },
 ) => selectedPromoPath

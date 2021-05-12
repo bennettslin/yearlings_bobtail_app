@@ -9,8 +9,8 @@ import {
     toggleIsAboutShown,
     updateIsAboutShown,
     updateIsAutoScroll,
-    toggleIsMarketingShown,
-    updateIsMarketingShown,
+    toggleIsPromoShown,
+    updateIsPromoShown,
     updateIsAudioOptionsExpanded,
 } from '../../../redux/toggle/action'
 import {
@@ -168,7 +168,7 @@ const LetterManager = forwardRef((props, ref) => {
                 keyWasRegistered = true
                 break
             case ROOT_HOME_KEY:
-                dispatch(toggleIsMarketingShown())
+                dispatch(toggleIsPromoShown())
                 keyWasRegistered = true
                 break
             default:
@@ -197,7 +197,7 @@ const LetterManager = forwardRef((props, ref) => {
 
         // Close pitch popup.
         } else if (isPromoShown) {
-            dispatch(updateIsMarketingShown())
+            dispatch(updateIsPromoShown())
 
         // Close wiki popup.
         } else if (isWikiShown) {

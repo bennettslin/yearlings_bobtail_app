@@ -1,14 +1,14 @@
 import React from 'react'
-import MarketingView from '../../Marketing/View'
+import PromoView from '../../Promo/View'
 
 const OnesheetPromo = () => (
-    <MarketingView
+    <PromoView
         {...{
             title: 'Onesheet',
         }}
     >
         Onesheet test
-    </MarketingView>
+    </PromoView>
 )
 
 export default OnesheetPromo

@@ -1,4 +1,4 @@
-# Marketing work!
+# Promo work!
 
 # Resources
 * https://www.icareifyoulisten.com/2013/10/10-things-to-consider-when-youre-submitting-an-album-for-review/

@@ -12,7 +12,7 @@ import { getCeilingFloorHeight } from './theatre'
 export const getViewportStore = ({
     windowHeight,
     windowWidth,
-    isMarketingPage,
+    isPromoPage,
 }) => {
     const
         deviceWidthIndex = getDeviceWidthIndex(windowWidth),
@@ -56,11 +56,11 @@ export const getViewportStore = ({
         })
 
     return {
-        // Marketing page just returns device width index.
+        // Promo page just returns device width index.
         deviceWidthIndex,
 
-        // TODO: Don't bother to calculate if marketing page.
-        ...!isMarketingPage && {
+        // TODO: Don't bother to calculate if promo page.
+        ...!isPromoPage && {
             windowWidth,
             windowHeight,
             isHeightlessLyric,

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import { useSelector } from 'react-redux'
-import MarketingUrlManager from './Marketing'
+import PromoUrlManager from './Promo'
 import {
     mapLyricSongIndex,
     mapLyricVerseIndex,
@@ -11,7 +11,7 @@ import { navigateToAlbumPage } from '../../helpers/navigate'
 
 const UrlManager = () => {
     const
-        navigateToMarketingPage = useRef(),
+        navigateToPromoPage = useRef(),
         lyricSongIndex = useSelector(mapLyricSongIndex),
         lyricVerseIndex = useSelector(mapLyricVerseIndex),
         lyricAnnotationIndex = useSelector(mapLyricAnnotationIndex),
@@ -40,7 +40,7 @@ const UrlManager = () => {
                 lyricAnnotationIndex,
             )
         } else {
-            navigateToMarketingPage.current()
+            navigateToPromoPage.current()
         }
     }, [
         lyricSongIndex,
@@ -50,9 +50,9 @@ const UrlManager = () => {
     ])
 
     return (
-        <MarketingUrlManager
+        <PromoUrlManager
             {...{
-                ref: navigateToMarketingPage,
+                ref: navigateToPromoPage,
                 verifyBeforeNavigation,
             }}
         />

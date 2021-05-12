@@ -5,12 +5,12 @@ import { getViewportStore } from '../../helpers/resize/store'
 export const getViewportReducer = ({
     windowHeight,
     windowWidth,
-    isMarketingPage,
+    isPromoPage,
 }) => (
     state = getViewportStore({
         windowHeight,
         windowWidth,
-        isMarketingPage,
+        isPromoPage,
     }),
     { type, payload },
 ) => {

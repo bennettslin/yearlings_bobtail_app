@@ -9,8 +9,8 @@ export const getShowLoadingContainer = pathname => (
 
 export const getIsAlbumClientSession = () => (
     /**
-     * This gets called to determine whether navigation to the marketing path
-     * started from the album or a marketing page.
+     * This gets called to determine whether navigation to the promo path
+     * started from the album or a promo page.
      */
     !getIsServerSide() &&
 

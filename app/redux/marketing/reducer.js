@@ -1,19 +1,19 @@
-// Reducers for marketing pages.
-import { MARKETING_STORE } from '../../constants/store'
-import { getMarketingDefaults } from './default'
+// Reducers for promo pages.
+import { PROMO_STORE } from '../../constants/store'
+import { getPromoDefaults } from './default'
 
-export const getMarketingReducer = ({
+export const getPromoReducer = ({
     initialArtupIndex,
     initialPromoPage,
 }) => (
-    state = getMarketingDefaults({
+    state = getPromoDefaults({
         initialArtupIndex,
         initialPromoPage,
     }),
     { type, payload },
 ) => {
     switch (type) {
-        case MARKETING_STORE:
+        case PROMO_STORE:
             return {
                 ...state,
                 ...payload,

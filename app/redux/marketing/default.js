@@ -1,4 +1,4 @@
-export const getMarketingDefaults = ({
+export const getPromoDefaults = ({
     initialArtupIndex,
     initialPromoPage = '',
 }) => ({

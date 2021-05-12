@@ -1,6 +1,6 @@
 import React from 'react'
 import cx from 'classnames'
-import RootButton from '../../Marketing/RootButton'
+import RootButton from '../../Promo/RootButton'
 import './style'
 
 const NotFoundHeader = () => (

@@ -1,7 +1,7 @@
-import getMarketingPageComponent from '../../../pageHocs/Marketing'
+import getPromoPageComponent from '../../../pageHocs/Promo'
 import { ARTUP_SUBPATH } from '../../../constants/routing'
 
-export default getMarketingPageComponent({
+export default getPromoPageComponent({
     pageArtupIndex: 4,
     pagePromoPath: ARTUP_SUBPATH,
 })

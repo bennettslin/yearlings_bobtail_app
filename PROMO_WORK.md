@@ -5,12 +5,12 @@
 * Create promo page
 * Redo PromoAnchor
 
-* Rename all marketing to promo
+* Rename all promo to promo
 * Rename promo to homepage
 
-* Key up for promo homepage from marketing child
+* Key up for promo homepage from promo child
 * Need to reset scroll upon promo path change?
-* Smart quotes in marketing material
+* Smart quotes in promo material
 
 # Bonus
 * Copy to clipboard functionality
@@ -21,8 +21,8 @@
 
 * Onesheet add-ons
     * Selects song when in album
-    * Opens song in new tab when in marketing container
+    * Opens song in new tab when in promo container
 
-* Bottom of marketing content has no minimum margin in low height screens. (Maybe don't bother to fix.)
+* Bottom of promo content has no minimum margin in low height screens. (Maybe don't bother to fix.)
 
 * Store promo page in local storage

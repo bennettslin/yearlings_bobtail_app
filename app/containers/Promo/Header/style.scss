@@ -1,0 +1,9 @@
+@import '../../../scss/constants/promo';
+
+.PromoHeader {
+    width: 100%;
+    height: $height__promoHeader;
+
+    display: flex;
+    align-items: center;
+}

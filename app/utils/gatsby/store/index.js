@@ -5,7 +5,7 @@ import { getParsedLocation } from '../path'
 import { getIsServerSide, getWindow } from '../../browser'
 import {
     getAlbumReducers,
-    getMarketingReducers,
+    getPromoReducers,
 } from '../../../redux'
 import { getIsAlbumPage } from '../album'
 import { getIsAdminPageWithStore } from '../admin'
@@ -34,7 +34,7 @@ const _getReducersIfNeeded = ({
         getIsPromoPage(pathname) ||
         getIsNotFoundPage(pathname)
     ) {
-        return getMarketingReducers({
+        return getPromoReducers({
             windowHeight,
             windowWidth,
             pathname,

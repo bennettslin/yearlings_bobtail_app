@@ -20,7 +20,7 @@ export const getAccessDefaults = initialAnnotationIndex => ({
     accessedWikiWormholeIndex: 0,
 })
 
-export const ACCESS_MARKETING_PAGE_DEFAULTS = {
+export const ACCESS_PROMO_PAGE_DEFAULTS = {
     isAccessOn: IS_STORED_ACCESS_ON,
 }
 

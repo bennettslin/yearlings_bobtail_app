@@ -27,12 +27,12 @@ export const updateIsAudioOptionsExpanded = (
     payload: { isAudioOptionsExpanded },
 })
 
-export const toggleIsMarketingShown = () => ({
+export const toggleIsPromoShown = () => ({
     type: TOGGLE_STORE,
     payload: { toggledIsPromoShown: true },
 })
 
-export const updateIsMarketingShown = (isPromoShown = false) => ({
+export const updateIsPromoShown = (isPromoShown = false) => ({
     type: TOGGLE_STORE,
     payload: { isPromoShown },
 })

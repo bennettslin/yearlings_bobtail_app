@@ -1,4 +1,4 @@
-import getMarketingPageComponent from '../../../pageHocs/Marketing'
+import getPromoPageComponent from '../../../pageHocs/Promo'
 import { ONESHEET_SUBPATH } from '../../../constants/routing'
 
-export default getMarketingPageComponent({ pagePromoPath: ONESHEET_SUBPATH })
+export default getPromoPageComponent({ pagePromoPath: ONESHEET_SUBPATH })

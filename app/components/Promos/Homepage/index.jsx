@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import Anchor from '../../Anchor'
-import MarketingView from '../../Marketing/View'
+import PromoView from '../../Promo/View'
 import { setSelectedPromoPath } from '../../../redux/marketing/action'
 import { ARTUP_SUBPATH, ONESHEET_SUBPATH } from '../../../constants/routing'
 
@@ -17,7 +17,7 @@ const HomepagePromo = () => {
     }
 
     return (
-        <MarketingView
+        <PromoView
             {...{
                 title: 'Promo Homepage',
             }}
@@ -36,7 +36,7 @@ const HomepagePromo = () => {
                     handleAnchorClick: handleArtupClick,
                 }}
             />
-        </MarketingView>
+        </PromoView>
     )
 }
 

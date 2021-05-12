@@ -1,0 +1,25 @@
+@import '../../../../scss/constants/colour';
+@import '../../../../scss/constants/icon';
+
+.PromoContent {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    & > :not(:last-child) {
+        margin-bottom: $margin__thick * 3;
+    }
+}
+
+.PromoContent__body {
+    & > :not(:last-child) {
+        margin-bottom: $margin__thick * 2;
+    }
+}
+
+.PromoContent__footnote {
+    font-size: 0.66em;
+}

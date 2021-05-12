@@ -10,16 +10,16 @@ import {
 import {
     ACCESS_NAV_DEFAULTS,
     ACCESS_DOT_DEFAULTS,
-    ACCESS_MARKETING_PAGE_DEFAULTS,
+    ACCESS_PROMO_PAGE_DEFAULTS,
     getAccessDefaults,
 } from './default'
 
 export const getAccessReducer = ({
     initialAnnotationIndex,
-    isMarketingPage,
+    isPromoPage,
 }) => (
-    isMarketingPage ? (
-        state = ACCESS_MARKETING_PAGE_DEFAULTS,
+    isPromoPage ? (
+        state = ACCESS_PROMO_PAGE_DEFAULTS,
         { type, payload },
     ) => {
         switch (type) {
