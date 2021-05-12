@@ -1,6 +1,6 @@
 import { createStore } from 'redux'
 import { devToolsEnhancer } from 'redux-devtools-extension'
-import { getIsPromoPage } from '../marketing'
+import { getIsPromoPage } from '../promo'
 import { getParsedLocation } from '../path'
 import { getIsServerSide, getWindow } from '../../browser'
 import {

@@ -5,7 +5,7 @@ import {
     getIsArtupPage,
     getIsOnesheetPage,
     getIsPromoHomepage,
-} from '../../../helpers/marketing'
+} from '../../../helpers/promo'
 import getPromoServerClientHoc from '../../../hocs/PromoHoc'
 import HomepagePromo from '../../Promos/Homepage'
 import OnesheetPromo from '../../Promos/Onesheet'

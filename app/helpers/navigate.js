@@ -3,7 +3,7 @@ import { navigate } from 'gatsby'
 import { getPathForSong } from '../api/album/songs'
 import { getPathForArtupSlide } from '../api/artup/slides'
 import { getWindow } from '../utils/browser'
-import { getArtupFullPath } from '../utils/gatsby/marketing'
+import { getArtupFullPath } from '../utils/gatsby/promo'
 import {
     ANNOTATION_QUERY_FIELD,
     VERSE_QUERY_FIELD,

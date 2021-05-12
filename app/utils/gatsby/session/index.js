@@ -1,7 +1,7 @@
 import { getDocument, getIsServerSide } from '../../browser'
 import { getIsAdminPage } from '../admin'
 import { getIsAlbumPage } from '../album'
-import { getIsPromoPage } from '../marketing'
+import { getIsPromoPage } from '../promo'
 
 export const getShowLoadingContainer = pathname => (
     getIsAlbumPage(pathname) || getIsPromoPage(pathname)

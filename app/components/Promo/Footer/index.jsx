@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { getIsArtupPage, getIsPromoHomepage } from '../../../helpers/marketing'
+import { getIsArtupPage, getIsPromoHomepage } from '../../../helpers/promo'
 import getPromoServerClientHoc from '../../../hocs/PromoHoc'
 import ArtupPagination from '../../Promos/Artup/Pagination'
 import HomepageButton from './HomepageButton'

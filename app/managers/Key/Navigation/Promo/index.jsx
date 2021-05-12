@@ -1,12 +1,12 @@
 import React, { forwardRef, useImperativeHandle, useRef } from 'react'
 import { useSelector } from 'react-redux'
 import ArtupDispatcher from '../../../../dispatchers/Artup'
-import { mapSelectedPromoPath } from '../../../../redux/marketing/selector'
+import { mapSelectedPromoPath } from '../../../../redux/promo/selector'
 import {
     ARROW_LEFT,
     ARROW_RIGHT,
 } from '../../../../constants/access'
-import { getIsArtupPage } from '../../../../helpers/marketing'
+import { getIsArtupPage } from '../../../../helpers/promo'
 
 const PromoNavigation = forwardRef((props, ref) => {
     const

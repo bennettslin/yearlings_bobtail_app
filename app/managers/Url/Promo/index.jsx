@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 import {
     mapArtupSlideIndex,
     mapSelectedPromoPath,
-} from '../../../redux/marketing/selector'
+} from '../../../redux/promo/selector'
 import {
     navigateToArtupPage,
     navigateToPathname,
@@ -13,8 +13,8 @@ import {
     getIsArtupPage,
     getIsOnesheetPage,
     getIsPromoHomepage,
-} from '../../../helpers/marketing'
-import { getOnesheetFullPath } from '../../../utils/gatsby/marketing'
+} from '../../../helpers/promo'
+import { getOnesheetFullPath } from '../../../utils/gatsby/promo'
 import { PROMO_PATH } from '../../../constants/routing'
 
 const PromoUrlManager = forwardRef(({ verifyBeforeNavigation }, ref) => {

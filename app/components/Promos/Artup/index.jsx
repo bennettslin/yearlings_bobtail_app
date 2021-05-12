@@ -12,7 +12,7 @@ import {
     getShowContactEmailForArtupSlide,
 } from '../../../api/artup/slides'
 import getPromoServerClientHoc from '../../../hocs/PromoHoc'
-import { mapArtupSlideIndex } from '../../../redux/marketing/selector'
+import { mapArtupSlideIndex } from '../../../redux/promo/selector'
 
 const ArtupPromo = ({ serverClientArtupIndex, handlePitchPageChange }) => {
     const artupSlideIndex = useSelector(mapArtupSlideIndex)

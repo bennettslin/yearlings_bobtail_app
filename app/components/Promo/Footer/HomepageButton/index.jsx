@@ -3,7 +3,7 @@ import cx from 'classnames'
 import { useDispatch, useSelector } from 'react-redux'
 import Button from '../../../Button'
 import { mapIsPhoneWidth } from '../../../../redux/device/selector'
-import { setSelectedPromoPath } from '../../../../redux/marketing/action'
+import { setSelectedPromoPath } from '../../../../redux/promo/action'
 import { PROMO_PAGE_BUTTON_KEY } from '../../../../constants/buttons'
 
 const HomepageButton = () => {

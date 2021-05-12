@@ -5,7 +5,7 @@ import PagePromoPathContext from '../../contexts/PagePromoPath'
 import {
     mapArtupSlideIndex,
     mapSelectedPromoPath,
-} from '../../redux/marketing/selector'
+} from '../../redux/promo/selector'
 import { getIsServerSide } from '../../utils/browser'
 
 const getPromoServerClientHoc = ServerClientComponent => (

@@ -2,7 +2,7 @@ import React from 'react'
 import { useDispatch } from 'react-redux'
 import Anchor from '../../Anchor'
 import PromoView from '../../Promo/View'
-import { setSelectedPromoPath } from '../../../redux/marketing/action'
+import { setSelectedPromoPath } from '../../../redux/promo/action'
 import { ARTUP_SUBPATH, ONESHEET_SUBPATH } from '../../../constants/routing'
 
 const HomepagePromo = () => {

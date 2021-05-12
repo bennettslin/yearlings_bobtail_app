@@ -1,8 +1,8 @@
 import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getArtupSlidesCount } from '../../api/artup/slides'
-import { setArtupSlideIndex } from '../../redux/marketing/action'
-import { mapArtupSlideIndex } from '../../redux/marketing/selector'
+import { setArtupSlideIndex } from '../../redux/promo/action'
+import { mapArtupSlideIndex } from '../../redux/promo/selector'
 
 const ArtupDispatcher = forwardRef((props, ref) => {
     const
