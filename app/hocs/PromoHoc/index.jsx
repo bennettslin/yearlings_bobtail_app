@@ -19,13 +19,13 @@ const getPromoServerClientHoc = ServerClientComponent => (
             pageArtupIndex = useContext(PageArtupIndexContext),
             pagePromoPath = useContext(PagePromoPathContext),
             artupSlideIndex = useSelector(mapArtupSlideIndex),
-            selectedPromoPath = useSelector(mapSelectedPromoPath),
+            selectedPromoPage = useSelector(mapSelectedPromoPath),
             serverClientArtupIndex = getIsServerSide() ?
                 pageArtupIndex :
                 artupSlideIndex,
             serverClientPromoPath = getIsServerSide() ?
                 pagePromoPath :
-                selectedPromoPath
+                selectedPromoPage
 
         return (
             <ServerClientComponent

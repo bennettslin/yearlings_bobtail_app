@@ -20,7 +20,7 @@ import {
     SELECTED_VERSE_INDEX,
     SELECTED_ANNOTATION_INDEX,
     VOLUME_INDEX,
-    SELECTED_PROMO_PATH,
+    SELECTED_PROMO_PAGE,
 } from '../../constants/store'
 
 export const getWindowStorage = () => {
@@ -125,6 +125,6 @@ export const getStoredArtupIndex = () => (
 
 export const getStoredPromoPath = () => {
     // TODO: Get stored.
-    const storedPromoPath = getWindowStorage()[SELECTED_PROMO_PATH]
+    const storedPromoPath = getWindowStorage()[SELECTED_PROMO_PAGE]
     return storedPromoPath
 }

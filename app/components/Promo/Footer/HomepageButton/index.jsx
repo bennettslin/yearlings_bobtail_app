@@ -3,7 +3,7 @@ import cx from 'classnames'
 import { useDispatch, useSelector } from 'react-redux'
 import Button from '../../../Button'
 import { mapIsPhoneWidth } from '../../../../redux/device/selector'
-import { setSelectedPromoPath } from '../../../../redux/promo/action'
+import { setSelectedPromoPage } from '../../../../redux/promo/action'
 import { PROMO_PAGE_BUTTON_KEY } from '../../../../constants/buttons'
 
 const HomepageButton = () => {
@@ -12,7 +12,7 @@ const HomepageButton = () => {
         isPhoneWidth = useSelector(mapIsPhoneWidth)
 
     const handleButtonClick = () => {
-        dispatch(setSelectedPromoPath())
+        dispatch(setSelectedPromoPage())
     }
 
     return (

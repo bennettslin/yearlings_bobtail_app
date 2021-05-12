@@ -5,5 +5,5 @@ export const mapArtupSlideIndex = (
 ) => artupSlideIndex
 
 export const mapSelectedPromoPath = (
-    { [PROMO_STORE]: { selectedPromoPath } },
-) => selectedPromoPath
+    { [PROMO_STORE]: { selectedPromoPage } },
+) => selectedPromoPage

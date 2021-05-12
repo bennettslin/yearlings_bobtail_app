@@ -11,10 +11,10 @@ import { getIsArtupPage } from '../../../../helpers/promo'
 const PromoNavigation = forwardRef((props, ref) => {
     const
         dispatchArtup = useRef(),
-        selectedPromoPath = useSelector(mapSelectedPromoPath)
+        selectedPromoPage = useSelector(mapSelectedPromoPath)
 
     const getDispatcher = () => {
-        if (getIsArtupPage(selectedPromoPath)) {
+        if (getIsArtupPage(selectedPromoPage)) {
             return dispatchArtup
         }
     }

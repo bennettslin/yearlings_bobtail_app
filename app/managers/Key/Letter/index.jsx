@@ -48,7 +48,7 @@ import {
     NEXT_SCENE_KEY,
     TIPS_TOGGLE_KEY,
     ABOUT_TOGGLE_KEY,
-    ROOT_HOME_KEY,
+    PROMO_TOGGLE_KEY,
     SPACE,
     META_ARROW_UP,
     META_ARROW_DOWN,
@@ -167,7 +167,7 @@ const LetterManager = forwardRef((props, ref) => {
                 dispatch(toggleIsAboutShown())
                 keyWasRegistered = true
                 break
-            case ROOT_HOME_KEY:
+            case PROMO_TOGGLE_KEY:
                 dispatch(toggleIsPromoShown())
                 keyWasRegistered = true
                 break

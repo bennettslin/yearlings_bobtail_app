@@ -1,5 +1,6 @@
 # Promo work
 * Make pagination placeholder same as pagination button to avoid jumpiness.
+* Figure out best name for promoPage/promoPath, and rename all of them
 
 * Create onesheet page
 * Create promo page

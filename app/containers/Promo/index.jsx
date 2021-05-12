@@ -12,7 +12,7 @@ import { reloadFromRoot } from '../../helpers/navigate'
 import { updateAccessStore } from '../../redux/access/action'
 import { mapSelectedPromoPath } from '../../redux/promo/selector'
 import { getIsServerSide } from '../../utils/browser'
-import { ESCAPE, ROOT_HOME_KEY } from '../../constants/access'
+import { ESCAPE, PROMO_TOGGLE_KEY } from '../../constants/access'
 import DeviceWrapper from '../../wrappers/DeviceWrapper'
 import AccessWrapper from '../../wrappers/AccessWrapper'
 import ResizeManager from '../../managers/Resize'
@@ -26,7 +26,7 @@ const PromoContainer = ({ children }) => {
         promoContainerElement = useRef(),
         promoScrollElement = useRef(),
         navigatePromo = useRef(),
-        selectedPromoPath = useSelector(mapSelectedPromoPath)
+        selectedPromoPage = useSelector(mapSelectedPromoPath)
 
     const getResizeContainerElement = () => promoContainerElement.current
 
@@ -52,7 +52,7 @@ const PromoContainer = ({ children }) => {
         navigatePromo.current(keyName)
 
         // Handle return home to album.
-        if (keyName === ROOT_HOME_KEY) {
+        if (keyName === PROMO_TOGGLE_KEY) {
             reloadFromRoot()
         }
 
@@ -100,7 +100,7 @@ const PromoContainer = ({ children }) => {
                 >
                     <Helmet>
                         <title>
-                            {getHelmetTitleForPromoPath(selectedPromoPath)}
+                            {getHelmetTitleForPromoPath(selectedPromoPage)}
                         </title>
                         <meta
                             {...{

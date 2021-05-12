@@ -20,14 +20,14 @@ import { PROMO_PATH } from '../../../constants/routing'
 const PromoUrlManager = forwardRef(({ verifyBeforeNavigation }, ref) => {
     const
         artupSlideIndex = useSelector(mapArtupSlideIndex),
-        selectedPromoPath = useSelector(mapSelectedPromoPath)
+        selectedPromoPage = useSelector(mapSelectedPromoPath)
 
     const navigateToPromoPage = () => {
-        if (getIsPromoHomepage(selectedPromoPath)) {
+        if (getIsPromoHomepage(selectedPromoPage)) {
             navigateToPathname(PROMO_PATH)
-        } else if (getIsOnesheetPage(selectedPromoPath)) {
+        } else if (getIsOnesheetPage(selectedPromoPage)) {
             navigateToPathname(getOnesheetFullPath())
-        } else if (getIsArtupPage(selectedPromoPath)) {
+        } else if (getIsArtupPage(selectedPromoPage)) {
             navigateToArtupPage(artupSlideIndex)
         }
     }
@@ -41,7 +41,7 @@ const PromoUrlManager = forwardRef(({ verifyBeforeNavigation }, ref) => {
         } else {
             navigateToPromoPage()
         }
-    }, [artupSlideIndex, selectedPromoPath])
+    }, [artupSlideIndex, selectedPromoPage])
 
     useImperativeHandle(ref, () => navigateToPromoPage)
 
