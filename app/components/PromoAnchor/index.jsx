@@ -13,10 +13,10 @@ const PromoAnchor = () => {
 
     return (
         <div {...{ className: 'PromoAnchor' }}>
-            {`Interested in working with us? Read `}
+            {`Interested in working with us? Visit our `}
             <Anchor
                 {...{
-                    text: 'our pitch!',
+                    text: 'promo homepage!',
                     analyticsLabel: 'marketing',
                     handleAnchorClick,
                 }}

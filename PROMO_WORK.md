@@ -1,4 +1,10 @@
 # Promo work
+* Rename to promo homepage everywhere
+* Key up for promo homepage from marketing child
+* Have marketings render single marketing view
+    * Have single index file for each marketing
+    * titles, pagination, and so forth are passed as props
+
 * Refine pagination component
     * Placeholder ellipsis button characters
     * Rearrange arrows to outside

@@ -83,6 +83,7 @@ const Pagination = ({
             }).map(index => (
                 <PaginationButton
                     {...{
+                        key: index,
                         pitchSlideIndex: index,
                         isSelected: selectedPitchIndex === index,
                         handleButtonClick,
