@@ -11,10 +11,10 @@ import {
     getTitleForArtupSlide,
     getShowContactEmailForArtupSlide,
 } from '../../../api/artup/slides'
-import getMarketingServerClientHoc from '../../../hocs/MarketingHoc'
+import getPromoServerClientHoc from '../../../hocs/PromoHoc'
 import { mapArtupSlideIndex } from '../../../redux/marketing/selector'
 
-const ArtupMarketing = ({ serverClientArtupIndex, handlePitchPageChange }) => {
+const ArtupPromo = ({ serverClientArtupIndex, handlePitchPageChange }) => {
     const artupSlideIndex = useSelector(mapArtupSlideIndex)
 
     useEffect(() => {
@@ -42,9 +42,9 @@ const ArtupMarketing = ({ serverClientArtupIndex, handlePitchPageChange }) => {
     )
 }
 
-ArtupMarketing.propTypes = {
+ArtupPromo.propTypes = {
     serverClientArtupIndex: PropTypes.number.isRequired,
     handlePitchPageChange: PropTypes.func.isRequired,
 }
 
-export default getMarketingServerClientHoc(ArtupMarketing)
+export default getPromoServerClientHoc(ArtupPromo)

@@ -1,7 +1,7 @@
 import React from 'react'
 import MarketingView from '../../Marketing/View'
 
-const OnesheetMarketing = () => (
+const OnesheetPromo = () => (
     <MarketingView
         {...{
             title: 'Onesheet',
@@ -11,4 +11,4 @@ const OnesheetMarketing = () => (
     </MarketingView>
 )
 
-export default OnesheetMarketing
+export default OnesheetPromo

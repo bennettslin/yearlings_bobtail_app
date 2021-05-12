@@ -5,7 +5,7 @@ import MarketingView from '../../Marketing/View'
 import { setSelectedPromoPath } from '../../../redux/marketing/action'
 import { ARTUP_SUBPATH, ONESHEET_SUBPATH } from '../../../constants/routing'
 
-const PromoMarketing = () => {
+const HomepagePromo = () => {
     const dispatch = useDispatch()
 
     const handleOnesheetClick = () => {
@@ -40,4 +40,4 @@ const PromoMarketing = () => {
     )
 }
 
-export default PromoMarketing
+export default HomepagePromo

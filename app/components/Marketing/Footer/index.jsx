@@ -3,12 +3,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { getIsArtupPage, getIsPromoHomepage } from '../../../helpers/marketing'
-import getMarketingServerClientHoc from '../../../hocs/MarketingHoc'
-import ArtupPagination from '../../Marketings/Artup/Pagination'
+import getPromoServerClientHoc from '../../../hocs/PromoHoc'
+import ArtupPagination from '../../Promos/Artup/Pagination'
 import HomepageButton from './HomepageButton'
 import './style'
 
-const MarketingFooter = ({ serverClientPromoPath }) => {
+const PromoFooter = ({ serverClientPromoPath }) => {
     // Promo homepage doesn't need footer.
     if (getIsPromoHomepage(serverClientPromoPath)) {
         return null
@@ -18,7 +18,7 @@ const MarketingFooter = ({ serverClientPromoPath }) => {
         <div
             {...{
                 className: cx(
-                    'MarketingFooter',
+                    'PromoFooter',
                     'promo__child',
                     'fCC',
                 ),
@@ -32,8 +32,8 @@ const MarketingFooter = ({ serverClientPromoPath }) => {
     )
 }
 
-MarketingFooter.propTypes = {
+PromoFooter.propTypes = {
     serverClientPromoPath: PropTypes.string.isRequired,
 }
 
-export default getMarketingServerClientHoc(MarketingFooter)
+export default getPromoServerClientHoc(PromoFooter)

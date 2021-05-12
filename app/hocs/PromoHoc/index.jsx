@@ -8,7 +8,7 @@ import {
 } from '../../redux/marketing/selector'
 import { getIsServerSide } from '../../utils/browser'
 
-const getMarketingServerClientHoc = ServerClientComponent => (
+const getPromoServerClientHoc = ServerClientComponent => (
     /**
      * This hoc passes to its child component either the page values that are
      * relevant only on the server side, or the selected values that are
@@ -40,4 +40,4 @@ const getMarketingServerClientHoc = ServerClientComponent => (
     })
 )
 
-export default getMarketingServerClientHoc
+export default getPromoServerClientHoc

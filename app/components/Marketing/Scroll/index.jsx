@@ -6,13 +6,13 @@ import {
     getIsOnesheetPage,
     getIsPromoHomepage,
 } from '../../../helpers/marketing'
-import getMarketingServerClientHoc from '../../../hocs/MarketingHoc'
-import PromoMarketing from '../../Marketings/Promo'
-import OnesheetMarketing from '../../Marketings/Onesheet'
-import ArtupMarketing from '../../Marketings/Artup'
+import getPromoServerClientHoc from '../../../hocs/PromoHoc'
+import HomepagePromo from '../../Promos/Homepage'
+import OnesheetPromo from '../../Promos/Onesheet'
+import ArtupPromo from '../../Promos/Artup'
 import './style'
 
-const MarketingScroll = forwardRef(({
+const PromoScroll = forwardRef(({
     serverClientPromoPath,
     handlePageChange = () => {},
 
@@ -29,7 +29,7 @@ const MarketingScroll = forwardRef(({
         <div
             {...{
                 className: cx(
-                    'MarketingScroll',
+                    'PromoScroll',
                     'promo__child',
                     'fCC',
                 ),
@@ -39,7 +39,7 @@ const MarketingScroll = forwardRef(({
                 {...{
                     className: cx(
                         // Box shadow and gradient mask can't be on same element.
-                        'MarketingScroll__child',
+                        'PromoScroll__child',
                         'abF',
                         'ovH', // Rounds scrollbar.
                     ),
@@ -49,7 +49,7 @@ const MarketingScroll = forwardRef(({
                     {...{
                         ref,
                         className: cx(
-                            'MarketingScroll__grandchild',
+                            'PromoScroll__grandchild',
                             'gradientMask__scrollBottom',
                             'foN',
                         ),
@@ -57,13 +57,13 @@ const MarketingScroll = forwardRef(({
                     }}
                 >
                     {getIsPromoHomepage(serverClientPromoPath) && (
-                        <PromoMarketing {...{ handlePitchPageChange }} />
+                        <HomepagePromo {...{ handlePitchPageChange }} />
                     )}
                     {getIsOnesheetPage(serverClientPromoPath) && (
-                        <OnesheetMarketing {...{ handlePitchPageChange }} />
+                        <OnesheetPromo {...{ handlePitchPageChange }} />
                     )}
                     {getIsArtupPage(serverClientPromoPath) && (
-                        <ArtupMarketing {...{ handlePitchPageChange }} />
+                        <ArtupPromo {...{ handlePitchPageChange }} />
                     )}
                 </div>
             </div>
@@ -71,9 +71,9 @@ const MarketingScroll = forwardRef(({
     )
 })
 
-MarketingScroll.propTypes = {
+PromoScroll.propTypes = {
     serverClientPromoPath: PropTypes.string.isRequired,
     handlePageChange: PropTypes.func,
 }
 
-export default getMarketingServerClientHoc(MarketingScroll)
+export default getPromoServerClientHoc(PromoScroll)

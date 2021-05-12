@@ -6,7 +6,7 @@ import { mapIsPhoneWidth } from '../../../../redux/device/selector'
 import { setSelectedPromoPath } from '../../../../redux/marketing/action'
 import { PROMO_PAGE_BUTTON_KEY } from '../../../../constants/buttons'
 
-const PromoPageButton = () => {
+const HomepageButton = () => {
     const
         dispatch = useDispatch(),
         isPhoneWidth = useSelector(mapIsPhoneWidth)
@@ -33,4 +33,4 @@ const PromoPageButton = () => {
     )
 }
 
-export default PromoPageButton
+export default HomepageButton
