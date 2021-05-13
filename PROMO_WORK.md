@@ -5,7 +5,6 @@
 * Create promo page
 * Redo PromoAnchor
 
-* Key up for promo homepage from promo child
 * Need to reset scroll upon promo path change?
 * Smart quotes in promo material
 

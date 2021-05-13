@@ -79,9 +79,11 @@ const Button = ({
                     isPopupButton && 'Button__popup',
                     isCustomSize && `Button__${buttonName}Size`,
                     isAccessEnter && showIfAccessOn && 'Button__accessed',
-                    accessKey && `${CHILD_ACCESS_PREFIX}${accessKey}`,
+                    !isDisabled && !isSelectedDisabled && [
+                        accessKey && `${CHILD_ACCESS_PREFIX}${accessKey}`,
+                        'Button__enabled',
+                    ],
                     {
-                        'Button__enabled': !isDisabled && !isSelectedDisabled,
                         'Button__selectDisabled': isSelectedDisabled,
                         'Button__defaultSize':
                             !isLargeSize && !isSmallSize && !isCustomSize,
