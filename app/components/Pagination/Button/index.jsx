@@ -8,6 +8,7 @@ const PaginationButton = ({
     isLargeSize,
     isSmallSize,
     isSelected,
+    isEllipsisPlaceholder,
     handleButtonClick,
 }) => {
     const _handleButtonClick = () => {
@@ -16,14 +17,21 @@ const PaginationButton = ({
 
     return (
         <Button
-            hasCharacterShadowLight
             {...{
                 isLargeSize,
                 isSmallSize,
                 buttonName: PAGINATION_SLIDE_BUTTON_KEY,
-                isSelectedDisabled: isSelected,
                 handleButtonClick: _handleButtonClick,
-                buttonCharacter: pitchSlideIndex,
+
+                ...isEllipsisPlaceholder ? {
+                    buttonCharacter: '…',
+                    isPlaceholderCharacter: true,
+                    isDisabled: true,
+                } : {
+                    buttonCharacter: pitchSlideIndex,
+                    isSelectedDisabled: isSelected,
+                    hasCharacterShadowLight: true,
+                },
             }}
         />
     )
@@ -34,6 +42,7 @@ PaginationButton.propTypes = {
     isLargeSize: PropTypes.bool.isRequired,
     isSmallSize: PropTypes.bool.isRequired,
     isSelected: PropTypes.bool.isRequired,
+    isEllipsisPlaceholder: PropTypes.bool,
     handleButtonClick: PropTypes.func.isRequired,
 }
 

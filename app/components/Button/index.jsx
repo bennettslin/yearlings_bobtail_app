@@ -28,6 +28,7 @@ const Button = ({
     isDisabled,
     isSelectedDisabled,
     isPopupButton,
+    isPlaceholderCharacter,
     isAccessed,
     isBrightHover,
     buttonIdentifier,
@@ -88,6 +89,7 @@ const Button = ({
                         'Button__largeSize': isLargeSize,
                     },
                     isPulsateAnimated && 'pulsateAnimated',
+                    isPlaceholderCharacter && 'Button__isPlaceholderCharacter',
                     className,
                 ),
                 ...showTooltip && {
@@ -118,7 +120,13 @@ const Button = ({
                     buttonTitle,
                 }}
             >
-                <ButtonIcon {...{ buttonName, buttonIdentifier }} />
+                <ButtonIcon
+                    {...{
+                        buttonName,
+                        buttonIdentifier,
+                        isPlaceholderCharacter,
+                    }}
+                />
                 <ButtonCharacter
                     {...{
                         buttonName,
@@ -156,6 +164,7 @@ Button.propTypes = {
     isLargeSize: PropTypes.bool,
     isDisabled: PropTypes.bool,
     isSelectedDisabled: PropTypes.bool,
+    isPlaceholderCharacter: PropTypes.bool,
     isPopupButton: PropTypes.bool,
     isAccessed: PropTypes.bool,
     isBrightHover: PropTypes.bool,

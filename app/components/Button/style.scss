@@ -65,8 +65,12 @@
     cursor: pointer;
 }
 
-.Button__selectDisabled,
-.Button__enabled {
+.Button__isPlaceholderCharacter {
+    opacity: 0.75;
+}
+
+.Button__enabled,
+.Button__selectDisabled {
     opacity: 1;
 }
 

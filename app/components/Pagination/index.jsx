@@ -83,26 +83,17 @@ const Pagination = ({
                         }}
                     />
                     {/* Second slide or ellipsis placeholder. */}
-                    {selectedPitchIndex <= 4 - increment ? (
-                        <PaginationButton
-                            {...{
-                                pitchSlideIndex: 2,
-                                isLargeSize,
-                                isSmallSize,
-                                isSelected: selectedPitchIndex === 2,
-                                handleButtonClick,
-                            }}
-                        />
-                    ) : (
-                        <Button
-                            isDisabled
-                            {...{
-                                isLargeSize,
-                                isSmallSize,
-                                buttonCharacter: '…',
-                            }}
-                        />
-                    )}
+                    <PaginationButton
+                        {...{
+                            pitchSlideIndex: 2,
+                            isLargeSize,
+                            isSmallSize,
+                            isSelected: selectedPitchIndex === 2,
+                            isEllipsisPlaceholder:
+                                selectedPitchIndex > 4 - increment,
+                            handleButtonClick,
+                        }}
+                    />
                 </>
             )}
             {getMiddlePitchIndices({
@@ -126,26 +117,18 @@ const Pagination = ({
             {!isOnlyIndex && (
                 <>
                     {/* Second to last slide or ellipsis placeholder. */}
-                    {selectedPitchIndex >= pitchSlideCount - 3 + increment ? (
-                        <PaginationButton
-                            {...{
-                                pitchSlideIndex: pitchSlideCount - 1,
-                                isLargeSize,
-                                isSmallSize,
-                                isSelected: selectedPitchIndex === pitchSlideCount - 1,
-                                handleButtonClick,
-                            }}
-                        />
-                    ) : (
-                        <Button
-                            isDisabled
-                            {...{
-                                isLargeSize,
-                                isSmallSize,
-                                buttonCharacter: '…',
-                            }}
-                        />
-                    )}
+                    <PaginationButton
+                        {...{
+                            pitchSlideIndex: pitchSlideCount - 1,
+                            isLargeSize,
+                            isSmallSize,
+                            isSelected:
+                                selectedPitchIndex === pitchSlideCount - 1,
+                            isEllipsisPlaceholder:
+                                selectedPitchIndex < pitchSlideCount - 3 + increment,
+                            handleButtonClick,
+                        }}
+                    />
                     {/* Last slide */}
                     <PaginationButton
                         {...{

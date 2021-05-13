@@ -13,14 +13,19 @@ import './style'
 const ButtonIcon = ({
     buttonName,
     buttonIdentifier,
+    isPlaceholderCharacter,
 
 }) => {
     const buttonIconSvg = getSvgForButton({
-        buttonName,
-        buttonIdentifier,
-    })
+            buttonName,
+            buttonIdentifier,
+        }),
+        doRender =
+            !isPlaceholderCharacter &&
+            getShowButtonIcon(buttonName) &&
+            Boolean(buttonIconSvg)
 
-    return getShowButtonIcon(buttonName) && Boolean(buttonIconSvg) && (
+    return doRender && (
         <InlineSvg
             {...{
                 className: cx(
@@ -50,6 +55,7 @@ const ButtonIcon = ({
 ButtonIcon.propTypes = {
     buttonName: PropTypes.string.isRequired,
     buttonIdentifier: PropTypes.any,
+    isPlaceholderCharacter: PropTypes.any,
 }
 
 export default memo(ButtonIcon)
