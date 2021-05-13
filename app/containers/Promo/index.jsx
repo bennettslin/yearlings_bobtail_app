@@ -10,14 +10,14 @@ import PromoHeader from './Header'
 import { getKeyName } from '../../managers/Key/helper'
 import { reloadFromRoot } from '../../helpers/navigate'
 import { updateAccessStore } from '../../redux/access/action'
-import { mapSelectedPromoPath } from '../../redux/promo/selector'
+import { mapSelectedPromoKey } from '../../redux/promo/selector'
 import { getIsServerSide } from '../../utils/browser'
 import { ESCAPE, PROMO_TOGGLE_KEY } from '../../constants/access'
 import DeviceWrapper from '../../wrappers/DeviceWrapper'
 import AccessWrapper from '../../wrappers/AccessWrapper'
 import ResizeManager from '../../managers/Resize'
 import PromoUrlManager from '../../managers/Url/Promo'
-import { getHelmetTitleForPromoPath } from './helper'
+import { getHelmetTitleForPromoKey } from './helper'
 import './style'
 
 const PromoContainer = ({ children }) => {
@@ -26,7 +26,7 @@ const PromoContainer = ({ children }) => {
         promoContainerElement = useRef(),
         promoScrollElement = useRef(),
         navigatePromo = useRef(),
-        selectedPromoPage = useSelector(mapSelectedPromoPath)
+        selectedPromoKey = useSelector(mapSelectedPromoKey)
 
     const getResizeContainerElement = () => promoContainerElement.current
 
@@ -100,7 +100,7 @@ const PromoContainer = ({ children }) => {
                 >
                     <Helmet>
                         <title>
-                            {getHelmetTitleForPromoPath(selectedPromoPage)}
+                            {getHelmetTitleForPromoKey(selectedPromoKey)}
                         </title>
                         <meta
                             {...{

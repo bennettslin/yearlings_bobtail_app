@@ -3,5 +3,5 @@ export const getPromoDefaults = ({
     initialPromoPage = '',
 }) => ({
     artupSlideIndex: initialArtupIndex,
-    selectedPromoPage: initialPromoPage,
+    selectedPromoKey: initialPromoPage,
 })

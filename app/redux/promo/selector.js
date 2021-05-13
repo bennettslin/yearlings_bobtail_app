@@ -4,6 +4,6 @@ export const mapArtupSlideIndex = (
     { [PROMO_STORE]: { artupSlideIndex } },
 ) => artupSlideIndex
 
-export const mapSelectedPromoPath = (
-    { [PROMO_STORE]: { selectedPromoPage } },
-) => selectedPromoPage
+export const mapSelectedPromoKey = (
+    { [PROMO_STORE]: { selectedPromoKey } },
+) => selectedPromoKey

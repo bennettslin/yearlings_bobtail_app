@@ -4,9 +4,9 @@ import {
     ONESHEET_SUBPATH,
 } from '../../constants/routing'
 
-export const getHelmetTitleForPromoPath = promoPath => {
+export const getHelmetTitleForPromoKey = promoKey => {
     let pageTitle
-    switch (promoPath) {
+    switch (promoKey) {
         case ARTUP_SUBPATH:
             pageTitle = `Artup pitch`
             break

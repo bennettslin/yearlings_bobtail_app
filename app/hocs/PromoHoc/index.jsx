@@ -1,10 +1,10 @@
 import React, { forwardRef, useContext } from 'react'
 import { useSelector } from 'react-redux'
 import PageArtupIndexContext from '../../contexts/PageArtupIndex'
-import PagePromoPathContext from '../../contexts/PagePromoPath'
+import PagePromoKeyContext from '../../contexts/PagePromoKey'
 import {
     mapArtupSlideIndex,
-    mapSelectedPromoPath,
+    mapSelectedPromoKey,
 } from '../../redux/promo/selector'
 import { getIsServerSide } from '../../utils/browser'
 
@@ -17,22 +17,22 @@ const getPromoServerClientHoc = ServerClientComponent => (
     forwardRef((props, ref) => {
         const
             pageArtupIndex = useContext(PageArtupIndexContext),
-            pagePromoPath = useContext(PagePromoPathContext),
+            pagePromoKey = useContext(PagePromoKeyContext),
             artupSlideIndex = useSelector(mapArtupSlideIndex),
-            selectedPromoPage = useSelector(mapSelectedPromoPath),
+            selectedPromoKey = useSelector(mapSelectedPromoKey),
             serverClientArtupIndex = getIsServerSide() ?
                 pageArtupIndex :
                 artupSlideIndex,
-            serverClientPromoPath = getIsServerSide() ?
-                pagePromoPath :
-                selectedPromoPage
+            serverClientPromoKey = getIsServerSide() ?
+                pagePromoKey :
+                selectedPromoKey
 
         return (
             <ServerClientComponent
                 {...{
                     ref,
                     serverClientArtupIndex,
-                    serverClientPromoPath,
+                    serverClientPromoKey,
                     ...props,
                 }}
             />

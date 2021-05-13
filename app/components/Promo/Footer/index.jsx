@@ -7,9 +7,9 @@ import ArtupPagination from '../../Promos/Artup/Pagination'
 import HomepageButton from './HomepageButton'
 import './style'
 
-const PromoFooter = ({ serverClientPromoPath }) => {
+const PromoFooter = ({ serverClientPromoKey }) => {
     // Promo homepage doesn't need footer.
-    if (getIsPromoHomepage(serverClientPromoPath)) {
+    if (getIsPromoHomepage(serverClientPromoKey)) {
         return null
     }
 
@@ -24,7 +24,7 @@ const PromoFooter = ({ serverClientPromoPath }) => {
             }}
         >
             <HomepageButton />
-            {getIsArtupPage(serverClientPromoPath) && (
+            {getIsArtupPage(serverClientPromoKey) && (
                 <ArtupPagination />
             )}
         </div>
@@ -32,7 +32,7 @@ const PromoFooter = ({ serverClientPromoPath }) => {
 }
 
 PromoFooter.propTypes = {
-    serverClientPromoPath: PropTypes.string.isRequired,
+    serverClientPromoKey: PropTypes.string.isRequired,
 }
 
 export default getPromoServerClientHoc(PromoFooter)

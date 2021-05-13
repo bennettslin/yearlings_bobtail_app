@@ -2,18 +2,18 @@ import React from 'react'
 import { useDispatch } from 'react-redux'
 import Anchor from '../../Anchor'
 import PromoView from '../../Promo/View'
-import { setSelectedPromoPage } from '../../../redux/promo/action'
+import { setSelectedPromoKey } from '../../../redux/promo/action'
 import { ARTUP_SUBPATH, ONESHEET_SUBPATH } from '../../../constants/routing'
 
 const HomepagePromo = () => {
     const dispatch = useDispatch()
 
     const handleOnesheetClick = () => {
-        dispatch(setSelectedPromoPage(ONESHEET_SUBPATH))
+        dispatch(setSelectedPromoKey(ONESHEET_SUBPATH))
     }
 
     const handleArtupClick = () => {
-        dispatch(setSelectedPromoPage(ARTUP_SUBPATH))
+        dispatch(setSelectedPromoKey(ARTUP_SUBPATH))
     }
 
     return (

@@ -1,28 +1,28 @@
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
 import PageArtupIndexContext from '../../contexts/PageArtupIndex'
-import PagePromoPathContext from '../../contexts/PagePromoPath'
+import PagePromoKeyContext from '../../contexts/PagePromoKey'
 import PromoScroll from './Scroll'
 import PromoFooter from './Footer'
 import './style'
 
 const Promo = forwardRef(({
     pageArtupIndex,
-    pagePromoPath,
+    pagePromoKey,
     handlePageChange,
 
 }, ref) => (
     <PageArtupIndexContext.Provider {...{ value: pageArtupIndex }}>
-        <PagePromoPathContext.Provider {...{ value: pagePromoPath }}>
+        <PagePromoKeyContext.Provider {...{ value: pagePromoKey }}>
             <PromoScroll {...{ ref, handlePageChange }} />
             <PromoFooter />
-        </PagePromoPathContext.Provider>
+        </PagePromoKeyContext.Provider>
     </PageArtupIndexContext.Provider>
 ))
 
 Promo.propTypes = {
     pageArtupIndex: PropTypes.number,
-    pagePromoPath: PropTypes.string,
+    pagePromoKey: PropTypes.string,
     handlePageChange: PropTypes.func,
 }
 

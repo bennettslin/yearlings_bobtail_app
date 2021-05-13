@@ -3,5 +3,5 @@ import { ARTUP_SUBPATH } from '../../../constants/routing'
 
 export default getPromoPageComponent({
     pageArtupIndex: 10,
-    pagePromoPath: ARTUP_SUBPATH,
+    pagePromoKey: ARTUP_SUBPATH,
 })

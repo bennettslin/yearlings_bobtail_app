@@ -49,7 +49,7 @@ export const getRoutingArtupIndex = pathname => {
     return getIsArtupSlideValid(routingArtupIndex) ? routingArtupIndex : NaN
 }
 
-export const getRoutingPromoPath = pathname => {
+export const getRoutingPromoKey = pathname => {
     if (pathname.includes(ONESHEET_SUBPATH)) {
         return ONESHEET_SUBPATH
     } else if (pathname.includes(ARTUP_SUBPATH)) {

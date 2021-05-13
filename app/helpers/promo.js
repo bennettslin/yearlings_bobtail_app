@@ -3,14 +3,14 @@ import {
     ONESHEET_SUBPATH,
 } from '../constants/routing'
 
-export const getIsPromoHomepage = promoPath => (
-    promoPath === ''
+export const getIsPromoHomepage = promoKey => (
+    promoKey === ''
 )
 
-export const getIsArtupPage = promoPath => (
-    promoPath === ARTUP_SUBPATH
+export const getIsArtupPage = promoKey => (
+    promoKey === ARTUP_SUBPATH
 )
 
-export const getIsOnesheetPage = promoPath => (
-    promoPath === ONESHEET_SUBPATH
+export const getIsOnesheetPage = promoKey => (
+    promoKey === ONESHEET_SUBPATH
 )

@@ -3,7 +3,7 @@ import { setInStorage } from '../../utils/storage'
 import {
     ARTUP_SLIDE_INDEX,
     PROMO_STORE,
-    SELECTED_PROMO_PAGE,
+    SELECTED_PROMO_KEY,
 } from '../../constants/store'
 
 export const setArtupSlideIndex = (artupSlideIndex = 0) => {
@@ -15,11 +15,11 @@ export const setArtupSlideIndex = (artupSlideIndex = 0) => {
     }
 }
 
-export const setSelectedPromoPage = (selectedPromoPage = '') => {
-    setInStorage(SELECTED_PROMO_PAGE, selectedPromoPage)
+export const setSelectedPromoKey = (selectedPromoKey = '') => {
+    setInStorage(SELECTED_PROMO_KEY, selectedPromoKey)
 
     return {
         type: PROMO_STORE,
-        payload: { selectedPromoPage },
+        payload: { selectedPromoKey },
     }
 }

@@ -13,7 +13,7 @@ import ArtupPromo from '../../Promos/Artup'
 import './style'
 
 const PromoScroll = forwardRef(({
-    serverClientPromoPath,
+    serverClientPromoKey,
     handlePageChange = () => {},
 
 }, ref) => {
@@ -56,13 +56,13 @@ const PromoScroll = forwardRef(({
                         tabIndex: -1,
                     }}
                 >
-                    {getIsPromoHomepage(serverClientPromoPath) && (
+                    {getIsPromoHomepage(serverClientPromoKey) && (
                         <HomepagePromo {...{ handlePitchPageChange }} />
                     )}
-                    {getIsOnesheetPage(serverClientPromoPath) && (
+                    {getIsOnesheetPage(serverClientPromoKey) && (
                         <OnesheetPromo {...{ handlePitchPageChange }} />
                     )}
-                    {getIsArtupPage(serverClientPromoPath) && (
+                    {getIsArtupPage(serverClientPromoKey) && (
                         <ArtupPromo {...{ handlePitchPageChange }} />
                     )}
                 </div>
@@ -72,7 +72,7 @@ const PromoScroll = forwardRef(({
 })
 
 PromoScroll.propTypes = {
-    serverClientPromoPath: PropTypes.string.isRequired,
+    serverClientPromoKey: PropTypes.string.isRequired,
     handlePageChange: PropTypes.func,
 }
 

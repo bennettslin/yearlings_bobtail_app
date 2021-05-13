@@ -1,35 +1,35 @@
 import React, { forwardRef, useImperativeHandle, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import ArtupDispatcher from '../../../../dispatchers/Artup'
-import { mapSelectedPromoPath } from '../../../../redux/promo/selector'
+import { mapSelectedPromoKey } from '../../../../redux/promo/selector'
 import {
     ARROW_LEFT,
     ARROW_RIGHT,
     ARROW_UP,
 } from '../../../../constants/access'
 import { getIsArtupPage, getIsPromoHomepage } from '../../../../helpers/promo'
-import { setSelectedPromoPage } from '../../../../redux/promo/action'
+import { setSelectedPromoKey } from '../../../../redux/promo/action'
 
 const PromoNavigation = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
         dispatchArtup = useRef(),
-        selectedPromoPage = useSelector(mapSelectedPromoPath)
+        selectedPromoKey = useSelector(mapSelectedPromoKey)
 
     const getDispatcher = () => {
-        if (getIsArtupPage(selectedPromoPage)) {
+        if (getIsArtupPage(selectedPromoKey)) {
             return dispatchArtup
         }
     }
 
     const navigateChildPromo = keyName => {
-        if (getIsPromoHomepage(selectedPromoPage)) {
+        if (getIsPromoHomepage(selectedPromoKey)) {
             return false
         }
 
         switch (keyName) {
             case ARROW_UP:
-                dispatch(setSelectedPromoPage())
+                dispatch(setSelectedPromoKey())
                 return true
         }
         return false

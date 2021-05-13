@@ -1,6 +1,4 @@
 # Promo work
-* Figure out best name for promoPage/promoPath, and rename all of them
-
 * Create onesheet page
 * Create promo page
 * Redo PromoAnchor

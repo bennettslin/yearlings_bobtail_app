@@ -2,7 +2,7 @@
 import {
     getRoutingAnnotationIndex,
     getRoutingArtupIndex,
-    getRoutingPromoPath,
+    getRoutingPromoKey,
     getRoutingSongIndex,
     getRoutingVerseIndex,
 } from '../routing'
@@ -99,5 +99,5 @@ export const getInitialArtupIndex = (pathname = '') => {
 
 export const getInitialPromoPageKey = (pathname = '') => {
     // TODO: Get routing or stored. Set initial storage.
-    return getRoutingPromoPath(pathname)
+    return getRoutingPromoKey(pathname)
 }
