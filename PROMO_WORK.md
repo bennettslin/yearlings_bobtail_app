@@ -1,12 +1,12 @@
 # Promo work
 * Create onesheet page
 * Create promo page
-* Redo PromoAnchor
 
 * Need to reset scroll upon promo path change?
-* Smart quotes in promo material
 
 # Bonus
+* Revise PromoAnchor?
+
 * Copy to clipboard functionality
 
 * Distinguish between pitch and artup

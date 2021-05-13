@@ -1,5 +1,4 @@
-import albumLyrics from '../lyrics'
-import { isString } from '../../../../app/helpers/general'
+import { isString } from '../../app/helpers/general'
 
 const QUOTES_CONFIGS = [
     {
@@ -28,7 +27,7 @@ const _replaceCharacterAtIndex = (string, index, character) => (
     string.substring(0, index) + character + string.substring(index + 1)
 )
 
-const _replaceStraightWithSmartQuotes = lyric => {
+const _replaceStraightWithSmartQuotes = text => {
 
     QUOTES_CONFIGS.forEach(({
         straightQuote,
@@ -36,7 +35,7 @@ const _replaceStraightWithSmartQuotes = lyric => {
         closingSmartQuote,
     }) => {
         const indicesOfCharacter =
-            _getAllIndicesOfCharacter(lyric, straightQuote)
+            _getAllIndicesOfCharacter(text, straightQuote)
 
         indicesOfCharacter.forEach(indexOfCharacter => {
             const newCharacter = (
@@ -47,62 +46,66 @@ const _replaceStraightWithSmartQuotes = lyric => {
                      * But the second character isn't an "s." This is just
                      * because of "Bobtail's" in Kyon.
                      */
-                    lyric[indexOfCharacter + 1] !== 's'
+                    text[indexOfCharacter + 1] !== 's'
                 ) ||
 
                 // Or else if it's preceded by a space.
-                lyric[indexOfCharacter - 1] === ' '
+                text[indexOfCharacter - 1] === ' '
             ) ? openingSmartQuote : closingSmartQuote
 
-            lyric = _replaceCharacterAtIndex(lyric, indexOfCharacter, newCharacter)
+            text = _replaceCharacterAtIndex(text, indexOfCharacter, newCharacter)
         })
     })
 
-    return lyric
+    return text
 }
 
-const _formatLyricString = lyric => (
+const _formatString = text => (
     // TODO: Replace straight with smart quotes.
-    _replaceStraightWithSmartQuotes(lyric)
+    _replaceStraightWithSmartQuotes(text)
 )
 
-export const _recurseForFormat = lyricEntity => {
-    if (isString(lyricEntity)) {
-        return _formatLyricString(lyricEntity)
+const _getIsUrl = key => (
+    // Don't format anything that is part of a url path.
+    key === 'href' ||
+    key === 'wiki'
+)
+
+const _recurseForFormat = textEntity => {
+    if (isString(textEntity)) {
+        return _formatString(textEntity)
 
     // Array is an object.
-    } else if (Array.isArray(lyricEntity)) {
-        return lyricEntity.map(lyric => (
-            _recurseForFormat(lyric)
+    } else if (Array.isArray(textEntity)) {
+        return textEntity.map(text => (
+            _recurseForFormat(text)
         ))
 
     // Null is also an object.
-    } else if (lyricEntity && typeof lyricEntity === 'object') {
+    } else if (textEntity && typeof textEntity === 'object') {
         const newEntity = {}
 
-        for (const key in lyricEntity) {
-            // TODO: Be smarter about only formatting certain strings?
-            newEntity[key] = key === 'wiki' ?
-                lyricEntity[key] :
-                _recurseForFormat(lyricEntity[key])
+        for (const key in textEntity) {
+            newEntity[key] = _getIsUrl(key) ?
+                textEntity[key] :
+                _recurseForFormat(textEntity[key])
         }
 
         return newEntity
 
     } else {
-        return lyricEntity
+        return textEntity
     }
 }
 
-// TODO: Include overview, album title, song titles.
-export const formatLyricMetadata = songIndex => {
-    const {
-        title,
-        overview,
-        lyricUnits,
-    } = albumLyrics[songIndex]
+export const formatKeysOfArrayOfObjects = ({
+    objects,
+    keys,
 
-    albumLyrics[songIndex].title = _recurseForFormat(title)
-    albumLyrics[songIndex].overview = _recurseForFormat(overview)
-    albumLyrics[songIndex].lyricUnits = _recurseForFormat(lyricUnits)
-}
+}) => objects.map(objectEntity => (
+    keys.reduce((entity, key) => {
+        // This mutates the object.
+        entity[key] = _recurseForFormat(entity[key])
+        return entity
+    }, objectEntity)
+))

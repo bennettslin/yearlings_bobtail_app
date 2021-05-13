@@ -16,7 +16,6 @@ import {
     getMaxSceneCount,
     getMaxVerseCount,
 } from './helpers/count'
-import { formatLyricMetadata } from './helpers/format'
 import { addTip } from './helpers/tips'
 import { addVerseMetadata } from './helpers/verse'
 import { addWormholeMetadata } from './helpers/wormhole'
@@ -27,8 +26,6 @@ const annotationsList = []
 const songs = getSongIndicesArray().map(songIndex => {
     const song = {}
     let annotations
-
-    formatLyricMetadata(songIndex)
 
     const isLogue =
         addSongAndLogueMetadata(songIndex, song)

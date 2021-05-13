@@ -1,4 +1,6 @@
-export default [
+import { getFormattedSlideMetadata } from '../helpers/slide'
+
+export default getFormattedSlideMetadata([
     {
         path: `introduction`,
         title: `Introduction`,
@@ -174,4 +176,4 @@ export default [
         ],
         contactEmail: true,
     },
-]
+])

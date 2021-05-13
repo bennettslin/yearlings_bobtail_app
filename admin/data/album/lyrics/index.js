@@ -19,9 +19,10 @@ import _17_VeganProclamation from './17_VeganProclamation'
 import _18_My100000thDream from './18_My100000thDream'
 import _19_Epilogue from './19_Epilogue'
 
+import { getFormattedLyricMetadata } from '../helpers/lyric'
 import { getArrayOfLength } from '../../../../app/helpers/general'
 
-const albumLyrics = [
+const albumLyrics = getFormattedLyricMetadata([
     _00_Prologue,
     _01_Didi,
     _02_WillyTheCocoa,
@@ -42,7 +43,7 @@ const albumLyrics = [
     _17_VeganProclamation,
     _18_My100000thDream,
     _19_Epilogue,
-]
+])
 
 export const getSongIndicesArray = () => (
     getArrayOfLength(albumLyrics.length)
