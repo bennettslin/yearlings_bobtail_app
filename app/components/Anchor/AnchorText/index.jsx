@@ -35,48 +35,41 @@ const AnchorText = ({
                 />
             )
 
-            return (
+            return didMount ? (
                 <Fragment {...{ key: index }}>
                     <span
                         {...{
-                            ...didMount && {
-                                className: 'AnchorText',
-                            },
+                            className: 'AnchorText',
                         }}
                     >
                         {/* Shown when no dot in dot sequence is selected. */}
                         <span
                             {...{
-                                ...didMount && {
-                                    className: cx(
-                                        'TextAnchor__plainText',
-                                    ),
-                                },
+                                className: cx(
+                                    'TextAnchor__plainText',
+                                ),
                             }}
                         >
                             {wordElement}
                         </span>
 
                         {/* Shown once some dot in dot sequence is selected. */}
-                        {didMount && (
-                            <span
-                                {...{
-                                    className: cx(
-                                        'TextAnchor__linkText',
+                        <span
+                            {...{
+                                className: cx(
+                                    'TextAnchor__linkText',
 
-                                        isAccessed && !isSelected ?
-                                            'TextAnchor__linkText__accessed' :
-                                            'TextAnchor__linkText__default',
+                                    isAccessed && !isSelected ?
+                                        'TextAnchor__linkText__accessed' :
+                                        'TextAnchor__linkText__default',
 
-                                        isSelected &&
-                                            'TextAnchor__linkText__selected',
-                                    ),
-                                }}
-                            >
-                                {wordElement}
-                            </span>
-                        )}
-
+                                    isSelected &&
+                                        'TextAnchor__linkText__selected',
+                                ),
+                            }}
+                        >
+                            {wordElement}
+                        </span>
                         {/* See styling comment for why this is last child. */}
                         {IS_USER_AGENT_DESKTOP && (
                             <Underline
@@ -98,7 +91,7 @@ const AnchorText = ({
                         index,
                     })}
                 </Fragment>
-            )
+            ) : wordElement
         })
     )
 }

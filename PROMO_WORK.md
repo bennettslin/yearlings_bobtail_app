@@ -1,7 +1,9 @@
 # Promo work
 * Have larger title and smaller subtitles.
 * Consistent way to render paragraphs in bodies.
-* Anchor doesn't have pointer in onesheet
+* Anchor work
+    * Anchor doesn't have pointer in onesheet
+    * Render anchor without plain text?
 
 * Create onesheet page.
 * Create promo homepage.
