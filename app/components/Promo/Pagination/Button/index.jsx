@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Button from '../../Button'
-import { PAGINATION_SLIDE_BUTTON_KEY } from '../../../constants/buttons'
+import Button from '../../../Button'
+import { PAGINATION_SLIDE_BUTTON_KEY } from '../../../../constants/buttons'
 
 const PaginationButton = ({
     pitchSlideIndex,

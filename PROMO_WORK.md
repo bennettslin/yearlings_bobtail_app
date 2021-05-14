@@ -1,5 +1,8 @@
 # Promo work
 * Have larger title and smaller subtitles.
+* Consistent way to render paragraphs in bodies.
+* Smart quotes don't work when starts with parentheses
+* Separate formatSlideMetadata function into two
 
 * Create onesheet page.
 * Create promo homepage.

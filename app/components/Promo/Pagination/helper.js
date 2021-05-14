@@ -1,4 +1,4 @@
-import { getArrayOfLength } from '../../helpers/general'
+import { getArrayOfLength } from '../../../helpers/general'
 
 export const getMiddlePitchIndices = ({
     selectedPitchIndex,

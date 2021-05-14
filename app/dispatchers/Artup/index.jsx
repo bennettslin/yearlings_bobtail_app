@@ -1,6 +1,6 @@
 import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { getArtupSlidesCount } from '../../api/artup/slides'
+import { getArtupSlidesCount } from '../../api/promo/artup'
 import { setArtupSlideIndex } from '../../redux/promo/action'
 import { mapArtupSlideIndex } from '../../redux/promo/selector'
 

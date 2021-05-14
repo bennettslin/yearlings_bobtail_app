@@ -1,13 +1,22 @@
 import React from 'react'
 import PromoView from '../../Promo/View'
+import {
+    getBodyForOnesheet,
+    getTitleForOnesheet,
+} from '../../../api/promo'
+import Texts from '../../Texts'
 
 const OnesheetPromo = () => (
     <PromoView
         {...{
-            title: 'Onesheet',
+            title: getTitleForOnesheet(),
         }}
     >
-        Onesheet test
+        {getBodyForOnesheet().map((text, index) => (
+            <p {...{ key: index }}>
+                <Texts {...{ text }} />
+            </p>
+        ))}
     </PromoView>
 )
 

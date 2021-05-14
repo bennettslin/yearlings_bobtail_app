@@ -2,7 +2,7 @@
 import { getValidSongIndex } from '../../api/album/songs'
 import { getValidVerseIndex } from '../../api/album/verses'
 import { getValidAnnotationIndex } from '../../api/album/annotations'
-import { getValidArtupSlideIndex } from '../../api/artup/slides'
+import { getValidArtupSlideIndex } from '../../api/promo/artup'
 import { getWindow } from '../browser'
 import { INITIAL_DOTS_BIT } from '../../helpers/dot'
 import { FULL_DOTS_BIT } from '../../constants/dots'

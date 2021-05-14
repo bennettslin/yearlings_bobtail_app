@@ -98,14 +98,21 @@ const _recurseForFormat = textEntity => {
     }
 }
 
-export const formatKeysOfArrayOfObjects = ({
+export const formatKeysOfObjects = ({
     objects,
     keys,
 
-}) => objects.map(objectEntity => (
-    keys.reduce((entity, key) => {
-        // This mutates the object.
-        entity[key] = _recurseForFormat(entity[key])
-        return entity
-    }, objectEntity)
-))
+}) => {
+    const
+        objectsArray = Array.isArray(objects) ? objects : [objects],
+        formattedObjects = objectsArray.map(objectEntity => (
+            keys.reduce((entity, key) => {
+            // This mutates the object.
+                entity[key] = _recurseForFormat(entity[key])
+
+                return entity
+            }, objectEntity)
+        ))
+
+    return Array.isArray(objects) ? formattedObjects : formattedObjects[0]
+}

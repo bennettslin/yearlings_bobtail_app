@@ -6,17 +6,17 @@ import {
     mapIsDesktopWidth,
     mapIsMiniWidth,
     mapIsPhoneWidth,
-} from '../../redux/device/selector'
-import Button from '../Button'
+} from '../../../redux/device/selector'
+import Button from '../../Button'
 import PaginationButton from './Button'
 import {
     ARROW_LEFT,
     ARROW_RIGHT,
-} from '../../constants/access'
+} from '../../../constants/access'
 import {
     PAGINATION_NEXT_BUTTON_KEY,
     PAGINATION_PREVIOUS_BUTTON_KEY,
-} from '../../constants/buttons'
+} from '../../../constants/buttons'
 import { getMiddlePitchIndices } from './helper'
 import './style'
 

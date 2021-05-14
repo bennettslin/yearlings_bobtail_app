@@ -1,5 +1,5 @@
-import { getPromo } from '../builds'
-import { getArrayOfLength } from '../../helpers/general'
+import { getPromo } from '../../builds'
+import { getArrayOfLength } from '../../../helpers/general'
 
 const {
     artup: {

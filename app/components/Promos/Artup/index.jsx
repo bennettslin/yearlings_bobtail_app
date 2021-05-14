@@ -10,7 +10,7 @@ import {
     getFootnoteForArtupSlide,
     getTitleForArtupSlide,
     getShowContactEmailForArtupSlide,
-} from '../../../api/artup/slides'
+} from '../../../api/promo/artup'
 import getPromoServerClientHoc from '../../../hocs/PromoHoc'
 import { mapArtupSlideIndex } from '../../../redux/promo/selector'
 

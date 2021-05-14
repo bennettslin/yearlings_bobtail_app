@@ -1,6 +1,6 @@
 import { getRoutingArtupIndex } from '../routing'
 import { getIsAlbumClientSession } from '../session'
-import { getPathForArtupSlide } from '../../../api/artup/slides'
+import { getPathForArtupSlide } from '../../../api/promo/artup'
 import {
     ARTUP_SUBPATH,
     ONESHEET_SUBPATH,

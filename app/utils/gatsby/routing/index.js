@@ -1,7 +1,7 @@
 import { getIsSongValid } from '../../../api/album/songs'
 import { getIsVerseValid } from '../../../api/album/verses'
 import { getIsAnnotationValid } from '../../../api/album/annotations'
-import { getIsArtupSlideValid } from '../../../api/artup/slides'
+import { getIsArtupSlideValid } from '../../../api/promo/artup'
 import { getArtupFullPath } from '../promo'
 import {
     getIndexFromPath,

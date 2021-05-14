@@ -1,4 +1,4 @@
-import { formatKeysOfArrayOfObjects } from '../../../utils/format'
+import { formatKeysOfObjects } from '../../../utils/format'
 import { addFormTypeIndices } from './formType'
 import { addHasSideCard } from './sideCard'
 
@@ -8,7 +8,7 @@ export const addLyricMetadata = (songIndex, song) => {
 }
 
 export const getFormattedLyricMetadata = songs => (
-    formatKeysOfArrayOfObjects({
+    formatKeysOfObjects({
         keys: ['title', 'overview', 'lyricUnits'],
         objects: songs,
     })

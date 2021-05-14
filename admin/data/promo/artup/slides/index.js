@@ -1,4 +1,4 @@
-import { getFormattedSlideMetadata } from '../helpers/slide'
+import { getFormattedSlideMetadata } from '../../helpers/slide'
 
 export default getFormattedSlideMetadata([
     {
