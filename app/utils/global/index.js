@@ -1,6 +1,6 @@
 import {
     getAlbum,
-    getArtup,
+    getPromo,
     getScene,
 } from '../../api/builds'
 import { getSong } from '../../api/album/songs'
@@ -32,7 +32,7 @@ export const initialiseGlobalAdminObjects = () => {
     if (!IS_PRODUCTION) {
         global.album = getAlbum()
         global.scene = getScene()
-        global.artup = getArtup()
+        global.promo = getPromo()
         global.s = () => getSong(getStoredSongIndex())
         global.z = () => getLayersForScene(
             getStoredSongIndex(),

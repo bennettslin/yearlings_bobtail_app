@@ -1,4 +1,4 @@
-import { formatKeysOfArrayOfObjects } from '../../../utils/format'
+import { formatKeysOfArrayOfObjects } from '../../../../utils/format'
 
 export const getFormattedSlideMetadata = slides => (
     formatKeysOfArrayOfObjects({

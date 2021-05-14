@@ -2,7 +2,7 @@ import webpack from 'webpack'
 import path from 'path'
 import scene from './admin/data/scene'
 import album from './admin/data/album'
-import artup from './admin/data/artup'
+import artup from './admin/data/promo'
 import {
     getIsRuntimeBuild,
     getIsProductionBuild,
@@ -26,7 +26,7 @@ export const onCreateWebpackConfig = ({ actions }) => {
                 ...!getIsRuntimeBuild() && {
                     SCENE: JSON.stringify(scene),
                     ALBUM: JSON.stringify(album),
-                    ARTUP: JSON.stringify(artup),
+                    PROMO: JSON.stringify(artup),
                 },
                 BUILD_DATE_TIME: buildDateTime,
                 IS_RUNTIME: getIsRuntimeBuild(),

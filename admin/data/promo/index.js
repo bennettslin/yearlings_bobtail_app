@@ -1,7 +1,7 @@
-import slides from './slides'
+import artup from './artup'
 import { RUNTIME } from '../../../app/constants/server'
 
 export default {
     _build: RUNTIME,
-    slides,
+    artup,
 }

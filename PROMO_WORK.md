@@ -1,6 +1,8 @@
 # Promo work
-* Create onesheet page
-* Create promo page
+* Have larger title and smaller subtitles.
+
+* Create onesheet page.
+* Create promo homepage.
 
 * Need to reset scroll upon promo path change?
 

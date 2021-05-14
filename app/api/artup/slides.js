@@ -1,9 +1,11 @@
-import { getArtup } from '../builds'
+import { getPromo } from '../builds'
 import { getArrayOfLength } from '../../helpers/general'
 
 const {
-    slides: SLIDES,
-} = getArtup()
+    artup: {
+        slides: SLIDES,
+    },
+} = getPromo()
 
 export const getArtupSlidesCount = () => SLIDES.length
 

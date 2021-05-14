@@ -22,8 +22,8 @@ module.exports = {
     'globals': {
         '__dirname': true,
         'ALBUM': true,
+        'PROMO': true,
         'SCENE': true,
-        'ARTUP': true,
         'BUILD_DATE_TIME': true,
         'IS_RUNTIME': true,
         'IS_PRODUCTION': true,
