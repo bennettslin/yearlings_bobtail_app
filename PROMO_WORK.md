@@ -1,13 +1,13 @@
 # Promo work
 * Have larger title and smaller subtitles.
 * Consistent way to render paragraphs in bodies.
-* Smart quotes don't work when starts with parentheses
 * Separate formatSlideMetadata function into two
 
 * Create onesheet page.
 * Create promo homepage.
 
-* Need to reset scroll upon promo path change?
+* Need to reset scroll upon promo path change? (Not if it's a separate PromoView, it seems.)
+* Bottom of promo content has no minimum margin in low height screens. (Maybe don't bother to fix.)
 
 # Bonus
 * Revise PromoAnchor?
@@ -22,6 +22,5 @@
     * Selects song when in album
     * Opens song in new tab when in promo container
 
-* Bottom of promo content has no minimum margin in low height screens. (Maybe don't bother to fix.)
 
 * Store promo page in local storage

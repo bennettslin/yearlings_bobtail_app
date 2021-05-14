@@ -49,8 +49,11 @@ const _replaceStraightWithSmartQuotes = text => {
                     text[indexOfCharacter + 1] !== 's'
                 ) ||
 
-                // Or else if it's preceded by a space.
-                text[indexOfCharacter - 1] === ' '
+                // Or if it's preceded by a space...
+                text[indexOfCharacter - 1] === ' ' ||
+
+                // ... or an opening parenthesis.
+                text[indexOfCharacter - 1] === '('
             ) ? openingSmartQuote : closingSmartQuote
 
             text = _replaceCharacterAtIndex(text, indexOfCharacter, newCharacter)
