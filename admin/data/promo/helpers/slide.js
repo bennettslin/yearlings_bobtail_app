@@ -1,8 +1,17 @@
-import { formatKeysOfObjects } from '../../../utils/format'
+import { formatKeysOfObject, formatKeysOfObjects } from '../../../utils/format'
 
-export const getFormattedSlideMetadata = objects => (
-    formatKeysOfObjects({
-        objects,
-        keys: ['title', 'body', 'footnote'],
-    })
+const KEYS = ['title', 'body', 'footnote']
+
+export const getFormattedSlideMetadata = entity => (
+    Array.isArray(entity) ? (
+        formatKeysOfObjects({
+            objects: entity,
+            keys: KEYS,
+        })
+    ) : (
+        formatKeysOfObject({
+            object: entity,
+            keys: KEYS,
+        })
+    )
 )

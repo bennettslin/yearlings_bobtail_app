@@ -1,7 +1,7 @@
 # Promo work
 * Have larger title and smaller subtitles.
 * Consistent way to render paragraphs in bodies.
-* Separate formatSlideMetadata function into two
+* Anchor doesn't have pointer in onesheet
 
 * Create onesheet page.
 * Create promo homepage.
