@@ -51,7 +51,7 @@ const PromoView = ({
 )
 
 PromoView.propTypes = {
-    title: PropTypes.string.isRequired,
+    title: PropTypes.string,
     body: PropTypes.array.isRequired,
     showContact: PropTypes.bool,
     footnote: PropTypes.oneOfType([

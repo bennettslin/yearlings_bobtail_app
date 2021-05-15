@@ -34,7 +34,7 @@ const Contact = ({ didMount, isMediumTitle }) => (
 
 Contact.propTypes = {
     didMount: PropTypes.bool.isRequired,
-    isMediumTitle: PropTypes.bool.isRequired,
+    isMediumTitle: PropTypes.bool,
 }
 
 export default getDidMountHoc(Contact)
