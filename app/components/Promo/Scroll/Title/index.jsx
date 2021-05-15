@@ -4,13 +4,13 @@ import cx from 'classnames'
 import Texts from '../../../Texts'
 import './style'
 
-const PromoViewTitle = ({ title }) => Boolean(title) && (
+const PromoScrollTitle = ({ title }) => (
     <div
         {...{
             className: cx(
-                'PromoViewTitle',
+                'PromoScrollTitle',
                 'fontColour__title',
-                'fontSize__largeTitle',
+                'fontSize__largerTitle',
                 'Rancho',
             ),
         }}
@@ -19,8 +19,8 @@ const PromoViewTitle = ({ title }) => Boolean(title) && (
     </div>
 )
 
-PromoViewTitle.propTypes = {
-    title: PropTypes.string,
+PromoScrollTitle.propTypes = {
+    title: PropTypes.string.isRequired,
 }
 
-export default PromoViewTitle
+export default PromoScrollTitle

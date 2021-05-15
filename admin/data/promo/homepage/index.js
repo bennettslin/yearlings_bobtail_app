@@ -4,10 +4,9 @@ import {
 } from '../../../../app/constants/routing'
 
 export default ({
-    title: 'Promo Homepage',
     body: ([
         {
-            title: 'Onesheet',
+            title: 'Press material',
         },
         {
             text: [
@@ -20,7 +19,7 @@ export default ({
             ],
         },
         {
-            title: 'Artup',
+            title: 'Presentations',
         },
         {
             text: [

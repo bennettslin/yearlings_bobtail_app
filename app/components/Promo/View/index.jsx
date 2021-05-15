@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Contact from './../../Contact'
-import Texts from './../../Texts'
-import PromoTitle from './Title'
-import PromoContent from './Content'
+import PromoViewTitle from './Title'
+import PromoViewContent from './Content'
+import PromoViewText from './Text'
 import { isString } from '../../../helpers/general'
 
 const PromoView = ({
@@ -12,36 +12,42 @@ const PromoView = ({
     footnote,
     showContact,
 }) => (
-    <>
-        <PromoTitle {...{ title }} />
-        <PromoContent {...{ footnote }}>
-            {body.map((text, index) => {
-                if (isString(text) || Array.isArray(text) || text.text) {
-                    return (
-                        <div {...{ key: index }}>
-                            <Texts {...{ text: isString(text) || Array.isArray(text) ? text : text.text }} />
-                        </div>
-                    )
+    <PromoViewContent {...{ footnote }}>
+        <PromoViewTitle {...{ title }} />
+        {body.map((text, index) => {
+            if (isString(text) || Array.isArray(text) || text.text) {
+                const textEntity =
+                    isString(text) || Array.isArray(text) ?
+                        text :
+                        text.text
 
-                } else if (text.title) {
-                    return (
-                        <PromoTitle
-                            {...{
-                                key: index,
-                                title: text.title,
-                            }}
-                        />
-                    )
+                return (
+                    <PromoViewText
+                        {...{
+                            key: index,
+                            text: textEntity,
+                        }}
+                    />
+                )
 
-                } else {
-                    return null
-                }
-            })}
-            {showContact && (
-                <Contact />
-            )}
-        </PromoContent>
-    </>
+            } else if (text.title) {
+                return (
+                    <PromoViewTitle
+                        {...{
+                            key: index,
+                            title: text.title,
+                        }}
+                    />
+                )
+
+            } else {
+                return null
+            }
+        })}
+        {showContact && (
+            <Contact isMediumTitle />
+        )}
+    </PromoViewContent>
 )
 
 PromoView.propTypes = {

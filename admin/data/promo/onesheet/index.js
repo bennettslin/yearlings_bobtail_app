@@ -1,7 +1,6 @@
 import { getFormattedSlideMetadata } from '../helpers/slide'
 
 export default getFormattedSlideMetadata({
-    title: 'Onesheet',
     body: [
         `Can a rock album ever win the Pulitzer Prize? It might seem unlikely. Today's rock music is loved for subjective qualities that don't spark discussion among literary scholars and musicologists the way hip hop can. But the Bobtail Yearlings are here to ask, why not try? And so they created Yearling's Bobtail, an ambitious multimedia project that merges a double album with an audio webcomic, in the belief that rock artists can aspire for more than popular appeal and critical acclaim. They can create classics worthy of academic study for generations to come.`,
         `Written and recorded by singer Bennett Lin, Yearling's Bobtail tells the autobiographical tale of an artistically inclined Asian boy growing up in Los Angeles, whose autistic brother and first crush on a Jewish friend force him to question his Buddhist upbringing. Bullied at school, he finds solace in a mail-order cult that instructs him to shut himself away. Years later, he embarks on a five-year plan for self-improvement that ultimately wins the hand of his first love, who brings him into her Hindu faith. But as his band gains exposure in the local scene, he bolsters his ego by seeking affection from other women, leading to heartbreak and loss.`,

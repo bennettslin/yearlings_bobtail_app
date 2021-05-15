@@ -11,6 +11,8 @@ import HomepagePromo from '../../Promos/Homepage'
 import OnesheetPromo from '../../Promos/Onesheet'
 import ArtupPromo from '../../Promos/Artup'
 import './style'
+import PromoScrollTitle from './Title'
+import { getTitleForPromoKey } from '../../../api/promo'
 
 const PromoScroll = forwardRef(({
     serverClientPromoKey,
@@ -56,6 +58,7 @@ const PromoScroll = forwardRef(({
                         tabIndex: -1,
                     }}
                 >
+                    <PromoScrollTitle {... { title: getTitleForPromoKey(serverClientPromoKey) }} />
                     {getIsPromoHomepage(serverClientPromoKey) && (
                         <HomepagePromo {...{ handlePitchPageChange }} />
                     )}

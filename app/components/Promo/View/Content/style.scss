@@ -1,7 +1,7 @@
 @import '../../../../scss/constants/colour';
 @import '../../../../scss/constants/icon';
 
-.PromoContent {
+.PromoViewContent {
     height: 100%;
     width: 100%;
 
@@ -18,8 +18,4 @@
     & > :not(:last-child) {
         margin-bottom: $margin__thick * 2;
     }
-}
-
-.PromoContent__footnote {
-    font-size: 0.66em;
 }

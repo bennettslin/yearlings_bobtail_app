@@ -1,6 +1,12 @@
 $multiplier__fontSize__mini: 0.85;
 $multiplier__fontSize__phone: 0.75;
 
+$fontSize__largerTitle: 3.5em;
+$fontSize__largerTitle__mini:
+    $fontSize__largerTitle * $multiplier__fontSize__mini;
+$fontSize__largerTitle__phone:
+    $fontSize__largerTitle * $multiplier__fontSize__phone;
+
 $fontSize__largeTitle: 2.75em;
 $fontSize__largeTitle__mini:
     $fontSize__largeTitle * $multiplier__fontSize__mini;

@@ -16,6 +16,21 @@
     color: $colour__paused__empty;
 }
 
+.fontSize__largerTitle {
+    font-size: $fontSize__largerTitle;
+
+    .DW__miniWidth
+    & {
+        font-size: $fontSize__largerTitle__mini;
+    }
+
+    .DW__phoneWidth
+    & {
+        font-size: $fontSize__largerTitle__phone;
+    }
+}
+
+
 .fontSize__largeTitle {
     font-size: $fontSize__largeTitle;
 

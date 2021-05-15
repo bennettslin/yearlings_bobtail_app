@@ -5,13 +5,16 @@ import getDidMountHoc from '../../hocs/DidMountHoc'
 import { CONTACT_EMAIL } from '../../constants/website'
 import './style'
 
-const Contact = ({ didMount }) => (
+const Contact = ({ didMount, isMediumTitle }) => (
     didMount ? (
         <span
             {...{
                 className: cx(
                     'Contact',
                     'Rancho',
+                    isMediumTitle ?
+                        'fontSize__mediumTitle' :
+                        'Contact__fontSize',
                 ),
             }}
         >
@@ -31,6 +34,7 @@ const Contact = ({ didMount }) => (
 
 Contact.propTypes = {
     didMount: PropTypes.bool.isRequired,
+    isMediumTitle: PropTypes.bool.isRequired,
 }
 
 export default getDidMountHoc(Contact)

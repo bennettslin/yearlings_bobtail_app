@@ -1,6 +1,4 @@
 # Promo work
-* Allow one large title and multiple smaller subtitles.
-
 * Flesh out onesheet page.
 * Flesh out promo homepage.
 

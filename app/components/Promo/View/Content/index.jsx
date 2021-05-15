@@ -4,7 +4,7 @@ import cx from 'classnames'
 import Texts from '../../../Texts'
 import './style'
 
-const PromoContent = ({
+const PromoViewContent = ({
     children,
     footnote,
 
@@ -12,8 +12,7 @@ const PromoContent = ({
     <div
         {...{
             className: cx(
-                'PromoContent',
-                'fontSize__mediumTitle',
+                'PromoViewContent',
             ),
         }}
     >
@@ -36,7 +35,7 @@ const PromoContent = ({
     </div>
 )
 
-PromoContent.propTypes = {
+PromoViewContent.propTypes = {
     children: PropTypes.node.isRequired,
     footnote: PropTypes.oneOfType([
         PropTypes.array,
@@ -44,4 +43,4 @@ PromoContent.propTypes = {
     ]),
 }
 
-export default PromoContent
+export default PromoViewContent
