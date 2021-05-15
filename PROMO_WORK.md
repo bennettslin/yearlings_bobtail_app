@@ -1,7 +1,6 @@
 # Promo work
 * Flesh out onesheet page.
 * Flesh out promo homepage.
-* Copying promo and mouse up 
 
 # Bonus
 * Copy to clipboard functionality

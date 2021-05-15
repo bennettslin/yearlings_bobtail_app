@@ -1,23 +1,27 @@
 import React, { forwardRef, useImperativeHandle, useRef, useState } from 'react'
+import { useSelector } from 'react-redux'
 import CloseHandler from '../../managers/Close'
 import SliderTouchDispatcher from '../SliderTouch'
 import StopPropagationDispatcher from '../StopPropagation'
-import { isEmailFocused } from '../../utils/email'
+import { mapIsOverlayShown } from '../../redux/overlay/selector'
 
 const RootTouchManager = forwardRef((props, ref) => {
     const
         dispatchSliderTouch = useRef(),
         stopPropagation = useRef(),
         closeForBodyClick = useRef(),
+        isOverlayShown = useSelector(mapIsOverlayShown),
         [isSliderTouchEnding, setIsSliderTouchEnding] = useState(false)
 
     const dispatchTouchMove = e => {
-        dispatchSliderTouch.current.move(e)
+        if (!isOverlayShown) {
+            dispatchSliderTouch.current.move(e)
+        }
     }
 
     const dispatchTouchEnd = () => {
         // If this returns true, then slider touch is ending.
-        if (dispatchSliderTouch.current.end()) {
+        if (!isOverlayShown && dispatchSliderTouch.current.end()) {
             /**
              * Ignore body click event that gets triggered after touch end on
              * slider, to prevent it from closing out of overlay.
@@ -28,7 +32,7 @@ const RootTouchManager = forwardRef((props, ref) => {
     }
 
     const dispatchRootClick = e => {
-        if (isEmailFocused()) {
+        if (isOverlayShown) {
             return false
         }
 
