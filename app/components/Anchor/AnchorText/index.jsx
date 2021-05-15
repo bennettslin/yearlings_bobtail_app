@@ -13,6 +13,7 @@ const AnchorText = ({
     isAccessed,
     isSelected,
     isWikiTextAnchor,
+    neverDeselects,
     text,
     textConfig,
 
@@ -43,15 +44,17 @@ const AnchorText = ({
                         }}
                     >
                         {/* Shown when no dot in dot sequence is selected. */}
-                        <span
-                            {...{
-                                className: cx(
-                                    'TextAnchor__plainText',
-                                ),
-                            }}
-                        >
-                            {wordElement}
-                        </span>
+                        {!neverDeselects && (
+                            <span
+                                {...{
+                                    className: cx(
+                                        'TextAnchor__plainText',
+                                    ),
+                                }}
+                            >
+                                {wordElement}
+                            </span>
+                        )}
 
                         {/* Shown once some dot in dot sequence is selected. */}
                         <span
@@ -100,6 +103,7 @@ AnchorText.propTypes = {
     isAccessed: PropTypes.bool,
     isSelected: PropTypes.bool,
     isWikiTextAnchor: PropTypes.bool,
+    neverDeselects: PropTypes.bool,
     text: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.array,

@@ -7,6 +7,7 @@ import Anchor from '../../Anchor'
 import Texts from '..'
 import TextSpan from './Span'
 import TextLyricAnchor from './LyricAnchor'
+import PromoAnchor from './PromoAnchor'
 
 const Text = forwardRef(({
     text: textEntity,
@@ -51,6 +52,7 @@ const Text = forwardRef(({
             const {
                     anchor: text,
                     href,
+                    promoKey,
                     annotationIndex,
                 } = textEntity,
                 { wormholeAnnotationIndex } = props
@@ -68,6 +70,16 @@ const Text = forwardRef(({
                             }}
                         />
                     </>
+                )
+
+            } else if (promoKey) {
+                return (
+                    <PromoAnchor
+                        {...{
+                            text,
+                            promoKey,
+                        }}
+                    />
                 )
 
             /**

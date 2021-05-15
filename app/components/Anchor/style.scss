@@ -9,7 +9,8 @@
     .TW__lyricsUnlocked
     &.Anchor__selectableNotLyric,
     .TW__isStationary.TW__lyricsUnlocked
-    &.Anchor__selectableLyric {
+    &.Anchor__selectableLyric,
+    &.Anchor__alwaysPointer {
         cursor: pointer;
     }
 }

@@ -1,13 +1,8 @@
 # Promo work
 * Have larger title and smaller subtitles.
-* Make anchors take promoKey that dispatches promo key
-* Fix issue with div being nested in p
-* Anchor work
-    * Anchor doesn't have pointer in onesheet
-    * Render anchor without plain text?
 
-* Create onesheet page.
-* Create promo homepage.
+* Flesh out onesheet page.
+* Flesh out promo homepage.
 
 * Need to reset scroll upon promo path change? (Not if it's a separate PromoView, it seems.)
 * Bottom of promo content has no minimum margin in low height screens. (Maybe don't bother to fix.)

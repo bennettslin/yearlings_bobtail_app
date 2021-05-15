@@ -16,11 +16,11 @@ const PromoView = ({
         <PromoTitle {...{ title }} />
         <PromoContent {...{ footnote }}>
             {body.map((text, index) => {
-                if (isString(text) || text.text) {
+                if (isString(text) || Array.isArray(text) || text.text) {
                     return (
-                        <p {...{ key: index }}>
-                            <Texts {...{ text: isString(text) ? text : text.text }} />
-                        </p>
+                        <div {...{ key: index }}>
+                            <Texts {...{ text: isString(text) || Array.isArray(text) ? text : text.text }} />
+                        </div>
                     )
 
                 } else if (text.title) {

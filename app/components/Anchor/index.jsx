@@ -14,6 +14,8 @@ const Anchor = forwardRef(({
     didMount,
     className,
     href,
+    promoKey,
+    neverDeselects,
     isAnnotationTitle,
     isAccessed: isAccessedBeforeDesktop,
     isSelected,
@@ -78,6 +80,7 @@ const Anchor = forwardRef(({
                     className: cx(
                         'Anchor',
                         isShown && 'Anchor__shown',
+                        promoKey && 'Anchor__alwaysPointer',
                         isAccessed && !isSelected && 'Anchor__accessed',
                         !isSelected && [
                             'Anchor__selectable',
@@ -113,6 +116,8 @@ const Anchor = forwardRef(({
                         isAccessed,
                         isSelected,
                         isWikiTextAnchor,
+                        neverDeselects:
+                            neverDeselects || Boolean(href || promoKey),
                         text,
                         textConfig,
                     }}
@@ -134,6 +139,8 @@ Anchor.propTypes = {
     didMount: PropTypes.bool.isRequired,
     className: PropTypes.string,
     href: PropTypes.string,
+    promoKey: PropTypes.string,
+    neverDeselects: PropTypes.bool,
     isAnnotationTitle: PropTypes.bool,
     isAccessed: PropTypes.bool,
     isSelected: PropTypes.bool,

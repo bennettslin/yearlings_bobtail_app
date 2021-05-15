@@ -15,7 +15,6 @@ export default ({
                 {
                     anchor: 'Onesheet',
                     promoKey: ONESHEET_SUBPATH,
-                    href: 'blah',
                 },
                 'blah',
             ],
@@ -29,7 +28,6 @@ export default ({
                 {
                     anchor: 'Artup',
                     promoKey: ARTUP_SUBPATH,
-                    href: 'blah',
                 },
                 'blah',
             ],

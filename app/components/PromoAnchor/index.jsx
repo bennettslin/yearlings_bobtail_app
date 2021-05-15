@@ -15,6 +15,7 @@ const PromoAnchor = () => {
         <div {...{ className: 'PromoAnchor' }}>
             {`Interested in working with us? Visit our `}
             <Anchor
+                neverDeselects
                 {...{
                     text: 'promo homepage!',
                     analyticsLabel: 'promo',
