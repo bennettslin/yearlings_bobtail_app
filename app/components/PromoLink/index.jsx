@@ -4,7 +4,7 @@ import Anchor from '../Anchor'
 import { toggleIsPromoShown } from '../../redux/toggle/action'
 import './style'
 
-const PromoAnchor = () => {
+const PromoLink = () => {
     const dispatch = useDispatch()
 
     const handleAnchorClick = () => {
@@ -12,7 +12,7 @@ const PromoAnchor = () => {
     }
 
     return (
-        <div {...{ className: 'PromoAnchor' }}>
+        <div {...{ className: 'PromoLink' }}>
             {`Interested in working with us? Visit our `}
             <Anchor
                 neverDeselects
@@ -26,4 +26,4 @@ const PromoAnchor = () => {
     )
 }
 
-export default PromoAnchor
+export default PromoLink

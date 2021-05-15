@@ -1,11 +1,11 @@
 # Promo work
-* Have larger title and smaller subtitles.
+* Allow one large title and multiple smaller subtitles.
 
 * Flesh out onesheet page.
 * Flesh out promo homepage.
 
 * Need to reset scroll upon promo path change? (Not if it's a separate PromoView, it seems.)
-* Bottom of promo content has no minimum margin in low height screens. (Maybe don't bother to fix.)
+* Bottom of promo content has no minimum margin in low height screens. (Need to fix.)
 
 # Bonus
 * Revise PromoAnchor?
