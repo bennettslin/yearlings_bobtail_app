@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import Button from '../../../Button'
 import { mapIsPhoneWidth } from '../../../../redux/device/selector'
 import { setSelectedPromoKey } from '../../../../redux/promo/action'
-import { ARROW_UP } from '../../../../constants/access'
+import { PROMO_TOGGLE_KEY } from '../../../../constants/access'
 import { PROMO_PAGE_BUTTON_KEY } from '../../../../constants/buttons'
 
 const HomepageButton = () => {
@@ -24,7 +24,7 @@ const HomepageButton = () => {
                     'dramaMasks',
                 ),
                 buttonName: PROMO_PAGE_BUTTON_KEY,
-                accessKey: ARROW_UP,
+                accessKey: PROMO_TOGGLE_KEY,
                 handleButtonClick,
 
                 ...!isPhoneWidth && {

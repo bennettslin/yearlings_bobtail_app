@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Contact from './../../Contact'
 import PromoViewTitle from './Title'
 import PromoViewContent from './Content'
 import PromoViewText from './Text'
@@ -10,7 +9,6 @@ const PromoView = ({
     title,
     body,
     footnote,
-    showContact,
 }) => (
     <PromoViewContent {...{ footnote }}>
         <PromoViewTitle {...{ title }} />
@@ -44,16 +42,12 @@ const PromoView = ({
                 return null
             }
         })}
-        {showContact && (
-            <Contact isMediumTitle />
-        )}
     </PromoViewContent>
 )
 
 PromoView.propTypes = {
     title: PropTypes.string,
     body: PropTypes.array.isRequired,
-    showContact: PropTypes.bool,
     footnote: PropTypes.oneOfType([
         PropTypes.array,
         PropTypes.string,

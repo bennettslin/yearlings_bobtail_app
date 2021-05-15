@@ -8,7 +8,6 @@ export default getFormattedSlideMetadata([
             `Hi, we're the Bobtail Yearlings! We'd love to hear from ambitious musicians, record labels and the music press, and anyone interested in working with us.`,
             `Are you thinking to get in touch, but feeling unsure about our unconventional way of doing things? Read on, and I'll convince you that the Bobtail Yearlings are as reasonable to bet on as any artist you've worked with before.`,
         ],
-        contactEmail: true,
     },
     {
         path: `stores-profit-then-scale`,
@@ -174,6 +173,5 @@ export default getFormattedSlideMetadata([
             ],
             `If you're convinced to bet on us, let's talk! We're flexible and open-minded, and we've got plenty more creative ideas up our sleeves.`,
         ],
-        contactEmail: true,
     },
 ])

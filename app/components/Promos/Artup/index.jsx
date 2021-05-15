@@ -7,7 +7,6 @@ import {
     getBodyForArtupSlide,
     getFootnoteForArtupSlide,
     getTitleForArtupSlide,
-    getShowContactEmailForArtupSlide,
 } from '../../../api/promo/artup'
 import getPromoServerClientHoc from '../../../hocs/PromoHoc'
 import { mapArtupSlideIndex } from '../../../redux/promo/selector'
@@ -27,8 +26,6 @@ const ArtupPromo = ({ serverClientArtupIndex, handlePitchPageChange }) => {
                 title: getTitleForArtupSlide(serverClientArtupIndex),
                 body: getBodyForArtupSlide(serverClientArtupIndex),
                 footnote: getFootnoteForArtupSlide(serverClientArtupIndex),
-                showContact:
-                    getShowContactEmailForArtupSlide(serverClientArtupIndex),
             }}
         />
     )

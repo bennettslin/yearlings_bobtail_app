@@ -38,7 +38,3 @@ export const getBodyForArtupSlide = artupSlideIndex => (
 export const getFootnoteForArtupSlide = artupSlideIndex => (
     SLIDES[artupSlideIndex - 1].footnote
 )
-
-export const getShowContactEmailForArtupSlide = artupSlideIndex => (
-    Boolean(SLIDES[artupSlideIndex - 1].contactEmail)
-)

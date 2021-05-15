@@ -5,7 +5,7 @@ import getDidMountHoc from '../../hocs/DidMountHoc'
 import { CONTACT_EMAIL } from '../../constants/website'
 import './style'
 
-const Contact = ({ didMount, isMediumTitle }) => (
+const Contact = ({ didMount, isMediumTitle, isTextShadowLight }) => (
     didMount ? (
         <span
             {...{
@@ -15,6 +15,7 @@ const Contact = ({ didMount, isMediumTitle }) => (
                     isMediumTitle ?
                         'fontSize__mediumTitle' :
                         'Contact__fontSize',
+                    isTextShadowLight && 'textShadow__light',
                 ),
             }}
         >
@@ -35,6 +36,7 @@ const Contact = ({ didMount, isMediumTitle }) => (
 Contact.propTypes = {
     didMount: PropTypes.bool.isRequired,
     isMediumTitle: PropTypes.bool,
+    isTextShadowLight: PropTypes.bool,
 }
 
 export default getDidMountHoc(Contact)

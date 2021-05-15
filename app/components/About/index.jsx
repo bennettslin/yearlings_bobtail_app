@@ -19,13 +19,13 @@ const About = () => (
         <AboutChild>
             <AboutTitle />
         </AboutChild>
-        <AboutChild {...{ header: 'Mailing List' }}>
+        <AboutChild {...{ header: 'Mailing list' }}>
             <MailingList />
         </AboutChild>
-        <AboutChild {...{ header: 'Contact Us' }}>
+        <AboutChild {...{ header: 'Contact us' }}>
             <AboutContact />
         </AboutChild>
-        <AboutChild {...{ header: 'Social Media' }}>
+        <AboutChild {...{ header: 'Social media' }}>
             <SocialMedia />
         </AboutChild>
         <AboutChild {...{ header: 'Credits' }}>

@@ -5,7 +5,7 @@ import { mapSelectedPromoKey } from '../../../../redux/promo/selector'
 import {
     ARROW_LEFT,
     ARROW_RIGHT,
-    ARROW_UP,
+    PROMO_TOGGLE_KEY,
 } from '../../../../constants/access'
 import { getIsArtupPage, getIsPromoHomepage } from '../../../../helpers/promo'
 import { setSelectedPromoKey } from '../../../../redux/promo/action'
@@ -28,7 +28,7 @@ const PromoNavigation = forwardRef((props, ref) => {
         }
 
         switch (keyName) {
-            case ARROW_UP:
+            case PROMO_TOGGLE_KEY:
                 dispatch(setSelectedPromoKey())
                 return true
         }

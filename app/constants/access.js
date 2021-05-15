@@ -1,4 +1,4 @@
-export const ABOUT_TOGGLE_KEY = 'a'
+export const ABOUT_ALBUM_TOGGLE_KEY = 'a'
 export const OVERVIEW_TOGGLE_KEY = 'b'
 export const CAROUSEL_TOGGLE_KEY = 'c'
 export const DOTS_SLIDE_TOGGLE_KEY = 'd'
@@ -62,5 +62,5 @@ export const STYLE_LOGIC_ACCESS_LETTERS = [
     OVERVIEW_TOGGLE_KEY,
     SCORE_TOGGLE_KEY,
     TIPS_TOGGLE_KEY,
-    ABOUT_TOGGLE_KEY,
+    ABOUT_ALBUM_TOGGLE_KEY,
 ]

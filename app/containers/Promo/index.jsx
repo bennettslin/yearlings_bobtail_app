@@ -12,7 +12,7 @@ import { reloadFromRoot } from '../../helpers/navigate'
 import { updateAccessStore } from '../../redux/access/action'
 import { mapSelectedPromoKey } from '../../redux/promo/selector'
 import { getIsServerSide } from '../../utils/browser'
-import { ESCAPE, PROMO_TOGGLE_KEY } from '../../constants/access'
+import { ESCAPE, ABOUT_ALBUM_TOGGLE_KEY } from '../../constants/access'
 import DeviceWrapper from '../../wrappers/DeviceWrapper'
 import AccessWrapper from '../../wrappers/AccessWrapper'
 import ResizeManager from '../../managers/Resize'
@@ -52,7 +52,7 @@ const PromoContainer = ({ children }) => {
         navigatePromo.current(keyName)
 
         // Handle return home to album.
-        if (keyName === PROMO_TOGGLE_KEY) {
+        if (keyName === ABOUT_ALBUM_TOGGLE_KEY) {
             reloadFromRoot()
         }
 
@@ -78,6 +78,7 @@ const PromoContainer = ({ children }) => {
                 label: 'promo',
             },
         )
+        focusElement()
     }, [])
 
     return (

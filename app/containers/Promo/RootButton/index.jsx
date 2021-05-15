@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import Button from '../../../components/Button'
 import { reloadFromRoot } from '../../../helpers/navigate'
-import { PROMO_TOGGLE_KEY } from '../../../constants/access'
+import { ABOUT_ALBUM_TOGGLE_KEY } from '../../../constants/access'
 import { ROOT_HOME_BUTTON_KEY } from '../../../constants/buttons'
 import { ALBUM_TITLE } from '../../../constants/paths'
 import './style'
@@ -16,7 +16,7 @@ const RootButton = ({ hasTitleShadowLight }) => (
                 'dramaMasks',
             ),
             buttonName: ROOT_HOME_BUTTON_KEY,
-            accessKey: PROMO_TOGGLE_KEY,
+            accessKey: ABOUT_ALBUM_TOGGLE_KEY,
             handleButtonClick: reloadFromRoot,
             hasTitleShadowLight,
             buttonTitle: (

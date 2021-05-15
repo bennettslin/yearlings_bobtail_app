@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux'
 import Button from '../../Button'
 import TipsHand from '../../Tips/Hand'
 import { toggleIsAboutShown } from '../../../redux/toggle/action'
-import { ABOUT_TOGGLE_KEY } from '../../../constants/access'
+import { ABOUT_ALBUM_TOGGLE_KEY } from '../../../constants/access'
 import { ABOUT_BUTTON_KEY } from '../../../constants/buttons'
 import { ABOUT } from '../../../constants/tips'
 import './style'
@@ -24,7 +24,7 @@ const AboutToggle = () => {
                 isCustomSize
                 {...{
                     buttonName: ABOUT_BUTTON_KEY,
-                    accessKey: ABOUT_TOGGLE_KEY,
+                    accessKey: ABOUT_ALBUM_TOGGLE_KEY,
                     handleButtonClick,
                 }}
             />
