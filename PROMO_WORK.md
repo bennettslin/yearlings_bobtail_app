@@ -1,13 +1,9 @@
 # Promo work
 * Flesh out onesheet page.
 * Flesh out promo homepage.
-
-* Need to reset scroll upon promo path change? (Not if it's a separate PromoView, it seems.)
-* Bottom of promo content has no minimum margin in low height screens. (Need to fix.)
+* Copying promo and mouse up 
 
 # Bonus
-* Revise PromoAnchor?
-
 * Copy to clipboard functionality
 
 * Distinguish between pitch and artup
