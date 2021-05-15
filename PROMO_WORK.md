@@ -1,6 +1,7 @@
 # Promo work
 * Have larger title and smaller subtitles.
-* Consistent way to render paragraphs in bodies.
+* Make anchors take promoKey that dispatches promo key
+* Fix issue with div being nested in p
 * Anchor work
     * Anchor doesn't have pointer in onesheet
     * Render anchor without plain text?

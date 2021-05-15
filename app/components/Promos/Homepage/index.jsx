@@ -3,41 +3,45 @@ import { useDispatch } from 'react-redux'
 import Anchor from '../../Anchor'
 import PromoView from '../../Promo/View'
 import { setSelectedPromoKey } from '../../../redux/promo/action'
-import { ARTUP_SUBPATH, ONESHEET_SUBPATH } from '../../../constants/routing'
+import { getBodyForHomepage, getTitleForHomepage } from '../../../api/promo/homepage'
 
 const HomepagePromo = () => {
     const dispatch = useDispatch()
 
-    const handleOnesheetClick = () => {
-        dispatch(setSelectedPromoKey(ONESHEET_SUBPATH))
-    }
+    // const handleOnesheetClick = () => {
+    //     dispatch(setSelectedPromoKey(ONESHEET_SUBPATH))
+    // }
 
-    const handleArtupClick = () => {
-        dispatch(setSelectedPromoKey(ARTUP_SUBPATH))
-    }
+    // const handleArtupClick = () => {
+    //     dispatch(setSelectedPromoKey(ARTUP_SUBPATH))
+    // }
 
     return (
         <PromoView
             {...{
-                title: 'Promo Homepage',
+                title: getTitleForHomepage(),
+                body: getBodyForHomepage(),
             }}
         >
-            <Anchor
-                {...{
-                    text: 'Onesheet',
-                    analyticsLabel: 'onesheet',
-                    handleAnchorClick: handleOnesheetClick,
-                }}
-            />
-            <Anchor
-                {...{
-                    text: 'Artup',
-                    analyticsLabel: 'artup',
-                    handleAnchorClick: handleArtupClick,
-                }}
-            />
         </PromoView>
     )
 }
 
 export default HomepagePromo
+
+// [
+//     <Anchor
+//         {...{
+//             text: 'Onesheet',
+//             analyticsLabel: 'onesheet',
+//             handleAnchorClick: handleOnesheetClick,
+//         }}
+//     />,
+//     <Anchor
+//         {...{
+//             text: 'Artup',
+//             analyticsLabel: 'artup',
+//             handleAnchorClick: handleArtupClick,
+//         }}
+//     />,
+// ]

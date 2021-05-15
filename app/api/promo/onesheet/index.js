@@ -1,4 +1,4 @@
-import { getPromo } from '../builds'
+import { getPromo } from '../../builds'
 
 const { onesheet } = getPromo()
 

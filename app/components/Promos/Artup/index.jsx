@@ -3,8 +3,6 @@ import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import PromoView from '../../Promo/View'
-import Contact from '../../Contact'
-import Texts from '../../Texts'
 import {
     getBodyForArtupSlide,
     getFootnoteForArtupSlide,
@@ -27,18 +25,12 @@ const ArtupPromo = ({ serverClientArtupIndex, handlePitchPageChange }) => {
         <PromoView
             {...{
                 title: getTitleForArtupSlide(serverClientArtupIndex),
+                body: getBodyForArtupSlide(serverClientArtupIndex),
                 footnote: getFootnoteForArtupSlide(serverClientArtupIndex),
+                showContact:
+                    getShowContactEmailForArtupSlide(serverClientArtupIndex),
             }}
-        >
-            {getBodyForArtupSlide(serverClientArtupIndex).map((text, index) => (
-                <p {...{ key: index }}>
-                    <Texts {...{ text }} />
-                </p>
-            ))}
-            {getShowContactEmailForArtupSlide(serverClientArtupIndex) && (
-                <Contact />
-            )}
-        </PromoView>
+        />
     )
 }
 

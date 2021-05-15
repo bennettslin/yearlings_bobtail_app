@@ -3,21 +3,15 @@ import PromoView from '../../Promo/View'
 import {
     getBodyForOnesheet,
     getTitleForOnesheet,
-} from '../../../api/promo'
-import Texts from '../../Texts'
+} from '../../../api/promo/onesheet'
 
 const OnesheetPromo = () => (
     <PromoView
         {...{
             title: getTitleForOnesheet(),
+            body: getBodyForOnesheet(),
         }}
-    >
-        {getBodyForOnesheet().map((text, index) => (
-            <p {...{ key: index }}>
-                <Texts {...{ text }} />
-            </p>
-        ))}
-    </PromoView>
+    />
 )
 
 export default OnesheetPromo
