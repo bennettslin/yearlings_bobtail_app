@@ -210,15 +210,15 @@ export default {
                     description: [
                         `My relationship with Sita was like a ship swaying in perilous waters. This notion is captured in the music by the`,
                         {
-                            anchor: `compound meter,`,
+                            anchor: `compound meter`,
                             wiki: `Metre_(music)`,
                         },
-                        `as well as by the back-and-forth between unrelated chords separated by a`,
+                        `, as well as by the back-and-forth between unrelated chords separated by a`,
                         {
-                            anchor: `tritone.`,
+                            anchor: `tritone`,
                             wiki: `Tritone`,
                         },
-                        `The two strands of meandering`,
+                        `. The two strands of meandering`,
                         {
                             anchor: `tuplets`,
                             wiki: `Tuplet`,
@@ -374,10 +374,10 @@ export default {
                                 description: [
                                     `In`,
                                     {
-                                        anchor: `medieval romance,`,
+                                        anchor: `medieval romance`,
                                         wiki: `Chivalric_romance`,
                                     },
-                                    `a`,
+                                    `, a`,
                                     {
                                         anchor: `knight-errant`,
                                         wiki: `Knight-errant`,
@@ -424,10 +424,10 @@ export default {
                                     description: [
                                         `In`,
                                         {
-                                            anchor: `time-lapse photography,`,
+                                            anchor: `time-lapse photography`,
                                             wiki: `Time-lapse_photography`,
                                         },
-                                        `images are captured at a lower frame rate, causing time to speed up on normal playback.`,
+                                        `, images are captured at a lower frame rate, causing time to speed up on normal playback.`,
                                     ],
                                 },
                             ],
@@ -446,10 +446,10 @@ export default {
                                     description: [
                                         `The passage of time is suggested here by a classic mnemonic for`,
                                         {
-                                            anchor: `daylight saving.`,
+                                            anchor: `daylight saving`,
                                             wiki: `Daylight_saving_time`,
                                         },
-                                        `"Spring forward, fall back" reminds us to set our clocks forward every spring, and back every fall.`,
+                                        `. "Spring forward, fall back" reminds us to set our clocks forward every spring, and back every fall.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -659,10 +659,10 @@ export default {
                                 description: [
                                     `I hated the idea of getting older and often joked about killing myself at`,
                                     {
-                                        anchor: `thirty-three,`,
+                                        anchor: `thirty-three`,
                                         wiki: `Chronology_of_Jesus`,
                                     },
-                                    `the age at which Jesus was crucified. Since clearly, this is all the time one needs to change the world. So when Sita asked me to specify the age at which I would come back for her in accordance with our little pact, and I answered thirty-three, the subtext was understood.`,
+                                    `, the age at which Jesus was crucified. Since clearly, this is all the time one needs to change the world. So when Sita asked me to specify the age at which I would come back for her in accordance with our little pact, and I answered thirty-three, the subtext was understood.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,

@@ -91,19 +91,20 @@ export default {
                                     description: [
                                         `In the`,
                                         {
-                                            anchor: `Book of Genesis,`,
+                                            anchor: `Book of Genesis`,
                                             wiki: `Book_of_Genesis`,
                                         },
+                                        `, "`,
                                         {
-                                            anchor: `"Lot"`,
+                                            anchor: `Lot`,
                                             wiki: `Lot_(biblical_person)`,
                                         },
-                                        `fled with his family from the wicked city of`,
+                                        `" fled with his family from the wicked city of`,
                                         {
-                                            anchor: `Sodom.`,
+                                            anchor: `Sodom`,
                                             wiki: `Sodom_and_Gomorrah`,
                                         },
-                                        `When`,
+                                        `. When`,
                                         {
                                             anchor: `his wife`,
                                             wiki: `Lot's_wife`,
@@ -151,10 +152,10 @@ export default {
                                     },
                                     `for anything that isn't`,
                                     {
-                                        anchor: `kosher.`,
+                                        anchor: `kosher`,
                                         wiki: `Kashrut`,
                                     },
-                                    `In Sasha's world, certain everyday foods weren't meant to be eaten. It could then be inferred that certain boys in her everyday life also weren't meant to be dated.`,
+                                    `. In Sasha's world, certain everyday foods weren't meant to be eaten. It could then be inferred that certain boys in her everyday life also weren't meant to be dated.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -212,9 +213,10 @@ export default {
                     description: [
                         `For this song, I wanted to capture the disorienting cycle between days spent living among the foreign and nights spent dreaming of the familiar. So I used a literary technique I invented called doublespeaker rhyme, in which two sets of lyrics that rhyme syllable for syllable are panned hard to separate speakers in the recording. It's the audio version of a cinematic`,
                         {
-                            anchor: `split screen.`,
+                            anchor: `split screen`,
                             wiki: `Split_screen_(video_production)`,
                         },
+                        `.`,
                     ],
                     dotKeys: {
                         [OBSERVATION]: true,
@@ -357,10 +359,10 @@ export default {
                                 description: [
                                     `Writing doublespeaker rhyme was pretty daunting, so I would come up with random challenges for myself. One challenge for this song was to mention each of the four elementals of`,
                                     {
-                                        anchor: `Paracelsus,`,
+                                        anchor: `Paracelsus`,
                                         wiki: `Paracelsus`,
                                     },
-                                    `the 16th-century alchemist who believed that nature is made up of four elements, each personified by a mythical creature. The`,
+                                    `, the 16th-century alchemist who believed that nature is made up of four elements, each personified by a mythical creature. The`,
                                     {
                                         anchor: `salamander`,
                                         wiki: `Salamanders_in_folklore`,
@@ -398,9 +400,10 @@ export default {
                                 description: [
                                     `Like most`,
                                     {
-                                        anchor: `amphibians,`,
+                                        anchor: `amphibians`,
                                         wiki: `Amphibian`,
                                     },
+                                    `,`,
                                     {
                                         anchor: `salamanders`,
                                         wiki: `Salamander`,
@@ -462,9 +465,10 @@ export default {
                                 description: [
                                     `The crescent moon is shaped like the blade of the scythe wielded by the`,
                                     {
-                                        anchor: `Grim Reaper.`,
+                                        anchor: `Grim Reaper`,
                                         wiki: `Death_(personification)`,
                                     },
+                                    `.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -475,27 +479,27 @@ export default {
                             anchor: `oriental`,
                             card: {
                                 description: [
-                                    `The word`,
+                                    `The word "`,
                                     {
-                                        anchor: `"Oriental"`,
+                                        anchor: `Oriental`,
                                         wiki: `Orient`,
                                     },
-                                    `wasn't a pejorative when I was growing up. It's even printed on my birth certificate. It became`,
+                                    `" wasn't a pejorative when I was growing up. It's even printed on my birth certificate. It became`,
                                     {
                                         anchor: `politically incorrect`,
                                         wiki: `Political_correctness`,
                                     },
-                                    `at around the same time that`,
+                                    `at around the same time that "`,
                                     {
-                                        anchor: `"queer"`,
+                                        anchor: `queer`,
                                         wiki: `Queer`,
                                     },
-                                    `was being reclaimed by the`,
+                                    `" was being reclaimed by the`,
                                     {
-                                        anchor: `gay community.`,
+                                        anchor: `gay community`,
                                         wiki: `LGBT_community`,
                                     },
-                                    `The latter tactic always made more sense to me.`,
+                                    `. The latter tactic always made more sense to me.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -546,12 +550,12 @@ export default {
                             anchor: `gentle means`,
                             card: {
                                 description: [
-                                    `Referring to myself here as a`,
+                                    `Referring to myself here as a "`,
                                     {
-                                        anchor: `"Gentile,"`,
+                                        anchor: `Gentile`,
                                         wiki: `Gentile`,
                                     },
-                                    `or non-Jew.`,
+                                    `," or non-Jew.`,
                                 ],
                                 dotKeys: {
                                     [PUN]: true,
@@ -664,9 +668,10 @@ export default {
                                 description: [
                                     `The narrator in`,
                                     {
-                                        anchor: `Herman Melville's`,
+                                        anchor: `Herman Melville`,
                                         wiki: `Herman_Melville`,
                                     },
+                                    `'s`,
                                     {
                                         isItalic: true,
                                         lyric: {
@@ -676,10 +681,10 @@ export default {
                                     },
                                     `is an outcast like his namesake`,
                                     {
-                                        anchor: `Ishmael.`,
+                                        anchor: `Ishmael`,
                                         wiki: `Ishmael`,
                                     },
-                                    `While the latter was banished to the desert, the former wanders the wilderness of the ocean. It is to these metaphorical dunes of the ocean that I now flee as well.`,
+                                    `. While the latter was banished to the desert, the former wanders the wilderness of the ocean. It is to these metaphorical dunes of the ocean that I now flee as well.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -711,10 +716,10 @@ export default {
                                 description: [
                                     `Being an illegitimate son, Ishmael was not to inherit the house of`,
                                     {
-                                        anchor: `Abraham,`,
+                                        anchor: `Abraham`,
                                         wiki: `Abraham`,
                                     },
-                                    `but God promised to make him into a great nation. Coming from less favored lineage myself, I could only hope for similar recompense, as I was not to marry into Sasha's house.`,
+                                    `, but God promised to make him into a great nation. Coming from less favored lineage myself, I could only hope for similar recompense, as I was not to marry into Sasha's house.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -749,10 +754,10 @@ export default {
                                         },
                                         `were eligible to attend a summer program in the city of`,
                                         {
-                                            anchor: `Paris.`,
+                                            anchor: `Paris`,
                                             wiki: `Paris`,
                                         },
-                                        `This excited Sasha, and so it excited me as well.`,
+                                        `. This excited Sasha, and so it excited me as well.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -767,15 +772,16 @@ export default {
                                         },
                                         `began when`,
                                         {
-                                            anchor: `Paris,`,
+                                            anchor: `Paris`,
                                             wiki: `Paris_(mythology)`,
                                         },
-                                        `the prince of Troy,`,
+                                        `, the prince of Troy,`,
                                         `eloped with`,
                                         {
-                                            anchor: `Helen of Sparta.`,
+                                            anchor: `Helen of Sparta`,
                                             wiki: `Helen_of_Troy`,
                                         },
+                                        `.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -839,12 +845,12 @@ export default {
                                         anchor: `rondel`,
                                         wiki: `Rondel_(poem)`,
                                     },
-                                    `is a verse form that originated in French poetry, but it can also refer to any round object, like a ball.`,
+                                    `is a verse form that originated in French poetry, but it can also refer to any round object, like a ball. "`,
                                     {
-                                        anchor: `"The apple of one's eye"`,
+                                        anchor: `The apple of one's eye`,
                                         wiki: `Apple_of_my_eye`,
                                     },
-                                    `is an`,
+                                    `" is an`,
                                     {
                                         anchor: `Old English`,
                                         wiki: `Old_English`,
@@ -877,10 +883,10 @@ export default {
                                     },
                                     `philosopher`,
                                     {
-                                        anchor: `Zhuangzi,`,
+                                        anchor: `Zhuangzi`,
                                         wiki: `Zhuang_Zhou`,
                                     },
-                                    `who couldn't be sure upon waking from a dream if he was then a man dreaming he was a butterfly, or now a butterfly dreaming he is a man.`,
+                                    `, who couldn't be sure upon waking from a dream if he was then a man dreaming he was a butterfly, or now a butterfly dreaming he is a man.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -895,12 +901,12 @@ export default {
                             anchor: `stored in this neck`,
                             card: {
                                 description: [
-                                    `Due to another misreading, the phrase "man's swelling" in Biblical Hebrew entered the Western lexicon as`,
+                                    `Due to another misreading, the phrase "man's swelling" in Biblical Hebrew entered the Western lexicon as "`,
                                     {
-                                        anchor: `"Adam's apple."`,
+                                        anchor: `Adam's apple`,
                                         wiki: `Adam's_apple`,
                                     },
-                                    `And so an apocryphal tale began that when`,
+                                    `." And so an apocryphal tale began that when`,
                                     {
                                         anchor: `Adam`,
                                         wiki: `Adam`,
@@ -912,10 +918,10 @@ export default {
                                     },
                                     `of knowledge, a piece lodged in his throat to mark all his descendants with a reminder of their`,
                                     {
-                                        anchor: `original sin.`,
+                                        anchor: `original sin`,
                                         wiki: `Original_sin`,
                                     },
-                                    `Similarly, my knowledge of where I stood with Sasha left me to feel a permanent lump in my throat.`,
+                                    `. Similarly, my knowledge of where I stood with Sasha left me to feel a permanent lump in my throat.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -948,10 +954,10 @@ export default {
                                     },
                                     `was the Greek goddess of discord. As revenge for being denied invitation to a feast attended by the other gods, she tossed a golden apple labeled "for the fairest" into their midst. When Paris was asked to judge its rightful owner, he chose`,
                                     {
-                                        anchor: `Aphrodite,`,
+                                        anchor: `Aphrodite`,
                                         wiki: `Aphrodite`,
                                     },
-                                    `who rewarded him with the hand of Helen.`,
+                                    `, who rewarded him with the hand of Helen.`,
                                 ],
                             },
                         },
@@ -980,10 +986,10 @@ export default {
                                 description: [
                                     `Odin's remains were taken to the`,
                                     {
-                                        anchor: `Humane Society,`,
+                                        anchor: `Humane Society`,
                                         wiki: `The_Humane_Society_of_the_United_States`,
                                     },
-                                    `which offers pet`,
+                                    `, which offers pet`,
                                     {
                                         anchor: `cremation`,
                                         wiki: `Cremation`,
@@ -1095,10 +1101,10 @@ export default {
                                 description: [
                                     `In`,
                                     {
-                                        anchor: `Hippocratic medicine,`,
+                                        anchor: `Hippocratic medicine`,
                                         wiki: `Humorism`,
                                     },
-                                    `the spleen was thought to secrete black bile, the humor that induces melancholy. In modern parlance, however, the spleen is associated with a foul temper. The expressions of resentment toward the bullies that I confided to Sasha were both sad and bitter in nature.`,
+                                    `, the spleen was thought to secrete black bile, the humor that induces melancholy. In modern parlance, however, the spleen is associated with a foul temper. The expressions of resentment toward the bullies that I confided to Sasha were both sad and bitter in nature.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -1145,10 +1151,10 @@ export default {
                                     },
                                     `was a Greek prophetess who was granted immortality but not eternal youth.`,
                                     {
-                                        anchor: `T.S. Eliot's`,
+                                        anchor: `T.S. Eliot`,
                                         wiki: `T._S._Eliot`,
                                     },
-                                    `poem`,
+                                    `'s poem`,
                                     {
                                         isItalic: true,
                                         lyric: {
@@ -1255,9 +1261,10 @@ export default {
                     description: [
                         `Recording vocals in doublespeaker rhyme proved to be trickier than expected. When singing, we tend to delay or shorten syllables to adjust for phrasing and consonant clusters. So even when each voice in a doublespeaker set sounded fine on its own, the disjointed syllables would meld into a jumbled mush once heard together. To keep them in perfect sync, I ended up devising a system of notation that looked like medieval`,
                         {
-                            anchor: `ligature.`,
+                            anchor: `ligature`,
                             wiki: `Ligature_(music)`,
                         },
+                        `.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -1300,10 +1307,10 @@ export default {
                                     description: [
                                         `Those who wander a prison yard must be on constant guard against getting`,
                                         {
-                                            anchor: 'shivved,',
+                                            anchor: 'shivved',
                                             wiki: `Shiv_(weapon)`,
                                         },
-                                        `or stabbed by a makeshift weapon. Lucky for me, the schoolyard was already preparing me for a lifetime of such vigilance.`,
+                                        `, or stabbed by a makeshift weapon. Lucky for me, the schoolyard was already preparing me for a lifetime of such vigilance.`,
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
@@ -1449,10 +1456,10 @@ export default {
                                     },
                                     `related to my fear of death. My mother would try to comfort me with the promise of`,
                                     {
-                                        anchor: `reincarnation.`,
+                                        anchor: `reincarnation`,
                                         wiki: `Reincarnation`,
                                     },
-                                    `But this just scared me further, since the end goal of Buddhism is to`,
+                                    `. But this just scared me further, since the end goal of Buddhism is to`,
                                     {
                                         isEmphasis: true,
                                         lyric: `escape`,
@@ -1584,10 +1591,10 @@ export default {
                                     },
                                     `in`,
                                     {
-                                        anchor: `Aesop's fable,`,
+                                        anchor: `Aesop's fable`,
                                         wiki: `Aesop's_Fables`,
                                     },
-                                    `but only because the hare falls asleep. Similarly, while tortoises are known to live for over a century, I had them beat in longevity if I could just will myself to believe it.`,
+                                    `, but only because the hare falls asleep. Similarly, while tortoises are known to live for over a century, I had them beat in longevity if I could just will myself to believe it.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1643,10 +1650,10 @@ export default {
                                     },
                                     `led the Israelites out of slavery. By`,
                                     {
-                                        anchor: `parting the Red Sea,`,
+                                        anchor: `parting the Red Sea`,
                                         wiki: `Crossing_the_Red_Sea`,
                                     },
-                                    `he allowed them to safely cross and escape Egypt.`,
+                                    `, he allowed them to safely cross and escape Egypt.`,
                                 ],
                             },
                         },
@@ -1745,12 +1752,12 @@ export default {
                             todo: true,
                             card: {
                                 description: [
-                                    `T.S. Eliot's`,
+                                    `T.S. Eliot's "`,
                                     {
-                                        anchor: `"The Love Song of J. Alfred Prufrock"`,
+                                        anchor: `The Love Song of J. Alfred Prufrock`,
                                         wiki: `The_Love_Song_of_J._Alfred_Prufrock`,
                                     },
-                                    `examines themes of stunted growth and missed opportunities. The poem ends with the narrator bemoaning that while the mermaids may sing, they won't sing for him. And while my resignation has turned the fearsome sea serpents into smiling mermaids, they still don't smile for me.`,
+                                    `" examines themes of stunted growth and missed opportunities. The poem ends with the narrator bemoaning that while the mermaids may sing, they won't sing for him. And while my resignation has turned the fearsome sea serpents into smiling mermaids, they still don't smile for me.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1772,10 +1779,10 @@ export default {
                                     },
                                     `means "Odin's day" in Old English, and I was born on a`,
                                     {
-                                        anchor: `Thursday.`,
+                                        anchor: `Thursday`,
                                         wiki: `Thursday`,
                                     },
-                                    `So my day literally begins where Odin's day ends.`,
+                                    `. So my day literally begins where Odin's day ends.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1796,10 +1803,10 @@ export default {
                                     description: [
                                         `The`,
                                         {
-                                            anchor: `gnome,`,
+                                            anchor: `gnome`,
                                             wiki: `Gnome`,
                                         },
-                                        `a small humanoid who lives underground, is the Paracelsian elemental of earth.`,
+                                        `, a small humanoid who lives underground, is the Paracelsian elemental of earth.`,
                                     ],
                                 },
                                 {
@@ -1826,11 +1833,12 @@ export default {
                             anchor: `mile less far to go`,
                             card: {
                                 description: [
+                                    `"`,
                                     {
-                                        anchor: `"Monday's Child"`,
+                                        anchor: `Monday's Child`,
                                         wiki: `Monday's_Child`,
                                     },
-                                    `is a nursery rhyme that predicts a child's fortune based on their weekday of birth. As Thursday's child, I'm promised to have "far to go," and indeed, the distance I have left to cover feels depressingly vast. Still, I'm now one day closer than when the day began…`,
+                                    `" is a nursery rhyme that predicts a child's fortune based on their weekday of birth. As Thursday's child, I'm promised to have "far to go," and indeed, the distance I have left to cover feels depressingly vast. Still, I'm now one day closer than when the day began…`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

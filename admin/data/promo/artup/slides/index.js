@@ -67,11 +67,12 @@ export default getFormattedSlideMetadata([
             `This is why we have the word "startup," to remind us that startups are their own thing. They're not simply stores that are riskier for being less competent. A startup comes with more risk precisely because it aims to fulfill an unknown need. But if it succeeds, then it becomes the leader of a new market. And for investors, this means a greater reward.`,
         ],
         footnote: [
-            `This point is taken from Paul Graham's essay`,
+            `This point is taken from Paul Graham's essay "`,
             {
-                anchor: `"Startup = Growth."`,
+                anchor: `Startup = Growth`,
                 href: `http://www.paulgraham.com/growth.html`,
             },
+            `."`,
         ],
     },
     {

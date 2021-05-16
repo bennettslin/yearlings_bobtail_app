@@ -1,6 +1,4 @@
 # Bug
-* Terminal punctuation in hyperlinks?
-    * http://writingspaces.org/wwsg/punctuation-hyperlinks
 * Audit text.
 * Do not include terminal punctuation in italics.
 

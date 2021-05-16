@@ -77,10 +77,10 @@ export default {
                     description: [
                         `The first line of this song was originally the last line of the previous one, before I got the idea to chain them together as a`,
                         {
-                            anchor: `medley,`,
+                            anchor: `medley`,
                             wiki: `Medley_(music)`,
                         },
-                        `à la`,
+                        `, à la`,
                         {
                             isItalic: true,
                             lyric: {
@@ -145,9 +145,10 @@ export default {
                                 description: [
                                     `Driving in Miriam's car, we arrive at a secluded spot on a cliff overlooking the`,
                                     {
-                                        anchor: `San Francisco Bay.`,
+                                        anchor: `San Francisco Bay`,
                                         wiki: `San_Francisco_Bay`,
                                     },
+                                    `.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -188,10 +189,10 @@ export default {
                                 description: [
                                     `My brother was a`,
                                     {
-                                        anchor: `breech baby,`,
+                                        anchor: `breech baby`,
                                         wiki: `Breech_birth`,
                                     },
-                                    `having exited the womb bottom first rather than head first. This complicated the delivery, which my mother once hypothesized to be the cause of his autism.`,
+                                    `, having exited the womb bottom first rather than head first. This complicated the delivery, which my mother once hypothesized to be the cause of his autism.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -227,11 +228,11 @@ export default {
                                     {
                                         isItalic: true,
                                         lyric: {
-                                            anchor: `Odyssey,`,
+                                            anchor: `Odyssey`,
                                             wiki: `Odyssey`,
                                         },
                                     },
-                                    `the`,
+                                    `, the`,
                                     {
                                         anchor: `lotus-eaters`,
                                         wiki: `Lotus-eaters`,
@@ -304,10 +305,10 @@ export default {
                                     description: [
                                         `In`,
                                         {
-                                            anchor: `Freudian psychology,`,
+                                            anchor: `Freudian psychology`,
                                             wiki: `Freud's_psychoanalytic_theories`,
                                         },
-                                        `the`,
+                                        `, the`,
                                         {
                                             anchor: `id`,
                                             wiki: `Id,_ego_and_super-ego`,
@@ -386,14 +387,15 @@ export default {
                                 description: [
                                     `Affixed to the dashboard is an ornament of a native Hawaiian man in a grass skirt. As the stereo blares`,
                                     {
-                                        anchor: `Lynyrd Skynyrd's`,
+                                        anchor: `Lynyrd Skynyrd`,
                                         wiki: `Lynyrd_Skynyrd`,
                                     },
+                                    `'s "`,
                                     {
-                                        anchor: `"Freebird,"`,
+                                        anchor: `Freebird`,
                                         wiki: `Free_Bird`,
                                     },
-                                    `he strums his ukulele in rhythm to the mountain god, whose rumblings tell the legend of an all-American phoenix.`,
+                                    `," he strums his ukulele in rhythm to the mountain god, whose rumblings tell the legend of an all-American phoenix.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -465,10 +467,10 @@ export default {
                                 description: [
                                     `My mother once advised me not to have children, given my brother's autism and my father's`,
                                     {
-                                        anchor: `Asperger syndrome.`,
+                                        anchor: `Asperger syndrome`,
                                         wiki: `Asperger_syndrome`,
                                     },
-                                    `I often wondered if the women I dated had this same thought when judging my desirability as a long-term partner.`,
+                                    `. I often wondered if the women I dated had this same thought when judging my desirability as a long-term partner.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -553,9 +555,10 @@ export default {
                                 description: [
                                     `But though my drunken self is forced to adopt the faith of his sober half, this internal conflict remains invisible to onlookers, who can only watch in bewilderment as I perform my own`,
                                     {
-                                        anchor: `circumcision.`,
+                                        anchor: `circumcision`,
                                         wiki: `Circumcision`,
                                     },
+                                    `.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -684,10 +687,10 @@ export default {
                                     },
                                     `can refer to the replacement of an actor's voice in film, but also to the ritual of`,
                                     {
-                                        anchor: `conferring knighthood.`,
+                                        anchor: `conferring knighthood`,
                                         wiki: `Accolade`,
                                     },
-                                    `And so we find the dummy of my drunken half, confused by the orders he's been given to speak for my crimes, instead patting me erratically on the shoulder with a sharp sword.`,
+                                    `. And so we find the dummy of my drunken half, confused by the orders he's been given to speak for my crimes, instead patting me erratically on the shoulder with a sharp sword.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -772,12 +775,12 @@ export default {
                             todo: true,
                             card: {
                                 description: [
-                                    `Like a typo, Miriam's involvement with me was a simple mistake that she could easily correct. And like a`,
+                                    `Like a typo, Miriam's involvement with me was a simple mistake that she could easily correct. And like a "`,
                                     {
-                                        anchor: `"Type O,"`,
+                                        anchor: `Type O`,
                                         wiki: `Blood_type`,
                                     },
-                                    `the universal blood donor, I was eager to give of myself to all other types of women, yet only one of my own type was able to give as much back.`,
+                                    `," the universal blood donor, I was eager to give of myself to all other types of women, yet only one of my own type was able to give as much back.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -790,12 +793,12 @@ export default {
                             todo: true,
                             card: {
                                 description: [
-                                    `Knowing the kind of fragile ex-boyfriend I was sure to be, Miriam must have dreaded the breakup. But of course she had no choice, since who knew what horrors lurked in my genetic makeup? Perhaps I was a carrier of`,
+                                    `Knowing the kind of fragile ex-boyfriend I was sure to be, Miriam must have dreaded the breakup. But of course she had no choice, since who knew what horrors lurked in my genetic makeup? Perhaps I was a carrier of "`,
                                     {
-                                        anchor: `"Fragile X,"`,
+                                        anchor: `Fragile X`,
                                         wiki: `Fragile_X_syndrome`,
                                     },
-                                    `a mutated X chromosome that results in mental disability.`,
+                                    `," a mutated X chromosome that results in mental disability.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -816,10 +819,10 @@ export default {
                                 description: [
                                     `After Miriam helps me to my "final exit," a euphemism used by proponents of`,
                                     {
-                                        anchor: `assisted suicide,`,
+                                        anchor: `assisted suicide`,
                                         wiki: `Assisted_suicide`,
                                     },
-                                    `I imagine her helping herself to my record collection, which she'll trade for cash at a record store.`,
+                                    `, I imagine her helping herself to my record collection, which she'll trade for cash at a record store.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -842,10 +845,11 @@ export default {
                                     {
                                         isItalic: true,
                                         lyric: {
-                                            anchor: `The Selfish Gene,`,
+                                            anchor: `The Selfish Gene`,
                                             wiki: `The_Selfish_Gene`,
                                         },
                                     },
+                                    `,`,
                                     {
                                         anchor: `Richard Dawkins`,
                                         wiki: `Richard_Dawkins`,
@@ -886,19 +890,20 @@ export default {
                                 },
                             },
                         },
+                        `"`,
                         {
-                            anchor: `"Bless her`,
+                            anchor: `Bless her`,
                             card: {
                                 description: [
                                     `The title of the play`,
                                     {
                                         isItalic: true,
                                         lyric: {
-                                            anchor: `Children of a Lesser God,`,
+                                            anchor: `Children of a Lesser God`,
                                             wiki: `Children_of_a_Lesser_God_(play)`,
                                         },
                                     },
-                                    `which centers on a deaf woman, suggests that being disabled is like living in a world created by an inferior deity. But I interpreted it differently as a child. Given the autism that ran in my family, which correlated in my mind with our foreign way of worship, I assumed it meant the disabled`,
+                                    `, which centers on a deaf woman, suggests that being disabled is like living in a world created by an inferior deity. But I interpreted it differently as a child. Given the autism that ran in my family, which correlated in my mind with our foreign way of worship, I assumed it meant the disabled`,
                                     {
                                         isEmphasis: true,
                                         lyric: `themselves`,
@@ -1011,9 +1016,10 @@ export default {
                                 description: [
                                     `Based on the perceived motives of younger women who date older men, I imagine that Miriam would jump at the first chance to remove me from`,
                                     {
-                                        anchor: `life support.`,
+                                        anchor: `life support`,
                                         wiki: `Life_support`,
                                     },
+                                    `.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1110,10 +1116,10 @@ export default {
                                 description: [
                                     `The`,
                                     {
-                                        anchor: `dromedary,`,
+                                        anchor: `dromedary`,
                                         wiki: `Dromedary`,
                                     },
-                                    `or Arabian camel, has a single hump on its back, while the`,
+                                    `, or Arabian camel, has a single hump on its back, while the`,
                                     {
                                         anchor: `Bactrian camel`,
                                         wiki: `Bactrian_camel`,

@@ -66,26 +66,26 @@ export default {
                                     {
                                         isItalic: true,
                                         lyric: {
-                                            anchor: `Maravijaya,`,
+                                            anchor: `Maravijaya`,
                                             wiki: `Maravijaya_attitude`,
                                         },
                                     },
-                                    `or "victory over Mara" in`,
+                                    `, or "victory over Mara" in`,
                                     {
-                                        anchor: `Sanskrit,`,
+                                        anchor: `Sanskrit`,
                                         wiki: `Sanskrit`,
                                     },
-                                    `is the seated posture of the`,
+                                    `, is the seated posture of the`,
                                     {
                                         anchor: `Buddha`,
                                         wiki: `Gautama_Buddha`,
                                     },
                                     `as he fends off temptation from the demon`,
                                     {
-                                        anchor: `Mara,`,
+                                        anchor: `Mara`,
                                         wiki: `Mara_(demon)`,
                                     },
-                                    `who personifies death. Like the Buddha, I had to summon otherworldly reserves of self-denial to get through band practice after Jacob and Mara started dating.`,
+                                    `, who personifies death. Like the Buddha, I had to summon otherworldly reserves of self-denial to get through band practice after Jacob and Mara started dating.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -212,10 +212,10 @@ export default {
                                 description: [
                                     `Though my main goal was to be well versed in all the important subjects, I derived the most satisfaction from being able to display some random skill with seeming nonchalance, like solving a`,
                                     {
-                                        anchor: `Rubik's Cube.`,
+                                        anchor: `Rubik's Cube`,
                                         wiki: `Rubik's_Cube`,
                                     },
-                                    `So I made sure to set aside time for purely fanciful pursuits.`,
+                                    `. So I made sure to set aside time for purely fanciful pursuits.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -360,9 +360,10 @@ export default {
                     description: [
                         `Back when I was first learning to play the banjo, I would strum the motions of`,
                         {
-                            anchor: `Earl Scruggs's`,
+                            anchor: `Earl Scruggs`,
                             wiki: `Earl_Scruggs`,
                         },
+                        `'s`,
                         {
                             anchor: `three-finger roll`,
                             wiki: `Scruggs_style`,
@@ -569,10 +570,10 @@ export default {
                                     },
                                     `and its`,
                                     {
-                                        anchor: `mass weddings,`,
+                                        anchor: `mass weddings`,
                                         wiki: `Blessing_ceremony_of_the_Unification_Church`,
                                     },
-                                    `in which thousands of congregants are paired off with perfect strangers. Whenever a Moonie accosted me on campus, I would amuse myself with the thought that if I just listened to their spiel and accepted their pamphlet, then my struggle to find a romantic partner would be over in an instant.`,
+                                    `, in which thousands of congregants are paired off with perfect strangers. Whenever a Moonie accosted me on campus, I would amuse myself with the thought that if I just listened to their spiel and accepted their pamphlet, then my struggle to find a romantic partner would be over in an instant.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -774,10 +775,10 @@ export default {
                                         },
                                         `will bring good luck to a bride. But in the`,
                                         {
-                                            anchor: `Victorian era,`,
+                                            anchor: `Victorian era`,
                                             wiki: `Victorian_era`,
                                         },
-                                        `the children who cleared soot from chimneys were neglected orphans. Whatever fortunes they imparted to others, only a lifetime of ill health awaited themselves. Likewise, having helped introduce Mara to Jacob, it was now on me to get on with my wretched life.`,
+                                        `, the children who cleared soot from chimneys were neglected orphans. Whatever fortunes they imparted to others, only a lifetime of ill health awaited themselves. Likewise, having helped introduce Mara to Jacob, it was now on me to get on with my wretched life.`,
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
@@ -1060,22 +1061,22 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `My original plan was to take the puns one level further by recording this song in a`,
+                        `My original plan was to take the puns one level further by recording this song in a "`,
                         {
-                            anchor: `"Mara-iachi"`,
+                            anchor: `Mara-iachi`,
                             wiki: `Mariachi`,
                         },
-                        `style. But I decided it wouldn't fit the song's tempo and quickly scrapped it. Still, it gave me an idea to model the outro after the`,
+                        `" style. But I decided it wouldn't fit the song's tempo and quickly scrapped it. Still, it gave me an idea to model the outro after the`,
                         {
                             anchor: `Los Lobos`,
                             wiki: `Los_Lobos`,
                         },
-                        `cover version of`,
+                        `cover version of "`,
                         {
-                            anchor: `"La Bamba,"`,
+                            anchor: `La Bamba`,
                             wiki: `La_Bamba_(song)`,
                         },
-                        `which ends with an uptempo rendition played on Mexican folk instruments.`,
+                        `," which ends with an uptempo rendition played on Mexican folk instruments.`,
                     ],
                     dotKeys: {
                         [PUN]: true,

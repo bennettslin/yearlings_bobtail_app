@@ -41,14 +41,15 @@ export default {
                     description: [
                         `All through that night, I ran Sita's bracelet through my fingers as I turned over the thoughts in my head. So in writing these lyrics, I drew inspiration from famous poems that ruminate on a still-life object, like`,
                         {
-                            anchor: `John Keats's`,
+                            anchor: `John Keats`,
                             wiki: `John_Keats`,
                         },
+                        `'s "`,
                         {
-                            anchor: `"Ode on a Grecian Urn."`,
+                            anchor: `Ode on a Grecian Urn`,
                             wiki: `Ode_on_a_Grecian_Urn`,
                         },
-                        `This also gave me an obvious working title for the song, which I ended up keeping for lack of anything better.`,
+                        `." This also gave me an obvious working title for the song, which I ended up keeping for lack of anything better.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -142,10 +143,10 @@ export default {
                     description: [
                         `This song evokes the country style of my childhood hero`,
                         {
-                            anchor: `Johnny Horton.`,
+                            anchor: `Johnny Horton`,
                             wiki: `Johnny_Horton`,
                         },
-                        `His records were the first I ever owned, as they were handed down to me by my mother who adored him in her teenybopper years. None of my classmates had ever heard of him, until one day, I met another kid whose Taiwanese mother had the same obsession. So I guess Horton was big in Taiwan, though he probably never knew that, having died in a car accident at the peak of his fame.`,
+                        `. His records were the first I ever owned, as they were handed down to me by my mother who adored him in her teenybopper years. None of my classmates had ever heard of him, until one day, I met another kid whose Taiwanese mother had the same obsession. So I guess Horton was big in Taiwan, though he probably never knew that, having died in a car accident at the peak of his fame.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -226,10 +227,10 @@ export default {
                         },
                         `on the lead acoustic guitar that would allow every note of its melody to be plucked as a`,
                         {
-                            anchor: `natural harmonic.`,
+                            anchor: `natural harmonic`,
                             wiki: `Guitar_harmonics`,
                         },
-                        `I didn't account for the need to move my fingers quickly from one note to the next, however, so I had to record each part in multiple short takes.`,
+                        `. I didn't account for the need to move my fingers quickly from one note to the next, however, so I had to record each part in multiple short takes.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -351,9 +352,10 @@ export default {
                     description: [
                         `Just as the citizens of`,
                         {
-                            anchor: `George Orwell's`,
+                            anchor: `George Orwell`,
                             wiki: `George_Orwell`,
                         },
+                        `'s`,
                         {
                             isItalic: true,
                             lyric: {
@@ -368,10 +370,10 @@ export default {
                         },
                         `to accept the propaganda of`,
                         {
-                            anchor: `Newspeak,`,
+                            anchor: `Newspeak`,
                             wiki: `Newspeak`,
                         },
-                        `I could only make sense of the breakup by reconciling the contradictions in my head. So this song uses doublespeaker rhyme— which I'd named partly for its Orwellian undertone— to depict the inner conflict between my sober self and his drunken alter ego.`,
+                        `, I could only make sense of the breakup by reconciling the contradictions in my head. So this song uses doublespeaker rhyme— which I'd named partly for its Orwellian undertone— to depict the inner conflict between my sober self and his drunken alter ego.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -401,9 +403,10 @@ export default {
                                     },
                                     `scanning a town's`,
                                     {
-                                        anchor: `wanted posters.`,
+                                        anchor: `wanted posters`,
                                         wiki: `Wanted_poster`,
                                     },
+                                    `.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -712,12 +715,12 @@ export default {
                                 anchor: `Mush`,
                                 card: {
                                     description: [
-                                        `Marching onward without sleep, I continue to strip away the intervening years, hoping to return to the last time I'd known untroubled bliss. And so I arrive at the first song I loved as a child, Johnny Horton's`,
+                                        `Marching onward without sleep, I continue to strip away the intervening years, hoping to return to the last time I'd known untroubled bliss. And so I arrive at the first song I loved as a child, Johnny Horton's "`,
                                         {
-                                            anchor: `"North to Alaska,"`,
+                                            anchor: `North to Alaska`,
                                             wiki: `North_to_Alaska_(song)`,
                                         },
-                                        `in which backup singers call out to their sled dogs, and wooden bowls evoke the clip-clopping of a horse's gait.`,
+                                        `," in which backup singers call out to their sled dogs, and wooden bowls evoke the clip-clopping of a horse's gait.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -810,12 +813,12 @@ export default {
                                         anchor: `Oscar Wilde`,
                                         wiki: `Oscar_Wilde`,
                                     },
-                                    `witnessed the execution of a man convicted of murdering his wife. Sympathizing with the man's plight, Wilde wrote his poem`,
+                                    `witnessed the execution of a man convicted of murdering his wife. Sympathizing with the man's plight, Wilde wrote his poem "`,
                                     {
-                                        anchor: `"The Ballad of Reading Gaol,"`,
+                                        anchor: `The Ballad of Reading Gaol`,
                                         wiki: `The_Ballad_of_Reading_Gaol`,
                                     },
-                                    `which finds a common thread tying the man's crime to his own— and to all of humanity's— with its refrain, "For each man kills the thing he loves."`,
+                                    `," which finds a common thread tying the man's crime to his own— and to all of humanity's— with its refrain, "For each man kills the thing he loves."`,
                                 ],
                             },
                         },
@@ -856,11 +859,11 @@ export default {
                                     {
                                         isItalic: true,
                                         lyric: {
-                                            anchor: `Übermensch,`,
+                                            anchor: `Übermensch`,
                                             wiki: `Übermensch`,
                                         },
                                     },
-                                    `or "overhuman," as an ideal of perfection toward which humanity might strive. I equated this with my goal to become a great artist. But since my underlying motive for creating great works was to be loved by scores of women, it then followed that the perfect version of myself could only be realized by having a cheating heart.`,
+                                    `, or "overhuman," as an ideal of perfection toward which humanity might strive. I equated this with my goal to become a great artist. But since my underlying motive for creating great works was to be loved by scores of women, it then followed that the perfect version of myself could only be realized by having a cheating heart.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -917,12 +920,12 @@ export default {
                             anchor: `frayed cord detached`,
                             card: {
                                 description: [
-                                    `In antiquity, legend held that whosoever could unravel the tightly entangled`,
+                                    `In antiquity, legend held that whosoever could unravel the tightly entangled "`,
                                     {
-                                        anchor: `"Gordian Knot"`,
+                                        anchor: `Gordian Knot`,
                                         wiki: `Gordian_Knot`,
                                     },
-                                    `would rule all of Asia.`,
+                                    `" would rule all of Asia.`,
                                     {
                                         anchor: `Alexander the Great`,
                                         wiki: `Alexander_the_Great`,
@@ -949,10 +952,10 @@ export default {
                                 description: [
                                     `Out of frustration over conflicting desires, I start punching myself in the head, as if each half of my brain is attacking the other using the one fist under its command. Since the right hemisphere`,
                                     {
-                                        anchor: `controls the left side,`,
+                                        anchor: `controls the left side`,
                                         wiki: `Contralateral_brain`,
                                     },
-                                    `of course, and the left one the right.`,
+                                    `, of course, and the left one the right.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1072,10 +1075,10 @@ export default {
                                 description: [
                                     `In college, I discovered that being drunk made it easier to do arduous tasks like writing`,
                                     {
-                                        anchor: `term papers,`,
+                                        anchor: `term papers`,
                                         wiki: `Term_paper`,
                                     },
-                                    `and so I would shunt the work to my drunken self. But once drunk, I felt like a slave having to take orders from his sober master, and I would do the work poorly or not at all. Somehow this became the strategy I used to deal with the arduous task of breaking up with Sita.`,
+                                    `, and so I would shunt the work to my drunken self. But once drunk, I felt like a slave having to take orders from his sober master, and I would do the work poorly or not at all. Somehow this became the strategy I used to deal with the arduous task of breaking up with Sita.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -1139,10 +1142,10 @@ export default {
                                 description: [
                                     `In the`,
                                     {
-                                        anchor: `Quran,`,
+                                        anchor: `Quran`,
                                         wiki: `Quran`,
                                     },
-                                    `the`,
+                                    `, the`,
                                     {
                                         anchor: `houris`,
                                         wiki: `Houri`,

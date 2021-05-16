@@ -59,7 +59,10 @@ const _replaceStraightWithSmartQuotes = text => {
                     text[indexOfCharacter - 1] === ' '
                 ) ||
 
-                // ... or an opening parenthesis.
+                // Or it's the only character. "Monday's Child," among others.
+                text.length === 1 ||
+
+                // ... or it's preceded by an opening parenthesis.
                 text[indexOfCharacter - 1] === '('
             ) ? openingSmartQuote : closingSmartQuote
 
@@ -91,12 +94,14 @@ const _recurseForSmartQuoteFormat = textEntity => {
         const newEntity = {}
 
         for (const key in textEntity) {
-            if (key === 'isItalic') {
-                // if (isString(textEntity.lyric) && hasSpecialCharacterAtIndex(textEntity.lyric, textEntity.lyric.length - 1)) {
-                //     console.error(textEntity.lyric)
-                // }
-                if (isString(textEntity.lyric) && textEntity.lyric.endsWith(`"`)) {
-                    console.error(textEntity.lyric)
+            if (key === 'anchor') {
+                if (isString(textEntity.anchor) && !textEntity.anchor[0].match(/[A-Za-z0-9]/g)) {
+                    console.error(textEntity.anchor)
+                }
+
+                const lastIndex = textEntity.anchor.length - 1
+                if (isString(textEntity.anchor) && !textEntity.anchor[lastIndex].match(/[A-Za-z0-9]/g)) {
+                    console.error(textEntity.anchor)
                 }
             }
 

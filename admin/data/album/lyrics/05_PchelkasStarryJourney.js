@@ -48,10 +48,10 @@ export default {
                     description: [
                         `Pchelka and Mushka were dogs sent into orbit under the`,
                         {
-                            anchor: `Soviet space program.`,
+                            anchor: `Soviet space program`,
                             wiki: `Soviet_space_dogs`,
                         },
-                        `In this allegorical retelling, I imagine myself as Pchelka and my brother as Mushka.`,
+                        `. In this allegorical retelling, I imagine myself as Pchelka and my brother as Mushka.`,
                     ],
                     dotKeys: {
                         [OBSERVATION]: true,
@@ -77,10 +77,10 @@ export default {
                                     description: [
                                         `In`,
                                         {
-                                            anchor: `Leonard Cohen's`,
+                                            anchor: `Leonard Cohen`,
                                             wiki: `Leonard_Cohen`,
                                         },
-                                        `otherwise tragic`,
+                                        `'s otherwise tragic`,
                                         {
                                             isItalic: true,
                                             lyric: {
@@ -146,10 +146,10 @@ export default {
                         },
                         `is a Russian republic, I also added`,
                         {
-                            anchor: `Tuvan throat singing,`,
+                            anchor: `Tuvan throat singing`,
                             wiki: `Tuvan_throat_singing`,
                         },
-                        `where overtones in a lone voice sound like accompaniment by a second voice. I liked the implied notion that my brother sings along with me in spirit.`,
+                        `, where overtones in a lone voice sound like accompaniment by a second voice. I liked the implied notion that my brother sings along with me in spirit.`,
                     ],
                     dotKeys: {
                         [OBSERVATION]: true,
@@ -404,10 +404,10 @@ export default {
                                 description: [
                                     `In a well-known comic book advertisement at the time, a scrawny guy takes revenge on a bully after learning to build up his muscles, all thanks to`,
                                     {
-                                        anchor: `Charles Atlas's`,
+                                        anchor: `Charles Atlas`,
                                         wiki: `Charles_Atlas`,
                                     },
-                                    `free`,
+                                    `'s free`,
                                     {
                                         anchor: `bodybuilding`,
                                         wiki: `Bodybuilding`,
@@ -459,10 +459,10 @@ export default {
                                 description: [
                                     `In East Asian cultures, relatives give money to children in`,
                                     {
-                                        anchor: `red envelopes.`,
+                                        anchor: `red envelopes`,
                                         wiki: `Red_envelope`,
                                     },
-                                    `My parents always insisted that we save this money for college. But desperate for answers, I blew all my savings on my correspondence with RI Research.`,
+                                    `. My parents always insisted that we save this money for college. But desperate for answers, I blew all my savings on my correspondence with RI Research.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -486,8 +486,9 @@ export default {
                 {
                     mixTime: `1:10:28.89`,
                     lyric: [
+                        `"`,
                         {
-                            anchor: `"Are you a Beyonder`,
+                            anchor: `Are you a Beyonder`,
                             card: {
                                 description: `According to RI Research, Beyonders are an ancient race of beings born from the stars and scattered across the universe with no memory of their true origin. Those who made it to Earth adopted the likeness of human beings, yet they're beset by a nagging disquiet that they do not truly belong.`,
                                 dotKeys: {
@@ -535,10 +536,10 @@ export default {
                                         },
                                         `by inventing the`,
                                         {
-                                            anchor: `liquid-fueled rocket.`,
+                                            anchor: `liquid-fueled rocket`,
                                             wiki: `Liquid-propellant_rocket`,
                                         },
-                                        `Unfortunately in my case, I couldn't wait for a more promising age to arrive on its own. Middle school was brutal and felt endless, and I needed answers right then.`,
+                                        `. Unfortunately in my case, I couldn't wait for a more promising age to arrive on its own. Middle school was brutal and felt endless, and I needed answers right then.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -609,10 +610,10 @@ export default {
                                         },
                                         `and`,
                                         {
-                                            anchor: `Estragon,`,
+                                            anchor: `Estragon`,
                                             wiki: `Estragon`,
                                         },
-                                        `the two tramps who are still waiting for Godot at the end of Beckett's play.`,
+                                        `, the two tramps who are still waiting for Godot at the end of Beckett's play.`,
                                     ],
                                 },
                             ],
@@ -630,10 +631,10 @@ export default {
                                 description: [
                                     `Some of the dogs chosen for the Soviet space program were strays found on the streets of Moscow. This includes`,
                                     {
-                                        anchor: `Laika,`,
+                                        anchor: `Laika`,
                                         wiki: `Laika`,
                                     },
-                                    `the first dog in orbit, whose death was intentional as her spacecraft wasn't designed to return. I could sympathize with Laika's plight of being helplessly thrust from one desperate circumstance to the next.`,
+                                    `, the first dog in orbit, whose death was intentional as her spacecraft wasn't designed to return. I could sympathize with Laika's plight of being helplessly thrust from one desperate circumstance to the next.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -684,15 +685,15 @@ export default {
                                         },
                                         `and`,
                                         {
-                                            anchor: `Canis Minor,`,
+                                            anchor: `Canis Minor`,
                                             wiki: `Canis_Minor`,
                                         },
-                                        `or "greater dog" and "lesser dog," are said to follow that of`,
+                                        `, or "greater dog" and "lesser dog," are said to follow that of`,
                                         {
-                                            anchor: `Orion,`,
+                                            anchor: `Orion`,
                                             wiki: `Orion_(constellation)`,
                                         },
-                                        `named after`,
+                                        `, named after`,
                                         {
                                             anchor: `the hunter`,
                                             wiki: `Orion_(mythology)`,
@@ -841,11 +842,11 @@ export default {
                         {
                             isItalic: true,
                             lyric: {
-                                anchor: `Genghis Blues.`,
+                                anchor: `Genghis Blues`,
                                 wiki: `Genghis_Blues`,
                             },
                         },
-                        `Within a week, I was able to sound out the main partials, which impressed her greatly. My life ever since has been all about recapturing that moment.`,
+                        `. Within a week, I was able to sound out the main partials, which impressed her greatly. My life ever since has been all about recapturing that moment.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -900,17 +901,17 @@ export default {
                             anchor: `cast here in pollens`,
                             card: {
                                 description: [
-                                    `In Greek mythology,`,
+                                    `In Greek mythology, "`,
                                     {
-                                        anchor: `"Castor and Pollux"`,
+                                        anchor: `Castor and Pollux`,
                                         wiki: `Castor_and_Pollux`,
                                     },
-                                    `were twin brothers fathered by Zeus. Castor was mortal, so after his death, Pollux pleaded with Zeus to let him share his immortality with his twin. Thus they were transformed into the constellation`,
+                                    `" were twin brothers fathered by Zeus. Castor was mortal, so after his death, Pollux pleaded with Zeus to let him share his immortality with his twin. Thus they were transformed into the constellation`,
                                     {
-                                        anchor: `Gemini.`,
+                                        anchor: `Gemini`,
                                         wiki: `Gemini_(constellation)`,
                                     },
-                                    `Similarly, I felt as if my brother were sharing his autism with me, along with its spiritual answers.`,
+                                    `. Similarly, I felt as if my brother were sharing his autism with me, along with its spiritual answers.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -972,10 +973,10 @@ export default {
                                     },
                                     `is the`,
                                     {
-                                        anchor: `Mafia's`,
+                                        anchor: `Mafia`,
                                         wiki: `American_Mafia`,
                                     },
-                                    `code of silence that discourages cooperation with authorities. I'm sure I wasn't the first kid who noticed parallels between the unspoken rules of the schoolyard and those of the criminal world.`,
+                                    `'s code of silence that discourages cooperation with authorities. I'm sure I wasn't the first kid who noticed parallels between the unspoken rules of the schoolyard and those of the criminal world.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1053,15 +1054,15 @@ export default {
                                 description: [
                                     `Since a`,
                                     {
-                                        anchor: `spy's`,
+                                        anchor: `spy`,
                                         wiki: `Espionage`,
                                     },
-                                    `success hinges upon staying hidden, their exploits can never be appreciated until they're caught and made to face the`,
+                                    `'s success hinges upon staying hidden, their exploits can never be appreciated until they're caught and made to face the`,
                                     {
-                                        anchor: `firing squad.`,
+                                        anchor: `firing squad`,
                                         wiki: `Execution_by_firing_squad`,
                                     },
-                                    `Similarly, at some point my desire to be part of a friendly squad caused me to open up and thus sabotage my past efforts to be unresponsive. But this only exposed me to greater scrutiny, as I was now forced to explain myself.`,
+                                    `. Similarly, at some point my desire to be part of a friendly squad caused me to open up and thus sabotage my past efforts to be unresponsive. But this only exposed me to greater scrutiny, as I was now forced to explain myself.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -1106,9 +1107,10 @@ export default {
                                         },
                                         `in the Russian`,
                                         {
-                                            anchor: `tundra.`,
+                                            anchor: `tundra`,
                                             wiki: `Tundra`,
                                         },
+                                        `.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -1118,10 +1120,10 @@ export default {
                                     description: [
                                         `Upon their arrival in the`,
                                         {
-                                            anchor: `New World,`,
+                                            anchor: `New World`,
                                             wiki: `New_World`,
                                         },
-                                        `the`,
+                                        `, the`,
                                         {
                                             anchor: `French`,
                                             wiki: `France`,
@@ -1131,34 +1133,35 @@ export default {
                                             isItalic: true,
                                             lyric: `marche`,
                                         },
-                                        `," meaning "go," which continued in English as`,
+                                        `," meaning "go," which continued in English as "`,
                                         {
-                                            anchor: `"mush."`,
+                                            anchor: `mush`,
                                             wiki: `Mushing`,
                                         },
+                                        `."`,
                                     ],
                                 },
                             ],
                         },
                         `,`,
                         {
-                            anchor: `Mushka's`,
+                            anchor: `Mushka`,
                             properNoun: true,
                             card: {
                                 description: [
                                     `While Pchelka and Mushka successfully spent a day in orbit aboard`,
                                     {
-                                        anchor: `Sputnik 6,`,
+                                        anchor: `Sputnik 6`,
                                         wiki: `Korabl-Sputnik_3`,
                                     },
-                                    `there was an error upon reentry. To prevent the spacecraft from landing in hostile territory, the Soviets made it self-destruct, killing all aboard. But in my retelling, I as Pchelka somehow manage to avoid the sad fate that my brother as Mushka could not.`,
+                                    `, there was an error upon reentry. To prevent the spacecraft from landing in hostile territory, the Soviets made it self-destruct, killing all aboard. But in my retelling, I as Pchelka somehow manage to avoid the sad fate that my brother as Mushka could not.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
                             },
                         },
-                        `dragged by collar`,
+                        `'s dragged by collar`,
                     ],
                 },
                 {
@@ -1171,15 +1174,15 @@ export default {
                                 description: [
                                     `I wrote this song during the peak of my activism with the`,
                                     {
-                                        anchor: `animal rights movement,`,
+                                        anchor: `animal rights movement`,
                                         wiki: `Animal_rights_movement`,
                                     },
-                                    `which takes a dim view of`,
+                                    `, which takes a dim view of`,
                                     {
-                                        anchor: `sled dog racing.`,
+                                        anchor: `sled dog racing`,
                                         wiki: `Sled_dog_racing`,
                                     },
-                                    `Not only are dogs routinely abandoned or killed when they outlive their usefulness, but the race itself is grueling enough to cause death by overexertion.`,
+                                    `. Not only are dogs routinely abandoned or killed when they outlive their usefulness, but the race itself is grueling enough to cause death by overexertion.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1193,15 +1196,15 @@ export default {
                                 description: [
                                     `During summer in the`,
                                     {
-                                        anchor: `Arctic,`,
+                                        anchor: `Arctic`,
                                         wiki: `Arctic`,
                                     },
-                                    `the`,
+                                    `, the`,
                                     {
-                                        anchor: `sun never sets.`,
+                                        anchor: `sun never sets`,
                                         wiki: `Midnight_sun`,
                                     },
-                                    `Instead, it remains visible just above the horizon.`,
+                                    `. Instead, it remains visible just above the horizon.`,
                                 ],
                             },
                         },
@@ -1232,17 +1235,17 @@ export default {
                             anchor: `idiot's rod`,
                             card: {
                                 description: [
-                                    `The`,
+                                    `The "`,
                                     {
-                                        anchor: `"Iditarod"`,
+                                        anchor: `Iditarod`,
                                         wiki: `Iditarod_Trail_Sled_Dog_Race`,
                                     },
-                                    `is an annual sled dog race held in`,
+                                    `" is an annual sled dog race held in`,
                                     {
-                                        anchor: `Alaska.`,
+                                        anchor: `Alaska`,
                                         wiki: `Alaska`,
                                     },
-                                    `Some mushers use a whip to keep the pack disciplined.`,
+                                    `. Some mushers use a whip to keep the pack disciplined.`,
                                 ],
                                 dotKeys: {
                                     [PUN]: true,
@@ -1267,10 +1270,10 @@ export default {
                                     },
                                     `injection is the most humane means of`,
                                     {
-                                        anchor: `euthanasia.`,
+                                        anchor: `euthanasia`,
                                         wiki: `Euthanasia`,
                                     },
-                                    `No such kindness was prepared for Laika, whose death by heat exhaustion had been expected all along.`,
+                                    `. No such kindness was prepared for Laika, whose death by heat exhaustion had been expected all along.`,
                                 ],
                             },
                         },
@@ -1347,14 +1350,15 @@ export default {
                 card: {
                     description: [
                         {
-                            anchor: `David Bowie's`,
+                            anchor: `David Bowie`,
                             wiki: `David_Bowie`,
                         },
+                        `'s "`,
                         {
-                            anchor: `"Space Oddity"`,
+                            anchor: `Space Oddity`,
                             wiki: `Space_Oddity`,
                         },
-                        `closes with a free-form instrumental outro that evokes the sound of failing radio transmissions. I aimed for a similar effect by scraping the strings of an electric guitar against the pickup, and by bouncing a metal rod on a single string near the bridge.`,
+                        `" closes with a free-form instrumental outro that evokes the sound of failing radio transmissions. I aimed for a similar effect by scraping the strings of an electric guitar against the pickup, and by bouncing a metal rod on a single string near the bridge.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,

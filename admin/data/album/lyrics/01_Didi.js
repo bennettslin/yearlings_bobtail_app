@@ -43,10 +43,10 @@ export default {
                     description: [
                         `My parents immigrated to the United States from the island of`,
                         {
-                            anchor: `Taiwan.`,
+                            anchor: `Taiwan`,
                             wiki: `Taiwan`,
                         },
-                        `When the`,
+                        `. When the`,
                         {
                             anchor: `Chinese`,
                             wiki: `China`,
@@ -102,12 +102,12 @@ export default {
                             anchor: `glockenspiel`,
                             wiki: `Glockenspiel`,
                         },
-                        `melody. I was also hoping to recreate the atmosphere of childlike wonder heard in the opening measures of`,
+                        `melody. I was also hoping to recreate the atmosphere of childlike wonder heard in the opening measures of "`,
                         {
-                            anchor: `"Wouldn't It Be Nice,"`,
+                            anchor: `Wouldn't It Be Nice`,
                             wiki: `Wouldn't_It_Be_Nice`,
                         },
-                        `the first song of the`,
+                        `," the first song of the`,
                         {
                             anchor: `Beach Boys`,
                             wiki: `The_Beach_Boys`,
@@ -116,11 +116,11 @@ export default {
                         {
                             isItalic: true,
                             lyric: {
-                                anchor: `Pet Sounds,`,
+                                anchor: `Pet Sounds`,
                                 wiki: `Pet_Sounds`,
                             },
                         },
-                        `which explores the theme of youthful innocence.`,
+                        `, which explores the theme of youthful innocence.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -162,15 +162,15 @@ export default {
                                     description: [
                                         `In preschool, we were taught to tie our shoes by making the`,
                                         {
-                                            anchor: `bunny criss-cross the tree.`,
+                                            anchor: `bunny criss-cross the tree`,
                                             wiki: `Shoelace_knot`,
                                         },
-                                        `But being`,
+                                        `. But being`,
                                         {
-                                            anchor: `left-handed,`,
+                                            anchor: `left-handed`,
                                             wiki: `Handedness`,
                                         },
-                                        `I was never clear on which hand should hold the bunny. My shoelaces always came undone as a result.`,
+                                        `, I was never clear on which hand should hold the bunny. My shoelaces always came undone as a result.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -214,11 +214,11 @@ export default {
                         {
                             isItalic: true,
                             lyric: {
-                                anchor: `A Portrait of the Artist as a Young Man,`,
+                                anchor: `A Portrait of the Artist as a Young Man`,
                                 wiki: `A_Portrait_of_the_Artist_as_a_Young_Man`,
                             },
                         },
-                        `begins in the simple prose of a child, I decided to do the same on this opening song.`,
+                        `, begins in the simple prose of a child, I decided to do the same on this opening song.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -293,10 +293,10 @@ export default {
                     description: [
                         `I wanted this song to capture the flurry of activity and transience of emotion that a child experiences from one day to the next. So as the rhythm lurches to and from a`,
                         {
-                            anchor: `half-time beat,`,
+                            anchor: `half-time beat`,
                             wiki: `Half-time_(music)`,
                         },
-                        `the chord progression quickly modulates between the`,
+                        `, the chord progression quickly modulates between the`,
                         {
                             anchor: `distantly related keys`,
                             wiki: `Closely_related_key`,
@@ -346,10 +346,10 @@ export default {
                                     description: [
                                         `The nurse placed my soiled pants in a grocery bag for me to take home. The bag may or may not have been from`,
                                         {
-                                            anchor: `Safeway,`,
+                                            anchor: `Safeway`,
                                             wiki: `Safeway_Inc.`,
                                         },
-                                        `a local supermarket chain.`,
+                                        `, a local supermarket chain.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -464,9 +464,10 @@ export default {
                                     },
                                     `records and sharing her fondness for old`,
                                     {
-                                        anchor: `Westerns.`,
+                                        anchor: `Westerns`,
                                         wiki: `Western_(genre)`,
                                     },
+                                    `.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -538,10 +539,10 @@ export default {
                         },
                         `that characterize`,
                         {
-                            anchor: `children's music,`,
+                            anchor: `children's music`,
                             wiki: `Children's_music`,
                         },
-                        `I dampened the lead`,
+                        `, I dampened the lead`,
                         {
                             anchor: `guitar`,
                             wiki: `Guitar`,
@@ -633,10 +634,10 @@ export default {
                     description: [
                         `A, C, and E\u2011flat, the three keys heard thus far, also comprise three of the four major triads of an`,
                         {
-                            anchor: `octatonic collection.`,
+                            anchor: `octatonic collection`,
                             wiki: `Octatonic_scale`,
                         },
-                        `The song now ends on G\u2011flat, the remaining major triad, to suggest the excitement of undiscovered vistas awaiting a young child.`,
+                        `. The song now ends on G\u2011flat, the remaining major triad, to suggest the excitement of undiscovered vistas awaiting a young child.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,

@@ -60,10 +60,10 @@ export default {
                             },
                             `had won`,
                             {
-                                anchor: `World War II.`,
+                                anchor: `World War II`,
                                 wiki: `World_War_II`,
                             },
-                            `Curiously, the characters in this book are engrossed in their own alternate history novel called`,
+                            `. Curiously, the characters in this book are engrossed in their own alternate history novel called`,
                             {
                                 isItalic: true,
                                 lyric: `The Grasshopper Lies Heavy`,
@@ -163,10 +163,10 @@ export default {
                             card: {
                                 description: [
                                     {
-                                        anchor: `Gun molls,`,
+                                        anchor: `Gun molls`,
                                         wiki: `Gun_moll`,
                                     },
-                                    `the female companions of famous mobsters, were both romanticized by society and feared for their exploits. Likewise, I desired the girls who hung out with the boys who bullied me, which made their contempt for me harder to stomach.`,
+                                    `, the female companions of famous mobsters, were both romanticized by society and feared for their exploits. Likewise, I desired the girls who hung out with the boys who bullied me, which made their contempt for me harder to stomach.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -194,9 +194,10 @@ export default {
                                     description: [
                                         `In 19th-century England, a market emerged for cheap, sensational novellas, which the highbrow derided as`,
                                         {
-                                            anchor: `penny dreadfuls.`,
+                                            anchor: `penny dreadfuls`,
                                             wiki: `Penny_dreadful`,
                                         },
+                                        `.`,
                                     ],
                                 },
                             ],
@@ -285,15 +286,15 @@ export default {
                                 description: [
                                     `As a`,
                                     {
-                                        anchor: `diabetic,`,
+                                        anchor: `diabetic`,
                                         wiki: `Diabetes`,
                                     },
-                                    `Sita regularly checked her blood sugar level before meals by pricking her finger with a`,
+                                    `, Sita regularly checked her blood sugar level before meals by pricking her finger with a`,
                                     {
-                                        anchor: `lancing device.`,
+                                        anchor: `lancing device`,
                                         wiki: `Blood_glucose_monitoring`,
                                     },
-                                    `That day, she forgot to take it with her after bussing her tray.`,
+                                    `. That day, she forgot to take it with her after bussing her tray.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -692,9 +693,10 @@ export default {
                                 description: [
                                     `After a grueling shift, I then had to make the long slog back home. So it would have been hard to feel gracious toward any nighttime jogger passing me by and feeling the euphoria of a`,
                                     {
-                                        anchor: `runner's high.`,
+                                        anchor: `runner's high`,
                                         wiki: `Neurobiological_effects_of_physical_exercise`,
                                     },
+                                    `.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -715,10 +717,10 @@ export default {
                                 description: [
                                     `In those days, I was almost never without my`,
                                     {
-                                        anchor: `Walkman,`,
+                                        anchor: `Walkman`,
                                         wiki: `Walkman`,
                                     },
-                                    `a portable cassette player. So if I ever wished pratfalls upon others, I could just pretend to be absorbed in my music, much like a child ducking beneath a window after pulling a prank.`,
+                                    `, a portable cassette player. So if I ever wished pratfalls upon others, I could just pretend to be absorbed in my music, much like a child ducking beneath a window after pulling a prank.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -915,10 +917,10 @@ export default {
                                     description: [
                                         `Lying on my bed is an open jar of`,
                                         {
-                                            anchor: `Vaseline,`,
+                                            anchor: `Vaseline`,
                                             wiki: `Vaseline`,
                                         },
-                                        `which I clearly used recently to masturbate.`,
+                                        `, which I clearly used recently to masturbate.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -956,9 +958,10 @@ export default {
                     description: [
                         `For me, the highlight of`,
                         {
-                            anchor: `Nirvana's`,
+                            anchor: `Nirvana`,
                             wiki: `Nirvana_(band)`,
                         },
+                        `'s`,
                         {
                             isItalic: true,
                             lyric: {
@@ -1283,9 +1286,10 @@ export default {
                     description: [
                         `The ascending chord progression of this coda initially suggests a blossoming relationship. Toward the end, it symbolizes`,
                         {
-                            anchor: `sexual climax.`,
+                            anchor: `sexual climax`,
                             wiki: `Orgasm`,
                         },
+                        `.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -1325,10 +1329,10 @@ export default {
                                         },
                                         `was a lighthouse keeper's daughter who rescued the survivors of a shipwreck by paddling out to sea in a rowboat. This brave feat won her renown in the Victorian era, but the consequent public exposure led to her early death by`,
                                         {
-                                            anchor: `tuberculosis.`,
+                                            anchor: `tuberculosis`,
                                             wiki: `Tuberculosis`,
                                         },
-                                        `And as Sita comforts me, I'm reminded that she's my "grace darling," having rescued me from a sea of loneliness.`,
+                                        `. And as Sita comforts me, I'm reminded that she's my "grace darling," having rescued me from a sea of loneliness.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -1347,15 +1351,15 @@ export default {
                                 description: [
                                     `Or else, fell "Lenore."`,
                                     {
-                                        anchor: `Edgar Allan Poe's`,
+                                        anchor: `Edgar Allan Poe`,
                                         wiki: `Edgar_Allan_Poe`,
                                     },
-                                    `wife also died from tuberculosis at a young age. Her prolonged illness likely inspired his poem`,
+                                    `'s wife also died from tuberculosis at a young age. Her prolonged illness likely inspired his poem "`,
                                     {
-                                        anchor: `"The Raven,"`,
+                                        anchor: `The Raven`,
                                         wiki: `The_Raven`,
                                     },
-                                    `in which the narrator laments the loss of his beloved Lenore.`,
+                                    `," in which the narrator laments the loss of his beloved Lenore.`,
                                 ],
                                 dotKeys: {
                                     [PUN]: true,
@@ -1400,10 +1404,10 @@ export default {
                                 description: [
                                     `Referring to her literal`,
                                     {
-                                        anchor: `temples.`,
+                                        anchor: `temples`,
                                         wiki: `Temple_(anatomy)`,
                                     },
-                                    `But possibly to her figurative ones as well.`,
+                                    `. But possibly to her figurative ones as well.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1455,11 +1459,11 @@ export default {
                         {
                             isItalic: true,
                             lyric: {
-                                anchor: `la petite mort,`,
+                                anchor: `la petite mort`,
                                 wiki: `La_petite_mort`,
                             },
                         },
-                        `which translates to "the little death," refers to a feeling of melancholic transcendence after orgasm. So as the chords continue to rise, the lead guitar plays a falling riff, before everything cuts away to Odin's theme, a reminder of the house cat that died in my youth.`,
+                        `, which translates to "the little death," refers to a feeling of melancholic transcendence after orgasm. So as the chords continue to rise, the lead guitar plays a falling riff, before everything cuts away to Odin's theme, a reminder of the house cat that died in my youth.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,

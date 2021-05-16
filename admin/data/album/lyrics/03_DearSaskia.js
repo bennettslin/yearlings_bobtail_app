@@ -340,10 +340,10 @@ export default {
                                 description: [
                                     `Every boy that Sasha crushed on was`,
                                     {
-                                        anchor: `Jewish,`,
+                                        anchor: `Jewish`,
                                         wiki: `Judaism`,
                                     },
-                                    `which in turn motivated her to be a better Jew. It frustrated me that since I could never help strengthen her faith, I would always be at a disadvantage in "getting her."`,
+                                    `, which in turn motivated her to be a better Jew. It frustrated me that since I could never help strengthen her faith, I would always be at a disadvantage in "getting her."`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -381,9 +381,10 @@ export default {
                         },
                         `and`,
                         {
-                            anchor: `woodwind screeches.`,
+                            anchor: `woodwind screeches`,
                             wiki: `Overblowing`,
                         },
+                        `.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -420,10 +421,10 @@ export default {
                                 description: [
                                     `I panicked when Sasha was allowed to`,
                                     {
-                                        anchor: `skip a grade,`,
+                                        anchor: `skip a grade`,
                                         wiki: `Grade_skipping`,
                                     },
-                                    `as this opened new vistas for her that necessarily excluded me. I continued to be reminded of this in middle school, as Sasha effortlessly navigated the same social landscape that I found so treacherous.`,
+                                    `, as this opened new vistas for her that necessarily excluded me. I continued to be reminded of this in middle school, as Sasha effortlessly navigated the same social landscape that I found so treacherous.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -443,15 +444,15 @@ export default {
                                 description: [
                                     `My family lived in the racially diverse, working-class neighborhood of`,
                                     {
-                                        anchor: `North Hollywood.`,
+                                        anchor: `North Hollywood`,
                                         wiki: `North_Hollywood,_Los_Angeles`,
                                     },
-                                    `Halfway through elementary school, my mother devised a ruse that allowed my sister and I to bus into`,
+                                    `. Halfway through elementary school, my mother devised a ruse that allowed my sister and I to bus into`,
                                     {
-                                        anchor: `Sherman Oaks,`,
+                                        anchor: `Sherman Oaks`,
                                         wiki: `Sherman_Oaks,_Los_Angeles`,
                                     },
-                                    `a wealthy district with few minorities. I remember feeling out of my element, but at the time I didn't quite know why.`,
+                                    `, a wealthy district with few minorities. I remember feeling out of my element, but at the time I didn't quite know why.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -512,12 +513,12 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `As I continue writing the letter, I also recall an incident where Sasha came to my rescue after some bullies had tied me to a`,
+                                        `As I continue writing the letter, I also recall an incident where Sasha came to my rescue after some bullies had tied me to a "`,
                                         {
-                                            anchor: `"tetherball"`,
+                                            anchor: `tetherball`,
                                             wiki: `Tetherball`,
                                         },
-                                        `pole.`,
+                                        `" pole.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -642,18 +643,20 @@ export default {
                                 description: [
                                     `The chokehold incident left me with a dislocated jaw. For a long time afterward, I had to keep my jaw clenched to avoid pain when speaking. This led to my odd manner of pronunciation that to this day often gets mistaken for a`,
                                     {
-                                        anchor: `Canadian accent.`,
+                                        anchor: `Canadian accent`,
                                         wiki: `Canadian_raising`,
                                     },
+                                    `.`,
                                     {
-                                        anchor: `Canadians,`,
+                                        anchor: `Canadians`,
                                         wiki: `Canada`,
                                     },
-                                    `of course, are affectionately known as`,
+                                    `, of course, are affectionately known as`,
                                     {
-                                        anchor: `Canucks.`,
+                                        anchor: `Canucks`,
                                         wiki: `Canuck`,
                                     },
+                                    `.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -733,10 +736,10 @@ export default {
                                     },
                                     `will remain comatose to create the impression of being dead, an act known as`,
                                     {
-                                        anchor: `playing possum.`,
+                                        anchor: `playing possum`,
                                         wiki: `Apparent_death`,
                                     },
-                                    `Similarly, as I lament to Sasha here, my only recourse in the coming years is to stay unresponsive to threats and hope for the best.`,
+                                    `. Similarly, as I lament to Sasha here, my only recourse in the coming years is to stay unresponsive to threats and hope for the best.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

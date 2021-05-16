@@ -46,22 +46,23 @@ export default {
                     description: [
                         `I first tried Robitussin earlier that summer after reading of its narcotic effects in`,
                         {
-                            anchor: `Jim Carroll's`,
+                            anchor: `Jim Carroll`,
                             wiki: `Jim_Carroll`,
                         },
+                        `'s`,
                         {
                             isItalic: true,
                             lyric: {
-                                anchor: `The Basketball Diaries.`,
+                                anchor: `The Basketball Diaries`,
                                 wiki: `The_Basketball_Diaries_(book)`,
                             },
                         },
-                        `It quickly became my drug of choice, since I didn't need to know any dealers. The best thing about a Robitussin trip is the`,
+                        `. It quickly became my drug of choice, since I didn't need to know any dealers. The best thing about a Robitussin trip is the`,
                         {
-                            anchor: `closed-eye hallucinations,`,
+                            anchor: `closed-eye hallucinations`,
                             wiki: `Closed-eye_hallucination`,
                         },
-                        `which are vivid images projected onto the backdrop of your eyelids. When they get too intense, you simply open your eyes, and they vanish. At the time, I called them "constellations."`,
+                        `, which are vivid images projected onto the backdrop of your eyelids. When they get too intense, you simply open your eyes, and they vanish. At the time, I called them "constellations."`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -163,10 +164,10 @@ export default {
                                     },
                                     `from heaven was a`,
                                     {
-                                        anchor: `psilocybin mushroom,`,
+                                        anchor: `psilocybin mushroom`,
                                         wiki: `Psilocybin_mushroom`,
                                     },
-                                    `based on its description in the Bible.`,
+                                    `, based on its description in the Bible.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -201,10 +202,10 @@ export default {
                                 {
                                     description: [
                                         {
-                                            anchor: `Dextromethorphan,`,
+                                            anchor: `Dextromethorphan`,
                                             wiki: `Dextromethorphan`,
                                         },
-                                        `the cough suppressant found in Robitussin, is often abbreviated as "DXM."`,
+                                        `, the cough suppressant found in Robitussin, is often abbreviated as "DXM."`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -232,15 +233,15 @@ export default {
                                     description: [
                                         `Ana's friends Howie and Tomer were seasoned drug users but had never taken Robitussin before. Given that it's sold`,
                                         {
-                                            anchor: `over the counter,`,
+                                            anchor: `over the counter`,
                                             wiki: `Over-the-counter_drug`,
                                         },
-                                        `they'd assumed its effects would be weaker than those of prescribed painkillers like`,
+                                        `, they'd assumed its effects would be weaker than those of prescribed painkillers like "`,
                                         {
-                                            anchor: `"Vicodin."`,
+                                            anchor: `Vicodin`,
                                             wiki: `Hydrocodone/paracetamol`,
                                         },
-                                        `That night proved them very wrong.`,
+                                        `." That night proved them very wrong.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -304,12 +305,12 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `Flashback to earlier that night, when we've arrived at a`,
+                                        `Flashback to earlier that night, when we've arrived at a "`,
                                         {
-                                            anchor: `"Walgreens"`,
+                                            anchor: `Walgreens`,
                                             wiki: `Walgreens`,
                                         },
-                                        `pharmacy to procure our Robitussin.`,
+                                        `" pharmacy to procure our Robitussin.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -318,12 +319,12 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `The`,
+                                        `The "`,
                                         {
-                                            anchor: `"Valkyries"`,
+                                            anchor: `Valkyries`,
                                             wiki: `Valkyrie`,
                                         },
-                                        `in`,
+                                        `" in`,
                                         {
                                             anchor: `Norse mythology`,
                                             wiki: `Norse_mythology`,
@@ -344,12 +345,12 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `The Valkyries would bring their dead heroes to`,
+                                        `The Valkyries would bring their dead heroes to "`,
                                         {
-                                            anchor: `"Valhalla,"`,
+                                            anchor: `Valhalla`,
                                             wiki: `Valhalla`,
                                         },
-                                        `a majestic hall ruled by the god Odin.`,
+                                        `," a majestic hall ruled by the god Odin.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -391,10 +392,10 @@ export default {
                                 description: [
                                     `Not all bottles of Robitussin will get you high. The ones to avoid are those containing`,
                                     {
-                                        anchor: `guaifenesin,`,
+                                        anchor: `guaifenesin`,
                                         wiki: `Guaifenesin`,
                                     },
-                                    `which is an expectorant. So we "upraise" our "quaffs" to "appraise" them, looking specifically for the medicinal property of keeping "coughs suppressed."`,
+                                    `, which is an expectorant. So we "upraise" our "quaffs" to "appraise" them, looking specifically for the medicinal property of keeping "coughs suppressed."`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -415,16 +416,17 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `The`,
+                                        `The "`,
                                         {
-                                            anchor: `"Kalevala"`,
+                                            anchor: `Kalevala`,
                                             wiki: `Kalevala`,
                                         },
-                                        `is the national epic poem of`,
+                                        `" is the national epic poem of`,
                                         {
-                                            anchor: `Finland.`,
+                                            anchor: `Finland`,
                                             wiki: `Finland`,
                                         },
+                                        `.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -446,11 +448,12 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `The licorice taste of Robitussin, which lingers on our tongues, is reminiscent of the spice`,
+                                        `The licorice taste of Robitussin, which lingers on our tongues, is reminiscent of the spice "`,
                                         {
-                                            anchor: `"fenugreek."`,
+                                            anchor: `fenugreek`,
                                             wiki: `Fenugreek`,
                                         },
+                                        `."`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -463,12 +466,12 @@ export default {
                                             anchor: `Finnish`,
                                             wiki: `Finnish_language`,
                                         },
-                                        `belongs to the`,
+                                        `belongs to the "`,
                                         {
-                                            anchor: `"Finno-Ugric"`,
+                                            anchor: `Finno-Ugric`,
                                             wiki: `Finno-Ugric_languages`,
                                         },
-                                        `language family.`,
+                                        `" language family.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -484,10 +487,10 @@ export default {
                                     description: [
                                         `We are literally "high men," and since the others are trying Robitussin for the`,
                                         {
-                                            anchor: `first time,`,
+                                            anchor: `first time`,
                                             wiki: `Virginity`,
                                         },
-                                        `it also "laps our hymen."`,
+                                        `, it also "laps our hymen."`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -532,21 +535,22 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `The`,
+                                        `The "`,
                                         {
-                                            anchor: `"Magyars"`,
+                                            anchor: `Magyars`,
                                             wiki: `Hungarians`,
                                         },
-                                        `are a Finno-Ugric people who "migrated" from the`,
+                                        `" are a Finno-Ugric people who "migrated" from the`,
                                         {
                                             anchor: `Ural Mountains`,
                                             wiki: `Ural_Mountains`,
                                         },
                                         `and established the nation of`,
                                         {
-                                            anchor: `Hungary.`,
+                                            anchor: `Hungary`,
                                             wiki: `Hungary`,
                                         },
+                                        `.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -559,12 +563,12 @@ export default {
                             anchor: `among ol'`,
                             card: {
                                 description: [
-                                    `The Magyars share genetic ancestry with the`,
+                                    `The Magyars share genetic ancestry with the "`,
                                     {
-                                        anchor: `"Mongols,"`,
+                                        anchor: `Mongols`,
                                         wiki: `Mongols`,
                                     },
-                                    `an East Asian nomadic people.`,
+                                    `," an East Asian nomadic people.`,
                                 ],
                                 dotKeys: {
                                     [PUN]: true,
@@ -583,17 +587,17 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `Back in the day, the Robitussin we took also contained`,
+                                        `Back in the day, the Robitussin we took also contained "`,
                                         {
-                                            anchor: `"pseudoephedrine,"`,
+                                            anchor: `pseudoephedrine`,
                                             wiki: `Pseudoephedrine`,
                                         },
-                                        `a nasal decongestant. Because this is the main ingredient used to make`,
+                                        `," a nasal decongestant. Because this is the main ingredient used to make`,
                                         {
-                                            anchor: `crystal meth,`,
+                                            anchor: `crystal meth`,
                                             wiki: `Methamphetamine`,
                                         },
-                                        `however, pseudoephedrine is no longer available over the counter.`,
+                                        `, however, pseudoephedrine is no longer available over the counter.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -611,9 +615,10 @@ export default {
                 card: {
                     description: [
                         {
-                            anchor: `The Police's`,
+                            anchor: `The Police`,
                             wiki: `The_Police`,
                         },
+                        `'s`,
                         {
                             isItalic: true,
                             lyric: {
@@ -621,12 +626,12 @@ export default {
                                 wiki: `Ghost_in_the_Machine_(album)`,
                             },
                         },
-                        `was my soundtrack of choice for a Robitussin trip, so I tried to recreate its ambience. Taking a cue from the song`,
+                        `was my soundtrack of choice for a Robitussin trip, so I tried to recreate its ambience. Taking a cue from the song "`,
                         {
-                            anchor: `"Secret Journey,"`,
+                            anchor: `Secret Journey`,
                             wiki: `Secret_Journey_(song)`,
                         },
-                        `I left the drum kick off the downbeat in the prechorus, which does wonders for letting the other instruments breathe before they get submerged again in the chorus.`,
+                        `," I left the drum kick off the downbeat in the prechorus, which does wonders for letting the other instruments breathe before they get submerged again in the chorus.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -685,11 +690,12 @@ export default {
                                 },
                                 {
                                     description: [
+                                        `"`,
                                         {
-                                            anchor: `"Genghis Khan,"`,
+                                            anchor: `Genghis Khan`,
                                             wiki: `Genghis_Khan`,
                                         },
-                                        `whose birth name was "Temujin," was the founder of the Mongol Empire.`,
+                                        `," whose birth name was "Temujin," was the founder of the Mongol Empire.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -703,17 +709,17 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `With the familiar sensation of Robitussin having kicked in, I'm no longer wavering like a playground`,
+                                        `With the familiar sensation of Robitussin having kicked in, I'm no longer wavering like a playground "`,
                                         {
-                                            anchor: `"teeter-totter,"`,
+                                            anchor: `teeter-totter`,
                                             wiki: `Seesaw`,
                                         },
-                                        `and any lingering protest from my inner`,
+                                        `," and any lingering protest from my inner "`,
                                         {
-                                            anchor: `"teetotaler"`,
+                                            anchor: `teetotaler`,
                                             wiki: `Teetotalism`,
                                         },
-                                        `has been killed off.`,
+                                        `" has been killed off.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -724,10 +730,10 @@ export default {
                                     description: [
                                         `Genghis Khan was able to unite the Mongols by defeating the`,
                                         {
-                                            anchor: `Tatars,`,
+                                            anchor: `Tatars`,
                                             wiki: `Tatars`,
                                         },
-                                        `a rival tribe.`,
+                                        `, a rival tribe.`,
                                     ],
                                 },
                             ],
@@ -751,16 +757,17 @@ export default {
                                 },
                                 {
                                     description: [
+                                        `"`,
                                         {
-                                            anchor: `"Tamerlane"`,
+                                            anchor: `Tamerlane`,
                                             wiki: `Timur`,
                                         },
-                                        `continued the Turko-Mongol expansion into`,
+                                        `" continued the Turko-Mongol expansion into`,
                                         {
-                                            anchor: `Central Asia.`,
+                                            anchor: `Central Asia`,
                                             wiki: `Central_Asia`,
                                         },
-                                        `Though not born from the seed of Genghis Khan directly, he laid out the case for his legitimacy by tracing lineage to a common ancestor.`,
+                                        `. Though not born from the seed of Genghis Khan directly, he laid out the case for his legitimacy by tracing lineage to a common ancestor.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -784,9 +791,10 @@ export default {
                                     description: [
                                         `The`,
                                         {
-                                            anchor: `Mughals,`,
+                                            anchor: `Mughals`,
                                             wiki: `Mughal_Empire`,
                                         },
+                                        `,`,
                                         {
                                             anchor: `Muslim`,
                                             wiki: `Islam`,
@@ -883,12 +891,12 @@ export default {
                                         anchor: `"Indo-Harappan" Civilization`,
                                         wiki: `Indus_Valley_Civilisation`,
                                     },
-                                    `that may be answered by studying the evolution of the`,
+                                    `that may be answered by studying the evolution of the "`,
                                     {
-                                        anchor: `"Indo-European"`,
+                                        anchor: `Indo-European`,
                                         wiki: `Indo-European_languages`,
                                     },
-                                    `language family.`,
+                                    `" language family.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -912,20 +920,20 @@ export default {
                                         anchor: `Iranian`,
                                         wiki: `Iran`,
                                     },
-                                    `language of`,
+                                    `language of "`,
                                     {
-                                        anchor: `"Farsi,"`,
+                                        anchor: `Farsi`,
                                         wiki: `Persian_language`,
                                     },
-                                    `the word for a deity is`,
+                                    `," the word for a deity is "`,
                                     {
                                         isItalic: true,
                                         lyric: {
-                                            anchor: `"ahura."`,
+                                            anchor: `ahura`,
                                             wiki: `Ahura`,
                                         },
                                     },
-                                    `But in the`,
+                                    `." But in the`,
                                     {
                                         anchor: `Vedic`,
                                         wiki: `Vedas`,
@@ -945,10 +953,10 @@ export default {
                                     },
                                     `based on religious differences. And because the Vedas precede the Persian`,
                                     {
-                                        anchor: `Avesta,`,
+                                        anchor: `Avesta`,
                                         wiki: `Avesta`,
                                     },
-                                    `it's likely that the apostates left the Indian subcontinent and migrated westward to the Iranian basin, rather than the other way around.`,
+                                    `, it's likely that the apostates left the Indian subcontinent and migrated westward to the Iranian basin, rather than the other way around.`,
                                 ],
                                 dotKeys: {
                                     [PUN]: true,
@@ -961,15 +969,15 @@ export default {
                             properNoun: true,
                             card: {
                                 description: [
-                                    `Moreover, in "Sanskrit," the word for a Vedic deity is`,
+                                    `Moreover, in "Sanskrit," the word for a Vedic deity is "`,
                                     {
                                         isItalic: true,
                                         lyric: {
-                                            anchor: `"deva,"`,
+                                            anchor: `deva`,
                                             wiki: `Deva_(Hinduism)`,
                                         },
                                     },
-                                    `while the Avestan`,
+                                    `," while the Avestan`,
                                     {
                                         isItalic: true,
                                         lyric: {
@@ -1017,12 +1025,12 @@ export default {
                             anchor: `our-youn' invedas`,
                             card: {
                                 description: [
-                                    `Although the`,
+                                    `Although the "`,
                                     {
-                                        anchor: `"Aryans"`,
+                                        anchor: `Aryans`,
                                         wiki: `Aryan`,
                                     },
-                                    `mentioned "in the Vedas" were a noble class based on religious distinction, 19th-century Western scholars postulated they were a light-skinned race that had conquered and civilized the local populations. While this theory has been debunked, the origin of the Indo-European people is still a matter of wide debate. And so "to sum up," I must put this "unsolved query" to rest, before the others lose their minds.`,
+                                    `" mentioned "in the Vedas" were a noble class based on religious distinction, 19th-century Western scholars postulated they were a light-skinned race that had conquered and civilized the local populations. While this theory has been debunked, the origin of the Indo-European people is still a matter of wide debate. And so "to sum up," I must put this "unsolved query" to rest, before the others lose their minds.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1099,15 +1107,15 @@ export default {
                                     description: [
                                         `Spent from the "Arabian" battles that ended with their`,
                                         {
-                                            anchor: `conquest by the Arabs,`,
+                                            anchor: `conquest by the Arabs`,
                                             wiki: `Muslim_conquest_of_Persia`,
                                         },
-                                        `the Persians were then`,
+                                        `, the Persians were then`,
                                         {
-                                            anchor: `subjugated by the Mongols,`,
+                                            anchor: `subjugated by the Mongols`,
                                             wiki: `Mongol_conquest_of_Khwarezmia`,
                                         },
-                                        `the next enemy at their doorstep.`,
+                                        `, the next enemy at their doorstep.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -1122,10 +1130,10 @@ export default {
                                 description: [
                                     `The Mongols would slaughter the men and seize the women of the lands they conquered. This fate was no doubt met by the`,
                                     {
-                                        anchor: `Uighurs,`,
+                                        anchor: `Uighurs`,
                                         wiki: `Uyghurs`,
                                     },
-                                    `a Turkic people encountered by the Mongols in their early campaigns. And so through "a duct, we egress," or exit, the steam tunnels, but not before I feign to "abduct a Uighuress."`,
+                                    `, a Turkic people encountered by the Mongols in their early campaigns. And so through "a duct, we egress," or exit, the steam tunnels, but not before I feign to "abduct a Uighuress."`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1165,11 +1173,11 @@ export default {
                                     {
                                         isItalic: true,
                                         lyric: {
-                                            anchor: `Eohippus,`,
+                                            anchor: `Eohippus`,
                                             wiki: `Eohippus`,
                                         },
                                     },
-                                    `or "dawn horse." This "dusk horse," then, would be encountered at the end of history, the brink of which so many before us had believed to have been reached.`,
+                                    `, or "dawn horse." This "dusk horse," then, would be encountered at the end of history, the brink of which so many before us had believed to have been reached.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1197,20 +1205,22 @@ export default {
                                 },
                                 {
                                     description: [
+                                        `"`,
                                         {
-                                            anchor: `"Angkor Wat,"`,
+                                            anchor: `Angkor Wat`,
                                             wiki: `Angkor_Wat`,
                                         },
-                                        `or "Temple City," is a 12th-century Hindu temple built by the`,
+                                        `," or "Temple City," is a 12th-century Hindu temple built by the`,
                                         {
                                             anchor: `"Khmer" Empire`,
                                             wiki: `Khmer_Empire`,
                                         },
                                         `in what is now present-day`,
                                         {
-                                            anchor: `Cambodia.`,
+                                            anchor: `Cambodia`,
                                             wiki: `Cambodia`,
                                         },
+                                        `.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -1223,9 +1233,9 @@ export default {
                             anchor: `scimitary of'fence`,
                             card: {
                                 description: [
-                                    `Rested and energized, we renew our`,
+                                    `Rested and energized, we renew our "`,
                                     {
-                                        anchor: `"scimitar`,
+                                        anchor: `scimitar`,
                                         wiki: `Scimitar`,
                                     },
                                     `offense." The next plan of attack is to visit the grave of Howie and Tomer's high school buddy Adam by driving through the "cemetery fence."`,
@@ -1302,10 +1312,10 @@ export default {
                                     description: [
                                         `According to the`,
                                         {
-                                            anchor: `Beringia theory,`,
+                                            anchor: `Beringia theory`,
                                             wiki: `Beringia`,
                                         },
-                                        `the Americas were settled by populations from north Asia who crossed "a bridge of land" connecting the two continents. When the glaciers later melted, the sea level rose, effectively causing the bridge to sink.`,
+                                        `, the Americas were settled by populations from north Asia who crossed "a bridge of land" connecting the two continents. When the glaciers later melted, the sea level rose, effectively causing the bridge to sink.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -1318,11 +1328,12 @@ export default {
                             anchor: `forc'd nations`,
                             card: {
                                 description: [
-                                    `"Forced" to leave their Asian homelands due to scarce resources, these groups are now known in Canada as the`,
+                                    `"Forced" to leave their Asian homelands due to scarce resources, these groups are now known in Canada as the "`,
                                     {
-                                        anchor: `"First Nations."`,
+                                        anchor: `First Nations`,
                                         wiki: `First_Nations`,
                                     },
+                                    `."`,
                                 ],
                                 dotKeys: {
                                     [PUN]: true,
@@ -1342,9 +1353,10 @@ export default {
                                 description: [
                                     `We navigate by "bearing straight" past a cross-shaped headstone, just as those before us had "passed across the`,
                                     {
-                                        anchor: `Bering Strait."`,
+                                        anchor: `Bering Strait`,
                                         wiki: `Bering_Strait`,
                                     },
+                                    `."`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1377,10 +1389,10 @@ export default {
                                         },
                                         `of the Arctic regions, may have migrated to the Americas by boat. An Inuit storyteller would narrate the journey of one such seafaring ancestor by describing how "he rows" with the "auroras," or`,
                                         {
-                                            anchor: `aurora borealis,`,
+                                            anchor: `aurora borealis`,
                                             wiki: `Aurora`,
                                         },
-                                        `to his left.`,
+                                        `, to his left.`,
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
@@ -1412,10 +1424,10 @@ export default {
                     description: [
                         `On my solo Robitussin trips, I would explore metaphysical truths in my head while playing video games on my`,
                         {
-                            anchor: `Super Nintendo.`,
+                            anchor: `Super Nintendo`,
                             wiki: `Super_Nintendo_Entertainment_System`,
                         },
-                        `This probably messed with the wiring in my head, because for a while afterward, every vintage arcade sound seemed to hide a profound spiritual message that my sober ears just couldn't suss out. I doubt other people are affected the same way, so the arcade synth here was probably just for my own amusement.`,
+                        `. This probably messed with the wiring in my head, because for a while afterward, every vintage arcade sound seemed to hide a profound spiritual message that my sober ears just couldn't suss out. I doubt other people are affected the same way, so the arcade synth here was probably just for my own amusement.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -1514,17 +1526,17 @@ export default {
                             todo: true,
                             card: {
                                 description: [
-                                    `Encountering the vision of a`,
+                                    `Encountering the vision of a "`,
                                     {
-                                        anchor: `"mastodon"`,
+                                        anchor: `mastodon`,
                                         wiki: `Mastodon`,
                                     },
-                                    `being "hunted by a`,
+                                    `" being "hunted by a`,
                                     {
-                                        anchor: `saber-toothed tiger,"`,
+                                        anchor: `saber-toothed tiger`,
                                         wiki: `Smilodon`,
                                     },
-                                    `I'm subconsciously "haunted by the sober truth" that I continue to keep Sita captive in a codependent relationship of which I'm beginning to tire.`,
+                                    `," I'm subconsciously "haunted by the sober truth" that I continue to keep Sita captive in a codependent relationship of which I'm beginning to tire.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1593,10 +1605,10 @@ export default {
                                     description: [
                                         `As Robitussin is a`,
                                         {
-                                            anchor: `dissociative drug,`,
+                                            anchor: `dissociative drug`,
                                             wiki: `Dissociative`,
                                         },
-                                        `I start to detach from myself. In doing so, I catch a glimpse of how superficial my aspirations are, and how "hollow" the local "scene" is in which I desire recognition.`,
+                                        `, I start to detach from myself. In doing so, I catch a glimpse of how superficial my aspirations are, and how "hollow" the local "scene" is in which I desire recognition.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -1605,12 +1617,12 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `The`,
+                                        `The "`,
                                         {
-                                            anchor: `"Holocene"`,
+                                            anchor: `Holocene`,
                                             wiki: `Holocene`,
                                         },
-                                        `is the current geological epoch, which began with the first human settlements.`,
+                                        `" is the current geological epoch, which began with the first human settlements.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -1662,17 +1674,17 @@ export default {
                                 properNoun: true,
                                 card: {
                                     description: [
-                                        `Recoiling from the sight of myself in a "low-key and fried" state, I see a constellation of my brother dressed as`,
+                                        `Recoiling from the sight of myself in a "low-key and fried" state, I see a constellation of my brother dressed as "`,
                                         {
-                                            anchor: `"Loki,"`,
+                                            anchor: `Loki`,
                                             wiki: `Loki`,
                                         },
-                                        `the Norse trickster god, next to my sister as`,
+                                        `," the Norse trickster god, next to my sister as "`,
                                         {
-                                            anchor: `"Freyja,"`,
+                                            anchor: `Freyja`,
                                             wiki: `Freyja`,
                                         },
-                                        `the renowned Norse goddess.`,
+                                        `," the renowned Norse goddess.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -1704,10 +1716,10 @@ export default {
                                 description: [
                                     `Our Inuit tribe has now ventured all the way to`,
                                     {
-                                        anchor: `Nunavut,`,
+                                        anchor: `Nunavut`,
                                         wiki: `Nunavut`,
                                     },
-                                    `the northernmost territory of Canada. Yet with the reappearance of the Norse in my thoughts, I realize our bounds are not limitless, as even imaginations must repeat. There's no new ground left to cover, in both our fantasy epics and our everyday lives. And so, just as the "Norse" encounter the "Nunavutters," we end the night as we'd begun it, "no worse and none the better."`,
+                                    `, the northernmost territory of Canada. Yet with the reappearance of the Norse in my thoughts, I realize our bounds are not limitless, as even imaginations must repeat. There's no new ground left to cover, in both our fantasy epics and our everyday lives. And so, just as the "Norse" encounter the "Nunavutters," we end the night as we'd begun it, "no worse and none the better."`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1751,14 +1763,15 @@ export default {
                                             },
                                             `was the son of`,
                                             {
-                                                anchor: `Erik the Red,`,
+                                                anchor: `Erik the Red`,
                                                 wiki: `Erik_the_Red`,
                                             },
-                                            `who established Norse settlements in`,
+                                            `, who established Norse settlements in`,
                                             {
-                                                anchor: `Greenland.`,
+                                                anchor: `Greenland`,
                                                 wiki: `Greenland`,
                                             },
+                                            `.`,
                                         ],
                                     },
                                 ],
@@ -1853,10 +1866,10 @@ export default {
                                 description: [
                                     `Meanwhile, sensing disaster afoot, our brave tribe flees to safety "in some`,
                                     {
-                                        anchor: `umiak,"`,
+                                        anchor: `umiak`,
                                         wiki: `Umiak`,
                                     },
-                                    `an Inuit boat made of whalebone and sealskin, as we skim through icy channels wreaked by a "snowy blitz."`,
+                                    `," an Inuit boat made of whalebone and sealskin, as we skim through icy channels wreaked by a "snowy blitz."`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1888,22 +1901,22 @@ export default {
                             anchor: `psychedelic`,
                             wiki: `Psychedelic_rock`,
                         },
-                        `period for ideas.`,
+                        `period for ideas. "`,
                         {
-                            anchor: `"Tomorrow Never Knows"`,
+                            anchor: `Tomorrow Never Knows`,
                             wiki: `Tomorrow_Never_Knows`,
                         },
-                        ` uses a`,
+                        `" uses a`,
                         {
                             anchor: `tape loop`,
                             wiki: `Tape_loop`,
                         },
                         `to imitate a`,
                         {
-                            anchor: `seagull's`,
+                            anchor: `seagull`,
                             wiki: `Gull`,
                         },
-                        `cry, which I tried to recreate by pinching off the airstream blown through the window of a recorder. The result wasn't what I'd hoped for, but here as background texture, it contributes nicely to the overall atmosphere.`,
+                        `'s cry, which I tried to recreate by pinching off the airstream blown through the window of a recorder. The result wasn't what I'd hoped for, but here as background texture, it contributes nicely to the overall atmosphere.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -1924,11 +1937,12 @@ export default {
                             anchor: `arrhythmetic heart`,
                             card: {
                                 description: [
+                                    `"`,
                                     {
-                                        anchor: `"Arrhythmia",`,
+                                        anchor: `Arrhythmia`,
                                         wiki: `Cardiac_arrhythmia`,
                                     },
-                                    `or an irregular heartbeat, is one downside of taking Robitussin. As the psychedelic effects wear off, I grow paranoid and perform "arithmetic" in my head, hoping my pulse becomes more stable with each passing minute.`,
+                                    `," or an irregular heartbeat, is one downside of taking Robitussin. As the psychedelic effects wear off, I grow paranoid and perform "arithmetic" in my head, hoping my pulse becomes more stable with each passing minute.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1947,22 +1961,22 @@ export default {
                             properNoun: true,
                             card: {
                                 description: [
-                                    `In the historical narrative still playing in my head, the`,
+                                    `In the historical narrative still playing in my head, the "`,
                                     {
-                                        anchor: `"English"`,
+                                        anchor: `English`,
                                         wiki: `English_people`,
                                     },
-                                    `have now arrived to despoil the New World. The white`,
+                                    `" have now arrived to despoil the New World. The white`,
                                     {
                                         anchor: `ruffs`,
                                         wiki: `Ruff_(clothing)`,
                                     },
                                     `around their necks resemble the neck fringes seen on`,
                                     {
-                                        anchor: `vultures,`,
+                                        anchor: `vultures`,
                                         wiki: `Vulture`,
                                     },
-                                    `or "buzzards," as they are colloquially known.`,
+                                    `, or "buzzards," as they are colloquially known.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1987,21 +2001,22 @@ export default {
                             properNoun: true,
                             card: {
                                 description: [
+                                    `"`,
                                     {
-                                        anchor: `"Rumspringa"`,
+                                        anchor: `Rumspringa`,
                                         wiki: `Rumspringa`,
                                     },
-                                    `is a rite of passage during which`,
+                                    `" is a rite of passage during which`,
                                     {
                                         anchor: `Amish`,
                                         wiki: `Amish`,
                                     },
                                     `teenagers are encouraged to explore the secular world of the "English," as the non-Amish are called, in the hope that this will strengthen their faith. Though it means "running around" in`,
                                     {
-                                        anchor: `Pennsylvania Dutch,`,
+                                        anchor: `Pennsylvania Dutch`,
                                         wiki: `Pennsylvania_German_language`,
                                     },
-                                    `I liked the mental picture of us dipping into a literal "rum spring." In any case, the spring of our youth, in both the literal and metaphorical sense, is running dry.`,
+                                    `, I liked the mental picture of us dipping into a literal "rum spring." In any case, the spring of our youth, in both the literal and metaphorical sense, is running dry.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -2020,16 +2035,17 @@ export default {
                             anchor: `In mouth deseret`,
                             card: {
                                 description: [
+                                    `"`,
                                     {
-                                        anchor: `"Deseret"`,
+                                        anchor: `Deseret`,
                                         wiki: `Deseret_alphabet`,
                                     },
-                                    `is an alphabet developed by the early`,
+                                    `" is an alphabet developed by the early`,
                                     {
-                                        anchor: `Mormons.`,
+                                        anchor: `Mormons`,
                                         wiki: `Mormons`,
                                     },
-                                    `As it had once filled their mouths, a "desert" now fills ours.`,
+                                    `. As it had once filled their mouths, a "desert" now fills ours.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -2065,10 +2081,10 @@ export default {
                                     description: [
                                         `"Black Latter-Day Saints to head." The Mormon Church, also known as the`,
                                         {
-                                            anchor: `Latter-Day Saints,`,
+                                            anchor: `Latter-Day Saints`,
                                             wiki: `The_Church_of_Jesus_Christ_of_Latter-day_Saints`,
                                         },
-                                        `originally did not allow its`,
+                                        `, originally did not allow its`,
                                         {
                                             anchor: `black members`,
                                             wiki: `Black_people_and_Mormonism`,
@@ -2089,10 +2105,10 @@ export default {
                                     description: [
                                         `"'Rejoice!' bellow the reverends." Stuck with nothing to watch but early-morning`,
                                         {
-                                            anchor: `televangelists,`,
+                                            anchor: `televangelists`,
                                             wiki: `Televangelism`,
                                         },
-                                        `it occurs to me that every religion's early spirit eventually degrades into orthodoxy and routine, as does every person's youthful spirit in their later years. But in the meantime, we're just halfway through summer, and more nights of Robitussin await…`,
+                                        `, it occurs to me that every religion's early spirit eventually degrades into orthodoxy and routine, as does every person's youthful spirit in their later years. But in the meantime, we're just halfway through summer, and more nights of Robitussin await…`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,

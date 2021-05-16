@@ -39,9 +39,10 @@ export default {
                 card: {
                     description: [
                         {
-                            anchor: `John Osborne's`,
+                            anchor: `John Osborne`,
                             wiki: `John_Osborne`,
                         },
+                        `'s`,
                         {
                             isItalic: true,
                             lyric: {
@@ -76,10 +77,10 @@ export default {
                     description: [
                         `A fellow dishroom worker named Owen had a`,
                         {
-                            anchor: `four-track cassette recorder,`,
+                            anchor: `four-track cassette recorder`,
                             wiki: `Portastudio`,
                         },
-                        `and some nights we would go back to his place to twiddle with it. Owen would tap out these intricate yet impromptu rhythms on plateware he'd swiped from the cafeteria. I did my best to conjure his spirit here, minus the impromptu part, of course.`,
+                        `, and some nights we would go back to his place to twiddle with it. Owen would tap out these intricate yet impromptu rhythms on plateware he'd swiped from the cafeteria. I did my best to conjure his spirit here, minus the impromptu part, of course.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -103,10 +104,10 @@ export default {
                                 description: [
                                     `During the`,
                                     {
-                                        anchor: `Civil War,`,
+                                        anchor: `Civil War`,
                                         wiki: `American_Civil_War`,
                                     },
-                                    `a`,
+                                    `, a`,
                                     {
                                         anchor: `color bearer`,
                                         wiki: `Standard-bearer`,
@@ -163,10 +164,10 @@ export default {
                                     description: [
                                         `I attended high school in`,
                                         {
-                                            anchor: `Van Nuys,`,
+                                            anchor: `Van Nuys`,
                                             wiki: `Van_Nuys`,
                                         },
-                                        `a neighborhood in the center of the San Fernando Valley.`,
+                                        `, a neighborhood in the center of the San Fernando Valley.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -184,10 +185,10 @@ export default {
                                 description: [
                                     `In the`,
                                     {
-                                        anchor: `First Battle of Bull Run,`,
+                                        anchor: `First Battle of Bull Run`,
                                         wiki: `First_Battle_of_Bull_Run`,
                                     },
-                                    `spectators picnicked on the hillside to witness what they assumed would be a quick victory. Similarly, my battles with bullies were fought and lost in full view of a lunchtime crowd.`,
+                                    `, spectators picnicked on the hillside to witness what they assumed would be a quick victory. Similarly, my battles with bullies were fought and lost in full view of a lunchtime crowd.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -204,10 +205,10 @@ export default {
                     description: [
                         `So as not to wake his neighbors while recording late at night, Owen would sing in muffled tones and then double track his vocals to thicken them. I wanted to recreate this effect here, so I took notes from`,
                         {
-                            anchor: `Elliott Smith,`,
+                            anchor: `Elliott Smith`,
                             wiki: `Elliott_Smith`,
                         },
-                        `who did the same on his first few albums.`,
+                        `, who did the same on his first few albums.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -232,10 +233,10 @@ export default {
                                 description: [
                                     `If a sapling survives the winter, it's rewarded with its first`,
                                     {
-                                        anchor: `tree ring,`,
+                                        anchor: `tree ring`,
                                         wiki: `Dendrochronology`,
                                     },
-                                    `which will be visible to all through any gaping wounds it has endured along the way.`,
+                                    `, which will be visible to all through any gaping wounds it has endured along the way.`,
                                 ],
                             },
                         },
@@ -286,15 +287,15 @@ export default {
                                 description: [
                                     `Like the six hundred who rode into the valley of death in`,
                                     {
-                                        anchor: `Alfred Tennyson's`,
+                                        anchor: `Alfred Tennyson`,
                                         wiki: `Alfred,_Lord_Tennyson`,
                                     },
-                                    `poem`,
+                                    `'s poem "`,
                                     {
-                                        anchor: `"The Charge of the Light Brigade,"`,
+                                        anchor: `The Charge of the Light Brigade`,
                                         wiki: `The_Charge_of_the_Light_Brigade_(poem)`,
                                     },
-                                    `I'd quietly accepted that mine was "not to reason why" but simply "to do and die" during my own wartime years in the San Fernando Valley.`,
+                                    `," I'd quietly accepted that mine was "not to reason why" but simply "to do and die" during my own wartime years in the San Fernando Valley.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -323,7 +324,7 @@ export default {
                     description: [
                         `When I asked Owen to recommend some good lyricists, he pointed me to`,
                         {
-                            anchor: `Nas.`,
+                            anchor: `Nas`,
                             wiki: `Nas`,
                         },
                         `. I hadn't paid much attention to`,
@@ -338,10 +339,10 @@ export default {
                         },
                         `offered great pointers on the flexibility of`,
                         {
-                            anchor: `internal rhyme,`,
+                            anchor: `internal rhyme`,
                             wiki: `Internal_rhyme`,
                         },
-                        `which I used in these verses.`,
+                        `, which I used in these verses.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -470,9 +471,10 @@ export default {
                                 description: [
                                     `Having sworn to be alert and ready when the next Mara shows up in my life, I notice the latecomer's hair color matches "Mara's sheen of" red, with the brightness of a`,
                                     {
-                                        anchor: `maraschino cherry.`,
+                                        anchor: `maraschino cherry`,
                                         wiki: `Maraschino_cherry`,
                                     },
+                                    `.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -486,8 +488,9 @@ export default {
                 {
                     mixTime: `0:54:00.03`,
                     lyric: [
+                        `"`,
                         {
-                            anchor: `"Great show`,
+                            anchor: `Great show`,
                             card: {
                                 description: `The best time to hit on someone is right after you've played a set. They've just spent the last half hour making you the center of their universe, in a crowd of others who've just done the same. So as expected, I find the redheaded woman to be flirtatious when we chat.`,
                                 dotKeys: {
@@ -618,10 +621,10 @@ export default {
                                 description: [
                                     `The better life got, the more unsatisfied I became. I was like the peasants of the`,
                                     {
-                                        anchor: `French Revolution,`,
+                                        anchor: `French Revolution`,
                                         wiki: `French_Revolution`,
                                     },
-                                    `who were so downtrodden that every attempt by the ruling elite to appease them only backfired. Not only did they grumble at such paltry improvements to their lives, but they were then further emboldened to make demands.`,
+                                    `, who were so downtrodden that every attempt by the ruling elite to appease them only backfired. Not only did they grumble at such paltry improvements to their lives, but they were then further emboldened to make demands.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -822,10 +825,10 @@ export default {
                                 description: [
                                     `But I relinquish my chance to know the redhead. Not just because it's past`,
                                     {
-                                        anchor: `last call,`,
+                                        anchor: `last call`,
                                         wiki: `Last_call_(bar_term)`,
                                     },
-                                    `and I would need a few more`,
+                                    `, and I would need a few more`,
                                     {
                                         anchor: `Budweisers`,
                                         wiki: `Budweiser`,

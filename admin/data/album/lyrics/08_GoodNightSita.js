@@ -58,10 +58,10 @@ export default {
                         },
                         `, the character Molly Bloom daydreams in an uninterrupted`,
                         {
-                            anchor: `stream of consciousness.`,
+                            anchor: `stream of consciousness`,
                             wiki: `Stream_of_consciousness`,
                         },
-                        `I borrowed this literary technique to capture the torrent of unspoken thoughts rushing through my head as Sita extends her good wishes before I depart.`,
+                        `. I borrowed this literary technique to capture the torrent of unspoken thoughts rushing through my head as Sita extends her good wishes before I depart.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -237,23 +237,25 @@ export default {
                     description: [
                         `I once had a supervisor who would blast`,
                         {
-                            anchor: `Michael Jackson's`,
+                            anchor: `Michael Jackson`,
                             wiki: `Michael_Jackson`,
                         },
+                        `'s "`,
                         {
-                            anchor: `"Don't Stop 'Til You Get Enough"`,
+                            anchor: `Don't Stop 'Til You Get Enough`,
                             wiki: `Don't_Stop_'Til_You_Get_Enough`,
                         },
-                        `in the home stretch of every dishroom shift. Ever since, I've associated this song with the idea of psyching myself up to have fun when I'm not really having fun. So I borrowed its sound to convey where my head was at during those first few dates with Sita. Hence the palm-muted electric guitars, rubbery`,
+                        `" in the home stretch of every dishroom shift. Ever since, I've associated this song with the idea of psyching myself up to have fun when I'm not really having fun. So I borrowed its sound to convey where my head was at during those first few dates with Sita. Hence the palm-muted electric guitars, rubbery`,
                         {
                             anchor: `bass`,
                             wiki: `Bass_guitar`,
                         },
                         `trills, and ample`,
                         {
-                            anchor: `cowbell.`,
+                            anchor: `cowbell`,
                             wiki: `Cowbell_(instrument)`,
                         },
+                        `.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -279,11 +281,12 @@ export default {
                             cards: [
                                 {
                                     description: [
+                                        `"`,
                                         {
-                                            anchor: `"Nora Barnacle"`,
+                                            anchor: `Nora Barnacle`,
                                             wiki: `Nora_Barnacle`,
                                         },
-                                        `was the wife of James Joyce and his inspiration for the Molly Bloom character, whose interior monologue in turn served as an inspiration for this song.`,
+                                        `" was the wife of James Joyce and his inspiration for the Molly Bloom character, whose interior monologue in turn served as an inspiration for this song.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -312,14 +315,15 @@ export default {
                                 },
                                 `that drains to the ocean, and I'm reminded of all the`,
                                 {
-                                    anchor: `sponges,`,
+                                    anchor: `sponges`,
                                     wiki: `Sponge`,
                                 },
+                                `,`,
                                 {
-                                    anchor: `barnacles,`,
+                                    anchor: `barnacles`,
                                     wiki: `Barnacle`,
                                 },
-                                `and other sea creatures that live to be carried away by the current to unknown places. And they don't sweat it.`,
+                                `, and other sea creatures that live to be carried away by the current to unknown places. And they don't sweat it.`,
                             ],
                             dotKeys: {
                                 [NARRATIVE]: true,
@@ -348,7 +352,7 @@ export default {
                     lyric: [
                         `for the`,
                         {
-                            anchor: `innermost matryoshka's`,
+                            anchor: `innermost matryoshka`,
                             card: {
                                 description: [
                                     `On our first date, I took Sita to a natural history museum. We spent some time gawking at the Russian wooden dolls known as`,
@@ -363,6 +367,7 @@ export default {
                                 },
                             },
                         },
+                        `'s`,
                     ],
                 },
                 {
@@ -433,10 +438,10 @@ export default {
                                 description: [
                                     `We pause for a minute to learn about`,
                                     {
-                                        anchor: `Piltdown Man,`,
+                                        anchor: `Piltdown Man`,
                                         wiki: `Piltdown_Man`,
                                     },
-                                    `a paleontological hoax in which the oversized jaw of an`,
+                                    `, a paleontological hoax in which the oversized jaw of an`,
                                     {
                                         anchor: `orangutan`,
                                         wiki: `Orangutan`,
@@ -488,19 +493,20 @@ export default {
                                 },
                                 {
                                     description: [
+                                        `"`,
                                         {
-                                            anchor: `"Ambrose Bierce"`,
+                                            anchor: `Ambrose Bierce`,
                                             wiki: `Ambrose_Bierce`,
                                         },
-                                        `wrote a collection of cynical definitions called`,
+                                        `" wrote a collection of cynical definitions called`,
                                         {
                                             isItalic: true,
                                             lyric: {
-                                                anchor: `The Devil's Dictionary.`,
+                                                anchor: `The Devil's Dictionary`,
                                                 wiki: `The_Devil's_Dictionary`,
                                             },
                                         },
-                                        `In hindsight, it probably wasn't the best idea to base my sense of humor on the work of a 19th-century American satirist.`,
+                                        `. In hindsight, it probably wasn't the best idea to base my sense of humor on the work of a 19th-century American satirist.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -556,10 +562,10 @@ export default {
                                     description: [
                                         `Stopping to rest our feet in a gallery devoted to Native American history, we learn about the development of`,
                                         {
-                                            anchor: `pidgins,`,
+                                            anchor: `pidgins`,
                                             wiki: `Pidgin`,
                                         },
-                                        `or impromptu languages that arose to facilitate trade between colonists and natives. Their exchanges were peppered with expressions of goodwill to make up for inevitable miscommunication, which aptly describes my first conversations with Sita.`,
+                                        `, or impromptu languages that arose to facilitate trade between colonists and natives. Their exchanges were peppered with expressions of goodwill to make up for inevitable miscommunication, which aptly describes my first conversations with Sita.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -653,10 +659,10 @@ export default {
                                 description: [
                                     `Dating as a low-status male is like being an`,
                                     {
-                                        anchor: `understudy,`,
+                                        anchor: `understudy`,
                                         wiki: `Understudy`,
                                     },
-                                    `a performer in theater who can serve as a replacement on short notice. You undertake all the same preparation while likely seeing none of the action. So I decided I needed to be proactive and branch out, like a freelancer without a steady gig advertising on a cork board.`,
+                                    `, a performer in theater who can serve as a replacement on short notice. You undertake all the same preparation while likely seeing none of the action. So I decided I needed to be proactive and branch out, like a freelancer without a steady gig advertising on a cork board.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -726,14 +732,15 @@ export default {
                     description: [
                         `To continue with the 70s feel for this song, I gathered ideas from the band`,
                         {
-                            anchor: `Television,`,
+                            anchor: `Television`,
                             wiki: `Television_(band)`,
                         },
-                        `who are well known for the complex interplay between their two lead guitars. The lick of tumbling triplets heard here was stolen note for note from the song "Friction" off their album`,
+                        `, who are well known for the complex interplay between their two lead guitars. The lick of tumbling triplets heard here was stolen note for note from the song "Friction" off their album`,
                         {
-                            anchor: `Marquee Moon.`,
+                            anchor: `Marquee Moon`,
                             wiki: `Marquee_Moon`,
                         },
+                        `.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -864,10 +871,10 @@ export default {
                                 description: [
                                     `On our third date, Sita and I visited a`,
                                     {
-                                        anchor: `go-kart raceway.`,
+                                        anchor: `go-kart raceway`,
                                         wiki: `Kart_racing`,
                                     },
-                                    `There was a twin go-kart available, presumably to seat a parent and child side by side. In jest, I gestured for Sita to hop in. She laughed and declined.`,
+                                    `. There was a twin go-kart available, presumably to seat a parent and child side by side. In jest, I gestured for Sita to hop in. She laughed and declined.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -944,10 +951,10 @@ export default {
                                         },
                                         `restaurant, where Sita ordered a dish that resembled a chicken breast. When we cracked its sesame-stick`,
                                         {
-                                            anchor: `wishbone,`,
+                                            anchor: `wishbone`,
                                             wiki: `Furcula`,
                                         },
-                                        `Sita got the longer end. Needless to say, my wish wasn't granted.`,
+                                        `, Sita got the longer end. Needless to say, my wish wasn't granted.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -999,19 +1006,20 @@ export default {
                     description: [
                         `Children's songs from the 70s are a treasure trove of musical wisdom. They were composed by professionals, but then arranged for the popular styles of that time. A great example is the soundtrack for`,
                         {
-                            anchor: `The New Mickey Mouse Club,`,
+                            anchor: `The New Mickey Mouse Club`,
                             wiki: `The_Mickey_Mouse_Club`,
                         },
-                        `a`,
+                        `, a`,
                         {
                             anchor: `disco-inflected`,
                             wiki: `Disco`,
                         },
                         `70s revival of the original 50s show. In particular, the song "Let's Go Day" gave me the idea to play portamento quarter notes on an`,
                         {
-                            anchor: `analog synthesizer.`,
+                            anchor: `analog synthesizer`,
                             wiki: `Analog_synthesizer`,
                         },
+                        `.`,
                     ],
                     dotKeys: {
                         [OBSERVATION]: true,
@@ -1102,12 +1110,12 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `Ambrose Bierce also wrote the short story`,
+                        `Ambrose Bierce also wrote the short story "`,
                         {
-                            anchor: `"An Occurrence at Owl Creek Bridge,"`,
+                            anchor: `An Occurrence at Owl Creek Bridge`,
                             wiki: `An_Occurrence_at_Owl_Creek_Bridge`,
                         },
-                        `in which a seemingly long span of time is revealed to have passed in an instant. Similarly, the near entirety of this song, during which I've recollected every date with Sita thus far, turns out to have been sandwiched between the briefest exchange of farewells.`,
+                        `," in which a seemingly long span of time is revealed to have passed in an instant. Similarly, the near entirety of this song, during which I've recollected every date with Sita thus far, turns out to have been sandwiched between the briefest exchange of farewells.`,
                     ],
                     dotKeys: {
                         [NARRATIVE]: true,

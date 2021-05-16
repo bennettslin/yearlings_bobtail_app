@@ -15,7 +15,7 @@ const TempGlobalAnnotations = () => {
     const
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         selectedAnnotationIndex = useSelector(mapSelectedAnnotationIndex),
-        [showTodos, setShowTodos] = useState(false)
+        [showTodos, setShowTodos] = useState(true)
 
     const toggleShowTodos = () => {
         setShowTodos(!showTodos)

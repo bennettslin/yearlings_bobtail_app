@@ -145,17 +145,17 @@ export default {
                             anchor: `furor`,
                             card: {
                                 description: [
-                                    `Or else, our`,
+                                    `Or else, our "`,
                                     {
-                                        anchor: `"Führer,"`,
+                                        anchor: `Führer`,
                                         wiki: `Führer`,
                                     },
-                                    `a German title of leadership strongly associated with`,
+                                    `," a German title of leadership strongly associated with`,
                                     {
-                                        anchor: `Adolf Hitler.`,
+                                        anchor: `Adolf Hitler`,
                                         wiki: `Adolf_Hitler`,
                                     },
-                                    `For animal rights proponents, the parallels between`,
+                                    `. For animal rights proponents, the parallels between`,
                                     {
                                         anchor: `factory farming`,
                                         wiki: `Intensive_animal_farming`,
@@ -225,15 +225,15 @@ export default {
                         },
                         `movie. After the battle, the camera panned across a motionless scene of bombed houses and dead bodies while a lone`,
                         {
-                            anchor: `gramophone,`,
+                            anchor: `gramophone`,
                             wiki: `Phonograph`,
                         },
-                        `preserved amid the wreckage, played a sappy Italian`,
+                        `, preserved amid the wreckage, played a sappy Italian`,
                         {
-                            anchor: `parlor song.`,
+                            anchor: `parlor song`,
                             wiki: `Parlour_music`,
                         },
-                        `The ironic contrast stuck with me, and I thought it would work well for this song.`,
+                        `. The ironic contrast stuck with me, and I thought it would work well for this song.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -335,10 +335,11 @@ export default {
                                         {
                                             isItalic: true,
                                             lyric: {
-                                                anchor: `I Know Why the Caged Bird Sings.`,
+                                                anchor: `I Know Why the Caged Bird Sings`,
                                                 wiki: `I_Know_Why_the_Caged_Bird_Sings`,
                                             },
                                         },
+                                        `.`,
                                     ],
                                 },
                             ],
@@ -372,10 +373,10 @@ export default {
                                             },
                                             `is a theory that the universe will reverse its expansion and eventually collapse upon itself, possibly igniting another`,
                                             {
-                                                anchor: `Big Bang.`,
+                                                anchor: `Big Bang`,
                                                 wiki: `Big_Bang`,
                                             },
-                                            `I found the thought comforting as it jibes with the Hindu belief that the universe is a living force like us, helplessly bound to an eternal cycle of death and rebirth.`,
+                                            `. I found the thought comforting as it jibes with the Hindu belief that the universe is a living force like us, helplessly bound to an eternal cycle of death and rebirth.`,
                                         ],
                                         dotKeys: {
                                             [OBSERVATION]: true,
@@ -389,20 +390,20 @@ export default {
                                         description: [
                                             `In`,
                                             {
-                                                anchor: `quantum theory,`,
+                                                anchor: `quantum theory`,
                                                 wiki: `Quantum_mechanics`,
                                             },
-                                            `a particle exists as a combination of its possible states. To explain the problem of applying this concept to larger objects,`,
+                                            `, a particle exists as a combination of its possible states. To explain the problem of applying this concept to larger objects,`,
                                             {
                                                 anchor: `Erwin Schrödinger`,
                                                 wiki: `Erwin_Schrödinger`,
                                             },
                                             `proposed a famous thought experiment known as`,
                                             {
-                                                anchor: `Schrödinger's cat.`,
+                                                anchor: `Schrödinger's cat`,
                                                 wiki: `Schrödinger's_cat`,
                                             },
-                                            `We imagine a cat sealed inside a steel chamber, where it stands an equal chance of surviving or being killed by cyanide. Since we can't observe the outcome, we must regard the cat as being simultaneously dead and alive.`,
+                                            `. We imagine a cat sealed inside a steel chamber, where it stands an equal chance of surviving or being killed by cyanide. Since we can't observe the outcome, we must regard the cat as being simultaneously dead and alive.`,
                                         ],
                                     },
                                 },
@@ -527,9 +528,10 @@ export default {
                                     },
                                     `aghast at all the things he cheered for at the`,
                                     {
-                                        anchor: `Nuremberg Rallies.`,
+                                        anchor: `Nuremberg Rallies`,
                                         wiki: `Nuremberg_Rally`,
                                     },
+                                    `.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -545,11 +547,11 @@ export default {
                                     {
                                         isItalic: true,
                                         lyric: {
-                                            anchor: `Schutzstaffel,`,
+                                            anchor: `Schutzstaffel`,
                                             wiki: `Schutzstaffel`,
                                         },
                                     },
-                                    `the paramilitary group responsible for carrying out the Holocaust, consisted of two thunderbolts side by side. And so, wishing no more to strike anyone down with my thunder, I strike myself down instead, leaving my complacence and ego behind.`,
+                                    `, the paramilitary group responsible for carrying out the Holocaust, consisted of two thunderbolts side by side. And so, wishing no more to strike anyone down with my thunder, I strike myself down instead, leaving my complacence and ego behind.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -636,10 +638,10 @@ export default {
                                 description: [
                                     `Upon becoming a vegan, I joined`,
                                     {
-                                        anchor: `People for the Ethical Treatment of Animals,`,
+                                        anchor: `People for the Ethical Treatment of Animals`,
                                         wiki: `People_for_the_Ethical_Treatment_of_Animals`,
                                     },
-                                    `an animal rights organization. For several years, I volunteered my time and took part in PETA demonstrations.`,
+                                    `, an animal rights organization. For several years, I volunteered my time and took part in PETA demonstrations.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -725,12 +727,12 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `In Nirvana's`,
+                                        `In Nirvana's "`,
                                         {
-                                            anchor: `"Sappy,"`,
+                                            anchor: `Sappy`,
                                             wiki: `Sappy`,
                                         },
-                                        `Kurt Cobain compares the victim of an abusive relationship to a small creature kept in a jar with breathing holes punched in the lid. I liked this imagery, so I took it.`,
+                                        `," Kurt Cobain compares the victim of an abusive relationship to a small creature kept in a jar with breathing holes punched in the lid. I liked this imagery, so I took it.`,
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
@@ -811,15 +813,15 @@ export default {
                                 description: [
                                     `As we come upon a`,
                                     {
-                                        anchor: `white dwarf,`,
+                                        anchor: `white dwarf`,
                                         wiki: `White_dwarf`,
                                     },
-                                    `the superdense remnant of an aged star, I'm reminded of`,
+                                    `, the superdense remnant of an aged star, I'm reminded of`,
                                     {
-                                        anchor: `Apasmara,`,
+                                        anchor: `Apasmara`,
                                         wiki: `Apasmara`,
                                     },
-                                    `the ageless dwarf demon of ignorance in Hindu mythology. And so I pause to mull over the hurt that my own ignorance has caused.`,
+                                    `, the ageless dwarf demon of ignorance in Hindu mythology. And so I pause to mull over the hurt that my own ignorance has caused.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -864,10 +866,10 @@ export default {
                                 {
                                     description: [
                                         {
-                                            anchor: `Nataraja,`,
+                                            anchor: `Nataraja`,
                                             wiki: `Nataraja`,
                                         },
-                                        `or "lord of the dance," is a depiction of the Hindu god`,
+                                        `, or "lord of the dance," is a depiction of the Hindu god`,
                                         {
                                             anchor: `Shiva`,
                                             wiki: `Shiva`,

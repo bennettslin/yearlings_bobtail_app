@@ -39,10 +39,10 @@ export default {
                         },
                         `is the first day of`,
                         {
-                            anchor: `Lent,`,
+                            anchor: `Lent`,
                             wiki: `Lent`,
                         },
-                        `a period of fasting observed by Christians to memorialize the forty days that`,
+                        `, a period of fasting observed by Christians to memorialize the forty days that`,
                         {
                             anchor: `Jesus`,
                             wiki: `Jesus`,
@@ -140,12 +140,12 @@ export default {
                             todo: true,
                             card: {
                                 description: [
-                                    `A reference to the classic`,
+                                    `A reference to the classic "`,
                                     {
-                                        anchor: `"Who's buried in Grant's tomb?"`,
+                                        anchor: `Who's buried in Grant's tomb`,
                                         wiki: `Grant's_Tomb`,
                                     },
-                                    `riddle, of course, but also to James Joyce's masterpiece novel`,
+                                    `?" riddle, of course, but also to James Joyce's masterpiece novel`,
                                     {
                                         isItalic: true,
                                         lyric: {
@@ -218,9 +218,10 @@ export default {
                                     description: [
                                         `Jesus was laid "to rest" on the day of`,
                                         {
-                                            anchor: `his crucifixion.`,
+                                            anchor: `his crucifixion`,
                                             wiki: `Crucifixion_of_Jesus`,
                                         },
+                                        `.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -285,10 +286,10 @@ export default {
                         },
                         `trains braking in a subway tunnel beneath the sidewalk. I made the tracks by overblowing individual pitches and then splicing those together to form descending`,
                         {
-                            anchor: `arpeggios—`,
+                            anchor: `arpeggios`,
                             wiki: `Arpeggio`,
                         },
-                        `triplets for the soprano recorder, quadruplets for the tenor.`,
+                        `— triplets for the soprano recorder, quadruplets for the tenor.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -439,15 +440,15 @@ export default {
                     description: [
                         `Maqam is distinguished by its use of`,
                         {
-                            anchor: `quarter tones,`,
+                            anchor: `quarter tones`,
                             wiki: `Quarter_tone`,
                         },
-                        `which are absent in the Western`,
+                        `, which are absent in the Western`,
                         {
-                            anchor: `chromatic scale.`,
+                            anchor: `chromatic scale`,
                             wiki: `Chromatic_scale`,
                         },
-                        `For each quarter-tone melody, I scored parts for two separate takes, the second one with the instrument detuned by a quarter step. I then recorded each take and`,
+                        `. For each quarter-tone melody, I scored parts for two separate takes, the second one with the instrument detuned by a quarter step. I then recorded each take and`,
                         {
                             anchor: `overdubbed`,
                             wiki: `Overdubbing`,
@@ -498,9 +499,10 @@ export default {
                     description: [
                         `While a major third can be divided into equal whole steps in Western music, a minor third can only be divided unequally, between whole and half. But quarter tones allow a minor third to be traversed in two equal steps, creating the sensation of a squished major third. I liked how this confused my ears so much, I went overboard with these rapid-fire minor-third runs on the`,
                         {
-                            anchor: `Dobro.`,
+                            anchor: `Dobro`,
                             wiki: `Dobro`,
                         },
+                        `.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -533,15 +535,15 @@ export default {
                                     },
                                     `ethnic group. They speak`,
                                     {
-                                        anchor: `Shelta,`,
+                                        anchor: `Shelta`,
                                         wiki: `Shelta`,
                                     },
-                                    `a cryptic language intended to exclude outsiders from comprehension. Catherine was part`,
+                                    `, a cryptic language intended to exclude outsiders from comprehension. Catherine was part`,
                                     {
-                                        anchor: `Irish,`,
+                                        anchor: `Irish`,
                                         wiki: `Ireland`,
                                     },
-                                    `though not a Traveller. Either way, I was stuck outside her "shelter."`,
+                                    `, though not a Traveller. Either way, I was stuck outside her "shelter."`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -560,12 +562,12 @@ export default {
                             anchor: `famous raincoat`,
                             card: {
                                 description: [
-                                    `Catherine was the one who introduced me to the music of Leonard Cohen. It was her impassioned reading of his song`,
+                                    `Catherine was the one who introduced me to the music of Leonard Cohen. It was her impassioned reading of his song "`,
                                     {
-                                        anchor: `"Famous Blue Raincoat"`,
+                                        anchor: `Famous Blue Raincoat`,
                                         wiki: `Famous_Blue_Raincoat`,
                                     },
-                                    `that helped me understand the heights that great lyrics can reach.`,
+                                    `" that helped me understand the heights that great lyrics can reach.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -586,25 +588,25 @@ export default {
                                     description: [
                                         `"Raincoat" is a slang term for`,
                                         {
-                                            anchor: `condoms,`,
+                                            anchor: `condoms`,
                                             wiki: `Condom`,
                                         },
-                                        `which might be unknown to`,
+                                        `, which might be unknown to "`,
                                         {
-                                            anchor: `"Rome"`,
+                                            anchor: `Rome`,
                                             wiki: `Rome`,
                                         },
-                                        `given the Catholic Church's stance against`,
+                                        `" given the Catholic Church's stance against`,
                                         {
-                                            anchor: `birth control.`,
+                                            anchor: `birth control`,
                                             wiki: `Birth_control`,
                                         },
-                                        `We never needed them since Catherine had vowed not to engage in`,
+                                        `.We never needed them since Catherine had vowed not to engage in`,
                                         {
-                                            anchor: `premarital sex,`,
+                                            anchor: `premarital sex`,
                                             wiki: `Premarital_sex`,
                                         },
-                                        `though I always held out the hope.`,
+                                        `, though I always held out the hope.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -626,10 +628,10 @@ export default {
                                 description: [
                                     `The critic`,
                                     {
-                                        anchor: `Dorothy Parker,`,
+                                        anchor: `Dorothy Parker`,
                                         wiki: `Dorothy_Parker`,
                                     },
-                                    `whose wit Catherine admired, famously quipped that "men seldom make passes at girls who wear glasses."`,
+                                    `, whose wit Catherine admired, famously quipped that "men seldom make passes at girls who wear glasses."`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -647,12 +649,12 @@ export default {
                                         isItalic: true,
                                         lyric: `Beautiful Losers`,
                                     },
-                                    `, particularly in its line, "Did you ever go clear?" (I later found out that`,
+                                    `, particularly in its line, "Did you ever go clear?" (I later found out that "`,
                                     {
-                                        anchor: `"going clear"`,
+                                        anchor: `going clear`,
                                         wiki: `Clear_(Scientology)`,
                                     },
-                                    `is a`,
+                                    `" is a`,
                                     {
                                         anchor: `Scientology`,
                                         wiki: `Scientology`,
@@ -670,10 +672,10 @@ export default {
                             card: {
                                 description: [
                                     {
-                                        anchor: `Kateri Tekakwitha,`,
+                                        anchor: `Kateri Tekakwitha`,
                                         wiki: `Kateri_Tekakwitha`,
                                     },
-                                    `baptized as Saint Catherine, was the Catholic Church's first`,
+                                    `, baptized as Saint Catherine, was the Catholic Church's first`,
                                     {
                                         anchor: `Native American`,
                                         wiki: `Native_Americans_in_the_United_States`,
@@ -718,10 +720,10 @@ export default {
                                     },
                                     `woman whose village he raided. Dorothy Parker was a member of the`,
                                     {
-                                        anchor: `Algonquin Round Table,`,
+                                        anchor: `Algonquin Round Table`,
                                         wiki: `Algonquin_Round_Table`,
                                     },
-                                    `a social circle of New York City writers known for their clever wit and wordplay. And so here I joke that Catherine must have feared I would take her away from her friends, being too dimwitted as I was to ever be allowed to meet them.`,
+                                    `, a social circle of New York City writers known for their clever wit and wordplay. And so here I joke that Catherine must have feared I would take her away from her friends, being too dimwitted as I was to ever be allowed to meet them.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -788,10 +790,10 @@ export default {
                                 description: [
                                     `The ash used on Ash Wednesday comes from burning the palm branches that were blessed on the previous year's`,
                                     {
-                                        anchor: `Palm Sunday.`,
+                                        anchor: `Palm Sunday`,
                                         wiki: `Palm_Sunday`,
                                     },
-                                    `But my ash came from a discarded cigarette that was still lit, so the palms I burned were the literal palms of my hands.`,
+                                    `. But my ash came from a discarded cigarette that was still lit, so the palms I burned were the literal palms of my hands.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -998,10 +1000,10 @@ export default {
                                 description: [
                                     `My ash was smudged by day's end, resembling the kind of large, amorphous mole that can develop into`,
                                     {
-                                        anchor: `melanoma.`,
+                                        anchor: `melanoma`,
                                         wiki: `Melanoma`,
                                     },
-                                    `Which is fitting, since it was probably sick of me to fake being Catholic.`,
+                                    `. Which is fitting, since it was probably sick of me to fake being Catholic.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,

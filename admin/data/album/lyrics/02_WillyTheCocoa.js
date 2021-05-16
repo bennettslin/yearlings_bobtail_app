@@ -49,10 +49,10 @@ export default {
                         },
                         `, or "crazy" in`,
                         {
-                            anchor: `Spanish.`,
+                            anchor: `Spanish`,
                             wiki: `Spanish_language`,
                         },
-                        `There wasn't an official way to spell it.`,
+                        `. There wasn't an official way to spell it.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -80,24 +80,25 @@ export default {
                     description: [
                         `In the past, a disabled child was sometimes thought to be a troll in disguise known as a`,
                         {
-                            anchor: `changeling,`,
+                            anchor: `changeling`,
                             wiki: `Changeling`,
                         },
-                        `who'd been left in place of a stolen human child. So I wanted this song to sound like a band of woodland trolls in secluded revelry after pulling off such a heist. I figured their style would be akin to the swamp rock of`,
+                        `, who'd been left in place of a stolen human child. So I wanted this song to sound like a band of woodland trolls in secluded revelry after pulling off such a heist. I figured their style would be akin to the swamp rock of`,
                         {
-                            anchor: `Creedence Clearwater Revival,`,
+                            anchor: `Creedence Clearwater Revival`,
                             wiki: `Creedence_Clearwater_Revival`,
                         },
-                        `and I used`,
+                        `, and I used`,
                         {
                             anchor: `melodicas`,
                             wiki: `Melodica`,
                         },
                         `to evoke`,
                         {
-                            anchor: `Cajun accordions.`,
+                            anchor: `Cajun accordions`,
                             wiki: `Cajun_accordion`,
                         },
+                        `.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -129,15 +130,15 @@ export default {
                                     },
                                     `of`,
                                     {
-                                        anchor: `Los Angeles,`,
+                                        anchor: `Los Angeles`,
                                         wiki: `Los_Angeles`,
                                     },
-                                    `where wide boulevards stretch endlessly along a`,
+                                    `, where wide boulevards stretch endlessly along a`,
                                     {
-                                        anchor: `grid plan,`,
+                                        anchor: `grid plan`,
                                         wiki: `Grid_plan`,
                                     },
-                                    `and mountains block the horizon on all sides.`,
+                                    `, and mountains block the horizon on all sides.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -242,10 +243,10 @@ export default {
                                     description: [
                                         `Willy had`,
                                         {
-                                            anchor: `microcephaly,`,
+                                            anchor: `microcephaly`,
                                             wiki: `Microcephaly`,
                                         },
-                                        `a medical condition in which the brain has failed to develop properly. And so his head was abnormally small in size, like the "pinheads" of`,
+                                        `, a medical condition in which the brain has failed to develop properly. And so his head was abnormally small in size, like the "pinheads" of`,
                                         {
                                             anchor: `carnival sideshows`,
                                             wiki: `Sideshow`,
@@ -503,12 +504,12 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `Willy might in fact be observing that my brother has yet to outgrow his`,
+                                        `Willy might in fact be observing that my brother has yet to outgrow his "`,
                                         {
-                                            anchor: `"colic,"`,
+                                            anchor: `colic`,
                                             wiki: `Baby_colic`,
                                         },
-                                        `a period of excessive crying in infants. In the past, such inexplicable delays in early development helped give rise to a belief in changelings.`,
+                                        `," a period of excessive crying in infants. In the past, such inexplicable delays in early development helped give rise to a belief in changelings.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -554,10 +555,10 @@ export default {
                                 description: [
                                     `In those days, the back pages of comic books were filled with ads for novelty items. Having sent away weeks ago for a pair of`,
                                     {
-                                        anchor: `X-Ray Specs,`,
+                                        anchor: `X-Ray Specs`,
                                         wiki: `X-Ray_Specs_(novelty)`,
                                     },
-                                    `which purportedly allow the wearer to see through objects, I've just received them in the mail and am now trying them on.`,
+                                    `, which purportedly allow the wearer to see through objects, I've just received them in the mail and am now trying them on.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -900,20 +901,20 @@ export default {
                                 description: [
                                     `We plant`,
                                     {
-                                        anchor: `asphodels,`,
+                                        anchor: `asphodels`,
                                         wiki: `Asphodelus`,
                                     },
-                                    `a popular garden plant named after the immortal flower that populates a`,
+                                    `, a popular garden plant named after the immortal flower that populates a`,
                                     {
                                         anchor: `section of the underworld`,
                                         wiki: `Asphodel_Meadows`,
                                     },
                                     `in`,
                                     {
-                                        anchor: `Greek mythology.`,
+                                        anchor: `Greek mythology`,
                                         wiki: `Greek_mythology`,
                                     },
-                                    `By softening the soil, the mulch gives new life to our flower beds. And perhaps Willy will do the same for our neighborhood, by softening the "asphalt" beneath which his body had lain.`,
+                                    `. By softening the soil, the mulch gives new life to our flower beds. And perhaps Willy will do the same for our neighborhood, by softening the "asphalt" beneath which his body had lain.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1023,12 +1024,12 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `After my brother was diagnosed with autism, my mother went back to school to learn child development. At the dinner table, she would explain to us such concepts as`,
+                                        `After my brother was diagnosed with autism, my mother went back to school to learn child development. At the dinner table, she would explain to us such concepts as "`,
                                         {
-                                            anchor: `"imprinting,"`,
+                                            anchor: `imprinting`,
                                             wiki: `Imprinting_(psychology)`,
                                         },
-                                        `the phase during which a child learns emotional attachment. She would then voice regret that she began her studies too late to help my brother.`,
+                                        `," the phase during which a child learns emotional attachment. She would then voice regret that she began her studies too late to help my brother.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -1037,16 +1038,16 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `Since an`,
+                                        `Since an "`,
                                         {
-                                            anchor: `"imp`,
+                                            anchor: `imp`,
                                             wiki: `Imp`,
                                         },
                                         {
-                                            anchor: `runt"`,
+                                            anchor: `runt`,
                                             wiki: `Runt`,
                                         },
-                                        `is literally the weakest member in a litter of troll infants, it's surely the one that a troll parent would try to replace with a stolen human child.`,
+                                        `" is literally the weakest member in a litter of troll infants, it's surely the one that a troll parent would try to replace with a stolen human child.`,
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
@@ -1128,10 +1129,10 @@ export default {
                                     description: [
                                         `In the`,
                                         {
-                                            anchor: `Cub Scouts,`,
+                                            anchor: `Cub Scouts`,
                                             wiki: `Cub_Scouting_(Boy_Scouts_of_America)`,
                                         },
-                                        `Webelos is the eldest rank and is earned by boys in the fourth or fifth grade. It stands for "We'll Be Loyal Scouts."`,
+                                        `, Webelos is the eldest rank and is earned by boys in the fourth or fifth grade. It stands for "We'll Be Loyal Scouts."`,
                                     ],
                                 },
                             ],
@@ -1196,10 +1197,10 @@ export default {
                                 description: [
                                     `I wore an eyepatch as a child to correct my`,
                                     {
-                                        anchor: `lazy eye.`,
+                                        anchor: `lazy eye`,
                                         wiki: `Amblyopia`,
                                     },
-                                    `Since I lacked depth perception, it was less of a struggle for me to draw on paper the things I saw in real life. Impressed by my ability, my mother insisted I was destined to be a great artist. So I always had it in my head that I would one day create a masterpiece, perhaps something like the`,
+                                    `. Since I lacked depth perception, it was less of a struggle for me to draw on paper the things I saw in real life. Impressed by my ability, my mother insisted I was destined to be a great artist. So I always had it in my head that I would one day create a masterpiece, perhaps something like the`,
                                     {
                                         anchor: `Tintin`,
                                         wiki: `The_Adventures_of_Tintin`,
@@ -1241,12 +1242,12 @@ export default {
                             todo: true,
                             card: {
                                 description: [
-                                    `My favorite word as a child was "bobtail." I was just so proud of myself the day I realized that the line "bells on bobtail ring," from the song`,
+                                    `My favorite word as a child was "bobtail." I was just so proud of myself the day I realized that the line "bells on bobtail ring," from the song "`,
                                     {
-                                        anchor: `"Jingle Bells,"`,
+                                        anchor: `Jingle Bells`,
                                         wiki: `Jingle_Bells`,
                                     },
-                                    `actually has meaning and isn't a jumble of random words. In any case,`,
+                                    `," actually has meaning and isn't a jumble of random words. In any case,`,
                                     {
                                         isItalic: true,
                                         lyric: `Bobtail`,

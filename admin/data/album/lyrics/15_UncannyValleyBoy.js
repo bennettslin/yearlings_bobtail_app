@@ -126,14 +126,15 @@ export default {
                                     description: [
                                         `Like the ghosts in`,
                                         {
-                                            anchor: `Charles Dickens's`,
+                                            anchor: `Charles Dickens`,
                                             wiki: `Charles_Dickens`,
                                         },
+                                        `'s`,
                                         {
-                                            anchor: `A Christmas Carol,`,
+                                            anchor: `A Christmas Carol`,
                                             wiki: `A_Christmas_Carol`,
                                         },
-                                        `my parents invite me on a magical night journey to witness the ordeals of my past, my self-serving ways at present, and the emotional devastation soon to come of it all.`,
+                                        `,my parents invite me on a magical night journey to witness the ordeals of my past, my self-serving ways at present, and the emotional devastation soon to come of it all.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -159,9 +160,10 @@ export default {
                             card: {
                                 description: [
                                     {
-                                        anchor: `Shel Silverstein's`,
+                                        anchor: `Shel Silverstein`,
                                         wiki: `Shel_Silverstein`,
                                     },
+                                    `'s`,
                                     {
                                         isItalic: true,
                                         lyric: {
@@ -206,14 +208,16 @@ export default {
                                     {
                                         isItalic: true,
                                         lyric: {
-                                            anchor: `The Monster at the End of This Book,`,
+                                            anchor: `The Monster at the End of This Book`,
                                             wiki: `The_Monster_at_the_End_of_This_Book:_Starring_Lovable,_Furry_Old_Grover`,
                                         },
                                     },
+                                    `,`,
                                     {
-                                        anchor: `Sesame Street's`,
+                                        anchor: `Sesame Street`,
                                         wiki: `Sesame_Street`,
                                     },
+                                    `'s`,
                                     {
                                         anchor: `Grover`,
                                         wiki: `Grover`,
@@ -260,10 +264,10 @@ export default {
                                 description: [
                                     `My parents lament that my opportunism has made me a future`,
                                     {
-                                        anchor: `"soldier of" fortune,`,
+                                        anchor: `"soldier of" fortune`,
                                         wiki: `Mercenary`,
                                     },
-                                    `as I squander everything good I have with Sita to chase unsavory and foolhardy pursuits.`,
+                                    `, as I squander everything good I have with Sita to chase unsavory and foolhardy pursuits.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -282,12 +286,12 @@ export default {
                             todo: true,
                             card: {
                                 description: [
-                                    `Being`,
+                                    `Being "`,
                                     {
-                                        anchor: `"endorphined"`,
+                                        anchor: `endorphined`,
                                         wiki: `Endorphins`,
                                     },
-                                    `in my perpetually inebriated state allows me to live as a virtual orphan, in denial of having parents whose high expectations I fail to meet.`,
+                                    `" in my perpetually inebriated state allows me to live as a virtual orphan, in denial of having parents whose high expectations I fail to meet.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -340,10 +344,10 @@ export default {
                     description: [
                         `My original hope for some of these puns was for listeners to believe they'd stumbled upon a`,
                         {
-                            anchor: `mondegreen.`,
+                            anchor: `mondegreen`,
                             wiki: `Mondegreen`,
                         },
-                        `But upon further reflection, they would realize the mishearing made too much sense to be inadvertent, and was likely an`,
+                        `. But upon further reflection, they would realize the mishearing made too much sense to be inadvertent, and was likely an`,
                         {
                             anchor: `Easter egg`,
                             wiki: `Easter_egg_(media)`,
@@ -422,19 +426,20 @@ export default {
                     description: [
                         `For this album, I kept in mind the`,
                         {
-                            anchor: `Kinks'`,
+                            anchor: `Kinks`,
                             wiki: `The_Kinks`,
                         },
+                        `'`,
                         {
                             anchor: `Village Green Preservation Society`,
                             wiki: `The_Kinks_Are_the_Village_Green_Preservation_Society`,
                         },
-                        `as my model. The songs all had to be memorable pop tunes, contain zero filler, and represent a diversity of musical styles. And each one would clock in at three minutes or so, with none over four. While there was no one-to-one mapping, this song was clearly the`,
+                        `as my model. The songs all had to be memorable pop tunes, contain zero filler, and represent a diversity of musical styles. And each one would clock in at three minutes or so, with none over four. While there was no one-to-one mapping, this song was clearly the "`,
                         {
-                            anchor: `"Wicked Annabella"`,
+                            anchor: `Wicked Annabella`,
                             wiki: `Wicked_Annabella`,
                         },
-                        `of the bunch. So I borrowed its sound of low notes played on distorted electric guitars.`,
+                        `" of the bunch. So I borrowed its sound of low notes played on distorted electric guitars.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -460,9 +465,10 @@ export default {
                                     description: [
                                         `In`,
                                         {
-                                            anchor: `Greek drama,`,
+                                            anchor: `Greek drama`,
                                             wiki: `Theatre_of_ancient_Greece`,
                                         },
+                                        `,`,
                                         {
                                             anchor: `hamartia`,
                                             wiki: `Hamartia`,
@@ -559,10 +565,10 @@ export default {
                     description: [
                         `As silly as the original lyrics for the chorus were, I liked them enough to keep them as a vocal`,
                         {
-                            anchor: `counter-melody.`,
+                            anchor: `counter-melody`,
                             wiki: `Counter-melody`,
                         },
-                        `The original counter-melody, which I'd planned to play on guitar, was then given to the lead vocals, for which I wrote new lyrics.`,
+                        `. The original counter-melody, which I'd planned to play on guitar, was then given to the lead vocals, for which I wrote new lyrics.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -587,9 +593,10 @@ export default {
                             card: {
                                 description: [
                                     {
-                                        anchor: `Antoine de Saint-Exupéry's`,
+                                        anchor: `Antoine de Saint-Exupéry`,
                                         wiki: `Antoine_de_Saint-Exupéry`,
                                     },
+                                    `'s`,
                                     {
                                         isItalic: true,
                                         lyric: {
@@ -637,10 +644,10 @@ export default {
                                     },
                                     `is a classic swindle in which a ball is placed under one of three nutshells that are then shuffled in plain view. Having recognized life to be an endless series of shell games, I vowed to never get suckered again. And knowing now how the ball is misplaced through`,
                                     {
-                                        anchor: `sleight of hand,`,
+                                        anchor: `sleight of hand`,
                                         wiki: `Sleight_of_hand`,
                                     },
-                                    `I could even do some grifting myself.`,
+                                    `, I could even do some grifting myself.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -674,11 +681,12 @@ export default {
                                         anchor: `fairy tale`,
                                         wiki: `Fairy_tale`,
                                     },
+                                    `"`,
                                     {
-                                        anchor: `"Jack and the Beanstalk,"`,
+                                        anchor: `Jack and the Beanstalk`,
                                         wiki: `Jack_and_the_Beanstalk`,
                                     },
-                                    `though I'm not sure why.`,
+                                    `," though I'm not sure why.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -727,10 +735,10 @@ export default {
                                 description: [
                                     `Some organizations make their new recruits go through degrading`,
                                     {
-                                        anchor: `hazing rituals.`,
+                                        anchor: `hazing rituals`,
                                         wiki: `Hazing`,
                                     },
-                                    `Having endured such abuse for so long myself, I finally conceded that I could't have toughened up any other way. And now I had no qualms about doling it out to others.`,
+                                    `. Having endured such abuse for so long myself, I finally conceded that I could't have toughened up any other way. And now I had no qualms about doling it out to others.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -756,24 +764,28 @@ export default {
                         },
                         `guitarist`,
                         {
-                            anchor: `Jonny Greenwood's`,
+                            anchor: `Jonny Greenwood`,
                             wiki: `Jonny_Greenwood`,
                         },
+                        `'s`,
                         {
                             anchor: `tremolo`,
                             wiki: `Tremolo`,
                         },
                         `picking on the song "Airbag" from their album`,
                         {
-                            anchor: `OK Computer.`,
-                            wiki: `OK_Computer`,
+                            isItalic: true,
+                            lyric: {
+                                anchor: `OK Computer`,
+                                wiki: `OK_Computer`,
+                            },
                         },
-                        `But as a left-hander who plays right-handed, I've always struggled with`,
+                        `. But as a left-hander who plays right-handed, I've always struggled with`,
                         {
-                            anchor: `alternate picking.`,
+                            anchor: `alternate picking`,
                             wiki: `Alternate_picking`,
                         },
-                        `So I recorded several takes of steady eighth notes on the banjo, each one offset further in the mix by a fraction of a beat. In the last few measures they separate in the balance, like a rope fraying at one end.`,
+                        `. So I recorded several takes of steady eighth notes on the banjo, each one offset further in the mix by a fraction of a beat. In the last few measures they separate in the balance, like a rope fraying at one end.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -822,14 +834,15 @@ export default {
                                         },
                                         `, an epic poem of ancient India. The epic recounts the marriage of Rama to`,
                                         {
-                                            anchor: `Sita,`,
+                                            anchor: `Sita`,
                                             wiki: `Sita`,
                                         },
-                                        `daughter of the earth, and his battle to rescue her after she was abducted by the demon king`,
+                                        `, daughter of the earth, and his battle to rescue her after she was abducted by the demon king`,
                                         {
-                                            anchor: `Ravana.`,
+                                            anchor: `Ravana`,
                                             wiki: `Ravana`,
                                         },
+                                        `.`,
                                     ],
                                 },
                             ],
@@ -975,10 +988,10 @@ export default {
                             card: {
                                 description: [
                                     {
-                                        anchor: `Valmiki,`,
+                                        anchor: `Valmiki`,
                                         wiki: `Valmiki`,
                                     },
-                                    `the renowned author of the`,
+                                    `, the renowned author of the`,
                                     {
                                         isItalic: true,
                                         lyric: `Ramayana`,
@@ -1010,12 +1023,12 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `In Greek mythology, the`,
+                                        `In Greek mythology, the "`,
                                         {
-                                            anchor: `"Sirens"`,
+                                            anchor: `Sirens`,
                                             wiki: `Siren_(mythology)`,
                                         },
-                                        `were beautiful women whose enchanting songs would lull sailors and lead them to crash against the rocky shores. But just as`,
+                                        `" were beautiful women whose enchanting songs would lull sailors and lead them to crash against the rocky shores. But just as`,
                                         {
                                             anchor: `Odysseus`,
                                             wiki: `Odysseus`,
@@ -1083,10 +1096,10 @@ export default {
                                     description: [
                                         `On special occasions, Sita would wear a`,
                                         {
-                                            anchor: `sari.`,
+                                            anchor: `sari`,
                                             wiki: `Sari`,
                                         },
-                                        `They looked really good on her.`,
+                                        `. They looked really good on her.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -1543,9 +1556,10 @@ export default {
                                     description: [
                                         `In my chant, however, the syllables gradually shift to form the holy name of Mara. Unlike Valmiki, who embraced Eastern spirituality, I find salvation in the embrace of Western women. And so my chant ends here with an expression of Western faith. In the`,
                                         {
-                                            anchor: `New Testament,`,
+                                            anchor: `New Testament`,
                                             wiki: `New_Testament`,
                                         },
+                                        `,`,
                                         {
                                             isItalic: true,
                                             lyric: {

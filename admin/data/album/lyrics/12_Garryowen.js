@@ -43,10 +43,10 @@ export default {
                         },
                         `, Garryowen is a menacing dog owned by a vulgar`,
                         {
-                            anchor: `Irish nationalist.`,
+                            anchor: `Irish nationalist`,
                             wiki: `Irish_nationalism`,
                         },
-                        `It seemed like a fitting eponym for my drunken self at the time.`,
+                        `. It seemed like a fitting eponym for my drunken self at the time.`,
                     ],
                     dotKeys: {
                         [OBSERVATION]: true,
@@ -298,10 +298,10 @@ export default {
                                 description: [
                                     `Once when Sita protested that we couldn't have sex until after I washed up, I snidely replied that she could still give me a hummer, or`,
                                     {
-                                        anchor: `blowjob,`,
+                                        anchor: `blowjob`,
                                         wiki: `Fellatio`,
                                     },
-                                    `since this didn't count as sex in her view.`,
+                                    `, since this didn't count as sex in her view.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -409,12 +409,12 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `Much like I wouldn't have recognized myself wearing an`,
+                                        `Much like I wouldn't have recognized myself wearing an "`,
                                         {
-                                            anchor: `"upturned collar,"`,
+                                            anchor: `upturned collar`,
                                             wiki: `Upturned_collar`,
                                         },
-                                        `the angry drunk I saw in my reflection didn't mesh with my self-image as a wide-eyed and well-meaning kid. And so at some point, I vowed to make a clean break and start over.`,
+                                        `," the angry drunk I saw in my reflection didn't mesh with my self-image as a wide-eyed and well-meaning kid. And so at some point, I vowed to make a clean break and start over.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -434,10 +434,10 @@ export default {
                     description: [
                         `In traditional`,
                         {
-                            anchor: `counterpoint,`,
+                            anchor: `counterpoint`,
                             wiki: `Counterpoint`,
                         },
-                        `melodies are laid one atop another, and the chord progression is simply a byproduct of the harmonies they form in sequence. But since the chords for this song were already established, I took the reverse approach. Starting with the progression written out as block chords, I assigned each note in a chord to a different part. Then for each part, I wrote a cohesive but unassuming melody that sounded out every one of its assigned notes.`,
+                        `, melodies are laid one atop another, and the chord progression is simply a byproduct of the harmonies they form in sequence. But since the chords for this song were already established, I took the reverse approach. Starting with the progression written out as block chords, I assigned each note in a chord to a different part. Then for each part, I wrote a cohesive but unassuming melody that sounded out every one of its assigned notes.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -797,9 +797,10 @@ export default {
                                 description: [
                                     `Related to the English "toodle-oo," the Irish "tooraloo" carries the same meaning of "goodbye." Nonsensical variants are prevalent in drinking songs and`,
                                     {
-                                        anchor: `lullabies.`,
+                                        anchor: `lullabies`,
                                         wiki: `Too_Ra_Loo_Ra_Loo_Ral`,
                                     },
+                                    `.`,
                                 ],
                             },
                         },

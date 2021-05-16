@@ -123,10 +123,10 @@ export default {
                                 description: [
                                     `Sita worked as a hostess at`,
                                     {
-                                        anchor: `El Torito,`,
+                                        anchor: `El Torito`,
                                         wiki: `El_Torito`,
                                     },
-                                    `a Mexican chain restaurant. I would sometimes pick her up after her shift.`,
+                                    `, a Mexican chain restaurant. I would sometimes pick her up after her shift.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -235,14 +235,15 @@ export default {
                                     description: [
                                         `Still wearing the traditional Mexican dress of her hostess uniform, Sita brings me to the`,
                                         {
-                                            anchor: `Pampas,`,
+                                            anchor: `Pampas`,
                                             wiki: `Pampas`,
                                         },
-                                        `the grassy lowlands spanning the southeastern end of`,
+                                        `, the grassy lowlands spanning the southeastern end of`,
                                         {
-                                            anchor: `South America.`,
+                                            anchor: `South America`,
                                             wiki: `South_America`,
                                         },
+                                        `.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -265,15 +266,15 @@ export default {
                                     },
                                     `are cow herdesses who worship the god`,
                                     {
-                                        anchor: `Krishna.`,
+                                        anchor: `Krishna`,
                                         wiki: `Krishna`,
                                     },
-                                    `I don't have an explanation for what they're doing in`,
+                                    `. I don't have an explanation for what they're doing in`,
                                     {
-                                        anchor: `Argentina,`,
+                                        anchor: `Argentina`,
                                         wiki: `Argentina`,
                                     },
-                                    `of all places. When I wrote these lyrics, I didn't think I'd need one.`,
+                                    `, of all places. When I wrote these lyrics, I didn't think I'd need one.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
