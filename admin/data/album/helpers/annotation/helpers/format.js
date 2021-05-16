@@ -1,5 +1,5 @@
-import { hasSpecialCharacterAtIndex } from '.'
-import { LYRIC_TEXT_KEYS } from '../../constants/lyrics'
+import { hasSpecialCharacterAtIndex } from '../../../../../../app/helpers/format'
+import { LYRIC_TEXT_KEYS } from '../../../../../../app/constants/lyrics'
 
 const _getStringText = textEntity => {
     if (Array.isArray(textEntity)) {
@@ -91,7 +91,7 @@ const _getUncapitalisedText = (text, properNoun) => (
         text.charAt(0).toLowerCase() + text.slice(1)
 )
 
-export const _getSingleQuotedFromDoubleQuotedText = text => (
+const _getSingleQuotedFromDoubleQuotedText = text => (
     text.replace(/\u201C/g, `‘`).replace(/\u201D/g, `’`).trim()
 )
 

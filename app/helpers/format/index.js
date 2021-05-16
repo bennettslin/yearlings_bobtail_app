@@ -1,18 +1,18 @@
 // Helpers for parsing text objects.
 import { isString } from '../general'
 
-const appendSharedSuffix = style => (
+const _appendSharedSuffix = style => (
     `${style}__shared`
 )
 
 export const getSharedClassNames = sharedStyle => {
     if (isString(sharedStyle)) {
-        return appendSharedSuffix(sharedStyle)
+        return _appendSharedSuffix(sharedStyle)
 
     } else if (Array.isArray(sharedStyle)) {
         return (
             sharedStyle.map(style => (
-                appendSharedSuffix(style)
+                _appendSharedSuffix(style)
             ))
         )
 
@@ -21,14 +21,10 @@ export const getSharedClassNames = sharedStyle => {
     }
 }
 
-const discardAfterDoubleUnderscore = word => {
-    // Remove anything after double underscore.
-    return word.split('__')[0]
-}
-
 // TODO: This won't be needed once no presence has its own custom styling.
 export const convertPresenceKeyToClassName = (word = '') => {
-    return discardAfterDoubleUnderscore(word)
+    // Remove anything after double underscore.
+    return word.split('__')[0]
 }
 
 export const capitaliseForClassName = word => {
