@@ -1,10 +1,10 @@
-import React, { memo, Fragment } from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import getDidMountHoc from '../../../hocs/DidMountHoc'
 import Texts from '../../Texts'
 import Underline from '../Underline'
-import { getSpaceIfNeeded, getWordsForWikiAnchor } from './helper'
+import { getWordsForWikiAnchor } from './helper'
 import { IS_USER_AGENT_DESKTOP } from '../../../constants/device'
 import './style'
 
@@ -24,7 +24,6 @@ const AnchorText = ({
 
     return (
         words.map((word, index) => {
-
             const wordElement = (
                 <Texts {...textConfig}
                     hasRecursed
@@ -37,63 +36,57 @@ const AnchorText = ({
             )
 
             return didMount ? (
-                <Fragment {...{ key: index }}>
-                    <span
-                        {...{
-                            className: 'AnchorText',
-                        }}
-                    >
-                        {/* Shown when no dot in dot sequence is selected. */}
-                        {!neverDeselects && (
-                            <span
-                                {...{
-                                    className: cx(
-                                        'TextAnchor__plainText',
-                                    ),
-                                }}
-                            >
-                                {wordElement}
-                            </span>
-                        )}
-
-                        {/* Shown once some dot in dot sequence is selected. */}
+                <span
+                    {...{
+                        key: index,
+                        className: 'AnchorText',
+                    }}
+                >
+                    {/* Shown when no dot in dot sequence is selected. */}
+                    {!neverDeselects && (
                         <span
                             {...{
                                 className: cx(
-                                    'TextAnchor__linkText',
-
-                                    isAccessed && !isSelected ?
-                                        'TextAnchor__linkText__accessed' :
-                                        'TextAnchor__linkText__default',
-
-                                    isSelected &&
-                                        'TextAnchor__linkText__selected',
+                                    'TextAnchor__plainText',
                                 ),
                             }}
                         >
                             {wordElement}
                         </span>
-                        {/* See styling comment for why this is last child. */}
-                        {IS_USER_AGENT_DESKTOP && (
-                            <Underline
-                                {...{
-                                    isAccessed,
-                                    isSelected,
-                                }}
-                                {...isWikiTextAnchor && {
-                                    isWikiAnchor: true,
-                                    isWikiFirstChild: index === 0,
-                                    isWikiLastChild: index === words.length - 1,
-                                }}
-                            />
-                        )}
+                    )}
+
+                    {/* Shown once some dot in dot sequence is selected. */}
+                    <span
+                        {...{
+                            className: cx(
+                                'TextAnchor__linkText',
+
+                                isAccessed && !isSelected ?
+                                    'TextAnchor__linkText__accessed' :
+                                    'TextAnchor__linkText__default',
+
+                                isSelected &&
+                                        'TextAnchor__linkText__selected',
+                            ),
+                        }}
+                    >
+                        {wordElement}
                     </span>
-                    {Boolean(isWikiTextAnchor) && getSpaceIfNeeded({
-                        words,
-                        word,
-                        index,
-                    })}
-                </Fragment>
+                    {/* See styling comment for why this is last child. */}
+                    {IS_USER_AGENT_DESKTOP && (
+                        <Underline
+                            {...{
+                                isAccessed,
+                                isSelected,
+                            }}
+                            {...isWikiTextAnchor && {
+                                isWikiAnchor: true,
+                                isWikiFirstChild: index === 0,
+                                isWikiLastChild: index === words.length - 1,
+                            }}
+                        />
+                    )}
+                </span>
             ) : wordElement
         })
     )
