@@ -60,16 +60,13 @@ const Text = forwardRef(({
             // It's an external anchor in the pitch.
             if (href) {
                 return (
-                    <>
-                        {' '}
-                        <Anchor
-                            {...{
-                                href,
-                                text,
-                                analyticsLabel: 'pitchAnchor',
-                            }}
-                        />
-                    </>
+                    <Anchor
+                        {...{
+                            href,
+                            text,
+                            analyticsLabel: 'pitchAnchor',
+                        }}
+                    />
                 )
 
             } else if (promoKey) {

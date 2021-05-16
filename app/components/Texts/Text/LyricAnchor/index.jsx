@@ -102,8 +102,6 @@ const TextLyricAnchor = forwardRef(({
 
     return (
         <>
-            {/* This space will not show if it starts the verse line. */}
-            {' '}
             <Anchor
                 {...{
                     ref: setRef,
