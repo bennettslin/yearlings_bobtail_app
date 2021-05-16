@@ -44,7 +44,7 @@ const TextLyricAnchor = forwardRef(({
         isSelected = useSelector(getMapIsLyricAnnotation(annotationIndex)),
         lyricAnnotationIndex = useSelector(mapLyricAnnotationIndex),
         isLyricsLocked = useSelector(mapIsLyricsLocked),
-        isWikiTextAnchor = Boolean(wikiIndex)
+        isWikiAnchor = Boolean(wikiIndex)
 
     let isAccessed = false
 
@@ -114,8 +114,8 @@ const TextLyricAnchor = forwardRef(({
                     analyticsLabel: wikiIndex ? 'wiki' : 'lyric',
                     isAccessed,
                     isSelected,
-                    isLyric: !isWikiTextAnchor,
-                    isWikiTextAnchor,
+                    isLyric: !isWikiAnchor,
+                    isWikiAnchor,
                     text,
                     textConfig: {
                         isVerseLyric,
@@ -124,12 +124,12 @@ const TextLyricAnchor = forwardRef(({
                         beginsVerse,
                         endsVerse,
                     },
-                    dotsBit: isWikiTextAnchor ? REFERENCE_BIT : dotsBit,
+                    dotsBit: isWikiAnchor ? REFERENCE_BIT : dotsBit,
                     handleAnchorClick,
                     handleAnchorMouse,
                 }}
             />
-            {isWikiTextAnchor && (
+            {isWikiAnchor && (
                 <WikiDispatcher {...{ ref: dispatchWiki }} />
             )}
             <StopPropagationDispatcher {...{ ref: stopPropagation }} />

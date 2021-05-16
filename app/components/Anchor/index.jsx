@@ -21,7 +21,7 @@ const Anchor = forwardRef(({
     isSelected,
     dotsBit,
     isLyric,
-    isWikiTextAnchor,
+    isWikiAnchor,
     text,
     textConfig,
     analyticsLabel,
@@ -38,7 +38,7 @@ const Anchor = forwardRef(({
 
         showDotSequence =
             isTextAnchor &&
-            !isWikiTextAnchor &&
+            !isWikiAnchor &&
             Number.isFinite(dotsBit) &&
             (
                 // If in mobile, only show dot sequence if annotation title.
@@ -87,7 +87,7 @@ const Anchor = forwardRef(({
                             isLyric && 'Anchor__selectableLyric',
                             !isLyric && 'Anchor__selectableNotLyric',
                         ],
-                        !isWikiTextAnchor && 'Anchor__noWrap',
+                        !isWikiAnchor && 'Anchor__noWrap',
                         className,
                     ),
                 },
@@ -115,7 +115,7 @@ const Anchor = forwardRef(({
                     {...{
                         isAccessed,
                         isSelected,
-                        isWikiTextAnchor,
+                        isWikiAnchor,
                         neverDeselects:
                             neverDeselects || Boolean(href || promoKey),
                         text,
@@ -145,7 +145,7 @@ Anchor.propTypes = {
     isAccessed: PropTypes.bool,
     isSelected: PropTypes.bool,
     isLyric: PropTypes.bool,
-    isWikiTextAnchor: PropTypes.bool,
+    isWikiAnchor: PropTypes.bool,
     dotsBit: PropTypes.number,
     text: PropTypes.any,
     textConfig: PropTypes.any,
