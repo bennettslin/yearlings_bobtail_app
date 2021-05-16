@@ -1,8 +1,7 @@
 # Bug
-* Terminal punctuation in hyperlinks
+* Terminal punctuation in hyperlinks?
     * http://writingspaces.org/wwsg/punctuation-hyperlinks
-    * Already did "tie his shoes"
-    * Already did "Zeizei"
+* Audit text.
 
 # TODO
 * Make turning off popups more obvious. (Wade brought this up.)
