@@ -16,6 +16,10 @@ const Texts = forwardRef(({
         textEntity.map((textEntry, index) => {
             const
                 /**
+                 * NOTE: This value is no longer used anywhere, but I'll keep
+                 * it for now, just in case.
+                 */
+                /**
                  * If it's the root text component, then determine if it's
                  * the beginning or ending span. If it's a subsequent
                  * recursion, then ensure that only the first entry of the
