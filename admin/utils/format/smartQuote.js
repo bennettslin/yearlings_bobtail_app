@@ -1,4 +1,4 @@
-import { isString } from '../../app/helpers/general'
+import { isString } from '../../../app/helpers/general'
 
 const QUOTES_CONFIGS = [
     {
@@ -63,25 +63,20 @@ const _replaceStraightWithSmartQuotes = text => {
     return text
 }
 
-const _formatString = text => (
-    // TODO: Replace straight with smart quotes.
-    _replaceStraightWithSmartQuotes(text)
-)
-
-const _getIsUrl = key => (
+const _getIsLocationPath = key => (
     // Don't format anything that is part of a url path.
     key === 'href' ||
     key === 'wiki'
 )
 
-const _recurseForFormat = textEntity => {
+const _recurseForSmartQuoteFormat = textEntity => {
     if (isString(textEntity)) {
-        return _formatString(textEntity)
+        return _replaceStraightWithSmartQuotes(textEntity)
 
     // Array is an object.
     } else if (Array.isArray(textEntity)) {
         return textEntity.map(text => (
-            _recurseForFormat(text)
+            _recurseForSmartQuoteFormat(text)
         ))
 
     // Null is also an object.
@@ -89,9 +84,9 @@ const _recurseForFormat = textEntity => {
         const newEntity = {}
 
         for (const key in textEntity) {
-            newEntity[key] = _getIsUrl(key) ?
+            newEntity[key] = _getIsLocationPath(key) ?
                 textEntity[key] :
-                _recurseForFormat(textEntity[key])
+                _recurseForSmartQuoteFormat(textEntity[key])
         }
 
         return newEntity
@@ -101,26 +96,26 @@ const _recurseForFormat = textEntity => {
     }
 }
 
-export const formatKeysOfObject = ({
+export const getSmartQuotedObjectForKeys = ({
     object,
     keys,
 
 }) => (
     keys.reduce((entity, key) => {
         // This mutates the object.
-        entity[key] = _recurseForFormat(entity[key])
+        entity[key] = _recurseForSmartQuoteFormat(entity[key])
 
         return entity
     }, object)
 )
 
-export const formatKeysOfObjects = ({
+export const getSmartQuotedObjectsForKeys = ({
     objects,
     keys,
 
 }) => (
     objects.map(object => (
-        formatKeysOfObject({
+        getSmartQuotedObjectForKeys({
             object,
             keys,
         })

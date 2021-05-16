@@ -260,9 +260,9 @@ export default {
                 {
                     mixTime: `0:53:04.78`,
                     lyric: [
-                        `Cause I get sick of hearing,`,
+                        `Cause I get sick of hearing, "`,
                         {
-                            anchor: `"Zeizei,`,
+                            anchor: `Zeizei`,
                             card: {
                                 description: [
                                     `In Chinese,`,
@@ -278,7 +278,7 @@ export default {
                                 },
                             },
                         },
-                        `let Didi play with you…"`,
+                        `, let Didi play with you…"`,
                     ],
                 },
                 {

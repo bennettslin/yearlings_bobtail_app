@@ -1,17 +1,48 @@
-import { formatKeysOfObject, formatKeysOfObjects } from '../../../utils/format'
+import {
+    getSmartQuotedObjectForKeys,
+    getSmartQuotedObjectsForKeys,
+} from '../../../utils/format/smartQuote'
+import {
+    getSpacedObjectForKeys,
+    getSpacedObjectsForKeys,
+} from '../../../utils/format/spacing'
 
 const KEYS = ['title', 'body', 'footnote']
 
-export const getFormattedSlideMetadata = entity => (
+const _getSmartQuotedSlideMetadata = entity => (
     Array.isArray(entity) ? (
-        formatKeysOfObjects({
+        getSmartQuotedObjectsForKeys({
             objects: entity,
             keys: KEYS,
         })
     ) : (
-        formatKeysOfObject({
+        getSmartQuotedObjectForKeys({
             object: entity,
             keys: KEYS,
         })
     )
 )
+
+const _getSpacedSlideMetadata = entity => (
+    Array.isArray(entity) ? (
+        getSpacedObjectsForKeys({
+            objects: entity,
+            keys: KEYS,
+        })
+    ) : (
+        getSpacedObjectForKeys({
+            object: entity,
+            keys: KEYS,
+        })
+    )
+)
+
+export const getFormattedSlideMetadata = entity => {
+    let newEntity
+
+    // Order matters. Spacing function assumes straight quotes.
+    newEntity = _getSmartQuotedSlideMetadata(entity)
+    newEntity = _getSpacedSlideMetadata(entity)
+
+    return newEntity
+}
