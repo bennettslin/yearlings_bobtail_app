@@ -861,31 +861,34 @@ export default {
                 },
                 {
                     mixTime: `1:12:09.29`,
-                    lyricLeft: {
-                        anchor: `dream your whims instead?`,
-                        card: {
-                            description: [
-                                `Uncertain of whether I'm asleep or awake, I recall the`,
-                                {
-                                    anchor: `Taoist`,
-                                    wiki: `Taoism`,
+                    lyricLeft: [
+                        {
+                            anchor: `dream your whims instead`,
+                            card: {
+                                description: [
+                                    `Uncertain of whether I'm asleep or awake, I recall the`,
+                                    {
+                                        anchor: `Taoist`,
+                                        wiki: `Taoism`,
+                                    },
+                                    `philosopher`,
+                                    {
+                                        anchor: `Zhuangzi,`,
+                                        wiki: `Zhuang_Zhou`,
+                                    },
+                                    `who couldn't be sure upon waking from a dream if he was then a man dreaming he was a butterfly, or now a butterfly dreaming he is a man.`,
+                                ],
+                                dotKeys: {
+                                    [NARRATIVE]: true,
                                 },
-                                `philosopher`,
-                                {
-                                    anchor: `Zhuangzi,`,
-                                    wiki: `Zhuang_Zhou`,
-                                },
-                                `who couldn't be sure upon waking from a dream if he was then a man dreaming he was a butterfly, or now a butterfly dreaming he is a man.`,
-                            ],
-                            dotKeys: {
-                                [NARRATIVE]: true,
                             },
                         },
-                    },
+                        `?`,
+                    ],
                     lyricRight: [
                         `be`,
                         {
-                            anchor: `stored in this neck?`,
+                            anchor: `stored in this neck`,
                             card: {
                                 description: [
                                     `Due to another misreading, the phrase "man's swelling" in Biblical Hebrew entered the Western lexicon as`,
@@ -915,6 +918,7 @@ export default {
                                 },
                             },
                         },
+                        `?`,
                     ],
                 },
             ],
@@ -1495,7 +1499,7 @@ export default {
                         },
                         `and`,
                         {
-                            anchor: `just play dumb?`,
+                            anchor: `just play dumb`,
                             todo: true,
                             card: {
                                 description: [
@@ -1511,6 +1515,7 @@ export default {
                                 },
                             },
                         },
+                        `?`,
                     ],
                 },
             ],

@@ -194,7 +194,7 @@ export default {
                             },
                         },
                         {
-                            anchor: `from our chest?`,
+                            anchor: `from our chest`,
                             card: {
                                 description: [
                                     `In the Book of Genesis, God gave life to`,
@@ -210,6 +210,7 @@ export default {
                                 },
                             },
                         },
+                        `?`,
                     ],
                 },
             ],

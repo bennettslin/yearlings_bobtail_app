@@ -362,7 +362,7 @@ export default {
                             ],
                         },
                         {
-                            anchor: `mead-Tussin!`,
+                            anchor: `mead-Tussin`,
                             card: {
                                 description: [
                                     {
@@ -377,6 +377,7 @@ export default {
                                 },
                             },
                         },
+                        `!`,
                     ],
                 },
                 {
@@ -696,7 +697,7 @@ export default {
                         },
                         `, has`,
                         {
-                            anchor: `slain the teeto-Tatars!`,
+                            anchor: `slain the teeto-Tatars`,
                             cards: [
                                 {
                                     description: [
@@ -729,6 +730,7 @@ export default {
                                 },
                             ],
                         },
+                        `!`,
                     ],
                 },
                 {
@@ -951,7 +953,7 @@ export default {
                         },
                         `or`,
                         {
-                            anchor: `Sensegreat deva's day shone?`,
+                            anchor: `Sensegreat deva's day shone`,
                             properNoun: true,
                             card: {
                                 description: [
@@ -979,6 +981,7 @@ export default {
                                 },
                             },
                         },
+                        `?`,
                     ],
                 },
                 {
@@ -1143,7 +1146,7 @@ export default {
                             },
                         },
                         {
-                            anchor: `the dusc-horse yet…?`,
+                            anchor: `the dusc-horse yet…`,
                             // Last sentence is particularly weird.
                             todo: true,
                             card: {
@@ -1169,6 +1172,7 @@ export default {
                                 },
                             },
                         },
+                        `?`,
                     ],
                 },
                 {
@@ -1211,7 +1215,7 @@ export default {
                         },
                         `, to war:`,
                         {
-                            anchor: `scimitary of'fence!`,
+                            anchor: `scimitary of'fence`,
                             card: {
                                 description: [
                                     `Rested and energized, we renew our`,
@@ -1227,6 +1231,7 @@ export default {
                                 },
                             },
                         },
+                        `!`,
                     ],
                 },
             ],
@@ -1530,32 +1535,35 @@ export default {
                     mixTime: `2:09:11.25`,
                     lyric: {
                         isItalic: true,
-                        lyric: {
-                            anchor: `sunk in tarpid lies!`,
-                            // Just needs time to think through.
-                            todo: true,
-                            cards: [
-                                {
-                                    description: `My mastodon lies sunk in a "tar pit," just as I've sunk too far in all my "torpid" lies to Sita explaining why I can't spend more nights with her.`,
-                                    dotKeys: {
-                                        [NARRATIVE]: true,
-                                        [PUN]: true,
-                                    },
-                                },
-                                {
-                                    description: [
-                                        {
-                                            anchor: `Tar pits`,
-                                            wiki: `Tar_pit`,
+                        lyric: [
+                            {
+                                anchor: `sunk in tarpid lies`,
+                                // Just needs time to think through.
+                                todo: true,
+                                cards: [
+                                    {
+                                        description: `My mastodon lies sunk in a "tar pit," just as I've sunk too far in all my "torpid" lies to Sita explaining why I can't spend more nights with her.`,
+                                        dotKeys: {
+                                            [NARRATIVE]: true,
+                                            [PUN]: true,
                                         },
-                                        `occur when natural asphalt leaks to the surface from underground. Preserving wood and bone, they are rich sources of paleontological discovery.`,
-                                    ],
-                                },
-                                {
-                                    wormhole: `sunken_tirpitz`,
-                                },
-                            ],
-                        },
+                                    },
+                                    {
+                                        description: [
+                                            {
+                                                anchor: `Tar pits`,
+                                                wiki: `Tar_pit`,
+                                            },
+                                            `occur when natural asphalt leaks to the surface from underground. Preserving wood and bone, they are rich sources of paleontological discovery.`,
+                                        ],
+                                    },
+                                    {
+                                        wormhole: `sunken_tirpitz`,
+                                    },
+                                ],
+                            },
+                            `!`,
+                        ],
                     },
                 },
             ],
@@ -1643,7 +1651,7 @@ export default {
                         lyric: [
                             `he sees`,
                             {
-                                anchor: `Lowkey and Freyed!`,
+                                anchor: `Lowkey and Freyed`,
                                 properNoun: true,
                                 card: {
                                     description: [
@@ -1665,6 +1673,7 @@ export default {
                                     },
                                 },
                             },
+                            `!`,
                         ],
                     },
                 },
@@ -1784,7 +1793,7 @@ export default {
                         },
                         `I have`,
                         {
-                            anchor: `left to mine?`,
+                            anchor: `left to mine`,
                             card: {
                                 description: `At the peak of my dissociation, I mine through "memories," unable to separate the collective memories of the world from those that are mine alone.`,
                                 dotKeys: {
@@ -1793,6 +1802,7 @@ export default {
                                 },
                             },
                         },
+                        `?`,
                     ],
                 },
             ],

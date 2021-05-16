@@ -276,27 +276,30 @@ export default {
                     mixTime: `0:36:20.36`,
                     lyric: {
                         isItalic: true,
-                        lyric: {
-                            anchor: `Poor Sam Peabody!`,
-                            card: {
-                                description: [
-                                    `When my family visited Canada one late summer, the`,
-                                    {
-                                        anchor: `white-throated sparrow`,
-                                        wiki: `White-throated_sparrow`,
+                        lyric: [
+                            {
+                                anchor: `Poor Sam Peabody`,
+                                card: {
+                                    description: [
+                                        `When my family visited Canada one late summer, the`,
+                                        {
+                                            anchor: `white-throated sparrow`,
+                                            wiki: `White-throated_sparrow`,
+                                        },
+                                        `was in breeding season, and we heard its song everywhere. I found the sound haunting and longed to hear it again ever afterward. "Poor Sam Peabody" is a mnemonic used by`,
+                                        {
+                                            anchor: `birdwatchers`,
+                                            wiki: `Birdwatching`,
+                                        },
+                                        `to mimic the song's cadence and pitch.`,
+                                    ],
+                                    dotKeys: {
+                                        [BACKSTORY]: true,
                                     },
-                                    `was in breeding season, and we heard its song everywhere. I found the sound haunting and longed to hear it again ever afterward. "Poor Sam Peabody" is a mnemonic used by`,
-                                    {
-                                        anchor: `birdwatchers`,
-                                        wiki: `Birdwatching`,
-                                    },
-                                    `to mimic the song's cadence and pitch.`,
-                                ],
-                                dotKeys: {
-                                    [BACKSTORY]: true,
                                 },
                             },
-                        },
+                            `!`,
+                        ],
                     },
                 },
             ],
@@ -769,7 +772,7 @@ export default {
                     lyric: [
                         `Is this`,
                         {
-                            anchor: `too much at once?`,
+                            anchor: `too much at once`,
                             card: {
                                 description: `I sobbed when I finally got the letter confirming I was a Beyonder. While I was relieved to have an explanation for my torment, the last thing I wanted was the burden of being different from everyone else.`,
                                 dotKeys: {
@@ -777,7 +780,7 @@ export default {
                                 },
                             },
                         },
-                        `We're trusting mum's to be the word.`,
+                        `? We're trusting mum's to be the word.`,
                     ],
                 },
             ],

@@ -156,7 +156,7 @@ export default {
                     lyric: [
                         `wondering to himself, who would`,
                         {
-                            anchor: `tie his shoes?`,
+                            anchor: `tie his shoes`,
                             cards: [
                                 {
                                     description: [
@@ -184,6 +184,7 @@ export default {
                                 },
                             ],
                         },
+                        `?`,
                     ],
                 },
                 {
@@ -511,11 +512,12 @@ export default {
                     lyric: [
                         `you'd`,
                         {
-                            anchor: `finally become someone?`,
+                            anchor: `finally become someone`,
                             card: {
                                 wormhole: `finally_become_someone`,
                             },
                         },
+                        `?`,
                     ],
                 },
             ],

@@ -709,7 +709,7 @@ export default {
                     lyric: [
                         `weren't they`,
                         {
-                            anchor: `right to take what's theirs?`,
+                            anchor: `right to take what's theirs`,
                             todo: true,
                             card: {
                                 description: `As opportunities for social advancement later opened up for me, I could look back, put myself in the bullies' shoes, and even sympathize with them. In a world that roots for the strong, who wouldn't readily take all the means available to avoid being weak?`,
@@ -719,6 +719,7 @@ export default {
                                 },
                             },
                         },
+                        `?`,
                     ],
                 },
                 {

@@ -167,7 +167,7 @@ export default {
                     lyric: [
                         `Did I`,
                         {
-                            anchor: `ever live another life?`,
+                            anchor: `ever live another life`,
                             card: {
                                 description: `As dreams often go, I have no memory or even awareness of having lived another life in the intervening years. It's obvious Sita and I hadn't stayed together, yet I can't recall any time spent apart. Of course, according to the Buddhist and Hindu faiths, I've lived many other lives quite literally, in past incarnations.`,
                                 dotKeys: {
@@ -176,6 +176,7 @@ export default {
                                 },
                             },
                         },
+                        `?`,
                     ],
                 },
                 {
@@ -510,7 +511,7 @@ export default {
                     mixTime: `3:42:06.66`,
                     lyric: [
                         {
-                            anchor: `When you'll be mine?`,
+                            anchor: `When you'll be mine`,
                             card: {
                                 description: `If this is only a dream, then what I'm holding onto is not really Sita, but only a memory of her. And if all I have left is a memory, then somewhere along the way I must have lost the real Sita. As I exit this world then, I hold onto the possibility that I may find her again in the next.`,
                                 dotKeys: {
@@ -519,6 +520,7 @@ export default {
                                 },
                             },
                         },
+                        `?`,
                     ],
                 },
             ],

@@ -476,7 +476,7 @@ export default {
                     lyric: [
                         `who tried but failed to win her heart`,
                         {
-                            anchor: `poised with brains?`,
+                            anchor: `poised with brains`,
                             card: {
                                 description: `Catherine didn't value the artistic strengths I'd always counted on to cover up my many weaknesses. Which made me realize that if I were ever to be worth keeping one day, then I simply couldn't have any weaknesses.`,
                                 dotKeys: {
@@ -485,6 +485,7 @@ export default {
                                 },
                             },
                         },
+                        `?`,
                     ],
                 },
             ],

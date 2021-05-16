@@ -1253,7 +1253,7 @@ export default {
                     lyric: [
                         `So`,
                         {
-                            anchor: `how's that compromise?`,
+                            anchor: `how's that compromise`,
                             card: {
                                 description: `Having taken such pains to tuck away my emotions for so long, I was suddenly hesitant to compromise the safety of this position. I just didn't want to be vulnerable again, and I had so little faith that my desires wouldn't backfire on me as they had the first time I revealed them.`,
                                 dotKeys: {
@@ -1262,6 +1262,7 @@ export default {
                                 },
                             },
                         },
+                        `?`,
                     ],
                 },
             ],

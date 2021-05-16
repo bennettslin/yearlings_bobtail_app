@@ -816,7 +816,7 @@ export default {
                         },
                         `, the`,
                         {
-                            anchor: `testifiers' lore?`,
+                            anchor: `testifiers' lore`,
                             card: {
                                 description: [
                                     `After slaying Ravana, Rama made Sita walk through`,
@@ -831,6 +831,7 @@ export default {
                                 },
                             },
                         },
+                        `?`,
                     ],
                 },
                 {
@@ -868,7 +869,7 @@ export default {
                         },
                         `on`,
                         {
-                            anchor: `repeat forevermore!`,
+                            anchor: `repeat forevermore`,
                             card: {
                                 description: `As I was making this album, a thought occurred to me. Like Rama, I too was now doomed to repeat my failures, as the story of how I betrayed my Sita would be endlessly retold.`,
                                 dotKeys: {
@@ -876,6 +877,7 @@ export default {
                                 },
                             },
                         },
+                        `!`,
                     ],
                 },
             ],
@@ -895,7 +897,7 @@ export default {
                     lyric: [
                         `your idol who riled you when you saw that you`,
                         {
-                            anchor: `two were tied?`,
+                            anchor: `two were tied`,
                             todo: true,
                             card: {
                                 description: `While Sita had hoped for us to be tied in a matrimonial sense, I chafed that we were also tied in a competitive sense. Between the two of us, there were fewer romantic partners in my past, and this felt to me like a threat.`,
@@ -905,6 +907,7 @@ export default {
                                 },
                             },
                         },
+                        `?`,
                     ],
                 },
             ],
@@ -1078,7 +1081,7 @@ export default {
                         },
                         `could sway you from a`,
                         {
-                            anchor: `fairer marathon!`,
+                            anchor: `fairer marathon`,
                             todo: true,
                             cards: [
                                 {
@@ -1102,6 +1105,7 @@ export default {
                                 },
                             ],
                         },
+                        `!`,
                     ],
                 },
             ],
@@ -1158,7 +1162,7 @@ export default {
                         },
                         `can't draw this contest`,
                         {
-                            anchor: `to be one!`,
+                            anchor: `to be one`,
                             card: {
                                 description: `Or else, a contest to be "won."`,
                                 dotKeys: {
@@ -1166,6 +1170,7 @@ export default {
                                 },
                             },
                         },
+                        `!`,
                     ],
                 },
             ],
@@ -1438,7 +1443,7 @@ export default {
                     lyric: [
                         `shouldn't you first be sure you've`,
                         {
-                            anchor: `finally become someone?`,
+                            anchor: `finally become someone`,
                             cards: [
                                 {
                                     description: [
@@ -1459,6 +1464,7 @@ export default {
                                 },
                             ],
                         },
+                        `?`,
                     ],
                 },
             ],
@@ -1478,36 +1484,39 @@ export default {
             ],
             sideSubCard: [
                 {
-                    lyric: {
-                        anchor: `…Maranatha!`,
-                        todo: true,
-                        card: {
-                            description: [
-                                `In my chant, however, the syllables gradually shift to form the holy name of Mara. Unlike Valmiki, who embraced Eastern spirituality, I find salvation in the embrace of Western women. And so my chant ends here with an expression of Western faith. In the`,
-                                {
-                                    anchor: `New Testament,`,
-                                    wiki: `New_Testament`,
-                                },
-                                {
-                                    isItalic: true,
-                                    lyric: {
-                                        anchor: `maranatha`,
-                                        wiki: `Maranatha`,
+                    lyric: [
+                        {
+                            anchor: `…Maranatha`,
+                            todo: true,
+                            card: {
+                                description: [
+                                    `In my chant, however, the syllables gradually shift to form the holy name of Mara. Unlike Valmiki, who embraced Eastern spirituality, I find salvation in the embrace of Western women. And so my chant ends here with an expression of Western faith. In the`,
+                                    {
+                                        anchor: `New Testament,`,
+                                        wiki: `New_Testament`,
                                     },
+                                    {
+                                        isItalic: true,
+                                        lyric: {
+                                            anchor: `maranatha`,
+                                            wiki: `Maranatha`,
+                                        },
+                                    },
+                                    `is`,
+                                    {
+                                        anchor: `Aramaic`,
+                                        wiki: `Aramaic`,
+                                    },
+                                    `for "our Lord has come."`,
+                                ],
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [OBSERVATION]: true,
                                 },
-                                `is`,
-                                {
-                                    anchor: `Aramaic`,
-                                    wiki: `Aramaic`,
-                                },
-                                `for "our Lord has come."`,
-                            ],
-                            dotKeys: {
-                                [NARRATIVE]: true,
-                                [OBSERVATION]: true,
                             },
                         },
-                    },
+                        `!`,
+                    ],
                 },
             ],
             unitDot: {

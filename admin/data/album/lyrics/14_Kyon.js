@@ -188,7 +188,7 @@ export default {
                     lyric: [
                         `Is it just her`,
                         {
-                            anchor: `womb you bed?`,
+                            anchor: `womb you bed`,
                             card: {
                                 description: `Of course, Sita herself was under no such illusion about my innocence. She knew full well that what I wanted was to sleep with more women, to compensate for being the less sexually experienced one in our relationship.`,
                                 dotKeys: {
@@ -196,6 +196,7 @@ export default {
                                 },
                             },
                         },
+                        `?`,
                     ],
                 },
                 {
@@ -633,7 +634,7 @@ export default {
                     lyric: [
                         `So are we agreed,`,
                         {
-                            anchor: `honeybee?`,
+                            anchor: `honeybee`,
                             card: {
                                 description: [
                                     `A`,
@@ -649,9 +650,9 @@ export default {
                                 },
                             },
                         },
-                        `Come for me? At`,
+                        `? Come for me? At`,
                         {
-                            anchor: `thirty-three?`,
+                            anchor: `thirty-three`,
                             todo: true,
                             card: {
                                 description: [
@@ -667,6 +668,7 @@ export default {
                                 },
                             },
                         },
+                        `?`,
                     ],
                 },
             ],

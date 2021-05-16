@@ -673,7 +673,7 @@ export default {
                     lyric: [
                         `aren't you the`,
                         {
-                            anchor: `faltering dear?`,
+                            anchor: `faltering dear`,
                             card: {
                                 description: `With my slate now wiped clean, I took pains to affect an endearingly awkward persona.`,
                                 dotKeys: {
@@ -681,6 +681,7 @@ export default {
                                 },
                             },
                         },
+                        `?`,
                     ],
                 },
             ],
