@@ -82,6 +82,7 @@ export const getFormattedEndingVerseSpanText = text => {
 }
 
 export const getFormattedLyricSpanText = text => {
+    // This prevents any new line from being a lone word.
     const lastSpaceIndex = text.lastIndexOf(' ')
 
     if (lastSpaceIndex > -1) {

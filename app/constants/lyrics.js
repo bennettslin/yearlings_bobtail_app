@@ -5,7 +5,6 @@ const LYRIC = 'lyric',
     ANCHOR = 'anchor'
 
 module.exports = {
-
     LYRIC,
     LYRIC_LEFT,
     LYRIC_CENTRE,
@@ -14,11 +13,7 @@ module.exports = {
 
     WIKI: 'wiki',
     WIKI_INDEX: 'wikiIndex',
-
     IS_UNIT_DOT: 'isUnitDot',
-    IS_VERSE_BEGINNING_SPAN: 'beginsVerse',
-    IS_VERSE_ENDING_SPAN: 'endsVerse',
-
     REFRAIN: 'refrain',
     VERSES: 'verse',
     PRECHORUS: 'prechorus',
