@@ -106,7 +106,7 @@ const PromoContainer = ({ children }) => {
                         <meta
                             {...{
                                 name: 'description',
-                                content: `Promo material for Yearling's Bobtail, the Bobtail Yearlings album.`,
+                                content: `Promo material for the Bobtail Yearlings album Yearling's Bobtail.`,
                             }}
                         />
                     </Helmet>

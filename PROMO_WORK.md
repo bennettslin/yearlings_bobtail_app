@@ -1,6 +1,5 @@
 # Promo work
 * Flesh out onesheet page.
-    * Onesheet needs italics.
 * Flesh out promo homepage.
     * Needs formatting.
 
