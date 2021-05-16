@@ -1065,7 +1065,7 @@ export default {
                         },
                         `first`,
                         {
-                            anchor: `unearth their own plots!`,
+                            anchor: `unearth their own plots`,
                             cards: [
                                 {
                                     description: `Figuratively, this means to reveal one's secret plans. Literally, it means to dig one's own grave.`,
@@ -1075,6 +1075,7 @@ export default {
                                 },
                             ],
                         },
+                        `!`,
                     ],
                 },
             ],

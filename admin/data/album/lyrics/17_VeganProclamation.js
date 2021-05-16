@@ -107,7 +107,7 @@ export default {
                     lyric: [
                         `So shall we,`,
                         {
-                            anchor: `Odin,`,
+                            anchor: `Odin`,
                             properNoun: true,
                             todo: true,
                             card: {
@@ -118,7 +118,7 @@ export default {
                                 },
                             },
                         },
-                        `lightly tread`,
+                        `, lightly tread`,
                     ],
                 },
                 {
@@ -256,7 +256,7 @@ export default {
                     lyric: [
                         `set to rock this pout from`,
                         {
-                            anchor: `horse to chair,`,
+                            anchor: `horse to chair`,
                             todo: true,
                             card: {
                                 description: `In other words, for the duration of my entire life, from rocking horse to rocking chair.`,
@@ -265,6 +265,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -405,7 +406,7 @@ export default {
                                 },
                                 `. Because if we can't ever be`,
                                 {
-                                    anchor: `known to be dead,`,
+                                    anchor: `known to be dead`,
                                     card: {
                                         description: `I liked the idea that if something greater than ourselves is unable to observe us, then like Schrödinger's battered cat, some part of us must always live on.`,
                                         dotKeys: {
@@ -413,7 +414,7 @@ export default {
                                         },
                                     },
                                 },
-                                `we just might always be alive… to God…"`,
+                                `, we just might always be alive… to God…"`,
                             ],
                         },
                     ],
@@ -468,7 +469,7 @@ export default {
                     lyric: [
                         `form a trail which leads to a`,
                         {
-                            anchor: `bloody broom,`,
+                            anchor: `bloody broom`,
                             card: {
                                 description: `Understandably, factory farm workers become inured to the daily violence, which would otherwise cast a pall over even mundane tasks like sweeping the floor.`,
                                 dotKeys: {
@@ -477,6 +478,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -496,7 +498,7 @@ export default {
                     lyric: [
                         `Through an alley strewn with`,
                         {
-                            anchor: `burger shrouds,`,
+                            anchor: `burger shrouds`,
                             card: {
                                 description: `As a vegan, I became hypersensitive to anything that was a byproduct of the meat industry. Even something as commonplace as a crumpled fast food wrapper would remind me of how much our society has commoditized animal suffering.`,
                                 dotKeys: {
@@ -505,6 +507,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -533,7 +536,7 @@ export default {
                             },
                         },
                         {
-                            anchor: `strikes himself from his cloud,`,
+                            anchor: `strikes himself from his cloud`,
                             card: {
                                 description: [
                                     `The insignia of the`,
@@ -552,6 +555,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -605,7 +609,7 @@ export default {
                     lyric: [
                         `then`,
                         {
-                            anchor: `none by us now,`,
+                            anchor: `none by us now`,
                             card: {
                                 description: `And so, vowing never again to be the cause of hurt to anyone or anything, I decide to become a vegan.`,
                                 dotKeys: {
@@ -613,7 +617,7 @@ export default {
                                 },
                             },
                         },
-                        `to any flesh!`,
+                        `, to any flesh!`,
                     ],
                 },
                 {
@@ -713,7 +717,7 @@ export default {
                     lyric: [
                         `I still`,
                         {
-                            anchor: `love you for the airholes,`,
+                            anchor: `love you for the airholes`,
                             cards: [
                                 {
                                     description: [
@@ -737,7 +741,7 @@ export default {
                                 },
                             ],
                         },
-                        `dear; and now, good night."`,
+                        `, dear; and now, good night."`,
                     ],
                 },
             ],
@@ -797,7 +801,7 @@ export default {
                     lyric: [
                         `The`,
                         {
-                            anchor: `diapered white dwarf,`,
+                            anchor: `diapered white dwarf`,
                             card: {
                                 description: [
                                     `As we come upon a`,
@@ -818,6 +822,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                         [
                             {
                                 anchor: `gurgling, curls up`,

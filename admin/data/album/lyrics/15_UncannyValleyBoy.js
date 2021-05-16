@@ -101,7 +101,7 @@ export default {
                     mixTime: `0:14:23.07`,
                     lyric: [
                         {
-                            anchor: `Beta,`,
+                            anchor: `Beta`,
                             card: {
                                 description: [
                                     `In Hindi,`,
@@ -118,7 +118,7 @@ export default {
                                 },
                             },
                         },
-                        `come`,
+                        `, come`,
                         {
                             anchor: `wax prophetic`,
                             cards: [
@@ -180,7 +180,7 @@ export default {
                     mixTime: `0:23:08.46`,
                     lyric: [
                         {
-                            anchor: `Stumped,`,
+                            anchor: `Stumped`,
                             cards: [
                                 {
                                     description: `In their claim to be stumped, my parents feign to be oblivious to the outcome of my story.`,
@@ -197,7 +197,7 @@ export default {
                                 },
                             ],
                         },
-                        `I ponder the`,
+                        `, I ponder the`,
                         {
                             anchor: `forespoken monster`,
                             card: {
@@ -301,7 +301,7 @@ export default {
                     mixTime: `0:36:18.46`,
                     lyric: [
                         {
-                            anchor: `Upon purchase of a queen's ship,`,
+                            anchor: `Upon purchase of a queen's ship`,
                             card: {
                                 description: [
                                     `RI Research promised I would rise above the bullies once a spaceship was funded by my payments. And so I learned to bide my time building toward and awaiting corrective justice. I was like "a pawn" in`,
@@ -317,6 +317,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                         {
                             anchor: `earth right now your tourist store…`,
                             todo: true,
@@ -371,7 +372,7 @@ export default {
                     lyric: [
                         `till they called,`,
                         {
-                            anchor: `suspecting you of huffing,`,
+                            anchor: `suspecting you of huffing`,
                             card: {
                                 description: [
                                     {
@@ -385,6 +386,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -567,7 +569,7 @@ export default {
                     lyric: [
                         `But then, my`,
                         {
-                            anchor: `little prince,`,
+                            anchor: `little prince`,
                             card: {
                                 description: [
                                     {
@@ -585,6 +587,7 @@ export default {
                                 ],
                             },
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -608,7 +611,7 @@ export default {
                     lyric: [
                         `you finally granted their`,
                         {
-                            anchor: `nutshells are rigged,`,
+                            anchor: `nutshells are rigged`,
                             // Move sleight of hand back where it was.
                             todo: true,
                             card: {
@@ -631,6 +634,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
             ],
@@ -681,7 +685,7 @@ export default {
                     lyric: [
                         `Now suddenly dressed to play, you`,
                         {
-                            anchor: `drowned your stutter,`,
+                            anchor: `drowned your stutter`,
                             card: {
                                 description: `Sometime in middle school I developed a stammer, perhaps as an unconscious way to buy time for collecting my thoughts. In college, I found that alcohol made it disappear.`,
                                 dotKeys: {
@@ -689,6 +693,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -766,7 +771,7 @@ export default {
                     lyric: [
                         `But have you heard, my beloved`,
                         {
-                            anchor: `Rama king,`,
+                            anchor: `Rama king`,
                             properNoun: true,
                             cards: [
                                 {
@@ -809,7 +814,7 @@ export default {
                                 },
                             ],
                         },
-                        `the`,
+                        `, the`,
                         {
                             anchor: `testifiers' lore?`,
                             card: {
@@ -915,7 +920,7 @@ export default {
                         `With bride you bridled in this perfect`,
                         {
                             // NOTE: I changed "duel" to "dual" here.
-                            anchor: `dual match,`,
+                            anchor: `dual match`,
                             card: {
                                 description: `To onlookers, Sita and I may have seemed like the perfect fit for each other. But to me, our relationship was a zero-sum "duel" match that only one of us could win.`,
                                 dotKeys: {
@@ -924,6 +929,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -971,7 +977,7 @@ export default {
                     lyric: [
                         `When`,
                         {
-                            anchor: `wakened from the siren,`,
+                            anchor: `wakened from the siren`,
                             cards: [
                                 {
                                     description: `Having lost sight of the group, I ended up passing out on the sidewalk. An ambulance siren jolted me awake.`,
@@ -1000,7 +1006,7 @@ export default {
                                 },
                             ],
                         },
-                        `you found spelled out in`,
+                        `, you found spelled out in`,
                         {
                             anchor: `dead ants:`,
                             cards: [
@@ -1218,7 +1224,7 @@ export default {
                     lyric: [
                         `what's left of what these`,
                         {
-                            anchor: `faces you flip override,`,
+                            anchor: `faces you flip override`,
                             todo: true,
                             card: {
                                 description: `My mother would sometimes ask me what happened to the playful little boy she once knew, which made me wonder myself. I think I just learned early on that for any given situation, there's an optimal person to be. Different situations call for being different people, and each new person takes up valuable mental space. At some point, it just didn't make sense to keep an original identity that served no other purpose.`,
@@ -1227,6 +1233,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -1284,7 +1291,7 @@ export default {
                     lyric: [
                         `that`,
                         {
-                            anchor: `weave through the vines,`,
+                            anchor: `weave through the vines`,
                             card: {
                                 description: `The magic beans had sprouted into thick, twisting vines that blocked out the sky as far as my helpless subjects could see.`,
                                 dotKeys: {
@@ -1292,6 +1299,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
             ],
@@ -1394,7 +1402,6 @@ export default {
                                     isItalic: true,
                                     lyric: `Bildungsroman`,
                                 },
-                                `,`,
                             ],
                             card: {
                                 description: [
@@ -1423,6 +1430,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
                 {

@@ -1017,7 +1017,7 @@ export default {
                     lyric: [
                         `being ever stuck in`,
                         {
-                            anchor: `imp-runt age of mind!`,
+                            anchor: `imp-runt age of mind`,
                             cards: [
                                 {
                                     description: [
@@ -1052,6 +1052,7 @@ export default {
                                 },
                             ],
                         },
+                        `!`,
                     ],
                 },
                 {
@@ -1112,7 +1113,7 @@ export default {
                     lyric: [
                         `for a`,
                         {
-                            anchor: `cub not yet Webelos!`,
+                            anchor: `cub not yet Webelos`,
                             cards: [
                                 {
                                     description: `My mother might also be assuring me that I'm not yet "way below."`,
@@ -1133,6 +1134,7 @@ export default {
                                 },
                             ],
                         },
+                        `!`,
                     ],
                 },
                 {

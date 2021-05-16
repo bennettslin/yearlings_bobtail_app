@@ -169,7 +169,7 @@ export default {
                     lyricCentre: [
                         `So`,
                         {
-                            anchor: `polite, yet resigned,`,
+                            anchor: `polite, yet resigned`,
                             todo: true,
                             card: {
                                 description: `While Sita had spent the day bottling up her emotions to brace for that night's confrontation, I was drunk and ready to pass out. So as she lobbed her accusations, I was still processing the situation and could only respond calmly and curtly, which just added to her fluster.`,
@@ -178,6 +178,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -436,7 +437,7 @@ export default {
                     lyricRight: [
                         `still hardened against her`,
                         {
-                            anchor: `fawning, misty glance,`,
+                            anchor: `fawning, misty glance`,
                             todo: true,
                             card: {
                                 description: `Stirred by a strange bitterness rumbling within, drunken me defiantly lashes out at the twin streetlamps lining the boulevard, whose misty glow has revived the vision of Sita's fearful gaze moments before he committed his crime.`,
@@ -445,6 +446,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -514,7 +516,7 @@ export default {
                     lyricLeft: [
                         `Then if`,
                         {
-                            anchor: `life were real,`,
+                            anchor: `life were real`,
                             card: {
                                 description: `Sita's friends weren't wrong to label me fake and pretentious. My emotions didn't feel legitimate even to myself, and so I reacted to them the way an actor reacts onstage to a cue. At the time, I blamed the lingering effects of Robitussin.`,
                                 dotKeys: {
@@ -523,7 +525,7 @@ export default {
                                 },
                             },
                         },
-                        `not just drunken play…`,
+                        `, not just drunken play…`,
                     ],
                     lyricRight: [
                         `And if`,
@@ -594,7 +596,7 @@ export default {
                     lyricCentre: [
                         `while this supposed`,
                         {
-                            anchor: `dove chafing in his cage,`,
+                            anchor: `dove chafing in his cage`,
                             card: {
                                 description: [
                                     `Meanwhile, a stressed`,
@@ -609,6 +611,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -905,7 +908,7 @@ export default {
                         },
                         `of this`,
                         {
-                            anchor: `frayed cord detached,`,
+                            anchor: `frayed cord detached`,
                             card: {
                                 description: [
                                     `In antiquity, legend held that whosoever could unravel the tightly entangled`,
@@ -926,6 +929,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -1004,7 +1008,7 @@ export default {
                     lyricRight: [
                         `by`,
                         {
-                            anchor: `trail of crumbs,`,
+                            anchor: `trail of crumbs`,
                             todo: true,
                             card: {
                                 description: `Fearing the emotional upheaval ahead, I wonder if it's too late to walk back the damage I've done. But even if I wanted to, I couldn't find my way back. All night I've been nibbling on the bread in my pocket rather than pinching off crumbs for a trail, trading away long-term security to satisfy my short-term hunger.`,
@@ -1014,7 +1018,7 @@ export default {
                                 },
                             },
                         },
-                        `which vanished as bartered feed.`,
+                        `, which vanished as bartered feed.`,
                     ],
                 },
                 {

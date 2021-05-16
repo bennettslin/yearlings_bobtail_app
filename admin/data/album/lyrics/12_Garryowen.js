@@ -142,7 +142,7 @@ export default {
                     lyric: [
                         `Tonight the`,
                         {
-                            anchor: `rubber off,`,
+                            anchor: `rubber off`,
                             card: {
                                 description: `As our relationship went south, sex became the last bargaining chip that Sita held in the power struggle between us. Since I didn't like the feeling of wearing a condom, she would offer to go without one just to coax any small kindness out of me.`,
                                 dotKeys: {
@@ -150,7 +150,7 @@ export default {
                                 },
                             },
                         },
-                        `she offered as a thought,`,
+                        `, she offered as a thought,`,
                     ],
                 },
                 {
@@ -189,7 +189,7 @@ export default {
                     lyric: [
                         `Well`,
                         {
-                            anchor: `you're not me,`,
+                            anchor: `you're not me`,
                             card: {
                                 description: `An inside joke among my friends was to address me as Garry when I was drunk, since my uneven rambles and oafish stunts made me an altogether different person.`,
                                 dotKeys: {
@@ -197,7 +197,7 @@ export default {
                                 },
                             },
                         },
-                        `Garryowen. Oh no, and`,
+                        `, Garryowen. Oh no, and`,
                     ],
                 },
                 {
@@ -228,7 +228,7 @@ export default {
                     lyric: [
                         `Drunk pissed punks tryst,`,
                         {
-                            anchor: `bustin' cars with fists,`,
+                            anchor: `bustin' cars with fists`,
                             card: {
                                 description: `There was this kid named Tristan in our little group who was particularly hotheaded. One night after we got kicked out of a party for a fight he incited, Tristan challenged us to see who could punch a car window and break the glass first. I didn't win.`,
                                 dotKeys: {
@@ -236,6 +236,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -265,7 +266,7 @@ export default {
                     lyric: [
                         `In you come, piss drunk, smug in`,
                         {
-                            anchor: `smegma crust,`,
+                            anchor: `smegma crust`,
                             cards: [
                                 {
                                     description: [
@@ -284,6 +285,7 @@ export default {
                                 },
                             ],
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -291,7 +293,7 @@ export default {
                     lyric: [
                         `since`,
                         {
-                            anchor: `hummers aren't love,`,
+                            anchor: `hummers aren't love`,
                             card: {
                                 description: [
                                     `Once when Sita protested that we couldn't have sex until after I washed up, I snidely replied that she could still give me a hummer, or`,
@@ -306,7 +308,7 @@ export default {
                                 },
                             },
                         },
-                        `or so`,
+                        `, or so`,
                         {
                             anchor: `she's claimed…`,
                             card: {
@@ -357,7 +359,7 @@ export default {
                     lyric: [
                         `So the`,
                         {
-                            anchor: `celibate you'll play,`,
+                            anchor: `celibate you'll play`,
                             todo: true,
                             card: {
                                 description: `Drinking made me impotent and thus impervious to Sita's advances, and so I gladly drank to excess. But not having sex was also purifying in its own right, since this lent the familiar comfort of being my old lovelorn self again.`,
@@ -367,7 +369,7 @@ export default {
                                 },
                             },
                         },
-                        `self-medicated,`,
+                        `, self-medicated,`,
                     ],
                 },
                 {
@@ -378,7 +380,7 @@ export default {
                     mixTime: `1:08:00.70`,
                     lyric: [
                         {
-                            anchor: `Slammed in the well,`,
+                            anchor: `Slammed in the well`,
                             card: {
                                 description: `Of course, using alcohol as a spiritual cleanser isn't really sustainable, as it requires you to vomit regularly into a toilet and see your reflection in the water staring back at you.`,
                                 dotKeys: {
@@ -387,7 +389,7 @@ export default {
                                 },
                             },
                         },
-                        `you'll glimpse yourself`,
+                        `, you'll glimpse yourself`,
                     ],
                 },
                 {
@@ -395,7 +397,7 @@ export default {
                     lyric: [
                         `with`,
                         {
-                            anchor: `choler turned up,`,
+                            anchor: `choler turned up`,
                             todo: true,
                             cards: [
                                 {
@@ -420,7 +422,7 @@ export default {
                                 },
                             ],
                         },
-                        `cringing in shame.`,
+                        `, cringing in shame.`,
                     ],
                 },
             ],
@@ -453,7 +455,7 @@ export default {
                     lyric: [
                         `As`,
                         {
-                            anchor: `claws you built from scratches,`,
+                            anchor: `claws you built from scratches`,
                             card: {
                                 description: `Cats scratch to sharpen their claws, just like I'd learned to keep my emotional defenses sharp after a lifetime of getting scratched and clawed by bullies.`,
                                 dotKeys: {
@@ -462,7 +464,7 @@ export default {
                                 },
                             },
                         },
-                        `with your bilious malice,`,
+                        `, with your bilious malice,`,
                     ],
                 },
                 {
@@ -470,7 +472,7 @@ export default {
                     lyric: [
                         `fill up a package strapped to your`,
                         {
-                            anchor: `scapegirl,`,
+                            anchor: `scapegirl`,
                             card: {
                                 description: [
                                     `In Biblical times, a community would seek absolution by symbolically placing its`,
@@ -486,6 +488,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -619,7 +622,7 @@ export default {
                     mixTime: `1:57:16.73`,
                     lyric: [
                         {
-                            anchor: `Final trip on a tanker,`,
+                            anchor: `Final trip on a tanker`,
                             todo: true,
                             cards: [
                                 {
@@ -643,7 +646,7 @@ export default {
                                 },
                             ],
                         },
-                        `you'll`,
+                        `, you'll`,
                         {
                             anchor: `drop your anchor`,
                             todo: true,
@@ -786,7 +789,7 @@ export default {
                     mixTime: `2:19:26.51`,
                     lyric: [
                         {
-                            anchor: `Toora-loora-li,`,
+                            anchor: `Toora-loora-li`,
                             card: {
                                 description: [
                                     `Related to the English "toodle-oo," the Irish "tooraloo" carries the same meaning of "goodbye." Nonsensical variants are prevalent in drinking songs and`,
@@ -797,7 +800,7 @@ export default {
                                 ],
                             },
                         },
-                        `Garryowen, who owes no one,`,
+                        `, Garryowen, who owes no one,`,
                     ],
                 },
                 {

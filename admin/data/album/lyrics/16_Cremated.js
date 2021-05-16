@@ -137,7 +137,7 @@ export default {
                     mixTime: `0:24:10.63`,
                     lyricLeft: [
                         {
-                            anchor: `At a vista,`,
+                            anchor: `At a vista`,
                             card: {
                                 description: [
                                     `Driving in Miriam's car, we arrive at a secluded spot on a cliff overlooking the`,
@@ -151,6 +151,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                         {
                             // NOTE: There are actually two 'key turned's in this song?
                             anchor: `key turned`,
@@ -179,7 +180,7 @@ export default {
                         },
                         `stuck`,
                         {
-                            anchor: `feet first,`,
+                            anchor: `feet first`,
                             card: {
                                 description: [
                                     `My brother was a`,
@@ -194,6 +195,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -215,7 +217,7 @@ export default {
                         `subversive`,
                         {
                             // NOTE: I added a hyphen in the lyrics as well.
-                            anchor: `inner lotus-eater,`,
+                            anchor: `inner lotus-eater`,
                             card: {
                                 description: [
                                     `In the`,
@@ -239,6 +241,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -247,7 +250,7 @@ export default {
                     lyricRight: [
                         `an everlasting`,
                         {
-                            anchor: `doublespeaker,`,
+                            anchor: `doublespeaker`,
                             todo: true,
                             card: {
                                 description: `That first month with Miriam was one of the happiest of my life, as all my efforts to improve myself during my first five-year plan finally came to fruition. Everything I did seemed to impress her, including doublespeaker rhyme, which I came up with while we were together. So Miriam became my sounding board for how I would use it in a song to juxtapose my sober and drunken thoughts.`,
@@ -256,6 +259,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -317,7 +321,7 @@ export default {
                     mixTime: `0:36:19.38`,
                     lyricLeft: [
                         {
-                            anchor: `pinkish slip,`,
+                            anchor: `pinkish slip`,
                             card: {
                                 description: [
                                     `Miriam is wearing a silky pink undergarment under her skirt. Of course, a`,
@@ -333,7 +337,7 @@ export default {
                                 },
                             },
                         },
-                        `making scrunched her pantyhose.`,
+                        `, making scrunched her pantyhose.`,
                     ],
                     lyricRight: [
                         `sinking ship, maybe`,
@@ -565,7 +569,7 @@ export default {
                     lyricRight: [
                         `to remain`,
                         {
-                            anchor: `inherently perfect,`,
+                            anchor: `inherently perfect`,
                             todo: true,
                             card: {
                                 description: `The real purpose of my drunken personality was to blame it for all my selfish desires, allowing me to remain above reproach myself. I didn't tell Miriam this, of course, since the latest thing I selfishly desired was her.`,
@@ -575,6 +579,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -740,7 +745,7 @@ export default {
                             ],
                         },
                         {
-                            anchor: `will not retract,`,
+                            anchor: `will not retract`,
                             card: {
                                 description: [
                                     `Some record players lack an auto-return function, so the needle will coast in the lead-out groove until it's manually lifted. Also, during euthanasia, the needle is left in the vein as the`,
@@ -752,6 +757,7 @@ export default {
                                 ],
                             },
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -826,7 +832,7 @@ export default {
                     lyricCentre: [
                         `Undeluded, she'll bask in`,
                         {
-                            anchor: `selfish cut-off jeans,`,
+                            anchor: `selfish cut-off jeans`,
                             card: {
                                 description: [
                                     `In`,
@@ -849,6 +855,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -856,7 +863,7 @@ export default {
                     lyricCentre: [
                         `and`,
                         {
-                            anchor: `in her pool,`,
+                            anchor: `in her pool`,
                             card: {
                                 description: `Lying sedated on my deathbed, I see Miriam lounging by a swimming pool, eternally radiant in her youth. I exhaust my last breath to wish her well, but she doesn't hear me and plunges into the deep end.`,
                                 dotKeys: {
@@ -864,7 +871,7 @@ export default {
                                 },
                             },
                         },
-                        `hears not a`,
+                        `, hears not a`,
                         {
                             anchor: `worrisome`,
                             todo: true,
@@ -877,7 +884,7 @@ export default {
                             },
                         },
                         {
-                            anchor: `"Bless her,`,
+                            anchor: `"Bless her`,
                             card: {
                                 description: [
                                     `The title of the play`,
@@ -900,6 +907,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                         {
                             anchor: `Godspeed…"`,
                             properNoun: true,
@@ -964,7 +972,7 @@ export default {
                     lyricLeft: [
                         `though no worse but for`,
                         {
-                            anchor: `his soreness,`,
+                            anchor: `his soreness`,
                             todo: true,
                             card: {
                                 description: `Miriam's vigorous lovemaking has left me chafed in certain areas. But of course, it gets harder to keep up in old age.`,
@@ -973,11 +981,12 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                     lyricRight: [
                         `so`,
                         {
-                            anchor: `homeward the sport's escorted,`,
+                            anchor: `homeward the sport's escorted`,
                             card: {
                                 description: `Having plied me with sex to ensure I'll be a good sport, Miriam now prepares to drive me home.`,
                                 dotKeys: {
@@ -985,6 +994,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -1045,7 +1055,7 @@ export default {
                     ],
                     lyricRight: [
                         {
-                            anchor: `Redressed,`,
+                            anchor: `Redressed`,
                             todo: true,
                             card: {
                                 description: `As I redress by pulling my pants back up, I'm about to learn that this latest sexual escapade was really meant as redress for the bad news that Miriam has forthcoming.`,
@@ -1055,7 +1065,7 @@ export default {
                                 },
                             },
                         },
-                        `he gets his notice, short an`,
+                        `, he gets his notice, short an`,
                     ],
                 },
                 {
@@ -1090,7 +1100,7 @@ export default {
                     lyricRight: [
                         `Life's a dumb`,
                         {
-                            anchor: `ex-dromedary,`,
+                            anchor: `ex-dromedary`,
                             card: {
                                 description: [
                                     `The`,
@@ -1107,6 +1117,7 @@ export default {
                                 ],
                             },
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -1114,7 +1125,7 @@ export default {
                     lyricLeft: [
                         `puff,`,
                         {
-                            anchor: `preparing the scoop,`,
+                            anchor: `preparing the scoop`,
                             todo: true,
                             card: {
                                 description: [
@@ -1132,7 +1143,7 @@ export default {
                                 },
                             },
                         },
-                        `he's getting dumped.`,
+                        `, he's getting dumped.`,
                     ],
                     lyricRight: [
                         `hungry carrying this groovy`,

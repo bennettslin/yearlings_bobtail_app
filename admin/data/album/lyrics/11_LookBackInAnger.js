@@ -98,7 +98,7 @@ export default {
                     lyric: [
                         `Scrambled past this hell, where`,
                         {
-                            anchor: `flagboy last fell,`,
+                            anchor: `flagboy last fell`,
                             card: {
                                 description: [
                                     `During the`,
@@ -118,6 +118,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -240,7 +241,7 @@ export default {
                         },
                         `says you've`,
                         {
-                            anchor: `past ring one,`,
+                            anchor: `past ring one`,
                             card: {
                                 description: [
                                     `A`,
@@ -255,6 +256,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -386,7 +388,7 @@ export default {
                     lyric: [
                         `You wished a`,
                         {
-                            anchor: `cancer nibbled off,`,
+                            anchor: `cancer nibbled off`,
                             card: {
                                 description: `It was therapeutic enough to write songs about my own disappointments and dysfunctions. It felt crazy that others would credit me with giving voice to theirs as well, and that I should be granted a higher status because of it.`,
                                 dotKeys: {
@@ -395,6 +397,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -462,7 +465,7 @@ export default {
                     lyric: [
                         `With hair of`,
                         {
-                            anchor: `maraschino red,`,
+                            anchor: `maraschino red`,
                             card: {
                                 description: [
                                     `Having sworn to be alert and ready when the next Mara shows up in my life, I notice the latecomer's hair color matches "Mara's sheen of" red, with the brightness of a`,
@@ -477,6 +480,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -561,7 +565,7 @@ export default {
                     lyric: [
                         `When`,
                         {
-                            anchor: `religious kids mocked,`,
+                            anchor: `religious kids mocked`,
                             card: {
                                 description: `Some of the bullies were regular churchgoers, which had the predictable effect of discrediting their faiths in my view.`,
                                 dotKeys: {
@@ -569,7 +573,7 @@ export default {
                                 },
                             },
                         },
-                        `each hypocrite's taunts`,
+                        `, each hypocrite's taunts`,
                     ],
                 },
                 {
@@ -581,7 +585,7 @@ export default {
                     lyric: [
                         `reading`,
                         {
-                            anchor: `His obit not a bang,`,
+                            anchor: `His obit not a bang`,
                             card: {
                                 description: `But my appraisal was based on reason, not malice. If there was one true God, it made no sense why he would entrust the dissemination of his message to the very tormentors of those he hoped to reach.`,
                                 dotKeys: {
@@ -590,7 +594,7 @@ export default {
                                 },
                             },
                         },
-                        `just a murmuring.`,
+                        `, just a murmuring.`,
                     ],
                 },
             ],
@@ -666,7 +670,7 @@ export default {
                     mixTime: `1:49:01.82`,
                     lyric: [
                         {
-                            anchor: `only to crack,`,
+                            anchor: `only to crack`,
                             card: {
                                 description: `Yet even as reason disproved the faiths of my tormentors, it also discredited mine as a Beyonder. Because, in a world abounding with rival claims to the truth, what sane person would stay loyal to a belief that promises zero community and only endless grief?`,
                                 dotKeys: {
@@ -675,6 +679,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                         {
                             anchor: `sprawled where they stood…`,
                             todo: true,
@@ -721,7 +726,7 @@ export default {
                     lyric: [
                         `So if you're weeping for`,
                         {
-                            anchor: `poor squirrels,`,
+                            anchor: `poor squirrels`,
                             card: {
                                 description: [
                                     `In the final scene of `,
@@ -736,6 +741,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -767,7 +773,7 @@ export default {
                     mixTime: `2:03:05.35`,
                     lyric: [
                         {
-                            anchor: `Red and friends,`,
+                            anchor: `Red and friends`,
                             properNoun: true,
                             card: {
                                 description: `The redheaded woman and her friends stick around as my bandmates and I load our gear into the van. During my chat with her between sets, I left open the possibility that we might all hang out after the show.`,
@@ -776,7 +782,7 @@ export default {
                                 },
                             },
                         },
-                        `lagging by the back door,`,
+                        `, lagging by the back door,`,
                     ],
                 },
                 {
@@ -788,7 +794,7 @@ export default {
                     lyric: [
                         `Drunk, you'd`,
                         {
-                            anchor: `claim you've never loved,`,
+                            anchor: `claim you've never loved`,
                             // Too wordy.
                             todo: true,
                             card: {
@@ -799,6 +805,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
                 {

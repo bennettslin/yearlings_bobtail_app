@@ -201,23 +201,26 @@ export default {
                 },
                 {
                     mixTime: `1:06:02.05`,
-                    lyric: {
-                        anchor: `No minutiae left unmastered,`,
-                        todo: true,
-                        card: {
-                            description: [
-                                `Though my main goal was to be well versed in all the important subjects, I derived the most satisfaction from being able to display some random skill with seeming nonchalance, like solving a`,
-                                {
-                                    anchor: `Rubik's Cube.`,
-                                    wiki: `Rubik's_Cube`,
+                    lyric: [
+                        {
+                            anchor: `No minutiae left unmastered`,
+                            todo: true,
+                            card: {
+                                description: [
+                                    `Though my main goal was to be well versed in all the important subjects, I derived the most satisfaction from being able to display some random skill with seeming nonchalance, like solving a`,
+                                    {
+                                        anchor: `Rubik's Cube.`,
+                                        wiki: `Rubik's_Cube`,
+                                    },
+                                    `So I made sure to set aside time for purely fanciful pursuits.`,
+                                ],
+                                dotKeys: {
+                                    [BACKSTORY]: true,
                                 },
-                                `So I made sure to set aside time for purely fanciful pursuits.`,
-                            ],
-                            dotKeys: {
-                                [BACKSTORY]: true,
                             },
                         },
-                    },
+                        `,`,
+                    ],
                 },
                 {
                     mixTime: `1:09:13.58`,

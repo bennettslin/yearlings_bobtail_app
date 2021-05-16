@@ -92,7 +92,7 @@ export default {
                     lyric: [
                         `So you fled to her`,
                         {
-                            anchor: `nest on this stork,`,
+                            anchor: `nest on this stork`,
                             cards: [
                                 {
                                     description: `Every time I broke up with Sita to date another woman, I would revert to the same naive, wide-eyed persona. I just longed to relive the giddiness of puppy love, like an infant experiencing the world for the first time.`,
@@ -112,6 +112,7 @@ export default {
                                 },
                             ],
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -166,7 +167,7 @@ export default {
                     lyric: [
                         `So baby, tell me then, when you`,
                         {
-                            anchor: `take in her breasts,`,
+                            anchor: `take in her breasts`,
                             card: {
                                 description: `It scared me, far more than I let on, to gamble away the familiar warmth of Sita's love for a mere chance at romance with some new woman. I often wondered if this fear then manifested in a hormonal craving for nurture over pleasure, because I was always struck by how motherly these women's naked bodies initially felt to me.`,
                                 dotKeys: {
@@ -175,6 +176,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -242,7 +244,7 @@ export default {
                     mixTime: `0:51:11.31`,
                     lyric: [
                         {
-                            anchor: `spurned at first,`,
+                            anchor: `spurned at first`,
                             card: {
                                 description: `Given the seeming ease with which I could now attract other women, I grew further indignant about the endless hoops I'd been made to jump through to win Sita over.`,
                                 dotKeys: {
@@ -250,7 +252,7 @@ export default {
                                 },
                             },
                         },
-                        `you couldn't let it die!`,
+                        `, you couldn't let it die!`,
                     ],
                 },
                 {
@@ -469,7 +471,7 @@ export default {
                         // NOTE: I made "My" capitalised.
                         `My`,
                         {
-                            anchor: `ticklish piglet,`,
+                            anchor: `ticklish piglet`,
                             card: {
                                 description: `Perversely, Sita and I were at our best during the months right after getting back together. She could enjoy the knowledge of being the better woman, while I got to bask in the afterglow of my latest sexual exploit.`,
                                 dotKeys: {
@@ -477,7 +479,7 @@ export default {
                                 },
                             },
                         },
-                        `you'll bounce back to me, giggly, having fully gorged yourself.`,
+                        `, you'll bounce back to me, giggly, having fully gorged yourself.`,
                     ],
                 },
                 {
@@ -608,7 +610,7 @@ export default {
                     mixTime: `2:13:12.51`,
                     lyric: [
                         {
-                            anchor: `bleeds just once,`,
+                            anchor: `bleeds just once`,
                             card: {
                                 description: [
                                     `Much like a vagina only bleeds the first time when the`,
@@ -623,7 +625,7 @@ export default {
                                 },
                             },
                         },
-                        `then never more…`,
+                        `, then never more…`,
                     ],
                 },
                 {
@@ -697,7 +699,7 @@ export default {
                     lyric: [
                         `your`,
                         {
-                            anchor: `fear of death,`,
+                            anchor: `fear of death`,
                             card: {
                                 description: `The night terrors I experienced as a child continued into adulthood. Sita would soothe me whenever I woke up screaming from visions of my impending death.`,
                                 dotKeys: {
@@ -705,9 +707,9 @@ export default {
                                 },
                             },
                         },
-                        `your`,
+                        `, your`,
                         {
-                            anchor: `fear of never dying,`,
+                            anchor: `fear of never dying`,
                             // This might be all I want to say. Just phrase better?
                             todo: true,
                             card: {
@@ -718,7 +720,7 @@ export default {
                                 },
                             },
                         },
-                        `and`,
+                        `, and`,
                         {
                             anchor: `sadness for what it was`,
                             card: {
@@ -741,7 +743,7 @@ export default {
                                     isItalic: true,
                                     lyric: `Bobtail`,
                                 },
-                                `'s your priority,`,
+                                `'s your priority`,
                             ],
                             properNoun: true,
                             card: {
@@ -759,7 +761,7 @@ export default {
                                 },
                             },
                         },
-                        `so for`,
+                        `, so for`,
                         {
                             isItalic: true,
                             lyric: `Bobtail`,

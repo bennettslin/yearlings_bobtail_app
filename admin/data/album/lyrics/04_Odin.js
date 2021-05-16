@@ -541,7 +541,7 @@ export default {
                         },
                         `for these`,
                         {
-                            anchor: `gentle means!`,
+                            anchor: `gentle means`,
                             card: {
                                 description: [
                                     `Referring to myself here as a`,
@@ -556,6 +556,7 @@ export default {
                                 },
                             },
                         },
+                        `!`,
                     ],
                 },
                 {

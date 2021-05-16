@@ -84,7 +84,7 @@ export default {
                     lyric: [
                         `My`,
                         {
-                            anchor: `hundred thousandth dream,`,
+                            anchor: `hundred thousandth dream`,
                             cards: [
                                 {
                                     description: `I read once that we typically have four dreams per night. Over a lifetime of seventy years, that's about a hundred thousand dreams. So here I am, dreaming the very last dream I'll ever dream.`,
@@ -101,7 +101,7 @@ export default {
                                 },
                             ],
                         },
-                        `I bumped into my Sita.`,
+                        `, I bumped into my Sita.`,
                     ],
                 },
                 {
@@ -407,7 +407,7 @@ export default {
                     lyric: [
                         `My hundred thousandth dream, on the`,
                         {
-                            anchor: `cliffs of El Cerrito,`,
+                            anchor: `cliffs of El Cerrito`,
                             card: {
                                 description: [
                                     `The city of`,
@@ -422,6 +422,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -473,7 +474,7 @@ export default {
                     lyric: [
                         `She'll always`,
                         {
-                            anchor: `come to take me,`,
+                            anchor: `come to take me`,
                             cards: [
                                 {
                                     description: `I now understand that Sita is my most cherished memory. And as such, she was always going to be the one chosen by my subconscious to ease my fears as I part from this world.`,
@@ -490,7 +491,7 @@ export default {
                                 },
                             ],
                         },
-                        `Sita! Sita!`,
+                        `, Sita! Sita!`,
                     ],
                 },
                 {

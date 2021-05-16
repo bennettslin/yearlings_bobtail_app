@@ -181,7 +181,7 @@ export default {
                     lyric: [
                         `of`,
                         {
-                            anchor: `de exempt,`,
+                            anchor: `de exempt`,
                             cards: [
                                 {
                                     description: [
@@ -211,6 +211,7 @@ export default {
                                 },
                             ],
                         },
+                        `,`,
                         {
                             anchor: `exit us`,
                             card: {
@@ -382,7 +383,7 @@ export default {
                     mixTime: `0:24:11.25`,
                     lyric: [
                         {
-                            anchor: `Quouffs uppraissed,`,
+                            anchor: `Quouffs uppraissed`,
                             card: {
                                 description: [
                                     `Not all bottles of Robitussin will get you high. The ones to avoid are those containing`,
@@ -398,7 +399,7 @@ export default {
                                 },
                             },
                         },
-                        `this`,
+                        `, this`,
                         {
                             anchor: `boundless Kalevalley ends`,
                             cards: [
@@ -516,7 +517,7 @@ export default {
                     mixTime: `0:35:18.75`,
                     lyric: [
                         {
-                            anchor: `Makeyars mygrate,`,
+                            anchor: `Makeyars mygrate`,
                             properNoun: true,
                             cards: [
                                 {
@@ -550,7 +551,7 @@ export default {
                                 },
                             ],
                         },
-                        `from`,
+                        `, from`,
                         {
                             anchor: `among ol'`,
                             card: {
@@ -669,7 +670,7 @@ export default {
                     mixTime: `0:46:12.19`,
                     lyric: [
                         {
-                            anchor: `Drinkhis Khan, once Toomujin,`,
+                            anchor: `Drinkhis Khan, once Toomujin`,
                             properNoun: true,
                             cards: [
                                 {
@@ -693,7 +694,7 @@ export default {
                                 },
                             ],
                         },
-                        `has`,
+                        `, has`,
                         {
                             anchor: `slain the teeto-Tatars!`,
                             cards: [
@@ -734,7 +735,7 @@ export default {
                     mixTime: `0:50:04.69`,
                     lyric: [
                         {
-                            anchor: `Tomer-layin' the seed,`,
+                            anchor: `Tomer-layin' the seed`,
                             properNoun: true,
                             cards: [
                                 {
@@ -763,6 +764,7 @@ export default {
                                 },
                             ],
                         },
+                        `,`,
                         {
                             anchor: `Howie led the feat`,
                             properNoun: true,
@@ -844,7 +846,7 @@ export default {
                     mixTime: `0:58:03.75`,
                     lyric: [
                         {
-                            anchor: `Indus-trail sewerce,`,
+                            anchor: `Indus-trail sewerce`,
                             properNoun: true,
                             card: {
                                 description: [
@@ -866,6 +868,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                         {
                             anchor: `questurns Indo Hairapins:`,
                             card: {
@@ -982,7 +985,7 @@ export default {
                     mixTime: `1:05:18.75`,
                     lyric: [
                         {
-                            anchor: `To soma up,`,
+                            anchor: `To soma up`,
                             card: {
                                 description: [
                                     `In the Vedas,`,
@@ -1002,6 +1005,7 @@ export default {
                                 ],
                             },
                         },
+                        `,`,
                         {
                             anchor: `our-youn' invedas`,
                             card: {
@@ -1066,7 +1070,7 @@ export default {
                     mixTime: `1:12:05.61`,
                     lyric: [
                         {
-                            anchor: `Ourevian battles spent,`,
+                            anchor: `Ourevian battles spent`,
                             properNoun: true,
                             cards: [
                                 {
@@ -1103,6 +1107,7 @@ export default {
                                 },
                             ],
                         },
+                        `,`,
                         {
                             anchor: `a'duct Uighuress`,
                             card: {
@@ -1171,7 +1176,7 @@ export default {
                     lyric: [
                         `From the`,
                         {
-                            anchor: `Khlmair city Ingcar Wet,`,
+                            anchor: `Khlmair city Ingcar Wet`,
                             properNoun: true,
                             cards: [
                                 {
@@ -1204,7 +1209,7 @@ export default {
                                 },
                             ],
                         },
-                        `to war:`,
+                        `, to war:`,
                         {
                             anchor: `scimitary of'fence!`,
                             card: {
@@ -1321,7 +1326,7 @@ export default {
                     lyric: [
                         `But`,
                         {
-                            anchor: `past a cross Bearing Straight,`,
+                            anchor: `past a cross Bearing Straight`,
                             card: {
                                 description: [
                                     `We navigate by "bearing straight" past a cross-shaped headstone, just as those before us had "passed across the`,
@@ -1336,6 +1341,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -1424,7 +1430,7 @@ export default {
                     mixTime: `1:57:19.69`,
                     lyric: [
                         {
-                            anchor: `I'll sail this sea,`,
+                            anchor: `I'll sail this sea`,
                             card: {
                                 description: [
                                     `As I stand before Adam's headstone under the predawn sky, a wave of clarity washes over me. With my sense of purpose renewed, I vow to finish`,
@@ -1439,7 +1445,7 @@ export default {
                                 },
                             },
                         },
-                        `there is only me and my northern star!`,
+                        `, there is only me and my northern star!`,
                     ],
                 },
             ],
@@ -1480,7 +1486,7 @@ export default {
                     lyric: [
                         `The`,
                         {
-                            anchor: `mistodawn,`,
+                            anchor: `mistodawn`,
                             card: {
                                 description: `The "mist of dawn" breaks, and we drive back to Howie's place. My newfound clarity proves short-lived as I lean back and shut my eyes to gaze at constellations.`,
                                 dotKeys: {
@@ -1489,6 +1495,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                         {
                             // NOTE: I changed from ha'nt.
                             anchor: `hant'd by sober-trooth tiedgirl`,
@@ -1799,7 +1806,7 @@ export default {
                     mixTime: `2:35:18.75`,
                     lyric: [
                         {
-                            anchor: `Pullar switch,`,
+                            anchor: `Pullar switch`,
                             cards: [
                                 {
                                     description: `Back at Howie's place, I'm crashing on a couch in his attic. There's an old black-and-white television in front of me, and I "pull the" switch to turn it on.`,
@@ -1822,6 +1829,7 @@ export default {
                                 },
                             ],
                         },
+                        `,`,
                         {
                             anchor: `in-som'umiak`,
                             card: {
@@ -1895,7 +1903,7 @@ export default {
                     lyric: [
                         `Then pounds`,
                         {
-                            anchor: `arrhythmetic heart,`,
+                            anchor: `arrhythmetic heart`,
                             card: {
                                 description: [
                                     {
@@ -1910,6 +1918,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -1990,7 +1999,7 @@ export default {
                     lyric: [
                         {
                             // NOTE: I made this lowercase.
-                            anchor: `In mouth deseret,`,
+                            anchor: `In mouth deseret`,
                             card: {
                                 description: [
                                     {
@@ -2010,6 +2019,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                         {
                             anchor: `black Letter-Day`,
                             cards: [
