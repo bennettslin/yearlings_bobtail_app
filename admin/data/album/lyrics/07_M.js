@@ -57,40 +57,43 @@ export default {
             subVerse: [
                 {
                     mixTime: `0:35:03.13`,
-                    lyricCentre: {
-                        anchor: `Maravijaya…`,
-                        properNoun: true,
-                        card: {
-                            description: [
-                                {
-                                    isItalic: true,
-                                    lyric: {
-                                        anchor: `Maravijaya,`,
-                                        wiki: `Maravijaya_attitude`,
+                    lyricCentre: [
+                        {
+                            anchor: `Maravijaya`,
+                            properNoun: true,
+                            card: {
+                                description: [
+                                    {
+                                        isItalic: true,
+                                        lyric: {
+                                            anchor: `Maravijaya,`,
+                                            wiki: `Maravijaya_attitude`,
+                                        },
                                     },
+                                    `or "victory over Mara" in`,
+                                    {
+                                        anchor: `Sanskrit,`,
+                                        wiki: `Sanskrit`,
+                                    },
+                                    `is the seated posture of the`,
+                                    {
+                                        anchor: `Buddha`,
+                                        wiki: `Gautama_Buddha`,
+                                    },
+                                    `as he fends off temptation from the demon`,
+                                    {
+                                        anchor: `Mara,`,
+                                        wiki: `Mara_(demon)`,
+                                    },
+                                    `who personifies death. Like the Buddha, I had to summon otherworldly reserves of self-denial to get through band practice after Jacob and Mara started dating.`,
+                                ],
+                                dotKeys: {
+                                    [OBSERVATION]: true,
                                 },
-                                `or "victory over Mara" in`,
-                                {
-                                    anchor: `Sanskrit,`,
-                                    wiki: `Sanskrit`,
-                                },
-                                `is the seated posture of the`,
-                                {
-                                    anchor: `Buddha`,
-                                    wiki: `Gautama_Buddha`,
-                                },
-                                `as he fends off temptation from the demon`,
-                                {
-                                    anchor: `Mara,`,
-                                    wiki: `Mara_(demon)`,
-                                },
-                                `who personifies death. Like the Buddha, I had to summon otherworldly reserves of self-denial to get through band practice after Jacob and Mara started dating.`,
-                            ],
-                            dotKeys: {
-                                [OBSERVATION]: true,
                             },
                         },
-                    },
+                        `…`,
+                    ],
                 },
             ],
             unitDot: {
@@ -950,7 +953,7 @@ export default {
                         },
                         `it's up to me to`,
                         {
-                            anchor: `be alert;`,
+                            anchor: `be alert`,
                             card: {
                                 description: `In short, it was no mystery why the situation with Mara had transpired the way it had. I found this thought to be empowering, because it meant that the Maras of the world were still attainable. It was just on me to figure out what they wanted. And once I knew, I could build myself up to be exactly that.`,
                                 dotKeys: {
@@ -958,6 +961,7 @@ export default {
                                 },
                             },
                         },
+                        `;`,
                     ],
                 },
                 {

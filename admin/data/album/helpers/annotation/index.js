@@ -54,7 +54,7 @@ const _recurseThroughVerse = ({
                 //     console.error(anchoredLyric.anchor)
                 // }
 
-                if (anchoredLyric.anchor.endsWith('?')) {
+                if (anchoredLyric.anchor.endsWith(';')) {
                     console.error(anchoredLyric.anchor)
                 }
             }

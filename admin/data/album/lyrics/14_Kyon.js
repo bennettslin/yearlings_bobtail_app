@@ -326,7 +326,7 @@ export default {
                     lyric: [
                         `But dear,`,
                         {
-                            anchor: `let's make a pact:`,
+                            anchor: `let's make a pact`,
                             card: {
                                 description: `Sita knew it was just a matter of time before I wanted the same mature, slow-burning love that she did. So after each breakup, she would make me promise to consider rekindling what we once had, whenever I should long for it again.`,
                                 dotKeys: {
@@ -334,7 +334,7 @@ export default {
                                 },
                             },
                         },
-                        `if you're single then,`,
+                        `: if you're single then,`,
                     ],
                 },
                 {
@@ -434,7 +434,7 @@ export default {
                         },
                         `to`,
                         {
-                            anchor: `spring forward on a fallback…`,
+                            anchor: `spring forward on a fallback`,
                             cards: [
                                 {
                                     description: `Then once my later years as a womanizer proved unkind, I would surely return to Sita, my fallback option, with relief rather than reluctance.`,
@@ -457,6 +457,7 @@ export default {
                                 },
                             ],
                         },
+                        `…`,
                     ],
                 },
             ],
@@ -785,7 +786,7 @@ export default {
                     lyric: [
                         `And darling, don't you worry, these were only`,
                         {
-                            anchor: `practice cuts…`,
+                            anchor: `practice cuts`,
                             todo: true,
                             card: {
                                 description: `When Sita first noticed the scars on my forearm and asked about them, I replied dryly that they were just for practice. Years later when I expressed concern that she'd tried cutting for herself, she gave me the same assurance. The message was clear that I was the cause in more ways than one.`,
@@ -794,6 +795,7 @@ export default {
                                 },
                             },
                         },
+                        `…`,
                     ],
                 },
             ],

@@ -360,7 +360,7 @@ export default {
                     lyric: [
                         `when`,
                         {
-                            anchor: `suddenly baby shrieks…`,
+                            anchor: `suddenly baby shrieks`,
                             card: {
                                 description: `My brother, the baby of our family, was typically calm and quiet in demeanor. However, when made to do things he didn't enjoy or understand, like sitting through a haircut, he could erupt without warning in a frenzied outburst.`,
                                 dotKeys: {
@@ -368,6 +368,7 @@ export default {
                                 },
                             },
                         },
+                        `…`,
                     ],
                 },
             ],
@@ -805,7 +806,7 @@ export default {
                         lyric: [
                             `Shelled skull has freed`,
                             {
-                                anchor: `unsalvaged soul…`,
+                                anchor: `unsalvaged soul`,
                                 cards: [
                                     {
                                         description: `To justify the abuse of sickly children, religious doctrine in the past often claimed that such children were devoid of souls.`,
@@ -818,6 +819,7 @@ export default {
                                     },
                                 ],
                             },
+                            `…`,
                         ],
                     },
                 },

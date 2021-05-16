@@ -327,7 +327,7 @@ export default {
                     lyric: [
                         `At first she hedged, but then`,
                         {
-                            anchor: `laying qualms to rest:`,
+                            anchor: `laying qualms to rest`,
                             cards: [
                                 {
                                     description: [
@@ -347,6 +347,7 @@ export default {
                                 },
                             ],
                         },
+                        `:`,
                     ],
                 },
                 {
@@ -419,7 +420,7 @@ export default {
                         },
                         `spurs tales of`,
                         {
-                            anchor: `bare-knuckle defeats…`,
+                            anchor: `bare-knuckle defeats`,
                             cards: [
                                 {
                                     description: `Sita seemed intrigued by my rough-and-tumble past, despite my honest admission that these were literal beatdowns in which I never threw a single punch.`,
@@ -432,6 +433,7 @@ export default {
                                 },
                             ],
                         },
+                        `…`,
                     ],
                 },
             ],
@@ -471,7 +473,7 @@ export default {
                     lyric: [
                         `Then just like the drift,`,
                         {
-                            anchor: `she disappeared…`,
+                            anchor: `she disappeared`,
                             card: {
                                 description: `Shortly after our third date, I called Sita to tell her I was in love with her. She admitted that she didn't feel the same way, yet wanted to remain friends. We hung up with the understanding that I would continue to invite her out for casual excursions. But I felt so dejected that I gave up altogether on seeing her again.`,
                                 dotKeys: {
@@ -479,6 +481,7 @@ export default {
                                 },
                             },
                         },
+                        `…`,
                     ],
                 },
             ],
@@ -779,7 +782,7 @@ export default {
                     lyric: [
                         `"Hey, you know`,
                         {
-                            anchor: `you're my password?"`,
+                            anchor: `you're my password`,
                             card: {
                                 description: `As I enter the passcode for the gate, Sita breaks the ice by mentioning that a topic we once discussed was the basis for a password she recently created.`,
                                 dotKeys: {
@@ -787,6 +790,7 @@ export default {
                                 },
                             },
                         },
+                        `?"`,
                     ],
                 },
                 {
@@ -832,7 +836,7 @@ export default {
                         },
                         `,`,
                         {
-                            anchor: `returned to your guard…`,
+                            anchor: `returned to your guard`,
                             card: {
                                 description: `Just like that, I'm once again on guard, second-guessing everything I say to Sita like a prisoner conversing with a jail guard.`,
                                 dotKeys: {
@@ -841,6 +845,7 @@ export default {
                                 },
                             },
                         },
+                        `…`,
                     ],
                 },
             ],
@@ -872,7 +877,7 @@ export default {
                     lyric: [
                         `Though`,
                         {
-                            anchor: `never full, you're fed;`,
+                            anchor: `never full, you're fed`,
                             card: {
                                 description: `Like a tired fugitive relieved to come back to a warm bed and regular meals, I have to concede that being just friends is still better than the cold, bleak alternative.`,
                                 dotKeys: {
@@ -881,7 +886,7 @@ export default {
                                 },
                             },
                         },
-                        `so you`,
+                        `; so you`,
                         {
                             anchor: `hit the switch`,
                             cards: [
@@ -930,9 +935,9 @@ export default {
                 {
                     mixTime: `2:40:09.44`,
                     lyric: [
-                        `"Shall I leave you," she says,`,
+                        `"Shall I leave you," she says, "`,
                         {
-                            anchor: `"here to Philip Dick?"`,
+                            anchor: `here to Philip Dick`,
                             card: {
                                 description: `Or else, to "feel up dick." Sita lightens the awkwardness by joking that I might prefer to continue masturbating alone. At the same time, she takes a gentle jab at the bookish exterior I've carefully crafted.`,
                                 dotKeys: {
@@ -941,6 +946,7 @@ export default {
                                 },
                             },
                         },
+                        `?"`,
                     ],
                 },
             ],
@@ -983,7 +989,7 @@ export default {
                     lyric: [
                         `Thoughts sift in the`,
                         {
-                            anchor: `waiting room:`,
+                            anchor: `waiting room`,
                             cards: [
                                 {
                                     description: [
@@ -1006,6 +1012,7 @@ export default {
                                 },
                             ],
                         },
+                        `:`,
                     ],
                 },
                 {
@@ -1189,15 +1196,18 @@ export default {
             mainVerses: [
                 {
                     mixTime: `3:15:03.58`,
-                    lyric: {
-                        anchor: `She loves you…`,
-                        card: {
-                            description: `It took a long while for Sita and I to be fully comfortable with each other. At the start of our yearlong friendship, we mostly just studied together at the library. Then slowly, short treks through campus progressed into long strolls around the neighborhood, which soon led up to leaning in closer on the couch. It all happened so fast toward the end that I was still processing what exactly had triggered it.`,
-                            dotKeys: {
-                                [BACKSTORY]: true,
+                    lyric: [
+                        {
+                            anchor: `She loves you`,
+                            card: {
+                                description: `It took a long while for Sita and I to be fully comfortable with each other. At the start of our yearlong friendship, we mostly just studied together at the library. Then slowly, short treks through campus progressed into long strolls around the neighborhood, which soon led up to leaning in closer on the couch. It all happened so fast toward the end that I was still processing what exactly had triggered it.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                },
                             },
                         },
-                    },
+                        `…`,
+                    ],
                 },
                 {
                     mixTime: `3:18:26.08`,
@@ -1237,7 +1247,7 @@ export default {
                     lyric: [
                         `you wear your`,
                         {
-                            anchor: `hard-on in a sleeve."`,
+                            anchor: `hard-on in a sleeve`,
                             card: {
                                 description: `Pointing to the condom on my erection, Sita lightens the mood by feigning to agree with a past self-assessment of mine that I wear my "heart on" my sleeve.`,
                                 dotKeys: {
@@ -1246,6 +1256,7 @@ export default {
                                 },
                             },
                         },
+                        `."`,
                     ],
                 },
                 {
@@ -1359,7 +1370,7 @@ export default {
                     lyric: [
                         `Let`,
                         {
-                            anchor: `pure lose to pure…`,
+                            anchor: `pure lose to pure`,
                             card: {
                                 description: `Sita and I were both virgins, which made it easier to lower my defenses. I had to remind myself that neither of us really knew what we were doing.`,
                                 dotKeys: {
@@ -1368,6 +1379,7 @@ export default {
                                 },
                             },
                         },
+                        `…`,
                     ],
                 },
             ],

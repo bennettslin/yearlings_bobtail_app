@@ -238,7 +238,7 @@ export default {
                     lyricLeft: [
                         `you drew with`,
                         {
-                            anchor: `crayons least whittled…`,
+                            anchor: `crayons least whittled`,
                             card: {
                                 description: [
                                     `When we landed in Taiwan, my aunt gave me a set of`,
@@ -254,11 +254,12 @@ export default {
                                 },
                             },
                         },
+                        `…`,
                     ],
                     lyricRight: [
                         `you`,
                         {
-                            anchor: `ruminate on these riddles…`,
+                            anchor: `ruminate on these riddles`,
                             todo: true,
                             card: {
                                 description: `The "awake" voice in the doublespeaker set echoes my thoughts as I lie on the floor mat, unable to sleep. The terrifying vastness of the universe suggests unlimited possibilities. And yet somehow, being with Sasha is not one of them.`,
@@ -268,6 +269,7 @@ export default {
                                 },
                             },
                         },
+                        `…`,
                     ],
                 },
             ],
@@ -565,7 +567,7 @@ export default {
                     lyricRight: [
                         `As you plummet down from`,
                         {
-                            anchor: `couplets past;`,
+                            anchor: `couplets past`,
                             card: {
                                 description: [
                                     `In poetry, a`,
@@ -580,6 +582,7 @@ export default {
                                 },
                             },
                         },
+                        `;`,
                     ],
                 },
                 {
@@ -703,7 +706,7 @@ export default {
                     lyricLeft: [
                         `that was`,
                         {
-                            anchor: `safe for a heathen…`,
+                            anchor: `safe for a heathen`,
                             card: {
                                 description: [
                                     `Being an illegitimate son, Ishmael was not to inherit the house of`,
@@ -718,6 +721,7 @@ export default {
                                 },
                             },
                         },
+                        `…`,
                     ],
                     lyricRight: `as a slave for the seasons?`,
                 },
@@ -1662,7 +1666,7 @@ export default {
                     lyricLeft: [
                         `then returns them as a`,
                         {
-                            anchor: `buffer zone…`,
+                            anchor: `buffer zone`,
                             card: {
                                 description: `The sea closed behind Moses and the Israelites, drowning the Egyptian army in pursuit. Unfortunately, the certainty of death following me at every turn can't be overcome so easily.`,
                                 dotKeys: {
@@ -1671,6 +1675,7 @@ export default {
                                 },
                             },
                         },
+                        `…`,
                     ],
                     // CONSIDER: Wormhole: Nora Barnacle in Good Night, Sita?
                     lyricRight: `can reach urchins smashed from undertows…`,
@@ -1784,7 +1789,7 @@ export default {
                     lyricLeft: [
                         `past a`,
                         {
-                            anchor: `guileless garden gnome…`,
+                            anchor: `guileless garden gnome`,
                             cards: [
                                 {
                                     description: [
@@ -1812,11 +1817,12 @@ export default {
                                 },
                             ],
                         },
+                        `…`,
                     ],
                     lyricRight: [
                         `has a`,
                         {
-                            anchor: `mile less far to go…`,
+                            anchor: `mile less far to go`,
                             card: {
                                 description: [
                                     {
@@ -1831,6 +1837,7 @@ export default {
                                 },
                             },
                         },
+                        `…`,
                     ],
                 },
             ],

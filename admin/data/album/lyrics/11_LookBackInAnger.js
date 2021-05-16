@@ -487,7 +487,7 @@ export default {
                     mixTime: `0:54:00.03`,
                     lyric: [
                         {
-                            anchor: `"Great show,"`,
+                            anchor: `"Great show`,
                             card: {
                                 description: `The best time to hit on someone is right after you've played a set. They've just spent the last half hour making you the center of their universe, in a crowd of others who've just done the same. So as expected, I find the redheaded woman to be flirtatious when we chat.`,
                                 dotKeys: {
@@ -496,7 +496,7 @@ export default {
                                 },
                             },
                         },
-                        `she later said.`,
+                        `," she later said.`,
                     ],
                 },
             ],
@@ -681,7 +681,7 @@ export default {
                         },
                         `,`,
                         {
-                            anchor: `sprawled where they stood…`,
+                            anchor: `sprawled where they stood`,
                             todo: true,
                             card: {
                                 description: `And while every beatdown I suffered was a serious blow to my mental health and emotional state, the bullies only continued to enjoy greater happiness and social standing. My belief as a Beyonder couldn't counter the harsh reality that nature favors its bullies.`,
@@ -691,6 +691,7 @@ export default {
                                 },
                             },
                         },
+                        `…`,
                     ],
                 },
             ],
@@ -814,7 +815,7 @@ export default {
                     lyric: [
                         `but it's too late to`,
                         {
-                            anchor: `unscrew a Bud…`,
+                            anchor: `unscrew a Bud`,
                             // I'm still not getting the right wording.
                             todo: true,
                             card: {
@@ -837,6 +838,7 @@ export default {
                                 },
                             },
                         },
+                        `…`,
                     ],
                 },
             ],

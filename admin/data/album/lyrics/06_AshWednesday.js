@@ -110,7 +110,7 @@ export default {
                     mixTime: `0:07:04.36`,
                     lyric: [
                         {
-                            anchor: `where it commenced:`,
+                            anchor: `where it commenced`,
                             card: {
                                 description: `The relationship with Catherine began much like my friendship with Sasha had years earlier. I latched onto the first person to show me kindness in a new environment, and then I tried to make myself indispensable in small ways.`,
                                 dotKeys: {
@@ -118,7 +118,7 @@ export default {
                                 },
                             },
                         },
-                        `in my`,
+                        `: in my`,
                         {
                             anchor: `bookless room`,
                             card: {
@@ -252,7 +252,7 @@ export default {
                         },
                         `up and left, hers the`,
                         {
-                            anchor: `sole assent…`,
+                            anchor: `sole assent`,
                             card: {
                                 description: `It was Catherine who wanted the breakup, not me. But she was also leaving me behind in another sense, since her "soul" was the only one awaiting "ascent."`,
                                 dotKeys: {
@@ -261,6 +261,7 @@ export default {
                                 },
                             },
                         },
+                        `…`,
                     ],
                 },
                 {
@@ -375,8 +376,9 @@ export default {
                 {
                     mixTime: `0:50:29.04`,
                     lyric: [
+                        `"My,`,
                         {
-                            anchor: `"My, what wit, man,"`,
+                            anchor: `what wit, man`,
                             card: {
                                 description: `I picture Catherine responding in her usual droll manner, with a pun that salutes my effort to channel "Walt Whitman."`,
                                 dotKeys: {
@@ -385,6 +387,7 @@ export default {
                                 },
                             },
                         },
+                        `,"`,
                         {
                             anchor: `putting down her Joyce`,
                             card: {
@@ -810,7 +813,7 @@ export default {
                             lyric: [
                                 `Et`,
                                 {
-                                    anchor: `Catherine vaut bien une messe…`,
+                                    anchor: `Catherine vaut bien une messe`,
                                     properNoun: true,
                                     todo: true,
                                     card: {
@@ -836,6 +839,7 @@ export default {
                                         },
                                     },
                                 },
+                                `…`,
                             ],
                         },
                     ],

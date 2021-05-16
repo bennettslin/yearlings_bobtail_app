@@ -224,7 +224,7 @@ export default {
                         },
                         `at the end of this`,
                         {
-                            anchor: `book of yours…`,
+                            anchor: `book of yours`,
                             card: {
                                 description: [
                                     `Like Grover, I was trapped inside a self-referential work, hoping to shape in real time the outcome toward which I was being relentlessly thrust. But unlike Grover, I had an inkling of who the monster at the end of`,
@@ -239,6 +239,7 @@ export default {
                                 },
                             },
                         },
+                        `…`,
                     ],
                 },
             ],
@@ -319,7 +320,7 @@ export default {
                         },
                         `,`,
                         {
-                            anchor: `earth right now your tourist store…`,
+                            anchor: `earth right now your tourist store`,
                             todo: true,
                             card: {
                                 description: `My mother once filled my head with visions of being a great artist. The mail-order cult then piled on the belief that I was a mere visitor to this planet. The lasting effect on my psyche was that I became unaffected by earthly concerns, preferring instead to work tirelessly "to restore" my "birthright" of artistic renown.`,
@@ -329,6 +330,7 @@ export default {
                                 },
                             },
                         },
+                        `…`,
                     ],
                 },
             ],
@@ -1011,7 +1013,7 @@ export default {
                         },
                         `, you found spelled out in`,
                         {
-                            anchor: `dead ants:`,
+                            anchor: `dead ants`,
                             cards: [
                                 {
                                     description: `My sidewalk art had killed off some ants, whose dead bodies formed an outline around what I'd drunkenly scrawled in chalk.`,
@@ -1031,8 +1033,9 @@ export default {
                                 },
                             ],
                         },
+                        `:`,
                         {
-                            anchor: `_____…`,
+                            anchor: `_____`,
                             card: {
                                 description: `And what I'd scrawled in chalk was… Mara's name. No real cliffhanger here. "M" just set a precedent for me to be gun-shy about mentioning her anywhere in my lyrics.`,
                                 dotKeys: {
@@ -1040,6 +1043,7 @@ export default {
                                 },
                             },
                         },
+                        `…`,
                     ],
                 },
             ],
@@ -1180,8 +1184,9 @@ export default {
                     lyric: {
                         isItalic: true,
                         lyric: [
+                            `…`,
                             {
-                                anchor: `…traded in`,
+                                anchor: `traded in`,
                                 todo: true,
                                 card: {
                                     description: `Like shiny new "bronzes" placed next to a gold trophy from the past, these other women were never more desirable than Sita in hindsight. They thrilled me most only because I'd won them more recently.`,
@@ -1470,23 +1475,27 @@ export default {
             ],
             sideCard: [
                 {
-                    lyric: {
-                        anchor: `Rama, Rama…`,
-                        properNoun: true,
-                        card: {
-                            description: `Like Valmiki as he chanted Rama's name, I desperately want to be good again.`,
-                            dotKeys: {
-                                [NARRATIVE]: true,
+                    lyric: [
+                        {
+                            anchor: `Rama, Rama`,
+                            properNoun: true,
+                            card: {
+                                description: `Like Valmiki as he chanted Rama's name, I desperately want to be good again.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                },
                             },
                         },
-                    },
+                        `…`,
+                    ],
                 },
             ],
             sideSubCard: [
                 {
                     lyric: [
+                        `…`,
                         {
-                            anchor: `…Maranatha`,
+                            anchor: `Maranatha`,
                             todo: true,
                             card: {
                                 description: [

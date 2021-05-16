@@ -454,7 +454,7 @@ export default {
                         },
                         `with your`,
                         {
-                            anchor: `sheriff's badge and gun…`,
+                            anchor: `sheriff's badge and gun`,
                             card: {
                                 description: [
                                     `Though my mother and other Taiwanese teenagers of her generation prized all things labeled American, their only exposure was through a local bootleg industry that mainly recycled the relics of America's past. And so my sister and I grew up listening to my mother's old`,
@@ -473,6 +473,7 @@ export default {
                                 },
                             },
                         },
+                        `…`,
                     ],
                 },
             ],

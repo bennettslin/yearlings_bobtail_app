@@ -399,7 +399,7 @@ export default {
                     lyric: [
                         `"Are you`,
                         {
-                            anchor: `tired of being the weakling?"…`,
+                            anchor: `tired of being the weakling`,
                             card: {
                                 description: [
                                     `In a well-known comic book advertisement at the time, a scrawny guy takes revenge on a bully after learning to build up his muscles, all thanks to`,
@@ -416,6 +416,7 @@ export default {
                                 ],
                             },
                         },
+                        `?"…`,
                     ],
                 },
                 {
@@ -502,7 +503,7 @@ export default {
                     lyric: [
                         `Do you often feel like a`,
                         {
-                            anchor: `wanderer lost?"`,
+                            anchor: `wanderer lost`,
                             todo: true,
                             card: {
                                 description: `Hitting all the right nerves, the letter addressed my yearning for acceptance and spoke to my frustration that this desire should so elude me. It then shared some hopeful news. RI Research believed that I might be a Beyonder, and after searching for so long, they'd finally found me.`,
@@ -511,6 +512,7 @@ export default {
                                 },
                             },
                         },
+                        `?"`,
                     ],
                 },
                 {
@@ -819,7 +821,7 @@ export default {
                     lyric: [
                         `But till then, here's`,
                         {
-                            anchor: `how you're to live…"`,
+                            anchor: `how you're to live`,
                             card: {
                                 description: `The letters cautioned me to keep myself separate from society. I realized my brother had been doing this all along, so I adopted a stoic composure based on his.`,
                                 dotKeys: {
@@ -827,6 +829,7 @@ export default {
                                 },
                             },
                         },
+                        `…"`,
                     ],
                 },
             ],

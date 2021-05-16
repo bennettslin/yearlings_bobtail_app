@@ -22,7 +22,8 @@ const ARRAY_KEYS = {
 const _appendWithSpaceIfNeeded = text => {
     // Do not append a space for these exceptions.
     if (
-        text.endsWith(` "`)
+        text.endsWith(` "`) ||
+        text.endsWith(`…`)
     ) {
         return text
     }

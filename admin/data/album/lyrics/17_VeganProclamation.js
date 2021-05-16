@@ -307,7 +307,7 @@ export default {
                     lyric: [
                         `and now I know why the`,
                         {
-                            anchor: `battered kitten purrs…`,
+                            anchor: `battered kitten purrs`,
                             // Maybe this is already good enough?
                             todo: true,
                             cards: [
@@ -343,6 +343,7 @@ export default {
                                 },
                             ],
                         },
+                        `…`,
                     ],
                 },
             ],
@@ -630,7 +631,7 @@ export default {
                     lyric: [
                         `and to be`,
                         {
-                            anchor: `good again…`,
+                            anchor: `good again`,
                             card: {
                                 description: [
                                     `Upon becoming a vegan, I joined`,
@@ -645,6 +646,7 @@ export default {
                                 },
                             },
                         },
+                        `…`,
                     ],
                 },
             ],
@@ -699,7 +701,7 @@ export default {
                     lyric: [
                         `Someday you'll breathe again; for one,`,
                         {
-                            anchor: `you have to…`,
+                            anchor: `you have to`,
                             card: {
                                 description: `Overcome with jealousy and heartbreak, I had no excuse to complain. I'd caused Sita this exact torment countless times. So in our last phone conversation, I just meekly asked how she'd managed it. She replied that she didn't know. There were days when she just didn't want to live. And yet, each day would pass all the same, pushing into the next. Slowly, days would add up to weeks, then weeks would turn into months, until the excruciating pain dulled into an aching sadness.`,
                                 dotKeys: {
@@ -707,6 +709,7 @@ export default {
                                 },
                             },
                         },
+                        `…`,
                     ],
                 },
                 {
@@ -771,7 +774,7 @@ export default {
                     lyric: [
                         `The stardust marks us, Odin,`,
                         {
-                            anchor: `sparks zip through our heads…`,
+                            anchor: `sparks zip through our heads`,
                             cards: [
                                 {
                                     description: [
@@ -791,6 +794,7 @@ export default {
                                 },
                             ],
                         },
+                        `…`,
                     ],
                 },
                 {
@@ -853,7 +857,7 @@ export default {
                         `Our ashed heads bow from`,
                         {
                             // NOTE: I added an "h" to Shiva.
-                            anchor: `chivalry to our Shiva's feet…`,
+                            anchor: `chivalry to our Shiva's feet`,
                             properNoun: true,
                             todo: true,
                             cards: [
@@ -880,6 +884,7 @@ export default {
                                 },
                             ],
                         },
+                        `…`,
                     ],
                 },
             ],

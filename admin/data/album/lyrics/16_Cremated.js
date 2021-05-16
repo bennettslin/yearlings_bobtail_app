@@ -56,16 +56,19 @@ export default {
             mainVerses: [
                 {
                     mixTime: null,
-                    lyricCentre: {
-                        anchor: `Or another…`,
-                        card: {
-                            description: `Even if I can't be with Mara, I can still be with someone like her. Namely, Miriam.`,
-                            dotKeys: {
-                                [NARRATIVE]: true,
-                                [OBSERVATION]: true,
+                    lyricCentre: [
+                        {
+                            anchor: `Or another`,
+                            card: {
+                                description: `Even if I can't be with Mara, I can still be with someone like her. Namely, Miriam.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [OBSERVATION]: true,
+                                },
                             },
                         },
-                    },
+                        `…`,
+                    ],
                 },
             ],
             unitDot: {
@@ -909,7 +912,7 @@ export default {
                         },
                         `,`,
                         {
-                            anchor: `Godspeed…"`,
+                            anchor: `Godspeed`,
                             properNoun: true,
                             cards: [
                                 {
@@ -928,6 +931,7 @@ export default {
                                 },
                             ],
                         },
+                        `…"`,
                     ],
                 },
             ],
@@ -1039,7 +1043,7 @@ export default {
                     lyricLeft: [
                         `He's`,
                         {
-                            anchor: `vegging with his boner shortened;`,
+                            anchor: `vegging with his boner shortened`,
                             cards: [
                                 {
                                     description: `Zoned out and flaccid, I'm about to be blindsided by Miriam's true intention for today's outing.`,
@@ -1052,6 +1056,7 @@ export default {
                                 },
                             ],
                         },
+                        `;`,
                     ],
                     lyricRight: [
                         {

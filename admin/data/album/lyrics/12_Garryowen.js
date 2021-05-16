@@ -310,7 +310,7 @@ export default {
                         },
                         `, or so`,
                         {
-                            anchor: `she's claimed…`,
+                            anchor: `she's claimed`,
                             card: {
                                 description: `Throughout our budding friendship, Sita had neglected to mention the extent of her sexual intimacy with past partners, even if always shy of intercourse. She tried to console me by pointing out that she never went all the way precisely because she didn't truly love them. She loved me, and so I had won. But it still stung like crazy to find out so late, and only deepened my resentment.`,
                                 dotKeys: {
@@ -318,6 +318,7 @@ export default {
                                 },
                             },
                         },
+                        `…`,
                     ],
                 },
             ],
@@ -584,7 +585,7 @@ export default {
                     lyric: [
                         `Someday`,
                         {
-                            anchor: `she won't be there;`,
+                            anchor: `she won't be there`,
                             card: {
                                 description: `But this codependency wasn't just the foundational basis of my love for Sita. It was really all I knew of how to love, period. I would never be asked to love in this way again, certainly not by any of the carefree scenesters I ogled at every show. And so it wasn't just cowardice that prevented me from cutting the cord. I genuinely feared whether I could ever truly love anyone else.`,
                                 dotKeys: {
@@ -592,7 +593,7 @@ export default {
                                 },
                             },
                         },
-                        `someday yet!`,
+                        `; someday yet!`,
                     ],
                 },
             ],
@@ -742,7 +743,7 @@ export default {
                         [
                             `see himself`,
                             {
-                                anchor: `as well in you."`,
+                                anchor: `as well in you`,
                                 card: {
                                     description: `But if I was capable of injuring myself, then I was also unlikely to feel any compunction about hurting anyone close to me, who now knew the worst side of me as only I once did.`,
                                     dotKeys: {
@@ -750,6 +751,7 @@ export default {
                                     },
                                 },
                             },
+                            `."`,
                         ],
                     ],
                 },

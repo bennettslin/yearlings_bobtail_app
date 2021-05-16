@@ -232,7 +232,7 @@ export default {
                         },
                         `, I felt you`,
                         {
-                            anchor: `prepped to shed…`,
+                            anchor: `prepped to shed`,
                             card: {
                                 description: [
                                     `Sasha is prepped in more than once sense, as she's preparing to begin enrollment at a`,
@@ -248,6 +248,7 @@ export default {
                                 },
                             },
                         },
+                        `…`,
                     ],
                 },
             ],
@@ -355,7 +356,7 @@ export default {
                     lyric: [
                         `staying kosher. Though, you know,`,
                         {
-                            anchor: `I would have too…`,
+                            anchor: `I would have too`,
                             card: {
                                 description: `Because if Sasha were to want me, then of course I would convert to Judaism. It made no sense to be loyal to my own cultural identity, which I had no hand in deciding.`,
                                 dotKeys: {
@@ -363,6 +364,7 @@ export default {
                                 },
                             },
                         },
+                        `…`,
                     ],
                 },
             ],
@@ -502,9 +504,9 @@ export default {
                 {
                     mixTime: `1:39:00.69`,
                     lyric: [
-                        `untied this`,
+                        `untied this "`,
                         {
-                            anchor: `"tetherboy,"`,
+                            anchor: `tetherboy`,
                             cards: [
                                 {
                                     description: [
@@ -535,7 +537,7 @@ export default {
                                 },
                             ],
                         },
-                        `soothing in your lecture voice.`,
+                        `," soothing in your lecture voice.`,
                     ],
                 },
             ],
@@ -586,9 +588,9 @@ export default {
                 {
                     mixTime: `1:54:13.07`,
                     lyric: [
-                        `who shrug when thus annoyed, yawning,`,
+                        `who shrug when thus annoyed, yawning, "`,
                         {
-                            anchor: `"Boys will beat boys…"`,
+                            anchor: `Boys will beat boys`,
                             card: {
                                 description: [
                                     `Of course, it's more common to say that boys will "`,
@@ -604,6 +606,7 @@ export default {
                                 },
                             },
                         },
+                        `…"`,
                     ],
                 },
             ],
@@ -667,7 +670,7 @@ export default {
                     lyric: [
                         `Anyway, I'm feeling healed. Still,`,
                         {
-                            anchor: `hugging hurts…`,
+                            anchor: `hugging hurts`,
                             todo: true,
                             card: {
                                 description: `After downplaying my injuries to avoid the humiliation of getting beaten up, I suddenly play them up here to hide my emotional hurt, as I explain to Sasha why I winced when we hugged on that last day.`,
@@ -676,6 +679,7 @@ export default {
                                 },
                             },
                         },
+                        `…`,
                     ],
                 },
             ],

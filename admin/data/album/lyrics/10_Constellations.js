@@ -148,7 +148,7 @@ export default {
                             },
                         },
                         {
-                            anchor: `whispures a low sigh, bein'…`,
+                            anchor: `whispures a low sigh, bein'`,
                             card: {
                                 description: [
                                     `"Heaven's manna was pure psilocybin." During this time, I was intrigued by the role played by`,
@@ -174,6 +174,7 @@ export default {
                                 },
                             },
                         },
+                        `…`,
                     ],
                 },
                 {
@@ -224,7 +225,7 @@ export default {
                         },
                         `the`,
                         {
-                            anchor: `Viking den…`,
+                            anchor: `Viking den`,
                             properNoun: true,
                             cards: [
                                 {
@@ -266,6 +267,7 @@ export default {
                                 },
                             ],
                         },
+                        `…`,
                     ],
                 },
             ],
@@ -297,7 +299,7 @@ export default {
                     mixTime: `0:20:18.75`,
                     lyric: [
                         {
-                            anchor: `Walkyriens:`,
+                            anchor: `Walkyriens`,
                             properNoun: true,
                             cards: [
                                 {
@@ -334,7 +336,7 @@ export default {
                                 },
                             ],
                         },
-                        `to`,
+                        `: to`,
                         {
                             // NOTE: I changed from 'Walhall.'
                             anchor: `Wal-hall o'`,
@@ -809,7 +811,7 @@ export default {
                         },
                         `of`,
                         {
-                            anchor: `avatars…`,
+                            anchor: `avatars`,
                             card: {
                                 description: [
                                     `In Hinduism, an`,
@@ -821,6 +823,7 @@ export default {
                                 ],
                             },
                         },
+                        `…`,
                     ],
                 },
             ],
@@ -872,7 +875,7 @@ export default {
                         },
                         `,`,
                         {
-                            anchor: `questurns Indo Hairapins:`,
+                            anchor: `questurns Indo Hairapins`,
                             card: {
                                 description: [
                                     `Our "quest turns into hairpins" as we wind our way down labyrinthine passageways. All the while, I blather on about "questions" surrounding the`,
@@ -893,6 +896,7 @@ export default {
                                 },
                             },
                         },
+                        `:`,
                     ],
                 },
                 {
@@ -1027,7 +1031,7 @@ export default {
                             },
                         },
                         {
-                            anchor: `unsolft quarry rest…`,
+                            anchor: `unsolft quarry rest`,
                             card: {
                                 description: `"Our young invaders" arrive at a clearing where dirt from the ground has been shaped into makeshift benches. Pausing for a breather, on this "soft quarry" we rest.`,
                                 dotKeys: {
@@ -1036,6 +1040,7 @@ export default {
                                 },
                             },
                         },
+                        `…`,
                     ],
                 },
             ],
@@ -1146,7 +1151,7 @@ export default {
                             },
                         },
                         {
-                            anchor: `the dusc-horse yet…`,
+                            anchor: `the dusc-horse yet`,
                             // Last sentence is particularly weird.
                             todo: true,
                             card: {
@@ -1172,7 +1177,7 @@ export default {
                                 },
                             },
                         },
-                        `?`,
+                        `…?`,
                     ],
                 },
                 {
@@ -1256,7 +1261,7 @@ export default {
                             },
                         },
                         {
-                            anchor: `Siburial plains…`,
+                            anchor: `Siburial plains`,
                             properNoun: true,
                             card: {
                                 description: [
@@ -1277,6 +1282,7 @@ export default {
                                 },
                             },
                         },
+                        `…`,
                     ],
                 },
                 {
@@ -1630,7 +1636,7 @@ export default {
                             },
                         },
                         {
-                            anchor: `toughtim rite…`,
+                            anchor: `toughtim rite`,
                             todo: true,
                             card: {
                                 description: `Having now achieved a full out-of-body experience, I gaze down upon my drugged-out self. Set against the familiar backdrop of Los Angeles, this degrading sight reminds me that in having scuttled off to the Bay Area, I'm shirking my obligation to care for my autistic brother. My sister, on the other hand, still lives nearby. Guilt-ridden, I sarcastically note that "brother and sister taught him right."`,
@@ -1640,6 +1646,7 @@ export default {
                                 },
                             },
                         },
+                        `…`,
                     ],
                 },
             ],
@@ -1859,7 +1866,7 @@ export default {
                         },
                         `skims through`,
                         {
-                            anchor: `channels snow blitz'd…`,
+                            anchor: `channels snow blitz'd`,
                             card: {
                                 description: `Being an "insomniac," I skim through channels that are "snow-blitzed" due to the television's poor reception.`,
                                 dotKeys: {
@@ -1868,6 +1875,7 @@ export default {
                                 },
                             },
                         },
+                        `…`,
                     ],
                 },
             ],
@@ -2050,7 +2058,7 @@ export default {
                             ],
                         },
                         {
-                            anchor: `Sensed ahead…`,
+                            anchor: `Sensed ahead`,
                             properNoun: true,
                             cards: [
                                 {
@@ -2073,6 +2081,7 @@ export default {
                                 },
                             ],
                         },
+                        `…`,
                         {
                             anchor: `"Rejoyce!" bellow the`,
                             cards: [
