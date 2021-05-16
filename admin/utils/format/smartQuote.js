@@ -94,16 +94,15 @@ const _recurseForSmartQuoteFormat = textEntity => {
         const newEntity = {}
 
         for (const key in textEntity) {
-            if (key === 'anchor') {
-                if (isString(textEntity.anchor) && !textEntity.anchor[0].match(/[A-Za-z0-9]/g)) {
-                    console.error(textEntity.anchor)
-                }
-
-                const lastIndex = textEntity.anchor.length - 1
-                if (isString(textEntity.anchor) && !textEntity.anchor[lastIndex].match(/[A-Za-z0-9]/g)) {
-                    console.error(textEntity.anchor)
-                }
-            }
+            // See which anchors still have double quotes.
+            // if (key === 'anchor') {
+            //     if (
+            //         isString(textEntity.anchor) &&
+            //         textEntity.anchor.includes('"')
+            //     ) {
+            //         console.error(textEntity.anchor)
+            //     }
+            // }
 
             newEntity[key] = _getIsLocationPath(key) ?
                 textEntity[key] :

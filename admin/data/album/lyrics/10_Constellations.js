@@ -886,12 +886,12 @@ export default {
                             anchor: `questurns Indo Hairapins`,
                             card: {
                                 description: [
-                                    `Our "quest turns into hairpins" as we wind our way down labyrinthine passageways. All the while, I blather on about "questions" surrounding the`,
+                                    `Our "quest turns into hairpins" as we wind our way down labyrinthine passageways. All the while, I blather on about "questions" surrounding the "`,
                                     {
-                                        anchor: `"Indo-Harappan" Civilization`,
+                                        anchor: `Indo-Harappan`,
                                         wiki: `Indus_Valley_Civilisation`,
                                     },
-                                    `that may be answered by studying the evolution of the "`,
+                                    `" civilization that may be answered by studying the evolution of the "`,
                                     {
                                         anchor: `Indo-European`,
                                         wiki: `Indo-European_languages`,
@@ -1210,12 +1210,12 @@ export default {
                                             anchor: `Angkor Wat`,
                                             wiki: `Angkor_Wat`,
                                         },
-                                        `," or "Temple City," is a 12th-century Hindu temple built by the`,
+                                        `," or "Temple City," is a 12th-century Hindu temple built by the "`,
                                         {
-                                            anchor: `"Khmer" Empire`,
-                                            wiki: `Khmer_Empire`,
+                                            anchor: `Khmer`,
+                                            wiki: `Khmer_people`,
                                         },
-                                        `in what is now present-day`,
+                                        `" nation of what is now present-day`,
                                         {
                                             anchor: `Cambodia`,
                                             wiki: `Cambodia`,

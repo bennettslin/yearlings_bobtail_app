@@ -262,9 +262,9 @@ export default {
                             anchor: `sold your whole fortune`,
                             card: {
                                 description: [
-                                    `My parents lament that my opportunism has made me a future`,
+                                    `My parents lament that my opportunism has made me a future "soldier of" fortune, or`,
                                     {
-                                        anchor: `"soldier of" fortune`,
+                                        anchor: `mercenary`,
                                         wiki: `Mercenary`,
                                     },
                                     `, as I squander everything good I have with Sita to chase unsavory and foolhardy pursuits.`,
