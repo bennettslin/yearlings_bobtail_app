@@ -1,4 +1,3 @@
-import { hasSpecialCharacterAtIndex } from '../../../app/helpers/format'
 import { isString } from '../../../app/helpers/general'
 
 const QUOTES_CONFIGS = [
