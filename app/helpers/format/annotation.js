@@ -2,20 +2,10 @@ import { hasSpecialCharacterAtIndex } from '.'
 import { LYRIC_TEXT_KEYS } from '../../constants/lyrics'
 
 const _getStringText = textEntity => {
-
     if (Array.isArray(textEntity)) {
-        /**
-         * This adds a whitespace unless the following text begins with "'s."
-         * Check "Bobtail's words" in M and "surrendered for Bobtail's sake" in
-         * Uncanny Valley.
-         */
-        return textEntity.reduce((textString, textObject) => {
-            const
-                objectString = _getStringText(textObject),
-                whiteSpace = objectString.indexOf(`’s`) === 0 ? '' : ' '
-
-            return textString + whiteSpace + objectString
-        }, '')
+        return textEntity.reduce((textString, textObject) => (
+            textString + _getStringText(textObject)
+        ), '')
 
     } else if (typeof textEntity === 'object') {
         return LYRIC_TEXT_KEYS.reduce((prevString, textKey) => {
@@ -112,7 +102,6 @@ export const getFormattedAnnotationTitle = ({
 
 }) => {
     let title = _getStringText(anchor)
-
     title = _getDeletedEndSpecialCharactersText(title)
     title = _getDeletedWrappingCharactersText(title)
     title = _getUncapitalisedText(title, properNoun)
