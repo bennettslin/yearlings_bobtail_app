@@ -151,7 +151,7 @@ export default {
                     mixTime: `0:19:07.84`,
                     lyric: [
                         {
-                            anchor: `You'd love Taiwan,`,
+                            anchor: `You'd love Taiwan`,
                             todo: true,
                             card: {
                                 description: `During a tour of the Taiwanese countryside with our cousins, I mentally noted all the things I could show to Sasha one day. As a child, the only time I cared much for my heritage was when I thought there was something to gain by sharing it with someone else.`,
@@ -161,7 +161,7 @@ export default {
                                 },
                             },
                         },
-                        `surrounded by walls of mountains,`,
+                        `, surrounded by walls of mountains,`,
                     ],
                 },
                 {
@@ -205,7 +205,7 @@ export default {
                     lyric: [
                         `I should`,
                         {
-                            anchor: `keep your kid name,`,
+                            anchor: `keep your kid name`,
                             card: {
                                 description: `Sasha decided that in Boston she would go by her given name of Saskia. I asked if I should start calling her Saskia now as well. She said no, since it would be nice to be reminded of which friends knew her first.`,
                                 dotKeys: {
@@ -213,7 +213,7 @@ export default {
                                 },
                             },
                         },
-                        `with everything it meant.`,
+                        `, with everything it meant.`,
                     ],
                 },
                 {
@@ -221,7 +221,7 @@ export default {
                     lyric: [
                         `But then in`,
                         {
-                            anchor: `your embrace,`,
+                            anchor: `your embrace`,
                             card: {
                                 description: `But it's no comfort to be cherished as an old friend by someone so visibly eager to dive into the new. As we hugged on the last day of school, Sasha was just about ready to slough off her old skin and scamper away.`,
                                 dotKeys: {
@@ -230,7 +230,7 @@ export default {
                                 },
                             },
                         },
-                        `I felt you`,
+                        `, I felt you`,
                         {
                             anchor: `prepped to shed…`,
                             card: {
@@ -289,7 +289,7 @@ export default {
                     mixTime: `0:54:27.01`,
                     lyric: [
                         {
-                            anchor: `your pupil's pupal fly,`,
+                            anchor: `your pupil's pupal fly`,
                             todo: true,
                             card: {
                                 description: [
@@ -306,7 +306,7 @@ export default {
                                 },
                             },
                         },
-                        `a`,
+                        `, a`,
                         {
                             anchor: `pet petrified—`,
                             card: {
@@ -551,7 +551,7 @@ export default {
                     lyric: [
                         `Oh but Sasha, if`,
                         {
-                            anchor: `anarchy reigns,`,
+                            anchor: `anarchy reigns`,
                             card: {
                                 description: `It was weird to be taught in history class that anarchy devolves into tyranny, and then to wander onto the quad and witness this very phenomenon in action.`,
                                 dotKeys: {
@@ -560,6 +560,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -567,7 +568,7 @@ export default {
                     lyric: [
                         `then no one lives when`,
                         {
-                            anchor: `narcing to the aides,`,
+                            anchor: `narcing to the aides`,
                             card: {
                                 description: [
                                     `To narc is to snitch, as an`,
@@ -579,6 +580,7 @@ export default {
                                 ],
                             },
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -620,7 +622,7 @@ export default {
                     lyric: [
                         `But though my`,
                         {
-                            anchor: `jaw was stuck,`,
+                            anchor: `jaw was stuck`,
                             card: {
                                 description: `Here, I refer to another incident where a bully snuck up from behind and put me in a chokehold as I waited for the school bus.`,
                                 dotKeys: {
@@ -628,9 +630,9 @@ export default {
                                 },
                             },
                         },
-                        `so now I`,
+                        `, so now I`,
                         {
-                            anchor: `talk Canuck,`,
+                            anchor: `talk Canuck`,
                             card: {
                                 description: [
                                     `The chokehold incident left me with a dislocated jaw. For a long time afterward, I had to keep my jaw clenched to avoid pain when speaking. This led to my odd manner of pronunciation that to this day often gets mistaken for a`,
@@ -653,6 +655,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
                 {

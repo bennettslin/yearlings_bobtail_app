@@ -220,7 +220,7 @@ export default {
                     lyric: [
                         `Swill pop poured from`,
                         {
-                            anchor: `wayside bottle,`,
+                            anchor: `wayside bottle`,
                             card: {
                                 description: `Willy begins his daily rounds by filling his shopping cart with discarded bottles and cans found littered along the sidewalks.`,
                                 dotKeys: {
@@ -228,6 +228,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -443,7 +444,7 @@ export default {
                     lyric: [
                         `Oh ma'am, I`,
                         {
-                            anchor: `see your kid with whiskers,`,
+                            anchor: `see your kid with whiskers`,
                             card: {
                                 description: [
                                     `Noting my brother's distaste for haircuts, Willy jokingly predicts that my brother will sport an unshaven look as an adult. But in many legends, the changeling is a full-grown troll who is perhaps centuries old. So Willy's phrasing invites the possibility that my brother, being a changeling, in fact`,
@@ -459,6 +460,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -466,7 +468,7 @@ export default {
                     lyric: [
                         `he croaks, stroking`,
                         {
-                            anchor: `creepers on his cheek,`,
+                            anchor: `creepers on his cheek`,
                             card: {
                                 description: `Of course, it should be no surprise if Willy is immune to the enchantment that disguises my brother's true form. After all, Willy may be a changeling himself, as evinced by his own unkempt facial hair.`,
                                 dotKeys: {
@@ -475,6 +477,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -544,7 +547,7 @@ export default {
                     lyric: [
                         `Prying`,
                         {
-                            anchor: `X-ray spec'd,`,
+                            anchor: `X-ray spec'd`,
                             properNoun: true,
                             card: {
                                 description: [
@@ -560,9 +563,9 @@ export default {
                                 },
                             },
                         },
-                        `enraged at`,
+                        `, enraged at`,
                         {
-                            anchor: `pages clawed,`,
+                            anchor: `pages clawed`,
                             cards: [
                                 {
                                     description: `My brother enjoyed cutting shapes of alphabet letters out of scrap paper. Since this was a creative activity that kept him occupied, my parents encouraged it and kept a pile of old magazines freshly stocked for him.`,
@@ -578,6 +581,7 @@ export default {
                                 },
                             ],
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -737,7 +741,7 @@ export default {
                             ],
                         },
                         {
-                            anchor: `with switch,`,
+                            anchor: `with switch`,
                             card: {
                                 description: [
                                     `A`,
@@ -749,7 +753,7 @@ export default {
                                 ],
                             },
                         },
-                        `whispers wind, to fix his switcheroo…`,
+                        `, whispers wind, to fix his switcheroo…`,
                     ],
                 },
             ],
@@ -996,7 +1000,7 @@ export default {
                     lyric: [
                         `But`,
                         {
-                            anchor: `how marbleless,`,
+                            anchor: `how marbleless`,
                             card: {
                                 description: `Occasionally, someone would make a clumsy attempt to ease my parents' worries by claiming to envy my brother. This person might remark on how "marvelous" it must be to live without one's "marbles," for example. I always had to wonder how gladly they would embrace the greater likelihood of being a victim of violent crime as well.`,
                                 dotKeys: {
@@ -1005,7 +1009,7 @@ export default {
                                 },
                             },
                         },
-                        `some reckoned,`,
+                        `, some reckoned,`,
                     ],
                 },
                 {
@@ -1055,7 +1059,7 @@ export default {
                     lyric: [
                         `Are you sick?`,
                         {
-                            anchor: `I am seven,`,
+                            anchor: `I am seven`,
                             card: {
                                 description: `My brother learned to answer the question of how old he is when he was six. But even after turning seven, he still insisted on answering "six." Though we finally got him to accept that "seven" was the new correct answer, the cost in sweat and tears was so high that when he turned eight, none of us had the energy to relive the ordeal. He's been answering "seven" ever since. And so here, I imagine him as a grownup testily correcting a stranger who has the nerve to ask if he's "six."`,
                                 dotKeys: {
@@ -1065,7 +1069,7 @@ export default {
                                 },
                             },
                         },
-                        `he'd reply…`,
+                        `, he'd reply…`,
                     ],
                 },
                 {
@@ -1092,7 +1096,7 @@ export default {
                     lyric: [
                         `Such`,
                         {
-                            anchor: `heavy fears,`,
+                            anchor: `heavy fears`,
                             card: {
                                 description: `One night soon after Willy's murder, I woke up screaming in fear of my mortality. My mother sat by my bedside to comfort me.`,
                                 dotKeys: {
@@ -1100,7 +1104,7 @@ export default {
                                 },
                             },
                         },
-                        `Mummy laughs,`,
+                        `, Mummy laughs,`,
                     ],
                 },
                 {
@@ -1168,7 +1172,7 @@ export default {
                     lyric: [
                         `In time, with`,
                         {
-                            anchor: `needle done,`,
+                            anchor: `needle done`,
                             cards: [
                                 {
                                     description: `My mother tells me that my life is a patchwork onto which I'll continue to sew new experiences. In turn, the insights gained from these experiences may inform and enrich my art.`,
@@ -1181,7 +1185,7 @@ export default {
                                 },
                             ],
                         },
-                        `you'll write this`,
+                        `, you'll write this`,
                         {
                             anchor: `book of yours`,
                             card: {

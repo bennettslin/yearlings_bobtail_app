@@ -79,7 +79,7 @@ export default {
                     lyricLeft: `Lights off, from your`,
                     lyricRight: [
                         {
-                            anchor: `By lot,`,
+                            anchor: `By lot`,
                             cards: [
                                 {
                                     description: `Lots are drawn by chance to decide an outcome, and it was my lot not to be born a Jew.`,
@@ -116,7 +116,7 @@ export default {
                                 },
                             ],
                         },
-                        `once more`,
+                        `, once more`,
                     ],
                 },
                 {
@@ -282,7 +282,7 @@ export default {
                     lyricLeft: [
                         `The`,
                         {
-                            anchor: `house settled in sheets,`,
+                            anchor: `house settled in sheets`,
                             card: {
                                 description: `Everyone else in the house is asleep, snug under their blankets. Of course, sheets are also used to cover the deceased.`,
                                 dotKeys: {
@@ -291,6 +291,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                     lyricRight: `But how dreadful indeed,`,
                 },
@@ -329,7 +330,7 @@ export default {
                     lyricLeft: [
                         `By the`,
                         {
-                            anchor: `alabaster balustrade,`,
+                            anchor: `alabaster balustrade`,
                             card: {
                                 description: [
                                     `Taiwanese buildings at the time made heavy use of iron bars and stone slabs, as far as my impression goes. Even ordinary living quarters had the feel of a mausoleum adorned with`,
@@ -344,6 +345,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                     lyricRight: [
                         `Like a`,
@@ -429,7 +431,7 @@ export default {
                     lyricLeft: [
                         `Then down`,
                         {
-                            anchor: `stygian stairs,`,
+                            anchor: `stygian stairs`,
                             card: {
                                 description: [
                                     `In Greek mythology, the river`,
@@ -444,6 +446,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                     lyricRight: `And how stingy and scarce`,
                 },
@@ -963,7 +966,7 @@ export default {
                     lyricLeft: [
                         `like Odin's ashes back from`,
                         {
-                            anchor: `the Society,`,
+                            anchor: `the Society`,
                             card: {
                                 description: [
                                     `Odin's remains were taken to the`,
@@ -983,6 +986,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                     lyricRight: [
                         `by`,
@@ -1075,7 +1079,7 @@ export default {
                     lyricRight: [
                         `Your`,
                         {
-                            anchor: `seizures of spleen,`,
+                            anchor: `seizures of spleen`,
                             todo: true,
                             card: {
                                 description: [
@@ -1091,6 +1095,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -1177,7 +1182,7 @@ export default {
                     lyricRight: [
                         `as not for wrapping by a`,
                         {
-                            anchor: `cellophane sylph,`,
+                            anchor: `cellophane sylph`,
                             cards: [
                                 {
                                     description: `Like cellophane, Sasha's intentions were transparent. I could always count on her to sympathize during my bouts of frustration.`,
@@ -1197,6 +1202,7 @@ export default {
                                 },
                             ],
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -1535,7 +1541,7 @@ export default {
                     lyricLeft: [
                         `But for a`,
                         {
-                            anchor: `fetus force-fed,`,
+                            anchor: `fetus force-fed`,
                             todo: true,
                             cards: [
                                 {
@@ -1552,12 +1558,12 @@ export default {
                                 },
                             ],
                         },
-                        `born preaborted,`,
+                        `, born preaborted,`,
                     ],
                     lyricRight: [
                         `Yet your`,
                         {
-                            anchor: `defeat of tortoise,`,
+                            anchor: `defeat of tortoise`,
                             card: {
                                 description: [
                                     `The`,
@@ -1577,7 +1583,7 @@ export default {
                                 },
                             },
                         },
-                        `forced lead unthwarted,`,
+                        `, forced lead unthwarted,`,
                     ],
                 },
                 {
@@ -1611,7 +1617,7 @@ export default {
                     lyricLeft: [
                         `Though no`,
                         {
-                            anchor: `slave parts these seas,`,
+                            anchor: `slave parts these seas`,
                             card: {
                                 description: [
                                     `The`,
@@ -1633,6 +1639,7 @@ export default {
                                 ],
                             },
                         },
+                        `,`,
                     ],
                     lyricRight: [
                         `Though, no`,
@@ -1675,7 +1682,7 @@ export default {
                     lyricLeft: [
                         `The sudsy ocean shapes its`,
                         {
-                            anchor: `padded bed,`,
+                            anchor: `padded bed`,
                             card: {
                                 description: `As I make peace with the inevitable, the ocean begins to feel calm and inviting. But my dream is also ending, and I expect to wake soon in the comfort of my bed.`,
                                 dotKeys: {
@@ -1683,6 +1690,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                     lyricRight: `But suddenly Odin's day is at its end;`,
                 },

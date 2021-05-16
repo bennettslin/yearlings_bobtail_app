@@ -159,7 +159,7 @@ export default {
                     lyric: [
                         `and their`,
                         {
-                            anchor: `molls perched on pedestals,`,
+                            anchor: `molls perched on pedestals`,
                             card: {
                                 description: [
                                     {
@@ -173,6 +173,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -279,7 +280,7 @@ export default {
                         },
                         `to`,
                         {
-                            anchor: `fetch her lancet pen,`,
+                            anchor: `fetch her lancet pen`,
                             card: {
                                 description: [
                                     `As a`,
@@ -299,6 +300,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -452,7 +454,7 @@ export default {
                     lyric: [
                         `Her`,
                         {
-                            anchor: `show played in mimes,`,
+                            anchor: `show played in mimes`,
                             card: {
                                 description: `The world of dating was awash in silent cues that, as far as I knew, no one could be expected to understand or deduce. I desperately wanted everything to be spelled out, and it baffled me that I was alone in feeling this way.`,
                                 dotKeys: {
@@ -461,7 +463,7 @@ export default {
                                 },
                             },
                         },
-                        `but you pleaded to hear.`,
+                        `, but you pleaded to hear.`,
                     ],
                 },
                 {
@@ -561,7 +563,7 @@ export default {
                     lyricLeft: [
                         `But`,
                         {
-                            anchor: `no convert's missed,`,
+                            anchor: `no convert's missed`,
                             todo: true,
                             card: {
                                 description: `In asking for the largest payments upfront, RI Research correctly guessed that I would grow disillusioned sooner rather than later. Sita's abrupt departure from my life, after having made such a profound impact, seemed like evidence that I was once again a sucker for the perfect scam.`,
@@ -570,7 +572,7 @@ export default {
                                 },
                             },
                         },
-                        `once assured his tithe.`,
+                        `, once assured his tithe.`,
                     ],
                     lyricRight: [
                         `and so off her list,`,
@@ -736,7 +738,7 @@ export default {
                     lyric: [
                         `Your gate code punched, when a`,
                         {
-                            anchor: `looming shadow nears,`,
+                            anchor: `looming shadow nears`,
                             cards: [
                                 {
                                     description: `There was a common path to the campus between my apartment and Sita's boarding house.`,
@@ -752,6 +754,7 @@ export default {
                                 },
                             ],
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -759,12 +762,12 @@ export default {
                     lyric: [
                         `as your`,
                         {
-                            anchor: `heartbeats,`,
+                            anchor: `heartbeats`,
                             card: {
                                 wormhole: `harpies`,
                             },
                         },
-                        `her steps, race to first.`,
+                        `, her steps, race to first.`,
                     ],
                 },
                 {
@@ -852,7 +855,7 @@ export default {
                     lyric: [
                         `In her`,
                         {
-                            anchor: `gingerbread prison,`,
+                            anchor: `gingerbread prison`,
                             card: {
                                 description: `But while being stuck in a platonic friendship with Sita will never fulfill me, it might still be sweet to nibble on.`,
                                 dotKeys: {
@@ -861,7 +864,7 @@ export default {
                                 },
                             },
                         },
-                        `here now you submit.`,
+                        `, here now you submit.`,
                     ],
                 },
                 {
@@ -1060,7 +1063,7 @@ export default {
                     lyric: [
                         `and the`,
                         {
-                            anchor: `organ on which it struck,`,
+                            anchor: `organ on which it struck`,
                             cards: [
                                 {
                                     description: `As the minutes tick away, I worry that Sita's diagnosis might be as severe as organ failure.`,
@@ -1076,6 +1079,7 @@ export default {
                                 },
                             ],
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -1139,7 +1143,7 @@ export default {
                     lyric: [
                         `In her`,
                         {
-                            anchor: `white gown,`,
+                            anchor: `white gown`,
                             card: {
                                 description: `White gowns are common attire in both wedding ceremonies and hospitals.`,
                                 dotKeys: {
@@ -1147,7 +1151,7 @@ export default {
                                 },
                             },
                         },
-                        `crept up she beams;`,
+                        `, crept up she beams;`,
                     ],
                 },
                 {

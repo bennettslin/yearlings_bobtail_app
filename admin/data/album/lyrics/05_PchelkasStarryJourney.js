@@ -176,7 +176,7 @@ export default {
                     lyric: [
                         `"Why'd you`,
                         {
-                            anchor: `hit your baby brother,`,
+                            anchor: `hit your baby brother`,
                             card: {
                                 description: `The times when I physically hurt my brother were actually rare. They just cast a long shadow in my memory. Since he could never understand or acknowledge my remorse, I could never truly feel forgiven.`,
                                 dotKeys: {
@@ -184,6 +184,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -310,7 +311,7 @@ export default {
                     lyric: [
                         `Oh brother, when all you`,
                         {
-                            anchor: `know is bleat,`,
+                            anchor: `know is bleat`,
                             cards: [
                                 {
                                     description: `Unfortunately, shrill protests against being bullied are about as effective as the bleating of a calf being led to slaughter.`,
@@ -323,6 +324,7 @@ export default {
                                 },
                             ],
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -374,7 +376,7 @@ export default {
                     mixTime: `0:47:27.64`,
                     lyric: [
                         {
-                            anchor: `Feigning sick,`,
+                            anchor: `Feigning sick`,
                             card: {
                                 description: `In earlier years, I was proud of my perfect attendance record. After the bullying began, I would skip school by faking illness. My mother noticed the change, but she trusted me enough not to press the issue.`,
                                 dotKeys: {
@@ -382,7 +384,7 @@ export default {
                                 },
                             },
                         },
-                        `I chanced to read`,
+                        `, I chanced to read`,
                     ],
                 },
                 {
@@ -513,7 +515,7 @@ export default {
                     lyric: [
                         `But`,
                         {
-                            anchor: `waiting for Goddard,`,
+                            anchor: `waiting for Goddard`,
                             cards: [
                                 {
                                     description: [
@@ -560,14 +562,14 @@ export default {
                                 },
                             ],
                         },
-                        `our two impatient paupers,`,
+                        `, our two impatient paupers,`,
                     ],
                 },
                 {
                     mixTime: `1:21:16.85`,
                     lyric: [
                         {
-                            anchor: `Gogo and his Didi,`,
+                            anchor: `Gogo and his Didi`,
                             properNoun: true,
                             cards: [
                                 {
@@ -610,7 +612,7 @@ export default {
                                 },
                             ],
                         },
-                        `sauntered off…`,
+                        `, sauntered off…`,
                     ],
                 },
                 {
@@ -1016,7 +1018,7 @@ export default {
                     lyric: [
                         `But`,
                         {
-                            anchor: `every hero has a heel,`,
+                            anchor: `every hero has a heel`,
                             card: {
                                 description: [
                                     `The Greek hero`,
@@ -1031,7 +1033,7 @@ export default {
                                 },
                             },
                         },
-                        `we'd realize, blind before the squad.`,
+                        `, we'd realize, blind before the squad.`,
                     ],
                 },
                 {
@@ -1086,7 +1088,7 @@ export default {
                     mixTime: `2:46:24.45`,
                     lyric: [
                         {
-                            anchor: `Mushing onward,`,
+                            anchor: `Mushing onward`,
                             cards: [
                                 {
                                     description: [
@@ -1131,6 +1133,7 @@ export default {
                                 },
                             ],
                         },
+                        `,`,
                         {
                             anchor: `Mushka's`,
                             properNoun: true,
@@ -1203,7 +1206,7 @@ export default {
                     lyric: [
                         `Choked, he's soon a goner,`,
                         {
-                            anchor: `no one heard his hollers,`,
+                            anchor: `no one heard his hollers`,
                             card: {
                                 description: `I always wondered if my brother was screaming on the inside, as I certainly was during this time.`,
                                 dotKeys: {
@@ -1211,6 +1214,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -1246,7 +1250,7 @@ export default {
                     lyric: [
                         `Next cabins come equipped with`,
                         {
-                            anchor: `pentobarbitone syringe,`,
+                            anchor: `pentobarbitone syringe`,
                             card: {
                                 description: [
                                     `A`,
@@ -1263,6 +1267,7 @@ export default {
                                 ],
                             },
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -1281,7 +1286,7 @@ export default {
                     lyric: [
                         `I'm`,
                         {
-                            anchor: `sorry I bailed,`,
+                            anchor: `sorry I bailed`,
                             card: {
                                 description: `By wanting to rejoin the company of others, I felt like I was betraying my brother somehow. Unlike me, he wasn't a tourist in the land of autism. He wasn't free to come and go as he pleased.`,
                                 dotKeys: {
@@ -1290,8 +1295,9 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                         {
-                            anchor: `Xiao Xiang,`,
+                            anchor: `Xiao Xiang`,
                             properNoun: true,
                             card: {
                                 description: `Mushka means "little fly" in Russian, and by coincidence, my brother's Chinese name, Xiao Xiang, literally means "little fly." (Though in his case, the second word is a verb, not a noun.) Incidentally, Pchelka means "little bee," which maybe also makes sense, given that my name starts with the letter B?`,
@@ -1301,7 +1307,7 @@ export default {
                                 },
                             },
                         },
-                        `mush on…`,
+                        `, mush on…`,
                     ],
                 },
                 {
@@ -1360,7 +1366,7 @@ export default {
                     lyric: [
                         `"Kids say you're`,
                         {
-                            anchor: `hopped on drugs,`,
+                            anchor: `hopped on drugs`,
                             card: {
                                 description: `Eventually a classmate suspected me of taking drugs, and I was sent to the principal's office. When my mother came to pick me up, she chewed out the principal for suspecting I could do such a thing. Since I was more responsive around authority figures, he agreed that the accusation didn't make sense and dropped it.`,
                                 dotKeys: {
@@ -1368,7 +1374,7 @@ export default {
                                 },
                             },
                         },
-                        `son, with Mum we'll need a word."`,
+                        `, son, with Mum we'll need a word."`,
                     ],
                 },
                 {
@@ -1376,7 +1382,7 @@ export default {
                     lyric: [
                         `Mushka,`,
                         {
-                            anchor: `per their bargain,`,
+                            anchor: `per their bargain`,
                             card: {
                                 description: `Though I faked autism for only a year or so, the social repercussions lasted much longer, since I was now and forever the kid who once did that really weird thing. It's not that I lacked the will to repair my standing. But I was as baffled as anyone else about the psychological forces that prompted such behavior in the first place, and there were no guide books to instruct me where to go from there.`,
                                 dotKeys: {
@@ -1385,7 +1391,7 @@ export default {
                                 },
                             },
                         },
-                        `I`,
+                        `, I`,
                         {
                             anchor: `can't ever return`,
                             card: {

@@ -133,7 +133,7 @@ export default {
                     lyric: [
                         `Bit my`,
                         {
-                            anchor: `sadness with patience,`,
+                            anchor: `sadness with patience`,
                             card: {
                                 description: `I'd spent my formative years as a child channeling my misery into various art projects, so this was all familiar terrain for me. Building yourself up into a desirable person, after all, is really just the ultimate art project.`,
                                 dotKeys: {
@@ -141,6 +141,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -254,7 +255,7 @@ export default {
                     mixTime: `1:11:27.43`,
                     lyric: [
                         {
-                            anchor: `Once I metamorphose,`,
+                            anchor: `Once I metamorphose`,
                             card: {
                                 description: `Upon completion of my metamorphosis, once I "met a Mara, for" certain I was to impress her.`,
                                 dotKeys: {
@@ -262,7 +263,7 @@ export default {
                                 },
                             },
                         },
-                        `certain I'd impress.`,
+                        `, certain I'd impress.`,
                     ],
                 },
             ],
@@ -285,7 +286,7 @@ export default {
                     mixTime: `1:17:04.35`,
                     lyric: [
                         {
-                            anchor: `Year five,`,
+                            anchor: `Year five`,
                             card: {
                                 description: [
                                     `The Soviet Union's`,
@@ -300,7 +301,7 @@ export default {
                                 },
                             },
                         },
-                        `and now the one who dug me up`,
+                        `, and now the one who dug me up`,
                     ],
                 },
                 {
@@ -308,7 +309,7 @@ export default {
                     lyric: [
                         `spent her`,
                         {
-                            anchor: `wishes on a friend,`,
+                            anchor: `wishes on a friend`,
                             card: {
                                 description: [
                                     `Toward the end of my five-year plan, the Yearlings were regularly playing local shows. I was thrilled when I first spotted Mara in the audience, thinking my hard work putting this band together was about to pay off. But it was Jacob who caught her eye. I felt like the`,
@@ -324,6 +325,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -384,7 +386,7 @@ export default {
                     lyric: [
                         `Hopes wrapped in`,
                         {
-                            anchor: `marinaded confections,`,
+                            anchor: `marinaded confections`,
                             card: {
                                 description: `Or they were wrapped in my "Mara-needed confessions."`,
                                 dotKeys: {
@@ -392,7 +394,7 @@ export default {
                                 },
                             },
                         },
-                        `but`,
+                        `, but`,
                     ],
                 },
                 {
@@ -458,7 +460,7 @@ export default {
                     mixTime: `1:36:06.66`,
                     lyric: [
                         {
-                            anchor: `Morphined,`,
+                            anchor: `Morphined`,
                             card: {
                                 description: `Or I'd be a "Mara fiend," a slightly different kind of addict.`,
                                 dotKeys: {
@@ -466,9 +468,9 @@ export default {
                                 },
                             },
                         },
-                        `I'll probably`,
+                        `, I'll probably`,
                         {
-                            anchor: `die pushing forty,`,
+                            anchor: `die pushing forty`,
                             card: {
                                 description: `Like the Soviets, I needed to take in stride the failures of my first five-year plan. Having banked on rapid character growth, I couldn't cut my losses now. I had nothing to my name other than what the next five-year plan might gain for me. Or failing that, the next one after. Yet five years is a huge chunk of lifetime to mete out all at once, and I only had so many decades remaining. The occasion became ripe to reflect on my mortality.`,
                                 dotKeys: {
@@ -476,7 +478,7 @@ export default {
                                 },
                             },
                         },
-                        `exiled`,
+                        `, exiled`,
                     ],
                 },
                 {
@@ -539,7 +541,7 @@ export default {
                     lyric: [
                         `Panoramic prints pending my soon-to-be`,
                         {
-                            anchor: `Moonie wedding,`,
+                            anchor: `Moonie wedding`,
                             properNoun: true,
                             todo: true,
                             card: {
@@ -571,6 +573,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -754,7 +757,7 @@ export default {
                     lyric: [
                         `Her lispy kiss unlucky for this`,
                         {
-                            anchor: `chimney sweep,`,
+                            anchor: `chimney sweep`,
                             cards: [
                                 {
                                     description: [
@@ -779,6 +782,7 @@ export default {
                                 },
                             ],
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -822,7 +826,7 @@ export default {
                         },
                         `," I bade them`,
                         {
-                            anchor: `to fare well,`,
+                            anchor: `to fare well`,
                             card: {
                                 description: `Jacob was my friend, and I was happy for him that he'd found Mara. But I also wasn't eager to stick around. So as I imagined them exchanging vows of "I do," I silently offered a vow of my own to bid them "two farewell."`,
                                 dotKeys: {
@@ -831,6 +835,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -849,7 +854,7 @@ export default {
                     lyric: [
                         `But then I saw the`,
                         {
-                            anchor: `world's a naked baby,`,
+                            anchor: `world's a naked baby`,
                             todo: true,
                             card: {
                                 description: `At some point, I realized that the social world is just one more part of the world at large. And so it too behaves as it does because of the sum total of what it is. Nothing is hidden from view, and every situation can be understood by reading it closely, no less than world events can be learned about by studying history textbooks.`,
@@ -858,6 +863,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
                 {

@@ -120,7 +120,7 @@ export default {
                         },
                         `in my`,
                         {
-                            anchor: `bookless room,`,
+                            anchor: `bookless room`,
                             card: {
                                 description: `When Catherine visited my apartment for the first time, she glanced around and remarked that she didn't see any books. "I don't read," I explained, only partly in jest.`,
                                 dotKeys: {
@@ -128,13 +128,14 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
                 {
                     mixTime: `0:10:14.39`,
                     lyric: [
                         {
-                            anchor: `Ulysses' tomb,`,
+                            anchor: `Ulysses' tomb`,
                             properNoun: true,
                             todo: true,
                             card: {
@@ -160,7 +161,7 @@ export default {
                                 },
                             },
                         },
-                        `surely buried she'd be!`,
+                        `, surely buried she'd be!`,
                     ],
                 },
             ],
@@ -197,7 +198,7 @@ export default {
                     lyric: [
                         `First we`,
                         {
-                            anchor: `laid Tourette's,`,
+                            anchor: `laid Tourette's`,
                             todo: true,
                             cards: [
                                 {
@@ -230,7 +231,7 @@ export default {
                                 },
                             ],
                         },
-                        `next regrets,`,
+                        `, next regrets,`,
                     ],
                 },
                 {
@@ -309,7 +310,7 @@ export default {
                     lyric: [
                         `I purge, with a`,
                         {
-                            anchor: `dirge she'd deride,`,
+                            anchor: `dirge she'd deride`,
                             cards: [
                                 {
                                     description: [
@@ -329,6 +330,7 @@ export default {
                                 },
                             ],
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -351,7 +353,7 @@ export default {
                     lyric: [
                         `Oh Catherine,`,
                         {
-                            anchor: `pressed for an opinion,`,
+                            anchor: `pressed for an opinion`,
                             cards: [
                                 {
                                     description: `I would sometimes ask Catherine for honest feedback on my lyrics, hoping that one day I could write a song to tug on her heartstrings.`,
@@ -367,7 +369,7 @@ export default {
                                 },
                             ],
                         },
-                        `sighed,`,
+                        `, sighed,`,
                     ],
                 },
                 {
@@ -384,7 +386,7 @@ export default {
                             },
                         },
                         {
-                            anchor: `putting down her Joyce,`,
+                            anchor: `putting down her Joyce`,
                             card: {
                                 description: [
                                     `Her compliment is less than sincere, however, since referencing a poet studied by middle schoolers is hardly an impressive feat. And so, having being made to put down the Joyce novel she was reading, Catherine amuses herself by figuratively putting`,
@@ -400,6 +402,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -511,7 +514,7 @@ export default {
                     lyric: [
                         `And as I pace, stranded here`,
                         {
-                            anchor: `outside her Shelta,`,
+                            anchor: `outside her Shelta`,
                             card: {
                                 description: [
                                     `The`,
@@ -542,6 +545,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -566,7 +570,7 @@ export default {
                             },
                         },
                         {
-                            anchor: `unknown to roam,`,
+                            anchor: `unknown to roam`,
                             cards: [
                                 {
                                     description: `If Catherine is a figurative Traveller, then I am unwelcome to follow her itinerant community that is well-known to roam.`,
@@ -605,6 +609,7 @@ export default {
                                 },
                             ],
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -733,7 +738,7 @@ export default {
                     lyric: [
                         `Well yes, I`,
                         {
-                            anchor: `faked this X,`,
+                            anchor: `faked this X`,
                             cards: [
                                 {
                                     description: [
@@ -757,7 +762,7 @@ export default {
                                 },
                             ],
                         },
-                        `I should confess,`,
+                        `, I should confess,`,
                     ],
                 },
                 {
@@ -773,7 +778,7 @@ export default {
                     lyric: [
                         `Well no, I know it's wrong, but I did`,
                         {
-                            anchor: `burn my palms,`,
+                            anchor: `burn my palms`,
                             card: {
                                 description: [
                                     `The ash used on Ash Wednesday comes from burning the palm branches that were blessed on the previous year's`,
@@ -789,6 +794,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
                 {
@@ -865,7 +871,7 @@ export default {
                     lyric: [
                         `us wretched souls`,
                         {
-                            anchor: `cursed to be born,`,
+                            anchor: `cursed to be born`,
                             cards: [
                                 {
                                     description: [
@@ -893,6 +899,7 @@ export default {
                                 },
                             ],
                         },
+                        `,`,
                     ],
                 },
                 {
