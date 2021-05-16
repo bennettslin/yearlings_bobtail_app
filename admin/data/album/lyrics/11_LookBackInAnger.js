@@ -262,7 +262,7 @@ export default {
                     lyric: [
                         `yet— if adding up— then`,
                         {
-                            anchor: `for more you'd vie.`,
+                            anchor: `for more you'd vie`,
                             card: {
                                 description: `But though it had been a struggle, I made it, didn't I? Which means I can easily do it again. So why wouldn't I try? After all, each new relationship is like another tree ring, a testament to one's resilience and continued growth.`,
                                 dotKeys: {
@@ -270,6 +270,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
                 {
@@ -300,7 +301,7 @@ export default {
                         },
                         `you rode, so on`,
                         {
-                            anchor: `spite you thrive.`,
+                            anchor: `spite you thrive`,
                             card: {
                                 description: `But this casual view of hardship is what later enabled me to justify the pain I caused Sita.`,
                                 dotKeys: {
@@ -308,6 +309,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
             ],
@@ -412,7 +414,7 @@ export default {
                     lyric: [
                         `She braves the crowd`,
                         {
-                            anchor: `filled first from sides.`,
+                            anchor: `filled first from sides`,
                             cards: [
                                 {
                                     description: `A few songs into my band's set, I watch from onstage as an attractive woman and her friends make their way through a packed room.`,
@@ -428,6 +430,7 @@ export default {
                                 },
                             ],
                         },
+                        `.`,
                     ],
                 },
                 {
@@ -435,7 +438,7 @@ export default {
                     lyric: [
                         `She might complete your`,
                         {
-                            anchor: `jigsawed life.`,
+                            anchor: `jigsawed life`,
                             card: {
                                 description: [
                                     `You typically work on a`,
@@ -451,6 +454,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
                 {
@@ -507,7 +511,7 @@ export default {
                     lyric: [
                         `and you were`,
                         {
-                            anchor: `fine when you had none.`,
+                            anchor: `fine when you had none`,
                             todo: true,
                             card: {
                                 description: `Things were finally looking up, so it baffled me to be more bitter than ever. I suspect it's because I felt indignant for my younger self, who'd been kept in the dark for so long about how much better life could be.`,
@@ -517,6 +521,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
                 {
@@ -642,7 +647,7 @@ export default {
                     lyric: [
                         `and thus secure,`,
                         {
-                            anchor: `must turn the cheek.`,
+                            anchor: `must turn the cheek`,
                             card: {
                                 description: `The letters from RI Research instructed me not to confront the bullies. Instead, I was to turn the other cheek, as Jesus had done, and quietly take their abuse in stride. After all, my exalted place in the universe necessarily asked of me to be the bigger person.`,
                                 dotKeys: {
@@ -650,6 +655,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
                 {
@@ -737,7 +743,7 @@ export default {
                     lyric: [
                         `also weep for`,
                         {
-                            anchor: `poor, poor bears.`,
+                            anchor: `poor, poor bears`,
                             todo: true,
                             card: {
                                 description: `His wife Alison then sighs in response, "Poor, poor bears," recognizing that he, a bear in their mutual fantasy, is just as much a victim complying within a power dynamic over which neither possesses much control.`,
@@ -746,6 +752,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
             ],
@@ -840,7 +847,7 @@ export default {
                     lyric: [
                         `'cause when you`,
                         {
-                            anchor: `beg it never comes.`,
+                            anchor: `beg it never comes`,
                             card: {
                                 description: [
                                     `There's no excuse for not looking out for yourself. I knew this now. So while I was justifiably angry`,
@@ -861,6 +868,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
                 {

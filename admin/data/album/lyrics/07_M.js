@@ -187,7 +187,7 @@ export default {
                     lyric: [
                         `to mold me into a`,
                         {
-                            anchor: `mystery mensch.`,
+                            anchor: `mystery mensch`,
                             card: {
                                 description: `There was an obvious lesson to draw from the smattering of women I'd somehow managed to attract up to this point in my life. All of them had been taken in by my appearance as an artsy loner, only to be turned off after finding that nothing of greater substance lay beneath. So my mission was to take this mistaken assumption that already existed and simply turn it into a correct one.`,
                                 dotKeys: {
@@ -195,6 +195,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
                 {
@@ -399,7 +400,7 @@ export default {
                     lyric: [
                         `before`,
                         {
-                            anchor: `tomorrow never sent.`,
+                            anchor: `tomorrow never sent`,
                             card: {
                                 description: `Or else, these hopes were never before sent "to Mara."`,
                                 dotKeys: {
@@ -407,6 +408,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
                 {
@@ -482,7 +484,7 @@ export default {
                     lyric: [
                         `to a`,
                         {
-                            anchor: `sand castle built by low tide.`,
+                            anchor: `sand castle built by low tide`,
                             card: {
                                 description: `To compound the failures of my first five-year plan, it was clear that in the interim I'd missed out on some crucial personal development that Jacob and others had naturally come by. And there was no guarantee another five-year plan wouldn't blindside me in the same manner. I feared a future as a stunted man-child, forever chasing ambitions both infantile and futile, like building castles out of sand.`,
                                 dotKeys: {
@@ -491,6 +493,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
                 {
@@ -575,7 +578,7 @@ export default {
                     lyric: [
                         `fools once expecting their`,
                         {
-                            anchor: `"Made in America" signs.`,
+                            anchor: `"Made in America" signs`,
                             properNoun: true,
                             todo: true,
                             card: {
@@ -586,6 +589,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
                 {
@@ -647,7 +651,7 @@ export default {
                         },
                         `in this`,
                         {
-                            anchor: `heap of twisted twine.`,
+                            anchor: `heap of twisted twine`,
                             todo: true,
                             card: {
                                 description: `But with nothing to show for five years of diligent effort, I was now paralyzed by doubt. There were no more actions I could confidently prescribe to better my circumstances. And so the puppet of my future self could only lie there motionless.`,
@@ -656,6 +660,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
             ],
@@ -674,7 +679,7 @@ export default {
                     lyric: [
                         `keeps me`,
                         {
-                            anchor: `solely for a pet.`,
+                            anchor: `solely for a pet`,
                             card: {
                                 description: `After Mara started dating Jacob, she continued to interact with me in the same flirtatious manner, which made me realize I'd misread her intentions all along.`,
                                 dotKeys: {
@@ -682,6 +687,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
                 {
@@ -705,7 +711,7 @@ export default {
                     lyric: [
                         `is choked down my`,
                         {
-                            anchor: `no-hope chest.`,
+                            anchor: `no-hope chest`,
                             cards: [
                                 {
                                     description: [
@@ -729,6 +735,7 @@ export default {
                                 },
                             ],
                         },
+                        `.`,
                     ],
                 },
             ],
@@ -808,12 +815,12 @@ export default {
                 {
                     mixTime: `2:30:29.75`,
                     lyric: [
-                        `Whispered`,
+                        `Whispered "`,
                         {
                             isItalic: true,
-                            lyric: `"adieu,"`,
+                            lyric: `adieu`,
                         },
-                        `I bade them`,
+                        `," I bade them`,
                         {
                             anchor: `to fare well,`,
                             card: {
@@ -863,16 +870,19 @@ export default {
                 },
                 {
                     mixTime: `2:42:20.52`,
-                    lyric: {
-                        anchor: `to have a merry ol' laugh.`,
-                        card: {
-                            description: `Or to have a "Mara, you'll" laugh. After all, if the world is as guileless and unwitting as a newborn, then it makes no sense to get upset when it makes a mess of things.`,
-                            dotKeys: {
-                                [OBSERVATION]: true,
-                                [PUN]: true,
+                    lyric: [
+                        {
+                            anchor: `to have a merry ol' laugh`,
+                            card: {
+                                description: `Or to have a "Mara, you'll" laugh. After all, if the world is as guileless and unwitting as a newborn, then it makes no sense to get upset when it makes a mess of things.`,
+                                dotKeys: {
+                                    [OBSERVATION]: true,
+                                    [PUN]: true,
+                                },
                             },
                         },
-                    },
+                        `.`,
+                    ],
                 },
             ],
         },
@@ -951,15 +961,18 @@ export default {
                 },
                 {
                     mixTime: `3:02:11.28`,
-                    lyric: {
-                        anchor: `friends have to lie.`,
-                        card: {
-                            description: `But I couldn't rely on my friends to tell me the truth. As dear as they were to me, they each had their own agenda.`,
-                            dotKeys: {
-                                [OBSERVATION]: true,
+                    lyric: [
+                        {
+                            anchor: `friends have to lie`,
+                            card: {
+                                description: `But I couldn't rely on my friends to tell me the truth. As dear as they were to me, they each had their own agenda.`,
+                                dotKeys: {
+                                    [OBSERVATION]: true,
+                                },
                             },
                         },
-                    },
+                        `.`,
+                    ],
                 },
             ],
         },

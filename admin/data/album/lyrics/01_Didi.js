@@ -235,7 +235,7 @@ export default {
                     lyric: [
                         `Didi, you've been following, I`,
                         {
-                            anchor: `didn't want you here.`,
+                            anchor: `didn't want you here`,
                             card: {
                                 description: `I often tagged along with my sister, who was fiercely protective of me. But there were times when she and her friends would insist on doing girl stuff by themselves. This always left me in a panic, since I had few playmates of my own.`,
                                 dotKeys: {
@@ -243,6 +243,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
                 {
@@ -489,7 +490,7 @@ export default {
                     lyric: [
                         `taped to all the`,
                         {
-                            anchor: `girls' mirrors.`,
+                            anchor: `girls' mirrors`,
                             card: {
                                 description: `My sister used to cut out pictures of pop stars from teenybopper magazines and tape them to our bathroom mirror.`,
                                 dotKeys: {
@@ -497,6 +498,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
                 {

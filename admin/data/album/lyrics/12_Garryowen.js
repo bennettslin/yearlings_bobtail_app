@@ -114,7 +114,7 @@ export default {
                     lyric: [
                         `with your`,
                         {
-                            anchor: `crew of chefs and thieves.`,
+                            anchor: `crew of chefs and thieves`,
                             cards: [
                                 {
                                     description: [
@@ -134,6 +134,7 @@ export default {
                                 },
                             ],
                         },
+                        `.`,
                     ],
                 },
                 {
@@ -157,7 +158,7 @@ export default {
                     lyric: [
                         `if you would`,
                         {
-                            anchor: `opt for bed not street.`,
+                            anchor: `opt for bed not street`,
                             todo: true,
                             card: {
                                 description: [
@@ -173,6 +174,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
             ],
@@ -563,7 +565,7 @@ export default {
                     lyric: [
                         `You won't always`,
                         {
-                            anchor: `have her for your pet.`,
+                            anchor: `have her for your pet`,
                             card: {
                                 description: `Sita's manner of prostrating herself forced me to wield an absolute power I never asked for, which exasperated me to no end. But its endearing nature was also guaranteed to make me love her, the way one necessarily loves a pet. So I never doubted the impending breakup would be equally wrenching for both of us.`,
                                 dotKeys: {
@@ -571,6 +573,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
                 {
@@ -802,7 +805,7 @@ export default {
                     lyric: [
                         `becomes someone's`,
                         {
-                            anchor: `last-ditch alibi.`,
+                            anchor: `last-ditch alibi`,
                             // Clarify which meaning of leaving in to leave her.
                             todo: true,
                             card: {
@@ -813,6 +816,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
             ],

@@ -37,9 +37,10 @@ export default getFormattedSlideMetadata([
         footnote: [
             `More on the`,
             {
-                anchor: `network effect.`,
+                anchor: `network effect`,
                 href: `https://en.wikipedia.org/wiki/Network_effect`,
             },
+            `.`,
         ],
     },
     {
@@ -52,9 +53,10 @@ export default getFormattedSlideMetadata([
         footnote: [
             `More on`,
             {
-                anchor: `economies of scale.`,
+                anchor: `economies of scale`,
                 href: `https://en.wikipedia.org/wiki/Economies_of_scale`,
             },
+            `.`,
         ],
     },
     {

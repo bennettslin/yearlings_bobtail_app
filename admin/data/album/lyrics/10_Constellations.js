@@ -121,7 +121,7 @@ export default {
                             ],
                         },
                         {
-                            anchor: `stiff in tandem.`,
+                            anchor: `stiff in tandem`,
                             card: {
                                 description: `Robitussin in its early stages will make your limbs feel stiff and mechanical. Having taken it an hour prior, we enjoy these effects and deliberately exaggerate them.`,
                                 dotKeys: {
@@ -130,6 +130,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
                 {
@@ -399,7 +400,7 @@ export default {
                         },
                         `this`,
                         {
-                            anchor: `boundless Kalevalley ends.`,
+                            anchor: `boundless Kalevalley ends`,
                             cards: [
                                 {
                                     description: `The San Fernando Valley, which I hated in my youth, is the quintessential "Cali valley." The days before I hightailed it out of that sprawling wasteland were painfully endless. On this summer break back home, however, the magic of Robitussin renders escape instantaneous.`,
@@ -427,6 +428,7 @@ export default {
                                 },
                             ],
                         },
+                        `.`,
                     ],
                 },
                 {
@@ -471,7 +473,7 @@ export default {
                             ],
                         },
                         {
-                            anchor: `Lapps are highmen.`,
+                            anchor: `Lapps are highmen`,
                             properNoun: true,
                             cards: [
                                 {
@@ -500,6 +502,7 @@ export default {
                                 },
                             ],
                         },
+                        `.`,
                     ],
                 },
             ],
@@ -565,7 +568,7 @@ export default {
                             },
                         },
                         {
-                            anchor: `psealed off drains.`,
+                            anchor: `psealed off drains`,
                             cards: [
                                 {
                                     description: `The entrance to the steam tunnels is hidden "among old, sealed-off drains."`,
@@ -594,6 +597,7 @@ export default {
                                 },
                             ],
                         },
+                        `.`,
                     ],
                 },
             ],
@@ -1100,7 +1104,7 @@ export default {
                             ],
                         },
                         {
-                            anchor: `a'duct Uighuress.`,
+                            anchor: `a'duct Uighuress`,
                             card: {
                                 description: [
                                     `The Mongols would slaughter the men and seize the women of the lands they conquered. This fate was no doubt met by the`,
@@ -1116,6 +1120,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
                 {
@@ -1369,7 +1374,7 @@ export default {
                         },
                         `to`,
                         {
-                            anchor: `Audamn's grave.`,
+                            anchor: `Audamn's grave`,
                             properNoun: true,
                             card: {
                                 description: `We sigh in relief to have spotted "Adam's" grave from among a sea of identical headstones, just as the first Americans, upon discovering a more bountiful land, perished their fears of an encroaching "autumn."`,
@@ -1379,6 +1384,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
             ],

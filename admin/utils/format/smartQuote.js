@@ -44,14 +44,20 @@ const _replaceStraightWithSmartQuotes = text => {
                     // It's an opening quote if it's the first character.
                     indexOfCharacter === 0 &&
                     /**
-                     * But the second character isn't an "s." This is just
+                     * And the second character isn't an "s." This is just
                      * because of "Bobtail's" in Kyon.
                      */
-                    text[indexOfCharacter + 1] !== 's'
-                ) ||
+                    text[indexOfCharacter + 1] !== 's' &&
 
-                // Or if it's preceded by a space...
-                text[indexOfCharacter - 1] === ' ' ||
+                    // And the second character also isn't a space.
+                    text[indexOfCharacter + 1] !== ' '
+                ) || (
+                    // Or it's not the first character...
+                    indexOfCharacter &&
+
+                    // And it's preceded by a space...
+                    text[indexOfCharacter - 1] === ' '
+                ) ||
 
                 // ... or an opening parenthesis.
                 text[indexOfCharacter - 1] === '('
@@ -85,14 +91,18 @@ const _recurseForSmartQuoteFormat = textEntity => {
         const newEntity = {}
 
         for (const key in textEntity) {
+            if (key === 'isItalic') {
+                // if (isString(textEntity.lyric) && hasSpecialCharacterAtIndex(textEntity.lyric, textEntity.lyric.length - 1)) {
+                //     console.error(textEntity.lyric)
+                // }
+                if (isString(textEntity.lyric) && textEntity.lyric.endsWith(`"`)) {
+                    console.error(textEntity.lyric)
+                }
+            }
+
             newEntity[key] = _getIsLocationPath(key) ?
                 textEntity[key] :
                 _recurseForSmartQuoteFormat(textEntity[key])
-            if (key === 'anchor') {
-                if (isString(textEntity.anchor) && hasSpecialCharacterAtIndex(textEntity.anchor, textEntity.anchor.length - 1)) {
-                    console.error(textEntity.anchor)
-                }
-            }
         }
 
         return newEntity

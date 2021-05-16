@@ -69,17 +69,17 @@ export default {
                                         anchor: `Walt Whitman`,
                                         wiki: `Walt_Whitman`,
                                     },
-                                    `wrote his elegy`,
+                                    `wrote his elegy "`,
                                     {
-                                        anchor: `"O Captain! My Captain!"`,
+                                        anchor: `O Captain! My Captain!`,
                                         wiki: `O_Captain!_My_Captain!`,
                                     },
-                                    `upon hearing of`,
+                                    `" upon hearing of`,
                                     {
-                                        anchor: `Abraham Lincoln's`,
+                                        anchor: `Abraham Lincoln`,
                                         wiki: `Abraham_Lincoln`,
                                     },
-                                    `assassination.`,
+                                    `'s assassination.`,
                                 ],
                                 dotKeys: {
                                     [PUN]: true,
@@ -693,7 +693,7 @@ export default {
                     lyric: [
                         `for I lack the wit to spare a`,
                         {
-                            anchor: `safe Algonquin abode.`,
+                            anchor: `safe Algonquin abode`,
                             card: {
                                 description: [
                                     `Kateri Tekakwitha was born to a`,
@@ -718,6 +718,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
             ],
@@ -816,12 +817,12 @@ export default {
                                                 anchor: `Protestant`,
                                                 wiki: `Protestantism`,
                                             },
-                                            `but converted to Catholicism to gain the French royal crown. He is reputed to have said,`,
+                                            `but converted to Catholicism to gain the French royal crown. He is reputed to have said, "`,
                                             {
                                                 isItalic: true,
-                                                lyric: `"Paris vaut bien une messe,"`,
+                                                lyric: `Paris vaut bien une messe`,
                                             },
-                                            `or "Paris is well worth a Mass," implying that spiritual allegiances are preceded by earthly ambitions. Similarly, I would have happily turned Catholic if it meant getting to stay with Catherine.`,
+                                            `," or "Paris is well worth a Mass," implying that spiritual allegiances are preceded by earthly ambitions. Similarly, I would have happily turned Catholic if it meant getting to stay with Catherine.`,
                                         ],
                                         dotKeys: {
                                             [OBSERVATION]: true,
@@ -916,7 +917,7 @@ export default {
                     lyric: [
                         `to wear it like a`,
                         {
-                            anchor: `tragic mask.`,
+                            anchor: `tragic mask`,
                             todo: true,
                             card: {
                                 description: [
@@ -938,6 +939,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
             ],

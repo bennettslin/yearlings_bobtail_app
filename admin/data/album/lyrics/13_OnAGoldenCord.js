@@ -99,7 +99,7 @@ export default {
                     lyricCentre: [
                         `safely kept with`,
                         {
-                            anchor: `bread and pocket lint.`,
+                            anchor: `bread and pocket lint`,
                             todo: true,
                             card: {
                                 description: `Before leaving the cafeteria after a long shift, I might stash some bread rolls in the front pockets of my jacket for munching on the go. Still holding the bracelet, I now tuck my hands in as well to keep warm.`,
@@ -108,6 +108,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
                 {
@@ -257,7 +258,7 @@ export default {
                     lyricRight: [
                         `Returned a golden cord, this`,
                         {
-                            anchor: `sole belonging signed.`,
+                            anchor: `sole belonging signed`,
                             card: {
                                 description: `Plopped onto moonlit streets from whereabouts unknown, the "drunken" voice of the doublespeaker pair can only recollect his past crimes. As such, he believes himself to be newly released from prison, perhaps having just retrieved from storage the gold bracelet now in his hand.`,
                                 dotKeys: {
@@ -265,6 +266,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
                 {
@@ -310,7 +312,7 @@ export default {
                     lyricLeft: [
                         `torched the`,
                         {
-                            anchor: `bellyaches on suttee.`,
+                            anchor: `bellyaches on suttee`,
                             todo: true,
                             card: {
                                 description: [
@@ -325,11 +327,12 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                     lyricRight: [
                         `for the`,
                         {
-                            anchor: `well-behaved on the wing.`,
+                            anchor: `well-behaved on the wing`,
                             card: {
                                 description: `Feeling no malice, drunken me can only surmise that after serving out his sentence without complaint, he's been granted early release for good behavior.`,
                                 dotKeys: {
@@ -337,6 +340,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
             ],
@@ -464,7 +468,7 @@ export default {
                     lyricRight: [
                         `past this`,
                         {
-                            anchor: `avenue Möbius.`,
+                            anchor: `avenue Möbius`,
                             cards: [
                                 {
                                     description: [
@@ -484,6 +488,7 @@ export default {
                                 },
                             ],
                         },
+                        `.`,
                     ],
                 },
             ],
@@ -729,7 +734,7 @@ export default {
                         `the taunting,`,
                         {
                             // NOTE: I added a hyphen..
-                            anchor: `street-swept dawn.`,
+                            anchor: `street-swept dawn`,
                             card: {
                                 description: [
                                     `As daylight breaks, the mechanical`,
@@ -744,6 +749,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
                 {
@@ -755,7 +761,7 @@ export default {
                     lyricCentre: [
                         `of gathering up the`,
                         {
-                            anchor: `suttee dust.`,
+                            anchor: `suttee dust`,
                             cards: [
                                 {
                                     description: `I imagine Sita by now to be fully immolated on the burnt rubble of our ruined relationship.`,
@@ -768,6 +774,7 @@ export default {
                                 },
                             ],
                         },
+                        `.`,
                     ],
                 },
                 {
@@ -926,7 +933,7 @@ export default {
                     lyricLeft: [
                         `each`,
                         {
-                            anchor: `attack with the proper fist.`,
+                            anchor: `attack with the proper fist`,
                             todo: true,
                             card: {
                                 description: [
@@ -943,6 +950,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                     lyricRight: [
                         {
@@ -1073,7 +1081,7 @@ export default {
                     lyricLeft: [
                         `a bid for greatness' sake, he's sold on as`,
                         {
-                            anchor: `holy war.`,
+                            anchor: `holy war`,
                             todo: true,
                             card: {
                                 description: [
@@ -1090,6 +1098,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                     lyricRight: `a bigger plate awaiting nulls one half full before.`,
                 },

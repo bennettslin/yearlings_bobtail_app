@@ -34,6 +34,7 @@ const _prependWithSpaceIfNeeded = text => {
     // Do not prepend a space for these exceptions.
     if (
         text.startsWith(`'s`) ||
+        text.startsWith(`" `) ||
         hasSpecialCharacterAtIndex(text, 0)
     ) {
         return text

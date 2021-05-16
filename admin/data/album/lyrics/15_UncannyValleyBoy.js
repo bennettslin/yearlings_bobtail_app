@@ -155,7 +155,7 @@ export default {
                     lyric: [
                         `Rest your rump, boy, by your old`,
                         {
-                            anchor: `giving tree.`,
+                            anchor: `giving tree`,
                             card: {
                                 description: [
                                     {
@@ -173,6 +173,7 @@ export default {
                                 ],
                             },
                         },
+                        `.`,
                     ],
                 },
                 {
@@ -276,7 +277,7 @@ export default {
                     lyric: [
                         `to live neutered, blissfully`,
                         {
-                            anchor: `and orphaned.`,
+                            anchor: `and orphaned`,
                             todo: true,
                             card: {
                                 description: [
@@ -293,6 +294,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
                 {
@@ -694,7 +696,7 @@ export default {
                     lyric: [
                         `smugly prepped to`,
                         {
-                            anchor: `haze the new latecomers.`,
+                            anchor: `haze the new latecomers`,
                             todo: true,
                             card: {
                                 description: [
@@ -710,6 +712,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
                 {
@@ -938,7 +941,7 @@ export default {
                         },
                         `slurring`,
                         {
-                            anchor: `Valmiki's chant.`,
+                            anchor: `Valmiki's chant`,
                             properNoun: true,
                             card: {
                                 description: [
@@ -960,6 +963,7 @@ export default {
                                 ],
                             },
                         },
+                        `.`,
                     ],
                 },
                 {
@@ -1178,7 +1182,7 @@ export default {
                             },
                             `for the`,
                             {
-                                anchor: `trophy blondes.`,
+                                anchor: `trophy blondes`,
                                 todo: true,
                                 cards: [
                                     {
@@ -1192,6 +1196,7 @@ export default {
                                     },
                                 ],
                             },
+                            `.`,
                         ],
                     },
                 },
@@ -1346,25 +1351,28 @@ export default {
                     lyric: `cast on your peons,`,
                 },
                 {
-                    lyric: {
-                        anchor: `old and subservient.`,
-                        todo: true,
-                        cards: [
-                            {
-                                description: `It wasn't until college that I learned to appreciate the sacrifices my parents had made for me and my siblings to lead better lives than their own. But knowing that this awareness came about through assigned coursework, rather than my own lived experiences, only added to my guilt.`,
-                                dotKeys: {
-                                    [BACKSTORY]: true,
+                    lyric: [
+                        {
+                            anchor: `old and subservient`,
+                            todo: true,
+                            cards: [
+                                {
+                                    description: `It wasn't until college that I learned to appreciate the sacrifices my parents had made for me and my siblings to lead better lives than their own. But knowing that this awareness came about through assigned coursework, rather than my own lived experiences, only added to my guilt.`,
+                                    dotKeys: {
+                                        [BACKSTORY]: true,
+                                    },
                                 },
-                            },
-                            {
-                                description: `Among those I ruled over were my parents, now feeble and senile after a lifetime of following their "son's" bidding.`,
-                                dotKeys: {
-                                    [NARRATIVE]: true,
-                                    [PUN]: true,
+                                {
+                                    description: `Among those I ruled over were my parents, now feeble and senile after a lifetime of following their "son's" bidding.`,
+                                    dotKeys: {
+                                        [NARRATIVE]: true,
+                                        [PUN]: true,
+                                    },
                                 },
-                            },
-                        ],
-                    },
+                            ],
+                        },
+                        `.`,
+                    ],
                 },
             ],
         },

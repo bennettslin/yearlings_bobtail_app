@@ -136,7 +136,7 @@ export default {
                     lyricRight: [
                         `trifling`,
                         {
-                            anchor: `tref must reseed the earth.`,
+                            anchor: `tref must reseed the earth`,
                             todo: true,
                             card: {
                                 description: [
@@ -161,6 +161,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
                 {
@@ -375,7 +376,7 @@ export default {
                     lyricLeft: [
                         `baby steps inch towards`,
                         {
-                            anchor: `crevice rays.`,
+                            anchor: `crevice rays`,
                             card: {
                                 description: `My grandmother's house at night was pitch black. When I woke to use the bathroom, I had to tiptoe to the door with only a sliver of moonlight peeking in from underneath to guide me.`,
                                 dotKeys: {
@@ -383,6 +384,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                     lyricRight: [
                         {
@@ -1039,7 +1041,7 @@ export default {
                     lyricRight: [
                         `where its`,
                         {
-                            anchor: `hopeless rests.`,
+                            anchor: `hopeless rests`,
                             todo: true,
                             cards: [
                                 {
@@ -1057,6 +1059,7 @@ export default {
                                 },
                             ],
                         },
+                        `.`,
                     ],
                 },
             ],
@@ -1271,29 +1274,32 @@ export default {
                 },
                 {
                     mixTime: `1:49:20.04`,
-                    lyricLeft: {
-                        anchor: `shivering for shivs unsheathed.`,
-                        todo: true,
-                        cards: [
-                            {
-                                // CONSIDER: Wormhole Kyon for shank? Needs to allow for multiple wormhole keys first.
-                                description: [
-                                    `Those who wander a prison yard must be on constant guard against getting`,
-                                    {
-                                        anchor: 'shivved,',
-                                        wiki: `Shiv_(weapon)`,
+                    lyricLeft: [
+                        {
+                            anchor: `shivering for shivs unsheathed`,
+                            todo: true,
+                            cards: [
+                                {
+                                    // CONSIDER: Wormhole Kyon for shank? Needs to allow for multiple wormhole keys first.
+                                    description: [
+                                        `Those who wander a prison yard must be on constant guard against getting`,
+                                        {
+                                            anchor: 'shivved,',
+                                            wiki: `Shiv_(weapon)`,
+                                        },
+                                        `or stabbed by a makeshift weapon. Lucky for me, the schoolyard was already preparing me for a lifetime of such vigilance.`,
+                                    ],
+                                    dotKeys: {
+                                        [OBSERVATION]: true,
                                     },
-                                    `or stabbed by a makeshift weapon. Lucky for me, the schoolyard was already preparing me for a lifetime of such vigilance.`,
-                                ],
-                                dotKeys: {
-                                    [OBSERVATION]: true,
                                 },
-                            },
-                            {
-                                wormhole: `chivalry`,
-                            },
-                        ],
-                    },
+                                {
+                                    wormhole: `chivalry`,
+                                },
+                            ],
+                        },
+                        `.`,
+                    ],
                     lyricRight: {
                         anchor: `shivaree towards shivah seat`,
                         cards: [

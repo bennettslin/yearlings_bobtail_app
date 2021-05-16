@@ -100,7 +100,7 @@ export default {
                         lyric: [
                             `L.A. to the Bay,`,
                             {
-                                anchor: `pompous autumn waits.`,
+                                anchor: `pompous autumn waits`,
                                 cards: [
                                     {
                                         description: `In high school, I continued on as the same unliked nobody I'd been in middle school. It just didn't seem possible to remake myself into someone new while surrounded by all the same classmates. But all the while I was crafting a future persona of a self-assured artist that was raring to go as soon as I could leave Los Angeles.`,
@@ -114,6 +114,7 @@ export default {
                                     },
                                 ],
                             },
+                            `.`,
                         ],
                     },
                 },
@@ -179,7 +180,7 @@ export default {
                     lyric: [
                         `noses in`,
                         {
-                            anchor: `penny dreadfuls.`,
+                            anchor: `penny dreadfuls`,
                             todo: true,
                             cards: [
                                 {
@@ -199,6 +200,7 @@ export default {
                                 },
                             ],
                         },
+                        `.`,
                     ],
                 },
             ],
@@ -248,7 +250,7 @@ export default {
                     lyric: [
                         `stalled by`,
                         {
-                            anchor: `keys left on dumbwaiter trays.`,
+                            anchor: `keys left on dumbwaiter trays`,
                             card: {
                                 description: `The students would bus their trays in carriages attached to a conveyor, which would then transport the trays into the dishroom. Every so often, someone would accidentally leave a personal item and come downstairs to retrieve it. I got a kick when that happened. The students were always grateful, and sometimes they were cute.`,
                                 dotKeys: {
@@ -256,6 +258,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
             ],
@@ -303,7 +306,7 @@ export default {
                     lyric: [
                         `and stunned, by`,
                         {
-                            anchor: `reflex you asked.`,
+                            anchor: `reflex you asked`,
                             todo: true,
                             cards: [
                                 {
@@ -314,6 +317,7 @@ export default {
                                 },
                             ],
                         },
+                        `.`,
                     ],
                 },
                 {
@@ -369,7 +373,7 @@ export default {
                         },
                         `attached to your`,
                         {
-                            anchor: `sci-fi paperback.`,
+                            anchor: `sci-fi paperback`,
                             cards: [
                                 {
                                     description: `At the time, I was obsessed with Dick's stories of altered states and dystopian worlds. I never left home without one of his novels under my arm.`,
@@ -382,6 +386,7 @@ export default {
                                 },
                             ],
                         },
+                        `.`,
                     ],
                 },
             ],
@@ -486,7 +491,7 @@ export default {
                     lyricLeft: [
                         `Alone his first gig,`,
                         {
-                            anchor: `stagefright ignites.`,
+                            anchor: `stagefright ignites`,
                             card: {
                                 description: [
                                     `During this time, I began performing at local`,
@@ -506,6 +511,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                     lyricRight: [
                         `With no`,
@@ -632,11 +638,12 @@ export default {
                             },
                         },
                         {
-                            anchor: `sooty dust.`,
+                            anchor: `sooty dust`,
                             card: {
                                 wormhole: `suttee_dust`,
                             },
                         },
+                        `.`,
                     ],
                 },
             ],
@@ -675,7 +682,7 @@ export default {
                     lyric: [
                         `them`,
                         {
-                            anchor: `tripped on runner's high.`,
+                            anchor: `tripped on runner's high`,
                             card: {
                                 description: [
                                     `After a grueling shift, I then had to make the long slog back home. So it would have been hard to feel gracious toward any nighttime jogger passing me by and feeling the euphoria of a`,
@@ -690,6 +697,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
                 {
@@ -795,7 +803,7 @@ export default {
                     lyric: [
                         `She`,
                         {
-                            anchor: `locks your arm.`,
+                            anchor: `locks your arm`,
                             card: {
                                 description: `Seeing Sita shiver from the cold, I invite her to warm up inside my apartment. In response, she gladly tucks her hand under my arm. Of course, it doesn't mean what I so badly want it to mean. And so it feels like I'm an escaped convict who's just been recaptured and put in handcuffs.`,
                                 dotKeys: {
@@ -804,8 +812,9 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                         {
-                            anchor: `Key turned,`,
+                            anchor: `Key turned`,
                             cards: [
                                 {
                                     description: `As we catch up on recent happenings, I unlock the door to my apartment. But with Sita clinging tightly to my arm, it feels more like I'm being directed into a holding cell.`,
@@ -818,6 +827,7 @@ export default {
                                 },
                             ],
                         },
+                        `,`,
                         {
                             anchor: `returned to your guard…`,
                             card: {
@@ -870,7 +880,7 @@ export default {
                         },
                         `so you`,
                         {
-                            anchor: `hit the switch.`,
+                            anchor: `hit the switch`,
                             cards: [
                                 {
                                     description: `With these thoughts swirling in my head, I flip on the light switch in my apartment.`,
@@ -883,6 +893,7 @@ export default {
                                 },
                             ],
                         },
+                        `.`,
                     ],
                 },
                 {
@@ -890,7 +901,7 @@ export default {
                     lyric: [
                         `On your bed's rumpled linens, a`,
                         {
-                            anchor: `lidless Vaseline sits.`,
+                            anchor: `lidless Vaseline sits`,
                             cards: [
                                 {
                                     description: [
@@ -910,6 +921,7 @@ export default {
                                 },
                             ],
                         },
+                        `.`,
                     ],
                 },
                 {
@@ -1099,7 +1111,7 @@ export default {
                             },
                         },
                         {
-                            anchor: `with a ring.`,
+                            anchor: `with a ring`,
                             cards: [
                                 {
                                     description: `Having dozed off, I'm roused by the ringing of a bell to indicate that a patient has been released from care and is returning to the waiting area.`,
@@ -1119,6 +1131,7 @@ export default {
                                 },
                             ],
                         },
+                        `.`,
                     ],
                 },
                 {
@@ -1142,7 +1155,7 @@ export default {
                     lyric: [
                         `and you marvel, glimmer of her`,
                         {
-                            anchor: `cheek unveiled.`,
+                            anchor: `cheek unveiled`,
                             cards: [
                                 {
                                     description: `Glancing up, I'm startled to find Sita hovering over me with a cheeky smile. Having quietly unclasped her purse from my grip, she returns to the treatment area, but not before inadvertently flashing some "cheek" from beneath her revealing hospital gown.`,
@@ -1160,6 +1173,7 @@ export default {
                                 },
                             ],
                         },
+                        `.`,
                     ],
                 },
             ],
@@ -1194,7 +1208,7 @@ export default {
                     lyric: [
                         `You`,
                         {
-                            anchor: `stand unsure.`,
+                            anchor: `stand unsure`,
                             cards: [
                                 {
                                     description: `The night we decided to have sex, I was overcome with a wary unease that I couldn't explain. As Sita lay naked while comforting me with her gaze, I stood forlornly by the bedside for what seemed like several minutes.`,
@@ -1207,7 +1221,7 @@ export default {
                                 },
                             ],
                         },
-                        `She lures with a tease,`,
+                        `. She lures with a tease,`,
                     ],
                 },
                 {
@@ -1312,7 +1326,7 @@ export default {
                         },
                         `light`,
                         {
-                            anchor: `fell an oar.`,
+                            anchor: `fell an oar`,
                             card: {
                                 description: [
                                     `Or else, fell "Lenore."`,
@@ -1332,6 +1346,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
                 {
@@ -1363,7 +1378,7 @@ export default {
                     lyric: [
                         `You`,
                         {
-                            anchor: `stroke her temples.`,
+                            anchor: `stroke her temples`,
                             card: {
                                 description: [
                                     `Referring to her literal`,
@@ -1379,7 +1394,7 @@ export default {
                                 },
                             },
                         },
-                        `She gushes as she guides,`,
+                        `. She gushes as she guides,`,
                     ],
                 },
                 {

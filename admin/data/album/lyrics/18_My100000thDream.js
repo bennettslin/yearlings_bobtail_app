@@ -117,7 +117,7 @@ export default {
                     lyric: [
                         `I took her shoulder as we drove from`,
                         {
-                            anchor: `El Torito.`,
+                            anchor: `El Torito`,
                             properNoun: true,
                             card: {
                                 description: [
@@ -133,6 +133,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
                 {

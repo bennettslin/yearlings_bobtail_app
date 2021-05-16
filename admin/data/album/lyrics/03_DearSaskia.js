@@ -98,7 +98,7 @@ export default {
                     lyric: [
                         `It's nearing autumn here with`,
                         {
-                            anchor: `record highs.`,
+                            anchor: `record highs`,
                             card: {
                                 description: `It's hard to write a letter. But one can always start by talking about the weather.`,
                                 dotKeys: {
@@ -106,6 +106,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
                 {
@@ -176,7 +177,7 @@ export default {
                     lyric: [
                         `of some`,
                         {
-                            anchor: `giant's house.`,
+                            anchor: `giant's house`,
                             todo: true,
                             card: {
                                 description: `My most vivid memory of that trip is when we stood in the middle of a lush valley. With the ground around us completely level, the enclosing mountains were nearly vertical, as their peaks disappeared into a translucent blanket of clouds stretched across the sky. I felt like a tiny guest in a giant's house.`,
@@ -185,6 +186,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
             ],
@@ -409,7 +411,7 @@ export default {
                     lyric: [
                         `And I sniffled daily when you`,
                         {
-                            anchor: `skipped a grade.`,
+                            anchor: `skipped a grade`,
                             card: {
                                 description: [
                                     `I panicked when Sasha was allowed to`,
@@ -424,6 +426,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
                 {
@@ -586,12 +589,12 @@ export default {
                             anchor: `"Boys will beat boys…"`,
                             card: {
                                 description: [
-                                    `Of course, it's more common to say that boys will`,
+                                    `Of course, it's more common to say that boys will "`,
                                     {
                                         isItalic: true,
-                                        lyric: `"be"`,
+                                        lyric: `be`,
                                     },
-                                    `boys, but one naturally follows the other. It surprised me when school aides declined to intervene on behalf of the victims of bullying, as if such predation were healthy to the middle school ecosystem.`,
+                                    `" boys, but one naturally follows the other. It surprised me when school aides declined to intervene on behalf of the victims of bullying, as if such predation were healthy to the middle school ecosystem.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -764,7 +767,7 @@ export default {
                     lyric: [
                         `on`,
                         {
-                            anchor: `rat turds choked.`,
+                            anchor: `rat turds choked`,
                             card: {
                                 description: `I wasn't sure how to end a song about a painful stage of my life that now seems comical in retrospect. I decided to err on the side of humor.`,
                                 dotKeys: {
@@ -773,6 +776,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
             ],

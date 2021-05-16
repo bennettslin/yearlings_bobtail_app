@@ -119,7 +119,7 @@ export default {
                     lyric: [
                         `history shed, having`,
                         {
-                            anchor: `never grown your horns.`,
+                            anchor: `never grown your horns`,
                             card: {
                                 description: `Of course, my continual desire to leave Sita was also driven by shame. Having left her before, any kindness I showed her now could only be viewed as atonement for past crimes. My role in this relationship was to be forever penitent, whereas I could just start over with someone new, untainted by sin.`,
                                 dotKeys: {
@@ -128,6 +128,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
                 {
@@ -384,7 +385,7 @@ export default {
                         },
                         `as the sole`,
                         {
-                            anchor: `keeper of his sheep herd.`,
+                            anchor: `keeper of his sheep herd`,
                             card: {
                                 description: [
                                     `A keeper, in the sense of being both the one who tends to the herd, as well as the only one to keep from`,
@@ -400,6 +401,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
                 {
@@ -718,7 +720,7 @@ export default {
                         },
                         `and`,
                         {
-                            anchor: `sadness for what it was.`,
+                            anchor: `sadness for what it was`,
                             card: {
                                 description: `As friends, Sita and I got along well because we were both sad people. But in hindsight, my sadness was a product of circumstance, whether from bullying in my youth, or from loneliness as I got older. Sita, on the other hand, suffered from clinical depression. And as I learned to be proactive in dealing with my moods, I grew impatient with her for being incapable of the same.`,
                                 dotKeys: {
@@ -726,6 +728,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
                 {
@@ -762,7 +765,7 @@ export default {
                             lyric: `Bobtail`,
                         },
                         {
-                            anchor: `I'll gladly wait.`,
+                            anchor: `I'll gladly wait`,
                             card: {
                                 description: `But Sita encouraged my artistic pretensions, believing them to reflect positively on her as well. Though she was uninterested in the local scene, she still enjoyed being seen as the one going home with me after a show.`,
                                 dotKeys: {
@@ -770,6 +773,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
                 {
@@ -812,12 +816,12 @@ export default {
                             anchor: `peacock`,
                             wiki: `Peafowl`,
                         },
-                        `has always sounded to me like it's pleading in Hindi,`,
+                        `has always sounded to me like it's pleading in Hindi, "`,
                         {
                             isItalic: true,
-                            lyric: `"kyon?"`,
+                            lyric: `kyon`,
                         },
-                        `My heart still breaks somewhat to hear it for this reason.`,
+                        `?" My heart still breaks somewhat to hear it for this reason.`,
                     ],
                     dotKeys: {
                         [OBSERVATION]: true,

@@ -146,7 +146,7 @@ export default {
                         },
                         `in`,
                         {
-                            anchor: `tarred pavement mirage.`,
+                            anchor: `tarred pavement mirage`,
                             card: {
                                 description: `In the mirages created by the summer heat, the reflections of the surrounding mountains point downward, suggesting that their jagged peaks had caused the asphalt cracks.`,
                                 dotKeys: {
@@ -154,6 +154,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
                 {
@@ -170,7 +171,7 @@ export default {
                         },
                         `as early worms work this`,
                         {
-                            anchor: `dying coyote's jaw.`,
+                            anchor: `dying coyote's jaw`,
                             cards: [
                                 {
                                     description: `Every so often, a coyote would wander down from the hillsides and get hit by traffic. Its body might then lie decomposing for days.`,
@@ -186,6 +187,7 @@ export default {
                                 },
                             ],
                         },
+                        `.`,
                     ],
                 },
             ],
@@ -297,7 +299,7 @@ export default {
                     lyric: [
                         `licking lips`,
                         {
-                            anchor: `he ends his stroll.`,
+                            anchor: `he ends his stroll`,
                             card: {
                                 description: `In most legends, the changeling is a witting participant in the deceitful replacement of a human child. As such, it takes pains to hide its true form while in the company of other humans. And so before Willy goes off to cash in his recyclables, he ends "as troll" by donning his human guise.`,
                                 dotKeys: {
@@ -306,6 +308,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
             ],
@@ -609,7 +612,7 @@ export default {
                     lyric: [
                         `with his tummy clenched, muffling`,
                         {
-                            anchor: `baffled sobs.`,
+                            anchor: `baffled sobs`,
                             card: {
                                 description: `The hardest part about having hurt my brother was knowing he had no way to understand the cause of my anger. The times when I turned on him and inflicted physical pain would always remain without explanation. For him, it was just another part of what life was.`,
                                 dotKeys: {
@@ -617,6 +620,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
                 {
@@ -776,7 +780,7 @@ export default {
                         },
                         `swung sounds the`,
                         {
-                            anchor: `past-noon toll.`,
+                            anchor: `past-noon toll`,
                             card: {
                                 description: `One of the gangsters grabs a wine bottle and smashes it against Willy's face. The sound reverberates throughout the neighborhood, like the peal of a town bell striking at one o'clock.`,
                                 dotKeys: {
@@ -785,6 +789,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
             ],
@@ -825,7 +830,7 @@ export default {
                     lyric: [
                         `dripping`,
                         {
-                            anchor: `Willy's stalkless bulb.`,
+                            anchor: `Willy's stalkless bulb`,
                             properNoun: true,
                             card: {
                                 description: [
@@ -842,6 +847,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
             ],
@@ -883,7 +889,7 @@ export default {
                     lyric: [
                         `that saw this`,
                         {
-                            anchor: `mulch soften asphodel.`,
+                            anchor: `mulch soften asphodel`,
                             card: {
                                 description: [
                                     `We plant`,
@@ -909,6 +915,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
                 {
@@ -939,7 +946,7 @@ export default {
                     lyric: [
                         `lay`,
                         {
-                            anchor: `forgotten amongst the mail.`,
+                            anchor: `forgotten amongst the mail`,
                             card: {
                                 description: `Having recently assaulted my brother in anger over a shredded comic book, I'm now indifferent to the latest issue from my monthly subscription.`,
                                 dotKeys: {
@@ -947,6 +954,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
             ],
@@ -1175,7 +1183,7 @@ export default {
                         },
                         `you'll write this`,
                         {
-                            anchor: `book of yours.`,
+                            anchor: `book of yours`,
                             card: {
                                 description: [
                                     `I wore an eyepatch as a child to correct my`,
@@ -1195,6 +1203,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
                 {

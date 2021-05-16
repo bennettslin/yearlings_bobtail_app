@@ -70,7 +70,7 @@ export default {
                             lyric: [
                                 `"If you're just starting out, you need to decide right now: Either you stick with quality vinyl, or you buy only the bargain bin LPs. You`,
                                 {
-                                    anchor: `can't have both.`,
+                                    anchor: `can't have both`,
                                     todo: true,
                                     card: {
                                         description: `This advice was offered by a friend when I bought a used turntable. And as it turns out, what he had to say about vinyl records holds just as well for life decisions. I learned this the hard way when I saw that my thoughtful deeds were always being negated by my hurtful ones. I couldn't keep two separate selves, where one gets praised for my kindness and the other takes the blame for all my selfish desires. I couldn't be both kinds of people.`,
@@ -80,7 +80,7 @@ export default {
                                         },
                                     },
                                 },
-                                `Because a scratched record will chip a good needle… and a chipped needle will scratch a good record…"`,
+                                `. Because a scratched record will chip a good needle… and a chipped needle will scratch a good record…"`,
                             ],
                         },
                     ],
@@ -358,7 +358,7 @@ export default {
                             lyric: [
                                 `"No, I'll smile because I believe in the`,
                                 {
-                                    anchor: `Big Crunch.`,
+                                    anchor: `Big Crunch`,
                                     properNoun: true,
                                     card: {
                                         description: [
@@ -379,9 +379,9 @@ export default {
                                         },
                                     },
                                 },
-                                `And meanwhile, the universe is a`,
+                                `. And meanwhile, the universe is a`,
                                 {
-                                    anchor: `cyanided box.`,
+                                    anchor: `cyanided box`,
                                     card: {
                                         description: [
                                             `In`,
@@ -403,7 +403,7 @@ export default {
                                         ],
                                     },
                                 },
-                                ` Because if we can't ever be`,
+                                `. Because if we can't ever be`,
                                 {
                                     anchor: `known to be dead,`,
                                     card: {

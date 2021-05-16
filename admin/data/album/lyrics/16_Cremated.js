@@ -338,7 +338,7 @@ export default {
                     lyricRight: [
                         `sinking ship, maybe`,
                         {
-                            anchor: `good for anecdotes.`,
+                            anchor: `good for anecdotes`,
                             todo: true,
                             card: {
                                 description: `Though Miriam was entertained by my character, it wasn't in any way that one should hope for, which blew apart my theory that being interesting is the key to dating. I was to be the oddball ex-boyfriend providing her with a lifetime of amusing tales to share, not the future companion who would someday hear them.`,
@@ -348,6 +348,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
             ],
@@ -401,7 +402,7 @@ export default {
                     lyricLeft: [
                         `nods as`,
                         {
-                            anchor: `she drums her toes.`,
+                            anchor: `she drums her toes`,
                             card: {
                                 description: `Of course, he actually sways because Miriam, who happens to be my all-American goddess, is humming along and tapping the underside of the dashboard with her feet.`,
                                 dotKeys: {
@@ -410,11 +411,12 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                     lyricRight: [
                         `not`,
                         {
-                            anchor: `at each other's throats.`,
+                            anchor: `at each other's throats`,
                             todo: true,
                             card: {
                                 description: [
@@ -436,6 +438,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
             ],
@@ -579,7 +582,7 @@ export default {
                     lyricLeft: [
                         `This swarm pumped and`,
                         {
-                            anchor: `kissed off, she purges up.`,
+                            anchor: `kissed off, she purges up`,
                             todo: true,
                             card: {
                                 description: `Upon bringing me to orgasm, Miriam sucks up the ejaculate and leans over the car door to spit it out. But this innocent act seems to carry a hidden message, that the genes in my defective sperm must never be allowed to mingle with hers.`,
@@ -589,6 +592,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                     lyricRight: [
                         `as`,
@@ -612,7 +616,7 @@ export default {
                         },
                         `his`,
                         {
-                            anchor: `offscreen person dubs.`,
+                            anchor: `offscreen person dubs`,
                             todo: true,
                             card: {
                                 description: [
@@ -629,6 +633,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
             ],
@@ -649,7 +654,7 @@ export default {
                     lyricLeft: [
                         `which she swore when scarcely`,
                         {
-                            anchor: `twenty-one.`,
+                            anchor: `twenty-one`,
                             card: {
                                 description: `Miriam was several years younger than me. So she was still eager to live it up, just as I was thinking it would be nice to settle down.`,
                                 dotKeys: {
@@ -657,6 +662,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                     lyricRight: [
                         {
@@ -683,7 +689,7 @@ export default {
                         },
                         `in care,`,
                         {
-                            anchor: `he's anyone.`,
+                            anchor: `he's anyone`,
                             card: {
                                 description: `After all, it isn't obvious at all to my drunken self that he's the dummy whose words and actions are dictated by his sober half, rather than the other way around.`,
                                 dotKeys: {
@@ -692,6 +698,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
             ],
@@ -985,7 +992,7 @@ export default {
                     lyricLeft: [
                         `this geezer's`,
                         {
-                            anchor: `life support's abortive.`,
+                            anchor: `life support's abortive`,
                             card: {
                                 description: [
                                     `Based on the perceived motives of younger women who date older men, I imagine that Miriam would jump at the first chance to remove me from`,
@@ -1000,6 +1007,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                     lyricRight: [
                         `the`,
@@ -1055,7 +1063,7 @@ export default {
                     lyricLeft: [
                         `a pop, and she`,
                         {
-                            anchor: `pulls the plug.`,
+                            anchor: `pulls the plug`,
                             card: {
                                 description: `The cigarette lighter plug pops out, and Miriam pulls it from the dashboard socket to light her cigarette. Having satisfied me with an orgasmic "pop," she's now less troubled to pull the plug on our relationship.`,
                                 dotKeys: {
@@ -1064,6 +1072,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                     lyricRight: `apology, bold and blunt.`,
                 },
@@ -1128,7 +1137,7 @@ export default {
                     lyricRight: [
                         `hungry carrying this groovy`,
                         {
-                            anchor: `second hump.`,
+                            anchor: `second hump`,
                             todo: true,
                             card: {
                                 description: `A camel stores fat in its hump, allowing it to travel for days without eating. And in trading away Sita's love for the ego boost I gained from humping other women, I was as senseless as a camel who chooses to go hungry just to wear a flashy adornment on his back.`,
@@ -1139,6 +1148,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
             ],

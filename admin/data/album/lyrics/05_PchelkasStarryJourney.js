@@ -71,7 +71,7 @@ export default {
                         lyric: [
                             `But F., that man is the`,
                             {
-                                anchor: `worst nuisance on the beach.`,
+                                anchor: `worst nuisance on the beach`,
                                 todo: true,
                                 card: {
                                     description: [
@@ -96,6 +96,7 @@ export default {
                                     },
                                 },
                             },
+                            `.`,
                         ],
                     },
                 },
@@ -239,7 +240,7 @@ export default {
                     lyric: [
                         `You stowed away`,
                         {
-                            anchor: `beneath your captain bed.`,
+                            anchor: `beneath your captain bed`,
                             todo: true,
                             card: {
                                 description: `I slept in a captain bed that rested atop a dresser on one side, with the other side flush against the wall. By entering through a side panel, I could squeeze into the space underneath and stay hidden.`,
@@ -248,6 +249,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
                 {
@@ -349,7 +351,7 @@ export default {
                     lyric: [
                         `till you`,
                         {
-                            anchor: `learn to kick it back.`,
+                            anchor: `learn to kick it back`,
                             card: {
                                 description: `The most popular kids in middle school were the ones least concerned about being liked. This ran counter to my understanding that anything worth pursuing should be pursued wholeheartedly. And yet, trying things their way didn't make me any more likable either.`,
                                 dotKeys: {
@@ -357,6 +359,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
             ],
@@ -711,7 +714,7 @@ export default {
                     lyric: [
                         `Beyonders bleed the most, their`,
                         {
-                            anchor: `roots unknown to them.`,
+                            anchor: `roots unknown to them`,
                             card: {
                                 description: [
                                     `I didn't know this at the time, but the notion of`,
@@ -731,6 +734,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
                 {
@@ -790,7 +794,7 @@ export default {
                     lyric: [
                         `one they'll find only once we build the`,
                         {
-                            anchor: `mothership.`,
+                            anchor: `mothership`,
                             card: {
                                 description: `To appear legitimate, the letters were peppered with pseudo-scientific terms, as they promised to keep me abreast of ongoing technological developments. This included spacecraft that would allow us to make contact with extraplanetary kin.`,
                                 dotKeys: {
@@ -798,6 +802,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
                 {
@@ -929,7 +934,7 @@ export default {
                     lyric: [
                         `twits daily`,
                         {
-                            anchor: `murdered for their virtue.`,
+                            anchor: `murdered for their virtue`,
                             todo: true,
                             card: {
                                 description: `Like all ordeals, mine was made more bearable because I could tie it to a greater purpose. But ironically, behaving as such only invited more abuse.`,
@@ -938,6 +943,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
                 {
@@ -1111,12 +1117,12 @@ export default {
                                             anchor: `French`,
                                             wiki: `France`,
                                         },
-                                        `learned the practice of dog sledding from the natives. They would command their dog teams to move by shouting`,
+                                        `learned the practice of dog sledding from the natives. They would command their dog teams to move by shouting "`,
                                         {
                                             isItalic: true,
-                                            lyric: `"marche,"`,
+                                            lyric: `marche`,
                                         },
-                                        `meaning "go," which continued in English as`,
+                                        `," meaning "go," which continued in English as`,
                                         {
                                             anchor: `"mush."`,
                                             wiki: `Mushing`,
@@ -1172,7 +1178,7 @@ export default {
                         },
                         `under`,
                         {
-                            anchor: `undying dawn.`,
+                            anchor: `undying dawn`,
                             card: {
                                 description: [
                                     `During summer in the`,
@@ -1189,6 +1195,7 @@ export default {
                                 ],
                             },
                         },
+                        `.`,
                     ],
                 },
                 {
@@ -1211,7 +1218,7 @@ export default {
                     lyric: [
                         `this pack honors only the`,
                         {
-                            anchor: `idiot's rod.`,
+                            anchor: `idiot's rod`,
                             card: {
                                 description: [
                                     `The`,
@@ -1231,6 +1238,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
                 {
@@ -1301,7 +1309,7 @@ export default {
                     lyric: [
                         `I couldn't ditch my wails, I`,
                         {
-                            anchor: `needed the pod.`,
+                            anchor: `needed the pod`,
                             card: {
                                 description: [
                                     `A group of`,
@@ -1317,6 +1325,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
             ],
@@ -1378,7 +1387,7 @@ export default {
                         },
                         `I`,
                         {
-                            anchor: `can't ever return.`,
+                            anchor: `can't ever return`,
                             card: {
                                 description: [
                                     `I'd grown disillusioned with RI Research by this point anyway, as the letters inexplicably began to take on`,
@@ -1393,6 +1402,7 @@ export default {
                                 },
                             },
                         },
+                        `.`,
                     ],
                 },
             ],
