@@ -48,6 +48,11 @@ const _recurseThroughVerse = ({
         if (lyricEntity[ANCHOR]) {
             const anchoredLyric = lyricEntity
 
+            // const regex = /[A-Za-z]/g
+            // if (typeof anchoredLyric.anchor === 'string' && !anchoredLyric.anchor[anchoredLyric.anchor.length - 1].match(regex)) {
+            //     console.error(anchoredLyric.anchor)
+            // }
+
             // Annotation is found, so register it.
             registerAnnotation({
                 verse,

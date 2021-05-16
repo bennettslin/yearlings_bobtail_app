@@ -156,7 +156,7 @@ export default {
                     lyric: [
                         `wondering to himself, who would`,
                         {
-                            anchor: `tie his shoes?`,
+                            anchor: `tie his shoes`,
                             cards: [
                                 {
                                     description: [
@@ -184,6 +184,7 @@ export default {
                                 },
                             ],
                         },
+                        `?`,
                     ],
                 },
                 {

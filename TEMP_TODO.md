@@ -1,7 +1,7 @@
 # Bug
-* Look at routing and storage methods. Are they extraneous, now that we're only accepting exact paths?
 * Terminal punctuation in hyperlinks
     * http://writingspaces.org/wwsg/punctuation-hyperlinks
+    * Already did "tie his shoes"
 
 # TODO
 * Make turning off popups more obvious. (Wade brought this up.)
