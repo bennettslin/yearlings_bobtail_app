@@ -2,7 +2,11 @@ export default [
     // Next.
     {
         taskName: `Promo pages.`,
-        workedHours: 61,
+        workedHours: 67,
+    },
+    {
+        taskName: `Terminal punctuation.`,
+        workedHours: 6,
     },
     {
         taskName: `Audit scenes.`,
