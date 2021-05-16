@@ -54,9 +54,9 @@ export default {
                         `In the final chapter of`,
                         {
                             isItalic: true,
-                            lyric: `Ulysses,`,
+                            lyric: `Ulysses`,
                         },
-                        `the character Molly Bloom daydreams in an uninterrupted`,
+                        `, the character Molly Bloom daydreams in an uninterrupted`,
                         {
                             anchor: `stream of consciousness.`,
                             wiki: `Stream_of_consciousness`,

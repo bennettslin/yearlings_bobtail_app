@@ -39,9 +39,9 @@ export default {
                         `In`,
                         {
                             isItalic: true,
-                            lyric: `Ulysses,`,
+                            lyric: `Ulysses`,
                         },
-                        `Garryowen is a menacing dog owned by a vulgar`,
+                        `, Garryowen is a menacing dog owned by a vulgar`,
                         {
                             anchor: `Irish nationalist.`,
                             wiki: `Irish_nationalism`,
@@ -74,9 +74,9 @@ export default {
                         `Since I took the name of my drunken personality from James Joyce's`,
                         {
                             isItalic: true,
-                            lyric: `Ulysses,`,
+                            lyric: `Ulysses`,
                         },
-                        `I went with the feel of an`,
+                        `, I went with the feel of an`,
                         {
                             anchor: `Irish reel`,
                             wiki: `Reel_(dance)`,

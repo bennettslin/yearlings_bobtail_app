@@ -322,7 +322,7 @@ export default {
                             anchor: `Nas.`,
                             wiki: `Nas`,
                         },
-                        `I hadn't paid much attention to`,
+                        `. I hadn't paid much attention to`,
                         {
                             anchor: `hip hop`,
                             wiki: `Hip_hop`,
@@ -721,9 +721,9 @@ export default {
                                     `In the final scene of `,
                                     {
                                         isItalic: true,
-                                        lyric: `Look Back in Anger,`,
+                                        lyric: `Look Back in Anger`,
                                     },
-                                    `the protagonist Jimmy pictures his wife as a squirrel and sighs, "Poor squirrels," acknowledging that his abusive tirades keep her in a neurotic and submissive state.`,
+                                    `, the protagonist Jimmy pictures his wife as a squirrel and sighs, "Poor squirrels," acknowledging that his abusive tirades keep her in a neurotic and submissive state.`,
                                 ],
                                 dotKeys: {
                                     [REFERENCE]: true,

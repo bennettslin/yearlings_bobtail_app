@@ -49,11 +49,11 @@ export default {
                             {
                                 isItalic: true,
                                 lyric: {
-                                    anchor: `The Man in the High Castle,`,
+                                    anchor: `The Man in the High Castle`,
                                     wiki: `The_Man_in_the_High_Castle`,
                                 },
                             },
-                            `which tells of an alternate history in which the`,
+                            `, which tells of an alternate history in which the`,
                             {
                                 anchor: `Axis powers`,
                                 wiki: `Axis_powers`,
@@ -66,9 +66,9 @@ export default {
                             `Curiously, the characters in this book are engrossed in their own alternate history novel called`,
                             {
                                 isItalic: true,
-                                lyric: `The Grasshopper Lies Heavy,`,
+                                lyric: `The Grasshopper Lies Heavy`,
                             },
-                            `in which the`,
+                            `, in which the`,
                             {
                                 anchor: `Allies`,
                                 wiki: `Allies_of_World_War_II`,
@@ -538,9 +538,9 @@ export default {
                                     `in World War II. In this analogy, Sita and I fight for the Axis. They were history's heroes in`,
                                     {
                                         isItalic: true,
-                                        lyric: `The Man in the High Castle,`,
+                                        lyric: `The Man in the High Castle`,
                                     },
-                                    `after all.`,
+                                    `, after all.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,

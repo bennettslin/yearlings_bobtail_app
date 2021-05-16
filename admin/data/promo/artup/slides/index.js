@@ -147,14 +147,14 @@ export default getFormattedSlideMetadata([
                 `And with the depth of arrangements on`,
                 {
                     isItalic: true,
-                    lyric: `Yearling's Bobtail,`,
+                    lyric: `Yearling's Bobtail`,
                 },
-                `I was also hoping to create the next`,
+                `, I was also hoping to create the next`,
                 {
                     isItalic: true,
-                    lyric: `Pet Sounds.`,
+                    lyric: `Pet Sounds`,
                 },
-                `But without an existing fanbase, I struggled to find bandmates able to tour in support of an album with so many intricate parts to learn. The stripped-down sets we ended up playing just didn't convey what it was meant to be.`,
+                `. But without an existing fanbase, I struggled to find bandmates able to tour in support of an album with so many intricate parts to learn. The stripped-down sets we ended up playing just didn't convey what it was meant to be.`,
             ],
         ],
     },

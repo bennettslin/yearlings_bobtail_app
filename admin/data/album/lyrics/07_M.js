@@ -995,9 +995,9 @@ export default {
                                     `Recognizing that what I wanted was someone like Mara, and taking stock of what I needed to fulfill this wish, I decided to return to what I do best. I would hole up in emotional seclusion, this time to work on an ambitious magnum opus. My next five-year plan would have me write all the lyrics, score all the parts, and play all the instruments on`,
                                     {
                                         isItalic: true,
-                                        lyric: `Bobtail,`,
+                                        lyric: `Bobtail`,
                                     },
-                                    `now conceived as the`,
+                                    `, now conceived as the`,
                                     {
                                         isItalic: true,
                                         lyric: `Ulysses`,

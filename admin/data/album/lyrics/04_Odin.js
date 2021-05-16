@@ -1015,9 +1015,9 @@ export default {
                                     `is a female nymph and the Paracelsian elemental of water. The term is derived from the Latin word`,
                                     {
                                         isItalic: true,
-                                        lyric: `unda,`,
+                                        lyric: `unda`,
                                     },
-                                    `meaning "wave."`,
+                                    `, meaning "wave."`,
                                 ],
                             },
                         },

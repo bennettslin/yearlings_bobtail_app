@@ -45,9 +45,9 @@ export default {
                         `bottles he collected and to his seeming a bit cuckoo and`,
                         {
                             isItalic: true,
-                            lyric: `loco,`,
+                            lyric: `loco`,
                         },
-                        `or "crazy" in`,
+                        `, or "crazy" in`,
                         {
                             anchor: `Spanish.`,
                             wiki: `Spanish_language`,

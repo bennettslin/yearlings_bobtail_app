@@ -788,11 +788,11 @@ export default {
                                         {
                                             isItalic: true,
                                             lyric: {
-                                                anchor: `Ramayana,`,
+                                                anchor: `Ramayana`,
                                                 wiki: `Ramayana`,
                                             },
                                         },
-                                        `an epic poem of ancient India. The epic recounts the marriage of Rama to`,
+                                        `, an epic poem of ancient India. The epic recounts the marriage of Rama to`,
                                         {
                                             anchor: `Sita,`,
                                             wiki: `Sita`,
@@ -949,14 +949,14 @@ export default {
                                     `the renowned author of the`,
                                     {
                                         isItalic: true,
-                                        lyric: `Ramayana,`,
+                                        lyric: `Ramayana`,
                                     },
-                                    `began his early life as Ratnakar, a highway bandit. Desperate to repent, he sought counsel from a passing sage, who told him to recite the holy name of Rama. Ratnakar was so sinful, however, that he could only repeat the word`,
+                                    `, began his early life as Ratnakar, a highway bandit. Desperate to repent, he sought counsel from a passing sage, who told him to recite the holy name of Rama. Ratnakar was so sinful, however, that he could only repeat the word`,
                                     {
                                         isItalic: true,
-                                        lyric: `mara,`,
+                                        lyric: `mara`,
                                     },
-                                    `or "death." Still, the grace of Rama caused the syllables to shift over time, until Ratnakar was finally chanting Rama's name.`,
+                                    `, or "death." Still, the grace of Rama caused the syllables to shift over time, until Ratnakar was finally chanting Rama's name.`,
                                 ],
                             },
                         },
@@ -1384,8 +1384,9 @@ export default {
                                 `great`,
                                 {
                                     isItalic: true,
-                                    lyric: `Bildungsroman,`,
+                                    lyric: `Bildungsroman`,
                                 },
+                                `,`,
                             ],
                             card: {
                                 description: [

@@ -746,9 +746,9 @@ export default {
                                     `As I continued to work on`,
                                     {
                                         isItalic: true,
-                                        lyric: `Bobtail,`,
+                                        lyric: `Bobtail`,
                                     },
-                                    `my night terrors grew less frequent, and my misery subsided. Recognizing this boon for what it was, I became further subsumed in my ambitions, which made me even more inattentive to Sita's needs.`,
+                                    `, my night terrors grew less frequent, and my misery subsided. Recognizing this boon for what it was, I became further subsumed in my ambitions, which made me even more inattentive to Sita's needs.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,

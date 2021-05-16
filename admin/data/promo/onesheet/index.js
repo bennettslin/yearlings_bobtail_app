@@ -6,9 +6,9 @@ export default getFormattedSlideMetadata({
             `Can a rock album ever win the Pulitzer Prize? It might seem unlikely. Today's rock music is loved for subjective qualities that don't spark discussion among literary scholars and musicologists the way hip hop can. But the Bobtail Yearlings are here to ask, why not try? And so they created`,
             {
                 isItalic: true,
-                lyric: `Yearling's Bobtail,`,
+                lyric: `Yearling's Bobtail`,
             },
-            `an ambitious multimedia project that merges a double album with an audio webcomic, in the belief that rock artists can aspire for more than popular appeal and critical acclaim. They can create classics worthy of academic study for generations to come.`,
+            `, an ambitious multimedia project that merges a double album with an audio webcomic, in the belief that rock artists can aspire for more than popular appeal and critical acclaim. They can create classics worthy of academic study for generations to come.`,
         ],
         [
             `Written and recorded by singer Bennett Lin,`,
@@ -27,8 +27,9 @@ export default getFormattedSlideMetadata({
             `and`,
             {
                 isItalic: true,
-                lyric: `Village Green Preservation Society,`,
+                lyric: `Village Green Preservation Society`,
             },
+            `,`,
             {
                 isItalic: true,
                 lyric: `Yearling's Bobtail`,

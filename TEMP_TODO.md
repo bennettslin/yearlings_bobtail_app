@@ -2,6 +2,7 @@
 * Terminal punctuation in hyperlinks?
     * http://writingspaces.org/wwsg/punctuation-hyperlinks
 * Audit text.
+* Do not include terminal punctuation in italics.
 
 # TODO
 * Make turning off popups more obvious. (Wade brought this up.)

@@ -795,9 +795,9 @@ export default {
                         `After releasing`,
                         {
                             isItalic: true,
-                            lyric: `Yearling's Bobtail,`,
+                            lyric: `Yearling's Bobtail`,
                         },
-                        `I was confused by the lack of interest from the indie labels and press. So I wrote a songwriting lesson book called`,
+                        `, I was confused by the lack of interest from the indie labels and press. So I wrote a songwriting lesson book called`,
                         {
                             isItalic: true,
                             lyric: `Bobtail Method`,

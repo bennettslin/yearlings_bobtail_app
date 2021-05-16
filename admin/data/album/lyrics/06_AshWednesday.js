@@ -148,11 +148,11 @@ export default {
                                     {
                                         isItalic: true,
                                         lyric: {
-                                            anchor: `Ulysses,`,
+                                            anchor: `Ulysses`,
                                             wiki: `Ulysses_(novel)`,
                                         },
                                     },
-                                    `which Catherine was reading at the time. My playful comment about not reading probably doomed the relationship, as Catherine figured that an illiterate boyfriend would surely be the death of her.`,
+                                    `, which Catherine was reading at the time. My playful comment about not reading probably doomed the relationship, as Catherine figured that an illiterate boyfriend would surely be the death of her.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -636,9 +636,9 @@ export default {
                                     `After Catherine cleared her life of me, I tried to win her back by reading lots of books, beginning with the ones we'd discussed. Catherine had mentioned that "Famous Blue Raincoat" echoes a similar theme of purification through betrayal found in Cohen's novel`,
                                     {
                                         isItalic: true,
-                                        lyric: `Beautiful Losers,`,
+                                        lyric: `Beautiful Losers`,
                                     },
-                                    `particularly in its line, "Did you ever go clear?" (I later found out that`,
+                                    `, particularly in its line, "Did you ever go clear?" (I later found out that`,
                                     {
                                         anchor: `"going clear"`,
                                         wiki: `Clear_(Scientology)`,
@@ -671,9 +671,9 @@ export default {
                                     `saint. Her story figures prominently in`,
                                     {
                                         isItalic: true,
-                                        lyric: `Beautiful Losers,`,
+                                        lyric: `Beautiful Losers`,
                                     },
-                                    `so I always assumed that "going clear" was a reference to the legend that her`,
+                                    `, so I always assumed that "going clear" was a reference to the legend that her`,
                                     {
                                         anchor: `smallpox`,
                                         wiki: `Smallpox`,

@@ -107,11 +107,11 @@ export default {
                                         {
                                             isItalic: true,
                                             lyric: {
-                                                anchor: `Finnegans Wake,`,
+                                                anchor: `Finnegans Wake`,
                                                 wiki: `Finnegans_Wake`,
                                             },
                                         },
-                                        `James Joyce's ambitious final novel, opens with the line, "riverrun, past Eve and Adam's." So I figured this song could start there as well.`,
+                                        `, James Joyce's ambitious final novel, opens with the line, "riverrun, past Eve and Adam's." So I figured this song could start there as well.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -274,9 +274,9 @@ export default {
                         `To be honest, I never got past the first fifty pages of`,
                         {
                             isItalic: true,
-                            lyric: `Finnegans Wake.`,
+                            lyric: `Finnegans Wake`,
                         },
-                        `Still, I took note of how Joyce used literary puns to create multiple layers of meaning within a dreamlike setting. It seemed like the perfect device to convey a Robitussin trip, during which worlds of meaning build up and fade within the briefest of moments, and everything feels at once epic and unreal.`,
+                        `. Still, I took note of how Joyce used literary puns to create multiple layers of meaning within a dreamlike setting. It seemed like the perfect device to convey a Robitussin trip, during which worlds of meaning build up and fade within the briefest of moments, and everything feels at once epic and unreal.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -992,8 +992,9 @@ export default {
                                     `is a ritual drink prepared from an unknown botanical substance believed by scholars to have psychedelic properties. The Avesta refers to it as`,
                                     {
                                         isItalic: true,
-                                        lyric: `haoma.`,
+                                        lyric: `haoma`,
                                     },
+                                    `.`,
                                 ],
                             },
                         },

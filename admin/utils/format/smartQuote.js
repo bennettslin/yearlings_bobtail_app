@@ -1,3 +1,4 @@
+import { hasSpecialCharacterAtIndex } from '../../../app/helpers/format'
 import { isString } from '../../../app/helpers/general'
 
 const QUOTES_CONFIGS = [
@@ -87,6 +88,11 @@ const _recurseForSmartQuoteFormat = textEntity => {
             newEntity[key] = _getIsLocationPath(key) ?
                 textEntity[key] :
                 _recurseForSmartQuoteFormat(textEntity[key])
+            if (key === 'anchor') {
+                if (isString(textEntity.anchor) && hasSpecialCharacterAtIndex(textEntity.anchor, textEntity.anchor.length - 1)) {
+                    console.error(textEntity.anchor)
+                }
+            }
         }
 
         return newEntity

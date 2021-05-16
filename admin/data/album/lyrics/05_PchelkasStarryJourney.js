@@ -84,11 +84,11 @@ export default {
                                         {
                                             isItalic: true,
                                             lyric: {
-                                                anchor: `Beautiful Losers,`,
+                                                anchor: `Beautiful Losers`,
                                                 wiki: `Beautiful_Losers`,
                                             },
                                         },
-                                        `the character F. tires of getting bullied at the beach and signs up for the Charles Axis bodybuilding course advertised in a comic book. Only then does he discover that it's Charles Axis who bullies him. I thought this passage perfectly captured the comic absurdity of being in a mail-order cult.`,
+                                        `, the character F. tires of getting bullied at the beach and signs up for the Charles Axis bodybuilding course advertised in a comic book. Only then does he discover that it's Charles Axis who bullies him. I thought this passage perfectly captured the comic absurdity of being in a mail-order cult.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
