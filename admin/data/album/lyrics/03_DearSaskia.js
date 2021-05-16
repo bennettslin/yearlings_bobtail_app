@@ -269,7 +269,7 @@ export default {
                             },
                         },
                         {
-                            anchor: `amber eyes—`,
+                            anchor: `amber eyes`,
                             card: {
                                 description: [
                                     `Sasha's eyes were of an amber color. But`,
@@ -284,6 +284,7 @@ export default {
                                 },
                             },
                         },
+                        `—`,
                     ],
                 },
                 {
@@ -309,7 +310,7 @@ export default {
                         },
                         `, a`,
                         {
-                            anchor: `pet petrified—`,
+                            anchor: `pet petrified`,
                             card: {
                                 description: [
                                     `Petrified by the thought of losing Sasha, I felt like a`,
@@ -325,6 +326,7 @@ export default {
                                 },
                             },
                         },
+                        `—`,
                     ],
                 },
                 {

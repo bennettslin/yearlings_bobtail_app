@@ -1359,7 +1359,7 @@ export default {
                     mixTime: `1:44:15.93`,
                     lyric: [
                         {
-                            anchor: `herows— ourauras left—`,
+                            anchor: `herows— ourauras left`,
                             cards: [
                                 {
                                     description: `Wishing to respect the dead, we've left "our auras" as history's "heroes" behind in the car.`,
@@ -1389,7 +1389,7 @@ export default {
                                 },
                             ],
                         },
-                        `to`,
+                        `— to`,
                         {
                             anchor: `Audamn's grave`,
                             properNoun: true,

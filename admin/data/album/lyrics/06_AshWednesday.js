@@ -637,7 +637,7 @@ export default {
                             },
                         },
                         {
-                            anchor: `went clear—`,
+                            anchor: `went clear`,
                             // Reconcile that part of clearing me from her life.
                             todo: true,
                             card: {
@@ -664,8 +664,9 @@ export default {
                                 },
                             },
                         },
+                        `—`,
                         {
-                            anchor: `my Tekakwitha—`,
+                            anchor: `my Tekakwitha`,
                             card: {
                                 description: [
                                     {
@@ -694,7 +695,7 @@ export default {
                                 },
                             },
                         },
-
+                        `—`,
                     ],
                 },
                 {

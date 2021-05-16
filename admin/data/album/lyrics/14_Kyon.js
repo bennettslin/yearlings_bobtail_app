@@ -352,7 +352,7 @@ export default {
                     mixTime: `1:09:00.72`,
                     lyric: [
                         {
-                            anchor: `I'll be stronger—`,
+                            anchor: `I'll be stronger`,
                             card: {
                                 description: `Sita was always promising to "get better," in her words. It was a weird trick I'd unconsciously played on her, as if all the blame didn't lie squarely with me.`,
                                 dotKeys: {
@@ -361,7 +361,7 @@ export default {
                                 },
                             },
                         },
-                        `not a bother, more modest, I promise—`,
+                        `— not a bother, more modest, I promise—`,
                     ],
                 },
                 {

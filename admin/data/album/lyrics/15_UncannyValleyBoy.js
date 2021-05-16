@@ -529,16 +529,28 @@ export default {
             ],
             sideCard: [
                 {
-                    lyric: `Oh, bastard ingrate!`,
+                    lyric: {
+                        isItalic: true,
+                        lyric: `Oh, bastard ingrate!`,
+                    },
                 },
                 {
-                    lyric: `Some nights you wake,`,
+                    lyric: {
+                        isItalic: true,
+                        lyric: `Some nights you wake,`,
+                    },
                 },
                 {
-                    lyric: `climb and survey`,
+                    lyric: {
+                        isItalic: true,
+                        lyric: `climb and survey`,
+                    },
                 },
                 {
-                    lyric: `the houses you've betrayed.`,
+                    lyric: {
+                        isItalic: true,
+                        lyric: `the houses you've betrayed.`,
+                    },
                 },
             ],
             unitDot: {
@@ -652,28 +664,34 @@ export default {
             sideCard: [
                 {
                     lyric: {
-                        anchor: `Scattered your beans`,
-                        card: {
-                            description: [
-                                `The nightmare began with me scattering magic beans all around the neighborhood. It was clearly based on the English`,
-                                {
-                                    anchor: `fairy tale`,
-                                    wiki: `Fairy_tale`,
+                        isItalic: true,
+                        lyric: {
+                            anchor: `Scattered your beans`,
+                            card: {
+                                description: [
+                                    `The nightmare began with me scattering magic beans all around the neighborhood. It was clearly based on the English`,
+                                    {
+                                        anchor: `fairy tale`,
+                                        wiki: `Fairy_tale`,
+                                    },
+                                    {
+                                        anchor: `"Jack and the Beanstalk,"`,
+                                        wiki: `Jack_and_the_Beanstalk`,
+                                    },
+                                    `though I'm not sure why.`,
+                                ],
+                                dotKeys: {
+                                    [NARRATIVE]: true,
                                 },
-                                {
-                                    anchor: `"Jack and the Beanstalk,"`,
-                                    wiki: `Jack_and_the_Beanstalk`,
-                                },
-                                `though I'm not sure why.`,
-                            ],
-                            dotKeys: {
-                                [NARRATIVE]: true,
                             },
                         },
                     },
                 },
                 {
-                    lyric: `over suburbia…`,
+                    lyric: {
+                        isItalic: true,
+                        lyric: `over suburbia…`,
+                    },
                 },
             ],
         },
@@ -1276,41 +1294,53 @@ export default {
             ],
             sideCard: [
                 {
-                    lyric: `Through tatters of sky,`,
+                    lyric: {
+                        isItalic: true,
+                        lyric: `Through tatters of sky,`,
+                    },
                 },
                 {
-                    lyric: [
-                        `their`,
-                        {
-                            anchor: `sun tinkles light`,
-                            todo: true,
-                            card: {
-                                description: `In the nightmare, I was now ruler of the neighborhood. I would shower my subjects in urine, their sole means of subsistence. In hindsight, my brain was probably telling me to wake up and use the bathroom.`,
-                                dotKeys: {
-                                    [NARRATIVE]: true,
-                                    [OBSERVATION]: true,
+                    lyric: {
+                        isItalic: true,
+                        lyric: [
+                            `their`,
+                            {
+                                anchor: `sun tinkles light`,
+                                todo: true,
+                                card: {
+                                    description: `In the nightmare, I was now ruler of the neighborhood. I would shower my subjects in urine, their sole means of subsistence. In hindsight, my brain was probably telling me to wake up and use the bathroom.`,
+                                    dotKeys: {
+                                        [NARRATIVE]: true,
+                                        [OBSERVATION]: true,
+                                    },
                                 },
                             },
-                        },
-                    ],
+                        ],
+                    },
                 },
                 {
-                    lyric: `in needling chimes`,
+                    lyric: {
+                        isItalic: true,
+                        lyric: `in needling chimes`,
+                    },
                 },
                 {
-                    lyric: [
-                        `that`,
-                        {
-                            anchor: `weave through the vines`,
-                            card: {
-                                description: `The magic beans had sprouted into thick, twisting vines that blocked out the sky as far as my helpless subjects could see.`,
-                                dotKeys: {
-                                    [NARRATIVE]: true,
+                    lyric: {
+                        isItalic: true,
+                        lyric: [
+                            `that`,
+                            {
+                                anchor: `weave through the vines`,
+                                card: {
+                                    description: `The magic beans had sprouted into thick, twisting vines that blocked out the sky as far as my helpless subjects could see.`,
+                                    dotKeys: {
+                                        [NARRATIVE]: true,
+                                    },
                                 },
                             },
-                        },
-                        `,`,
-                    ],
+                            `,`,
+                        ],
+                    },
                 },
             ],
         },
@@ -1341,7 +1371,7 @@ export default {
                                     isItalic: true,
                                     lyric: `Bobtail`,
                                 },
-                                `'s sake,`,
+                                `'s sake`,
                             ],
                             todo: true,
                             card: {
@@ -1352,6 +1382,7 @@ export default {
                                 },
                             },
                         },
+                        `,`,
                     ],
                 },
             ],
@@ -1366,31 +1397,37 @@ export default {
             ],
             sideCard: [
                 {
-                    lyric: `cast on your peons,`,
+                    lyric: {
+                        isItalic: true,
+                        lyric: `cast on your peons,`,
+                    },
                 },
                 {
-                    lyric: [
-                        {
-                            anchor: `old and subservient`,
-                            todo: true,
-                            cards: [
-                                {
-                                    description: `It wasn't until college that I learned to appreciate the sacrifices my parents had made for me and my siblings to lead better lives than their own. But knowing that this awareness came about through assigned coursework, rather than my own lived experiences, only added to my guilt.`,
-                                    dotKeys: {
-                                        [BACKSTORY]: true,
+                    lyric: {
+                        isItalic: true,
+                        lyric: [
+                            {
+                                anchor: `old and subservient`,
+                                todo: true,
+                                cards: [
+                                    {
+                                        description: `It wasn't until college that I learned to appreciate the sacrifices my parents had made for me and my siblings to lead better lives than their own. But knowing that this awareness came about through assigned coursework, rather than my own lived experiences, only added to my guilt.`,
+                                        dotKeys: {
+                                            [BACKSTORY]: true,
+                                        },
                                     },
-                                },
-                                {
-                                    description: `Among those I ruled over were my parents, now feeble and senile after a lifetime of following their "son's" bidding.`,
-                                    dotKeys: {
-                                        [NARRATIVE]: true,
-                                        [PUN]: true,
+                                    {
+                                        description: `Among those I ruled over were my parents, now feeble and senile after a lifetime of following their "son's" bidding.`,
+                                        dotKeys: {
+                                            [NARRATIVE]: true,
+                                            [PUN]: true,
+                                        },
                                     },
-                                },
-                            ],
-                        },
-                        `.`,
-                    ],
+                                ],
+                            },
+                            `.`,
+                        ],
+                    },
                 },
             ],
         },
@@ -1475,57 +1512,63 @@ export default {
             ],
             sideCard: [
                 {
-                    lyric: [
-                        {
-                            anchor: `Rama, Rama`,
-                            properNoun: true,
-                            card: {
-                                description: `Like Valmiki as he chanted Rama's name, I desperately want to be good again.`,
-                                dotKeys: {
-                                    [NARRATIVE]: true,
+                    lyric: {
+                        isItalic: true,
+                        lyric: [
+                            {
+                                anchor: `Rama`,
+                                properNoun: true,
+                                card: {
+                                    description: `Like Valmiki as he chanted Rama's name, I desperately want to be good again.`,
+                                    dotKeys: {
+                                        [NARRATIVE]: true,
+                                    },
                                 },
                             },
-                        },
-                        `…`,
-                    ],
+                            `, Rama…`,
+                        ],
+                    },
                 },
             ],
             sideSubCard: [
                 {
-                    lyric: [
-                        `…`,
-                        {
-                            anchor: `Maranatha`,
-                            todo: true,
-                            card: {
-                                description: [
-                                    `In my chant, however, the syllables gradually shift to form the holy name of Mara. Unlike Valmiki, who embraced Eastern spirituality, I find salvation in the embrace of Western women. And so my chant ends here with an expression of Western faith. In the`,
-                                    {
-                                        anchor: `New Testament,`,
-                                        wiki: `New_Testament`,
-                                    },
-                                    {
-                                        isItalic: true,
-                                        lyric: {
-                                            anchor: `maranatha`,
-                                            wiki: `Maranatha`,
+                    lyric: {
+                        isItalic: true,
+                        lyric: [
+                            `…`,
+                            {
+                                anchor: `Maranatha`,
+                                todo: true,
+                                card: {
+                                    description: [
+                                        `In my chant, however, the syllables gradually shift to form the holy name of Mara. Unlike Valmiki, who embraced Eastern spirituality, I find salvation in the embrace of Western women. And so my chant ends here with an expression of Western faith. In the`,
+                                        {
+                                            anchor: `New Testament,`,
+                                            wiki: `New_Testament`,
                                         },
+                                        {
+                                            isItalic: true,
+                                            lyric: {
+                                                anchor: `maranatha`,
+                                                wiki: `Maranatha`,
+                                            },
+                                        },
+                                        `is`,
+                                        {
+                                            anchor: `Aramaic`,
+                                            wiki: `Aramaic`,
+                                        },
+                                        `for "our Lord has come."`,
+                                    ],
+                                    dotKeys: {
+                                        [NARRATIVE]: true,
+                                        [OBSERVATION]: true,
                                     },
-                                    `is`,
-                                    {
-                                        anchor: `Aramaic`,
-                                        wiki: `Aramaic`,
-                                    },
-                                    `for "our Lord has come."`,
-                                ],
-                                dotKeys: {
-                                    [NARRATIVE]: true,
-                                    [OBSERVATION]: true,
                                 },
                             },
-                        },
-                        `!`,
-                    ],
+                            `!`,
+                        ],
+                    },
                 },
             ],
             unitDot: {

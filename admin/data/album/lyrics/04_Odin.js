@@ -1019,7 +1019,7 @@ export default {
                         },
                         `that come undone by`,
                         {
-                            anchor: `undine—`,
+                            anchor: `undine`,
                             card: {
                                 description: [
                                     `The`,
@@ -1036,6 +1036,7 @@ export default {
                                 ],
                             },
                         },
+                        `—`,
                     ],
                 },
                 {
