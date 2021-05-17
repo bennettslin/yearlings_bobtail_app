@@ -23,7 +23,12 @@ const ARRAY_KEYS = {
 const _appendWithSpaceIfNeeded = text => {
     // Do not append a space for these exceptions.
     if (
-        text.endsWith(`"`) ||
+        // It's an opening quote for a first word.
+        text === `"` ||
+
+        // It's an opening quote for a middle word.
+        text.endsWith(' "') ||
+
         text.endsWith(`…`)
     ) {
         return text

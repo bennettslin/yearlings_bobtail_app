@@ -1,7 +1,5 @@
 # Bug
-* Fix "Lenore." Edgar
-* Fix "What, wit man," putting
-* Can't click out of promo popup."
+* Can't click out of any popup from overlay.
 
 # TODO
 * Make turning off popups more obvious. (Wade brought this up.)
