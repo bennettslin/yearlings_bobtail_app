@@ -1261,7 +1261,7 @@ export default {
                     mixTime: `1:28:03.75`,
                     lyric: [
                         {
-                            anchor: `Pour sod, fourfeit tundr's`,
+                            anchor: `Pour sod, fourfeit tundr`,
                             card: {
                                 description: `In the car, Howie and Tomer swap tales from their high school days, bemoaning the "poor sod" who had sod poured on him from "four feet under."`,
                                 dotKeys: {
@@ -1270,6 +1270,7 @@ export default {
                                 },
                             },
                         },
+                        `'s`,
                         {
                             anchor: `Siburial plains`,
                             properNoun: true,

@@ -601,7 +601,7 @@ export default {
                                             anchor: `birth control`,
                                             wiki: `Birth_control`,
                                         },
-                                        `.We never needed them since Catherine had vowed not to engage in`,
+                                        `. We never needed them since Catherine had vowed not to engage in`,
                                         {
                                             anchor: `premarital sex`,
                                             wiki: `Premarital_sex`,

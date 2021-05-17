@@ -131,10 +131,13 @@ export default {
                                         },
                                         `'s`,
                                         {
-                                            anchor: `A Christmas Carol`,
-                                            wiki: `A_Christmas_Carol`,
+                                            isItalic: true,
+                                            lyric: {
+                                                anchor: `A Christmas Carol`,
+                                                wiki: `A_Christmas_Carol`,
+                                            },
                                         },
-                                        `,my parents invite me on a magical night journey to witness the ordeals of my past, my self-serving ways at present, and the emotional devastation soon to come of it all.`,
+                                        `, my parents invite me on a magical night journey to witness the ordeals of my past, my self-serving ways at present, and the emotional devastation soon to come of it all.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,

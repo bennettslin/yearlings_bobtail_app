@@ -1014,7 +1014,7 @@ export default {
                                     isItalic: true,
                                     lyric: `Bobtail`,
                                 },
-                                `'s words—`,
+                                `'s words`,
                             ],
                             properNoun: true,
                             card: {
@@ -1036,6 +1036,7 @@ export default {
                                 },
                             },
                         },
+                        `—`,
                     ],
                 },
                 {
