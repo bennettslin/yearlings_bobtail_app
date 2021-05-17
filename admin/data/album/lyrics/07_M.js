@@ -57,43 +57,46 @@ export default {
             subVerse: [
                 {
                     mixTime: `0:35:03.13`,
-                    lyricCentre: [
-                        {
-                            anchor: `Maravijaya`,
-                            properNoun: true,
-                            card: {
-                                description: [
-                                    {
-                                        isItalic: true,
-                                        lyric: {
-                                            anchor: `Maravijaya`,
-                                            wiki: `Maravijaya_attitude`,
+                    lyricCentre: {
+                        isItalic: true,
+                        lyric: [
+                            {
+                                anchor: `Maravijaya`,
+                                properNoun: true,
+                                card: {
+                                    description: [
+                                        {
+                                            isItalic: true,
+                                            lyric: {
+                                                anchor: `Maravijaya`,
+                                                wiki: `Maravijaya_attitude`,
+                                            },
                                         },
+                                        `, or "victory over Mara" in`,
+                                        {
+                                            anchor: `Sanskrit`,
+                                            wiki: `Sanskrit`,
+                                        },
+                                        `, is the seated posture of the`,
+                                        {
+                                            anchor: `Buddha`,
+                                            wiki: `Gautama_Buddha`,
+                                        },
+                                        `as he fends off temptation from the demon`,
+                                        {
+                                            anchor: `Mara`,
+                                            wiki: `Mara_(demon)`,
+                                        },
+                                        `, who personifies death. Like the Buddha, I had to summon otherworldly reserves of self-denial to get through band practice after Jacob and Mara started dating.`,
+                                    ],
+                                    dotKeys: {
+                                        [OBSERVATION]: true,
                                     },
-                                    `, or "victory over Mara" in`,
-                                    {
-                                        anchor: `Sanskrit`,
-                                        wiki: `Sanskrit`,
-                                    },
-                                    `, is the seated posture of the`,
-                                    {
-                                        anchor: `Buddha`,
-                                        wiki: `Gautama_Buddha`,
-                                    },
-                                    `as he fends off temptation from the demon`,
-                                    {
-                                        anchor: `Mara`,
-                                        wiki: `Mara_(demon)`,
-                                    },
-                                    `, who personifies death. Like the Buddha, I had to summon otherworldly reserves of self-denial to get through band practice after Jacob and Mara started dating.`,
-                                ],
-                                dotKeys: {
-                                    [OBSERVATION]: true,
                                 },
                             },
-                        },
-                        `…`,
-                    ],
+                            `…`,
+                        ],
+                    },
                 },
             ],
             unitDot: {

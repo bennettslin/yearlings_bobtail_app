@@ -56,19 +56,22 @@ export default {
             mainVerses: [
                 {
                     mixTime: null,
-                    lyricCentre: [
-                        {
-                            anchor: `Or another`,
-                            card: {
-                                description: `Even if I can't be with Mara, I can still be with someone like her. Namely, Miriam.`,
-                                dotKeys: {
-                                    [NARRATIVE]: true,
-                                    [OBSERVATION]: true,
+                    lyricCentre: {
+                        isItalic: true,
+                        lyric: [
+                            {
+                                anchor: `Or another`,
+                                card: {
+                                    description: `Even if I can't be with Mara, I can still be with someone like her. Namely, Miriam.`,
+                                    dotKeys: {
+                                        [NARRATIVE]: true,
+                                        [OBSERVATION]: true,
+                                    },
                                 },
                             },
-                        },
-                        `…`,
-                    ],
+                            `…`,
+                        ],
+                    },
                 },
             ],
             unitDot: {

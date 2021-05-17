@@ -65,7 +65,10 @@ export default {
             mainVerses: [
                 {
                     mixTime: null,
-                    lyricCentre: `Mr. Odin died today.`,
+                    lyricCentre: {
+                        isItalic: true,
+                        lyric: `Mr. Odin died today.`,
+                    },
                 },
             ],
         },

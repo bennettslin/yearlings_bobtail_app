@@ -69,7 +69,7 @@ export default {
                     lyric: {
                         isItalic: true,
                         lyric: [
-                            `But F., that man is the`,
+                            `"But F., that man is the`,
                             {
                                 anchor: `worst nuisance on the beach`,
                                 todo: true,
@@ -96,7 +96,7 @@ export default {
                                     },
                                 },
                             },
-                            `.`,
+                            `."`,
                         ],
                     },
                 },

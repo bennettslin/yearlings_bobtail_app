@@ -17,11 +17,12 @@ const PromoLink = () => {
             <Anchor
                 neverDeselects
                 {...{
-                    text: 'promo homepage!',
+                    text: 'promo homepage',
                     analyticsLabel: 'promo',
                     handleAnchorClick,
                 }}
             />
+            {`!`}
         </div>
     )
 }

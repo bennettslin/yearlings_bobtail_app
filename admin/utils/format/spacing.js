@@ -12,6 +12,7 @@ const ARRAY_KEYS = {
     body: true,
     footnote: true,
     description: true,
+    overview: true,
     [LYRIC]: true,
     [LYRIC_LEFT]: true,
     [LYRIC_CENTRE]: true,

@@ -1,8 +1,7 @@
 # Bug
-* Audit text.
-* Do not include terminal punctuation in italics.
 * Fix "Lenore." Edgar
 * Fix "What, wit man," putting
+* Can't click out of promo popup."
 
 # TODO
 * Make turning off popups more obvious. (Wade brought this up.)
