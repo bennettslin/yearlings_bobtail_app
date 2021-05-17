@@ -1,5 +1,5 @@
 # Bug
-* Can't click out of any popup from overlay.
+* Can't click on popup, then mouse up on overlay. Minor issue?
 
 # TODO
 * Make turning off popups more obvious. (Wade brought this up.)

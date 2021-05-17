@@ -6,7 +6,7 @@ export default [
     },
     {
         taskName: `Terminal punctuation.`,
-        workedHours: 6,
+        workedHours: 14,
     },
     {
         taskName: `Audit scenes.`,
