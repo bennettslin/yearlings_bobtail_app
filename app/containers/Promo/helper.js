@@ -8,7 +8,7 @@ export const getHelmetTitleForPromoKey = promoKey => {
     let pageTitle
     switch (promoKey) {
         case ARTUP_SUBPATH:
-            pageTitle = `Artup presentation`
+            pageTitle = `"Artup" presentation`
             break
         case ONESHEET_SUBPATH:
             pageTitle = `Onesheet`

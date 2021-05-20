@@ -212,7 +212,7 @@ export default getFormattedSlideMetadata([
         title: `Bet on the Bobtail Yearlings`,
         body: [
             {
-                paragraph: `Let's wrap this up! We've seen that as the Digital Revolution got underway, investors came to learn that startups aren't stores. What if we can kickstart the next musical revolution just by learning that artups aren't like indie artists?`,
+                paragraph: `Let's wrap this up! We've seen that as the Digital Revolution got underway, investors came to learn that startups aren't like stores. What if we can kickstart the next musical revolution just by learning that artups aren't like indie artists?`,
             },
             {
                 paragraph: [

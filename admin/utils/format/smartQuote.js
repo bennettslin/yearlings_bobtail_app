@@ -28,7 +28,6 @@ const _replaceCharacterAtIndex = (string, index, character) => (
 )
 
 const _replaceStraightWithSmartQuotes = text => {
-
     QUOTES_CONFIGS.forEach(({
         straightQuote,
         openingSmartQuote,
@@ -47,6 +46,9 @@ const _replaceStraightWithSmartQuotes = text => {
                      * because of "Bobtail's" in Kyon.
                      */
                     text[indexOfCharacter + 1] !== 's' &&
+
+                    // And the second character also isn't a colon.
+                    text[indexOfCharacter + 1] !== ':' &&
 
                     // And the second character also isn't a space.
                     text[indexOfCharacter + 1] !== ' '

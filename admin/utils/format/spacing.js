@@ -12,6 +12,7 @@ const ARRAY_KEYS = {
     body: true,
     footnote: true,
     description: true,
+    list: true,
     paragraph: true,
     overview: true,
     [LYRIC]: true,
@@ -43,6 +44,7 @@ const _prependWithSpaceIfNeeded = text => {
     if (
         text.startsWith(`'s`) ||
         text.startsWith(`" `) ||
+        text.startsWith(`":`) ||
         text.startsWith(`'`) ||
         hasSpecialCharacterAtIndex(text, 0)
     ) {

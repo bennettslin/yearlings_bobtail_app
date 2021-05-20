@@ -1,9 +1,10 @@
+import { getFormattedSlideMetadata } from '../helpers/slide'
 import {
     ARTUP_SUBPATH,
     ONESHEET_SUBPATH,
 } from '../../../../app/constants/routing'
 
-export default ({
+export default getFormattedSlideMetadata({
     body: ([
         {
             title: 'Press material',
@@ -15,7 +16,7 @@ export default ({
                         anchor: 'Onesheet',
                         promoKey: ONESHEET_SUBPATH,
                     },
-                    ': Artist biography and album overview.',
+                    `: Artist biography and album overview.`,
                 ],
             ],
         },
@@ -25,11 +26,12 @@ export default ({
         {
             list: [
                 [
+                    `"`,
                     {
-                        anchor: 'Artups',
+                        anchor: 'Artup',
                         promoKey: ARTUP_SUBPATH,
                     },
-                    ': Find out why the Bobtail Yearlings are a terrible indie band!',
+                    `": Find out why the Bobtail Yearlings are a terrible indie band!`,
                 ],
             ],
         },

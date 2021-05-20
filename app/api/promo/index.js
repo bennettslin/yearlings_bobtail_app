@@ -8,7 +8,7 @@ export const getTitleForPromoKey = promoKey => {
         case ONESHEET_SUBPATH:
             return 'Onesheet'
         case ARTUP_SUBPATH:
-            return 'Artup Presentation'
+            return '"Artup" Presentation'
     }
 
     return 'Promo Homepage'
