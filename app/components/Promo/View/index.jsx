@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import PromoViewTitle from './Title'
 import PromoViewContent from './Content'
-import PromoViewText from './Text'
-import { isString } from '../../../helpers/general'
+import PromoViewParagraph from './Paragraph'
+import PromoViewTitle from './Title'
+import PromoViewList from './List'
 
 const PromoView = ({
     title,
@@ -12,28 +12,33 @@ const PromoView = ({
 }) => (
     <PromoViewContent {...{ footnote }}>
         <PromoViewTitle {...{ title }} />
-        {body.map((text, index) => {
-            if (isString(text) || Array.isArray(text) || text.text) {
-                const textEntity =
-                    isString(text) || Array.isArray(text) ?
-                        text :
-                        text.text
-
+        {body.map((entity, index) => {
+            if (entity.paragraph) {
                 return (
-                    <PromoViewText
+                    <PromoViewParagraph
                         {...{
                             key: index,
-                            text: textEntity,
+                            paragraph: entity.paragraph,
                         }}
                     />
                 )
 
-            } else if (text.title) {
+            } else if (entity.title) {
                 return (
                     <PromoViewTitle
                         {...{
                             key: index,
-                            title: text.title,
+                            title: entity.title,
+                        }}
+                    />
+                )
+
+            } else if (entity.list) {
+                return (
+                    <PromoViewList
+                        {...{
+                            key: index,
+                            list: entity.list,
                         }}
                     />
                 )

@@ -13,9 +13,3 @@
         margin-bottom: $margin__thick * 3;
     }
 }
-
-.PromoContent__body {
-    & > :not(:last-child) {
-        margin-bottom: $margin__thick * 2;
-    }
-}

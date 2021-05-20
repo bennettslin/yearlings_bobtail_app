@@ -1,7 +1,7 @@
 @import '../../../../scss/constants/icon';
 
-.PromoViewTitle {
+.PromoViewList {
     &:not(:first-child) {
-        padding-top: $margin__thick * 3;
+        padding-top: $margin__thick * 2;
     }
 }

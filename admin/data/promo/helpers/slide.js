@@ -41,8 +41,8 @@ export const getFormattedSlideMetadata = entity => {
     let newEntity
 
     // Order matters. Spacing function assumes straight quotes.
-    newEntity = _getSmartQuotedSlideMetadata(entity)
     newEntity = _getSpacedSlideMetadata(entity)
+    newEntity = _getSmartQuotedSlideMetadata(entity)
 
     return newEntity
 }

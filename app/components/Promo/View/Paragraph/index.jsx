@@ -2,25 +2,26 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import Texts from '../../../Texts'
+import './style'
 
-const PromoViewText = ({ text }) => (
+const PromoViewParagraph = ({ paragraph }) => (
     <div
         {...{
             className: cx(
-                'PromoViewText',
+                'PromoViewParagraph',
                 'fontSize__mediumTitle',
             ),
         }}
     >
-        <Texts {...{ text }} />
+        <Texts {...{ text: paragraph }} />
     </div>
 )
 
-PromoViewText.propTypes = {
-    text: PropTypes.oneOfType([
+PromoViewParagraph.propTypes = {
+    paragraph: PropTypes.oneOfType([
         PropTypes.array,
         PropTypes.string,
-    ]),
+    ]).isRequired,
 }
 
-export default PromoViewText
+export default PromoViewParagraph

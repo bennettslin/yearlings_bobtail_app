@@ -9,26 +9,28 @@ export default ({
             title: 'Press material',
         },
         {
-            text: [
-                'Blah',
-                {
-                    anchor: 'Onesheet',
-                    promoKey: ONESHEET_SUBPATH,
-                },
-                'blah',
+            list: [
+                [
+                    {
+                        anchor: 'Onesheet',
+                        promoKey: ONESHEET_SUBPATH,
+                    },
+                    ': Artist biography and album overview.',
+                ],
             ],
         },
         {
             title: 'Presentations',
         },
         {
-            text: [
-                'Blah',
-                {
-                    anchor: 'Artup',
-                    promoKey: ARTUP_SUBPATH,
-                },
-                'blah',
+            list: [
+                [
+                    {
+                        anchor: 'Artups',
+                        promoKey: ARTUP_SUBPATH,
+                    },
+                    ': Find out why the Bobtail Yearlings are a terrible indie band!',
+                ],
             ],
         },
     ]),

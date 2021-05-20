@@ -1,8 +1,3 @@
-# Promo work
-* Flesh out onesheet page.
-* Flesh out promo homepage.
-    * Needs formatting.
-
 # Bonus
 * Copy to clipboard functionality
 
