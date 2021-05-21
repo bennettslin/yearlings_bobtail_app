@@ -1,15 +1,5 @@
-import {
-    ARTUP_SUBPATH,
-    ONESHEET_SUBPATH,
-} from '../../constants/routing'
+import { getPromo } from '../builds'
 
-export const getTitleForPromoKey = promoKey => {
-    switch (promoKey) {
-        case ONESHEET_SUBPATH:
-            return 'Onesheet'
-        case ARTUP_SUBPATH:
-            return '"Artup" Presentation'
-    }
-
-    return 'Promo Homepage'
-}
+export const getTitleForPromo = promoKey => (
+    getPromo().titles[promoKey] || getPromo().titles.homepage
+)

@@ -1,8 +1,3 @@
-# TODO
-* Get titles from data somehow
-    * Then put smart quotes on them
-* Do same with album title?
-
 # Bonus
 * Copy to clipboard functionality
 

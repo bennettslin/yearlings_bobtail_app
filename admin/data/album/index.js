@@ -19,8 +19,8 @@ import {
 import { addTip } from './helpers/tips'
 import { addVerseMetadata } from './helpers/verse'
 import { addWormholeMetadata } from './helpers/wormhole'
-import { RUNTIME } from '../../../app/constants/server'
 import { getSmartQuotedEntity } from '../../utils/format/smartQuote'
+import { RUNTIME } from '../../../app/constants/server'
 
 const annotationsList = []
 
