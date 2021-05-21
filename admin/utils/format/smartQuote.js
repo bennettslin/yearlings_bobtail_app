@@ -117,6 +117,10 @@ const _recurseForSmartQuoteFormat = textEntity => {
     }
 }
 
+export const getSmartQuotedEntity = entity => (
+    _recurseForSmartQuoteFormat(entity)
+)
+
 export const getSmartQuotedObjectForKeys = ({
     object,
     keys,

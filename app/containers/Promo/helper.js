@@ -1,4 +1,4 @@
-import { ALBUM_TITLE } from '../../constants/paths'
+import { getTitleForAlbum } from '../../api/album/title'
 import {
     ARTUP_SUBPATH,
     ONESHEET_SUBPATH,
@@ -17,5 +17,5 @@ export const getHelmetTitleForPromoKey = promoKey => {
             pageTitle = `Promo`
             break
     }
-    return `${pageTitle} | ${ALBUM_TITLE}`
+    return `${pageTitle} | ${getTitleForAlbum()}`
 }

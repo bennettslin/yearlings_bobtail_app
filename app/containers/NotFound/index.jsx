@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet'
 import NotFoundHeader from './Header'
 import Texts from '../../components/Texts'
 import DeviceWrapper from '../../wrappers/DeviceWrapper'
-import { ALBUM_TITLE } from '../../constants/paths'
+import { getTitleForAlbum } from '../../api/album/title'
 import { navigateToPathname } from '../../helpers/navigate'
 import './style'
 
@@ -37,7 +37,7 @@ const NotFoundContainer = () => {
                 }}
             >
                 <Helmet>
-                    <title>{`404 | ${ALBUM_TITLE}`}</title>
+                    <title>{`404 | ${getTitleForAlbum()}`}</title>
                     <meta
                         {...{
                             name: 'description',

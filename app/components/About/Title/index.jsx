@@ -3,7 +3,7 @@ import cx from 'classnames'
 import PropTypes from 'prop-types'
 import getDidMountHoc from '../../../hocs/DidMountHoc'
 import Anchor from '../../Anchor'
-import { ALBUM_TITLE } from '../../../constants/paths'
+import { getTitleForAlbum } from '../../../api/album/title'
 import { BOBTAIL_YEARLINGS_WEBSITE } from '../../../constants/website'
 import './style'
 
@@ -21,7 +21,7 @@ const AboutTitle = ({ didMount }) => (
                 },
             }}
         >
-            {ALBUM_TITLE}
+            {getTitleForAlbum()}
         </i>
         <div>
             {'by '}

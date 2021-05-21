@@ -1,6 +1,6 @@
 import React from 'react'
 import cx from 'classnames'
-import { ALBUM_TITLE } from '../../../constants/paths'
+import { getTitleForAlbum } from '../../../api/album/title'
 import './style'
 
 const AlbumBanner = () => (
@@ -15,7 +15,7 @@ const AlbumBanner = () => (
             ),
         }}
     >
-        Bobtail Yearlings - <i>{ALBUM_TITLE}</i>
+        Bobtail Yearlings - <i>{getTitleForAlbum()}</i>
     </div>
 )
 

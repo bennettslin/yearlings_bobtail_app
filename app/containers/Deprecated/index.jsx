@@ -3,7 +3,7 @@ import cx from 'classnames'
 import { Helmet } from 'react-helmet'
 import Texts from '../../components/Texts'
 import { navigateToPathname } from '../../helpers/navigate'
-import { ALBUM_TITLE } from '../../constants/paths'
+import { getTitleForAlbum } from '../../api/album/title'
 import './style'
 
 const DEPRECATED_TEXT = 'Sorry, this browser is not supported.'
@@ -34,7 +34,7 @@ const DeprecatedContainer = () => {
             }}
         >
             <Helmet>
-                <title>{`Deprecated | ${ALBUM_TITLE}`}</title>
+                <title>{`Deprecated | ${getTitleForAlbum()}`}</title>
                 <meta
                     {...{
                         name: 'description',
