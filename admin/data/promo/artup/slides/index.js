@@ -49,7 +49,7 @@ export default getFormattedSlideMetadata([
                 paragraph: `If a startup makes no profit when it only has thousands of users, how can it suddenly turn profitable with a million users? One reason is the network effect, where a product becomes more valuable to every user as more users use the product.`,
             },
             {
-                paragraph: `For example, back when Facebook launched, its thousands of users were only able to connect with fellow classmates at Harvard. By the time it had millions of users, however, each user could now connect with childhood friends, distant family members, and more.`,
+                paragraph: `For example, back when Facebook launched, its thousands of users were only able to connect with their fellow classmates at Harvard. By the time Facebook had millions of users, however, each user could now connect with childhood friends, distant family members, and more.`,
             },
         ],
         footnote: [

@@ -4,18 +4,15 @@
 * Don't centre menu. Just have placeholder for Slider.
 
 # iOS Chrome, Safari
-* Audio files don't play?
+* About popup doesn't scroll upon load
+    * Works fine after adjusting viewport once.
 
 # Safari
 * Performance is terrible.
-* Audio files don't play.
-* Hovering over Filmstrip isn't immediately registered.
 
 # Firefox
-* Performance is not great.
-* Kyon? is offset.
+* Kyon? is offset in song banner.
 
 # Edge
 
 # Edge legacy, Internet Explorer
-* Not going to support. Error page?

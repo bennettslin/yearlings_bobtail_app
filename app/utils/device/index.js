@@ -26,5 +26,9 @@ export const logDevice = () => {
 }
 
 export const getIsUserAgentDeprecated = () => (
-    BROWSER_NAME === 'Internet Explorer'
+    // Legacy Edge.
+    ENGINE_NAME?.includes('EdgeHTML') ||
+
+    // Internet Explorer.
+    ENGINE_NAME?.includes('Trident')
 )
