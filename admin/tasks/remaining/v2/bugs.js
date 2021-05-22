@@ -1,11 +1,6 @@
 export default [
     {
-        taskName: `Small presences are positioned weird on mobile screens.`,
-        workedHours: 0,
-        neededHours: 1,
-    },
-    {
-        taskName: `Pitch page doesn't allow just correct indices, without correct paths.`,
+        taskName: `Wide presences are positioned weird on mobile screens.`,
         workedHours: 0,
         neededHours: 1,
     },
