@@ -62,7 +62,7 @@ export default getFormattedSlideMetadata({
             paragraph: `After all, what became of Donald Trump's era of peak influence? We no longer assume that winning over live crowds is the mark of a great leader. And every insult against Joe Biden backfired because we now understand that real work can, in fact, be done in a basement.`,
         },
         {
-            paragraph: `Will today's music fans accept that the great rock albums of our time might, in fact, be made in a bedroom? The Bobtail Yearlings are betting on it!`,
+            paragraph: `Will today's music fans accept that the great rock albums of our time can, in fact, be made in a bedroom? The Bobtail Yearlings are betting on it!`,
         },
     ],
 })
