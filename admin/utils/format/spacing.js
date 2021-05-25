@@ -31,6 +31,9 @@ const _appendWithSpaceIfNeeded = text => {
         // It's an opening quote for a middle word.
         text.endsWith(' "') ||
 
+        // In onesheet.
+        text.endsWith('("') ||
+
         text.endsWith(`…`)
     ) {
         return text
@@ -45,6 +48,7 @@ const _prependWithSpaceIfNeeded = text => {
         text.startsWith(`'s`) ||
         text.startsWith(`" `) ||
         text.startsWith(`":`) ||
+        text.startsWith(`")`) ||
         text.startsWith(`'`) ||
         hasSpecialCharacterAtIndex(text, 0)
     ) {

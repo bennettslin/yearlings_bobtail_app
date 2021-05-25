@@ -39,11 +39,58 @@ export default getFormattedSlideMetadata({
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
                 },
-                `serves up memorable pop songs with folk instruments arranged in intricate counterpoint. The music is a hodgepodge of styles, from Tuvan throatsinging ("Pchelka's Starry Journey") and Arabic quarter tones ("Ash Wednesday") to Irish reel ("Garryowen") and honky tonk ("On a Golden Cord"). It also includes Shepard tones ("Cremated"), an auditory illusion in which a tone gradually descends in pitch while remaining fixed in place.`,
+                `serves up memorable pop songs with folk instruments arranged in intricate counterpoint. The music is a hodgepodge of styles, from Tuvan throatsinging ("`,
+                {
+                    anchor: `Pchelka's Starry Journey`,
+                    songIndex: 5,
+                },
+                `") and Arabic quarter tones ("`,
+                {
+                    anchor: `Ash Wednesday`,
+                    songIndex: 6,
+                },
+                `") to Irish reel ("`,
+                {
+                    anchor: `Garryowen`,
+                    songIndex: 12,
+                },
+                `") and honky tonk ("`,
+                {
+                    anchor: `On a Golden Cord`,
+                    songIndex: 13,
+                },
+                `"). It also includes Shepard tones ("`,
+                {
+                    anchor: `Cremated`,
+                    songIndex: 16,
+                },
+                `"), an auditory illusion in which a tone gradually descends in pitch while remaining fixed in place.`,
             ],
         },
         {
-            paragraph: `The lyrics follow in the footsteps of modernist writer James Joyce by employing such literary techniques as stream of consciousness ("Good Night, Sita"), meta-reference ("Grasshoppers Lie Heavy"), and neologistic puns ("Constellations!"). It even uses a technique of Bennett's own invention called doublespeaker rhyme, in which two sets of lyrics that rhyme syllable for syllable are panned hard to separate speakers ("Odin"), creating the musical version of a cinematic split screen.`,
+            paragraph: [
+                `The lyrics follow in the footsteps of modernist writer James Joyce by employing such literary techniques as stream of consciousness ("`,
+                {
+                    anchor: `Good Night, Sita`,
+                    songIndex: 8,
+                },
+                `"), meta-reference ("`,
+                {
+                    anchor: `Grasshoppers Lie Heavy`,
+                    songIndex: 9,
+                },
+                `"), and neologistic puns ("`,
+                {
+                    anchor: `Constellations!`,
+                    songIndex: 10,
+                },
+                `"). It even uses a technique of Bennett's own invention called doublespeaker rhyme, in which two sets of lyrics that rhyme syllable for syllable are panned hard to separate speakers ("`,
+                {
+                    anchor: `Odin`,
+                    songIndex: 4,
+                },
+                `"), creating the musical version of a cinematic split screen.`,
+            ],
         },
         {
             paragraph: `The audio webcomic presents the story as a theatrical play, with illustrated characters and stage props animating in and out as the music progresses. Annotations offer background context for the lyrics, and links to Wikipedia help explain obscure references. Meanwhile, full music scores offer insight into how each song was composed.`,

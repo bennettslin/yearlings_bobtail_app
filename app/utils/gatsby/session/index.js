@@ -15,7 +15,7 @@ export const getIsAlbumClientSession = () => (
     !getIsServerSide() &&
 
     // This approach is fragile, but it works for now.
-    getDocument().getElementsByClassName('RootContainer').length
+    Boolean(getDocument().getElementsByClassName('RootContainer').length)
 )
 
 export const getIsNotFoundPage = pathname => (

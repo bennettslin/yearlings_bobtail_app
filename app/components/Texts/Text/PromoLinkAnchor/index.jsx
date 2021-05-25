@@ -4,7 +4,7 @@ import Anchor from '../../../Anchor'
 import { useDispatch } from 'react-redux'
 import { setSelectedPromoKey } from '../../../../redux/promo/action'
 
-const PromoAnchor = ({
+const PromoLinkAnchor = ({
     text,
     promoKey,
 
@@ -17,9 +17,9 @@ const PromoAnchor = ({
 
     return (
         <Anchor
+            alwaysPointer
             {...{
                 text,
-                promoKey,
                 analyticsLabel: promoKey,
                 handleAnchorClick,
             }}
@@ -27,9 +27,9 @@ const PromoAnchor = ({
     )
 }
 
-PromoAnchor.propTypes = {
+PromoLinkAnchor.propTypes = {
     text: PropTypes.string.isRequired,
     promoKey: PropTypes.string.isRequired,
 }
 
-export default PromoAnchor
+export default PromoLinkAnchor

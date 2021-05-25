@@ -1,4 +1,4 @@
-import { getPathForSong } from '../../../api/album/songs'
+import { getFullPathForSong } from '../../../api/album/songs'
 import { getRoutingSongIndex } from '../routing'
 import { getIsAlbumClientSession } from '../session'
 
@@ -11,7 +11,7 @@ const _getIsValidSongPath = pathname => {
     // Check if it's a valid album page path.
     const routingSongIndex = getRoutingSongIndex(pathname)
     if (Number.isFinite(routingSongIndex)) {
-        return pathname === `${routingSongIndex}-${getPathForSong(routingSongIndex)}`
+        return pathname === `${getFullPathForSong(routingSongIndex)}`
     }
 
     return false

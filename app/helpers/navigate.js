@@ -1,6 +1,6 @@
 import qs from 'qs'
 import { navigate } from 'gatsby'
-import { getPathForSong } from '../api/album/songs'
+import { getFullPathForSong } from '../api/album/songs'
 import { getPathForArtupSlide } from '../api/promo/artup'
 import { getWindow } from '../utils/browser'
 import { getArtupFullPath } from '../utils/gatsby/promo'
@@ -41,9 +41,7 @@ export const navigateToAlbumPage = (
          * being removed by the plugin that removes trailing slashes.
          */
         albumUrl = `/${
-            songIndex
-        }-${
-            getPathForSong(songIndex)
+            getFullPathForSong(songIndex)
         }${
             queryStrings ? `/${queryStrings}` : ''
         }`
