@@ -5145,7 +5145,7 @@ export default [
     },
     {
         taskName: `Promo pages.`,
-        workedHours: 72,
+        workedHours: 73,
     },
     {
         taskName: `Terminal punctuation.`,
@@ -5158,6 +5158,9 @@ export default [
     {
         taskName: `Audit scenes.`,
         workedHours: 3,
-        neededHours: 3,
+    },
+    {
+        taskName: `Lyric and annotation audits.`,
+        workedHours: 23,
     },
 ]

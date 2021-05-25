@@ -631,7 +631,7 @@ export default {
                             anchor: `Secret Journey`,
                             wiki: `Secret_Journey_(song)`,
                         },
-                        `," I left the drum kick off the downbeat in the prechorus, which does wonders for letting the other instruments breathe before they get submerged again in the chorus.`,
+                        `," I left the drum kick off the downbeat in the prechorus, which does wonders for letting the other instruments breathe before they're submerged again in the chorus.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -1149,9 +1149,8 @@ export default {
                     lyric: [
                         {
                             anchor: `Are Melee tapirs`,
-                            todo: true,
                             card: {
-                                description: `"Our melee tapers the discourse." Having scavenged materials to make swords and shields, we could only brandish them with playful menace within the narrow corridors of the steam tunnels. Now out in the open, we stop chattering and start battling as we make our way back to the car.`,
+                                description: `"Our melee tapers the discourse." Having scavenged materials to make swords and shields, we could only brandish them with playful menace inside the narrow steam tunnels. Now out in the open, we stop chattering and start battling as we make our way back to the car.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,

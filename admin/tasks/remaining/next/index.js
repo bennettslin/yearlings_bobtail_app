@@ -13,11 +13,7 @@ export default [
         workedHours: 16,
     },
     {
-        taskName: `Lyric and annotation audits.`,
-        workedHours: 23,
-    },
-    {
         taskName: `Awkward annotation edits.`,
-        workedHours: 0,
+        workedHours: 2,
     },
 ]
