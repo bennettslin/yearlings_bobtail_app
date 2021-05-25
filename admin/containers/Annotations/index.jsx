@@ -9,16 +9,20 @@ import {
     mapSelectedAnnotationIndex,
     mapSelectedSongIndex,
 } from '../../../app/redux/selected/selector'
+import { getBoolFromStorage, setBoolInStorage } from '../../../app/utils/storage'
 import './style'
+
+const SHOW_ALL_ANNOTATIONS_KEY = 'showAllAnnotations'
 
 const TempGlobalAnnotations = () => {
     const
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         selectedAnnotationIndex = useSelector(mapSelectedAnnotationIndex),
-        [showTodos, setShowTodos] = useState(true)
+        [showAll, setShowAll] = useState(getBoolFromStorage(SHOW_ALL_ANNOTATIONS_KEY))
 
     const toggleShowTodos = () => {
-        setShowTodos(!showTodos)
+        setShowAll(!showAll)
+        setBoolInStorage(SHOW_ALL_ANNOTATIONS_KEY, !showAll)
     }
 
     useEffect(() => {
@@ -44,7 +48,7 @@ const TempGlobalAnnotations = () => {
                 ),
             }}
         >
-            <GlobalColumns {...{ showTodos }} />
+            <GlobalColumns {...{ showAll }} />
             <GlobalHeader />
             <GlobalCounter {...{ toggleShowTodos }} />
         </div>

@@ -27,7 +27,7 @@ export default {
     mixStartTime: `0:01:22.94`,
     playerStartTime: 3332.826,
     todo: true,
-    overview: `Every night I dreamt of reuniting with Sita, only to wake up in a panicked sweat as the reality came roaring back that I'd lost her forever. After slogging through the day under a crushing blanket of despair, I would crawl back to bed in dread of the cruel tricks soon to be played yet again by my subconscious mind. I had no idea when this torment would end. The answer, I feared, was never.`,
+    overview: `Every night I dreamt of reuniting with Sita, only to wake up in a panicked sweat as the reality came roaring back that I'd lost her forever. After slogging through the day under a crushing blanket of despair, I would crawl back to bed, in dread of the cruel tricks soon to be played yet again by my subconscious mind. I had no idea when this torment would end. The answer, I feared, was never.`,
     lyricUnits: [
         {
             unitMap: {},

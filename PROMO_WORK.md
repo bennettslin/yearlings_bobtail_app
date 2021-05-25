@@ -1,5 +1,4 @@
 * Read Charlie's book
-
 * Share in JavaScript
 
 # Bonus

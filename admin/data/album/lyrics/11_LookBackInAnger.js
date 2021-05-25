@@ -318,8 +318,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                // Just needs a little work.
-                todo: true,
                 card: {
                     description: [
                         `When I asked Owen to recommend some good lyricists, he pointed me to`,
@@ -332,7 +330,7 @@ export default {
                             anchor: `hip hop`,
                             wiki: `Hip_hop`,
                         },
-                        `at the time, believing it too removed from my own songwriting approach to offer much wisdom. I've since corrected this oversight, but back when it was my lone point of reference for rap music, Nas's album`,
+                        `at the time, believing it to be too far removed from my own songwriting approach to offer much wisdom. I've since corrected this oversight, but back when it was my lone point of reference for rap music, Nas's album`,
                         {
                             anchor: `Illmatic`,
                             wiki: `Illmatic`,
@@ -361,7 +359,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Feeble feeder fish`,
-                            todo: true,
                             card: {
                                 description: [
                                     `The pecking order in a tank of`,
@@ -369,7 +366,7 @@ export default {
                                         anchor: `feeder fish`,
                                         wiki: `Feeder_fish`,
                                     },
-                                    `is deceptive, since the ones least fit to be sold as prey end up living the longest. In retrospect, high school worked the same way. All the time I spent focusing on pet projects had left me unfit to defend my place in the social hierarchy, but the artistic skills I developed as a result are what kept me from being eaten alive in the real world.`,
+                                    `is deceptive, since the ones least fit to be sold as prey end up living the longest. In retrospect, high school worked the same way. All the time I spent focusing on pet projects left me unfit to defend my place in the social hierarchy, but the artistic skills I developed as a result were what kept me from being eaten alive later in the real world.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -519,9 +516,8 @@ export default {
                         `and you were`,
                         {
                             anchor: `fine when you had none`,
-                            todo: true,
                             card: {
-                                description: `Things were finally looking up, so it baffled me to be more bitter than ever. I suspect it's because I felt indignant for my younger self, who'd been kept in the dark for so long about how much better life could be.`,
+                                description: `Things were finally looking up, so it baffled me that I should be as bitter as ever. I suspect it's because I felt indignant for my younger self, who'd been kept in the dark for so long about how much better life could be.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -675,7 +671,7 @@ export default {
                         {
                             anchor: `only to crack`,
                             card: {
-                                description: `Yet even as reason disproved the faiths of my tormentors, it also discredited mine as a Beyonder. Because, in a world abounding with rival claims to the truth, what sane person would stay loyal to a belief that promises zero community and only endless grief?`,
+                                description: `Yet even as reason disproved the faiths of my tormentors, it also discredited my own as a Beyonder. After all, in a world abounding with rival claims to the truth, what sane person would stay loyal to a belief that promises zero community and only endless grief?`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -685,9 +681,8 @@ export default {
                         `,`,
                         {
                             anchor: `sprawled where they stood`,
-                            todo: true,
                             card: {
-                                description: `And while every beatdown I suffered was a serious blow to my mental health and emotional state, the bullies only continued to enjoy greater happiness and social standing. My belief as a Beyonder couldn't counter the harsh reality that nature favors its bullies.`,
+                                description: `And while every beatdown I suffered was a serious blow to my mental state, the bullies continued to enjoy greater happiness and social standing. My belief as a Beyonder just couldn't survive the harsh realization that nature favors its bullies.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -714,9 +709,8 @@ export default {
                         `weren't they`,
                         {
                             anchor: `right to take what's theirs`,
-                            todo: true,
                             card: {
-                                description: `As opportunities for social advancement later opened up for me, I could look back, put myself in the bullies' shoes, and even sympathize with them. In a world that roots for the strong, who wouldn't readily take all the means available to avoid being weak?`,
+                                description: `As opportunities for social advancement later opened up for me, I could look back and even sympathize with the bullies by putting myself in their shoes. In a world that roots for the strong, who wouldn't readily take all the means available to avoid being weak?`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

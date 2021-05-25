@@ -7,7 +7,7 @@ import {
 } from '../../../../app/api/album/annotations'
 import { getSongsNotLoguesCount } from '../../../../app/api/album/songs'
 
-const AnnotationSongColumn = ({ songIndex, showTodos }) => {
+const AnnotationSongColumn = ({ songIndex, showAll }) => {
     const
         songColumnElement = useRef(),
         hue = (songIndex - 1) / getSongsNotLoguesCount() * 360
@@ -25,7 +25,7 @@ const AnnotationSongColumn = ({ songIndex, showTodos }) => {
             {getAnnotationIndices(songIndex)
                 .filter(annotationIndex => (
                     // Only show annotations left todo.
-                    showTodos ||
+                    showAll ||
                     getTodoForAnnotation(songIndex, annotationIndex)
                 ))
                 .map(annotationIndex => (
@@ -44,7 +44,7 @@ const AnnotationSongColumn = ({ songIndex, showTodos }) => {
 
 AnnotationSongColumn.propTypes = {
     songIndex: PropTypes.number.isRequired,
-    showTodos: PropTypes.bool.isRequired,
+    showAll: PropTypes.bool.isRequired,
 }
 
 export default AnnotationSongColumn

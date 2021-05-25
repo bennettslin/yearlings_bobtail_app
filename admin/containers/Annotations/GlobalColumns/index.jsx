@@ -5,7 +5,7 @@ import AnnotationSongColumn from '../AnnotationSongColumn'
 import { getArrayOfLength } from '../../../../app/helpers/general'
 import { getSongsNotLoguesCount } from '../../../../app/api/album/songs'
 
-const TempGlobalColumns = ({ showTodos }) => {
+const TempGlobalColumns = ({ showAll }) => {
     return (
         <div
             {...{
@@ -21,7 +21,7 @@ const TempGlobalColumns = ({ showTodos }) => {
                     {...{
                         key: index,
                         songIndex: index + 1,
-                        showTodos,
+                        showAll,
                     }}
                 />
             ))}
@@ -30,7 +30,7 @@ const TempGlobalColumns = ({ showTodos }) => {
 }
 
 TempGlobalColumns.propTypes = {
-    showTodos: PropTypes.bool.isRequired,
+    showAll: PropTypes.bool.isRequired,
 }
 
 export default TempGlobalColumns
