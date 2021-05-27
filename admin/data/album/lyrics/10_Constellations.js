@@ -1708,7 +1708,8 @@ export default {
                     mixTime: `2:20:18.75`,
                     lyric: [
                         {
-                            anchor: `Noworse and Nunavutter`,
+                            // NOTE: Changing from Nunavutter.
+                            anchor: `Noworse and Nunavetter`,
                             properNoun: true,
                             // Just confirm. This may be the best it will be.
                             todo: true,
