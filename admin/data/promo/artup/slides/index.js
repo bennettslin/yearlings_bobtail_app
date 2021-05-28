@@ -187,7 +187,7 @@ export default getFormattedSlideMetadata([
                         isItalic: true,
                         lyric: `Ulysses`,
                     },
-                    `of rock albums. Unfortunately, its complex lyrics only make sense after careful study, which we as an unknown band had no right to ask of anyone. So when I sent out the promos, no one bothered to understand the lyrics. One reviewer even mistook "`,
+                    `of rock albums. Unfortunately, its complex lyrics only make sense after careful study, which we as an unknown band had no right to ask of anyone. So when I sent out the promos, no one bothered to understand the lyrics. One critic even mistook "`,
                     {
                         anchor: `Constellations!`,
                         songIndex: 10,
