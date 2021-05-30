@@ -31,7 +31,7 @@ export default getFormattedSlideMetadata({
                         anchor: 'Artup',
                         promoKey: ARTUP_SUBPATH,
                     },
-                    `": Find out why the Bobtail Yearlings are a terrible indie band!`,
+                    `": Are some artists more like stores, while others are more like startups?`,
                 ],
             ],
         },

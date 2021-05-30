@@ -1,38 +1,26 @@
 # Promo work!
 
+# TODO now
+* Research music blogs
+* Research newspaper music reviewers
+* Research music websites
+* Research podcasts
+* Research YouTube channels
+
+# TODO after
+* Research record labels
+* Research Asian-American sources
+
 # Resources
 * https://www.icareifyoulisten.com/2013/10/10-things-to-consider-when-youre-submitting-an-album-for-review/
 
-## Feedback
-* Wade, Chris, Stephanie
-* Ashley
-* Jeff
-
-## Personal contacts
-* Friends
-    * Adam Cohn
-    * Charles Yu
-    * Louise Barder
-* Facebook
-
-## Gathering leads
-* Previous contacts
-* Record labels
-* Music press (every reporter)
-    * Individuals
-        * Steven Hyden
-* Other press (every reporter)
-    * Individuals
-        * Matt Yglesias
-* Asian-American
+## Getting desperate
 * Literature
 * Frontend development
-* PR firms
-    * Individuals
-        * Ryan Holiday
 
 ## Email
 * General wording
 
 ## Further PR?
 * PR firms
+* Ryan Holiday
