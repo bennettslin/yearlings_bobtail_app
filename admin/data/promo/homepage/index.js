@@ -28,10 +28,10 @@ export default getFormattedSlideMetadata({
                 [
                     `"`,
                     {
-                        anchor: 'Artup',
+                        anchor: 'Invest in Artups',
                         promoKey: ARTUP_SUBPATH,
                     },
-                    `": Are some artists more like stores, while others are more like startups?`,
+                    `": What if some artists are more like stores, while others are more like startups?`,
                 ],
             ],
         },

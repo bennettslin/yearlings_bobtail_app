@@ -1,4 +1,4 @@
-# Promo work!
+# Marketing work!
 
 # TODO now
 * Research music blogs
@@ -9,6 +9,7 @@
 
 # TODO after
 * Research record labels
+* Research media for artistic comics
 * Research Asian-American sources
 
 # Resources

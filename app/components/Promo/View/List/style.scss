@@ -1,6 +1,9 @@
 @import '../../../../scss/constants/icon';
 
 .PromoViewList {
+    text-indent: -1.5em;
+    padding-left: 1.5em;
+
     &:not(:first-child) {
         padding-top: $margin__thick * 2;
     }

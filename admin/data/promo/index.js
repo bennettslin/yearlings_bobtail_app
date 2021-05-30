@@ -9,7 +9,7 @@ export default {
     titles: {
         homepage: getSmartQuotedEntity(`Promo Homepage`),
         onesheet: getSmartQuotedEntity(`Onesheet`),
-        artup: getSmartQuotedEntity(`"Artup" Presentation`),
+        artup: getSmartQuotedEntity(`Invest in Artups`),
     },
     homepage,
     onesheet,
