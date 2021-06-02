@@ -2,7 +2,6 @@
 import { getValidSongIndex } from '../../api/album/songs'
 import { getValidVerseIndex } from '../../api/album/verses'
 import { getValidAnnotationIndex } from '../../api/album/annotations'
-import { getValidArtupSlideIndex } from '../../api/promo/artup'
 import { getWindow } from '../browser'
 import { INITIAL_DOTS_BIT } from '../../helpers/dot'
 import { FULL_DOTS_BIT } from '../../constants/dots'
@@ -14,13 +13,11 @@ import {
     VOLUME_MAX,
 } from '../../constants/options'
 import {
-    ARTUP_SLIDE_INDEX,
     SELECTED_DOTS_BIT,
     SELECTED_SONG_INDEX,
     SELECTED_VERSE_INDEX,
     SELECTED_ANNOTATION_INDEX,
     VOLUME_INDEX,
-    SELECTED_PROMO_KEY,
 } from '../../constants/store'
 
 export const getWindowStorage = () => {
@@ -115,16 +112,4 @@ export const getDotsBitFromStorage = (initialAnnotationIndex) => {
     // This only saves upon initial retrieval.
     setInStorage(SELECTED_DOTS_BIT, savedDotsBit)
     return savedDotsBit
-}
-
-export const getStoredArtupIndex = () => (
-    getValidArtupSlideIndex(
-        _getParsedStoredInteger(ARTUP_SLIDE_INDEX),
-    )
-)
-
-export const getStoredPromoKey = () => {
-    // TODO: Get stored.
-    const storedPromoKey = getWindowStorage()[SELECTED_PROMO_KEY]
-    return storedPromoKey
 }

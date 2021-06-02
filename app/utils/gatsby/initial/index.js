@@ -10,11 +10,9 @@ import {
     getStoredAnnotationIndex,
     getStoredSongIndex,
     getStoredVerseIndex,
-    getStoredArtupIndex,
     setInStorage,
 } from '../../storage'
 import {
-    ARTUP_SLIDE_INDEX,
     SELECTED_ANNOTATION_INDEX,
     SELECTED_SONG_INDEX,
     SELECTED_VERSE_INDEX,
@@ -85,14 +83,10 @@ export const getInitialArtupIndex = (pathname = '') => {
          * so we default to the stored index.
          */
         routingArtupIndex = getRoutingArtupIndex(pathname),
-        storedArtupIndex = getStoredArtupIndex(),
         isRoutingArtupValid = Number.isFinite(routingArtupIndex),
         initialArtupIndex = isRoutingArtupValid ?
             routingArtupIndex :
-            storedArtupIndex
-
-    // Save once upon initial retrieval.
-    setInStorage(ARTUP_SLIDE_INDEX, initialArtupIndex)
+            1
 
     return initialArtupIndex
 }

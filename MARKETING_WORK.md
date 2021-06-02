@@ -1,9 +1,7 @@
 # Marketing work!
+* Put music up on Bandcamp, SoundCloud, and Spotify
 
 # TODO now
-* Research music blogs
-* Research newspaper music reviewers
-* Research music websites
 * Research podcasts
 * Research YouTube channels
 

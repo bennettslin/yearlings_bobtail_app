@@ -28,9 +28,6 @@ export const IS_ACCESS_ON = 'isAccessOn'
 export const IS_CAROUSEL_EXPANDED = 'isCarouselExpanded'
 export const SELECTED_DOTS_BIT = 'selectedDotsBit'
 
-export const ARTUP_SLIDE_INDEX = 'artupSlideIndex'
-export const SELECTED_PROMO_KEY = 'selectedPromoKey'
-
 export const SELECTED_SONG_INDEX = 'selectedSongIndex'
 export const SELECTED_VERSE_INDEX = 'selectedVerseIndex'
 export const SELECTED_ANNOTATION_INDEX = 'selectedAnnotationIndex'

@@ -19,10 +19,6 @@ export const getIsArtupSlideValid = artupSlideIndex => (
     )
 )
 
-export const getValidArtupSlideIndex = artupSlideIndex => (
-    getIsArtupSlideValid(artupSlideIndex) ? artupSlideIndex : 1
-)
-
 export const getPathForArtupSlide = artupSlideIndex => (
     SLIDES[artupSlideIndex - 1].path
 )
