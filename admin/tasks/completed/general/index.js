@@ -5141,11 +5141,11 @@ export default [
     },
     {
         taskName: `Promo content.`,
-        workedHours: 56,
+        workedHours: 66,
     },
     {
         taskName: `Promo pages.`,
-        workedHours: 74,
+        workedHours: 75,
     },
     {
         taskName: `Terminal punctuation.`,

@@ -1027,12 +1027,12 @@ export default {
                                         isItalic: true,
                                         lyric: `Bobtail`,
                                     },
-                                    `, now conceived as the`,
+                                    `, now conceived as "The`,
                                     {
                                         isItalic: true,
                                         lyric: `Ulysses`,
                                     },
-                                    `of rock albums.`,
+                                    `of Rock Albums."`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,

@@ -177,22 +177,17 @@ export default getFormattedSlideMetadata([
         body: [
             {
                 paragraph: [
-                    `If you've checked out our audio webcomic, then you might know where this is going.`,
+                    `You might know where this is going.`,
                     {
                         isItalic: true,
                         lyric: `Yearling's Bobtail`,
                     },
-                    `was my attempt to create the`,
+                    `was my attempt to create "The`,
                     {
                         isItalic: true,
                         lyric: `Ulysses`,
                     },
-                    `of rock albums. Unfortunately, its complex lyrics only make sense after careful study, which we as an unknown band had no right to ask of anyone. So when I sent out the promos, no one bothered to understand the lyrics. One critic even mistook "`,
-                    {
-                        anchor: `Constellations!`,
-                        songIndex: 10,
-                    },
-                    `" for Engrish!`,
+                    `of Rock Albums." Unfortunately, its complex lyrics only make sense after careful study, which we as an unknown band had no right to ask of anyone. So when I sent out the promos, no one bothered to understand the lyrics. One critic even mistook them for Engrish!`,
                 ],
             },
             {

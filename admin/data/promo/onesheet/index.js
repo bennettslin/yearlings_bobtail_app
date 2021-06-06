@@ -4,7 +4,7 @@ export default getFormattedSlideMetadata({
     body: [
         {
             paragraph: [
-                `Can a rock album ever win the Pulitzer Prize? It might seem unlikely. Today's rock music is loved for subjective qualities that don't spark discussion among literary scholars and musicologists the way hip hop can. But the Bobtail Yearlings are here to ask, why not try? And so they created`,
+                `Can a rock album ever win the Pulitzer Prize? It might seem unlikely. Today's rock music is loved for subjective qualities that can't spark discussion among literary scholars and musicologists the way hip hop does. But the Bobtail Yearlings are here to ask, why not try? And so they created`,
                 {
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
@@ -20,6 +20,40 @@ export default getFormattedSlideMetadata({
                     lyric: `Yearling's Bobtail`,
                 },
                 `tells the autobiographical tale of an artistically inclined Asian boy growing up in Los Angeles, whose autistic brother and first crush on a Jewish friend force him to question his Buddhist upbringing. Bullied at school, he finds solace in a mail-order cult that instructs him to shut himself away. Years later, he embarks on a five-year plan for self-improvement that ultimately wins the hand of his first love, who brings him into her Hindu faith. But as his band gains exposure in the local scene, he bolsters his ego by seeking affection from other women, leading to heartbreak and loss.`,
+            ],
+        },
+        {
+            paragraph: [
+                {
+                    isItalic: true,
+                    lyric: `Yearling's Bobtail`,
+                },
+                `was born from Bennett's vision to create "The`,
+                {
+                    isItalic: true,
+                    lyric: `Ulysses`,
+                },
+                `of Rock Albums." And so its lyrics follow in the footsteps of modernist writer James Joyce by employing such literary techniques as stream of consciousness ("`,
+                {
+                    anchor: `Good Night, Sita`,
+                    songIndex: 8,
+                },
+                `"), meta-reference ("`,
+                {
+                    anchor: `Grasshoppers Lie Heavy`,
+                    songIndex: 9,
+                },
+                `"), and neologistic puns ("`,
+                {
+                    anchor: `Constellations!`,
+                    songIndex: 10,
+                },
+                `"). It even uses a technique of Bennett's own invention called doublespeaker rhyme, in which two sets of lyrics that rhyme syllable for syllable are panned hard to separate speakers ("`,
+                {
+                    anchor: `Odin`,
+                    songIndex: 4,
+                },
+                `"), creating the musical version of a cinematic split screen.`,
             ],
         },
         {
@@ -65,31 +99,6 @@ export default getFormattedSlideMetadata({
                     songIndex: 16,
                 },
                 `"), an auditory illusion in which a tone gradually descends in pitch while remaining fixed in place.`,
-            ],
-        },
-        {
-            paragraph: [
-                `The lyrics follow in the footsteps of modernist writer James Joyce by employing such literary techniques as stream of consciousness ("`,
-                {
-                    anchor: `Good Night, Sita`,
-                    songIndex: 8,
-                },
-                `"), meta-reference ("`,
-                {
-                    anchor: `Grasshoppers Lie Heavy`,
-                    songIndex: 9,
-                },
-                `"), and neologistic puns ("`,
-                {
-                    anchor: `Constellations!`,
-                    songIndex: 10,
-                },
-                `"). It even uses a technique of Bennett's own invention called doublespeaker rhyme, in which two sets of lyrics that rhyme syllable for syllable are panned hard to separate speakers ("`,
-                {
-                    anchor: `Odin`,
-                    songIndex: 4,
-                },
-                `"), creating the musical version of a cinematic split screen.`,
             ],
         },
         {
