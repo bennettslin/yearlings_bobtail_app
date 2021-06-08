@@ -4,7 +4,7 @@ export default getFormattedSlideMetadata({
     body: [
         {
             paragraph: [
-                `Can a rock album ever win the Pulitzer Prize? It might seem unlikely. To win over critics and the public, rock artists aim for subjective qualities that don't spark discussion among literary scholars and musicologists the way hip hop does. But what if critical acclaim and popular appeal can also be gained by creating a classic worthy of academic study for generations to come? The Bobtail Yearlings are here to try for that possibility, by promising to win a Pulitzer for rock music in their lifetime. And so they present`,
+                `Can a rock album ever win the Pulitzer Prize? It might seem unlikely. To gain popular approval and critical acclaim, today's rock artists aim for subjective qualities that don't inspire literary scholars and musicologists the way hip hop does. But what if rock music can also merit academic study while appealing to everyone? The Bobtail Yearlings are here to take that challenge, and to have us hold them to it, they promise to win rock music a Pulitzer in their lifetime. And with that said, they present`,
                 {
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
@@ -59,7 +59,7 @@ export default getFormattedSlideMetadata({
         },
         {
             paragraph: [
-                `Inspired by classic rock albums such as`,
+                `Inspired by such classic rock albums as`,
                 {
                     isItalic: true,
                     lyric: `Pet Sounds`,
@@ -121,6 +121,7 @@ export default getFormattedSlideMetadata({
         },
         {
             // TODO: Wrap up with reminder that we're promising a Pulitzer.
+            // Classics that merit academic study for generations to come.
             paragraph: `Will today's music fans accept that the great rock albums of our time can, in fact, be made in a bedroom? The Bobtail Yearlings are betting on it!`,
         },
     ],
