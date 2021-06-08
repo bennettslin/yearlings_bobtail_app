@@ -4,7 +4,7 @@ export default getFormattedSlideMetadata({
     body: [
         {
             paragraph: [
-                `Can a rock album ever win the Pulitzer Prize? It might seem unlikely. To gain popular approval and critical acclaim, today's rock artists aim for subjective qualities that don't inspire literary scholars and musicologists the way hip hop does. But what if rock music can also merit academic study while appealing to everyone? The Bobtail Yearlings are here to take that challenge, and to have us hold them to it, they promise to win rock music a Pulitzer in their lifetime. And with that said, they present`,
+                `Can a rock album ever win the Pulitzer Prize? It might seem unlikely. To earn popular approval and critical acclaim, today's rock artists typically aim for subjective qualities that don't inspire literary scholars and musicologists the way hip hop does. But what if rock music can also merit academic study while appealing to everyone? The Bobtail Yearlings are up for the challenge! And to have us hold them to it, they promise to win rock a Pulitzer in their lifetime. With that now said, they present`,
                 {
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
