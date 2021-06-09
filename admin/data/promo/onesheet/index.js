@@ -4,7 +4,7 @@ export default getFormattedSlideMetadata({
     body: [
         {
             paragraph: [
-                `Can a rock album ever win the Pulitzer Prize? It might seem unlikely. To earn popular approval and critical acclaim, today's rock artists typically aim for subjective qualities that don't inspire literary scholars and musicologists the way hip hop does. But what if rock music can also merit academic study while appealing to everyone? The Bobtail Yearlings are up for the challenge! And to have us hold them to it, they promise to win rock a Pulitzer in their lifetime. With that now said, they present`,
+                `Can a rock album ever win the Pulitzer Prize? It might seem unlikely. To earn popular approval and critical acclaim, today's rock artists usually aim for subjective qualities that don't inspire literary scholars and musicologists the way hip hop does. But what if rock music can also merit academic study while appealing to everyone? The Bobtail Yearlings will take that challenge! And to have us hold them to it, they promise to win rock a Pulitzer in their lifetime. With that now said, they present`,
                 {
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
@@ -19,7 +19,7 @@ export default getFormattedSlideMetadata({
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
                 },
-                `tells the autobiographical tale of an artistically inclined Asian boy growing up in Los Angeles, whose autistic brother and first crush on a Jewish girl cause him to question his Buddhist upbringing. Bullied at school, he finds solace in a mail-order cult that instructs him to shut away his emotions. Years later, he embarks on a five-year plan for self-improvement that ultimately wins the hand of his first love, who brings him into her Hindu faith. But as his band gains exposure in the local scene, he bolsters his ego by seeking affection from other women, leading to heartbreak and loss.`,
+                `tells the autobiographical tale of an artistically inclined Asian boy growing up in Los Angeles, whose autistic brother and first crush on a Jewish girl cause him to question his Buddhist upbringing. Bullied at school, he finds solace in a mail-order cult that instructs him to shut himself away. Years later, he embarks on a five-year plan for self-improvement that ultimately wins the hand of his first love, who brings him into her Hindu faith. But as his band gains exposure in the local scene, he bolsters his ego by seeking affection from other women, leading to heartbreak and loss.`,
             ],
         },
         {
@@ -104,16 +104,21 @@ export default getFormattedSlideMetadata({
         },
         {
             paragraph: [
-                `Completed as an album a decade ago,`,
+                `Completed a decade ago,`,
                 {
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
                 },
-                `was overlooked by the indie labels and never released. At the time, with indie rock at peak influence, the term "bedroom recording" had become an insult, as artists were now expected to win over live crowds and master the administrative skills needed to bypass the labels. But , .`,
+                `was never released. At the time, the indie labels were most eager to sign artists who didn't need them, but the Bobtail Yearlings need a label as much as they expect to be needed back. Still, by being overlooked, they became that rare controlled experiment that can only happen by chance in the wild. What happens when innovation never gets heard and thus influences no one?`,
+                {
+                    isItalic: true,
+                    lyric: `Yearling's Bobtail`,
+                },
+                `sounds at once delightfully foreign yet uncannily familiar while being of no traceable time, offering a fascinating glimpse into what rock music today might have been.`,
             ],
         },
         {
-            paragraph: `Sensing that indie rock's era of peak influence wouldn't last, Bennett bided his time by learning new creative skills such as music notation, web development, and illustration. This allowed him to build the audio webcomic, which presents the album's story as a theatrical play, with illustrated characters and stage props that enter and exit as the music progresses. Annotations offer background context for the lyrics, and links to Wikipedia explain obscure references. Meanwhile, full music scores offer insight into how each song was written.`,
+            paragraph: `To bide his time during indie rock's era of peak influence, Bennett learned new creative skills such as music composition, web development, and illustration. This allowed him to build the audio webcomic, which presents the album's story as a theatrical play, with illustrated characters and stage props that enter and exit as the music progresses. Annotations offer background context for the lyrics, and links to Wikipedia explain obscure references. Meanwhile, full music scores offer insight into how each song was written.`,
         },
         {
             // TODO: Make this consistent with above.
@@ -121,8 +126,7 @@ export default getFormattedSlideMetadata({
         },
         {
             // TODO: Wrap up with reminder that we're promising a Pulitzer.
-            // Classics that merit academic study for generations to come.
-            paragraph: `Will today's music fans accept that the great rock albums of our time can, in fact, be made in a bedroom? The Bobtail Yearlings are betting on it!`,
+            paragraph: `After all, a record label can do far worse than sign an artist who promises them, and us, a Pulitzer!`,
         },
     ],
 })
