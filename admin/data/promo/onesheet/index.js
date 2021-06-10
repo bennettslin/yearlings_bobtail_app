@@ -4,7 +4,7 @@ export default getFormattedSlideMetadata({
     body: [
         {
             paragraph: [
-                `Can a rock album ever win the Pulitzer Prize? It might seem unlikely. To earn popular approval and critical acclaim, today's rock artists usually aim for subjective qualities that don't inspire literary scholars and musicologists the way hip hop does. But what if rock music can also merit academic study while appealing to everyone? The Bobtail Yearlings will take that challenge! And to have us hold them to it, they promise to win rock a Pulitzer in their lifetime. With that now said, they present`,
+                `Can a rock album ever win the Pulitzer Prize? It might seem unlikely. To earn popular approval and critical acclaim, today's rock artists usually aim for subjective qualities that don't inspire literary scholars and musicologists the way hip hop does. But what if rock music can also merit academic study while appealing to everyone? The Bobtail Yearlings accept this challenge! And to have us hold them to it, they promise to win rock a Pulitzer in their lifetime. With that now said, they present`,
                 {
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
@@ -74,7 +74,7 @@ export default getFormattedSlideMetadata({
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
                 },
-                `serves up memorable pop melodies with folk instruments arranged in intricate counterpoint. The music is a hodgepodge of styles, from Tuvan throatsinging ("`,
+                `serves up memorable pop tunes with folk instruments arranged in intricate counterpoint. The music is a hodgepodge of styles, from Tuvan throatsinging ("`,
                 {
                     anchor: `Pchelka's Starry Journey`,
                     songIndex: 5,
@@ -103,13 +103,14 @@ export default getFormattedSlideMetadata({
             ],
         },
         {
+            // TODO: Answer the question?
             paragraph: [
                 `Completed a decade ago,`,
                 {
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
                 },
-                `was never released. At the time, the indie labels were most eager to sign artists who didn't need them, but the Bobtail Yearlings need a label as much as they expect to be needed back. Still, by being overlooked, they became that rare controlled experiment that can only happen by chance in the wild. What happens when innovation never gets heard and thus influences no one?`,
+                `was never released. At the time, the indie labels were most eager to sign artists who didn't need them, but the Bobtail Yearlings need a label as much as they expect to be needed back. Still, by being overlooked, they became that rare controlled experiment that only happens by chance in the wild. What happens when innovation never gets heard and thus influences no one?`,
                 {
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
@@ -122,7 +123,7 @@ export default getFormattedSlideMetadata({
         },
         {
             // TODO: Make this consistent with above.
-            paragraph: `After all, what became of Donald Trump's era of peak influence? We no longer assume that winning over live crowds is the mark of a great leader. And every insult against Joe Biden backfired because we now understand that real work can, in fact, be done in a basement.`,
+            paragraph: `The end of Donald Trump's presidency offers the next generation an opportunity to reevaluate the values they inherited. Thanks to Trump, we`,
         },
         {
             // TODO: Wrap up with reminder that we're promising a Pulitzer.
