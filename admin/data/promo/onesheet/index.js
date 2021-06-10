@@ -4,7 +4,7 @@ export default getFormattedSlideMetadata({
     body: [
         {
             paragraph: [
-                `Can a rock album ever win the Pulitzer Prize? It might seem unlikely. To earn popular approval and critical acclaim, today's rock artists usually aim for subjective qualities that don't inspire literary scholars and musicologists the way hip hop does. But what if rock music can also merit academic study while appealing to everyone? The Bobtail Yearlings will take that challenge! And to have us hold them to it, they promise to win rock a Pulitzer in their lifetime. With that now said, they present`,
+                `Can a rock album ever win the Pulitzer Prize? It might seem unlikely. To earn popular approval and critical acclaim, today's rock artists usually aim for subjective qualities that don't intrigue literary scholars and musicologists the way hip hop does. But what if rock music can also merit academic study while appealing to everyone? The Bobtail Yearlings will take that challenge! And to have us hold them to it, they promise to win rock a Pulitzer in their lifetime. And so they present`,
                 {
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
@@ -109,12 +109,12 @@ export default getFormattedSlideMetadata({
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
                 },
-                `was never released. At the time, the indie labels were most eager to sign artists who didn't need them, but the Bobtail Yearlings need a label as much as they expect to be needed back. Still, by being overlooked, they became that rare controlled experiment that can only happen by chance in the wild. What happens when innovation never gets heard and thus influences no one?`,
+                `was never released. At the time, the indie labels were most eager to sign artists who didn't need them, but the Bobtail Yearlings need a label as much as they hope to be needed back. Still, by being overlooked, they became that rare controlled experiment that can only happen by chance in the wild. What does innovation sound like if it's never heard and thus influences no one? Both otherworldly and uncannily familiar,`,
                 {
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
                 },
-                `sounds at once delightfully foreign yet uncannily familiar while being of no traceable time, offering a fascinating glimpse into what rock music today might have been.`,
+                `traces a lineage yet belongs to no time, offering a fascinating glimpse into what rock music today might have been.`,
             ],
         },
         {
