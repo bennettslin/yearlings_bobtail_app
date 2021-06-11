@@ -109,7 +109,7 @@ export default getFormattedSlideMetadata({
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
                 },
-                `was never released. At the time, the indie labels were most eager to sign artists who didn't need them, but the Bobtail Yearlings need a label as much as they hope to be needed back. Still, by being overlooked, they became that rare controlled experiment that only happens by chance in the wild. What does innovation sound like if it's never heard and thus influences no one? At once otherworldly and uncannily familiar,`,
+                `was never released. At the time, the indie labels were most eager to sign artists who didn't need them, but the Bobtail Yearlings need a label as much as they hope to be needed back. Still, by being overlooked, they became a rare controlled experiment that only happens by chance in the wild. What does innovation sound like if it's never heard and thus influences no one? At once otherworldly and uncannily familiar,`,
                 {
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
@@ -121,12 +121,23 @@ export default getFormattedSlideMetadata({
             paragraph: `To bide his time during indie rock's era of peak influence, Bennett learned new creative skills such as music composition, web development, and illustration. This allowed him to build the audio webcomic, which presents the album's story as a theatrical play, with illustrated characters and stage props that enter and exit as the music progresses. Annotations offer background context for the lyrics, and links to Wikipedia explain obscure references. Meanwhile, full music scores offer insight into how each song was written.`,
         },
         {
-            // TODO: Make this consistent with above.
-            paragraph: `The end of Donald Trump's presidency offers the next generation an opportunity to reevaluate the values they inherited. Thanks to Trump, we`,
+            paragraph: [
+                // TODO: Make Malkmus line more about maximising possibilities. Revise line about inherited beliefs.
+                `Thanks to Donald Trump's failed presidency, fewer of us accept the standard indie rock belief that winning over live crowds is the best signifier of potential, or that a job too many want and so few get to have should go to those who treat it with Malkmusian nonchalance. Perhaps now is the time to reconsider`,
+                {
+                    isItalic: true,
+                    lyric: `all`,
+                },
+                `our inherited beliefs. For example, by asking artists to do the work of the labels themselves, indie rock built redundancy into the system. But this makes the whole less than the sum of its parts! What if our generation's gift to rock music lies in the rediscovery of interdependence— which allows the whole to be`,
+                {
+                    isItalic: true,
+                    lyric: `greater`,
+                },
+                `?`,
+            ],
         },
         {
-            // TODO: Wrap up with reminder that we're promising a Pulitzer.
-            paragraph: `After all, a record label can do far worse than sign an artist who promises them, and us, a Pulitzer!`,
+            paragraph: `After all, hip hop never lost its interdependence to begin with. And what better genre to follow if we hope for a rock album to someday win the Pulitzer!`,
         },
     ],
 })
