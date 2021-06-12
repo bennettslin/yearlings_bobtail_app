@@ -4,13 +4,12 @@ export default getFormattedSlideMetadata({
     body: [
         {
             paragraph: [
-                // TODO: While appealing to everyone.
-                `Can a rock album ever win the Pulitzer Prize? It might seem unlikely. To earn popular approval and critical acclaim, today's rock artists usually aim for subjective qualities that don't intrigue literary scholars and musicologists the way hip hop does. But what if rock music can also merit academic study while appealing to everyone? The Bobtail Yearlings accept this challenge! And to have us hold them to it, they promise to win rock music a Pulitzer in their lifetime. With that now said, they present`,
+                `Can a rock album win the Pulitzer Prize? It might seem unlikely. To earn popular approval and critical acclaim, rock artists often aim for subjective qualities that don't intrigue literary scholars and musicologists the way hip hop does. But what if rock music can also merit academic study while appealing to everyone? The Bobtail Yearlings accept this challenge! And to have us hold them to it, they promise to win rock music a Pulitzer in their lifetime. With that said, they now present`,
                 {
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
                 },
-                `, an ambitious multimedia project that merges a double album with an audio webcomic.`,
+                `, an ambitious multimedia project that combines a double album with an audio webcomic.`,
             ],
         },
         {
@@ -20,7 +19,7 @@ export default getFormattedSlideMetadata({
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
                 },
-                `tells the autobiographical tale of an artistically inclined Asian boy growing up in Los Angeles, whose autistic brother and first crush on a Jewish girl cause him to question his Buddhist upbringing. Bullied at school, he finds solace in a mail-order cult that instructs him to shut himself away. Years later, he embarks on a five-year plan for self-improvement that ultimately wins the hand of his first love, who brings him into her Hindu faith. But as his band gains exposure in the local scene, he bolsters his ego by seeking affection from other women, leading to heartbreak and loss.`,
+                `tells the autobiographical tale of an artistically inclined Asian boy growing up in Los Angeles, whose autistic brother and first crush on a Jewish girl cause him to question his Buddhist upbringing. Bullied at school, he finds solace in a mail-order cult that instructs him to shut his feelings away. Years later, he embarks on a five-year plan for self-improvement that ultimately wins the hand of his first love, who brings him into her Hindu faith. But as his band gains exposure in the local scene, he bolsters his ego by seeking affection from other women, leading to heartbreak and loss.`,
             ],
         },
         {
@@ -104,19 +103,13 @@ export default getFormattedSlideMetadata({
             ],
         },
         {
-            // TODO: Path that rock music didn't take.
             paragraph: [
-                `Completed a decade ago,`,
+                `The album was completed a decade ago but never released. At the time, indie labels were most eager to sign artists who didn't need them, but the Bobtail Yearlings need a label as much as they hope to be needed back. Still, in being overlooked, they became the control group in a fascinating experiment that can only happen by chance in the wild. What happens when a musical work that continues to seek innovation in songcraft rather than technology is never heard and thus influences no one? At once otherworldly and uncannily familiar,`,
                 {
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
                 },
-                `was never released. At the time, the indie labels were most eager to sign artists who didn't need them, but the Bobtail Yearlings need a label as much as they hope to be needed back. Still, by being overlooked, they became a rare controlled experiment that can only happen by chance in the wild. What does innovation sound like if it's never heard and thus influences no one? At once otherworldly and uncannily familiar,`,
-                {
-                    isItalic: true,
-                    lyric: `Yearling's Bobtail`,
-                },
-                `traces a lineage but belongs to no time, offering a fascinating glimpse into what rock music today might have been.`,
+                `traces a lineage but belongs to no time, offering fans of rock music a rare glimpse down a historical road not taken.`,
             ],
         },
         {
@@ -124,13 +117,12 @@ export default getFormattedSlideMetadata({
         },
         {
             paragraph: [
-                // TODO: Revise cultivated talent part.
-                `Thanks to Donald Trump's failed presidency, fewer of us accept the standard indie rock wisdom that winning over live crowds is the best signal of future potential, or that the serendipity of willful naivete should always triumph over the cumulative talent of lifelong ambition. Perhaps it's now time to reconsider`,
+                `Thanks to Donald Trump's failed presidency, fewer of us accept the standard indie rock wisdom that winning over live crowds is the best signal of future potential, or that the serendipity of willful naivete should always triumph over talent accrued from lifelong ambition. Perhaps it's now time to reconsider`,
                 {
                     isItalic: true,
                     lyric: `all`,
                 },
-                `our inherited wisdom. For example, by asking artists to do the work of the labels themselves, indie rock built redundancy into the system. But doesn't this make the whole less than the sum of its parts? What if the next generation's contribution to rock music will be its rediscovery of interdependence— allowing the whole to be`,
+                `the inherited wisdom. For example, by asking artists to do the work of the labels themselves, indie rock built redundancy into its system. But doesn't this make the whole less than the sum of its parts? What if the next generation's gift to rock music will be its rediscovery of interdependence— allowing the whole to be`,
                 {
                     isItalic: true,
                     lyric: `greater`,
