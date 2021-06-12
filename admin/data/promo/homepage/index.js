@@ -16,7 +16,7 @@ export default getFormattedSlideMetadata({
                         anchor: 'Onesheet',
                         promoKey: ONESHEET_SUBPATH,
                     },
-                    `: Artist biography and album overview.`,
+                    `: Artist biography, project overview, and a promise to win a Pulitzer for the record label that signs us!`,
                 ],
             ],
         },
