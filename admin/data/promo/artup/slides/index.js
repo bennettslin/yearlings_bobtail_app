@@ -6,9 +6,6 @@ export default getFormattedSlideMetadata([
         title: `Introduction`,
         body: [
             {
-                paragraph: `Hi, we're the Bobtail Yearlings! We'd love to hear from ambitious musicians, record labels and the music press, and anyone interested in working with us.`,
-            },
-            {
                 paragraph: `Are you thinking to get in touch, but feeling unsure about our unconventional way of doing things? Read on, and I'll convince you that the Bobtail Yearlings are as reasonable to bet on as any artist you've worked with before.`,
             },
         ],
