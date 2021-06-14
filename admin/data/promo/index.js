@@ -2,16 +2,22 @@ import homepage from './homepage'
 import onesheet from './onesheet'
 import artup from './artup'
 import artup2 from './artup2'
-import { getSmartQuotedEntity } from '../../utils/format/smartQuote'
+import { getTitleForPromoPage } from './helpers/title'
+import {
+    ARTUP_2_SUBPATH,
+    ARTUP_SUBPATH,
+    ONESHEET_SUBPATH,
+    PROMO_PATH,
+} from '../../../app/constants/routing'
 import { RUNTIME } from '../../../app/constants/server'
 
 export default {
     _build: RUNTIME,
     titles: {
-        homepage: getSmartQuotedEntity(`Promo Homepage`),
-        onesheet: getSmartQuotedEntity(`Onesheet`),
-        artup: getSmartQuotedEntity(`Invest in Artups`),
-        artup2: getSmartQuotedEntity(`Invest in Artups 2`),
+        homepage: getTitleForPromoPage(PROMO_PATH),
+        onesheet: getTitleForPromoPage(ONESHEET_SUBPATH),
+        artup: getTitleForPromoPage(ARTUP_SUBPATH),
+        artup2: getTitleForPromoPage(ARTUP_2_SUBPATH),
     },
     homepage,
     onesheet,
