@@ -22,6 +22,16 @@ const TextSpan = ({
     let formattedText = text,
         Tag
 
+    // Add nonbreaking space between last two words.
+    if (isVerseLyric) {
+        formattedText = getFormattedLyricSpanText(formattedText)
+    }
+
+    // Last verse span in wormhole destination verse will end in ellipsis.
+    if (isWormholeDestinationVerse && endsVerse) {
+        formattedText = getFormattedEndingVerseSpanText(formattedText)
+    }
+
     if (isWormholeDestinationAnchor) {
         Tag = 'span'
     }
@@ -31,16 +41,6 @@ const TextSpan = ({
 
     } else if (isItalic) {
         Tag = 'i'
-    }
-
-    // Add nonbreaking space between last two words.
-    if (isVerseLyric) {
-        formattedText = getFormattedLyricSpanText(formattedText)
-    }
-
-    // Last verse span in wormhole destination verse will end in ellipsis.
-    if (isWormholeDestinationVerse && endsVerse) {
-        formattedText = getFormattedEndingVerseSpanText(formattedText)
     }
 
     return Tag ? (
@@ -57,7 +57,6 @@ const TextSpan = ({
 }
 
 TextSpan.propTypes = {
-// From parent.
     text: PropTypes.string.isRequired,
     isVerseLyric: PropTypes.bool,
     isEmphasis: PropTypes.bool,

@@ -1,4 +1,5 @@
 import { getFormattedSlideMetadata } from '../helpers/slide'
+import { CONTACT_TEXT } from '../../../../app/constants/contact'
 import {
     ARTUP_SUBPATH,
     ONESHEET_SUBPATH,
@@ -34,6 +35,12 @@ export default getFormattedSlideMetadata({
                     `": What if indie artists are more like stores, while other artists are more like startups?`,
                 ],
             ],
+        },
+        {
+            title: 'Contact us',
+        },
+        {
+            paragraph: CONTACT_TEXT,
         },
     ]),
 })

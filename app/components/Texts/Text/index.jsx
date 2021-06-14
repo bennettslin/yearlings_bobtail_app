@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import { isString } from '../../../helpers/general'
 
 import Anchor from '../../Anchor'
+import Contact from '../../Contact'
 import Texts from '..'
 import TextSpan from './Span'
 import TextLyricAnchor from './LyricAnchor'
@@ -31,9 +32,14 @@ const Text = forwardRef(({
     } else if (typeof textEntity === 'object') {
         const {
             lyric,
+            isContact,
             isItalic,
             isEmphasis,
         } = textEntity
+
+        if (isContact) {
+            return <Contact />
+        }
 
         if (isItalic || isEmphasis) {
             return (
