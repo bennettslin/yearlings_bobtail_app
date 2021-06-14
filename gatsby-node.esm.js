@@ -2,7 +2,7 @@ import webpack from 'webpack'
 import path from 'path'
 import scene from './admin/data/scene'
 import album from './admin/data/album'
-import artup from './admin/data/promo'
+import promo from './admin/data/promo'
 import {
     getIsRuntimeBuild,
     getIsProductionBuild,
@@ -13,7 +13,7 @@ export const onCreateWebpackConfig = ({ actions }) => {
     // Dev sanity check.
     scene._build = COMPILED
     album._build = COMPILED
-    artup._build = COMPILED
+    promo._build = COMPILED
 
     // Get primitive value of current date and time.
     const buildDateTime = new Date().valueOf()
@@ -26,7 +26,7 @@ export const onCreateWebpackConfig = ({ actions }) => {
                 ...!getIsRuntimeBuild() && {
                     SCENE: JSON.stringify(scene),
                     ALBUM: JSON.stringify(album),
-                    PROMO: JSON.stringify(artup),
+                    PROMO: JSON.stringify(promo),
                 },
                 BUILD_DATE_TIME: buildDateTime,
                 IS_RUNTIME: getIsRuntimeBuild(),

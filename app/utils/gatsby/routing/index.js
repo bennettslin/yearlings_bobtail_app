@@ -10,6 +10,7 @@ import {
 import {
     ANNOTATION_QUERY_FIELD,
     ARTUP_SUBPATH,
+    ARTUP_2_SUBPATH,
     ONESHEET_SUBPATH,
     VERSE_QUERY_FIELD,
 } from '../../../constants/routing'
@@ -54,6 +55,8 @@ export const getRoutingPromoKey = pathname => {
         return ONESHEET_SUBPATH
     } else if (pathname.includes(ARTUP_SUBPATH)) {
         return ARTUP_SUBPATH
+    } else if (pathname.includes(ARTUP_2_SUBPATH)) {
+        return ARTUP_2_SUBPATH
     } else {
         return ''
     }

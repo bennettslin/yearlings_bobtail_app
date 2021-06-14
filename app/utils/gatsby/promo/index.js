@@ -3,12 +3,14 @@ import { getIsAlbumClientSession } from '../session'
 import { getPathForArtupSlide } from '../../../api/promo/artup'
 import {
     ARTUP_SUBPATH,
+    ARTUP_2_SUBPATH,
     ONESHEET_SUBPATH,
     PROMO_PATH,
 } from '../../../constants/routing'
 
 export const getOnesheetFullPath = () => `${PROMO_PATH}/${ONESHEET_SUBPATH}`
 export const getArtupFullPath = () => `${PROMO_PATH}/${ARTUP_SUBPATH}`
+export const getArtup2FullPath = () => `${PROMO_PATH}/${ARTUP_2_SUBPATH}`
 
 const _getIsValidPromoHomepagePath = pathname => (
     pathname === PROMO_PATH
