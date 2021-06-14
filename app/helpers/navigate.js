@@ -2,8 +2,12 @@ import qs from 'qs'
 import { navigate } from 'gatsby'
 import { getFullPathForSong } from '../api/album/songs'
 import { getPathForArtupSlide } from '../api/promo/artup'
+import { getPathForArtup2Slide } from '../api/promo/artup2'
 import { getWindow } from '../utils/browser'
-import { getArtupFullPath } from '../utils/gatsby/promo'
+import {
+    getArtupFullPath,
+    getArtup2FullPath,
+} from '../utils/gatsby/promo'
 import {
     ANNOTATION_QUERY_FIELD,
     VERSE_QUERY_FIELD,
@@ -54,16 +58,28 @@ export const navigateToAlbumPage = (
 }
 
 export const navigateToArtupPage = artupSlideIndex => {
-    const artupUrl = `/${
-        getArtupFullPath()
-    }/${
-        artupSlideIndex
-    }-${
-        getPathForArtupSlide(artupSlideIndex)
-    }`
-
     navigate(
-        artupUrl,
+        `/${
+            getArtupFullPath()
+        }/${
+            artupSlideIndex
+        }-${
+            getPathForArtupSlide(artupSlideIndex)
+        }`,
+        // Replace, not push, in history.
+        { replace: true },
+    )
+}
+
+export const navigateToArtup2Page = artup2SlideIndex => {
+    navigate(
+        `/${
+            getArtup2FullPath()
+        }/${
+            artup2SlideIndex
+        }-${
+            getPathForArtup2Slide(artup2SlideIndex)
+        }`,
         // Replace, not push, in history.
         { replace: true },
     )

@@ -3,14 +3,17 @@ import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import {
     mapArtupSlideIndex,
+    mapArtup2SlideIndex,
     mapSelectedPromoKey,
 } from '../../../redux/promo/selector'
 import {
     navigateToArtupPage,
+    navigateToArtup2Page,
     navigateToPathname,
 } from '../../../helpers/navigate'
 import {
     getIsArtupPage,
+    getIsArtup2Page,
     getIsOnesheetPage,
     getIsPromoHomepage,
 } from '../../../helpers/promo'
@@ -20,6 +23,7 @@ import { PROMO_PATH } from '../../../constants/routing'
 const PromoUrlManager = forwardRef(({ verifyBeforeNavigation }, ref) => {
     const
         artupSlideIndex = useSelector(mapArtupSlideIndex),
+        artup2SlideIndex = useSelector(mapArtup2SlideIndex),
         selectedPromoKey = useSelector(mapSelectedPromoKey)
 
     const navigateToPromoPage = () => {
@@ -29,6 +33,8 @@ const PromoUrlManager = forwardRef(({ verifyBeforeNavigation }, ref) => {
             navigateToPathname(getOnesheetFullPath())
         } else if (getIsArtupPage(selectedPromoKey)) {
             navigateToArtupPage(artupSlideIndex)
+        } else if (getIsArtup2Page(selectedPromoKey)) {
+            navigateToArtup2Page(artup2SlideIndex)
         }
     }
 
@@ -41,7 +47,7 @@ const PromoUrlManager = forwardRef(({ verifyBeforeNavigation }, ref) => {
         } else {
             navigateToPromoPage()
         }
-    }, [artupSlideIndex, selectedPromoKey])
+    }, [artupSlideIndex, artup2SlideIndex, selectedPromoKey])
 
     useImperativeHandle(ref, () => navigateToPromoPage)
 

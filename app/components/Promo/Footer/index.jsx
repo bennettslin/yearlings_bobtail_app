@@ -1,33 +1,44 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { getIsArtupPage, getIsPromoHomepage } from '../../../helpers/promo'
+import { getIsArtup2Page, getIsArtupPage, getIsPromoHomepage } from '../../../helpers/promo'
 import getPromoServerClientHoc from '../../../hocs/PromoHoc'
 import Contact from '../../Contact'
 import ArtupPagination from '../../Promos/Artup/Pagination'
+import Artup2Pagination from '../../Promos/Artup2/Pagination'
 import HomepageButton from './HomepageButton'
 import './style'
 
-const PromoFooter = ({ serverClientPromoKey }) => (
-    <div
-        {...{
-            className: cx(
-                'PromoFooter',
-                'promo__child',
-                'fCC',
-            ),
-        }}
-    >
-        {getIsArtupPage(serverClientPromoKey) ? (
-            <ArtupPagination />
-        ) : (
-            <Contact isTextShadowLight />
-        )}
-        {!getIsPromoHomepage(serverClientPromoKey) && (
-            <HomepageButton />
-        )}
-    </div>
-)
+const PromoFooter = ({ serverClientPromoKey }) => {
+    const showContact =
+        !getIsArtupPage(serverClientPromoKey) &&
+        !getIsArtup2Page(serverClientPromoKey)
+
+    return (
+        <div
+            {...{
+                className: cx(
+                    'PromoFooter',
+                    'promo__child',
+                    'fCC',
+                ),
+            }}
+        >
+            {getIsArtupPage(serverClientPromoKey) && (
+                <ArtupPagination />
+            )}
+            {getIsArtup2Page(serverClientPromoKey) && (
+                <Artup2Pagination />
+            )}
+            {showContact && (
+                <Contact isTextShadowLight />
+            )}
+            {!getIsPromoHomepage(serverClientPromoKey) && (
+                <HomepageButton />
+            )}
+        </div>
+    )
+}
 
 PromoFooter.propTypes = {
     serverClientPromoKey: PropTypes.string.isRequired,

@@ -2,6 +2,7 @@
 import {
     getRoutingAnnotationIndex,
     getRoutingArtupIndex,
+    getRoutingArtup2Index,
     getRoutingPromoKey,
     getRoutingSongIndex,
     getRoutingVerseIndex,
@@ -89,6 +90,21 @@ export const getInitialArtupIndex = (pathname = '') => {
             1
 
     return initialArtupIndex
+}
+
+export const getInitialArtup2Index = (pathname = '') => {
+    const
+        /**
+         * When called by album reducer, the pathname is obviously not passed,
+         * so we default to the stored index.
+         */
+        routingArtup2Index = getRoutingArtup2Index(pathname),
+        isRoutingArtup2Valid = Number.isFinite(routingArtup2Index),
+        initialArtup2Index = isRoutingArtup2Valid ?
+            routingArtup2Index :
+            1
+
+    return initialArtup2Index
 }
 
 export const getInitialPromoPageKey = (pathname = '') => {

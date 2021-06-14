@@ -1,9 +1,11 @@
 import React, { forwardRef, useContext } from 'react'
 import { useSelector } from 'react-redux'
 import PageArtupIndexContext from '../../contexts/PageArtupIndex'
+import PageArtup2IndexContext from '../../contexts/PageArtup2Index'
 import PagePromoKeyContext from '../../contexts/PagePromoKey'
 import {
     mapArtupSlideIndex,
+    mapArtup2SlideIndex,
     mapSelectedPromoKey,
 } from '../../redux/promo/selector'
 import { getIsServerSide } from '../../utils/browser'
@@ -17,12 +19,17 @@ const getPromoServerClientHoc = ServerClientComponent => (
     forwardRef((props, ref) => {
         const
             pageArtupIndex = useContext(PageArtupIndexContext),
+            pageArtup2Index = useContext(PageArtup2IndexContext),
             pagePromoKey = useContext(PagePromoKeyContext),
             artupSlideIndex = useSelector(mapArtupSlideIndex),
+            artup2SlideIndex = useSelector(mapArtup2SlideIndex),
             selectedPromoKey = useSelector(mapSelectedPromoKey),
             serverClientArtupIndex = getIsServerSide() ?
                 pageArtupIndex :
                 artupSlideIndex,
+            serverClientArtup2Index = getIsServerSide() ?
+                pageArtup2Index :
+                artup2SlideIndex,
             serverClientPromoKey = getIsServerSide() ?
                 pagePromoKey :
                 selectedPromoKey
@@ -32,6 +39,7 @@ const getPromoServerClientHoc = ServerClientComponent => (
                 {...{
                     ref,
                     serverClientArtupIndex,
+                    serverClientArtup2Index,
                     serverClientPromoKey,
                     ...props,
                 }}

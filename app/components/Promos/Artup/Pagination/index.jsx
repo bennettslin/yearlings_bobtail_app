@@ -10,8 +10,8 @@ const ArtupPagination = () => {
         dispatchArtup = useRef(),
         artupSlideIndex = useSelector(mapArtupSlideIndex)
 
-    const dispatchPitch = pitchSlideIndex => {
-        dispatchArtup.current({ artupSlideIndex: pitchSlideIndex })
+    const dispatchPitch = slideIndex => {
+        dispatchArtup.current({ artupSlideIndex: slideIndex })
     }
 
     return (

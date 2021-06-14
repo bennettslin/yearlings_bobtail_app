@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import {
     getIsArtupPage,
+    getIsArtup2Page,
     getIsOnesheetPage,
     getIsPromoHomepage,
 } from '../../../helpers/promo'
@@ -10,6 +11,7 @@ import getPromoServerClientHoc from '../../../hocs/PromoHoc'
 import HomepagePromo from '../../Promos/Homepage'
 import OnesheetPromo from '../../Promos/Onesheet'
 import ArtupPromo from '../../Promos/Artup'
+import Artup2Promo from '../../Promos/Artup2'
 import './style'
 import PromoScrollTitle from './Title'
 import { getTitleForPromo } from '../../../api/promo'
@@ -67,6 +69,9 @@ const PromoScroll = forwardRef(({
                     )}
                     {getIsArtupPage(serverClientPromoKey) && (
                         <ArtupPromo {...{ handlePitchPageChange }} />
+                    )}
+                    {getIsArtup2Page(serverClientPromoKey) && (
+                        <Artup2Promo {...{ handlePitchPageChange }} />
                     )}
                 </div>
             </div>

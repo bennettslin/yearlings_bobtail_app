@@ -4,10 +4,12 @@ import { getPromoDefaults } from './default'
 
 export const getPromoReducer = ({
     initialArtupIndex,
+    initialArtup2Index,
     initialPromoPage,
 }) => (
     state = getPromoDefaults({
         initialArtupIndex,
+        initialArtup2Index,
         initialPromoPage,
     }),
     { type, payload },

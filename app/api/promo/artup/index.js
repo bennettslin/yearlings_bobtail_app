@@ -9,12 +9,8 @@ const {
 
 export const getArtupSlidesCount = () => SLIDES.length
 
-const getArtupSlideIndices = () => (
-    getArrayOfLength(getArtupSlidesCount(), 1)
-)
-
 export const getIsArtupSlideValid = artupSlideIndex => (
-    getArtupSlideIndices().some(
+    getArrayOfLength(getArtupSlidesCount(), 1).some(
         index => index === artupSlideIndex,
     )
 )
