@@ -8,6 +8,11 @@ export const getIsPromoHomepage = promoKey => (
     promoKey === ''
 )
 
+export const getIsPitchPage = promoKey => (
+    promoKey === ARTUP_SUBPATH ||
+    promoKey === ARTUP_2_SUBPATH
+)
+
 export const getIsArtupPage = promoKey => (
     promoKey === ARTUP_SUBPATH
 )

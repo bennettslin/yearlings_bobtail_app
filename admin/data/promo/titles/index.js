@@ -1,4 +1,3 @@
-import { getSmartQuotedEntity } from '../../../utils/format/smartQuote'
 import {
     ARTUP_SUBPATH,
     ARTUP_2_SUBPATH,
@@ -7,8 +6,8 @@ import {
 } from '../../../../app/constants/routing'
 
 export default {
-    [PROMO_PATH]: getSmartQuotedEntity(`Promo Homepage`),
-    [ONESHEET_SUBPATH]: getSmartQuotedEntity(`Onesheet`),
-    [ARTUP_SUBPATH]: getSmartQuotedEntity('Invest in Artups'),
-    [ARTUP_2_SUBPATH]: getSmartQuotedEntity('Invest in Artups 2'),
+    [PROMO_PATH]: `Promo Homepage`,
+    [ONESHEET_SUBPATH]: `Onesheet`,
+    [ARTUP_SUBPATH]: `Invest in Artups`,
+    [ARTUP_2_SUBPATH]: `Invest in Artups 2`,
 }
