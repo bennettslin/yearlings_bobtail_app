@@ -1,5 +1,4 @@
 # TODO
-* Simplify title helper
 * Have single getIsPresentation helper where needed
 * Presentations have first page that's just table of contents
     * Modify indexing logic
