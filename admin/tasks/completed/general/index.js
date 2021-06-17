@@ -5141,7 +5141,7 @@ export default [
     },
     {
         taskName: `Promo content.`,
-        workedHours: 104,
+        workedHours: 108,
     },
     {
         taskName: `Promo pages.`,
