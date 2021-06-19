@@ -11,7 +11,11 @@ const _getIsValidSongPath = pathname => {
     // Check if it's a valid album page path.
     const routingSongIndex = getRoutingSongIndex(pathname)
     if (Number.isFinite(routingSongIndex)) {
-        return pathname === `${getFullPathForSong(routingSongIndex)}`
+        return (
+            // Allow for song path to be just index number.
+            pathname === `${routingSongIndex}` ||
+            pathname === `${getFullPathForSong(routingSongIndex)}`
+        )
     }
 
     return false

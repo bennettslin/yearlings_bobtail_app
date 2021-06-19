@@ -1,5 +1,7 @@
 export const VERSE_QUERY_FIELD = 'verse'
+export const VERSE_QUERY_INITIAL = 'v'
 export const ANNOTATION_QUERY_FIELD = 'annotation'
+export const ANNOTATION_QUERY_INITIAL = 'a'
 
 export const PROMO_PATH = 'promo'
 export const ONESHEET_SUBPATH = 'onesheet'

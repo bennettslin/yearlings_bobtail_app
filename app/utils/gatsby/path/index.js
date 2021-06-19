@@ -9,9 +9,12 @@ export const getIndexFromPath = ({ pathname, rootPath }) => (
     )
 )
 
-export const getIndexFromQueryString = (search, key) => (
+export const getIndexFromQueryString = (search, keys) => (
     search ?
-        parseInt(qs.parse(search, { ignoreQueryPrefix: true })[key]) :
+        keys.reduce((valueIndex, key) => (
+            valueIndex ||
+            parseInt(qs.parse(search, { ignoreQueryPrefix: true })[key])
+        ), NaN) :
         NaN
 )
 

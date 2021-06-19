@@ -1,5 +1,6 @@
 # Bug
 * Can't click on popup, then mouse up on overlay. Minor issue?
+* Hovering on dotless anchor does not hover verse underneath
 
 # TODO
 * Make turning off popups more obvious. (Wade brought this up.)

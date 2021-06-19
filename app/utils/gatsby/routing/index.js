@@ -12,11 +12,13 @@ import {
     getIndexFromQueryString,
 } from '../path'
 import {
-    ANNOTATION_QUERY_FIELD,
     ARTUP_SUBPATH,
     ARTUP_2_SUBPATH,
     ONESHEET_SUBPATH,
     VERSE_QUERY_FIELD,
+    VERSE_QUERY_INITIAL,
+    ANNOTATION_QUERY_FIELD,
+    ANNOTATION_QUERY_INITIAL,
 } from '../../../constants/routing'
 
 export const getRoutingSongIndex = pathname => {
@@ -27,7 +29,10 @@ export const getRoutingSongIndex = pathname => {
 export const getRoutingVerseIndex = (search, songIndex) => {
     const routingVerseIndex = getIndexFromQueryString(
         search,
-        VERSE_QUERY_FIELD,
+        [
+            VERSE_QUERY_FIELD,
+            VERSE_QUERY_INITIAL,
+        ],
     )
     return getIsVerseValid(
         songIndex,
@@ -38,7 +43,10 @@ export const getRoutingVerseIndex = (search, songIndex) => {
 export const getRoutingAnnotationIndex = (search, songIndex) => {
     const routingAnnotationIndex = getIndexFromQueryString(
         search,
-        ANNOTATION_QUERY_FIELD,
+        [
+            ANNOTATION_QUERY_FIELD,
+            ANNOTATION_QUERY_INITIAL,
+        ],
     )
     return getIsAnnotationValid(
         songIndex,
