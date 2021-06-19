@@ -5163,4 +5163,8 @@ export default [
         taskName: `Lyric and annotation audits.`,
         workedHours: 23,
     },
+    {
+        taskName: `Add to social media.`,
+        workedHours: 3,
+    },
 ]
