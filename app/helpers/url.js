@@ -38,3 +38,22 @@ export const getUrlPath = ({
         queryStrings ? `/${queryStrings}` : ''
     }`
 }
+
+export const getUrl = ({
+    songIndex,
+    verseIndex,
+    annotationIndex,
+    isShort,
+
+}) => {
+    const urlPath = getUrlPath({
+        songIndex,
+        verseIndex,
+        annotationIndex,
+        isShort,
+    })
+
+    return (
+        `${window.location.host}${urlPath}`
+    )
+}

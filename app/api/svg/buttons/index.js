@@ -53,9 +53,12 @@ import {
     POPUP_PREVIOUS_BUTTON_KEY,
     POPUP_NEXT_BUTTON_KEY,
     ROOT_HOME_BUTTON_KEY,
-    WORMHOLE_BUTTON_KEY,
     SCORES_BUTTON_KEY,
+    SOCIAL_FACEBOOK_BUTTON_KEY,
+    SOCIAL_TWITTER_BUTTON_KEY,
+    SOCIAL_URL_BUTTON_KEY,
     TIPS_BUTTON_KEY,
+    WORMHOLE_BUTTON_KEY,
 } from '../../../constants/buttons'
 
 export default {
@@ -86,5 +89,8 @@ export default {
     [ROOT_HOME_BUTTON_KEY]: rootHome,
     [WORMHOLE_BUTTON_KEY]: wormhole,
     [SCORES_BUTTON_KEY]: scores,
+    [SOCIAL_FACEBOOK_BUTTON_KEY]: about,
+    [SOCIAL_TWITTER_BUTTON_KEY]: dotsSlide,
+    [SOCIAL_URL_BUTTON_KEY]: promoPage,
     [TIPS_BUTTON_KEY]: tips,
 }

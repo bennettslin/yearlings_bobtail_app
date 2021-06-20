@@ -20,8 +20,11 @@ import {
     POPUP_CLOSE_BUTTON_KEY,
     POPUP_PREVIOUS_BUTTON_KEY,
     POPUP_NEXT_BUTTON_KEY,
-    WORMHOLE_BUTTON_KEY,
     SCORES_BUTTON_KEY,
+    SOCIAL_FACEBOOK_BUTTON_KEY,
+    SOCIAL_TWITTER_BUTTON_KEY,
+    SOCIAL_URL_BUTTON_KEY,
+    WORMHOLE_BUTTON_KEY,
 } from '../../constants/buttons'
 import { IS_USER_AGENT_DESKTOP } from '../../constants/device'
 
@@ -97,6 +100,9 @@ const TOOLTIP_TEXT_MAP = {
     [POPUP_PREVIOUS_BUTTON_KEY]: 'previous annotation',
     [POPUP_NEXT_BUTTON_KEY]: 'next annotation',
     [SCORES_BUTTON_KEY]: 'score',
+    [SOCIAL_FACEBOOK_BUTTON_KEY]: 'post on Facebook',
+    [SOCIAL_TWITTER_BUTTON_KEY]: 'post on Twitter',
+    [SOCIAL_URL_BUTTON_KEY]: 'copy URL to clipboard',
     get tips() {
         return {
             [SHOWN]: 'tip shown',
