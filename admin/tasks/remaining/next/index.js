@@ -1,5 +1,9 @@
 export default [
     // Next.
+    {
+        taskName: `Social media.`,
+        workedHours: 3,
+    },
 
     // Needed.
 

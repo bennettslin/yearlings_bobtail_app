@@ -5164,7 +5164,7 @@ export default [
         workedHours: 23,
     },
     {
-        taskName: `Add to social media.`,
+        taskName: `Music distributor work.`,
         workedHours: 3,
     },
 ]
