@@ -16,8 +16,12 @@ const SocialMediaButtons = ({ annotationIndex }) => (
         }}
     >
         <CopyUrlButton {...{ annotationIndex }} />
-        <TwitterButton {...{ annotationIndex }} />
-        <FacebookButton {...{ annotationIndex }} />
+        {isNaN(annotationIndex) && (
+            <>
+                <TwitterButton />
+                <FacebookButton />
+            </>
+        )}
     </div>
 )
 

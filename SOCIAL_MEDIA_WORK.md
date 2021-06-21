@@ -1,14 +1,4 @@
 # Social media work
-* Annotations only have URL buttons
-    * Remove annotationIndex from buttons that don't need it
-
-* Tooltip for social media buttons in annotation has too dark shadow
-    * But only in carousel annotation
-    * Tooltip needs unique IDs
-
-* Placeholder image files for each song
-    * og and twitter configs use correct song file names
-
 * getUrl helper adds slash if not in path
 
 * Social media links for each song and logue

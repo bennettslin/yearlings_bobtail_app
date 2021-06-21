@@ -25,6 +25,7 @@ const CopyUrlButton = ({ annotationIndex }) => {
                     'CopyUrlButton',
                 ),
                 buttonName: SOCIAL_COPY_URL_BUTTON_KEY,
+                tooltipIdentifier: annotationIndex,
                 handleButtonClick,
             }}
         />

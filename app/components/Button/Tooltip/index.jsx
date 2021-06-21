@@ -12,7 +12,7 @@ import {
 } from '../../../redux/device/selector'
 import './style'
 
-const Tooltip = ({ buttonName }) => {
+const Tooltip = ({ buttonName, tooltipIdentifier }) => {
     const
         isAccessOn = useSelector(mapIsAccessOn),
         isDesktopWidth = useSelector(mapIsDesktopWidth),
@@ -29,7 +29,7 @@ const Tooltip = ({ buttonName }) => {
                     'ReactTooltip',
                     'dropShadow',
                 ),
-                id: buttonName,
+                id: `${buttonName}${tooltipIdentifier || ''}`,
                 effect: 'solid',
                 delayShow: 750,
                 type: 'light',
@@ -44,6 +44,7 @@ const Tooltip = ({ buttonName }) => {
 
 Tooltip.propTypes = {
     buttonName: PropTypes.string.isRequired,
+    tooltipIdentifier: PropTypes.any,
 }
 
 export default memo(Tooltip)
