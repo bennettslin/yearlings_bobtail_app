@@ -1,11 +1,23 @@
 # Social media work
-* Have url helper include verse with annotations?
-    * Allow anntations without verse to go to first timed verse?
 * Each song has social media links
-* Facebook link works
-* Twitter link works
 * UI feedback for copy URL
     * "Link copied to clipboard!"
-* Create custom icons
 
-https://blog.hubspot.com/blog/tabid/6307/bid/29544/the-ultimate-cheat-sheet-for-creating-social-media-buttons.aspx
+* Index paths
+    * Comment out social media buttons
+    * Publish
+    * Test with shortened URLs in production
+
+* Create test social media accounts
+
+* Allow for different URL lengths
+    * Facebook and copy URL have full path
+    * Twitter has shortened path
+
+* Create test social media accounts
+
+* Create custom icons
+* Details in window
+
+* Have url helper include verse with annotations?
+    * Allow annotations without verse to go to first timed verse?

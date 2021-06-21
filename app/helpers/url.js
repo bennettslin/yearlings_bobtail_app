@@ -8,6 +8,8 @@ import {
     VERSE_QUERY_INITIAL,
 } from '../constants/routing'
 
+const YEARLINGS_BOBTAIL_DOMAIN = `https://www.yearlingsbobtail.com`
+
 export const getUrlPath = ({
     songIndex,
     verseIndex,
@@ -54,6 +56,6 @@ export const getUrl = ({
     })
 
     return (
-        `${window.location.host}${urlPath}`
+        `${YEARLINGS_BOBTAIL_DOMAIN}${urlPath}`
     )
 }
