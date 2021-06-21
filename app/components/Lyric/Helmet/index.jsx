@@ -2,18 +2,33 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import getSongServerClientHoc from '../../../hocs/SongHoc'
-import { getOverviewForSong } from '../../../api/album/songs'
-import { getDocumentHead } from './helper'
+import {
+    getMetaDescription,
+    getMetaTitle,
+    getMetaTags,
+} from './helper'
 
 const LyricHelmet = ({ serverClientSongIndex }) => (
     <Helmet>
-        <title>{getDocumentHead(serverClientSongIndex)}</title>
+        <title>{getMetaTitle(serverClientSongIndex)}</title>
         <meta
             {...{
                 name: 'description',
-                content: getOverviewForSong(serverClientSongIndex),
+                content: getMetaDescription(serverClientSongIndex),
             }}
         />
+        {getMetaTags(serverClientSongIndex).map(({
+            name,
+            content,
+        }) => (
+            <meta
+                {...{
+                    key: name,
+                    name,
+                    content,
+                }}
+            />
+        ))}
     </Helmet>
 )
 

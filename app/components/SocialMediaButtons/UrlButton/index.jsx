@@ -14,7 +14,6 @@ const UrlButton = ({ annotationIndex }) => {
         navigator.clipboard.writeText(getUrl({
             songIndex: selectedSongIndex,
             annotationIndex,
-            isShort: true,
         }))
     }
 

@@ -14,7 +14,8 @@ const TwitterButton = ({ annotationIndex }) => {
         openSocialMediaPopup({
             songIndex: selectedSongIndex,
             annotationIndex,
-            buttonKey: SOCIAL_TWITTER_BUTTON_KEY,
+            identifier: SOCIAL_TWITTER_BUTTON_KEY,
+            isShort: true,
         })
     }
 

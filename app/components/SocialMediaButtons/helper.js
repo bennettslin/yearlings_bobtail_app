@@ -26,17 +26,18 @@ const getWindowFeatures = features => (
 export const openSocialMediaPopup = ({
     songIndex,
     annotationIndex,
-    buttonKey,
+    identifier,
+    isShort,
 }) => {
     const
         encodedUrl = encodeUrl(
             getUrl({
                 songIndex,
                 annotationIndex,
-                isShort: true,
+                isShort,
             }),
         ),
-        socialMediaUrl = `${SOCIAL_MEDIA_URL_MAP[buttonKey]}${encodedUrl}&`
+        socialMediaUrl = `${SOCIAL_MEDIA_URL_MAP[identifier]}${encodedUrl}`
 
     window.open(
         socialMediaUrl,

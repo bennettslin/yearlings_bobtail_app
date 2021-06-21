@@ -14,7 +14,7 @@ const FacebookButton = ({ annotationIndex }) => {
         openSocialMediaPopup({
             songIndex: selectedSongIndex,
             annotationIndex,
-            buttonKey: SOCIAL_FACEBOOK_BUTTON_KEY,
+            identifier: SOCIAL_FACEBOOK_BUTTON_KEY,
         })
     }
 

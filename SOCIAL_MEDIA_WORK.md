@@ -1,23 +1,28 @@
 # Social media work
-* Each song has social media links
+* Position social media links for each song and logue
+* Position social media links for each promo page
+    * Helmet for promo page
+    * Facebook and Twitter meta tags
+
+* Annotations only have URL buttons
 * UI feedback for copy URL
     * "Link copied to clipboard!"
 
-* Index paths
-    * Comment out social media buttons
-    * Publish
-    * Test with shortened URLs in production
-
-* Create test social media accounts
-
-* Allow for different URL lengths
-    * Facebook and copy URL have full path
-    * Twitter has shortened path
-
-* Create test social media accounts
+* Consolidate helpers that need YB domain
 
 * Create custom icons
-* Details in window
+    * Facebook
+    * Twitter
+    * Copy URL
 
-* Have url helper include verse with annotations?
-    * Allow annotations without verse to go to first timed verse?
+* Twitter player cards
+    * https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards
+    * https://cards-dev.twitter.com/validator
+* Create unique images for each song
+    * Twitter
+        * Square
+    * Facebook
+        * 1200 * 630
+
+# Bonus
+* Image alts
