@@ -11,7 +11,7 @@ import {
 const YEARLINGS_BOBTAIL_DOMAIN = `https://www.yearlingsbobtail.com`
 
 export const getUrl = path => (
-    `${YEARLINGS_BOBTAIL_DOMAIN}${path}`
+    `${YEARLINGS_BOBTAIL_DOMAIN}${path[0] === '/' ? path : `/${path}`}`
 )
 
 export const getSongUrlPath = ({

@@ -19,7 +19,7 @@ const getFacebookConfig = songIndex => ({
     'og:type': 'website',
     'og:title': getMetaTitle(songIndex),
     'og:description': getMetaDescription(songIndex),
-    'og:image': getUrl(`/${getFullPathForSong(songIndex)}.jpg`),
+    'og:image': getUrl(`${getFullPathForSong(songIndex)}.jpg`),
 })
 
 const getTwitterConfig = songIndex => ({
@@ -27,7 +27,7 @@ const getTwitterConfig = songIndex => ({
     'twitter:site': '@BobtailYearling',
     'twitter:title': getMetaTitle(songIndex),
     'twitter:description': getMetaDescription(songIndex),
-    'twitter:image': getUrl(`/${getFullPathForSong(songIndex)}.jpg`),
+    'twitter:image': getUrl(`${getFullPathForSong(songIndex)}.jpg`),
 })
 
 export const getMetaTags = songIndex => {

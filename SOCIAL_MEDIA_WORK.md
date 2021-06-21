@@ -1,5 +1,11 @@
 # Social media work
-* getUrl helper adds slash if not in path
+
+* UI feedback for copy URL
+    * set timeout value in Redux
+    * Temporarily make button a checkmark
+        * Have checkmark icon
+    * Temporarily show tooltip with text
+        * "Link copied!"
 
 * Social media links for each song and logue
     * Position
@@ -9,13 +15,6 @@
     * Layout
     * Helmet for promo page
     * Facebook and Twitter meta tags
-
-* UI feedback for copy URL
-    * set timeout value in Redux
-    * Temporarily make button a checkmark
-        * Have checkmark icon
-    * Temporarily show tooltip with text
-        * "Link copied!"
 
 * Twitter player cards
     * https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards
