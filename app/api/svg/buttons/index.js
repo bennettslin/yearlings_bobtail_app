@@ -27,6 +27,10 @@ import wormhole from './carousel/wormhole'
 import scores from './main/scores'
 import tips from './main/tips'
 
+import copyUrl from './socialMedia/copyUrl'
+import facebook from './socialMedia/facebook'
+import twitter from './socialMedia/twitter'
+
 import {
     ABOUT_BUTTON_KEY,
     AUDIO_PLAY_BUTTON_KEY,
@@ -54,9 +58,9 @@ import {
     POPUP_NEXT_BUTTON_KEY,
     ROOT_HOME_BUTTON_KEY,
     SCORES_BUTTON_KEY,
+    SOCIAL_COPY_URL_BUTTON_KEY,
     SOCIAL_FACEBOOK_BUTTON_KEY,
     SOCIAL_TWITTER_BUTTON_KEY,
-    SOCIAL_URL_BUTTON_KEY,
     TIPS_BUTTON_KEY,
     WORMHOLE_BUTTON_KEY,
 } from '../../../constants/buttons'
@@ -89,8 +93,8 @@ export default {
     [ROOT_HOME_BUTTON_KEY]: rootHome,
     [WORMHOLE_BUTTON_KEY]: wormhole,
     [SCORES_BUTTON_KEY]: scores,
-    [SOCIAL_FACEBOOK_BUTTON_KEY]: about,
-    [SOCIAL_TWITTER_BUTTON_KEY]: dotsSlide,
-    [SOCIAL_URL_BUTTON_KEY]: promoPage,
+    [SOCIAL_COPY_URL_BUTTON_KEY]: copyUrl,
+    [SOCIAL_FACEBOOK_BUTTON_KEY]: facebook,
+    [SOCIAL_TWITTER_BUTTON_KEY]: twitter,
     [TIPS_BUTTON_KEY]: tips,
 }

@@ -35,6 +35,7 @@ const Lyric = forwardRef(({ didMount, pageSongIndex }, ref) => {
 
     return (
         <PageSongIndexContext.Provider {...{ value: pageSongIndex }}>
+            <LyricHelmet />
             <CSSTransition
                 appear
                 {...{
@@ -65,7 +66,6 @@ const Lyric = forwardRef(({ didMount, pageSongIndex }, ref) => {
                     <CarouselAccess inLyric />
                 </div>
             </CSSTransition>
-            <LyricHelmet />
         </PageSongIndexContext.Provider>
     )
 })

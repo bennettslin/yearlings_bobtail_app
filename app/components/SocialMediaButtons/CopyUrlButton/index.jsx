@@ -4,14 +4,14 @@ import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import Button from '../../Button'
 import { mapSelectedSongIndex } from '../../../redux/selected/selector'
-import { getUrl } from '../../../helpers/url'
-import { SOCIAL_URL_BUTTON_KEY } from '../../../constants/buttons'
+import { getSongUrl } from '../../../helpers/url'
+import { SOCIAL_COPY_URL_BUTTON_KEY } from '../../../constants/buttons'
 
-const UrlButton = ({ annotationIndex }) => {
+const CopyUrlButton = ({ annotationIndex }) => {
     const selectedSongIndex = useSelector(mapSelectedSongIndex)
 
     const handleButtonClick = () => {
-        navigator.clipboard.writeText(getUrl({
+        navigator.clipboard.writeText(getSongUrl({
             songIndex: selectedSongIndex,
             annotationIndex,
         }))
@@ -22,17 +22,17 @@ const UrlButton = ({ annotationIndex }) => {
             isSmallSize
             {...{
                 className: cx(
-                    'UrlButton',
+                    'CopyUrlButton',
                 ),
-                buttonName: SOCIAL_URL_BUTTON_KEY,
+                buttonName: SOCIAL_COPY_URL_BUTTON_KEY,
                 handleButtonClick,
             }}
         />
     )
 }
 
-UrlButton.propTypes = {
+CopyUrlButton.propTypes = {
     annotationIndex: PropTypes.number,
 }
 
-export default UrlButton
+export default CopyUrlButton

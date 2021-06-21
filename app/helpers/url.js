@@ -10,7 +10,11 @@ import {
 
 const YEARLINGS_BOBTAIL_DOMAIN = `https://www.yearlingsbobtail.com`
 
-export const getUrlPath = ({
+export const getUrl = path => (
+    `${YEARLINGS_BOBTAIL_DOMAIN}${path}`
+)
+
+export const getSongUrlPath = ({
     songIndex,
     verseIndex,
     annotationIndex,
@@ -41,21 +45,19 @@ export const getUrlPath = ({
     }`
 }
 
-export const getUrl = ({
+export const getSongUrl = ({
     songIndex,
     verseIndex,
     annotationIndex,
     isShort,
 
 }) => {
-    const urlPath = getUrlPath({
+    const urlPath = getSongUrlPath({
         songIndex,
         verseIndex,
         annotationIndex,
         isShort,
     })
 
-    return (
-        `${YEARLINGS_BOBTAIL_DOMAIN}${urlPath}`
-    )
+    return getUrl(urlPath)
 }

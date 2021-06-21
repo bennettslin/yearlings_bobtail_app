@@ -6,7 +6,7 @@ import {
     getArtupFullPath,
     getArtup2FullPath,
 } from '../utils/gatsby/promo'
-import { getUrlPath } from './url'
+import { getSongUrlPath } from './url'
 
 export const reloadFromRoot = () => {
     /**
@@ -22,7 +22,7 @@ export const navigateToAlbumPage = (
     annotationIndex,
 ) => {
     navigate(
-        getUrlPath({
+        getSongUrlPath({
             songIndex,
             verseIndex,
             annotationIndex,

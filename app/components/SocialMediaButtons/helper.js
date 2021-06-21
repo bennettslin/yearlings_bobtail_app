@@ -1,5 +1,5 @@
 import encodeUrl from 'encodeurl'
-import { getUrl } from '../../helpers/url'
+import { getSongUrl } from '../../helpers/url'
 import { SOCIAL_FACEBOOK_BUTTON_KEY, SOCIAL_TWITTER_BUTTON_KEY } from '../../constants/buttons'
 
 const
@@ -31,7 +31,7 @@ export const openSocialMediaPopup = ({
 }) => {
     const
         encodedUrl = encodeUrl(
-            getUrl({
+            getSongUrl({
                 songIndex,
                 annotationIndex,
                 isShort,

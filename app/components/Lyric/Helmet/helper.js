@@ -3,7 +3,7 @@ import {
     getTitleForSong,
 } from '../../../api/album/songs'
 import { getTitleForAlbum } from '../../../api/album/title'
-import { getUrl } from '../../../helpers/url'
+import { getSongUrl, getUrl } from '../../../helpers/url'
 
 export const getMetaTitle = songIndex => (
     `${getTitleForSong(songIndex)} | ${getTitleForAlbum()}`
@@ -14,11 +14,11 @@ export const getMetaDescription = songIndex => (
 )
 
 const getFacebookConfig = songIndex => ({
-    'og:url': getUrl({ songIndex }),
+    'og:url': getSongUrl({ songIndex }),
     'og:type': 'website',
     'og:title': getMetaTitle(songIndex),
     'og:description': getMetaDescription(songIndex),
-    'og:image': 'https://www.yearlingsbobtail.com/test.jpg',
+    'og:image': getUrl('/test.jpg'),
 })
 
 const getTwitterConfig = songIndex => ({
@@ -26,7 +26,7 @@ const getTwitterConfig = songIndex => ({
     'twitter:site': '@BobtailYearling',
     'twitter:title': getMetaTitle(songIndex),
     'twitter:description': getMetaDescription(songIndex),
-    'twitter:image': 'https://www.yearlingsbobtail.com/test.jpg',
+    'twitter:image': getUrl('/test.jpg'),
 })
 
 export const getMetaTags = songIndex => {

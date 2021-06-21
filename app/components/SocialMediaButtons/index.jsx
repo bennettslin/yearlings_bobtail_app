@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import FacebookButton from './FacebookButton'
 import TwitterButton from './TwitterButton'
-import UrlButton from './UrlButton'
+import CopyUrlButton from './CopyUrlButton'
 import './style'
 
 const SocialMediaButtons = ({ annotationIndex }) => (
@@ -15,7 +15,7 @@ const SocialMediaButtons = ({ annotationIndex }) => (
             ),
         }}
     >
-        <UrlButton {...{ annotationIndex }} />
+        <CopyUrlButton {...{ annotationIndex }} />
         <TwitterButton {...{ annotationIndex }} />
         <FacebookButton {...{ annotationIndex }} />
     </div>
