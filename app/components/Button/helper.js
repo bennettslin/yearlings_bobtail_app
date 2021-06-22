@@ -100,7 +100,7 @@ const TOOLTIP_TEXT_MAP = {
     [POPUP_PREVIOUS_BUTTON_KEY]: 'previous annotation',
     [POPUP_NEXT_BUTTON_KEY]: 'next annotation',
     [SCORES_BUTTON_KEY]: 'score',
-    [SOCIAL_COPY_URL_BUTTON_KEY]: 'copy URL to clipboard',
+    [SOCIAL_COPY_URL_BUTTON_KEY]: 'copy link to clipboard',
     [SOCIAL_FACEBOOK_BUTTON_KEY]: 'post on Facebook',
     [SOCIAL_TWITTER_BUTTON_KEY]: 'post on Twitter',
     get tips() {

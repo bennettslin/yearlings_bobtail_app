@@ -1,4 +1,5 @@
 # Bug
+* Helper to flatten overview for meta descriptions
 * Can't click on popup, then mouse up on overlay. Minor issue?
 * Hovering on dotless anchor does not hover verse underneath
 

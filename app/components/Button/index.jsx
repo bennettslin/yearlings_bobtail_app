@@ -38,6 +38,7 @@ const Button = ({
     hasTitleShadowLight,
     accessKey,
     buttonTitle,
+    tooltipIdentifier,
     children,
 
 }) => {
@@ -95,7 +96,7 @@ const Button = ({
                     className,
                 ),
                 ...showTooltip && {
-                    'data-for': buttonName,
+                    'data-for': `${buttonName}${tooltipIdentifier || ''}`,
                     'data-tip': getTooltipText({
                         buttonName,
                         buttonIdentifier,
@@ -149,7 +150,7 @@ const Button = ({
                 )}
             </ButtonAnimatable>
             {showTooltip && (
-                <Tooltip {...{ buttonName }} />
+                <Tooltip {...{ buttonName, tooltipIdentifier }} />
             )}
             <StopPropagationDispatcher {...{ ref: stopPropagation }} />
         </div>
@@ -179,6 +180,7 @@ Button.propTypes = {
     ]),
     hasTitleShadowLight: PropTypes.bool,
     buttonTitle: PropTypes.any,
+    tooltipIdentifier: PropTypes.any,
     handleButtonClick: PropTypes.func.isRequired,
     children: PropTypes.any,
 }
