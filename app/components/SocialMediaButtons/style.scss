@@ -1,7 +1,7 @@
 @import '../../scss/constants/icon';
 
 .SocialMediaButtons {
-    margin-top: $MARGIN_THIN;
+    margin-top: $MARGIN_THIN * 2;
     justify-content: end;
     flex-direction: row-reverse;
 }

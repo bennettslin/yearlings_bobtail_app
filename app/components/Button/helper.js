@@ -24,6 +24,7 @@ import {
     SOCIAL_COPY_URL_BUTTON_KEY,
     SOCIAL_FACEBOOK_BUTTON_KEY,
     SOCIAL_TWITTER_BUTTON_KEY,
+    SONG_REPEAT_BUTTON_KEY,
     WORMHOLE_BUTTON_KEY,
 } from '../../constants/buttons'
 import { IS_USER_AGENT_DESKTOP } from '../../constants/device'
@@ -45,7 +46,7 @@ import {
 
 const TOOLTIP_TEXT_MAP = {
     [ABOUT_BUTTON_KEY]: 'about this album',
-    get songRepeat() {
+    get [SONG_REPEAT_BUTTON_KEY]() {
         return {
             [false]: 'continued play',
             [true]: 'repeated play',
@@ -100,7 +101,12 @@ const TOOLTIP_TEXT_MAP = {
     [POPUP_PREVIOUS_BUTTON_KEY]: 'previous annotation',
     [POPUP_NEXT_BUTTON_KEY]: 'next annotation',
     [SCORES_BUTTON_KEY]: 'score',
-    [SOCIAL_COPY_URL_BUTTON_KEY]: 'copy link to clipboard',
+    get [SOCIAL_COPY_URL_BUTTON_KEY]() {
+        return {
+            [false]: 'copy link to clipboard',
+            [true]: 'link copied!',
+        }
+    },
     [SOCIAL_FACEBOOK_BUTTON_KEY]: 'post on Facebook',
     [SOCIAL_TWITTER_BUTTON_KEY]: 'post on Twitter',
     get tips() {

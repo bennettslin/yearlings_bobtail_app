@@ -1,12 +1,5 @@
 # Social media work
 
-* UI feedback for copy URL
-    * set timeout value in Redux
-    * Temporarily make button a checkmark
-        * Have checkmark icon
-    * Temporarily show tooltip with text
-        * "Link copied!"
-
 * Social media links for each song and logue
     * Position
     * Layout

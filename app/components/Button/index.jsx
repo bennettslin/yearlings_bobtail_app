@@ -33,6 +33,7 @@ const Button = forwardRef(({
     isBrightHover,
     buttonIdentifier,
     handleButtonClick,
+    handleTooltipHide,
     hasCharacterShadowLight,
     buttonCharacter,
     hasTitleShadowLight,
@@ -151,7 +152,13 @@ const Button = forwardRef(({
                 )}
             </ButtonAnimatable>
             {isTooltipEnabled && (
-                <Tooltip {...{ buttonName, tooltipIdentifier }} />
+                <Tooltip
+                    {...{
+                        buttonName,
+                        tooltipIdentifier,
+                        handleTooltipHide,
+                    }}
+                />
             )}
             <StopPropagationDispatcher {...{ ref: stopPropagation }} />
         </div>
@@ -183,6 +190,7 @@ Button.propTypes = {
     buttonTitle: PropTypes.any,
     tooltipIdentifier: PropTypes.any,
     handleButtonClick: PropTypes.func.isRequired,
+    handleTooltipHide: PropTypes.func,
     children: PropTypes.any,
 }
 

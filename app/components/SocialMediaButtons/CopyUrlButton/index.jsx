@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useDispatch, useSelector } from 'react-redux'
@@ -14,17 +14,33 @@ const CopyUrlButton = ({ annotationIndex }) => {
     const
         dispatch = useDispatch(),
         buttonRef = useRef(),
+        copiedUrlRef = useRef(),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         tooltipId = `${SOCIAL_COPY_URL_BUTTON_KEY}${annotationIndex}`,
-        isCopiedUrl = useSelector(getMapIsCopiedUrlKey(tooltipId))
+        isCopiedUrl = useSelector(getMapIsCopiedUrlKey(tooltipId)),
+        [copyTimeoutId, setCopyTimeoutId] = useState(-1)
+
+    copiedUrlRef.current = isCopiedUrl
+
+    const resetCopiedUrlKey = () => {
+        if (copiedUrlRef.current) {
+            dispatch(updateCopiedUrlKey())
+        }
+    }
 
     const handleButtonClick = () => {
         navigator.clipboard.writeText(getSongUrl({
             songIndex: selectedSongIndex,
             annotationIndex,
         }))
-        // TODO: Set timeout
+
+        clearTimeout(copyTimeoutId)
         dispatch(updateCopiedUrlKey(tooltipId))
+
+        setCopyTimeoutId(setTimeout(
+            resetCopiedUrlKey,
+            1500,
+        ))
     }
 
     useEffect(() => {
@@ -44,8 +60,10 @@ const CopyUrlButton = ({ annotationIndex }) => {
                     'CopyUrlButton',
                 ),
                 buttonName: SOCIAL_COPY_URL_BUTTON_KEY,
+                buttonIdentifier: isCopiedUrl,
                 tooltipIdentifier: annotationIndex,
                 handleButtonClick,
+                handleTooltipHide: resetCopiedUrlKey,
             }}
         />
     )

@@ -13,7 +13,11 @@ import {
 import { getMapIsCopiedUrlKey } from '../../../redux/session/selector'
 import './style'
 
-const Tooltip = ({ buttonName, tooltipIdentifier }) => {
+const Tooltip = ({
+    buttonName,
+    tooltipIdentifier,
+    handleTooltipHide,
+}) => {
     const
         isAccessOn = useSelector(mapIsAccessOn),
         isDesktopWidth = useSelector(mapIsDesktopWidth),
@@ -46,6 +50,7 @@ const Tooltip = ({ buttonName, tooltipIdentifier }) => {
                     buttonName,
                     isDesktopWidth,
                 }),
+                afterHide: handleTooltipHide,
             }}
         />
     )
@@ -54,6 +59,7 @@ const Tooltip = ({ buttonName, tooltipIdentifier }) => {
 Tooltip.propTypes = {
     buttonName: PropTypes.string.isRequired,
     tooltipIdentifier: PropTypes.any,
+    handleTooltipHide: PropTypes.func,
 }
 
 export default memo(Tooltip)
