@@ -10,29 +10,38 @@ import {
     mapIsDesktopWidth,
     mapIsPhoneOrMiniWidth,
 } from '../../../redux/device/selector'
+import { getMapIsCopiedUrlKey } from '../../../redux/session/selector'
 import './style'
 
 const Tooltip = ({ buttonName, tooltipIdentifier }) => {
     const
         isAccessOn = useSelector(mapIsAccessOn),
         isDesktopWidth = useSelector(mapIsDesktopWidth),
-        isPhoneOrMiniWidth = useSelector(mapIsPhoneOrMiniWidth)
+        isPhoneOrMiniWidth = useSelector(mapIsPhoneOrMiniWidth),
+        tooltipId = `${buttonName}${tooltipIdentifier || ''}`,
+        isCopiedUrl = useSelector(getMapIsCopiedUrlKey(tooltipId))
 
     /**
      * If it's a narrow viewport or a mobile device, always allow the tooltip
      * to show. Otherwise, allow it to show if access is on.
      */
-    return (!IS_USER_AGENT_DESKTOP || isPhoneOrMiniWidth || isAccessOn) && (
+    return (
+        !IS_USER_AGENT_DESKTOP ||
+        isPhoneOrMiniWidth ||
+        isAccessOn ||
+        isCopiedUrl
+    ) && (
         <ReactTooltip
             {...{
                 className: cx(
                     'ReactTooltip',
                     'dropShadow',
                 ),
-                id: `${buttonName}${tooltipIdentifier || ''}`,
+                id: tooltipId,
                 effect: 'solid',
-                delayShow: 750,
-                type: 'light',
+                delayShow: isCopiedUrl ? 0 : 750,
+                delayHide: isCopiedUrl ? 500 : 250,
+                type: isCopiedUrl ? 'success' : 'light',
                 place: getTooltipPlacement({
                     buttonName,
                     isDesktopWidth,

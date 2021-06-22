@@ -112,7 +112,7 @@ const TOOLTIP_TEXT_MAP = {
     },
 }
 
-export const getShowTooltip = buttonName => {
+export const getIsTooltipEnabled = buttonName => {
     // Don't show tooltips in mobile, to avoid sticky hover.
     if (!IS_USER_AGENT_DESKTOP) {
         return false

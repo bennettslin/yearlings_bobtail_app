@@ -1,4 +1,4 @@
-import React, { memo, useRef } from 'react'
+import React, { memo, forwardRef, useRef } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import getDidMountHoc from '../../hocs/DidMountHoc'
@@ -12,12 +12,12 @@ import AccessLetter from '../Access/Letter'
 import { ENTER } from '../../constants/access'
 import { CHILD_ACCESS_PREFIX } from '../../constants/prefixes'
 import {
-    getShowTooltip,
+    getIsTooltipEnabled,
     getTooltipText,
 } from './helper'
 import './style'
 
-const Button = ({
+const Button = forwardRef(({
     didMount,
     buttonName,
     className,
@@ -41,7 +41,7 @@ const Button = ({
     tooltipIdentifier,
     children,
 
-}) => {
+}, ref) => {
     const
         stopPropagation = useRef(),
         isAccessEnter = accessKey === ENTER,
@@ -54,7 +54,7 @@ const Button = ({
             isAccessed
         ),
 
-        showTooltip = getShowTooltip(buttonName) && !isDisabled
+        isTooltipEnabled = getIsTooltipEnabled(buttonName) && !isDisabled
 
     const onClick = e => {
         if (!isDisabled) {
@@ -74,6 +74,7 @@ const Button = ({
     return didMount && (
         <div
             {...{
+                ref,
                 className: cx(
                     'Button',
                     `Button__${buttonName}`,
@@ -95,7 +96,7 @@ const Button = ({
                     isPlaceholderCharacter && 'Button__isPlaceholderCharacter',
                     className,
                 ),
-                ...showTooltip && {
+                ...isTooltipEnabled && {
                     'data-for': `${buttonName}${tooltipIdentifier || ''}`,
                     'data-tip': getTooltipText({
                         buttonName,
@@ -149,13 +150,13 @@ const Button = ({
                     />
                 )}
             </ButtonAnimatable>
-            {showTooltip && (
+            {isTooltipEnabled && (
                 <Tooltip {...{ buttonName, tooltipIdentifier }} />
             )}
             <StopPropagationDispatcher {...{ ref: stopPropagation }} />
         </div>
     )
-}
+})
 
 Button.propTypes = {
     didMount: PropTypes.bool.isRequired,
