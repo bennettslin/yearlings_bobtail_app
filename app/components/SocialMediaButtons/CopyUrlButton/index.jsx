@@ -1,14 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import Button from '../../Button'
 import { mapSelectedSongIndex } from '../../../redux/selected/selector'
 import { getSongUrl } from '../../../helpers/url'
 import { SOCIAL_COPY_URL_BUTTON_KEY } from '../../../constants/buttons'
 
 const CopyUrlButton = ({ annotationIndex }) => {
-    const selectedSongIndex = useSelector(mapSelectedSongIndex)
+    const
+        dispatch = useDispatch(),
+        selectedSongIndex = useSelector(mapSelectedSongIndex)
 
     const handleButtonClick = () => {
         navigator.clipboard.writeText(getSongUrl({

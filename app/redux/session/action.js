@@ -37,3 +37,8 @@ export const updateEarColumnIndex = earColumnIndex => ({
     type: SESSION_STORE,
     payload: { earColumnIndex },
 })
+
+export const updateCopiedUrlKey = copiedUrlKey => ({
+    type: SESSION_STORE,
+    payload: { copiedUrlKey },
+})

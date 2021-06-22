@@ -26,4 +26,5 @@ export const getSessionDefaults = ({
         initialSongIndex,
         initialAnnotationIndex,
     ) || 0,
+    copiedUrlKey: '',
 })
