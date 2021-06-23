@@ -12,43 +12,45 @@ import {
     PROMO_PATH,
 } from '../../../constants/routing'
 
-export const getOnesheetFullPath = () => `${PROMO_PATH}/${ONESHEET_SUBPATH}`
-export const getArtupFullPath = () => `${PROMO_PATH}/${ARTUP_SUBPATH}`
-export const getArtup2FullPath = () => `${PROMO_PATH}/${ARTUP_2_SUBPATH}`
+export const getPromoPath = promoKey => (
+    promoKey ? `${PROMO_PATH}/${promoKey}` : PROMO_PATH
+)
 
 const _getIsValidPromoHomepagePath = pathname => (
     pathname === PROMO_PATH
 )
 
 const _getIsValidOnesheetPath = pathname => (
-    pathname === getOnesheetFullPath()
+    pathname === getPromoPath(ONESHEET_SUBPATH)
 )
 
 const _getIsValidArtupPath = pathname => {
+    const artupPath = getPromoPath(ARTUP_SUBPATH)
     // Check if it's a valid artup root path.
-    if (pathname === getArtupFullPath()) {
+    if (pathname === artupPath) {
         return true
     }
 
     // Check if it's a valid artup page path.
     const routingArtupIndex = getRoutingArtupIndex(pathname)
     if (Number.isFinite(routingArtupIndex)) {
-        return pathname === `${getArtupFullPath()}/${routingArtupIndex}-${getPathForArtupSlide(routingArtupIndex)}`
+        return pathname === `${artupPath}/${routingArtupIndex}-${getPathForArtupSlide(routingArtupIndex)}`
     }
 
     return false
 }
 
 const _getIsValidArtup2Path = pathname => {
+    const artup2Path = getPromoPath(ARTUP_2_SUBPATH)
     // Check if it's a valid artup2 root path.
-    if (pathname === getArtup2FullPath()) {
+    if (pathname === artup2Path) {
         return true
     }
 
     // Check if it's a valid artup2 page path.
     const routingArtup2Index = getRoutingArtup2Index(pathname)
     if (Number.isFinite(routingArtup2Index)) {
-        return pathname === `${getArtup2FullPath()}/${routingArtup2Index}-${getPathForArtup2Slide(routingArtup2Index)}`
+        return pathname === `${artup2Path}/${routingArtup2Index}-${getPathForArtup2Slide(routingArtup2Index)}`
     }
 
     return false

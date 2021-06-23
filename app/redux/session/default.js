@@ -17,14 +17,20 @@ export const SESSION_WIKI_DEFAULTS = {
 export const getSessionDefaults = ({
     initialSongIndex,
     initialAnnotationIndex,
+    isPromoPage,
+
 }) => ({
-    ...SESSION_WIKI_DEFAULTS,
-    isSongRepeatOn: IS_STORED_SONG_REPEAT_ON,
-    volumeIndex: STORED_VOLUME_INDEX,
-    shownNavBookIndex: getBookForSongIndex(initialSongIndex),
-    earColumnIndex: getColumnIndexForAnnotation(
-        initialSongIndex,
-        initialAnnotationIndex,
-    ) || 0,
+    // Promo page just has copied URL key.
     copiedUrlKey: '',
+
+    ...!isPromoPage && {
+        ...SESSION_WIKI_DEFAULTS,
+        isSongRepeatOn: IS_STORED_SONG_REPEAT_ON,
+        volumeIndex: STORED_VOLUME_INDEX,
+        shownNavBookIndex: getBookForSongIndex(initialSongIndex),
+        earColumnIndex: getColumnIndexForAnnotation(
+            initialSongIndex,
+            initialAnnotationIndex,
+        ) || 0,
+    },
 })

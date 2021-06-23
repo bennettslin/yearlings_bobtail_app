@@ -6,11 +6,13 @@ export const getSelectedReducer = ({
     initialSongIndex,
     initialVerseIndex,
     initialAnnotationIndex,
+    isPromoPage,
 }) => (
     state = getSelectedDefaults({
         initialSongIndex,
         initialVerseIndex,
         initialAnnotationIndex,
+        isPromoPage,
     }),
     { type, payload },
 ) => {

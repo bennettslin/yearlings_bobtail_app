@@ -136,6 +136,10 @@ export const getPromoReducers = ({
             initialArtup2Index,
             initialPromoPage,
         }),
+        [SELECTED_STORE]: getSelectedReducer({
+            isPromoPage: true,
+        }),
+        [SESSION_STORE]: getSessionReducer({ isPromoPage: true }),
         [VIEWPORT_STORE]: getViewportReducer({
             windowHeight,
             windowWidth,

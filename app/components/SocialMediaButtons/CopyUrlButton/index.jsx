@@ -4,18 +4,20 @@ import cx from 'classnames'
 import { useDispatch, useSelector } from 'react-redux'
 import ReactTooltip from 'react-tooltip'
 import Button from '../../Button'
+import { mapSelectedPromoKey } from '../../../redux/promo/selector'
 import { mapSelectedSongIndex } from '../../../redux/selected/selector'
-import { getSongUrl } from '../../../helpers/url'
-import { SOCIAL_COPY_URL_BUTTON_KEY } from '../../../constants/buttons'
 import { updateCopiedUrlKey } from '../../../redux/session/action'
 import { getMapIsCopiedUrlKey } from '../../../redux/session/selector'
+import { SOCIAL_COPY_URL_BUTTON_KEY } from '../../../constants/buttons'
+import { copyUrlToClipboard } from './helper'
 
-const CopyUrlButton = ({ annotationIndex }) => {
+const CopyUrlButton = ({ annotationIndex, isPromoPage }) => {
     const
         dispatch = useDispatch(),
         buttonRef = useRef(),
         copiedUrlRef = useRef(),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
+        selectedPromoKey = useSelector(mapSelectedPromoKey),
         tooltipId = `${SOCIAL_COPY_URL_BUTTON_KEY}${annotationIndex}`,
         isCopiedUrl = useSelector(getMapIsCopiedUrlKey(tooltipId)),
         [copyTimeoutId, setCopyTimeoutId] = useState(-1)
@@ -29,10 +31,12 @@ const CopyUrlButton = ({ annotationIndex }) => {
     }
 
     const handleButtonClick = () => {
-        navigator.clipboard.writeText(getSongUrl({
+        copyUrlToClipboard({
             songIndex: selectedSongIndex,
             annotationIndex,
-        }))
+            promoKey: selectedPromoKey,
+            isPromoPage,
+        })
 
         clearTimeout(copyTimeoutId)
         dispatch(updateCopiedUrlKey(tooltipId))
@@ -71,6 +75,7 @@ const CopyUrlButton = ({ annotationIndex }) => {
 
 CopyUrlButton.propTypes = {
     annotationIndex: PropTypes.number,
+    isPromoPage: PropTypes.bool,
 }
 
 export default CopyUrlButton

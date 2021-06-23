@@ -14,8 +14,14 @@ export const getViewportStore = ({
     windowWidth,
     isPromoPage,
 }) => {
+    const deviceWidthIndex = getDeviceWidthIndex(windowWidth)
+
+    if (isPromoPage) {
+        // Promo page just has device width index.
+        return { deviceWidthIndex }
+    }
+
     const
-        deviceWidthIndex = getDeviceWidthIndex(windowWidth),
         isHeightlessLyric = getIsHeightlessLyric({
             deviceWidthIndex,
             windowHeight,
@@ -56,21 +62,16 @@ export const getViewportStore = ({
         })
 
     return {
-        // Promo page just returns device width index.
         deviceWidthIndex,
-
-        // TODO: Don't bother to calculate if promo page.
-        ...!isPromoPage && {
-            windowWidth,
-            windowHeight,
-            isHeightlessLyric,
-            isTwoRowMenu,
-            menuHeight,
-            canCarouselNavMount,
-            stageDimensionCoordinates,
-            prosceniumDimensionCoordinates,
-            ceilingHeight,
-            floorHeight,
-        },
+        windowWidth,
+        windowHeight,
+        isHeightlessLyric,
+        isTwoRowMenu,
+        menuHeight,
+        canCarouselNavMount,
+        stageDimensionCoordinates,
+        prosceniumDimensionCoordinates,
+        ceilingHeight,
+        floorHeight,
     }
 }

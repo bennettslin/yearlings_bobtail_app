@@ -6,7 +6,7 @@ import TwitterButton from './TwitterButton'
 import CopyUrlButton from './CopyUrlButton'
 import './style'
 
-const SocialMediaButtons = ({ annotationIndex }) => (
+const SocialMediaButtons = ({ annotationIndex, isPromoPage }) => (
     <div
         {...{
             className: cx(
@@ -15,11 +15,11 @@ const SocialMediaButtons = ({ annotationIndex }) => (
             ),
         }}
     >
-        <CopyUrlButton {...{ annotationIndex }} />
+        <CopyUrlButton {...{ annotationIndex, isPromoPage }} />
         {isNaN(annotationIndex) && (
             <>
-                <TwitterButton />
-                <FacebookButton />
+                <TwitterButton {...{ isPromoPage }} />
+                <FacebookButton {...{ isPromoPage }} />
             </>
         )}
     </div>
@@ -27,6 +27,7 @@ const SocialMediaButtons = ({ annotationIndex }) => (
 
 SocialMediaButtons.propTypes = {
     annotationIndex: PropTypes.number,
+    isPromoPage: PropTypes.bool,
 }
 
 export default SocialMediaButtons

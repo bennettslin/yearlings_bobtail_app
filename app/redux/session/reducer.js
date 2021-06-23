@@ -12,10 +12,12 @@ import { VOLUME_MAX, VOLUME_MIN } from '../../constants/options'
 export const getSessionReducer = ({
     initialSongIndex,
     initialAnnotationIndex,
+    isPromoPage,
 }) => (
     state = getSessionDefaults({
         initialSongIndex,
         initialAnnotationIndex,
+        isPromoPage,
     }),
     { type, payload },
 ) => {

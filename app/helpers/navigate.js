@@ -2,11 +2,9 @@ import { navigate } from 'gatsby'
 import { getPathForArtupSlide } from '../api/promo/artup'
 import { getPathForArtup2Slide } from '../api/promo/artup2'
 import { getWindow } from '../utils/browser'
-import {
-    getArtupFullPath,
-    getArtup2FullPath,
-} from '../utils/gatsby/promo'
+import { getPromoPath } from '../utils/gatsby/promo'
 import { getSongUrlPath } from './url'
+import { ARTUP_2_SUBPATH, ARTUP_SUBPATH } from '../constants/routing'
 
 export const reloadFromRoot = () => {
     /**
@@ -35,7 +33,7 @@ export const navigateToAlbumPage = (
 export const navigateToArtupPage = artupSlideIndex => {
     navigate(
         `/${
-            getArtupFullPath()
+            getPromoPath(ARTUP_SUBPATH)
         }/${
             artupSlideIndex
         }-${
@@ -49,7 +47,7 @@ export const navigateToArtupPage = artupSlideIndex => {
 export const navigateToArtup2Page = artup2SlideIndex => {
     navigate(
         `/${
-            getArtup2FullPath()
+            getPromoPath(ARTUP_2_SUBPATH)
         }/${
             artup2SlideIndex
         }-${

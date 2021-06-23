@@ -4,9 +4,12 @@ export const getSelectedDefaults = ({
     initialSongIndex,
     initialVerseIndex,
     initialAnnotationIndex,
+    isPromoPage,
 }) => ({
-    selectedSongIndex: initialSongIndex,
-    selectedVerseIndex: initialVerseIndex,
-    selectedAnnotationIndex: initialAnnotationIndex,
-    isSelectedLogue: getSongIsLogue(initialSongIndex),
+    ...!isPromoPage && {
+        selectedSongIndex: initialSongIndex,
+        selectedVerseIndex: initialVerseIndex,
+        selectedAnnotationIndex: initialAnnotationIndex,
+        isSelectedLogue: getSongIsLogue(initialSongIndex),
+    },
 })

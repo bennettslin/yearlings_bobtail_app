@@ -1,5 +1,5 @@
 import encodeUrl from 'encodeurl'
-import { getSongUrl } from '../../helpers/url'
+import { getPromoUrl, getSongUrl } from '../../helpers/url'
 import { SOCIAL_FACEBOOK_BUTTON_KEY, SOCIAL_TWITTER_BUTTON_KEY } from '../../constants/buttons'
 
 const
@@ -24,18 +24,20 @@ const getWindowFeatures = features => (
 )
 
 export const openSocialMediaPopup = ({
-    songIndex,
-    annotationIndex,
     identifier,
+    songIndex,
+    promoKey,
+    isPromoPage,
     isShort,
 }) => {
     const
         encodedUrl = encodeUrl(
-            getSongUrl({
-                songIndex,
-                annotationIndex,
-                isShort,
-            }),
+            isPromoPage ?
+                getPromoUrl(promoKey) :
+                getSongUrl({
+                    songIndex,
+                    isShort,
+                }),
         ),
         socialMediaUrl = `${SOCIAL_MEDIA_URL_MAP[identifier]}${encodedUrl}`
 

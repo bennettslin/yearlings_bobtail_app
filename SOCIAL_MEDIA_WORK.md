@@ -8,6 +8,9 @@
     * Layout
     * Helmet for promo page
     * Facebook and Twitter meta tags
+    * Tooltips are weird
+    * Copy URL UI feedback tooltip doesn't work
+    * Allow links to each individual pitch page
 
 * Twitter player cards
     * https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards

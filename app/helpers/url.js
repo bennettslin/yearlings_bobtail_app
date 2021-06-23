@@ -7,6 +7,7 @@ import {
     VERSE_QUERY_FIELD,
     VERSE_QUERY_INITIAL,
 } from '../constants/routing'
+import { getPromoPath } from '../utils/gatsby/promo'
 
 const YEARLINGS_BOBTAIL_DOMAIN = `https://www.yearlingsbobtail.com`
 
@@ -60,4 +61,8 @@ export const getSongUrl = ({
     })
 
     return getUrl(urlPath)
+}
+
+export const getPromoUrl = promoKey => {
+    return getUrl(getPromoPath(promoKey))
 }

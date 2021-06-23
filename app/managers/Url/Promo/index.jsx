@@ -14,11 +14,8 @@ import {
 import {
     getIsArtupPage,
     getIsArtup2Page,
-    getIsOnesheetPage,
-    getIsPromoHomepage,
 } from '../../../helpers/promo'
-import { getOnesheetFullPath } from '../../../utils/gatsby/promo'
-import { PROMO_PATH } from '../../../constants/routing'
+import { getPromoPath } from '../../../utils/gatsby/promo'
 
 const PromoUrlManager = forwardRef(({ verifyBeforeNavigation }, ref) => {
     const
@@ -27,14 +24,12 @@ const PromoUrlManager = forwardRef(({ verifyBeforeNavigation }, ref) => {
         selectedPromoKey = useSelector(mapSelectedPromoKey)
 
     const navigateToPromoPage = () => {
-        if (getIsPromoHomepage(selectedPromoKey)) {
-            navigateToPathname(PROMO_PATH)
-        } else if (getIsOnesheetPage(selectedPromoKey)) {
-            navigateToPathname(getOnesheetFullPath())
-        } else if (getIsArtupPage(selectedPromoKey)) {
+        if (getIsArtupPage(selectedPromoKey)) {
             navigateToArtupPage(artupSlideIndex)
         } else if (getIsArtup2Page(selectedPromoKey)) {
             navigateToArtup2Page(artup2SlideIndex)
+        } else {
+            navigateToPathname(getPromoPath(selectedPromoKey))
         }
     }
 
