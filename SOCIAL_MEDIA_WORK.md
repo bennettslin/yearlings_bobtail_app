@@ -3,8 +3,8 @@
 * Social media links for each song and logue
     * Position
     * Layout
-* Social media links for each promo page
-    * Meta description is homepage description
+
+* Official image for promo social media
 
 * Twitter player cards
     * https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards

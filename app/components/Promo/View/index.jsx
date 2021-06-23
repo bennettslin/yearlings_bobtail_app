@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import PromoViewContent from './Content'
 import PromoViewParagraph from './Paragraph'
 import PromoViewTitle from './Title'
-import PromoViewList from './List'
+import PromoViewEntry from './Entry'
 import SocialMediaButtons from '../../SocialMediaButtons'
 
 const PromoView = ({
@@ -34,12 +34,12 @@ const PromoView = ({
                     />
                 )
 
-            } else if (entity.list) {
+            } else if (entity.entry) {
                 return (
-                    <PromoViewList
+                    <PromoViewEntry
                         {...{
                             key: index,
-                            list: entity.list,
+                            entry: entity.entry,
                         }}
                     />
                 )

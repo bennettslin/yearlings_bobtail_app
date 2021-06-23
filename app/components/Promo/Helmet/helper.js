@@ -1,13 +1,13 @@
 import { getTitleForAlbum } from '../../../api/album/title'
-import { getTitleForPromo } from '../../../api/promo'
+import { getDescriptionForPromo, getTitleForPromo } from '../../../api/promo'
 import { getPromoUrl, getUrl } from '../../../helpers/url'
 
 export const getMetaTitle = promoKey => (
     `${getTitleForPromo(promoKey)} | ${getTitleForAlbum()}`
 )
 
-export const getMetaDescription = () => (
-    `Promo material for the Bobtail Yearlings album Yearling's Bobtail.`
+export const getMetaDescription = promoKey => (
+    getDescriptionForPromo(promoKey)
 )
 
 const getFacebookConfig = promoKey => ({
