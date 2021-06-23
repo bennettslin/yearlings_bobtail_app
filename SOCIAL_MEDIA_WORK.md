@@ -5,9 +5,8 @@
     * Layout
 * Social media links for each promo page
     * Position
+        * Height messed up in both popup and page
     * Layout
-    * Promo footnotes are now messed up
-    * Copy URL UI feedback tooltip doesn't work
     * Meta description is homepage description
 
 * Twitter player cards

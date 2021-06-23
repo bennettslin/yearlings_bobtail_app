@@ -18,7 +18,7 @@ const CopyUrlButton = ({ annotationIndex, isPromoPage }) => {
         copiedUrlRef = useRef(),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         selectedPromoKey = useSelector(mapSelectedPromoKey),
-        tooltipId = `${SOCIAL_COPY_URL_BUTTON_KEY}${annotationIndex}`,
+        tooltipId = `${SOCIAL_COPY_URL_BUTTON_KEY}${Number.isFinite(annotationIndex) ? annotationIndex : ''}`,
         isCopiedUrl = useSelector(getMapIsCopiedUrlKey(tooltipId)),
         [copyTimeoutId, setCopyTimeoutId] = useState(-1)
 
