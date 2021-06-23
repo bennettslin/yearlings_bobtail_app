@@ -6,11 +6,9 @@
 * Social media links for each promo page
     * Position
     * Layout
-    * Helmet for promo page
-    * Facebook and Twitter meta tags
-    * Tooltips are weird
+    * Promo footnotes are now messed up
     * Copy URL UI feedback tooltip doesn't work
-    * Allow links to each individual pitch page
+    * Meta description is homepage description
 
 * Twitter player cards
     * https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards

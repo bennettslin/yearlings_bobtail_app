@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import Texts from '../../../Texts'
-import SocialMediaButtons from '../../../SocialMediaButtons'
 import './style'
 
 const PromoScrollTitle = ({ title }) => (
@@ -16,7 +15,6 @@ const PromoScrollTitle = ({ title }) => (
             ),
         }}
     >
-        <SocialMediaButtons isPromoPage />
         <Texts {...{ text: title }} />
     </div>
 )

@@ -15,7 +15,6 @@ import DeviceWrapper from '../../wrappers/DeviceWrapper'
 import AccessWrapper from '../../wrappers/AccessWrapper'
 import ResizeManager from '../../managers/Resize'
 import PromoUrlManager from '../../managers/Url/Promo'
-import PromoHelmet from './Helmet'
 import './style'
 
 const PromoContainer = ({ children }) => {
@@ -96,7 +95,6 @@ const PromoContainer = ({ children }) => {
                         onKeyUp,
                     }}
                 >
-                    <PromoHelmet />
                     <ResizeManager
                         isPromoPage
                         {...{ getResizeContainerElement }}
@@ -106,6 +104,7 @@ const PromoContainer = ({ children }) => {
                         children
                     ) : (
                         <Promo
+                            isPromoPage
                             {...{
                                 ref: promoScrollElement,
                                 handlePageChange: focusElement,

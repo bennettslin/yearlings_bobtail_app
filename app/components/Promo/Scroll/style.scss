@@ -20,7 +20,7 @@
     position: relative;
     width: 100%;
     height: 100%;
-    padding: $margin__thick * 2;
+    padding: 0 $margin__thick * 2 $margin__thick * 2;
 
     display: flex;
     flex-direction: column;

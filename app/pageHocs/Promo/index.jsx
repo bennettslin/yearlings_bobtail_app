@@ -15,6 +15,7 @@ const getPromoPageComponent = ({
      */
     const PromoPageComponent = () => (
         <Promo
+            isPromoPage
             {...{
                 pageArtupIndex,
                 pageArtup2Index,

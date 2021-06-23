@@ -11,6 +11,7 @@ const SocialMediaButtons = ({ annotationIndex, isPromoPage }) => (
         {...{
             className: cx(
                 'SocialMediaButtons',
+                isPromoPage && 'SocialMediaButtons__promoPage',
                 'fCC',
             ),
         }}
