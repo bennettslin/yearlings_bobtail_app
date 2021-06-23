@@ -1,8 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { useDispatch, useSelector } from 'react-redux'
-import { Helmet } from 'react-helmet'
+import { useDispatch } from 'react-redux'
 import PromoNavigation from '../../managers/Key/Navigation/Promo'
 import AccessStylesheet from '../../components/Stylesheets/Access'
 import Promo from '../../components/Promo'
@@ -10,14 +9,13 @@ import PromoHeader from './Header'
 import { getKeyName } from '../../managers/Key/helper'
 import { reloadFromRoot } from '../../helpers/navigate'
 import { updateAccessStore } from '../../redux/access/action'
-import { mapSelectedPromoKey } from '../../redux/promo/selector'
 import { getIsServerSide } from '../../utils/browser'
 import { ESCAPE, ABOUT_ALBUM_TOGGLE_KEY } from '../../constants/access'
 import DeviceWrapper from '../../wrappers/DeviceWrapper'
 import AccessWrapper from '../../wrappers/AccessWrapper'
 import ResizeManager from '../../managers/Resize'
 import PromoUrlManager from '../../managers/Url/Promo'
-import { getHelmetTitleForPromoKey } from './helper'
+import PromoHelmet from './Helmet'
 import './style'
 
 const PromoContainer = ({ children }) => {
@@ -25,8 +23,7 @@ const PromoContainer = ({ children }) => {
         dispatch = useDispatch(),
         promoContainerElement = useRef(),
         promoScrollElement = useRef(),
-        navigatePromo = useRef(),
-        selectedPromoKey = useSelector(mapSelectedPromoKey)
+        navigatePromo = useRef()
 
     const getResizeContainerElement = () => promoContainerElement.current
 
@@ -99,17 +96,7 @@ const PromoContainer = ({ children }) => {
                         onKeyUp,
                     }}
                 >
-                    <Helmet>
-                        <title>
-                            {getHelmetTitleForPromoKey(selectedPromoKey)}
-                        </title>
-                        <meta
-                            {...{
-                                name: 'description',
-                                content: `Promo material for the Bobtail Yearlings album Yearling's Bobtail.`,
-                            }}
-                        />
-                    </Helmet>
+                    <PromoHelmet />
                     <ResizeManager
                         isPromoPage
                         {...{ getResizeContainerElement }}
