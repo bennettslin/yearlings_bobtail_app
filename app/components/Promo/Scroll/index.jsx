@@ -50,7 +50,6 @@ const PromoScroll = forwardRef(({
                     ),
                 }}
             >
-                <SocialMediaButtons isPromoPage />
                 <div
                     {...{
                         ref,
@@ -62,6 +61,7 @@ const PromoScroll = forwardRef(({
                         tabIndex: -1,
                     }}
                 >
+                    <SocialMediaButtons isPromoPage />
                     <PromoScrollTitle {... { title: getTitleForPromo(serverClientPromoKey) }} />
                     {getIsPromoHomepage(serverClientPromoKey) && (
                         <HomepagePromo {...{ handlePitchPageChange }} />

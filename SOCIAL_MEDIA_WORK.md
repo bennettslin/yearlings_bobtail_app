@@ -4,9 +4,10 @@
     * Position
     * Layout
 * Social media links for each promo page
-    * Position
-        * Height messed up in both popup and page
-    * Layout
+    * Social media buttons need to be nested under child, not grandchild of scroll
+        * This is needed to show tooltips
+        * But then this messes up the height...
+        * Solution is to put below content, but above footer?
     * Meta description is homepage description
 
 * Twitter player cards
