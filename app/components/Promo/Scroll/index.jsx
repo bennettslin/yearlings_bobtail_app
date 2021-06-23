@@ -6,7 +6,6 @@ import HomepagePromo from '../../Promos/Homepage'
 import OnesheetPromo from '../../Promos/Onesheet'
 import ArtupPromo from '../../Promos/Artup'
 import Artup2Promo from '../../Promos/Artup2'
-import SocialMediaButtons from '../../SocialMediaButtons'
 import PromoScrollTitle from './Title'
 import { getTitleForPromo } from '../../../api/promo'
 import {
@@ -61,7 +60,6 @@ const PromoScroll = forwardRef(({
                         tabIndex: -1,
                     }}
                 >
-                    <SocialMediaButtons isPromoPage />
                     <PromoScrollTitle {... { title: getTitleForPromo(serverClientPromoKey) }} />
                     {getIsPromoHomepage(serverClientPromoKey) && (
                         <HomepagePromo {...{ handlePitchPageChange }} />
