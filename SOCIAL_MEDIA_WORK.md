@@ -1,8 +1,7 @@
 # Social media work
 
-* Social media links for each song and logue
-    * Position
-    * Layout
+* Social media links
+    * Tooltip is under button
 
 * Official image for promo social media
 

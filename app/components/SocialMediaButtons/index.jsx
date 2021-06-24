@@ -6,29 +6,44 @@ import TwitterButton from './TwitterButton'
 import CopyUrlButton from './CopyUrlButton'
 import './style'
 
-const SocialMediaButtons = ({ annotationIndex, isPromoPage }) => (
+const SocialMediaButtons = ({
+    className,
+    annotationIndex,
+    isLogueOverview,
+    isPromoPage,
+    isShelfLeft,
+}) => (
     <div
         {...{
             className: cx(
                 'SocialMediaButtons',
-                isPromoPage && 'SocialMediaButtons__promoPage',
+                Number.isFinite(annotationIndex) &&
+                    'SocialMediaButtons__annotation',
+                (
+                    isLogueOverview || isPromoPage
+                ) && 'SocialMediaButtons__isBelowText',
+                isShelfLeft && 'SocialMediaButtons__shelfLeft',
                 'fCC',
+                className,
             ),
         }}
     >
-        <CopyUrlButton {...{ annotationIndex, isPromoPage }} />
         {isNaN(annotationIndex) && (
             <>
-                <TwitterButton {...{ isPromoPage }} />
                 <FacebookButton {...{ isPromoPage }} />
+                <TwitterButton {...{ isPromoPage }} />
             </>
         )}
+        <CopyUrlButton {...{ annotationIndex, isPromoPage }} />
     </div>
 )
 
 SocialMediaButtons.propTypes = {
+    className: PropTypes.string,
     annotationIndex: PropTypes.number,
+    isLogueOverview: PropTypes.bool,
     isPromoPage: PropTypes.bool,
+    isShelfLeft: PropTypes.bool,
 }
 
 export default SocialMediaButtons
