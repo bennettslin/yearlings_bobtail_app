@@ -2,9 +2,12 @@
 
 * Consolidate helmets
 * GA events
+* Nest social media jpgs in directories
 
 * Research Twitter player cards
     * https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards
+    * Create static html sites
+    * Create mp3s
 * Create unique images for each song
     * Twitter
         * Square
