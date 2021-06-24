@@ -15,7 +15,7 @@ const getDefaultConfig = promoKey => ({
 })
 
 const getFacebookConfig = promoKey => ({
-    'og:url': getPromoUrl(promoKey),
+    'og:url': `${getPromoUrl(promoKey)}/`,
     'og:type': 'website',
     'og:title': getMetaTitle(promoKey),
     'og:description': getMetaDescription(promoKey),

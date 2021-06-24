@@ -19,7 +19,7 @@ const getDefaultConfig = songIndex => ({
 })
 
 const getFacebookConfig = songIndex => ({
-    'og:url': getSongUrl({ songIndex }),
+    'og:url': `${getSongUrl({ songIndex })}/`,
     'og:type': 'website',
     'og:title': getMetaTitle(songIndex),
     'og:description': getMetaDescription(songIndex),
