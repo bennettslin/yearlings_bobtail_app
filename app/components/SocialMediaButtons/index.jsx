@@ -30,8 +30,10 @@ const SocialMediaButtons = ({
     >
         {isNaN(annotationIndex) && (
             <>
+                {/* Allow tooltips to always be on top. */}
+                {isShelfLeft && <TwitterButton {...{ isPromoPage }} />}
                 <FacebookButton {...{ isPromoPage }} />
-                <TwitterButton {...{ isPromoPage }} />
+                {!isShelfLeft && <TwitterButton {...{ isPromoPage }} />}
             </>
         )}
         <CopyUrlButton {...{ annotationIndex, isPromoPage }} />

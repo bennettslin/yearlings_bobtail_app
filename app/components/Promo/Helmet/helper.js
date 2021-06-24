@@ -10,12 +10,16 @@ export const getMetaDescription = promoKey => (
     getDescriptionForPromo(promoKey)
 )
 
+const getDefaultConfig = promoKey => ({
+    'description': getMetaDescription(promoKey),
+})
+
 const getFacebookConfig = promoKey => ({
     'og:url': getPromoUrl(promoKey),
     'og:type': 'website',
     'og:title': getMetaTitle(promoKey),
     'og:description': getMetaDescription(promoKey),
-    'og:image': getUrl(`test.jpg`),
+    'og:image': getUrl(`image_socialMedia.jpg`),
 })
 
 const getTwitterConfig = promoKey => ({
@@ -23,17 +27,27 @@ const getTwitterConfig = promoKey => ({
     'twitter:site': '@BobtailYearling',
     'twitter:title': getMetaTitle(promoKey),
     'twitter:description': getMetaDescription(promoKey),
-    'twitter:image': getUrl(`test.jpg`),
+    'twitter:image': getUrl(`image_socialMedia.jpg`),
 })
 
-export const getMetaTags = promoKey => {
-    const config = {
-        ...getFacebookConfig(promoKey),
-        ...getTwitterConfig(promoKey),
-    }
-
-    return Object.keys(config).map(metaTagKey => ({
-        name: metaTagKey,
-        content: config[metaTagKey],
+// TODO: This is duplicated.
+const spreadConfig = ({ config, nameKey }) => (
+    Object.keys(config).map(key => ({
+        [nameKey]: key,
+        content: config[key],
     }))
-}
+)
+
+export const getMetaTags = songIndex => ([
+    ...spreadConfig({
+        config: {
+            ...getDefaultConfig(songIndex),
+            ...getTwitterConfig(songIndex),
+        },
+        nameKey: 'name',
+    }),
+    ...spreadConfig({
+        config: getFacebookConfig(songIndex),
+        nameKey: 'property',
+    }),
+])

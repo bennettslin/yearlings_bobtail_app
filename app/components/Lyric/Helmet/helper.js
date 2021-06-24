@@ -14,6 +14,10 @@ export const getMetaDescription = songIndex => (
     getOverviewForSong(songIndex)
 )
 
+const getDefaultConfig = songIndex => ({
+    'description': getMetaDescription(songIndex),
+})
+
 const getFacebookConfig = songIndex => ({
     'og:url': getSongUrl({ songIndex }),
     'og:type': 'website',
@@ -30,14 +34,24 @@ const getTwitterConfig = songIndex => ({
     'twitter:image': getUrl(`${getFullPathForSong(songIndex)}.jpg`),
 })
 
-export const getMetaTags = songIndex => {
-    const config = {
-        ...getFacebookConfig(songIndex),
-        ...getTwitterConfig(songIndex),
-    }
-
-    return Object.keys(config).map(metaTagKey => ({
-        name: metaTagKey,
-        content: config[metaTagKey],
+// TODO: This is duplicated.
+const spreadConfig = ({ config, nameKey }) => (
+    Object.keys(config).map(key => ({
+        [nameKey]: key,
+        content: config[key],
     }))
-}
+)
+
+export const getMetaTags = songIndex => ([
+    ...spreadConfig({
+        config: {
+            ...getDefaultConfig(songIndex),
+            ...getTwitterConfig(songIndex),
+        },
+        nameKey: 'name',
+    }),
+    ...spreadConfig({
+        config: getFacebookConfig(songIndex),
+        nameKey: 'property',
+    }),
+])

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import getPromoServerClientHoc from '../../../hocs/PromoHoc'
 import {
-    getMetaDescription,
     getMetaTitle,
     getMetaTags,
 } from './helper'
@@ -15,20 +14,16 @@ const PromoHelmet = ({ isPromoPage, serverClientPromoKey }) => {
             <title>
                 {getMetaTitle(serverClientPromoKey)}
             </title>
-            <meta
-                {...{
-                    name: 'description',
-                    content: getMetaDescription(),
-                }}
-            />
             {getMetaTags(serverClientPromoKey).map(({
                 name,
+                property,
                 content,
-            }) => (
+            }, index) => (
                 <meta
                     {...{
-                        key: name,
-                        name,
+                        key: index,
+                        ...name && { name },
+                        ...property && { property },
                         content,
                     }}
                 />

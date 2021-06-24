@@ -31,14 +31,14 @@ export const openSocialMediaPopup = ({
     isShort,
 }) => {
     const
-        encodedUrl = encodeUrl(
-            isPromoPage ?
-                getPromoUrl(promoKey) :
-                getSongUrl({
-                    songIndex,
-                    isShort,
-                }),
-        ),
+        url = isPromoPage ?
+            getPromoUrl(promoKey) :
+            getSongUrl({
+                songIndex,
+                isShort,
+            }),
+        // Include final forward slash because Twitter warns about redirects.
+        encodedUrl = encodeUrl(`${url}/`),
         socialMediaUrl = `${SOCIAL_MEDIA_URL_MAP[identifier]}${encodedUrl}`
 
     window.open(

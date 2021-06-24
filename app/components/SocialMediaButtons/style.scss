@@ -16,4 +16,5 @@
 .SocialMediaButtons__shelfLeft {
     width: $length__iconSmall * 2;
     flex-wrap: wrap;
+    flex-direction: row-reverse;
 }
