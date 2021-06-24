@@ -1,8 +1,9 @@
 # Social media work
 
 * Consolidate helmets
+* GA events
 
-* Twitter player cards
+* Research Twitter player cards
     * https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards
 * Create unique images for each song
     * Twitter
@@ -13,7 +14,7 @@
 * Official image for promo social media
 * Adjust button icon colours
 
-* Validate all paths
+* Validate/scrape all paths
 
 # Bonus
 * Image alts
