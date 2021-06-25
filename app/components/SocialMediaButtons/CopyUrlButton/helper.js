@@ -1,17 +1,32 @@
+import { PROMO_PAGE_SOCIAL_MEDIA } from '../../../constants/socialMedia'
 import { getPromoUrl, getSongUrl } from '../../../helpers/url'
 
 export const copyUrlToClipboard = ({
+    socialMediaId,
     songIndex,
     annotationIndex,
     promoKey,
-    isPromoPage,
 }) => {
-    const urlText = isPromoPage ?
+    const url = socialMediaId === PROMO_PAGE_SOCIAL_MEDIA ?
         getPromoUrl(promoKey) :
         getSongUrl({
             songIndex,
             annotationIndex,
         })
 
-    navigator.clipboard.writeText(urlText)
+    navigator.clipboard.writeText(url)
+}
+
+export const getCopyUrlButtonIdentifier = ({
+    socialMediaId,
+    songIndex,
+    annotationIndex,
+}) => {
+    if (socialMediaId === PROMO_PAGE_SOCIAL_MEDIA) {
+        return null
+    } else if (isNaN(annotationIndex)) {
+        return songIndex
+    } else {
+        return songIndex * 100 + annotationIndex
+    }
 }

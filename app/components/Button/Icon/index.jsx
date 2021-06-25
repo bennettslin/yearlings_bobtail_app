@@ -12,13 +12,13 @@ import './style'
 
 const ButtonIcon = ({
     buttonName,
-    buttonIdentifier,
+    buttonOption,
     isPlaceholderCharacter,
 
 }) => {
     const buttonIconSvg = getSvgForButton({
             buttonName,
-            buttonIdentifier,
+            buttonOption,
         }),
         doRender =
             !isPlaceholderCharacter &&
@@ -36,11 +36,11 @@ const ButtonIcon = ({
 
                     // Allow epilogue button to be horizontally reversed.
                     buttonName === NAV_SONG_BUTTON_KEY &&
-                        `ButtonIcon__${buttonName}__${buttonIdentifier}`,
+                        `ButtonIcon__${buttonName}__${buttonOption}`,
 
                     getButtonIconClassNames({
                         buttonName,
-                        buttonIdentifier,
+                        buttonOption,
                     }),
 
                     'abF',
@@ -54,7 +54,7 @@ const ButtonIcon = ({
 
 ButtonIcon.propTypes = {
     buttonName: PropTypes.string.isRequired,
-    buttonIdentifier: PropTypes.any,
+    buttonOption: PropTypes.any,
     isPlaceholderCharacter: PropTypes.any,
 }
 

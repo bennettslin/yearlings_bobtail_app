@@ -8,17 +8,25 @@ import { mapSelectedPromoKey } from '../../../redux/promo/selector'
 import { mapSelectedSongIndex } from '../../../redux/selected/selector'
 import { updateCopiedUrlKey } from '../../../redux/session/action'
 import { getMapIsCopiedUrlKey } from '../../../redux/session/selector'
+import {
+    copyUrlToClipboard,
+    getCopyUrlButtonIdentifier,
+} from './helper'
 import { SOCIAL_COPY_URL_BUTTON_KEY } from '../../../constants/buttons'
-import { copyUrlToClipboard } from './helper'
 
-const CopyUrlButton = ({ annotationIndex, isPromoPage }) => {
+const CopyUrlButton = ({ id, annotationIndex }) => {
     const
         dispatch = useDispatch(),
         buttonRef = useRef(),
         copiedUrlRef = useRef(),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         selectedPromoKey = useSelector(mapSelectedPromoKey),
-        tooltipId = `${SOCIAL_COPY_URL_BUTTON_KEY}${Number.isFinite(annotationIndex) ? annotationIndex : ''}`,
+        buttonIdentifier = getCopyUrlButtonIdentifier({
+            socialMediaId: id,
+            songIndex: selectedSongIndex,
+            annotationIndex,
+        }),
+        tooltipId = `${SOCIAL_COPY_URL_BUTTON_KEY}${Number.isFinite(buttonIdentifier) ? buttonIdentifier : ''}`,
         isCopiedUrl = useSelector(getMapIsCopiedUrlKey(tooltipId)),
         [copyTimeoutId, setCopyTimeoutId] = useState(-1)
 
@@ -32,10 +40,10 @@ const CopyUrlButton = ({ annotationIndex, isPromoPage }) => {
 
     const handleButtonClick = () => {
         copyUrlToClipboard({
+            socialMediaId: id,
             songIndex: selectedSongIndex,
             annotationIndex,
             promoKey: selectedPromoKey,
-            isPromoPage,
         })
 
         clearTimeout(copyTimeoutId)
@@ -64,8 +72,8 @@ const CopyUrlButton = ({ annotationIndex, isPromoPage }) => {
                     'CopyUrlButton',
                 ),
                 buttonName: SOCIAL_COPY_URL_BUTTON_KEY,
-                buttonIdentifier: isCopiedUrl,
-                tooltipIdentifier: annotationIndex,
+                buttonOption: isCopiedUrl,
+                buttonIdentifier,
                 handleButtonClick,
                 handleTooltipHide: resetCopiedUrlKey,
             }}
@@ -74,8 +82,8 @@ const CopyUrlButton = ({ annotationIndex, isPromoPage }) => {
 }
 
 CopyUrlButton.propTypes = {
+    id: PropTypes.string.isRequired,
     annotationIndex: PropTypes.number,
-    isPromoPage: PropTypes.bool,
 }
 
 export default CopyUrlButton

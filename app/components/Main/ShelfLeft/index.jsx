@@ -11,6 +11,7 @@ import SocialMediaButtons from '../../SocialMediaButtons'
 import { mapIsDesktopWidth } from '../../../redux/device/selector'
 import { mapIsShelfLeftShown } from '../../../redux/main/selector'
 import './style'
+import { SHELF_LEFT_SOCIAL_MEDIA } from '../../../constants/socialMedia'
 
 const CHILD_CLASS_NAME = 'ShelfLeft__child'
 
@@ -34,8 +35,10 @@ const ShelfLeft = () => {
                 </>
             )}
             <SocialMediaButtons
-                isShelfLeft
-                {...{ className: CHILD_CLASS_NAME }}
+                {...{
+                    id: SHELF_LEFT_SOCIAL_MEDIA,
+                    className: CHILD_CLASS_NAME,
+                }}
             />
         </div>
     )

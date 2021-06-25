@@ -16,7 +16,7 @@ export const getShowButtonIcon = buttonName => {
     return buttonName !== DOTS_SLIDE_SELECT_BUTTON_KEY
 }
 
-export const getButtonIconClassNames = ({ buttonName, buttonIdentifier }) => {
+export const getButtonIconClassNames = ({ buttonName, buttonOption }) => {
     let className
 
     if (
@@ -24,7 +24,7 @@ export const getButtonIconClassNames = ({ buttonName, buttonIdentifier }) => {
         buttonName === NAV_BOOK_BUTTON_KEY ||
         (
             buttonName === NAV_SONG_BUTTON_KEY &&
-            getSongIsLogue(buttonIdentifier)
+            getSongIsLogue(buttonOption)
         )
     ) {
         className = BOOK__SHARED

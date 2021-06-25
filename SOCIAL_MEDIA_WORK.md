@@ -1,7 +1,5 @@
 # Social media work
 
-* Consolidate helmets
-* GA events
 * Nest social media jpgs in directories
 
 * Research Twitter player cards

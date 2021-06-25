@@ -4,10 +4,11 @@ import PropTypes from 'prop-types'
 import SocialMediaButtons from '../../SocialMediaButtons'
 import { getSongIsLogue } from '../../../api/album/songs'
 import getSongServerClientHoc from '../../../hocs/SongHoc'
+import { OVERVIEW_LOGUE_SOCIAL_MEDIA } from '../../../constants/socialMedia'
 
 const OverviewSocialMediaButtons = ({ serverClientSongIndex }) => (
     getSongIsLogue(serverClientSongIndex) && (
-        <SocialMediaButtons isLogueOverview />
+        <SocialMediaButtons {...{ id: OVERVIEW_LOGUE_SOCIAL_MEDIA }} />
     )
 )
 

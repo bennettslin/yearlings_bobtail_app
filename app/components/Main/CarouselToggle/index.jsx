@@ -30,7 +30,7 @@ const CarouselToggle = () => {
                 isLargeSize
                 {...{
                     buttonName: CAROUSEL_NAV_BUTTON_KEY,
-                    buttonIdentifier: carouselNavIdentifier,
+                    buttonOption: carouselNavIdentifier,
                     accessKey: CAROUSEL_TOGGLE_KEY,
                     handleButtonClick,
                 }}

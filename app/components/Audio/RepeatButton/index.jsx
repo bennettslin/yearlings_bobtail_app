@@ -24,7 +24,7 @@ const RepeatButton = () => {
             {...{
                 buttonName: SONG_REPEAT_BUTTON_KEY,
                 accessKey: SONG_REPEAT_TOGGLE_KEY,
-                buttonIdentifier: isSongRepeatOn,
+                buttonOption: isSongRepeatOn,
                 handleButtonClick: handleSongRepeatClick,
             }}
         />

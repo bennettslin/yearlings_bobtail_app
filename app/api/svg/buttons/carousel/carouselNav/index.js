@@ -17,6 +17,6 @@ const CAROUSEL_NAV_MAP = {
     [SHOW_CAROUSEL_NAV_NEXT]: neitherShown,
 }
 
-export default ({ buttonIdentifier }) => {
-    return CAROUSEL_NAV_MAP[buttonIdentifier]
+export default ({ buttonOption }) => {
+    return CAROUSEL_NAV_MAP[buttonOption]
 }

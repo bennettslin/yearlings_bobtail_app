@@ -7,18 +7,19 @@ import { mapSelectedPromoKey } from '../../../redux/promo/selector'
 import { mapSelectedSongIndex } from '../../../redux/selected/selector'
 import { openSocialMediaPopup } from '../helper'
 import { SOCIAL_TWITTER_BUTTON_KEY } from '../../../constants/buttons'
+import { PROMO_PAGE_SOCIAL_MEDIA } from '../../../constants/socialMedia'
 
-const TwitterButton = ({ isPromoPage }) => {
+const TwitterButton = ({ id }) => {
     const
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         selectedPromoKey = useSelector(mapSelectedPromoKey)
 
     const handleButtonClick = () => {
         openSocialMediaPopup({
-            identifier: SOCIAL_TWITTER_BUTTON_KEY,
+            socialMediaId: id,
+            brandId: SOCIAL_TWITTER_BUTTON_KEY,
             songIndex: selectedSongIndex,
             promoKey: selectedPromoKey,
-            isPromoPage,
             isShort: true,
         })
     }
@@ -31,6 +32,9 @@ const TwitterButton = ({ isPromoPage }) => {
                     'TwitterButton',
                 ),
                 buttonName: SOCIAL_TWITTER_BUTTON_KEY,
+                buttonIdentifier:
+                    id !== PROMO_PAGE_SOCIAL_MEDIA &&
+                        selectedSongIndex,
                 handleButtonClick,
             }}
         />
@@ -38,7 +42,7 @@ const TwitterButton = ({ isPromoPage }) => {
 }
 
 TwitterButton.propTypes = {
-    isPromoPage: PropTypes.bool,
+    id: PropTypes.string.isRequired,
 }
 
 export default TwitterButton

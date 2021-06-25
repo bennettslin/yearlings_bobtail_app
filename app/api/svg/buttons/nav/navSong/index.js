@@ -8,6 +8,6 @@ const NAV_SONG_MAP = {
     [false]: navSong,
 }
 
-export default ({ buttonIdentifier: songIndex }) => {
+export default ({ buttonOption: songIndex }) => {
     return NAV_SONG_MAP[getSongIsLogue(songIndex)]
 }

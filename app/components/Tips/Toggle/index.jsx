@@ -47,7 +47,7 @@ const TipsToggle = ({
                 {...{
                     isBrightHover: inPopup,
                     buttonName: TIPS_BUTTON_KEY,
-                    buttonIdentifier: selectedTipsOption,
+                    buttonOption: selectedTipsOption,
                     accessKey: TIPS_TOGGLE_KEY,
                     isDisabled: !canTipsShowForDevice,
                     handleButtonClick,

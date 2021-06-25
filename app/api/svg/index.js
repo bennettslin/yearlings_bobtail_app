@@ -23,9 +23,9 @@ export const getSvgForPresence = ({
 
 export const getSvgForButton = ({
     buttonName,
-    buttonIdentifier,
+    buttonOption,
 }) => (
-    BUTTON_ICONS_MAP?.[buttonName]?.({ buttonIdentifier })
+    BUTTON_ICONS_MAP?.[buttonName]?.({ buttonOption })
 )
 
 export const getSvgForDot = dotKey => DOT_ICONS_MAP[dotKey]

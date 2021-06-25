@@ -1,6 +1,7 @@
 import encodeUrl from 'encodeurl'
 import { getPromoUrl, getSongUrl } from '../../helpers/url'
 import { SOCIAL_FACEBOOK_BUTTON_KEY, SOCIAL_TWITTER_BUTTON_KEY } from '../../constants/buttons'
+import { PROMO_PAGE_SOCIAL_MEDIA } from '../../constants/socialMedia'
 
 const
     SOCIAL_MEDIA_URL_MAP = {
@@ -24,14 +25,14 @@ const getWindowFeatures = features => (
 )
 
 export const openSocialMediaPopup = ({
-    identifier,
+    socialMediaId,
+    brandId,
     songIndex,
     promoKey,
-    isPromoPage,
     isShort,
 }) => {
     const
-        url = isPromoPage ?
+        url = socialMediaId === PROMO_PAGE_SOCIAL_MEDIA ?
             getPromoUrl(promoKey) :
             getSongUrl({
                 songIndex,
@@ -39,7 +40,7 @@ export const openSocialMediaPopup = ({
             }),
         // Include final forward slash because Twitter warns about redirects.
         encodedUrl = encodeUrl(`${url}/`),
-        socialMediaUrl = `${SOCIAL_MEDIA_URL_MAP[identifier]}${encodedUrl}`
+        socialMediaUrl = `${SOCIAL_MEDIA_URL_MAP[brandId]}${encodedUrl}`
 
     window.open(
         socialMediaUrl,

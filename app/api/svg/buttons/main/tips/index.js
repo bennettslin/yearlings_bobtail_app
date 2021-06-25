@@ -14,6 +14,6 @@ const TIPS_MAP = {
     [DISABLED]: tipsDisabled,
 }
 
-export default ({ buttonIdentifier }) => {
-    return TIPS_MAP[buttonIdentifier]
+export default ({ buttonOption }) => {
+    return TIPS_MAP[buttonOption]
 }

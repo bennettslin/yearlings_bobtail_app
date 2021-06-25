@@ -38,7 +38,7 @@ const OverviewToggle = ({ className }) => {
                 {...{
                     buttonName: OVERVIEW_BUTTON_KEY,
                     accessKey: OVERVIEW_TOGGLE_KEY,
-                    buttonIdentifier: getOverviewToggleIdentifier({
+                    buttonOption: getOverviewToggleIdentifier({
                         isLyricLogue,
                         selectedOverviewOption,
                     }),

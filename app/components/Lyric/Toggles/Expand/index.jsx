@@ -50,7 +50,7 @@ const LyricToggleExpand = ({ inMain }) => {
                     isLargeSize
                     {...{
                         buttonName: LYRIC_EXPAND_BUTTON_KEY,
-                        buttonIdentifier: isLyricExpanded,
+                        buttonOption: isLyricExpanded,
                         accessKey: LYRIC_EXPAND_KEY,
                         handleButtonClick,
                     }}

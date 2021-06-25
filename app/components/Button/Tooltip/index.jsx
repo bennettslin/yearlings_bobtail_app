@@ -15,14 +15,14 @@ import './style'
 
 const Tooltip = ({
     buttonName,
-    tooltipIdentifier,
+    buttonIdentifier,
     handleTooltipHide,
 }) => {
     const
         isAccessOn = useSelector(mapIsAccessOn),
         isDesktopWidth = useSelector(mapIsDesktopWidth),
         isPhoneOrMiniWidth = useSelector(mapIsPhoneOrMiniWidth),
-        tooltipId = `${buttonName}${tooltipIdentifier || ''}`,
+        tooltipId = `${buttonName}${buttonIdentifier || ''}`,
         isCopiedUrl = useSelector(getMapIsCopiedUrlKey(tooltipId))
 
     /**
@@ -58,7 +58,7 @@ const Tooltip = ({
 
 Tooltip.propTypes = {
     buttonName: PropTypes.string.isRequired,
-    tooltipIdentifier: PropTypes.any,
+    buttonIdentifier: PropTypes.any,
     handleTooltipHide: PropTypes.func,
 }
 

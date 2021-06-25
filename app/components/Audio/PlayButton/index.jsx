@@ -29,7 +29,7 @@ const PlayButton = () => {
                     buttonName: AUDIO_PLAY_BUTTON_KEY,
                     accessKey: AUDIO_PLAY_KEY,
                     isPulsateAnimated: isPrologue,
-                    buttonIdentifier: isPlaying,
+                    buttonOption: isPlaying,
                     isDisabled: !isPlayButtonEnabled,
                     handleButtonClick: handlePlayClick,
                 }}

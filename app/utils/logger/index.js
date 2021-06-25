@@ -54,12 +54,13 @@ export const logAccess = (log, keyName) => {
         label: keyName,
     })
 }
-export const logEvent = (componentName, label) => {
+export const logEvent = (componentName, label, value) => {
     _log({
         log: `Event "${label || 'click'}" from ${componentName}.`,
         category: EVENT,
         action: componentName,
         label,
+        ...Number.isFinite(value) && { value },
     })
 }
 export const logSelect = ({

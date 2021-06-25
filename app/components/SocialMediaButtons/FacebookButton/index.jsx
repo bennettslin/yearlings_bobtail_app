@@ -7,18 +7,19 @@ import { mapSelectedPromoKey } from '../../../redux/promo/selector'
 import { mapSelectedSongIndex } from '../../../redux/selected/selector'
 import { openSocialMediaPopup } from '../helper'
 import { SOCIAL_FACEBOOK_BUTTON_KEY } from '../../../constants/buttons'
+import { PROMO_PAGE_SOCIAL_MEDIA } from '../../../constants/socialMedia'
 
-const FacebookButton = ({ isPromoPage }) => {
+const FacebookButton = ({ id }) => {
     const
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         selectedPromoKey = useSelector(mapSelectedPromoKey)
 
     const handleButtonClick = () => {
         openSocialMediaPopup({
-            identifier: SOCIAL_FACEBOOK_BUTTON_KEY,
+            socialMediaId: id,
+            brandId: SOCIAL_FACEBOOK_BUTTON_KEY,
             songIndex: selectedSongIndex,
             promoKey: selectedPromoKey,
-            isPromoPage,
         })
     }
 
@@ -30,6 +31,9 @@ const FacebookButton = ({ isPromoPage }) => {
                     'FacebookButton',
                 ),
                 buttonName: SOCIAL_FACEBOOK_BUTTON_KEY,
+                buttonIdentifier:
+                    id !== PROMO_PAGE_SOCIAL_MEDIA &&
+                        selectedSongIndex,
                 handleButtonClick,
             }}
         />
@@ -37,7 +41,7 @@ const FacebookButton = ({ isPromoPage }) => {
 }
 
 FacebookButton.propTypes = {
-    isPromoPage: PropTypes.bool,
+    id: PropTypes.string.isRequired,
 }
 
 export default FacebookButton

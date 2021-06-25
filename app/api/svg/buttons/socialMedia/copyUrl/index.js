@@ -6,6 +6,6 @@ const COPY_URL_MAP = {
     [true]: copyUrlCopied,
 }
 
-export default ({ buttonIdentifier: isCopiedUrl }) => {
+export default ({ buttonOption: isCopiedUrl }) => {
     return COPY_URL_MAP[isCopiedUrl]
 }

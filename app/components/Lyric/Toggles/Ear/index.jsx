@@ -49,7 +49,7 @@ const LyricToggleEar = () => {
                     isLargeSize
                     {...{
                         buttonName: LYRIC_EAR_BUTTON_KEY,
-                        buttonIdentifier: EAR_COLUMN_KEYS[earColumnIndex],
+                        buttonOption: EAR_COLUMN_KEYS[earColumnIndex],
                         accessKey: LYRIC_COLUMN_TOGGLE_KEY,
                         handleButtonClick,
                     }}

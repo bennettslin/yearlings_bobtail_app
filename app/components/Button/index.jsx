@@ -31,7 +31,7 @@ const Button = forwardRef(({
     isPlaceholderCharacter,
     isAccessed,
     isBrightHover,
-    buttonIdentifier,
+    buttonOption,
     handleButtonClick,
     handleTooltipHide,
     hasCharacterShadowLight,
@@ -39,7 +39,7 @@ const Button = forwardRef(({
     hasTitleShadowLight,
     accessKey,
     buttonTitle,
-    tooltipIdentifier,
+    buttonIdentifier,
     children,
 
 }, ref) => {
@@ -65,6 +65,7 @@ const Button = forwardRef(({
                 logEvent(
                     `Button`,
                     buttonName,
+                    buttonIdentifier,
                 )
 
                 handleButtonClick(e)
@@ -98,10 +99,10 @@ const Button = forwardRef(({
                     className,
                 ),
                 ...isTooltipEnabled && {
-                    'data-for': `${buttonName}${tooltipIdentifier || ''}`,
+                    'data-for': `${buttonName}${buttonIdentifier || ''}`,
                     'data-tip': getTooltipText({
                         buttonName,
-                        buttonIdentifier,
+                        buttonOption,
                     }),
                 },
                 onClick,
@@ -128,7 +129,7 @@ const Button = forwardRef(({
                 <ButtonIcon
                     {...{
                         buttonName,
-                        buttonIdentifier,
+                        buttonOption,
                         isPlaceholderCharacter,
                     }}
                 />
@@ -155,7 +156,7 @@ const Button = forwardRef(({
                 <Tooltip
                     {...{
                         buttonName,
-                        tooltipIdentifier,
+                        buttonIdentifier,
                         handleTooltipHide,
                     }}
                 />
@@ -179,7 +180,7 @@ Button.propTypes = {
     isPopupButton: PropTypes.bool,
     isAccessed: PropTypes.bool,
     isBrightHover: PropTypes.bool,
-    buttonIdentifier: PropTypes.any,
+    buttonOption: PropTypes.any,
     accessKey: PropTypes.string,
     hasCharacterShadowLight: PropTypes.bool,
     buttonCharacter: PropTypes.oneOfType([
@@ -188,7 +189,7 @@ Button.propTypes = {
     ]),
     hasTitleShadowLight: PropTypes.bool,
     buttonTitle: PropTypes.any,
-    tooltipIdentifier: PropTypes.any,
+    buttonIdentifier: PropTypes.any,
     handleButtonClick: PropTypes.func.isRequired,
     handleTooltipHide: PropTypes.func,
     children: PropTypes.any,

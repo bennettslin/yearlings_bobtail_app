@@ -136,17 +136,17 @@ export const getIsTooltipEnabled = buttonName => {
     return true
 }
 
-export const getTooltipText = ({ buttonName, buttonIdentifier }) => {
+export const getTooltipText = ({ buttonName, buttonOption }) => {
     if (buttonName === NAV_SONG_BUTTON_KEY) {
-        return getTitleForSong(buttonIdentifier)
+        return getTitleForSong(buttonOption)
     }
 
     if (buttonName === NAV_BOOK_BUTTON_KEY) {
-        return `Book ${buttonIdentifier === 0 ? 'I' : 'II'}`
+        return `Book ${buttonOption === 0 ? 'I' : 'II'}`
     }
 
-    if (buttonIdentifier !== undefined) {
-        return TOOLTIP_TEXT_MAP[buttonName][buttonIdentifier]
+    if (buttonOption !== undefined) {
+        return TOOLTIP_TEXT_MAP[buttonName][buttonOption]
     }
     return TOOLTIP_TEXT_MAP[buttonName]
 }

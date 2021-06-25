@@ -6,6 +6,6 @@ const SONG_REPEAT_MAP = {
     [true]: audioRepeat,
 }
 
-export default ({ buttonIdentifier: isSongRepeatOn }) => {
+export default ({ buttonOption: isSongRepeatOn }) => {
     return SONG_REPEAT_MAP[isSongRepeatOn]
 }

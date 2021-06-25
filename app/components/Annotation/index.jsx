@@ -10,6 +10,7 @@ import AnnotationHeader from './Header'
 import AnnotationCard from './Card'
 import { getAnnotationCardIndices } from '../../api/album/cards'
 import './style'
+import { ANNOTATION_SOCIAL_MEDIA } from '../../constants/socialMedia'
 
 const Annotation = ({
     didMount,
@@ -77,7 +78,12 @@ const Annotation = ({
                         }}
                     />
                 ))}
-                <SocialMediaButtons {...{ annotationIndex }} />
+                <SocialMediaButtons
+                    {...{
+                        id: ANNOTATION_SOCIAL_MEDIA,
+                        annotationIndex,
+                    }}
+                />
             </div>
             <StopPropagationDispatcher {...{ ref: stopPropagation }} />
         </>

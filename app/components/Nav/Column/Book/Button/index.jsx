@@ -32,7 +32,7 @@ const NavButton = ({
 
         isBook = Number.isFinite(bookIndex),
 
-        buttonIdentifier = isBook ? bookIndex : songIndex,
+        buttonOption = isBook ? bookIndex : songIndex,
 
         // Hard-coding indices because I'm lazy.
         isLeftmost = bookIndex === 0 || songIndex === 0,
@@ -80,7 +80,7 @@ const NavButton = ({
                     buttonName: isBook ?
                         NAV_BOOK_BUTTON_KEY :
                         NAV_SONG_BUTTON_KEY,
-                    buttonIdentifier,
+                    buttonOption,
                     isDisabled: !isEnabled,
                     isSelectedDisabled: isSelected,
                     accessKey: isToggle ? '' : ENTER,
