@@ -20,7 +20,11 @@ const getDefaultConfig = songIndex => ({
 })
 
 const getImagePath = songIndex => (
-    `images/socialMedia/album/${getFullPathForSong(songIndex)}.jpg`
+    `share/image/${getFullPathForSong(songIndex)}.jpg`
+)
+
+const getPlayerPath = songIndex => (
+    `share/template/${getFullPathForSong(songIndex)}.html`
 )
 
 const getFacebookConfig = songIndex => ({
@@ -32,11 +36,14 @@ const getFacebookConfig = songIndex => ({
 })
 
 const getTwitterConfig = songIndex => ({
-    'twitter:card': 'summary',
+    'twitter:card': 'player',
     'twitter:site': '@BobtailYearling',
     'twitter:title': getMetaTitle(songIndex),
     'twitter:description': getMetaDescription(songIndex),
     'twitter:image': getUrl(getImagePath(songIndex)),
+    'twitter:player': getUrl(getPlayerPath(songIndex)),
+    'twitter:player:width': 480,
+    'twitter:player:height': 480,
 })
 
 export const getMetaTags = songIndex => ([

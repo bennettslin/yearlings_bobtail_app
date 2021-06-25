@@ -16,7 +16,7 @@ const getDefaultConfig = promoKey => ({
 })
 
 const getImagePath = () => (
-    `images/socialMedia/image_socialMedia.jpg`
+    `share/image/promo.jpg`
 )
 
 const getFacebookConfig = promoKey => ({
