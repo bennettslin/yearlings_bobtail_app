@@ -16,10 +16,10 @@ const PromoHelmet = ({ isPromoPage, serverClientPromoKey }) => {
                 name,
                 property,
                 content,
-            }, index) => (
+            }) => (
                 <meta
                     {...{
-                        key: index,
+                        key: name || property,
                         ...name && { name },
                         ...property && { property },
                         content,

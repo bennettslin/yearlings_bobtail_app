@@ -14,10 +14,10 @@ const LyricHelmet = ({ serverClientSongIndex }) => (
             name,
             property,
             content,
-        }, index) => (
+        }) => (
             <meta
                 {...{
-                    key: index,
+                    key: name || property,
                     ...name && { name },
                     ...property && { property },
                     content,
