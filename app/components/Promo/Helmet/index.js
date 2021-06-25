@@ -11,9 +11,7 @@ const PromoHelmet = ({ isPromoPage, serverClientPromoKey }) => {
     // Does not render in album session.
     return Boolean(isPromoPage) && (
         <Helmet>
-            <title>
-                {getMetaTitle(serverClientPromoKey)}
-            </title>
+            <title>{getMetaTitle(serverClientPromoKey)}</title>
             {getMetaTags(serverClientPromoKey).map(({
                 name,
                 property,

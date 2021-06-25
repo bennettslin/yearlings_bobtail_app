@@ -4,6 +4,7 @@ import {
     getTitleForSong,
 } from '../../../api/album/songs'
 import { getTitleForAlbum } from '../../../api/album/title'
+import { spreadHelmetConfig } from '../../../helpers/helmet'
 import { getSongUrl, getUrl } from '../../../helpers/url'
 
 export const getMetaTitle = songIndex => (
@@ -34,23 +35,15 @@ const getTwitterConfig = songIndex => ({
     'twitter:image': getUrl(`${getFullPathForSong(songIndex)}.jpg`),
 })
 
-// TODO: This is duplicated.
-const spreadConfig = ({ config, nameKey }) => (
-    Object.keys(config).map(key => ({
-        [nameKey]: key,
-        content: config[key],
-    }))
-)
-
 export const getMetaTags = songIndex => ([
-    ...spreadConfig({
+    ...spreadHelmetConfig({
         config: {
             ...getDefaultConfig(songIndex),
             ...getTwitterConfig(songIndex),
         },
         nameKey: 'name',
     }),
-    ...spreadConfig({
+    ...spreadHelmetConfig({
         config: getFacebookConfig(songIndex),
         nameKey: 'property',
     }),
