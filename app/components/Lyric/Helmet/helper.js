@@ -47,8 +47,8 @@ const getTwitterConfig = songIndex => ({
 
     ...!getSongIsLogue(songIndex) && {
         'twitter:player': getUrl(getPlayerPath(songIndex)),
-        'twitter:player:width': 251,
-        'twitter:player:height': 480,
+        'twitter:player:width': 480,
+        'twitter:player:height': 360,
     },
 })
 
