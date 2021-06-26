@@ -34,7 +34,7 @@ const getFacebookConfig = songIndex => ({
 
 const getTwitterConfig = songIndex => ({
     'twitter:card': getSongIsLogue(songIndex) ?
-        'summary_large_image' :
+        'summary' :
         'player',
     'twitter:site': '@BobtailYearling',
     'twitter:title': getMetaTitle(songIndex),
@@ -42,7 +42,7 @@ const getTwitterConfig = songIndex => ({
     'twitter:image':
         getUrl(`share/image/twitter_thumbnail/${
             getFullPathForSong(songIndex)
-        }.jpg`),
+        }.png`),
 
     ...!getSongIsLogue(songIndex) && {
         'twitter:player':
