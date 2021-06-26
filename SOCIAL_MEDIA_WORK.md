@@ -10,12 +10,15 @@
         * "Try to keep your images as close to 1.91:1 aspect ratio as possible to display the full image in News Feed without any cropping."
     * Twitter
         * Square for thumbnail: 900 x 900, 1200 x 1200, or 1400 x 1400
-        * 3:4 aspect ratio for background: 1200 x 900
+        * 3:4 aspect ratio for background: 1600 x 1200
 
 * Official image for promo social media
 * Adjust button icon colours
 
 * Validate/scrape all paths
+    * Twitter validated
+
+* GA for Twitter
 
 # Bonus
 * Image alts
