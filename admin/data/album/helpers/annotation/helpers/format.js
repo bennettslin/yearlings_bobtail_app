@@ -1,23 +1,7 @@
-import { hasSpecialCharacterAtIndex } from '../../../../../../app/helpers/format'
-import { LYRIC_TEXT_KEYS } from '../../../../../../app/constants/lyrics'
-
-const _getStringText = textEntity => {
-    if (Array.isArray(textEntity)) {
-        return textEntity.reduce((textString, textObject) => (
-            textString + _getStringText(textObject)
-        ), '')
-
-    } else if (typeof textEntity === 'object') {
-        return LYRIC_TEXT_KEYS.reduce((prevString, textKey) => {
-            return textEntity[textKey] ?
-                _getStringText(textEntity[textKey]) :
-                prevString
-        }, '')
-
-    } else {
-        return textEntity
-    }
-}
+import {
+    getStringText,
+    hasSpecialCharacterAtIndex,
+} from '../../../../../../app/helpers/format'
 
 const _getDeletedEndSpecialCharactersText = text => {
     // Eliminate all special characters at end.
@@ -101,7 +85,7 @@ export const getFormattedAnnotationTitle = ({
     properNoun,
 
 }) => {
-    let title = _getStringText(anchor)
+    let title = getStringText(anchor)
     title = _getDeletedEndSpecialCharactersText(title)
     title = _getDeletedWrappingCharactersText(title)
     title = _getUncapitalisedText(title, properNoun)

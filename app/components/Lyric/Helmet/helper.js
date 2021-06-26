@@ -5,6 +5,7 @@ import {
     getTitleForSong,
 } from '../../../api/album/songs'
 import { getTitleForAlbum } from '../../../api/album/title'
+import { getStringText } from '../../../helpers/format'
 import { spreadHelmetConfig } from '../../../helpers/helmet'
 import { getSongUrl, getUrl } from '../../../helpers/url'
 
@@ -13,7 +14,7 @@ export const getMetaTitle = songIndex => (
 )
 
 export const getMetaDescription = songIndex => (
-    getOverviewForSong(songIndex)
+    getStringText(getOverviewForSong(songIndex))
 )
 
 const getDefaultConfig = songIndex => ({

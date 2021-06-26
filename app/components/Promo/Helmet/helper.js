@@ -1,5 +1,6 @@
 import { getTitleForAlbum } from '../../../api/album/title'
 import { getDescriptionForPromo, getTitleForPromo } from '../../../api/promo'
+import { getStringText } from '../../../helpers/format'
 import { spreadHelmetConfig } from '../../../helpers/helmet'
 import { getPromoUrl, getUrl } from '../../../helpers/url'
 
@@ -8,7 +9,7 @@ export const getMetaTitle = promoKey => (
 )
 
 export const getMetaDescription = promoKey => (
-    getDescriptionForPromo(promoKey)
+    getStringText(getDescriptionForPromo(promoKey))
 )
 
 const getDefaultConfig = promoKey => ({

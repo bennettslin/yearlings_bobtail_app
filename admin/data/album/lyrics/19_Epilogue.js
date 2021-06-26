@@ -19,6 +19,6 @@ export default {
             isEmphasis: true,
             lyric: `then`,
         },
-        `prove to be viable in the long term— rather than the reverse order, as indie rock insists— is not that crazy. It's how startups work. It's how many past artists got their start. The truth is, interdependence was the reason for rock music's great past. Why wouldn't it hold the key to a better future?`,
+        `prove to be viable in the long term— rather than the reverse order, as indie rock insists— is not that crazy. It's how hip hop works. It's how many pioneering artists got their start. The truth is, interdependence was the reason for rock music's great past. Why wouldn't it hold the key to a better future?`,
     ],
 }

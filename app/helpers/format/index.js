@@ -1,6 +1,26 @@
 // Helpers for parsing text objects.
 import { isString } from '../general'
 
+import { LYRIC_TEXT_KEYS } from '../../constants/lyrics'
+
+export const getStringText = textEntity => {
+    if (Array.isArray(textEntity)) {
+        return textEntity.reduce((textString, textObject) => (
+            textString + getStringText(textObject)
+        ), '')
+
+    } else if (typeof textEntity === 'object') {
+        return LYRIC_TEXT_KEYS.reduce((prevString, textKey) => {
+            return textEntity[textKey] ?
+                getStringText(textEntity[textKey]) :
+                prevString
+        }, '')
+
+    } else {
+        return textEntity
+    }
+}
+
 const _appendSharedSuffix = style => (
     `${style}__shared`
 )

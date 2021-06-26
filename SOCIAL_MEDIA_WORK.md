@@ -1,7 +1,5 @@
 # Social media work
 
-* Helper to flatten overview for meta descriptions
-
 * Research Twitter player cards
     * https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards
 * Create unique images for each song
