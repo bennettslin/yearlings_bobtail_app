@@ -1,5 +1,7 @@
 # Social media work
 
+* Logues have summary with image Twitter cards
+
 * Research Twitter player cards
     * https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards
 * Create unique images for each song

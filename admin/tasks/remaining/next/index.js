@@ -2,7 +2,7 @@ export default [
     // Next.
     {
         taskName: `Social media buttons.`,
-        workedHours: 37,
+        workedHours: 39,
     },
 
     // Needed.
