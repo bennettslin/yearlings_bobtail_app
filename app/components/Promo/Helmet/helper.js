@@ -16,16 +16,12 @@ const getDefaultConfig = promoKey => ({
     'description': getMetaDescription(promoKey),
 })
 
-const getImagePath = () => (
-    `share/image/promo.jpg`
-)
-
 const getFacebookConfig = promoKey => ({
     'og:url': `${getPromoUrl(promoKey)}/`,
     'og:type': 'website',
     'og:title': getMetaTitle(promoKey),
     'og:description': getMetaDescription(promoKey),
-    'og:image': getUrl(getImagePath()),
+    'og:image': getUrl(`share/image/facebook_image/promo.jpg`),
 })
 
 const getTwitterConfig = promoKey => ({
@@ -33,7 +29,7 @@ const getTwitterConfig = promoKey => ({
     'twitter:site': '@BobtailYearling',
     'twitter:title': getMetaTitle(promoKey),
     'twitter:description': getMetaDescription(promoKey),
-    'twitter:image': getUrl(getImagePath()),
+    'twitter:image': getUrl(`share/image/twitter_thumbnail/promo.jpg`),
 })
 
 export const getMetaTags = songIndex => ([

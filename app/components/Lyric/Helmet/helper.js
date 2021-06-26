@@ -21,20 +21,15 @@ const getDefaultConfig = songIndex => ({
     'description': getMetaDescription(songIndex),
 })
 
-const getImagePath = songIndex => (
-    `share/image/${getFullPathForSong(songIndex)}.jpg`
-)
-
-const getPlayerPath = songIndex => (
-    `share/entry/${getFullPathForSong(songIndex)}.html`
-)
-
 const getFacebookConfig = songIndex => ({
     'og:url': `${getSongUrl({ songIndex })}/`,
     'og:type': 'website',
     'og:title': getMetaTitle(songIndex),
     'og:description': getMetaDescription(songIndex),
-    'og:image': getUrl(getImagePath(songIndex)),
+    'og:image':
+        getUrl(`share/image/facebook_image/${
+            getFullPathForSong(songIndex)
+        }.jpg`),
 })
 
 const getTwitterConfig = songIndex => ({
@@ -44,10 +39,14 @@ const getTwitterConfig = songIndex => ({
     'twitter:site': '@BobtailYearling',
     'twitter:title': getMetaTitle(songIndex),
     'twitter:description': getMetaDescription(songIndex),
-    'twitter:image': getUrl(getImagePath(songIndex)),
+    'twitter:image':
+        getUrl(`share/image/twitter_thumbnail/${
+            getFullPathForSong(songIndex)
+        }.jpg`),
 
     ...!getSongIsLogue(songIndex) && {
-        'twitter:player': getUrl(getPlayerPath(songIndex)),
+        'twitter:player':
+            getUrl(`share/entry/${getFullPathForSong(songIndex)}.html`),
         'twitter:player:width': 480,
         'twitter:player:height': 360,
     },
