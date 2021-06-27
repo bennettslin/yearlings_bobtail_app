@@ -5167,4 +5167,8 @@ export default [
         taskName: `Music distributor work.`,
         workedHours: 3,
     },
+    {
+        taskName: `Social media buttons.`,
+        workedHours: 45,
+    },
 ]
