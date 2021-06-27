@@ -29,7 +29,7 @@ const getFacebookConfig = songIndex => ({
     'og:image':
         getUrl(`share/image/facebook_image/${
             getFullPathForSong(songIndex)
-        }.png`),
+        }.jpg`),
 })
 
 const getTwitterConfig = songIndex => ({
