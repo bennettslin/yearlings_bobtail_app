@@ -1,6 +1,5 @@
 # Still TODO?
 * Image alts
-* GA for Twitter
 * Adjust button icon colours
 
 # Validators
