@@ -1,32 +1,52 @@
 <!DOCTYPE html>
-<style type="text/css">
-  .container {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-  }
-  .container, img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-  }
-  audio {
-    margin-bottom: 4px;
-  }
-  </style>
 <html>
+  <head>
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-133481555-2', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <!-- End Google Analytics -->
+    <style type="text/css">
+      .container {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+      }
+      .container, img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+      }
+      audio {
+        margin-bottom: 4px;
+      }
+    </style>
+  </head>
   <body>
-  <div class="container">
-    <image src="../image/twitter_image/3-dear-saskia.png">
-    <audio controls>
-      <source src="../audio/3-dear-saskia.mp3" autoplay type="audio/mpeg">
-    </audio>
-  </div>
-  <script>
-    var audio = document.getElementsByTagName('audio')[0];
-    audio.volume = 0.5;
-  </script>
+    <div class="container">
+      <image src="../image/twitter_image/3-dear-saskia.png">
+      <audio controls>
+        <source src="../audio/3-dear-saskia.mp3" autoplay type="audio/mpeg">
+      </audio>
+    </div>
+    <script>
+      var audio = document.getElementsByTagName('audio')[0];
+      audio.volume = 0.5;
+
+      ga('send', {
+          hitType: 'event',
+          eventCategory: 'event',
+          eventAction: 'share',
+          eventLabel: 'twitter',
+          eventValue: 3,
+      });
+    </script>
   </body>
 </html>
