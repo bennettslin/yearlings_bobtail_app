@@ -29,10 +29,10 @@
       }
     </style>
   </head>
-  <body>
+  <body onload="onBodyLoad()">
     <div class="container">
       <image src="../image/twitter_image/13-on-a-golden-cord.png">
-      <audio controls>
+      <audio controls onplay="onAudioPlay()">
         <source src="../audio/13-on-a-golden-cord.mp3" autoplay type="audio/mpeg">
       </audio>
     </div>
@@ -40,13 +40,25 @@
       var audio = document.getElementsByTagName('audio')[0];
       audio.volume = 0.5;
 
-      ga('send', {
+      function onBodyLoad() {
+        ga('send', {
           hitType: 'event',
-          eventCategory: 'event',
-          eventAction: 'share',
+          eventCategory: 'share',
+          eventAction: 'load',
           eventLabel: 'twitter',
           eventValue: 13,
-      });
+        });
+      }
+
+      function onAudioPlay() {
+        ga('send', {
+          hitType: 'event',
+          eventCategory: 'share',
+          eventAction: 'play',
+          eventLabel: 'twitter',
+          eventValue: 13,
+        });
+      }
     </script>
   </body>
 </html>
