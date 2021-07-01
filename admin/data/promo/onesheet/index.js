@@ -4,7 +4,7 @@ export default getFormattedSlideMetadata({
     body: [
         {
             paragraph: [
-                `Can a rock album win the Pulitzer Prize? It might seem unlikely. To earn popular approval and critical acclaim, rock artists often aim for subjective qualities that don't intrigue literary scholars and musicologists the way hip hop does. But what if rock music can also merit academic study while appealing to everyone? The Bobtail Yearlings accept this challenge! And to have us hold them to it, they promise to win rock music a Pulitzer in their lifetime. With that said, they now present`,
+                `Can a rock album win the Pulitzer Prize? It might seem unlikely. To earn popular approval and critical acclaim, rock artists often aim for subjective qualities that may not intrigue literary scholars and musicologists the way hip hop does. But what if rock music can also merit academic study while appealing to everyone? The Bobtail Yearlings accept this challenge! And to have us hold them to it, they promise to win rock music a Pulitzer in their lifetime. With that said, they now present`,
                 {
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
@@ -19,7 +19,7 @@ export default getFormattedSlideMetadata({
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
                 },
-                `tells the autobiographical tale of an artistically inclined Asian boy growing up in Los Angeles, whose autistic brother and first crush on a Jewish girl cause him to question his Buddhist upbringing. Bullied at school, he finds solace in a mail-order cult that instructs him to shut his feelings away. Years later, he embarks on a five-year plan for self-improvement that ultimately wins the hand of his first love, who brings him into her Hindu faith. But as his band gains exposure in the local scene, he bolsters his ego by seeking affection from other women, leading to heartbreak and loss.`,
+                `tells the autobiographical tale of an artistically inclined Asian boy growing up in Los Angeles, whose autistic brother and first crush on a Jewish girl lead him to question his Buddhist upbringing. Bullied at school, he finds solace in a mail-order cult that instructs him to shut his feelings away. Years later, he embarks on a five-year plan for self-improvement that ultimately wins the hand of his first love, who brings him into her Hindu faith. But as his band gains exposure in the local scene, he bolsters his ego by seeking affection from other women, leading to heartbreak and loss.`,
             ],
         },
         {
@@ -104,7 +104,7 @@ export default getFormattedSlideMetadata({
         },
         {
             paragraph: [
-                `The album was completed a decade ago but never released. At the time, indie labels were most eager to sign artists who didn't need them, but the Bobtail Yearlings need a label as much as they hope to be needed back. Still, in being overlooked, they became the control group in a fascinating experiment that can only happen by chance in the wild. What happens when a musical work that continues to seek innovation in songcraft rather than technology is never heard and thus influences no one? At once otherworldly and uncannily familiar,`,
+                `The album was completed a decade ago but never released. At the time, indie labels were most eager to sign artists who didn't need them, but the Bobtail Yearlings need a label as much as they hope to be needed back. Still, by being overlooked, they became the control group in a fascinating experiment that can only happen by chance in the wild. What happens when a musical work that continues to seek innovation in songcraft rather than technology is never heard and thus influences no one? At once otherworldly and uncannily familiar,`,
                 {
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
