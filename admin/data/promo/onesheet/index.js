@@ -109,7 +109,7 @@ export default getFormattedSlideMetadata({
                     isEmphasis: true,
                     lyric: `didn't`,
                 },
-                `need them— but the Bobtail Yearlings need a label as much as they hope to be needed back. Still, by being overlooked, they became the control group in a fascinating experiment that can only happen by chance in the wild. TODO: What happens when a band continues to seek innovation in songcraft at a time when others are finding it in technology— only to then never be heard and thus influence no one? At once otherworldly and uncannily familiar,`,
+                `need them— but the Bobtail Yearlings need a label as much as they hope to be needed back. Still, by being overlooked, they became the control group in a fascinating experiment that can only happen by chance in the wild. What happens if a band continues to seek innovation in songcraft— at a time when others are finding it in technology— only to then never be heard and thus influence no one? At once otherworldly and uncannily familiar,`,
                 {
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
@@ -136,7 +136,7 @@ export default getFormattedSlideMetadata({
             ],
         },
         {
-            paragraph: `After all, hip hop never lost its interdependence to begin with. And what better genre to follow if we hope for a rock album— by the Bobtail Yearlings, or otherwise— to someday win the Pulitzer!`,
+            paragraph: `After all, hip hop never lost its interdependence to begin with. And what better genre to follow if we hope for a rock album— by the Bobtail Yearlings or anyone else— to someday win the Pulitzer!`,
         },
     ],
 })
