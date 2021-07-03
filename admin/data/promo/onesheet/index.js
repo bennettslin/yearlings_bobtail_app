@@ -109,12 +109,12 @@ export default getFormattedSlideMetadata({
                     isEmphasis: true,
                     lyric: `didn't`,
                 },
-                `need them— but the Bobtail Yearlings need a label as much as they hope to be needed back. Still, by being overlooked, they became the control group in a fascinating experiment that can only happen by chance in the wild. What happens if a band continues to seek innovation in songcraft— at a time when others are finding it in technology— only to then never be heard and thus influence no one? At once otherworldly and uncannily familiar,`,
+                `need them— but the Bobtail Yearlings need a label as much as they hope to be needed back. Still, by being overlooked, they became the control group in a fascinating experiment that can only happen by freak occurrence. What does it sound like if a band continues to seek innovation in songcraft while others have moved on to finding it in technology— only to then never be heard and thus influence no one? At once otherworldly and uncannily familiar,`,
                 {
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
                 },
-                `traces a lineage but belongs to no time, offering rock fans a rare glimpse down a historical road not taken.`,
+                `traces a lineage but belongs to no time, offering us a rare glimpse down a historical road not taken.`,
             ],
         },
         {
@@ -127,7 +127,7 @@ export default getFormattedSlideMetadata({
                     isEmphasis: true,
                     lyric: `all`,
                 },
-                `the inherited wisdom. For example, by asking artists to do the work of the labels themselves, indie rock built redundancy into its system. But doesn't this make the whole less than the sum of its parts? What if the next generation's gift to rock music will be its rediscovery of interdependence— allowing the whole to be`,
+                `our inherited beliefs. For example, by asking artists to do the work of the labels themselves, indie rock built redundancy into its system. But doesn't this make the whole less than the sum of its parts? What if the next generation's gift to rock music will be its rediscovery of interdependence— allowing the whole to be`,
                 {
                     isEmphasis: true,
                     lyric: `greater`,
