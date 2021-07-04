@@ -12,7 +12,7 @@ export default [
         workedHours: 16,
     },
     {
-        taskName: `Awkward annotation edits.`,
-        workedHours: 2,
+        taskName: `Annotation edits.`,
+        workedHours: 3,
     },
 ]

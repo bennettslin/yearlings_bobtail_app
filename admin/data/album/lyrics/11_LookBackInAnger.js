@@ -615,12 +615,17 @@ export default {
                             anchor: `peasant discontented`,
                             card: {
                                 description: [
-                                    `The better life got, the more unsatisfied I became. I was like the peasants of the`,
+                                    `The better life got for me, the more unsatisfied I became. I was like the peasants of the`,
                                     {
                                         anchor: `French Revolution`,
                                         wiki: `French_Revolution`,
                                     },
-                                    `, who were so downtrodden that every attempt by the ruling elite to appease them only backfired. Not only did they grumble at such paltry improvements to their lives, but they were then further emboldened to make demands.`,
+                                    `, who grew further agitated with each attempt by the ruling elite to appease them. Not only did they grumble at such paltry improvements to their lives, they were then emboldened to make new demands, illustrating what is now known as the`,
+                                    {
+                                        anchor: `Tocqueville paradox`,
+                                        wiki: `Tocqueville_effect`,
+                                    },
+                                    `.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -827,7 +832,7 @@ export default {
                                         anchor: `Budweisers`,
                                         wiki: `Budweiser`,
                                     },
-                                    `in me to reach the desired level of affability. It's also too late to present myself as someone who isn't already in a relationship with his best friend. I can't just unscrew a "bud" at will.`,
+                                    `in me to reach the desired level of affability. It's also too late to present myself as someone who isn't already in a sexual relationship with his best friend. I can't just unscrew a "bud" at will.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
