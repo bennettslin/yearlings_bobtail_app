@@ -613,6 +613,7 @@ export default {
                     lyric: [
                         {
                             anchor: `peasant discontented`,
+                            todo: true,
                             card: {
                                 description: [
                                     `The better life got for me, the more unsatisfied I became. I was like the peasants of the`,
@@ -620,7 +621,7 @@ export default {
                                         anchor: `French Revolution`,
                                         wiki: `French_Revolution`,
                                     },
-                                    `, who grew further agitated with each attempt by the ruling elite to appease them. Not only did they grumble at such paltry improvements to their lives, they were then emboldened to make new demands, illustrating what is now known as the`,
+                                    `, who grew more agitated as the ruling elite made further attempts to appease them. Not only did they grumble at such paltry improvements to their lives, they were then emboldened to make new demands, illustrating what is now known as the`,
                                     {
                                         anchor: `Tocqueville paradox`,
                                         wiki: `Tocqueville_effect`,
