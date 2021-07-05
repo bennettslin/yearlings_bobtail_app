@@ -2056,7 +2056,9 @@ export default {
                         },
                         `,`,
                         {
-                            anchor: `black Letter-Day`,
+                            // NOTE: I capitalised Black.
+                            anchor: `Black Letter-Day`,
+                            properNoun: true,
                             cards: [
                                 {
                                     description: [
@@ -2087,7 +2089,7 @@ export default {
                                         },
                                         `, originally did not allow its`,
                                         {
-                                            anchor: `black members`,
+                                            anchor: `Black members`,
                                             wiki: `Black_people_and_Mormonism`,
                                         },
                                         `to attain priesthood. This policy was reversed in 1978.`,

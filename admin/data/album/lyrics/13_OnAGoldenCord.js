@@ -703,7 +703,19 @@ export default {
                 },
                 {
                     mixTime: `1:56:17.14`,
-                    lyricCentre: `Now the jester teeters towards…`,
+                    lyricCentre: [
+                        `Now the`,
+                        {
+                            anchor: `jester teeters`,
+                            card: {
+                                description: `I was stopped by a pair of police officers that night. They deemed me harmless and sent me on my way. I've since learned that this likely wouldn't have been the experience of my Black friends, of course.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                },
+                            },
+                        },
+                        `towards…`,
+                    ],
                 },
             ],
             sideCard: [
