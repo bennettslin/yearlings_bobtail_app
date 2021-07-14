@@ -49,9 +49,6 @@ SocialMediaButtons.propTypes = {
     id: PropTypes.string.isRequired,
     className: PropTypes.string,
     annotationIndex: PropTypes.number,
-    isLogueOverview: PropTypes.bool,
-    isPromoPage: PropTypes.bool,
-    isShelfLeft: PropTypes.bool,
 }
 
 export default SocialMediaButtons
