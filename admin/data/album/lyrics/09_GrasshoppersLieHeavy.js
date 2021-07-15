@@ -999,10 +999,10 @@ export default {
                                     description: [
                                         `One night, Sita had a`,
                                         {
-                                            anchor: `hypoglycemic`,
-                                            wiki: `Hypoglycemia`,
+                                            anchor: `hyperglycemic`,
+                                            wiki: `Hyperglycemia`,
                                         },
-                                        `episode. I drove her to the hospital and sat in the waiting area as she was being examined.`,
+                                        `episode. I drove her to the emergency room and sat in the waiting area as she was being examined.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
