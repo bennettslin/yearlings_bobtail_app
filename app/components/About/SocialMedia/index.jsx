@@ -3,6 +3,7 @@ import Anchor from '../../Anchor'
 import {
     FACEBOOK_PAGE,
     INSTAGRAM_PAGE,
+    TWITTER_PAGE,
 } from '../../../constants/website'
 import './style'
 
@@ -20,6 +21,13 @@ const SocialMedia = () => (
                 href: INSTAGRAM_PAGE,
                 text: 'Instagram',
                 analyticsLabel: 'instagram',
+            }}
+        />
+        <Anchor
+            {...{
+                href: TWITTER_PAGE,
+                text: 'Twitter',
+                analyticsLabel: 'twitter',
             }}
         />
     </div>
