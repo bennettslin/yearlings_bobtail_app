@@ -21,6 +21,18 @@ export const getStringText = textEntity => {
     }
 }
 
+export const getTruncatedStringText = (textEntity, maxLength = 160) => {
+    let stringText = getStringText(textEntity)
+
+    return stringText.length > maxLength ?
+        /**
+         * If greater than max length, truncate to max length, remove trailing
+         * space, and add ellipsis.
+         */
+        stringText.substring(0, maxLength).trim() + '…' :
+        stringText
+}
+
 const _appendSharedSuffix = style => (
     `${style}__shared`
 )

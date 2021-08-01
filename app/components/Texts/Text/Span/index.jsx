@@ -2,7 +2,6 @@
 
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
-import cx from 'classnames'
 import {
     getFormattedLyricSpanText,
     getFormattedEndingVerseSpanText,
@@ -46,9 +45,9 @@ const TextSpan = ({
     return Tag ? (
         <Tag
             {...{
-                className: cx(
-                    isWormholeDestinationAnchor && 'text__wormholeDestinationAnchor',
-                ),
+                ...isWormholeDestinationAnchor && {
+                    className: 'text__wormholeDestinationAnchor',
+                },
             }}
         >
             {formattedText}

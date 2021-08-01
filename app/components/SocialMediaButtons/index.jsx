@@ -4,17 +4,19 @@ import cx from 'classnames'
 import FacebookButton from './FacebookButton'
 import TwitterButton from './TwitterButton'
 import CopyUrlButton from './CopyUrlButton'
-import './style'
+import getDidMountHoc from '../../hocs/DidMountHoc'
 import { ANNOTATION_SOCIAL_MEDIA, OVERVIEW_LOGUE_SOCIAL_MEDIA, PROMO_PAGE_SOCIAL_MEDIA, SHELF_LEFT_SOCIAL_MEDIA } from '../../constants/socialMedia'
+import './style'
 
 const SocialMediaButtons = ({
+    didMount,
     id,
     className,
     annotationIndex,
 }) => {
     const isShelfLeft = id === SHELF_LEFT_SOCIAL_MEDIA
 
-    return (
+    return didMount && (
         <div
             {...{
                 className: cx(
@@ -46,9 +48,10 @@ const SocialMediaButtons = ({
 }
 
 SocialMediaButtons.propTypes = {
+    didMount: PropTypes.bool.isRequired,
     id: PropTypes.string.isRequired,
     className: PropTypes.string,
     annotationIndex: PropTypes.number,
 }
 
-export default SocialMediaButtons
+export default getDidMountHoc(SocialMediaButtons)

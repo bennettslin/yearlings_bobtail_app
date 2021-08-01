@@ -5169,6 +5169,6 @@ export default [
     },
     {
         taskName: `Social media buttons.`,
-        workedHours: 46,
+        workedHours: 47,
     },
 ]

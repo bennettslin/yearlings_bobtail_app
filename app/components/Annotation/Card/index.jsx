@@ -54,9 +54,9 @@ const AnnotationCard = ({
         >
             <div
                 {...{
-                    className: cx(
-                        'AnnotationCard',
-                        didMount && [
+                    ...didMount && {
+                        className: cx(
+                            'AnnotationCard',
                             description ?
                                 [
                                     'AnnotationCard__isText',
@@ -69,8 +69,8 @@ const AnnotationCard = ({
                                 ] :
                                 'AnnotationCard__wormhole',
                             'fontSize__verse',
-                        ],
-                    ),
+                        ),
+                    },
                 }}
             >
                 {description ? (

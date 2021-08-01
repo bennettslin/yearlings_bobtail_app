@@ -1,7 +1,4 @@
 export default [
-    // Next.
-    // Needed.
-
     // Ongoing, only nice to have.
     {
         taskName: `Shared styles work.`,
