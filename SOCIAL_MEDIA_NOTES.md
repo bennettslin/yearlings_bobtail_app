@@ -8,5 +8,6 @@
     * 4:3 aspect ratio: 1600 x 1200
 
 # Still TODO?
+* Is encoding URL really needed? Removed from BY website.
 * Image alts
 * Adjust button icon colours

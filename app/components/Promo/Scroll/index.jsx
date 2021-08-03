@@ -21,7 +21,7 @@ const PromoScroll = forwardRef(({
     handlePageChange = () => {},
 
 }, ref) => {
-    const handlePitchPageChange = () => {
+    const handlePromoPageChange = () => {
         if (ref) {
             // Allow child to scroll back to top.
             ref.current.scrollTop = 0
@@ -62,16 +62,16 @@ const PromoScroll = forwardRef(({
                 >
                     <PromoScrollTitle {... { title: getTitleForPromo(serverClientPromoKey) }} />
                     {getIsPromoHomepage(serverClientPromoKey) && (
-                        <HomepagePromo {...{ handlePitchPageChange }} />
+                        <HomepagePromo {...{ handlePromoPageChange }} />
                     )}
                     {getIsOnesheetPage(serverClientPromoKey) && (
-                        <OnesheetPromo {...{ handlePitchPageChange }} />
+                        <OnesheetPromo {...{ handlePromoPageChange }} />
                     )}
                     {getIsArtupPage(serverClientPromoKey) && (
-                        <ArtupPromo {...{ handlePitchPageChange }} />
+                        <ArtupPromo {...{ handlePromoPageChange }} />
                     )}
                     {getIsArtup2Page(serverClientPromoKey) && (
-                        <Artup2Promo {...{ handlePitchPageChange }} />
+                        <Artup2Promo {...{ handlePromoPageChange }} />
                     )}
                 </div>
             </div>

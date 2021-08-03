@@ -1,13 +1,25 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import PropTypes from 'prop-types'
 import PromoView from '../../Promo/View'
 import { getBodyForOnesheet } from '../../../api/promo/onesheet'
 
-const OnesheetPromo = () => (
-    <PromoView
-        {...{
-            body: getBodyForOnesheet(),
-        }}
-    />
-)
+const OnesheetPromo = ({ handlePromoPageChange }) => {
+    useEffect(() => {
+        // Scroll back to top upon slide change.
+        handlePromoPageChange()
+    }, [])
+
+    return (
+        <PromoView
+            {...{
+                body: getBodyForOnesheet(),
+            }}
+        />
+    )
+}
+
+OnesheetPromo.propTypes = {
+    handlePromoPageChange: PropTypes.func.isRequired,
+}
 
 export default OnesheetPromo

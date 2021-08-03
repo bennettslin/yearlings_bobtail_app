@@ -11,12 +11,12 @@ import {
 import getPromoServerClientHoc from '../../../hocs/PromoHoc'
 import { mapArtupSlideIndex } from '../../../redux/promo/selector'
 
-const ArtupPromo = ({ serverClientArtupIndex, handlePitchPageChange }) => {
+const ArtupPromo = ({ serverClientArtupIndex, handlePromoPageChange }) => {
     const artupSlideIndex = useSelector(mapArtupSlideIndex)
 
     useEffect(() => {
         // Scroll back to top upon slide change.
-        handlePitchPageChange()
+        handlePromoPageChange()
         logState('artupSlideIndex', artupSlideIndex)
     }, [artupSlideIndex])
 
@@ -33,7 +33,7 @@ const ArtupPromo = ({ serverClientArtupIndex, handlePitchPageChange }) => {
 
 ArtupPromo.propTypes = {
     serverClientArtupIndex: PropTypes.number.isRequired,
-    handlePitchPageChange: PropTypes.func.isRequired,
+    handlePromoPageChange: PropTypes.func.isRequired,
 }
 
 export default getPromoServerClientHoc(ArtupPromo)
