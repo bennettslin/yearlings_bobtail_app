@@ -24,19 +24,9 @@
 }
 
 .bennettRecordPlayer {
-    .baseBottom { fill: hsl(25, 34%, 48%); }
-    .baseFront { fill: hsl(25, 35%, 44%); }
-    .baseTop { fill: hsl(25, 39%, 53%); }
-    .coverFront { fill: hsla(30, 24%, 59%, 0.5); }
-    .coverSide { fill: hsla(30, 20%, 49%, 0.5); }
-    .coverRear { fill: hsla(30, 25%, 39%, 0.5); }
-    .silverFront { fill: hsl(178, 12%, 57%); }
-    .silverTop { fill: hsl(176, 17%, 64%); }
-    .plasticSide { fill: hsl(154, 7%, 39%); }
-    .plasticFront { fill: hsl(155, 7%, 35%); }
-    .plasticTop { fill: hsl(154, 7%, 44%); }
-    .label { fill: hsl(68, 27%, 59%); }
-    .bar { fill: hsl(175, 6%, 59%); }
+    .coverRear { fill: hsla(30, 25%, 39%, 0.2); }
+    .coverSide { fill: hsla(30, 24%, 49%, 0.2); }
+    .coverFront { fill: hsla(30, 24%, 59%, 0.2); }
 }
 
 .bedroomLamp__desk {
