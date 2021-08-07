@@ -27,7 +27,7 @@ const getFacebookConfig = songIndex => ({
     'og:title': getMetaTitle(songIndex),
     'og:description': getMetaDescription(songIndex),
     'og:image':
-        getUrl(`share/image/facebook_image/${
+        getUrl(`share/image/facebook/${
             getFullPathForSong(songIndex)
         }.png`),
 })
@@ -40,7 +40,7 @@ const getTwitterConfig = songIndex => ({
     'twitter:title': getMetaTitle(songIndex),
     'twitter:description': getMetaDescription(songIndex),
     'twitter:image':
-        getUrl(`share/image/twitter_thumbnail/${
+        getUrl(`share/image/twitter/${
             getFullPathForSong(songIndex)
         }.png`),
 
