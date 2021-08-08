@@ -39,10 +39,12 @@ export default {
                     },
                 },
             ],
-        `gatsby-plugin-postcss`,
         `gatsby-plugin-react-helmet`,
         `gatsby-plugin-remove-trailing-slashes`,
-        `gatsby-plugin-sass`,
+        {
+            resolve: `gatsby-plugin-sass`,
+            options: {},
+        },
         {
             resolve: `gatsby-plugin-s3`,
             options: {

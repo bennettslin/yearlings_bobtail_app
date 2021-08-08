@@ -78,8 +78,8 @@
     "gatsby-plugin-sass": "^4.11.0",
     "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.24",
     "jsdom": "^16.7.0",
-    "node-sass": "^6.0.1",
     "redux-devtools-extension": "^2.13.9",
+    "sass": "^1.37.5",
     "webpack": "^4.41.6"
   }
 }
