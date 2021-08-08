@@ -18,7 +18,7 @@ export const getMetaDescription = songIndex => (
 )
 
 const getDefaultConfig = songIndex => ({
-    'description': getMetaDescription(songIndex),
+    description: getMetaDescription(songIndex),
 })
 
 const getFacebookConfig = songIndex => ({

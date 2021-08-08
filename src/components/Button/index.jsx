@@ -88,11 +88,11 @@ const Button = forwardRef(({
                         'Button__enabled',
                     ],
                     {
-                        'Button__selectDisabled': isSelectedDisabled,
-                        'Button__defaultSize':
+                        Button__selectDisabled: isSelectedDisabled,
+                        Button__defaultSize:
                             !isLargeSize && !isSmallSize && !isCustomSize,
-                        'Button__smallSize': isSmallSize,
-                        'Button__largeSize': isLargeSize,
+                        Button__smallSize: isSmallSize,
+                        Button__largeSize: isLargeSize,
                     },
                     isPulsateAnimated && 'pulsateAnimated',
                     isPlaceholderCharacter && 'Button__isPlaceholderCharacter',

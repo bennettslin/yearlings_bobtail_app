@@ -1,72 +1,61 @@
-const pkg = require('./package.json')
-
-const reactVersion = () => {
-    if (pkg.dependencies && pkg.dependencies.react) {
-        return { version: pkg.dependencies.react.replace(/[^0-9.]/g, '') }
-    }
-    if (pkg.devDependencies && pkg.devDependencies.react) {
-        return { version: pkg.devDependencies.react.replace(/[^0-9.]/g, '') }
-    }
-}
-
 module.exports = {
-    'env': {
-        'browser': true,
-        'commonjs': true,
-        'es6': true,
+    env: {
+        browser: true,
+        commonjs: true,
+        es6: true,
     },
-    'extends': [
+    extends: [
         'eslint:recommended',
         'plugin:react/recommended',
     ],
-    'globals': {
-        '__dirname': true,
-        'ALBUM': true,
-        'PROMO': true,
-        'SCENE': true,
-        'BUILD_DATE_TIME': true,
-        'IS_RUNTIME': true,
-        'IS_PRODUCTION': true,
-        'gtag': true,
-        'logAccess': true,
-        'logAdmin': true,
-        'logEvent': true,
-        'logFocus': true,
-        'logMount': true,
-        'logPlayer': true,
-        'logScroll': true,
-        'logSelect': true,
-        'logServe': true,
-        'logState': true,
-        'logTransition': true,
-        'logError': true,
-        'logSuccess': true,
-        'process': true,
+    globals: {
+        __dirname: true,
+        ALBUM: true,
+        PROMO: true,
+        SCENE: true,
+        BUILD_DATE_TIME: true,
+        IS_RUNTIME: true,
+        IS_PRODUCTION: true,
+        gtag: true,
+        logAccess: true,
+        logAdmin: true,
+        logEvent: true,
+        logFocus: true,
+        logMount: true,
+        logPlayer: true,
+        logScroll: true,
+        logSelect: true,
+        logServe: true,
+        logState: true,
+        logTransition: true,
+        logError: true,
+        logSuccess: true,
+        process: true,
     },
-    'parser': '@babel/eslint-parser',
-    'parserOptions': {
-        'ecmaFeatures': {
-            'experimentalObjectRestSpread': true,
-            'jsx': true,
+    parser: '@babel/eslint-parser',
+    parserOptions: {
+        ecmaFeatures: {
+            experimentalObjectRestSpread: true,
+            jsx: true,
         },
-        'ecmaVersion': 2020,
-        'sourceType': 'module',
+        ecmaVersion: 2020,
+        sourceType: 'module',
     },
-    'plugins': [
+    plugins: [
         'import',
         'react',
     ],
-    'settings': {
+    settings: {
         'import/resolver': {
             node: {
                 extensions: ['.js', '.jsx', '.mp3', '.pdf', '.scss', '.svg'],
             },
         },
-        'react': {
-            ...reactVersion(),
+        react: {
+            version: 'detect',
         },
     },
-    'rules': {
+    rules: {
         'accessor-pairs': 'error',
         'array-bracket-spacing': [
             'error',
@@ -78,8 +67,8 @@ module.exports = {
         'arrow-spacing': [
             'error',
             {
-                'after': true,
-                'before': true,
+                after: true,
+                before: true,
             },
         ],
         'block-scoped-var': 'error',
@@ -89,7 +78,7 @@ module.exports = {
             '1tbs',
         ],
         'callback-return': 'error',
-        'camelcase': 'off',
+        camelcase: 'off',
         'capitalized-comments': 'off',
         'class-methods-use-this': 'off',
         'comma-dangle': [
@@ -99,27 +88,27 @@ module.exports = {
         'comma-spacing': [
             'error',
             {
-                'after': true,
-                'before': false,
+                after: true,
+                before: false,
             },
         ],
         'comma-style': [
             'error',
             'last',
         ],
-        'complexity': 0,
+        complexity: 0,
         'computed-property-spacing': [
             'error',
             'never',
         ],
         'consistent-return': 'off',
         'consistent-this': 'error',
-        'curly': 'error',
+        curly: 'error',
         'default-case': 'off',
         'dot-location': 'off',
         'dot-notation': 'error',
         'eol-last': 'error',
-        'eqeqeq': 'error',
+        eqeqeq: 'error',
         'func-call-spacing': 'off',
         'func-name-matching': 'error',
         'func-names': 'error',
@@ -132,7 +121,7 @@ module.exports = {
         'id-length': 'off',
         'id-match': 'error',
         'import/no-unresolved': 'error',
-        'indent': ['error', 4, { 'SwitchCase': 1 }],
+        indent: ['error', 4, { SwitchCase: 1 }],
         'init-declarations': 'off',
         'jsx-quotes': [
             'error',
@@ -142,8 +131,8 @@ module.exports = {
         'keyword-spacing': [
             'error',
             {
-                'after': true,
-                'before': true,
+                after: true,
+                before: true,
             },
         ],
         'line-comment-position': 'off',
@@ -253,7 +242,7 @@ module.exports = {
         'no-unneeded-ternary': [
             'error',
             {
-                'defaultAssignment': true,
+                defaultAssignment: true,
             },
         ],
         'no-unused-expressions': 'error',
@@ -272,8 +261,8 @@ module.exports = {
         'no-with': 'error',
         'object-curly-newline': [
             'error', {
-                'minProperties': 6,
-                'consistent': true,
+                minProperties: 6,
+                consistent: true,
             },
         ],
         'object-curly-spacing': [
@@ -283,7 +272,7 @@ module.exports = {
         'object-property-newline': [
             'error',
             {
-                'allowMultiplePropertiesPerLine': true,
+                allowMultiplePropertiesPerLine: true,
             },
         ],
         'object-shorthand': ['error', 'always'],
@@ -301,9 +290,9 @@ module.exports = {
         'prefer-rest-params': 'error',
         'prefer-spread': 'error',
         'prefer-template': 'off',
-        'quote-props': 'off',
-        'quotes': ['error', 'single', { allowTemplateLiterals: true }],
-        'radix': [
+        'quote-props': ['error', 'as-needed'],
+        quotes: ['error', 'single', { allowTemplateLiterals: true }],
+        radix: [
             'error',
             'as-needed',
         ],
@@ -316,7 +305,7 @@ module.exports = {
             'error',
             'never',
         ],
-        'semi': ['error', 'never'],
+        semi: ['error', 'never'],
         'semi-spacing': 'error',
         'sort-imports': 'off',
         'sort-keys': 'off',
@@ -330,7 +319,7 @@ module.exports = {
         'space-infix-ops': 'error',
         'space-unary-ops': 'error',
         'spaced-comment': 'off',
-        'strict': 'error',
+        strict: 'error',
         'symbol-description': 'error',
         'template-curly-spacing': [
             'error',
@@ -345,7 +334,7 @@ module.exports = {
         'wrap-iife': 'error',
         'wrap-regex': 'error',
         'yield-star-spacing': 'error',
-        'yoda': [
+        yoda: [
             'error',
             'never',
         ],

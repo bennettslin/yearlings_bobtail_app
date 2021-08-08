@@ -61,14 +61,14 @@ const PopupViewButton = ({
                 className: cx(
                     'PopupViewButton',
                     {
-                        'PopupViewButton__close': isCloseButton,
-                        'PopupViewButton__closeFullWidth':
+                        PopupViewButton__close: isCloseButton,
+                        PopupViewButton__closeFullWidth:
                             isCloseButton && isFullPopup,
-                        'PopupViewButton__previous': isPreviousButton,
-                        'PopupViewButton__next': isNextButton,
-                        'PopupViewButton__side':
+                        PopupViewButton__previous: isPreviousButton,
+                        PopupViewButton__next: isNextButton,
+                        PopupViewButton__side:
                             isPreviousButton || isNextButton,
-                        'PopupViewButton__inCardSize': inCardSize,
+                        PopupViewButton__inCardSize: inCardSize,
                     },
 
                     displaysInOverlay ?

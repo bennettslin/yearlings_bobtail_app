@@ -56,9 +56,9 @@ const Popup = ({
 
                             // For animation styling.
                             {
-                                'Popup__notInOverlay': !displaysInOverlay,
-                                'fCC': !noFlexCentre,
-                                'abF': !noAbsoluteFull,
+                                Popup__notInOverlay: !displaysInOverlay,
+                                fCC: !noFlexCentre,
+                                abF: !noAbsoluteFull,
                             },
                         ],
                     ),

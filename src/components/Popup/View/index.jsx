@@ -34,13 +34,13 @@ const PopupView = ({
                     'PopupView',
                     `${popupName}View`,
                     {
-                        'PopupView__bounceAnimate': bounceAnimate,
-                        'PopupView__shrinkAnimate': shrinkAnimate,
-                        'PopupView__cardSize': isCardSize,
-                        'popupView__fullWidth': isFullPopup,
-                        'popupView__fullHeight': isFullPopup,
-                        'popupView__promoWidth': isPromoPopup,
-                        'PopupView__canBeFullHeight':
+                        PopupView__bounceAnimate: bounceAnimate,
+                        PopupView__shrinkAnimate: shrinkAnimate,
+                        PopupView__cardSize: isCardSize,
+                        popupView__fullWidth: isFullPopup,
+                        popupView__fullHeight: isFullPopup,
+                        popupView__promoWidth: isPromoPopup,
+                        PopupView__canBeFullHeight:
                             canBeFullHeight || isFullPopup,
                     },
                 ],
@@ -85,8 +85,8 @@ const PopupView = ({
                         'PopupViewContent',
                         `${popupName}ViewContent`,
                         {
-                            'PopupViewContent__narrowPadding': hasNarrowPadding,
-                            'PopupViewContent__widePadding': hasWidePadding,
+                            PopupViewContent__narrowPadding: hasNarrowPadding,
+                            PopupViewContent__widePadding: hasWidePadding,
                         },
                         !noBoxShadow && 'boxShadow__popupView',
                         overflowScroll && 'PopupViewContent__overflowScroll',

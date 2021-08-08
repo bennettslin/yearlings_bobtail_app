@@ -13,7 +13,7 @@ export const getMetaDescription = promoKey => (
 )
 
 const getDefaultConfig = promoKey => ({
-    'description': getMetaDescription(promoKey),
+    description: getMetaDescription(promoKey),
 })
 
 const getFacebookConfig = promoKey => ({

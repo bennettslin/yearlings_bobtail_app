@@ -14,8 +14,8 @@
     "release:candidate": "npm run clean && DESTINATION=candidate npm run build:staging && npm run deploy",
     "release:delivery": "npm run clean && DESTINATION=delivery npm run build:production && npm run deploy",
     "release:production": "npm run clean && DESTINATION=production npm run build:production && npm run deploy",
-    "lint": "eslint --ext js,jsx app",
-    "lint:fix": "eslint --ext js,jsx --fix app"
+    "lint": "eslint --ext js,jsx admin src",
+    "lint:fix": "eslint --ext js,jsx --fix admin src"
   },
   "author": "Bobtail Yearlings",
   "license": "ISC",
