@@ -50,9 +50,9 @@
     .light { fill: hsl($hue__afterword, 54%, 80%); }
 }
 .Dot__deselected {
-    .dark { fill: hsl(0, 0, 60%); }
-    .medium { fill: hsl(0, 0, 70%); }
-    .light { fill: hsl(0, 0, 80%); }
+    .dark { fill: hsl(0, 0%, 60%); }
+    .medium { fill: hsl(0, 0%, 70%); }
+    .light { fill: hsl(0, 0%, 80%); }
 }
 // Maybe don't do...
 // .Anchor__selectableNotLyric:hover

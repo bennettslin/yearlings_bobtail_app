@@ -1,3 +1,4 @@
+@use 'sass:math';
 @import '../../../../scss/constants/border';
 @import '../../../../scss/constants/icon';
 @import '../../../../scss/constants/shadow';
@@ -113,14 +114,14 @@ $width__sliderStanzaTab: 9px;
         $lightShade,
         $lightShade 1px,
         transparent 1px,
-        transparent $height / 2
+        transparent math.div($height, 2)
     ),
     repeating-linear-gradient(
         $degrees,
         $lightShade,
         $lightShade 1px,
         transparent 1px,
-        transparent $height / 2
+        transparent math.div($height, 2)
     ),
     linear-gradient(
         $degrees,

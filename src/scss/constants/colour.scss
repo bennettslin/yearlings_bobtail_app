@@ -124,12 +124,12 @@ $colour__annotationWormhole: hsl($hue__wormhole, $sat__lighter, $lum__lightest);
 $colour__annotationWormhole__title: hsl($hue__wormhole, 2%, 60%);
 
 // Song stanza colours.
-$bgColour__formType__verse: hsl(210, 35, 40);
-$bgColour__formType__prechorus: hsl(120, 25, 40);
-$bgColour__formType__chorus: hsl(300, 25, 40);
-$bgColour__formType__postchorus: hsl(30, 40, 40);
-$bgColour__formType__bridge: hsl(180, 40, 30);
-$bgColour__formType__refrain: hsl(60, 40, 35);
-$bgColour__formType__coda: hsl(90, 40, 35);
-$bgColour__formType__instrumental: hsl(270, 25, 40);
-$bgColour__formType__none: hsl(0, 0, 45);
+$bgColour__formType__verse: hsl(210, 35%, 40%);
+$bgColour__formType__prechorus: hsl(120, 25%, 40%);
+$bgColour__formType__chorus: hsl(300, 25%, 40%);
+$bgColour__formType__postchorus: hsl(30, 40%, 40%);
+$bgColour__formType__bridge: hsl(180, 40%, 30%);
+$bgColour__formType__refrain: hsl(60, 40%, 35%);
+$bgColour__formType__coda: hsl(90, 40%, 35%);
+$bgColour__formType__instrumental: hsl(270, 25%, 40%);
+$bgColour__formType__none: hsl(0, 0%, 45%);

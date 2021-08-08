@@ -1,3 +1,4 @@
+@use 'sass:math';
 @import '../../scss/constants/icon';
 @import '../../scss/constants/nav';
 @import '../../scss/constants/responsive';
@@ -17,11 +18,13 @@ $count__icons__double: 18 + 2;
 $multiplier__gap__medium: 2;
 $multiplier__gap__large: 3;
 
-$width__gap__singleMedium: $multiplier__gap__medium / $COUNT_GAPS_SINGLE;
-$width__gap__singleLarge: $multiplier__gap__large / $COUNT_GAPS_SINGLE;
+// COUNT_GAPS_SINGLE is 16, math.div complains about using variable divisor
+$width__gap__singleMedium: math.div($multiplier__gap__medium, 16);
+$width__gap__singleLarge: math.div($multiplier__gap__large, 16);
 
-$width__gap__doubleMedium: $multiplier__gap__medium / $COUNT_GAPS_DOUBLE;
-$width__gap__doubleLarge: $multiplier__gap__large / $COUNT_GAPS_DOUBLE;
+// COUNT_GAPS_DOUBLE is 26, math.div complains about using variable divisor
+$width__gap__doubleMedium: math.div($multiplier__gap__medium, 26);
+$width__gap__doubleLarge: math.div($multiplier__gap__large, 26);
 
 
 $screenWidth__full: 100vw;
@@ -72,11 +75,11 @@ $monitor-shrink-icon-constant: $WIDTH_GOLDEN_CORD + 10 * $padding__navColumnChil
 
 $monitor-shrink-icon: calc((#{$screenWidth__full} - #{$monitor-shrink-icon-constant}) / #{$count__icons__double});
 
-$monitor-shrink-book-offset-constant: $multiplier__gap__medium * 1px + $padding__navColumnChild * 2 - ($WIDTH_GOLDEN_CORD + 10 * $padding__navColumnChild + $LENGTH_ICON_LARGE + $COUNT_GAPS_DOUBLE) / $count__icons__double;
+$monitor-shrink-book-offset-constant: $multiplier__gap__medium * 1px + $padding__navColumnChild * 2 - math.div($WIDTH_GOLDEN_CORD + 10 * $padding__navColumnChild + $LENGTH_ICON_LARGE + $COUNT_GAPS_DOUBLE, $count__icons__double);
 
 $monitor-shrink-book-offset: calc(#{$screenWidth__full} / #{$count__icons__double} + #{$monitor-shrink-book-offset-constant});
 
-$monitor-shrink-toggle-width-constant: $padding__navColumnChild * 2 - ($WIDTH_GOLDEN_CORD + 10 * $padding__navColumnChild + $COUNT_GAPS_DOUBLE * 1px) / $count__icons__double;
+$monitor-shrink-toggle-width-constant: $padding__navColumnChild * 2 - math.div($WIDTH_GOLDEN_CORD + 10 * $padding__navColumnChild + $COUNT_GAPS_DOUBLE * 1px, $count__icons__double);
 
 $monitor-shrink-toggle-width: calc(#{$screenWidth__full} / #{$count__icons__double} + #{$monitor-shrink-toggle-width-constant});
 
@@ -149,11 +152,11 @@ $laptop-shrink-icon-constant:
 
 $laptop-shrink-icon: calc((#{$screenWidth__full} - #{$laptop-shrink-icon-constant}) / #{$count__icons__single});
 
-$laptop-shrink-book-offset-constant: $multiplier__gap__medium * 1px + $padding__navColumnChild * 2 - ($WIDTH_UNCANNY_VALLEY + 8 * $padding__navColumnChild + $LENGTH_ICON_LARGE + $COUNT_GAPS_SINGLE) / $count__icons__single;
+$laptop-shrink-book-offset-constant: $multiplier__gap__medium * 1px + $padding__navColumnChild * 2 - math.div($WIDTH_UNCANNY_VALLEY + 8 * $padding__navColumnChild + $LENGTH_ICON_LARGE + $COUNT_GAPS_SINGLE, $count__icons__single);
 
 $laptop-shrink-book-offset: calc(#{$screenWidth__full} / #{$count__icons__single} + #{$laptop-shrink-book-offset-constant});
 
-$laptop-shrink-toggle-width-constant: $padding__navColumnChild * 2 - ($WIDTH_UNCANNY_VALLEY + 8 * $padding__navColumnChild + $COUNT_GAPS_SINGLE * 1px) / $count__icons__single;
+$laptop-shrink-toggle-width-constant: $padding__navColumnChild * 2 - math.div($WIDTH_UNCANNY_VALLEY + 8 * $padding__navColumnChild + $COUNT_GAPS_SINGLE * 1px, $count__icons__single);
 
 $laptop-shrink-toggle-width: calc(#{$screenWidth__full} / #{$count__icons__single} + #{$laptop-shrink-toggle-width-constant});
 
@@ -186,7 +189,7 @@ $tablet-shrink-icon-constant: 10 * $padding__navColumnChild + $LENGTH_ICON_LARGE
 
 $tablet-shrink-icon: calc((#{$screenWidth__full} - #{$tablet-shrink-icon-constant}) / #{$count__icons__double});
 
-$tablet-shrink-book-offset-constant: $multiplier__gap__medium * 1px + $padding__navColumnChild * 2 - (10 * $padding__navColumnChild + $LENGTH_ICON_LARGE_TABLET + $COUNT_GAPS_DOUBLE) / $count__icons__double;
+$tablet-shrink-book-offset-constant: $multiplier__gap__medium * 1px + $padding__navColumnChild * 2 - math.div(10 * $padding__navColumnChild + $LENGTH_ICON_LARGE_TABLET + $COUNT_GAPS_DOUBLE, $count__icons__double);
 
 $tablet-shrink-book-offset: calc(#{$screenWidth__full} / #{$count__icons__double} + #{$tablet-shrink-book-offset-constant});
 

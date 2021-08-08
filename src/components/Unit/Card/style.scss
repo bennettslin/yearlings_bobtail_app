@@ -1,3 +1,4 @@
+@use 'sass:math';
 @import '../../../scss/constants/border';
 @import '../../../scss/constants/icon';
 @import '../../../scss/constants/lyric';
@@ -30,7 +31,7 @@
 .UnitCard__sheet {
     position: relative;
 
-    padding: $MARGIN_THIN / 2;
+    padding: math.div($MARGIN_THIN, 2);
     border-radius: $borderRadius__narrow;
 
     .Unit__column__main
@@ -58,14 +59,14 @@ $height: $height__formTypeTab * 4;
         $lightShade,
         $lightShade 1px,
         transparent 1px,
-        transparent $height / 2
+        transparent math.div($height, 2)
     ),
     repeating-linear-gradient(
         $degrees,
         $lightShade,
         $lightShade 1px,
         transparent 1px,
-        transparent $height / 2
+        transparent math.div($height, 2)
     ),
     linear-gradient(
         $degrees,

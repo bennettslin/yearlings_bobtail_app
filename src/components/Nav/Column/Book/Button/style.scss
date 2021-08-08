@@ -1,3 +1,4 @@
+@use 'sass:math';
 @import '../../../../../scss/constants/icon';
 @import '../../../../../scss/constants/responsive';
 @import '../../../../../scss/constants/transition';
@@ -81,7 +82,7 @@
 
 [class*=ButtonTitleText__nav] {
     float: left;
-    padding-left: $margin__thick / 2;
+    padding-left: math.div($margin__thick, 2);
     transform: rotate(270deg);
     transform-origin: left top 0;
 

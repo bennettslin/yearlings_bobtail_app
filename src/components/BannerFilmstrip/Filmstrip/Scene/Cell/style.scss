@@ -1,3 +1,4 @@
+@use 'sass:math';
 @import '../../../../../scss/constants/bannerFilmstrip';
 @import '../../../../../scss/constants/border';
 @import '../../../../../scss/constants/colour';
@@ -40,7 +41,7 @@
      * be helped, because cells are solid elements rather than masks.
      */
     width: calc(100% + #{$length__filmPerf});
-    left: -$length__filmPerf / 2;
+    left: math.div(-$length__filmPerf, 2);
 }
 
 .FilmstripCell {
