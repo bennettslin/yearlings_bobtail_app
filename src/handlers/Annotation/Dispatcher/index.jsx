@@ -4,7 +4,7 @@ import { scrollCarouselToAnnotation } from '../../../redux/scrollCarousel/action
 import { scrollLyricToAnchor } from '../../../redux/scrollLyric/action'
 import { updateSelectedStore } from '../../../redux/selected/action'
 import { getHasSelectedDot } from '../../../helpers/dot'
-import { getDotsBitForAnnotation } from '../../../api/album/annotations'
+import { getDotsBitForAnnotation } from '../../../endpoint/album/annotations'
 import { getAnnotationIndexForDirection } from '../../../helpers/annotation'
 import { mapSelectedDotsBit } from '../../../redux/dots/selector'
 import { mapIsEarShown } from '../../../redux/ear/selector'

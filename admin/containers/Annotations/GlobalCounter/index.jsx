@@ -5,7 +5,7 @@ import Button from '../../../../src/components/Button'
 import {
     getGlobalAnnotationCount,
     getGlobalAnnotationDoneCount,
-} from '../../../api/album/globalAnnotation'
+} from '../../../endpoint/album/globalAnnotation'
 
 const GlobalCounter = ({ toggleShowTodos }) => {
     const

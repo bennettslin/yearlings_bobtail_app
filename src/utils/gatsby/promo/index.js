@@ -3,8 +3,8 @@ import {
     getRoutingArtup2Index,
 } from '../routing'
 import { getIsAlbumClientSession } from '../session'
-import { getPathForArtupSlide } from '../../../api/promo/artup'
-import { getPathForArtup2Slide } from '../../../api/promo/artup2'
+import { getPathForArtupSlide } from '../../../endpoint/promo/artup'
+import { getPathForArtup2Slide } from '../../../endpoint/promo/artup2'
 import {
     ARTUP_SUBPATH,
     ARTUP_2_SUBPATH,

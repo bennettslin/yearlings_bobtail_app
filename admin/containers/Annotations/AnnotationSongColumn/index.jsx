@@ -4,8 +4,8 @@ import Annotation from '../Annotation'
 import {
     getAnnotationIndices,
     getTodoForAnnotation,
-} from '../../../../src/api/album/annotations'
-import { getSongsNotLoguesCount } from '../../../../src/api/album/songs'
+} from '../../../../src/endpoint/album/annotations'
+import { getSongsNotLoguesCount } from '../../../../src/endpoint/album/songs'
 
 const AnnotationSongColumn = ({ songIndex, showAll }) => {
     const

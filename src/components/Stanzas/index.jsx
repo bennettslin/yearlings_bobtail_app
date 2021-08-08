@@ -8,8 +8,8 @@ import getSongServerClientHoc from '../../hocs/SongHoc'
 import VerseDispatcher from '../../dispatchers/Verse'
 import Stanza from './Stanza'
 import Unit from '../Unit'
-import { getStanzaIndices } from '../../api/album/stanzas'
-import { getLastUnitDotCardIndex } from '../../api/album/units'
+import { getStanzaIndices } from '../../endpoint/album/stanzas'
+import { getLastUnitDotCardIndex } from '../../endpoint/album/units'
 import './style'
 
 const Stanzas = forwardRef(({ serverClientSongIndex }, ref) => {

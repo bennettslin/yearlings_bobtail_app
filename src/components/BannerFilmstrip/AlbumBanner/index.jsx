@@ -1,6 +1,6 @@
 import React from 'react'
 import cx from 'classnames'
-import { getTitleForAlbum } from '../../../api/album/title'
+import { getTitleForAlbum } from '../../../endpoint/album/title'
 import './style'
 
 const AlbumBanner = () => (

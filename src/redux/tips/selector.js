@@ -1,5 +1,5 @@
 import { createSelector } from 'reselect'
-import { getShowTipForDevice } from '../../api/album/tips'
+import { getShowTipForDevice } from '../../endpoint/album/tips'
 import { getIsShown } from '../../helpers/options'
 import {
     mapIsPhoneWidth,

@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import { useSelector } from 'react-redux'
-import { getArtup2SlidesCount } from '../../../../api/promo/artup2'
+import { getArtup2SlidesCount } from '../../../../endpoint/promo/artup2'
 import { mapArtup2SlideIndex } from '../../../../redux/promo/selector'
 import Artup2Dispatcher from '../../../../dispatchers/Artup2'
 import Pagination from '../../../Promo/Pagination'

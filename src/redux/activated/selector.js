@@ -1,5 +1,5 @@
 import { createSelector } from 'reselect'
-import { getSceneIndexForVerse } from '../../api/album/verses'
+import { getSceneIndexForVerse } from '../../endpoint/album/verses'
 import { mapSelectedSongIndex } from '../selected/selector'
 import { ACTIVATED_STORE } from '../../constants/store'
 

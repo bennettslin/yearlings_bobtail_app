@@ -1,7 +1,7 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import Presence from '../../Presence'
-import { getPresencesForLayer } from '../../../api/scene/presences'
+import { getPresencesForLayer } from '../../../endpoint/scene/presences'
 import { ACTOR } from '../../../constants/scene'
 
 const Layer = ({

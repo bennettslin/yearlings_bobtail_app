@@ -11,7 +11,7 @@ import AnnotationWormholes from './Wormholes'
 import {
     getDescriptionForAnnotationCard,
     getDotsBitForAnnotationCard,
-} from '../../../api/album/cards'
+} from '../../../endpoint/album/cards'
 import { getDotsBitHasKey } from '../../../helpers/dot'
 import { getMapHasSelectedDot } from '../../../redux/dots/selector'
 import { BACKSTORY, NARRATIVE, AFTERWORD } from '../../../constants/dots'

@@ -3,7 +3,7 @@ import cx from 'classnames'
 import PropTypes from 'prop-types'
 import getDidMountHoc from '../../../hocs/DidMountHoc'
 import Anchor from '../../Anchor'
-import { getTitleForAlbum } from '../../../api/album/title'
+import { getTitleForAlbum } from '../../../endpoint/album/title'
 import { BOBTAIL_YEARLINGS_WEBSITE } from '../../../constants/website'
 import './style'
 

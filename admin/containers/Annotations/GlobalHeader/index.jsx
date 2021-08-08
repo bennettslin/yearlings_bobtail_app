@@ -2,7 +2,7 @@ import React from 'react'
 import cx from 'classnames'
 import AnnotationSongHeader from '../AnnotationSongHeader'
 import { getArrayOfLength } from '../../../../src/helpers/general'
-import { getSongsNotLoguesCount } from '../../../../src/api/album/songs'
+import { getSongsNotLoguesCount } from '../../../../src/endpoint/album/songs'
 
 const TempGlobalHeader = () => {
     return (

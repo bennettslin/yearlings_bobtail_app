@@ -1,5 +1,5 @@
-import { getColumnIndexForAnnotation } from '../../api/album/annotations'
-import { getBookForSongIndex } from '../../api/album/songs'
+import { getColumnIndexForAnnotation } from '../../endpoint/album/annotations'
+import { getBookForSongIndex } from '../../endpoint/album/songs'
 import {
     getBoolFromStorage,
     getStoredVolumeIndex,

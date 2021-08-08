@@ -2,8 +2,8 @@ import { createSelector } from 'reselect'
 import {
     getSongIsPrologue,
     getSongIsEpilogue,
-} from '../../api/album/songs'
-import { getSceneIndexForVerse } from '../../api/album/verses'
+} from '../../endpoint/album/songs'
+import { getSceneIndexForVerse } from '../../endpoint/album/verses'
 import { getBeforeOnOrAfter } from '../../helpers/cursor'
 import { SELECTED_STORE } from '../../constants/store'
 

@@ -12,11 +12,11 @@ import {
     getSharedClassNames,
 } from '../../../../src/helpers/format'
 import { getDocument } from '../../../../src/utils/browser'
-import { getArrangementForPresence } from '../../../../src/api/scene/presences'
+import { getArrangementForPresence } from '../../../../src/endpoint/scene/presences'
 import {
     getSharedStyleForActor,
     getSharedStyleForThing,
-} from '../../../../src/api/scene/sharedStyles'
+} from '../../../../src/endpoint/scene/sharedStyles'
 
 import {
     getPreviewerSvgMapForActor,

@@ -1,6 +1,6 @@
 import { navigate } from 'gatsby'
-import { getPathForArtupSlide } from '../api/promo/artup'
-import { getPathForArtup2Slide } from '../api/promo/artup2'
+import { getPathForArtupSlide } from '../endpoint/promo/artup'
+import { getPathForArtup2Slide } from '../endpoint/promo/artup2'
 import { getWindow } from '../utils/browser'
 import { getPromoPath } from '../utils/gatsby/promo'
 import { getSongUrlPath } from './url'

@@ -1,7 +1,7 @@
 import {
     getIsPresenceShownInScene,
     getCounterpartForPresence,
-} from '../api/scene/presences'
+} from '../endpoint/scene/presences'
 
 export const getIsPresenceShown = ({
     canTransitionAfterSceneChange,

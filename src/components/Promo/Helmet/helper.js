@@ -1,5 +1,5 @@
-import { getTitleForAlbum } from '../../../api/album/title'
-import { getDescriptionForPromo, getTitleForPromo } from '../../../api/promo'
+import { getTitleForAlbum } from '../../../endpoint/album/title'
+import { getDescriptionForPromo, getTitleForPromo } from '../../../endpoint/promo'
 import { getTruncatedStringText } from '../../../helpers/format'
 import { spreadHelmetConfig } from '../../../helpers/helmet'
 import { getPromoUrl, getUrl } from '../../../helpers/url'

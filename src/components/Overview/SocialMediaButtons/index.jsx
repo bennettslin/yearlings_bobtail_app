@@ -2,7 +2,7 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import SocialMediaButtons from '../../SocialMediaButtons'
-import { getSongIsLogue } from '../../../api/album/songs'
+import { getSongIsLogue } from '../../../endpoint/album/songs'
 import getSongServerClientHoc from '../../../hocs/SongHoc'
 import { OVERVIEW_LOGUE_SOCIAL_MEDIA } from '../../../constants/socialMedia'
 

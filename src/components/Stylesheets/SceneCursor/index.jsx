@@ -1,7 +1,7 @@
 import React, { memo } from 'react'
 import Stylesheet from '../../../modules/Stylesheet'
 import { getArrayOfLength } from '../../../helpers/general'
-import { getMaxSceneCountForAlbum } from '../../../api/album/count'
+import { getMaxSceneCountForAlbum } from '../../../endpoint/album/count'
 import {
     SCENE_BEFORE_PREFIX,
     SCENE_AFTER_PREFIX,

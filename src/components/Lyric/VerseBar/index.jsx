@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import cx from 'classnames'
 import getDidMountHoc from '../../../hocs/DidMountHoc'
 import Verse from '../../Verse'
-import { getVerse } from '../../../api/album/verses'
+import { getVerse } from '../../../endpoint/album/verses'
 import { updateIsAutoScroll } from '../../../redux/toggle/action'
 import { getMapVerseCursorIndex } from '../../../redux/cursor/selector'
 import {

@@ -4,7 +4,7 @@ import React, { memo } from 'react'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
 import SliderStanza from './Stanza'
-import { getStanzaIndices } from '../../../api/album/stanzas'
+import { getStanzaIndices } from '../../../endpoint/album/stanzas'
 import { mapLyricSongIndex } from '../../../redux/lyric/selector'
 
 const SliderStanzas = () => {

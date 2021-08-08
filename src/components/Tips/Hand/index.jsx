@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import InlineSvg from '../../../modules/InlineSvg'
 import tipsHand from '../../../assets/svgs/app/tips/tipsHand'
-import { getSongTipType } from '../../../api/album/tips'
+import { getSongTipType } from '../../../endpoint/album/tips'
 import {
     ANNOTATION,
     WORMHOLES,

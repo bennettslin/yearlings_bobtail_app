@@ -1,9 +1,9 @@
-import { getSongsNotLoguesCount } from '../../../api/album/songs'
+import { getSongsNotLoguesCount } from '../../../endpoint/album/songs'
 import {
     getAudioTimeForCurrentTime,
     getEndTimeForVerse,
-} from '../../../api/album/time'
-import { getVerseCountForSong } from '../../../api/album/verses'
+} from '../../../endpoint/album/time'
+import { getVerseCountForSong } from '../../../endpoint/album/verses'
 import { getTimeDifference } from '../../../utils/logger/helpers/time'
 
 const SONG_CONTINUE_BUFFER_TIME = 1

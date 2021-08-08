@@ -12,8 +12,8 @@ import {
     getIsUnitTruncatable,
     getUnitFormType,
 } from './helper'
-import { getSubsequentForUnit } from '../../../api/album/units'
-import { getVerse } from '../../../api/album/verses'
+import { getSubsequentForUnit } from '../../../endpoint/album/units'
+import { getVerse } from '../../../endpoint/album/verses'
 import './style'
 
 const UnitCard = forwardRef(({

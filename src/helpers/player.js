@@ -1,7 +1,7 @@
 import {
     getSongsNotLoguesCount,
     getSongIsLogue,
-} from '../api/album/songs'
+} from '../endpoint/album/songs'
 import {
     getObjectFromBit,
     getBitFromObject,

@@ -2,7 +2,7 @@ import {
     getColumnIndexForAnnotation,
     getAnnotationCountForSong,
     getDotsBitForAnnotation,
-} from '../api/album/annotations'
+} from '../endpoint/album/annotations'
 import { getHasSelectedDot } from '../helpers/dot'
 
 export const getShowAnnotationForColumn = ({

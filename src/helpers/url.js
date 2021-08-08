@@ -1,5 +1,5 @@
 import qs from 'qs'
-import { getFullPathForSong } from '../api/album/songs'
+import { getFullPathForSong } from '../endpoint/album/songs'
 
 import {
     ANNOTATION_QUERY_FIELD,

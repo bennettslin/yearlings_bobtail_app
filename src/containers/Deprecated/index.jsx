@@ -3,7 +3,7 @@ import cx from 'classnames'
 import { Helmet } from 'react-helmet'
 import Texts from '../../components/Texts'
 import { navigateToPathname } from '../../helpers/navigate'
-import { getTitleForAlbum } from '../../api/album/title'
+import { getTitleForAlbum } from '../../endpoint/album/title'
 import './style'
 
 const DEPRECATED_TEXT = 'Sorry, this browser is not supported.'

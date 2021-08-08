@@ -10,7 +10,7 @@ import {
     mapSelectedSongIndex,
     mapSelectedVerseIndex,
 } from '../../redux/selected/selector'
-import { getSongIsLogue } from '../../api/album/songs'
+import { getSongIsLogue } from '../../endpoint/album/songs'
 
 const AudioManager = forwardRef(({ didMount }, ref) => {
     const

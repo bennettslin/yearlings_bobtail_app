@@ -10,13 +10,13 @@ import {
     getSharedClassNames,
     capitaliseForClassName,
 } from '../../../helpers/format'
-import { getArrangementForPresence } from '../../../api/scene/presences'
+import { getArrangementForPresence } from '../../../endpoint/scene/presences'
 import {
     getSharedStyleForActor,
     getSharedStyleForThing,
-} from '../../../api/scene/sharedStyles'
-import { getWirePlacedFront } from '../../../api/scene/wires'
-import { getSvgForPresence } from '../../../api/svg'
+} from '../../../endpoint/scene/sharedStyles'
+import { getWirePlacedFront } from '../../../endpoint/scene/wires'
+import { getSvgForPresence } from '../../../endpoint/svg'
 import { getMapZIndexForPresence } from '../../../redux/presence/selector'
 import { getCoordinatesForPresence } from './helpers/position'
 import { getCompoundActorStyleIfNeeded } from './helpers/sharedStyle'

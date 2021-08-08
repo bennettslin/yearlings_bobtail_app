@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet'
 import NotFoundHeader from './Header'
 import Texts from '../../components/Texts'
 import DeviceWrapper from '../../wrappers/DeviceWrapper'
-import { getTitleForAlbum } from '../../api/album/title'
+import { getTitleForAlbum } from '../../endpoint/album/title'
 import { navigateToPathname } from '../../helpers/navigate'
 import './style'
 

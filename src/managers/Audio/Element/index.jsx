@@ -11,8 +11,8 @@ import VerseDispatcher from '../../../dispatchers/Verse'
 import {
     getPlayerTimeForVerse,
     getAudioTimeForCurrentTime,
-} from '../../../api/album/time'
-import { getMp3 } from '../../../api/mp3'
+} from '../../../endpoint/album/time'
+import { getMp3 } from '../../../endpoint/mp3'
 import { getFormattedTime } from '../../../helpers/format'
 import { updateCanPlayThrough } from '../../../redux/players/action'
 import { mapCanPlayThrough } from '../../../redux/players/selector'

@@ -2,10 +2,10 @@ import {
     getAlbum,
     getPromo,
     getScene,
-} from '../../api/builds'
-import { getSong } from '../../api/album/songs'
-import { getLayersForScene } from '../../api/album/scenes'
-import { getSceneIndexForVerse } from '../../api/album/verses'
+} from '../../endpoint/builds'
+import { getSong } from '../../endpoint/album/songs'
+import { getLayersForScene } from '../../endpoint/album/scenes'
+import { getSceneIndexForVerse } from '../../endpoint/album/verses'
 import {
     getStoredSongIndex,
     getStoredVerseIndex,

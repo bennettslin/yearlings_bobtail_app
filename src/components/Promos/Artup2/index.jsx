@@ -7,7 +7,7 @@ import {
     getBodyForArtup2Slide,
     getFootnoteForArtup2Slide,
     getTitleForArtup2Slide,
-} from '../../../api/promo/artup2'
+} from '../../../endpoint/promo/artup2'
 import getPromoServerClientHoc from '../../../hocs/PromoHoc'
 import { mapArtup2SlideIndex } from '../../../redux/promo/selector'
 

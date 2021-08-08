@@ -2,7 +2,7 @@ import {
     getDurationForSong,
     getStartTimeForScene,
     getDurationForScene,
-} from '../api/album/time'
+} from '../endpoint/album/time'
 
 export const getSceneDimensionCoordinate = (
     songIndex,

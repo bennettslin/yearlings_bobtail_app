@@ -1,4 +1,4 @@
-import { getSceneIndexForVerse } from '../../api/album/verses'
+import { getSceneIndexForVerse } from '../../endpoint/album/verses'
 
 export const getSceneDefaults = ({
     initialSongIndex,

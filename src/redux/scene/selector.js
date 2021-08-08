@@ -3,7 +3,7 @@ import {
     getCubesKeyForScene,
     getSkyTimeForScene,
     getSeasonForScene,
-} from '../../api/album/scenes'
+} from '../../endpoint/album/scenes'
 import { getIsDarkScene } from '../../helpers/scene'
 import { mapIsSongSelectComplete } from '../entrance/selector'
 import { DEFAULT_STAGE_KEY } from '../../constants/scene/scenes'

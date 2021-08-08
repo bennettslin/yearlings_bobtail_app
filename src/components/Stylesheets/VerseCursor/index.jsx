@@ -1,7 +1,7 @@
 import React, { memo } from 'react'
 import Stylesheet from '../../../modules/Stylesheet'
 import { getArrayOfLength } from '../../../helpers/general'
-import { getMaxVerseCountForAlbum } from '../../../api/album/count'
+import { getMaxVerseCountForAlbum } from '../../../endpoint/album/count'
 import {
     VERSE_BEFORE_PREFIX,
     VERSE_AFTER_PREFIX,

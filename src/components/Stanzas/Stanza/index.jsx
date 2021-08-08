@@ -7,7 +7,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import getSongServerClientHoc from '../../../hocs/SongHoc'
 import Unit from '../../Unit'
-import { getUnitIndicesForStanza } from '../../../api/album/stanzas'
+import { getUnitIndicesForStanza } from '../../../endpoint/album/stanzas'
 import './style'
 
 const Stanza = forwardRef(({

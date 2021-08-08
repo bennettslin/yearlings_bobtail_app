@@ -4,8 +4,8 @@ import {
     getDurationForScene,
     getStartTimeForVerse,
     getDurationForVerse,
-} from '../api/album/time'
-import { getSongIsLogue } from '../api/album/songs'
+} from '../endpoint/album/time'
+import { getSongIsLogue } from '../endpoint/album/songs'
 
 export const getSongTrackerWidth = ({
     selectedSongIndex,

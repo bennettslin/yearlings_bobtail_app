@@ -1,7 +1,7 @@
 // Helpers for getting and setting state persisted in user's local storage.
-import { getValidSongIndex } from '../../api/album/songs'
-import { getValidVerseIndex } from '../../api/album/verses'
-import { getValidAnnotationIndex } from '../../api/album/annotations'
+import { getValidSongIndex } from '../../endpoint/album/songs'
+import { getValidVerseIndex } from '../../endpoint/album/verses'
+import { getValidAnnotationIndex } from '../../endpoint/album/annotations'
 import { getWindow } from '../browser'
 import { INITIAL_DOTS_BIT } from '../../helpers/dot'
 import { FULL_DOTS_BIT } from '../../constants/dots'

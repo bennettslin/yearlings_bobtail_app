@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import PromoView from '../../Promo/View'
-import { getBodyForHomepage } from '../../../api/promo/homepage'
+import { getBodyForHomepage } from '../../../endpoint/promo/homepage'
 
 const HomepagePromo = ({ handlePromoPageChange }) => {
     useEffect(() => {

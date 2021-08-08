@@ -1,5 +1,5 @@
 import { createSelector } from 'reselect'
-import { getStartTimeForVerse } from '../../api/album/time'
+import { getStartTimeForVerse } from '../../endpoint/album/time'
 import { getIsSmallBannerText } from '../../helpers/resize/responsive'
 import { mapSelectedSongIndex } from '../selected/selector'
 import { mapWindowWidth } from '../viewport/selector'

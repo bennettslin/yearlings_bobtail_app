@@ -17,7 +17,7 @@ import {
     getVerseIndicesForUnit,
     getIsSideCardOnBottomForUnit,
     getSideCardForUnit,
-} from '../../api/album/units'
+} from '../../endpoint/album/units'
 import { mapIsEarShown } from '../../redux/ear/selector'
 import './style'
 

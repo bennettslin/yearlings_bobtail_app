@@ -1,4 +1,4 @@
-import { getTitleForSong } from '../../api/album/songs'
+import { getTitleForSong } from '../../endpoint/album/songs'
 import {
     ABOUT_BUTTON_KEY,
     AUDIO_NEXT_BUTTON_KEY,

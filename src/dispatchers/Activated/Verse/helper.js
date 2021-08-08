@@ -1,4 +1,4 @@
-import { getVerseCountForSong } from '../../../api/album/verses'
+import { getVerseCountForSong } from '../../../endpoint/album/verses'
 
 export const getActivatedVerseForDirection = ({
     selectedSongIndex,

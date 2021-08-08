@@ -1,4 +1,4 @@
-import { getTitleForSong } from '../../../../../api/album/songs'
+import { getTitleForSong } from '../../../../../endpoint/album/songs'
 
 export const getIndexCharacter = ({ bookIndex, songIndex }) => {
     if (Number.isFinite(bookIndex)) {

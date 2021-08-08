@@ -2,7 +2,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
-import { getIndexedTitleForSong } from '../../../../api/album/songs'
+import { getIndexedTitleForSong } from '../../../../endpoint/album/songs'
 import { mapSelectedSongIndex } from '../../../../redux/selected/selector'
 import './style'
 

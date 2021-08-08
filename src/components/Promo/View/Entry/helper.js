@@ -1,7 +1,7 @@
 import {
     getDescriptionForPromo,
     getTitleForPromo,
-} from '../../../../api/promo'
+} from '../../../../endpoint/promo'
 
 export const getEntryRichText = ({ promoKey }) => ([
     [

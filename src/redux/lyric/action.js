@@ -1,5 +1,5 @@
 // Actions for lyric and carousel state.
-import { getSongIsLogue } from '../../api/album/songs'
+import { getSongIsLogue } from '../../endpoint/album/songs'
 import {
     hasKey,
     getDefinedOnlyPayload,

@@ -3,12 +3,12 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import SliderVerses from './Verses'
-import { getFormTypeForStanza } from '../../../../api/album/stanzas'
+import { getFormTypeForStanza } from '../../../../endpoint/album/stanzas'
 import {
     getDurationForSong,
     getStartTimeForStanza,
     getEndTimeForStanza,
-} from '../../../../api/album/time'
+} from '../../../../endpoint/album/time'
 import { CSS_OVERLAP_MARGIN_X_SLIDER } from '../../../../constants/responsive'
 import { getMapIsStanzaCursor } from '../../../../redux/cursor/selector'
 import { mapLyricSongIndex } from '../../../../redux/lyric/selector'

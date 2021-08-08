@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import getDidMountHoc from '../../hocs/DidMountHoc'
-import { getSongTipType } from '../../api/album/tips'
+import { getSongTipType } from '../../endpoint/album/tips'
 import { ANNOTATION, WIKI, WORMHOLES } from '../../constants/tips'
 import {
     mapBackstoryDot,

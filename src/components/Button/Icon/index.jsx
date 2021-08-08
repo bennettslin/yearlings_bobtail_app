@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import InlineSvg from '../../../modules/InlineSvg'
-import { getSvgForButton } from '../../../api/svg'
+import { getSvgForButton } from '../../../endpoint/svg'
 import {
     getButtonIconClassNames,
     getShowButtonIcon,

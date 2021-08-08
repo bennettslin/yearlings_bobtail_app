@@ -8,7 +8,7 @@ import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
 import SocialMediaButtons from '../SocialMediaButtons'
 import AnnotationHeader from './Header'
 import AnnotationCard from './Card'
-import { getAnnotationCardIndices } from '../../api/album/cards'
+import { getAnnotationCardIndices } from '../../endpoint/album/cards'
 import './style'
 import { ANNOTATION_SOCIAL_MEDIA } from '../../constants/socialMedia'
 

@@ -5,8 +5,8 @@ import AnnotationDispatcher from '../../../../handlers/Annotation/Dispatcher'
 import SongDispatcher from '../../../../dispatchers/Song'
 import WikiDispatcher from '../../../../dispatchers/Wiki'
 import WikiWormholeDispatcher from '../../../../handlers/WikiWormhole/Dispatcher'
-import { getWikiWormholeEntity } from '../../../../api/album/annotations'
-import { getWormholeLinkForWikiWormhole } from '../../../../api/album/wormholes'
+import { getWikiWormholeEntity } from '../../../../endpoint/album/annotations'
+import { getWormholeLinkForWikiWormhole } from '../../../../endpoint/album/wormholes'
 import {
     ARROW_LEFT,
     ARROW_RIGHT,

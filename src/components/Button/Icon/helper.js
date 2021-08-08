@@ -1,4 +1,4 @@
-import { getSongIsLogue } from '../../../api/album/songs'
+import { getSongIsLogue } from '../../../endpoint/album/songs'
 import {
     DOTS_SLIDE_SELECT_BUTTON_KEY,
     LYRIC_SCROLL_BUTTON_KEY,

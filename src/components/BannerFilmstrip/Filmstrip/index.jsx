@@ -6,7 +6,7 @@ import TipsHand from '../../Tips/Hand'
 import AccessDirectionLetter from '../../Access/DirectionLetter'
 import SceneDispatcher from '../../../dispatchers/Scene'
 import StopPropagationDispatcher from '../../../dispatchers/StopPropagation'
-import { getSceneIndices } from '../../../api/album/scenes'
+import { getSceneIndices } from '../../../endpoint/album/scenes'
 import {
     PREVIOUS_SCENE_KEY,
     NEXT_SCENE_KEY,

@@ -5,7 +5,7 @@ import {
     resetAccessedNav,
 } from '../../../redux/access/action'
 import { updateShownNavBookIndex } from '../../../redux/session/action'
-import { getBookForSongIndex } from '../../../api/album/songs'
+import { getBookForSongIndex } from '../../../endpoint/album/songs'
 import { mapSelectedSongIndex } from '../../../redux/selected/selector'
 import { mapIsNavExpanded } from '../../../redux/toggle/selector'
 

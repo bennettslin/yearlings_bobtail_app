@@ -7,7 +7,7 @@ import {
     getSubVerseTypeForUnit,
     getSideCardTypeForUnit,
     getSideSubCardTypeForUnit,
-} from '../../../api/album/units'
+} from '../../../endpoint/album/units'
 
 export const getUnitFormType = ({
     songIndex,

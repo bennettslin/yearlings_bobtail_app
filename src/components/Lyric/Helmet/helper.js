@@ -3,8 +3,8 @@ import {
     getOverviewForSong,
     getSongIsLogue,
     getTitleForSong,
-} from '../../../api/album/songs'
-import { getTitleForAlbum } from '../../../api/album/title'
+} from '../../../endpoint/album/songs'
+import { getTitleForAlbum } from '../../../endpoint/album/title'
 import { getTruncatedStringText } from '../../../helpers/format'
 import { spreadHelmetConfig } from '../../../helpers/helmet'
 import { getSongUrl, getUrl } from '../../../helpers/url'

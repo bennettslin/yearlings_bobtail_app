@@ -2,7 +2,7 @@ import { getArrayOfLength } from '../../helpers/general'
 import {
     getMaxSceneCountForAlbum,
     getMaxVerseCountForAlbum,
-} from '../../api/album/count'
+} from '../../endpoint/album/count'
 import {
     SCENE_BEFORE_PREFIX,
     SCENE_CURSOR_PREFIX,

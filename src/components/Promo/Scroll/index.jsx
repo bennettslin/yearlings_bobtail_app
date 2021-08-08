@@ -7,7 +7,7 @@ import OnesheetPromo from '../../Promos/Onesheet'
 import ArtupPromo from '../../Promos/Artup'
 import Artup2Promo from '../../Promos/Artup2'
 import PromoScrollTitle from './Title'
-import { getTitleForPromo } from '../../../api/promo'
+import { getTitleForPromo } from '../../../endpoint/promo'
 import {
     getIsArtupPage,
     getIsArtup2Page,

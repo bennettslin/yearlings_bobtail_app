@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Anchor from '../../../Anchor'
 import SongDispatcher from '../../../../dispatchers/Song'
 import { getIsAlbumClientSession } from '../../../../utils/gatsby/session'
-import { getFullPathForSong } from '../../../../api/album/songs'
+import { getFullPathForSong } from '../../../../endpoint/album/songs'
 
 const PromoSongAnchor = ({
     text,

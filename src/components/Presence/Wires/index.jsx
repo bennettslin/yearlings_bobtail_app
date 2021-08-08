@@ -1,7 +1,7 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { getWires } from '../../../api/scene/wires'
+import { getWires } from '../../../endpoint/scene/wires'
 import './style'
 
 const defaultProps = {

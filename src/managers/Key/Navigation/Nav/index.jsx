@@ -6,7 +6,7 @@ import SongDispatcher from '../../../../dispatchers/Song'
 import {
     getSongsAndLoguesCount,
     getBookForSongIndex,
-} from '../../../../api/album/songs'
+} from '../../../../endpoint/album/songs'
 import {
     ARROW_LEFT,
     ARROW_RIGHT,

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import getDidMountHoc from '../../hocs/DidMountHoc'
 import InlineSvg from '../../modules/InlineSvg'
-import { getSvgForDot } from '../../api/svg'
+import { getSvgForDot } from '../../endpoint/svg'
 import './style'
 
 const Dot = ({

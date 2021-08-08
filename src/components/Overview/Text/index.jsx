@@ -6,7 +6,7 @@ import Texts from '../../Texts'
 import {
     getOverviewForSong,
     getSongIsLogue,
-} from '../../../api/album/songs'
+} from '../../../endpoint/album/songs'
 import getSongServerClientHoc from '../../../hocs/SongHoc'
 
 const OverviewText = ({ serverClientSongIndex }) => (

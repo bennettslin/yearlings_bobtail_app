@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import AnnotationSongColumn from '../AnnotationSongColumn'
 import { getArrayOfLength } from '../../../../src/helpers/general'
-import { getSongsNotLoguesCount } from '../../../../src/api/album/songs'
+import { getSongsNotLoguesCount } from '../../../../src/endpoint/album/songs'
 
 const TempGlobalColumns = ({ showAll }) => {
     return (

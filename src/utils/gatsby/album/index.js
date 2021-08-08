@@ -1,4 +1,4 @@
-import { getFullPathForSong } from '../../../api/album/songs'
+import { getFullPathForSong } from '../../../endpoint/album/songs'
 import { getRoutingSongIndex } from '../routing'
 import { getIsAlbumClientSession } from '../session'
 

@@ -8,7 +8,7 @@ import NavRoad from '../Road'
 import {
     getSongsAndLoguesCount,
     getStartingIndexForBook,
-} from '../../../../../api/album/songs'
+} from '../../../../../endpoint/album/songs'
 import { getArrayOfLength } from '../../../../../helpers/general'
 import './style'
 

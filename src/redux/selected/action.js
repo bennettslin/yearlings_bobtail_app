@@ -4,7 +4,7 @@ import {
     hasKey,
     getDefinedOnlyPayload,
 } from '../../helpers/action'
-import { getSongIsLogue } from '../../api/album/songs'
+import { getSongIsLogue } from '../../endpoint/album/songs'
 import {
     SELECTED_STORE,
     SELECTED_SONG_INDEX,

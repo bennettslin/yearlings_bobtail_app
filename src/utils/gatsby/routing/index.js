@@ -1,8 +1,8 @@
-import { getIsSongValid } from '../../../api/album/songs'
-import { getIsVerseValid } from '../../../api/album/verses'
-import { getIsAnnotationValid } from '../../../api/album/annotations'
-import { getIsArtupSlideValid } from '../../../api/promo/artup'
-import { getIsArtup2SlideValid } from '../../../api/promo/artup2'
+import { getIsSongValid } from '../../../endpoint/album/songs'
+import { getIsVerseValid } from '../../../endpoint/album/verses'
+import { getIsAnnotationValid } from '../../../endpoint/album/annotations'
+import { getIsArtupSlideValid } from '../../../endpoint/promo/artup'
+import { getIsArtup2SlideValid } from '../../../endpoint/promo/artup2'
 import { getPromoPath } from '../promo'
 import {
     getIndexFromPath,

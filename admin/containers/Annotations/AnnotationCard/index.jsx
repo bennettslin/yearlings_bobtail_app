@@ -7,7 +7,7 @@ import {
     getDescriptionForAnnotationCard,
     getDotKeysForAnnotationCard,
     getDotsBitForAnnotationCard,
-} from '../../../../src/api/album/cards'
+} from '../../../../src/endpoint/album/cards'
 import DotSequence from '../../../../src/components/DotSequence'
 
 const AnnotationCard = ({

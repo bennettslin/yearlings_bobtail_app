@@ -2,7 +2,7 @@ import { createSelector } from 'reselect'
 import {
     getStanzaIndexForVerse,
     getSceneIndexForVerse,
-} from '../../api/album/verses'
+} from '../../endpoint/album/verses'
 import {
     getCursorIndex,
     getCursorTime,

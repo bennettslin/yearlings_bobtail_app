@@ -5,7 +5,7 @@ import Button from '../../../components/Button'
 import { reloadFromRoot } from '../../../helpers/navigate'
 import { ABOUT_ALBUM_TOGGLE_KEY } from '../../../constants/access'
 import { ROOT_HOME_BUTTON_KEY } from '../../../constants/buttons'
-import { getTitleForAlbum } from '../../../api/album/title'
+import { getTitleForAlbum } from '../../../endpoint/album/title'
 import './style'
 
 const RootButton = ({ hasTitleShadowLight }) => (

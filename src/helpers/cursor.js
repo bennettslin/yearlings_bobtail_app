@@ -1,4 +1,4 @@
-import { getStartTimeForVerse } from '../api/album/time'
+import { getStartTimeForVerse } from '../endpoint/album/time'
 
 export const getCursorIndex = (
     canTransitionAfterSongChange,

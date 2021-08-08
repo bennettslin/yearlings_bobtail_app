@@ -1,4 +1,4 @@
-import { getSceneIndexForVerse } from '../../api/album/verses'
+import { getSceneIndexForVerse } from '../../endpoint/album/verses'
 import { sendToAnalyticsFromLog } from './helpers/analytics'
 import { getTimeDifference } from './helpers/time'
 import {

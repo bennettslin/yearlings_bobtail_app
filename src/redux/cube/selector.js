@@ -5,7 +5,7 @@ import {
     getFloorHslaForCube,
     getFloorZIndexForCube,
     getSlantDirectionForCube,
-} from '../../api/scene/cubes'
+} from '../../endpoint/scene/cubes'
 import { mapSceneCubesKey } from '../scene/selector'
 
 export const getMapCubeCeilingHsla = (yIndex, xIndex) => createSelector(

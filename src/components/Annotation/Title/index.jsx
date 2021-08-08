@@ -10,7 +10,7 @@ import AnnotationAccess from './Access'
 import {
     getDotsBitForAnnotation,
     getTitleForAnnotation,
-} from '../../../api/album/annotations'
+} from '../../../endpoint/album/annotations'
 import { getDotKeysFromBit } from '../../../helpers/dot'
 import { IS_UNIT_DOT } from '../../../constants/lyrics'
 import { getAccessibleWikiWormholesCount } from './helper'

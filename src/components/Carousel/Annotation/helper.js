@@ -1,4 +1,4 @@
-import { getColumnIndexForAnnotation } from '../../../api/album/annotations'
+import { getColumnIndexForAnnotation } from '../../../endpoint/album/annotations'
 import { EAR_COLUMN_KEYS } from '../../../constants/lyrics'
 
 export const getCarouselAnnotationData = (

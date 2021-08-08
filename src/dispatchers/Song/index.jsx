@@ -10,7 +10,7 @@ import {
     updateWikiIndices,
 } from '../../redux/session/action'
 import { updateIsNavExpanded } from '../../redux/toggle/action'
-import { getSongsAndLoguesCount } from '../../api/album/songs'
+import { getSongsAndLoguesCount } from '../../endpoint/album/songs'
 import { mapIsSongChangeDone } from '../../redux/entrance/selector'
 import { mapSelectedSongIndex } from '../../redux/selected/selector'
 import { logSongSelect } from './helper'

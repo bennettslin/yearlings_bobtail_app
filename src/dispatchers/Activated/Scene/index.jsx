@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { scrollLyricToVerse } from '../../../redux/scrollLyric/action'
 import { updateActivatedVerseIndex } from '../../../redux/activated/action'
 import { updateIsAutoScroll } from '../../../redux/toggle/action'
-import { getVerseIndexForScene } from '../../../api/album/scenes'
+import { getVerseIndexForScene } from '../../../endpoint/album/scenes'
 import { getActivatedSceneForDirection } from './helper'
 import { mapActivatedSceneIndex } from '../../../redux/activated/selector'
 import {
