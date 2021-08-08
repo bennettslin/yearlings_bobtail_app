@@ -1,3 +1,7 @@
+# Packages
+* Can't upgrade to webpack 5 because it breaks exporting variables to JavaScript
+    * Can't upgrade to gatsby 3 without webpack 5
+
 # Bug
 * Can't click on popup, then mouse up on overlay. Minor issue?
 * Hovering on dotless anchor does not hover verse underneath
