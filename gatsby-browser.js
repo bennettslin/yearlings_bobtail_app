@@ -14,6 +14,10 @@ logBuild()
 logDevice()
 logAnalytics()
 
+logSuccess(`Hi, I'm looking for another developer or two to help build some music-based apps. If this sounds like interesting work to you, please get in touch! Bennett`)
+
+logError(`Hi, if you can help me figure out how to continue exporting Sass variables to JavaScript in webpack 5, I'd be super grateful! Right now, this is blocking me from upgrading to webpack 5 and gatsby 3. Bennett`)
+
 export {
     wrapRootElement,
     wrapPageElement,
