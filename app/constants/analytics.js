@@ -1,2 +1,4 @@
-export const GA_ACCOUNT__STAGING = 'UA-133481555-1'
-export const GA_ACCOUNT__PRODUCTION = 'UA-133481555-2'
+export const GA_ACCOUNT = 'G-JRJHJPYE3R'
+
+export const ANALYTICS__FAILURE = 'analyticsFailure'
+export const ANALYTICS__SUCCESS = 'analyticsSuccess'

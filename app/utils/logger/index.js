@@ -1,8 +1,8 @@
 import { getSceneIndexForVerse } from '../../api/album/verses'
-import { sendToGaFromLog } from './helpers/analytics'
+import { sendToAnalyticsFromLog } from './helpers/analytics'
 import { getTimeDifference } from './helpers/time'
 import {
-    ACCESS, ADMIN, EVENT, FOCUS, MOUNT, PLAYER, SCROLL, SELECT, SERVE, STATE, TRANSITION, SUCCESS, ERROR, getStyleForCategory,
+    ACCESS, ADMIN, EVENT, FOCUS, MOUNT, PLAYER, SCROLL, SELECT, SERVE, STATE, TRANSITION, SUCCESS, ERROR, getStyleForCategoryLog,
 } from './helpers/styles'
 
 const _log = ({
@@ -22,15 +22,12 @@ const _log = ({
     if (log) {
         console[level](
             `%c${log}`,
-            styles || getStyleForCategory({
-                category: styleCategory || category,
-                action,
-            }),
+            styles || getStyleForCategoryLog(styleCategory || category),
             timeDifference,
         )
     }
 
-    sendToGaFromLog({
+    sendToAnalyticsFromLog({
         category,
         action,
         label,

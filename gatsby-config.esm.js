@@ -3,19 +3,16 @@ import {
     getIsProductionBuild,
     getS3BucketName,
 } from './app/utils/server'
-import {
-    GA_ACCOUNT__STAGING,
-    GA_ACCOUNT__PRODUCTION,
-} from './app/constants/analytics'
+import { GA_ACCOUNT } from './app/constants/analytics'
 
 export default {
     plugins: [
         {
-            resolve: `gatsby-plugin-google-analytics`,
+            resolve: `gatsby-plugin-google-gtag`,
             options: {
-                trackingId: getIsProductionBuild() ?
-                    GA_ACCOUNT__PRODUCTION :
-                    GA_ACCOUNT__STAGING,
+                trackingIds: [
+                    GA_ACCOUNT,
+                ],
             },
         },
         {

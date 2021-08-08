@@ -1,8 +1,10 @@
+import {
+    ANALYTICS__FAILURE,
+    ANALYTICS__SUCCESS,
+} from '../../../constants/analytics'
+
 export const ACCESS = 'access'
 export const ADMIN = 'admin'
-export const ANALYTICS__FAILURE = 'analyticsFailure'
-export const ANALYTICS__PENDING = 'analyticsPending'
-export const ANALYTICS__SUCCESS = 'analyticsSuccess'
 export const ERROR = 'error'
 export const EVENT = 'event'
 export const FOCUS = 'focus'
@@ -26,22 +28,15 @@ const BASE_STYLES = {
     fontSize: '1.25em',
 }
 
-const GA_STYLE = {
-    // If log sends to analytics, show yellow background instead.
-    backgroundColor: '#fffff8',
-}
-
-const _getStyles = (styles) => {
-    const stylesArray = []
-
-    for (const key in styles) {
-        // Change camel case to dashed case.
-        const dashedKey =
-            key.replace(/([A-Z])/g, (g) => `-${g[0].toLowerCase()}`)
-
-        stylesArray.push(`${dashedKey}: ${styles[key]};`)
-    }
-    return stylesArray.join(' ')
+const ANALYTICS_STYLES = {
+    [ANALYTICS__FAILURE]: {
+        color: '#b44',
+        fontSize: '0.6em',
+    },
+    [ANALYTICS__SUCCESS]: {
+        color: '#4b4',
+        fontSize: '0.6em',
+    },
 }
 
 const LOG_STYLES = {
@@ -52,18 +47,6 @@ const LOG_STYLES = {
     [ADMIN]: {
         color: '#2b8',
         fontSize: '2em',
-    },
-    [ANALYTICS__FAILURE]: {
-        color: '#b44',
-        fontSize: '0.6em',
-    },
-    [ANALYTICS__PENDING]: {
-        color: '#bb4',
-        fontSize: '0.6em',
-    },
-    [ANALYTICS__SUCCESS]: {
-        color: '#4b4',
-        fontSize: '0.6em',
     },
     [ERROR]: {
         color: '#b44',
@@ -110,19 +93,28 @@ const LOG_STYLES = {
     },
 }
 
-export const getStyleForCategory = ({
-    category,
-    action,
+const _getStyles = (styles) => {
+    const stylesArray = []
 
-}) => (
+    for (const key in styles) {
+        // Change camel case to dashed case.
+        const dashedKey =
+            key.replace(/([A-Z])/g, (g) => `-${g[0].toLowerCase()}`)
+
+        stylesArray.push(`${dashedKey}: ${styles[key]};`)
+    }
+    return stylesArray.join(' ')
+}
+
+export const getStyleForAnalyticsLog = category => (
     _getStyles({
-        ...(
-            category !== ANALYTICS__SUCCESS &&
-            category !== ANALYTICS__PENDING &&
-            category !== ANALYTICS__FAILURE
-        ) && BASE_STYLES,
+        ...ANALYTICS_STYLES[category],
+    })
+)
+
+export const getStyleForCategoryLog = category => (
+    _getStyles({
+        ...BASE_STYLES,
         ...LOG_STYLES[category],
-        // It's a GA call if it has an action.
-        ...Boolean(action) && GA_STYLE,
     })
 )
