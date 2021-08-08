@@ -1,10 +1,10 @@
-import bennettKeyboard from '../../../../../assets/svgs/actors/stephanie/bennettKeyboard'
-import flapper from '../../../../../assets/svgs/actors/stephanie/flapper'
-import mingling from '../../../../../assets/svgs/actors/stephanie/mingling'
-import bennettDefiant from '../../../../../assets/svgs/actors/stephanie/bennettDefiant'
-import bennettRecording from '../../../../../assets/svgs/actors/stephanie/bennettRecording'
-import protester from '../../../../../assets/svgs/actors/stephanie/protester'
-import epilogue from '../../../../../assets/svgs/actors/stephanie/epilogue'
+import bennettKeyboard from '../../../../assets/svgs/actors/stephanie/bennettKeyboard'
+import flapper from '../../../../assets/svgs/actors/stephanie/flapper'
+import mingling from '../../../../assets/svgs/actors/stephanie/mingling'
+import bennettDefiant from '../../../../assets/svgs/actors/stephanie/bennettDefiant'
+import bennettRecording from '../../../../assets/svgs/actors/stephanie/bennettRecording'
+import protester from '../../../../assets/svgs/actors/stephanie/protester'
+import epilogue from '../../../../assets/svgs/actors/stephanie/epilogue'
 
 import {
     BENNETT_KEYBOARD,

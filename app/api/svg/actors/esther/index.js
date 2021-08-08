@@ -1,7 +1,7 @@
-import curious from '../../../../../assets/svgs/actors/esther/curious'
-import snickering from '../../../../../assets/svgs/actors/esther/snickering'
-import youngChild from '../../../../../assets/svgs/actors/esther/youngChild'
-import epilogue from '../../../../../assets/svgs/actors/esther/epilogue'
+import curious from '../../../../assets/svgs/actors/esther/curious'
+import snickering from '../../../../assets/svgs/actors/esther/snickering'
+import youngChild from '../../../../assets/svgs/actors/esther/youngChild'
+import epilogue from '../../../../assets/svgs/actors/esther/epilogue'
 
 import {
     CURIOUS,

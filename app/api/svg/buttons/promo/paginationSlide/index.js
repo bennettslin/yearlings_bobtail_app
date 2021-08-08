@@ -1,3 +1,3 @@
-import paginationSlide from '../../../../../../assets/svgs/app/promo/paginationSlide'
+import paginationSlide from '../../../../../assets/svgs/app/promo/paginationSlide'
 
 export default () => paginationSlide

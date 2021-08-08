@@ -1,6 +1,6 @@
-import joking from '../../../../../assets/svgs/actors/khariLiz/jokingLaughing'
-import protectiveConcerned from '../../../../../assets/svgs/actors/khariLiz/protectiveConcerned'
-import caress from '../../../../../assets/svgs/actors/khariLiz/caress'
+import joking from '../../../../assets/svgs/actors/khariLiz/jokingLaughing'
+import protectiveConcerned from '../../../../assets/svgs/actors/khariLiz/protectiveConcerned'
+import caress from '../../../../assets/svgs/actors/khariLiz/caress'
 
 import {
     JOKING_LAUGHING,

@@ -1,11 +1,11 @@
-import backstory from '../../../../assets/svgs/app/dots/backstory'
-import narrative from '../../../../assets/svgs/app/dots/narrative'
-import observation from '../../../../assets/svgs/app/dots/observation'
-import pun from '../../../../assets/svgs/app/dots/pun'
-import reference from '../../../../assets/svgs/app/dots/reference'
-import wormhole from '../../../../assets/svgs/app/dots/wormhole'
-import songcraft from '../../../../assets/svgs/app/dots/songcraft'
-import afterword from '../../../../assets/svgs/app/dots/afterword'
+import backstory from '../../../assets/svgs/app/dots/backstory'
+import narrative from '../../../assets/svgs/app/dots/narrative'
+import observation from '../../../assets/svgs/app/dots/observation'
+import pun from '../../../assets/svgs/app/dots/pun'
+import reference from '../../../assets/svgs/app/dots/reference'
+import wormhole from '../../../assets/svgs/app/dots/wormhole'
+import songcraft from '../../../assets/svgs/app/dots/songcraft'
+import afterword from '../../../assets/svgs/app/dots/afterword'
 
 import {
     BACKSTORY,

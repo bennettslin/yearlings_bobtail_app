@@ -1,7 +1,7 @@
-import exasperated from '../../../../../assets/svgs/actors/anita/exasperated'
-import concerned from '../../../../../assets/svgs/actors/anita/concerned'
-import cheering from '../../../../../assets/svgs/actors/anita/cheering'
-import youngChild from '../../../../../assets/svgs/actors/anita/youngChild'
+import exasperated from '../../../../assets/svgs/actors/anita/exasperated'
+import concerned from '../../../../assets/svgs/actors/anita/concerned'
+import cheering from '../../../../assets/svgs/actors/anita/cheering'
+import youngChild from '../../../../assets/svgs/actors/anita/youngChild'
 
 import {
     EXASPERATED,

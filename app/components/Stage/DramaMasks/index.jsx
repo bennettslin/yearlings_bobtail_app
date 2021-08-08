@@ -2,7 +2,7 @@ import React from 'react'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import InlineSvg from '../../../modules/InlineSvg'
-import dramaMasks from '../../../../assets/svgs/theatre/dramaMasks'
+import dramaMasks from '../../../assets/svgs/theatre/dramaMasks'
 import { mapProsceniumDimensionCoordinates } from '../../../redux/viewport/selector'
 import './style'
 

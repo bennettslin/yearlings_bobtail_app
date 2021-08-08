@@ -1,6 +1,6 @@
-import principal from '../../../../../assets/svgs/actors/tristan/principal'
-import punching from '../../../../../assets/svgs/actors/tristan/punching'
-import epilogue from '../../../../../assets/svgs/actors/tristan/epilogue'
+import principal from '../../../../assets/svgs/actors/tristan/principal'
+import punching from '../../../../assets/svgs/actors/tristan/punching'
+import epilogue from '../../../../assets/svgs/actors/tristan/epilogue'
 
 import {
     PRINCIPAL,

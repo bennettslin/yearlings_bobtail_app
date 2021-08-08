@@ -1,22 +1,22 @@
 @font-face {
     font-family: Neuton;
-    src: url('../../assets/fonts/Neuton/Neuton-Regular.ttf');
+    src: url('../assets/fonts/Neuton/Neuton-Regular.ttf');
 }
 
 @font-face {
     font-family: PT Sans Narrow;
-    src: url('../../assets/fonts/PTSansNarrow/PTSansNarrow-Regular.ttf');
+    src: url('../assets/fonts/PTSansNarrow/PTSansNarrow-Regular.ttf');
 }
 
 @font-face {
     font-family: PT Sans Narrow;
-    src: url('../../assets/fonts/PTSansNarrow/PTSansNarrow-Bold.ttf');
+    src: url('../assets/fonts/PTSansNarrow/PTSansNarrow-Bold.ttf');
     font-weight: bold;
 }
 
 @font-face {
     font-family: Rancho;
-    src: url('../../assets/fonts/Rancho/Rancho-Regular.ttf');
+    src: url('../assets/fonts/Rancho/Rancho-Regular.ttf');
 }
 
 @import './classes/animation';

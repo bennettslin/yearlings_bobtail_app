@@ -1,8 +1,8 @@
-import doubleAlbert from '../../../../../assets/svgs/actors/khari/doubleAlbert'
-import arrived from '../../../../../assets/svgs/actors/khari/arrived'
-import judgmental from '../../../../../assets/svgs/actors/khari/judgmental'
-import concerned from '../../../../../assets/svgs/actors/khari/concerned'
-import epilogue from '../../../../../assets/svgs/actors/khari/epilogue'
+import doubleAlbert from '../../../../assets/svgs/actors/khari/doubleAlbert'
+import arrived from '../../../../assets/svgs/actors/khari/arrived'
+import judgmental from '../../../../assets/svgs/actors/khari/judgmental'
+import concerned from '../../../../assets/svgs/actors/khari/concerned'
+import epilogue from '../../../../assets/svgs/actors/khari/epilogue'
 
 import {
     DOUBLE_ALBERT,

@@ -1,5 +1,5 @@
-import audioContinue from '../../../../../../assets/svgs/app/audio/audioContinue'
-import audioRepeat from '../../../../../../assets/svgs/app/audio/audioRepeat'
+import audioContinue from '../../../../../assets/svgs/app/audio/audioContinue'
+import audioRepeat from '../../../../../assets/svgs/app/audio/audioRepeat'
 
 const SONG_REPEAT_MAP = {
     [false]: audioContinue,

@@ -1,7 +1,7 @@
-import feigningFear from '../../../../../assets/svgs/actors/andrew/feigningFear'
-import throwing from '../../../../../assets/svgs/actors/andrew/throwing'
-import noodling from '../../../../../assets/svgs/actors/andrew/noodling'
-import epilogue from '../../../../../assets/svgs/actors/andrew/epilogue'
+import feigningFear from '../../../../assets/svgs/actors/andrew/feigningFear'
+import throwing from '../../../../assets/svgs/actors/andrew/throwing'
+import noodling from '../../../../assets/svgs/actors/andrew/noodling'
+import epilogue from '../../../../assets/svgs/actors/andrew/epilogue'
 
 import {
     FEIGNING_FEAR,

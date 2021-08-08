@@ -1,7 +1,7 @@
-import popupClose from '../../../../../../assets/svgs/app/direction/popupClose'
-import carouselShown from '../../../../../../assets/svgs/app/carouselNav/carouselShown'
-import navShown from '../../../../../../assets/svgs/app/carouselNav/navShown'
-import neitherShown from '../../../../../../assets/svgs/app/carouselNav/neitherShown'
+import popupClose from '../../../../../assets/svgs/app/direction/popupClose'
+import carouselShown from '../../../../../assets/svgs/app/carouselNav/carouselShown'
+import navShown from '../../../../../assets/svgs/app/carouselNav/navShown'
+import neitherShown from '../../../../../assets/svgs/app/carouselNav/neitherShown'
 
 import {
     CLOSE_NAV_NEXT,

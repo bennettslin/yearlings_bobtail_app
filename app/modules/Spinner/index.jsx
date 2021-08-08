@@ -1,6 +1,6 @@
 import React from 'react'
 import InlineSvg from '../../modules/InlineSvg'
-import dramaMasks from '../../../assets/svgs/theatre/dramaMasks'
+import dramaMasks from '../../assets/svgs/theatre/dramaMasks'
 import './style'
 
 const Spinner = () => (

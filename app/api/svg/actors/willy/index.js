@@ -1,7 +1,7 @@
-import collecting from '../../../../../assets/svgs/actors/willy/collecting'
-import ducking from '../../../../../assets/svgs/actors/willy/ducking'
-import crossingGuard from '../../../../../assets/svgs/actors/willy/crossingGuard'
-import epilogue from '../../../../../assets/svgs/actors/willy/epilogue'
+import collecting from '../../../../assets/svgs/actors/willy/collecting'
+import ducking from '../../../../assets/svgs/actors/willy/ducking'
+import crossingGuard from '../../../../assets/svgs/actors/willy/crossingGuard'
+import epilogue from '../../../../assets/svgs/actors/willy/epilogue'
 
 import {
     COLLECTING,

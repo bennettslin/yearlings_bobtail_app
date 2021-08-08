@@ -1,6 +1,6 @@
-import carrying from '../../../../../assets/svgs/actors/jacob/carrying'
-import flirting from '../../../../../assets/svgs/actors/jacob/flirting'
-import epilogue from '../../../../../assets/svgs/actors/jacob/epilogue'
+import carrying from '../../../../assets/svgs/actors/jacob/carrying'
+import flirting from '../../../../assets/svgs/actors/jacob/flirting'
+import epilogue from '../../../../assets/svgs/actors/jacob/epilogue'
 
 import {
     FLIRTING,

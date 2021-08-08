@@ -25,7 +25,7 @@ export default {
                 background_color: '#8c4848',
                 theme_color: '#c9c2a5',
                 display: 'standalone',
-                icon: `assets/favicon/${getFaviconFileName()}.png`,
+                icon: `app/assets/favicon/${getFaviconFileName()}.png`,
             },
         },
         ...getIsProductionBuild() ?

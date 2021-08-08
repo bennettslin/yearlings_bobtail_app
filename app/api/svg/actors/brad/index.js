@@ -1,6 +1,6 @@
-import gesturing from '../../../../../assets/svgs/actors/brad/gesturing'
-import snacking from '../../../../../assets/svgs/actors/brad/snacking'
-import epilogue from '../../../../../assets/svgs/actors/brad/epilogue'
+import gesturing from '../../../../assets/svgs/actors/brad/gesturing'
+import snacking from '../../../../assets/svgs/actors/brad/snacking'
+import epilogue from '../../../../assets/svgs/actors/brad/epilogue'
 
 import {
     GESTURING,

@@ -1,12 +1,12 @@
-import atticPillow from '../../../../../assets/svgs/furnitures/atticPillow'
-import bennettPillow from '../../../../../assets/svgs/furnitures/bennettPillow'
-import captainBedPillow from '../../../../../assets/svgs/furnitures/captainBedPillow'
-import deathbedBlanket from '../../../../../assets/svgs/furnitures/deathbedBlanket'
-import deathbedPillow from '../../../../../assets/svgs/furnitures/deathbedPillow'
-import lizPillows from '../../../../../assets/svgs/furnitures/lizPillows'
-import lizPillowsPile from '../../../../../assets/svgs/furnitures/lizPillowsPile'
-import lizPillowsPileReflection from '../../../../../assets/svgs/furnitures/lizPillowsPileReflection'
-import lizPillowsReflection from '../../../../../assets/svgs/furnitures/lizPillowsReflection'
+import atticPillow from '../../../../assets/svgs/furnitures/atticPillow'
+import bennettPillow from '../../../../assets/svgs/furnitures/bennettPillow'
+import captainBedPillow from '../../../../assets/svgs/furnitures/captainBedPillow'
+import deathbedBlanket from '../../../../assets/svgs/furnitures/deathbedBlanket'
+import deathbedPillow from '../../../../assets/svgs/furnitures/deathbedPillow'
+import lizPillows from '../../../../assets/svgs/furnitures/lizPillows'
+import lizPillowsPile from '../../../../assets/svgs/furnitures/lizPillowsPile'
+import lizPillowsPileReflection from '../../../../assets/svgs/furnitures/lizPillowsPileReflection'
+import lizPillowsReflection from '../../../../assets/svgs/furnitures/lizPillowsReflection'
 
 import {
     ATTIC_PILLOW,

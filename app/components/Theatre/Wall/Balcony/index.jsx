@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import InlineSvg from '../../../../modules/InlineSvg'
-import wallBalcony from '../../../../../assets/svgs/theatre/wallBalcony'
+import wallBalcony from '../../../../assets/svgs/theatre/wallBalcony'
 import './style'
 
 const WallBalcony = ({

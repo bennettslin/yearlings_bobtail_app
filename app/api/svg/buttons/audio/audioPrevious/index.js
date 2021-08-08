@@ -1,3 +1,3 @@
-import audioPrevious from '../../../../../../assets/svgs/app/audio/audioPrevious'
+import audioPrevious from '../../../../../assets/svgs/app/audio/audioPrevious'
 
 export default () => audioPrevious

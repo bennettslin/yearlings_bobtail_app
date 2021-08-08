@@ -1,5 +1,5 @@
-import indignant from '../../../../../assets/svgs/actors/sasha/indignant'
-import popularGirl from '../../../../../assets/svgs/actors/sasha/popularGirl'
+import indignant from '../../../../assets/svgs/actors/sasha/indignant'
+import popularGirl from '../../../../assets/svgs/actors/sasha/popularGirl'
 
 import {
     INDIGNANT,

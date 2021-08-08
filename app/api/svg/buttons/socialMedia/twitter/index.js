@@ -1,3 +1,3 @@
-import twitter from '../../../../../../assets/svgs/app/socialMedia/twitter'
+import twitter from '../../../../../assets/svgs/app/socialMedia/twitter'
 
 export default () => twitter
