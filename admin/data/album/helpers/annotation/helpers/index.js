@@ -1,10 +1,10 @@
 import { getFormattedAnnotationTitle } from './format'
 import { registerCardsDotKeys } from './register'
-import { getDotsBitFromKeys } from '../../../../../../app/helpers/dot'
+import { getDotsBitFromKeys } from '../../../../../../src/helpers/dot'
 import {
     LYRIC_LEFT,
     LYRIC_RIGHT,
-} from '../../../../../../app/constants/lyrics'
+} from '../../../../../../src/constants/lyrics'
 
 export const registerAnnotation = ({
     verse,

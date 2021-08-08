@@ -1,4 +1,4 @@
-import { DISHROOM_KEY } from '../../../../../app/constants/scene/scenes'
+import { DISHROOM_KEY } from '../../../../../src/constants/scene/scenes'
 
 import {
     DEFAULT_CLEAR_COLOUR as D,
@@ -6,9 +6,9 @@ import {
     INDUSTRIAL_WALL_COLOUR as W,
     SCHOOL_WALL_COLOUR as Z,
     CONCRETE_PLATFORM_COLOUR as P,
-} from '../../../../../app/constants/scene/cubes/colours'
+} from '../../../../../src/constants/scene/cubes/colours'
 
-import { a, f, g } from '../../../../../app/constants/scene/cubes/zIndices'
+import { a, f, g } from '../../../../../src/constants/scene/cubes/zIndices'
 
 export default {
     [DISHROOM_KEY]: {

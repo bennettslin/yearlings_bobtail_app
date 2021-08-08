@@ -1,4 +1,4 @@
-import { BENNETT_GATE_KEY } from '../../../../../app/constants/scene/scenes'
+import { BENNETT_GATE_KEY } from '../../../../../src/constants/scene/scenes'
 
 import {
     DEFAULT_CLEAR_COLOUR as D,
@@ -6,9 +6,9 @@ import {
     PAVEMENT_COLOUR as V,
     APARTMENT_EXTERIOR_COLOUR as X,
     ROOF_COLOUR as C,
-} from '../../../../../app/constants/scene/cubes/colours'
+} from '../../../../../src/constants/scene/cubes/colours'
 
-import { d, f, k } from '../../../../../app/constants/scene/cubes/zIndices'
+import { d, f, k } from '../../../../../src/constants/scene/cubes/zIndices'
 
 /**
  * Gate should match in courtyard.

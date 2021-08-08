@@ -1,9 +1,9 @@
-import { TETHERBALL_COURT_KEY } from '../../../../../app/constants/scene/scenes'
+import { TETHERBALL_COURT_KEY } from '../../../../../src/constants/scene/scenes'
 
 import {
     GROUND_CLEAR_COLOUR as G,
     PAVEMENT_COLOUR as V,
-} from '../../../../../app/constants/scene/cubes/colours'
+} from '../../../../../src/constants/scene/cubes/colours'
 
 export default {
     [TETHERBALL_COURT_KEY]: {

@@ -4,11 +4,11 @@ import {
     JACOB,
     ANA,
     TOMER,
-} from '../../../../../../app/constants/scene/actors'
-import { FLIRTING } from '../../../../../../app/constants/scene/actors/songs'
-import { SQUATTING } from '../../../../../../app/constants/scene/actors/ana'
-import { DISTRACTED } from '../../../../../../app/constants/scene/actors/bennett'
-import { SHANE_BUYING } from '../../../../../../app/constants/scene/actors/tomer'
+} from '../../../../../../src/constants/scene/actors'
+import { FLIRTING } from '../../../../../../src/constants/scene/actors/songs'
+import { SQUATTING } from '../../../../../../src/constants/scene/actors/ana'
+import { DISTRACTED } from '../../../../../../src/constants/scene/actors/bennett'
+import { SHANE_BUYING } from '../../../../../../src/constants/scene/actors/tomer'
 
 export default {
     [TOMER]: {

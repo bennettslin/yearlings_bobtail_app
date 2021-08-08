@@ -1,12 +1,12 @@
 import {
     CARDBOARD,
     DOOR,
-} from '../../../../../app/constants/scene/things'
+} from '../../../../../src/constants/scene/things'
 import {
     ALBUM_NAS,
     POSTER_ELLIOTT_SMITH,
-} from '../../../../../app/constants/scene/things/cardboards'
-import { BASEMENT_DOOR_SIDE } from '../../../../../app/constants/scene/things/doors'
+} from '../../../../../src/constants/scene/things/cardboards'
+import { BASEMENT_DOOR_SIDE } from '../../../../../src/constants/scene/things/doors'
 
 export default {
     [CARDBOARD]: {

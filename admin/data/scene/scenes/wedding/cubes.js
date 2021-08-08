@@ -1,11 +1,11 @@
-import { RIGHT } from '../../../../../app/constants/scene/cubes'
-import { WEDDING_KEY } from '../../../../../app/constants/scene/scenes'
+import { RIGHT } from '../../../../../src/constants/scene/cubes'
+import { WEDDING_KEY } from '../../../../../src/constants/scene/scenes'
 
 import {
     GROUND_CLEAR_COLOUR as G,
     GRASS_COLOUR as H,
     PLATFORM_COLOUR as P,
-} from '../../../../../app/constants/scene/cubes/colours'
+} from '../../../../../src/constants/scene/cubes/colours'
 
 /**
  * ...........-..

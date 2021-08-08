@@ -1,22 +1,22 @@
-import { ACTOR } from '../../../../../../../app/constants/scene'
+import { ACTOR } from '../../../../../../../src/constants/scene'
 import {
     BENNETT,
     MIRIAM,
-} from '../../../../../../../app/constants/scene/actors'
+} from '../../../../../../../src/constants/scene/actors'
 import {
     REMOVING_PANTS,
     INFIRM,
     DISPOSING_CONDOM,
-} from '../../../../../../../app/constants/scene/actors/bennett'
+} from '../../../../../../../src/constants/scene/actors/bennett'
 import {
     PERFUMING,
     TENNIS,
     REVERSING,
-} from '../../../../../../../app/constants/scene/actors/miriam'
+} from '../../../../../../../src/constants/scene/actors/miriam'
 import {
     COWGIRL,
     BLOWJOB,
-} from '../../../../../../../app/constants/scene/actors/miriamBennett'
+} from '../../../../../../../src/constants/scene/actors/miriamBennett'
 
 export default [
     {

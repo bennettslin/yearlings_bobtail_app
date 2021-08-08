@@ -1,4 +1,4 @@
-import { BASEMENT_COUCH_KEY } from '../../../../../app/constants/scene/scenes'
+import { BASEMENT_COUCH_KEY } from '../../../../../src/constants/scene/scenes'
 
 import {
     PAVEMENT_COLOUR as V,
@@ -7,9 +7,9 @@ import {
     BENNETT_COUCH_COLOUR as U,
     FURNITURE_PLATFORM_COLOUR as P,
     BASEMENT_CEILING_COLOUR as C,
-} from '../../../../../app/constants/scene/cubes/colours'
+} from '../../../../../src/constants/scene/cubes/colours'
 
-import { b, d, e, f } from '../../../../../app/constants/scene/cubes/zIndices'
+import { b, d, e, f } from '../../../../../src/constants/scene/cubes/zIndices'
 
 export default {
     [BASEMENT_COUCH_KEY]: {

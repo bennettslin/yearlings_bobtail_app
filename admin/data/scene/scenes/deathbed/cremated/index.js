@@ -1,9 +1,9 @@
 import {
     BENNETT,
     MIRIAM,
-} from '../../../../../../app/constants/scene/actors'
-import { INFIRM } from '../../../../../../app/constants/scene/actors/bennett'
-import { TENNIS } from '../../../../../../app/constants/scene/actors/miriam'
+} from '../../../../../../src/constants/scene/actors'
+import { INFIRM } from '../../../../../../src/constants/scene/actors/bennett'
+import { TENNIS } from '../../../../../../src/constants/scene/actors/miriam'
 
 export default {
     [BENNETT]: {

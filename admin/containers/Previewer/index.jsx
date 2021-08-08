@@ -4,8 +4,8 @@ import cx from 'classnames'
 import scrollIntoView from 'scroll-into-view'
 import PreviewerSvg from './Svg'
 import PreviewerDashboard from './Dashboard'
-import { capitaliseForClassName } from '../../../app/helpers/format'
-import { getDocument } from '../../../app/utils/browser'
+import { capitaliseForClassName } from '../../../src/helpers/format'
+import { getDocument } from '../../../src/utils/browser'
 import { accessPresence } from '../../utils/access'
 import { logSvgCount } from '../../utils/log'
 import {
@@ -18,7 +18,7 @@ import {
     getPreviewerSvgMapForActor,
     getPreviewerSvgMapForThing,
 } from '../../utils/svg'
-import { BACKDROP } from '../../../app/constants/scene/things'
+import { BACKDROP } from '../../../src/constants/scene/things'
 import './style'
 
 class Previewer extends PureComponent {

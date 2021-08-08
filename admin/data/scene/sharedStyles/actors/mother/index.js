@@ -2,13 +2,13 @@ import {
     STOOPING,
     COMFORTING,
     ARGUING,
-} from '../../../../../../app/constants/scene/actors/mother'
+} from '../../../../../../src/constants/scene/actors/mother'
 import {
     PRESENT,
     FUTURE,
     EPILOGUE,
-} from '../../../../../../app/constants/scene/actors/songs'
-import { GHOST__SHARED } from '../../../../../../app/constants/scene/sharedStyles/wardrobe'
+} from '../../../../../../src/constants/scene/actors/songs'
+import { GHOST__SHARED } from '../../../../../../src/constants/scene/sharedStyles/wardrobe'
 
 export default {
     [STOOPING]: null,

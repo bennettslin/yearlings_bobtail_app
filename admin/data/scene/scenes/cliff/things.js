@@ -1,12 +1,12 @@
 import {
     CUTOUT,
     FLAT,
-} from '../../../../../app/constants/scene/things'
-import { CLIFF_TREE } from '../../../../../app/constants/scene/things/cutouts'
+} from '../../../../../src/constants/scene/things'
+import { CLIFF_TREE } from '../../../../../src/constants/scene/things/cutouts'
 import {
     CLIFF_GRAVES_FAR,
     CLIFF_GRAVES_NEAR,
-} from '../../../../../app/constants/scene/things/flats'
+} from '../../../../../src/constants/scene/things/flats'
 
 export default {
     [CUTOUT]: {

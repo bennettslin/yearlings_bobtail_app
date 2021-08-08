@@ -2,7 +2,7 @@ import {
     OAKLAND_HOUSES_KEY,
     OAKLAND_COUCH_THOUGHT_KEY,
     OAKLAND_VOLKSWAGEN_KEY,
-} from '../../../../../app/constants/scene/scenes'
+} from '../../../../../src/constants/scene/scenes'
 
 import {
     GROUND_CLEAR_COLOUR as G,
@@ -10,7 +10,7 @@ import {
     PAVEMENT_COLOUR as V,
     LIZ_FLOOR_COLOUR as F,
     LIZ_COUCH_COLOUR as U,
-} from '../../../../../app/constants/scene/cubes/colours'
+} from '../../../../../src/constants/scene/cubes/colours'
 
 export default {
     [OAKLAND_HOUSES_KEY]: {

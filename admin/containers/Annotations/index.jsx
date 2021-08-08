@@ -8,8 +8,8 @@ import GlobalColumns from './GlobalColumns'
 import {
     mapSelectedAnnotationIndex,
     mapSelectedSongIndex,
-} from '../../../app/redux/selected/selector'
-import { getBoolFromStorage, setBoolInStorage } from '../../../app/utils/storage'
+} from '../../../src/redux/selected/selector'
+import { getBoolFromStorage, setBoolInStorage } from '../../../src/utils/storage'
 import './style'
 
 const SHOW_ALL_ANNOTATIONS_KEY = 'showAllAnnotations'

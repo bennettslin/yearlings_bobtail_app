@@ -1,12 +1,12 @@
 import {
     CUTOUT,
     FLAT,
-} from '../../../../../app/constants/scene/things'
+} from '../../../../../src/constants/scene/things'
 import {
     UCLA_TREE__LEFT,
     UCLA_TREE__RIGHT,
-} from '../../../../../app/constants/scene/things/cutouts'
-import { ROYCE_HALL } from '../../../../../app/constants/scene/things/flats'
+} from '../../../../../src/constants/scene/things/cutouts'
+import { ROYCE_HALL } from '../../../../../src/constants/scene/things/flats'
 
 export default {
     [CUTOUT]: {

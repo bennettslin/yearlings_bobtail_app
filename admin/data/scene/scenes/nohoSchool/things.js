@@ -5,16 +5,16 @@ import {
     FIXTURE,
     FLAT,
     PANEL,
-} from '../../../../../app/constants/scene/things'
-import { ESTHER_SPEECH } from '../../../../../app/constants/scene/things/bubbles'
-import { PLAYGROUND_SLIDE } from '../../../../../app/constants/scene/things/cutouts'
-import { NURSE_DOOR } from '../../../../../app/constants/scene/things/doors'
+} from '../../../../../src/constants/scene/things'
+import { ESTHER_SPEECH } from '../../../../../src/constants/scene/things/bubbles'
+import { PLAYGROUND_SLIDE } from '../../../../../src/constants/scene/things/cutouts'
+import { NURSE_DOOR } from '../../../../../src/constants/scene/things/doors'
 import {
     PLAYGROUND_BALL,
     SAFEWAY_BAG,
-} from '../../../../../app/constants/scene/things/fixtures'
-import { NEAR_BUILDINGS } from '../../../../../app/constants/scene/things/flats'
-import { NURSE_BENCH } from '../../../../../app/constants/scene/things/panels'
+} from '../../../../../src/constants/scene/things/fixtures'
+import { NEAR_BUILDINGS } from '../../../../../src/constants/scene/things/flats'
+import { NURSE_BENCH } from '../../../../../src/constants/scene/things/panels'
 
 export default {
     [BUBBLE]: {

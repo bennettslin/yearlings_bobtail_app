@@ -2,10 +2,10 @@ import {
     BENNETT,
     HOWIE,
     MIRIAM,
-} from '../../../../../../app/constants/scene/actors'
-import { WONDERING_BABY } from '../../../../../../app/constants/scene/actors/bennett'
-import { USHER_WAITING } from '../../../../../../app/constants/scene/actors/howie'
-import { INFANT_NURSING } from '../../../../../../app/constants/scene/actors/miriam'
+} from '../../../../../../src/constants/scene/actors'
+import { WONDERING_BABY } from '../../../../../../src/constants/scene/actors/bennett'
+import { USHER_WAITING } from '../../../../../../src/constants/scene/actors/howie'
+import { INFANT_NURSING } from '../../../../../../src/constants/scene/actors/miriam'
 
 export default {
     [BENNETT]: {

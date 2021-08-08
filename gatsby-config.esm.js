@@ -2,8 +2,8 @@ import {
     getFaviconFileName,
     getIsProductionBuild,
     getS3BucketName,
-} from './app/utils/server'
-import { GA_ACCOUNT } from './app/constants/analytics'
+} from './src/utils/server'
+import { GA_ACCOUNT } from './src/constants/analytics'
 
 export default {
     plugins: [
@@ -25,7 +25,7 @@ export default {
                 background_color: '#8c4848',
                 theme_color: '#c9c2a5',
                 display: 'standalone',
-                icon: `app/assets/favicon/${getFaviconFileName()}.png`,
+                icon: `src/assets/favicon/${getFaviconFileName()}.png`,
             },
         },
         ...getIsProductionBuild() ?
@@ -40,10 +40,10 @@ export default {
                 },
             ],
         {
-            // Always include app pages.
+            // Always include src pages.
             resolve: `gatsby-plugin-page-creator`,
             options: {
-                path: `${__dirname}/app/pages`,
+                path: `${__dirname}/src/pages`,
             },
         },
         `gatsby-plugin-postcss`,

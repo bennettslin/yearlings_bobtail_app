@@ -1,12 +1,12 @@
 import {
     ANA,
     ANA_HOWIE,
-} from '../../../../app/constants/scene/actors'
+} from '../../../../src/constants/scene/actors'
 import {
     SQUATTING,
     CHUCKLING,
     SMIRKING,
-} from '../../../../app/constants/scene/actors/ana'
+} from '../../../../src/constants/scene/actors/ana'
 import {
     EATING,
     ABBEY_ROAD,
@@ -17,7 +17,7 @@ import {
     PERFORMING,
     WAITING,
     EPILOGUE,
-} from '../../../../app/constants/scene/actors/songs'
+} from '../../../../src/constants/scene/actors/songs'
 
 export default [
     {

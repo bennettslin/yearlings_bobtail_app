@@ -5,7 +5,7 @@ import {
     PUN,
     REFERENCE,
     SONGCRAFT,
-} from '../../../../app/constants/dots'
+} from '../../../../src/constants/dots'
 
 import {
     VERSES,
@@ -15,7 +15,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
     FORESHADOW_OF_WORMHOLE_PREFIX,
-} from '../../../../app/constants/lyrics'
+} from '../../../../src/constants/lyrics'
 
 export default {
     path: 'cremated',

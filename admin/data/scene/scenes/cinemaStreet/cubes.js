@@ -1,4 +1,4 @@
-import { CINEMA_STREET_KEY } from '../../../../../app/constants/scene/scenes'
+import { CINEMA_STREET_KEY } from '../../../../../src/constants/scene/scenes'
 
 import {
     DEFAULT_CLEAR_COLOUR as D,
@@ -8,9 +8,9 @@ import {
     ROOF_COLOUR as C,
     VELVET_FLOOR_COLOUR as F,
     CINEMA_EXTERIOR_COLOUR as X,
-} from '../../../../../app/constants/scene/cubes/colours'
+} from '../../../../../src/constants/scene/cubes/colours'
 
-import { f, k } from '../../../../../app/constants/scene/cubes/zIndices'
+import { f, k } from '../../../../../src/constants/scene/cubes/zIndices'
 
 export default {
     [CINEMA_STREET_KEY]: {

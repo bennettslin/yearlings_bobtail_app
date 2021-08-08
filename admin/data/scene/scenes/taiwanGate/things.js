@@ -3,18 +3,18 @@ import {
     CUTOUT,
     DOOR,
     FLAT,
-} from '../../../../../app/constants/scene/things'
-import { BENNETT_ODIN_RICKSHAW } from '../../../../../app/constants/scene/things/cardboards'
+} from '../../../../../src/constants/scene/things'
+import { BENNETT_ODIN_RICKSHAW } from '../../../../../src/constants/scene/things/cardboards'
 import {
     TAIWAN_SHRUB,
     TAIWAN_TREE,
-} from '../../../../../app/constants/scene/things/cutouts'
-import { IRON_GATE } from '../../../../../app/constants/scene/things/doors'
+} from '../../../../../src/constants/scene/things/cutouts'
+import { IRON_GATE } from '../../../../../src/constants/scene/things/doors'
 import {
     TAIWAN_HOUSES_CENTRE,
     TAIWAN_HOUSE_FAR,
     TAIWAN_HOUSE_NEAR,
-} from '../../../../../app/constants/scene/things/flats'
+} from '../../../../../src/constants/scene/things/flats'
 
 export default {
     [CARDBOARD]: {

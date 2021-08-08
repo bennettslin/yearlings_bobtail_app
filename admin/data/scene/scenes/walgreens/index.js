@@ -3,8 +3,8 @@ import {
     ANA,
     HOWIE,
     TOMER,
-} from '../../../../../app/constants/scene/actors'
-import { WALGREENS } from '../../../../../app/constants/scene/actors/songs'
+} from '../../../../../src/constants/scene/actors'
+import { WALGREENS } from '../../../../../src/constants/scene/actors/songs'
 
 export default {
     [BENNETT]: {

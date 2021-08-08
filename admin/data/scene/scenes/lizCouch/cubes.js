@@ -2,7 +2,7 @@ import {
     LIZ_COUCH_KEY,
     LIZ_COUCH_SEAT_KEY,
     LIZ_COUCH_DARK_KEY,
-} from '../../../../../app/constants/scene/scenes'
+} from '../../../../../src/constants/scene/scenes'
 import { LIZ_COUCH_PEAFOWL_CUBES } from './asleep/cubes'
 import {
     DEFAULT_CLEAR_COLOUR as D,
@@ -12,8 +12,8 @@ import {
     LIZ_WALL_COLOUR as W,
     NIGHT_COLOUR as Z,
     LIZ_COUCH_COLOUR as U,
-} from '../../../../../app/constants/scene/cubes/colours'
-import { d, g, k } from '../../../../../app/constants/scene/cubes/zIndices'
+} from '../../../../../src/constants/scene/cubes/colours'
+import { d, g, k } from '../../../../../src/constants/scene/cubes/zIndices'
 
 /**
  * Blinds and gate should match in lizGate.

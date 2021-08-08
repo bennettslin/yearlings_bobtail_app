@@ -9,14 +9,14 @@ import {
     LIZ_PILLOWS_PILE,
     LIZ_PILLOWS_PILE_REFLECTION,
     LIZ_PILLOWS_REFLECTION,
-} from '../../../../../../app/constants/scene/things/furnitures'
-import { DARKEN__SHARED } from '../../../../../../app/constants/scene/sharedStyles'
+} from '../../../../../../src/constants/scene/things/furnitures'
+import { DARKEN__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
 import {
     ATTIC_LINENS__SHARED,
     BENNETT_LINENS__SHARED,
     HOSPITAL_LINENS__SHARED,
     LIZ_LINENS__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/furniture'
+} from '../../../../../../src/constants/scene/sharedStyles/furniture'
 
 export default {
     [ATTIC_PILLOW]: ATTIC_LINENS__SHARED,

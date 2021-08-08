@@ -1,4 +1,4 @@
-import { ACTOR } from '../../../../../../../app/constants/scene'
+import { ACTOR } from '../../../../../../../src/constants/scene'
 import {
     BENNETT,
     ANA,
@@ -6,23 +6,23 @@ import {
     MIRIAM,
     TRISTAN,
     NESTOR,
-} from '../../../../../../../app/constants/scene/actors'
+} from '../../../../../../../src/constants/scene/actors'
 import {
     CHUCKLING,
     SMIRKING,
-} from '../../../../../../../app/constants/scene/actors/ana'
-import { DROPPING_MEATS } from '../../../../../../../app/constants/scene/actors/bennett'
+} from '../../../../../../../src/constants/scene/actors/ana'
+import { DROPPING_MEATS } from '../../../../../../../src/constants/scene/actors/bennett'
 import {
     BRUSH_OFF,
     CELIBATE_FREEZING,
-} from '../../../../../../../app/constants/scene/actors/bennettLiz'
-import { NOOGIE } from '../../../../../../../app/constants/scene/actors/miriamTristan'
-import { INJURED } from '../../../../../../../app/constants/scene/actors/nestor'
-import { PUNCHING } from '../../../../../../../app/constants/scene/actors/tristan'
+} from '../../../../../../../src/constants/scene/actors/bennettLiz'
+import { NOOGIE } from '../../../../../../../src/constants/scene/actors/miriamTristan'
+import { INJURED } from '../../../../../../../src/constants/scene/actors/nestor'
+import { PUNCHING } from '../../../../../../../src/constants/scene/actors/tristan'
 import {
     GREETING,
     LEAVING_CRUMBLED,
-} from '../../../../../../../app/constants/scene/actors/songs'
+} from '../../../../../../../src/constants/scene/actors/songs'
 
 export default [
     {

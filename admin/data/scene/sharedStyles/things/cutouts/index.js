@@ -72,22 +72,22 @@ import {
     WEDDING_CHAIR,
     WEDDING_CROWD,
     YELLOW_TAPED_GRILL,
-} from '../../../../../../app/constants/scene/things/cutouts'
-import { ALL_PEOPLE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/actors'
+} from '../../../../../../src/constants/scene/things/cutouts'
+import { ALL_PEOPLE__SHARED } from '../../../../../../src/constants/scene/sharedStyles/actors'
 import {
     DISH__SHARED,
     TRAY__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/cafeteria'
+} from '../../../../../../src/constants/scene/sharedStyles/cafeteria'
 import {
     BANANA__SHARED,
     CIGARETTE__SHARED,
     GARBAGE_BAG__SHARED,
     PAPER_BAG__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/food'
-import { DARKEN__SHARED } from '../../../../../../app/constants/scene/sharedStyles'
-import { BENNETT_LINENS__SHARED } from '../../../../../../app/constants/scene/sharedStyles/furniture'
-import { BULB__SHARED } from '../../../../../../app/constants/scene/sharedStyles/household'
-import { MONITOR__SHARED } from '../../../../../../app/constants/scene/sharedStyles/instruments'
+} from '../../../../../../src/constants/scene/sharedStyles/food'
+import { DARKEN__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
+import { BENNETT_LINENS__SHARED } from '../../../../../../src/constants/scene/sharedStyles/furniture'
+import { BULB__SHARED } from '../../../../../../src/constants/scene/sharedStyles/household'
+import { MONITOR__SHARED } from '../../../../../../src/constants/scene/sharedStyles/instruments'
 import {
     FOLIAGE__SHARED,
     FREEWAY_SIGN__SHARED,
@@ -95,12 +95,12 @@ import {
     ROSE_RED__SHARED,
     TAIWAN_FOLIAGE__SHARED,
     TRAFFIC_LIGHT__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/outdoor'
+} from '../../../../../../src/constants/scene/sharedStyles/outdoor'
 import {
     BOOK__SHARED,
     NEWSPAPER__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/paper'
-import { ALL_VEHICLES__SHARED } from '../../../../../../app/constants/scene/sharedStyles/vehicles'
+} from '../../../../../../src/constants/scene/sharedStyles/paper'
+import { ALL_VEHICLES__SHARED } from '../../../../../../src/constants/scene/sharedStyles/vehicles'
 
 export default {
     [APARTMENT_PLANT]: FOLIAGE__SHARED,

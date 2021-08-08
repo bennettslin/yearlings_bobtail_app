@@ -3,7 +3,7 @@ import {
     FIXTURE,
     FURNITURE,
     PANEL,
-} from '../../../../../app/constants/scene/things'
+} from '../../../../../src/constants/scene/things'
 import {
     POSTER_LEONARD_COHEN,
     POSTER_NIRVANA,
@@ -11,14 +11,14 @@ import {
     PROGRESS_CHART_EARLY,
     PROGRESS_CHART_LATE,
     ALBUM_TELEVISION,
-} from '../../../../../app/constants/scene/things/cardboards'
+} from '../../../../../src/constants/scene/things/cardboards'
 import {
     BENNETT_RECORD_PLAYER,
     BENNETT_COUCH_LAMP,
     ELECTRIC_GUITAR,
     KEYBOARD,
-} from '../../../../../app/constants/scene/things/fixtures'
-import { BENNETT_PILLOW__COUCH } from '../../../../../app/constants/scene/things/furnitures'
+} from '../../../../../src/constants/scene/things/fixtures'
+import { BENNETT_PILLOW__COUCH } from '../../../../../src/constants/scene/things/furnitures'
 import {
     BENNETT_NIGHTSTAND,
     BENNETT_RECORD_STAND,
@@ -27,7 +27,7 @@ import {
     WIDE_ARMREST_BENNETT__LEFT,
     WIDE_ARMREST_BENNETT__RIGHT,
     WIDE_COUCH_BENNETT,
-} from '../../../../../app/constants/scene/things/panels'
+} from '../../../../../src/constants/scene/things/panels'
 
 export default {
     [FIXTURE]: {

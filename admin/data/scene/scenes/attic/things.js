@@ -2,19 +2,19 @@ import {
     CUTOUT,
     FURNITURE,
     PANEL,
-} from '../../../../../app/constants/scene/things'
+} from '../../../../../src/constants/scene/things'
 import {
     STORAGE_BOXES,
     STORAGE_CHEST,
     HOWIE_FRIDGE,
     TELEVISION,
-} from '../../../../../app/constants/scene/things/cutouts'
-import { ATTIC_PILLOW } from '../../../../../app/constants/scene/things/furnitures'
+} from '../../../../../src/constants/scene/things/cutouts'
+import { ATTIC_PILLOW } from '../../../../../src/constants/scene/things/furnitures'
 import {
     ATTIC_COUCH,
     ATTIC_ARMREST__LEFT,
     ATTIC_ARMREST__RIGHT,
-} from '../../../../../app/constants/scene/things/panels'
+} from '../../../../../src/constants/scene/things/panels'
 
 export default {
     [CUTOUT]: {

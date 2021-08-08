@@ -1,5 +1,5 @@
-import { LIZ } from '../../../../../../app/constants/scene/actors'
-import { ASLEEP_COUCH } from '../../../../../../app/constants/scene/actors/liz'
+import { LIZ } from '../../../../../../src/constants/scene/actors'
+import { ASLEEP_COUCH } from '../../../../../../src/constants/scene/actors/liz'
 
 export default {
     [LIZ]: {

@@ -1,8 +1,8 @@
 import {
     BENNETT,
     HOWIE,
-} from '../../../../../app/constants/scene/actors'
-import { ATTIC } from '../../../../../app/constants/scene/actors/songs'
+} from '../../../../../src/constants/scene/actors'
+import { ATTIC } from '../../../../../src/constants/scene/actors/songs'
 
 export default {
     [BENNETT]: {

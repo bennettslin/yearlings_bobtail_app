@@ -1,5 +1,5 @@
-import { BENNETT_LIZ } from '../../../../../app/constants/scene/actors'
-import { CLIFF } from '../../../../../app/constants/scene/actors/bennettLiz'
+import { BENNETT_LIZ } from '../../../../../src/constants/scene/actors'
+import { CLIFF } from '../../../../../src/constants/scene/actors/bennettLiz'
 
 export default {
     [BENNETT_LIZ]: {

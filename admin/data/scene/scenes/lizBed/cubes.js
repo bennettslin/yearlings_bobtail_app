@@ -3,7 +3,7 @@ import {
     LIZ_BED_OPEN_KEY,
     LIZ_BED_PHONE_KEY,
     LIZ_BED_DARK_KEY,
-} from '../../../../../app/constants/scene/scenes'
+} from '../../../../../src/constants/scene/scenes'
 
 import {
     DEFAULT_CLEAR_COLOUR as D,
@@ -13,9 +13,9 @@ import {
     NIGHT_COLOUR as Z,
     FURNITURE_PLATFORM_COLOUR as P,
     LIZ_BED_COLOUR as U,
-} from '../../../../../app/constants/scene/cubes/colours'
+} from '../../../../../src/constants/scene/cubes/colours'
 
-import { e, g, k } from '../../../../../app/constants/scene/cubes/zIndices'
+import { e, g, k } from '../../../../../src/constants/scene/cubes/zIndices'
 
 const DEFAULT_CEILING = {
     hslaColours: [

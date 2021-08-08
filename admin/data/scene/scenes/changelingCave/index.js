@@ -1,5 +1,5 @@
-import { CHRISTOPHER_BENNETT_WILLY } from '../../../../../app/constants/scene/actors'
-import { REASSURING_ENCHANTED } from '../../../../../app/constants/scene/actors/christopherBennettWilly'
+import { CHRISTOPHER_BENNETT_WILLY } from '../../../../../src/constants/scene/actors'
+import { REASSURING_ENCHANTED } from '../../../../../src/constants/scene/actors/christopherBennettWilly'
 
 export default {
     [CHRISTOPHER_BENNETT_WILLY]: {

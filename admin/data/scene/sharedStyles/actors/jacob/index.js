@@ -2,14 +2,14 @@ import {
     FLIRTING,
     CARRYING,
     EPILOGUE,
-} from '../../../../../../app/constants/scene/actors/songs'
+} from '../../../../../../src/constants/scene/actors/songs'
 import {
     CYMBAL__SHARED,
     DRUMS__SHARED,
     DRUMSTICK__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/instruments'
-import { BOOK__SHARED } from '../../../../../../app/constants/scene/sharedStyles/paper'
-import { RAINBOW__SHARED } from '../../../../../../app/constants/scene/sharedStyles/wardrobe'
+} from '../../../../../../src/constants/scene/sharedStyles/instruments'
+import { BOOK__SHARED } from '../../../../../../src/constants/scene/sharedStyles/paper'
+import { RAINBOW__SHARED } from '../../../../../../src/constants/scene/sharedStyles/wardrobe'
 
 export default {
     [FLIRTING]: [

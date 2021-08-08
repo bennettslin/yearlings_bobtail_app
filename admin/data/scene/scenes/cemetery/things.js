@@ -1,12 +1,12 @@
 import {
     CUTOUT,
     FLAT,
-} from '../../../../../app/constants/scene/things'
-import { GRAVESTONE } from '../../../../../app/constants/scene/things/cutouts'
+} from '../../../../../src/constants/scene/things'
+import { GRAVESTONE } from '../../../../../src/constants/scene/things/cutouts'
 import {
     CEMETERY_HILLS_LEFT,
     CEMETERY_HILLS_RIGHT,
-} from '../../../../../app/constants/scene/things/flats'
+} from '../../../../../src/constants/scene/things/flats'
 
 export default {
     [CUTOUT]: {

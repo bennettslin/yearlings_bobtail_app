@@ -6,11 +6,11 @@ import {
     FLAT,
     FURNITURE,
     PANEL,
-} from '../../../../../app/constants/scene/things'
+} from '../../../../../src/constants/scene/things'
 import {
     THOUGHT_MEDIUM__DEATHBED,
     THOUGHT_SMALL,
-} from '../../../../../app/constants/scene/things/backdrops'
+} from '../../../../../src/constants/scene/things/backdrops'
 import {
     BUBBLE_LARGE__DEATHBED,
     BUBBLE_LARGE__INVERSE,
@@ -21,18 +21,18 @@ import {
     BUBBLE_SMALL__DEATHBED,
     BUBBLE_SMALL__INVERSE,
     BUBBLE_SMALL__TENNIS,
-} from '../../../../../app/constants/scene/things/bubbles'
-import { IV_DRIP } from '../../../../../app/constants/scene/things/cutouts'
-import { HOSPITAL_RECORD_PLAYER, TENNIS_BALL } from '../../../../../app/constants/scene/things/fixtures'
-import { TENNIS_COURT } from '../../../../../app/constants/scene/things/flats'
+} from '../../../../../src/constants/scene/things/bubbles'
+import { IV_DRIP } from '../../../../../src/constants/scene/things/cutouts'
+import { HOSPITAL_RECORD_PLAYER, TENNIS_BALL } from '../../../../../src/constants/scene/things/fixtures'
+import { TENNIS_COURT } from '../../../../../src/constants/scene/things/flats'
 import {
     DEATHBED_BLANKET,
     DEATHBED_PILLOW,
-} from '../../../../../app/constants/scene/things/furnitures'
+} from '../../../../../src/constants/scene/things/furnitures'
 import {
     HOSPITAL_BED,
     HOSPITAL_RECORD_STAND,
-} from '../../../../../app/constants/scene/things/panels'
+} from '../../../../../src/constants/scene/things/panels'
 import {
     BUBBLE_LARGE_CONFIG,
     BUBBLE_MEDIUM_CONFIG,

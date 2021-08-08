@@ -2,17 +2,17 @@ import {
     WILLY,
     CHRISTOPHER_BENNETT_WILLY,
     HOWIE_WILLY,
-} from '../../../../app/constants/scene/actors'
+} from '../../../../src/constants/scene/actors'
 import {
     COLLECTING,
     DUCKING,
     CROSSING_GUARD,
-} from '../../../../app/constants/scene/actors/willy'
-import { REASSURING_ENCHANTED } from '../../../../app/constants/scene/actors/christopherBennettWilly'
+} from '../../../../src/constants/scene/actors/willy'
+import { REASSURING_ENCHANTED } from '../../../../src/constants/scene/actors/christopherBennettWilly'
 import {
     GANGBANGER,
     EPILOGUE,
-} from '../../../../app/constants/scene/actors/songs'
+} from '../../../../src/constants/scene/actors/songs'
 
 export default [
     {

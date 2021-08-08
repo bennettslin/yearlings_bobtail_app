@@ -1,11 +1,11 @@
-import { GO_KARTS_KEY } from '../../../../../app/constants/scene/scenes'
+import { GO_KARTS_KEY } from '../../../../../src/constants/scene/scenes'
 
 import {
     DEFAULT_CLEAR_COLOUR as D,
     STREET_COLOUR as T,
     CROSSWALK_COLOUR as K,
     GRASS_COLOUR as H,
-} from '../../../../../app/constants/scene/cubes/colours'
+} from '../../../../../src/constants/scene/cubes/colours'
 
 export default {
     [GO_KARTS_KEY]: {

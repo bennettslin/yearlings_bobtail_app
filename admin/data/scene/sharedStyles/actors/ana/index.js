@@ -2,7 +2,7 @@ import {
     SQUATTING,
     CHUCKLING,
     SMIRKING,
-} from '../../../../../../app/constants/scene/actors/ana'
+} from '../../../../../../src/constants/scene/actors/ana'
 import {
     EATING,
     ABBEY_ROAD,
@@ -12,18 +12,18 @@ import {
     PERFORMING,
     WAITING,
     EPILOGUE,
-} from '../../../../../../app/constants/scene/actors/songs'
+} from '../../../../../../src/constants/scene/actors/songs'
 import {
     BASEMENT_TAKEOUT__SHARED,
     BUDWEISER__SHARED,
     CIGARETTE__SHARED,
     ROBITUSSIN__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/food'
+} from '../../../../../../src/constants/scene/sharedStyles/food'
 import {
     BASS__SHARED,
     BASS_CASE__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/instruments'
-import { STEAM_TUNNEL__SHARED } from '../../../../../../app/constants/scene/sharedStyles/wardrobe'
+} from '../../../../../../src/constants/scene/sharedStyles/instruments'
+import { STEAM_TUNNEL__SHARED } from '../../../../../../src/constants/scene/sharedStyles/wardrobe'
 
 export default {
     [SQUATTING]: [

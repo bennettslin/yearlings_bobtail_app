@@ -3,24 +3,24 @@ import {
     AMY_STEPHANIE,
     BENNETT_STEPHANIE,
     MIRIAM_STEPHANIE,
-} from '../../../../app/constants/scene/actors'
+} from '../../../../src/constants/scene/actors'
 import {
     BENNETT_KEYBOARD,
     FLAPPER,
     BENNETT_DEFIANT,
     BENNETT_RECORDING,
-} from '../../../../app/constants/scene/actors/stephanie'
-import { SQUEEZING } from '../../../../app/constants/scene/actors/amyStephanie'
+} from '../../../../src/constants/scene/actors/stephanie'
+import { SQUEEZING } from '../../../../src/constants/scene/actors/amyStephanie'
 import {
     HORSING,
     DRYING_TEARS,
-} from '../../../../app/constants/scene/actors/bennettStephanie'
-import { MISCHIEVOUS_BANJO } from '../../../../app/constants/scene/actors/miriamStephanie'
+} from '../../../../src/constants/scene/actors/bennettStephanie'
+import { MISCHIEVOUS_BANJO } from '../../../../src/constants/scene/actors/miriamStephanie'
 import {
     MINGLING,
     EPILOGUE,
     PROTESTER,
-} from '../../../../app/constants/scene/actors/songs'
+} from '../../../../src/constants/scene/actors/songs'
 
 export default [
     {

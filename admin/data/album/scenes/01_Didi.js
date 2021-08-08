@@ -1,4 +1,4 @@
-import { ACTOR } from '../../../../app/constants/scene'
+import { ACTOR } from '../../../../src/constants/scene'
 import {
     BACKDROP,
     BUBBLE,
@@ -8,13 +8,13 @@ import {
     FIXTURE,
     FLAT,
     PANEL,
-} from '../../../../app/constants/scene/things'
+} from '../../../../src/constants/scene/things'
 import {
     BATHROOM_KEY,
     BATHROOM_OPEN_KEY,
     NOHO_HOUSES_KEY,
     NOHO_SCHOOL_KEY,
-} from '../../../../app/constants/scene/scenes'
+} from '../../../../src/constants/scene/scenes'
 import {
     SEASON_PAST,
     SEASON_SPRING,
@@ -22,33 +22,33 @@ import {
     TIME_DAWN,
     TIME_MORNING,
     TIME_NOON,
-} from '../../../../app/constants/scene/sky'
+} from '../../../../src/constants/scene/sky'
 import {
     ANITA,
     ESTHER,
     YOUNG_BENNETT,
-} from '../../../../app/constants/scene/actors'
+} from '../../../../src/constants/scene/actors'
 import {
     BATHING,
     FLUSTERED,
     PANICKED,
     SINGING,
-} from '../../../../app/constants/scene/actors/youngBennett'
+} from '../../../../src/constants/scene/actors/youngBennett'
 import {
     CHEERING,
     CONCERNED,
     EXASPERATED,
-} from '../../../../app/constants/scene/actors/anita'
+} from '../../../../src/constants/scene/actors/anita'
 import {
     CURIOUS,
     SNICKERING,
-} from '../../../../app/constants/scene/actors/esther'
+} from '../../../../src/constants/scene/actors/esther'
 import {
     VALLEY_CLOSER_BACKDROP,
     VALLEY_FURTHER_BACKDROP,
-} from '../../../../app/constants/scene/things/backdrops'
-import { ESTHER_SPEECH } from '../../../../app/constants/scene/things/bubbles'
-import { ALBUM_JOHNNY_HORTON } from '../../../../app/constants/scene/things/cardboards'
+} from '../../../../src/constants/scene/things/backdrops'
+import { ESTHER_SPEECH } from '../../../../src/constants/scene/things/bubbles'
+import { ALBUM_JOHNNY_HORTON } from '../../../../src/constants/scene/things/cardboards'
 import {
     FIRE_HYDRANT,
     LEMON_TREE__BATHROOM,
@@ -57,26 +57,26 @@ import {
     ROSEBUSH_DOUBLE_BATHROOM,
     ROSEBUSH_SINGLE_BATHROOM,
     TOWEL_RACK,
-} from '../../../../app/constants/scene/things/cutouts'
+} from '../../../../src/constants/scene/things/cutouts'
 import {
     DEFAULT_FENCE_BATHROOM,
     NURSE_DOOR,
-} from '../../../../app/constants/scene/things/doors'
+} from '../../../../src/constants/scene/things/doors'
 import {
     PLAYGROUND_BALL,
     RECORD_PLAYER_STOOL,
     SAFEWAY_BAG,
-} from '../../../../app/constants/scene/things/fixtures'
+} from '../../../../src/constants/scene/things/fixtures'
 import {
     NEAR_BUILDINGS,
     NEAR_HOUSES,
     NOHO_HOUSE_LEFT,
     NOHO_HOUSE_RIGHT,
-} from '../../../../app/constants/scene/things/flats'
+} from '../../../../src/constants/scene/things/flats'
 import {
     BATHTUB,
     NURSE_BENCH,
-} from '../../../../app/constants/scene/things/panels'
+} from '../../../../src/constants/scene/things/panels'
 
 export default [
     {

@@ -3,16 +3,16 @@ import {
     FLAPPER,
     BENNETT_DEFIANT,
     BENNETT_RECORDING,
-} from '../../../../../../app/constants/scene/actors/stephanie'
+} from '../../../../../../src/constants/scene/actors/stephanie'
 import {
     MINGLING,
     PROTESTER,
     EPILOGUE,
-} from '../../../../../../app/constants/scene/actors/songs'
-import { BENNETT } from '../../../../../../app/constants/scene/actors'
-import { BENNETT_FUTURE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/actors'
-import { HEINEKEN__SHARED } from '../../../../../../app/constants/scene/sharedStyles/food'
-import { VIOLIN__SHARED } from '../../../../../../app/constants/scene/sharedStyles/instruments'
+} from '../../../../../../src/constants/scene/actors/songs'
+import { BENNETT } from '../../../../../../src/constants/scene/actors'
+import { BENNETT_FUTURE__SHARED } from '../../../../../../src/constants/scene/sharedStyles/actors'
+import { HEINEKEN__SHARED } from '../../../../../../src/constants/scene/sharedStyles/food'
+import { VIOLIN__SHARED } from '../../../../../../src/constants/scene/sharedStyles/instruments'
 
 export default {
     [BENNETT_KEYBOARD]: BENNETT,

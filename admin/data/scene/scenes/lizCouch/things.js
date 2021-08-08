@@ -5,7 +5,7 @@ import {
     FIXTURE,
     PANEL,
     PUPPET,
-} from '../../../../../app/constants/scene/things'
+} from '../../../../../src/constants/scene/things'
 import {
     BUBBLE_SMALL__TCHOTCHKES,
     BUBBLE_MEDIUM__TCHOTCHKES,
@@ -22,32 +22,32 @@ import {
     BUBBLE_MEDIUM__REUNION,
     BUBBLE_LARGE__REUNION,
     LIZ_THOUGHT_REUNION,
-} from '../../../../../app/constants/scene/things/bubbles'
+} from '../../../../../src/constants/scene/things/bubbles'
 import {
     CAT_FOOD_DISHES,
     CAT_LITTER_BOX,
     CYPRESS_DOUBLE__LIZ_COUCH,
     CYPRESS_SINGLE__LIZ_COUCH,
     TRAFFIC_LIGHT_REAR,
-} from '../../../../../app/constants/scene/things/cutouts'
+} from '../../../../../src/constants/scene/things/cutouts'
 import {
     LIZ_BLINDS_INSIDE,
     LIZ_BLINDS_INSIDE_OPEN,
     LIZ_DOOR,
     LIZ_DOOR_OPEN,
     LIZ_GATE_INSIDE,
-} from '../../../../../app/constants/scene/things/doors'
-import { TCHOTCHKES } from '../../../../../app/constants/scene/things/fixtures'
+} from '../../../../../src/constants/scene/things/doors'
+import { TCHOTCHKES } from '../../../../../src/constants/scene/things/fixtures'
 import {
     LIZ_COUCH__ROOM,
     LIZ_OTTOMAN,
-} from '../../../../../app/constants/scene/things/panels'
+} from '../../../../../src/constants/scene/things/panels'
 import {
     OPAL_COUCH__ROOM,
     OPAL_GAZING,
     PEACOCK,
     PEAHEN,
-} from '../../../../../app/constants/scene/things/puppets'
+} from '../../../../../src/constants/scene/things/puppets'
 import {
     BUBBLE_LARGE_CONFIG,
     BUBBLE_MEDIUM_CONFIG,

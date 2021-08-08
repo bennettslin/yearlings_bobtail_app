@@ -2,10 +2,10 @@ import {
     CARDBOARD,
     DOOR,
     PANEL,
-} from '../../../../../app/constants/scene/things'
-import { CORKBOARD } from '../../../../../app/constants/scene/things/cardboards'
-import { PRINCIPAL_DOOR } from '../../../../../app/constants/scene/things/doors'
-import { PRINCIPAL_BENCH } from '../../../../../app/constants/scene/things/panels'
+} from '../../../../../src/constants/scene/things'
+import { CORKBOARD } from '../../../../../src/constants/scene/things/cardboards'
+import { PRINCIPAL_DOOR } from '../../../../../src/constants/scene/things/doors'
+import { PRINCIPAL_BENCH } from '../../../../../src/constants/scene/things/panels'
 
 export default {
     [CARDBOARD]: {

@@ -1,12 +1,12 @@
 import {
     getWindowStorage,
     setInStorage,
-} from '../../app/utils/storage'
+} from '../../src/utils/storage'
 import {
     getPreviewerSvgMapForActor,
     getPreviewerSvgMapForThing,
 } from './svg'
-import { getWindow } from '../../app/utils/browser'
+import { getWindow } from '../../src/utils/browser'
 import WHOLE_ACTORS_LIST from '../constants/actors'
 import THINGS_LIST from '../constants/things'
 

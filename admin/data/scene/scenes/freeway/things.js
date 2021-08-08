@@ -2,13 +2,13 @@ import {
     CUTOUT,
     FLAT,
     PANEL,
-} from '../../../../../app/constants/scene/things'
+} from '../../../../../src/constants/scene/things'
 import {
     SHOPPING_CART,
     OVERPASS_SIGN_BACK,
-} from '../../../../../app/constants/scene/things/cutouts'
-import { VALLEY_FREEWAY } from '../../../../../app/constants/scene/things/flats'
-import { FREEWAY_FENCE } from '../../../../../app/constants/scene/things/panels'
+} from '../../../../../src/constants/scene/things/cutouts'
+import { VALLEY_FREEWAY } from '../../../../../src/constants/scene/things/flats'
+import { FREEWAY_FENCE } from '../../../../../src/constants/scene/things/panels'
 
 export default {
     [CUTOUT]: {

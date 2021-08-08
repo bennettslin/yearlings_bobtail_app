@@ -1,14 +1,14 @@
 import {
     HURT_CONSOLING,
     SOBBING_SHIELDING,
-} from '../../../../../../app/constants/scene/actors/estherMother'
+} from '../../../../../../src/constants/scene/actors/estherMother'
 import {
     BENNETT,
     LIZ,
-} from '../../../../../../app/constants/scene/actors'
-import { ALL_PEOPLE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/actors'
-import { PROMISE_PHOTO__SHARED } from '../../../../../../app/constants/scene/sharedStyles/print'
-import { GHOST__SHARED } from '../../../../../../app/constants/scene/sharedStyles/wardrobe'
+} from '../../../../../../src/constants/scene/actors'
+import { ALL_PEOPLE__SHARED } from '../../../../../../src/constants/scene/sharedStyles/actors'
+import { PROMISE_PHOTO__SHARED } from '../../../../../../src/constants/scene/sharedStyles/print'
+import { GHOST__SHARED } from '../../../../../../src/constants/scene/sharedStyles/wardrobe'
 
 export default {
     [HURT_CONSOLING]: [

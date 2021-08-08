@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
 import DrawingActor from '../DrawingActor'
-import { ACTOR } from '../../../../../app/constants/scene'
+import { ACTOR } from '../../../../../src/constants/scene'
 
 const DrawingSection = ({
     [ACTOR]: actors,

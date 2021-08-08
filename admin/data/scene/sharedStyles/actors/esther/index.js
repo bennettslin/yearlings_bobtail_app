@@ -1,12 +1,12 @@
 import {
     CURIOUS,
     SNICKERING,
-} from '../../../../../../app/constants/scene/actors/esther'
+} from '../../../../../../src/constants/scene/actors/esther'
 import {
     YOUNG_CHILD,
     EPILOGUE,
-} from '../../../../../../app/constants/scene/actors/songs'
-import { BACKPACK__SHARED } from '../../../../../../app/constants/scene/sharedStyles/wardrobe'
+} from '../../../../../../src/constants/scene/actors/songs'
+import { BACKPACK__SHARED } from '../../../../../../src/constants/scene/sharedStyles/wardrobe'
 
 export default {
     [CURIOUS]: BACKPACK__SHARED,

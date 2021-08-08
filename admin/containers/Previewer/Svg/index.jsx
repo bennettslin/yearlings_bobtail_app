@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import InlineSvg from '../../../../app/modules/InlineSvg'
+import InlineSvg from '../../../../src/modules/InlineSvg'
 
 import PreviewerDescription from '../Description'
 
@@ -10,13 +10,13 @@ import {
     convertPresenceKeyToTitle,
     convertPresenceKeyToClassName,
     getSharedClassNames,
-} from '../../../../app/helpers/format'
-import { getDocument } from '../../../../app/utils/browser'
-import { getArrangementForPresence } from '../../../../app/api/scene/presences'
+} from '../../../../src/helpers/format'
+import { getDocument } from '../../../../src/utils/browser'
+import { getArrangementForPresence } from '../../../../src/api/scene/presences'
 import {
     getSharedStyleForActor,
     getSharedStyleForThing,
-} from '../../../../app/api/scene/sharedStyles'
+} from '../../../../src/api/scene/sharedStyles'
 
 import {
     getPreviewerSvgMapForActor,
@@ -26,10 +26,10 @@ import {
 import {
     getViewBoxSize,
     getDimensionsForPresence,
-} from '../../../../app/components/Presence/Svg/helpers/size'
-import { getCompoundActorStyleIfNeeded } from '../../../../app/components/Presence/Svg/helpers/sharedStyle'
+} from '../../../../src/components/Presence/Svg/helpers/size'
+import { getCompoundActorStyleIfNeeded } from '../../../../src/components/Presence/Svg/helpers/sharedStyle'
 
-import { ACTOR } from '../../../../app/constants/scene'
+import { ACTOR } from '../../../../src/constants/scene'
 import { WHOLE_ACTOR_INSTANCES } from '../../../constants/actors'
 import { CUSTOM_THING_INSTANCES } from '../../../constants/things'
 

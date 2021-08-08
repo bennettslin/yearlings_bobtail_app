@@ -1,4 +1,4 @@
-import { ACTOR } from '../../../../app/constants/scene'
+import { ACTOR } from '../../../../src/constants/scene'
 import {
     BACKDROP,
     BUBBLE,
@@ -8,43 +8,43 @@ import {
     FURNITURE,
     PANEL,
     PUPPET,
-} from '../../../../app/constants/scene/things'
+} from '../../../../src/constants/scene/things'
 import {
     EL_CERRITO_KEY,
     EL_CERRITO_CAR_KEY,
     EL_CERRITO_DEATHBED_KEY,
     EL_CERRITO_TENNIS_KEY,
-} from '../../../../app/constants/scene/scenes'
+} from '../../../../src/constants/scene/scenes'
 import {
     TIME_AFTERNOON,
     TIME_EVENING,
     SEASON_AUTUMN,
     SEASON_THOUGHT,
-} from '../../../../app/constants/scene/sky'
+} from '../../../../src/constants/scene/sky'
 import {
     BENNETT,
     MIRIAM,
     MIRIAM_BENNETT,
-} from '../../../../app/constants/scene/actors'
+} from '../../../../src/constants/scene/actors'
 import {
     REMOVING_PANTS,
     INFIRM,
     DISPOSING_CONDOM,
-} from '../../../../app/constants/scene/actors/bennett'
+} from '../../../../src/constants/scene/actors/bennett'
 import {
     PERFUMING,
     TENNIS,
     REVERSING,
-} from '../../../../app/constants/scene/actors/miriam'
+} from '../../../../src/constants/scene/actors/miriam'
 import {
     COWGIRL,
     BLOWJOB,
-} from '../../../../app/constants/scene/actors/miriamBennett'
+} from '../../../../src/constants/scene/actors/miriamBennett'
 import {
     GOLDEN_GATE_BACKDROP,
     THOUGHT_MEDIUM__DEATHBED,
     THOUGHT_SMALL,
-} from '../../../../app/constants/scene/things/backdrops'
+} from '../../../../src/constants/scene/things/backdrops'
 import {
     BUBBLE_SMALL__DEATHBED,
     BUBBLE_MEDIUM__DEATHBED,
@@ -52,24 +52,24 @@ import {
     BUBBLE_SMALL__TENNIS,
     BUBBLE_MEDIUM__TENNIS,
     BUBBLE_LARGE__TENNIS,
-} from '../../../../app/constants/scene/things/bubbles'
+} from '../../../../src/constants/scene/things/bubbles'
 import {
     EL_CERRITO_TREE,
     IV_DRIP,
-} from '../../../../app/constants/scene/things/cutouts'
+} from '../../../../src/constants/scene/things/cutouts'
 import {
     CONDOM_MIRIAM,
     CONDOM_WRAPPER_MIRIAM,
     FREEWAY_SIGN,
     HOSPITAL_RECORD_PLAYER,
     TENNIS_BALL,
-} from '../../../../app/constants/scene/things/fixtures'
+} from '../../../../src/constants/scene/things/fixtures'
 import {
     EL_CERRITO_FAR,
     EL_CERRITO_NEAR,
     TENNIS_COURT,
-} from '../../../../app/constants/scene/things/flats'
-import { DEATHBED_PILLOW } from '../../../../app/constants/scene/things/furnitures'
+} from '../../../../src/constants/scene/things/flats'
+import { DEATHBED_PILLOW } from '../../../../src/constants/scene/things/furnitures'
 import {
     REATTA_INTERIOR,
     REATTA_SEAT_BOTTOM,
@@ -79,8 +79,8 @@ import {
     REATTA_EXTERIOR_REAR,
     HOSPITAL_BED,
     HOSPITAL_RECORD_STAND,
-} from '../../../../app/constants/scene/things/panels'
-import { PUPPET_REATTA } from '../../../../app/constants/scene/things/puppets'
+} from '../../../../src/constants/scene/things/panels'
+import { PUPPET_REATTA } from '../../../../src/constants/scene/things/puppets'
 
 export default [
     {

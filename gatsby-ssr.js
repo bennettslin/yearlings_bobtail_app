@@ -1,4 +1,4 @@
 export {
     wrapRootElement,
     wrapPageElement,
-} from './app/utils/gatsby'
+} from './src/utils/gatsby'

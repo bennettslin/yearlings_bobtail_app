@@ -1,16 +1,16 @@
 import {
     ANITA,
     ANITA_BENNETT,
-} from '../../../../app/constants/scene/actors'
+} from '../../../../src/constants/scene/actors'
 import {
     EXASPERATED,
     CONCERNED,
     CHEERING,
-} from '../../../../app/constants/scene/actors/anita'
+} from '../../../../src/constants/scene/actors/anita'
 import {
     YOUNG_CHILD,
     EPILOGUE,
-} from '../../../../app/constants/scene/actors/songs'
+} from '../../../../src/constants/scene/actors/songs'
 
 export default [
     {

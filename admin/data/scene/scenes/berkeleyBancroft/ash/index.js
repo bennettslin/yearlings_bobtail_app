@@ -2,10 +2,10 @@ import {
     BENNETT,
     AMY,
     WADE,
-} from '../../../../../../app/constants/scene/actors'
-import { SMOKER } from '../../../../../../app/constants/scene/actors/amy'
-import { CATHOLIC_IDEA } from '../../../../../../app/constants/scene/actors/bennett'
-import { CATHOLIC_GUY } from '../../../../../../app/constants/scene/actors/wade'
+} from '../../../../../../src/constants/scene/actors'
+import { SMOKER } from '../../../../../../src/constants/scene/actors/amy'
+import { CATHOLIC_IDEA } from '../../../../../../src/constants/scene/actors/bennett'
+import { CATHOLIC_GUY } from '../../../../../../src/constants/scene/actors/wade'
 
 export default {
     [BENNETT]: {

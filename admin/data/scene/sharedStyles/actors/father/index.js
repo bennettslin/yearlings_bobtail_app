@@ -2,13 +2,13 @@ import {
     ROARING,
     ACCUSATORY,
     REELING,
-} from '../../../../../../app/constants/scene/actors/father'
+} from '../../../../../../src/constants/scene/actors/father'
 import {
     PAST,
     FUTURE,
     EPILOGUE,
-} from '../../../../../../app/constants/scene/actors/songs'
-import { GHOST__SHARED } from '../../../../../../app/constants/scene/sharedStyles/wardrobe'
+} from '../../../../../../src/constants/scene/actors/songs'
+import { GHOST__SHARED } from '../../../../../../src/constants/scene/sharedStyles/wardrobe'
 
 export default {
     [ROARING]: null,

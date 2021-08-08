@@ -1,16 +1,16 @@
 import {
     TRISTAN,
     MIRIAM_TRISTAN,
-} from '../../../../app/constants/scene/actors'
+} from '../../../../src/constants/scene/actors'
 import {
     PRINCIPAL,
     PUNCHING,
-} from '../../../../app/constants/scene/actors/tristan'
-import { NOOGIE } from '../../../../app/constants/scene/actors/miriamTristan'
+} from '../../../../src/constants/scene/actors/tristan'
+import { NOOGIE } from '../../../../src/constants/scene/actors/miriamTristan'
 import {
     GREETING,
     EPILOGUE,
-} from '../../../../app/constants/scene/actors/songs'
+} from '../../../../src/constants/scene/actors/songs'
 
 export default [
     {

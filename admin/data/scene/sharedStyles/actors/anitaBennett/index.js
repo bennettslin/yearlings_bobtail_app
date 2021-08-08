@@ -1,4 +1,4 @@
-import { EPILOGUE } from '../../../../../../app/constants/scene/actors/songs'
+import { EPILOGUE } from '../../../../../../src/constants/scene/actors/songs'
 
 export default {
     [EPILOGUE]: null,

@@ -1,9 +1,9 @@
 import {
     CUTOUT,
     FIXTURE,
-} from '../../../../../app/constants/scene/things'
-import { STEAM_PIPES } from '../../../../../app/constants/scene/things/cutouts'
-import { PUSH_BROOM__TUNNEL } from '../../../../../app/constants/scene/things/fixtures'
+} from '../../../../../src/constants/scene/things'
+import { STEAM_PIPES } from '../../../../../src/constants/scene/things/cutouts'
+import { PUSH_BROOM__TUNNEL } from '../../../../../src/constants/scene/things/fixtures'
 
 export default {
     [CUTOUT]: {

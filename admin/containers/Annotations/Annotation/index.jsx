@@ -6,9 +6,9 @@ import AnnotationCard from '../AnnotationCard'
 import {
     getTitleForAnnotation,
     getTodoForAnnotation,
-} from '../../../../app/api/album/annotations'
-import { getAnnotationCardIndices } from '../../../../app/api/album/cards'
-import { updateSelectedStore } from '../../../../app/redux/selected/action'
+} from '../../../../src/api/album/annotations'
+import { getAnnotationCardIndices } from '../../../../src/api/album/cards'
+import { updateSelectedStore } from '../../../../src/redux/selected/action'
 
 const Annotation = ({ songIndex, annotationIndex }) => {
     const

@@ -11,9 +11,9 @@ import {
     ARROW_DOWN,
     ARROW_LEFT,
     ARROW_RIGHT,
-} from '../../app/constants/access'
+} from '../../src/constants/access'
 
-import { getKeyName } from '../../app/managers/Key/helper'
+import { getKeyName } from '../../src/managers/Key/helper'
 
 const accessPresenceType = ({
     isActor,

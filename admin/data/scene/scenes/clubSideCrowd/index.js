@@ -4,11 +4,11 @@ import {
     TOMER,
     AMY_STEPHANIE,
     WADE,
-} from '../../../../../app/constants/scene/actors'
-import { PERFORMING } from '../../../../../app/constants/scene/actors/songs'
-import { SQUEEZING } from '../../../../../app/constants/scene/actors/amyStephanie'
-import { SHANE_SPILLING } from '../../../../../app/constants/scene/actors/tomer'
-import { WATCHING } from '../../../../../app/constants/scene/actors/wade'
+} from '../../../../../src/constants/scene/actors'
+import { PERFORMING } from '../../../../../src/constants/scene/actors/songs'
+import { SQUEEZING } from '../../../../../src/constants/scene/actors/amyStephanie'
+import { SHANE_SPILLING } from '../../../../../src/constants/scene/actors/tomer'
+import { WATCHING } from '../../../../../src/constants/scene/actors/wade'
 
 export default {
     [BENNETT]: {

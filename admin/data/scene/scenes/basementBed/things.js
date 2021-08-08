@@ -3,18 +3,18 @@ import {
     DOOR,
     FIXTURE,
     FURNITURE,
-} from '../../../../../app/constants/scene/things'
+} from '../../../../../src/constants/scene/things'
 import {
     PEACH_TREE,
     ROSEBUSH_DOUBLE_BASEMENT,
     ROSEBUSH_SINGLE_BASEMENT,
-} from '../../../../../app/constants/scene/things/cutouts'
-import { BASEMENT_DOOR } from '../../../../../app/constants/scene/things/doors'
+} from '../../../../../src/constants/scene/things/cutouts'
+import { BASEMENT_DOOR } from '../../../../../src/constants/scene/things/doors'
 import {
     CRACKED_PICTURE,
     GHOST_SHACKLES,
-} from '../../../../../app/constants/scene/things/fixtures'
-import { BASEMENT_PILLOW } from '../../../../../app/constants/scene/things/furnitures'
+} from '../../../../../src/constants/scene/things/fixtures'
+import { BASEMENT_PILLOW } from '../../../../../src/constants/scene/things/furnitures'
 
 export default {
     [CUTOUT]: {

@@ -2,8 +2,8 @@ import {
     FEIGNING_FEAR,
     THROWING,
     NOODLING,
-} from '../../../../../../app/constants/scene/actors/andrew'
-import { EPILOGUE } from '../../../../../../app/constants/scene/actors/songs'
+} from '../../../../../../src/constants/scene/actors/andrew'
+import { EPILOGUE } from '../../../../../../src/constants/scene/actors/songs'
 
 export default {
     [FEIGNING_FEAR]: null,

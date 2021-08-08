@@ -7,27 +7,27 @@ import {
     MOTHER,
     PRETEEN_BENNETT,
     SASHA_BENNETT,
-} from '../../../../../app/constants/scene/actors'
+} from '../../../../../src/constants/scene/actors'
 import {
     HURT_CONSOLING,
     SOBBING_SHIELDING,
-} from '../../../../../app/constants/scene/actors/estherMother'
+} from '../../../../../src/constants/scene/actors/estherMother'
 import {
     ACCUSATORY,
     REELING,
-} from '../../../../../app/constants/scene/actors/father'
+} from '../../../../../src/constants/scene/actors/father'
 import {
     PETTING_SEATED,
     PETTING_SEATED_PRESENT,
     PETTING_STANDING,
-} from '../../../../../app/constants/scene/actors/liz'
-import { BUOY } from '../../../../../app/constants/scene/actors/preteenBennett'
-import { MERMAID } from '../../../../../app/constants/scene/actors/sashaBennett'
+} from '../../../../../src/constants/scene/actors/liz'
+import { BUOY } from '../../../../../src/constants/scene/actors/preteenBennett'
+import { MERMAID } from '../../../../../src/constants/scene/actors/sashaBennett'
 import {
     PAST,
     PRESENT,
     FUTURE,
-} from '../../../../../app/constants/scene/actors/songs'
+} from '../../../../../src/constants/scene/actors/songs'
 
 const PETTING_SEATED_CONFIG = {
     wires: [

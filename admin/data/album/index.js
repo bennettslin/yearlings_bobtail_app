@@ -20,7 +20,7 @@ import { addTip } from './helpers/tips'
 import { addVerseMetadata } from './helpers/verse'
 import { addWormholeMetadata } from './helpers/wormhole'
 import { getSmartQuotedEntity } from '../../utils/format/smartQuote'
-import { RUNTIME } from '../../../app/constants/server'
+import { RUNTIME } from '../../../src/constants/server'
 
 const annotationsList = []
 

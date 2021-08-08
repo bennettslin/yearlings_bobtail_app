@@ -2,20 +2,20 @@ import {
     KHARI,
     KHARI_LIZ,
     KHARI_LIZ_REFLECTION,
-} from '../../../../app/constants/scene/actors'
+} from '../../../../src/constants/scene/actors'
 import {
     DOUBLE_ALBERT,
     ARRIVED,
     JUDGMENTAL,
     CONCERNED,
-} from '../../../../app/constants/scene/actors/khari'
+} from '../../../../src/constants/scene/actors/khari'
 import {
     JOKING_LAUGHING,
     PROTECTIVE_CONCERNED,
     CARESS,
     CARESS_REFLECTION,
-} from '../../../../app/constants/scene/actors/khariLiz'
-import { EPILOGUE } from '../../../../app/constants/scene/actors/songs'
+} from '../../../../src/constants/scene/actors/khariLiz'
+import { EPILOGUE } from '../../../../src/constants/scene/actors/songs'
 
 export default [
     {

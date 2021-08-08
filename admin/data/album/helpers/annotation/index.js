@@ -1,13 +1,13 @@
 import albumLyrics from '../../lyrics'
 import { registerAnnotation } from './helpers'
-import { getDotsBitFromKeys } from '../../../../../app/helpers/dot'
+import { getDotsBitFromKeys } from '../../../../../src/helpers/dot'
 
 import {
     ANNOTATION_SEARCH_KEYS,
     ANCHOR,
     LYRIC_LEFT,
     LYRIC_RIGHT,
-} from '../../../../../app/constants/lyrics'
+} from '../../../../../src/constants/lyrics'
 
 const _recurseThroughVerse = ({
     verse,

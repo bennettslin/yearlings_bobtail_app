@@ -1,7 +1,7 @@
 import {
     getStringText,
     hasSpecialCharacterAtIndex,
-} from '../../../../../../app/helpers/format'
+} from '../../../../../../src/helpers/format'
 
 const _getDeletedEndSpecialCharactersText = text => {
     // Eliminate all special characters at end.

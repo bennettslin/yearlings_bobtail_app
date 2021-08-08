@@ -1,10 +1,10 @@
-import { LEFT } from '../../../../../app/constants/scene/cubes'
-import { CEMETERY_KEY } from '../../../../../app/constants/scene/scenes'
+import { LEFT } from '../../../../../src/constants/scene/cubes'
+import { CEMETERY_KEY } from '../../../../../src/constants/scene/scenes'
 
 import {
     GROUND_CLEAR_COLOUR as G,
     GRASS_COLOUR as H,
-} from '../../../../../app/constants/scene/cubes/colours'
+} from '../../../../../src/constants/scene/cubes/colours'
 
 export default {
     [CEMETERY_KEY]: {

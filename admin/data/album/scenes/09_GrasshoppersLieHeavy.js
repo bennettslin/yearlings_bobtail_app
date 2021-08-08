@@ -1,4 +1,4 @@
-import { ACTOR } from '../../../../app/constants/scene'
+import { ACTOR } from '../../../../src/constants/scene'
 import {
     BACKDROP,
     BUBBLE,
@@ -9,7 +9,7 @@ import {
     FLAT,
     FURNITURE,
     PANEL,
-} from '../../../../app/constants/scene/things'
+} from '../../../../src/constants/scene/things'
 import {
     DISHROOM_KEY,
     BENNETT_BED_KEY,
@@ -21,7 +21,7 @@ import {
     LIZ_GATE_KEY,
     LIZ_GATE_STREET_KEY,
     BENNETT_GATE_KEY,
-} from '../../../../app/constants/scene/scenes'
+} from '../../../../src/constants/scene/scenes'
 import {
     TIME_EVENING,
     TIME_NOON,
@@ -29,31 +29,31 @@ import {
     SEASON_AUTUMN,
     SEASON_WINTER,
     SEASON_LOVE,
-} from '../../../../app/constants/scene/sky'
+} from '../../../../src/constants/scene/sky'
 import {
     BENNETT,
     BENNETT_LIZ,
     LIZ,
     NESTOR,
     BENNETT_LIZ_REFLECTION,
-} from '../../../../app/constants/scene/actors'
+} from '../../../../src/constants/scene/actors'
 import {
     DISHROOM_READING,
     MOP_SOPPED,
     WAITING_ROOM_ASLEEP,
-} from '../../../../app/constants/scene/actors/bennett'
-import { JOGGER } from '../../../../app/constants/scene/actors/nestor'
+} from '../../../../src/constants/scene/actors/bennett'
+import { JOGGER } from '../../../../src/constants/scene/actors/nestor'
 import {
     DISHROOM_LANCET,
     DATE_ENDING,
     DATE_ENDED,
     GATE_CODE,
     RUMPLED_LINENS,
-} from '../../../../app/constants/scene/actors/songs'
+} from '../../../../src/constants/scene/actors/songs'
 import {
     OAKLAND_FRONT__HIGH,
     OAKLAND_SIDE__LEVEL,
-} from '../../../../app/constants/scene/things/backdrops'
+} from '../../../../src/constants/scene/things/backdrops'
 import {
     AFTERGLOW,
     AFTERGLOW_REFLECTION,
@@ -63,7 +63,7 @@ import {
     HARD_ON_REFLECTION,
     MISSIONARY,
     MISSIONARY_REFLECTION,
-} from '../../../../app/constants/scene/actors/bennettLiz'
+} from '../../../../src/constants/scene/actors/bennettLiz'
 import {
     BUBBLE_SMALL__WAITING,
     BUBBLE_MEDIUM__WAITING,
@@ -71,12 +71,12 @@ import {
     WAITING_THOUGHT_WALKING,
     WAITING_THOUGHT_SINGING,
     WAITING_THOUGHT_STUDYING,
-} from '../../../../app/constants/scene/things/bubbles'
+} from '../../../../src/constants/scene/things/bubbles'
 import {
     CODE_BOX,
     CLIPBOARD,
     PAINTING,
-} from '../../../../app/constants/scene/things/cardboards'
+} from '../../../../src/constants/scene/things/cardboards'
 import {
     APARTMENT_PLANT,
     BUSH_DOUBLE__BENNETT_GATE,
@@ -97,7 +97,7 @@ import {
     TRAFFIC_LIGHT_FRONT,
     TRAY_PILE,
     WAITING_ROOM_PLANT,
-} from '../../../../app/constants/scene/things/cutouts'
+} from '../../../../src/constants/scene/things/cutouts'
 import {
     BENNETT_DOOR_INSIDE,
     BENNETT_DOOR_INSIDE_OPEN,
@@ -113,7 +113,7 @@ import {
     NEIGHBOUR_DOOR,
     WAITING_ROOM_DOOR,
     WAITING_ROOM_DOOR_OPEN,
-} from '../../../../app/constants/scene/things/doors'
+} from '../../../../src/constants/scene/things/doors'
 import {
     CONDOM_LIZ,
     CONDOM_REFLECTION,
@@ -125,19 +125,19 @@ import {
     LIZ_PHONE,
     LIZ_PHONE_REFLECTION,
     VASELINE,
-} from '../../../../app/constants/scene/things/fixtures'
+} from '../../../../src/constants/scene/things/fixtures'
 import {
     NEAR_BUILDINGS,
     PUBLIC_FAR__LIZ_GATE,
     PUBLIC_NEAR__LIZ_GATE,
-} from '../../../../app/constants/scene/things/flats'
+} from '../../../../src/constants/scene/things/flats'
 import {
     BENNETT_PILLOW__BED,
     LIZ_PILLOWS,
     LIZ_PILLOWS_REFLECTION,
     LIZ_PILLOWS_PILE,
     LIZ_PILLOWS_PILE_REFLECTION,
-} from '../../../../app/constants/scene/things/furnitures'
+} from '../../../../src/constants/scene/things/furnitures'
 import {
     BENNETT_BED,
     CONVEYOR_BELT,
@@ -150,7 +150,7 @@ import {
     WAITING_ARMREST__BENNETT_RIGHT,
     WAITING_ARMREST__LIZ_LEFT,
     WAITING_ARMREST__LIZ_RIGHT,
-} from '../../../../app/constants/scene/things/panels'
+} from '../../../../src/constants/scene/things/panels'
 
 /**
  * All of these scenes repeat twice.

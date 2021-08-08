@@ -2,13 +2,13 @@ import {
     CUTOUT,
     DOOR,
     FIXTURE,
-} from '../../../../../app/constants/scene/things'
+} from '../../../../../src/constants/scene/things'
 import {
     CACTUS_DOUBLE__PORCH,
     CACTUS_SINGLE__PORCH,
-} from '../../../../../app/constants/scene/things/cutouts'
-import { PORCH_DOOR } from '../../../../../app/constants/scene/things/doors'
-import { HAIRCUT_SCISSORS } from '../../../../../app/constants/scene/things/fixtures'
+} from '../../../../../src/constants/scene/things/cutouts'
+import { PORCH_DOOR } from '../../../../../src/constants/scene/things/doors'
+import { HAIRCUT_SCISSORS } from '../../../../../src/constants/scene/things/fixtures'
 
 export default {
     [CUTOUT]: {

@@ -1,9 +1,9 @@
-import { RIGHT } from '../../../../../app/constants/scene/cubes'
+import { RIGHT } from '../../../../../src/constants/scene/cubes'
 import {
     EL_CERRITO_DEATHBED_KEY,
     EL_CERRITO_TENNIS_KEY,
     CLIFF_DEATHBED_KEY,
-} from '../../../../../app/constants/scene/scenes'
+} from '../../../../../src/constants/scene/scenes'
 
 import {
     DEFAULT_CLEAR_COLOUR as D,
@@ -13,7 +13,7 @@ import {
     GRASS_COLOUR as H,
     STREET_COLOUR as T,
     DEATHBED_FLOOR_COLOUR as F,
-} from '../../../../../app/constants/scene/cubes/colours'
+} from '../../../../../src/constants/scene/cubes/colours'
 
 /**
  * ...........-..

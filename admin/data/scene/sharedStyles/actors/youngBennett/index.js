@@ -3,17 +3,17 @@ import {
     FLUSTERED,
     BATHING,
     SINGING,
-} from '../../../../../../app/constants/scene/actors/youngBennett'
-import { YOUNG_CHILD } from '../../../../../../app/constants/scene/actors/songs'
-import { VIOLIN__SHARED } from '../../../../../../app/constants/scene/sharedStyles/instruments'
+} from '../../../../../../src/constants/scene/actors/youngBennett'
+import { YOUNG_CHILD } from '../../../../../../src/constants/scene/actors/songs'
+import { VIOLIN__SHARED } from '../../../../../../src/constants/scene/sharedStyles/instruments'
 import {
     BOOK__SHARED,
     MAGAZINE__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/paper'
+} from '../../../../../../src/constants/scene/sharedStyles/paper'
 import {
     BACKPACK__SHARED,
     YOUNG_BACKPACK__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/wardrobe'
+} from '../../../../../../src/constants/scene/sharedStyles/wardrobe'
 
 export default {
     [PANICKED]: [

@@ -1,4 +1,4 @@
-import { COURTYARD_KEY } from '../../../../../app/constants/scene/scenes'
+import { COURTYARD_KEY } from '../../../../../src/constants/scene/scenes'
 
 import {
     DEFAULT_CLEAR_COLOUR as D,
@@ -8,9 +8,9 @@ import {
     BENNETT_FLOOR_COLOUR as F,
     BENNETT_WALL_COLOUR as W,
     APARTMENT_EXTERIOR_COLOUR as X,
-} from '../../../../../app/constants/scene/cubes/colours'
+} from '../../../../../src/constants/scene/cubes/colours'
 
-import { d, f, k } from '../../../../../app/constants/scene/cubes/zIndices'
+import { d, f, k } from '../../../../../src/constants/scene/cubes/zIndices'
 
 /**
  * Blinds and door should match in bennettBed.

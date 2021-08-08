@@ -1,4 +1,4 @@
-import { ACTOR } from '../../../../app/constants/scene'
+import { ACTOR } from '../../../../src/constants/scene'
 import {
     BACKDROP,
     BUBBLE,
@@ -9,7 +9,7 @@ import {
     FLAT,
     FURNITURE,
     PANEL,
-} from '../../../../app/constants/scene/things'
+} from '../../../../src/constants/scene/things'
 import {
     BASEMENT_KEY,
     BENNETT_COUCH_KEY,
@@ -17,14 +17,14 @@ import {
     CINEMA_KEY,
     CINEMA_STREET_KEY,
     CLUB_FRONT_KEY,
-} from '../../../../app/constants/scene/scenes'
+} from '../../../../src/constants/scene/scenes'
 import {
     SEASON_SUMMER,
     TIME_AFTERNOON,
     TIME_EVENING,
     TIME_NIGHT,
     TIME_NOON,
-} from '../../../../app/constants/scene/sky'
+} from '../../../../src/constants/scene/sky'
 import {
     ANA,
     BENNETT,
@@ -35,8 +35,8 @@ import {
     MIRIAM,
     STEPHANIE,
     TOMER,
-} from '../../../../app/constants/scene/actors'
-import { SQUATTING } from '../../../../app/constants/scene/actors/ana'
+} from '../../../../src/constants/scene/actors'
+import { SQUATTING } from '../../../../src/constants/scene/actors/ana'
 import {
     COUCH_READING,
     DISTRACTED,
@@ -45,32 +45,32 @@ import {
     PONDERING,
     RUBIKS_CUBE,
     WONDERING_BABY,
-} from '../../../../app/constants/scene/actors/bennett'
+} from '../../../../src/constants/scene/actors/bennett'
 import {
     USHER_LOOKING,
     USHER_WAITING,
-} from '../../../../app/constants/scene/actors/howie'
+} from '../../../../src/constants/scene/actors/howie'
 import {
     INFANT_CURIOUS,
     INFANT_NURSING,
-} from '../../../../app/constants/scene/actors/miriam'
-import { BENNETT_KEYBOARD } from '../../../../app/constants/scene/actors/stephanie'
-import { SHANE_BUYING } from '../../../../app/constants/scene/actors/tomer'
+} from '../../../../src/constants/scene/actors/miriam'
+import { BENNETT_KEYBOARD } from '../../../../src/constants/scene/actors/stephanie'
+import { SHANE_BUYING } from '../../../../src/constants/scene/actors/tomer'
 import {
     EATING,
     FLIRTING,
-} from '../../../../app/constants/scene/actors/songs'
+} from '../../../../src/constants/scene/actors/songs'
 import {
     OAKLAND_FRONT__HIGH,
     OAKLAND_SIDE__LEVEL,
-} from '../../../../app/constants/scene/things/backdrops'
+} from '../../../../src/constants/scene/things/backdrops'
 import {
     BUBBLE_LARGE__CINEMA,
     BUBBLE_MEDIUM__CINEMA,
     BUBBLE_SMALL__CINEMA,
     CINEMA_THOUGHT_BUYING,
     CINEMA_THOUGHT_RECORDING,
-} from '../../../../app/constants/scene/things/bubbles'
+} from '../../../../src/constants/scene/things/bubbles'
 import {
     POSTER_GLADIATOR,
     POSTER_LEONARD_COHEN,
@@ -82,7 +82,7 @@ import {
     PROGRESS_CHART_EARLY,
     PROGRESS_CHART_LATE,
     ALBUM_TELEVISION,
-} from '../../../../app/constants/scene/things/cardboards'
+} from '../../../../src/constants/scene/things/cardboards'
 import {
     MONITOR_FRONT__LEFT,
     MONITOR_FRONT__RIGHT,
@@ -91,12 +91,12 @@ import {
     ROSEBUSH_SINGLE_BASEMENT,
     WALL_SPEAKER_FRONT__LEFT,
     WALL_SPEAKER_FRONT__RIGHT,
-} from '../../../../app/constants/scene/things/cutouts'
+} from '../../../../src/constants/scene/things/cutouts'
 import {
     BASEMENT_DOOR_OPEN,
     CINEMA_DOORS,
     DEFAULT_FENCE_BASEMENT,
-} from '../../../../app/constants/scene/things/doors'
+} from '../../../../src/constants/scene/things/doors'
 import {
     BASEMENT_BEER_BENNETT,
     BASEMENT_BEER_CASE,
@@ -110,14 +110,14 @@ import {
     ELECTRIC_GUITAR,
     GUITAR_CASE_UPRIGHT,
     KEYBOARD,
-} from '../../../../app/constants/scene/things/fixtures'
+} from '../../../../src/constants/scene/things/fixtures'
 import {
     COMMERCIAL_CENTRE,
     COMMERCIAL_FAR_RIGHT,
     COMMERCIAL_MIDDLE_RIGHT,
     COMMERCIAL_NEAR_RIGHT,
-} from '../../../../app/constants/scene/things/flats'
-import { BENNETT_PILLOW__COUCH } from '../../../../app/constants/scene/things/furnitures'
+} from '../../../../src/constants/scene/things/flats'
+import { BENNETT_PILLOW__COUCH } from '../../../../src/constants/scene/things/furnitures'
 import {
     BENNETT_NIGHTSTAND,
     BENNETT_RECORD_STAND,
@@ -130,7 +130,7 @@ import {
     WIDE_ARMREST_BENNETT__LEFT,
     WIDE_ARMREST_BENNETT__RIGHT,
     WIDE_COUCH_BENNETT,
-} from '../../../../app/constants/scene/things/panels'
+} from '../../../../src/constants/scene/things/panels'
 
 export default [
     {

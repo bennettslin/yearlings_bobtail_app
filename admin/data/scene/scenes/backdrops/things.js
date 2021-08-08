@@ -1,4 +1,4 @@
-import { BACKDROP } from '../../../../../app/constants/scene/things'
+import { BACKDROP } from '../../../../../src/constants/scene/things'
 import {
     DRIVING_BACKDROP,
     GOLDEN_GATE_BACKDROP,
@@ -24,7 +24,7 @@ import {
     VALLEY_FURTHER_BACKDROP,
     VALLEY_PANORAMA_BACKDROP,
     WEDDING_BACKDROP,
-} from '../../../../../app/constants/scene/things/backdrops'
+} from '../../../../../src/constants/scene/things/backdrops'
 
 export default {
     [BACKDROP]: {

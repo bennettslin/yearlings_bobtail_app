@@ -3,8 +3,8 @@ import {
     ANA,
     HOWIE,
     TOMER,
-} from '../../../../../app/constants/scene/actors'
-import { ABBEY_ROAD } from '../../../../../app/constants/scene/actors/songs'
+} from '../../../../../src/constants/scene/actors'
+import { ABBEY_ROAD } from '../../../../../src/constants/scene/actors/songs'
 
 export default {
     [HOWIE]: {

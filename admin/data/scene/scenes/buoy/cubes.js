@@ -1,7 +1,7 @@
-import { RIGHT } from '../../../../../app/constants/scene/cubes'
-import { BUOY_KEY } from '../../../../../app/constants/scene/scenes'
+import { RIGHT } from '../../../../../src/constants/scene/cubes'
+import { BUOY_KEY } from '../../../../../src/constants/scene/scenes'
 
-import { OCEAN_COLOUR as V } from '../../../../../app/constants/scene/cubes/colours'
+import { OCEAN_COLOUR as V } from '../../../../../src/constants/scene/cubes/colours'
 
 export default {
     [BUOY_KEY]: {

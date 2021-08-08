@@ -43,12 +43,12 @@ import {
     SNOWGLOBE_SMALL_PRESENT,
     SNOWGLOBE_SMALL_FUTURE,
     VAN_NUYS_PAINTING,
-} from '../../../../../../app/constants/scene/things/cardboards'
+} from '../../../../../../src/constants/scene/things/cardboards'
 import {
     BENNETT,
     LIZ,
     MARA,
-} from '../../../../../../app/constants/scene/actors'
+} from '../../../../../../src/constants/scene/actors'
 import {
     ALL_PAST__SHARED,
     ALL_PEOPLE__SHARED,
@@ -57,29 +57,29 @@ import {
     BENNETT_FUTURE__SHARED,
     MIRIAM_FUTURE__SHARED,
     ALL_CLOTHING__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/actors'
+} from '../../../../../../src/constants/scene/sharedStyles/actors'
 import {
     ODIN_PAST__SHARED,
     SEA_SERPENT__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/animals'
-import { TAIWAN_LINENS__SHARED } from '../../../../../../app/constants/scene/sharedStyles/furniture'
+} from '../../../../../../src/constants/scene/sharedStyles/animals'
+import { TAIWAN_LINENS__SHARED } from '../../../../../../src/constants/scene/sharedStyles/furniture'
 import {
     FOLIAGE__SHARED,
     MOUNTAIN__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/outdoor'
+} from '../../../../../../src/constants/scene/sharedStyles/outdoor'
 import {
     POSTER_GLADIATOR__SHARED,
     PROGRESS_CHART__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/print'
+} from '../../../../../../src/constants/scene/sharedStyles/print'
 import {
     TAIWAN_BUOY__SHARED,
     TAIWAN_RICKSHAW__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/taiwan'
+} from '../../../../../../src/constants/scene/sharedStyles/taiwan'
 import {
     REATTA__SHARED,
     ALL_VEHICLES__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/vehicles'
-import { FUTURE__SHARED, PAST__SHARED, PRESENT__SHARED } from '../../../../../../app/constants/scene/sharedStyles'
+} from '../../../../../../src/constants/scene/sharedStyles/vehicles'
+import { FUTURE__SHARED, PAST__SHARED, PRESENT__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
 
 export default {
     [ALBUM_JOHNNY_HORTON]: [

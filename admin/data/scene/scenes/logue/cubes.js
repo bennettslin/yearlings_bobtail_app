@@ -1,9 +1,9 @@
-import { LOGUE_KEY } from '../../../../../app/constants/scene/scenes'
+import { LOGUE_KEY } from '../../../../../src/constants/scene/scenes'
 
 import {
     GROUND_CLEAR_COLOUR as G,
     PLATFORM_COLOUR as P,
-} from '../../../../../app/constants/scene/cubes/colours'
+} from '../../../../../src/constants/scene/cubes/colours'
 
 export default {
     [LOGUE_KEY]: {

@@ -1,6 +1,6 @@
 import { getScene } from '../builds'
 import { getLayerForScene } from '../album/scenes'
-import { ACTOR } from '../../../app/constants/scene'
+import { ACTOR } from '../../../src/constants/scene'
 
 const {
     actors: ACTOR_ARRANGEMENTS,

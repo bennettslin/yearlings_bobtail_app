@@ -1,7 +1,7 @@
 import {
     WILLY,
-} from '../../../../../app/constants/scene/actors'
-import { COLLECTING } from '../../../../../app/constants/scene/actors/willy'
+} from '../../../../../src/constants/scene/actors'
+import { COLLECTING } from '../../../../../src/constants/scene/actors/willy'
 
 export default {
     [WILLY]: {

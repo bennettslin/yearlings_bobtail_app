@@ -1,9 +1,9 @@
 import {
     BENNETT,
     STEPHANIE,
-} from '../../../../../app/constants/scene/actors'
-import { CORD_REAR } from '../../../../../app/constants/scene/actors/bennett'
-import { BENNETT_DEFIANT } from '../../../../../app/constants/scene/actors/stephanie'
+} from '../../../../../src/constants/scene/actors'
+import { CORD_REAR } from '../../../../../src/constants/scene/actors/bennett'
+import { BENNETT_DEFIANT } from '../../../../../src/constants/scene/actors/stephanie'
 
 export default {
     [BENNETT]: {

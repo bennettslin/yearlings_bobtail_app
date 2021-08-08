@@ -1,11 +1,11 @@
-import { STEAM_TUNNEL_KEY } from '../../../../../app/constants/scene/scenes'
+import { STEAM_TUNNEL_KEY } from '../../../../../src/constants/scene/scenes'
 
 import {
     DIRT_FLOOR_COLOUR as F,
     UNDERGROUND_WALL_COLOUR as W,
-} from '../../../../../app/constants/scene/cubes/colours'
+} from '../../../../../src/constants/scene/cubes/colours'
 
-import { d } from '../../../../../app/constants/scene/cubes/zIndices'
+import { d } from '../../../../../src/constants/scene/cubes/zIndices'
 
 export default {
     [STEAM_TUNNEL_KEY]: {

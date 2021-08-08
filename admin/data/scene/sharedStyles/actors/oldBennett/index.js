@@ -1,4 +1,4 @@
-import { PROLOGUE } from '../../../../../../app/constants/scene/actors/songs'
+import { PROLOGUE } from '../../../../../../src/constants/scene/actors/songs'
 
 export default {
     [PROLOGUE]: null,

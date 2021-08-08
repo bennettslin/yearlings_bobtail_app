@@ -1,15 +1,15 @@
-import { RIGHT } from '../../../../../app/constants/scene/cubes'
+import { RIGHT } from '../../../../../src/constants/scene/cubes'
 import {
     EL_CERRITO_KEY,
     EL_CERRITO_CAR_KEY,
-} from '../../../../../app/constants/scene/scenes'
+} from '../../../../../src/constants/scene/scenes'
 
 import {
     DEFAULT_CLEAR_COLOUR as D,
     GROUND_CLEAR_COLOUR as G,
     GRASS_COLOUR as H,
     STREET_COLOUR as T,
-} from '../../../../../app/constants/scene/cubes/colours'
+} from '../../../../../src/constants/scene/cubes/colours'
 
 /**
  * ...........-..

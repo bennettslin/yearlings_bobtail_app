@@ -2,13 +2,13 @@ import {
     CARDBOARD,
     CUTOUT,
     FLAT,
-} from '../../../../../app/constants/scene/things'
-import { BENNETT_ODIN_BUOY } from '../../../../../app/constants/scene/things/cardboards'
-import { YELLOW_TAPED_GRILL } from '../../../../../app/constants/scene/things/cutouts'
+} from '../../../../../src/constants/scene/things'
+import { BENNETT_ODIN_BUOY } from '../../../../../src/constants/scene/things/cardboards'
+import { YELLOW_TAPED_GRILL } from '../../../../../src/constants/scene/things/cutouts'
 import {
     FERRIS_WHEEL,
     ROLLER_COASTER,
-} from '../../../../../app/constants/scene/things/flats'
+} from '../../../../../src/constants/scene/things/flats'
 
 export default {
     [CARDBOARD]: {

@@ -1,5 +1,5 @@
-import { BENNETT } from '../../../../../../app/constants/scene/actors'
-import { RUBIKS_CUBE } from '../../../../../../app/constants/scene/actors/bennett'
+import { BENNETT } from '../../../../../../src/constants/scene/actors'
+import { RUBIKS_CUBE } from '../../../../../../src/constants/scene/actors/bennett'
 
 export default {
     [BENNETT]: {

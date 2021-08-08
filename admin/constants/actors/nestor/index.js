@@ -1,7 +1,7 @@
-import { NESTOR, AMY_NESTOR_TOMER } from '../../../../app/constants/scene/actors'
-import { JOGGER, INJURED } from '../../../../app/constants/scene/actors/nestor'
-import { OFFICER } from '../../../../app/constants/scene/actors/amyNestorTomer'
-import { GREETING, EPILOGUE } from '../../../../app/constants/scene/actors/songs'
+import { NESTOR, AMY_NESTOR_TOMER } from '../../../../src/constants/scene/actors'
+import { JOGGER, INJURED } from '../../../../src/constants/scene/actors/nestor'
+import { OFFICER } from '../../../../src/constants/scene/actors/amyNestorTomer'
+import { GREETING, EPILOGUE } from '../../../../src/constants/scene/actors/songs'
 
 export default [
     {

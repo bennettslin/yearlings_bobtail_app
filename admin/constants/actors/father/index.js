@@ -1,18 +1,18 @@
 import {
     FATHER,
     BENNETT_FATHER,
-} from '../../../../app/constants/scene/actors'
+} from '../../../../src/constants/scene/actors'
 import {
     ROARING,
     ACCUSATORY,
     REELING,
-} from '../../../../app/constants/scene/actors/father'
+} from '../../../../src/constants/scene/actors/father'
 import {
     PAST,
     PRESENT,
     FUTURE,
     EPILOGUE,
-} from '../../../../app/constants/scene/actors/songs'
+} from '../../../../src/constants/scene/actors/songs'
 
 export default [
     {

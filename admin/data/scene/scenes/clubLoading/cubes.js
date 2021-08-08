@@ -1,4 +1,4 @@
-import { CLUB_LOADING } from '../../../../../app/constants/scene/scenes'
+import { CLUB_LOADING } from '../../../../../src/constants/scene/scenes'
 
 import {
     DEFAULT_CLEAR_COLOUR as D,
@@ -9,9 +9,9 @@ import {
     CLUB_SIDE_PRIMARY_COLOUR as B,
     CLUB_SIDE_SECONDARY_COLOUR as E,
     GENERIC_EXTERIOR_COLOUR as X,
-} from '../../../../../app/constants/scene/cubes/colours'
+} from '../../../../../src/constants/scene/cubes/colours'
 
-import { d, f, k } from '../../../../../app/constants/scene/cubes/zIndices'
+import { d, f, k } from '../../../../../src/constants/scene/cubes/zIndices'
 
 export default {
     [CLUB_LOADING]: {

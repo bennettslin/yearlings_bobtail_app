@@ -1,19 +1,19 @@
 import {
     ESTHER,
     ESTHER_MOTHER,
-} from '../../../../app/constants/scene/actors'
+} from '../../../../src/constants/scene/actors'
 import {
     CURIOUS,
     SNICKERING,
-} from '../../../../app/constants/scene/actors/esther'
+} from '../../../../src/constants/scene/actors/esther'
 import {
     HURT_CONSOLING,
     SOBBING_SHIELDING,
-} from '../../../../app/constants/scene/actors/estherMother'
+} from '../../../../src/constants/scene/actors/estherMother'
 import {
     YOUNG_CHILD,
     EPILOGUE,
-} from '../../../../app/constants/scene/actors/songs'
+} from '../../../../src/constants/scene/actors/songs'
 
 export default [
     {

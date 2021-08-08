@@ -1,8 +1,8 @@
 import {
     BENNETT,
     LIZ,
-} from '../../../../../app/constants/scene/actors'
-import { GO_KARTS } from '../../../../../app/constants/scene/actors/songs'
+} from '../../../../../src/constants/scene/actors'
+import { GO_KARTS } from '../../../../../src/constants/scene/actors/songs'
 
 export default {
     [BENNETT]: {

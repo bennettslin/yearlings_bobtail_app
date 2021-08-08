@@ -2,10 +2,10 @@ import {
     BENNETT,
     ANA,
     MIRIAM_TRISTAN,
-} from '../../../../../../app/constants/scene/actors'
-import { GREETING } from '../../../../../../app/constants/scene/actors/songs'
-import { SMIRKING } from '../../../../../../app/constants/scene/actors/ana'
-import { NOOGIE } from '../../../../../../app/constants/scene/actors/miriamTristan'
+} from '../../../../../../src/constants/scene/actors'
+import { GREETING } from '../../../../../../src/constants/scene/actors/songs'
+import { SMIRKING } from '../../../../../../src/constants/scene/actors/ana'
+import { NOOGIE } from '../../../../../../src/constants/scene/actors/miriamTristan'
 
 export default {
     [ANA]: {

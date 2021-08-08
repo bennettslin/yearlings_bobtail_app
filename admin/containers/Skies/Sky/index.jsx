@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { TIME_STAGE } from '../../../../app/constants/scene/sky'
+import { TIME_STAGE } from '../../../../src/constants/scene/sky'
 
 const AdminSky = ({
     sceneSkyTime = TIME_STAGE,

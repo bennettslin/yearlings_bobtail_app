@@ -1,12 +1,12 @@
 import {
     CARDBOARD,
     DOOR,
-} from '../../../../../app/constants/scene/things'
+} from '../../../../../src/constants/scene/things'
 import {
     BENNETT_TAIWAN_GATE,
     ODIN_TAIWAN_GATE,
-} from '../../../../../app/constants/scene/things/cardboards'
-import { IRON_GATE_LOW } from '../../../../../app/constants/scene/things/doors'
+} from '../../../../../src/constants/scene/things/cardboards'
+import { IRON_GATE_LOW } from '../../../../../src/constants/scene/things/doors'
 
 export default {
     [CARDBOARD]: {

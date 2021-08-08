@@ -1,4 +1,4 @@
-import { TOP } from '../../../../app/constants/transition'
+import { TOP } from '../../../../src/constants/transition'
 
 const BUBBLE_CONFIG = {
     yIndex: 5,

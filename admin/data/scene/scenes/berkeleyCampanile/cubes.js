@@ -1,4 +1,4 @@
-import { BERKELEY_CAMPANILE_KEY } from '../../../../../app/constants/scene/scenes'
+import { BERKELEY_CAMPANILE_KEY } from '../../../../../src/constants/scene/scenes'
 
 import {
     DEFAULT_CLEAR_COLOUR as D,
@@ -8,9 +8,9 @@ import {
     BANCROFT_GATE_COLOUR as A,
     BANCROFT_EXTERIOR_COLOUR as X,
     CONCRETE_PLATFORM_COLOUR as P,
-} from '../../../../../app/constants/scene/cubes/colours'
+} from '../../../../../src/constants/scene/cubes/colours'
 
-import { g, k } from '../../../../../app/constants/scene/cubes/zIndices'
+import { g, k } from '../../../../../src/constants/scene/cubes/zIndices'
 
 export default {
     [BERKELEY_CAMPANILE_KEY]: {

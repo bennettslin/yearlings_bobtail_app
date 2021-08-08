@@ -1,10 +1,10 @@
-import { EATING } from '../../../../../../app/constants/scene/actors/songs'
+import { EATING } from '../../../../../../src/constants/scene/actors/songs'
 import {
     BASEMENT_TAKEOUT__SHARED,
     BUDWEISER__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/food'
-import { BOOK__SHARED } from '../../../../../../app/constants/scene/sharedStyles/paper'
-import { RAINBOW__SHARED } from '../../../../../../app/constants/scene/sharedStyles/wardrobe'
+} from '../../../../../../src/constants/scene/sharedStyles/food'
+import { BOOK__SHARED } from '../../../../../../src/constants/scene/sharedStyles/paper'
+import { RAINBOW__SHARED } from '../../../../../../src/constants/scene/sharedStyles/wardrobe'
 
 export default {
     [EATING]: [

@@ -3,13 +3,13 @@ import {
     FIXTURE,
     FURNITURE,
     PANEL,
-} from '../../../../../app/constants/scene/things'
+} from '../../../../../src/constants/scene/things'
 import {
     BUBBLE_SMALL__AMY,
     BUBBLE_MEDIUM__AMY,
     BUBBLE_LARGE__AMY,
     THOUGHT_AMY,
-} from '../../../../../app/constants/scene/things/bubbles'
+} from '../../../../../src/constants/scene/things/bubbles'
 import {
     BENNETT_SHOE,
     BENNETT_SHOE_REFLECTION,
@@ -21,19 +21,19 @@ import {
     LIZ_PHONE_BASE,
     LIZ_PHONE_BASE_REFLECTION,
     LIZ_PHONE_REFLECTION,
-} from '../../../../../app/constants/scene/things/fixtures'
+} from '../../../../../src/constants/scene/things/fixtures'
 import {
     LIZ_PILLOWS,
     LIZ_PILLOWS_PILE,
     LIZ_PILLOWS_PILE_REFLECTION,
     LIZ_PILLOWS_REFLECTION,
-} from '../../../../../app/constants/scene/things/furnitures'
+} from '../../../../../src/constants/scene/things/furnitures'
 import {
     LIZ_BED,
     LIZ_NIGHTSTAND,
     MILK_CRATE__VEGAN,
     PHONE_CALL_PANEL,
-} from '../../../../../app/constants/scene/things/panels'
+} from '../../../../../src/constants/scene/things/panels'
 import {
     BUBBLE_LARGE_CONFIG,
     BUBBLE_MEDIUM_CONFIG,

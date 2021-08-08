@@ -1,4 +1,4 @@
-import { getWindow } from '../../../app/utils/browser'
+import { getWindow } from '../../../src/utils/browser'
 
 const
     PADDING_DASHBOARD = 10,

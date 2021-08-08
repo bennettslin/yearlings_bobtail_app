@@ -1,9 +1,9 @@
 import {
     BENNETT,
     MIRIAM,
-} from '../../../../../../app/constants/scene/actors'
-import { REMOVING_PANTS } from '../../../../../../app/constants/scene/actors/bennett'
-import { PERFUMING } from '../../../../../../app/constants/scene/actors/miriam'
+} from '../../../../../../src/constants/scene/actors'
+import { REMOVING_PANTS } from '../../../../../../src/constants/scene/actors/bennett'
+import { PERFUMING } from '../../../../../../src/constants/scene/actors/miriam'
 
 export default {
     [BENNETT]: {

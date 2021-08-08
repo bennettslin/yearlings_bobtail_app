@@ -1,10 +1,10 @@
-import { CATHOLIC_CHURCH_KEY } from '../../../../../app/constants/scene/scenes'
+import { CATHOLIC_CHURCH_KEY } from '../../../../../src/constants/scene/scenes'
 
 import {
     GROUND_CLEAR_COLOUR as G,
     STREET_COLOUR as T,
     PAVEMENT_COLOUR as V,
-} from '../../../../../app/constants/scene/cubes/colours'
+} from '../../../../../src/constants/scene/cubes/colours'
 
 export default {
     [CATHOLIC_CHURCH_KEY]: {

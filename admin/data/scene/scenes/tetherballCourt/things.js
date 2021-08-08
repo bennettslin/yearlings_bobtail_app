@@ -2,17 +2,17 @@ import {
     BUBBLE,
     CUTOUT,
     FLAT,
-} from '../../../../../app/constants/scene/things'
+} from '../../../../../src/constants/scene/things'
 import {
     BUBBLE_SMALL__RIGHT,
     BUBBLE_MEDIUM__RIGHT,
     BUBBLE_LARGE__RIGHT,
-} from '../../../../../app/constants/scene/things/bubbles'
+} from '../../../../../src/constants/scene/things/bubbles'
 import {
     CAMPUS_TREE_SINGLE__TETHERBALL,
     CAMPUS_TREE_DOUBLE__TETHERBALL,
-} from '../../../../../app/constants/scene/things/cutouts'
-import { SCHOOL_BUNGALOW } from '../../../../../app/constants/scene/things/flats'
+} from '../../../../../src/constants/scene/things/cutouts'
+import { SCHOOL_BUNGALOW } from '../../../../../src/constants/scene/things/flats'
 import {
     BUBBLE_LARGE_CONFIG,
     BUBBLE_MEDIUM_CONFIG,

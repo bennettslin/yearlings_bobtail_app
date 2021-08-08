@@ -27,7 +27,7 @@ import {
     ALLEY,
     BROKEN_HEARTED,
     DEMONSTRATION,
-} from '../../../../../../app/constants/scene/actors/bennett'
+} from '../../../../../../src/constants/scene/actors/bennett'
 import {
     EATING,
     DATE_ENDING,
@@ -51,18 +51,18 @@ import {
     PAST,
     FUTURE,
     EL_TORITO,
-} from '../../../../../../app/constants/scene/actors/songs'
-import { TRAY__SHARED } from '../../../../../../app/constants/scene/sharedStyles/cafeteria'
+} from '../../../../../../src/constants/scene/actors/songs'
+import { TRAY__SHARED } from '../../../../../../src/constants/scene/sharedStyles/cafeteria'
 import {
     BASEMENT_TAKEOUT__SHARED,
     FROZEN_MEATS__SHARED,
     LANCET_PEN__SHARED,
     ROBITUSSIN__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/food'
+} from '../../../../../../src/constants/scene/sharedStyles/food'
 import {
     ATTIC_LINENS__SHARED,
     HOSPITAL_LINENS__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/furniture'
+} from '../../../../../../src/constants/scene/sharedStyles/furniture'
 import {
     ACOUSTIC_GUITAR__SHARED,
     BASS_CASE__SHARED,
@@ -70,10 +70,10 @@ import {
     ELECTRIC_GUITAR__SHARED,
     GUITAR_CASE__SHARED,
     MANDOLIN__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/instruments'
-import { BOOK__SHARED } from '../../../../../../app/constants/scene/sharedStyles/paper'
-import { DOLLAR__SHARED } from '../../../../../../app/constants/scene/sharedStyles/print'
-import { GO_KART__SHARED } from '../../../../../../app/constants/scene/sharedStyles/vehicles'
+} from '../../../../../../src/constants/scene/sharedStyles/instruments'
+import { BOOK__SHARED } from '../../../../../../src/constants/scene/sharedStyles/paper'
+import { DOLLAR__SHARED } from '../../../../../../src/constants/scene/sharedStyles/print'
+import { GO_KART__SHARED } from '../../../../../../src/constants/scene/sharedStyles/vehicles'
 import {
     BRACELET__SHARED,
     CAFETERIA__SHARED,
@@ -82,7 +82,7 @@ import {
     MESSENGER_BAG__SHARED,
     MIRIAM_CONDOM__SHARED,
     WALKMAN__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/wardrobe'
+} from '../../../../../../src/constants/scene/sharedStyles/wardrobe'
 
 export default {
     [BREAKUP_DEJECTED]: null,

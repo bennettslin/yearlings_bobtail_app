@@ -1,13 +1,13 @@
-import { TAIWAN_STAIRS_KEY } from '../../../../../app/constants/scene/scenes'
+import { TAIWAN_STAIRS_KEY } from '../../../../../src/constants/scene/scenes'
 
 import {
     DEFAULT_CLEAR_COLOUR as D,
     PAVEMENT_COLOUR as V,
     TAIWAN_GATE_COLOUR as A,
     NIGHT_COLOUR as Z,
-} from '../../../../../app/constants/scene/cubes/colours'
+} from '../../../../../src/constants/scene/cubes/colours'
 
-import { e, g, k } from '../../../../../app/constants/scene/cubes/zIndices'
+import { e, g, k } from '../../../../../src/constants/scene/cubes/zIndices'
 
 export default {
     [TAIWAN_STAIRS_KEY]: {

@@ -1,12 +1,12 @@
 import {
     CUTOUT,
     FLAT,
-} from '../../../../../app/constants/scene/things'
+} from '../../../../../src/constants/scene/things'
 import {
     TWIN_STREETLAMP__FAR,
     TWIN_STREETLAMP__MIDDLE,
     TWIN_STREETLAMP__NEAR,
-} from '../../../../../app/constants/scene/things/cutouts'
+} from '../../../../../src/constants/scene/things/cutouts'
 import {
     RESIDENTIAL_FAR_LEFT,
     RESIDENTIAL_MIDDLE_LEFT,
@@ -14,7 +14,7 @@ import {
     RESIDENTIAL_FAR_RIGHT,
     RESIDENTIAL_MIDDLE_RIGHT,
     RESIDENTIAL_NEAR_RIGHT,
-} from '../../../../../app/constants/scene/things/flats'
+} from '../../../../../src/constants/scene/things/flats'
 
 export default {
     [CUTOUT]: {

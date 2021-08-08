@@ -2,8 +2,8 @@ import {
     BENNETT,
     ANA_HOWIE,
     TOMER,
-} from '../../../../../app/constants/scene/actors'
-import { CEMETERY } from '../../../../../app/constants/scene/actors/songs'
+} from '../../../../../src/constants/scene/actors'
+import { CEMETERY } from '../../../../../src/constants/scene/actors/songs'
 
 export default {
     [BENNETT]: {

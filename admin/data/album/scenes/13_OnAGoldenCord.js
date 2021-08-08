@@ -1,24 +1,24 @@
-import { ACTOR } from '../../../../app/constants/scene'
+import { ACTOR } from '../../../../src/constants/scene'
 import {
     BACKDROP,
     BUBBLE,
     CUTOUT,
     FLAT,
     PANEL,
-} from '../../../../app/constants/scene/things'
+} from '../../../../src/constants/scene/things'
 import {
     OAKLAND_COUCH_THOUGHT_KEY,
     OAKLAND_HOUSES_KEY,
     OAKLAND_RESIDENTIAL_KEY,
     OAKLAND_COMMERCIAL_KEY,
     OAKLAND_PUBLIC_KEY,
-} from '../../../../app/constants/scene/scenes'
+} from '../../../../src/constants/scene/scenes'
 import {
     TIME_NIGHT,
     TIME_TWILIGHT,
     TIME_DAWN,
     SEASON_AUTUMN,
-} from '../../../../app/constants/scene/sky'
+} from '../../../../src/constants/scene/sky'
 import {
     YOUNG_BENNETT,
     BENNETT,
@@ -29,36 +29,36 @@ import {
     WILLY,
     AMY_NESTOR_TOMER,
     STEPHANIE,
-} from '../../../../app/constants/scene/actors'
-import { OFFICER } from '../../../../app/constants/scene/actors/amyNestorTomer'
+} from '../../../../src/constants/scene/actors'
+import { OFFICER } from '../../../../src/constants/scene/actors/amyNestorTomer'
 import {
     CORD_SIDE,
     CORD_REAR,
-} from '../../../../app/constants/scene/actors/bennett'
-import { AWKWARD_CONSOLATION } from '../../../../app/constants/scene/actors/bennettLiz'
+} from '../../../../src/constants/scene/actors/bennett'
+import { AWKWARD_CONSOLATION } from '../../../../src/constants/scene/actors/bennettLiz'
 import {
     HORSING,
     DRYING_TEARS,
-} from '../../../../app/constants/scene/actors/bennettStephanie'
-import { BENNETT_DEFIANT } from '../../../../app/constants/scene/actors/stephanie'
-import { CROSSING_GUARD } from '../../../../app/constants/scene/actors/willy'
-import { YOUNG_CHILD } from '../../../../app/constants/scene/actors/songs'
+} from '../../../../src/constants/scene/actors/bennettStephanie'
+import { BENNETT_DEFIANT } from '../../../../src/constants/scene/actors/stephanie'
+import { CROSSING_GUARD } from '../../../../src/constants/scene/actors/willy'
+import { YOUNG_CHILD } from '../../../../src/constants/scene/actors/songs'
 import {
     OAKLAND_SIDE__LEVEL,
     OAKLAND_FRONT__HIGH,
     OAKLAND_FRONT__LOW,
     THOUGHT_MEDIUM__GOLDEN,
-} from '../../../../app/constants/scene/things/backdrops'
+} from '../../../../src/constants/scene/things/backdrops'
 import {
     BUBBLE_SMALL__GOLDEN,
     BUBBLE_MEDIUM__GOLDEN,
     BUBBLE_LARGE__GOLDEN,
-} from '../../../../app/constants/scene/things/bubbles'
+} from '../../../../src/constants/scene/things/bubbles'
 import {
     TWIN_STREETLAMP__FAR,
     TWIN_STREETLAMP__MIDDLE,
     TWIN_STREETLAMP__NEAR,
-} from '../../../../app/constants/scene/things/cutouts'
+} from '../../../../src/constants/scene/things/cutouts'
 import {
     OAKLAND_HOUSE_LEFT,
     OAKLAND_HOUSE_RIGHT,
@@ -81,8 +81,8 @@ import {
     OAKLAND_FLAG,
     DISTANT_BUILDINGS,
     DISTANT_HOUSES,
-} from '../../../../app/constants/scene/things/flats'
-import { LIZ_COUCH__ROOM } from '../../../../app/constants/scene/things/panels'
+} from '../../../../src/constants/scene/things/flats'
+import { LIZ_COUCH__ROOM } from '../../../../src/constants/scene/things/panels'
 
 export default [
     {

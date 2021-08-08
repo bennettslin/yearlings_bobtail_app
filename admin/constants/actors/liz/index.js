@@ -6,7 +6,7 @@ import {
     BENNETT_LIZ_REFLECTION,
     LIZ_REFLECTION,
     KHARI_LIZ_REFLECTION,
-} from '../../../../app/constants/scene/actors'
+} from '../../../../src/constants/scene/actors'
 import {
     ASLEEP_REACHING,
     REACHING_REFLECTION,
@@ -18,7 +18,7 @@ import {
     DEFENDING,
     NOT_HUNGRY,
     ASLEEP_COUCH,
-} from '../../../../app/constants/scene/actors/liz'
+} from '../../../../src/constants/scene/actors/liz'
 import {
     GINGERBREAD_PRISON,
     CHEEK_UNVEILED,
@@ -35,13 +35,13 @@ import {
     GETTING_DARK,
     CLIFF,
     FINAL_DREAM,
-} from '../../../../app/constants/scene/actors/bennettLiz'
+} from '../../../../src/constants/scene/actors/bennettLiz'
 import {
     JOKING_LAUGHING,
     PROTECTIVE_CONCERNED,
     CARESS,
     CARESS_REFLECTION,
-} from '../../../../app/constants/scene/actors/khariLiz'
+} from '../../../../src/constants/scene/actors/khariLiz'
 import {
     DATE_ENDING,
     MUSEUM,
@@ -54,7 +54,7 @@ import {
     LEAVING_CRUMBLED,
     EL_TORITO,
     EPILOGUE,
-} from '../../../../app/constants/scene/actors/songs'
+} from '../../../../src/constants/scene/actors/songs'
 
 export default [
     {

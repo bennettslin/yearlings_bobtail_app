@@ -4,7 +4,7 @@ import {
     FIXTURE,
     FURNITURE,
     PANEL,
-} from '../../../../../app/constants/scene/things'
+} from '../../../../../src/constants/scene/things'
 import {
     BLINDS_OUTSIDE__NEIGHBOUR,
     NEIGHBOUR_DOOR,
@@ -12,16 +12,16 @@ import {
     BENNETT_DOOR_INSIDE,
     BENNETT_DOOR_INSIDE_OPEN,
     BENNETT_GATE_SIDE_OPEN,
-} from '../../../../../app/constants/scene/things/doors'
+} from '../../../../../src/constants/scene/things/doors'
 import {
     LIGHT_SWITCH__OFF,
     LIGHT_SWITCH__ON,
     LINGERIE_DRAWING,
     VASELINE,
-} from '../../../../../app/constants/scene/things/fixtures'
-import { RECYCLING_BIN__NEIGHBOUR } from '../../../../../app/constants/scene/things/cutouts'
-import { BENNETT_PILLOW__BED } from '../../../../../app/constants/scene/things/furnitures'
-import { BENNETT_BED } from '../../../../../app/constants/scene/things/panels'
+} from '../../../../../src/constants/scene/things/fixtures'
+import { RECYCLING_BIN__NEIGHBOUR } from '../../../../../src/constants/scene/things/cutouts'
+import { BENNETT_PILLOW__BED } from '../../../../../src/constants/scene/things/furnitures'
+import { BENNETT_BED } from '../../../../../src/constants/scene/things/panels'
 
 export default {
     [CUTOUT]: {

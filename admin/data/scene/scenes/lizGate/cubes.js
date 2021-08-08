@@ -1,7 +1,7 @@
 import {
     LIZ_GATE_KEY,
     LIZ_GATE_STREET_KEY,
-} from '../../../../../app/constants/scene/scenes'
+} from '../../../../../src/constants/scene/scenes'
 
 import {
     DEFAULT_CLEAR_COLOUR as D,
@@ -12,9 +12,9 @@ import {
     ROOF_COLOUR as C,
     LIZ_WALL_COLOUR as W,
     LIZ_EXTERIOR_COLOUR as X,
-} from '../../../../../app/constants/scene/cubes/colours'
+} from '../../../../../src/constants/scene/cubes/colours'
 
-import { d, f, k } from '../../../../../app/constants/scene/cubes/zIndices'
+import { d, f, k } from '../../../../../src/constants/scene/cubes/zIndices'
 
 /**
  * Blinds and gate should match in lizCouch.

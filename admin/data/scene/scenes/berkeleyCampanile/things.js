@@ -2,19 +2,19 @@ import {
     CUTOUT,
     FLAT,
     PUPPET,
-} from '../../../../../app/constants/scene/things'
+} from '../../../../../src/constants/scene/things'
 import {
     SIGNPOST,
     STINK_PLANT,
     CAMPUS_TREE_SINGLE__CAMPANILE,
     CAMPUS_TREE_DOUBLE__CAMPANILE,
-} from '../../../../../app/constants/scene/things/cutouts'
+} from '../../../../../src/constants/scene/things/cutouts'
 import {
     CAMPANILE,
     BERKELEY_BUILDING_TALL,
     BERKELEY_BUILDING_WIDE__CAMPANILE,
-} from '../../../../../app/constants/scene/things/flats'
-import { GHOST_ODIN_DEMONSTRATION } from '../../../../../app/constants/scene/things/puppets'
+} from '../../../../../src/constants/scene/things/flats'
+import { GHOST_ODIN_DEMONSTRATION } from '../../../../../src/constants/scene/things/puppets'
 
 export default {
     [CUTOUT]: {

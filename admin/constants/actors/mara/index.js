@@ -1,7 +1,7 @@
 import {
     MARA,
     JACOB_MARA,
-} from '../../../../app/constants/scene/actors'
+} from '../../../../src/constants/scene/actors'
 import {
     FLIRTING,
     EATING,
@@ -9,7 +9,7 @@ import {
     WAITING,
     GOPI,
     EPILOGUE,
-} from '../../../../app/constants/scene/actors/songs'
+} from '../../../../src/constants/scene/actors/songs'
 
 export default [
     {

@@ -21,8 +21,8 @@ import {
     AMY,
     STEPHANIE,
     WADE,
-} from '../../../../../../app/constants/scene/actors'
-import { EPILOGUE } from '../../../../../../app/constants/scene/actors/songs'
+} from '../../../../../../src/constants/scene/actors'
+import { EPILOGUE } from '../../../../../../src/constants/scene/actors/songs'
 
 export default {
     [SASHA_BENNETT]: {

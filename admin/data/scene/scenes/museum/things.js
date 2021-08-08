@@ -1,8 +1,8 @@
-import { CUTOUT } from '../../../../../app/constants/scene/things'
+import { CUTOUT } from '../../../../../src/constants/scene/things'
 import {
     CAVEMAN_BONES,
     MUSEUM_DISPLAY,
-} from '../../../../../app/constants/scene/things/cutouts'
+} from '../../../../../src/constants/scene/things/cutouts'
 
 export default {
     [CUTOUT]: {

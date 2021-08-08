@@ -3,19 +3,19 @@ import {
     FIXTURE,
     FLAT,
     PANEL,
-} from '../../../../../app/constants/scene/things'
+} from '../../../../../src/constants/scene/things'
 import {
     CONSTELLATION_TARPIT,
     CONSTELLATION_SIBLING,
-} from '../../../../../app/constants/scene/things/bubbles'
-import { EVIAN_BOTTLES } from '../../../../../app/constants/scene/things/fixtures'
-import { DRIVING_HOUSE__SINGLE } from '../../../../../app/constants/scene/things/flats'
+} from '../../../../../src/constants/scene/things/bubbles'
+import { EVIAN_BOTTLES } from '../../../../../src/constants/scene/things/fixtures'
+import { DRIVING_HOUSE__SINGLE } from '../../../../../src/constants/scene/things/flats'
 import {
     SATURN_INTERIOR,
     SATURN_EXTERIOR,
     SATURN_SEAT,
     SATURN_SEAT_DOWN,
-} from '../../../../../app/constants/scene/things/panels'
+} from '../../../../../src/constants/scene/things/panels'
 
 export default {
     [BUBBLE]: {

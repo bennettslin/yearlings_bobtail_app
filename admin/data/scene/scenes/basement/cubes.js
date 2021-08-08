@@ -1,4 +1,4 @@
-import { BASEMENT_KEY } from '../../../../../app/constants/scene/scenes'
+import { BASEMENT_KEY } from '../../../../../src/constants/scene/scenes'
 
 import {
     DEFAULT_CLEAR_COLOUR as D,
@@ -7,9 +7,9 @@ import {
     DIRT_FLOOR_COLOUR as F,
     UNDERGROUND_WALL_COLOUR as W,
     BASEMENT_CEILING_COLOUR as C,
-} from '../../../../../app/constants/scene/cubes/colours'
+} from '../../../../../src/constants/scene/cubes/colours'
 
-import { b, d, e, f, k } from '../../../../../app/constants/scene/cubes/zIndices'
+import { b, d, e, f, k } from '../../../../../src/constants/scene/cubes/zIndices'
 
 export const DEFAULT_CEILING = {
     hslaColours: [

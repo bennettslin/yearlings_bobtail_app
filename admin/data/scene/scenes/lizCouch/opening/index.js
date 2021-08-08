@@ -1,9 +1,9 @@
 import {
     LIZ,
     KHARI,
-} from '../../../../../../app/constants/scene/actors'
-import { ARRIVED } from '../../../../../../app/constants/scene/actors/khari'
-import { OPENING_DOOR } from '../../../../../../app/constants/scene/actors/liz'
+} from '../../../../../../src/constants/scene/actors'
+import { ARRIVED } from '../../../../../../src/constants/scene/actors/khari'
+import { OPENING_DOOR } from '../../../../../../src/constants/scene/actors/liz'
 
 export default {
     [LIZ]: {

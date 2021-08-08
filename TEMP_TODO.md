@@ -45,7 +45,3 @@
 * "I would" into "I'd." "I'd be" works better, any others?
 * When to use commas.
 * When to use contractions.
-
-# Bobtail Yearlings website
-* Add WordPress to website, have blog section.
-* Link to Blogspot from WordPress.

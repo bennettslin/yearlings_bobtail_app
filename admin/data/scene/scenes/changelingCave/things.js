@@ -2,16 +2,16 @@ import {
     CUTOUT,
     FLAT,
     PANEL,
-} from '../../../../../app/constants/scene/things'
-import { CAMPFIRE } from '../../../../../app/constants/scene/things/cutouts'
-import { FAMILY_HOUSE } from '../../../../../app/constants/scene/things/flats'
+} from '../../../../../src/constants/scene/things'
+import { CAMPFIRE } from '../../../../../src/constants/scene/things/cutouts'
+import { FAMILY_HOUSE } from '../../../../../src/constants/scene/things/flats'
 import {
     CAVE_SHADOWS,
     STALACTITES,
     TROLL_SHADOW_LEFT,
     TROLL_SHADOW_RIGHT,
     TROLL_SHADOW_FAR,
-} from '../../../../../app/constants/scene/things/panels'
+} from '../../../../../src/constants/scene/things/panels'
 
 export default {
     [CUTOUT]: {

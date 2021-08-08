@@ -1,11 +1,11 @@
-import { SCHOOLBUS_KEY } from '../../../../../app/constants/scene/scenes'
+import { SCHOOLBUS_KEY } from '../../../../../src/constants/scene/scenes'
 
 import {
     DEFAULT_CLEAR_COLOUR as D,
     PAVEMENT_COLOUR as V,
     STREET_COLOUR as T,
     CROSSWALK_COLOUR as K,
-} from '../../../../../app/constants/scene/cubes/colours'
+} from '../../../../../src/constants/scene/cubes/colours'
 
 export default {
     [SCHOOLBUS_KEY]: {

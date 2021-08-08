@@ -3,10 +3,10 @@ import {
     LIZ,
     KHARI,
     STEPHANIE,
-} from '../../../../../app/constants/scene/actors'
-import { BACKSTAGE } from '../../../../../app/constants/scene/actors/songs'
-import { DOUBLE_ALBERT } from '../../../../../app/constants/scene/actors/khari'
-import { FLAPPER } from '../../../../../app/constants/scene/actors/stephanie'
+} from '../../../../../src/constants/scene/actors'
+import { BACKSTAGE } from '../../../../../src/constants/scene/actors/songs'
+import { DOUBLE_ALBERT } from '../../../../../src/constants/scene/actors/khari'
+import { FLAPPER } from '../../../../../src/constants/scene/actors/stephanie'
 
 export default {
     [STEPHANIE]: {

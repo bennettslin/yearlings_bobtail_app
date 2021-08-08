@@ -1,9 +1,9 @@
 import {
     BENNETT_LIZ,
     AMY,
-} from '../../../../../../app/constants/scene/actors'
-import { DOCTOR } from '../../../../../../app/constants/scene/actors/amy'
-import { FINAL_DREAM } from '../../../../../../app/constants/scene/actors/bennettLiz'
+} from '../../../../../../src/constants/scene/actors'
+import { DOCTOR } from '../../../../../../src/constants/scene/actors/amy'
+import { FINAL_DREAM } from '../../../../../../src/constants/scene/actors/bennettLiz'
 
 export default {
     [BENNETT_LIZ]: {

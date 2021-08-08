@@ -1,4 +1,4 @@
-import { ACTOR } from '../../../../app/constants/scene'
+import { ACTOR } from '../../../../src/constants/scene'
 import {
     BACKDROP,
     BUBBLE,
@@ -8,54 +8,54 @@ import {
     FIXTURE,
     FLAT,
     PANEL,
-} from '../../../../app/constants/scene/things'
+} from '../../../../src/constants/scene/things'
 import {
     BENNETT_COUCH_THOUGHT_KEY,
     BERKELEY_BANCROFT_KEY,
     BERKELEY_CAMPANILE_KEY,
     CATHOLIC_CHURCH_KEY,
     COURTYARD_KEY,
-} from '../../../../app/constants/scene/scenes'
+} from '../../../../src/constants/scene/scenes'
 import {
     SEASON_SPRING,
     SEASON_THOUGHT,
     TIME_EVENING,
     TIME_MORNING,
     TIME_NIGHT,
-} from '../../../../app/constants/scene/sky'
+} from '../../../../src/constants/scene/sky'
 import {
     AMY,
     BENNETT,
     CATHERINE,
     WADE,
-} from '../../../../app/constants/scene/actors'
-import { SMOKER } from '../../../../app/constants/scene/actors/amy'
+} from '../../../../src/constants/scene/actors'
+import { SMOKER } from '../../../../src/constants/scene/actors/amy'
 import {
     BREAKUP_DEJECTED,
     CATHOLIC_IDEA,
     CATHOLIC_PENSIVE,
     PIOUS,
     SOLICITING_OPINION,
-} from '../../../../app/constants/scene/actors/bennett'
+} from '../../../../src/constants/scene/actors/bennett'
 import {
     PUZZLED,
     QUIPPING,
     WEEPING,
-} from '../../../../app/constants/scene/actors/catherine'
-import { CATHOLIC_GUY } from '../../../../app/constants/scene/actors/wade'
+} from '../../../../src/constants/scene/actors/catherine'
+import { CATHOLIC_GUY } from '../../../../src/constants/scene/actors/wade'
 import {
     OAKLAND_SIDE__LEVEL,
     THOUGHT_LARGE__RIGHT,
-} from '../../../../app/constants/scene/things/backdrops'
+} from '../../../../src/constants/scene/things/backdrops'
 import {
     BUBBLE_LARGE__RIGHT,
     BUBBLE_MEDIUM__RIGHT,
     BUBBLE_SMALL__RIGHT,
-} from '../../../../app/constants/scene/things/bubbles'
+} from '../../../../src/constants/scene/things/bubbles'
 import {
     POSTER_NIRVANA,
     ALBUM_POLICE,
-} from '../../../../app/constants/scene/things/cardboards'
+} from '../../../../src/constants/scene/things/cardboards'
 import {
     ASH_CAN,
     BUSH_DOUBLE__COURTYARD,
@@ -67,18 +67,18 @@ import {
     RECYCLING_BIN__BENNETT,
     SIGNPOST,
     STINK_PLANT,
-} from '../../../../app/constants/scene/things/cutouts'
+} from '../../../../src/constants/scene/things/cutouts'
 import {
     BANCROFT_DOOR,
     BENNETT_DOOR_OUTSIDE,
     BENNETT_GATE_SIDE,
     BLINDS_OUTSIDE__BENNETT,
-} from '../../../../app/constants/scene/things/doors'
+} from '../../../../src/constants/scene/things/doors'
 import {
     BENNETT_COUCH_LAMP,
     BENNETT_RECORD_PLAYER,
     ELECTRIC_GUITAR,
-} from '../../../../app/constants/scene/things/fixtures'
+} from '../../../../src/constants/scene/things/fixtures'
 import {
     BERKELEY_BUILDING_TALL,
     BERKELEY_BUILDING_WIDE__BANCROFT,
@@ -89,14 +89,14 @@ import {
     NEAR_BUILDINGS,
     ST_JOSEPHS_ANNEX,
     ST_JOSEPHS_CHURCH,
-} from '../../../../app/constants/scene/things/flats'
+} from '../../../../src/constants/scene/things/flats'
 import {
     BENNETT_NIGHTSTAND,
     BENNETT_RECORD_STAND,
     WIDE_ARMREST_BENNETT__LEFT,
     WIDE_ARMREST_BENNETT__RIGHT,
     WIDE_COUCH_BENNETT,
-} from '../../../../app/constants/scene/things/panels'
+} from '../../../../src/constants/scene/things/panels'
 
 export default [
     {

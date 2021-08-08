@@ -1,9 +1,9 @@
 import {
     BENNETT_STEPHANIE,
     AMY_NESTOR_TOMER,
-} from '../../../../../app/constants/scene/actors'
-import { OFFICER } from '../../../../../app/constants/scene/actors/amyNestorTomer'
-import { HORSING } from '../../../../../app/constants/scene/actors/bennettStephanie'
+} from '../../../../../src/constants/scene/actors'
+import { OFFICER } from '../../../../../src/constants/scene/actors/amyNestorTomer'
+import { HORSING } from '../../../../../src/constants/scene/actors/bennettStephanie'
 
 export default {
     [BENNETT_STEPHANIE]: {

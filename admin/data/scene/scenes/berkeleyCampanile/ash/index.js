@@ -1,9 +1,9 @@
 import {
     BENNETT,
     CATHERINE,
-} from '../../../../../../app/constants/scene/actors'
-import { PIOUS } from '../../../../../../app/constants/scene/actors/bennett'
-import { PUZZLED } from '../../../../../../app/constants/scene/actors/catherine'
+} from '../../../../../../src/constants/scene/actors'
+import { PIOUS } from '../../../../../../src/constants/scene/actors/bennett'
+import { PUZZLED } from '../../../../../../src/constants/scene/actors/catherine'
 
 export default {
     [BENNETT]: {

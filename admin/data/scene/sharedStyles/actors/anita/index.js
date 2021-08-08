@@ -2,12 +2,12 @@ import {
     EXASPERATED,
     CONCERNED,
     CHEERING,
-} from '../../../../../../app/constants/scene/actors/anita'
-import { YOUNG_CHILD } from '../../../../../../app/constants/scene/actors/songs'
+} from '../../../../../../src/constants/scene/actors/anita'
+import { YOUNG_CHILD } from '../../../../../../src/constants/scene/actors/songs'
 import {
     BACKPACK__SHARED,
     RAINBOW__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/wardrobe'
+} from '../../../../../../src/constants/scene/sharedStyles/wardrobe'
 
 export default {
     [EXASPERATED]: [

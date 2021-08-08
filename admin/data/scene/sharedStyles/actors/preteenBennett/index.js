@@ -15,24 +15,24 @@ import {
     STOIC,
     WISTFUL,
     SHEEPISH,
-} from '../../../../../../app/constants/scene/actors/preteenBennett'
-import { ASLEEP } from '../../../../../../app/constants/scene/actors/songs'
-import { PUDDING__SHARED } from '../../../../../../app/constants/scene/sharedStyles/food'
+} from '../../../../../../src/constants/scene/actors/preteenBennett'
+import { ASLEEP } from '../../../../../../src/constants/scene/actors/songs'
+import { PUDDING__SHARED } from '../../../../../../src/constants/scene/sharedStyles/food'
 import {
     BENNETT_LINENS__SHARED,
     TAIWAN_LINENS__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/furniture'
+} from '../../../../../../src/constants/scene/sharedStyles/furniture'
 import {
     BOOK__SHARED,
     LETTER__SHARED,
     MAGAZINE__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/paper'
-import { DOLLAR__SHARED } from '../../../../../../app/constants/scene/sharedStyles/print'
+} from '../../../../../../src/constants/scene/sharedStyles/paper'
+import { DOLLAR__SHARED } from '../../../../../../src/constants/scene/sharedStyles/print'
 import {
     TAIWAN_BUOY__SHARED,
     TAIWAN_RICKSHAW__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/taiwan'
-import { ALL_VEHICLES__SHARED } from '../../../../../../app/constants/scene/sharedStyles/vehicles'
+} from '../../../../../../src/constants/scene/sharedStyles/taiwan'
+import { ALL_VEHICLES__SHARED } from '../../../../../../src/constants/scene/sharedStyles/vehicles'
 
 export default {
     [CAUTIOUS]: null,

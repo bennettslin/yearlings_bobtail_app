@@ -3,11 +3,11 @@ import {
     AMY,
     MARA,
     JACOB,
-} from '../../../../../app/constants/scene/actors'
+} from '../../../../../src/constants/scene/actors'
 import {
     FLIRTING,
     CARRYING,
-} from '../../../../../app/constants/scene/actors/songs'
+} from '../../../../../src/constants/scene/actors/songs'
 
 export default {
     [JACOB]: {

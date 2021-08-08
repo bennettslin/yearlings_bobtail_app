@@ -1,5 +1,5 @@
-import { LEFT } from '../../../../../../app/constants/scene/cubes'
-import { BEDROOM_SPACE_KEY } from '../../../../../../app/constants/scene/scenes'
+import { LEFT } from '../../../../../../src/constants/scene/cubes'
+import { BEDROOM_SPACE_KEY } from '../../../../../../src/constants/scene/scenes'
 
 import {
     DEFAULT_CLEAR_COLOUR as D,
@@ -9,7 +9,7 @@ import {
     FUTURE_SPOTLIGHT_LIGHT_COLOUR as M,
     FUTURE_SPOTLIGHT_LIGHTER_COLOUR as N,
     FUTURE_SPOTLIGHT_LIGHTEST_COLOUR as O,
-} from '../../../../../../app/constants/scene/cubes/colours'
+} from '../../../../../../src/constants/scene/cubes/colours'
 export const BEDROOM_SPACE_CUBES = {
     [BEDROOM_SPACE_KEY]: {
         slantDirection: LEFT,

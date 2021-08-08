@@ -24,7 +24,7 @@ import {
     PUPPET_MOTHER_END,
     PUPPET_MOTHER_MIDDLE,
     PUPPET_REATTA,
-} from '../../../../../../app/constants/scene/things/puppets'
+} from '../../../../../../src/constants/scene/things/puppets'
 import {
     ANITA,
     BENNETT,
@@ -32,20 +32,20 @@ import {
     FATHER,
     MIRIAM,
     MOTHER,
-} from '../../../../../../app/constants/scene/actors'
+} from '../../../../../../src/constants/scene/actors'
 import {
     ALL_CLOTHING__SHARED,
     ALL_PEOPLE__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/actors'
+} from '../../../../../../src/constants/scene/sharedStyles/actors'
 import {
     ODIN_GHOST__SHARED,
     OPAL__SHARED,
     PEAFOWL__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/animals'
+} from '../../../../../../src/constants/scene/sharedStyles/animals'
 import {
     ALL_VEHICLES__SHARED,
     REATTA__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/vehicles'
+} from '../../../../../../src/constants/scene/sharedStyles/vehicles'
 
 export default {
     [GHOST_ODIN_ALLEY]: ODIN_GHOST__SHARED,

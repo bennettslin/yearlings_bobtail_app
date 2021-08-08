@@ -102,7 +102,7 @@ import {
     BENNETT_LIZ_REFLECTION,
     LIZ_REFLECTION,
     KHARI_LIZ_REFLECTION,
-} from '../../../../../app/constants/scene/actors'
+} from '../../../../../src/constants/scene/actors'
 
 export default {
     [YOUNG_BENNETT]: youngBennett,

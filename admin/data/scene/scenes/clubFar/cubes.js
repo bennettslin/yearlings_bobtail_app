@@ -1,13 +1,13 @@
-import { CLUB_FAR_KEY } from '../../../../../app/constants/scene/scenes'
+import { CLUB_FAR_KEY } from '../../../../../src/constants/scene/scenes'
 
 import {
     OLD_FLOOR_COLOUR as F,
     CLUB_FRONT_PRIMARY_COLOUR as B,
     CLUB_FRONT_SECONDARY_COLOUR as E,
     PLATFORM_COLOUR as P,
-} from '../../../../../app/constants/scene/cubes/colours'
+} from '../../../../../src/constants/scene/cubes/colours'
 
-import { g } from '../../../../../app/constants/scene/cubes/zIndices'
+import { g } from '../../../../../src/constants/scene/cubes/zIndices'
 
 export default {
     [CLUB_FAR_KEY]: {

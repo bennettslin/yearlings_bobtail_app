@@ -3,11 +3,11 @@ import {
     ANA,
     TRISTAN,
     NESTOR,
-} from '../../../../../../app/constants/scene/actors'
-import { CHUCKLING } from '../../../../../../app/constants/scene/actors/ana'
-import { DROPPING_MEATS } from '../../../../../../app/constants/scene/actors/bennett'
-import { INJURED } from '../../../../../../app/constants/scene/actors/nestor'
-import { PUNCHING } from '../../../../../../app/constants/scene/actors/tristan'
+} from '../../../../../../src/constants/scene/actors'
+import { CHUCKLING } from '../../../../../../src/constants/scene/actors/ana'
+import { DROPPING_MEATS } from '../../../../../../src/constants/scene/actors/bennett'
+import { INJURED } from '../../../../../../src/constants/scene/actors/nestor'
+import { PUNCHING } from '../../../../../../src/constants/scene/actors/tristan'
 
 export default {
     [BENNETT]: {

@@ -1,4 +1,4 @@
-import { ACTOR } from '../../../../app/constants/scene'
+import { ACTOR } from '../../../../src/constants/scene'
 import {
     BACKDROP,
     CARDBOARD,
@@ -8,14 +8,14 @@ import {
     FURNITURE,
     PANEL,
     PUPPET,
-} from '../../../../app/constants/scene/things'
+} from '../../../../src/constants/scene/things'
 import {
     BASEMENT_BED_DARK_KEY,
     BASEMENT_BED_MAGIC_KEY,
     SNOWGLOBES_PAST_KEY,
     SNOWGLOBES_PRESENT_KEY,
     SNOWGLOBES_FUTURE_KEY,
-} from '../../../../app/constants/scene/scenes'
+} from '../../../../src/constants/scene/scenes'
 import {
     TIME_NIGHT,
     SEASON_AUTUMN,
@@ -23,7 +23,7 @@ import {
     SEASON_PAST,
     SEASON_PRESENT,
     SEASON_FUTURE,
-} from '../../../../app/constants/scene/sky'
+} from '../../../../src/constants/scene/sky'
 import {
     BENNETT,
     BENNETT_FATHER,
@@ -36,36 +36,36 @@ import {
     MIRIAM_BENNETT,
     MIRIAM_STEPHANIE,
     STEPHANIE,
-} from '../../../../app/constants/scene/actors'
+} from '../../../../src/constants/scene/actors'
 import {
     HURT_CONSOLING,
     SOBBING_SHIELDING,
-} from '../../../../app/constants/scene/actors/estherMother'
+} from '../../../../src/constants/scene/actors/estherMother'
 import {
     ACCUSATORY,
     REELING,
-} from '../../../../app/constants/scene/actors/father'
-import { JOKING_LAUGHING } from '../../../../app/constants/scene/actors/khariLiz'
-import { PETTING_SEATED_PRESENT } from '../../../../app/constants/scene/actors/liz'
+} from '../../../../src/constants/scene/actors/father'
+import { JOKING_LAUGHING } from '../../../../src/constants/scene/actors/khariLiz'
+import { PETTING_SEATED_PRESENT } from '../../../../src/constants/scene/actors/liz'
 import {
     ASLEEP_FEARFUL,
     FENDING_OFF,
-} from '../../../../app/constants/scene/actors/miriamBennett'
-import { MISCHIEVOUS_BANJO } from '../../../../app/constants/scene/actors/miriamStephanie'
-import { COMFORTING_HUMILIATED } from '../../../../app/constants/scene/actors/sashaBennett'
-import { BENNETT_RECORDING } from '../../../../app/constants/scene/actors/stephanie'
+} from '../../../../src/constants/scene/actors/miriamBennett'
+import { MISCHIEVOUS_BANJO } from '../../../../src/constants/scene/actors/miriamStephanie'
+import { COMFORTING_HUMILIATED } from '../../../../src/constants/scene/actors/sashaBennett'
+import { BENNETT_RECORDING } from '../../../../src/constants/scene/actors/stephanie'
 import {
     ASLEEP,
     PAST,
     PRESENT,
     FUTURE,
-} from '../../../../app/constants/scene/actors/songs'
+} from '../../../../src/constants/scene/actors/songs'
 import {
     OAKLAND_SIDE__LEVEL,
     ROAD_PAST,
     ROAD_PRESENT,
     ROAD_FUTURE,
-} from '../../../../app/constants/scene/things/backdrops'
+} from '../../../../src/constants/scene/things/backdrops'
 import {
     SNOWGLOBE_SMALL_PAST,
     SNOWGLOBE_ENRAGED_SOBBING,
@@ -74,24 +74,24 @@ import {
     SNOWGLOBE_SMALL_FUTURE,
     SNOWGLOBE_CORD,
     SNOWGLOBE_COWGIRL,
-} from '../../../../app/constants/scene/things/cardboards'
+} from '../../../../src/constants/scene/things/cardboards'
 import {
     PEACH_TREE,
     ROSEBUSH_DOUBLE_BASEMENT,
     ROSEBUSH_SINGLE_BASEMENT,
-} from '../../../../app/constants/scene/things/cutouts'
+} from '../../../../src/constants/scene/things/cutouts'
 import {
     BASEMENT_DOOR,
     DEFAULT_FENCE_BASEMENT,
-} from '../../../../app/constants/scene/things/doors'
+} from '../../../../src/constants/scene/things/doors'
 import {
     TETHERBALL_POLE,
     RECORDING_MIC,
     RECORDING_BEERS,
     CRACKED_PICTURE,
     GHOST_SHACKLES,
-} from '../../../../app/constants/scene/things/fixtures'
-import { BASEMENT_PILLOW } from '../../../../app/constants/scene/things/furnitures'
+} from '../../../../src/constants/scene/things/fixtures'
+import { BASEMENT_PILLOW } from '../../../../src/constants/scene/things/furnitures'
 import {
     SNOWGLOBE_PAST,
     SNOWGLOBE_PRESENT__LIZ,
@@ -104,8 +104,8 @@ import {
     WIDE_COUCH_MIRIAM,
     WIDE_ARMREST_MIRIAM__LEFT,
     WIDE_ARMREST_MIRIAM__RIGHT,
-} from '../../../../app/constants/scene/things/panels'
-import { OPAL_COUCH__FUTURE } from '../../../../app/constants/scene/things/puppets'
+} from '../../../../src/constants/scene/things/panels'
+import { OPAL_COUCH__FUTURE } from '../../../../src/constants/scene/things/puppets'
 
 export default [
     {

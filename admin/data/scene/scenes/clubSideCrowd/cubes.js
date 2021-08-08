@@ -1,13 +1,13 @@
-import { CLUB_SIDE_CROWD_KEY } from '../../../../../app/constants/scene/scenes'
+import { CLUB_SIDE_CROWD_KEY } from '../../../../../src/constants/scene/scenes'
 
 import {
     OLD_FLOOR_COLOUR as F,
     CLUB_SIDE_PRIMARY_COLOUR as B,
     CLUB_SIDE_SECONDARY_COLOUR as E,
     PLATFORM_COLOUR as P,
-} from '../../../../../app/constants/scene/cubes/colours'
+} from '../../../../../src/constants/scene/cubes/colours'
 
-import { d, g } from '../../../../../app/constants/scene/cubes/zIndices'
+import { d, g } from '../../../../../src/constants/scene/cubes/zIndices'
 
 export default {
     [CLUB_SIDE_CROWD_KEY]: {

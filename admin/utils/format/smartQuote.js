@@ -1,4 +1,4 @@
-import { isString } from '../../../app/helpers/general'
+import { isString } from '../../../src/helpers/general'
 
 const QUOTES_CONFIGS = [
     {

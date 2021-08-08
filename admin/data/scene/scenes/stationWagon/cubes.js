@@ -1,10 +1,10 @@
-import { STATION_WAGON_KEY } from '../../../../../app/constants/scene/scenes'
+import { STATION_WAGON_KEY } from '../../../../../src/constants/scene/scenes'
 
 import {
     DEFAULT_CLEAR_COLOUR as D,
     STREET_COLOUR as T,
     CROSSWALK_COLOUR as K,
-} from '../../../../../app/constants/scene/cubes/colours'
+} from '../../../../../src/constants/scene/cubes/colours'
 
 export default {
     [STATION_WAGON_KEY]: {

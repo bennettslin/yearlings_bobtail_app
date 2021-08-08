@@ -1,7 +1,7 @@
 import { albumScenes } from '../scenes'
 
-import { TIME_STAGE } from '../../../../app/constants/scene/sky'
-import { getFloatToHundredth } from '../../../../app/helpers/general'
+import { TIME_STAGE } from '../../../../src/constants/scene/sky'
+import { getFloatToHundredth } from '../../../../src/helpers/general'
 
 const _addDurationsToSceneConfigs = ({
     songDuration,

@@ -1,5 +1,5 @@
-import { PRETEEN_BENNETT } from '../../../../../../app/constants/scene/actors'
-import { ASLEEP } from '../../../../../../app/constants/scene/actors/songs'
+import { PRETEEN_BENNETT } from '../../../../../../src/constants/scene/actors'
+import { ASLEEP } from '../../../../../../src/constants/scene/actors/songs'
 
 export default {
     [PRETEEN_BENNETT]: {

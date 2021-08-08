@@ -3,7 +3,7 @@ import {
     ARTUP_2_SUBPATH,
     ONESHEET_SUBPATH,
     PROMO_PATH,
-} from '../../../../app/constants/routing'
+} from '../../../../src/constants/routing'
 
 export default {
     [PROMO_PATH]: {

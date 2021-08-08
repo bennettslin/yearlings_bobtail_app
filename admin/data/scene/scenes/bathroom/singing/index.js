@@ -1,9 +1,9 @@
 import {
     YOUNG_BENNETT,
     ANITA,
-} from '../../../../../../app/constants/scene/actors'
-import { CHEERING } from '../../../../../../app/constants/scene/actors/anita'
-import { SINGING } from '../../../../../../app/constants/scene/actors/youngBennett'
+} from '../../../../../../src/constants/scene/actors'
+import { CHEERING } from '../../../../../../src/constants/scene/actors/anita'
+import { SINGING } from '../../../../../../src/constants/scene/actors/youngBennett'
 
 export default {
     [YOUNG_BENNETT]: {

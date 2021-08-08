@@ -20,7 +20,7 @@ import _18_My100000thDream from './18_My100000thDream'
 import _19_Epilogue from './19_Epilogue'
 
 import { getFormattedLyricMetadata } from '../helpers/lyric'
-import { getArrayOfLength } from '../../../../app/helpers/general'
+import { getArrayOfLength } from '../../../../src/helpers/general'
 
 const albumLyrics = getFormattedLyricMetadata([
     _00_Prologue,

@@ -3,11 +3,11 @@ import {
     MOTHER,
     CHRISTOPHER,
     TRISTAN,
-} from '../../../../../app/constants/scene/actors'
-import { STARING } from '../../../../../app/constants/scene/actors/christopher'
-import { ARGUING } from '../../../../../app/constants/scene/actors/mother'
-import { SHEEPISH } from '../../../../../app/constants/scene/actors/preteenBennett'
-import { PRINCIPAL } from '../../../../../app/constants/scene/actors/tristan'
+} from '../../../../../src/constants/scene/actors'
+import { STARING } from '../../../../../src/constants/scene/actors/christopher'
+import { ARGUING } from '../../../../../src/constants/scene/actors/mother'
+import { SHEEPISH } from '../../../../../src/constants/scene/actors/preteenBennett'
+import { PRINCIPAL } from '../../../../../src/constants/scene/actors/tristan'
 
 export default {
     [PRETEEN_BENNETT]: {

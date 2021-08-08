@@ -3,23 +3,23 @@ import {
     FIXTURE,
     FLAT,
     PANEL,
-} from '../../../../../app/constants/scene/things'
+} from '../../../../../src/constants/scene/things'
 import {
     BUBBLE_SMALL__LEFT,
     BUBBLE_MEDIUM__LEFT,
     BUBBLE_LARGE__LEFT,
-} from '../../../../../app/constants/scene/things/bubbles'
-import { BACKPACK_BENNETT } from '../../../../../app/constants/scene/things/fixtures'
+} from '../../../../../src/constants/scene/things/bubbles'
+import { BACKPACK_BENNETT } from '../../../../../src/constants/scene/things/fixtures'
 import {
     DRIVING_HOUSE_LEFT,
     DRIVING_HOUSE__RIGHT,
-} from '../../../../../app/constants/scene/things/flats'
+} from '../../../../../src/constants/scene/things/flats'
 import {
     SCHOOLBUS_INTERIOR,
     SCHOOLBUS_SEAT__LEFT,
     SCHOOLBUS_SEAT__RIGHT,
     SCHOOLBUS_EXTERIOR,
-} from '../../../../../app/constants/scene/things/panels'
+} from '../../../../../src/constants/scene/things/panels'
 import {
     BUBBLE_LARGE_CONFIG,
     BUBBLE_MEDIUM_CONFIG,

@@ -3,17 +3,17 @@ import {
     DOOR,
     FLAT,
     PUPPET,
-} from '../../../../../app/constants/scene/things'
+} from '../../../../../src/constants/scene/things'
 import {
     CAMPUS_TREE_SINGLE__BANCROFT,
     ASH_CAN,
-} from '../../../../../app/constants/scene/things/cutouts'
-import { BANCROFT_DOOR } from '../../../../../app/constants/scene/things/doors'
+} from '../../../../../src/constants/scene/things/cutouts'
+import { BANCROFT_DOOR } from '../../../../../src/constants/scene/things/doors'
 import {
     DISTANT_BUILDINGS,
     BERKELEY_BUILDING_WIDE__BANCROFT,
-} from '../../../../../app/constants/scene/things/flats'
-import { GHOST_ODIN_CAMPUS } from '../../../../../app/constants/scene/things/puppets'
+} from '../../../../../src/constants/scene/things/flats'
+import { GHOST_ODIN_CAMPUS } from '../../../../../src/constants/scene/things/puppets'
 
 export default {
     [CUTOUT]: {

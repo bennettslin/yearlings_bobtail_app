@@ -2,7 +2,7 @@ import {
     TANTRUM,
     SOBBING,
     STARING,
-} from '../../../../../../app/constants/scene/actors/christopher'
+} from '../../../../../../src/constants/scene/actors/christopher'
 
 export default {
     [TANTRUM]: null,

@@ -7,11 +7,11 @@ import {
     FLAT,
     FURNITURE,
     PANEL,
-} from '../../../../../app/constants/scene/things'
+} from '../../../../../src/constants/scene/things'
 import {
     SKETCH_DOGS_ROCKET,
     SKETCHBOOK__DOGS_ROCKET,
-} from '../../../../../app/constants/scene/things/bubbles'
+} from '../../../../../src/constants/scene/things/bubbles'
 import {
     POSTER_TINTIN,
     POSTER_BLOOM_COUNTY,
@@ -19,17 +19,17 @@ import {
     DOGS_ROCKET,
     EARTH__STATION,
     DOGS_SPACE_STATION,
-} from '../../../../../app/constants/scene/things/cardboards'
+} from '../../../../../src/constants/scene/things/cardboards'
 import {
     LEMON_TREE__BEDROOM,
     ROSEBUSH_SLANTED_DOUBLE,
     ROSEBUSH_SLANTED_SINGLE,
-} from '../../../../../app/constants/scene/things/cutouts'
+} from '../../../../../src/constants/scene/things/cutouts'
 import {
     BEDROOM_BLINDS,
     BEDROOM_BLINDS_OPEN,
     BEDROOM_FENCE,
-} from '../../../../../app/constants/scene/things/doors'
+} from '../../../../../src/constants/scene/things/doors'
 import {
     LETTER_SCRAPS__CHRISTOPHER,
     TORN_MAGAZINES__CHRISTOPHER,
@@ -41,17 +41,17 @@ import {
     BENNETT_LETTERS,
     RED_ENVELOPE_MONEY,
     BEYONDER_ENVELOPE,
-} from '../../../../../app/constants/scene/things/fixtures'
+} from '../../../../../src/constants/scene/things/fixtures'
 import {
     BEDROOM_SIREN,
     BEDROOM_BUS,
-} from '../../../../../app/constants/scene/things/flats'
-import { CAPTAIN_BED_PILLOW } from '../../../../../app/constants/scene/things/furnitures'
+} from '../../../../../src/constants/scene/things/flats'
+import { CAPTAIN_BED_PILLOW } from '../../../../../src/constants/scene/things/furnitures'
 import {
     BEDROOM_DESK,
     BEDROOM_STOOL,
     CAPTAIN_BED,
-} from '../../../../../app/constants/scene/things/panels'
+} from '../../../../../src/constants/scene/things/panels'
 import { SKETCH_CONFIG } from '../../sharedConfigs'
 
 export default {

@@ -5,7 +5,7 @@ import {
     PUN,
     AFTERWORD,
     SONGCRAFT,
-} from '../../../../app/constants/dots'
+} from '../../../../src/constants/dots'
 
 import {
     VERSES,
@@ -13,7 +13,7 @@ import {
     CHORUS,
     REFRAIN,
     IS_UNIT_DOT,
-} from '../../../../app/constants/lyrics'
+} from '../../../../src/constants/lyrics'
 
 export default {
     path: 'dear-saskia',

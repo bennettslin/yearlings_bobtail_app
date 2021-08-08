@@ -1,16 +1,16 @@
 import {
     CUTOUT,
     FIXTURE,
-} from '../../../../../app/constants/scene/things'
+} from '../../../../../src/constants/scene/things'
 import {
     SANDBAGS,
     STAGE_LIGHTS,
-} from '../../../../../app/constants/scene/things/cutouts'
+} from '../../../../../src/constants/scene/things/cutouts'
 import {
     PUSH_BROOM__BACKSTAGE,
     STEPLADDER,
     MANNEQUIN,
-} from '../../../../../app/constants/scene/things/fixtures'
+} from '../../../../../src/constants/scene/things/fixtures'
 
 export default {
     [CUTOUT]: {

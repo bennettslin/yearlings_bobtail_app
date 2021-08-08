@@ -1,5 +1,5 @@
-import { REFERENCE, WORMHOLE } from '../../../../../../app/constants/dots'
-import { WIKI } from '../../../../../../app/constants/lyrics'
+import { REFERENCE, WORMHOLE } from '../../../../../../src/constants/dots'
+import { WIKI } from '../../../../../../src/constants/lyrics'
 
 const _addWikiWormholeDotKeyToCard = (card) => {
     const {

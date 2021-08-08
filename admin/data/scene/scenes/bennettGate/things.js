@@ -2,14 +2,14 @@ import {
     CARDBOARD,
     CUTOUT,
     DOOR,
-} from '../../../../../app/constants/scene/things'
-import { CODE_BOX } from '../../../../../app/constants/scene/things/cardboards'
+} from '../../../../../src/constants/scene/things'
+import { CODE_BOX } from '../../../../../src/constants/scene/things/cardboards'
 import {
     APARTMENT_PLANT,
     BUSH_SINGLE__BENNETT_GATE,
     BUSH_DOUBLE__BENNETT_GATE,
-} from '../../../../../app/constants/scene/things/cutouts'
-import { BENNETT_GATE_FRONT } from '../../../../../app/constants/scene/things/doors'
+} from '../../../../../src/constants/scene/things/cutouts'
+import { BENNETT_GATE_FRONT } from '../../../../../src/constants/scene/things/doors'
 
 export default {
     [CARDBOARD]: {

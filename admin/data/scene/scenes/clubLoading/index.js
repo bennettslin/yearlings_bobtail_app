@@ -5,12 +5,12 @@ import {
     AMY,
     STEPHANIE,
     WADE,
-} from '../../../../../app/constants/scene/actors'
+} from '../../../../../src/constants/scene/actors'
 import {
     MINGLING,
     WAITING,
-} from '../../../../../app/constants/scene/actors/songs'
-import { SIDELONG_HESITANCE } from '../../../../../app/constants/scene/actors/bennett'
+} from '../../../../../src/constants/scene/actors/songs'
+import { SIDELONG_HESITANCE } from '../../../../../src/constants/scene/actors/bennett'
 
 export default {
     [ANA]: {

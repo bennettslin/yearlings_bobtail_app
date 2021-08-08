@@ -1,13 +1,13 @@
 import {
     CUTOUT,
     FLAT,
-} from '../../../../../app/constants/scene/things'
-import { FIRE_HYDRANT } from '../../../../../app/constants/scene/things/cutouts'
+} from '../../../../../src/constants/scene/things'
+import { FIRE_HYDRANT } from '../../../../../src/constants/scene/things/cutouts'
 import {
     NEAR_HOUSES,
     NOHO_HOUSE_LEFT,
     NOHO_HOUSE_RIGHT,
-} from '../../../../../app/constants/scene/things/flats'
+} from '../../../../../src/constants/scene/things/flats'
 export default {
     [CUTOUT]: {
         [FIRE_HYDRANT]: {

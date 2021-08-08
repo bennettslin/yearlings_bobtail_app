@@ -1,4 +1,4 @@
-import { SNOWGLOBES_PRESENT_KEY } from '../../../../../app/constants/scene/scenes'
+import { SNOWGLOBES_PRESENT_KEY } from '../../../../../src/constants/scene/scenes'
 
 import {
     GROUND_CLEAR_COLOUR as G,
@@ -6,7 +6,7 @@ import {
     PRESENT_PLATFORM_COLOUR as P,
     LIZ_COUCH_COLOUR as U,
     MIRIAM_COUCH_COLOUR as Z,
-} from '../../../../../app/constants/scene/cubes/colours'
+} from '../../../../../src/constants/scene/cubes/colours'
 
 export default {
     [SNOWGLOBES_PRESENT_KEY]: {

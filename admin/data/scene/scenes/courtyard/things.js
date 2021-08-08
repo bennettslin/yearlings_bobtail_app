@@ -1,17 +1,17 @@
 import {
     CUTOUT,
     DOOR,
-} from '../../../../../app/constants/scene/things'
+} from '../../../../../src/constants/scene/things'
 import {
     RECYCLING_BIN__BENNETT,
     BUSH_SINGLE__COURTYARD,
     BUSH_DOUBLE__COURTYARD,
-} from '../../../../../app/constants/scene/things/cutouts'
+} from '../../../../../src/constants/scene/things/cutouts'
 import {
     BLINDS_OUTSIDE__BENNETT,
     BENNETT_DOOR_OUTSIDE,
     BENNETT_GATE_SIDE,
-} from '../../../../../app/constants/scene/things/doors'
+} from '../../../../../src/constants/scene/things/doors'
 
 export default {
     [CUTOUT]: {

@@ -1,9 +1,9 @@
 import {
     BENNETT,
     HOWIE,
-} from '../../../../../app/constants/scene/actors'
-import { MERRILY_DERANGED } from '../../../../../app/constants/scene/actors/bennett'
-import { USHER_LOOKING } from '../../../../../app/constants/scene/actors/howie'
+} from '../../../../../src/constants/scene/actors'
+import { MERRILY_DERANGED } from '../../../../../src/constants/scene/actors/bennett'
+import { USHER_LOOKING } from '../../../../../src/constants/scene/actors/howie'
 
 export default {
     [BENNETT]: {

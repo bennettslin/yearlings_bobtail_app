@@ -1,13 +1,13 @@
 import {
     JACOB,
     JACOB_MARA,
-} from '../../../../app/constants/scene/actors'
+} from '../../../../src/constants/scene/actors'
 import {
     FLIRTING,
     EATING,
     CARRYING,
     EPILOGUE,
-} from '../../../../app/constants/scene/actors/songs'
+} from '../../../../src/constants/scene/actors/songs'
 
 export default [
     {

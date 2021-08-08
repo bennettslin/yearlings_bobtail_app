@@ -37,7 +37,7 @@ import {
     PRINCIPAL_DOOR,
     WAITING_ROOM_DOOR,
     WAITING_ROOM_DOOR_OPEN,
-} from '../../../../../../app/constants/scene/things/doors'
+} from '../../../../../../src/constants/scene/things/doors'
 import {
     BENNETT_APARTMENT__SHARED,
     BENNETT_GATE__SHARED,
@@ -46,13 +46,13 @@ import {
     FAMILY_HOUSE__SHARED,
     LIZ_APARTMENT__SHARED,
     LIZ_GATE__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/home'
+} from '../../../../../../src/constants/scene/sharedStyles/home'
 import {
     FOLIAGE__SHARED,
     MOUNTAIN__SHARED,
     WALL__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/outdoor'
-import { DARKEN__SHARED } from '../../../../../../app/constants/scene/sharedStyles'
+} from '../../../../../../src/constants/scene/sharedStyles/outdoor'
+import { DARKEN__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
 
 export default {
     [BANCROFT_DOOR]: DOOR__SHARED,

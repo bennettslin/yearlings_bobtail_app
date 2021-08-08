@@ -1,4 +1,4 @@
-import { ACTOR } from '../../../../app/constants/scene'
+import { ACTOR } from '../../../../src/constants/scene'
 import {
     BACKDROP,
     BUBBLE,
@@ -9,7 +9,7 @@ import {
     FLAT,
     FURNITURE,
     PANEL,
-} from '../../../../app/constants/scene/things'
+} from '../../../../src/constants/scene/things'
 import {
     BEDROOM_DOGS_KEY,
     BEDROOM_KEY,
@@ -18,7 +18,7 @@ import {
     VAN_NUYS_HALLWAY_KEY,
     VAN_NUYS_LOCKERS_KEY,
     VAN_NUYS_QUAD_KEY,
-} from '../../../../app/constants/scene/scenes'
+} from '../../../../src/constants/scene/scenes'
 import {
     SEASON_FUTURE,
     SEASON_NIGHT_MAGIC,
@@ -27,7 +27,7 @@ import {
     TIME_EVENING,
     TIME_MORNING,
     TIME_NOON,
-} from '../../../../app/constants/scene/sky'
+} from '../../../../src/constants/scene/sky'
 import {
     ANDREW,
     BRAD,
@@ -37,38 +37,38 @@ import {
     PRETEEN_BENNETT,
     SASHA,
     TRISTAN,
-} from '../../../../app/constants/scene/actors'
+} from '../../../../src/constants/scene/actors'
 import {
     NOODLING,
     THROWING,
-} from '../../../../app/constants/scene/actors/andrew'
+} from '../../../../src/constants/scene/actors/andrew'
 import {
     GESTURING,
     SNACKING,
-} from '../../../../app/constants/scene/actors/brad'
-import { STARING } from '../../../../app/constants/scene/actors/christopher'
-import { BLISSFUL_GUILTY } from '../../../../app/constants/scene/actors/christopherBennett'
-import { ARGUING } from '../../../../app/constants/scene/actors/mother'
+} from '../../../../src/constants/scene/actors/brad'
+import { STARING } from '../../../../src/constants/scene/actors/christopher'
+import { BLISSFUL_GUILTY } from '../../../../src/constants/scene/actors/christopherBennett'
+import { ARGUING } from '../../../../src/constants/scene/actors/mother'
 import {
     FEIGNING_SICK,
     SHAKEN,
     SHEEPISH,
     STOIC,
     WISTFUL,
-} from '../../../../app/constants/scene/actors/preteenBennett'
-import { POPULAR_GIRL } from '../../../../app/constants/scene/actors/sasha'
-import { ASLEEP } from '../../../../app/constants/scene/actors/songs'
-import { PRINCIPAL } from '../../../../app/constants/scene/actors/tristan'
+} from '../../../../src/constants/scene/actors/preteenBennett'
+import { POPULAR_GIRL } from '../../../../src/constants/scene/actors/sasha'
+import { ASLEEP } from '../../../../src/constants/scene/actors/songs'
+import { PRINCIPAL } from '../../../../src/constants/scene/actors/tristan'
 import {
     VALLEY_CLOSER_BACKDROP,
     VALLEY_FURTHER_BACKDROP,
-} from '../../../../app/constants/scene/things/backdrops'
+} from '../../../../src/constants/scene/things/backdrops'
 import {
     SKETCHBOOK__DOGS_ROCKET,
     SKETCHBOOK__ESCAPE_POD,
     SKETCH_DOGS_ROCKET,
     SKETCH_ESCAPE_POD,
-} from '../../../../app/constants/scene/things/bubbles'
+} from '../../../../src/constants/scene/things/bubbles'
 import {
     POSTER_BLOOM_COUNTY,
     CORKBOARD,
@@ -77,7 +77,7 @@ import {
     EARTH__STATION,
     DOGS_SPACE_STATION,
     VAN_NUYS_PAINTING,
-} from '../../../../app/constants/scene/things/cardboards'
+} from '../../../../src/constants/scene/things/cardboards'
 import {
     BUSH_DOUBLE__LOCKERS,
     BUSH_DOUBLE__QUAD,
@@ -89,13 +89,13 @@ import {
     ROSEBUSH_SLANTED_SINGLE,
     TRASH_CAN__LOCKERS,
     TRASH_CAN__QUAD,
-} from '../../../../app/constants/scene/things/cutouts'
+} from '../../../../src/constants/scene/things/cutouts'
 import {
     BEDROOM_BLINDS,
     BEDROOM_BLINDS_OPEN,
     BEDROOM_FENCE,
     PRINCIPAL_DOOR,
-} from '../../../../app/constants/scene/things/doors'
+} from '../../../../src/constants/scene/things/doors'
 import {
     BALLED_FOIL__LOCKERS,
     BEDROOM_LAMP__BED,
@@ -106,18 +106,18 @@ import {
     RED_ENVELOPE_MONEY,
     THROWN_FRUIT,
     TORN_MAGAZINES__BENNETT,
-} from '../../../../app/constants/scene/things/fixtures'
+} from '../../../../src/constants/scene/things/fixtures'
 import {
     BEDROOM_BUS,
     NEAR_BUILDINGS,
-} from '../../../../app/constants/scene/things/flats'
-import { CAPTAIN_BED_PILLOW } from '../../../../app/constants/scene/things/furnitures'
+} from '../../../../src/constants/scene/things/flats'
+import { CAPTAIN_BED_PILLOW } from '../../../../src/constants/scene/things/furnitures'
 import {
     BEDROOM_DESK,
     BEDROOM_STOOL,
     CAPTAIN_BED,
     PRINCIPAL_BENCH,
-} from '../../../../app/constants/scene/things/panels'
+} from '../../../../src/constants/scene/things/panels'
 
 /**
  * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the

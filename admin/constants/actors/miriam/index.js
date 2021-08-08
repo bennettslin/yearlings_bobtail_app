@@ -3,27 +3,27 @@ import {
     MIRIAM_BENNETT,
     MIRIAM_STEPHANIE,
     MIRIAM_TRISTAN,
-} from '../../../../app/constants/scene/actors'
+} from '../../../../src/constants/scene/actors'
 import {
     INFANT_CURIOUS,
     INFANT_NURSING,
     PERFUMING,
     TENNIS,
     REVERSING,
-} from '../../../../app/constants/scene/actors/miriam'
+} from '../../../../src/constants/scene/actors/miriam'
 import {
     ASLEEP_FEARFUL,
     FENDING_OFF,
     COWGIRL,
     BLOWJOB,
-} from '../../../../app/constants/scene/actors/miriamBennett'
-import { MISCHIEVOUS_BANJO } from '../../../../app/constants/scene/actors/miriamStephanie'
-import { NOOGIE } from '../../../../app/constants/scene/actors/miriamTristan'
+} from '../../../../src/constants/scene/actors/miriamBennett'
+import { MISCHIEVOUS_BANJO } from '../../../../src/constants/scene/actors/miriamStephanie'
+import { NOOGIE } from '../../../../src/constants/scene/actors/miriamTristan'
 import {
     GREETING,
     EPILOGUE,
     GOPI,
-} from '../../../../app/constants/scene/actors/songs'
+} from '../../../../src/constants/scene/actors/songs'
 
 export default [
     {

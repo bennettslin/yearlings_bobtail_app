@@ -1,4 +1,4 @@
-import { FLAT } from '../../../../../app/constants/scene/things'
+import { FLAT } from '../../../../../src/constants/scene/things'
 import {
     COMMERCIAL_CENTRE,
     COMMERCIAL_FAR_LEFT,
@@ -7,7 +7,7 @@ import {
     COMMERCIAL_FAR_RIGHT,
     COMMERCIAL_MIDDLE_RIGHT,
     COMMERCIAL_NEAR_RIGHT,
-} from '../../../../../app/constants/scene/things/flats'
+} from '../../../../../src/constants/scene/things/flats'
 
 export default {
     [FLAT]: {

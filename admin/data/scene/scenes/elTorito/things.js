@@ -1,13 +1,13 @@
 import {
     CUTOUT,
     DOOR,
-} from '../../../../../app/constants/scene/things'
+} from '../../../../../src/constants/scene/things'
 import {
     DISPENSER_LEFT,
     DISPENSER_RIGHT,
     HOSTESS_STAND,
-} from '../../../../../app/constants/scene/things/cutouts'
-import { EL_TORITO_DOORS } from '../../../../../app/constants/scene/things/doors'
+} from '../../../../../src/constants/scene/things/cutouts'
+import { EL_TORITO_DOORS } from '../../../../../src/constants/scene/things/doors'
 
 export default {
     [CUTOUT]: {

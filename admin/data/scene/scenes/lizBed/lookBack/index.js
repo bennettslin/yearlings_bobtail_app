@@ -3,15 +3,15 @@ import {
     LIZ,
     BENNETT_REFLECTION,
     LIZ_REFLECTION,
-} from '../../../../../../app/constants/scene/actors'
+} from '../../../../../../src/constants/scene/actors'
 import {
     REMOVING_SHOES,
     SHOES_REFLECTION,
-} from '../../../../../../app/constants/scene/actors/bennett'
+} from '../../../../../../src/constants/scene/actors/bennett'
 import {
     ASLEEP_REACHING,
     REACHING_REFLECTION,
-} from '../../../../../../app/constants/scene/actors/liz'
+} from '../../../../../../src/constants/scene/actors/liz'
 
 export default {
     [LIZ]: {

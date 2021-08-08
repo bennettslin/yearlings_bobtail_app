@@ -1,4 +1,4 @@
-import { ACTOR } from '../../../../app/constants/scene'
+import { ACTOR } from '../../../../src/constants/scene'
 import {
     BACKDROP,
     CARDBOARD,
@@ -7,7 +7,7 @@ import {
     FIXTURE,
     FLAT,
     PANEL,
-} from '../../../../app/constants/scene/things'
+} from '../../../../src/constants/scene/things'
 import {
     BUOY_KEY,
     OCEAN_DEPTHS_KEY,
@@ -17,18 +17,18 @@ import {
     TAIWAN_GATE_KEY,
     TAIWAN_ROOM_KEY,
     TAIWAN_STAIRS_KEY,
-} from '../../../../app/constants/scene/scenes'
+} from '../../../../src/constants/scene/scenes'
 import {
     SEASON_AUTUMN,
     SEASON_OCEAN_SIDE,
     SEASON_OCEAN_TOP,
     TIME_NIGHT_TAIWAN,
     TIME_TWILIGHT_TAIWAN,
-} from '../../../../app/constants/scene/sky'
+} from '../../../../src/constants/scene/sky'
 import {
     PRETEEN_BENNETT,
     SASHA_BENNETT,
-} from '../../../../app/constants/scene/actors'
+} from '../../../../src/constants/scene/actors'
 import {
     BUOY,
     GATE,
@@ -37,8 +37,8 @@ import {
     RICKSHAW,
     SHORE,
     STAIRS,
-} from '../../../../app/constants/scene/actors/preteenBennett'
-import { MERMAID } from '../../../../app/constants/scene/actors/sashaBennett'
+} from '../../../../src/constants/scene/actors/preteenBennett'
+import { MERMAID } from '../../../../src/constants/scene/actors/sashaBennett'
 import {
     MOUNTAIN_TAIWAN_BACKDROP,
     OCEAN_BOTTOM_FAR,
@@ -46,7 +46,7 @@ import {
     SHORE_BUOY_BACKDROP,
     SHORE_RICKSHAW_BACKDROP,
     TAIWAN_STAIRS_BACKDROP,
-} from '../../../../app/constants/scene/things/backdrops'
+} from '../../../../src/constants/scene/things/backdrops'
 import {
     BENNETT_MAT,
     BENNETT_ODIN_BUOY,
@@ -62,19 +62,19 @@ import {
     ODIN_TAIWAN_STAIRS,
     SEA_SERPENT_LEFT,
     SEA_SERPENT_RIGHT,
-} from '../../../../app/constants/scene/things/cardboards'
+} from '../../../../src/constants/scene/things/cardboards'
 import {
     BUDDHA_SHRINE,
     TAIWAN_FRIDGE,
     TAIWAN_SHRUB,
     TAIWAN_TREE,
     YELLOW_TAPED_GRILL,
-} from '../../../../app/constants/scene/things/cutouts'
+} from '../../../../src/constants/scene/things/cutouts'
 import {
     IRON_GATE,
     IRON_GATE_LOW,
-} from '../../../../app/constants/scene/things/doors'
-import { FRIDGE_DRAWINGS } from '../../../../app/constants/scene/things/fixtures'
+} from '../../../../src/constants/scene/things/doors'
+import { FRIDGE_DRAWINGS } from '../../../../src/constants/scene/things/fixtures'
 import {
     FERRIS_WHEEL,
     OCEAN_BOTTOM_MIDDLE,
@@ -84,7 +84,7 @@ import {
     TAIWAN_HOUSES_CENTRE,
     TAIWAN_HOUSE_FAR,
     TAIWAN_HOUSE_NEAR,
-} from '../../../../app/constants/scene/things/flats'
+} from '../../../../src/constants/scene/things/flats'
 import {
     BUDDHA_STAND,
     OCEAN_CAVE_EXTERIOR,
@@ -94,7 +94,7 @@ import {
     OCEAN_WAVES__MIDDLE_FRONT,
     OCEAN_WAVES__MIDDLE_REAR,
     OCEAN_WAVES__REAR,
-} from '../../../../app/constants/scene/things/panels'
+} from '../../../../src/constants/scene/things/panels'
 
 export default [
     {

@@ -1,9 +1,9 @@
-import { WALGREENS_KEY } from '../../../../../app/constants/scene/scenes'
+import { WALGREENS_KEY } from '../../../../../src/constants/scene/scenes'
 
 import {
     GROUND_CLEAR_COLOUR as G,
     WOOD_FLOOR_COLOUR as F,
-} from '../../../../../app/constants/scene/cubes/colours'
+} from '../../../../../src/constants/scene/cubes/colours'
 
 export default {
     [WALGREENS_KEY]: {

@@ -1,11 +1,11 @@
 import {
     CARDBOARD,
     PANEL,
-} from '../../../../../app/constants/scene/things'
+} from '../../../../../src/constants/scene/things'
 import {
     SNOWGLOBE_SMALL_PRESENT,
     SNOWGLOBE_LEAVING_CRUMBLED,
-} from '../../../../../app/constants/scene/things/cardboards'
+} from '../../../../../src/constants/scene/things/cardboards'
 import {
     SNOWGLOBE_PRESENT__LIZ,
     SNOWGLOBE_PRESENT__BENNETT,
@@ -13,7 +13,7 @@ import {
     WIDE_COUCH_MIRIAM,
     WIDE_ARMREST_MIRIAM__LEFT,
     WIDE_ARMREST_MIRIAM__RIGHT,
-} from '../../../../../app/constants/scene/things/panels'
+} from '../../../../../src/constants/scene/things/panels'
 
 export default {
     [CARDBOARD]: {

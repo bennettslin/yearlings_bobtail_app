@@ -2,9 +2,9 @@ import {
     BENNETT,
     MIRIAM_TRISTAN,
     NESTOR,
-} from '../../../../../app/constants/scene/actors'
-import { SHOW_ANNOYED } from '../../../../../app/constants/scene/actors/bennett'
-import { GREETING } from '../../../../../app/constants/scene/actors/songs'
+} from '../../../../../src/constants/scene/actors'
+import { SHOW_ANNOYED } from '../../../../../src/constants/scene/actors/bennett'
+import { GREETING } from '../../../../../src/constants/scene/actors/songs'
 
 export default {
     [BENNETT]: {

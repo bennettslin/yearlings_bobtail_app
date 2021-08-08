@@ -3,18 +3,18 @@ import {
     BUBBLE,
     FLAT,
     PANEL,
-} from '../../../../../app/constants/scene/things'
-import { THOUGHT_MEDIUM__GOLDEN } from '../../../../../app/constants/scene/things/backdrops'
+} from '../../../../../src/constants/scene/things'
+import { THOUGHT_MEDIUM__GOLDEN } from '../../../../../src/constants/scene/things/backdrops'
 import {
     BUBBLE_SMALL__GOLDEN,
     BUBBLE_MEDIUM__GOLDEN,
     BUBBLE_LARGE__GOLDEN,
-} from '../../../../../app/constants/scene/things/bubbles'
+} from '../../../../../src/constants/scene/things/bubbles'
 import {
     OAKLAND_HOUSE_LEFT,
     OAKLAND_HOUSE_RIGHT,
-} from '../../../../../app/constants/scene/things/flats'
-import { VOLKSWAGEN } from '../../../../../app/constants/scene/things/panels'
+} from '../../../../../src/constants/scene/things/flats'
+import { VOLKSWAGEN } from '../../../../../src/constants/scene/things/panels'
 import {
     BUBBLE_LARGE_CONFIG,
     BUBBLE_MEDIUM_CONFIG,

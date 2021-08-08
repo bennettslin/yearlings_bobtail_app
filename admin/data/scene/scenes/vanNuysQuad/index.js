@@ -3,11 +3,11 @@ import {
     SASHA,
     BRAD,
     ANDREW,
-} from '../../../../../app/constants/scene/actors'
-import { NOODLING } from '../../../../../app/constants/scene/actors/andrew'
-import { SNACKING } from '../../../../../app/constants/scene/actors/brad'
-import { WISTFUL } from '../../../../../app/constants/scene/actors/preteenBennett'
-import { POPULAR_GIRL } from '../../../../../app/constants/scene/actors/sasha'
+} from '../../../../../src/constants/scene/actors'
+import { NOODLING } from '../../../../../src/constants/scene/actors/andrew'
+import { SNACKING } from '../../../../../src/constants/scene/actors/brad'
+import { WISTFUL } from '../../../../../src/constants/scene/actors/preteenBennett'
+import { POPULAR_GIRL } from '../../../../../src/constants/scene/actors/sasha'
 
 export default {
     [PRETEEN_BENNETT]: {

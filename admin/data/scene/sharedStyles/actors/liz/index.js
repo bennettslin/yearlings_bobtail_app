@@ -8,7 +8,7 @@ import {
     DEFENDING,
     NOT_HUNGRY,
     ASLEEP_COUCH,
-} from '../../../../../../app/constants/scene/actors/liz'
+} from '../../../../../../src/constants/scene/actors/liz'
 import {
     DATE_ENDING,
     MUSEUM,
@@ -20,13 +20,13 @@ import {
     RUMPLED_LINENS,
     LEAVING_CRUMBLED,
     EL_TORITO,
-} from '../../../../../../app/constants/scene/actors/songs'
-import { BENNETT } from '../../../../../../app/constants/scene/actors'
-import { OPAL__SHARED } from '../../../../../../app/constants/scene/sharedStyles/animals'
-import { CHINESE_TAKEOUT__SHARED } from '../../../../../../app/constants/scene/sharedStyles/food'
-import { LIZ_LINENS__SHARED } from '../../../../../../app/constants/scene/sharedStyles/furniture'
-import { GO_KART__SHARED } from '../../../../../../app/constants/scene/sharedStyles/vehicles'
-import { BACKPACK__SHARED } from '../../../../../../app/constants/scene/sharedStyles/wardrobe'
+} from '../../../../../../src/constants/scene/actors/songs'
+import { BENNETT } from '../../../../../../src/constants/scene/actors'
+import { OPAL__SHARED } from '../../../../../../src/constants/scene/sharedStyles/animals'
+import { CHINESE_TAKEOUT__SHARED } from '../../../../../../src/constants/scene/sharedStyles/food'
+import { LIZ_LINENS__SHARED } from '../../../../../../src/constants/scene/sharedStyles/furniture'
+import { GO_KART__SHARED } from '../../../../../../src/constants/scene/sharedStyles/vehicles'
+import { BACKPACK__SHARED } from '../../../../../../src/constants/scene/sharedStyles/wardrobe'
 
 export default {
     [DATE_ENDING]: null,

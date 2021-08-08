@@ -1,4 +1,4 @@
-import { WAITING_ROOM_KEY } from '../../../../../app/constants/scene/scenes'
+import { WAITING_ROOM_KEY } from '../../../../../src/constants/scene/scenes'
 
 import {
     DEFAULT_CLEAR_COLOUR as D,
@@ -6,9 +6,9 @@ import {
     WOOD_FLOOR_COLOUR as F,
     SOFT_WALL_COLOUR as W,
     WAITING_ARMCHAIR_COLOUR as U,
-} from '../../../../../app/constants/scene/cubes/colours'
+} from '../../../../../src/constants/scene/cubes/colours'
 
-import { d, g, k } from '../../../../../app/constants/scene/cubes/zIndices'
+import { d, g, k } from '../../../../../src/constants/scene/cubes/zIndices'
 
 export default {
     [WAITING_ROOM_KEY]: {

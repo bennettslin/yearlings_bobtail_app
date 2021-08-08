@@ -1,4 +1,4 @@
-import { ACTOR } from '../../../../app/constants/scene'
+import { ACTOR } from '../../../../src/constants/scene'
 import {
     BACKDROP,
     BUBBLE,
@@ -7,33 +7,33 @@ import {
     FLAT,
     PANEL,
     PUPPET,
-} from '../../../../app/constants/scene/things'
+} from '../../../../src/constants/scene/things'
 import {
     PUPPET_SHOW_KEY,
     SCHOOLBUS_KEY,
     TETHERBALL_COURT_KEY,
-} from '../../../../app/constants/scene/scenes'
+} from '../../../../src/constants/scene/scenes'
 import {
     SEASON_PRESENT,
     SEASON_THOUGHT,
-} from '../../../../app/constants/scene/sky'
+} from '../../../../src/constants/scene/sky'
 import {
     ANDREW,
     BRAD_BENNETT,
     BRAD_SASHA,
     PRETEEN_BENNETT,
     SASHA,
-} from '../../../../app/constants/scene/actors'
-import { FEIGNING_FEAR } from '../../../../app/constants/scene/actors/andrew'
-import { TYING_TETHER } from '../../../../app/constants/scene/actors/bradBennett'
-import { CHARMED_SCHOOLBUS } from '../../../../app/constants/scene/actors/bradSasha'
-import { PANICKED } from '../../../../app/constants/scene/actors/preteenBennett'
-import { INDIGNANT } from '../../../../app/constants/scene/actors/sasha'
+} from '../../../../src/constants/scene/actors'
+import { FEIGNING_FEAR } from '../../../../src/constants/scene/actors/andrew'
+import { TYING_TETHER } from '../../../../src/constants/scene/actors/bradBennett'
+import { CHARMED_SCHOOLBUS } from '../../../../src/constants/scene/actors/bradSasha'
+import { PANICKED } from '../../../../src/constants/scene/actors/preteenBennett'
+import { INDIGNANT } from '../../../../src/constants/scene/actors/sasha'
 import {
     TAIWAN_MOUNTAINS_BACKDROP,
     THOUGHT_LARGE__LEFT,
     THOUGHT_LARGE__RIGHT,
-} from '../../../../app/constants/scene/things/backdrops'
+} from '../../../../src/constants/scene/things/backdrops'
 import {
     BUBBLE_LARGE__LEFT,
     BUBBLE_LARGE__RIGHT,
@@ -45,12 +45,12 @@ import {
     SKETCHBOOK__TOGETHER,
     SKETCH_APART,
     SKETCH_TOGETHER,
-} from '../../../../app/constants/scene/things/bubbles'
+} from '../../../../src/constants/scene/things/bubbles'
 import {
     CAMPUS_TREE_DOUBLE__TETHERBALL,
     CAMPUS_TREE_SINGLE__TETHERBALL,
-} from '../../../../app/constants/scene/things/cutouts'
-import { BACKPACK_BENNETT } from '../../../../app/constants/scene/things/fixtures'
+} from '../../../../src/constants/scene/things/cutouts'
+import { BACKPACK_BENNETT } from '../../../../src/constants/scene/things/fixtures'
 import {
     DISTANT_HOUSES,
     DRIVING_HOUSE_LEFT,
@@ -60,7 +60,7 @@ import {
     TAIWAN_MOUNTAINS_BRIDGED,
     TAIWAN_MOUNTAIN_LEFT,
     TAIWAN_MOUNTAIN_RIGHT,
-} from '../../../../app/constants/scene/things/flats'
+} from '../../../../src/constants/scene/things/flats'
 import {
     SCHOOLBUS_EXTERIOR,
     SCHOOLBUS_INTERIOR,
@@ -69,7 +69,7 @@ import {
     TAIWAN_BRIDGE,
     TAIWAN_HAZE__CLOUD,
     TAIWAN_HAZE__FOG,
-} from '../../../../app/constants/scene/things/panels'
+} from '../../../../src/constants/scene/things/panels'
 import {
     PUPPET_ANITA_BEGIN,
     PUPPET_ANITA_END,
@@ -86,7 +86,7 @@ import {
     PUPPET_MOTHER_BEGIN,
     PUPPET_MOTHER_END,
     PUPPET_MOTHER_MIDDLE,
-} from '../../../../app/constants/scene/things/puppets'
+} from '../../../../src/constants/scene/things/puppets'
 
 export default [
     {

@@ -1,4 +1,4 @@
-import { ACTOR } from '../../../../app/constants/scene'
+import { ACTOR } from '../../../../src/constants/scene'
 import {
     BACKDROP,
     CUTOUT,
@@ -8,14 +8,14 @@ import {
     FURNITURE,
     PANEL,
     PUPPET,
-} from '../../../../app/constants/scene/things'
+} from '../../../../src/constants/scene/things'
 import {
     CLUB_FAR_KEY,
     LIZ_BED_PHONE_KEY,
     ALLEY_KEY,
     BERKELEY_BANCROFT_KEY,
     BERKELEY_CAMPANILE_KEY,
-} from '../../../../app/constants/scene/scenes'
+} from '../../../../src/constants/scene/scenes'
 import {
     TIME_NOON,
     TIME_AFTERNOON,
@@ -23,7 +23,7 @@ import {
     TIME_NIGHT,
     SEASON_WINTER,
     SEASON_LOVE,
-} from '../../../../app/constants/scene/sky'
+} from '../../../../src/constants/scene/sky'
 import {
     BENNETT,
     KHARI_LIZ,
@@ -33,24 +33,24 @@ import {
     STEPHANIE,
     WADE,
     KHARI_LIZ_REFLECTION,
-} from '../../../../app/constants/scene/actors'
+} from '../../../../src/constants/scene/actors'
 import {
     CAMPUS_ASHAMED,
     SHOW_ANNOYED,
     ALLEY,
     BROKEN_HEARTED,
     DEMONSTRATION,
-} from '../../../../app/constants/scene/actors/bennett'
+} from '../../../../src/constants/scene/actors/bennett'
 import {
     PROTECTIVE_CONCERNED,
     CARESS,
     CARESS_REFLECTION,
-} from '../../../../app/constants/scene/actors/khariLiz'
+} from '../../../../src/constants/scene/actors/khariLiz'
 import {
     GREETING,
     PROTESTER,
-} from '../../../../app/constants/scene/actors/songs'
-import { OAKLAND_SIDE__LEVEL } from '../../../../app/constants/scene/things/backdrops'
+} from '../../../../src/constants/scene/actors/songs'
+import { OAKLAND_SIDE__LEVEL } from '../../../../src/constants/scene/things/backdrops'
 import {
     SIGNPOST,
     STINK_PLANT,
@@ -63,16 +63,16 @@ import {
     DUMPSTER,
     CHUTE_RECYCLING,
     CHUTE_GARBAGE,
-} from '../../../../app/constants/scene/things/cutouts'
+} from '../../../../src/constants/scene/things/cutouts'
 import {
     BANCROFT_DOOR,
     LOADING_DOCK_DOOR,
-} from '../../../../app/constants/scene/things/doors'
+} from '../../../../src/constants/scene/things/doors'
 import {
     BALLED_FOIL__ALLEY,
     LIZ_PHONE_BASE,
     LIZ_PHONE_BASE_REFLECTION,
-} from '../../../../app/constants/scene/things/fixtures'
+} from '../../../../src/constants/scene/things/fixtures'
 import {
     CAMPANILE,
     BERKELEY_BUILDING_TALL,
@@ -80,24 +80,24 @@ import {
     BERKELEY_BUILDING_WIDE__CAMPANILE,
     NEAR_BUILDINGS,
     DISTANT_BUILDINGS,
-} from '../../../../app/constants/scene/things/flats'
+} from '../../../../src/constants/scene/things/flats'
 import {
     LIZ_PILLOWS,
     LIZ_PILLOWS_REFLECTION,
-} from '../../../../app/constants/scene/things/furnitures'
+} from '../../../../src/constants/scene/things/furnitures'
 import {
     CROWD_BACK,
     LIZ_BED,
     LIZ_NIGHTSTAND,
     MILK_CRATE__VEGAN,
     PHONE_CALL_PANEL,
-} from '../../../../app/constants/scene/things/panels'
+} from '../../../../src/constants/scene/things/panels'
 import {
     GHOST_ODIN_CAMPUS,
     GHOST_ODIN_CLUB,
     GHOST_ODIN_ALLEY,
     GHOST_ODIN_DEMONSTRATION,
-} from '../../../../app/constants/scene/things/puppets'
+} from '../../../../src/constants/scene/things/puppets'
 
 export default [
     {

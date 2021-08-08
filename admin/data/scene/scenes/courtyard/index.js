@@ -1,9 +1,9 @@
 import {
     BENNETT,
     CATHERINE,
-} from '../../../../../app/constants/scene/actors'
-import { BREAKUP_DEJECTED } from '../../../../../app/constants/scene/actors/bennett'
-import { WEEPING } from '../../../../../app/constants/scene/actors/catherine'
+} from '../../../../../src/constants/scene/actors'
+import { BREAKUP_DEJECTED } from '../../../../../src/constants/scene/actors/bennett'
+import { WEEPING } from '../../../../../src/constants/scene/actors/catherine'
 
 export default {
     [BENNETT]: {

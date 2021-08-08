@@ -6,8 +6,8 @@ import promo from './admin/data/promo'
 import {
     getIsRuntimeBuild,
     getIsProductionBuild,
-} from './app/utils/server'
-import { COMPILED } from './app/constants/server'
+} from './src/utils/server'
+import { COMPILED } from './src/constants/server'
 
 export const onCreateWebpackConfig = ({ actions }) => {
     // Dev sanity check.
@@ -40,7 +40,7 @@ export const onCreateWebpackConfig = ({ actions }) => {
                 // Grab data from admin folder in runtime builds.
                 data: getIsRuntimeBuild() ?
                     path.resolve(__dirname, './admin/data') :
-                    path.resolve(__dirname, './app/data'),
+                    path.resolve(__dirname, './src/data'),
             },
         },
     })

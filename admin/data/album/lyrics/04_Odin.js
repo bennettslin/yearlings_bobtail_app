@@ -6,7 +6,7 @@ import {
     PUN,
     REFERENCE,
     SONGCRAFT,
-} from '../../../../app/constants/dots'
+} from '../../../../src/constants/dots'
 
 import {
     VERSES,
@@ -19,7 +19,7 @@ import {
     FLASHBACK_TO_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
     RESPONSE,
-} from '../../../../app/constants/lyrics'
+} from '../../../../src/constants/lyrics'
 
 export default {
     path: 'odin',

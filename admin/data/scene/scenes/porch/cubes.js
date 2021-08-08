@@ -1,4 +1,4 @@
-import { PORCH_KEY } from '../../../../../app/constants/scene/scenes'
+import { PORCH_KEY } from '../../../../../src/constants/scene/scenes'
 
 import {
     DEFAULT_CLEAR_COLOUR as D,
@@ -7,9 +7,9 @@ import {
     ROOF_COLOUR as C,
     PAVEMENT_COLOUR as V,
     FAMILY_EXTERIOR_COLOUR as X,
-} from '../../../../../app/constants/scene/cubes/colours'
+} from '../../../../../src/constants/scene/cubes/colours'
 
-import { e, f, k } from '../../../../../app/constants/scene/cubes/zIndices'
+import { e, f, k } from '../../../../../src/constants/scene/cubes/zIndices'
 
 export default {
     [PORCH_KEY]: {

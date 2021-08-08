@@ -1,4 +1,4 @@
-import { getFloatToHundredth } from '../../../../app/helpers/general'
+import { getFloatToHundredth } from '../../../../src/helpers/general'
 
 export const addVerseDurations = ({
     songDuration,

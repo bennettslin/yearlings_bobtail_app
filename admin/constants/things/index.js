@@ -11,7 +11,7 @@ import {
     FURNITURE,
     PANEL,
     PUPPET,
-} from '../../../app/constants/scene/things'
+} from '../../../src/constants/scene/things'
 
 const POSTER = 'poster'
 

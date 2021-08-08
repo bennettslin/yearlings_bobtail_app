@@ -2,17 +2,17 @@ import {
     SASHA,
     BRAD_SASHA,
     SASHA_BENNETT,
-} from '../../../../app/constants/scene/actors'
+} from '../../../../src/constants/scene/actors'
 import {
     INDIGNANT,
     POPULAR_GIRL,
-} from '../../../../app/constants/scene/actors/sasha'
-import { CHARMED_SCHOOLBUS } from '../../../../app/constants/scene/actors/bradSasha'
+} from '../../../../src/constants/scene/actors/sasha'
+import { CHARMED_SCHOOLBUS } from '../../../../src/constants/scene/actors/bradSasha'
 import {
     MERMAID,
     COMFORTING_HUMILIATED,
-} from '../../../../app/constants/scene/actors/sashaBennett'
-import { EPILOGUE } from '../../../../app/constants/scene/actors/songs'
+} from '../../../../src/constants/scene/actors/sashaBennett'
+import { EPILOGUE } from '../../../../src/constants/scene/actors/songs'
 
 export default [
     {

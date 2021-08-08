@@ -1,5 +1,5 @@
-import { PRETEEN_BENNETT } from '../../../../../app/constants/scene/actors'
-import { MAT } from '../../../../../app/constants/scene/actors/preteenBennett'
+import { PRETEEN_BENNETT } from '../../../../../src/constants/scene/actors'
+import { MAT } from '../../../../../src/constants/scene/actors/preteenBennett'
 
 export default {
     [PRETEEN_BENNETT]: {

@@ -3,9 +3,9 @@ import {
     AMY,
     STEPHANIE,
     WADE,
-} from '../../../../../../app/constants/scene/actors'
-import { PROTESTER } from '../../../../../../app/constants/scene/actors/songs'
-import { DEMONSTRATION } from '../../../../../../app/constants/scene/actors/bennett'
+} from '../../../../../../src/constants/scene/actors'
+import { PROTESTER } from '../../../../../../src/constants/scene/actors/songs'
+import { DEMONSTRATION } from '../../../../../../src/constants/scene/actors/bennett'
 
 export default {
     [STEPHANIE]: {

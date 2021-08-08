@@ -1,24 +1,24 @@
-import { ACTOR } from '../../../../../../../app/constants/scene'
+import { ACTOR } from '../../../../../../../src/constants/scene'
 import {
     YOUNG_BENNETT,
     ANITA,
     ESTHER,
-} from '../../../../../../../app/constants/scene/actors'
+} from '../../../../../../../src/constants/scene/actors'
 import {
     PANICKED,
     FLUSTERED,
     BATHING,
     SINGING,
-} from '../../../../../../../app/constants/scene/actors/youngBennett'
+} from '../../../../../../../src/constants/scene/actors/youngBennett'
 import {
     EXASPERATED,
     CONCERNED,
     CHEERING,
-} from '../../../../../../../app/constants/scene/actors/anita'
+} from '../../../../../../../src/constants/scene/actors/anita'
 import {
     CURIOUS,
     SNICKERING,
-} from '../../../../../../../app/constants/scene/actors/esther'
+} from '../../../../../../../src/constants/scene/actors/esther'
 
 export default [
     {

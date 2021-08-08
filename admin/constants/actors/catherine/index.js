@@ -1,15 +1,15 @@
 import {
     CATHERINE,
-} from '../../../../app/constants/scene/actors'
+} from '../../../../src/constants/scene/actors'
 import {
     WEEPING,
     QUIPPING,
     PUZZLED,
-} from '../../../../app/constants/scene/actors/catherine'
+} from '../../../../src/constants/scene/actors/catherine'
 import {
     EPILOGUE,
     GOPI,
-} from '../../../../app/constants/scene/actors/songs'
+} from '../../../../src/constants/scene/actors/songs'
 
 export default [
     {

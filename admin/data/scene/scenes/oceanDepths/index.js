@@ -1,5 +1,5 @@
-import { SASHA_BENNETT } from '../../../../../app/constants/scene/actors'
-import { MERMAID } from '../../../../../app/constants/scene/actors/sashaBennett'
+import { SASHA_BENNETT } from '../../../../../src/constants/scene/actors'
+import { MERMAID } from '../../../../../src/constants/scene/actors/sashaBennett'
 
 export default {
     [SASHA_BENNETT]: {

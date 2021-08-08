@@ -1,15 +1,15 @@
 import {
     CARDBOARD,
     PANEL,
-} from '../../../../../app/constants/scene/things'
+} from '../../../../../src/constants/scene/things'
 import {
     BENNETT_MAT,
     ODIN_MAT,
-} from '../../../../../app/constants/scene/things/cardboards'
+} from '../../../../../src/constants/scene/things/cardboards'
 import {
     OCEAN_CAVE_INTERIOR,
     OCEAN_CAVE_EXTERIOR,
-} from '../../../../../app/constants/scene/things/panels'
+} from '../../../../../src/constants/scene/things/panels'
 
 export default {
     [CARDBOARD]: {

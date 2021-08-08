@@ -1,11 +1,11 @@
 import {
     BENNETT_LIZ,
     BENNETT_LIZ_REFLECTION,
-} from '../../../../../../app/constants/scene/actors'
+} from '../../../../../../src/constants/scene/actors'
 import {
     HARD_ON,
     HARD_ON_REFLECTION,
-} from '../../../../../../app/constants/scene/actors/bennettLiz'
+} from '../../../../../../src/constants/scene/actors/bennettLiz'
 
 export default {
     [BENNETT_LIZ]: {

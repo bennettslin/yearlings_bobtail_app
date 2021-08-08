@@ -4,10 +4,10 @@ import {
     ANITA,
     ESTHER,
     WILLY,
-} from '../../../../../app/constants/scene/actors'
-import { YOUNG_CHILD } from '../../../../../app/constants/scene/actors/songs'
-import { DRYING_TEARS } from '../../../../../app/constants/scene/actors/bennettStephanie'
-import { CROSSING_GUARD } from '../../../../../app/constants/scene/actors/willy'
+} from '../../../../../src/constants/scene/actors'
+import { YOUNG_CHILD } from '../../../../../src/constants/scene/actors/songs'
+import { DRYING_TEARS } from '../../../../../src/constants/scene/actors/bennettStephanie'
+import { CROSSING_GUARD } from '../../../../../src/constants/scene/actors/willy'
 
 export default {
     [BENNETT_STEPHANIE]: {

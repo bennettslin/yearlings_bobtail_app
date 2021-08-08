@@ -1,21 +1,21 @@
 import {
     MOTHER,
     ESTHER_MOTHER,
-} from '../../../../app/constants/scene/actors'
+} from '../../../../src/constants/scene/actors'
 import {
     STOOPING,
     COMFORTING,
     ARGUING,
-} from '../../../../app/constants/scene/actors/mother'
+} from '../../../../src/constants/scene/actors/mother'
 import {
     HURT_CONSOLING,
     SOBBING_SHIELDING,
-} from '../../../../app/constants/scene/actors/estherMother'
+} from '../../../../src/constants/scene/actors/estherMother'
 import {
     PRESENT,
     FUTURE,
     EPILOGUE,
-} from '../../../../app/constants/scene/actors/songs'
+} from '../../../../src/constants/scene/actors/songs'
 
 export default [
     {

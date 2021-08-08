@@ -1,7 +1,7 @@
 import {
     INDIGNANT,
     POPULAR_GIRL,
-} from '../../../../../../app/constants/scene/actors/sasha'
+} from '../../../../../../src/constants/scene/actors/sasha'
 
 export default {
     [INDIGNANT]: null,

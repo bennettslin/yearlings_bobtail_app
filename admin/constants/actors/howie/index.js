@@ -2,11 +2,11 @@ import {
     HOWIE,
     HOWIE_WILLY,
     ANA_HOWIE,
-} from '../../../../app/constants/scene/actors'
+} from '../../../../src/constants/scene/actors'
 import {
     USHER_WAITING,
     USHER_LOOKING,
-} from '../../../../app/constants/scene/actors/howie'
+} from '../../../../src/constants/scene/actors/howie'
 import {
     GANGBANGER,
     ABBEY_ROAD,
@@ -16,7 +16,7 @@ import {
     STATION_WAGON,
     ATTIC,
     EPILOGUE,
-} from '../../../../app/constants/scene/actors/songs'
+} from '../../../../src/constants/scene/actors/songs'
 
 export default [
     {

@@ -17,7 +17,7 @@ import {
     NAV,
     ABOUT,
     OVERVIEW,
-} from '../../../../app/constants/tips'
+} from '../../../../src/constants/tips'
 
 export default [
     null,

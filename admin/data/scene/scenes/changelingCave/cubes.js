@@ -1,4 +1,4 @@
-import { CHANGELING_CAVE_KEY } from '../../../../../app/constants/scene/scenes'
+import { CHANGELING_CAVE_KEY } from '../../../../../src/constants/scene/scenes'
 
 import {
     GROUND_CLEAR_COLOUR as G,
@@ -8,7 +8,7 @@ import {
     SPOTLIGHT_LIGHT_COLOUR as M,
     SPOTLIGHT_LIGHTER_COLOUR as N,
     SPOTLIGHT_LIGHTEST_COLOUR as O,
-} from '../../../../../app/constants/scene/cubes/colours'
+} from '../../../../../src/constants/scene/cubes/colours'
 
 export default {
     [CHANGELING_CAVE_KEY]: {

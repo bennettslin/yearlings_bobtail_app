@@ -1,4 +1,4 @@
-import { ACTOR } from '../../../../app/constants/scene'
+import { ACTOR } from '../../../../src/constants/scene'
 import {
     BACKDROP,
     BUBBLE,
@@ -8,17 +8,17 @@ import {
     FLAT,
     FURNITURE,
     PANEL,
-} from '../../../../app/constants/scene/things'
+} from '../../../../src/constants/scene/things'
 import {
     CLUB_SIDE_CROWD_KEY,
     CLUB_SIDE_STAGE_KEY,
     LIZ_BED_KEY,
     CLUB_LOADING,
-} from '../../../../app/constants/scene/scenes'
+} from '../../../../src/constants/scene/scenes'
 import {
     TIME_NIGHT,
     SEASON_SUMMER,
-} from '../../../../app/constants/scene/sky'
+} from '../../../../src/constants/scene/sky'
 import {
     BENNETT,
     MARA,
@@ -32,39 +32,39 @@ import {
     WADE,
     BENNETT_REFLECTION,
     LIZ_REFLECTION,
-} from '../../../../app/constants/scene/actors'
+} from '../../../../src/constants/scene/actors'
 import {
     SIDELONG_HESITANCE,
     REMOVING_SHOES,
     SHOES_REFLECTION,
-} from '../../../../app/constants/scene/actors/bennett'
+} from '../../../../src/constants/scene/actors/bennett'
 import {
     ASLEEP_REACHING,
     REACHING_REFLECTION,
-} from '../../../../app/constants/scene/actors/liz'
-import { SHANE_SPILLING } from '../../../../app/constants/scene/actors/tomer'
-import { WATCHING } from '../../../../app/constants/scene/actors/wade'
-import { SQUEEZING } from '../../../../app/constants/scene/actors/amyStephanie'
+} from '../../../../src/constants/scene/actors/liz'
+import { SHANE_SPILLING } from '../../../../src/constants/scene/actors/tomer'
+import { WATCHING } from '../../../../src/constants/scene/actors/wade'
+import { SQUEEZING } from '../../../../src/constants/scene/actors/amyStephanie'
 import {
     PERFORMING,
     FLIRTING,
     CARRYING,
     MINGLING,
     WAITING,
-} from '../../../../app/constants/scene/actors/songs'
-import { OAKLAND_SIDE__LEVEL } from '../../../../app/constants/scene/things/backdrops'
+} from '../../../../src/constants/scene/actors/songs'
+import { OAKLAND_SIDE__LEVEL } from '../../../../src/constants/scene/things/backdrops'
 import {
     BUBBLE_SMALL__AMY,
     BUBBLE_MEDIUM__AMY,
     BUBBLE_LARGE__AMY,
     THOUGHT_AMY,
-} from '../../../../app/constants/scene/things/bubbles'
+} from '../../../../src/constants/scene/things/bubbles'
 import {
     MONITOR_SIDE__CROWD,
     MONITOR_SIDE__STAGE,
     WALL_SPEAKER_SIDE,
-} from '../../../../app/constants/scene/things/cutouts'
-import { CLUB_DOOR_OPEN } from '../../../../app/constants/scene/things/doors'
+} from '../../../../src/constants/scene/things/cutouts'
+import { CLUB_DOOR_OPEN } from '../../../../src/constants/scene/things/doors'
 import {
     STAGE_MIC__CROWD,
     STAGE_MIC__STAGE,
@@ -76,17 +76,17 @@ import {
     LIZ_PHONE_REFLECTION,
     BENNETT_SHOE,
     BENNETT_SHOE_REFLECTION,
-} from '../../../../app/constants/scene/things/fixtures'
-import { NEAR_BUILDINGS } from '../../../../app/constants/scene/things/flats'
+} from '../../../../src/constants/scene/things/fixtures'
+import { NEAR_BUILDINGS } from '../../../../src/constants/scene/things/flats'
 import {
     LIZ_PILLOWS,
     LIZ_PILLOWS_REFLECTION,
-} from '../../../../app/constants/scene/things/furnitures'
+} from '../../../../src/constants/scene/things/furnitures'
 import {
     CROWD_SIDE,
     LIZ_BED,
     LIZ_NIGHTSTAND,
-} from '../../../../app/constants/scene/things/panels'
+} from '../../../../src/constants/scene/things/panels'
 
 export default [
     {

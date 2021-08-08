@@ -1,24 +1,24 @@
-import { ACTOR } from '../../../../../../../app/constants/scene'
+import { ACTOR } from '../../../../../../../src/constants/scene'
 import {
     BENNETT,
     CATHERINE,
     AMY,
     WADE,
-} from '../../../../../../../app/constants/scene/actors'
-import { SMOKER } from '../../../../../../../app/constants/scene/actors/amy'
+} from '../../../../../../../src/constants/scene/actors'
+import { SMOKER } from '../../../../../../../src/constants/scene/actors/amy'
 import {
     BREAKUP_DEJECTED,
     SOLICITING_OPINION,
     CATHOLIC_PENSIVE,
     CATHOLIC_IDEA,
     PIOUS,
-} from '../../../../../../../app/constants/scene/actors/bennett'
+} from '../../../../../../../src/constants/scene/actors/bennett'
 import {
     WEEPING,
     QUIPPING,
     PUZZLED,
-} from '../../../../../../../app/constants/scene/actors/catherine'
-import { CATHOLIC_GUY } from '../../../../../../../app/constants/scene/actors/wade'
+} from '../../../../../../../src/constants/scene/actors/catherine'
+import { CATHOLIC_GUY } from '../../../../../../../src/constants/scene/actors/wade'
 
 export default [
     {

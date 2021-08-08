@@ -1,19 +1,19 @@
 import {
     CARDBOARD,
     PANEL,
-} from '../../../../../app/constants/scene/things'
+} from '../../../../../src/constants/scene/things'
 import {
     BENNETT_ODIN_DEPTHS,
     SEA_SERPENT_LEFT,
     SEA_SERPENT_RIGHT,
-} from '../../../../../app/constants/scene/things/cardboards'
+} from '../../../../../src/constants/scene/things/cardboards'
 import {
     OCEAN_WAVES__REAR,
     OCEAN_WAVES__MIDDLE_REAR,
     OCEAN_WAVES__MIDDLE,
     OCEAN_WAVES__MIDDLE_FRONT,
     OCEAN_WAVES__FRONT,
-} from '../../../../../app/constants/scene/things/panels'
+} from '../../../../../src/constants/scene/things/panels'
 
 export default {
     [CARDBOARD]: {

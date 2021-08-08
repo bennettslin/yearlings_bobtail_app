@@ -2,9 +2,9 @@ import {
     BENNETT,
     FATHER,
     SASHA_BENNETT,
-} from '../../../../../app/constants/scene/actors'
-import { PAST } from '../../../../../app/constants/scene/actors/songs'
-import { COMFORTING_HUMILIATED } from '../../../../../app/constants/scene/actors/sashaBennett'
+} from '../../../../../src/constants/scene/actors'
+import { PAST } from '../../../../../src/constants/scene/actors/songs'
+import { COMFORTING_HUMILIATED } from '../../../../../src/constants/scene/actors/sashaBennett'
 
 export default {
     [BENNETT]: {

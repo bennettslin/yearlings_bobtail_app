@@ -1,9 +1,9 @@
 import {
     DOOR,
     FIXTURE,
-} from '../../../../../app/constants/scene/things'
-import { CLUB_DOOR_OPEN } from '../../../../../app/constants/scene/things/doors'
-import { DRUMS_STACKED__CLUB } from '../../../../../app/constants/scene/things/fixtures'
+} from '../../../../../src/constants/scene/things'
+import { CLUB_DOOR_OPEN } from '../../../../../src/constants/scene/things/doors'
+import { DRUMS_STACKED__CLUB } from '../../../../../src/constants/scene/things/fixtures'
 
 export default {
     [DOOR]: {

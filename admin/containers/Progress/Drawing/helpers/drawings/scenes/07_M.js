@@ -1,4 +1,4 @@
-import { ACTOR } from '../../../../../../../app/constants/scene'
+import { ACTOR } from '../../../../../../../src/constants/scene'
 import {
     BENNETT,
     MARA,
@@ -8,8 +8,8 @@ import {
     TOMER,
     MIRIAM,
     STEPHANIE,
-} from '../../../../../../../app/constants/scene/actors'
-import { SQUATTING } from '../../../../../../../app/constants/scene/actors/ana'
+} from '../../../../../../../src/constants/scene/actors'
+import { SQUATTING } from '../../../../../../../src/constants/scene/actors/ana'
 import {
     PONDERING,
     RUBIKS_CUBE,
@@ -18,21 +18,21 @@ import {
     HOPELESSLY_CRUSHED,
     WONDERING_BABY,
     MERRILY_DERANGED,
-} from '../../../../../../../app/constants/scene/actors/bennett'
+} from '../../../../../../../src/constants/scene/actors/bennett'
 import {
     USHER_WAITING,
     USHER_LOOKING,
-} from '../../../../../../../app/constants/scene/actors/howie'
+} from '../../../../../../../src/constants/scene/actors/howie'
 import {
     INFANT_CURIOUS,
     INFANT_NURSING,
-} from '../../../../../../../app/constants/scene/actors/miriam'
-import { BENNETT_KEYBOARD } from '../../../../../../../app/constants/scene/actors/stephanie'
-import { SHANE_BUYING } from '../../../../../../../app/constants/scene/actors/tomer'
+} from '../../../../../../../src/constants/scene/actors/miriam'
+import { BENNETT_KEYBOARD } from '../../../../../../../src/constants/scene/actors/stephanie'
+import { SHANE_BUYING } from '../../../../../../../src/constants/scene/actors/tomer'
 import {
     FLIRTING,
     EATING,
-} from '../../../../../../../app/constants/scene/actors/songs'
+} from '../../../../../../../src/constants/scene/actors/songs'
 
 export default [
     {

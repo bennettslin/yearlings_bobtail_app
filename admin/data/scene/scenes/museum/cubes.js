@@ -1,12 +1,12 @@
-import { MUSEUM_KEY } from '../../../../../app/constants/scene/scenes'
+import { MUSEUM_KEY } from '../../../../../src/constants/scene/scenes'
 
 import {
     WOOD_FLOOR_COLOUR as F,
     FANCY_WALL_COLOUR as W,
     PLATFORM_COLOUR as P,
-} from '../../../../../app/constants/scene/cubes/colours'
+} from '../../../../../src/constants/scene/cubes/colours'
 
-import { d, g } from '../../../../../app/constants/scene/cubes/zIndices'
+import { d, g } from '../../../../../src/constants/scene/cubes/zIndices'
 
 export default {
     [MUSEUM_KEY]: {

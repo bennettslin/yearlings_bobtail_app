@@ -1,8 +1,8 @@
-import { BASEMENT_BED_MAGIC_KEY } from '../../../../../../app/constants/scene/scenes'
+import { BASEMENT_BED_MAGIC_KEY } from '../../../../../../src/constants/scene/scenes'
 import {
     GRASS_COLOUR as H,
     NIGHT_MAGIC_COLOUR as Z,
-} from '../../../../../../app/constants/scene/cubes/colours'
+} from '../../../../../../src/constants/scene/cubes/colours'
 
 const DEFAULT_FLOOR = {
     zIndices: [

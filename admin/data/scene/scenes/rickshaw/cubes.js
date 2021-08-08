@@ -1,10 +1,10 @@
-import { LEFT } from '../../../../../app/constants/scene/cubes'
-import { RICKSHAW_KEY } from '../../../../../app/constants/scene/scenes'
+import { LEFT } from '../../../../../src/constants/scene/cubes'
+import { RICKSHAW_KEY } from '../../../../../src/constants/scene/scenes'
 
 import {
     SAND_COLOUR as K,
     STREET_COLOUR as T,
-} from '../../../../../app/constants/scene/cubes/colours'
+} from '../../../../../src/constants/scene/cubes/colours'
 
 export default {
     [RICKSHAW_KEY]: {

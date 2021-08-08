@@ -20,7 +20,7 @@ import {
     FURNITURE,
     PANEL,
     PUPPET,
-} from '../../../../../app/constants/scene/things'
+} from '../../../../../src/constants/scene/things'
 
 export default {
     [BACKDROP]: backdrops,

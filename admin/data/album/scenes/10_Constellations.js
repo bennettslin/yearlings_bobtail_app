@@ -2,7 +2,7 @@
  * TODO: References, decide on where to put quotations marks. Balance between
  * not being clear and being too obvious.
  */
-import { ACTOR } from '../../../../app/constants/scene'
+import { ACTOR } from '../../../../src/constants/scene'
 import {
     BACKDROP,
     BUBBLE,
@@ -11,7 +11,7 @@ import {
     FLAT,
     FURNITURE,
     PANEL,
-} from '../../../../app/constants/scene/things'
+} from '../../../../src/constants/scene/things'
 import {
     WALGREENS_KEY,
     STEAM_TUNNEL_KEY,
@@ -19,21 +19,21 @@ import {
     ROYCE_HALL_KEY,
     CEMETERY_KEY,
     STATION_WAGON_KEY,
-} from '../../../../app/constants/scene/scenes'
+} from '../../../../src/constants/scene/scenes'
 import {
     TIME_NIGHT,
     TIME_TWILIGHT,
     TIME_DAWN,
     SEASON_SPRING,
     SEASON_THOUGHT,
-} from '../../../../app/constants/scene/sky'
+} from '../../../../src/constants/scene/sky'
 import {
     BENNETT,
     ANA,
     ANA_HOWIE,
     HOWIE,
     TOMER,
-} from '../../../../app/constants/scene/actors'
+} from '../../../../src/constants/scene/actors'
 import {
     ABBEY_ROAD,
     WALGREENS,
@@ -41,15 +41,15 @@ import {
     CEMETERY,
     STATION_WAGON,
     ATTIC,
-} from '../../../../app/constants/scene/actors/songs'
+} from '../../../../src/constants/scene/actors/songs'
 import {
     LOS_ANGELES_BACKDROP,
     PHARMACY_CEL,
-} from '../../../../app/constants/scene/things/backdrops'
+} from '../../../../src/constants/scene/things/backdrops'
 import {
     CONSTELLATION_TARPIT,
     CONSTELLATION_SIBLING,
-} from '../../../../app/constants/scene/things/bubbles'
+} from '../../../../src/constants/scene/things/bubbles'
 import {
     UCLA_TREE__LEFT,
     UCLA_TREE__RIGHT,
@@ -60,18 +60,18 @@ import {
     STORAGE_CHEST,
     HOWIE_FRIDGE,
     TELEVISION,
-} from '../../../../app/constants/scene/things/cutouts'
+} from '../../../../src/constants/scene/things/cutouts'
 import {
     PUSH_BROOM__TUNNEL,
     EVIAN_BOTTLES,
-} from '../../../../app/constants/scene/things/fixtures'
+} from '../../../../src/constants/scene/things/fixtures'
 import {
     ROYCE_HALL,
     CEMETERY_HILLS_LEFT,
     CEMETERY_HILLS_RIGHT,
     DRIVING_HOUSE__SINGLE,
     DISTANT_BUILDINGS,
-} from '../../../../app/constants/scene/things/flats'
+} from '../../../../src/constants/scene/things/flats'
 import {
     SATURN_EXTERIOR,
     SATURN_INTERIOR,
@@ -80,8 +80,8 @@ import {
     ATTIC_COUCH,
     ATTIC_ARMREST__LEFT,
     ATTIC_ARMREST__RIGHT,
-} from '../../../../app/constants/scene/things/panels'
-import { ATTIC_PILLOW } from '../../../../app/constants/scene/things/furnitures'
+} from '../../../../src/constants/scene/things/panels'
+import { ATTIC_PILLOW } from '../../../../src/constants/scene/things/furnitures'
 
 export default [
     {

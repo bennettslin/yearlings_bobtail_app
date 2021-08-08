@@ -1,11 +1,11 @@
-import { NOHO_SCHOOL_KEY } from '../../../../../app/constants/scene/scenes'
+import { NOHO_SCHOOL_KEY } from '../../../../../src/constants/scene/scenes'
 
 import {
     DEFAULT_CLEAR_COLOUR as D,
     GROUND_CLEAR_COLOUR as G,
     PAVEMENT_COLOUR as V,
     SCHOOL_FLOOR_COLOUR as F,
-} from '../../../../../app/constants/scene/cubes/colours'
+} from '../../../../../src/constants/scene/cubes/colours'
 
 export default {
     [NOHO_SCHOOL_KEY]: {

@@ -1,9 +1,9 @@
 import {
     PRETEEN_BENNETT,
     BRAD_SASHA,
-} from '../../../../../app/constants/scene/actors'
-import { CHARMED_SCHOOLBUS } from '../../../../../app/constants/scene/actors/bradSasha'
-import { PANICKED } from '../../../../../app/constants/scene/actors/preteenBennett'
+} from '../../../../../src/constants/scene/actors'
+import { CHARMED_SCHOOLBUS } from '../../../../../src/constants/scene/actors/bradSasha'
+import { PANICKED } from '../../../../../src/constants/scene/actors/preteenBennett'
 
 export default {
     [PRETEEN_BENNETT]: {

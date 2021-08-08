@@ -23,56 +23,56 @@ import {
     WAITING_THOUGHT_SINGING,
     WAITING_THOUGHT_STUDYING,
     WAITING_THOUGHT_WALKING,
-} from '../../../../../../app/constants/scene/things/bubbles'
+} from '../../../../../../src/constants/scene/things/bubbles'
 import {
     AMY,
     ANDREW,
     BENNETT,
     LIZ,
     MARA,
-} from '../../../../../../app/constants/scene/actors'
+} from '../../../../../../src/constants/scene/actors'
 import {
     ALL_PEOPLE__SHARED,
     ALL_CLOTHING__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/actors'
-import { HOUSE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/buildings'
-import { TRAY__SHARED } from '../../../../../../app/constants/scene/sharedStyles/cafeteria'
+} from '../../../../../../src/constants/scene/sharedStyles/actors'
+import { HOUSE__SHARED } from '../../../../../../src/constants/scene/sharedStyles/buildings'
+import { TRAY__SHARED } from '../../../../../../src/constants/scene/sharedStyles/cafeteria'
 import {
     CONSTELLATION__SHARED,
     DRAWING__SHARED,
     THOUGHT__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/comic'
+} from '../../../../../../src/constants/scene/sharedStyles/comic'
 import {
     BASEMENT_TAKEOUT__SHARED,
     LANCET_PEN__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/food'
-import { BENNETT_LINENS__SHARED } from '../../../../../../app/constants/scene/sharedStyles/furniture'
-import { DOOR__SHARED } from '../../../../../../app/constants/scene/sharedStyles/home'
+} from '../../../../../../src/constants/scene/sharedStyles/food'
+import { BENNETT_LINENS__SHARED } from '../../../../../../src/constants/scene/sharedStyles/furniture'
+import { DOOR__SHARED } from '../../../../../../src/constants/scene/sharedStyles/home'
 import {
     ACOUSTIC_GUITAR__SHARED,
     BANJO__SHARED,
     HEADPHONE__SHARED,
     MICROPHONE__SHARED,
     MONITOR__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/instruments'
+} from '../../../../../../src/constants/scene/sharedStyles/instruments'
 import {
     FOLIAGE__SHARED,
     MOUNTAIN__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/outdoor'
+} from '../../../../../../src/constants/scene/sharedStyles/outdoor'
 import {
     BOOK__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/paper'
+} from '../../../../../../src/constants/scene/sharedStyles/paper'
 import {
     BENNETT_ROOM_SHARED,
     DINING_SHARED,
     BUSING_SHARED,
     DISHROOM_SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/room'
+} from '../../../../../../src/constants/scene/sharedStyles/room'
 import {
     ALL_VEHICLES__SHARED,
     REATTA__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/vehicles'
-import { CAFETERIA__SHARED } from '../../../../../../app/constants/scene/sharedStyles/wardrobe'
+} from '../../../../../../src/constants/scene/sharedStyles/vehicles'
+import { CAFETERIA__SHARED } from '../../../../../../src/constants/scene/sharedStyles/wardrobe'
 
 export default {
     [BUBBLE_LARGE]: null,

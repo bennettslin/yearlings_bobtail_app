@@ -1,5 +1,5 @@
-import { YOUNG_BENNETT } from '../../../../../../app/constants/scene/actors'
-import { BATHING } from '../../../../../../app/constants/scene/actors/youngBennett'
+import { YOUNG_BENNETT } from '../../../../../../src/constants/scene/actors'
+import { BATHING } from '../../../../../../src/constants/scene/actors/youngBennett'
 
 export default {
     [YOUNG_BENNETT]: {

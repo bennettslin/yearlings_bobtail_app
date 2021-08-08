@@ -1,18 +1,18 @@
 import {
     BUBBLE,
     CARDBOARD,
-} from '../../../../../app/constants/scene/things'
+} from '../../../../../src/constants/scene/things'
 import {
     BUBBLE_SMALL__CINEMA,
     BUBBLE_MEDIUM__CINEMA,
     BUBBLE_LARGE__CINEMA,
     CINEMA_THOUGHT_RECORDING,
     CINEMA_THOUGHT_BUYING,
-} from '../../../../../app/constants/scene/things/bubbles'
+} from '../../../../../src/constants/scene/things/bubbles'
 import {
     POSTER_GLADIATOR,
     MARQUEE_FRAME__GLADIATOR,
-} from '../../../../../app/constants/scene/things/cardboards'
+} from '../../../../../src/constants/scene/things/cardboards'
 import {
     BUBBLE_LARGE_CONFIG,
     BUBBLE_MEDIUM_CONFIG,

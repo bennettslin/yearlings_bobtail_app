@@ -1,4 +1,4 @@
-import { CARDBOARD } from '../../../../app/constants/scene/things'
+import { CARDBOARD } from '../../../../src/constants/scene/things'
 
 import {
     POSTER_TINTIN,
@@ -6,7 +6,7 @@ import {
     POSTER_NIRVANA,
     POSTER_LEONARD_COHEN,
     POSTER_ELLIOTT_SMITH,
-} from '../../../../app/constants/scene/things/cardboards'
+} from '../../../../src/constants/scene/things/cardboards'
 
 export default [
     {

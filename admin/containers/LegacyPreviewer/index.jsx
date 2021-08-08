@@ -5,8 +5,8 @@ import debounce from 'debounce'
 import PreviewerDashboard from '../Previewer/Dashboard'
 import PreviewerSvg from '../Previewer/Svg'
 
-import { getViewBoxSize } from '../../../app/components/Presence/Svg/helpers/size'
-import { getWindow } from '../../../app/utils/browser'
+import { getViewBoxSize } from '../../../src/components/Presence/Svg/helpers/size'
+import { getWindow } from '../../../src/utils/browser'
 import { accessPresence } from '../../utils/access'
 import {
     getPresenceFromStorage,

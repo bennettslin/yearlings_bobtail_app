@@ -4,7 +4,7 @@ import {
     OBSERVATION,
     PUN,
     SONGCRAFT,
-} from '../../../../app/constants/dots'
+} from '../../../../src/constants/dots'
 
 import {
     VERSES,
@@ -13,7 +13,7 @@ import {
     BRIDGE,
     IS_UNIT_DOT,
     FORESHADOW_OF_WORMHOLE_PREFIX,
-} from '../../../../app/constants/lyrics'
+} from '../../../../src/constants/lyrics'
 
 export default {
     path: 'ash-wednesday',

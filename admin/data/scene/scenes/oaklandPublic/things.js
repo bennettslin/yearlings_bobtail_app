@@ -1,10 +1,10 @@
-import { FLAT } from '../../../../../app/constants/scene/things'
+import { FLAT } from '../../../../../src/constants/scene/things'
 import {
     PUBLIC_FAR__GOLDEN_CORD,
     PUBLIC_NEAR__GOLDEN_CORD,
     OAKLAND_SCHOOL,
     OAKLAND_FLAG,
-} from '../../../../../app/constants/scene/things/flats'
+} from '../../../../../src/constants/scene/things/flats'
 
 export default {
     [FLAT]: {

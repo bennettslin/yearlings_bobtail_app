@@ -10,7 +10,7 @@ import {
     TIME_AFTERNOON,
     TIME_EVENING,
     TIME_NIGHT,
-} from '../../../../app/constants/scene/sky'
+} from '../../../../src/constants/scene/sky'
 
 const SkyDay = ({ sceneSeason }) => (
     <div className={cx(

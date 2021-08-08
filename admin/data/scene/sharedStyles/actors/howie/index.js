@@ -1,7 +1,7 @@
 import {
     USHER_WAITING,
     USHER_LOOKING,
-} from '../../../../../../app/constants/scene/actors/howie'
+} from '../../../../../../src/constants/scene/actors/howie'
 import {
     ABBEY_ROAD,
     WALGREENS,
@@ -9,13 +9,13 @@ import {
     STATION_WAGON,
     ATTIC,
     EPILOGUE,
-} from '../../../../../../app/constants/scene/actors/songs'
-import { MARA } from '../../../../../../app/constants/scene/actors'
-import { USHER__SHARED } from '../../../../../../app/constants/scene/sharedStyles/actors'
-import { THOUGHT__SHARED } from '../../../../../../app/constants/scene/sharedStyles/comic'
-import { ROBITUSSIN__SHARED } from '../../../../../../app/constants/scene/sharedStyles/food'
-import { SATURN__SHARED } from '../../../../../../app/constants/scene/sharedStyles/vehicles'
-import { STEAM_TUNNEL__SHARED } from '../../../../../../app/constants/scene/sharedStyles/wardrobe'
+} from '../../../../../../src/constants/scene/actors/songs'
+import { MARA } from '../../../../../../src/constants/scene/actors'
+import { USHER__SHARED } from '../../../../../../src/constants/scene/sharedStyles/actors'
+import { THOUGHT__SHARED } from '../../../../../../src/constants/scene/sharedStyles/comic'
+import { ROBITUSSIN__SHARED } from '../../../../../../src/constants/scene/sharedStyles/food'
+import { SATURN__SHARED } from '../../../../../../src/constants/scene/sharedStyles/vehicles'
+import { STEAM_TUNNEL__SHARED } from '../../../../../../src/constants/scene/sharedStyles/wardrobe'
 
 export default {
     [ABBEY_ROAD]: null,

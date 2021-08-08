@@ -63,27 +63,27 @@ import {
     WIDE_ARMREST_MIRIAM,
     WIDE_COUCH_BENNETT,
     WIDE_COUCH_MIRIAM,
-} from '../../../../../../app/constants/scene/things/panels'
-import { DARKEN__SHARED, FUTURE__SHARED, PAST__SHARED, PRESENT__SHARED } from '../../../../../../app/constants/scene/sharedStyles'
-import { OCEAN_LIFE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/animals'
+} from '../../../../../../src/constants/scene/things/panels'
+import { DARKEN__SHARED, FUTURE__SHARED, PAST__SHARED, PRESENT__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
+import { OCEAN_LIFE__SHARED } from '../../../../../../src/constants/scene/sharedStyles/animals'
 import {
     DISH__SHARED,
     TRAY__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/cafeteria'
-import { DRAWING__SHARED } from '../../../../../../app/constants/scene/sharedStyles/comic'
+} from '../../../../../../src/constants/scene/sharedStyles/cafeteria'
+import { DRAWING__SHARED } from '../../../../../../src/constants/scene/sharedStyles/comic'
 import {
     ATTIC_LINENS__SHARED,
     BENNETT_LINENS__SHARED,
     LIZ_LINENS__SHARED,
     MIRIAM_LINENS__SHARED,
     WAITING_ARMCHAIR__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/furniture'
+} from '../../../../../../src/constants/scene/sharedStyles/furniture'
 import {
     OCEAN_CAVE__SHARED,
     ROSE_RED__SHARED,
     TAIWAN_FOLIAGE__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/outdoor'
-import { BOOK__SHARED } from '../../../../../../app/constants/scene/sharedStyles/paper'
+} from '../../../../../../src/constants/scene/sharedStyles/outdoor'
+import { BOOK__SHARED } from '../../../../../../src/constants/scene/sharedStyles/paper'
 import {
     ALL_VEHICLES__SHARED,
     GO_KART__SHARED,
@@ -91,7 +91,7 @@ import {
     REATTA__SHARED,
     SATURN__SHARED,
     SCHOOLBUS__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/vehicles'
+} from '../../../../../../src/constants/scene/sharedStyles/vehicles'
 
 export default {
     [ATTIC_ARMREST]: [

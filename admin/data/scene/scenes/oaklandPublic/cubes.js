@@ -1,11 +1,11 @@
-import { OAKLAND_PUBLIC_KEY } from '../../../../../app/constants/scene/scenes'
+import { OAKLAND_PUBLIC_KEY } from '../../../../../src/constants/scene/scenes'
 
 import {
     GROUND_CLEAR_COLOUR as G,
     STREET_COLOUR as T,
     CROSSWALK_COLOUR as K,
     PAVEMENT_COLOUR as V,
-} from '../../../../../app/constants/scene/cubes/colours'
+} from '../../../../../src/constants/scene/cubes/colours'
 
 export default {
     [OAKLAND_PUBLIC_KEY]: {

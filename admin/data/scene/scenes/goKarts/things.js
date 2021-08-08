@@ -1,14 +1,14 @@
 import {
     FLAT,
     PANEL,
-} from '../../../../../app/constants/scene/things'
-import { GO_KART_TRACK } from '../../../../../app/constants/scene/things/flats'
+} from '../../../../../src/constants/scene/things'
+import { GO_KART_TRACK } from '../../../../../src/constants/scene/things/flats'
 import {
     GO_KART_SEAT__LEFT,
     GO_KART_SEAT__RIGHT,
     GO_KART_EXTERIOR__LEFT,
     GO_KART_EXTERIOR__RIGHT,
-} from '../../../../../app/constants/scene/things/panels'
+} from '../../../../../src/constants/scene/things/panels'
 
 export default {
     [FLAT]: {

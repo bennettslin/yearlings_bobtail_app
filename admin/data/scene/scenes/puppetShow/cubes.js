@@ -1,6 +1,6 @@
-import { PUPPET_SHOW_KEY } from '../../../../../app/constants/scene/scenes'
+import { PUPPET_SHOW_KEY } from '../../../../../src/constants/scene/scenes'
 
-import { GROUND_CLEAR_COLOUR as G } from '../../../../../app/constants/scene/cubes/colours'
+import { GROUND_CLEAR_COLOUR as G } from '../../../../../src/constants/scene/cubes/colours'
 
 export default {
     [PUPPET_SHOW_KEY]: {

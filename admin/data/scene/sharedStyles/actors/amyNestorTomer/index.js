@@ -1,4 +1,4 @@
-import { OFFICER } from '../../../../../../app/constants/scene/actors/amyNestorTomer'
+import { OFFICER } from '../../../../../../src/constants/scene/actors/amyNestorTomer'
 
 export default {
     [OFFICER]: null,

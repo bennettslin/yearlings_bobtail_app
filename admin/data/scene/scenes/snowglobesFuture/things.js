@@ -3,22 +3,22 @@ import {
     FIXTURE,
     PANEL,
     PUPPET,
-} from '../../../../../app/constants/scene/things'
+} from '../../../../../src/constants/scene/things'
 import {
     SNOWGLOBE_SMALL_FUTURE,
     SNOWGLOBE_CORD,
     SNOWGLOBE_COWGIRL,
-} from '../../../../../app/constants/scene/things/cardboards'
+} from '../../../../../src/constants/scene/things/cardboards'
 import {
     RECORDING_MIC,
     RECORDING_BEERS,
-} from '../../../../../app/constants/scene/things/fixtures'
+} from '../../../../../src/constants/scene/things/fixtures'
 import {
     SNOWGLOBE_FUTURE__LIZ,
     SNOWGLOBE_FUTURE__BENNETT,
     LIZ_COUCH__FUTURE,
-} from '../../../../../app/constants/scene/things/panels'
-import { OPAL_COUCH__FUTURE } from '../../../../../app/constants/scene/things/puppets'
+} from '../../../../../src/constants/scene/things/panels'
+import { OPAL_COUCH__FUTURE } from '../../../../../src/constants/scene/things/puppets'
 
 export default {
     [CARDBOARD]: {

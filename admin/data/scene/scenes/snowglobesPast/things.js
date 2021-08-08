@@ -2,13 +2,13 @@ import {
     CARDBOARD,
     FIXTURE,
     PANEL,
-} from '../../../../../app/constants/scene/things'
+} from '../../../../../src/constants/scene/things'
 import {
     SNOWGLOBE_SMALL_PAST,
     SNOWGLOBE_ENRAGED_SOBBING,
-} from '../../../../../app/constants/scene/things/cardboards'
-import { TETHERBALL_POLE } from '../../../../../app/constants/scene/things/fixtures'
-import { SNOWGLOBE_PAST } from '../../../../../app/constants/scene/things/panels'
+} from '../../../../../src/constants/scene/things/cardboards'
+import { TETHERBALL_POLE } from '../../../../../src/constants/scene/things/fixtures'
+import { SNOWGLOBE_PAST } from '../../../../../src/constants/scene/things/panels'
 
 export default {
     [CARDBOARD]: {

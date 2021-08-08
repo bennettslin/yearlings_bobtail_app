@@ -4,18 +4,18 @@ import {
     PERFUMING,
     TENNIS,
     REVERSING,
-} from '../../../../../../app/constants/scene/actors/miriam'
+} from '../../../../../../src/constants/scene/actors/miriam'
 import {
     GOPI,
     EPILOGUE,
-} from '../../../../../../app/constants/scene/actors/songs'
-import { MARA } from '../../../../../../app/constants/scene/actors'
-import { THOUGHT__SHARED } from '../../../../../../app/constants/scene/sharedStyles/comic'
-import { REATTA__SHARED } from '../../../../../../app/constants/scene/sharedStyles/vehicles'
+} from '../../../../../../src/constants/scene/actors/songs'
+import { MARA } from '../../../../../../src/constants/scene/actors'
+import { THOUGHT__SHARED } from '../../../../../../src/constants/scene/sharedStyles/comic'
+import { REATTA__SHARED } from '../../../../../../src/constants/scene/sharedStyles/vehicles'
 import {
     SARI__SHARED,
     YOUNG_MOM__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/wardrobe'
+} from '../../../../../../src/constants/scene/sharedStyles/wardrobe'
 
 export default {
     [INFANT_CURIOUS]: [

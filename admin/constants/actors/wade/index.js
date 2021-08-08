@@ -1,15 +1,15 @@
 import {
     WADE,
-} from '../../../../app/constants/scene/actors'
+} from '../../../../src/constants/scene/actors'
 import {
     CATHOLIC_GUY,
     WATCHING,
-} from '../../../../app/constants/scene/actors/wade'
+} from '../../../../src/constants/scene/actors/wade'
 import {
     MINGLING,
     EPILOGUE,
     PROTESTER,
-} from '../../../../app/constants/scene/actors/songs'
+} from '../../../../src/constants/scene/actors/songs'
 
 export default [
     {

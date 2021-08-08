@@ -3,10 +3,10 @@ import {
     LIZ,
     MOTHER,
     MIRIAM_STEPHANIE,
-} from '../../../../../app/constants/scene/actors'
-import { PRESENT } from '../../../../../app/constants/scene/actors/songs'
-import { PETTING_SEATED_PRESENT } from '../../../../../app/constants/scene/actors/liz'
-import { MISCHIEVOUS_BANJO } from '../../../../../app/constants/scene/actors/miriamStephanie'
+} from '../../../../../src/constants/scene/actors'
+import { PRESENT } from '../../../../../src/constants/scene/actors/songs'
+import { PETTING_SEATED_PRESENT } from '../../../../../src/constants/scene/actors/liz'
+import { MISCHIEVOUS_BANJO } from '../../../../../src/constants/scene/actors/miriamStephanie'
 
 export default {
     [MOTHER]: {

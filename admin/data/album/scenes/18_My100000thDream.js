@@ -1,4 +1,4 @@
-import { ACTOR } from '../../../../app/constants/scene'
+import { ACTOR } from '../../../../src/constants/scene'
 import {
     BACKDROP,
     BUBBLE,
@@ -9,14 +9,14 @@ import {
     FURNITURE,
     PANEL,
     PUPPET,
-} from '../../../../app/constants/scene/things'
+} from '../../../../src/constants/scene/things'
 import {
     EL_TORITO_KEY,
     PAMPAS_KEY,
     WEDDING_KEY,
     CLIFF_KEY,
     CLIFF_DEATHBED_KEY,
-} from '../../../../app/constants/scene/scenes'
+} from '../../../../src/constants/scene/scenes'
 import {
     TIME_MORNING,
     TIME_NOON,
@@ -27,7 +27,7 @@ import {
     SEASON_AUTUMN,
     SEASON_WINTER,
     SEASON_THOUGHT,
-} from '../../../../app/constants/scene/sky'
+} from '../../../../src/constants/scene/sky'
 import {
     BENNETT,
     BENNETT_LIZ,
@@ -36,30 +36,30 @@ import {
     LIZ,
     MIRIAM,
     AMY,
-} from '../../../../app/constants/scene/actors'
-import { DOCTOR } from '../../../../app/constants/scene/actors/amy'
+} from '../../../../src/constants/scene/actors'
+import { DOCTOR } from '../../../../src/constants/scene/actors/amy'
 import {
     EL_TORITO,
     GOPI,
-} from '../../../../app/constants/scene/actors/songs'
+} from '../../../../src/constants/scene/actors/songs'
 import {
     PAMPAS,
     GETTING_DARK,
     CLIFF,
     FINAL_DREAM,
-} from '../../../../app/constants/scene/actors/bennettLiz'
+} from '../../../../src/constants/scene/actors/bennettLiz'
 import {
     OAKLAND_SIDE__LEVEL,
     MOUNTAIN_PAMPAS_BACKDROP,
     WEDDING_BACKDROP,
     GOLDEN_GATE_BACKDROP,
     THOUGHT_MEDIUM__DEATHBED,
-} from '../../../../app/constants/scene/things/backdrops'
+} from '../../../../src/constants/scene/things/backdrops'
 import {
     BUBBLE_SMALL__INVERSE,
     BUBBLE_MEDIUM__INVERSE,
     BUBBLE_LARGE__INVERSE,
-} from '../../../../app/constants/scene/things/bubbles'
+} from '../../../../src/constants/scene/things/bubbles'
 import {
     CLIFF_TREE,
     DISPENSER_LEFT,
@@ -68,9 +68,9 @@ import {
     IV_DRIP,
     WEDDING_CHAIR,
     WEDDING_CROWD,
-} from '../../../../app/constants/scene/things/cutouts'
-import { EL_TORITO_DOORS } from '../../../../app/constants/scene/things/doors'
-import { HOSPITAL_RECORD_PLAYER } from '../../../../app/constants/scene/things/fixtures'
+} from '../../../../src/constants/scene/things/cutouts'
+import { EL_TORITO_DOORS } from '../../../../src/constants/scene/things/doors'
+import { HOSPITAL_RECORD_PLAYER } from '../../../../src/constants/scene/things/fixtures'
 import {
     NEAR_BUILDINGS,
     CLIFF_GRAVES_FAR,
@@ -79,18 +79,18 @@ import {
     FOREBODING_TREES__NEAR,
     FOREBODING_TREES__MIDDLE,
     FOREBODING_TREES__FAR,
-} from '../../../../app/constants/scene/things/flats'
+} from '../../../../src/constants/scene/things/flats'
 import {
     DEATHBED_BLANKET,
     DEATHBED_PILLOW,
-} from '../../../../app/constants/scene/things/furnitures'
+} from '../../../../src/constants/scene/things/furnitures'
 import {
     WEDDING_PLATFORM_FRONT,
     WEDDING_PLATFORM_REAR,
     HOSPITAL_BED,
     HOSPITAL_RECORD_STAND,
-} from '../../../../app/constants/scene/things/panels'
-import { PUPPET_KHARI_LIZ } from '../../../../app/constants/scene/things/puppets'
+} from '../../../../src/constants/scene/things/panels'
+import { PUPPET_KHARI_LIZ } from '../../../../src/constants/scene/things/puppets'
 
 export default [
     {

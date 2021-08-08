@@ -4,10 +4,10 @@ import {
     FATHER,
     KHARI_LIZ,
     STEPHANIE,
-} from '../../../../../app/constants/scene/actors'
-import { FUTURE } from '../../../../../app/constants/scene/actors/songs'
-import { JOKING_LAUGHING } from '../../../../../app/constants/scene/actors/khariLiz'
-import { BENNETT_RECORDING } from '../../../../../app/constants/scene/actors/stephanie'
+} from '../../../../../src/constants/scene/actors'
+import { FUTURE } from '../../../../../src/constants/scene/actors/songs'
+import { JOKING_LAUGHING } from '../../../../../src/constants/scene/actors/khariLiz'
+import { BENNETT_RECORDING } from '../../../../../src/constants/scene/actors/stephanie'
 
 export default {
     [FATHER]: {

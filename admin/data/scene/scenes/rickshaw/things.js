@@ -1,12 +1,12 @@
 import {
     CARDBOARD,
     FLAT,
-} from '../../../../../app/constants/scene/things'
+} from '../../../../../src/constants/scene/things'
 import {
     BENNETT_SHORE,
     ODIN_SHORE,
-} from '../../../../../app/constants/scene/things/cardboards'
-import { RICKSHAW_TOWN } from '../../../../../app/constants/scene/things/flats'
+} from '../../../../../src/constants/scene/things/cardboards'
+import { RICKSHAW_TOWN } from '../../../../../src/constants/scene/things/flats'
 
 export default {
     [CARDBOARD]: {

@@ -3,13 +3,13 @@ import {
     CUTOUT,
     DOOR,
     FLAT,
-} from '../../../../../app/constants/scene/things'
+} from '../../../../../src/constants/scene/things'
 import {
     BUBBLE_SMALL__GO_KART,
     BUBBLE_MEDIUM__GO_KART,
     BUBBLE_LARGE__GO_KART,
     THOUGHT_GO_KART,
-} from '../../../../../app/constants/scene/things/bubbles'
+} from '../../../../../src/constants/scene/things/bubbles'
 import {
     CACTUS_SINGLE__LIZ_ENDING,
     CACTUS_SINGLE__LIZ_ENDED,
@@ -19,17 +19,17 @@ import {
     CYPRESS_DOUBLE__LIZ_GATE,
     CYPRESS_SINGLE__LIZ_ENDED,
     CYPRESS_SINGLE__LIZ_ENDING,
-} from '../../../../../app/constants/scene/things/cutouts'
+} from '../../../../../src/constants/scene/things/cutouts'
 import {
     LIZ_BLINDS_OUTSIDE__ENDING,
     LIZ_BLINDS_OUTSIDE__ENDED,
     LIZ_GATE_OUTSIDE,
     LIZ_GATE_OUTSIDE_OPEN,
-} from '../../../../../app/constants/scene/things/doors'
+} from '../../../../../src/constants/scene/things/doors'
 import {
     PUBLIC_FAR__LIZ_GATE,
     PUBLIC_NEAR__LIZ_GATE,
-} from '../../../../../app/constants/scene/things/flats'
+} from '../../../../../src/constants/scene/things/flats'
 import {
     BUBBLE_LARGE_CONFIG,
     BUBBLE_MEDIUM_CONFIG,

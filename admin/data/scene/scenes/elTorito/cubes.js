@@ -1,4 +1,4 @@
-import { EL_TORITO_KEY } from '../../../../../app/constants/scene/scenes'
+import { EL_TORITO_KEY } from '../../../../../src/constants/scene/scenes'
 
 import {
     PAVEMENT_COLOUR as V,
@@ -6,9 +6,9 @@ import {
     VELVET_FLOOR_COLOUR as F,
     FANCY_WALL_COLOUR as W,
     GENERIC_EXTERIOR_COLOUR as X,
-} from '../../../../../app/constants/scene/cubes/colours'
+} from '../../../../../src/constants/scene/cubes/colours'
 
-import { e, f } from '../../../../../app/constants/scene/cubes/zIndices'
+import { e, f } from '../../../../../src/constants/scene/cubes/zIndices'
 
 export default {
     [EL_TORITO_KEY]: {

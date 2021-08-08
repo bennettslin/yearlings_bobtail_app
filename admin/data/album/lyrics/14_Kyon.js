@@ -4,7 +4,7 @@ import {
     PUN,
     REFERENCE,
     SONGCRAFT,
-} from '../../../../app/constants/dots'
+} from '../../../../src/constants/dots'
 
 import {
     VERSES,
@@ -15,7 +15,7 @@ import {
     REFRAIN,
     OUTRO,
     IS_UNIT_DOT,
-} from '../../../../app/constants/lyrics'
+} from '../../../../src/constants/lyrics'
 
 export default {
     path: 'kyon',

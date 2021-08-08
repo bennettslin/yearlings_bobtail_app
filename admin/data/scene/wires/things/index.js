@@ -2,7 +2,7 @@ import {
     BUBBLE,
     CARDBOARD,
     PUPPET,
-} from '../../../../../app/constants/scene/things'
+} from '../../../../../src/constants/scene/things'
 import {
     CINEMA_THOUGHT_BUYING,
     CINEMA_THOUGHT_RECORDING,
@@ -18,7 +18,7 @@ import {
     WAITING_THOUGHT_SINGING,
     WAITING_THOUGHT_STUDYING,
     WAITING_THOUGHT_WALKING,
-} from '../../../../../app/constants/scene/things/bubbles'
+} from '../../../../../src/constants/scene/things/bubbles'
 import {
     SEA_SERPENT_LEFT,
     SEA_SERPENT_RIGHT,
@@ -26,7 +26,7 @@ import {
     EARTH,
     DOGS_ROCKET,
     DOGS_SPACE_STATION,
-} from '../../../../../app/constants/scene/things/cardboards'
+} from '../../../../../src/constants/scene/things/cardboards'
 import {
     GHOST_ODIN_ALLEY,
     GHOST_ODIN_CAMPUS,
@@ -53,7 +53,7 @@ import {
     PUPPET_MOTHER_END,
     PUPPET_MOTHER_MIDDLE,
     PUPPET_REATTA,
-} from '../../../../../app/constants/scene/things/puppets'
+} from '../../../../../src/constants/scene/things/puppets'
 
 const BUBBLE_DEFAULT = {
     wires: [

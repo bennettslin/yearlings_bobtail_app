@@ -1,17 +1,17 @@
 import {
     CUTOUT,
     FIXTURE,
-} from '../../../../../app/constants/scene/things'
+} from '../../../../../src/constants/scene/things'
 import {
     MONITOR_SIDE__STAGE,
     WALL_SPEAKER_SIDE,
-} from '../../../../../app/constants/scene/things/cutouts'
+} from '../../../../../src/constants/scene/things/cutouts'
 import {
     STAGE_MIC__STAGE,
     KICK_DRUM,
     DRUM_THRONE,
     GUITAR_CASE_OPEN,
-} from '../../../../../app/constants/scene/things/fixtures'
+} from '../../../../../src/constants/scene/things/fixtures'
 
 export default {
     [CUTOUT]: {

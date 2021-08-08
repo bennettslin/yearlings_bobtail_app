@@ -1,11 +1,11 @@
-import { logAnalytics } from './app/utils/analytics'
-import { logBuild } from './app/utils/build'
-import { logDevice } from './app/utils/device'
+import { logAnalytics } from './src/utils/analytics'
+import { logBuild } from './src/utils/build'
+import { logDevice } from './src/utils/device'
 import {
     initialiseGlobalAdminObjects,
     globaliseLogs,
-} from './app/utils/global'
-import './app/scss/app'
+} from './src/utils/global'
+import './src/scss/style'
 
 initialiseGlobalAdminObjects()
 globaliseLogs()
@@ -17,4 +17,4 @@ logAnalytics()
 export {
     wrapRootElement,
     wrapPageElement,
-} from './app/utils/gatsby'
+} from './src/utils/gatsby'

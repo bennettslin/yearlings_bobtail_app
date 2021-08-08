@@ -58,17 +58,17 @@ import {
     THROWN_FRUIT,
     TORN_MAGAZINES,
     VASELINE,
-} from '../../../../../../app/constants/scene/things/fixtures'
+} from '../../../../../../src/constants/scene/things/fixtures'
 import {
     ALL_CLOTHING__SHARED,
     ALL_PEOPLE__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/actors'
+} from '../../../../../../src/constants/scene/sharedStyles/actors'
 import {
     BENNETT,
     LIZ,
     SASHA,
-} from '../../../../../../app/constants/scene/actors'
-import { DRAWING__SHARED } from '../../../../../../app/constants/scene/sharedStyles/comic'
+} from '../../../../../../src/constants/scene/actors'
+import { DRAWING__SHARED } from '../../../../../../src/constants/scene/sharedStyles/comic'
 import {
     BANANA__SHARED,
     BUDWEISER__SHARED,
@@ -76,11 +76,11 @@ import {
     HEINEKEN__SHARED,
     PAPER_BAG__SHARED,
     PUDDING__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/food'
+} from '../../../../../../src/constants/scene/sharedStyles/food'
 import {
     BULB__SHARED,
     LIZ_PHONE__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/household'
+} from '../../../../../../src/constants/scene/sharedStyles/household'
 import {
     ACOUSTIC_GUITAR__SHARED,
     BASS_CASE__SHARED,
@@ -89,27 +89,27 @@ import {
     ELECTRIC_GUITAR__SHARED,
     GUITAR_CASE__SHARED,
     MICROPHONE__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/instruments'
+} from '../../../../../../src/constants/scene/sharedStyles/instruments'
 import {
     FREEWAY_SIGN__SHARED,
     TETHERBALL_POLE__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/outdoor'
+} from '../../../../../../src/constants/scene/sharedStyles/outdoor'
 import {
     BOOK__SHARED,
     LETTER__SHARED,
     MAGAZINE__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/paper'
+} from '../../../../../../src/constants/scene/sharedStyles/paper'
 import {
     DOLLAR__SHARED,
     PROMISE_PHOTO__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/print'
+} from '../../../../../../src/constants/scene/sharedStyles/print'
 import {
     BACKPACK__SHARED,
     GHOST__SHARED,
     LIZ_CONDOM__SHARED,
     MIRIAM_CONDOM__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/wardrobe'
-import { DARKEN__SHARED } from '../../../../../../app/constants/scene/sharedStyles'
+} from '../../../../../../src/constants/scene/sharedStyles/wardrobe'
+import { DARKEN__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
 
 export default {
     [BACKPACK_BENNETT]: BACKPACK__SHARED,

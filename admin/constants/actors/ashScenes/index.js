@@ -3,14 +3,14 @@ import {
     BENNETT,
     CATHERINE,
     WADE,
-} from '../../../../app/constants/scene/actors'
-import { SMOKER } from '../../../../app/constants/scene/actors/amy'
+} from '../../../../src/constants/scene/actors'
+import { SMOKER } from '../../../../src/constants/scene/actors/amy'
 import {
     CATHOLIC_IDEA,
     PIOUS,
-} from '../../../../app/constants/scene/actors/bennett'
-import { PUZZLED } from '../../../../app/constants/scene/actors/catherine'
-import { CATHOLIC_GUY } from '../../../../app/constants/scene/actors/wade'
+} from '../../../../src/constants/scene/actors/bennett'
+import { PUZZLED } from '../../../../src/constants/scene/actors/catherine'
+import { CATHOLIC_GUY } from '../../../../src/constants/scene/actors/wade'
 
 export default [
     {

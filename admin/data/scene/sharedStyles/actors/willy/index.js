@@ -2,9 +2,9 @@ import {
     COLLECTING,
     DUCKING,
     CROSSING_GUARD,
-} from '../../../../../../app/constants/scene/actors/willy'
-import { EPILOGUE } from '../../../../../../app/constants/scene/actors/songs'
-import { BUDWEISER__SHARED } from '../../../../../../app/constants/scene/sharedStyles/food'
+} from '../../../../../../src/constants/scene/actors/willy'
+import { EPILOGUE } from '../../../../../../src/constants/scene/actors/songs'
+import { BUDWEISER__SHARED } from '../../../../../../src/constants/scene/sharedStyles/food'
 
 export default {
     [COLLECTING]: BUDWEISER__SHARED,

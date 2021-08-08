@@ -1,4 +1,4 @@
-import { ACTOR } from '../../../../app/constants/scene'
+import { ACTOR } from '../../../../src/constants/scene'
 import {
     BACKDROP,
     CARDBOARD,
@@ -7,17 +7,17 @@ import {
     FIXTURE,
     FLAT,
     PANEL,
-} from '../../../../app/constants/scene/things'
+} from '../../../../src/constants/scene/things'
 import {
     LIZ_COUCH_KEY,
     BASEMENT_COUCH_KEY,
     CLUB_FRONT_KEY,
     OAKLAND_VOLKSWAGEN_KEY,
-} from '../../../../app/constants/scene/scenes'
+} from '../../../../src/constants/scene/scenes'
 import {
     TIME_NIGHT,
     SEASON_AUTUMN,
-} from '../../../../app/constants/scene/sky'
+} from '../../../../src/constants/scene/sky'
 import {
     BENNETT,
     BENNETT_LIZ,
@@ -26,31 +26,31 @@ import {
     MIRIAM_TRISTAN,
     TRISTAN,
     NESTOR,
-} from '../../../../app/constants/scene/actors'
+} from '../../../../src/constants/scene/actors'
 import {
     CHUCKLING,
     SMIRKING,
-} from '../../../../app/constants/scene/actors/ana'
-import { DROPPING_MEATS } from '../../../../app/constants/scene/actors/bennett'
+} from '../../../../src/constants/scene/actors/ana'
+import { DROPPING_MEATS } from '../../../../src/constants/scene/actors/bennett'
 import {
     BRUSH_OFF,
     CELIBATE_FREEZING,
-} from '../../../../app/constants/scene/actors/bennettLiz'
-import { NOOGIE } from '../../../../app/constants/scene/actors/miriamTristan'
-import { INJURED } from '../../../../app/constants/scene/actors/nestor'
-import { PUNCHING } from '../../../../app/constants/scene/actors/tristan'
+} from '../../../../src/constants/scene/actors/bennettLiz'
+import { NOOGIE } from '../../../../src/constants/scene/actors/miriamTristan'
+import { INJURED } from '../../../../src/constants/scene/actors/nestor'
+import { PUNCHING } from '../../../../src/constants/scene/actors/tristan'
 import {
     GREETING,
     LEAVING_CRUMBLED,
-} from '../../../../app/constants/scene/actors/songs'
+} from '../../../../src/constants/scene/actors/songs'
 import {
     OAKLAND_SIDE__LEVEL,
     OAKLAND_SIDE__LIZ_COUCH,
-} from '../../../../app/constants/scene/things/backdrops'
+} from '../../../../src/constants/scene/things/backdrops'
 import {
     ALBUM_NAS,
     POSTER_ELLIOTT_SMITH,
-} from '../../../../app/constants/scene/things/cardboards'
+} from '../../../../src/constants/scene/things/cardboards'
 import {
     CAT_FOOD_DISHES,
     CAT_LITTER_BOX,
@@ -58,25 +58,25 @@ import {
     MONITOR_FRONT__RIGHT,
     WALL_SPEAKER_FRONT__LEFT,
     WALL_SPEAKER_FRONT__RIGHT,
-} from '../../../../app/constants/scene/things/cutouts'
+} from '../../../../src/constants/scene/things/cutouts'
 import {
     LIZ_BLINDS_INSIDE,
     LIZ_DOOR,
     LIZ_DOOR_OPEN,
     BASEMENT_DOOR_SIDE,
     LIZ_GATE_INSIDE,
-} from '../../../../app/constants/scene/things/doors'
+} from '../../../../src/constants/scene/things/doors'
 import {
     ELECTRIC_GUITAR,
     DRUMKIT,
     BENNETT_COUCH_LAMP,
     BENNETT_RECORD_PLAYER,
-} from '../../../../app/constants/scene/things/fixtures'
+} from '../../../../src/constants/scene/things/fixtures'
 import {
     DISTANT_HOUSES,
     OAKLAND_HOUSE_LEFT,
     OAKLAND_HOUSE_RIGHT,
-} from '../../../../app/constants/scene/things/flats'
+} from '../../../../src/constants/scene/things/flats'
 import {
     VOLKSWAGEN,
     WIDE_COUCH_BENNETT,
@@ -85,7 +85,7 @@ import {
     LIZ_COUCH__ROOM,
     BENNETT_NIGHTSTAND,
     BENNETT_RECORD_STAND,
-} from '../../../../app/constants/scene/things/panels'
+} from '../../../../src/constants/scene/things/panels'
 
 export default [
     {

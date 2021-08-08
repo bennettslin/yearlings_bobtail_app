@@ -4,10 +4,10 @@ import {
     WAITING,
     GOPI,
     EPILOGUE,
-} from '../../../../../../app/constants/scene/actors/songs'
-import { HEINEKEN__SHARED } from '../../../../../../app/constants/scene/sharedStyles/food'
-import { DRUMS__SHARED } from '../../../../../../app/constants/scene/sharedStyles/instruments'
-import { SARI__SHARED } from '../../../../../../app/constants/scene/sharedStyles/wardrobe'
+} from '../../../../../../src/constants/scene/actors/songs'
+import { HEINEKEN__SHARED } from '../../../../../../src/constants/scene/sharedStyles/food'
+import { DRUMS__SHARED } from '../../../../../../src/constants/scene/sharedStyles/instruments'
+import { SARI__SHARED } from '../../../../../../src/constants/scene/sharedStyles/wardrobe'
 
 export default {
     [FLIRTING]: HEINEKEN__SHARED,

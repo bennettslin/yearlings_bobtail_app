@@ -1,11 +1,11 @@
-import { LEFT } from '../../../../../app/constants/scene/cubes'
+import { LEFT } from '../../../../../src/constants/scene/cubes'
 import { BEDROOM_SPACE_CUBES } from './shaken/cubes'
 import {
     BEDROOM_KEY,
     BEDROOM_STOOL_KEY,
     BEDROOM_OPEN_KEY,
     BEDROOM_DOGS_KEY,
-} from '../../../../../app/constants/scene/scenes'
+} from '../../../../../src/constants/scene/scenes'
 import {
     DEFAULT_CLEAR_COLOUR as D,
     GRASS_COLOUR as H,
@@ -17,8 +17,8 @@ import {
     SPOTLIGHT_LIGHTER_COLOUR as N,
     SPOTLIGHT_LIGHTEST_COLOUR as O,
     BENNETT_BED_COLOUR as U,
-} from '../../../../../app/constants/scene/cubes/colours'
-import { d, g, k } from '../../../../../app/constants/scene/cubes/zIndices'
+} from '../../../../../src/constants/scene/cubes/colours'
+import { d, g, k } from '../../../../../src/constants/scene/cubes/zIndices'
 
 /**
  * --.-----------

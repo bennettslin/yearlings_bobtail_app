@@ -1,4 +1,4 @@
-import { ACTOR } from '../../../../app/constants/scene'
+import { ACTOR } from '../../../../src/constants/scene'
 import {
     BACKDROP,
     CARDBOARD,
@@ -8,7 +8,7 @@ import {
     FLAT,
     FURNITURE,
     PANEL,
-} from '../../../../app/constants/scene/things'
+} from '../../../../src/constants/scene/things'
 import {
     BEDROOM_KEY,
     BEDROOM_STOOL_KEY,
@@ -16,7 +16,7 @@ import {
     FREEWAY_KEY,
     NOHO_HOUSES_KEY,
     PORCH_KEY,
-} from '../../../../app/constants/scene/scenes'
+} from '../../../../src/constants/scene/scenes'
 import {
     SEASON_NIGHT_MAGIC,
     SEASON_SUMMER,
@@ -26,7 +26,7 @@ import {
     TIME_NIGHT,
     TIME_NOON,
     TIME_TWILIGHT,
-} from '../../../../app/constants/scene/sky'
+} from '../../../../src/constants/scene/sky'
 import {
     CHRISTOPHER,
     CHRISTOPHER_BENNETT_WILLY,
@@ -36,33 +36,33 @@ import {
     PRETEEN_BENNETT,
     TOMER,
     WILLY,
-} from '../../../../app/constants/scene/actors'
+} from '../../../../src/constants/scene/actors'
 import {
     CAUTIOUS,
     ENRAGED,
     FEARFUL,
-} from '../../../../app/constants/scene/actors/preteenBennett'
+} from '../../../../src/constants/scene/actors/preteenBennett'
 import {
     COLLECTING,
     DUCKING,
-} from '../../../../app/constants/scene/actors/willy'
+} from '../../../../src/constants/scene/actors/willy'
 import {
     COMFORTING,
     STOOPING,
-} from '../../../../app/constants/scene/actors/mother'
-import { ROARING } from '../../../../app/constants/scene/actors/father'
+} from '../../../../src/constants/scene/actors/mother'
+import { ROARING } from '../../../../src/constants/scene/actors/father'
 import {
     SOBBING,
     TANTRUM,
-} from '../../../../app/constants/scene/actors/christopher'
-import { REASSURING_ENCHANTED } from '../../../../app/constants/scene/actors/christopherBennettWilly'
-import { GANGBANGER } from '../../../../app/constants/scene/actors/songs'
+} from '../../../../src/constants/scene/actors/christopher'
+import { REASSURING_ENCHANTED } from '../../../../src/constants/scene/actors/christopherBennettWilly'
+import { GANGBANGER } from '../../../../src/constants/scene/actors/songs'
 import {
     VALLEY_CLOSER_BACKDROP,
     VALLEY_FURTHER_BACKDROP,
     VALLEY_PANORAMA_BACKDROP,
-} from '../../../../app/constants/scene/things/backdrops'
-import { POSTER_TINTIN } from '../../../../app/constants/scene/things/cardboards'
+} from '../../../../src/constants/scene/things/backdrops'
+import { POSTER_TINTIN } from '../../../../src/constants/scene/things/cardboards'
 import {
     CACTUS_DOUBLE__PORCH,
     CACTUS_SINGLE__PORCH,
@@ -70,20 +70,20 @@ import {
     FIRE_HYDRANT,
     OVERPASS_SIGN_BACK,
     SHOPPING_CART,
-} from '../../../../app/constants/scene/things/cutouts'
+} from '../../../../src/constants/scene/things/cutouts'
 import {
     BEDROOM_BLINDS_OPEN,
     BEDROOM_FENCE,
     DEFAULT_FENCE_BATHROOM,
     PORCH_DOOR,
-} from '../../../../app/constants/scene/things/doors'
+} from '../../../../src/constants/scene/things/doors'
 import {
     BEDROOM_LAMP__DESK,
     CHRISTOPHER_LETTERS,
     HAIRCUT_SCISSORS,
     LETTER_SCRAPS__CHRISTOPHER,
     TORN_MAGAZINES__CHRISTOPHER,
-} from '../../../../app/constants/scene/things/fixtures'
+} from '../../../../src/constants/scene/things/fixtures'
 import {
     BEDROOM_SIREN,
     FAMILY_HOUSE,
@@ -91,8 +91,8 @@ import {
     NOHO_HOUSE_LEFT,
     NOHO_HOUSE_RIGHT,
     VALLEY_FREEWAY,
-} from '../../../../app/constants/scene/things/flats'
-import { CAPTAIN_BED_PILLOW } from '../../../../app/constants/scene/things/furnitures'
+} from '../../../../src/constants/scene/things/flats'
+import { CAPTAIN_BED_PILLOW } from '../../../../src/constants/scene/things/furnitures'
 import {
     BEDROOM_DESK,
     BEDROOM_STOOL,
@@ -103,7 +103,7 @@ import {
     TROLL_SHADOW_FAR,
     TROLL_SHADOW_LEFT,
     TROLL_SHADOW_RIGHT,
-} from '../../../../app/constants/scene/things/panels'
+} from '../../../../src/constants/scene/things/panels'
 
 export default [
     {

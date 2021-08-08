@@ -1,12 +1,12 @@
 import {
     CARDBOARD,
     FLAT,
-} from '../../../../../app/constants/scene/things'
-import { BENNETT_ODIN_OCEAN_FLOOR } from '../../../../../app/constants/scene/things/cardboards'
+} from '../../../../../src/constants/scene/things'
+import { BENNETT_ODIN_OCEAN_FLOOR } from '../../../../../src/constants/scene/things/cardboards'
 import {
     OCEAN_BOTTOM_MIDDLE,
     OCEAN_BOTTOM_NEAR,
-} from '../../../../../app/constants/scene/things/flats'
+} from '../../../../../src/constants/scene/things/flats'
 
 export default {
     [CARDBOARD]: {

@@ -1,9 +1,9 @@
 import {
     PANEL,
     PUPPET,
-} from '../../../../../app/constants/scene/things'
-import { CROWD_BACK } from '../../../../../app/constants/scene/things/panels'
-import { GHOST_ODIN_CLUB } from '../../../../../app/constants/scene/things/puppets'
+} from '../../../../../src/constants/scene/things'
+import { CROWD_BACK } from '../../../../../src/constants/scene/things/panels'
+import { GHOST_ODIN_CLUB } from '../../../../../src/constants/scene/things/puppets'
 
 export default {
     [PANEL]: {

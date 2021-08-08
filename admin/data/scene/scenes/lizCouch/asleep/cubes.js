@@ -1,4 +1,4 @@
-import { LIZ_COUCH_PEAFOWL_KEY } from '../../../../../../app/constants/scene/scenes'
+import { LIZ_COUCH_PEAFOWL_KEY } from '../../../../../../src/constants/scene/scenes'
 import {
     PAVEMENT_COLOUR as V,
     GRASS_COLOUR as H,
@@ -8,7 +8,7 @@ import {
     FUTURE_SPOTLIGHT_LIGHT_COLOUR as M,
     FUTURE_SPOTLIGHT_LIGHTER_COLOUR as N,
     FUTURE_SPOTLIGHT_LIGHTEST_COLOUR as O,
-} from '../../../../../../app/constants/scene/cubes/colours'
+} from '../../../../../../src/constants/scene/cubes/colours'
 
 export const LIZ_COUCH_PEAFOWL_CUBES = {
     [LIZ_COUCH_PEAFOWL_KEY]: {

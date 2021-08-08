@@ -2,10 +2,10 @@ import {
     ANDREW,
     BRAD_BENNETT,
     SASHA,
-} from '../../../../app/constants/scene/actors'
-import { FEIGNING_FEAR } from '../../../../app/constants/scene/actors/andrew'
-import { TYING_TETHER } from '../../../../app/constants/scene/actors/bradBennett'
-import { INDIGNANT } from '../../../../app/constants/scene/actors/sasha'
+} from '../../../../src/constants/scene/actors'
+import { FEIGNING_FEAR } from '../../../../src/constants/scene/actors/andrew'
+import { TYING_TETHER } from '../../../../src/constants/scene/actors/bradBennett'
+import { INDIGNANT } from '../../../../src/constants/scene/actors/sasha'
 
 export default [
     {

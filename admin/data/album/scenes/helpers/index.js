@@ -3,9 +3,9 @@ import THING_ARRANGEMENTS from '../../../scene/scenes/things'
 import {
     getNearestXIndex,
     getValueInAbridgedMatrix,
-} from '../../../../../app/helpers/cubeIndices'
-import { getCharStringForNumber } from '../../../../../app/helpers/format'
-import { ACTOR } from '../../../../../app/constants/scene'
+} from '../../../../../src/helpers/cubeIndices'
+import { getCharStringForNumber } from '../../../../../src/helpers/format'
+import { ACTOR } from '../../../../../src/constants/scene'
 import cubes from '../../../scene/scenes/cubes'
 
 const _recurseForCleanup = object => {

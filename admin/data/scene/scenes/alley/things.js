@@ -3,15 +3,15 @@ import {
     DOOR,
     FIXTURE,
     PUPPET,
-} from '../../../../../app/constants/scene/things'
+} from '../../../../../src/constants/scene/things'
 import {
     CHUTE_GARBAGE,
     CHUTE_RECYCLING,
     DUMPSTER,
-} from '../../../../../app/constants/scene/things/cutouts'
-import { LOADING_DOCK_DOOR } from '../../../../../app/constants/scene/things/doors'
-import { BALLED_FOIL__ALLEY } from '../../../../../app/constants/scene/things/fixtures'
-import { GHOST_ODIN_ALLEY } from '../../../../../app/constants/scene/things/puppets'
+} from '../../../../../src/constants/scene/things/cutouts'
+import { LOADING_DOCK_DOOR } from '../../../../../src/constants/scene/things/doors'
+import { BALLED_FOIL__ALLEY } from '../../../../../src/constants/scene/things/fixtures'
+import { GHOST_ODIN_ALLEY } from '../../../../../src/constants/scene/things/puppets'
 
 export default {
     [CUTOUT]: {

@@ -11,13 +11,13 @@ import {
     GETTING_DARK,
     CLIFF,
     FINAL_DREAM,
-} from '../../../../../../app/constants/scene/actors/bennettLiz'
-import { HEINEKEN__SHARED } from '../../../../../../app/constants/scene/sharedStyles/food'
+} from '../../../../../../src/constants/scene/actors/bennettLiz'
+import { HEINEKEN__SHARED } from '../../../../../../src/constants/scene/sharedStyles/food'
 import {
     CYMBAL__SHARED,
     DOBRO__SHARED,
     RECORDER__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/instruments'
+} from '../../../../../../src/constants/scene/sharedStyles/instruments'
 import {
     BACKPACK__SHARED,
     BRACELET__SHARED,
@@ -25,7 +25,7 @@ import {
     LIZ_PURSE__SHARED,
     MESSENGER_BAG__SHARED,
     SARI__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/wardrobe'
+} from '../../../../../../src/constants/scene/sharedStyles/wardrobe'
 
 export default {
     [GINGERBREAD_PRISON]: [

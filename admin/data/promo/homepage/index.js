@@ -1,9 +1,9 @@
 import { getFormattedSlideMetadata } from '../helpers/slide'
-import { CONTACT_TEXT } from '../../../../app/constants/contact'
+import { CONTACT_TEXT } from '../../../../src/constants/contact'
 import {
     ARTUP_SUBPATH,
     ONESHEET_SUBPATH,
-} from '../../../../app/constants/routing'
+} from '../../../../src/constants/routing'
 
 export default getFormattedSlideMetadata({
     body: ([

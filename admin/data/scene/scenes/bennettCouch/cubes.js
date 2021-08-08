@@ -2,7 +2,7 @@ import {
     BENNETT_COUCH_KEY,
     BENNETT_COUCH_KEYBOARD_KEY,
     BENNETT_COUCH_THOUGHT_KEY,
-} from '../../../../../app/constants/scene/scenes'
+} from '../../../../../src/constants/scene/scenes'
 
 import {
     DEFAULT_CLEAR_COLOUR as D,
@@ -11,9 +11,9 @@ import {
     BENNETT_WALL_COLOUR as W,
     BENNETT_COUCH_COLOUR as U,
     FURNITURE_PLATFORM_COLOUR as P,
-} from '../../../../../app/constants/scene/cubes/colours'
+} from '../../../../../src/constants/scene/cubes/colours'
 
-import { g } from '../../../../../app/constants/scene/cubes/zIndices'
+import { g } from '../../../../../src/constants/scene/cubes/zIndices'
 
 export const DEFAULT_CEILING = {
     hslaColours: [

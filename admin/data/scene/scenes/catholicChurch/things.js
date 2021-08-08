@@ -1,13 +1,13 @@
 import {
     CUTOUT,
     FLAT,
-} from '../../../../../app/constants/scene/things'
-import { LAMPPOST__CHURCH } from '../../../../../app/constants/scene/things/cutouts'
+} from '../../../../../src/constants/scene/things'
+import { LAMPPOST__CHURCH } from '../../../../../src/constants/scene/things/cutouts'
 import {
     DISTANT_HOUSES,
     ST_JOSEPHS_ANNEX,
     ST_JOSEPHS_CHURCH,
-} from '../../../../../app/constants/scene/things/flats'
+} from '../../../../../src/constants/scene/things/flats'
 
 export default {
     [CUTOUT]: {

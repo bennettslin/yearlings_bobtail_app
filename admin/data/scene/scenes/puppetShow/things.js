@@ -3,23 +3,23 @@ import {
     FLAT,
     PANEL,
     PUPPET,
-} from '../../../../../app/constants/scene/things'
+} from '../../../../../src/constants/scene/things'
 import {
     SKETCH_TOGETHER,
     SKETCHBOOK__TOGETHER,
     SKETCH_APART,
     SKETCHBOOK__APART,
-} from '../../../../../app/constants/scene/things/bubbles'
+} from '../../../../../src/constants/scene/things/bubbles'
 import {
     TAIWAN_MOUNTAINS_BRIDGED,
     TAIWAN_MOUNTAIN_LEFT,
     TAIWAN_MOUNTAIN_RIGHT,
-} from '../../../../../app/constants/scene/things/flats'
+} from '../../../../../src/constants/scene/things/flats'
 import {
     TAIWAN_BRIDGE,
     TAIWAN_HAZE__CLOUD,
     TAIWAN_HAZE__FOG,
-} from '../../../../../app/constants/scene/things/panels'
+} from '../../../../../src/constants/scene/things/panels'
 import {
     PUPPET_BENNETT_BEGIN,
     PUPPET_ANITA_BEGIN,
@@ -36,7 +36,7 @@ import {
     PUPPET_CHRISTOPHER_END,
     PUPPET_FATHER_END,
     PUPPET_MOTHER_END,
-} from '../../../../../app/constants/scene/things/puppets'
+} from '../../../../../src/constants/scene/things/puppets'
 import {
     PUPPET_ANITA_CONFIG,
     PUPPET_BENNETT_CONFIG,

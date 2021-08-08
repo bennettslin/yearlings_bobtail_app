@@ -23,20 +23,20 @@ import {
     VALLEY_FURTHER_BACKDROP,
     VALLEY_PANORAMA_BACKDROP,
     WEDDING_BACKDROP,
-} from '../../../../../../app/constants/scene/things/backdrops'
+} from '../../../../../../src/constants/scene/things/backdrops'
 import {
     BUILDINGS__SHARED,
     TAIWAN_HOUSE__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/buildings'
-import { DOOR__SHARED } from '../../../../../../app/constants/scene/sharedStyles/home'
-import { BOOK__SHARED } from '../../../../../../app/constants/scene/sharedStyles/paper'
+} from '../../../../../../src/constants/scene/sharedStyles/buildings'
+import { DOOR__SHARED } from '../../../../../../src/constants/scene/sharedStyles/home'
+import { BOOK__SHARED } from '../../../../../../src/constants/scene/sharedStyles/paper'
 import {
     FOLIAGE__SHARED,
     MOUNTAIN__SHARED,
     TAIWAN_FOLIAGE__SHARED,
     TAIWAN_MOUNTAIN__SHARED,
     VOLCANO__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/outdoor'
+} from '../../../../../../src/constants/scene/sharedStyles/outdoor'
 
 export default {
     [DRIVING_BACKDROP]: FOLIAGE__SHARED,

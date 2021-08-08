@@ -1,8 +1,8 @@
-import { TAIWAN_ROOM_KEY } from '../../../../../app/constants/scene/scenes'
+import { TAIWAN_ROOM_KEY } from '../../../../../src/constants/scene/scenes'
 import {
     NIGHT_COLOUR as Z,
-} from '../../../../../app/constants/scene/cubes/colours'
-import { e, g } from '../../../../../app/constants/scene/cubes/zIndices'
+} from '../../../../../src/constants/scene/cubes/colours'
+import { e, g } from '../../../../../src/constants/scene/cubes/zIndices'
 
 export default {
     [TAIWAN_ROOM_KEY]: {

@@ -1,7 +1,7 @@
 import {
     BENNETT_BED_KEY,
     BENNETT_BED_DARK_KEY,
-} from '../../../../../app/constants/scene/scenes'
+} from '../../../../../src/constants/scene/scenes'
 
 import {
     DEFAULT_CLEAR_COLOUR as D,
@@ -11,9 +11,9 @@ import {
     NIGHT_COLOUR as Z,
     APARTMENT_EXTERIOR_COLOUR as X,
     BENNETT_BED_COLOUR as U,
-} from '../../../../../app/constants/scene/cubes/colours'
+} from '../../../../../src/constants/scene/cubes/colours'
 
-import { d, g, k } from '../../../../../app/constants/scene/cubes/zIndices'
+import { d, g, k } from '../../../../../src/constants/scene/cubes/zIndices'
 
 const DEFAULT_CEILING = {
     hslaColours: [

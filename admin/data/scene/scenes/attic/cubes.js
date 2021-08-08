@@ -1,8 +1,8 @@
-import { ATTIC_KEY } from '../../../../../app/constants/scene/scenes'
+import { ATTIC_KEY } from '../../../../../src/constants/scene/scenes'
 
-import { NIGHT_COLOUR as Z } from '../../../../../app/constants/scene/cubes/colours'
+import { NIGHT_COLOUR as Z } from '../../../../../src/constants/scene/cubes/colours'
 
-import { c, f, g } from '../../../../../app/constants/scene/cubes/zIndices'
+import { c, f, g } from '../../../../../src/constants/scene/cubes/zIndices'
 
 export default {
     [ATTIC_KEY]: {

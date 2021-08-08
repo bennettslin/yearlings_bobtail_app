@@ -1,5 +1,5 @@
-import { getSongsAndLoguesCount } from '../../../../../../app/api/album/songs'
-import { getArrayOfLength } from '../../../../../../app/helpers/general'
+import { getSongsAndLoguesCount } from '../../../../../../src/api/album/songs'
+import { getArrayOfLength } from '../../../../../../src/helpers/general'
 
 import {
     initialiseDrawings,

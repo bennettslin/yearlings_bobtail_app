@@ -1,4 +1,4 @@
-import { SQUEEZING } from '../../../../../../app/constants/scene/actors/amyStephanie'
+import { SQUEEZING } from '../../../../../../src/constants/scene/actors/amyStephanie'
 
 export default {
     [SQUEEZING]: null,

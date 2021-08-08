@@ -4,18 +4,18 @@ import {
     DOOR,
     FIXTURE,
     PANEL,
-} from '../../../../../app/constants/scene/things'
-import { ALBUM_JOHNNY_HORTON } from '../../../../../app/constants/scene/things/cardboards'
+} from '../../../../../src/constants/scene/things'
+import { ALBUM_JOHNNY_HORTON } from '../../../../../src/constants/scene/things/cardboards'
 import {
     MIRRORED_SINK,
     TOWEL_RACK,
     LEMON_TREE__BATHROOM,
     ROSEBUSH_DOUBLE_BATHROOM,
     ROSEBUSH_SINGLE_BATHROOM,
-} from '../../../../../app/constants/scene/things/cutouts'
-import { DEFAULT_FENCE_BATHROOM } from '../../../../../app/constants/scene/things/doors'
-import { RECORD_PLAYER_STOOL } from '../../../../../app/constants/scene/things/fixtures'
-import { BATHTUB } from '../../../../../app/constants/scene/things/panels'
+} from '../../../../../src/constants/scene/things/cutouts'
+import { DEFAULT_FENCE_BATHROOM } from '../../../../../src/constants/scene/things/doors'
+import { RECORD_PLAYER_STOOL } from '../../../../../src/constants/scene/things/fixtures'
+import { BATHTUB } from '../../../../../src/constants/scene/things/panels'
 
 export default {
     [CUTOUT]: {

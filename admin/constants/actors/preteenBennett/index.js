@@ -4,7 +4,7 @@ import {
     CHRISTOPHER_BENNETT,
     CHRISTOPHER_BENNETT_WILLY,
     SASHA_BENNETT,
-} from '../../../../app/constants/scene/actors'
+} from '../../../../src/constants/scene/actors'
 import {
     CAUTIOUS,
     ENRAGED,
@@ -22,18 +22,18 @@ import {
     STOIC,
     WISTFUL,
     SHEEPISH,
-} from '../../../../app/constants/scene/actors/preteenBennett'
-import { TYING_TETHER } from '../../../../app/constants/scene/actors/bradBennett'
-import { BLISSFUL_GUILTY } from '../../../../app/constants/scene/actors/christopherBennett'
-import { REASSURING_ENCHANTED } from '../../../../app/constants/scene/actors/christopherBennettWilly'
+} from '../../../../src/constants/scene/actors/preteenBennett'
+import { TYING_TETHER } from '../../../../src/constants/scene/actors/bradBennett'
+import { BLISSFUL_GUILTY } from '../../../../src/constants/scene/actors/christopherBennett'
+import { REASSURING_ENCHANTED } from '../../../../src/constants/scene/actors/christopherBennettWilly'
 import {
     MERMAID,
     COMFORTING_HUMILIATED,
-} from '../../../../app/constants/scene/actors/sashaBennett'
+} from '../../../../src/constants/scene/actors/sashaBennett'
 import {
     ASLEEP,
     EPILOGUE,
-} from '../../../../app/constants/scene/actors/songs'
+} from '../../../../src/constants/scene/actors/songs'
 
 export default [
     {

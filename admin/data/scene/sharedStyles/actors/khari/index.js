@@ -3,9 +3,9 @@ import {
     ARRIVED,
     JUDGMENTAL,
     CONCERNED,
-} from '../../../../../../app/constants/scene/actors/khari'
-import { EPILOGUE } from '../../../../../../app/constants/scene/actors/songs'
-import { CHINESE_TAKEOUT__SHARED } from '../../../../../../app/constants/scene/sharedStyles/food'
+} from '../../../../../../src/constants/scene/actors/khari'
+import { EPILOGUE } from '../../../../../../src/constants/scene/actors/songs'
+import { CHINESE_TAKEOUT__SHARED } from '../../../../../../src/constants/scene/sharedStyles/food'
 
 export default {
     [DOUBLE_ALBERT]: null,

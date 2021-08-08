@@ -2,7 +2,7 @@ import {
     CUTOUT,
     DOOR,
     PANEL,
-} from '../../../../../app/constants/scene/things'
+} from '../../../../../src/constants/scene/things'
 import {
     TRAY_PILE,
     DISHROOM_DOLLY__TRAY,
@@ -10,12 +10,12 @@ import {
     GLASS_RACK__SINK,
     GLASS_RACK__DOLLY,
     DISH_PILE,
-} from '../../../../../app/constants/scene/things/cutouts'
-import { DISHROOM_DOOR } from '../../../../../app/constants/scene/things/doors'
+} from '../../../../../src/constants/scene/things/cutouts'
+import { DISHROOM_DOOR } from '../../../../../src/constants/scene/things/doors'
 import {
     CONVEYOR_BELT,
     DISHROOM_SINK,
-} from '../../../../../app/constants/scene/things/panels'
+} from '../../../../../src/constants/scene/things/panels'
 
 export default {
     [CUTOUT]: {

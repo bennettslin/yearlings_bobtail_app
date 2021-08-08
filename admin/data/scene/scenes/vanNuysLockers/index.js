@@ -2,10 +2,10 @@ import {
     PRETEEN_BENNETT,
     BRAD,
     ANDREW,
-} from '../../../../../app/constants/scene/actors'
-import { THROWING } from '../../../../../app/constants/scene/actors/andrew'
-import { GESTURING } from '../../../../../app/constants/scene/actors/brad'
-import { STOIC } from '../../../../../app/constants/scene/actors/preteenBennett'
+} from '../../../../../src/constants/scene/actors'
+import { THROWING } from '../../../../../src/constants/scene/actors/andrew'
+import { GESTURING } from '../../../../../src/constants/scene/actors/brad'
+import { STOIC } from '../../../../../src/constants/scene/actors/preteenBennett'
 
 export default {
     [BRAD]: {

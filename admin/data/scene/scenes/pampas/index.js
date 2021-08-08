@@ -3,9 +3,9 @@ import {
     CATHERINE,
     MARA,
     MIRIAM,
-} from '../../../../../app/constants/scene/actors'
-import { PAMPAS } from '../../../../../app/constants/scene/actors/bennettLiz'
-import { GOPI } from '../../../../../app/constants/scene/actors/songs'
+} from '../../../../../src/constants/scene/actors'
+import { PAMPAS } from '../../../../../src/constants/scene/actors/bennettLiz'
+import { GOPI } from '../../../../../src/constants/scene/actors/songs'
 
 export default {
     [BENNETT_LIZ]: {

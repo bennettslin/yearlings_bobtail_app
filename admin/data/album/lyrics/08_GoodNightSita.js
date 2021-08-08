@@ -4,14 +4,14 @@ import {
     OBSERVATION,
     PUN,
     SONGCRAFT,
-} from '../../../../app/constants/dots'
+} from '../../../../src/constants/dots'
 
 import {
     VERSES,
     CHORUS,
     POSTCHORUS,
     IS_UNIT_DOT,
-} from '../../../../app/constants/lyrics'
+} from '../../../../src/constants/lyrics'
 
 export default {
     path: 'good-night-sita',

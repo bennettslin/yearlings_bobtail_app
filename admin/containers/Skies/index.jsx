@@ -21,7 +21,7 @@ import {
     SEASON_OCEAN_TOP,
     SEASON_OCEAN_SIDE,
     SEASON_THOUGHT,
-} from '../../../app/constants/scene/sky'
+} from '../../../src/constants/scene/sky'
 import './style'
 
 const Skies = () => {

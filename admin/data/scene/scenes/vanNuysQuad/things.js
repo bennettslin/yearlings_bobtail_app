@@ -2,17 +2,17 @@ import {
     BUBBLE,
     CARDBOARD,
     CUTOUT,
-} from '../../../../../app/constants/scene/things'
+} from '../../../../../src/constants/scene/things'
 import {
     SKETCH_ESCAPE_POD,
     SKETCHBOOK__ESCAPE_POD,
-} from '../../../../../app/constants/scene/things/bubbles'
-import { VAN_NUYS_PAINTING } from '../../../../../app/constants/scene/things/cardboards'
+} from '../../../../../src/constants/scene/things/bubbles'
+import { VAN_NUYS_PAINTING } from '../../../../../src/constants/scene/things/cardboards'
 import {
     TRASH_CAN__QUAD,
     BUSH_SINGLE__QUAD,
     BUSH_DOUBLE__QUAD,
-} from '../../../../../app/constants/scene/things/cutouts'
+} from '../../../../../src/constants/scene/things/cutouts'
 import { SKETCH_CONFIG } from '../../sharedConfigs'
 
 export default {

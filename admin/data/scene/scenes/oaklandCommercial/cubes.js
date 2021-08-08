@@ -1,10 +1,10 @@
-import { OAKLAND_COMMERCIAL_KEY } from '../../../../../app/constants/scene/scenes'
+import { OAKLAND_COMMERCIAL_KEY } from '../../../../../src/constants/scene/scenes'
 
 import {
     DEFAULT_CLEAR_COLOUR as D,
     STREET_COLOUR as T,
     PAVEMENT_COLOUR as V,
-} from '../../../../../app/constants/scene/cubes/colours'
+} from '../../../../../src/constants/scene/cubes/colours'
 
 export default {
     [OAKLAND_COMMERCIAL_KEY]: {

@@ -1,4 +1,4 @@
-import { ACTOR } from '../../../../app/constants/scene'
+import { ACTOR } from '../../../../src/constants/scene'
 import {
     BACKDROP,
     BUBBLE,
@@ -7,45 +7,45 @@ import {
     FIXTURE,
     FLAT,
     PANEL,
-} from '../../../../app/constants/scene/things'
+} from '../../../../src/constants/scene/things'
 import {
     BACKSTAGE_KEY,
     GO_KARTS_KEY,
     LIZ_GATE_KEY,
     LIZ_GATE_STREET_KEY,
     MUSEUM_KEY,
-} from '../../../../app/constants/scene/scenes'
+} from '../../../../src/constants/scene/scenes'
 import {
     SEASON_AUTUMN,
     TIME_AFTERNOON,
     TIME_EVENING,
-} from '../../../../app/constants/scene/sky'
+} from '../../../../src/constants/scene/sky'
 import {
     BENNETT,
     KHARI,
     LIZ,
     STEPHANIE,
-} from '../../../../app/constants/scene/actors'
-import { DOUBLE_ALBERT } from '../../../../app/constants/scene/actors/khari'
-import { FLAPPER } from '../../../../app/constants/scene/actors/stephanie'
+} from '../../../../src/constants/scene/actors'
+import { DOUBLE_ALBERT } from '../../../../src/constants/scene/actors/khari'
+import { FLAPPER } from '../../../../src/constants/scene/actors/stephanie'
 import {
     BACKSTAGE,
     DATE_ENDED,
     DATE_ENDING,
     GO_KARTS,
     MUSEUM,
-} from '../../../../app/constants/scene/actors/songs'
+} from '../../../../src/constants/scene/actors/songs'
 import {
     DRIVING_BACKDROP,
     OAKLAND_FRONT__HIGH,
     OAKLAND_SIDE__LEVEL,
-} from '../../../../app/constants/scene/things/backdrops'
+} from '../../../../src/constants/scene/things/backdrops'
 import {
     BUBBLE_LARGE__GO_KART,
     BUBBLE_MEDIUM__GO_KART,
     BUBBLE_SMALL__GO_KART,
     THOUGHT_GO_KART,
-} from '../../../../app/constants/scene/things/bubbles'
+} from '../../../../src/constants/scene/things/bubbles'
 import {
     CACTUS_DOUBLE__LIZ_GATE,
     CACTUS_SINGLE__LIZ_ENDED,
@@ -59,29 +59,29 @@ import {
     SANDBAGS,
     STAGE_LIGHTS,
     TRAFFIC_LIGHT_FRONT,
-} from '../../../../app/constants/scene/things/cutouts'
+} from '../../../../src/constants/scene/things/cutouts'
 import {
     LIZ_BLINDS_OUTSIDE__ENDED,
     LIZ_BLINDS_OUTSIDE__ENDING,
     LIZ_GATE_OUTSIDE,
     LIZ_GATE_OUTSIDE_OPEN,
-} from '../../../../app/constants/scene/things/doors'
+} from '../../../../src/constants/scene/things/doors'
 import {
     MANNEQUIN,
     PUSH_BROOM__BACKSTAGE,
     STEPLADDER,
-} from '../../../../app/constants/scene/things/fixtures'
+} from '../../../../src/constants/scene/things/fixtures'
 import {
     GO_KART_TRACK,
     PUBLIC_FAR__LIZ_GATE,
     PUBLIC_NEAR__LIZ_GATE,
-} from '../../../../app/constants/scene/things/flats'
+} from '../../../../src/constants/scene/things/flats'
 import {
     GO_KART_EXTERIOR__LEFT,
     GO_KART_EXTERIOR__RIGHT,
     GO_KART_SEAT__LEFT,
     GO_KART_SEAT__RIGHT,
-} from '../../../../app/constants/scene/things/panels'
+} from '../../../../src/constants/scene/things/panels'
 
 export default [
     {

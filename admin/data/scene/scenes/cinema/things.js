@@ -1,14 +1,14 @@
 import {
     CARDBOARD,
     DOOR,
-} from '../../../../../app/constants/scene/things'
+} from '../../../../../src/constants/scene/things'
 import {
     POSTER_MARA_MEMENTO,
     MARQUEE_FRAME__MARA_MEMENTO,
     POSTER_MARA_GLADIATOR,
     MARQUEE_FRAME__MARA_GLADIATOR,
-} from '../../../../../app/constants/scene/things/cardboards'
-import { CINEMA_DOORS } from '../../../../../app/constants/scene/things/doors'
+} from '../../../../../src/constants/scene/things/cardboards'
+import { CINEMA_DOORS } from '../../../../../src/constants/scene/things/doors'
 
 export default {
     [CARDBOARD]: {

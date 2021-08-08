@@ -3,11 +3,11 @@ import {
     WILLY,
     MOTHER,
     CHRISTOPHER,
-} from '../../../../../app/constants/scene/actors'
-import { TANTRUM } from '../../../../../app/constants/scene/actors/christopher'
-import { STOOPING } from '../../../../../app/constants/scene/actors/mother'
-import { CAUTIOUS } from '../../../../../app/constants/scene/actors/preteenBennett'
-import { DUCKING } from '../../../../../app/constants/scene/actors/willy'
+} from '../../../../../src/constants/scene/actors'
+import { TANTRUM } from '../../../../../src/constants/scene/actors/christopher'
+import { STOOPING } from '../../../../../src/constants/scene/actors/mother'
+import { CAUTIOUS } from '../../../../../src/constants/scene/actors/preteenBennett'
+import { DUCKING } from '../../../../../src/constants/scene/actors/willy'
 
 export default {
     [PRETEEN_BENNETT]: {

@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import AnnotationSongColumn from '../AnnotationSongColumn'
-import { getArrayOfLength } from '../../../../app/helpers/general'
-import { getSongsNotLoguesCount } from '../../../../app/api/album/songs'
+import { getArrayOfLength } from '../../../../src/helpers/general'
+import { getSongsNotLoguesCount } from '../../../../src/api/album/songs'
 
 const TempGlobalColumns = ({ showAll }) => {
     return (

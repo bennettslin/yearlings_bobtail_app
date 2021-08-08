@@ -3,17 +3,17 @@ import {
     CARDBOARD,
     FIXTURE,
     PANEL,
-} from '../../../../../app/constants/scene/things'
+} from '../../../../../src/constants/scene/things'
 import {
     BENNETT_TAIWAN_STAIRS,
     ODIN_TAIWAN_STAIRS,
-} from '../../../../../app/constants/scene/things/cardboards'
+} from '../../../../../src/constants/scene/things/cardboards'
 import {
     BUDDHA_SHRINE,
     TAIWAN_FRIDGE,
-} from '../../../../../app/constants/scene/things/cutouts'
-import { FRIDGE_DRAWINGS } from '../../../../../app/constants/scene/things/fixtures'
-import { BUDDHA_STAND } from '../../../../../app/constants/scene/things/panels'
+} from '../../../../../src/constants/scene/things/cutouts'
+import { FRIDGE_DRAWINGS } from '../../../../../src/constants/scene/things/fixtures'
+import { BUDDHA_STAND } from '../../../../../src/constants/scene/things/panels'
 
 export default {
     [CARDBOARD]: {

@@ -4,17 +4,17 @@ import {
     FLAT,
     PANEL,
     PUPPET,
-} from '../../../../../app/constants/scene/things'
-import { EL_CERRITO_TREE } from '../../../../../app/constants/scene/things/cutouts'
+} from '../../../../../src/constants/scene/things'
+import { EL_CERRITO_TREE } from '../../../../../src/constants/scene/things/cutouts'
 import {
     FREEWAY_SIGN,
     CONDOM_MIRIAM,
     CONDOM_WRAPPER_MIRIAM,
-} from '../../../../../app/constants/scene/things/fixtures'
+} from '../../../../../src/constants/scene/things/fixtures'
 import {
     EL_CERRITO_FAR,
     EL_CERRITO_NEAR,
-} from '../../../../../app/constants/scene/things/flats'
+} from '../../../../../src/constants/scene/things/flats'
 import {
     REATTA_EXTERIOR_FRONT,
     REATTA_EXTERIOR_REAR,
@@ -22,8 +22,8 @@ import {
     REATTA_SEAT_BOTTOM,
     REATTA_SEAT_BACK,
     REATTA_SEAT_BACK_DOWN,
-} from '../../../../../app/constants/scene/things/panels'
-import { PUPPET_REATTA } from '../../../../../app/constants/scene/things/puppets'
+} from '../../../../../src/constants/scene/things/panels'
+import { PUPPET_REATTA } from '../../../../../src/constants/scene/things/puppets'
 
 export default {
     [CUTOUT]: {

@@ -3,21 +3,21 @@ import {
     FLAT,
     PANEL,
     PUPPET,
-} from '../../../../../app/constants/scene/things'
+} from '../../../../../src/constants/scene/things'
 import {
     WEDDING_CHAIR,
     WEDDING_CROWD,
-} from '../../../../../app/constants/scene/things/cutouts'
+} from '../../../../../src/constants/scene/things/cutouts'
 import {
     FOREBODING_TREES__FAR,
     FOREBODING_TREES__MIDDLE,
     FOREBODING_TREES__NEAR,
-} from '../../../../../app/constants/scene/things/flats'
+} from '../../../../../src/constants/scene/things/flats'
 import {
     WEDDING_PLATFORM_FRONT,
     WEDDING_PLATFORM_REAR,
-} from '../../../../../app/constants/scene/things/panels'
-import { PUPPET_KHARI_LIZ } from '../../../../../app/constants/scene/things/puppets'
+} from '../../../../../src/constants/scene/things/panels'
+import { PUPPET_KHARI_LIZ } from '../../../../../src/constants/scene/things/puppets'
 
 export default {
     [CUTOUT]: {

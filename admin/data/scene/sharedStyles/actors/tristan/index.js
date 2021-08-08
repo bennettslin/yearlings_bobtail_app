@@ -1,8 +1,8 @@
 import {
     PRINCIPAL,
     PUNCHING,
-} from '../../../../../../app/constants/scene/actors/tristan'
-import { EPILOGUE } from '../../../../../../app/constants/scene/actors/songs'
+} from '../../../../../../src/constants/scene/actors/tristan'
+import { EPILOGUE } from '../../../../../../src/constants/scene/actors/songs'
 
 export default {
     [PUNCHING]: null,

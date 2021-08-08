@@ -2,11 +2,11 @@ import {
     DOOR,
     FIXTURE,
     PANEL,
-} from '../../../../../app/constants/scene/things'
+} from '../../../../../src/constants/scene/things'
 import {
     BASEMENT_DOOR_OPEN,
     DEFAULT_FENCE_BASEMENT,
-} from '../../../../../app/constants/scene/things/doors'
+} from '../../../../../src/constants/scene/things/doors'
 import {
     BASEMENT_BEER_BENNETT,
     BASEMENT_BEER_CASE,
@@ -14,13 +14,13 @@ import {
     BASS_CASE_UPRIGHT,
     DRUMS_STACKED__BASEMENT,
     GUITAR_CASE_UPRIGHT,
-} from '../../../../../app/constants/scene/things/fixtures'
+} from '../../../../../src/constants/scene/things/fixtures'
 import {
     MILK_CRATE__ANA,
     MILK_CRATE__BENNETT,
     MILK_CRATE__JACOB,
     MILK_CRATE__MARA,
-} from '../../../../../app/constants/scene/things/panels'
+} from '../../../../../src/constants/scene/things/panels'
 
 export default {
     [DOOR]: {

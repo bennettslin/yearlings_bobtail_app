@@ -1,17 +1,17 @@
 import {
     CUTOUT,
     FIXTURE,
-} from '../../../../../app/constants/scene/things'
+} from '../../../../../src/constants/scene/things'
 import {
     LOCKER_BANK,
     TRASH_CAN__LOCKERS,
     BUSH_SINGLE__LOCKERS,
     BUSH_DOUBLE__LOCKERS,
-} from '../../../../../app/constants/scene/things/cutouts'
+} from '../../../../../src/constants/scene/things/cutouts'
 import {
     THROWN_FRUIT,
     BALLED_FOIL__LOCKERS,
-} from '../../../../../app/constants/scene/things/fixtures'
+} from '../../../../../src/constants/scene/things/fixtures'
 
 export default {
     [CUTOUT]: {
