@@ -50,7 +50,7 @@ export default {
             },
         },
         {
-            resolve: `gatsby-plugin-webpack-bundle-analyzer`,
+            resolve: `gatsby-plugin-webpack-bundle-analyser-v2`,
             options: {
                 analyzerPort: 1114,
                 openAnalyzer: false,
