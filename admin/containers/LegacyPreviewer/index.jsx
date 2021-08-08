@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react'
 import cx from 'classnames'
-import debounce from 'debounce'
 
 import PreviewerDashboard from '../Previewer/Dashboard'
 import PreviewerSvg from '../Previewer/Svg'
@@ -41,7 +40,7 @@ class LegacyPreviewer extends PureComponent {
     componentDidMount() {
         logMount('LegacyPreviewer')
         logSvgCount()
-        getWindow().onresize = debounce(this.setHeightAspectRatio, 0)
+        getWindow().onresize = this.setHeightAspectRatio
         this.focusPreviewerElement()
     }
 
