@@ -39,13 +39,6 @@ export default {
                     },
                 },
             ],
-        {
-            // Always include src pages.
-            resolve: `gatsby-plugin-page-creator`,
-            options: {
-                path: `${__dirname}/src/pages`,
-            },
-        },
         `gatsby-plugin-postcss`,
         `gatsby-plugin-react-helmet`,
         `gatsby-plugin-remove-trailing-slashes`,
