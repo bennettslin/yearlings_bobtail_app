@@ -9,7 +9,7 @@ import {
     LENGTH_ICON,
     LENGTH_ICON_LARGE,
     LENGTH_ICON_LARGE_MINI,
-} from '../../scss/exports/style'
+} from '../../scss/exports/style.module'
 import { getJsFromSass } from '../format'
 
 export const getCanCarouselNavMount = ({

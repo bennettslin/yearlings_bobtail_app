@@ -57,7 +57,7 @@
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-react": "^7.24.0",
     "esm": "^3.2.25",
-    "gatsby": "^2.32.13",
+    "gatsby": "^3.11.0",
     "gatsby-plugin-google-gtag": "^3.11.0",
     "gatsby-plugin-manifest": "^3.11.0",
     "gatsby-plugin-page-creator": "^3.11.0",
@@ -68,8 +68,9 @@
     "gatsby-plugin-sass": "^4.11.0",
     "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.24",
     "jsdom": "^16.7.0",
+    "postcss": "^8.3.6",
     "redux-devtools-extension": "^2.13.9",
     "sass": "^1.37.5",
-    "webpack": "^4.46.0"
+    "webpack": "^5.49.0"
   }
 }

@@ -8,7 +8,7 @@ import {
     MARGIN_THIN,
     OVERLAP_MARGIN_X_SLIDER,
     PADDING_POPUP_CONTENT_WIDE,
-} from '../../scss/exports/style'
+} from '../../scss/exports/style.module'
 import { getJsFromSass } from '../../helpers/format'
 
 /*****************

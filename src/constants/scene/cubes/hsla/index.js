@@ -15,7 +15,7 @@ import {
     HUE_SNOW,
     HUE_TENNIS,
     HUE_WAITING,
-} from '../../../../scss/exports/style'
+} from '../../../../scss/exports/style.module'
 
 import {
     APARTMENT_EXTERIOR_COLOUR,

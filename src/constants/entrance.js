@@ -5,7 +5,7 @@ import {
 import {
     TRANSITION_DURATION_CURTAINS,
     TRANSITION_DURATION_PRESENCE,
-} from '../scss/exports/style'
+} from '../scss/exports/style.module'
 
 const GENERAL_BUFFER = 25
 

@@ -16,7 +16,7 @@ import {
     COLOUR__FUTURE__LIGHT,
     COLOUR__FUTURE__DARK,
     COLOUR__FUTURE__DARKER,
-} from '../../../scss/exports/style'
+} from '../../../scss/exports/style.module'
 
 const VerseCursorStylesheets = () => (
     <>
