@@ -14,7 +14,7 @@ logBuild()
 logDevice()
 logAnalytics()
 
-logSuccess(`Hi, I'm looking for another developer or two to help build some music-based apps. If this sounds like interesting work to you, please get in touch! Bennett`)
+logSuccess(`Hi, I'm looking for a developer or two to help me build some music-based apps. I can pay a fixed sum. (These apps will be free, probably.) If this sounds interesting to you, please tell me your story and send examples of your work to the contact email given on this website. Thanks! Bennett`)
 
 export {
     wrapRootElement,
