@@ -72,9 +72,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
-                    description: `With the breakup, I was now free to rebuild my life from scratch. I could revert to the state of childlike innocence that I'd known before my relationship with Sita, before even the bullying and the mail-order cult. And so here we hear the song of the white-throated sparrow, harkening back to the happier days of my youth.`,
+                    description: `With the breakup, I was free to rebuild my life from scratch. I could revert to the state of childlike innocence that I'd known before the relationship, before the bullying and the mail-order cult. And so here we hear the song of the white-throated sparrow, which harkens back to the happier days of my youth.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGCRAFT]: true,
@@ -708,7 +707,7 @@ export default {
                         {
                             anchor: `jester teeters`,
                             card: {
-                                description: `I was stopped by a pair of police officers that night. They deemed me harmless and sent me on my way. I've since learned that this likely wouldn't have been the experience of my Black friends, of course.`,
+                                description: `I was stopped by a pair of police officers that night. They judged me to be harmless and sent me on my way. I've since learned that this likely wouldn't have been the experience of my Black friends, of course.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

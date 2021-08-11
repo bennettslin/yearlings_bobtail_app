@@ -330,7 +330,7 @@ export default {
                             anchor: `earth right now your tourist store`,
                             todo: true,
                             card: {
-                                description: `My mother once filled my head with visions of being a great artist. The mail-order cult then piled on the belief that I was a mere visitor to this planet. The lasting effect on my psyche was that I became unaffected by earthly concerns, preferring instead to work tirelessly "to restore" my "birthright" of artistic renown.`,
+                                description: `My mother once filled my head with visions of being a great artist. The mail-order cult then piled on with the belief that I was a mere visitor to this planet. The lasting effect on my psyche was that I became unaffected by earthly concerns, preferring instead to work tirelessly "to restore" my "birthright" of artistic renown.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
