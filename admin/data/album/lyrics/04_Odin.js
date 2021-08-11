@@ -1506,7 +1506,7 @@ export default {
                             // But as a child, I came to a slightly different conclusion. If my brother and I could be so alike in physical makeup yet so different in mental presence, then it made more sense to believe that no one has a soul.
                             todo: true,
                             card: {
-                                description: `I knew that humans need to fear death to ensure their survival. But what I didn't understand is why it has to be done consciously. Why couldn't we just fear death the same way that oil is said to fear water?`,
+                                description: `I knew that humans need to fear death to ensure their survival. I just didn't understand why it had to be done consciously. Why couldn't we fear death the same way that oil is said to fear water?`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },

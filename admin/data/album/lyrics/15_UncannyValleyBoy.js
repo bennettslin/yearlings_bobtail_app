@@ -328,9 +328,8 @@ export default {
                         `,`,
                         {
                             anchor: `earth right now your tourist store`,
-                            todo: true,
                             card: {
-                                description: `My mother once filled my head with visions of being a great artist. The mail-order cult then piled on with the belief that I was a mere visitor to this planet. The lasting effect on my psyche was that I became unaffected by earthly concerns, preferring instead to work tirelessly "to restore" my "birthright" of artistic renown.`,
+                                description: `My mother tried to instill Buddhist ideals, even as she filled my head with visions of being a great artist. The mail-order cult then piled on with the belief that I was only a visitor to this planet. The lasting effect on my psyche was that I became unaffected by earthly concerns, preferring instead to work tirelessly "to restore" my "birthright" of artistic renown.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -424,10 +423,9 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `For this album, I kept in mind the`,
+                        `The`,
                         {
                             anchor: `Kinks`,
                             wiki: `The_Kinks`,
@@ -437,7 +435,7 @@ export default {
                             anchor: `Village Green Preservation Society`,
                             wiki: `The_Kinks_Are_the_Village_Green_Preservation_Society`,
                         },
-                        `as my model. The songs all had to be memorable pop tunes, contain zero filler, and represent a diversity of musical styles. And each one would clock in at three minutes or so, with none over four. While there was no one-to-one mapping, this song was clearly the "`,
+                        `was my model for this album. As such, my songs all had to be memorable pop tunes, contain zero filler, and represent a diversity of musical styles. And each one would clock in at three minutes or so, with none over four. While there was no one-to-one mapping, this song was clearly the "`,
                         {
                             anchor: `Wicked Annabella`,
                             wiki: `Wicked_Annabella`,
