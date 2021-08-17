@@ -16,7 +16,7 @@ const AboutTitle = ({ didMount }) => (
                         'About__albumTitle',
                         'fontColour__title',
                         'fontSize__largeTitle',
-                        'Rancho',
+                        'font__heading',
                     ),
                 },
             }}
@@ -31,7 +31,7 @@ const AboutTitle = ({ didMount }) => (
                         className: cx(
                             'About__bandName',
                             'fontColour__title',
-                            'Rancho',
+                            'font__heading',
                         ),
                     },
                 }}

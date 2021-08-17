@@ -30,7 +30,7 @@ const NotFoundContainer = () => {
                         'NotFoundContainer',
                         'fontColour__title',
                         'fontSize__largeTitle',
-                        'Rancho',
+                        'font__heading',
                         'abF',
                         'fCC',
                     ),

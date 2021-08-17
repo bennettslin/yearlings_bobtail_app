@@ -19,7 +19,7 @@ const AnnotationSongHeader = ({ songIndex }) => {
                 className: cx(
                     'TempGlobalAnnotationSongHeader',
                     'textShadow__light',
-                    'Rancho',
+                    'font__heading',
                     'fCC',
                 ),
                 style: {

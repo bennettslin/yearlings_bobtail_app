@@ -57,7 +57,7 @@ const AdminSky = ({
             {...{
                 className: cx(
                     'AdminSky__text',
-                    'PtSansNarrow',
+                    'font__text',
                     'textShadow__light',
                 ),
             }}

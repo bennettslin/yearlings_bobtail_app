@@ -19,7 +19,7 @@ const ButtonCharacter = ({
                 isSelected ?
                     'button__text__selected' :
                     'button__text__interactable',
-                'Rancho',
+                'font__heading',
                 'abF',
                 'fCC',
                 hasCharacterShadowLight ?

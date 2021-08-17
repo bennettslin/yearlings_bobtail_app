@@ -55,7 +55,7 @@ const MailingList = ({ didMount }) => {
                     className: cx(
                         'MailingList__emailField',
                         'MailingList__input',
-                        'PtSansNarrow',
+                        'font__text',
                         'foN',
                     ),
                     id: EMAIL_ID,
@@ -93,7 +93,7 @@ const MailingList = ({ didMount }) => {
                     className: cx(
                         'MailingList__submitButton',
                         'MailingList__input',
-                        'PtSansNarrow',
+                        'font__text',
                         'foN',
                     ),
                     type: 'submit',

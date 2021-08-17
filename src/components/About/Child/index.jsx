@@ -29,7 +29,7 @@ const AboutChild = ({
                         className: cx(
                             'AboutChild__header',
                             'fontColour__title',
-                            'Rancho',
+                            'font__heading',
                         ),
                     },
                 }}

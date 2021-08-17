@@ -54,7 +54,7 @@ const AccessLetter = ({
                         'AccessLetter__inButtonOrDotAnchor',
 
                     'fCC',
-                    'Neuton',
+                    'font__extra',
                 )}
             >
                 <AccessField />

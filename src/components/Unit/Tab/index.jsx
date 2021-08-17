@@ -50,7 +50,7 @@ const UnitTab = ({
                 {...{
                     className: cx(
                         'UnitTab__text',
-                        'Neuton',
+                        'font__extra',
                     ),
                 }}
             >

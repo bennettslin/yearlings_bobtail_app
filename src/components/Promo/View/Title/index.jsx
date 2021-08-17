@@ -11,7 +11,7 @@ const PromoViewTitle = ({ title }) => Boolean(title) && (
                 'PromoViewTitle',
                 'fontColour__title',
                 'fontSize__largeTitle',
-                'Rancho',
+                'font__heading',
             ),
         }}
     >

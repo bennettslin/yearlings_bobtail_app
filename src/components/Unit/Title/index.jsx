@@ -18,7 +18,7 @@ const UnitSongTitle = ({ didMount, serverClientSongIndex }) => {
                         'UnitSongTitle',
                         'fCC',
                         'textShadow__dark',
-                        'Rancho',
+                        'font__heading',
                     ),
                 },
             }}

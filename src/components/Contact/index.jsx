@@ -11,7 +11,7 @@ const Contact = ({ didMount, isMediumTitle, isTextShadowLight }) => (
             {...{
                 className: cx(
                     'Contact',
-                    'Rancho',
+                    'font__heading',
                     isMediumTitle ?
                         'fontSize__mediumTitle' :
                         'Contact__fontSize',

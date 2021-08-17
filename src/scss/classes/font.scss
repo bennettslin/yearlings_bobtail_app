@@ -1,15 +1,15 @@
 @import '../constants/colour';
 
-.Neuton {
-    font-family: Neuton, Times;
-}
-
-.PtSansNarrow {
+.font__text {
     font-family: PT Sans Narrow, Arial;
 }
 
-.Rancho {
+.font__heading {
     font-family: Rancho, Georgia;
+}
+
+.font__extra {
+    font-family: Neuton, Times;
 }
 
 .fontColour__title {

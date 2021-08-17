@@ -44,7 +44,7 @@ const TempGlobalAnnotations = () => {
             {...{
                 className: cx(
                     'TempGlobalAnnotations',
-                    'PtSansNarrow',
+                    'font__text',
                 ),
             }}
         >

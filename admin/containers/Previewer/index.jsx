@@ -159,7 +159,7 @@ class Previewer extends PureComponent {
                     className: cx(
                         'Previewer',
                         'abF',
-                        'PtSansNarrow',
+                        'font__text',
                     ),
                     tabIndex: -1,
                     onKeyDown: this.handleKeyDown,

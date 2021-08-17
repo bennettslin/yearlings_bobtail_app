@@ -184,7 +184,7 @@ const SongBanner = () => {
                         'dropShadow__lightHover',
 
                     'ovH',
-                    'Rancho',
+                    'font__heading',
                 ),
                 onClick,
 

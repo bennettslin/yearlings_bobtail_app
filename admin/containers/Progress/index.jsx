@@ -15,7 +15,7 @@ const Progress = () => {
         <div
             className={cx(
                 'Admin',
-                'PtSansNarrow',
+                'font__text',
             )}
         >
             <div className="Admin__column">

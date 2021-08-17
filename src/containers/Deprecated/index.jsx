@@ -27,7 +27,7 @@ const DeprecatedContainer = () => {
                     'DeprecatedContainer',
                     'fontColour__title',
                     'fontSize__largeTitle',
-                    'Rancho',
+                    'font__heading',
                     'abF',
                     'fCC',
                 ),

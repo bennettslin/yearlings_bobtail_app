@@ -28,7 +28,7 @@ const ButtonTitle = ({
                     isSelected ?
                         'button__text__selected' :
                         'button__text__interactable',
-                    'Rancho',
+                    'font__heading',
                     hasTitleShadowLight ?
                         'textShadow__light' :
                         'textShadow__dark',

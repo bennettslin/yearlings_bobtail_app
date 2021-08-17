@@ -86,7 +86,7 @@ const PromoContainer = ({ children }) => {
                         className: cx(
                             'PromoContainer',
                             'rootContainer',
-                            'PtSansNarrow',
+                            'font__text',
                             'abF',
                             'fCC',
                         ),

@@ -11,7 +11,7 @@ const PromoScrollTitle = ({ title }) => (
                 'PromoScrollTitle',
                 'fontColour__title',
                 'fontSize__largerTitle',
-                'Rancho',
+                'font__heading',
             ),
         }}
     >

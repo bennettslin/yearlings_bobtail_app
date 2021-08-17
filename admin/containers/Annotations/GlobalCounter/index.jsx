@@ -21,7 +21,7 @@ const GlobalCounter = ({ toggleShowTodos }) => {
                 className: cx(
                     'TempGlobalCounter',
                     'textShadow__light',
-                    'Rancho',
+                    'font__heading',
                     'fCC',
                 ),
             }}

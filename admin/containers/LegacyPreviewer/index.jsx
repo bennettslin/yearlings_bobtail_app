@@ -124,7 +124,7 @@ class LegacyPreviewer extends PureComponent {
                     className: cx(
                         'LegacyPreviewer',
                         'abF',
-                        'PtSansNarrow',
+                        'font__text',
                     ),
                     tabIndex: -1,
                     onKeyDown: this.handleKeyDown,

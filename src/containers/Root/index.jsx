@@ -90,7 +90,7 @@ const RootContainer = () => {
                 className: cx(
                     'RootContainer',
                     'rootContainer',
-                    'PtSansNarrow',
+                    'font__text',
                     'abF',
                     'ovH',
                 ),
