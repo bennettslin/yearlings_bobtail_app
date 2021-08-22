@@ -1,9 +1,11 @@
-.iframeContainer {
+@import '../../scss/constants/transition';
+
+.Iframe {
     height: 100%;
     overflow-y: hidden;
 }
 
-.iframeContainer__iframe {
+.Iframe__window {
     border: 0;
     width: 100%;
     height: 100%;
@@ -15,6 +17,6 @@
     }
 }
 
-.iframeContainer__iframe__loaded {
+.Iframe__window__loaded {
     opacity: 1;
 }

@@ -2,6 +2,7 @@ import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import Spinner from '../Spinner'
+import './style'
 
 const Iframe = forwardRef(({
     className,
@@ -14,7 +15,7 @@ const Iframe = forwardRef(({
         {...{
             className: cx(
                 className,
-                'iframeContainer',
+                'Iframe',
             ),
         }}
     >
@@ -22,7 +23,7 @@ const Iframe = forwardRef(({
             <div
                 {...{
                     className: cx(
-                        'iframeContainer__spinner',
+                        'Iframe__spinner',
                         'abF',
                         'fCC',
                     ),
@@ -36,8 +37,8 @@ const Iframe = forwardRef(({
                 {...{
                     ref,
                     className: cx(
-                        'iframeContainer__iframe',
-                        !isLoading && 'iframeContainer__iframe__loaded',
+                        'Iframe__window',
+                        !isLoading && 'Iframe__window__loaded',
                     ),
                     tabIndex: -1,
                     onLoad,
