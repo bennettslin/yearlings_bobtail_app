@@ -1,0 +1,17 @@
+h5 {
+    margin: 0;
+}
+
+.ProjectSection { 
+    text-align: right;
+    font-size: 1.25em;
+
+    &:not(:first-child) {
+        margin-top: 12px;
+    }
+}
+
+.ProgressSection__v2 {
+    color: #bbb;
+    font-size: 0.9em;
+}

@@ -1,81 +1,52 @@
-@mixin mixin__progressBar($colour__progressBar, $colour__progressBar__filled) {
-    .ProgressBar {
-        background-color: $colour__progressBar;
+$padding__progress: 15px;
+$backgroundColour__columnOdd: #ede;
+$backgroundColour__columnEven: #eed;
+$backgroundColour__field: rgba(255, 255, 255, 0.5);
 
-        .ProgressBar__filled {
-            background-color: $colour__progressBar__filled;
-        }
-    }
-}
-
-@import './AdminNav/style';
-@import './Drawing/style';
-@import './ProgressBar/style';
-
-$section-colour: rgba(255, 255, 255, 0.5);
-
-$field-padding: 15px;
-
-// Field widths.
-$field-width: 350px;
-
-// Field colours.
-$album-field-colour: #ede;
-$shared-field-colour: #edd;
-$drawing-field-colour: #eed;
-
-/**********
- * FIELDS *
- **********/
-
-.Admin {
+.Progress {
     position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-
-    z-index: 100;
     background-color: #888;
-
+    
     display: flex;
     justify-content: center;
 }
 
-.Admin__column {
-    display: flex;
-}
-
-.Admin__field {
-    width: $field-width;
-    min-width: $field-width;
-    padding: 0 ($field-padding * 0.5);
+.Progress__column {
+    $width__column: 350px;
+    width: $width__column;
+    padding: 0 ($padding__progress * 0.5);
     height: 100%;
     overflow-x: hidden;
     overflow-y: scroll;
+
+    &:first-child {
+        padding-left: $padding__progress;
+    }
+
+    &:last-child {
+        padding-right: $padding__progress;
+    }
+
+    &:nth-child(odd) {
+        background-color: $backgroundColour__columnOdd;
+    }
+
+    &:nth-child(even) {
+        background-color: $backgroundColour__columnEven;
+    }
 }
 
-.album.Admin__field {
-    padding-left: $field-padding;
-    background-color: $album-field-colour;
-}
+.Progress__field {
+    padding: $padding__progress;
+    margin: $padding__progress 0;
 
-.shared.Admin__field {
-    background-color: $shared-field-colour;
-}
+    display: flex;
+    flex-direction: column;
 
-.drawing.Admin__field {
-    padding-right: $field-padding;
-    background-color: $drawing-field-colour;
-}
-
-/************
- * SECTIONS *m
- ************/
-
-.Admin__field > * {
-    padding: $field-padding;
-    margin: $field-padding 0;
-    background-color: $section-colour;
+    background-color: $backgroundColour__field;
     box-shadow: 0 2px 2px 2px rgba(75, 75, 100, 0.4);
 }
