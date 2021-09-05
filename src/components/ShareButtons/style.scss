@@ -1,19 +1,19 @@
 @import '../../scss/constants/icon';
 
-.SocialMediaButtons {
+.ShareButtons {
     justify-content: center;
 }
 
-.SocialMediaButtons__annotation {
+.ShareButtons__annotation {
     margin-top: $MARGIN_THIN * 2;
     justify-content: flex-end;
 }
 
-.SocialMediaButtons__isBelowText {
+.ShareButtons__isBelowText {
     margin-top: $margin__thick * 2;
 }
 
-.SocialMediaButtons__shelfLeft {
+.ShareButtons__shelfLeft {
     width: $length__iconSmall * 2;
     flex-wrap: wrap;
     flex-direction: row-reverse;

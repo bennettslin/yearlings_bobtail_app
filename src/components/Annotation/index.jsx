@@ -5,7 +5,7 @@ import cx from 'classnames'
 import getDidMountHoc from '../../hocs/DidMountHoc'
 import getSongServerClientHoc from '../../hocs/SongHoc'
 import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
-import SocialMediaButtons from '../SocialMediaButtons'
+import ShareButtons from '../ShareButtons'
 import AnnotationHeader from './Header'
 import AnnotationCard from './Card'
 import { getAnnotationCardIndices } from '../../endpoint/album/cards'
@@ -78,7 +78,7 @@ const Annotation = ({
                         }}
                     />
                 ))}
-                <SocialMediaButtons
+                <ShareButtons
                     {...{
                         id: ANNOTATION_SOCIAL_MEDIA,
                         annotationIndex,

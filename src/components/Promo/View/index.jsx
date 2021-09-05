@@ -4,7 +4,7 @@ import PromoViewContent from './Content'
 import PromoViewParagraph from './Paragraph'
 import PromoViewTitle from './Title'
 import PromoViewEntry from './Entry'
-import SocialMediaButtons from '../../SocialMediaButtons'
+import ShareButtons from '../../ShareButtons'
 import { PROMO_PAGE_SOCIAL_MEDIA } from '../../../constants/socialMedia'
 
 const PromoView = ({
@@ -49,7 +49,7 @@ const PromoView = ({
                 return null
             }
         })}
-        <SocialMediaButtons {...{ id: PROMO_PAGE_SOCIAL_MEDIA }} />
+        <ShareButtons {...{ id: PROMO_PAGE_SOCIAL_MEDIA }} />
     </PromoViewContent>
 )
 

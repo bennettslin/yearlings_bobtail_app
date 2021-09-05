@@ -6,7 +6,7 @@ import cx from 'classnames'
 import PageSongIndexContext from '../../contexts/PageSongIndex'
 import OverviewToggle from '../Main/OverviewToggle'
 import OverviewText from './Text'
-import OverviewSocialMediaButtons from './SocialMediaButtons'
+import OverviewShareButtons from './ShareButtons'
 import { mapIsToggleInOverview } from '../../redux/overview/selector'
 import './style'
 
@@ -32,7 +32,7 @@ const Overview = ({ pageSongIndex }) => {
                     />
                 }
                 <OverviewText />
-                <OverviewSocialMediaButtons />
+                <OverviewShareButtons />
             </div>
         </PageSongIndexContext.Provider>
     )

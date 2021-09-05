@@ -7,7 +7,7 @@ import ScoreToggle from '../../Score/Toggle'
 import TipsToggle from '../../Tips/Toggle'
 import DotsSlideToggle from '../DotsSlideToggle'
 import OverviewToggle from '../OverviewToggle'
-import SocialMediaButtons from '../../SocialMediaButtons'
+import ShareButtons from '../../ShareButtons'
 import { mapIsDesktopWidth } from '../../../redux/device/selector'
 import { mapIsShelfLeftShown } from '../../../redux/main/selector'
 import './style'
@@ -34,7 +34,7 @@ const ShelfLeft = () => {
                     <TipsToggle {...{ className: CHILD_CLASS_NAME }} />
                 </>
             )}
-            <SocialMediaButtons
+            <ShareButtons
                 {...{
                     id: SHELF_LEFT_SOCIAL_MEDIA,
                     className: CHILD_CLASS_NAME,

@@ -8,7 +8,7 @@ import getDidMountHoc from '../../hocs/DidMountHoc'
 import { ANNOTATION_SOCIAL_MEDIA, OVERVIEW_LOGUE_SOCIAL_MEDIA, PROMO_PAGE_SOCIAL_MEDIA, SHELF_LEFT_SOCIAL_MEDIA } from '../../constants/socialMedia'
 import './style'
 
-const SocialMediaButtons = ({
+const ShareButtons = ({
     didMount,
     id,
     className,
@@ -20,15 +20,15 @@ const SocialMediaButtons = ({
         <div
             {...{
                 className: cx(
-                    'SocialMediaButtons',
+                    'ShareButtons',
                     id === ANNOTATION_SOCIAL_MEDIA &&
-                        'SocialMediaButtons__annotation',
+                        'ShareButtons__annotation',
                     isShelfLeft &&
-                        'SocialMediaButtons__shelfLeft',
+                        'ShareButtons__shelfLeft',
                     (
                         id === OVERVIEW_LOGUE_SOCIAL_MEDIA ||
                         id === PROMO_PAGE_SOCIAL_MEDIA
-                    ) && 'SocialMediaButtons__isBelowText',
+                    ) && 'ShareButtons__isBelowText',
                     'fCC',
                     className,
                 ),
@@ -47,11 +47,11 @@ const SocialMediaButtons = ({
     )
 }
 
-SocialMediaButtons.propTypes = {
+ShareButtons.propTypes = {
     didMount: PropTypes.bool.isRequired,
     id: PropTypes.string.isRequired,
     className: PropTypes.string,
     annotationIndex: PropTypes.number,
 }
 
-export default getDidMountHoc(SocialMediaButtons)
+export default getDidMountHoc(ShareButtons)
