@@ -2,7 +2,6 @@ import { getIsSongValid } from '../../../endpoint/album/songs'
 import { getIsVerseValid } from '../../../endpoint/album/verses'
 import { getIsAnnotationValid } from '../../../endpoint/album/annotations'
 import { getIsArtupSlideValid } from '../../../endpoint/promo/artup'
-import { getIsArtup2SlideValid } from '../../../endpoint/promo/artup2'
 import { getPromoPath } from '../promo'
 import {
     getIndexFromPath,
@@ -10,7 +9,6 @@ import {
 } from '../path'
 import {
     ARTUP_SUBPATH,
-    ARTUP_2_SUBPATH,
     ONESHEET_SUBPATH,
     VERSE_QUERY_FIELD,
     VERSE_QUERY_INITIAL,
@@ -59,20 +57,9 @@ export const getRoutingArtupIndex = pathname => {
     return getIsArtupSlideValid(routingArtupIndex) ? routingArtupIndex : NaN
 }
 
-export const getRoutingArtup2Index = pathname => {
-    const routingArtup2Index = getIndexFromPath({
-        pathname,
-        rootPath: getPromoPath(ARTUP_2_SUBPATH),
-    })
-    return getIsArtup2SlideValid(routingArtup2Index) ? routingArtup2Index : NaN
-}
-
 export const getRoutingPromoKey = pathname => {
     if (pathname.includes(ONESHEET_SUBPATH)) {
         return ONESHEET_SUBPATH
-    // TODO: Switch order again.
-    } else if (pathname.includes(ARTUP_2_SUBPATH)) {
-        return ARTUP_2_SUBPATH
     } else if (pathname.includes(ARTUP_SUBPATH)) {
         return ARTUP_SUBPATH
     } else {

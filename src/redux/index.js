@@ -53,7 +53,6 @@ import {
 import {
     getInitialAlbumIndices,
     getInitialArtupIndex,
-    getInitialArtup2Index,
     getInitialPromoPageKey,
 } from '../utils/gatsby/initial'
 
@@ -68,8 +67,7 @@ export const getAlbumReducers = ({
             initialVerseIndex,
             initialAnnotationIndex,
         } = getInitialAlbumIndices(pathname, search),
-        initialArtupIndex = getInitialArtupIndex(pathname),
-        initialArtup2Index = getInitialArtup2Index(pathname)
+        initialArtupIndex = getInitialArtupIndex(pathname)
 
     return combineReducers({
         [ACCESS_STORE]: getAccessReducer({ initialAnnotationIndex }),
@@ -92,7 +90,6 @@ export const getAlbumReducers = ({
         [PLAYERS_STORE]: PlayersReducer,
         [PROMO_STORE]: getPromoReducer({
             initialArtupIndex,
-            initialArtup2Index,
         }),
         [SCENE_STORE]: getSceneReducer({
             initialSongIndex,
@@ -126,14 +123,12 @@ export const getPromoReducers = ({
 }) => {
     const
         initialArtupIndex = getInitialArtupIndex(pathname),
-        initialArtup2Index = getInitialArtup2Index(pathname),
         initialPromoPage = getInitialPromoPageKey(pathname)
 
     return combineReducers({
         [ACCESS_STORE]: getAccessReducer({ isPromoPage: true }),
         [PROMO_STORE]: getPromoReducer({
             initialArtupIndex,
-            initialArtup2Index,
             initialPromoPage,
         }),
         [SELECTED_STORE]: getSelectedReducer({

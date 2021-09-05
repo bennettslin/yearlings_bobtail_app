@@ -3,31 +3,23 @@ import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import {
     mapArtupSlideIndex,
-    mapArtup2SlideIndex,
     mapSelectedPromoKey,
 } from '../../../redux/promo/selector'
 import {
     navigateToArtupPage,
-    navigateToArtup2Page,
     navigateToPathname,
 } from '../../../helpers/navigate'
-import {
-    getIsArtupPage,
-    getIsArtup2Page,
-} from '../../../helpers/promo'
+import { getIsArtupPage } from '../../../helpers/promo'
 import { getPromoPath } from '../../../utils/gatsby/promo'
 
 const PromoUrlManager = forwardRef(({ verifyBeforeNavigation }, ref) => {
     const
         artupSlideIndex = useSelector(mapArtupSlideIndex),
-        artup2SlideIndex = useSelector(mapArtup2SlideIndex),
         selectedPromoKey = useSelector(mapSelectedPromoKey)
 
     const navigateToPromoPage = () => {
         if (getIsArtupPage(selectedPromoKey)) {
             navigateToArtupPage(artupSlideIndex)
-        } else if (getIsArtup2Page(selectedPromoKey)) {
-            navigateToArtup2Page(artup2SlideIndex)
         } else {
             navigateToPathname(getPromoPath(selectedPromoKey))
         }
@@ -42,7 +34,7 @@ const PromoUrlManager = forwardRef(({ verifyBeforeNavigation }, ref) => {
         } else {
             navigateToPromoPage()
         }
-    }, [artupSlideIndex, artup2SlideIndex, selectedPromoKey])
+    }, [artupSlideIndex, selectedPromoKey])
 
     useImperativeHandle(ref, () => navigateToPromoPage)
 

@@ -1,6 +1,5 @@
 import {
     ARTUP_SUBPATH,
-    ARTUP_2_SUBPATH,
     ONESHEET_SUBPATH,
     PROMO_PATH,
 } from '../../../../src/constants/routing'
@@ -16,10 +15,6 @@ export default {
     },
     [ARTUP_SUBPATH]: {
         title: `Invest in Artups`,
-        description: `What if indie artists are like stores, while other artists are like startups?`,
-    },
-    [ARTUP_2_SUBPATH]: {
-        title: `Invest in Artups 2`,
         description: `What if indie artists are like stores, while other artists are like startups?`,
     },
 }

@@ -1,13 +1,8 @@
-import {
-    getRoutingArtupIndex,
-    getRoutingArtup2Index,
-} from '../routing'
+import { getRoutingArtupIndex } from '../routing'
 import { getIsAlbumClientSession } from '../session'
 import { getPathForArtupSlide } from '../../../endpoint/promo/artup'
-import { getPathForArtup2Slide } from '../../../endpoint/promo/artup2'
 import {
     ARTUP_SUBPATH,
-    ARTUP_2_SUBPATH,
     ONESHEET_SUBPATH,
     PROMO_PATH,
 } from '../../../constants/routing'
@@ -40,22 +35,6 @@ const _getIsValidArtupPath = pathname => {
     return false
 }
 
-const _getIsValidArtup2Path = pathname => {
-    const artup2Path = getPromoPath(ARTUP_2_SUBPATH)
-    // Check if it's a valid artup2 root path.
-    if (pathname === artup2Path) {
-        return true
-    }
-
-    // Check if it's a valid artup2 page path.
-    const routingArtup2Index = getRoutingArtup2Index(pathname)
-    if (Number.isFinite(routingArtup2Index)) {
-        return pathname === `${artup2Path}/${routingArtup2Index}-${getPathForArtup2Slide(routingArtup2Index)}`
-    }
-
-    return false
-}
-
 export const getIsPromoPage = pathname => (
     /**
      * Ensure that we are not in a promo popup, since it will also show a
@@ -64,7 +43,6 @@ export const getIsPromoPage = pathname => (
     !getIsAlbumClientSession() && (
         _getIsValidPromoHomepagePath(pathname) ||
         _getIsValidOnesheetPath(pathname) ||
-        _getIsValidArtupPath(pathname) ||
-        _getIsValidArtup2Path(pathname)
+        _getIsValidArtupPath(pathname)
     )
 )

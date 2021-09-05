@@ -4,7 +4,6 @@ import Promo from '../../components/Promo'
 
 const getPromoPageComponent = ({
     pageArtupIndex = 1,
-    pageArtup2Index = 1,
     pagePromoKey,
 
 } = {}) => {
@@ -18,7 +17,6 @@ const getPromoPageComponent = ({
             isPromoPage
             {...{
                 pageArtupIndex,
-                pageArtup2Index,
                 pagePromoKey,
             }}
         />
@@ -26,7 +24,6 @@ const getPromoPageComponent = ({
 
     PromoPageComponent.propTypes = {
         pageArtupIndex: PropTypes.number,
-        pageArtup2Index: PropTypes.number,
         pagePromoKey: PropTypes.string,
     }
 

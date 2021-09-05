@@ -5,12 +5,10 @@ import getPromoServerClientHoc from '../../../hocs/PromoHoc'
 import HomepagePromo from '../../Promos/Homepage'
 import OnesheetPromo from '../../Promos/Onesheet'
 import ArtupPromo from '../../Promos/Artup'
-import Artup2Promo from '../../Promos/Artup2'
 import PromoScrollTitle from './Title'
 import { getTitleForPromo } from '../../../endpoint/promo'
 import {
     getIsArtupPage,
-    getIsArtup2Page,
     getIsOnesheetPage,
     getIsPromoHomepage,
 } from '../../../helpers/promo'
@@ -69,9 +67,6 @@ const PromoScroll = forwardRef(({
                     )}
                     {getIsArtupPage(serverClientPromoKey) && (
                         <ArtupPromo {...{ handlePromoPageChange }} />
-                    )}
-                    {getIsArtup2Page(serverClientPromoKey) && (
-                        <Artup2Promo {...{ handlePromoPageChange }} />
                     )}
                 </div>
             </div>
