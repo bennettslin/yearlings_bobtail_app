@@ -9,10 +9,10 @@ import {
 } from '../constants/routing'
 import { getPromoPath } from '../utils/gatsby/promo'
 
-const YEARLINGS_BOBTAIL_DOMAIN = `https://www.yearlingsbobtail.com`
+const DOMAIN = `https://www.yearlingsbobtail.com`
 
 export const getUrl = path => (
-    `${YEARLINGS_BOBTAIL_DOMAIN}${path[0] === '/' ? path : `/${path}`}`
+    `${DOMAIN}${path[0] === '/' ? path : `/${path}`}`
 )
 
 export const getSongUrlPath = ({

@@ -4,7 +4,7 @@ const getDateTimeForConsole = dateTime => (
     `${format(dateTime, 'MMMM d, yyyy, h:mmaaaaa')}m`
 )
 
-export const getDateTimeForGa = dateTime => (
+const getDateTimeForGa = dateTime => (
     format(dateTime, 'yyyy.MM.dd.HH.mm')
 )
 
@@ -14,9 +14,9 @@ export const logBuild = () => {
         {
             action: 'build',
             label: getDateTimeForGa(BUILD_DATE_TIME),
-        }
+        },
     )
     logServe(
-        `IS_RUNTIME is ${IS_RUNTIME ? 'true' : 'false'}, IS_PRODUCTION is ${IS_PRODUCTION ? 'true' : 'false'}.`
+        `IS_RUNTIME is ${IS_RUNTIME ? 'true' : 'false'}, IS_PRODUCTION is ${IS_PRODUCTION ? 'true' : 'false'}.`,
     )
 }
