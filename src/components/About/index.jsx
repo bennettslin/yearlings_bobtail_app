@@ -3,10 +3,10 @@ import React, { memo } from 'react'
 import cx from 'classnames'
 import AboutChild from './Child'
 import AboutTitle from './Title'
-import AboutContact from './Contact'
-import AboutCredits from './Credits'
 import MailingList from './MailingList'
-import SocialMedia from './SocialMedia'
+import AboutContact from './Contact'
+import FollowButtons from '../FollowButtons'
+import AboutCredits from './Credits'
 
 const About = () => (
     <div
@@ -25,8 +25,8 @@ const About = () => (
         <AboutChild {...{ header: 'Contact us' }}>
             <AboutContact />
         </AboutChild>
-        <AboutChild {...{ header: 'Social media' }}>
-            <SocialMedia />
+        <AboutChild {...{ header: 'Follow us' }}>
+            <FollowButtons />
         </AboutChild>
         <AboutChild {...{ header: 'Credits' }}>
             <AboutCredits />

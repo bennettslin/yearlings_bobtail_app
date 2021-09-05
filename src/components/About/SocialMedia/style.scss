@@ -1,9 +1,0 @@
-@import '../../../scss/constants/icon';
-
-.SocialMedia {
-    display: flex;
-
-    & > :not(:last-child) {
-        margin-right: $MARGIN_THIN;
-    }
-}
