@@ -8,6 +8,7 @@ import { getTitleForAlbum } from '../../../endpoint/album/title'
 import { getTruncatedStringText } from '../../../helpers/format'
 import { spreadHelmetConfig } from '../../../helpers/helmet'
 import { getSongUrl, getUrl } from '../../../helpers/url'
+import { TWITTER_ACCOUNT } from '../../../constants/socialMedia'
 
 export const getMetaTitle = songIndex => (
     `${getTitleForSong(songIndex)} | ${getTitleForAlbum()}`
@@ -36,7 +37,7 @@ const getTwitterConfig = songIndex => ({
     'twitter:card': getSongIsLogue(songIndex) ?
         'summary' :
         'player',
-    'twitter:site': '@BobtailYearling',
+    'twitter:site': TWITTER_ACCOUNT,
     'twitter:title': getMetaTitle(songIndex),
     'twitter:description': getMetaDescription(songIndex),
     'twitter:image':

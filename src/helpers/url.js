@@ -1,18 +1,18 @@
 import qs from 'qs'
 import { getFullPathForSong } from '../endpoint/album/songs'
-
+import { getPromoPath } from '../utils/gatsby/promo'
 import {
     ANNOTATION_QUERY_FIELD,
     ANNOTATION_QUERY_INITIAL,
     VERSE_QUERY_FIELD,
     VERSE_QUERY_INITIAL,
 } from '../constants/routing'
-import { getPromoPath } from '../utils/gatsby/promo'
+import { DOMAIN } from '../utils/server'
 
-const DOMAIN = `https://www.yearlingsbobtail.com`
+const DOMAIN_NAME = `https://www.${DOMAIN}.com`
 
 export const getUrl = path => (
-    `${DOMAIN}${path[0] === '/' ? path : `/${path}`}`
+    `${DOMAIN_NAME}${path[0] === '/' ? path : `/${path}`}`
 )
 
 export const getSongUrlPath = ({

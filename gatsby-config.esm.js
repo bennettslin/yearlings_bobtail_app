@@ -1,4 +1,6 @@
 import {
+    APP_DESCRIPTION,
+    APP_TITLE,
     getFaviconFileName,
     getIsProductionBuild,
     getS3BucketName,
@@ -18,9 +20,9 @@ export default {
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
-                name: `Yearling's Bobtail`,
-                short_name: `Yearling's Bobtail`,
-                description: 'Audio webcomic by Bobtail Yearlings',
+                name: APP_TITLE,
+                short_name: APP_TITLE,
+                description: APP_DESCRIPTION,
                 start_url: '/',
                 background_color: '#8c4848',
                 theme_color: '#c9c2a5',
@@ -54,7 +56,7 @@ export default {
         {
             resolve: `gatsby-plugin-webpack-bundle-analyser-v2`,
             options: {
-                analyzerPort: 1114,
+                // analyzerPort: 8888,
                 openAnalyzer: false,
             },
         },
