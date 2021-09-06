@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux'
 import Button from '../../Button'
 import { mapSelectedPromoKey } from '../../../redux/promo/selector'
 import { mapSelectedSongIndex } from '../../../redux/selected/selector'
-import { openSocialMediaPopup } from '../helper'
+import { openSocialMediaPopup } from '../../../utils/socialMedia'
 import { SOCIAL_TWITTER_BUTTON_KEY } from '../../../constants/buttons'
 import { PROMO_PAGE_SOCIAL_MEDIA } from '../../../constants/socialMedia'
 
