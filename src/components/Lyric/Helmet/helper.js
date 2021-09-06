@@ -37,7 +37,7 @@ const getTwitterConfig = songIndex => ({
     'twitter:card': getSongIsLogue(songIndex) ?
         'summary' :
         'player',
-    'twitter:site': TWITTER_ACCOUNT,
+    'twitter:site': `@${TWITTER_ACCOUNT}`,
     'twitter:title': getMetaTitle(songIndex),
     'twitter:description': getMetaDescription(songIndex),
     'twitter:image':

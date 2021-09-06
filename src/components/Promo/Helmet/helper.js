@@ -28,7 +28,7 @@ const getFacebookConfig = promoKey => ({
 
 const getTwitterConfig = promoKey => ({
     'twitter:card': 'summary',
-    'twitter:site': TWITTER_ACCOUNT,
+    'twitter:site': `@${TWITTER_ACCOUNT}`,
     'twitter:title': getMetaTitle(promoKey),
     'twitter:description': getMetaDescription(promoKey),
     'twitter:image': getUrl(`share/image/twitter/${APP_NAME}.jpg`),
