@@ -10,6 +10,7 @@ import {
 import { COMPILED } from './src/constants/server'
 
 import albumPages from './src/utils/gatsby/pages/album'
+import promoPages from './src/utils/gatsby/pages/promo'
 
 export const onCreateWebpackConfig = ({ actions }) => {
     // Dev sanity check.
@@ -49,16 +50,17 @@ export const onCreateWebpackConfig = ({ actions }) => {
 }
 
 export const createPages = ({ actions }) => {
-    albumPages.forEach(({
-        path,
-        pageSongIndex,
-    }) => {
+    albumPages.forEach(page => {
         actions.createPage({
-            path,
-            context: {
-                pageSongIndex,
-            },
+            ...page,
             component: require.resolve('./src/containers/AlbumPage/index.jsx'),
+        })
+    })
+
+    promoPages.forEach(page => {
+        actions.createPage({
+            ...page,
+            component: require.resolve('./src/containers/PromoPage/index.jsx'),
         })
     })
 }
