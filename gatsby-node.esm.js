@@ -9,6 +9,8 @@ import {
 } from './src/utils/server'
 import { COMPILED } from './src/constants/server'
 
+import albumPages from './src/utils/gatsby/pages/album'
+
 export const onCreateWebpackConfig = ({ actions }) => {
     // Dev sanity check.
     scene._build = COMPILED
@@ -43,5 +45,20 @@ export const onCreateWebpackConfig = ({ actions }) => {
                     path.resolve(__dirname, './src/data'),
             },
         },
+    })
+}
+
+export const createPages = ({ actions }) => {
+    albumPages.forEach(({
+        path,
+        pageSongIndex,
+    }) => {
+        actions.createPage({
+            path,
+            context: {
+                pageSongIndex,
+            },
+            component: require.resolve('./src/containers/AlbumPage/index.jsx'),
+        })
     })
 }
