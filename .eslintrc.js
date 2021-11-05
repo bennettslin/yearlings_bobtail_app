@@ -10,9 +10,10 @@ module.exports = {
     ],
     globals: {
         __dirname: true,
+        SCENE: true,
         ALBUM: true,
         PROMO: true,
-        SCENE: true,
+        FACE_PATHS: true,
         BUILD_DATE_TIME: true,
         IS_RUNTIME: true,
         IS_PRODUCTION: true,

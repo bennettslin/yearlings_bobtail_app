@@ -1,5 +1,6 @@
 import {
     getAlbum,
+    getFacePaths,
     getPromo,
     getScene,
 } from '../../endpoint/builds'
@@ -33,6 +34,7 @@ export const initialiseGlobalAdminObjects = () => {
         global.album = getAlbum()
         global.scene = getScene()
         global.promo = getPromo()
+        global.facePaths = getFacePaths()
         global.s = () => getSong(getStoredSongIndex())
         global.z = () => getLayersForScene(
             getStoredSongIndex(),

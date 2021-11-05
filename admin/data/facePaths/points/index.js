@@ -6,13 +6,13 @@ import {
     SIDE,
     TILE,
     BASE,
-} from '../../../../../../../constants/scene/cubes'
+} from '../../../../src/constants/scene/cubes'
 import {
     CUBE_X_AXIS_LENGTH,
     CUBE_Z_AXIS_LENGTH,
-} from '../../../../../../../constants/cubeIndex'
+} from '../../../../src/constants/cubeIndex'
 
-import { getHorizontalPlaneFractions } from '../../../../../../../helpers/cubePlanes'
+import { getHorizontalPlaneFractions } from '../../../../src/helpers/cubePlanes'
 
 const MID_X_INDEX = CUBE_X_AXIS_LENGTH / 2
 

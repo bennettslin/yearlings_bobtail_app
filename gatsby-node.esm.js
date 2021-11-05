@@ -3,6 +3,7 @@ import path from 'path'
 import scene from './admin/data/scene'
 import album from './admin/data/album'
 import promo from './admin/data/promo'
+import facePaths from './admin/data/facePaths'
 import {
     getIsRuntimeBuild,
     getIsProductionBuild,
@@ -17,6 +18,7 @@ export const onCreateWebpackConfig = ({ actions }) => {
     scene._build = COMPILED
     album._build = COMPILED
     promo._build = COMPILED
+    facePaths._build = COMPILED
 
     // Get primitive value of current date and time.
     const buildDateTime = new Date().valueOf()
@@ -30,6 +32,7 @@ export const onCreateWebpackConfig = ({ actions }) => {
                     SCENE: JSON.stringify(scene),
                     ALBUM: JSON.stringify(album),
                     PROMO: JSON.stringify(promo),
+                    FACE_PATHS: JSON.stringify(facePaths),
                 },
                 BUILD_DATE_TIME: buildDateTime,
                 IS_RUNTIME: getIsRuntimeBuild(),
