@@ -1126,12 +1126,12 @@ export default {
                             todo: true,
                             card: {
                                 description: [
-                                    `Wandering the beach, I notice a steel whistle half buried in the sand, possibly dropped by a`,
+                                    `Wandering the beach in my dream, I notice a steel whistle buried in the sand that was dropped by a`,
                                     {
                                         anchor: `lifeguard`,
                                         wiki: `Lifeguard`,
                                     },
-                                    `earlier in the day. Its shrill cry once warned of danger, but now it lies forever silent. Even in dreams, some dangers must come without warning.`,
+                                    `earlier in the day. With its shrill cry to warn of danger now forever silenced, it serves to remind me that some dangers must always come without warning.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

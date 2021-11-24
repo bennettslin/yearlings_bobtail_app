@@ -159,10 +159,9 @@ export default {
                         `if you would`,
                         {
                             anchor: `opt for bed not street`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `I was tired of working countless shifts at the cafeteria, so I decided to stop paying rent for a while by moving out after my lease ended. Instead, I would alternate between spending a few nights with Sita and crashing in the`,
+                                    `I was tired of working extra shifts just to make the rent. So after my lease ended, I would alternate between spending some nights with Sita, and others crashing in the`,
                                     {
                                         anchor: `punk house`,
                                         wiki: `Punk_house`,

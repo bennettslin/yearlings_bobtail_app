@@ -1,7 +1,7 @@
 import { REFERENCE, WORMHOLE } from '../../../../../../src/constants/dots'
 import { WIKI } from '../../../../../../src/constants/lyrics'
 
-const _addWikiWormholeDotKeyToCard = (card) => {
+const _addWikiWormholeDotKeyToCard = card => {
     const {
         description,
         wormhole,
