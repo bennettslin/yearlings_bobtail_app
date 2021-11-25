@@ -615,7 +615,7 @@ export default {
                             todo: true,
                             cards: [
                                 {
-                                    description: `The condom sits strangely motionless on the car seat, like a puppet that was so full of life just moments before. But having gotten me to a place I otherwise wouldn't have gone, it has no other use and can now be discarded at will.`,
+                                    description: `The condom sits strangely motionless on the car seat, like a puppet that was so full of life just moments before. But having brought me to a place I otherwise wouldn't have gone, it has no other use and can now be discarded at will.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
