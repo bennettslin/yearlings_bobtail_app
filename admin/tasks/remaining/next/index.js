@@ -6,10 +6,10 @@ export default [
     },
     {
         taskName: `Face fixes.`,
-        workedHours: 16,
+        workedHours: 17,
     },
     {
         taskName: `Annotation edits.`,
-        workedHours: 3,
+        workedHours: 5,
     },
 ]
