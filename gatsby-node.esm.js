@@ -4,14 +4,13 @@ import scene from './admin/data/scene'
 import album from './admin/data/album'
 import promo from './admin/data/promo'
 import facePaths from './admin/data/facePaths'
+import albumPages from './src/utils/gatsby/pages/album'
+import promoPages from './src/utils/gatsby/pages/promo'
 import {
     getIsRuntimeBuild,
     getIsProductionBuild,
 } from './src/utils/server'
 import { COMPILED } from './src/constants/server'
-
-import albumPages from './src/utils/gatsby/pages/album'
-import promoPages from './src/utils/gatsby/pages/promo'
 
 export const onCreateWebpackConfig = ({ actions }) => {
     // Dev sanity check.
