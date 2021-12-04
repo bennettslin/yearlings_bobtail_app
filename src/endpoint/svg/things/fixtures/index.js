@@ -5,6 +5,7 @@ import basementBeerCase from '../../../../assets/svgs/fixtures/basementBeerCase'
 import basementBeerMara from '../../../../assets/svgs/fixtures/basementBeerMara'
 import bassCaseUpright from '../../../../assets/svgs/fixtures/bassCaseUpright'
 import bedroomLamp from '../../../../assets/svgs/fixtures/bedroomLamp'
+import beethovenBust from '../../../../assets/svgs/fixtures/beethovenBust'
 import bennettCouchLamp from '../../../../assets/svgs/fixtures/bennettCouchLamp'
 import bennettLetters from '../../../../assets/svgs/fixtures/bennettLetters'
 import bennettRecordPlayer from '../../../../assets/svgs/fixtures/bennettRecordPlayer'
@@ -66,6 +67,7 @@ import {
     BASS_CASE_UPRIGHT,
     BEDROOM_LAMP__BED,
     BEDROOM_LAMP__DESK,
+    BEETHOVEN_BUST,
     BENNETT_COUCH_LAMP,
     BENNETT_LETTERS,
     BENNETT_RECORD_PLAYER,
@@ -136,6 +138,7 @@ export default {
     [BASS_CASE_UPRIGHT]: bassCaseUpright,
     [BEDROOM_LAMP__BED]: bedroomLamp,
     [BEDROOM_LAMP__DESK]: bedroomLamp,
+    [BEETHOVEN_BUST]: beethovenBust,
     [BENNETT_COUCH_LAMP]: bennettCouchLamp,
     [BENNETT_LETTERS]: bennettLetters,
     [BENNETT_RECORD_PLAYER]: bennettRecordPlayer,

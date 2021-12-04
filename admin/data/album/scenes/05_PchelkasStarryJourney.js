@@ -100,6 +100,7 @@ import {
     BALLED_FOIL__LOCKERS,
     BEDROOM_LAMP__BED,
     BEDROOM_LAMP__DESK,
+    BEETHOVEN_BUST,
     BENNETT_LETTERS,
     BEYONDER_ENVELOPE,
     LETTER_SCRAPS__BENNETT,
@@ -133,6 +134,9 @@ export default [
             },
             [CARDBOARD]: {
                 [POSTER_BLOOM_COUNTY]: true,
+            },
+            [FIXTURE]: {
+                [BEETHOVEN_BUST]: true,
             },
             [FURNITURE]: {
                 [CAPTAIN_BED_PILLOW]: true,
@@ -175,6 +179,7 @@ export default [
             },
             [FIXTURE]: {
                 [BEDROOM_LAMP__BED]: true,
+                [BEETHOVEN_BUST]: true,
                 [LETTER_SCRAPS__BENNETT]: true,
                 [TORN_MAGAZINES__BENNETT]: true,
                 [BENNETT_LETTERS]: true,
@@ -208,6 +213,7 @@ export default [
             },
             [FIXTURE]: {
                 [BEDROOM_LAMP__DESK]: true,
+                [BEETHOVEN_BUST]: true,
                 [RED_ENVELOPE_MONEY]: true,
             },
             [FLAT]: {
@@ -286,6 +292,7 @@ export default [
             },
             [FIXTURE]: {
                 [BEDROOM_LAMP__DESK]: true,
+                [BEETHOVEN_BUST]: true,
                 [BEYONDER_ENVELOPE]: true,
             },
             [PANEL]: {

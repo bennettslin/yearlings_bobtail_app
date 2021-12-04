@@ -1,5 +1,9 @@
 export default [
     {
+        taskName: 'beethovenBust',
+        workedHours: 1,
+    },
+    {
         taskName: 'bennettCouchLamp',
         workedHours: 0.5,
     },

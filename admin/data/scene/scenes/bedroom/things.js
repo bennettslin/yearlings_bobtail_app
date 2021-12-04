@@ -34,11 +34,12 @@ import {
     LETTER_SCRAPS__CHRISTOPHER,
     TORN_MAGAZINES__CHRISTOPHER,
     CHRISTOPHER_LETTERS,
+    BEETHOVEN_BUST,
     BEDROOM_LAMP__BED,
     BEDROOM_LAMP__DESK,
+    BENNETT_LETTERS,
     LETTER_SCRAPS__BENNETT,
     TORN_MAGAZINES__BENNETT,
-    BENNETT_LETTERS,
     RED_ENVELOPE_MONEY,
     BEYONDER_ENVELOPE,
 } from '../../../../../src/constants/scene/things/fixtures'
@@ -107,6 +108,12 @@ export default {
         },
     },
     [FIXTURE]: {
+        [BEETHOVEN_BUST]: {
+            yIndex: 3,
+            xPosition: 1.9,
+            zOffset: -0.04,
+            scaleFactor: 0.33,
+        },
         [BEDROOM_LAMP__DESK]: {
             yIndex: 2,
             xPosition: 3.6,
