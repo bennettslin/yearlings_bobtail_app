@@ -43,12 +43,12 @@
     <g class="irisDarkBrown">
       <circle cx="55.54" cy="44.25" r="3.14"/>
       <circle cx="33.55" cy="43.87" r="3.14"/>
-      <circle cx="133.64" cy="62.4" r="3.01"/>
+      <circle cx="132.85" cy="62.4" r="3.01"/>
     </g>
     <g class="pupil">
       <circle cx="55.54" cy="44.25" r="1.22"/>
       <circle cx="33.55" cy="43.87" r="1.22"/>
-      <circle cx="133.64" cy="62.4" r="1.17"/>
+      <circle cx="132.85" cy="62.4" r="1.17"/>
     </g>
   </g>
   <g class="skinEastAsian">
