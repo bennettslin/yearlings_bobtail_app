@@ -149,7 +149,7 @@ export default [
     },
     {
         taskName: 'lingerieDrawing and sketchbook actor fixtures.',
-        workedHours: 3,
+        workedHours: 4,
     },
     {
         taskName: 'basementBeerCase',
