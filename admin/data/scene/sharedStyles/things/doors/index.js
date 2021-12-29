@@ -86,6 +86,7 @@ export default {
     ],
     [BENNETT_DOOR_OUTSIDE]: [
         BENNETT_APARTMENT__SHARED,
+        BENNETT_INSIDE__SHARED,
         DOOR__SHARED,
     ],
     [BENNETT_GATE_FRONT]: [
