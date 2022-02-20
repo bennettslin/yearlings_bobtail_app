@@ -1,9 +1,11 @@
-import { getRoutingArtupIndex } from '../routing'
+import { getRoutingArtupIndex, getRoutingParetoIndex } from '../routing'
 import { getIsAlbumClientSession } from '../session'
 import { getPathForArtupSlide } from '../../../endpoint/promo/artup'
+import { getPathForParetoSlide } from '../../../endpoint/promo/pareto'
 import {
     ARTUP_SUBPATH,
     ONESHEET_SUBPATH,
+    PARETO_SUBPATH,
     PROMO_PATH,
 } from '../../../constants/routing'
 
@@ -35,6 +37,22 @@ const _getIsValidArtupPath = pathname => {
     return false
 }
 
+const _getIsValidParetoPath = pathname => {
+    const paretoPath = getPromoPath(PARETO_SUBPATH)
+    // Check if it's a valid pareto root path.
+    if (pathname === paretoPath) {
+        return true
+    }
+
+    // Check if it's a valid pareto page path.
+    const routingParetoIndex = getRoutingParetoIndex(pathname)
+    if (Number.isFinite(routingParetoIndex)) {
+        return pathname === `${paretoPath}/${routingParetoIndex}-${getPathForParetoSlide(routingParetoIndex)}`
+    }
+
+    return false
+}
+
 export const getIsPromoPage = pathname => (
     /**
      * Ensure that we are not in a promo popup, since it will also show a
@@ -43,6 +61,7 @@ export const getIsPromoPage = pathname => (
     !getIsAlbumClientSession() && (
         _getIsValidPromoHomepagePath(pathname) ||
         _getIsValidOnesheetPath(pathname) ||
-        _getIsValidArtupPath(pathname)
+        _getIsValidArtupPath(pathname) ||
+        _getIsValidParetoPath(pathname)
     )
 )

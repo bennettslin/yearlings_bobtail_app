@@ -1,9 +1,10 @@
 import { navigate } from 'gatsby'
 import { getPathForArtupSlide } from '../endpoint/promo/artup'
+import { getPathForParetoSlide } from '../endpoint/promo/pareto'
 import { getWindow } from '../utils/browser'
 import { getPromoPath } from '../utils/gatsby/promo'
 import { getSongUrlPath } from './url'
-import { ARTUP_SUBPATH } from '../constants/routing'
+import { ARTUP_SUBPATH, PARETO_SUBPATH } from '../constants/routing'
 
 export const reloadFromRoot = () => {
     /**
@@ -37,6 +38,20 @@ export const navigateToArtupPage = artupSlideIndex => {
             artupSlideIndex
         }-${
             getPathForArtupSlide(artupSlideIndex)
+        }`,
+        // Replace, not push, in history.
+        { replace: true },
+    )
+}
+
+export const navigateToParetoPage = paretoSlideIndex => {
+    navigate(
+        `/${
+            getPromoPath(PARETO_SUBPATH)
+        }/${
+            paretoSlideIndex
+        }-${
+            getPathForParetoSlide(paretoSlideIndex)
         }`,
         // Replace, not push, in history.
         { replace: true },

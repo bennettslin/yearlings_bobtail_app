@@ -3,6 +3,7 @@ import { CONTACT_TEXT } from '../../../../src/constants/contact'
 import {
     ARTUP_SUBPATH,
     ONESHEET_SUBPATH,
+    PARETO_SUBPATH,
 } from '../../../../src/constants/routing'
 
 export default getFormattedSlideMetadata({
@@ -21,6 +22,11 @@ export default getFormattedSlideMetadata({
         {
             entry: {
                 promoKey: ARTUP_SUBPATH,
+            },
+        },
+        {
+            entry: {
+                promoKey: PARETO_SUBPATH,
             },
         },
         {

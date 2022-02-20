@@ -2,6 +2,7 @@ import directory from './directory'
 import homepage from './homepage'
 import onesheet from './onesheet'
 import artup from './artup'
+import pareto from './pareto'
 import { RUNTIME } from '../../../src/constants/server'
 
 export default {
@@ -10,4 +11,5 @@ export default {
     homepage,
     onesheet,
     artup,
+    pareto,
 }

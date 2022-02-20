@@ -5,6 +5,7 @@ import Promo from '../../components/Promo'
 const PromoPage = ({
     pageContext: {
         pageArtupIndex = 1,
+        pageParetoIndex = 1,
         pagePromoKey,
     } = {},
 }) => (
@@ -12,6 +13,7 @@ const PromoPage = ({
         isPromoPage
         {...{
             pageArtupIndex,
+            pageParetoIndex,
             pagePromoKey,
         }}
     />
@@ -20,6 +22,7 @@ const PromoPage = ({
 PromoPage.propTypes = {
     pageContext: PropTypes.shape({
         pageArtupIndex: PropTypes.number,
+        pageParetoIndex: PropTypes.number,
         pagePromoKey: PropTypes.string,
     }),
 }

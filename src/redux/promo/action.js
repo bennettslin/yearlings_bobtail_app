@@ -6,6 +6,11 @@ export const setArtupSlideIndex = (artupSlideIndex = 0) => ({
     payload: { artupSlideIndex },
 })
 
+export const setParetoSlideIndex = (paretoSlideIndex = 0) => ({
+    type: PROMO_STORE,
+    payload: { paretoSlideIndex },
+})
+
 export const setSelectedPromoKey = (selectedPromoKey = '') => ({
     type: PROMO_STORE,
     payload: { selectedPromoKey },

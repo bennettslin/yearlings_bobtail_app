@@ -6,6 +6,7 @@ export const ANNOTATION_QUERY_INITIAL = 'a'
 export const PROMO_PATH = 'promo'
 export const ONESHEET_SUBPATH = 'onesheet'
 export const ARTUP_SUBPATH = 'artup'
+export const PARETO_SUBPATH = 'pareto'
 
 export const VALID_ADMIN_PATHS = {
     actors: true,

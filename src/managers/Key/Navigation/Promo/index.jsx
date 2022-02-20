@@ -1,6 +1,7 @@
 import React, { forwardRef, useImperativeHandle, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import ArtupDispatcher from '../../../../dispatchers/Artup'
+import ParetoDispatcher from '../../../../dispatchers/Pareto'
 import { mapSelectedPromoKey } from '../../../../redux/promo/selector'
 import {
     ARROW_LEFT,
@@ -9,6 +10,7 @@ import {
 } from '../../../../constants/access'
 import {
     getIsArtupPage,
+    getIsParetoPage,
     getIsPromoHomepage,
 } from '../../../../helpers/promo'
 import { setSelectedPromoKey } from '../../../../redux/promo/action'
@@ -17,11 +19,14 @@ const PromoNavigation = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
         dispatchArtup = useRef(),
+        dispatchPareto = useRef(),
         selectedPromoKey = useSelector(mapSelectedPromoKey)
 
     const getDispatcher = () => {
         if (getIsArtupPage(selectedPromoKey)) {
             return dispatchArtup
+        } else if (getIsParetoPage(selectedPromoKey)) {
+            return dispatchPareto
         }
     }
 
@@ -67,6 +72,7 @@ const PromoNavigation = forwardRef((props, ref) => {
     return (
         <>
             <ArtupDispatcher {...{ ref: dispatchArtup }} />
+            <ParetoDispatcher {...{ ref: dispatchPareto }} />
         </>
     )
 })
