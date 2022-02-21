@@ -21,12 +21,12 @@ export default getFormattedSlideMetadata({
         },
         {
             entry: {
-                promoKey: ARTUP_SUBPATH,
+                promoKey: PARETO_SUBPATH,
             },
         },
         {
             entry: {
-                promoKey: PARETO_SUBPATH,
+                promoKey: ARTUP_SUBPATH,
             },
         },
         {

@@ -49,7 +49,7 @@ export default getFormattedSlideMetadata({
                     anchor: `Constellations!`,
                     songIndex: 10,
                 },
-                `"). There's even a literary device that Bennett invented called doublespeaker rhyme, in which two sets of lyrics that rhyme syllable for syllable are panned hard into opposite speakers to create a musical split screen ("`,
+                `"). There's even a literary device he invented called doublespeaker rhyme, in which two sets of lyrics that rhyme syllable for syllable are panned hard into opposite speakers to create a musical split screen ("`,
                 {
                     anchor: `Odin`,
                     songIndex: 4,
