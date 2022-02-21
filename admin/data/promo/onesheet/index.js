@@ -103,7 +103,7 @@ export default getFormattedSlideMetadata({
             ],
         },
         {
-            paragraph: `But Bennett believed his forecast wasn't wrong, just premature. To bide his time, he learned music composition, web development, and illustration. Using these skills, he built an audio webcomic that presents the album's story as a theatrical play with illustrated characters. Annotations offer background context, while music scores offer insight into how the songs were written.`,
+            paragraph: `But Bennett believed his forecast wasn't wrong, just premature. To bide his time, he learned music composition, web development, and illustration. Using these creative skills, he built an audio webcomic that presents the album's story as a theatrical play with illustrated characters. Annotations offer background context, while music scores offer insight into how the songs were written.`,
         },
         {
             paragraph: `Was Bennett right that a demo renaissance is inevitable? After all, past artists made demos, and their music is killing ours. Coincidence? Maybe not. A demo's audience hears it for what it can be in the future. This doesn't just free an artist to take creative risks; it stirs the very thought to do so. Had Bennett known he'd need to win over the public without label support, the idea for doublespeaker rhyme never would have come to him.`,
