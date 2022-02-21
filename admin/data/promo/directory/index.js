@@ -19,7 +19,7 @@ export default {
         description: `Some artists are like stores, while others are like startups.`,
     },
     [PARETO_SUBPATH]: {
-        title: `Pareto Package Deal`,
-        description: `What you'll get from signing the Bobtail Yearlings.`,
+        title: `A Pareto Package Deal`,
+        description: `What you'll get when you sign the Bobtail Yearlings.`,
     },
 }
