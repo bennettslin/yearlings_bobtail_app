@@ -17,7 +17,7 @@ export default getFormattedSlideMetadata({
             },
         },
         {
-            title: 'Presentations',
+            title: 'Pitch presentations',
         },
         {
             entry: {

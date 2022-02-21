@@ -3,38 +3,38 @@ import { getFormattedSlideMetadata } from '../helpers/slide'
 export default getFormattedSlideMetadata({
     body: [
         {
+            paragraph: `Old music is killing new music, and it's not hard to see why. The current system for nurturing artists is badly in need of reform. The problem is, summoning the courage to reform is hard. We won't do it until we catch the system betting on the wrong horses. And in today's artist-friendly culture, no artist will ever be seen as the wrong horse.`,
+        },
+        {
             paragraph: [
-                `Can a rock album win the Pulitzer Prize? It might seem unlikely. To earn popular approval and critical acclaim, rock artists often aim for subjective qualities that don't intrigue literary scholars and musicologists the way hip hop does. But what if rock music can just as readily appeal to everyone by meriting academic study? The Bobtail Yearlings accept this challenge! And to have us hold them to it, they promise to win a Pulitzer for rock music in their lifetime. With that said, they now present`,
+                `But there's hope! Courage to reform can also come if we catch the system betting against the`,
+                {
+                    isEmphasis: true,
+                    lyric: `right`,
+                },
+                `horses. This happens rarely, of course, since we don't hear about rejected artists. Yet against all odds, we're now hearing about the Bobtail Yearlings. The system bet against them a decade ago. What if they were the right horse?`,
+            ],
+        },
+        {
+            paragraph: `Early this century as home recording became affordable, Bobtail Yearlings singer Bennett Lin foresaw a coming renaissance. Any artist could now take pains to make a demo so good, no indie label could refuse it. And all these artists would raise creative standards to new heights. So he decided to spend five years making a demo album so innovative, it would change our understanding of what music can be.`,
+        },
+        {
+            paragraph: [
                 {
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
                 },
-                `, an ambitious multimedia project that combines a double album with an audio webcomic.`,
+                `is Bennett's autobiographical tale of an artistically inclined Asian boy from Los Angeles whose autistic brother and first crush on a Jewish girl cause him to question his Buddhist upbringing. Bullied at school, he finds solace in a mail-order cult and shuts his feelings away. Years later, he embarks on a five-year plan for self-improvement to win the hand of his first love, who brings him into her Hindu faith. But as his band gets popular in the local scene, he boosts his ego by seeking out other women, leading to heartbreak and loss.`,
             ],
         },
         {
             paragraph: [
-                `Written and recorded by front person Bennett Lin,`,
-                {
-                    isItalic: true,
-                    lyric: `Yearling's Bobtail`,
-                },
-                `tells the autobiographical tale of an artistic Asian boy growing up in Los Angeles, whose autistic brother and first crush on a Jewish girl force him to question his Buddhist upbringing. Bullied at school, he finds solace in a mail-order cult that instructs him to shut his feelings away. Years later, he embarks on a five-year plan for self-improvement that ultimately wins the hand of his first love, who brings him into her Hindu faith. But as his band gains exposure in the local scene, he bolsters his ego by seeking affection from other women, leading to heartbreak and loss.`,
-            ],
-        },
-        {
-            paragraph: [
-                `Born from Bennett's vision to create "The`,
+                `In line with Bennett's vision to create "The`,
                 {
                     isItalic: true,
                     lyric: `Ulysses`,
                 },
-                `of Rock Albums,"`,
-                {
-                    isItalic: true,
-                    lyric: `Yearling's Bobtail`,
-                },
-                `follows in the footsteps of modernist writer James Joyce, with lyrics employing stream of consciousness ("`,
+                `of Rock Albums," the lyrics experiment with stream of consciousness ("`,
                 {
                     anchor: `Good Night, Sita`,
                     songIndex: 8,
@@ -49,17 +49,17 @@ export default getFormattedSlideMetadata({
                     anchor: `Constellations!`,
                     songIndex: 10,
                 },
-                `"). It even uses a literary device of Bennett's own invention called doublespeaker rhyme, in which two sets of lyrics that rhyme syllable for syllable are panned hard to separate speakers ("`,
+                `"). There's even a literary device that Bennett invented called doublespeaker rhyme, in which two sets of lyrics that rhyme syllable for syllable are panned hard into opposite speakers to create a musical split screen ("`,
                 {
                     anchor: `Odin`,
                     songIndex: 4,
                 },
-                `"), creating the musical version of a cinematic split screen.`,
+                `").`,
             ],
         },
         {
             paragraph: [
-                `Inspired by such classic rock albums as`,
+                `Inspired by`,
                 {
                     isItalic: true,
                     lyric: `Pet Sounds`,
@@ -69,30 +69,20 @@ export default getFormattedSlideMetadata({
                     isItalic: true,
                     lyric: `Village Green Preservation Society`,
                 },
-                `,`,
-                {
-                    isItalic: true,
-                    lyric: `Yearling's Bobtail`,
-                },
-                `serves up memorable pop tunes with folk instruments arranged in intricate counterpoint. The music is a hodgepodge of styles, from Tuvan throatsinging ("`,
+                `, the album serves up pop melodies with folk instruments arranged in counterpoint. The styles range from Tuvan throatsinging ("`,
                 {
                     anchor: `Pchelka's Starry Journey`,
                     songIndex: 5,
                 },
-                `") and Arabic quarter tones ("`,
+                `") to Arabic quarter tones ("`,
                 {
                     anchor: `Ash Wednesday`,
                     songIndex: 6,
                 },
-                `") to Irish reel ("`,
+                `") and Irish reel ("`,
                 {
                     anchor: `Garryowen`,
                     songIndex: 12,
-                },
-                `") and honky tonk ("`,
-                {
-                    anchor: `On a Golden Cord`,
-                    songIndex: 13,
                 },
                 `"). It also includes Shepard tones ("`,
                 {
@@ -104,39 +94,22 @@ export default getFormattedSlideMetadata({
         },
         {
             paragraph: [
-                `The album was completed a decade ago but never released. Back then, the indie labels were most eager to sign artists who`,
-                {
-                    isEmphasis: true,
-                    lyric: `didn't`,
-                },
-                `need them— but the Bobtail Yearlings need a label as much as they hope to be needed back. Still, by being overlooked, they became the control group in a fascinating experiment that can only happen by freak occurrence. What does it sound like if a band continues to seek innovation in songcraft while others have moved on to finding it in technology— only to then never be heard and thus influence no one? At once otherworldly and uncannily familiar,`,
+                `Bennett assumed that creative standards would change because barriers to entry stay fixed. But the system saw it the other way around. With these barriers now lowered, other artists began to release fully complete works on their own, winning over the public directly. And so`,
                 {
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
                 },
-                `traces a lineage but belongs to no time, offering us a rare glimpse down a historical road not taken.`,
+                `was refused by all the indie labels. It no longer made sense to bet on an unproven demo.`,
             ],
         },
         {
-            paragraph: `To bide his time during indie rock's era of peak influence, Bennett learned new creative skills such as music composition, web development, and illustration. This allowed him to build the audio webcomic, which presents the album's story as a theatrical play, with illustrated characters and stage props that enter and exit as the music progresses. Annotations offer background context for the lyrics, and links to Wikipedia explain obscure references. Meanwhile, full music scores offer insight into how each song was written.`,
+            paragraph: `But Bennett believed his forecast wasn't wrong, just premature. To bide his time, he learned music composition, web development, and illustration. Using these skills, he built an audio webcomic that presents the album's story as a theatrical play with illustrated characters. Annotations offer background context, while music scores offer insight into how the songs were written.`,
         },
         {
-            paragraph: [
-                `Thanks to Donald Trump's failed presidency, fewer of us accept the standard indie rock wisdom that winning over live crowds and gaining followers is the best signal of future potential, or that willful naivete should always triumph over talent accrued from lifelong ambition. Perhaps it's now time to reconsider`,
-                {
-                    isEmphasis: true,
-                    lyric: `all`,
-                },
-                `our inherited beliefs. For example, by asking artists to do the work of the labels themselves, indie rock built redundancy into its system. But doesn't this make the whole less than the sum of its parts? What if the next generation's gift to rock music will be its rediscovery of interdependence— allowing the whole to be`,
-                {
-                    isEmphasis: true,
-                    lyric: `greater`,
-                },
-                `?`,
-            ],
+            paragraph: `Was Bennett right that a demo renaissance is inevitable? After all, past artists made demos, and their music is killing ours. Coincidence? Maybe not. A demo's audience hears it for what it can be in the future. This doesn't just free an artist to take creative risks; it stirs the very thought to do so. Had Bennett known he'd need to win over the public without label support, the idea for doublespeaker rhyme never would have come to him.`,
         },
         {
-            paragraph: `After all, hip hop never lost its interdependence to begin with. And what better genre to follow if we hope for a rock album— by the Bobtail Yearlings or anyone else— to someday win the Pulitzer!`,
+            paragraph: `The current system rests on the belief that when the next artist comes along to change what music can be, the public will lead, and the labels will follow. After two decades, this has yet to happen. What if it's actually the other way around?`,
         },
     ],
 })

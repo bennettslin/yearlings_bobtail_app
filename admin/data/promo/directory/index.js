@@ -12,14 +12,14 @@ export default {
     },
     [ONESHEET_SUBPATH]: {
         title: `Onesheet`,
-        description: `Artist biography and project overview. Plus, a Pulitzer promise!`,
+        description: `Artist biography and project overview.`,
     },
     [ARTUP_SUBPATH]: {
         title: `Invest in Artups`,
-        description: `What if indie artists are like stores, while other artists are like startups?`,
+        description: `Some artists are like stores, while others are like startups.`,
     },
     [PARETO_SUBPATH]: {
-        title: `Placeholder Title`,
-        description: `Placeholder description.`,
+        title: `Pareto Package Deal`,
+        description: `What you'll get from signing the Bobtail Yearlings.`,
     },
 }
