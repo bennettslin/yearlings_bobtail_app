@@ -395,7 +395,7 @@ export default {
                                         anchor: `guaifenesin`,
                                         wiki: `Guaifenesin`,
                                     },
-                                    `, which is an expectorant. So we "upraise" our "quaffs" to "appraise" them, looking specifically for the medicinal property of keeping "coughs suppressed."`,
+                                    `, which is an expectorant. So we "upraise" our "quaffs" to "appraise" them, looking specifically for the medicinal property that keeps "coughs suppressed."`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -408,7 +408,7 @@ export default {
                             anchor: `boundless Kalevalley ends`,
                             cards: [
                                 {
-                                    description: `The San Fernando Valley, which I hated in my youth, is the quintessential "Cali valley." The days before I hightailed it out of that sprawling wasteland were painfully endless. On this summer break back home, however, the magic of Robitussin renders escape instantaneous.`,
+                                    description: `The San Fernando Valley, which I hated in my youth, is the quintessential "Cali valley." The days until I could leave that sprawling wasteland felt endless. On this summer break back home, however, the magic of Robitussin renders escape instantaneous.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true,

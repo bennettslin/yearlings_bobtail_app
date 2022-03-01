@@ -3,7 +3,7 @@ import {
     getTitleForPromo,
 } from '../../../../endpoint/promo'
 
-export const getEntryRichText = ({ promoKey }) => ([
+export const getEntryRichText = promoKey => [
     [
         {
             anchor: getTitleForPromo(promoKey),
@@ -11,4 +11,4 @@ export const getEntryRichText = ({ promoKey }) => ([
         },
         `: ${getDescriptionForPromo(promoKey)}`,
     ],
-])
+]

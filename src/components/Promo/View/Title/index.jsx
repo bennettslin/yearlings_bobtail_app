@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import Texts from '../../../Texts'
-import './style'
 
 const PromoViewTitle = ({ title }) => Boolean(title) && (
     <div

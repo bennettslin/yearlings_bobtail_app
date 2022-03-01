@@ -1,0 +1,11 @@
+@import '../../../../scss/constants/icon';
+
+.PromoViewSection {
+    display: flex;
+    flex-direction: column;
+
+    // For footnotes.
+    &:not(:last-child) {
+        margin-bottom: $margin__thick * 2;
+    }
+}

@@ -3,7 +3,7 @@ import { getFormattedSlideMetadata } from '../helpers/slide'
 export default getFormattedSlideMetadata({
     body: [
         {
-            paragraph: `Old music is killing new music, and it's not hard to see why. The current system for nurturing artists is badly in need of reform. The problem is, summoning the courage to reform is hard. We won't do it until we catch the system betting on the wrong horses. And in today's artist-friendly culture, no artist will ever be seen as the wrong horse.`,
+            paragraph: `Old music is killing new music, and it's not hard to see why. The current system for nurturing artists is badly in need of reform. The problem is, summoning the courage to reform is hard. We won't do it unless we catch the system betting on the wrong horses. And in today's artist-friendly culture, no artist will ever be seen as the wrong horse.`,
         },
         {
             paragraph: [
@@ -106,7 +106,7 @@ export default getFormattedSlideMetadata({
             paragraph: `But Bennett insisted his forecast wasn't wrong, just premature. To bide his time, he learned music composition, web development, and illustration. Using these creative skills, he built an audio webcomic that presents the album's story as a theatrical play with illustrated characters. Annotations offer background context, while music scores offer insight into how the songs were written.`,
         },
         {
-            paragraph: `So… was Bennett right? Is a demo renaissance inevitable? After all, past artists made demos, and their music is killing ours. Coincidence? Maybe not. A demo's audience hears it for what it can be in the future. This doesn't just free an artist to take creative risks; it awakens the thought to do so. Had Bennett known he'd need to win over the public without label support, the idea for doublespeaker rhyme never would have come to him.`,
+            paragraph: `So was Bennett right? Is a demo renaissance inevitable? Past artists made demos, after all, and their music is killing ours. Coincidence? Maybe not. A demo's audience agrees to hear it for what it can be in the future. This doesn't just free an artist to take creative risks; it awakens the very thought to do so. Had Bennett known he'd be judged on his ability to win over the public without label support, the idea for doublespeaker rhyme never would have come to him.`,
         },
         {
             paragraph: `The current system rests on the belief that when the next artist comes along to change what music can be, the public will lead, and the labels will follow. After two decades, this has yet to happen. What if it's actually the other way around?`,

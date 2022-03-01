@@ -1,9 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import PromoViewContent from './Content'
-import PromoViewParagraph from './Paragraph'
+import PromoViewSection from './Section'
 import PromoViewTitle from './Title'
-import PromoViewEntry from './Entry'
 import ShareButtons from '../../ShareButtons'
 import { PROMO_PAGE_SOCIAL_MEDIA } from '../../../constants/socialMedia'
 
@@ -14,48 +13,29 @@ const PromoView = ({
 }) => (
     <PromoViewContent {...{ footnote }}>
         <PromoViewTitle {...{ title }} />
-        {body.map((entity, index) => {
-            if (entity.paragraph) {
-                return (
-                    <PromoViewParagraph
-                        {...{
-                            key: index,
-                            paragraph: entity.paragraph,
-                        }}
-                    />
-                )
-
-            } else if (entity.title) {
-                return (
-                    <PromoViewTitle
-                        {...{
-                            key: index,
-                            title: entity.title,
-                        }}
-                    />
-                )
-
-            } else if (entity.entry) {
-                return (
-                    <PromoViewEntry
-                        {...{
-                            key: index,
-                            entry: entity.entry,
-                        }}
-                    />
-                )
-
-            } else {
-                return null
-            }
-        })}
+        {body.map((section, index) => (
+            <PromoViewSection {...{ key: index, ...section }} />
+        ))}
         <ShareButtons {...{ id: PROMO_PAGE_SOCIAL_MEDIA }} />
     </PromoViewContent>
 )
 
 PromoView.propTypes = {
     title: PropTypes.string,
-    body: PropTypes.array.isRequired,
+    body: PropTypes.arrayOf(
+        PropTypes.oneOfType([
+            PropTypes.shape({
+                title: PropTypes.string,
+                promoKeys: PropTypes.arrayOf(
+                    PropTypes.string.isRequired,
+                ),
+                paragraph: PropTypes.oneOfType([
+                    PropTypes.array,
+                    PropTypes.string,
+                ]),
+            }),
+        ]),
+    ).isRequired,
     footnote: PropTypes.oneOfType([
         PropTypes.array,
         PropTypes.string,

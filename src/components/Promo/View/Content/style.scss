@@ -1,4 +1,3 @@
-@import '../../../../scss/constants/colour';
 @import '../../../../scss/constants/icon';
 
 .PromoViewContent {
@@ -9,6 +8,7 @@
     flex-direction: column;
     justify-content: space-between;
 
+    // For footnotes.
     & > :not(:last-child) {
         margin-bottom: $margin__thick * 3;
     }

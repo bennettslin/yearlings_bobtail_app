@@ -20,6 +20,6 @@ export default {
     },
     [PARETO_SUBPATH]: {
         title: `A Pareto Package Deal`,
-        description: `What you'll get when you sign the Bobtail Yearlings.`,
+        description: `What your label gets by signing the Bobtail Yearlings.`,
     },
 }

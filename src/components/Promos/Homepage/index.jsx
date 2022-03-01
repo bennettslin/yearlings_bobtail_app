@@ -10,12 +10,7 @@ const HomepagePromo = ({ handlePromoPageChange }) => {
     }, [])
 
     return (
-        <PromoView
-            {...{
-                body: getBodyForHomepage(),
-            }}
-        >
-        </PromoView>
+        <PromoView {...{ body: getBodyForHomepage() }} />
     )
 }
 

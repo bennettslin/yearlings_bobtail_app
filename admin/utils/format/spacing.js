@@ -9,7 +9,6 @@ import {
 import { hasSpecialCharacterAtIndex } from '../../../src/helpers/format'
 
 const ARRAY_KEYS = {
-    body: true,
     footnote: true,
     description: true,
     list: true,

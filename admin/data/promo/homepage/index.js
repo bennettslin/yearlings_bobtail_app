@@ -7,33 +7,23 @@ import {
 } from '../../../../src/constants/routing'
 
 export default getFormattedSlideMetadata({
-    body: ([
+    body: [
         {
             title: 'Press material',
-        },
-        {
-            entry: {
-                promoKey: ONESHEET_SUBPATH,
-            },
+            promoKeys: [
+                ONESHEET_SUBPATH,
+            ],
         },
         {
             title: 'Pitch presentations',
-        },
-        {
-            entry: {
-                promoKey: PARETO_SUBPATH,
-            },
-        },
-        {
-            entry: {
-                promoKey: ARTUP_SUBPATH,
-            },
+            promoKeys: [
+                PARETO_SUBPATH,
+                ARTUP_SUBPATH,
+            ],
         },
         {
             title: 'Contact us',
-        },
-        {
             paragraph: CONTACT_TEXT,
         },
-    ]),
+    ],
 })
