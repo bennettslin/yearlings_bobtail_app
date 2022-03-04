@@ -2,11 +2,17 @@ import qs from 'qs'
 import { getWindow } from '../../browser'
 
 export const getIndexFromPath = ({ pathname, rootPath }) => (
-    parseInt(
-        pathname
-            .replace(rootPath ? `${rootPath}/` : '', '')
-            .split('-')[0],
-    )
+    /**
+     * If it's an album page, it won't have a root path. If it's a promo page,
+     * make sure we set the index only for that promo page.
+     */
+    !rootPath || pathname.includes(rootPath) ?
+        parseInt(
+            pathname
+                .replace(rootPath ? `${rootPath}/` : '', '')
+                .split('-')[0],
+        ) :
+        NaN
 )
 
 export const getIndexFromQueryString = (search, keys) => (
