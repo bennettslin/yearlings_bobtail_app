@@ -61,6 +61,7 @@ import {
     CONDOM_MIRIAM,
     CONDOM_WRAPPER_MIRIAM,
     FREEWAY_SIGN,
+    HAWAIIAN_DOLL,
     HOSPITAL_RECORD_PLAYER,
     TENNIS_BALL,
 } from '../../../../src/constants/scene/things/fixtures'
@@ -105,6 +106,7 @@ export default [
             },
             [FIXTURE]: {
                 [FREEWAY_SIGN]: true,
+                [HAWAIIAN_DOLL]: true,
             },
             [FLAT]: {
                 [EL_CERRITO_FAR]: true,
@@ -140,6 +142,7 @@ export default [
             [FIXTURE]: {
                 [CONDOM_WRAPPER_MIRIAM]: true,
                 [FREEWAY_SIGN]: true,
+                [HAWAIIAN_DOLL]: true,
             },
             [FLAT]: {
                 [EL_CERRITO_FAR]: true,
@@ -175,6 +178,7 @@ export default [
             [FIXTURE]: {
                 [CONDOM_WRAPPER_MIRIAM]: true,
                 [FREEWAY_SIGN]: true,
+                [HAWAIIAN_DOLL]: true,
             },
             [FLAT]: {
                 [EL_CERRITO_FAR]: true,
@@ -302,6 +306,7 @@ export default [
             [FIXTURE]: {
                 [CONDOM_WRAPPER_MIRIAM]: true,
                 [FREEWAY_SIGN]: true,
+                [HAWAIIAN_DOLL]: true,
             },
             [FLAT]: {
                 [EL_CERRITO_FAR]: true,

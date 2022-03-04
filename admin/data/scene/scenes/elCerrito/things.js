@@ -10,6 +10,7 @@ import {
     FREEWAY_SIGN,
     CONDOM_MIRIAM,
     CONDOM_WRAPPER_MIRIAM,
+    HAWAIIAN_DOLL,
 } from '../../../../../src/constants/scene/things/fixtures'
 import {
     EL_CERRITO_FAR,
@@ -47,6 +48,11 @@ export default {
             yIndex: 5,
             xPosition: 1.25,
             zOffset: 0.11,
+        },
+        [HAWAIIAN_DOLL]: {
+            yIndex: 4,
+            xPosition: 4.15,
+            zOffset: 1.7,
         },
     },
     [FLAT]: {

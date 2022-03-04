@@ -31,6 +31,7 @@ import guitarCaseOpen from '../../../../assets/svgs/fixtures/guitarCaseOpen'
 import guitarCaseUpright from '../../../../assets/svgs/fixtures/guitarCaseUpright'
 import haircutScissors from '../../../../assets/svgs/fixtures/haircutScissors'
 import hospitalRecordPlayer from '../../../../assets/svgs/fixtures/hospitalRecordPlayer'
+import hawaiianDoll from '../../../../assets/svgs/fixtures/hawaiianDoll'
 import keyboard from '../../../../assets/svgs/fixtures/keyboard'
 import kickDrum from '../../../../assets/svgs/fixtures/kickDrum'
 import letterScraps from '../../../../assets/svgs/fixtures/letterScraps'
@@ -95,6 +96,7 @@ import {
     GUITAR_CASE_OPEN,
     GUITAR_CASE_UPRIGHT,
     HAIRCUT_SCISSORS,
+    HAWAIIAN_DOLL,
     HOSPITAL_RECORD_PLAYER,
     KEYBOARD,
     KICK_DRUM,
@@ -166,6 +168,7 @@ export default {
     [GUITAR_CASE_OPEN]: guitarCaseOpen,
     [GUITAR_CASE_UPRIGHT]: guitarCaseUpright,
     [HAIRCUT_SCISSORS]: haircutScissors,
+    [HAWAIIAN_DOLL]: hawaiianDoll,
     [HOSPITAL_RECORD_PLAYER]: hospitalRecordPlayer,
     [KEYBOARD]: keyboard,
     [KICK_DRUM]: kickDrum,
