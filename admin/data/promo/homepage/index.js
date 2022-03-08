@@ -3,7 +3,7 @@ import { CONTACT_TEXT } from '../../../../src/constants/contact'
 import {
     ARTUP_SUBPATH,
     ONESHEET_SUBPATH,
-    PARETO_SUBPATH,
+    // PARETO_SUBPATH,
 } from '../../../../src/constants/routing'
 
 export default getFormattedSlideMetadata({
@@ -17,7 +17,7 @@ export default getFormattedSlideMetadata({
         {
             title: 'Pitch presentations',
             promoKeys: [
-                PARETO_SUBPATH,
+                // PARETO_SUBPATH,
                 ARTUP_SUBPATH,
             ],
         },
