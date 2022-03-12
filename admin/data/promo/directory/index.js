@@ -1,3 +1,4 @@
+import { getFormattedSlideMetadata } from '../helpers/slide'
 import {
     ARTUP_SUBPATH,
     ONESHEET_SUBPATH,
@@ -10,10 +11,18 @@ export default {
         title: `Promo Homepage`,
         description: `Promo content for the Bobtail Yearlings album Yearling's Bobtail.`,
     },
-    [ONESHEET_SUBPATH]: {
-        title: `Onesheet`,
-        description: `Artist biography and project overview.`,
-    },
+    [ONESHEET_SUBPATH]: getFormattedSlideMetadata({
+        title: [
+            `The`,
+            {
+                isItalic: true,
+                lyric: `Ulysses`,
+            },
+            `of Rock Albums`,
+        ],
+        plainTitle: `The Ulysses of Rock Albums`,
+        description: `Artist and project onesheet.`,
+    }),
     [ARTUP_SUBPATH]: {
         title: `Invest in Artups`,
         description: `Some artists are like stores, while others are like startups.`,

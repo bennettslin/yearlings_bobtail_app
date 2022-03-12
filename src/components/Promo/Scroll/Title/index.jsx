@@ -20,7 +20,7 @@ const PromoScrollTitle = ({ title }) => (
 )
 
 PromoScrollTitle.propTypes = {
-    title: PropTypes.string.isRequired,
+    title: PropTypes.any.isRequired,
 }
 
 export default PromoScrollTitle

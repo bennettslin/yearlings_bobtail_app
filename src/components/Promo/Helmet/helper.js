@@ -7,7 +7,7 @@ import { TWITTER_ACCOUNT } from '../../../constants/socialMedia'
 import { APP_NAME } from '../../../utils/server'
 
 export const getMetaTitle = promoKey => (
-    `${getTitleForPromo(promoKey)} | ${getTitleForAlbum()}`
+    `${getTitleForPromo(promoKey, true)} | ${getTitleForAlbum()}`
 )
 
 export const getMetaDescription = promoKey => (

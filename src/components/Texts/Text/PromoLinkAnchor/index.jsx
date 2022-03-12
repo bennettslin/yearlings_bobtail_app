@@ -28,7 +28,7 @@ const PromoLinkAnchor = ({
 }
 
 PromoLinkAnchor.propTypes = {
-    text: PropTypes.string.isRequired,
+    text: PropTypes.any.isRequired,
     promoKey: PropTypes.string.isRequired,
 }
 
