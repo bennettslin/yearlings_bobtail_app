@@ -17,17 +17,17 @@ export default getFormattedSlideMetadata({
         },
         {
             paragraph: [
-                `Early this century as home recording became affordable, Bobtail Yearlings singer Bennett Lin foresaw a coming renaissance. Any artist could now take pains to make a demo so good, no indie label could refuse it. Each such attempt would then raise creative standards to new heights. And so, having just read James Joyce's`,
+                `Early this century as home recording became affordable, Bobtail Yearlings singer Bennett Lin foresaw a coming renaissance. Any artist could now take pains to put out a demo so good, no indie label could refuse it. Creative standards would soon rise to new heights. So as he read James Joyce's`,
                 {
                     isItalic: true,
                     lyric: `Ulysses`,
                 },
-                `, he was inspired to make "The`,
+                `, it dawned on him to make his demo "The`,
                 {
                     isItalic: true,
                     lyric: `Ulysses`,
                 },
-                `of Rock Albums"— an album so innovative, it would change our understanding of what music can be.`,
+                `of Rock Albums"— an album so innovative, it would change what music can be.`,
             ],
         },
         {
@@ -60,6 +60,16 @@ export default getFormattedSlideMetadata({
                 {
                     anchor: `Odin`,
                     songIndex: 4,
+                },
+                `," "`,
+                {
+                    anchor: `On a Golden Cord`,
+                    songIndex: 13,
+                },
+                `," "`,
+                {
+                    anchor: `Cremated`,
+                    songIndex: 16,
                 },
                 `").`,
             ],
@@ -101,16 +111,16 @@ export default getFormattedSlideMetadata({
         },
         {
             paragraph: [
-                `Bennett assumed that creative standards would change because barriers to entry must stay fixed. But the system saw it the other way around. With these barriers lowered, other artists were now releasing fully realized works on their own and winning over the public directly. As such, upon its completion five years later,`,
+                `Bennett assumed that creative standards would change because barriers to entry stay fixed. But the system saw it the other way around and lowered the barriers instead. Artists could now self-release fully realized works and win over the public directly. So upon its completion five years later,`,
                 {
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
                 },
-                `was refused by all the indie labels. It no longer made sense to bet on an unproven demo.`,
+                `was refused by all the indie labels. It no longer made sense to bet on a demo.`,
             ],
         },
         {
-            paragraph: `But Bennett insisted his forecast wasn't wrong, just premature. To bide his time, he learned music composition, web development, and illustration. With these artistic skills, he built an audio webcomic that presents the album's story as a theatrical play. Annotations offer background context, while music scores offer insight into how the songs were written.`,
+            paragraph: `But Bennett insisted his forecast wasn't wrong, just premature. To bide his time, he learned music composition, web development, and illustration, allowing him to build an audio webcomic that presents the album's story as a theatrical play. Annotations offer background context, while music scores offer insight into how the songs were written.`,
         },
         {
             paragraph: [
