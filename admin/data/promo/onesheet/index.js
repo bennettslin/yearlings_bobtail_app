@@ -16,7 +16,19 @@ export default getFormattedSlideMetadata({
             ],
         },
         {
-            paragraph: `Early this century as home recording became affordable, Bobtail Yearlings singer Bennett Lin foresaw a coming renaissance. Any artist could now take pains to make a demo so good, no indie label could refuse it. And all these artists would raise creative standards to new heights. So he decided to spend five years making a demo album so innovative, it would change our understanding of what music can be.`,
+            paragraph: [
+                `Early this century as home recording became affordable, Bobtail Yearlings singer Bennett Lin foresaw a coming renaissance. Any artist could now take pains to make a demo so good, no indie label could refuse it. Each such attempt would then raise creative standards to new heights. And so, having just read James Joyce's`,
+                {
+                    isItalic: true,
+                    lyric: `Ulysses`,
+                },
+                `, he decided to make "The`,
+                {
+                    isItalic: true,
+                    lyric: `Ulysses`,
+                },
+                `of Rock Albums"— an album so innovative, it would change our understanding of what rock music can be.`,
+            ],
         },
         {
             paragraph: [
@@ -24,17 +36,12 @@ export default getFormattedSlideMetadata({
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
                 },
-                `is Bennett's autobiographical tale of a Taiwanese-American boy from Los Angeles whose autistic brother and first crush on a Jewish girl cause him to question his Buddhist upbringing. Bullied at school, he finds solace in a mail-order cult and shuts his feelings away. Years later, he embarks on a five-year plan for self-improvement to win the hand of his first love, who brings him into her Hindu faith. But as his band gets popular in the local scene, he boosts his ego by seeking out other women, leading to heartbreak and loss.`,
+                `is Bennett's autobiographical tale of a Taiwanese-American boy from Los Angeles whose autistic brother and first crush on a Jewish girl cause him to question his Buddhist upbringing. Bullied at school, he finds solace in a mail-order cult and shuts his feelings away. Years later, he embarks on a five-year plan for self-improvement that wins the hand of his first love, who brings him into her Hindu faith. But as his band gets popular in the local scene, he boosts his ego by seeking out other women, leading to heartbreak and loss.`,
             ],
         },
         {
             paragraph: [
-                `In line with Bennett's vision to create "The`,
-                {
-                    isItalic: true,
-                    lyric: `Ulysses`,
-                },
-                `of Rock Albums," the lyrics experiment with stream of consciousness ("`,
+                `In line with Bennett's Joycean vision, the lyrics experiment with stream of consciousness ("`,
                 {
                     anchor: `Good Night, Sita`,
                     songIndex: 8,
@@ -59,7 +66,7 @@ export default getFormattedSlideMetadata({
         },
         {
             paragraph: [
-                `Inspired by`,
+                `Modeled after`,
                 {
                     isItalic: true,
                     lyric: `Pet Sounds`,
@@ -94,7 +101,7 @@ export default getFormattedSlideMetadata({
         },
         {
             paragraph: [
-                `Bennett assumed that creative standards would change because barriers to entry must stay fixed. But the system saw it the other way around. With these barriers now lowered, other artists began to release fully complete works on their own, winning over the public directly. And so`,
+                `Bennett assumed that creative standards would change because barriers to entry must stay fixed. But the system saw it the other way around. With these barriers lowered, other artists were now releasing fully realized works on their own and winning over the public directly. And so, upon its completion five years later,`,
                 {
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
@@ -103,10 +110,17 @@ export default getFormattedSlideMetadata({
             ],
         },
         {
-            paragraph: `But Bennett insisted his forecast wasn't wrong, just premature. To bide his time, he learned music composition, web development, and illustration. Using these creative skills, he built an audio webcomic that presents the album's story as a theatrical play with illustrated characters. Annotations offer background context, while music scores offer insight into how the songs were written.`,
+            paragraph: `But Bennett insisted his forecast wasn't wrong, just premature. To bide his time, he learned music composition, web development, and illustration. With these artistic skills, he built an audio webcomic that presents the album's story as a theatrical play. Annotations offer background context, while music scores offer insight into how the songs were written.`,
         },
         {
-            paragraph: `So was Bennett right? Is a demo renaissance inevitable? Past artists made demos, after all, and their music is killing ours. Coincidence? Maybe not. A demo's audience agrees to hear it for what it can be in the future. This doesn't just free an artist to take creative risks; it awakens the very thought to do so. Had Bennett known he'd be judged on his ability to win over the public without label support, the idea for doublespeaker rhyme never would have come to him.`,
+            paragraph: [
+                `So was Bennett right? Is a demo renaissance inevitable? Past artists made demos, after all, and their music is now killing ours. Coincidence? Maybe not. A demo's audience agrees to hear what it can be in the`,
+                {
+                    isEmphasis: true,
+                    lyric: `future`,
+                },
+                `. This doesn't just free an artist to take creative risks; it awakens the very thought to do so. Had Bennett known he'd be judged on his ability to win over the public without label support, the idea for doublespeaker rhyme never would have come to him.`,
+            ],
         },
         {
             paragraph: `The current system rests on the belief that when the next artist comes along to change what music can be, the public will lead, and the labels will follow. After two decades, this has yet to happen. What if it's actually the other way around?`,
