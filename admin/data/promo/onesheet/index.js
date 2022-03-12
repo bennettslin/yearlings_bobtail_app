@@ -22,12 +22,12 @@ export default getFormattedSlideMetadata({
                     isItalic: true,
                     lyric: `Ulysses`,
                 },
-                `, he decided to make "The`,
+                `, he was inspired to make "The`,
                 {
                     isItalic: true,
                     lyric: `Ulysses`,
                 },
-                `of Rock Albums"— an album so innovative, it would change our understanding of what rock music can be.`,
+                `of Rock Albums"— an album so innovative, it would change our understanding of what music can be.`,
             ],
         },
         {
@@ -101,7 +101,7 @@ export default getFormattedSlideMetadata({
         },
         {
             paragraph: [
-                `Bennett assumed that creative standards would change because barriers to entry must stay fixed. But the system saw it the other way around. With these barriers lowered, other artists were now releasing fully realized works on their own and winning over the public directly. And so, upon its completion five years later,`,
+                `Bennett assumed that creative standards would change because barriers to entry must stay fixed. But the system saw it the other way around. With these barriers lowered, other artists were now releasing fully realized works on their own and winning over the public directly. As such, upon its completion five years later,`,
                 {
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
