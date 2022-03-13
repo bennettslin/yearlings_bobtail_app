@@ -17,12 +17,12 @@ export default getFormattedSlideMetadata({
         },
         {
             paragraph: [
-                `Early this century as home recording became affordable, Bobtail Yearlings singer Bennett Lin foresaw a coming renaissance. Any artist could now take pains to put out a demo so good, no indie label could refuse it. Creative standards would soon rise to new heights. As he read James Joyce's`,
+                `Early this century as home recording became affordable, Bobtail Yearlings singer Bennett Lin foresaw a coming renaissance. Any artist could now take pains to put out a demo so good, no indie label could refuse it. Creative standards would soon rise to new heights. So as he finished James Joyce's`,
                 {
                     isItalic: true,
                     lyric: `Ulysses`,
                 },
-                `, it then dawned on him to make his demo "The`,
+                `, it dawned on him to make his demo "The`,
                 {
                     isItalic: true,
                     lyric: `Ulysses`,
