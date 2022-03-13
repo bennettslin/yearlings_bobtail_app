@@ -17,12 +17,12 @@ export default getFormattedSlideMetadata({
         },
         {
             paragraph: [
-                `Early this century as home recording became affordable, Bobtail Yearlings singer Bennett Lin foresaw a coming renaissance. Any artist could now take pains to put out a demo so good, no indie label could refuse it. Creative standards would soon rise to new heights. So as he read James Joyce's`,
+                `Early this century as home recording became affordable, Bobtail Yearlings singer Bennett Lin foresaw a coming renaissance. Any artist could now take pains to put out a demo so good, no indie label could refuse it. Creative standards would soon rise to new heights. As he read James Joyce's`,
                 {
                     isItalic: true,
                     lyric: `Ulysses`,
                 },
-                `, it dawned on him to make his demo "The`,
+                `, it then dawned on him to make his demo "The`,
                 {
                     isItalic: true,
                     lyric: `Ulysses`,
@@ -41,7 +41,7 @@ export default getFormattedSlideMetadata({
         },
         {
             paragraph: [
-                `In line with Bennett's Joycean vision, the lyrics experiment with stream of consciousness ("`,
+                `In keeping with Bennett's Joycean vision, the lyrics experiment with stream of consciousness ("`,
                 {
                     anchor: `Good Night, Sita`,
                     songIndex: 8,
@@ -111,7 +111,7 @@ export default getFormattedSlideMetadata({
         },
         {
             paragraph: [
-                `Bennett assumed that creative standards would change because barriers to entry stay fixed. But the system saw it the other way around and lowered the barriers instead. Artists could now self-release fully realized works and win over the public directly. So upon its completion five years later,`,
+                `Bennett assumed that creative standards would change because barriers to entry stay fixed. But the system saw it the other way around and lowered the barriers instead. Artists could now self-release fully realized works to win over the public directly. So upon its completion five years later,`,
                 {
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
@@ -124,12 +124,12 @@ export default getFormattedSlideMetadata({
         },
         {
             paragraph: [
-                `So was Bennett right? Is a demo renaissance inevitable? Past artists made demos, after all, and their music is now killing ours. Coincidence? Maybe not. A demo's audience agrees to hear what it can be in the`,
+                `So… was Bennett right? Is a demo renaissance inevitable? Past artists made demos, after all, and their music is now killing ours. Coincidence? Maybe not. A demo's audience agrees to hear what it can be in the`,
                 {
                     isEmphasis: true,
                     lyric: `future`,
                 },
-                `. This doesn't just free an artist to take creative risks; it awakens the very thought to do so. Had Bennett known he'd be judged on his ability to win over the public without label support, the idea for doublespeaker rhyme never would have come to him.`,
+                `. This doesn't just free an artist to take creative risks; it awakens the very thought to do so. Had Bennett known he'd be judged on winning over the public without label support, the idea for doublespeaker rhyme never would have come to him.`,
             ],
         },
         {
