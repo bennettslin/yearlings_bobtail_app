@@ -107,15 +107,15 @@ const _addAnnotationLists = (annotations, song) => {
         )
         annotationDotsBits.push(getDotsBitFromKeys(annotation.dotKeys))
         annotationCardsDescriptionsList.push(
-            annotation.cards.map(card => card.description || null),
+            annotation.cards.map((card = {}) => card.description || null),
         )
         annotationCardsDotsBitsList.push(
             // If single card, push individual dot keys for dev clarity.
-            annotation.cards.length === 1 ?
+            annotation.cards.length === 1 && annotation.cards[0] ?
                 getDotsBitFromKeys(
                     annotation.cards[0].dotKeys,
                 ) || null :
-                annotation.cards.map(card => getDotsBitFromKeys(
+                annotation.cards.map((card = {}) => getDotsBitFromKeys(
                     card.dotKeys,
                 ) || null),
         )

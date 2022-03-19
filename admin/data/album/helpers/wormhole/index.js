@@ -35,7 +35,7 @@ export const addWormholeMetadata = (annotationsList, album) => {
             annotations.forEach(annotation => {
                 let wormholeLinks = null
 
-                annotation.cards.forEach(card => {
+                annotation.cards.forEach((card = {}) => {
                     /**
                      * There is only one wormholeLinks array per annotation. So
                      * it does not need to be nested under any given card.

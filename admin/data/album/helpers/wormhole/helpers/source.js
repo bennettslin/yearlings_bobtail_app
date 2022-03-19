@@ -31,7 +31,7 @@ export const tellEachSourceLinkItsDestination = (
                     songIndex,
                     annotationIndex,
                 ),
-                card = cards[cardIndex]
+                card = cards[cardIndex] || {}
 
             // Let it know every other link for this wormhole key.
             card.wormholeLinks =
@@ -63,17 +63,17 @@ export const addWormholeLinksToCard = (annotationsList, tempWormholeLinks) => {
                     songIndex,
                     annotationIndex,
                     cardIndex,
-                    tempSourceWormholeLinks,
+                    tempSourceWormholeLinks = [],
                 } = destinationLink,
                 {
                     cards,
-                    tempSourceWormholeIndices,
+                    tempSourceWormholeIndices = [],
                 } = _getAnnotation(
                     annotationsList,
                     songIndex,
                     annotationIndex,
                 ),
-                card = cards[cardIndex]
+                card = cards[cardIndex] || {}
 
             card.wormholeLinks = tempLinks.filter((destinationLink, thisIndex) => {
 

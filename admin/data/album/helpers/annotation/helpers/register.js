@@ -1,7 +1,7 @@
 import { REFERENCE, WORMHOLE } from '../../../../../../src/constants/dots'
 import { WIKI } from '../../../../../../src/constants/lyrics'
 
-const _addWikiWormholeDotKeyToCard = card => {
+const _addWikiWormholeDotKeyToCard = (card = {}) => {
     const {
         description,
         wormhole,
@@ -50,7 +50,7 @@ const _getHasWikiAnchor = (description) => {
     }
 }
 
-const _addCardDotKeysToAnnotation = (card, dotKeys) => {
+const _addCardDotKeysToAnnotation = (card = {}, dotKeys) => {
     // Add dot keys to both song and annotation card.
     if (card.dotKeys) {
         Object.keys(card.dotKeys).forEach(dotKey => {

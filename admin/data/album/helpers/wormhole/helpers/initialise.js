@@ -53,7 +53,7 @@ export const initialiseTempWormholeLinks = (
             annotations.forEach(annotation => {
                 const { cards } = annotation
 
-                cards.forEach((card, cardIndex) => {
+                cards.forEach((card = {}, cardIndex) => {
                     const { wormhole } = card
                     if (wormhole) {
                         _addCardWormholeLinksToTempAlbumLinks({

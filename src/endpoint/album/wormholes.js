@@ -6,7 +6,7 @@ export const getSourceWormholeIndices = (songIndex, annotationIndex) => {
         annotationIndex,
     )
 
-    return wormholeLinks.map(wormholeLink => (
+    return wormholeLinks.map((wormholeLink = {}) => (
         wormholeLink.sourceWormholeIndex
     ))
 }
