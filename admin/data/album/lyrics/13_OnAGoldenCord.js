@@ -1114,7 +1114,7 @@ export default {
                                         anchor: `9/11 hijackers`,
                                         wiki: `September_11_attacks`,
                                     },
-                                    `were unaware it was a suicide mission, having prepared instead to make public statements on their religious motivations. Similarly, in orchestrating his scheme to be rid of Sita, sober me sold his drunken half on all the benefits of breaking up, while neglecting to mention the tremendous sacrifice it would entail.`,
+                                    `were unaware it was a suicide mission, having prepared to make public statements on their religious motivations. Similarly, in orchestrating his scheme to be rid of Sita, sober me sold his drunken half on all the benefits of breaking up, while neglecting to mention the tremendous sacrifice it would entail.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

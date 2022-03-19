@@ -27,7 +27,7 @@ export default {
     mixStartTime: `0:01:22.94`,
     playerStartTime: 3332.826,
     todo: true,
-    overview: `Every night I dreamt of reuniting with Sita, only to wake up in a panicked sweat as the reality came roaring back that I'd lost her forever. After slogging through the day under a crushing blanket of despair, I would crawl back to bed, in dread of the cruel tricks soon to be played yet again by my subconscious mind. I had no idea when this torment would end. The answer, I feared, was never.`,
+    overview: `Every night I dreamt of reuniting with Sita, only to wake in a panicked sweat as the reality came roaring back that I'd lost her forever. After slogging through the day under a cloud of despair, I would crawl back into bed and await with dread the cruel tricks soon to be played yet again by my subconscious mind. I had no idea when this torment would end. The answer, I feared, was never.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -35,7 +35,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: true,
                 card: {
-                    description: `This is the second song on the album that was an original Yearlings staple, and also the only one I ever wrote for Sita while we were together. I suppose it's telling of our relationship that my one romantic song for her was about the dreams that would plague me as an old man filled with regret for having lost her. Anyway, as with "M," I changed the musical arrangement but kept the original lyrics.`,
+                    description: `This is the second song on the album that was an original Yearlings staple. I suppose it's telling of our relationship that the one romantic song I wrote for Sita was about the dreams that would haunt me as an old man filled with regret for having lost her. Anyway, as with "M," I changed the musical arrangement but kept the lyrics.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGCRAFT]: true,

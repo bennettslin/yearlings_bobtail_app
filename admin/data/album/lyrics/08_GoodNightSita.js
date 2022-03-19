@@ -81,10 +81,8 @@ export default {
                         `or`,
                         {
                             anchor: `should I should you`,
-                            // Can't tell if second "to" is needed.
-                            todo: true,
                             card: {
-                                description: `At this point, I'm too flustered to form complete thoughts, let alone to speak in complete sentences.`,
+                                description: `At this point, I'm too flustered to form complete thoughts, let alone speak in complete sentences.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -590,7 +588,7 @@ export default {
                             // Just confirm it sounds okay.
                             todo: true,
                             card: {
-                                description: `On our second date, Sita invited me to see her friend act in a play, which I hated. In all fairness, it probably wasn't bad. My impression of the night was just colored by my insecurities, given the warm rapport between Sita and her friend backstage, in contrast to my own inability to get a word in edgewise.`,
+                                description: `On our second date, Sita invited me to see her friend act in a play, which I hated. In all fairness, it probably wasn't bad. My impression of the night was just colored by my insecurities, given the rapport between Sita and her friend backstage, in contrast to my own inability to get a word in edgewise.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -694,9 +692,8 @@ export default {
                         `then wise up and`,
                         {
                             anchor: `learn to shotgun`,
-                            todo: true,
                             card: {
-                                description: `In time I came to adopt the shotgun approach to dating, which involves hitting on anyone at any moment. It works because the math is on your side. Even if your success rate remains dismal, you're expanding the sample size, which increases your chances of getting at least one positive result. And one person saying yes to a date is really all you were hoping for.`,
+                                description: `In time I came to adopt the shotgun approach to dating, which involves hitting on anyone at any moment. It works because the math is on your side. Even if your success rate remains dismal, you're increasing the sample size, which gives you a better chance of getting at least one positive result. And one person saying yes is really all you were hoping for.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -891,12 +888,12 @@ export default {
                             anchor: `endless flowchart`,
                             card: {
                                 description: [
-                                    `At the time, I wondered if it would be possible to prepare a mental`,
+                                    `At the time, I wondered if it were possible to prepare a mental`,
                                     {
                                         anchor: `flowchart`,
                                         wiki: `Flowchart`,
                                     },
-                                    `of all the myriad ways a date might unfold. I could then make one optimal decision after another to nudge the events of the evening toward my desired outcome.`,
+                                    `of the myriad ways a date might unfold. I could then make one optimal decision after another to nudge the events of the evening toward my desired outcome.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -911,15 +908,14 @@ export default {
                         `with every given`,
                         {
                             anchor: `answer a no`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `Of course, if I were never given an opening to make any decisions at all, then each date would end with me going right back to the beginning of my flowchart. And I'd be doomed to spend my life cycling through an`,
+                                    `Of course, if I were never given an opening to make any decisions at all, then each date would end with me going right back to the beginning of the flowchart. And I'd be doomed to spend my life cycling through an`,
                                     {
                                         anchor: `infinite loop`,
                                         wiki: `Infinite_loop`,
                                     },
-                                    `of polite rejection.`,
+                                    `of polite rejections.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -981,9 +977,8 @@ export default {
                         `from a`,
                         {
                             anchor: `dummy steering wheel`,
-                            todo: true,
                             card: {
-                                description: `Any semblance of control I felt on a date was an illusion. And yet I would still cling tightly, like a child clutching the passenger steering wheel in a twin go-kart. There was too much at stake for me to ever just let go and embrace spontaneity.`,
+                                description: `Any semblance of control I felt on a date was an illusion. But still I would cling tightly, like a child clutching the passenger steering wheel in a twin go-kart. Too much was at stake for me to ever let go and embrace spontaneity.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },

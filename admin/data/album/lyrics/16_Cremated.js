@@ -365,9 +365,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
-                    description: `My original plan for this song was to use doublespeaker rhyme to contrast Miriam's inner thoughts with mine. I gave up after I kept forgetting which column of lyrics corresponded with which person, making me realize that no such distinction existed. We were both of the same mind in thinking the relationship was doomed to fail. One of us just had a better idea of when.`,
+                    description: `My original plan for this song was to use doublespeaker rhyme to contrast Miriam's inner thoughts with mine. But I kept forgetting which column of lyrics was whose, making me realize there wasn't any real distinction. We were of the same mind that the relationship would fail. One of us just had a better idea of when.`,
                     dotKeys: {
                         [OBSERVATION]: true,
                         [SONGCRAFT]: true,
@@ -485,10 +484,9 @@ export default {
                     lyricRight: [
                         {
                             anchor: `Trophy bronzed`,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `The first time I had sex with a woman other than Sita, I left the used condom on my nightstand for days. Like a proud parent who bronzes their baby's shoes, I was just awestruck that this tiny thing I'd squirted out had grown into something so much bigger.`,
+                                    description: `The first time I had sex with a woman other than Sita, I left the used condom on my nightstand for days. Like a proud parent who bronzes their baby's shoes, I was awestruck that this tiny thing I'd squirted out had grown into something so much bigger.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [OBSERVATION]: true,
@@ -536,9 +534,8 @@ export default {
                         `for some`,
                         {
                             anchor: `unforeskinned virgin`,
-                            todo: true,
                             card: {
-                                description: `I learned a long time ago not to wear identity markers or hold personal convictions that would limit the size of my dating pool. It's why I've never gotten a tattoo. I needed to be a blank slab for each new woman to shape me into whatever she liked. And so I imagine that before dating Miriam, I'd reset myself to a default state of being sexually inexperienced and having an intact foreskin.`,
+                                description: `I learned a long time ago not to wear identity markers or hold personal convictions that would limit the size of my dating pool. I think this is why I've never gotten a tattoo. I needed to be a blank slab for each new woman to shape me into whatever she liked. So here I imagine that before dating Miriam, I'd reset myself to a default state of being sexually inexperienced and having an intact foreskin.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
