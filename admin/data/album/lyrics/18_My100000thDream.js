@@ -35,7 +35,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: true,
                 card: {
-                    description: `This is the second song on the album that was an original Yearlings staple. It's also the only one I ever wrote for Sita while we were together. I suppose it's telling of our relationship that my one romantic song for her was about the dreams that would plague me as an old man filled with regret for having lost her. Anyway, as with "M," I changed the musical arrangement but kept the original lyrics.`,
+                    description: `This is the second song on the album that was an original Yearlings staple. I suppose it's telling of our relationship that the one romantic song I wrote for Sita was about the dreams that would haunt me as an old man filled with regret for having lost her. Anyway, as with "M," I changed the musical arrangement but kept the lyrics.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGCRAFT]: true,
