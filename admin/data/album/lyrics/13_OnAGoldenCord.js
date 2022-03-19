@@ -102,7 +102,7 @@ export default {
                             anchor: `bread and pocket lint`,
                             todo: true,
                             card: {
-                                description: `Before leaving the cafeteria after a long shift, I might stash some bread rolls in the front pockets of my jacket for munching on the go. Still holding the bracelet, I now tuck my hands in as well to keep warm.`,
+                                description: `Before leaving the cafeteria after a long shift, I might stash some bread rolls in the front pockets of my jacket to munch on the go. Still holding the bracelet, I now tuck my hands in as well to keep warm.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
