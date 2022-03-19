@@ -9,7 +9,7 @@ export const getVerseIndices = songIndex => (
         [] :
         getArrayOfLength(
             // Which verse array we use is arbitrary.
-            getSong(songIndex).verseDurations.length,
+            getSong(songIndex)?.verseDurations.length,
         )
 )
 

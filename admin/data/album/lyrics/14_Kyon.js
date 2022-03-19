@@ -32,13 +32,12 @@ export default {
     playerReferenceTime: 2498.410,
     playerStartTime: 2496.296,
     todo: true,
-    overview: `The on-again, off-again years gave me enough distance from my misdeeds to see how emotionally abusive I'd become. But what baffled me is how it had gotten that far to begin with. I tried hard to understand why Sita so willingly endured my cruelty, and I came to see just how thoroughly she'd tied her sense of worth to our relationship. I was fighting for me. She was fighting for us.`,
+    overview: `The on-again, off-again years gave me enough distance from my misdeeds to see how emotionally abusive I'd become. But what baffled me is how things ever got that far to begin with, and why Sita so willingly endured my cruelty. In time, I came to see just how thoroughly she'd tied her sense of worth to our relationship. I was fighting for me. She was fighting for us.`,
     lyricUnits: [
         {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         {
@@ -50,7 +49,7 @@ export default {
                             anchor: `Hindi`,
                             wiki: `Hindi`,
                         },
-                        `word for "why." After Sita and I started dating, I studied Hindi for several years. It was an easy decision to make, since I got course credit for it as a religious studies major, and it allowed me to converse with her family in their native language.`,
+                        `word for "why." After Sita and I started dating, I studied Hindi for several years, which allowed me to converse with her family in their native language. I also got course credit for it as a religious studies major, so it was an easy decision to make.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -654,15 +653,14 @@ export default {
                         `? Come for me? At`,
                         {
                             anchor: `thirty-three`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `I hated the idea of getting older and often joked about killing myself at`,
+                                    `I often joked about killing myself at`,
                                     {
                                         anchor: `thirty-three`,
                                         wiki: `Chronology_of_Jesus`,
                                     },
-                                    `, the age at which Jesus was crucified. Since clearly, this is all the time one needs to change the world. So when Sita asked me to specify the age at which I would come back for her in accordance with our little pact, and I answered thirty-three, the subtext was understood.`,
+                                    `, the age at which Jesus was crucified. I hated the idea of getting older, and clearly this is all the time one needs to make an impact on the world. So when Sita asked me to declare the age at which I would come back for her in accordance with our little pact, I answered thirty-three. The subtext was understood.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,

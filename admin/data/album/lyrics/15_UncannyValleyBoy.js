@@ -643,7 +643,7 @@ export default {
                                         anchor: `shell game`,
                                         wiki: `Shell_game`,
                                     },
-                                    `is a classic swindle in which a ball is placed under one of three nutshells that are then shuffled in plain view. Having recognized life to be an endless series of shell games, I vowed to never get suckered again. And knowing now how the ball is misplaced through`,
+                                    `is a classic swindle in which a ball is placed under one of three nutshells that are then shuffled in plain view. Having recognized life to be an endless series of shell games, I vowed to never get suckered again. And knowing now how the ball gets misplaced through`,
                                     {
                                         anchor: `sleight of hand`,
                                         wiki: `Sleight_of_hand`,
@@ -731,15 +731,14 @@ export default {
                         `smugly prepped to`,
                         {
                             anchor: `haze the new latecomers`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `Some organizations make their new recruits go through degrading`,
+                                    `Some organizations put new recruits through degrading`,
                                     {
                                         anchor: `hazing rituals`,
                                         wiki: `Hazing`,
                                     },
-                                    `. Having endured such abuse for so long myself, I finally conceded that I could't have toughened up any other way. And now I had no qualms about doling it out to others.`,
+                                    `. After enduring such abuse for so long myself, I finally conceded that I could't have toughened up any other way. And now I had no qualms about dishing it out to others.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -934,7 +933,7 @@ export default {
                             anchor: `two were tied`,
                             todo: true,
                             card: {
-                                description: `While Sita had hoped for us to be tied in a matrimonial sense, I chafed that we were also tied in a competitive sense. Between the two of us, there were fewer romantic partners in my past, and this felt to me like a threat.`,
+                                description: `While Sita had hoped for us to be tied in a matrimonial sense, I chafed that we were also tied in a competitive sense. Between the two of us, I had fewer romantic partners in my past, and this felt like a threat.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -1231,10 +1230,9 @@ export default {
                             `for the`,
                             {
                                 anchor: `trophy blondes`,
-                                todo: true,
                                 cards: [
                                     {
-                                        description: `To add insult to injury, the women I left Sita for were usually white, which bothered her greatly. In my defense, this wasn't by design, but seeing her loss as my gain, I let her believe the worst.`,
+                                        description: `To add insult to injury, the women I left Sita for were often white, which bothered her greatly. In my defense, this wasn't by design. But seeing her loss as my gain, I let her believe the worst.`,
                                         dotKeys: {
                                             [BACKSTORY]: true,
                                         },
@@ -1555,7 +1553,7 @@ export default {
                                 todo: true,
                                 card: {
                                     description: [
-                                        `In my chant, however, the syllables gradually shift to form the holy name of Mara. Unlike Valmiki, who embraced Eastern spirituality, I find salvation in the embrace of Western women. And so my chant ends here with an expression of Western faith. In the`,
+                                        `In my chant, however, the syllables gradually shift to form the holy name of Mara. Unlike Valmiki, who embraced Eastern spirituality, I find salvation in the embrace of Western women. And so my chant ends with an expression of Western faith. In the`,
                                         {
                                             anchor: `New Testament`,
                                             wiki: `New_Testament`,

@@ -4,17 +4,17 @@ import { getVerseIndicesForStanza } from './stanzas'
 import { getVerseCountForSong } from './verses'
 
 export const getDurationForSong = songIndex => {
-    const { songDuration } = getSong(songIndex)
+    const { songDuration } = getSong(songIndex) || {}
     return songDuration || Number.MAX_SAFE_INTEGER
 }
 
 export const getStartTimeForVerse = (songIndex, verseIndex) => {
-    const { verseStartTimes = [] } = getSong(songIndex)
+    const { verseStartTimes = [] } = getSong(songIndex) || {}
     return verseStartTimes[verseIndex] || 0
 }
 
 const getPlayerTimeForSong = songIndex => {
-    const { playerTime } = getSong(songIndex)
+    const { playerTime } = getSong(songIndex) || {}
     return playerTime
 }
 

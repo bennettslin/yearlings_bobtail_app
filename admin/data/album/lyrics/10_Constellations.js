@@ -36,7 +36,7 @@ export default {
     mixStartTime: `0:01:18.60`,
     playerReferenceTime: 1751.447,
     playerStartTime: 1751.191,
-    overview: `One night I went with my bassist Ana and her friends to explore the steam tunnels under UCLA while high on Robitussin. I got us to pretend we were Vikings and Mongols and other waves of human migration throughout world history. In hindsight, the others were probably just humoring me. I wound up doing a lot of Robitussin that summer. It took a while for me to regain my grip on reality.`,
+    overview: `One night I went with my bassist Ana and her friends to get high on Robitussin and explore the steam tunnels under UCLA. I got us all to pretend we were Vikings, Mongols, and other waves of human migration throughout world history. In hindsight, they were probably just humoring me. I wound up doing a lot of Robitussin that summer. It took a while for me to regain my grip on reality.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -406,6 +406,7 @@ export default {
                         `, this`,
                         {
                             anchor: `boundless Kalevalley ends`,
+                            todo: true,
                             cards: [
                                 {
                                     description: `The San Fernando Valley, which I hated in my youth, is the quintessential "Cali valley." The days until I could leave that sprawling wasteland felt endless. On this summer break back home, however, the magic of Robitussin renders escape instantaneous.`,
@@ -611,7 +612,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         {
@@ -631,7 +631,7 @@ export default {
                             anchor: `Secret Journey`,
                             wiki: `Secret_Journey_(song)`,
                         },
-                        `," I left the drum kick off the downbeat in the prechorus, which does wonders for letting the other instruments breathe before they're submerged again in the chorus.`,
+                        `," I left the kick drum off the downbeat in the prechorus, which does wonders for letting the other instruments breathe before they're submerged again in the chorus.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -1427,7 +1427,7 @@ export default {
                             anchor: `Super Nintendo`,
                             wiki: `Super_Nintendo_Entertainment_System`,
                         },
-                        `. This probably messed with the wiring in my head, because for a while afterward, every vintage arcade sound seemed to hide a profound spiritual message that my sober ears just couldn't suss out. I doubt other people are affected the same way, so the arcade synth here was probably just for my own amusement.`,
+                        `. For a good while afterward, every vintage arcade sound seemed to hide a profound spiritual message that my sober ears just couldn't suss out. I doubt other people are affected the same way, so the arcade synth here was probably just for my own amusement.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -1474,9 +1474,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
-                    description: `If the lyrics for this second chorus seem out of place given their noticeable lack of literary puns, it's because they're a carryover from the song's previous incarnation. But I liked them enough to keep them, and they coincide perfectly with my moment of clarity at the cemetery.`,
+                    description: `If the lyrics for this second chorus seem out of place given the noticeable lack of literary puns, it's because they're a carryover from a previous incarnation of this song. I liked them enough to keep them, and they perfectly capture my moment of clarity at the cemetery.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGCRAFT]: true,

@@ -738,7 +738,7 @@ export default {
                                         isItalic: true,
                                         lyric: `Look Back in Anger`,
                                     },
-                                    `, the protagonist Jimmy pictures his wife as a squirrel and sighs, "Poor squirrels," acknowledging that his abusive tirades keep her in a neurotic and submissive state.`,
+                                    `, the protagonist Jimmy pictures his wife as a squirrel and sighs, "Poor squirrels," recognizing that his abusive tirades keep her in a neurotic and submissive state.`,
                                 ],
                                 dotKeys: {
                                     [REFERENCE]: true,
@@ -754,9 +754,8 @@ export default {
                         `also weep for`,
                         {
                             anchor: `poor, poor bears`,
-                            todo: true,
                             card: {
-                                description: `His wife Alison then sighs in response, "Poor, poor bears," recognizing that he, a bear in their mutual fantasy, is just as much a victim complying within a power dynamic over which neither possesses much control.`,
+                                description: `His wife Alison then sighs in response, "Poor, poor bears," to acknowledge that he, a bear in their mutual fantasy, is just as much a victim complying with a power dynamic over which neither possesses much control.`,
                                 dotKeys: {
                                     [REFERENCE]: true,
                                 },

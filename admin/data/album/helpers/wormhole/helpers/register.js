@@ -104,7 +104,7 @@ const _registerWikiWormholeLinksForCard = ({
     card: {
         description,
         wormholeLinks,
-    },
+    } = {},
 }) => {
     if (description) {
         _registerWikiLinksForCard({

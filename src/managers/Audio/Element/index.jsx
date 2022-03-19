@@ -85,7 +85,9 @@ const AudioPlayerElement = forwardRef(({ onPlayerLoaded }, ref) => {
                 currentTime,
             )
         logPlayer(`Player set to audio time ${getFormattedTime(audioTime)}, current time ${getFormattedTime(currentTime)}.`)
-        audioPlayerElement.current.currentTime = currentTime
+        if (Number.isFinite(currentTime)) {
+            audioPlayerElement.current.currentTime = currentTime
+        }
     }
 
     const onLoadedMetadata = () => {
