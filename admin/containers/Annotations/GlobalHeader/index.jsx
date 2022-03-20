@@ -1,10 +1,11 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import cx from 'classnames'
 import AnnotationSongHeader from '../AnnotationSongHeader'
 import { getArrayOfLength } from '../../../../src/helpers/general'
 import { getSongsNotLoguesCount } from '../../../../src/endpoint/album/songs'
 
-const TempGlobalHeader = () => {
+const TempGlobalHeader = ({ showAll }) => {
     return (
         <div
             {...{
@@ -20,11 +21,16 @@ const TempGlobalHeader = () => {
                     {...{
                         key: index,
                         songIndex: index + 1,
+                        showAll,
                     }}
                 />
             ))}
         </div>
     )
+}
+
+TempGlobalHeader.propTypes = {
+    showAll: PropTypes.bool.isRequired,
 }
 
 export default TempGlobalHeader

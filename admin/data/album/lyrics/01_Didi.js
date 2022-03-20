@@ -89,25 +89,14 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `Since this song is sung from the perspective of my sister as a child, I wanted toy instruments to abound. And so the intro begins with a strummed`,
-                        {
-                            anchor: `autoharp`,
-                            wiki: `Autoharp`,
-                        },
-                        `leading into a`,
-                        {
-                            anchor: `glockenspiel`,
-                            wiki: `Glockenspiel`,
-                        },
-                        `melody. I was also hoping to recreate the atmosphere of childlike wonder heard in the opening measures of "`,
+                        `Since this song is sung from the perspective of my sister as a child, I tried to recreate the feeling of childlike innocence heard in the opening measures of "`,
                         {
                             anchor: `Wouldn't It Be Nice`,
                             wiki: `Wouldn't_It_Be_Nice`,
                         },
-                        `," the first song of the`,
+                        `," the first song from the`,
                         {
                             anchor: `Beach Boys`,
                             wiki: `The_Beach_Boys`,
@@ -120,7 +109,17 @@ export default {
                                 wiki: `Pet_Sounds`,
                             },
                         },
-                        `, which explores the theme of youthful innocence.`,
+                        `. And so the introduction begins with an`,
+                        {
+                            anchor: `autoharp`,
+                            wiki: `Autoharp`,
+                        },
+                        `leading into a`,
+                        {
+                            anchor: `glockenspiel`,
+                            wiki: `Glockenspiel`,
+                        },
+                        `melody.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,

@@ -576,9 +576,8 @@ export default {
                         `to remain`,
                         {
                             anchor: `inherently perfect`,
-                            todo: true,
                             card: {
-                                description: `The real purpose of having a drunken personality was to blame it for all my selfish desires, allowing me to remain above reproach myself. I didn't tell Miriam this, of course, since the latest thing I selfishly desired was her.`,
+                                description: `The real purpose of having a drunken alter ego was to blame it for all my selfish desires while remaining above reproach myself. I didn't tell Miriam this, of course, since the latest thing I selfishly desired was her.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -609,10 +608,9 @@ export default {
                         `as`,
                         {
                             anchor: `worn puppet`,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `The condom sits strangely motionless on the car seat, like a puppet that was so full of life just moments before. But having brought me to a place I otherwise wouldn't have gone, it has no other use and can now be discarded at will.`,
+                                    description: `The condom sits motionless on the car seat, like a puppet so full of life just moments before. Having brought me to a place I otherwise couldn't have gone, it has no other use and can now be discarded.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },

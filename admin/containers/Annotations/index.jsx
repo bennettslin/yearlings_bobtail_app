@@ -49,7 +49,7 @@ const TempGlobalAnnotations = () => {
             }}
         >
             <GlobalColumns {...{ showAll }} />
-            <GlobalHeader />
+            <GlobalHeader {...{ showAll }} />
             <GlobalCounter {...{ toggleShowTodos }} />
         </div>
     )

@@ -83,7 +83,7 @@ export default {
                             anchor: `changeling`,
                             wiki: `Changeling`,
                         },
-                        `, who'd been left in place of a stolen human child. So I wanted this song to sound like a band of woodland trolls in secluded revelry after pulling off such a heist. I figured their style would be akin to the swamp rock of`,
+                        `, who'd been left in place of a stolen human child. I wanted this song to sound like a band of woodland trolls in secluded revelry after pulling off such a heist. I figured their style would be akin to the swamp rock of`,
                         {
                             anchor: `Creedence Clearwater Revival`,
                             wiki: `Creedence_Clearwater_Revival`,

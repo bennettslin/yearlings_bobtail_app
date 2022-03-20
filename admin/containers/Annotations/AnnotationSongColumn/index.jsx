@@ -1,18 +1,19 @@
 import React, { useRef } from 'react'
 import PropTypes from 'prop-types'
 import Annotation from '../Annotation'
-import {
-    getAnnotationIndices,
-    getTodoForAnnotation,
-} from '../../../../src/endpoint/album/annotations'
 import { getSongsNotLoguesCount } from '../../../../src/endpoint/album/songs'
+import { getShownAnnotationIndices } from '../helpers'
 
 const AnnotationSongColumn = ({ songIndex, showAll }) => {
     const
         songColumnElement = useRef(),
-        hue = (songIndex - 1) / getSongsNotLoguesCount() * 360
+        hue = (songIndex - 1) / getSongsNotLoguesCount() * 360,
+        shownAnnotationIndices = getShownAnnotationIndices({
+            songIndex,
+            showAll,
+        })
 
-    return (
+    return shownAnnotationIndices.length ? (
         <div
             {...{
                 ref: songColumnElement,
@@ -22,24 +23,17 @@ const AnnotationSongColumn = ({ songIndex, showAll }) => {
                 },
             }}
         >
-            {getAnnotationIndices(songIndex)
-                .filter(annotationIndex => (
-                    // Only show annotations left todo.
-                    showAll ||
-                    getTodoForAnnotation(songIndex, annotationIndex)
-                ))
-                .map(annotationIndex => (
-                    <Annotation
-                        {...{
-                            key: annotationIndex,
-                            songIndex,
-                            annotationIndex,
-                        }}
-                    />
-                ))
-            }
+            {shownAnnotationIndices.map(annotationIndex => (
+                <Annotation
+                    {...{
+                        key: annotationIndex,
+                        songIndex,
+                        annotationIndex,
+                    }}
+                />
+            ))}
         </div>
-    )
+    ) : null
 }
 
 AnnotationSongColumn.propTypes = {

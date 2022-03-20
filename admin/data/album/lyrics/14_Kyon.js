@@ -32,7 +32,7 @@ export default {
     playerReferenceTime: 2498.410,
     playerStartTime: 2496.296,
     todo: true,
-    overview: `The on-again, off-again years gave me enough distance from my misdeeds to see how emotionally abusive I'd become. But what baffled me is how things ever got that far to begin with, and why Sita so willingly endured my cruelty. In time, I came to see just how thoroughly she'd tied her sense of worth to our relationship. I was fighting for me. She was fighting for us.`,
+    overview: `The on-again, off-again years allowed me to see how emotionally abusive I'd become. It also wasn't hard to understand how things had degenerated so fast. I lashed out assuming that Sita would lash out right back. But instead she willingly endured my cruelty, and that's what baffled me. In time I came to realize just how thoroughly she'd tied her sense of worth to our relationship. I was fighting for me. She was fighting for us.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -268,7 +268,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `Every time we got back together, Sita would reassert our status as a couple by insisting I bring her along to see my friends, despite the humiliation of facing the very gang that emboldened me to leave her. The circus`,
+                        `Every time we got back together, Sita would reassert our status as a couple by insisting I bring her along to see my friends, despite the humiliation of facing the very gang that had emboldened me to leave her. The circus`,
                         {
                             anchor: `calliope`,
                             wiki: `Calliope_(music)`,

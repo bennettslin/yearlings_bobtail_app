@@ -42,15 +42,14 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `Odin, who was around before I was born, originally had a Taiwanese name. My sister and I anglicized it into the name of the`,
+                        `Odin, who was around before I was born, originally had a Taiwanese name. My sister and I anglicized it to the name of the`,
                         {
                             anchor: `Norse god`,
                             wiki: `Odin`,
                         },
-                        `when we were older.`,
+                        `once we were older.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -141,7 +140,6 @@ export default {
                         `trifling`,
                         {
                             anchor: `tref must reseed the earth`,
-                            todo: true,
                             card: {
                                 description: [
                                     {
@@ -158,7 +156,7 @@ export default {
                                         anchor: `kosher`,
                                         wiki: `Kashrut`,
                                     },
-                                    `. In Sasha's world, certain everyday foods weren't meant to be eaten. It could then be inferred that certain boys in her everyday life also weren't meant to be dated.`,
+                                    `. In Sasha's world, certain everyday foods weren't meant to be eaten. It could also be inferred that certain boys in her everyday life weren't meant to be dated.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -265,9 +263,8 @@ export default {
                         `you`,
                         {
                             anchor: `ruminate on these riddles`,
-                            todo: true,
                             card: {
-                                description: `The "awake" voice in the doublespeaker set echoes my thoughts as I lie on the floor mat, unable to sleep. The terrifying vastness of the universe suggests unlimited possibilities. And yet somehow, being with Sasha is not one of them.`,
+                                description: `The "awake" voice in the doublespeaker set echoes my thoughts as I lie on the floor mat, unable to sleep. The vastness of the universe, while terrifying, also suggests unlimited possibilities. Yet somehow, being with Sasha isn't one of them.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -516,7 +513,6 @@ export default {
                         `proves`,
                         {
                             anchor: `shibboleth`,
-                            todo: true,
                             card: {
                                 description: [
                                     [
@@ -648,7 +644,7 @@ export default {
                 todo: true,
                 card: {
                     // TODO: Or bottled butterfly and jarred sibyl.
-                    description: `While the two doublespeaker voices proceed independently, they plant subtle ideas along each other's path, much as our conscious thoughts affect our dreams and vice versa. In this stanza, for example, the mention of a staircase by the "asleep" voice precedes the plummeting spoken of by the "awake" voice.`,
+                    description: `While the two doublespeaker voices seem to proceed independently, they plant subtle ideas along each other's path, much as our conscious thoughts affect our dreams and vice versa. In this stanza, for example, the mention of a staircase by the "asleep" voice precedes the plummeting spoken of by the "awake" voice.`,
                     dotKeys: {
                         [OBSERVATION]: true,
                         [SONGCRAFT]: true,
@@ -1303,7 +1299,6 @@ export default {
                     lyricLeft: [
                         {
                             anchor: `shivering for shivs unsheathed`,
-                            todo: true,
                             cards: [
                                 {
                                     // CONSIDER: Wormhole Kyon for shank? Needs to allow for multiple wormhole keys first.
@@ -1313,7 +1308,7 @@ export default {
                                             anchor: 'shivved',
                                             wiki: `Shiv_(weapon)`,
                                         },
-                                        `, or stabbed by a makeshift weapon. Lucky for me, the schoolyard was already preparing me for a lifetime of such vigilance.`,
+                                        `, or stabbed by a makeshift weapon. As luck would have it, the schoolyard was already preparing me for a lifetime of such vigilance.`,
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
