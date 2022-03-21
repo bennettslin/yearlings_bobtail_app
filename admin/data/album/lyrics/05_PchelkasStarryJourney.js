@@ -126,7 +126,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `In keeping with the`,
@@ -134,22 +133,22 @@ export default {
                             anchor: `Russian`,
                             wiki: `Russia`,
                         },
-                        `theme of dogs in space for this song, the feeling of the`,
+                        `theme of dogs in space for this song, two frenetically plucked mandolins capture the essence of the`,
                         {
                             anchor: `balalaika`,
                             wiki: `Balalaika`,
                         },
-                        `is evoked by frenetically plucked mandolins. Since`,
+                        `. Since`,
                         {
                             anchor: `Tuva`,
                             wiki: `Tuva`,
                         },
-                        `is a Russian republic, I also added`,
+                        `is a federal state of Russia, I also added`,
                         {
-                            anchor: `Tuvan throat singing`,
+                            anchor: `throat singing`,
                             wiki: `Tuvan_throat_singing`,
                         },
-                        `, where overtones in a lone voice sound like accompaniment by a second voice. I liked the implied notion that my brother sings along with me in spirit.`,
+                        `, where overtones in a lone voice sound like accompaniment by a second voice. I liked the implication that my brother sings with me in spirit.`,
                     ],
                     dotKeys: {
                         [OBSERVATION]: true,

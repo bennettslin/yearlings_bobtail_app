@@ -1160,8 +1160,9 @@ export default {
                         {
                             anchor: `second hump`,
                             todo: true,
+                            // TODO: Analogy to traveling. Roam.
                             card: {
-                                description: `A camel stores fat in its hump, allowing it to travel for days without eating. And in trading away Sita's love for the ego boost I gained from humping other women, I was as senseless as a camel who chooses to go hungry just to wear a flashy adornment on his back.`,
+                                description: `A camel stores fat in its hump, allowing it to travel for days without eating. So in trading away the nourishment of Sita's love for the ego boost of humping other women, I was like a senseless camel who chooses to go hungry just to wear a flashy new adornment on his back.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [PUN]: true,
