@@ -668,9 +668,8 @@ export default {
                         `when you really thought the`,
                         {
                             anchor: `world that simple`,
-                            todo: true,
                             card: {
-                                description: `I gave the bracelet to Sita during the first few weeks of our relationship. I was just too inexperienced at the time to show my love in any more meaningful way. Of course, she was just as inexperienced and knew no other way to validate it.`,
+                                description: `I'd given the bracelet to Sita during the first few weeks of our relationship. I was just too inexperienced at the time to show my love in any more meaningful way. Of course, she was too inexperienced to know of any other way to validate it.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -689,9 +688,8 @@ export default {
                         `the`,
                         {
                             anchor: `gesture then`,
-                            todo: true,
                             card: {
-                                description: `I bought the bracelet from a jewelry store at the local mall. It cost a lot relative to my hourly wage at the time, which was all it took for Sita to recognize my earnest intentions.`,
+                                description: `I'd bought the bracelet from a jewelry store in the local mall. It cost a lot relative to my hourly wage at the time. But that was all it took for Sita to recognize my earnest intentions.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -1084,12 +1082,12 @@ export default {
                             todo: true,
                             card: {
                                 description: [
-                                    `In college, I discovered that being drunk made it easier to do arduous tasks like writing`,
+                                    `In college, my wishful thinking was that being drunk makes it easier to do arduous tasks like writing`,
                                     {
                                         anchor: `term papers`,
                                         wiki: `Term_paper`,
                                     },
-                                    `, and so I would shunt the work to my drunken self. But once drunk, I felt like a slave having to take orders from his sober master, and I would do the work poorly or not at all. Somehow this became the strategy I used to deal with the arduous task of breaking up with Sita.`,
+                                    `. So I would shunt that work to my drunken self. Once drunk, however, I felt like a slave taking orders from his sober master, and I would do the work poorly or not at all. Somehow this became my strategy to deal with the arduous task of breaking up with Sita.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,

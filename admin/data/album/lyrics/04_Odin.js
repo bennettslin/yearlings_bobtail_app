@@ -1747,7 +1747,6 @@ export default {
                         `while`,
                         {
                             anchor: `mermaids smile`,
-                            todo: true,
                             card: {
                                 description: [
                                     `T.S. Eliot's "`,
@@ -1755,7 +1754,7 @@ export default {
                                         anchor: `The Love Song of J. Alfred Prufrock`,
                                         wiki: `The_Love_Song_of_J._Alfred_Prufrock`,
                                     },
-                                    `" examines themes of stunted growth and missed opportunities. The poem ends with the narrator bemoaning that while the mermaids may sing, they won't sing for him. And while my resignation has turned the fearsome sea serpents into smiling mermaids, they still don't smile for me.`,
+                                    `" examines themes of stunted growth and missed opportunities. The narrator of the poem bemoans that while the mermaids may sing, they don't sing for him. Similarly, while my resignation has turned the fearsome sea serpents into smiling mermaids, they still don't smile for me.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

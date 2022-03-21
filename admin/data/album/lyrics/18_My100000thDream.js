@@ -26,8 +26,7 @@ export default {
     referenceDescription: `Piano in measure 1`,
     mixStartTime: `0:01:22.94`,
     playerStartTime: 3332.826,
-    todo: true,
-    overview: `Every night I dreamt of reuniting with Sita, only to wake in a panicked sweat as the reality came roaring back that I'd lost her forever. After slogging through the day under a cloud of despair, I would crawl back into bed and await with dread the cruel tricks soon to be played yet again by my subconscious mind. I had no idea when this torment would end. The answer, I feared, was never.`,
+    overview: `After slogging through the day under a cloud of despair, I would crawl into bed and lie awake until exhaustion overpowered me. And every night I would dream of reuniting with Sita, only to wake in a panicked sweat as the reality came roaring back that I'd lost her forever. I had no idea when this cruel trick played by my subconscious mind would end. The answer, I feared, was never.`,
     lyricUnits: [
         {
             unitMap: {},

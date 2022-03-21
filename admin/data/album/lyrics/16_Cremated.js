@@ -981,6 +981,7 @@ export default {
                         {
                             anchor: `his soreness`,
                             todo: true,
+                            // TODO: Talk about figurative soreness.
                             card: {
                                 description: `Miriam's vigorous lovemaking has left me chafed in certain areas. But of course, it gets harder to keep up in old age.`,
                                 dotKeys: {

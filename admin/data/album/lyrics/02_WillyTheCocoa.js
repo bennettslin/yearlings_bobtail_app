@@ -75,7 +75,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `In the past, a disabled child was sometimes thought to be a troll in disguise known as a`,
@@ -83,17 +82,17 @@ export default {
                             anchor: `changeling`,
                             wiki: `Changeling`,
                         },
-                        `, who'd been left in place of a stolen human child. I wanted this song to sound like a band of woodland trolls in secluded revelry after pulling off such a heist. I figured their style would be akin to the swamp rock of`,
+                        `, who'd been left in place of a stolen human infant. I wanted this song to sound like a band of woodland trolls in secluded revelry after pulling off such a heist. I figured their style would be like the swamp rock of`,
                         {
                             anchor: `Creedence Clearwater Revival`,
                             wiki: `Creedence_Clearwater_Revival`,
                         },
-                        `, and I used`,
+                        `, so I used`,
                         {
                             anchor: `melodicas`,
                             wiki: `Melodica`,
                         },
-                        `to evoke`,
+                        `to evoke the sound of`,
                         {
                             anchor: `Cajun accordions`,
                             wiki: `Cajun_accordion`,
