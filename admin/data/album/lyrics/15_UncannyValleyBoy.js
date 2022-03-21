@@ -1218,9 +1218,8 @@ export default {
                             `…`,
                             {
                                 anchor: `traded in`,
-                                todo: true,
                                 card: {
-                                    description: `Like shiny new "bronzes" placed next to a gold trophy from the past, these other women were never more desirable than Sita in hindsight. They thrilled me most only because I'd won them more recently.`,
+                                    description: `Like shiny new "bronzes" placed next to a gold trophy on the shelf, these other women were never more desirable than Sita in hindsight. They thrilled me only because I'd won them recently.`,
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                         [PUN]: true,
@@ -1553,7 +1552,7 @@ export default {
                                 todo: true,
                                 card: {
                                     description: [
-                                        `In my chant, however, the syllables gradually shift to form the holy name of Mara. Unlike Valmiki, who embraced Eastern spirituality, I find salvation in the embrace of Western women. And so my chant ends with an expression of Western faith. In the`,
+                                        `But in my chant, the syllables gradually shift to form the holy name of Mara. And while Valmiki embraced Eastern spirituality, my salvation lies in the embrace of Western women. So my chant ends with an expression of Western faith. In the`,
                                         {
                                             anchor: `New Testament`,
                                             wiki: `New_Testament`,
@@ -1586,7 +1585,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `To record the gradual shift from "Rama" to "Mara" in the backing vocals, I made a`,
@@ -1594,7 +1592,7 @@ export default {
                             anchor: `click track`,
                             wiki: `Click_track`,
                         },
-                        `at a tempo that was calculated to arrive an eighth note ahead of the mix after seven measures. I then recorded multiple vocal tracks along to it, taking breaths at different points on each one. Overlaid together, they create the impression of a single uninterrupted take.`,
+                        `at a tempo sped up to arrive an eighth note ahead after seven measures. I then recorded multiple vocal tracks, taking breaths at different points each time. Heard together at once, they create the impression of a single uninterrupted take.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
