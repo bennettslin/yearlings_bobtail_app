@@ -550,15 +550,14 @@ export default {
                         `on a`,
                         {
                             anchor: `self-servicing cleric surgeon`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `But though my drunken self is forced to adopt the faith of his sober half, this internal conflict remains invisible to onlookers, who can only watch in bewilderment as I perform my own`,
+                                    `But while my drunken self is forced to adopt the faith of his sober half, this internal conflict remains unseen to others, who can only watch in bewilderment as I perform`,
                                     {
                                         anchor: `circumcision`,
                                         wiki: `Circumcision`,
                                     },
-                                    `.`,
+                                    `on myself.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -593,9 +592,8 @@ export default {
                         `This swarm pumped and`,
                         {
                             anchor: `kissed off, she purges up`,
-                            todo: true,
                             card: {
-                                description: `Upon bringing me to orgasm, Miriam sucks up the ejaculate and leans over the car door to spit it out. But this innocent act seems to carry a hidden message, that the genes in my defective sperm must never be allowed to mingle with hers.`,
+                                description: `Upon bringing me to orgasm, Miriam sucks up the ejaculate and leans over the car door to spit it out. But in this innocent act, I can't help but read a hidden message. Namely, that the genes in my defective sperm must never be allowed to mingle with hers.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -626,7 +624,6 @@ export default {
                         `his`,
                         {
                             anchor: `offscreen person dubs`,
-                            todo: true,
                             card: {
                                 description: [
                                     `Of course, this won't be the first time I've tossed a puppet aside after it served my purpose. Like a`,
@@ -634,7 +631,7 @@ export default {
                                         anchor: `ventriloquist`,
                                         wiki: `Ventriloquism`,
                                     },
-                                    `with a dummy on his lap, I made my drunken half say all the questionable things needed to get what I wanted, while I just sat there looking appalled.`,
+                                    `with a dummy on his lap, I made my drunken half say all the questionable things needed to fulfill my desires, while I just sat there looking appalled.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -676,19 +673,18 @@ export default {
                     lyricRight: [
                         {
                             anchor: `twitching sword`,
-                            todo: true,
                             card: {
                                 description: [
                                     {
                                         anchor: `Dubbing`,
                                         wiki: `Dubbing_(filmmaking)`,
                                     },
-                                    `can refer to the replacement of an actor's voice in film, but also to the ritual of`,
+                                    `refers to the replacement of an actor's voice in film, but also to the ritual of`,
                                     {
                                         anchor: `conferring knighthood`,
                                         wiki: `Accolade`,
                                     },
-                                    `. And so we find the dummy of my drunken half, confused by the orders he's been given to speak for my crimes, instead patting me erratically on the shoulder with a sharp sword.`,
+                                    `. So now we find my drunken half, confused by the order he's been given to speak for my crimes, instead patting me erratically on the shoulder with a sharp sword.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -770,15 +766,14 @@ export default {
                         `it`,
                         {
                             anchor: `hums a typo`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `Like a typo, Miriam's involvement with me was a simple mistake that she could easily correct. And like a "`,
+                                    `Like a typo, Miriam's involvement with me was a simple mistake she could easily correct. And in the same vein as a "`,
                                     {
                                         anchor: `Type O`,
                                         wiki: `Blood_type`,
                                     },
-                                    `," the universal blood donor, I was eager to give of myself to all other types of women, yet only one of my own type was able to give as much back.`,
+                                    `," the universal blood donor, I was eager to give of myself to all other women, but only one who was already my own was able to give as much back.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
