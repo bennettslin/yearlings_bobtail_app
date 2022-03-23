@@ -801,7 +801,7 @@ export default {
                             // Too wordy.
                             todo: true,
                             card: {
-                                description: `My songs projected the image of an inexperienced kid forever unlucky in love. But as the misfortunes of my past receded into the distance, I needed greater quantities of alcohol to carry on with the lie that my life hadn't substantially improved.`,
+                                description: `My songs projected the image of an inexperienced kid forever unlucky in love. But as the misfortunes of my youth receded into further into the past, I needed greater quantities of alcohol to carry on with the lie that my life hadn't substantially improved.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -817,21 +817,19 @@ export default {
                         `but it's too late to`,
                         {
                             anchor: `unscrew a Bud`,
-                            // I'm still not getting the right wording.
-                            todo: true,
                             card: {
                                 description: [
-                                    `But I relinquish my chance to know the redhead. Not just because it's past`,
+                                    `I end up relinquishing my chance to know the redhead. It's after`,
                                     {
                                         anchor: `last call`,
                                         wiki: `Last_call_(bar_term)`,
                                     },
-                                    `, and I would need a few more`,
+                                    `, and I would need a few`,
                                     {
                                         anchor: `Budweisers`,
                                         wiki: `Budweiser`,
                                     },
-                                    `in me to reach the desired level of affability. It's also too late to present myself as someone who isn't already in a sexual relationship with his best friend. I can't just unscrew a "bud" at will.`,
+                                    `in me to reach the desired level of affability. But it's also too late to present myself as someone who isn't sexually involved with his best friend. I can't just unscrew a "bud" at will.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

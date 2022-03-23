@@ -172,7 +172,7 @@ export default {
                             anchor: `polite, yet resigned`,
                             todo: true,
                             card: {
-                                description: `While Sita had spent the day bottling up her emotions to brace for that night's confrontation, I was drunk and ready to pass out. So as she lobbed her accusations, I was still processing the situation and could only respond calmly and curtly, which just added to her fluster.`,
+                                description: `Having braced for that night's confrontation, Sita was now hurling all her accusations at me. Meanwhile, I was drunk and still processing the situation. So I could only respond curtly, which just added to her fluster.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -205,7 +205,7 @@ export default {
                             anchor: `went through your mail`,
                             todo: true,
                             card: {
-                                description: `Confused about why I'd grown distant, Sita caved in that day and snooped around on my desktop computer. In so doing, she stumbled upon my emails, one of which spoke of a crush, and another soliciting advice from friends on how to break up gently.`,
+                                description: `Confused about why I'd grown distant, Sita caved in that day and snooped around on my desktop computer. In so doing, she stumbled upon some emails to my friends, which spoke of recent crushes while soliciting advice on how to break up gently.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -856,7 +856,6 @@ export default {
                                 lyric: `Übermensch`,
                             },
                             properNoun: true,
-                            todo: true,
                             card: {
                                 description: [
                                     `The German philosopher`,
@@ -872,7 +871,7 @@ export default {
                                             wiki: `Übermensch`,
                                         },
                                     },
-                                    `, or "overhuman," as an ideal of perfection toward which humanity might strive. I equated this with my goal to become a great artist. But since my underlying motive for creating great works was to be loved by scores of women, it then followed that the perfect version of myself could only be realized by having a cheating heart.`,
+                                    `, or "overhuman," as an ideal of perfection toward which humanity might strive. I equated this to my goal of becoming a great artist. But since my underlying motive for this goal was to be loved by scores of women, it then followed that the ideal version of myself could only be realized by having a cheating heart.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -956,15 +955,14 @@ export default {
                         `each`,
                         {
                             anchor: `attack with the proper fist`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `Out of frustration over conflicting desires, I start punching myself in the head, as if each half of my brain is attacking the other using the one fist under its command. Since the right hemisphere`,
+                                    `Out of frustration over conflicting desires, I start punching myself in the head. Since the left hemisphere`,
                                     {
-                                        anchor: `controls the left side`,
+                                        anchor: `controls the body's right side`,
                                         wiki: `Contralateral_brain`,
                                     },
-                                    `, of course, and the left one the right.`,
+                                    `, and the right hemisphere, the left, it's as if each half of my brain is attacking the other using the one fist under its command.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1029,7 +1027,7 @@ export default {
                             anchor: `trail of crumbs`,
                             todo: true,
                             card: {
-                                description: `Fearing the emotional upheaval ahead, I wonder if it's too late to walk back the damage I've done. But even if I wanted to, I couldn't find my way back. All night I've been nibbling on the bread in my pocket rather than pinching off crumbs for a trail, trading away long-term security to satisfy my short-term hunger.`,
+                                description: `Fearing upheaval ahead, I wonder if it's too late to walk back the damage done. But I couldn't find my way back even if I wanted to. Instead of dropping a breadcrumb trail, I've been nibbling on the rolls in my pocket all night, trading away long-term security to satisfy my short-term hunger.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,

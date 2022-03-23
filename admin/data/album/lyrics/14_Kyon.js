@@ -32,7 +32,19 @@ export default {
     playerReferenceTime: 2498.410,
     playerStartTime: 2496.296,
     todo: true,
-    overview: `The on-again, off-again years allowed me to see how emotionally abusive I'd become. It also wasn't hard to understand how things had degenerated so fast. I lashed out assuming that Sita would lash out right back. But instead she willingly endured my cruelty, and that's what baffled me. In time I came to realize just how thoroughly she'd tied her sense of worth to our relationship. I was fighting for me. She was fighting for us.`,
+    overview: [
+        `I was self-aware enough to recognize the`,
+        {
+            isEmphasis: true,
+            lyric: `mechanism`,
+        },
+        `by which I'd become emotionally abusive so quickly. I would harden my attacks fully expecting Sita to lash out right back. But instead she quietly endured my cruelty, and`,
+        {
+            isEmphasis: true,
+            lyric: `that's`,
+        },
+        `what baffled me. The on-again, off-again years finally gave me the distance needed to understand just how thoroughly she'd tied her sense of worth to our relationship. I was fighting for me. She was fighting for us.`,
+    ],
     lyricUnits: [
         {
             unitMap: {},

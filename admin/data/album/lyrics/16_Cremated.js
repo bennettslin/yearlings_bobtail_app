@@ -874,9 +874,8 @@ export default {
                         `, hears not a`,
                         {
                             anchor: `worrisome`,
-                            todo: true,
                             card: {
-                                description: `After the breakup with Miriam, I only had good wishes for her, which surprised me given how competitive and selfish I was around Sita. But I came away knowing that someone like Miriam could want me, even if just for a while. So as far as I was concerned, it was a pretty good bargain.`,
+                                description: `After the breakup with Miriam, I only had good wishes for her, which surprised me given how competitive and selfish I was around Sita. But I came away knowing that a woman like Miriam could want me, even if just for a while. I didn't have that before, so it felt like a good bargain.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -1157,7 +1156,7 @@ export default {
                             todo: true,
                             // TODO: Analogy to traveling. Roam.
                             card: {
-                                description: `A camel stores fat in its hump, allowing it to travel for days without eating. So in trading away the nourishment of Sita's love for the ego boost of humping other women, I was like a senseless camel who chooses to go hungry just to wear a flashy new adornment on his back.`,
+                                description: `A camel stores fat in its hump, allowing it to travel for days without eating. So in trading away the nourishment of Sita's love for the ego boost of humping other women, I was as senseless as a camel that chooses to go hungry just to wear a flashy new adornment on his back.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [PUN]: true,

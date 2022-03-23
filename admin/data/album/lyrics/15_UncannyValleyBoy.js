@@ -1549,10 +1549,9 @@ export default {
                             `…`,
                             {
                                 anchor: `Maranatha`,
-                                todo: true,
                                 card: {
                                     description: [
-                                        `But in my chant, the syllables gradually shift to form the holy name of Mara. And while Valmiki embraced Eastern spirituality, my salvation lies in the embrace of Western women. So my chant ends with an expression of Western faith. In the`,
+                                        `But in my chant, the syllables gradually shift to form the holy name of Mara. And while Valmiki embraced Eastern devotion, salvation for me lies in the embrace of Western women. And so my chant ends on a phrase of Western faith. Occurring once in the`,
                                         {
                                             anchor: `New Testament`,
                                             wiki: `New_Testament`,

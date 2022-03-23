@@ -181,10 +181,9 @@ export default {
                         `noses in`,
                         {
                             anchor: `penny dreadfuls`,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `The only way for me to even the score was to feel disdain for the popular books and music they consumed.`,
+                                    description: `But I could even the score by showing disdain for the popular books and music they consumed.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -312,7 +311,7 @@ export default {
                             todo: true,
                             cards: [
                                 {
-                                    description: `By then, I was mostly on autopilot when it came to hitting on random women in random situations. But stunned by Sita's beauty, I made a particular effort to succeed. So after handing her the lancet pen, I began to engage in conversation.`,
+                                    description: `By then, I was mostly on autopilot when it came to hitting on random women in random situations. But taken aback by Sita's beauty, I made a particular effort to succeed. So after handing her the lancet pen, I began to engage in conversation.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -546,7 +545,7 @@ export default {
                                         anchor: `German navy`,
                                         wiki: `Kriegsmarine`,
                                     },
-                                    `in World War II. In this analogy, Sita and I fight for the Axis. They were history's heroes in`,
+                                    `in World War II. In this metaphor, Sita and I fight for the Axis, who were history's heroes in`,
                                     {
                                         isItalic: true,
                                         lyric: `The Man in the High Castle`,
@@ -568,8 +567,9 @@ export default {
                         {
                             anchor: `no convert's missed`,
                             todo: true,
+                            // TODO: This is more about my investment into it.
                             card: {
-                                description: `In asking for the largest payments upfront, RI Research correctly guessed that I would grow disillusioned sooner rather than later. Sita's abrupt departure from my life, after she'd made such a profound impact, seemed like evidence that I was once again a sucker for the perfect scam.`,
+                                description: `In asking for the largest payments upfront, RI Research rightly guessed that I would grow disillusioned sooner rather than later. Sita's abrupt departure from my life, after she'd made such a profound impact, seemed like evidence that I was once again a sucker for the perfect scam.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -1318,8 +1318,6 @@ export default {
                         {
                             anchor: `Grace Darling's beacon`,
                             properNoun: true,
-                            // Not sure if these should be separate cards.
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -1332,7 +1330,7 @@ export default {
                                             anchor: `tuberculosis`,
                                             wiki: `Tuberculosis`,
                                         },
-                                        `. And as Sita comforts me, I'm reminded that she's my "grace darling," having rescued me from a sea of loneliness.`,
+                                        `. And as Sita comforts me, I'm reminded that she's my "grace darling," the one who rescued me from a sea of loneliness.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,

@@ -1061,10 +1061,16 @@ export default {
                         `where its`,
                         {
                             anchor: `hopeless rests`,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `Hope was all that remained in Pandora's box. But upon having the hard truths of the world revealed to me by Sasha, I'm just left to feel as hopeless as ever.`,
+                                    description: [
+                                        `Hope was all that remained in`,
+                                        {
+                                            anchor: `Pandora's box`,
+                                            wiki: `Pandora's_box`,
+                                        },
+                                        `. But upon having the hard truths of the world revealed to me by Sasha, I'm left to feel as hopeless as ever.`,
+                                    ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [REFERENCE]: true,
