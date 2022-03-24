@@ -170,9 +170,8 @@ export default {
                         `So`,
                         {
                             anchor: `polite, yet resigned`,
-                            todo: true,
                             card: {
-                                description: `Having braced for that night's confrontation, Sita was now hurling all her accusations at me. Meanwhile, I was drunk and still processing the situation. So I could only respond curtly, which just added to her fluster.`,
+                                description: `Having braced for that night's confrontation, Sita deftly lobbed one accusation after another. Meanwhile, I was drunk and still trying to process the situation. So I could only respond curtly, which just added to her fluster.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -203,9 +202,8 @@ export default {
                         `I'm sorry, but I`,
                         {
                             anchor: `went through your mail`,
-                            todo: true,
                             card: {
-                                description: `Confused about why I'd grown distant, Sita caved in that day and snooped around on my desktop computer. In so doing, she stumbled upon some emails to my friends, which spoke of recent crushes while soliciting advice on how to break up gently.`,
+                                description: `Confused about why I'd grown distant, Sita snooped around on my desktop computer that day and stumbled upon an email to my friends. In the email, I spoke of a recent crush and solicited advice on breaking up gently.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -908,15 +906,14 @@ export default {
                         `Then the`,
                         {
                             anchor: `guardian knot`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `While the`,
+                                    `The`,
                                     {
                                         anchor: `umbilical cord`,
                                         wiki: `Umbilical_cord`,
                                     },
-                                    `passes sustenance from a mother to the child inside her womb, after birth it shrivels and falls off to reveal the navel. So in sustaining each other by locking our navels, Sita became my guardian, and I hers.`,
+                                    `passes sustenance from a mother to the fetus inside her womb. But after birth, it shrivels and falls off to reveal the child's navel. So in sustaining each other through locked navels, Sita became my guardian, and I hers.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1080,12 +1077,12 @@ export default {
                             todo: true,
                             card: {
                                 description: [
-                                    `In college, my wishful thinking was that being drunk makes it easier to do arduous tasks like writing`,
+                                    `In college, my wishful thinking was that a burdensome task like writing a`,
                                     {
-                                        anchor: `term papers`,
+                                        anchor: `term paper`,
                                         wiki: `Term_paper`,
                                     },
-                                    `. So I would shunt that work to my drunken self. Once drunk, however, I felt like a slave taking orders from his sober master, and I would do the work poorly or not at all. Somehow this became my strategy to deal with the arduous task of breaking up with Sita.`,
+                                    `could be shunted onto my drunken self. Once drunk, however, I felt like a slave taking orders from a master, and I would do the work poorly or not at all. Somehow this became my strategy for handling the burden of breaking up with Sita.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -1103,6 +1100,7 @@ export default {
                         {
                             anchor: `holy war`,
                             todo: true,
+                            // TODO: Tie religious motivations with benefits of breaking up.
                             card: {
                                 description: [
                                     `Most of the`,

@@ -643,7 +643,7 @@ export default {
                                         anchor: `shell game`,
                                         wiki: `Shell_game`,
                                     },
-                                    `is a classic swindle in which a ball is placed under one of three nutshells that are then shuffled in plain view. Having recognized life to be an endless series of shell games, I vowed to never get suckered again. And knowing now how the ball gets misplaced through`,
+                                    `is a classic swindle in which a ball is placed under one of three nutshells that are then shuffled in plain view. Having recognized life to be an endless series of shell games, I vowed never to get suckered again. And knowing now how the ball gets misplaced through`,
                                     {
                                         anchor: `sleight of hand`,
                                         wiki: `Sleight_of_hand`,

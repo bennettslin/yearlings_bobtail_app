@@ -726,7 +726,7 @@ export default {
                             // This might be all I want to say. Just phrase better?
                             todo: true,
                             card: {
-                                description: `Sita could relate to my fear of immortality. Growing up Hindu in America, she'd compared nirvana with heaven herself and found both lacking. Though she had no ready answers, she invited me to attend Hindu services with her. I was attracted to Hinduism's sprawling pantheon of deities and avatars, which I found to be comforting. It just seemed like the more details there are to learn, the more room there is to get lost in the divine.`,
+                                description: `Sita could relate to my fear of immortality. Growing up Hindu in America, she'd compared nirvana with heaven herself and found both lacking. Though she had no ready answers, she invited me to attend Hindu services with her. I found Hinduism's sprawling pantheon of deities and avatars to be strangely comforting. It just seemed like the more details there are to learn, the more room there is to get lost in the divine.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -797,9 +797,8 @@ export default {
                         `And darling, don't you worry, these were only`,
                         {
                             anchor: `practice cuts`,
-                            todo: true,
                             card: {
-                                description: `When Sita first noticed the scars on my forearm and asked about them, I replied dryly that they were just for practice. Years later when I expressed concern that she'd tried cutting for herself, she gave me the same assurance. The message was clear that I was the cause in more ways than one.`,
+                                description: `When Sita asked about the scars on my forearm, I replied dryly that they were just for practice. Years later, when I expressed concern after she'd tried cutting for herself, she replied with the same assurance. The message was clear that I was the cause in more ways than one.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -837,7 +836,7 @@ export default {
                             isItalic: true,
                             lyric: `kyon`,
                         },
-                        `?" My heart still breaks somewhat to hear it for this reason.`,
+                        `?" For this reason, my heart still breaks somewhat to hear it.`,
                     ],
                     dotKeys: {
                         [OBSERVATION]: true,

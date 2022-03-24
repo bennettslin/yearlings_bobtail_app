@@ -545,7 +545,7 @@ export default {
                                         anchor: `German navy`,
                                         wiki: `Kriegsmarine`,
                                     },
-                                    `in World War II. In this metaphor, Sita and I fight for the Axis, who were history's heroes in`,
+                                    `in World War II. In this allegory, Sita and I fight for the Axis, who were history's heroes in`,
                                     {
                                         isItalic: true,
                                         lyric: `The Man in the High Castle`,

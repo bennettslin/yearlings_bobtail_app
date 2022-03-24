@@ -798,10 +798,10 @@ export default {
                         `Drunk, you'd`,
                         {
                             anchor: `claim you've never loved`,
-                            // Too wordy.
                             todo: true,
+                            // TODO: Still too wordy?
                             card: {
-                                description: `My songs projected the image of an inexperienced kid forever unlucky in love. But as the misfortunes of my youth receded into further into the past, I needed greater quantities of alcohol to carry on with the lie that my life hadn't substantially improved.`,
+                                description: `I wrote my songs from the viewpoint of an inexperienced kid forever unlucky in love. But this persona grew further outdated as the misfortunes of my youth receded into the past. And so I needed to drink greater amounts of alcohol to carry on with the lie that my life hadn't substantially improved.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

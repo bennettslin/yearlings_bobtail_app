@@ -61,14 +61,15 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 todo: true,
+                // TODO: This is the basic idea.
                 card: {
                     description: [
-                        `I always marveled at how the`,
+                        `As a teenager, I tried to figure out how the`,
                         {
                             anchor: `Beatles`,
                             wiki: `The_Beatles`,
                         },
-                        `weaved melodies and chords so seamlessly, and years ago I vowed to figure out their songwriting methods once and for all. The result of my studies was a notebook filled with musical ideas that were just a bit too treacly for me to do anything with. But years later when planning out this album, I realized that treacle was exactly what an overwrought letter to Sasha called for.`,
+                        `weaved melodies into chords so seamlessly. I came up with some musical phrases in their style, but they felt so labored that I never did anything with them. Years later as I planned out this album, I realized they would work perfectly for a song about an overwrought letter to Sasha.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -121,7 +122,7 @@ export default {
                             anchor: `first semester`,
                             todo: true,
                             card: {
-                                description: `My family was spending the entire summer in Taiwan. We weren't getting back to the States until after Sasha was to have left for Boston and begun the new school year.`,
+                                description: `My family was spending the entire summer in Taiwan. We wouldn't get back to the States until after Sasha was to have left for Boston and begun the new school year.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

@@ -861,7 +861,6 @@ export default {
                             // NOTE: I added an "h" to Shiva.
                             anchor: `chivalry to our Shiva's feet`,
                             properNoun: true,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -869,12 +868,12 @@ export default {
                                             anchor: `Nataraja`,
                                             wiki: `Nataraja`,
                                         },
-                                        `, or "lord of the dance," is a depiction of the Hindu god`,
+                                        `, or "lord of the dance" in Sanskrit, is a depiction of the Hindu god`,
                                         {
                                             anchor: `Shiva`,
                                             wiki: `Shiva`,
                                         },
-                                        `as a cosmic dancer, who dances to tear down the universe and build it up again in an endless cycle. Beneath his feet lies the dwarf demon Apasmara, thus symbolizing Shiva's victory over ignorance. And having ignorantly caused my share of destruction to the universe, I now commit to help rebuild it.`,
+                                        `as he dances to destroy and rebuild the universe in an endless cycle. Crushed beneath his foot lies Apasmara, symbolizing Shiva's victory over ignorance. And having caused my share of ignorant destruction in this universe, I now commit to rebuild it.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
