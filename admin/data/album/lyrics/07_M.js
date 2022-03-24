@@ -472,7 +472,7 @@ export default {
                         {
                             anchor: `Morphined`,
                             card: {
-                                description: `Or I'd be a "Mara fiend," a slightly different kind of addict.`,
+                                description: `Or I would be a "Mara fiend," a slightly different kind of addict.`,
                                 dotKeys: {
                                     [PUN]: true,
                                 },

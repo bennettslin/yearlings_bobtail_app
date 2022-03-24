@@ -360,9 +360,8 @@ export default {
                         `So the`,
                         {
                             anchor: `celibate you'll play`,
-                            todo: true,
                             card: {
-                                description: `Drinking made me impotent and thus impervious to Sita's advances, and so I gladly drank to excess. But not having sex was also purifying in its own right, since this lent the familiar comfort of being my old lovelorn self again.`,
+                                description: `Drinking made me impotent and thus impervious to Sita's advances, so I gladly drank to excess. But not having sex was also purifying in its own right, since this lent the familiar comfort of being my past lovelorn self again.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -428,7 +427,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `In traditional`,
@@ -436,7 +434,7 @@ export default {
                             anchor: `counterpoint`,
                             wiki: `Counterpoint`,
                         },
-                        `, melodies are laid one atop another, and the chord progression is simply a byproduct of the harmonies they form in sequence. But since the chords for this song were already established, I took the reverse approach. Starting with the progression written out as block chords, I assigned each note in a chord to a different part. Then for each part, I wrote a cohesive but unassuming melody that sounded out every one of its assigned notes.`,
+                        `, melodies are laid one atop another, and the chord progression is a byproduct of the harmonies they form in sequence. But since the chords for this song were established first, the reverse approach was called for. I assigned each note in a chord to a different part. Then for every part, I shaped its sequence of assigned notes into an unassuming melody.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -623,10 +621,9 @@ export default {
                     lyric: [
                         {
                             anchor: `Final trip on a tanker`,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `I knew that upon starting afresh with someone new, I would need to stay sober for a while. But short of being completely drunk, I could never muster the courage to break up with Sita. So I drank to oblivion each night, hoping to wake up one morning and discover that by some unknown miracle, I was now both newly single and utterly repulsed by the taste of alcohol.`,
+                                    description: `I knew I would need to stay relatively sober to start afresh with someone new. But short of being drunk, I could never muster the courage to break up with Sita. So I drank to oblivion each night, hoping to wake up one morning and discover that I was both newly single and miraculously repulsed by the taste of alcohol.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -652,7 +649,7 @@ export default {
                             todo: true,
                             // TODO: Mention being stabilized.
                             card: {
-                                description: `I'd ascribed every last one of my grievances to Sita for so long that all I felt after the breakup was an eerie serenity. I could finally drop my "anger," and that was tantamount to being happy.`,
+                                description: `I'd ascribed every last one of my grievances to Sita for so long, all I could feel immediately after the breakup was an eerie serenity. I could finally drop my "anger," and that was tantamount to being happy.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -766,11 +763,9 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                // Just confirm.
-                todo: true,
                 card: {
                     description: [
-                        `After some trial and error, I decided the counterpoint in this song sounded best with each part occupying the same register, which allows them to blend together into a single harmonic layer. At the same time, the ear can tease apart the different timbres of each instrument, as is the case with the banjo, fiddle, and`,
+                        `After some trial and error, I decided the counterpoint sounds best with each part occupying the same register, which allows them to blend into a single harmonic layer. At the same time, the ear can tease apart the different timbres of each instrument, as with the banjo, fiddle, and`,
                         {
                             anchor: `tin whistle`,
                             wiki: `Tin_whistle`,
@@ -813,10 +808,8 @@ export default {
                         `becomes someone's`,
                         {
                             anchor: `last-ditch alibi`,
-                            // Clarify which meaning of leaving in to leave her.
-                            todo: true,
                             card: {
-                                description: `Though my friends were clearly joking to say it was Garry and not me who'd committed this or that act of vandalism, on some level I accepted it as the truth. And now it also wasn't me who'd sapped Sita of her confidence through the years, finally to leave her a crumbled wreck. It must have been Garry. I wasn't there.`,
+                                description: `Though my friends were only joking to say it was Garry and not me who'd committed this or that act of vandalism, on some level I accepted it as the truth. And now it also wasn't me who'd drained Sita of her confidence through the years, leaving her a crumbled wreck. It must have been Garry. I wasn't there.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -858,8 +851,6 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                // Make sure the sensed my bedroom walls sentence makes sense.
-                todo: true,
                 card: {
                     description: [
                         `After`,
@@ -867,17 +858,17 @@ export default {
                             isItalic: true,
                             lyric: `Yearling's Bobtail`,
                         },
-                        `was rejected by every last record label, I got so depressed I went on a months-long bender. I eventually kept a box of wine by my bed to calm my nerves in the middle of the night. One day upon skipping my morning beers, I sensed my bedroom walls conspiring to attack me. I learned this was the first stage of`,
+                        `was rejected by every last indie label, I got so depressed I went on a months-long bender. Eventually I kept a box of wine by my bed to calm my nerves in the middle of the night. One day upon skipping my morning beers, I sensed my bedroom walls conspiring to attack me. I learned this was the first stage of`,
                         {
                             anchor: `delirium tremens`,
                             wiki: `Delirium_tremens`,
                         },
-                        `and started attending`,
+                        `and started to attend`,
                         {
                             anchor: `Alcoholics Anonymous`,
                             wiki: `Alcoholics_Anonymous`,
                         },
-                        `meetings. I haven't had a drink since.`,
+                        `meetings. The paranoia lasted a week. I haven't had a drink since.`,
                     ],
                     dotKeys: {
                         [AFTERWORD]: true,

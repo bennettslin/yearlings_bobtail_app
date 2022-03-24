@@ -641,10 +641,9 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     // TODO: Or bottled butterfly and jarred sibyl.
-                    description: `While the two doublespeaker voices seem to proceed independently, they plant subtle ideas along each other's path, much as our conscious thoughts affect our dreams and vice versa. In this stanza, for example, the mention of a staircase by the "asleep" voice precedes the plummeting spoken of by the "awake" voice.`,
+                    description: `While the two doublespeaker voices seem to operate independently, they plant subtle ideas along each other's path, much as our conscious thoughts affect our dreams and vice versa. In this stanza, for example, the mention of a staircase by the "asleep" voice precedes the plummeting spoken of by the "awake" voice.`,
                     dotKeys: {
                         [OBSERVATION]: true,
                         [SONGCRAFT]: true,
@@ -1507,7 +1506,7 @@ export default {
                             // But as a child, I came to a slightly different conclusion. If my brother and I could be so alike in physical makeup yet so different in mental presence, then it made more sense to believe that no one has a soul.
                             todo: true,
                             card: {
-                                description: `I knew that humans need to fear death to ensure their survival. I just didn't understand why it had to be done consciously. Why couldn't we fear death the same way that oil is said to fear water?`,
+                                description: `I knew that humans need to fear death to ensure their survival. I just didn't understand why it had to be done consciously. Why couldn't living beings fear death the same way that oil is said to fear water?`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -1516,7 +1515,6 @@ export default {
                         `and`,
                         {
                             anchor: `just play dumb`,
-                            todo: true,
                             card: {
                                 description: [
                                     `Neither heaven nor`,
@@ -1524,7 +1522,7 @@ export default {
                                         anchor: `nirvana`,
                                         wiki: `Nirvana`,
                                     },
-                                    `sounded all that pleasant, and yet they were the best offers available. It just seemed to me that if we were meant to know which afterlife to strive for, then its appeal would be self-evident. Why wouldn't the correct spiritual path be obvious to even the most thickheaded child?`,
+                                    `sounded all that pleasant, yet they were the best offers available. It just seemed to me that if we're expected to know which afterlife to strive for, then its appeal should be self-evident. Who would design a world where the correct spiritual path isn't obvious to even the most thickheaded child?`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1564,10 +1562,9 @@ export default {
                         `But for a`,
                         {
                             anchor: `fetus force-fed`,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `Most maddening of all was that one has no say in being brought into this world. Given how distressing the certainty of death must always be, it seemed like there should be an option to opt out to begin with.`,
+                                    description: `Most maddening of all, one has no say in being brought into this world to begin with. Given how distressing the certainty of death must always be, it just seemed like there should be an option to opt out of this whole mess.`,
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                     },
