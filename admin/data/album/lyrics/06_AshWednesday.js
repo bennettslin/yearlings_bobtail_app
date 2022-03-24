@@ -137,7 +137,6 @@ export default {
                         {
                             anchor: `Ulysses' tomb`,
                             properNoun: true,
-                            todo: true,
                             card: {
                                 description: [
                                     `A reference to the classic "`,
@@ -145,7 +144,7 @@ export default {
                                         anchor: `Who's buried in Grant's tomb`,
                                         wiki: `Grant's_Tomb`,
                                     },
-                                    `?" riddle, of course, but also to James Joyce's masterpiece novel`,
+                                    `?" riddle, of course, but also to the James Joyce novel`,
                                     {
                                         isItalic: true,
                                         lyric: {
@@ -153,7 +152,7 @@ export default {
                                             wiki: `Ulysses_(novel)`,
                                         },
                                     },
-                                    `, which Catherine was reading at the time. My playful comment about not reading probably doomed the relationship, as Catherine figured that an illiterate boyfriend would surely be the death of her.`,
+                                    `, which Catherine was reading at the time. The relationship was probably doomed at that point, as having an illiterate boyfriend would surely be the death of her.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -644,7 +643,7 @@ export default {
                             todo: true,
                             card: {
                                 description: [
-                                    `After Catherine cleared her life of me, I tried to win her back by reading lots of books, beginning with the ones we'd discussed. Catherine had mentioned that "Famous Blue Raincoat" echoes a similar theme of purification through betrayal found in Cohen's novel`,
+                                    `After Catherine cleared her life of me, I tried to win her back by reading books, beginning with the ones we'd discussed. Catherine had mentioned that "Famous Blue Raincoat" echoes a similar theme of purification through betrayal found in Cohen's novel`,
                                     {
                                         isItalic: true,
                                         lyric: `Beautiful Losers`,
@@ -818,7 +817,6 @@ export default {
                                 {
                                     anchor: `Catherine vaut bien une messe`,
                                     properNoun: true,
-                                    todo: true,
                                     card: {
                                         description: [
                                             {
@@ -830,12 +828,12 @@ export default {
                                                 anchor: `Protestant`,
                                                 wiki: `Protestantism`,
                                             },
-                                            `but converted to Catholicism to gain the French royal crown. He is reputed to have said, "`,
+                                            `but converted to Catholicism to gain the royal crown. He is reputed to have said, "`,
                                             {
                                                 isItalic: true,
                                                 lyric: `Paris vaut bien une messe`,
                                             },
-                                            `," or "Paris is well worth a Mass," implying that spiritual allegiances are preceded by earthly ambitions. Similarly, I would have happily turned Catholic if it meant getting to stay with Catherine.`,
+                                            `," or "Paris is well worth a Mass," implying that spiritual allegiances may be dictated by earthly ambitions. Similarly, I would have happily turned Catholic if that could get Catherine to stay.`,
                                         ],
                                         dotKeys: {
                                             [OBSERVATION]: true,
