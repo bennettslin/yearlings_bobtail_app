@@ -287,8 +287,9 @@ export default {
                         {
                             anchor: `first pets`,
                             todo: true,
+                            // TODO: Periodically fully heal?
                             card: {
-                                description: `It blew my mind that I could hurt Sita for so long and still live with myself. In hindsight, it's because I never questioned the facade of sanity she'd constructed as a means to cope. I'd allowed myself to believe that our recurring moments of intimacy, which she clung to and cherished as if that's how it always was, were truly all she needed.`,
+                                description: `It blew my mind how I could hurt Sita for so long and still live with myself. In hindsight, I just never questioned the facade of sanity she'd constructed as a means to cope. I'd allowed myself to believe that our periodic moments of intimacy, which she clung to and cherished, were all that was needed for the wounds to fully heal.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -313,12 +314,12 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `Sita had her own story to tell about mistreating her first pet. Upon receiving a kitten as a child, she hugged it so hard that it began to purr. Taking this as a sign of its contentment, she hugged it even harder. Years later, she learned that cats also`,
+                                        `Sita had her own story to tell about mistreating her first pet. Upon receiving a kitten as a child, she hugged it so hard it began to purr. Taking this as a sign of its contentment, she hugged it even harder. Years later, she learned that cats also`,
                                         {
                                             anchor: `purr to cope`,
                                             wiki: `Purr`,
                                         },
-                                        `with distress, and looking back, she realized her kitten had believed it was being crushed to death. She lived in guilt over this ever since.`,
+                                        `with distress, and looking back, she realized her kitten had believed it was being crushed to death. She lived in guilt ever since.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,

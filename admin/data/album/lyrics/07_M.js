@@ -619,7 +619,7 @@ export default {
                                         anchor: `time capsule`,
                                         wiki: `Time_capsule`,
                                     },
-                                    `is a vessel of contemporary objects that will be seen as historical artifacts once rediscovered by a later era. In a way, it allows past generations to speak to future ones. Similarly, in my dejected state, I could only envision my next five-year plan as a forum to air my grievances to a captive future audience.`,
+                                    `is a vessel of contemporary objects that will be seen as historical artifacts once rediscovered in a later era. In a way, it allows a past generation to speak to future ones. Similarly, in my dejected state, I could only envision my next five-year plan as a means for airing my grievances to a captive future audience.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -665,9 +665,8 @@ export default {
                         `in this`,
                         {
                             anchor: `heap of twisted twine`,
-                            todo: true,
                             card: {
-                                description: `But with nothing to show for five years of diligent effort, I was now paralyzed by doubt. There were no more actions I could confidently prescribe to better my circumstances. And so the puppet of my future self could only lie there motionless.`,
+                                description: `But with nothing to show after five years of diligent effort, I was now paralyzed by doubt. There were no more actions I could confidently undertake to better my circumstances. And so the puppet of my future self could only lie there motionless.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -804,7 +803,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `Given all the years I might have to spend in servitude to my five-year plans, I was effectively an old man already. And being "in dentures," I was unable to speak.`,
+                                        `Given all the years I might have to spend in servitude to my five-year plans, I was in effect an old man already. And being "in dentures," I was unable to speak.`,
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,

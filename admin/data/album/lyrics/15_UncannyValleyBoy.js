@@ -634,16 +634,14 @@ export default {
                         `you finally granted their`,
                         {
                             anchor: `nutshells are rigged`,
-                            // Move sleight of hand back where it was.
-                            todo: true,
                             card: {
                                 description: [
-                                    `The`,
+                                    `The classic`,
                                     {
                                         anchor: `shell game`,
                                         wiki: `Shell_game`,
                                     },
-                                    `is a classic swindle in which a ball is placed under one of three nutshells that are then shuffled in plain view. Having recognized life to be an endless series of shell games, I vowed never to get suckered again. And knowing now how the ball gets misplaced through`,
+                                    `is a swindle in which a pea is placed under one of three nutshells that are then shuffled in plain view. Having recognized life to be an endless series of shell games, I vowed never to get suckered again. And knowing now that the pea gets misplaced through`,
                                     {
                                         anchor: `sleight of hand`,
                                         wiki: `Sleight_of_hand`,
@@ -892,9 +890,8 @@ export default {
                         `to watch you`,
                         {
                             anchor: `fail your Sita`,
-                            todo: true,
                             card: {
-                                description: `Modern audiences may find it disgraceful that Rama's first act upon reuniting with Sita was to demand proof of her purity. My reaction is similar when I look back on my need at the time to be the more sexually experienced partner in the relationship. It baffles me now why I couldn't just be grateful for whatever circumstances first had to happen before Sita finally chose me.`,
+                                description: `Modern audiences may find it disgraceful that Rama's first act upon reuniting with Sita was to demand proof of her purity. I feel similarly when looking back on my need to be the more sexually experienced partner in the relationship. It baffles me why I couldn't just be grateful for whatever circumstances needed to happen before Sita finally chose me.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -1126,7 +1123,7 @@ export default {
                                             anchor: `marathon`,
                                             wiki: `Marathon`,
                                         },
-                                        `that rewards patience and resolve, the traits that I happened to possess in spades.`,
+                                        `that rewards patience and resolve, traits that I possessed in spades.`,
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
@@ -1283,7 +1280,7 @@ export default {
                             anchor: `pages you've ripped`,
                             todo: true,
                             card: {
-                                description: `My parents lament my eagerness to ditch past sentiments for present ambitions, as if I'm tearing out old pages from the scrapbook of my life to free up room for new inserts.`,
+                                description: `My parents lament my eagerness to ditch past sentiments in favor of present ambitions, as if I'm tearing out old pages from the scrapbook of my life to free up room for new inserts.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -1384,9 +1381,8 @@ export default {
                                 },
                                 `'s sake`,
                             ],
-                            todo: true,
                             card: {
-                                description: `My next five-year plan, like the one before it, was meant to dramatically improve my life through a major overhaul of the underlying system. Since it couldn't be left half completed, there was no point in questioning it while the work was in progress.`,
+                                description: `My next five-year plan, like the one before it, was meant to dramatically improve my life through an overhaul of the underlying system. Since it couldn't be left half completed, there was no point in second-guessing its logic once the work was already in progress.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
