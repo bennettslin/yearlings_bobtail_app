@@ -1074,15 +1074,14 @@ export default {
                         `Though, the`,
                         {
                             anchor: `master mind`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `In college, my wishful thinking was that a burdensome task like writing a`,
+                                    `In college, my wishful thinking for writing`,
                                     {
-                                        anchor: `term paper`,
+                                        anchor: `term papers`,
                                         wiki: `Term_paper`,
                                     },
-                                    `could be shunted onto my drunken self. Once drunk, however, I felt like a slave taking orders from a master, and I would do the work poorly or not at all. Somehow this became my strategy for handling the burden of breaking up with Sita.`,
+                                    `was that I could shunt the burden onto my drunken self. Once drunk, however, I felt like a slave taking orders from a master, and I would do the work poorly or not at all. Somehow this became my strategy for dealing with the burden of breaking up with Sita.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,

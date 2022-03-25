@@ -352,7 +352,7 @@ export default {
                             anchor: `good for anecdotes`,
                             todo: true,
                             card: {
-                                description: `Though Miriam was entertained by my character, it wasn't in any way that one should hope for, which blew apart my theory that being interesting is the key to dating. I was to be the oddball ex-boyfriend providing her with a lifetime of amusing tales to share, not the future companion who would someday hear them.`,
+                                description: `Though Miriam was entertained by my character, it wasn't in a way that one should hope for, which blew apart my theory that being interesting is the key to dating. I was to be the oddball ex-boyfriend providing a lifetime of amusing tales to share, not the future companion who would one day hear them.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -428,7 +428,6 @@ export default {
                         `not`,
                         {
                             anchor: `at each other's throats`,
-                            todo: true,
                             card: {
                                 description: [
                                     `Some`,
@@ -441,7 +440,7 @@ export default {
                                         anchor: `Abbott and Costello`,
                                         wiki: `Abbott_and_Costello`,
                                     },
-                                    `famously did not get along. This enlivened the dynamic between them onstage, but it also made for tense moments when the tape stopped rolling. Similarly, while Miriam was delighted to hear how my two personalities would befuddle and vex each other in doublespeaker rhyme, she surely wanted no part of the underlying drama that inspired this idea.`,
+                                    `famously did not get along. This enlivened the dynamic between them onstage, but it made for tense moments when the tape stopped rolling. So while Miriam liked the idea of my two personalities befuddling each other in doublespeaker rhyme, she surely wanted no part of the underlying drama that inspired it.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -1060,9 +1059,8 @@ export default {
                     lyricRight: [
                         {
                             anchor: `Redressed`,
-                            todo: true,
                             card: {
-                                description: `As I redress by pulling my pants back up, I'm about to learn that this latest sexual escapade was really meant as redress for the bad news that Miriam has forthcoming.`,
+                                description: `As I redress by pulling my pants back up, I'm about to learn that this latest sexual escapade was meant to be redress for the bad news that Miriam has forthcoming.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -1133,12 +1131,12 @@ export default {
                             todo: true,
                             card: {
                                 description: [
-                                    `Miriam searches for a way to deliver the bad news in the least messy way possible, like a pet owner getting the`,
+                                    `Miriam searches for a way to deliver the bad news in the least messy way possible. She's like a pet owner readying the`,
                                     {
                                         anchor: `pooper scooper`,
                                         wiki: `Pooper-scooper`,
                                     },
-                                    `ready in case her pet makes its mess on a freshly manicured lawn.`,
+                                    `in case her pet makes a mess on her freshly manicured lawn.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
