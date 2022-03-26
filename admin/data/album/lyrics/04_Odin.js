@@ -1132,7 +1132,7 @@ export default {
                                         anchor: `lifeguard`,
                                         wiki: `Lifeguard`,
                                     },
-                                    `earlier in the day. With its shrill cry to warn of danger now forever silenced, it serves to remind me that some dangers must always come without warning.`,
+                                    `earlier in the day. Its shrill cry to warn of danger is now forever silenced. An omen, perhaps, that some dangers come without warning.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1504,9 +1504,8 @@ export default {
                             anchor: `soulless solace`,
                             // From Willy the Cocoa ("unsalvaged souls")
                             // But as a child, I came to a slightly different conclusion. If my brother and I could be so alike in physical makeup yet so different in mental presence, then it made more sense to believe that no one has a soul.
-                            todo: true,
                             card: {
-                                description: `I knew that humans need to fear death to ensure their survival. I just didn't understand why it had to be done consciously. Why couldn't living beings fear death the same way that oil is said to fear water?`,
+                                description: `I knew that living beings need to fear death to ensure their survival. I just didn't understand why it had to be done consciously. Why couldn't we fear death the way oil is said to fear water?`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -1720,7 +1719,6 @@ export default {
                     lyricRight: [
                         {
                             anchor: `his litter`,
-                            todo: true,
                             card: {
                                 description: [
                                     `It isn't just Odin's unused`,
@@ -1733,7 +1731,7 @@ export default {
                                         anchor: `litter`,
                                         wiki: `Litter_(zoology)`,
                                     },
-                                    `of his own, in a world that remembers only those who were made into a great nation.`,
+                                    `of his own.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

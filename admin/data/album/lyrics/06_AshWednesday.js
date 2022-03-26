@@ -931,10 +931,9 @@ export default {
                         `to wear it like a`,
                         {
                             anchor: `tragic mask`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `At some point, I learned to see`,
+                                    `In time I came to see`,
                                     {
                                         anchor: `comedy`,
                                         wiki: `Comedy`,
@@ -944,7 +943,7 @@ export default {
                                         anchor: `tragedy`,
                                         wiki: `Tragedy`,
                                     },
-                                    `as two sides of the same coin. After all, any misfortune can be made into song, writing a song calls for taking the broader view, and looking broadly enough will expose the comic underbelly of every misfortune. So I always preferred a negative outcome to none at all, making everything I did feel like a stage act.`,
+                                    `as two sides of the same coin. After all, any misfortune can be turned into a song, writing a song calls for taking the broader view, and any misfortune viewed broadly enough will reveal its comic underbelly. So I was always happier with a negative outcome than with none at all. But this made everything I do feel like a stage act.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,

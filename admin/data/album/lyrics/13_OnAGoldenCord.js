@@ -102,7 +102,7 @@ export default {
                             anchor: `bread and pocket lint`,
                             todo: true,
                             card: {
-                                description: `Before leaving the cafeteria after a long shift, I might stash some bread rolls in the front pockets of my jacket to munch on the go. Still holding the bracelet, I now tuck my hands in as well to keep warm.`,
+                                description: `Before leaving the cafeteria that evening after a long shift, I stashed some bread rolls in my jacket to munch on the go. Now holding the bracelet, I tuck my hands in my front pockets to keep warm.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -425,9 +425,8 @@ export default {
                     lyricLeft: [
                         {
                             anchor: `Guilt pardons`,
-                            todo: true,
                             card: {
-                                description: `My sober self observes his drunken accomplice's lack of remorse yet can only feel pity, aware of the trauma that must surely linger after performing such a heinous act. After all, avoiding such trauma was precisely the reason he chose not to carry out the hit himself.`,
+                                description: `As my sober self observes his drunken accomplice's lack of remorse, he can only feel pity, knowing the trauma that would linger in anyone who performed this heinous act. After all, avoiding such trauma was the reason he chose not to carry out the hit himself.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -1024,7 +1023,7 @@ export default {
                             anchor: `trail of crumbs`,
                             todo: true,
                             card: {
-                                description: `Fearing upheaval ahead, I wonder if it's too late to walk back the damage done. But I couldn't find my way back even if I wanted to. Instead of dropping a breadcrumb trail, I've been nibbling on the rolls in my pocket all night, trading away long-term security to satisfy my short-term hunger.`,
+                                description: `Fearing upheaval ahead, I wonder if it's too late to walk back the damage done. But I couldn't find my way back even if I wanted to. Instead of dropping a breadcrumb trail, I've been nibbling on the rolls in my pocket all night. I've been trading away long-term security to satisfy my short-term hunger.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -1046,9 +1045,8 @@ export default {
                         {
                             anchor: `Garry's sole witness`,
                             properNoun: true,
-                            todo: true,
                             card: {
-                                description: `While all my promises to Sita have proven to be lies, I didn't intend them to be. Still, while I wish to argue my case, I realize the breakup will be done with sooner if I just accept my role as the villain. And so the sober me, called up to testify for his drunken half, stays silent.`,
+                                description: `Though I desperately wish to plead my case, I realize the breakup will be over with much sooner if I just accept my role as the villain. And so the sober me, called up to testify for his drunken half, stays silent.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,

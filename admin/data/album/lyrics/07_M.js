@@ -210,10 +210,9 @@ export default {
                     lyric: [
                         {
                             anchor: `No minutiae left unmastered`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `Though my main goal was to be well versed in all the important subjects, I got the most satisfaction from showing off some random skill with seeming nonchalance. So I made sure to set aside time for purely fanciful pursuits, like solving a`,
+                                    `Though my goal was to be well versed in every important subject, I got the most satisfaction from showing off a random skill with seeming nonchalance. So I made sure to set aside time for purely fanciful pursuits, like learning to solve a`,
                                     {
                                         anchor: `Rubik's Cube`,
                                         wiki: `Rubik's_Cube`,
@@ -801,7 +800,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `Given all the years I might have to spend in servitude to my five-year plans, I was in effect an old man already. And being "in dentures," I was unable to speak.`,
+                                        `Given all the years I might have to spend in servitude to my five-year plans, I was in effect an old man already. And likely one "in dentures" who was unable to speak.`,
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
@@ -864,7 +863,7 @@ export default {
                             anchor: `world's a naked baby`,
                             todo: true,
                             card: {
-                                description: `At some point, I realized that the social world is just one more part of the world at large. And so it too behaves as it does because of the sum total of what it is. Nothing is hidden from view, and every situation can be understood by reading it closely, no less than world events can be learned about by studying history textbooks.`,
+                                description: `At some point, I realized that the social world is just another part of the world at large. And so it too behaves as the sum of all its moving parts. Nothing is hidden from view, and every social situation can be understood by reading it closely, no less than facts can be memorized by studying textbooks.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },

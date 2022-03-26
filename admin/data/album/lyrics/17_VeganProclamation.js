@@ -111,7 +111,7 @@ export default {
                             properNoun: true,
                             todo: true,
                             card: {
-                                description: `As a child, I never paid much attention to our pet cat Odin. He just seemed to come with the house. So when Sita and I adopted a cat together, it surprised me just how naturally the instinct came to me to nurture a pet. Years later when my failure to nurture the relationship with Sita led to our final breakup, I thought of Odin often.`,
+                                description: `As a child, I didn't pay much attention to Odin. He just seemed to come with the house. So when Sita and I adopted a cat together, I was surprised how naturally the instinct to nurture a pet came to me. Years later when my failure to nurture the relationship with Sita led to our final breakup, I thought of Odin often.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -258,9 +258,8 @@ export default {
                         `set to rock this pout from`,
                         {
                             anchor: `horse to chair`,
-                            todo: true,
                             card: {
-                                description: `In other words, for the duration of my entire life, from rocking horse to rocking chair.`,
+                                description: `In other words, from rocking horse to rocking chair.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -287,7 +286,7 @@ export default {
                         {
                             anchor: `first pets`,
                             todo: true,
-                            // TODO: Periodically fully heal?
+                            // TODO: Which seemed to cover the wound, also healed it.
                             card: {
                                 description: `It blew my mind how I could hurt Sita for so long and still live with myself. In hindsight, I just never questioned the facade of sanity she'd constructed as a means to cope. I'd allowed myself to believe that our periodic moments of intimacy, which she clung to and cherished, were all that was needed for the wounds to fully heal.`,
                                 dotKeys: {
@@ -314,7 +313,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `Sita had her own story to tell about mistreating her first pet. Upon receiving a kitten as a child, she hugged it so hard it began to purr. Taking this as a sign of its contentment, she hugged it even harder. Years later, she learned that cats also`,
+                                        `Sita had her own story to tell about mistreating her first pet. Upon receiving a kitten as a child, she hugged it so hard it began to purr. Taking this as a sign of contentment, she hugged it even harder. Years later, she learned that cats will`,
                                         {
                                             anchor: `purr to cope`,
                                             wiki: `Purr`,

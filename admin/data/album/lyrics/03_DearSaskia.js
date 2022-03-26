@@ -69,7 +69,7 @@ export default {
                             anchor: `Beatles`,
                             wiki: `The_Beatles`,
                         },
-                        `weaved melodies into chords so seamlessly. The music for this song came from those efforts, but it felt too labored, and all my fixes made it worse, so I put it away. Years later, I realized that music labored to death was exactly what a song about an overwrought letter to Sasha called for.`,
+                        `weaved melodies into chords so seamlessly. The music for this song came from those efforts. It felt too labored, and all my fixes made it worse, so I put it away. But years later, I realized that music labored to death was exactly what a song about an overwrought letter to Sasha called for.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
