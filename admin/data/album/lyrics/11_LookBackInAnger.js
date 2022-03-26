@@ -801,7 +801,7 @@ export default {
                             todo: true,
                             // TODO: Still too wordy?
                             card: {
-                                description: `I wrote my songs from the viewpoint of an inexperienced kid forever unlucky in love. But this persona grew further outdated as the misfortunes of my youth receded into the past. And so I needed to drink greater amounts of alcohol to carry on with the lie that my life hadn't substantially improved.`,
+                                description: `My songs were about being an inexperienced kid forever unlucky in love. But this persona grew further outdated as the hardships of my youth receded into the past. And so I needed to drink greater amounts of alcohol to carry on with the lie that my life hadn't substantially improved.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

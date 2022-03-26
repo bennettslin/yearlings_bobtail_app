@@ -1572,7 +1572,7 @@ export default {
                                                 anchor: `Tar pits`,
                                                 wiki: `Tar_pit`,
                                             },
-                                            `occur when natural asphalt leaks to the surface from underground. Preserving wood and bone, they are rich sources of paleontological discovery.`,
+                                            `occur when natural asphalt leaks to the surface from underground. Preserving wood and bone, they're rich sources of paleontological discovery.`,
                                         ],
                                     },
                                     {
@@ -1649,9 +1649,8 @@ export default {
                         },
                         {
                             anchor: `toughtim rite`,
-                            todo: true,
                             card: {
-                                description: `Having now achieved a full out-of-body experience, I gaze down upon my drugged-out self. Set against the familiar backdrop of Los Angeles, this degrading sight reminds me that in having scuttled off to the Bay Area, I'm shirking my obligation to care for my autistic brother. My sister, on the other hand, still lives nearby. Guilt-ridden, I sarcastically note that "brother and sister taught him right."`,
+                                description: `Having now achieved a full out-of-body experience, I gaze down upon my drugged-out self. Set against the familiar backdrop of Los Angeles, this degrading sight reminds me that in having scuttled off to the Bay Area, I'm shirking my duty to care for my autistic brother. My sister, on the other hand, lives nearby. Guilt-ridden, I sarcastically note that "brother and sister taught him right."`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -1711,8 +1710,6 @@ export default {
                             // NOTE: Changing from Nunavutter.
                             anchor: `Noworse and Nunavetter`,
                             properNoun: true,
-                            // Just confirm. This may be the best it will be.
-                            todo: true,
                             card: {
                                 description: [
                                     `Our Inuit tribe has now ventured all the way to`,
@@ -1720,7 +1717,7 @@ export default {
                                         anchor: `Nunavut`,
                                         wiki: `Nunavut`,
                                     },
-                                    `, the northernmost territory of Canada. Yet with the reappearance of the Norse in my thoughts, I realize our bounds are not limitless, as even imaginations must repeat. There's no new ground left to cover, in both our fantasy epics and our everyday lives. And so, just as the "Norse" encounter the "Nunavutters," we end the night as we'd begun it, "no worse and none the better."`,
+                                    `, the northernmost territory of Canada. Yet with the Norse making a reappearance in my thoughts, I realize that even our fantasies must circle back and cover old ground, just like the humdrum lives from which we're trying to escape. So as the "Norse" encounter the "Nunavutters," we end the night as we'd begun it, "no worse and none the better."`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

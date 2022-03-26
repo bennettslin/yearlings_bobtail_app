@@ -213,12 +213,12 @@ export default {
                             todo: true,
                             card: {
                                 description: [
-                                    `Though my main goal was to be well versed in all the important subjects, I derived the most satisfaction from being able to display some random skill with seeming nonchalance, like solving a`,
+                                    `Though my main goal was to be well versed in all the important subjects, I got the most satisfaction from showing off some random skill with seeming nonchalance. So I made sure to set aside time for purely fanciful pursuits, like solving a`,
                                     {
                                         anchor: `Rubik's Cube`,
                                         wiki: `Rubik's_Cube`,
                                     },
-                                    `. So I made sure to set aside time for purely fanciful pursuits.`,
+                                    `.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -553,7 +553,6 @@ export default {
                         {
                             anchor: `Moonie wedding`,
                             properNoun: true,
-                            todo: true,
                             card: {
                                 description: [
                                     `The`,
@@ -561,22 +560,22 @@ export default {
                                         anchor: `Unification Church`,
                                         wiki: `Unification_Church`,
                                     },
-                                    `founded by`,
+                                    `, founded by`,
                                     {
                                         anchor: `Sun Myung Moon`,
                                         wiki: `Sun_Myung_Moon`,
                                     },
-                                    `is known for both its aggressive`,
+                                    `, is known for its aggressive`,
                                     {
                                         anchor: `proselytism`,
                                         wiki: `Proselytism`,
                                     },
-                                    `and its`,
+                                    `, as well as its`,
                                     {
                                         anchor: `mass weddings`,
                                         wiki: `Blessing_ceremony_of_the_Unification_Church`,
                                     },
-                                    `, in which thousands of congregants are paired off with perfect strangers. Whenever a Moonie accosted me on campus, I would amuse myself with the thought that if I just listened to their spiel and accepted their pamphlet, then my struggle to find a romantic partner would be over in an instant.`,
+                                    `in which thousands of congregants are paired off with perfect strangers. Whenever a Moonie accosted me on campus, the thought would amuse me that I could just accept their invitation, and my struggle to find a romantic partner would be over in an instant.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -593,9 +592,8 @@ export default {
                         {
                             anchor: `"Made in America" signs`,
                             properNoun: true,
-                            todo: true,
                             card: {
-                                description: `As a way to promote cross-cultural harmony, the pairings in these mass weddings are often international by design. So my Moonie bride might be a foreigner who cynically chose the church just to raise a family in America. And I would be foolish to believe my "maiden Mara co-signs" the marriage license in good faith.`,
+                                description: `As a way to promote cross-cultural harmony, the pairings in these mass weddings are often international by design. Which means my Moonie bride might be a foreigner who cleverly joined the church just to start a family in America. And if so, I would be a fool to believe my "maiden Mara co-signs" the marriage license in good faith.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [PUN]: true,

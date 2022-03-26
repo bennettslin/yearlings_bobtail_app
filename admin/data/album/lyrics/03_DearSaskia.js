@@ -69,7 +69,7 @@ export default {
                             anchor: `Beatles`,
                             wiki: `The_Beatles`,
                         },
-                        `weaved melodies into chords so seamlessly. I came up with some musical phrases in their style, but they felt so labored that I never did anything with them. Years later as I planned out this album, I realized they would work perfectly for a song about an overwrought letter to Sasha.`,
+                        `weaved melodies into chords so seamlessly. The music for this song came from those efforts, but it felt too labored, and all my fixes made it worse, so I put it away. Years later, I realized that music labored to death was exactly what a song about an overwrought letter to Sasha called for.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -344,7 +344,7 @@ export default {
                                         anchor: `Jewish`,
                                         wiki: `Judaism`,
                                     },
-                                    `, which in turn motivated her to be a better Jew. It frustrated me that since I could never help strengthen her faith, I would always be at a disadvantage in "getting her."`,
+                                    `, which in turn motivated her to be a better Jew. Since I could never help strengthen her faith myself, I would always be at a disadvantage in "getting her."`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,

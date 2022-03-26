@@ -59,7 +59,7 @@ export default {
                                 anchor: `Valley girl`,
                                 wiki: `Valley_girl`,
                             },
-                            `stereotype. So the kids I grew up with proudly self-identified with the label, even if they didn't embody its traits.`,
+                            `stereotype. So the kids I grew up with self-identified with the label, even if they didn't embody its traits.`,
                         ],
                         dotKeys: {
                             [OBSERVATION]: true,
@@ -84,7 +84,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: `I wrote the music for this song a while back after waking from a horrid nightmare that I badly needed to retell. But I quietly shelved it after all my attempts to describe the nightmare only elicited laughter. Years later, I realized its gloomy chords and disjointed tempo changes could be repurposed into this song about a lecture delivered by a nightmarish version of my parents.`,
+                    description: `I wrote the music for this song a while back after waking from a horrid nightmare. The premise quickly seemed laughable, so I shelved it. But years later, I realized its gloomy chords and disjointed tempo changes would work well for a song about a nightmarish version of my parents.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGCRAFT]: true,
@@ -928,9 +928,8 @@ export default {
                         `your idol who riled you when you saw that you`,
                         {
                             anchor: `two were tied`,
-                            todo: true,
                             card: {
-                                description: `While Sita had hoped for us to be tied in a matrimonial sense, I chafed that we were also tied in a competitive sense. Between the two of us, I had fewer romantic partners in my past, and this felt like a threat.`,
+                                description: `While Sita had hoped for us to be tied in a matrimonial sense, I chafed that we were also tied in a competitive sense. Between the two of us, I had fewer past romances to speak of, and this felt like a threat.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -1115,15 +1114,16 @@ export default {
                         {
                             anchor: `fairer marathon`,
                             todo: true,
+                            // TODO: Does this logic connect?
                             cards: [
                                 {
                                     description: [
-                                        `The constant one-upmanship wasn't just petty. It was exhausting to keep an inner tally of all the times I felt slighted. I wanted life to be more like a`,
+                                        `The endless one-upmanship wasn't just petty. It was exhausting to keep an inner tally of all the times I felt slighted. I wanted life to be more like a`,
                                         {
                                             anchor: `marathon`,
                                             wiki: `Marathon`,
                                         },
-                                        `that rewards patience and resolve, traits that I possessed in spades.`,
+                                        `that rewards patience and resolve, the traits I possessed in spades.`,
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
@@ -1316,7 +1316,7 @@ export default {
                                 anchor: `sun tinkles light`,
                                 todo: true,
                                 card: {
-                                    description: `In the nightmare, I was now ruler of the neighborhood. I would shower my subjects in urine, their sole means of subsistence. In hindsight, my brain was probably telling me to wake up and use the bathroom.`,
+                                    description: `In the nightmare, I was now ruler of the neighborhood. I would shower my subjects in urine, their sole means of subsistence. In retrospect, my brain was probably telling me to wake up and use the bathroom.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [OBSERVATION]: true,
