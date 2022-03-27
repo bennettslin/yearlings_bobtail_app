@@ -1124,15 +1124,14 @@ export default {
                         `to be a`,
                         {
                             anchor: `guard's whistle`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `Wandering the beach in my dream, I notice a steel whistle buried in the sand that was dropped by a`,
+                                    `Wandering the beach in my dream, I notice a steel whistle that was likely dropped in the sand by a`,
                                     {
                                         anchor: `lifeguard`,
                                         wiki: `Lifeguard`,
                                     },
-                                    `earlier in the day. Its shrill cry to warn of danger is now forever silenced. An omen, perhaps, that some dangers come without warning.`,
+                                    `. Its shrill cry to warn of danger is now forever silenced. An omen, perhaps, that some dangers come without warning.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1449,25 +1448,19 @@ export default {
                         `when your`,
                         {
                             anchor: `day to die`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `As a child, I suffered from`,
+                                    `As a child I suffered from`,
                                     {
                                         anchor: `night terrors`,
                                         wiki: `Night_terror`,
                                     },
-                                    `related to my fear of death. My mother would try to comfort me with the promise of`,
+                                    `related to my fear of death. My mother tried to comfort me with the promise of`,
                                     {
                                         anchor: `reincarnation`,
                                         wiki: `Reincarnation`,
                                     },
-                                    `. But this just scared me further, since the end goal of Buddhism is to`,
-                                    {
-                                        isEmphasis: true,
-                                        lyric: `escape`,
-                                    },
-                                    `the cycle of rebirth. Being reborn again and again, but only up until my last life, was just aging and dying on a grander scale.`,
+                                    `, but I found this thought even more dreadful. It wasn't just dying that frightened me; it was a lifetime of hurtling toward death. What reincarnation offered was another round of the same.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -1487,7 +1480,7 @@ export default {
                         {
                             anchor: `holed up hostage`,
                             card: {
-                                description: `And yet the thought of being stuck with a soul forever, an inescapable fate promised by the faiths of my classmates, seemed no less dreadful.`,
+                                description: `And yet the thought of being stuck with a soul forever, an inescapable fate promised by the faiths of my classmates, felt no less disturbing.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -1502,10 +1495,15 @@ export default {
                         `pray for`,
                         {
                             anchor: `soulless solace`,
-                            // From Willy the Cocoa ("unsalvaged souls")
-                            // But as a child, I came to a slightly different conclusion. If my brother and I could be so alike in physical makeup yet so different in mental presence, then it made more sense to believe that no one has a soul.
                             card: {
-                                description: `I knew that living beings need to fear death to ensure their survival. I just didn't understand why it had to be done consciously. Why couldn't we fear death the way oil is said to fear water?`,
+                                description: [
+                                    `The end goal of Buddhism is`,
+                                    {
+                                        anchor: `nirvana`,
+                                        wiki: `Nirvana`,
+                                    },
+                                    `, release from the cycle of rebirth. But this just seemed like dying on a grander scale, which confirmed my intuition that one shouldn't want to live in the first place. So why do we?`,
+                                ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -1515,14 +1513,7 @@ export default {
                         {
                             anchor: `just play dumb`,
                             card: {
-                                description: [
-                                    `Neither heaven nor`,
-                                    {
-                                        anchor: `nirvana`,
-                                        wiki: `Nirvana`,
-                                    },
-                                    `sounded all that pleasant, yet they were the best offers available. It just seemed to me that if we're expected to know which afterlife to strive for, then its appeal should be self-evident. Who would design a world where the correct spiritual path isn't obvious to even the most thickheaded child?`,
-                                ],
+                                description: `Neither heaven nor nirvana sounded all that pleasant, yet they were the best offers available. It just seemed to me that if we're expected to know which afterlife to strive for, then its appeal should be self-evident to even the most thickheaded child.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },

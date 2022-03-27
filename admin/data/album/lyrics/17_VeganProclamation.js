@@ -73,7 +73,7 @@ export default {
                                     anchor: `can't have both`,
                                     todo: true,
                                     card: {
-                                        description: `This advice was offered by a friend when I bought a used turntable. And as it turns out, what he had to say about vinyl records holds just as well for life decisions. I learned this the hard way when I saw that my thoughtful deeds were always being negated by my hurtful ones. I couldn't keep two separate selves, where one gets praised for my kindness and the other takes the blame for all my selfish desires. I couldn't be both kinds of people.`,
+                                        description: `This advice was offered by a friend when I bought a used turntable. As it turns out, what he had to say about vinyl records holds just as well for life decisions. I learned this the hard way when I saw that my thoughtful deeds were always negated by my hurtful ones. I couldn't keep two separate selves, where one gets praised for my kindness and the other takes the blame for all my selfish desires. I couldn't be both kinds of people.`,
                                         dotKeys: {
                                             [BACKSTORY]: true,
                                             [OBSERVATION]: true,
@@ -88,9 +88,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
-                    description: `The previous song offered a glimpse of me as an infirm patient, fading away while listening to old records. The crackle of a needle on vinyl now introduces the third and final song of the medley.`,
+                    description: `The previous song offered a brief glimpse of me as an infirm patient, fading away while listening to old records. The crackle of a needle on vinyl now introduces the third and final song of the medley.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
@@ -109,9 +108,8 @@ export default {
                         {
                             anchor: `Odin`,
                             properNoun: true,
-                            todo: true,
                             card: {
-                                description: `As a child, I didn't pay much attention to Odin. He just seemed to come with the house. So when Sita and I adopted a cat together, I was surprised how naturally the instinct to nurture a pet came to me. Years later when my failure to nurture the relationship with Sita led to our final breakup, I thought of Odin often.`,
+                                description: `As a child I didn't pay much attention to Odin. He seemed to just come with the house. So when Sita and I adopted a cat together, I was surprised by how naturally the instinct to nurture a pet came to me. Years later after my failure to nurture the relationship led to our final breakup, I thought of Odin often.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

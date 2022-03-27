@@ -1128,15 +1128,14 @@ export default {
                         `puff,`,
                         {
                             anchor: `preparing the scoop`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `Miriam searches for a way to deliver the bad news in the least messy way possible. She's like a pet owner readying the`,
+                                    `Miriam searches for a way to deliver the bad news in the least messy way possible, like a pet owner readying the`,
                                     {
                                         anchor: `pooper scooper`,
                                         wiki: `Pooper-scooper`,
                                     },
-                                    `in case her pet makes a mess on her freshly manicured lawn.`,
+                                    `for the moment her pet takes a dump on her lawn.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1151,10 +1150,8 @@ export default {
                         `hungry carrying this groovy`,
                         {
                             anchor: `second hump`,
-                            todo: true,
-                            // TODO: Analogy to traveling. Roam.
                             card: {
-                                description: `A camel stores fat in its hump, allowing it to travel for days without eating. So in trading away the nourishment of Sita's love for the ego boost of humping other women, I was as senseless as a camel that chooses to go hungry just to wear a flashy new adornment on his back.`,
+                                description: `A camel can travel for months without eating by living off the fat in its hump. And in my own wanderings, the ego boost I gained from humping other women allowed me to live without the nourishment of Sita's love.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [PUN]: true,

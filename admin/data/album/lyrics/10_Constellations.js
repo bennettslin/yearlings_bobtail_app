@@ -406,11 +406,9 @@ export default {
                         `, this`,
                         {
                             anchor: `boundless Kalevalley ends`,
-                            todo: true,
-                            // TODO: I'm just not getting the phrasing right.
                             cards: [
                                 {
-                                    description: `The San Fernando Valley is the quintessential "Cali valley." In my youth, the days until I could leave that sprawling wasteland felt endless. But on this summer break back home, the magic of Robitussin renders escape instantaneous.`,
+                                    description: `The San Fernando Valley is the quintessential "Cali valley." In my youth, the days until I could leave this sprawling wasteland felt endless. But on this summer break back home, escape is now instantaneous with the power of Robitussin.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true,

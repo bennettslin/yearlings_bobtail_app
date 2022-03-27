@@ -504,9 +504,8 @@ export default {
                         `Do you often feel like a`,
                         {
                             anchor: `wanderer lost`,
-                            todo: true,
                             card: {
-                                description: `Hitting all the right nerves, the letter addressed my yearning for acceptance and spoke to my frustration that this desire should so elude me. It then shared some hopeful news. RI Research believed that I might be a Beyonder, and after searching for so long, they'd finally found me.`,
+                                description: `The letter addressed my yearning for acceptance and spoke to my frustration that this desire should so elude me. Having hit all the right nerves, it then shared hopeful news: RI Research believed that I might be a Beyonder. And now, after searching for so long, they'd found me.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

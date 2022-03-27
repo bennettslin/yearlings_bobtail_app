@@ -311,7 +311,7 @@ export default {
                                     anchor: `storm drain`,
                                     wiki: `Storm_drain`,
                                 },
-                                `that drains to the ocean, and I'm reminded of all the`,
+                                `that leads to the ocean, and I'm reminded of all the`,
                                 {
                                     anchor: `sponges`,
                                     wiki: `Sponge`,
@@ -781,15 +781,14 @@ export default {
                         `brave`,
                         {
                             anchor: `rejection into art`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `I learned to accept and even welcome the latest rejection by turning it into subject matter for new songs. And so in time I came to see a life of getting rejected as`,
+                                    `I learned to welcome rejection since I could always use it as subject matter for new songs. Which meant that a lifetime of getting rejected could`,
                                     {
                                         isItalic: true,
                                         lyric: `itself`,
                                     },
-                                    `a work of art.`,
+                                    `be a work of art.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -812,9 +811,8 @@ export default {
                         `but`,
                         {
                             anchor: `died unfinished`,
-                            todo: true,
                             card: {
-                                description: `Of course, there's no guarantee that such a work will ever be completed in the artist's lifetime, since a satisfying ending isn't really under their control.`,
+                                description: `Of course, there was no guarantee that such a work would ever be completed. Since a satisfying ending wasn't really under my control.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },

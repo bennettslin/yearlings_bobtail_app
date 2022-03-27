@@ -31,7 +31,7 @@ export default {
     playerStartTime: 384.329,
     // This is a magic number adjusted by ear. In the mix, it's actually 44.96.
     mixSamplingFrequency: 45.39,
-    overview: `Sasha was a childhood friend, as well as my first crush. The strength she drew from her Jewish identity fascinated me, but it also clued me in on a cruel paradox. Namely, that no good comes from longing to share in someone's faith and roots, which stay strong precisely by not being shared. Sasha moved away during middle school, at the peak of my troubles with bullies. That summer, I wrote her a letter on a family trip to Taiwan.`,
+    overview: `Sasha was a childhood friend as well as my first crush. The strength she drew from her Jewish identity fascinated me, but it also clued me in on a cruel paradox. Namely, that no good comes from longing to share in someone's faith and roots, which stay strong precisely by not being shared. Sasha moved away during middle school at the peak of my troubles with bullies. That summer, I wrote her a letter on a family trip to Taiwan.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -60,16 +60,14 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
-                // TODO: This is the basic idea.
                 card: {
                     description: [
-                        `As a teenager, I tried to figure out how the`,
+                        `As a teenager I tried to figure out how the`,
                         {
                             anchor: `Beatles`,
                             wiki: `The_Beatles`,
                         },
-                        `weaved melodies into chords so seamlessly. The music for this song came from those efforts. It felt too labored, and all my fixes made it worse, so I put it away. But years later, I realized that music labored to death was exactly what a song about an overwrought letter to Sasha called for.`,
+                        `weaved melodies into chord progressions so seamlessly. The music for this song came about from those efforts. But it felt too labored, and all my fixes made it worse, so I put it away. Years later, I realized that music labored to death was exactly what a song about an overwrought letter to Sasha called for.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -179,9 +177,8 @@ export default {
                         `of some`,
                         {
                             anchor: `giant's house`,
-                            todo: true,
                             card: {
-                                description: `My most vivid memory of that trip is when we stood in the middle of a lush valley. With the ground around us completely level, the enclosing mountains were nearly vertical, as their peaks disappeared into a translucent blanket of clouds stretched across the sky. I felt like a tiny guest in a giant's house.`,
+                                description: `My most vivid memory of that trip was standing in the middle of a lush valley. The ground around us was entirely level, the enclosing mountains were nearly vertical, and their peaks disappeared into a translucent blanket of clouds stretched across the sky. I felt like a tiny guest in a giant house.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -293,15 +290,14 @@ export default {
                     lyric: [
                         {
                             anchor: `your pupil's pupal fly`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `As I reflect on my feelings for Sasha, I recall our last day together, when I caught my reflection in the`,
+                                    `Reflecting on my feelings for Sasha, I recall our last day together, when I caught my reflection in the`,
                                     {
                                         anchor: `pupil`,
                                         wiki: `Pupil`,
                                     },
-                                    `of her eye. She looked at me the way a teacher looks upon a pupil, and I could see we were no longer on the same footing, if we ever were.`,
+                                    `of her eye. She looked at me the way a teacher looks upon a pupil. I could see we were no longer on the same footing, if we ever were.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -336,7 +332,6 @@ export default {
                         `with you raving over how`,
                         {
                             anchor: `he's getting you`,
-                            todo: true,
                             card: {
                                 description: [
                                     `Every boy that Sasha crushed on was`,
@@ -344,7 +339,7 @@ export default {
                                         anchor: `Jewish`,
                                         wiki: `Judaism`,
                                     },
-                                    `, which in turn motivated her to be a better Jew. Since I could never help strengthen her faith myself, I would always be at a disadvantage in "getting her."`,
+                                    `, which in turn motivated her to be a better Jew. But I could never help strengthen her faith myself, so I would always be at a disadvantage in "getting" her.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,

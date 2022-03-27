@@ -714,7 +714,7 @@ export default {
                             // This might be all I want to say. Just phrase better?
                             todo: true,
                             card: {
-                                description: `Sita could relate to my fear of immortality. Growing up Hindu in America, she'd compared nirvana with heaven herself and found both lacking. Though she had no ready answers, she invited me to attend Hindu services with her. I found Hinduism's sprawling pantheon of deities and avatars to be strangely comforting. It just seemed like the more details there are to learn, the more room there is to get lost in the divine.`,
+                                description: `Though Sita had no ready answers, she invited me to attend services with her. I found Hinduism's sprawling pantheon of deities and avatars to be comforting. It just seemed like the more details there are to learn, the more room there is to get lost in the divine.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
