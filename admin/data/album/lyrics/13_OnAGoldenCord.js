@@ -438,9 +438,8 @@ export default {
                         `still hardened against her`,
                         {
                             anchor: `fawning, misty glance`,
-                            todo: true,
                             card: {
-                                description: `Stirred by a strange bitterness rumbling within, drunken me defiantly lashes out at the twin streetlamps lining the boulevard, whose misty glow has revived the vision of Sita's fearful gaze moments before he committed his crime.`,
+                                description: `With bitterness rumbling in his heart, drunken me lashes out in defiance at the boulevard's twin street lights. Their glowing lamps have revived the memory of Sita's fearful gaze at the moment he committed his crime.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -1021,9 +1020,8 @@ export default {
                         `by`,
                         {
                             anchor: `trail of crumbs`,
-                            todo: true,
                             card: {
-                                description: `Fearing upheaval ahead, I wonder if it's too late to walk back the damage done. But I couldn't find my way back even if I wanted to. Instead of dropping a breadcrumb trail, I've been nibbling on the rolls in my pocket all night. I've been trading away long-term security to satisfy my short-term hunger.`,
+                                description: `Fearing upheaval ahead, I wonder if it's too late to walk back the damage done. But I couldn't find my way back if I wanted to. All night I've been nibbling on the rolls in my pocket instead of dropping a breadcrumb trail. I've traded away long-term security to satisfy my short-term hunger.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,

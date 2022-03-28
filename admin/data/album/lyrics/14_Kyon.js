@@ -32,7 +32,8 @@ export default {
     playerReferenceTime: 2498.410,
     playerStartTime: 2496.296,
     todo: true,
-    overview: `The on-again, off-again years put enough distance between me and my misdeeds for me to see how emotionally abusive I'd become. I fought fully expecting her to fight back. But Sita just quietly endured my cruelty, and that's what baffled me. In time I came to understand how thoroughly she'd tied her sense of worth to our relationship. I was fighting for me. She was fighting for us.`,
+    // TODO: Connect this thought better.
+    overview: `The on-again, off-again years provided enough distance from my misdeeds for me to see how emotionally abusive I'd become. But Sita just quietly endured my cruelty, and that's what baffled me. In time I came to understand how thoroughly she'd tied her sense of worth to our relationship. I was fighting for me. She was fighting for us.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -711,10 +712,8 @@ export default {
                         `, your`,
                         {
                             anchor: `fear of never dying`,
-                            // This might be all I want to say. Just phrase better?
-                            todo: true,
                             card: {
-                                description: `Though Sita had no ready answers, she invited me to attend services with her. I found Hinduism's sprawling pantheon of deities and avatars to be comforting. It just seemed like the more details there are to learn, the more room there is to get lost in the divine.`,
+                                description: `I also hadn't settled the issue of whether an afterlife was even preferable. Though Sita had no ready answers, she invited me to attend services with her. I found comfort in Hinduism's sprawling pantheon of deities and avatars. It just seemed like the more details there are to learn, the more ways there are to get lost in the divine.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

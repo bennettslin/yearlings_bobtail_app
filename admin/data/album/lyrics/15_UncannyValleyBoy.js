@@ -1113,12 +1113,10 @@ export default {
                         `could sway you from a`,
                         {
                             anchor: `fairer marathon`,
-                            todo: true,
-                            // TODO: Does this logic connect?
                             cards: [
                                 {
                                     description: [
-                                        `The endless one-upmanship wasn't just petty. It was exhausting to keep an inner tally of all the times I felt slighted. I wanted life to be more like a`,
+                                        `The endless one-upmanship wasn't just petty. It was exhausting to counter every perceived slight with one of my own. I wanted life to be like a`,
                                         {
                                             anchor: `marathon`,
                                             wiki: `Marathon`,
@@ -1261,9 +1259,10 @@ export default {
                         `what's left of what these`,
                         {
                             anchor: `faces you flip override`,
+                            // TODO: Make this more clear.
                             todo: true,
                             card: {
-                                description: `My mother would sometimes ask me what happened to the playful little boy she once knew, which made me wonder myself. I think I just learned early on that for any given situation, there's an optimal person to be. Different situations call for being different people, and each new person takes up valuable mental space. At some point, it just didn't make sense to keep an original identity that served no other purpose.`,
+                                description: `My mother would sometimes ask what happened to the playful little boy she once knew. I think I just learned early on that for any given situation, there's an optimal person to be. It was just a matter of juggling all those alternate personalities. So it didn't make sense to keep an original identity that served no other purpose.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

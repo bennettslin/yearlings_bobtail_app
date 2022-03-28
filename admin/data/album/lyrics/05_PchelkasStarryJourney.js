@@ -944,7 +944,7 @@ export default {
                             anchor: `murdered for their virtue`,
                             todo: true,
                             card: {
-                                description: `Like all ordeals, mine was made more bearable because I could tie it to a greater purpose. But ironically, behaving as such only invited more abuse.`,
+                                description: `Like any ordeal, mine was made more bearable because I could tie it to a greater purpose. But ironically, behaving as such only invited more abuse.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },

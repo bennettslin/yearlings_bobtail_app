@@ -785,7 +785,7 @@ export default {
                             todo: true,
                             card: {
                                 description: [
-                                    `Knowing the kind of fragile ex-boyfriend I was sure to be, Miriam must have dreaded the breakup. But of course she had no choice, since who knew what horrors lurked in my genetic makeup? Perhaps I was a carrier of "`,
+                                    `Knowing the kind of fragile ex-boyfriend I was sure to be, Miriam must have dreaded the breakup. But who knew what horrors lurked in my genetic makeup? Perhaps I was a carrier of "`,
                                     {
                                         anchor: `Fragile X`,
                                         wiki: `Fragile_X_syndrome`,
