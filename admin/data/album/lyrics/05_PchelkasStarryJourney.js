@@ -904,7 +904,7 @@ export default {
                                         anchor: `Castor and Pollux`,
                                         wiki: `Castor_and_Pollux`,
                                     },
-                                    `" were twin brothers fathered by Zeus. Castor was mortal, so after his death, Pollux pleaded with Zeus to let him share his immortality with his twin. Thus they were transformed into the constellation`,
+                                    `" were twin brothers fathered by Zeus. Pollux was immortal; Castor was not. After Castor's death, Pollux pleaded with Zeus to let him share his immortality with his twin. And so they were transformed into the constellation`,
                                     {
                                         anchor: `Gemini`,
                                         wiki: `Gemini_(constellation)`,
@@ -942,9 +942,8 @@ export default {
                         `twits daily`,
                         {
                             anchor: `murdered for their virtue`,
-                            todo: true,
                             card: {
-                                description: `Like any ordeal, mine was made more bearable because I could tie it to a greater purpose. But ironically, behaving as such only invited more abuse.`,
+                                description: `My ordeal was made more bearable if I could tie it to a greater purpose. But ironically, behaving like my suffering had meaning only invited further abuse.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -1047,7 +1046,6 @@ export default {
                         `The only`,
                         {
                             anchor: `spies who get to feel love`,
-                            todo: true,
                             card: {
                                 description: [
                                     `Since a`,
@@ -1055,16 +1053,16 @@ export default {
                                         anchor: `spy`,
                                         wiki: `Espionage`,
                                     },
-                                    `'s success hinges upon staying hidden, their exploits can never be appreciated until they're caught and made to face the`,
+                                    `'s success hinges upon staying hidden, their exploits will never be known until after they've been captured and then executed by`,
                                     {
                                         anchor: `firing squad`,
                                         wiki: `Execution_by_firing_squad`,
                                     },
-                                    `. Similarly, at some point my desire to be part of a friendly squad caused me to open up and thus sabotage my past efforts to be unresponsive. But this only exposed me to greater scrutiny, as I was now forced to explain myself.`,
+                                    `. Similarly, my desire to be part of a friendly squad eventually led me to open up, thus sabotaging all my previous efforts to be unresponsive.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
-                                    [OBSERVATION]: true,
+                                    [PUN]: true,
                                 },
                             },
                         },
@@ -1073,7 +1071,13 @@ export default {
                             anchor: `unearth their own plots`,
                             cards: [
                                 {
-                                    description: `Figuratively, this means to reveal one's secret plans. Literally, it means to dig one's own grave.`,
+                                    description: `But this only exposed me to greater scrutiny, as I was now forced to explain my past behavior.`,
+                                    dotKeys: {
+                                        [BACKSTORY]: true,
+                                    },
+                                },
+                                {
+                                    description: `Figuratively, to reveal one's secret plans. Literally, to dig one's own grave.`,
                                     dotKeys: {
                                         [PUN]: true,
                                     },
@@ -1331,7 +1335,7 @@ export default {
                                         anchor: `whales`,
                                         wiki: `Whale`,
                                     },
-                                    `is called a pod. Because I wanted to belong to a social group, I couldn't ditch my "whales," and thus I sought out a metaphorical escape pod.`,
+                                    `is called a pod. Because I wanted to belong to a social group, I couldn't ditch my "whales," and so I sought out a metaphorical escape pod.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
