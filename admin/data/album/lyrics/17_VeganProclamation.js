@@ -71,9 +71,8 @@ export default {
                                 `"If you're just starting out, you need to decide right now: Either you stick with quality vinyl, or you buy only the bargain bin LPs. You`,
                                 {
                                     anchor: `can't have both`,
-                                    todo: true,
                                     card: {
-                                        description: `This advice was offered by a friend when I bought a used turntable. As it turns out, what he had to say about vinyl records holds just as well for life decisions. I learned this the hard way when I saw that my thoughtful deeds were always negated by my hurtful ones. I couldn't keep two separate selves, where one gets praised for my kindness and the other takes the blame for all my selfish desires. I couldn't be both kinds of people.`,
+                                        description: `A friend offered me this advice when I bought a turntable. And as it turns out, what's true for vinyl records holds just as well for life decisions. I couldn't have two selves— one to earn praise for kindness, the other to take the blame for my selfish desires. A single hurtful deed taints everything else. It isn't possible to be both kinds of people.`,
                                         dotKeys: {
                                             [BACKSTORY]: true,
                                             [OBSERVATION]: true,
@@ -283,10 +282,8 @@ export default {
                         `Well,`,
                         {
                             anchor: `first pets`,
-                            todo: true,
-                            // TODO: Which seemed to cover the wound, also healed it.
                             card: {
-                                description: `It blew my mind how I could hurt Sita for so long and still live with myself. In hindsight, I just never questioned the facade of sanity she'd constructed as a means to cope. I'd allowed myself to believe that our periodic moments of intimacy, which she clung to and cherished, were all that was needed for the wounds to fully heal.`,
+                                description: `It blew my mind that I could hurt Sita for so long and still live with myself. In hindsight, I just never questioned the facade of sanity she'd constructed as a means to cope. I'd allowed myself to believe that our periodic moments of intimacy, which she clung to and cherished, were all that was needed to heal the wounds and wipe the slate clean.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -306,17 +303,15 @@ export default {
                         `and now I know why the`,
                         {
                             anchor: `battered kitten purrs`,
-                            // Maybe this is already good enough?
-                            todo: true,
                             cards: [
                                 {
                                     description: [
-                                        `Sita had her own story to tell about mistreating her first pet. Upon receiving a kitten as a child, she hugged it so hard it began to purr. Taking this as a sign of contentment, she hugged it even harder. Years later, she learned that cats will`,
+                                        `Sita had her own story to tell about mistreating a first pet. Upon receiving a kitten as a child, she hugged it so hard it began to purr. Taking this as a sign of its contentment, she hugged it even harder. Later she learned that cats also`,
                                         {
                                             anchor: `purr to cope`,
                                             wiki: `Purr`,
                                         },
-                                        `with distress, and looking back, she realized her kitten had believed it was being crushed to death. She lived in guilt ever since.`,
+                                        `with distress, and looking back, she realized her kitten had thought it was being crushed to death. She lived in guilt ever since.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,

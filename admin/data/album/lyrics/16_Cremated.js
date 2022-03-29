@@ -933,10 +933,9 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     // NOTE: Change in recording? Connect to Uncanny Valley?
-                    description: `The bouncing ping pong ball heard here mimics the ticking of a wall clock by my deathbed. As I fade away in my infirm state, its echoes reverberate like the sound of a tennis ball being volleyed back and forth, and I picture Miriam in a leisurely match with her new beau.`,
+                    description: `The bouncing ping pong ball heard here mimics an alarm clock at my bedside as I fade away in my infirmity. Its ticking reverberates like the echoes of a tennis ball being volleyed back and forth, and I picture Miriam in a leisurely match with her new beau.`,
                     dotKeys: {
                         [NARRATIVE]: true,
                         [SONGCRAFT]: true,

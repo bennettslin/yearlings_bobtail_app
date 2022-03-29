@@ -1259,10 +1259,8 @@ export default {
                         `what's left of what these`,
                         {
                             anchor: `faces you flip override`,
-                            // TODO: Make this more clear.
-                            todo: true,
                             card: {
-                                description: `My mother would sometimes ask what happened to the playful little boy she once knew. I think I just learned early on that for any given situation, there's an optimal person to be. It was just a matter of juggling all those alternate personalities. So it didn't make sense to keep an original identity that served no other purpose.`,
+                                description: `My mother would sometimes ask what happened to the playful little boy she once knew. I think I just learned early on that for every given situation, there's an optimal person to be, and the key is to juggle those various personalities. So it made no sense to keep the original lying around if it served no other purpose.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -1279,7 +1277,7 @@ export default {
                             anchor: `pages you've ripped`,
                             todo: true,
                             card: {
-                                description: `My parents lament my eagerness to ditch past sentiments in favor of present ambitions, as if I'm tearing out old pages from the scrapbook of my life to free up room for new inserts.`,
+                                description: `Given my eagerness to ditch past sentiments in favor of present ambitions, it's like I'm tearing out pages from the scrapbook of my life to free up space for new inserts.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -1414,10 +1412,9 @@ export default {
                         lyric: [
                             {
                                 anchor: `old and subservient`,
-                                todo: true,
                                 cards: [
                                     {
-                                        description: `It wasn't until college that I learned to appreciate the sacrifices my parents had made for me and my siblings to lead better lives than their own. But knowing that this awareness came about through assigned coursework, rather than my own lived experiences, only added to my guilt.`,
+                                        description: `It wasn't until college that I understood the sacrifices my parents made for me and my siblings to lead better lives than their own. But this awareness came about through coursework rather than my own lived experiences, which just added to my guilt.`,
                                         dotKeys: {
                                             [BACKSTORY]: true,
                                         },
