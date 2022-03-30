@@ -311,7 +311,7 @@ export default {
                         {
                             anchor: `she's claimed`,
                             card: {
-                                description: `Throughout our budding friendship, Sita had neglected to mention the extent of her sexual intimacy with past partners, even if always shy of intercourse. She tried to console me by pointing out that she never went all the way precisely because she didn't truly love them. She loved me, and so I had won. But it still stung like crazy to find out so late, and only deepened my resentment.`,
+                                description: `Throughout our budding friendship, Sita had neglected to mention the extent of her sexual intimacy with past partners, even if always shy of intercourse. She tried to console me by pointing out that she never went all the way precisely because she didn't truly love them. She loved me, and so I had won. But it still stung like crazy to find out so late, which only deepened my resentment.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -397,7 +397,6 @@ export default {
                         `with`,
                         {
                             anchor: `choler turned up`,
-                            todo: true,
                             cards: [
                                 {
                                     description: `In Hippocratic medicine, choler, or yellow bile, is the humor that induces aggression.`,
@@ -412,7 +411,7 @@ export default {
                                             anchor: `upturned collar`,
                                             wiki: `Upturned_collar`,
                                         },
-                                        `," the angry drunk I saw in my reflection didn't mesh with my self-image as a wide-eyed and well-meaning kid. And so at some point, I vowed to make a clean break and start over.`,
+                                        `," the angry drunk I saw in my reflection didn't mesh with my self-image as a wide-eyed kid who meant well. At some point, I vowed to make a clean break and start over.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -584,7 +583,7 @@ export default {
                         {
                             anchor: `she won't be there`,
                             card: {
-                                description: `But this codependency wasn't just the foundational basis of my love for Sita. It was really all I knew of how to love, period. I would never be asked to love in this way again, certainly not by any of the carefree scenesters I ogled at every show. And so it wasn't just cowardice that prevented me from cutting the cord. I genuinely feared whether I could ever truly love anyone else.`,
+                                description: `But this codependency wasn't just the foundational basis of my love for Sita. It was really all I knew of how to love, period. I would never be asked to love in this way again, certainly not by any of the carefree scenesters whom I ogled at every show. And so it wasn't just cowardice that prevented me from cutting the cord. I genuinely feared whether I could ever truly love anyone else.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

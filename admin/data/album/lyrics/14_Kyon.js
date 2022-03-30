@@ -33,7 +33,7 @@ export default {
     playerStartTime: 2496.296,
     todo: true,
     // TODO: Connect this thought better.
-    overview: `The on-again, off-again years finally gave me the distance needed to see how emotionally abusive I'd become. But Sita just quietly endured my cruelty, and that's what baffled me. In time I came to understand how thoroughly she'd tied her sense of worth to our relationship. I was fighting for me. She was fighting for us.`,
+    overview: `The on-again, off-again years finally gave me enough distance to see how emotionally abusive I'd become. But Sita just quietly endured my cruelty, and that's what baffled me. In time I came to understand how thoroughly she'd tied her sense of worth to our relationship. I was fighting for me. She was fighting for us.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -556,7 +556,7 @@ export default {
                         {
                             anchor: `lap my wound clean`,
                             card: {
-                                description: `After ejaculating through vaginal sex, I would go down on Sita until she reached orgasm. When I asked her once what she saw in me that was worth holding onto, she listed this as an example of my thoughtfulness. I couldn't think of anything myself.`,
+                                description: `After vaginal sex, I would go down on Sita until she reached orgasm. She mentioned this as an example of my thoughtfulness once, after I asked her what she saw in me that was worth holding onto. It seemed like proof to me that I had no actual redeeming qualities.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -574,7 +574,7 @@ export default {
                             anchor: `common time`,
                             wiki: `Time_signature`,
                         },
-                        `even as the underlying chords remain unchanged, to represent the normalization of our dysfunctional relationship. The two strands of tuplets are also more in sync, as one plays two notes for every three played by the other.`,
+                        `even as the underlying chords remain unchanged, thus representing the normalization of our dysfunctional relationship. The two strands of tuplets are also more in sync, as one plays two notes for every three played by the other.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -620,7 +620,7 @@ export default {
                                         anchor: `hymen`,
                                         wiki: `Hymen`,
                                     },
-                                    `is ruptured, every subsequent breakup felt less like a piercing stab and more like an irritant on an already festering wound.`,
+                                    `is ruptured, each subsequent breakup felt less like a piercing stab and more like an irritant on an already festering wound.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,

@@ -231,12 +231,12 @@ export default {
                             anchor: `sapling cut`,
                             card: {
                                 description: [
-                                    `If a sapling survives the winter, it's rewarded with its first`,
+                                    `A sapling that survives the winter will be rewarded with its first`,
                                     {
                                         anchor: `tree ring`,
                                         wiki: `Dendrochronology`,
                                     },
-                                    `, which will be visible to all through any gaping wounds it has endured along the way.`,
+                                    `, which will be visible through any gaping wounds it suffered along the way.`,
                                 ],
                             },
                         },
@@ -267,7 +267,7 @@ export default {
                         {
                             anchor: `for more you'd vie`,
                             card: {
-                                description: `But though it had been a struggle, I made it, didn't I? Which means I can easily do it again. So why wouldn't I try? After all, each new relationship is like another tree ring, a testament to one's resilience and continued growth.`,
+                                description: `But though it was a struggle, I did make it. Which means I can easily do it again. So why wouldn't I try? After all, each new relationship is like another tree ring, a testament to one's resilience and continued growth.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -489,7 +489,7 @@ export default {
                         {
                             anchor: `Great show`,
                             card: {
-                                description: `The best time to hit on someone is right after you've played a set. They've just spent the last half hour making you the center of their universe, in a crowd of others who've just done the same. So as expected, I find the redheaded woman to be flirtatious when we chat.`,
+                                description: `The best time to hit on someone is right after you've played a set, since they've just spent the last half hour making you the center of their universe. So as expected, the redheaded woman is quite flirtatious when we chat.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -657,7 +657,7 @@ export default {
                         {
                             anchor: `must turn the cheek`,
                             card: {
-                                description: `The letters from RI Research instructed me not to confront the bullies. Instead, I was to turn the other cheek, as Jesus had done, and quietly take their abuse in stride. After all, my exalted place in the universe necessarily asked of me to be the bigger person.`,
+                                description: `The letters from RI Research instructed me not to confront the bullies. Instead, I was to turn the other cheek, as Jesus had done, and quietly take their abuse in stride. My exalted place in the universe necessarily asked of me to be the bigger person.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -676,7 +676,7 @@ export default {
                         {
                             anchor: `only to crack`,
                             card: {
-                                description: `Yet even as reason disproved the faiths of my tormentors, it also discredited my own as a Beyonder. After all, in a world abounding with rival claims to the truth, what sane person would stay loyal to a belief that promises zero community and only endless grief?`,
+                                description: `Yet even as reason disproved the faiths of my tormentors, it also discredited my own as a Beyonder. In a world abounding with rival claims to the truth, what sane person would stay loyal to a belief that promises zero community and only endless grief?`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -687,7 +687,7 @@ export default {
                         {
                             anchor: `sprawled where they stood`,
                             card: {
-                                description: `And while every beatdown I suffered was a serious blow to my mental state, the bullies continued to enjoy greater happiness and social standing. My belief as a Beyonder just couldn't survive the harsh realization that nature favors its bullies.`,
+                                description: `And while every beatdown I suffered was a serious blow to my mental state, the bullies continued to enjoy greater happiness and social standing. My belief as a Beyonder couldn't survive the harsh realization that nature favors its bullies.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -801,7 +801,7 @@ export default {
                             todo: true,
                             // TODO: Still too wordy?
                             card: {
-                                description: `My songs were about being an inexperienced kid forever unlucky in love. But this persona grew further outdated as the hardships of my youth receded into the past. And so I needed to drink greater amounts of alcohol to carry on with the lie that my life hadn't substantially improved.`,
+                                description: `My songs were about being an inexperienced kid forever unlucky in love. But this persona only grew outdated as the hardships of my youth receded into the past. So I needed to drink greater amounts of alcohol to carry on with the lie that my life hadn't substantially improved.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

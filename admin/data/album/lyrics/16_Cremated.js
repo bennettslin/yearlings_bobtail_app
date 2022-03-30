@@ -41,7 +41,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: `A childhood playmate once asked if I knew what cremation was. I didn't but assumed it must be fun and tasty. Of course, the horrifying truth was revealed to me a moment later. I thought this was a perfect metaphor for a song about the seemingly innocent day trip that ended with Miriam breaking up with me.`,
+                    description: `A childhood playmate once asked if I knew what cremation was. I didn't, so I assumed it must be fun and tasty. Of course, the horrifying truth was revealed to me a moment later. I thought this was a perfect metaphor for a song about the seemingly innocent day trip that ended with Miriam breaking up with me.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [OBSERVATION]: true,
@@ -177,7 +177,7 @@ export default {
                                         anchor: `atavism`,
                                         wiki: `Atavism`,
                                     },
-                                    `is a genetic trait that resurfaces after several generations. Though I wasn't autistic myself, it still lurked in my genes, ready to spring at any time on my children, on my grandchildren, on my grandchildren's children…`,
+                                    `is a genetic trait that resurfaces after several generations. Though I wasn't autistic myself, it still lurked in my genes, ready to spring at any time on my children, or on my grandchildren, or on my grandchildren's children…`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,

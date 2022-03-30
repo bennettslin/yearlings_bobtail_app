@@ -79,7 +79,7 @@ export default {
                         },
                     },
                     {
-                        description: `I chose this song title because I liked the idea of two grasshoppers hidden in the tall grass, each hesitantly signaling to the other, as neither one wishes to reveal itself first.`,
+                        description: `I chose this song title because I liked the image of two grasshoppers hidden in the tall grass, with each hesitantly signaling to the other, and neither wishing to reveal itself first.`,
                         dotKeys: {
                             [OBSERVATION]: true,
                         },
@@ -102,7 +102,7 @@ export default {
                                 anchor: `pompous autumn waits`,
                                 cards: [
                                     {
-                                        description: `In high school, I continued on as the same unliked nobody I'd been in middle school. It just didn't seem possible to remake myself into someone new while surrounded by all the same classmates. But all the while I was crafting a future persona of a self-assured artist that was raring to go as soon as I could leave Los Angeles.`,
+                                        description: `In high school I carried on as the same wretched nobody that I was in middle school. It just didn't seem possible to remake myself into someone new while surrounded by all the same classmates. But all the while I was crafting my future identity as a self-assured artist, and it was raring to go as soon as I could leave Los Angeles.`,
                                         dotKeys: {
                                             [BACKSTORY]: true,
                                             [OBSERVATION]: true,
@@ -920,7 +920,7 @@ export default {
                                             anchor: `Vaseline`,
                                             wiki: `Vaseline`,
                                         },
-                                        `, which I clearly used recently to masturbate.`,
+                                        `, which I clearly used recently for masturbating.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -956,7 +956,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `For me, the highlight of`,
+                        `The highlight of`,
                         {
                             anchor: `Nirvana`,
                             wiki: `Nirvana_(band)`,
@@ -969,7 +969,7 @@ export default {
                                 wiki: `Nevermind`,
                             },
                         },
-                        `is when`,
+                        `for me is when`,
                         {
                             anchor: `Kurt Cobain`,
                             wiki: `Kurt_Cobain`,

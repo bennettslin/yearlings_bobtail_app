@@ -122,7 +122,7 @@ export default {
                         {
                             anchor: `broken`,
                             card: {
-                                description: `When I walked into Sita's living room that night to find her seated on the couch, the bracelet lay in a mangled heap on her coffee table. I wondered if she'd damaged it on purpose. I later realized that only when it was snug around her wrist did its dozens of links intricately lock into place.`,
+                                description: `When I walked into Sita's living room that night to find her seated on the couch, the bracelet lay in a mangled heap on her coffee table. I wondered if she'd damaged it on purpose. I later realized that its dozens of intricate links would only lock into place once the bracelet was snug around her wrist.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -145,7 +145,7 @@ export default {
                             anchor: `Johnny Horton`,
                             wiki: `Johnny_Horton`,
                         },
-                        `. His records were the first I ever owned, as they were handed down to me by my mother who adored him in her teenybopper years. None of my classmates had ever heard of him, until one day, I met another kid whose Taiwanese mother had the same obsession. So I guess Horton was big in Taiwan, though he probably never knew that, having died in a car accident at the peak of his fame.`,
+                        `. His records were the first I ever owned, as they were handed down to me by my mother who adored him in her teenybopper years. None of my classmates had ever heard of him, until one day, I met another kid whose Taiwanese mother had the same obsession. So I guess Horton was big in Taiwan. But he probably never knew this, having died in a car accident at the peak of his fame.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -933,7 +933,7 @@ export default {
                                         anchor: `Alexander the Great`,
                                         wiki: `Alexander_the_Great`,
                                     },
-                                    `simply chopped it in half with his sword and then went on to fulfill the prophecy. So in my own bid for greatness, I applied the same brute force to sever the cord binding me to Sita.`,
+                                    `simply chopped it in half with his sword and then went on to fulfill the prophecy. And in my own bid for greatness, I applied the same brute force to sever the cord binding me to Sita.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
