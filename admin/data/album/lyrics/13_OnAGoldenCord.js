@@ -100,9 +100,9 @@ export default {
                         `safely kept with`,
                         {
                             anchor: `bread and pocket lint`,
-                            todo: true,
                             card: {
-                                description: `Before leaving the cafeteria that evening after a long shift, I stashed some bread rolls in my jacket to munch on the go. Now holding the bracelet, I tuck my hands in my front pockets to keep warm.`,
+                                description: `
+                                Before leaving the cafeteria that evening, I stashed some bread rolls in the front pockets of my jacket to munch on the go. Now clutching the bracelet, I tuck my hands in as well to keep warm.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },

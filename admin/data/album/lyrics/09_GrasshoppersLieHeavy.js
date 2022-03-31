@@ -311,7 +311,7 @@ export default {
                             todo: true,
                             cards: [
                                 {
-                                    description: `By then, I was mostly on autopilot when it came to hitting on random women in random situations. But taken aback by Sita's beauty, I was determined not to screw this one up. So after handing her the lancet pen, I began to engage in conversation.`,
+                                    description: `By then, I was mostly on autopilot when it came to hitting on random women in random situations. But taken aback by Sita's looks, I did my best not to screw this one up. So after handing back the lancet pen, I tried to disarm her with  conversation.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
