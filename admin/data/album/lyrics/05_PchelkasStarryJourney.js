@@ -75,7 +75,7 @@ export default {
                                 todo: true,
                                 card: {
                                     description: [
-                                        `In`,
+                                        `In a humorous passage from`,
                                         {
                                             anchor: `Leonard Cohen`,
                                             wiki: `Leonard_Cohen`,
@@ -88,7 +88,7 @@ export default {
                                                 wiki: `Beautiful_Losers`,
                                             },
                                         },
-                                        `, the character F. tires of getting bullied at the beach and signs up for the Charles Axis bodybuilding course advertised in a comic book. He later discovers that it's Charles Axis who bullies him. I thought this passage perfectly captured the comic absurdity of being in a mail-order cult.`,
+                                        `, the character F. tires of getting bullied at the beach. So he signs up for the Charles Axis bodybuilding course advertised in a comic book, only to find out that it's Charles Axis who bullies him. The scene perfectly captured how comically absurd the idea of being in a mail-order cult always seemed when I would explain it to friends.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -208,9 +208,8 @@ export default {
                         `when you wanted to`,
                         {
                             anchor: `buy a fortress`,
-                            todo: true,
                             card: {
-                                description: `As a child, I liked to hole up somewhere and work on projects undisturbed. So one year, I asked my parents for a lifesize wooden fort as a combined birthday and Christmas gift, since my birthday is in November. Unfortunately, I learned that some things were too pricey even to count for two gifts.`,
+                                description: `Since my birthday is in November, I had the option to ask for a combined birthday and Christmas gift. I liked to hole up in tight spaces and work on projects undisturbed, so one year I asked my parents for a life-size wooden fort. Unfortunately, some toys are too pricey to count for even two gifts.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

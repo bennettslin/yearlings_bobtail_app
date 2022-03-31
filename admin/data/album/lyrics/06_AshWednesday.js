@@ -198,7 +198,6 @@ export default {
                         `First we`,
                         {
                             anchor: `laid Tourette's`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -207,7 +206,7 @@ export default {
                                             anchor: `Tourette syndrome`,
                                             wiki: `Tourette_syndrome`,
                                         },
-                                        `who suffer from involuntary tics, Catherine and I might have impulsively said unpleasant things to each other during the breakup.`,
+                                        `who suffer from involuntary tics, Catherine and I might have said some unpleasant things on impulse during the breakup.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -639,11 +638,11 @@ export default {
                         },
                         {
                             anchor: `went clear`,
-                            // Reconcile that part of clearing me from her life.
+                            // TODO: Should this be two cards? Reconcile that part of clearing me from her life.
                             todo: true,
                             card: {
                                 description: [
-                                    `Once Catherine cleared me from her life, I hoped to win her back by reading books, beginning with the ones we'd discussed. Catherine had mentioned that "Famous Blue Raincoat" echoes a similar theme of purification through betrayal found in Cohen's novel`,
+                                    `After Catherine cleared me from her life, my hope was to win her back by reading books, beginning with the ones we'd discussed. Catherine had mentioned that "Famous Blue Raincoat" echoes a similar theme of purification through betrayal found in Cohen's novel`,
                                     {
                                         isItalic: true,
                                         lyric: `Beautiful Losers`,
