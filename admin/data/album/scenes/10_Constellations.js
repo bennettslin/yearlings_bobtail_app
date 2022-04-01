@@ -73,6 +73,8 @@ import {
     DISTANT_BUILDINGS,
 } from '../../../../src/constants/scene/things/flats'
 import {
+    SHADOW_MONGOL,
+    SHADOW_VIKING,
     SATURN_EXTERIOR,
     SATURN_INTERIOR,
     SATURN_SEAT,
@@ -180,6 +182,10 @@ export default [
             },
             [FIXTURE]: {
                 [PUSH_BROOM__TUNNEL]: true,
+            },
+            [PANEL]: {
+                [SHADOW_MONGOL]: true,
+                [SHADOW_VIKING]: true,
             },
         },
         cubes: STEAM_TUNNEL_KEY,

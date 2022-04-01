@@ -42,6 +42,7 @@ import {
     TORN_MAGAZINES__BENNETT,
     RED_ENVELOPE_MONEY,
     BEYONDER_ENVELOPE,
+    FLOWER_BULBS,
 } from '../../../../../src/constants/scene/things/fixtures'
 import {
     BEDROOM_SIREN,
@@ -119,6 +120,11 @@ export default {
             xPosition: 3.6,
             zOffset: -0.04,
             layerYIndex: 3,
+        },
+        [FLOWER_BULBS]: {
+            yIndex: 3,
+            xPosition: 2.8,
+            zOffset: 0,
         },
     },
     [FURNITURE]: {

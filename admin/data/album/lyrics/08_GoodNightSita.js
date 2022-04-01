@@ -409,11 +409,9 @@ export default {
                         `to find the`,
                         {
                             anchor: `chrysalis unchristened`,
-                            // This also needs much better phrasing.
-                            todo: true,
                             cards: [
                                 {
-                                    description: `As we pass a display on the butterfly lifecycle, it occurs to me that what I seek is a chrysalis. That is, a rare specimen of female so new to this world that my own lack of worldly ways is rendered moot. Of course, every other low-status male out there has the same idea.`,
+                                    description: `As we pass a display on the butterfly lifecycle, it occurs to me that what I seek in a partner is a chrysalis. That is, a rare specimen so new to this world that my own lack of worldliness can be considered moot.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [OBSERVATION]: true,
@@ -430,11 +428,9 @@ export default {
                         `who'd buy this`,
                         {
                             anchor: `aping jaw`,
-                            // Also just needs to be phrased better.
-                            todo: true,
                             card: {
                                 description: [
-                                    `We pause for a minute to learn about`,
+                                    `We stop by a replica of`,
                                     {
                                         anchor: `Piltdown Man`,
                                         wiki: `Piltdown_Man`,
@@ -444,7 +440,7 @@ export default {
                                         anchor: `orangutan`,
                                         wiki: `Orangutan`,
                                     },
-                                    `was attached to the cranium of a modern human. Meanwhile, I'm hoping that the words coming out of my mouth don't betray the lack of volume in my head.`,
+                                    `was attached to the cranium of a modern human. Meanwhile, in my efforts to convince Sita that I'm her missing link, I'm hoping the words escaping from my mouth don't betray the undersized volume of my head.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

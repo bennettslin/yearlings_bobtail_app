@@ -81,6 +81,7 @@ import {
     BEDROOM_LAMP__DESK,
     BEETHOVEN_BUST,
     CHRISTOPHER_LETTERS,
+    FLOWER_BULBS,
     HAIRCUT_SCISSORS,
     LETTER_SCRAPS__CHRISTOPHER,
     TORN_MAGAZINES__CHRISTOPHER,
@@ -299,6 +300,7 @@ export default [
             [FIXTURE]: {
                 [BEDROOM_LAMP__DESK]: true,
                 [BEETHOVEN_BUST]: true,
+                [FLOWER_BULBS]: true,
             },
             [FLAT]: {
                 [BEDROOM_SIREN]: true,

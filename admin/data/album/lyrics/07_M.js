@@ -797,27 +797,20 @@ export default {
                         {
                             anchor: `indentures dumbed`,
                             todo: true,
-                            cards: [
-                                {
-                                    description: [
-                                        `Given all the years I might have to spend in servitude to my five-year plans, I was in effect an old man already. And likely one "in dentures" who was unable to speak.`,
-                                    ],
-                                    dotKeys: {
-                                        [OBSERVATION]: true,
-                                        [PUN]: true,
+                            card: {
+                                description: [
+                                    `Chimney sweeps were typically apprenticed as`,
+                                    {
+                                        anchor: `indentured servants`,
+                                        wiki: `Indentured_servant`,
                                     },
+                                    `at a young age. Similarly, I was facing a lifetime of servitude to my five-year plans. By the time I was free to speak for myself, I'd be an old man "in dentures," and thus unable.`,
+                                ],
+                                dotKeys: {
+                                    [OBSERVATION]: true,
+                                    [PUN]: true,
                                 },
-                                {
-                                    description: [
-                                        `Chimney sweeps were typically apprenticed as`,
-                                        {
-                                            anchor: `indentured servants`,
-                                            wiki: `Indentured_servant`,
-                                        },
-                                        `at a young age.`,
-                                    ],
-                                },
-                            ],
+                            },
                         },
                         `as a boy.`,
                     ],
