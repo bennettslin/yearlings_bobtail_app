@@ -6,7 +6,7 @@ export default getFormattedSlideMetadata([
         title: `Introduction`,
         body: [
             {
-                paragraph: `Are you thinking to get in touch, but feeling unsure about our unconventional way of doing things? Read on, and I'll convince you that the Bobtail Yearlings are as reasonable to bet on as any artist you've worked with before.`,
+                paragraph: `Are you thinking to get in touch but feeling unsure about our unconventional way of doing things? Read on, and I'll convince you that the Bobtail Yearlings are as reasonable to bet on as any artist you've worked with before.`,
             },
         ],
     },
@@ -15,13 +15,13 @@ export default getFormattedSlideMetadata([
         title: `Stores profit, then scale`,
         body: [
             {
-                paragraph: `Let's start in the world of business. It's easy to think all big companies are the same, but some begin as startups, others as stores. What's the difference?`,
+                paragraph: `Let's start in the world of business. It's easy to think that all big companies are the same. But some begin as startups, others as stores. What's the difference?`,
             },
             {
                 paragraph: `Stores seek first to profit, then scale. For example, Walmart began as a single neighborhood store. Then once it became profitable, Sam Walton opened another store in the next town over, and then another.`,
             },
             {
-                paragraph: `There's little risk in trying to scale a store, given that each new store can repeat the same proven strategy. The downside is that scaling might not be possible. Since stores fulfill a known need, one isn't much different from the next. So wherever one competitor opens a store, there's now less room for others.`,
+                paragraph: `Because each new store can repeat the same proven strategy, there's little risk in trying to scale a store. The downside is that scaling might not be possible. Since stores fulfill a known need, one isn't much different from the next. So wherever one competitor opens a store, there's now less room for others.`,
             },
         ],
         footnote: `In this pitch, let's call any company a store if it sells goods or services that aren't immediately reproducible on demand.`,
@@ -46,7 +46,7 @@ export default getFormattedSlideMetadata([
                 paragraph: `If a startup makes no profit when it only has thousands of users, how can it suddenly turn profitable with a million users? One reason is the network effect, where a product becomes more valuable to every user as more users use the product.`,
             },
             {
-                paragraph: `For example, back when Facebook launched, its thousands of users were only able to connect with their fellow classmates at Harvard. By the time Facebook had millions of users, however, each user could now connect with childhood friends, distant family members, and more.`,
+                paragraph: `For example, when Facebook launched, it was a social network for Harvard students who could only connect with each other. But by the time Facebook had millions of users, each user could now connect with childhood friends, distant family members, and more.`,
             },
         ],
         footnote: [
@@ -106,7 +106,10 @@ export default getFormattedSlideMetadata([
                 paragraph: `Let's get back now to music. For the past couple decades, record labels have preferred to sign indie artists, since they pose fewer risks. But it's no wonder why indie artists are less risky; they're the stores of the music world.`,
             },
             {
-                paragraph: `Indie artists typically gain fans by playing live shows. This is possible because audiences for shows already exist, and they arrive with certain expectations. In other words, indie artists fulfill a known need. And once an indie artist has built up a regional fanbase of a thousand, they can repeat their strategy to win over the next thousand fans in another region, and then the next.`,
+                paragraph: `Traditionally, indie artists gain fans by touring and playing live shows. In recent years, they're more likely to do so by building up a presence on social media and streaming platforms.`,
+            },
+            {
+                paragraph: `Either way, an indie artist's success hinges upon fulfilling a known need. And once they've built up a fanbase of a thousand, they can repeat their strategy to win over the next thousand fans in another region, and then the next.`,
             },
         ],
     },
@@ -144,7 +147,7 @@ export default getFormattedSlideMetadata([
                         isItalic: true,
                         lyric: `Ulysses`,
                     },
-                    `is so dense and complex, for example, that if a community of readers hadn't already taken the leap to understand it, most of us wouldn't bother with it. We need to be reassured by others that its difficult passages aren't gibberish but instead hide layers of deeper meaning, and that our patience will be rewarded.`,
+                    `is so dense and complex, for example, that if a community of readers hadn't already taken the leap to understand it, most of us wouldn't bother. We need to be reassured by others that its difficult passages aren't gibberish but instead hide layers of deeper meaning.`,
                 ],
             },
         ],

@@ -118,9 +118,8 @@ export default {
                         `your`,
                         {
                             anchor: `first semester`,
-                            todo: true,
                             card: {
-                                description: `My family was spending the entire summer in Taiwan. We wouldn't get back to the States until after Sasha was to have left for Boston and begun the new school year.`,
+                                description: `My family was spending the entire summer in Taiwan. We wouldn't get back to the States until after Sasha was to begin the new school year in Boston.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
