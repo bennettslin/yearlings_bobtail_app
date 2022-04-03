@@ -309,9 +309,10 @@ export default {
                         {
                             anchor: `reflex you asked`,
                             todo: true,
+                            // TODO: Before asking her on a date.
                             cards: [
                                 {
-                                    description: `By then, I was mostly on autopilot when it came to hitting on random women in random situations. But taken aback by Sita's looks, I did my best not to screw this one up. So after handing back the lancet pen, I tried to disarm her with  conversation.`,
+                                    description: `By then, I was mostly on autopilot when it came to hitting on random women in random situations. But taken aback by Sita's looks, I was determined not to screw this one up. So after handing back the lancet pen, I tried to engage her in witty conversation.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },

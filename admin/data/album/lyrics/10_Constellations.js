@@ -1521,6 +1521,7 @@ export default {
                             // NOTE: I changed from ha'nt.
                             anchor: `hant'd by sober-trooth tiedgirl`,
                             // Just needs to be worded right.
+                            // TODO: Ease into the fact that the relationship isn't working.
                             todo: true,
                             card: {
                                 description: [

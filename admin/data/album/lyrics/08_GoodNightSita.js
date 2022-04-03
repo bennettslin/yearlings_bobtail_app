@@ -581,10 +581,10 @@ export default {
                         `hyped up like some`,
                         {
                             anchor: `disastrous play`,
-                            // Just confirm it sounds okay.
+                            // TODO: Make more about not enjoying due to my insecurities.
                             todo: true,
                             card: {
-                                description: `On our second date, Sita invited me to see her friend act in a play, which I hated. In all fairness, it probably wasn't bad. My impression of the night was just colored by my insecurities, given the rapport between Sita and her friend backstage, in contrast to my own inability to get a word in edgewise.`,
+                                description: `On our second date, Sita invited me to see her friend act in a play. My impression of the evening was colored by my insecurities, given the rapport between Sita and her friend backstage, in contrast to my own inability to get a word in edgewise.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

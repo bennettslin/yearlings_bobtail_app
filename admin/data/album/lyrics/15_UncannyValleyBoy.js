@@ -110,7 +110,7 @@ export default {
                                         isItalic: true,
                                         lyric: `beta`,
                                     },
-                                    `means "son." Having unequivocally taken Sita's side, my parents in the nightmare address me as an Indian parent would.`,
+                                    `means "son." Having unequivocally taken Sita's side, I imagine my parents addressing me as an Indian parent would.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1311,9 +1311,8 @@ export default {
                             `their`,
                             {
                                 anchor: `sun tinkles light`,
-                                todo: true,
                                 card: {
-                                    description: `In the nightmare, I was now ruler of the neighborhood. I would shower my subjects in urine, their sole means of subsistence. In retrospect, my brain was probably telling me to wake up and use the bathroom.`,
+                                    description: `In the nightmare, I now ruled the neighborhood from above as a tyrant. I would shower my subjects in urine, which they lapped up as their sole means of subsistence. Now that I think about it, my brain was probably telling me to wake up and use the bathroom.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [OBSERVATION]: true,
