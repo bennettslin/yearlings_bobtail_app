@@ -6,7 +6,7 @@ export default getFormattedSlideMetadata([
         title: `Placeholder`,
         body: [
             {
-                paragraph: `Placeholder text.`,
+                paragraph: ``,
             },
         ],
     },
