@@ -796,8 +796,6 @@ export default {
                     lyric: [
                         {
                             anchor: `indentures dumbed`,
-                            todo: true,
-                            // TODO: Combine with above.
                             card: {
                                 description: [
                                     `Chimney sweeps were typically apprenticed as`,
@@ -805,7 +803,7 @@ export default {
                                         anchor: `indentured servants`,
                                         wiki: `Indentured_servant`,
                                     },
-                                    `at a young age. Similarly, by the time I was freed from servitude to my five-year plans, I'd be an old man "in dentures" and thus unable to speak for myself.`,
+                                    `at a young age. And in my case, by the time I was freed from servitude to my five-year plans, I'd be an old man "in dentures" and thus unable to speak for myself.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,

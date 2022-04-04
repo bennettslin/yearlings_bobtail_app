@@ -21,7 +21,7 @@ import {
 
 export default {
     path: 'didi',
-    title: 'Didi (弟弟)',
+    title: '弟弟 (Didi)',
     /**
      * This is for recalibrating the player start time after redoing the mix.
      *

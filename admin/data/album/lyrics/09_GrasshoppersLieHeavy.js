@@ -308,11 +308,9 @@ export default {
                         `and stunned, by`,
                         {
                             anchor: `reflex you asked`,
-                            todo: true,
-                            // TODO: Before asking her on a date.
                             cards: [
                                 {
-                                    description: `By then, I was mostly on autopilot when it came to hitting on random women in random situations. But taken aback by Sita's looks, I was determined not to screw this one up. So after handing back the lancet pen, I tried to engage her in witty conversation.`,
+                                    description: `By then, I was mostly on autopilot when it came to hitting on random women in random situations. But taken aback by Sita's looks, I was determined not to screw this one up. So after handing back the lancet pen, I tried to engage her in smart conversation before asking for a date.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -336,7 +334,7 @@ export default {
                                             anchor: `vocational rehabilitation`,
                                             wiki: `Vocational_rehabilitation`,
                                         },
-                                        `program. For this reason, along with feeling somewhat ambushed, Sita was hesitant to say yes to a date. But as we chatted, I won her over with my taste in literature and familiarity with the alternative culture.`,
+                                        `program. For this reason, along with feeling ambushed, Sita was hesitant to say yes. But as we chatted, I won her over with my taste in literature and familiarity with the alternative culture.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,

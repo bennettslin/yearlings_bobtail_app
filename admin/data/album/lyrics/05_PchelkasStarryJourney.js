@@ -75,7 +75,7 @@ export default {
                                 todo: true,
                                 card: {
                                     description: [
-                                        `In a humorous passage from`,
+                                        `In a comically absurd passage from`,
                                         {
                                             anchor: `Leonard Cohen`,
                                             wiki: `Leonard_Cohen`,
@@ -88,7 +88,7 @@ export default {
                                                 wiki: `Beautiful_Losers`,
                                             },
                                         },
-                                        `, the character F. tires of getting bullied at the beach. So he signs up for the Charles Axis bodybuilding course advertised in a comic book, only to find out that it's Charles Axis who bullies him. The scene perfectly captured how comically absurd the idea of being in a mail-order cult always seemed when I would explain it to friends.`,
+                                        `, the character F. tires of getting bullied at the beach. So he signs up for the Charles Axis bodybuilding course advertised in a comic book, only to find out it's Charles Axis who bullies him. When I read this, I laughed in the same way that I do when trying to explain my time in a mail-order cult.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,

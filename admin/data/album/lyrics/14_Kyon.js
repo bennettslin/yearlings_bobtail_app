@@ -19,7 +19,7 @@ import {
 
 export default {
     path: 'kyon',
-    title: 'Kyon? (क्यों?)',
+    title: 'क्यों? (Kyon?)',
     /**
      * This is for recalibrating the player start time after redoing the mix.
      *

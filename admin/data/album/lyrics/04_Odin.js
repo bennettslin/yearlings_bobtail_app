@@ -1246,6 +1246,7 @@ export default {
                     lyricRight: [
                         {
                             anchor: `didn't impart warmth`,
+                            // TODO: There was a limit to how much…
                             todo: true,
                             card: {
                                 description: `But also like cellophane, Sasha couldn't reflect warmth where none was present. If I couldn't be the better person in dealing with the bullies, then there came a point where she needed to keep her distance from me as well.`,

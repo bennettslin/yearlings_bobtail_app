@@ -26,18 +26,19 @@ export default getFormattedSlideMetadata([
             },
             {
                 paragraph: [
-                    `Similarly, each of us is lopsided, with unique strengths and weaknesses. So for any project, just 20% of our effort gets us 80% of the way there. It's basically completed! But no,`,
+                    `Similarly, each of us is lopsided given our unique strengths and weaknesses. So for any project, thanks to our strengths, just 20% of our effort gets us 80% of the way there. That's basically completed! But no,`,
                     // TODO: Reverse this.
                     // But now the remaining 20% of the work, the stuff we're weakest at, will require a whopping 80% of our effort.
                     {
                         isEmphasis: true,
                         lyric: `actual`,
                     },
-                    `completion now requires a whopping 80% of our effort to tackle the remaining 20% of the work. That's… a bummer.`,
+                    `completion now requires a whopping 80% of our effort to get through the remaining 20% of the work that depends on our weaknesses.`,
                 ],
             },
             {
-                paragraph: `Still, any indie artist will happily power through. After all, 100% of your effort gets you 100% of the way there. How can it be better than that?`,
+                // TODO: Move to next page.
+                paragraph: `Still, any indie artist will happily power through. After all, 100% of your effort gets you 100% of the way there. How can it be better than linear efficiency?`,
             },
         ],
         footnote: [
@@ -49,7 +50,7 @@ export default getFormattedSlideMetadata([
             `.`,
         ],
     },
-    // But interdependent artists reason differently. If society is lopsided, then others out there are lopsided in a completely different way from you. Your strengths are their weaknesses, and vice versa. That remaining 20% of the work represents your weakness, but someone else's strength.
+    // But interdependent artists see a way. If society is lopsided, then others out there are lopsided in a completely different way from you. Your strengths are their weaknesses, and vice versa. That remaining 20% of the work represents your weakness, but someone else's strength.
 
     // The record label.
 

@@ -1277,7 +1277,7 @@ export default {
                             anchor: `pages you've ripped`,
                             todo: true,
                             card: {
-                                description: `Given my eagerness to ditch past sentiments in favor of present ambitions, it's like I'm tearing out pages from the scrapbook of my life to free up space for new inserts.`,
+                                description: `My parents lament my eagerness to ditch past sentiments in favor of present ambitions. It's as if I'm tearing out pages from the scrapbook of my life to free up space for new inserts.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
