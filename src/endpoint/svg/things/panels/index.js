@@ -44,6 +44,8 @@ import saturnSeatDown from '../../../../assets/svgs/panels/saturnSeatDown'
 import schoolbusExterior from '../../../../assets/svgs/panels/schoolbusExterior'
 import schoolbusInterior from '../../../../assets/svgs/panels/schoolbusInterior'
 import schoolbusSeat from '../../../../assets/svgs/panels/schoolbusSeat'
+import shadowMongol from '../../../../assets/svgs/panels/shadowMongol'
+import shadowViking from '../../../../assets/svgs/panels/shadowViking'
 import snowglobe from '../../../../assets/svgs/panels/snowglobe'
 import stalactites from '../../../../assets/svgs/panels/stalactites'
 import taiwanBridge from '../../../../assets/svgs/panels/taiwanBridge'
@@ -212,8 +214,8 @@ export default {
     [SCHOOLBUS_INTERIOR]: schoolbusInterior,
     [SCHOOLBUS_SEAT__LEFT]: schoolbusSeat,
     [SCHOOLBUS_SEAT__RIGHT]: schoolbusSeat,
-    [SHADOW_MONGOL]: trollShadowLeft,
-    [SHADOW_VIKING]: trollShadowRight,
+    [SHADOW_MONGOL]: shadowMongol,
+    [SHADOW_VIKING]: shadowViking,
     [SNOWGLOBE_FUTURE__BENNETT]: snowglobe,
     [SNOWGLOBE_PRESENT__BENNETT]: snowglobe,
     [SNOWGLOBE_PRESENT__LIZ]: snowglobe,

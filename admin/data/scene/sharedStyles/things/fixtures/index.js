@@ -94,6 +94,7 @@ import {
     MICROPHONE__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/instruments'
 import {
+    FOLIAGE__SHARED,
     FREEWAY_SIGN__SHARED,
     TETHERBALL_POLE__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/outdoor'
@@ -172,7 +173,7 @@ export default {
     [DRUM_THRONE]: DRUMS__SHARED,
     [ELECTRIC_GUITAR]: ELECTRIC_GUITAR__SHARED,
     [EVIAN_BOTTLES]: EVIAN__SHARED,
-    [FLOWER_BULBS]: null,
+    [FLOWER_BULBS]: FOLIAGE__SHARED,
     [FREEWAY_SIGN]: FREEWAY_SIGN__SHARED,
     [FRIDGE_DRAWINGS]: [
         ALL_PEOPLE__SHARED,
