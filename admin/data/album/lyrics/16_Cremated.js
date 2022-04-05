@@ -973,7 +973,7 @@ export default {
                             anchor: `his soreness`,
                             todo: true,
                             card: {
-                                description: `Miriam gratifies me with her most vigorous lovemaking yet, as she knows how sore I'll be about the breakup. But now I'm feeling sore in my nether regions. With no other explanation, I assume it's harder to keep up in old age.`,
+                                description: `Miriam gratifies me with her most vigorous lovemaking yet, as she knows I'll be sore about the breakup. But as my nether regions begin to feel sore, I can only suppose that I'm struggling to keep up in my old age.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
