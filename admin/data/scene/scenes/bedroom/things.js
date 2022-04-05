@@ -123,8 +123,8 @@ export default {
         },
         [FLOWER_BULBS]: {
             yIndex: 3,
-            xPosition: 2.8,
-            zOffset: 0,
+            xPosition: 2.9,
+            zOffset: -0.01,
         },
     },
     [FURNITURE]: {

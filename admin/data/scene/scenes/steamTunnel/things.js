@@ -23,11 +23,11 @@ export default {
     [PANEL]: {
         [SHADOW_MONGOL]: {
             yIndex: 5,
-            xPosition: 1,
+            xPosition: 9,
         },
         [SHADOW_VIKING]: {
             yIndex: 5,
-            xPosition: 10,
+            xPosition: 1.2,
         },
     },
 }

@@ -24,6 +24,7 @@ import drumThrone from '../../../../assets/svgs/fixtures/drumThrone'
 import drumsStacked from '../../../../assets/svgs/fixtures/drumsStacked'
 import electricGuitar from '../../../../assets/svgs/fixtures/electricGuitar'
 import evianBottles from '../../../../assets/svgs/fixtures/evianBottles'
+import flowerBulbs from '../../../../assets/svgs/fixtures/flowerBulbs'
 import freewaySign from '../../../../assets/svgs/fixtures/freewaySign'
 import fridgeDrawings from '../../../../assets/svgs/fixtures/fridgeDrawings'
 import ghostShackles from '../../../../assets/svgs/fixtures/ghostShackles'
@@ -163,7 +164,7 @@ export default {
     [DRUM_THRONE]: drumThrone,
     [ELECTRIC_GUITAR]: electricGuitar,
     [EVIAN_BOTTLES]: evianBottles,
-    [FLOWER_BULBS]: tennisBall,
+    [FLOWER_BULBS]: flowerBulbs,
     [FREEWAY_SIGN]: freewaySign,
     [FRIDGE_DRAWINGS]: fridgeDrawings,
     [GHOST_SHACKLES]: ghostShackles,
