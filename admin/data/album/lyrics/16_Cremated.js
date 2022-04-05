@@ -954,9 +954,8 @@ export default {
                         `The`,
                         {
                             anchor: `seat hurt`,
-                            awkwardTrue: true,
                             card: {
-                                description: `I somehow threw out my back while reclining the seat with Miriam on top of me. Perhaps it's a sign that I'm getting on in my years.`,
+                                description: `Somehow I threw out my back while reclining the seat with Miriam on top of me. Perhaps it's a sign that I'm getting on in years.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -974,7 +973,7 @@ export default {
                             anchor: `his soreness`,
                             todo: true,
                             card: {
-                                description: `Anticipating how sore I'll be after the breakup, Miriam was particularly vigorous in her lovemaking, which has left me feeling sore in certain areas. Although maybe it's just harder to keep up in old age.`,
+                                description: `Miriam gratifies me with her most vigorous lovemaking yet, as she knows how sore I'll be about the breakup. But now I'm feeling sore in my nether regions. With no other explanation, I assume it's harder to keep up in old age.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
