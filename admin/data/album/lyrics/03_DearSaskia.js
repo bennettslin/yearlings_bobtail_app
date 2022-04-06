@@ -150,9 +150,8 @@ export default {
                     lyric: [
                         {
                             anchor: `You'd love Taiwan`,
-                            todo: true,
                             card: {
-                                description: `During a tour of the Taiwanese countryside with our cousins, I mentally noted all the things I could show to Sasha one day. As a child, the only time I cared much for my heritage was when I thought there was something to gain by sharing it with someone else.`,
+                                description: `During a tour of the Taiwanese countryside with my cousins, I mentally noted all the things I could show to Sasha one day. I'm not sure it had to do with any pride in my heritage. I just thought I had something to gain by sharing it with someone else.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -673,7 +672,7 @@ export default {
                             anchor: `hugging hurts`,
                             todo: true,
                             card: {
-                                description: `After downplaying my injuries to avoid the humiliation of getting beaten up, I suddenly play them up here to hide my emotional hurt, as I explain to Sasha why I winced when we hugged on that last day.`,
+                                description: `I would typically downplay my injuries to avoid the humiliation of having been beaten up. But I play them up here to hide my emotional hurt, as I explain to Sasha why I winced when we hugged on that last day.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },

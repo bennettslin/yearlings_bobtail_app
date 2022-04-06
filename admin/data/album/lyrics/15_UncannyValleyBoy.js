@@ -1275,9 +1275,8 @@ export default {
                         `and all these`,
                         {
                             anchor: `pages you've ripped`,
-                            todo: true,
                             card: {
-                                description: `My parents criticize my eagerness to ditch past sentiments in favor of present ambitions, as if I'm tearing out pages from a scrapbook to free up space for new inserts.`,
+                                description: `My parents bemoan my eagerness to ditch past comforts for present ambitions, as if I'm tearing out pages from a scrapbook to free up space for new inserts.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
