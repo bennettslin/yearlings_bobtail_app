@@ -126,11 +126,16 @@ export default getFormattedSlideMetadata([
                         isItalic: true,
                         lyric: `Yearling's Bobtail`,
                     },
-                    `. The album and audio webcomic combined took 25,000 hours to make— more than a decade of my life! Which means there won't be another work this intricate or expansive for a while— or maybe ever, if it stays unknown.`,
+                    `. The album and audio webcomic combined took 25,000 hours to make— more than a decade of my life! Which means there won't be another work this intricate or expansive for a while— or maybe ever, if`,
+                    {
+                        isItalic: true,
+                        lyric: `Yearling's Bobtail`,
+                    },
+                    `stays unknown.`,
                 ],
             },
             {
-                paragraph: `But what are the chances it stays unknown forever? If you say that's unlikely, then what are the chances it will have no impact once it's released by a record label? If you say that's unlikely as well, then why can't that label be you?`,
+                paragraph: `But what are the chances it stays unknown forever? If you say this is unlikely, then what are the chances it will have no impact once it's released by a record label? If you say this is unlikely as well, then why can't that label be you?`,
             },
         ],
     },
@@ -149,12 +154,12 @@ export default getFormattedSlideMetadata([
             },
             {
                 paragraph: [
-                    `What work might this be? Who knows, but`,
+                    `What work might this be? Who knows, but I'd say`,
                     {
                         isItalic: true,
                         lyric: `Yearling's Bobtail`,
                     },
-                    `is a pretty strong candidate. Being "The`,
+                    `is a strong candidate! Being "The`,
                     {
                         isItalic: true,
                         lyric: `Ulysses`,
@@ -164,7 +169,7 @@ export default getFormattedSlideMetadata([
             },
         ],
         footnote: [
-            `I can recommend`,
+            `I recommend`,
             {
                 anchor: {
                     isItalic: true,
@@ -198,19 +203,6 @@ export default getFormattedSlideMetadata([
 //     Audio webcomic for the Ulysses of rock albums.
 // 25,000 hours. Web development skills, guidance to any other artist hoping to do the same. Technology now exists
 // NFT
-
-// An audio webcomic for the "Ulysses of Rock Albums."
-
-//
-
-//
-// He posits a few ways this can happen. Perhaps the medium they're working in is too new. Or perhaps
-// Medium that's new and therefore unseen.
-// Have deeper significance beyond the content of the work itself.
-
-// Klosterman discusses authors, not musicians, so I'm
-
-// An audio webcomic for the Ulysses of Rock Albums.
 
 // Bobtail Dominoes.
 

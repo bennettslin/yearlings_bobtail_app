@@ -565,10 +565,8 @@ export default {
                         `But`,
                         {
                             anchor: `no convert's missed`,
-                            todo: true,
-                            // TODO: This is more about my investment into it.
                             card: {
-                                description: `In asking for the largest payments upfront, RI Research rightly guessed that I would grow disillusioned sooner rather than later. Sita's abrupt departure from my life, after she'd made such a profound impact, seemed like evidence that I was once again a sucker for the perfect scam.`,
+                                description: `RI Research likely guessed that I would grow disillusioned sooner rather than later, and so they asked for the largest payments upfront. The last few letters were so sloppily written, it even felt like they were shooing me away by that point. And now Sita's abrupt departure from my life seemed like evidence that I was once again a sucker for the perfect scam.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
