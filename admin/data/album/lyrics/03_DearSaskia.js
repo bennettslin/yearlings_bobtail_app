@@ -670,9 +670,8 @@ export default {
                         `Anyway, I'm feeling healed. Still,`,
                         {
                             anchor: `hugging hurts`,
-                            todo: true,
                             card: {
-                                description: `I would typically downplay my injuries to avoid the humiliation of having been beaten up. But I play them up here to hide my emotional hurt, as I explain to Sasha why I winced when we hugged on that last day.`,
+                                description: `It's more typical to downplay one's injuries to avoid the humiliation of getting beaten up. But here I play them up to mask my emotional hurt, as I explain to Sasha why I winced when we hugged on that last day.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },

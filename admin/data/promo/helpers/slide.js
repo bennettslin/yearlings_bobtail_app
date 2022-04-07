@@ -1,3 +1,4 @@
+import slugify from 'slugify'
 import {
     getSmartQuotedObjectForKeys,
     getSmartQuotedObjectsForKeys,
@@ -43,6 +44,18 @@ export const getFormattedSlideMetadata = entity => {
     // Order matters. Spacing function assumes straight quotes.
     newEntity = _getSpacedSlideMetadata(entity)
     newEntity = _getSmartQuotedSlideMetadata(entity)
+
+    if (Array.isArray(newEntity)) {
+        newEntity = newEntity.map(section => ({
+            ...section,
+            path: slugify(
+                section.title, {
+                    lower: true,
+                    strict: true,
+                },
+            ),
+        }))
+    }
 
     return newEntity
 }

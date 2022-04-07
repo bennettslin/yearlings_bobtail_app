@@ -2,7 +2,6 @@ import { getFormattedSlideMetadata } from '../../helpers/slide'
 
 export default getFormattedSlideMetadata([
     {
-        path: `introduction`,
         title: `Introduction`,
         body: [
             {
@@ -11,7 +10,6 @@ export default getFormattedSlideMetadata([
         ],
     },
     {
-        path: `stores-profit-then-scale`,
         title: `Stores profit, then scale`,
         body: [
             {
@@ -27,19 +25,16 @@ export default getFormattedSlideMetadata([
         footnote: `In this pitch, let's call any company a store if it sells goods or services that aren't immediately reproducible on demand.`,
     },
     {
-        path: `startups-scale-then-profit`,
         title: `Startups scale, then profit`,
         body: [
             {
                 paragraph: `Unlike stores, a startup seeks to scale first, even if this means going without profit in the short term. A good example is Google, which stayed unprofitable in its first few years until it reached millions of users.`,
             },
             {
-                paragraph: `This means that founding a startup is a risky venture at every step along the way. The upside is that the need to self-differentiate is baked into a startup's business model. So if its founders have correctly identified an unknown need that they can fulfill, then their path to scale and success is probably assured.`,
             },
         ],
     },
     {
-        path: `startups-and-the-network-effect`,
         title: `Startups and the network effect`,
         body: [
             {
@@ -59,7 +54,6 @@ export default getFormattedSlideMetadata([
         ],
     },
     {
-        path: `startups-and-economies-of-scale`,
         title: `Startups and economies of scale`,
         body: [
             {
@@ -79,7 +73,6 @@ export default getFormattedSlideMetadata([
         ],
     },
     {
-        path: `greater-risks-greater-rewards`,
         title: `Greater risks, greater rewards`,
         body: [
             {
@@ -99,7 +92,6 @@ export default getFormattedSlideMetadata([
         ],
     },
     {
-        path: `indie-artists-are-like-stores`,
         title: `Indie artists are like stores`,
         body: [
             {
@@ -114,7 +106,6 @@ export default getFormattedSlideMetadata([
         ],
     },
     {
-        path: `artups-are-like-startups`,
         title: `Artups are like startups`,
         body: [
             {
@@ -134,7 +125,6 @@ export default getFormattedSlideMetadata([
         ],
     },
     {
-        path: `artups-and-the-network-effect`,
         title: `Artups and the network effect`,
         body: [
             {
@@ -153,7 +143,6 @@ export default getFormattedSlideMetadata([
         ],
     },
     {
-        path: `artups-and-economies-of-scale`,
         title: `Artups and economies of scale`,
         body: [
             {
@@ -172,7 +161,6 @@ export default getFormattedSlideMetadata([
         ],
     },
     {
-        path: `our-initial-reception`,
         title: `Our initial reception`,
         body: [
             {
@@ -208,7 +196,6 @@ export default getFormattedSlideMetadata([
         ],
     },
     {
-        path: `bet-on-the-bobtail-yearlings`,
         title: `Bet on the Bobtail Yearlings`,
         body: [
             {

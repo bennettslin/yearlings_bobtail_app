@@ -1,17 +1,17 @@
 .drawing#{$suffix} {
-    [class^=sketch] { stroke: hsl(45, 5%, 20%); }
-    .eyeBlob { fill: hsla(45, 5%, 40%, 0.75); }
-    .sketchDarkest { fill: hsla(45, 5%, 20%, 0.75); }
-    .sketchDarker { fill: hsla(45, 5%, 35%, 0.75); }
-    .sketchMiddle { fill: hsla(45, 5%, 50%, 0.75); }
-    .sketchLighter { fill: hsla(45, 5%, 65%, 0.75); }
-    .sketchLightest { fill: hsla(45, 5%, 80%, 0.75); }
+    [class^=sketch] { stroke: hsla(45, 5%, 20%, 0.5); }
+    .eyeBlob { fill: hsla(45, 5%, 40%, 0.625); }
+    .sketchDarkest { fill: hsla(45, 5%, 20%, 0.625); }
+    .sketchDarker { fill: hsla(45, 5%, 35%, 0.625); }
+    .sketchMiddle { fill: hsla(45, 5%, 50%, 0.625); }
+    .sketchLighter { fill: hsla(45, 5%, 65%, 0.625); }
+    .sketchLightest { fill: hsla(45, 5%, 80%, 0.625); }
 
     .darken__parent
     &.darken#{$suffix} {
-        .sketchDarkest { fill: hsla(45, 3%, 15%, 0.75); }
-        .sketchDarker { fill: hsla(45, 3%, 23%, 0.75); }
-        .sketchMiddle { fill: hsla(45, 3%, 30%, 0.75); }
-        .sketchLightest { fill: hsla(45, 5%, 45%, 0.75); }
+        .sketchDarkest { fill: hsla(45, 3%, 15%, 0.625); }
+        .sketchDarker { fill: hsla(45, 3%, 23%, 0.625); }
+        .sketchMiddle { fill: hsla(45, 3%, 30%, 0.625); }
+        .sketchLightest { fill: hsla(45, 5%, 45%, 0.625); }
     }
 }
