@@ -77,7 +77,7 @@ export default getFormattedSlideMetadata([
             },
             {
                 paragraph: [
-                    `Now here's the crazy part. The indie labels will always turn down this deal. Because unlike major labels, indie labels don't make smart bets to maximize gains; they make safe bets to minimize risk. Which means they sign fanbases, not talent. Indie labels see themselves as multipliers, not exponents, so a band's fanbase needs to be sizable to begin with. And a Pareto package deal is all about showing what the label gains`,
+                    `Now here's the crazy part. The indie labels will always turn down this deal, because they don't make smart bets to maximize gains; they make safe bets to minimize risk. Which means they sign fanbases, not talent. Indie labels see themselves as multipliers, not exponents, so a band's fanbase needs to be sizable to begin with. And a Pareto package deal is all about showing what the label gains`,
                     {
                         isEmphasis: true,
                         lyric: `in lieu of`,
@@ -121,24 +121,16 @@ export default getFormattedSlideMetadata([
             },
             {
                 paragraph: [
-                    `The main offering, of course, is`,
+                    `Naturally, the main offering is`,
                     {
                         isItalic: true,
                         lyric: `Yearling's Bobtail`,
                     },
-                    `. The album and audio webcomic combined took 25,000 hours to make— more than ten years of my life! Which means there won't be another work this intricate or expansive for a long while— or ever, if it remains unknown.`,
+                    `. The album and audio webcomic combined took 25,000 hours to make— more than a decade of my life! Which means there won't be another work this intricate or expansive for a while— or maybe ever, if it stays unknown.`,
                 ],
             },
             {
-                // TODO: Redo. Poke around for twenty minutes or so. Surely some visionary label will figure it out before then. Why can't that label be you?
-                paragraph: [
-                    `But which scenario is more likely? That`,
-                    {
-                        isItalic: true,
-                        lyric: `Yearling's Bobtail`,
-                    },
-                    `remains unknown because the Bobtail Yearlings were too naive to do things the indie way? Or that it gets discovered by some Dre-like visionary, who readily sees what the indie labels were too naive to see?`,
-                ],
+                paragraph: `But what are the chances it stays unknown forever? If you say that's unlikely, then what are the chances it will have no impact once it's released by a record label? If you say that's unlikely as well, then why can't that label be you?`,
             },
         ],
     },
@@ -146,24 +138,23 @@ export default getFormattedSlideMetadata([
         title: `But what if indie rock is wrong?`,
         body: [
             {
-                // TODO: The one single work from our time that lasts
                 paragraph: [
                     `In his book`,
                     {
                         isItalic: true,
                         lyric: `But What If We're Wrong?`,
                     },
-                    `, Chuck Klosterman explores the likelihood that future generations will remember only a single work of art from our time, and that this work will be one that's presently unknown. Perhaps it experiments with a medium that's just too new, or perhaps its significance will only come in light of future understanding.`,
+                    `, Chuck Klosterman explores the likelihood that future generations will best remember a single work of art from our time, and that this work is presently unknown to us. Perhaps it experiments with a medium that's just too new, or perhaps its significance will only come in light of future understanding.`,
                 ],
             },
             {
                 paragraph: [
-                    `Which work might this be? Who knows, but`,
+                    `What work might this be? Who knows, but`,
                     {
                         isItalic: true,
                         lyric: `Yearling's Bobtail`,
                     },
-                    `is a very strong candidate. Being "The`,
+                    `is a pretty strong candidate. Being "The`,
                     {
                         isItalic: true,
                         lyric: `Ulysses`,
@@ -173,7 +164,7 @@ export default getFormattedSlideMetadata([
             },
         ],
         footnote: [
-            `I do recommend`,
+            `I can recommend`,
             {
                 anchor: {
                     isItalic: true,
