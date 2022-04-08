@@ -76,8 +76,9 @@ export default getFormattedSlideMetadata([
                 paragraph: `So in essence, every interdependent band promises to be five times better, in exchange for being allowed to focus solely on their strength. Let's call the terms of this promise their Pareto package deal.`,
             },
             {
+                // TODO: Rephrase without major labels?
                 paragraph: [
-                    `Now here's the crazy part. The indie labels will always turn down this deal, because they don't make smart bets to maximize gains; they make safe bets to minimize risk. Which means they sign fanbases, not talent. Indie labels see themselves as multipliers, not exponents, so a band's fanbase needs to be sizable to begin with. And a Pareto package deal is all about showing what the label gains`,
+                    `Now here's the crazy part. The indie labels will always turn down this deal. Because unlike major labels, indie labels don't make smart bets to maximize gains; they make safe bets to minimize risk. Which means they sign fanbases, not talent. Indie labels see themselves as multipliers, not exponents, so a band's fanbase needs to be sizable to begin with. And a Pareto package deal is all about showing what the label gains`,
                     {
                         isEmphasis: true,
                         lyric: `in lieu of`,
@@ -120,7 +121,7 @@ export default getFormattedSlideMetadata([
         },
         body: [
             {
-                paragraph: `Are the Bobtail Yearlings an Eminem of rock? Before deciding, you'll want to know what's in our Pareto package deal. So let's get started!`,
+                paragraph: `Are the Bobtail Yearlings an Eminem of rock? Before deciding, you'll probably want to know what's in our Pareto package deal. So let's get started!`,
             },
             {
                 paragraph: [
@@ -129,16 +130,16 @@ export default getFormattedSlideMetadata([
                         isItalic: true,
                         lyric: `Yearling's Bobtail`,
                     },
-                    `. The album and audio webcomic combined took me 25,000 hours to make— more than a decade of my life! Which means there won't be another work this intricate or expansive for a while— or maybe ever, if`,
+                    `. The album and audio webcomic combined took me 25,000 hours to make— more than a decade of my life! Which means there won't be another work this intricate or expansive for a long while— or maybe ever, if`,
                     {
                         isItalic: true,
                         lyric: `Yearling's Bobtail`,
                     },
-                    `remains unknown.`,
+                    `stays unknown.`,
                 ],
             },
             {
-                paragraph: `But is that really likely? Isn't it far more likely that some visionary record label in the future will rediscover the benefits of interdependence and sign us? And if you agree, then why can't that visionary label be you?`,
+                paragraph: `But will the Bobtail Yearlings really stay unknown? Isn't it far more likely that some visionary record label in the future will rediscover interdependence and sign us? And if you say yes, then why can't that visionary label be you?`,
             },
         ],
     },
@@ -157,12 +158,12 @@ export default getFormattedSlideMetadata([
             },
             {
                 paragraph: [
-                    `Who knows what work this might be, but`,
+                    `Who knows what this unknown work might be. But`,
                     {
                         isItalic: true,
                         lyric: `Yearling's Bobtail`,
                     },
-                    `is a pretty strong candidate! Being "The`,
+                    `is a strong candidate! Being "The`,
                     {
                         isItalic: true,
                         lyric: `Ulysses`,
@@ -187,7 +188,8 @@ export default getFormattedSlideMetadata([
         title: `A word on Web3`,
         body: [
             {
-                paragraph: `A quick word for Web3 enthusiasts. Web3 may be an optimal technology for monetizing, but Web2 is the optimal technology for creating. So if you spent the Web2 years chasing after bands that monetized their work on platforms created by others, then Web3 has nothing further to offer you. You're the product, not the platform, so you'll always be playing by rules set by others.`,
+                // TODO: Does this sound okay?
+                paragraph: `A quick word for Web3 enthusiasts. Web3 may be an optimal technology for monetizing, but Web2 is the optimal technology for creating. So if your priority during Web2 was to look for bands that monetized their work on platforms created by others, then Web3 won't be a different experience. You didn't see what was truly being offered by Web2, and now what's truly to be gained from Web3 is closed off to you.`,
             },
             {
                 paragraph: [
@@ -201,7 +203,7 @@ export default getFormattedSlideMetadata([
                         isEmphasis: true,
                         lyric: `is`,
                     },
-                    `its own Web2 creation. It made the best use of Web2, so now it's optimally placed to benefit from Web3. And we're happy to help your other bands get to this place as well.`,
+                    `its own Web2 creation. Which means it's optimally placed to benefit from Web3 monetization. And we're happy to help your other bands get to this place as well.`,
                 ],
             },
         ],
@@ -235,11 +237,15 @@ export default getFormattedSlideMetadata([
         title: `A word on nuts and bolts`,
         body: [
             {
-                paragraph: `Placeholder text.`,
+                paragraph: `Another quick work on the nuts and bolts of music.`,
             },
+        ],
+        footnote: [
+            ``,
         ],
     },
     {
+        // TODO: Add links to comic, scores, and mp3s.
         title: `Rosalind Franklin album`,
         body: [
             {
@@ -253,7 +259,7 @@ export default getFormattedSlideMetadata([
                 ],
             },
             {
-                paragraph: `The lyrics and music scores are solid, however. With label support, I'd love to rerecord the songs with a full band and guest artists, and to make the comic book a collaborative effort with professional illustrators.`,
+                paragraph: `The lyrics and music scores are solid, however. With label support, I'd love to rerecord the songs with a full band and guest artists, and to redo the comic book as a collaborative effort with professional illustrators.`,
             },
         ],
     },
@@ -262,6 +268,12 @@ export default getFormattedSlideMetadata([
         body: [
             {
                 paragraph: `Placeholder text.`,
+            },
+            {
+                paragraph: {
+                    anchor: `www.bobtailmethod.com`,
+                    href: `https://bobtailmethod.com`,
+                },
             },
         ],
     },

@@ -1426,7 +1426,7 @@ export default {
                             anchor: `Super Nintendo`,
                             wiki: `Super_Nintendo_Entertainment_System`,
                         },
-                        `. For a good while afterward, every vintage arcade sound seemed to hide a profound spiritual message that my sober ears just couldn't suss out. I doubt other people are affected the same way, so the arcade synth here was probably just for my own amusement.`,
+                        `. For a good while afterward, every vintage arcade sound I heard seemed to hide a profound spiritual message that my sober ears just couldn't suss out.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
