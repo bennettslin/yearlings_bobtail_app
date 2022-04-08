@@ -38,6 +38,10 @@ const _getSpacedSlideMetadata = entity => (
     )
 )
 
+const _getTitleText = title => (
+    title?.lyric || title
+)
+
 export const getFormattedSlideMetadata = entity => {
     let newEntity
 
@@ -49,7 +53,11 @@ export const getFormattedSlideMetadata = entity => {
         newEntity = newEntity.map(section => ({
             ...section,
             path: slugify(
-                section.title, {
+                Array.isArray(section.title) ?
+                    section.title.map(title => (
+                        _getTitleText(title)
+                    )).join('-') :
+                    _getTitleText(section.title), {
                     lower: true,
                     strict: true,
                 },

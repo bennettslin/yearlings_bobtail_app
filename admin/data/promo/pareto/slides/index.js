@@ -39,7 +39,7 @@ export default getFormattedSlideMetadata([
         title: `The indie brute force approach`,
         body: [
             {
-                paragraph: `If the project we're talking about is a band's album, then clearly the band's strength lies on the artistic side of it: writing and recording the music. On the other hand, they'll be weakest on the administrative side: marketing and distributing the album. Which makes sense, since bands in the past weren't expected to do this work to begin with.`,
+                paragraph: `If the project we're talking about is a band's album, then clearly the band's strength lies on the artistic side of it: writing and recording the music. On the other hand, they'll be weakest on the administrative side: marketing and distributing the album. Which makes sense, since it was the record labels who did this work in the past.`,
             },
             {
                 paragraph: `Still, an indie band will happily power through it all. 100% progress for 100% effort! Who can argue with linear efficiency?`,
@@ -73,7 +73,7 @@ export default getFormattedSlideMetadata([
         title: `Indie labels are multipliers, not exponents`,
         body: [
             {
-                paragraph: `In essence, every interdependent band promises to be five times better, in exchange for being allowed to focus solely on their strength. Let's call the terms of this promise their Pareto package deal.`,
+                paragraph: `So in essence, every interdependent band promises to be five times better, in exchange for being allowed to focus solely on their strength. Let's call the terms of this promise their Pareto package deal.`,
             },
             {
                 paragraph: [
@@ -92,12 +92,12 @@ export default getFormattedSlideMetadata([
         body: [
             {
                 paragraph: [
-                    `But this is a huge opportunity for everyone else. In fact, if you're a hip hop executive, it's the best way to get into the rock game. You'll be signing the best bands, and you wouldn't need to skip a beat, since hip hop has never`,
+                    `But this is a huge opportunity for everyone else. In fact, if you're a hip hop executive, it's the best way to get into the rock game. You'll be signing the best bands, and you wouldn't need to skip a beat, since hip hop never`,
                     {
                         isEmphasis: true,
-                        lyric: `not`,
+                        lyric: `stopped`,
                     },
-                    `been interdependent.`,
+                    `being interdependent.`,
                 ],
             },
             {
@@ -114,28 +114,31 @@ export default getFormattedSlideMetadata([
         ],
     },
     {
-        title: `Our Pareto package deal`,
+        title: {
+            isItalic: true,
+            lyric: `Yearling's Bobtail`,
+        },
         body: [
             {
-                paragraph: `So are the Bobtail Yearlings an Eminem of rock? Before you decide, you'll probably want to know what's in our Pareto package deal. So let's get started!`,
+                paragraph: `Are the Bobtail Yearlings an Eminem of rock? Before deciding, you'll want to know what's in our Pareto package deal. So let's get started!`,
             },
             {
                 paragraph: [
-                    `Naturally, the main offering is`,
+                    `Naturally, you'll get`,
                     {
                         isItalic: true,
                         lyric: `Yearling's Bobtail`,
                     },
-                    `. The album and audio webcomic combined took 25,000 hours to make— more than a decade of my life! Which means there won't be another work this intricate or expansive for a while— or maybe ever, if`,
+                    `. The album and audio webcomic combined took me 25,000 hours to make— more than a decade of my life! Which means there won't be another work this intricate or expansive for a while— or maybe ever, if`,
                     {
                         isItalic: true,
                         lyric: `Yearling's Bobtail`,
                     },
-                    `stays unknown.`,
+                    `remains unknown.`,
                 ],
             },
             {
-                paragraph: `But what are the chances it stays unknown forever? If you say this is unlikely, then what are the chances it will have no impact once it's released by a record label? If you say this is unlikely as well, then why can't that label be you?`,
+                paragraph: `But is that really likely? Isn't it far more likely that some visionary record label in the future will rediscover the benefits of interdependence and sign us? And if you agree, then why can't that visionary label be you?`,
             },
         ],
     },
@@ -149,17 +152,17 @@ export default getFormattedSlideMetadata([
                         isItalic: true,
                         lyric: `But What If We're Wrong?`,
                     },
-                    `, Chuck Klosterman explores the likelihood that future generations will best remember a single work of art from our time, and that this work is presently unknown to us. Perhaps it experiments with a medium that's just too new, or perhaps its significance will only come in light of future understanding.`,
+                    `, Chuck Klosterman explores the likelihood that future generations will best remember a single work of art from our time— and that this work is presently unknown to us. Perhaps it experiments with a medium that's just too new, or perhaps its significance will only come in light of future understanding.`,
                 ],
             },
             {
                 paragraph: [
-                    `What work might this be? Who knows, but I'd say`,
+                    `Who knows what work this might be, but`,
                     {
                         isItalic: true,
                         lyric: `Yearling's Bobtail`,
                     },
-                    `is a strong candidate! Being "The`,
+                    `is a pretty strong candidate! Being "The`,
                     {
                         isItalic: true,
                         lyric: `Ulysses`,
@@ -184,8 +187,21 @@ export default getFormattedSlideMetadata([
         title: `A word on Web3`,
         body: [
             {
+                paragraph: `A quick word for Web3 enthusiasts. Web3 may be an optimal technology for monetizing, but Web2 is the optimal technology for creating. So if you spent the Web2 years chasing after bands that monetized their work on platforms created by others, then Web3 has nothing further to offer you. You're the product, not the platform, so you'll always be playing by rules set by others.`,
+            },
+            {
                 paragraph: [
-                    `I have one more point to make before moving on. Web2 is a technology that's optimal for creating, while Web3 is an optimal technology for monetizing. If you saw Web2 as an opportunity to monetize work on a platform that was someone else's Web2 creation, rather than to make work `,
+                    `But`,
+                    {
+                        isItalic: true,
+                        lyric: `Yearling's Bobtail`,
+                    },
+                    `didn't empower anyone else's platform. It`,
+                    {
+                        isEmphasis: true,
+                        lyric: `is`,
+                    },
+                    `its own Web2 creation. It made the best use of Web2, so now it's optimally placed to benefit from Web3. And we're happy to help your other bands get to this place as well.`,
                 ],
             },
         ],
@@ -198,22 +214,109 @@ export default getFormattedSlideMetadata([
             `.`,
         ],
     },
+    {
+        title: `Bobtail Dominoes`,
+        body: [
+            {
+                paragraph: `Bobtail Dominoes is a musical board game I invented in which players take turns arranging dominoes into chords. I'm in the process of getting the tabletop version manufactured, after which I'll create a Kickstarter campaign to promote and sell it. In the future, I plan to create an online mobile version. The patent is pending.`,
+            },
+            {
+                paragraph: `You can visit the website to read the rules, watch a demonstration game, and solve daily puzzles.`,
+            },
+            {
+                paragraph: {
+                    anchor: `www.bobtaildominoes.com`,
+                    href: `https://www.bobtaildominoes.com`,
+                },
+            },
+        ],
+    },
+    {
+        title: `A word on nuts and bolts`,
+        body: [
+            {
+                paragraph: `Placeholder text.`,
+            },
+        ],
+    },
+    {
+        title: `Rosalind Franklin album`,
+        body: [
+            {
+                paragraph: [
+                    `After putting out`,
+                    {
+                        isItalic: true,
+                        lyric: `Yearling's Bobtail`,
+                    },
+                    `, I began the next project, a comic book album about the life of English biophysicist Rosalind Franklin. I still wasn't signed to a label by that point, so I had to make do with little resources. As a result, I was unhappy with how the comic book and the recordings turned out.`,
+                ],
+            },
+            {
+                paragraph: `The lyrics and music scores are solid, however. With label support, I'd love to rerecord the songs with a full band and guest artists, and to make the comic book a collaborative effort with professional illustrators.`,
+            },
+        ],
+    },
+    {
+        title: `Bobtail Method`,
+        body: [
+            {
+                paragraph: `Placeholder text.`,
+            },
+        ],
+    },
+    {
+        title: [
+            `Amnesticism and`,
+            {
+                isItalic: true,
+                lyric: `The Owl in Eve`,
+            },
+        ],
+        body: [
+            {
+                paragraph: [
+                    `After`,
+                    {
+                        isItalic: true,
+                        lyric: `Yearling's Bobtail`,
+                    },
+                    `was rejected by all the record labels, I went back to school to study music for the first time. For my Master's thesis, I invented a theory for composing tonal music in virtual spaces, which I call amnesticism. The basic idea is that in each region of the virtual space, a different chord progression is played. Yet a listener moving from one region to another will hear a seamless transition between these chord progressions.`,
+                ],
+            },
+            {
+                paragraph: [
+                    `I've composed a piece called`,
+                    {
+                        isItalic: true,
+                        lyric: `The Owl in Eve`,
+                    },
+                    `that demonstrates this theory. Once I have more resources in the future, I'll create an online tutorial, along with the software needed to hear music composed in this manner.`,
+                ],
+            },
+            {
+                paragraph: {
+                    anchor: `Amnesticism thesis`,
+                    href: `https://digital.lib.washington.edu/researchworks/handle/1773/23566`,
+                },
+            },
+        ],
+    },
+    {
+        // TODO: Sibelius files.
+        title: `Erhu album`,
+        body: [
+            {
+                paragraph: `The melodies and chord progressions for our third album, the one after the Rosalind Franklin album, are already written. It will feature an erhu as the lead instrument.`,
+            },
+        ],
+    },
+    {
+        title: `BYCombo`,
+        body: [
+            {
+                paragraph: `Placeholder text.`,
+            },
+        ],
+    },
 ])
-
-//     Audio webcomic for the Ulysses of rock albums.
-// 25,000 hours. Web development skills, guidance to any other artist hoping to do the same. Technology now exists
-// NFT
-
-// Bobtail Dominoes.
-
-// Rosalind Franklin comic book album.
-// Links to mp3s and scores.
-
-// Erhu album.
-// Sibelius files.
-
-// Bobtail Method.
-
-// Amnesticism.
-
-// BYCombo.
