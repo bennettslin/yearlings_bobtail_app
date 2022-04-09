@@ -39,7 +39,7 @@ const _getSpacedSlideMetadata = entity => (
 )
 
 const _getTitleText = title => (
-    title?.lyric || title
+    typeof title === 'string' ? title : title.lyric
 )
 
 export const getFormattedSlideMetadata = entity => {

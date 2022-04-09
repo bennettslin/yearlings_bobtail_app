@@ -520,7 +520,6 @@ export default {
                         `With no`,
                         {
                             anchor: `sister ship`,
-                            todo: true,
                             card: {
                                 description: [
                                     `The`,
@@ -544,12 +543,12 @@ export default {
                                         anchor: `German navy`,
                                         wiki: `Kriegsmarine`,
                                     },
-                                    `in World War II. In this allegory, Sita and I fight for the Axis, who were history's heroes in`,
+                                    `in World War II. In this allegory, Sita and I fight for the Axis, since they were the heroes of history in`,
                                     {
                                         isItalic: true,
                                         lyric: `The Man in the High Castle`,
                                     },
-                                    `, after all.`,
+                                    `.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
