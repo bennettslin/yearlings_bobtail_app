@@ -160,12 +160,12 @@ export default getFormattedSlideMetadata([
                         isItalic: true,
                         lyric: `But What If We're Wrong?`,
                     },
-                    `, Chuck Klosterman notes that many past works were unknown in their own time. He then raises an interesting question. If only one work from`,
+                    `, Chuck Klosterman notes that many past works were unknown in their own time. He then raises an interesting question: If only one work from`,
                     {
                         isEmphasis: true,
                         lyric: `our`,
                     },
-                    `time is remembered, aren't the chances just as good that it's unknown at present to`,
+                    `time is to be remembered, aren't the chances just as good that at present it's unknown to`,
                     {
                         isEmphasis: true,
                         lyric: `us`,
@@ -175,7 +175,7 @@ export default getFormattedSlideMetadata([
             },
             {
                 paragraph: [
-                    `Who knows which work this might be. But is there a smarter bet than`,
+                    `Who knows which work this might be. But can you think of a smarter bet than`,
                     {
                         isItalic: true,
                         lyric: `Yearling's Bobtail`,
