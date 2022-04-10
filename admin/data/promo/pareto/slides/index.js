@@ -170,7 +170,7 @@ export default getFormattedSlideMetadata([
                         isEmphasis: true,
                         lyric: `us`,
                     },
-                    `? Perhaps the medium it explores is too new, or maybe its significance will only be clear in light of future understanding.`,
+                    `? Perhaps the medium it explores is too new, or its significance will only be clear in light of future understanding.`,
                 ],
             },
             {
@@ -205,7 +205,7 @@ export default getFormattedSlideMetadata([
         title: `A word on Web3`,
         body: [
             {
-                paragraph: `Oh, a quick word for Web3 enthusiasts. Yes, Web3 is optimal for monetization. But it builds upon Web2, the optimal technology for creators. The artists who truly stand to gain from Web3 will be those who see what's truly being offered by Web2. For any artist who doesn't— who's only ever used Web2 to monetize their work on platforms created by others— Web3 will just be more of the same.`,
+                paragraph: `Oh, a quick word for Web3 enthusiasts. Yes, Web3 is optimal for monetization. But it builds upon Web2, the optimal technology for creators. The artists who truly stand to gain from Web3 will be those who see what's truly being offered by Web2. For any artist who doesn't— who only sees Web2 as a way to monetize their work on platforms created by others— Web3 will just be more of the same.`,
             },
             {
                 // TODO: Rephrase.
