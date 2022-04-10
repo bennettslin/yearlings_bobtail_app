@@ -39,7 +39,7 @@ export default getFormattedSlideMetadata([
         title: `The indie brute force approach`,
         body: [
             {
-                paragraph: `If the project we're talking about is a band's album, then clearly the band's strength lies on the artistic side of it: writing and recording the music. On the other hand, they'll be weakest on the administrative side: marketing and distributing the album. Which makes sense, since it was the record labels who did this work in the past.`,
+                paragraph: `If the project we're talking about is a band's album, then clearly the band's strength lies on the artistic side of it: writing and recording the music. On the other hand, they'll be weakest on the administrative side: marketing and distributing the album. Which makes sense, since this is the work that a record label would have done in the past.`,
             },
             {
                 paragraph: `Still, an indie band will happily power through it all. 100% progress for 100% effort! Who can argue with linear efficiency?`,
@@ -53,7 +53,7 @@ export default getFormattedSlideMetadata([
                 paragraph: `But interdependent bands see a better way. If society is lopsided, then someone out there is strong where you're weak, and weak where you're strong. And for bands, that someone is a record label. Marketing and distribution may be a band's weakness, but it's a label's strength. A label can do the administrative work for far less effort.`,
             },
             {
-                paragraph: `Okay, you might ask, but why would they? Every indie band arrives at the negotiating table having done the administrative work already. What label wouldn't prefer that?`,
+                paragraph: `Okay, you might ask, but why would they? Every indie band arrives at the negotiating table having done the administrative work already. What label wouldn't prefer a deal in which their job is already done?`,
             },
         ],
     },
@@ -70,15 +70,15 @@ export default getFormattedSlideMetadata([
         footnote: `This rule isn't as provocative as it seems. The best interdependent band, after all, is the Beatles.`,
     },
     {
-        title: `Indie labels are multipliers, not exponents`,
+        title: `Indie rock versus interdependence`,
         body: [
             {
                 paragraph: `So in essence, every interdependent band promises to be five times better, in exchange for being allowed to focus solely on their strength. Let's call the terms of this promise their Pareto package deal.`,
             },
             {
-                // TODO: Exponent part not needed?
+                // TODO: Reword once again?
                 paragraph: [
-                    `Now here's the crazy part. The indie labels will always turn down this deal. Their business model isn't to make smart bets to maximize gains; it's to make safe bets to minimize risk. And so they acquire fanbases, not talent. Since indie labels see themselves as multipliers, not exponents, a band's fanbase needs to be sizable to begin with. And a Pareto package deal is all about showing what the label gains`,
+                    `Now here's the crazy part. The indie labels will always turn down this deal. Their business model isn't to make smart bets to maximize gains; it's to make safe bets to minimize risk. And so they acquire fanbases, not talent— which means a band's fanbase needs to be sizable to begin with. And a Pareto package deal is all about showing what the label gains`,
                     {
                         isEmphasis: true,
                         lyric: `in lieu of`,
@@ -93,7 +93,7 @@ export default getFormattedSlideMetadata([
         body: [
             {
                 paragraph: [
-                    `But this is a huge opportunity for everyone else. In fact, if you're a hip hop executive, it's the best way to get into the rock game. You'll be signing the best bands, and you wouldn't need to skip a beat, since hip hop never`,
+                    `But this is a huge opportunity for everyone else. In fact, if you're a hip hop executive, it's the best way to get into the rock game. You'll be signing the best bands, and you wouldn't need to skip a beat, since hip hop has never`,
                     {
                         isEmphasis: true,
                         lyric: `stopped`,
@@ -139,7 +139,14 @@ export default getFormattedSlideMetadata([
                 ],
             },
             {
-                paragraph: `But will the Bobtail Yearlings really stay unknown? Isn't it far more likely that some visionary record label will rediscover interdependence in the future and sign us? And if you say yes, then why can't that visionary label be you?`,
+                paragraph: [
+                    `But you're not the only one reading this, and I only have to convince one of you. So ask yourself… how likely is`,
+                    {
+                        isItalic: true,
+                        lyric: `Yearling's Bobtail`,
+                    },
+                    `to stay unknown?`,
+                ],
             },
         ],
     },
@@ -153,22 +160,33 @@ export default getFormattedSlideMetadata([
                         isItalic: true,
                         lyric: `But What If We're Wrong?`,
                     },
-                    `, Chuck Klosterman explores the likelihood that future generations will best remember a single work of art from our time— and that this work is presently unknown to us. Perhaps it experiments with a medium that's just too new, or perhaps its significance will only come in light of future understanding.`,
+                    `, Chuck Klosterman notes that many past works were unknown in their own time. He then asks, if future generations remember only one work from`,
+                    {
+                        isEmphasis: true,
+                        lyric: `our`,
+                    },
+                    `time, aren't the chances just as good that it's presently unknown to`,
+                    {
+                        isEmphasis: true,
+                        lyric: `us`,
+                    },
+                    `? Perhaps it experiments with a medium that's too new, or maybe its significance will only be clear in light of future understanding.`,
                 ],
             },
             {
+                // TODO: More convincing phrasing.
                 paragraph: [
-                    `Who knows what this unknown work might be. But`,
+                    `Who knows which work this might be. But is there any smarter bet than`,
                     {
                         isItalic: true,
                         lyric: `Yearling's Bobtail`,
                     },
-                    `is a strong candidate! Being "The`,
+                    `? Being "The`,
                     {
                         isItalic: true,
                         lyric: `Ulysses`,
                     },
-                    `of Rock Albums," it was modeled after a novel that's lasted a century. Its audio webcomic is a brand new medium. And once it's known, it will become the canonical example of art that only an interdependent band can make.`,
+                    `of Rock Albums," it was modeled after a novel that's lasted a century. Its audio webcomic is a brand new medium. What it does best will be hard for AI to master. And once it's known, it will become the canonical example of art that only an interdependent band can make.`,
                 ],
             },
         ],
@@ -188,17 +206,22 @@ export default getFormattedSlideMetadata([
         title: `A word on Web3`,
         body: [
             {
-                // TODO: Think about rephrasing again?
-                paragraph: `A quick word for Web3 enthusiasts. While Web3 will be all about monetizing, Web2 is a technology for creators. Which means that the ones who truly stand to gain from Web3 are those who understood what was truly being offered by Web2. So if your priority during these Web2 years was to look for bands that monetized their work on platforms created by others, then Web3 will just be more of the same for you.`,
+                paragraph: `A quick word for Web3 enthusiasts. Yes, Web3 is optimal for monetization. But it builds on Web2, the optimal technology for creators. So the artists who truly stand to gain from Web3 are those who understood what was truly being offered by Web2. If an artist only used Web2 to monetize their work on platforms created by others, then Web3 will just be more of the same.`,
             },
             {
+                // TODO: Rephrase.
                 paragraph: [
                     `But`,
                     {
                         isItalic: true,
                         lyric: `Yearling's Bobtail`,
                     },
-                    `is its own platform. It doesn't empower anyone else's. With a Web2 creation of our own, the Bobtail Yearlings are now well placed to benefit from Web3 monetization. And if you sign us, we've got the know-how to help your other bands get to this place as well.`,
+                    `doesn't empower anyone else's platform; it`,
+                    {
+                        isEmphasis: true,
+                        lyric: `is`,
+                    },
+                    `its own platform. The Bobtail Yearlings used the tools provided by Web2 to create, and now we're well placed to monetize in Web3. And if you sign us, we'd love to help your other bands get to this place as well.`,
                 ],
             },
         ],
@@ -215,8 +238,9 @@ export default getFormattedSlideMetadata([
         title: `Bobtail Dominoes`,
         body: [
             {
-                paragraph: `Bobtail Dominoes is a musical board game I invented in which players take turns arranging dominoes into chords. I'm in the process of getting the tabletop version manufactured, after which I'll create a Kickstarter campaign to promote and sell it. In the future, I plan to create an online mobile version. The patent is pending.`,
+                paragraph: `Bobtail Dominoes is a musical board game I invented in which players take turns arranging custom-shaped dominoes into chords. I'm in the process of getting the tabletop version manufactured, after which I'll create a Kickstarter campaign to promote and sell it. In the future, I plan to create an online version.`,
             },
+            // TODO: More about promoting band here?
             {
                 paragraph: `You can visit the website to read the rules, watch a demonstration game, and solve daily puzzles.`,
             },
@@ -265,7 +289,7 @@ export default getFormattedSlideMetadata([
                 paragraph: `Placeholder text.`,
             },
             {
-                paragraph: `Bobtail Method is currently available as a pdf, but this isn't an ideal format. With more resources, I plan to create an online tutorial and app.`,
+                paragraph: `Bobtail Method is currently viewable as a pdf. With more resources, I plan to create an online tutorial and app.`,
             },
             {
                 paragraph: {
@@ -276,10 +300,13 @@ export default getFormattedSlideMetadata([
         ],
     },
     {
-        title: `A word on rock music's vicious circle`,
+        title: `Rock's vicious circle`,
         body: [
             {
-                paragraph: `Rock music today is caught in a vicious circle of poor knowledge and perverse incentives. Given such a vast pool of candidates, indie labels don't have time to listen to every band, so they trust the numbers they see on social media and streaming platforms. These numbers are easily inflated, which makes them faulty measures of artistic worth. But bands will grind away and inflate them just to stay afloat in a vast pool of candidates.`,
+                paragraph: `It's no longer controversial to say that rock music has gotten worse. It's also not hard to see how it happened. We're trapped in a vicious circle of inadequate knowledge and perverse incentives.`,
+            },
+            {
+                paragraph: `Given a vast pool of candidates, indie labels don't have time to listen to every band. So they trust the numbers they see on social media and music platforms. These numbers are easily inflated, which makes them faulty measures of artistic worth. But bands will grind away and inflate them all the same, just to stay afloat in a vast pool of candidates.`,
             },
         ],
     },
@@ -287,11 +314,17 @@ export default getFormattedSlideMetadata([
         title: `BYCombo`,
         body: [
             {
-                paragraph: `BYCombo is our nonprofit artist incubator that aims to fix this problem by starting a demo revolution. Our promise to the bands is that each demo gets heard and fairly considered by the labels. And our promise to the labels is that each band pours a minimum number of hours into every demo.`,
+                paragraph: `BYCombo is our nonprofit band incubator that aims to break this vicious circle by starting a demo revolution. Our promise to the bands is that their demos get heard and fairly considered by the labels. And our promise to the labels is that each band pours a minimum number of hours into every demo. So bands can focus on what matters, and labels can fully understand what's out there.`,
             },
             {
-                // TODO: Mention serendipity.
-                paragraph: `With our own 25,000-hour demo, the Bobtail Yearlings exemplify what this solution has to offer. We may be the only band that can do so. Which means the only way to save rock music is to sign us!`,
+                paragraph: [
+                    `But to get off the ground, BYCombo needs to demonstrate the advantages of a patiently crafted demo. And I know of no other band with a demo that took 25,000 hours to make. So if this solution we're proposing is indeed the only way to save rock music, then`,
+                    {
+                        isEmphasis: true,
+                        lyric: `someone`,
+                    },
+                    `will need to sign the Bobtail Yearlings!`,
+                ],
             },
             {
                 paragraph: {
@@ -317,7 +350,7 @@ export default getFormattedSlideMetadata([
                         isItalic: true,
                         lyric: `Yearling's Bobtail`,
                     },
-                    `was rejected by all the record labels, I went back to school to study music for the first time. For my Master's thesis, I invented a theory for composing tonal music in virtual spaces, which I call amnesticism. The basic idea is that in each region of the virtual space, a different chord progression is played. Yet a listener moving from one region to another will hear a seamless transition between these chord progressions.`,
+                    `was rejected by all the record labels, I went back to school to study music for the first time. For my Master's thesis, I invented a theory for composing tonal music in virtual spaces, which I call amnesticism. The basic idea is that in each region of the virtual space, a different chord progression is played. Yet a listener moving from one region to another will hear a seamless transition.`,
                 ],
             },
             {

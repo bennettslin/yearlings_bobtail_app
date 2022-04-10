@@ -971,9 +971,8 @@ export default {
                         `though no worse but for`,
                         {
                             anchor: `his soreness`,
-                            todo: true,
                             card: {
-                                description: `Miriam gratifies me with her most vigorous lovemaking yet, as she knows I'll be sore about the breakup. But as my nether regions begin to feel sore, I can only suppose that I'm struggling to keep up in my old age.`,
+                                description: `Miriam knew how sore I'd be about the breakup, and so she gratified me with her most vigorous lovemaking yet. But with no cause to explain why my penis is now sore, I can only suppose that it's hard to keep up in my old age.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
