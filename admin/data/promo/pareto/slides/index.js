@@ -121,7 +121,7 @@ export default getFormattedSlideMetadata([
         },
         body: [
             {
-                paragraph: `Are the Bobtail Yearlings an Eminem of rock? Before deciding, you'll probably want to know what's in our Pareto package deal. So let's get started!`,
+                paragraph: `Are the Bobtail Yearlings an Eminem of rock? Before deciding, you'll probably want to know what's in our Pareto package deal. So let's get started.`,
             },
             {
                 paragraph: [
@@ -140,12 +140,12 @@ export default getFormattedSlideMetadata([
             },
             {
                 paragraph: [
-                    `But you're not the only one reading this, and I only have to convince one of you. So ask yourself… how likely is`,
+                    `But you're not the only one reading this, and I only have to convince one of you.`,
                     {
                         isItalic: true,
                         lyric: `Yearling's Bobtail`,
                     },
-                    `to stay unknown?`,
+                    `will only stay unknown if every single one of you refuses to see the merits of interdependence. So ask yourself… how likely is that?`,
                 ],
             },
         ],
@@ -160,38 +160,37 @@ export default getFormattedSlideMetadata([
                         isItalic: true,
                         lyric: `But What If We're Wrong?`,
                     },
-                    `, Chuck Klosterman notes that many past works were unknown in their own time. He then asks, if future generations remember only one work from`,
+                    `, Chuck Klosterman notes that many past works were unknown in their own time. He then raises an interesting question. If only one work from`,
                     {
                         isEmphasis: true,
                         lyric: `our`,
                     },
-                    `time, aren't the chances just as good that it's presently unknown to`,
+                    `time is remembered, aren't the chances just as good that it's unknown at present to`,
                     {
                         isEmphasis: true,
                         lyric: `us`,
                     },
-                    `? Perhaps it experiments with a medium that's too new, or maybe its significance will only be clear in light of future understanding.`,
+                    `? Perhaps the medium it explores is too new, or maybe its significance will only be clear in light of future understanding.`,
                 ],
             },
             {
-                // TODO: More convincing phrasing.
                 paragraph: [
-                    `Who knows which work this might be. But is there any smarter bet than`,
+                    `Who knows which work this might be. But is there a smarter bet than`,
                     {
                         isItalic: true,
                         lyric: `Yearling's Bobtail`,
                     },
-                    `? Being "The`,
+                    `? As "The`,
                     {
                         isItalic: true,
                         lyric: `Ulysses`,
                     },
-                    `of Rock Albums," it was modeled after a novel that's lasted a century. Its audio webcomic is a brand new medium. What it does best will be hard for AI to master. And once it's known, it will become the canonical example of art that only an interdependent band can make.`,
+                    `of Rock Albums," it was modeled after a novel that's lasted a century. Its audio webcomic is a brand new medium. What it does best will be very hard for AI to master. And once it's known, it will become the canonical example of art that only an interdependent band can make.`,
                 ],
             },
         ],
         footnote: [
-            `I recommend`,
+            `Klosterman never discusses indie rock directly in`,
             {
                 anchor: {
                     isItalic: true,
@@ -199,14 +198,14 @@ export default getFormattedSlideMetadata([
                 },
                 href: `https://www.penguinrandomhouse.com/books/533521/but-what-if-were-wrong-by-chuck-klosterman`,
             },
-            `as a fun read.`,
+            `But his argument makes it clear that indie bands, who rely heavily on fan support, will be among the first to be forgotten. No future audience ever "supports" an artist from its past, after all.`,
         ],
     },
     {
         title: `A word on Web3`,
         body: [
             {
-                paragraph: `A quick word for Web3 enthusiasts. Yes, Web3 is optimal for monetization. But it builds on Web2, the optimal technology for creators. So the artists who truly stand to gain from Web3 are those who understood what was truly being offered by Web2. If an artist only used Web2 to monetize their work on platforms created by others, then Web3 will just be more of the same.`,
+                paragraph: `Oh, a quick word for Web3 enthusiasts. Yes, Web3 is optimal for monetization. But it builds upon Web2, the optimal technology for creators. The artists who truly stand to gain from Web3 will be those who see what's truly being offered by Web2. For any artist who doesn't— who's only ever used Web2 to monetize their work on platforms created by others— Web3 will just be more of the same.`,
             },
             {
                 // TODO: Rephrase.
@@ -216,12 +215,7 @@ export default getFormattedSlideMetadata([
                         isItalic: true,
                         lyric: `Yearling's Bobtail`,
                     },
-                    `doesn't empower anyone else's platform; it`,
-                    {
-                        isEmphasis: true,
-                        lyric: `is`,
-                    },
-                    `its own platform. The Bobtail Yearlings used the tools provided by Web2 to create, and now we're well placed to monetize in Web3. And if you sign us, we'd love to help your other bands get to this place as well.`,
+                    `doesn't empower anyone else's platform; it's a Web2 creation of its own. Which means the Bobtail Yearlings are now well placed to monetize in Web3. And if you sign us, we're happy to help your other bands get to this place as well.`,
                 ],
             },
         ],
@@ -289,7 +283,7 @@ export default getFormattedSlideMetadata([
                 paragraph: `Placeholder text.`,
             },
             {
-                paragraph: `Bobtail Method is currently viewable as a pdf. With more resources, I plan to create an online tutorial and app.`,
+                paragraph: `The manuscript for Bobtail Method is viewable as a pdf, but this isn't the ideal format. With more resources, I plan to create an online tutorial and app.`,
             },
             {
                 paragraph: {
@@ -300,30 +294,31 @@ export default getFormattedSlideMetadata([
         ],
     },
     {
-        title: `Rock's vicious circle`,
-        body: [
-            {
-                paragraph: `It's no longer controversial to say that rock music has gotten worse. It's also not hard to see how it happened. We're trapped in a vicious circle of inadequate knowledge and perverse incentives.`,
-            },
-            {
-                paragraph: `Given a vast pool of candidates, indie labels don't have time to listen to every band. So they trust the numbers they see on social media and music platforms. These numbers are easily inflated, which makes them faulty measures of artistic worth. But bands will grind away and inflate them all the same, just to stay afloat in a vast pool of candidates.`,
-            },
-        ],
-    },
-    {
         title: `BYCombo`,
         body: [
             {
-                paragraph: `BYCombo is our nonprofit band incubator that aims to break this vicious circle by starting a demo revolution. Our promise to the bands is that their demos get heard and fairly considered by the labels. And our promise to the labels is that each band pours a minimum number of hours into every demo. So bands can focus on what matters, and labels can fully understand what's out there.`,
+                paragraph: `Before we discuss BYCombo, let's admit that rock music has gotten worse. It's no longer controversial to say this. It's also not hard to see how it happened. We're trapped in a vicious circle of inadequate knowledge and perverse incentives.`,
+            },
+            {
+                paragraph: `Given a vast pool of candidates, indie labels don't have time to listen to every band. So they trust the numbers they see on social media and music platforms. These numbers are easily inflated, which makes them inaccurate measures of artistic worth. But bands will grind away and inflate them all the same, just to stay afloat in a vast pool of candidates.`,
+            },
+        ],
+        footnote: `Those with wealth will hire publicists to grind away for them, which makes the numbers even more inaccurate.`,
+    },
+    {
+        title: `Breaking the vicious circle`,
+        body: [
+            {
+                paragraph: `BYCombo is our nonprofit band incubator that aims to break this vicious circle by starting a demo revolution. Our promise to the bands is that each demo is given fair consideration by the labels. And our promise to the labels is that each band invests a minimum number of hours into their demo. So bands can focus on what matters, and labels can fully understand what's out there.`,
             },
             {
                 paragraph: [
-                    `But to get off the ground, BYCombo needs to demonstrate the advantages of a patiently crafted demo. And I know of no other band with a demo that took 25,000 hours to make. So if this solution we're proposing is indeed the only way to save rock music, then`,
+                    `But to get BYCombo off the ground, the labels need to know what they might gain by holding out for a patiently crafted demo. They need to see an example, and I know of no other band with a demo that took 25,000 hours to make. So if you agree that our solution is the only way to save rock music, then`,
                     {
                         isEmphasis: true,
-                        lyric: `someone`,
+                        lyric: `one`,
                     },
-                    `will need to sign the Bobtail Yearlings!`,
+                    `of you will need to sign the Bobtail Yearlings!`,
                 ],
             },
             {
