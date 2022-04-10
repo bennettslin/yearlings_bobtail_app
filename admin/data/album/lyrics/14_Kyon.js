@@ -33,6 +33,7 @@ export default {
     playerStartTime: 2496.296,
     todo: true,
     // TODO: Connect this thought better.
+    // To see how my behavior incrementally degenerated into cruelty. I would behave in a manner than what a self-respecting person would tolerate. Whereupon I would need to make my behavior worse.
     overview: `The on-again, off-again years finally gave me enough distance to see how emotionally abusive I'd become. But Sita just quietly endured my cruelty, and that's what baffled me. In time I came to understand how thoroughly she'd tied her sense of worth to our relationship. I was fighting for me. She was fighting for us.`,
     lyricUnits: [
         {

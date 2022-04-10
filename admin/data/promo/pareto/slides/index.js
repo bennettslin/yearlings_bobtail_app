@@ -11,8 +11,11 @@ export default getFormattedSlideMetadata([
                         isEmphasis: true,
                         lyric: `don't`,
                     },
-                    `need a label. But read on, and I'll explain the advantages of signing any interdependent band, along with all the projects under our belt and underway that will be yours if you sign us.`,
+                    `need a label.`,
                 ],
+            },
+            {
+                paragraph: `But read on, and I'll explain the benefits of signing any interdependent band. I'll then list all the projects we have under our belt and underway. They're all yours if you sign us, and you might just end up saving rock music along the way!`,
             },
         ],
     },
@@ -36,10 +39,10 @@ export default getFormattedSlideMetadata([
         ],
     },
     {
-        title: `The indie brute force approach`,
+        title: `The brute force approach`,
         body: [
             {
-                paragraph: `If the project we're talking about is a band's album, then clearly the band's strength lies on the artistic side of it: writing and recording the music. On the other hand, they'll be weakest on the administrative side: marketing and distributing the album. Which makes sense, since this is the work that a record label would have done in the past.`,
+                paragraph: `If the project we're talking about is a band's album, then clearly the band's strength lies on the artistic side of it: writing and recording the music. On the other hand, they'll be weakest on the administrative side: marketing and distributing the album. Which makes sense. In the past, this is the work that a record label would have done.`,
             },
             {
                 paragraph: `Still, an indie band will happily power through it all. 100% progress for 100% effort! Who can argue with linear efficiency?`,
@@ -70,15 +73,14 @@ export default getFormattedSlideMetadata([
         footnote: `This rule isn't as provocative as it seems. The best interdependent band, after all, is the Beatles.`,
     },
     {
-        title: `Indie rock versus interdependence`,
+        title: `Indie labels want fanbases`,
         body: [
             {
                 paragraph: `So in essence, every interdependent band promises to be five times better, in exchange for being allowed to focus solely on their strength. Let's call the terms of this promise their Pareto package deal.`,
             },
             {
-                // TODO: Reword once again?
                 paragraph: [
-                    `Now here's the crazy part. The indie labels will always turn down this deal. Their business model isn't to make smart bets to maximize gains; it's to make safe bets to minimize risk. And so they acquire fanbases, not talent— which means a band's fanbase needs to be sizable to begin with. And a Pareto package deal is all about showing what the label gains`,
+                    `Now here's the crazy part. The indie labels will always turn down this deal. They don't make smart bets to maximize gains; they make safe bets to minimize risk. Their business model is to acquire fanbases, not talent— which means a band's fanbase needs to be sizable to begin with. And a Pareto package deal is all about showing what the label gains`,
                     {
                         isEmphasis: true,
                         lyric: `in lieu of`,
@@ -93,16 +95,19 @@ export default getFormattedSlideMetadata([
         body: [
             {
                 paragraph: [
-                    `But this is a huge opportunity for everyone else. In fact, if you're a hip hop executive, it's the best way to get into the rock game. You'll be signing the best bands, and you wouldn't need to skip a beat, since hip hop has never`,
+                    `But this is a huge opportunity for everyone else. In fact, if you're a hip hop executive, you wouldn't need to skip a beat, since hip hop has never`,
                     {
                         isEmphasis: true,
-                        lyric: `stopped`,
+                        lyric: `not`,
                     },
-                    `being interdependent.`,
+                    `been interdependent.`,
                 ],
             },
             {
                 paragraph: `For example, the Slim Shady EP only sold 250 copies. Yet as soon as Dr. Dre heard it, he signed Eminem to his record label. Dre recognized that Eminem's overwhelming talent and negligible fanbase were part of the same Pareto package deal. But if Eminem had been a rocker, the indie labels would have rejected him. Which means they're leaving the Eminems of rock all to you!`,
+            },
+            {
+                paragraph: `So are the Bobtail Yearlings an Eminem of rock? See what's in our Pareto package deal and decide for yourself!`,
             },
         ],
         footnote: [
@@ -121,31 +126,38 @@ export default getFormattedSlideMetadata([
         },
         body: [
             {
-                paragraph: `Are the Bobtail Yearlings an Eminem of rock? Before deciding, you'll probably want to know what's in our Pareto package deal. So let's get started.`,
-            },
-            {
                 paragraph: [
                     `Naturally, you'll get`,
                     {
                         isItalic: true,
                         lyric: `Yearling's Bobtail`,
                     },
-                    `. The album and audio webcomic combined took me 25,000 hours to make— more than a decade of my life! Which means there won't be another work this intricate and expansive for a long while— or maybe ever, if`,
+                    `. Will it always be known as "The`,
+                    {
+                        isItalic: true,
+                        lyric: `Ulysses`,
+                    },
+                    `of Rock Albums"? I think it's likely. Every search result for this term points to us, and doublespeaker rhyme is a bona fide invention. So imagine that every year, in perpetuity, a new crop of college students will be made aware that`,
                     {
                         isItalic: true,
                         lyric: `Yearling's Bobtail`,
                     },
-                    `stays unknown.`,
+                    `did for rock music what`,
+                    {
+                        isItalic: true,
+                        lyric: `Ulysses`,
+                    },
+                    `did for literature. What's that worth?`,
                 ],
             },
             {
                 paragraph: [
-                    `But you're not the only one reading this, and I only have to convince one of you.`,
+                    `And the music and audio webcomic combined took me 25,000 hours to make— more than a decade of my life! Bands today are hungry to create an album this intricate and expansive, and a critical mass of them would usher in a modern renaissance. But they can only be inspired by what they know. So how likely is`,
                     {
                         isItalic: true,
                         lyric: `Yearling's Bobtail`,
                     },
-                    `will only stay unknown if every single one of you refuses to see the merits of interdependence. So ask yourself… how likely is that?`,
+                    `to remain unknown?`,
                 ],
             },
         ],
@@ -165,7 +177,7 @@ export default getFormattedSlideMetadata([
                         isEmphasis: true,
                         lyric: `our`,
                     },
-                    `time is to be remembered, aren't the chances just as good that at present it's unknown to`,
+                    `time will be remembered, aren't the chances just as good that at present it's unknown to`,
                     {
                         isEmphasis: true,
                         lyric: `us`,
@@ -180,12 +192,7 @@ export default getFormattedSlideMetadata([
                         isItalic: true,
                         lyric: `Yearling's Bobtail`,
                     },
-                    `? As "The`,
-                    {
-                        isItalic: true,
-                        lyric: `Ulysses`,
-                    },
-                    `of Rock Albums," it was modeled after a novel that's lasted a century. Its audio webcomic is a brand new medium. What it does best will be very hard for AI to master. And once it's known, it will become the canonical example of art that only an interdependent band can make.`,
+                    `? It was modeled after a novel that's lasted a century. Its audio webcomic is a brand new medium. What it does best will be very hard for AI to master. And once it's known, it will become the canonical example of art that only an interdependent band can make.`,
                 ],
             },
         ],
@@ -215,7 +222,7 @@ export default getFormattedSlideMetadata([
                         isItalic: true,
                         lyric: `Yearling's Bobtail`,
                     },
-                    `doesn't empower anyone else's platform; it's a Web2 creation of its own. Which means the Bobtail Yearlings are now well placed to monetize in Web3. And if you sign us, we're happy to help your other bands get to this place as well.`,
+                    `doesn't empower anyone else's platform; it's a Web2 creation of its own. Which means the Bobtail Yearlings are now well placed to monetize in Web3. And if you sign us, we'll be happy to help your other bands get to this place as well.`,
                 ],
             },
         ],
@@ -313,12 +320,12 @@ export default getFormattedSlideMetadata([
             },
             {
                 paragraph: [
-                    `But to get BYCombo off the ground, the labels need to know what they might gain by holding out for a patiently crafted demo. They need to see an example, and I know of no other band with a demo that took 25,000 hours to make. So if you agree that our solution is the only way to save rock music, then`,
+                    `But for BYCombo to get off the ground, the labels need to know what might be gained by holding out for a patiently crafted demo. They need a ready example, and I know of no other band with a demo that took 25,000 hours to make. So if you agree that our solution is the only way to save rock music, then`,
                     {
                         isEmphasis: true,
-                        lyric: `one`,
+                        lyric: `someone`,
                     },
-                    `of you will need to sign the Bobtail Yearlings!`,
+                    `will need to sign the Bobtail Yearlings!`,
                 ],
             },
             {
@@ -382,6 +389,22 @@ export default getFormattedSlideMetadata([
                 href: `https://en.wikipedia.org/wiki/Erhu`,
             },
             `, also known as the Chinese violin.`,
+        ],
+    },
+    {
+        title: `Conclusion`,
+        body: [
+            {
+                // TODO: Move to last page.
+                paragraph: [
+                    `But you're not the only one reading this, and I only have to convince one of you.`,
+                    {
+                        isItalic: true,
+                        lyric: `Yearling's Bobtail`,
+                    },
+                    `will only stay unknown if every single one of you refuses to see the merits of interdependence. So ask yourself… how likely is that?`,
+                ],
+            },
         ],
     },
 ])

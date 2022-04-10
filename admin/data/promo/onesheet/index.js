@@ -3,7 +3,7 @@ import { getFormattedSlideMetadata } from '../helpers/slide'
 export default getFormattedSlideMetadata({
     body: [
         {
-            paragraph: `Old music is killing new music, and it's not hard to see why. The current system for nurturing artists is badly in need of reform. The problem is, summoning the courage to reform is hard. We won't do it unless we catch the system betting on the wrong horses. And in today's artist-friendly culture, no artist will ever be seen as the wrong horse.`,
+            paragraph: `Rock music is stagnating. Old music is killing new music, and it's not hard to see why. The current indie system for nurturing artists is badly in need of reform. The problem is, summoning the courage to reform is hard. We won't do it unless we catch the system betting on the wrong horses. And in today's artist-friendly culture, no artist will ever be seen as the wrong horse.`,
         },
         {
             paragraph: [
@@ -27,7 +27,7 @@ export default getFormattedSlideMetadata({
                     isItalic: true,
                     lyric: `Ulysses`,
                 },
-                `of Rock Albums"— an album so innovative, it would change what music can be.`,
+                `of Rock Albums"— an album so innovative, it would change what rock music can be.`,
             ],
         },
         {
@@ -133,7 +133,7 @@ export default getFormattedSlideMetadata({
             ],
         },
         {
-            paragraph: `The current system rests on the belief that when the next artist comes along to change what music can be, the public will lead, and the labels will follow. After two decades, this has yet to happen. What if it's actually the other way around?`,
+            paragraph: `The current indie system rests on the belief that when the next artist comes along to change what music can be, the public will lead, and the labels will follow. After two decades, this has yet to happen. What if it's actually the other way around? And what if rock music can only be saved once we realize that?`,
         },
     ],
 })
