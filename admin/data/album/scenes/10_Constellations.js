@@ -74,7 +74,8 @@ import {
 } from '../../../../src/constants/scene/things/flats'
 import {
     SHADOW_MONGOL,
-    SHADOW_VIKING,
+    SHADOW_VIKING_FAR,
+    SHADOW_VIKING_NEAR,
     SATURN_EXTERIOR,
     SATURN_INTERIOR,
     SATURN_SEAT,
@@ -185,7 +186,8 @@ export default [
             },
             [PANEL]: {
                 [SHADOW_MONGOL]: true,
-                [SHADOW_VIKING]: true,
+                [SHADOW_VIKING_FAR]: true,
+                [SHADOW_VIKING_NEAR]: true,
             },
         },
         cubes: STEAM_TUNNEL_KEY,

@@ -15,7 +15,7 @@ export default getFormattedSlideMetadata([
                 ],
             },
             {
-                paragraph: `But read on, and I'll explain the benefits of signing any interdependent band. I'll then list all the projects we have under our belt and underway. They're all yours if you sign us, and you might just end up saving rock music along the way!`,
+                paragraph: `But read on, and I'll explain the benefits of signing an interdependent band. I'll then list all the projects we have under our belt and underway. They're all yours if you sign us, and you might just end up saving rock music along the way!`,
             },
         ],
     },
@@ -152,7 +152,12 @@ export default getFormattedSlideMetadata([
             },
             {
                 paragraph: [
-                    `And the music and audio webcomic combined took me 25,000 hours to make— more than a decade of my life! Bands today are hungry to create an album this intricate and expansive, and a critical mass of them would usher in a modern renaissance. But they can only be inspired by what they know. So how likely is`,
+                    `And the album and audio webcomic combined took me 25,000 hours to make— more than a decade of my life! Once`,
+                    {
+                        isItalic: true,
+                        lyric: `Yearling's Bobtail`,
+                    },
+                    `is known, other bands will be inspired to create works just as intricate and expansive. These works will usher in a modern renaissance, which almost everyone wants to see happen. So how likely is`,
                     {
                         isItalic: true,
                         lyric: `Yearling's Bobtail`,
@@ -215,7 +220,6 @@ export default getFormattedSlideMetadata([
                 paragraph: `Oh, a quick word for Web3 enthusiasts. Yes, Web3 is optimal for monetization. But it builds upon Web2, the optimal technology for creators. The artists who truly stand to gain from Web3 will be those who see what's truly being offered by Web2. For any artist who doesn't— who only sees Web2 as a way to monetize their work on platforms created by others— Web3 will just be more of the same.`,
             },
             {
-                // TODO: Rephrase.
                 paragraph: [
                     `But`,
                     {
@@ -239,11 +243,10 @@ export default getFormattedSlideMetadata([
         title: `Bobtail Dominoes`,
         body: [
             {
-                paragraph: `Bobtail Dominoes is a musical board game I invented in which players take turns arranging custom-shaped dominoes into chords. I'm in the process of getting the tabletop version manufactured, after which I'll create a Kickstarter campaign to promote and sell it. In the future, I plan to create an online version.`,
+                paragraph: `Bobtail Dominoes is a musical game I invented in which players take turns arranging custom-shaped dominoes into chords. Playing it has improved my own skills as a musician, so I'll attest that it can do the same for others. It's also a great way to come up with chord progressions for a new song!`,
             },
-            // TODO: More about promoting band here?
             {
-                paragraph: `You can visit the website to read the rules, watch a demonstration game, and solve daily puzzles.`,
+                paragraph: `I'm in the process of getting the tabletop version manufactured, after which I'll start a Kickstarter campaign. In the future, I plan to create an online version. And of course, everyone who enjoys the game will be that much more likely to become a Bobtail Yearlings fan. You can visit the website to read the rules, watch a demonstration game, and solve our daily puzzles.`,
             },
             {
                 paragraph: {
@@ -254,21 +257,11 @@ export default getFormattedSlideMetadata([
         ],
     },
     {
-        title: `A word on nuts and bolts`,
-        body: [
-            {
-                paragraph: `Another quick work on the nuts and bolts of music.`,
-            },
-        ],
-        footnote: [
-            ``,
-        ],
-    },
-    {
         // TODO: Add links to comic, scores, and mp3s.
         title: `Rosalind Franklin album`,
         body: [
             {
+                // TODO: Be more specific about its story.
                 paragraph: [
                     `Our next project after`,
                     {
@@ -286,11 +279,14 @@ export default getFormattedSlideMetadata([
     {
         title: `Bobtail Method`,
         body: [
+            // TODO: When I first started to write songs as a teenager, I quickly noticed that most rock songs were written come up with a chord progression first, and then layer a melody on top of it. But the Beatles seemed to write their chords and melodies simultaneously. Their chords informed the melodies, but the melodies seemed to inform the chords, leading to songs that felt more organic.
+            // I searched for a consistent way to write musical material that would help me write songs like the Beatles. I came up with Bobtail Method, a set of exercises in which the chords inform the melodies for one measure, and then vice versa.
+            // 
             {
                 paragraph: `Placeholder text.`,
             },
             {
-                paragraph: `The manuscript for Bobtail Method is viewable as a pdf, but this isn't the ideal format. With more resources, I plan to create an online tutorial and app.`,
+                paragraph: `The manuscript for the book is viewable as a pdf, but this isn't the ideal format. With more resources, I plan to create an online tutorial and app. And as with Bobtail Dominoes, any musician who benefits from Bobtail Method is likely to become a Bobtail Yearlings fan as well.`,
             },
             {
                 paragraph: {
@@ -368,7 +364,7 @@ export default getFormattedSlideMetadata([
             },
             {
                 paragraph: {
-                    anchor: `Amnesticism thesis`,
+                    anchor: `Master's thesis`,
                     href: `https://digital.lib.washington.edu/researchworks/handle/1773/23566`,
                 },
             },
@@ -395,7 +391,7 @@ export default getFormattedSlideMetadata([
         title: `Conclusion`,
         body: [
             {
-                // TODO: Move to last page.
+                // TODO: Redo.
                 paragraph: [
                     `But you're not the only one reading this, and I only have to convince one of you.`,
                     {

@@ -45,7 +45,8 @@ import schoolbusExterior from '../../../../assets/svgs/panels/schoolbusExterior'
 import schoolbusInterior from '../../../../assets/svgs/panels/schoolbusInterior'
 import schoolbusSeat from '../../../../assets/svgs/panels/schoolbusSeat'
 import shadowMongol from '../../../../assets/svgs/panels/shadowMongol'
-import shadowViking from '../../../../assets/svgs/panels/shadowViking'
+// import shadowVikingFar from '../../../../assets/svgs/panels/shadowVikingFar'
+import shadowVikingNear from '../../../../assets/svgs/panels/shadowVikingNear'
 import snowglobe from '../../../../assets/svgs/panels/snowglobe'
 import stalactites from '../../../../assets/svgs/panels/stalactites'
 import taiwanBridge from '../../../../assets/svgs/panels/taiwanBridge'
@@ -123,7 +124,7 @@ import {
     SCHOOLBUS_SEAT__LEFT,
     SCHOOLBUS_SEAT__RIGHT,
     SHADOW_MONGOL,
-    SHADOW_VIKING,
+    SHADOW_VIKING_NEAR,
     SNOWGLOBE_FUTURE__BENNETT,
     SNOWGLOBE_PRESENT__BENNETT,
     SNOWGLOBE_PRESENT__LIZ,
@@ -151,6 +152,7 @@ import {
     WIDE_ARMREST_MIRIAM__RIGHT,
     WIDE_COUCH_BENNETT,
     WIDE_COUCH_MIRIAM,
+    SHADOW_VIKING_FAR,
 } from '../../../../constants/scene/things/panels'
 
 export default {
@@ -215,7 +217,8 @@ export default {
     [SCHOOLBUS_SEAT__LEFT]: schoolbusSeat,
     [SCHOOLBUS_SEAT__RIGHT]: schoolbusSeat,
     [SHADOW_MONGOL]: shadowMongol,
-    [SHADOW_VIKING]: shadowViking,
+    [SHADOW_VIKING_FAR]: shadowVikingNear,
+    [SHADOW_VIKING_NEAR]: shadowVikingNear,
     [SNOWGLOBE_FUTURE__BENNETT]: snowglobe,
     [SNOWGLOBE_PRESENT__BENNETT]: snowglobe,
     [SNOWGLOBE_PRESENT__LIZ]: snowglobe,

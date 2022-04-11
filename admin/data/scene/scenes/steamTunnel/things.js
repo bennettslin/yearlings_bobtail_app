@@ -5,7 +5,11 @@ import {
 } from '../../../../../src/constants/scene/things'
 import { STEAM_PIPES } from '../../../../../src/constants/scene/things/cutouts'
 import { PUSH_BROOM__TUNNEL } from '../../../../../src/constants/scene/things/fixtures'
-import { SHADOW_MONGOL, SHADOW_VIKING } from '../../../../../src/constants/scene/things/panels'
+import {
+    SHADOW_MONGOL,
+    SHADOW_VIKING_FAR,
+    SHADOW_VIKING_NEAR,
+} from '../../../../../src/constants/scene/things/panels'
 
 export default {
     [CUTOUT]: {
@@ -25,7 +29,11 @@ export default {
             yIndex: 5,
             xPosition: 9,
         },
-        [SHADOW_VIKING]: {
+        [SHADOW_VIKING_FAR]: {
+            yIndex: 4,
+            xPosition: 2.2,
+        },
+        [SHADOW_VIKING_NEAR]: {
             yIndex: 5,
             xPosition: 1.2,
         },
