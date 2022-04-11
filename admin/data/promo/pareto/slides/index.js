@@ -157,7 +157,7 @@ export default getFormattedSlideMetadata([
                         isItalic: true,
                         lyric: `Yearling's Bobtail`,
                     },
-                    `is known, other bands will be inspired to create works just as intricate and expansive. These works will usher in a modern renaissance, which almost everyone wants to see happen. So how likely is`,
+                    `is known, other bands will be inspired to create works just as intricate and expansive, ushering in a modern renaissance. Almost everyone wants to see this happen. So how likely is`,
                     {
                         isItalic: true,
                         lyric: `Yearling's Bobtail`,
@@ -281,7 +281,7 @@ export default getFormattedSlideMetadata([
         body: [
             // TODO: When I first started to write songs as a teenager, I quickly noticed that most rock songs were written come up with a chord progression first, and then layer a melody on top of it. But the Beatles seemed to write their chords and melodies simultaneously. Their chords informed the melodies, but the melodies seemed to inform the chords, leading to songs that felt more organic.
             // I searched for a consistent way to write musical material that would help me write songs like the Beatles. I came up with Bobtail Method, a set of exercises in which the chords inform the melodies for one measure, and then vice versa.
-            // 
+            //
             {
                 paragraph: `Placeholder text.`,
             },
