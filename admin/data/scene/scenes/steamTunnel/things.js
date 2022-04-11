@@ -31,11 +31,11 @@ export default {
         },
         [SHADOW_VIKING_FAR]: {
             yIndex: 4,
-            xPosition: 2.2,
+            xPosition: 2.3,
         },
         [SHADOW_VIKING_NEAR]: {
             yIndex: 5,
-            xPosition: 1.2,
+            xPosition: 1.3,
         },
     },
 }
