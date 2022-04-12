@@ -80,12 +80,12 @@ export default getFormattedSlideMetadata([
             },
             {
                 paragraph: [
-                    `Now here's the crazy part. The indie labels will always turn down this deal. They don't make smart bets to maximize gains; they make safe bets to minimize risk. Their business model is to acquire fanbases, not talent— which means a band's fanbase needs to be sizable to begin with. And a Pareto package deal is all about showing what the label gains`,
+                    `Now here's the crazy part. The indie labels will turn down this deal every time, because their business model isn't to make smart bets for maximum gains. It's to look for safe bets to minimize risk. Indie labels hope to acquire fanbases, not talent. And a Pareto package deal is all about showing what a band can do with their talent if they`,
                     {
                         isEmphasis: true,
-                        lyric: `in lieu of`,
+                        lyric: `aren't`,
                     },
-                    `a fanbase here and now.`,
+                    `required to build up a fanbase on their own.`,
                 ],
             },
         ],
@@ -104,7 +104,7 @@ export default getFormattedSlideMetadata([
                 ],
             },
             {
-                paragraph: `For example, the Slim Shady EP only sold 250 copies. Yet as soon as Dr. Dre heard it, he signed Eminem to his record label. Dre recognized that Eminem's overwhelming talent and negligible fanbase were part of the same Pareto package deal. But if Eminem had been a rocker, the indie labels would have rejected him. Which means they're leaving the Eminems of rock all to you!`,
+                paragraph: `For example, the Slim Shady EP sold only 250 copies. Yet as soon as Dr. Dre heard it, he signed Eminem to his record label. Dre recognized that Eminem's overwhelming talent and negligible fanbase were part of the same Pareto package deal. But if Eminem had been a rocker, the indie labels would have rejected him. Which means they're leaving the Eminems of rock all to you!`,
             },
             {
                 paragraph: `So are the Bobtail Yearlings an Eminem of rock? See what's in our Pareto package deal and decide for yourself!`,
@@ -137,32 +137,17 @@ export default getFormattedSlideMetadata([
                         isItalic: true,
                         lyric: `Ulysses`,
                     },
-                    `of Rock Albums"? I think it's likely. Every search result for this term points to us, and doublespeaker rhyme is a bona fide invention. So imagine that every year, in perpetuity, a new crop of college students will be made aware that`,
-                    {
-                        isItalic: true,
-                        lyric: `Yearling's Bobtail`,
-                    },
-                    `did for rock music what`,
-                    {
-                        isItalic: true,
-                        lyric: `Ulysses`,
-                    },
-                    `did for literature. What's that worth?`,
+                    `of Rock Albums"? I think so. Every search result for this term points to us, and doublespeaker rhyme is a bona fide invention. Now imagine that every year, in perpetuity, a new crop of English majors is made aware that our band did for rock music what James Joyce did for literature. What's that worth?`,
                 ],
             },
             {
                 paragraph: [
-                    `And the album and audio webcomic combined took me 25,000 hours to make— more than a decade of my life! Once`,
+                    `And the album and audio webcomic combined took me 25,000 hours to make— more than a decade of my life! A work this intricate and expansive would inspire other bands to rise to similar heights, ushering in a modern renaissance. Pretty much everyone wants to see this happen. So how likely is`,
                     {
                         isItalic: true,
                         lyric: `Yearling's Bobtail`,
                     },
-                    `is known, other bands will be inspired to create works just as intricate and expansive, ushering in a modern renaissance. Almost everyone wants to see this happen. So how likely is`,
-                    {
-                        isItalic: true,
-                        lyric: `Yearling's Bobtail`,
-                    },
-                    `to remain unknown?`,
+                    `to stay unknown, really?`,
                 ],
             },
         ],
@@ -192,7 +177,7 @@ export default getFormattedSlideMetadata([
             },
             {
                 paragraph: [
-                    `Who knows which work this might be. But can you think of a smarter bet than`,
+                    `Who knows which work this might be. But can you think of a smarter bet right now than`,
                     {
                         isItalic: true,
                         lyric: `Yearling's Bobtail`,
@@ -261,32 +246,28 @@ export default getFormattedSlideMetadata([
         title: `Rosalind Franklin album`,
         body: [
             {
-                // TODO: Be more specific about its story.
                 paragraph: [
-                    `Our next project after`,
+                    `After`,
                     {
                         isItalic: true,
                         lyric: `Yearling's Bobtail`,
                     },
-                    `was a comic book album about the life of English biophysicist Rosalind Franklin. I still wasn't signed to a label by that point, so I had to make do with little resources. As a result, I was unhappy with how the comic book and the recordings turned out. The album was completely ignored upon release, so it's just as well.`,
+                    `went nowhere, I decided to create a comic book album about the life of English biophysicist Rosalind Franklin. I still wasn't signed to a label by that point, so I had to make do with little resources. As a result, I was unhappy with how the comic book and the recordings turned out. The album was completely ignored upon its release, so that's just as well.`,
                 ],
             },
             {
-                paragraph: `The lyrics and music scores are solid, however. With label support, I'd love to rerecord the songs with a full band and guest artists, and to redo the comic book as a collaborative effort with professional illustrators.`,
+                paragraph: `The lyrics and music scores are solid, however. With label support, I'd love to rerecord the songs with a full band and guest artists, and to redo the comic book as a collaborative effort with skilled illustrators. So if you're curious what our next album will be, this is it.`,
             },
         ],
     },
     {
         title: `Bobtail Method`,
         body: [
-            // TODO: When I first started to write songs as a teenager, I quickly noticed that most rock songs were written come up with a chord progression first, and then layer a melody on top of it. But the Beatles seemed to write their chords and melodies simultaneously. Their chords informed the melodies, but the melodies seemed to inform the chords, leading to songs that felt more organic.
-            // I searched for a consistent way to write musical material that would help me write songs like the Beatles. I came up with Bobtail Method, a set of exercises in which the chords inform the melodies for one measure, and then vice versa.
-            //
             {
-                paragraph: `Placeholder text.`,
+                paragraph: `The easiest way to write a song is to arrange two to four chords in a repeated loop, and then layer a melody on top. But as a teenager I wanted to sound like the Beatles, whose melodies and chords are tightly intertwined. And so I came up with Bobtail Method, which teaches how to compose musical passages by alternating between melody and chord progression, one measure at a time.`,
             },
             {
-                paragraph: `The manuscript for the book is viewable as a pdf, but this isn't the ideal format. With more resources, I plan to create an online tutorial and app. And as with Bobtail Dominoes, any musician who benefits from Bobtail Method is likely to become a Bobtail Yearlings fan as well.`,
+                paragraph: `The book is viewable as a pdf, but this isn't the ideal format, and I've since improved as a writer. With more resources, I plan to create an online tutorial and app. And as with Bobtail Dominoes, any musician who benefits from Bobtail Method will likely become a Bobtail Yearlings fan as well.`,
             },
             {
                 paragraph: {
@@ -300,7 +281,7 @@ export default getFormattedSlideMetadata([
         title: `BYCombo`,
         body: [
             {
-                paragraph: `Before we discuss BYCombo, let's admit that rock music has gotten worse. It's no longer controversial to say this. It's also not hard to see how it happened. We're trapped in a vicious circle of inadequate knowledge and perverse incentives.`,
+                paragraph: `Before we discuss BYCombo, let's admit that rock music has gotten worse. It's no longer controversial to say this. It's also not hard to see how it happened. Indie rock has trapped us in a vicious circle of inadequate knowledge and perverse incentives.`,
             },
             {
                 paragraph: `Given a vast pool of candidates, indie labels don't have time to listen to every band. So they trust the numbers they see on social media and music platforms. These numbers are easily inflated, which makes them inaccurate measures of artistic worth. But bands will grind away and inflate them all the same, just to stay afloat in a vast pool of candidates.`,
@@ -316,7 +297,7 @@ export default getFormattedSlideMetadata([
             },
             {
                 paragraph: [
-                    `But for BYCombo to get off the ground, the labels need to know what might be gained by holding out for a patiently crafted demo. They need a ready example, and I know of no other band with a demo that took 25,000 hours to make. So if you agree that our solution is the only way to save rock music, then`,
+                    `But for BYCombo to get off the ground, the labels need to know what might be gained by holding out for a patiently crafted demo. There needs to be a ready example, and I know of no other band with a demo that took 25,000 hours to make. So if you agree that our solution is the only way to save rock music, then`,
                     {
                         isEmphasis: true,
                         lyric: `someone`,
@@ -391,14 +372,28 @@ export default getFormattedSlideMetadata([
         title: `Conclusion`,
         body: [
             {
-                // TODO: Redo.
                 paragraph: [
-                    `But you're not the only one reading this, and I only have to convince one of you.`,
+                    `That's our Pareto package deal! But maybe you're still not convinced. After all, indie rock told us to grind away and build up a fanbase on our own, and we refused. Yes, the bands who change the world are the ones who rebel against what they're told. But that's when it's the`,
                     {
-                        isItalic: true,
-                        lyric: `Yearling's Bobtail`,
+                        isEmphasis: true,
+                        lyric: `bad`,
                     },
-                    `will only stay unknown if every single one of you refuses to see the merits of interdependence. So ask yourself… how likely is that?`,
+                    `guys telling them what to do. Indie rock is a`,
+                    {
+                        isEmphasis: true,
+                        lyric: `good`,
+                    },
+                    `guy! So what's our major malfunction?`,
+                ],
+            },
+            {
+                paragraph: [
+                    `It might help to see it this way. You're not the only one reading this, and I just have to convince one of you. So there's no doubt that`,
+                    {
+                        isEmphasis: true,
+                        lyric: `some`,
+                    },
+                    `visionary record label will sign us and kick off the interdependence revolution that saves rock music. The only question is whether you want that visionary label to be you.`,
                 ],
             },
         ],

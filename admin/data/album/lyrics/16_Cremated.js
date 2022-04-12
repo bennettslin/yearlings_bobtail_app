@@ -258,9 +258,8 @@ export default {
                         `an everlasting`,
                         {
                             anchor: `doublespeaker`,
-                            todo: true,
                             card: {
-                                description: `That first month with Miriam was one of the happiest of my life, as all my efforts to improve myself during my first five-year plan finally came to fruition. Everything I did seemed to impress her, including doublespeaker rhyme, which I came up with while we were together. So Miriam became my sounding board for how I would use it in a song to juxtapose my sober and drunken thoughts.`,
+                                description: `While I did my best to adopt an angelic personality, my reputation preceded me by that point. Miriam knew about the drunken incidents. And I must have known all along that she knew. But I never volunteered an explanation for the discrepancy, and she never asked for one. I guess she just accepted it as part of the adventure.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -336,7 +335,7 @@ export default {
                                         anchor: `pink slip`,
                                         wiki: `Termination_of_employment`,
                                     },
-                                    `is also a notice to an employee that they're getting fired…`,
+                                    `is also a notice to an employee that they're getting laid off…`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -352,7 +351,7 @@ export default {
                             anchor: `good for anecdotes`,
                             todo: true,
                             card: {
-                                description: `Though Miriam was entertained by my character, it wasn't in a way that one should hope for, which blew apart my theory that being interesting is the key to dating. I was to be the oddball ex-boyfriend providing a lifetime of amusing tales to share, not the future companion who would one day hear them.`,
+                                description: `Though Miriam was entertained by my character, it wasn't in a way that one should hope for. I was to be the oddball ex-boyfriend in a future tale of her misspent youth, not the life companion who would one day be told about it in reassurance that he's nothing like me.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -440,7 +439,7 @@ export default {
                                         anchor: `Abbott and Costello`,
                                         wiki: `Abbott_and_Costello`,
                                     },
-                                    `famously did not get along. This enlivened the dynamic between them onstage, but it made for tense moments when the tape stopped rolling. So while Miriam liked the idea of my two personalities befuddling each other in doublespeaker rhyme, she surely wanted no part of the underlying drama that inspired it.`,
+                                    `famously did not get along. This enlivened the dynamic between them onstage, but it made for tense moments when the tape stopped rolling. So while Miriam might have enjoyed watching my two halves outwit each other, she surely wanted no part of the underlying drama that fueled this spectacle.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,

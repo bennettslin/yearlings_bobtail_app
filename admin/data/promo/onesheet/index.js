@@ -133,7 +133,7 @@ export default getFormattedSlideMetadata({
             ],
         },
         {
-            paragraph: `The current indie system rests on the belief that when the next artist comes along to change what music can be, the public will lead, and the labels will follow. After two decades, this has yet to happen. What if it's actually the other way around? And what if rock music can only be saved once we realize that?`,
+            paragraph: `The current indie system rests on the belief that when the next artist comes along to change what music can be, the public will lead, and the labels will follow. After two decades, this has yet to happen. What if it's actually the other way around? And what if rock music can only be saved once we realize this?`,
         },
     ],
 })
