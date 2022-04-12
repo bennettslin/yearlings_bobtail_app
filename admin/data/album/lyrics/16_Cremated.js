@@ -349,9 +349,8 @@ export default {
                         `sinking ship, maybe`,
                         {
                             anchor: `good for anecdotes`,
-                            todo: true,
                             card: {
-                                description: `Though Miriam was entertained by my character, it wasn't in a way that one should hope for. I was to be the oddball ex-boyfriend in a future tale of her misspent youth, not the life companion who would one day be told about it in reassurance that he's nothing like me.`,
+                                description: `Though Miriam was entertained by my character, it wasn't in a way that one should hope for. I was to be the oddball ex-boyfriend in a tale of her misspent youth, not the life companion who would one day hear all about it.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

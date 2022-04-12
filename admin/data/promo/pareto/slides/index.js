@@ -267,6 +267,7 @@ export default getFormattedSlideMetadata([
                 paragraph: `The easiest way to write a song is to arrange two to four chords in a repeated loop, and then layer a melody on top. But as a teenager I wanted to sound like the Beatles, whose melodies and chords are tightly intertwined. And so I came up with Bobtail Method, which teaches how to compose musical passages by alternating between melody and chord progression, one measure at a time.`,
             },
             {
+                // TODO: Musician's musicians.
                 paragraph: `The book is viewable as a pdf, but this isn't the ideal format, and I've since improved as a writer. With more resources, I plan to create an online tutorial and app. And as with Bobtail Dominoes, any musician who benefits from Bobtail Method will likely become a Bobtail Yearlings fan as well.`,
             },
             {
@@ -353,6 +354,7 @@ export default getFormattedSlideMetadata([
     },
     {
         // TODO: Add Sibelius images.
+        // TODO: Dysfunctions of indie rock.
         title: `Erhu album`,
         body: [
             {
@@ -372,28 +374,32 @@ export default getFormattedSlideMetadata([
         title: `Conclusion`,
         body: [
             {
-                paragraph: [
-                    `That's our Pareto package deal! But maybe you're still not convinced. After all, indie rock told us to grind away and build up a fanbase on our own, and we refused. Yes, the bands who change the world are the ones who rebel against what they're told. But that's only when it's the`,
-                    {
-                        isEmphasis: true,
-                        lyric: `bad`,
-                    },
-                    `guys telling them what to do. Indie rock is a`,
-                    {
-                        isEmphasis: true,
-                        lyric: `good`,
-                    },
-                    `guy! So what's our major malfunction?`,
-                ],
+                // TODO: Next two albums.
+                paragraph: `In summary, with the Bobtail Yearlings you'll get: musician's musicians who can help others master the nuts and bolts of songwriting (Bobtail Dominoes, Bobtail Method); rock music's next revolutionaries (BYCombo); a band that will never settle for being elder statespeople, who'll continue to innovate (amnesticism).`,
             },
+            // {
+            //     paragraph: [
+            //         `That's our Pareto package deal! But maybe you're still not convinced. After all, indie rock told us to grind away and build up a fanbase on our own, and we refused. Yes, the bands who change the world are the ones who rebel against what they're told. But that's only when it's the`,
+            //         {
+            //             isEmphasis: true,
+            //             lyric: `bad`,
+            //         },
+            //         `guys telling them what to do. Indie rock is a`,
+            //         {
+            //             isEmphasis: true,
+            //             lyric: `good`,
+            //         },
+            //         `guy! So what's our major malfunction?`,
+            //     ],
+            // },
             {
                 paragraph: [
-                    `It might help to see it this way. You're not the only one reading this, and I just have to convince one of you. So there's no doubt that`,
+                    `But if you're still nervous, we understand. Revolutions`,
                     {
                         isEmphasis: true,
-                        lyric: `some`,
+                        lyric: `should`,
                     },
-                    `visionary record label will sign us and kick off the interdependence revolution that saves rock music. The only question is whether you want that visionary label to be you.`,
+                    `feel scary, and interdependence is no different. So here's a thought. You're not the only one reading this, and I just have to convince one of you. Suppose that while you're dithering, another label signs us. The next revolution in rock music now begins, and you're safely not a part of it. Are you filled with relief? Or regret?`,
                 ],
             },
         ],
