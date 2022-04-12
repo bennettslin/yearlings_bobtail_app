@@ -373,7 +373,7 @@ export default getFormattedSlideMetadata([
         body: [
             {
                 paragraph: [
-                    `That's our Pareto package deal! But maybe you're still not convinced. After all, indie rock told us to grind away and build up a fanbase on our own, and we refused. Yes, the bands who change the world are the ones who rebel against what they're told. But that's when it's the`,
+                    `That's our Pareto package deal! But maybe you're still not convinced. After all, indie rock told us to grind away and build up a fanbase on our own, and we refused. Yes, the bands who change the world are the ones who rebel against what they're told. But that's only when it's the`,
                     {
                         isEmphasis: true,
                         lyric: `bad`,
