@@ -67,10 +67,7 @@ import {
     FOLIAGE__SHARED,
     MOUNTAIN__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/outdoor'
-import {
-    POSTER_GLADIATOR__SHARED,
-    PROGRESS_CHART__SHARED,
-} from '../../../../../../src/constants/scene/sharedStyles/print'
+import { POSTER_GLADIATOR__SHARED } from '../../../../../../src/constants/scene/sharedStyles/print'
 import {
     TAIWAN_BUOY__SHARED,
     TAIWAN_RICKSHAW__SHARED,
@@ -173,8 +170,8 @@ export default {
     ],
     [POSTER_NIRVANA]: ALL_PEOPLE__SHARED,
     [POSTER_TINTIN]: ALL_PEOPLE__SHARED,
-    [PROGRESS_CHART_EARLY]: PROGRESS_CHART__SHARED,
-    [PROGRESS_CHART_LATE]: PROGRESS_CHART__SHARED,
+    [PROGRESS_CHART_EARLY]: null,
+    [PROGRESS_CHART_LATE]: null,
     [SEA_SERPENT_LEFT]: SEA_SERPENT__SHARED,
     [SEA_SERPENT_RIGHT]: SEA_SERPENT__SHARED,
     [SNOWGLOBE_CORD]: [
