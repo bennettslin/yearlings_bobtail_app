@@ -101,6 +101,7 @@ import {
     BASEMENT_DOOR_OPEN,
     CINEMA_DOORS,
     DEFAULT_FENCE_BASEMENT,
+    TRANSOM,
 } from '../../../../src/constants/scene/things/doors'
 import {
     BASEMENT_BEER_BENNETT,
@@ -154,6 +155,9 @@ export default [
             [CUTOUT]: {
                 [TREE__COUCH]: true,
             },
+            [DOOR]: {
+                [TRANSOM]: true,
+            },
             [FIXTURE]: {
                 [BENNETT_RECORD_PLAYER]: true,
                 [BENNETT_COUCH_LAMP]: true,
@@ -186,6 +190,9 @@ export default [
             },
             [CUTOUT]: {
                 [TREE_DEAD__COUCH]: true,
+            },
+            [DOOR]: {
+                [TRANSOM]: true,
             },
             [FIXTURE]: {
                 [BENNETT_RECORD_PLAYER]: true,
@@ -227,6 +234,9 @@ export default [
             },
             [CUTOUT]: {
                 [TREE__COUCH]: true,
+            },
+            [DOOR]: {
+                [TRANSOM]: true,
             },
             [FIXTURE]: {
                 [BENNETT_RECORD_PLAYER]: true,

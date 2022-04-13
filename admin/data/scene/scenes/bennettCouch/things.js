@@ -1,6 +1,7 @@
 import {
     CARDBOARD,
     CUTOUT,
+    DOOR,
     FIXTURE,
     FURNITURE,
     PANEL,
@@ -17,6 +18,7 @@ import {
     TREE__COUCH,
     TREE_DEAD__COUCH,
 } from '../../../../../src/constants/scene/things/cutouts'
+import { TRANSOM } from '../../../../../src/constants/scene/things/doors'
 import {
     BENNETT_RECORD_PLAYER,
     BENNETT_COUCH_LAMP,
@@ -49,6 +51,13 @@ export default {
             zOffset: -6,
             scaleFactor: 1.4,
             counterpart: TREE__COUCH,
+        },
+    },
+    [DOOR]: {
+        [TRANSOM]: {
+            yIndex: 1,
+            xPosition: 4,
+            zOffset: 3,
         },
     },
     [FIXTURE]: {

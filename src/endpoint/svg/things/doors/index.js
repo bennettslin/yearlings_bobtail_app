@@ -33,6 +33,7 @@ import neighbourDoor from '../../../../assets/svgs/doors/neighbourDoor'
 import nurseDoor from '../../../../assets/svgs/doors/nurseDoor'
 import porchDoor from '../../../../assets/svgs/doors/porchDoor'
 import principalDoor from '../../../../assets/svgs/doors/principalDoor'
+import transom from '../../../../assets/svgs/doors/transom'
 import waitingRoomDoor from '../../../../assets/svgs/doors/waitingRoomDoor'
 import waitingRoomDoorOpen from '../../../../assets/svgs/doors/waitingRoomDoorOpen'
 
@@ -75,6 +76,7 @@ import {
     NURSE_DOOR,
     PORCH_DOOR,
     PRINCIPAL_DOOR,
+    TRANSOM,
     WAITING_ROOM_DOOR,
     WAITING_ROOM_DOOR_OPEN,
 } from '../../../../constants/scene/things/doors'
@@ -118,6 +120,7 @@ export default {
     [NURSE_DOOR]: nurseDoor,
     [PORCH_DOOR]: porchDoor,
     [PRINCIPAL_DOOR]: principalDoor,
+    [TRANSOM]: transom,
     [WAITING_ROOM_DOOR]: waitingRoomDoor,
     [WAITING_ROOM_DOOR_OPEN]: waitingRoomDoorOpen,
 }

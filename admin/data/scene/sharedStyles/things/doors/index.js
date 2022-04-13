@@ -35,6 +35,7 @@ import {
     NURSE_DOOR,
     PORCH_DOOR,
     PRINCIPAL_DOOR,
+    TRANSOM,
     WAITING_ROOM_DOOR,
     WAITING_ROOM_DOOR_OPEN,
 } from '../../../../../../src/constants/scene/things/doors'
@@ -149,6 +150,7 @@ export default {
     [NURSE_DOOR]: DOOR__SHARED,
     [PORCH_DOOR]: DOOR__SHARED,
     [PRINCIPAL_DOOR]: DOOR__SHARED,
+    [TRANSOM]: BENNETT_INSIDE__SHARED,
     [WAITING_ROOM_DOOR]: DOOR__SHARED,
     [WAITING_ROOM_DOOR_OPEN]: DOOR__SHARED,
 }
