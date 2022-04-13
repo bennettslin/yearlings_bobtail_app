@@ -24,7 +24,7 @@ import {
     TIME_NIGHT,
     TIME_TWILIGHT,
     TIME_DAWN,
-    SEASON_SPRING,
+    SEASON_SUMMER,
     SEASON_THOUGHT,
 } from '../../../../src/constants/scene/sky'
 import {
@@ -122,7 +122,7 @@ export default [
             },
         },
         cubes: ROYCE_HALL_KEY,
-        sky: { time: TIME_NIGHT, season: SEASON_SPRING },
+        sky: { time: TIME_NIGHT, season: SEASON_SUMMER },
     },
     {
         unitIndex: 3,
@@ -191,7 +191,7 @@ export default [
             },
         },
         cubes: STEAM_TUNNEL_KEY,
-        sky: { time: TIME_NIGHT, season: SEASON_SPRING },
+        sky: { time: TIME_NIGHT, season: SEASON_SUMMER },
     },
     {
         unitIndex: 9,
@@ -223,7 +223,7 @@ export default [
             },
         },
         cubes: CEMETERY_KEY,
-        sky: { time: TIME_NIGHT, season: SEASON_SPRING },
+        sky: { time: TIME_NIGHT, season: SEASON_SUMMER },
     },
     {
         unitIndex: 11,
@@ -269,7 +269,7 @@ export default [
             },
         },
         cubes: STATION_WAGON_KEY,
-        sky: { time: TIME_TWILIGHT, season: SEASON_SPRING },
+        sky: { time: TIME_TWILIGHT, season: SEASON_SUMMER },
     },
     {
         unitIndex: 15,
@@ -301,6 +301,6 @@ export default [
             },
         },
         cubes: ATTIC_KEY,
-        sky: { time: TIME_DAWN, season: SEASON_SPRING },
+        sky: { time: TIME_DAWN, season: SEASON_SUMMER },
     },
 ]

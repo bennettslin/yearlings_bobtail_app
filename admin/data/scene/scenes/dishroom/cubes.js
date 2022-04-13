@@ -8,7 +8,7 @@ import {
     CONCRETE_PLATFORM_COLOUR as P,
 } from '../../../../../src/constants/scene/cubes/colours'
 
-import { a, f, g } from '../../../../../src/constants/scene/cubes/zIndices'
+import { b, f, g } from '../../../../../src/constants/scene/cubes/zIndices'
 
 export default {
     [DISHROOM_KEY]: {
@@ -34,7 +34,7 @@ export default {
             ],
             zIndices: [
                 [0],
-                [0, 0, a, a, a, a, a, 0],
+                [0, 0, b, b, b, b, b, 0],
                 [0, 0, 6, 6, 6, 6, 6, 0, 4, 4, 4, 0],
                 [0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 0],
                 [0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 0],

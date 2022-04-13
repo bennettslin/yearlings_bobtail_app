@@ -23,7 +23,7 @@ export default {
     [CARDBOARD]: {
         [CORKBOARD__DISHROOM]: {
             yIndex: 0,
-            xPosition: 4.5,
+            xPosition: 3.5,
             zOffset: 4,
         },
     },
@@ -65,7 +65,7 @@ export default {
         [CONVEYOR_BELT]: {
             yIndex: 1,
             xPosition: 4.1,
-            zOffset: -1.8,
+            zOffset: -2.1,
         },
         [DISHROOM_SINK]: {
             yIndex: 3,
