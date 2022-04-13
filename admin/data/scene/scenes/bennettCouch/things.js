@@ -57,7 +57,7 @@ export default {
         [TRANSOM]: {
             yIndex: 1,
             xPosition: 4,
-            zOffset: 3,
+            zOffset: 2.75,
         },
     },
     [FIXTURE]: {
