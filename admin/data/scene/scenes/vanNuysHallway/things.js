@@ -3,13 +3,13 @@ import {
     DOOR,
     PANEL,
 } from '../../../../../src/constants/scene/things'
-import { CORKBOARD } from '../../../../../src/constants/scene/things/cardboards'
+import { CORKBOARD__SCHOOL } from '../../../../../src/constants/scene/things/cardboards'
 import { PRINCIPAL_DOOR } from '../../../../../src/constants/scene/things/doors'
 import { PRINCIPAL_BENCH } from '../../../../../src/constants/scene/things/panels'
 
 export default {
     [CARDBOARD]: {
-        [CORKBOARD]: {
+        [CORKBOARD__SCHOOL]: {
             yIndex: 4,
             xPosition: 7.5,
             zOffset: 1.5,

@@ -73,8 +73,9 @@ import {
     WAITING_THOUGHT_STUDYING,
 } from '../../../../src/constants/scene/things/bubbles'
 import {
-    CODE_BOX,
     CLIPBOARD,
+    CODE_BOX,
+    CORKBOARD__DISHROOM,
     PAINTING,
 } from '../../../../src/constants/scene/things/cardboards'
 import {
@@ -166,6 +167,9 @@ export default [
                     instance: DISHROOM_READING,
                 },
             },
+            [CARDBOARD]: {
+                [CORKBOARD__DISHROOM]: true,
+            },
             [CUTOUT]: {
                 [DISH_PILE]: true,
                 [TRAY_PILE]: true,
@@ -200,6 +204,9 @@ export default [
                         instance: DISHROOM_LANCET,
                     },
                 },
+            },
+            [CARDBOARD]: {
+                [CORKBOARD__DISHROOM]: true,
             },
             [CUTOUT]: {
                 [DISH_PILE]: true,

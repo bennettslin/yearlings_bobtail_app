@@ -1,8 +1,10 @@
 import {
+    CARDBOARD,
     CUTOUT,
     DOOR,
     PANEL,
 } from '../../../../../src/constants/scene/things'
+import { CORKBOARD__DISHROOM } from '../../../../../src/constants/scene/things/cardboards'
 import {
     TRAY_PILE,
     DISHROOM_DOLLY__TRAY,
@@ -18,6 +20,13 @@ import {
 } from '../../../../../src/constants/scene/things/panels'
 
 export default {
+    [CARDBOARD]: {
+        [CORKBOARD__DISHROOM]: {
+            yIndex: 0,
+            xPosition: 4.5,
+            zOffset: 4,
+        },
+    },
     [CUTOUT]: {
         [DISH_PILE]: {
             yIndex: 2,

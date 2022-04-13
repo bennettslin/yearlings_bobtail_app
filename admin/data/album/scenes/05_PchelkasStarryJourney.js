@@ -71,7 +71,7 @@ import {
 } from '../../../../src/constants/scene/things/bubbles'
 import {
     POSTER_BLOOM_COUNTY,
-    CORKBOARD,
+    CORKBOARD__SCHOOL,
     DOGS_ROCKET,
     EARTH__ROCKET,
     EARTH__STATION,
@@ -412,7 +412,7 @@ export default [
                 },
             },
             [CARDBOARD]: {
-                [CORKBOARD]: true,
+                [CORKBOARD__SCHOOL]: true,
             },
             [DOOR]: {
                 [PRINCIPAL_DOOR]: true,
