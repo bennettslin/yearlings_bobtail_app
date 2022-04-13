@@ -71,6 +71,7 @@ import {
     DRUMKIT,
     BENNETT_COUCH_LAMP,
     BENNETT_RECORD_PLAYER,
+    HEINEKEN__SITA,
 } from '../../../../src/constants/scene/things/fixtures'
 import {
     DISTANT_HOUSES,
@@ -175,6 +176,7 @@ export default [
                 [BENNETT_COUCH_LAMP]: true,
                 [BENNETT_RECORD_PLAYER]: true,
                 [ELECTRIC_GUITAR]: true,
+                [HEINEKEN__SITA]: true,
             },
             [PANEL]: {
                 [BENNETT_NIGHTSTAND]: true,

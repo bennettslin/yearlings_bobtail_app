@@ -85,17 +85,18 @@ import {
     DEFAULT_FENCE_BASEMENT,
 } from '../../../../src/constants/scene/things/doors'
 import {
-    TETHERBALL_POLE,
-    RECORDING_MIC,
-    RECORDING_BEERS,
-    CRACKED_PICTURE,
-    GHOST_SHACKLES,
     BASS_CASE_UPRIGHT,
-    GUITAR_CASE_UPRIGHT,
-    DRUMS_STACKED__BASEMENT,
     BUDWEISER_CASE,
     BUDWEISER_EMPTIER__MIRIAM,
     BUDWEISER_FULLER__MIRIAM,
+    CRACKED_PICTURE,
+    DRUMS_STACKED__BASEMENT,
+    GHOST_SHACKLES,
+    GUITAR_CASE_UPRIGHT,
+    HEINEKEN__BENNETT,
+    HEINEKEN_PACK,
+    RECORDING_MIC,
+    TETHERBALL_POLE,
 } from '../../../../src/constants/scene/things/fixtures'
 import { BASEMENT_PILLOW } from '../../../../src/constants/scene/things/furnitures'
 import {
@@ -315,7 +316,8 @@ export default [
             },
             [FIXTURE]: {
                 [RECORDING_MIC]: true,
-                [RECORDING_BEERS]: true,
+                [HEINEKEN__BENNETT]: true,
+                [HEINEKEN_PACK]: true,
             },
             [PANEL]: {
                 [SNOWGLOBE_FUTURE__LIZ]: true,

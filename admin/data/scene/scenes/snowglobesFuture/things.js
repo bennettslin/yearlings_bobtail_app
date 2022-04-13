@@ -11,7 +11,8 @@ import {
 } from '../../../../../src/constants/scene/things/cardboards'
 import {
     RECORDING_MIC,
-    RECORDING_BEERS,
+    HEINEKEN_PACK,
+    HEINEKEN__BENNETT,
 } from '../../../../../src/constants/scene/things/fixtures'
 import {
     SNOWGLOBE_FUTURE__LIZ,
@@ -48,7 +49,11 @@ export default {
             yIndex: 1,
             xPosition: 9,
         },
-        [RECORDING_BEERS]: {
+        [HEINEKEN__BENNETT]: {
+            yIndex: 1,
+            xPosition: 6.7,
+        },
+        [HEINEKEN_PACK]: {
             yIndex: 1,
             xPosition: 7.2,
         },

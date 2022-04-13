@@ -31,8 +31,10 @@ import ghostShackles from '../../../../assets/svgs/fixtures/ghostShackles'
 import guitarCaseOpen from '../../../../assets/svgs/fixtures/guitarCaseOpen'
 import guitarCaseUpright from '../../../../assets/svgs/fixtures/guitarCaseUpright'
 import haircutScissors from '../../../../assets/svgs/fixtures/haircutScissors'
-import hospitalRecordPlayer from '../../../../assets/svgs/fixtures/hospitalRecordPlayer'
 import hawaiianDoll from '../../../../assets/svgs/fixtures/hawaiianDoll'
+import heineken from '../../../../assets/svgs/fixtures/heineken'
+import heinekenPack from '../../../../assets/svgs/fixtures/heinekenPack'
+import hospitalRecordPlayer from '../../../../assets/svgs/fixtures/hospitalRecordPlayer'
 import keyboard from '../../../../assets/svgs/fixtures/keyboard'
 import kickDrum from '../../../../assets/svgs/fixtures/kickDrum'
 import letterScraps from '../../../../assets/svgs/fixtures/letterScraps'
@@ -46,7 +48,6 @@ import mannequin from '../../../../assets/svgs/fixtures/mannequin'
 import playgroundBall from '../../../../assets/svgs/fixtures/playgroundBall'
 import pushBroom from '../../../../assets/svgs/fixtures/pushBroom'
 import recordPlayerStool from '../../../../assets/svgs/fixtures/recordPlayerStool'
-import recordingBeers from '../../../../assets/svgs/fixtures/recordingBeers'
 import recordingMic from '../../../../assets/svgs/fixtures/recordingMic'
 import redEnvelopeMoney from '../../../../assets/svgs/fixtures/redEnvelopeMoney'
 import safewayBag from '../../../../assets/svgs/fixtures/safewayBag'
@@ -63,9 +64,6 @@ import {
     BACKPACK_BENNETT,
     BALLED_FOIL__ALLEY,
     BALLED_FOIL__LOCKERS,
-    BUDWEISER_FULLER__BENNETT,
-    BUDWEISER_CASE,
-    BUDWEISER_EMPTIER__MARA,
     BASS_CASE_UPRIGHT,
     BEDROOM_LAMP__BED,
     BEDROOM_LAMP__DESK,
@@ -76,6 +74,9 @@ import {
     BENNETT_SHOE,
     BENNETT_SHOE_REFLECTION,
     BEYONDER_ENVELOPE,
+    BUDWEISER_CASE,
+    BUDWEISER_EMPTIER__MARA,
+    BUDWEISER_FULLER__BENNETT,
     CASH_BOX,
     CHRISTOPHER_LETTERS,
     CONDOM_LIZ,
@@ -99,6 +100,9 @@ import {
     GUITAR_CASE_UPRIGHT,
     HAIRCUT_SCISSORS,
     HAWAIIAN_DOLL,
+    HEINEKEN__BENNETT,
+    HEINEKEN__SITA,
+    HEINEKEN_PACK,
     HOSPITAL_RECORD_PLAYER,
     KEYBOARD,
     KICK_DRUM,
@@ -115,7 +119,6 @@ import {
     PLAYGROUND_BALL,
     PUSH_BROOM__BACKSTAGE,
     PUSH_BROOM__TUNNEL,
-    RECORDING_BEERS,
     RECORDING_MIC,
     RECORD_PLAYER_STOOL,
     RED_ENVELOPE_MONEY,
@@ -176,6 +179,9 @@ export default {
     [GUITAR_CASE_UPRIGHT]: guitarCaseUpright,
     [HAIRCUT_SCISSORS]: haircutScissors,
     [HAWAIIAN_DOLL]: hawaiianDoll,
+    [HEINEKEN__BENNETT]: heineken,
+    [HEINEKEN__SITA]: heineken,
+    [HEINEKEN_PACK]: heinekenPack,
     [HOSPITAL_RECORD_PLAYER]: hospitalRecordPlayer,
     [KEYBOARD]: keyboard,
     [KICK_DRUM]: kickDrum,
@@ -192,7 +198,6 @@ export default {
     [PLAYGROUND_BALL]: playgroundBall,
     [PUSH_BROOM__BACKSTAGE]: pushBroom,
     [PUSH_BROOM__TUNNEL]: pushBroom,
-    [RECORDING_BEERS]: recordingBeers,
     [RECORDING_MIC]: recordingMic,
     [RECORD_PLAYER_STOOL]: recordPlayerStool,
     [RED_ENVELOPE_MONEY]: redEnvelopeMoney,
