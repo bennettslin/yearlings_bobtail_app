@@ -1,5 +1,6 @@
 import {
     CARDBOARD,
+    CUTOUT,
     FIXTURE,
     FURNITURE,
     PANEL,
@@ -12,6 +13,10 @@ import {
     PROGRESS_CHART_LATE,
     ALBUM_TELEVISION,
 } from '../../../../../src/constants/scene/things/cardboards'
+import {
+    TREE__COUCH,
+    TREE_DEAD__COUCH,
+} from '../../../../../src/constants/scene/things/cutouts'
 import {
     BENNETT_RECORD_PLAYER,
     BENNETT_COUCH_LAMP,
@@ -30,6 +35,22 @@ import {
 } from '../../../../../src/constants/scene/things/panels'
 
 export default {
+    [CUTOUT]: {
+        [TREE__COUCH]: {
+            yIndex: -1,
+            xPosition: 4,
+            zOffset: -6,
+            scaleFactor: 1.175,
+            counterpart: TREE_DEAD__COUCH,
+        },
+        [TREE_DEAD__COUCH]: {
+            yIndex: -1,
+            xPosition: 4,
+            zOffset: -6,
+            scaleFactor: 1.4,
+            counterpart: TREE__COUCH,
+        },
+    },
     [FIXTURE]: {
         [BENNETT_RECORD_PLAYER]: {
             yIndex: 1,

@@ -19,7 +19,10 @@ import {
     CLUB_FRONT_KEY,
 } from '../../../../src/constants/scene/scenes'
 import {
+    SEASON_AUTUMN,
+    SEASON_SPRING,
     SEASON_SUMMER,
+    SEASON_WINTER,
     TIME_AFTERNOON,
     TIME_EVENING,
     TIME_NIGHT,
@@ -89,6 +92,8 @@ import {
     PEACH_TREE,
     ROSEBUSH_DOUBLE_BASEMENT,
     ROSEBUSH_SINGLE_BASEMENT,
+    TREE_DEAD__COUCH,
+    TREE__COUCH,
     WALL_SPEAKER_FRONT__LEFT,
     WALL_SPEAKER_FRONT__RIGHT,
 } from '../../../../src/constants/scene/things/cutouts'
@@ -146,6 +151,9 @@ export default [
             [CARDBOARD]: {
                 [POSTER_LEONARD_COHEN]: true,
             },
+            [CUTOUT]: {
+                [TREE__COUCH]: true,
+            },
             [FIXTURE]: {
                 [BENNETT_RECORD_PLAYER]: true,
                 [BENNETT_COUCH_LAMP]: true,
@@ -160,7 +168,7 @@ export default [
             },
         },
         cubes: BENNETT_COUCH_KEY,
-        sky: { time: TIME_EVENING, season: SEASON_SUMMER },
+        sky: { time: TIME_EVENING, season: SEASON_AUTUMN },
     },
     {
         unitIndex: 2,
@@ -175,6 +183,9 @@ export default [
             [CARDBOARD]: {
                 [ALBUM_TELEVISION]: true,
                 [PROGRESS_CHART_EARLY]: true,
+            },
+            [CUTOUT]: {
+                [TREE_DEAD__COUCH]: true,
             },
             [FIXTURE]: {
                 [BENNETT_RECORD_PLAYER]: true,
@@ -193,7 +204,7 @@ export default [
             },
         },
         cubes: BENNETT_COUCH_KEY,
-        sky: { time: TIME_EVENING, season: SEASON_SUMMER },
+        sky: { time: TIME_AFTERNOON, season: SEASON_WINTER },
     },
     {
         unitIndex: 3,
@@ -214,6 +225,9 @@ export default [
             [CARDBOARD]: {
                 [PROGRESS_CHART_LATE]: true,
             },
+            [CUTOUT]: {
+                [TREE__COUCH]: true,
+            },
             [FIXTURE]: {
                 [BENNETT_RECORD_PLAYER]: true,
                 [BENNETT_COUCH_LAMP]: true,
@@ -231,7 +245,7 @@ export default [
             },
         },
         cubes: BENNETT_COUCH_KEYBOARD_KEY,
-        sky: { time: TIME_EVENING, season: SEASON_SUMMER },
+        sky: { time: TIME_NOON, season: SEASON_SPRING },
     },
     {
         unitIndex: 4,

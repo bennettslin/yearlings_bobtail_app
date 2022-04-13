@@ -54,8 +54,8 @@ import {
     BUBBLE_LARGE__TENNIS,
 } from '../../../../src/constants/scene/things/bubbles'
 import {
-    EL_CERRITO_TREE,
     IV_DRIP,
+    TREE__EL_CERRITO,
 } from '../../../../src/constants/scene/things/cutouts'
 import {
     CONDOM_MIRIAM,
@@ -102,7 +102,7 @@ export default [
                 [GOLDEN_GATE_BACKDROP]: true,
             },
             [CUTOUT]: {
-                [EL_CERRITO_TREE]: true,
+                [TREE__EL_CERRITO]: true,
             },
             [FIXTURE]: {
                 [FREEWAY_SIGN]: true,
@@ -137,7 +137,7 @@ export default [
                 [GOLDEN_GATE_BACKDROP]: true,
             },
             [CUTOUT]: {
-                [EL_CERRITO_TREE]: true,
+                [TREE__EL_CERRITO]: true,
             },
             [FIXTURE]: {
                 [CONDOM_WRAPPER_MIRIAM]: true,
@@ -173,7 +173,7 @@ export default [
                 [GOLDEN_GATE_BACKDROP]: true,
             },
             [CUTOUT]: {
-                [EL_CERRITO_TREE]: true,
+                [TREE__EL_CERRITO]: true,
             },
             [FIXTURE]: {
                 [CONDOM_WRAPPER_MIRIAM]: true,
@@ -301,7 +301,7 @@ export default [
                 [GOLDEN_GATE_BACKDROP]: true,
             },
             [CUTOUT]: {
-                [EL_CERRITO_TREE]: true,
+                [TREE__EL_CERRITO]: true,
             },
             [FIXTURE]: {
                 [CONDOM_WRAPPER_MIRIAM]: true,
@@ -331,7 +331,7 @@ export default [
                 [GOLDEN_GATE_BACKDROP]: true,
             },
             [CUTOUT]: {
-                [EL_CERRITO_TREE]: true,
+                [TREE__EL_CERRITO]: true,
             },
             [FIXTURE]: {
                 [FREEWAY_SIGN]: true,

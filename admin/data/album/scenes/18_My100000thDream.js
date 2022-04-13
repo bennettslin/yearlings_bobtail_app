@@ -61,7 +61,7 @@ import {
     BUBBLE_LARGE__INVERSE,
 } from '../../../../src/constants/scene/things/bubbles'
 import {
-    CLIFF_TREE,
+    TREE_DEAD__EL_CERRITO,
     DISPENSER_LEFT,
     DISPENSER_RIGHT,
     HOSTESS_STAND,
@@ -212,7 +212,7 @@ export default [
                 [GOLDEN_GATE_BACKDROP]: true,
             },
             [CUTOUT]: {
-                [CLIFF_TREE]: true,
+                [TREE_DEAD__EL_CERRITO]: true,
             },
             [FLAT]: {
                 [CLIFF_GRAVES_FAR]: true,

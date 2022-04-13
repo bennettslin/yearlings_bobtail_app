@@ -2,7 +2,7 @@ import {
     CUTOUT,
     FLAT,
 } from '../../../../../src/constants/scene/things'
-import { CLIFF_TREE } from '../../../../../src/constants/scene/things/cutouts'
+import { TREE_DEAD__EL_CERRITO } from '../../../../../src/constants/scene/things/cutouts'
 import {
     CLIFF_GRAVES_FAR,
     CLIFF_GRAVES_NEAR,
@@ -10,7 +10,7 @@ import {
 
 export default {
     [CUTOUT]: {
-        [CLIFF_TREE]: {
+        [TREE_DEAD__EL_CERRITO]: {
             yIndex: 1,
             xPosition: 1,
         },

@@ -202,7 +202,7 @@ export default getFormattedSlideMetadata([
         title: `A word on Web3`,
         body: [
             {
-                paragraph: `Oh, a quick word for Web3 enthusiasts. Yes, Web3 is optimal for monetization. But it builds upon Web2, the optimal technology for creators. The artists who truly stand to gain from Web3 will be those who see what's truly being offered by Web2. For any artist who doesn't— who only sees Web2 as a way to monetize their work on platforms created by others— Web3 will just be more of the same.`,
+                paragraph: `Oh, a quick word for Web3 enthusiasts. Yes, Web3 is optimal for monetization. But it builds upon Web2, the optimal technology for creators. So the artists who truly stand to gain from Web3 will be those who see what's truly being offered by Web2. For any artist who doesn't— who only sees Web2 as a way to monetize their work on platforms created by others— Web3 will just be more of the same.`,
             },
             {
                 paragraph: [
@@ -228,7 +228,7 @@ export default getFormattedSlideMetadata([
         title: `Bobtail Dominoes`,
         body: [
             {
-                paragraph: `Bobtail Dominoes is a musical game I invented in which players take turns arranging custom-shaped dominoes into chords. Playing it has improved my own skills as a musician, so I'll attest that it can do the same for others. It's also a great way to come up with chord progressions for a new song!`,
+                paragraph: `Bobtail Dominoes is a musical game I invented in which players take turns arranging custom-shaped dominoes into chords. Playing it has improved my own skills as a songwriter, so I'll attest that it can do the same for others. It's also a great way to come up with chord progressions for a new song!`,
             },
             {
                 paragraph: `I'm in the process of getting the tabletop version manufactured, after which I'll start a Kickstarter campaign. In the future, I plan to create an online version. And of course, everyone who enjoys the game will be that much more likely to become a Bobtail Yearlings fan. You can visit the website to read the rules, watch a demonstration game, and solve our daily puzzles.`,
@@ -257,24 +257,6 @@ export default getFormattedSlideMetadata([
             },
             {
                 paragraph: `The lyrics and music scores are solid, however. With label support, I'd love to rerecord the songs with a full band and guest artists, and to redo the comic book as a collaborative effort with skilled illustrators. So if you're curious what our next album will be, this is it.`,
-            },
-        ],
-    },
-    {
-        title: `Bobtail Method`,
-        body: [
-            {
-                paragraph: `The easiest way to write a song is to arrange two to four chords in a repeated loop, and then layer a melody on top. But as a teenager I wanted to sound like the Beatles, whose melodies and chords are tightly intertwined. And so I came up with Bobtail Method, which teaches how to compose musical passages by alternating between melody and chord progression, one measure at a time.`,
-            },
-            {
-                // TODO: Musician's musicians.
-                paragraph: `The book is viewable as a pdf, but this isn't the ideal format, and I've since improved as a writer. With more resources, I plan to create an online tutorial and app. And as with Bobtail Dominoes, any musician who benefits from Bobtail Method will likely become a Bobtail Yearlings fan as well.`,
-            },
-            {
-                paragraph: {
-                    anchor: `www.bobtailmethod.com`,
-                    href: `https://bobtailmethod.com`,
-                },
             },
         ],
     },
@@ -315,6 +297,24 @@ export default getFormattedSlideMetadata([
         ],
     },
     {
+        title: `Bobtail Method`,
+        body: [
+            {
+                paragraph: `The easiest way to write a song is to arrange two to four chords in a repeated loop, and then layer a melody on top. But as a teenager I wanted to sound like the Beatles, whose melodies and chords are tightly intertwined. And so I came up with Bobtail Method, which teaches how to compose musical passages by alternating between melody and chord progression, one measure at a time.`,
+            },
+            {
+                paragraph: `The book is viewable as a pdf, but this isn't the ideal format, and I've since improved as a writer. With more resources, I plan to create an online tutorial and app. And as with Bobtail Dominoes, any songwriter who benefits from Bobtail Method will likely become a Bobtail Yearlings fan as well.`,
+            },
+            {
+                paragraph: {
+                    anchor: `www.bobtailmethod.com`,
+                    href: `https://bobtailmethod.com`,
+                },
+            },
+        ],
+    },
+    {
+        // TODO: Owl in Eve lyrics.
         title: [
             `Amnesticism and`,
             {
@@ -334,7 +334,6 @@ export default getFormattedSlideMetadata([
                 ],
             },
             {
-                // TODO: Owl in Eve lyrics.
                 paragraph: [
                     `I've composed a piece called`,
                     {
@@ -354,7 +353,6 @@ export default getFormattedSlideMetadata([
     },
     {
         // TODO: Add Sibelius images.
-        // TODO: Dysfunctions of indie rock.
         title: `Erhu album`,
         body: [
             {
@@ -374,32 +372,23 @@ export default getFormattedSlideMetadata([
         title: `Conclusion`,
         body: [
             {
-                // TODO: Next two albums.
-                paragraph: `In summary, with the Bobtail Yearlings you'll get: musician's musicians who can help others master the nuts and bolts of songwriting (Bobtail Dominoes, Bobtail Method); rock music's next revolutionaries (BYCombo); a band that will never settle for being elder statespeople, who'll continue to innovate (amnesticism).`,
+                paragraph: [
+                    `In summary, you'll get: a groundbreaking album that will outlast this century (`,
+                    {
+                        isItalic: true,
+                        lyric: `Yearling's Bobtail`,
+                    },
+                    `); two more albums that are raring to go; a system to begin and sustain a modern renaissance (BYCombo); tools to help others master the nuts and bolts of songwriting (Bobtail Dominoes, Bobtail Method); and a music theory worthy of academic prestige (amnesticism).`,
+                ],
             },
-            // {
-            //     paragraph: [
-            //         `That's our Pareto package deal! But maybe you're still not convinced. After all, indie rock told us to grind away and build up a fanbase on our own, and we refused. Yes, the bands who change the world are the ones who rebel against what they're told. But that's only when it's the`,
-            //         {
-            //             isEmphasis: true,
-            //             lyric: `bad`,
-            //         },
-            //         `guys telling them what to do. Indie rock is a`,
-            //         {
-            //             isEmphasis: true,
-            //             lyric: `good`,
-            //         },
-            //         `guy! So what's our major malfunction?`,
-            //     ],
-            // },
             {
                 paragraph: [
-                    `But if you're still nervous, we understand. Revolutions`,
+                    `But… the tradeoff is that we haven't built up a fanbase on our own. If you're still nervous about that, we understand. Revolutions feel scary because they are, and interdependence is no different. So here's a thought. You're not the only label reading this, and I just have to convince`,
                     {
                         isEmphasis: true,
-                        lyric: `should`,
+                        lyric: `one`,
                     },
-                    `feel scary, and interdependence is no different. So here's a thought. You're not the only one reading this, and I just have to convince one of you. Suppose that while you're dithering, another label signs us. The next revolution in rock music now begins, and you're safely not a part of it. Are you filled with relief? Or regret?`,
+                    `of you. Suppose that while you're dithering, another label signs us. The next revolution in rock music now begins, and you're safely not a part of it. Are you filled with relief? Or regret?`,
                 ],
             },
         ],

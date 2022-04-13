@@ -13,7 +13,6 @@ import catLitterBox from '../../../../assets/svgs/cutouts/catLitterBox'
 import cavemanBones from '../../../../assets/svgs/cutouts/cavemanBones'
 import chuteGarbage from '../../../../assets/svgs/cutouts/chuteGarbage'
 import chuteRecycling from '../../../../assets/svgs/cutouts/chuteRecycling'
-import cliffTree from '../../../../assets/svgs/cutouts/cliffTree'
 import cypressDouble from '../../../../assets/svgs/cutouts/cypressDouble'
 import cypressSingle from '../../../../assets/svgs/cutouts/cypressSingle'
 import dishPile from '../../../../assets/svgs/cutouts/dishPile'
@@ -21,7 +20,6 @@ import dishroomDolly from '../../../../assets/svgs/cutouts/dishroomDolly'
 import dispenserLeft from '../../../../assets/svgs/cutouts/dispenserLeft'
 import dispenserRight from '../../../../assets/svgs/cutouts/dispenserRight'
 import dumpster from '../../../../assets/svgs/cutouts/dumpster'
-import elCerritoTree from '../../../../assets/svgs/cutouts/elCerritoTree'
 import fireHydrant from '../../../../assets/svgs/cutouts/fireHydrant'
 import glassRack from '../../../../assets/svgs/cutouts/glassRack'
 import gravestone from '../../../../assets/svgs/cutouts/gravestone'
@@ -61,6 +59,8 @@ import trafficLightFront from '../../../../assets/svgs/cutouts/trafficLightFront
 import trafficLightRear from '../../../../assets/svgs/cutouts/trafficLightRear'
 import trashCan from '../../../../assets/svgs/cutouts/trashCan'
 import trayPile from '../../../../assets/svgs/cutouts/trayPile'
+import tree from '../../../../assets/svgs/cutouts/tree'
+import treeDead from '../../../../assets/svgs/cutouts/treeDead'
 import twinStreetlamp from '../../../../assets/svgs/cutouts/twinStreetlamp'
 import uclaTree from '../../../../assets/svgs/cutouts/uclaTree'
 import waitingRoomPlant from '../../../../assets/svgs/cutouts/waitingRoomPlant'
@@ -98,7 +98,6 @@ import {
     CAVEMAN_BONES,
     CHUTE_GARBAGE,
     CHUTE_RECYCLING,
-    CLIFF_TREE,
     CYPRESS_DOUBLE__LIZ_COUCH,
     CYPRESS_DOUBLE__LIZ_GATE,
     CYPRESS_SINGLE__LIZ_COUCH,
@@ -110,7 +109,6 @@ import {
     DISPENSER_LEFT,
     DISPENSER_RIGHT,
     DUMPSTER,
-    EL_CERRITO_TREE,
     FIRE_HYDRANT,
     GLASS_RACK__DOLLY,
     GLASS_RACK__SINK,
@@ -159,6 +157,10 @@ import {
     TRASH_CAN__LOCKERS,
     TRASH_CAN__QUAD,
     TRAY_PILE,
+    TREE__COUCH,
+    TREE__EL_CERRITO,
+    TREE_DEAD__COUCH,
+    TREE_DEAD__EL_CERRITO,
     TWIN_STREETLAMP__FAR,
     TWIN_STREETLAMP__MIDDLE,
     TWIN_STREETLAMP__NEAR,
@@ -201,7 +203,6 @@ export default {
     [CAVEMAN_BONES]: cavemanBones,
     [CHUTE_GARBAGE]: chuteGarbage,
     [CHUTE_RECYCLING]: chuteRecycling,
-    [CLIFF_TREE]: cliffTree,
     [CYPRESS_DOUBLE__LIZ_COUCH]: cypressDouble,
     [CYPRESS_DOUBLE__LIZ_GATE]: cypressDouble,
     [CYPRESS_SINGLE__LIZ_COUCH]: cypressSingle,
@@ -213,7 +214,6 @@ export default {
     [DISPENSER_LEFT]: dispenserLeft,
     [DISPENSER_RIGHT]: dispenserRight,
     [DUMPSTER]: dumpster,
-    [EL_CERRITO_TREE]: elCerritoTree,
     [FIRE_HYDRANT]: fireHydrant,
     [GLASS_RACK__DOLLY]: glassRack,
     [GLASS_RACK__SINK]: glassRack,
@@ -262,6 +262,10 @@ export default {
     [TRASH_CAN__LOCKERS]: trashCan,
     [TRASH_CAN__QUAD]: trashCan,
     [TRAY_PILE]: trayPile,
+    [TREE__COUCH]: tree,
+    [TREE__EL_CERRITO]: tree,
+    [TREE_DEAD__COUCH]: treeDead,
+    [TREE_DEAD__EL_CERRITO]: treeDead,
     [TWIN_STREETLAMP__FAR]: twinStreetlamp,
     [TWIN_STREETLAMP__MIDDLE]: twinStreetlamp,
     [TWIN_STREETLAMP__NEAR]: twinStreetlamp,

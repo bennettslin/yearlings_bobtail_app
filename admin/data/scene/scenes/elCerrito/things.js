@@ -5,7 +5,7 @@ import {
     PANEL,
     PUPPET,
 } from '../../../../../src/constants/scene/things'
-import { EL_CERRITO_TREE } from '../../../../../src/constants/scene/things/cutouts'
+import { TREE__EL_CERRITO } from '../../../../../src/constants/scene/things/cutouts'
 import {
     FREEWAY_SIGN,
     CONDOM_MIRIAM,
@@ -28,7 +28,7 @@ import { PUPPET_REATTA } from '../../../../../src/constants/scene/things/puppets
 
 export default {
     [CUTOUT]: {
-        [EL_CERRITO_TREE]: {
+        [TREE__EL_CERRITO]: {
             yIndex: 1,
             xPosition: 1,
         },
