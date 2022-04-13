@@ -93,7 +93,9 @@ import {
     BASS_CASE_UPRIGHT,
     GUITAR_CASE_UPRIGHT,
     DRUMS_STACKED__BASEMENT,
-    BASEMENT_BEER_CASE,
+    BUDWEISER_CASE,
+    BUDWEISER_EMPTIER__MIRIAM,
+    BUDWEISER_FULLER__MIRIAM,
 } from '../../../../src/constants/scene/things/fixtures'
 import { BASEMENT_PILLOW } from '../../../../src/constants/scene/things/furnitures'
 import {
@@ -133,9 +135,8 @@ export default [
                 [BASS_CASE_UPRIGHT]: true,
                 [GUITAR_CASE_UPRIGHT]: true,
                 [DRUMS_STACKED__BASEMENT]: true,
-                [BASEMENT_BEER_CASE]: true,
-                // [BASEMENT_BEER_MARA]: true,
-                // [BASEMENT_BEER_BENNETT]: true,
+                [BUDWEISER_CASE]: true,
+                [BUDWEISER_EMPTIER__MIRIAM]: true,
             },
             [FURNITURE]: {
                 [BASEMENT_PILLOW]: true,
@@ -182,9 +183,8 @@ export default [
                 [BASS_CASE_UPRIGHT]: true,
                 [GUITAR_CASE_UPRIGHT]: true,
                 [DRUMS_STACKED__BASEMENT]: true,
-                [BASEMENT_BEER_CASE]: true,
-                // [BASEMENT_BEER_MARA]: true,
-                // [BASEMENT_BEER_BENNETT]: true,
+                [BUDWEISER_CASE]: true,
+                [BUDWEISER_EMPTIER__MIRIAM]: true,
             },
             [FURNITURE]: {
                 [BASEMENT_PILLOW]: true,
@@ -261,6 +261,9 @@ export default [
             [CARDBOARD]: {
                 [SNOWGLOBE_SMALL_PRESENT]: true,
                 [SNOWGLOBE_LEAVING_CRUMBLED]: true,
+            },
+            [FIXTURE]: {
+                [BUDWEISER_FULLER__MIRIAM]: true,
             },
             [PANEL]: {
                 [SNOWGLOBE_PRESENT__LIZ]: true,
@@ -363,9 +366,8 @@ export default [
                 [BASS_CASE_UPRIGHT]: true,
                 [GUITAR_CASE_UPRIGHT]: true,
                 [DRUMS_STACKED__BASEMENT]: true,
-                [BASEMENT_BEER_CASE]: true,
-                // [BASEMENT_BEER_MARA]: true,
-                // [BASEMENT_BEER_BENNETT]: true,
+                [BUDWEISER_CASE]: true,
+                [BUDWEISER_EMPTIER__MIRIAM]: true,
             },
             [FURNITURE]: {
                 [BASEMENT_PILLOW]: true,

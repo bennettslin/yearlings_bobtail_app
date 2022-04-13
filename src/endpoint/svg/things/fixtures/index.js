@@ -1,8 +1,5 @@
 import backpackBennett from '../../../../assets/svgs/fixtures/backpackBennett'
 import balledFoil from '../../../../assets/svgs/fixtures/balledFoil'
-import basementBeerBennett from '../../../../assets/svgs/fixtures/basementBeerBennett'
-import basementBeerCase from '../../../../assets/svgs/fixtures/basementBeerCase'
-import basementBeerMara from '../../../../assets/svgs/fixtures/basementBeerMara'
 import bassCaseUpright from '../../../../assets/svgs/fixtures/bassCaseUpright'
 import bedroomLamp from '../../../../assets/svgs/fixtures/bedroomLamp'
 import beethovenBust from '../../../../assets/svgs/fixtures/beethovenBust'
@@ -12,6 +9,9 @@ import bennettRecordPlayer from '../../../../assets/svgs/fixtures/bennettRecordP
 import bennettShoe from '../../../../assets/svgs/fixtures/bennettShoe'
 import bennettShoeReflection from '../../../../assets/svgs/fixtures/bennettShoeReflection'
 import beyonderEnvelope from '../../../../assets/svgs/fixtures/beyonderEnvelope'
+import budweiserCase from '../../../../assets/svgs/fixtures/budweiserCase'
+import budweiserEmptier from '../../../../assets/svgs/fixtures/budweiserEmptier'
+import budweiserFuller from '../../../../assets/svgs/fixtures/budweiserFuller'
 import cashBox from '../../../../assets/svgs/fixtures/cashBox'
 import christopherLetters from '../../../../assets/svgs/fixtures/christopherLetters'
 import condom from '../../../../assets/svgs/fixtures/condom'
@@ -63,9 +63,9 @@ import {
     BACKPACK_BENNETT,
     BALLED_FOIL__ALLEY,
     BALLED_FOIL__LOCKERS,
-    BASEMENT_BEER_BENNETT,
-    BASEMENT_BEER_CASE,
-    BASEMENT_BEER_MARA,
+    BUDWEISER_FULLER__BENNETT,
+    BUDWEISER_CASE,
+    BUDWEISER_EMPTIER__MARA,
     BASS_CASE_UPRIGHT,
     BEDROOM_LAMP__BED,
     BEDROOM_LAMP__DESK,
@@ -130,15 +130,19 @@ import {
     TORN_MAGAZINES__BENNETT,
     TORN_MAGAZINES__CHRISTOPHER,
     VASELINE,
+    BUDWEISER_EMPTIER__MIRIAM,
+    BUDWEISER_FULLER__MIRIAM,
 } from '../../../../constants/scene/things/fixtures'
 
 export default {
     [BACKPACK_BENNETT]: backpackBennett,
     [BALLED_FOIL__ALLEY]: balledFoil,
     [BALLED_FOIL__LOCKERS]: balledFoil,
-    [BASEMENT_BEER_BENNETT]: basementBeerBennett,
-    [BASEMENT_BEER_CASE]: basementBeerCase,
-    [BASEMENT_BEER_MARA]: basementBeerMara,
+    [BUDWEISER_CASE]: budweiserCase,
+    [BUDWEISER_EMPTIER__MARA]: budweiserEmptier,
+    [BUDWEISER_EMPTIER__MIRIAM]: budweiserEmptier,
+    [BUDWEISER_FULLER__BENNETT]: budweiserFuller,
+    [BUDWEISER_FULLER__MIRIAM]: budweiserFuller,
     [BASS_CASE_UPRIGHT]: bassCaseUpright,
     [BEDROOM_LAMP__BED]: bedroomLamp,
     [BEDROOM_LAMP__DESK]: bedroomLamp,

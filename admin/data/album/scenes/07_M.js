@@ -104,9 +104,9 @@ import {
     TRANSOM,
 } from '../../../../src/constants/scene/things/doors'
 import {
-    BASEMENT_BEER_BENNETT,
-    BASEMENT_BEER_CASE,
-    BASEMENT_BEER_MARA,
+    BUDWEISER_FULLER__BENNETT,
+    BUDWEISER_CASE,
+    BUDWEISER_EMPTIER__MARA,
     BASS_CASE_UPRIGHT,
     BENNETT_COUCH_LAMP,
     BENNETT_RECORD_PLAYER,
@@ -333,9 +333,9 @@ export default [
                 [BASS_CASE_UPRIGHT]: true,
                 [GUITAR_CASE_UPRIGHT]: true,
                 [DRUMS_STACKED__BASEMENT]: true,
-                [BASEMENT_BEER_CASE]: true,
-                [BASEMENT_BEER_MARA]: true,
-                [BASEMENT_BEER_BENNETT]: true,
+                [BUDWEISER_CASE]: true,
+                [BUDWEISER_EMPTIER__MARA]: true,
+                [BUDWEISER_FULLER__BENNETT]: true,
             },
             [PANEL]: {
                 [MILK_CRATE__ANA]: true,

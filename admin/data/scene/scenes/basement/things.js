@@ -8,9 +8,9 @@ import {
     DEFAULT_FENCE_BASEMENT,
 } from '../../../../../src/constants/scene/things/doors'
 import {
-    BASEMENT_BEER_BENNETT,
-    BASEMENT_BEER_CASE,
-    BASEMENT_BEER_MARA,
+    BUDWEISER_FULLER__BENNETT,
+    BUDWEISER_CASE,
+    BUDWEISER_EMPTIER__MARA,
     BASS_CASE_UPRIGHT,
     DRUMS_STACKED__BASEMENT,
     GUITAR_CASE_UPRIGHT,
@@ -45,15 +45,15 @@ export default {
             xPosition: 5.25,
             zOffset: -0.1,
         },
-        [BASEMENT_BEER_CASE]: {
+        [BUDWEISER_CASE]: {
             yIndex: 5,
             xPosition: 1.5,
         },
-        [BASEMENT_BEER_MARA]: {
+        [BUDWEISER_EMPTIER__MARA]: {
             yIndex: 5,
             xPosition: 4.1,
         },
-        [BASEMENT_BEER_BENNETT]: {
+        [BUDWEISER_FULLER__BENNETT]: {
             yIndex: 5,
             xPosition: 7.1,
         },

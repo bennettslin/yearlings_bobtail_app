@@ -1,11 +1,13 @@
 import {
     CARDBOARD,
+    FIXTURE,
     PANEL,
 } from '../../../../../src/constants/scene/things'
 import {
     SNOWGLOBE_SMALL_PRESENT,
     SNOWGLOBE_LEAVING_CRUMBLED,
 } from '../../../../../src/constants/scene/things/cardboards'
+import { BUDWEISER_FULLER__MIRIAM } from '../../../../../src/constants/scene/things/fixtures'
 import {
     SNOWGLOBE_PRESENT__LIZ,
     SNOWGLOBE_PRESENT__BENNETT,
@@ -29,6 +31,12 @@ export default {
             zOffset: 2.7,
             scaleFactor: 0.85,
             rotate: 10,
+        },
+    },
+    [FIXTURE]: {
+        [BUDWEISER_FULLER__MIRIAM]: {
+            yIndex: 3,
+            xPosition: 6.5,
         },
     },
     [PANEL]: {

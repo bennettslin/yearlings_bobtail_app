@@ -11,6 +11,7 @@ import {
 } from '../../../../../src/constants/scene/things/cutouts'
 import { BASEMENT_DOOR } from '../../../../../src/constants/scene/things/doors'
 import {
+    BUDWEISER_EMPTIER__MIRIAM,
     CRACKED_PICTURE,
     GHOST_SHACKLES,
 } from '../../../../../src/constants/scene/things/fixtures'
@@ -39,6 +40,10 @@ export default {
         },
     },
     [FIXTURE]: {
+        [BUDWEISER_EMPTIER__MIRIAM]: {
+            yIndex: 5,
+            xPosition: 2.25,
+        },
         [CRACKED_PICTURE]: {
             yIndex: 4,
             xPosition: 0.2,
