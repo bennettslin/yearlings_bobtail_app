@@ -21,8 +21,8 @@
     .tongue { fill: hsl(350, 26%, 63%); }
     .mouthInner { fill: hsl(4, 21%, 39%); }
 
-    .skinGallicBlood { fill: hsl(1, 51%, 63%); }
-    .skinEastAsianBlood { fill: hsl(1, 49%, 60%); }
+    [class^=skinGallicBlood] { fill: hsl(1, 51%, 63%); }
+    [class^=skinEastAsianBlood] { fill: hsl(1, 49%, 60%); }
 
     .skinNordic { fill: hsl(21, 48%, 80%); }
     .skinGallic { fill: hsl(19, 46%, 74%); }
