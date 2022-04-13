@@ -242,7 +242,7 @@ export default {
                             anchor: `beneath your captain bed`,
                             todo: true,
                             card: {
-                                description: `I slept in a captain bed that rested atop a dresser on one side, with the other side flush against the wall. By entering through a side panel, I could squeeze into the space underneath and stay hidden.`,
+                                description: `I slept in a captain bed that had a dresser on one side. There was just empty space on the other side, which sat flush against the wall. By crawling through the cabinet and squeezing past the back panel, I could enter that space and stay hidden.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

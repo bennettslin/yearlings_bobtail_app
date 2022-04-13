@@ -300,10 +300,10 @@ export default getFormattedSlideMetadata([
         title: `Bobtail Method`,
         body: [
             {
-                paragraph: `The easiest way to write a song is to arrange two to four chords in a repeated loop, and then layer a melody on top. But as a teenager I wanted to sound like the Beatles, whose melodies and chords are tightly intertwined. And so I came up with Bobtail Method, which teaches how to compose musical passages by alternating between melody and chord progression, one measure at a time.`,
+                paragraph: `It's easy to write songs by playing a four-chord loop and layering a melody on top. But as a teenager I wanted to sound like the Beatles, whose melodies and chord progressions are tightly intertwined. And so I learned to compose musical passages by alternating between melody and chords, one measure at a time. Later on I distilled this approach into a lesson plan called Bobtail Method.`,
             },
             {
-                paragraph: `The book is viewable as a pdf, but this isn't the ideal format, and I've since improved as a writer. With more resources, I plan to create an online tutorial and app. And as with Bobtail Dominoes, any songwriter who benefits from Bobtail Method will likely become a Bobtail Yearlings fan as well.`,
+                paragraph: `You can view the pdf, but my writing has since improved, and a book isn't the ideal format. With more resources, I plan to create an online tutorial and app. As with Bobtail Dominoes, I think it's likely that any musician who benefits from Bobtail Method will also become a Bobtail Yearlings fan. It can't hurt that I use excerpts from our own songs to demonstrate key principles!`,
             },
             {
                 paragraph: {
