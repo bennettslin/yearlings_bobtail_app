@@ -35,7 +35,7 @@ export default {
     [FIXTURE]: {
         [HEINEKEN__SITA]: {
             yIndex: 4,
-            xPosition: 4.75,
+            xPosition: 4.25,
         },
     },
 }

@@ -55,7 +55,7 @@ export default {
         },
         [HEINEKEN_PACK]: {
             yIndex: 1,
-            xPosition: 7.2,
+            xPosition: 7.4,
         },
     },
     [PANEL]: {
