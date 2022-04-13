@@ -34,15 +34,15 @@ export default {
     [FIXTURE]: {
         [BASS_CASE_UPRIGHT]: {
             yIndex: 2,
-            xPosition: 7.5,
+            xPosition: 7.65,
         },
         [GUITAR_CASE_UPRIGHT]: {
             yIndex: 2,
-            xPosition: 9.5,
+            xPosition: 9.35,
         },
         [DRUMS_STACKED__BASEMENT]: {
             yIndex: 2,
-            xPosition: 5,
+            xPosition: 5.25,
             zOffset: -0.1,
         },
         [BASEMENT_BEER_CASE]: {

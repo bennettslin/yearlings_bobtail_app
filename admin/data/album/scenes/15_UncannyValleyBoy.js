@@ -90,6 +90,10 @@ import {
     RECORDING_BEERS,
     CRACKED_PICTURE,
     GHOST_SHACKLES,
+    BASS_CASE_UPRIGHT,
+    GUITAR_CASE_UPRIGHT,
+    DRUMS_STACKED__BASEMENT,
+    BASEMENT_BEER_CASE,
 } from '../../../../src/constants/scene/things/fixtures'
 import { BASEMENT_PILLOW } from '../../../../src/constants/scene/things/furnitures'
 import {
@@ -124,6 +128,14 @@ export default [
             [DOOR]: {
                 [DEFAULT_FENCE_BASEMENT]: true,
                 [BASEMENT_DOOR]: true,
+            },
+            [FIXTURE]: {
+                [BASS_CASE_UPRIGHT]: true,
+                [GUITAR_CASE_UPRIGHT]: true,
+                [DRUMS_STACKED__BASEMENT]: true,
+                [BASEMENT_BEER_CASE]: true,
+                // [BASEMENT_BEER_MARA]: true,
+                // [BASEMENT_BEER_BENNETT]: true,
             },
             [FURNITURE]: {
                 [BASEMENT_PILLOW]: true,
@@ -165,6 +177,14 @@ export default [
             },
             [DOOR]: {
                 [DEFAULT_FENCE_BASEMENT]: true,
+            },
+            [FIXTURE]: {
+                [BASS_CASE_UPRIGHT]: true,
+                [GUITAR_CASE_UPRIGHT]: true,
+                [DRUMS_STACKED__BASEMENT]: true,
+                [BASEMENT_BEER_CASE]: true,
+                // [BASEMENT_BEER_MARA]: true,
+                // [BASEMENT_BEER_BENNETT]: true,
             },
             [FURNITURE]: {
                 [BASEMENT_PILLOW]: true,
@@ -340,6 +360,12 @@ export default [
             [FIXTURE]: {
                 [CRACKED_PICTURE]: true,
                 [GHOST_SHACKLES]: true,
+                [BASS_CASE_UPRIGHT]: true,
+                [GUITAR_CASE_UPRIGHT]: true,
+                [DRUMS_STACKED__BASEMENT]: true,
+                [BASEMENT_BEER_CASE]: true,
+                // [BASEMENT_BEER_MARA]: true,
+                // [BASEMENT_BEER_BENNETT]: true,
             },
             [FURNITURE]: {
                 [BASEMENT_PILLOW]: true,
