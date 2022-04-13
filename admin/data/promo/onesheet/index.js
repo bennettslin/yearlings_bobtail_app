@@ -86,7 +86,7 @@ export default getFormattedSlideMetadata({
                     isItalic: true,
                     lyric: `Village Green Preservation Society`,
                 },
-                `, the album serves up pop melodies with folk instruments arranged in counterpoint. The styles range from Tuvan throatsinging ("`,
+                `, the music serves up pop melodies with folk instruments arranged in counterpoint. The styles range from Tuvan throatsinging ("`,
                 {
                     anchor: `Pchelka's Starry Journey`,
                     songIndex: 5,

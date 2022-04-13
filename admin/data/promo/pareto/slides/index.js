@@ -142,7 +142,7 @@ export default getFormattedSlideMetadata([
             },
             {
                 paragraph: [
-                    `And the album and audio webcomic combined took me 25,000 hours to make— more than a decade of my life! A work this intricate and expansive would inspire other bands to rise to similar heights, ushering in a modern renaissance. Pretty much everyone wants to see this happen. So how likely is`,
+                    `And the music and webcomic combined took me 25,000 hours to make— more than a decade of my life! A work this intricate and expansive could inspire other bands to rise to similar heights, ushering in a modern renaissance. Pretty much everyone wants to see this happen. So how likely is`,
                     {
                         isItalic: true,
                         lyric: `Yearling's Bobtail`,

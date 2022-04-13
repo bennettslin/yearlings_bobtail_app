@@ -16,27 +16,27 @@ export default {
         },
         [COMMERCIAL_FAR_LEFT]: {
             yIndex: 2,
-            xPosition: 1.75,
+            xPosition: 1.8,
         },
         [COMMERCIAL_FAR_RIGHT]: {
             yIndex: 2,
-            xPosition: 9,
+            xPosition: 9.2,
         },
         [COMMERCIAL_MIDDLE_LEFT]: {
             yIndex: 3,
-            xPosition: 1,
+            xPosition: 0.7,
         },
         [COMMERCIAL_MIDDLE_RIGHT]: {
             yIndex: 3,
-            xPosition: 10,
+            xPosition: 10.4,
         },
         [COMMERCIAL_NEAR_LEFT]: {
             yIndex: 4,
-            xPosition: 0,
+            xPosition: -0.3,
         },
         [COMMERCIAL_NEAR_RIGHT]: {
             yIndex: 4,
-            xPosition: 11,
+            xPosition: 11.2,
         },
     },
 }

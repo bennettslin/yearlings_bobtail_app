@@ -17,15 +17,15 @@ export default {
         ceiling: {
             hslaColours: [
                 [D],
+                [D],
                 [C, C, C, C, D],
-                [C, C, X, C, D],
                 [X, X, X, C, D],
                 [C, C, C, C, D],
             ],
             zIndices: [
                 [k],
+                [k],
                 [f, f, f, f, k],
-                [f, f, 1, f, k],
                 [1, 1, 1, f, k],
                 [f, f, f, f, k],
             ],
@@ -34,7 +34,7 @@ export default {
             hslaColours: [
                 [G],
                 [V],
-                [F, F, F, V, T, T, T, T, V],
+                [V, V, V, V, T, T, T, T, V],
                 [F, F, F, V, T, T, T, T, T, V],
                 [V, V, V, V, T, T, T, T, T, T, V],
                 [V, V, V, V, T],

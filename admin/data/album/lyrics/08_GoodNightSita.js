@@ -311,7 +311,7 @@ export default {
                                     anchor: `storm drain`,
                                     wiki: `Storm_drain`,
                                 },
-                                `that leads to the ocean, and I'm reminded of all the`,
+                                `that flows into the ocean, and I'm reminded of all the`,
                                 {
                                     anchor: `sponges`,
                                     wiki: `Sponge`,
@@ -321,7 +321,7 @@ export default {
                                     anchor: `barnacles`,
                                     wiki: `Barnacle`,
                                 },
-                                `, and other sea creatures that live to be carried away by the current to unknown places. And they don't sweat it.`,
+                                `, and other sea creatures that simply go where their current takes them.`,
                             ],
                             dotKeys: {
                                 [NARRATIVE]: true,

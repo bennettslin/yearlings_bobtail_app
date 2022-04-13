@@ -119,6 +119,7 @@ import {
 } from '../../../../src/constants/scene/things/fixtures'
 import {
     COMMERCIAL_CENTRE,
+    COMMERCIAL_FAR_LEFT,
     COMMERCIAL_FAR_RIGHT,
     COMMERCIAL_MIDDLE_RIGHT,
     COMMERCIAL_NEAR_RIGHT,
@@ -443,6 +444,7 @@ export default [
             },
             [FLAT]: {
                 [COMMERCIAL_CENTRE]: true,
+                [COMMERCIAL_FAR_LEFT]: true,
                 [COMMERCIAL_FAR_RIGHT]: true,
                 [COMMERCIAL_MIDDLE_RIGHT]: true,
                 [COMMERCIAL_NEAR_RIGHT]: true,
