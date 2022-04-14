@@ -209,7 +209,7 @@ export default {
                         {
                             anchor: `buy a fortress`,
                             card: {
-                                description: `Since my birthday is in November, I had the option to ask for a combined birthday and Christmas gift. I liked to hole up in tight spaces and work on projects undisturbed, so one year I asked my parents for a life-size wooden fort. Unfortunately, some toys are too pricey to count for even two gifts.`,
+                                description: `Since my birthday is in November, I had the option to ask for a combined birthday and Christmas gift. I always liked to hole up somewhere and work on projects undisturbed, so one year I asked my parents for a life-size wooden fort. Unfortunately, some toys were too pricey to count for even two gifts.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -240,9 +240,8 @@ export default {
                         `You stowed away`,
                         {
                             anchor: `beneath your captain bed`,
-                            todo: true,
                             card: {
-                                description: `I slept in a captain bed that had a dresser on one side. There was just empty space on the other side, which sat flush against the wall. By crawling through the cabinet and squeezing past the back panel, I could enter that space and stay hidden.`,
+                                description: `I slept in a captain bed that lay atop a dresser on one side. There was nothing beneath on the other side, which sat flush against the wall. By crawling through a cabinet and squeezing past the flimsy back panel, I could access the hidden space behind the dresser.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

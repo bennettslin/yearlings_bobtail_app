@@ -302,8 +302,6 @@ export default {
                     mixTime: `0:23:18.66`,
                     lyric: {
                         anchor: `swept in unchartable tides`,
-                        // Just needs better phrasing.
-                        todo: true,
                         card: {
                             description: [
                                 `The perils of being steered in unknown directions have kept me on edge throughout this date. But nearby is a`,
@@ -313,13 +311,13 @@ export default {
                                 },
                                 `that flows into the ocean, and I'm reminded of the many sea creatures that simply go where the current takes them. Surely I can be as unflappable as a`,
                                 {
-                                    anchor: `sponge`,
-                                    wiki: `Sponge`,
+                                    anchor: `barnacle`,
+                                    wiki: `Barnacle`,
                                 },
                                 `or a`,
                                 {
-                                    anchor: `barnacle`,
-                                    wiki: `Barnacle`,
+                                    anchor: `sponge`,
+                                    wiki: `Sponge`,
                                 },
                                 `?`,
                             ],

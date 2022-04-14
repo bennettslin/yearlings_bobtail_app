@@ -1175,7 +1175,7 @@ export default {
                                             wiki: `Eohippus`,
                                         },
                                     },
-                                    `, or "dawn horse." This "dusk horse," then, would be encountered at the end of history, the brink of which so many before us had believed to have been reached.`,
+                                    `, or "dawn horse." This "dusk horse," then, would be encountered at the end of history, which so many before us believed to have already been reached.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1421,12 +1421,12 @@ export default {
                 todo: true,
                 card: {
                     description: [
-                        `I always treated my solo trips as a chance to explore metaphysical truths in my head, even if all I did was sit and play video games on my`,
+                        `Every solo trip was a chance to explore metaphysical truths in my head. But Robitussin takes an hour to kick in, so I would wait by playing on my`,
                         {
                             anchor: `Super Nintendo`,
                             wiki: `Super_Nintendo_Entertainment_System`,
                         },
-                        `. For a good while afterward, every vintage arcade sound I heard seemed to hide a profound spiritual message that my sober ears just couldn't suss out.`,
+                        `. And sometimes I would just keep playing. For several years afterward, every vintage arcade sound I heard seemed to hide a profound spiritual message that my sober ears just couldn't suss out.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
