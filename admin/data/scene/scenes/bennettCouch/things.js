@@ -49,7 +49,7 @@ export default {
             yIndex: -1,
             xPosition: 4,
             zOffset: -6,
-            scaleFactor: 1.4,
+            scaleFactor: 1.175,
             counterpart: TREE__COUCH,
         },
     },
