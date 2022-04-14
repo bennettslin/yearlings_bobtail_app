@@ -306,22 +306,22 @@ export default {
                         todo: true,
                         card: {
                             description: [
-                                `The constant peril of being steered in directions for which I'm ill-prepared has kept me on edge throughout this date. But nearby is a`,
+                                `The perils of being steered in unknown directions have kept me on edge throughout this date. But nearby is a`,
                                 {
                                     anchor: `storm drain`,
                                     wiki: `Storm_drain`,
                                 },
-                                `that flows into the ocean, and I'm reminded of all the`,
+                                `that flows into the ocean, and I'm reminded of the many sea creatures that simply go where the current takes them. Surely I can be as unflappable as a`,
                                 {
-                                    anchor: `sponges`,
+                                    anchor: `sponge`,
                                     wiki: `Sponge`,
                                 },
-                                `,`,
+                                `or a`,
                                 {
-                                    anchor: `barnacles`,
+                                    anchor: `barnacle`,
                                     wiki: `Barnacle`,
                                 },
-                                `, and other sea creatures that simply go where their current takes them.`,
+                                `?`,
                             ],
                             dotKeys: {
                                 [NARRATIVE]: true,
@@ -337,7 +337,7 @@ export default {
                         {
                             anchor: `always know to pry`,
                             card: {
-                                description: `And no one else seems to sweat the risk of coming on too strong either. They just keep the conversation flowing by pressing their date for more details, the way a starfish pries open an oyster resting on the seafloor.`,
+                                description: `And no one else seems to sweat the risk of coming on too strong on a date either. They just keep the conversation flowing by pressing for more details, the way a starfish pries open an oyster resting on the seafloor.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -581,10 +581,8 @@ export default {
                         `hyped up like some`,
                         {
                             anchor: `disastrous play`,
-                            // TODO: Make more about not enjoying due to my insecurities.
-                            todo: true,
                             card: {
-                                description: `On our second date, Sita invited me to see her friend act in a play. My impression of the evening was colored by my insecurities, given the rapport between Sita and her friend backstage, in contrast to my own inability to get a word in edgewise.`,
+                                description: `On our second date, Sita took me to see her friend act in a play, after which we met up with him backstage. Given the rapport between them, measured against my own inability to get a word in edgewise, I felt insecure the rest of that evening.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

@@ -648,7 +648,7 @@ export default {
                             todo: true,
                             // TODO: Mention being stabilized.
                             card: {
-                                description: `I'd ascribed every last one of my grievances to Sita for so long, all I could feel immediately after the breakup was an eerie serenity. I could finally drop my "anger," and that was tantamount to being happy.`,
+                                description: `I'd ascribed every last one of my grievances to Sita for so long, all I could feel after the breakup was an eerie serenity. I could finally drop my "anger," and that was tantamount to being happy.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,

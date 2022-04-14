@@ -616,7 +616,7 @@ export default {
                                         anchor: `time capsule`,
                                         wiki: `Time_capsule`,
                                     },
-                                    `is a vessel of contemporary objects that will be seen as historical artifacts once rediscovered in a later era. In a way, it allows a past generation to speak to future ones. Similarly, in my dejected state, I could only envision my next five-year plan as a forum for airing my grievances to a captive future audience.`,
+                                    `is a vessel of contemporary objects that will be seen as historical artifacts once rediscovered in a later era. In a way, it allows a past generation to speak to future ones. And in my dejected state, I could only envision my next five-year plan as a forum for airing my grievances to a future audience.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,

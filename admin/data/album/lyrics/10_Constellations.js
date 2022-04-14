@@ -1421,7 +1421,7 @@ export default {
                 todo: true,
                 card: {
                     description: [
-                        `On my solo Robitussin trips, I would explore metaphysical truths in my head while playing video games on my`,
+                        `I always treated my solo trips as a chance to explore metaphysical truths in my head, even if all I did was sit and play video games on my`,
                         {
                             anchor: `Super Nintendo`,
                             wiki: `Super_Nintendo_Entertainment_System`,
