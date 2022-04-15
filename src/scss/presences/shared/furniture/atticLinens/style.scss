@@ -7,5 +7,6 @@
     .darken__parent
     &.darken#{$suffix} {
         .cushion { fill: hsl($hue__attic__linens, 8%, 26%); }
+        .pillow { fill: hsl($hue__attic__linens + 10, 13%, 34%); }
     }
 }

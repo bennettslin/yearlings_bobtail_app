@@ -7,16 +7,16 @@
     .bottleOpaque { fill: hsl(22, 27%, 45%); };
     .label { fill: hsl(9, 43%, 47%); }
     .bottleCap { fill: hsl(52, 15%, 53%); }
-}
 
-.darken__parent
-.darken#{$suffix} {
-    .labelReverse { fill: hsl(23, 17%, 19%); }
-    .beerSide { fill: hsla(45, 17%, 19%, 0.5); }
-    .beerTop { fill: hsla(45, 17%, 29%, 0.5); }
-    .bottleSide { fill: hsla(20, 17%, 24%, 0.6); }
-    .bottleBottom { fill: hsla(20, 17%, 15%, 0.3); }
-    .bottleOpaque { fill: hsl(22, 17%, 25%); };
-    .label { fill: hsl(9, 17%, 27%); }
-    .bottleCap { fill: hsl(52, 17%, 33%); }
+    .darken__parent
+    &.darken#{$suffix} {
+        .labelReverse { fill: hsl(23, 17%, 19%); }
+        .beerSide { fill: hsla(45, 17%, 19%, 0.5); }
+        .beerTop { fill: hsla(45, 17%, 29%, 0.5); }
+        .bottleSide { fill: hsla(20, 17%, 24%, 0.6); }
+        .bottleBottom { fill: hsla(20, 17%, 15%, 0.3); }
+        .bottleOpaque { fill: hsl(22, 17%, 25%); };
+        .label { fill: hsl(9, 17%, 27%); }
+        .bottleCap { fill: hsl(52, 17%, 33%); }
+    }
 }

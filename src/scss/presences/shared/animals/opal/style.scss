@@ -1,4 +1,9 @@
 .opal#{$suffix} {
     .fur { fill: hsl(210, 13%, 41%); }
     .nose { fill: hsl(210, 13%, 31%); }
+
+    .darken__parent
+    &.darken#{$suffix} {
+        .fur { fill: hsl(210, 13%, 26%); }
+    }
 }

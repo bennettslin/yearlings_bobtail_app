@@ -2,13 +2,13 @@
     .caseDark { fill: hsl(38, 19%, 42%); }
     .caseMedium { fill: hsl(39, 18%, 45%); }
     .caseLight { fill: hsl(39, 18%, 49%); }
-    .liningLight { fill: hsl(65, 28%, 76%); }
-    .liningMedium { fill: hsl(64, 21%, 71%); }
     .liningDark { fill: hsl(64, 16%, 65%); }
-}
+    .liningMedium { fill: hsl(64, 21%, 71%); }
+    .liningLight { fill: hsl(65, 28%, 76%); }
 
-.darken__parent
-.darken#{$suffix} {
-    .caseMedium { fill: hsl(39, 15%, 25%); }
-    .caseLight { fill: hsl(39, 15%, 29%); }
+    .darken__parent
+    &.darken#{$suffix} {
+        .caseMedium { fill: hsl(39, 15%, 25%); }
+        .caseLight { fill: hsl(39, 15%, 29%); }
+    }
 }

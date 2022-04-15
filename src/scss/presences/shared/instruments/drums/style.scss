@@ -2,9 +2,9 @@
     .head { fill: hsl(87, 11%, 72%); }
     .shellInner { fill: hsl(33, 28%, 50%); }
     .shell { fill: hsl(33, 35%, 55%); }
-}
 
-.darken__parent
-.darken#{$suffix} {
-    .shell { fill: hsl(33, 19%, 29%); }
+    .darken__parent
+    &.darken#{$suffix} {
+        .shell { fill: hsl(33, 19%, 29%); }
+    }
 }

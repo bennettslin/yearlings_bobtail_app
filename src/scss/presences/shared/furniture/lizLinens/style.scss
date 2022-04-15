@@ -14,5 +14,8 @@
         .pillowSurface { fill: hsl($HUE_LIZ_LINENS, 4%, 25%); }
         .pillowEdge { fill: hsl($HUE_LIZ_LINENS, 5%, 22%); }
         .skirt { fill: hsl($HUE_LIZ_LINENS, 6%, 21%); }
+
+        .boyfriendPillow { fill: hsl($HUE_LIZ_LINENS - 35, 18%, 34%); }
+        .lizPillow { fill: hsl($HUE_LIZ_LINENS + 15, 18%, 34%); }
     }
 }
