@@ -67,6 +67,9 @@
 
 .darken__parent
 .darken#{$suffix} {
+    .flatRedDarker { fill: hsl(0, 17%, 19%); }
+    .flatRedDark { fill: hsl(0, 17%, 24%); }
+    .flatRedMediumDark { fill: hsl(0, 17%, 29%); }
     .flatRedMedium { fill: hsl(0, 17%, 34%); }
     .flatRedLight { fill: hsl(0, 17%, 39%); }
     .flatAmberLight { fill: hsl(45, 17%, 39%); }
@@ -74,4 +77,7 @@
     .flatTealMedium { fill: hsl(180, 17%, 34%); }
     .flatBlueDark { fill: hsl(210, 17%, 29%); }
     .flatBlueMedium { fill: hsl(210, 17%, 34%); }
+    .flatBlueMediumLight { fill: hsl(210, 17%, 39%); }
+    .flatPurpleMediumDark { fill: hsl(270, 17%, 29%); }
+    .flatPurpleMedium { fill: hsl(270, 17%, 34%); }
 }

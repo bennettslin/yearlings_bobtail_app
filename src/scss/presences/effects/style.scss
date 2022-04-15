@@ -65,3 +65,10 @@
     stroke: hsla(0, 0%, 90%, 0.5);
     // stroke-width: 2px;
 }
+
+.darken__parent
+.darken#{$suffix} {
+    [class$=LightLine] {
+        stroke: none;
+    }
+}

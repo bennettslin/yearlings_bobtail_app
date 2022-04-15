@@ -1,12 +1,14 @@
 .guitarCase#{$suffix} {
-    .guitarHandle { fill: hsl(204, 9%, 32%); }
     .guitarLiningLight { fill: hsl(15, 24%, 39%); }
     .guitarLiningDark { fill: hsl(15, 24%, 32%); }
-    .guitarBrassLight { fill: hsl(147, 7%, 51%); }
     .guitarCaseDark { fill: hsl(180, 7%, 33%); }
     .guitarLeatherDark { fill: hsl(198, 6%, 30%); }
-    .guitarBrassDark { fill: hsl(152, 7%, 36%); }
-    .guitarBrassMedium { fill: hsl(150, 7%, 45%); }
     .guitarCaseLight { fill: hsl(180, 7%, 37%); }
     .guitarLeatherLight { fill: hsl(196, 6%, 35%); }
+}
+
+.darken__parent
+.darken#{$suffix} {
+    .guitarCaseLight { fill: hsl(180, 7%, 24%); }
+    .guitarLeatherLight { fill: hsl(196, 6%, 22%); }
 }

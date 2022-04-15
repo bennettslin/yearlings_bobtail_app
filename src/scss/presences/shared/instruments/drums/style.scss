@@ -2,11 +2,9 @@
     .head { fill: hsl(87, 11%, 72%); }
     .shellInner { fill: hsl(33, 28%, 50%); }
     .shell { fill: hsl(33, 35%, 55%); }
-    .logo { fill: hsl(79, 19%, 25%); }
+}
 
-    .pad { fill: hsl(43, 23%, 20%); }
-    .padding { fill: hsl(265, 12%, 58%); }
-
-    .throneTop { fill: hsl(60, 4%, 37%); }
-    .throneSide { fill: hsl(60, 4%, 31%); }
+.darken__parent
+.darken#{$suffix} {
+    .shell { fill: hsl(33, 19%, 29%); }
 }

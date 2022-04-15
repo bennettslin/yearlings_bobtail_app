@@ -111,9 +111,7 @@ export default {
         BENNETT_LINENS__SHARED,
         DARKEN__SHARED,
     ],
-    [BENNETT_BED]: [
-        DARKEN__SHARED,
-    ],
+    [BENNETT_BED]: DARKEN__SHARED,
     [BENNETT_NIGHTSTAND]: null,
     [BENNETT_RECORD_STAND]: null,
     [BUDDHA_STAND]: [

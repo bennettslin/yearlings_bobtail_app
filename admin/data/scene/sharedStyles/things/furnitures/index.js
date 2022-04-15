@@ -20,7 +20,10 @@ import {
 
 export default {
     [ATTIC_PILLOW]: ATTIC_LINENS__SHARED,
-    [BASEMENT_PILLOW]: BENNETT_LINENS__SHARED,
+    [BASEMENT_PILLOW]: [
+        DARKEN__SHARED,
+        BENNETT_LINENS__SHARED,
+    ],
     [BENNETT_PILLOW]: [
         DARKEN__SHARED,
         BENNETT_LINENS__SHARED,

@@ -5,3 +5,11 @@
 .chromeMedium { fill: hsl(160, 10%, 57%); }
 .chromeMediumLight { fill: hsl(160, 10%, 62%); }
 .chromeLight { fill: hsl(160, 10%, 67%); }
+
+.darken__parent
+.darken#{$suffix} {
+    .chromeDarkest { fill: hsl(160, 4%, 22%); }
+    .chromeDark { fill: hsl(160, 4%, 27%); }
+    .chromeMedium { fill: hsl(160, 4%, 32%); }
+    .chromeLight { fill: hsl(160, 4%, 37%); }
+}
