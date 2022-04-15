@@ -11,3 +11,4 @@
 ## Night Magic
 * Willy (changelingCave)
 * Pchelka (bedroom)
+* Uncanny (basementBed)

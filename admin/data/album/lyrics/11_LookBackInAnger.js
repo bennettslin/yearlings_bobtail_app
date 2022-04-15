@@ -799,9 +799,9 @@ export default {
                         {
                             anchor: `claim you've never loved`,
                             todo: true,
-                            // TODO: Still too wordy?
+                            // TODO: This has gotten away from being unloved.
                             card: {
-                                description: `My songs were about being an inexperienced kid forever unlucky in love. But this persona only grew outdated as the hardships of my youth receded into the past. So I needed to drink greater amounts of alcohol to carry on with the lie that my life hadn't substantially improved.`,
+                                description: `My songs were about being an inexperienced kid dealing with the hardships of his childhood. But this persona grew outdated as my life substantially improved. Which meant I needed to drink greater amounts of alcohol to carry on with the lie that I was who I sang I was.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

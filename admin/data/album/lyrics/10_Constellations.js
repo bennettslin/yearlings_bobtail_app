@@ -1158,16 +1158,16 @@ export default {
                         },
                         {
                             anchor: `the dusc-horse yet`,
-                            // Last sentence is particularly weird.
+                            // TODO: I'm not sure these sentences connect.
                             todo: true,
                             card: {
                                 description: [
-                                    `"Are Malay tapirs the dusk horse yet?" Through conquest and migration, exotic new species were discovered. Native to the Malay peninsula, the`,
+                                    `"Are Malay tapirs the dusk horse yet?" Exotic new species were often discovered through conquest and migration. Native to the Malay peninsula, the`,
                                     {
                                         anchor: `Malayan tapir`,
                                         wiki: `Malayan_tapir`,
                                     },
-                                    `is distantly related to the horse and bears a physical resemblance to the horse's prehistoric ancestor`,
+                                    `bears a physical resemblance to the horse's prehistoric ancestor`,
                                     {
                                         isItalic: true,
                                         lyric: {
@@ -1175,7 +1175,7 @@ export default {
                                             wiki: `Eohippus`,
                                         },
                                     },
-                                    `, or "dawn horse." This "dusk horse," then, would be encountered at the end of history, which so many before us believed to have already been reached.`,
+                                    `, or "dawn horse." So once we encounter this "dusk horse," we'll know we've reached the end of history.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,

@@ -638,26 +638,25 @@ export default {
                         },
                         {
                             anchor: `went clear`,
-                            // TODO: Should this be two cards? Reconcile that part of clearing me from her life.
                             todo: true,
                             card: {
                                 description: [
-                                    `After Catherine cleared me from her life, my hope was to win her back by reading books, beginning with the ones we'd discussed. Catherine had mentioned that "Famous Blue Raincoat" echoes a similar theme of purification through betrayal found in Cohen's novel`,
+                                    `After Catherine cleared me from her life, my hope was to win her back by reading books. Since she was a fan of Leonard Cohen, I started with`,
                                     {
                                         isItalic: true,
                                         lyric: `Beautiful Losers`,
                                     },
-                                    `, particularly in its line, "Did you ever go clear?" (I later found out that "`,
+                                    `. I noticed that it shares the same theme of purification through betrayal found in "Famous Blue Raincoat," which seemed to explain the line: "Did you ever go clear?" But I later found out that`,
                                     {
                                         anchor: `going clear`,
                                         wiki: `Clear_(Scientology)`,
                                     },
-                                    `" is a`,
+                                    `is a`,
                                     {
                                         anchor: `Scientology`,
                                         wiki: `Scientology`,
                                     },
-                                    `thing.)`,
+                                    `thing.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -683,7 +682,7 @@ export default {
                                         isItalic: true,
                                         lyric: `Beautiful Losers`,
                                     },
-                                    `, so I always assumed that "going clear" was a reference to the legend that her`,
+                                    `, so I assumed that "go clear" was also a reference to the legend that her`,
                                     {
                                         anchor: `smallpox`,
                                         wiki: `Smallpox`,

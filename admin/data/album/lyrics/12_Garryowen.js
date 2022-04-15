@@ -338,7 +338,7 @@ export default {
                             anchor: `buys your grief`,
                             todo: true,
                             card: {
-                                description: `My worlds collided one night when I smashed a random bike in a fit of drunken rage. The bike turned out to belong to a scene kid who liked my music from my earliest days of playing out. He'd related so strongly to my songs about unfulfilled hopes. I was disgusted with myself for having disappointed him.`,
+                                description: `My worlds collided one night when I smashed a random bike in a fit of drunken rage. The bike turned out to belong to a friend of a scene kid who liked my music from my earliest days of playing out. He'd related so strongly to my songs about unfulfilled hopes. I was disgusted with myself for having disappointed him.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -646,9 +646,9 @@ export default {
                         {
                             anchor: `drop your anchor`,
                             todo: true,
-                            // TODO: Mention being stabilized.
+                            // TODO: Still undecided.
                             card: {
-                                description: `I'd ascribed every last one of my grievances to Sita for so long, all I could feel after the breakup was an eerie serenity. I could finally drop my "anger," and that was tantamount to being happy.`,
+                                description: `More than anything else, I was just so tired of the endless jostling that would take my emotions from one extreme to the next. Ending the relationship meant that I could finally drop my "anger" and feel emotionally anchored.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,

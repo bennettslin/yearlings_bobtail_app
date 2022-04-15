@@ -275,11 +275,12 @@ export default {
                         {
                             // NOTE: I changed "pauper's" to "paupers'."
                             anchor: `paupers' grave`,
+                            // TODO: Connect with pauper's grave more.
                             todo: true,
                             cards: [
                                 {
                                     description: [
-                                        `Though the breakup was successful, it happened sooner than expected, forcing my sober self to scrap his plans for a clean getaway. He's now back at the scene where earlier he tossed the body of his drunken half in haste.`,
+                                        `Though the breakup was successful, it happened sooner than expected, forcing my sober self to scrap his plans for a clean getaway. He's now arrived to retrieve the unclaimed body of his drunken half.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -292,7 +293,7 @@ export default {
                                             anchor: `paupers' grave`,
                                             wiki: `Potter's_field`,
                                         },
-                                        `is a burial ground for all those who die penniless or unknown.`,
+                                        `is a burial ground for those who died penniless or unknown.`,
                                     ],
                                 },
                             ],
@@ -1095,8 +1096,6 @@ export default {
                         `a bid for greatness' sake, he's sold on as`,
                         {
                             anchor: `holy war`,
-                            todo: true,
-                            // TODO: Tie religious motivations with benefits of breaking up.
                             card: {
                                 description: [
                                     `Most of the`,
@@ -1104,7 +1103,7 @@ export default {
                                         anchor: `9/11 hijackers`,
                                         wiki: `September_11_attacks`,
                                     },
-                                    `were unaware it was a suicide mission. They'd even prepared to make public statements on their religious motivations. Similarly, in orchestrating his scheme to be rid of Sita, sober me sold his drunken half on all the benefits of breaking up, while neglecting to mention the tremendous sacrifice it would entail.`,
+                                    `were unaware that it was a suicide mission, having prepared instead to speak publicly on their religious motives. Similarly, my drunken half was sold on all the benefits of breaking up with Sita, unaware that the one being sacrificed in this mission would be him.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
