@@ -22,6 +22,7 @@ import {
     EL_TORITO,
 } from '../../../../../../src/constants/scene/actors/songs'
 import { BENNETT } from '../../../../../../src/constants/scene/actors'
+import { DARKEN__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
 import { OPAL__SHARED } from '../../../../../../src/constants/scene/sharedStyles/animals'
 import { CHINESE_TAKEOUT__SHARED } from '../../../../../../src/constants/scene/sharedStyles/food'
 import { LIZ_LINENS__SHARED } from '../../../../../../src/constants/scene/sharedStyles/furniture'
@@ -48,6 +49,9 @@ export default {
     [OPENING_DOOR]: null,
     [DEFENDING]: CHINESE_TAKEOUT__SHARED,
     [NOT_HUNGRY]: CHINESE_TAKEOUT__SHARED,
-    [ASLEEP_COUCH]: LIZ_LINENS__SHARED,
+    [ASLEEP_COUCH]: [
+        DARKEN__SHARED,
+        LIZ_LINENS__SHARED,
+    ],
     [EL_TORITO]: null,
 }

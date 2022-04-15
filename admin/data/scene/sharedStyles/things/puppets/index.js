@@ -33,6 +33,7 @@ import {
     MIRIAM,
     MOTHER,
 } from '../../../../../../src/constants/scene/actors'
+import { DARKEN__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
 import {
     ALL_CLOTHING__SHARED,
     ALL_PEOPLE__SHARED,
@@ -53,7 +54,10 @@ export default {
     [GHOST_ODIN_CLUB]: ODIN_GHOST__SHARED,
     [GHOST_ODIN_DEMONSTRATION]: ODIN_GHOST__SHARED,
     [OPAL_COUCH]: OPAL__SHARED,
-    [OPAL_GAZING]: OPAL__SHARED,
+    [OPAL_GAZING]: [
+        DARKEN__SHARED,
+        OPAL__SHARED,
+    ],
     [PEACOCK]: PEAFOWL__SHARED,
     [PEAHEN]: PEAFOWL__SHARED,
     [PUPPET_ANITA_BEGIN]: [

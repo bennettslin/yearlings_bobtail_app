@@ -11,6 +11,7 @@ import {
     EPILOGUE,
 } from '../../../../../../src/constants/scene/actors/songs'
 import { MARA } from '../../../../../../src/constants/scene/actors'
+import { DARKEN__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
 import { USHER__SHARED } from '../../../../../../src/constants/scene/sharedStyles/actors'
 import { THOUGHT__SHARED } from '../../../../../../src/constants/scene/sharedStyles/comic'
 import { ROBITUSSIN__SHARED } from '../../../../../../src/constants/scene/sharedStyles/food'
@@ -22,7 +23,7 @@ export default {
     [WALGREENS]: ROBITUSSIN__SHARED,
     [STEAM_TUNNEL]: STEAM_TUNNEL__SHARED,
     [STATION_WAGON]: SATURN__SHARED,
-    [ATTIC]: null,
+    [ATTIC]: DARKEN__SHARED,
     [EPILOGUE]: null,
     [USHER_WAITING]: [
         MARA,

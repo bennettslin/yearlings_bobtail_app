@@ -17,6 +17,7 @@ import {
     SHEEPISH,
 } from '../../../../../../src/constants/scene/actors/preteenBennett'
 import { ASLEEP } from '../../../../../../src/constants/scene/actors/songs'
+import { DARKEN__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
 import { PUDDING__SHARED } from '../../../../../../src/constants/scene/sharedStyles/food'
 import {
     BENNETT_LINENS__SHARED,
@@ -39,8 +40,11 @@ export default {
     [ENRAGED]: MAGAZINE__SHARED,
     [FEARFUL]: BENNETT_LINENS__SHARED,
     [PANICKED]: BOOK__SHARED,
-    [MAT]: TAIWAN_LINENS__SHARED,
-    [STAIRS]: null,
+    [MAT]: [
+        DARKEN__SHARED,
+        TAIWAN_LINENS__SHARED,
+    ],
+    [STAIRS]: DARKEN__SHARED,
     [GATE]: null,
     [RICKSHAW]: [
         ALL_VEHICLES__SHARED,

@@ -52,6 +52,7 @@ import {
     FUTURE,
     EL_TORITO,
 } from '../../../../../../src/constants/scene/actors/songs'
+import { DARKEN__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
 import { TRAY__SHARED } from '../../../../../../src/constants/scene/sharedStyles/cafeteria'
 import {
     BASEMENT_TAKEOUT__SHARED,
@@ -129,7 +130,10 @@ export default {
     [STEAM_TUNNEL]: null,
     [CEMETERY]: null,
     [STATION_WAGON]: null,
-    [ATTIC]: ATTIC_LINENS__SHARED,
+    [ATTIC]: [
+        DARKEN__SHARED,
+        ATTIC_LINENS__SHARED,
+    ],
     [PERFORMING]: ELECTRIC_GUITAR__SHARED,
     [FLIRTING]: CABLE__SHARED,
     [SIDELONG_HESITANCE]: [
