@@ -10,6 +10,10 @@
     .christopherShoe { fill: hsl(197, 21%, 62%); }
     .christopherStrap { fill: hsl(197, 18%, 48%); }
 
+    .pastChristopherShirt { fill: hsl($HUE_PAST, 51%, 59%); }
+    .pastChristopherShorts { fill: hsl($HUE_PAST, 17%, 44%); }
+    .pastChristopherShoe { fill: hsl($HUE_PAST, 31%, 57%); }
+
     .blissfulGuilty {
         .handle { fill: hsl(184, 47%, 58%); }
     }

@@ -10,6 +10,13 @@
     .khariShorts { fill: hsl(12, 32%, 58%); }
     .khariShoe { fill: hsl(66, 8%, 49%); }
 
+    .futureKhariShirt { fill: hsl($HUE_FUTURE, 19%, 54%); }
+    .futureKhariCollar { fill: hsl($HUE_FUTURE, 22%, 58%); }
+    .futureKhariSweater { fill: hsl($HUE_FUTURE, 37%, 60%); }
+    .futureKhariSweaterTrim { fill: hsl($HUE_FUTURE, 32%, 56%); }
+    .futureKhariShorts { fill: hsl($HUE_FUTURE, 29%, 70%); }
+    .futureKhariShoe { fill: hsl($HUE_FUTURE, 8%, 49%); }
+
     &.doubleAlbert {
         .hatBottom { fill: hsl(3, 11%, 38%); }
         .hatTop { fill: hsl(5, 11%, 42%); }

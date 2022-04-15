@@ -24,7 +24,6 @@ case BASEMENT_BED_MAGIC_KEY:
 
 # TODO
 * Make basement and Bennett pillows the same?
-* Change past colors to its own colour, not shared
 * Make clubs and Look Back darkened scenes
 * Separate scenes in Pchelka
 
