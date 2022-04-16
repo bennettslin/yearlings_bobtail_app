@@ -1,63 +1,71 @@
 .allPeople#{$suffix} {
     .ashedCross { fill: hsla(9, 5%, 48%, 0.75); }
+
     .sclera { fill: hsl(216, 16%, 88%); }
     .pupil { fill: hsla(0, 0%, 0%, 0.5); }
-    .irisBlue { fill: hsl(204, 15%, 57%); }
-    .irisGreen { fill: hsl(104, 15%, 52%); }
-    .irisHazel { fill: hsl(71, 20%, 52%); }
-    .irisAmber { fill: hsl(56, 21%, 52%); }
-    .irisBrown { fill: hsl(42, 19%, 47%); }
+
     .irisDarkBrown { fill: hsl(36, 21%, 42%); }
-    .gum { fill: hsl(6, 37%, 63%); }
-    [class^=lipFemaleLight] { fill: hsla(1, 33%, 58%, 0.5); }
-    [class^=lipFemaleMedium] { fill: hsla(1, 27%, 51%, 0.5); }
-    [class^=lipFemaleBrown] { fill: hsla(2, 24%, 44%, 0.52); }
+    .irisBrown { fill: hsl(42, 19%, 47%); }
+    .irisAmber { fill: hsl(56, 21%, 52%); }
+    .irisHazel { fill: hsl(71, 20%, 52%); }
+    .irisGreen { fill: hsl(104, 15%, 52%); }
+    .irisBlue { fill: hsl(204, 15%, 57%); }
+
     [class^=lipFemaleDark] { fill: hsla(2, 21%, 41%, 0.55); }
-    .lipMaleLight__noStroke { fill: hsla(1, 24%, 61%, 0.3); }
-    .lipMaleMedium__noStroke { fill: hsla(1, 17%, 54%, 0.4); }
-    .lipMaleBrown__noStroke { fill: hsla(2, 16%, 44%, 0.45); }
+    [class^=lipFemaleBrown] { fill: hsla(2, 24%, 44%, 0.52); }
+    [class^=lipFemaleMedium] { fill: hsla(1, 27%, 51%, 0.5); }
+    [class^=lipFemaleLight] { fill: hsla(1, 33%, 58%, 0.5); }
+
     .lipMaleDark__noStroke { fill: hsla(2, 15%, 41%, 0.45); }
-    .teeth { fill: hsl(40, 17%, 82%); }
-    .tongue { fill: hsl(350, 26%, 63%); }
+    .lipMaleBrown__noStroke { fill: hsla(2, 16%, 44%, 0.45); }
+    .lipMaleMedium__noStroke { fill: hsla(1, 17%, 54%, 0.4); }
+    .lipMaleLight__noStroke { fill: hsla(1, 24%, 61%, 0.3); }
+
     .mouthInner { fill: hsl(4, 21%, 39%); }
+    .tongue { fill: hsl(350, 26%, 63%); }
+    .gum { fill: hsl(6, 37%, 63%); }
+    .teeth { fill: hsl(40, 17%, 82%); }
 
-    [class^=skinGallicBlood] { fill: hsl(1, 51%, 63%); }
     [class^=skinEastAsianBlood] { fill: hsl(1, 49%, 60%); }
+    [class^=skinGallicBlood] { fill: hsl(1, 51%, 63%); }
 
-    .skinNordic { fill: hsl(21, 48%, 80%); }
-    .skinGallic { fill: hsl(19, 46%, 74%); }
-    .skinAshkenazi { fill: hsl(22, 46%, 70%); }
-
-    .skinEastAsian { fill: hsl(29, 45%, 68%); }
-    .skinLatino { fill: hsl(24, 42%, 62%); }
-
-    .skinFilipino { fill: hsl(28, 42%, 57%); }
-    .skinIndian { fill: hsl(21, 33%, 52%); }
     .skinBlack { fill: hsl(29, 31%, 48%); }
+    .skinIndian { fill: hsl(21, 33%, 52%); }
+    .skinFilipino { fill: hsl(28, 42%, 57%); }
+    .skinLatino { fill: hsl(24, 42%, 62%); }
+    .skinEastAsian { fill: hsl(29, 45%, 68%); }
+    .skinAshkenazi { fill: hsl(22, 46%, 70%); }
+    .skinGallic { fill: hsl(19, 46%, 74%); }
+    .skinNordic { fill: hsl(21, 48%, 80%); }
 
-    .eyebrowBlonde, .hairBlonde { fill: hsl(41, 48%, 72%); }
-    .hairBlondeDark { fill: hsl(41, 48%, 65%); }
-    .eyebrowSandy, .hairSandy { fill: hsl(32, 37%, 61%); }
-    .eyebrowRed, .hairRed { fill: hsl(21, 56%, 40%); }
-    .hairRedDark { fill: hsl(21, 56%, 35%); }
-    .eyebrowDyedRed, .hairDyedRed { fill: hsl(355, 28%, 47%); }
-    .eyebrowLightBrown, .hairLightBrown { fill: hsl(19, 18%, 55%); }
-    .eyebrowMediumBrown, .hairMediumBrown { fill: hsl(23, 30%, 39%); }
-    .eyebrowDarkBrown, .hairDarkBrown { fill: hsl(19, 17%, 25%); }
-    .eyebrowLightGray, .hairLightGray { fill: hsl(60, 1%, 61%); }
-    .eyebrowDarkGray, .hairDarkGray { fill: hsl(26, 1%, 32%); }
-    .eyebrowBlack, .hairBlack { fill: hsl(26, 7%, 25%); }
     .hairBlackDark { fill: hsl(26, 7%, 22%); }
+    .eyebrowBlack, .hairBlack { fill: hsl(26, 7%, 25%); }
+    .eyebrowDarkGray, .hairDarkGray { fill: hsl(26, 1%, 32%); }
+    .eyebrowLightGray, .hairLightGray { fill: hsl(60, 1%, 61%); }
+    .eyebrowDarkBrown, .hairDarkBrown { fill: hsl(19, 17%, 25%); }
+    .eyebrowMediumBrown, .hairMediumBrown { fill: hsl(23, 30%, 39%); }
+    .eyebrowLightBrown, .hairLightBrown { fill: hsl(19, 18%, 55%); }
+    .eyebrowDyedRed, .hairDyedRed { fill: hsl(355, 28%, 47%); }
+    .hairRedDark { fill: hsl(21, 56%, 35%); }
+    .eyebrowRed, .hairRed { fill: hsl(21, 56%, 40%); }
+    .eyebrowSandy, .hairSandy { fill: hsl(32, 37%, 61%); }
+    .hairBlondeDark { fill: hsl(41, 48%, 65%); }
+    .eyebrowBlonde, .hairBlonde { fill: hsl(41, 48%, 72%); }
 
-    .stubbleBlonde { fill: hsl(33, 41%, 77%); }
     .stubbleBlack { fill: hsl(33, 16%, 44%); }
+    .stubbleBlonde { fill: hsl(33, 41%, 77%); }
 
     .nippleEastAsian { fill: hsl(16, 26%, 49%); }
     .nippleWhiteBlood { fill: hsl(1, 26%, 49%); }
 
     .darken__parent
     &.darken#{$suffix} {
-        .hairLightBrown { fill: hsl(19, 12%, 32%); }
+        .skinBlack { fill: hsl(29, 22%, 32%); }
         .skinAshkenazi { fill: hsl(22, 22%, 42%); }
+        .skinNordic { fill: hsl(21, 22%, 46%); }
+        .hairBlack { fill: hsl(26, 6%, 20%); }
+        .hairLightBrown { fill: hsl(19, 12%, 32%); }
+        .hairSandy { fill: hsl(32, 12%, 37%); }
+        .hairBlonde { fill: hsl(41, 12%, 41%); }
     }
 }

@@ -11,7 +11,7 @@
 TAIWAN_ROOM_KEY (only Bennett and linens lit)
 TAIWAN_STAIRS_KEY (only Bennett lit)
 BEDROOM_DARK_KEY
-    things (Bloom County poster)
+    things
     actors
 BENNETT_BED_DARK_KEY (nothing lit)
 LIZ_BED_DARK_KEY (both Grasshoppers and Look Back)
