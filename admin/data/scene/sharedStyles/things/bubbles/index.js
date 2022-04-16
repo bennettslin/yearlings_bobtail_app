@@ -53,7 +53,6 @@ import {
     BANJO__SHARED,
     HEADPHONE__SHARED,
     MICROPHONE__SHARED,
-    MONITOR__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/instruments'
 import {
     FOLIAGE__SHARED,
@@ -105,7 +104,6 @@ export default {
         BANJO__SHARED,
         ACOUSTIC_GUITAR__SHARED,
         MICROPHONE__SHARED,
-        MONITOR__SHARED,
         AMY,
         BENNETT,
         LIZ,

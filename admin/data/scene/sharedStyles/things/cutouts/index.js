@@ -87,7 +87,6 @@ import {
 import { DARKEN__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
 import { BENNETT_LINENS__SHARED } from '../../../../../../src/constants/scene/sharedStyles/furniture'
 import { BULB__SHARED } from '../../../../../../src/constants/scene/sharedStyles/household'
-import { MONITOR__SHARED } from '../../../../../../src/constants/scene/sharedStyles/instruments'
 import {
     FOLIAGE__SHARED,
     FREEWAY_SIGN__SHARED,
@@ -142,8 +141,8 @@ export default {
     [LEMON_TREE]: FOLIAGE__SHARED,
     [LOCKER_BANK]: null,
     [MIRRORED_SINK]: ALL_PEOPLE__SHARED,
-    [MONITOR_FRONT]: MONITOR__SHARED,
-    [MONITOR_SIDE]: MONITOR__SHARED,
+    [MONITOR_FRONT]: null,
+    [MONITOR_SIDE]: null,
     [MUSEUM_DISPLAY]: null,
     [OVERPASS_SIGN_BACK]: FREEWAY_SIGN__SHARED,
     [PEACH_TREE]: FOLIAGE__SHARED,
@@ -199,8 +198,8 @@ export default {
     [TWIN_STREETLAMP]: BULB__SHARED,
     [UCLA_TREE]: FOLIAGE__SHARED,
     [WAITING_ROOM_PLANT]: FOLIAGE__SHARED,
-    [WALL_SPEAKER_FRONT]: MONITOR__SHARED,
-    [WALL_SPEAKER_SIDE]: MONITOR__SHARED,
+    [WALL_SPEAKER_FRONT]: null,
+    [WALL_SPEAKER_SIDE]: null,
     [WEDDING_CHAIR]: [
         ROSE_RED__SHARED,
         TAIWAN_FOLIAGE__SHARED,
