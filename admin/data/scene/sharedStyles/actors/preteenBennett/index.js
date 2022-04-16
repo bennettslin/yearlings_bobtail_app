@@ -17,6 +17,7 @@ import {
     SHEEPISH,
 } from '../../../../../../src/constants/scene/actors/preteenBennett'
 import { ASLEEP } from '../../../../../../src/constants/scene/actors/songs'
+import { DARKEN_DEFAULT__SHARED, DARKEN_EXTRA__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
 import { PUDDING__SHARED } from '../../../../../../src/constants/scene/sharedStyles/food'
 import {
     BENNETT_LINENS__SHARED,
@@ -53,8 +54,14 @@ export default {
         DOLLAR__SHARED,
         BENNETT_LINENS__SHARED,
     ],
-    [ASLEEP]: BENNETT_LINENS__SHARED,
-    [SHAKEN]: LETTER__SHARED,
+    [ASLEEP]: [
+        DARKEN_EXTRA__SHARED,
+        BENNETT_LINENS__SHARED,
+    ],
+    [SHAKEN]: [
+        DARKEN_DEFAULT__SHARED,
+        LETTER__SHARED,
+    ],
     [STOIC]: PUDDING__SHARED,
     [WISTFUL]: null,
     [SHEEPISH]: null,

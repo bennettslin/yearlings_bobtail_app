@@ -53,22 +53,22 @@ import {
     MOUNTAIN__SHARED,
     WALL__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/outdoor'
-import { DARKEN__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
+import { DARKEN_DEFAULT__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
 
 export default {
     [BANCROFT_DOOR]: DOOR__SHARED,
     [BASEMENT_DOOR]: [
-        DARKEN__SHARED,
+        DARKEN_DEFAULT__SHARED,
         DOOR__SHARED,
     ],
     [BASEMENT_DOOR_OPEN]: DOOR__SHARED,
     [BASEMENT_DOOR_SIDE]: DOOR__SHARED,
     [BEDROOM_BLINDS]: [
-        DARKEN__SHARED,
+        DARKEN_DEFAULT__SHARED,
         BENNETT_INSIDE__SHARED,
     ],
     [BEDROOM_BLINDS_OPEN]: [
-        DARKEN__SHARED,
+        DARKEN_DEFAULT__SHARED,
         BENNETT_INSIDE__SHARED,
     ],
     [BEDROOM_FENCE]: [
@@ -78,13 +78,13 @@ export default {
     ],
     [BENNETT_DOOR_INSIDE]: [
         BENNETT_INSIDE__SHARED,
-        DARKEN__SHARED,
+        DARKEN_DEFAULT__SHARED,
         DOOR__SHARED,
     ],
     [BENNETT_DOOR_INSIDE_OPEN]: [
         BENNETT_APARTMENT__SHARED,
         BENNETT_INSIDE__SHARED,
-        DARKEN__SHARED,
+        DARKEN_DEFAULT__SHARED,
         DOOR__SHARED,
     ],
     [BENNETT_DOOR_OUTSIDE]: [
@@ -106,7 +106,7 @@ export default {
     ],
     [BLINDS_INSIDE_OPEN]: [
         BENNETT_INSIDE__SHARED,
-        DARKEN__SHARED,
+        DARKEN_DEFAULT__SHARED,
     ],
     [BLINDS_OUTSIDE]: BENNETT_APARTMENT__SHARED,
     [CINEMA_DOORS]: DOOR__SHARED,
@@ -125,19 +125,19 @@ export default {
     [IRON_GATE_LOW]: null,
     [LIZ_BLINDS_INSIDE]: LIZ_APARTMENT__SHARED,
     [LIZ_BLINDS_INSIDE_OPEN]: [
-        DARKEN__SHARED,
+        DARKEN_DEFAULT__SHARED,
         LIZ_APARTMENT__SHARED,
     ],
     [LIZ_BLINDS_OUTSIDE]: [
         LIZ_APARTMENT__SHARED,
     ],
     [LIZ_DOOR]: [
-        DARKEN__SHARED,
+        DARKEN_DEFAULT__SHARED,
         DOOR__SHARED,
         LIZ_APARTMENT__SHARED,
     ],
     [LIZ_DOOR_OPEN]: [
-        DARKEN__SHARED,
+        DARKEN_DEFAULT__SHARED,
         DOOR__SHARED,
         LIZ_APARTMENT__SHARED,
     ],

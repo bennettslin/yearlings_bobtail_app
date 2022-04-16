@@ -8,8 +8,7 @@
     .paperStackDark { fill: hsl(45, 8%, 63%); }
     .romanNumeral { fill: hsl(61, 65%, 88%); }
 
-    .darken__parent
-    &.darken#{$suffix} {
+    .darkenDefault &.darken#{$suffix} {
         .paperStackLight { fill: hsl(47, 6%, 39%); } 
     }
 }

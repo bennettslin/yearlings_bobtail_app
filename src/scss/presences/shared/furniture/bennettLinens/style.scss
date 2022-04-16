@@ -6,10 +6,15 @@
     .bennettBlanketInner { fill: hsl($HUE_BENNETT_LINENS + 20, 35%, 52%); }
     .bennettBlanket { fill: hsl($HUE_BENNETT_LINENS + 20, 35%, 62%); }
 
-    .darken__parent
-    &.darken#{$suffix} {
+    .darkenDefault &.darken#{$suffix} {
+        // This is to darken the stool.
         .cushion { fill: hsl($HUE_BENNETT_LINENS, 13%, 28%); }
         .cushionLight { fill: hsl($HUE_BENNETT_LINENS, 13%, 31%); }
+    }
+
+    .darkenExtra &.darkenExtra#{$suffix} {
         .bennettPillow { fill: hsl($HUE_BENNETT_LINENS - 20, 18%, 36%); }
+        .bennettBlanketInner { fill: hsl($HUE_BENNETT_LINENS + 20, 18%, 26%); }
+        .bennettBlanket { fill: hsl($HUE_BENNETT_LINENS + 20, 18%, 40%); }
     }
 }

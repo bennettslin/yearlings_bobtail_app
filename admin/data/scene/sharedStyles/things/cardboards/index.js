@@ -73,7 +73,7 @@ import {
     REATTA__SHARED,
     ALL_VEHICLES__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/vehicles'
-import { DARKEN__SHARED, FUTURE__SHARED, PAST__SHARED, PRESENT__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
+import { DARKEN_DEFAULT__SHARED, FUTURE__SHARED, PAST__SHARED, PRESENT__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
 
 export default {
     [ALBUM_JOHNNY_HORTON]: [
@@ -127,7 +127,7 @@ export default {
         BENNETT,
     ],
     [BENNETT_TAIWAN_STAIRS]: [
-        DARKEN__SHARED,
+        DARKEN_DEFAULT__SHARED,
         ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED,
         BENNETT,
@@ -143,12 +143,12 @@ export default {
     [ODIN_SHORE]: ODIN_PAST__SHARED,
     [ODIN_TAIWAN_GATE]: ODIN_PAST__SHARED,
     [ODIN_TAIWAN_STAIRS]: [
-        DARKEN__SHARED,
+        DARKEN_DEFAULT__SHARED,
         ODIN_PAST__SHARED,
     ],
     [PAINTING]: null,
     [POSTER_BLOOM_COUNTY]: [
-        DARKEN__SHARED,
+        DARKEN_DEFAULT__SHARED,
         ALL_PEOPLE__SHARED,
         MOUNTAIN__SHARED,
     ],

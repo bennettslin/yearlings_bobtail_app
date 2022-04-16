@@ -6,7 +6,6 @@
 // .waterMediumLight { fill: hsl($HUE_OCEAN, 46%, 62%); }
 // .waterLight { fill: hsl($HUE_OCEAN, 46%, 67%); }
 
-.darken__parent
-.darken#{$suffix} {
+.darkenDefault .darken#{$suffix} {
     .waterDark { fill: hsl($HUE_OCEAN, 23%, 29%); }
 }

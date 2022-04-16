@@ -4,7 +4,7 @@ import {
     getSkyTimeForScene,
     getSeasonForScene,
 } from '../../endpoint/album/scenes'
-import { getIsDarkScene } from '../../helpers/scene'
+import { getIsDarkenExtraScene, getIsDarkenDefaultScene } from '../../helpers/scene'
 import { mapIsSongSelectComplete } from '../entrance/selector'
 import { DEFAULT_STAGE_KEY } from '../../constants/scene/scenes'
 import { SCENE_STORE } from '../../constants/store'
@@ -44,11 +44,14 @@ export const mapSceneSkySeason = createSelector(
     ) => getSeasonForScene(sceneSongIndex, sceneSceneIndex),
 )
 
-export const mapIsDarkScene = createSelector(
+export const mapIsDarkenDefaultScene = createSelector(
     mapSceneCubesKey,
-    (
-        sceneCubesKey,
-    ) => getIsDarkScene(sceneCubesKey),
+    sceneCubesKey => getIsDarkenDefaultScene(sceneCubesKey),
+)
+
+export const mapIsDarkenExtraScene = createSelector(
+    mapSceneCubesKey,
+    sceneCubesKey => getIsDarkenExtraScene(sceneCubesKey),
 )
 
 export const mapCanStageReset = createSelector(

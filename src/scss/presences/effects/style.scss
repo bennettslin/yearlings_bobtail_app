@@ -66,8 +66,7 @@
     // stroke-width: 2px;
 }
 
-.darken__parent
-.darken#{$suffix} {
+.darkenDefault .darken#{$suffix} {
     [class$=LightLine] {
         stroke: none;
     }

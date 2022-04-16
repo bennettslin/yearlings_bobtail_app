@@ -114,20 +114,20 @@ import {
     LIZ_CONDOM__SHARED,
     MIRIAM_CONDOM__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/wardrobe'
-import { DARKEN__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
+import { DARKEN_DEFAULT__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
 
 export default {
     [BACKPACK_BENNETT]: BACKPACK__SHARED,
     [BALLED_FOIL]: null,
     [BASS_CASE_UPRIGHT]: [
-        DARKEN__SHARED,
+        DARKEN_DEFAULT__SHARED,
         BASS_CASE__SHARED,
     ],
     [BEDROOM_LAMP]: [
         BULB__SHARED,
-        DARKEN__SHARED,
+        DARKEN_DEFAULT__SHARED,
     ],
-    [BEETHOVEN_BUST]: DARKEN__SHARED,
+    [BEETHOVEN_BUST]: DARKEN_DEFAULT__SHARED,
     [BENNETT_COUCH_LAMP]: null,
     [BENNETT_LETTERS]: MAGAZINE__SHARED,
     [BENNETT_RECORD_PLAYER]: null,
@@ -139,32 +139,35 @@ export default {
         ALL_CLOTHING__SHARED,
         BENNETT,
     ],
-    [BEYONDER_ENVELOPE]: LETTER__SHARED,
+    [BEYONDER_ENVELOPE]: [
+        DARKEN_DEFAULT__SHARED,
+        LETTER__SHARED,
+    ],
     [BUDWEISER_CASE]: [
-        DARKEN__SHARED,
+        DARKEN_DEFAULT__SHARED,
         BUDWEISER__SHARED,
     ],
     [BUDWEISER_EMPTIER]: [
-        DARKEN__SHARED,
+        DARKEN_DEFAULT__SHARED,
         BUDWEISER__SHARED,
     ],
     [BUDWEISER_FULLER]: BUDWEISER__SHARED,
     [CASH_BOX]: DOLLAR__SHARED,
     [CONDOM_LIZ]: [
-        DARKEN__SHARED,
+        DARKEN_DEFAULT__SHARED,
         LIZ_CONDOM__SHARED,
     ],
     [CONDOM_REFLECTION]: [
-        DARKEN__SHARED,
+        DARKEN_DEFAULT__SHARED,
         LIZ_CONDOM__SHARED,
     ],
     [CONDOM_MIRIAM]: MIRIAM_CONDOM__SHARED,
     [CONDOM_WRAPPER_LIZ]: [
-        DARKEN__SHARED,
+        DARKEN_DEFAULT__SHARED,
         LIZ_CONDOM__SHARED,
     ],
     [CONDOM_WRAPPER_REFLECTION]: [
-        DARKEN__SHARED,
+        DARKEN_DEFAULT__SHARED,
         LIZ_CONDOM__SHARED,
     ],
     [CONDOM_WRAPPER_MIRIAM]: MIRIAM_CONDOM__SHARED,
@@ -180,7 +183,7 @@ export default {
         DRUMS__SHARED,
     ],
     [DRUMS_STACKED]: [
-        DARKEN__SHARED,
+        DARKEN_DEFAULT__SHARED,
         DRUMS__SHARED,
     ],
     [DRUM_THRONE]: DRUMS__SHARED,
@@ -189,7 +192,7 @@ export default {
     [FLOWER_BULBS]: FOLIAGE__SHARED,
     [FREEWAY_SIGN]: FREEWAY_SIGN__SHARED,
     [FRIDGE_DRAWINGS]: [
-        DARKEN__SHARED,
+        DARKEN_DEFAULT__SHARED,
         ALL_PEOPLE__SHARED,
         ACOUSTIC_GUITAR__SHARED,
         SASHA,
@@ -198,7 +201,7 @@ export default {
     [GHOST_SHACKLES]: GHOST__SHARED,
     [GUITAR_CASE_OPEN]: GUITAR_CASE__SHARED,
     [GUITAR_CASE_UPRIGHT]: [
-        DARKEN__SHARED,
+        DARKEN_DEFAULT__SHARED,
         GUITAR_CASE__SHARED,
     ],
     [HAIRCUT_SCISSORS]: null,
@@ -211,20 +214,20 @@ export default {
     [KEYBOARD]: null,
     [KICK_DRUM]: DRUMS__SHARED,
     [LETTER_SCRAPS]: MAGAZINE__SHARED,
-    [LIGHT_SWITCH]: DARKEN__SHARED,
+    [LIGHT_SWITCH]: DARKEN_DEFAULT__SHARED,
     [LINGERIE_DRAWING]: [
         BOOK__SHARED,
-        DARKEN__SHARED,
+        DARKEN_DEFAULT__SHARED,
         DRAWING__SHARED,
     ],
     [LIZ_PHONE]: [
-        DARKEN__SHARED,
+        DARKEN_DEFAULT__SHARED,
         LIZ_PHONE__SHARED,
     ],
     [LIZ_PHONE_BASE]: LIZ_PHONE__SHARED,
     [LIZ_PHONE_BASE_REFLECTION]: LIZ_PHONE__SHARED,
     [LIZ_PHONE_REFLECTION]: [
-        DARKEN__SHARED,
+        DARKEN_DEFAULT__SHARED,
         LIZ_PHONE__SHARED,
     ],
     [MANNEQUIN]: null,
@@ -247,5 +250,5 @@ export default {
         PUDDING__SHARED,
     ],
     [TORN_MAGAZINES]: MAGAZINE__SHARED,
-    [VASELINE]: DARKEN__SHARED,
+    [VASELINE]: DARKEN_DEFAULT__SHARED,
 }

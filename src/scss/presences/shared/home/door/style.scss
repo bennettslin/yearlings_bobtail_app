@@ -20,8 +20,7 @@
     .edgeLight { fill: hsl(33, 22%, 44%); }
     .panelLight { fill: hsl(33, 22%, 47%); }
 
-    .darken__parent
-    &.darken#{$suffix} {
+    .darkenDefault &.darken#{$suffix} {
         .frameDarkFront { fill: hsl(33, 8%, 28%); }
         .doorDarkFront { fill: hsl(33, 12%, 23%); }
     }

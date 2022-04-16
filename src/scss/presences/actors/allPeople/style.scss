@@ -58,14 +58,20 @@
     .nippleEastAsian { fill: hsl(16, 26%, 49%); }
     .nippleWhiteBlood { fill: hsl(1, 26%, 49%); }
 
-    .darken__parent
-    &.darken#{$suffix} {
-        .skinBlack { fill: hsl(29, 22%, 32%); }
-        .skinAshkenazi { fill: hsl(22, 22%, 42%); }
-        .skinNordic { fill: hsl(21, 22%, 46%); }
-        .hairBlack { fill: hsl(26, 6%, 20%); }
+    .darkenDefault &.darken#{$suffix} {
+        .skinBlack { fill: hsl(29, 18%, 32%); }
+        .skinAshkenazi { fill: hsl(22, 18%, 42%); }
+        .skinNordic { fill: hsl(21, 18%, 46%); }
         .hairLightBrown { fill: hsl(19, 12%, 32%); }
         .hairSandy { fill: hsl(32, 12%, 37%); }
         .hairBlonde { fill: hsl(41, 12%, 41%); }
+    }
+
+    .darkenExtra &.darkenExtra#{$suffix} {
+        .skinEastAsian { fill: hsl(29, 18%, 40%); }
+    }    
+
+    .darkenDefault &.darken#{$suffix}, .darkenExtra &.darkenExtra#{$suffix} {
+        .hairBlack { fill: hsl(26, 6%, 20%); }
     }
 }

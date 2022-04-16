@@ -1,7 +1,6 @@
 .shadowDark { fill: hsl(0, 0%, 17%); }
 .shadow { fill: hsl(0, 0%, 22%); }
 
-.darken__parent
-.darken#{$suffix} {
+.darkenDefault .darken#{$suffix} {
     .shadow { fill: hsl(0, 0%, 16%); }
 }

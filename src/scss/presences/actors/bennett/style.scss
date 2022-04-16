@@ -25,8 +25,7 @@
     .pastBennettShoe { fill: hsl($HUE_PAST, 20%, 41%); }
     .pastConverseLogo { fill: hsl($HUE_PAST, 37%, 60%); }
 
-    .darken__parent
-    &.darken#{$suffix} {
+    .darkenDefault &.darken#{$suffix} {
         .pastBennettJeans { fill: hsl($HUE_PAST, 13%, 27%); }
         .pastBennettShoe { fill: hsl($HUE_PAST, 12%, 23%); }
         .pastConverseLogo { fill: hsl($HUE_PAST, 17%, 33%); }

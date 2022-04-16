@@ -9,7 +9,6 @@
 
 .glassClear { fill: hsla(175, 25%, 75%, 0.25); }
 
-.darken__parent
-.darken#{$suffix} {
+.darkenDefault .darken#{$suffix} {
     .glassDarkest { fill: hsl(175, 12%, 24%); }
 }

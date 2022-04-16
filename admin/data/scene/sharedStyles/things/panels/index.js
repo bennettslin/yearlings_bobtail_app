@@ -67,7 +67,7 @@ import {
     WIDE_COUCH_BENNETT,
     WIDE_COUCH_MIRIAM,
 } from '../../../../../../src/constants/scene/things/panels'
-import { DARKEN__SHARED, FUTURE__SHARED, PAST__SHARED, PRESENT__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
+import { DARKEN_DEFAULT__SHARED, FUTURE__SHARED, PAST__SHARED, PRESENT__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
 import { OCEAN_LIFE__SHARED } from '../../../../../../src/constants/scene/sharedStyles/animals'
 import {
     DISH__SHARED,
@@ -98,33 +98,33 @@ import {
 
 export default {
     [ATTIC_ARMREST]: [
-        DARKEN__SHARED,
+        DARKEN_DEFAULT__SHARED,
         ATTIC_LINENS__SHARED,
     ],
     [ATTIC_COUCH]: [
-        DARKEN__SHARED,
+        DARKEN_DEFAULT__SHARED,
         ATTIC_LINENS__SHARED,
     ],
     [BATHTUB]: null,
-    [BEDROOM_DESK]: DARKEN__SHARED,
+    [BEDROOM_DESK]: DARKEN_DEFAULT__SHARED,
     [BEDROOM_STOOL]: [
         BENNETT_LINENS__SHARED,
-        DARKEN__SHARED,
+        DARKEN_DEFAULT__SHARED,
     ],
-    [BENNETT_BED]: DARKEN__SHARED,
+    [BENNETT_BED]: DARKEN_DEFAULT__SHARED,
     [BENNETT_NIGHTSTAND]: null,
     [BENNETT_RECORD_STAND]: null,
     [BUDDHA_STAND]: [
-        DARKEN__SHARED,
+        DARKEN_DEFAULT__SHARED,
     ],
-    [CAPTAIN_BED]: DARKEN__SHARED,
+    [CAPTAIN_BED]: DARKEN_DEFAULT__SHARED,
     [CAVE_SHADOWS]: DRAWING__SHARED,
     [CONVEYOR_BELT]: [
         DISH__SHARED,
         TRAY__SHARED,
     ],
-    [CROWD_BACK]: DARKEN__SHARED,
-    [CROWD_SIDE]: DARKEN__SHARED,
+    [CROWD_BACK]: DARKEN_DEFAULT__SHARED,
+    [CROWD_SIDE]: DARKEN_DEFAULT__SHARED,
     [DISHROOM_SINK]: null,
     [FREEWAY_FENCE]: null,
     [GO_KART_EXTERIOR]: [
@@ -136,12 +136,12 @@ export default {
     [HOSPITAL_RECORD_STAND]: null,
     [KEYBOARD_STAND_LEFT]: BOOK__SHARED,
     [KEYBOARD_STAND_RIGHT]: BOOK__SHARED,
-    [LIZ_BED]: DARKEN__SHARED,
+    [LIZ_BED]: DARKEN_DEFAULT__SHARED,
     [LIZ_COUCH]: [
-        DARKEN__SHARED,
+        DARKEN_DEFAULT__SHARED,
         LIZ_LINENS__SHARED,
     ],
-    [LIZ_NIGHTSTAND]: DARKEN__SHARED,
+    [LIZ_NIGHTSTAND]: DARKEN_DEFAULT__SHARED,
     [LIZ_OTTOMAN]: LIZ_LINENS__SHARED,
     [MILK_CRATE]: null,
     [NURSE_BENCH]: null,

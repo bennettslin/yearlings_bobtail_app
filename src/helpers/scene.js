@@ -15,7 +15,8 @@ import {
     TAIWAN_STAIRS_KEY,
 } from '../constants/scene/scenes'
 
-export const getIsDarkScene = sceneCubesKey => {
+// Scenes where only the default presences are darkened.
+export const getIsDarkenDefaultScene = sceneCubesKey => {
     switch (sceneCubesKey) {
         // Night scenes.
         case TAIWAN_ROOM_KEY:
@@ -28,12 +29,24 @@ export const getIsDarkScene = sceneCubesKey => {
         case LIZ_COUCH_DARK_KEY:
         case BASEMENT_BED_DARK_KEY:
         case CLUB_FAR_DARK_KEY:
+
         // Night magic scenes.
         // eslint-disable-next-line no-fallthrough
         case BEDROOM_MAGIC_KEY:
         case BEDROOM_FUTURE_KEY:
         case LIZ_COUCH_FUTURE_KEY:
         case BASEMENT_BED_MAGIC_KEY:
+            return true
+    }
+    return false
+}
+
+// Scenes where designated extra presences are darkened.
+export const getIsDarkenExtraScene = sceneCubesKey => {
+    switch (sceneCubesKey) {
+        case BEDROOM_MAGIC_KEY:
+        case BEDROOM_FUTURE_KEY:
+        case BASEMENT_BED_DARK_KEY:
             return true
     }
     return false

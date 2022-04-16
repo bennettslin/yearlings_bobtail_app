@@ -12,8 +12,7 @@
     .blinds { fill: hsl($HUE_LIZ_ROOM, 5%, 74%); }
     .rail { fill: hsl($HUE_LIZ_ROOM, 17%, 66%); }
 
-    .darken__parent
-    &.darken#{$suffix} {
+    .darkenDefault &.darken#{$suffix} {
         .frameSide { fill: hsl($HUE_LIZ_ROOM, 9%, 32%); }
         .frameFront { fill: hsl($HUE_LIZ_ROOM, 9%, 35%); }
         .doorSide { fill: hsl($HUE_LIZ_ROOM + 20, 11%, 30%); }

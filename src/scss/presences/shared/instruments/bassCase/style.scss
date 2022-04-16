@@ -6,8 +6,7 @@
     .liningMedium { fill: hsl(64, 21%, 71%); }
     .liningLight { fill: hsl(65, 28%, 76%); }
 
-    .darken__parent
-    &.darken#{$suffix} {
+    .darkenDefault &.darken#{$suffix} {
         .caseMedium { fill: hsl(39, 15%, 25%); }
         .caseLight { fill: hsl(39, 15%, 29%); }
     }

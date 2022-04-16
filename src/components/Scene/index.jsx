@@ -6,7 +6,7 @@ import {
     mapIsSongChangeDone,
     mapIsSceneChangeDone,
 } from '../../redux/entrance/selector'
-import { mapIsDarkScene } from '../../redux/scene/selector'
+import { mapIsDarkenExtraScene, mapIsDarkenDefaultScene } from '../../redux/scene/selector'
 import Transition from 'react-transition-group/Transition'
 import Cubes from '../Cubes'
 import Presences from '../Presences'
@@ -18,7 +18,8 @@ const Scene = () => {
         dispatch = useDispatch(),
         isSongChangeDone = useSelector(mapIsSongChangeDone),
         isSceneChangeDone = useSelector(mapIsSceneChangeDone),
-        isDarkScene = useSelector(mapIsDarkScene)
+        isDarkenDefaultScene = useSelector(mapIsDarkenDefaultScene),
+        isDarkenExtraScene = useSelector(mapIsDarkenExtraScene)
 
     const onExited = () => {
         logTransition('Scene did exit.')
@@ -46,7 +47,8 @@ const Scene = () => {
                 {...{
                     className: cx(
                         'Scene',
-                        isDarkScene && 'darken__parent',
+                        isDarkenDefaultScene && 'darkenDefault',
+                        isDarkenExtraScene && 'darkenExtra',
                         'abF',
                     ),
                 }}

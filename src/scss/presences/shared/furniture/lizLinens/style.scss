@@ -8,8 +8,7 @@
     .lizPillow { fill: hsl($HUE_LIZ_LINENS + 15, 27%, 59%); }
     .lizBlanket { fill: hsl($HUE_LIZ_LINENS, 25%, 60%); }
 
-    .darken__parent
-    &.darken#{$suffix} {
+    .darkenDefault &.darken#{$suffix} {
         .cushion { fill: hsl($HUE_LIZ_LINENS, 6%, 28%); }
         .pillowSurface { fill: hsl($HUE_LIZ_LINENS, 4%, 25%); }
         .pillowEdge { fill: hsl($HUE_LIZ_LINENS, 5%, 22%); }
