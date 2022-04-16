@@ -2,7 +2,6 @@ import {
     CUTOUT,
     DOOR,
     FIXTURE,
-    FURNITURE,
 } from '../../../../../src/constants/scene/things'
 import {
     PEACH_TREE,
@@ -15,7 +14,6 @@ import {
     CRACKED_PICTURE,
     GHOST_SHACKLES,
 } from '../../../../../src/constants/scene/things/fixtures'
-import { BASEMENT_PILLOW } from '../../../../../src/constants/scene/things/furnitures'
 
 export default {
     [CUTOUT]: {
@@ -53,12 +51,6 @@ export default {
             yIndex: 4,
             xPosition: 6.2,
             zOffset: 2.8,
-        },
-    },
-    [FURNITURE]: {
-        [BASEMENT_PILLOW]: {
-            yIndex: 4,
-            xPosition: 9.5,
         },
     },
 }

@@ -3,6 +3,7 @@ import {
     LIZ_BED_LOVE_KEY,
     LIZ_BED_PHONE_KEY,
     LIZ_BED_DARK_KEY,
+    LIZ_BED_DARK_EXTRA_KEY,
 } from '../../../../../src/constants/scene/scenes'
 
 import {
@@ -47,6 +48,21 @@ const DEFAULT_FLOOR = {
         [1, 1, 4, 4, 4, 4, 4, 4, 1, 1, 1, 1],
         [1],
     ],
+}
+
+const DARK_CONFIGS = {
+    ceiling: {
+        hslaColours: [
+            [Z],
+        ],
+        zIndices: DEFAULT_CEILING.zIndices,
+    },
+    floor: {
+        hslaColours: [
+            [Z],
+        ],
+        zIndices: DEFAULT_FLOOR.zIndices,
+    },
 }
 
 const OPEN_CEILING = {
@@ -109,18 +125,6 @@ export default {
             ],
         },
     },
-    [LIZ_BED_DARK_KEY]: {
-        ceiling: {
-            hslaColours: [
-                [Z],
-            ],
-            zIndices: DEFAULT_CEILING.zIndices,
-        },
-        floor: {
-            hslaColours: [
-                [Z],
-            ],
-            zIndices: DEFAULT_FLOOR.zIndices,
-        },
-    },
+    [LIZ_BED_DARK_KEY]: DARK_CONFIGS,
+    [LIZ_BED_DARK_EXTRA_KEY]: DARK_CONFIGS,
 }

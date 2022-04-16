@@ -1,5 +1,4 @@
 export const ATTIC_PILLOW = 'atticPillow'
-export const BASEMENT_PILLOW = 'basementPillow'
 export const BENNETT_PILLOW = 'bennettPillow'
 export const BENNETT_PILLOW__BED = 'bennettPillow__bed'
 export const BENNETT_PILLOW__COUCH = 'bennettPillow__couch'

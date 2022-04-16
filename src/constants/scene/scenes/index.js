@@ -72,6 +72,7 @@ export const BENNETT_GATE_KEY = 'bennettGate'
 export const LIZ_BED_KEY = 'lizBed'
 export const LIZ_BED_LOVE_KEY = 'lizBedLove'
 export const LIZ_BED_DARK_KEY = 'lizBedDark'
+export const LIZ_BED_DARK_EXTRA_KEY = 'lizBedDarkExtra'
 export const LIZ_BED_PHONE_KEY = 'lizBedOpenPhone'
 
 export const LIZ_COUCH_KEY = 'lizCouch'

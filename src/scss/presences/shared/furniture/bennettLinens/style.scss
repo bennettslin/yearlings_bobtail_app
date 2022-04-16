@@ -7,7 +7,7 @@
     .bennettBlanket { fill: hsl($HUE_BENNETT_LINENS + 20, 35%, 62%); }
 
     .darkenDefault &.darken#{$suffix} {
-        // This is to darken the stool.
+        // For bedroom stool.
         .cushion { fill: hsl($HUE_BENNETT_LINENS, 13%, 28%); }
         .cushionLight { fill: hsl($HUE_BENNETT_LINENS, 13%, 31%); }
     }

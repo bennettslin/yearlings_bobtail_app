@@ -10,7 +10,6 @@ import lizPillowsReflection from '../../../../assets/svgs/furnitures/lizPillowsR
 
 import {
     ATTIC_PILLOW,
-    BASEMENT_PILLOW,
     BENNETT_PILLOW__BED,
     BENNETT_PILLOW__COUCH,
     CAPTAIN_BED_PILLOW,
@@ -24,7 +23,6 @@ import {
 
 export default {
     [ATTIC_PILLOW]: atticPillow,
-    [BASEMENT_PILLOW]: bennettPillow,
     [BENNETT_PILLOW__BED]: bennettPillow,
     [BENNETT_PILLOW__COUCH]: bennettPillow,
     [CAPTAIN_BED_PILLOW]: captainBedPillow,

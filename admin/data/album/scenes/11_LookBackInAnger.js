@@ -10,11 +10,12 @@ import {
     PANEL,
 } from '../../../../src/constants/scene/things'
 import {
-    CLUB_SIDE_CROWD_KEY,
-    CLUB_SIDE_STAGE_KEY,
-    LIZ_BED_DARK_KEY,
     CLUB_LOADING,
     CLUB_SIDE_CROWD_DARK_KEY,
+    CLUB_SIDE_CROWD_KEY,
+    CLUB_SIDE_STAGE_KEY,
+    LIZ_BED_DARK_EXTRA_KEY,
+    LIZ_BED_DARK_KEY,
 } from '../../../../src/constants/scene/scenes'
 import {
     TIME_NIGHT,
@@ -324,7 +325,7 @@ export default [
                 [LIZ_BED]: true,
             },
         },
-        cubes: LIZ_BED_DARK_KEY,
+        cubes: LIZ_BED_DARK_EXTRA_KEY,
         sky: { time: TIME_NIGHT, season: SEASON_SUMMER },
     },
 ]

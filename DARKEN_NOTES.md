@@ -1,11 +1,9 @@
 # Darken notes
 
 # Next TODO
-* System to allow actors and pillows to stay lit for some scenes and not others
-    * Have extra dark status?
-    * Pillows
-    * Make basement and Bennett pillows the same?
-
+* Simplify postal letter colour
+* Stretch out Liz blanket
+* Darken rest of extra presences
 * Figure out lamp lighting logic
 
 TAIWAN_ROOM_KEY (only Bennett and linens lit)

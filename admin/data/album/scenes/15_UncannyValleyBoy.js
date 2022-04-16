@@ -98,7 +98,7 @@ import {
     RECORDING_MIC,
     TETHERBALL_POLE,
 } from '../../../../src/constants/scene/things/fixtures'
-import { BASEMENT_PILLOW } from '../../../../src/constants/scene/things/furnitures'
+import { BENNETT_PILLOW__BED } from '../../../../src/constants/scene/things/furnitures'
 import {
     SNOWGLOBE_PAST,
     SNOWGLOBE_PRESENT__LIZ,
@@ -140,7 +140,7 @@ export default [
                 [BUDWEISER_EMPTIER__MIRIAM]: true,
             },
             [FURNITURE]: {
-                [BASEMENT_PILLOW]: true,
+                [BENNETT_PILLOW__BED]: true,
             },
             [PANEL]: {
                 [BENNETT_BED]: true,
@@ -180,15 +180,8 @@ export default [
             [DOOR]: {
                 [DEFAULT_FENCE_BASEMENT]: true,
             },
-            [FIXTURE]: {
-                [BASS_CASE_UPRIGHT]: true,
-                [GUITAR_CASE_UPRIGHT]: true,
-                [DRUMS_STACKED__BASEMENT]: true,
-                [BUDWEISER_CASE]: true,
-                [BUDWEISER_EMPTIER__MIRIAM]: true,
-            },
             [FURNITURE]: {
-                [BASEMENT_PILLOW]: true,
+                [BENNETT_PILLOW__BED]: true,
             },
             [PANEL]: {
                 [BENNETT_BED]: true,
@@ -365,14 +358,9 @@ export default [
             [FIXTURE]: {
                 [CRACKED_PICTURE]: true,
                 [GHOST_SHACKLES]: true,
-                [BASS_CASE_UPRIGHT]: true,
-                [GUITAR_CASE_UPRIGHT]: true,
-                [DRUMS_STACKED__BASEMENT]: true,
-                [BUDWEISER_CASE]: true,
-                [BUDWEISER_EMPTIER__MIRIAM]: true,
             },
             [FURNITURE]: {
-                [BASEMENT_PILLOW]: true,
+                [BENNETT_PILLOW__BED]: true,
             },
             [PANEL]: {
                 [BENNETT_BED]: true,
