@@ -123,8 +123,8 @@ export default {
         DISH__SHARED,
         TRAY__SHARED,
     ],
-    [CROWD_BACK]: null,
-    [CROWD_SIDE]: null,
+    [CROWD_BACK]: DARKEN__SHARED,
+    [CROWD_SIDE]: DARKEN__SHARED,
     [DISHROOM_SINK]: null,
     [FREEWAY_FENCE]: null,
     [GO_KART_EXTERIOR]: [

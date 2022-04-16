@@ -25,6 +25,13 @@
     .pastBennettShoe { fill: hsl($HUE_PAST, 20%, 41%); }
     .pastConverseLogo { fill: hsl($HUE_PAST, 37%, 60%); }
 
+    .darken__parent
+    &.darken#{$suffix} {
+        .pastBennettJeans { fill: hsl($HUE_PAST, 13%, 27%); }
+        .pastBennettShoe { fill: hsl($HUE_PAST, 12%, 23%); }
+        .pastConverseLogo { fill: hsl($HUE_PAST, 17%, 33%); }
+    }
+
     .futureBennettJacket { fill: hsl($HUE_FUTURE, 10%, 38%); }
     .futureBennettSleeves { fill: hsl($HUE_FUTURE, 37%, 52%); }
     .futureBennettUnderwear { fill: hsl($HUE_FUTURE, 39%, 61%); }
@@ -91,11 +98,3 @@
         .garlandFlower { fill: hsl(15, 52%, 69%); }
     }
 }
-
-// .darken__parent
-// .darken#{$suffix} {
-//     .bennettSleeves { fill: hsl(359, 41%, 44%); }
-//     .bennettJeans { fill: hsl(216, 21%, 39%); }
-//     .bennettShoe { fill: hsl(32, 11%, 31%); }
-//     .converseLogo { fill: hsl(3, 37%, 50%); }
-// }

@@ -23,6 +23,12 @@
     .soleWhite { fill: hsl(0, 0%, 77%); }
     .soleWhiteDark { fill: hsl(0, 0%, 67%); }
 
+    .darken__parent
+    &.darken#{$suffix} {
+        .soleWhite { fill: hsl(0, 0%, 37%); }
+        .soleWhiteDark { fill: hsl(0, 0%, 32%); }
+    }
+
     /**
      * TODO: Ideally, have these single white styles, rather than separate ones
      * for shirts, socks, and shoes.

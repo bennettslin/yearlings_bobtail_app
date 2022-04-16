@@ -12,7 +12,6 @@ import {
     CLIFF,
     FINAL_DREAM,
 } from '../../../../../../src/constants/scene/actors/bennettLiz'
-import { DARKEN__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
 import { HEINEKEN__SHARED } from '../../../../../../src/constants/scene/sharedStyles/food'
 import {
     CYMBAL__SHARED,
@@ -36,7 +35,7 @@ export default {
     [CHEEK_UNVEILED]: LIZ_PURSE__SHARED,
     [HARD_ON]: LIZ_CONDOM__SHARED,
     [MISSIONARY]: null,
-    [AFTERGLOW]: DARKEN__SHARED,
+    [AFTERGLOW]: null,
     [BRUSH_OFF]: BRACELET__SHARED,
     [CELIBATE_FREEZING]: [
         HEINEKEN__SHARED,

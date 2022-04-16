@@ -5,6 +5,8 @@ import {
     BEDROOM_DOGS_KEY,
     BEDROOM_SPACE_KEY,
     BENNETT_BED_DARK_KEY,
+    CLUB_FAR_DARK_KEY,
+    CLUB_SIDE_CROWD_DARK_KEY,
     LIZ_BED_DARK_KEY,
     LIZ_COUCH_DARK_KEY,
     LIZ_COUCH_PEAFOWL_KEY,
@@ -20,8 +22,10 @@ export const getIsDarkScene = sceneCubesKey => {
         case BENNETT_BED_DARK_KEY:
         case LIZ_BED_DARK_KEY:
         case ATTIC_KEY:
+        case CLUB_SIDE_CROWD_DARK_KEY:
         case LIZ_COUCH_DARK_KEY:
         case BASEMENT_BED_DARK_KEY:
+        case CLUB_FAR_DARK_KEY:
         // Night magic scenes.
         // eslint-disable-next-line no-fallthrough
         case BEDROOM_DOGS_KEY:

@@ -10,7 +10,7 @@ import {
     PUPPET,
 } from '../../../../src/constants/scene/things'
 import {
-    CLUB_FAR_KEY,
+    CLUB_FAR_DARK_KEY,
     LIZ_BED_PHONE_KEY,
     ALLEY_KEY,
     BERKELEY_BANCROFT_KEY,
@@ -164,7 +164,7 @@ export default [
                 [GHOST_ODIN_CLUB]: true,
             },
         },
-        cubes: CLUB_FAR_KEY,
+        cubes: CLUB_FAR_DARK_KEY,
         sky: { time: TIME_NIGHT, season: SEASON_WINTER },
     },
     {

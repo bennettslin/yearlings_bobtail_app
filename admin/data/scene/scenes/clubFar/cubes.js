@@ -1,24 +1,15 @@
-import { CLUB_FAR_KEY } from '../../../../../src/constants/scene/scenes'
-
+import { CLUB_FAR_DARK_KEY } from '../../../../../src/constants/scene/scenes'
 import {
-    OLD_FLOOR_COLOUR as F,
-    CLUB_FRONT_PRIMARY_COLOUR as B,
-    CLUB_FRONT_SECONDARY_COLOUR as E,
     PLATFORM_COLOUR as P,
+    NIGHT_COLOUR as Z,
 } from '../../../../../src/constants/scene/cubes/colours'
-
 import { g } from '../../../../../src/constants/scene/cubes/zIndices'
 
 export default {
-    [CLUB_FAR_KEY]: {
+    [CLUB_FAR_DARK_KEY]: {
         ceiling: {
             hslaColours: [
-                [B, E, B, E, B, E, B, E, B, E, B, B],
-                [B, B, B, B, B, B, B, B, B, B, B, E],
-                [E, B, B, B, B, B, B, B, B, B, B, B],
-                [B, B, B, B, B, B, B, B, B, B, B, E],
-                [E, B, B, B, B, B, B, B, B, B, B, B],
-                [B, B, B, B, B, B, B, B, B, B, B, E],
+                [Z],
             ],
             zIndices: [
                 [1],
@@ -27,9 +18,9 @@ export default {
         },
         floor: {
             hslaColours: [
-                [F],
-                [F, P, P, P, P, P, P, P, P, P, P, F],
-                [F],
+                [Z],
+                [Z, P, P, P, P, P, P, P, P, P, P, Z],
+                [Z],
             ],
             zIndices: [
                 [1],

@@ -12,8 +12,9 @@ import {
 import {
     CLUB_SIDE_CROWD_KEY,
     CLUB_SIDE_STAGE_KEY,
-    LIZ_BED_KEY,
+    LIZ_BED_DARK_KEY,
     CLUB_LOADING,
+    CLUB_SIDE_CROWD_DARK_KEY,
 } from '../../../../src/constants/scene/scenes'
 import {
     TIME_NIGHT,
@@ -141,7 +142,7 @@ export default [
                 [CROWD_SIDE]: true,
             },
         },
-        cubes: CLUB_SIDE_CROWD_KEY,
+        cubes: CLUB_SIDE_CROWD_DARK_KEY,
         sky: { time: TIME_NIGHT, season: SEASON_SUMMER },
     },
     {
@@ -269,7 +270,7 @@ export default [
                 [LIZ_BED]: true,
             },
         },
-        cubes: LIZ_BED_KEY,
+        cubes: LIZ_BED_DARK_KEY,
         sky: { time: TIME_NIGHT, season: SEASON_SUMMER },
     },
     {
@@ -321,7 +322,7 @@ export default [
                 [LIZ_BED]: true,
             },
         },
-        cubes: LIZ_BED_KEY,
+        cubes: LIZ_BED_DARK_KEY,
         sky: { time: TIME_NIGHT, season: SEASON_SUMMER },
     },
 ]

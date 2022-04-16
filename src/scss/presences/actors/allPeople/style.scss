@@ -54,4 +54,10 @@
 
     .nippleEastAsian { fill: hsl(16, 26%, 49%); }
     .nippleWhiteBlood { fill: hsl(1, 26%, 49%); }
+
+    .darken__parent
+    &.darken#{$suffix} {
+        .hairLightBrown { fill: hsl(19, 12%, 32%); }
+        .skinAshkenazi { fill: hsl(22, 22%, 42%); }
+    }
 }
