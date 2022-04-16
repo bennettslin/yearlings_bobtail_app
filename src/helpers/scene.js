@@ -19,6 +19,7 @@ import {
 // Scenes where only the default presences are darkened.
 export const getIsDarkenDefaultScene = sceneCubesKey => {
     switch (sceneCubesKey) {
+        // These include all the darken extra scenes.
         case TAIWAN_ROOM_KEY:
         case TAIWAN_STAIRS_KEY:
         case BEDROOM_DARK_KEY:

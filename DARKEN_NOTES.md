@@ -3,37 +3,79 @@
 # Next TODO
 * Simplify postal letter colour
 * Stretch out Liz blanket
+* Add conveyor belt tray presence
+    * Add bowls
+* Flatten Sita's boob in afterglow
+* Make Odin cutouts completely past, including hair and skin
+    * Adjust to make them all just a little lighter
+    * Make snowglobes completely past or future as well
+* Make exhaust opaque (Both schoolbus and Miriam car)
+    * Fix Reatta rear light
+* Make ocean backdrops darker
+
 * Darken rest of extra presences
-* Figure out lamp lighting logic
 
-TAIWAN_ROOM_KEY (only Bennett and linens lit)
-TAIWAN_STAIRS_KEY (only Bennett lit)
-BEDROOM_DARK_KEY
-    things
-    actors
-BENNETT_BED_DARK_KEY (nothing lit)
-LIZ_BED_DARK_KEY (both Grasshoppers and Look Back)
-    actors
-ATTIC_KEY
-    actors
-CLUB_SIDE_CROWD_DARK_KEY
-    things
-    actors
-LIZ_COUCH_DARK_KEY
-    actors
-BASEMENT_BED_DARK_KEY
-    actors
-CLUB_FAR_DARK_KEY
-    things
-    actors
+# TODO Audit
+* TAIWAN_ROOM_KEY
+    * things
+    * actors
+* TAIWAN_STAIRS_KEY
+    * things
+    * actors
+* BEDROOM_DARK_KEY
+    * things
+    * actors
+* BEDROOM_MAGIC_KEY
+    * things
+    * actors
+* BEDROOM_FUTURE_KEY
+    * things
+    * actors
+* BENNETT_BED_DARK_KEY
+    * things
+    * actors
+* LIZ_BED_DARK_KEY
+    * things
+    * actors
+* LIZ_BED_DARK_EXTRA_KEY
+    * things
+    * actors
+* ATTIC_KEY
+    * things
+    * actors
+* CLUB_SIDE_CROWD_DARK_KEY
+    * things
+    * actors
+* LIZ_COUCH_DARK_KEY
+    * things
+    * actors
+* LIZ_COUCH_FUTURE_KEY
+    * things
+    * actors
+* BASEMENT_BED_DARK_KEY
+    * things
+    * actors
+* BASEMENT_BED_MAGIC_KEY
+    * things
+    * actors
+* CLUB_FAR_DARK_KEY
+    * things
+    * actors
 
-BEDROOM_MAGIC_KEY
-BEDROOM_FUTURE_KEY
-LIZ_COUCH_FUTURE_KEY
-BASEMENT_BED_MAGIC_KEY
+# Next TODO
+* Magic and season scenes
+    * Cubes
+    * Selector logic
+    * Presences
 
-# TODO
-* Make clubs and Look Back darkened scenes
-* Separate scenes in Pchelka
+## Past
+* Didi (bathroom)
 
-# Darken night
+## Future
+* Pchelka (bedroom)
+* Kyon (lizBedroom)
+
+## Night Magic
+* Willy (changelingCave)
+* Pchelka (bedroom)
+* Uncanny (basementBed)
