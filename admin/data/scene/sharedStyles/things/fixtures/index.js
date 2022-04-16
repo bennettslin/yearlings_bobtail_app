@@ -127,7 +127,7 @@ export default {
         BULB__SHARED,
         DARKEN__SHARED,
     ],
-    [BEETHOVEN_BUST]: null,
+    [BEETHOVEN_BUST]: DARKEN__SHARED,
     [BENNETT_COUCH_LAMP]: null,
     [BENNETT_LETTERS]: MAGAZINE__SHARED,
     [BENNETT_RECORD_PLAYER]: null,

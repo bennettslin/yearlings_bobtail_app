@@ -148,6 +148,7 @@ export default {
     ],
     [PAINTING]: null,
     [POSTER_BLOOM_COUNTY]: [
+        DARKEN__SHARED,
         ALL_PEOPLE__SHARED,
         MOUNTAIN__SHARED,
     ],
