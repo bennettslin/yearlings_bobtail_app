@@ -18,7 +18,7 @@ export default {
     [CUTOUT]: {
         [MONITOR_SIDE__STAGE]: {
             yIndex: 4,
-            xPosition: 9,
+            xPosition: 8,
         },
         [WALL_SPEAKER_SIDE__LEFT]: {
             yIndex: 4,
@@ -40,17 +40,17 @@ export default {
         },
         [DRUM_THRONE]: {
             yIndex: 1,
-            xPosition: 5,
+            xPosition: 4.8,
             zOffset: -0.1,
             layerYIndex: 2,
         },
         [STAGE_MIC__STAGE]: {
             yIndex: 3,
-            xPosition: 8.65,
+            xPosition: 7.65,
         },
         [GUITAR_CASE_OPEN]: {
             yIndex: 5,
-            xPosition: 9,
+            xPosition: 9.2,
             zOffset: -0.07,
         },
     },

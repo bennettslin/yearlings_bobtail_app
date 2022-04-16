@@ -13,25 +13,25 @@ export default {
     [JACOB]: {
         [CARRYING]: {
             yIndex: 3,
-            xPosition: 2.1,
+            xPosition: 1.7,
         },
     },
     [MARA]: {
         [CARRYING]: {
             yIndex: 4,
-            xPosition: 4,
+            xPosition: 3.5,
         },
     },
     [BENNETT]: {
         [FLIRTING]: {
             yIndex: 4,
-            xPosition: 6.3,
+            xPosition: 5.8,
         },
     },
     [AMY]: {
         [FLIRTING]: {
             yIndex: 4,
-            xPosition: 7.9,
+            xPosition: 7,
         },
     },
 }

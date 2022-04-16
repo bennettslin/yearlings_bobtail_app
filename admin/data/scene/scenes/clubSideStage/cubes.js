@@ -13,12 +13,12 @@ export default {
     [CLUB_SIDE_STAGE_KEY]: {
         ceiling: {
             hslaColours: [
-                [B, E, B, E, B, E, B, E, B, E, B, E],
-                [B, B, B, B, B, B, B, B, B, B, B, B],
+                [B, B, E, B, E, B, E, B, E, B, E, B],
                 [E, B, B, B, B, B, B, B, B, B, B, B],
                 [B, B, B, B, B, B, B, B, B, B, B, B],
                 [E, B, B, B, B, B, B, B, B, B, B, B],
                 [B, B, B, B, B, B, B, B, B, B, B, B],
+                [E, B, B, B, B, B, B, B, B, B, B, B],
             ],
             zIndices: [
                 [1],
@@ -31,18 +31,18 @@ export default {
         floor: {
             hslaColours: [
                 [F],
-                [F, P, P, P, P, P, P, P, P, P, F],
-                [F, P, P, P, P, P, P, P, P, P, F],
-                [F, P, P, P, P, P, P, P, P, P, F],
-                [F, P, P, P, P, P, P, P, P, P, F],
+                [F, P, P, P, P, P, P, P, P, F],
+                [F, P, P, P, P, P, P, P, P, F],
+                [F, P, P, P, P, P, P, P, P, F],
+                [F, P, P, P, P, P, P, P, P, F],
                 [F],
             ],
             zIndices: [
                 [1],
-                [1, 3, 3, 3, 3, 3, 3, 3, 3, 3, 1],
-                [1, 2, 3, 3, 3, 3, 3, 3, 3, 3, 1],
-                [1, 2, 3, 3, 3, 3, 3, 3, 3, 3, 1],
-                [1, 3, 3, 3, 3, 3, 3, 3, 3, 3, 1],
+                [1, 3, 3, 3, 3, 3, 3, 3, 3, 1],
+                [1, 2, 3, 3, 3, 3, 3, 3, 3, 1],
+                [1, 2, 3, 3, 3, 3, 3, 3, 3, 1],
+                [1, 3, 3, 3, 3, 3, 3, 3, 3, 1],
                 [1],
             ],
         },
