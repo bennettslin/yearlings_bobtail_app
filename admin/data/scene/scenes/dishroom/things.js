@@ -15,7 +15,8 @@ import {
 } from '../../../../../src/constants/scene/things/cutouts'
 import { DISHROOM_DOOR } from '../../../../../src/constants/scene/things/doors'
 import {
-    CONVEYOR_BELT,
+    CONVEYOR_BELT__LANCET,
+    CONVEYOR_BELT__READING,
     DISHROOM_SINK,
 } from '../../../../../src/constants/scene/things/panels'
 
@@ -30,10 +31,11 @@ export default {
     [CUTOUT]: {
         [DISH_PILE]: {
             yIndex: 2,
-            xPosition: 2,
+            xPosition: 4.7,
         },
         [GLASS_RACK__SINK]: {
             yIndex: 2,
+            xPosition: 2.2,
         },
         [TRAY_PILE]: {
             yIndex: 4,
@@ -62,10 +64,18 @@ export default {
         },
     },
     [PANEL]: {
-        [CONVEYOR_BELT]: {
+        [CONVEYOR_BELT__READING]: {
+            yIndex: 1,
+            xPosition: 3.84,
+            zOffset: -2.1,
+            flipHorizontal: true,
+            counterpart: CONVEYOR_BELT__LANCET,
+        },
+        [CONVEYOR_BELT__LANCET]: {
             yIndex: 1,
             xPosition: 4.1,
             zOffset: -2.1,
+            counterpart: CONVEYOR_BELT__READING,
         },
         [DISHROOM_SINK]: {
             yIndex: 3,

@@ -141,7 +141,8 @@ import {
 } from '../../../../src/constants/scene/things/furnitures'
 import {
     BENNETT_BED,
-    CONVEYOR_BELT,
+    CONVEYOR_BELT__LANCET,
+    CONVEYOR_BELT__READING,
     DISHROOM_SINK,
     LIZ_BED,
     LIZ_NIGHTSTAND,
@@ -182,7 +183,7 @@ export default [
                 [DISHROOM_DOOR]: true,
             },
             [PANEL]: {
-                [CONVEYOR_BELT]: true,
+                [CONVEYOR_BELT__READING]: true,
                 [DISHROOM_SINK]: true,
             },
         },
@@ -220,7 +221,7 @@ export default [
                 [DISHROOM_DOOR]: true,
             },
             [PANEL]: {
-                [CONVEYOR_BELT]: true,
+                [CONVEYOR_BELT__LANCET]: true,
                 [DISHROOM_SINK]: true,
             },
         },

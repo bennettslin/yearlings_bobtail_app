@@ -22,9 +22,9 @@ export default {
     },
     [DOOR]: {
         [IRON_GATE_LOW]: {
-            yIndex: 0,
+            yIndex: 1,
             xPosition: 4,
-            zOffset: -2.2,
+            zOffset: -2.83,
         },
     },
 }

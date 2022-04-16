@@ -40,13 +40,14 @@ export default {
         },
         [DRUM_THRONE]: {
             yIndex: 1,
-            xPosition: 4.8,
+            xPosition: 4.5,
             zOffset: -0.1,
             layerYIndex: 2,
         },
         [STAGE_MIC__STAGE]: {
             yIndex: 3,
-            xPosition: 7.65,
+            xPosition: 8.15,
+            flipHorizontal: true,
         },
         [GUITAR_CASE_OPEN]: {
             yIndex: 5,

@@ -646,7 +646,7 @@ export default {
                                         isItalic: true,
                                         lyric: `Beautiful Losers`,
                                     },
-                                    `. I noticed that it shares the same theme of purification through betrayal found in "Famous Blue Raincoat," which seemed to explain the line: "Did you ever go clear?" But I later found out that`,
+                                    `. I noticed that it shared the same theme of purification through betrayal found in "Famous Blue Raincoat," which seemed to explain the line: "Did you ever go clear?" But I later found out that`,
                                     {
                                         anchor: `going clear`,
                                         wiki: `Clear_(Scientology)`,
