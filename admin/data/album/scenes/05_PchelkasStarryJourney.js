@@ -11,13 +11,15 @@ import {
     PANEL,
 } from '../../../../src/constants/scene/things'
 import {
-    BEDROOM_DOGS_KEY,
+    BEDROOM_MAGIC_KEY,
     BEDROOM_KEY,
-    BEDROOM_OPEN_KEY,
-    BEDROOM_SPACE_KEY,
+    BEDROOM_STOWAWAYS_KEY,
+    BEDROOM_FUTURE_KEY,
     VAN_NUYS_HALLWAY_KEY,
     VAN_NUYS_LOCKERS_KEY,
     VAN_NUYS_QUAD_KEY,
+    BEDROOM_DARK_KEY,
+    BEDROOM_STOOL_KEY,
 } from '../../../../src/constants/scene/scenes'
 import {
     SEASON_FUTURE,
@@ -26,6 +28,7 @@ import {
     TIME_AFTERNOON,
     TIME_EVENING,
     TIME_MORNING,
+    TIME_NIGHT,
     TIME_NOON,
 } from '../../../../src/constants/scene/sky'
 import {
@@ -188,7 +191,7 @@ export default [
                 [BEDROOM_DESK]: true,
             },
         },
-        cubes: BEDROOM_OPEN_KEY,
+        cubes: BEDROOM_STOWAWAYS_KEY,
         sky: { time: TIME_EVENING, season: SEASON_WINTER },
     },
     {
@@ -232,7 +235,47 @@ export default [
     },
     {
         unitIndex: 9,
-        description: `Bennett is in bed sleeping. In his dream bubble, he imagines two dogs pulling a rocket.`,
+        description: `Bennett is in bed sleeping.`,
+        presences: {
+            [ACTOR]: {
+                [PRETEEN_BENNETT]: {
+                    description: 'in bed, asleep, turned away',
+                    instance: ASLEEP,
+                },
+            },
+            [BACKDROP]: {
+                [VALLEY_FURTHER_BACKDROP]: true,
+            },
+            [CARDBOARD]: {
+                [POSTER_BLOOM_COUNTY]: true,
+            },
+            [CUTOUT]: {
+                [LEMON_TREE__BEDROOM]: true,
+                [ROSEBUSH_SLANTED_DOUBLE]: true,
+                [ROSEBUSH_SLANTED_SINGLE]: true,
+            },
+            [DOOR]: {
+                [BEDROOM_FENCE]: true,
+                [BEDROOM_BLINDS]: true,
+            },
+            [FIXTURE]: {
+                [BEDROOM_LAMP__DESK]: true,
+                [BEETHOVEN_BUST]: true,
+            },
+            [FURNITURE]: {
+                [CAPTAIN_BED_PILLOW]: true,
+            },
+            [PANEL]: {
+                [BEDROOM_DESK]: true,
+                [CAPTAIN_BED]: true,
+            },
+        },
+        cubes: BEDROOM_DARK_KEY,
+        sky: { time: TIME_NIGHT, season: SEASON_WINTER },
+    },
+    {
+        unitIndex: 10,
+        description: `In his dream bubble, he imagines two dogs pulling a rocket.`,
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
@@ -262,12 +305,12 @@ export default [
                 [CAPTAIN_BED]: true,
             },
         },
-        cubes: BEDROOM_DOGS_KEY,
+        cubes: BEDROOM_MAGIC_KEY,
         sky: { season: SEASON_NIGHT_MAGIC },
     },
     {
-        unitIndex: 10,
-        description: `Bennett is at his desk, reading a letter and crying. In his thought bubble, he is standing alone on Earth, looking up into space.`,
+        unitIndex: 12,
+        description: `In his thought bubble, he is standing alone on Earth, looking up into space.`,
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
@@ -300,11 +343,53 @@ export default [
                 [BEDROOM_STOOL]: true,
             },
         },
-        cubes: BEDROOM_SPACE_KEY,
+        cubes: BEDROOM_FUTURE_KEY,
         sky: { season: SEASON_FUTURE },
     },
     {
         unitIndex: 13,
+        description: `Bennett is at his desk, reading a letter and crying.`,
+        presences: {
+            [ACTOR]: {
+                [PRETEEN_BENNETT]: {
+                    description: 'side, sitting, shaken, scared',
+                    instance: SHAKEN,
+                },
+            },
+            [BACKDROP]: {
+                [VALLEY_FURTHER_BACKDROP]: true,
+            },
+            [CARDBOARD]: {
+                [POSTER_BLOOM_COUNTY]: true,
+            },
+            [CUTOUT]: {
+                [LEMON_TREE__BEDROOM]: true,
+                [ROSEBUSH_SLANTED_DOUBLE]: true,
+                [ROSEBUSH_SLANTED_SINGLE]: true,
+            },
+            [DOOR]: {
+                [BEDROOM_FENCE]: true,
+                [BEDROOM_BLINDS_OPEN]: true,
+            },
+            [FIXTURE]: {
+                [BEDROOM_LAMP__DESK]: true,
+                [BEETHOVEN_BUST]: true,
+                [BEYONDER_ENVELOPE]: true,
+            },
+            [FURNITURE]: {
+                [CAPTAIN_BED_PILLOW]: true,
+            },
+            [PANEL]: {
+                [BEDROOM_DESK]: true,
+                [BEDROOM_STOOL]: true,
+                [CAPTAIN_BED]: true,
+            },
+        },
+        cubes: BEDROOM_STOOL_KEY,
+        sky: { time: TIME_MORNING, season: SEASON_WINTER },
+    },
+    {
+        unitIndex: 14,
         description: `Bennett is sitting by himself, away from the lunch crowd. The two bullies have been throwing food at him, trying to rile him up, but to no avail. One looks angry, the other is suggesting that they should leave.`,
         presences: {
             [ACTOR]: {

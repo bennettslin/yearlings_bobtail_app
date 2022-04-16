@@ -101,11 +101,13 @@ export default {
             yIndex: 3,
             xPosition: 2.8,
             zOffset: 0.125,
+            counterpart: BEDROOM_BLINDS_OPEN,
         },
         [BEDROOM_BLINDS_OPEN]: {
             yIndex: 3,
             xPosition: 2.8,
             zOffset: 0.125,
+            counterpart: BEDROOM_BLINDS,
         },
     },
     [FIXTURE]: {

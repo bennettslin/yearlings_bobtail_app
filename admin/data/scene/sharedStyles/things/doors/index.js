@@ -64,9 +64,11 @@ export default {
     [BASEMENT_DOOR_OPEN]: DOOR__SHARED,
     [BASEMENT_DOOR_SIDE]: DOOR__SHARED,
     [BEDROOM_BLINDS]: [
+        DARKEN__SHARED,
         BENNETT_INSIDE__SHARED,
     ],
     [BEDROOM_BLINDS_OPEN]: [
+        DARKEN__SHARED,
         BENNETT_INSIDE__SHARED,
     ],
     [BEDROOM_FENCE]: [

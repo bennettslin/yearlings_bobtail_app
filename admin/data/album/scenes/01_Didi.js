@@ -11,7 +11,7 @@ import {
 } from '../../../../src/constants/scene/things'
 import {
     BATHROOM_KEY,
-    BATHROOM_OPEN_KEY,
+    BATHROOM_PAST_KEY,
     NOHO_HOUSES_KEY,
     NOHO_SCHOOL_KEY,
 } from '../../../../src/constants/scene/scenes'
@@ -237,7 +237,7 @@ export default [
                 [BATHTUB]: true,
             },
         },
-        cubes: BATHROOM_OPEN_KEY,
+        cubes: BATHROOM_PAST_KEY,
         sky: { season: SEASON_PAST },
     },
 ]

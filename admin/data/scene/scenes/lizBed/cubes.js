@@ -1,6 +1,6 @@
 import {
     LIZ_BED_KEY,
-    LIZ_BED_OPEN_KEY,
+    LIZ_BED_LOVE_KEY,
     LIZ_BED_PHONE_KEY,
     LIZ_BED_DARK_KEY,
 } from '../../../../../src/constants/scene/scenes'
@@ -67,7 +67,7 @@ export default {
         ceiling: DEFAULT_CEILING,
         floor: DEFAULT_FLOOR,
     },
-    [LIZ_BED_OPEN_KEY]: {
+    [LIZ_BED_LOVE_KEY]: {
         ceiling: OPEN_CEILING,
         floor: {
             hslaColours: [

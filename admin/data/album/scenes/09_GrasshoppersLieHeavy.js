@@ -16,7 +16,7 @@ import {
     BENNETT_BED_DARK_KEY,
     WAITING_ROOM_KEY,
     LIZ_BED_KEY,
-    LIZ_BED_OPEN_KEY,
+    LIZ_BED_LOVE_KEY,
     LIZ_BED_DARK_KEY,
     LIZ_GATE_KEY,
     LIZ_GATE_STREET_KEY,
@@ -583,7 +583,7 @@ export default [
                 [LIZ_BED]: true,
             },
         },
-        cubes: LIZ_BED_OPEN_KEY,
+        cubes: LIZ_BED_LOVE_KEY,
         sky: { season: SEASON_LOVE },
     },
     {

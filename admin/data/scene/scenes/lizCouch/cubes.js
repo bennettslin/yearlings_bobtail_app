@@ -3,7 +3,7 @@ import {
     LIZ_COUCH_SEAT_KEY,
     LIZ_COUCH_DARK_KEY,
 } from '../../../../../src/constants/scene/scenes'
-import { LIZ_COUCH_PEAFOWL_CUBES } from './asleep/cubes'
+import { LIZ_COUCH_FUTURE_CUBES } from './asleep/cubes'
 import {
     DEFAULT_CLEAR_COLOUR as D,
     PAVEMENT_COLOUR as V,
@@ -95,5 +95,5 @@ export default {
             zIndices: DEFAULT_FLOOR.zIndices,
         },
     },
-    ...LIZ_COUCH_PEAFOWL_CUBES,
+    ...LIZ_COUCH_FUTURE_CUBES,
 }

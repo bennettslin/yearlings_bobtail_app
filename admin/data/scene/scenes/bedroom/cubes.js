@@ -1,24 +1,21 @@
 import { LEFT } from '../../../../../src/constants/scene/cubes'
-import { BEDROOM_SPACE_CUBES } from './shaken/cubes'
+import { BEDROOM_FUTURE_CUBES } from './shaken/cubes'
 import {
     BEDROOM_KEY,
     BEDROOM_STOOL_KEY,
-    BEDROOM_OPEN_KEY,
-    BEDROOM_DOGS_KEY,
+    BEDROOM_STOWAWAYS_KEY,
+    BEDROOM_DARK_KEY,
 } from '../../../../../src/constants/scene/scenes'
 import {
     DEFAULT_CLEAR_COLOUR as D,
     GRASS_COLOUR as H,
     BENNETT_CARPET_COLOUR as F,
     BENNETT_WALL_COLOUR as W,
-    NIGHT_MAGIC_COLOUR as Z,
-    SPOTLIGHT_MEDIUM_COLOUR as L,
-    SPOTLIGHT_LIGHT_COLOUR as M,
-    SPOTLIGHT_LIGHTER_COLOUR as N,
-    SPOTLIGHT_LIGHTEST_COLOUR as O,
+    NIGHT_COLOUR as Z,
     BENNETT_BED_COLOUR as U,
 } from '../../../../../src/constants/scene/cubes/colours'
 import { d, g, k } from '../../../../../src/constants/scene/cubes/zIndices'
+import { BEDROOM_MAGIC_CUBES } from './asleep/cubes'
 
 /**
  * --.-----------
@@ -99,7 +96,7 @@ export default {
             ],
         },
     },
-    [BEDROOM_OPEN_KEY]: {
+    [BEDROOM_STOWAWAYS_KEY]: {
         slantDirection: LEFT,
         ceiling: DEFAULT_CEILING,
         floor: {
@@ -121,26 +118,31 @@ export default {
             ],
         },
     },
-    [BEDROOM_DOGS_KEY]: {
+    [BEDROOM_DARK_KEY]: {
         slantDirection: LEFT,
+        ceiling: {
+            hslaColours: [
+                [D, D, D, D, D, Z, D, Z, Z, Z, D],
+                [D, D, D, Z, Z, Z, Z, Z, Z, Z, D],
+                [D, D, Z, Z, Z, Z, Z, Z, Z, Z, Z, D],
+                [Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, D],
+                [Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, D],
+                [Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z],
+            ],
+            zIndices: DEFAULT_CEILING.zIndices,
+        },
         floor: {
             hslaColours: [
-                [H, H, H, H, H, Z, Z, Z, Z, Z, H],
+                [H, H, H, H, H, Z, H, Z, Z, Z, H],
                 [H, H, H, Z, Z, Z, Z, Z, Z, Z, H],
-                [H, H, M, L, L, Z, Z, Z, Z, Z, Z, H],
-                [L, M, N, M, M, Z, Z, Z, Z, Z, Z, H],
-                [M, N, O, N, M, Z, Z, Z, Z, Z, Z, H],
-                [L, N, O, O, N, L, Z, Z, Z, Z, Z, Z],
+                [H, H, Z, Z, D, Z, Z, Z, Z, Z, Z, H],
+                [Z, Z, D, D, Z, Z, Z, Z, Z, Z, Z, H],
+                [Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, H],
+                [Z],
             ],
-            zIndices: [
-                [1],
-                [1, 1, 1, 1, 1, 1, 1, 7, 7, 1],
-                [1, 1, 1, 1, 1, 1, 1, 7, 7, 7, 1],
-                [1, 1, 1, 1, 1, 1, 1, 7, 7, 7, 1],
-                [1, 1, 1, 1, 1, 1, 1, 7, 1],
-                [1],
-            ],
+            zIndices: DEFAULT_FLOOR.zIndices,
         },
     },
-    ...BEDROOM_SPACE_CUBES,
+    ...BEDROOM_MAGIC_CUBES,
+    ...BEDROOM_FUTURE_CUBES,
 }

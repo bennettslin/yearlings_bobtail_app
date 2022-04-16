@@ -68,7 +68,10 @@ import {
     CACTUS_SINGLE__PORCH,
     CAMPFIRE,
     FIRE_HYDRANT,
+    LEMON_TREE__BEDROOM,
     OVERPASS_SIGN_BACK,
+    ROSEBUSH_SLANTED_DOUBLE,
+    ROSEBUSH_SLANTED_SINGLE,
     SHOPPING_CART,
 } from '../../../../src/constants/scene/things/cutouts'
 import {
@@ -219,6 +222,11 @@ export default [
             [CARDBOARD]: {
                 [POSTER_TINTIN]: true,
             },
+            [CUTOUT]: {
+                [LEMON_TREE__BEDROOM]: true,
+                [ROSEBUSH_SLANTED_DOUBLE]: true,
+                [ROSEBUSH_SLANTED_SINGLE]: true,
+            },
             [DOOR]: {
                 [BEDROOM_FENCE]: true,
                 [BEDROOM_BLINDS_OPEN]: true,
@@ -292,6 +300,11 @@ export default [
             },
             [CARDBOARD]: {
                 [POSTER_TINTIN]: true,
+            },
+            [CUTOUT]: {
+                [LEMON_TREE__BEDROOM]: true,
+                [ROSEBUSH_SLANTED_DOUBLE]: true,
+                [ROSEBUSH_SLANTED_SINGLE]: true,
             },
             [DOOR]: {
                 [BEDROOM_FENCE]: true,

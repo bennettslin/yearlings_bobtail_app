@@ -12,7 +12,7 @@ import {
     LIZ_COUCH_KEY,
     LIZ_COUCH_SEAT_KEY,
     LIZ_COUCH_DARK_KEY,
-    LIZ_COUCH_PEAFOWL_KEY,
+    LIZ_COUCH_FUTURE_KEY,
 } from '../../../../src/constants/scene/scenes'
 import {
     TIME_DAWN,
@@ -417,7 +417,7 @@ export default [
                 [PEAHEN]: true,
             },
         },
-        cubes: LIZ_COUCH_PEAFOWL_KEY,
+        cubes: LIZ_COUCH_FUTURE_KEY,
         sky: { season: SEASON_FUTURE },
     },
 ]

@@ -1,4 +1,4 @@
-import { LIZ_COUCH_PEAFOWL_KEY } from '../../../../../../src/constants/scene/scenes'
+import { LIZ_COUCH_FUTURE_KEY } from '../../../../../../src/constants/scene/scenes'
 import {
     PAVEMENT_COLOUR as V,
     GRASS_COLOUR as H,
@@ -10,8 +10,8 @@ import {
     FUTURE_SPOTLIGHT_LIGHTEST_COLOUR as O,
 } from '../../../../../../src/constants/scene/cubes/colours'
 
-export const LIZ_COUCH_PEAFOWL_CUBES = {
-    [LIZ_COUCH_PEAFOWL_KEY]: {
+export const LIZ_COUCH_FUTURE_CUBES = {
+    [LIZ_COUCH_FUTURE_KEY]: {
         floor: {
             hslaColours: [
                 [A, A, A, A, A, V, V, V, A],

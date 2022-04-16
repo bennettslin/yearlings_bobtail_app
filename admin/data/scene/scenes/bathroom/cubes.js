@@ -1,6 +1,6 @@
 import {
     BATHROOM_KEY,
-    BATHROOM_OPEN_KEY,
+    BATHROOM_PAST_KEY,
 } from '../../../../../src/constants/scene/scenes'
 
 import {
@@ -45,7 +45,7 @@ export default {
         },
         floor: DEFAULT_FLOOR,
     },
-    [BATHROOM_OPEN_KEY]: {
+    [BATHROOM_PAST_KEY]: {
         floor: DEFAULT_FLOOR,
     },
 }
