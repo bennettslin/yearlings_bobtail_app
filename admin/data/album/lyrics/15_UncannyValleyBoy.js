@@ -294,7 +294,7 @@ export default {
                                         anchor: `endorphined`,
                                         wiki: `Endorphins`,
                                     },
-                                    `" in my perpetually drunken state allows me to live as a virtual orphan, in denial of having parents whose high expectations I fail to meet.`,
+                                    `" in my perpetually drunken state allows me to behave as a virtual orphan. I can live in denial of having parents whose expectations I fail to meet.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

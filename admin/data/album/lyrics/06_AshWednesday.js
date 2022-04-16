@@ -638,15 +638,14 @@ export default {
                         },
                         {
                             anchor: `went clear`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `After Catherine cleared me from her life, my hope was to win her back by reading books. Since she was a fan of Leonard Cohen, I started with`,
+                                    `After Catherine cleared me from her life, my hope was to win her back by reading books. Since she loved Leonard Cohen, I started with`,
                                     {
                                         isItalic: true,
                                         lyric: `Beautiful Losers`,
                                     },
-                                    `. I noticed that it shared the same theme of purification through betrayal found in "Famous Blue Raincoat," which seemed to explain the line: "Did you ever go clear?" But I later found out that`,
+                                    `, which turned out to share the same theme of purification through betrayal found in "Famous Blue Raincoat." I thought this explained the line: "Did you ever go clear?" But I later found out that`,
                                     {
                                         anchor: `going clear`,
                                         wiki: `Clear_(Scientology)`,
