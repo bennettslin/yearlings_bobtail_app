@@ -9,7 +9,9 @@
 
 .darken__parent
 .darken#{$suffix} {
+    .blackDark { fill: hsl(0, 0%, 19%); }
     .blackMediumDark { fill: hsl(0, 0%, 21%); }
     .blackMedium { fill: hsl(0, 0%, 24%); }
+    .blackMediumLight { fill: hsl(0, 0%, 26%); }
     .blackLight { fill: hsl(0, 0%, 29%); }
 }
