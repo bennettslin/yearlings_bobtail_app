@@ -31,11 +31,10 @@ export default {
     [CUTOUT]: {
         [DISH_PILE]: {
             yIndex: 2,
-            xPosition: 4.7,
+            xPosition: 2,
         },
         [GLASS_RACK__SINK]: {
             yIndex: 2,
-            xPosition: 2.2,
         },
         [TRAY_PILE]: {
             yIndex: 4,
