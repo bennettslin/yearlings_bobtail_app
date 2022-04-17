@@ -76,7 +76,6 @@ import {
     YELLOW_TAPED_GRILL,
 } from '../../../../../../src/constants/scene/things/cutouts'
 import { ALL_PEOPLE__SHARED } from '../../../../../../src/constants/scene/sharedStyles/actors'
-import { DISH__SHARED } from '../../../../../../src/constants/scene/sharedStyles/cafeteria'
 import {
     BANANA__SHARED,
     CIGARETTE__SHARED,
@@ -104,7 +103,7 @@ export default {
     [APARTMENT_PLANT]: FOLIAGE__SHARED,
     [ASH_CAN]: CIGARETTE__SHARED,
     [STINK_PLANT]: FOLIAGE__SHARED,
-    [BOWL_PILE]: DISH__SHARED,
+    [BOWL_PILE]: null,
     [BUDDHA_SHRINE]: DARKEN_DEFAULT__SHARED,
     [BUSH_DOUBLE]: FOLIAGE__SHARED,
     [BUSH_SINGLE]: FOLIAGE__SHARED,
@@ -113,7 +112,7 @@ export default {
     [CAMPFIRE]: FOLIAGE__SHARED,
     [CAMPUS_TREE_DOUBLE]: FOLIAGE__SHARED,
     [CAMPUS_TREE_SINGLE]: FOLIAGE__SHARED,
-    [CARRIAGE_TRAY]: DISH__SHARED,
+    [CARRIAGE_TRAY]: null,
     [CAT_FOOD_DISHES]: DARKEN_DEFAULT__SHARED,
     [CAT_LITTER_BOX]: DARKEN_DEFAULT__SHARED,
     [CAVEMAN_BONES]: null,
@@ -122,7 +121,7 @@ export default {
     [CYPRESS_DOUBLE]: FOLIAGE__SHARED,
     [CYPRESS_SINGLE]: FOLIAGE__SHARED,
     [DISHROOM_DOLLY]: ALL_VEHICLES__SHARED,
-    [DISH_PILE]: DISH__SHARED,
+    [DISH_PILE]: null,
     [DISPENSER_LEFT]: [
         ALL_PEOPLE__SHARED,
         NEWSPAPER__SHARED,
