@@ -1,14 +1,12 @@
 # Darken notes
 
 # Next TODO
-* Make Odin cutouts completely past, including hair and skin
-    * Adjust to make them all just a little lighter
-    * Make snowglobes completely past or future as well
+* Make Bloom County pants and background dull, not flat
+* Make snowglobes completely past or future as well
 * Make exhaust opaque (Both schoolbus and Miriam car)
     * Fix Reatta rear light
-* Make ocean backdrops darker
 
-* Darken rest of extra presences
+* Darken presences again
 
 # TODO Audit
 * TAIWAN_ROOM_KEY
@@ -74,3 +72,7 @@
 * Willy (changelingCave)
 * Pchelka (bedroom)
 * Uncanny (basementBed)
+
+# After TODO
+* Finalize seasons (do this on paper)
+* Times and seasons
