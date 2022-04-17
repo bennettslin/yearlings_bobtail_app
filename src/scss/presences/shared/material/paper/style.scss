@@ -13,7 +13,8 @@
 .redDisplayLine { stroke: hsla(0, 35%, 72%, 0.75); }
 
 .darkenDefault .darken#{$suffix} {
-    .paperLight { fill: hsl(48, 13%, 45%); }
+    .paperDark { fill: hsl(48, 11%, 35%); }
+    .paperLight { fill: hsl(48, 11%, 45%); }
     .blueDisplayLine { stroke: hsla(200, 35%, 32%, 0.75); }
     .redDisplayLine { stroke: hsla(0, 35%, 32%, 0.75); }
 }

@@ -69,10 +69,13 @@
 .darkenDefault .darken#{$suffix} {
     .dullOrangeDark { fill: hsl(30, 10%, 29%); }
     .dullAmberMedium { fill: hsl(45, 10%, 34%); }
-    .dullAmberMediumLight { fill: hsl(45, 10%, 36%); }    
+    .dullAmberMediumLight { fill: hsl(45, 10%, 36%); }
+    .dullYellowDark { fill: hsl(60, 10%, 29%); }
+    .dullChartreuseMedium { fill: hsl(90, 10%, 34%); }
     .dullGreenDark { fill: hsl(120, 10%, 29%); }
     .dullGreenMedium { fill: hsl(120, 10%, 34%); }
     .dullTealLight { fill: hsl(180, 10%, 40%); }
     .dullBlueMedium { fill: hsl(210, 10%, 34%); }
+    .dullIndigoMedium { fill: hsl(240, 10%, 34%); }
     .dullPurpleMedium { fill: hsl(270, 10%, 34%); }
 }

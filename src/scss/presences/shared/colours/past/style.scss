@@ -17,3 +17,10 @@
 .flatPastLight { fill: hsl($HUE_PAST, 33%, 67%); }
 // .flatPastLighter { fill: hsl($HUE_PAST, 33%, 72%); }
 // .flatPastLightest { fill: hsl($HUE_PAST, 33%, 77%); }
+
+.darkenDefault .darken#{$suffix} {
+    .dullPastDarker { fill: hsl($HUE_PAST, 13%, 22%); }
+    .dullPastDark { fill: hsl($HUE_PAST, 13%, 24%); }
+    .dullPastMediumDark { fill: hsl($HUE_PAST, 13%, 28%); }
+    .dullPastMediumLight { fill: hsl($HUE_PAST, 13%, 32%); }
+}
