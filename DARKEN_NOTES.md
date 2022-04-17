@@ -2,8 +2,6 @@
 
 # Next TODO
 * Make snowglobes completely past or future as well
-* Make exhaust opaque (Both schoolbus and Miriam car)
-    * Fix Reatta rear light
 
 * Darken presences again
 

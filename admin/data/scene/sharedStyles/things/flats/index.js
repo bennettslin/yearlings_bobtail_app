@@ -83,16 +83,10 @@ import {
     TAIWAN_MOUNTAIN__SHARED,
     WALL__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/outdoor'
-import {
-    ALL_VEHICLES__SHARED,
-    SCHOOLBUS__SHARED,
-} from '../../../../../../src/constants/scene/sharedStyles/vehicles'
+import { ALL_VEHICLES__SHARED } from '../../../../../../src/constants/scene/sharedStyles/vehicles'
 
 export default {
-    [BEDROOM_BUS]: [
-        ALL_VEHICLES__SHARED,
-        SCHOOLBUS__SHARED,
-    ],
+    [BEDROOM_BUS]: ALL_VEHICLES__SHARED,
     [BEDROOM_SIREN]: null,
     [BERKELEY_BUILDING_TALL]: [
         CAMPUS__SHARED,

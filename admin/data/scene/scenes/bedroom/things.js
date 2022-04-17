@@ -228,8 +228,8 @@ export const THINGS_BEDROOM_FEIGNING = {
     },
     [FLAT]: {
         [BEDROOM_BUS]: {
-            xPosition: 2,
-            zOffset: 2.25,
+            xPosition: 2.3,
+            zOffset: 2,
         },
     },
 }

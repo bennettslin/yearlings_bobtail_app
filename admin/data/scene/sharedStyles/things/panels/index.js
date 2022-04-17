@@ -88,7 +88,6 @@ import {
     INTERIOR__SHARED,
     REATTA__SHARED,
     SATURN__SHARED,
-    SCHOOLBUS__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/vehicles'
 
 export default {
@@ -161,10 +160,7 @@ export default {
     [SATURN_INTERIOR]: INTERIOR__SHARED,
     [SATURN_SEAT]: SATURN__SHARED,
     [SATURN_SEAT_DOWN]: SATURN__SHARED,
-    [SCHOOLBUS_EXTERIOR]: [
-        ALL_VEHICLES__SHARED,
-        SCHOOLBUS__SHARED,
-    ],
+    [SCHOOLBUS_EXTERIOR]: ALL_VEHICLES__SHARED,
     [SCHOOLBUS_INTERIOR]: INTERIOR__SHARED,
     [SCHOOLBUS_SEAT]: null,
     [SHADOW_MONGOL]: null,
