@@ -50,8 +50,8 @@
     <path d="M63.24,175.93c-4.68,1.93-18.11,.61-21.65-1.79"/>
   </g>
   <g class="sketchbook">
-    <polygon class="sketchPaperMedium" points="39.48 162.93 41.44 161.35 33.19 124.7 6.33 118.83 4.02 120.11 39.48 162.93"/>
-    <polygon class="sketchPaperLight" points="4.02 120.11 30.9 126.28 39.48 162.93 14.38 155.34 4.02 120.11"/>
+    <polygon class="paperDark" points="39.48 162.93 41.44 161.35 33.19 124.7 6.33 118.83 4.02 120.11 39.48 162.93"/>
+    <polygon class="paperLight" points="4.02 120.11 30.9 126.28 39.48 162.93 14.38 155.34 4.02 120.11"/>
     <g class="blueDisplayLine">
       <line x1="6.13" y1="127.06" x2="32.55" y2="133.34"/>
       <line x1="6.88" y1="129.85" x2="33.24" y2="136.29"/>

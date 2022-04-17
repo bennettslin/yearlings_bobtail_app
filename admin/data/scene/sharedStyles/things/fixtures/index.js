@@ -98,10 +98,7 @@ import {
     FREEWAY_SIGN__SHARED,
     TETHERBALL_POLE__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/outdoor'
-import {
-    BOOK__SHARED,
-    MAGAZINE__SHARED,
-} from '../../../../../../src/constants/scene/sharedStyles/paper'
+import { BOOK__SHARED } from '../../../../../../src/constants/scene/sharedStyles/paper'
 import {
     DOLLAR__SHARED,
     PROMISE_PHOTO__SHARED,
@@ -127,7 +124,7 @@ export default {
     ],
     [BEETHOVEN_BUST]: DARKEN_DEFAULT__SHARED,
     [BENNETT_COUCH_LAMP]: null,
-    [BENNETT_LETTERS]: MAGAZINE__SHARED,
+    [BENNETT_LETTERS]: null,
     [BENNETT_RECORD_PLAYER]: null,
     [BENNETT_SHOE]: [
         ALL_CLOTHING__SHARED,
@@ -166,7 +163,7 @@ export default {
         LIZ_CONDOM__SHARED,
     ],
     [CONDOM_WRAPPER_MIRIAM]: MIRIAM_CONDOM__SHARED,
-    [CHRISTOPHER_LETTERS]: MAGAZINE__SHARED,
+    [CHRISTOPHER_LETTERS]: null,
     [CRACKED_PICTURE]: [
         PROMISE_PHOTO__SHARED,
         ALL_PEOPLE__SHARED,
@@ -208,7 +205,7 @@ export default {
     [HOSPITAL_RECORD_PLAYER]: null,
     [KEYBOARD]: null,
     [KICK_DRUM]: DRUMS__SHARED,
-    [LETTER_SCRAPS]: MAGAZINE__SHARED,
+    [LETTER_SCRAPS]: null,
     [LIGHT_SWITCH]: DARKEN_DEFAULT__SHARED,
     [LINGERIE_DRAWING]: [
         BOOK__SHARED,
@@ -241,6 +238,6 @@ export default {
         BANANA__SHARED,
         PUDDING__SHARED,
     ],
-    [TORN_MAGAZINES]: MAGAZINE__SHARED,
+    [TORN_MAGAZINES]: null,
     [VASELINE]: DARKEN_DEFAULT__SHARED,
 }

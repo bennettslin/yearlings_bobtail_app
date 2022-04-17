@@ -1,14 +1,19 @@
 // Skews light.
-// .paperDarkest { fill: hsl(48, 18%, 57%); }
-// .paperDarker { fill: hsl(48, 18%, 62%); }
-// .paperDark { fill: hsl(48, 18%, 67%); }
-// .paperMediumDark { fill: hsl(48, 18%, 72%); }
-.paperMedium { fill: hsl(48, 18%, 77%); }
-.paperMediumLight { fill: hsl(48, 18%, 82%); }
-.paperLight { fill: hsl(48, 18%, 87%); }
-// .paperLighter { fill: hsl(48, 18%, 92%); }
-// .paperLightest { fill: hsl(48, 18%, 97%); }
+// .paperDarkest { fill: hsl(48, 13%, 57%); }
+.paperDarker { fill: hsl(48, 13%, 62%); }
+.paperDark { fill: hsl(48, 13%, 67%); }
+// .paperMediumDark { fill: hsl(48, 13%, 72%); }
+// .paperMedium { fill: hsl(48, 13%, 77%); }
+.paperMediumLight { fill: hsl(48, 13%, 82%); }
+.paperLight { fill: hsl(48, 13%, 87%); }
+// .paperLighter { fill: hsl(48, 13%, 92%); }
+// .paperLightest { fill: hsl(48, 13%, 97%); }
+
+.blueDisplayLine { stroke: hsla(200, 35%, 72%, 0.75); }
+.redDisplayLine { stroke: hsla(0, 35%, 72%, 0.75); }
 
 .darkenDefault .darken#{$suffix} {
-
+    .paperLight { fill: hsl(48, 13%, 45%); }
+    .blueDisplayLine { stroke: hsla(200, 35%, 32%, 0.75); }
+    .redDisplayLine { stroke: hsla(0, 35%, 32%, 0.75); }
 }

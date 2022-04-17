@@ -29,7 +29,7 @@
     <path class="backpackInner" d="M187.42,224.86c-36.3-49.69,12.83-85.28,51.48-42.14l-51.48,42.14Z"/>
     <polygon class="flatMaroonMedium" points="231.72 186.22 216.99 166.73 176.74 199.93 191.34 219.21 231.72 186.22"/>
     <polygon class="flatGreenMedium" points="230.61 188.75 217.27 171.1 180.82 201.16 194.04 218.62 230.61 188.75"/>
-    <g class="paperStackLight">
+    <g class="paperDark">
       <polygon points="214.49 171.15 179.9 199.68 180.82 201.16 217.27 171.1 214.49 171.15"/>
       <polygon points="214.95 166.93 176.2 198.86 176.74 199.93 216.99 166.73 214.95 166.93"/>
     </g>

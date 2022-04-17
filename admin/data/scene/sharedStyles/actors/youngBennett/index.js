@@ -6,10 +6,7 @@ import {
 } from '../../../../../../src/constants/scene/actors/youngBennett'
 import { YOUNG_CHILD } from '../../../../../../src/constants/scene/actors/songs'
 import { VIOLIN__SHARED } from '../../../../../../src/constants/scene/sharedStyles/instruments'
-import {
-    BOOK__SHARED,
-    MAGAZINE__SHARED,
-} from '../../../../../../src/constants/scene/sharedStyles/paper'
+import { BOOK__SHARED } from '../../../../../../src/constants/scene/sharedStyles/paper'
 import {
     BACKPACK__SHARED,
     YOUNG_BACKPACK__SHARED,
@@ -20,7 +17,6 @@ export default {
         BACKPACK__SHARED,
         YOUNG_BACKPACK__SHARED,
         BOOK__SHARED,
-        MAGAZINE__SHARED,
     ],
     [FLUSTERED]: [
         BACKPACK__SHARED,

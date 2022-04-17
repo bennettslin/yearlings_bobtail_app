@@ -23,10 +23,7 @@ import {
     BENNETT_LINENS__SHARED,
     TAIWAN_LINENS__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/furniture'
-import {
-    BOOK__SHARED,
-    MAGAZINE__SHARED,
-} from '../../../../../../src/constants/scene/sharedStyles/paper'
+import { BOOK__SHARED } from '../../../../../../src/constants/scene/sharedStyles/paper'
 import { DOLLAR__SHARED } from '../../../../../../src/constants/scene/sharedStyles/print'
 import {
     TAIWAN_BUOY__SHARED,
@@ -36,7 +33,7 @@ import { ALL_VEHICLES__SHARED } from '../../../../../../src/constants/scene/shar
 
 export default {
     [CAUTIOUS]: null,
-    [ENRAGED]: MAGAZINE__SHARED,
+    [ENRAGED]: null,
     [FEARFUL]: BENNETT_LINENS__SHARED,
     [PANICKED]: BOOK__SHARED,
     [MAT]: TAIWAN_LINENS__SHARED,

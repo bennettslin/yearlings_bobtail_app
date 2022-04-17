@@ -92,10 +92,7 @@ import {
     TAIWAN_FOLIAGE__SHARED,
     TRAFFIC_LIGHT__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/outdoor'
-import {
-    BOOK__SHARED,
-    NEWSPAPER__SHARED,
-} from '../../../../../../src/constants/scene/sharedStyles/paper'
+import { BOOK__SHARED } from '../../../../../../src/constants/scene/sharedStyles/paper'
 import { ALL_VEHICLES__SHARED } from '../../../../../../src/constants/scene/sharedStyles/vehicles'
 
 export default {
@@ -121,11 +118,8 @@ export default {
     [CYPRESS_SINGLE]: FOLIAGE__SHARED,
     [DISHROOM_DOLLY]: ALL_VEHICLES__SHARED,
     [DISH_PILE]: null,
-    [DISPENSER_LEFT]: [
-        ALL_PEOPLE__SHARED,
-        NEWSPAPER__SHARED,
-    ],
-    [DISPENSER_RIGHT]: NEWSPAPER__SHARED,
+    [DISPENSER_LEFT]: ALL_PEOPLE__SHARED,
+    [DISPENSER_RIGHT]: null,
     [DUMPSTER]: [
         ALL_VEHICLES__SHARED,
         GARBAGE_BAG__SHARED,
