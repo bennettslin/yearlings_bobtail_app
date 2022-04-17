@@ -1,6 +1,7 @@
 # Darken notes
 
 # Next TODO
+* Flatten Sita's boob some more
 * Make Odin cutouts completely past, including hair and skin
     * Adjust to make them all just a little lighter
     * Make snowglobes completely past or future as well
