@@ -78,7 +78,6 @@ import {
     BUDWEISER__SHARED,
     EVIAN__SHARED,
     HEINEKEN__SHARED,
-    PAPER_BAG__SHARED,
     PUDDING__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/food'
 import {
@@ -239,7 +238,7 @@ export default {
         DOLLAR__SHARED,
         LETTER__SHARED,
     ],
-    [SAFEWAY_BAG]: PAPER_BAG__SHARED,
+    [SAFEWAY_BAG]: null,
     [STAGE_MIC]: MICROPHONE__SHARED,
     [STEPLADDER]: null,
     [TCHOTCHKES]: null,

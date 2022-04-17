@@ -80,7 +80,6 @@ import {
     BANANA__SHARED,
     CIGARETTE__SHARED,
     GARBAGE_BAG__SHARED,
-    PAPER_BAG__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/food'
 import { DARKEN_DEFAULT__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
 import { BENNETT_LINENS__SHARED } from '../../../../../../src/constants/scene/sharedStyles/furniture'
@@ -190,7 +189,6 @@ export default {
     [TRASH_CAN]: [
         BANANA__SHARED,
         GARBAGE_BAG__SHARED,
-        PAPER_BAG__SHARED,
     ],
     [TRAY_PILE]: null,
     [TREE]: FOLIAGE__SHARED,

@@ -44,7 +44,7 @@ export default {
         },
         [SAFEWAY_BAG]: {
             yIndex: 5,
-            xPosition: 9.8,
+            xPosition: 10,
         },
     },
     [FLAT]: {
