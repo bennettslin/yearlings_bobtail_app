@@ -59,16 +59,11 @@ import {
     ODIN_PAST__SHARED,
     SEA_SERPENT__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/animals'
-import { TAIWAN_LINENS__SHARED } from '../../../../../../src/constants/scene/sharedStyles/furniture'
 import {
     FOLIAGE__SHARED,
     MOUNTAIN__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/outdoor'
 import { POSTER_GLADIATOR__SHARED } from '../../../../../../src/constants/scene/sharedStyles/print'
-import {
-    TAIWAN_BUOY__SHARED,
-    TAIWAN_RICKSHAW__SHARED,
-} from '../../../../../../src/constants/scene/sharedStyles/taiwan'
 import {
     REATTA__SHARED,
     ALL_VEHICLES__SHARED,
@@ -87,14 +82,12 @@ export default {
         ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED,
         BENNETT,
-        TAIWAN_LINENS__SHARED,
     ],
     [BENNETT_ODIN_BUOY]: [
         ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED,
         BENNETT,
         ODIN_PAST__SHARED,
-        TAIWAN_BUOY__SHARED,
     ],
     [BENNETT_ODIN_DEPTHS]: [
         ALL_CLOTHING__SHARED,
@@ -114,7 +107,6 @@ export default {
         ALL_VEHICLES__SHARED,
         BENNETT,
         ODIN_PAST__SHARED,
-        TAIWAN_RICKSHAW__SHARED,
     ],
     [BENNETT_SHORE]: [
         ALL_CLOTHING__SHARED,

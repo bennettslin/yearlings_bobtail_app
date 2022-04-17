@@ -1,6 +1,4 @@
 .taiwanRickshaw#{$suffix} {
-    .metalDark { fill: hsl(167, 8%, 49%); }
-    .metalLight { fill: hsl(167, 11%, 59%); }
     .frameDarkest { fill: hsl(94, 21%, 33%); }
     .frameDark { fill: hsl(94, 22%, 35%); }
     .frameMedium { fill: hsl(93, 22%, 39%); }
@@ -8,13 +6,9 @@
     .rickshawDark { fill: hsl(140, 21%, 42%); }
     .rickshawMedium { fill: hsl(140, 22%, 45%); }
     .rickshawLight { fill: hsl(140, 22%, 50%); }
-    .light { fill: hsl(9, 36%, 48%); }
 
     .spokes { fill: hsla(173, 13%, 62%, 0.5); }
-    .rim { fill: hsl(174, 8%, 48%); }
     .seatDark { fill: hsl(310, 11%, 42%); }
     .seatLight { fill: hsl(311, 11%, 47%); }
     .bikeSeat { fill: hsl(45, 11%, 41%); }
-    .brassLight { fill: hsl(67, 13%, 48%); }
-    .brassDark { fill: hsl(68, 14%, 45%); }
 }

@@ -24,10 +24,7 @@ import {
     TAIWAN_LINENS__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/furniture'
 import { DOLLAR__SHARED } from '../../../../../../src/constants/scene/sharedStyles/print'
-import {
-    TAIWAN_BUOY__SHARED,
-    TAIWAN_RICKSHAW__SHARED,
-} from '../../../../../../src/constants/scene/sharedStyles/taiwan'
+import { TAIWAN_RICKSHAW__SHARED } from '../../../../../../src/constants/scene/sharedStyles/taiwan'
 import { ALL_VEHICLES__SHARED } from '../../../../../../src/constants/scene/sharedStyles/vehicles'
 
 export default {
@@ -43,7 +40,7 @@ export default {
         TAIWAN_RICKSHAW__SHARED,
     ],
     [SHORE]: null,
-    [BUOY]: TAIWAN_BUOY__SHARED,
+    [BUOY]: null,
     [OCEAN_FLOOR]: null,
     [FEIGNING_SICK]: [
         DOLLAR__SHARED,
