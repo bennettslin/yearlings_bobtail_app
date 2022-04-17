@@ -8,6 +8,7 @@ export default {
     [BENNETT]: {
         [GATE_CODE]: {
             yIndex: 4,
+            xPosition: 5.3,
         },
     },
     [LIZ]: {
