@@ -1,0 +1,14 @@
+// Skews light.
+// .paperDarkest { fill: hsl(48, 18%, 57%); }
+// .paperDarker { fill: hsl(48, 18%, 62%); }
+// .paperDark { fill: hsl(48, 18%, 67%); }
+// .paperMediumDark { fill: hsl(48, 18%, 72%); }
+.paperMedium { fill: hsl(48, 18%, 77%); }
+.paperMediumLight { fill: hsl(48, 18%, 82%); }
+.paperLight { fill: hsl(48, 18%, 87%); }
+// .paperLighter { fill: hsl(48, 18%, 92%); }
+// .paperLightest { fill: hsl(48, 18%, 97%); }
+
+.darkenDefault .darken#{$suffix} {
+
+}

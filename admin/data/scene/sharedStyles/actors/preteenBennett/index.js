@@ -25,7 +25,6 @@ import {
 } from '../../../../../../src/constants/scene/sharedStyles/furniture'
 import {
     BOOK__SHARED,
-    LETTER__SHARED,
     MAGAZINE__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/paper'
 import { DOLLAR__SHARED } from '../../../../../../src/constants/scene/sharedStyles/print'
@@ -58,10 +57,7 @@ export default {
         DARKEN_EXTRA__SHARED,
         BENNETT_LINENS__SHARED,
     ],
-    [SHAKEN]: [
-        DARKEN_EXTRA__SHARED,
-        LETTER__SHARED,
-    ],
+    [SHAKEN]: DARKEN_EXTRA__SHARED,
     [STOIC]: PUDDING__SHARED,
     [WISTFUL]: null,
     [SHEEPISH]: null,

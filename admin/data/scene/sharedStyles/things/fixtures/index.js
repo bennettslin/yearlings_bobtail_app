@@ -100,7 +100,6 @@ import {
 } from '../../../../../../src/constants/scene/sharedStyles/outdoor'
 import {
     BOOK__SHARED,
-    LETTER__SHARED,
     MAGAZINE__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/paper'
 import {
@@ -138,10 +137,7 @@ export default {
         ALL_CLOTHING__SHARED,
         BENNETT,
     ],
-    [BEYONDER_ENVELOPE]: [
-        DARKEN_DEFAULT__SHARED,
-        LETTER__SHARED,
-    ],
+    [BEYONDER_ENVELOPE]: DARKEN_DEFAULT__SHARED,
     [BUDWEISER_CASE]: [
         DARKEN_DEFAULT__SHARED,
         BUDWEISER__SHARED,
@@ -234,10 +230,7 @@ export default {
     [PUSH_BROOM]: null,
     [RECORDING_MIC]: MICROPHONE__SHARED,
     [RECORD_PLAYER_STOOL]: null,
-    [RED_ENVELOPE_MONEY]: [
-        DOLLAR__SHARED,
-        LETTER__SHARED,
-    ],
+    [RED_ENVELOPE_MONEY]: DOLLAR__SHARED,
     [SAFEWAY_BAG]: null,
     [STAGE_MIC]: MICROPHONE__SHARED,
     [STEPLADDER]: null,

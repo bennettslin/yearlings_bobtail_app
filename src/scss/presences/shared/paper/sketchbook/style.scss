@@ -1,16 +1,11 @@
 .sketchPaperMedium { fill: hsl(56, 21%, 73%); }
 .sketchPaperLight { fill: hsl(44, 25%, 88%); }
-.sketchbookWire { fill: hsl(348, 2%, 40%); }
-.pencilBody { fill: hsl(89, 44%, 64%); }
-.pencilMetal { fill: hsl(167, 14%, 73%); }
 .blueDisplayLine { stroke: hsla(200, 35%, 72%, 0.75); }
 .redDisplayLine { stroke: hsla(0, 35%, 72%, 0.75); }
 
 .darkenDefault .darken#{$suffix} {
     .sketchPaperMedium { fill: hsl(56, 13%, 35%); }
     .sketchPaperLight { fill: hsl(44, 13%, 45%); }
-    .pencilBody { fill: hsl(89, 22%, 37%); }
-    .pencilMetal { fill: hsl(167, 7%, 42%); }
     .blueDisplayLine { stroke: hsla(200, 35%, 32%, 0.75); }
     .redDisplayLine { stroke: hsla(0, 35%, 32%, 0.75); }
 }
