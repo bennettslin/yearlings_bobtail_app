@@ -57,6 +57,7 @@
 # Next TODO
 * Magic and season scenes
     * Cubes
+        * Past cubes (not dark)
     * Selector logic
     * Presences
 
