@@ -52,7 +52,6 @@ import {
     FUTURE,
     EL_TORITO,
 } from '../../../../../../src/constants/scene/actors/songs'
-import { TRAY__SHARED } from '../../../../../../src/constants/scene/sharedStyles/cafeteria'
 import {
     BASEMENT_TAKEOUT__SHARED,
     FROZEN_MEATS__SHARED,
@@ -107,7 +106,6 @@ export default {
         BOOK__SHARED,
         CAFETERIA__SHARED,
         LANCET_PEN__SHARED,
-        TRAY__SHARED,
     ],
     [DISHROOM_LANCET]: [
         BOOK__SHARED,

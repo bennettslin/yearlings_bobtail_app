@@ -80,11 +80,13 @@ import {
 } from '../../../../src/constants/scene/things/cardboards'
 import {
     APARTMENT_PLANT,
+    BOWL_PILE,
     BUSH_DOUBLE__BENNETT_GATE,
     BUSH_SINGLE__BENNETT_GATE,
     CACTUS_DOUBLE__LIZ_GATE,
     CACTUS_SINGLE__LIZ_ENDED,
     CACTUS_SINGLE__LIZ_ENDING,
+    CARRIAGE_TRAY,
     CYPRESS_DOUBLE__LIZ_GATE,
     CYPRESS_SINGLE__LIZ_ENDED,
     CYPRESS_SINGLE__LIZ_ENDING,
@@ -172,6 +174,7 @@ export default [
                 [CORKBOARD__DISHROOM]: true,
             },
             [CUTOUT]: {
+                [BOWL_PILE]: true,
                 [DISH_PILE]: true,
                 [TRAY_PILE]: true,
                 [GLASS_RACK__SINK]: true,
@@ -210,6 +213,8 @@ export default [
                 [CORKBOARD__DISHROOM]: true,
             },
             [CUTOUT]: {
+                [BOWL_PILE]: true,
+                [CARRIAGE_TRAY]: true,
                 [DISH_PILE]: true,
                 [TRAY_PILE]: true,
                 [GLASS_RACK__SINK]: true,

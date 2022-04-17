@@ -1,6 +1,7 @@
 import {
     APARTMENT_PLANT,
     ASH_CAN,
+    BOWL_PILE,
     BUDDHA_SHRINE,
     BUSH_DOUBLE,
     BUSH_SINGLE,
@@ -9,6 +10,7 @@ import {
     CAMPFIRE,
     CAMPUS_TREE_DOUBLE,
     CAMPUS_TREE_SINGLE,
+    CARRIAGE_TRAY,
     CAT_FOOD_DISHES,
     CAT_LITTER_BOX,
     CAVEMAN_BONES,
@@ -74,10 +76,7 @@ import {
     YELLOW_TAPED_GRILL,
 } from '../../../../../../src/constants/scene/things/cutouts'
 import { ALL_PEOPLE__SHARED } from '../../../../../../src/constants/scene/sharedStyles/actors'
-import {
-    DISH__SHARED,
-    TRAY__SHARED,
-} from '../../../../../../src/constants/scene/sharedStyles/cafeteria'
+import { DISH__SHARED } from '../../../../../../src/constants/scene/sharedStyles/cafeteria'
 import {
     BANANA__SHARED,
     CIGARETTE__SHARED,
@@ -105,6 +104,7 @@ export default {
     [APARTMENT_PLANT]: FOLIAGE__SHARED,
     [ASH_CAN]: CIGARETTE__SHARED,
     [STINK_PLANT]: FOLIAGE__SHARED,
+    [BOWL_PILE]: DISH__SHARED,
     [BUDDHA_SHRINE]: DARKEN_DEFAULT__SHARED,
     [BUSH_DOUBLE]: FOLIAGE__SHARED,
     [BUSH_SINGLE]: FOLIAGE__SHARED,
@@ -113,6 +113,7 @@ export default {
     [CAMPFIRE]: FOLIAGE__SHARED,
     [CAMPUS_TREE_DOUBLE]: FOLIAGE__SHARED,
     [CAMPUS_TREE_SINGLE]: FOLIAGE__SHARED,
+    [CARRIAGE_TRAY]: DISH__SHARED,
     [CAT_FOOD_DISHES]: DARKEN_DEFAULT__SHARED,
     [CAT_LITTER_BOX]: DARKEN_DEFAULT__SHARED,
     [CAVEMAN_BONES]: null,
@@ -192,7 +193,7 @@ export default {
         GARBAGE_BAG__SHARED,
         PAPER_BAG__SHARED,
     ],
-    [TRAY_PILE]: TRAY__SHARED,
+    [TRAY_PILE]: null,
     [TREE]: FOLIAGE__SHARED,
     [TREE_DEAD]: FOLIAGE__SHARED,
     [TWIN_STREETLAMP]: BULB__SHARED,

@@ -69,10 +69,6 @@ import {
 } from '../../../../../../src/constants/scene/things/panels'
 import { DARKEN_DEFAULT__SHARED, FUTURE__SHARED, PAST__SHARED, PRESENT__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
 import { OCEAN_LIFE__SHARED } from '../../../../../../src/constants/scene/sharedStyles/animals'
-import {
-    DISH__SHARED,
-    TRAY__SHARED,
-} from '../../../../../../src/constants/scene/sharedStyles/cafeteria'
 import { DRAWING__SHARED } from '../../../../../../src/constants/scene/sharedStyles/comic'
 import {
     ATTIC_LINENS__SHARED,
@@ -119,10 +115,7 @@ export default {
     ],
     [CAPTAIN_BED]: DARKEN_DEFAULT__SHARED,
     [CAVE_SHADOWS]: DRAWING__SHARED,
-    [CONVEYOR_BELT]: [
-        DISH__SHARED,
-        TRAY__SHARED,
-    ],
+    [CONVEYOR_BELT]: null,
     [CROWD_BACK]: DARKEN_DEFAULT__SHARED,
     [CROWD_SIDE]: DARKEN_DEFAULT__SHARED,
     [DISHROOM_SINK]: null,

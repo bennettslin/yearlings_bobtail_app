@@ -2,9 +2,6 @@
 
 # Next TODO
 * Simplify postal letter colour
-* Stretch out Liz blanket
-* Add conveyor belt tray presence
-    * Add bowls
 * Flatten Sita's boob in afterglow
 * Make Odin cutouts completely past, including hair and skin
     * Adjust to make them all just a little lighter

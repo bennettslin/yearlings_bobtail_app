@@ -5,7 +5,7 @@ export default {
     [BENNETT]: {
         [DISHROOM_READING]: {
             yIndex: 5,
-            xPosition: 4.2,
+            xPosition: 4,
         },
     },
 }

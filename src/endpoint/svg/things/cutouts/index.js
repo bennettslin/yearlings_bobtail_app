@@ -1,5 +1,6 @@
 import apartmentPlant from '../../../../assets/svgs/cutouts/apartmentPlant'
 import ashCan from '../../../../assets/svgs/cutouts/ashCan'
+import bowlPile from '../../../../assets/svgs/cutouts/bowlPile'
 import buddhaShrine from '../../../../assets/svgs/cutouts/buddhaShrine'
 import bushDouble from '../../../../assets/svgs/cutouts/bushDouble'
 import bushSingle from '../../../../assets/svgs/cutouts/bushSingle'
@@ -8,6 +9,7 @@ import cactusSingle from '../../../../assets/svgs/cutouts/cactusSingle'
 import campfire from '../../../../assets/svgs/cutouts/campfire'
 import campusTreeDouble from '../../../../assets/svgs/cutouts/campusTreeDouble'
 import campusTreeSingle from '../../../../assets/svgs/cutouts/campusTreeSingle'
+import carriageTray from '../../../../assets/svgs/cutouts/carriageTray'
 import catFoodDishes from '../../../../assets/svgs/cutouts/catFoodDishes'
 import catLitterBox from '../../../../assets/svgs/cutouts/catLitterBox'
 import cavemanBones from '../../../../assets/svgs/cutouts/cavemanBones'
@@ -73,6 +75,7 @@ import yellowTapedGrill from '../../../../assets/svgs/cutouts/yellowTapedGrill'
 import {
     APARTMENT_PLANT,
     ASH_CAN,
+    BOWL_PILE,
     BUDDHA_SHRINE,
     BUSH_DOUBLE__BENNETT_GATE,
     BUSH_DOUBLE__COURTYARD,
@@ -174,11 +177,13 @@ import {
     WEDDING_CHAIR,
     WEDDING_CROWD,
     YELLOW_TAPED_GRILL,
+    CARRIAGE_TRAY,
 } from '../../../../constants/scene/things/cutouts'
 
 export default {
     [APARTMENT_PLANT]: apartmentPlant,
     [ASH_CAN]: ashCan,
+    [BOWL_PILE]: bowlPile,
     [BUDDHA_SHRINE]: buddhaShrine,
     [BUSH_DOUBLE__BENNETT_GATE]: bushDouble,
     [BUSH_DOUBLE__COURTYARD]: bushDouble,
@@ -199,6 +204,7 @@ export default {
     [CAMPUS_TREE_SINGLE__BANCROFT]: campusTreeSingle,
     [CAMPUS_TREE_SINGLE__CAMPANILE]: campusTreeSingle,
     [CAMPUS_TREE_SINGLE__TETHERBALL]: campusTreeSingle,
+    [CARRIAGE_TRAY]: carriageTray,
     [CAT_FOOD_DISHES]: catFoodDishes,
     [CAT_LITTER_BOX]: catLitterBox,
     [CAVEMAN_BONES]: cavemanBones,

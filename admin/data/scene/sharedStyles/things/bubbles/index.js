@@ -36,7 +36,6 @@ import {
     ALL_CLOTHING__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/actors'
 import { HOUSE__SHARED } from '../../../../../../src/constants/scene/sharedStyles/buildings'
-import { TRAY__SHARED } from '../../../../../../src/constants/scene/sharedStyles/cafeteria'
 import {
     CONSTELLATION__SHARED,
     DRAWING__SHARED,
@@ -122,7 +121,6 @@ export default {
         BOOK__SHARED,
         CAFETERIA__SHARED,
         DINING_SHARED,
-        TRAY__SHARED,
     ],
     [LIZ_THOUGHT_BUSING]: [
         BENNETT,
@@ -133,7 +131,6 @@ export default {
         BUSING_SHARED,
         CAFETERIA__SHARED,
         DISHROOM_SHARED,
-        TRAY__SHARED,
     ],
     [LIZ_THOUGHT_DISHROOM]: [
         BENNETT,

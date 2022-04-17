@@ -6,12 +6,14 @@ import {
 } from '../../../../../src/constants/scene/things'
 import { CORKBOARD__DISHROOM } from '../../../../../src/constants/scene/things/cardboards'
 import {
-    TRAY_PILE,
-    DISHROOM_DOLLY__TRAY,
+    BOWL_PILE,
+    CARRIAGE_TRAY,
     DISHROOM_DOLLY__GLASS,
-    GLASS_RACK__SINK,
-    GLASS_RACK__DOLLY,
+    DISHROOM_DOLLY__TRAY,
     DISH_PILE,
+    GLASS_RACK__DOLLY,
+    GLASS_RACK__SINK,
+    TRAY_PILE,
 } from '../../../../../src/constants/scene/things/cutouts'
 import { DISHROOM_DOOR } from '../../../../../src/constants/scene/things/doors'
 import {
@@ -29,6 +31,16 @@ export default {
         },
     },
     [CUTOUT]: {
+        [BOWL_PILE]: {
+            yIndex: 2,
+            xPosition: 3,
+        },
+        [CARRIAGE_TRAY]: {
+            yIndex: 1,
+            xPosition: 2.68,
+            zOffset: -1.2,
+            layerYIndex: 2,
+        },
         [DISH_PILE]: {
             yIndex: 2,
             xPosition: 2,
