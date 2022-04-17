@@ -22,10 +22,10 @@
     .shoelace { fill: hsl(0, 0%, 82%); }
     .soleWhite { fill: hsl(0, 0%, 77%); }
     .soleWhiteDark { fill: hsl(0, 0%, 67%); }
-
-    .darkenDefault &.darken#{$suffix} {
-        .soleWhite { fill: hsl(0, 0%, 37%); }
-        .soleWhiteDark { fill: hsl(0, 0%, 32%); }
+    
+    .darkenExtra &.darkenExtra#{$suffix} {
+        .shirtWhite { fill: hsl(0, 0%, 47%); }
+        .soleWhite { fill: hsl(0, 0%, 31%); }
     }
 
     /**

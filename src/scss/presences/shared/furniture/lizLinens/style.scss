@@ -18,5 +18,6 @@
     .darkenExtra &.darkenExtra#{$suffix} {
         .boyfriendPillow { fill: hsl($HUE_LIZ_LINENS - 35, 15%, 36%); }
         .lizPillow { fill: hsl($HUE_LIZ_LINENS + 15, 15%, 36%); }
+        .lizBlanket { fill: hsl($HUE_LIZ_LINENS, 15%, 37%); }
     }
 }

@@ -286,7 +286,6 @@ export default {
                         `to live neutered, blissfully`,
                         {
                             anchor: `and orphaned`,
-                            todo: true,
                             card: {
                                 description: [
                                     `Being "`,

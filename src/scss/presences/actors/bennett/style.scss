@@ -20,6 +20,13 @@
     .bennettShoeLining { fill: hsl(32, 7%, 57%); }
     .converseLogo { fill: hsl(3, 37%, 60%); }
 
+    .darkenExtra &.darkenExtra#{$suffix} {
+        .bennettSleeves { fill: hsl(359, 20%, 34%); }
+        .bennettJeans { fill: hsl(216, 13%, 29%); }
+        .bennettShoe { fill: hsl(32, 9%, 21%); }
+        .converseLogo { fill: hsl(3, 18%, 30%); }
+    }
+
     // For snowglobe.
     .pastBennettSleeves { fill: hsl($HUE_PAST, 37%, 52%); }
     .pastBennettJeans { fill: hsl($HUE_PAST, 27%, 47%); }
