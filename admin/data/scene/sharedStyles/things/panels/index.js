@@ -82,7 +82,6 @@ import {
     ROSE_RED__SHARED,
     TAIWAN_FOLIAGE__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/outdoor'
-import { BOOK__SHARED } from '../../../../../../src/constants/scene/sharedStyles/paper'
 import {
     ALL_VEHICLES__SHARED,
     GO_KART__SHARED,
@@ -127,8 +126,8 @@ export default {
     [GO_KART_SEAT]: GO_KART__SHARED,
     [HOSPITAL_BED]: null,
     [HOSPITAL_RECORD_STAND]: null,
-    [KEYBOARD_STAND_LEFT]: BOOK__SHARED,
-    [KEYBOARD_STAND_RIGHT]: BOOK__SHARED,
+    [KEYBOARD_STAND_LEFT]: null,
+    [KEYBOARD_STAND_RIGHT]: null,
     [LIZ_BED]: DARKEN_DEFAULT__SHARED,
     [LIZ_COUCH]: [
         DARKEN_DEFAULT__SHARED,

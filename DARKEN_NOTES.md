@@ -1,8 +1,6 @@
 # Darken notes
 
 # Next TODO
-* Simplify postal letter colour
-* Flatten Sita's boob in afterglow
 * Make Odin cutouts completely past, including hair and skin
     * Adjust to make them all just a little lighter
     * Make snowglobes completely past or future as well

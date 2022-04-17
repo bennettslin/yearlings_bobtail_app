@@ -1,7 +1,7 @@
 <svg viewBox="0 0 72.44 42.44">
   <path class="dullBlueDarker" d="M71.94,21.18V18.53H6c0,1-2.21,1-2.21,0-4.49-2.29-4.26,25.27,0,23.32,0-1.06,2.21-1.06,2.21,0h66V39.2H3.78v-18Z"/>
   <path class="dullRedDarker" d="M69.74,3.32V.67H8.2c0,1-2.21,1-2.21,0C1.5-1.62,1.73,20.48,6,18.53c0-1.05,2.21-1.05,2.21,0H69.74V15.89H6V3.32Z"/>
-  <g class="paperStackDark">
+  <g class="paperDark">
     <rect x="3.78" y="21.18" width="66.39" height="18.01"/>
     <rect x="5.99" y="3.32" width="61.98" height="12.57"/>
   </g>

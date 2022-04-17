@@ -38,10 +38,7 @@ const ButtonIcon = ({
                     buttonName === NAV_SONG_BUTTON_KEY &&
                         `ButtonIcon__${buttonName}__${buttonOption}`,
 
-                    getButtonIconClassNames({
-                        buttonName,
-                        buttonOption,
-                    }),
+                    getButtonIconClassNames(buttonName),
 
                     'abF',
                 ),

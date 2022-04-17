@@ -58,9 +58,6 @@ import {
     MOUNTAIN__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/outdoor'
 import {
-    BOOK__SHARED,
-} from '../../../../../../src/constants/scene/sharedStyles/paper'
-import {
     BENNETT_ROOM_SHARED,
     DINING_SHARED,
     BUSING_SHARED,
@@ -82,7 +79,6 @@ export default {
         THOUGHT__SHARED,
     ],
     [CINEMA_THOUGHT_RECORDING]: [
-        BOOK__SHARED,
         ACOUSTIC_GUITAR__SHARED,
         HEADPHONE__SHARED,
         MICROPHONE__SHARED,
@@ -118,7 +114,6 @@ export default {
         ALL_PEOPLE__SHARED,
         THOUGHT__SHARED,
         BASEMENT_TAKEOUT__SHARED,
-        BOOK__SHARED,
         CAFETERIA__SHARED,
         DINING_SHARED,
     ],
@@ -127,7 +122,6 @@ export default {
         LIZ,
         ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED,
-        BOOK__SHARED,
         BUSING_SHARED,
         CAFETERIA__SHARED,
         DISHROOM_SHARED,
@@ -137,7 +131,6 @@ export default {
         LIZ,
         ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED,
-        BOOK__SHARED,
         BUSING_SHARED,
         CAFETERIA__SHARED,
         DISHROOM_SHARED,
@@ -158,7 +151,7 @@ export default {
     ],
     [CONSTELLATION_SIBLING]: CONSTELLATION__SHARED,
     [CONSTELLATION_TARPIT]: CONSTELLATION__SHARED,
-    [SKETCHBOOK]: BOOK__SHARED,
+    [SKETCHBOOK]: null,
     [SKETCH_APART]: DRAWING__SHARED,
     [SKETCH_DOGS_ROCKET]: DRAWING__SHARED,
     [SKETCH_ESCAPE_POD]: DRAWING__SHARED,
@@ -188,7 +181,6 @@ export default {
         ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED,
         THOUGHT__SHARED,
-        BOOK__SHARED,
     ],
     [WAITING_THOUGHT_WALKING]: [
         BENNETT,

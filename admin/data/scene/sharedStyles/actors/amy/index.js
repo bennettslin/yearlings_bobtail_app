@@ -13,13 +13,12 @@ import {
     HEINEKEN__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/food'
 import { HOSPITAL_LINENS__SHARED } from '../../../../../../src/constants/scene/sharedStyles/furniture'
-import { BOOK__SHARED } from '../../../../../../src/constants/scene/sharedStyles/paper'
 
 export default {
     [SMOKER]: CIGARETTE__SHARED,
     [FLIRTING]: null,
     [MINGLING]: HEINEKEN__SHARED,
-    [PROTESTER]: BOOK__SHARED,
+    [PROTESTER]: null,
     [DOCTOR]: HOSPITAL_LINENS__SHARED,
     [EPILOGUE]: null,
 }

@@ -98,7 +98,6 @@ import {
     FREEWAY_SIGN__SHARED,
     TETHERBALL_POLE__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/outdoor'
-import { BOOK__SHARED } from '../../../../../../src/constants/scene/sharedStyles/paper'
 import {
     DOLLAR__SHARED,
     PROMISE_PHOTO__SHARED,
@@ -208,7 +207,6 @@ export default {
     [LETTER_SCRAPS]: null,
     [LIGHT_SWITCH]: DARKEN_DEFAULT__SHARED,
     [LINGERIE_DRAWING]: [
-        BOOK__SHARED,
         DARKEN_DEFAULT__SHARED,
         DRAWING__SHARED,
     ],

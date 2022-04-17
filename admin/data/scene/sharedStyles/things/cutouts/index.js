@@ -92,7 +92,6 @@ import {
     TAIWAN_FOLIAGE__SHARED,
     TRAFFIC_LIGHT__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/outdoor'
-import { BOOK__SHARED } from '../../../../../../src/constants/scene/sharedStyles/paper'
 import { ALL_VEHICLES__SHARED } from '../../../../../../src/constants/scene/sharedStyles/vehicles'
 
 export default {
@@ -127,7 +126,7 @@ export default {
     [FIRE_HYDRANT]: null,
     [GLASS_RACK]: null,
     [GRAVESTONE]: null,
-    [HOSTESS_STAND]: BOOK__SHARED,
+    [HOSTESS_STAND]: null,
     [HOWIE_FRIDGE]: DARKEN_DEFAULT__SHARED,
     [IV_DRIP]: null,
     [LAMPPOST]: BULB__SHARED,

@@ -23,7 +23,6 @@ import {
     BENNETT_LINENS__SHARED,
     TAIWAN_LINENS__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/furniture'
-import { BOOK__SHARED } from '../../../../../../src/constants/scene/sharedStyles/paper'
 import { DOLLAR__SHARED } from '../../../../../../src/constants/scene/sharedStyles/print'
 import {
     TAIWAN_BUOY__SHARED,
@@ -35,7 +34,7 @@ export default {
     [CAUTIOUS]: null,
     [ENRAGED]: null,
     [FEARFUL]: BENNETT_LINENS__SHARED,
-    [PANICKED]: BOOK__SHARED,
+    [PANICKED]: null,
     [MAT]: TAIWAN_LINENS__SHARED,
     [STAIRS]: null,
     [GATE]: null,

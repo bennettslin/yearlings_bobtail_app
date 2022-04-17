@@ -1,7 +1,7 @@
 <svg viewBox="0 0 226.81 578.31">
   <g class="sign">
     <rect class="signHandle" x="187.94" y="94.42" width="6.93" height="73.59" transform="translate(-2.75 4.11) rotate(-1.22)"/>
-    <polygon class="bookPageMedium" points="226.56 102.64 160.25 90.41 158.64 15.3 224.38 0.25 226.56 102.64"/>
+    <polygon class="paperMedium" points="226.56 102.64 160.25 90.41 158.64 15.3 224.38 0.25 226.56 102.64"/>
     <g class="signDisplayLine">
       <line x1="179.42" y1="28.11" x2="179.63" y2="37.73"/>
       <path d="M174.63,38.25l-.3-14.13c-.13-4.64,3-5.08,3.09-.52"/>

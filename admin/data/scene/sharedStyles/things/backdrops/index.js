@@ -29,7 +29,6 @@ import {
     TAIWAN_HOUSE__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/buildings'
 import { DOOR__SHARED } from '../../../../../../src/constants/scene/sharedStyles/home'
-import { BOOK__SHARED } from '../../../../../../src/constants/scene/sharedStyles/paper'
 import {
     FOLIAGE__SHARED,
     MOUNTAIN__SHARED,
@@ -61,9 +60,9 @@ export default {
     ],
     [OCEAN_BOTTOM_FAR]: VOLCANO__SHARED,
     [OCEAN_FLOOR_FAR]: VOLCANO__SHARED,
-    [PHARMACY_CEL]: BOOK__SHARED,
+    [PHARMACY_CEL]: null,
     [ROAD_FUTURE]: null,
-    [ROAD_PAST]: BOOK__SHARED,
+    [ROAD_PAST]: null,
     [ROAD_PRESENT]: null,
     [SHORE_BUOY_BACKDROP]: [
         TAIWAN_FOLIAGE__SHARED,

@@ -70,7 +70,6 @@ import {
     GUITAR_CASE__SHARED,
     MANDOLIN__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/instruments'
-import { BOOK__SHARED } from '../../../../../../src/constants/scene/sharedStyles/paper'
 import { DOLLAR__SHARED } from '../../../../../../src/constants/scene/sharedStyles/print'
 import { GO_KART__SHARED } from '../../../../../../src/constants/scene/sharedStyles/vehicles'
 import {
@@ -90,7 +89,7 @@ export default {
     [CATHOLIC_IDEA]: MESSENGER_BAG__SHARED,
     [PIOUS]: MESSENGER_BAG__SHARED,
     [PONDERING]: null,
-    [COUCH_READING]: BOOK__SHARED,
+    [COUCH_READING]: null,
     [RUBIKS_CUBE]: null,
     [DISTRACTED]: DOLLAR__SHARED,
     [EATING]: BASEMENT_TAKEOUT__SHARED,
@@ -103,12 +102,10 @@ export default {
     [GO_KARTS]: GO_KART__SHARED,
     [DATE_ENDED]: null,
     [DISHROOM_READING]: [
-        BOOK__SHARED,
         CAFETERIA__SHARED,
         LANCET_PEN__SHARED,
     ],
     [DISHROOM_LANCET]: [
-        BOOK__SHARED,
         CAFETERIA__SHARED,
         LANCET_PEN__SHARED,
     ],
