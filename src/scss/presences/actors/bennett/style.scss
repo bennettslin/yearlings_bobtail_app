@@ -25,15 +25,8 @@
     .pastBennettJeans { fill: hsl($HUE_PAST, 27%, 47%); }
     .pastBennettShoe { fill: hsl($HUE_PAST, 20%, 41%); }
     .pastConverseLogo { fill: hsl($HUE_PAST, 37%, 60%); }
-
     .futureBennettUnderwear { fill: hsl($HUE_FUTURE, 39%, 61%); }
     .futureBennettWaistband { fill: hsl($HUE_FUTURE, 47%, 72%); }
-
-    // TODO: Delete once snowglobes moved over to flat future colours.
-    .futureBennettJacket { fill: hsl($HUE_FUTURE, 10%, 38%); }
-    .futureBennettSleeves { fill: hsl($HUE_FUTURE, 37%, 52%); }
-    .futureBennettJeans { fill: hsl($HUE_FUTURE, 27%, 47%); }
-    .futureBennettShoe { fill: hsl($HUE_FUTURE, 11%, 41%); }
 
     &.enraged {
         .frame { fill: hsl(175, 33%, 47%); }
