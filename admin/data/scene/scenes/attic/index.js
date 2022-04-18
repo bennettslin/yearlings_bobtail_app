@@ -16,7 +16,7 @@ export default {
     [HOWIE]: {
         [ATTIC]: {
             yIndex: 3,
-            xPosition: 9.5,
+            xPosition: 9,
         },
     },
 }
