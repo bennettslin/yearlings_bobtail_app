@@ -1,9 +1,7 @@
 # Darken notes
 
 # Immediate TODO
-* Condense NoHo house, El Torito exteriors
-* Make attic rafters slanted
-* Lighten darkened past colours for Bennett and Odin (Odin)
+* Rename to dark room
 
 * Adjust wine bottle
     * Just get rid of wine top?
@@ -18,4 +16,6 @@
 # Next TODO
 * Autumn and winter foliage colours
 * Night colours
+    * Night cubes
+    * Dark interior cubes? Apartment, club loading, El Torito
 * Past, future, and magic colours

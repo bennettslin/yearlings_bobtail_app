@@ -19,8 +19,8 @@
 // .flatPastLightest { fill: hsl($HUE_PAST, 33%, 77%); }
 
 .darkenDefault .darken#{$suffix} {
-    .dullPastDarker { fill: hsl($HUE_PAST, 13%, 22%); }
-    .dullPastDark { fill: hsl($HUE_PAST, 13%, 24%); }
-    .dullPastMediumDark { fill: hsl($HUE_PAST, 13%, 28%); }
-    .dullPastMediumLight { fill: hsl($HUE_PAST, 13%, 32%); }
+    .dullPastDarker { fill: hsl($HUE_PAST, 10%, 27%); }
+    .dullPastDark { fill: hsl($HUE_PAST, 10%, 29%); }
+    .dullPastMediumDark { fill: hsl($HUE_PAST, 10%, 32%); }
+    .dullPastMediumLight { fill: hsl($HUE_PAST, 10%, 39%); }
 }

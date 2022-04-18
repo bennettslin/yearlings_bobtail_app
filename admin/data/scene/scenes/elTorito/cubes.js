@@ -14,17 +14,17 @@ export default {
     [EL_TORITO_KEY]: {
         ceiling: {
             hslaColours: [
-                [W],
-                [W, C, C, C, C, C, C, C, C, C, C, W],
-                [X],
-                [C],
+                [C, X, W, W, W, W, W, W, W, W, X, C],
                 [C, X, C, C, C, C, C, C, C, C, X, C],
+                [C, X, X, X, X, X, X, X, X, X, X, C],
+                [C],
+                [C, V, C, C, C, C, C, C, C, C, V, C],
                 [C],
             ],
             zIndices: [
-                [0],
-                [2, f, f, f, f, f, f, f, f, f, f, 2],
-                [1, 1, 1, e, e, e, e, e, e, 1, 1, 1],
+                [f, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, f],
+                [f, 1, f, f, f, f, f, f, f, f, 1, f],
+                [f, 1, 1, e, e, e, e, e, e, 1, 1, f],
                 [f],
                 [f, 1, f, f, f, f, f, f, f, f, 1, f],
                 [f],
@@ -32,13 +32,13 @@ export default {
         },
         floor: {
             hslaColours: [
-                [F],
-                [F],
+                [V, X, X, X, X, X, X, X, X, X, X, V],
+                [V, X, F, F, F, F, F, F, F, F, X, V],
                 [V],
             ],
             zIndices: [
                 [0],
-                [2],
+                [1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1],
                 [1, 1, 1, 2, 2, 2, 2, 2, 2, 1],
                 [1, 1, 1, 2, 2, 2, 2, 2, 2, 1],
                 [1],
