@@ -38,7 +38,7 @@ export default {
     },
     [CUTOUT]: {
         [TRASH_CAN__QUAD]: {
-            yIndex: 3,
+            yIndex: 4,
             xPosition: 0.5,
             flipHorizontal: true,
         },

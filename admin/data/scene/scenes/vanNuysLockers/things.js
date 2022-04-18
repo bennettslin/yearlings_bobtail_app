@@ -20,7 +20,7 @@ export default {
             xPosition: 3.5,
         },
         [TRASH_CAN__LOCKERS]: {
-            yIndex: 2,
+            yIndex: 1,
             xPosition: 10.5,
         },
         [BUSH_SINGLE__LOCKERS]: {
