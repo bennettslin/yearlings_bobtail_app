@@ -7,9 +7,12 @@ import {
 import {
     getIsDarkenExtraScene,
     getIsDarkenDefaultScene,
-    getIsPastScene,
-    getIsFutureScene,
-    getIsMagicScene,
+    getIsPastSeason,
+    getIsFutureSeason,
+    getIsMagicSeason,
+    getIsNightTime,
+    getIsAutumnSeason,
+    getIsWinterSeason,
 } from '../../helpers/scene'
 import { mapIsSongSelectComplete } from '../entrance/selector'
 import { DEFAULT_STAGE_KEY } from '../../constants/scene/scenes'
@@ -41,6 +44,11 @@ export const mapSceneSkyTime = createSelector(
     ) => getSkyTimeForScene(sceneSongIndex, sceneSceneIndex),
 )
 
+export const mapIsNightTime = createSelector(
+    mapSceneSkyTime,
+    skyTime => getIsNightTime(skyTime),
+)
+
 export const mapSceneSkySeason = createSelector(
     mapSceneSongIndex,
     mapSceneSceneIndex,
@@ -48,6 +56,16 @@ export const mapSceneSkySeason = createSelector(
         sceneSongIndex,
         sceneSceneIndex,
     ) => getSeasonForScene(sceneSongIndex, sceneSceneIndex),
+)
+
+export const mapIsAutumnSeason = createSelector(
+    mapSceneSkySeason,
+    skySeason => getIsAutumnSeason(skySeason),
+)
+
+export const mapIsWinterSeason = createSelector(
+    mapSceneSkySeason,
+    skySeason => getIsWinterSeason(skySeason),
 )
 
 export const mapIsDarkenDefaultScene = createSelector(
@@ -60,19 +78,19 @@ export const mapIsDarkenExtraScene = createSelector(
     sceneCubesKey => getIsDarkenExtraScene(sceneCubesKey),
 )
 
-export const mapIsPastScene = createSelector(
+export const mapIsPastSeason = createSelector(
     mapSceneCubesKey,
-    sceneCubesKey => getIsPastScene(sceneCubesKey),
+    sceneCubesKey => getIsPastSeason(sceneCubesKey),
 )
 
-export const mapIsFutureScene = createSelector(
+export const mapIsFutureSeason = createSelector(
     mapSceneCubesKey,
-    sceneCubesKey => getIsFutureScene(sceneCubesKey),
+    sceneCubesKey => getIsFutureSeason(sceneCubesKey),
 )
 
-export const mapIsMagicScene = createSelector(
+export const mapIsMagicSeason = createSelector(
     mapSceneCubesKey,
-    sceneCubesKey => getIsMagicScene(sceneCubesKey),
+    sceneCubesKey => getIsMagicSeason(sceneCubesKey),
 )
 
 export const mapCanStageReset = createSelector(

@@ -19,6 +19,9 @@ import {
     SNOWGLOBES_FUTURE_KEY,
     CHANGELING_CAVE_KEY,
 } from '../constants/scene/scenes'
+import {
+    SEASON_AUTUMN, SEASON_WINTER, TIME_NIGHT, TIME_NIGHT_TAIWAN, TIME_TWILIGHT, TIME_TWILIGHT_TAIWAN,
+} from '../constants/scene/sky'
 
 // Scenes where only the default presences are darkened.
 export const getIsDarkenDefaultScene = sceneCubesKey => {
@@ -57,7 +60,7 @@ export const getIsDarkenExtraScene = sceneCubesKey => {
     return false
 }
 
-export const getIsPastScene = sceneCubesKey => {
+export const getIsPastSeason = sceneCubesKey => {
     switch (sceneCubesKey) {
         case BATHROOM_PAST_KEY:
         case SNOWGLOBES_PAST_KEY:
@@ -66,7 +69,7 @@ export const getIsPastScene = sceneCubesKey => {
     return false
 }
 
-export const getIsFutureScene = sceneCubesKey => {
+export const getIsFutureSeason = sceneCubesKey => {
     switch (sceneCubesKey) {
         case BEDROOM_FUTURE_KEY:
         case LIZ_COUCH_FUTURE_KEY:
@@ -76,7 +79,7 @@ export const getIsFutureScene = sceneCubesKey => {
     return false
 }
 
-export const getIsMagicScene = sceneCubesKey => {
+export const getIsMagicSeason = sceneCubesKey => {
     switch (sceneCubesKey) {
         case CHANGELING_CAVE_KEY:
         case BEDROOM_MAGIC_KEY:
@@ -85,3 +88,19 @@ export const getIsMagicScene = sceneCubesKey => {
     }
     return false
 }
+
+export const getIsNightTime = skyTime => {
+    switch (skyTime) {
+        case TIME_NIGHT:
+        case TIME_NIGHT_TAIWAN:
+        case TIME_TWILIGHT:
+        case TIME_TWILIGHT_TAIWAN:
+        case BEDROOM_MAGIC_KEY:
+        case BASEMENT_BED_MAGIC_KEY:
+            return true
+    }
+    return false
+}
+
+export const getIsAutumnSeason = skySeason => skySeason === SEASON_AUTUMN
+export const getIsWinterSeason = skySeason => skySeason === SEASON_WINTER

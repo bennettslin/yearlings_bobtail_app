@@ -5,8 +5,6 @@
 * Make attic rafters slanted
 * Pole in locker bank
 
-* Selectors for autumn, winter, and night scenes
-
 * Lighten darkened past colours for Bennett and Odin (Odin)
 * Change bathroom colours to be more yellow
 

@@ -1,15 +1,21 @@
 import React, { useEffect, Fragment } from 'react'
 import cx from 'classnames'
 import { useDispatch, useSelector } from 'react-redux'
-import { updateEntranceStore } from '../../redux/entrance/action'
-import {
-    mapIsSongChangeDone,
-    mapIsSceneChangeDone,
-} from '../../redux/entrance/selector'
-import { mapIsDarkenExtraScene, mapIsDarkenDefaultScene, mapIsPastScene, mapIsFutureScene, mapIsMagicScene } from '../../redux/scene/selector'
-import Transition from 'react-transition-group/Transition'
 import Cubes from '../Cubes'
 import Presences from '../Presences'
+import { updateEntranceStore } from '../../redux/entrance/action'
+import { mapIsSongChangeDone, mapIsSceneChangeDone } from '../../redux/entrance/selector'
+import {
+    mapIsAutumnSeason,
+    mapIsDarkenDefaultScene,
+    mapIsDarkenExtraScene,
+    mapIsFutureSeason,
+    mapIsMagicSeason,
+    mapIsNightTime,
+    mapIsPastSeason,
+    mapIsWinterSeason,
+} from '../../redux/scene/selector'
+import Transition from 'react-transition-group/Transition'
 import { CUBE_Y_INDICES } from '../../constants/cubeIndex'
 import { CURTAINS_ENTERED_AFTER_SONG_CHANGE_DONE_DURATION } from '../../constants/entrance'
 
@@ -20,9 +26,12 @@ const Scene = () => {
         isSceneChangeDone = useSelector(mapIsSceneChangeDone),
         isDarkenDefaultScene = useSelector(mapIsDarkenDefaultScene),
         isDarkenExtraScene = useSelector(mapIsDarkenExtraScene),
-        isPastScene = useSelector(mapIsPastScene),
-        isFutureScene = useSelector(mapIsFutureScene),
-        isMagicScene = useSelector(mapIsMagicScene)
+        isNightTime = useSelector(mapIsNightTime),
+        isAutumnSeason = useSelector(mapIsAutumnSeason),
+        isWinterSeason = useSelector(mapIsWinterSeason),
+        isPastSeason = useSelector(mapIsPastSeason),
+        isFutureSeason = useSelector(mapIsFutureSeason),
+        isMagicSeason = useSelector(mapIsMagicSeason)
 
     const onExited = () => {
         logTransition('Scene did exit.')
@@ -52,9 +61,12 @@ const Scene = () => {
                         'Scene',
                         isDarkenDefaultScene && 'darkenDefault',
                         isDarkenExtraScene && 'darkenExtra',
-                        isPastScene && 'pastScene',
-                        isFutureScene && 'futureScene',
-                        isMagicScene && 'magicScene',
+                        isNightTime && 'nightTime',
+                        isAutumnSeason && 'autumnSeason',
+                        isWinterSeason && 'winterSeason',
+                        isPastSeason && 'pastSeason',
+                        isFutureSeason && 'futureSeason',
+                        isMagicSeason && 'magicSeason',
                         'abF',
                     ),
                 }}
