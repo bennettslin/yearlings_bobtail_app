@@ -1,7 +1,6 @@
 import {
-    ARTUP_SUBPATH,
     ONESHEET_SUBPATH,
-    PARETO_SUBPATH,
+    PITCH_KEYS,
 } from '../constants/routing'
 
 export const getIsPromoHomepage = promoKey => (
@@ -9,8 +8,7 @@ export const getIsPromoHomepage = promoKey => (
 )
 
 export const getIsPitchPage = promoKey => (
-    promoKey === ARTUP_SUBPATH ||
-    promoKey === PARETO_SUBPATH
+    PITCH_KEYS.some(pitchKey => promoKey === pitchKey)
 )
 
 export const getIsOnesheetPage = promoKey => (

@@ -2,9 +2,8 @@ import { getRoutingPitchIndex } from '../routing'
 import { getIsAlbumClientSession } from '../session'
 import { getPathForSlide } from '../../../endpoint/promo/pitches'
 import {
-    ARTUP_SUBPATH,
     ONESHEET_SUBPATH,
-    PARETO_SUBPATH,
+    PITCH_KEYS,
     PROMO_PATH,
 } from '../../../constants/routing'
 
@@ -50,7 +49,8 @@ export const getIsPromoPage = pathname => (
     !getIsAlbumClientSession() && (
         _getIsValidPromoHomepagePath(pathname) ||
         _getIsValidOnesheetPath(pathname) ||
-        _getIsValidPitchPath(ARTUP_SUBPATH, pathname) ||
-        _getIsValidPitchPath(PARETO_SUBPATH, pathname)
+        PITCH_KEYS.some(pitchKey => (
+            _getIsValidPitchPath(pitchKey, pathname)
+        ))
     )
 )

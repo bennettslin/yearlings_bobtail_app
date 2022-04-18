@@ -8,13 +8,12 @@ import {
     getIndexFromQueryString,
 } from '../path'
 import {
-    ARTUP_SUBPATH,
-    ONESHEET_SUBPATH,
-    VERSE_QUERY_FIELD,
-    VERSE_QUERY_INITIAL,
     ANNOTATION_QUERY_FIELD,
     ANNOTATION_QUERY_INITIAL,
-    PARETO_SUBPATH,
+    ONESHEET_SUBPATH,
+    PITCH_KEYS,
+    VERSE_QUERY_FIELD,
+    VERSE_QUERY_INITIAL,
 } from '../../../constants/routing'
 
 export const getRoutingSongIndex = pathname => {
@@ -61,11 +60,9 @@ export const getRoutingPitchIndex = (pitchKey, pathname) => {
 export const getRoutingPromoKey = pathname => {
     if (pathname.includes(ONESHEET_SUBPATH)) {
         return ONESHEET_SUBPATH
-    } else if (pathname.includes(ARTUP_SUBPATH)) {
-        return ARTUP_SUBPATH
-    } else if (pathname.includes(PARETO_SUBPATH)) {
-        return PARETO_SUBPATH
-    } else {
-        return ''
     }
+
+    return PITCH_KEYS.reduce((matchedPitchKey, pitchKey) => (
+        pathname.includes(pitchKey) ? pitchKey : matchedPitchKey
+    ), '')
 }
