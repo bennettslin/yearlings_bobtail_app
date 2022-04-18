@@ -15,14 +15,14 @@ import {
     LIZ_COUCH_FUTURE_KEY,
 } from '../../../../src/constants/scene/scenes'
 import {
-    TIME_DAWN,
-    TIME_MORNING,
-    TIME_NOON,
-    TIME_AFTERNOON,
-    TIME_EVENING,
-    TIME_NIGHT,
     SEASON_AUTUMN,
     SEASON_FUTURE,
+    TIME_AFTERNOON,
+    TIME_DAWN,
+    TIME_EVENING,
+    TIME_MORNING,
+    TIME_NIGHT,
+    TIME_NOON,
 } from '../../../../src/constants/scene/sky'
 import {
     LIZ,

@@ -19,7 +19,7 @@ import {
     TAIWAN_STAIRS_KEY,
 } from '../../../../src/constants/scene/scenes'
 import {
-    SEASON_AUTUMN,
+    SEASON_SUMMER,
     SEASON_OCEAN_SIDE,
     SEASON_OCEAN_TOP,
     TIME_NIGHT_TAIWAN,
@@ -123,7 +123,7 @@ export default [
             },
         },
         cubes: TAIWAN_ROOM_KEY,
-        sky: { time: TIME_NIGHT_TAIWAN, season: SEASON_AUTUMN },
+        sky: { time: TIME_NIGHT_TAIWAN, season: SEASON_SUMMER },
     },
     {
         unitIndex: 4,
@@ -147,7 +147,7 @@ export default [
             },
         },
         cubes: TAIWAN_STAIRS_KEY,
-        sky: { time: TIME_NIGHT_TAIWAN, season: SEASON_AUTUMN },
+        sky: { time: TIME_NIGHT_TAIWAN, season: SEASON_SUMMER },
     },
     {
         unitIndex: 6,
@@ -179,7 +179,7 @@ export default [
             },
         },
         cubes: TAIWAN_GATE_KEY,
-        sky: { time: TIME_NIGHT_TAIWAN, season: SEASON_AUTUMN },
+        sky: { time: TIME_NIGHT_TAIWAN, season: SEASON_SUMMER },
     },
     {
         unitIndex: 9,
@@ -203,7 +203,7 @@ export default [
             },
         },
         cubes: RICKSHAW_KEY,
-        sky: { time: TIME_TWILIGHT_TAIWAN, season: SEASON_AUTUMN },
+        sky: { time: TIME_TWILIGHT_TAIWAN, season: SEASON_SUMMER },
     },
     {
         unitIndex: 11,
@@ -230,7 +230,7 @@ export default [
             },
         },
         cubes: SHORE_KEY,
-        sky: { time: TIME_TWILIGHT_TAIWAN, season: SEASON_AUTUMN },
+        sky: { time: TIME_TWILIGHT_TAIWAN, season: SEASON_SUMMER },
     },
     {
         unitIndex: 14,

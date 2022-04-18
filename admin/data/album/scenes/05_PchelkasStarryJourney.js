@@ -24,7 +24,7 @@ import {
 import {
     SEASON_FUTURE,
     SEASON_NIGHT_MAGIC,
-    SEASON_WINTER,
+    SEASON_AUTUMN,
     TIME_AFTERNOON,
     TIME_EVENING,
     TIME_MORNING,
@@ -154,7 +154,7 @@ export default [
             },
         },
         cubes: BEDROOM_KEY,
-        sky: { time: TIME_EVENING, season: SEASON_WINTER },
+        sky: { time: TIME_EVENING, season: SEASON_AUTUMN },
     },
     {
         unitIndex: 2,
@@ -192,7 +192,7 @@ export default [
             },
         },
         cubes: BEDROOM_STOWAWAYS_KEY,
-        sky: { time: TIME_EVENING, season: SEASON_WINTER },
+        sky: { time: TIME_EVENING, season: SEASON_AUTUMN },
     },
     {
         unitIndex: 6,
@@ -231,7 +231,7 @@ export default [
             },
         },
         cubes: BEDROOM_KEY,
-        sky: { time: TIME_MORNING, season: SEASON_WINTER },
+        sky: { time: TIME_MORNING, season: SEASON_AUTUMN },
     },
     {
         unitIndex: 9,
@@ -248,11 +248,6 @@ export default [
             },
             [CARDBOARD]: {
                 [POSTER_BLOOM_COUNTY]: true,
-            },
-            [CUTOUT]: {
-                [LEMON_TREE__BEDROOM]: true,
-                [ROSEBUSH_SLANTED_DOUBLE]: true,
-                [ROSEBUSH_SLANTED_SINGLE]: true,
             },
             [DOOR]: {
                 [BEDROOM_FENCE]: true,
@@ -271,7 +266,7 @@ export default [
             },
         },
         cubes: BEDROOM_DARK_KEY,
-        sky: { time: TIME_NIGHT, season: SEASON_WINTER },
+        sky: { time: TIME_NIGHT, season: SEASON_AUTUMN },
     },
     {
         unitIndex: 10,
@@ -362,11 +357,6 @@ export default [
             [CARDBOARD]: {
                 [POSTER_BLOOM_COUNTY]: true,
             },
-            [CUTOUT]: {
-                [LEMON_TREE__BEDROOM]: true,
-                [ROSEBUSH_SLANTED_DOUBLE]: true,
-                [ROSEBUSH_SLANTED_SINGLE]: true,
-            },
             [DOOR]: {
                 [BEDROOM_FENCE]: true,
                 [BEDROOM_BLINDS_OPEN]: true,
@@ -386,7 +376,7 @@ export default [
             },
         },
         cubes: BEDROOM_STOOL_KEY,
-        sky: { time: TIME_MORNING, season: SEASON_WINTER },
+        sky: { time: TIME_MORNING, season: SEASON_AUTUMN },
     },
     {
         unitIndex: 14,
@@ -424,7 +414,7 @@ export default [
             },
         },
         cubes: VAN_NUYS_LOCKERS_KEY,
-        sky: { time: TIME_NOON, season: SEASON_WINTER },
+        sky: { time: TIME_NOON, season: SEASON_AUTUMN },
     },
     {
         unitIndex: 17,
@@ -470,7 +460,7 @@ export default [
             },
         },
         cubes: VAN_NUYS_QUAD_KEY,
-        sky: { time: TIME_NOON, season: SEASON_WINTER },
+        sky: { time: TIME_NOON, season: SEASON_AUTUMN },
     },
     {
         unitIndex: 18,
@@ -507,6 +497,6 @@ export default [
             },
         },
         cubes: VAN_NUYS_HALLWAY_KEY,
-        sky: { time: TIME_AFTERNOON, season: SEASON_WINTER },
+        sky: { time: TIME_AFTERNOON, season: SEASON_AUTUMN },
     },
 ]

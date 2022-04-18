@@ -14,6 +14,10 @@ import {
     LIZ_COUCH_FUTURE_KEY,
     TAIWAN_ROOM_KEY,
     TAIWAN_STAIRS_KEY,
+    BATHROOM_PAST_KEY,
+    SNOWGLOBES_PAST_KEY,
+    SNOWGLOBES_FUTURE_KEY,
+    CHANGELING_CAVE_KEY,
 } from '../constants/scene/scenes'
 
 // Scenes where only the default presences are darkened.
@@ -48,6 +52,35 @@ export const getIsDarkenExtraScene = sceneCubesKey => {
         case BENNETT_BED_DARK_KEY:
         case LIZ_BED_DARK_EXTRA_KEY:
         case LIZ_COUCH_FUTURE_KEY:
+            return true
+    }
+    return false
+}
+
+export const getIsPastScene = sceneCubesKey => {
+    switch (sceneCubesKey) {
+        case BATHROOM_PAST_KEY:
+        case SNOWGLOBES_PAST_KEY:
+            return true
+    }
+    return false
+}
+
+export const getIsFutureScene = sceneCubesKey => {
+    switch (sceneCubesKey) {
+        case BEDROOM_FUTURE_KEY:
+        case LIZ_COUCH_FUTURE_KEY:
+        case SNOWGLOBES_FUTURE_KEY:
+            return true
+    }
+    return false
+}
+
+export const getIsNightMagicScene = sceneCubesKey => {
+    switch (sceneCubesKey) {
+        case CHANGELING_CAVE_KEY:
+        case BEDROOM_MAGIC_KEY:
+        case BASEMENT_BED_MAGIC_KEY:
             return true
     }
     return false

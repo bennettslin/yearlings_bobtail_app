@@ -17,12 +17,12 @@ import {
     SNOWGLOBES_FUTURE_KEY,
 } from '../../../../src/constants/scene/scenes'
 import {
-    TIME_NIGHT,
     SEASON_AUTUMN,
+    SEASON_FUTURE,
     SEASON_NIGHT_MAGIC,
     SEASON_PAST,
     SEASON_PRESENT,
-    SEASON_FUTURE,
+    TIME_NIGHT,
 } from '../../../../src/constants/scene/sky'
 import {
     BENNETT,

@@ -13,19 +13,19 @@ import {
     PANEL,
 } from '../../../../src/constants/scene/things'
 import {
-    WALGREENS_KEY,
-    STEAM_TUNNEL_KEY,
     ATTIC_KEY,
-    ROYCE_HALL_KEY,
     CEMETERY_KEY,
+    ROYCE_HALL_KEY,
     STATION_WAGON_KEY,
+    STEAM_TUNNEL_KEY,
+    WALGREENS_KEY,
 } from '../../../../src/constants/scene/scenes'
 import {
-    TIME_NIGHT,
-    TIME_TWILIGHT,
-    TIME_DAWN,
     SEASON_SUMMER,
     SEASON_THOUGHT,
+    TIME_DAWN,
+    TIME_NIGHT,
+    TIME_TWILIGHT,
 } from '../../../../src/constants/scene/sky'
 import {
     BENNETT,

@@ -26,7 +26,7 @@ import {
     TIME_EVENING,
     TIME_NOON,
     TIME_NIGHT,
-    SEASON_AUTUMN,
+    SEASON_SUMMER,
     SEASON_WINTER,
     SEASON_LOVE,
 } from '../../../../src/constants/scene/sky'
@@ -191,7 +191,7 @@ export default [
             },
         },
         cubes: DISHROOM_KEY,
-        sky: { time: TIME_NOON, season: SEASON_AUTUMN },
+        sky: { time: TIME_NOON, season: SEASON_SUMMER },
     },
     {
         unitIndex: 4,
@@ -231,7 +231,7 @@ export default [
             },
         },
         cubes: DISHROOM_KEY,
-        sky: { time: TIME_NOON, season: SEASON_AUTUMN },
+        sky: { time: TIME_NOON, season: SEASON_SUMMER },
     },
     {
         unitIndex: 6,
@@ -264,7 +264,7 @@ export default [
             },
         },
         cubes: LIZ_GATE_KEY,
-        sky: { time: TIME_EVENING, season: SEASON_AUTUMN },
+        sky: { time: TIME_EVENING, season: SEASON_SUMMER },
     },
     {
         unitIndex: 7,
@@ -301,7 +301,7 @@ export default [
                 [PUBLIC_NEAR__LIZ_GATE]: true,
             },
         },
-        sky: { time: TIME_EVENING, season: SEASON_AUTUMN },
+        sky: { time: TIME_EVENING, season: SEASON_SUMMER },
     },
     {
         unitIndex: 8,

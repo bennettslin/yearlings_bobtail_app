@@ -18,8 +18,8 @@ import {
     LIZ_BED_DARK_KEY,
 } from '../../../../src/constants/scene/scenes'
 import {
-    TIME_NIGHT,
     SEASON_SUMMER,
+    TIME_NIGHT,
 } from '../../../../src/constants/scene/sky'
 import {
     BENNETT,

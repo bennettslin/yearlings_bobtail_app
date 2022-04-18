@@ -1,25 +1,9 @@
 # Darken notes
 
 # Next TODO
-* Magic and season scenes
-    * Cubes
-        * Past cubes (not dark)
-    * Selector logic
-    * Presences
-        * Just change hues for now
-
-## Past
-* Didi (bathroom)
-
-## Future
-* Pchelka (bedroom)
-* Kyon (lizBedroom)
-
-## Night Magic
-* Willy (changelingCave)
-* Pchelka (bedroom)
-* Uncanny (basementBed)
-
-# After TODO
-* Finalize seasons (do this on paper)
-* Times and seasons
+* Condense NoHo house, apartment, club, El Torito exteriors
+* Lighten darkened past colours for Bennett and Odin (Odin)
+* Selectors for autumn, winter, and night scenes
+* Change night magic to just magic
+* Pole in locker bank
+* Bathroom past cubes

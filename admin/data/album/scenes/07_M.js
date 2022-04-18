@@ -21,7 +21,6 @@ import {
 import {
     SEASON_AUTUMN,
     SEASON_SPRING,
-    SEASON_SUMMER,
     SEASON_WINTER,
     TIME_AFTERNOON,
     TIME_EVENING,
@@ -298,7 +297,7 @@ export default [
             },
         },
         cubes: CLUB_FRONT_KEY,
-        sky: { time: TIME_NIGHT, season: SEASON_SUMMER },
+        sky: { time: TIME_NIGHT, season: SEASON_SPRING },
     },
     {
         unitIndex: 6,
@@ -346,7 +345,7 @@ export default [
             },
         },
         cubes: BASEMENT_KEY,
-        sky: { time: TIME_NOON, season: SEASON_SUMMER },
+        sky: { time: TIME_NOON, season: SEASON_SPRING },
     },
     {
         unitIndex: 8,
@@ -375,7 +374,7 @@ export default [
             },
         },
         cubes: CINEMA_KEY,
-        sky: { time: TIME_AFTERNOON, season: SEASON_SUMMER },
+        sky: { time: TIME_AFTERNOON, season: SEASON_SPRING },
     },
     {
         unitIndex: 10,
@@ -410,7 +409,7 @@ export default [
             },
         },
         cubes: CINEMA_KEY,
-        sky: { time: TIME_AFTERNOON, season: SEASON_SUMMER },
+        sky: { time: TIME_AFTERNOON, season: SEASON_SPRING },
     },
     {
         unitIndex: 12,
@@ -451,6 +450,6 @@ export default [
             },
         },
         cubes: CINEMA_STREET_KEY,
-        sky: { time: TIME_AFTERNOON, season: SEASON_SUMMER },
+        sky: { time: TIME_AFTERNOON, season: SEASON_SPRING },
     },
 ]

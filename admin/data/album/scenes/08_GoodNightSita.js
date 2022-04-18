@@ -16,7 +16,7 @@ import {
     MUSEUM_KEY,
 } from '../../../../src/constants/scene/scenes'
 import {
-    SEASON_AUTUMN,
+    SEASON_SUMMER,
     TIME_AFTERNOON,
     TIME_EVENING,
 } from '../../../../src/constants/scene/sky'
@@ -115,7 +115,7 @@ export default [
             },
         },
         cubes: LIZ_GATE_KEY,
-        sky: { time: TIME_EVENING, season: SEASON_AUTUMN },
+        sky: { time: TIME_EVENING, season: SEASON_SUMMER },
     },
     {
         unitIndex: 4,
@@ -139,7 +139,7 @@ export default [
             },
         },
         cubes: MUSEUM_KEY,
-        sky: { time: TIME_AFTERNOON, season: SEASON_AUTUMN },
+        sky: { time: TIME_AFTERNOON, season: SEASON_SUMMER },
     },
     {
         unitIndex: 7,
@@ -178,7 +178,7 @@ export default [
             },
         },
         cubes: BACKSTAGE_KEY,
-        sky: { time: TIME_AFTERNOON, season: SEASON_AUTUMN },
+        sky: { time: TIME_AFTERNOON, season: SEASON_SUMMER },
     },
     {
         unitIndex: 11,
@@ -211,7 +211,7 @@ export default [
             },
         },
         cubes: GO_KARTS_KEY,
-        sky: { time: TIME_AFTERNOON, season: SEASON_AUTUMN },
+        sky: { time: TIME_AFTERNOON, season: SEASON_SUMMER },
     },
     {
         unitIndex: 14,
@@ -254,6 +254,6 @@ export default [
             },
         },
         cubes: LIZ_GATE_STREET_KEY,
-        sky: { time: TIME_EVENING, season: SEASON_AUTUMN },
+        sky: { time: TIME_EVENING, season: SEASON_SUMMER },
     },
 ]

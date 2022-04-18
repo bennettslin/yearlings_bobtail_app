@@ -18,15 +18,15 @@ import {
     CLIFF_DEATHBED_KEY,
 } from '../../../../src/constants/scene/scenes'
 import {
-    TIME_MORNING,
-    TIME_NOON,
-    TIME_AFTERNOON,
-    TIME_EVENING,
+    SEASON_AUTUMN,
     SEASON_SPRING,
     SEASON_SUMMER,
-    SEASON_AUTUMN,
-    SEASON_WINTER,
     SEASON_THOUGHT,
+    SEASON_WINTER,
+    TIME_AFTERNOON,
+    TIME_EVENING,
+    TIME_MORNING,
+    TIME_NOON,
 } from '../../../../src/constants/scene/sky'
 import {
     BENNETT,

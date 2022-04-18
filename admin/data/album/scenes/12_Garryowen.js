@@ -15,8 +15,8 @@ import {
     OAKLAND_VOLKSWAGEN_KEY,
 } from '../../../../src/constants/scene/scenes'
 import {
+    SEASON_SUMMER,
     TIME_NIGHT,
-    SEASON_AUTUMN,
 } from '../../../../src/constants/scene/sky'
 import {
     BENNETT,
@@ -116,7 +116,7 @@ export default [
             },
         },
         cubes: LIZ_COUCH_KEY,
-        sky: { time: TIME_NIGHT, season: SEASON_AUTUMN },
+        sky: { time: TIME_NIGHT, season: SEASON_SUMMER },
     },
     {
         unitIndex: 3,
@@ -153,7 +153,7 @@ export default [
             },
         },
         cubes: OAKLAND_VOLKSWAGEN_KEY,
-        sky: { time: TIME_NIGHT, season: SEASON_AUTUMN },
+        sky: { time: TIME_NIGHT, season: SEASON_SUMMER },
     },
     {
         unitIndex: 6,
@@ -187,7 +187,7 @@ export default [
             },
         },
         cubes: BASEMENT_COUCH_KEY,
-        sky: { time: TIME_NIGHT, season: SEASON_AUTUMN },
+        sky: { time: TIME_NIGHT, season: SEASON_SUMMER },
     },
     {
         unitIndex: 10,
@@ -218,7 +218,7 @@ export default [
             },
         },
         cubes: CLUB_FRONT_KEY,
-        sky: { time: TIME_NIGHT, season: SEASON_AUTUMN },
+        sky: { time: TIME_NIGHT, season: SEASON_SUMMER },
     },
     {
         unitIndex: 13,
@@ -253,6 +253,6 @@ export default [
             },
         },
         cubes: LIZ_COUCH_KEY,
-        sky: { time: TIME_NIGHT, season: SEASON_AUTUMN },
+        sky: { time: TIME_NIGHT, season: SEASON_SUMMER },
     },
 ]

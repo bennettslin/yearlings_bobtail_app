@@ -202,7 +202,7 @@ export default getFormattedSlideMetadata([
         title: `A word on Web3`,
         body: [
             {
-                paragraph: `Oh, a quick word for Web3 enthusiasts. Yes, Web3 is optimal for monetization. But it builds upon Web2, the optimal technology for creators. So the artists who truly stand to gain from Web3 will be those who see what's truly being offered by Web2. For any artist who doesn't— who only sees Web2 as a way to monetize their work on platforms created by others— Web3 will just be more of the same.`,
+                paragraph: `A quick word here for Web3 enthusiasts. Yes, Web3 is optimal for monetization. But it builds upon Web2, the optimal technology for creators. So the artists who truly stand to gain from Web3 will be those who see what's truly being offered by Web2. For any artist who doesn't— who only sees Web2 as a way to monetize their work on platforms created by others— Web3 will just be more of the same.`,
             },
             {
                 paragraph: [
@@ -228,7 +228,7 @@ export default getFormattedSlideMetadata([
         title: `Bobtail Dominoes`,
         body: [
             {
-                paragraph: `Bobtail Dominoes is a musical game I invented in which players take turns arranging custom-shaped dominoes into chords. Playing it has improved my own skills as a songwriter, so I'll attest that it can do the same for others. It's also a great way to come up with chord progressions for a new song!`,
+                paragraph: `Bobtail Dominoes is a musical game I invented in which players take turns arranging custom-shaped dominoes into chords. Playing it has improved my own skills as a songwriter, so I'll attest that it can do the same for others. It's also a great way to come up with chord progressions for new songs!`,
             },
             {
                 paragraph: `I'm in the process of getting the tabletop version manufactured, after which I'll start a Kickstarter campaign. In the future, I plan to create an online version. And of course, everyone who enjoys the game will be that much more likely to become a Bobtail Yearlings fan. You can visit the website to read the rules, watch a demonstration game, and solve our daily puzzles.`,
@@ -256,7 +256,14 @@ export default getFormattedSlideMetadata([
                 ],
             },
             {
-                paragraph: `The lyrics and music scores are solid, however. With label support, I'd love to rerecord the songs with a full band and guest artists, and to redo the comic book as a collaborative effort with skilled illustrators. So if you're curious what our next album will be, this is it.`,
+                paragraph: [
+                    `The lyrics and music scores are solid, however. With label support, I'd love to rerecord the songs with a full band and guest artists, and to redo the comic book as a collaborative effort with skilled illustrators. So if you're curious what our next album will be after`,
+                    {
+                        isItalic: true,
+                        lyric: `Yearling's Bobtail`,
+                    },
+                    `, this is it!`,
+                ],
             },
         ],
     },
@@ -280,7 +287,7 @@ export default getFormattedSlideMetadata([
             },
             {
                 paragraph: [
-                    `But for BYCombo to get off the ground, the labels need to know what might be gained by holding out for a patiently crafted demo. There needs to be a ready example, and I know of no other band with a demo that took 25,000 hours to make. So if you agree that our solution is the only way to save rock music, then`,
+                    `But for BYCombo to get off the ground, the labels need to know what might be gained by holding out for a patiently crafted demo. There needs to be a ready example, and I know of no other band with a demo that took 25,000 hours to make. So if our solution turns out to be the only way to save rock music, then`,
                     {
                         isEmphasis: true,
                         lyric: `someone`,
@@ -303,13 +310,24 @@ export default getFormattedSlideMetadata([
                 paragraph: `It's easy to write songs by playing a four-chord loop and layering a melody on top. But as a teenager I wanted to sound like the Beatles, whose melodies and chord progressions are tightly intertwined. And so I learned to compose musical passages by alternating between melody and chords, one measure at a time. Later on I distilled this approach into a lesson plan called Bobtail Method.`,
             },
             {
-                paragraph: `You can view the pdf, but my writing has since improved, and a book isn't the ideal format. With more resources, I plan to create an online tutorial and app. As with Bobtail Dominoes, I think it's likely that any musician who benefits from Bobtail Method will also become a Bobtail Yearlings fan. It can't hurt that I use excerpts from our own songs to demonstrate key principles!`,
+                paragraph: `You can view the pdf, but a book isn't the ideal format, and my writing has since improved. With more resources, I plan to create an online tutorial and app. As with Bobtail Dominoes, it's likely that any musician who benefits from Bobtail Method will become a Bobtail Yearlings fan. It can't hurt that key principles in the lessons are demonstrated using excerpts from our own songs!`,
             },
             {
                 paragraph: {
                     anchor: `www.bobtailmethod.com`,
                     href: `https://bobtailmethod.com`,
                 },
+            },
+        ],
+    },
+    {
+        title: `A word on hobbyists and outsiders`,
+        body: [
+            {
+                paragraph: `Placeholder text.`,
+            },
+            {
+                paragraph: `Placeholder text.`,
             },
         ],
     },
@@ -373,12 +391,12 @@ export default getFormattedSlideMetadata([
         body: [
             {
                 paragraph: [
-                    `In summary, you'll get: a groundbreaking album that will outlast this century (`,
+                    `In summary, you'll get: a groundbreaking and long-lasting album (`,
                     {
                         isItalic: true,
                         lyric: `Yearling's Bobtail`,
                     },
-                    `); two more albums that are raring to go; a system to begin and sustain a modern renaissance (BYCombo); tools to help others master the nuts and bolts of songwriting (Bobtail Dominoes, Bobtail Method); and a music theory worthy of academic prestige (amnesticism).`,
+                    `); another two albums already raring to go; a system for sustaining a modern renaissance (BYCombo); tools to help others master the nuts and bolts of songwriting (Bobtail Dominoes, Bobtail Method); and a music theory worthy of academic prestige (amnesticism).`,
                 ],
             },
             {

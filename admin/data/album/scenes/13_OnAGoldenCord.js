@@ -14,10 +14,10 @@ import {
     OAKLAND_PUBLIC_KEY,
 } from '../../../../src/constants/scene/scenes'
 import {
+    SEASON_AUTUMN,
+    TIME_DAWN,
     TIME_NIGHT,
     TIME_TWILIGHT,
-    TIME_DAWN,
-    SEASON_AUTUMN,
 } from '../../../../src/constants/scene/sky'
 import {
     YOUNG_BENNETT,

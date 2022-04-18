@@ -1,5 +1,11 @@
 import { BASEMENT_BED_MAGIC_KEY } from '../../../../../../src/constants/scene/scenes'
-import { NIGHT_MAGIC_COLOUR as Z } from '../../../../../../src/constants/scene/cubes/colours'
+import {
+    NIGHT_FUTURE_COLOUR as Z,
+    FUTURE_SPOTLIGHT_MEDIUM_COLOUR as L,
+    FUTURE_SPOTLIGHT_LIGHT_COLOUR as M,
+    FUTURE_SPOTLIGHT_LIGHTER_COLOUR as N,
+    FUTURE_SPOTLIGHT_LIGHTEST_COLOUR as O,
+} from '../../../../../../src/constants/scene/cubes/colours'
 
 const DEFAULT_FLOOR = {
     zIndices: [
@@ -16,7 +22,12 @@ export const BASEMENT_BED_MAGIC_CUBES = {
     [BASEMENT_BED_MAGIC_KEY]: {
         floor: {
             hslaColours: [
-                [Z],
+                [L, M, M, L, Z],
+                [M, N, N, M, L, Z],
+                [N, O, O, N, M, Z],
+                [N, O, O, N, M, Z],
+                [M, N, N, M, L, Z],
+                [L, M, M, L, Z],
             ],
             zIndices: DEFAULT_FLOOR.zIndices,
         },

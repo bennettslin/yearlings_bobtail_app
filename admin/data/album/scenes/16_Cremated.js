@@ -16,10 +16,10 @@ import {
     EL_CERRITO_TENNIS_KEY,
 } from '../../../../src/constants/scene/scenes'
 import {
-    TIME_AFTERNOON,
-    TIME_EVENING,
     SEASON_AUTUMN,
     SEASON_THOUGHT,
+    TIME_AFTERNOON,
+    TIME_EVENING,
 } from '../../../../src/constants/scene/sky'
 import {
     BENNETT,

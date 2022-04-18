@@ -17,12 +17,12 @@ import {
     BERKELEY_CAMPANILE_KEY,
 } from '../../../../src/constants/scene/scenes'
 import {
-    TIME_NOON,
+    SEASON_LOVE,
+    SEASON_WINTER,
     TIME_AFTERNOON,
     TIME_EVENING,
     TIME_NIGHT,
-    SEASON_WINTER,
-    SEASON_LOVE,
+    TIME_NOON,
 } from '../../../../src/constants/scene/sky'
 import {
     BENNETT,
