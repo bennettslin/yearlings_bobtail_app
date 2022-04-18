@@ -1,8 +1,6 @@
 # Darken notes
 
 # Next TODO
-* Make attic fridge longer
-
 * Condense NoHo house, apartment, club, El Torito exteriors
 * Make attic rafters slanted
 * Pole in locker bank
