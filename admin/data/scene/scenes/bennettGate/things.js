@@ -22,11 +22,11 @@ export default {
     [CUTOUT]: {
         [APARTMENT_PLANT]: {
             yIndex: 3,
-            xPosition: 1,
+            xPosition: 1.5,
         },
         [BUSH_SINGLE__BENNETT_GATE]: {
             yIndex: 3,
-            xPosition: 10.4,
+            xPosition: 10,
         },
         [BUSH_DOUBLE__BENNETT_GATE]: {
             yIndex: 2,

@@ -1,7 +1,7 @@
 # Darken notes
 
 # Immediate TODO
-* Condense NoHo house, apartment, El Torito exteriors
+* Condense NoHo house, El Torito exteriors
 * Make attic rafters slanted
 * Lighten darkened past colours for Bennett and Odin (Odin)
 

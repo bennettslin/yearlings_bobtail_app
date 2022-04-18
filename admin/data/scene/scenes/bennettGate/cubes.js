@@ -17,17 +17,17 @@ export default {
     [BENNETT_GATE_KEY]: {
         ceiling: {
             hslaColours: [
-                [X],
-                [X],
-                [X, X, X, C, C, C, C, C, C, C, X],
+                [C, X, X, X, X, X, X, X, X, X, X, C],
+                [C, X, X, X, X, X, X, X, X, X, X, C],
+                [C, X, X, C, C, C, C, C, C, C, X, C],
                 [C],
                 [C],
                 [D],
             ],
             zIndices: [
-                [0],
-                [1, 1, 1, 1, 1, 1, d, d, d, 1, 1],
-                [1, 1, 1, f, f, f, f, f, f, f, 1],
+                [f, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, f],
+                [f, 1, 1, 1, 1, 1, d, d, d, 1, 1, f],
+                [f, 1, 1, f, f, f, f, f, f, f, 1, f],
                 [f],
                 [f],
                 [k],
