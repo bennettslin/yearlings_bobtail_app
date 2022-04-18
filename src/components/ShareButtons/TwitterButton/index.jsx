@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import Button from '../../Button'
-import { mapSelectedPromoKey } from '../../../redux/promo/selector'
+import { mapSelectedPitchSlideIndex, mapSelectedPromoKey } from '../../../redux/promo/selector'
 import { mapSelectedSongIndex } from '../../../redux/selected/selector'
 import { openSocialMediaPopup } from '../../../utils/socialMedia'
 import { SOCIAL_TWITTER_BUTTON_KEY } from '../../../constants/buttons'
@@ -12,7 +12,8 @@ import { PROMO_PAGE_SOCIAL_MEDIA } from '../../../constants/socialMedia'
 const TwitterButton = ({ id }) => {
     const
         selectedSongIndex = useSelector(mapSelectedSongIndex),
-        selectedPromoKey = useSelector(mapSelectedPromoKey)
+        selectedPromoKey = useSelector(mapSelectedPromoKey),
+        selectedPitchIndex = useSelector(mapSelectedPitchSlideIndex)
 
     const handleButtonClick = () => {
         openSocialMediaPopup({
@@ -20,6 +21,7 @@ const TwitterButton = ({ id }) => {
             brandId: SOCIAL_TWITTER_BUTTON_KEY,
             songIndex: selectedSongIndex,
             promoKey: selectedPromoKey,
+            pitchIndex: selectedPitchIndex,
             isShort: true,
         })
     }

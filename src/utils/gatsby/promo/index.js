@@ -11,6 +11,14 @@ export const getPromoPath = promoKey => (
     promoKey ? `${PROMO_PATH}/${promoKey}` : PROMO_PATH
 )
 
+export const getFormattedPromoPath = (promoKey, pitchIndex) => {
+    const pitchSubpath = getPathForSlide(promoKey, pitchIndex)
+    return [
+        getPromoPath(promoKey),
+        ...pitchSubpath ? [`${pitchIndex}-${pitchSubpath}`] : [],
+    ].join('/')
+}
+
 const _getIsValidPromoHomepagePath = pathname => (
     pathname === PROMO_PATH
 )
@@ -20,22 +28,15 @@ const _getIsValidOnesheetPath = pathname => (
 )
 
 const _getIsValidPitchPath = (pitchKey, pathname) => {
-    const promoPath = getPromoPath(pitchKey)
     // Check if it's a valid pitch root path.
-    if (pathname === promoPath) {
+    if (pathname === getPromoPath(pitchKey)) {
         return true
     }
 
     // Check if it's a valid pitch page path.
     const routingPitchIndex = getRoutingPitchIndex(pitchKey, pathname)
     if (Number.isFinite(routingPitchIndex)) {
-        return pathname === `${
-            promoPath
-        }/${
-            routingPitchIndex
-        }-${
-            getPathForSlide(pitchKey, routingPitchIndex)
-        }`
+        return pathname === getFormattedPromoPath(pitchKey, routingPitchIndex)
     }
 
     return false

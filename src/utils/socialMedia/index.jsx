@@ -30,11 +30,12 @@ export const openSocialMediaPopup = ({
     brandId,
     songIndex,
     promoKey,
+    pitchIndex,
     isShort,
 }) => {
     const
         url = socialMediaId === PROMO_PAGE_SOCIAL_MEDIA ?
-            getPromoUrl(promoKey) :
+            getPromoUrl(promoKey, pitchIndex) :
             getSongUrl({
                 songIndex,
                 isShort,

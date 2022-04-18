@@ -1,7 +1,6 @@
 import { navigate } from 'gatsby'
-import { getPathForSlide } from '../endpoint/promo/pitches'
 import { getWindow } from '../utils/browser'
-import { getPromoPath } from '../utils/gatsby/promo'
+import { getFormattedPromoPath } from '../utils/gatsby/promo'
 import { getSongUrlPath } from './url'
 
 export const reloadFromRoot = () => {
@@ -30,13 +29,7 @@ export const navigateToAlbumPage = (
 
 export const navigateToPitchPage = (pitchKey, pitchSlideIndex) => {
     navigate(
-        `/${
-            getPromoPath(pitchKey)
-        }/${
-            pitchSlideIndex
-        }-${
-            getPathForSlide(pitchKey, pitchSlideIndex)
-        }`,
+        `/${getFormattedPromoPath(pitchKey, pitchSlideIndex)}`,
         // Replace, not push, in history.
         { replace: true },
     )
