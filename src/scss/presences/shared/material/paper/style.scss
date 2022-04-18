@@ -12,13 +12,13 @@
 .blueDisplayLine { stroke: hsla(200, 35%, 72%, 0.75); }
 .redDisplayLine { stroke: hsla(0, 35%, 72%, 0.75); }
 
-.darkenDefault .darken#{$suffix} {
+.darkRoomDefault .darkRoom#{$suffix} {
     .paperMediumLight { fill: hsl(48, 11%, 43%); }
     .blueDisplayLine { stroke: hsla(200, 35%, 32%, 0.75); }
     .redDisplayLine { stroke: hsla(0, 35%, 32%, 0.75); }
 }
 
-.darkenDefault .darken#{$suffix}, .darkenExtra .darkenExtra#{$suffix} {
+.darkRoomDefault .darkRoom#{$suffix}, .darkRoomExtra .darkRoomExtra#{$suffix} {
     .paperDark { fill: hsl(48, 11%, 35%); }
     .paperLight { fill: hsl(48, 11%, 45%); }
 }

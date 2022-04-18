@@ -67,7 +67,7 @@ import {
     WIDE_COUCH_BENNETT,
     WIDE_COUCH_MIRIAM,
 } from '../../../../../../src/constants/scene/things/panels'
-import { DARKEN_DEFAULT__SHARED, FUTURE__SHARED, PAST__SHARED, PRESENT__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
+import { DARK_ROOM_DEFAULT__SHARED, FUTURE__SHARED, PAST__SHARED, PRESENT__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
 import { OCEAN_LIFE__SHARED } from '../../../../../../src/constants/scene/sharedStyles/animals'
 import { DRAWING__SHARED } from '../../../../../../src/constants/scene/sharedStyles/comic'
 import {
@@ -92,30 +92,30 @@ import {
 
 export default {
     [ATTIC_ARMREST]: [
-        DARKEN_DEFAULT__SHARED,
+        DARK_ROOM_DEFAULT__SHARED,
         ATTIC_LINENS__SHARED,
     ],
     [ATTIC_COUCH]: [
-        DARKEN_DEFAULT__SHARED,
+        DARK_ROOM_DEFAULT__SHARED,
         ATTIC_LINENS__SHARED,
     ],
     [BATHTUB]: null,
-    [BEDROOM_DESK]: DARKEN_DEFAULT__SHARED,
+    [BEDROOM_DESK]: DARK_ROOM_DEFAULT__SHARED,
     [BEDROOM_STOOL]: [
         BENNETT_LINENS__SHARED,
-        DARKEN_DEFAULT__SHARED,
+        DARK_ROOM_DEFAULT__SHARED,
     ],
-    [BENNETT_BED]: DARKEN_DEFAULT__SHARED,
+    [BENNETT_BED]: DARK_ROOM_DEFAULT__SHARED,
     [BENNETT_NIGHTSTAND]: null,
     [BENNETT_RECORD_STAND]: null,
     [BUDDHA_STAND]: [
-        DARKEN_DEFAULT__SHARED,
+        DARK_ROOM_DEFAULT__SHARED,
     ],
-    [CAPTAIN_BED]: DARKEN_DEFAULT__SHARED,
+    [CAPTAIN_BED]: DARK_ROOM_DEFAULT__SHARED,
     [CAVE_SHADOWS]: DRAWING__SHARED,
     [CONVEYOR_BELT]: null,
-    [CROWD_BACK]: DARKEN_DEFAULT__SHARED,
-    [CROWD_SIDE]: DARKEN_DEFAULT__SHARED,
+    [CROWD_BACK]: DARK_ROOM_DEFAULT__SHARED,
+    [CROWD_SIDE]: DARK_ROOM_DEFAULT__SHARED,
     [DISHROOM_SINK]: null,
     [FREEWAY_FENCE]: null,
     [GO_KART_EXTERIOR]: [
@@ -127,12 +127,12 @@ export default {
     [HOSPITAL_RECORD_STAND]: null,
     [KEYBOARD_STAND_LEFT]: null,
     [KEYBOARD_STAND_RIGHT]: null,
-    [LIZ_BED]: DARKEN_DEFAULT__SHARED,
+    [LIZ_BED]: DARK_ROOM_DEFAULT__SHARED,
     [LIZ_COUCH]: [
-        DARKEN_DEFAULT__SHARED,
+        DARK_ROOM_DEFAULT__SHARED,
         LIZ_LINENS__SHARED,
     ],
-    [LIZ_NIGHTSTAND]: DARKEN_DEFAULT__SHARED,
+    [LIZ_NIGHTSTAND]: DARK_ROOM_DEFAULT__SHARED,
     [LIZ_OTTOMAN]: LIZ_LINENS__SHARED,
     [MILK_CRATE]: null,
     [NURSE_BENCH]: null,

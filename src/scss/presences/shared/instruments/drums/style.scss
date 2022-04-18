@@ -3,7 +3,7 @@
     .shellInner { fill: hsl(33, 28%, 50%); }
     .shell { fill: hsl(33, 35%, 55%); }
 
-    .darkenDefault &.darken#{$suffix} {
+    .darkRoomDefault &.darkRoom#{$suffix} {
         .shell { fill: hsl(33, 19%, 29%); }
     }
 }

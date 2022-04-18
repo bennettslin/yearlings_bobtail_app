@@ -5,8 +5,8 @@ import {
     getSeasonForScene,
 } from '../../endpoint/album/scenes'
 import {
-    getIsDarkenExtraScene,
-    getIsDarkenDefaultScene,
+    getIsDarkRoomExtraScene,
+    getIsDarkRoomDefaultScene,
     getIsPastSeason,
     getIsFutureSeason,
     getIsMagicSeason,
@@ -68,14 +68,14 @@ export const mapIsWinterSeason = createSelector(
     skySeason => getIsWinterSeason(skySeason),
 )
 
-export const mapIsDarkenDefaultScene = createSelector(
+export const mapIsDarkRoomDefaultScene = createSelector(
     mapSceneCubesKey,
-    sceneCubesKey => getIsDarkenDefaultScene(sceneCubesKey),
+    sceneCubesKey => getIsDarkRoomDefaultScene(sceneCubesKey),
 )
 
-export const mapIsDarkenExtraScene = createSelector(
+export const mapIsDarkRoomExtraScene = createSelector(
     mapSceneCubesKey,
-    sceneCubesKey => getIsDarkenExtraScene(sceneCubesKey),
+    sceneCubesKey => getIsDarkRoomExtraScene(sceneCubesKey),
 )
 
 export const mapIsPastSeason = createSelector(

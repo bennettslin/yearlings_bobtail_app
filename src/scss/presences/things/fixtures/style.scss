@@ -20,7 +20,7 @@
     // TODO: Not the best approach. Duplicate styling.
     .bulbOn { fill: hsla(240, 100%, 94%, 0.7); }
 
-    .darkenDefault &.darken#{$suffix} {
+    .darkRoomDefault &.darkRoom#{$suffix} {
         .bulbOn { fill: hsla(240, 25%, 52%, 0.7); }
     }
 }

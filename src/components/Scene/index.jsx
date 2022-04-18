@@ -7,8 +7,8 @@ import { updateEntranceStore } from '../../redux/entrance/action'
 import { mapIsSongChangeDone, mapIsSceneChangeDone } from '../../redux/entrance/selector'
 import {
     mapIsAutumnSeason,
-    mapIsDarkenDefaultScene,
-    mapIsDarkenExtraScene,
+    mapIsDarkRoomDefaultScene,
+    mapIsDarkRoomExtraScene,
     mapIsFutureSeason,
     mapIsMagicSeason,
     mapIsNightTime,
@@ -24,8 +24,8 @@ const Scene = () => {
         dispatch = useDispatch(),
         isSongChangeDone = useSelector(mapIsSongChangeDone),
         isSceneChangeDone = useSelector(mapIsSceneChangeDone),
-        isDarkenDefaultScene = useSelector(mapIsDarkenDefaultScene),
-        isDarkenExtraScene = useSelector(mapIsDarkenExtraScene),
+        isDarkRoomDefaultScene = useSelector(mapIsDarkRoomDefaultScene),
+        isDarkRoomExtraScene = useSelector(mapIsDarkRoomExtraScene),
         isNightTime = useSelector(mapIsNightTime),
         isAutumnSeason = useSelector(mapIsAutumnSeason),
         isWinterSeason = useSelector(mapIsWinterSeason),
@@ -59,8 +59,8 @@ const Scene = () => {
                 {...{
                     className: cx(
                         'Scene',
-                        isDarkenDefaultScene && 'darkenDefault',
-                        isDarkenExtraScene && 'darkenExtra',
+                        isDarkRoomDefaultScene && 'darkRoomDefault',
+                        isDarkRoomExtraScene && 'darkRoomExtra',
                         isNightTime && 'nightTime',
                         isAutumnSeason && 'autumnSeason',
                         isWinterSeason && 'winterSeason',

@@ -22,7 +22,7 @@ import {
     EL_TORITO,
 } from '../../../../../../src/constants/scene/actors/songs'
 import { BENNETT } from '../../../../../../src/constants/scene/actors'
-import { DARKEN_EXTRA__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
+import { DARK_ROOM_EXTRA__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
 import { OPAL__SHARED } from '../../../../../../src/constants/scene/sharedStyles/animals'
 import { CHINESE_TAKEOUT__SHARED } from '../../../../../../src/constants/scene/sharedStyles/food'
 import { LIZ_LINENS__SHARED } from '../../../../../../src/constants/scene/sharedStyles/furniture'
@@ -39,7 +39,7 @@ export default {
     [GATE_CODE]: BACKPACK__SHARED,
     [RUMPLED_LINENS]: BACKPACK__SHARED,
     [ASLEEP_REACHING]: [
-        DARKEN_EXTRA__SHARED,
+        DARK_ROOM_EXTRA__SHARED,
         LIZ_LINENS__SHARED,
     ],
     [LEAVING_CRUMBLED]: null,
@@ -53,7 +53,7 @@ export default {
     [DEFENDING]: CHINESE_TAKEOUT__SHARED,
     [NOT_HUNGRY]: CHINESE_TAKEOUT__SHARED,
     [ASLEEP_COUCH]: [
-        DARKEN_EXTRA__SHARED,
+        DARK_ROOM_EXTRA__SHARED,
         LIZ_LINENS__SHARED,
     ],
     [EL_TORITO]: null,

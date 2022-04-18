@@ -1,7 +1,7 @@
 .odinPast#{$suffix} {
     .fur { fill: hsl($HUE_PAST, 33%, 52%); }
 
-    .darkenDefault &.darken#{$suffix} {
+    .darkRoomDefault &.darkRoom#{$suffix} {
         .fur { fill: hsl($HUE_PAST, 13%, 26%); }
     }
 }

@@ -24,7 +24,7 @@ import {
 } from '../constants/scene/sky'
 
 // Scenes where only the default presences are darkened.
-export const getIsDarkenDefaultScene = sceneCubesKey => {
+export const getIsDarkRoomDefaultScene = sceneCubesKey => {
     switch (sceneCubesKey) {
         // These include all the darken extra scenes.
         case TAIWAN_ROOM_KEY:
@@ -48,7 +48,7 @@ export const getIsDarkenDefaultScene = sceneCubesKey => {
 }
 
 // Scenes where designated extra presences are darkened.
-export const getIsDarkenExtraScene = sceneCubesKey => {
+export const getIsDarkRoomExtraScene = sceneCubesKey => {
     switch (sceneCubesKey) {
         case BEDROOM_MAGIC_KEY:
         case BEDROOM_FUTURE_KEY:

@@ -17,7 +17,7 @@ import {
     SHEEPISH,
 } from '../../../../../../src/constants/scene/actors/preteenBennett'
 import { ASLEEP } from '../../../../../../src/constants/scene/actors/songs'
-import { DARKEN_EXTRA__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
+import { DARK_ROOM_EXTRA__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
 import { PUDDING__SHARED } from '../../../../../../src/constants/scene/sharedStyles/food'
 import {
     BENNETT_LINENS__SHARED,
@@ -47,10 +47,10 @@ export default {
         BENNETT_LINENS__SHARED,
     ],
     [ASLEEP]: [
-        DARKEN_EXTRA__SHARED,
+        DARK_ROOM_EXTRA__SHARED,
         BENNETT_LINENS__SHARED,
     ],
-    [SHAKEN]: DARKEN_EXTRA__SHARED,
+    [SHAKEN]: DARK_ROOM_EXTRA__SHARED,
     [STOIC]: PUDDING__SHARED,
     [WISTFUL]: null,
     [SHEEPISH]: null,

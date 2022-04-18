@@ -2,7 +2,7 @@
     .fur { fill: hsl(210, 13%, 41%); }
     .nose { fill: hsl(210, 13%, 31%); }
 
-    .darkenDefault &.darken#{$suffix} {
+    .darkRoomDefault &.darkRoom#{$suffix} {
         .fur { fill: hsl(210, 13%, 26%); }
     }
 }

@@ -8,14 +8,14 @@
     .lizPillow { fill: hsl($HUE_LIZ_LINENS + 15, 27%, 59%); }
     .lizBlanket { fill: hsl($HUE_LIZ_LINENS, 25%, 60%); }
 
-    .darkenDefault &.darken#{$suffix} {
+    .darkRoomDefault &.darkRoom#{$suffix} {
         .cushion { fill: hsl($HUE_LIZ_LINENS, 6%, 28%); }
         .pillowSurface { fill: hsl($HUE_LIZ_LINENS, 4%, 25%); }
         .pillowEdge { fill: hsl($HUE_LIZ_LINENS, 5%, 22%); }
         .skirt { fill: hsl($HUE_LIZ_LINENS, 6%, 21%); }
     }
 
-    .darkenExtra &.darkenExtra#{$suffix} {
+    .darkRoomExtra &.darkRoomExtra#{$suffix} {
         .boyfriendPillow { fill: hsl($HUE_LIZ_LINENS - 35, 15%, 36%); }
         .lizPillow { fill: hsl($HUE_LIZ_LINENS + 15, 15%, 36%); }
         .lizBlanket { fill: hsl($HUE_LIZ_LINENS, 15%, 37%); }

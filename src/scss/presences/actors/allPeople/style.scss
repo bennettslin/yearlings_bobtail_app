@@ -58,7 +58,7 @@
     .nippleEastAsian { fill: hsl(16, 26%, 49%); }
     .nippleWhiteBlood { fill: hsl(1, 26%, 49%); }
 
-    .darkenDefault &.darken#{$suffix} {
+    .darkRoomDefault &.darkRoom#{$suffix} {
         // Includes fridge drawings and Bloom County poster.
         .skinBlack { fill: hsl(29, 18%, 32%); }
         .skinAshkenazi { fill: hsl(22, 18%, 42%); }
@@ -68,7 +68,7 @@
         .hairBlonde { fill: hsl(41, 12%, 41%); }
     }
 
-    .darkenExtra &.darkenExtra#{$suffix} {
+    .darkRoomExtra &.darkRoomExtra#{$suffix} {
         [class^=lipFemaleBrown] { fill: hsla(2, 11%, 22%, 0.52); }
         .lipMaleMedium__noStroke { fill: hsla(1, 11%, 34%, 0.4); }
         .teeth { fill: hsl(40, 13%, 42%); }
@@ -76,8 +76,8 @@
         .skinEastAsian { fill: hsl(29, 18%, 40%); }
     }
 
-    .darkenDefault &.darken#{$suffix},
-    .darkenExtra &.darkenExtra#{$suffix} {
+    .darkRoomDefault &.darkRoom#{$suffix},
+    .darkRoomExtra &.darkRoomExtra#{$suffix} {
         // Includes Bloom County poster.
         .hairBlackDark { fill: hsl(26, 6%, 18%); }
         .eyebrowBlack, .hairBlack { fill: hsl(26, 6%, 20%); }

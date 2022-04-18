@@ -23,7 +23,6 @@ import {
 import {
     SEASON_SUMMER,
     SEASON_THOUGHT,
-    TIME_DAWN,
     TIME_NIGHT,
     TIME_TWILIGHT,
 } from '../../../../src/constants/scene/sky'
@@ -301,6 +300,6 @@ export default [
             },
         },
         cubes: ATTIC_KEY,
-        sky: { time: TIME_DAWN, season: SEASON_SUMMER },
+        sky: { time: TIME_TWILIGHT, season: SEASON_SUMMER },
     },
 ]

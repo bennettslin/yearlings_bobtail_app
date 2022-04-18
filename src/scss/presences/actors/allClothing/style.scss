@@ -23,7 +23,7 @@
     .soleWhite { fill: hsl(0, 0%, 77%); }
     .soleWhiteDark { fill: hsl(0, 0%, 67%); }
     
-    .darkenExtra &.darkenExtra#{$suffix} {
+    .darkRoomExtra &.darkRoomExtra#{$suffix} {
         .shirtWhite { fill: hsl(0, 0%, 47%); }
         .soleWhite { fill: hsl(0, 0%, 31%); }
     }

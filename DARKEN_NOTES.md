@@ -1,8 +1,6 @@
 # Darken notes
 
 # Immediate TODO
-* Rename to dark room
-
 * Adjust wine bottle
     * Just get rid of wine top?
     * Get rid of label colours, just use general colours
@@ -17,5 +15,6 @@
 * Autumn and winter foliage colours
 * Night colours
     * Night cubes
+    * Dark clear cubes
     * Dark interior cubes? Apartment, club loading, El Torito
 * Past, future, and magic colours

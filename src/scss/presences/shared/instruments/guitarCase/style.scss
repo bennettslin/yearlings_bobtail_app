@@ -6,7 +6,7 @@
     .guitarLeatherDark { fill: hsl(198, 6%, 30%); }
     .guitarLeatherLight { fill: hsl(196, 6%, 35%); }
 
-    .darkenDefault &.darken#{$suffix} {
+    .darkRoomDefault &.darkRoom#{$suffix} {
         .guitarCaseLight { fill: hsl(180, 7%, 24%); }
         .guitarLeatherLight { fill: hsl(196, 6%, 22%); }
     }
