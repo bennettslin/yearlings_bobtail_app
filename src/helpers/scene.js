@@ -76,7 +76,7 @@ export const getIsFutureScene = sceneCubesKey => {
     return false
 }
 
-export const getIsNightMagicScene = sceneCubesKey => {
+export const getIsMagicScene = sceneCubesKey => {
     switch (sceneCubesKey) {
         case CHANGELING_CAVE_KEY:
         case BEDROOM_MAGIC_KEY:

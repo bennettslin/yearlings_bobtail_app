@@ -19,7 +19,7 @@ import {
 import {
     SEASON_AUTUMN,
     SEASON_FUTURE,
-    SEASON_NIGHT_MAGIC,
+    SEASON_MAGIC,
     SEASON_PAST,
     SEASON_PRESENT,
     TIME_NIGHT,
@@ -188,7 +188,7 @@ export default [
             },
         },
         cubes: BASEMENT_BED_MAGIC_KEY,
-        sky: { season: SEASON_NIGHT_MAGIC },
+        sky: { season: SEASON_MAGIC },
     },
     {
         unitIndex: 5,
@@ -367,6 +367,6 @@ export default [
             },
         },
         cubes: BASEMENT_BED_MAGIC_KEY,
-        sky: { season: SEASON_NIGHT_MAGIC },
+        sky: { season: SEASON_MAGIC },
     },
 ]

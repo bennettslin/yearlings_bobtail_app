@@ -17,7 +17,7 @@ import {
     SEASON_FUTURE,
 
     SEASON_LOVE,
-    SEASON_NIGHT_MAGIC,
+    SEASON_MAGIC,
     SEASON_OCEAN_TOP,
     SEASON_OCEAN_SIDE,
     SEASON_THOUGHT,
@@ -62,7 +62,7 @@ const Skies = () => {
                 <Sky {...{ sceneSeason: SEASON_OCEAN_SIDE }} />
                 <Sky {...{ sceneSeason: SEASON_LOVE }} />
                 <Sky {...{ sceneSeason: SEASON_THOUGHT }} />
-                <Sky {...{ sceneSeason: SEASON_NIGHT_MAGIC }} />
+                <Sky {...{ sceneSeason: SEASON_MAGIC }} />
             </div>
         </div>
     )

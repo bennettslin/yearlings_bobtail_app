@@ -23,7 +23,7 @@ import {
 } from '../../../../src/constants/scene/scenes'
 import {
     SEASON_FUTURE,
-    SEASON_NIGHT_MAGIC,
+    SEASON_MAGIC,
     SEASON_AUTUMN,
     TIME_AFTERNOON,
     TIME_EVENING,
@@ -301,7 +301,7 @@ export default [
             },
         },
         cubes: BEDROOM_MAGIC_KEY,
-        sky: { season: SEASON_NIGHT_MAGIC },
+        sky: { season: SEASON_MAGIC },
     },
     {
         unitIndex: 12,

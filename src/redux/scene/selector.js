@@ -9,7 +9,7 @@ import {
     getIsDarkenDefaultScene,
     getIsPastScene,
     getIsFutureScene,
-    getIsNightMagicScene,
+    getIsMagicScene,
 } from '../../helpers/scene'
 import { mapIsSongSelectComplete } from '../entrance/selector'
 import { DEFAULT_STAGE_KEY } from '../../constants/scene/scenes'
@@ -70,9 +70,9 @@ export const mapIsFutureScene = createSelector(
     sceneCubesKey => getIsFutureScene(sceneCubesKey),
 )
 
-export const mapIsNightMagicScene = createSelector(
+export const mapIsMagicScene = createSelector(
     mapSceneCubesKey,
-    sceneCubesKey => getIsNightMagicScene(sceneCubesKey),
+    sceneCubesKey => getIsMagicScene(sceneCubesKey),
 )
 
 export const mapCanStageReset = createSelector(

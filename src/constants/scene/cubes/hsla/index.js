@@ -58,7 +58,7 @@ import {
     MIRIAM_COUCH_COLOUR,
     NIGHT_COLOUR,
     NIGHT_FUTURE_COLOUR,
-    NIGHT_MAGIC_COLOUR,
+    MAGIC_COLOUR,
     OCEAN_COLOUR,
     OLD_FLOOR_COLOUR,
     PAVEMENT_COLOUR,
@@ -119,7 +119,7 @@ export default {
     [SNOW_FLOOR_COLOUR]: { h: parseInt(HUE_SNOW), s: 30, l: 87 },
     /* Z. */
     [NIGHT_COLOUR]: { h: 221, s: 17, l: 34 },
-    [NIGHT_MAGIC_COLOUR]: { h: 125, s: 17, l: 25 },
+    [MAGIC_COLOUR]: { h: 125, s: 17, l: 25 },
     [NIGHT_FUTURE_COLOUR]: { h: 276, s: 17, l: 25 },
     /* L, M, N, O. */
     [SPOTLIGHT_MEDIUM_COLOUR]: { h: 77, s: 19, l: 35 },

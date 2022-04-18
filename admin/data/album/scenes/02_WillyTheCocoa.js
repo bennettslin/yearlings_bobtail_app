@@ -18,7 +18,7 @@ import {
     PORCH_KEY,
 } from '../../../../src/constants/scene/scenes'
 import {
-    SEASON_NIGHT_MAGIC,
+    SEASON_MAGIC,
     SEASON_SUMMER,
     TIME_DAWN,
     TIME_EVENING,
@@ -346,7 +346,7 @@ export default [
             },
         },
         cubes: CHANGELING_CAVE_KEY,
-        sky: { season: SEASON_NIGHT_MAGIC },
+        sky: { season: SEASON_MAGIC },
 
     },
 ]

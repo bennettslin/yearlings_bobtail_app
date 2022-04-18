@@ -21,7 +21,7 @@ export const SEASON_PRESENT = 'present'
 export const SEASON_FUTURE = 'future'
 
 export const SEASON_LOVE = 'love'
-export const SEASON_NIGHT_MAGIC = 'nightMagic'
+export const SEASON_MAGIC = 'magic'
 export const SEASON_OCEAN_TOP = 'oceanTop'
 export const SEASON_OCEAN_SIDE = 'oceanSide'
 export const SEASON_THOUGHT = 'thought'

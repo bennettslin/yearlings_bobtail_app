@@ -6,7 +6,7 @@ import {
     mapIsSongChangeDone,
     mapIsSceneChangeDone,
 } from '../../redux/entrance/selector'
-import { mapIsDarkenExtraScene, mapIsDarkenDefaultScene, mapIsPastScene, mapIsFutureScene, mapIsNightMagicScene } from '../../redux/scene/selector'
+import { mapIsDarkenExtraScene, mapIsDarkenDefaultScene, mapIsPastScene, mapIsFutureScene, mapIsMagicScene } from '../../redux/scene/selector'
 import Transition from 'react-transition-group/Transition'
 import Cubes from '../Cubes'
 import Presences from '../Presences'
@@ -22,7 +22,7 @@ const Scene = () => {
         isDarkenExtraScene = useSelector(mapIsDarkenExtraScene),
         isPastScene = useSelector(mapIsPastScene),
         isFutureScene = useSelector(mapIsFutureScene),
-        isNightMagicScene = useSelector(mapIsNightMagicScene)
+        isMagicScene = useSelector(mapIsMagicScene)
 
     const onExited = () => {
         logTransition('Scene did exit.')
@@ -54,7 +54,7 @@ const Scene = () => {
                         isDarkenExtraScene && 'darkenExtra',
                         isPastScene && 'pastScene',
                         isFutureScene && 'futureScene',
-                        isNightMagicScene && 'nightMagic',
+                        isMagicScene && 'magicScene',
                         'abF',
                     ),
                 }}

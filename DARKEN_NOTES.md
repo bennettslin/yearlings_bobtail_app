@@ -1,9 +1,16 @@
 # Darken notes
 
 # Next TODO
+* Make attic fridge longer
+
 * Condense NoHo house, apartment, club, El Torito exteriors
-* Lighten darkened past colours for Bennett and Odin (Odin)
-* Selectors for autumn, winter, and night scenes
-* Change night magic to just magic
+* Make attic rafters slanted
 * Pole in locker bank
 * Bathroom past cubes
+
+* Selectors for autumn, winter, and night scenes
+
+* Lighten darkened past colours for Bennett and Odin (Odin)
+* Autumn and winter foliage colours
+* Night colours
+* Past, future, and magic colours

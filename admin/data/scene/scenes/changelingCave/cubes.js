@@ -3,7 +3,7 @@ import { CHANGELING_CAVE_KEY } from '../../../../../src/constants/scene/scenes'
 import {
     GROUND_CLEAR_COLOUR as G,
     PAVEMENT_COLOUR as V,
-    NIGHT_MAGIC_COLOUR as Z,
+    MAGIC_COLOUR as Z,
     SPOTLIGHT_MEDIUM_COLOUR as L,
     SPOTLIGHT_LIGHT_COLOUR as M,
     SPOTLIGHT_LIGHTER_COLOUR as N,
