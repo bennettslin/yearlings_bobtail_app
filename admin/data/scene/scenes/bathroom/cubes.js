@@ -7,6 +7,7 @@ import {
     DEFAULT_CLEAR_COLOUR as D,
     GROUND_CLEAR_COLOUR as G,
     LINOLEUM_FLOOR_COLOUR as F,
+    PAST_LINOLEUM_COLOUR as Z,
     SOFT_WALL_COLOUR as W,
 } from '../../../../../src/constants/scene/cubes/colours'
 
@@ -46,6 +47,16 @@ export default {
         floor: DEFAULT_FLOOR,
     },
     [BATHROOM_PAST_KEY]: {
-        floor: DEFAULT_FLOOR,
+        floor: {
+            hslaColours: [
+                [G],
+                [Z],
+                [Z],
+                [Z, Z, Z, D, D, D, D, Z],
+                [Z],
+                [Z],
+            ],
+            zIndices: DEFAULT_FLOOR.zIndices,
+        },
     },
 }

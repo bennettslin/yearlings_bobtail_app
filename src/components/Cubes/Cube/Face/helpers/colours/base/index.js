@@ -6,6 +6,7 @@ import {
     WOOD_FLOOR_COLOUR,
     BENNETT_FLOOR_COLOUR,
     LINOLEUM_FLOOR_COLOUR,
+    PAST_LINOLEUM_COLOUR,
 } from '../../../../../../../constants/scene/cubes/colours'
 import HSLA_MAP from '../../../../../../../constants/scene/cubes/hsla'
 
@@ -98,6 +99,7 @@ const COLOUR_GETTER_MAP = {
     [WOOD_FLOOR_COLOUR]: _getRandomBrickPatternValue,
     [BENNETT_FLOOR_COLOUR]: _getDiagonalValue,
     [LINOLEUM_FLOOR_COLOUR]: _getCheckerboardValue,
+    [PAST_LINOLEUM_COLOUR]: _getCheckerboardValue,
 }
 
 export const getBaseColour = ({

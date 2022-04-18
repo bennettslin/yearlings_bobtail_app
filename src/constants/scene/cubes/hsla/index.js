@@ -84,6 +84,7 @@ import {
     VELVET_FLOOR_COLOUR,
     WAITING_ARMCHAIR_COLOUR,
     WOOD_FLOOR_COLOUR,
+    PAST_LINOLEUM_COLOUR,
 } from '../colours'
 
 export default {
@@ -118,8 +119,9 @@ export default {
     [VELVET_FLOOR_COLOUR]: { h: 357, s: 44, l: 36 },
     [SNOW_FLOOR_COLOUR]: { h: parseInt(HUE_SNOW), s: 30, l: 87 },
     /* Z. */
-    [NIGHT_COLOUR]: { h: 221, s: 17, l: 34 },
+    [PAST_LINOLEUM_COLOUR]: { h: parseInt(HUE_PAST), s: 14, l: 67 },
     [MAGIC_COLOUR]: { h: 125, s: 17, l: 25 },
+    [NIGHT_COLOUR]: { h: 221, s: 17, l: 34 },
     [NIGHT_FUTURE_COLOUR]: { h: 276, s: 17, l: 25 },
     /* L, M, N, O. */
     [SPOTLIGHT_MEDIUM_COLOUR]: { h: 77, s: 19, l: 35 },
