@@ -17,14 +17,18 @@ export default {
     [CLUB_LOADING]: {
         ceiling: {
             hslaColours: [
-                [C, B, E, B, E, B, E, B, E, B, E, B],
-                [C, X],
+                [C, B, E, B, E, B, E, B, E, B, E, C],
+                [C, X, C, C, C, C, C, C, C, C, X, C],
+                [C, X, X, X, X, X, X, X, X, X, X, C],
+                [C],
                 [C],
                 [D],
             ],
             zIndices: [
-                [f, 1],
-                [f, 1, 1, 1, d, d, d, 1],
+                [f, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, f],
+                [f, 1, f, f, f, f, f, f, f, f, 1, f],
+                [f, 1, 1, 1, d, d, d, 1, 1, 1, 1, f],
+                [f],
                 [f],
                 [k],
             ],
@@ -32,7 +36,8 @@ export default {
         floor: {
             hslaColours: [
                 [G],
-                [V, F],
+                [V, F, F, F, F, F, F, F, F, F, F, V],
+                [V, F, F, F, F, F, F, F, F, F, F, V],
                 [V],
             ],
             zIndices: [

@@ -15,42 +15,42 @@ import { SIDELONG_HESITANCE } from '../../../../../src/constants/scene/actors/be
 export default {
     [ANA]: {
         [WAITING]: {
-            yIndex: 3,
+            yIndex: 4,
             xPosition: 0.5,
             zOffset: -0.07,
         },
     },
     [MARA]: {
         [WAITING]: {
-            yIndex: 3,
+            yIndex: 4,
             xPosition: 2.3,
             zOffset: -0.07,
         },
     },
     [BENNETT]: {
         [SIDELONG_HESITANCE]: {
-            yIndex: 3,
+            yIndex: 4,
             xPosition: 4.7,
             zOffset: -0.05,
         },
     },
     [AMY]: {
         [MINGLING]: {
-            yIndex: 3,
+            yIndex: 4,
             xPosition: 7.3,
             zOffset: -0.06,
         },
     },
     [WADE]: {
         [MINGLING]: {
-            yIndex: 3,
+            yIndex: 4,
             xPosition: 8.7,
             zOffset: -0.05,
         },
     },
     [STEPHANIE]: {
         [MINGLING]: {
-            yIndex: 3,
+            yIndex: 4,
             xPosition: 10.5,
             zOffset: -0.06,
         },

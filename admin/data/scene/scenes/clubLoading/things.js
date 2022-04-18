@@ -8,14 +8,14 @@ import { DRUMS_STACKED__CLUB } from '../../../../../src/constants/scene/things/f
 export default {
     [DOOR]: {
         [CLUB_DOOR_OPEN]: {
-            yIndex: 2,
+            yIndex: 3,
             xPosition: 5.25,
             zOffset: -0.07,
         },
     },
     [FIXTURE]: {
         [DRUMS_STACKED__CLUB]: {
-            yIndex: 2,
+            yIndex: 3,
             xPosition: 1.6,
         },
     },
