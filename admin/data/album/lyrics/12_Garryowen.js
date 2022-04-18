@@ -648,7 +648,7 @@ export default {
                             todo: true,
                             // TODO: Still undecided.
                             card: {
-                                description: `More than anything else, I was just so tired of feeling my emotions lurch from one extreme to the next. Ending the relationship meant that I could finally drop my "anger" and feel anchored in my life.`,
+                                description: `More than anything else, I was just tired of feeling my emotions lurch from one extreme to the next. Ending the relationship meant that I could finally drop my "anger" and feel anchored in life.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,

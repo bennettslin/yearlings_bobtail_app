@@ -131,8 +131,10 @@ export const getSpacedObjectForKeys = ({
 }) => (
     keys.reduce((entity, key) => {
         // This mutates the object.
-        entity[key] = _recurseForSpacedFormat(entity[key], key)
-
+        const entry = _recurseForSpacedFormat(entity[key], key)
+        if (entry) {
+            entity[key] = entry
+        }
         return entity
     }, object)
 )

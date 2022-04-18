@@ -21,16 +21,25 @@ const PromoView = ({
 )
 
 PromoView.propTypes = {
-    title: PropTypes.string,
+    title: PropTypes.oneOfType([
+        PropTypes.array,
+        PropTypes.object,
+        PropTypes.string,
+    ]),
     body: PropTypes.arrayOf(
         PropTypes.oneOfType([
             PropTypes.shape({
-                title: PropTypes.string,
+                title: PropTypes.oneOfType([
+                    PropTypes.array,
+                    PropTypes.object,
+                    PropTypes.string,
+                ]),
                 promoKeys: PropTypes.arrayOf(
                     PropTypes.string.isRequired,
                 ),
                 paragraph: PropTypes.oneOfType([
                     PropTypes.array,
+                    PropTypes.object,
                     PropTypes.string,
                 ]),
             }),

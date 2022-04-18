@@ -88,7 +88,7 @@ export default {
                                                 wiki: `Beautiful_Losers`,
                                             },
                                         },
-                                        `, the character F. tires of getting bullied at the beach. So he signs up for the Charles Axis bodybuilding course advertised in a comic book, only to find out that it's Charles Axis who bullies him. This absurd revelation sums up my mood when I reflect on where my own adventures in mail order ended up taking me.`,
+                                        `, the character F. tires of getting bullied at the beach. So he signs up for the Charles Axis bodybuilding course advertised in a comic book— only to find out it's Charles Axis who bullies him. This absurd revelation pretty much sums up my mood when I reflect on my own adventures in mail order, and where they ended up taking me.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,

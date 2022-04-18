@@ -617,7 +617,7 @@ export default {
                                         anchor: `time capsule`,
                                         wiki: `Time_capsule`,
                                     },
-                                    `allows a past generation to speak to future ones. And in my dejected state, I could only envision my next five-year plan as a forum for airing my grievances to a future audience.`,
+                                    `allows a past generation to speak to a future one. And in my dejected state, I could only envision my next five-year plan as a means to deliver my grievances to a captive audience.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
