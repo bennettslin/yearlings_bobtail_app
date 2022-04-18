@@ -9,8 +9,6 @@
         * Single wine bottle doesn't need bottom
     * See if these can also apply to other bottles
 
-* Change bathroom colours to be more yellow
-
 # Next TODO
 * Autumn and winter foliage colours
 * Night colours
