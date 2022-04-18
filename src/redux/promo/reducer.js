@@ -22,14 +22,15 @@ export const getPromoReducer = ({
             }
         case SET_PITCH_SLIDE_INDEX: {
             const
-                { pitchKey, pitchSlideIndex } = payload,
-                { pitchSlideIndices } = state
+                { pitchSlideIndex } = payload,
+                { selectedPromoKey, pitchSlideIndices } = state
 
             return {
                 ...state,
                 pitchSlideIndices: {
                     ...pitchSlideIndices,
-                    [pitchKey]: pitchSlideIndex,
+                    // This does NOT check if selected promo key is valid pitch.
+                    [selectedPromoKey]: pitchSlideIndex,
                 },
             }
         }

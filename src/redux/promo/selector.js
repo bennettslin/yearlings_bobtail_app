@@ -20,5 +20,7 @@ export const mapSelectedPitchSlideIndex = createSelector(
     (
         selectedPromoKey,
         pitchSlideIndices,
-    ) => pitchSlideIndices[selectedPromoKey],
+
+    // Return -1 if selected promo key is not valid pitch.
+    ) => pitchSlideIndices[selectedPromoKey] || -1,
 )

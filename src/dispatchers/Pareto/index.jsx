@@ -16,18 +16,18 @@ const ParetoDispatcher = forwardRef((props, ref) => {
 
     }) => {
         if (Number.isFinite(nextParetoSlideIndex)) {
-            dispatch(setPitchSlideIndex(PARETO_SUBPATH, nextParetoSlideIndex))
+            dispatch(setPitchSlideIndex(nextParetoSlideIndex))
             return true
 
         } else if (direction === -1) {
             if (paretoSlideIndex > 1) {
-                dispatch(setPitchSlideIndex(PARETO_SUBPATH, paretoSlideIndex - 1))
+                dispatch(setPitchSlideIndex(paretoSlideIndex - 1))
                 return true
             }
 
         } else if (direction === 1) {
             if (paretoSlideIndex < getSlidesCount(PARETO_SUBPATH)) {
-                dispatch(setPitchSlideIndex(PARETO_SUBPATH, paretoSlideIndex + 1))
+                dispatch(setPitchSlideIndex(paretoSlideIndex + 1))
                 return true
             }
         }

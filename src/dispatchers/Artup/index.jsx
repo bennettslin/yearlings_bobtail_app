@@ -16,18 +16,18 @@ const ArtupDispatcher = forwardRef((props, ref) => {
 
     }) => {
         if (Number.isFinite(nextArtupSlideIndex)) {
-            dispatch(setPitchSlideIndex(ARTUP_SUBPATH, nextArtupSlideIndex))
+            dispatch(setPitchSlideIndex(nextArtupSlideIndex))
             return true
 
         } else if (direction === -1) {
             if (artupSlideIndex > 1) {
-                dispatch(setPitchSlideIndex(ARTUP_SUBPATH, artupSlideIndex - 1))
+                dispatch(setPitchSlideIndex(artupSlideIndex - 1))
                 return true
             }
 
         } else if (direction === 1) {
             if (artupSlideIndex < getSlidesCount(ARTUP_SUBPATH)) {
-                dispatch(setPitchSlideIndex(ARTUP_SUBPATH, artupSlideIndex + 1))
+                dispatch(setPitchSlideIndex(artupSlideIndex + 1))
                 return true
             }
         }
