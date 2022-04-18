@@ -45,8 +45,7 @@
     "react-transition-group": "^4.4.2",
     "redux": "^4.1.1",
     "reselect": "^4.0.0",
-    "scroll-into-view": "^1.16.0",
-    "slugify": "^1.6.5"
+    "scroll-into-view": "^1.16.0"
   },
   "devDependencies": {
     "@babel/core": "^7.17.8",
@@ -74,6 +73,7 @@
     "postcss": "^8.3.6",
     "redux-devtools-extension": "^2.13.9",
     "sass": "^1.38.0",
+    "slugify": "^1.6.5",
     "webpack": "^5.70.0"
   }
 }

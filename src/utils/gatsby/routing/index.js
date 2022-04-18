@@ -1,8 +1,7 @@
 import { getIsSongValid } from '../../../endpoint/album/songs'
 import { getIsVerseValid } from '../../../endpoint/album/verses'
 import { getIsAnnotationValid } from '../../../endpoint/album/annotations'
-import { getIsArtupSlideValid } from '../../../endpoint/promo/artup'
-import { getIsParetoSlideValid } from '../../../endpoint/promo/pareto'
+import { getIsSlideValid } from '../../../endpoint/promo/pitches'
 import { getPromoPath } from '../promo'
 import {
     getIndexFromPath,
@@ -51,20 +50,12 @@ export const getRoutingAnnotationIndex = (search, songIndex) => {
     ) ? routingAnnotationIndex : NaN
 }
 
-export const getRoutingArtupIndex = pathname => {
-    const routingArtupIndex = getIndexFromPath({
+export const getRoutingPitchIndex = (pitchKey, pathname) => {
+    const routingIndex = getIndexFromPath({
         pathname,
-        rootPath: getPromoPath(ARTUP_SUBPATH),
+        rootPath: getPromoPath(pitchKey),
     })
-    return getIsArtupSlideValid(routingArtupIndex) ? routingArtupIndex : NaN
-}
-
-export const getRoutingParetoIndex = pathname => {
-    const routingParetoIndex = getIndexFromPath({
-        pathname,
-        rootPath: getPromoPath(PARETO_SUBPATH),
-    })
-    return getIsParetoSlideValid(routingParetoIndex) ? routingParetoIndex : NaN
+    return getIsSlideValid(pitchKey, routingIndex) ? routingIndex : NaN
 }
 
 export const getRoutingPromoKey = pathname => {

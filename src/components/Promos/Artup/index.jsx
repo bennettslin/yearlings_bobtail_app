@@ -3,13 +3,10 @@ import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import PromoView from '../../Promo/View'
-import {
-    getBodyForArtupSlide,
-    getFootnoteForArtupSlide,
-    getTitleForArtupSlide,
-} from '../../../endpoint/promo/artup'
 import getPromoServerClientHoc from '../../../hocs/PromoHoc'
 import { mapArtupSlideIndex } from '../../../redux/promo/selector'
+import { getBodyForSlide, getFootnoteForSlide, getTitleForSlide } from '../../../endpoint/promo/pitches'
+import { ARTUP_SUBPATH } from '../../../constants/routing'
 
 const ArtupPromo = ({ serverClientArtupIndex, handlePromoPageChange }) => {
     const artupSlideIndex = useSelector(mapArtupSlideIndex)
@@ -23,9 +20,12 @@ const ArtupPromo = ({ serverClientArtupIndex, handlePromoPageChange }) => {
     return (
         <PromoView
             {...{
-                title: getTitleForArtupSlide(serverClientArtupIndex),
-                body: getBodyForArtupSlide(serverClientArtupIndex),
-                footnote: getFootnoteForArtupSlide(serverClientArtupIndex),
+                title: getTitleForSlide(ARTUP_SUBPATH, serverClientArtupIndex),
+                body: getBodyForSlide(ARTUP_SUBPATH, serverClientArtupIndex),
+                footnote: getFootnoteForSlide(
+                    ARTUP_SUBPATH,
+                    serverClientArtupIndex,
+                ),
             }}
         />
     )

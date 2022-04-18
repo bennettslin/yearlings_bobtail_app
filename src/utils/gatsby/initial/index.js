@@ -1,8 +1,7 @@
 
 import {
     getRoutingAnnotationIndex,
-    getRoutingArtupIndex,
-    getRoutingParetoIndex,
+    getRoutingPitchIndex,
     getRoutingPromoKey,
     getRoutingSongIndex,
     getRoutingVerseIndex,
@@ -77,34 +76,13 @@ export const getInitialAlbumIndices = (pathname, search) => {
     }
 }
 
-export const getInitialArtupIndex = (pathname = '') => {
-    const
-        /**
-         * When called by album reducer, the pathname is obviously not passed,
-         * so we default to the stored index.
-         */
-        routingArtupIndex = getRoutingArtupIndex(pathname),
-        isRoutingArtupValid = Number.isFinite(routingArtupIndex),
-        initialArtupIndex = isRoutingArtupValid ?
-            routingArtupIndex :
-            1
-
-    return initialArtupIndex
-}
-
-export const getInitialParetoIndex = (pathname = '') => {
-    const
-        /**
-         * When called by album reducer, the pathname is obviously not passed,
-         * so we default to the stored index.
-         */
-        routingParetoIndex = getRoutingParetoIndex(pathname),
-        isRoutingParetoValid = Number.isFinite(routingParetoIndex),
-        initialParetoIndex = isRoutingParetoValid ?
-            routingParetoIndex :
-            1
-
-    return initialParetoIndex
+export const getInitialPitchIndex = (pitchKey, pathname = '') => {
+    /**
+     * When called by album reducer, the pathname is obviously not passed,
+     * so we default to the stored index.
+     */
+    const routingPitchIndex = getRoutingPitchIndex(pitchKey, pathname)
+    return Number.isFinite(routingPitchIndex) ? routingPitchIndex : 1
 }
 
 export const getInitialPromoPageKey = (pathname = '') => {

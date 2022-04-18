@@ -7,12 +7,12 @@ import {
     mapSelectedPromoKey,
 } from '../../../redux/promo/selector'
 import {
-    navigateToArtupPage,
-    navigateToParetoPage,
     navigateToPathname,
+    navigateToPitchPage,
 } from '../../../helpers/navigate'
 import { getIsArtupPage, getIsParetoPage } from '../../../helpers/promo'
 import { getPromoPath } from '../../../utils/gatsby/promo'
+import { ARTUP_SUBPATH, PARETO_SUBPATH } from '../../../constants/routing'
 
 const PromoUrlManager = forwardRef(({ verifyBeforeNavigation }, ref) => {
     const
@@ -22,9 +22,9 @@ const PromoUrlManager = forwardRef(({ verifyBeforeNavigation }, ref) => {
 
     const navigateToPromoPage = () => {
         if (getIsArtupPage(selectedPromoKey)) {
-            navigateToArtupPage(artupSlideIndex)
+            navigateToPitchPage(ARTUP_SUBPATH, artupSlideIndex)
         } else if (getIsParetoPage(selectedPromoKey)) {
-            navigateToParetoPage(paretoSlideIndex)
+            navigateToPitchPage(PARETO_SUBPATH, paretoSlideIndex)
         } else {
             navigateToPathname(getPromoPath(selectedPromoKey))
         }

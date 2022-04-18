@@ -1,6 +1,7 @@
 import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { getParetoSlidesCount } from '../../endpoint/promo/pareto'
+import { PARETO_SUBPATH } from '../../constants/routing'
+import { getSlidesCount } from '../../endpoint/promo/pitches'
 import { setParetoSlideIndex } from '../../redux/promo/action'
 import { mapParetoSlideIndex } from '../../redux/promo/selector'
 
@@ -25,7 +26,7 @@ const ParetoDispatcher = forwardRef((props, ref) => {
             }
 
         } else if (direction === 1) {
-            if (paretoSlideIndex < getParetoSlidesCount()) {
+            if (paretoSlideIndex < getSlidesCount(PARETO_SUBPATH)) {
                 dispatch(setParetoSlideIndex(paretoSlideIndex + 1))
                 return true
             }

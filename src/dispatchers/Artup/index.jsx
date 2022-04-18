@@ -1,8 +1,9 @@
 import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { getArtupSlidesCount } from '../../endpoint/promo/artup'
+import { getSlidesCount } from '../../endpoint/promo/pitches'
 import { setArtupSlideIndex } from '../../redux/promo/action'
 import { mapArtupSlideIndex } from '../../redux/promo/selector'
+import { ARTUP_SUBPATH } from '../../constants/routing'
 
 const ArtupDispatcher = forwardRef((props, ref) => {
     const
@@ -25,7 +26,7 @@ const ArtupDispatcher = forwardRef((props, ref) => {
             }
 
         } else if (direction === 1) {
-            if (artupSlideIndex < getArtupSlidesCount()) {
+            if (artupSlideIndex < getSlidesCount(ARTUP_SUBPATH)) {
                 dispatch(setArtupSlideIndex(artupSlideIndex + 1))
                 return true
             }

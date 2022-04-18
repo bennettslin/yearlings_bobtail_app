@@ -3,13 +3,10 @@ import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import PromoView from '../../Promo/View'
-import {
-    getBodyForParetoSlide,
-    getFootnoteForParetoSlide,
-    getTitleForParetoSlide,
-} from '../../../endpoint/promo/pareto'
 import getPromoServerClientHoc from '../../../hocs/PromoHoc'
 import { mapParetoSlideIndex } from '../../../redux/promo/selector'
+import { getBodyForSlide, getFootnoteForSlide, getTitleForSlide } from '../../../endpoint/promo/pitches'
+import { PARETO_SUBPATH } from '../../../constants/routing'
 
 const ParetoPromo = ({ serverClientParetoIndex, handlePromoPageChange }) => {
     const paretoSlideIndex = useSelector(mapParetoSlideIndex)
@@ -23,9 +20,15 @@ const ParetoPromo = ({ serverClientParetoIndex, handlePromoPageChange }) => {
     return (
         <PromoView
             {...{
-                title: getTitleForParetoSlide(serverClientParetoIndex),
-                body: getBodyForParetoSlide(serverClientParetoIndex),
-                footnote: getFootnoteForParetoSlide(serverClientParetoIndex),
+                title: getTitleForSlide(
+                    PARETO_SUBPATH,
+                    serverClientParetoIndex,
+                ),
+                body: getBodyForSlide(PARETO_SUBPATH, serverClientParetoIndex),
+                footnote: getFootnoteForSlide(
+                    PARETO_SUBPATH,
+                    serverClientParetoIndex,
+                ),
             }}
         />
     )

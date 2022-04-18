@@ -1,17 +1,18 @@
 import React, { useRef } from 'react'
 import { useSelector } from 'react-redux'
-import { getArtupSlidesCount } from '../../../../endpoint/promo/artup'
+import { getSlidesCount } from '../../../../endpoint/promo/pitches'
 import { mapArtupSlideIndex } from '../../../../redux/promo/selector'
 import ArtupDispatcher from '../../../../dispatchers/Artup'
 import Pagination from '../../../Promo/Pagination'
+import { ARTUP_SUBPATH } from '../../../../constants/routing'
 
 const ArtupPagination = () => {
     const
         dispatchArtup = useRef(),
         artupSlideIndex = useSelector(mapArtupSlideIndex)
 
-    const dispatchPitch = slideIndex => {
-        dispatchArtup.current({ artupSlideIndex: slideIndex })
+    const dispatchPitch = pitchSlideIndex => {
+        dispatchArtup.current({ artupSlideIndex: pitchSlideIndex })
     }
 
     return (
@@ -20,7 +21,7 @@ const ArtupPagination = () => {
                 {...{
                     dispatchPitch,
                     selectedPitchIndex: artupSlideIndex,
-                    pitchSlideCount: getArtupSlidesCount(),
+                    pitchSlideCount: getSlidesCount(ARTUP_SUBPATH),
                 }}
             />
             <ArtupDispatcher {...{ ref: dispatchArtup }} />
