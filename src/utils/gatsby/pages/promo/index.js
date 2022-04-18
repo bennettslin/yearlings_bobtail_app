@@ -25,14 +25,14 @@ export default [
     ...promo.artup.slides.map(({ path }, index) => ({
         path: `${PROMO_PATH}/${ARTUP_SUBPATH}/${index + 1}-${path}`,
         context: {
-            pageArtupIndex: index + 1,
+            pagePitchIndex: index + 1,
             pagePromoKey: ARTUP_SUBPATH,
         },
     })),
     ...promo.pareto.slides.map(({ path }, index) => ({
         path: `${PROMO_PATH}/${PARETO_SUBPATH}/${index + 1}-${path}`,
         context: {
-            pageParetoIndex: index + 1,
+            pagePitchIndex: index + 1,
             pagePromoKey: PARETO_SUBPATH,
         },
     })),

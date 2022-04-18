@@ -1,11 +1,9 @@
 import React, { forwardRef, useContext } from 'react'
 import { useSelector } from 'react-redux'
-import { ARTUP_SUBPATH, PARETO_SUBPATH } from '../../constants/routing'
-import PageArtupIndexContext from '../../contexts/PageArtupIndex'
-import PageParetoIndexContext from '../../contexts/PageParetoIndex'
+import PagePitchIndexContext from '../../contexts/PagePitchIndex'
 import PagePromoKeyContext from '../../contexts/PagePromoKey'
 import {
-    getMapPitchSlideIndex,
+    mapSelectedPitchSlideIndex,
     mapSelectedPromoKey,
 } from '../../redux/promo/selector'
 import { getIsServerSide } from '../../utils/browser'
@@ -18,29 +16,21 @@ const getPromoServerClientHoc = ServerClientComponent => (
      */
     forwardRef((props, ref) => {
         const
-            pageArtupIndex = useContext(PageArtupIndexContext),
-            pageParetoIndex = useContext(PageParetoIndexContext),
+            pagePitchIndex = useContext(PagePitchIndexContext),
             pagePromoKey = useContext(PagePromoKeyContext),
-            artupSlideIndex = useSelector(getMapPitchSlideIndex(ARTUP_SUBPATH)),
-            paretoSlideIndex = useSelector(getMapPitchSlideIndex(PARETO_SUBPATH)),
             selectedPromoKey = useSelector(mapSelectedPromoKey),
-            serverClientArtupIndex = getIsServerSide() ?
-                pageArtupIndex :
-                artupSlideIndex,
-            serverClientParetoIndex = getIsServerSide() ?
-                pageParetoIndex :
-                paretoSlideIndex,
-            serverClientPromoKey = getIsServerSide() ?
-                pagePromoKey :
-                selectedPromoKey
+            pitchSlideIndex = useSelector(mapSelectedPitchSlideIndex)
 
         return (
             <ServerClientComponent
                 {...{
                     ref,
-                    serverClientArtupIndex,
-                    serverClientParetoIndex,
-                    serverClientPromoKey,
+                    serverClientPitchIndex: getIsServerSide() ?
+                        pagePitchIndex :
+                        pitchSlideIndex,
+                    serverClientPromoKey: getIsServerSide() ?
+                        pagePromoKey :
+                        selectedPromoKey,
                     ...props,
                 }}
             />

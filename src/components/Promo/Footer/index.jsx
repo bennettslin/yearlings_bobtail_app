@@ -1,17 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import Contact from '../../Contact'
+import PitchPagination from '../../Promos/Pitch/Pagination'
+import HomepageButton from './HomepageButton'
 import {
-    getIsArtupPage,
-    getIsParetoPage,
     getIsPitchPage,
     getIsPromoHomepage,
 } from '../../../helpers/promo'
 import getPromoServerClientHoc from '../../../hocs/PromoHoc'
-import Contact from '../../Contact'
-import ArtupPagination from '../../Promos/Artup/Pagination'
-import ParetoPagination from '../../Promos/Pareto/Pagination'
-import HomepageButton from './HomepageButton'
 import './style'
 
 const PromoFooter = ({ serverClientPromoKey }) => (
@@ -24,13 +21,9 @@ const PromoFooter = ({ serverClientPromoKey }) => (
             ),
         }}
     >
-        {getIsArtupPage(serverClientPromoKey) && (
-            <ArtupPagination />
-        )}
-        {getIsParetoPage(serverClientPromoKey) && (
-            <ParetoPagination />
-        )}
-        {!getIsPitchPage(serverClientPromoKey) && (
+        {getIsPitchPage(serverClientPromoKey) ? (
+            <PitchPagination />
+        ) : (
             <Contact isTextShadowLight />
         )}
         {!getIsPromoHomepage(serverClientPromoKey) && (

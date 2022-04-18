@@ -9,21 +9,17 @@ import {
     navigateToPathname,
     navigateToPitchPage,
 } from '../../../helpers/navigate'
-import { getIsArtupPage, getIsParetoPage } from '../../../helpers/promo'
+import { getIsPitchPage } from '../../../helpers/promo'
 import { getPromoPath } from '../../../utils/gatsby/promo'
-import { ARTUP_SUBPATH, PARETO_SUBPATH } from '../../../constants/routing'
 
 const PromoUrlManager = forwardRef(({ verifyBeforeNavigation }, ref) => {
     const
-        artupSlideIndex = useSelector(getMapPitchSlideIndex(ARTUP_SUBPATH)),
-        paretoSlideIndex = useSelector(getMapPitchSlideIndex(PARETO_SUBPATH)),
-        selectedPromoKey = useSelector(mapSelectedPromoKey)
+        selectedPromoKey = useSelector(mapSelectedPromoKey),
+        pitchSlideIndex = useSelector(getMapPitchSlideIndex(selectedPromoKey))
 
     const navigateToPromoPage = () => {
-        if (getIsArtupPage(selectedPromoKey)) {
-            navigateToPitchPage(ARTUP_SUBPATH, artupSlideIndex)
-        } else if (getIsParetoPage(selectedPromoKey)) {
-            navigateToPitchPage(PARETO_SUBPATH, paretoSlideIndex)
+        if (getIsPitchPage(selectedPromoKey)) {
+            navigateToPitchPage(selectedPromoKey, pitchSlideIndex)
         } else {
             navigateToPathname(getPromoPath(selectedPromoKey))
         }
@@ -38,7 +34,7 @@ const PromoUrlManager = forwardRef(({ verifyBeforeNavigation }, ref) => {
         } else {
             navigateToPromoPage()
         }
-    }, [artupSlideIndex, paretoSlideIndex, selectedPromoKey])
+    }, [pitchSlideIndex, selectedPromoKey])
 
     useImperativeHandle(ref, () => navigateToPromoPage)
 

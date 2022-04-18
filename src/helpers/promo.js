@@ -8,17 +8,9 @@ export const getIsPromoHomepage = promoKey => (
     promoKey === ''
 )
 
-export const getIsArtupPage = promoKey => (
-    promoKey === ARTUP_SUBPATH
-)
-
-export const getIsParetoPage = promoKey => (
-    promoKey === PARETO_SUBPATH
-)
-
 export const getIsPitchPage = promoKey => (
-    getIsArtupPage(promoKey) ||
-    getIsParetoPage(promoKey)
+    promoKey === ARTUP_SUBPATH ||
+    promoKey === PARETO_SUBPATH
 )
 
 export const getIsOnesheetPage = promoKey => (
