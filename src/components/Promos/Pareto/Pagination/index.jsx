@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import { useSelector } from 'react-redux'
 import { getSlidesCount } from '../../../../endpoint/promo/pitches'
-import { mapParetoSlideIndex } from '../../../../redux/promo/selector'
+import { getMapPitchSlideIndex } from '../../../../redux/promo/selector'
 import ParetoDispatcher from '../../../../dispatchers/Pareto'
 import Pagination from '../../../Promo/Pagination'
 import { PARETO_SUBPATH } from '../../../../constants/routing'
@@ -9,7 +9,7 @@ import { PARETO_SUBPATH } from '../../../../constants/routing'
 const ParetoPagination = () => {
     const
         dispatchPareto = useRef(),
-        paretoSlideIndex = useSelector(mapParetoSlideIndex)
+        paretoSlideIndex = useSelector(getMapPitchSlideIndex(PARETO_SUBPATH))
 
     const dispatchPitch = pitchSlideIndex => {
         dispatchPareto.current({ paretoSlideIndex: pitchSlideIndex })

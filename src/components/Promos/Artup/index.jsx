@@ -4,12 +4,12 @@ import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import PromoView from '../../Promo/View'
 import getPromoServerClientHoc from '../../../hocs/PromoHoc'
-import { mapArtupSlideIndex } from '../../../redux/promo/selector'
+import { getMapPitchSlideIndex } from '../../../redux/promo/selector'
 import { getBodyForSlide, getFootnoteForSlide, getTitleForSlide } from '../../../endpoint/promo/pitches'
 import { ARTUP_SUBPATH } from '../../../constants/routing'
 
 const ArtupPromo = ({ serverClientArtupIndex, handlePromoPageChange }) => {
-    const artupSlideIndex = useSelector(mapArtupSlideIndex)
+    const artupSlideIndex = useSelector(getMapPitchSlideIndex(ARTUP_SUBPATH))
 
     useEffect(() => {
         // Scroll back to top upon slide change.

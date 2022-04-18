@@ -2,8 +2,7 @@ import { forwardRef, useEffect, useImperativeHandle } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import {
-    mapArtupSlideIndex,
-    mapParetoSlideIndex,
+    getMapPitchSlideIndex,
     mapSelectedPromoKey,
 } from '../../../redux/promo/selector'
 import {
@@ -16,8 +15,8 @@ import { ARTUP_SUBPATH, PARETO_SUBPATH } from '../../../constants/routing'
 
 const PromoUrlManager = forwardRef(({ verifyBeforeNavigation }, ref) => {
     const
-        artupSlideIndex = useSelector(mapArtupSlideIndex),
-        paretoSlideIndex = useSelector(mapParetoSlideIndex),
+        artupSlideIndex = useSelector(getMapPitchSlideIndex(ARTUP_SUBPATH)),
+        paretoSlideIndex = useSelector(getMapPitchSlideIndex(PARETO_SUBPATH)),
         selectedPromoKey = useSelector(mapSelectedPromoKey)
 
     const navigateToPromoPage = () => {

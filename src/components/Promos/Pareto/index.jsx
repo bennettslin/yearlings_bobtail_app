@@ -4,12 +4,12 @@ import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import PromoView from '../../Promo/View'
 import getPromoServerClientHoc from '../../../hocs/PromoHoc'
-import { mapParetoSlideIndex } from '../../../redux/promo/selector'
+import { getMapPitchSlideIndex } from '../../../redux/promo/selector'
 import { getBodyForSlide, getFootnoteForSlide, getTitleForSlide } from '../../../endpoint/promo/pitches'
 import { PARETO_SUBPATH } from '../../../constants/routing'
 
 const ParetoPromo = ({ serverClientParetoIndex, handlePromoPageChange }) => {
-    const paretoSlideIndex = useSelector(mapParetoSlideIndex)
+    const paretoSlideIndex = useSelector(getMapPitchSlideIndex(PARETO_SUBPATH))
 
     useEffect(() => {
         // Scroll back to top upon slide change.
