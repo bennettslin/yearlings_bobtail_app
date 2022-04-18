@@ -7,7 +7,7 @@ import {
     SNOWGLOBE_SMALL_PRESENT,
     SNOWGLOBE_LEAVING_CRUMBLED,
 } from '../../../../../src/constants/scene/things/cardboards'
-import { BUDWEISER_FULLER__MIRIAM } from '../../../../../src/constants/scene/things/fixtures'
+import { HEINEKEN_PACK, HEINEKEN__BENNETT } from '../../../../../src/constants/scene/things/fixtures'
 import {
     SNOWGLOBE_PRESENT__LIZ,
     SNOWGLOBE_PRESENT__BENNETT,
@@ -34,9 +34,15 @@ export default {
         },
     },
     [FIXTURE]: {
-        [BUDWEISER_FULLER__MIRIAM]: {
+        [HEINEKEN__BENNETT]: {
             yIndex: 3,
-            xPosition: 6.5,
+            xPosition: 6.3,
+            zOffset: -0.03,
+        },
+        [HEINEKEN_PACK]: {
+            yIndex: 3,
+            xPosition: 7,
+            zOffset: -0.03,
         },
     },
     [PANEL]: {

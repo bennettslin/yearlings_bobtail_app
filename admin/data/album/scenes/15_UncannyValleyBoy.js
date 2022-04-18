@@ -97,6 +97,7 @@ import {
     HEINEKEN_PACK,
     RECORDING_MIC,
     TETHERBALL_POLE,
+    WINE_BOTTLE,
 } from '../../../../src/constants/scene/things/fixtures'
 import { BENNETT_PILLOW__BED } from '../../../../src/constants/scene/things/furnitures'
 import {
@@ -138,6 +139,7 @@ export default [
                 [DRUMS_STACKED__BASEMENT]: true,
                 [BUDWEISER_CASE]: true,
                 [BUDWEISER_EMPTIER__MIRIAM]: true,
+                [BUDWEISER_FULLER__MIRIAM]: true,
             },
             [FURNITURE]: {
                 [BENNETT_PILLOW__BED]: true,
@@ -257,7 +259,8 @@ export default [
                 [SNOWGLOBE_LEAVING_CRUMBLED]: true,
             },
             [FIXTURE]: {
-                [BUDWEISER_FULLER__MIRIAM]: true,
+                [HEINEKEN__BENNETT]: true,
+                [HEINEKEN_PACK]: true,
             },
             [PANEL]: {
                 [SNOWGLOBE_PRESENT__LIZ]: true,
@@ -309,8 +312,7 @@ export default [
             },
             [FIXTURE]: {
                 [RECORDING_MIC]: true,
-                [HEINEKEN__BENNETT]: true,
-                [HEINEKEN_PACK]: true,
+                [WINE_BOTTLE]: true,
             },
             [PANEL]: {
                 [SNOWGLOBE_FUTURE__LIZ]: true,

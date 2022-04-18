@@ -73,9 +73,9 @@
 .flatMaroonLight { fill: hsl(330, 33%, 67%); }
 
 .darkenDefault .darken#{$suffix} {
-    .flatRedDarker { fill: hsl(0, 17%, 19%); }
-    .flatRedDark { fill: hsl(0, 17%, 24%); }
-    .flatRedMediumDark { fill: hsl(0, 17%, 29%); }
+    .flatRedDarker { fill: hsl(0, 17%, 27%); }
+    .flatRedDark { fill: hsl(0, 17%, 29%); }
+    .flatRedMediumDark { fill: hsl(0, 17%, 32%); }
     .flatRedMedium { fill: hsl(0, 17%, 34%); }
     .flatRedLight { fill: hsl(0, 17%, 39%); }
     .flatOrangeMedium { fill: hsl(30, 17%, 34%); }
@@ -89,7 +89,7 @@
     .flatBlueMedium { fill: hsl(210, 17%, 34%); }
     .flatBlueMediumLight { fill: hsl(210, 17%, 39%); }
     .flatBlueLightest { fill: hsl(210, 17%, 44%); }
-    .flatPurpleMediumDark { fill: hsl(270, 17%, 29%); }
+    .flatPurpleMediumDark { fill: hsl(270, 17%, 32%); }
     .flatPurpleMedium { fill: hsl(270, 17%, 34%); }
     .flatMaroonLight { fill: hsl(330, 17%, 39%); }
 }

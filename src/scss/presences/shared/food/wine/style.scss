@@ -1,6 +1,9 @@
 .wine#{$suffix} {
-    .wineBottleSide { fill: hsla(161, 19%, 64%, 0.6); }
-    .wineBottleBottom { fill: hsla(161, 14%, 58%, 0.3); }
-    .wineLabel { fill: hsl(235, 24%, 59%); }
-    .wineLabelReverse { fill: hsl(235, 33%, 81%); }
+    .wineBottleBottom { fill: hsla(120, 14%, 22%, 0.6); }
+    .wineBottleSide { fill: hsla(120, 19%, 27%, 0.6); }
+    .wineBottleTop { fill: hsla(120, 14%, 22%, 0.6); }
+    .wineLabel { fill: hsl(235, 33%, 57%); }
+    .wineLabelReverse { fill: hsl(235, 20%, 77%); }
+    .wineSide { fill: hsl(330, 50%, 24%); }
+    .wineTop { fill: hsl(330, 40%, 34%); }
 }

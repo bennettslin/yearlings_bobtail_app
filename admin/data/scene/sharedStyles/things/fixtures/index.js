@@ -62,6 +62,7 @@ import {
     THROWN_FRUIT,
     TORN_MAGAZINES,
     VASELINE,
+    WINE_BOTTLE,
 } from '../../../../../../src/constants/scene/things/fixtures'
 import {
     ALL_CLOTHING__SHARED,
@@ -79,6 +80,7 @@ import {
     EVIAN__SHARED,
     HEINEKEN__SHARED,
     PUDDING__SHARED,
+    WINE__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/food'
 import {
     BULB__SHARED,
@@ -142,7 +144,10 @@ export default {
         DARKEN_DEFAULT__SHARED,
         BUDWEISER__SHARED,
     ],
-    [BUDWEISER_FULLER]: BUDWEISER__SHARED,
+    [BUDWEISER_FULLER]: [
+        DARKEN_DEFAULT__SHARED,
+        BUDWEISER__SHARED,
+    ],
     [CASH_BOX]: DOLLAR__SHARED,
     [CONDOM_LIZ]: [
         DARKEN_DEFAULT__SHARED,
@@ -238,4 +243,5 @@ export default {
     ],
     [TORN_MAGAZINES]: null,
     [VASELINE]: DARKEN_DEFAULT__SHARED,
+    [WINE_BOTTLE]: WINE__SHARED,
 }

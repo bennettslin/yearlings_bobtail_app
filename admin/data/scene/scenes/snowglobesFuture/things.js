@@ -10,9 +10,7 @@ import {
     SNOWGLOBE_COWGIRL,
 } from '../../../../../src/constants/scene/things/cardboards'
 import {
-    RECORDING_MIC,
-    HEINEKEN_PACK,
-    HEINEKEN__BENNETT,
+    RECORDING_MIC, WINE_BOTTLE,
 } from '../../../../../src/constants/scene/things/fixtures'
 import {
     SNOWGLOBE_FUTURE__LIZ,
@@ -49,13 +47,9 @@ export default {
             yIndex: 1,
             xPosition: 9,
         },
-        [HEINEKEN__BENNETT]: {
+        [WINE_BOTTLE]: {
             yIndex: 1,
-            xPosition: 6.7,
-        },
-        [HEINEKEN_PACK]: {
-            yIndex: 1,
-            xPosition: 7.4,
+            xPosition: 7.3,
         },
     },
     [PANEL]: {

@@ -59,6 +59,7 @@ import tetherballPole from '../../../../assets/svgs/fixtures/tetherballPole'
 import thrownFruit from '../../../../assets/svgs/fixtures/thrownFruit'
 import tornMagazines from '../../../../assets/svgs/fixtures/tornMagazines'
 import vaseline from '../../../../assets/svgs/fixtures/vaseline'
+import wineBottle from '../../../../assets/svgs/fixtures/wineBottle'
 
 import {
     BACKPACK_BENNETT,
@@ -135,6 +136,7 @@ import {
     VASELINE,
     BUDWEISER_EMPTIER__MIRIAM,
     BUDWEISER_FULLER__MIRIAM,
+    WINE_BOTTLE,
 } from '../../../../constants/scene/things/fixtures'
 
 export default {
@@ -212,4 +214,5 @@ export default {
     [TORN_MAGAZINES__BENNETT]: tornMagazines,
     [TORN_MAGAZINES__CHRISTOPHER]: tornMagazines,
     [VASELINE]: vaseline,
+    [WINE_BOTTLE]: wineBottle,
 }
