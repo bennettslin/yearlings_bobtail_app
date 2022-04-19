@@ -12,8 +12,7 @@ export const getIsSlideValid = (pitchKey, pitchSlideIndex) => (
 )
 
 export const getPathForSlide = (pitchKey, pitchSlideIndex) => (
-    Number.isFinite(pitchSlideIndex) &&
-    getSlides(pitchKey)[pitchSlideIndex - 1].path
+    getSlides(pitchKey)[pitchSlideIndex - 1]?.path
 )
 
 export const getTitleForSlide = (pitchKey, pitchSlideIndex) => (
