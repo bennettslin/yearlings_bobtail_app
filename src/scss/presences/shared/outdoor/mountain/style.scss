@@ -14,9 +14,9 @@
 
     .winterSeason
     &.winter#{$suffix} {
-        .meadowFar { fill: hsl(182, 23%, 54%); }
-        .meadowMiddle { fill: hsl(182, 23%, 51%); }
-        .meadowNear { fill: hsl(182, 23%, 48%); }
+        .meadowFar { fill: hsl(182, 18%, 54%); }
+        .meadowMiddle { fill: hsl(182, 18%, 51%); }
+        .meadowNear { fill: hsl(182, 18%, 48%); }
     }
 
     .autumnSeason.nightTime

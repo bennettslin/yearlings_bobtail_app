@@ -6,7 +6,10 @@ import {
     WOOD_FLOOR_COLOUR,
     BENNETT_FLOOR_COLOUR,
     LINOLEUM_FLOOR_COLOUR,
-    PAST_LINOLEUM_COLOUR,
+    LINOLEUM_PAST_COLOUR,
+    GRASS_AUTUMN_COLOUR,
+    GRASS_AUTUMN_NIGHT_COLOUR,
+    GRASS_WINTER_COLOUR,
 } from '../../../../../../../constants/scene/cubes/colours'
 import HSLA_MAP from '../../../../../../../constants/scene/cubes/hsla'
 
@@ -93,13 +96,16 @@ const _getDiagonalValue = ({
 }
 
 const COLOUR_GETTER_MAP = {
-    [GRASS_COLOUR]: _getWideRandomValue,
-    [SAND_COLOUR]: _getWideRandomValue,
-    [OCEAN_COLOUR]: _getNarrowRandomValue,
-    [WOOD_FLOOR_COLOUR]: _getRandomBrickPatternValue,
     [BENNETT_FLOOR_COLOUR]: _getDiagonalValue,
+    [GRASS_AUTUMN_COLOUR]: _getWideRandomValue,
+    [GRASS_AUTUMN_NIGHT_COLOUR]: _getWideRandomValue,
+    [GRASS_COLOUR]: _getWideRandomValue,
+    [GRASS_WINTER_COLOUR]: _getWideRandomValue,
     [LINOLEUM_FLOOR_COLOUR]: _getCheckerboardValue,
-    [PAST_LINOLEUM_COLOUR]: _getCheckerboardValue,
+    [LINOLEUM_PAST_COLOUR]: _getCheckerboardValue,
+    [OCEAN_COLOUR]: _getNarrowRandomValue,
+    [SAND_COLOUR]: _getWideRandomValue,
+    [WOOD_FLOOR_COLOUR]: _getRandomBrickPatternValue,
 }
 
 export const getBaseColour = ({

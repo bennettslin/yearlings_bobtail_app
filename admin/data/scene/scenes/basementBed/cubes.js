@@ -2,7 +2,7 @@ import { BASEMENT_BED_DARK_KEY } from '../../../../../src/constants/scene/scenes
 import { BASEMENT_BED_MAGIC_CUBES } from './fearful/cubes'
 import {
     DEFAULT_CLEAR_COLOUR as D,
-    GRASS_COLOUR as H,
+    GRASS_AUTUMN_NIGHT_COLOUR as H,
     DARK_ROOM_COLOUR as Z,
 } from '../../../../../src/constants/scene/cubes/colours'
 import { DEFAULT_CEILING } from '../basement/cubes'

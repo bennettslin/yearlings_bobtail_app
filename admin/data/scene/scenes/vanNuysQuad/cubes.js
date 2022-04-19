@@ -3,7 +3,7 @@ import { VAN_NUYS_QUAD_KEY } from '../../../../../src/constants/scene/scenes'
 import {
     DEFAULT_CLEAR_COLOUR as D,
     GROUND_CLEAR_COLOUR as G,
-    GRASS_COLOUR as H,
+    GRASS_AUTUMN_COLOUR as H,
     ROOF_COLOUR as C,
     VAN_NUYS_EXTERIOR_COLOUR as X,
     CONCRETE_PLATFORM_COLOUR as P,

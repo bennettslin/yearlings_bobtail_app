@@ -3,7 +3,7 @@ import { WEDDING_KEY } from '../../../../../src/constants/scene/scenes'
 
 import {
     GROUND_CLEAR_COLOUR as G,
-    GRASS_COLOUR as H,
+    GRASS_AUTUMN_COLOUR as H,
     PLATFORM_COLOUR as P,
 } from '../../../../../src/constants/scene/cubes/colours'
 

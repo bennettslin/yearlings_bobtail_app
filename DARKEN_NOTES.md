@@ -11,8 +11,7 @@
 
 # Next TODO
 * Condense alley cubes?
-* Autumn and winter foliage colours
-    * Cubes as well
+* Khari winter coat in Vegan?
 * Night colours
     * Night cubes for all buildings
     * Audit cubes

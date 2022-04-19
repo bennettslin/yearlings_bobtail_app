@@ -7,7 +7,7 @@ import {
     DEFAULT_CLEAR_COLOUR as D,
     GROUND_CLEAR_COLOUR as G,
     LINOLEUM_FLOOR_COLOUR as F,
-    PAST_LINOLEUM_COLOUR as Z,
+    LINOLEUM_PAST_COLOUR as Z,
     SOFT_WALL_COLOUR as W,
 } from '../../../../../src/constants/scene/cubes/colours'
 

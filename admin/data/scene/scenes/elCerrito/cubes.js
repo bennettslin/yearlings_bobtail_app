@@ -7,7 +7,7 @@ import {
 import {
     DEFAULT_CLEAR_COLOUR as D,
     GROUND_CLEAR_COLOUR as G,
-    GRASS_COLOUR as H,
+    GRASS_AUTUMN_COLOUR as H,
     STREET_COLOUR as T,
 } from '../../../../../src/constants/scene/cubes/colours'
 

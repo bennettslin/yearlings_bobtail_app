@@ -56,12 +56,12 @@
 
     .winterSeason
     &.winter#{$suffix} {
-        .foliageNear {fill: hsl(195, 22%, 55%); }
-        .foliageNearest {fill: hsl(195, 23%, 51%); }
+        .foliageNear {fill: hsl(195, 17%, 55%); }
+        .foliageNearest {fill: hsl(195, 18%, 51%); }
 
-        .treeFurthest { fill: hsl(211, 24%, 51%); }
-        .treeFurther { fill: hsl(211, 24%, 53%); }
-        .treeCloser { fill: hsl(211, 24%, 56%); }
+        .treeFurthest { fill: hsl(211, 19%, 51%); }
+        .treeFurther { fill: hsl(211, 19%, 53%); }
+        .treeCloser { fill: hsl(211, 19%, 56%); }
     }
 
     .nightTime
@@ -92,10 +92,10 @@
 
     .winterSeason.nightTime
     &.winter#{$suffix} {
-        .foliageNear {fill: hsl(195, 12%, 50%); }
+        .foliageNear {fill: hsl(195, 17%, 50%); }
 
-        .treeFurthest { fill: hsl(211, 14%, 46%); }
-        .treeFurther { fill: hsl(211, 14%, 48%); }
-        .treeCloser { fill: hsl(211, 14%, 51%); }
+        .treeFurthest { fill: hsl(211, 19%, 46%); }
+        .treeFurther { fill: hsl(211, 19%, 48%); }
+        .treeCloser { fill: hsl(211, 19%, 51%); }
     }
 }
