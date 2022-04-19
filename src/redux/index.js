@@ -52,10 +52,19 @@ import {
 } from '../constants/store'
 import {
     getInitialAlbumIndices,
-    getInitialArtupIndex,
-    getInitialParetoIndex,
+    getInitialPitchIndex,
     getInitialPromoPageKey,
 } from '../utils/gatsby/initial'
+import { PITCH_KEYS } from '../constants/routing'
+
+const getInitialPitchIndices = pathname => (
+    Object.fromEntries(
+        PITCH_KEYS.map(pitchKey => [
+            pitchKey,
+            getInitialPitchIndex(pitchKey, pathname),
+        ]),
+    )
+)
 
 export const getAlbumReducers = ({
     windowHeight,
@@ -64,12 +73,10 @@ export const getAlbumReducers = ({
     search,
 }) => {
     const {
-            initialSongIndex,
-            initialVerseIndex,
-            initialAnnotationIndex,
-        } = getInitialAlbumIndices(pathname, search),
-        initialArtupIndex = getInitialArtupIndex(pathname),
-        initialParetoIndex = getInitialParetoIndex(pathname)
+        initialSongIndex,
+        initialVerseIndex,
+        initialAnnotationIndex,
+    } = getInitialAlbumIndices(pathname, search)
 
     return combineReducers({
         [ACCESS_STORE]: getAccessReducer({ initialAnnotationIndex }),
@@ -91,8 +98,7 @@ export const getAlbumReducers = ({
         [OPTION_STORE]: getOptionReducer(initialSongIndex),
         [PLAYERS_STORE]: PlayersReducer,
         [PROMO_STORE]: getPromoReducer({
-            initialArtupIndex,
-            initialParetoIndex,
+            initialPitchIndices: getInitialPitchIndices(pathname),
         }),
         [SCENE_STORE]: getSceneReducer({
             initialSongIndex,
@@ -123,27 +129,20 @@ export const getPromoReducers = ({
     windowHeight,
     windowWidth,
     pathname,
-}) => {
-    const
-        initialArtupIndex = getInitialArtupIndex(pathname),
-        initialParetoIndex = getInitialParetoIndex(pathname),
-        initialPromoPage = getInitialPromoPageKey(pathname)
 
-    return combineReducers({
-        [ACCESS_STORE]: getAccessReducer({ isPromoPage: true }),
-        [PROMO_STORE]: getPromoReducer({
-            initialArtupIndex,
-            initialParetoIndex,
-            initialPromoPage,
-        }),
-        [SELECTED_STORE]: getSelectedReducer({
-            isPromoPage: true,
-        }),
-        [SESSION_STORE]: getSessionReducer({ isPromoPage: true }),
-        [VIEWPORT_STORE]: getViewportReducer({
-            windowHeight,
-            windowWidth,
-            isPromoPage: true,
-        }),
-    })
-}
+}) => combineReducers({
+    [ACCESS_STORE]: getAccessReducer({ isPromoPage: true }),
+    [PROMO_STORE]: getPromoReducer({
+        initialPitchIndices: getInitialPitchIndices(pathname),
+        initialPromoPage: getInitialPromoPageKey(pathname),
+    }),
+    [SELECTED_STORE]: getSelectedReducer({
+        isPromoPage: true,
+    }),
+    [SESSION_STORE]: getSessionReducer({ isPromoPage: true }),
+    [VIEWPORT_STORE]: getViewportReducer({
+        windowHeight,
+        windowWidth,
+        isPromoPage: true,
+    }),
+})

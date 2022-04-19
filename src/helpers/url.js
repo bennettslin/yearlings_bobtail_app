@@ -1,6 +1,6 @@
 import qs from 'qs'
 import { getFullPathForSong } from '../endpoint/album/songs'
-import { getPromoPath } from '../utils/gatsby/promo'
+import { getFormattedPromoPath } from '../utils/gatsby/promo'
 import {
     ANNOTATION_QUERY_FIELD,
     ANNOTATION_QUERY_INITIAL,
@@ -63,6 +63,6 @@ export const getSongUrl = ({
     return getUrl(urlPath)
 }
 
-export const getPromoUrl = promoKey => {
-    return getUrl(getPromoPath(promoKey))
+export const getPromoUrl = (promoKey, pitchIndex) => {
+    return getUrl(getFormattedPromoPath(promoKey, pitchIndex))
 }

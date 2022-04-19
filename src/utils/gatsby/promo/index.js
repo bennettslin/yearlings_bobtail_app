@@ -1,17 +1,23 @@
-import { getRoutingArtupIndex, getRoutingParetoIndex } from '../routing'
+import { getRoutingPitchIndex } from '../routing'
 import { getIsAlbumClientSession } from '../session'
-import { getPathForArtupSlide } from '../../../endpoint/promo/artup'
-import { getPathForParetoSlide } from '../../../endpoint/promo/pareto'
+import { getPathForSlide } from '../../../endpoint/promo/pitches'
 import {
-    ARTUP_SUBPATH,
     ONESHEET_SUBPATH,
-    PARETO_SUBPATH,
+    PITCH_KEYS,
     PROMO_PATH,
 } from '../../../constants/routing'
 
 export const getPromoPath = promoKey => (
     promoKey ? `${PROMO_PATH}/${promoKey}` : PROMO_PATH
 )
+
+export const getFormattedPromoPath = (promoKey, pitchIndex) => {
+    const pitchSubpath = getPathForSlide(promoKey, pitchIndex)
+    return [
+        getPromoPath(promoKey),
+        ...pitchSubpath ? [`${pitchIndex}-${pitchSubpath}`] : [],
+    ].join('/')
+}
 
 const _getIsValidPromoHomepagePath = pathname => (
     pathname === PROMO_PATH
@@ -21,33 +27,16 @@ const _getIsValidOnesheetPath = pathname => (
     pathname === getPromoPath(ONESHEET_SUBPATH)
 )
 
-const _getIsValidArtupPath = pathname => {
-    const artupPath = getPromoPath(ARTUP_SUBPATH)
-    // Check if it's a valid artup root path.
-    if (pathname === artupPath) {
+const _getIsValidPitchPath = (pitchKey, pathname) => {
+    // Check if it's a valid pitch root path.
+    if (pathname === getPromoPath(pitchKey)) {
         return true
     }
 
-    // Check if it's a valid artup page path.
-    const routingArtupIndex = getRoutingArtupIndex(pathname)
-    if (Number.isFinite(routingArtupIndex)) {
-        return pathname === `${artupPath}/${routingArtupIndex}-${getPathForArtupSlide(routingArtupIndex)}`
-    }
-
-    return false
-}
-
-const _getIsValidParetoPath = pathname => {
-    const paretoPath = getPromoPath(PARETO_SUBPATH)
-    // Check if it's a valid pareto root path.
-    if (pathname === paretoPath) {
-        return true
-    }
-
-    // Check if it's a valid pareto page path.
-    const routingParetoIndex = getRoutingParetoIndex(pathname)
-    if (Number.isFinite(routingParetoIndex)) {
-        return pathname === `${paretoPath}/${routingParetoIndex}-${getPathForParetoSlide(routingParetoIndex)}`
+    // Check if it's a valid pitch page path.
+    const routingPitchIndex = getRoutingPitchIndex(pitchKey, pathname)
+    if (Number.isFinite(routingPitchIndex)) {
+        return pathname === getFormattedPromoPath(pitchKey, routingPitchIndex)
     }
 
     return false
@@ -61,7 +50,8 @@ export const getIsPromoPage = pathname => (
     !getIsAlbumClientSession() && (
         _getIsValidPromoHomepagePath(pathname) ||
         _getIsValidOnesheetPath(pathname) ||
-        _getIsValidArtupPath(pathname) ||
-        _getIsValidParetoPath(pathname)
+        PITCH_KEYS.some(pitchKey => (
+            _getIsValidPitchPath(pitchKey, pathname)
+        ))
     )
 )

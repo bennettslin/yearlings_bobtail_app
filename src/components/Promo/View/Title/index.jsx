@@ -19,7 +19,11 @@ const PromoViewTitle = ({ title }) => Boolean(title) && (
 )
 
 PromoViewTitle.propTypes = {
-    title: PropTypes.string,
+    title: PropTypes.oneOfType([
+        PropTypes.array,
+        PropTypes.object,
+        PropTypes.string,
+    ]),
 }
 
 export default PromoViewTitle

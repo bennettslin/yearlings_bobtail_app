@@ -780,15 +780,14 @@ export default {
                         },
                         {
                             anchor: `fragile ex`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `Knowing the kind of fragile ex-boyfriend I was sure to be, Miriam must have dreaded the breakup. But who knew what horrors lurked in my genetic makeup? Perhaps I was a carrier of "`,
+                                    `Knowing the kind of fragile ex-boyfriend I was sure to be, Miriam had to be delicate in breaking up with me. But of course it needed to be done, given what horrors might be lurking in my genetic makeup. Perhaps I'm a carrier of "`,
                                     {
                                         anchor: `Fragile X`,
                                         wiki: `Fragile_X_syndrome`,
                                     },
-                                    `," a mutated X chromosome that results in mental disability.`,
+                                    `," a mutated X chromosome that causes mental disability.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,

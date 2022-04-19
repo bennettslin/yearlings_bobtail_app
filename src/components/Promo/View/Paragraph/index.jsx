@@ -19,6 +19,7 @@ const PromoViewParagraph = ({ paragraph }) => Boolean(paragraph) && (
 PromoViewParagraph.propTypes = {
     paragraph: PropTypes.oneOfType([
         PropTypes.array,
+        PropTypes.object,
         PropTypes.string,
     ]),
 }

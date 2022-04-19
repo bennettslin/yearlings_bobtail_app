@@ -4,7 +4,7 @@ import cx from 'classnames'
 import { useDispatch, useSelector } from 'react-redux'
 import ReactTooltip from 'react-tooltip'
 import Button from '../../Button'
-import { mapSelectedPromoKey } from '../../../redux/promo/selector'
+import { mapSelectedPitchSlideIndex, mapSelectedPromoKey } from '../../../redux/promo/selector'
 import { mapSelectedSongIndex } from '../../../redux/selected/selector'
 import { updateCopiedUrlKey } from '../../../redux/session/action'
 import { getMapIsCopiedUrlKey } from '../../../redux/session/selector'
@@ -21,6 +21,7 @@ const CopyUrlButton = ({ id, annotationIndex }) => {
         copiedUrlRef = useRef(),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         selectedPromoKey = useSelector(mapSelectedPromoKey),
+        selectedPitchIndex = useSelector(mapSelectedPitchSlideIndex),
         buttonIdentifier = getCopyUrlButtonIdentifier({
             socialMediaId: id,
             songIndex: selectedSongIndex,
@@ -44,6 +45,7 @@ const CopyUrlButton = ({ id, annotationIndex }) => {
             songIndex: selectedSongIndex,
             annotationIndex,
             promoKey: selectedPromoKey,
+            pitchIndex: selectedPitchIndex,
         })
 
         clearTimeout(copyTimeoutId)

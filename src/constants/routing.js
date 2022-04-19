@@ -8,6 +8,11 @@ export const ONESHEET_SUBPATH = 'onesheet'
 export const ARTUP_SUBPATH = 'artup'
 export const PARETO_SUBPATH = 'pareto'
 
+export const PITCH_KEYS = [
+    ARTUP_SUBPATH,
+    PARETO_SUBPATH,
+]
+
 export const VALID_ADMIN_PATHS = {
     actors: true,
     annotations: true,

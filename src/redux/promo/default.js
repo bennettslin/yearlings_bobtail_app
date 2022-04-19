@@ -1,9 +1,9 @@
+export const SET_PITCH_SLIDE_INDEX = 'setPitchSlideIndex'
+
 export const getPromoDefaults = ({
-    initialArtupIndex,
-    initialParetoIndex,
+    initialPitchIndices,
     initialPromoPage = '',
 }) => ({
-    artupSlideIndex: initialArtupIndex,
-    paretoSlideIndex: initialParetoIndex,
     selectedPromoKey: initialPromoPage,
+    pitchSlideIndices: initialPitchIndices,
 })

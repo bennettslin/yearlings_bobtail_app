@@ -6,9 +6,10 @@ export const copyUrlToClipboard = ({
     songIndex,
     annotationIndex,
     promoKey,
+    pitchIndex,
 }) => {
     const url = socialMediaId === PROMO_PAGE_SOCIAL_MEDIA ?
-        getPromoUrl(promoKey) :
+        getPromoUrl(promoKey, pitchIndex) :
         getSongUrl({
             songIndex,
             annotationIndex,

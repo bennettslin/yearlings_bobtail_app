@@ -129,12 +129,15 @@ export const getSmartQuotedObjectForKeys = ({
     keys,
 
 }) => (
-    keys.reduce((entity, key) => {
-        // This mutates the object.
-        entity[key] = _recurseForSmartQuoteFormat(entity[key])
-
-        return entity
-    }, object)
+    keys
+        .reduce((entity, key) => {
+            // This mutates the object.
+            const entry = _recurseForSmartQuoteFormat(entity[key])
+            if (entry) {
+                entity[key] = entry
+            }
+            return entity
+        }, object)
 )
 
 export const getSmartQuotedObjectsForKeys = ({

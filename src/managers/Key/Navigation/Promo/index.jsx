@@ -1,34 +1,20 @@
 import React, { forwardRef, useImperativeHandle, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import ArtupDispatcher from '../../../../dispatchers/Artup'
-import ParetoDispatcher from '../../../../dispatchers/Pareto'
 import { mapSelectedPromoKey } from '../../../../redux/promo/selector'
 import {
     ARROW_LEFT,
     ARROW_RIGHT,
     PROMO_TOGGLE_KEY,
 } from '../../../../constants/access'
-import {
-    getIsArtupPage,
-    getIsParetoPage,
-    getIsPromoHomepage,
-} from '../../../../helpers/promo'
+import { getIsPromoHomepage } from '../../../../helpers/promo'
 import { setSelectedPromoKey } from '../../../../redux/promo/action'
+import PitchDispatcher from '../../../../dispatchers/Pitch'
 
 const PromoNavigation = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
-        dispatchArtup = useRef(),
-        dispatchPareto = useRef(),
+        dispatchPitch = useRef(),
         selectedPromoKey = useSelector(mapSelectedPromoKey)
-
-    const getDispatcher = () => {
-        if (getIsArtupPage(selectedPromoKey)) {
-            return dispatchArtup
-        } else if (getIsParetoPage(selectedPromoKey)) {
-            return dispatchPareto
-        }
-    }
 
     const navigateChildPromo = keyName => {
         if (getIsPromoHomepage(selectedPromoKey)) {
@@ -44,19 +30,14 @@ const PromoNavigation = forwardRef((props, ref) => {
     }
 
     const navigatePitchPromo = keyName => {
-        const dispatchPromo = getDispatcher()
-        if (!dispatchPromo) {
-            return false
-        }
-
         let keyWasRegistered = false
 
         switch (keyName) {
             case ARROW_LEFT:
-                keyWasRegistered = dispatchPromo.current({ direction: -1 })
+                keyWasRegistered = dispatchPitch.current({ direction: -1 })
                 break
             case ARROW_RIGHT:
-                keyWasRegistered = dispatchPromo.current({ direction: 1 })
+                keyWasRegistered = dispatchPitch.current({ direction: 1 })
                 break
         }
 
@@ -70,10 +51,7 @@ const PromoNavigation = forwardRef((props, ref) => {
 
     useImperativeHandle(ref, () => navigatePromo)
     return (
-        <>
-            <ArtupDispatcher {...{ ref: dispatchArtup }} />
-            <ParetoDispatcher {...{ ref: dispatchPareto }} />
-        </>
+        <PitchDispatcher {...{ ref: dispatchPitch }} />
     )
 })
 

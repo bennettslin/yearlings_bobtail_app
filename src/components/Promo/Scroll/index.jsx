@@ -4,15 +4,13 @@ import cx from 'classnames'
 import getPromoServerClientHoc from '../../../hocs/PromoHoc'
 import HomepagePromo from '../../Promos/Homepage'
 import OnesheetPromo from '../../Promos/Onesheet'
-import ArtupPromo from '../../Promos/Artup'
-import ParetoPromo from '../../Promos/Pareto'
+import PitchPromo from '../../Promos/Pitch'
 import PromoScrollTitle from './Title'
 import { getTitleForPromo } from '../../../endpoint/promo'
 import {
-    getIsArtupPage,
-    getIsParetoPage,
     getIsOnesheetPage,
     getIsPromoHomepage,
+    getIsPitchPage,
 } from '../../../helpers/promo'
 import './style'
 
@@ -67,11 +65,8 @@ const PromoScroll = forwardRef(({
                     {getIsOnesheetPage(serverClientPromoKey) && (
                         <OnesheetPromo {...{ handlePromoPageChange }} />
                     )}
-                    {getIsArtupPage(serverClientPromoKey) && (
-                        <ArtupPromo {...{ handlePromoPageChange }} />
-                    )}
-                    {getIsParetoPage(serverClientPromoKey) && (
-                        <ParetoPromo {...{ handlePromoPageChange }} />
+                    {getIsPitchPage(serverClientPromoKey) && (
+                        <PitchPromo {...{ handlePromoPageChange }} />
                     )}
                 </div>
             </div>
