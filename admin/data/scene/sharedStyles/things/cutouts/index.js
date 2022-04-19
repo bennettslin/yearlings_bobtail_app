@@ -81,7 +81,7 @@ import {
     CIGARETTE__SHARED,
     GARBAGE_BAG__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/food'
-import { DARK_ROOM_DEFAULT__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
+import { AUTUMN__SHARED, DARK_ROOM_DEFAULT__SHARED, WINTER__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
 import { BENNETT_LINENS__SHARED } from '../../../../../../src/constants/scene/sharedStyles/furniture'
 import { BULB__SHARED } from '../../../../../../src/constants/scene/sharedStyles/household'
 import {
@@ -95,18 +95,36 @@ import {
 import { ALL_VEHICLES__SHARED } from '../../../../../../src/constants/scene/sharedStyles/vehicles'
 
 export default {
-    [APARTMENT_PLANT]: FOLIAGE__SHARED,
+    [APARTMENT_PLANT]: [
+        AUTUMN__SHARED,
+        FOLIAGE__SHARED,
+    ],
     [ASH_CAN]: CIGARETTE__SHARED,
-    [STINK_PLANT]: FOLIAGE__SHARED,
+    [STINK_PLANT]: [
+        AUTUMN__SHARED,
+        FOLIAGE__SHARED,
+    ],
     [BOWL_PILE]: null,
     [BUDDHA_SHRINE]: DARK_ROOM_DEFAULT__SHARED,
-    [BUSH_DOUBLE]: FOLIAGE__SHARED,
-    [BUSH_SINGLE]: FOLIAGE__SHARED,
+    [BUSH_DOUBLE]: [
+        AUTUMN__SHARED,
+        FOLIAGE__SHARED,
+    ],
+    [BUSH_SINGLE]: [
+        AUTUMN__SHARED,
+        FOLIAGE__SHARED,
+    ],
     [CACTUS_DOUBLE]: FOLIAGE__SHARED,
     [CACTUS_SINGLE]: FOLIAGE__SHARED,
     [CAMPFIRE]: FOLIAGE__SHARED,
-    [CAMPUS_TREE_DOUBLE]: FOLIAGE__SHARED,
-    [CAMPUS_TREE_SINGLE]: FOLIAGE__SHARED,
+    [CAMPUS_TREE_DOUBLE]: [
+        WINTER__SHARED,
+        FOLIAGE__SHARED,
+    ],
+    [CAMPUS_TREE_SINGLE]: [
+        WINTER__SHARED,
+        FOLIAGE__SHARED,
+    ],
     [CARRIAGE_TRAY]: null,
     [CAT_FOOD_DISHES]: DARK_ROOM_DEFAULT__SHARED,
     [CAT_LITTER_BOX]: DARK_ROOM_DEFAULT__SHARED,
@@ -184,7 +202,10 @@ export default {
         GARBAGE_BAG__SHARED,
     ],
     [TRAY_PILE]: null,
-    [TREE]: FOLIAGE__SHARED,
+    [TREE]: [
+        AUTUMN__SHARED,
+        FOLIAGE__SHARED,
+    ],
     [TREE_DEAD]: FOLIAGE__SHARED,
     [TWIN_STREETLAMP]: BULB__SHARED,
     [UCLA_TREE]: FOLIAGE__SHARED,

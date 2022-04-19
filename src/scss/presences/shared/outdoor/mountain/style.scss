@@ -6,4 +6,21 @@
     .meadowFar { fill: hsl(92, 28%, 44%); }
     .meadowMiddle { fill: hsl(92, 28%, 41%); }
     .meadowNear { fill: hsl(92, 28%, 38%); }
+
+    .autumnSeason
+    &.autumn#{$suffix} {
+        .meadowNear { fill: hsl(62, 28%, 38%); }
+    }
+
+    .winterSeason
+    &.winter#{$suffix} {
+        .meadowFar { fill: hsl(182, 23%, 54%); }
+        .meadowMiddle { fill: hsl(182, 23%, 51%); }
+        .meadowNear { fill: hsl(182, 23%, 48%); }
+    }
+
+    .autumnSeason.nightTime
+    &.autumn#{$suffix} {
+        .meadowNear { fill: hsl(62, 18%, 33%); }
+    }
 }

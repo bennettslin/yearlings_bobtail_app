@@ -53,7 +53,7 @@ import {
     MOUNTAIN__SHARED,
     WALL__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/outdoor'
-import { DARK_ROOM_DEFAULT__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
+import { AUTUMN__SHARED, DARK_ROOM_DEFAULT__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
 
 export default {
     [BANCROFT_DOOR]: DOOR__SHARED,
@@ -72,6 +72,7 @@ export default {
         BENNETT_INSIDE__SHARED,
     ],
     [BEDROOM_FENCE]: [
+        AUTUMN__SHARED,
         FOLIAGE__SHARED,
         FAMILY_HOUSE__SHARED,
         MOUNTAIN__SHARED,
@@ -112,6 +113,7 @@ export default {
     [CINEMA_DOORS]: DOOR__SHARED,
     [CLUB_DOOR_OPEN]: DOOR__SHARED,
     [DEFAULT_FENCE_BASEMENT]: [
+        AUTUMN__SHARED,
         FOLIAGE__SHARED,
         WALL__SHARED,
     ],

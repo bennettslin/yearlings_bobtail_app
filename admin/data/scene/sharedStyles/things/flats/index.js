@@ -84,6 +84,7 @@ import {
     WALL__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/outdoor'
 import { ALL_VEHICLES__SHARED } from '../../../../../../src/constants/scene/sharedStyles/vehicles'
+import { AUTUMN__SHARED, WINTER__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
 
 export default {
     [BEDROOM_BUS]: ALL_VEHICLES__SHARED,
@@ -97,6 +98,8 @@ export default {
         BUILDING__SHARED,
     ],
     [CAMPANILE]: [
+        AUTUMN__SHARED,
+        WINTER__SHARED,
         FOLIAGE__SHARED,
     ],
     [CEMETERY_HILLS_LEFT]: [
@@ -108,9 +111,11 @@ export default {
         MOUNTAIN__SHARED,
     ],
     [CLIFF_GRAVES_FAR]: [
+        WINTER__SHARED,
         MOUNTAIN__SHARED,
     ],
     [CLIFF_GRAVES_NEAR]: [
+        WINTER__SHARED,
         MOUNTAIN__SHARED,
     ],
     [COMMERCIAL_CENTRE]: [
@@ -142,11 +147,14 @@ export default {
         DOOR__SHARED,
     ],
     [DISTANT_BUILDINGS]: [
+        AUTUMN__SHARED,
+        WINTER__SHARED,
         BUILDINGS__SHARED,
         FOLIAGE__SHARED,
         WALL__SHARED,
     ],
     [DISTANT_HOUSES]: [
+        AUTUMN__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
         WALL__SHARED,
@@ -162,10 +170,12 @@ export default {
         BUILDING__SHARED,
     ],
     [EL_CERRITO_FAR]: [
+        AUTUMN__SHARED,
         BUILDINGS__SHARED,
         FOLIAGE__SHARED,
     ],
     [EL_CERRITO_NEAR]: [
+        AUTUMN__SHARED,
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
@@ -180,6 +190,8 @@ export default {
     [FOREBODING_TREES]: FOLIAGE__SHARED,
     [GO_KART_TRACK]: ALL_VEHICLES__SHARED,
     [NEAR_BUILDINGS]: [
+        AUTUMN__SHARED,
+        WINTER__SHARED,
         BUILDINGS__SHARED,
         FOLIAGE__SHARED,
         WALL__SHARED,
@@ -201,18 +213,21 @@ export default {
     ],
     [OAKLAND_FLAG]: null,
     [OAKLAND_HOUSE_LEFT]: [
+        AUTUMN__SHARED,
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
         OAKLAND_HOUSE_LEFT__SHARED,
     ],
     [OAKLAND_HOUSE_RIGHT]: [
+        AUTUMN__SHARED,
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
         OAKLAND_HOUSE_RIGHT__SHARED,
     ],
     [OAKLAND_SCHOOL]: [
+        AUTUMN__SHARED,
         BUILDING__SHARED,
         DOOR__SHARED,
         FOLIAGE__SHARED,
@@ -227,43 +242,51 @@ export default {
         MOUNTAIN__SHARED,
     ],
     [PUBLIC_FAR]: [
+        AUTUMN__SHARED,
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
     ],
     [PUBLIC_NEAR]: [
+        AUTUMN__SHARED,
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
     ],
     [RESIDENTIAL_FAR_LEFT]: [
+        AUTUMN__SHARED,
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
     ],
     [RESIDENTIAL_FAR_RIGHT]: [
+        AUTUMN__SHARED,
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
     ],
     [RESIDENTIAL_MIDDLE_LEFT]: [
+        AUTUMN__SHARED,
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
         OAKLAND_HOUSE_RIGHT__SHARED,
     ],
     [RESIDENTIAL_MIDDLE_RIGHT]: [
+        AUTUMN__SHARED,
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
     ],
     [RESIDENTIAL_NEAR_LEFT]: [
+        AUTUMN__SHARED,
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
         OAKLAND_HOUSE_LEFT__SHARED,
     ],
     [RESIDENTIAL_NEAR_RIGHT]: [
+        AUTUMN__SHARED,
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,

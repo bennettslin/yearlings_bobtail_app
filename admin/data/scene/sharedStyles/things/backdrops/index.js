@@ -36,6 +36,7 @@ import {
     TAIWAN_MOUNTAIN__SHARED,
     VOLCANO__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/outdoor'
+import { AUTUMN__SHARED, WINTER__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
 
 export default {
     [DRIVING_BACKDROP]: FOLIAGE__SHARED,
@@ -51,10 +52,13 @@ export default {
     [MOUNTAIN_TAIWAN_BACKDROP]: TAIWAN_MOUNTAIN__SHARED,
     [MOUNTAIN_PAMPAS_BACKDROP]: MOUNTAIN__SHARED,
     [OAKLAND_FRONT]: [
+        AUTUMN__SHARED,
         FOLIAGE__SHARED,
         MOUNTAIN__SHARED,
     ],
     [OAKLAND_SIDE]: [
+        AUTUMN__SHARED,
+        WINTER__SHARED,
         FOLIAGE__SHARED,
         MOUNTAIN__SHARED,
     ],
@@ -83,10 +87,12 @@ export default {
     [THOUGHT_MEDIUM]: null,
     [THOUGHT_SMALL]: null,
     [VALLEY_CLOSER_BACKDROP]: [
+        AUTUMN__SHARED,
         FOLIAGE__SHARED,
         MOUNTAIN__SHARED,
     ],
     [VALLEY_FURTHER_BACKDROP]: [
+        AUTUMN__SHARED,
         FOLIAGE__SHARED,
         MOUNTAIN__SHARED,
     ],
