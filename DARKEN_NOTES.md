@@ -10,10 +10,9 @@
 * My 100,000th Dream
 
 # Next TODO
-* Condense alley cubes?
+* Roof for alley cubes?
 * Khari winter coat in Vegan?
 * Night colours
     * Night cubes for all buildings
     * Audit cubes
-    * Glass clear in windows
 * Past, future, and magic colours

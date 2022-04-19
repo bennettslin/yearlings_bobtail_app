@@ -11,4 +11,5 @@
 
 .darkRoomDefault .darkRoom#{$suffix} {
     .glassDarkest { fill: hsl(175, 12%, 24%); }
+    .glassClear { fill: hsla(175, 15%, 35%, 0.25); }
 }
