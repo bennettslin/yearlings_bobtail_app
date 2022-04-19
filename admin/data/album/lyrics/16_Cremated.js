@@ -296,6 +296,7 @@ export default {
                         {
                             anchor: `beaten wit and id`,
                             todo: true,
+                            // TODO: Part of the fun of having a drunken persona was to let its impulses mess things up in the worst way possible.
                             cards: [
                                 {
                                     description: `The rational schemes of my sober self didn't always win out. Sometimes the best decisions came from indulging the whims of my drunken half.`,

@@ -1162,7 +1162,7 @@ export default {
                             todo: true,
                             card: {
                                 description: [
-                                    `"Are Malay tapirs the dusk horse yet?" Exotic new species were often discovered through conquest and migration. Native to the Malay peninsula, the`,
+                                    `"Are Malay tapirs the dusk horse yet?" Like other waves of human migration before us, our little group may discover exotic new species. Native to the Malay peninsula, the`,
                                     {
                                         anchor: `Malayan tapir`,
                                         wiki: `Malayan_tapir`,
@@ -1418,15 +1418,14 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `Every solo trip was a chance to explore metaphysical truths in my head. But Robitussin takes an hour to kick in, so I would wait by playing on my`,
+                        `On solo trips, I would play on my`,
                         {
                             anchor: `Super Nintendo`,
                             wiki: `Super_Nintendo_Entertainment_System`,
                         },
-                        `. And sometimes I would just keep playing. For several years afterward, every vintage arcade sound I heard seemed to hide a profound spiritual message that my sober ears just couldn't suss out.`,
+                        `until the Robitussin kicked in. And sometimes I would just keep playing, even as my mind began to wander in search of metaphysical truths. So for years afterward, every vintage arcade sound that I heard seemed to hide a spiritual message, which my sober ears just couldn't suss out.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
