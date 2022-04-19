@@ -3,6 +3,8 @@
 # Next TODO
 * Make apartment gate smaller
 * Autumn and winter foliage colours
-* Night colours
-    * Night cubes
+    * Audit foliage styles
 * Past, future, and magic colours
+* Night colours
+    * Night cubes for all buildings
+    * Audit cubes
