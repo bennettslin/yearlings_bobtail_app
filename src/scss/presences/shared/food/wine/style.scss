@@ -1,9 +1,9 @@
 .wine#{$suffix} {
-    .wineBottleBottom { fill: hsla(120, 14%, 22%, 0.6); }
-    .wineBottleSide { fill: hsla(120, 19%, 27%, 0.6); }
-    .wineBottleTop { fill: hsla(120, 14%, 22%, 0.6); }
-    .wineLabel { fill: hsl(235, 33%, 57%); }
-    .wineLabelReverse { fill: hsl(235, 20%, 77%); }
+    // .wineBottleBottom { fill: hsla(120, 14%, 22%, 0.6); }
+    .wineBottleGlass { fill: hsla(120, 19%, 27%, 0.5); }
+    // .wineBottleTop { fill: hsla(120, 14%, 22%, 0.6); }
+    // .wineLabel { fill: hsl(235, 33%, 57%); }
+    // .wineLabelReverse { fill: hsl(235, 20%, 77%); }
     .wineSide { fill: hsl(330, 50%, 24%); }
     .wineTop { fill: hsl(330, 40%, 34%); }
 }
