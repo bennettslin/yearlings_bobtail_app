@@ -14,29 +14,29 @@ import { BENNETT_GATE_FRONT } from '../../../../../src/constants/scene/things/do
 export default {
     [CARDBOARD]: {
         [CODE_BOX]: {
-            yIndex: 2,
+            yIndex: 3,
             xPosition: 4,
             zOffset: 3,
         },
     },
     [CUTOUT]: {
         [APARTMENT_PLANT]: {
-            yIndex: 3,
+            yIndex: 4,
             xPosition: 1.5,
         },
         [BUSH_SINGLE__BENNETT_GATE]: {
-            yIndex: 3,
+            yIndex: 4,
             xPosition: 10,
         },
         [BUSH_DOUBLE__BENNETT_GATE]: {
-            yIndex: 2,
+            yIndex: 3,
             xPosition: 3.9,
             scaleFactor: 0.92,
         },
     },
     [DOOR]: {
         [BENNETT_GATE_FRONT]: {
-            yIndex: 2,
+            yIndex: 3,
             xPosition: 7,
         },
     },

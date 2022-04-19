@@ -4,6 +4,7 @@ import {
     DEFAULT_CLEAR_COLOUR as D,
     GROUND_CLEAR_COLOUR as G,
     PAVEMENT_COLOUR as V,
+    DARK_ROOM_COLOUR as Z,
     APARTMENT_EXTERIOR_COLOUR as X,
     ROOF_COLOUR as C,
 } from '../../../../../src/constants/scene/cubes/colours'
@@ -17,18 +18,18 @@ export default {
     [BENNETT_GATE_KEY]: {
         ceiling: {
             hslaColours: [
-                [C, X, X, X, X, X, X, X, X, X, X, C],
+                [C, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, C],
+                [C, X, C, C, C, C, C, C, C, C, X, C],
                 [C, X, X, X, X, X, X, X, X, X, X, C],
                 [C, X, X, C, C, C, C, C, C, C, X, C],
-                [C],
                 [C],
                 [D],
             ],
             zIndices: [
                 [f, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, f],
+                [f, 1, f, f, f, f, f, f, f, f, 1, f],
                 [f, 1, 1, 1, 1, 1, d, d, d, 1, 1, f],
                 [f, 1, 1, f, f, f, f, f, f, f, 1, f],
-                [f],
                 [f],
                 [k],
             ],
@@ -36,6 +37,8 @@ export default {
         floor: {
             hslaColours: [
                 [G],
+                [V, V, Z, Z, Z, Z, Z, Z, Z, Z, V],
+                [V, V, V, V, V, V, Z, Z, Z, V],
                 [V],
             ],
             zIndices: [

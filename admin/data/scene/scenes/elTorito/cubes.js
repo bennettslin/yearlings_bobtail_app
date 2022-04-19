@@ -3,8 +3,7 @@ import { EL_TORITO_KEY } from '../../../../../src/constants/scene/scenes'
 import {
     PAVEMENT_COLOUR as V,
     ROOF_COLOUR as C,
-    VELVET_FLOOR_COLOUR as F,
-    FANCY_WALL_COLOUR as W,
+    DARK_ROOM_COLOUR as Z,
     GENERIC_EXTERIOR_COLOUR as X,
 } from '../../../../../src/constants/scene/cubes/colours'
 
@@ -14,7 +13,7 @@ export default {
     [EL_TORITO_KEY]: {
         ceiling: {
             hslaColours: [
-                [C, X, W, W, W, W, W, W, W, W, X, C],
+                [C, X, Z, Z, Z, Z, Z, Z, Z, Z, X, C],
                 [C, X, C, C, C, C, C, C, C, C, X, C],
                 [C, X, X, X, X, X, X, X, X, X, X, C],
                 [C],
@@ -33,7 +32,7 @@ export default {
         floor: {
             hslaColours: [
                 [V, X, X, X, X, X, X, X, X, X, X, V],
-                [V, X, F, F, F, F, F, F, F, F, X, V],
+                [V, X, Z, Z, Z, Z, Z, Z, Z, Z, X, V],
                 [V],
             ],
             zIndices: [
