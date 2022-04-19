@@ -1,6 +1,6 @@
 import qs from 'qs'
 import { getFullPathForSong } from '../endpoint/album/songs'
-import { getFormattedPromoPath, getPromoPath } from '../utils/gatsby/promo'
+import { getFormattedPromoPath } from '../utils/gatsby/promo'
 import {
     ANNOTATION_QUERY_FIELD,
     ANNOTATION_QUERY_INITIAL,

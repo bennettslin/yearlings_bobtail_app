@@ -3,13 +3,11 @@ import { PROMO_STORE } from '../../constants/store'
 import { getPromoDefaults, SET_PITCH_SLIDE_INDEX } from './default'
 
 export const getPromoReducer = ({
-    initialArtupIndex,
-    initialParetoIndex,
+    initialPitchIndices,
     initialPromoPage,
 }) => (
     state = getPromoDefaults({
-        initialArtupIndex,
-        initialParetoIndex,
+        initialPitchIndices,
         initialPromoPage,
     }),
     { type, payload },

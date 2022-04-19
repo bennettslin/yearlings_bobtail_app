@@ -55,7 +55,16 @@ import {
     getInitialPitchIndex,
     getInitialPromoPageKey,
 } from '../utils/gatsby/initial'
-import { ARTUP_SUBPATH, PARETO_SUBPATH } from '../constants/routing'
+import { PITCH_KEYS } from '../constants/routing'
+
+const getInitialPitchIndices = pathname => (
+    Object.fromEntries(
+        PITCH_KEYS.map(pitchKey => [
+            pitchKey,
+            getInitialPitchIndex(pitchKey, pathname),
+        ]),
+    )
+)
 
 export const getAlbumReducers = ({
     windowHeight,
@@ -89,8 +98,7 @@ export const getAlbumReducers = ({
         [OPTION_STORE]: getOptionReducer(initialSongIndex),
         [PLAYERS_STORE]: PlayersReducer,
         [PROMO_STORE]: getPromoReducer({
-            initialArtupIndex: getInitialPitchIndex(ARTUP_SUBPATH, pathname),
-            initialParetoIndex: getInitialPitchIndex(PARETO_SUBPATH, pathname),
+            initialPitchIndices: getInitialPitchIndices(pathname),
         }),
         [SCENE_STORE]: getSceneReducer({
             initialSongIndex,
@@ -125,8 +133,7 @@ export const getPromoReducers = ({
 }) => combineReducers({
     [ACCESS_STORE]: getAccessReducer({ isPromoPage: true }),
     [PROMO_STORE]: getPromoReducer({
-        initialArtupIndex: getInitialPitchIndex(ARTUP_SUBPATH, pathname),
-        initialParetoIndex: getInitialPitchIndex(PARETO_SUBPATH, pathname),
+        initialPitchIndices: getInitialPitchIndices(pathname),
         initialPromoPage: getInitialPromoPageKey(pathname),
     }),
     [SELECTED_STORE]: getSelectedReducer({
