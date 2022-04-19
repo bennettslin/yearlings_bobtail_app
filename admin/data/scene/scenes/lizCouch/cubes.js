@@ -10,7 +10,7 @@ import {
     LIZ_GATE_COLOUR as A,
     LIZ_FLOOR_COLOUR as F,
     LIZ_WALL_COLOUR as W,
-    NIGHT_COLOUR as Z,
+    DARK_ROOM_COLOUR as Z,
     LIZ_COUCH_COLOUR as U,
 } from '../../../../../src/constants/scene/cubes/colours'
 import { d, g, k } from '../../../../../src/constants/scene/cubes/zIndices'

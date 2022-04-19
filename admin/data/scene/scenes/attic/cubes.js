@@ -1,6 +1,6 @@
 import { ATTIC_KEY } from '../../../../../src/constants/scene/scenes'
 
-import { NIGHT_COLOUR as Z } from '../../../../../src/constants/scene/cubes/colours'
+import { DARK_ROOM_COLOUR as Z } from '../../../../../src/constants/scene/cubes/colours'
 
 import { c, f, g } from '../../../../../src/constants/scene/cubes/zIndices'
 

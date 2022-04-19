@@ -2,7 +2,7 @@ import { LEFT } from '../../../../../../src/constants/scene/cubes'
 import { BEDROOM_FUTURE_KEY } from '../../../../../../src/constants/scene/scenes'
 
 import {
-    DEFAULT_CLEAR_COLOUR as D,
+    DARK_ROOM_CLEAR_COLOUR as D,
     NIGHT_FUTURE_COLOUR as Z,
     FUTURE_SPOTLIGHT_MEDIUM_COLOUR as L,
     FUTURE_SPOTLIGHT_LIGHT_COLOUR as M,

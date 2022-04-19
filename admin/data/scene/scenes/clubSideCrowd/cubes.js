@@ -6,7 +6,7 @@ import {
     OLD_FLOOR_COLOUR as F,
     CLUB_SIDE_PRIMARY_COLOUR as B,
     CLUB_SIDE_SECONDARY_COLOUR as E,
-    NIGHT_COLOUR as Z,
+    DARK_ROOM_COLOUR as Z,
     PLATFORM_COLOUR as P,
 } from '../../../../../src/constants/scene/cubes/colours'
 import { d, g } from '../../../../../src/constants/scene/cubes/zIndices'

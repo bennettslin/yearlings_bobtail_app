@@ -11,7 +11,7 @@ import {
     GROUND_CLEAR_COLOUR as G,
     LIZ_FLOOR_COLOUR as F,
     LIZ_WALL_COLOUR as W,
-    NIGHT_COLOUR as Z,
+    DARK_ROOM_COLOUR as Z,
     FURNITURE_PLATFORM_COLOUR as P,
     LIZ_BED_COLOUR as U,
 } from '../../../../../src/constants/scene/cubes/colours'

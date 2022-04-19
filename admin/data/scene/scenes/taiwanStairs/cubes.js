@@ -4,7 +4,7 @@ import {
     DEFAULT_CLEAR_COLOUR as D,
     PAVEMENT_COLOUR as V,
     TAIWAN_GATE_COLOUR as A,
-    NIGHT_COLOUR as Z,
+    DARK_ROOM_COLOUR as Z,
 } from '../../../../../src/constants/scene/cubes/colours'
 
 import { e, g, k } from '../../../../../src/constants/scene/cubes/zIndices'

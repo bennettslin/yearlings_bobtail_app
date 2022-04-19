@@ -8,10 +8,11 @@ import {
 } from '../../../../../src/constants/scene/scenes'
 import {
     DEFAULT_CLEAR_COLOUR as D,
+    DARK_ROOM_CLEAR_COLOUR as E,
     GRASS_COLOUR as H,
     BENNETT_CARPET_COLOUR as F,
     BENNETT_WALL_COLOUR as W,
-    NIGHT_COLOUR as Z,
+    DARK_ROOM_COLOUR as Z,
     BENNETT_BED_COLOUR as U,
 } from '../../../../../src/constants/scene/cubes/colours'
 import { d, g, k } from '../../../../../src/constants/scene/cubes/zIndices'
@@ -135,8 +136,8 @@ export default {
             hslaColours: [
                 [H, H, H, H, H, Z, H, Z, Z, Z, H],
                 [H, H, H, Z, Z, Z, Z, Z, Z, Z, H],
-                [H, H, Z, Z, D, Z, Z, Z, Z, Z, Z, H],
-                [Z, Z, D, D, Z, Z, Z, Z, Z, Z, Z, H],
+                [H, H, Z, Z, E, Z, Z, Z, Z, Z, Z, H],
+                [Z, Z, E, E, Z, Z, Z, Z, Z, Z, Z, H],
                 [Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, H],
                 [Z],
             ],

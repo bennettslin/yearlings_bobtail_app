@@ -34,6 +34,7 @@ import {
     CLUB_SIDE_SECONDARY_COLOUR,
     CONCRETE_PLATFORM_COLOUR,
     CROSSWALK_COLOUR,
+    DARK_ROOM_COLOUR,
     DEATHBED_FLOOR_COLOUR,
     DEFAULT_CLEAR_COLOUR,
     DIRT_FLOOR_COLOUR,
@@ -56,7 +57,6 @@ import {
     FURNITURE_PLATFORM_COLOUR,
     LIZ_WALL_COLOUR,
     MIRIAM_COUCH_COLOUR,
-    NIGHT_COLOUR,
     NIGHT_FUTURE_COLOUR,
     MAGIC_COLOUR,
     OCEAN_COLOUR,
@@ -85,11 +85,13 @@ import {
     WAITING_ARMCHAIR_COLOUR,
     WOOD_FLOOR_COLOUR,
     PAST_LINOLEUM_COLOUR,
+    DARK_ROOM_CLEAR_COLOUR,
 } from '../colours'
 
 export default {
-    /* D. */
+    /* D, E. */
     [DEFAULT_CLEAR_COLOUR]: { h: 0, s: 0, l: 100, a: 0.2 },
+    [DARK_ROOM_CLEAR_COLOUR]: { h: 0, s: 0, l: 34, a: 0.2 },
     /* G. */
     [GROUND_CLEAR_COLOUR]: { h: 0, s: 0, l: 0, a: 0.2 },
     /* H. */
@@ -121,7 +123,7 @@ export default {
     /* Z. */
     [PAST_LINOLEUM_COLOUR]: { h: parseInt(HUE_PAST), s: 14, l: 67 },
     [MAGIC_COLOUR]: { h: 125, s: 17, l: 25 },
-    [NIGHT_COLOUR]: { h: 221, s: 17, l: 34 },
+    [DARK_ROOM_COLOUR]: { h: 221, s: 17, l: 34 },
     [NIGHT_FUTURE_COLOUR]: { h: 276, s: 17, l: 25 },
     /* L, M, N, O. */
     [SPOTLIGHT_MEDIUM_COLOUR]: { h: 77, s: 19, l: 35 },

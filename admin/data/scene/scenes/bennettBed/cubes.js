@@ -8,7 +8,7 @@ import {
     PAVEMENT_COLOUR as V,
     BENNETT_FLOOR_COLOUR as F,
     BENNETT_WALL_COLOUR as W,
-    NIGHT_COLOUR as Z,
+    DARK_ROOM_COLOUR as Z,
     APARTMENT_EXTERIOR_COLOUR as X,
     BENNETT_BED_COLOUR as U,
 } from '../../../../../src/constants/scene/cubes/colours'
