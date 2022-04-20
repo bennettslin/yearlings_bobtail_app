@@ -9,8 +9,8 @@ import {
     BUSH_DOUBLE__LOCKERS,
 } from '../../../../../src/constants/scene/things/cutouts'
 import {
-    THROWN_FRUIT,
     BALLED_FOIL__LOCKERS,
+    THROWN_FRUIT__LOCKERS,
 } from '../../../../../src/constants/scene/things/fixtures'
 
 export default {
@@ -34,7 +34,7 @@ export default {
         },
     },
     [FIXTURE]: {
-        [THROWN_FRUIT]: {
+        [THROWN_FRUIT__LOCKERS]: {
             yIndex: 4,
             xPosition: 5.8,
             zOffset: -0.04,

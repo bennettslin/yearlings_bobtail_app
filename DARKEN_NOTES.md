@@ -3,7 +3,6 @@
 # Next TODO
 * Roof for alley cubes?
     * Make alley interior dark
-    * Add trash
 * Make bathroom smaller?
 
 * Refactor

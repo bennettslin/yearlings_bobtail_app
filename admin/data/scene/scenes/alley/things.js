@@ -10,7 +10,7 @@ import {
     DUMPSTER,
 } from '../../../../../src/constants/scene/things/cutouts'
 import { LOADING_DOCK_DOOR } from '../../../../../src/constants/scene/things/doors'
-import { BALLED_FOIL__ALLEY } from '../../../../../src/constants/scene/things/fixtures'
+import { BALLED_FOIL__ALLEY, THROWN_FRUIT__ALLEY } from '../../../../../src/constants/scene/things/fixtures'
 import { GHOST_ODIN_ALLEY } from '../../../../../src/constants/scene/things/puppets'
 
 export default {
@@ -40,6 +40,11 @@ export default {
         [BALLED_FOIL__ALLEY]: {
             yIndex: 4,
             zOffset: 2.5,
+        },
+        [THROWN_FRUIT__ALLEY]: {
+            yIndex: 3,
+            xPosition: 7,
+            zOffset: -0.05,
         },
     },
     [PUPPET]: {

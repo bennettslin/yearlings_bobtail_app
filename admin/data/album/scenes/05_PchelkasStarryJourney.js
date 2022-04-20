@@ -108,7 +108,7 @@ import {
     BEYONDER_ENVELOPE,
     LETTER_SCRAPS__BENNETT,
     RED_ENVELOPE_MONEY,
-    THROWN_FRUIT,
+    THROWN_FRUIT__LOCKERS,
     TORN_MAGAZINES__BENNETT,
 } from '../../../../src/constants/scene/things/fixtures'
 import {
@@ -406,7 +406,7 @@ export default [
                 [BUSH_DOUBLE__LOCKERS]: true,
             },
             [FIXTURE]: {
-                [THROWN_FRUIT]: true,
+                [THROWN_FRUIT__LOCKERS]: true,
                 [BALLED_FOIL__LOCKERS]: true,
             },
             [FLAT]: {

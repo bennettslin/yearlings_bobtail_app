@@ -72,6 +72,7 @@ import {
     BALLED_FOIL__ALLEY,
     LIZ_PHONE_BASE,
     LIZ_PHONE_BASE_REFLECTION,
+    THROWN_FRUIT__ALLEY,
 } from '../../../../src/constants/scene/things/fixtures'
 import {
     CAMPANILE,
@@ -190,6 +191,7 @@ export default [
             },
             [FIXTURE]: {
                 [BALLED_FOIL__ALLEY]: true,
+                [THROWN_FRUIT__ALLEY]: true,
             },
             [FLAT]: {
                 [NEAR_BUILDINGS]: true,
