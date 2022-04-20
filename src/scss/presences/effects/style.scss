@@ -32,13 +32,13 @@
 .gum,
 .teeth,
 .mouthInner,
+.cheekLine,
 [class^=lipFemale],
 [class$=EdgeLine] {
     stroke-width: 0.6px;
 }
 
 .smileLine,
-.cheekLine,
 .lipOverlapLine,
 [class$=FoldLine] {
     stroke-width: 0.7px;

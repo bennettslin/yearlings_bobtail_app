@@ -35,7 +35,7 @@ export default {
         [BLINDS_OUTSIDE__NEIGHBOUR]: {
             yIndex: 1,
             xPosition: 5,
-            zOffset: 1.375,
+            zOffset: 1.475,
             scaleFactor: 0.86,
         },
         [NEIGHBOUR_DOOR]: {
