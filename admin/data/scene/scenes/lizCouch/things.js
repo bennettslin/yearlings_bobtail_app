@@ -83,12 +83,12 @@ export default {
         [LIZ_BLINDS_INSIDE]: {
             yIndex: 2,
             xPosition: 6,
-            zOffset: 2.25,
+            zOffset: 1.75,
         },
         [LIZ_BLINDS_INSIDE_OPEN]: {
             yIndex: 2,
             xPosition: 6,
-            zOffset: 2.25,
+            zOffset: 1.75,
         },
         [LIZ_DOOR]: {
             yIndex: 5,

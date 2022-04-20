@@ -1,10 +1,13 @@
 # Darken notes
 
 # Next TODO
-* Roof for alley cubes?
+* Rename clear colour cubes for consistency
 * Khari winter coat in Vegan?
 * Fix Bennett gate side
-* Lower Liz window?
+    * Resize
+* Lower Liz window? And other windows as well?
+* Roof for alley cubes?
+* Make bathroom smaller?
 
 * Refactor
     * Get rid of buildingsNearDark
@@ -18,8 +21,9 @@
     * St Joseph's
     * Evian bottle
 
-* Past, future, and magic colours
+* Do twilight and night in Taiwan
 * Do time evening?
+* Past, future, and magic colours
 
 # Finally TODO
 * Audit presences

@@ -99,12 +99,12 @@ export const THINGS_LIZ_GATE_DATE_ENDED = {
         [LIZ_BLINDS_OUTSIDE__ENDING]: {
             yIndex: 2,
             xPosition: 6,
-            zOffset: 2.25,
+            zOffset: 1.75,
         },
         [LIZ_BLINDS_OUTSIDE__ENDED]: {
             yIndex: 2,
             xPosition: 3,
-            zOffset: 2.25,
+            zOffset: 1.75,
         },
         [LIZ_GATE_OUTSIDE]: {
             yIndex: 4,

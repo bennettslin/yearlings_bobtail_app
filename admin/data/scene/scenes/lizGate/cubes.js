@@ -10,7 +10,7 @@ import {
     PAVEMENT_COLOUR as V,
     LIZ_GATE_COLOUR as A,
     ROOF_COLOUR as C,
-    LIZ_WALL_COLOUR as W,
+    DARK_ROOM_COLOUR as Z,
     LIZ_EXTERIOR_COLOUR as X,
 } from '../../../../../src/constants/scene/cubes/colours'
 
@@ -23,7 +23,7 @@ export default {
     [LIZ_GATE_KEY]: {
         ceiling: {
             hslaColours: [
-                [W],
+                [Z],
                 [X],
                 [C],
                 [D],
@@ -45,7 +45,7 @@ export default {
             ],
             zIndices: [
                 [1],
-                [1, 1, 1, 1, 6, 6, 6, 6, 6, 1],
+                [1, 1, 1, 1, 5, 5, 5, 5, 5, 1],
                 [1],
                 [6, 6, 6, 6, 6, 1, 1, 1, 6],
                 [1],
@@ -55,7 +55,7 @@ export default {
     [LIZ_GATE_STREET_KEY]: {
         ceiling: {
             hslaColours: [
-                [W, W, W, W, W, W, W, W, W, C, D],
+                [Z, Z, Z, Z, Z, Z, Z, Z, Z, C, D],
                 [X, X, X, X, X, X, X, X, X, C, D],
                 [C, C, C, C, C, C, C, C, C, C, D],
                 [D],
@@ -77,7 +77,7 @@ export default {
             ],
             zIndices: [
                 [1],
-                [1, 6, 6, 6, 6, 6, 1],
+                [1, 5, 5, 5, 5, 5, 1],
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1],
                 [6, 6, 1, 1, 1, 6, 6, 6, 6, 6, 0, 1],
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],

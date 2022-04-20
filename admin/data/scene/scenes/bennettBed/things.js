@@ -35,7 +35,7 @@ export default {
         [BLINDS_OUTSIDE__NEIGHBOUR]: {
             yIndex: 1,
             xPosition: 5,
-            zOffset: 1.875,
+            zOffset: 1.375,
             scaleFactor: 0.86,
         },
         [NEIGHBOUR_DOOR]: {
@@ -45,7 +45,7 @@ export default {
         [BLINDS_INSIDE_OPEN]: {
             yIndex: 3,
             xPosition: 7.5,
-            zOffset: 2.25,
+            zOffset: 1.75,
         },
         [BENNETT_DOOR_INSIDE]: {
             yIndex: 3,

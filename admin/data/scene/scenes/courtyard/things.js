@@ -32,7 +32,7 @@ export default {
         [BLINDS_OUTSIDE__BENNETT]: {
             yIndex: 2,
             xPosition: 3.5,
-            zOffset: 2.25,
+            zOffset: 1.75,
         },
         [BENNETT_DOOR_OUTSIDE]: {
             yIndex: 2,
