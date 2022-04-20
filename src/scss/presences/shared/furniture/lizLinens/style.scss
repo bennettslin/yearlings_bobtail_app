@@ -4,8 +4,8 @@
     .pillowEdge { fill: hsl($HUE_LIZ_LINENS, 10%, 34%); }
     .skirt { fill: hsl($HUE_LIZ_LINENS, 11%, 32%); }
 
-    .boyfriendPillow { fill: hsl($HUE_LIZ_LINENS - 35, 32%, 62%); }
-    .lizPillow { fill: hsl($HUE_LIZ_LINENS + 15, 27%, 59%); }
+    .boyfriendPillow { fill: hsl($HUE_LIZ_LINENS - 20, 32%, 62%); }
+    .lizPillow { fill: hsl($HUE_LIZ_LINENS + 20, 27%, 59%); }
     .lizBlanket { fill: hsl($HUE_LIZ_LINENS, 25%, 60%); }
 
     .darkRoomDefault &.darkRoom#{$suffix} {
@@ -16,8 +16,8 @@
     }
 
     .darkRoomExtra &.darkRoomExtra#{$suffix} {
-        .boyfriendPillow { fill: hsl($HUE_LIZ_LINENS - 35, 15%, 36%); }
-        .lizPillow { fill: hsl($HUE_LIZ_LINENS + 15, 15%, 36%); }
+        .boyfriendPillow { fill: hsl($HUE_LIZ_LINENS - 20, 15%, 36%); }
+        .lizPillow { fill: hsl($HUE_LIZ_LINENS + 20, 15%, 36%); }
         .lizBlanket { fill: hsl($HUE_LIZ_LINENS, 15%, 37%); }
     }
 }

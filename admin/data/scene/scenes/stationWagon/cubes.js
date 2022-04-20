@@ -1,7 +1,7 @@
 import { STATION_WAGON_KEY } from '../../../../../src/constants/scene/scenes'
 
 import {
-    DARK_ROOM_CLEAR_COLOUR as D,
+    GROUND_CLEAR_COLOUR as G,
     STREET_NIGHT_COLOUR as T,
     CROSSWALK_NIGHT_COLOUR as K,
 } from '../../../../../src/constants/scene/cubes/colours'
@@ -12,8 +12,8 @@ export default {
             hslaColours: [
                 [T],
                 [T],
-                [T, D, D, D, D, D, D, D, D, D, D, T],
-                [T, D, D, D, D, D, D, D, D, D, D, T],
+                [T, G, G, G, G, G, G, G, G, G, G, T],
+                [T, G, G, G, G, G, G, G, G, G, G, T],
                 [T],
                 [K],
             ],

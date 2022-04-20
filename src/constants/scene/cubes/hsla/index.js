@@ -35,7 +35,6 @@ import {
     CONCRETE_PLATFORM_COLOUR,
     CONCRETE_PLATFORM_NIGHT_COLOUR,
     CROSSWALK_COLOUR,
-    DARK_ROOM_CLEAR_COLOUR,
     DARK_ROOM_COLOUR,
     DEATHBED_FLOOR_COLOUR,
     DEFAULT_CLEAR_COLOUR,
@@ -101,9 +100,8 @@ import {
 } from '../colours'
 
 export default {
-    /* D, E. */
+    /* D. */
     [DEFAULT_CLEAR_COLOUR]: { h: 0, s: 0, l: 100, a: 0.2 },
-    [DARK_ROOM_CLEAR_COLOUR]: { h: 0, s: 0, l: 34, a: 0.2 },
     /* G. */
     [GROUND_CLEAR_COLOUR]: { h: 0, s: 0, l: 0, a: 0.2 },
     /* H. */

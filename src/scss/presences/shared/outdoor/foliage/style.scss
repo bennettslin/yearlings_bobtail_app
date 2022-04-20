@@ -1,5 +1,5 @@
 .foliage#{$suffix} {
-    .foliageFar {fill: hsl(105, 20%, 53%); }
+    .foliageFar {fill: hsl(105, 20%, 52%); }
     .foliageMiddle {fill: hsl(105, 21%, 49%); }
     .foliageNear {fill: hsl(105, 22%, 45%); }
     .foliageNearest {fill: hsl(105, 23%, 41%); }
@@ -34,7 +34,7 @@
 
     .nightTime
     &.nightTime#{$suffix} {
-        .foliageFar {fill: hsl(105, 10%, 43%); }
+        .foliageFar {fill: hsl(105, 10%, 42%); }
         .foliageMiddle {fill: hsl(105, 11%, 39%); }
         .foliageNear {fill: hsl(105, 12%, 35%); }
         .palmFrond { fill: hsl(94, 12%, 36%); }
