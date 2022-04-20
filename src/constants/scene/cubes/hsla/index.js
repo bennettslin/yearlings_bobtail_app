@@ -65,7 +65,7 @@ import {
     MAGIC_COLOUR,
     MIRIAM_COUCH_COLOUR,
     NIGHT_FUTURE_COLOUR,
-    OCEAN_COLOUR,
+    OCEAN_NIGHT_COLOUR,
     OLD_FLOOR_COLOUR,
     PAST_PLATFORM_COLOUR,
     PAVEMENT_NIGHT_COLOUR,
@@ -73,7 +73,7 @@ import {
     PLATFORM_COLOUR,
     PRESENT_PLATFORM_COLOUR,
     ROOF_COLOUR,
-    SAND_COLOUR,
+    SAND_NIGHT_COLOUR,
     SCHOOL_FLOOR_COLOUR,
     SCHOOL_WALL_COLOUR,
     SNOW_FLOOR_COLOUR,
@@ -83,7 +83,7 @@ import {
     SPOTLIGHT_LIGHTEST_COLOUR,
     SPOTLIGHT_MEDIUM_COLOUR,
     STREET_COLOUR,
-    TAIWAN_GATE_COLOUR,
+    TAIWAN_GATE_NIGHT_COLOUR,
     TENNIS_COLOUR,
     UNDERGROUND_WALL_COLOUR,
     VAN_NUYS_EXTERIOR_COLOUR,
@@ -114,12 +114,12 @@ export default {
     [STREET_COLOUR]: { h: 0, s: 0, l: 39 },
     [STREET_NIGHT_COLOUR]: { h: 0, s: 0, l: 29 },
     /* V. */
-    [OCEAN_COLOUR]: { h: parseInt(HUE_OCEAN), s: 46, l: 42 },
+    [OCEAN_NIGHT_COLOUR]: { h: parseInt(HUE_OCEAN), s: 36, l: 32 },
     [PAVEMENT_COLOUR]: { h: 0, s: 0, l: 61 },
     [PAVEMENT_NIGHT_COLOUR]: { h: 0, s: 0, l: 51 },
     [TENNIS_COLOUR]: { h: parseInt(HUE_TENNIS), s: 51, l: 55 },
     /* K. */
-    [SAND_COLOUR]: { h: parseInt(HUE_SAND), s: 22, l: 52 },
+    [SAND_NIGHT_COLOUR]: { h: parseInt(HUE_SAND), s: 12, l: 42 },
     [CROSSWALK_COLOUR]: { h: 48, s: 6, l: 82 },
     [CROSSWALK_NIGHT_COLOUR]: { h: 48, s: 4, l: 62 },
     /* C. */
@@ -175,9 +175,9 @@ export default {
     [CINEMA_EXTERIOR_COLOUR]: { h: 143, s: 14, l: 68 },
     [VAN_NUYS_EXTERIOR_COLOUR]: { h: 334, s: 14, l: 63 },
     /* A. */
-    [TAIWAN_GATE_COLOUR]: { h: 18, s: 17, l: 46 },
+    [TAIWAN_GATE_NIGHT_COLOUR]: { h: 18, s: 12, l: 42 },
     [LIZ_GATE_COLOUR]: { h: 46, s: 12, l: 57 },
-    [LIZ_GATE_NIGHT_COLOUR]: { h: 46, s: 6, l: 47 },
+    [LIZ_GATE_NIGHT_COLOUR]: { h: 46, s: 6, l: 42 },
     [BANCROFT_GATE_COLOUR]: { h: 102, s: 4, l: 59 },
     /* P. */
     [CONCRETE_PLATFORM_COLOUR]: { h: 220, s: 14, l: 69 },

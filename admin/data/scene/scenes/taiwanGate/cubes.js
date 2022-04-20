@@ -2,11 +2,11 @@ import { TAIWAN_GATE_KEY } from '../../../../../src/constants/scene/scenes'
 
 import {
     DEFAULT_CLEAR_COLOUR as D,
-    STREET_COLOUR as T,
-    PAVEMENT_COLOUR as V,
-    ROOF_COLOUR as C,
-    TAIWAN_GATE_COLOUR as A,
-    GENERIC_EXTERIOR_COLOUR as X,
+    STREET_NIGHT_COLOUR as T,
+    PAVEMENT_NIGHT_COLOUR as V,
+    ROOF_NIGHT_COLOUR as C,
+    TAIWAN_GATE_NIGHT_COLOUR as A,
+    GENERIC_NIGHT_COLOUR as X,
 } from '../../../../../src/constants/scene/cubes/colours'
 
 import { b, f, k } from '../../../../../src/constants/scene/cubes/zIndices'

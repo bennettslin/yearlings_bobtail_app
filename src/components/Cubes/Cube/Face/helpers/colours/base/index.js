@@ -1,8 +1,8 @@
 /* eslint-disable object-curly-newline */
 import {
     GRASS_COLOUR,
-    OCEAN_COLOUR,
-    SAND_COLOUR,
+    OCEAN_NIGHT_COLOUR,
+    SAND_NIGHT_COLOUR,
     WOOD_FLOOR_COLOUR,
     BENNETT_FLOOR_COLOUR,
     LINOLEUM_FLOOR_COLOUR,
@@ -105,8 +105,8 @@ const COLOUR_GETTER_MAP = {
     [GRASS_WINTER_COLOUR]: _getWideRandomValue,
     [LINOLEUM_FLOOR_COLOUR]: _getCheckerboardValue,
     [LINOLEUM_PAST_COLOUR]: _getCheckerboardValue,
-    [OCEAN_COLOUR]: _getNarrowRandomValue,
-    [SAND_COLOUR]: _getWideRandomValue,
+    [OCEAN_NIGHT_COLOUR]: _getNarrowRandomValue,
+    [SAND_NIGHT_COLOUR]: _getWideRandomValue,
     [WOOD_FLOOR_COLOUR]: _getRandomBrickPatternValue,
 }
 

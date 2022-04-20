@@ -2,8 +2,8 @@ import { RIGHT } from '../../../../../src/constants/scene/cubes'
 import { SHORE_KEY } from '../../../../../src/constants/scene/scenes'
 
 import {
-    SAND_COLOUR as K,
-    OCEAN_COLOUR as V,
+    SAND_NIGHT_COLOUR as K,
+    OCEAN_NIGHT_COLOUR as V,
 } from '../../../../../src/constants/scene/cubes/colours'
 
 export default {
