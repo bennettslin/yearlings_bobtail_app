@@ -60,8 +60,8 @@ export default {
         [PETTING_SEATED_PRESENT]: PETTING_SEATED_CONFIG,
         [PETTING_STANDING]: {
             wires: [
-                { x: 0.68, y: 0.37 },
-                { x: 0.81, y: 0.36 },
+                { x: 0.66, y: 0.44 },
+                { x: 0.79, y: 0.46 },
             ],
             placedFront: true,
         },

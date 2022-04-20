@@ -4,8 +4,6 @@
 * Rename clear colour cubes for consistency
 * Khari winter coat in Vegan?
 * Fix Bennett gate side
-    * Resize
-* Lower Liz window? And other windows as well?
 * Roof for alley cubes?
 * Make bathroom smaller?
 
