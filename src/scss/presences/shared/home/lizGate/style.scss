@@ -1,18 +1,18 @@
 .lizGate#{$suffix} {
-    .postDark { fill: hsl(38, 24%, 48%); }
-    .post { fill: hsl(38, 24%, 54%); }
-    .plankLight { fill: hsl(43, 28%, 65%); }
-    .plankDark { fill: hsl(53, 23%, 60%); }
-    .plankMedium { fill: hsl(46, 25%, 63%); }
-    .beam { fill: hsl(62, 29%, 66%); }
+    .postDark { fill: hsl(38, 22%, 47%); }
+    .post { fill: hsl(38, 22%, 52%); }
+    .plankDark { fill: hsl(53, 22%, 52%); }
+    .plankMedium { fill: hsl(46, 23%, 54%); }
+    .plankLight { fill: hsl(43, 24%, 56%); }
+    .beam { fill: hsl(62, 24%, 57%); }
 
     .nightTime
     &.nightTime#{$suffix} {
-        .postDark { fill: hsl(38, 14%, 38%); }
-        .post { fill: hsl(38, 14%, 44%); }
-        .plankLight { fill: hsl(43, 18%, 55%); }
-        .plankDark { fill: hsl(53, 13%, 50%); }
-        .plankMedium { fill: hsl(46, 15%, 53%); }
-        .beam { fill: hsl(62, 19%, 56%); }
+        .postDark { fill: hsl(38, 12%, 37%); }
+        .post { fill: hsl(38, 12%, 42%); }
+        .plankLight { fill: hsl(43, 12%, 42%); }
+        .plankDark { fill: hsl(53, 13%, 44%); }
+        .plankMedium { fill: hsl(46, 14%, 46%); }
+        .beam { fill: hsl(62, 14%, 47%); }
     }
 }

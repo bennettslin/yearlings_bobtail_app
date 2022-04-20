@@ -178,8 +178,8 @@ export default {
     [VAN_NUYS_EXTERIOR_COLOUR]: { h: 334, s: 14, l: 63 },
     /* A. */
     [TAIWAN_GATE_COLOUR]: { h: 18, s: 17, l: 46 },
-    [LIZ_GATE_COLOUR]: { h: 46, s: 12, l: 63 },
-    [LIZ_GATE_NIGHT_COLOUR]: { h: 46, s: 6, l: 53 },
+    [LIZ_GATE_COLOUR]: { h: 46, s: 12, l: 57 },
+    [LIZ_GATE_NIGHT_COLOUR]: { h: 46, s: 6, l: 47 },
     [BANCROFT_GATE_COLOUR]: { h: 102, s: 4, l: 59 },
     /* P. */
     [CONCRETE_PLATFORM_COLOUR]: { h: 220, s: 14, l: 69 },

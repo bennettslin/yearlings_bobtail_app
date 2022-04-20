@@ -6,6 +6,7 @@
 * Fix Bennett gate side
 * Roof for alley cubes?
 * Make bathroom smaller?
+* Make Liz couch closer to green?
 
 * Refactor
     * Get rid of buildingsNearDark
