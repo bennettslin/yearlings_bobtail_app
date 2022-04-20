@@ -1,7 +1,6 @@
 # Darken notes
 
 # Next TODO
-* Khari winter coat in Vegan?
 * Fix Bennett gate side still…
 * Roof for alley cubes?
     * Make alley interior dark
