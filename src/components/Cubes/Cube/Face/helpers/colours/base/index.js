@@ -10,6 +10,7 @@ import {
     GRASS_AUTUMN_COLOUR,
     GRASS_AUTUMN_NIGHT_COLOUR,
     GRASS_WINTER_COLOUR,
+    GRASS_NIGHT_COLOUR,
 } from '../../../../../../../constants/scene/cubes/colours'
 import HSLA_MAP from '../../../../../../../constants/scene/cubes/hsla'
 
@@ -100,6 +101,7 @@ const COLOUR_GETTER_MAP = {
     [GRASS_AUTUMN_COLOUR]: _getWideRandomValue,
     [GRASS_AUTUMN_NIGHT_COLOUR]: _getWideRandomValue,
     [GRASS_COLOUR]: _getWideRandomValue,
+    [GRASS_NIGHT_COLOUR]: _getWideRandomValue,
     [GRASS_WINTER_COLOUR]: _getWideRandomValue,
     [LINOLEUM_FLOOR_COLOUR]: _getCheckerboardValue,
     [LINOLEUM_PAST_COLOUR]: _getCheckerboardValue,

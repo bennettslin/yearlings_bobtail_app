@@ -3,10 +3,10 @@ import { BENNETT_GATE_KEY } from '../../../../../src/constants/scene/scenes'
 import {
     DEFAULT_CLEAR_COLOUR as D,
     GROUND_CLEAR_COLOUR as G,
-    PAVEMENT_COLOUR as V,
+    PAVEMENT_NIGHT_COLOUR as V,
     DARK_ROOM_COLOUR as Z,
-    APARTMENT_EXTERIOR_COLOUR as X,
-    ROOF_COLOUR as C,
+    APARTMENT_NIGHT_COLOUR as X,
+    ROOF_NIGHT_COLOUR as C,
 } from '../../../../../src/constants/scene/cubes/colours'
 
 import { d, f, k } from '../../../../../src/constants/scene/cubes/zIndices'

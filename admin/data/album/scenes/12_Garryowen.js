@@ -9,9 +9,9 @@ import {
     PANEL,
 } from '../../../../src/constants/scene/things'
 import {
-    LIZ_COUCH_KEY,
     BASEMENT_COUCH_KEY,
     CLUB_FRONT_KEY,
+    LIZ_COUCH_NIGHT_KEY,
     OAKLAND_VOLKSWAGEN_KEY,
 } from '../../../../src/constants/scene/scenes'
 import {
@@ -115,7 +115,7 @@ export default [
                 [LIZ_COUCH__ROOM]: true,
             },
         },
-        cubes: LIZ_COUCH_KEY,
+        cubes: LIZ_COUCH_NIGHT_KEY,
         sky: { time: TIME_NIGHT, season: SEASON_SUMMER },
     },
     {
@@ -252,7 +252,7 @@ export default [
                 [LIZ_COUCH__ROOM]: true,
             },
         },
-        cubes: LIZ_COUCH_KEY,
+        cubes: LIZ_COUCH_NIGHT_KEY,
         sky: { time: TIME_NIGHT, season: SEASON_SUMMER },
     },
 ]

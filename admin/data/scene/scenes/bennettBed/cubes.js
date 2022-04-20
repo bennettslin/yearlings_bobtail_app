@@ -5,11 +5,11 @@ import {
 
 import {
     DEFAULT_CLEAR_COLOUR as D,
-    PAVEMENT_COLOUR as V,
+    PAVEMENT_NIGHT_COLOUR as V,
     BENNETT_FLOOR_COLOUR as F,
     BENNETT_WALL_COLOUR as W,
     DARK_ROOM_COLOUR as Z,
-    APARTMENT_EXTERIOR_COLOUR as X,
+    APARTMENT_NIGHT_COLOUR as X,
     BENNETT_BED_COLOUR as U,
 } from '../../../../../src/constants/scene/cubes/colours'
 

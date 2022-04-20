@@ -3,7 +3,7 @@ import { CEMETERY_KEY } from '../../../../../src/constants/scene/scenes'
 
 import {
     GROUND_CLEAR_COLOUR as G,
-    GRASS_COLOUR as H,
+    GRASS_NIGHT_COLOUR as H,
 } from '../../../../../src/constants/scene/cubes/colours'
 
 export default {

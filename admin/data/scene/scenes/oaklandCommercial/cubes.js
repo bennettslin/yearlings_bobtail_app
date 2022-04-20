@@ -2,8 +2,8 @@ import { OAKLAND_COMMERCIAL_KEY } from '../../../../../src/constants/scene/scene
 
 import {
     DEFAULT_CLEAR_COLOUR as D,
-    STREET_COLOUR as T,
-    PAVEMENT_COLOUR as V,
+    STREET_NIGHT_COLOUR as T,
+    PAVEMENT_NIGHT_COLOUR as V,
 } from '../../../../../src/constants/scene/cubes/colours'
 
 export default {

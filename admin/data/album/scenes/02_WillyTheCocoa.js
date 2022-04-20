@@ -11,9 +11,10 @@ import {
 } from '../../../../src/constants/scene/things'
 import {
     BEDROOM_KEY,
-    BEDROOM_STOOL_KEY,
+    BEDROOM_STOOL_NIGHT_KEY,
     CHANGELING_CAVE_KEY,
     FREEWAY_KEY,
+    FREEWAY_NIGHT_KEY,
     NOHO_HOUSES_KEY,
     PORCH_KEY,
 } from '../../../../src/constants/scene/scenes'
@@ -111,7 +112,7 @@ export default [
     {
         unitIndex: 1,
         description: `San Fernando valley in the morning.`,
-        cubes: FREEWAY_KEY,
+        cubes: FREEWAY_NIGHT_KEY,
         presences: {
             [BACKDROP]: {
                 [VALLEY_PANORAMA_BACKDROP]: true,
@@ -314,7 +315,7 @@ export default [
                 [CAPTAIN_BED]: true,
             },
         },
-        cubes: BEDROOM_STOOL_KEY,
+        cubes: BEDROOM_STOOL_NIGHT_KEY,
         sky: { time: TIME_NIGHT, season: SEASON_SUMMER },
     },
     {

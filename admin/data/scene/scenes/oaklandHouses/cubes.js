@@ -6,8 +6,8 @@ import {
 
 import {
     GROUND_CLEAR_COLOUR as G,
-    STREET_COLOUR as T,
-    PAVEMENT_COLOUR as V,
+    STREET_NIGHT_COLOUR as T,
+    PAVEMENT_NIGHT_COLOUR as V,
     LIZ_FLOOR_COLOUR as F,
     LIZ_COUCH_COLOUR as U,
 } from '../../../../../src/constants/scene/cubes/colours'

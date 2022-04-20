@@ -10,7 +10,7 @@ import {
     PANEL,
 } from '../../../../src/constants/scene/things'
 import {
-    CLUB_LOADING,
+    CLUB_LOADING_KEY,
     CLUB_SIDE_CROWD_DARK_KEY,
     CLUB_SIDE_CROWD_KEY,
     CLUB_SIDE_STAGE_KEY,
@@ -227,7 +227,7 @@ export default [
                 [NEAR_BUILDINGS]: true,
             },
         },
-        cubes: CLUB_LOADING,
+        cubes: CLUB_LOADING_KEY,
         sky: { time: TIME_NIGHT, season: SEASON_SUMMER },
     },
     {

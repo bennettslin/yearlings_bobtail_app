@@ -5,11 +5,13 @@ import {
     BEDROOM_STOOL_KEY,
     BEDROOM_STOWAWAYS_KEY,
     BEDROOM_DARK_KEY,
+    BEDROOM_STOOL_NIGHT_KEY,
 } from '../../../../../src/constants/scene/scenes'
 import {
     DEFAULT_CLEAR_COLOUR as D,
     DARK_ROOM_CLEAR_COLOUR as E,
     GRASS_COLOUR as H,
+    GRASS_NIGHT_COLOUR as I,
     BENNETT_CARPET_COLOUR as F,
     BENNETT_WALL_COLOUR as W,
     DARK_ROOM_COLOUR as Z,
@@ -69,6 +71,17 @@ const DEFAULT_FLOOR = {
     ],
 }
 
+const STOOL_FLOOR = {
+    zIndices: [
+        [1],
+        [1, 1, 1, 6, 6, 1, 1, 7, 7, 1],
+        [1, 1, 6, 6, 5, 1, 1, 7, 7, 7, 1],
+        [1, 6, 5, 5, 1, 1, 1, 7, 7, 7, 1],
+        [1, 1, 1, 1, 3, 1, 1, 7, 1],
+        [1],
+    ],
+}
+
 export default {
     [BEDROOM_KEY]: {
         slantDirection: LEFT,
@@ -87,14 +100,22 @@ export default {
                 [F, F, F, F, D, F, F, U, F, F, F, H],
                 [F],
             ],
-            zIndices: [
-                [1],
-                [1, 1, 1, 6, 6, 1, 1, 7, 7, 1],
-                [1, 1, 6, 6, 5, 1, 1, 7, 7, 7, 1],
-                [1, 6, 5, 5, 1, 1, 1, 7, 7, 7, 1],
-                [1, 1, 1, 1, 3, 1, 1, 7, 1],
-                [1],
+            zIndices: STOOL_FLOOR.zIndices,
+        },
+    },
+    [BEDROOM_STOOL_NIGHT_KEY]: {
+        slantDirection: LEFT,
+        ceiling: DEFAULT_CEILING,
+        floor: {
+            hslaColours: [
+                [I, I, I, I, I, F, I, F, F, F, I],
+                [I, I, I, W, W, F, F, U, U, F, I],
+                [I, I, W, W, D, F, F, U, U, U, F, I],
+                [F, W, D, D, F, F, F, U, U, U, F, I],
+                [F, F, F, F, D, F, F, U, F, F, F, I],
+                [F],
             ],
+            zIndices: STOOL_FLOOR.zIndices,
         },
     },
     [BEDROOM_STOWAWAYS_KEY]: {
@@ -134,11 +155,11 @@ export default {
         },
         floor: {
             hslaColours: [
-                [H, H, H, H, H, Z, H, Z, Z, Z, H],
-                [H, H, H, Z, Z, Z, Z, Z, Z, Z, H],
-                [H, H, Z, Z, E, Z, Z, Z, Z, Z, Z, H],
-                [Z, Z, E, E, Z, Z, Z, Z, Z, Z, Z, H],
-                [Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, H],
+                [I, I, I, I, I, Z, I, Z, Z, Z, I],
+                [I, I, I, Z, Z, Z, Z, Z, Z, Z, I],
+                [I, I, Z, Z, E, Z, Z, Z, Z, Z, Z, I],
+                [Z, Z, E, E, Z, Z, Z, Z, Z, Z, Z, I],
+                [Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, I],
                 [Z],
             ],
             zIndices: DEFAULT_FLOOR.zIndices,

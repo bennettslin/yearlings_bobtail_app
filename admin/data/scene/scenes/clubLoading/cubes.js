@@ -1,18 +1,18 @@
-import { CLUB_LOADING } from '../../../../../src/constants/scene/scenes'
+import { CLUB_LOADING_KEY } from '../../../../../src/constants/scene/scenes'
 
 import {
     DEFAULT_CLEAR_COLOUR as D,
     GROUND_CLEAR_COLOUR as G,
-    PAVEMENT_COLOUR as V,
-    ROOF_COLOUR as C,
+    PAVEMENT_NIGHT_COLOUR as V,
+    ROOF_NIGHT_COLOUR as C,
     DARK_ROOM_COLOUR as Z,
-    GENERIC_EXTERIOR_COLOUR as X,
+    GENERIC_NIGHT_COLOUR as X,
 } from '../../../../../src/constants/scene/cubes/colours'
 
 import { d, f, k } from '../../../../../src/constants/scene/cubes/zIndices'
 
 export default {
-    [CLUB_LOADING]: {
+    [CLUB_LOADING_KEY]: {
         ceiling: {
             hslaColours: [
                 [C, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, C],

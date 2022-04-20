@@ -3,22 +3,25 @@
 # Next TODO
 * Roof for alley cubes?
 * Khari winter coat in Vegan?
-* Get rid of buildingsNearDark
 * Fix Bennett gate side
+* Lower Liz window?
 
 * Refactor
-    * Evian bottle
+    * Get rid of buildingsNearDark
     * Houses and buildings
-    * Liz gate
+    * Doors
     * Bricks (roofs)
+    * Liz gate
     * Interior
     * Cars
     * Royce Hall
     * St Joseph's
+    * Evian bottle
 
-* Night colours
-    * Night cubes for all buildings
-    * Audit presences
-    * Audit cubes
-    * Remove extraneous colours
 * Past, future, and magic colours
+* Do time evening?
+
+# Finally TODO
+* Audit presences
+* Audit cubes
+* Remove extraneous colours and cubes?
