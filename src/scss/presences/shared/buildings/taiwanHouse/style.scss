@@ -26,4 +26,9 @@
     .awningSide { fill: hsl(215, 25%, 41%); }
     .awningFront { fill: hsl(215, 25%, 45%); }
     .awningTop { fill: hsl(215, 25%, 50%); }
+
+    .nightTime
+    &.nightTime#{$suffix} {
+
+    }
 }

@@ -8,4 +8,9 @@
     .meadowFar { fill: hsl(154, 10%, 38%); }
     .meadowMiddle { fill: hsl(154, 12%, 35%); }
     .meadowNear { fill: hsl(154, 14%, 32%); }
+
+    .nightTime
+    &.nightTime#{$suffix} {
+
+    }
 }

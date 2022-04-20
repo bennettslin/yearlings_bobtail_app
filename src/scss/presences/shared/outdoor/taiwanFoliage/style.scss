@@ -14,4 +14,9 @@
     .bonsaiFurther { fill: hsl(290, 23%, 56%); }
     .bonsaiMiddle { fill: hsl(290, 23%, 61%); }
     .bonsaiCloser { fill: hsl(290, 23%, 66%); }
+
+    .nightTime
+    &.nightTime#{$suffix} {
+
+    }
 }
