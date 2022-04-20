@@ -2,4 +2,10 @@
     .fence { fill: hsl(65, 13%, 55%); }
     .fenceDark { fill: hsl(65, 13%, 50%); }
     .wallFront { fill: hsl($HUE_FAMILY, 46%, 65%); }
+
+    .nightTime
+    &.nightTime#{$suffix} {
+        .fence { fill: hsl(65, 8%, 45%); }
+        .fenceDark { fill: hsl(65, 8%, 40%); }
+    }
 }

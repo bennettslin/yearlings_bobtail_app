@@ -1,9 +1,21 @@
 .oaklandHouseLeft#{$suffix} {
     .wallSide { fill: hsl(30, 19%, 50%); }
     .wallFront { fill: hsl(30, 25%, 56%); }
+
+    .nightTime
+    &.nightTime#{$suffix} {
+        .wallSide { fill: hsl(30, 9%, 40%); }
+        .wallFront { fill: hsl(30, 15%, 46%); }
+    }
 }
 
 .oaklandHouseRight#{$suffix} {
-    .wallSide { fill: hsl(210, 19%, 50%); }
-    .wallFront { fill: hsl(210, 25%, 56%); }
+    .wallSide { fill: hsl(210, 19%, 40%); }
+    .wallFront { fill: hsl(210, 25%, 46%); }
+
+    .nightTime
+    &.nightTime#{$suffix} {
+        .wallSide { fill: hsl(210, 9%, 30%); }
+        .wallFront { fill: hsl(210, 15%, 36%); }
+    }
 }

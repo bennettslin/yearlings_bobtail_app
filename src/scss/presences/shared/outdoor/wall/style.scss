@@ -1,6 +1,6 @@
 .wall#{$suffix} {
-    .fence { fill: hsl(27, 23%, 50%); }
-    .fenceDark { fill: hsl(27, 23%, 45%); }
+    .fence { fill: hsl(27, 23%, 42%); }
+    .fenceDark { fill: hsl(27, 23%, 37%); }
     .wall { fill: hsl(28, 18%, 54%); }
     .ledge { fill: hsl(36, 21%, 62%); }
     .brickDark { fill: hsl(17, 36%, 39%); }
@@ -8,9 +8,10 @@
 
     .nightTime
     &.nightTime#{$suffix} {
-        .wall { fill: hsl(28, 8%, 49%); }
-        .ledge { fill: hsl(36, 11%, 57%); }
-        .brickDark { fill: hsl(17, 26%, 34%); }
-        .brickLight { fill: hsl(42, 15%, 43%); }
+        .fence { fill: hsl(27, 13%, 32%); }
+        .wall { fill: hsl(28, 8%, 44%); }
+        .ledge { fill: hsl(36, 11%, 52%); }
+        .brickDark { fill: hsl(17, 26%, 29%); }
+        .brickLight { fill: hsl(42, 15%, 38%); }
     }
 }

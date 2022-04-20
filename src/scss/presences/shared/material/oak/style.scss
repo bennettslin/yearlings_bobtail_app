@@ -19,3 +19,9 @@
     .oakLighter { fill: hsl(35, 13%, 41%); }
     .oakLightest { fill: hsl(35, 13%, 44%); }
 }
+
+.nightTime .nightTime#{$suffix} {
+    .oakDarkest { fill: hsl(35, 10%, 27%); }
+    .oakDark { fill: hsl(35, 10%, 37%); }
+    .oakMedium { fill: hsl(35, 10%, 47%); }
+}

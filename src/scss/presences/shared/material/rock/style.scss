@@ -7,3 +7,9 @@
 // .rockLight { fill: hsl(75, 7%, 67%); }
 // .rockLighter { fill: hsl(75, 7%, 72%); }
 // .rockLightest { fill: hsl(75, 7%, 77%); }
+
+.nightTime .nightTime#{$suffix} {
+    .rockMediumDark { fill: hsl(75, 4%, 42%); }
+    .rockMedium { fill: hsl(75, 4%, 47%); }
+    .rockMediumLight { fill: hsl(75, 4%, 52%); }
+}

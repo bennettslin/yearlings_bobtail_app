@@ -10,6 +10,14 @@
     .nightTime
     &.nightTime#{$suffix} {
         .mountain { fill: hsl(340, 8%, 37%); }
+        .meadowFar { fill: hsl(92, 18%, 34%); }
+        .meadowMiddle { fill: hsl(92, 18%, 31%); }
+        .meadowNear { fill: hsl(92, 18%, 28%); }
+    }
+
+    .autumnSeason.nightTime
+    &.autumn#{$suffix}.nightTime#{$suffix} {
+        .meadowNear { fill: hsl(62, 18%, 28%); }
     }
 
     .autumnSeason
@@ -22,10 +30,5 @@
         .meadowFar { fill: hsl(182, 18%, 54%); }
         .meadowMiddle { fill: hsl(182, 18%, 51%); }
         .meadowNear { fill: hsl(182, 18%, 48%); }
-    }
-
-    .autumnSeason.nightTime
-    &.autumn#{$suffix}.nightTime#{$suffix} {
-        .meadowNear { fill: hsl(62, 18%, 33%); }
     }
 }

@@ -1,7 +1,7 @@
 .house#{$suffix} {
     .roofBelow { fill: hsl($HUE_ROOF, 20%, 43%); }
     .roofSide { fill: hsl($HUE_ROOF, 20%, 50%); }
-    .roofTop { fill: hsl($HUE_ROOF, 20%, 56%); }
+    .roofTop { fill: hsl($HUE_ROOF, 20%, 54%); }
     .beam { fill: hsl(49, 10%, 49%); }
     .railFront { fill: hsl(40, 24%, 61%); }
     .railSide { fill: hsl(40, 17%, 56%); }
@@ -13,5 +13,21 @@
     .stepSide { fill: hsl(220, 16%, 49%); }
 
     // ~ concrete platform hsla.
-    .stepFront { fill: hsl(220, 16%, 59%); }
+    .stepFront { fill: hsl(220, 16%, 56%); }
+
+    .nightTime
+    &.nightTime#{$suffix} {
+        .roofBelow { fill: hsl($HUE_ROOF, 10%, 33%); }
+        .roofSide { fill: hsl($HUE_ROOF, 10%, 40%); }
+        .roofTop { fill: hsl($HUE_ROOF, 10%, 44%); }
+        .railFront { fill: hsl(40, 14%, 51%); }
+        .railSide { fill: hsl(40, 12%, 46%); }
+        .deckFront { fill: hsl(40, 9%, 51%); }
+        .deckSide { fill: hsl(40, 4%, 46%); }
+        .bayWallFront { fill: hsl(60, 5%, 51%); }
+        .bayWallMiddle { fill: hsl(60, 5%, 48%); }
+        .bayWallSide { fill: hsl(60, 5%, 45%); }
+        .stepSide { fill: hsl(220, 8%, 39%); }
+        .stepFront { fill: hsl(220, 8%, 46%); }
+    }
 }

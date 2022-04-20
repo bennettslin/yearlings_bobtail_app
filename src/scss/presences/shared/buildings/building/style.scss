@@ -14,17 +14,17 @@
 
     .nightTime
     &.nightTime#{$suffix} {
-        .wallLowSide { fill: hsl(45, 5%, 48%); }
-        .wallLowFront { fill: hsl(45, 10%, 56%); }
-        .wallMediumSide { fill: hsl(22, 10%, 40%); }
-        .wallMediumFront { fill: hsl(22, 10%, 48%); }
-        .wallHighSide { fill: hsl(7, 10%, 36%); }
-        .wallHighFront { fill: hsl(7, 15%, 44%); }
-        .roofSide { fill: hsl(17, 10%, 40%); }
-        .roofBelow { fill: hsl(17, 10%, 44%); }
-        .roofFront { fill: hsl(17, 14%, 48%); }
+        .wallLowSide { fill: hsl(45, 5%, 43%); }
+        .wallLowFront { fill: hsl(45, 10%, 51%); }
+        .wallMediumSide { fill: hsl(22, 10%, 35%); }
+        .wallMediumFront { fill: hsl(22, 10%, 43%); }
+        .wallHighSide { fill: hsl(7, 10%, 31%); }
+        .wallHighFront { fill: hsl(7, 15%, 39%); }
+        .roofSide { fill: hsl(17, 10%, 35%); }
+        .roofBelow { fill: hsl(17, 10%, 39%); }
+        .roofFront { fill: hsl(17, 14%, 43%); }
         .awningTop { fill: hsl(228, 15%, 51%); }
-        .awningFront { fill: hsl(228, 8%, 48%); }
-        .awningSide { fill: hsl(228, 5%, 40%); }
+        .awningFront { fill: hsl(228, 8%, 43%); }
+        .awningSide { fill: hsl(228, 5%, 35%); }
     }
 }

@@ -98,6 +98,7 @@ export default {
     [APARTMENT_PLANT]: [
         AUTUMN__SHARED,
         FOLIAGE__SHARED,
+        NIGHT_TIME__SHARED,
     ],
     [ASH_CAN]: CIGARETTE__SHARED,
     [STINK_PLANT]: [
@@ -109,10 +110,12 @@ export default {
     [BUSH_DOUBLE]: [
         AUTUMN__SHARED,
         FOLIAGE__SHARED,
+        NIGHT_TIME__SHARED,
     ],
     [BUSH_SINGLE]: [
         AUTUMN__SHARED,
         FOLIAGE__SHARED,
+        NIGHT_TIME__SHARED,
     ],
     [CACTUS_DOUBLE]: FOLIAGE__SHARED,
     [CACTUS_SINGLE]: FOLIAGE__SHARED,
@@ -143,11 +146,14 @@ export default {
     ],
     [FIRE_HYDRANT]: null,
     [GLASS_RACK]: null,
-    [GRAVESTONE]: null,
+    [GRAVESTONE]: NIGHT_TIME__SHARED,
     [HOSTESS_STAND]: null,
     [HOWIE_FRIDGE]: DARK_ROOM_DEFAULT__SHARED,
     [IV_DRIP]: null,
-    [LAMPPOST]: BULB__SHARED,
+    [LAMPPOST]: [
+        NIGHT_TIME__SHARED,
+        BULB__SHARED,
+    ],
     [LEMON_TREE]: FOLIAGE__SHARED,
     [LOCKER_BANK]: null,
     [MIRRORED_SINK]: ALL_PEOPLE__SHARED,
@@ -161,7 +167,7 @@ export default {
     [PEACH_TREE]: FOLIAGE__SHARED,
     [PHARMACY_AISLE]: null,
     [PLAYGROUND_SLIDE]: null,
-    [RECYCLING_BIN]: null,
+    [RECYCLING_BIN]: NIGHT_TIME__SHARED,
     [ROSEBUSH_DOUBLE_BATHROOM]: [
         FOLIAGE__SHARED,
         ROSE_RED__SHARED,
@@ -210,8 +216,14 @@ export default {
         FOLIAGE__SHARED,
     ],
     [TREE_DEAD]: FOLIAGE__SHARED,
-    [TWIN_STREETLAMP]: BULB__SHARED,
-    [UCLA_TREE]: FOLIAGE__SHARED,
+    [TWIN_STREETLAMP]: [
+        NIGHT_TIME__SHARED,
+        BULB__SHARED,
+    ],
+    [UCLA_TREE]: [
+        NIGHT_TIME__SHARED,
+        FOLIAGE__SHARED,
+    ],
     [WAITING_ROOM_PLANT]: FOLIAGE__SHARED,
     [WALL_SPEAKER_FRONT]: DARK_ROOM_DEFAULT__SHARED,
     [WALL_SPEAKER_SIDE]: null,

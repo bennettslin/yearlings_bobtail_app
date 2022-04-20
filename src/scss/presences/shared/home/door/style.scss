@@ -28,8 +28,13 @@
 
     .nightTime
     &.nightTime#{$suffix} {
-        .frameMediumSide { fill: hsl(33, 11%, 43%); }
-        .frameMediumFront { fill: hsl(33, 9%, 48%); }
-        .doorMediumFront { fill: hsl(33, 17%, 28%); }
+        .frameDarkFront { fill: hsl(33, 10%, 36%); }
+        .doorDarkFront { fill: hsl(33, 13%, 25%); }
+        .frameMediumSide { fill: hsl(33, 11%, 38%); }
+        .frameMediumFront { fill: hsl(33, 9%, 43%); }
+        .doorMediumFront { fill: hsl(33, 17%, 33%); }
+        .frameLightSide { fill: hsl(33, 9%, 45%); }
+        .frameLightFront { fill: hsl(33, 12%, 50%); }
+        .doorLightFront { fill: hsl(33, 12%, 40%); }
     }
 }

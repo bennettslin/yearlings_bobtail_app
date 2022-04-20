@@ -93,3 +93,10 @@
     .flatPurpleMedium { fill: hsl(270, 17%, 34%); }
     .flatMaroonLight { fill: hsl(330, 17%, 39%); }
 }
+
+.nightTime .nightTime#{$suffix} {
+    .flatChartreuseMedium { fill: hsl(90, 23%, 47%); }
+    .flatChartreuseMediumLight { fill: hsl(90, 23%, 52%); }
+    .flatChartreuseLight { fill: hsl(90, 23%, 57%); }
+    .flatBlueDark { fill: hsl(210, 23%, 37%); }
+}

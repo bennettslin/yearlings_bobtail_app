@@ -4,3 +4,7 @@
 .darkRoomDefault .darkRoom#{$suffix} {
     .shadow { fill: hsl(0, 0%, 16%); }
 }
+
+.nightTime .nightTime#{$suffix} {
+    .shadow { fill: hsl(0, 0%, 17%); }
+}

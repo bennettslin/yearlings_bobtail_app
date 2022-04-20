@@ -53,7 +53,7 @@ import {
     MOUNTAIN__SHARED,
     WALL__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/outdoor'
-import { AUTUMN__SHARED, DARK_ROOM_DEFAULT__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
+import { AUTUMN__SHARED, DARK_ROOM_DEFAULT__SHARED, NIGHT_TIME__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
 
 export default {
     [BANCROFT_DOOR]: DOOR__SHARED,
@@ -76,6 +76,7 @@ export default {
         FOLIAGE__SHARED,
         FAMILY_HOUSE__SHARED,
         MOUNTAIN__SHARED,
+        NIGHT_TIME__SHARED,
     ],
     [BENNETT_DOOR_INSIDE]: [
         BENNETT_INSIDE__SHARED,
@@ -96,6 +97,7 @@ export default {
     [BENNETT_GATE_FRONT]: [
         BENNETT_GATE__SHARED,
         BENNETT_APARTMENT__SHARED,
+        NIGHT_TIME__SHARED,
     ],
     [BENNETT_GATE_SIDE]: [
         BENNETT_GATE__SHARED,
@@ -104,17 +106,22 @@ export default {
     [BENNETT_GATE_SIDE_OPEN]: [
         BENNETT_GATE__SHARED,
         BENNETT_APARTMENT__SHARED,
+        NIGHT_TIME__SHARED,
     ],
     [BLINDS_INSIDE_OPEN]: [
         BENNETT_INSIDE__SHARED,
         DARK_ROOM_DEFAULT__SHARED,
     ],
-    [BLINDS_OUTSIDE]: BENNETT_APARTMENT__SHARED,
+    [BLINDS_OUTSIDE]: [
+        BENNETT_APARTMENT__SHARED,
+        NIGHT_TIME__SHARED,
+    ],
     [CINEMA_DOORS]: DOOR__SHARED,
     [CLUB_DOOR_OPEN]: DOOR__SHARED,
     [DEFAULT_FENCE_BASEMENT]: [
         AUTUMN__SHARED,
         FOLIAGE__SHARED,
+        NIGHT_TIME__SHARED,
         WALL__SHARED,
     ],
     [DEFAULT_FENCE_BATHROOM]: [
@@ -143,13 +150,17 @@ export default {
         DOOR__SHARED,
         LIZ_APARTMENT__SHARED,
     ],
-    [LIZ_GATE_INSIDE]: LIZ_GATE__SHARED,
+    [LIZ_GATE_INSIDE]: [
+        NIGHT_TIME__SHARED,
+        LIZ_GATE__SHARED,
+    ],
     [LIZ_GATE_OUTSIDE]: LIZ_GATE__SHARED,
     [LIZ_GATE_OUTSIDE_OPEN]: LIZ_GATE__SHARED,
     [LOADING_DOCK_DOOR]: DOOR__SHARED,
     [NEIGHBOUR_DOOR]: [
         BENNETT_APARTMENT__SHARED,
         DOOR__SHARED,
+        NIGHT_TIME__SHARED,
     ],
     [NURSE_DOOR]: DOOR__SHARED,
     [PORCH_DOOR]: DOOR__SHARED,

@@ -15,6 +15,10 @@
 }
 
 .nightTime .nightTime#{$suffix} {
-    .glassMedium { fill: hsl(175, 10%, 42%); }
+    .glassDarkest { fill: hsl(175, 8%, 27%); }
+    .glassDark { fill: hsl(175, 8%, 37%); }
+    .glassMediumDark { fill: hsl(175, 9%, 42%); }
+    .glassMedium { fill: hsl(175, 10%, 47%); }
     .glassLight { fill: hsl(175, 12%, 52%); }
+    .glassClear { fill: hsla(175, 10%, 20%, 0.25); }
 }

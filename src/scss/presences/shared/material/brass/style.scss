@@ -15,6 +15,8 @@
 }
 
 .nightTime .nightTime#{$suffix} {
-    .brassDarker { fill: hsl(61, 16%, 32%); }
-    .brassMediumLight { fill: hsl(61, 16%, 52%); }
+    .brassDarker { fill: hsl(61, 11%, 32%); }
+    .brassDark { fill: hsl(61, 11%, 37%); }
+    .brassMediumLight { fill: hsl(61, 11%, 52%); }
+    .brassLight { fill: hsl(61, 11%, 57%); }
 }

@@ -17,5 +17,7 @@
 
 .nightTime .nightTime#{$suffix} {
     .steelDark { fill: hsl(195, 6%, 37%); }
+    .steelMediumDark { fill: hsl(195, 6%, 42%); }
     .steelMedium { fill: hsl(195, 6%, 47%); }
+    .steelLight { fill: hsl(195, 6%, 57%); }
 }

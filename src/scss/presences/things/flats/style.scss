@@ -44,21 +44,41 @@
 .residentialFarLeft {
     .wallSide { fill: hsl(270, 12%, 52%); }
     .wallFront { fill: hsl(270, 18%, 58%); }
+
+    .nightTime &.nightTime#{$suffix} {
+        .wallSide { fill: hsl(270, 7%, 42%); }
+        .wallFront { fill: hsl(270, 13%, 48%); }
+    }
 }
 
 .residentialFarRight {
     .wallSide { fill: hsl(60, 14%, 45%); }
     .wallFront { fill: hsl(60, 20%, 51%); }
+
+    .nightTime &.nightTime#{$suffix} {
+        .wallSide { fill: hsl(60, 7%, 35%); }
+        .wallFront { fill: hsl(60, 13%, 41%); }
+    }
 }
 
 .residentialMiddleRight {
     .wallSide { fill: hsl(0, 4%, 50%); }
     .wallFront { fill: hsl(0, 10%, 56%); }
+
+    .nightTime &.nightTime#{$suffix} {
+        .wallSide { fill: hsl(0, 4%, 40%); }
+        .wallFront { fill: hsl(0, 10%, 46%); }
+    }
 }
 
 .residentialNearRight {
     .wallSide { fill: hsl(240, 14%, 50%); }
     .wallFront { fill: hsl(240, 20%, 56%); }
+
+    .nightTime &.nightTime#{$suffix} {
+        .wallSide { fill: hsl(240, 7%, 40%); }
+        .wallFront { fill: hsl(240, 13%, 46%); }
+    }
 }
 
 .rollerCoaster {
@@ -67,22 +87,22 @@
 }
 
 .royceHall {
-    .roofDark { fill: hsl(66, 9%, 43%); }
-    .roofLight { fill: hsl(60, 9%, 49%); }
-    .brickDarkest { fill: hsl(25, 37%, 38%); }
-    .brickDarker { fill: hsl(25, 37%, 45%); }
-    .brickDark { fill: hsl(25, 38%, 51%); }
-    .brickLight { fill: hsl(25, 49%, 57%); }
-    .wallInner { fill: hsl(66, 9%, 41%); }
-    .wallFront { fill: hsl(62, 15%, 62%); }
-    .trimDark { fill: hsl(65, 11%, 55%); }
-    .trimLight { fill: hsl(64, 18%, 67%); }
-    .stepFront { fill: hsl(226, 14%, 51%); }
-    .stepSide { fill: hsl(226, 13%, 43%); }
-    .trimOrnamentInner { fill: hsl(65, 9%, 52%); }
-    .trimOrnamentOuter { fill: hsl(64, 14%, 62%); }
-    .brickOrnament { fill: hsl(13, 42%, 53%); }
-    .stainedGlass { fill: hsl(228, 24%, 47%); }
+    .roofDark { fill: hsl(66, 9%, 38%); }
+    .roofLight { fill: hsl(60, 9%, 42%); }
+    .brickDarkest { fill: hsl(25, 28%, 28%); }
+    .brickDarker { fill: hsl(25, 28%, 35%); }
+    .brickDark { fill: hsl(25, 28%, 41%); }
+    .brickLight { fill: hsl(25, 29%, 47%); }
+    .wallInner { fill: hsl(66, 9%, 31%); }
+    .wallFront { fill: hsl(62, 12%, 42%); }
+    .trimDark { fill: hsl(65, 9%, 40%); }
+    .trimLight { fill: hsl(64, 8%, 45%); }
+    .stepFront { fill: hsl(226, 9%, 41%); }
+    .stepSide { fill: hsl(226, 8%, 33%); }
+    .trimOrnamentInner { fill: hsl(65, 9%, 37%); }
+    .trimOrnamentOuter { fill: hsl(64, 9%, 42%); }
+    .brickOrnament { fill: hsl(13, 32%, 43%); }
+    .stainedGlass { fill: hsl(228, 14%, 37%); }
 }
 
 .schoolBungalow {
@@ -90,35 +110,35 @@
 }
 
 .stJosephsAnnex {
-    .wallFront { fill: hsl(24, 40%, 59%); }
+    .wallFront { fill: hsl(24, 15%, 47%); }
 }
 
 .stJosephsChurch {
-    .foundationRear { fill: hsl(316, 6%, 41%); }
-    .foundationMiddle { fill: hsl(316, 6%, 44%); }
-    .foundationFront { fill: hsl(316, 6%, 47%); }
-    .roofTopRear { fill: hsl(147, 8%, 38%); }
-    .roofSide { fill: hsl(150, 7%, 43%); }
-    .roofTop { fill: hsl(150, 7%, 47%); }
-    .wallDark { fill: hsl(24, 25%, 51%); }
-    .wallMedium { fill: hsl(24, 25%, 54%); }
-    .wallLight { fill: hsl(24, 25%, 57%); }
-    .ball { fill: hsl(40, 35%, 51%); }
-    .cross { fill: hsl(41, 43%, 59%); }
-    .marbleDark { fill: hsl(48, 8%, 54%); }
-    .marbleLight { fill: hsl(48, 8%, 59%); }
-    .trimDark { fill: hsl(74, 14%, 51%); }
-    .trimMedium { fill: hsl(74, 14%, 56%); }
-    .trimLight { fill: hsl(74, 14%, 61%); }
-    .stainedGlassFrame { fill: hsl(56, 30%, 65%); }
-    .stainedGlass { fill: hsl(224, 24%, 47%); }
-    .stepFront { fill: hsl(233, 16%, 59%); }
-    .lampholder { fill: hsl(30, 8%, 33%); }
-    .stJosephRear { fill: hsl(60, 6%, 66%); }
-    .stJosephFront { fill: hsl(65, 8%, 70%); }
-    .robe { fill: hsl(47, 17%, 31%); }
-    .scroll { fill: hsl(60, 3%, 46%); }
-    .book { fill: hsl(60, 3%, 41%); }
+    .foundationRear { fill: hsl(316, 6%, 36%); }
+    .foundationMiddle { fill: hsl(316, 6%, 39%); }
+    .foundationFront { fill: hsl(316, 6%, 42%); }
+    .roofTopRear { fill: hsl(147, 8%, 33%); }
+    .roofSide { fill: hsl(150, 7%, 38%); }
+    .roofTop { fill: hsl(150, 7%, 42%); }
+    .wallDark { fill: hsl(24, 15%, 41%); }
+    .wallMedium { fill: hsl(24, 15%, 44%); }
+    .wallLight { fill: hsl(24, 15%, 47%); }
+    .ball { fill: hsl(40, 25%, 49%); }
+    .cross { fill: hsl(41, 33%, 54%); }
+    .marbleDark { fill: hsl(48, 8%, 44%); }
+    .marbleLight { fill: hsl(48, 8%, 49%); }
+    .trimDark { fill: hsl(74, 9%, 41%); }
+    .trimMedium { fill: hsl(74, 9%, 46%); }
+    .trimLight { fill: hsl(74, 9%, 51%); }
+    .stainedGlassFrame { fill: hsl(56, 20%, 55%); }
+    .stainedGlass { fill: hsl(224, 14%, 37%); }
+    .stepFront { fill: hsl(233, 11%, 43%); }
+    .lampholder { fill: hsl(30, 8%, 23%); }
+    .stJosephRear { fill: hsl(60, 6%, 56%); }
+    .stJosephFront { fill: hsl(65, 8%, 60%); }
+    .robe { fill: hsl(47, 17%, 21%); }
+    .scroll { fill: hsl(60, 3%, 36%); }
+    .book { fill: hsl(60, 3%, 31%); }
 }
 
 .tennisCourt {

@@ -63,6 +63,7 @@ export default {
         WINTER__SHARED,
         FOLIAGE__SHARED,
         MOUNTAIN__SHARED,
+        NIGHT_TIME__SHARED,
     ],
     [OCEAN_BOTTOM_FAR]: VOLCANO__SHARED,
     [OCEAN_FLOOR_FAR]: VOLCANO__SHARED,
@@ -97,6 +98,7 @@ export default {
         AUTUMN__SHARED,
         FOLIAGE__SHARED,
         MOUNTAIN__SHARED,
+        NIGHT_TIME__SHARED,
     ],
     [VALLEY_PANORAMA_BACKDROP]: [
         BUILDINGS__SHARED,

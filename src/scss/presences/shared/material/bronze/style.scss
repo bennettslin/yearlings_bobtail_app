@@ -11,3 +11,8 @@
     .bronzeDark { fill: hsl(47, 19%, 29%); }
     .bronzeMediumDark { fill: hsl(47, 19%, 31%); }
 }
+
+.nightTime .nightTime#{$suffix} {
+    .bronzeDarker { fill: hsl(47, 27%, 32%); }
+    .bronzeMediumDark { fill: hsl(47, 27%, 42%); }
+}

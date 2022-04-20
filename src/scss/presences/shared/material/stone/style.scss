@@ -7,3 +7,9 @@
 .stoneLight { fill: hsl(155, 6%, 67%); }
 // .stoneLighter { fill: hsl(155, 6%, 72%); }
 // .stoneLightest { fill: hsl(155, 6%, 77%); }
+
+.nightTime .nightTime#{$suffix} {
+    .stoneDarkest { fill: hsl(155, 4%, 27%); }
+    .stoneDark { fill: hsl(155, 4%, 37%); }
+    .stoneMedium { fill: hsl(155, 4%, 47%); }
+}

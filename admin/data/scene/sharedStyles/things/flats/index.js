@@ -105,10 +105,12 @@ export default {
     [CEMETERY_HILLS_LEFT]: [
         FOLIAGE__SHARED,
         MOUNTAIN__SHARED,
+        NIGHT_TIME__SHARED,
     ],
     [CEMETERY_HILLS_RIGHT]: [
         FOLIAGE__SHARED,
         MOUNTAIN__SHARED,
+        NIGHT_TIME__SHARED,
     ],
     [CLIFF_GRAVES_FAR]: [
         WINTER__SHARED,
@@ -165,6 +167,7 @@ export default {
         AUTUMN__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
+        NIGHT_TIME__SHARED,
         WALL__SHARED,
     ],
     [DRIVING_HOUSE]: [
@@ -200,10 +203,11 @@ export default {
     [GO_KART_TRACK]: ALL_VEHICLES__SHARED,
     [NEAR_BUILDINGS]: [
         AUTUMN__SHARED,
-        WINTER__SHARED,
         BUILDINGS__SHARED,
         FOLIAGE__SHARED,
+        NIGHT_TIME__SHARED,
         WALL__SHARED,
+        WINTER__SHARED,
     ],
     [NEAR_HOUSES]: [
         FOLIAGE__SHARED,
@@ -226,6 +230,7 @@ export default {
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
+        NIGHT_TIME__SHARED,
         OAKLAND_HOUSE_LEFT__SHARED,
     ],
     [OAKLAND_HOUSE_RIGHT]: [
@@ -233,6 +238,7 @@ export default {
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
+        NIGHT_TIME__SHARED,
         OAKLAND_HOUSE_RIGHT__SHARED,
     ],
     [OAKLAND_SCHOOL]: [
@@ -267,18 +273,21 @@ export default {
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
+        NIGHT_TIME__SHARED,
     ],
     [RESIDENTIAL_FAR_RIGHT]: [
         AUTUMN__SHARED,
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
+        NIGHT_TIME__SHARED,
     ],
     [RESIDENTIAL_MIDDLE_LEFT]: [
         AUTUMN__SHARED,
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
+        NIGHT_TIME__SHARED,
         OAKLAND_HOUSE_RIGHT__SHARED,
     ],
     [RESIDENTIAL_MIDDLE_RIGHT]: [
@@ -286,12 +295,14 @@ export default {
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
+        NIGHT_TIME__SHARED,
     ],
     [RESIDENTIAL_NEAR_LEFT]: [
         AUTUMN__SHARED,
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
+        NIGHT_TIME__SHARED,
         OAKLAND_HOUSE_LEFT__SHARED,
     ],
     [RESIDENTIAL_NEAR_RIGHT]: [
@@ -299,6 +310,7 @@ export default {
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
+        NIGHT_TIME__SHARED,
     ],
     [RICKSHAW_TOWN]: [
         DOOR__SHARED,
@@ -306,7 +318,10 @@ export default {
         TAIWAN_HOUSE__SHARED,
     ],
     [ROLLER_COASTER]: null,
-    [ROYCE_HALL]: DOOR__SHARED,
+    [ROYCE_HALL]: [
+        NIGHT_TIME__SHARED,
+        DOOR__SHARED,
+    ],
     [SCHOOL_BUNGALOW]: [
         BUILDING__SHARED,
         DOOR__SHARED,
@@ -315,11 +330,13 @@ export default {
     [ST_JOSEPHS_ANNEX]: [
         DOOR__SHARED,
         HOUSE__SHARED,
+        NIGHT_TIME__SHARED,
     ],
     [ST_JOSEPHS_CHURCH]: [
         BULB__SHARED,
         DOOR__SHARED,
         FOLIAGE__SHARED,
+        NIGHT_TIME__SHARED,
     ],
     [TAIWAN_HOUSES_CENTRE]: [
         DOOR__SHARED,

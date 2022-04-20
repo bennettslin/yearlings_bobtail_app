@@ -68,7 +68,7 @@ import {
     REATTA__SHARED,
     ALL_VEHICLES__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/vehicles'
-import { DARK_ROOM_DEFAULT__SHARED, FUTURE__SHARED, PAST__SHARED, PRESENT__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
+import { DARK_ROOM_DEFAULT__SHARED, FUTURE__SHARED, NIGHT_TIME__SHARED, PAST__SHARED, PRESENT__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
 
 export default {
     [ALBUM_JOHNNY_HORTON]: [
@@ -125,7 +125,7 @@ export default {
         BENNETT,
     ],
     [CLIPBOARD]: null,
-    [CODE_BOX]: null,
+    [CODE_BOX]: NIGHT_TIME__SHARED,
     [CORKBOARD]: null,
     [DOGS_ROCKET]: null,
     [DOGS_SPACE_STATION]: null,

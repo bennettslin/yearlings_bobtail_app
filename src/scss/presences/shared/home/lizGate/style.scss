@@ -5,4 +5,14 @@
     .plankDark { fill: hsl(53, 23%, 60%); }
     .plankMedium { fill: hsl(46, 25%, 63%); }
     .beam { fill: hsl(62, 29%, 66%); }
+
+    .nightTime
+    &.nightTime#{$suffix} {
+        .postDark { fill: hsl(38, 14%, 38%); }
+        .post { fill: hsl(38, 14%, 44%); }
+        .plankLight { fill: hsl(43, 18%, 55%); }
+        .plankDark { fill: hsl(53, 13%, 50%); }
+        .plankMedium { fill: hsl(46, 15%, 53%); }
+        .beam { fill: hsl(62, 19%, 56%); }
+    }
 }
