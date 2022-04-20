@@ -5,8 +5,8 @@
 * Fix Bennett gate side still…
 * Roof for alley cubes?
     * Make alley interior dark
+    * Add trash
 * Make bathroom smaller?
-* Make Liz couch closer to green?
 
 * Refactor
     * Get rid of buildingsNearDark
