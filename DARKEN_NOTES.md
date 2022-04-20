@@ -3,7 +3,6 @@
 # Next TODO
 * Alley
     * Shrink door and dumpster, extend pipes
-* Make bathroom smaller?
 
 * Refactor
     * Get rid of buildingsNearDark

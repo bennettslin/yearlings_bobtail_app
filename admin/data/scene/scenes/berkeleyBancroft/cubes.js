@@ -36,8 +36,8 @@ export default {
                 [G],
                 [V],
                 [V, V, V, V, A, P],
-                [V, V, V, V, A, A, A, P, P, P, P, P],
-                [V, V, V, V, V, V, V, P, P, P, P, P],
+                [V, V, V, V, A, A, A, P],
+                [V, V, V, V, V, V, V, P],
                 [V],
             ],
             zIndices: [

@@ -19,7 +19,7 @@ export default {
                 [Q, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Q],
                 [Q, X, X, X, X, X, X, X, X, X, X, Q],
                 [Q, Q, Q, Q, Q, Q, Q, Q, D, D, D, Q],
-                [Q, Q, Q, Q, Q, Q, Q, Q, Q, Q, Q, Q],
+                [Q],
                 [D],
             ],
             zIndices: [

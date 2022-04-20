@@ -47,12 +47,12 @@ export const THINGS_BATHROOM_BATHING = {
     [CUTOUT]: {
         [TOWEL_RACK]: {
             yIndex: 2,
-            xPosition: 2.5,
+            xPosition: 3,
             zOffset: 1.5,
         },
         [MIRRORED_SINK]: {
             yIndex: 2,
-            xPosition: 8.5,
+            xPosition: 8,
         },
     },
 }

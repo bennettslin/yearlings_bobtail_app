@@ -11,7 +11,7 @@ import {
     SOFT_WALL_COLOUR as W,
 } from '../../../../../src/constants/scene/cubes/colours'
 
-import { f, k } from '../../../../../src/constants/scene/cubes/zIndices'
+import { d, k } from '../../../../../src/constants/scene/cubes/zIndices'
 
 const DEFAULT_FLOOR = {
     hslaColours: [
@@ -41,7 +41,7 @@ export default {
             zIndices: [
                 [k],
                 [1],
-                [1, f, f, f, f, f, f, f, f, f, f, 1],
+                [1, 1, d, d, d, d, d, d, d, d, 1, 1],
             ],
         },
         floor: DEFAULT_FLOOR,
@@ -53,7 +53,6 @@ export default {
                 [Z],
                 [Z],
                 [Z, Z, Z, D, D, D, D, Z],
-                [Z],
                 [Z],
             ],
             zIndices: DEFAULT_FLOOR.zIndices,
