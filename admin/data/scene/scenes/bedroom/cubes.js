@@ -9,7 +9,7 @@ import {
 } from '../../../../../src/constants/scene/scenes'
 import {
     DEFAULT_CLEAR_COLOUR as D,
-    DARK_ROOM_CLEAR_COLOUR as E,
+    GROUND_CLEAR_COLOUR as G,
     GRASS_COLOUR as H,
     GRASS_NIGHT_COLOUR as I,
     BENNETT_CARPET_COLOUR as F,
@@ -157,8 +157,8 @@ export default {
             hslaColours: [
                 [I, I, I, I, I, Z, I, Z, Z, Z, I],
                 [I, I, I, Z, Z, Z, Z, Z, Z, Z, I],
-                [I, I, Z, Z, E, Z, Z, Z, Z, Z, Z, I],
-                [Z, Z, E, E, Z, Z, Z, Z, Z, Z, Z, I],
+                [I, I, Z, Z, G, Z, Z, Z, Z, Z, Z, I],
+                [Z, Z, G, G, Z, Z, Z, Z, Z, Z, Z, I],
                 [Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, I],
                 [Z],
             ],

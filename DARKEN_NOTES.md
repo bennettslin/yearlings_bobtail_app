@@ -1,10 +1,10 @@
 # Darken notes
 
 # Next TODO
-* Rename clear colour cubes for consistency
 * Khari winter coat in Vegan?
-* Fix Bennett gate side
+* Fix Bennett gate side still…
 * Roof for alley cubes?
+    * Make alley interior dark
 * Make bathroom smaller?
 * Make Liz couch closer to green?
 
