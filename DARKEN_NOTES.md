@@ -1,7 +1,6 @@
 # Darken notes
 
 # Next TODO
-* Khari winter coat in Vegan?
 * Roof for alley cubes?
     * Make alley interior dark
     * Add trash
