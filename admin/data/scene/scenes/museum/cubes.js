@@ -6,7 +6,7 @@ import {
     PLATFORM_COLOUR as P,
 } from '../../../../../src/constants/scene/cubes/colours'
 
-import { d, g } from '../../../../../src/constants/scene/cubes/zIndices'
+import { e, g } from '../../../../../src/constants/scene/cubes/zIndices'
 
 export default {
     [MUSEUM_KEY]: {
@@ -17,9 +17,9 @@ export default {
             zIndices: [
                 [1],
                 [1, g, g, g, g, g, g, g, g, g, g, 1],
-                [d, g, g, g, g, g, g, g, g, g, g, 1],
-                [d, g, g, g, g, g, g, g, g, g, g, 1],
-                [d, g, g, g, g, g, g, g, g, g, g, 1],
+                [e, g, g, g, g, g, g, g, g, g, g, 1],
+                [e, g, g, g, g, g, g, g, g, g, g, 1],
+                [e, g, g, g, g, g, g, g, g, g, g, 1],
                 [1, g, g, g, g, g, g, g, g, g, g, 1],
             ],
         },

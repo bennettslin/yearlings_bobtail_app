@@ -5,7 +5,7 @@ import {
     SCHOOL_WALL_COLOUR as W,
 } from '../../../../../src/constants/scene/cubes/colours'
 
-import { d, g } from '../../../../../src/constants/scene/cubes/zIndices'
+import { e, g } from '../../../../../src/constants/scene/cubes/zIndices'
 
 export default {
     [BACKSTAGE_KEY]: {
@@ -16,9 +16,9 @@ export default {
             zIndices: [
                 [1],
                 [1, g, g, g, g, g, g, g, g, g, g, 1],
-                [d, g, g, g, g, g, g, g, g, g, g, d],
-                [d, g, g, g, g, g, g, g, g, g, g, d],
-                [d, g, g, g, g, g, g, g, g, g, g, d],
+                [e, g, g, g, g, g, g, g, g, g, g, e],
+                [e, g, g, g, g, g, g, g, g, g, g, e],
+                [e, g, g, g, g, g, g, g, g, g, g, e],
                 [1, g, g, g, g, g, g, g, g, g, g, 1],
             ],
         },
