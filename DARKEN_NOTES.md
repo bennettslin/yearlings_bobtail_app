@@ -1,8 +1,6 @@
 # Darken notes
 
 # Next TODO
-* Alley
-    * Shrink door and dumpster, extend pipes
 
 * Refactor
     * Get rid of buildingsNearDark

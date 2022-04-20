@@ -43,7 +43,7 @@ export default {
         },
         [THROWN_FRUIT__ALLEY]: {
             yIndex: 3,
-            xPosition: 7,
+            xPosition: 7.1,
             zOffset: -0.05,
         },
     },
