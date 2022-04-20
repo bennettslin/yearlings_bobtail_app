@@ -8,4 +8,14 @@
     .bar { fill: hsl(268, 11%, 66%); }
     .cushion { fill: hsl(268, 6%, 68%); }
     .metalDark { fill: hsl(268, 13%, 28%); }
+
+    .nightTime
+    &.nightTime#{$suffix} {
+        .body { fill: hsl(268, 16%, 44%); }
+        .bumper { fill: hsl(0, 0%, 50%); }
+
+        .bar { fill: hsl(268, 6%, 51%); }
+        .cushion { fill: hsl(268, 6%, 43%); }
+        .metalDark { fill: hsl(268, 8%, 23%); }
+    }
 }

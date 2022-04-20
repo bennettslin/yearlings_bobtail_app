@@ -84,7 +84,7 @@ import {
     WALL__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/outdoor'
 import { ALL_VEHICLES__SHARED } from '../../../../../../src/constants/scene/sharedStyles/vehicles'
-import { AUTUMN__SHARED, WINTER__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
+import { AUTUMN__SHARED, NIGHT_TIME__SHARED, WINTER__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
 
 export default {
     [BEDROOM_BUS]: ALL_VEHICLES__SHARED,
@@ -121,37 +121,45 @@ export default {
     [COMMERCIAL_CENTRE]: [
         BUILDING__SHARED,
         DOOR__SHARED,
+        NIGHT_TIME__SHARED,
     ],
     [COMMERCIAL_FAR_LEFT]: [
         BUILDING__SHARED,
         DOOR__SHARED,
+        NIGHT_TIME__SHARED,
     ],
     [COMMERCIAL_FAR_RIGHT]: [
         BUILDING__SHARED,
         DOOR__SHARED,
+        NIGHT_TIME__SHARED,
     ],
     [COMMERCIAL_MIDDLE_LEFT]: [
         BUILDING__SHARED,
         DOOR__SHARED,
+        NIGHT_TIME__SHARED,
     ],
     [COMMERCIAL_MIDDLE_RIGHT]: [
         BUILDING__SHARED,
         DOOR__SHARED,
+        NIGHT_TIME__SHARED,
     ],
     [COMMERCIAL_NEAR_LEFT]: [
         BUILDING__SHARED,
         DOOR__SHARED,
+        NIGHT_TIME__SHARED,
     ],
     [COMMERCIAL_NEAR_RIGHT]: [
         BUILDING__SHARED,
         DOOR__SHARED,
+        NIGHT_TIME__SHARED,
     ],
     [DISTANT_BUILDINGS]: [
         AUTUMN__SHARED,
-        WINTER__SHARED,
         BUILDINGS__SHARED,
         FOLIAGE__SHARED,
+        NIGHT_TIME__SHARED,
         WALL__SHARED,
+        WINTER__SHARED,
     ],
     [DISTANT_HOUSES]: [
         AUTUMN__SHARED,
@@ -160,9 +168,10 @@ export default {
         WALL__SHARED,
     ],
     [DRIVING_HOUSE]: [
+        BUILDING__SHARED,
         DOOR__SHARED,
         FOLIAGE__SHARED,
-        BUILDING__SHARED,
+        NIGHT_TIME__SHARED,
     ],
     [DRIVING_HOUSE_LEFT]: [
         DOOR__SHARED,
@@ -343,5 +352,6 @@ export default {
         BUILDINGS__SHARED,
         FREEWAY_SIGN__SHARED,
         FOLIAGE__SHARED,
+        NIGHT_TIME__SHARED,
     ],
 }

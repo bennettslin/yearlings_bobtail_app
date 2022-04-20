@@ -110,7 +110,7 @@ import {
     LIZ_CONDOM__SHARED,
     MIRIAM_CONDOM__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/wardrobe'
-import { DARK_ROOM_DEFAULT__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
+import { DARK_ROOM_DEFAULT__SHARED, NIGHT_TIME__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
 
 export default {
     [BACKPACK_BENNETT]: BACKPACK__SHARED,
@@ -184,7 +184,10 @@ export default {
     ],
     [DRUM_THRONE]: DRUMS__SHARED,
     [ELECTRIC_GUITAR]: ELECTRIC_GUITAR__SHARED,
-    [EVIAN_BOTTLES]: EVIAN__SHARED,
+    [EVIAN_BOTTLES]: [
+        NIGHT_TIME__SHARED,
+        EVIAN__SHARED,
+    ],
     [FLOWER_BULBS]: FOLIAGE__SHARED,
     [FREEWAY_SIGN]: FREEWAY_SIGN__SHARED,
     [FRIDGE_DRAWINGS]: [

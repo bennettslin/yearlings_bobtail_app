@@ -67,7 +67,7 @@ import {
     WIDE_COUCH_BENNETT,
     WIDE_COUCH_MIRIAM,
 } from '../../../../../../src/constants/scene/things/panels'
-import { DARK_ROOM_DEFAULT__SHARED, FUTURE__SHARED, PAST__SHARED, PRESENT__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
+import { DARK_ROOM_DEFAULT__SHARED, FUTURE__SHARED, NIGHT_TIME__SHARED, PAST__SHARED, PRESENT__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
 import { OCEAN_LIFE__SHARED } from '../../../../../../src/constants/scene/sharedStyles/animals'
 import { DRAWING__SHARED } from '../../../../../../src/constants/scene/sharedStyles/comic'
 import {
@@ -117,7 +117,7 @@ export default {
     [CROWD_BACK]: DARK_ROOM_DEFAULT__SHARED,
     [CROWD_SIDE]: DARK_ROOM_DEFAULT__SHARED,
     [DISHROOM_SINK]: null,
-    [FREEWAY_FENCE]: null,
+    [FREEWAY_FENCE]: NIGHT_TIME__SHARED,
     [GO_KART_EXTERIOR]: [
         ALL_VEHICLES__SHARED,
         GO_KART__SHARED,
@@ -155,11 +155,21 @@ export default {
     [REATTA_SEAT_BACK_DOWN]: REATTA__SHARED,
     [SATURN_EXTERIOR]: [
         ALL_VEHICLES__SHARED,
+        NIGHT_TIME__SHARED,
         SATURN__SHARED,
     ],
-    [SATURN_INTERIOR]: INTERIOR__SHARED,
-    [SATURN_SEAT]: SATURN__SHARED,
-    [SATURN_SEAT_DOWN]: SATURN__SHARED,
+    [SATURN_INTERIOR]: [
+        INTERIOR__SHARED,
+        NIGHT_TIME__SHARED,
+    ],
+    [SATURN_SEAT]: [
+        NIGHT_TIME__SHARED,
+        SATURN__SHARED,
+    ],
+    [SATURN_SEAT_DOWN]: [
+        NIGHT_TIME__SHARED,
+        SATURN__SHARED,
+    ],
     [SCHOOLBUS_EXTERIOR]: ALL_VEHICLES__SHARED,
     [SCHOOLBUS_INTERIOR]: INTERIOR__SHARED,
     [SCHOOLBUS_SEAT]: null,

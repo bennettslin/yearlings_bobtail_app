@@ -8,7 +8,23 @@
     .roofSide { fill: hsl(17, 20%, 45%); }
     .roofBelow { fill: hsl(17, 20%, 49%); }
     .roofFront { fill: hsl(17, 24%, 53%); }
-    .awningTop { fill: hsl(228, 30%, 61%); }
+    .awningTop { fill: hsl(228, 25%, 61%); }
     .awningFront { fill: hsl(228, 18%, 53%); }
     .awningSide { fill: hsl(228, 10%, 45%); }
+
+    .nightTime
+    &.nightTime#{$suffix} {
+        .wallLowSide { fill: hsl(45, 5%, 48%); }
+        .wallLowFront { fill: hsl(45, 10%, 56%); }
+        .wallMediumSide { fill: hsl(22, 10%, 40%); }
+        .wallMediumFront { fill: hsl(22, 10%, 48%); }
+        .wallHighSide { fill: hsl(7, 10%, 36%); }
+        .wallHighFront { fill: hsl(7, 15%, 44%); }
+        .roofSide { fill: hsl(17, 10%, 40%); }
+        .roofBelow { fill: hsl(17, 10%, 44%); }
+        .roofFront { fill: hsl(17, 14%, 48%); }
+        .awningTop { fill: hsl(228, 15%, 51%); }
+        .awningFront { fill: hsl(228, 8%, 48%); }
+        .awningSide { fill: hsl(228, 5%, 40%); }
+    }
 }

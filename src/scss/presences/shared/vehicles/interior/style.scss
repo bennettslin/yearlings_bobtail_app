@@ -1,5 +1,8 @@
 .interior#{$suffix} {
-    .interior {
-        fill: hsl(240, 24%, 35%);
+    .interior { fill: hsl(240, 24%, 35%); }
+
+    .nightTime
+    &.nightTime#{$suffix} {
+        .interior { fill: hsl(240, 14%, 25%); }
     }
 }

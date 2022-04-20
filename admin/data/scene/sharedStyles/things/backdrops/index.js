@@ -24,6 +24,7 @@ import {
     VALLEY_PANORAMA_BACKDROP,
     WEDDING_BACKDROP,
 } from '../../../../../../src/constants/scene/things/backdrops'
+import { AUTUMN__SHARED, NIGHT_TIME__SHARED, WINTER__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
 import {
     BUILDINGS__SHARED,
     TAIWAN_HOUSE__SHARED,
@@ -36,7 +37,6 @@ import {
     TAIWAN_MOUNTAIN__SHARED,
     VOLCANO__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/outdoor'
-import { AUTUMN__SHARED, WINTER__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
 
 export default {
     [DRIVING_BACKDROP]: FOLIAGE__SHARED,
@@ -48,6 +48,7 @@ export default {
         BUILDINGS__SHARED,
         FOLIAGE__SHARED,
         MOUNTAIN__SHARED,
+        NIGHT_TIME__SHARED,
     ],
     [MOUNTAIN_TAIWAN_BACKDROP]: TAIWAN_MOUNTAIN__SHARED,
     [MOUNTAIN_PAMPAS_BACKDROP]: MOUNTAIN__SHARED,
@@ -55,6 +56,7 @@ export default {
         AUTUMN__SHARED,
         FOLIAGE__SHARED,
         MOUNTAIN__SHARED,
+        NIGHT_TIME__SHARED,
     ],
     [OAKLAND_SIDE]: [
         AUTUMN__SHARED,
@@ -100,6 +102,7 @@ export default {
         BUILDINGS__SHARED,
         FOLIAGE__SHARED,
         MOUNTAIN__SHARED,
+        NIGHT_TIME__SHARED,
     ],
     [WEDDING_BACKDROP]: MOUNTAIN__SHARED,
 }

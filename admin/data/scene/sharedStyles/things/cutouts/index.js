@@ -81,7 +81,7 @@ import {
     CIGARETTE__SHARED,
     GARBAGE_BAG__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/food'
-import { AUTUMN__SHARED, DARK_ROOM_DEFAULT__SHARED, WINTER__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
+import { AUTUMN__SHARED, DARK_ROOM_DEFAULT__SHARED, NIGHT_TIME__SHARED, WINTER__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
 import { BENNETT_LINENS__SHARED } from '../../../../../../src/constants/scene/sharedStyles/furniture'
 import { BULB__SHARED } from '../../../../../../src/constants/scene/sharedStyles/household'
 import {
@@ -154,7 +154,10 @@ export default {
     [MONITOR_FRONT]: null,
     [MONITOR_SIDE]: null,
     [MUSEUM_DISPLAY]: null,
-    [OVERPASS_SIGN_BACK]: FREEWAY_SIGN__SHARED,
+    [OVERPASS_SIGN_BACK]: [
+        NIGHT_TIME__SHARED,
+        FREEWAY_SIGN__SHARED,
+    ],
     [PEACH_TREE]: FOLIAGE__SHARED,
     [PHARMACY_AISLE]: null,
     [PLAYGROUND_SLIDE]: null,

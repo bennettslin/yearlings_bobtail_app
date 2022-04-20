@@ -5,4 +5,11 @@
     .headLightDark { fill: hsl(56, 11%, 73%); }
     .headLight { fill: hsl(57, 21%, 81%); }
     .headLightLit { fill: hsl(58, 100%, 85%); }
+
+    .nightTime
+    &.nightTime#{$suffix} {
+        .hubcapReflection { fill: hsl(240, 13%, 70%); }
+        .brakeLight { fill: hsl(0, 45%, 45%); }
+        .turnLight { fill: hsl(25, 50%, 40%); }
+    }
 }

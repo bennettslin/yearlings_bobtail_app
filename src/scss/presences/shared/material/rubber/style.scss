@@ -14,3 +14,7 @@
     .rubberMedium { fill: hsl(240, 3%, 24%); }
     .rubberLight { fill: hsl(240, 3%, 29%); }
 }
+
+.nightTime .nightTime#{$suffix} {
+    .rubberDark { fill: hsl(240, 5%, 22%); }
+}

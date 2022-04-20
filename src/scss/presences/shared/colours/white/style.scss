@@ -14,3 +14,10 @@
     .whiteMediumLight { fill: hsl(0, 0%, 46%); }
     .whiteLight { fill: hsl(0, 0%, 49%); }
 }
+
+.nightTime .nightTime#{$suffix} {
+    .whiteDarkest { fill: hsl(0, 0%, 47%); }
+    .whiteDark { fill: hsl(0, 0%, 57%); }
+    .whiteMediumDark { fill: hsl(0, 0%, 62%); }
+    .whiteMedium { fill: hsl(0, 0%, 67%); }
+}

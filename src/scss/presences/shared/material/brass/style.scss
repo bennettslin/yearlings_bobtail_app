@@ -13,3 +13,8 @@
     .brassMedium { fill: hsl(61, 11%, 34%); }
     .brassMediumLight { fill: hsl(61, 11%, 39%); }
 }
+
+.nightTime .nightTime#{$suffix} {
+    .brassDarker { fill: hsl(61, 16%, 32%); }
+    .brassMediumLight { fill: hsl(61, 16%, 52%); }
+}

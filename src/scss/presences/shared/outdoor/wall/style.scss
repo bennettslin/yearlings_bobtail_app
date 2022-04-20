@@ -2,7 +2,15 @@
     .fence { fill: hsl(27, 23%, 50%); }
     .fenceDark { fill: hsl(27, 23%, 45%); }
     .wall { fill: hsl(28, 18%, 54%); }
-    .ledge { fill: hsl(36, 21%, 72%); }
+    .ledge { fill: hsl(36, 21%, 62%); }
     .brickDark { fill: hsl(17, 36%, 39%); }
     .brickLight { fill: hsl(42, 25%, 48%); }
+
+    .nightTime
+    &.nightTime#{$suffix} {
+        .wall { fill: hsl(28, 8%, 49%); }
+        .ledge { fill: hsl(36, 11%, 57%); }
+        .brickDark { fill: hsl(17, 26%, 34%); }
+        .brickLight { fill: hsl(42, 15%, 43%); }
+    }
 }

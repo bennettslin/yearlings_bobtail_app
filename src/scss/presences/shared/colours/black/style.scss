@@ -14,3 +14,10 @@
     .blackMediumLight { fill: hsl(0, 0%, 26%); }
     .blackLight { fill: hsl(0, 0%, 29%); }
 }
+
+.nightTime .nightTime#{$suffix} {
+    .blackDarkest { fill: hsl(0, 0%, 12%); }
+    .blackDark { fill: hsl(0, 0%, 17%); }
+    .blackMedium { fill: hsl(0, 0%, 27%); }
+    .blackLight { fill: hsl(0, 0%, 37%); }
+}
