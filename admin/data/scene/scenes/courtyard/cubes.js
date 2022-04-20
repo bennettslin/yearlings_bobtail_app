@@ -20,16 +20,16 @@ export default {
     [COURTYARD_KEY]: {
         ceiling: {
             hslaColours: [
-                [W],
-                [X],
+                [W, W, W, W, W, W, W, W, W, W, X, C],
+                [X, X, X, X, X, X, X, X, X, X, X, C],
                 [X, C],
                 [X, C, D],
                 [X, C, D],
                 [X, C, D],
             ],
             zIndices: [
-                [0],
-                [1, 1, d, d, d, d, 1, d, d, d, 1],
+                [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, f],
+                [1, 1, d, d, d, d, 1, d, d, d, 1, f],
                 [1, f, f],
                 [d, f, k],
                 [d, f, k],
@@ -39,7 +39,7 @@ export default {
         floor: {
             hslaColours: [
                 [G],
-                [V, F, X, X, X, X, F],
+                [V, F, X, X, X, X, F, F, F, F, F, V],
                 [V],
                 [V],
                 [V],

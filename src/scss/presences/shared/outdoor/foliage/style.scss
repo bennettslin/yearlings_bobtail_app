@@ -57,13 +57,13 @@
         .palmFrond { fill: hsl(34, 12%, 36%); }
         .treeFurthest { fill: hsl(31, 14%, 31%); }
         .treeCloser { fill: hsl(31, 14%, 36%); }
-        .bushFurthest { fill: hsl(79, 14%, 34%); }
-        .bushFurther { fill: hsl(79, 14%, 38%); }
-        .bushCloser { fill: hsl(79, 14%, 42%); }
-        .cypressFurther { fill: hsl(93, 14%, 27%); }
-        .cypressCloser { fill: hsl(93, 14%, 32%); }
-        .shrubFurther { fill: hsl(100, 13%, 32%); }
-        .shrubCloser { fill: hsl(100, 15%, 37%); }
+        .bushFurthest { fill: hsl(54, 14%, 34%); }
+        .bushFurther { fill: hsl(54, 14%, 38%); }
+        .bushCloser { fill: hsl(54, 14%, 42%); }
+        .cypressFurther { fill: hsl(68, 14%, 27%); }
+        .cypressCloser { fill: hsl(68, 14%, 32%); }
+        .shrubFurther { fill: hsl(80, 13%, 32%); }
+        .shrubCloser { fill: hsl(80, 15%, 37%); }
     }
 
     .winterSeason.nightTime
@@ -85,13 +85,11 @@
         .treeFurther { fill: hsl(31, 24%, 43%); }
         .treeMiddle { fill: hsl(31, 24%, 44%); }
         .treeCloser { fill: hsl(31, 24%, 46%); }
-
-        .bushFurthest { fill: hsl(79, 24%, 44%); }
-        .bushFurther { fill: hsl(79, 24%, 48%); }
-        .bushCloser { fill: hsl(79, 24%, 52%); }
-
-        .shrubFurther { fill: hsl(100, 25%, 42%); }
-        .shrubCloser { fill: hsl(100, 25%, 47%); }
+        .bushFurthest { fill: hsl(54, 24%, 44%); }
+        .bushFurther { fill: hsl(54, 24%, 48%); }
+        .bushCloser { fill: hsl(54, 24%, 52%); }
+        .shrubFurther { fill: hsl(80, 25%, 42%); }
+        .shrubCloser { fill: hsl(80, 25%, 47%); }
     }
 
     .winterSeason

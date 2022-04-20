@@ -1,8 +1,8 @@
 # Darken notes
 
 # Next TODO
-* Roof for alley cubes?
-    * Make alley interior dark
+* Alley
+    * Shrink door and dumpster, extend pipes
 * Make bathroom smaller?
 
 * Refactor

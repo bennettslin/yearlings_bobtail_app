@@ -22,18 +22,18 @@ export default {
         [CHUTE_GARBAGE]: {
             yIndex: 2,
             xPosition: 9.95,
-            zOffset: 5,
+            zOffset: 4.5,
         },
         [CHUTE_RECYCLING]: {
             yIndex: 2,
             xPosition: 8.05,
-            zOffset: 5,
+            zOffset: 4.5,
         },
     },
     [DOOR]: {
         [LOADING_DOCK_DOOR]: {
             yIndex: 2,
-            xPosition: 3,
+            xPosition: 3.5,
         },
     },
     [FIXTURE]: {

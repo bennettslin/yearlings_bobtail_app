@@ -801,7 +801,7 @@ export default {
                             todo: true,
                             // TODO: This has gotten away from being unloved.
                             card: {
-                                description: `My songs were about being an inexperienced kid dealing with the hardships of his childhood. But this persona grew outdated as my life substantially improved. Which meant I needed to drink greater amounts of alcohol to carry on with the lie that I was who I sang I was.`,
+                                description: `My first complete songs were about being unlucky in love. So as my life substantially improved, I needed to drink greater amounts of alcohol to carry on with the lie that I was still the same inexperienced kid who'd written them.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

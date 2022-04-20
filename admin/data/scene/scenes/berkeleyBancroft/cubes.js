@@ -3,6 +3,7 @@ import { BERKELEY_BANCROFT_KEY } from '../../../../../src/constants/scene/scenes
 import {
     DEFAULT_CLEAR_COLOUR as D,
     GROUND_CLEAR_COLOUR as G,
+    DARK_ROOM_COLOUR as Z,
     ROOF_COLOUR as C,
     PAVEMENT_COLOUR as V,
     BANCROFT_GATE_COLOUR as A,
@@ -16,14 +17,14 @@ export default {
     [BERKELEY_BANCROFT_KEY]: {
         ceiling: {
             hslaColours: [
-                [D, D, D, D, C],
-                [D, D, D, D, C, X],
+                [D, D, D, D, C, X, Z],
+                [D, D, D, D, C, X, Z],
                 [D, D, D, D, C, X],
                 [D, D, D, D, C],
                 [D],
             ],
             zIndices: [
-                [k, k, k, k, g],
+                [k, k, k, k, g, 3],
                 [k, k, k, k, g, 3],
                 [k, k, k, k, g, 3, 3, 3, f, f, f, 3],
                 [k, k, k, k, g],
