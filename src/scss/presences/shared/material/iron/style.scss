@@ -12,6 +12,8 @@
 }
 
 .nightTime .nightTime#{$suffix} {
+    .ironDarkest { fill: hsl(35, 5%, 27%); }
+    .ironDarker { fill: hsl(35, 5%, 32%); }
     .ironDark { fill: hsl(35, 5%, 37%); }
     .ironMedium { fill: hsl(35, 5%, 47%); }
 }

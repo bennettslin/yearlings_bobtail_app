@@ -1,6 +1,8 @@
 # Darken notes
 
 # Next TODO
+* Reverse palace trim on Taiwan house near
+* Adjust white on past Bennetts
 
 * Refactor
     * Get rid of buildingsNearDark
@@ -14,8 +16,7 @@
     * St Joseph's
     * Evian bottle
 
-* Do twilight and night in Taiwan
-* Do time evening?
+* Do time evening and ocean
 * Past, future, and magic colours
 
 # Finally TODO

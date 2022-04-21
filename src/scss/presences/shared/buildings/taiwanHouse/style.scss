@@ -9,13 +9,13 @@
     .palaceRoofTrimBelow { fill: hsl(49, 27%, 37%); }
     .palaceRoofTrimAbove { fill: hsl(49, 29%, 41%); }
 
-    .wallLowSide { fill: hsl(38, 18%, 49%); }
-    .wallLowFront { fill: hsl(38, 19%, 57%); }
-    .wallHighSide { fill: hsl(45, 18%, 43%); }
-    .wallHighFront { fill: hsl(45, 19%, 51%); }
+    .wallLowSide { fill: hsl(38, 18%, 44%); }
+    .wallLowFront { fill: hsl(38, 19%, 52%); }
+    .wallHighSide { fill: hsl(45, 18%, 41%); }
+    .wallHighFront { fill: hsl(45, 19%, 49%); }
 
-    .stepFront { fill: hsl(221, 20%, 47%); }
     .stepSide { fill: hsl(221, 20%, 42%); }
+    .stepFront { fill: hsl(221, 20%, 47%); }
     .roofBelow { fill: hsl(21, 28%, 39%); }
     .roofSide { fill: hsl(22, 28%, 44%); }
     .roofFront { fill: hsl(21, 28%, 47%); }
@@ -25,10 +25,34 @@
     .awningBelow { fill: hsl(215, 25%, 37%); }
     .awningSide { fill: hsl(215, 25%, 41%); }
     .awningFront { fill: hsl(215, 25%, 45%); }
-    .awningTop { fill: hsl(215, 25%, 50%); }
+    .awningTop { fill: hsl(215, 25%, 49%); }
 
     .nightTime
     &.nightTime#{$suffix} {
-
+        .palaceWallSide { fill: hsl(2, 18%, 18%); }
+        .palaceWallFront { fill: hsl(1, 20%, 22%); }
+        .palaceWallInner { fill: hsl(0, 20%, 15%); }
+        .palaceTrimFront { fill: hsl(44, 24%, 29%); }
+        .palaceTrimSide { fill: hsl(43, 24%, 32%); }
+        .palaceRoofSide { fill: hsl(50, 18%, 20%); }
+        .palaceRoofFront { fill: hsl(50, 18%, 22%); }
+        .palaceRoofTrimBelow { fill: hsl(49, 17%, 27%); }
+        .palaceRoofTrimAbove { fill: hsl(49, 19%, 31%); }
+        .wallLowSide { fill: hsl(38, 13%, 34%); }
+        .wallLowFront { fill: hsl(38, 14%, 42%); }
+        .wallHighSide { fill: hsl(38, 13%, 31%); }
+        .wallHighFront { fill: hsl(45, 14%, 39%); }
+        .stepSide { fill: hsl(221, 10%, 32%); }
+        .stepFront { fill: hsl(221, 10%, 37%); }
+        .roofBelow { fill: hsl(21, 18%, 29%); }
+        .roofSide { fill: hsl(22, 18%, 34%); }
+        .roofFront { fill: hsl(21, 18%, 37%); }
+        .roofTop { fill: hsl(21, 18%, 40%); }
+        .beamSide { fill: hsl(39, 10%, 22%); }
+        .beamFront { fill: hsl(39, 13%, 28%); }
+        .awningBelow { fill: hsl(215, 15%, 27%); }
+        .awningSide { fill: hsl(215, 15%, 31%); }
+        .awningFront { fill: hsl(215, 15%, 35%); }
+        .awningTop { fill: hsl(215, 15%, 39%); }
     }
 }

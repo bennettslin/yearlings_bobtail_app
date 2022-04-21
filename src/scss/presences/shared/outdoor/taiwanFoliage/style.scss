@@ -17,6 +17,13 @@
 
     .nightTime
     &.nightTime#{$suffix} {
-
+        .foliage {fill: hsl(5, 13%, 44%); }
+        .treeFurthest { fill: hsl(331, 15%, 45%); }
+        .treeFurther { fill: hsl(331, 15%, 46%); }
+        .treeMiddle { fill: hsl(331, 15%, 48%); }
+        .treeCloser { fill: hsl(331, 15%, 49%); }
+        .treeTrunk { fill: hsl(34, 7%, 36%); }
+        .shrubFurther { fill: hsl(305, 13%, 37%); }
+        .shrubCloser { fill: hsl(305, 13%, 42%); }
     }
 }

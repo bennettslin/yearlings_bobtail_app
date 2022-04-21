@@ -24,3 +24,14 @@
     .dullPastMediumDark { fill: hsl($HUE_PAST, 10%, 32%); }
     .dullPastMediumLight { fill: hsl($HUE_PAST, 10%, 39%); }
 }
+
+.nightTime .nightTime#{$suffix} {
+    .dullPastDarkest { fill: hsl($HUE_PAST, 10%, 27%); }
+    .dullPastDarker { fill: hsl($HUE_PAST, 10%, 32%); }
+    .dullPastDark { fill: hsl($HUE_PAST, 10%, 37%); }
+    .dullPastMediumDark { fill: hsl($HUE_PAST, 10%, 42%); }
+    .dullPastMedium { fill: hsl($HUE_PAST, 10%, 47%); }
+    .dullPastMediumLight { fill: hsl($HUE_PAST, 10%, 52%); }
+    .dullPastLighter { fill: hsl($HUE_PAST, 10%, 62%); }
+    .flatPastLight { fill: hsl($HUE_PAST, 23%, 57%); }
+}

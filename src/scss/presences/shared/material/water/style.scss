@@ -9,3 +9,7 @@
 .darkRoomDefault .darkRoom#{$suffix} {
     .waterDark { fill: hsl($HUE_OCEAN, 23%, 29%); }
 }
+
+.nightTime .nightTime#{$suffix} {
+    .waterDarker { fill: hsl($HUE_OCEAN, 36%, 32%); }
+}

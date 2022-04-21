@@ -5,3 +5,7 @@
 // .sandMedium { fill: hsl($HUE_SAND, 22%, 57%); }
 .sandMediumLight { fill: hsl($HUE_SAND, 22%, 62%); }
 // .sandLight { fill: hsl($HUE_SAND, 22%, 67%); }
+
+.nightTime .nightTime#{$suffix} {
+    .sandMediumDark { fill: hsl($HUE_SAND, 12%, 42%); }
+}

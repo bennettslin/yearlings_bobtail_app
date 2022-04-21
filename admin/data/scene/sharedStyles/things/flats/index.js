@@ -198,7 +198,7 @@ export default {
         FOLIAGE__SHARED,
         HOUSE__SHARED,
     ],
-    [FERRIS_WHEEL]: null,
+    [FERRIS_WHEEL]: NIGHT_TIME__SHARED,
     [FOREBODING_TREES]: FOLIAGE__SHARED,
     [GO_KART_TRACK]: ALL_VEHICLES__SHARED,
     [NEAR_BUILDINGS]: [
@@ -314,10 +314,11 @@ export default {
     ],
     [RICKSHAW_TOWN]: [
         DOOR__SHARED,
+        NIGHT_TIME__SHARED,
         TAIWAN_FOLIAGE__SHARED,
         TAIWAN_HOUSE__SHARED,
     ],
-    [ROLLER_COASTER]: null,
+    [ROLLER_COASTER]: NIGHT_TIME__SHARED,
     [ROYCE_HALL]: [
         NIGHT_TIME__SHARED,
         DOOR__SHARED,
@@ -340,14 +341,17 @@ export default {
     ],
     [TAIWAN_HOUSES_CENTRE]: [
         DOOR__SHARED,
+        NIGHT_TIME__SHARED,
         TAIWAN_HOUSE__SHARED,
     ],
     [TAIWAN_HOUSE_FAR]: [
         DOOR__SHARED,
+        NIGHT_TIME__SHARED,
         TAIWAN_HOUSE__SHARED,
     ],
     [TAIWAN_HOUSE_NEAR]: [
         DOOR__SHARED,
+        NIGHT_TIME__SHARED,
         TAIWAN_HOUSE__SHARED,
     ],
     [TAIWAN_MOUNTAINS_BRIDGED]: [

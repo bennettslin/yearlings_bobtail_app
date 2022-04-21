@@ -175,7 +175,7 @@ export default {
     [CINEMA_EXTERIOR_COLOUR]: { h: 143, s: 14, l: 68 },
     [VAN_NUYS_EXTERIOR_COLOUR]: { h: 334, s: 14, l: 63 },
     /* A. */
-    [TAIWAN_GATE_NIGHT_COLOUR]: { h: 18, s: 12, l: 42 },
+    [TAIWAN_GATE_NIGHT_COLOUR]: { h: 18, s: 9, l: 37 },
     [LIZ_GATE_COLOUR]: { h: 46, s: 12, l: 57 },
     [LIZ_GATE_NIGHT_COLOUR]: { h: 46, s: 6, l: 42 },
     [BANCROFT_GATE_COLOUR]: { h: 102, s: 4, l: 59 },

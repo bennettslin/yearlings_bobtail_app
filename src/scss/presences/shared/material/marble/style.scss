@@ -8,3 +8,9 @@
 .marbleLight { fill: hsl(60, 10%, 87%); }
 // .marbleLighter { fill: hsl(60, 10%, 92%); }
 // .marbleLightest { fill: hsl(60, 10%, 97%); }
+
+.nightTime .nightTime#{$suffix} {
+    .marbleDarkest { fill: hsl(60, 5%, 42%); }
+    .marbleDarker { fill: hsl(60, 5%, 47%); }
+    .marbleDark { fill: hsl(60, 5%, 52%); }
+}

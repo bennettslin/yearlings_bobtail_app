@@ -95,8 +95,21 @@
 }
 
 .nightTime .nightTime#{$suffix} {
+    .flatRedMedium { fill: hsl(0, 23%, 47%); }
+    .flatOrangeDark { fill: hsl(30, 23%, 37%); }
+    .flatYellowDarker { fill: hsl(60, 23%, 32%); }
+    .flatYellowDark { fill: hsl(60, 23%, 37%); }
+    .flatYellowMediumDark { fill: hsl(60, 23%, 42%); }
     .flatChartreuseMedium { fill: hsl(90, 23%, 47%); }
     .flatChartreuseMediumLight { fill: hsl(90, 23%, 52%); }
     .flatChartreuseLight { fill: hsl(90, 23%, 57%); }
+    .flatGreenDarker { fill: hsl(120, 23%, 32%); }
+    .flatGreenDark { fill: hsl(120, 23%, 37%); }
+    .flatGreenMedium { fill: hsl(120, 23%, 47%); }
     .flatBlueDark { fill: hsl(210, 23%, 37%); }
+    .flatBlueMedium { fill: hsl(210, 23%, 47%); }
+    .flatPurpleDarker { fill: hsl(270, 23%, 32%); }
+    .flatPurpleDark { fill: hsl(270, 23%, 37%); }
+    .flatPurpleMedium { fill: hsl(270, 23%, 47%); }
+    .flatMaroonMedium { fill: hsl(330, 23%, 47%); }
 }

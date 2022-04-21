@@ -87,6 +87,7 @@ export default {
         ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED,
         BENNETT,
+        NIGHT_TIME__SHARED,
         ODIN_PAST__SHARED,
     ],
     [BENNETT_ODIN_DEPTHS]: [
@@ -106,16 +107,19 @@ export default {
         ALL_PEOPLE__SHARED,
         ALL_VEHICLES__SHARED,
         BENNETT,
+        NIGHT_TIME__SHARED,
         ODIN_PAST__SHARED,
     ],
     [BENNETT_SHORE]: [
         ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED,
         BENNETT,
+        NIGHT_TIME__SHARED,
     ],
     [BENNETT_TAIWAN_GATE]: [
         ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED,
+        NIGHT_TIME__SHARED,
         BENNETT,
     ],
     [BENNETT_TAIWAN_STAIRS]: [
@@ -132,8 +136,14 @@ export default {
     [EARTH]: null,
     [MARQUEE_FRAME]: null,
     [ODIN_MAT]: ODIN_PAST__SHARED,
-    [ODIN_SHORE]: ODIN_PAST__SHARED,
-    [ODIN_TAIWAN_GATE]: ODIN_PAST__SHARED,
+    [ODIN_SHORE]: [
+        NIGHT_TIME__SHARED,
+        ODIN_PAST__SHARED,
+    ],
+    [ODIN_TAIWAN_GATE]: [
+        NIGHT_TIME__SHARED,
+        ODIN_PAST__SHARED,
+    ],
     [ODIN_TAIWAN_STAIRS]: [
         DARK_ROOM_DEFAULT__SHARED,
         ODIN_PAST__SHARED,

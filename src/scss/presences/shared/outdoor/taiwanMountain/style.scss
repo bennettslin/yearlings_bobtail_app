@@ -11,6 +11,6 @@
 
     .nightTime
     &.nightTime#{$suffix} {
-
+        .mountain { fill: hsl(198, 10%, 29%); }
     }
 }
