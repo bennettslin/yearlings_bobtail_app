@@ -264,12 +264,14 @@ export default {
     [PUBLIC_FAR]: [
         AUTUMN__SHARED,
         DOOR__SHARED,
+        EVENING_TIME__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
     ],
     [PUBLIC_NEAR]: [
         AUTUMN__SHARED,
         DOOR__SHARED,
+        EVENING_TIME__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
     ],

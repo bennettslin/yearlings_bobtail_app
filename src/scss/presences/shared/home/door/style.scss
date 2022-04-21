@@ -26,6 +26,14 @@
         .doorDarkFront { fill: hsl(33, 12%, 23%); }
     }
 
+    .eveningTime
+    &.eveningTime#{$suffix} {
+        .frameMediumSide { fill: hsl(33, 11%, 43%); }
+        .frameMediumFront { fill: hsl(33, 14%, 48%); }
+        .doorMediumSide { fill: hsl(33, 22%, 32%); }
+    }
+
+
     .nightTime
     &.nightTime#{$suffix} {
         .frameDarkSide { fill: hsl(33, 8%, 31%); }

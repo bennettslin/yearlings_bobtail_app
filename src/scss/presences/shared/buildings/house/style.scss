@@ -15,6 +15,15 @@
     // ~ concrete platform hsla.
     .stepFront { fill: hsl(220, 16%, 56%); }
 
+    .eveningTime
+    &.eveningTime#{$suffix} {
+        .roofBelow { fill: hsl($HUE_ROOF, 15%, 38%); }
+        .roofSide { fill: hsl($HUE_ROOF, 15%, 45%); }
+        .roofTop { fill: hsl($HUE_ROOF, 15%, 49%); }
+        .stepSide { fill: hsl(220, 11%, 44%); }
+        .stepFront { fill: hsl(220, 11%, 51%); }
+    }
+
     .nightTime
     &.nightTime#{$suffix} {
         .roofBelow { fill: hsl($HUE_ROOF, 10%, 33%); }

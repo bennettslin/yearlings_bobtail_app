@@ -6,13 +6,22 @@
     .plankLight { fill: hsl(43, 24%, 56%); }
     .beam { fill: hsl(62, 24%, 57%); }
 
+    .eveningTime
+    &.eveningTime#{$suffix} {
+        .postDark { fill: hsl(38, 17%, 42%); }
+        .post { fill: hsl(38, 17%, 47%); }
+        .plankDark { fill: hsl(53, 17%, 47%); }
+        .plankMedium { fill: hsl(46, 18%, 49%); }
+        .plankLight { fill: hsl(43, 19%, 51%); }
+    }
+
     .nightTime
     &.nightTime#{$suffix} {
         .postDark { fill: hsl(38, 12%, 37%); }
         .post { fill: hsl(38, 12%, 42%); }
-        .plankLight { fill: hsl(43, 12%, 42%); }
         .plankDark { fill: hsl(53, 13%, 44%); }
         .plankMedium { fill: hsl(46, 14%, 46%); }
+        .plankLight { fill: hsl(43, 12%, 42%); }
         .beam { fill: hsl(62, 14%, 47%); }
     }
 }

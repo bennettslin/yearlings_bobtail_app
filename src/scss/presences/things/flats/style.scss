@@ -34,11 +34,21 @@
 .publicFar {
     .wallSide { fill: hsl(300, 19%, 60%); }
     .wallFront { fill: hsl(300, 25%, 69%); }
+
+    .eveningTime &.eveningTime#{$suffix} {
+        .wallSide { fill: hsl(300, 14%, 55%); }
+        .wallFront { fill: hsl(300, 20%, 64%); }
+    }
 }
 
 .publicNear {
     .wallSide { fill: hsl(150, 19%, 60%); }
     .wallFront { fill: hsl(150, 25%, 69%); }
+
+    .eveningTime &.eveningTime#{$suffix} {
+        .wallSide { fill: hsl(150, 14%, 55%); }
+        .wallFront { fill: hsl(150, 20%, 64%); }
+    }
 }
 
 .residentialFarLeft {

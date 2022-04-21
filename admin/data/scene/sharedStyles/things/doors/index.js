@@ -142,6 +142,7 @@ export default {
         LIZ_APARTMENT__SHARED,
     ],
     [LIZ_BLINDS_OUTSIDE]: [
+        EVENING_TIME__SHARED,
         LIZ_APARTMENT__SHARED,
     ],
     [LIZ_DOOR]: [
@@ -158,8 +159,14 @@ export default {
         NIGHT_TIME__SHARED,
         LIZ_GATE__SHARED,
     ],
-    [LIZ_GATE_OUTSIDE]: LIZ_GATE__SHARED,
-    [LIZ_GATE_OUTSIDE_OPEN]: LIZ_GATE__SHARED,
+    [LIZ_GATE_OUTSIDE]: [
+        EVENING_TIME__SHARED,
+        LIZ_GATE__SHARED,
+    ],
+    [LIZ_GATE_OUTSIDE_OPEN]: [
+        EVENING_TIME__SHARED,
+        LIZ_GATE__SHARED,
+    ],
     [LOADING_DOCK_DOOR]: DOOR__SHARED,
     [NEIGHBOUR_DOOR]: [
         BENNETT_APARTMENT__SHARED,

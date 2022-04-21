@@ -16,6 +16,8 @@
 
 .eveningTime .eveningTime#{$suffix} {
     .glassDarkest { fill: hsl(175, 13%, 32%); }
+    .glassMedium { fill: hsl(175, 15%, 52%); }
+    .glassLight { fill: hsl(175, 17%, 62%); }
     .glassClear { fill: hsla(175, 20%, 25%, 0.25); }
 }
 
