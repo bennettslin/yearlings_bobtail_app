@@ -36,18 +36,18 @@ export default {
     [FLAT]: {
         [FOREBODING_TREES__FAR]: {
             yIndex: 1,
-            xPosition: 8.5,
+            xPosition: 8.75,
             scaleFactor: 0.54,
         },
         [FOREBODING_TREES__MIDDLE]: {
             yIndex: 2,
-            xPosition: 9.75,
+            xPosition: 10.25,
             scaleFactor: 0.77,
             flipHorizontal: true,
         },
         [FOREBODING_TREES__NEAR]: {
             yIndex: 3,
-            xPosition: 10.5,
+            xPosition: 12,
         },
     },
     [PANEL]: {
