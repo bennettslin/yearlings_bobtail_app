@@ -54,7 +54,7 @@ import {
     WALL__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/outdoor'
 import {
-    AUTUMN__SHARED, DARK_ROOM_DEFAULT__SHARED, EVENING_TIME__SHARED, FUTURE__SHARED, MAGIC__SHARED, NIGHT_TIME__SHARED,
+    AUTUMN__SHARED, DARK_ROOM_DEFAULT__SHARED, EVENING_TIME__SHARED, FUTURE__SHARED, MAGIC__SHARED, NIGHT_TIME__SHARED, PAST__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles'
 
 export default {
@@ -135,6 +135,7 @@ export default {
     [DEFAULT_FENCE_BATHROOM]: [
         FOLIAGE__SHARED,
         FAMILY_HOUSE__SHARED,
+        PAST__SHARED,
     ],
     [DISHROOM_DOOR]: DOOR__SHARED,
     [EL_TORITO_DOORS]: DOOR__SHARED,

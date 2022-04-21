@@ -29,6 +29,11 @@
         .meadowNear { fill: hsl($HUE_MAGIC, 18%, 28%); }
     }
 
+    .pastSeason
+    &.past#{$suffix} {
+        .mountain { fill: hsl($HUE_PAST, 13%, 47%); }
+    }
+
     .futureSeason
     &.future#{$suffix} {
         .mountain { fill: hsl($HUE_FUTURE, 8%, 37%); }

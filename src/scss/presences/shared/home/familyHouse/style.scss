@@ -22,6 +22,11 @@
         .wallFront { fill: hsl($HUE_MAGIC, 21%, 40%); }
     }
 
+    .pastSeason
+    &.past#{$suffix} {
+        .fence { fill: hsl($HUE_PAST, 13%, 55%); }
+    }
+
     .futureSeason
     &.future#{$suffix} {
         .fenceDark { fill: hsl($HUE_FUTURE, 8%, 40%); }

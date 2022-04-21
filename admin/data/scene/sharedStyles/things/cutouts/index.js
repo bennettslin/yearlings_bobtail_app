@@ -82,7 +82,7 @@ import {
     GARBAGE_BAG__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/food'
 import {
-    AUTUMN__SHARED, DARK_ROOM_DEFAULT__SHARED, EVENING_TIME__SHARED, FUTURE__SHARED, MAGIC__SHARED, NIGHT_TIME__SHARED, WINTER__SHARED,
+    AUTUMN__SHARED, DARK_ROOM_DEFAULT__SHARED, EVENING_TIME__SHARED, FUTURE__SHARED, MAGIC__SHARED, NIGHT_TIME__SHARED, PAST__SHARED, WINTER__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles'
 import { BENNETT_LINENS__SHARED } from '../../../../../../src/constants/scene/sharedStyles/furniture'
 import { BULB__SHARED } from '../../../../../../src/constants/scene/sharedStyles/household'
@@ -178,6 +178,7 @@ export default {
         FOLIAGE__SHARED,
         FUTURE__SHARED,
         MAGIC__SHARED,
+        PAST__SHARED,
     ],
     [LOCKER_BANK]: null,
     [MIRRORED_SINK]: ALL_PEOPLE__SHARED,
@@ -200,6 +201,7 @@ export default {
     ],
     [ROSEBUSH_DOUBLE_BATHROOM]: [
         FOLIAGE__SHARED,
+        PAST__SHARED,
         ROSE_RED__SHARED,
     ],
     [ROSEBUSH_DOUBLE_BASEMENT]: [
@@ -209,6 +211,7 @@ export default {
     ],
     [ROSEBUSH_SINGLE_BATHROOM]: [
         FOLIAGE__SHARED,
+        PAST__SHARED,
         ROSE_RED__SHARED,
     ],
     [ROSEBUSH_SINGLE_BASEMENT]: [

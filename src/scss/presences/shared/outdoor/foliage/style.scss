@@ -88,6 +88,19 @@
         .peach { fill: hsl($HUE_MAGIC, 17%, 45%); }
     }
 
+    .pastSeason
+    &.past#{$suffix} {
+        .palmFrond { fill: hsl($HUE_PAST, 22%, 46%); }
+        .palmTrunk { fill: hsl($HUE_PAST, 24%, 35%); }
+        .treeFurther { fill: hsl($HUE_PAST, 24%, 43%); }
+        .treeMiddle { fill: hsl($HUE_PAST, 24%, 44%); }
+        .treeCloser { fill: hsl($HUE_PAST, 24%, 46%); }
+        .treeTrunk { fill: hsl($HUE_PAST, 22%, 36%); }
+        .bushCloser { fill: hsl($HUE_PAST, 24%, 50%); }
+        .cypressCloser { fill: hsl($HUE_PAST, 24%, 42%); }
+        .lemon { fill: hsl($HUE_PAST, 33%, 49%); }
+    }
+
     .futureSeason
     &.future#{$suffix} {
         .foliageNear {fill: hsl($HUE_FUTURE, 12%, 35%); }
