@@ -1,8 +1,7 @@
-import { CHANGELING_CAVE_KEY } from '../../../../../src/constants/scene/scenes'
+import { CHANGELING_MAGIC_KEY } from '../../../../../src/constants/scene/scenes'
 
 import {
     GROUND_CLEAR_COLOUR as G,
-    PAVEMENT_COLOUR as V,
     MAGIC_COLOUR as Z,
     SPOTLIGHT_MEDIUM_COLOUR as L,
     SPOTLIGHT_LIGHT_COLOUR as M,
@@ -11,11 +10,11 @@ import {
 } from '../../../../../src/constants/scene/cubes/colours'
 
 export default {
-    [CHANGELING_CAVE_KEY]: {
+    [CHANGELING_MAGIC_KEY]: {
         floor: {
             hslaColours: [
                 [G],
-                [V],
+                [Z],
                 [Z, L, M, M, L, Z],
                 [L, M, N, N, M, L, Z],
                 [M, N, O, O, N, M, Z],

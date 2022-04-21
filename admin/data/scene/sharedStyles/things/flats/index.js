@@ -83,7 +83,7 @@ import {
     WALL__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/outdoor'
 import { ALL_VEHICLES__SHARED } from '../../../../../../src/constants/scene/sharedStyles/vehicles'
-import { AUTUMN__SHARED, EVENING_TIME__SHARED, NIGHT_TIME__SHARED, WINTER__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
+import { AUTUMN__SHARED, EVENING_TIME__SHARED, MAGIC__SHARED, NIGHT_TIME__SHARED, WINTER__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
 
 export default {
     [BEDROOM_BUS]: ALL_VEHICLES__SHARED,
@@ -196,9 +196,10 @@ export default {
         HOUSE__SHARED,
     ],
     [FAMILY_HOUSE]: [
-        FAMILY_HOUSE__SHARED,
         DOOR__SHARED,
+        FAMILY_HOUSE__SHARED,
         FOLIAGE__SHARED,
+        MAGIC__SHARED,
         HOUSE__SHARED,
     ],
     [FERRIS_WHEEL]: NIGHT_TIME__SHARED,
@@ -218,6 +219,7 @@ export default {
     ],
     [NEAR_HOUSES]: [
         FOLIAGE__SHARED,
+        MAGIC__SHARED,
         HOUSE__SHARED,
         WALL__SHARED,
     ],

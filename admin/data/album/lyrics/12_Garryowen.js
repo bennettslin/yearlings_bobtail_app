@@ -645,9 +645,9 @@ export default {
                         {
                             anchor: `drop your anchor`,
                             todo: true,
-                            // TODO: Still undecided.
+                            // TODO: Still undecided. Ending the relationship would put an end. And then I could finally drop my "anger," if you will.
                             card: {
-                                description: `More than anything else, I was just tired of feeling my emotions lurch from one extreme to the next. Ending the relationship meant that I could finally drop my "anger" and feel anchored in life.`,
+                                description: `More than anything else, I was just tired of feeling my emotions lurch from one extreme to the next. Ending the relationship meant that I could finally drop my "anger" and feel emotionally stabilized.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,

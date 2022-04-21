@@ -22,4 +22,9 @@
         .brickDark { fill: hsl(17, 26%, 29%); }
         .brickLight { fill: hsl(42, 15%, 38%); }
     }
+
+    .magicSeason
+    &.magic#{$suffix} {
+        .fence { fill: hsl($HUE_MAGIC, 13%, 32%); }
+    }
 }

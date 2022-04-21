@@ -10,7 +10,7 @@ export const BATHROOM_PAST_KEY = 'bathroomPast'
 export const FREEWAY_KEY = 'freeway'
 export const FREEWAY_NIGHT_KEY = 'freewayNight'
 export const PORCH_KEY = 'porch'
-export const CHANGELING_CAVE_KEY = 'changelingCave'
+export const CHANGELING_MAGIC_KEY = 'changelingMagic'
 
 export const PUPPET_SHOW_KEY = 'puppetShow'
 export const SCHOOLBUS_KEY = 'schoolbus'

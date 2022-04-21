@@ -12,7 +12,7 @@ import {
 import {
     BEDROOM_EVENING_KEY,
     BEDROOM_STOOL_NIGHT_KEY,
-    CHANGELING_CAVE_KEY,
+    CHANGELING_MAGIC_KEY,
     FREEWAY_KEY,
     FREEWAY_NIGHT_KEY,
     NOHO_HOUSES_KEY,
@@ -346,7 +346,7 @@ export default [
                 [STALACTITES]: true,
             },
         },
-        cubes: CHANGELING_CAVE_KEY,
+        cubes: CHANGELING_MAGIC_KEY,
         sky: { season: SEASON_MAGIC },
 
     },

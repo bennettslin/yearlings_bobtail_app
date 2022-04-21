@@ -1158,16 +1158,15 @@ export default {
                         },
                         {
                             anchor: `the dusc-horse yet`,
-                            // TODO: I'm not sure these sentences connect.
                             todo: true,
                             card: {
                                 description: [
-                                    `"Are Malay tapirs the dusk horse yet?" Like other waves of human migration before us, our little group may discover exotic new species. Native to the Malay peninsula, the`,
+                                    `"Are Malay tapirs the dusk horse yet?" Native to the Malay peninsula, the`,
                                     {
                                         anchor: `Malayan tapir`,
                                         wiki: `Malayan_tapir`,
                                     },
-                                    `bears a physical resemblance to the horse's prehistoric ancestor`,
+                                    `bears a resemblance to the horse's prehistoric ancestor`,
                                     {
                                         isItalic: true,
                                         lyric: {
@@ -1175,7 +1174,7 @@ export default {
                                             wiki: `Eohippus`,
                                         },
                                     },
-                                    `, or "dawn horse." So once we encounter this "dusk horse," we'll know we've reached the end of history.`,
+                                    `, or "dawn horse." As our little group discovers exotic new species in the lands we conquer, we search for this mythical "dusk horse" that will let us know we've reached the end of history.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,

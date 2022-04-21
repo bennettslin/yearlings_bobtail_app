@@ -47,4 +47,10 @@
         .frameLightFront { fill: hsl(33, 12%, 50%); }
         .doorLightFront { fill: hsl(33, 12%, 40%); }
     }
+
+    .magicSeason
+    &.magic#{$suffix} {
+        .frameMediumFront { fill: hsl($HUE_MAGIC, 9%, 43%); }
+        .doorMediumFront { fill: hsl($HUE_MAGIC, 17%, 33%); }
+    }
 }

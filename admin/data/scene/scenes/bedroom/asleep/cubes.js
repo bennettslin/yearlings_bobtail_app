@@ -1,7 +1,7 @@
 import { LEFT } from '../../../../../../src/constants/scene/cubes'
 import { BEDROOM_MAGIC_KEY } from '../../../../../../src/constants/scene/scenes'
 import {
-    NIGHT_FUTURE_COLOUR as Z,
+    MAGIC_COLOUR as Z,
     FUTURE_SPOTLIGHT_MEDIUM_COLOUR as L,
     FUTURE_SPOTLIGHT_LIGHT_COLOUR as M,
     FUTURE_SPOTLIGHT_LIGHTER_COLOUR as N,

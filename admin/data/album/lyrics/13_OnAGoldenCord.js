@@ -275,28 +275,19 @@ export default {
                         {
                             // NOTE: I changed "pauper's" to "paupers'."
                             anchor: `paupers' grave`,
-                            // TODO: Connect with pauper's grave more.
-                            todo: true,
-                            cards: [
-                                {
-                                    description: [
-                                        `Though the breakup was successful, it happened sooner than expected, forcing my sober self to scrap his plans for a clean getaway. He's now arrived to retrieve the unclaimed body of his drunken half.`,
-                                    ],
-                                    dotKeys: {
-                                        [NARRATIVE]: true,
+                            card: {
+                                description: [
+                                    `Though the breakup was successful, it happened sooner than expected, forcing my sober self to scrap his plans for a clean getaway. He's now arrived at the`,
+                                    {
+                                        anchor: `paupers' grave`,
+                                        wiki: `Potter's_field`,
                                     },
+                                    `where the unclaimed remains of his drunken half were since buried.`,
+                                ],
+                                dotKeys: {
+                                    [NARRATIVE]: true,
                                 },
-                                {
-                                    description: [
-                                        `A`,
-                                        {
-                                            anchor: `paupers' grave`,
-                                            wiki: `Potter's_field`,
-                                        },
-                                        `is a burial ground for those who died penniless or unknown.`,
-                                    ],
-                                },
-                            ],
+                            },
                         },
                         `from dreams.`,
                     ],
@@ -321,7 +312,7 @@ export default {
                                         anchor: `Suttee`,
                                         wiki: `Sati_(practice)`,
                                     },
-                                    `is an outlawed Hindu custom in which a widow commits suicide by throwing herself on her husband's funeral pyre. Likewise, sober me knew he could be rid of Sita forever if he just killed off bit by bit the one she loved, pushing her to venture further into the darkness to chase after the less and less of their relationship that remained.`,
+                                    `is an outdated Hindu custom in which a widow commits suicide by throwing herself on her husband's funeral pyre. Likewise, sober me knew he could be rid of Sita forever if he just killed off bit by bit the one she loved, pushing her to venture further into the darkness to chase after the less and less of their relationship that remained.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

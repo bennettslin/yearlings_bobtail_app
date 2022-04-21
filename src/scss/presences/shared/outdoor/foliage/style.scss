@@ -71,6 +71,17 @@
         .shrubCloser { fill: hsl(165, 10%, 37%); }
     }
 
+    .magicSeason
+    &.magic#{$suffix} {
+        .palmFrond { fill: hsl($HUE_MAGIC, 12%, 36%); }
+        .palmTrunk { fill: hsl($HUE_MAGIC, 14%, 25%); }
+        .cactusFurther { fill: hsl($HUE_MAGIC, 13%, 36%); }
+        .treeFurther { fill: hsl($HUE_MAGIC, 14%, 33%); }
+        .treeCloser { fill: hsl($HUE_MAGIC, 14%, 36%); }
+        .treeTrunk { fill: hsl($HUE_MAGIC, 12%, 26%); }
+        .bushFurther { fill: hsl($HUE_MAGIC, 14%, 37%); }
+    }
+
     .autumnSeason.eveningTime
     &.autumn#{$suffix}.eveningTime#{$suffix} {
         .foliageNear {fill: hsl(45, 17%, 40%); }

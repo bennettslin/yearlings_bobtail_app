@@ -6,6 +6,7 @@ import {
     HUE_FUTURE,
     HUE_LIZ_LINENS,
     HUE_LIZ_ROOM,
+    HUE_MAGIC,
     HUE_MIRIAM_LINENS,
     HUE_OCEAN,
     HUE_PAST,
@@ -154,7 +155,7 @@ export default {
     [SNOW_FLOOR_COLOUR]: { h: parseInt(HUE_SNOW), s: 30, l: 87 },
     /* Z. */
     [LINOLEUM_PAST_COLOUR]: { h: parseInt(HUE_PAST), s: 14, l: 67 },
-    [MAGIC_COLOUR]: { h: 125, s: 17, l: 25 },
+    [MAGIC_COLOUR]: { h: parseInt(HUE_MAGIC), s: 17, l: 25 },
     [DARK_ROOM_COLOUR]: { h: 221, s: 17, l: 34 },
     [NIGHT_FUTURE_COLOUR]: { h: 276, s: 17, l: 25 },
     /* L, M, N, O. */

@@ -14,4 +14,9 @@
         .fenceDark { fill: hsl(65, 8%, 40%); }
         .fence { fill: hsl(65, 8%, 45%); }
     }
+
+    .magicSeason
+    &.magic#{$suffix} {
+        .wallFront { fill: hsl($HUE_MAGIC, 21%, 40%); }
+    }
 }

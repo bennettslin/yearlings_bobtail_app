@@ -1,5 +1,5 @@
 .house#{$suffix} {
-    .roofBelow { fill: hsl($HUE_ROOF, 20%, 43%); }
+    .roofBelow { fill: hsl($HUE_MAGIC, 20%, 43%); }
     .roofSide { fill: hsl($HUE_ROOF, 20%, 50%); }
     .roofTop { fill: hsl($HUE_ROOF, 20%, 54%); }
     .beam { fill: hsl(49, 10%, 49%); }
@@ -38,5 +38,13 @@
         .bayWallSide { fill: hsl(60, 5%, 45%); }
         .stepSide { fill: hsl(220, 8%, 39%); }
         .stepFront { fill: hsl(220, 8%, 46%); }
+    }
+
+    .magicSeason
+    &.magic#{$suffix} {
+        .roofSide { fill: hsl($HUE_MAGIC, 10%, 40%); }
+        .roofTop { fill: hsl($HUE_MAGIC, 10%, 44%); }
+        .beam { fill: hsl($HUE_MAGIC, 5%, 39%); }
+        .stepFront { fill: hsl($HUE_MAGIC, 8%, 46%); }
     }
 }

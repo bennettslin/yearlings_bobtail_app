@@ -167,17 +167,17 @@ export default getFormattedSlideMetadata([
                         isEmphasis: true,
                         lyric: `our`,
                     },
-                    `time will be remembered, aren't the chances just as good that at present it's unknown to`,
+                    `time will be remembered, aren't chances just as good that at present it's unknown to`,
                     {
                         isEmphasis: true,
                         lyric: `us`,
                     },
-                    `? Perhaps the medium it explores is too new, or its significance will only be clear in light of future understanding.`,
+                    `? Perhaps the medium it explores is too new. Or maybe its significance will only be clear in light of future understanding.`,
                 ],
             },
             {
                 paragraph: [
-                    `Who knows which work this might be. But can you think of a smarter bet right now than`,
+                    `Who knows which work this might be, but can you think of a smarter bet than`,
                     {
                         isItalic: true,
                         lyric: `Yearling's Bobtail`,

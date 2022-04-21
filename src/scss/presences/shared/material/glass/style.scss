@@ -29,3 +29,7 @@
     .glassLight { fill: hsl(175, 12%, 52%); }
     .glassClear { fill: hsla(175, 10%, 20%, 0.25); }
 }
+
+.magicSeason .magic#{$suffix} {
+    .glassLight { fill: hsl($HUE_MAGIC, 12%, 52%); }
+}

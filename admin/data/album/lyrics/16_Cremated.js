@@ -606,7 +606,7 @@ export default {
                             anchor: `worn puppet`,
                             cards: [
                                 {
-                                    description: `The condom sits motionless on the car seat, like a puppet so full of life just moments before. Having brought me to a place I otherwise couldn't have gone, it has no other use and can now be discarded.`,
+                                    description: `The condom sits motionless on the car seat, like a puppet so full of life just moments before. But having brought me to a place I otherwise couldn't have gone, it has no other use and can now be discarded.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
