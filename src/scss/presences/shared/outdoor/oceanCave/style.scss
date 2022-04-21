@@ -1,5 +1,12 @@
 .oceanCave#{$suffix} {
-    .oceanCaveBack {fill: hsl(79, 13%, 37%); }
-    .oceanCaveMiddle {fill: hsl(79, 13%, 41%); }
     .oceanCaveFront {fill: hsl(79, 13%, 45%); }
+    .oceanCaveMiddle {fill: hsl(79, 13%, 41%); }
+    .oceanCaveBack {fill: hsl(79, 13%, 37%); }
+
+    .nightTime
+    &.nightTime#{$suffix} {
+        .oceanCaveFront {fill: hsl(79, 7%, 35%); }
+        .oceanCaveMiddle {fill: hsl(79, 7%, 31%); }
+        .oceanCaveBack {fill: hsl(79, 7%, 27%); }
+    }
 }

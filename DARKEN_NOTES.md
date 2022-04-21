@@ -3,9 +3,11 @@
 # Next TODO
 * Reverse palace trim on Taiwan house near
 * Adjust white on past Bennetts
+* Remove Odin past styling
 
 * Refactor
     * Get rid of buildingsNearDark
+    * Get rid of volcano, ocean cave, and ocean life styles
     * Houses and buildings
     * Doors
     * Bricks (roofs)
@@ -16,7 +18,7 @@
     * St Joseph's
     * Evian bottle
 
-* Do time evening and ocean
+* Do time evening
 * Past, future, and magic colours
 
 # Finally TODO

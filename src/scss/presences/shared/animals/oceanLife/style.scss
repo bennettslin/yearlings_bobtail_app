@@ -1,23 +1,36 @@
 .oceanLife#{$suffix} {
     .kelpBack { fill: hsl(150, 30%, 40%); }
     .kelpFront { fill: hsl(150, 30%, 50%); }
-
     .seaweed { fill: hsl(90, 30%, 40%); }
-
     .frondBack { fill: hsl(210, 30%, 40%); }
     .frondFront { fill: hsl(210, 30%, 50%); }
-
     .coralTubeCavity { fill: hsl(60, 30%, 40%); }
     .coralTube { fill: hsl(60, 30%, 50%); }
-
     .coralBrainCavity { fill: hsl(30, 33%, 40%); }
     .coralBrain { fill: hsl(30, 33%, 50%); }
-
     .urchinBack { fill: hsl(270, 30%, 40%); }
     .urchinFront { fill: hsl(270, 30%, 50%); }
-
     .tubeWormCavity { fill: hsl(180, 30%, 30%); }
     .tubeWormBack { fill: hsl(180, 30%, 40%); }
     .tubeWormFront { fill: hsl(180, 30%, 50%); }
     .tubeWormPlume { fill: hsl(20, 30%, 50%); }
+
+    .nightTime
+    &.nightTime#{$suffix} {
+        .kelpBack { fill: hsl(150, 20%, 30%); }
+        .kelpFront { fill: hsl(150, 20%, 40%); }
+        .seaweed { fill: hsl(90, 20%, 50%); }
+        .frondBack { fill: hsl(210, 20%, 30%); }
+        .frondFront { fill: hsl(210, 20%, 40%); }
+        .coralTubeCavity { fill: hsl(60, 20%, 30%); }
+        .coralTube { fill: hsl(60, 20%, 40%); }
+        .coralBrainCavity { fill: hsl(30, 33%, 30%); }
+        .coralBrain { fill: hsl(30, 33%, 40%); }
+        .urchinBack { fill: hsl(270, 20%, 30%); }
+        .urchinFront { fill: hsl(270, 20%, 40%); }
+        .tubeWormCavity { fill: hsl(180, 20%, 20%); }
+        .tubeWormBack { fill: hsl(180, 20%, 30%); }
+        .tubeWormFront { fill: hsl(180, 20%, 40%); }
+        .tubeWormPlume { fill: hsl(20, 20%, 40%); }
+    }
 }

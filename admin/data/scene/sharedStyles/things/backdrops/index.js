@@ -68,8 +68,14 @@ export default {
         MOUNTAIN__SHARED,
         NIGHT_TIME__SHARED,
     ],
-    [OCEAN_BOTTOM_FAR]: VOLCANO__SHARED,
-    [OCEAN_FLOOR_FAR]: VOLCANO__SHARED,
+    [OCEAN_BOTTOM_FAR]: [
+        NIGHT_TIME__SHARED,
+        VOLCANO__SHARED,
+    ],
+    [OCEAN_FLOOR_FAR]: [
+        NIGHT_TIME__SHARED,
+        VOLCANO__SHARED,
+    ],
     [PHARMACY_CEL]: null,
     [ROAD_FUTURE]: null,
     [ROAD_PAST]: null,

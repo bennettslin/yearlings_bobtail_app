@@ -136,8 +136,14 @@ export default {
     [LIZ_OTTOMAN]: LIZ_LINENS__SHARED,
     [MILK_CRATE]: null,
     [NURSE_BENCH]: null,
-    [OCEAN_CAVE_EXTERIOR]: OCEAN_CAVE__SHARED,
-    [OCEAN_CAVE_INTERIOR]: OCEAN_LIFE__SHARED,
+    [OCEAN_CAVE_EXTERIOR]: [
+        NIGHT_TIME__SHARED,
+        OCEAN_CAVE__SHARED,
+    ],
+    [OCEAN_CAVE_INTERIOR]: [
+        NIGHT_TIME__SHARED,
+        OCEAN_LIFE__SHARED,
+    ],
     [OCEAN_WAVES]: null,
     [PHONE_CALL_PANEL]: null,
     [PRINCIPAL_BENCH]: null,

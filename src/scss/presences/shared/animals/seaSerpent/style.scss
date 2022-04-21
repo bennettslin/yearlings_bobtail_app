@@ -1,7 +1,16 @@
 .seaSerpent#{$suffix} {
-    .eye { fill: hsl(150, 33%, 37%); }
-    .scalesMedium { fill: hsl(180, 33%, 57%); }
-    .scalesLight { fill: hsl(180, 33%, 67%); }
-    .coralMedium { fill: hsl(325, 33%, 57%); }
-    .coralLight { fill: hsl(325, 33%, 67%); }
+    .eye { fill: hsl(150, 28%, 42%); }
+    .scalesMedium { fill: hsl(180, 28%, 52%); }
+    .scalesLight { fill: hsl(180, 28%, 62%); }
+    .coralMedium { fill: hsl(325, 28%, 52%); }
+    .coralLight { fill: hsl(325, 28%, 62%); }
+
+    .nightTime
+    &.nightTime#{$suffix} {
+        .eye { fill: hsl(150, 18%, 27%); }
+        .scalesMedium { fill: hsl(180, 18%, 42%); }
+        .scalesLight { fill: hsl(180, 18%, 52%); }
+        .coralMedium { fill: hsl(325, 18%, 42%); }
+        .coralLight { fill: hsl(325, 18%, 52%); }
+    }
 }

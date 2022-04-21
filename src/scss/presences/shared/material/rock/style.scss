@@ -9,6 +9,7 @@
 // .rockLightest { fill: hsl(75, 7%, 77%); }
 
 .nightTime .nightTime#{$suffix} {
+    .rockDark { fill: hsl(75, 4%, 37%); }
     .rockMediumDark { fill: hsl(75, 4%, 42%); }
     .rockMedium { fill: hsl(75, 4%, 47%); }
     .rockMediumLight { fill: hsl(75, 4%, 52%); }

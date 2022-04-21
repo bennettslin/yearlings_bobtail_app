@@ -82,6 +82,7 @@ export default {
         ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED,
         BENNETT,
+        NIGHT_TIME__SHARED,
     ],
     [BENNETT_ODIN_BUOY]: [
         ALL_CLOTHING__SHARED,
@@ -94,12 +95,14 @@ export default {
         ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED,
         BENNETT,
+        NIGHT_TIME__SHARED,
         ODIN_PAST__SHARED,
     ],
     [BENNETT_ODIN_OCEAN_FLOOR]: [
         ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED,
         BENNETT,
+        NIGHT_TIME__SHARED,
         ODIN_PAST__SHARED,
     ],
     [BENNETT_ODIN_RICKSHAW]: [
@@ -135,7 +138,10 @@ export default {
     [DOGS_SPACE_STATION]: null,
     [EARTH]: null,
     [MARQUEE_FRAME]: null,
-    [ODIN_MAT]: ODIN_PAST__SHARED,
+    [ODIN_MAT]: [
+        NIGHT_TIME__SHARED,
+        ODIN_PAST__SHARED,
+    ],
     [ODIN_SHORE]: [
         NIGHT_TIME__SHARED,
         ODIN_PAST__SHARED,
@@ -176,8 +182,14 @@ export default {
     [POSTER_TINTIN]: ALL_PEOPLE__SHARED,
     [PROGRESS_CHART_EARLY]: null,
     [PROGRESS_CHART_LATE]: null,
-    [SEA_SERPENT_LEFT]: SEA_SERPENT__SHARED,
-    [SEA_SERPENT_RIGHT]: SEA_SERPENT__SHARED,
+    [SEA_SERPENT_LEFT]: [
+        NIGHT_TIME__SHARED,
+        SEA_SERPENT__SHARED,
+    ],
+    [SEA_SERPENT_RIGHT]: [
+        NIGHT_TIME__SHARED,
+        SEA_SERPENT__SHARED,
+    ],
     [SNOWGLOBE_CORD]: [
         BENNETT,
         ALL_PEOPLE__SHARED,

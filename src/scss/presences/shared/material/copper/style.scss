@@ -11,3 +11,9 @@
     .copperDarker { fill: hsl(34, 14%, 26%); }
     .copperDark { fill: hsl(34, 14%, 29%); }
 }
+
+.nightTime .nightTime#{$suffix} {
+    .copperDarkest { fill: hsl(34, 18%, 27%); }
+    .copperDarker { fill: hsl(34, 18%, 32%); }
+    .copperDark { fill: hsl(34, 18%, 37%); }
+}

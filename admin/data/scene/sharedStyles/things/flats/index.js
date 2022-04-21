@@ -248,8 +248,12 @@ export default {
         FOLIAGE__SHARED,
         HOUSE__SHARED,
     ],
-    [OCEAN_BOTTOM_MIDDLE]: OCEAN_CAVE__SHARED,
+    [OCEAN_BOTTOM_MIDDLE]: [
+        NIGHT_TIME__SHARED,
+        OCEAN_CAVE__SHARED,
+    ],
     [OCEAN_BOTTOM_NEAR]: [
+        NIGHT_TIME__SHARED,
         OCEAN_LIFE__SHARED,
     ],
     [PAMPAS_FAR]: [

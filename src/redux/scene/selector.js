@@ -44,11 +44,6 @@ export const mapSceneSkyTime = createSelector(
     ) => getSkyTimeForScene(sceneSongIndex, sceneSceneIndex),
 )
 
-export const mapIsNightTime = createSelector(
-    mapSceneSkyTime,
-    skyTime => getIsNightTime(skyTime),
-)
-
 export const mapSceneSkySeason = createSelector(
     mapSceneSongIndex,
     mapSceneSceneIndex,
@@ -56,6 +51,12 @@ export const mapSceneSkySeason = createSelector(
         sceneSongIndex,
         sceneSceneIndex,
     ) => getSeasonForScene(sceneSongIndex, sceneSceneIndex),
+)
+
+export const mapIsNightTime = createSelector(
+    mapSceneSkyTime,
+    mapSceneSkySeason,
+    (skyTime, skySeason) => getIsNightTime(skyTime, skySeason),
 )
 
 export const mapIsAutumnSeason = createSelector(

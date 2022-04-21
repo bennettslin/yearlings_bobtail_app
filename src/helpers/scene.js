@@ -2,7 +2,7 @@ import {
     ATTIC_KEY, BASEMENT_BED_DARK_KEY, BASEMENT_BED_MAGIC_KEY, BATHROOM_PAST_KEY, BEDROOM_DARK_KEY, BEDROOM_FUTURE_KEY, BEDROOM_MAGIC_KEY, BENNETT_BED_DARK_KEY, CHANGELING_CAVE_KEY, CLUB_FAR_DARK_KEY, CLUB_SIDE_CROWD_DARK_KEY, LIZ_BED_DARK_EXTRA_KEY, LIZ_BED_DARK_KEY, LIZ_COUCH_DARK_KEY, LIZ_COUCH_FUTURE_KEY, SNOWGLOBES_FUTURE_KEY, SNOWGLOBES_PAST_KEY, TAIWAN_ROOM_KEY, TAIWAN_STAIRS_KEY,
 } from '../constants/scene/scenes'
 import {
-    SEASON_AUTUMN, SEASON_WINTER, TIME_NIGHT, TIME_NIGHT_TAIWAN, TIME_TWILIGHT, TIME_TWILIGHT_TAIWAN,
+    SEASON_AUTUMN, SEASON_OCEAN_SIDE, SEASON_OCEAN_TOP, SEASON_WINTER, TIME_NIGHT, TIME_NIGHT_TAIWAN, TIME_TWILIGHT, TIME_TWILIGHT_TAIWAN,
 } from '../constants/scene/sky'
 
 // Scenes where only the default presences are darkened.
@@ -71,7 +71,7 @@ export const getIsMagicSeason = sceneCubesKey => {
     return false
 }
 
-export const getIsNightTime = skyTime => {
+export const getIsNightTime = (skyTime, skySeason) => {
     switch (skyTime) {
         case TIME_NIGHT:
         case TIME_NIGHT_TAIWAN:
@@ -79,6 +79,11 @@ export const getIsNightTime = skyTime => {
         case TIME_TWILIGHT_TAIWAN:
         case BEDROOM_MAGIC_KEY:
         case BASEMENT_BED_MAGIC_KEY:
+            return true
+    }
+    switch (skySeason) {
+        case SEASON_OCEAN_TOP:
+        case SEASON_OCEAN_SIDE:
             return true
     }
     return false
