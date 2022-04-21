@@ -55,10 +55,7 @@ import {
     ALL_PEOPLE__SHARED,
     ALL_CLOTHING__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/actors'
-import {
-    ODIN_PAST__SHARED,
-    SEA_SERPENT__SHARED,
-} from '../../../../../../src/constants/scene/sharedStyles/animals'
+import { SEA_SERPENT__SHARED } from '../../../../../../src/constants/scene/sharedStyles/animals'
 import {
     FOLIAGE__SHARED,
     MOUNTAIN__SHARED,
@@ -89,21 +86,18 @@ export default {
         ALL_PEOPLE__SHARED,
         BENNETT,
         NIGHT_TIME__SHARED,
-        ODIN_PAST__SHARED,
     ],
     [BENNETT_ODIN_DEPTHS]: [
         ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED,
         BENNETT,
         NIGHT_TIME__SHARED,
-        ODIN_PAST__SHARED,
     ],
     [BENNETT_ODIN_OCEAN_FLOOR]: [
         ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED,
         BENNETT,
         NIGHT_TIME__SHARED,
-        ODIN_PAST__SHARED,
     ],
     [BENNETT_ODIN_RICKSHAW]: [
         ALL_CLOTHING__SHARED,
@@ -111,7 +105,6 @@ export default {
         ALL_VEHICLES__SHARED,
         BENNETT,
         NIGHT_TIME__SHARED,
-        ODIN_PAST__SHARED,
     ],
     [BENNETT_SHORE]: [
         ALL_CLOTHING__SHARED,
@@ -140,19 +133,15 @@ export default {
     [MARQUEE_FRAME]: null,
     [ODIN_MAT]: [
         NIGHT_TIME__SHARED,
-        ODIN_PAST__SHARED,
     ],
     [ODIN_SHORE]: [
         NIGHT_TIME__SHARED,
-        ODIN_PAST__SHARED,
     ],
     [ODIN_TAIWAN_GATE]: [
         NIGHT_TIME__SHARED,
-        ODIN_PAST__SHARED,
     ],
     [ODIN_TAIWAN_STAIRS]: [
         DARK_ROOM_DEFAULT__SHARED,
-        ODIN_PAST__SHARED,
     ],
     [PAINTING]: null,
     [POSTER_BLOOM_COUNTY]: [

@@ -1,15 +1,11 @@
 # Darken notes
 
 # Next TODO
-* Reverse palace trim on Taiwan house near
-* Adjust white on past Bennetts
-* Remove Odin past styling
-* Get rid of door side on Bennett door outside
 * Make foreboding trees autumn trees
+* Buoy ocean cubes?
 
 * Refactor
-    * Get rid of buildingsNearDark
-    * Get rid of volcano, ocean cave, and ocean life styles
+    * Get rid of ocean life styles
     * Houses and buildings
     * Doors
     * Bricks (roofs)

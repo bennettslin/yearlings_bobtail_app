@@ -8,12 +8,6 @@
 // .whiteLighter { fill: hsl(0, 0%, 92%); }
 // .whiteLightest { fill: hsl(0, 0%, 97%); }
 
-.eveningTime .eveningTime#{$suffix} {
-    .whiteDark { fill: hsl(0, 0%, 62%); }
-    .whiteMediumDark { fill: hsl(0, 0%, 67%); }
-    .whiteMedium { fill: hsl(0, 0%, 72%); }
-}
-
 .darkRoom .darkRoom#{$suffix} {
     .whiteDark { fill: hsl(0, 0%, 40%); }
     .whiteMedium { fill: hsl(0, 0%, 44%); }
@@ -21,10 +15,16 @@
     .whiteLight { fill: hsl(0, 0%, 49%); }
 }
 
-.nightTime .nightTime#{$suffix} {
-    .whiteDarkest { fill: hsl(0, 0%, 47%); }
+.eveningTime .eveningTime#{$suffix} {
     .whiteDark { fill: hsl(0, 0%, 57%); }
     .whiteMediumDark { fill: hsl(0, 0%, 62%); }
     .whiteMedium { fill: hsl(0, 0%, 67%); }
-    .whiteLight { fill: hsl(0, 0%, 72%); }
+}
+
+.nightTime .nightTime#{$suffix} {
+    .whiteDarkest { fill: hsl(0, 0%, 42%); }
+    .whiteDark { fill: hsl(0, 0%, 52%); }
+    .whiteMediumDark { fill: hsl(0, 0%, 57%); }
+    .whiteMedium { fill: hsl(0, 0%, 62%); }
+    .whiteLight { fill: hsl(0, 0%, 67%); }
 }

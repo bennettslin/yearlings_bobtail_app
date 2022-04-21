@@ -35,7 +35,6 @@ import {
     MOUNTAIN__SHARED,
     TAIWAN_FOLIAGE__SHARED,
     TAIWAN_MOUNTAIN__SHARED,
-    VOLCANO__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/outdoor'
 
 export default {
@@ -71,14 +70,8 @@ export default {
         NIGHT_TIME__SHARED,
         WINTER__SHARED,
     ],
-    [OCEAN_BOTTOM_FAR]: [
-        NIGHT_TIME__SHARED,
-        VOLCANO__SHARED,
-    ],
-    [OCEAN_FLOOR_FAR]: [
-        NIGHT_TIME__SHARED,
-        VOLCANO__SHARED,
-    ],
+    [OCEAN_BOTTOM_FAR]: NIGHT_TIME__SHARED,
+    [OCEAN_FLOOR_FAR]: NIGHT_TIME__SHARED,
     [PHARMACY_CEL]: null,
     [ROAD_FUTURE]: null,
     [ROAD_PAST]: null,

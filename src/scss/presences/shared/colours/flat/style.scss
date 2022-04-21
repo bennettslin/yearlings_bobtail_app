@@ -103,6 +103,7 @@
 }
 
 .nightTime .nightTime#{$suffix} {
+    .flatRedDark { fill: hsl(0, 23%, 37%); }
     .flatRedMedium { fill: hsl(0, 23%, 47%); }
     .flatOrangeDark { fill: hsl(30, 23%, 37%); }
     .flatYellowDarker { fill: hsl(60, 23%, 32%); }

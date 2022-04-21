@@ -20,6 +20,10 @@
     .oakLightest { fill: hsl(35, 13%, 44%); }
 }
 
+.eveningTime .eveningTime#{$suffix} {
+    .oakDarkest { fill: hsl(35, 13%, 32%); }
+}
+
 .nightTime .nightTime#{$suffix} {
     .oakDarkest { fill: hsl(35, 10%, 27%); }
     .oakDark { fill: hsl(35, 10%, 37%); }

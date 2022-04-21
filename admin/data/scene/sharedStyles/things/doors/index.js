@@ -92,7 +92,6 @@ export default {
     ],
     [BENNETT_DOOR_OUTSIDE]: [
         BENNETT_APARTMENT__SHARED,
-        BENNETT_INSIDE__SHARED,
         DOOR__SHARED,
         EVENING_TIME__SHARED,
     ],

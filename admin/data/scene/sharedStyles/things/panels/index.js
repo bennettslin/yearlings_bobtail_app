@@ -78,7 +78,6 @@ import {
     WAITING_ARMCHAIR__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/furniture'
 import {
-    OCEAN_CAVE__SHARED,
     ROSE_RED__SHARED,
     TAIWAN_FOLIAGE__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/outdoor'
@@ -136,10 +135,7 @@ export default {
     [LIZ_OTTOMAN]: LIZ_LINENS__SHARED,
     [MILK_CRATE]: null,
     [NURSE_BENCH]: null,
-    [OCEAN_CAVE_EXTERIOR]: [
-        NIGHT_TIME__SHARED,
-        OCEAN_CAVE__SHARED,
-    ],
+    [OCEAN_CAVE_EXTERIOR]: NIGHT_TIME__SHARED,
     [OCEAN_CAVE_INTERIOR]: [
         NIGHT_TIME__SHARED,
         OCEAN_LIFE__SHARED,
