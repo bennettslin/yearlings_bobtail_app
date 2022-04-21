@@ -1,7 +1,12 @@
 # Darken notes
 
 # Next TODO
+* Past, future, and magic colours
 * Make foreboding trees autumn trees
+* Make Liz wear her thick coat?
+    * Make her small jacket a different colour?
+    * Make her wear something thicker under thick coat?
+    * Make Liz bed cubes colour what it was (225)
 * Buoy ocean cubes?
 
 * Refactor
@@ -15,8 +20,6 @@
     * Royce Hall
     * St Joseph's
     * Evian bottle
-
-* Past, future, and magic colours
 
 # Finally TODO
 * Audit presences
