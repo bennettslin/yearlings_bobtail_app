@@ -83,6 +83,10 @@
     .dullPurpleMedium { fill: hsl(270, 10%, 34%); }
 }
 
+.eveningTime .eveningTime#{$suffix} {
+    .dullYellowDark { fill: hsl(60, 15%, 42%); }
+}
+
 .nightTime .nightTime#{$suffix} {
     .dullRedDarker { fill: hsl(0, 10%, 32%); }
     .dullRedDark { fill: hsl(0, 10%, 37%); }

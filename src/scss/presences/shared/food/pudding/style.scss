@@ -3,4 +3,12 @@
     .puddingCupInner { fill: hsl(30, 10%, 67%); }
     .puddingCupBottom { fill: hsl(33, 30%, 87%); }
     .pudding { fill: hsl(38, 26%, 33%); }
+
+    .eveningTime
+    &.eveningTime#{$suffix} {
+        .puddingCupTop { fill: hsl(33, 37%, 85%); }
+        .puddingCupInner { fill: hsl(30, 7%, 62%); }
+        .puddingCupBottom { fill: hsl(33, 25%, 82%); }
+        .pudding { fill: hsl(38, 21%, 28%); }
+    }
 }

@@ -4,4 +4,13 @@
 
     .wrapperOuter { fill: hsl(339, 33%, 62%); }
     .wrapperInner { fill: hsl(339, 33%, 72%); }
+
+    .eveningTime
+    &.eveningTime#{$suffix} {
+        .condomRing { fill: hsl(339, 15%, 57%); }
+        .condomBag { fill: hsl(339, 15%, 67%); }
+    
+        .wrapperOuter { fill: hsl(339, 28%, 57%); }
+        .wrapperInner { fill: hsl(339, 28%, 67%); }
+    }
 }

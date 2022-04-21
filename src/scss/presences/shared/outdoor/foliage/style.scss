@@ -1,6 +1,6 @@
 .foliage#{$suffix} {
-    .foliageFar {fill: hsl(105, 20%, 52%); }
-    .foliageMiddle {fill: hsl(105, 21%, 49%); }
+    .foliageFar {fill: hsl(105, 20%, 51%); }
+    .foliageMiddle {fill: hsl(105, 21%, 48%); }
     .foliageNear {fill: hsl(105, 22%, 45%); }
     .foliageNearest {fill: hsl(105, 23%, 41%); }
 
@@ -42,6 +42,7 @@
         .treeFurthest { fill: hsl(121, 19%, 36%); }
         .treeFurther { fill: hsl(121, 19%, 38%); }
         .treeCloser { fill: hsl(121, 19%, 41%); }
+        .treeTrunkFurther { fill: hsl(35, 17%, 27%); }
         .treeTrunk { fill: hsl(35, 17%, 31%); }
         .bushFurther { fill: hsl(139, 19%, 43%); }
         .bushCloser { fill: hsl(139, 19%, 47%); }
@@ -53,8 +54,8 @@
 
     .nightTime
     &.nightTime#{$suffix} {
-        .foliageFar {fill: hsl(105, 10%, 42%); }
-        .foliageMiddle {fill: hsl(105, 11%, 39%); }
+        .foliageFar {fill: hsl(105, 10%, 41%); }
+        .foliageMiddle {fill: hsl(105, 11%, 38%); }
         .foliageNear {fill: hsl(105, 12%, 35%); }
         .palmFrond { fill: hsl(94, 12%, 36%); }
         .palmTrunk { fill: hsl(35, 14%, 25%); }
@@ -72,6 +73,10 @@
 
     .autumnSeason.eveningTime
     &.autumn#{$suffix}.eveningTime#{$suffix} {
+        .foliageFar {fill: hsl(45, 15%, 46%); }
+        .foliageMiddle {fill: hsl(45, 16%, 43%); }
+        .foliageNear {fill: hsl(45, 17%, 40%); }
+        .foliageNearest {fill: hsl(45, 18%, 36%); }
         .palmFrond { fill: hsl(34, 17%, 41%); }
         .bushFurther { fill: hsl(54, 19%, 43%); }
         .bushCloser { fill: hsl(54, 19%, 47%); }
@@ -96,6 +101,14 @@
         .shrubCloser { fill: hsl(80, 15%, 37%); }
     }
 
+    .winterSeason.eveningTime
+    &.winter#{$suffix}.eveningTime#{$suffix} {
+        .foliageNear {fill: hsl(195, 17%, 50%); }
+        .treeFurthest { fill: hsl(211, 19%, 46%); }
+        .treeFurther { fill: hsl(211, 19%, 48%); }
+        .treeCloser { fill: hsl(211, 19%, 51%); }
+    }
+
     .winterSeason.nightTime
     &.winter#{$suffix}.nightTime#{$suffix} {
         .foliageNear {fill: hsl(195, 17%, 45%); }
@@ -106,8 +119,8 @@
 
     .autumnSeason
     &.autumn#{$suffix} {
-        .foliageFar {fill: hsl(45, 20%, 53%); }
-        .foliageMiddle {fill: hsl(45, 21%, 49%); }
+        .foliageFar {fill: hsl(45, 20%, 51%); }
+        .foliageMiddle {fill: hsl(45, 21%, 48%); }
         .foliageNear {fill: hsl(45, 22%, 45%); }
         .foliageNearest {fill: hsl(45, 23%, 41%); }
         .palmFrond { fill: hsl(34, 22%, 46%); }

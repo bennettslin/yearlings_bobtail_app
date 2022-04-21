@@ -2,9 +2,15 @@
     .signBack {fill: hsl(112, 11%, 41%); }
     .signFront {fill: hsl(116, 28%, 38%); }
 
+    .eveningTime
+    &.eveningTime#{$suffix} {
+        .signBack {fill: hsl(112, 9%, 36%); }
+        .signFront {fill: hsl(116, 18%, 33%); }
+    }
+
     .nightTime
     &.nightTime#{$suffix} {
-        .signBack {fill: hsl(112, 9%, 31%); }
+        .signBack {fill: hsl(112, 6%, 31%); }
         .signFront {fill: hsl(116, 18%, 28%); }
     }
 }

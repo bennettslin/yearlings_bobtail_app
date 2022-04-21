@@ -11,4 +11,10 @@
     .garbageBagFront {fill: hsl(187, 23%, 55%); }
     .bagLiningOuter {fill: hsl(186, 29%, 59%); }
     .bagLiningInner {fill: hsl(187, 19%, 46%); }
+
+    .eveningTime
+    &.eveningTime#{$suffix} {
+        .garbageBagRear {fill: hsl(47, 5%, 32%); }
+        .garbageBagFront {fill: hsl(187, 18%, 50%); }
+    }
 }

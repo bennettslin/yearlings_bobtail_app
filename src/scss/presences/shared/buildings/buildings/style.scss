@@ -7,6 +7,8 @@
 
     .eveningTime
     &.eveningTime#{$suffix} {
+        .buildingsFarthest { fill: hsl(220, 14%, 49%); }
+        .buildingsFar { fill: hsl(220, 16%, 45%); }
         .buildingsNear { fill: hsl(216, 18%, 41%); }
     }
 

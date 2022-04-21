@@ -65,6 +65,11 @@
     .wallSide { fill: hsl(60, 14%, 45%); }
     .wallFront { fill: hsl(60, 20%, 51%); }
 
+    .eveningTime .eveningTime#{$suffix} & {
+        .wallSide { fill: hsl(60, 9%, 40%); }
+        .wallFront { fill: hsl(60, 15%, 46%); }
+    }
+    
     .nightTime &.nightTime#{$suffix} {
         .wallSide { fill: hsl(60, 7%, 35%); }
         .wallFront { fill: hsl(60, 13%, 41%); }
@@ -75,6 +80,10 @@
     .wallSide { fill: hsl(0, 4%, 50%); }
     .wallFront { fill: hsl(0, 10%, 56%); }
 
+    .eveningTime .eveningTime#{$suffix} & {
+        .wallSide { fill: hsl(0, 4%, 45%); }
+    }
+    
     .nightTime &.nightTime#{$suffix} {
         .wallSide { fill: hsl(0, 4%, 40%); }
         .wallFront { fill: hsl(0, 10%, 46%); }
@@ -85,6 +94,11 @@
     .wallSide { fill: hsl(240, 14%, 50%); }
     .wallFront { fill: hsl(240, 20%, 56%); }
 
+    .eveningTime .eveningTime#{$suffix} & {
+        .wallSide { fill: hsl(240, 9%, 45%); }
+        .wallFront { fill: hsl(240, 15%, 51%); }
+    }
+    
     .nightTime &.nightTime#{$suffix} {
         .wallSide { fill: hsl(240, 7%, 40%); }
         .wallFront { fill: hsl(240, 13%, 46%); }

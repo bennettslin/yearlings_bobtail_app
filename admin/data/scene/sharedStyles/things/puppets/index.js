@@ -33,7 +33,7 @@ import {
     MIRIAM,
     MOTHER,
 } from '../../../../../../src/constants/scene/actors'
-import { DARK_ROOM_DEFAULT__SHARED, EVENING_TIME__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
+import { DARK_ROOM_DEFAULT__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
 import {
     ALL_CLOTHING__SHARED,
     ALL_PEOPLE__SHARED,
@@ -49,10 +49,7 @@ import {
 } from '../../../../../../src/constants/scene/sharedStyles/vehicles'
 
 export default {
-    [GHOST_ODIN_ALLEY]: [
-        EVENING_TIME__SHARED,
-        ODIN_GHOST__SHARED,
-    ],
+    [GHOST_ODIN_ALLEY]: ODIN_GHOST__SHARED,
     [GHOST_ODIN_CAMPUS]: ODIN_GHOST__SHARED,
     [GHOST_ODIN_CLUB]: ODIN_GHOST__SHARED,
     [GHOST_ODIN_DEMONSTRATION]: ODIN_GHOST__SHARED,
@@ -132,7 +129,6 @@ export default {
         MIRIAM,
         ALL_PEOPLE__SHARED,
         ALL_VEHICLES__SHARED,
-        EVENING_TIME__SHARED,
         REATTA__SHARED,
     ],
 }

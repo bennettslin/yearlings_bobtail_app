@@ -7,7 +7,10 @@
 .patinaLight { fill: hsl(151, 16%, 67%); }
 
 .eveningTime .eveningTime#{$suffix} {
+    .patinaDarkest { fill: hsl(151, 11%, 32%); }
+    .patinaDarker { fill: hsl(151, 11%, 37%); }
     .patinaDark { fill: hsl(151, 11%, 42%); }
+    .patinaMediumDark { fill: hsl(151, 11%, 47%); }
 }
 
 .nightTime .nightTime#{$suffix} {

@@ -1,3 +1,7 @@
 .goldenGateBackdrop {
     .suspenders { fill: hsla(0, 83%, 88%, 0.5); }
+
+    .eveningTime &.eveningTime#{$suffix} {
+        .suspenders { fill: hsla(0, 78%, 83%, 0.5); }
+    }
 }

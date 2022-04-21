@@ -16,6 +16,8 @@
 }
 
 .eveningTime .eveningTime#{$suffix} {
+    .steelDarkest { fill: hsl(195, 6%, 32%); }
+    .steelDarker { fill: hsl(195, 6%, 37%); }
     .steelDark { fill: hsl(195, 6%, 42%); }
     .steelMediumDark { fill: hsl(195, 6%, 47%); }
     .steelMedium { fill: hsl(195, 6%, 52%); }

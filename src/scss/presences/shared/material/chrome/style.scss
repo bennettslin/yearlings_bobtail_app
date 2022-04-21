@@ -13,6 +13,10 @@
     .chromeLight { fill: hsl(160, 4%, 37%); }
 }
 
+.eveningTime .eveningTime#{$suffix} {
+    .chromeLight { fill: hsl(160, 5%, 62%); }
+}
+
 .nightTime .nightTime#{$suffix} {
     .chromeDarker { fill: hsl(160, 5%, 32%); }
     .chromeDark { fill: hsl(160, 5%, 37%); }

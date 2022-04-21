@@ -5,6 +5,7 @@ import {
 
 import {
     DEFAULT_CLEAR_COLOUR as D,
+    GROUND_CLEAR_COLOUR as G,
     GRASS_COLOUR as H,
     STREET_COLOUR as T,
     PAVEMENT_COLOUR as V,
@@ -29,7 +30,7 @@ export default {
                 [D],
             ],
             zIndices: [
-                [1],
+                [0],
                 [1, 1, 1, 1, d, d, d, d, d, 1],
                 [f],
                 [k],
@@ -37,14 +38,14 @@ export default {
         },
         floor: {
             hslaColours: [
-                [V],
+                [G],
                 [V, V, V, X, X, X, X, X, V],
                 [H],
                 [A, A, A, A, A, V, V, V, A],
                 [V],
             ],
             zIndices: [
-                [1],
+                [0],
                 [1, 1, 1, 1, 5, 5, 5, 5, 5, 1],
                 [1],
                 [6, 6, 6, 6, 6, 1, 1, 1, 6],
@@ -61,7 +62,7 @@ export default {
                 [D],
             ],
             zIndices: [
-                [1, 1, 1, 1, 1, 1, 1, 1, 1, f, k],
+                [0, 0, 0, 0, 0, 0, 0, 0, 0, f, k],
                 [1, d, d, d, d, d, 1, 1, 1, f, k],
                 [f, f, f, f, f, f, f, f, f, f, k],
                 [k],
@@ -69,14 +70,14 @@ export default {
         },
         floor: {
             hslaColours: [
-                [V],
+                [G],
                 [V, X, X, X, X, X, V],
                 [H, H, H, H, H, H, H, H, H, H, T, V],
                 [A, A, V, V, V, A, A, A, A, A, T, V],
                 [V, V, V, V, V, V, V, V, V, V, T],
             ],
             zIndices: [
-                [1],
+                [0],
                 [1, 5, 5, 5, 5, 5, 1],
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1],
                 [6, 6, 1, 1, 1, 6, 6, 6, 6, 6, 0, 1],

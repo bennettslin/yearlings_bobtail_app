@@ -1,9 +1,20 @@
 .banana#{$suffix} {
     .bananaOuterRear { fill: hsl(62, 31%, 50%); }
     .bananaOuterMiddle { fill: hsl(61, 36%, 54%); }
-    .bananaInnerMiddle { fill: hsl(87, 11%, 67%); }
-    .bananaInnerRear { fill: hsl(85, 9%, 63%); }
     .bananaOuterFront { fill: hsl(61, 41%, 57%); }
+    .bananaInnerRear { fill: hsl(85, 9%, 63%); }
+    .bananaInnerMiddle { fill: hsl(87, 11%, 67%); }
     .bananaInnerFront { fill: hsl(85, 13%, 70%); }
     .bananaEnd { fill: hsl(61, 31%, 27%); }
+
+    .eveningTime
+    &.eveningTime#{$suffix} {
+        .bananaOuterRear { fill: hsl(62, 26%, 45%); }
+        .bananaOuterMiddle { fill: hsl(61, 31%, 49%); }
+        .bananaOuterFront { fill: hsl(61, 36%, 52%); }
+        .bananaInnerRear { fill: hsl(85, 6%, 58%); }
+        .bananaInnerMiddle { fill: hsl(87, 8%, 62%); }
+        .bananaInnerFront { fill: hsl(85, 9%, 65%); }
+        .bananaEnd { fill: hsl(61, 26%, 22%); }
+    }
 }

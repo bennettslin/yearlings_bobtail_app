@@ -9,7 +9,9 @@
 // .whiteLightest { fill: hsl(0, 0%, 97%); }
 
 .eveningTime .eveningTime#{$suffix} {
+    .whiteDark { fill: hsl(0, 0%, 62%); }
     .whiteMediumDark { fill: hsl(0, 0%, 67%); }
+    .whiteMedium { fill: hsl(0, 0%, 72%); }
 }
 
 .darkRoom .darkRoom#{$suffix} {

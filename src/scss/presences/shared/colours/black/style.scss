@@ -15,6 +15,10 @@
     .blackLight { fill: hsl(0, 0%, 29%); }
 }
 
+.eveningTime .eveningTime#{$suffix} {
+    .blackDark { fill: hsl(0, 0%, 22%); }
+}
+
 .nightTime .nightTime#{$suffix} {
     .blackDarkest { fill: hsl(0, 0%, 12%); }
     .blackDark { fill: hsl(0, 0%, 17%); }

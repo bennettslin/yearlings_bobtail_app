@@ -95,6 +95,10 @@
 }
 
 .eveningTime .eveningTime#{$suffix} {
+    .flatRedMediumDark { fill: hsl(0, 28%, 47%); }
+    .flatRedMedium { fill: hsl(0, 28%, 52%); }
+    .flatYellowDark { fill: hsl(60, 28%, 42%); }
+    .flatYellowMediumDark { fill: hsl(60, 28%, 47%); }
     .flatBlueDark { fill: hsl(210, 28%, 42%); }
 }
 
