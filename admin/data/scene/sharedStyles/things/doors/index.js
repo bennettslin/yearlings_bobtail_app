@@ -53,7 +53,9 @@ import {
     MOUNTAIN__SHARED,
     WALL__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/outdoor'
-import { AUTUMN__SHARED, DARK_ROOM_DEFAULT__SHARED, EVENING_TIME__SHARED, NIGHT_TIME__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
+import {
+    AUTUMN__SHARED, DARK_ROOM_DEFAULT__SHARED, EVENING_TIME__SHARED, FUTURE__SHARED, MAGIC__SHARED, NIGHT_TIME__SHARED,
+} from '../../../../../../src/constants/scene/sharedStyles'
 
 export default {
     [BANCROFT_DOOR]: DOOR__SHARED,
@@ -74,8 +76,10 @@ export default {
     [BEDROOM_FENCE]: [
         AUTUMN__SHARED,
         EVENING_TIME__SHARED,
-        FOLIAGE__SHARED,
         FAMILY_HOUSE__SHARED,
+        FOLIAGE__SHARED,
+        FUTURE__SHARED,
+        MAGIC__SHARED,
         MOUNTAIN__SHARED,
         NIGHT_TIME__SHARED,
     ],
@@ -124,6 +128,7 @@ export default {
     [DEFAULT_FENCE_BASEMENT]: [
         AUTUMN__SHARED,
         FOLIAGE__SHARED,
+        MAGIC__SHARED,
         NIGHT_TIME__SHARED,
         WALL__SHARED,
     ],
@@ -156,6 +161,7 @@ export default {
     ],
     [LIZ_GATE_INSIDE]: [
         EVENING_TIME__SHARED,
+        FUTURE__SHARED,
         NIGHT_TIME__SHARED,
         LIZ_GATE__SHARED,
     ],

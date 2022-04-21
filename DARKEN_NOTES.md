@@ -2,6 +2,7 @@
 
 # Next TODO
 * Past, future, and magic colours
+* Make slanted bushes three dimensional colours?
 * Make foreboding trees their own presences?
 * Make Liz wear her thick coat?
     * Make her small jacket a different colour?

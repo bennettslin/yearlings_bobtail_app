@@ -26,6 +26,13 @@
     .magicSeason
     &.magic#{$suffix} {
         .mountain { fill: hsl($HUE_MAGIC, 8%, 37%); }
+        .meadowNear { fill: hsl($HUE_MAGIC, 18%, 28%); }
+    }
+
+    .futureSeason
+    &.future#{$suffix} {
+        .mountain { fill: hsl($HUE_FUTURE, 8%, 37%); }
+        .meadowNear { fill: hsl($HUE_FUTURE, 18%, 28%); }
     }
 
     .autumnSeason.eveningTime

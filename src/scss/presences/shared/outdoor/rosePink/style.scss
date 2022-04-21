@@ -1,3 +1,8 @@
 .rosePink#{$suffix} {
     .rose { fill: hsl(270, 16%, 70%); }
+
+    .magicSeason
+    &.magic#{$suffix} {
+        .rose { fill: hsl($HUE_MAGIC, 8%, 50%); }
+    }
 }

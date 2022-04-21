@@ -25,4 +25,13 @@
         .plankLight { fill: hsl(43, 12%, 42%); }
         .beam { fill: hsl(62, 14%, 47%); }
     }
+
+    .futureSeason
+    &.future#{$suffix} {
+        .post { fill: hsl($HUE_FUTURE, 12%, 42%); }
+        .plankDark { fill: hsl($HUE_FUTURE, 13%, 44%); }
+        .plankMedium { fill: hsl($HUE_FUTURE, 14%, 46%); }
+        .plankLight { fill: hsl($HUE_FUTURE, 12%, 42%); }
+        .beam { fill: hsl($HUE_FUTURE, 14%, 47%); }
+    }
 }

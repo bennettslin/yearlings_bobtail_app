@@ -24,7 +24,9 @@ import {
     VALLEY_PANORAMA_BACKDROP,
     WEDDING_BACKDROP,
 } from '../../../../../../src/constants/scene/things/backdrops'
-import { AUTUMN__SHARED, EVENING_TIME__SHARED, MAGIC__SHARED, NIGHT_TIME__SHARED, WINTER__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
+import {
+    AUTUMN__SHARED, EVENING_TIME__SHARED, FUTURE__SHARED, MAGIC__SHARED, NIGHT_TIME__SHARED, WINTER__SHARED,
+} from '../../../../../../src/constants/scene/sharedStyles'
 import {
     BUILDINGS__SHARED,
     TAIWAN_HOUSE__SHARED,
@@ -66,6 +68,8 @@ export default {
         AUTUMN__SHARED,
         EVENING_TIME__SHARED,
         FOLIAGE__SHARED,
+        FUTURE__SHARED,
+        MAGIC__SHARED,
         MOUNTAIN__SHARED,
         NIGHT_TIME__SHARED,
         WINTER__SHARED,
@@ -107,6 +111,8 @@ export default {
         AUTUMN__SHARED,
         EVENING_TIME__SHARED,
         FOLIAGE__SHARED,
+        FUTURE__SHARED,
+        MAGIC__SHARED,
         MOUNTAIN__SHARED,
         NIGHT_TIME__SHARED,
     ],

@@ -29,8 +29,8 @@
     .shrubFurther { fill: hsl(164, 22%, 42%); }
     .shrubCloser { fill: hsl(165, 25%, 47%); }
 
-    .lemon { fill: hsl(57, 43%, 49%); }
-    .peach { fill: hsl(12, 47%, 65%); }
+    .lemon { fill: hsl(57, 33%, 49%); }
+    .peach { fill: hsl(12, 37%, 65%); }
 
     .eveningTime
     &.eveningTime#{$suffix} {
@@ -73,13 +73,35 @@
 
     .magicSeason
     &.magic#{$suffix} {
+        .foliageNear {fill: hsl($HUE_MAGIC, 12%, 35%); }
         .palmFrond { fill: hsl($HUE_MAGIC, 12%, 36%); }
         .palmTrunk { fill: hsl($HUE_MAGIC, 14%, 25%); }
         .cactusFurther { fill: hsl($HUE_MAGIC, 13%, 36%); }
         .treeFurther { fill: hsl($HUE_MAGIC, 14%, 33%); }
+        .treeMiddle { fill: hsl($HUE_MAGIC, 14%, 34%); }
         .treeCloser { fill: hsl($HUE_MAGIC, 14%, 36%); }
         .treeTrunk { fill: hsl($HUE_MAGIC, 12%, 26%); }
         .bushFurther { fill: hsl($HUE_MAGIC, 14%, 37%); }
+        .bushCloser { fill: hsl($HUE_MAGIC, 14%, 40%); }
+        .cypressCloser { fill: hsl($HUE_MAGIC, 14%, 32%); }
+        .lemon { fill: hsl($HUE_MAGIC, 18%, 39%); }
+        .peach { fill: hsl($HUE_MAGIC, 17%, 45%); }
+    }
+
+    .futureSeason
+    &.future#{$suffix} {
+        .foliageNear {fill: hsl($HUE_FUTURE, 12%, 35%); }
+        .palmFrond { fill: hsl($HUE_FUTURE, 12%, 36%); }
+        .palmTrunk { fill: hsl($HUE_FUTURE, 14%, 25%); }
+        .treeFurther { fill: hsl($HUE_FUTURE, 14%, 33%); }
+        .treeMiddle { fill: hsl($HUE_FUTURE, 14%, 34%); }
+        .treeCloser { fill: hsl($HUE_FUTURE, 14%, 36%); }
+        .treeTrunk { fill: hsl($HUE_FUTURE, 12%, 26%); }
+        .bushFurther { fill: hsl($HUE_FUTURE, 14%, 37%); }
+        .bushCloser { fill: hsl($HUE_FUTURE, 14%, 40%); }
+        .cypressFurther { fill: hsl($HUE_FUTURE, 14%, 27%); }
+        .cypressCloser { fill: hsl($HUE_FUTURE, 14%, 32%); }
+        .lemon { fill: hsl($HUE_FUTURE, 23%, 39%); }
     }
 
     .autumnSeason.eveningTime

@@ -26,3 +26,8 @@
     .brassMediumLight { fill: hsl(61, 11%, 52%); }
     .brassLight { fill: hsl(61, 11%, 57%); }
 }
+
+.futureSeason .future#{$suffix} {
+    .brassDarkest { fill: hsl($HUE_FUTURE, 11%, 27%); }
+    .brassDark { fill: hsl($HUE_FUTURE, 11%, 37%); }
+}

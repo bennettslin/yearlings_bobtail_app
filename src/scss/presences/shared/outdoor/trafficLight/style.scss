@@ -2,4 +2,11 @@
     .lightGreen { fill: hsl(107, 85%, 65%); }
     .lightOff { fill: hsl(18, 12%, 37%); }
     .lightRed { fill: hsl(353, 85%, 65%); }
+
+    .futureSeason
+    &.future#{$suffix} {
+        .lightGreen { fill: hsl($HUE_FUTURE, 35%, 45%); }
+        .lightOff { fill: hsl($HUE_FUTURE, 6%, 27%); }
+        .lightRed { fill: hsl($HUE_FUTURE, 35%, 45%); }
+    }
 }

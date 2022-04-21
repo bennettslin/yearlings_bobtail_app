@@ -81,7 +81,9 @@ import {
     CIGARETTE__SHARED,
     GARBAGE_BAG__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/food'
-import { AUTUMN__SHARED, DARK_ROOM_DEFAULT__SHARED, EVENING_TIME__SHARED, NIGHT_TIME__SHARED, WINTER__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
+import {
+    AUTUMN__SHARED, DARK_ROOM_DEFAULT__SHARED, EVENING_TIME__SHARED, FUTURE__SHARED, MAGIC__SHARED, NIGHT_TIME__SHARED, WINTER__SHARED,
+} from '../../../../../../src/constants/scene/sharedStyles'
 import { BENNETT_LINENS__SHARED } from '../../../../../../src/constants/scene/sharedStyles/furniture'
 import { BULB__SHARED } from '../../../../../../src/constants/scene/sharedStyles/household'
 import {
@@ -145,10 +147,12 @@ export default {
     [CYPRESS_DOUBLE]: [
         EVENING_TIME__SHARED,
         FOLIAGE__SHARED,
+        FUTURE__SHARED,
     ],
     [CYPRESS_SINGLE]: [
         EVENING_TIME__SHARED,
         FOLIAGE__SHARED,
+        FUTURE__SHARED,
     ],
     [DISHROOM_DOLLY]: ALL_VEHICLES__SHARED,
     [DISH_PILE]: null,
@@ -170,7 +174,11 @@ export default {
         NIGHT_TIME__SHARED,
         BULB__SHARED,
     ],
-    [LEMON_TREE]: FOLIAGE__SHARED,
+    [LEMON_TREE]: [
+        FOLIAGE__SHARED,
+        FUTURE__SHARED,
+        MAGIC__SHARED,
+    ],
     [LOCKER_BANK]: null,
     [MIRRORED_SINK]: ALL_PEOPLE__SHARED,
     [MONITOR_FRONT]: null,
@@ -180,7 +188,10 @@ export default {
         NIGHT_TIME__SHARED,
         FREEWAY_SIGN__SHARED,
     ],
-    [PEACH_TREE]: FOLIAGE__SHARED,
+    [PEACH_TREE]: [
+        FOLIAGE__SHARED,
+        MAGIC__SHARED,
+    ],
     [PHARMACY_AISLE]: null,
     [PLAYGROUND_SLIDE]: null,
     [RECYCLING_BIN]: [
@@ -193,6 +204,7 @@ export default {
     ],
     [ROSEBUSH_DOUBLE_BASEMENT]: [
         FOLIAGE__SHARED,
+        MAGIC__SHARED,
         ROSE_PINK__SHARED,
     ],
     [ROSEBUSH_SINGLE_BATHROOM]: [
@@ -201,14 +213,19 @@ export default {
     ],
     [ROSEBUSH_SINGLE_BASEMENT]: [
         FOLIAGE__SHARED,
+        MAGIC__SHARED,
         ROSE_PINK__SHARED,
     ],
     [ROSEBUSH_SLANTED_DOUBLE]: [
         FOLIAGE__SHARED,
+        FUTURE__SHARED,
+        MAGIC__SHARED,
         ROSE_RED__SHARED,
     ],
     [ROSEBUSH_SLANTED_SINGLE]: [
         FOLIAGE__SHARED,
+        FUTURE__SHARED,
+        MAGIC__SHARED,
         ROSE_RED__SHARED,
     ],
     [SANDBAGS]: null,
@@ -233,7 +250,10 @@ export default {
         EVENING_TIME__SHARED,
         TRAFFIC_LIGHT__SHARED,
     ],
-    [TRAFFIC_LIGHT_REAR]: TRAFFIC_LIGHT__SHARED,
+    [TRAFFIC_LIGHT_REAR]: [
+        FUTURE__SHARED,
+        TRAFFIC_LIGHT__SHARED,
+    ],
     [TRASH_CAN]: [
         BANANA__SHARED,
         GARBAGE_BAG__SHARED,
