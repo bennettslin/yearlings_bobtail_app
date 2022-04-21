@@ -47,7 +47,7 @@ export default {
         },
         [FOREBODING_TREES__NEAR]: {
             yIndex: 3,
-            xPosition: 12,
+            xPosition: 12.25,
         },
     },
     [PANEL]: {

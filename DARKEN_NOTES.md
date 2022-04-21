@@ -2,7 +2,7 @@
 
 # Next TODO
 * Past, future, and magic colours
-* Make foreboding trees autumn trees
+* Make foreboding trees their own presences?
 * Make Liz wear her thick coat?
     * Make her small jacket a different colour?
     * Make her wear something thicker under thick coat?
