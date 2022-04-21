@@ -7,8 +7,17 @@
     .blinds { fill: hsl($HUE_APARTMENT, 5%, 70%); }
     .rail { fill: hsl($HUE_APARTMENT, 17%, 62%); }
 
-    .darkRoomDefault &.darkRoom#{$suffix} {
+    .darkRoom &.darkRoom#{$suffix} {
         .doorExterior { fill: hsl($HUE_APARTMENT + 20, 5%, 33%); }
+    }
+
+    .eveningTime &.eveningTime#{$suffix} {
+        .frameExterior { fill: hsl($HUE_APARTMENT, 7%, 45%); }
+        .doorExterior { fill: hsl($HUE_APARTMENT + 20, 7%, 50%); }
+    
+        .paneStill { fill: hsl($HUE_APARTMENT, 9%, 53%); }
+        .blinds { fill: hsl($HUE_APARTMENT, 7%, 65%); }
+        .rail { fill: hsl($HUE_APARTMENT, 12%, 57%); }
     }
 
     .nightTime &.nightTime#{$suffix} {

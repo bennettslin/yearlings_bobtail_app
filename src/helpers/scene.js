@@ -2,7 +2,7 @@ import {
     ATTIC_KEY, BASEMENT_BED_DARK_KEY, BASEMENT_BED_MAGIC_KEY, BATHROOM_PAST_KEY, BEDROOM_DARK_KEY, BEDROOM_FUTURE_KEY, BEDROOM_MAGIC_KEY, BENNETT_BED_DARK_KEY, CHANGELING_CAVE_KEY, CLUB_FAR_DARK_KEY, CLUB_SIDE_CROWD_DARK_KEY, LIZ_BED_DARK_EXTRA_KEY, LIZ_BED_DARK_KEY, LIZ_COUCH_DARK_KEY, LIZ_COUCH_FUTURE_KEY, SNOWGLOBES_FUTURE_KEY, SNOWGLOBES_PAST_KEY, TAIWAN_ROOM_KEY, TAIWAN_STAIRS_KEY,
 } from '../constants/scene/scenes'
 import {
-    SEASON_AUTUMN, SEASON_OCEAN_SIDE, SEASON_OCEAN_TOP, SEASON_WINTER, TIME_NIGHT, TIME_NIGHT_TAIWAN, TIME_TWILIGHT, TIME_TWILIGHT_TAIWAN,
+    SEASON_AUTUMN, SEASON_OCEAN_SIDE, SEASON_OCEAN_TOP, SEASON_WINTER, TIME_EVENING, TIME_NIGHT, TIME_NIGHT_TAIWAN, TIME_TWILIGHT, TIME_TWILIGHT_TAIWAN,
 } from '../constants/scene/sky'
 
 // Scenes where only the default presences are darkened.
@@ -71,6 +71,8 @@ export const getIsMagicSeason = sceneCubesKey => {
     return false
 }
 
+export const getIsEveningTime = skyTime => skyTime === TIME_EVENING
+
 export const getIsNightTime = (skyTime, skySeason) => {
     switch (skyTime) {
         case TIME_NIGHT:
@@ -95,4 +97,5 @@ export const getIsAutumnSeason = skySeason => (
     // Autumn styling also applies to winter season.
     skySeason === SEASON_WINTER
 )
+
 export const getIsWinterSeason = skySeason => skySeason === SEASON_WINTER

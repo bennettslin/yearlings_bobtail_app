@@ -4,7 +4,7 @@
     .blanket { fill: hsl($hue__attic__linens + 20, 26%, 61%); }
     .blanketInner { fill: hsl($hue__attic__linens + 20, 26%, 50%); }
 
-    .darkRoomDefault &.darkRoom#{$suffix} {
+    .darkRoom &.darkRoom#{$suffix} {
         .cushion { fill: hsl($hue__attic__linens, 8%, 26%); }
         .pillow { fill: hsl($hue__attic__linens + 10, 13%, 36%); }
     }

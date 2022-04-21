@@ -32,6 +32,21 @@
     .lemon { fill: hsl(57, 43%, 49%); }
     .peach { fill: hsl(12, 47%, 65%); }
 
+    .eveningTime
+    &.eveningTime#{$suffix} {
+        .foliageNear {fill: hsl(105, 17%, 40%); }
+        .palmFrond { fill: hsl(94, 17%, 41%); }
+        .palmTrunk { fill: hsl(35, 19%, 30%); }
+        .treeFurthest { fill: hsl(121, 19%, 36%); }
+        .treeFurther { fill: hsl(121, 19%, 38%); }
+        .treeCloser { fill: hsl(121, 19%, 41%); }
+        .treeTrunk { fill: hsl(35, 17%, 31%); }
+        .bushFurther { fill: hsl(139, 19%, 43%); }
+        .bushCloser { fill: hsl(139, 19%, 47%); }
+        .shrubFurther { fill: hsl(164, 17%, 37%); }
+        .shrubCloser { fill: hsl(165, 20%, 42%); }
+    }
+
     .nightTime
     &.nightTime#{$suffix} {
         .foliageFar {fill: hsl(105, 10%, 42%); }
@@ -49,6 +64,17 @@
         .cypressCloser { fill: hsl(158, 14%, 32%); }
         .shrubFurther { fill: hsl(164, 7%, 32%); }
         .shrubCloser { fill: hsl(165, 10%, 37%); }
+    }
+
+    .autumnSeason.eveningTime
+    &.autumn#{$suffix}.eveningTime#{$suffix} {
+        .palmFrond { fill: hsl(34, 17%, 41%); }
+        .bushFurther { fill: hsl(54, 19%, 43%); }
+        .bushCloser { fill: hsl(54, 19%, 47%); }
+        .treeFurthest { fill: hsl(31, 19%, 36%); }
+        .treeFurther { fill: hsl(31, 19%, 38%); }
+        .treeMiddle { fill: hsl(31, 19%, 39%); }
+        .treeCloser { fill: hsl(31, 19%, 41%); }
     }
 
     .autumnSeason.nightTime

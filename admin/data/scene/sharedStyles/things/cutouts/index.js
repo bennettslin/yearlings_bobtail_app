@@ -81,7 +81,7 @@ import {
     CIGARETTE__SHARED,
     GARBAGE_BAG__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/food'
-import { AUTUMN__SHARED, DARK_ROOM_DEFAULT__SHARED, NIGHT_TIME__SHARED, WINTER__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
+import { AUTUMN__SHARED, DARK_ROOM_DEFAULT__SHARED, EVENING_TIME__SHARED, NIGHT_TIME__SHARED, WINTER__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
 import { BENNETT_LINENS__SHARED } from '../../../../../../src/constants/scene/sharedStyles/furniture'
 import { BULB__SHARED } from '../../../../../../src/constants/scene/sharedStyles/household'
 import {
@@ -109,11 +109,13 @@ export default {
     [BUDDHA_SHRINE]: DARK_ROOM_DEFAULT__SHARED,
     [BUSH_DOUBLE]: [
         AUTUMN__SHARED,
+        EVENING_TIME__SHARED,
         FOLIAGE__SHARED,
         NIGHT_TIME__SHARED,
     ],
     [BUSH_SINGLE]: [
         AUTUMN__SHARED,
+        EVENING_TIME__SHARED,
         FOLIAGE__SHARED,
         NIGHT_TIME__SHARED,
     ],
@@ -167,7 +169,10 @@ export default {
     [PEACH_TREE]: FOLIAGE__SHARED,
     [PHARMACY_AISLE]: null,
     [PLAYGROUND_SLIDE]: null,
-    [RECYCLING_BIN]: NIGHT_TIME__SHARED,
+    [RECYCLING_BIN]: [
+        EVENING_TIME__SHARED,
+        NIGHT_TIME__SHARED,
+    ],
     [ROSEBUSH_DOUBLE_BATHROOM]: [
         FOLIAGE__SHARED,
         ROSE_RED__SHARED,
@@ -219,6 +224,7 @@ export default {
     [TRAY_PILE]: null,
     [TREE]: [
         AUTUMN__SHARED,
+        EVENING_TIME__SHARED,
         FOLIAGE__SHARED,
     ],
     [TREE_DEAD]: FOLIAGE__SHARED,

@@ -5,6 +5,11 @@
     .buildingsNearest { fill: hsl(216, 23%, 42%); }
     .buildingsNearDark { fill: hsl(216, 23%, 42%); }
 
+    .eveningTime
+    &.eveningTime#{$suffix} {
+        .buildingsNear { fill: hsl(216, 18%, 41%); }
+    }
+
     .nightTime
     &.nightTime#{$suffix} {
         .buildingsFarthest { fill: hsl(220, 9%, 44%); }

@@ -9,9 +9,14 @@
 
 .glassClear { fill: hsla(175, 25%, 75%, 0.25); }
 
-.darkRoomDefault .darkRoom#{$suffix} {
+.darkRoom .darkRoom#{$suffix} {
     .glassDarkest { fill: hsl(175, 12%, 24%); }
-    .glassClear { fill: hsla(175, 15%, 35%, 0.25); }
+    .glassClear { fill: hsla(175, 15%, 15%, 0.25); }
+}
+
+.eveningTime .eveningTime#{$suffix} {
+    .glassDarkest { fill: hsl(175, 13%, 32%); }
+    .glassClear { fill: hsla(175, 20%, 25%, 0.25); }
 }
 
 .nightTime .nightTime#{$suffix} {

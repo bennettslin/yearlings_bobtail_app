@@ -6,14 +6,7 @@ import Presences from '../Presences'
 import { updateEntranceStore } from '../../redux/entrance/action'
 import { mapIsSongChangeDone, mapIsSceneChangeDone } from '../../redux/entrance/selector'
 import {
-    mapIsAutumnSeason,
-    mapIsDarkRoomDefaultScene,
-    mapIsDarkRoomExtraScene,
-    mapIsFutureSeason,
-    mapIsMagicSeason,
-    mapIsNightTime,
-    mapIsPastSeason,
-    mapIsWinterSeason,
+    mapIsAutumnSeason, mapIsDarkRoomDefaultScene, mapIsDarkRoomExtraScene, mapIsEveningTime, mapIsFutureSeason, mapIsMagicSeason, mapIsNightTime, mapIsPastSeason, mapIsWinterSeason,
 } from '../../redux/scene/selector'
 import Transition from 'react-transition-group/Transition'
 import { CUBE_Y_INDICES } from '../../constants/cubeIndex'
@@ -26,6 +19,7 @@ const Scene = () => {
         isSceneChangeDone = useSelector(mapIsSceneChangeDone),
         isDarkRoomDefaultScene = useSelector(mapIsDarkRoomDefaultScene),
         isDarkRoomExtraScene = useSelector(mapIsDarkRoomExtraScene),
+        isEveningTime = useSelector(mapIsEveningTime),
         isNightTime = useSelector(mapIsNightTime),
         isAutumnSeason = useSelector(mapIsAutumnSeason),
         isWinterSeason = useSelector(mapIsWinterSeason),
@@ -59,8 +53,9 @@ const Scene = () => {
                 {...{
                     className: cx(
                         'Scene',
-                        isDarkRoomDefaultScene && 'darkRoomDefault',
+                        isDarkRoomDefaultScene && 'darkRoom',
                         isDarkRoomExtraScene && 'darkRoomExtra',
+                        isEveningTime && 'eveningTime',
                         isNightTime && 'nightTime',
                         isAutumnSeason && 'autumnSeason',
                         isWinterSeason && 'winterSeason',

@@ -7,7 +7,7 @@
     .sketchLighter { fill: hsla(45, 5%, 65%, 0.625); }
     .sketchLightest { fill: hsla(45, 5%, 80%, 0.625); }
 
-    .darkRoomDefault &.darkRoom#{$suffix} {
+    .darkRoom &.darkRoom#{$suffix} {
         .sketchDarkest { fill: hsla(45, 3%, 15%, 0.625); }
         .sketchDarker { fill: hsla(45, 3%, 23%, 0.625); }
         .sketchMiddle { fill: hsla(45, 3%, 30%, 0.625); }

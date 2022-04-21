@@ -10,6 +10,17 @@
     .bolt { fill: hsl(111, 15%, 37%); }
     .faceplate { fill: hsl(192, 16%, 43%); }
 
+    .eveningTime &.eveningTime#{$suffix} {
+        .gateDark { fill: hsl(180, 10%, 43%); }
+        .gateLight { fill: hsl(180, 10%, 48%); }
+        .mesh { fill: hsla(180, 31%, 12%, 0.2); }
+        .escutcheon { fill: hsl(171, 5%, 56%); }
+        .knobMountDark { fill: hsl(200, 6%, 42%); }
+        .knobMountLight { fill: hsl(195, 7%, 48%); }
+        .knobLight { fill: hsl(180, 11%, 60%); }
+        .knobDark { fill: hsl(180, 6%, 52%); }
+    }
+
     .nightTime &.nightTime#{$suffix} {
         .gateDark { fill: hsl(180, 10%, 38%); }
         .gateLight { fill: hsl(180, 10%, 43%); }

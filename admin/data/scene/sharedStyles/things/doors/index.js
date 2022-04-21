@@ -53,7 +53,7 @@ import {
     MOUNTAIN__SHARED,
     WALL__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/outdoor'
-import { AUTUMN__SHARED, DARK_ROOM_DEFAULT__SHARED, NIGHT_TIME__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
+import { AUTUMN__SHARED, DARK_ROOM_DEFAULT__SHARED, EVENING_TIME__SHARED, NIGHT_TIME__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
 
 export default {
     [BANCROFT_DOOR]: DOOR__SHARED,
@@ -73,6 +73,7 @@ export default {
     ],
     [BEDROOM_FENCE]: [
         AUTUMN__SHARED,
+        EVENING_TIME__SHARED,
         FOLIAGE__SHARED,
         FAMILY_HOUSE__SHARED,
         MOUNTAIN__SHARED,
@@ -93,6 +94,7 @@ export default {
         BENNETT_APARTMENT__SHARED,
         BENNETT_INSIDE__SHARED,
         DOOR__SHARED,
+        EVENING_TIME__SHARED,
     ],
     [BENNETT_GATE_FRONT]: [
         BENNETT_GATE__SHARED,
@@ -102,6 +104,7 @@ export default {
     [BENNETT_GATE_SIDE]: [
         BENNETT_GATE__SHARED,
         BENNETT_APARTMENT__SHARED,
+        EVENING_TIME__SHARED,
     ],
     [BENNETT_GATE_SIDE_OPEN]: [
         BENNETT_GATE__SHARED,
@@ -114,6 +117,7 @@ export default {
     ],
     [BLINDS_OUTSIDE]: [
         BENNETT_APARTMENT__SHARED,
+        EVENING_TIME__SHARED,
         NIGHT_TIME__SHARED,
     ],
     [CINEMA_DOORS]: DOOR__SHARED,

@@ -13,6 +13,7 @@ import {
     getIsNightTime,
     getIsAutumnSeason,
     getIsWinterSeason,
+    getIsEveningTime,
 } from '../../helpers/scene'
 import { mapIsSongSelectComplete } from '../entrance/selector'
 import { DEFAULT_STAGE_KEY } from '../../constants/scene/scenes'
@@ -51,6 +52,11 @@ export const mapSceneSkySeason = createSelector(
         sceneSongIndex,
         sceneSceneIndex,
     ) => getSeasonForScene(sceneSongIndex, sceneSceneIndex),
+)
+
+export const mapIsEveningTime = createSelector(
+    mapSceneSkyTime,
+    skyTime => getIsEveningTime(skyTime),
 )
 
 export const mapIsNightTime = createSelector(

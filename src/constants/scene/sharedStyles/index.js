@@ -9,4 +9,6 @@ export const FUTURE__SHARED = 'future'
 
 export const AUTUMN__SHARED = 'autumn'
 export const WINTER__SHARED = 'winter'
+
+export const EVENING_TIME__SHARED = 'eveningTime'
 export const NIGHT_TIME__SHARED = 'nightTime'

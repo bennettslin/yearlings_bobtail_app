@@ -4,6 +4,7 @@
 * Reverse palace trim on Taiwan house near
 * Adjust white on past Bennetts
 * Remove Odin past styling
+* Get rid of door side on Bennett door outside
 
 * Refactor
     * Get rid of buildingsNearDark
@@ -19,6 +20,7 @@
     * Evian bottle
 
 * Do time evening
+    * Evening cubes
 * Past, future, and magic colours
 
 # Finally TODO

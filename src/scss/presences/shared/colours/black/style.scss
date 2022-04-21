@@ -7,7 +7,7 @@
 .blackLight { fill: hsl(0, 0%, 47%); }
 .blackLighter { fill: hsl(0, 0%, 52%); }
 
-.darkRoomDefault .darkRoom#{$suffix} {
+.darkRoom .darkRoom#{$suffix} {
     .blackDark { fill: hsl(0, 0%, 19%); }
     .blackMediumDark { fill: hsl(0, 0%, 21%); }
     .blackMedium { fill: hsl(0, 0%, 24%); }

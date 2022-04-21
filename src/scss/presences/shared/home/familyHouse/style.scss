@@ -1,11 +1,17 @@
 .familyHouse#{$suffix} {
-    .fence { fill: hsl(65, 13%, 55%); }
     .fenceDark { fill: hsl(65, 13%, 50%); }
+    .fence { fill: hsl(65, 13%, 55%); }
     .wallFront { fill: hsl($HUE_FAMILY, 46%, 65%); }
+
+    .eveningTime
+    &.eveningTime#{$suffix} {
+        .fenceDark { fill: hsl(65, 8%, 45%); }
+        .fence { fill: hsl(65, 8%, 50%); }
+    }
 
     .nightTime
     &.nightTime#{$suffix} {
-        .fence { fill: hsl(65, 8%, 45%); }
         .fenceDark { fill: hsl(65, 8%, 40%); }
+        .fence { fill: hsl(65, 8%, 45%); }
     }
 }

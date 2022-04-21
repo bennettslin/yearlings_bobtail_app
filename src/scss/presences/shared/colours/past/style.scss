@@ -18,7 +18,7 @@
 .flatPastLighter { fill: hsl($HUE_PAST, 33%, 72%); }
 // .flatPastLightest { fill: hsl($HUE_PAST, 33%, 77%); }
 
-.darkRoomDefault .darkRoom#{$suffix} {
+.darkRoom .darkRoom#{$suffix} {
     .dullPastDarker { fill: hsl($HUE_PAST, 10%, 27%); }
     .dullPastDark { fill: hsl($HUE_PAST, 10%, 29%); }
     .dullPastMediumDark { fill: hsl($HUE_PAST, 10%, 32%); }

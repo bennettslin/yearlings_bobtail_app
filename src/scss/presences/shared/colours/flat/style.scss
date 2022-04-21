@@ -72,7 +72,7 @@
 .flatMaroonMedium { fill: hsl(330, 33%, 57%); }
 .flatMaroonLight { fill: hsl(330, 33%, 67%); }
 
-.darkRoomDefault .darkRoom#{$suffix} {
+.darkRoom .darkRoom#{$suffix} {
     .flatRedDarker { fill: hsl(0, 17%, 27%); }
     .flatRedDark { fill: hsl(0, 17%, 29%); }
     .flatRedMediumDark { fill: hsl(0, 17%, 32%); }
@@ -92,6 +92,10 @@
     .flatPurpleMediumDark { fill: hsl(270, 17%, 32%); }
     .flatPurpleMedium { fill: hsl(270, 17%, 34%); }
     .flatMaroonLight { fill: hsl(330, 17%, 39%); }
+}
+
+.eveningTime .eveningTime#{$suffix} {
+    .flatBlueDark { fill: hsl(210, 28%, 42%); }
 }
 
 .nightTime .nightTime#{$suffix} {

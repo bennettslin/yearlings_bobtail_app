@@ -6,10 +6,16 @@
 // .bronzeMediumLight { fill: hsl(47, 37%, 62%); }
 // .bronzeLight { fill: hsl(47, 37%, 67%); }
 
-.darkRoomDefault .darkRoom#{$suffix} {
+.darkRoom .darkRoom#{$suffix} {
     .bronzeDarker { fill: hsl(47, 19%, 26%); }
     .bronzeDark { fill: hsl(47, 19%, 29%); }
     .bronzeMediumDark { fill: hsl(47, 19%, 31%); }
+}
+
+.eveningTime .eveningTime#{$suffix} {
+    .bronzeDarker { fill: hsl(47, 32%, 37%); }
+    .bronzeDark { fill: hsl(47, 32%, 42%); }
+    .bronzeMediumDark { fill: hsl(47, 32%, 47%); }
 }
 
 .nightTime .nightTime#{$suffix} {

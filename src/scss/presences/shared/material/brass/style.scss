@@ -6,7 +6,7 @@
 .brassMediumLight { fill: hsl(61, 21%, 62%); }
 .brassLight { fill: hsl(61, 21%, 67%); }
 
-.darkRoomDefault .darkRoom#{$suffix} {
+.darkRoom .darkRoom#{$suffix} {
     .brassDarkest { fill: hsl(61, 11%, 24%); }
     .brassDarker { fill: hsl(61, 11%, 26%); }
     .brassDark { fill: hsl(61, 11%, 29%); }
