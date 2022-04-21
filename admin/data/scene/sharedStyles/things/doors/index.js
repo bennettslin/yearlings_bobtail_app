@@ -156,6 +156,7 @@ export default {
         LIZ_APARTMENT__SHARED,
     ],
     [LIZ_GATE_INSIDE]: [
+        EVENING_TIME__SHARED,
         NIGHT_TIME__SHARED,
         LIZ_GATE__SHARED,
     ],
