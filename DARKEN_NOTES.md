@@ -5,6 +5,7 @@
 * Adjust white on past Bennetts
 * Remove Odin past styling
 * Get rid of door side on Bennett door outside
+* Make foreboding trees autumn trees
 
 * Refactor
     * Get rid of buildingsNearDark
