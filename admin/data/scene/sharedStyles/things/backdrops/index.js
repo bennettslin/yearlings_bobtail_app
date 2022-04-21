@@ -42,6 +42,7 @@ export default {
     [DRIVING_BACKDROP]: FOLIAGE__SHARED,
     [GOLDEN_GATE_BACKDROP]: [
         BUILDINGS__SHARED,
+        EVENING_TIME__SHARED,
         MOUNTAIN__SHARED,
     ],
     [LOS_ANGELES_BACKDROP]: [

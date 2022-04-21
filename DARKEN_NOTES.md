@@ -25,6 +25,6 @@
 
 # Finally TODO
 * Audit presences
-    * Make sure backdrops are at level 0 if possible?
+    * Make sure all backdrops are at level 0 if possible?
 * Audit cubes
 * Remove extraneous colours and cubes?

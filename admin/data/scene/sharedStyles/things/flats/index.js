@@ -113,12 +113,14 @@ export default {
         NIGHT_TIME__SHARED,
     ],
     [CLIFF_GRAVES_FAR]: [
-        WINTER__SHARED,
+        EVENING_TIME__SHARED,
         MOUNTAIN__SHARED,
+        WINTER__SHARED,
     ],
     [CLIFF_GRAVES_NEAR]: [
-        WINTER__SHARED,
+        EVENING_TIME__SHARED,
         MOUNTAIN__SHARED,
+        WINTER__SHARED,
     ],
     [COMMERCIAL_CENTRE]: [
         BUILDING__SHARED,
@@ -184,11 +186,13 @@ export default {
     [EL_CERRITO_FAR]: [
         AUTUMN__SHARED,
         BUILDINGS__SHARED,
+        EVENING_TIME__SHARED,
         FOLIAGE__SHARED,
     ],
     [EL_CERRITO_NEAR]: [
         AUTUMN__SHARED,
         DOOR__SHARED,
+        EVENING_TIME__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
     ],

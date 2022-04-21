@@ -140,8 +140,8 @@ export default {
     [CAT_FOOD_DISHES]: DARK_ROOM_DEFAULT__SHARED,
     [CAT_LITTER_BOX]: DARK_ROOM_DEFAULT__SHARED,
     [CAVEMAN_BONES]: null,
-    [CHUTE_GARBAGE]: null,
-    [CHUTE_RECYCLING]: null,
+    [CHUTE_GARBAGE]: EVENING_TIME__SHARED,
+    [CHUTE_RECYCLING]: EVENING_TIME__SHARED,
     [CYPRESS_DOUBLE]: [
         EVENING_TIME__SHARED,
         FOLIAGE__SHARED,
@@ -156,6 +156,7 @@ export default {
     [DISPENSER_RIGHT]: null,
     [DUMPSTER]: [
         ALL_VEHICLES__SHARED,
+        EVENING_TIME__SHARED,
         GARBAGE_BAG__SHARED,
     ],
     [FIRE_HYDRANT]: null,
@@ -243,7 +244,10 @@ export default {
         EVENING_TIME__SHARED,
         FOLIAGE__SHARED,
     ],
-    [TREE_DEAD]: FOLIAGE__SHARED,
+    [TREE_DEAD]: [
+        EVENING_TIME__SHARED,
+        FOLIAGE__SHARED,
+    ],
     [TWIN_STREETLAMP]: [
         NIGHT_TIME__SHARED,
         BULB__SHARED,

@@ -168,7 +168,10 @@ export default {
         EVENING_TIME__SHARED,
         LIZ_GATE__SHARED,
     ],
-    [LOADING_DOCK_DOOR]: DOOR__SHARED,
+    [LOADING_DOCK_DOOR]: [
+        DOOR__SHARED,
+        EVENING_TIME__SHARED,
+    ],
     [NEIGHBOUR_DOOR]: [
         BENNETT_APARTMENT__SHARED,
         DOOR__SHARED,

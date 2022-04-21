@@ -110,11 +110,11 @@ import {
     LIZ_CONDOM__SHARED,
     MIRIAM_CONDOM__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/wardrobe'
-import { DARK_ROOM_DEFAULT__SHARED, NIGHT_TIME__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
+import { DARK_ROOM_DEFAULT__SHARED, EVENING_TIME__SHARED, NIGHT_TIME__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
 
 export default {
     [BACKPACK_BENNETT]: BACKPACK__SHARED,
-    [BALLED_FOIL]: null,
+    [BALLED_FOIL]: EVENING_TIME__SHARED,
     [BASS_CASE_UPRIGHT]: [
         DARK_ROOM_DEFAULT__SHARED,
         BASS_CASE__SHARED,
@@ -157,7 +157,10 @@ export default {
         DARK_ROOM_DEFAULT__SHARED,
         LIZ_CONDOM__SHARED,
     ],
-    [CONDOM_MIRIAM]: MIRIAM_CONDOM__SHARED,
+    [CONDOM_MIRIAM]: [
+        EVENING_TIME__SHARED,
+        MIRIAM_CONDOM__SHARED,
+    ],
     [CONDOM_WRAPPER_LIZ]: [
         DARK_ROOM_DEFAULT__SHARED,
         LIZ_CONDOM__SHARED,
@@ -166,7 +169,10 @@ export default {
         DARK_ROOM_DEFAULT__SHARED,
         LIZ_CONDOM__SHARED,
     ],
-    [CONDOM_WRAPPER_MIRIAM]: MIRIAM_CONDOM__SHARED,
+    [CONDOM_WRAPPER_MIRIAM]: [
+        EVENING_TIME__SHARED,
+        MIRIAM_CONDOM__SHARED,
+    ],
     [CHRISTOPHER_LETTERS]: null,
     [CRACKED_PICTURE]: [
         PROMISE_PHOTO__SHARED,
@@ -189,7 +195,10 @@ export default {
         EVIAN__SHARED,
     ],
     [FLOWER_BULBS]: FOLIAGE__SHARED,
-    [FREEWAY_SIGN]: FREEWAY_SIGN__SHARED,
+    [FREEWAY_SIGN]: [
+        EVENING_TIME__SHARED,
+        FREEWAY_SIGN__SHARED,
+    ],
     [FRIDGE_DRAWINGS]: [
         DARK_ROOM_DEFAULT__SHARED,
         ALL_PEOPLE__SHARED,
@@ -242,6 +251,7 @@ export default {
     [TETHERBALL_POLE]: TETHERBALL_POLE__SHARED,
     [THROWN_FRUIT]: [
         BANANA__SHARED,
+        EVENING_TIME__SHARED,
         PUDDING__SHARED,
     ],
     [TORN_MAGAZINES]: null,
