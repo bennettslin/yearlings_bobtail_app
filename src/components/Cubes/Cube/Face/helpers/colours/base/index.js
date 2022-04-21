@@ -1,16 +1,18 @@
 /* eslint-disable object-curly-newline */
 import {
+    BENNETT_FLOOR_COLOUR,
+    GRASS_AUTUMN_COLOUR,
+    GRASS_AUTUMN_EVENING_COLOUR,
+    GRASS_AUTUMN_NIGHT_COLOUR,
     GRASS_COLOUR,
+    GRASS_EVENING_COLOUR,
+    GRASS_NIGHT_COLOUR,
+    GRASS_WINTER_EVENING_COLOUR,
+    LINOLEUM_FLOOR_COLOUR,
+    LINOLEUM_PAST_COLOUR,
     OCEAN_NIGHT_COLOUR,
     SAND_NIGHT_COLOUR,
     WOOD_FLOOR_COLOUR,
-    BENNETT_FLOOR_COLOUR,
-    LINOLEUM_FLOOR_COLOUR,
-    LINOLEUM_PAST_COLOUR,
-    GRASS_AUTUMN_COLOUR,
-    GRASS_AUTUMN_NIGHT_COLOUR,
-    GRASS_WINTER_COLOUR,
-    GRASS_NIGHT_COLOUR,
 } from '../../../../../../../constants/scene/cubes/colours'
 import HSLA_MAP from '../../../../../../../constants/scene/cubes/hsla'
 
@@ -99,10 +101,12 @@ const _getDiagonalValue = ({
 const COLOUR_GETTER_MAP = {
     [BENNETT_FLOOR_COLOUR]: _getDiagonalValue,
     [GRASS_AUTUMN_COLOUR]: _getWideRandomValue,
+    [GRASS_AUTUMN_EVENING_COLOUR]: _getWideRandomValue,
     [GRASS_AUTUMN_NIGHT_COLOUR]: _getWideRandomValue,
     [GRASS_COLOUR]: _getWideRandomValue,
+    [GRASS_EVENING_COLOUR]: _getWideRandomValue,
     [GRASS_NIGHT_COLOUR]: _getWideRandomValue,
-    [GRASS_WINTER_COLOUR]: _getWideRandomValue,
+    [GRASS_WINTER_EVENING_COLOUR]: _getWideRandomValue,
     [LINOLEUM_FLOOR_COLOUR]: _getCheckerboardValue,
     [LINOLEUM_PAST_COLOUR]: _getCheckerboardValue,
     [OCEAN_NIGHT_COLOUR]: _getNarrowRandomValue,

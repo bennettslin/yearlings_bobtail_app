@@ -4,10 +4,10 @@ import {
     DEFAULT_CLEAR_COLOUR as D,
     GROUND_CLEAR_COLOUR as G,
     DARK_ROOM_COLOUR as Z,
-    PAVEMENT_COLOUR as V,
-    GENERIC_EXTERIOR_COLOUR as X,
-    PLATFORM_COLOUR as P,
-    CONCRETE_PLATFORM_COLOUR as Q,
+    PAVEMENT_EVENING_COLOUR as V,
+    GENERIC_EVENING_COLOUR as X,
+    PLATFORM_EVENING_COLOUR as P,
+    CONCRETE_PLATFORM_EVENING_COLOUR as Q,
 } from '../../../../../src/constants/scene/cubes/colours'
 
 import { d, f, k } from '../../../../../src/constants/scene/cubes/zIndices'

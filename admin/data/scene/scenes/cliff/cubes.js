@@ -3,7 +3,7 @@ import { CLIFF_KEY } from '../../../../../src/constants/scene/scenes'
 
 import {
     GROUND_CLEAR_COLOUR as G,
-    GRASS_WINTER_COLOUR as H,
+    GRASS_WINTER_EVENING_COLOUR as H,
 } from '../../../../../src/constants/scene/cubes/colours'
 
 export default {

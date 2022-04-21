@@ -162,7 +162,7 @@ export default {
     [FIRE_HYDRANT]: null,
     [GLASS_RACK]: null,
     [GRAVESTONE]: NIGHT_TIME__SHARED,
-    [HOSTESS_STAND]: null,
+    [HOSTESS_STAND]: DARK_ROOM_DEFAULT__SHARED,
     [HOWIE_FRIDGE]: DARK_ROOM_DEFAULT__SHARED,
     [IV_DRIP]: null,
     [LAMPPOST]: [

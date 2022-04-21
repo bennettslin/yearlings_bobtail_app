@@ -10,9 +10,9 @@ import {
     PUPPET,
 } from '../../../../src/constants/scene/things'
 import {
-    EL_CERRITO_KEY,
     EL_CERRITO_CAR_KEY,
     EL_CERRITO_DEATHBED_KEY,
+    EL_CERRITO_EVENING_KEY,
     EL_CERRITO_TENNIS_KEY,
 } from '../../../../src/constants/scene/scenes'
 import {
@@ -346,7 +346,7 @@ export default [
                 [PUPPET_REATTA]: true,
             },
         },
-        cubes: EL_CERRITO_KEY,
+        cubes: EL_CERRITO_EVENING_KEY,
         sky: { time: TIME_EVENING, season: SEASON_AUTUMN },
     },
 ]

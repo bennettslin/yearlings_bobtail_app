@@ -6,13 +6,13 @@ import {
 import {
     DEFAULT_CLEAR_COLOUR as D,
     GROUND_CLEAR_COLOUR as G,
-    GRASS_COLOUR as H,
-    STREET_COLOUR as T,
-    PAVEMENT_COLOUR as V,
-    LIZ_GATE_COLOUR as A,
-    ROOF_COLOUR as C,
+    GRASS_EVENING_COLOUR as H,
+    STREET_EVENING_COLOUR as T,
+    PAVEMENT_EVENING_COLOUR as V,
+    LIZ_GATE_EVENING_COLOUR as A,
+    ROOF_EVENING_COLOUR as C,
     DARK_ROOM_COLOUR as Z,
-    LIZ_EXTERIOR_COLOUR as X,
+    LIZ_EVENING_COLOR as X,
 } from '../../../../../src/constants/scene/cubes/colours'
 
 import { d, f, k } from '../../../../../src/constants/scene/cubes/zIndices'

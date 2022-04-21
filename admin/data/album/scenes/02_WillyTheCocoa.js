@@ -10,7 +10,7 @@ import {
     PANEL,
 } from '../../../../src/constants/scene/things'
 import {
-    BEDROOM_KEY,
+    BEDROOM_EVENING_KEY,
     BEDROOM_STOOL_NIGHT_KEY,
     CHANGELING_CAVE_KEY,
     FREEWAY_KEY,
@@ -239,7 +239,7 @@ export default [
                 [CAPTAIN_BED]: true,
             },
         },
-        cubes: BEDROOM_KEY,
+        cubes: BEDROOM_EVENING_KEY,
         sky: { time: TIME_EVENING, season: SEASON_SUMMER },
     },
     {

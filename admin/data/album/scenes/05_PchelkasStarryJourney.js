@@ -11,15 +11,16 @@ import {
     PANEL,
 } from '../../../../src/constants/scene/things'
 import {
-    BEDROOM_MAGIC_KEY,
-    BEDROOM_KEY,
-    BEDROOM_STOWAWAYS_KEY,
+    BEDROOM_DARK_KEY,
+    BEDROOM_EVENING_KEY,
     BEDROOM_FUTURE_KEY,
+    BEDROOM_KEY,
+    BEDROOM_MAGIC_KEY,
+    BEDROOM_STOOL_KEY,
+    BEDROOM_STOWAWAYS_KEY,
     VAN_NUYS_HALLWAY_KEY,
     VAN_NUYS_LOCKERS_KEY,
     VAN_NUYS_QUAD_KEY,
-    BEDROOM_DARK_KEY,
-    BEDROOM_STOOL_KEY,
 } from '../../../../src/constants/scene/scenes'
 import {
     SEASON_FUTURE,
@@ -153,7 +154,7 @@ export default [
                 [CAPTAIN_BED]: true,
             },
         },
-        cubes: BEDROOM_KEY,
+        cubes: BEDROOM_EVENING_KEY,
         sky: { time: TIME_EVENING, season: SEASON_AUTUMN },
     },
     {

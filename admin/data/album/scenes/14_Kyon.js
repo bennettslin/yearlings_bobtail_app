@@ -13,6 +13,7 @@ import {
     LIZ_COUCH_SEAT_KEY,
     LIZ_COUCH_DARK_KEY,
     LIZ_COUCH_FUTURE_KEY,
+    LIZ_COUCH_EVENING_KEY,
 } from '../../../../src/constants/scene/scenes'
 import {
     SEASON_AUTUMN,
@@ -343,7 +344,7 @@ export default [
                 [LIZ_COUCH__ROOM]: true,
             },
         },
-        cubes: LIZ_COUCH_KEY,
+        cubes: LIZ_COUCH_EVENING_KEY,
         sky: { time: TIME_EVENING, season: SEASON_AUTUMN },
     },
     {

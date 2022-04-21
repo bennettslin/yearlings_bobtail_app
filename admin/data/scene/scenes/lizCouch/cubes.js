@@ -3,6 +3,7 @@ import {
     LIZ_COUCH_SEAT_KEY,
     LIZ_COUCH_DARK_KEY,
     LIZ_COUCH_NIGHT_KEY,
+    LIZ_COUCH_EVENING_KEY,
 } from '../../../../../src/constants/scene/scenes'
 import { LIZ_COUCH_FUTURE_CUBES } from './asleep/cubes'
 import {
@@ -10,7 +11,8 @@ import {
     PAVEMENT_COLOUR as V,
     PAVEMENT_NIGHT_COLOUR as X,
     LIZ_GATE_COLOUR as A,
-    LIZ_GATE_NIGHT_COLOUR as B,
+    LIZ_GATE_EVENING_COLOUR as B,
+    LIZ_GATE_NIGHT_COLOUR as C,
     LIZ_FLOOR_COLOUR as F,
     LIZ_WALL_COLOUR as W,
     DARK_ROOM_COLOUR as Z,
@@ -61,11 +63,25 @@ export default {
         ceiling: DEFAULT_CEILING,
         floor: DEFAULT_FLOOR,
     },
-    [LIZ_COUCH_NIGHT_KEY]: {
+    [LIZ_COUCH_EVENING_KEY]: {
         ceiling: DEFAULT_CEILING,
         floor: {
             hslaColours: [
                 [B, B, B, B, B, X, X, X, B],
+                [F, F, F, F, W, W, W, W, W, F],
+                [F],
+                [F, U, U, U, F],
+                [F, U, U, U, F],
+                [F],
+            ],
+            zIndices: DEFAULT_FLOOR.zIndices,
+        },
+    },
+    [LIZ_COUCH_NIGHT_KEY]: {
+        ceiling: DEFAULT_CEILING,
+        floor: {
+            hslaColours: [
+                [C, C, C, C, C, X, X, X, C],
                 [F, F, F, F, W, W, W, W, W, F],
                 [F],
                 [F, U, U, U, F],
@@ -106,7 +122,7 @@ export default {
         },
         floor: {
             hslaColours: [
-                [B, B, B, B, B, X, X, X, B],
+                [C, C, C, C, C, X, X, X, C],
                 [Z],
             ],
             zIndices: DEFAULT_FLOOR.zIndices,

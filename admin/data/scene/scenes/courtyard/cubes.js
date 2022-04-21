@@ -3,11 +3,11 @@ import { COURTYARD_KEY } from '../../../../../src/constants/scene/scenes'
 import {
     DEFAULT_CLEAR_COLOUR as D,
     GROUND_CLEAR_COLOUR as G,
-    PAVEMENT_COLOUR as V,
-    ROOF_COLOUR as C,
+    PAVEMENT_EVENING_COLOUR as V,
+    ROOF_EVENING_COLOUR as C,
     BENNETT_FLOOR_COLOUR as F,
     BENNETT_WALL_COLOUR as W,
-    APARTMENT_EXTERIOR_COLOUR as X,
+    APARTMENT_EVENING_COLOUR as X,
 } from '../../../../../src/constants/scene/cubes/colours'
 
 import { d, f, k } from '../../../../../src/constants/scene/cubes/zIndices'

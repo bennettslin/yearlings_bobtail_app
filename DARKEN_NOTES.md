@@ -19,8 +19,6 @@
     * St Joseph's
     * Evian bottle
 
-* Do time evening
-    * Evening cubes
 * Past, future, and magic colours
 
 # Finally TODO
