@@ -2,9 +2,7 @@
 
 # Next TODO
 * Make bathroom past scene a scrapbook photo?
-* Make Liz wear her thick coat?
-    * Make her small jacket a different colour?
-    * Make her wear something thicker under thick coat?
+* Make Liz coat a different colour?
 * Buoy ocean cubes?
 * Ocean backgrounds
     * Bubbles in water
