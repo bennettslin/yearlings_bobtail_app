@@ -40,7 +40,7 @@ export default {
         },
         [FOREBODING_TREES_MIDDLE]: {
             yIndex: 2,
-            xPosition: 9.25,
+            xPosition: 9.35,
         },
         [FOREBODING_TREES_NEAR]: {
             yIndex: 3,

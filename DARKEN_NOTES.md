@@ -1,7 +1,6 @@
 # Darken notes
 
 # Next TODO
-* Make slanted bushes three dimensional colours?
 * Make bathroom past scene a scrapbook photo?
 * Make Liz wear her thick coat?
     * Make her small jacket a different colour?
