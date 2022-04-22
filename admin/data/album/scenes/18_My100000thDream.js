@@ -76,9 +76,9 @@ import {
     CLIFF_GRAVES_FAR,
     CLIFF_GRAVES_NEAR,
     PAMPAS_FAR,
-    FOREBODING_TREES__NEAR,
-    FOREBODING_TREES__MIDDLE,
-    FOREBODING_TREES__FAR,
+    FOREBODING_TREES_NEAR,
+    FOREBODING_TREES_MIDDLE,
+    FOREBODING_TREES_FAR,
 } from '../../../../src/constants/scene/things/flats'
 import {
     DEATHBED_BLANKET,
@@ -183,9 +183,9 @@ export default [
                 [WEDDING_BACKDROP]: true,
             },
             [FLAT]: {
-                [FOREBODING_TREES__NEAR]: true,
-                [FOREBODING_TREES__MIDDLE]: true,
-                [FOREBODING_TREES__FAR]: true,
+                [FOREBODING_TREES_NEAR]: true,
+                [FOREBODING_TREES_MIDDLE]: true,
+                [FOREBODING_TREES_FAR]: true,
             },
             [PANEL]: {
                 [WEDDING_PLATFORM_FRONT]: true,

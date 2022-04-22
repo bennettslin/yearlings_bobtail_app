@@ -1,5 +1,5 @@
 .taiwanFoliage#{$suffix} {
-    .foliage {fill: hsl(5, 23%, 54%); }
+    .foliage {fill: hsl(345, 21%, 47%); }
 
     .treeFurthest { fill: hsl(331, 25%, 55%); }
     .treeFurther { fill: hsl(331, 25%, 56%); }
@@ -17,7 +17,7 @@
 
     .nightTime
     &.nightTime#{$suffix} {
-        .foliage {fill: hsl(5, 13%, 44%); }
+        .foliage {fill: hsl(345, 11%, 37%); }
         .treeFurthest { fill: hsl(331, 15%, 45%); }
         .treeFurther { fill: hsl(331, 15%, 46%); }
         .treeMiddle { fill: hsl(331, 15%, 48%); }

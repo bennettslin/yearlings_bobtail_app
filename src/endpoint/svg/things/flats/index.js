@@ -22,7 +22,9 @@ import elCerritoFar from '../../../../assets/svgs/flats/elCerritoFar'
 import elCerritoNear from '../../../../assets/svgs/flats/elCerritoNear'
 import familyHouse from '../../../../assets/svgs/flats/familyHouse'
 import ferrisWheel from '../../../../assets/svgs/flats/ferrisWheel'
-import forebodingTrees from '../../../../assets/svgs/flats/forebodingTrees'
+import forebodingTreesFar from '../../../../assets/svgs/flats/forebodingTreesFar'
+import forebodingTreesMiddle from '../../../../assets/svgs/flats/forebodingTreesMiddle'
+import forebodingTreesNear from '../../../../assets/svgs/flats/forebodingTreesNear'
 import goKartTrack from '../../../../assets/svgs/flats/goKartTrack'
 import nearBuildings from '../../../../assets/svgs/flats/nearBuildings'
 import nearHouses from '../../../../assets/svgs/flats/nearHouses'
@@ -85,9 +87,9 @@ import {
     EL_CERRITO_NEAR,
     FAMILY_HOUSE,
     FERRIS_WHEEL,
-    FOREBODING_TREES__FAR,
-    FOREBODING_TREES__MIDDLE,
-    FOREBODING_TREES__NEAR,
+    FOREBODING_TREES_FAR,
+    FOREBODING_TREES_MIDDLE,
+    FOREBODING_TREES_NEAR,
     GO_KART_TRACK,
     NEAR_BUILDINGS,
     NEAR_HOUSES,
@@ -153,9 +155,9 @@ export default {
     [EL_CERRITO_NEAR]: elCerritoNear,
     [FAMILY_HOUSE]: familyHouse,
     [FERRIS_WHEEL]: ferrisWheel,
-    [FOREBODING_TREES__FAR]: forebodingTrees,
-    [FOREBODING_TREES__MIDDLE]: forebodingTrees,
-    [FOREBODING_TREES__NEAR]: forebodingTrees,
+    [FOREBODING_TREES_FAR]: forebodingTreesFar,
+    [FOREBODING_TREES_MIDDLE]: forebodingTreesMiddle,
+    [FOREBODING_TREES_NEAR]: forebodingTreesNear,
     [GO_KART_TRACK]: goKartTrack,
     [NEAR_BUILDINGS]: nearBuildings,
     [NEAR_HOUSES]: nearHouses,

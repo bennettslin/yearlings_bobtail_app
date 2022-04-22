@@ -9,9 +9,9 @@ import {
     WEDDING_CROWD,
 } from '../../../../../src/constants/scene/things/cutouts'
 import {
-    FOREBODING_TREES__FAR,
-    FOREBODING_TREES__MIDDLE,
-    FOREBODING_TREES__NEAR,
+    FOREBODING_TREES_FAR,
+    FOREBODING_TREES_MIDDLE,
+    FOREBODING_TREES_NEAR,
 } from '../../../../../src/constants/scene/things/flats'
 import {
     WEDDING_PLATFORM_FRONT,
@@ -34,18 +34,18 @@ export default {
         },
     },
     [FLAT]: {
-        [FOREBODING_TREES__FAR]: {
+        [FOREBODING_TREES_FAR]: {
             yIndex: 1,
             xPosition: 8.75,
             scaleFactor: 0.54,
         },
-        [FOREBODING_TREES__MIDDLE]: {
+        [FOREBODING_TREES_MIDDLE]: {
             yIndex: 2,
             xPosition: 10.25,
             scaleFactor: 0.77,
             flipHorizontal: true,
         },
-        [FOREBODING_TREES__NEAR]: {
+        [FOREBODING_TREES_NEAR]: {
             yIndex: 3,
             xPosition: 12.25,
         },
