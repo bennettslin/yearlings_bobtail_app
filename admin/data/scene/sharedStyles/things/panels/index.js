@@ -84,7 +84,6 @@ import {
 import {
     ALL_VEHICLES__SHARED,
     GO_KART__SHARED,
-    INTERIOR__SHARED,
     REATTA__SHARED,
     SATURN__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/vehicles'
@@ -151,7 +150,7 @@ export default {
         ALL_VEHICLES__SHARED,
         REATTA__SHARED,
     ],
-    [REATTA_INTERIOR]: INTERIOR__SHARED,
+    [REATTA_INTERIOR]: null,
     [REATTA_SEAT_BOTTOM]: REATTA__SHARED,
     [REATTA_SEAT_BACK]: REATTA__SHARED,
     [REATTA_SEAT_BACK_DOWN]: REATTA__SHARED,
@@ -160,10 +159,7 @@ export default {
         NIGHT_TIME__SHARED,
         SATURN__SHARED,
     ],
-    [SATURN_INTERIOR]: [
-        INTERIOR__SHARED,
-        NIGHT_TIME__SHARED,
-    ],
+    [SATURN_INTERIOR]: NIGHT_TIME__SHARED,
     [SATURN_SEAT]: [
         NIGHT_TIME__SHARED,
         SATURN__SHARED,
@@ -173,7 +169,7 @@ export default {
         SATURN__SHARED,
     ],
     [SCHOOLBUS_EXTERIOR]: ALL_VEHICLES__SHARED,
-    [SCHOOLBUS_INTERIOR]: INTERIOR__SHARED,
+    [SCHOOLBUS_INTERIOR]: null,
     [SCHOOLBUS_SEAT]: null,
     [SHADOW_MONGOL]: null,
     [SHADOW_VIKING_FAR]: null,
