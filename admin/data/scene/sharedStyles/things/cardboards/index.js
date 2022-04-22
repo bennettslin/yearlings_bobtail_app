@@ -131,18 +131,10 @@ export default {
     [DOGS_SPACE_STATION]: null,
     [EARTH]: null,
     [MARQUEE_FRAME]: null,
-    [ODIN_MAT]: [
-        NIGHT_TIME__SHARED,
-    ],
-    [ODIN_SHORE]: [
-        NIGHT_TIME__SHARED,
-    ],
-    [ODIN_TAIWAN_GATE]: [
-        NIGHT_TIME__SHARED,
-    ],
-    [ODIN_TAIWAN_STAIRS]: [
-        DARK_ROOM_DEFAULT__SHARED,
-    ],
+    [ODIN_MAT]: NIGHT_TIME__SHARED,
+    [ODIN_SHORE]: NIGHT_TIME__SHARED,
+    [ODIN_TAIWAN_GATE]: NIGHT_TIME__SHARED,
+    [ODIN_TAIWAN_STAIRS]: DARK_ROOM_DEFAULT__SHARED,
     [PAINTING]: null,
     [POSTER_BLOOM_COUNTY]: [
         DARK_ROOM_DEFAULT__SHARED,
