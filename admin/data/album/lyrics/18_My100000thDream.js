@@ -236,7 +236,7 @@ export default {
                                             anchor: `Pampas`,
                                             wiki: `Pampas`,
                                         },
-                                        `, the grassy lowlands spanning the southeastern end of`,
+                                        `, the grassy lowlands that span the southern end of`,
                                         {
                                             anchor: `South America`,
                                             wiki: `South_America`,
@@ -568,7 +568,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: `In New York City I met Liz, with whom things ended no less painfully. So in making this audio webcomic, I was faced with a dilemma. I wanted to stay genuine to the album, given how fresh my wounds were when I made it, while being honest that I'd since moved on and was now devastated over a different breakup. My solution was to depict the events as a stage play, with the role of Sita played by an Indian version of Liz. The resulting character looks like neither, which should come as a relief to both.`,
+                    description: `In New York City I met Liz, with whom things ended no less painfully. So in making this audio webcomic, I was faced with a dilemma. I wanted to stay genuine to the album, given how fresh my wounds were when I'd made it, while being honest that I'd since moved on and was now devastated over a different breakup. My solution was to depict the events as a stage play, with the role of Sita played by an Indian version of Liz. The resulting character looks like neither, which should come as a relief to both.`,
                     dotKeys: {
                         [AFTERWORD]: true,
                     },

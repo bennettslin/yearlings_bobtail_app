@@ -33,7 +33,7 @@ export default {
     mixStartTime: `-0:00:02.88`,
     playerReferenceTime: 2951.729,
     playerStartTime: 2926.829,
-    overview: `While I can't deny that dating white women helped silence the nagging feeling I had of being genetically inferior, I honestly didn't seek them out. A case in point is Miriam, whom I met at a Yearlings show. She was the storybook ending my ego had been waiting for: cute, hip, and drawn to me through no effort on my part. We lasted a few months. In the end, I did wonder if she was just slumming it with me.`,
+    overview: `While I can't deny that dating white women helped silence the nagging feeling I had of being genetically inferior, I honestly didn't seek them out. A case in point is Miriam, whom I met at a Yearlings show. She was the storybook ending my ego had been waiting for: cute, hip, and drawn to me through no effort on my part. We lasted a few months. I always did wonder if she was just slumming it with me.`,
     isDoublespeaker: true,
     lyricUnits: [
         {
@@ -41,7 +41,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: `A childhood playmate once asked if I knew what cremation was. I didn't, so I assumed it must be fun and tasty. Of course, the horrifying truth was revealed to me a moment later. I thought this was a perfect metaphor for a song about the seemingly innocent day trip that ended with Miriam breaking up with me.`,
+                    description: `A childhood playmate once asked me if I knew what cremation was. I didn't, but I assumed it must be fun and tasty. Of course, the horrifying truth was revealed a moment later. I thought this was a perfect metaphor for a song about the seemingly innocent day trip that ended with Miriam breaking up with me.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [OBSERVATION]: true,
