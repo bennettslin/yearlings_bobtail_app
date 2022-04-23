@@ -4,9 +4,9 @@ import { Provider } from 'react-redux'
 import AlbumContainer from '../../containers/Album'
 import LoadingContainer from '../../containers/Loading'
 import PromoContainer from '../../containers/Promo'
-import { getIsAlbumPage } from './album'
+import { getIsAlbumSession } from './album'
 import { getParsedLocation } from './path'
-import { getIsPromoPage } from './promo'
+import { getIsPromoSession } from './promo'
 import { getShowLoadingContainer } from './session'
 import { getStoreIfNeeded } from './store'
 import { getIsUserAgentDeprecated } from '../device'
@@ -36,13 +36,13 @@ export const wrapPageElement = ({ element }) => {
 
     const { pathname } = getParsedLocation(element)
 
-    if (getIsAlbumPage(pathname)) {
+    if (getIsAlbumSession(pathname)) {
         return (
             <AlbumContainer>
                 {element}
             </AlbumContainer>
         )
-    } else if (getIsPromoPage(pathname)) {
+    } else if (getIsPromoSession(pathname)) {
         return (
             <PromoContainer>
                 {element}

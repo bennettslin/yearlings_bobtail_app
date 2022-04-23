@@ -25,7 +25,6 @@ import {
  * song list order on the album.
  */
 export default {
-    path: `pchelkas-starry-journey`,
     title: `Pchelka's Starry Journey`,
     /**
      * This is for recalibrating the player start time after redoing the mix.

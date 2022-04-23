@@ -1,5 +1,4 @@
 export default {
-    path: 'epilogue',
     title: 'epilogue',
     isLogue: true,
     /**

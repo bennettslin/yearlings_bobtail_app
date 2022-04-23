@@ -2,7 +2,7 @@ import { getFullPathForSong } from '../../../endpoint/album/songs'
 import { getRoutingSongIndex } from '../routing'
 import { getIsAlbumClientSession } from '../session'
 
-const _getIsValidSongPath = pathname => {
+export const getIsAlbumSongPath = pathname => {
     // Check if it's a valid album root path.
     if (pathname === '') {
         return true
@@ -21,8 +21,9 @@ const _getIsValidSongPath = pathname => {
     return false
 }
 
-export const getIsAlbumPage = pathname => (
-    _getIsValidSongPath(pathname) ||
+export const getIsAlbumSession = pathname => (
+    getIsAlbumSongPath(pathname) ||
+
     /**
      * Also check if we are in a promo popup, since it will show a promo
      * pathname while it is open.

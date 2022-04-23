@@ -4,11 +4,14 @@
 * Make Pareto first pitch in list?
 * Add date to onesheet and pitch
 * Permanent logs for navigation
-* Slugify song names
 * Fix navigation replace upon every single state change!
 * Fix font heading underline issue
+* Navigation between logue and song causes audio to play.
 
 # Tech notes
+* Need helper to get state from window's pop state
+    * See if this can be consolidated with validator methods
+    * Also get verse and annotation from search
 
 # Acceptance criteria
 * Don't navigate upon app load (/)

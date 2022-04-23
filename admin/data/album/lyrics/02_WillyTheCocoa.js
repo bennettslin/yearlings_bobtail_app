@@ -20,7 +20,6 @@ import {
 } from '../../../../src/constants/lyrics'
 
 export default {
-    path: 'willy-the-cocoa',
     title: 'Willy the Cocoa',
     /**
      * This is for recalibrating the player start time after redoing the mix.

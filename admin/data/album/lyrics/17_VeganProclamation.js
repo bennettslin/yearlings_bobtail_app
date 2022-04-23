@@ -20,7 +20,6 @@ import {
 } from '../../../../src/constants/lyrics'
 
 export default {
-    path: 'vegan-proclamation',
     title: 'Vegan Proclamation',
     /**
      * This is for recalibrating the mix start time after redoing the mix. This

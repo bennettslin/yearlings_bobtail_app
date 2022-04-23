@@ -19,7 +19,6 @@ import {
 } from '../../../../src/constants/lyrics'
 
 export default {
-    path: 'look-back-in-anger',
     title: 'Look Back in Anger',
     /**
      * This is for recalibrating the player start time after redoing the mix.

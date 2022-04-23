@@ -20,7 +20,6 @@ import {
 } from '../../../../src/constants/lyrics'
 
 export default {
-    path: 'grasshoppers-lie-heavy',
     title: 'Grasshoppers Lie Heavy',
     /**
      * This is for recalibrating the player start time after redoing the mix.

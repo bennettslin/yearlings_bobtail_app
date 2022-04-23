@@ -1,5 +1,6 @@
-import { getFloatToHundredth } from '../../../../src/helpers/general'
+import slugify from 'slugify'
 import albumLyrics from '../lyrics'
+import { getFloatToHundredth } from '../../../../src/helpers/general'
 
 const _addIsLogue = (songIndex, song) => {
     const { isLogue } = albumLyrics[songIndex]
@@ -17,8 +18,14 @@ const _addOverview = (songIndex, song) => {
 }
 
 const _addPathAndTitle = (songIndex, song) => {
-    const { path, title } = albumLyrics[songIndex]
-    song.path = path
+    const { title } = albumLyrics[songIndex]
+    song.path = slugify(
+        title,
+        {
+            lower: true,
+            strict: true,
+        },
+    )
     song.title = title
 }
 

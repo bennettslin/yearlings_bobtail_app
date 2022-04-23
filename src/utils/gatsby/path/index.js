@@ -24,7 +24,7 @@ export const getIndexFromQueryString = (search, keys) => (
         NaN
 )
 
-const _getPathname = (pathname = '') => (
+export const getTrimmedPathname = (pathname = '') => (
     pathname
         // Split by slashes and remove empty strings.
         .split('/')
@@ -49,7 +49,7 @@ export const getParsedLocation = ({
     } = getWindow()
 
     return {
-        pathname: _getPathname(
+        pathname: getTrimmedPathname(
             rootElementPathname ||
             pageElementPathname ||
             windowPathname,

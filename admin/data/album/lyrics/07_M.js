@@ -17,7 +17,6 @@ import {
 } from '../../../../src/constants/lyrics'
 
 export default {
-    path: 'm',
     title: 'M',
     /**
      * This is for recalibrating the player start time after redoing the mix.

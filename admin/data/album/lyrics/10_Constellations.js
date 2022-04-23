@@ -23,7 +23,6 @@ import {
 } from '../../../../src/constants/lyrics'
 
 export default {
-    path: 'constellations',
     title: 'Constellations!',
     /**
      * This is for recalibrating the player start time after redoing the mix.

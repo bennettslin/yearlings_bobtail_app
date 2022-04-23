@@ -18,7 +18,6 @@ import {
 } from '../../../../src/constants/lyrics'
 
 export default {
-    path: 'cremated',
     title: 'Cremated',
     /**
      * This is for recalibrating the mix start time after redoing the mix. This

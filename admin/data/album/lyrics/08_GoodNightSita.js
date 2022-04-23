@@ -14,7 +14,6 @@ import {
 } from '../../../../src/constants/lyrics'
 
 export default {
-    path: 'good-night-sita',
     title: 'Good Night, Sita',
     /**
      * This is for recalibrating the player start time after redoing the mix.

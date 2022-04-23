@@ -1,5 +1,4 @@
 export default {
-    path: 'prologue',
     title: 'prologue',
     isLogue: true,
     overview: [

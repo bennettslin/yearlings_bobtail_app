@@ -1,10 +1,10 @@
 import { getDocument, getIsServerSide } from '../../browser'
 import { getIsAdminPage } from '../admin'
-import { getIsAlbumPage } from '../album'
-import { getIsPromoPage } from '../promo'
+import { getIsAlbumSession } from '../album'
+import { getIsPromoSession } from '../promo'
 
 export const getShowLoadingContainer = pathname => (
-    getIsAlbumPage(pathname) || getIsPromoPage(pathname)
+    getIsAlbumSession(pathname) || getIsPromoSession(pathname)
 )
 
 export const getIsAlbumClientSession = () => (
@@ -20,6 +20,6 @@ export const getIsAlbumClientSession = () => (
 
 export const getIsNotFoundPage = pathname => (
     !getIsAdminPage(pathname) &&
-    !getIsAlbumPage(pathname) &&
-    !getIsPromoPage(pathname)
+    !getIsAlbumSession(pathname) &&
+    !getIsPromoSession(pathname)
 )

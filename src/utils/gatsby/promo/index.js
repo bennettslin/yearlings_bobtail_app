@@ -42,16 +42,20 @@ const _getIsValidPitchPath = (pitchKey, pathname) => {
     return false
 }
 
-export const getIsPromoPage = pathname => (
+export const getIsPromoPath = pathname => (
+    _getIsValidPromoHomepagePath(pathname) ||
+    _getIsValidOnesheetPath(pathname) ||
+    PITCH_KEYS.some(pitchKey => (
+        _getIsValidPitchPath(pitchKey, pathname)
+    ))
+)
+
+export const getIsPromoSession = pathname => (
+    getIsPromoPath(pathname) &&
+
     /**
      * Ensure that we are not in a promo popup, since it will also show a
      * promo pathname while it is open.
      */
-    !getIsAlbumClientSession() && (
-        _getIsValidPromoHomepagePath(pathname) ||
-        _getIsValidOnesheetPath(pathname) ||
-        PITCH_KEYS.some(pitchKey => (
-            _getIsValidPitchPath(pitchKey, pathname)
-        ))
-    )
+    !getIsAlbumClientSession()
 )

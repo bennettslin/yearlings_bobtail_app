@@ -1,13 +1,13 @@
 import { createStore } from 'redux'
 import { devToolsEnhancer } from 'redux-devtools-extension'
-import { getIsPromoPage } from '../promo'
+import { getIsPromoSession } from '../promo'
 import { getParsedLocation } from '../path'
 import { getIsServerSide, getWindow } from '../../browser'
 import {
     getAlbumReducers,
     getPromoReducers,
 } from '../../../redux'
-import { getIsAlbumPage } from '../album'
+import { getIsAlbumSession } from '../album'
 import { getIsAdminPageWithStore } from '../admin'
 import { getIsNotFoundPage } from '../session'
 
@@ -21,7 +21,7 @@ const _getReducersIfNeeded = ({
     if (
         // For some reason, server side needs store for all pages.
         getIsServerSide() ||
-        getIsAlbumPage(pathname) ||
+        getIsAlbumSession(pathname) ||
         getIsAdminPageWithStore(pathname)
     ) {
         return getAlbumReducers({
@@ -31,7 +31,7 @@ const _getReducersIfNeeded = ({
             search,
         })
     } else if (
-        getIsPromoPage(pathname) ||
+        getIsPromoSession(pathname) ||
         getIsNotFoundPage(pathname)
     ) {
         return getPromoReducers({
