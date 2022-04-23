@@ -1,7 +1,8 @@
 // Reducers for lyric and carousel state.
 import { hasKey } from '../../helpers/action'
+import { getLyricDefaults, UPDATE_LYRIC_SONG } from './default'
+import { navigateToAlbumPage } from '../../helpers/navigate'
 import { LYRIC_STORE, SELECTED_STORE } from '../../constants/store'
-import { getLyricDefaults } from './default'
 
 export const getLyricReducer = ({
     initialSongIndex,
@@ -21,20 +22,64 @@ export const getLyricReducer = ({
                 ...state,
                 ...payload,
             }
+        case UPDATE_LYRIC_SONG: {
+            const {
+                lyricSongIndex,
+                lyricVerseIndex,
+                lyricAnnotationIndex,
+            } = payload
+
+            /**
+             * If song was changed, push to history.
+             */
+            navigateToAlbumPage(
+                lyricSongIndex,
+                lyricVerseIndex,
+                lyricAnnotationIndex,
+            )
+
+            return {
+                ...state,
+                ...payload,
+            }
+        }
         case SELECTED_STORE: {
             const {
-                selectedSongIndex,
-                selectedVerseIndex,
-                selectedAnnotationIndex,
-            } = payload
+                    selectedSongIndex,
+                    selectedVerseIndex,
+                    selectedAnnotationIndex,
+                } = payload,
+                {
+                    lyricSongIndex,
+                    lyricVerseIndex,
+                    lyricAnnotationIndex,
+                } = state,
+                isChangeWithinSameSong = !hasKey(selectedSongIndex)
+
+            /**
+             * If verse or annotation was changed within same song, replace in
+             * history right away.
+             */
+            if (isChangeWithinSameSong) {
+                navigateToAlbumPage(
+                    lyricSongIndex,
+                    hasKey(selectedVerseIndex) ?
+                        selectedVerseIndex :
+                        lyricVerseIndex,
+                    hasKey(selectedAnnotationIndex) ?
+                        selectedAnnotationIndex :
+                        lyricAnnotationIndex,
+                    true, // Replace in history.
+                )
+            }
 
             return {
                 ...state,
                 /**
-                 * If verse or annotation was changed within the same song, set
-                 * here right away.
+                 * If verse or annotation was changed within same song, set in
+                 * state right away.
                  */
-                ...!hasKey(selectedSongIndex) && {
+                ...isChangeWithinSameSong && {
                     ...hasKey(selectedVerseIndex) && {
                         lyricVerseIndex: selectedVerseIndex,
                     },

@@ -7,14 +7,14 @@ import AccessStylesheet from '../../components/Stylesheets/Access'
 import Promo from '../../components/Promo'
 import PromoHeader from './Header'
 import { getKeyName } from '../../managers/Key/helper'
-import { reloadFromRoot } from '../../helpers/navigate'
+import { reloadRootPage } from '../../helpers/navigate'
 import { updateAccessStore } from '../../redux/access/action'
 import { getIsServerSide } from '../../utils/browser'
 import { ESCAPE, ABOUT_ALBUM_TOGGLE_KEY } from '../../constants/access'
 import DeviceWrapper from '../../wrappers/DeviceWrapper'
 import AccessWrapper from '../../wrappers/AccessWrapper'
+import BackButtonManager from '../../managers/BrowserNav/BackButton'
 import ResizeManager from '../../managers/Resize'
-import PromoUrlManager from '../../managers/Url/Promo'
 import './style'
 
 const PromoContainer = ({ children }) => {
@@ -49,7 +49,7 @@ const PromoContainer = ({ children }) => {
 
         // Handle return home to album.
         if (keyName === ABOUT_ALBUM_TOGGLE_KEY) {
-            reloadFromRoot()
+            reloadRootPage()
         }
 
         dispatch(updateAccessStore({
@@ -112,7 +112,7 @@ const PromoContainer = ({ children }) => {
                         />
                     )}
                     <PromoNavigation {...{ ref: navigatePromo }} />
-                    <PromoUrlManager />
+                    <BackButtonManager />
                 </div>
                 <AccessStylesheet />
             </AccessWrapper>

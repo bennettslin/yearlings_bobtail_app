@@ -5,7 +5,7 @@ import NotFoundHeader from './Header'
 import Texts from '../../components/Texts'
 import DeviceWrapper from '../../wrappers/DeviceWrapper'
 import { getTitleForAlbum } from '../../endpoint/album/title'
-import { navigateToPathname } from '../../helpers/navigate'
+import { navigateToStandalonePage } from '../../helpers/navigate'
 import './style'
 
 const NOT_FOUND_TEXT = 'Oops! Page not found.'
@@ -19,7 +19,7 @@ const NotFoundContainer = () => {
                 label: 'notFound',
             },
         )
-        navigateToPathname('404')
+        navigateToStandalonePage('404')
     }, [])
 
     return (

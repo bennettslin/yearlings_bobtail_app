@@ -1,4 +1,5 @@
 import { getSongIsLogue } from '../../endpoint/album/songs'
+export const UPDATE_LYRIC_SONG = 'updateLyricSong'
 
 export const getLyricDefaults = ({
     initialSongIndex,

@@ -1,6 +1,6 @@
 // Reducers for promo pages.
-import { PROMO_STORE } from '../../constants/store'
-import { getPromoDefaults, SET_PITCH_SLIDE_INDEX } from './default'
+import { navigateToPromoPage } from '../../helpers/navigate'
+import { getPromoDefaults, SET_PITCH_SLIDE_INDEX, SET_SELECTED_PROMO_KEY } from './default'
 
 export const getPromoReducer = ({
     initialPitchIndices,
@@ -13,15 +13,30 @@ export const getPromoReducer = ({
     { type, payload },
 ) => {
     switch (type) {
-        case PROMO_STORE:
+        case SET_SELECTED_PROMO_KEY: {
+            const
+                { selectedPromoKey } = payload,
+                { pitchSlideIndices } = state
+
+            navigateToPromoPage(
+                selectedPromoKey,
+                pitchSlideIndices[selectedPromoKey],
+            )
+
             return {
                 ...state,
                 ...payload,
             }
+        }
         case SET_PITCH_SLIDE_INDEX: {
             const
                 { pitchSlideIndex } = payload,
                 { selectedPromoKey, pitchSlideIndices } = state
+
+            navigateToPromoPage(
+                selectedPromoKey,
+                pitchSlideIndex,
+            )
 
             return {
                 ...state,

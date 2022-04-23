@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateEntranceStore } from '../../redux/entrance/action'
-import { updateLyricStore } from '../../redux/lyric/action'
+import { updateLyricSong } from '../../redux/lyric/action'
 import { scrollCarouselForSongSelect } from '../../redux/scrollCarousel/action'
 import { scrollLyricForSongSelect } from '../../redux/scrollLyric/action'
 import { mapIsSongChangeDone } from '../../redux/entrance/selector'
@@ -68,7 +68,7 @@ const SongChangeManager = () => {
     useEffect(() => {
         if (didMount) {
             if (isSongChangeDone) {
-                dispatch(updateLyricStore({
+                dispatch(updateLyricSong({
                     lyricSongIndex: selectedSongIndex,
                     lyricVerseIndex: selectedVerseIndex,
                     lyricAnnotationIndex: selectedAnnotationIndex,

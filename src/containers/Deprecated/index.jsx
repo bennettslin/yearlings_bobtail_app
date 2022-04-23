@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import cx from 'classnames'
 import { Helmet } from 'react-helmet'
 import Texts from '../../components/Texts'
-import { navigateToPathname } from '../../helpers/navigate'
+import { navigateToStandalonePage } from '../../helpers/navigate'
 import { getTitleForAlbum } from '../../endpoint/album/title'
 import './style'
 
@@ -17,7 +17,7 @@ const DeprecatedContainer = () => {
                 label: 'deprecated',
             },
         )
-        navigateToPathname('deprecated')
+        navigateToStandalonePage('deprecated')
     }, [])
 
     return (
