@@ -3,11 +3,6 @@
 * Helmet should get promo page in album
 * Add date to onesheet and pitch
 
-# Tech notes
-* Need helper to get state from window's pop state
-    * See if this can be consolidated with validator methods
-    * Also get verse and annotation from search
-
 # Acceptance criteria
 * Don't navigate upon app load (/)
 
@@ -20,10 +15,17 @@
     * Verse and annotation changes within same song (/)
 
 * Back button changes state for:
-    * Album song changes
-    * Promo path and pitch page changes
+    * Album song changes (/)
+    * Promo path (/)
+    * Pitch page changes (/)
     * Toggling between album and promo
-        * Going from promo popup to album closes popup
+        * Going from promo popup to album closes popup (/)
         * Going from album to promo opens popup
+
+* When album song, verse, or annotation is changed during promo
+    * It is *not* recorded in history
+    * It *is* pushed to history only after promo is closed
+
+* All works for promo session as well
 
 * Clean up console logs

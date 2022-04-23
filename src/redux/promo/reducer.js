@@ -1,6 +1,18 @@
 // Reducers for promo pages.
+import { PITCH_KEYS } from '../../constants/routing'
 import { navigateToPromoPage } from '../../helpers/navigate'
-import { getPromoDefaults, SET_PITCH_SLIDE_INDEX, SET_SELECTED_PROMO_KEY } from './default'
+import { getPromoDefaults, SET_PITCH_SLIDE_INDEX, SET_SELECTED_PROMO_KEY, UPDATE_PROMO_FROM_BROWSER_NAV } from './default'
+
+const getUpdatedPitchSlideIndices = ({
+    pitchSlideIndices,
+    selectedPromoKey,
+    pitchSlideIndex,
+}) => ({
+    ...pitchSlideIndices,
+    ...PITCH_KEYS.includes(selectedPromoKey) && {
+        [selectedPromoKey]: pitchSlideIndex,
+    },
+})
 
 export const getPromoReducer = ({
     initialPitchIndices,
@@ -40,11 +52,25 @@ export const getPromoReducer = ({
 
             return {
                 ...state,
-                pitchSlideIndices: {
-                    ...pitchSlideIndices,
-                    // This does NOT check if selected promo key is valid pitch.
-                    [selectedPromoKey]: pitchSlideIndex,
-                },
+                pitchSlideIndices: getUpdatedPitchSlideIndices({
+                    pitchSlideIndices,
+                    selectedPromoKey,
+                    pitchSlideIndex,
+                }),
+            }
+        }
+        case UPDATE_PROMO_FROM_BROWSER_NAV: {
+            const
+                { selectedPromoKey, pitchSlideIndex } = payload,
+                { pitchSlideIndices } = state
+            return {
+                ...state,
+                selectedPromoKey,
+                pitchSlideIndices: getUpdatedPitchSlideIndices({
+                    pitchSlideIndices,
+                    selectedPromoKey,
+                    pitchSlideIndex,
+                }),
             }
         }
         default:

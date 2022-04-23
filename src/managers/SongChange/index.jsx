@@ -15,6 +15,7 @@ import {
     SONG_SELECT_COMPLETE_DURATION,
     STAGE_RESET_AFTER_STAGE_COULD_RESET_DURATION,
 } from '../../constants/entrance'
+import { mapIsPromoShown } from '../../redux/toggle/selector'
 
 const SongChangeManager = () => {
     const
@@ -25,6 +26,7 @@ const SongChangeManager = () => {
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         selectedVerseIndex = useSelector(mapSelectedVerseIndex),
         selectedAnnotationIndex = useSelector(mapSelectedAnnotationIndex),
+        isPromoShown = useSelector(mapIsPromoShown),
         [songSelectTimeoutId, setSongSelectTimeoutId] = useState(-1),
         [didMount, setDidMount] = useState(false)
 
@@ -72,6 +74,12 @@ const SongChangeManager = () => {
                     lyricSongIndex: selectedSongIndex,
                     lyricVerseIndex: selectedVerseIndex,
                     lyricAnnotationIndex: selectedAnnotationIndex,
+
+                    /**
+                     * If promo is shown, we don't want this song change pushed
+                     * to history.
+                     */
+                    replace: isPromoShown,
                 }))
 
                 // Scroll upon completion of subsequent song changes.

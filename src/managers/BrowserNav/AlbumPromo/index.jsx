@@ -34,8 +34,8 @@ const AlbumPromoManager = ({ didMount }) => {
         if (didMount) {
             if (isPromoShown) {
                 /**
-                 * This navigates from album to promo only. Navigation
-                 * between promo pages happens in promo reducer.
+                 * This navigates from album to promo only. Navigation between
+                 * promo pages happens in promo reducer.
                  */
                 navigateToPromoPage(
                     selectedPromoKey,
@@ -43,8 +43,8 @@ const AlbumPromoManager = ({ didMount }) => {
                 )
             } else {
                 /**
-                 * This navigates from promo to album only. Navigation
-                 * between album pages happens in lyric reducer.
+                 * This navigates from promo to album only. Navigation between
+                 * album pages happens in lyric reducer.
                  */
                 navigateToAlbumPage(
                     lyricSongIndex,

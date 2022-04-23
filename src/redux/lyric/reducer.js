@@ -27,6 +27,7 @@ export const getLyricReducer = ({
                 lyricSongIndex,
                 lyricVerseIndex,
                 lyricAnnotationIndex,
+                replace,
             } = payload
 
             /**
@@ -36,6 +37,7 @@ export const getLyricReducer = ({
                 lyricSongIndex,
                 lyricVerseIndex,
                 lyricAnnotationIndex,
+                replace,
             )
 
             return {

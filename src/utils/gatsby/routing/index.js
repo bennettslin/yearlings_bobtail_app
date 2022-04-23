@@ -49,14 +49,6 @@ export const getRoutingAnnotationIndex = (search, songIndex) => {
     ) ? routingAnnotationIndex : NaN
 }
 
-export const getRoutingPitchIndex = (pitchKey, pathname) => {
-    const routingIndex = getIndexFromPath({
-        pathname,
-        rootPath: getPromoPath(pitchKey),
-    })
-    return getIsSlideValid(pitchKey, routingIndex) ? routingIndex : NaN
-}
-
 export const getRoutingPromoKey = pathname => {
     if (pathname.includes(ONESHEET_SUBPATH)) {
         return ONESHEET_SUBPATH
@@ -65,4 +57,12 @@ export const getRoutingPromoKey = pathname => {
     return PITCH_KEYS.reduce((matchedPitchKey, pitchKey) => (
         pathname.includes(pitchKey) ? pitchKey : matchedPitchKey
     ), '')
+}
+
+export const getRoutingPitchIndex = (pitchKey, pathname) => {
+    const routingIndex = getIndexFromPath({
+        pathname,
+        rootPath: getPromoPath(pitchKey),
+    })
+    return getIsSlideValid(pitchKey, routingIndex) ? routingIndex : NaN
 }
