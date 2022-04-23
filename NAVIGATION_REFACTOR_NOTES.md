@@ -1,11 +1,9 @@
 # Navigation refactor notes
 * Make title of pitch the helmet title
 * Helmet should get promo page in album
-* Make Pareto first pitch in list?
 * Add date to onesheet and pitch
-* Permanent logs for navigation
 * Fix navigation replace upon every single state change!
-* Navigation between logue and song causes audio to play.
+    * It's in closeMainSections
 
 # Tech notes
 * Need helper to get state from window's pop state

@@ -8,9 +8,10 @@ export const ONESHEET_SUBPATH = 'onesheet'
 export const ARTUP_SUBPATH = 'artup'
 export const PARETO_SUBPATH = 'pareto'
 
+// Order here determines order in promo home page.
 export const PITCH_KEYS = [
-    ARTUP_SUBPATH,
     PARETO_SUBPATH,
+    ARTUP_SUBPATH,
 ]
 
 export const VALID_ADMIN_PATHS = {
