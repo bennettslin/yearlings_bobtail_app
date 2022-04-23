@@ -64,19 +64,19 @@ const CloseHandler = forwardRef((props, ref) => {
 
     } = {}) => {
         // Close or collapse just one and do nothing else.
-        if (isAudioOptionsExpanded && !exemptAudioOptions) {
+        if (!exemptAudioOptions && isAudioOptionsExpanded) {
             dispatch(updateIsAudioOptionsExpanded())
 
-        } else if (isWikiShown && !exemptWiki) {
+        } else if (!exemptWiki && isWikiShown) {
             dispatch(updateWikiIndices())
 
-        } else if (isScoreShown && !exemptScore) {
+        } else if (!exemptScore && isScoreShown) {
             dispatch(updateIsScoreShown())
 
-        } else if (isAboutShown && !exemptAbout) {
+        } else if (!exemptAbout && isAboutShown) {
             dispatch(updateIsAboutShown())
 
-        } else if (isPromoShown && !exemptPromo) {
+        } else if (!exemptPromo && isPromoShown) {
             dispatch(updateIsPromoShown())
 
         } else {
@@ -97,45 +97,39 @@ const CloseHandler = forwardRef((props, ref) => {
         exemptActivatedVerse,
 
     } = {}) => {
-        if (!exemptAnnotation) {
+        if (!exemptAnnotation && isAnnotationShown) {
             dispatch(updateSelectedStore({ selectedAnnotationIndex: 0 }))
         }
 
-        if (!exemptCarousel) {
+        if (!exemptCarousel && isCarouselExpanded) {
             dispatch(updateIsCarouselExpanded())
         }
 
-        if (!exemptDots) {
+        if (!exemptDots && isDotsSlideShown) {
             dispatch(updateIsDotsSlideShown())
         }
 
-        if (!exemptLyric) {
+        if (!exemptLyric && isLyricExpanded) {
             dispatch(updateIsLyricExpanded())
         }
 
-        if (!exemptNav) {
+        if (!exemptNav && isNavExpanded) {
             dispatch(updateIsNavExpanded())
         }
 
-        if (!exemptOverview) {
-            // Just hide overview when opening other sections.
-            if (isOverviewShown) {
-                dispatch(updateOptionStore({
-                    selectedOverviewOption: HIDDEN,
-                }))
-            }
+        if (!exemptOverview && isOverviewShown) {
+            dispatch(updateOptionStore({
+                selectedOverviewOption: HIDDEN,
+            }))
         }
 
-        if (!exemptTips) {
-            // Just hide tips when opening other sections.
-            if (isTipsShown) {
-                dispatch(updateOptionStore({
-                    selectedTipsOption: HIDDEN,
-                }))
-            }
+        if (!exemptTips && isTipsShown) {
+            dispatch(updateOptionStore({
+                selectedTipsOption: HIDDEN,
+            }))
         }
 
-        if (!exemptActivatedVerse) {
+        if (!exemptActivatedVerse && isActivated) {
             dispatch(updateActivatedVerseIndex())
         }
     }

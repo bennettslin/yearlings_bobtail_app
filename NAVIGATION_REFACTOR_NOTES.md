@@ -2,8 +2,6 @@
 * Make title of pitch the helmet title
 * Helmet should get promo page in album
 * Add date to onesheet and pitch
-* Fix navigation replace upon every single state change!
-    * It's in closeMainSections
 
 # Tech notes
 * Need helper to get state from window's pop state

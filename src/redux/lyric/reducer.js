@@ -60,11 +60,6 @@ export const getLyricReducer = ({
                         hasKey(selectedAnnotationIndex)
                     )
 
-            // console.log('payload', payload)
-            // console.log('state', state)
-            // console.log('selected store', selectedSongIndex, selectedVerseIndex, selectedAnnotationIndex)
-            // console.log('lyric store', lyricSongIndex, lyricVerseIndex, lyricAnnotationIndex)
-
             if (!isChangeWithinSameSong) {
                 return state
             }
