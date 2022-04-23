@@ -54,24 +54,30 @@ export const getLyricReducer = ({
                     lyricVerseIndex,
                     lyricAnnotationIndex,
                 } = state,
-                isChangeWithinSameSong = !hasKey(selectedSongIndex)
+                isChangeWithinSameSong =
+                    !hasKey(selectedSongIndex) && (
+                        hasKey(selectedVerseIndex) ||
+                        hasKey(selectedAnnotationIndex)
+                    )
+
+            if (!isChangeWithinSameSong) {
+                return state
+            }
 
             /**
              * If verse or annotation was changed within same song, replace in
              * history right away.
              */
-            if (isChangeWithinSameSong) {
-                navigateToAlbumPage(
-                    lyricSongIndex,
-                    hasKey(selectedVerseIndex) ?
-                        selectedVerseIndex :
-                        lyricVerseIndex,
-                    hasKey(selectedAnnotationIndex) ?
-                        selectedAnnotationIndex :
-                        lyricAnnotationIndex,
-                    true, // Replace in history.
-                )
-            }
+            navigateToAlbumPage(
+                lyricSongIndex,
+                hasKey(selectedVerseIndex) ?
+                    selectedVerseIndex :
+                    lyricVerseIndex,
+                hasKey(selectedAnnotationIndex) ?
+                    selectedAnnotationIndex :
+                    lyricAnnotationIndex,
+                true, // Replace in history.
+            )
 
             return {
                 ...state,
@@ -79,13 +85,11 @@ export const getLyricReducer = ({
                  * If verse or annotation was changed within same song, set in
                  * state right away.
                  */
-                ...isChangeWithinSameSong && {
-                    ...hasKey(selectedVerseIndex) && {
-                        lyricVerseIndex: selectedVerseIndex,
-                    },
-                    ...hasKey(selectedAnnotationIndex) && {
-                        lyricAnnotationIndex: selectedAnnotationIndex,
-                    },
+                ...hasKey(selectedVerseIndex) && {
+                    lyricVerseIndex: selectedVerseIndex,
+                },
+                ...hasKey(selectedAnnotationIndex) && {
+                    lyricAnnotationIndex: selectedAnnotationIndex,
                 },
             }
         }
