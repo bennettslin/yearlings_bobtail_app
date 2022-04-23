@@ -1,21 +1,22 @@
 import React, { useEffect, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import SongDispatcher from '../../../dispatchers/Song'
-import { mapLyricAnnotationIndex, mapLyricSongIndex, mapLyricVerseIndex } from '../../../redux/lyric/selector'
-import { updatePromoFromBrowserNav } from '../../../redux/promo/action'
-import { toggleIsPromoShown } from '../../../redux/toggle/action'
-import { mapIsPromoShown } from '../../../redux/toggle/selector'
-import { getWindow } from '../../../utils/browser'
-import { getIsAlbumSongPath } from '../../../utils/gatsby/album'
-import { getTrimmedPathname } from '../../../utils/gatsby/path'
-import { getIsPromoPath } from '../../../utils/gatsby/promo'
-import { getRoutingAnnotationIndex, getRoutingPitchIndex, getRoutingPromoKey, getRoutingSongIndex, getRoutingVerseIndex } from '../../../utils/gatsby/routing'
+import SongDispatcher from '../../dispatchers/Song'
+import PromoDispatcher from '../../dispatchers/Promo'
+import { mapLyricAnnotationIndex, mapLyricSongIndex, mapLyricVerseIndex } from '../../redux/lyric/selector'
+import { updatePromoFromBrowserNav } from '../../redux/promo/action'
+import { mapIsPromoShown } from '../../redux/toggle/selector'
+import { getWindow } from '../../utils/browser'
+import { getIsAlbumSongPath } from '../../utils/gatsby/album'
+import { getTrimmedPathname } from '../../utils/gatsby/path'
+import { getIsPromoPath } from '../../utils/gatsby/promo'
+import { getRoutingAnnotationIndex, getRoutingPitchIndex, getRoutingPromoKey, getRoutingSongIndex, getRoutingVerseIndex } from '../../utils/gatsby/routing'
 
-const BackButtonManager = () => {
+const BrowserNavManager = () => {
     const
         dispatch = useDispatch(),
         onPopStateRef = useRef(),
         dispatchSong = useRef(),
+        dispatchPromo = useRef(),
         lyricSongIndex = useSelector(mapLyricSongIndex),
         lyricVerseIndex = useSelector(mapLyricVerseIndex),
         lyricAnnotationIndex = useSelector(mapLyricAnnotationIndex),
@@ -46,7 +47,6 @@ const BackButtonManager = () => {
                 lyricAnnotationIndex: currentAnnotationIndex,
             } = onPopStateRef.current
 
-        // TODO: Album promo manager is messing with this.
         if (
             routingSongIndex !== currentSongIndex || (
                 Number.isFinite(routingVerseIndex) &&
@@ -84,18 +84,24 @@ const BackButtonManager = () => {
                 pathname = getTrimmedPathname(rawPathname),
                 { isPromoShown: currentIsPromoShown } = onPopStateRef.current
 
-            logAdmin(`on pop state: ${pathname}`)
+            logAdmin(`Browser navigated back to: ${pathname}${search ? `/${search}` : ''}`)
 
             if (getIsAlbumSongPath(pathname)) {
                 browseBackToAlbum(pathname, search)
                 if (currentIsPromoShown) {
-                    dispatch(toggleIsPromoShown(false))
+                    dispatchPromo.current({
+                        isPromoShown: false,
+                        bypassNavigation: true,
+                    })
                 }
 
             } else if (getIsPromoPath(pathname)) {
                 browseBackToPromo(pathname)
                 if (!currentIsPromoShown) {
-                    dispatch(toggleIsPromoShown(true))
+                    dispatchPromo.current({
+                        isPromoShown: true,
+                        bypassNavigation: true,
+                    })
                 }
             }
         }
@@ -105,7 +111,12 @@ const BackButtonManager = () => {
         }
     }, [])
 
-    return <SongDispatcher {...{ ref: dispatchSong }} />
+    return (
+        <>
+            <SongDispatcher {...{ ref: dispatchSong }} />
+            <PromoDispatcher {...{ ref: dispatchPromo }} />
+        </>
+    )
 }
 
-export default BackButtonManager
+export default BrowserNavManager

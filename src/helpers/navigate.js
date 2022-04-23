@@ -1,5 +1,6 @@
 import { navigate } from 'gatsby'
 import { getWindow } from '../utils/browser'
+import { getTrimmedPathname } from '../utils/gatsby/path'
 import { getFormattedPromoPath } from '../utils/gatsby/promo'
 import { getSongUrlPath } from './url'
 
@@ -17,11 +18,11 @@ export const navigateToAlbumPage = (
     annotationIndex,
     replace = false,
 ) => {
-    logAdmin(`navigate ${replace ? 'replace' : 'push'} to album page: ${getSongUrlPath({
+    logAdmin(`Navigated ${replace ? 'replace' : 'push'} to album page: ${getTrimmedPathname(getSongUrlPath({
         songIndex,
         verseIndex,
         annotationIndex,
-    })}`)
+    }))}`)
     navigate(
         getSongUrlPath({
             songIndex,
@@ -37,7 +38,7 @@ export const navigateToPromoPage = (
     pitchSlideIndex,
     replace = false,
 ) => {
-    logAdmin(`navigate ${replace ? 'replace' : 'push'} to pitch page: ${`/${getFormattedPromoPath(pitchKey, pitchSlideIndex)}`}`)
+    logAdmin(`Navigated ${replace ? 'replace' : 'push'} to pitch page: ${`${getFormattedPromoPath(pitchKey, pitchSlideIndex)}`}`)
     navigate(
         `/${getFormattedPromoPath(pitchKey, pitchSlideIndex)}`,
         { replace },
@@ -49,7 +50,7 @@ export const navigateToStandalonePage = (
     pathname,
     replace = true,
 ) => {
-    logAdmin(`navigate to standalone page: ${pathname ? `/${pathname}` : ''}`)
+    logAdmin(`Navigated to standalone page: ${pathname ? `${pathname}` : ''}`)
     navigate(
         pathname ? `/${pathname}` : '',
         { replace },

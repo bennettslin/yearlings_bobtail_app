@@ -3,6 +3,8 @@
 * Helmet should get promo page in album
 * Add date to onesheet and pitch
 
+* Have single promo action with bypass navigation flag
+
 # Acceptance criteria
 * Don't navigate upon app load (/)
 

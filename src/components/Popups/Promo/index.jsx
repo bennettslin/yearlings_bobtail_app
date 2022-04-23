@@ -1,21 +1,21 @@
 // Popup container for promo section.
-import React, { forwardRef, memo, useEffect } from 'react'
+import React, { forwardRef, memo, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import getDidMountHoc from '../../../hocs/DidMountHoc'
-import { updateIsPromoShown } from '../../../redux/toggle/action'
 import Popup from '../../Popup'
 import Promo from '../../Promo'
+import PromoDispatcher from '../../../dispatchers/Promo'
 import { mapIsPromoShown } from '../../../redux/toggle/selector'
 import './style'
 
 const PromoPopup = forwardRef(({ didMount }, ref) => {
     const
-        dispatch = useDispatch(),
+        dispatchPromo = useRef(),
         isPromoShown = useSelector(mapIsPromoShown)
 
     const handleCloseClick = () => {
-        dispatch(updateIsPromoShown())
+        dispatchPromo.current()
     }
 
     useEffect(() => {
@@ -25,22 +25,25 @@ const PromoPopup = forwardRef(({ didMount }, ref) => {
     }, [isPromoShown])
 
     return didMount && (
-        <Popup
-            mountOnEnter
-            unmountOnExit
-            isFullPopup
-            isPromoPopup
-            shrinkAnimate
-            displaysInOverlay
-            noOverflowHidden
-            {...{
-                popupName: 'PromoPopup',
-                isVisible: isPromoShown,
-                handleCloseClick,
-            }}
-        >
-            <Promo {...{ ref }} />
-        </Popup>
+        <>
+            <PromoDispatcher {...{ ref: dispatchPromo }} />
+            <Popup
+                mountOnEnter
+                unmountOnExit
+                isFullPopup
+                isPromoPopup
+                shrinkAnimate
+                displaysInOverlay
+                noOverflowHidden
+                {...{
+                    popupName: 'PromoPopup',
+                    isVisible: isPromoShown,
+                    handleCloseClick,
+                }}
+            >
+                <Promo {...{ ref }} />
+            </Popup>
+        </>
     )
 })
 

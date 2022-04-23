@@ -27,11 +27,6 @@ export const updateIsAudioOptionsExpanded = (
     payload: { isAudioOptionsExpanded },
 })
 
-export const toggleIsPromoShown = () => ({
-    type: TOGGLE_STORE,
-    payload: { toggledIsPromoShown: true },
-})
-
 export const updateIsPromoShown = (isPromoShown = false) => ({
     type: TOGGLE_STORE,
     payload: { isPromoShown },
@@ -69,4 +64,12 @@ export const updateIsNavExpanded = (isNavExpanded = false) => ({
 export const updateIsScoreShown = (isScoreShown = false) => ({
     type: TOGGLE_STORE,
     payload: { isScoreShown },
+})
+
+/**
+ * This is only ever used for admin purposes and may be removed at any time.
+ */
+export const adminToggleIsPromoShown = () => ({
+    type: TOGGLE_STORE,
+    payload: { toggledIsPromoShown: true },
 })

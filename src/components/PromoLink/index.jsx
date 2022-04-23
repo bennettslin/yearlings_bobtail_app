@@ -1,29 +1,31 @@
-import React from 'react'
-import { useDispatch } from 'react-redux'
+import React, { useRef } from 'react'
 import Anchor from '../Anchor'
-import { toggleIsPromoShown } from '../../redux/toggle/action'
+import PromoDispatcher from '../../dispatchers/Promo'
 import './style'
 
 const PromoLink = () => {
-    const dispatch = useDispatch()
+    const dispatchPromo = useRef()
 
     const handleAnchorClick = () => {
-        dispatch(toggleIsPromoShown())
+        dispatchPromo.current({ isPromoShown: true })
     }
 
     return (
-        <div {...{ className: 'PromoLink' }}>
-            {`Interested in working with us? Visit our `}
-            <Anchor
-                neverDeselects
-                {...{
-                    text: 'promo homepage',
-                    analyticsLabel: 'promo',
-                    handleAnchorClick,
-                }}
-            />
-            {`!`}
-        </div>
+        <>
+            <PromoDispatcher {...{ ref: dispatchPromo }} />
+            <div {...{ className: 'PromoLink' }}>
+                {`Interested in working with us? Visit our `}
+                <Anchor
+                    neverDeselects
+                    {...{
+                        text: 'promo homepage',
+                        analyticsLabel: 'promo',
+                        handleAnchorClick,
+                    }}
+                />
+                {`!`}
+            </div>
+        </>
     )
 }
 

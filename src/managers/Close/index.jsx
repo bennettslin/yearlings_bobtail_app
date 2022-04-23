@@ -2,8 +2,9 @@
  * Handler for closing multiple sections. Because the logic is so similar for
  * each section, it is better for dev clarity to keep them together.
  */
-import { forwardRef, useImperativeHandle, useEffect, useState } from 'react'
+import React, { forwardRef, useImperativeHandle, useEffect, useState, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import PromoDispatcher from '../../dispatchers/Promo'
 import { updateActivatedVerseIndex } from '../../redux/activated/action'
 import { updateOptionStore } from '../../redux/option/action'
 import { updateWikiIndices } from '../../redux/session/action'
@@ -15,7 +16,6 @@ import {
     updateIsDotsSlideShown,
     updateIsLyricExpanded,
     updateIsNavExpanded,
-    updateIsPromoShown,
     updateIsScoreShown,
 } from '../../redux/toggle/action'
 import { HIDDEN } from '../../constants/options'
@@ -39,6 +39,7 @@ import { mapIsWikiShown } from '../../redux/wiki/selector'
 const CloseHandler = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
+        dispatchPromo = useRef(),
         isActivated = useSelector(mapIsActivated),
         isOverviewShown = useSelector(mapIsOverviewShown),
         isTipsShown = useSelector(mapIsTipsShown),
@@ -77,7 +78,7 @@ const CloseHandler = forwardRef((props, ref) => {
             dispatch(updateIsAboutShown())
 
         } else if (!exemptPromo && isPromoShown) {
-            dispatch(updateIsPromoShown())
+            dispatchPromo.current()
 
         } else {
             return false
@@ -272,7 +273,9 @@ const CloseHandler = forwardRef((props, ref) => {
     }
 
     useImperativeHandle(ref, () => closeForBodyClick)
-    return null
+    return (
+        <PromoDispatcher {...{ ref: dispatchPromo }} />
+    )
 })
 
 export default CloseHandler

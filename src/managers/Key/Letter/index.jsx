@@ -1,5 +1,17 @@
 import React, { forwardRef, useImperativeHandle, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import CarouselNavDispatcher from '../../../dispatchers/CarouselNav'
+import DotsSlideDispatcher from '../../../dispatchers/DotsSlide'
+import EarColumnDispatcher from '../../../dispatchers/EarColumn'
+import ActivatedSceneDispatcher from '../../../dispatchers/Activated/Scene'
+import ActivatedVerseDispatcher from '../../../dispatchers/Activated/Verse'
+import LyricExpandDispatcher from '../../../dispatchers/LyricExpand'
+import OverviewDispatcher from '../../../dispatchers/Overview'
+import PlayDispatcher from '../../../dispatchers/Play'
+import PromoDispatcher from '../../../dispatchers/Promo'
+import ScoreDispatcher from '../../../dispatchers/Score'
+import SongDispatcher from '../../../dispatchers/Song'
+import TipsDispatcher from '../../../dispatchers/Tips'
 import { updateAccessStore } from '../../../redux/access/action'
 import { updateActivatedVerseIndex } from '../../../redux/activated/action'
 import { updateSelectedStore } from '../../../redux/selected/action'
@@ -9,8 +21,6 @@ import {
     toggleIsAboutShown,
     updateIsAboutShown,
     updateIsAutoScroll,
-    toggleIsPromoShown,
-    updateIsPromoShown,
     updateIsAudioOptionsExpanded,
 } from '../../../redux/toggle/action'
 import {
@@ -19,17 +29,6 @@ import {
     incrementVolumeIndex,
     decrementVolumeIndex,
 } from '../../../redux/session/action'
-import CarouselNavDispatcher from '../../../dispatchers/CarouselNav'
-import DotsSlideDispatcher from '../../../dispatchers/DotsSlide'
-import EarColumnDispatcher from '../../../dispatchers/EarColumn'
-import ActivatedSceneDispatcher from '../../../dispatchers/Activated/Scene'
-import ActivatedVerseDispatcher from '../../../dispatchers/Activated/Verse'
-import LyricExpandDispatcher from '../../../dispatchers/LyricExpand'
-import OverviewDispatcher from '../../../dispatchers/Overview'
-import PlayDispatcher from '../../../dispatchers/Play'
-import TipsDispatcher from '../../../dispatchers/Tips'
-import ScoreDispatcher from '../../../dispatchers/Score'
-import SongDispatcher from '../../../dispatchers/Song'
 import {
     PREVIOUS_VERSE_KEY,
     NEXT_VERSE_KEY,
@@ -79,6 +78,7 @@ const LetterManager = forwardRef((props, ref) => {
         dispatchLyricExpand = useRef(),
         dispatchOverview = useRef(),
         dispatchPlay = useRef(),
+        dispatchPromo = useRef(),
         dispatchSong = useRef(),
         dispatchTips = useRef(),
         dispatchScore = useRef(),
@@ -168,7 +168,7 @@ const LetterManager = forwardRef((props, ref) => {
                 keyWasRegistered = true
                 break
             case PROMO_TOGGLE_KEY:
-                dispatch(toggleIsPromoShown())
+                dispatchPromo.current({ isAdminToggle: true })
                 keyWasRegistered = true
                 break
             default:
@@ -197,7 +197,7 @@ const LetterManager = forwardRef((props, ref) => {
 
         // Close pitch popup.
         } else if (isPromoShown) {
-            dispatch(updateIsPromoShown())
+            dispatchPromo.current()
 
         // Close wiki popup.
         } else if (isWikiShown) {
@@ -250,6 +250,7 @@ const LetterManager = forwardRef((props, ref) => {
             <LyricExpandDispatcher {...{ ref: dispatchLyricExpand }} />
             <OverviewDispatcher {...{ ref: dispatchOverview }} />
             <PlayDispatcher {...{ ref: dispatchPlay }} />
+            <PromoDispatcher {...{ ref: dispatchPromo }} />
             <SongDispatcher {...{ ref: dispatchSong }} />
             <TipsDispatcher {...{ ref: dispatchTips }} />
             <ScoreDispatcher {...{ ref: dispatchScore }} />
