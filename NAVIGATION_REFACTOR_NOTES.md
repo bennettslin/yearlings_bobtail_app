@@ -2,8 +2,8 @@
 * Make title of pitch the helmet title
 * Helmet should get promo page in album
 * Add date to onesheet and pitch
-
 * Have single promo action with bypass navigation flag
+* Dev test
 
 # Acceptance criteria
 * Don't navigate upon app load (/)
@@ -20,13 +20,12 @@
     * Album song changes (/)
     * Promo path (/)
     * Pitch page changes (/)
-    * Toggling between album and promo
-        * Going from promo popup to album closes popup (/)
-        * Going from album to promo opens popup
+    * Going from promo to album closes popup (/)
+    * When possible, going from album to promo opens popup (/)
 
-* When album song, verse, or annotation is changed during promo
-    * It is *not* recorded in history
-    * It *is* pushed to history only after promo is closed
+* When album song or verse is changed during promo
+    * It is *not* recorded in history (/)
+    * Song, annotation, and verse *is* pushed to history once promo is closed (/)
 
 * All works for promo session as well
 

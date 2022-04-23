@@ -27,18 +27,20 @@ export const getLyricReducer = ({
                 lyricSongIndex,
                 lyricVerseIndex,
                 lyricAnnotationIndex,
-                replace,
+                bypassNavigation,
             } = payload
 
-            /**
-             * If song was changed, push to history.
-             */
-            navigateToAlbumPage(
-                lyricSongIndex,
-                lyricVerseIndex,
-                lyricAnnotationIndex,
-                replace,
-            )
+            if (!bypassNavigation) {
+                /**
+                 * If song was changed, we want to push to history. When promo
+                 * is shown, however, we will bypass.
+                 */
+                navigateToAlbumPage(
+                    lyricSongIndex,
+                    lyricVerseIndex,
+                    lyricAnnotationIndex,
+                )
+            }
 
             return {
                 ...state,
@@ -50,6 +52,7 @@ export const getLyricReducer = ({
                     selectedSongIndex,
                     selectedVerseIndex,
                     selectedAnnotationIndex,
+                    bypassNavigation,
                 } = payload,
                 {
                     lyricSongIndex,
@@ -66,20 +69,23 @@ export const getLyricReducer = ({
                 return state
             }
 
-            /**
-             * If verse or annotation was changed within same song, replace in
-             * history right away.
-             */
-            navigateToAlbumPage(
-                lyricSongIndex,
-                hasKey(selectedVerseIndex) ?
-                    selectedVerseIndex :
-                    lyricVerseIndex,
-                hasKey(selectedAnnotationIndex) ?
-                    selectedAnnotationIndex :
-                    lyricAnnotationIndex,
-                true, // Replace in history.
-            )
+            if (!bypassNavigation) {
+                /**
+                 * If verse or annotation was changed within same song, replace
+                 * in history right away. When promo is shown, however, we will
+                 * bypass.
+                 */
+                navigateToAlbumPage(
+                    lyricSongIndex,
+                    hasKey(selectedVerseIndex) ?
+                        selectedVerseIndex :
+                        lyricVerseIndex,
+                    hasKey(selectedAnnotationIndex) ?
+                        selectedAnnotationIndex :
+                        lyricAnnotationIndex,
+                    true, // Replace in history.
+                )
+            }
 
             return {
                 ...state,

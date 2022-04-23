@@ -9,7 +9,7 @@ import {
     autoScrollLyricForPlay,
 } from '../../redux/scrollLyric/action'
 import { mapSelectedSongIndex } from '../../redux/selected/selector'
-import { mapIsAutoScroll } from '../../redux/toggle/selector'
+import { mapIsAutoScroll, mapIsPromoShown } from '../../redux/toggle/selector'
 import { resetVerseChange, updateEntranceStore } from '../../redux/entrance/action'
 import { logVerseSelect } from './helper'
 
@@ -19,7 +19,8 @@ const VerseDispatcher = forwardRef((props, ref) => {
         dispatch = useDispatch(),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         lyricVerseIndex = useSelector(mapLyricVerseIndex),
-        isAutoScroll = useSelector(mapIsAutoScroll)
+        isAutoScroll = useSelector(mapIsAutoScroll),
+        isPromoShown = useSelector(mapIsPromoShown)
 
     const dispatchVerse = ({
         scrollLog,
@@ -35,6 +36,7 @@ const VerseDispatcher = forwardRef((props, ref) => {
         if (lyricVerseIndex !== verseIndex) {
             dispatch(updateSelectedStore({
                 selectedVerseIndex: verseIndex,
+                bypassNavigation: isPromoShown,
             }))
 
             logVerseSelect({

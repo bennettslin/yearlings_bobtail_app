@@ -76,10 +76,10 @@ const SongChangeManager = () => {
                     lyricAnnotationIndex: selectedAnnotationIndex,
 
                     /**
-                     * If promo is shown, we don't want this song change pushed
-                     * to history.
+                     * If promo is shown, we want any song change to bypass
+                     * navigation.
                      */
-                    replace: isPromoShown,
+                    bypassNavigation: isPromoShown,
                 }))
 
                 // Scroll upon completion of subsequent song changes.

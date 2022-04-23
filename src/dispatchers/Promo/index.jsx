@@ -28,30 +28,30 @@ const PromoDispatcher = forwardRef((props, ref) => {
                 updateIsPromoShown(nextIsPromoShown),
         )
 
-        if (
-            !bypassNavigation &&
-            isAdminToggle ? !isPromoShown : nextIsPromoShown
-        ) {
-            /**
-             * This navigates from album to promo only. Navigation between
-             * promo pages happens in promo reducer.
-             */
-            navigateToPromoPage(
-                selectedPromoKey,
-                pitchSlideIndex,
-            )
+        if (!bypassNavigation) {
+            if (isAdminToggle ? !isPromoShown : nextIsPromoShown) {
+                /**
+                 * This navigates from album to promo only. Navigation between
+                 * promo pages happens in promo reducer.
+                 */
+                navigateToPromoPage(
+                    selectedPromoKey,
+                    pitchSlideIndex,
+                )
 
-        } else {
-            /**
-             * This navigates from promo to album only. Navigation between
-             * album pages happens in lyric reducer.
-             */
-            navigateToAlbumPage(
-                lyricSongIndex,
-                lyricVerseIndex,
-                lyricAnnotationIndex,
-            )
+            } else {
+                /**
+                 * This navigates from promo to album only. Navigation between
+                 * album pages happens in lyric reducer.
+                 */
+                navigateToAlbumPage(
+                    lyricSongIndex,
+                    lyricVerseIndex,
+                    lyricAnnotationIndex,
+                )
+            }
         }
+
     }
 
     useImperativeHandle(ref, () => dispatchPromo)

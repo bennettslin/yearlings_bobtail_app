@@ -10,6 +10,7 @@ import { getIsAlbumSongPath } from '../../utils/gatsby/album'
 import { getTrimmedPathname } from '../../utils/gatsby/path'
 import { getIsPromoPath } from '../../utils/gatsby/promo'
 import { getRoutingAnnotationIndex, getRoutingPitchIndex, getRoutingPromoKey, getRoutingSongIndex, getRoutingVerseIndex } from '../../utils/gatsby/routing'
+import { navigateToAlbumPage } from '../../helpers/navigate'
 
 const BrowserNavManager = () => {
     const
@@ -24,10 +25,24 @@ const BrowserNavManager = () => {
 
     // For window event listener.
     onPopStateRef.current = {
-        lyricSongIndex,
-        lyricVerseIndex,
-        lyricAnnotationIndex,
-        isPromoShown,
+        currentSongIndex: lyricSongIndex,
+        currentVerseIndex: lyricVerseIndex,
+        currentAnnotationIndex: lyricAnnotationIndex,
+        currentIsPromoShown: isPromoShown,
+    }
+
+    const navigateToAlbum = () => {
+        const {
+            currentSongIndex,
+            currentVerseIndex,
+            currentAnnotationIndex,
+        } = onPopStateRef.current
+
+        navigateToAlbumPage(
+            currentSongIndex,
+            currentVerseIndex,
+            currentAnnotationIndex,
+        )
     }
 
     const browseBackToAlbum = (pathname, search) => {
@@ -42,9 +57,9 @@ const BrowserNavManager = () => {
                 routingSongIndex,
             ),
             {
-                lyricSongIndex: currentSongIndex,
-                lyricVerseIndex: currentVerseIndex,
-                lyricAnnotationIndex: currentAnnotationIndex,
+                currentSongIndex,
+                currentVerseIndex,
+                currentAnnotationIndex,
             } = onPopStateRef.current
 
         if (
@@ -82,27 +97,38 @@ const BrowserNavManager = () => {
             const
                 { pathname: rawPathname, search } = getWindow().location,
                 pathname = getTrimmedPathname(rawPathname),
-                { isPromoShown: currentIsPromoShown } = onPopStateRef.current
-
-            logAdmin(`Browser navigated back to: ${pathname}${search ? `/${search}` : ''}`)
+                { currentIsPromoShown } = onPopStateRef.current
 
             if (getIsAlbumSongPath(pathname)) {
-                browseBackToAlbum(pathname, search)
                 if (currentIsPromoShown) {
+                    // If promo page is shown, toggle off.
                     dispatchPromo.current({
                         isPromoShown: false,
                         bypassNavigation: true,
                     })
+
+                    /**
+                     * If promo page is shown, just navigate without changing
+                     * state. Otherwise, navigation will be handled once state
+                     * is changed.
+                     */
+                    navigateToAlbum()
+                } else {
+                    logAdmin(`Browser navigated back to album song path: ${pathname}${search ? `/${search}` : ''}`)
+                    browseBackToAlbum(pathname, search)
                 }
 
             } else if (getIsPromoPath(pathname)) {
-                browseBackToPromo(pathname)
                 if (!currentIsPromoShown) {
+                    // If promo page is not shown, toggle on.
                     dispatchPromo.current({
                         isPromoShown: true,
                         bypassNavigation: true,
                     })
                 }
+
+                logAdmin(`Browser navigated back to promo path: ${pathname}${search ? `/${search}` : ''}`)
+                browseBackToPromo(pathname)
             }
         }
 
