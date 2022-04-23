@@ -5,7 +5,6 @@
 * Add date to onesheet and pitch
 * Permanent logs for navigation
 * Fix navigation replace upon every single state change!
-* Fix font heading underline issue
 * Navigation between logue and song causes audio to play.
 
 # Tech notes
