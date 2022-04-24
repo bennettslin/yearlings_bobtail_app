@@ -147,7 +147,7 @@ export default {
                         {
                             anchor: `tarred pavement mirage`,
                             card: {
-                                description: `In the mirages created by the summer heat, the reflections of the surrounding mountains point downward, suggesting that their jagged peaks had caused the asphalt cracks.`,
+                                description: `In the mirages created by the summer heat, the reflections of the Valley's surrounding mountains point downward. One could playfully suggest that their jagged peaks had caused the asphalt cracks.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -199,7 +199,7 @@ export default {
                             anchor: `root progression`,
                             wiki: `Root_(chord)`,
                         },
-                        `here traces a zigzag in which a minor-third drop from one measure is followed by a whole-step rise to the next. At the cadence of each line, melodicas hurriedly catch up by compressing a warped version of this descending pattern into a single measure.`,
+                        `here traces a zigzag in which a minor-third drop from one measure is followed by a whole-step rise to the next. At the cadence of each line, melodicas hurry to catch up by squeezing a warped version of this descending pattern into a single measure.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -244,7 +244,7 @@ export default {
                                             anchor: `microcephaly`,
                                             wiki: `Microcephaly`,
                                         },
-                                        `, a medical condition in which the brain has failed to develop properly. And so his head was abnormally small in size, like the "pinheads" of`,
+                                        `, a medical condition in which the brain fails to develop properly. And so his head was abnormally small in size, like the "pinheads" of`,
                                         {
                                             anchor: `carnival sideshows`,
                                             wiki: `Sideshow`,
@@ -329,7 +329,7 @@ export default {
                         {
                             anchor: `our tins and our jars`,
                             card: {
-                                description: `Like some other households in the neighborhood, my family would leave our recyclables out on the porch for Willy to come by and collect.`,
+                                description: `Like some other households in the neighborhood, my family would leave our recyclables out on the porch for Willy to collect.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -361,7 +361,7 @@ export default {
                         {
                             anchor: `suddenly baby shrieks`,
                             card: {
-                                description: `My brother, the baby of our family, was typically calm and quiet in demeanor. However, when made to do things he didn't enjoy or understand, like sitting through a haircut, he could erupt without warning in a frenzied outburst.`,
+                                description: `My brother, the baby of our family, was typically calm and quiet in demeanor. However, when made to do things he didn't enjoy or understand like sitting through a haircut, he could erupt without warning in a frenzied outburst.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -528,7 +528,7 @@ export default {
                             anchor: `autism`,
                             wiki: `Autism`,
                         },
-                        `when I overheard my parents talk about my brother's condition in their Taiwanese accents. The next day, I explained to classmates that my brother was "artistic." So I wanted the lyrics for this song to explore the ways in which a child's mishearings of adult conversations might lead to roundabout understanding.`,
+                        `when I overheard my parents talk about my brother's condition in their Taiwanese accents. The next day, I explained to classmates that my brother was "artistic." So I wanted the lyrics for this song to explore ways in which a child's mishearings of adult conversation might lead to roundabout understanding.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -574,7 +574,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `Unfortunately, the comic book I'd been reading on the floor just a minute ago has somehow made its way into my brother's scrap pile.`,
+                                    description: `Unfortunately, the comic book I was reading on the floor just a minute ago has somehow made its way into my brother's scrap pile.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -865,18 +865,8 @@ export default {
                 {
                     mixTime: `2:12:00.00`,
                     lyric: [
-                        `Oh, and`,
-                        {
-                            anchor: `August was`,
-                            properNoun: true,
-                            card: {
-                                description: `Understanding the gravity of the present moment, I try to make sense of it as if I were already looking back on the past.`,
-                                dotKeys: {
-                                    [NARRATIVE]: true,
-                                },
-                            },
-                        },
-                        `the`,
+                        // NOTE: I've decided that this past tense usage really doesn't need to be explained and therefore doesn't need its own annotation.
+                        `Oh, and August was the`,
                         {
                             anchor: `sawdust month`,
                             card: {
@@ -982,7 +972,7 @@ export default {
                             anchor: `whammy bar`,
                             wiki: `Vibrato_systems_for_guitar`,
                         },
-                        `at the same time. Since either of these can bend pitch on its own, it makes no sense to combine them. Which is exactly why a troll musician would.`,
+                        `at the same time. Since either of these can bend pitch on its own, it makes no sense to combine them. Which is exactly why a troll guitarist would.`,
                     ],
                     dotKeys: {
                         [OBSERVATION]: true,
@@ -1063,7 +1053,7 @@ export default {
                         {
                             anchor: `I am seven`,
                             card: {
-                                description: `My brother learned to answer the question of how old he is when he was six. But even after turning seven, he still insisted on answering "six." Though we finally got him to accept that "seven" was the new correct answer, the cost in sweat and tears was so high that when he turned eight, none of us had the energy to relive the ordeal. He's been answering "seven" ever since. And so here, I imagine him as a grownup testily correcting a stranger who has the nerve to ask if he's "six."`,
+                                description: `My brother learned to answer the question of how old he was at age six. But even after turning seven, he still insisted on answering "six." Though we finally got him to accept that "seven" was the new correct answer, the cost in sweat and tears was so high that when he turned eight, none of us had the energy to relive the ordeal. He's been answering "seven" ever since. And so here, I imagine him as a grownup testily correcting a stranger who has the nerve to ask if he's "six."`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -1244,7 +1234,7 @@ export default {
                                         anchor: `Jingle Bells`,
                                         wiki: `Jingle_Bells`,
                                     },
-                                    `," actually has meaning and isn't a jumble of random words. In any case,`,
+                                    `," isn't a jumble of random words. In any case,`,
                                     {
                                         isItalic: true,
                                         lyric: `Bobtail`,

@@ -643,10 +643,8 @@ export default {
                         `, you'll`,
                         {
                             anchor: `drop your anchor`,
-                            todo: true,
-                            // TODO: Still undecided. Ending the relationship would put an end. And then I could finally drop my "anger," if you will.
                             card: {
-                                description: `More than anything else, I was just tired of having my emotions constantly lurch from one extreme to the next. Ending the relationship meant that I could finally drop my "anger" and feel anchored in place.`,
+                                description: `More than anything else, I was tired of endlessly lurching from one emotional extreme to the next. Breaking up meant that I could finally drop my "anger" and keep my mood anchored in place.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -670,7 +668,7 @@ export default {
                         {
                             anchor: `faltering dear`,
                             card: {
-                                description: `With my slate now wiped clean, I took pains to affect an endearingly awkward persona.`,
+                                description: `And with my slate wiped clean, I could once again take pains to affect an endearingly awkward persona.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -739,7 +737,7 @@ export default {
                             {
                                 anchor: `as well in you`,
                                 card: {
-                                    description: `But if I was capable of injuring myself, then I was also unlikely to feel any compunction about hurting anyone close to me, who now knew the worst side of me as only I once did.`,
+                                    description: `But if I was capable of injuring myself, then I was also unlikely to have any qualms about hurting anyone close to me, who now knew the worst side of me as only I once did.`,
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                     },

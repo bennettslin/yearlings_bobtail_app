@@ -37,7 +37,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: `Sasha's given name was actually Saskia. But because this was difficult for other children to pronounce, she'd gone by the nickname of Sasha her entire life.`,
+                    description: `Sasha's given name was actually Saskia. But because this was difficult for other children to pronounce, she'd gone by the nickname of Sasha her whole life.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                     },
@@ -61,12 +61,12 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `As a teenager I tried to figure out how the`,
+                        `As a teenager, I tried to figure out how the`,
                         {
                             anchor: `Beatles`,
                             wiki: `The_Beatles`,
                         },
-                        `weaved melodies into chord progressions so seamlessly. The music for this song came about from those efforts. But it felt too labored, and all my fixes made it worse, so I put it away. Years later, I realized that music labored to death was exactly what a song about an overwrought letter to Sasha called for.`,
+                        `weaved melodies into chord progressions so seamlessly. The music for this song came about from those efforts. But it felt so labored, and all my fixes made it worse, so I put it away. Years later, I realized that music labored to death was exactly what a song about an overwrought letter to Sasha called for.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -118,7 +118,7 @@ export default {
                         {
                             anchor: `first semester`,
                             card: {
-                                description: `My family was spending the entire summer in Taiwan. We wouldn't get back to the States until after Sasha was to begin the new school year in Boston.`,
+                                description: `My family was spending the entire summer in Taiwan. We weren't to get back to the States until after Sasha had begun the new school year in Boston.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -131,7 +131,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: `I wanted the vocals in this song to sound sickly, so I held off on recording them until I came down with a cold. This was guaranteed to happen at some point during the five years I worked on this album.`,
+                    description: `I wanted the vocals in this song to sound sickly, so I held off on recording them until I could come down with a cold. Which was guaranteed to happen at some point during the five years I worked on this album.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },

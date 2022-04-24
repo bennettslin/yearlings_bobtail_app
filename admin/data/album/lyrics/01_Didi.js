@@ -40,17 +40,17 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `My parents immigrated to the United States from the island of`,
+                        `My parents immigrated to the United States from`,
                         {
                             anchor: `Taiwan`,
                             wiki: `Taiwan`,
                         },
-                        `. When the`,
+                        `, an island off the coast of`,
                         {
-                            anchor: `Chinese`,
+                            anchor: `China`,
                             wiki: `China`,
                         },
-                        `invaded Taiwan in 1949, they took over and imposed`,
+                        `. After the Chinese invaded and took over in 1949, they imposed`,
                         {
                             anchor: `their language`,
                             wiki: `Chinese_language`,
@@ -60,7 +60,7 @@ export default {
                             anchor: `Taiwanese`,
                             wiki: `Taiwanese_Hokkien`,
                         },
-                        `we grew up speaking at home included many Chinese words, such as`,
+                        `we spoke at home included many Chinese words, such as`,
                         {
                             isItalic: true,
                             lyric: `didi`,
@@ -455,7 +455,7 @@ export default {
                             anchor: `sheriff's badge and gun`,
                             card: {
                                 description: [
-                                    `Though my mother and other Taiwanese teenagers of her generation prized all things labeled American, their only exposure was through a local bootleg industry that mainly recycled the relics of America's past. And so my sister and I grew up listening to my mother's old`,
+                                    `Though my mother and other Taiwanese teenagers of her generation prized all things labeled American, they didn't necessarily know what that entailed. Their only exposure was through a local bootleg industry that mainly recycled the relics of America's past. And so my sister and I grew up listening to my mother's old`,
                                     {
                                         anchor: `country`,
                                         wiki: `Country_music`,

@@ -1,11 +1,10 @@
+@import './icon';
 @import './font';
 
 // This is based on just eyeballing it until it looked right. Includes padding.
 $height__annotationTitle: 18px;
 
-$paddingX__carouselAnnotation: 8px;
-
-$padding__annotationCard: 5px;
+$padding__annotationCard: $margin__thick;
 
 $baseWidth__annotationCard: 354px;
 $width__annotationCard:
