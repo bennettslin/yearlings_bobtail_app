@@ -101,7 +101,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: `This song is one of two on this album that was originally performed by the Yearlings. At the time, I kept its meaning a secret by disguising Mara's name in various puns. In this recording, my enunciations are exaggerated to make the puns obvious.`,
+                    description: `This song is one of two on this album that was originally performed by the Yearlings. At the time, I kept its meaning a secret by disguising Mara's name in various puns. But in this recording, I exaggerated my enunciations to make the puns obvious.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGCRAFT]: true,
@@ -121,7 +121,7 @@ export default {
                         {
                             anchor: `learning the talents`,
                             card: {
-                                description: `It's not that I'd done anything wrong to cause the breakup with Catherine. I just didn't have much to offer. So it seemed illogical to keep trying the same approach, as if one day I should see a dramatically different result. To secure my future chances with women, what I needed was to take time off and build up a surplus of attractive traits. So I started with the ones that Catherine valued most.`,
+                                description: `It's not that I'd done anything wrong to cause the breakup with Catherine. I just didn't have much to offer. So it seemed illogical to keep doing things the same way, as if one day I should see a dramatically different result. To secure my future chances with women, what I needed was to take time off and build up a surplus of attractive traits. So I started with the ones that Catherine valued most.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -140,7 +140,7 @@ export default {
                         {
                             anchor: `sadness with patience`,
                             card: {
-                                description: `I'd spent my formative years as a child channeling my misery into various art projects, so this was all familiar terrain for me. Building yourself up into a desirable person, after all, is really just the ultimate art project.`,
+                                description: `I'd spent my formative years as a child channeling my misery into various art projects, so this was all familiar terrain for me. Building up oneself to become a desirable person is really just the ultimate art project, after all.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -195,7 +195,7 @@ export default {
                         {
                             anchor: `mystery mensch`,
                             card: {
-                                description: `There was an obvious lesson to draw from the smattering of women I'd somehow managed to attract up to this point in my life. All of them had been taken in by my appearance as an artsy loner, only to be turned off after finding that nothing of greater substance lay beneath. So my mission was to take this mistaken assumption that already existed and simply turn it into a correct one.`,
+                                description: `There was an obvious lesson to draw from the smattering of women I'd somehow managed to attract up to this point in my life. All of them had been taken in by my appearance as an artsy loner, only to be turned off after finding that nothing of greater substance lay beneath. So my mission was simply to take this mistaken assumption and make it a correct one.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -211,7 +211,7 @@ export default {
                             anchor: `No minutiae left unmastered`,
                             card: {
                                 description: [
-                                    `Though my goal was to be well versed in every important subject, I got the most satisfaction from showing off a random skill with seeming nonchalance. So I made sure to set aside time for purely fanciful pursuits, like learning to solve a`,
+                                    `Though my goal was to be well versed in every important subject, I got the most satisfaction from showing off a random skill with seeming nonchalance. So I made sure to set aside time for purely fanciful pursuits like learning to solve a`,
                                     {
                                         anchor: `Rubik's Cube`,
                                         wiki: `Rubik's_Cube`,
@@ -277,7 +277,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: `I quickly abandoned my original plan to pack the lyrics with M words, after this stanza proved how unfeasible an entire song written in this manner would be.`,
+                    description: `I abandoned my plan to pack the lyrics with M words after this stanza proved how unfeasible it would be to write an entire song in this manner.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
@@ -359,7 +359,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `Back when I was first learning to play the banjo, I would strum the motions of`,
+                        `Back when I was learning to play the banjo, I would strum the motions of`,
                         {
                             anchor: `Earl Scruggs`,
                             wiki: `Earl_Scruggs`,
@@ -369,7 +369,7 @@ export default {
                             anchor: `three-finger roll`,
                             wiki: `Scruggs_style`,
                         },
-                        `on my kneecap throughout the day. From there, it crossed over to my guitar fingerpicking technique, as can be heard on the`,
+                        `on my thigh wherever I went. From there, it crossed over to my guitar fingerpicking technique, as can be heard on the`,
                         {
                             anchor: `Spanish guitar`,
                             wiki: `Classical_guitar`,
@@ -396,7 +396,7 @@ export default {
                         {
                             anchor: `marinaded confections`,
                             card: {
-                                description: `Or they were wrapped in my "Mara-needed confessions."`,
+                                description: `Or, they were wrapped in my "Mara-needed confessions."`,
                                 dotKeys: {
                                     [PUN]: true,
                                 },
@@ -451,7 +451,7 @@ export default {
                             anchor: `cowpunk`,
                             wiki: `Cowpunk`,
                         },
-                        `band, the Yearlings would perform this song at breakneck speed. But I moderated the tempo for this recording to make the lyrics intelligible. Even so, my drumming skills still weren't up to par. So I recorded the drum tracks at a lower tape speed, which brought them to the proper tempo upon normal playback.`,
+                        `band, the Yearlings would perform this song at breakneck speed. But I moderated the tempo for this recording to make the lyrics intelligible. Even so, my drumming skills weren't up to par. So I recorded the drum tracks at a lower tape speed, which brought them to the proper tempo upon normal playback.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -470,7 +470,7 @@ export default {
                         {
                             anchor: `Morphined`,
                             card: {
-                                description: `Or I would be a "Mara fiend," a slightly different kind of addict.`,
+                                description: `Or, I would be a "Mara fiend," a slightly different kind of addict.`,
                                 dotKeys: {
                                     [PUN]: true,
                                 },
@@ -496,7 +496,7 @@ export default {
                         {
                             anchor: `sand castle built by low tide`,
                             card: {
-                                description: `To compound the failures of my first five-year plan, it was clear that in the interim I'd missed out on some crucial personal development that Jacob and others had naturally come by. And there was no guarantee another five-year plan wouldn't blindside me in the same manner. I feared a future as a stunted man-child, forever chasing ambitions both infantile and futile, like building castles out of sand.`,
+                                description: `Compounding the failures of my first five-year plan, it was clear that in the interim I'd missed out on some crucial personal development that others had naturally come by. And there was no guarantee that another five-year plan wouldn't blindside me in the same manner. I feared a future as a stunted man-child forever chasing ambitions both infantile and futile, like building castles out of sand.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -611,12 +611,12 @@ export default {
                             // TODO: Mention that future audience is the only one I have.
                             card: {
                                 description: [
-                                    `In a way, a`,
+                                    `In my dejected state, I could only envision my next five-year plan as a`,
                                     {
                                         anchor: `time capsule`,
                                         wiki: `Time_capsule`,
                                     },
-                                    `allows a past generation to speak to a future one. And in my dejected state, I could only envision my next five-year plan as a means to deliver my grievances to a captive audience.`,
+                                    `for storing my grievances, to be discovered by a sympathetic future audience.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -644,7 +644,7 @@ export default {
                                             anchor: `marionette`,
                                             wiki: `Marionette`,
                                         },
-                                        `being made to posture by the hidden hand of my younger self. Of course, I eagerly donned these strings because I believed my younger self's lies, that a "Mara you'll net" by doing so.`,
+                                        `being made to posture by the hidden hand of my younger self. Of course, I eagerly wore these strings only because I believed my younger self's lies, that a "Mara you'll net" by doing so.`,
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
@@ -663,7 +663,7 @@ export default {
                         {
                             anchor: `heap of twisted twine`,
                             card: {
-                                description: `But with nothing to show after five years of diligent effort, I was now paralyzed by doubt. There were no more actions I could confidently undertake to better my circumstances. And so the puppet of my future self could only lie there motionless.`,
+                                description: `But with nothing to show after five years of diligent effort, I was now paralyzed by doubt. I knew of no other actions to undertake that might better my circumstances. And so the puppet of my future self lay motionless before me.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -690,7 +690,7 @@ export default {
                         {
                             anchor: `solely for a pet`,
                             card: {
-                                description: `After Mara started dating Jacob, she continued to interact with me in the same flirtatious manner, which made me realize I'd misread her intentions all along.`,
+                                description: `After Mara started dating Jacob, she continued to interact with me in the same manner, which made me realize that I'd misread her intentions all along. Being treated with respect isn't the same as being flirted with. I get this now. But at the time, I was so unfamiliar with the former that I mistook it for the latter.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -777,7 +777,7 @@ export default {
                                             anchor: `Victorian era`,
                                             wiki: `Victorian_era`,
                                         },
-                                        `, the children who cleared soot from chimneys were neglected orphans. Whatever fortunes they imparted to others, only a lifetime of ill health awaited themselves. Likewise, having helped introduce Mara to Jacob, it was now on me to get on with my wretched life.`,
+                                        `, the children who cleared soot from chimneys were neglected orphans. Whatever fortunes they imparted to others, only a lifetime of ill health awaited themselves. Likewise, I'd helped introduce Mara to Jacob, and now it was on me to get on with my wretched life.`,
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
@@ -803,7 +803,7 @@ export default {
                                         anchor: `indentured servants`,
                                         wiki: `Indentured_servant`,
                                     },
-                                    `at a young age. And in my case, by the time I was freed from servitude to my five-year plans, I'd be an old man "in dentures" and thus unable to speak for myself.`,
+                                    `at a young age. But in my case, I was to remain in servitude to my five-year plans until I was an old man. By then, I'd be "in dentures" and thus unable to speak for myself.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -826,7 +826,7 @@ export default {
                         {
                             anchor: `to fare well`,
                             card: {
-                                description: `Jacob was my friend, and I was happy for him that he'd found Mara. But I also wasn't eager to stick around. So as I imagined them exchanging vows of "I do," I silently offered a vow of my own to bid them "two farewell."`,
+                                description: `Jacob was my friend, and I was happy that he'd found Mara. Still, I wasn't eager to stick around. So after imagining them exchanging vows of "I do," I silently offered a vow of my own to bid them "two farewell."`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -855,7 +855,7 @@ export default {
                             anchor: `world's a naked baby`,
                             todo: true,
                             card: {
-                                description: `At some point, I realized that the social world is just another part of the world at large. And so it too behaves as the sum of all its moving parts. Nothing is hidden from view, and every social situation can be understood by reading it closely, no less than facts can be memorized by studying textbooks.`,
+                                description: `But at some point, I realized that a social circle is just like the world at large. It too is just the sum total of everyone involved, doing what they do by nature. Nothing is hidden from view, and any social situation can be understood by studying its various interactions, no less than a holistic picture of the world begins to emerge after reading books on every subject matter.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -878,7 +878,7 @@ export default {
                         {
                             anchor: `to have a merry ol' laugh`,
                             card: {
-                                description: `Or to have a "Mara, you'll" laugh. After all, if the world is as guileless and unwitting as a newborn, then it makes no sense to get upset when it makes a mess of things.`,
+                                description: `Or, to have a "Mara, you'll" laugh. After all, if the world is as guileless and unwitting as a newborn, then it makes no sense to get upset when it makes a mess of things.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [PUN]: true,
@@ -947,7 +947,7 @@ export default {
                         {
                             anchor: `be alert`,
                             card: {
-                                description: `In short, it was no mystery why the situation with Mara had transpired the way it had. I found this thought to be empowering, because it meant that the Maras of the world were still attainable. It was just on me to figure out what they wanted. And once I knew, I could build myself up to be exactly that.`,
+                                description: `In short, it was no mystery why the situation with Mara had transpired the way it had. I found this thought to be empowering, because it meant that the Maras of the world were still attainable. It was just on me to understand what they wanted. And once I knew, I could build myself up to be exactly that.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -970,7 +970,7 @@ export default {
                         {
                             anchor: `friends have to lie`,
                             card: {
-                                description: `But I couldn't rely on my friends to tell me the truth. As dear as they were to me, they each had their own agenda.`,
+                                description: `But I couldn't rely on my friends to tell me the truth. As dear as they were to me, each one had their own agenda.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -1010,7 +1010,7 @@ export default {
                             properNoun: true,
                             card: {
                                 description: [
-                                    `Recognizing that what I wanted was someone like Mara, and taking stock of what I needed to fulfill this wish, I decided to return to what I do best. I would hole up in emotional seclusion, this time to work on an ambitious magnum opus. My next five-year plan would have me write all the lyrics, score all the parts, and play all the instruments on`,
+                                    `Recognizing that what I wanted was someone like Mara, and taking stock of what was needed for me to fulfill this wish, I decided to return to what I do best. I would hole up in emotional seclusion, this time to work on an ambitious magnum opus. My next five-year plan would have me write all the lyrics, score all the parts, and play all the instruments on`,
                                     {
                                         isItalic: true,
                                         lyric: `Bobtail`,
@@ -1058,7 +1058,7 @@ export default {
                             anchor: `Mara-iachi`,
                             wiki: `Mariachi`,
                         },
-                        `" style. But I decided it wouldn't fit the song's tempo and quickly scrapped it. Still, it gave me an idea to model the outro after the`,
+                        `" style. But I decided it wouldn't fit the song's tempo and eventually scrapped it. Still, it gave me an idea to model the outro after the`,
                         {
                             anchor: `Los Lobos`,
                             wiki: `Los_Lobos`,
