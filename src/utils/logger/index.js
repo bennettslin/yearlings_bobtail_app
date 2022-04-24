@@ -2,7 +2,7 @@ import { getSceneIndexForVerse } from '../../endpoint/album/verses'
 import { sendToAnalyticsFromLog } from './helpers/analytics'
 import { getTimeDifference } from './helpers/time'
 import {
-    ACCESS, ADMIN, EVENT, FOCUS, MOUNT, PLAYER, SCROLL, SELECT, SERVE, STATE, TRANSITION, SUCCESS, ERROR, getStyleForCategoryLog,
+    ACCESS, ADMIN, EVENT, GENERAL, MOUNT, PLAYER, SCROLL, SELECT, SERVE, STATE, TRANSITION, SUCCESS, ERROR, getStyleForCategoryLog,
 } from './helpers/styles'
 
 const _log = ({
@@ -127,10 +127,10 @@ export const logAdmin = log => {
         category: ADMIN,
     })
 }
-export const logFocus = log => {
+export const logGeneral = log => {
     _log({
         log,
-        category: FOCUS,
+        category: GENERAL,
     })
 }
 export const logMount = componentName => {

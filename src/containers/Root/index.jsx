@@ -57,7 +57,7 @@ const RootContainer = () => {
         }
 
         if (currentElement?.focus) {
-            logFocus(`Focus on ${logString}.`)
+            logGeneral(`Focus on ${logString}.`)
             currentElement.focus()
         }
     }

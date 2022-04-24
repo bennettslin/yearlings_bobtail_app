@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import SongDispatcher from '../../dispatchers/Song'
 import PromoDispatcher from '../../dispatchers/Promo'
 import { mapLyricAnnotationIndex, mapLyricSongIndex, mapLyricVerseIndex } from '../../redux/lyric/selector'
-import { updatePromoFromBrowserNav } from '../../redux/promo/action'
+import { updatePromo } from '../../redux/promo/action'
 import { mapIsPromoShown } from '../../redux/toggle/selector'
 import { getWindow } from '../../utils/browser'
 import { getIsAlbumSongPath } from '../../utils/gatsby/album'
@@ -86,10 +86,11 @@ const BrowserNavManager = () => {
                 routingPromoKey,
                 pathname,
             )
-        dispatch(updatePromoFromBrowserNav(
-            routingPromoKey,
-            routingPitchIndex,
-        ))
+        dispatch(updatePromo({
+            selectedPromoKey: routingPromoKey,
+            pitchSlideIndex: routingPitchIndex,
+            bypassNavigation: true,
+        }))
     }
 
     useEffect(() => {
@@ -98,6 +99,8 @@ const BrowserNavManager = () => {
                 { pathname: rawPathname, search } = getWindow().location,
                 pathname = getTrimmedPathname(rawPathname),
                 { currentIsPromoShown } = onPopStateRef.current
+
+            logAdmin(`Browser navigated back to path: ${pathname}${search ? `/${search}` : ''}`)
 
             if (getIsAlbumSongPath(pathname)) {
                 if (currentIsPromoShown) {
@@ -114,7 +117,6 @@ const BrowserNavManager = () => {
                      */
                     navigateToAlbum()
                 } else {
-                    logAdmin(`Browser navigated back to album song path: ${pathname}${search ? `/${search}` : ''}`)
                     browseBackToAlbum(pathname, search)
                 }
 
@@ -127,7 +129,6 @@ const BrowserNavManager = () => {
                     })
                 }
 
-                logAdmin(`Browser navigated back to promo path: ${pathname}${search ? `/${search}` : ''}`)
                 browseBackToPromo(pathname)
             }
         }

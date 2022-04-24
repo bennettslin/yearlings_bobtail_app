@@ -15,7 +15,7 @@ import {
     logAccess,
     logAdmin,
     logEvent,
-    logFocus,
+    logGeneral,
     logMount,
     logPlayer,
     logScroll,
@@ -52,7 +52,7 @@ export const globaliseLogs = () => {
     global.logAccess = logAccess
     global.logAdmin = logAdmin
     global.logEvent = logEvent
-    global.logFocus = logFocus
+    global.logGeneral = logGeneral
     global.logMount = logMount
     global.logPlayer = logPlayer
     global.logScroll = logScroll

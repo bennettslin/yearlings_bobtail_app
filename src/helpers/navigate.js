@@ -18,7 +18,7 @@ export const navigateToAlbumPage = (
     annotationIndex,
     replace = false,
 ) => {
-    logAdmin(`Navigated ${replace ? 'replace' : 'push'} to album page: ${getTrimmedPathname(getSongUrlPath({
+    logAdmin(`Manually ${replace ? 'replaced in' : 'pushed to'} navigation history: ${getTrimmedPathname(getSongUrlPath({
         songIndex,
         verseIndex,
         annotationIndex,
@@ -38,7 +38,7 @@ export const navigateToPromoPage = (
     pitchSlideIndex,
     replace = false,
 ) => {
-    logAdmin(`Navigated ${replace ? 'replace' : 'push'} to pitch page: ${`${getFormattedPromoPath(pitchKey, pitchSlideIndex)}`}`)
+    logAdmin(`Manually ${replace ? 'replaced in' : 'pushed to'} navigation history: ${`${getFormattedPromoPath(pitchKey, pitchSlideIndex)}`}`)
     navigate(
         `/${getFormattedPromoPath(pitchKey, pitchSlideIndex)}`,
         { replace },
@@ -50,7 +50,7 @@ export const navigateToStandalonePage = (
     pathname,
     replace = true,
 ) => {
-    logAdmin(`Navigated to standalone page: ${pathname ? `${pathname}` : ''}`)
+    logAdmin(`Manually replaced in navigation history: ${pathname ? `${pathname}` : ''}`)
     navigate(
         pathname ? `/${pathname}` : '',
         { replace },

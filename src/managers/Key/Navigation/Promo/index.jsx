@@ -7,7 +7,7 @@ import {
     PROMO_TOGGLE_KEY,
 } from '../../../../constants/access'
 import { getIsPromoHomepage } from '../../../../helpers/promo'
-import { setSelectedPromoKey } from '../../../../redux/promo/action'
+import { resetPromo } from '../../../../redux/promo/action'
 import PitchDispatcher from '../../../../dispatchers/Pitch'
 
 const PromoNavigation = forwardRef((props, ref) => {
@@ -23,7 +23,7 @@ const PromoNavigation = forwardRef((props, ref) => {
 
         switch (keyName) {
             case PROMO_TOGGLE_KEY:
-                dispatch(setSelectedPromoKey())
+                dispatch(resetPromo())
                 return true
         }
         return false

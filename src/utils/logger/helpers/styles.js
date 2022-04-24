@@ -7,7 +7,7 @@ export const ACCESS = 'access'
 export const ADMIN = 'admin'
 export const ERROR = 'error'
 export const EVENT = 'event'
-export const FOCUS = 'focus'
+export const GENERAL = 'general'
 export const MOUNT = 'mount'
 export const PLAYER = 'player'
 export const SCROLL = 'scroll'
@@ -56,7 +56,7 @@ const LOG_STYLES = {
         color: '#8ad',
         fontSize: '0.8em',
     },
-    [FOCUS]: {
+    [GENERAL]: {
         color: '#874',
         fontSize: '0.8em',
     },

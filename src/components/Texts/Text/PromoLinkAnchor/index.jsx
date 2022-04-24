@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Anchor from '../../../Anchor'
 import { useDispatch } from 'react-redux'
-import { setSelectedPromoKey } from '../../../../redux/promo/action'
+import { updatePromo } from '../../../../redux/promo/action'
 
 const PromoLinkAnchor = ({
     text,
@@ -12,7 +12,7 @@ const PromoLinkAnchor = ({
     const dispatch = useDispatch()
 
     const handleAnchorClick = () => {
-        dispatch(setSelectedPromoKey(promoKey))
+        dispatch(updatePromo({ selectedPromoKey: promoKey }))
     }
 
     return (
