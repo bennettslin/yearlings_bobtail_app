@@ -1,5 +1,4 @@
 # Navigation refactor notes
-* Promo link links to first page (this fixes a bug)
 * Make title of pitch the helmet title
 * Helmet should get promo page in album
 * Add date to onesheet and pitch

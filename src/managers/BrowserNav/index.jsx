@@ -89,7 +89,9 @@ const BrowserNavManager = () => {
             )
         dispatch(updatePromo({
             selectedPromoKey: routingPromoKey,
-            pitchSlideIndex: routingPitchIndex,
+            ...Number.isFinite(routingPitchIndex) && {
+                pitchSlideIndex: routingPitchIndex,
+            },
             bypassNavigation: true,
         }))
     }
