@@ -224,11 +224,27 @@ export default {
                 {
                     mixTime: `0:39:02.09`,
                     lyric: [
-                        `Drunk pissed punks tryst,`,
+                        `Drunk pissed`,
+                        {
+                            anchor: `punks tryst,`,
+                            card: {
+                                description: [
+                                    `At the time, I wore baseball tees and was still baby-faced enough to be mistaken for a middle schooler. Tristan, one of the crust punks in the thieving group, liked our ragtag look and referred to us as the`,
+                                    {
+                                        anchor: `Young Ones`,
+                                        wiki: `The_Young_Ones_(TV_series)`,
+                                    },
+                                    `. He was clearly our Vyvyan. I'm not sure which of the other characters he saw me as.`,
+                                ],
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                },
+                            },
+                        },
                         {
                             anchor: `bustin' cars with fists`,
                             card: {
-                                description: `There was this kid named Tristan in our little group who was particularly hotheaded. One night after we got kicked out of a party for a fight he incited, Tristan challenged us to see who could punch a car window and break the glass first. I didn't win.`,
+                                description: `Tristan was particularly hotheaded when drunk. One night after getting us kicked out of a party for a fight he started, he challenged us to see who could punch a car window and break the glass first. I didn't win.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -499,7 +515,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `Though I'd taken violin lessons as a child, my skills were rusty by the time I made this album. Rather than get up to speed through intense practice, I created the fiddle parts by recording just a fragment at a time and then splicing those together. To make up for my cop-out, I threw in a complicated`,
+                        `Though I'd played violin for ten years as a child, my skills were rusty by the time I made this album. Rather than get up to speed through intense practice, I created the fiddle parts by recording just a fragment at a time and then splicing those together. To make up for my cop-out, I threw in a complicated`,
                         {
                             anchor: `glissando`,
                             wiki: `Glissando`,

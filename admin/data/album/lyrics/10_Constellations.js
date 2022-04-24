@@ -1157,7 +1157,6 @@ export default {
                         },
                         {
                             anchor: `the dusc-horse yet`,
-                            todo: true,
                             card: {
                                 description: [
                                     `"Are Malay tapirs the dusk horse yet?" Native to the Malay peninsula, the`,
@@ -1173,7 +1172,7 @@ export default {
                                             wiki: `Eohippus`,
                                         },
                                     },
-                                    `, or "dawn horse." As our little group discovers exotic new species in the lands we conquer, we search for this mythical "dusk horse" that will let us know we've reached the end of history.`,
+                                    `, or "dawn horse." As our little group discovers exotic new species in the lands we conquer, we search for this mythical "dusk horse" that will tell us we've reached the end of history.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
