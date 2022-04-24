@@ -1,18 +1,18 @@
 import React, { useEffect, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import SongDispatcher from '../../dispatchers/Song'
-import PromoDispatcher from '../../dispatchers/Promo'
-import { mapLyricAnnotationIndex, mapLyricSongIndex, mapLyricVerseIndex } from '../../redux/lyric/selector'
-import { updatePromo } from '../../redux/promo/action'
-import { mapIsPromoShown } from '../../redux/toggle/selector'
-import { getWindow } from '../../utils/browser'
-import { getIsAlbumSongPath } from '../../utils/gatsby/album'
-import { getTrimmedPathname } from '../../utils/gatsby/path'
-import { getIsPromoPath } from '../../utils/gatsby/promo'
-import { getRoutingAnnotationIndex, getRoutingPitchIndex, getRoutingPromoKey, getRoutingSongIndex, getRoutingVerseIndex } from '../../utils/gatsby/routing'
-import { navigateToAlbumPage } from '../../helpers/navigate'
+import SongDispatcher from '../../../dispatchers/Song'
+import AlbumPromoDispatcher from '../../../dispatchers/Promo/Album'
+import { mapLyricAnnotationIndex, mapLyricSongIndex, mapLyricVerseIndex } from '../../../redux/lyric/selector'
+import { updatePromo } from '../../../redux/promo/action'
+import { mapIsPromoShown } from '../../../redux/toggle/selector'
+import { getWindow } from '../../../utils/browser'
+import { getIsAlbumSongPath } from '../../../utils/gatsby/album'
+import { getTrimmedPathname } from '../../../utils/gatsby/path'
+import { getIsPromoPath } from '../../../utils/gatsby/promo'
+import { getRoutingAnnotationIndex, getRoutingPitchIndex, getRoutingPromoKey, getRoutingSongIndex, getRoutingVerseIndex } from '../../../utils/gatsby/routing'
+import { navigateToAlbumPage } from '../../../helpers/navigate'
 
-const BrowserNavManager = () => {
+const AlbumBrowserNavManager = () => {
     const
         dispatch = useDispatch(),
         onPopStateRef = useRef(),
@@ -103,7 +103,7 @@ const BrowserNavManager = () => {
                 pathname = getTrimmedPathname(rawPathname),
                 { currentIsPromoShown } = onPopStateRef.current
 
-            logAdmin(`Browser navigated back to path: ${pathname}${search ? `/${search}` : ''}`)
+            logGeneral(`Browser navigated back to path: ${pathname}${search ? `/${search}` : ''}`)
 
             if (getIsAlbumSongPath(pathname)) {
                 if (currentIsPromoShown) {
@@ -144,9 +144,9 @@ const BrowserNavManager = () => {
     return (
         <>
             <SongDispatcher {...{ ref: dispatchSong }} />
-            <PromoDispatcher {...{ ref: dispatchPromo }} />
+            <AlbumPromoDispatcher {...{ ref: dispatchPromo }} />
         </>
     )
 }
 
-export default BrowserNavManager
+export default AlbumBrowserNavManager

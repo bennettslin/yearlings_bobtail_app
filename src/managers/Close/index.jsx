@@ -4,7 +4,7 @@
  */
 import React, { forwardRef, useImperativeHandle, useEffect, useState, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import PromoDispatcher from '../../dispatchers/Promo'
+import AlbumPromoDispatcher from '../../dispatchers/Promo/Album'
 import { updateActivatedVerseIndex } from '../../redux/activated/action'
 import { updateOptionStore } from '../../redux/option/action'
 import { updateWikiIndices } from '../../redux/session/action'
@@ -274,7 +274,7 @@ const CloseHandler = forwardRef((props, ref) => {
 
     useImperativeHandle(ref, () => closeForBodyClick)
     return (
-        <PromoDispatcher {...{ ref: dispatchPromo }} />
+        <AlbumPromoDispatcher {...{ ref: dispatchPromo }} />
     )
 })
 

@@ -1,12 +1,12 @@
 import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { navigateToAlbumPage, navigateToPromoPage } from '../../helpers/navigate'
-import { mapLyricAnnotationIndex, mapLyricSongIndex, mapLyricVerseIndex } from '../../redux/lyric/selector'
-import { mapSelectedPitchSlideIndex, mapSelectedPromoKey } from '../../redux/promo/selector'
-import { adminToggleIsPromoShown, updateIsPromoShown } from '../../redux/toggle/action'
-import { mapIsPromoShown } from '../../redux/toggle/selector'
+import { navigateToAlbumPage, navigateToPromoPage } from '../../../helpers/navigate'
+import { mapLyricAnnotationIndex, mapLyricSongIndex, mapLyricVerseIndex } from '../../../redux/lyric/selector'
+import { mapSelectedPitchSlideIndex, mapSelectedPromoKey } from '../../../redux/promo/selector'
+import { adminToggleIsPromoShown, updateIsPromoShown } from '../../../redux/toggle/action'
+import { mapIsPromoShown } from '../../../redux/toggle/selector'
 
-const PromoDispatcher = forwardRef((props, ref) => {
+const AlbumPromoDispatcher = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
         lyricSongIndex = useSelector(mapLyricSongIndex),
@@ -58,4 +58,4 @@ const PromoDispatcher = forwardRef((props, ref) => {
     return null
 })
 
-export default PromoDispatcher
+export default AlbumPromoDispatcher

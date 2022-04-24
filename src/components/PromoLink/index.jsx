@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import Anchor from '../Anchor'
-import PromoDispatcher from '../../dispatchers/Promo'
+import AlbumPromoDispatcher from '../../dispatchers/Promo/Album'
 import './style'
 
 const PromoLink = () => {
@@ -12,7 +12,7 @@ const PromoLink = () => {
 
     return (
         <>
-            <PromoDispatcher {...{ ref: dispatchPromo }} />
+            <AlbumPromoDispatcher {...{ ref: dispatchPromo }} />
             <div {...{ className: 'PromoLink' }}>
                 {`Interested in working with us? Visit our `}
                 <Anchor

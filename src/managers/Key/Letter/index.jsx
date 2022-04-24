@@ -8,7 +8,7 @@ import ActivatedVerseDispatcher from '../../../dispatchers/Activated/Verse'
 import LyricExpandDispatcher from '../../../dispatchers/LyricExpand'
 import OverviewDispatcher from '../../../dispatchers/Overview'
 import PlayDispatcher from '../../../dispatchers/Play'
-import PromoDispatcher from '../../../dispatchers/Promo'
+import AlbumPromoDispatcher from '../../../dispatchers/Promo/Album'
 import ScoreDispatcher from '../../../dispatchers/Score'
 import SongDispatcher from '../../../dispatchers/Song'
 import TipsDispatcher from '../../../dispatchers/Tips'
@@ -250,7 +250,7 @@ const LetterManager = forwardRef((props, ref) => {
             <LyricExpandDispatcher {...{ ref: dispatchLyricExpand }} />
             <OverviewDispatcher {...{ ref: dispatchOverview }} />
             <PlayDispatcher {...{ ref: dispatchPlay }} />
-            <PromoDispatcher {...{ ref: dispatchPromo }} />
+            <AlbumPromoDispatcher {...{ ref: dispatchPromo }} />
             <SongDispatcher {...{ ref: dispatchSong }} />
             <TipsDispatcher {...{ ref: dispatchTips }} />
             <ScoreDispatcher {...{ ref: dispatchScore }} />

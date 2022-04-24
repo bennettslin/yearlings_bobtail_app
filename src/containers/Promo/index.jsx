@@ -13,7 +13,7 @@ import { getIsServerSide } from '../../utils/browser'
 import { ESCAPE, ABOUT_ALBUM_TOGGLE_KEY } from '../../constants/access'
 import DeviceWrapper from '../../wrappers/DeviceWrapper'
 import AccessWrapper from '../../wrappers/AccessWrapper'
-import BrowserNavManager from '../../managers/BrowserNav'
+import PromoBrowserNavManager from '../../managers/BrowserNav/Promo'
 import ResizeManager from '../../managers/Resize'
 import './style'
 
@@ -112,7 +112,7 @@ const PromoContainer = ({ children }) => {
                         />
                     )}
                     <PromoNavigation {...{ ref: navigatePromo }} />
-                    <BrowserNavManager />
+                    <PromoBrowserNavManager />
                 </div>
                 <AccessStylesheet />
             </AccessWrapper>

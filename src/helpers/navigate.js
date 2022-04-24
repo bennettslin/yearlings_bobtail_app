@@ -5,6 +5,7 @@ import { getFormattedPromoPath } from '../utils/gatsby/promo'
 import { getSongUrlPath } from './url'
 
 export const reloadRootPage = () => {
+    logGeneral('Reload from root page.')
     /**
      * Navigation from promo back to album cannot be done through gatsby, since
      * it does not change store provider.
@@ -18,7 +19,7 @@ export const navigateToAlbumPage = (
     annotationIndex,
     replace = false,
 ) => {
-    logAdmin(`Manually ${replace ? 'replaced in' : 'pushed to'} navigation history: ${getTrimmedPathname(getSongUrlPath({
+    logGeneral(`Manually ${replace ? 'replaced in' : 'pushed to'} navigation history: ${getTrimmedPathname(getSongUrlPath({
         songIndex,
         verseIndex,
         annotationIndex,
@@ -38,7 +39,7 @@ export const navigateToPromoPage = (
     pitchSlideIndex,
     replace = false,
 ) => {
-    logAdmin(`Manually ${replace ? 'replaced in' : 'pushed to'} navigation history: ${`${getFormattedPromoPath(pitchKey, pitchSlideIndex)}`}`)
+    logGeneral(`Manually ${replace ? 'replaced in' : 'pushed to'} navigation history: ${`${getFormattedPromoPath(pitchKey, pitchSlideIndex)}`}`)
     navigate(
         `/${getFormattedPromoPath(pitchKey, pitchSlideIndex)}`,
         { replace },
@@ -50,7 +51,7 @@ export const navigateToStandalonePage = (
     pathname,
     replace = true,
 ) => {
-    logAdmin(`Manually replaced in navigation history: ${pathname ? `${pathname}` : ''}`)
+    logGeneral(`Manually replaced in navigation history: ${pathname ? `${pathname}` : ''}`)
     navigate(
         pathname ? `/${pathname}` : '',
         { replace },

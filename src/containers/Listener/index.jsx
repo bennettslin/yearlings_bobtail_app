@@ -5,7 +5,7 @@ import WikiWormholeListener from '../../handlers/WikiWormhole/Listener'
 import SceneChangeManager from '../../managers/SceneChange'
 import SongChangeManager from '../../managers/SongChange'
 import ScrollManager from '../../managers/Scroll'
-import BrowserNavManager from '../../managers/BrowserNav'
+import AlbumBrowserNavManager from '../../managers/BrowserNav/Album'
 
 const ListenerContainer = () => {
     useEffect(() => {
@@ -20,7 +20,7 @@ const ListenerContainer = () => {
             <SceneChangeManager />
             <SongChangeManager />
             <ScrollManager />
-            <BrowserNavManager />
+            <AlbumBrowserNavManager />
         </>
     )
 }

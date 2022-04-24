@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux'
 import getDidMountHoc from '../../../hocs/DidMountHoc'
 import Popup from '../../Popup'
 import Promo from '../../Promo'
-import PromoDispatcher from '../../../dispatchers/Promo'
+import AlbumPromoDispatcher from '../../../dispatchers/Promo/Album'
 import { mapIsPromoShown } from '../../../redux/toggle/selector'
 import './style'
 
@@ -26,7 +26,7 @@ const PromoPopup = forwardRef(({ didMount }, ref) => {
 
     return didMount && (
         <>
-            <PromoDispatcher {...{ ref: dispatchPromo }} />
+            <AlbumPromoDispatcher {...{ ref: dispatchPromo }} />
             <Popup
                 mountOnEnter
                 unmountOnExit
