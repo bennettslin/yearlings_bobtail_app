@@ -71,3 +71,7 @@ export const mapIsSelectedEpilogue = createSelector(
     mapSelectedSongIndex,
     selectedSongIndex => getSongIsEpilogue(selectedSongIndex),
 )
+
+export const mapDoBrowserBypassNavigation = (
+    { [SELECTED_STORE]: { doBrowserBypassNavigation } },
+) => doBrowserBypassNavigation

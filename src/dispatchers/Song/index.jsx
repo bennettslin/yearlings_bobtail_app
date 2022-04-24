@@ -26,6 +26,7 @@ const SongDispatcher = forwardRef((props, ref) => {
         selectedSongIndex: nextSongIndex = 0,
         selectedVerseIndex = 0,
         selectedAnnotationIndex = 0,
+        doBrowserBypassNavigation = false,
         earColumnIndex,
         destinationWormholeIndex,
         fromPlayDispatcher,
@@ -83,6 +84,7 @@ const SongDispatcher = forwardRef((props, ref) => {
             selectedSongIndex: nextSongIndex,
             selectedVerseIndex,
             selectedAnnotationIndex,
+            doBrowserBypassNavigation,
         }))
 
         logSongSelect({

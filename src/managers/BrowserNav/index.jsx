@@ -75,6 +75,7 @@ const BrowserNavManager = () => {
                 selectedSongIndex: routingSongIndex,
                 selectedVerseIndex: routingVerseIndex || 0,
                 selectedAnnotationIndex: routingAnnotationIndex || 0,
+                doBrowserBypassNavigation: true,
             })
         }
     }

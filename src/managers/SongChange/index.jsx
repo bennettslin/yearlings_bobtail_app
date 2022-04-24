@@ -7,6 +7,7 @@ import { scrollLyricForSongSelect } from '../../redux/scrollLyric/action'
 import { mapIsSongChangeDone } from '../../redux/entrance/selector'
 import { mapCanStageReset } from '../../redux/scene/selector'
 import {
+    mapDoBrowserBypassNavigation,
     mapSelectedSongIndex,
     mapSelectedVerseIndex,
     mapSelectedAnnotationIndex,
@@ -16,6 +17,7 @@ import {
     STAGE_RESET_AFTER_STAGE_COULD_RESET_DURATION,
 } from '../../constants/entrance'
 import { mapIsPromoShown } from '../../redux/toggle/selector'
+import { updateSelectedStore } from '../../redux/selected/action'
 
 const SongChangeManager = () => {
     const
@@ -26,6 +28,7 @@ const SongChangeManager = () => {
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         selectedVerseIndex = useSelector(mapSelectedVerseIndex),
         selectedAnnotationIndex = useSelector(mapSelectedAnnotationIndex),
+        doBrowserBypassNavigation = useSelector(mapDoBrowserBypassNavigation),
         isPromoShown = useSelector(mapIsPromoShown),
         [songSelectTimeoutId, setSongSelectTimeoutId] = useState(-1),
         [didMount, setDidMount] = useState(false)
@@ -77,10 +80,12 @@ const SongChangeManager = () => {
 
                     /**
                      * If promo is shown, we want any song change to bypass
-                     * navigation.
+                     * navigation. Also bypass navigation if song changed from
+                     * browser navigation.
                      */
-                    bypassNavigation: isPromoShown,
+                    bypassNavigation: doBrowserBypassNavigation || isPromoShown,
                 }))
+                dispatch(updateSelectedStore({ bypassNavigation: false }))
 
                 // Scroll upon completion of subsequent song changes.
                 dispatch(scrollCarouselForSongSelect())

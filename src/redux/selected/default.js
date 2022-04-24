@@ -11,5 +11,6 @@ export const getSelectedDefaults = ({
         selectedVerseIndex: initialVerseIndex,
         selectedAnnotationIndex: initialAnnotationIndex,
         isSelectedLogue: getSongIsLogue(initialSongIndex),
+        doBrowserBypassNavigation: false,
     },
 })

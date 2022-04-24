@@ -1,5 +1,4 @@
 # Navigation refactor notes
-* Don't manually push after browser back if not in promo
 * Promo link links to first page (this fixes a bug)
 * Make title of pitch the helmet title
 * Helmet should get promo page in album
@@ -28,5 +27,7 @@
 * When album song or verse is changed during promo (/)
     * It is *not* recorded in history (/)
     * Song, annotation, and verse *is* pushed to history once promo is closed (/)
+
+* Confirm that playing still works
 
 * All works for promo session as well
