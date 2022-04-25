@@ -122,7 +122,7 @@ export default {
                                             anchor: `crust punks`,
                                             wiki: `Gutter_punk`,
                                         },
-                                        `who were friends of Ana's. Every so often, half of us would go out to pilfer groceries, while the other half would cook whatever was brought back into a meal for all to share. I was always in the thieving group.`,
+                                        `who were friends of Ana's. Every so often, half of us would go out to pilfer groceries, while the other half would cook whatever was brought back into a meal for all to share. I was in the thieving group.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -229,7 +229,12 @@ export default {
                             anchor: `punks tryst,`,
                             card: {
                                 description: [
-                                    `At the time, I wore baseball tees and was still baby-faced enough to be mistaken for a middle schooler. Tristan, one of the crust punks in the thieving group, liked our ragtag look and referred to us as the`,
+                                    `At the time, I wore`,
+                                    {
+                                        anchor: `baseball tees`,
+                                        wiki: `Raglan_sleeve`,
+                                    },
+                                    `and was still baby-faced enough to be mistaken for a middle schooler. Tristan, one of the punks in the thieving group, liked our mismatched look and referred to us as the`,
                                     {
                                         anchor: `Young Ones`,
                                         wiki: `The_Young_Ones_(TV_series)`,
@@ -581,7 +586,7 @@ export default {
                         {
                             anchor: `have her for your pet`,
                             card: {
-                                description: `Sita's manner of prostrating herself forced me to wield an absolute power I never asked for, which exasperated me to no end. But its endearing nature was also guaranteed to make me love her, the way one necessarily loves a pet. So I never doubted the impending breakup would be equally wrenching for both of us.`,
+                                description: `Sita's manner of prostrating herself like a pet forced me to wield an absolute power that I never asked for, and this exasperated me to no end. But its endearing nature was also guaranteed to make me love her, which I did. So I never doubted the impending breakup would be equally wrenching for both of us.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -869,12 +874,12 @@ export default {
                             isItalic: true,
                             lyric: `Yearling's Bobtail`,
                         },
-                        `was rejected by every last indie label, I got so depressed I went on a months-long bender. Eventually I kept a box of wine by my bed to calm my nerves in the middle of the night. One day upon skipping my morning beers, I sensed my bedroom walls conspiring to attack me. I learned this was the first stage of`,
+                        `was rejected by every last indie label, I got so depressed that I went on a months-long bender. Eventually I kept a box of wine by my bed to calm my nerves in the middle of the night. One day upon skipping my morning beers, I sensed my bedroom walls conspiring to attack me. I learned that this was the onset of`,
                         {
                             anchor: `delirium tremens`,
                             wiki: `Delirium_tremens`,
                         },
-                        `and started to attend`,
+                        `and started attending`,
                         {
                             anchor: `Alcoholics Anonymous`,
                             wiki: `Alcoholics_Anonymous`,

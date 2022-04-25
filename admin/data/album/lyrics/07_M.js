@@ -211,7 +211,7 @@ export default {
                             anchor: `No minutiae left unmastered`,
                             card: {
                                 description: [
-                                    `Though my goal was to be well versed in every important subject, I got the most satisfaction from showing off a random skill with seeming nonchalance. So I made sure to set aside time for purely fanciful pursuits like learning to solve a`,
+                                    `Though my goal was to be well versed in every important subject matter, I got the most satisfaction from showing off a random skill with seeming nonchalance. So I made sure to set aside time for purely fanciful pursuits like learning to solve a`,
                                     {
                                         anchor: `Rubik's Cube`,
                                         wiki: `Rubik's_Cube`,
@@ -607,16 +607,14 @@ export default {
                         `In a`,
                         {
                             anchor: `time capsule`,
-                            todo: true,
-                            // TODO: Mention that future audience is the only one I have.
                             card: {
                                 description: [
-                                    `In my dejected state, I could only envision my next five-year plan as a`,
+                                    `In my dejection, I could only envision my next five-year plan as a`,
                                     {
                                         anchor: `time capsule`,
                                         wiki: `Time_capsule`,
                                     },
-                                    `for storing my grievances, to be discovered by a sympathetic future audience.`,
+                                    `in which to bury hopes that might one day be rediscovered by a sympathetic audience.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -639,7 +637,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `There was a comfort in having all my priorities settled in advance by the five-year plan. Since I always knew with certainty the right course of action, I could undertake it with conviction. I was like a`,
+                                        `There was a comfort in having all my priorities settled in advance by a five-year plan. Since I always knew with certainty the right course of action, I could undertake it with conviction. I was like a`,
                                         {
                                             anchor: `marionette`,
                                             wiki: `Marionette`,
@@ -690,7 +688,7 @@ export default {
                         {
                             anchor: `solely for a pet`,
                             card: {
-                                description: `After Mara started dating Jacob, she continued to interact with me in the same manner, which made me realize that I'd misread her intentions all along. In retrospect, I was so unused to being treated with respect that it felt like being flirted with.`,
+                                description: `After Mara started dating Jacob, she continued to interact with me in the same manner, which made me realize that I'd misread her intentions all along. In retrospect, I was so unused to being treated with genial regard that it felt like being flirted with.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -853,10 +851,8 @@ export default {
                         `But then I saw the`,
                         {
                             anchor: `world's a naked baby`,
-                            // TODO: When finishing this one, make sure they all tie together. More about the fact that there's no hidden agenda, no one's out to get me.
-                            todo: true,
                             card: {
-                                description: `But at some point, I realized that a social circle is just like the world at large. It too is no more than the net result of everyone involved just doing what they do by nature. Nothing is hidden from view, and any social situation can be understood by observing its various interactions, no less than a holistic picture of the world begins to emerge after reading books on various subject matters.`,
+                                description: `But at some point, I realized that a social scene isn't any different from the world at large. Nothing is hidden from view, and any situation can be understood by observing its various interactions, no less than a holistic picture of the world can be pieced together by reading books on various subject matters.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -879,7 +875,8 @@ export default {
                         {
                             anchor: `to have a merry ol' laugh`,
                             card: {
-                                description: `Or, to have a "Mara, you'll" laugh. After all, if the world is as guileless and unwitting as a newborn, then it makes no sense to get upset when it makes a mess of things.`,
+
+                                description: `Or, to have a "Mara, you'll" laugh. In other words, everyone just does what they'll do, and the world is no more than the net result of all that. There's no hidden agenda, which means I can only react with good humor if the world gets in the way of what I intended.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [PUN]: true,
@@ -913,7 +910,7 @@ export default {
                         {
                             anchor: `boy who's to love her baby`,
                             card: {
-                                description: `And if a woman's list of ideal traits in a man includes what kind of father he'll be to her child, then she's likely to judge him by how he treats the world at large.`,
+                                description: `In short, the world is as guileless and unwitting as a newborn infant. So if a woman's list of ideal traits in a man includes what kind of father he'll be to her child, then she's likely to judge him by how he treats the world at large.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -948,7 +945,7 @@ export default {
                         {
                             anchor: `be alert`,
                             card: {
-                                description: `In short, it was no mystery why the situation with Mara had transpired the way it had. I found this thought to be empowering, because it meant that the Maras of the world were still attainable. It was just on me to understand what they wanted. And once I knew, I could build myself up to be exactly that.`,
+                                description: `There was no mystery why the situation with Mara transpired as it had. It was my fault for being caught off guard. I found this thought empowering, because it meant that the Maras of the world were still attainable. It was just on me to understand what they wanted. And then I could build myself up to be exactly that.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -971,7 +968,7 @@ export default {
                         {
                             anchor: `friends have to lie`,
                             card: {
-                                description: `But I couldn't rely on my friends to tell me the truth. As dear as they were to me, each one had their own agenda.`,
+                                description: `But I couldn't rely on my friends to be truthful about what I had to offer. As dear as I was to them, they each had their own neck to protect.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
