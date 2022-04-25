@@ -690,7 +690,7 @@ export default {
                         {
                             anchor: `solely for a pet`,
                             card: {
-                                description: `After Mara started dating Jacob, she continued to interact with me in the same manner, which made me realize that I'd misread her intentions all along. Being treated with respect isn't the same as being flirted with. I get this now. But at the time, I was so unfamiliar with the former that I mistook it for the latter.`,
+                                description: `After Mara started dating Jacob, she continued to interact with me in the same manner, which made me realize that I'd misread her intentions all along. In retrospect, I was so unused to being treated with respect that it felt like being flirted with.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -853,6 +853,7 @@ export default {
                         `But then I saw the`,
                         {
                             anchor: `world's a naked baby`,
+                            // TODO: When finishing this one, make sure they all tie together.
                             todo: true,
                             card: {
                                 description: `But at some point, I realized that a social circle is just like the world at large. It too is just the sum total of everyone involved, doing what they do by nature. Nothing is hidden from view, and any social situation can be understood by studying its various interactions, no less than a holistic picture of the world begins to emerge after reading books on every subject matter.`,
