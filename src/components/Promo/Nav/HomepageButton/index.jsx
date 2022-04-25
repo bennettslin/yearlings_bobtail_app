@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useDispatch, useSelector } from 'react-redux'
 import Button from '../../../Button'
@@ -7,7 +8,7 @@ import { resetPromo } from '../../../../redux/promo/action'
 import { PROMO_TOGGLE_KEY } from '../../../../constants/access'
 import { PROMO_PAGE_BUTTON_KEY } from '../../../../constants/buttons'
 
-const HomepageButton = () => {
+const HomepageButton = ({ isSelected }) => {
     const
         dispatch = useDispatch(),
         isPhoneWidth = useSelector(mapIsPhoneWidth)
@@ -30,9 +31,14 @@ const HomepageButton = () => {
                 ...!isPhoneWidth && {
                     buttonTitle: 'back to promo homepage',
                 },
+                isSelectedDisabled: isSelected,
             }}
         />
     )
+}
+
+HomepageButton.propTypes = {
+    isSelected: PropTypes.bool.isRequired,
 }
 
 export default HomepageButton

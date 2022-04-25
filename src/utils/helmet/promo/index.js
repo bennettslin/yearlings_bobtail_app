@@ -9,7 +9,6 @@ import { getPromoUrl, getUrl } from '../../../helpers/url'
 import { APP_NAME } from '../../server'
 
 export const getPromoMetaTitle = (promoKey, pitchIndex) => {
-    console.log(getTitleForSlide(promoKey, pitchIndex), 'here')
     const promoTitle = getTitleForPromo(promoKey, true)
     return (
         PITCH_KEYS.includes(promoKey) ?

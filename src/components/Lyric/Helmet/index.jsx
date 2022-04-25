@@ -5,12 +5,13 @@ import getSongServerClientHoc from '../../../hocs/SongHoc'
 import { getMetaTags, getMetaTitle } from '../../../utils/helmet'
 import { useSelector } from 'react-redux'
 import { mapIsPromoShown } from '../../../redux/toggle/selector'
-import { mapSelectedPromoKey } from '../../../redux/promo/selector'
+import { mapSelectedPitchSlideIndex, mapSelectedPromoKey } from '../../../redux/promo/selector'
 
 const LyricHelmet = ({ serverClientSongIndex }) => {
     const
         isPromoShown = useSelector(mapIsPromoShown),
-        selectedPromoKey = useSelector(mapSelectedPromoKey)
+        selectedPromoKey = useSelector(mapSelectedPromoKey),
+        pitchSlideIndex = useSelector(mapSelectedPitchSlideIndex)
 
     return (
         <Helmet>
@@ -19,12 +20,14 @@ const LyricHelmet = ({ serverClientSongIndex }) => {
                     doShowPromo: isPromoShown,
                     songIndex: serverClientSongIndex,
                     promoKey: selectedPromoKey,
+                    pitchIndex: pitchSlideIndex,
                 })}
             </title>
             {getMetaTags({
                 doShowPromo: isPromoShown,
                 songIndex: serverClientSongIndex,
                 promoKey: selectedPromoKey,
+                pitchIndex: pitchSlideIndex,
             }).map(({
                 name,
                 property,

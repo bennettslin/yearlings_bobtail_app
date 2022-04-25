@@ -26,9 +26,11 @@ const PromoNav = ({ serverClientPromoKey }) => (
         ) : (
             <Contact isTextShadowLight />
         )}
-        {!getIsPromoHomepage(serverClientPromoKey) && (
-            <HomepageButton />
-        )}
+        <HomepageButton
+            {...{
+                isSelected: getIsPromoHomepage(serverClientPromoKey),
+            }}
+        />
     </div>
 )
 

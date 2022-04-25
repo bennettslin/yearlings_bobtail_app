@@ -853,10 +853,10 @@ export default {
                         `But then I saw the`,
                         {
                             anchor: `world's a naked baby`,
-                            // TODO: When finishing this one, make sure they all tie together.
+                            // TODO: When finishing this one, make sure they all tie together. More about the fact that there's no hidden agenda, no one's out to get me.
                             todo: true,
                             card: {
-                                description: `But at some point, I realized that a social circle is just like the world at large. It too is just the sum total of everyone involved, doing what they do by nature. Nothing is hidden from view, and any social situation can be understood by studying its various interactions, no less than a holistic picture of the world begins to emerge after reading books on every subject matter.`,
+                                description: `But at some point, I realized that a social circle is just like the world at large. It too is no more than the net result of everyone involved just doing what they do by nature. Nothing is hidden from view, and any social situation can be understood by observing its various interactions, no less than a holistic picture of the world begins to emerge after reading books on various subject matters.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
