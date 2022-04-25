@@ -1,0 +1,23 @@
+@import '../../../../scss/constants/colour';
+
+.house {
+    .Button__promoHomepage
+    & {
+        fill: $colour__buttonTextSelect__dark;
+    }
+
+    .Button__promoHomepage.Button__enabled
+    & {
+        fill: $colour__buttonText__dark;
+    }
+
+    .Button__promoHomepage.Button__enabled:hover
+    & {
+        fill: $colour__buttonTextHover__dark;
+    }
+
+    .Button__promoHomepage.Button__enabled:active
+    & {
+        fill: $colour__buttonTextActive__dark;
+    }
+}

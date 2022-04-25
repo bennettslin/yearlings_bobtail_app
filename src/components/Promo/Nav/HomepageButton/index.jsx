@@ -1,17 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import Button from '../../../Button'
-import { mapIsPhoneWidth } from '../../../../redux/device/selector'
 import { resetPromo } from '../../../../redux/promo/action'
 import { PROMO_TOGGLE_KEY } from '../../../../constants/access'
 import { PROMO_PAGE_BUTTON_KEY } from '../../../../constants/buttons'
+import './style'
 
 const HomepageButton = ({ isSelected }) => {
-    const
-        dispatch = useDispatch(),
-        isPhoneWidth = useSelector(mapIsPhoneWidth)
+    const dispatch = useDispatch()
 
     const handleButtonClick = () => {
         dispatch(resetPromo())
@@ -28,9 +26,10 @@ const HomepageButton = ({ isSelected }) => {
                 accessKey: PROMO_TOGGLE_KEY,
                 handleButtonClick,
 
-                ...!isPhoneWidth && {
-                    buttonTitle: 'back to promo homepage',
-                },
+                // TODO: Removing text for now.
+                // ...!isPhoneWidth && {
+                //     buttonTitle: 'back to promo homepage',
+                // },
                 isSelectedDisabled: isSelected,
             }}
         />
