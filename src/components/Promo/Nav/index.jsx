@@ -11,11 +11,11 @@ import {
 import getPromoServerClientHoc from '../../../hocs/PromoHoc'
 import './style'
 
-const PromoFooter = ({ serverClientPromoKey }) => (
+const PromoNav = ({ serverClientPromoKey }) => (
     <div
         {...{
             className: cx(
-                'PromoFooter',
+                'PromoNav',
                 'promo__child',
                 'fCC',
             ),
@@ -32,8 +32,8 @@ const PromoFooter = ({ serverClientPromoKey }) => (
     </div>
 )
 
-PromoFooter.propTypes = {
+PromoNav.propTypes = {
     serverClientPromoKey: PropTypes.string.isRequired,
 }
 
-export default getPromoServerClientHoc(PromoFooter)
+export default getPromoServerClientHoc(PromoNav)

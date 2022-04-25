@@ -16,7 +16,7 @@ export const getPathForSlide = (pitchKey, pitchSlideIndex) => (
 )
 
 export const getTitleForSlide = (pitchKey, pitchSlideIndex) => (
-    getSlides(pitchKey)[pitchSlideIndex - 1].title
+    getSlides(pitchKey)[pitchSlideIndex - 1]?.title
 )
 
 export const getBodyForSlide = (pitchKey, pitchSlideIndex) => (

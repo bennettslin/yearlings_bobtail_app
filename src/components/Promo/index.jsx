@@ -4,7 +4,7 @@ import PagePitchIndexContext from '../../contexts/PagePitchIndex'
 import PagePromoKeyContext from '../../contexts/PagePromoKey'
 import PromoHelmet from './Helmet'
 import PromoScroll from './Scroll'
-import PromoFooter from './Footer'
+import PromoNav from './Nav'
 import './style'
 
 const Promo = forwardRef(({
@@ -17,8 +17,8 @@ const Promo = forwardRef(({
     <PagePitchIndexContext.Provider {...{ value: pagePitchIndex }}>
         <PagePromoKeyContext.Provider {...{ value: pagePromoKey }}>
             <PromoHelmet {...{ isPromoPage }} />
+            <PromoNav />
             <PromoScroll {...{ ref, handlePageChange }} />
-            <PromoFooter />
         </PagePromoKeyContext.Provider>
     </PagePitchIndexContext.Provider>
 ))
