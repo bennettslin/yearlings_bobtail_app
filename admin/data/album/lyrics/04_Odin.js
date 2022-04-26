@@ -155,7 +155,7 @@ export default {
                                         anchor: `kosher`,
                                         wiki: `Kashrut`,
                                     },
-                                    `. In Sasha's world, certain everyday foods weren't meant to be eaten. It could also be inferred that certain boys in her everyday life weren't meant to be dated.`,
+                                    `. In Sasha's world, certain everyday foods weren't meant to be eaten. And so it could also be inferred that certain boys in her everyday life weren't meant to be dated.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -248,7 +248,7 @@ export default {
                                         anchor: `pastels`,
                                         wiki: `Pastel`,
                                     },
-                                    `as a gift. They were more powdery than crayons and thus ran out quickly. By the end of our trip, I had to make do with the least used colors. Similarly, being in Taiwan kept me in a perpetual state of discomfort, as I was forced to rely on underused skills like speaking Taiwanese.`,
+                                    `as a gift. They were more powdery than crayons and thus ran out quickly. By the end of our trip, I had to make do with the least used colors. Which is a fitting metaphor for my overall state of discomfort throughout the trip, since I was forced to rely on my least used skills like speaking Taiwanese.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -443,7 +443,7 @@ export default {
                                         anchor: `Styx`,
                                         wiki: `Styx`,
                                     },
-                                    `separates the realm of the living from the underworld. In my grandmother's house at night, the stairs leading down to the first floor were similarly foreboding.`,
+                                    `separates the realm of the living from the underworld. In my grandmother's house at night, the stairs leading down to the first floor seemed just as foreboding.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -498,7 +498,7 @@ export default {
                                         anchor: `gay community`,
                                         wiki: `LGBT_community`,
                                     },
-                                    `. The latter tactic always made more sense to me.`,
+                                    `. The latter approach always made more sense to me.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -681,7 +681,7 @@ export default {
                                         anchor: `Ishmael`,
                                         wiki: `Ishmael`,
                                     },
-                                    `. While the latter was banished to the desert, the former wanders the wilderness of the ocean. It is to these metaphorical dunes of the ocean that I now flee as well.`,
+                                    `. While the latter was banished to the desert, the former wanders the wilderness of the ocean. It's to these metaphorical dunes of the ocean that I now flee as well.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -711,7 +711,7 @@ export default {
                             anchor: `safe for a heathen`,
                             card: {
                                 description: [
-                                    `Being an illegitimate son, Ishmael was not to inherit the house of`,
+                                    `Being an illegitimate son, Ishmael wasn't to inherit the house of`,
                                     {
                                         anchor: `Abraham`,
                                         wiki: `Abraham`,
@@ -1099,7 +1099,6 @@ export default {
                         `Your`,
                         {
                             anchor: `seizures of spleen`,
-                            todo: true,
                             card: {
                                 description: [
                                     `In`,
@@ -1107,7 +1106,7 @@ export default {
                                         anchor: `Hippocratic medicine`,
                                         wiki: `Humorism`,
                                     },
-                                    `, the spleen was thought to secrete black bile, the humor that induces melancholy. In modern parlance, however, the spleen is associated with a foul temper. The expressions of resentment toward the bullies that I confided to Sasha were both sad and bitter in nature.`,
+                                    `, the spleen was thought to induce melancholy. But in modern speech, it's associated with spite. I suppose my resentment toward the bullies had a bit of both.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -1203,7 +1202,7 @@ export default {
                             anchor: `cellophane sylph`,
                             cards: [
                                 {
-                                    description: `Like cellophane, Sasha's intentions were transparent. I could always count on her to sympathize during my bouts of frustration.`,
+                                    description: `Like cellophane, Sasha's intentions were transparent. I could always count on her to sympathize with my anger toward the bullies.`,
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                     },
@@ -1245,10 +1244,8 @@ export default {
                     lyricRight: [
                         {
                             anchor: `didn't impart warmth`,
-                            // TODO: There was a limit to how much…
-                            todo: true,
                             card: {
-                                description: `But also like cellophane, Sasha couldn't reflect warmth where none was present. If I couldn't be the better person in dealing with the bullies, then there came a point where she needed to keep her distance from me as well.`,
+                                description: `But also like cellophane, Sasha couldn't reflect warmth where none was present. If I couldn't be the better person in dealing with the bullies, then there came a point when she would need to keep her distance from me as well.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -1262,7 +1259,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `Recording vocals in doublespeaker rhyme proved to be trickier than expected. When singing, we tend to delay or shorten syllables to adjust for phrasing and consonant clusters. So even when each voice in a doublespeaker set sounded fine on its own, the disjointed syllables would meld into a jumbled mush once heard together. To keep them in perfect sync, I ended up devising a system of notation that looked like medieval`,
+                        `Recording vocals in doublespeaker rhyme proved to be trickier than expected. When singing, we tend to shorten or elongate syllables to adjust for phrasing and consonant clusters. And so the two voices would sound disjointed once heard together. To perform the syllables in perfect sync, I ended up devising a system of notation that looked like medieval`,
                         {
                             anchor: `ligature`,
                             wiki: `Ligature_(music)`,
@@ -1287,7 +1284,7 @@ export default {
                         {
                             anchor: `Buoy bobs`,
                             card: {
-                                description: `As buoys bob in an ocean filled with sea serpents, who's to say that this "boy" isn't also bobbing through life, oblivious to dangers lurking everywhere?`,
+                                description: `In my dream, I see myself adrift on a buoy as it bobs in an ocean filled with sea serpents. But who's to say that this "boy" isn't also bobbing through life, oblivious to dangers lurking everywhere?`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -1383,12 +1380,12 @@ export default {
                             anchor: `silhouettes of torn rides`,
                             card: {
                                 description: [
-                                    `Watching the waves of the ocean rise and fall, I recall the`,
+                                    `Watching the waves rise and fall in the ocean, I recall the`,
                                     {
                                         anchor: `traveling carnivals`,
                                         wiki: `Traveling_carnival`,
                                     },
-                                    `that came to town in my youth. Every summer, their amusement rides would rise up to reshape the skyline. And yet, they are now being dissembled in my memories with the transience of ocean waves.`,
+                                    `that came to town in my youth. Every summer, their amusement rides would rise up to reshape the skyline. And yet, they're now being dissembled in my memories with the transience of ocean waves.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1460,7 +1457,7 @@ export default {
                                         anchor: `reincarnation`,
                                         wiki: `Reincarnation`,
                                     },
-                                    `, but I found this thought even more dreadful. It wasn't just dying that frightened me; it was a lifetime of hurtling toward death. What reincarnation offered was another round of the same.`,
+                                    `, but this only filled me with greater dread. It wasn't just death that frightened me; it was a lifetime of hurtling toward it. All that reincarnation offered was more rounds of the same.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -1585,7 +1582,7 @@ export default {
                                         anchor: `Aesop's fable`,
                                         wiki: `Aesop's_Fables`,
                                     },
-                                    `, but only because the hare falls asleep. Similarly, while tortoises are known to live for over a century, I had them beat in longevity if I could just will myself to believe it.`,
+                                    `, but only because the hare falls asleep. Similarly, while tortoises live for over a century, I had them beat in longevity so long as I didn't sleep on choosing the right faith.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1746,7 +1743,7 @@ export default {
                                         anchor: `The Love Song of J. Alfred Prufrock`,
                                         wiki: `The_Love_Song_of_J._Alfred_Prufrock`,
                                     },
-                                    `" examines themes of stunted growth and missed opportunities. The narrator of the poem bemoans that while the mermaids may sing, they don't sing for him. Similarly, while my resignation has turned the fearsome sea serpents into smiling mermaids, they still don't smile for me.`,
+                                    `" examines themes of stunted growth and missed opportunities. The narrator of the poem bemoans that while the mermaids may sing, they don't sing for him. Likewise, while my resignation has turned the fearsome sea serpents into smiling mermaids, they still don't smile for me.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1865,7 +1862,7 @@ export default {
                             isItalic: true,
                             lyric: `Yearling's Bobtail`,
                         },
-                        `wouldn't get any attention from the indie press, I moved to`,
+                        `wouldn't get any attention from the music press, I moved to`,
                         {
                             anchor: `New York City`,
                             wiki: `New_York_City`,

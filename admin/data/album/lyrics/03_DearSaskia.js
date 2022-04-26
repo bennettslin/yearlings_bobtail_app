@@ -30,7 +30,7 @@ export default {
     playerStartTime: 384.329,
     // This is a magic number adjusted by ear. In the mix, it's actually 44.96.
     mixSamplingFrequency: 45.39,
-    overview: `Sasha was a childhood friend as well as my first crush. The strength she drew from her Jewish identity fascinated me, but it also clued me in on a cruel paradox. Namely, that no good comes from longing to share in someone's faith and roots, which stay strong precisely by not being shared. Sasha moved away during middle school at the peak of my troubles with bullies. That summer, I wrote her a letter on a family trip to Taiwan.`,
+    overview: `Sasha was a childhood friend as well as my first crush. The strength she drew from her Jewish identity fascinated me, but it also clued me in on a cruel paradox. Namely, that no good comes from longing to share in someone's faith and roots, which stay strong precisely by not being shared. Sasha moved away during middle school at the peak of my struggles with bullies. That summer, I wrote her a letter on a family trip to Taiwan.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -66,7 +66,7 @@ export default {
                             anchor: `Beatles`,
                             wiki: `The_Beatles`,
                         },
-                        `weaved melodies into chord progressions so seamlessly. The music for this song came about from those efforts. But it felt so labored, and all my fixes made it worse, so I put it away. Years later, I realized that music labored to death was exactly what a song about an overwrought letter to Sasha called for.`,
+                        `weaved melodies into chords so seamlessly. The music for this song initially came about from that study. But it sounded too labored, and all my fixes made it worse, so I put it away. Years later, I realized that music labored to death was exactly what a song about an overwrought letter to Sasha called for.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -150,7 +150,7 @@ export default {
                         {
                             anchor: `You'd love Taiwan`,
                             card: {
-                                description: `During a tour of the Taiwanese countryside with my cousins, I mentally noted all the things I could show to Sasha one day. I'm not sure it had to do with any pride in my heritage. I just thought I had something to gain by sharing it with someone else.`,
+                                description: `During a tour of the Taiwanese countryside with my cousins, I mentally noted all the things I could show to Sasha one day. I'm not sure it had to do with pride in my heritage. I just liked the idea of having something to share with someone else.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -175,7 +175,7 @@ export default {
                         {
                             anchor: `giant's house`,
                             card: {
-                                description: `My most vivid memory of that trip was standing in the middle of a lush valley. The ground around us was entirely level, the enclosing mountains were nearly vertical, and their peaks disappeared into a translucent blanket of clouds stretched across the sky. I felt like a tiny guest in a giant house.`,
+                                description: `In my most vivid memory from that trip, we stood in the middle of a lush valley. The ground around us was entirely level, the enclosing mountains rose nearly vertically, and their peaks disappeared into a translucent blanket of clouds stretched across the sky. I felt like a tiny guest in a giant house.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -202,7 +202,7 @@ export default {
                         {
                             anchor: `keep your kid name`,
                             card: {
-                                description: `Sasha decided that in Boston she would go by her given name of Saskia. I asked if I should start calling her Saskia now as well. She said no, since it would be nice to be reminded of which friends knew her first.`,
+                                description: `Sasha decided that in Boston she would go by her given name of Saskia. I asked if I should start calling her Saskia now as well. She said no, since it would be nice to have a reminder of which friends knew her first.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -218,7 +218,7 @@ export default {
                         {
                             anchor: `your embrace`,
                             card: {
-                                description: `But it's no comfort to be cherished as an old friend by someone so visibly eager to dive into the new. As we hugged on the last day of school, Sasha was just about ready to slough off her old skin and scamper away.`,
+                                description: `But it's no comfort to be cherished as an old friend by someone so visibly eager to dive into the new. As we hugged on the last day of school, Sasha was just about ready to throw off her old skin and scamper away.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -230,7 +230,7 @@ export default {
                             anchor: `prepped to shed`,
                             card: {
                                 description: [
-                                    `Sasha is prepped in more than once sense, as she's preparing to begin enrollment at a`,
+                                    `Sasha is prepped in more than one sense, since she's preparing to begin enrollment at a`,
                                     {
                                         anchor: `preparatory school`,
                                         wiki: `College-preparatory_school`,
@@ -272,7 +272,7 @@ export default {
                                         anchor: `amber`,
                                         wiki: `Amber`,
                                     },
-                                    `can also refer to fossilized tree resin, which preserves the remains of trapped insects from epochs past.`,
+                                    `also refers to fossilized tree resin, which can preserve the remains of trapped insects from epochs past.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -353,7 +353,7 @@ export default {
                         {
                             anchor: `I would have too`,
                             card: {
-                                description: `Because if Sasha were to want me, then of course I would convert to Judaism. It made no sense to be loyal to my own cultural identity, which I had no hand in deciding.`,
+                                description: `Yet if Sasha were to want me, then of course I would convert to Judaism. It made no sense to be loyal to my own cultural identity, which I had no hand in deciding.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -435,12 +435,12 @@ export default {
                             anchor: `bus seat`,
                             card: {
                                 description: [
-                                    `My family lived in the racially diverse, working-class neighborhood of`,
+                                    `My family lived in`,
                                     {
                                         anchor: `North Hollywood`,
                                         wiki: `North_Hollywood,_Los_Angeles`,
                                     },
-                                    `. Halfway through elementary school, my mother devised a ruse that allowed my sister and I to bus into`,
+                                    `, a racially diverse and working-class neighborhood. Halfway through elementary school, my mother devised a ruse that allowed my sister and I to bus into`,
                                     {
                                         anchor: `Sherman Oaks`,
                                         wiki: `Sherman_Oaks,_Los_Angeles`,
@@ -506,7 +506,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `As I continue writing the letter, I also recall an incident where Sasha came to my rescue after some bullies had tied me to a "`,
+                                        `As I continue to write this letter, I recall an incident when Sasha came to my rescue after some bullies had tied me to a "`,
                                         {
                                             anchor: `tetherball`,
                                             wiki: `Tetherball`,
@@ -551,7 +551,7 @@ export default {
                         {
                             anchor: `anarchy reigns`,
                             card: {
-                                description: `It was weird to be taught in history class that anarchy devolves into tyranny, and then to wander onto the quad and witness this very phenomenon in action.`,
+                                description: `It was weird to be taught in history class that anarchy devolves into tyranny, and then to wander the quad and witness this very phenomenon in action.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -594,7 +594,7 @@ export default {
                                         isItalic: true,
                                         lyric: `be`,
                                     },
-                                    `" boys, but one naturally follows the other. It surprised me when school aides declined to intervene on behalf of the victims of bullying, as if such predation were healthy to the middle school ecosystem.`,
+                                    `" boys, but the one naturally follows the other. It surprised me when school aides declined to intervene on behalf of the victims of bullying, as if such predation were healthy to the middle school ecosystem.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -623,7 +623,7 @@ export default {
                         {
                             anchor: `jaw was stuck`,
                             card: {
-                                description: `Here, I refer to another incident where a bully snuck up from behind and put me in a chokehold as I waited for the school bus.`,
+                                description: `Here, I refer to another incident when a bully snuck up from behind and put me in a chokehold as I waited for the school bus.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -683,7 +683,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: `Back in the day, I noticed that every other band would write songs by coming up with the chords up front, then layering a vocal melody on top. But my theory was that the Beatles wrote the melody and chords together, so I aimed to do the same. I was always happiest with results like the chorus here, where the music meanders for a stretch rather than repeating every four measures. Such songs are never fan favorites, but they're the hardest to write, which was satisfying.`,
+                    description: `It's easy to write songs by playing a four-chord loop, then layering a melody on top. But my theory was that the Beatles wrote the melody and chords together at once, so I aimed to do the same. I was always happiest with results like the chorus here, where the music meanders for a long stretch without repeating.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
@@ -731,7 +731,7 @@ export default {
                                         anchor: `playing possum`,
                                         wiki: `Apparent_death`,
                                     },
-                                    `. Similarly, as I lament to Sasha here, my only recourse in the coming years is to stay unresponsive to threats and hope for the best.`,
+                                    `. Similarly, my only recourse in the coming years is to stay unresponsive to threats and hope for the best.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -773,7 +773,7 @@ export default {
                         {
                             anchor: `rat turds choked`,
                             card: {
-                                description: `I wasn't sure how to end a song about a painful stage of my life that now seems comical in retrospect. I decided to err on the side of humor.`,
+                                description: `I wasn't sure how to end a song about a painful stage in my life that now seems comical in retrospect. I decided to err on the side of humor.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [SONGCRAFT]: true,
@@ -787,7 +787,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: `While the first chorus of this song is grounded in the key of C, the second chorus collapses under the weight of my despondence and settles into the key of B\u2011flat, a whole step lower. But now, as I commit to powering through the coming semester, this third and final chorus rises up a half step to the key of D\u2011flat.`,
+                    description: `While the first chorus of this song is grounded in the key of C, the second chorus collapses under the weight of my despondence and settles into the key of B\u2011flat, a whole step lower. But now as I commit to powering through the coming semester, this third and final chorus rises up a half step to the key of D\u2011flat.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
@@ -810,7 +810,7 @@ export default {
                             isItalic: true,
                             lyric: `Bobtail Method`,
                         },
-                        `that distilled all the wisdom I'd gathered over the years about combining chords and melodies. My hope was that this would help me be taken seriously. Unfortunately, the promo copies I sent out were met with the same radio silence. I'll still release`,
+                        `that distills all the wisdom I'd gathered over the years from studying the Beatles. My hope was that this would finally get me taken seriously. Unfortunately, the promo copies I sent out were met with the same radio silence. I'll still release`,
                         {
                             isItalic: true,
                             lyric: `Bobtail Method`,
