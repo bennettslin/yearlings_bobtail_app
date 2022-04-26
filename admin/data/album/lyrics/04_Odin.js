@@ -1106,7 +1106,7 @@ export default {
                                         anchor: `Hippocratic medicine`,
                                         wiki: `Humorism`,
                                     },
-                                    `, the spleen was thought to induce melancholy. But in modern speech, it's associated with spite. I suppose my resentment toward the bullies had a bit of both.`,
+                                    `, the spleen was thought to induce melancholy. But in modern speech, it's a symbol of malice. I suppose my resentment toward the bullies had a bit of both.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
