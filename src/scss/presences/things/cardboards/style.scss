@@ -13,46 +13,6 @@
     .tongue { fill: hsl(323, 38%, 65%); }
 }
 
-.posterMaraMemento {
-    .frame { fill: hsl(0, 17%, 21%); }
-    .outline { fill: hsl(28, 15%, 53%); }
-    .shirt { fill: hsl(55, 33%, 67%); }
-    .collar { fill: hsl(61, 32%, 59%); }
-    .photoFrame { fill: hsl(56, 25%, 89%); }
-}
-
-.marqueeFrame {
-    .frame { fill: hsl(5, 73%, 58%); }
-    .bulbOuter { fill: hsl(57, 71%, 58%); }
-    .bulbInner { fill: hsl(55, 20%, 87%); }
-}
-
-.albumNas {
-    .skinBlack { fill: hsla(28, 29%, 50%, 0.7); }
-    .hairBlack { fill: hsla(26, 7%, 25%, 0.7); }
-}
-
-.posterNirvana {
-    .frame { fill: hsl(194, 17%, 45%); }
-    .pants { fill: hsl(220, 7%, 25%); }
-    .shirt { fill: hsl(169, 18%, 58%); }
-    .suitInner { fill: hsl(276, 12%, 47%); }
-    .strap { fill: hsl(325, 12%, 38%); }
-    .suit { fill: hsl(272, 27%, 64%); }
-    .button { fill: hsl(71, 30%, 68%); }
-    .lapel { fill: hsl(276, 11%, 48%); }
-    .endPin { fill: hsl(176, 8%, 63%); }
-    .guitar { fill: hsl(195, 38%, 60%); }
-    .bridgeBottom { fill: hsl(177, 8%, 50%); }
-    .bridgeTop { fill: hsl(177, 12%, 66%); }
-    .pickguard { fill: hsl(179, 54%, 82%); }
-    .knob { fill: hsl(176, 18%, 66%); }
-    .pickup { fill: hsl(180, 17%, 88%); }
-    .fretboard { fill: hsl(43, 22%, 56%); }
-    .head { fill: hsl(40, 36%, 79%); }
-    .nut { fill: hsl(64, 11%, 73%); }
-}
-
 .dogsSpaceStation {
     .body { fill: hsl(43, 27%, 82%); }
     .stationTop { fill: hsl(248, 45%, 73%); }
@@ -65,4 +25,15 @@
     .panelSide { fill: hsl(191, 15%, 55%); }
     .panelFront { fill: hsl(190, 25%, 68%); }
     .bar { fill: hsl(192, 12%, 48%); }
+}
+
+.marqueeFrame {
+    .frame { fill: hsl(5, 73%, 58%); }
+    .bulbOuter { fill: hsl(57, 71%, 58%); }
+    .bulbInner { fill: hsl(55, 20%, 87%); }
+}
+
+.albumNas {
+    .skinBlack { fill: hsla(28, 29%, 50%, 0.7); }
+    .hairBlack { fill: hsla(26, 7%, 25%, 0.7); }
 }
