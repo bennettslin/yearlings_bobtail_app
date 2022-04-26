@@ -1,21 +1,21 @@
 .buildings#{$suffix} {
+    .buildingsNearest { fill: hsl(216, 23%, 45%); }
+    .buildingsNear { fill: hsl(216, 23%, 48%); }
+    .buildingsFar { fill: hsl(220, 21%, 51%); }
     .buildingsFarthest { fill: hsl(220, 19%, 54%); }
-    .buildingsFar { fill: hsl(220, 21%, 50%); }
-    .buildingsNear { fill: hsl(216, 23%, 46%); }
-    .buildingsNearest { fill: hsl(216, 23%, 42%); }
 
     .eveningTime
     &.eveningTime#{$suffix} {
-        .buildingsFarthest { fill: hsl(220, 14%, 49%); }
-        .buildingsFar { fill: hsl(220, 16%, 45%); }
-        .buildingsNear { fill: hsl(216, 18%, 41%); }
+        .buildingsNear { fill: hsl(216, 18%, 40%); }
+        .buildingsFar { fill: hsl(220, 16%, 43%); }
+        .buildingsFarthest { fill: hsl(220, 14%, 46%); }
     }
 
     .nightTime
     &.nightTime#{$suffix} {
-        .buildingsFarthest { fill: hsl(220, 9%, 44%); }
-        .buildingsFar { fill: hsl(220, 11%, 40%); }
-        .buildingsNear { fill: hsl(216, 13%, 36%); }
         .buildingsNearest { fill: hsl(216, 13%, 32%); }
+        .buildingsNear { fill: hsl(216, 13%, 36%); }
+        .buildingsFar { fill: hsl(220, 11%, 40%); }
+        .buildingsFarthest { fill: hsl(220, 9%, 44%); }
     }
 }

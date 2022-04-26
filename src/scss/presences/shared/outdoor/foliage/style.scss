@@ -151,22 +151,6 @@
         .shrubCloser { fill: hsl(80, 15%, 37%); }
     }
 
-    .winterSeason.eveningTime
-    &.winter#{$suffix}.eveningTime#{$suffix} {
-        .foliageNear {fill: hsl(195, 17%, 50%); }
-        .treeFurthest { fill: hsl(211, 19%, 46%); }
-        .treeFurther { fill: hsl(211, 19%, 48%); }
-        .treeCloser { fill: hsl(211, 19%, 51%); }
-    }
-
-    .winterSeason.nightTime
-    &.winter#{$suffix}.nightTime#{$suffix} {
-        .foliageNear {fill: hsl(195, 17%, 45%); }
-        .treeFurthest { fill: hsl(211, 19%, 41%); }
-        .treeFurther { fill: hsl(211, 19%, 43%); }
-        .treeCloser { fill: hsl(211, 19%, 46%); }
-    }
-
     .autumnSeason
     &.autumn#{$suffix} {
         .foliageNearest {fill: hsl(45, 23%, 42%); }
@@ -185,12 +169,28 @@
         .shrubCloser { fill: hsl(80, 25%, 47%); }
     }
 
+    .winterSeason.eveningTime
+    &.winter#{$suffix}.eveningTime#{$suffix} {
+        .foliageNear {fill: hsl(55, 7%, 45%); }
+        .treeFurthest { fill: hsl(41, 9%, 41%); }
+        .treeFurther { fill: hsl(41, 9%, 43%); }
+        .treeCloser { fill: hsl(41, 9%, 46%); }
+    }
+
+    .winterSeason.nightTime
+    &.winter#{$suffix}.nightTime#{$suffix} {
+        .foliageNear {fill: hsl(55, 7%, 35%); }
+        .treeFurthest { fill: hsl(41, 9%, 31%); }
+        .treeFurther { fill: hsl(41, 9%, 33%); }
+        .treeCloser { fill: hsl(41, 9%, 36%); }
+    }
+
     .winterSeason
     &.winter#{$suffix} {
-        .foliageNearest {fill: hsl(195, 18%, 51%); }
-        .foliageNear {fill: hsl(195, 17%, 55%); }
-        .treeFurthest { fill: hsl(211, 19%, 51%); }
-        .treeFurther { fill: hsl(211, 19%, 53%); }
-        .treeCloser { fill: hsl(211, 19%, 56%); }
+        .foliageNearest {fill: hsl(55, 8%, 52%); }
+        .foliageNear {fill: hsl(55, 7%, 55%); }
+        .treeFurthest { fill: hsl(41, 9%, 51%); }
+        .treeFurther { fill: hsl(41, 9%, 53%); }
+        .treeCloser { fill: hsl(41, 9%, 56%); }
     }
 }

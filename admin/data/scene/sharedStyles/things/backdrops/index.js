@@ -45,6 +45,7 @@ export default {
         BUILDINGS__SHARED,
         EVENING_TIME__SHARED,
         MOUNTAIN__SHARED,
+        WINTER__SHARED,
     ],
     [LOS_ANGELES_BACKDROP]: [
         BUILDINGS__SHARED,

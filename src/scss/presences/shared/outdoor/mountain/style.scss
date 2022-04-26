@@ -57,13 +57,22 @@
 
     .winterSeason.eveningTime
     &.winter#{$suffix}.eveningTime#{$suffix} {
+        .mountainNear { fill: hsl(222, 14%, 53%); }
+        .mountain { fill: hsl(222, 13%, 57%); }
+        .mountainFar { fill: hsl(222, 12%, 61%); }
         .meadowFar { fill: hsl(182, 18%, 59%); }
         .meadowMiddle { fill: hsl(182, 18%, 56%); }
         .meadowNear { fill: hsl(182, 18%, 53%); }
     }
 
+    .winterSeason.nightTime
+    &.winter#{$suffix}.nightTime#{$suffix} {
+        .mountain { fill: hsl(222, 8%, 47%); }
+    }
+
     .winterSeason
     &.winter#{$suffix} {
+        .mountain { fill: hsl(222, 13%, 77%); }
         .meadowFar { fill: hsl(182, 18%, 54%); }
         .meadowMiddle { fill: hsl(182, 18%, 51%); }
         .meadowNear { fill: hsl(182, 18%, 48%); }
