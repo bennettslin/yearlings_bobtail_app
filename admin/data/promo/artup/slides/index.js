@@ -5,6 +5,12 @@ export default getFormattedSlideMetadata([
         title: `Introduction`,
         body: [
             {
+                paragraph: {
+                    isItalic: true,
+                    lyric: `May 2021`,
+                },
+            },
+            {
                 paragraph: `Are you thinking to get in touch with the Bobtail Yearlings but feeling unsure about our unconventional way of doing things? Read on, and I'll convince you that we're as reasonable to bet on as any artist you've worked with before.`,
             },
         ],

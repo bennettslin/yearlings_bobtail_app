@@ -3,6 +3,12 @@ import { getFormattedSlideMetadata } from '../helpers/slide'
 export default getFormattedSlideMetadata({
     body: [
         {
+            paragraph: {
+                isItalic: true,
+                lyric: `March 2022`,
+            },
+        },
+        {
             paragraph: `Rock music is stagnating. Old music is killing new music, and it's not hard to see why. The current indie system for nurturing artists is badly in need of reform. The problem is, summoning the courage to reform is hard. We won't do it unless we catch the system betting on the wrong horses. And in today's artist-friendly culture, no artist will ever be seen as the wrong horse.`,
         },
         {

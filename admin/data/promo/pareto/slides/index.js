@@ -5,6 +5,12 @@ export default getFormattedSlideMetadata([
         title: `Introduction`,
         body: [
             {
+                paragraph: {
+                    isItalic: true,
+                    lyric: `April 2022`,
+                },
+            },
+            {
                 paragraph: [
                     `Signing the Bobtail Yearlings might seem like a risky idea. After all, we're an interdependent band that needs a record label, and the current wisdom is that labels should only sign indie bands who`,
                     {

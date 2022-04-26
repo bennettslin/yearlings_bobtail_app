@@ -234,7 +234,7 @@ export default {
                                         anchor: `baseball tees`,
                                         wiki: `Raglan_sleeve`,
                                     },
-                                    `and was still baby-faced enough to be mistaken for a middle schooler. Tristan, one of the punks in the thieving group, liked our mismatched look and referred to us as the`,
+                                    `and was still baby-faced enough to be mistaken for a middle schooler. Tristan, one of the punks in the thieving group, liked our ragtag look and referred to us as the`,
                                     {
                                         anchor: `Young Ones`,
                                         wiki: `The_Young_Ones_(TV_series)`,
