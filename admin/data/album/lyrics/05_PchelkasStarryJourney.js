@@ -86,7 +86,17 @@ export default {
                                                 wiki: `Beautiful_Losers`,
                                             },
                                         },
-                                        `, the character F. tires of getting bullied at the beach. So he signs up for the Charles Axis bodybuilding course advertised in a comic book— only to find out it's Charles Axis who bullies him. This absurd revelation sums up my mood whenever I reflect on where my own adventures in mail order ended up taking me.`,
+                                        `, the character F. tires of getting bullied at the beach. So he signs up for the Charles Axis`,
+                                        {
+                                            anchor: `bodybuilding`,
+                                            wiki: `Bodybuilding`,
+                                        },
+                                        `course advertised in a comic book— only to find out it's Charles Axis who bullies him. This absurd revelation sums up my mood whenever I reflect on where my own adventures in`,
+                                        {
+                                            anchor: `mail order`,
+                                            wiki: `Mail_order`,
+                                        },
+                                        `ended up taking me.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -207,7 +217,7 @@ export default {
                         {
                             anchor: `buy a fortress`,
                             card: {
-                                description: `Since my birthday is in November, I had the option to ask for a combined birthday and Christmas gift. I always liked to hole up somewhere and work on projects undisturbed, so one year I asked my parents for a life-size wooden fort. Unfortunately, some toys were too pricey to count for even two gifts.`,
+                                description: `Since I was born in November, I had the option to ask for a combined birthday and Christmas gift. I always liked to hole up somewhere and work on projects undisturbed, so one year I asked my parents for a life-size wooden fort. Unfortunately, some toys were too pricey to count for even two gifts.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -332,7 +342,7 @@ export default {
                         {
                             anchor: `your cape`,
                             card: {
-                                description: `I was well liked in elementary school despite being small in stature and absorbed in my art projects. Besides being harmless and unassuming, I readily drew cartoon figures for anyone who asked. But the traits that once made me a hero now marked me as easy prey in middle school, and I was ill-prepared.`,
+                                description: `I was well liked in elementary school despite being small in stature and absorbed in my art projects. Not only was I harmless and unassuming, but I readily drew cartoon figures for anyone who asked. But the traits that once made me a hero now marked me as easy prey in middle school, and I was ill-prepared.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -402,12 +412,7 @@ export default {
                                         anchor: `Charles Atlas`,
                                         wiki: `Charles_Atlas`,
                                     },
-                                    `'s free`,
-                                    {
-                                        anchor: `bodybuilding`,
-                                        wiki: `Bodybuilding`,
-                                    },
-                                    `guide.`,
+                                    `'s free bodybuilding guide.`,
                                 ],
                             },
                         },
@@ -457,7 +462,7 @@ export default {
                                         anchor: `red envelopes`,
                                         wiki: `Red_envelope`,
                                     },
-                                    `. My parents always insisted that we save this money for college. But desperate for answers, I blew all my savings on my correspondence with RI Research.`,
+                                    `. My parents always insisted that we save this money for college. But desperate for answers, I blew it all on my correspondence with RI Research.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -840,7 +845,12 @@ export default {
                                 wiki: `Genghis_Blues`,
                             },
                         },
-                        `. Within a week, I was able to sound out the main partials, which impressed her greatly. My life ever since has been all about recapturing that moment.`,
+                        `. Within a week I was able to sound out the`,
+                        {
+                            anchor: `main partials`,
+                            wiki: `Harmonic_series_(music)`,
+                        },
+                        `, which impressed her greatly. My life ever since has been all about recapturing that moment.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -1003,7 +1013,7 @@ export default {
                                         anchor: `cryptogram`,
                                         wiki: `Cryptogram`,
                                     },
-                                    `gives away fewer clues and is thus more difficult to solve. In the same vein, by not speaking or expressing emotion, I gave the bullies fewer openings to provoke a response from me, and the less they then bothered to try.`,
+                                    `gives away fewer clues and is thus more difficult to solve. In the same vein, by not speaking or expressing emotion, I gave the bullies fewer openings to provoke a response from me. And the less they then bothered to try.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1049,7 +1059,7 @@ export default {
                                         anchor: `spy`,
                                         wiki: `Espionage`,
                                     },
-                                    `'s success hinges upon staying hidden, their exploits will never be known until after they've been captured and then executed by`,
+                                    `'s success hinges upon staying hidden, their exploits will never be known until they've been captured and executed by`,
                                     {
                                         anchor: `firing squad`,
                                         wiki: `Execution_by_firing_squad`,
@@ -1216,7 +1226,7 @@ export default {
                         {
                             anchor: `no one heard his hollers`,
                             card: {
-                                description: `I always wondered if my brother was screaming on the inside, as I certainly was during this time.`,
+                                description: `I always wondered if my brother was actually screaming on the inside, as I certainly was during this time.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -1393,7 +1403,7 @@ export default {
                         {
                             anchor: `per their bargain`,
                             card: {
-                                description: `Though I faked autism for only a year or so, the social repercussions lasted much longer, since I was now and forever the kid who once did that really weird thing. It's not that I lacked the will to repair my standing. But I was as baffled as anyone else about the psychological forces that prompted such behavior in the first place, and there were no guide books to instruct me where to go from there.`,
+                                description: `Though I faked autism for only a year or so, the social repercussions lasted much longer, since I was now and forever the kid who once did that really weird thing. It's not that I lacked the will to repair my standing. But I was as baffled as anyone else about the psychological forces that prompted such behavior in the first place. And there were no guide books instructing me where to go from there.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

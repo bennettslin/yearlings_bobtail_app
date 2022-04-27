@@ -22,7 +22,7 @@ export default {
     referenceDescription: `"Good" in anacrusis`,
     playerStartTime: 1346.412,
     mixStartTime: `0:01:11.89`,
-    overview: `Sometime after dating Catherine and a while before meeting Mara, I hit on a university student named Sita. Nothing came of the few dates that followed, however, and I quickly scurried away in disappointment.`,
+    overview: `Sometime after dating Catherine and a while before meeting Mara, I hit on a university student named Sita. Nothing came of the few dates that followed, however, and I scurried away in disappointment.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -105,7 +105,7 @@ export default {
                         {
                             anchor: `without once knowing love`,
                             card: {
-                                description: `The women I tried to date always preferred men with past relationship experience, which seemed bizarre to me. If everyone thought this way, then no one could ever be in a relationship. Just like no one could ever get a job if previous work experience was always needed.`,
+                                description: `The women I wanted to date always preferred men with past relationship experience, which seemed bizarre to me. If everyone thought this way, then no one could ever be in a relationship. Just like no one would ever have a job if previous work experience were always needed.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -437,7 +437,7 @@ export default {
                                         anchor: `orangutan`,
                                         wiki: `Orangutan`,
                                     },
-                                    `was attached to the cranium of a modern human. Meanwhile, in my efforts to convince Sita that I'm her missing link, I'm hoping the words escaping from my mouth don't betray the undersized volume of my head.`,
+                                    `was attached to the cranium of a modern human. Meanwhile, in my efforts to convince Sita that I might be her missing link, I'm hoping the words escaping my mouth don't betray the undersized volume of my head.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -516,7 +516,7 @@ export default {
                             anchor: `a focus grown clear`,
                             card: {
                                 description: [
-                                    `A few hours into a date, my buzz would wear off, and I would realize I'd just constructed an elaborate backstory that could only topple under scrutiny, like a`,
+                                    `My buzz would wear off a few hours into a date, and then I would realize I'd just constructed an elaborate backstory that could only topple under scrutiny, like a`,
                                     {
                                         anchor: `totem pole`,
                                         wiki: `Totem_pole`,
@@ -579,7 +579,7 @@ export default {
                         {
                             anchor: `disastrous play`,
                             card: {
-                                description: `On our second date, Sita took me to see her friend act in a play, after which we met up with him backstage. Given the rapport between them, measured against my own inability to get a word in edgewise, I felt insecure the rest of that evening.`,
+                                description: `On our second date, Sita took me to see her friend act in a play, after which we met up with him backstage. In contrast to the rapport they shared, I couldn't get a word in edgewise, and I felt insecure the rest of the evening.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -646,12 +646,17 @@ export default {
                             anchor: `understudy sought`,
                             card: {
                                 description: [
-                                    `Dating as a low-status male is like being an`,
+                                    `Dating while low status is like being an`,
                                     {
                                         anchor: `understudy`,
                                         wiki: `Understudy`,
                                     },
-                                    `, a performer in theater who can serve as a replacement on short notice. You undertake all the same preparation while likely seeing none of the action. So I decided I needed to be proactive and branch out, like a freelancer without a steady gig advertising on a cork board.`,
+                                    `, a performer in theater who serves as a replacement on short notice. You undertake all the same preparation yet see little of the same action. So I decided to be proactive and branch out, like a freelancer without a steady gig advertising on a`,
+                                    {
+                                        anchor: `cork board`,
+                                        wiki: `Bulletin_board`,
+                                    },
+                                    `.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -704,7 +709,7 @@ export default {
                         {
                             anchor: `breeze through our parts`,
                             card: {
-                                description: `Any time I made a witty remark that got a good response, I'd be sure to use it again on future attempts at hitting on someone, like an actor reprising a role. This also lessened the sting of rejection, since the less I needed to prepare, the less invested I felt in any one particular attempt.`,
+                                description: `Any time I said something witty that got a good response, I'd be sure to use it again on future attempts at hitting on someone, like an actor reprising a role. This also lessened the sting of rejection, since the less I had to prepare, the less invested I needed to feel.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -803,7 +808,7 @@ export default {
                         {
                             anchor: `died unfinished`,
                             card: {
-                                description: `Of course, there was no guarantee that such a work would ever be completed. Since a satisfying ending wasn't really under my control.`,
+                                description: `Of course, there was no guarantee that such a work would ever be completed, since a satisfying ending wasn't really under my control.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -827,7 +832,7 @@ export default {
                         {
                             anchor: `sampler cologne`,
                             card: {
-                                description: `Whenever I spotted a men's magazine that had been thrown out, I would tear out the scent strips from its cologne advertisements and add them to my pile. Then right before a date, I would rub a few strips on my neck and wrists.`,
+                                description: `Whenever I spotted a lifestyle magazine that had been thrown out, I would tear out the scent strips from its cologne advertisements and add them to my pile. Then right before a date, I would rub a few strips on my neck and wrists.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -967,7 +972,7 @@ export default {
                         {
                             anchor: `dummy steering wheel`,
                             card: {
-                                description: `Any semblance of control I felt on a date was an illusion. But still I would cling tightly, like a child clutching the passenger steering wheel in a twin go-kart. Too much was at stake for me to ever let go and embrace spontaneity.`,
+                                description: `Any semblance of control that I felt on a date was an illusion. But still I would cling tightly, like a child clutching the passenger steering wheel in a twin go-kart. Too much was at stake for me to let go and embrace spontaneity.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -1099,7 +1104,7 @@ export default {
                             anchor: `An Occurrence at Owl Creek Bridge`,
                             wiki: `An_Occurrence_at_Owl_Creek_Bridge`,
                         },
-                        `," in which a seemingly long span of time is revealed to have passed in an instant. Similarly, the near entirety of this song, during which I've recollected every date with Sita thus far, turns out to have been sandwiched between the briefest exchange of farewells.`,
+                        `," in which a seemingly long span of time is revealed to have passed in an instant. Likewise, the near entirety of this song, during which I recollected every date with Sita thus far, turns out to have been sandwiched between the briefest exchange of farewells.`,
                     ],
                     dotKeys: {
                         [NARRATIVE]: true,

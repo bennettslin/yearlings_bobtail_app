@@ -151,7 +151,7 @@ export default {
                                             wiki: `Ulysses_(novel)`,
                                         },
                                     },
-                                    `, which Catherine was reading at the time. The relationship was probably doomed at that point, as having an illiterate boyfriend would surely be the death of her.`,
+                                    `, which Catherine was reading at the time. Our relationship was probably doomed as soon as I made that remark, since having an illiterate boyfriend would surely be the death of her.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -322,7 +322,7 @@ export default {
                                     ],
                                 },
                                 {
-                                    description: `Up to that point, songwriting for me was just a matter of coming up with melodies and chords. But Catherine appreciated music for its lyrics, and because my lyrics were mostly nonsensical, she wasn't impressed by any of the songs I played for her.`,
+                                    description: `Up to that point, I thought of songwriting as just a matter of coming up with melodies and chords. But Catherine appreciated music for its lyrics, and because my lyrics were mostly nonsensical, she wasn't impressed by any of my songs that I played for her.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -378,7 +378,7 @@ export default {
                         {
                             anchor: `what wit, man`,
                             card: {
-                                description: `I picture Catherine responding in her usual droll manner, with a pun that salutes my effort to channel "Walt Whitman."`,
+                                description: `I picture Catherine responding in her droll manner, with a pun that salutes my effort to channel "Walt Whitman."`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -414,7 +414,7 @@ export default {
                             anchor: `"Joyce" oblivious`,
                             card: {
                                 description: [
-                                    `Of course, not knowing I couldn't be the next Joyce is precisely why I dared to try. And so the idea began to congeal in my head that I could do for rock music what`,
+                                    `Of course, not knowing that I couldn't be the next Joyce is why I dared to try. And so the idea began to congeal in my head that I could do for rock music what`,
                                     {
                                         isItalic: true,
                                         lyric: `Ulysses`,
@@ -435,7 +435,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `Maqam is distinguished by its use of`,
+                        `Maqam is distinguished by its`,
                         {
                             anchor: `quarter tones`,
                             wiki: `Quarter_tone`,
@@ -445,12 +445,17 @@ export default {
                             anchor: `chromatic scale`,
                             wiki: `Chromatic_scale`,
                         },
-                        `. For each quarter-tone melody, I scored parts for two separate takes, the second one with the instrument detuned by a quarter step. I then recorded each take and`,
+                        `. For each maqam`,
+                        {
+                            anchor: `counter-melody`,
+                            wiki: `Counter-melody`,
+                        },
+                        `, I scored two separate parts, the second one with the instrument detuned by a quarter step. I then`,
                         {
                             anchor: `overdubbed`,
                             wiki: `Overdubbing`,
                         },
-                        `them into a single track.`,
+                        `the recorded takes into a single track.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -479,7 +484,7 @@ export default {
                         {
                             anchor: `poised with brains`,
                             card: {
-                                description: `Catherine didn't value the artistic strengths I'd always counted on to cover up my many weaknesses. Which made me realize that if I were ever to be worth keeping one day, then I simply couldn't have any weaknesses.`,
+                                description: `Catherine undervalued the artistic strengths that I'd always counted on to cover up my many weaknesses. Which made me realize that if I were ever to be worth keeping, then I simply couldn't have any weaknesses.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -494,7 +499,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `While a major third can be divided into equal whole steps in Western music, a minor third can only be divided unequally, between whole and half. But quarter tones allow a minor third to be traversed in two equal steps, creating the sensation of a squished major third. I liked how this confused my ears so much, I went overboard with these rapid-fire minor-third runs on the`,
+                        `While a major third can be divided into equal whole steps in Western music, a minor third can only be divided unequally between whole and half. But quarter tones allow a minor third to be traversed in two equal steps, creating the sensation of a squished major third. I liked how this confused my ears, and I went overboard with these rapid-fire minor-third runs on the`,
                         {
                             anchor: `Dobro`,
                             wiki: `Dobro`,
@@ -598,7 +603,7 @@ export default {
                                             anchor: `birth control`,
                                             wiki: `Birth_control`,
                                         },
-                                        `. We never needed them since Catherine had vowed not to engage in`,
+                                        `. We had no need for condoms since Catherine had vowed not to engage in`,
                                         {
                                             anchor: `premarital sex`,
                                             wiki: `Premarital_sex`,

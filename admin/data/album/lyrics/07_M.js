@@ -25,7 +25,7 @@ export default {
     referenceDescription: `Spanish guitar in measure 1`,
     playerStartTime: 1131.214,
     mixStartTime: `0:02:12.00`,
-    overview: `After the breakup with Catherine, I vowed to spend the next five years shaping myself into the ideal romantic prospect. I started attending local shows and eventually cobbled together my own band, the Yearlings. I kept running into a fellow scenester named Mara and soon grew infatuated. But Mara ended up going out with my drummer Jacob, which made band practice awkward.`,
+    overview: `After the breakup with Catherine, I vowed to spend the next five years shaping myself into the ideal romantic prospect. Toward the end, I started attending local shows and eventually cobbled together my own band, the Yearlings. There was a fellow scenester named Mara whom I noticed from afar, and soon I grew infatuated. But Mara ended up going out with my drummer Jacob, which made band practice awkward.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -121,7 +121,7 @@ export default {
                         {
                             anchor: `learning the talents`,
                             card: {
-                                description: `It's not that I'd done anything wrong to cause the breakup with Catherine. I just didn't have much to offer. So it seemed illogical to keep doing things the same way, as if one day I should see a dramatically different result. To secure my future chances with women, what I needed was to take time off and build up a surplus of attractive traits. So I started with the ones that Catherine valued most.`,
+                                description: `It's not that I'd done anything wrong to cause the breakup with Catherine. I just didn't have much to offer. So it seemed illogical to keep doing things the same way, as if one day I should see a dramatically different result. To secure a future chance at romance, what I needed was to take time off and build up a surplus of attractive traits. So I started with the ones that Catherine valued most.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -249,7 +249,7 @@ export default {
                         {
                             anchor: `mindful manners`,
                             card: {
-                                description: `I also decided to stop using swear words. I figured it would be a definite win with any woman who didn't curse, while all others would find its quaintness charming.`,
+                                description: `I also decided to stop using swear words. I figured it would be a definite win with any woman like Catherine who didn't curse, while the rest would find its quaintness charming.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -876,7 +876,7 @@ export default {
                             anchor: `to have a merry ol' laugh`,
                             card: {
 
-                                description: `Or, to have a "Mara, you'll" laugh. In other words, everyone just does what they'll do, and the world is no more than the net result of all that. There's no hidden agenda, which means I can only react with good humor if the world gets in the way of what I intended.`,
+                                description: `Or, to have a "Mara, you'll" laugh. In other words, everyone just does what they do, and the world is no more than the net result of all that. There's no hidden agenda; no one has it in for me. And so I can only react with good humor if the world gets in the way of what I'd intended.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [PUN]: true,
@@ -910,7 +910,7 @@ export default {
                         {
                             anchor: `boy who's to love her baby`,
                             card: {
-                                description: `In short, the world is as guileless and unwitting as a newborn infant. So if a woman's list of ideal traits in a man includes what kind of father he'll be to her child, then she's likely to judge him by how he treats the world at large.`,
+                                description: `In short, the world is as guileless and unwitting as a newborn infant. Which means if a woman's list of ideal traits in a man includes what kind of father he'll be to her child, then she's likely to judge him by how he treats the world at large.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -968,7 +968,7 @@ export default {
                         {
                             anchor: `friends have to lie`,
                             card: {
-                                description: `But I couldn't rely on my friends to be truthful about what I had to offer. As dear as I was to them, they each had their own neck to protect.`,
+                                description: `But I couldn't rely on my friends to be truthful about what I had to offer. As dear as we were to each other, they each had their own neck to protect.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -1008,7 +1008,7 @@ export default {
                             properNoun: true,
                             card: {
                                 description: [
-                                    `Recognizing that what I wanted was someone like Mara, and taking stock of what was needed for me to fulfill this wish, I decided to return to what I do best. I would hole up in emotional seclusion, this time to work on an ambitious magnum opus. My next five-year plan would have me write all the lyrics, score all the parts, and play all the instruments on`,
+                                    `Recognizing that what I wanted was someone like Mara, and taking stock of what was needed for me to fulfill this wish, I decided to return to what I do best. I would hole up in emotional seclusion, this time to work on a magnum opus. My next five-year plan would see me write all the lyrics, score all the parts, and perform all the tracks on`,
                                     {
                                         isItalic: true,
                                         lyric: `Bobtail`,
