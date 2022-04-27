@@ -138,6 +138,7 @@ import {
     TORN_MAGAZINES__CHRISTOPHER,
     VASELINE,
     WINE_BOTTLE,
+    HEINEKEN__WILLY,
 } from '../../../../constants/scene/things/fixtures'
 
 export default {
@@ -184,6 +185,7 @@ export default {
     [HAWAIIAN_DOLL]: hawaiianDoll,
     [HEINEKEN__BENNETT]: heineken,
     [HEINEKEN__SITA]: heineken,
+    [HEINEKEN__WILLY]: heineken,
     [HEINEKEN_PACK]: heinekenPack,
     [HOSPITAL_RECORD_PLAYER]: hospitalRecordPlayer,
     [KEYBOARD]: keyboard,

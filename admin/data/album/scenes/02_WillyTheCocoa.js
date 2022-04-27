@@ -84,6 +84,7 @@ import {
     CHRISTOPHER_LETTERS,
     FLOWER_BULBS,
     HAIRCUT_SCISSORS,
+    HEINEKEN__WILLY,
     LETTER_SCRAPS__CHRISTOPHER,
     TORN_MAGAZINES__CHRISTOPHER,
 } from '../../../../src/constants/scene/things/fixtures'
@@ -264,6 +265,9 @@ export default [
             [CUTOUT]: {
                 [SHOPPING_CART]: true,
                 [FIRE_HYDRANT]: true,
+            },
+            [FIXTURE]: {
+                [HEINEKEN__WILLY]: true,
             },
             [FLAT]: {
                 [NEAR_HOUSES]: true,

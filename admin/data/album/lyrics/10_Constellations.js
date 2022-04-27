@@ -1447,8 +1447,9 @@ export default {
                 {
                     mixTime: `1:57:19.69`,
                     lyric: [
+                        `I'll sail this sea,`,
                         {
-                            anchor: `I'll sail this sea`,
+                            anchor: `there is only me`,
                             card: {
                                 description: [
                                     `As I stand before Adam's headstone under the predawn sky, a wave of clarity washes over me. With my sense of purpose renewed, I vow to finish`,
@@ -1463,7 +1464,7 @@ export default {
                                 },
                             },
                         },
-                        `, there is only me and my northern star!`,
+                        `and my northern star!`,
                     ],
                 },
             ],
