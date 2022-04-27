@@ -35,7 +35,7 @@ export default {
     mixStartTime: `0:01:18.60`,
     playerReferenceTime: 1751.447,
     playerStartTime: 1751.191,
-    overview: `One night I went with my bassist Ana and her friends to get high on Robitussin and explore the steam tunnels under UCLA. I got us all to pretend we were Vikings, Mongols, and other waves of human migration throughout world history. In hindsight, they were probably just humoring me. I wound up doing a lot of Robitussin that summer. It took a while for me to regain my grip on reality.`,
+    overview: `One night I went with my bassist Ana and her friends to get high on Robitussin and explore the steam tunnels under UCLA. I got us all to pretend that we were Vikings and Mongols and other waves of human migration throughout world history. In hindsight, they were probably just humoring me. I wound up doing a lot of Robitussin that summer. It took a while for me to regain my grip on reality.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -216,7 +216,7 @@ export default {
                         {
                             anchor: `exit us`,
                             card: {
-                                description: `As the Book of "Exodus" recounts how the Israelites found manna during their trek out of Egypt, so too do we leave the drudgery of our homes seeking spiritual sustenance.`,
+                                description: `As the Book of "Exodus" recounts how the Israelites found manna during their trek out of Egypt, so too do we leave the drudgery of our homes to seek spiritual sustenance.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -1383,7 +1383,7 @@ export default {
                                             anchor: `Inuits`,
                                             wiki: `Inuit`,
                                         },
-                                        `of the Arctic regions, may have migrated to the Americas by boat. An Inuit storyteller would narrate the journey of one such seafaring ancestor by describing how "he rows" with the "auroras," or`,
+                                        `of the Arctic regions, migrated to the Americas by boat. An Inuit storyteller might narrate the journey of one such seafaring ancestor by describing how "he rows" with the "auroras," or`,
                                         {
                                             anchor: `aurora borealis`,
                                             wiki: `Aurora`,
@@ -1470,7 +1470,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: `If the lyrics for this second chorus seem out of place given the noticeable lack of literary puns, it's because they're a carryover from a previous incarnation of this song. I liked them enough to keep them, and they perfectly capture my moment of clarity at the cemetery.`,
+                    description: `If the lyrics for this second chorus seem out of place given the noticeable lack of literary puns, it's because they're a carryover from a previous incarnation of this song. But I liked them enough to keep them, and they perfectly capture my moment of clarity at the cemetery.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGCRAFT]: true,

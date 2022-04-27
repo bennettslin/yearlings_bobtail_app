@@ -78,7 +78,7 @@ export default {
                                         anchor: `Abraham Lincoln`,
                                         wiki: `Abraham_Lincoln`,
                                     },
-                                    `'s assassination.`,
+                                    `'s assassination. I don't recall why I chose this reference. I think I just spent a long while whimpering to myself, "Oh, Catherine…"`,
                                 ],
                                 dotKeys: {
                                     [PUN]: true,
@@ -713,17 +713,17 @@ export default {
                                         anchor: `Mohawk`,
                                         wiki: `Mohawk_people`,
                                     },
-                                    `chief and a captured`,
+                                    `chief and an`,
                                     {
                                         anchor: `Algonquin`,
                                         wiki: `Algonquin_people`,
                                     },
-                                    `woman whose village he raided. Dorothy Parker was a member of the`,
+                                    `woman taken from a village raided by his tribe. Dorothy Parker was a member of the`,
                                     {
                                         anchor: `Algonquin Round Table`,
                                         wiki: `Algonquin_Round_Table`,
                                     },
-                                    `, a social circle of New York City writers known for their clever wit and wordplay. And so here I joke that Catherine must have feared I would take her away from her friends, being too dimwitted as I was to ever be allowed to meet them.`,
+                                    `, a social circle of New York City writers known for their clever wit and wordplay. And so here I joke that Catherine must have feared I would take her away from her smart circle of friends, being too dimwitted as I was to ever be allowed to meet them.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,

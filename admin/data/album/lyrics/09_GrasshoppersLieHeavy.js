@@ -28,7 +28,7 @@ export default {
     referenceDescription: `"L." in anacrusis`,
     mixStartTime: `0:01:29.52`,
     playerStartTime: 1478.233,
-    overview: `I worked my way through college as a dishwasher in a cafeteria, which is how I met Sita. After I scared her off, we didn't speak for months. But she eventually reached out again, and we became friends. As I got over my rough start with playing live shows, and as I continued to struggle with dating women, Sita lent her moral support, though a part of me kept wanting something more. At some point, she started to like me back. I'm still not sure how.`,
+    overview: `I worked my way through college as a dishwasher in a cafeteria, which is how I met Sita. After I scared her off, we didn't speak for months. But she eventually reached out again, and we became friends. As I got over my rough start with playing live shows, and as I continued to struggle with dating, Sita lent her moral support, though a part of me always wanting something more. At some point, she started to like me back. I'm still not sure how.`,
     isDoublespeaker: true,
     lyricUnits: [
         {
@@ -78,7 +78,7 @@ export default {
                         },
                     },
                     {
-                        description: `I chose this song title because I liked the image of two grasshoppers hidden in the tall grass, with each hesitantly signaling to the other, and neither wishing to reveal itself first.`,
+                        description: `I chose this song title because I liked the image of two grasshoppers hidden in the tall grass, each hesitantly signaling to the other, as neither wishes to reveal itself first.`,
                         dotKeys: {
                             [OBSERVATION]: true,
                         },
@@ -164,7 +164,7 @@ export default {
                                         anchor: `Gun molls`,
                                         wiki: `Gun_moll`,
                                     },
-                                    `, the female companions of famous mobsters, were both romanticized by society and feared for their exploits. Likewise, I desired the girls who hung out with the boys who bullied me, which made their contempt for me harder to stomach.`,
+                                    `, the female companions of famous mobsters, were both romanticized by society and feared for their exploits. Likewise, I desired the girls who hung out with the boys who bullied me. But this made their contempt harder to stomach.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -182,7 +182,7 @@ export default {
                             anchor: `penny dreadfuls`,
                             cards: [
                                 {
-                                    description: `But I could even the score by showing disdain for the popular books and music they consumed.`,
+                                    description: `Still, I could even the score by showing disdain for the popular books and music they consumed.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -286,12 +286,12 @@ export default {
                                         anchor: `diabetic`,
                                         wiki: `Diabetes`,
                                     },
-                                    `, Sita regularly checked her blood sugar level before meals by pricking her finger with a`,
+                                    `, Sita regularly checked her blood sugar level by pricking her finger with a`,
                                     {
                                         anchor: `lancing device`,
                                         wiki: `Blood_glucose_monitoring`,
                                     },
-                                    `. That day, she forgot to take it with her after bussing her tray.`,
+                                    `before meals. That day, she forgot to take it with her after bussing her tray.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -496,17 +496,17 @@ export default {
                             anchor: `stagefright ignites`,
                             card: {
                                 description: [
-                                    `During this time, I began performing at local`,
-                                    {
-                                        anchor: `coffee shops`,
-                                        wiki: `Coffeehouse`,
-                                    },
-                                    `hosting`,
+                                    `During this time, I began performing at`,
                                     {
                                         anchor: `singer-songwriter`,
                                         wiki: `Singer-songwriter`,
                                     },
-                                    `nights. My first few attempts were a disaster, but I learned to conquer my stagefright with just the right amount of alcohol.`,
+                                    `nights hosted by local`,
+                                    {
+                                        anchor: `coffee shops`,
+                                        wiki: `Coffeehouse`,
+                                    },
+                                    `. My first few attempts were a disaster, but I learned to conquer my stagefright with just the right amount of alcohol.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -835,7 +835,7 @@ export default {
                         {
                             anchor: `returned to your guard`,
                             card: {
-                                description: `Just like that, I'm once again on guard, second-guessing everything I say to Sita like a prisoner conversing with a jail guard.`,
+                                description: `And just like that, I'm once again second-guessing everything I say, like a prisoner conversing with a jail guard.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -1456,7 +1456,7 @@ export default {
                                 wiki: `La_petite_mort`,
                             },
                         },
-                        `, which translates to "the little death," refers to a feeling of melancholic transcendence after orgasm. So as the chords continue to rise, the lead guitar plays a falling riff, before everything cuts away to Odin's theme, a reminder of the house cat that died in my youth.`,
+                        `, which translates to "the little death," refers to a feeling of melancholic transcendence after orgasm. So as the chords continue to rise, the lead guitar plays a falling riff, before everything cuts away to Odin's theme, a reminder of the house cat that passed away in my youth.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
