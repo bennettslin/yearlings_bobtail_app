@@ -29,8 +29,7 @@ export default {
     playerStartTime: 1932.102,
     // This is a magic number adjusted by ear. In the mix, it's actually 41.66.
     mixSamplingFrequency: 41.64,
-    todo: true,
-    overview: `With the Yearlings becoming a fixture in the local scene, I started to command more attention than I'd ever known, particularly from women. Yet even as my misery abated, beneath it all there remained a simmering resentment. I also began to regret my relationship with Sita, which now felt like a decision I'd been coerced to make under deprived conditions from which I was now free.`,
+    overview: `With the Yearlings becoming a fixture in the local scene, I started to command more attention than I'd ever known, particularly from women. Yet even as my misery abated, a lingering resentment still simmered beneath. I also began to regret my relationship with Sita, which now felt like a decision I'd been coerced to make under deprived conditions from which I was now free.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -50,7 +49,7 @@ export default {
                                 wiki: `Look_Back_in_Anger`,
                             },
                         },
-                        `is a theatrical play, set in postwar England, about a disgruntled young man of the working class who hurls his rage at his long-suffering wife. It hit unnervingly close to home when I read it.`,
+                        `is a theatrical play set in postwar England, about a disgruntled young man of the working class who hurls his rage at his long-suffering wife. It hit unnervingly close to home when I read it.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -167,7 +166,7 @@ export default {
                                             anchor: `Van Nuys`,
                                             wiki: `Van_Nuys`,
                                         },
-                                        `, a neighborhood in the center of the San Fernando Valley.`,
+                                        `, a neighborhood in the middle of the San Fernando Valley.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -267,7 +266,7 @@ export default {
                         {
                             anchor: `for more you'd vie`,
                             card: {
-                                description: `But though it was a struggle, I did make it. Which means I can easily do it again. So why wouldn't I try? After all, each new relationship is like another tree ring, a testament to one's resilience and continued growth.`,
+                                description: `But though it was a struggle, I did make it. Which means I can do it again. So why wouldn't I try? After all, each new relationship is like another tree ring, a testament to one's resilience and continued growth.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -295,7 +294,7 @@ export default {
                                         anchor: `The Charge of the Light Brigade`,
                                         wiki: `The_Charge_of_the_Light_Brigade_(poem)`,
                                     },
-                                    `," I'd quietly accepted that mine was "not to reason why" but simply "to do and die" during my own wartime years in the San Fernando Valley.`,
+                                    `," I'd bravely accepted that mine was "not to reason why," but simply "to do and die" during my own wartime years in the San Fernando Valley.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -306,7 +305,7 @@ export default {
                         {
                             anchor: `spite you thrive`,
                             card: {
-                                description: `But this casual view of my own hardship is what enabled me to justify the pain I caused Sita.`,
+                                description: `But this casual view of my own hardship is what later enabled me to justify the pain I caused Sita.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -330,10 +329,13 @@ export default {
                             anchor: `hip hop`,
                             wiki: `Hip_hop`,
                         },
-                        `at the time, believing it to be too far removed from my own songwriting approach to offer much wisdom. I've since corrected this oversight, but back when it was my lone point of reference for rap music, Nas's album`,
+                        `up to that point, as I assumed it was too far removed from my own songwriting approach to offer wisdom. I've since corrected this oversight, but back when it was my lone point of reference for rap music,`,
                         {
-                            anchor: `Illmatic`,
-                            wiki: `Illmatic`,
+                            isItalic: true,
+                            lyric: {
+                                anchor: `Illmatic`,
+                                wiki: `Illmatic`,
+                            },
                         },
                         `offered great pointers on the flexibility of`,
                         {
@@ -366,7 +368,7 @@ export default {
                                         anchor: `feeder fish`,
                                         wiki: `Feeder_fish`,
                                     },
-                                    `is deceptive, since the ones least fit to be sold as prey end up living the longest. In retrospect, high school worked the same way. All the time I spent focusing on pet projects left me unfit to defend my place in the social hierarchy, but the artistic skills I developed as a result were what kept me from being eaten alive later in the real world.`,
+                                    `is deceptive, since the ones least fit to be sold as prey end up living the longest. In retrospect, high school worked the same way. All the time I'd spent focusing on pet projects left me unfit to defend my place in the social hierarchy. But the artistic skills I'd developed as a result were now keeping me from being eaten alive in the real world.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -466,7 +468,7 @@ export default {
                             anchor: `maraschino red`,
                             card: {
                                 description: [
-                                    `Having sworn to be alert and ready when the next Mara shows up in my life, I notice the latecomer's hair color matches "Mara's sheen of" red, with the brightness of a`,
+                                    `Having sworn to be ready when the next Mara shows up in my life, I notice that the latecomer's hair color matches "Mara's sheen of" red, with the brightness of a`,
                                     {
                                         anchor: `maraschino cherry`,
                                         wiki: `Maraschino_cherry`,
@@ -489,7 +491,7 @@ export default {
                         {
                             anchor: `Great show`,
                             card: {
-                                description: `The best time to hit on someone is right after you've played a set, since they've just spent the last half hour making you the center of their universe. So as expected, the redheaded woman is quite flirtatious when we chat.`,
+                                description: `The best time to hit on someone is right after you've played a set, since they've just spent the last half hour unconsciously putting you at the center of their universe. So as expected, the redheaded woman is quite flirtatious when we chat.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -517,7 +519,7 @@ export default {
                         {
                             anchor: `fine when you had none`,
                             card: {
-                                description: `Things were finally looking up, so it baffled me that I should be as bitter as ever. I suspect it's because I felt indignant for my younger self, who'd been kept in the dark for so long about how much better life could be.`,
+                                description: `Things were finally looking up, so it confused me that a quiet bitterness should still remain. I suspect it's because I felt indignant for my younger self, who'd been kept for so long in the dark about how much better life could be.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -586,7 +588,7 @@ export default {
                         {
                             anchor: `His obit not a bang`,
                             card: {
-                                description: `But my appraisal was based on reason, not malice. If there was one true God, it made no sense why he would entrust the dissemination of his message to the very tormentors of those he hoped to reach.`,
+                                description: `But my appraisal was based on reason, not malice. If the Christian god were the one true God, then it made no sense why he would entrust the dissemination of his message to the tormentors of those he hoped to reach.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -620,7 +622,7 @@ export default {
                                         anchor: `French Revolution`,
                                         wiki: `French_Revolution`,
                                     },
-                                    `, who grew further agitated after each attempt by the ruling elite to appease them. Not only did they grumble at such paltry improvements to their lives, they were then emboldened to make new demands. This phenomenon is known as the`,
+                                    `, who only grew further agitated after each attempt by the ruling elite to appease them. Not only did they grumble at such paltry improvements to their lives, but they were then emboldened to make new demands. This phenomenon is known as the`,
                                     {
                                         anchor: `Tocqueville paradox`,
                                         wiki: `Tocqueville_effect`,
@@ -657,7 +659,7 @@ export default {
                         {
                             anchor: `must turn the cheek`,
                             card: {
-                                description: `The letters from RI Research instructed me not to confront the bullies. Instead, I was to turn the other cheek, as Jesus had done, and quietly take their abuse in stride. My exalted place in the universe necessarily asked of me to be the bigger person.`,
+                                description: `The letters from RI Research instructed me not to confront the bullies. Instead, I was to turn the other cheek, as Jesus had done, and take my abuse in stride. My exalted place in the universe necessarily asked of me to be the bigger person.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -676,7 +678,7 @@ export default {
                         {
                             anchor: `only to crack`,
                             card: {
-                                description: `Yet even as reason disproved the faiths of my tormentors, it also discredited my own as a Beyonder. In a world abounding with rival claims to the truth, what sane person would stay loyal to a belief that promises zero community and only endless grief?`,
+                                description: `Yet even as reason disproved the faiths of my tormentors, it also discredited my own as a Beyonder. When so many rival claims to the truth abound, what sane person would stay loyal to a belief that promises zero community and only endless grief?`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -715,7 +717,7 @@ export default {
                         {
                             anchor: `right to take what's theirs`,
                             card: {
-                                description: `As opportunities for social advancement later opened up for me, I could look back and even sympathize with the bullies by putting myself in their shoes. In a world that roots for the strong, who wouldn't readily take all the means available to avoid being weak?`,
+                                description: `As opportunities for social advancement opened up for me, I could look back and even sympathize with the bullies by putting myself in their shoes. After all, in a world that roots for the strong, who wouldn't readily take all the means available to avoid being weak?`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -755,7 +757,7 @@ export default {
                         {
                             anchor: `poor, poor bears`,
                             card: {
-                                description: `His wife Alison then sighs in response, "Poor, poor bears," to acknowledge that he, a bear in their mutual fantasy, is just as much a victim complying with a power dynamic over which neither possesses much control.`,
+                                description: `His wife Alison then sighs in response, "Poor, poor bears," acknowledging that he, a bear in their mutual fantasy, is just as much a victim complying within a power dynamic over which neither possesses much control.`,
                                 dotKeys: {
                                     [REFERENCE]: true,
                                 },
@@ -819,12 +821,12 @@ export default {
                             anchor: `unscrew a Bud`,
                             card: {
                                 description: [
-                                    `I end up relinquishing my chance to know the redhead. It's after`,
+                                    `I end up relinquishing my chance to know the redheaded woman. It's after`,
                                     {
                                         anchor: `last call`,
                                         wiki: `Last_call_(bar_term)`,
                                     },
-                                    `, and I would need a few`,
+                                    `, and I would need a few more`,
                                     {
                                         anchor: `Budweisers`,
                                         wiki: `Budweiser`,

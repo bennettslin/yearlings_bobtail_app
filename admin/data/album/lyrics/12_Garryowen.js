@@ -27,7 +27,7 @@ export default {
     referenceDescription: `Banjo in anacrusis`,
     playerStartTime: 2107.996,
     mixStartTime: `0:01:01.40`,
-    overview: `My mood changed for the worse when I drank, leading friends to joke that I had a sinister alter ego. It wasn't far from the truth. I was souring on my relationship with Sita by this point, and being drunk provided both an escape and an excuse to act out. But I really didn't like myself during such moments. I missed being the hapless kid I still was in my head. Knowing now how to get it right, I longed for a do-over, without the mess this time. And without Sita.`,
+    overview: `My mood changed for the worse when I drank, leading friends to joke that I had a sinister alter ego. It wasn't far from the truth. I was souring on my relationship with Sita by this point, and being drunk provided both an escape and an excuse to act out. But I really didn't like myself when this happened. I missed being the hapless kid that I still was in my head. And knowing now how to get it right, I longed for a do-over, only this time without the mess. In other words… without Sita.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -122,7 +122,7 @@ export default {
                                             anchor: `crust punks`,
                                             wiki: `Gutter_punk`,
                                         },
-                                        `who were friends of Ana's. Every so often, half of us would go out to pilfer groceries, while the other half would cook whatever was brought back into a meal for all to share. I was in the thieving group.`,
+                                        `who were friends of Ana's. Every so often, half of us would go out to pilfer groceries, while the other half would cook whatever we brought back into a meal for all to share. I was in the thieving group.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -160,12 +160,12 @@ export default {
                             anchor: `opt for bed not street`,
                             card: {
                                 description: [
-                                    `I was tired of working extra shifts just to make the rent. So after my lease ended, I would alternate between spending some nights with Sita, and others crashing in the`,
+                                    `I was tired of working extra shifts just to make the rent. So after my lease ended, I alternated between spending some nights with Sita, and others crashing in the`,
                                     {
                                         anchor: `punk house`,
                                         wiki: `Punk_house`,
                                     },
-                                    `basement. This gave me the regular comfort of Sita's bed, while also ensuring she never held too much leverage over me.`,
+                                    `basement. This gave me the regular comfort of Sita's bed, while ensuring that she never held too much leverage over me.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -189,7 +189,7 @@ export default {
                         {
                             anchor: `you're not me`,
                             card: {
-                                description: `An inside joke among my friends was to address me as Garry when I was drunk, since my uneven rambles and oafish stunts made me an altogether different person.`,
+                                description: `An inside joke among my friends was to address me as Garry when I was drunk, since my uneven rambling and oafish stunts made me an altogether different person.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -204,7 +204,7 @@ export default {
                         {
                             anchor: `I can't speak`,
                             card: {
-                                description: `But having an alter ego also absolved me of personal responsibility for my actions, which became a problem as my drunken behavior spilled further into random acts of aggression and misdemeanors.`,
+                                description: `But having an alter ego also absolved me of personal responsibility for my actions, which became a problem as my drunken behavior spilled into random aggression and misdemeanors.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -266,7 +266,7 @@ export default {
                             anchor: `littlest fuss will incite`,
                             cards: [
                                 {
-                                    description: `After lashing out all night in a spastic fury, Tristan would be perfectly collected by next morning. I came to see that his chaotic behavior was in fact meticulously controlled, giving him a strange inner peace. So I sought to steer my drunken temper in the same direction.`,
+                                    description: `After lashing out all night in a spastic fury, Tristan would be perfectly collected the next morning. I came to see that his chaotic behavior was in fact meticulously controlled, giving him a strange inner peace. So I sought to steer my drunken temper in the same direction.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [OBSERVATION]: true,
@@ -331,7 +331,7 @@ export default {
                         {
                             anchor: `she's claimed`,
                             card: {
-                                description: `Throughout our budding friendship, Sita had neglected to mention the extent of her sexual intimacy with past partners, even if always shy of intercourse. She tried to console me by pointing out that she never went all the way precisely because she didn't truly love them. She loved me, and so I had won. But it still stung like crazy to find out so late, which only deepened my resentment.`,
+                                description: `Throughout our budding friendship, Sita had neglected to mention the extent of her sexual intimacy with past partners, even if it was always shy of intercourse. She tried to console me by pointing out that she never went all the way precisely because she didn't love them. She loved me, so I had won. But it still stung like crazy to find out this late, which only deepened my resentment.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -400,7 +400,7 @@ export default {
                         {
                             anchor: `Slammed in the well`,
                             card: {
-                                description: `Of course, using alcohol as a spiritual cleanser isn't really sustainable, as it requires you to vomit regularly into a toilet and see your reflection in the water staring back at you.`,
+                                description: `Of course, using alcohol as a spiritual cleanser isn't really sustainable, since it requires you to vomit regularly into a toilet and see your miserable reflection staring back at you in the water.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -418,7 +418,7 @@ export default {
                             anchor: `choler turned up`,
                             cards: [
                                 {
-                                    description: `In Hippocratic medicine, choler, or yellow bile, is the humor that induces aggression.`,
+                                    description: `In Hippocratic medicine, choler is the humor that induces aggression.`,
                                     dotKeys: {
                                         [REFERENCE]: true,
                                     },
@@ -452,7 +452,7 @@ export default {
                             anchor: `counterpoint`,
                             wiki: `Counterpoint`,
                         },
-                        `, melodies are laid one atop another, and the chord progression is a byproduct of the harmonies they form in sequence. But since the chords for this song were established first, the reverse approach was called for. I assigned each note in a chord to a different part. Then for every part, I shaped its sequence of assigned notes into an unassuming counter-melody.`,
+                        `, melodies are laid atop one another, and the chord progression is a byproduct of the harmonies they form in sequence. But since the chords for this song were established first, the reverse approach was called for. I assigned each note in a chord to a different part. Then for every part, I shaped its sequence of assigned notes into an unassuming counter-melody.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -563,7 +563,7 @@ export default {
                         {
                             anchor: `make her strip bare`,
                             card: {
-                                description: `Sita learned early on that she could always whisk me away for some lovemaking by hovering naked beside me and shivering dramatically from the cold. But as our relationship soured, this brazen appeal to my primal and protective instincts grew tiresome, and I drew some cruel pleasure in letting her shiver for just a bit longer.`,
+                                description: `Sita learned early on that she could always whisk me away for some lovemaking by hovering naked beside me while shivering dramatically from the cold. But as our relationship soured, this brazen appeal to my primal and protective instincts grew tiresome, and I drew some cruel pleasure in letting her shiver for just a bit longer.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -586,7 +586,7 @@ export default {
                         {
                             anchor: `have her for your pet`,
                             card: {
-                                description: `Sita's manner of prostrating herself like a pet forced me to wield an absolute power that I never asked for, and this exasperated me to no end. But its endearing nature was also guaranteed to make me love her, which I did. So I never doubted the impending breakup would be equally wrenching for both of us.`,
+                                description: `Sita's manner of prostrating herself like a pet forced me to wield an absolute power that I never asked for, and this exasperated me to no end. But its endearing nature was also guaranteed to make me love her, and I did. So I never doubted that the impending breakup would be wrenching for both of us.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -621,7 +621,7 @@ export default {
                             anchor: `bagpipes`,
                             wiki: `Bagpipes`,
                         },
-                        `heard here evoke a funeral procession to mark the death of my relationship with Sita. I mimicked the sound by overdubbing multiple takes of a two-part harmony on the melodica, with one part acting as the chanter and the other as the drone.`,
+                        `heard here evoke a funeral procession to mark the death of the relationship. I mimicked the sound by overdubbing multiple takes of a two-part harmony on the melodica, with one part acting as the chanter and the other as the drone.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -689,7 +689,7 @@ export default {
                         {
                             anchor: `faltering dear`,
                             card: {
-                                description: `And with my slate wiped clean, I could once again take pains to affect an endearingly awkward persona.`,
+                                description: `And with my slate wiped clean, I could take pains to affect an endearingly awkward persona.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -758,7 +758,7 @@ export default {
                             {
                                 anchor: `as well in you`,
                                 card: {
-                                    description: `But if I was capable of injuring myself, then I was also unlikely to have any qualms about hurting anyone close to me, who now knew the worst side of me as only I once did.`,
+                                    description: `But if I was capable of injuring myself, then I also wasn't likely to have any qualms about hurting someone close to me, who now knew the worst side of me as only I once did.`,
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                     },
@@ -825,7 +825,7 @@ export default {
                         {
                             anchor: `last-ditch alibi`,
                             card: {
-                                description: `Though my friends were only joking to say it was Garry and not me who'd committed this or that act of vandalism, on some level I accepted it as the truth. And now it also wasn't me who'd drained Sita of her confidence through the years, leaving her a crumbled wreck. It must have been Garry. I wasn't there.`,
+                                description: `Though my friends were only joking to say it was Garry and not me who'd committed this or that act of vandalism, on some level I accepted it as the truth. And now it also wasn't me who'd drained Sita of her confidence through the years, to leave her a crumbled wreck. It must have been Garry. I wasn't there.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
