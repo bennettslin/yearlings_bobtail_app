@@ -2,26 +2,6 @@
     .wire { stroke: hsla(348, 2%, 40%, 0.25); }
 }
 
-.hospitalBed {
-    .swivel { fill: hsl(240, 3%, 59%); }
-    .wheelSide { fill: hsl(0, 0%, 22%); }
-    .wheelFront { fill: hsl(240, 1%, 28%); }
-    .headBoardEdge { fill: hsl(30, 24%, 34%); }
-    .headBoardSurface { fill: hsl(28, 35%, 52%); }
-    .platformBelowTop { fill: hsl(174, 12%, 50%); }
-    .platformBelowSide { fill: hsl(183, 13%, 34%); }
-    .platformBelowFront { fill: hsl(178, 16%, 60%); }
-    .frameSide { fill: hsl(267, 16%, 48%); }
-    .frameFront { fill: hsl(230, 12%, 58%); }
-    .platformAboveSide { fill: hsl(186, 14%, 41%); }
-    .platformAboveFront { fill: hsl(179, 26%, 69%); }
-    .platformAboveTop { fill: hsl(174, 16%, 55%); }
-    .mattressSide { fill: hsl(334, 11%, 45%); }
-    .mattressFront { fill: hsl(335, 14%, 53%); }
-    .footBoardEdge { fill: hsl(31, 26%, 40%); }
-    .footBoardSurface { fill: hsl(30, 47%, 58%); }
-}
-
 .oceanWaves {
     stroke: none;
     .ocean { fill: hsla(195, 63%, 32%, 0.04); }

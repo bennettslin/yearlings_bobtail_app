@@ -17,7 +17,7 @@
       <path d="M180,57.08c13-7.61,21.36,10.42,12,16.19-4.65,2.76-9.13-.08-12.08-4.67C177.45,64.67,175.64,59.9,180,57.08Z"/>
     </g>
   </g>
-  <g class="eyeBlob">
+  <g class="blackDark__noStroke">
     <ellipse cx="155.45" cy="82.02" rx="1.59" ry="3.19" transform="translate(-2.77 5.48) rotate(-2)"/>
     <ellipse cx="126.43" cy="82.27" rx="1.59" ry="3.19" transform="translate(-2.79 4.46) rotate(-2)"/>
   </g>

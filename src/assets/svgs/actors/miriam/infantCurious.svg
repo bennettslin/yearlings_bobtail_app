@@ -99,7 +99,7 @@
       <path d="M112.77,45.35a8.09,8.09,0,0,0-6.66,2.14"/>
       <path d="M128.9,43.71a7.61,7.61,0,0,0-6.46,2.11"/>
     </g>
-    <g class="eyeBlob">
+    <g class="blackDark__noStroke">
       <ellipse cx="111.3" cy="51.48" rx="2.34" ry="4.67" transform="translate(-3.18 7.53) rotate(-3.82)"/>
       <ellipse cx="127.24" cy="49.85" rx="2.34" ry="4.67" transform="translate(-3.04 8.59) rotate(-3.82)"/>
     </g>

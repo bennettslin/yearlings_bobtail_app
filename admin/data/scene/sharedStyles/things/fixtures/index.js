@@ -73,7 +73,7 @@ import {
     LIZ,
     SASHA,
 } from '../../../../../../src/constants/scene/actors'
-import { DRAWING__SHARED, THOUGHT__SHARED } from '../../../../../../src/constants/scene/sharedStyles/comic'
+import { DRAWING__SHARED } from '../../../../../../src/constants/scene/sharedStyles/comic'
 import {
     BANANA__SHARED,
     BUDWEISER__SHARED,
@@ -204,7 +204,6 @@ export default {
         ALL_PEOPLE__SHARED,
         ACOUSTIC_GUITAR__SHARED,
         SASHA,
-        THOUGHT__SHARED,
     ],
     [GHOST_SHACKLES]: GHOST__SHARED,
     [GUITAR_CASE_OPEN]: GUITAR_CASE__SHARED,

@@ -10,7 +10,6 @@ import {
     EPILOGUE,
 } from '../../../../../../src/constants/scene/actors/songs'
 import { MARA } from '../../../../../../src/constants/scene/actors'
-import { THOUGHT__SHARED } from '../../../../../../src/constants/scene/sharedStyles/comic'
 import { REATTA__SHARED } from '../../../../../../src/constants/scene/sharedStyles/vehicles'
 import {
     SARI__SHARED,
@@ -21,12 +20,10 @@ export default {
     [INFANT_CURIOUS]: [
         MARA,
         YOUNG_MOM__SHARED,
-        THOUGHT__SHARED,
     ],
     [INFANT_NURSING]: [
         MARA,
         YOUNG_MOM__SHARED,
-        THOUGHT__SHARED,
     ],
     [PERFUMING]: null,
     [TENNIS]: null,

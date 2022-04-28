@@ -39,7 +39,6 @@ import { HOUSE__SHARED } from '../../../../../../src/constants/scene/sharedStyle
 import {
     CONSTELLATION__SHARED,
     DRAWING__SHARED,
-    THOUGHT__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/comic'
 import {
     BASEMENT_TAKEOUT__SHARED,
@@ -76,7 +75,6 @@ export default {
     [CINEMA_THOUGHT_BUYING]: [
         MARA,
         ALL_PEOPLE__SHARED,
-        THOUGHT__SHARED,
     ],
     [CINEMA_THOUGHT_RECORDING]: [
         ACOUSTIC_GUITAR__SHARED,
@@ -85,7 +83,6 @@ export default {
         BENNETT,
         ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED,
-        THOUGHT__SHARED,
     ],
     [ESTHER_SPEECH]: null,
     [KHARI_SPEECH_ATTACK]: [
@@ -93,7 +90,6 @@ export default {
         LIZ,
         ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED,
-        THOUGHT__SHARED,
     ],
     [LIZ_SPEECH_DEFENCE]: [
         BANJO__SHARED,
@@ -104,7 +100,6 @@ export default {
         LIZ,
         ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED,
-        THOUGHT__SHARED,
     ],
     [LIZ_THOUGHT_DINING]: [
         ANDREW,
@@ -112,7 +107,6 @@ export default {
         LIZ,
         ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED,
-        THOUGHT__SHARED,
         BASEMENT_TAKEOUT__SHARED,
         CAFETERIA__SHARED,
         DINING_SHARED,
@@ -137,14 +131,12 @@ export default {
         DOOR__SHARED,
         HOUSE__SHARED,
         LANCET_PEN__SHARED,
-        THOUGHT__SHARED,
     ],
     [LIZ_THOUGHT_REUNION]: [
         BENNETT,
         LIZ,
         ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED,
-        THOUGHT__SHARED,
         ALL_VEHICLES__SHARED,
         FOLIAGE__SHARED,
         REATTA__SHARED,
@@ -162,7 +154,6 @@ export default {
         ALL_PEOPLE__SHARED,
         BENNETT_LINENS__SHARED,
         BENNETT_ROOM_SHARED,
-        THOUGHT__SHARED,
     ],
     [THOUGHT_GO_KART]: FOLIAGE__SHARED,
     [WAITING_THOUGHT_SINGING]: [
@@ -173,20 +164,17 @@ export default {
         BANJO__SHARED,
         BENNETT_LINENS__SHARED,
         BENNETT_ROOM_SHARED,
-        THOUGHT__SHARED,
     ],
     [WAITING_THOUGHT_STUDYING]: [
         BENNETT,
         LIZ,
         ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED,
-        THOUGHT__SHARED,
     ],
     [WAITING_THOUGHT_WALKING]: [
         BENNETT,
         LIZ,
         ALL_PEOPLE__SHARED,
-        THOUGHT__SHARED,
         FOLIAGE__SHARED,
         MOUNTAIN__SHARED,
     ],

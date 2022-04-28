@@ -12,7 +12,6 @@ import {
 } from '../../../../../../src/constants/scene/actors/songs'
 import { MARA } from '../../../../../../src/constants/scene/actors'
 import { USHER__SHARED } from '../../../../../../src/constants/scene/sharedStyles/actors'
-import { THOUGHT__SHARED } from '../../../../../../src/constants/scene/sharedStyles/comic'
 import { ROBITUSSIN__SHARED } from '../../../../../../src/constants/scene/sharedStyles/food'
 import { SATURN__SHARED } from '../../../../../../src/constants/scene/sharedStyles/vehicles'
 import { STEAM_TUNNEL__SHARED } from '../../../../../../src/constants/scene/sharedStyles/wardrobe'
@@ -27,7 +26,6 @@ export default {
     [USHER_WAITING]: [
         MARA,
         USHER__SHARED,
-        THOUGHT__SHARED,
     ],
     [USHER_LOOKING]: USHER__SHARED,
 }
