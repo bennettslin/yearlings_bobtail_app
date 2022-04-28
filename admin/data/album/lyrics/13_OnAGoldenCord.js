@@ -29,7 +29,7 @@ export default {
     mixStartTime: `0:03:11.10`,
     playerReferenceTime: 2298.378,
     playerStartTime: 2295.261,
-    overview: `After a long night out with friends, I might shuffle on to Sita's place, slip into bed with her, and quickly doze off. But one night, Sita was waiting to confront me, having discovered my plans to break up with her. In tears, she returned the gold bracelet I'd given her at the start of our relationship, and then she kicked me out. With nowhere to go, I wandered the streets until sunrise. And so began the first of our many breakups…`,
+    overview: `After a night out with friends, I might shuffle on to Sita's place, slip into bed with her, and quickly doze off. But one night, Sita was waiting to confront me, having discovered my plans to break up with her. In tears, she returned the gold bracelet I'd given her at the start of our relationship, and then she kicked me out. With nowhere to go, I wandered the streets until sunrise. And so began the first of our many breakups…`,
     isDoublespeaker: true,
     lyricUnits: [
         {
@@ -101,7 +101,7 @@ export default {
                             anchor: `bread and pocket lint`,
                             card: {
                                 description: `
-                                Before leaving the cafeteria that evening, I stashed some bread rolls in the front pockets of my jacket to munch on the go. Now clutching the bracelet, I tuck my hands in as well to keep warm.`,
+                                Before leaving the cafeteria that evening, I stashed some bread rolls in the front pockets of my jacket for munching on the go. Now clutching the bracelet, I tuck in my hands as well to keep warm.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -121,7 +121,7 @@ export default {
                         {
                             anchor: `broken`,
                             card: {
-                                description: `When I walked into Sita's living room that night to find her seated on the couch, the bracelet lay in a mangled heap on her coffee table. I wondered if she'd damaged it on purpose. I later realized that its dozens of intricate links would only lock into place once the bracelet was snug around her wrist.`,
+                                description: `When I walked into Sita's living room that night to find her seated on the couch, the bracelet lay in a mangled heap on her coffee table. I wondered if she'd damaged it on purpose. I later realized that its dozens of intricate links locked into place only once the bracelet was snug around her wrist.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -202,7 +202,7 @@ export default {
                         {
                             anchor: `went through your mail`,
                             card: {
-                                description: `Confused about why I'd grown distant, Sita snooped around on my desktop computer that day and stumbled upon an email to my friends. In the email, I spoke of a recent crush and solicited advice on breaking up gently.`,
+                                description: `Confused about why I'd grown distant, Sita snooped around on my desktop computer that day and stumbled upon some emails to friends. In the emails, I spoke of a recent crush and solicited advice on breaking up gently.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -226,7 +226,7 @@ export default {
                             anchor: `natural harmonic`,
                             wiki: `Guitar_harmonics`,
                         },
-                        `. I didn't account for the need to move my fingers quickly from one note to the next, however, so I had to record each part in multiple short takes.`,
+                        `. I didn't account for the need to quickly move my fingers from one end of the fretboard to the other, however, so I had to record each part in multiple short takes.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -281,7 +281,7 @@ export default {
                                         anchor: `paupers' grave`,
                                         wiki: `Potter's_field`,
                                     },
-                                    `where the unclaimed remains of his drunken half were since buried.`,
+                                    `where the unclaimed remains of his drunken half have been buried.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -304,14 +304,13 @@ export default {
                         {
                             anchor: `bellyaches on suttee`,
                             todo: true,
-                            // TODO: If there was no one left for her to love.
                             card: {
                                 description: [
                                     {
                                         anchor: `Suttee`,
                                         wiki: `Sati_(practice)`,
                                     },
-                                    `is an outdated Hindu custom in which a widow commits suicide by throwing herself onto her husband's funeral pyre. Likewise, sober me knew he could be rid of Sita forever if he just killed off bit by bit the one she loved, pushing her to venture further into the darkness to chase after the less and less of their relationship that remained.`,
+                                    `is an outdated Hindu custom in which a widow commits suicide by throwing herself onto her husband's funeral pyre. Likewise, sober me knew he could be rid of Sita forever if he just killed off the one she loved, pushing her to venture further into the darkness to chase after the nothingness that remained.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -325,7 +324,7 @@ export default {
                         {
                             anchor: `well-behaved on the wing`,
                             card: {
-                                description: `Feeling no malice, drunken me can only surmise that after serving out his sentence without complaint, he's been granted early release for good behavior.`,
+                                description: `Harboring no grudges, drunken me can only surmise that after serving out his sentence without complaint, he's been granted early release for good behavior.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -339,7 +338,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `Just as the citizens of`,
+                        `In`,
                         {
                             anchor: `George Orwell`,
                             wiki: `George_Orwell`,
@@ -352,7 +351,7 @@ export default {
                                 wiki: `Nineteen_Eighty-Four`,
                             },
                         },
-                        `are required to engage in`,
+                        `, the citizens are forced to engage in`,
                         {
                             anchor: `doublethink`,
                             wiki: `Doublethink`,
@@ -362,7 +361,7 @@ export default {
                             anchor: `Newspeak`,
                             wiki: `Newspeak`,
                         },
-                        `, I could only make sense of the breakup by reconciling the contradictions in my head. So this song uses doublespeaker rhyme— which I'd named partly for its Orwellian undertone— to depict the inner conflict between my sober self and his drunken alter ego.`,
+                        `. And all through that night, I needed to make sense of the breakup by reconciling the contradictions in my head. So this song uses doublespeaker rhyme— which I'd named partly for its Orwellian undertone— to depict the inner conflict between my sober self and his drunken alter ego.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -385,7 +384,7 @@ export default {
                             anchor: `wanted ads`,
                             card: {
                                 description: [
-                                    `As drunken me wanders the Oakland streets, he stops to read flyers posted on telephone poles by bands seeking new members, like a vigilante of the`,
+                                    `As drunken me wanders the Oakland streets, he stops to read flyers on telephone poles posted by bands seeking new members, like a vigilante of the`,
                                     {
                                         anchor: `Old West`,
                                         wiki: `American_frontier`,
@@ -418,7 +417,7 @@ export default {
                         {
                             anchor: `Guilt pardons`,
                             card: {
-                                description: `As my sober self observes his drunken accomplice's lack of remorse, he can only feel pity, knowing the trauma that would linger in anyone who performed this heinous act. After all, avoiding such trauma was the reason he chose not to carry out the hit himself.`,
+                                description: `As my sober self observes his drunken accomplice's lack of remorse, he can only feel pity, knowing the trauma that must linger in anyone who performed this heinous act. After all, avoiding such trauma was the reason he chose not to carry out the hit himself.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -431,7 +430,7 @@ export default {
                         {
                             anchor: `fawning, misty glance`,
                             card: {
-                                description: `With bitterness rumbling in his heart, drunken me lashes out in defiance at the boulevard's twin street lights. Their glowing lamps have revived the memory of Sita's fearful gaze at the moment he committed his crime.`,
+                                description: `With bitterness suddenly rumbling in his heart, drunken me lashes out in defiance at the boulevard's twin street lights. Their glowing lamps have revived the memory of Sita's fearful gaze at the moment he committed his crime.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -509,7 +508,7 @@ export default {
                         {
                             anchor: `life were real`,
                             card: {
-                                description: `Sita's friends weren't wrong to label me fake and pretentious. My emotions didn't feel legitimate even to myself, and so I reacted to them the way an actor reacts onstage to a cue. At the time, I blamed the lingering effects of Robitussin.`,
+                                description: `Sita's friends weren't wrong to label me fake and pretentious. My emotions didn't feel legitimate even to myself, and so I reacted to them like an actor responding to a cue. At the time, I blamed the lingering effects of Robitussin.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -569,7 +568,7 @@ export default {
                                         anchor: `carnivores`,
                                         wiki: `Carnivore`,
                                     },
-                                    `have an instinct to tear flesh with their jaws, so they reflexively soften their bites during rough play. And knowing as I did now what it truly means to inflict harm, I realized the bullies held back their blows the same way, believing their cruelty to be in good fun.`,
+                                    `have an instinct to tear flesh with their jaws, so they reflexively soften their bites during rough play. And knowing now what it truly means to inflict harm, I realized the bullies held back their blows the same way, believing their cruelty to be in good fun.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -795,7 +794,7 @@ export default {
                 },
                 {
                     mixTime: `2:13:21.42`,
-                    lyricCentre: `Or was I once, something not what I've become?`,
+                    lyricCentre: `Or was I once something not what I've become?`,
                 },
                 {
                     mixTime: `2:21:07.70`,
@@ -925,7 +924,7 @@ export default {
                                         anchor: `Alexander the Great`,
                                         wiki: `Alexander_the_Great`,
                                     },
-                                    `simply chopped it in half with his sword and then went on to fulfill the prophecy. And in my own bid for greatness, I applied the same brute force to sever the cord binding me to Sita.`,
+                                    `simply chopped it in half with his sword, after which he then went on to fulfill the prophecy. And in my own bid for greatness, I applied the same brute force to sever the cord binding me to Sita.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -949,7 +948,7 @@ export default {
                                         anchor: `controls the body's right side`,
                                         wiki: `Contralateral_brain`,
                                     },
-                                    `, and the right hemisphere, the left, it's as if each half of my brain is attacking the other using the one fist under its command.`,
+                                    `, and the right hemisphere, the left, it's as if each half of my brain attacks the other using the one fist under its command.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1036,7 +1035,7 @@ export default {
                             anchor: `Garry's sole witness`,
                             properNoun: true,
                             card: {
-                                description: `Though I desperately wish to plead my case, I realize the breakup will be over with much sooner if I just accept my role as the villain. And so the sober me, called up to testify for his drunken half, stays silent.`,
+                                description: `Though I desperately wish to plead my case, I realize the breakup will be over with sooner if I just accept my role as the villain. And so the sober me, called up to testify for his drunken half, stays silent.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -1064,12 +1063,12 @@ export default {
                             anchor: `master mind`,
                             card: {
                                 description: [
-                                    `In college, my wishful thinking for writing`,
+                                    `In college, my wishful thinking was that I could shunt the burden of writing`,
                                     {
                                         anchor: `term papers`,
                                         wiki: `Term_paper`,
                                     },
-                                    `was that I could shunt the burden onto my drunken self. Once drunk, however, I felt like a slave taking orders from a master, and I would do the work poorly or not at all. Somehow this became my strategy for dealing with the burden of breaking up with Sita.`,
+                                    `onto my drunken self. Once drunk, however, I felt like a slave taking orders from a master, and I would do the work poorly or not at all. Somehow this became my strategy for dealing with the burden of breaking up with Sita.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,

@@ -586,7 +586,7 @@ export default {
                         {
                             anchor: `have her for your pet`,
                             card: {
-                                description: `Sita's manner of prostrating herself like a pet forced me to wield an absolute power that I never asked for, and this exasperated me to no end. But its endearing nature was also guaranteed to make me love her, and I did. So I never doubted that the impending breakup would be wrenching for both of us.`,
+                                description: `Sita's manner of prostrating herself like a pet forced me to wield an absolute power that I never asked for, which exasperated me to no end. But its endearing nature was also guaranteed to make me love her, and I did. So I never doubted that the impending breakup would be wrenching for both of us.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
