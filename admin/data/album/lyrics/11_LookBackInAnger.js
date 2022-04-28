@@ -29,7 +29,8 @@ export default {
     playerStartTime: 1932.102,
     // This is a magic number adjusted by ear. In the mix, it's actually 41.66.
     mixSamplingFrequency: 41.64,
-    overview: `With the Yearlings becoming a fixture in the local scene, I started to command more attention than I'd ever known, particularly from women. And yet, my misery didn't abate but instead simmered into a hard-boiled resentment. I also began to regret my relationship with Sita, which now felt like a decision I'd been coerced to make under deprived conditions from which I was now freed.`,
+    todo: true,
+    overview: `With the Yearlings becoming a fixture in the local scene, I started to command more attention than I'd ever known, particularly from women. Yet even as my misery abated, beneath it all there remained a simmering resentment. I also began to regret my relationship with Sita, which now felt like a decision I'd been coerced to make under deprived conditions from which I was now free.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -49,7 +50,7 @@ export default {
                                 wiki: `Look_Back_in_Anger`,
                             },
                         },
-                        `is a theatrical play, set in postwar England, about a disgruntled young man of the working class who hurls rage at his long-suffering wife. It hit unnervingly close to home when I read it.`,
+                        `is a theatrical play, set in postwar England, about a disgruntled young man of the working class who hurls his rage at his long-suffering wife. It hit unnervingly close to home when I read it.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -305,7 +306,7 @@ export default {
                         {
                             anchor: `spite you thrive`,
                             card: {
-                                description: `But this casual view of hardship is what later enabled me to justify the pain I caused Sita.`,
+                                description: `But this casual view of my own hardship is what enabled me to justify the pain I caused Sita.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -828,7 +829,7 @@ export default {
                                         anchor: `Budweisers`,
                                         wiki: `Budweiser`,
                                     },
-                                    `in me to reach the desired level of affability. But it's also too late to present myself as someone who isn't sexually involved with his best friend. I can't just unscrew a "bud" at will.`,
+                                    `in me to reach the desired level of affability. But it's also too late to present myself as someone who isn't already sexually involved with his best friend. I can't just unscrew a "bud" at will.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

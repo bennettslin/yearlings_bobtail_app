@@ -1,7 +1,3 @@
-/**
- * TODO: References, decide on where to put quotations marks. Balance between
- * not being clear and being too obvious.
- */
 import {
     BACKSTORY,
     NARRATIVE,
@@ -204,7 +200,7 @@ export default {
                                             anchor: `Dextromethorphan`,
                                             wiki: `Dextromethorphan`,
                                         },
-                                        `, the cough suppressant found in Robitussin, is often abbreviated as "DXM."`,
+                                        `, a cough suppressant, is the ingredient responsible for Robitussin's hallucinogenic properties. It's sometimes abbreviated as "DXM."`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -275,12 +271,12 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `To be honest, I never got past the first fifty pages of`,
+                        `Full disclosure: I never got past the first fifty pages of`,
                         {
                             isItalic: true,
                             lyric: `Finnegans Wake`,
                         },
-                        `. Still, I took note of how Joyce used literary puns to create multiple layers of meaning within a dreamlike setting. It seemed like the perfect device to convey a Robitussin trip, during which worlds of meaning build up and fade within the briefest of moments, and everything feels at once epic and unreal.`,
+                        `. Still, I noted how Joyce used literary puns to create multiple layers of meaning within a dreamlike setting. It seemed like the perfect device to convey a Robitussin trip, during which worlds of meaning build up and fade within the briefest of moments, and everything feels at once epic and unreal.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -591,7 +587,7 @@ export default {
                                             anchor: `pseudoephedrine`,
                                             wiki: `Pseudoephedrine`,
                                         },
-                                        `," a nasal decongestant. Because this is the main ingredient used to make`,
+                                        `," a nasal decongestant. Because it's the main ingredient used to make`,
                                         {
                                             anchor: `crystal meth`,
                                             wiki: `Methamphetamine`,
@@ -747,7 +743,7 @@ export default {
                             properNoun: true,
                             cards: [
                                 {
-                                    description: `Tomer jokingly drops crumbs of dirt as if laying a trail of seeds, while I observe that we're laying the seed that will sprout into nations of our descendants in the lands we conquer.`,
+                                    description: `Tomer jokingly drops crumbs of dirt as if laying a trail of seeds. I observe that these seeds will sprout into the nations of our descendants in the lands we conquer.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true,
@@ -884,7 +880,7 @@ export default {
                             anchor: `questurns Indo Hairapins`,
                             card: {
                                 description: [
-                                    `Our "quest turns into hairpins" as we wind our way down labyrinthine passageways. All the while, I blather on about "questions" surrounding the "`,
+                                    `Our "quest turns into hairpins" as we wind our way down labyrinthine pathways. All the while, I blather on about "questions" surrounding the "`,
                                     {
                                         anchor: `Indo-Harappan`,
                                         wiki: `Indus_Valley_Civilisation`,
@@ -1039,7 +1035,7 @@ export default {
                         {
                             anchor: `unsolft quarry rest`,
                             card: {
-                                description: `"Our young invaders" arrive at a clearing where dirt from the ground has been shaped into makeshift benches. Pausing for a breather, on this "soft quarry" we rest.`,
+                                description: `"Our young invaders" arrive at a clearing where dirt from the ground has been shaped into makeshift benches. Pausing for a breather, we rest on this "soft quarry."`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -1383,7 +1379,12 @@ export default {
                                             anchor: `Inuits`,
                                             wiki: `Inuit`,
                                         },
-                                        `of the Arctic regions, migrated to the Americas by boat. An Inuit storyteller might narrate the journey of one such seafaring ancestor by describing how "he rows" with the "auroras," or`,
+                                        `of the Arctic regions, migrated to the Americas by boat. So if an Inuit`,
+                                        {
+                                            anchor: `shaman`,
+                                            wiki: `Shamanism`,
+                                        },
+                                        `were to tell the story of a seafaring ancestor, they might describe how "he rows" with the "auroras," or`,
                                         {
                                             anchor: `aurora borealis`,
                                             wiki: `Aurora`,
@@ -1517,22 +1518,24 @@ export default {
                         {
                             // NOTE: I changed from ha'nt.
                             anchor: `hant'd by sober-trooth tiedgirl`,
-                            // Just needs to be worded right.
-                            // TODO: Ease into the fact that the relationship isn't working.
-                            todo: true,
                             card: {
                                 description: [
-                                    `Encountering the vision of a "`,
-                                    {
-                                        anchor: `mastodon`,
-                                        wiki: `Mastodon`,
-                                    },
-                                    `" being "hunted by a`,
+                                    `As I envision a "`,
                                     {
                                         anchor: `saber-toothed tiger`,
                                         wiki: `Smilodon`,
                                     },
-                                    `," I'm subconsciously "haunted by the sober truth" that I continue to keep Sita captive in a codependent relationship of which I'm beginning to tire.`,
+                                    `" "hunting" down a "`,
+                                    {
+                                        anchor: `mastodon`,
+                                        wiki: `Mastodon`,
+                                    },
+                                    `," I'm "haunted by the sober truth" that my relationship with Sita has devolved into`,
+                                    {
+                                        anchor: `codependency`,
+                                        wiki: `Codependency`,
+                                    },
+                                    `, and I'm beginning to tire of it.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1552,11 +1555,9 @@ export default {
                         lyric: [
                             {
                                 anchor: `sunk in tarpid lies`,
-                                // Just needs time to think through.
-                                todo: true,
                                 cards: [
                                     {
-                                        description: `My mastodon lies sunk in a "tar pit," just as I've sunk too far in all my "torpid" lies to Sita explaining why I can't spend more nights with her.`,
+                                        description: `My mastodon lies sunk in a "tar pit," just as I'm sinking in all my "torpid" lies explaining to Sita why I don't spend more nights with her.`,
                                         dotKeys: {
                                             [NARRATIVE]: true,
                                             [PUN]: true,
@@ -1858,12 +1859,12 @@ export default {
                             anchor: `in-som'umiak`,
                             card: {
                                 description: [
-                                    `Meanwhile, sensing disaster afoot, our brave tribe flees to safety "in some`,
+                                    `Meanwhile, sensing disaster afoot, our brave Inuit tribe flees to safety "in some`,
                                     {
                                         anchor: `umiak`,
                                         wiki: `Umiak`,
                                     },
-                                    `," an Inuit boat made of whalebone and sealskin, as we skim through icy channels wreaked by a "snowy blitz."`,
+                                    `," a boat made of whalebone and sealskin, as we skim through icy channels wreaked by a "snowy blitz."`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1890,7 +1891,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `For a song about recreational drug use, I naturally turned to the Beatles during their`,
+                        `For a song about recreational drug use, I naturally turned to the Beatles in their`,
                         {
                             anchor: `psychedelic`,
                             wiki: `Psychedelic_rock`,
@@ -1910,7 +1911,7 @@ export default {
                             anchor: `seagull`,
                             wiki: `Gull`,
                         },
-                        `'s cry, which I tried to recreate by pinching off the airstream blown through the window of a recorder. The result wasn't what I'd hoped for, but here as background texture, it contributes nicely to the overall atmosphere.`,
+                        `'s cry, which I tried to recreate by pinching off the airstream blown through the window of a recorder. The result wasn't what I'd hoped for, but as background texture, it contributes nicely to the overall atmosphere.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -1982,7 +1983,7 @@ export default {
                             anchor: `come unsated`,
                             properNoun: true,
                             card: {
-                                description: `Howie is downstairs in "anguish" over still being "buzzed," as he downs cup after cup of water to quench his parched innards. Earlier that night, he'd opted for the large bottle of Robitussin, thinking the small one I recommended wouldn't be enough.`,
+                                description: `Howie is downstairs in "anguish" over still being "buzzed," as he quenches his innards by downing cups of water. He'd opted for a large bottle of Robitussin earlier that night, thinking the small one I recommended wouldn't be enough.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -2010,7 +2011,7 @@ export default {
                                         anchor: `Pennsylvania Dutch`,
                                         wiki: `Pennsylvania_German_language`,
                                     },
-                                    `, I liked the mental picture of us dipping into a literal "rum spring." In any case, the spring of our youth, in both the literal and metaphorical sense, is running dry.`,
+                                    `, I like the image of us dipping into a literal "rum spring." In any case, the spring of our youth, in both the literal and metaphorical sense, is running dry.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,

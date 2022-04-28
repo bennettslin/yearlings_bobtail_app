@@ -322,7 +322,7 @@ export default {
                                     ],
                                 },
                                 {
-                                    description: `Up to that point, I thought of songwriting as just a matter of coming up with melodies and chords. But Catherine appreciated music for its lyrics, and because my lyrics were mostly nonsensical, she wasn't impressed by any of my songs that I played for her.`,
+                                    description: `Up to that point, I thought of songwriting as just a matter of coming up with melodies and chords. But Catherine appreciated music for its lyrics, and because mine at the time were of the nonsensical variety, she wasn't impressed by any of my songs that I played for her.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -390,7 +390,7 @@ export default {
                             anchor: `putting down her Joyce`,
                             card: {
                                 description: [
-                                    `Her compliment is less than sincere, however, since referencing a poet studied by middle schoolers is hardly an impressive feat. And so, having being made to put down the Joyce novel she was reading, Catherine amuses herself by figuratively putting`,
+                                    `Her compliment is less than sincere, however, since referencing a poet studied by middle schoolers is hardly an impressive feat. And so, feeling annoyed at being made to put down the Joyce novel she was reading, Catherine amuses herself by putting`,
                                     {
                                         isItalic: true,
                                         lyric: `me`,
@@ -419,7 +419,7 @@ export default {
                                         isItalic: true,
                                         lyric: `Ulysses`,
                                     },
-                                    `had once done for English literature.`,
+                                    `had done for English literature.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -829,7 +829,7 @@ export default {
                                                 anchor: `Protestant`,
                                                 wiki: `Protestantism`,
                                             },
-                                            `but converted to Catholicism to gain the royal crown. He is reputed to have said, "`,
+                                            `but converted to Catholicism to gain the royal crown. He's reputed to have said, "`,
                                             {
                                                 isItalic: true,
                                                 lyric: `Paris vaut bien une messe`,

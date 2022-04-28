@@ -78,7 +78,7 @@ export default {
                         },
                     },
                     {
-                        description: `I chose this song title because I liked the image of two grasshoppers hidden in the tall grass, each hesitantly signaling to the other, as neither wishes to reveal itself first.`,
+                        description: `I chose this song title because I liked the image of two grasshoppers hidden in the tall grass, each hesitantly signaling to the other, with neither wishing to be first to reveal itself.`,
                         dotKeys: {
                             [OBSERVATION]: true,
                         },
@@ -189,7 +189,7 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `In 19th-century England, a market emerged for cheap, sensational novellas, which the highbrow derided as`,
+                                        `In 19th-century England, a market emerged for cheap and sensational novellas, which the highbrow derided as`,
                                         {
                                             anchor: `penny dreadfuls`,
                                             wiki: `Penny_dreadful`,
@@ -236,7 +236,7 @@ export default {
                         {
                             anchor: `dull dishroom days`,
                             card: {
-                                description: `I got a job washing dishes at a university cafeteria. The work was uneventful and offered no social interaction, but that was its appeal to me. At the start of the shift, I would sit and read while the dishes piled up, then clean them all at once in a mad rush. As it got busy, I would switch to writing song lyrics in my head.`,
+                                description: `I got a job washing dishes at a university cafeteria. The work was uneventful and offered no social interaction, but that was its appeal to me. At the start of the shift, I could read a book while the dishes piled up, then clean them all at once in a mad rush. As it got busy, I would switch to writing song lyrics in my head.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -376,7 +376,7 @@ export default {
                             anchor: `sci-fi paperback`,
                             cards: [
                                 {
-                                    description: `At the time, I was obsessed with Dick's stories of altered states and dystopian worlds. I never left home without one of his novels under my arm.`,
+                                    description: `At the time, I was obsessed with Dick's stories of altered states and dystopian worlds. I often walked around with one of his novels visibly nestled under my arm.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -564,7 +564,7 @@ export default {
                         {
                             anchor: `no convert's missed`,
                             card: {
-                                description: `RI Research likely guessed that I would grow disillusioned sooner rather than later, and so they asked for the largest payments upfront. The last few letters were so sloppily written, it even felt like they were shooing me away by that point. And now Sita's abrupt departure from my life seemed like evidence that I was once again a sucker for the perfect scam.`,
+                                description: `RI Research guessed that I would grow disillusioned sooner rather than later, which is why they asked for the largest payments upfront. The last few letters were so sloppily written, it even felt like they were shooing me away by that point. And now Sita's abrupt departure from my life seemed like evidence that I was once again a sucker for the perfect scam.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -617,7 +617,7 @@ export default {
                         {
                             anchor: `sour grapes, bitter sweets`,
                             card: {
-                                description: `At the end of each shift, I would head to the dining area to scavenge enough leftovers for my next meal. Busy days were doubly cruel because after staying late and working myself to exhaustion, all that was left to pick through were the dried-out scraps that no one else wanted.`,
+                                description: `At the end of each shift, I would head to the dining area to scavenge enough leftovers for my next meal. Busy days were doubly cruel because after staying late and working myself to exhaustion, there would be nothing left to pick through but the withered scraps that no one else wanted.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -667,7 +667,7 @@ export default {
                                         anchor: `phantom limb`,
                                         wiki: `Phantom_limb`,
                                     },
-                                    `is the sensation that a missing limb is still attached and responsive. As I walk home from the cafeteria, an amputation is what it feels like to spend the coming weekend alone after several weeks of giddy hope.`,
+                                    `is the sensation that a missing limb is still responsive. And having spent those last weeks of the summer in giddy hope, an amputation is now what it feels like to face the coming weekend alone.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -686,12 +686,12 @@ export default {
                             anchor: `tripped on runner's high`,
                             card: {
                                 description: [
-                                    `After a grueling shift, I then had to make the long slog back home. So it would have been hard to feel gracious toward any nighttime jogger passing me by and feeling the euphoria of a`,
+                                    `After a grueling shift, I would make the long slog back home while feeling dead tired in all my limbs. So if I were to be passed by a nighttime jogger feeling the euphoria of a`,
                                     {
                                         anchor: `runner's high`,
                                         wiki: `Neurobiological_effects_of_physical_exercise`,
                                     },
-                                    `.`,
+                                    `, it would have been hard to feel gracious.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -710,12 +710,12 @@ export default {
                             anchor: `window of your Walkman`,
                             card: {
                                 description: [
-                                    `In those days, I was almost never without my`,
+                                    `In those days, I often carried a`,
                                     {
                                         anchor: `Walkman`,
                                         wiki: `Walkman`,
                                     },
-                                    `, a portable cassette player. So if I ever wished pratfalls upon others, I could just pretend to be absorbed in my music, much like a child ducking beneath a window after pulling a prank.`,
+                                    `wherever I went. So after wishing pratfalls upon others, I could just pretend to be absorbed in my music, like a child ducking beneath a window after pulling a prank.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -781,7 +781,7 @@ export default {
                         {
                             anchor: `you're my password`,
                             card: {
-                                description: `As I enter the passcode for the gate, Sita breaks the ice by mentioning that a topic we once discussed was the basis for a password she recently created.`,
+                                description: `As I enter the passcode for the gate, Sita breaks the ice by mentioning that a topic we'd once discussed was the basis for a password she recently created.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -809,7 +809,7 @@ export default {
                         {
                             anchor: `locks your arm`,
                             card: {
-                                description: `Seeing Sita shiver from the cold, I invite her to warm up inside my apartment. In response, she gladly tucks her hand under my arm. Of course, it doesn't mean what I so badly want it to mean. And so it feels like I'm an escaped convict who's just been recaptured and put in handcuffs.`,
+                                description: `Seeing Sita shiver from the cold, I invite her to warm up inside my apartment. In response, she gladly tucks her hand under my arm. Of course, this doesn't mean what I want it to mean. And so I feel like an escaped convict who's just been recaptured and put in handcuffs.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -821,7 +821,7 @@ export default {
                             anchor: `Key turned`,
                             cards: [
                                 {
-                                    description: `As we catch up on recent happenings, I unlock the door to my apartment. But with Sita clinging tightly to my arm, it feels more like I'm being directed into a holding cell.`,
+                                    description: `As we catch up on recent happenings, I unlock the door to my apartment. But with Sita clinging tightly to my arm, it feels like I'm being directed into a holding cell.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -835,7 +835,7 @@ export default {
                         {
                             anchor: `returned to your guard`,
                             card: {
-                                description: `And just like that, I'm once again second-guessing everything I say, like a prisoner conversing with a jail guard.`,
+                                description: `And just like that, I'm once again on guard, as I was on our first few dates. I'm second-guessing everything I say, like a prisoner conversing with a jail guard.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -859,7 +859,7 @@ export default {
                         {
                             anchor: `gingerbread prison`,
                             card: {
-                                description: `But while being stuck in a platonic friendship with Sita will never fulfill me, it might still be sweet to nibble on.`,
+                                description: `Since a platonic friendship with Sita can never fulfill me, I find the thought instantly depressing. And yet… it's also kind of sweet to nibble on.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -876,7 +876,7 @@ export default {
                         {
                             anchor: `never full, you're fed`,
                             card: {
-                                description: `Like a tired fugitive relieved to come back to a warm bed and regular meals, I have to concede that being just friends is still better than the cold, bleak alternative.`,
+                                description: `Like a tired fugitive relieved to come back to a warm bed and regular meals, I have to concede that even if we're just friends, it's still better than the cold, bleak alternative.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -915,7 +915,7 @@ export default {
                                             anchor: `Vaseline`,
                                             wiki: `Vaseline`,
                                         },
-                                        `, which I clearly used recently for masturbating.`,
+                                        `, which I clearly used recently to masturbate with.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -936,7 +936,7 @@ export default {
                         {
                             anchor: `here to Philip Dick`,
                             card: {
-                                description: `Or else, to "feel up dick." Sita lightens the awkwardness by joking that I might prefer to continue masturbating alone. At the same time, she takes a gentle jab at the bookish exterior I've carefully crafted.`,
+                                description: `Or else, to "feel up dick." Sita lightens the awkwardness by joking that I might prefer to continue masturbating alone. At the same time, she takes a gentle jab at the bookish exterior I've crafted.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -964,12 +964,12 @@ export default {
                                 wiki: `Nevermind`,
                             },
                         },
-                        `for me is when`,
+                        `is when`,
                         {
                             anchor: `Kurt Cobain`,
                             wiki: `Kurt_Cobain`,
                         },
-                        `kicks the last third of "Lounge Act" into high gear by singing the same melody an octave higher. I'd always wanted to recreate this effect but could never do so, since the melodies I write tend to span my whole vocal range. So when I realized the chorus melody for this song stays within a single register throughout, I made it work.`,
+                        `kicks the last third of "Lounge Act" into high gear by singing the same melody an octave higher. I'd always wanted to recreate this effect but could never do so, since the melodies I write tend to span my whole vocal range. So when I realized the melody for this chorus stays within a single register throughout, I made it work.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -1021,7 +1021,7 @@ export default {
                             anchor: `bright to your gloom`,
                             cards: [
                                 {
-                                    description: `As we became friends, what I stood to gain from Sita was obvious. Less so was what she gained from me, given my moody temperament. But in time I came to see that her cheery nature actually masked a lingering depression, which gave me an opening to win her over with simple, kind gestures.`,
+                                    description: `As we became friends, what I stood to gain from Sita was obvious. Less so was what she gained from me, given my moody temperament. But in time I came to see that her cheery nature masked a lingering depression, which gave me an opening to win her over with simple, kind gestures.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -1150,7 +1150,7 @@ export default {
                         {
                             anchor: `white gown`,
                             card: {
-                                description: `White gowns are common attire in both wedding ceremonies and hospitals.`,
+                                description: `White gowns are commonly worn in both wedding ceremonies and hospitals.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -1198,7 +1198,7 @@ export default {
                         {
                             anchor: `She loves you`,
                             card: {
-                                description: `It took a long while for Sita and I to be fully comfortable with each other. At the start of our yearlong friendship, we mostly just studied together at the library. Then slowly, short treks through campus progressed into long strolls around the neighborhood, which soon led up to leaning in closer on the couch. It all happened so fast toward the end that I was still processing what exactly had triggered it.`,
+                                description: `It took a long while for Sita and I to be fully comfortable with each other. At the start of our yearlong friendship, we mostly just studied together at the library. Then slowly, short treks through campus progressed into long strolls around the neighborhood, which soon led up to leaning in closer on the couch. It all happened so fast toward the end that I was still processing what exactly triggered it.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -1264,7 +1264,7 @@ export default {
                         {
                             anchor: `how's that compromise`,
                             card: {
-                                description: `Having taken such pains to tuck away my emotions for so long, I was suddenly hesitant to compromise the safety of this position. I just didn't want to be vulnerable again, and I had so little faith that my desires wouldn't backfire on me as they had the first time I revealed them.`,
+                                description: `Having taken such pains to tuck away my emotions for so long, I was now hesitant to compromise the safety of this position. I just didn't want to feel vulnerable again, and I had so little faith that my desires wouldn't backfire on me as they had the first time I revealed them.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -1325,7 +1325,7 @@ export default {
                                             anchor: `tuberculosis`,
                                             wiki: `Tuberculosis`,
                                         },
-                                        `. And as Sita comforts me, I'm reminded that she's my "grace darling," the one who rescued me from a sea of loneliness.`,
+                                        `. And as Sita comforts me, I'm reminded that she's my "grace darling," who rescued me from a sea of loneliness.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -1369,7 +1369,7 @@ export default {
                         {
                             anchor: `pure lose to pure`,
                             card: {
-                                description: `Sita and I were both virgins, which made it easier to lower my defenses. I had to remind myself that neither of us really knew what we were doing.`,
+                                description: `Sita and I were both virgins, which made it easier to lower my defenses. I had to remind myself that neither of us knew what we were doing.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -1400,7 +1400,7 @@ export default {
                                         anchor: `temples`,
                                         wiki: `Temple_(anatomy)`,
                                     },
-                                    `. But possibly to her figurative ones as well.`,
+                                    `. And possibly to her figurative ones as well.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
