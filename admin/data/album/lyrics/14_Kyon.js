@@ -47,7 +47,7 @@ export default {
                             anchor: `Hindi`,
                             wiki: `Hindi`,
                         },
-                        `word for "why." After Sita and I started dating, I studied Hindi for several years, which allowed me to converse with her family in their native language. I also got course credit for it as a religious studies major, so it was an easy decision to make.`,
+                        `word for "why." After Sita and I started dating, I studied Hindi for several years, which allowed me to converse with her family in their native language. I also got course credit for it as a religious studies major.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -71,7 +71,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: `Having settled into an unhealthy power dynamic early on, Sita and I failed to grow as individuals. I can see now that she was waiting for me to grow up, because she couldn't do it without me. So the humming here evokes her quiet waiting, born of resignation.`,
+                    description: `Having settled into an unhealthy power dynamic early on, Sita and I failed to grow as individuals. But I can see now that she was just waiting for me to grow up. As long as we were together, she couldn't do it on her own. And so the humming heard here is the sound of her waiting in quiet resignation.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGCRAFT]: true,
@@ -187,7 +187,7 @@ export default {
                         {
                             anchor: `womb you bed`,
                             card: {
-                                description: `Of course, Sita herself was under no such illusion about my innocence. She knew full well that what I wanted was to sleep with more women, to compensate for being the less sexually experienced one in our relationship.`,
+                                description: `Of course, Sita herself was under no such illusion about my innocence. She knew full well that I just wanted to sleep with more women, to compensate for being the less sexually experienced one in our relationship.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -205,12 +205,12 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `My relationship with Sita was like a ship swaying in perilous waters. This notion is captured in the music by the`,
+                        `My relationship with Sita was like a ship swaying in perilous waters. This notion is captured in the music by both the`,
                         {
                             anchor: `compound meter`,
                             wiki: `Metre_(music)`,
                         },
-                        `, as well as by the back-and-forth between unrelated chords separated by a`,
+                        `and the vacillation between unrelated chords separated by a`,
                         {
                             anchor: `tritone`,
                             wiki: `Tritone`,
@@ -388,12 +388,12 @@ export default {
                             anchor: `keeper of his sheep herd`,
                             card: {
                                 description: [
-                                    `A keeper, in the sense of being both the one who tends to the herd, as well as the only one to keep from`,
+                                    `A keeper in the sense of being the one who tends to the herd, as well as the only one to keep from`,
                                     {
                                         isEmphasis: true,
                                         lyric: `among`,
                                     },
-                                    `the herd. Resigned to my infidelity, Sita could only hope that her permissiveness would earn her a privileged position amid all the other women I desired.`,
+                                    `the herd. Resigned to my infidelity, Sita could only hope that her permissiveness might earn her a privileged position amid all the other women I desired.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -434,7 +434,7 @@ export default {
                             anchor: `spring forward on a fallback`,
                             cards: [
                                 {
-                                    description: `Then once my later years as a womanizer proved unkind, I would surely return to Sita, my fallback option, with relief rather than reluctance.`,
+                                    description: `Then once my later years as a womanizer proved to be unfulfilling, I would surely return to her, my fallback option, with relief rather than reluctance.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -553,7 +553,7 @@ export default {
                         {
                             anchor: `lap my wound clean`,
                             card: {
-                                description: `After vaginal sex, I would go down on Sita until she reached orgasm. She mentioned this as an example of my thoughtfulness once, after I asked her what she saw in me that was worth holding onto. It seemed like proof to me that I had no actual redeeming qualities.`,
+                                description: `After vaginal sex, I would go down on Sita until she reached orgasm. She mentioned this as an example of my thoughtfulness once, when I asked her what she saw in me that was worth holding onto. It seemed like proof that I had no actual redeeming qualities.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -640,7 +640,7 @@ export default {
                                         anchor: `honeybee`,
                                         wiki: `Honey_bee`,
                                     },
-                                    `will die after stinging someone, as its stinger is connected to vital organs. Similarly, in having given my virginity to Sita in return, I realized too late there was a vital part of me that could never be recovered apart from her as well.`,
+                                    `will die after stinging someone, as its stinger is connected to vital organs. Similarly, in having given my virginity to Sita in return, I realized too late that a vital part of me could never be recovered apart from her as well.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -658,7 +658,7 @@ export default {
                                         anchor: `thirty-three`,
                                         wiki: `Chronology_of_Jesus`,
                                     },
-                                    `, the age at which Jesus was crucified. I hated the idea of getting older, and clearly this is all the time one needs to make an impact on the world. So when Sita asked me to declare the age at which I would come back for her in accordance with our little pact, I answered thirty-three. The subtext was understood.`,
+                                    `, the age at which Jesus was crucified. I hated the idea of getting older, and clearly this is all the time one needs to make an impact on the world. So when Sita asked me to specify the age at which I would come back for her in accordance with our little pact, I answered thirty-three. The subtext was understood.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -710,7 +710,7 @@ export default {
                         {
                             anchor: `fear of never dying`,
                             card: {
-                                description: `I also hadn't settled the issue of whether an afterlife was even preferable. Though Sita had no ready answers, she invited me to attend services with her. I found comfort in Hinduism's sprawling pantheon of deities and avatars. It just seemed like the more details there are to learn, the more ways there are to get lost in the divine.`,
+                                description: `I also hadn't settled the issue of whether an afterlife was even preferable. Though Sita had no ready answers, she invited me to perform Hindu worship with her, which supplemented what I was learning in my religious studies courses. I found comfort in Hinduism's sprawling pantheon of deities and avatars. It just seemed like the more details there are to learn, the more ways there are to get lost in the divine.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -782,7 +782,7 @@ export default {
                         {
                             anchor: `practice cuts`,
                             card: {
-                                description: `When Sita asked about the scars on my forearm, I wryly replied that they were just for practice. Years later when I expressed concern after she'd tried cutting for herself, she replied with the same assurance. The message was clear that I was the cause in more ways than one.`,
+                                description: `When Sita first asked about the scars on my forearm, I replied wryly that they were just for practice. Years later when I expressed concern after she'd tried cutting for herself, she replied with the same assurance. The message was clear that I was the cause in more ways than one.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -815,12 +815,12 @@ export default {
                             anchor: `peacock`,
                             wiki: `Peafowl`,
                         },
-                        `has always sounded to me like it's pleading in Hindi, "`,
+                        `has always sounded to me like it's pleading "`,
                         {
                             isItalic: true,
                             lyric: `kyon`,
                         },
-                        `?" For this reason, my heart still breaks somewhat to hear it.`,
+                        `" in Hindi. For this reason, my heart still breaks somewhat to hear it.`,
                     ],
                     dotKeys: {
                         [OBSERVATION]: true,
