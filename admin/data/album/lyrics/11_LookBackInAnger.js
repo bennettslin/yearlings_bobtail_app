@@ -800,10 +800,8 @@ export default {
                         `Drunk, you'd`,
                         {
                             anchor: `claim you've never loved`,
-                            todo: true,
-                            // TODO: This has gotten away from being unloved.
                             card: {
-                                description: `My first complete songs were about being unlucky in love. So as my life substantially improved, I needed to drink greater amounts of alcohol to carry on with the lie that I was still the same inexperienced kid who'd written them.`,
+                                description: `My first songs for the band were about being unlucky in love. So as my life improved, I needed to drink further amounts of alcohol to carry on with the lie that I was still the same inexperienced kid who wrote them.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

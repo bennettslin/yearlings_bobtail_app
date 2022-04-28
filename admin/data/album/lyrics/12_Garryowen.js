@@ -160,7 +160,7 @@ export default {
                             anchor: `opt for bed not street`,
                             card: {
                                 description: [
-                                    `I was tired of working extra shifts just to make the rent. So after my lease ended, I alternated between spending some nights with Sita, and others crashing in the`,
+                                    `I was tired of working extra shifts just to make the rent. So after my lease ended, I alternated between spending some nights with Sita, and other nights crashing in the`,
                                     {
                                         anchor: `punk house`,
                                         wiki: `Punk_house`,
