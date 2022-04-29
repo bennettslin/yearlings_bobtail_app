@@ -101,8 +101,9 @@ export default {
             xPosition: 3.03,
         },
         [HOSPITAL_BED_INTERIOR]: {
-            yIndex: 4,
+            yIndex: 3,
             xPosition: 3.03,
+            zOffset: -2,
         },
         [HOSPITAL_RECORD_STAND]: {
             yIndex: 5,

@@ -7,20 +7,20 @@ import {
     PUPPET,
 } from '../../../../../src/constants/scene/things'
 import {
-    BUBBLE_SMALL__TCHOTCHKES,
-    BUBBLE_MEDIUM__TCHOTCHKES,
-    BUBBLE_LARGE__TCHOTCHKES,
-    LIZ_THOUGHT_DINING,
-    LIZ_THOUGHT_BUSING,
-    BUBBLE_SMALL__DISHROOM,
-    BUBBLE_MEDIUM__DISHROOM,
     BUBBLE_LARGE__DISHROOM,
-    LIZ_THOUGHT_DISHROOM,
+    BUBBLE_LARGE__REUNION,
+    BUBBLE_LARGE__TCHOTCHKES,
+    BUBBLE_MEDIUM__DISHROOM,
+    BUBBLE_MEDIUM__REUNION,
+    BUBBLE_MEDIUM__TCHOTCHKES,
+    BUBBLE_SMALL__DISHROOM,
+    BUBBLE_SMALL__REUNION,
+    BUBBLE_SMALL__TCHOTCHKES,
     KHARI_SPEECH_ATTACK,
     LIZ_SPEECH_DEFENCE,
-    BUBBLE_SMALL__REUNION,
-    BUBBLE_MEDIUM__REUNION,
-    BUBBLE_LARGE__REUNION,
+    LIZ_THOUGHT_BUSING,
+    LIZ_THOUGHT_DINING,
+    LIZ_THOUGHT_DISHROOM,
     LIZ_THOUGHT_REUNION,
 } from '../../../../../src/constants/scene/things/bubbles'
 import {
@@ -28,6 +28,7 @@ import {
     CAT_LITTER_BOX,
     CYPRESS_DOUBLE__LIZ_COUCH,
     CYPRESS_SINGLE__LIZ_COUCH,
+    HINDU_SHRINE,
     TRAFFIC_LIGHT_REAR,
 } from '../../../../../src/constants/scene/things/cutouts'
 import {
@@ -73,6 +74,12 @@ export default {
             yIndex: 1,
             xPosition: 0.5,
             flipHorizontal: true,
+        },
+        // TODO: Need to account for position in thought scene.
+        [HINDU_SHRINE]: {
+            yIndex: 2,
+            xPosition: 2,
+            zOffset: 4.5,
         },
         [TRAFFIC_LIGHT_REAR]: {
             xPosition: 1.5,

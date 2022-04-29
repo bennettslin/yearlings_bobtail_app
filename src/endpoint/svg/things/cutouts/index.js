@@ -29,6 +29,7 @@ import dumpster from '../../../../assets/svgs/cutouts/dumpster'
 import fireHydrant from '../../../../assets/svgs/cutouts/fireHydrant'
 import glassRack from '../../../../assets/svgs/cutouts/glassRack'
 import gravestone from '../../../../assets/svgs/cutouts/gravestone'
+import hinduShrine from '../../../../assets/svgs/cutouts/hinduShrine'
 import hostessStand from '../../../../assets/svgs/cutouts/hostessStand'
 import howieFridge from '../../../../assets/svgs/cutouts/howieFridge'
 import ivDrip from '../../../../assets/svgs/cutouts/ivDrip'
@@ -125,6 +126,7 @@ import {
     GLASS_RACK__DOLLY,
     GLASS_RACK__SINK,
     GRAVESTONE,
+    HINDU_SHRINE,
     HOSTESS_STAND,
     HOWIE_FRIDGE,
     IV_DRIP,
@@ -239,6 +241,7 @@ export default {
     [GLASS_RACK__DOLLY]: glassRack,
     [GLASS_RACK__SINK]: glassRack,
     [GRAVESTONE]: gravestone,
+    [HINDU_SHRINE]: hinduShrine,
     [HOSTESS_STAND]: hostessStand,
     [HOWIE_FRIDGE]: howieFridge,
     [IV_DRIP]: ivDrip,

@@ -55,32 +55,33 @@ import {
     BUBBLE_LARGE__GOLDEN,
 } from '../../../../src/constants/scene/things/bubbles'
 import {
+    HINDU_SHRINE,
     TWIN_STREETLAMP__FAR,
     TWIN_STREETLAMP__MIDDLE,
     TWIN_STREETLAMP__NEAR,
 } from '../../../../src/constants/scene/things/cutouts'
 import {
-    OAKLAND_HOUSE_LEFT,
-    OAKLAND_HOUSE_RIGHT,
-    RESIDENTIAL_FAR_LEFT,
-    RESIDENTIAL_MIDDLE_LEFT,
-    RESIDENTIAL_NEAR_LEFT,
-    RESIDENTIAL_FAR_RIGHT,
-    RESIDENTIAL_MIDDLE_RIGHT,
-    RESIDENTIAL_NEAR_RIGHT,
     COMMERCIAL_CENTRE,
     COMMERCIAL_FAR_LEFT,
-    COMMERCIAL_MIDDLE_LEFT,
-    COMMERCIAL_NEAR_LEFT,
     COMMERCIAL_FAR_RIGHT,
+    COMMERCIAL_MIDDLE_LEFT,
     COMMERCIAL_MIDDLE_RIGHT,
+    COMMERCIAL_NEAR_LEFT,
     COMMERCIAL_NEAR_RIGHT,
-    PUBLIC_FAR__GOLDEN_CORD,
-    PUBLIC_NEAR__GOLDEN_CORD,
-    OAKLAND_SCHOOL,
-    OAKLAND_FLAG,
     DISTANT_BUILDINGS,
     DISTANT_HOUSES,
+    OAKLAND_FLAG,
+    OAKLAND_HOUSE_LEFT,
+    OAKLAND_HOUSE_RIGHT,
+    OAKLAND_SCHOOL,
+    PUBLIC_FAR__GOLDEN_CORD,
+    PUBLIC_NEAR__GOLDEN_CORD,
+    RESIDENTIAL_FAR_LEFT,
+    RESIDENTIAL_FAR_RIGHT,
+    RESIDENTIAL_MIDDLE_LEFT,
+    RESIDENTIAL_MIDDLE_RIGHT,
+    RESIDENTIAL_NEAR_LEFT,
+    RESIDENTIAL_NEAR_RIGHT,
 } from '../../../../src/constants/scene/things/flats'
 import { LIZ_COUCH__ROOM } from '../../../../src/constants/scene/things/panels'
 
@@ -125,6 +126,9 @@ export default [
                 [BUBBLE_SMALL__GOLDEN]: true,
                 [BUBBLE_MEDIUM__GOLDEN]: true,
                 [BUBBLE_LARGE__GOLDEN]: true,
+            },
+            [CUTOUT]: {
+                [HINDU_SHRINE]: true,
             },
             [FLAT]: {
                 [DISTANT_HOUSES]: true,
