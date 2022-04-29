@@ -34,7 +34,7 @@ export default {
     mixStartTime: `0:09:04.17`,
     playerReferenceTime: 3094.348,
     playerStartTime: 3091.413,
-    overview: `Having committed to writing and recording all the songs on my next album, I'd been burning bridges with my bandmates for some time. Since we'd stopped playing shows as a result, I had no new opportunities to meet women after Miriam left me. Most devastating of all, Sita had fallen in love with someone else. I wasn't to win her back, ever again. All I had now was myself, but I really didn't like me much. And I had no idea how to be a good person again.`,
+    overview: `Having committed to writing and recording all the songs on my next album, I'd been burning bridges with my bandmates for some time. Since we'd stopped playing shows as a result, I had no new opportunities to meet women after Miriam left me. Most devastating of all, Sita had fallen in love with someone else. I wasn't to win her back, ever again. All I had now was myself, and I really didn't like myself much. I desperately wanted to be a good person again, but I had no idea how.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -47,7 +47,7 @@ export default {
                             anchor: `vegan`,
                             wiki: `Veganism`,
                         },
-                        `during our relationship. I supported her decision by helping her research how to avoid animal products. After we stopped speaking to each other, I became vegan as well, which was the first step toward liking myself again.`,
+                        `during our relationship. I supported her decision by helping her to avoid animal products. After we stopped speaking to each other, I became vegan as well, which was the first step toward liking myself again.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -71,7 +71,7 @@ export default {
                                 {
                                     anchor: `can't have both`,
                                     card: {
-                                        description: `A friend offered me this advice when I bought a turntable. And as it turns out, what's true for vinyl records holds just as well for life decisions. I couldn't have two selves— one to earn praise for kindness, the other to take the blame for my selfish desires. A single hurtful deed taints everything else. It isn't possible to be both kinds of people.`,
+                                        description: `A friend offered me this advice when I bought a turntable. And as it turns out, what's true for vinyl records holds just as well for life decisions. I couldn't have two selves— one to earn praise for kindness, the other to take the blame for my selfish desires. A single hurtful deed taints everything else. It isn't possible to be both kinds of people at once.`,
                                         dotKeys: {
                                             [BACKSTORY]: true,
                                             [OBSERVATION]: true,
@@ -107,7 +107,7 @@ export default {
                             anchor: `Odin`,
                             properNoun: true,
                             card: {
-                                description: `As a child I didn't pay much attention to Odin. He seemed to just come with the house. So when Sita and I adopted a cat together, I was surprised by how naturally the instinct to nurture a pet came to me. Years later after my failure to nurture the relationship led to our final breakup, I thought of Odin often.`,
+                                description: `As a child I didn't pay much attention to Odin. He just seemed to come with the house. So when Sita and I adopted a cat together, I was surprised by how naturally the instinct to nurture a pet came to me. Years later after my failure to nurture the relationship led to our final breakup, I thought of Odin often.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -129,7 +129,7 @@ export default {
                                         anchor: `Dairy cows`,
                                         wiki: `Dairy_cattle`,
                                     },
-                                    `are impregnated every year to keep them at peak lactation. This is done by restraining them in an apparatus once known in the dairy industry as a "rape rack," where they're then forcibly inseminated.`,
+                                    `are impregnated every year to keep them at peak lactation. This is done by forcibly inseminating them on an apparatus once known in the dairy industry as a "rape rack."`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -305,7 +305,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `Sita had her own story to tell about mistreating a first pet. Upon receiving a kitten as a child, she hugged it so hard it began to purr. Taking this as a sign of its contentment, she hugged it even harder. Later she learned that cats also`,
+                                        `Sita had her own story to tell about mistreating a first pet. Upon receiving a kitten as a child, she hugged it so hard it began to purr. Taking this as a sign of its contentment, she hugged it even harder. Years later, she learned that cats also`,
                                         {
                                             anchor: `purr to cope`,
                                             wiki: `Purr`,
@@ -318,7 +318,7 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `Also a reference to the`,
+                                        `Also, a reference to the`,
                                         {
                                             anchor: `Maya Angelou`,
                                             wiki: `Maya_Angelou`,
@@ -363,7 +363,7 @@ export default {
                                                 anchor: `Big Crunch`,
                                                 wiki: `Big_Crunch`,
                                             },
-                                            `is a theory that the universe will reverse its expansion and eventually collapse upon itself, possibly igniting another`,
+                                            `is a theory that the universe will reverse its expansion and eventually collapse upon itself, possibly to ignite another`,
                                             {
                                                 anchor: `Big Bang`,
                                                 wiki: `Big_Bang`,
@@ -403,7 +403,7 @@ export default {
                                 {
                                     anchor: `known to be dead`,
                                     card: {
-                                        description: `I liked the idea that if something greater than ourselves is unable to observe us, then like Schrödinger's battered cat, some part of us must always live on.`,
+                                        description: `I liked the idea that if something greater than ourselves is unable to observe us, then like Schrödinger's abused cat, some part of us must always live on.`,
                                         dotKeys: {
                                             [OBSERVATION]: true,
                                         },
@@ -513,12 +513,12 @@ export default {
                             anchor: `lone rallied youth`,
                             card: {
                                 description: [
-                                    `Having spent years playing shows, I've seen firsthand how an audience gets whipped into a single-minded frenzy. But as that world now drifts away, I puzzle over what drew me to those crowds, and why I longed to be adored by them. I question everything I've valued up to this point, like a reformed`,
+                                    `Having played shows for many years, I've seen how an audience gets whipped into a single-minded frenzy. But with that world now drifting away, I puzzle over what drew me to those crowds and why I longed to be adored by them. I question everything I've valued up to this point, like a reformed`,
                                     {
                                         anchor: `Hitler Youth`,
                                         wiki: `Hitler_Youth`,
                                     },
-                                    `aghast at all the things he cheered for at the`,
+                                    `who's suddenly aghast at all the things he cheered for at the`,
                                     {
                                         anchor: `Nuremberg Rallies`,
                                         wiki: `Nuremberg_Rally`,
@@ -661,7 +661,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: `When Sita and I first met, she asked to hear some of my music. I'd just bought a multi-effects processor and played around with it, so I gave her a copy of those recordings. She particularly liked one where I pitch-shifted my vocals an octave up, so I made it the basis for the second half of this song.`,
+                    description: `When Sita and I first met, she asked to hear my music. I'd just bought a multi-effects processor and had played around with it, so I gave her a copy of those recordings. She particularly liked one in which I'd pitch-shifted my vocals an octave up, so I made it the basis for the second half of this song.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGCRAFT]: true,
@@ -681,7 +681,7 @@ export default {
                         {
                             anchor: `leads have left`,
                             card: {
-                                description: `For several years, my modus operandi was to stay with Sita right up until I had another option to pursue. Each time I left, Sita would languish for a few months before summoning the courage to contact me. Then upon learning that things hadn't worked out with the other woman, which they never did, she would cajole me back. But now our situations were reversed. I had no more options coming down the pike, while Sita had met someone with whom she fully intended to stay.`,
+                                description: `For several years, my modus operandi was to stay with Sita right up until I had another option to pursue. Each time I left, Sita would languish for a few months before summoning the courage to contact me. Upon learning that things hadn't worked out with the other woman, which they never did, she would then cajole me back. But now our situations were reversed. I had no more options coming down the pike, while Sita had met someone with whom she intended to stay.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -772,7 +772,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `Travelling with Odin beyond the galaxy, I observe that the universe is almost entirely empty space, just like the distance between`,
+                                        `Traveling with Odin beyond the galaxy, I observe that the universe is almost entirely empty space, just like the distance between`,
                                         {
                                             anchor: `subatomic particles`,
                                             wiki: `Subatomic_particle`,
@@ -813,7 +813,7 @@ export default {
                                         anchor: `Apasmara`,
                                         wiki: `Apasmara`,
                                     },
-                                    `, the ageless dwarf demon of ignorance in Hindu mythology. And so I pause to mull over the hurt that my own ignorance has caused.`,
+                                    `, the ageless dwarf demon of ignorance in Hindu mythology. And so I pause to mull over the hurt caused by my own ignorance.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -827,7 +827,7 @@ export default {
                                 anchor: `gurgling, curls up`,
                                 cards: [
                                     {
-                                        description: `With ignorance being as old as time itself, I'm comforted to know that we've always corrected our past mistakes. And yet, it's just as dispiriting that those coming after us have yet to make theirs. The universe never truly learns, and I'm partly to blame. I had this same thought as a child, when I wondered if I was the reason my brother would never get better. It made me realize that all I could do was love him and then do better for him.`,
+                                        description: `With ignorance being as old as time itself, I'm comforted to know that we've always corrected our past mistakes. And yet, it's just as dispiriting to know that those coming after us have yet to make theirs. The universe never truly learns, and I'm partly to blame. I had this same thought as a child, when I wondered if I was the reason that my brother never got better. It made me realize that all I could do was love him and then do better for him.`,
                                         dotKeys: {
                                             [NARRATIVE]: true,
                                             [OBSERVATION]: true,
@@ -865,7 +865,7 @@ export default {
                                             anchor: `Shiva`,
                                             wiki: `Shiva`,
                                         },
-                                        `as he dances to destroy and rebuild the universe in an endless cycle. Crushed beneath his foot lies Apasmara, symbolizing Shiva's victory over ignorance. And having caused my share of ignorant destruction in this universe, I now commit to rebuild it.`,
+                                        `as he dances to destroy and rebuild the universe in an endless cycle. Crushed beneath his foot lies Apasmara, which symbolizes Shiva's victory over ignorance. And having caused my share of ignorant destruction in this universe, I now commit to rebuild it.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -901,7 +901,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: `I stayed vegan for about five years. I quit after moving to New York City, since Sasha ate meat. I guess it's just the nature of who I am that my social identity is the first thing I'll jettison whenever a chance for romance is at stake. Still, these days I'm mostly vegetarian. It's just easier and healthier.`,
+                    description: `I stayed vegan for five years. I quit after moving to New York City because Sasha ate meat. I guess it's the nature of who I am that my personal identity will always be the first thing I jettison whenever a chance for romance is at stake. Still, these days I'm mostly vegetarian. It's both easier and healthier.`,
                     dotKeys: {
                         [AFTERWORD]: true,
                     },

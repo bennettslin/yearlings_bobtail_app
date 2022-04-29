@@ -1034,7 +1034,7 @@ export default {
                             anchor: `Garry's sole witness`,
                             properNoun: true,
                             card: {
-                                description: `Though I desperately wish to plead my case, I realize the breakup will be over with sooner if I just accept my role as the villain. And so the sober me, called up to testify for his drunken half, stays silent.`,
+                                description: `Though I really wish to plead my case, I realize that the breakup will be over with sooner if I just accept my role as the villain. And so the sober me, called up to testify for his drunken half, stays silent.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
