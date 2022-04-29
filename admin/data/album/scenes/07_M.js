@@ -105,12 +105,13 @@ import {
     TRANSOM,
 } from '../../../../src/constants/scene/things/doors'
 import {
-    BUDWEISER_FULLER__BENNETT,
-    BUDWEISER_CASE,
-    BUDWEISER_EMPTIER__MARA,
     BASS_CASE_UPRIGHT,
+    BEETHOVEN_BUST__COUCH,
     BENNETT_COUCH_LAMP,
     BENNETT_RECORD_PLAYER,
+    BUDWEISER_CASE,
+    BUDWEISER_EMPTIER__MARA,
+    BUDWEISER_FULLER__BENNETT,
     CASH_BOX,
     DRUMKIT,
     DRUMS_STACKED__BASEMENT,
@@ -161,6 +162,7 @@ export default [
                 [TRANSOM]: true,
             },
             [FIXTURE]: {
+                [BEETHOVEN_BUST__COUCH]: true,
                 [BENNETT_RECORD_PLAYER]: true,
                 [BENNETT_COUCH_LAMP]: true,
                 [ELECTRIC_GUITAR]: true,
@@ -197,6 +199,7 @@ export default [
                 [TRANSOM]: true,
             },
             [FIXTURE]: {
+                [BEETHOVEN_BUST__COUCH]: true,
                 [BENNETT_RECORD_PLAYER]: true,
                 [BENNETT_COUCH_LAMP]: true,
                 [ELECTRIC_GUITAR]: true,
@@ -241,6 +244,7 @@ export default [
                 [TRANSOM]: true,
             },
             [FIXTURE]: {
+                [BEETHOVEN_BUST__COUCH]: true,
                 [BENNETT_RECORD_PLAYER]: true,
                 [BENNETT_COUCH_LAMP]: true,
                 [ELECTRIC_GUITAR]: true,

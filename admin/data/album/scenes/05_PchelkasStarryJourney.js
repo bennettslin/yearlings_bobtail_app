@@ -74,12 +74,12 @@ import {
     SKETCH_ESCAPE_POD,
 } from '../../../../src/constants/scene/things/bubbles'
 import {
-    POSTER_BLOOM_COUNTY,
     CORKBOARD__SCHOOL,
     DOGS_ROCKET,
+    DOGS_SPACE_STATION,
     EARTH__ROCKET,
     EARTH__STATION,
-    DOGS_SPACE_STATION,
+    POSTER_BLOOM_COUNTY,
     VAN_NUYS_PAINTING,
 } from '../../../../src/constants/scene/things/cardboards'
 import {
@@ -104,7 +104,7 @@ import {
     BALLED_FOIL__LOCKERS,
     BEDROOM_LAMP__BED,
     BEDROOM_LAMP__DESK,
-    BEETHOVEN_BUST,
+    BEETHOVEN_BUST__BEDROOM,
     BENNETT_LETTERS,
     BEYONDER_ENVELOPE,
     LETTER_SCRAPS__BENNETT,
@@ -140,7 +140,7 @@ export default [
                 [POSTER_BLOOM_COUNTY]: true,
             },
             [FIXTURE]: {
-                [BEETHOVEN_BUST]: true,
+                [BEETHOVEN_BUST__BEDROOM]: true,
             },
             [FURNITURE]: {
                 [CAPTAIN_BED_PILLOW]: true,
@@ -183,7 +183,7 @@ export default [
             },
             [FIXTURE]: {
                 [BEDROOM_LAMP__BED]: true,
-                [BEETHOVEN_BUST]: true,
+                [BEETHOVEN_BUST__BEDROOM]: true,
                 [LETTER_SCRAPS__BENNETT]: true,
                 [TORN_MAGAZINES__BENNETT]: true,
                 [BENNETT_LETTERS]: true,
@@ -217,7 +217,7 @@ export default [
             },
             [FIXTURE]: {
                 [BEDROOM_LAMP__DESK]: true,
-                [BEETHOVEN_BUST]: true,
+                [BEETHOVEN_BUST__BEDROOM]: true,
                 [RED_ENVELOPE_MONEY]: true,
             },
             [FLAT]: {
@@ -256,7 +256,7 @@ export default [
             },
             [FIXTURE]: {
                 [BEDROOM_LAMP__DESK]: true,
-                [BEETHOVEN_BUST]: true,
+                [BEETHOVEN_BUST__BEDROOM]: true,
             },
             [FURNITURE]: {
                 [CAPTAIN_BED_PILLOW]: true,
@@ -331,7 +331,7 @@ export default [
             },
             [FIXTURE]: {
                 [BEDROOM_LAMP__DESK]: true,
-                [BEETHOVEN_BUST]: true,
+                [BEETHOVEN_BUST__BEDROOM]: true,
                 [BEYONDER_ENVELOPE]: true,
             },
             [PANEL]: {
@@ -364,7 +364,7 @@ export default [
             },
             [FIXTURE]: {
                 [BEDROOM_LAMP__DESK]: true,
-                [BEETHOVEN_BUST]: true,
+                [BEETHOVEN_BUST__BEDROOM]: true,
                 [BEYONDER_ENVELOPE]: true,
             },
             [FURNITURE]: {

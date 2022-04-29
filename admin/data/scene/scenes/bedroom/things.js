@@ -13,12 +13,12 @@ import {
     SKETCHBOOK__DOGS_ROCKET,
 } from '../../../../../src/constants/scene/things/bubbles'
 import {
-    POSTER_TINTIN,
-    POSTER_BLOOM_COUNTY,
-    EARTH__ROCKET,
     DOGS_ROCKET,
-    EARTH__STATION,
     DOGS_SPACE_STATION,
+    EARTH__ROCKET,
+    EARTH__STATION,
+    POSTER_BLOOM_COUNTY,
+    POSTER_TINTIN,
 } from '../../../../../src/constants/scene/things/cardboards'
 import {
     LEMON_TREE__BEDROOM,
@@ -31,18 +31,18 @@ import {
     BEDROOM_FENCE,
 } from '../../../../../src/constants/scene/things/doors'
 import {
-    LETTER_SCRAPS__CHRISTOPHER,
-    TORN_MAGAZINES__CHRISTOPHER,
-    CHRISTOPHER_LETTERS,
-    BEETHOVEN_BUST,
     BEDROOM_LAMP__BED,
     BEDROOM_LAMP__DESK,
+    BEETHOVEN_BUST__BEDROOM,
     BENNETT_LETTERS,
-    LETTER_SCRAPS__BENNETT,
-    TORN_MAGAZINES__BENNETT,
-    RED_ENVELOPE_MONEY,
     BEYONDER_ENVELOPE,
+    CHRISTOPHER_LETTERS,
     FLOWER_BULBS,
+    LETTER_SCRAPS__BENNETT,
+    LETTER_SCRAPS__CHRISTOPHER,
+    RED_ENVELOPE_MONEY,
+    TORN_MAGAZINES__BENNETT,
+    TORN_MAGAZINES__CHRISTOPHER,
 } from '../../../../../src/constants/scene/things/fixtures'
 import {
     BEDROOM_SIREN,
@@ -111,7 +111,7 @@ export default {
         },
     },
     [FIXTURE]: {
-        [BEETHOVEN_BUST]: {
+        [BEETHOVEN_BUST__BEDROOM]: {
             yIndex: 3,
             xPosition: 1.9,
             zOffset: -0.04,

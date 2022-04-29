@@ -75,6 +75,7 @@ import {
     BLINDS_OUTSIDE__BENNETT,
 } from '../../../../src/constants/scene/things/doors'
 import {
+    BEETHOVEN_BUST__COUCH,
     BENNETT_COUCH_LAMP,
     BENNETT_RECORD_PLAYER,
     ELECTRIC_GUITAR,
@@ -160,6 +161,7 @@ export default [
                 [POSTER_NIRVANA]: true,
             },
             [FIXTURE]: {
+                [BEETHOVEN_BUST__COUCH]: true,
                 [BENNETT_RECORD_PLAYER]: true,
                 [BENNETT_COUCH_LAMP]: true,
                 [ELECTRIC_GUITAR]: true,

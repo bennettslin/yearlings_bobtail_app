@@ -80,7 +80,7 @@ import {
 } from '../../../../src/constants/scene/things/doors'
 import {
     BEDROOM_LAMP__DESK,
-    BEETHOVEN_BUST,
+    BEETHOVEN_BUST__BEDROOM,
     CHRISTOPHER_LETTERS,
     FLOWER_BULBS,
     HAIRCUT_SCISSORS,
@@ -227,7 +227,7 @@ export default [
             },
             [FIXTURE]: {
                 [BEDROOM_LAMP__DESK]: true,
-                [BEETHOVEN_BUST]: true,
+                [BEETHOVEN_BUST__BEDROOM]: true,
                 [LETTER_SCRAPS__CHRISTOPHER]: true,
                 [TORN_MAGAZINES__CHRISTOPHER]: true,
                 [CHRISTOPHER_LETTERS]: true,
@@ -304,7 +304,7 @@ export default [
             },
             [FIXTURE]: {
                 [BEDROOM_LAMP__DESK]: true,
-                [BEETHOVEN_BUST]: true,
+                [BEETHOVEN_BUST__BEDROOM]: true,
                 [FLOWER_BULBS]: true,
             },
             [FLAT]: {

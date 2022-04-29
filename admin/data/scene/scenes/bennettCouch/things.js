@@ -24,6 +24,7 @@ import {
     BENNETT_COUCH_LAMP,
     ELECTRIC_GUITAR,
     KEYBOARD,
+    BEETHOVEN_BUST__COUCH,
 } from '../../../../../src/constants/scene/things/fixtures'
 import { BENNETT_PILLOW__COUCH } from '../../../../../src/constants/scene/things/furnitures'
 import {
@@ -61,6 +62,12 @@ export default {
         },
     },
     [FIXTURE]: {
+        [BEETHOVEN_BUST__COUCH]: {
+            yIndex: 1,
+            xPosition: 2,
+            zOffset: 1,
+            scaleFactor: 0.33,
+        },
         [BENNETT_RECORD_PLAYER]: {
             yIndex: 1,
             xPosition: 8.5,
