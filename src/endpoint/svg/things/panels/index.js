@@ -10,6 +10,7 @@ import buddhaStand from '../../../../assets/svgs/panels/buddhaStand'
 import captainBed from '../../../../assets/svgs/panels/captainBed'
 import caveShadows from '../../../../assets/svgs/panels/caveShadows'
 import conveyorBelt from '../../../../assets/svgs/panels/conveyorBelt'
+import couchShelf from '../../../../assets/svgs/panels/couchShelf'
 import crowdBack from '../../../../assets/svgs/panels/crowdBack'
 import crowdSide from '../../../../assets/svgs/panels/crowdSide'
 import dishroomSink from '../../../../assets/svgs/panels/dishroomSink'
@@ -17,6 +18,7 @@ import freewayFence from '../../../../assets/svgs/panels/freewayFence'
 import goKartExterior from '../../../../assets/svgs/panels/goKartExterior'
 import goKartSeat from '../../../../assets/svgs/panels/goKartSeat'
 import hospitalBed from '../../../../assets/svgs/panels/hospitalBed'
+import hospitalBedInterior from '../../../../assets/svgs/panels/hospitalBedInterior'
 import hospitalRecordStand from '../../../../assets/svgs/panels/hospitalRecordStand'
 import keyboardStandLeft from '../../../../assets/svgs/panels/keyboardStandLeft'
 import keyboardStandRight from '../../../../assets/svgs/panels/keyboardStandRight'
@@ -154,6 +156,8 @@ import {
     WIDE_COUCH_BENNETT,
     WIDE_COUCH_MIRIAM,
     SHADOW_VIKING_FAR,
+    HOSPITAL_BED_INTERIOR,
+    COUCH_SHELF,
 } from '../../../../constants/scene/things/panels'
 
 export default {
@@ -171,6 +175,7 @@ export default {
     [CAVE_SHADOWS]: caveShadows,
     [CONVEYOR_BELT__READING]: conveyorBelt,
     [CONVEYOR_BELT__LANCET]: conveyorBelt,
+    [COUCH_SHELF]: couchShelf,
     [CROWD_BACK]: crowdBack,
     [CROWD_SIDE]: crowdSide,
     [DISHROOM_SINK]: dishroomSink,
@@ -180,6 +185,7 @@ export default {
     [GO_KART_SEAT__LEFT]: goKartSeat,
     [GO_KART_SEAT__RIGHT]: goKartSeat,
     [HOSPITAL_BED]: hospitalBed,
+    [HOSPITAL_BED_INTERIOR]: hospitalBedInterior,
     [HOSPITAL_RECORD_STAND]: hospitalRecordStand,
     [KEYBOARD_STAND_LEFT]: keyboardStandLeft,
     [KEYBOARD_STAND_RIGHT]: keyboardStandRight,

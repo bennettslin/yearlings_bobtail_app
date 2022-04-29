@@ -94,6 +94,7 @@ import {
 import {
     BENNETT_NIGHTSTAND,
     BENNETT_RECORD_STAND,
+    COUCH_SHELF,
     WIDE_ARMREST_BENNETT__LEFT,
     WIDE_ARMREST_BENNETT__RIGHT,
     WIDE_COUCH_BENNETT,
@@ -169,6 +170,7 @@ export default [
             [PANEL]: {
                 [BENNETT_NIGHTSTAND]: true,
                 [BENNETT_RECORD_STAND]: true,
+                [COUCH_SHELF]: true,
                 [WIDE_COUCH_BENNETT]: true,
                 [WIDE_ARMREST_BENNETT__LEFT]: true,
                 [WIDE_ARMREST_BENNETT__RIGHT]: true,

@@ -31,6 +31,7 @@ import {
 } from '../../../../../src/constants/scene/things/furnitures'
 import {
     HOSPITAL_BED,
+    HOSPITAL_BED_INTERIOR,
     HOSPITAL_RECORD_STAND,
 } from '../../../../../src/constants/scene/things/panels'
 import {
@@ -97,6 +98,10 @@ export default {
     [PANEL]: {
         [HOSPITAL_BED]: {
             yIndex: 5,
+            xPosition: 3.03,
+        },
+        [HOSPITAL_BED_INTERIOR]: {
+            yIndex: 4,
             xPosition: 3.03,
         },
         [HOSPITAL_RECORD_STAND]: {

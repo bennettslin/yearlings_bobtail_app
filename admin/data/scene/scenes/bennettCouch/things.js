@@ -30,6 +30,7 @@ import { BENNETT_PILLOW__COUCH } from '../../../../../src/constants/scene/things
 import {
     BENNETT_NIGHTSTAND,
     BENNETT_RECORD_STAND,
+    COUCH_SHELF,
     KEYBOARD_STAND_LEFT,
     KEYBOARD_STAND_RIGHT,
     WIDE_ARMREST_BENNETT__LEFT,
@@ -98,6 +99,11 @@ export default {
             yIndex: 1,
             xPosition: 8.55,
             zOffset: -1.58,
+        },
+        [COUCH_SHELF]: {
+            yIndex: 1,
+            xPosition: 4,
+            zOffset: 1,
         },
         [KEYBOARD_STAND_LEFT]: {
             yIndex: 4,

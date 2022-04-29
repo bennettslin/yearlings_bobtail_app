@@ -74,6 +74,7 @@ import {
     BENNETT_COUCH_LAMP,
     BENNETT_RECORD_PLAYER,
     HEINEKEN__SITA,
+    BEETHOVEN_BUST__COUCH,
 } from '../../../../src/constants/scene/things/fixtures'
 import {
     DISTANT_HOUSES,
@@ -88,6 +89,7 @@ import {
     LIZ_COUCH__ROOM,
     BENNETT_NIGHTSTAND,
     BENNETT_RECORD_STAND,
+    COUCH_SHELF,
 } from '../../../../src/constants/scene/things/panels'
 
 export default [
@@ -175,6 +177,7 @@ export default [
                 [BASEMENT_DOOR_SIDE]: true,
             },
             [FIXTURE]: {
+                [BEETHOVEN_BUST__COUCH]: true,
                 [BENNETT_COUCH_LAMP]: true,
                 [BENNETT_RECORD_PLAYER]: true,
                 [ELECTRIC_GUITAR]: true,
@@ -183,6 +186,7 @@ export default [
             [PANEL]: {
                 [BENNETT_NIGHTSTAND]: true,
                 [BENNETT_RECORD_STAND]: true,
+                [COUCH_SHELF]: true,
                 [WIDE_COUCH_BENNETT]: true,
                 [WIDE_ARMREST_BENNETT__LEFT]: true,
                 [WIDE_ARMREST_BENNETT__RIGHT]: true,

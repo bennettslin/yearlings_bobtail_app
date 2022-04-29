@@ -89,6 +89,7 @@ import {
     WEDDING_PLATFORM_REAR,
     HOSPITAL_BED,
     HOSPITAL_RECORD_STAND,
+    HOSPITAL_BED_INTERIOR,
 } from '../../../../src/constants/scene/things/panels'
 import { PUPPET_KHARI_LIZ } from '../../../../src/constants/scene/things/puppets'
 
@@ -261,6 +262,7 @@ export default [
             },
             [PANEL]: {
                 [HOSPITAL_BED]: true,
+                [HOSPITAL_BED_INTERIOR]: true,
                 [HOSPITAL_RECORD_STAND]: true,
             },
         },
