@@ -40,7 +40,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: `A childhood playmate once asked me if I knew what cremation was. I didn't, but I assumed it must be fun and tasty. Of course, the horrifying truth was revealed a moment later. I thought this was a perfect metaphor for a song about the seemingly innocent day trip that ended with Miriam breaking up with me.`,
+                    description: `When I was a child, a playmate once asked if I knew what cremation was. I didn't, but I assumed it must be fun and tasty. Of course, the horrifying truth was revealed to me a moment later. I thought this was the perfect metaphor for a song about the seemingly innocent day trip that ended with Miriam breaking up with me.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [OBSERVATION]: true,
@@ -120,7 +120,7 @@ export default {
                             anchor: `Shepard tone`,
                             wiki: `Shepard_tone`,
                         },
-                        `is an auditory illusion in which a tone moves steadily up or down in pitch yet remains fixed within the same register. A steady move downward seemed like an apt metaphor for my breakup with Miriam, so I included two Shepard tones here. One is a low bass that descends in discrete half steps, while the other is a high treble that does so in a perpetual glissando. Since I didn't know how to code at the time, both were made by splicing together`,
+                        `is an auditory illusion in which a tone moves steadily up or down in pitch yet remains fixed within the same register. A steady decline seemed like an apt metaphor for my breakup with Miriam, so I included two Shepard tones here. One is a low bass that descends in discrete half steps, while the other is a high treble that descends in a perpetual glissando. Since I didn't know how to code at the time, both were made by splicing together`,
                         {
                             anchor: `pure tones`,
                             wiki: `Pure_tone`,
@@ -176,7 +176,7 @@ export default {
                                         anchor: `atavism`,
                                         wiki: `Atavism`,
                                     },
-                                    `is a genetic trait that resurfaces after several generations. Though I wasn't autistic myself, it still lurked in my genes, ready to spring at any time on my children, or on my grandchildren, or on my grandchildren's children…`,
+                                    `is a genetic trait that resurfaces after several generations. Though I wasn't autistic myself, it still lurked in my genes, ready to spring at any time on my children, on my grandchildren, on my grandchildren's children…`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -258,7 +258,7 @@ export default {
                         {
                             anchor: `doublespeaker`,
                             card: {
-                                description: `While I did my best to adopt an angelic personality, my reputation preceded me by that point. Miriam knew about the drunken incidents. And I must have known all along that she knew. But I never volunteered an explanation for the discrepancy, and she never asked for one. I guess she just accepted it as part of the adventure.`,
+                                description: `While I did my best to adopt an angelic personality, my reputation preceded me by that point. Miriam knew about the drunken incidents. And I must have known that she knew. But I never volunteered an explanation for the discrepancy, and she never asked for one. I guess she just accepted it as part of the adventure.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -438,7 +438,7 @@ export default {
                                         anchor: `Abbott and Costello`,
                                         wiki: `Abbott_and_Costello`,
                                     },
-                                    `famously did not get along. This enlivened the dynamic between them onstage, but it made for tense moments when the tape stopped rolling. So while Miriam might have enjoyed watching my two halves outwit each other, she surely wanted no part of the underlying drama that fueled this spectacle.`,
+                                    `famously didn't get along. This enlivened the dynamic between them onstage, but it made for tense moments when the tape stopped rolling. So while Miriam might have enjoyed watching my two halves outwit each other, she surely wanted no part of the underlying drama that animated this spectacle.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -497,7 +497,7 @@ export default {
                         {
                             anchor: `from a Trojan`,
                             card: {
-                                description: `Having climaxed first, Miriam wraps up our little tryst by peeling off the condom and giving me a blowjob.`,
+                                description: `Having climaxed first, Miriam wraps up our little tryst by removing the condom and giving me a blowjob.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -549,7 +549,7 @@ export default {
                             anchor: `self-servicing cleric surgeon`,
                             card: {
                                 description: [
-                                    `But while my drunken self is forced to adopt the faith of his sober half, this internal conflict remains unseen to others, who can only watch in bewilderment as I perform`,
+                                    `But while my drunken self is being forcibly converted to the faith of his sober half, this internal conflict remains unseen to others, who can only watch in bewilderment as I perform`,
                                     {
                                         anchor: `circumcision`,
                                         wiki: `Circumcision`,
@@ -605,7 +605,7 @@ export default {
                             anchor: `worn puppet`,
                             cards: [
                                 {
-                                    description: `The condom sits motionless on the car seat, like a puppet so full of life just moments before. But having brought me to a place I otherwise couldn't have gone, it has no other use and can now be discarded.`,
+                                    description: `The condom sits motionless on the car seat, like a puppet so full of life just moments before. But having brought me to a place I otherwise wouldn't have gone, it has no other use and can now be discarded.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -623,7 +623,7 @@ export default {
                             anchor: `offscreen person dubs`,
                             card: {
                                 description: [
-                                    `Of course, this won't be the first time I've tossed a puppet aside after it served my purpose. Like a`,
+                                    `Of course, this wouldn't be the first time I've tossed aside a puppet after it served my purpose. Like a`,
                                     {
                                         anchor: `ventriloquist`,
                                         wiki: `Ventriloquism`,
@@ -693,7 +693,7 @@ export default {
                         {
                             anchor: `he's anyone`,
                             card: {
-                                description: `After all, it isn't obvious at all to my drunken self that he's the dummy whose words and actions are dictated by his sober half, rather than the other way around.`,
+                                description: `After all, it's not at all obvious to my drunken self that he's the dummy whose words and actions are being dictated by his sober half, rather than the other way around.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -871,7 +871,7 @@ export default {
                         {
                             anchor: `worrisome`,
                             card: {
-                                description: `After the breakup with Miriam, I only had good wishes for her, which surprised me given how competitive and selfish I was around Sita. But I came away knowing that a woman like Miriam could want me, even if just for a while. I didn't have that before, so it felt like a good bargain.`,
+                                description: `After the breakup with Miriam, I only had good wishes for her, which surprised me given how competitive and selfish I was around Sita. But I came away knowing that a woman like Miriam could want me, even if just for a while. I didn't have that before, so it felt like an amazing bargain.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -891,7 +891,7 @@ export default {
                                             wiki: `Children_of_a_Lesser_God_(play)`,
                                         },
                                     },
-                                    `, which centers on a deaf woman, suggests that being disabled is like living in a world created by an inferior deity. But I interpreted it differently as a child. Given the autism that ran in my family, which correlated in my mind with our foreign way of worship, I assumed it meant the disabled`,
+                                    `, which centers on a deaf woman, suggests that being disabled is like living in a world created by an inferior deity. But I interpreted it differently as a child. Given the autism that ran in my family, which correlated in my mind with our foreign way of worship, I assumed it meant that the disabled`,
                                     {
                                         isEmphasis: true,
                                         lyric: `themselves`,
@@ -909,14 +909,14 @@ export default {
                             properNoun: true,
                             cards: [
                                 {
-                                    description: `To further compound my insecurities in being raised Buddhist, my complexion was also different from that of everyone else in Sasha's world. And so my inferiority complex failed to distinguish between carrying faulty genes, following a faulty faith, and being of a faulty race. They all seemed to derive from a single congenital defect at the core of my being.`,
+                                    description: `To compound my insecurities as a child about being raised Buddhist, my complexion was different from that of everyone else in Sasha's world. And so my inferiority complex failed to distinguish between carrying faulty genes, following a faulty faith, and being of a faulty race. They all seemed to derive from a single congenital defect at the core of my being.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [OBSERVATION]: true,
                                     },
                                 },
                                 {
-                                    description: `My imagined scenario ends with Miriam feeling mightily relieved to know that in her gene pool, "here's not where some lesser god has peed."`,
+                                    description: `My imagined scenario ends with Miriam feeling relieved to know that in her gene pool, "here's not where some lesser god has peed."`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true,
@@ -932,7 +932,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     // NOTE: Change in recording? Connect to Uncanny Valley?
-                    description: `The bouncing ping pong ball heard here mimics an alarm clock at my bedside as I fade away in my infirmity. Its ticking reverberates like the echoes of a tennis ball being volleyed back and forth, and I picture Miriam in a leisurely match with her new beau.`,
+                    description: `The bouncing ping pong ball heard here mimics an alarm clock at my bedside as I fade away in my infirmity. Its ticks reverberate like the echoes of a tennis ball being volleyed back and forth, and I picture Miriam in a leisurely match with her new beau.`,
                     dotKeys: {
                         [NARRATIVE]: true,
                         [SONGCRAFT]: true,
@@ -1019,7 +1019,7 @@ export default {
                         {
                             anchor: `cleaved horizon`,
                             card: {
-                                description: `As we make our way downhill, the horizon appears like a cleaver splitting the sky open, as the road spills down on us like wet cement pouring out from the rupture.`,
+                                description: `As we make our way downhill, the horizon appears like a cleaver splitting the sky open, with the road spilling down on us like wet cement pouring out from the rupture.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
