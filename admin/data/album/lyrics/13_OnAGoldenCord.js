@@ -303,14 +303,13 @@ export default {
                         `torched the`,
                         {
                             anchor: `bellyaches on suttee`,
-                            todo: true,
                             card: {
                                 description: [
                                     {
                                         anchor: `Suttee`,
                                         wiki: `Sati_(practice)`,
                                     },
-                                    `is an outdated Hindu custom in which a widow commits suicide by throwing herself onto her husband's funeral pyre. Likewise, sober me knew he could be rid of Sita forever if he just killed off the one she loved, pushing her to venture further into the darkness to chase after the nothingness that remained.`,
+                                    `is an outdated Hindu custom in which a widow commits suicide by throwing herself onto her husband's funeral pyre. Likewise, sober me knew he could be rid of Sita if he just killed off the one she loved, pushing her to venture further into the darkness to chase after the nothingness that remained.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

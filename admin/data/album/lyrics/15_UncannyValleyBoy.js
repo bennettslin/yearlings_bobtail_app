@@ -44,7 +44,7 @@ export default {
                                 anchor: `uncanny valley`,
                                 wiki: `Uncanny_valley`,
                             },
-                            `is a theory that human replicas only repulse us further as they grow more lifelike, insofar as they remain less than convincingly so. And as I grew older while remaining less than convincing as a grownup, it was reasonable to wonder if this "valley boy" now elicited the same revulsion.`,
+                            `theorizes that we're further repulsed by human replicas as they grow increasingly lifelike, insofar as they remain less than convincingly so. And as I grew older while remaining less than convincing as a grownup, it was reasonable to wonder if this "Valley boy" now elicited the same revulsion.`,
                         ],
                         dotKeys: {
                             [OBSERVATION]: true,
@@ -58,7 +58,7 @@ export default {
                                 anchor: `Valley girl`,
                                 wiki: `Valley_girl`,
                             },
-                            `stereotype. So the kids I grew up with self-identified with the label, even if they didn't embody its traits.`,
+                            `stereotype.`,
                         ],
                         dotKeys: {
                             [OBSERVATION]: true,
@@ -173,7 +173,7 @@ export default {
                                             wiki: `The_Giving_Tree`,
                                         },
                                     },
-                                    `is a children's book about a tree's nurturing love for a boy. As the boy grows into a man, the tree's gifts to him become increasingly self-sacrificing in nature. The story can be understood as an allegory for unhealthy, codependent relationships.`,
+                                    `is a children's book about a tree's nurturing love for a boy. As the boy grows into a man, the tree's gifts to him become increasingly self-sacrificing in nature. The story can be understood as an allegory for codependent relationships.`,
                                 ],
                             },
                         },
@@ -310,7 +310,7 @@ export default {
                             anchor: `Upon purchase of a queen's ship`,
                             card: {
                                 description: [
-                                    `RI Research promised I would rise above the bullies once a spaceship was funded by my payments. And so I learned to bide my time building toward and awaiting corrective justice. I was like "a pawn" in`,
+                                    `RI Research promised that I could rise above the bullies once a spaceship was funded by my payments. And so I learned to bide my time, building toward and awaiting corrective justice. I was like "a pawn" in`,
                                     {
                                         anchor: `chess`,
                                         wiki: `Chess`,
@@ -327,7 +327,7 @@ export default {
                         {
                             anchor: `earth right now your tourist store`,
                             card: {
-                                description: `My mother tried to instill Buddhist ideals, even as she filled my head with visions of being a great artist. The mail-order cult then piled on with the belief that I was only a visitor to this planet. The lasting effect on my psyche was that I became unaffected by earthly concerns, preferring instead to work tirelessly "to restore" my "birthright" of artistic renown.`,
+                                description: `My mother tried to instill Buddhist ideals of renouncing materialism even as she filled my head with visions of becoming a great artist. The mail-order cult then piled on with the belief that I was a mere visitor to this planet. The lasting effect on my psyche was that I became unaffected by earthly concerns while working tirelessly "to restore" my "birthright" of artistic renown.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -342,12 +342,12 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `My original hope for some of these puns was for listeners to believe they'd stumbled upon a`,
+                        `In coming up with the puns in this stanza, my hope was for listeners to believe they'd heard a`,
                         {
                             anchor: `mondegreen`,
                             wiki: `Mondegreen`,
                         },
-                        `. But upon further reflection, they would realize the mishearing made too much sense to be inadvertent, and was likely an`,
+                        `. But upon reflection, they would realize that the mishearing made too much sense to be inadvertent, and was likely an`,
                         {
                             anchor: `Easter egg`,
                             wiki: `Easter_egg_(media)`,
@@ -385,7 +385,7 @@ export default {
                                         anchor: `Inhalants`,
                                         wiki: `Inhalant`,
                                     },
-                                    `were the scary youth trend of my middle school years. To remain unresponsive to the bullies' threats, I had to be slow to respond in general. Eventually, someone thought I must be huffing paint, and I got called into the principal's office.`,
+                                    `were the scary youth trend of my middle school years. To remain unresponsive to the bullies' threats, I was slow to respond in general. Eventually, someone thought I must be huffing paint, and I got called into the principal's office.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -433,12 +433,12 @@ export default {
                             anchor: `Village Green Preservation Society`,
                             wiki: `The_Kinks_Are_the_Village_Green_Preservation_Society`,
                         },
-                        `was my model for this album. As such, my songs all had to be memorable pop tunes, contain zero filler, and represent a diversity of musical styles. And each one would clock in at three minutes or so, with none over four. While there was no one-to-one mapping, this song was clearly the "`,
+                        `was my model for this album. As such, the songs all had to be memorable pop tunes, contain zero filler, and represent a diversity of musical styles. And each one would clock in at three minutes or so, with none over four. While there was no one-to-one mapping, this song was clearly the "`,
                         {
                             anchor: `Wicked Annabella`,
                             wiki: `Wicked_Annabella`,
                         },
-                        `" of the bunch. So I borrowed its sound of low notes played on distorted electric guitars.`,
+                        `" of the bunch. So I borrowed its sound of low notes played on crunchy electric guitars.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -480,7 +480,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `My parents also allude to my former belief that I was born from the stars, or as they put it, "a Martian."`,
+                                    description: `My parents also allude to my former belief that I was born from the stars. Or, as they put it, that I'm "a Martian."`,
                                     dotKeys: {
                                         [PUN]: true,
                                     },
@@ -567,7 +567,7 @@ export default {
                             anchor: `counter-melody`,
                             wiki: `Counter-melody`,
                         },
-                        `. The original counter-melody, which I'd planned to play on guitar, was then given to the lead vocals, for which I wrote new lyrics.`,
+                        `. The original counter-melody, which I played on guitar, was then given to the lead vocals, for which I wrote new lyrics.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -833,7 +833,7 @@ export default {
                                             anchor: `Sita`,
                                             wiki: `Sita`,
                                         },
-                                        `, daughter of the earth, and his battle to rescue her after she was abducted by the demon king`,
+                                        `, the daughter of the earth, and his battle to rescue her after she was abducted by the demon king`,
                                         {
                                             anchor: `Ravana`,
                                             wiki: `Ravana`,
@@ -881,7 +881,7 @@ export default {
                                         isItalic: true,
                                         lyric: `Ramayana`,
                                     },
-                                    `began to broadcast throughout India. Each week, street markets and train stations came to a standstill as so many people dropped what they were doing to glue themselves to the closest television screen.`,
+                                    `began to broadcast throughout India. Each week, street markets and train stations would come to a standstill as everyone dropped what they were doing to glue themselves to the nearest television screen.`,
                                 ],
                             },
                         },
@@ -889,7 +889,7 @@ export default {
                         {
                             anchor: `fail your Sita`,
                             card: {
-                                description: `Modern audiences may find it disgraceful that Rama's first act upon reuniting with Sita was to demand proof of her purity. I feel similarly when looking back on my need to be the more sexually experienced partner in the relationship. It baffles me why I couldn't just be grateful for whatever circumstances needed to happen before Sita finally chose me.`,
+                                description: `Modern audiences may find it disgraceful that Rama's first act upon reuniting with Sita was to demand proof of her purity. I feel the same way when I look back now on my need to be the more sexually experienced partner in the relationship. It baffles me why I couldn't just be grateful for whatever circumstances needed to happen before Sita finally chose me.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -899,7 +899,7 @@ export default {
                         {
                             anchor: `repeat forevermore`,
                             card: {
-                                description: `As I was making this album, a thought occurred to me. Like Rama, I too was now doomed to repeat my failures, as the story of how I betrayed my Sita would be endlessly retold.`,
+                                description: `As I was making this album, a thought occurred to me. Like Rama, I too am now doomed to repeat my failures, as the story of how I betrayed my Sita is endlessly retold.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -952,7 +952,7 @@ export default {
                             // NOTE: I changed "duel" to "dual" here.
                             anchor: `dual match`,
                             card: {
-                                description: `To onlookers, Sita and I may have seemed like the perfect fit for each other. But to me, our relationship was a zero-sum "duel" match that only one of us could win.`,
+                                description: `To onlookers, Sita and I seemed like the perfect fit for each other. But to me, our relationship was a zero-sum "duel" match that only one of us could win.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [PUN]: true,
@@ -1060,9 +1060,9 @@ export default {
                         },
                         `:`,
                         {
-                            anchor: `_____`,
+                            anchor: `____`,
                             card: {
-                                description: `And what I'd scrawled in chalk was… Mara's name. No real cliffhanger here. "M" just set a precedent for me to be gun-shy about mentioning her anywhere in my lyrics.`,
+                                description: `And what I'd scrawled was… Mara's name. No cliffhanger here. "M" just set a precedent for me to be gun-shy about mentioning her in my lyrics.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -1100,7 +1100,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `Sita's "well-worn sorries" in time grew tiresome, since only one of us needed to beg the other for forgiveness, and we both knew it wasn't her.`,
+                                    description: `Sita's "well-worn sorries" grew tiresome, since only one of us needed to beg the other for forgiveness, and we both knew it wasn't her.`,
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                         [PUN]: true,
@@ -1119,7 +1119,7 @@ export default {
                                             anchor: `marathon`,
                                             wiki: `Marathon`,
                                         },
-                                        `that rewards patience and resolve, the traits I possessed in spades.`,
+                                        `that rewards patience and resolve, traits that I possessed in spades.`,
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
@@ -1224,7 +1224,7 @@ export default {
                                 anchor: `trophy blondes`,
                                 cards: [
                                     {
-                                        description: `To add insult to injury, the women I left Sita for were often white, which bothered her greatly. In my defense, this wasn't by design. But seeing her loss as my gain, I let her believe the worst.`,
+                                        description: `To add insult to injury, all the women I left Sita for were white, which bothered her greatly. In my defense, this wasn't by design. But seeing her loss as my gain, I let her believe the worst.`,
                                         dotKeys: {
                                             [BACKSTORY]: true,
                                         },
@@ -1258,7 +1258,7 @@ export default {
                         {
                             anchor: `faces you flip override`,
                             card: {
-                                description: `My mother would sometimes ask what happened to the playful little boy she once knew. I think I just learned early on that for every given situation, there's an optimal person to be, and the key is to juggle those various personalities. So it made no sense to keep the original lying around if it served no other purpose.`,
+                                description: `My mother would sometimes ask what happened to the playful little boy she once knew, which made me wonder myself. I think I learned early on that for every situation there's an optimal person to be, and the key is to deftly juggle those various personas. So it made no sense to keep the original persona lying around if it served no other purpose.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

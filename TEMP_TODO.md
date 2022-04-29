@@ -25,8 +25,6 @@
 * Be smarter about memo.
 
 # Annotation edit TODO:
-* world's a naked baby, social world is just another skill
-* Whimpering Oh Catherine?
 * Willy sparkles?
 * Carpenters thing?
 * Golden Cord Bungalow Bill?
