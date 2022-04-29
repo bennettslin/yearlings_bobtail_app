@@ -14,12 +14,12 @@
 [class$=Line] {
     fill: none;
     stroke-width: 0.7px;
-    stroke: hsla(0, 0%, 27%, 0.7);
+    stroke: hsla(0, 0%, 17%, 0.7);
 }
 
 .clothesFoldLine,
 .cheekLine {
-    stroke: hsla(0, 0%, 27%, 0.4);
+    stroke: hsla(0, 0%, 17%, 0.4);
 }
 
 .eyeCornerLine,
@@ -58,11 +58,11 @@
 
 [class$=Logo]
 [class$=Line] {
-    stroke: hsla(0, 5%, 20%, 0.4);
+    stroke: hsla(0, 5%, 17%, 0.4);
 }
 
 [class$=LightLine] {
-    stroke: hsla(0, 0%, 90%, 0.5);
+    stroke: hsla(0, 0%, 87%, 0.5);
     // stroke-width: 2px;
 }
 

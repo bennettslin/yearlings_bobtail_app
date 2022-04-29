@@ -43,6 +43,8 @@ import {
     SNOWGLOBE_SMALL_PRESENT,
     SNOWGLOBE_SMALL_FUTURE,
     VAN_NUYS_PAINTING,
+    PAINTING_FUXI,
+    PAINTING_NUWA,
 } from '../../../../../../src/constants/scene/things/cardboards'
 import {
     BENNETT,
@@ -136,6 +138,8 @@ export default {
     [ODIN_TAIWAN_GATE]: NIGHT_TIME__SHARED,
     [ODIN_TAIWAN_STAIRS]: DARK_ROOM_DEFAULT__SHARED,
     [PAINTING]: null,
+    [PAINTING_FUXI]: null,
+    [PAINTING_NUWA]: null,
     [POSTER_BLOOM_COUNTY]: [
         DARK_ROOM_DEFAULT__SHARED,
         ALL_PEOPLE__SHARED,

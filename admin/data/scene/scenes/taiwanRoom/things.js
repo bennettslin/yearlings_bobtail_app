@@ -7,6 +7,8 @@ import {
 import {
     BENNETT_TAIWAN_STAIRS,
     ODIN_TAIWAN_STAIRS,
+    PAINTING_FUXI__MAT,
+    PAINTING_NUWA__MAT,
 } from '../../../../../src/constants/scene/things/cardboards'
 import {
     BUDDHA_SHRINE,
@@ -24,6 +26,21 @@ export default {
         [ODIN_TAIWAN_STAIRS]: {
             yIndex: 2,
             xPosition: 1.5,
+        },
+        [PAINTING_FUXI__MAT]: {
+            yIndex: 1,
+            xPosition: 1.5,
+            zOffset: 2.5,
+            perspective: 140,
+            rotate: -15,
+            rotateY: 300,
+            skewX: -15,
+            skewY: 9,
+        },
+        [PAINTING_NUWA__MAT]: {
+            yIndex: 2,
+            xPosition: 1.5,
+            zOffset: 2.5,
         },
     },
     [CUTOUT]: {

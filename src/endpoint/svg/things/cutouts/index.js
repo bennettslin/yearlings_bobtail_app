@@ -2,6 +2,7 @@ import apartmentPlant from '../../../../assets/svgs/cutouts/apartmentPlant'
 import ashCan from '../../../../assets/svgs/cutouts/ashCan'
 import bowlPile from '../../../../assets/svgs/cutouts/bowlPile'
 import buddhaShrine from '../../../../assets/svgs/cutouts/buddhaShrine'
+import buddhaStatue from '../../../../assets/svgs/cutouts/buddhaStatue'
 import bushDouble from '../../../../assets/svgs/cutouts/bushDouble'
 import bushSingle from '../../../../assets/svgs/cutouts/bushSingle'
 import cactusDouble from '../../../../assets/svgs/cutouts/cactusDouble'
@@ -80,6 +81,7 @@ import {
     ASH_CAN,
     BOWL_PILE,
     BUDDHA_SHRINE,
+    BUDDHA_STATUE,
     BUSH_DOUBLE__BENNETT_GATE,
     BUSH_DOUBLE__COURTYARD,
     BUSH_DOUBLE__LOCKERS,
@@ -193,6 +195,7 @@ export default {
     [ASH_CAN]: ashCan,
     [BOWL_PILE]: bowlPile,
     [BUDDHA_SHRINE]: buddhaShrine,
+    [BUDDHA_STATUE]: buddhaStatue,
     [BUSH_DOUBLE__BENNETT_GATE]: bushDouble,
     [BUSH_DOUBLE__COURTYARD]: bushDouble,
     [BUSH_DOUBLE__LOCKERS]: bushDouble,
