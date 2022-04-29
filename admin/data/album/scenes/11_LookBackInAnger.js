@@ -62,10 +62,11 @@ import {
     THOUGHT_AMY,
 } from '../../../../src/constants/scene/things/bubbles'
 import {
+    CLUB_CHRISTMAS_LIGHTS,
     MONITOR_SIDE__CROWD,
     MONITOR_SIDE__STAGE,
-    // WALL_SPEAKER_SIDE__LEFT,
-    WALL_SPEAKER_SIDE__RIGHT,
+    WALL_SPEAKER_SIDE__CROWD,
+    WALL_SPEAKER_SIDE__STAGE,
 } from '../../../../src/constants/scene/things/cutouts'
 import { CLUB_DOOR_OPEN } from '../../../../src/constants/scene/things/doors'
 import {
@@ -97,7 +98,9 @@ export default [
         description: `Empty club.`,
         presences: {
             [CUTOUT]: {
+                [CLUB_CHRISTMAS_LIGHTS]: true,
                 [MONITOR_SIDE__CROWD]: true,
+                [WALL_SPEAKER_SIDE__CROWD]: true,
             },
             [FIXTURE]: {
                 [STAGE_MIC__CROWD]: true,
@@ -135,7 +138,9 @@ export default [
                 },
             },
             [CUTOUT]: {
+                [CLUB_CHRISTMAS_LIGHTS]: true,
                 [MONITOR_SIDE__CROWD]: true,
+                [WALL_SPEAKER_SIDE__CROWD]: true,
             },
             [FIXTURE]: {
                 [STAGE_MIC__CROWD]: true,
@@ -170,9 +175,9 @@ export default [
                 },
             },
             [CUTOUT]: {
+                [CLUB_CHRISTMAS_LIGHTS]: true,
                 [MONITOR_SIDE__STAGE]: true,
-                // [WALL_SPEAKER_SIDE__LEFT]: true,
-                [WALL_SPEAKER_SIDE__RIGHT]: true,
+                [WALL_SPEAKER_SIDE__STAGE]: true,
             },
             [FIXTURE]: {
                 [STAGE_MIC__STAGE]: true,

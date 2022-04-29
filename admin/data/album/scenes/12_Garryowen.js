@@ -54,10 +54,12 @@ import {
 import {
     CAT_FOOD_DISHES,
     CAT_LITTER_BOX,
+    CLUB_CURTAIN,
+    CLUB_FLOOD_LIGHTS,
     MONITOR_FRONT__LEFT,
     MONITOR_FRONT__RIGHT,
-    WALL_SPEAKER_FRONT__LEFT,
-    WALL_SPEAKER_FRONT__RIGHT,
+    WALL_SPEAKER__FRONT_LEFT,
+    WALL_SPEAKER__FRONT_RIGHT,
 } from '../../../../src/constants/scene/things/cutouts'
 import {
     LIZ_BLINDS_INSIDE,
@@ -208,10 +210,12 @@ export default [
                 },
             },
             [CUTOUT]: {
+                [CLUB_CURTAIN]: true,
+                [CLUB_FLOOD_LIGHTS]: true,
                 [MONITOR_FRONT__LEFT]: true,
                 [MONITOR_FRONT__RIGHT]: true,
-                [WALL_SPEAKER_FRONT__LEFT]: true,
-                [WALL_SPEAKER_FRONT__RIGHT]: true,
+                [WALL_SPEAKER__FRONT_LEFT]: true,
+                [WALL_SPEAKER__FRONT_RIGHT]: true,
             },
             [FIXTURE]: {
                 [DRUMKIT]: true,

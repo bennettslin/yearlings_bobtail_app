@@ -3,10 +3,12 @@ import {
     FIXTURE,
 } from '../../../../../src/constants/scene/things'
 import {
+    CLUB_CURTAIN,
+    CLUB_FLOOD_LIGHTS,
     MONITOR_FRONT__LEFT,
     MONITOR_FRONT__RIGHT,
-    WALL_SPEAKER_FRONT__LEFT,
-    WALL_SPEAKER_FRONT__RIGHT,
+    WALL_SPEAKER__FRONT_LEFT,
+    WALL_SPEAKER__FRONT_RIGHT,
 } from '../../../../../src/constants/scene/things/cutouts'
 import {
     CASH_BOX,
@@ -15,6 +17,13 @@ import {
 
 export default {
     [CUTOUT]: {
+        [CLUB_CURTAIN]: {
+            yIndex: 0,
+        },
+        [CLUB_FLOOD_LIGHTS]: {
+            yIndex: 0,
+            zOffset: 6,
+        },
         [MONITOR_FRONT__LEFT]: {
             yIndex: 4,
             xPosition: 2,
@@ -24,14 +33,14 @@ export default {
             xPosition: 9,
             flipHorizontal: true,
         },
-        [WALL_SPEAKER_FRONT__LEFT]: {
-            yIndex: 1,
-            xPosition: 1.5,
+        [WALL_SPEAKER__FRONT_LEFT]: {
+            yIndex: 4,
+            xPosition: 1.25,
             zOffset: 4.5,
         },
-        [WALL_SPEAKER_FRONT__RIGHT]: {
-            yIndex: 1,
-            xPosition: 9.5,
+        [WALL_SPEAKER__FRONT_RIGHT]: {
+            yIndex: 4,
+            xPosition: 9.75,
             zOffset: 4.5,
             flipHorizontal: true,
         },

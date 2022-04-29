@@ -15,6 +15,9 @@ import catLitterBox from '../../../../assets/svgs/cutouts/catLitterBox'
 import cavemanBones from '../../../../assets/svgs/cutouts/cavemanBones'
 import chuteGarbage from '../../../../assets/svgs/cutouts/chuteGarbage'
 import chuteRecycling from '../../../../assets/svgs/cutouts/chuteRecycling'
+import clubChristmasLights from '../../../../assets/svgs/cutouts/clubChristmasLights'
+import clubCurtain from '../../../../assets/svgs/cutouts/clubCurtain'
+import clubFloodLights from '../../../../assets/svgs/cutouts/clubFloodLights'
 import cypressDouble from '../../../../assets/svgs/cutouts/cypressDouble'
 import cypressSingle from '../../../../assets/svgs/cutouts/cypressSingle'
 import dishPile from '../../../../assets/svgs/cutouts/dishPile'
@@ -66,7 +69,7 @@ import treeDead from '../../../../assets/svgs/cutouts/treeDead'
 import twinStreetlamp from '../../../../assets/svgs/cutouts/twinStreetlamp'
 import uclaTree from '../../../../assets/svgs/cutouts/uclaTree'
 import waitingRoomPlant from '../../../../assets/svgs/cutouts/waitingRoomPlant'
-import wallSpeakerFront from '../../../../assets/svgs/cutouts/wallSpeakerFront'
+import wallSpeaker from '../../../../assets/svgs/cutouts/wallSpeaker'
 import wallSpeakerSide from '../../../../assets/svgs/cutouts/wallSpeakerSide'
 import weddingChair from '../../../../assets/svgs/cutouts/weddingChair'
 import weddingCrowd from '../../../../assets/svgs/cutouts/weddingCrowd'
@@ -96,11 +99,15 @@ import {
     CAMPUS_TREE_SINGLE__BANCROFT,
     CAMPUS_TREE_SINGLE__CAMPANILE,
     CAMPUS_TREE_SINGLE__TETHERBALL,
+    CARRIAGE_TRAY,
     CAT_FOOD_DISHES,
     CAT_LITTER_BOX,
     CAVEMAN_BONES,
     CHUTE_GARBAGE,
     CHUTE_RECYCLING,
+    CLUB_CHRISTMAS_LIGHTS,
+    CLUB_CURTAIN,
+    CLUB_FLOOD_LIGHTS,
     CYPRESS_DOUBLE__LIZ_COUCH,
     CYPRESS_DOUBLE__LIZ_GATE,
     CYPRESS_SINGLE__LIZ_COUCH,
@@ -160,24 +167,25 @@ import {
     TRASH_CAN__LOCKERS,
     TRASH_CAN__QUAD,
     TRAY_PILE,
-    TREE__COUCH,
-    TREE__EL_CERRITO,
     TREE_DEAD__COUCH,
     TREE_DEAD__EL_CERRITO,
+    TREE__COUCH,
+    TREE__EL_CERRITO,
     TWIN_STREETLAMP__FAR,
     TWIN_STREETLAMP__MIDDLE,
     TWIN_STREETLAMP__NEAR,
     UCLA_TREE__LEFT,
     UCLA_TREE__RIGHT,
     WAITING_ROOM_PLANT,
-    WALL_SPEAKER_FRONT__LEFT,
-    WALL_SPEAKER_FRONT__RIGHT,
-    WALL_SPEAKER_SIDE__LEFT,
-    WALL_SPEAKER_SIDE__RIGHT,
+    WALL_SPEAKER_SIDE__CROWD,
+    WALL_SPEAKER_SIDE__STAGE,
+    WALL_SPEAKER__FAR_LEFT,
+    WALL_SPEAKER__FAR_RIGHT,
+    WALL_SPEAKER__FRONT_LEFT,
+    WALL_SPEAKER__FRONT_RIGHT,
     WEDDING_CHAIR,
     WEDDING_CROWD,
     YELLOW_TAPED_GRILL,
-    CARRIAGE_TRAY,
 } from '../../../../constants/scene/things/cutouts'
 
 export default {
@@ -210,6 +218,9 @@ export default {
     [CAVEMAN_BONES]: cavemanBones,
     [CHUTE_GARBAGE]: chuteGarbage,
     [CHUTE_RECYCLING]: chuteRecycling,
+    [CLUB_CHRISTMAS_LIGHTS]: clubChristmasLights,
+    [CLUB_CURTAIN]: clubCurtain,
+    [CLUB_FLOOD_LIGHTS]: clubFloodLights,
     [CYPRESS_DOUBLE__LIZ_COUCH]: cypressDouble,
     [CYPRESS_DOUBLE__LIZ_GATE]: cypressDouble,
     [CYPRESS_SINGLE__LIZ_COUCH]: cypressSingle,
@@ -269,20 +280,22 @@ export default {
     [TRASH_CAN__LOCKERS]: trashCan,
     [TRASH_CAN__QUAD]: trashCan,
     [TRAY_PILE]: trayPile,
-    [TREE__COUCH]: tree,
-    [TREE__EL_CERRITO]: tree,
     [TREE_DEAD__COUCH]: treeDead,
     [TREE_DEAD__EL_CERRITO]: treeDead,
+    [TREE__COUCH]: tree,
+    [TREE__EL_CERRITO]: tree,
     [TWIN_STREETLAMP__FAR]: twinStreetlamp,
     [TWIN_STREETLAMP__MIDDLE]: twinStreetlamp,
     [TWIN_STREETLAMP__NEAR]: twinStreetlamp,
     [UCLA_TREE__LEFT]: uclaTree,
     [UCLA_TREE__RIGHT]: uclaTree,
     [WAITING_ROOM_PLANT]: waitingRoomPlant,
-    [WALL_SPEAKER_FRONT__LEFT]: wallSpeakerFront,
-    [WALL_SPEAKER_FRONT__RIGHT]: wallSpeakerFront,
-    [WALL_SPEAKER_SIDE__LEFT]: wallSpeakerSide,
-    [WALL_SPEAKER_SIDE__RIGHT]: wallSpeakerSide,
+    [WALL_SPEAKER__FAR_LEFT]: wallSpeaker,
+    [WALL_SPEAKER__FAR_RIGHT]: wallSpeaker,
+    [WALL_SPEAKER__FRONT_LEFT]: wallSpeaker,
+    [WALL_SPEAKER__FRONT_RIGHT]: wallSpeaker,
+    [WALL_SPEAKER_SIDE__CROWD]: wallSpeakerSide,
+    [WALL_SPEAKER_SIDE__STAGE]: wallSpeakerSide,
     [WEDDING_CHAIR]: weddingChair,
     [WEDDING_CROWD]: weddingCrowd,
     [YELLOW_TAPED_GRILL]: yellowTapedGrill,

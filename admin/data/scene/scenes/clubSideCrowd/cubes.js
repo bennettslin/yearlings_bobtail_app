@@ -17,7 +17,7 @@ const DEFAULT_CEILING = {
         [g, g, g, g, g, g, g, g, g, g, g, 1],
         [g, g, g, g, g, g, g, g, g, g, g, d],
         [g, g, g, g, g, g, g, g, g, g, g, d],
-        [g, g, g, g, g, g, g, g, g, g, g, 1],
+        [g, g, g, g, g, g, g, g, g, g, g, d],
         [g, g, g, g, g, g, g, g, g, g, g, 1],
     ],
 }

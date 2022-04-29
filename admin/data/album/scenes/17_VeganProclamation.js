@@ -58,11 +58,13 @@ import {
     CAMPUS_TREE_SINGLE__BANCROFT,
     CAMPUS_TREE_SINGLE__CAMPANILE,
     CAMPUS_TREE_DOUBLE__CAMPANILE,
-    WALL_SPEAKER_FRONT__LEFT,
-    WALL_SPEAKER_FRONT__RIGHT,
+    WALL_SPEAKER__FAR_LEFT,
+    WALL_SPEAKER__FAR_RIGHT,
     DUMPSTER,
     CHUTE_RECYCLING,
     CHUTE_GARBAGE,
+    CLUB_CURTAIN,
+    CLUB_FLOOD_LIGHTS,
 } from '../../../../src/constants/scene/things/cutouts'
 import {
     BANCROFT_DOOR,
@@ -155,8 +157,10 @@ export default [
                 },
             },
             [CUTOUT]: {
-                [WALL_SPEAKER_FRONT__LEFT]: true,
-                [WALL_SPEAKER_FRONT__RIGHT]: true,
+                [CLUB_CURTAIN]: true,
+                [CLUB_FLOOD_LIGHTS]: true,
+                [WALL_SPEAKER__FAR_LEFT]: true,
+                [WALL_SPEAKER__FAR_RIGHT]: true,
             },
             [PANEL]: {
                 [CROWD_BACK]: true,

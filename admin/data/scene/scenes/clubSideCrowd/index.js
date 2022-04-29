@@ -20,7 +20,7 @@ export default {
     [ANA]: {
         [PERFORMING]: {
             yIndex: 2,
-            xPosition: 2.4,
+            xPosition: 2.35,
         },
     },
     [WADE]: {

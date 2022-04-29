@@ -86,6 +86,8 @@ import {
     ALBUM_TELEVISION,
 } from '../../../../src/constants/scene/things/cardboards'
 import {
+    CLUB_CURTAIN,
+    CLUB_FLOOD_LIGHTS,
     MONITOR_FRONT__LEFT,
     MONITOR_FRONT__RIGHT,
     PEACH_TREE,
@@ -93,8 +95,8 @@ import {
     ROSEBUSH_SINGLE_BASEMENT,
     TREE_DEAD__COUCH,
     TREE__COUCH,
-    WALL_SPEAKER_FRONT__LEFT,
-    WALL_SPEAKER_FRONT__RIGHT,
+    WALL_SPEAKER__FRONT_LEFT,
+    WALL_SPEAKER__FRONT_RIGHT,
 } from '../../../../src/constants/scene/things/cutouts'
 import {
     BASEMENT_DOOR_OPEN,
@@ -286,10 +288,12 @@ export default [
                 },
             },
             [CUTOUT]: {
+                [CLUB_CURTAIN]: true,
+                [CLUB_FLOOD_LIGHTS]: true,
                 [MONITOR_FRONT__LEFT]: true,
                 [MONITOR_FRONT__RIGHT]: true,
-                [WALL_SPEAKER_FRONT__LEFT]: true,
-                [WALL_SPEAKER_FRONT__RIGHT]: true,
+                [WALL_SPEAKER__FRONT_LEFT]: true,
+                [WALL_SPEAKER__FRONT_RIGHT]: true,
             },
             [FIXTURE]: {
                 [CASH_BOX]: true,

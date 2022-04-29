@@ -4,8 +4,7 @@ import {
 } from '../../../../../src/constants/scene/things'
 import {
     MONITOR_SIDE__STAGE,
-    WALL_SPEAKER_SIDE__LEFT,
-    WALL_SPEAKER_SIDE__RIGHT,
+    WALL_SPEAKER_SIDE__STAGE,
 } from '../../../../../src/constants/scene/things/cutouts'
 import {
     STAGE_MIC__STAGE,
@@ -17,20 +16,13 @@ import {
 export default {
     [CUTOUT]: {
         [MONITOR_SIDE__STAGE]: {
-            yIndex: 4,
+            yIndex: 1,
             xPosition: 8,
         },
-        [WALL_SPEAKER_SIDE__LEFT]: {
-            yIndex: 4,
-            xPosition: 1.5,
-            zOffset: 4.5,
-            rotate: 15,
-        },
-        [WALL_SPEAKER_SIDE__RIGHT]: {
+        [WALL_SPEAKER_SIDE__STAGE]: {
             yIndex: 1,
-            xPosition: 1.5,
+            xPosition: 8,
             zOffset: 4.5,
-            rotate: 15,
         },
     },
     [FIXTURE]: {
