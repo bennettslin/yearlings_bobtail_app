@@ -79,6 +79,7 @@ import {
     BENNETT_COUCH_LAMP,
     BENNETT_RECORD_PLAYER,
     ELECTRIC_GUITAR,
+    SHELF_CUP,
 } from '../../../../src/constants/scene/things/fixtures'
 import {
     BERKELEY_BUILDING_TALL,
@@ -166,6 +167,7 @@ export default [
                 [BENNETT_RECORD_PLAYER]: true,
                 [BENNETT_COUCH_LAMP]: true,
                 [ELECTRIC_GUITAR]: true,
+                [SHELF_CUP]: true,
             },
             [PANEL]: {
                 [BENNETT_NIGHTSTAND]: true,

@@ -25,6 +25,9 @@ import {
     ELECTRIC_GUITAR,
     KEYBOARD,
     BEETHOVEN_BUST__COUCH,
+    SHELF_BOOKS_EARLY,
+    SHELF_BOOKS_LATE,
+    SHELF_CUP,
 } from '../../../../../src/constants/scene/things/fixtures'
 import { BENNETT_PILLOW__COUCH } from '../../../../../src/constants/scene/things/furnitures'
 import {
@@ -81,6 +84,21 @@ export default {
             yIndex: 2,
             xPosition: 9.6,
             zOffset: -0.07,
+        },
+        [SHELF_BOOKS_EARLY]: {
+            yIndex: 1,
+            xPosition: 4,
+            zOffset: 1,
+        },
+        [SHELF_BOOKS_LATE]: {
+            yIndex: 1,
+            xPosition: 4,
+            zOffset: 1,
+        },
+        [SHELF_CUP]: {
+            yIndex: 1,
+            xPosition: 4,
+            zOffset: 1,
         },
     },
     [FURNITURE]: {

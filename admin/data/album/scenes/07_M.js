@@ -118,6 +118,9 @@ import {
     ELECTRIC_GUITAR,
     GUITAR_CASE_UPRIGHT,
     KEYBOARD,
+    SHELF_BOOKS_EARLY,
+    SHELF_BOOKS_LATE,
+    SHELF_CUP,
 } from '../../../../src/constants/scene/things/fixtures'
 import {
     COMMERCIAL_CENTRE,
@@ -167,6 +170,7 @@ export default [
                 [BENNETT_RECORD_PLAYER]: true,
                 [BENNETT_COUCH_LAMP]: true,
                 [ELECTRIC_GUITAR]: true,
+                [SHELF_CUP]: true,
             },
             [PANEL]: {
                 [BENNETT_NIGHTSTAND]: true,
@@ -205,6 +209,7 @@ export default [
                 [BENNETT_RECORD_PLAYER]: true,
                 [BENNETT_COUCH_LAMP]: true,
                 [ELECTRIC_GUITAR]: true,
+                [SHELF_BOOKS_EARLY]: true,
             },
             [FURNITURE]: {
                 [BENNETT_PILLOW__COUCH]: true,
@@ -252,6 +257,7 @@ export default [
                 [BENNETT_COUCH_LAMP]: true,
                 [ELECTRIC_GUITAR]: true,
                 [KEYBOARD]: true,
+                [SHELF_BOOKS_LATE]: true,
             },
             [PANEL]: {
                 [BENNETT_NIGHTSTAND]: true,

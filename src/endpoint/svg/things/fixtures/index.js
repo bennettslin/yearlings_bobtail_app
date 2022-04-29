@@ -51,6 +51,9 @@ import recordPlayerStool from '../../../../assets/svgs/fixtures/recordPlayerStoo
 import recordingMic from '../../../../assets/svgs/fixtures/recordingMic'
 import redEnvelopeMoney from '../../../../assets/svgs/fixtures/redEnvelopeMoney'
 import safewayBag from '../../../../assets/svgs/fixtures/safewayBag'
+import shelfBooksEarly from '../../../../assets/svgs/fixtures/shelfBooksEarly'
+import shelfBooksLate from '../../../../assets/svgs/fixtures/shelfBooksLate'
+import shelfCup from '../../../../assets/svgs/fixtures/shelfCup'
 import stageMic from '../../../../assets/svgs/fixtures/stageMic'
 import stepladder from '../../../../assets/svgs/fixtures/stepladder'
 import tchotchkes from '../../../../assets/svgs/fixtures/tchotchkes'
@@ -128,6 +131,9 @@ import {
     RECORD_PLAYER_STOOL,
     RED_ENVELOPE_MONEY,
     SAFEWAY_BAG,
+    SHELF_BOOKS_EARLY,
+    SHELF_BOOKS_LATE,
+    SHELF_CUP,
     STAGE_MIC__CROWD,
     STAGE_MIC__STAGE,
     STEPLADDER,
@@ -209,6 +215,9 @@ export default {
     [RECORD_PLAYER_STOOL]: recordPlayerStool,
     [RED_ENVELOPE_MONEY]: redEnvelopeMoney,
     [SAFEWAY_BAG]: safewayBag,
+    [SHELF_BOOKS_EARLY]: shelfBooksEarly,
+    [SHELF_BOOKS_LATE]: shelfBooksLate,
+    [SHELF_CUP]: shelfCup,
     [STAGE_MIC__CROWD]: stageMic,
     [STAGE_MIC__STAGE]: stageMic,
     [STEPLADDER]: stepladder,
