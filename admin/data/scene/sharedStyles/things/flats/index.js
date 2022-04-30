@@ -359,6 +359,7 @@ export default {
         BULB__SHARED,
         DOOR__SHARED,
         FOLIAGE__SHARED,
+        HOUSE__SHARED,
         NIGHT_TIME__SHARED,
     ],
     [TAIWAN_HOUSES_CENTRE]: [
