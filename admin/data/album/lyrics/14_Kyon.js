@@ -30,7 +30,7 @@ export default {
     mixStartTime: `0:00:00.27`,
     playerReferenceTime: 2498.410,
     playerStartTime: 2496.296,
-    overview: `The on-again, off-again years gave me enough distance to understand how my behavior had degenerated so quickly into emotional cruelty. Hoping for an easy breakup, I would act up in small ways. But Sita was determined to work it out, and she would endure. Which then upped the ante for how awfully I would need to behave next time, and so forth. In time I came to see how thoroughly she'd tied her sense of worth to our relationship. I was fighting for me. She was fighting for us.`,
+    overview: `The on-again, off-again years gave me enough distance to understand how my behavior had degenerated so quickly into emotional cruelty. Hoping for an easy breakup, I would act up in small ways. But Sita was just as determined to work it out, and she would endure. Which then upped the ante for how awfully I should behave next time… and on and on. In time I came to see how thoroughly she'd tied her sense of worth to our relationship. I was fighting for me. She was fighting for us.`,
     lyricUnits: [
         {
             unitMap: {},

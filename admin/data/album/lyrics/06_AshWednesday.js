@@ -78,7 +78,7 @@ export default {
                                         anchor: `Abraham Lincoln`,
                                         wiki: `Abraham_Lincoln`,
                                     },
-                                    `'s assassination. I don't recall why I chose this reference. I think I just spent a long while whimpering to myself, "Oh, Catherine…"`,
+                                    `'s assassination. I'm not sure why I chose this reference. I might have just spent a while whimpering to myself, "Oh, Catherine…"`,
                                 ],
                                 dotKeys: {
                                     [PUN]: true,
