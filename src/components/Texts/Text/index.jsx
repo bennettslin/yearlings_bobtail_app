@@ -65,7 +65,7 @@ const Text = forwardRef(({
                 } = textEntity,
                 { wormholeAnnotationIndex } = props
 
-            // It's an external anchor in the pitch.
+            // It's an external anchor.
             if (href) {
                 return (
                     <Anchor

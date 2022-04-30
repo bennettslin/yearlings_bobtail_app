@@ -5,6 +5,7 @@ import Contact from '../../Contact'
 import PitchPagination from '../../Promos/Pitch/Pagination'
 import HomepageButton from './HomepageButton'
 import {
+    getIsDownloadPage,
     getIsPitchPage,
     getIsPromoHomepage,
 } from '../../../helpers/promo'
@@ -29,6 +30,7 @@ const PromoNav = ({ serverClientPromoKey }) => (
         <HomepageButton
             {...{
                 isSelected: getIsPromoHomepage(serverClientPromoKey),
+                isDownloadPage: getIsDownloadPage(serverClientPromoKey),
             }}
         />
     </div>

@@ -72,8 +72,10 @@ const Anchor = forwardRef(({
         handleAnchorMouse(false)
     }
 
+    const Tag = 'a'
+
     return (
-        <a
+        <Tag
             {...{
                 ref,
                 ...didMount && {
@@ -117,7 +119,9 @@ const Anchor = forwardRef(({
                         isSelected,
                         isWikiAnchor,
                         neverDeselects:
-                            neverDeselects || Boolean(href) || alwaysPointer,
+                            neverDeselects ||
+                            Boolean(href) ||
+                            alwaysPointer,
                         text,
                         textConfig,
                     }}
@@ -131,7 +135,7 @@ const Anchor = forwardRef(({
                     }}
                 />
             )}
-        </a>
+        </Tag>
     )
 })
 

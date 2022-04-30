@@ -10,7 +10,6 @@ import {
 import {
     ANNOTATION_QUERY_FIELD,
     ANNOTATION_QUERY_INITIAL,
-    ONESHEET_SUBPATH,
     PITCH_KEYS,
     VERSE_QUERY_FIELD,
     VERSE_QUERY_INITIAL,
@@ -49,14 +48,23 @@ export const getRoutingAnnotationIndex = (search, songIndex) => {
     ) ? routingAnnotationIndex : NaN
 }
 
-export const getRoutingPromoKey = pathname => {
-    if (pathname.includes(ONESHEET_SUBPATH)) {
-        return ONESHEET_SUBPATH
+export const getRoutingPromoKey = rawPathname => {
+    const pathname = rawPathname.replace('promo', '').replace('/', '')
+
+    // It's the homepage.
+    if (!pathname) {
+        return pathname
     }
 
-    return PITCH_KEYS.reduce((matchedPitchKey, pitchKey) => (
-        pathname.includes(pitchKey) ? pitchKey : matchedPitchKey
-    ), '')
+    // It's a pitch page.
+    if (PITCH_KEYS.some(pitchKey => pathname.includes(pitchKey))) {
+        return PITCH_KEYS.reduce((matchedPitchKey, pitchKey) => (
+            pathname.includes(pitchKey) ? pitchKey : matchedPitchKey
+        ), '')
+    }
+
+    // It's a single page.
+    return pathname
 }
 
 export const getRoutingPitchIndex = (pitchKey, pathname) => {

@@ -1,3 +1,4 @@
+import { ROSALIND_SUBPATH } from '../../../../../src/constants/routing'
 import { getFormattedSlideMetadata } from '../../helpers/slide'
 
 export default getFormattedSlideMetadata([
@@ -270,6 +271,12 @@ export default getFormattedSlideMetadata([
                     },
                     `, this is it!`,
                 ],
+            },
+            {
+                paragraph: {
+                    anchor: `Comic book, mp3s, and scores`,
+                    promoKey: ROSALIND_SUBPATH,
+                },
             },
         ],
     },

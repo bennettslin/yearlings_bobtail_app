@@ -4,6 +4,7 @@ import {
     ONESHEET_SUBPATH,
     PARETO_SUBPATH,
     PROMO_PATH,
+    ROSALIND_SUBPATH,
 } from '../../../../src/constants/routing'
 
 export default {
@@ -23,6 +24,10 @@ export default {
         plainTitle: `The Ulysses of Rock Albums`,
         description: `Artist and project onesheet.`,
     }),
+    [ROSALIND_SUBPATH]: {
+        title: 'Rosalind Franklin Album',
+        description: `Page for album content`,
+    },
     [ARTUP_SUBPATH]: {
         title: `Invest in Artups`,
         description: `Some artists are like stores, while others are like startups.`,

@@ -5,6 +5,7 @@ export const ANNOTATION_QUERY_INITIAL = 'a'
 
 export const PROMO_PATH = 'promo'
 export const ONESHEET_SUBPATH = 'onesheet'
+export const ROSALIND_SUBPATH = 'rosalind'
 export const ARTUP_SUBPATH = 'artup'
 export const PARETO_SUBPATH = 'pareto'
 

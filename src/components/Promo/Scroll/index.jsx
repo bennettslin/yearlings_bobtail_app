@@ -2,16 +2,11 @@ import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import getPromoServerClientHoc from '../../../hocs/PromoHoc'
-import HomepagePromo from '../../Promos/Homepage'
-import OnesheetPromo from '../../Promos/Onesheet'
 import PitchPromo from '../../Promos/Pitch'
+import SinglePagePromo from '../../Promos/SinglePage'
 import PromoScrollTitle from './Title'
 import { getTitleForPromo } from '../../../endpoint/promo'
-import {
-    getIsOnesheetPage,
-    getIsPromoHomepage,
-    getIsPitchPage,
-} from '../../../helpers/promo'
+import { getIsPitchPage } from '../../../helpers/promo'
 import './style'
 
 const PromoScroll = forwardRef(({
@@ -58,15 +53,20 @@ const PromoScroll = forwardRef(({
                         tabIndex: -1,
                     }}
                 >
-                    <PromoScrollTitle {... { title: getTitleForPromo(serverClientPromoKey) }} />
-                    {getIsPromoHomepage(serverClientPromoKey) && (
-                        <HomepagePromo {...{ handlePromoPageChange }} />
-                    )}
-                    {getIsOnesheetPage(serverClientPromoKey) && (
-                        <OnesheetPromo {...{ handlePromoPageChange }} />
-                    )}
-                    {getIsPitchPage(serverClientPromoKey) && (
+                    <PromoScrollTitle
+                        {...{
+                            title: getTitleForPromo(serverClientPromoKey),
+                        }}
+                    />
+                    {getIsPitchPage(serverClientPromoKey) ? (
                         <PitchPromo {...{ handlePromoPageChange }} />
+                    ) : (
+                        <SinglePagePromo
+                            {...{
+                                promoKey: serverClientPromoKey,
+                                handlePromoPageChange,
+                            }}
+                        />
                     )}
                 </div>
             </div>

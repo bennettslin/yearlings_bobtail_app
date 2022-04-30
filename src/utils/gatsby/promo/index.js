@@ -5,6 +5,7 @@ import {
     ONESHEET_SUBPATH,
     PITCH_KEYS,
     PROMO_PATH,
+    ROSALIND_SUBPATH,
 } from '../../../constants/routing'
 
 export const getPromoPath = promoKey => (
@@ -19,12 +20,10 @@ export const getFormattedPromoPath = (promoKey, pitchIndex) => {
     ].join('/')
 }
 
-const _getIsValidPromoHomepagePath = pathname => (
-    pathname === PROMO_PATH
-)
-
-const _getIsValidOnesheetPath = pathname => (
-    pathname === getPromoPath(ONESHEET_SUBPATH)
+const _getIsValidPromoSinglePagePath = pathname => (
+    pathname === PROMO_PATH ||
+    pathname === getPromoPath(ONESHEET_SUBPATH) ||
+    pathname === getPromoPath(ROSALIND_SUBPATH)
 )
 
 const _getIsValidPitchPath = (pitchKey, pathname) => {
@@ -43,8 +42,7 @@ const _getIsValidPitchPath = (pitchKey, pathname) => {
 }
 
 export const getIsPromoPath = pathname => (
-    _getIsValidPromoHomepagePath(pathname) ||
-    _getIsValidOnesheetPath(pathname) ||
+    _getIsValidPromoSinglePagePath(pathname) ||
     PITCH_KEYS.some(pitchKey => (
         _getIsValidPitchPath(pitchKey, pathname)
     ))

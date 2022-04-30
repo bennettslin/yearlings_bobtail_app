@@ -26,6 +26,7 @@ import {
     SOCIAL_TWITTER_BUTTON_KEY,
     SONG_REPEAT_BUTTON_KEY,
     WORMHOLE_BUTTON_KEY,
+    PROMO_BACK_BUTTON_KEY,
 } from '../../constants/buttons'
 import { IS_USER_AGENT_DESKTOP } from '../../constants/device'
 
@@ -129,6 +130,7 @@ export const getIsTooltipEnabled = buttonName => {
         case NAV_BOOK_BUTTON_KEY:
         case NAV_SONG_BUTTON_KEY:
         case PROMO_PAGE_BUTTON_KEY:
+        case PROMO_BACK_BUTTON_KEY:
         case PAGINATION_SLIDE_BUTTON_KEY:
         case WORMHOLE_BUTTON_KEY:
             return false

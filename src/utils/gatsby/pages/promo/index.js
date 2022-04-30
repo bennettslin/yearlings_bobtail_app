@@ -1,6 +1,7 @@
 import promo from '../../../../../admin/data/promo'
 import {
     ONESHEET_SUBPATH,
+    ROSALIND_SUBPATH,
     PITCH_KEYS,
     PROMO_PATH,
 } from '../../../../constants/routing'
@@ -12,6 +13,10 @@ export default [
     {
         path: `${PROMO_PATH}/${ONESHEET_SUBPATH}`,
         context: { pagePromoKey: ONESHEET_SUBPATH },
+    },
+    {
+        path: `${PROMO_PATH}/${ROSALIND_SUBPATH}`,
+        context: { pagePromoKey: ROSALIND_SUBPATH },
     },
     ...PITCH_KEYS.map(pitchKey => [
         {
