@@ -1,4 +1,3 @@
-// Component to show individual annotation note or all wormholes.
 import React from 'react'
 import PropTypes from 'prop-types'
 import Texts from '../../../../src/components/Texts'

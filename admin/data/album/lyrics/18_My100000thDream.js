@@ -25,7 +25,7 @@ export default {
     referenceDescription: `Piano in measure 1`,
     mixStartTime: `0:01:22.94`,
     playerStartTime: 3332.826,
-    overview: `After slogging through the day under a cloud of despair, I would crawl into bed and lie awake until exhaustion overpowered me. And every night I would dream of reuniting with Sita, only to wake in a panicked sweat as the reality came roaring back that I'd lost her forever. I had no idea when this cruel trick played by my subconscious mind would end. The answer, I feared, was never.`,
+    overview: `After slogging through the day under a cloud of despair, I would crawl into bed and lie awake until exhaustion overtook me. Every night I would then dream of reuniting with Sita, only to wake in a panicked sweat as the reality came roaring back that I'd lost her forever. I lived in dread of this cruel trick played by my subconscious mind, and I had no idea when the torment would end. The answer, I feared, was never.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -142,7 +142,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `We segue into the arpeggiated chords from "Cremated," followed by the slide guitar and natural harmonics from "On a Golden Cord."`,
+                        `We segue into the first verse with the arpeggiated chords from "Cremated," followed by the slide guitar and natural harmonics heard in "On a Golden Cord."`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -166,7 +166,7 @@ export default {
                         {
                             anchor: `ever live another life`,
                             card: {
-                                description: `As dreams often go, I have no memory or even awareness of having lived another life in the intervening years. It's obvious Sita and I hadn't stayed together, yet I can't recall any time spent apart. Of course, according to the Buddhist and Hindu faiths, I've lived many other lives quite literally, in past incarnations.`,
+                                description: `As dreams often go, I have no memory or even awareness of having lived another life in the intervening years. It's obvious that Sita and I haven't stayed together, yet I can't seem to recall any time spent apart. Of course, according to the Buddhist and Hindu faiths, I've lived many other lives quite literally, in past incarnations.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -198,7 +198,7 @@ export default {
                             anchor: `organ`,
                             wiki: `Electric_organ`,
                         },
-                        `and slide mandolin from "Kyon?" make a reappearance here, along with the tremolo banjo and`,
+                        `and slide mandolin from "Kyon?" make their appearance in the first chorus, along with the tremolo banjo and`,
                         {
                             anchor: `rubato`,
                             wiki: `Tempo_rubato`,
@@ -271,7 +271,7 @@ export default {
                                         anchor: `Argentina`,
                                         wiki: `Argentina`,
                                     },
-                                    `, of all places. When I wrote these lyrics, I didn't think I'd need one.`,
+                                    `. When I wrote these lyrics, I didn't think I'd need one.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -298,7 +298,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: `Up next, the mandolin and tin whistle from "Garryowen," followed by the high-pitched synthesizer and recorder from "Look Back in Anger."`,
+                    description: `Up next in the second verse are the mandolin and tin whistle from "Garryowen," followed by the high-pitched synthesizer and recorder from "Look Back in Anger."`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
@@ -335,12 +335,12 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `In the second chorus, we hear the`,
+                        `In the second chorus, the`,
                         {
                             anchor: `electric sitar`,
                             wiki: `Electric_sitar`,
                         },
-                        `and vintage arcade sound from "Constellations!" and the`,
+                        `and vintage arcade sound from "Constellations!" reappear, along with the`,
                         {
                             anchor: `carillon`,
                             wiki: `Carillon`,
@@ -374,7 +374,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: `The chord progression here, which I call Sita's theme, comes from the bridge in "Grasshoppers Lie Heavy." Musical texture is provided by the arpeggiated Spanish guitar from "M," followed by the melodicas evoking brass fanfare heard in "Pchelka's Starry Journey."`,
+                    description: `The chord progression heard in the bridge, which I call Sita's theme, comes from the bridge in "Grasshoppers Lie Heavy." Musical texture is provided by the arpeggiated Spanish guitar from "M," followed by the melodicas evoking brass fanfare heard in "Pchelka's Starry Journey."`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
@@ -414,7 +414,7 @@ export default {
                                         anchor: `El Cerrito`,
                                         wiki: `El_Cerrito,_California`,
                                     },
-                                    `has a sprawling hillside area with hiking trails, secluded groves, and a great view of the San Francisco Bay. In my happier days with Sita, it was our prime choice for a weekend outing.`,
+                                    `has a sprawling hillside area with hiking trails, secluded groves, and a great view of the San Francisco Bay. In my happier days with Sita, it was a prime choice for a weekend outing.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -439,7 +439,7 @@ export default {
                         {
                             anchor: `last thought`,
                             card: {
-                                description: `As Sita's ominous words wrench me from my bliss, I realize now that this is only a dream. And moreover, it may be my last.`,
+                                description: `As these ominous words from Sita wrench me from my bliss, I realize now that this is only a dream. And moreover, it may be my last.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -511,7 +511,7 @@ export default {
                         {
                             anchor: `When you'll be mine`,
                             card: {
-                                description: `If this is only a dream, then what I'm holding onto isn't really Sita, but only a memory of her. And if all I have left is a memory, then somewhere along the way I must have lost the real Sita. As I exit this world then, I hold onto the possibility that I may find her again in the next.`,
+                                description: `If this is only a dream, then what I'm holding onto isn't really Sita, but only a memory of her. And if all I have left is a memory, then somewhere along the way I must have lost the real Sita. So as I now exit this world, I hold onto the possibility that I may find her again in the next.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,

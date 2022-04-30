@@ -865,7 +865,7 @@ export default {
                                             anchor: `Shiva`,
                                             wiki: `Shiva`,
                                         },
-                                        `as he dances to destroy and rebuild the universe in an endless cycle. Crushed beneath his foot lies Apasmara, which symbolizes Shiva's victory over ignorance. And having caused my share of ignorant destruction in this universe, I now commit to rebuild it.`,
+                                        `as he dances to destroy and rebuild the universe in an endless cycle. Crushed beneath his foot lies Apasmara, symbolizing Shiva's victory over ignorance. And having caused my share of ignorant destruction in this universe, I now commit to rebuild it.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,

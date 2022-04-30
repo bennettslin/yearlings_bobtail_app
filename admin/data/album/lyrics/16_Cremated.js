@@ -294,31 +294,24 @@ export default {
                         `his`,
                         {
                             anchor: `beaten wit and id`,
-                            todo: true,
-                            // TODO: Part of the fun of having a drunken persona was to let its impulses mess things up in the worst way possible.
-                            cards: [
-                                {
-                                    description: `The rational schemes of my sober self didn't always win out. Sometimes the best decisions came from indulging the whims of my drunken half.`,
-                                    dotKeys: {
-                                        [BACKSTORY]: true,
+                            card: {
+                                description: [
+                                    `Like the`,
+                                    {
+                                        anchor: `id`,
+                                        wiki: `Id,_ego_and_super-ego`,
                                     },
+                                    `in`,
+                                    {
+                                        anchor: `Freudian psychology`,
+                                        wiki: `Freud's_psychoanalytic_theories`,
+                                    },
+                                    `, the primal urges of my drunken self regularly undermined the rational schemes of his sober half.`,
+                                ],
+                                dotKeys: {
+                                    [OBSERVATION]: true,
                                 },
-                                {
-                                    description: [
-                                        `In`,
-                                        {
-                                            anchor: `Freudian psychology`,
-                                            wiki: `Freud's_psychoanalytic_theories`,
-                                        },
-                                        `, the`,
-                                        {
-                                            anchor: `id`,
-                                            wiki: `Id,_ego_and_super-ego`,
-                                        },
-                                        `represents the primal impulses of the psyche.`,
-                                    ],
-                                },
-                            ],
+                            },
                         },
                         `she's deemed her`,
                     ],

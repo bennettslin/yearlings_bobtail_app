@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Annotation from '../Annotation'
 import { getSongsNotLoguesCount } from '../../../../src/endpoint/album/songs'
 import { getShownAnnotationIndices } from '../helpers'
+import Overview from '../Overview'
 
 const AnnotationSongColumn = ({ songIndex, showAll }) => {
     const
@@ -23,6 +24,7 @@ const AnnotationSongColumn = ({ songIndex, showAll }) => {
                 },
             }}
         >
+            <Overview {...{ songIndex }} />
             {shownAnnotationIndices.map(annotationIndex => (
                 <Annotation
                     {...{
