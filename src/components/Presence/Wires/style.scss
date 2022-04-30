@@ -1,7 +1,26 @@
 $width__wire: 1px;
 
 .Wire {
-    border-left: $width__wire solid hsla(0, 0%, 60%, 0.5);
-    height: 100%;
+    border-left: $width__wire solid hsla(0, 0%, 60%, 0.33);
     width: $width__wire;
+    height: 100%;
+
+    .darkRoom
+    & {
+        border-left: $width__wire solid hsla(0, 0%, 30%, 0.33);
+    }
+
+    .eveningTime
+    & {
+        border-left: $width__wire solid hsla(0, 0%, 50%, 0.33);
+    }
+
+    .nightTime
+    &,
+    .futureSeason
+    &,
+    .magicSeason
+    & {
+        border-left: $width__wire solid hsla(0, 0%, 40%, 0.33);
+    }
 }
