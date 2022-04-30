@@ -3,7 +3,8 @@ import { getFullPathForSong, getOverviewForSong, getSongIsLogue, getTitleForSong
 import { getTitleForAlbum } from '../../../endpoint/album/title'
 import { getTruncatedStringText } from '../../../helpers/format'
 import { spreadHelmetConfig } from '../../../helpers/helmet'
-import { getSongUrl, getUrl } from '../../../helpers/url'
+import { getSongUrl } from '../../../helpers/url'
+import { getUrl } from '../../gatsby/path'
 
 export const getAlbumMetaTitle = songIndex => (
     `${getTitleForSong(songIndex)} | ${getTitleForAlbum()}`

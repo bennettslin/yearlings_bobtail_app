@@ -1,4 +1,4 @@
-import { getUrl } from '../../../../src/helpers/url'
+import { getUrl } from '../../../../src/utils/gatsby/path'
 import { getFormattedSlideMetadata } from '../helpers/slide'
 
 export default getFormattedSlideMetadata({

@@ -1,5 +1,6 @@
 import qs from 'qs'
 import { getFullPathForSong } from '../endpoint/album/songs'
+import { getUrl } from '../utils/gatsby/path'
 import { getFormattedPromoPath } from '../utils/gatsby/promo'
 import {
     ANNOTATION_QUERY_FIELD,
@@ -7,13 +8,6 @@ import {
     VERSE_QUERY_FIELD,
     VERSE_QUERY_INITIAL,
 } from '../constants/routing'
-import { DOMAIN } from '../utils/server'
-
-const DOMAIN_NAME = `https://www.${DOMAIN}.com`
-
-export const getUrl = path => (
-    `${DOMAIN_NAME}${path[0] === '/' ? path : `/${path}`}`
-)
 
 export const getSongUrlPath = ({
     songIndex,

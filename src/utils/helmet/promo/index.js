@@ -5,7 +5,8 @@ import { getDescriptionForPromo, getTitleForPromo } from '../../../endpoint/prom
 import { getTitleForSlide } from '../../../endpoint/promo/pitches'
 import { getTruncatedStringText } from '../../../helpers/format'
 import { getPitchTitleAsText, spreadHelmetConfig } from '../../../helpers/helmet'
-import { getPromoUrl, getUrl } from '../../../helpers/url'
+import { getPromoUrl } from '../../../helpers/url'
+import { getUrl } from '../../gatsby/path'
 import { APP_NAME } from '../../server'
 
 export const getPromoMetaTitle = (promoKey, pitchIndex) => {

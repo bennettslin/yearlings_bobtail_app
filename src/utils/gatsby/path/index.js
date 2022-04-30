@@ -1,5 +1,12 @@
 import qs from 'qs'
 import { getWindow } from '../../browser'
+import { DOMAIN } from '../../server'
+
+const DOMAIN_NAME = `https://www.${DOMAIN}.com`
+
+export const getUrl = path => (
+    `${DOMAIN_NAME}${path[0] === '/' ? path : `/${path}`}`
+)
 
 export const getIndexFromPath = ({ pathname, rootPath }) => (
     /**
