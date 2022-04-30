@@ -16,6 +16,7 @@ import rootHome from './promo/rootHome'
 import navBook from './nav/navBook'
 import navSong from './nav/navSong'
 import overview from './main/overview'
+import promoBack from './promo/promoBack'
 import promoPage from './promo/promoPage'
 import paginationNext from './promo/paginationNext'
 import paginationPrevious from './promo/paginationPrevious'
@@ -89,7 +90,7 @@ export default {
     [POPUP_CLOSE_BUTTON_KEY]: popupClose,
     [POPUP_NEXT_BUTTON_KEY]: popupNext,
     [POPUP_PREVIOUS_BUTTON_KEY]: popupPrevious,
-    [PROMO_BACK_BUTTON_KEY]: promoPage,
+    [PROMO_BACK_BUTTON_KEY]: promoBack,
     [PROMO_PAGE_BUTTON_KEY]: promoPage,
     [ROOT_HOME_BUTTON_KEY]: rootHome,
     [SCORES_BUTTON_KEY]: scores,
