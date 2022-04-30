@@ -249,7 +249,6 @@ export default getFormattedSlideMetadata([
         ],
     },
     {
-        // TODO: Add links to comic, scores, and mp3s.
         title: `Rosalind Franklin album`,
         body: [
             {
@@ -259,7 +258,7 @@ export default getFormattedSlideMetadata([
                         isItalic: true,
                         lyric: `Yearling's Bobtail`,
                     },
-                    `went nowhere, I decided to create a comic book album about the life of English biophysicist Rosalind Franklin. I still wasn't signed to a label by that point, so I had to make do with little resources. As a result, I was unhappy with how the comic book and the recordings turned out. The album was completely ignored upon its release, so that's just as well.`,
+                    `went nowhere, I decided to create a comic book album about the life of English biophysicist Rosalind Franklin. But since I had to make do with no partners and few resources, I was unhappy with how the comic book and the recordings turned out. The project was completely ignored upon its release, so that's just as well.`,
                 ],
             },
             {
@@ -274,7 +273,7 @@ export default getFormattedSlideMetadata([
             },
             {
                 paragraph: {
-                    anchor: `Rosalind Franklin album`,
+                    anchor: `Rosalind Franklin album files`,
                     promoKey: ROSALIND_SUBPATH,
                 },
             },

@@ -31,11 +31,16 @@ const Text = forwardRef(({
 
     } else if (typeof textEntity === 'object') {
         const {
+            breakTag,
             lyric,
             isContact,
             isItalic,
             isEmphasis,
         } = textEntity
+
+        if (breakTag) {
+            return <br />
+        }
 
         if (isContact) {
             return <Contact />

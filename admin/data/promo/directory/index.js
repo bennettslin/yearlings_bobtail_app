@@ -25,8 +25,8 @@ export default {
         description: `Artist and project onesheet.`,
     }),
     [ROSALIND_SUBPATH]: {
-        title: 'Rosalind Franklin Album',
-        description: `Page for album content`,
+        title: 'Rosalind Franklin Album Files',
+        description: `Page for album files.`,
     },
     [ARTUP_SUBPATH]: {
         title: `Invest in Artups`,
