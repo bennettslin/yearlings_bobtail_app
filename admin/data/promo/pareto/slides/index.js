@@ -1,4 +1,4 @@
-import { ROSALIND_SUBPATH } from '../../../../../src/constants/routing'
+import { AMNESTICISM_SUBPATH, ROSALIND_SUBPATH } from '../../../../../src/constants/routing'
 import { getFormattedSlideMetadata } from '../../helpers/slide'
 
 export default getFormattedSlideMetadata([
@@ -374,10 +374,16 @@ export default getFormattedSlideMetadata([
                 ],
             },
             {
-                paragraph: {
-                    anchor: `Master's thesis`,
-                    href: `https://digital.lib.washington.edu/researchworks/handle/1773/23566`,
-                },
+                paragraph: [
+                    {
+                        anchor: `Master's thesis`,
+                        href: `https://digital.lib.washington.edu/researchworks/handle/1773/23566`,
+                    },
+                    {
+                        anchor: `Amnesticism files`,
+                        promoKey: AMNESTICISM_SUBPATH,
+                    },
+                ],
             },
         ],
     },

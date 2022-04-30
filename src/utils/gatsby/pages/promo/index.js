@@ -4,6 +4,7 @@ import {
     ROSALIND_SUBPATH,
     PITCH_KEYS,
     PROMO_PATH,
+    AMNESTICISM_SUBPATH,
 } from '../../../../constants/routing'
 
 export default [
@@ -13,6 +14,10 @@ export default [
     {
         path: `${PROMO_PATH}/${ONESHEET_SUBPATH}`,
         context: { pagePromoKey: ONESHEET_SUBPATH },
+    },
+    {
+        path: `${PROMO_PATH}/${AMNESTICISM_SUBPATH}`,
+        context: { pagePromoKey: AMNESTICISM_SUBPATH },
     },
     {
         path: `${PROMO_PATH}/${ROSALIND_SUBPATH}`,
