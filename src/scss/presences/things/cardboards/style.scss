@@ -1,36 +1,6 @@
-.dogsRocket {
-    .booster { fill: hsl(16, 43%, 47%); }
-    .fin { fill: hsl(16, 48%, 58%); }
-    .rocket { fill: hsl(17, 43%, 50%); }
-    .checkerRed { fill: hsl(17, 53%, 58%); }
-    .suitHindLeg { fill: hsl(60, 13%, 63%); }
-    .suitBody { fill: hsl(249, 34%, 65%); }
-    .suitFrontLeg { fill: hsl(60, 16%, 69%); }
-    .suitInner { fill: hsl(248, 22%, 56%); }
-    .head { fill: hsl(43, 27%, 82%); }
-    .nose { fill: hsl(53, 8%, 41%); }
-    .mouth { fill: hsl(53, 8%, 38%); }
-    .tongue { fill: hsl(323, 38%, 65%); }
-}
-
-.dogsSpaceStation {
-    .body { fill: hsl(43, 27%, 82%); }
-    .stationTop { fill: hsl(248, 45%, 73%); }
-    .stationMiddle { fill: hsl(249, 32%, 66%); }
-    .stationBottom { fill: hsl(247, 16%, 49%); }
-    .stationInner { fill: hsl(248, 22%, 56%); }
-    .stationFloor { fill: hsl(247, 16%, 49%); }
-    .trim { fill: hsl(42, 26%, 62%); }
-    .panelBottom { fill: hsl(191, 20%, 63%); }
-    .panelSide { fill: hsl(191, 15%, 55%); }
-    .panelFront { fill: hsl(190, 25%, 68%); }
-    .bar { fill: hsl(192, 12%, 48%); }
-}
-
 .marqueeFrame {
-    .frame { fill: hsl(5, 73%, 58%); }
-    .bulbOuter { fill: hsl(57, 71%, 58%); }
-    .bulbInner { fill: hsl(55, 20%, 87%); }
+    .bulbOuter { fill: hsl(60, 33%, 77%); }
+    .bulbInner__noStroke { fill: hsl(60, 20%, 87%); }
 }
 
 .albumNas {
