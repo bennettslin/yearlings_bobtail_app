@@ -2,6 +2,7 @@ import { getRoutingPitchIndex } from '../routing'
 import { getIsAlbumClientSession } from '../session'
 import { getPathForSlide } from '../../../endpoint/promo/pitches'
 import {
+    AMNESTICISM_SUBPATH,
     ONESHEET_SUBPATH,
     PITCH_KEYS,
     PROMO_PATH,
@@ -23,6 +24,7 @@ export const getFormattedPromoPath = (promoKey, pitchIndex) => {
 const _getIsValidPromoSinglePagePath = pathname => (
     pathname === PROMO_PATH ||
     pathname === getPromoPath(ONESHEET_SUBPATH) ||
+    pathname === getPromoPath(AMNESTICISM_SUBPATH) ||
     pathname === getPromoPath(ROSALIND_SUBPATH)
 )
 
