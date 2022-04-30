@@ -264,7 +264,7 @@ export default getFormattedSlideMetadata([
             },
             {
                 paragraph: [
-                    `The lyrics and music scores are solid, however. With label support, I'd love to rerecord the songs with a full band and guest artists, and to redo the comic book as a collaborative effort with skilled illustrators. So if you're curious what our next album will be after`,
+                    `The lyrics and music scores are solid, however. With label support, I'd love to rerecord the songs with a full band and guest artists, and redo the comic book as a collaborative effort with skilled illustrators. So if you're curious what our next album will be after`,
                     {
                         isItalic: true,
                         lyric: `Yearling's Bobtail`,
@@ -274,7 +274,7 @@ export default getFormattedSlideMetadata([
             },
             {
                 paragraph: {
-                    anchor: `Comic book, mp3s, and scores`,
+                    anchor: `Rosalind Franklin album`,
                     promoKey: ROSALIND_SUBPATH,
                 },
             },
