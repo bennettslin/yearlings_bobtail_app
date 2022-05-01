@@ -273,7 +273,7 @@ export default getFormattedSlideMetadata([
             },
             {
                 paragraph: {
-                    anchor: `Rosalind Franklin album files`,
+                    anchor: `Rosalind Franklin album content`,
                     promoKey: ROSALIND_SUBPATH,
                 },
             },
@@ -379,8 +379,9 @@ export default getFormattedSlideMetadata([
                         anchor: `Master's thesis`,
                         href: `https://digital.lib.washington.edu/researchworks/handle/1773/23566`,
                     },
+                    { breakTag: true },
                     {
-                        anchor: `Amnesticism files`,
+                        anchor: `Amnesticism content`,
                         promoKey: AMNESTICISM_SUBPATH,
                     },
                 ],

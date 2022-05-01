@@ -41,11 +41,11 @@ export default {
 
     // Download pages.
     [AMNESTICISM_SUBPATH]: {
-        title: 'Amnesticism Files',
-        description: `Page for amnesticism files.`,
+        title: 'Amnesticism Content',
+        description: `Page for amnesticism content.`,
     },
     [ROSALIND_SUBPATH]: {
-        title: 'Rosalind Franklin Album Files',
-        description: `Page for Rosalind Franklin album files.`,
+        title: 'Rosalind Franklin Album Content',
+        description: `Page for Rosalind Franklin album content.`,
     },
 }

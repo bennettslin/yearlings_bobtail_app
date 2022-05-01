@@ -1,3 +1,4 @@
+import amnesticism from './amnesticism'
 import artup from './artup'
 import directory from './directory'
 import homepage from './homepage'
@@ -8,6 +9,7 @@ import { RUNTIME } from '../../../src/constants/server'
 
 export default {
     _build: RUNTIME,
+    amnesticism,
     artup,
     directory,
     homepage,
