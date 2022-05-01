@@ -344,6 +344,7 @@ export default {
     [ROYCE_HALL]: [
         NIGHT_TIME__SHARED,
         DOOR__SHARED,
+        HOUSE__SHARED,
     ],
     [SCHOOL_BUNGALOW]: [
         BUILDING__SHARED,

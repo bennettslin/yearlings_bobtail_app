@@ -3,15 +3,11 @@
     .fenceDark { fill: hsl(27, 23%, 37%); }
     .wall { fill: hsl(28, 18%, 54%); }
     .ledge { fill: hsl(36, 21%, 62%); }
-    .brickDark { fill: hsl(17, 36%, 39%); }
-    .brickLight { fill: hsl(42, 25%, 48%); }
 
     .eveningTime
     &.eveningTime#{$suffix} {
         .wall { fill: hsl(28, 13%, 49%); }
         .ledge { fill: hsl(36, 16%, 57%); }
-        .brickDark { fill: hsl(17, 31%, 34%); }
-        .brickLight { fill: hsl(42, 20%, 43%); }
     }
 
     .nightTime
@@ -19,8 +15,6 @@
         .fence { fill: hsl(27, 13%, 32%); }
         .wall { fill: hsl(28, 8%, 44%); }
         .ledge { fill: hsl(36, 11%, 52%); }
-        .brickDark { fill: hsl(17, 26%, 29%); }
-        .brickLight { fill: hsl(42, 15%, 38%); }
     }
 
     .magicSeason

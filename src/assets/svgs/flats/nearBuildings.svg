@@ -28,7 +28,7 @@
   </g>
   <rect class="wall" x=".5" y="260.38" width="1280.24" height="175.04"/>
   <path class="ledge" d="M.5,276.44H1280.74c0-6.16,0-11.62,0-16.06H.5c0,4.03,0,9.55,0,16.06Z"/>
-  <g class="brickDark">
+  <g class="brickDarker">
     <rect x="28.99" y="291.73" width="30.02" height="14.23"/>
     <rect x="211.96" y="291.64" width="30.02" height="14.23"/>
     <rect x="333.72" y="305.81" width="30.02" height="14.23"/>
@@ -40,7 +40,7 @@
     <rect x="1156.54" y="305.8" width="30.02" height="14.23"/>
     <rect x="1247.81" y="305.76" width="30.02" height="14.23"/>
   </g>
-  <g class="brickLight">
+  <g class="brickDark">
     <rect x="1217.68" y="291.71" width="30.02" height="14.23"/>
     <rect x="1095.77" y="291.67" width="30.02" height="14.23"/>
     <rect x="943.76" y="291.74" width="30.02" height="14.23"/>

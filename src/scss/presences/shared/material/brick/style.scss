@@ -1,0 +1,16 @@
+// .brickDarkest { fill: hsl(21, 28%, 37%); }
+.brickDarker { fill: hsl(21, 28%, 42%); }
+.brickDark { fill: hsl(21, 28%, 47%); }
+.brickMediumDark { fill: hsl(21, 28%, 52%); }
+.brickMedium { fill: hsl(21, 28%, 57%); }
+// .brickMediumLight { fill: hsl(21, 28%, 62%); }
+// .brickLight { fill: hsl(21, 28%, 67%); }
+// .brickLighter { fill: hsl(21, 28%, 72%); }
+// .brickLightest { fill: hsl(21, 28%, 77%); }
+
+.nightTime .nightTime#{$suffix} {
+    .brickDarker { fill: hsl(21, 28%, 32%); }
+    .brickDark { fill: hsl(21, 28%, 37%); }
+    .brickMediumDark { fill: hsl(21, 28%, 42%); }
+    .brickMedium { fill: hsl(21, 28%, 47%); }
+}
