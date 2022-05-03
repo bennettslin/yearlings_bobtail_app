@@ -107,7 +107,7 @@ export default getFormattedSlideMetadata([
                 paragraph: `Traditionally, indie artists gain fans by touring and playing live shows. In recent years, they're more likely to do so by building up a presence on social media and streaming platforms.`,
             },
             {
-                paragraph: `Either way, an indie artist's success hinges upon fulfilling a known need. And once they've built up a fanbase of a thousand, they can repeat their strategy to win over the next thousand fans in another region, and then the next.`,
+                paragraph: `Either way, an indie artist's success hinges upon fulfilling a known need. And once they've built a fanbase of a thousand, they can repeat their strategy to win over the next thousand fans in another region, and then the next.`,
             },
         ],
     },
