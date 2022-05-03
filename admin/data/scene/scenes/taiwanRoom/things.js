@@ -28,6 +28,11 @@ export default {
             xPosition: 1.5,
         },
         [PAINTING_FUXI__MAT]: {
+            yIndex: 2,
+            xPosition: 1.5,
+            zOffset: 2.5,
+        },
+        [PAINTING_NUWA__MAT]: {
             yIndex: 1,
             xPosition: 1.5,
             zOffset: 2.5,
@@ -36,11 +41,6 @@ export default {
             rotateY: 300,
             skewX: -15,
             skewY: 9,
-        },
-        [PAINTING_NUWA__MAT]: {
-            yIndex: 2,
-            xPosition: 1.5,
-            zOffset: 2.5,
         },
     },
     [CUTOUT]: {

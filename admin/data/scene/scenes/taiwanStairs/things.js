@@ -16,19 +16,14 @@ export default {
     [CARDBOARD]: {
         [BENNETT_TAIWAN_GATE]: {
             yIndex: 2,
-            xPosition: 4.75,
-            zOffset: 0.8,
+            xPosition: 3.75,
+            zOffset: 0.3,
         },
         [ODIN_TAIWAN_GATE]: {
             yIndex: 1,
-            xPosition: 6.25,
+            xPosition: 5.25,
         },
         [PAINTING_FUXI__STAIRS]: {
-            yIndex: 4,
-            xPosition: 8.5,
-            zOffset: 2.5,
-        },
-        [PAINTING_NUWA__STAIRS]: {
             yIndex: 4,
             xPosition: 10,
             zOffset: 2.5,
@@ -38,18 +33,23 @@ export default {
             skewX: -15,
             skewY: 9,
         },
+        [PAINTING_NUWA__STAIRS]: {
+            yIndex: 4,
+            xPosition: 7.5,
+            zOffset: 2.5,
+        },
     },
     [CUTOUT]: {
         [BUDDHA_STATUE]: {
             yIndex: 4,
-            xPosition: 2,
+            xPosition: 1,
         },
     },
     [DOOR]: {
         [IRON_GATE_LOW]: {
             yIndex: 1,
-            xPosition: 4,
-            zOffset: -2.83,
+            xPosition: 3,
+            zOffset: -3.33,
         },
     },
 }

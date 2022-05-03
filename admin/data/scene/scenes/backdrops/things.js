@@ -56,8 +56,8 @@ export default {
         [SHORE_RICKSHAW_BACKDROP]: {},
         [TAIWAN_MOUNTAINS_BACKDROP]: {},
         [TAIWAN_STAIRS_BACKDROP]: {
-            xPosition: 4.5,
-            zOffset: 3,
+            xPosition: 3.33,
+            zOffset: 2.5,
         },
         [THOUGHT_LARGE__LEFT]: {
         },
