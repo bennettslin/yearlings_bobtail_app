@@ -96,14 +96,13 @@ export default {
         },
     },
     [PANEL]: {
+        [HOSPITAL_BED_INTERIOR]: {
+            yIndex: 1,
+            xPosition: 2.53,
+        },
         [HOSPITAL_BED]: {
             yIndex: 5,
             xPosition: 3.03,
-        },
-        [HOSPITAL_BED_INTERIOR]: {
-            yIndex: 3,
-            xPosition: 3.03,
-            zOffset: -2,
         },
         [HOSPITAL_RECORD_STAND]: {
             yIndex: 5,
