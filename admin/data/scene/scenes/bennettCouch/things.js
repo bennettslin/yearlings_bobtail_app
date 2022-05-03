@@ -68,8 +68,8 @@ export default {
     [FIXTURE]: {
         [BEETHOVEN_BUST__COUCH]: {
             yIndex: 1,
-            xPosition: 2,
-            zOffset: 1,
+            xPosition: 1.75,
+            zOffset: 1.25,
         },
         [BENNETT_RECORD_PLAYER]: {
             yIndex: 1,
@@ -96,8 +96,8 @@ export default {
         },
         [SHELF_CUP]: {
             yIndex: 1,
-            xPosition: 4,
-            zOffset: 1,
+            xPosition: 5.75,
+            zOffset: 1.25,
         },
     },
     [FURNITURE]: {
@@ -120,7 +120,8 @@ export default {
         [COUCH_SHELF]: {
             yIndex: 1,
             xPosition: 4,
-            zOffset: 1,
+            zOffset: 0.5,
+            layerYIndex: 2,
         },
         [KEYBOARD_STAND_LEFT]: {
             yIndex: 4,
