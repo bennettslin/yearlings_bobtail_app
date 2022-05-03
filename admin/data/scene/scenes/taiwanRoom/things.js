@@ -3,6 +3,7 @@ import {
     CARDBOARD,
     FIXTURE,
     PANEL,
+    DOOR,
 } from '../../../../../src/constants/scene/things'
 import {
     BENNETT_TAIWAN_STAIRS,
@@ -14,6 +15,7 @@ import {
     BUDDHA_SHRINE,
     TAIWAN_FRIDGE,
 } from '../../../../../src/constants/scene/things/cutouts'
+import { TAIWAN_DOOR, TAIWAN_WINDOW_SIDE } from '../../../../../src/constants/scene/things/doors'
 import { FRIDGE_DRAWINGS } from '../../../../../src/constants/scene/things/fixtures'
 import { BUDDHA_STAND } from '../../../../../src/constants/scene/things/panels'
 
@@ -50,6 +52,16 @@ export default {
         [TAIWAN_FRIDGE]: {
             yIndex: 1,
             xPosition: 9.5,
+        },
+    },
+    [DOOR]: {
+        [TAIWAN_DOOR]: {
+            yIndex: 3,
+            xPosition: 8,
+        },
+        [TAIWAN_WINDOW_SIDE]: {
+            yIndex: 4,
+            xPosition: 1,
         },
     },
     [FIXTURE]: {

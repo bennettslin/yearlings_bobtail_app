@@ -10,7 +10,7 @@ import {
     PAINTING_NUWA__STAIRS,
 } from '../../../../../src/constants/scene/things/cardboards'
 import { BUDDHA_STATUE } from '../../../../../src/constants/scene/things/cutouts'
-import { IRON_GATE_LOW } from '../../../../../src/constants/scene/things/doors'
+import { IRON_GATE_LOW, TAIWAN_WINDOW } from '../../../../../src/constants/scene/things/doors'
 
 export default {
     [CARDBOARD]: {
@@ -50,6 +50,10 @@ export default {
             yIndex: 1,
             xPosition: 3,
             zOffset: -3.33,
+        },
+        [TAIWAN_WINDOW]: {
+            yIndex: 4,
+            xPosition: 3,
         },
     },
 }

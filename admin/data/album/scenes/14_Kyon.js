@@ -66,7 +66,7 @@ import {
     CAT_LITTER_BOX,
     CYPRESS_DOUBLE__LIZ_COUCH,
     CYPRESS_SINGLE__LIZ_COUCH,
-    HINDU_SHRINE,
+    // HINDU_SHRINE,
     TRAFFIC_LIGHT_REAR,
 } from '../../../../src/constants/scene/things/cutouts'
 import {
@@ -106,7 +106,7 @@ export default [
             [CUTOUT]: {
                 [CAT_FOOD_DISHES]: true,
                 [CAT_LITTER_BOX]: true,
-                [HINDU_SHRINE]: true,
+                // [HINDU_SHRINE]: true,
             },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE_OPEN]: true,
@@ -138,7 +138,7 @@ export default [
             [CUTOUT]: {
                 [CAT_FOOD_DISHES]: true,
                 [CAT_LITTER_BOX]: true,
-                [HINDU_SHRINE]: true,
+                // [HINDU_SHRINE]: true,
             },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE_OPEN]: true,
@@ -177,7 +177,7 @@ export default [
             [CUTOUT]: {
                 [CAT_FOOD_DISHES]: true,
                 [CAT_LITTER_BOX]: true,
-                [HINDU_SHRINE]: true,
+                // [HINDU_SHRINE]: true,
             },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE_OPEN]: true,
@@ -225,7 +225,7 @@ export default [
             [CUTOUT]: {
                 [CAT_FOOD_DISHES]: true,
                 [CAT_LITTER_BOX]: true,
-                [HINDU_SHRINE]: true,
+                // [HINDU_SHRINE]: true,
             },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE_OPEN]: true,
@@ -264,7 +264,7 @@ export default [
             [CUTOUT]: {
                 [CAT_FOOD_DISHES]: true,
                 [CAT_LITTER_BOX]: true,
-                [HINDU_SHRINE]: true,
+                // [HINDU_SHRINE]: true,
             },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE_OPEN]: true,
@@ -304,7 +304,7 @@ export default [
             [CUTOUT]: {
                 [CAT_FOOD_DISHES]: true,
                 [CAT_LITTER_BOX]: true,
-                [HINDU_SHRINE]: true,
+                // [HINDU_SHRINE]: true,
             },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE_OPEN]: true,
@@ -341,7 +341,7 @@ export default [
             [CUTOUT]: {
                 [CAT_FOOD_DISHES]: true,
                 [CAT_LITTER_BOX]: true,
-                [HINDU_SHRINE]: true,
+                // [HINDU_SHRINE]: true,
             },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE_OPEN]: true,
@@ -379,7 +379,7 @@ export default [
             [CUTOUT]: {
                 [CAT_FOOD_DISHES]: true,
                 [CAT_LITTER_BOX]: true,
-                [HINDU_SHRINE]: true,
+                // [HINDU_SHRINE]: true,
             },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE_OPEN]: true,

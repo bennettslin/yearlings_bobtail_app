@@ -52,19 +52,19 @@ import {
 } from '../../../../src/constants/scene/actors/songs'
 import { OAKLAND_SIDE__LEVEL } from '../../../../src/constants/scene/things/backdrops'
 import {
-    SIGNPOST,
-    STINK_PLANT,
     ASH_CAN,
+    CAMPUS_TREE_DOUBLE__CAMPANILE,
     CAMPUS_TREE_SINGLE__BANCROFT,
     CAMPUS_TREE_SINGLE__CAMPANILE,
-    CAMPUS_TREE_DOUBLE__CAMPANILE,
+    CHUTE_GARBAGE,
+    CHUTE_RECYCLING,
+    // CLUB_CURTAIN,
+    // CLUB_FLOOD_LIGHTS,
+    DUMPSTER,
+    SIGNPOST,
+    STINK_PLANT,
     WALL_SPEAKER__FAR_LEFT,
     WALL_SPEAKER__FAR_RIGHT,
-    DUMPSTER,
-    CHUTE_RECYCLING,
-    CHUTE_GARBAGE,
-    CLUB_CURTAIN,
-    CLUB_FLOOD_LIGHTS,
 } from '../../../../src/constants/scene/things/cutouts'
 import {
     BANCROFT_DOOR,
@@ -157,8 +157,8 @@ export default [
                 },
             },
             [CUTOUT]: {
-                [CLUB_CURTAIN]: true,
-                [CLUB_FLOOD_LIGHTS]: true,
+                // [CLUB_CURTAIN]: true,
+                // [CLUB_FLOOD_LIGHTS]: true,
                 [WALL_SPEAKER__FAR_LEFT]: true,
                 [WALL_SPEAKER__FAR_RIGHT]: true,
             },

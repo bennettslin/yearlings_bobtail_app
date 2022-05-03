@@ -86,8 +86,8 @@ import {
     ALBUM_TELEVISION,
 } from '../../../../src/constants/scene/things/cardboards'
 import {
-    CLUB_CURTAIN,
-    CLUB_FLOOD_LIGHTS,
+    // CLUB_CURTAIN,
+    // CLUB_FLOOD_LIGHTS,
     MONITOR_FRONT__LEFT,
     MONITOR_FRONT__RIGHT,
     PEACH_TREE,
@@ -118,8 +118,8 @@ import {
     ELECTRIC_GUITAR,
     GUITAR_CASE_UPRIGHT,
     KEYBOARD,
-    SHELF_BOOKS_EARLY,
-    SHELF_BOOKS_LATE,
+    // SHELF_BOOKS_EARLY,
+    // SHELF_BOOKS_LATE,
     SHELF_CUP,
 } from '../../../../src/constants/scene/things/fixtures'
 import {
@@ -209,7 +209,7 @@ export default [
                 [BENNETT_RECORD_PLAYER]: true,
                 [BENNETT_COUCH_LAMP]: true,
                 [ELECTRIC_GUITAR]: true,
-                [SHELF_BOOKS_EARLY]: true,
+                // [SHELF_BOOKS_EARLY]: true,
             },
             [FURNITURE]: {
                 [BENNETT_PILLOW__COUCH]: true,
@@ -257,7 +257,7 @@ export default [
                 [BENNETT_COUCH_LAMP]: true,
                 [ELECTRIC_GUITAR]: true,
                 [KEYBOARD]: true,
-                [SHELF_BOOKS_LATE]: true,
+                // [SHELF_BOOKS_LATE]: true,
             },
             [PANEL]: {
                 [BENNETT_NIGHTSTAND]: true,
@@ -302,8 +302,8 @@ export default [
                 },
             },
             [CUTOUT]: {
-                [CLUB_CURTAIN]: true,
-                [CLUB_FLOOD_LIGHTS]: true,
+                // [CLUB_CURTAIN]: true,
+                // [CLUB_FLOOD_LIGHTS]: true,
                 [MONITOR_FRONT__LEFT]: true,
                 [MONITOR_FRONT__RIGHT]: true,
                 [WALL_SPEAKER__FRONT_LEFT]: true,

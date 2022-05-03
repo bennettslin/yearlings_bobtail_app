@@ -54,9 +54,9 @@ import {
 import {
     CAT_FOOD_DISHES,
     CAT_LITTER_BOX,
-    CLUB_CURTAIN,
-    CLUB_FLOOD_LIGHTS,
-    HINDU_SHRINE,
+    // CLUB_CURTAIN,
+    // CLUB_FLOOD_LIGHTS,
+    // HINDU_SHRINE,
     MONITOR_FRONT__LEFT,
     MONITOR_FRONT__RIGHT,
     WALL_SPEAKER__FRONT_LEFT,
@@ -76,7 +76,7 @@ import {
     BENNETT_RECORD_PLAYER,
     HEINEKEN__SITA,
     BEETHOVEN_BUST__COUCH,
-    SHELF_BOOKS_LATE,
+    // SHELF_BOOKS_LATE,
 } from '../../../../src/constants/scene/things/fixtures'
 import {
     DISTANT_HOUSES,
@@ -111,7 +111,7 @@ export default [
             [CUTOUT]: {
                 [CAT_FOOD_DISHES]: true,
                 [CAT_LITTER_BOX]: true,
-                [HINDU_SHRINE]: true,
+                // [HINDU_SHRINE]: true,
             },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE]: true,
@@ -185,7 +185,7 @@ export default [
                 [BENNETT_RECORD_PLAYER]: true,
                 [ELECTRIC_GUITAR]: true,
                 [HEINEKEN__SITA]: true,
-                [SHELF_BOOKS_LATE]: true,
+                // [SHELF_BOOKS_LATE]: true,
             },
             [PANEL]: {
                 [BENNETT_NIGHTSTAND]: true,
@@ -218,8 +218,8 @@ export default [
                 },
             },
             [CUTOUT]: {
-                [CLUB_CURTAIN]: true,
-                [CLUB_FLOOD_LIGHTS]: true,
+                // [CLUB_CURTAIN]: true,
+                // [CLUB_FLOOD_LIGHTS]: true,
                 [MONITOR_FRONT__LEFT]: true,
                 [MONITOR_FRONT__RIGHT]: true,
                 [WALL_SPEAKER__FRONT_LEFT]: true,
@@ -254,7 +254,7 @@ export default [
             [CUTOUT]: {
                 [CAT_FOOD_DISHES]: true,
                 [CAT_LITTER_BOX]: true,
-                [HINDU_SHRINE]: true,
+                // [HINDU_SHRINE]: true,
             },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE]: true,

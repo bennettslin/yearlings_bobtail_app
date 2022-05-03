@@ -295,7 +295,7 @@ export default getFormattedSlideMetadata([
         title: `Breaking the vicious circle`,
         body: [
             {
-                paragraph: `BYCombo is our nonprofit band incubator that aims to break this vicious circle by starting a demo renaissance. We incentivize the labels to listen by promising that a hefty sum of time goes into each demo. And we promise the bands that each demo is given fair consideration by the labels. So labels can understand what's truly out there, and bands can focus only on what matters.`,
+                paragraph: `BYCombo is our nonprofit band incubator that aims to break this vicious circle by starting a demo renaissance. We get the labels to listen by guaranteeing that a huge sum of time goes into making each demo. And we promise the bands that each demo is given fair consideration. So labels can understand what's truly out there, and bands can focus only on what matters.`,
             },
             {
                 paragraph: [

@@ -9,7 +9,7 @@ import {
     TAIWAN_SHRUB,
     TAIWAN_TREE,
 } from '../../../../../src/constants/scene/things/cutouts'
-import { IRON_GATE } from '../../../../../src/constants/scene/things/doors'
+import { IRON_GATE, TAIWAN_CIRCLE_WINDOW } from '../../../../../src/constants/scene/things/doors'
 import {
     TAIWAN_HOUSES_CENTRE,
     TAIWAN_HOUSE_FAR,
@@ -38,6 +38,10 @@ export default {
         [IRON_GATE]: {
             yIndex: 5,
             xPosition: 1.9,
+        },
+        [TAIWAN_CIRCLE_WINDOW]: {
+            yIndex: 4,
+            xPosition: 2,
         },
     },
     [FLAT]: {

@@ -62,7 +62,7 @@ import {
     THOUGHT_AMY,
 } from '../../../../src/constants/scene/things/bubbles'
 import {
-    CLUB_CHRISTMAS_LIGHTS,
+    // CLUB_CHRISTMAS_LIGHTS,
     MONITOR_SIDE__CROWD,
     MONITOR_SIDE__STAGE,
     WALL_SPEAKER_SIDE__CROWD,
@@ -98,7 +98,7 @@ export default [
         description: `Empty club.`,
         presences: {
             [CUTOUT]: {
-                [CLUB_CHRISTMAS_LIGHTS]: true,
+                // [CLUB_CHRISTMAS_LIGHTS]: true,
                 [MONITOR_SIDE__CROWD]: true,
                 [WALL_SPEAKER_SIDE__CROWD]: true,
             },
@@ -138,7 +138,7 @@ export default [
                 },
             },
             [CUTOUT]: {
-                [CLUB_CHRISTMAS_LIGHTS]: true,
+                // [CLUB_CHRISTMAS_LIGHTS]: true,
                 [MONITOR_SIDE__CROWD]: true,
                 [WALL_SPEAKER_SIDE__CROWD]: true,
             },
@@ -175,7 +175,7 @@ export default [
                 },
             },
             [CUTOUT]: {
-                [CLUB_CHRISTMAS_LIGHTS]: true,
+                // [CLUB_CHRISTMAS_LIGHTS]: true,
                 [MONITOR_SIDE__STAGE]: true,
                 [WALL_SPEAKER_SIDE__STAGE]: true,
             },
