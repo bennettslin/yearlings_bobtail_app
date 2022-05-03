@@ -70,7 +70,6 @@ export default {
             yIndex: 1,
             xPosition: 2,
             zOffset: 1,
-            scaleFactor: 0.33,
         },
         [BENNETT_RECORD_PLAYER]: {
             yIndex: 1,

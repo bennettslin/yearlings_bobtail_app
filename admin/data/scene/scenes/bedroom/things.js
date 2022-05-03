@@ -115,7 +115,6 @@ export default {
             yIndex: 3,
             xPosition: 1.9,
             zOffset: -0.04,
-            scaleFactor: 0.33,
         },
         [BEDROOM_LAMP__DESK]: {
             yIndex: 2,
