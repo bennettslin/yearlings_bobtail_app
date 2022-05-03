@@ -22,7 +22,7 @@ export default getFormattedSlideMetadata([
                 ],
             },
             {
-                paragraph: `But read on, and I'll explain the benefits of signing an interdependent band. I'll then list all the projects we have under our belt and underway. They're all yours if you sign us, and you might just end up saving rock music along the way!`,
+                paragraph: `But read on, and I'll explain the benefits of signing an interdependent band. I'll then list all the projects we have under our belt and underway. They're all yours if you sign us, and you might just end up saving rock music by kickstarting the interdependence revolution!`,
             },
         ],
     },
@@ -92,7 +92,7 @@ export default getFormattedSlideMetadata([
                         isEmphasis: true,
                         lyric: `aren't`,
                     },
-                    `required to build up a fanbase on their own.`,
+                    `required to build a fanbase on their own.`,
                 ],
             },
         ],
@@ -111,7 +111,7 @@ export default getFormattedSlideMetadata([
                 ],
             },
             {
-                paragraph: `For example, the Slim Shady EP sold only 250 copies. Yet as soon as Dr. Dre heard it, he signed Eminem to his record label. Dre recognized that Eminem's overwhelming talent and negligible fanbase were part of the same Pareto package deal. But if Eminem had been a rocker, the indie labels would have rejected him. Which means they're leaving the Eminems of rock all to you!`,
+                paragraph: `For example, the Slim Shady EP sold only 250 copies. Yet as soon as Dr. Dre heard it, he signed Eminem to his record label. Dre recognized that Eminem's overwhelming talent yet negligible fanbase were part of the same Pareto package deal. But if Eminem had been a rocker, the indie labels would have rejected him. Which means they're leaving the Eminems of rock all to you!`,
             },
             {
                 paragraph: `So are the Bobtail Yearlings an Eminem of rock? See what's in our Pareto package deal and decide for yourself!`,
@@ -149,7 +149,7 @@ export default getFormattedSlideMetadata([
             },
             {
                 paragraph: [
-                    `And the music and webcomic combined took me 25,000 hours to make— more than twelve years of my life! A work this intricate and expansive could inspire other bands to rise to similar heights, ushering in a modern renaissance. Pretty much everyone wants to see this happen. So how likely is`,
+                    `And the music and webcomic combined took me 25,000 hours to make— more than twelve years of my life! A work this intricate and expansive could usher in a revolution of interdependence by inspiring other bands to rise to similar heights. Almost everyone would be happy to see this happen. So how likely is`,
                     {
                         isItalic: true,
                         lyric: `Yearling's Bobtail`,
@@ -258,12 +258,12 @@ export default getFormattedSlideMetadata([
                         isItalic: true,
                         lyric: `Yearling's Bobtail`,
                     },
-                    `went nowhere, I decided to create a comic book album about the life of English biophysicist Rosalind Franklin. But since I had to make do with no partners and few resources, I was unhappy with how the comic book and the recordings turned out. The project was completely ignored upon its release, so that's just as well.`,
+                    `went nowhere, I decided to create a comic book album about the life of English biophysicist Rosalind Franklin. But since I had to make do with no partners and few resources, I was unhappy with how the comic book and the recordings turned out. The project was completely ignored upon its release, so this was just as well.`,
                 ],
             },
             {
                 paragraph: [
-                    `The lyrics and music scores are solid, however. With label support, I'd love to rerecord the songs with a full band and guest artists, and redo the comic book as a collaborative effort with skilled illustrators. So if you're curious what our next album will be after`,
+                    `The lyrics and music scores are solid, however. With label support, I'd love to rerecord the songs with a full band and guest artists, and to redo the comic book as a collaborative effort with skilled illustrators. So if you're curious what our next album will be after`,
                     {
                         isItalic: true,
                         lyric: `Yearling's Bobtail`,
@@ -286,7 +286,7 @@ export default getFormattedSlideMetadata([
                 paragraph: `Before we discuss BYCombo, let's admit that rock music has gotten worse. It's no longer controversial to say this. It's also not hard to see how it happened. Indie rock has trapped us in a vicious circle of inadequate knowledge and perverse incentives.`,
             },
             {
-                paragraph: `Given a vast pool of candidates, indie labels don't have time to listen to every band. So they trust the numbers they see on social media and music platforms. These numbers are easily inflated, which makes them inaccurate measures of artistic worth. But bands will grind away and inflate them all the same, just to stay afloat in a vast pool of candidates.`,
+                paragraph: `Given a vast pool of candidates, indie labels don't have time to learn about every band. So they trust the numbers they see on social media and music platforms. These numbers are easily inflated, which makes them inaccurate measures of artistic worth. But bands will grind away and inflate them all the same, just to stay afloat in a vast pool of candidates.`,
             },
         ],
         footnote: `Those with wealth will hire publicists to grind away for them, which makes the numbers even more inaccurate.`,
@@ -295,7 +295,7 @@ export default getFormattedSlideMetadata([
         title: `Breaking the vicious circle`,
         body: [
             {
-                paragraph: `BYCombo is our nonprofit band incubator that aims to break this vicious circle by starting a demo revolution. Our promise to the bands is that each demo is given fair consideration by the labels. And our promise to the labels is that each band invests a minimum number of hours into their demo. So bands can focus on what matters, and labels can fully understand what's out there.`,
+                paragraph: `BYCombo is our nonprofit band incubator that aims to break this vicious circle by starting a demo renaissance. We incentivize the labels to listen by promising that a hefty sum of time goes into each demo. And we promise the bands that each demo is given fair consideration by the labels. So labels can understand what's truly out there, and bands can focus only on what matters.`,
             },
             {
                 paragraph: [
@@ -420,7 +420,7 @@ export default getFormattedSlideMetadata([
             },
             {
                 paragraph: [
-                    `But… the tradeoff is that we haven't built up a fanbase on our own. If you're still nervous about that, we understand. Revolutions feel scary because they are, and interdependence is no different. So here's a thought. You're not the only label reading this, and I just have to convince`,
+                    `But… the tradeoff is that we haven't built a fanbase on our own. If you're still nervous about that, we understand. Revolutions feel scary because they are, and interdependence is no different. So here's a thought. You're not the only label reading this, and I just have to convince`,
                     {
                         isEmphasis: true,
                         lyric: `one`,
