@@ -30,7 +30,7 @@ export default {
     referenceDescription: `Acoustic guitar in measure 1`,
     mixStartTime: `0:01:18.46`,
     playerStartTime: 2722.629,
-    overview: `Upon learning of my brother's autism, my parents were too harried to notice I was being bullied at school. In guilt, they later indulged every whim I had to find my own path. But as I got older, they grew concerned that I wasn't maturing as I went. On top of this, they were devastated when I left Sita, whom they adored. Naturally, I felt crushed by the weight of disappointing them. Still, I had a master plan to follow, and I wasn't about to change my ways.`,
+    overview: `Upon learning of my brother's autism, my parents were too harried to notice I was being bullied at school. In guilt, they later indulged every whim I had to find my own path. But as I got older, they grew concerned that I wasn't maturing as I went. On top of this, they were crushed when I left Sita, whom they adored. Naturally, I wasn't happy to disappoint them. Still, I had a master plan to follow, and I wasn't about to change my ways.`,
     lyricUnits: [
         {
             unitMap: {},
