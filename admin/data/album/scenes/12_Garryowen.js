@@ -56,7 +56,7 @@ import {
     CAT_LITTER_BOX,
     // CLUB_CURTAIN,
     // CLUB_FLOOD_LIGHTS,
-    // HINDU_SHRINE,
+    HINDU_SHRINE,
     MONITOR_FRONT__LEFT,
     MONITOR_FRONT__RIGHT,
     WALL_SPEAKER__FRONT_LEFT,
@@ -111,7 +111,7 @@ export default [
             [CUTOUT]: {
                 [CAT_FOOD_DISHES]: true,
                 [CAT_LITTER_BOX]: true,
-                // [HINDU_SHRINE]: true,
+                [HINDU_SHRINE]: true,
             },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE]: true,
@@ -254,7 +254,7 @@ export default [
             [CUTOUT]: {
                 [CAT_FOOD_DISHES]: true,
                 [CAT_LITTER_BOX]: true,
-                // [HINDU_SHRINE]: true,
+                [HINDU_SHRINE]: true,
             },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE]: true,

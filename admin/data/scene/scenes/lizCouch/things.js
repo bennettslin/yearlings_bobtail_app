@@ -79,7 +79,7 @@ export default {
         [HINDU_SHRINE]: {
             yIndex: 2,
             xPosition: 2,
-            zOffset: 4.5,
+            zOffset: 3.5,
         },
         [TRAFFIC_LIGHT_REAR]: {
             xPosition: 1.5,
