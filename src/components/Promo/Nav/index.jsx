@@ -1,15 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import getPromoServerClientHoc from '../../../hocs/PromoHoc'
 import Contact from '../../Contact'
 import PitchPagination from '../../Promos/Pitch/Pagination'
+import BackButton from './BackButton'
 import HomepageButton from './HomepageButton'
 import {
     getIsDownloadPage,
     getIsPitchPage,
     getIsPromoHomepage,
 } from '../../../helpers/promo'
-import getPromoServerClientHoc from '../../../hocs/PromoHoc'
 import './style'
 
 const PromoNav = ({ serverClientPromoKey }) => (
@@ -27,12 +28,22 @@ const PromoNav = ({ serverClientPromoKey }) => (
         ) : (
             <Contact isTextShadowLight />
         )}
-        <HomepageButton
+        <div
             {...{
-                isSelected: getIsPromoHomepage(serverClientPromoKey),
-                isDownloadPage: getIsDownloadPage(serverClientPromoKey),
+                className: 'fCC',
             }}
-        />
+        >
+            <HomepageButton
+                {...{
+                    isSelected: getIsPromoHomepage(serverClientPromoKey),
+                }}
+            />
+            <BackButton
+                {...{
+                    isDownloadPage: getIsDownloadPage(serverClientPromoKey),
+                }}
+            />
+        </div>
     </div>
 )
 

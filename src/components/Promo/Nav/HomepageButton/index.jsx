@@ -2,25 +2,19 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useDispatch } from 'react-redux'
-import { navigate } from 'gatsby'
 import Button from '../../../Button'
 import { resetPromo } from '../../../../redux/promo/action'
 import { PROMO_TOGGLE_KEY } from '../../../../constants/access'
-import { PROMO_BACK_BUTTON_KEY, PROMO_PAGE_BUTTON_KEY } from '../../../../constants/buttons'
+import { PROMO_PAGE_BUTTON_KEY } from '../../../../constants/buttons'
 import './style'
 
 const HomepageButton = ({
     isSelected,
-    isDownloadPage,
 }) => {
     const dispatch = useDispatch()
 
     const handleButtonClick = () => {
-        if (isDownloadPage) {
-            navigate(-1)
-        } else {
-            dispatch(resetPromo())
-        }
+        dispatch(resetPromo())
     }
 
     return (
@@ -30,9 +24,7 @@ const HomepageButton = ({
                 className: cx(
                     'dramaMasks',
                 ),
-                buttonName: isDownloadPage ?
-                    PROMO_BACK_BUTTON_KEY :
-                    PROMO_PAGE_BUTTON_KEY,
+                buttonName: PROMO_PAGE_BUTTON_KEY,
                 accessKey: PROMO_TOGGLE_KEY,
                 handleButtonClick,
 
@@ -48,7 +40,6 @@ const HomepageButton = ({
 
 HomepageButton.propTypes = {
     isSelected: PropTypes.bool.isRequired,
-    isDownloadPage: PropTypes.bool.isRequired,
 }
 
 export default HomepageButton

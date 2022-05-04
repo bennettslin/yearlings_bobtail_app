@@ -87,7 +87,7 @@ export default getFormattedSlideMetadata([
             },
             {
                 paragraph: [
-                    `Now here's the crazy part. The indie labels will turn down this deal every time, because their business model isn't to make smart bets for maximum gains. It's to look for safe bets to minimize risk. Indie labels hope to acquire fanbases, not talent. And a Pareto package deal is all about showing what a band can do with their talent if they`,
+                    `Now here's the crazy part. The indie labels will turn down this deal every time, because their business model isn't to make smart bets for maximum gains. It's to look for safe bets that minimize risk. Indie labels hope to acquire fanbases, not talent. And a Pareto package deal is all about showing what a band can do with their talent if they`,
                     {
                         isEmphasis: true,
                         lyric: `aren't`,
@@ -189,7 +189,7 @@ export default getFormattedSlideMetadata([
                         isItalic: true,
                         lyric: `Yearling's Bobtail`,
                     },
-                    `? It was modeled after a novel that's lasted a century. Its audio webcomic is a brand new medium. What it does best will be very hard for AI to master. And once it's known, it will become the canonical example of art that only an interdependent band can make.`,
+                    `? It was modeled after a novel that's lasted a century. Its audio webcomic is a brand new medium. What it does best will be hard for AI to master. And once it's known, it will become the canonical example of art that only an interdependent band can make.`,
                 ],
             },
         ],
