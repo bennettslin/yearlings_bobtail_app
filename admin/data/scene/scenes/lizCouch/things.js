@@ -75,11 +75,12 @@ export default {
             xPosition: 0.5,
             flipHorizontal: true,
         },
-        // TODO: Need to account for position in thought scene.
         [HINDU_SHRINE]: {
-            yIndex: 2,
-            xPosition: 2,
-            zOffset: 3.5,
+            // This allows for couch thought to use same config.
+            yIndex: 3,
+            xPosition: 2.22,
+            zOffset: 2.5,
+            layerYIndex: 2,
         },
         [TRAFFIC_LIGHT_REAR]: {
             xPosition: 1.5,

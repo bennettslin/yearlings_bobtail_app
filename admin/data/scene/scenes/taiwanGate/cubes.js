@@ -7,9 +7,10 @@ import {
     ROOF_NIGHT_COLOUR as C,
     TAIWAN_GATE_NIGHT_COLOUR as A,
     GENERIC_NIGHT_COLOUR as X,
+    DARK_ROOM_COLOUR as Z,
 } from '../../../../../src/constants/scene/cubes/colours'
 
-import { b, f, k } from '../../../../../src/constants/scene/cubes/zIndices'
+import { b, d, f, k } from '../../../../../src/constants/scene/cubes/zIndices'
 
 export default {
     [TAIWAN_GATE_KEY]: {
@@ -17,7 +18,7 @@ export default {
             hslaColours: [
                 [D],
                 [C, C, C, C, D],
-                [X, X, X, C, D],
+                [Z, Z, X, C, D],
                 [X, X, X, C, D],
                 [C, C, C, C, D],
                 [D],
@@ -26,7 +27,7 @@ export default {
                 [k],
                 [f, f, f, f, k],
                 [1, 1, 1, f, k],
-                [1, 1, 1, f, k],
+                [d, d, 1, f, k],
                 [f, f, f, f, k],
                 [k],
             ],
@@ -36,7 +37,7 @@ export default {
                 [T],
                 [T],
                 [V, V, V, A, V, T, T, T, T, T, V],
-                [V, V, V, A, V, T, T, T, T, T, T, V],
+                [X, X, V, A, V, T, T, T, T, T, T, V],
                 [V, V, V, A, V, T],
                 [V, V, V, V, V, T],
             ],
@@ -44,7 +45,7 @@ export default {
                 [0],
                 [0],
                 [1, 1, 1, b, 1, 0, 0, 0, 0, 0, 1],
-                [1, 1, 1, b, 1, 0, 0, 0, 0, 0, 0, 1],
+                [7, 7, 1, b, 1, 0, 0, 0, 0, 0, 0, 1],
                 [1, 1, 1, b, 1, 0],
                 [1, 1, 1, 1, 1, 0],
             ],

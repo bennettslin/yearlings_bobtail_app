@@ -55,7 +55,7 @@ import {
     BUBBLE_LARGE__GOLDEN,
 } from '../../../../src/constants/scene/things/bubbles'
 import {
-    // HINDU_SHRINE,
+    HINDU_SHRINE,
     TWIN_STREETLAMP__FAR,
     TWIN_STREETLAMP__MIDDLE,
     TWIN_STREETLAMP__NEAR,
@@ -128,7 +128,7 @@ export default [
                 [BUBBLE_LARGE__GOLDEN]: true,
             },
             [CUTOUT]: {
-                // [HINDU_SHRINE]: true,
+                [HINDU_SHRINE]: true,
             },
             [FLAT]: {
                 [DISTANT_HOUSES]: true,
