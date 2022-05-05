@@ -286,7 +286,7 @@ export default getFormattedSlideMetadata([
                 paragraph: `Before we discuss BYCombo, let's admit that rock music has gotten worse. It's no longer controversial to say this. It's also not hard to see how it happened. Indie rock has trapped us in a vicious circle of inadequate knowledge and perverse incentives.`,
             },
             {
-                paragraph: `Given an endless pool of candidates, indie labels don’t have time to learn about every artist. So they trust the numbers they see on music platforms and social media. These numbers can be cynically inflated, which makes them poor measures of artistic worth. But artists grind away and inflate them all the same, just to stay afloat in an endless pool of candidates.`,
+                paragraph: `Given an endless sea of candidates, indie labels don’t have time to learn about every artist, so they base their judgments on fanbase size. This number can be cynically inflated, however, which makes it a terrible measure of artistic worth. Yet indie artists will grind away and inflate it all the same, just to stay afloat in an endless sea of candidates.`,
             },
         ],
         footnote: `Those with wealth will hire publicists to grind away for them, which makes the numbers even more inaccurate.`,
@@ -295,7 +295,7 @@ export default getFormattedSlideMetadata([
         title: `Breaking the vicious circle`,
         body: [
             {
-                paragraph: `BYCombo is our nonprofit band incubator that aims to break this vicious circle by starting a demo renaissance. We'll get the labels to listen by guaranteeing that solid chunks of lifetime went into making each demo. And we'll promise the bands that every demo is given fair consideration. So labels can truly understand who's out there, and bands can focus on doing what matters.`,
+                paragraph: `BYCombo is our nonprofit band incubator that aims to break this vicious circle by starting a demo renaissance. We promise the labels that solid chunks of lifetime went into making each demo. And we promise the bands that every demo is given fair consideration. So labels can have a clear picture of who's out there, and bands can focus solely on what matters.`,
             },
             {
                 paragraph: [
