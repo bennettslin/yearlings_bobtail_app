@@ -114,7 +114,7 @@ export default {
     ],
     [BOWL_PILE]: null,
     [BUDDHA_SHRINE]: DARK_ROOM_DEFAULT__SHARED,
-    [BUDDHA_STATUE]: null,
+    [BUDDHA_STATUE]: DARK_ROOM_DEFAULT__SHARED,
     [BUSH_DOUBLE]: [
         AUTUMN__SHARED,
         EVENING_TIME__SHARED,

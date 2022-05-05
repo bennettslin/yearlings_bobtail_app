@@ -41,8 +41,8 @@ export default {
     },
     [CUTOUT]: {
         [BUDDHA_STATUE]: {
-            yIndex: 4,
-            xPosition: 1,
+            yIndex: 5,
+            xPosition: 1.4,
         },
     },
     [DOOR]: {

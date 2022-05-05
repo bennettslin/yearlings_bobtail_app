@@ -69,7 +69,7 @@ import {
 } from '../../../../src/constants/scene/things/cardboards'
 import {
     BUDDHA_SHRINE,
-    // BUDDHA_STATUE,
+    BUDDHA_STATUE,
     TAIWAN_FRIDGE,
     TAIWAN_SHRUB,
     TAIWAN_TREE,
@@ -160,7 +160,7 @@ export default [
                 // [PAINTING_NUWA__STAIRS]: true,
             },
             [CUTOUT]: {
-                // [BUDDHA_STATUE]: true,
+                [BUDDHA_STATUE]: true,
             },
             [DOOR]: {
                 [IRON_GATE_LOW]: true,
