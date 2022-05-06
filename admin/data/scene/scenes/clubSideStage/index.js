@@ -31,7 +31,7 @@ export default {
     [AMY]: {
         [FLIRTING]: {
             yIndex: 4,
-            xPosition: 7,
+            xPosition: 6.9,
         },
     },
 }

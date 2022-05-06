@@ -14,13 +14,13 @@ export default {
     [BENNETT]: {
         [PERFORMING]: {
             yIndex: 4,
-            xPosition: 0.8,
+            xPosition: 0.7,
         },
     },
     [ANA]: {
         [PERFORMING]: {
             yIndex: 2,
-            xPosition: 2.35,
+            xPosition: 2.4,
         },
     },
     [WADE]: {

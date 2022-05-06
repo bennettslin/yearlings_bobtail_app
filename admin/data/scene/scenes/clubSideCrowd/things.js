@@ -15,18 +15,19 @@ export default {
         },
         [MONITOR_SIDE__CROWD]: {
             yIndex: 1,
-            xPosition: 3,
+            xPosition: 2.6,
         },
         [WALL_SPEAKER_SIDE__CROWD]: {
             yIndex: 1,
             xPosition: 3,
             zOffset: 4.5,
+            rotate: 15,
         },
     },
     [FIXTURE]: {
         [STAGE_MIC__CROWD]: {
-            yIndex: 3,
-            xPosition: 2.65,
+            yIndex: 4,
+            xPosition: 2.8,
         },
     },
     [PANEL]: {
