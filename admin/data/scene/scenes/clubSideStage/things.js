@@ -17,12 +17,13 @@ export default {
     [CUTOUT]: {
         [MONITOR_SIDE__STAGE]: {
             yIndex: 1,
-            xPosition: 8,
+            xPosition: 7.6,
         },
         [WALL_SPEAKER_SIDE__STAGE]: {
             yIndex: 1,
             xPosition: 8,
             zOffset: 4.5,
+            rotate: 15,
         },
     },
     [FIXTURE]: {
@@ -37,8 +38,8 @@ export default {
             layerYIndex: 2,
         },
         [STAGE_MIC__STAGE]: {
-            yIndex: 3,
-            xPosition: 8.15,
+            yIndex: 4,
+            xPosition: 7.8,
             flipHorizontal: true,
         },
         [GUITAR_CASE_OPEN]: {
