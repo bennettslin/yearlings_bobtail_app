@@ -5,7 +5,7 @@ import { navigate } from 'gatsby'
 import Button from '../../../Button'
 import { PROMO_BACK_BUTTON_KEY } from '../../../../constants/buttons'
 
-const HomepageButton = ({
+const BackButton = ({
     isDownloadPage,
 }) => {
     const handleButtonClick = () => {
@@ -26,9 +26,8 @@ const HomepageButton = ({
     )
 }
 
-HomepageButton.propTypes = {
-    isSelected: PropTypes.bool.isRequired,
+BackButton.propTypes = {
     isDownloadPage: PropTypes.bool.isRequired,
 }
 
-export default HomepageButton
+export default BackButton
