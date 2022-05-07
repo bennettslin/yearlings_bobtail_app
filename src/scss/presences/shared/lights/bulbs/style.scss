@@ -1,0 +1,13 @@
+.bulbRed { fill: hsl(0, 33%, 57%); }
+.bulbYellow { fill: hsl(60, 33%, 57%); }
+.bulbGreen { fill: hsl(120, 33%, 57%); }
+.bulbBlue { fill: hsl(210, 33%, 57%); }
+.bulbPurple { fill: hsl(270, 33%, 57%); }
+
+.darkRoom .darkRoom#{$suffix} {
+    .bulbRed { fill: hsl(0, 55%, 77%); }
+    .bulbYellow { fill: hsl(60, 55%, 77%); }
+    .bulbGreen { fill: hsl(120, 55%, 77%); }
+    .bulbBlue { fill: hsl(210, 55%, 77%); }
+    .bulbPurple { fill: hsl(270, 55%, 77%); }
+}

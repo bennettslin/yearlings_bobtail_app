@@ -11,6 +11,7 @@ export default {
     [CUTOUT]: {
         [CLUB_CHRISTMAS_LIGHTS]: {
             yIndex: 0,
+            xPosition: 6,
             zOffset: 6,
         },
         [MONITOR_SIDE__CROWD]: {
