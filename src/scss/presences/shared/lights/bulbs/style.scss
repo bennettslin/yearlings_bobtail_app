@@ -1,13 +1,13 @@
-.bulbRed { fill: hsl(0, 33%, 57%); }
-.bulbYellow { fill: hsl(60, 33%, 57%); }
-.bulbGreen { fill: hsl(120, 33%, 57%); }
-.bulbBlue { fill: hsl(210, 33%, 57%); }
-.bulbPurple { fill: hsl(270, 33%, 57%); }
+.bulbRed { fill: hsl(0, 23%, 47%); }
+.bulbYellow { fill: hsl(60, 23%, 47%); }
+.bulbGreen { fill: hsl(120, 23%, 47%); }
+.bulbBlue { fill: hsl(210, 23%, 47%); }
+.bulbPurple { fill: hsl(270, 23%, 47%); }
 
 .darkRoom .darkRoom#{$suffix} {
-    .bulbRed { fill: hsl(0, 55%, 77%); }
-    .bulbYellow { fill: hsl(60, 55%, 77%); }
-    .bulbGreen { fill: hsl(120, 55%, 77%); }
-    .bulbBlue { fill: hsl(210, 55%, 77%); }
-    .bulbPurple { fill: hsl(270, 55%, 77%); }
+    .bulbRed { fill: hsl(0, 63%, 77%); }
+    .bulbYellow { fill: hsl(60, 63%, 77%); }
+    .bulbGreen { fill: hsl(120, 63%, 77%); }
+    .bulbBlue { fill: hsl(210, 63%, 77%); }
+    .bulbPurple { fill: hsl(270, 63%, 77%); }
 }

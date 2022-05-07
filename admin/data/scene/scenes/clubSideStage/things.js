@@ -3,6 +3,7 @@ import {
     FIXTURE,
 } from '../../../../../src/constants/scene/things'
 import {
+    CLUB_CHRISTMAS_LIGHTS__STAGE,
     MONITOR_SIDE__STAGE,
     WALL_SPEAKER_SIDE__STAGE,
 } from '../../../../../src/constants/scene/things/cutouts'
@@ -15,6 +16,11 @@ import {
 
 export default {
     [CUTOUT]: {
+        [CLUB_CHRISTMAS_LIGHTS__STAGE]: {
+            yIndex: 0,
+            xPosition: 6,
+            zOffset: 6,
+        },
         [MONITOR_SIDE__STAGE]: {
             yIndex: 1,
             xPosition: 7.6,
