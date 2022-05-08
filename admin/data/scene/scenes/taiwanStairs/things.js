@@ -6,8 +6,8 @@ import {
 import {
     BENNETT_TAIWAN_GATE,
     ODIN_TAIWAN_GATE,
-    PAINTING_FUXI__STAIRS,
-    PAINTING_NUWA__STAIRS,
+    PAINTING_CHINESE_GOD__STAIRS,
+    PAINTING_CHINESE_GODDESS__STAIRS,
 } from '../../../../../src/constants/scene/things/cardboards'
 import { BUDDHA_STATUE } from '../../../../../src/constants/scene/things/cutouts'
 import { IRON_GATE_LOW, TAIWAN_WINDOW } from '../../../../../src/constants/scene/things/doors'
@@ -17,13 +17,13 @@ export default {
         [BENNETT_TAIWAN_GATE]: {
             yIndex: 2,
             xPosition: 3.75,
-            zOffset: 1.2,
+            zOffset: 1.6,
         },
         [ODIN_TAIWAN_GATE]: {
             yIndex: 1,
             xPosition: 5.25,
         },
-        [PAINTING_FUXI__STAIRS]: {
+        [PAINTING_CHINESE_GOD__STAIRS]: {
             yIndex: 4,
             xPosition: 10,
             zOffset: 2.5,
@@ -33,7 +33,7 @@ export default {
             skewX: -15,
             skewY: 9,
         },
-        [PAINTING_NUWA__STAIRS]: {
+        [PAINTING_CHINESE_GODDESS__STAIRS]: {
             yIndex: 4,
             xPosition: 7.5,
             zOffset: 2.5,

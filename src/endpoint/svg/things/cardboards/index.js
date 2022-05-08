@@ -22,8 +22,8 @@ import odinShore from '../../../../assets/svgs/cardboards/odinShore'
 import odinTaiwanGate from '../../../../assets/svgs/cardboards/odinTaiwanGate'
 import odinTaiwanStairs from '../../../../assets/svgs/cardboards/odinTaiwanStairs'
 import painting from '../../../../assets/svgs/cardboards/painting'
-import paintingFuxi from '../../../../assets/svgs/cardboards/paintingFuxi'
-import paintingNuwa from '../../../../assets/svgs/cardboards/paintingNuwa'
+import paintingChineseGod from '../../../../assets/svgs/cardboards/paintingChineseGod'
+import paintingChineseGoddess from '../../../../assets/svgs/cardboards/paintingChineseGoddess'
 import posterBloomCounty from '../../../../assets/svgs/cardboards/posterBloomCounty'
 import posterElliottSmith from '../../../../assets/svgs/cardboards/posterElliottSmith'
 import posterGladiator from '../../../../assets/svgs/cardboards/posterGladiator'
@@ -72,10 +72,10 @@ import {
     ODIN_TAIWAN_GATE,
     ODIN_TAIWAN_STAIRS,
     PAINTING,
-    PAINTING_FUXI__MAT,
-    PAINTING_FUXI__STAIRS,
-    PAINTING_NUWA__MAT,
-    PAINTING_NUWA__STAIRS,
+    PAINTING_CHINESE_GOD__MAT,
+    PAINTING_CHINESE_GOD__STAIRS,
+    PAINTING_CHINESE_GODDESS__MAT,
+    PAINTING_CHINESE_GODDESS__STAIRS,
     POSTER_BLOOM_COUNTY,
     POSTER_ELLIOTT_SMITH,
     POSTER_GLADIATOR,
@@ -127,10 +127,10 @@ export default {
     [ODIN_TAIWAN_GATE]: odinTaiwanGate,
     [ODIN_TAIWAN_STAIRS]: odinTaiwanStairs,
     [PAINTING]: painting,
-    [PAINTING_FUXI__MAT]: paintingFuxi,
-    [PAINTING_FUXI__STAIRS]: paintingFuxi,
-    [PAINTING_NUWA__MAT]: paintingNuwa,
-    [PAINTING_NUWA__STAIRS]: paintingNuwa,
+    [PAINTING_CHINESE_GOD__MAT]: paintingChineseGod,
+    [PAINTING_CHINESE_GOD__STAIRS]: paintingChineseGod,
+    [PAINTING_CHINESE_GODDESS__MAT]: paintingChineseGoddess,
+    [PAINTING_CHINESE_GODDESS__STAIRS]: paintingChineseGoddess,
     [POSTER_BLOOM_COUNTY]: posterBloomCounty,
     [POSTER_ELLIOTT_SMITH]: posterElliottSmith,
     [POSTER_GLADIATOR]: posterGladiator,
