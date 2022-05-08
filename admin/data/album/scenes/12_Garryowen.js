@@ -54,7 +54,7 @@ import {
 import {
     CAT_FOOD_DISHES,
     CAT_LITTER_BOX,
-    // CLUB_CURTAIN,
+    CLUB_CURTAIN,
     // CLUB_FLOOD_LIGHTS,
     HINDU_SHRINE,
     MONITOR_FRONT__LEFT,
@@ -218,7 +218,7 @@ export default [
                 },
             },
             [CUTOUT]: {
-                // [CLUB_CURTAIN]: true,
+                [CLUB_CURTAIN]: true,
                 // [CLUB_FLOOD_LIGHTS]: true,
                 [MONITOR_FRONT__LEFT]: true,
                 [MONITOR_FRONT__RIGHT]: true,

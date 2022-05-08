@@ -58,7 +58,7 @@ import {
     CAMPUS_TREE_SINGLE__CAMPANILE,
     CHUTE_GARBAGE,
     CHUTE_RECYCLING,
-    // CLUB_CURTAIN,
+    CLUB_CURTAIN,
     // CLUB_FLOOD_LIGHTS,
     DUMPSTER,
     SIGNPOST,
@@ -157,7 +157,7 @@ export default [
                 },
             },
             [CUTOUT]: {
-                // [CLUB_CURTAIN]: true,
+                [CLUB_CURTAIN]: true,
                 // [CLUB_FLOOD_LIGHTS]: true,
                 [WALL_SPEAKER__FAR_LEFT]: true,
                 [WALL_SPEAKER__FAR_RIGHT]: true,

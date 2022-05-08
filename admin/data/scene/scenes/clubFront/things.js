@@ -18,7 +18,8 @@ import {
 export default {
     [CUTOUT]: {
         [CLUB_CURTAIN]: {
-            yIndex: 0,
+            yIndex: 1,
+            zOffset: 0.15,
         },
         [CLUB_FLOOD_LIGHTS]: {
             yIndex: 0,
@@ -36,12 +37,12 @@ export default {
         [WALL_SPEAKER__FRONT_LEFT]: {
             yIndex: 4,
             xPosition: 1.25,
-            zOffset: 4.5,
+            zOffset: 4,
         },
         [WALL_SPEAKER__FRONT_RIGHT]: {
             yIndex: 4,
             xPosition: 9.75,
-            zOffset: 4.5,
+            zOffset: 4,
             flipHorizontal: true,
         },
     },
