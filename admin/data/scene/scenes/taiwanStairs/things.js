@@ -17,7 +17,7 @@ export default {
         [BENNETT_TAIWAN_GATE]: {
             yIndex: 2,
             xPosition: 3.75,
-            zOffset: 1.6,
+            zOffset: 1.2,
         },
         [ODIN_TAIWAN_GATE]: {
             yIndex: 1,

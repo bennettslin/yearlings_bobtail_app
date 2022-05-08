@@ -6,7 +6,7 @@ import {
     PAVEMENT_NIGHT_COLOUR as V,
     ROOF_NIGHT_COLOUR as C,
     TAIWAN_GATE_NIGHT_COLOUR as A,
-    GENERIC_NIGHT_COLOUR as X,
+    TAIWAN_WALL_NIGHT_COLOUR as X,
     DARK_ROOM_COLOUR as Z,
 } from '../../../../../src/constants/scene/cubes/colours'
 
