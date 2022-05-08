@@ -10,7 +10,7 @@ import {
     DARK_ROOM_COLOUR as Z,
 } from '../../../../../src/constants/scene/cubes/colours'
 
-import { b, d, f, k } from '../../../../../src/constants/scene/cubes/zIndices'
+import { c, e, f, k } from '../../../../../src/constants/scene/cubes/zIndices'
 
 export default {
     [TAIWAN_GATE_KEY]: {
@@ -27,7 +27,7 @@ export default {
                 [k],
                 [f, f, f, f, k],
                 [1, 1, 1, f, k],
-                [d, d, 1, f, k],
+                [e, e, 1, f, k],
                 [f, f, f, f, k],
                 [k],
             ],
@@ -44,9 +44,9 @@ export default {
             zIndices: [
                 [0],
                 [0],
-                [1, 1, 1, b, 1, 0, 0, 0, 0, 0, 1],
-                [7, 7, 1, b, 1, 0, 0, 0, 0, 0, 0, 1],
-                [1, 1, 1, b, 1, 0],
+                [1, 1, 1, c, 1, 0, 0, 0, 0, 0, 1],
+                [8, 8, 1, c, 1, 0, 0, 0, 0, 0, 0, 1],
+                [1, 1, 1, c, 1, 0],
                 [1, 1, 1, 1, 1, 0],
             ],
         },
