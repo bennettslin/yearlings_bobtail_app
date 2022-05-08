@@ -68,11 +68,6 @@ export default {
         floor: {
             hslaColours: [
                 [Z],
-                [P, P, P, P, Z],
-                [P, P, P, P, Z],
-                [P, P, P, P, Z],
-                [P, P, P, P, Z],
-                [Z],
             ],
             zIndices: DEFAULT_FLOOR.zIndices,
         },

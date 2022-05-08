@@ -1,6 +1,5 @@
 import { CLUB_FAR_DARK_KEY } from '../../../../../src/constants/scene/scenes'
 import {
-    PLATFORM_COLOUR as P,
     DARK_ROOM_COLOUR as Z,
 } from '../../../../../src/constants/scene/cubes/colours'
 import { g } from '../../../../../src/constants/scene/cubes/zIndices'
@@ -18,8 +17,6 @@ export default {
         },
         floor: {
             hslaColours: [
-                [Z],
-                [Z, P, P, P, P, P, P, P, P, P, P, Z],
                 [Z],
             ],
             zIndices: [
