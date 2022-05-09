@@ -53,7 +53,8 @@ export default {
         },
         [TAIWAN_WINDOW]: {
             yIndex: 4,
-            xPosition: 3,
+            xPosition: 3.5,
+            zOffset: 2.15,
         },
     },
 }

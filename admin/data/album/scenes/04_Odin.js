@@ -80,7 +80,7 @@ import {
     IRON_GATE_LOW,
     // TAIWAN_CIRCLE_WINDOW,
     // TAIWAN_DOOR,
-    // TAIWAN_WINDOW,
+    TAIWAN_WINDOW,
     // TAIWAN_WINDOW_SIDE,
 } from '../../../../src/constants/scene/things/doors'
 import { FRIDGE_DRAWINGS } from '../../../../src/constants/scene/things/fixtures'
@@ -164,7 +164,7 @@ export default [
             },
             [DOOR]: {
                 [IRON_GATE_LOW]: true,
-                // [TAIWAN_WINDOW]: true,
+                [TAIWAN_WINDOW]: true,
             },
         },
         cubes: TAIWAN_STAIRS_KEY,
