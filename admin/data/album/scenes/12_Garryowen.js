@@ -76,7 +76,7 @@ import {
     BENNETT_RECORD_PLAYER,
     HEINEKEN__SITA,
     BEETHOVEN_BUST__COUCH,
-    // SHELF_BOOKS_LATE,
+    SHELF_BOOKS_LATE,
 } from '../../../../src/constants/scene/things/fixtures'
 import {
     DISTANT_HOUSES,
@@ -185,7 +185,7 @@ export default [
                 [BENNETT_RECORD_PLAYER]: true,
                 [ELECTRIC_GUITAR]: true,
                 [HEINEKEN__SITA]: true,
-                // [SHELF_BOOKS_LATE]: true,
+                [SHELF_BOOKS_LATE]: true,
             },
             [PANEL]: {
                 [BENNETT_NIGHTSTAND]: true,

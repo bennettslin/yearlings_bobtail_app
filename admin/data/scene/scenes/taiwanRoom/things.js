@@ -8,8 +8,8 @@ import {
 import {
     BENNETT_TAIWAN_STAIRS,
     ODIN_TAIWAN_STAIRS,
-    PAINTING_CHINESE_GOD__MAT,
-    PAINTING_CHINESE_GODDESS__MAT,
+    PAINTING_EMPRESS__MAT,
+    PAINTING_GODDESS__MAT,
 } from '../../../../../src/constants/scene/things/cardboards'
 import {
     BUDDHA_SHRINE,
@@ -29,12 +29,12 @@ export default {
             yIndex: 2,
             xPosition: 1.5,
         },
-        [PAINTING_CHINESE_GOD__MAT]: {
+        [PAINTING_EMPRESS__MAT]: {
             yIndex: 2,
             xPosition: 1.5,
             zOffset: 2.5,
         },
-        [PAINTING_CHINESE_GODDESS__MAT]: {
+        [PAINTING_GODDESS__MAT]: {
             yIndex: 1,
             xPosition: 1.5,
             zOffset: 2.5,

@@ -86,13 +86,15 @@ export default {
         },
         [SHELF_BOOKS_EARLY]: {
             yIndex: 1,
-            xPosition: 4,
-            zOffset: 1,
+            xPosition: 5.05,
+            zOffset: 1.25,
+            counterpart: SHELF_BOOKS_LATE,
         },
         [SHELF_BOOKS_LATE]: {
             yIndex: 1,
-            xPosition: 4,
-            zOffset: 1,
+            xPosition: 4.3,
+            zOffset: 1.25,
+            counterpart: SHELF_BOOKS_EARLY,
         },
         [SHELF_CUP]: {
             yIndex: 1,
