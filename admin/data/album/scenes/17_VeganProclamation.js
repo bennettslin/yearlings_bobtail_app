@@ -59,7 +59,7 @@ import {
     CHUTE_GARBAGE,
     CHUTE_RECYCLING,
     CLUB_CURTAIN,
-    // CLUB_FLOOD_LIGHTS,
+    CLUB_FLOOD_LIGHTS,
     DUMPSTER,
     SIGNPOST,
     STINK_PLANT,
@@ -158,7 +158,7 @@ export default [
             },
             [CUTOUT]: {
                 [CLUB_CURTAIN]: true,
-                // [CLUB_FLOOD_LIGHTS]: true,
+                [CLUB_FLOOD_LIGHTS]: true,
                 [WALL_SPEAKER__FAR_LEFT]: true,
                 [WALL_SPEAKER__FAR_RIGHT]: true,
             },
