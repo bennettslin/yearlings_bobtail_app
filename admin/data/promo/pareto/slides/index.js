@@ -332,17 +332,6 @@ export default getFormattedSlideMetadata([
             },
         ],
     },
-    // {
-    //     title: `A word on hobbyists and outsiders`,
-    //     body: [
-    //         {
-    //             paragraph: `Placeholder text.`,
-    //         },
-    //         {
-    //             paragraph: `Placeholder text.`,
-    //         },
-    //     ],
-    // },
     {
         // TODO: Owl in Eve lyrics.
         title: [
