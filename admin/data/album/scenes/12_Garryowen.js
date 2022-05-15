@@ -201,7 +201,7 @@ export default [
     },
     {
         unitIndex: 10,
-        description: `Bennett has just finished playing a show. Tristan introduces his kid sister Miriam, who is dressed more preppie, while giving her a noogie. Ana is removing her bass, rolling her eyes, as Bennett is clearly smitten.`,
+        description: `Bennett has just finished playing a show. Tristan introduces his kid sister Miriam, who is dressed more preppie, while giving her a noogie. Ana is removing their bass, rolling their eyes, as Bennett is clearly smitten.`,
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
