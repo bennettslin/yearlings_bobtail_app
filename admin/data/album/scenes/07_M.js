@@ -87,7 +87,7 @@ import {
 } from '../../../../src/constants/scene/things/cardboards'
 import {
     CLUB_CURTAIN,
-    // CLUB_FLOOD_LIGHTS,
+    CLUB_FLOOD_LIGHTS,
     MONITOR_FRONT__LEFT,
     MONITOR_FRONT__RIGHT,
     PEACH_TREE,
@@ -303,7 +303,7 @@ export default [
             },
             [CUTOUT]: {
                 [CLUB_CURTAIN]: true,
-                // [CLUB_FLOOD_LIGHTS]: true,
+                [CLUB_FLOOD_LIGHTS]: true,
                 [MONITOR_FRONT__LEFT]: true,
                 [MONITOR_FRONT__RIGHT]: true,
                 [WALL_SPEAKER__FRONT_LEFT]: true,

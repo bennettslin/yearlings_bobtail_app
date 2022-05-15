@@ -22,8 +22,8 @@ export default {
             zOffset: 0.15,
         },
         [CLUB_FLOOD_LIGHTS]: {
-            yIndex: 0,
-            zOffset: 6,
+            yIndex: 1,
+            zOffset: 5.8,
         },
         [MONITOR_FRONT__LEFT]: {
             yIndex: 4,
