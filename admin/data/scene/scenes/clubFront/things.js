@@ -19,11 +19,11 @@ export default {
     [CUTOUT]: {
         [CLUB_CURTAIN]: {
             yIndex: 1,
-            zOffset: 0.15,
+            zOffset: 0.1,
         },
         [CLUB_FLOOD_LIGHTS]: {
             yIndex: 1,
-            zOffset: 5.8,
+            zOffset: 5.75,
         },
         [MONITOR_FRONT__LEFT]: {
             yIndex: 4,
