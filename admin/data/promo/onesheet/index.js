@@ -28,12 +28,12 @@ export default getFormattedSlideMetadata({
                     isItalic: true,
                     lyric: `Ulysses`,
                 },
-                `, it then dawned on him to make his demo "The`,
+                `, it then dawned on him to make his demo "the`,
                 {
                     isItalic: true,
                     lyric: `Ulysses`,
                 },
-                `of Rock Albums"— an album so innovative, it would change what rock music can be.`,
+                `of rock albums"— an album so innovative, it would change what rock music can be.`,
             ],
         },
         {

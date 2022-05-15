@@ -176,12 +176,12 @@ export default getFormattedSlideMetadata([
                         isItalic: true,
                         lyric: `Yearling's Bobtail`,
                     },
-                    `was my attempt to create "The`,
+                    `was my attempt to create "the`,
                     {
                         isItalic: true,
                         lyric: `Ulysses`,
                     },
-                    `of Rock Albums." Unfortunately, its complex lyrics only make sense after careful study, which we as an unknown band had no right to ask of anyone. So when I sent out the promos, no one bothered to understand the lyrics. One critic even mistook them for Engrish!`,
+                    `of rock albums." Unfortunately, its complex lyrics only make sense after careful study, which we as an unknown band had no right to ask of anyone. So when I sent out the promos, no one bothered to understand the lyrics. One critic even mistook them for Engrish!`,
                 ],
             },
             {

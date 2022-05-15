@@ -139,12 +139,12 @@ export default getFormattedSlideMetadata([
                         isItalic: true,
                         lyric: `Yearling's Bobtail`,
                     },
-                    `. Will it always be known as "The`,
+                    `. Will it always be known as "the`,
                     {
                         isItalic: true,
                         lyric: `Ulysses`,
                     },
-                    `of Rock Albums"? I think so. Every search result for this term points to us, and doublespeaker rhyme is a bona fide invention. Now imagine that every year, in perpetuity, a new crop of English majors is made aware that our band did for rock music what James Joyce did for literature. What's that worth?`,
+                    `of rock albums"? I think so. Every search result for this term points to us, and doublespeaker rhyme is a bona fide invention. Now imagine that every year, in perpetuity, a new crop of English majors is made aware that our band did for rock music what James Joyce did for literature. What's that worth?`,
                 ],
             },
             {
