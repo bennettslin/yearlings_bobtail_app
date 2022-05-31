@@ -111,7 +111,7 @@ export default getFormattedSlideMetadata([
                 ],
             },
             {
-                paragraph: `For example, the Slim Shady EP sold only 250 copies. Yet as soon as Dr. Dre heard it, he signed Eminem to his record label. Dre recognized that Eminem's overwhelming talent yet negligible fanbase were part of the same Pareto package deal. But if Eminem had been a rocker, the indie labels would have rejected him. Which means they're leaving the Eminems of rock all to you!`,
+                paragraph: `For example, the Slim Shady EP sold only 250 copies. Yet as soon as Dr. Dre heard it, he signed Eminem to his record label. Dre recognized that Eminem's overwhelming talent and negligible fanbase were part of the same Pareto package deal. But if Eminem had been a rocker, the indie labels would have rejected him. Which means they're leaving the Eminems of rock all to you!`,
             },
             {
                 paragraph: `So are the Bobtail Yearlings an Eminem of rock? See what's in our Pareto package deal and decide for yourself!`,
