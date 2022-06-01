@@ -117,7 +117,7 @@ export default getFormattedSlideMetadata({
         },
         {
             paragraph: [
-                `Bennett assumed that creative standards would change because barriers to entry stay fixed. But the system saw it the other way around and lowered the barriers instead. Artists could now self-release fully realized works to win over the public directly. So upon its completion five years later,`,
+                `Bennett assumed that creative standards would change because barriers to entry stay fixed. But the system saw it the other way around and lowered the barriers instead. Artists could now self-release fully realized works to win over the masses directly. So upon its completion five years later,`,
                 {
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
@@ -135,11 +135,11 @@ export default getFormattedSlideMetadata({
                     isEmphasis: true,
                     lyric: `future`,
                 },
-                `. This doesn't just free an artist to take creative risks; it awakens the very thought to do so. Had Bennett known he'd be judged on winning over the public without label support, the idea for doublespeaker rhyme never would have come to him.`,
+                `. This doesn't just free an artist to take creative risks; it awakens the very thought to do so. Had Bennett known he'd be judged on winning over the masses without label support, the idea for doublespeaker rhyme never would have come to him.`,
             ],
         },
         {
-            paragraph: `The current indie system rests on the belief that when the next artist comes along to change what music can be, the public will lead, and the labels will follow. After two decades, this has yet to happen. What if it's actually the other way around? And what if rock music can only be saved once we realize this?`,
+            paragraph: `The current indie system rests on the belief that when the next artist comes along to change what music can be, the masses will lead, and the labels will follow. After two decades, this has yet to happen. What if it's actually the other way around? And what if rock music can only be saved once we realize this?`,
         },
     ],
 })

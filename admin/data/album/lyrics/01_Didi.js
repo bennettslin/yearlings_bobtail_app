@@ -289,7 +289,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `I wanted this song to capture the flurry of activity and transience of emotion that a child experiences from one day to the next. So as the rhythm lurches to and from a`,
+                        `I wanted this song to capture the flurry of activity and transience of emotion that a child experiences over the course of a day. So as the rhythm lurches to and from a`,
                         {
                             anchor: `half-time beat`,
                             wiki: `Half-time_(music)`,
