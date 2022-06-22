@@ -13,7 +13,7 @@ export default getFormattedSlideMetadata([
             },
             {
                 paragraph: [
-                    `Signing the Bobtail Yearlings might seem like a risky idea. After all, we're an interdependent band that needs a record label, and the current wisdom is that labels should only sign indie bands who`,
+                    `Signing the Bobtail Yearlings might seem like a risky idea. After all, we're an interdependent band that needs a record label, and the current wisdom is that labels should only sign indie artists who`,
                     {
                         isEmphasis: true,
                         lyric: `don't`,
@@ -52,7 +52,7 @@ export default getFormattedSlideMetadata([
                 paragraph: `If the project we're talking about is a band's album, then clearly the band's strength lies on the artistic side of it: writing and recording the music. On the other hand, they'll be weakest on the administrative side: marketing and distributing the album. Which makes sense. In the past, this is the work that a record label would have done.`,
             },
             {
-                paragraph: `Still, an indie band will happily power through it all. 100% progress for 100% effort! Who can argue with linear efficiency?`,
+                paragraph: `Still, an indie artist will happily power through it all. 100% progress for 100% effort! Who can argue with linear efficiency?`,
             },
         ],
     },
@@ -63,7 +63,7 @@ export default getFormattedSlideMetadata([
                 paragraph: `But interdependent bands see a better way. If society is lopsided, then someone out there is strong where you're weak, and weak where you're strong. And for bands, that someone is a record label. Marketing and distribution may be a band's weakness, but it's a label's strength. A label can do the administrative work for far less effort.`,
             },
             {
-                paragraph: `Okay, you might ask, but why would they? Every indie band arrives at the negotiating table having done the administrative work already. What label wouldn't prefer a deal in which their job is already done?`,
+                paragraph: `Okay, you might ask, but why would they? Every indie artist arrives at the negotiating table having done the administrative work already. What label wouldn't prefer a deal in which their job is already done?`,
             },
         ],
     },
@@ -74,7 +74,7 @@ export default getFormattedSlideMetadata([
                 paragraph: `Here's the value proposition. Since an interdependent band doesn't need to spend any effort on their area of weakness, they can redirect it back onto their area of strength. So instead of a mere 20% of their effort, the artistic side of every project now gets the full 100%— a fivefold increase!`,
             },
             {
-                paragraph: `This fivefold increase in effort would make a band five times more talented, and improve their art five times over. Let's call this the 5x rule of interdependence. Based on this rule, we can expect the best interdependent bands to be five times better than the best indie bands.`,
+                paragraph: `This fivefold increase in effort would make a band five times more talented, and improve their art five times over. Let's call this the 5x rule of interdependence. Based on this rule, we can expect the best interdependent bands to be five times better than the best indie artists.`,
             },
         ],
         footnote: `This rule isn't as provocative as it seems. The best interdependent band, after all, is the Beatles.`,
@@ -87,7 +87,7 @@ export default getFormattedSlideMetadata([
             },
             {
                 paragraph: [
-                    `Now here's the crazy part. The indie labels will turn down this deal every time, because their business model isn't to make smart bets for maximum gains. It's to look for safe bets that minimize risk. Indie labels hope to acquire fanbases, not talent. And a Pareto package deal is all about showing what a band can do with their talent if they`,
+                    `Now here's the crazy part. The indie labels will turn down this deal every time. Their business model isn't to make smart bets for maximum gains; it's to look for safe bets that minimize risk. Indie labels hope to acquire fanbases, not talent. And a Pareto package deal is all about showing what a band can do with their talent if they`,
                     {
                         isEmphasis: true,
                         lyric: `aren't`,
@@ -111,7 +111,7 @@ export default getFormattedSlideMetadata([
                 ],
             },
             {
-                paragraph: `For example, the Slim Shady EP sold only 250 copies. Yet as soon as Dr. Dre heard it, he signed Eminem to his record label. Dre recognized that Eminem's overwhelming talent and negligible fanbase were part of the same Pareto package deal. But if Eminem had been a rocker, the indie labels would have rejected him. Which means they're leaving the Eminems of rock all to you!`,
+                paragraph: `For example, the Slim Shady EP sold only 250 copies. Yet as soon as Dr. Dre heard it, he signed Eminem to his record label. Dre recognized that Eminem's overwhelming talent and negligible fanbase were two sides of the same coin. But if Eminem had been a rocker, the indie labels would have rejected him. Which means they're leaving the Eminems of rock all to you!`,
             },
             {
                 paragraph: `So are the Bobtail Yearlings an Eminem of rock? See what's in our Pareto package deal and decide for yourself!`,
@@ -202,7 +202,7 @@ export default getFormattedSlideMetadata([
                 },
                 href: `https://www.penguinrandomhouse.com/books/533521/but-what-if-were-wrong-by-chuck-klosterman`,
             },
-            `But his argument makes it clear that indie bands, who rely heavily on fan support, will be among the first to be forgotten. No future audience ever "supports" an artist from its past, after all.`,
+            `But his argument makes it clear that indie artists, who rely heavily on fan support, will be among the first to be forgotten. No future audience ever "supports" an artist from its past, after all.`,
         ],
     },
     {
