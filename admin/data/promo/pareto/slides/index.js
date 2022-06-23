@@ -189,7 +189,7 @@ export default getFormattedSlideMetadata([
                         isItalic: true,
                         lyric: `Yearling's Bobtail`,
                     },
-                    `? It was modeled after a novel that's lasted a century. Its audio webcomic is a brand new medium. What it does best will be hard for AI to master. And once it's known, it will become the canonical example of art that only an interdependent band can make.`,
+                    `? It was modeled after a novel that's lasted a century. Its audio webcomic is a brand new medium. What it does best will be hard for AI to master. And once it's known, it'll become the canonical example of art that only an interdependent band can make.`,
                 ],
             },
         ],
