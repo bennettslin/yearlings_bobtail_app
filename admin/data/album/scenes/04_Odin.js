@@ -60,10 +60,10 @@ import {
     ODIN_SHORE,
     ODIN_TAIWAN_GATE,
     ODIN_TAIWAN_STAIRS,
-    // PAINTING_EMPRESS__MAT,
-    // PAINTING_EMPRESS__STAIRS,
-    // PAINTING_GODDESS__MAT,
-    // PAINTING_GODDESS__STAIRS,
+    PAINTING_EMPRESS__MAT,
+    PAINTING_EMPRESS__STAIRS,
+    PAINTING_GODDESS__MAT,
+    PAINTING_GODDESS__STAIRS,
     SEA_SERPENT_LEFT,
     SEA_SERPENT_RIGHT,
 } from '../../../../src/constants/scene/things/cardboards'
@@ -119,8 +119,8 @@ export default [
             [CARDBOARD]: {
                 [BENNETT_TAIWAN_STAIRS]: true,
                 [ODIN_TAIWAN_STAIRS]: true,
-                // [PAINTING_EMPRESS__MAT]: true,
-                // [PAINTING_GODDESS__MAT]: true,
+                [PAINTING_EMPRESS__MAT]: true,
+                [PAINTING_GODDESS__MAT]: true,
             },
             [CUTOUT]: {
                 [BUDDHA_SHRINE]: true,
@@ -156,8 +156,8 @@ export default [
             [CARDBOARD]: {
                 [BENNETT_TAIWAN_GATE]: true,
                 [ODIN_TAIWAN_GATE]: true,
-                // [PAINTING_EMPRESS__STAIRS]: true,
-                // [PAINTING_GODDESS__STAIRS]: true,
+                [PAINTING_EMPRESS__STAIRS]: true,
+                [PAINTING_GODDESS__STAIRS]: true,
             },
             [CUTOUT]: {
                 [BUDDHA_STATUE]: true,
