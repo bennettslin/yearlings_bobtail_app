@@ -27,7 +27,7 @@ export default {
             yIndex: 4,
             xPosition: 10.6,
             zOffset: 1.56,
-            perspective: 140,
+            perspective: 160,
             rotate: -15,
             rotateY: 278,
             skewX: -15,
