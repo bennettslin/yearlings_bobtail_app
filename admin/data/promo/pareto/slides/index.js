@@ -241,10 +241,17 @@ export default getFormattedSlideMetadata([
                 paragraph: `I'm in the process of getting the tabletop version manufactured, after which I'll start a Kickstarter campaign. In the future, I plan to create an online version. And of course, everyone who enjoys the game will be that much more likely to become a Bobtail Yearlings fan. You can visit the website to read the rules, watch a demonstration game, and solve our daily puzzles.`,
             },
             {
-                paragraph: {
-                    anchor: `www.bobtaildominoes.com`,
-                    href: `https://www.bobtaildominoes.com`,
-                },
+                paragraph: [
+                    {
+                        anchor: `www.bobtaildominoes.com`,
+                        href: `https://www.bobtaildominoes.com`,
+                    },
+                    { breakTag: true },
+                    {
+                        anchor: `US patent`,
+                        href: `https://patentsgazette.uspto.gov/week25/OG/html/1499-3/US11367363-20220621.html`,
+                    },
+                ],
             },
         ],
     },
@@ -333,7 +340,6 @@ export default getFormattedSlideMetadata([
         ],
     },
     {
-        // TODO: Owl in Eve lyrics.
         title: [
             `Amnesticism and`,
             {
