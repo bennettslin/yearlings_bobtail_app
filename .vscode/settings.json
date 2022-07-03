@@ -29,7 +29,7 @@
 
             /* Remove xmlns metadata. */
             "cursorTop",
-            // "editor.action.deleteLines",
+            "editor.action.deleteLines",
             "cursorWordRight",
             "cursorRight",
             "cursorWordRightSelect",

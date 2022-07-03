@@ -5,7 +5,7 @@ export default {
     [PRETEEN_BENNETT]: {
         [MAT]: {
             yIndex: 5,
-            xPosition: 5,
+            xPosition: 5.5,
         },
     },
 }

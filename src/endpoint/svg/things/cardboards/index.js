@@ -22,8 +22,8 @@ import odinShore from '../../../../assets/svgs/cardboards/odinShore'
 import odinTaiwanGate from '../../../../assets/svgs/cardboards/odinTaiwanGate'
 import odinTaiwanStairs from '../../../../assets/svgs/cardboards/odinTaiwanStairs'
 import painting from '../../../../assets/svgs/cardboards/painting'
-import paintingChineseEmpress from '../../../../assets/svgs/cardboards/paintingChineseEmpress'
-import paintingChineseGoddess from '../../../../assets/svgs/cardboards/paintingChineseGoddess'
+import paintingEmpress from '../../../../assets/svgs/cardboards/paintingEmpress'
+import paintingGoddess from '../../../../assets/svgs/cardboards/paintingGoddess'
 import posterBloomCounty from '../../../../assets/svgs/cardboards/posterBloomCounty'
 import posterElliottSmith from '../../../../assets/svgs/cardboards/posterElliottSmith'
 import posterGladiator from '../../../../assets/svgs/cardboards/posterGladiator'
@@ -127,10 +127,10 @@ export default {
     [ODIN_TAIWAN_GATE]: odinTaiwanGate,
     [ODIN_TAIWAN_STAIRS]: odinTaiwanStairs,
     [PAINTING]: painting,
-    [PAINTING_EMPRESS__MAT]: paintingChineseEmpress,
-    [PAINTING_EMPRESS__STAIRS]: paintingChineseEmpress,
-    [PAINTING_GODDESS__MAT]: paintingChineseGoddess,
-    [PAINTING_GODDESS__STAIRS]: paintingChineseGoddess,
+    [PAINTING_EMPRESS__MAT]: paintingEmpress,
+    [PAINTING_EMPRESS__STAIRS]: paintingEmpress,
+    [PAINTING_GODDESS__MAT]: paintingGoddess,
+    [PAINTING_GODDESS__STAIRS]: paintingGoddess,
     [POSTER_BLOOM_COUNTY]: posterBloomCounty,
     [POSTER_ELLIOTT_SMITH]: posterElliottSmith,
     [POSTER_GLADIATOR]: posterGladiator,

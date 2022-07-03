@@ -27,7 +27,7 @@ export default {
         },
         [ODIN_TAIWAN_STAIRS]: {
             yIndex: 2,
-            xPosition: 1.5,
+            xPosition: 2,
         },
         [PAINTING_EMPRESS__MAT]: {
             yIndex: 1,

@@ -75,6 +75,8 @@
 .dullMaroonLighter { fill: hsl(330, 20%, 72%); }
 
 .darkRoom .darkRoom#{$suffix} {
+    .dullRedMedium { fill: hsl(0, 10%, 34%); }
+    .dullRedLight { fill: hsl(0, 10%, 40%); }
     .dullOrangeDark { fill: hsl(30, 10%, 29%); }
     .dullAmberMedium { fill: hsl(45, 10%, 34%); }
     .dullAmberMediumLight { fill: hsl(45, 10%, 36%); }
@@ -82,6 +84,7 @@
     .dullChartreuseMedium { fill: hsl(90, 10%, 34%); }
     .dullGreenDark { fill: hsl(120, 10%, 29%); }
     .dullGreenMedium { fill: hsl(120, 10%, 34%); }
+    .dullTurquoiseDark { fill: hsl(150, 10%, 29%); }
     .dullTealLight { fill: hsl(180, 10%, 40%); }
     .dullBlueMedium { fill: hsl(210, 10%, 34%); }
     .dullIndigoDark { fill: hsl(240, 10%, 29%); }
