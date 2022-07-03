@@ -15,7 +15,7 @@ import {
     BUDDHA_SHRINE,
     TAIWAN_FRIDGE,
 } from '../../../../../src/constants/scene/things/cutouts'
-import { TAIWAN_DOOR, TAIWAN_WINDOW_SIDE } from '../../../../../src/constants/scene/things/doors'
+import { TAIWAN_DOOR, TAIWAN_WINDOW__ROOM } from '../../../../../src/constants/scene/things/doors'
 import { FRIDGE_DRAWINGS } from '../../../../../src/constants/scene/things/fixtures'
 import { BUDDHA_STAND } from '../../../../../src/constants/scene/things/panels'
 
@@ -62,9 +62,16 @@ export default {
             yIndex: 3,
             xPosition: 8,
         },
-        [TAIWAN_WINDOW_SIDE]: {
-            yIndex: 4,
-            xPosition: 1,
+        [TAIWAN_WINDOW__ROOM]: {
+            yIndex: 3,
+            xPosition: 0.38,
+            zOffset: -0.19,
+            perspective: 160,
+            rotate: -15,
+            rotateY: 84,
+            skewX: -15,
+            skewY: 33,
+            layerYIndex: 5,
         },
     },
     [FIXTURE]: {

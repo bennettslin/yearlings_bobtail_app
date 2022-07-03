@@ -36,7 +36,6 @@ import principalDoor from '../../../../assets/svgs/doors/principalDoor'
 import taiwanCircleWindow from '../../../../assets/svgs/doors/taiwanCircleWindow'
 import taiwanDoor from '../../../../assets/svgs/doors/taiwanDoor'
 import taiwanWindow from '../../../../assets/svgs/doors/taiwanWindow'
-import taiwanWindowSide from '../../../../assets/svgs/doors/taiwanWindowSide'
 import transom from '../../../../assets/svgs/doors/transom'
 import waitingRoomDoor from '../../../../assets/svgs/doors/waitingRoomDoor'
 import waitingRoomDoorOpen from '../../../../assets/svgs/doors/waitingRoomDoorOpen'
@@ -82,8 +81,8 @@ import {
     PRINCIPAL_DOOR,
     TAIWAN_CIRCLE_WINDOW,
     TAIWAN_DOOR,
-    TAIWAN_WINDOW,
-    TAIWAN_WINDOW_SIDE,
+    TAIWAN_WINDOW__ROOM,
+    TAIWAN_WINDOW__STAIRS,
     TRANSOM,
     WAITING_ROOM_DOOR,
     WAITING_ROOM_DOOR_OPEN,
@@ -130,8 +129,8 @@ export default {
     [PRINCIPAL_DOOR]: principalDoor,
     [TAIWAN_CIRCLE_WINDOW]: taiwanCircleWindow,
     [TAIWAN_DOOR]: taiwanDoor,
-    [TAIWAN_WINDOW]: taiwanWindow,
-    [TAIWAN_WINDOW_SIDE]: taiwanWindowSide,
+    [TAIWAN_WINDOW__ROOM]: taiwanWindow,
+    [TAIWAN_WINDOW__STAIRS]: taiwanWindow,
     [TRANSOM]: transom,
     [WAITING_ROOM_DOOR]: waitingRoomDoor,
     [WAITING_ROOM_DOOR_OPEN]: waitingRoomDoorOpen,
