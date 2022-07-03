@@ -33,7 +33,7 @@ export default {
             yIndex: 1,
             xPosition: 2.25,
             zOffset: 1.5,
-            scaleFactor: 1.1,
+            scaleFactor: 1.05,
         },
         [PAINTING_GODDESS__MAT]: {
             yIndex: 1,
@@ -44,7 +44,7 @@ export default {
             rotateY: 85,
             skewX: -15,
             skewY: 37,
-            scaleFactor: 1.1,
+            scaleFactor: 1.05,
             layerYIndex: 2,
         },
     },

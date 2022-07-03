@@ -15,7 +15,7 @@ import { IRON_GATE_LOW, TAIWAN_WINDOW } from '../../../../../src/constants/scene
 export default {
     [CARDBOARD]: {
         [BENNETT_TAIWAN_GATE]: {
-            yIndex: 2,
+            yIndex: 1,
             xPosition: 3.75,
             zOffset: 1.2,
         },
@@ -24,8 +24,8 @@ export default {
             xPosition: 5.25,
         },
         [PAINTING_EMPRESS__STAIRS]: {
-            yIndex: 4,
-            xPosition: 10.6,
+            yIndex: 3,
+            xPosition: 10.73,
             zOffset: 1.56,
             perspective: 160,
             rotate: -15,
@@ -35,15 +35,15 @@ export default {
             layerYIndex: 5,
         },
         [PAINTING_GODDESS__STAIRS]: {
-            yIndex: 4,
-            xPosition: 8.5,
+            yIndex: 3,
+            xPosition: 8.75,
             zOffset: 1.5,
         },
     },
     [CUTOUT]: {
         [BUDDHA_STATUE]: {
-            yIndex: 5,
-            xPosition: 1.4,
+            yIndex: 4,
+            xPosition: 1.3,
         },
     },
     [DOOR]: {
@@ -53,9 +53,9 @@ export default {
             zOffset: -3.33,
         },
         [TAIWAN_WINDOW]: {
-            yIndex: 4,
+            yIndex: 3,
             xPosition: 3.5,
-            zOffset: 2.15,
+            zOffset: 2.26,
         },
     },
 }
