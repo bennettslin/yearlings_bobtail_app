@@ -9,15 +9,17 @@
 }
 
 .DotSequence__inTextAnchor {
-    left: -$length__lyricSequenceDot * 0.2;
-
-    // Expose more when in lyric.
-    top: -60%;
+    .Lyric
+    & {
+        left: -$length__lyricSequenceDot * 0.2;
+        // Expose more when in lyric.
+        bottom: 60%;
+    }
 
     .AnnotationTitle
     & {
         // Expose less when in annotation title.
-        top: -25%;
+        bottom: 40%;
     }
 
     .VerseLine__lyricRight
