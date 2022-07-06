@@ -249,7 +249,7 @@ export default getFormattedSlideMetadata([
                     { breakTag: true },
                     {
                         anchor: `US patent`,
-                        href: `https://patentsgazette.uspto.gov/week25/OG/html/1499-3/US11367363-20220621.html`,
+                        href: `https://patents.google.com/patent/US11367363B1`,
                     },
                 ],
             },
