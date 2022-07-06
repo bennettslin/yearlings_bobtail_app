@@ -31,7 +31,7 @@ const AlbumBrowserNavManager = () => {
         currentIsPromoShown: isPromoShown,
     }
 
-    const navigateToAlbum = () => {
+    const navigateToAlbum = replace => {
         const {
             currentSongIndex,
             currentVerseIndex,
@@ -42,6 +42,7 @@ const AlbumBrowserNavManager = () => {
             currentSongIndex,
             currentVerseIndex,
             currentAnnotationIndex,
+            replace,
         )
     }
 
@@ -97,6 +98,9 @@ const AlbumBrowserNavManager = () => {
     }
 
     useEffect(() => {
+        // Replace path on app load.
+        navigateToAlbum(true)
+
         getWindow().onpopstate = () => {
             const
                 { pathname: rawPathname, search } = getWindow().location,
