@@ -194,7 +194,7 @@ export default getFormattedSlideMetadata([
             },
         ],
         footnote: [
-            `Klosterman never discusses indie rock directly in`,
+            `Klosterman never calls out indie rock directly in`,
             {
                 anchor: {
                     isItalic: true,
