@@ -41,7 +41,8 @@ export default {
         },
         [TAIWAN_CIRCLE_WINDOW]: {
             yIndex: 4,
-            xPosition: 2,
+            xPosition: 0,
+            zOffset: 3,
         },
     },
     [FLAT]: {

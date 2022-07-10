@@ -78,7 +78,7 @@ import {
 import {
     IRON_GATE,
     IRON_GATE_LOW,
-    // TAIWAN_CIRCLE_WINDOW,
+    TAIWAN_CIRCLE_WINDOW,
     // TAIWAN_DOOR,
     TAIWAN_WINDOW__ROOM,
     TAIWAN_WINDOW__STAIRS,
@@ -192,7 +192,7 @@ export default [
             },
             [DOOR]: {
                 [IRON_GATE]: true,
-                // [TAIWAN_CIRCLE_WINDOW]: true,
+                [TAIWAN_CIRCLE_WINDOW]: true,
             },
             [FLAT]: {
                 [TAIWAN_HOUSES_CENTRE]: true,
