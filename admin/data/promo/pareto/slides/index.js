@@ -102,7 +102,7 @@ export default getFormattedSlideMetadata([
         body: [
             {
                 paragraph: [
-                    `But this is a huge opportunity for everyone else. In fact, if you're a hip hop executive, you wouldn't need to skip a beat, since hip hop has never`,
+                    `But this is a huge opportunity for everyone else. In fact, if you're a hip hop mogul, you wouldn't need to skip a beat, since hip hop has never`,
                     {
                         isEmphasis: true,
                         lyric: `not`,
@@ -202,7 +202,7 @@ export default getFormattedSlideMetadata([
                 },
                 href: `https://www.penguinrandomhouse.com/books/533521/but-what-if-were-wrong-by-chuck-klosterman`,
             },
-            `But his argument makes it clear that indie artists, who rely heavily on fan support, will be among the first to be forgotten. No future audience ever "supports" an artist from its past, after all.`,
+            `But his argument makes it clear that indie artists, who rely heavily on fan support, will be among the first to be forgotten. No future audience ever supports an artist from its past, after all.`,
         ],
     },
     {
