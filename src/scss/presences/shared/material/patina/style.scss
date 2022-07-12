@@ -6,6 +6,10 @@
 // .patinaMediumLight { fill: hsl(151, 16%, 62%); }
 .patinaLight { fill: hsl(151, 16%, 67%); }
 
+.darkRoom .darkRoom#{$suffix} {
+    .patinaDark { fill: hsl(151, 10%, 29%); } // Taiwan window only.
+}
+
 .eveningTime .eveningTime#{$suffix} {
     .patinaDarkest { fill: hsl(151, 11%, 32%); }
     .patinaDarker { fill: hsl(151, 11%, 37%); }
