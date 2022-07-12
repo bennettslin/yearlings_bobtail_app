@@ -36,7 +36,6 @@ import {
     PORCH_DOOR,
     PRINCIPAL_DOOR,
     TAIWAN_CIRCLE_WINDOW,
-    TAIWAN_DOOR,
     TAIWAN_WINDOW,
     TRANSOM,
     WAITING_ROOM_DOOR,
@@ -193,7 +192,6 @@ export default {
         NIGHT_TIME__SHARED,
         DOOR__SHARED,
     ],
-    [TAIWAN_DOOR]: null,
     [TAIWAN_WINDOW]: [
         DARK_ROOM_DEFAULT__SHARED,
         DOOR__SHARED,
