@@ -1,11 +1,11 @@
 // Section to show song overview.
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
-// import PromoLink from '../../PromoLink'
+import PromoLink from '../../PromoLink'
 import Texts from '../../Texts'
 import {
     getOverviewForSong,
-    // getSongIsLogue,
+    getSongIsLogue,
 } from '../../../endpoint/album/songs'
 import getSongServerClientHoc from '../../../hocs/SongHoc'
 
@@ -16,9 +16,9 @@ const OverviewText = ({ serverClientSongIndex }) => (
                 text: getOverviewForSong(serverClientSongIndex),
             }}
         />
-        {/* {getSongIsLogue(serverClientSongIndex) && (
+        {getSongIsLogue(serverClientSongIndex) && (
             <PromoLink />
-        )} */}
+        )}
     </>
 )
 
