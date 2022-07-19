@@ -11,7 +11,7 @@ export default getFormattedSlideMetadata([
                 },
             },
             {
-                paragraph: `Are you thinking to get in touch with the Bobtail Yearlings but feeling unsure about our unconventional way of doing things? Read on, and I'll convince you that we're as reasonable to bet on as any artist you've worked with before.`,
+                paragraph: `Are you thinking to get in touch with the Bobtail Yearlings, but you're feeling unsure about our unconventional ways? Read on, and I'll convince you that we're as reasonable to bet on as any band you've worked with before.`,
             },
         ],
     },
@@ -210,12 +210,12 @@ export default getFormattedSlideMetadata([
             },
             {
                 paragraph: [
-                    `And yes, the Bobtail Yearlings were rightfully judged to be incompetent when seen as an indie band. But how does`,
+                    `And yes, the Bobtail Yearlings were rightly deemed to be incompetent when judged as an indie artist. But how does`,
                     {
                         isItalic: true,
                         lyric: `Yearling's Bobtail`,
                     },
-                    `do when measured as the work of an artup?`,
+                    `stack up once it's understood as the work of an artup?`,
                 ],
             },
             {
