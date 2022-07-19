@@ -37,6 +37,7 @@ export default getFormattedSlideMetadata([
                 paragraph: `Unlike stores, a startup seeks to scale first, even if this means going without profit in the short term. A good example is Google, which stayed unprofitable in its first few years until it reached millions of users.`,
             },
             {
+                paragraph: `This means that founding a startup is a risky venture at every step along the way. The upside is that the need to self-differentiate is baked into a startup's business model. So if its founders have correctly identified an unknown need that they can fulfill, then their path to scale and success is probably assured.`,
             },
         ],
     },
