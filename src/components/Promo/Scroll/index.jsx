@@ -47,7 +47,7 @@ const PromoScroll = forwardRef(({
                         ref,
                         className: cx(
                             'PromoScroll__grandchild',
-                            'gradientMask__scrollBottom',
+                            'gradientMask__scroll',
                             'foN',
                         ),
                         tabIndex: -1,
