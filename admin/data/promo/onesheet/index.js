@@ -23,7 +23,7 @@ export default getFormattedSlideMetadata({
         },
         {
             paragraph: [
-                `Early this century as home recording became affordable, Bobtail Yearlings singer Bennett Lin foresaw a coming renaissance. Any artist could now take pains to put out a demo so good, no indie label could refuse it. And each one would raise creative standards to new heights. As he pondered this while reading James Joyce's`,
+                `Early this century as home recording became affordable, Bobtail Yearlings singer Bennett Lin foresaw a coming renaissance. Any artist could now take pains to put out a demo so good, no label could refuse it. And each one would raise creative standards to new heights. As he pondered this while reading James Joyce's`,
                 {
                     isItalic: true,
                     lyric: `Ulysses`,
@@ -117,7 +117,7 @@ export default getFormattedSlideMetadata({
         },
         {
             paragraph: [
-                `Bennett assumed that creative standards would change because barriers to entry stay fixed. But the system saw it the other way around and lowered the barriers instead. Artists could now self-release fully realized works to win over the masses directly. So upon its completion five years later,`,
+                `Bennett assumed that creative standards could only rise because barriers to entry have to stay fixed. But the system lowered the barriers instead. Artists could now self-release fully realized works to win over the masses directly. So upon its completion five years later,`,
                 {
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
@@ -139,7 +139,7 @@ export default getFormattedSlideMetadata({
             ],
         },
         {
-            paragraph: `The current indie system rests on the belief that when the next artist comes along to change what music can be, the masses will lead, and the labels will follow. After two decades, this has yet to happen. What if it's the other way around, and the labels need to lead? And what if rock music can only be saved once we realize this?`,
+            paragraph: `The current indie system rests on the belief that when the next artist comes along to change what music can be, the masses will lead and the labels will follow. After two decades, this has yet to happen. What if it's the labels who need to lead? And what if rock music can only be saved once we realize this?`,
         },
     ],
 })

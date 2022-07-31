@@ -293,7 +293,7 @@ export default getFormattedSlideMetadata([
                 paragraph: `Before we discuss BYCombo, let's admit that rock music has gotten worse. It's no longer controversial to say this. It's also not hard to see how it happened. Indie rock has trapped us in a vicious circle of inadequate knowledge and perverse incentives.`,
             },
             {
-                paragraph: `Given an endless sea of candidates, indie labels don’t have time to learn about every artist, so they base their judgments on fanbase size. This number can be cynically inflated, however, making it a terrible measure of artistic worth. Yet indie artists grind away and inflate it all the same, just to stay afloat in an endless sea of candidates.`,
+                paragraph: `Given an endless sea of applicants, indie labels don’t have time to learn about every artist, so they base their judgments on fanbase size. This number can be cynically inflated, however, making it a terrible measure of artistic worth. Yet indie artists grind away and inflate it all the same, just to stay afloat in an endless sea of applicants.`,
             },
         ],
         footnote: `Those with wealth will hire publicists to grind away for them, which makes the numbers even more inaccurate.`,
