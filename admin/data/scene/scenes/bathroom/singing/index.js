@@ -8,14 +8,14 @@ import { SINGING } from '../../../../../../src/constants/scene/actors/youngBenne
 export default {
     [YOUNG_BENNETT]: {
         [SINGING]: {
-            yIndex: 3,
-            xPosition: 5.7,
+            yIndex: 2,
+            xPosition: 5.45,
         },
     },
     [ANITA]: {
         [CHEERING]: {
-            yIndex: 4,
-            xPosition: 4.3,
+            yIndex: 3,
+            xPosition: 4.05,
             zOffset: -0.1,
             layerYIndex: 5,
         },

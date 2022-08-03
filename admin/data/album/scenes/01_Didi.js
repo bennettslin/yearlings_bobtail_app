@@ -223,6 +223,43 @@ export default [
                 [ALBUM_JOHNNY_HORTON]: true,
             },
             [CUTOUT]: {
+                [MIRRORED_SINK]: true,
+                [TOWEL_RACK]: true,
+            },
+            [DOOR]: {
+                [DEFAULT_FENCE_BATHROOM]: true,
+            },
+            [FIXTURE]: {
+                [RECORD_PLAYER_STOOL]: true,
+            },
+            [PANEL]: {
+                [BATHTUB]: true,
+            },
+        },
+        cubes: BATHROOM_KEY,
+        sky: { time: TIME_AFTERNOON, season: SEASON_SPRING },
+    },
+    {
+        unitIndex: 14,
+        description: `A scrapbook photo of the previous scene`,
+        presences: {
+            [ACTOR]: {
+                [ANITA]: {
+                    description: 'back, squatting, smiling',
+                    instance: CHEERING,
+                },
+                [YOUNG_BENNETT]: {
+                    description: 'side, facing front, singing, smiling',
+                    instance: SINGING,
+                },
+            },
+            [BACKDROP]: {
+                [VALLEY_FURTHER_BACKDROP]: true,
+            },
+            [CARDBOARD]: {
+                [ALBUM_JOHNNY_HORTON]: true,
+            },
+            [CUTOUT]: {
                 [LEMON_TREE__BATHROOM]: true,
                 [ROSEBUSH_DOUBLE_BATHROOM]: true,
                 [ROSEBUSH_SINGLE_BATHROOM]: true,

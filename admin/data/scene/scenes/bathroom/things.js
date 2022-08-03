@@ -37,7 +37,7 @@ export default {
     },
     [PANEL]: {
         [BATHTUB]: {
-            yIndex: 4,
+            yIndex: 3,
             xPosition: 4.5,
         },
     },
@@ -61,7 +61,7 @@ export const THINGS_BATHROOM_SINGING = {
     [CARDBOARD]: {
         [ALBUM_JOHNNY_HORTON]: {
             yIndex: 4,
-            xPosition: 9,
+            xPosition: 8,
             perspective: 50,
             rotateY: 25,
             skewX: 5,
@@ -70,7 +70,7 @@ export const THINGS_BATHROOM_SINGING = {
     [FIXTURE]: {
         [RECORD_PLAYER_STOOL]: {
             yIndex: 4,
-            xPosition: 7.7,
+            xPosition: 6.75,
         },
     },
 }

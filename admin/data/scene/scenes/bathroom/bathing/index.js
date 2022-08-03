@@ -4,7 +4,7 @@ import { BATHING } from '../../../../../../src/constants/scene/actors/youngBenne
 export default {
     [YOUNG_BENNETT]: {
         [BATHING]: {
-            yIndex: 3,
+            yIndex: 2,
         },
     },
 }

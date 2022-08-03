@@ -17,17 +17,14 @@ const DEFAULT_FLOOR = {
     hslaColours: [
         [G],
         [F],
-        [F],
         [F, F, F, D, D, D, D, F],
-        [F],
         [F],
     ],
     zIndices: [
         [0],
-        [1],
-        [1],
-        [1, 1, 1, 2, 2, 2, 2, 1],
-        [1],
+        [2],
+        [2, 2, 2, 3, 3, 3, 3, 2],
+        [2],
     ],
 }
 
@@ -40,8 +37,8 @@ export default {
             ],
             zIndices: [
                 [k],
-                [1],
-                [1, 1, d, d, d, d, d, d, d, d, 1, 1],
+                [2],
+                [2, 2, d, d, d, d, d, d, d, d, 2, 2],
             ],
         },
         floor: DEFAULT_FLOOR,
@@ -50,7 +47,6 @@ export default {
         floor: {
             hslaColours: [
                 [G],
-                [Z],
                 [Z],
                 [Z, Z, Z, D, D, D, D, Z],
                 [Z],
