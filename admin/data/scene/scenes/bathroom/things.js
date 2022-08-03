@@ -1,10 +1,12 @@
 import {
+    BUBBLE,
     CARDBOARD,
     CUTOUT,
     DOOR,
     FIXTURE,
     PANEL,
 } from '../../../../../src/constants/scene/things'
+import { PHOTO_SCRAPBOOK } from '../../../../../src/constants/scene/things/bubbles'
 import { ALBUM_JOHNNY_HORTON } from '../../../../../src/constants/scene/things/cardboards'
 import {
     MIRRORED_SINK,
@@ -18,6 +20,11 @@ import { RECORD_PLAYER_STOOL } from '../../../../../src/constants/scene/things/f
 import { BATHTUB } from '../../../../../src/constants/scene/things/panels'
 
 export default {
+    [BUBBLE]: {
+        [PHOTO_SCRAPBOOK]: {
+            yIndex: 5,
+        },
+    },
     [CUTOUT]: {
         [LEMON_TREE__BATHROOM]: {
             yIndex: 0,

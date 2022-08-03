@@ -12,6 +12,7 @@ import lizThoughtBusing from '../../../../assets/svgs/bubbles/lizThoughtBusing'
 import lizThoughtDining from '../../../../assets/svgs/bubbles/lizThoughtDining'
 import lizThoughtDishroom from '../../../../assets/svgs/bubbles/lizThoughtDishroom'
 import lizThoughtReunion from '../../../../assets/svgs/bubbles/lizThoughtReunion'
+import photoScrapbook from '../../../../assets/svgs/bubbles/photoScrapbook'
 import sketchApart from '../../../../assets/svgs/bubbles/sketchApart'
 import sketchDogsRocket from '../../../../assets/svgs/bubbles/sketchDogsRocket'
 import sketchEscapePod from '../../../../assets/svgs/bubbles/sketchEscapePod'
@@ -74,6 +75,7 @@ import {
     LIZ_THOUGHT_DINING,
     LIZ_THOUGHT_DISHROOM,
     LIZ_THOUGHT_REUNION,
+    PHOTO_SCRAPBOOK,
     SKETCHBOOK__APART,
     SKETCHBOOK__DOGS_ROCKET,
     SKETCHBOOK__ESCAPE_POD,
@@ -140,6 +142,7 @@ export default {
     [LIZ_THOUGHT_DINING]: lizThoughtDining,
     [LIZ_THOUGHT_DISHROOM]: lizThoughtDishroom,
     [LIZ_THOUGHT_REUNION]: lizThoughtReunion,
+    [PHOTO_SCRAPBOOK]: photoScrapbook,
     [SKETCHBOOK__APART]: sketchbook,
     [SKETCHBOOK__DOGS_ROCKET]: sketchbook,
     [SKETCHBOOK__ESCAPE_POD]: sketchbook,
