@@ -7,6 +7,14 @@
     .anitaJacketSleeve { fill: hsl(205, 24%, 80%); }
     .anitaShoe { fill: hsl(0, 31%, 61%); }
 
+    .pastSeason
+    &.past#{$suffix} {
+        .anitaBarrette { fill: hsl($HUE_PAST, 67%, 59%); }
+        .anitaDress { fill: hsl($HUE_PAST, 55%, 73%); }
+        .anitaBelt { fill: hsl($HUE_PAST, 35%, 48%); }
+        .anitaShoe { fill: hsl($HUE_PAST, 31%, 61%); }
+    }
+
     &.exasperated {
         .backpackMedium { fill: hsl(309, 37%, 60%); }
         .backpackLight { fill: hsl(310, 42%, 62%); }

@@ -49,7 +49,7 @@ import {
 } from '../../../../src/constants/scene/things/backdrops'
 import {
     ESTHER_SPEECH,
-    PHOTO_SCRAPBOOK,
+    // PHOTO_SCRAPBOOK,
 } from '../../../../src/constants/scene/things/bubbles'
 import { ALBUM_JOHNNY_HORTON } from '../../../../src/constants/scene/things/cardboards'
 import {
@@ -260,7 +260,7 @@ export default [
                 [VALLEY_FURTHER_BACKDROP]: true,
             },
             [BUBBLE]: {
-                [PHOTO_SCRAPBOOK]: true,
+                // [PHOTO_SCRAPBOOK]: true,
             },
             [CARDBOARD]: {
                 [ALBUM_JOHNNY_HORTON]: true,

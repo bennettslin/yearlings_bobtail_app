@@ -8,7 +8,6 @@
     .sashaSock { fill: hsl(102, 27%, 65%); }
     .sashaShoe { fill: hsl(184, 7%, 48%); }
 
-        // For snowglobe.
     .pastSeason
     &.past#{$suffix} {
         .sashaHairTie { fill: hsl($HUE_PAST, 41%, 57%); }

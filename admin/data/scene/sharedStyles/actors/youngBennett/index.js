@@ -10,6 +10,7 @@ import {
     BACKPACK__SHARED,
     YOUNG_BACKPACK__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/wardrobe'
+import { PAST__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
 
 export default {
     [PANICKED]: [
@@ -21,6 +22,9 @@ export default {
         YOUNG_BACKPACK__SHARED,
     ],
     [BATHING]: null,
-    [SINGING]: VIOLIN__SHARED,
+    [SINGING]: [
+        VIOLIN__SHARED,
+        PAST__SHARED,
+    ],
     [YOUNG_CHILD]: null,
 }

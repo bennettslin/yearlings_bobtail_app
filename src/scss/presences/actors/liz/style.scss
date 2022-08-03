@@ -21,7 +21,6 @@
         .lizUndershirt { fill: hsl(149, 13%, 34%); }
     }
 
-    // For snowglobe.
     .futureSeason
     &.future#{$suffix} {
         .lizShirt { fill: hsl($HUE_FUTURE, 28%, 57%); }

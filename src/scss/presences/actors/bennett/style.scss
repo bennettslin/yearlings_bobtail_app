@@ -20,6 +20,10 @@
     .bennettShoeLining { fill: hsl(32, 7%, 57%); }
     .converseLogo { fill: hsl(3, 37%, 60%); }
 
+    // Young Bennett singing.
+    .cowboyHat { fill: hsl(0, 26%, 57%); }
+    .cowboyHatBrim { fill: hsl(0, 26%, 52%); }
+
     .darkRoomExtra &.darkRoomExtra#{$suffix} {
         .bennettSleeves { fill: hsl(359, 20%, 34%); }
         .bennettJeans { fill: hsl(216, 13%, 29%); }
@@ -27,14 +31,18 @@
         .converseLogo { fill: hsl(3, 18%, 30%); }
     }
 
-    // For snowglobe.
     .pastSeason
     &.past#{$suffix} {
         .bennettSleeves { fill: hsl($HUE_PAST, 37%, 52%); }
         .bennettJeans { fill: hsl($HUE_PAST, 27%, 47%); }
         .bennettShoe { fill: hsl($HUE_PAST, 20%, 41%); }
         .converseLogo { fill: hsl($HUE_PAST, 37%, 60%); }
+
+        // Young Bennett singing.
+        .cowboyHat { fill: hsl($HUE_PAST, 26%, 57%); }
+        .cowboyHatBrim { fill: hsl($HUE_PAST, 26%, 52%); }
     }
+
     .futureSeason
     &.future#{$suffix} {
         .bennettUnderwear { fill: hsl($HUE_FUTURE, 39%, 61%); }
@@ -54,11 +62,6 @@
     &.flustered {
         .overallsFlap { fill: hsl(350, 27%, 59%); }
         .overalls { fill: hsl(350, 36%, 67%); }
-    }
-
-    &.singing {
-        .cowboyHat { fill: hsl(25, 31%, 45%); }
-        .cowboyHatBrim { fill: hsl(25, 31%, 39%); }
     }
 
     &.youngChild {
