@@ -28,12 +28,18 @@
     }
 
     // For snowglobe.
-    .pastBennettSleeves { fill: hsl($HUE_PAST, 37%, 52%); }
-    .pastBennettJeans { fill: hsl($HUE_PAST, 27%, 47%); }
-    .pastBennettShoe { fill: hsl($HUE_PAST, 20%, 41%); }
-    .pastConverseLogo { fill: hsl($HUE_PAST, 37%, 60%); }
-    .futureBennettUnderwear { fill: hsl($HUE_FUTURE, 39%, 61%); }
-    .futureBennettWaistband { fill: hsl($HUE_FUTURE, 47%, 72%); }
+    .pastSeason
+    &.past#{$suffix} {
+        .bennettSleeves { fill: hsl($HUE_PAST, 37%, 52%); }
+        .bennettJeans { fill: hsl($HUE_PAST, 27%, 47%); }
+        .bennettShoe { fill: hsl($HUE_PAST, 20%, 41%); }
+        .converseLogo { fill: hsl($HUE_PAST, 37%, 60%); }
+    }
+    .futureSeason
+    &.future#{$suffix} {
+        .bennettUnderwear { fill: hsl($HUE_FUTURE, 39%, 61%); }
+        .bennettWaistband { fill: hsl($HUE_FUTURE, 47%, 72%); }
+    }
 
     &.enraged {
         .frame { fill: hsl(175, 33%, 47%); }
