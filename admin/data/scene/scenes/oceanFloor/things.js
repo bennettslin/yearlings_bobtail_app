@@ -1,7 +1,9 @@
 import {
+    BUBBLE,
     CARDBOARD,
     PANEL,
 } from '../../../../../src/constants/scene/things'
+import { DREAM_OCEAN_FLOOR } from '../../../../../src/constants/scene/things/bubbles'
 import {
     BENNETT_MAT,
     ODIN_MAT,
@@ -12,6 +14,12 @@ import {
 } from '../../../../../src/constants/scene/things/panels'
 
 export default {
+    [BUBBLE]: {
+        [DREAM_OCEAN_FLOOR]: {
+            yIndex: 5,
+            xPosition: 5.5,
+        },
+    },
     [CARDBOARD]: {
         [BENNETT_MAT]: {
             yIndex: 2,

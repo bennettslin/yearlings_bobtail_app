@@ -1,8 +1,10 @@
 import {
+    BUBBLE,
     CARDBOARD,
     CUTOUT,
     FLAT,
 } from '../../../../../src/constants/scene/things'
+import { DREAM_SHORE } from '../../../../../src/constants/scene/things/bubbles'
 import { BENNETT_ODIN_BUOY } from '../../../../../src/constants/scene/things/cardboards'
 import { YELLOW_TAPED_GRILL } from '../../../../../src/constants/scene/things/cutouts'
 import {
@@ -11,6 +13,12 @@ import {
 } from '../../../../../src/constants/scene/things/flats'
 
 export default {
+    [BUBBLE]: {
+        [DREAM_SHORE]: {
+            yIndex: 5,
+            xPosition: 5.5,
+        },
+    },
     [CARDBOARD]: {
         [BENNETT_ODIN_BUOY]: {
             yIndex: 1,

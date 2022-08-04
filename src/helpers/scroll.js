@@ -4,7 +4,7 @@ import {
     CSS_WIDTH_UNCANNY_VALLEY,
 } from '../constants/responsive/deviceWidth'
 
-const _getCarouselLeftAlign = ({
+const getCarouselLeftAlign = ({
     windowWidth,
     isDesktopWidth,
     isMonitorWidth,
@@ -34,7 +34,7 @@ const _getCarouselLeftAlign = ({
     }
 }
 
-const _getLyricTopAlign = ({
+const getLyricTopAlign = ({
     isDesktopWidth,
     isLyricExpanded,
 }) => {
@@ -62,12 +62,12 @@ export const getAlignForScroll = ({
     isLyricExpanded,
 }) => (
     isCarousel ?
-        _getCarouselLeftAlign({
+        getCarouselLeftAlign({
             windowWidth,
             isDesktopWidth,
             isMonitorWidth,
         }) :
-        _getLyricTopAlign({
+        getLyricTopAlign({
             isDesktopWidth,
             isLyricExpanded,
         })

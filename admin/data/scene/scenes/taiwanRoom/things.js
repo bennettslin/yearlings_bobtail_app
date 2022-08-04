@@ -1,10 +1,12 @@
 import {
-    CUTOUT,
+    BUBBLE,
     CARDBOARD,
+    CUTOUT,
+    DOOR,
     FIXTURE,
     PANEL,
-    DOOR,
 } from '../../../../../src/constants/scene/things'
+import { DREAM_MAT } from '../../../../../src/constants/scene/things/bubbles'
 import {
     BENNETT_TAIWAN_STAIRS,
     ODIN_TAIWAN_STAIRS,
@@ -20,6 +22,12 @@ import { FRIDGE_DRAWINGS } from '../../../../../src/constants/scene/things/fixtu
 import { BUDDHA_STAND } from '../../../../../src/constants/scene/things/panels'
 
 export default {
+    [BUBBLE]: {
+        [DREAM_MAT]: {
+            yIndex: 5,
+            xPosition: 5.5,
+        },
+    },
     [CARDBOARD]: {
         [BENNETT_TAIWAN_STAIRS]: {
             yIndex: 2,

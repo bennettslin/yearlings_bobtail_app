@@ -11,7 +11,7 @@ import { getIsAlbumSession } from '../album'
 import { getIsAdminPageWithStore } from '../admin'
 import { getIsNotFoundPage } from '../session'
 
-const _getReducersIfNeeded = ({
+const getReducersIfNeeded = ({
     windowHeight,
     windowWidth,
     pathname,
@@ -53,7 +53,7 @@ export const getStoreIfNeeded = element => {
             innerHeight: windowHeight = 0,
             innerWidth: windowWidth = 0,
         } = getWindow(),
-        reducers = _getReducersIfNeeded({
+        reducers = getReducersIfNeeded({
             windowHeight,
             windowWidth,
             pathname,

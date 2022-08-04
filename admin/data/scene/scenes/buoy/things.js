@@ -1,7 +1,9 @@
 import {
+    BUBBLE,
     CARDBOARD,
     PANEL,
 } from '../../../../../src/constants/scene/things'
+import { DREAM_BUOY } from '../../../../../src/constants/scene/things/bubbles'
 import {
     BENNETT_ODIN_DEPTHS,
     SEA_SERPENT_LEFT,
@@ -16,6 +18,12 @@ import {
 } from '../../../../../src/constants/scene/things/panels'
 
 export default {
+    [BUBBLE]: {
+        [DREAM_BUOY]: {
+            yIndex: 5,
+            xPosition: 5.5,
+        },
+    },
     [CARDBOARD]: {
         [SEA_SERPENT_LEFT]: {
             yIndex: 0,

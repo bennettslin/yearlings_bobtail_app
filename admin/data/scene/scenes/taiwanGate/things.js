@@ -1,9 +1,11 @@
 import {
+    BUBBLE,
     CARDBOARD,
     CUTOUT,
     DOOR,
     FLAT,
 } from '../../../../../src/constants/scene/things'
+import { DREAM_GATE } from '../../../../../src/constants/scene/things/bubbles'
 import { BENNETT_ODIN_RICKSHAW } from '../../../../../src/constants/scene/things/cardboards'
 import {
     TAIWAN_SHRUB,
@@ -17,6 +19,12 @@ import {
 } from '../../../../../src/constants/scene/things/flats'
 
 export default {
+    [BUBBLE]: {
+        [DREAM_GATE]: {
+            yIndex: 5,
+            xPosition: 5.5,
+        },
+    },
     [CARDBOARD]: {
         [BENNETT_ODIN_RICKSHAW]: {
             yIndex: 2,

@@ -1,7 +1,9 @@
 import {
+    BUBBLE,
     CARDBOARD,
     FLAT,
 } from '../../../../../src/constants/scene/things'
+import { DREAM_RICKSHAW } from '../../../../../src/constants/scene/things/bubbles'
 import {
     BENNETT_SHORE,
     ODIN_SHORE,
@@ -9,6 +11,12 @@ import {
 import { RICKSHAW_TOWN } from '../../../../../src/constants/scene/things/flats'
 
 export default {
+    [BUBBLE]: {
+        [DREAM_RICKSHAW]: {
+            yIndex: 5,
+            xPosition: 5.5,
+        },
+    },
     [CARDBOARD]: {
         [BENNETT_SHORE]: {
             yIndex: 2,

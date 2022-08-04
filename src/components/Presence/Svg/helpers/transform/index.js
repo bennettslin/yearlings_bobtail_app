@@ -1,6 +1,6 @@
 const SCALE_STYLE = 'scaleX(-1)'
 
-const _getSvgTransformForPresence = ({
+const getSvgTransformForPresence = ({
     flipHorizontal,
     rotate,
     skewX,
@@ -55,7 +55,7 @@ export const setSvgTransform = ({
     rotateY,
 
 }) => {
-    const transformStyle = _getSvgTransformForPresence({
+    const transformStyle = getSvgTransformForPresence({
         flipHorizontal,
         rotate,
         skewX,
