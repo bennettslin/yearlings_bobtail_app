@@ -6,7 +6,10 @@ import {
     FIXTURE,
     PANEL,
 } from '../../../../../src/constants/scene/things'
-import { DREAM_MAT } from '../../../../../src/constants/scene/things/bubbles'
+import {
+    DREAM_MAT_BENNETT,
+    DREAM_MAT_ODIN,
+} from '../../../../../src/constants/scene/things/bubbles'
 import {
     BENNETT_TAIWAN_STAIRS,
     ODIN_TAIWAN_STAIRS,
@@ -23,7 +26,11 @@ import { BUDDHA_STAND } from '../../../../../src/constants/scene/things/panels'
 
 export default {
     [BUBBLE]: {
-        [DREAM_MAT]: {
+        [DREAM_MAT_BENNETT]: {
+            yIndex: 5,
+            xPosition: 5.5,
+        },
+        [DREAM_MAT_ODIN]: {
             yIndex: 5,
             xPosition: 5.5,
         },

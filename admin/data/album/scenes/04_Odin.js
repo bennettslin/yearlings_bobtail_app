@@ -52,7 +52,8 @@ import {
 //     DREAM_BUOY,
 //     DREAM_DEPTHS,
 //     DREAM_GATE,
-//     DREAM_MAT,
+//     DREAM_MAT_BENNETT,
+//     DREAM_MAT_ODIN,
 //     DREAM_OCEAN_FLOOR,
 //     DREAM_RICKSHAW,
 //     DREAM_SHORE,
@@ -127,7 +128,8 @@ export default [
                 },
             },
             [BUBBLE]: {
-                // [DREAM_MAT]: true,
+                // [DREAM_MAT_BENNETT]: true,
+                // [DREAM_MAT_ODIN]: true,
             },
             [CARDBOARD]: {
                 [BENNETT_TAIWAN_STAIRS]: true,

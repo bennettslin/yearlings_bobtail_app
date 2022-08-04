@@ -5,7 +5,8 @@ import cinemaThoughtBuying from '../../../../assets/svgs/bubbles/cinemaThoughtBu
 import cinemaThoughtRecording from '../../../../assets/svgs/bubbles/cinemaThoughtRecording'
 import constellationSibling from '../../../../assets/svgs/bubbles/constellationSibling'
 import constellationTarpit from '../../../../assets/svgs/bubbles/constellationTarpit'
-import dreamMat from '../../../../assets/svgs/bubbles/dreamMat'
+import dreamMatBennett from '../../../../assets/svgs/bubbles/dreamMatBennett'
+import dreamMatOdin from '../../../../assets/svgs/bubbles/dreamMatOdin'
 import dreamStairs from '../../../../assets/svgs/bubbles/dreamStairs'
 import dreamGate from '../../../../assets/svgs/bubbles/dreamGate'
 import dreamRickshaw from '../../../../assets/svgs/bubbles/dreamRickshaw'
@@ -79,7 +80,8 @@ import {
     DREAM_BUOY,
     DREAM_DEPTHS,
     DREAM_GATE,
-    DREAM_MAT,
+    DREAM_MAT_BENNETT,
+    DREAM_MAT_ODIN,
     DREAM_OCEAN_FLOOR,
     DREAM_RICKSHAW,
     DREAM_SHORE,
@@ -151,7 +153,8 @@ export default {
     [CINEMA_THOUGHT_RECORDING]: cinemaThoughtRecording,
     [CONSTELLATION_SIBLING]: constellationSibling,
     [CONSTELLATION_TARPIT]: constellationTarpit,
-    [DREAM_MAT]: dreamMat,
+    [DREAM_MAT_BENNETT]: dreamMatBennett,
+    [DREAM_MAT_ODIN]: dreamMatOdin,
     [DREAM_STAIRS]: dreamStairs,
     [DREAM_GATE]: dreamGate,
     [DREAM_RICKSHAW]: dreamRickshaw,
