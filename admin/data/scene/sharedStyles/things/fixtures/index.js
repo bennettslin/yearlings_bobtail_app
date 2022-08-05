@@ -74,7 +74,6 @@ import {
 import {
     BENNETT,
     LIZ,
-    SASHA,
 } from '../../../../../../src/constants/scene/actors'
 import { DRAWING__SHARED } from '../../../../../../src/constants/scene/sharedStyles/comic'
 import {
@@ -90,7 +89,6 @@ import {
     LIZ_PHONE__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/household'
 import {
-    ACOUSTIC_GUITAR__SHARED,
     BASS_CASE__SHARED,
     CYMBAL__SHARED,
     DRUMS__SHARED,
@@ -202,12 +200,7 @@ export default {
         EVENING_TIME__SHARED,
         FREEWAY_SIGN__SHARED,
     ],
-    [FRIDGE_DRAWINGS]: [
-        DARK_ROOM_DEFAULT__SHARED,
-        ALL_PEOPLE__SHARED,
-        ACOUSTIC_GUITAR__SHARED,
-        SASHA,
-    ],
+    [FRIDGE_DRAWINGS]: null,
     [GHOST_SHACKLES]: GHOST__SHARED,
     [GUITAR_CASE_OPEN]: GUITAR_CASE__SHARED,
     [GUITAR_CASE_UPRIGHT]: [
