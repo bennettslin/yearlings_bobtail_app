@@ -84,18 +84,6 @@ export default {
             xPosition: 9.6,
             zOffset: -0.07,
         },
-        [SHELF_BOOKS_EARLY]: {
-            yIndex: 1,
-            xPosition: 5.05,
-            zOffset: 1.25,
-            counterpart: SHELF_BOOKS_LATE,
-        },
-        [SHELF_BOOKS_LATE]: {
-            yIndex: 1,
-            xPosition: 4.3,
-            zOffset: 1.25,
-            counterpart: SHELF_BOOKS_EARLY,
-        },
         [SHELF_CUP]: {
             yIndex: 1,
             xPosition: 5.75,
@@ -194,6 +182,14 @@ export const THINGS_BENNETT_COUCH_RUBIKS = {
             counterpart: PROGRESS_CHART_LATE,
         },
     },
+    [FIXTURE]: {
+        [SHELF_BOOKS_EARLY]: {
+            yIndex: 1,
+            xPosition: 5.05,
+            zOffset: 1.25,
+            counterpart: SHELF_BOOKS_LATE,
+        },
+    },
 }
 
 export const THINGS_BENNETT_COUCH_READING = {
@@ -206,6 +202,12 @@ export const THINGS_BENNETT_COUCH_READING = {
         },
     },
     [FIXTURE]: {
+        [SHELF_BOOKS_LATE]: {
+            yIndex: 1,
+            xPosition: 4.3,
+            zOffset: 1.25,
+            counterpart: SHELF_BOOKS_EARLY,
+        },
         [KEYBOARD]: {
             yIndex: 4,
             xPosition: 6.5,
