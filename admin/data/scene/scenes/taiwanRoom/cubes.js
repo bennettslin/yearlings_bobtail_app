@@ -14,7 +14,7 @@ export default {
                 [5],
                 [5, g, g, g, g, g, g, g, g, g, g, 5],
                 [4, g, g, g, g, g, g, g, g, g, g, 5],
-                [f, g, g, g, 5, 5, 5, 5, e, e, 5, 5],
+                [f, g, g, g, 5, 5, 5, 5, 5, e, e, 5],
                 [f, g, g, g, g, g, g, g, g, g, g, 5],
                 [1, g, g, g, g, g, g, g, g, g, g, 5],
             ],

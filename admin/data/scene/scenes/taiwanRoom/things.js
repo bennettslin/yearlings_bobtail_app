@@ -38,10 +38,10 @@ export default {
     [CARDBOARD]: {
         [BENNETT_TAIWAN_STAIRS]: {
             yIndex: 2,
-            xPosition: 7.75,
+            xPosition: 8.75,
         },
         [ODIN_TAIWAN_STAIRS]: {
-            yIndex: 2,
+            yIndex: 3,
             xPosition: 2,
         },
         [PAINTING_EMPRESS__MAT]: {
@@ -69,7 +69,7 @@ export default {
         },
         [TAIWAN_FRIDGE]: {
             yIndex: 1,
-            xPosition: 9.5,
+            xPosition: 8.75,
         },
     },
     [DOOR]: {
@@ -88,7 +88,7 @@ export default {
     [FIXTURE]: {
         [FRIDGE_DRAWINGS]: {
             yIndex: 1,
-            xPosition: 9,
+            xPosition: 10,
             zOffset: 1.25,
         },
     },
