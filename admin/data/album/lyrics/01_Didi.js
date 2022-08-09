@@ -40,7 +40,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `My parents immigrated to the United States from`,
+                        `My parents immigrated from`,
                         {
                             anchor: `Taiwan`,
                             wiki: `Taiwan`,
@@ -50,12 +50,17 @@ export default {
                             anchor: `China`,
                             wiki: `China`,
                         },
-                        `. After the Chinese invaded and took over in 1949, they imposed`,
+                        `that was invaded by`,
                         {
-                            anchor: `their language`,
-                            wiki: `Chinese_language`,
+                            anchor: `Chinese Nationalists`,
+                            wiki: `Kuomintang`,
                         },
-                        `on the native population. So the`,
+                        `in 1949. Upon taking over, the Nationalists made`,
+                        {
+                            anchor: `Mandarin Chinese`,
+                            wiki: `Mandarin_Chinese`,
+                        },
+                        `the official language. So the`,
                         {
                             anchor: `Taiwanese`,
                             wiki: `Taiwanese_Hokkien`,
