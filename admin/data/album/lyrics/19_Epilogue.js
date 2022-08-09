@@ -7,6 +7,7 @@ export default {
      * song to repeat itself without the player ending first.
      */
     playerStartTime: 3576.7,
+    todo: true,
     overview: [
         `Thanks for listening! It really means a lot. So what do I hope to gain by creating this audio webcomic, a decade after the album was finished? In short, I'm still looking for help, whether in the form of a traditional record deal, or some modern arrangement devised by forward-thinking Zoomers. The notion that an artist can start by realizing a bold vision, and`,
         {

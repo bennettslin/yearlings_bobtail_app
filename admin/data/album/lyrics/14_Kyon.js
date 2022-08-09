@@ -30,12 +30,14 @@ export default {
     mixStartTime: `0:00:00.27`,
     playerReferenceTime: 2498.410,
     playerStartTime: 2496.296,
+    todo: true,
     overview: `The on-again, off-again years gave me enough emotional distance to understand how my behavior had degenerated so quickly into cruelty. Hoping for an easy breakup, I would act up in small ways. But Sita was just as determined to work it out, and she would endure. Which then lowered the threshold for how awfully I should behave next time… and on and on. In time I came to see how thoroughly she'd tied her sense of worth to our relationship. I was fighting for me. She was fighting for us.`,
     lyricUnits: [
         {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: [
                         {
@@ -70,6 +72,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: `Having settled into an unhealthy power dynamic early on, Sita and I failed to grow as individuals. But I can see now that she was just waiting for me to grow up. As long as we were together, she couldn't do it on her own. And so the humming heard here is the sound of her waiting in quiet resignation.`,
                     dotKeys: {
@@ -90,6 +93,7 @@ export default {
                         `So you fled to her`,
                         {
                             anchor: `nest on this stork`,
+                            todo: true,
                             cards: [
                                 {
                                     description: `Every time I broke up with Sita to date another woman, I would revert to the same naive, wide-eyed persona. I just longed to relive the giddiness of puppy love, like an infant experiencing the world for the first time.`,
@@ -118,6 +122,7 @@ export default {
                         `history shed, having`,
                         {
                             anchor: `never grown your horns`,
+                            todo: true,
                             card: {
                                 description: `Of course, my continual desire to leave Sita was also driven by shame. Having left her before, any kindness I showed her now could only be viewed as atonement for past crimes. My role in this relationship was to be forever penitent, whereas I could just start over with someone new, untainted by sin.`,
                                 dotKeys: {
@@ -135,6 +140,7 @@ export default {
                         `A`,
                         {
                             anchor: `present sent`,
+                            todo: true,
                             card: {
                                 wormhole: `present_sent`,
                             },
@@ -145,6 +151,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: `I wanted this song to speak from Sita's perspective, but in retrospect, my portrayal might be a bit one-dimensional. I was just self-absorbed in my guilt when I wrote it, and my primary purpose was to beat myself up over what my stupidity had cost me.`,
                     dotKeys: {
@@ -165,6 +172,7 @@ export default {
                         `So baby, tell me then, when you`,
                         {
                             anchor: `take in her breasts`,
+                            todo: true,
                             card: {
                                 description: `It scared me, far more than I let on, to gamble away the familiar warmth of Sita's love for a mere chance at romance with some new woman. I often wondered if this fear then manifested in a hormonal craving for nurture over pleasure, because I was always struck by how motherly these women's naked bodies initially felt to me.`,
                                 dotKeys: {
@@ -186,6 +194,7 @@ export default {
                         `Is it just her`,
                         {
                             anchor: `womb you bed`,
+                            todo: true,
                             card: {
                                 description: `Of course, Sita herself was under no such illusion about my innocence. She knew full well that I just wanted to sleep with more women, to compensate for being the less sexually experienced one in our relationship.`,
                                 dotKeys: {
@@ -203,6 +212,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: [
                         `My relationship with Sita was like a ship swaying in perilous waters. This notion is captured in the music by both the`,
@@ -243,6 +253,7 @@ export default {
                     lyric: [
                         {
                             anchor: `spurned at first`,
+                            todo: true,
                             card: {
                                 description: `Given the seeming ease with which I could now attract other women, I grew further indignant about the endless hoops I'd been made to jump through to win Sita over.`,
                                 dotKeys: {
@@ -264,6 +275,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: [
                         `Every time we got back together, Sita would reassert our status as a couple by insisting I bring her along to see my friends, despite the humiliation of facing the very gang that had emboldened me to leave her. The circus`,
@@ -291,6 +303,7 @@ export default {
                     lyric: [
                         {
                             anchor: `all the points`,
+                            todo: true,
                             card: {
                                 description: `After Sita's initial rejection of me, we spent a year getting to know each other as friends, during which time I still tried to impress her without appearing as such. One day I solved her friend's Rubik's Cube, a skill I'd picked up during my first five-year plan. While her friend raved, I meekly shrugged, as Sita sat and smiled. I'd become a puzzle for her to solve.`,
                                 dotKeys: {
@@ -307,6 +320,7 @@ export default {
                     lyric: [
                         {
                             anchor: `plunders past`,
+                            todo: true,
                             card: {
                                 description: `The sting I felt in having been initially rejected by Sita was aggravated by the later revelation of her sexual past. And all the more so since it was precisely the painful lessons she took away from these past encounters that made her wary of my initial advances. Of course, I missed the irony of being the one who would surely end up providing the most painful lesson by far.`,
                                 dotKeys: {
@@ -324,6 +338,7 @@ export default {
                         `But dear,`,
                         {
                             anchor: `let's make a pact`,
+                            todo: true,
                             card: {
                                 description: `Sita knew it was just a matter of time before I wanted the same mature, slow-burning love that she did. So after each breakup, she would make me promise to consider rekindling what we once had, whenever I should long for it again.`,
                                 dotKeys: {
@@ -350,6 +365,7 @@ export default {
                     lyric: [
                         {
                             anchor: `I'll be stronger`,
+                            todo: true,
                             card: {
                                 description: `Sita was always promising to "get better," in her words. It was a weird trick I'd unconsciously played on her, as if all the blame didn't lie squarely with me.`,
                                 dotKeys: {
@@ -367,6 +383,7 @@ export default {
                         `to parent my`,
                         {
                             anchor: `knight-errant`,
+                            todo: true,
                             card: {
                                 description: [
                                     `In`,
@@ -386,6 +403,7 @@ export default {
                         `as the sole`,
                         {
                             anchor: `keeper of his sheep herd`,
+                            todo: true,
                             card: {
                                 description: [
                                     `A keeper in the sense of being the one who tends to the herd, as well as the only one to keep from`,
@@ -410,6 +428,7 @@ export default {
                         `And when sobered by the`,
                         {
                             anchor: `time lapse`,
+                            todo: true,
                             cards: [
                                 {
                                     description: `Sita anticipated that my philandering years would whiz by in a flash as the pursuit of other women grew repetitive, imprinting few standout memories.`,
@@ -432,6 +451,7 @@ export default {
                         `to`,
                         {
                             anchor: `spring forward on a fallback`,
+                            todo: true,
                             cards: [
                                 {
                                     description: `Then once my later years as a womanizer proved to be unfulfilling, I would surely return to her, my fallback option, with relief rather than reluctance.`,
@@ -471,6 +491,7 @@ export default {
                         `My`,
                         {
                             anchor: `ticklish piglet`,
+                            todo: true,
                             card: {
                                 description: `Perversely, Sita and I were at our best during the months right after getting back together. She could enjoy the knowledge of being the better woman, while I got to bask in the afterglow of my latest sexual exploit.`,
                                 dotKeys: {
@@ -487,6 +508,7 @@ export default {
                         `Bursting belly told by`,
                         {
                             anchor: `extra holes`,
+                            todo: true,
                             card: {
                                 description: `Notches can be carved in one's belt to support a girth distended from overfeeding. They might also tally sexual conquests.`,
                                 dotKeys: {
@@ -510,6 +532,7 @@ export default {
                         `A`,
                         {
                             anchor: `shank's dustless silhouette`,
+                            todo: true,
                             cards: [
                                 {
                                     description: `During our on-and-off years, I would habitually return to Sita, promising to mend my ways. Things would be peachy for a while, after which I would run off yet again with another woman. I was like a reformed convict who might any day relapse without warning, taking with him the shank he'd left on the windowsill to collect dust.`,
@@ -535,6 +558,7 @@ export default {
                         `your`,
                         {
                             anchor: `severed stinger`,
+                            todo: true,
                             card: {
                                 description: `At the time, I failed to appreciate what it meant for Sita to have given her virginity to me. She had to make things work because a part of me was forever lodged inside her, like a barbed stinger left under the skin after a bee sting.`,
                                 dotKeys: {
@@ -552,6 +576,7 @@ export default {
                         `But other nights you'd`,
                         {
                             anchor: `lap my wound clean`,
+                            todo: true,
                             card: {
                                 description: `After vaginal sex, I would go down on Sita until she reached orgasm. She mentioned this as an example of my thoughtfulness once, when I asked her what she saw in me that was worth holding onto. It seemed like proof that I had no actual redeeming qualities.`,
                                 dotKeys: {
@@ -564,6 +589,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: [
                         `In the second half of the song, the meter switches to`,
@@ -595,6 +621,7 @@ export default {
                         `Besides, a`,
                         {
                             anchor: `you-shaped pussing sore`,
+                            todo: true,
                             card: {
                                 description: `Or else, "U-shaped." Yet more imagery comparing vaginal penetration to an inflicted lesion. I think I was feeling both guilty and horny when I wrote these lyrics.`,
                                 dotKeys: {
@@ -610,6 +637,7 @@ export default {
                     lyric: [
                         {
                             anchor: `bleeds just once`,
+                            todo: true,
                             card: {
                                 description: [
                                     `Much like a vagina only bleeds the first time when the`,
@@ -633,6 +661,7 @@ export default {
                         `So are we agreed,`,
                         {
                             anchor: `honeybee`,
+                            todo: true,
                             card: {
                                 description: [
                                     `A`,
@@ -651,6 +680,7 @@ export default {
                         `? Come for me? At`,
                         {
                             anchor: `thirty-three`,
+                            todo: true,
                             card: {
                                 description: [
                                     `I often joked about killing myself at`,
@@ -699,6 +729,7 @@ export default {
                         `your`,
                         {
                             anchor: `fear of death`,
+                            todo: true,
                             card: {
                                 description: `The night terrors I experienced as a child continued into adulthood. Sita would soothe me whenever I woke up screaming from visions of my impending death.`,
                                 dotKeys: {
@@ -709,6 +740,7 @@ export default {
                         `, your`,
                         {
                             anchor: `fear of never dying`,
+                            todo: true,
                             card: {
                                 description: `I also hadn't settled the issue of whether an afterlife was even preferable. Though Sita had no ready answers, she invited me to perform Hindu worship with her, which supplemented what I was learning in my religious studies courses. I found comfort in Hinduism's sprawling pantheon of deities and avatars. It just seemed like the more details there are to learn, the more ways there are to get lost in the divine.`,
                                 dotKeys: {
@@ -720,6 +752,7 @@ export default {
                         `, and`,
                         {
                             anchor: `sadness for what it was`,
+                            todo: true,
                             card: {
                                 description: `As friends, Sita and I got along well because we were both sad people. But in hindsight, my sadness was a product of circumstance, whether from bullying in my youth, or from loneliness as I got older. Sita, on the other hand, suffered from clinical depression. And as I learned to be proactive in dealing with my moods, I grew impatient with her for being incapable of the same.`,
                                 dotKeys: {
@@ -743,6 +776,7 @@ export default {
                                 `'s your priority`,
                             ],
                             properNoun: true,
+                            todo: true,
                             card: {
                                 description: [
                                     `As I continued to work on`,
@@ -765,6 +799,7 @@ export default {
                         },
                         {
                             anchor: `I'll gladly wait`,
+                            todo: true,
                             card: {
                                 description: `But Sita encouraged my artistic pretensions, believing them to reflect positively on her as well. Though she was uninterested in the local scene, she still enjoyed being seen as the one going home with me after a show.`,
                                 dotKeys: {
@@ -781,6 +816,7 @@ export default {
                         `And darling, don't you worry, these were only`,
                         {
                             anchor: `practice cuts`,
+                            todo: true,
                             card: {
                                 description: `When Sita first asked about the scars on my forearm, I replied wryly that they were just for practice. Years later when I expressed concern after she'd tried cutting for herself, she replied with the same assurance. The message was clear that I was the cause in more ways than one.`,
                                 dotKeys: {
@@ -808,6 +844,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: [
                         `The cry of a`,

@@ -7,5 +7,9 @@
     {
         "key": "ctrl+alt+cmd+j",
         "command": "macros.prepSvg"
+    },
+    {
+        "key": "ctrl+alt+cmd+k",
+        "command": "macros.addTodosToAnnotations"
     }
 ]

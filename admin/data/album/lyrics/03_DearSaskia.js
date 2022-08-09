@@ -30,12 +30,14 @@ export default {
     playerStartTime: 384.329,
     // This is a magic number adjusted by ear. In the mix, it's actually 44.96.
     mixSamplingFrequency: 45.39,
+    todo: true,
     overview: `Sasha was a childhood friend as well as my first crush. The strength she drew from her Jewish identity fascinated me, but it also clued me in on a cruel paradox. Namely, that no good comes from longing to share in someone's faith and roots, which stay strong precisely by not being shared. Sasha moved away during middle school at the peak of my struggles with bullies. That summer, I wrote her a letter on a family trip to Taiwan.`,
     lyricUnits: [
         {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: `Sasha's given name was actually Saskia. But because this was difficult for other children to pronounce, she'd gone by the nickname of Sasha her whole life.`,
                     dotKeys: {
@@ -59,6 +61,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: [
                         `As a teenager, I tried to figure out how the`,
@@ -97,6 +100,7 @@ export default {
                         `It's nearing autumn here with`,
                         {
                             anchor: `record highs`,
+                            todo: true,
                             card: {
                                 description: `It's hard to write a letter. But one can always start by talking about the weather.`,
                                 dotKeys: {
@@ -117,6 +121,7 @@ export default {
                         `your`,
                         {
                             anchor: `first semester`,
+                            todo: true,
                             card: {
                                 description: `My family was spending the entire summer in Taiwan. We weren't to get back to the States until after Sasha had begun the new school year in Boston.`,
                                 dotKeys: {
@@ -130,6 +135,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: `I wanted the vocals in this song to sound sickly, so I held off on recording them until I could come down with a cold. Which was guaranteed to happen at some point during the five years I worked on this album.`,
                     dotKeys: {
@@ -149,6 +155,7 @@ export default {
                     lyric: [
                         {
                             anchor: `You'd love Taiwan`,
+                            todo: true,
                             card: {
                                 description: `During a tour of the Taiwanese countryside with my cousins, I mentally noted all the things I could show to Sasha one day. I'm not sure it had to do with pride in my heritage. I just liked the idea of having something to share with someone else.`,
                                 dotKeys: {
@@ -174,6 +181,7 @@ export default {
                         `of some`,
                         {
                             anchor: `giant's house`,
+                            todo: true,
                             card: {
                                 description: `In my most vivid memory from that trip, we stood in the middle of a lush valley. The ground around us was entirely level, the enclosing mountains rose nearly vertically, and their peaks disappeared into a translucent blanket of clouds stretched across the sky. I felt like a tiny guest in a giant house.`,
                                 dotKeys: {
@@ -201,6 +209,7 @@ export default {
                         `I should`,
                         {
                             anchor: `keep your kid name`,
+                            todo: true,
                             card: {
                                 description: `Sasha decided that in Boston she would go by her given name of Saskia. I asked if I should start calling her Saskia now as well. She said no, since it would be nice to have a reminder of which friends knew her first.`,
                                 dotKeys: {
@@ -217,6 +226,7 @@ export default {
                         `But then in`,
                         {
                             anchor: `your embrace`,
+                            todo: true,
                             card: {
                                 description: `But it's no comfort to be cherished as an old friend by someone so visibly eager to dive into the new. As we hugged on the last day of school, Sasha was just about ready to throw off her old skin and scamper away.`,
                                 dotKeys: {
@@ -228,6 +238,7 @@ export default {
                         `, I felt you`,
                         {
                             anchor: `prepped to shed`,
+                            todo: true,
                             card: {
                                 description: [
                                     `Sasha is prepped in more than one sense, since she's preparing to begin enrollment at a`,
@@ -259,12 +270,14 @@ export default {
                         `And I'd reflect inside`,
                         {
                             anchor: `withering`,
+                            todo: true,
                             card: {
                                 wormhole: `withering`,
                             },
                         },
                         {
                             anchor: `amber eyes`,
+                            todo: true,
                             card: {
                                 description: [
                                     `Sasha's eyes were of an amber color. But`,
@@ -287,6 +300,7 @@ export default {
                     lyric: [
                         {
                             anchor: `your pupil's pupal fly`,
+                            todo: true,
                             card: {
                                 description: [
                                     `Reflecting on my feelings for Sasha, I recall our last day together, when I caught my reflection in the`,
@@ -305,6 +319,7 @@ export default {
                         `, a`,
                         {
                             anchor: `pet petrified`,
+                            todo: true,
                             card: {
                                 description: [
                                     `Petrified by the thought of losing Sasha, I felt like a`,
@@ -329,6 +344,7 @@ export default {
                         `with you raving over how`,
                         {
                             anchor: `he's getting you`,
+                            todo: true,
                             card: {
                                 description: [
                                     `Every boy that Sasha crushed on was`,
@@ -352,6 +368,7 @@ export default {
                         `staying kosher. Though, you know,`,
                         {
                             anchor: `I would have too`,
+                            todo: true,
                             card: {
                                 description: `Yet if Sasha were to want me, then of course I would convert to Judaism. It made no sense to be loyal to my own cultural identity, which I had no hand in deciding.`,
                                 dotKeys: {
@@ -365,6 +382,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: [
                         `To match the passive-aggressive mood of the lyrics, the sentimental string harmonies in the chorus abruptly give way to`,
@@ -410,6 +428,7 @@ export default {
                         `And I sniffled daily when you`,
                         {
                             anchor: `skipped a grade`,
+                            todo: true,
                             card: {
                                 description: [
                                     `I panicked when Sasha was allowed to`,
@@ -433,6 +452,7 @@ export default {
                         `One`,
                         {
                             anchor: `bus seat`,
+                            todo: true,
                             card: {
                                 description: [
                                     `My family lived in`,
@@ -461,6 +481,7 @@ export default {
                         `caress, sun-streaked and loose, a`,
                         {
                             anchor: `wet-cheeked papoose`,
+                            todo: true,
                             card: {
                                 description: [
                                     `Here, I recall an afternoon bus ride when Sasha sat in front of me. As her hair blew in my face, I realized that she'd matured into the next peer group. I felt like a`,
@@ -503,6 +524,7 @@ export default {
                         `untied this "`,
                         {
                             anchor: `tetherboy`,
+                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -550,6 +572,7 @@ export default {
                         `Oh but Sasha, if`,
                         {
                             anchor: `anarchy reigns`,
+                            todo: true,
                             card: {
                                 description: `It was weird to be taught in history class that anarchy devolves into tyranny, and then to wander the quad and witness this very phenomenon in action.`,
                                 dotKeys: {
@@ -567,6 +590,7 @@ export default {
                         `then no one lives when`,
                         {
                             anchor: `narcing to the aides`,
+                            todo: true,
                             card: {
                                 description: [
                                     `To narc is to snitch, as an`,
@@ -587,6 +611,7 @@ export default {
                         `who shrug when thus annoyed, yawning, "`,
                         {
                             anchor: `Boys will beat boys`,
+                            todo: true,
                             card: {
                                 description: [
                                     `Of course, it's more common to say that boys will "`,
@@ -622,6 +647,7 @@ export default {
                         `But though my`,
                         {
                             anchor: `jaw was stuck`,
+                            todo: true,
                             card: {
                                 description: `Here, I refer to another incident when a bully snuck up from behind and put me in a chokehold as I waited for the school bus.`,
                                 dotKeys: {
@@ -632,6 +658,7 @@ export default {
                         `, so now I`,
                         {
                             anchor: `talk Canuck`,
+                            todo: true,
                             card: {
                                 description: [
                                     `The chokehold incident left me with a dislocated jaw. For a long time afterward, I had to keep my jaw clenched to avoid pain when speaking. This led to my odd manner of pronunciation that to this day often gets mistaken for a`,
@@ -669,6 +696,7 @@ export default {
                         `Anyway, I'm feeling healed. Still,`,
                         {
                             anchor: `hugging hurts`,
+                            todo: true,
                             card: {
                                 description: `It's more typical to downplay one's injuries to avoid the humiliation of getting beaten up. But here I play them up to mask my emotional hurt, as I explain to Sasha why I winced when we hugged on that last day.`,
                                 dotKeys: {
@@ -682,6 +710,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: `It's easy to write songs by playing a four-chord loop, then layering a melody on top. But my theory was that the Beatles wrote the melody and chords together at once, so I aimed to do the same. I was always happiest with results like the chorus here, where the music meanders for a long stretch without repeating.`,
                     dotKeys: {
@@ -719,6 +748,7 @@ export default {
                         `while if I last the fall`,
                         {
                             anchor: `playing possum`,
+                            todo: true,
                             card: {
                                 description: [
                                     `To avoid confrontation, an`,
@@ -746,6 +776,7 @@ export default {
                         `is a toss-up. But where some`,
                         {
                             anchor: `hemophile`,
+                            todo: true,
                             card: {
                                 description: [
                                     {
@@ -772,6 +803,7 @@ export default {
                         `on`,
                         {
                             anchor: `rat turds choked`,
+                            todo: true,
                             card: {
                                 description: `I wasn't sure how to end a song about a painful stage in my life that now seems comical in retrospect. I decided to err on the side of humor.`,
                                 dotKeys: {
@@ -786,6 +818,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: `While the first chorus of this song is grounded in the key of C, the second chorus collapses under the weight of my despondence and settles into the key of B\u2011flat, a whole step lower. But now as I commit to powering through the coming semester, this third and final chorus rises up a half step to the key of D\u2011flat.`,
                     dotKeys: {
@@ -798,6 +831,7 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: [
                         `After releasing`,

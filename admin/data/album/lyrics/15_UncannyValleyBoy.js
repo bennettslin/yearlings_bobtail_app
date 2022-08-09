@@ -30,12 +30,14 @@ export default {
     referenceDescription: `Acoustic guitar in measure 1`,
     mixStartTime: `0:01:18.46`,
     playerStartTime: 2722.629,
+    todo: true,
     overview: `Upon learning of my brother's autism, my parents were too harried to notice I was being bullied at school. In guilt, they later indulged every whim I had to find my own path. But as I got older, they grew concerned that I wasn't maturing as I went. On top of this, they were crushed when I left Sita, whom they adored. Naturally, I wasn't happy to disappoint them. Still, I had a master plan to follow, and I wasn't about to change my ways.`,
     lyricUnits: [
         {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 cards: [
                     {
                         description: [
@@ -82,6 +84,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: `I wrote the music for this song a while back after waking from a horrid nightmare. The premise quickly seemed laughable, so I shelved it. But years later, I realized its gloomy chords and disjointed tempo changes would work well for a song about a nightmarish version of my parents.`,
                     dotKeys: {
@@ -101,6 +104,7 @@ export default {
                     lyric: [
                         {
                             anchor: `Beta`,
+                            todo: true,
                             card: {
                                 description: [
                                     `In Hindi,`,
@@ -120,6 +124,7 @@ export default {
                         `, come`,
                         {
                             anchor: `wax prophetic`,
+                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -159,6 +164,7 @@ export default {
                         `Rest your rump, boy, by your old`,
                         {
                             anchor: `giving tree`,
+                            todo: true,
                             card: {
                                 description: [
                                     {
@@ -185,6 +191,7 @@ export default {
                     lyric: [
                         {
                             anchor: `Stumped`,
+                            todo: true,
                             cards: [
                                 {
                                     description: `In their claim to be stumped, my parents feign to be oblivious to the outcome of my story.`,
@@ -204,6 +211,7 @@ export default {
                         `, I ponder the`,
                         {
                             anchor: `forespoken monster`,
+                            todo: true,
                             card: {
                                 description: [
                                     `In`,
@@ -231,6 +239,7 @@ export default {
                         `at the end of this`,
                         {
                             anchor: `book of yours`,
+                            todo: true,
                             card: {
                                 description: [
                                     `Like Grover, I was trapped inside a self-referential work, hoping to shape in real time the outcome toward which I was being relentlessly thrust. But unlike Grover, I had an inkling of who the monster at the end of`,
@@ -262,6 +271,7 @@ export default {
                         `And you, for a future,`,
                         {
                             anchor: `sold your whole fortune`,
+                            todo: true,
                             card: {
                                 description: [
                                     `My parents lament that my opportunism has made me a future "soldier of" fortune, or`,
@@ -285,6 +295,7 @@ export default {
                         `to live neutered, blissfully`,
                         {
                             anchor: `and orphaned`,
+                            todo: true,
                             card: {
                                 description: [
                                     `Being "`,
@@ -308,6 +319,7 @@ export default {
                     lyric: [
                         {
                             anchor: `Upon purchase of a queen's ship`,
+                            todo: true,
                             card: {
                                 description: [
                                     `RI Research promised that I could rise above the bullies once a spaceship was funded by my payments. And so I learned to bide my time, building toward and awaiting corrective justice. I was like "a pawn" in`,
@@ -326,6 +338,7 @@ export default {
                         `,`,
                         {
                             anchor: `earth right now your tourist store`,
+                            todo: true,
                             card: {
                                 description: `My mother tried to instill Buddhist ideals of renouncing materialism even as she filled my head with visions of becoming a great artist. The mail-order cult then piled on with the belief that I was a mere visitor to this planet. The lasting effect on my psyche was that I became unaffected by earthly concerns while working tirelessly "to restore" my "birthright" of artistic renown.`,
                                 dotKeys: {
@@ -340,6 +353,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: [
                         `In coming up with the puns in this stanza, my hope was for listeners to believe they'd heard a`,
@@ -379,6 +393,7 @@ export default {
                         `till they called,`,
                         {
                             anchor: `suspecting you of huffing`,
+                            todo: true,
                             card: {
                                 description: [
                                     {
@@ -401,6 +416,7 @@ export default {
                         `then we caught you`,
                         {
                             anchor: `stuffing twenties`,
+                            todo: true,
                             card: {
                                 description: [
                                     `Since I had`,
@@ -421,6 +437,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: [
                         `The`,
@@ -459,6 +476,7 @@ export default {
                         `So do you believe`,
                         {
                             anchor: `your hamartia`,
+                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -513,6 +531,7 @@ export default {
                         `you made a`,
                         {
                             anchor: `bunker that shuts airtight`,
+                            todo: true,
                             card: {
                                 description: `I learned early on to deal with problems by locking myself away, both physically and mentally. Then once sheltered, I could calmly and patiently study my situation to plot the best way forward.`,
                                 dotKeys: {
@@ -560,6 +579,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: [
                         `As silly as the original lyrics for the chorus were, I liked them enough to keep them as a vocal`,
@@ -589,6 +609,7 @@ export default {
                         `But then, my`,
                         {
                             anchor: `little prince`,
+                            todo: true,
                             card: {
                                 description: [
                                     {
@@ -616,6 +637,7 @@ export default {
                         `safe on your`,
                         {
                             anchor: `tiny planet`,
+                            todo: true,
                             card: {
                                 description: `Like the little prince, I was also a visitor from the stars who once saw this world through guileless eyes.`,
                                 dotKeys: {
@@ -632,6 +654,7 @@ export default {
                         `you finally granted their`,
                         {
                             anchor: `nutshells are rigged`,
+                            todo: true,
                             card: {
                                 description: [
                                     `The classic`,
@@ -671,6 +694,7 @@ export default {
                         isItalic: true,
                         lyric: {
                             anchor: `Scattered your beans`,
+                            todo: true,
                             card: {
                                 description: [
                                     `The nightmare began with me scattering magic beans all around the neighborhood. It was clearly based on the English`,
@@ -711,6 +735,7 @@ export default {
                         `Now suddenly dressed to play, you`,
                         {
                             anchor: `drowned your stutter`,
+                            todo: true,
                             card: {
                                 description: `Sometime in middle school I developed a stammer, perhaps as an unconscious way to buy time for collecting my thoughts. In college, I found that alcohol made it disappear.`,
                                 dotKeys: {
@@ -727,6 +752,7 @@ export default {
                         `smugly prepped to`,
                         {
                             anchor: `haze the new latecomers`,
+                            todo: true,
                             card: {
                                 description: [
                                     `Some organizations put new recruits through degrading`,
@@ -751,6 +777,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: [
                         `I wanted to mimic`,
@@ -801,6 +828,7 @@ export default {
                         {
                             anchor: `Rama king`,
                             properNoun: true,
+                            todo: true,
                             cards: [
                                 {
                                     description: `My parents might be calling me a "drama" king, in a subtle dig that everything I do is an attention-seeking act.`,
@@ -846,6 +874,7 @@ export default {
                         `, the`,
                         {
                             anchor: `testifiers' lore`,
+                            todo: true,
                             card: {
                                 description: [
                                     `After slaying Ravana, Rama made Sita walk through`,
@@ -869,6 +898,7 @@ export default {
                         `A`,
                         {
                             anchor: `nation paused`,
+                            todo: true,
                             card: {
                                 description: [
                                     `In 1987, a`,
@@ -888,6 +918,7 @@ export default {
                         `to watch you`,
                         {
                             anchor: `fail your Sita`,
+                            todo: true,
                             card: {
                                 description: `Modern audiences may find it disgraceful that Rama's first act upon reuniting with Sita was to demand proof of her purity. I feel the same way when I look back now on my need to be the more sexually experienced partner in the relationship. It baffles me why I couldn't just be grateful for whatever circumstances needed to happen before Sita finally chose me.`,
                                 dotKeys: {
@@ -898,6 +929,7 @@ export default {
                         `on`,
                         {
                             anchor: `repeat forevermore`,
+                            todo: true,
                             card: {
                                 description: `As I was making this album, a thought occurred to me. Like Rama, I too am now doomed to repeat my failures, as the story of how I betrayed my Sita is endlessly retold.`,
                                 dotKeys: {
@@ -926,6 +958,7 @@ export default {
                         `your idol who riled you when you saw that you`,
                         {
                             anchor: `two were tied`,
+                            todo: true,
                             card: {
                                 description: `While Sita had hoped for us to be tied in a matrimonial sense, I chafed that we were also tied in a competitive sense. Between the two of us, I had fewer past romances to speak of, and this felt like a threat.`,
                                 dotKeys: {
@@ -951,6 +984,7 @@ export default {
                         {
                             // NOTE: I changed "duel" to "dual" here.
                             anchor: `dual match`,
+                            todo: true,
                             card: {
                                 description: `To onlookers, Sita and I seemed like the perfect fit for each other. But to me, our relationship was a zero-sum "duel" match that only one of us could win.`,
                                 dotKeys: {
@@ -968,6 +1002,7 @@ export default {
                         `and so one night you`,
                         {
                             anchor: `chalked the sidewalks`,
+                            todo: true,
                             card: {
                                 description: `One night, my friends and I got drunk and decided to tag the streets with fluorescent sidewalk chalk. Since I didn't want anyone to crowd out my artwork, I ran ahead of the group.`,
                                 dotKeys: {
@@ -979,6 +1014,7 @@ export default {
                         {
                             anchor: `Valmiki's chant`,
                             properNoun: true,
+                            todo: true,
                             card: {
                                 description: [
                                     {
@@ -1008,6 +1044,7 @@ export default {
                         `When`,
                         {
                             anchor: `wakened from the siren`,
+                            todo: true,
                             cards: [
                                 {
                                     description: `Having lost sight of the group, I ended up passing out on the sidewalk. An ambulance siren jolted me awake.`,
@@ -1039,6 +1076,7 @@ export default {
                         `, you found spelled out in`,
                         {
                             anchor: `dead ants`,
+                            todo: true,
                             cards: [
                                 {
                                     description: `My sidewalk art had killed off some ants, whose dead bodies formed an outline around what I'd drunkenly scrawled in chalk.`,
@@ -1061,6 +1099,7 @@ export default {
                         `:`,
                         {
                             anchor: `____`,
+                            todo: true,
                             card: {
                                 description: `And what I'd scrawled was… Mara's name. No cliffhanger here. "M" just set a precedent for me to be gun-shy about mentioning her in my lyrics.`,
                                 dotKeys: {
@@ -1085,6 +1124,7 @@ export default {
                         `No`,
                         {
                             anchor: `well worn sari`,
+                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -1111,6 +1151,7 @@ export default {
                         `could sway you from a`,
                         {
                             anchor: `fairer marathon`,
+                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -1146,6 +1187,7 @@ export default {
                             `Your`,
                             {
                                 anchor: `dulling gold`,
+                                todo: true,
                                 card: {
                                     description: `My once treasured bond with Sita had lost its luster, even if only by my neglect.`,
                                     dotKeys: {
@@ -1172,6 +1214,7 @@ export default {
                         `Stubborn`,
                         {
                             anchor: `harpies`,
+                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -1191,6 +1234,7 @@ export default {
                         `can't draw this contest`,
                         {
                             anchor: `to be one`,
+                            todo: true,
                             card: {
                                 description: `Or else, a contest to be "won."`,
                                 dotKeys: {
@@ -1211,6 +1255,7 @@ export default {
                             `…`,
                             {
                                 anchor: `traded in`,
+                                todo: true,
                                 card: {
                                     description: `Like shiny new "bronzes" placed next to a gold trophy on the shelf, these other women were never more desirable than Sita in hindsight. They thrilled me only because I'd won them recently.`,
                                     dotKeys: {
@@ -1222,6 +1267,7 @@ export default {
                             `for the`,
                             {
                                 anchor: `trophy blondes`,
+                                todo: true,
                                 cards: [
                                     {
                                         description: `To add insult to injury, all the women I left Sita for were white, which bothered her greatly. In my defense, this wasn't by design. But seeing her loss as my gain, I let her believe the worst.`,
@@ -1257,6 +1303,7 @@ export default {
                         `what's left of what these`,
                         {
                             anchor: `faces you flip override`,
+                            todo: true,
                             card: {
                                 description: `My mother would sometimes ask what happened to the playful little boy she once knew, which made me wonder myself. I think I learned early on that for every situation there's an optimal person to be, and the key is to deftly juggle those various personas. So it made no sense to keep the original persona lying around if it served no other purpose.`,
                                 dotKeys: {
@@ -1273,6 +1320,7 @@ export default {
                         `and all these`,
                         {
                             anchor: `pages you've ripped`,
+                            todo: true,
                             card: {
                                 description: `My parents bemoan my eagerness to ditch past comforts for present ambitions, as if I'm tearing out pages from a scrapbook to free up space for new inserts.`,
                                 dotKeys: {
@@ -1308,6 +1356,7 @@ export default {
                             `their`,
                             {
                                 anchor: `sun tinkles light`,
+                                todo: true,
                                 card: {
                                     description: `In the nightmare, I now ruled the neighborhood from above as a tyrant. I would shower my subjects in urine, which they lapped up as their sole means of subsistence. Now that I think about it, my brain was probably telling me to wake up and use the bathroom.`,
                                     dotKeys: {
@@ -1332,6 +1381,7 @@ export default {
                             `that`,
                             {
                                 anchor: `weave through the vines`,
+                                todo: true,
                                 card: {
                                     description: `The magic beans had sprouted into thick, twisting vines that blocked out the sky as far as my helpless subjects could see.`,
                                     dotKeys: {
@@ -1374,6 +1424,7 @@ export default {
                                 },
                                 `'s sake`,
                             ],
+                            todo: true,
                             card: {
                                 description: `My next five-year plan, like the one before it, was meant to dramatically improve my life through an overhaul of the underlying system. Since it couldn't be left half completed, there was no point in second-guessing its logic once the work was already in progress.`,
                                 dotKeys: {
@@ -1408,6 +1459,7 @@ export default {
                         lyric: [
                             {
                                 anchor: `old and subservient`,
+                                todo: true,
                                 cards: [
                                     {
                                         description: `It wasn't until college that I understood the sacrifices my parents made for me and my siblings to lead better lives than their own. But this awareness came about through coursework rather than my own lived experiences, which just added to my guilt.`,
@@ -1449,6 +1501,7 @@ export default {
                                     lyric: `Bildungsroman`,
                                 },
                             ],
+                            todo: true,
                             card: {
                                 description: [
                                     `A`,
@@ -1485,6 +1538,7 @@ export default {
                         `shouldn't you first be sure you've`,
                         {
                             anchor: `finally become someone`,
+                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -1517,6 +1571,7 @@ export default {
                             {
                                 anchor: `Rama`,
                                 properNoun: true,
+                                todo: true,
                                 card: {
                                     description: `Like Valmiki as he chanted Rama's name, I desperately want to be good again.`,
                                     dotKeys: {
@@ -1537,6 +1592,7 @@ export default {
                             `…`,
                             {
                                 anchor: `Maranatha`,
+                                todo: true,
                                 card: {
                                     description: [
                                         `But in my chant, the syllables gradually shift to form the holy name of Mara. And while Valmiki embraced Eastern devotion, salvation for me lies in the embrace of Western women. And so my chant ends on a phrase of Western faith. Occurring once in the`,
@@ -1572,6 +1628,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: [
                         `To record the gradual shift from "Rama" to "Mara" in the backing vocals, I made a`,

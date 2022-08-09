@@ -29,12 +29,14 @@ export default {
     playerStartTime: 1932.102,
     // This is a magic number adjusted by ear. In the mix, it's actually 41.66.
     mixSamplingFrequency: 41.64,
+    todo: true,
     overview: `With the Yearlings becoming a fixture in the local scene, I started to command more attention than I'd ever known, particularly from women. Yet even as my misery abated, a lingering resentment still simmered beneath. I also began to regret my relationship with Sita, which now felt like a decision I'd been coerced to make under deprived conditions from which I was now free.`,
     lyricUnits: [
         {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: [
                         {
@@ -72,6 +74,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: [
                         `A fellow dishroom worker named Owen had a`,
@@ -99,6 +102,7 @@ export default {
                         `Scrambled past this hell, where`,
                         {
                             anchor: `flagboy last fell`,
+                            todo: true,
                             card: {
                                 description: [
                                     `During the`,
@@ -126,6 +130,7 @@ export default {
                     lyric: [
                         {
                             anchor: `dragging aglets held`,
+                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -158,6 +163,7 @@ export default {
                         {
                             anchor: `Van Nuys belles`,
                             properNoun: true,
+                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -180,6 +186,7 @@ export default {
                         {
                             anchor: `lunched soundless`,
                             properNoun: true,
+                            todo: true,
                             card: {
                                 description: [
                                     `In the`,
@@ -200,6 +207,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: [
                         `So as not to wake his neighbors while recording late at night, Owen would sing in muffled tones and then double track his vocals to thicken them. I wanted to recreate this effect here, so I took notes from`,
@@ -228,6 +236,7 @@ export default {
                         `Now your`,
                         {
                             anchor: `sapling cut`,
+                            todo: true,
                             card: {
                                 description: [
                                     `A sapling that survives the winter will be rewarded with its first`,
@@ -242,6 +251,7 @@ export default {
                         `says you've`,
                         {
                             anchor: `past ring one`,
+                            todo: true,
                             card: {
                                 description: [
                                     `A`,
@@ -265,6 +275,7 @@ export default {
                         `yet— if adding up— then`,
                         {
                             anchor: `for more you'd vie`,
+                            todo: true,
                             card: {
                                 description: `But though it was a struggle, I did make it. Which means I can do it again. So why wouldn't I try? After all, each new relationship is like another tree ring, a testament to one's resilience and continued growth.`,
                                 dotKeys: {
@@ -282,6 +293,7 @@ export default {
                         {
                             anchor: `Valley of death`,
                             properNoun: true,
+                            todo: true,
                             card: {
                                 description: [
                                     `Like the six hundred who rode into the valley of death in`,
@@ -304,6 +316,7 @@ export default {
                         `you rode, so on`,
                         {
                             anchor: `spite you thrive`,
+                            todo: true,
                             card: {
                                 description: `But this casual view of my own hardship is what later enabled me to justify the pain I caused Sita.`,
                                 dotKeys: {
@@ -317,6 +330,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: [
                         `When I asked Owen to recommend some good lyricists, he pointed me to`,
@@ -361,6 +375,7 @@ export default {
                     lyric: [
                         {
                             anchor: `Feeble feeder fish`,
+                            todo: true,
                             card: {
                                 description: [
                                     `The pecking order in a tank of`,
@@ -389,6 +404,7 @@ export default {
                         `You wished a`,
                         {
                             anchor: `cancer nibbled off`,
+                            todo: true,
                             card: {
                                 description: `It was therapeutic enough to write songs about my own disappointments and dysfunctions. It felt crazy that others would credit me with giving voice to theirs as well, and that I should be granted a higher status because of it.`,
                                 dotKeys: {
@@ -418,6 +434,7 @@ export default {
                         `She braves the crowd`,
                         {
                             anchor: `filled first from sides`,
+                            todo: true,
                             cards: [
                                 {
                                     description: `A few songs into my band's set, I watch from onstage as an attractive woman and her friends make their way through a packed room.`,
@@ -442,6 +459,7 @@ export default {
                         `She might complete your`,
                         {
                             anchor: `jigsawed life`,
+                            todo: true,
                             card: {
                                 description: [
                                     `You typically work on a`,
@@ -466,6 +484,7 @@ export default {
                         `With hair of`,
                         {
                             anchor: `maraschino red`,
+                            todo: true,
                             card: {
                                 description: [
                                     `Having sworn to be ready when the next Mara shows up in my life, I notice that the latecomer's hair color matches "Mara's sheen of" red, with the brightness of a`,
@@ -490,6 +509,7 @@ export default {
                         `"`,
                         {
                             anchor: `Great show`,
+                            todo: true,
                             card: {
                                 description: `The best time to hit on someone is right after you've played a set, since they've just spent the last half hour unconsciously putting you at the center of their universe. So as expected, the redheaded woman is quite flirtatious when we chat.`,
                                 dotKeys: {
@@ -518,6 +538,7 @@ export default {
                         `and you were`,
                         {
                             anchor: `fine when you had none`,
+                            todo: true,
                             card: {
                                 description: `Things were finally looking up, so it confused me that a quiet bitterness should still remain. I suspect it's because I felt indignant for my younger self, who'd been kept for so long in the dark about how much better life could be.`,
                                 dotKeys: {
@@ -541,6 +562,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: [
                         `I recorded the drum cymbals here at an extremely low tape speed, which turned them into`,
@@ -567,6 +589,7 @@ export default {
                         `When`,
                         {
                             anchor: `religious kids mocked`,
+                            todo: true,
                             card: {
                                 description: `Some of the bullies were regular churchgoers, which had the predictable effect of discrediting their faiths in my view.`,
                                 dotKeys: {
@@ -587,6 +610,7 @@ export default {
                         `reading`,
                         {
                             anchor: `His obit not a bang`,
+                            todo: true,
                             card: {
                                 description: `But my appraisal was based on reason, not malice. If the Christian god were the one true God, then it made no sense why he would entrust the dissemination of his message to the tormentors of those he hoped to reach.`,
                                 dotKeys: {
@@ -615,6 +639,7 @@ export default {
                     lyric: [
                         {
                             anchor: `peasant discontented`,
+                            todo: true,
                             card: {
                                 description: [
                                     `The better my life got, the more unsatisfied I became. I was like the peasants of the`,
@@ -658,6 +683,7 @@ export default {
                         `and thus secure,`,
                         {
                             anchor: `must turn the cheek`,
+                            todo: true,
                             card: {
                                 description: `The letters from RI Research instructed me not to confront the bullies. Instead, I was to turn the other cheek, as Jesus had done, and take my abuse in stride. My exalted place in the universe necessarily asked of me to be the bigger person.`,
                                 dotKeys: {
@@ -677,6 +703,7 @@ export default {
                     lyric: [
                         {
                             anchor: `only to crack`,
+                            todo: true,
                             card: {
                                 description: `Yet even as reason disproved the faiths of my tormentors, it also discredited my own as a Beyonder. When so many rival claims to the truth abound, what sane person would stay loyal to a belief that promises zero community and only endless grief?`,
                                 dotKeys: {
@@ -688,6 +715,7 @@ export default {
                         `,`,
                         {
                             anchor: `sprawled where they stood`,
+                            todo: true,
                             card: {
                                 description: `And while every beatdown I suffered was a serious blow to my mental state, the bullies continued to enjoy greater happiness and social standing. My belief as a Beyonder couldn't survive the harsh realization that nature favors its bullies.`,
                                 dotKeys: {
@@ -716,6 +744,7 @@ export default {
                         `weren't they`,
                         {
                             anchor: `right to take what's theirs`,
+                            todo: true,
                             card: {
                                 description: `As opportunities for social advancement opened up for me, I could look back and even sympathize with the bullies by putting myself in their shoes. After all, in a world that roots for the strong, who wouldn't readily take all the means available to avoid being weak?`,
                                 dotKeys: {
@@ -733,6 +762,7 @@ export default {
                         `So if you're weeping for`,
                         {
                             anchor: `poor squirrels`,
+                            todo: true,
                             card: {
                                 description: [
                                     `In the final scene of `,
@@ -756,6 +786,7 @@ export default {
                         `also weep for`,
                         {
                             anchor: `poor, poor bears`,
+                            todo: true,
                             card: {
                                 description: `His wife Alison then sighs in response, "Poor, poor bears," acknowledging that he, a bear in their mutual fantasy, is just as much a victim complying within a power dynamic over which neither possesses much control.`,
                                 dotKeys: {
@@ -780,6 +811,7 @@ export default {
                         {
                             anchor: `Red and friends`,
                             properNoun: true,
+                            todo: true,
                             card: {
                                 description: `The redheaded woman and her friends stick around as my bandmates and I load our gear into the van. During my chat with her between sets, I left open the possibility that we might all hang out after the show.`,
                                 dotKeys: {
@@ -800,6 +832,7 @@ export default {
                         `Drunk, you'd`,
                         {
                             anchor: `claim you've never loved`,
+                            todo: true,
                             card: {
                                 description: `My first songs for the band were about being unlucky in love. So as my life improved, I needed to drink further amounts of alcohol to carry on with the lie that I was still the same inexperienced kid who wrote them.`,
                                 dotKeys: {
@@ -817,6 +850,7 @@ export default {
                         `but it's too late to`,
                         {
                             anchor: `unscrew a Bud`,
+                            todo: true,
                             card: {
                                 description: [
                                     `I end up relinquishing my chance to know the redheaded woman. It's after`,
@@ -857,6 +891,7 @@ export default {
                         `'cause when you`,
                         {
                             anchor: `beg it never comes`,
+                            todo: true,
                             card: {
                                 description: [
                                     `There's no excuse for not looking out for yourself. I knew this now. So while I was justifiably angry`,

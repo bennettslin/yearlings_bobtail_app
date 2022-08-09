@@ -32,12 +32,14 @@ export default {
     mixStartTime: `0:01:11.97`,
     playerReferenceTime: 0.282,
     playerStartTime: 0.027,
+    todo: true,
     overview: `As a young child, I depended on my older sister to do most everything for me, like zipping up my jacket. One day when she wasn't around to help, I pooped my pants and had to be sent home from school.`,
     lyricUnits: [
         {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: [
                         `My parents immigrated from`,
@@ -93,6 +95,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: [
                         `Since this song is sung from the perspective of my sister as a child, I tried to recreate the feeling of childlike innocence heard in the opening measures of "`,
@@ -160,6 +163,7 @@ export default {
                         `wondering to himself, who would`,
                         {
                             anchor: `tie his shoes`,
+                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -201,6 +205,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: [
                         `My ambition for this album was to do for`,
@@ -240,6 +245,7 @@ export default {
                         `Didi, you've been following, I`,
                         {
                             anchor: `didn't want you here`,
+                            todo: true,
                             card: {
                                 description: `I often tagged along with my sister, who was fiercely protective of me. But there were times when she and her friends would insist on doing girl stuff by themselves. This always left me in a panic, since I had few playmates of my own.`,
                                 dotKeys: {
@@ -267,6 +273,7 @@ export default {
                         `Cause I get sick of hearing, "`,
                         {
                             anchor: `Zeizei`,
+                            todo: true,
                             card: {
                                 description: [
                                     `In Chinese,`,
@@ -292,6 +299,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: [
                         `I wanted this song to capture the flurry of activity and transience of emotion that a child experiences over the course of a day. So as the rhythm lurches to and from a`,
@@ -323,6 +331,7 @@ export default {
                         `Didi`,
                         {
                             anchor: `made an "accident"`,
+                            todo: true,
                             card: {
                                 description: `After pooping my pants, I continued to sit quietly at my desk. A classmate noticed the smell and informed the teacher.`,
                                 dotKeys: {
@@ -344,6 +353,7 @@ export default {
                         {
                             anchor: `Safeway paper bag`,
                             properNoun: true,
+                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -371,6 +381,7 @@ export default {
                     lyric: [
                         {
                             anchor: `decked in overalls`,
+                            todo: true,
                             card: {
                                 description: [
                                     `Since I was the smallest child in my grade, the only item of clothing that fit me was a pair of girls'`,
@@ -407,6 +418,7 @@ export default {
                         `Didi, you've`,
                         {
                             anchor: `been in the bath`,
+                            todo: true,
                             card: {
                                 description: `My mother picked me up and dropped me off at home with my grandparents, who lived with us. I remember taking a long while to bathe myself.`,
                                 dotKeys: {
@@ -450,6 +462,7 @@ export default {
                     lyric: [
                         {
                             anchor: `crooked thieves`,
+                            todo: true,
                             card: {
                                 description: ``,
                                 wormhole: `crooked_thieves`,
@@ -458,6 +471,7 @@ export default {
                         `with your`,
                         {
                             anchor: `sheriff's badge and gun`,
+                            todo: true,
                             card: {
                                 description: [
                                     `Though my mother and other Taiwanese teenagers of her generation prized all things labeled American, they didn't necessarily know what that entailed. Their only exposure was through a local bootleg industry that mainly recycled the relics of America's past. And so my sister and I grew up listening to my mother's old`,
@@ -498,6 +512,7 @@ export default {
                         `taped to all the`,
                         {
                             anchor: `girls' mirrors`,
+                            todo: true,
                             card: {
                                 description: `My sister used to cut out pictures of pop stars from teenybopper magazines and tape them to our bathroom mirror.`,
                                 dotKeys: {
@@ -518,6 +533,7 @@ export default {
                         `you'd`,
                         {
                             anchor: `finally become someone`,
+                            todo: true,
                             card: {
                                 wormhole: `finally_become_someone`,
                             },
@@ -528,6 +544,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: [
                         `To mimic the subdued twangs of`,
@@ -633,6 +650,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: [
                         `A, C, and E\u2011flat, the three keys heard thus far, also comprise three of the four major triads of an`,
@@ -652,6 +670,7 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: [
                         `As home studios became more affordable in the early 00s, I sensed that a wave of artists would soon take the field of`,
