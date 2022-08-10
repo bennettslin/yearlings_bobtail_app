@@ -32,7 +32,6 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: `This is the other song on the album that was an original Yearlings staple. As with "M," I changed the arrangement but kept the lyrics. I suppose it's telling of my relationship with Sita that I only ever wrote one romantic song for her, and it's about the dreams that would haunt me as an old man filled with regret for having lost her.`,
                     dotKeys: {
@@ -119,7 +118,6 @@ export default {
                         {
                             anchor: `El Torito`,
                             properNoun: true,
-                            todo: true,
                             card: {
                                 description: [
                                     `Sita worked as a hostess at`,
@@ -144,10 +142,9 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `We segue into the first verse with the arpeggiated chords from "Cremated," followed by the slide guitar and natural harmonics heard in "On a Golden Cord."`,
+                        `We segue into this first verse with the arpeggiated chords from "Cremated," followed by the slide guitar and natural harmonics heard in "On a Golden Cord."`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -172,7 +169,7 @@ export default {
                             anchor: `ever live another life`,
                             todo: true,
                             card: {
-                                description: `As dreams often go, I have no memory or even awareness of having lived another life in the intervening years. It's obvious that Sita and I haven't stayed together, yet I can't seem to recall any time spent apart. Of course, according to the Buddhist and Hindu faiths, I've lived many other lives quite literally, in past incarnations.`,
+                                description: `As dreams often go, I have no memory or even awareness of having lived another life in the intervening years. It's clear that Sita and I haven't stayed together, yet I can't recall any time spent apart. Of course, according to the Buddhist and Hindu faiths, I've lived many other lives quite literally, in past incarnations.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -197,7 +194,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `The pulsating`,
@@ -205,7 +201,7 @@ export default {
                             anchor: `organ`,
                             wiki: `Electric_organ`,
                         },
-                        `and slide mandolin from "Kyon?" make their appearance in the first chorus, along with the tremolo banjo and`,
+                        `and slide mandolin from "Kyon?" make a reappearance in this first chorus, along with the tremolo banjo and`,
                         {
                             anchor: `rubato`,
                             wiki: `Tempo_rubato`,
@@ -304,9 +300,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
-                    description: `Up next in the second verse are the mandolin and tin whistle from "Garryowen," followed by the high-pitched synthesizer and recorder from "Look Back in Anger."`,
+                    description: `Up next in this second verse are the mandolin and tin whistle from "Garryowen," followed by the high-pitched synthesizer and recorder from "Look Back in Anger."`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
@@ -341,10 +336,9 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `In the second chorus, the`,
+                        `In this second chorus, the`,
                         {
                             anchor: `electric sitar`,
                             wiki: `Electric_sitar`,
@@ -382,9 +376,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
-                    description: `The chord progression heard in the bridge, which I call Sita's theme, comes from the bridge in "Grasshoppers Lie Heavy." Musical texture is provided by the arpeggiated Spanish guitar from "M," followed by the melodicas evoking brass fanfare heard in "Pchelka's Starry Journey."`,
+                    description: `The chord progression heard in this bridge, which I call Sita's theme, comes from the bridge in "Grasshoppers Lie Heavy." Musical texture is provided by the arpeggiated Spanish guitar from "M," followed by the melodicas evoking brass fanfare heard in "Pchelka's Starry Journey."`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
@@ -425,7 +418,7 @@ export default {
                                         anchor: `El Cerrito`,
                                         wiki: `El_Cerrito,_California`,
                                     },
-                                    `has a sprawling hillside area with hiking trails, secluded groves, and a great view of the San Francisco Bay. In my happier days with Sita, it was a prime choice for a weekend outing.`,
+                                    `has a sprawling hillside with hiking trails, secluded groves, and a view of the San Francisco Bay. In my happier days with Sita, it was a prime choice for a weekend outing.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -467,9 +460,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
-                    description: `The third verse revisits the bowed guitars ending on scratch tones first heard in "Dear Saskia," along with the four-note motif of its refrain. These are then followed by the shrieking whistles and pitch-shifted instruments from "Ash Wednesday."`,
+                    description: `This third verse revisits the bowed guitars ending on scratch tones first heard in "Dear Saskia," along with the four-note motif of its refrain. These are then followed by the shrieking whistles and pitch-shifted instruments from "Ash Wednesday."`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
@@ -547,7 +539,7 @@ export default {
                             anchor: `electric mandolin`,
                             wiki: `Electric_mandolin`,
                         },
-                        `and saturated tape effect from "Odin" return in the third and final chorus, as well as the legato slides on palm-muted instruments from "Willy the Cocoa."`,
+                        `and saturated tape effect from "Odin" return in this third and final chorus, as well as the legato slides on palm-muted instruments from "Willy the Cocoa."`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -570,7 +562,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: `And so this final song of the album ends, with the same autoharp and glockenspiel that opened "Didi."`,
                     dotKeys: {
