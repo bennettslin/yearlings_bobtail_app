@@ -40,9 +40,8 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
-                    description: `When I was a child, a playmate once asked if I knew what cremation was. I didn't, but I assumed it must be fun and tasty. Of course, the horrifying truth was revealed to me a moment later. I thought this was the perfect metaphor for a song about the seemingly innocent day trip that ended with Miriam breaking up with me.`,
+                    description: `Once when I was a child, a playmate asked if I knew what cremation was. I didn't, but I assumed it must be fun and tasty. Of course, the horrifying truth was revealed to me a moment later. I thought this was the perfect metaphor for a song about the seemingly innocent day trip that ended with Miriam breaking up with me.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [OBSERVATION]: true,
@@ -62,7 +61,6 @@ export default {
                         lyric: [
                             {
                                 anchor: `Or another`,
-                                todo: true,
                                 card: {
                                     description: `Even if I can't be with Mara, I can still be with someone like her. Namely, Miriam.`,
                                     dotKeys: {

@@ -178,7 +178,7 @@ export default {
                             anchor: `fridge's gallery in web's wake`,
                             todo: true,
                             card: {
-                                description: `The cobwebs trailing from my clothes happen to snag some drawings of mine that were attached to the refrigerator, scattering them onto the floor.`,
+                                description: `The cobwebs trailing from my clothes happen to snag some drawings of mine that were attached to the refrigerator, causing them to scatter onto the floor.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -189,7 +189,6 @@ export default {
                     lyricRight: [
                         {
                             anchor: `Indifferent galaxies`,
-                            todo: true,
                             card: {
                                 description: [
                                     `The`,
@@ -197,7 +196,7 @@ export default {
                                         anchor: `Buddhism`,
                                         wiki: `Buddhism`,
                                     },
-                                    `of my upbringing didn't make much sense to me, partly because it clashed with the various faiths of my classmates. At the same time, it didn't make any more sense for them to be right and my parents wrong. So with all beliefs equally suspect, I could only conceive of the universe as a limitless stretch of cold, empty space, in which we live and die to no greater concern.`,
+                                    `of my upbringing didn't make much sense to me, partly because it clashed with the various faiths of my classmates. At the same time, it didn't make any more sense for them to be right, and my parents wrong. So with all beliefs equally suspect, I could only conceive of the universe as a limitless stretch of cold, empty space, in which we live and die to no greater concern.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,

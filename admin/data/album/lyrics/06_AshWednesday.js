@@ -31,7 +31,6 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         {
@@ -157,7 +156,7 @@ export default {
                                             wiki: `Ulysses_(novel)`,
                                         },
                                     },
-                                    `, which Catherine was reading at the time. Our relationship was probably doomed as soon as I made that remark, since having an illiterate boyfriend would surely be the death of her.`,
+                                    `, which Catherine was reading at the time. Our relationship was probably doomed once I made that remark, since having an illiterate boyfriend would surely be the death of her.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,

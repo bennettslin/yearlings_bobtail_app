@@ -121,7 +121,6 @@ export default {
                         `the`,
                         {
                             anchor: `valley somersaults`,
-                            todo: true,
                             card: {
                                 description: [
                                     `I grew up in the`,
@@ -179,7 +178,7 @@ export default {
                             todo: true,
                             cards: [
                                 {
-                                    description: `Every so often, a coyote would wander down from the hillsides and get hit by traffic. Its body might then lie decomposing for days.`,
+                                    description: `Every so often, a coyote would wander down from the hillside and get hit by traffic. Its body might then lie decomposing for days.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },

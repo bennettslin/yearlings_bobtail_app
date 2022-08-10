@@ -54,7 +54,7 @@ export default {
                                 wiki: `The_Basketball_Diaries_(book)`,
                             },
                         },
-                        `. It quickly became my drug of choice, since I didn't need to know any dealers. The best thing about a Robitussin trip is the`,
+                        `. It quickly became my drug of choice, since I didn't need to know any dealers. The best part of a Robitussin trip is the`,
                         {
                             anchor: `closed-eye hallucinations`,
                             wiki: `Closed-eye_hallucination`,

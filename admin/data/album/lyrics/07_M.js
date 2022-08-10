@@ -32,7 +32,6 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: `To avoid mentioning Mara by name, I came up with the song title "M," which I planned to explain by packing the lyrics with words that start with the letter M. I probably wasn't fooling anyone.`,
                     dotKeys: {
@@ -74,7 +73,12 @@ export default {
                                                 wiki: `Maravijaya_attitude`,
                                             },
                                         },
-                                        `, or "victory over Mara" in`,
+                                        `, or "victory over`,
+                                        {
+                                            anchor: `Mara`,
+                                            wiki: `Mara_(demon)`,
+                                        },
+                                        `" in`,
                                         {
                                             anchor: `Sanskrit`,
                                             wiki: `Sanskrit`,
@@ -84,12 +88,7 @@ export default {
                                             anchor: `Buddha`,
                                             wiki: `Gautama_Buddha`,
                                         },
-                                        `as he fends off temptation from the demon`,
-                                        {
-                                            anchor: `Mara`,
-                                            wiki: `Mara_(demon)`,
-                                        },
-                                        `, who personifies death. Like the Buddha, I had to summon otherworldly reserves of self-denial to get through band practice after Jacob and Mara started dating.`,
+                                        `as he fends off temptation from the demon Mara, who personifies death. Like the Buddha, I had to summon otherworldly reserves of self-denial to get through band practice after Jacob and Mara started dating.`,
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
@@ -105,7 +104,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: true,
                 card: {
-                    description: `This song is one of two on this album that was originally performed by the Yearlings. At the time, I kept its meaning a secret by disguising Mara's name in various puns. But in this recording, I exaggerated my enunciations to make the puns obvious.`,
+                    description: `This song is one of two on this album that was originally performed by the Yearlings. At the time, I kept its meaning a secret by disguising Mara's name in various puns. But in this recording, my enunciations are exaggerated to make the puns obvious.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGCRAFT]: true,
@@ -146,7 +145,7 @@ export default {
                             anchor: `sadness with patience`,
                             todo: true,
                             card: {
-                                description: `I'd spent my formative years as a child channeling my misery into various art projects, so this was all familiar terrain for me. Building up oneself to become a desirable person is really just the ultimate art project, after all.`,
+                                description: `I'd spent my formative years as a child channeling my misery into various art projects, so this was all familiar terrain for me. To build up oneself into a desirable person is really the ultimate art project, after all.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -165,7 +164,6 @@ export default {
                         `in`,
                         {
                             anchor: `five years`,
-                            todo: true,
                             card: {
                                 description: [
                                     `The`,
@@ -173,7 +171,12 @@ export default {
                                         anchor: `five-year plans`,
                                         wiki: `Five-year_plans_for_the_national_economy_of_the_Soviet_Union`,
                                     },
-                                    `of the Soviet Union were centrally organized mandates for rapid economic development. Five years thus seemed like the optimal time frame to carry out my own plan for rapid character growth.`,
+                                    `of the`,
+                                    {
+                                        anchor: `Soviet Union`,
+                                        wiki: `Soviet_Union`,
+                                    },
+                                    `were centrally organized mandates for rapid economic development. Five years thus seemed like the optimal time frame to carry out my own plan for rapid character growth.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -203,7 +206,7 @@ export default {
                             anchor: `mystery mensch`,
                             todo: true,
                             card: {
-                                description: `There was an obvious lesson to draw from the smattering of women I'd somehow managed to attract up to this point in my life. All of them had been taken in by my appearance as an artsy loner, only to be turned off after finding that nothing of greater substance lay beneath. So my mission was simply to take this mistaken assumption and make it a correct one.`,
+                                description: `There was an obvious lesson to draw from the smattering of women I'd managed to attract up to this point in my life. All of them had been taken in by my appearance as an artsy loner, only to be turned off after finding that nothing of greater substance lay beneath. So my mission was simply to turn this mistaken assumption into a correct one.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -240,7 +243,6 @@ export default {
                     lyric: [
                         {
                             anchor: `music cred`,
-                            todo: true,
                             card: {
                                 description: [
                                     `I always detected a whiff of disdain from the`,
@@ -248,7 +250,7 @@ export default {
                                         anchor: `Berkeley`,
                                         wiki: `Berkeley,_California`,
                                     },
-                                    `record store clerks who rang up my purchases. With my quest for self-betterment, I overcame my intimidation and started asking them for recommended listening.`,
+                                    `record store clerks who rang up my purchases. With my quest for self-betterment, I overcame my intimidation and started to ask them for recommended listening.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -260,7 +262,7 @@ export default {
                             anchor: `mindful manners`,
                             todo: true,
                             card: {
-                                description: `I also decided to stop using swear words. I figured it would be a definite win with any woman like Catherine who didn't curse, while the rest would find its quaintness charming.`,
+                                description: `I also decided to stop swearing. I figured it would be a definite win with any woman like Catherine who didn't curse, while the rest would find its quaintness charming.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -288,7 +290,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: `I abandoned my plan to pack the lyrics with M words after this stanza proved how unfeasible it would be to write an entire song in this manner.`,
                     dotKeys: {

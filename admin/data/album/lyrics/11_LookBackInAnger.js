@@ -115,7 +115,7 @@ export default {
                                         anchor: `color bearer`,
                                         wiki: `Standard-bearer`,
                                     },
-                                    `carried the flag of his respective side onto the battlefield. Charging headlong into a volley of musket fire while twirling a piece of cloth seemed like an apt metaphor for my high school years.`,
+                                    `carried the flag of his respective side onto the battlefield. Charging headlong into a volley of musket fire while waving a piece of cloth seemed like an apt metaphor for my high school years.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -383,7 +383,7 @@ export default {
                                         anchor: `feeder fish`,
                                         wiki: `Feeder_fish`,
                                     },
-                                    `is deceptive, since the ones least fit to be sold as prey end up living the longest. In retrospect, high school worked the same way. All the time I'd spent focusing on pet projects left me unfit to defend my place in the social hierarchy. But the artistic skills I'd developed as a result were now keeping me from being eaten alive in the real world.`,
+                                    `is deceptive, since the ones who are least fit are also the least likely to be sold as prey, and therefore end up living the longest. In retrospect, high school worked the same way. All the time I'd spent focusing on pet projects left me unfit to defend my place in the social hierarchy. But the artistic skills I'd developed as a result were now keeping me from being eaten alive in the real world.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -562,7 +562,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `I recorded the drum cymbals here at an extremely low tape speed, which turned them into`,
@@ -589,9 +588,8 @@ export default {
                         `When`,
                         {
                             anchor: `religious kids mocked`,
-                            todo: true,
                             card: {
-                                description: `Some of the bullies were regular churchgoers, which had the predictable effect of discrediting their faiths in my view.`,
+                                description: `Some of the bullies were regular churchgoers, which had the predictable effect of discrediting their faith in my view.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -610,7 +608,6 @@ export default {
                         `reading`,
                         {
                             anchor: `His obit not a bang`,
-                            todo: true,
                             card: {
                                 description: `But my appraisal was based on reason, not malice. If the Christian god were the one true God, then it made no sense why he would entrust the dissemination of his message to the tormentors of those he hoped to reach.`,
                                 dotKeys: {
@@ -639,7 +636,6 @@ export default {
                     lyric: [
                         {
                             anchor: `peasant discontented`,
-                            todo: true,
                             card: {
                                 description: [
                                     `The better my life got, the more unsatisfied I became. I was like the peasants of the`,

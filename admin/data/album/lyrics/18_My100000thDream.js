@@ -85,7 +85,6 @@ export default {
                         `My`,
                         {
                             anchor: `hundred thousandth dream`,
-                            todo: true,
                             cards: [
                                 {
                                     description: `I read once that we typically have four dreams per night. Over a lifetime of seventy years, that's about a hundred thousand dreams. So here I am, dreaming the very last dream I'll ever dream.`,
