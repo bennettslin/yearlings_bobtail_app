@@ -374,7 +374,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `Back when I was learning to play the banjo, I would strum the motions of`,
@@ -577,7 +576,6 @@ export default {
                         {
                             anchor: `Moonie wedding`,
                             properNoun: true,
-                            todo: true,
                             card: {
                                 description: [
                                     `The`,
@@ -617,7 +615,6 @@ export default {
                         {
                             anchor: `"Made in America" signs`,
                             properNoun: true,
-                            todo: true,
                             card: {
                                 description: `As a way to promote cross-cultural harmony, the pairings in these mass weddings are often international by design. Which means my Moonie bride might be a foreigner who cleverly joined the church just to start a family in America. And if so, I would be a fool to believe my "maiden Mara co-signs" the marriage license in good faith.`,
                                 dotKeys: {

@@ -264,11 +264,11 @@ export default {
                         `set to rock this pout from`,
                         {
                             anchor: `horse to chair`,
-                            todo: true,
                             card: {
                                 description: `In other words, from rocking horse to rocking chair.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
+                                    [PUN]: true,
                                 },
                             },
                         },

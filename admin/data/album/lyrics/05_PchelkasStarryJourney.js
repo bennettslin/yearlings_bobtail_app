@@ -44,7 +44,6 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `Pchelka and Mushka were dogs sent into orbit under the`,
@@ -73,7 +72,6 @@ export default {
                             `"But F., that man is the`,
                             {
                                 anchor: `worst nuisance on the beach`,
-                                todo: true,
                                 card: {
                                     description: [
                                         `In a humorous passage from`,
@@ -116,7 +114,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: true,
                 card: {
-                    description: `I wanted a kid to recite this line, but no one I knew was having kids just yet. So I had my sister do it.`,
+                    description: `I wanted a kid to recite this line, but no one I knew had one at the time. So I had my sister do it while feigning a child's voice.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
