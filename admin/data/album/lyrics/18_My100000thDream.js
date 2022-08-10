@@ -234,7 +234,6 @@ export default {
                         {
                             anchor: `Pampas`,
                             properNoun: true,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -262,7 +261,6 @@ export default {
                         `where the`,
                         {
                             anchor: `gopis`,
-                            todo: true,
                             card: {
                                 description: [
                                     `In Hindu mythology, the`,
@@ -275,7 +273,7 @@ export default {
                                         anchor: `Krishna`,
                                         wiki: `Krishna`,
                                     },
-                                    `. I don't have an explanation for what they're doing in`,
+                                    `. I don't have a good explanation for what they're doing in`,
                                     {
                                         anchor: `Argentina`,
                                         wiki: `Argentina`,

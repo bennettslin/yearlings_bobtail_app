@@ -142,7 +142,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `This song evokes the country style of my childhood hero`,
@@ -770,7 +769,6 @@ export default {
                         {
                             // NOTE: I added a hyphen..
                             anchor: `street-swept dawn`,
-                            todo: true,
                             card: {
                                 description: [
                                     `As daylight breaks, the mechanical`,

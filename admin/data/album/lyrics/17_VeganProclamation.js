@@ -128,7 +128,6 @@ export default {
                         `past the`,
                         {
                             anchor: `rape racks`,
-                            todo: true,
                             card: {
                                 description: [
                                     {

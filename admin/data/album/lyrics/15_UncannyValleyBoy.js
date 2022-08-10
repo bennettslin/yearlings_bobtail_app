@@ -164,7 +164,6 @@ export default {
                         `Rest your rump, boy, by your old`,
                         {
                             anchor: `giving tree`,
-                            todo: true,
                             card: {
                                 description: [
                                     {
@@ -191,7 +190,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Stumped`,
-                            todo: true,
                             cards: [
                                 {
                                     description: `In their claim to be stumped, my parents feign to be oblivious to the outcome of my story.`,

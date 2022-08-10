@@ -125,7 +125,7 @@ export default {
                                             anchor: `crust punks`,
                                             wiki: `Gutter_punk`,
                                         },
-                                        `who were friends of Ana's. Every so often, half of us would go out to pilfer groceries, while the other half would cook whatever we brought back into a meal for all to share. I was in the thieving group.`,
+                                        `who were friends of Ana's. Every so often, half of us would go out to pilfer groceries, while the other half would cook whatever we brought back into a meal for all to share. I was always in the thieving group.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,

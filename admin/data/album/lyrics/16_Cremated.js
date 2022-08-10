@@ -216,7 +216,6 @@ export default {
                         `to`,
                         {
                             anchor: `first switch`,
-                            todo: true,
                             card: {
                                 description: `After parking the car, Miriam flips the ignition switch to the accessory position and turns on the stereo.`,
                                 dotKeys: {
@@ -231,7 +230,6 @@ export default {
                         {
                             // NOTE: I added a hyphen in the lyrics as well.
                             anchor: `inner lotus-eater`,
-                            todo: true,
                             card: {
                                 description: [
                                     `In the`,
