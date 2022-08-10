@@ -167,7 +167,6 @@ export default {
                         {
                             // NOTE: There are actually two 'key turned's in this song?
                             anchor: `key turned`,
-                            todo: true,
                             card: {
                                 wormhole: `key_turned`,
                             },

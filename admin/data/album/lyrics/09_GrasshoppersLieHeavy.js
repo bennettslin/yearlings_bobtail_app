@@ -279,7 +279,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Down the steps`,
-                            todo: true,
                             card: {
                                 wormhole: `down_the_steppes`,
                             },
@@ -287,20 +286,19 @@ export default {
                         `to`,
                         {
                             anchor: `fetch her lancet pen`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `As a`,
+                                    `Being a`,
                                     {
                                         anchor: `diabetic`,
                                         wiki: `Diabetes`,
                                     },
-                                    `, Sita regularly checked her blood sugar level by pricking her finger with a`,
+                                    `, Sita regularly checked her blood sugar level before meals by pricking her finger with a`,
                                     {
                                         anchor: `lancing device`,
                                         wiki: `Blood_glucose_monitoring`,
                                     },
-                                    `before meals. That day, she forgot to take it with her after bussing her tray.`,
+                                    `. That day, she forgot to take it with her after busing her tray.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -603,7 +601,6 @@ export default {
                                 },
                                 `lies`,
                             ],
-                            todo: true,
                             card: {
                                 wormhole: `sunken_tirpitz`,
                             },
@@ -657,14 +654,12 @@ export default {
                     lyric: [
                         {
                             anchor: `chimneys weep`,
-                            todo: true,
                             card: {
                                 wormhole: `chimney_sweep`,
                             },
                         },
                         {
                             anchor: `sooty dust`,
-                            todo: true,
                             card: {
                                 wormhole: `suttee_dust`,
                             },
@@ -792,7 +787,6 @@ export default {
                         `as your`,
                         {
                             anchor: `heartbeats`,
-                            todo: true,
                             card: {
                                 wormhole: `harpies`,
                             },
@@ -1137,7 +1131,6 @@ export default {
                         `in the`,
                         {
                             anchor: `ever-present scent`,
-                            todo: true,
                             card: {
                                 wormhole: 'present_sent',
                             },
@@ -1160,7 +1153,6 @@ export default {
                         `Then you`,
                         {
                             anchor: `wake by a bell`,
-                            todo: true,
                             card: {
                                 wormhole: `belle`,
                             },

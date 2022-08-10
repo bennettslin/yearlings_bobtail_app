@@ -140,7 +140,6 @@ export default {
                         `A`,
                         {
                             anchor: `present sent`,
-                            todo: true,
                             card: {
                                 wormhole: `present_sent`,
                             },
