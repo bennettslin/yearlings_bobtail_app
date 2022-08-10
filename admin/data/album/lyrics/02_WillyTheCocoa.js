@@ -38,7 +38,7 @@ export default {
                 todo: true,
                 card: {
                     description: [
-                        `The kids in the neighborhood knew Willy as the "Cocoa," referring both to the`,
+                        `The kids in the neighborhood knew Willy as "the Cocoa," referring both to the`,
                         {
                             anchor: `Coke`,
                             wiki: `Coca-Cola`,
@@ -76,7 +76,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `In the past, a disabled child was sometimes thought to be a troll in disguise known as a`,
@@ -199,7 +198,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `The`,
@@ -207,7 +205,7 @@ export default {
                             anchor: `root progression`,
                             wiki: `Root_(chord)`,
                         },
-                        `here traces a zigzag in which a minor-third drop from one measure is followed by a whole-step rise to the next. At the cadence of each line, melodicas hurry to catch up by squeezing a warped version of this descending pattern into a single measure.`,
+                        `here traces a zigzag in which a minor-third drop from one measure is followed by a whole-step rise to the next. At the cadence of each line, the melodicas hurry to catch up by squeezing a warped version of this descending pattern into a single measure.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -388,10 +386,9 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `In some legends, a changeling hints at its true identity by handling common tools in a peculiar way. I figured their manner of playing instruments would be no less peculiar, so I experimented with unconventional techniques, like pairing`,
+                        `In some legends, a changeling hints at its true identity by handling common tools in a peculiar way. I figured their manner of playing instruments would be no less peculiar, so I experimented with unconventional techniques like pairing`,
                         {
                             anchor: `palm mutes`,
                             wiki: `Palm_mute`,
@@ -401,7 +398,7 @@ export default {
                             anchor: `mandolin`,
                             wiki: `Mandolin`,
                         },
-                        `here.`,
+                        `.`,
                     ],
                     dotKeys: {
                         [OBSERVATION]: true,
@@ -542,7 +539,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `I first learned of`,
@@ -550,7 +546,7 @@ export default {
                             anchor: `autism`,
                             wiki: `Autism`,
                         },
-                        `when I overheard my parents talk about my brother's condition in their Taiwanese accents. The next day, I explained to classmates that my brother was "artistic." So I wanted the lyrics for this song to explore ways in which a child's mishearings of adult conversation might lead to roundabout understanding.`,
+                        `when I overheard my parents talk about my brother's condition in their Taiwanese accents. The next day, I explained to classmates that my brother was "artistic." So I wanted the lyrics for this song to explore how a child's mishearing of adult conversation might lead to roundabout understanding.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -1003,7 +999,7 @@ export default {
                             anchor: `electric guitar`,
                             wiki: `Electric_guitar`,
                         },
-                        `riff here, I used both a`,
+                        `riff heard here, I used both a`,
                         {
                             anchor: `slide`,
                             wiki: `Steel_bar`,

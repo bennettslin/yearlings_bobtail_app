@@ -95,10 +95,9 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `Since this song is sung from the perspective of my sister as a child, I tried to recreate the feeling of childlike innocence heard in the opening measures of "`,
+                        `Since this song is sung from the perspective of my sister as a child, I wanted to recreate the feeling of childlike innocence heard in the opening measures of "`,
                         {
                             anchor: `Wouldn't It Be Nice`,
                             wiki: `Wouldn't_It_Be_Nice`,
@@ -116,7 +115,7 @@ export default {
                                 wiki: `Pet_Sounds`,
                             },
                         },
-                        `. And so the introduction begins with an`,
+                        `. And so here the introduction begins with an`,
                         {
                             anchor: `autoharp`,
                             wiki: `Autoharp`,
@@ -299,7 +298,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `I wanted this song to capture the flurry of activity and transience of emotion that a child experiences over the course of a day. So as the rhythm lurches to and from a`,
@@ -544,7 +542,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `To mimic the subdued twangs of`,
@@ -650,7 +647,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `A, C, and E\u2011flat, the three keys heard thus far, also comprise three of the four major triads of an`,

@@ -29,14 +29,13 @@ export default {
     mixStartTime: `0:01:29.52`,
     playerStartTime: 1478.233,
     todo: true,
-    overview: `I worked my way through college as a dishwasher in a cafeteria, which is how I met Sita. After I scared her off, we didn't speak for months. But she eventually reached out again, and we became friends. As I got over my rough start with playing live shows, and as I continued to struggle with dating women, Sita lent her moral support, though a part of me always wanted something more. At some point, she started to like me back. I'm still not sure how.`,
+    overview: `I worked my way through college as a dishwasher in a cafeteria, which is how I met Sita. After I scared her off, we didn't speak for months. But she eventually reached out again, and we became friends. As I got off to a rocky start with playing live shows, and as I continued to struggle with dating women, Sita lent her moral support, though a part of me always wanted something more. At some point, she started to like me back. I'm still not sure how.`,
     isDoublespeaker: true,
     lyricUnits: [
         {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 cards: [
                     {
                         description: [
@@ -80,7 +79,7 @@ export default {
                         },
                     },
                     {
-                        description: `I chose this song title because I liked the image of two grasshoppers hidden in the tall grass, each hesitantly signaling to the other, with neither wishing to be first to reveal itself.`,
+                        description: `I chose this song title because I liked the image of two grasshoppers hidden in the tall grass, each hesitantly signaling to the other, with neither wishing to be the first to reveal itself.`,
                         dotKeys: {
                             [OBSERVATION]: true,
                         },
@@ -104,7 +103,7 @@ export default {
                                 todo: true,
                                 cards: [
                                     {
-                                        description: `In high school I carried on as the same wretched nobody that I was in middle school. It just didn't seem possible to remake myself into someone new while surrounded by all the same classmates. But all the while I was crafting my future identity as a self-assured artist, and it was raring to go as soon as I could leave Los Angeles.`,
+                                        description: `In high school, I carried on as the same wretched nobody that I'd been in middle school. It just didn't seem possible to remake myself into someone new while surrounded by all the same classmates. But all the while I was crafting my future identity as a self-assured artist, which was raring to go as soon as I could leave Los Angeles.`,
                                         dotKeys: {
                                             [BACKSTORY]: true,
                                             [OBSERVATION]: true,
@@ -122,7 +121,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `Just as`,

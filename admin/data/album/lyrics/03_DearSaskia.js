@@ -61,7 +61,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `As a teenager, I tried to figure out how the`,
@@ -137,7 +136,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: true,
                 card: {
-                    description: `I wanted the vocals in this song to sound sickly, so I held off on recording them until I could come down with a cold. Which was guaranteed to happen at some point during the five years I worked on this album.`,
+                    description: `I wanted the vocals for this song to sound sickly, so I held off on recording them until I came down with a cold. Which was guaranteed to happen at some point during the five years I worked on this album.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
@@ -382,7 +381,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `To match the passive-aggressive mood of the lyrics, the sentimental string harmonies in the chorus abruptly give way to`,
@@ -710,9 +708,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
-                    description: `It's easy to write songs by playing a four-chord loop, then layering a melody on top. But my theory was that the Beatles wrote the melody and chords together at once, so I aimed to do the same. I was always happiest with results like the chorus here, where the music meanders for a long stretch without repeating.`,
+                    description: `It's easy to write songs by playing a four-chord loop, then layering a melody on top. But my theory was that the Beatles wrote the melody and chords together at once, one measure at a time, so I tried to do the same. I was always happiest with results like the chorus here, where the music meanders for a long stretch without repeating.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
@@ -803,7 +800,6 @@ export default {
                         `on`,
                         {
                             anchor: `rat turds choked`,
-                            todo: true,
                             card: {
                                 description: `I wasn't sure how to end a song about a painful stage in my life that now seems comical in retrospect. I decided to err on the side of humor.`,
                                 dotKeys: {
@@ -818,9 +814,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
-                    description: `While the first chorus of this song is grounded in the key of C, the second chorus collapses under the weight of my despondence and settles into the key of B\u2011flat, a whole step lower. But now as I commit to powering through the coming semester, this third and final chorus rises up a half step to the key of D\u2011flat.`,
+                    description: `While the first chorus of this song is grounded in the key of C, the second chorus collapses under the weight of my despondence and settles into the key of B\u2011flat, a whole step lower. But now I commit to powering through the coming semester, and so this third and final chorus rises up a half step to the key of D\u2011flat.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
