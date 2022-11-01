@@ -8,5 +8,6 @@
         rgba(0, 0, 0, 0)
     );
 
-    mask-image: $gradient__scroll;
+    // TODO: Comment this out for now due to Chrome bug.
+    // mask-image: $gradient__scroll;
 }
