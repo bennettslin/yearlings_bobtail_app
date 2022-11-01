@@ -63,7 +63,7 @@ export default getFormattedSlideMetadata([
                 paragraph: `But interdependent bands see a better way. If society is lopsided, then someone out there is strong where you're weak, and weak where you're strong. And for bands, that someone is a record label. Marketing and distribution may be a band's weakness, but it's a label's strength. A label can do the administrative work for far less effort.`,
             },
             {
-                paragraph: `Okay, you might ask, but why would they? Every indie artist arrives at the negotiating table having done the administrative work already. What label wouldn't prefer a deal in which their job is already done?`,
+                paragraph: `Okay, you might ask, but why would they? Every indie artist arrives at the negotiating table having done the administrative work already. What label wouldn't prefer a deal in which their job is already done for them?`,
             },
         ],
     },
@@ -270,7 +270,7 @@ export default getFormattedSlideMetadata([
             },
             {
                 paragraph: [
-                    `The lyrics and music scores are solid, however. With label support, I'd love to rerecord the songs with a full band and guest artists, and to redo the comic book as a collaborative effort with skilled illustrators. So if you're curious what our next album will be after`,
+                    `The lyrics and music scores are solid, however. With label support, I'd love to remake the songs with a full band and guest artists, and to redo the comic book as a collaborative effort with skilled illustrators. So if you're curious what our next album will be after`,
                     {
                         isItalic: true,
                         lyric: `Yearling's Bobtail`,
@@ -410,7 +410,7 @@ export default getFormattedSlideMetadata([
                         isItalic: true,
                         lyric: `Yearling's Bobtail`,
                     },
-                    `); another two albums already raring to go; a system for sustaining a modern renaissance (BYCombo); tools to help others master the nuts and bolts of songwriting (Bobtail Dominoes, Bobtail Method); and a music theory worthy of academic prestige (amnesticism).`,
+                    `); the next two albums raring to go; a system for sustaining a modern renaissance (BYCombo); tools to help others master the nuts and bolts of songwriting (Bobtail Dominoes, Bobtail Method); and a music theory worthy of academic prestige (amnesticism).`,
                 ],
             },
             {
