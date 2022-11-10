@@ -256,7 +256,10 @@ export default getFormattedSlideMetadata([
         ],
     },
     {
-        title: `Rosalind Franklin album`,
+        title: {
+            isItalic: true,
+            lyric: `Album for Rosalind Franklin`,
+        },
         body: [
             {
                 paragraph: [
@@ -384,20 +387,14 @@ export default getFormattedSlideMetadata([
         ],
     },
     {
-        // TODO: Add Sibelius images.
-        title: `Erhu album`,
+        title: {
+            isItalic: true,
+            lyric: `A People's History of Indie Rock`,
+        },
         body: [
             {
-                paragraph: `Our third album will feature an erhu as the lead instrument. The melodies and chord progressions are already written. And if you'll humor me, I think they're some of my best! Coming up with the lyrics and recording the songs will be a collaborative effort with the entire band.`,
+                paragraph: `I've been observing and analyzing indie rock's dysfunctions for half my life, and now there's no better way to discuss my findings than through a concept album. The melodies and chord progressions are already written— and if you'll humor me, I think they're some of my best! Coming up with the lyrics and recording the songs will be a collaborative effort with the entire band.`,
             },
-        ],
-        footnote: [
-            `More on the`,
-            {
-                anchor: `erhu`,
-                href: `https://en.wikipedia.org/wiki/Erhu`,
-            },
-            `, also known as the Chinese violin.`,
         ],
     },
     {
