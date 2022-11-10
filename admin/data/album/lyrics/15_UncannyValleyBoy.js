@@ -1268,7 +1268,7 @@ export default {
                                 todo: true,
                                 cards: [
                                     {
-                                        description: `To add insult to injury, all the women I left Sita for were white, which bothered her greatly. In my defense, this wasn't by design. But seeing her loss as my gain, I let her believe the worst.`,
+                                        description: `To add insult to injury, all the women I left Sita for were White, which bothered her greatly. In my defense, this wasn't by design. But seeing her loss as my gain, I let her believe the worst.`,
                                         dotKeys: {
                                             [BACKSTORY]: true,
                                         },
