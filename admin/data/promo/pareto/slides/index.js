@@ -205,32 +205,32 @@ export default getFormattedSlideMetadata([
             `But his argument makes it clear that indie artists, who rely heavily on fan support, will be among the first to be forgotten. No future audience ever supports an artist from its past, after all.`,
         ],
     },
-    {
-        title: `A word on Web3`,
-        body: [
-            {
-                paragraph: `A quick word here for Web3 enthusiasts. Yes, Web3 is optimal for monetization. But it builds upon Web2, the optimal technology for creators. So the artists who truly stand to gain from Web3 will be those who see what's truly being offered by Web2. For any artist who doesn't— who only sees Web2 as a way to monetize their work on platforms created by others— Web3 will just be more of the same.`,
-            },
-            {
-                paragraph: [
-                    `But`,
-                    {
-                        isItalic: true,
-                        lyric: `Yearling's Bobtail`,
-                    },
-                    `doesn't empower anyone else's platform; it's a Web2 creation of its own. Which means the Bobtail Yearlings are now well placed to monetize in Web3. And if you sign us, we'll be happy to help your other bands get to this place as well.`,
-                ],
-            },
-        ],
-        footnote: [
-            `The New York Times has a great primer on`,
-            {
-                anchor: `Web3`,
-                href: `https://www.nytimes.com/interactive/2022/03/18/technology/web3-definition-internet.html`,
-            },
-            `.`,
-        ],
-    },
+    // {
+    //     title: `A word on Web3`,
+    //     body: [
+    //         {
+    //             paragraph: `A quick word here for Web3 enthusiasts. Yes, Web3 is optimal for monetization. But it builds upon Web2, the optimal technology for creators. So the artists who truly stand to gain from Web3 will be those who see what's truly being offered by Web2. For any artist who doesn't— who only sees Web2 as a way to monetize their work on platforms created by others— Web3 will just be more of the same.`,
+    //         },
+    //         {
+    //             paragraph: [
+    //                 `But`,
+    //                 {
+    //                     isItalic: true,
+    //                     lyric: `Yearling's Bobtail`,
+    //                 },
+    //                 `doesn't empower anyone else's platform; it's a Web2 creation of its own. Which means the Bobtail Yearlings are now well placed to monetize in Web3. And if you sign us, we'll be happy to help your other bands get to this place as well.`,
+    //             ],
+    //         },
+    //     ],
+    //     footnote: [
+    //         `The New York Times has a great primer on`,
+    //         {
+    //             anchor: `Web3`,
+    //             href: `https://www.nytimes.com/interactive/2022/03/18/technology/web3-definition-internet.html`,
+    //         },
+    //         `.`,
+    //     ],
+    // },
     {
         title: `Bobtail Dominoes`,
         body: [
@@ -268,7 +268,7 @@ export default getFormattedSlideMetadata([
                         isItalic: true,
                         lyric: `Yearling's Bobtail`,
                     },
-                    `went nowhere, I decided to create a comic book album about the life of English biophysicist Rosalind Franklin. But since I had to make do with no partners and few resources, I was unhappy with how the comic book and the recordings turned out. The project was completely ignored upon its release, so this was just as well.`,
+                    `went nowhere, I decided to create a comic book album about the life of English biochemist Rosalind Franklin. But since I had to make do with no partners and few resources, I was unhappy with how the comic book and the recordings turned out. The project was completely ignored upon its release, so this was just as well.`,
                 ],
             },
             {
