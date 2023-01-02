@@ -393,7 +393,7 @@ export default getFormattedSlideMetadata([
         },
         body: [
             {
-                paragraph: `I've been observing and analyzing indie rock's dysfunctions for half my life, and now there's no better way to discuss my findings than through a concept album. The melodies and chord progressions are already written— and if you'll humor me, I think they're some of my best! Coming up with the lyrics and recording the songs will be a collaborative effort with the entire band.`,
+                paragraph: `I've been observing and analyzing indie rock's dysfunctions for half my life, and now there's no better way to share my findings than through a concept album. The melodies and chord progressions are already written— and if you'll humor me, I think they're some of my best! Coming up with the lyrics and recording the songs will be a collaborative effort with the entire band.`,
             },
         ],
     },
