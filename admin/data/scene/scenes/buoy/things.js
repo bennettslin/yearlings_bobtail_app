@@ -5,7 +5,7 @@ import {
 } from '../../../../../src/constants/scene/things'
 import { DREAM_BUOY } from '../../../../../src/constants/scene/things/bubbles'
 import {
-    BENNETT_ODIN_DEPTHS,
+    BENNETT_ODIN_BUOY,
     SEA_SERPENT_LEFT,
     SEA_SERPENT_RIGHT,
 } from '../../../../../src/constants/scene/things/cardboards'
@@ -20,8 +20,10 @@ import {
 export default {
     [BUBBLE]: {
         [DREAM_BUOY]: {
-            yIndex: 5,
-            xPosition: 5.5,
+            yIndex: 0,
+            xPosition: 2.5,
+            scaleFactor: 0.7,
+            zOffset: 2.5,
         },
     },
     [CARDBOARD]: {
@@ -30,7 +32,7 @@ export default {
             xPosition: 1,
             zOffset: 0.5,
         },
-        [BENNETT_ODIN_DEPTHS]: {
+        [BENNETT_ODIN_BUOY]: {
             yIndex: 0,
             xPosition: 2.5,
             scaleFactor: 0.7,

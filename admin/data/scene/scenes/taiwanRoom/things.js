@@ -11,8 +11,8 @@ import {
     DREAM_MAT_ODIN,
 } from '../../../../../src/constants/scene/things/bubbles'
 import {
-    BENNETT_TAIWAN_STAIRS,
-    ODIN_TAIWAN_STAIRS,
+    BENNETT_MAT,
+    ODIN_MAT,
     PAINTING_EMPRESS__MAT,
     PAINTING_GODDESS__MAT,
 } from '../../../../../src/constants/scene/things/cardboards'
@@ -27,20 +27,20 @@ import { BUDDHA_STAND } from '../../../../../src/constants/scene/things/panels'
 export default {
     [BUBBLE]: {
         [DREAM_MAT_BENNETT]: {
-            yIndex: 5,
-            xPosition: 5.5,
-        },
-        [DREAM_MAT_ODIN]: {
-            yIndex: 5,
-            xPosition: 5.5,
-        },
-    },
-    [CARDBOARD]: {
-        [BENNETT_TAIWAN_STAIRS]: {
             yIndex: 2,
             xPosition: 8.75,
         },
-        [ODIN_TAIWAN_STAIRS]: {
+        [DREAM_MAT_ODIN]: {
+            yIndex: 3,
+            xPosition: 2,
+        },
+    },
+    [CARDBOARD]: {
+        [BENNETT_MAT]: {
+            yIndex: 2,
+            xPosition: 8.75,
+        },
+        [ODIN_MAT]: {
             yIndex: 3,
             xPosition: 2,
         },

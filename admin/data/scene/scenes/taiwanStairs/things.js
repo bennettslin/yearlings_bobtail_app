@@ -6,8 +6,8 @@ import {
 } from '../../../../../src/constants/scene/things'
 import { DREAM_STAIRS } from '../../../../../src/constants/scene/things/bubbles'
 import {
-    BENNETT_TAIWAN_GATE,
-    ODIN_TAIWAN_GATE,
+    BENNETT_STAIRS,
+    ODIN_STAIRS,
     PAINTING_EMPRESS__STAIRS,
     PAINTING_GODDESS__STAIRS,
 } from '../../../../../src/constants/scene/things/cardboards'
@@ -17,17 +17,18 @@ import { IRON_GATE_LOW, TAIWAN_WINDOW__STAIRS } from '../../../../../src/constan
 export default {
     [BUBBLE]: {
         [DREAM_STAIRS]: {
-            yIndex: 5,
-            xPosition: 5.5,
-        },
-    },
-    [CARDBOARD]: {
-        [BENNETT_TAIWAN_GATE]: {
             yIndex: 1,
             xPosition: 3.75,
             zOffset: 0.2,
         },
-        [ODIN_TAIWAN_GATE]: {
+    },
+    [CARDBOARD]: {
+        [BENNETT_STAIRS]: {
+            yIndex: 1,
+            xPosition: 3.75,
+            zOffset: 0.2,
+        },
+        [ODIN_STAIRS]: {
             yIndex: 1,
             xPosition: 5.25,
         },

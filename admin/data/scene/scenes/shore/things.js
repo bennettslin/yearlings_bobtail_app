@@ -5,7 +5,7 @@ import {
     FLAT,
 } from '../../../../../src/constants/scene/things'
 import { DREAM_SHORE } from '../../../../../src/constants/scene/things/bubbles'
-import { BENNETT_ODIN_BUOY } from '../../../../../src/constants/scene/things/cardboards'
+import { BENNETT_ODIN_SHORE } from '../../../../../src/constants/scene/things/cardboards'
 import { YELLOW_TAPED_GRILL } from '../../../../../src/constants/scene/things/cutouts'
 import {
     FERRIS_WHEEL,
@@ -15,12 +15,13 @@ import {
 export default {
     [BUBBLE]: {
         [DREAM_SHORE]: {
-            yIndex: 5,
-            xPosition: 5.5,
+            yIndex: 1,
+            xPosition: 8,
+            scaleFactor: 0.6,
         },
     },
     [CARDBOARD]: {
-        [BENNETT_ODIN_BUOY]: {
+        [BENNETT_ODIN_SHORE]: {
             yIndex: 1,
             xPosition: 8,
             scaleFactor: 0.6,

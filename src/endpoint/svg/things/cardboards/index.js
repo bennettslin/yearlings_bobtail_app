@@ -3,13 +3,13 @@ import albumNas from '../../../../assets/svgs/cardboards/albumNas'
 import albumPolice from '../../../../assets/svgs/cardboards/albumPolice'
 import albumTelevision from '../../../../assets/svgs/cardboards/albumTelevision'
 import bennettMat from '../../../../assets/svgs/cardboards/bennettMat'
+import bennettOceanFloor from '../../../../assets/svgs/cardboards/bennettOceanFloor'
 import bennettOdinBuoy from '../../../../assets/svgs/cardboards/bennettOdinBuoy'
 import bennettOdinDepths from '../../../../assets/svgs/cardboards/bennettOdinDepths'
-import bennettOdinOceanFloor from '../../../../assets/svgs/cardboards/bennettOdinOceanFloor'
-import bennettOdinRickshaw from '../../../../assets/svgs/cardboards/bennettOdinRickshaw'
-import bennettShore from '../../../../assets/svgs/cardboards/bennettShore'
-import bennettTaiwanGate from '../../../../assets/svgs/cardboards/bennettTaiwanGate'
-import bennettTaiwanStairs from '../../../../assets/svgs/cardboards/bennettTaiwanStairs'
+import bennettOdinGate from '../../../../assets/svgs/cardboards/bennettOdinGate'
+import bennettOdinShore from '../../../../assets/svgs/cardboards/bennettOdinShore'
+import bennettRickshaw from '../../../../assets/svgs/cardboards/bennettRickshaw'
+import bennettStairs from '../../../../assets/svgs/cardboards/bennettStairs'
 import clipboard from '../../../../assets/svgs/cardboards/clipboard'
 import codeBox from '../../../../assets/svgs/cardboards/codeBox'
 import corkboard from '../../../../assets/svgs/cardboards/corkboard'
@@ -18,9 +18,9 @@ import dogsSpaceStation from '../../../../assets/svgs/cardboards/dogsSpaceStatio
 import earth from '../../../../assets/svgs/cardboards/earth'
 import marqueeFrame from '../../../../assets/svgs/cardboards/marqueeFrame'
 import odinMat from '../../../../assets/svgs/cardboards/odinMat'
-import odinShore from '../../../../assets/svgs/cardboards/odinShore'
-import odinTaiwanGate from '../../../../assets/svgs/cardboards/odinTaiwanGate'
-import odinTaiwanStairs from '../../../../assets/svgs/cardboards/odinTaiwanStairs'
+import odinOceanFloor from '../../../../assets/svgs/cardboards/odinOceanFloor'
+import odinRickshaw from '../../../../assets/svgs/cardboards/odinRickshaw'
+import odinStairs from '../../../../assets/svgs/cardboards/odinStairs'
 import painting from '../../../../assets/svgs/cardboards/painting'
 import paintingEmpress from '../../../../assets/svgs/cardboards/paintingEmpress'
 import paintingGoddess from '../../../../assets/svgs/cardboards/paintingGoddess'
@@ -49,13 +49,13 @@ import {
     ALBUM_POLICE,
     ALBUM_TELEVISION,
     BENNETT_MAT,
+    BENNETT_OCEAN_FLOOR,
     BENNETT_ODIN_BUOY,
     BENNETT_ODIN_DEPTHS,
-    BENNETT_ODIN_OCEAN_FLOOR,
-    BENNETT_ODIN_RICKSHAW,
-    BENNETT_SHORE,
-    BENNETT_TAIWAN_GATE,
-    BENNETT_TAIWAN_STAIRS,
+    BENNETT_ODIN_GATE,
+    BENNETT_ODIN_SHORE,
+    BENNETT_RICKSHAW,
+    BENNETT_STAIRS,
     CLIPBOARD,
     CODE_BOX,
     CORKBOARD__DISHROOM,
@@ -68,9 +68,9 @@ import {
     MARQUEE_FRAME__MARA_GLADIATOR,
     MARQUEE_FRAME__MARA_MEMENTO,
     ODIN_MAT,
-    ODIN_SHORE,
-    ODIN_TAIWAN_GATE,
-    ODIN_TAIWAN_STAIRS,
+    ODIN_OCEAN_FLOOR,
+    ODIN_RICKSHAW,
+    ODIN_STAIRS,
     PAINTING,
     PAINTING_EMPRESS__MAT,
     PAINTING_EMPRESS__STAIRS,
@@ -104,13 +104,13 @@ export default {
     [ALBUM_POLICE]: albumPolice,
     [ALBUM_TELEVISION]: albumTelevision,
     [BENNETT_MAT]: bennettMat,
+    [BENNETT_OCEAN_FLOOR]: bennettOceanFloor,
     [BENNETT_ODIN_BUOY]: bennettOdinBuoy,
     [BENNETT_ODIN_DEPTHS]: bennettOdinDepths,
-    [BENNETT_ODIN_OCEAN_FLOOR]: bennettOdinOceanFloor,
-    [BENNETT_ODIN_RICKSHAW]: bennettOdinRickshaw,
-    [BENNETT_SHORE]: bennettShore,
-    [BENNETT_TAIWAN_GATE]: bennettTaiwanGate,
-    [BENNETT_TAIWAN_STAIRS]: bennettTaiwanStairs,
+    [BENNETT_ODIN_GATE]: bennettOdinGate,
+    [BENNETT_ODIN_SHORE]: bennettOdinShore,
+    [BENNETT_RICKSHAW]: bennettRickshaw,
+    [BENNETT_STAIRS]: bennettStairs,
     [CLIPBOARD]: clipboard,
     [CODE_BOX]: codeBox,
     [CORKBOARD__DISHROOM]: corkboard,
@@ -123,9 +123,9 @@ export default {
     [MARQUEE_FRAME__MARA_GLADIATOR]: marqueeFrame,
     [MARQUEE_FRAME__MARA_MEMENTO]: marqueeFrame,
     [ODIN_MAT]: odinMat,
-    [ODIN_SHORE]: odinShore,
-    [ODIN_TAIWAN_GATE]: odinTaiwanGate,
-    [ODIN_TAIWAN_STAIRS]: odinTaiwanStairs,
+    [ODIN_OCEAN_FLOOR]: odinOceanFloor,
+    [ODIN_RICKSHAW]: odinRickshaw,
+    [ODIN_STAIRS]: odinStairs,
     [PAINTING]: painting,
     [PAINTING_EMPRESS__MAT]: paintingEmpress,
     [PAINTING_EMPRESS__STAIRS]: paintingEmpress,

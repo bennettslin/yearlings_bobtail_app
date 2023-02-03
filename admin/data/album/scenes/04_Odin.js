@@ -48,30 +48,30 @@ import {
     SHORE_RICKSHAW_BACKDROP,
     TAIWAN_STAIRS_BACKDROP,
 } from '../../../../src/constants/scene/things/backdrops'
-// import {
-//     DREAM_BUOY,
-//     DREAM_DEPTHS,
-//     DREAM_GATE,
-//     DREAM_MAT_BENNETT,
-//     DREAM_MAT_ODIN,
-//     DREAM_OCEAN_FLOOR,
-//     DREAM_RICKSHAW,
-//     DREAM_SHORE,
-//     DREAM_STAIRS,
-// } from '../../../../src/constants/scene/things/bubbles'
 import {
-    BENNETT_MAT,
+    DREAM_BUOY,
+    DREAM_DEPTHS,
+    DREAM_GATE,
+    DREAM_MAT_BENNETT,
+    DREAM_MAT_ODIN,
+    DREAM_OCEAN_FLOOR,
+    DREAM_RICKSHAW,
+    DREAM_SHORE,
+    DREAM_STAIRS,
+} from '../../../../src/constants/scene/things/bubbles'
+import {
+    BENNETT_OCEAN_FLOOR,
+    BENNETT_ODIN_SHORE,
     BENNETT_ODIN_BUOY,
     BENNETT_ODIN_DEPTHS,
-    BENNETT_ODIN_OCEAN_FLOOR,
-    BENNETT_ODIN_RICKSHAW,
-    BENNETT_SHORE,
-    BENNETT_TAIWAN_GATE,
-    BENNETT_TAIWAN_STAIRS,
+    BENNETT_ODIN_GATE,
+    BENNETT_RICKSHAW,
+    BENNETT_STAIRS,
+    BENNETT_MAT,
+    ODIN_OCEAN_FLOOR,
+    ODIN_RICKSHAW,
+    ODIN_STAIRS,
     ODIN_MAT,
-    ODIN_SHORE,
-    ODIN_TAIWAN_GATE,
-    ODIN_TAIWAN_STAIRS,
     PAINTING_EMPRESS__MAT,
     PAINTING_EMPRESS__STAIRS,
     PAINTING_GODDESS__MAT,
@@ -128,12 +128,12 @@ export default [
                 },
             },
             [BUBBLE]: {
-                // [DREAM_MAT_BENNETT]: true,
-                // [DREAM_MAT_ODIN]: true,
+                [DREAM_MAT_BENNETT]: true,
+                [DREAM_MAT_ODIN]: true,
             },
             [CARDBOARD]: {
-                [BENNETT_TAIWAN_STAIRS]: true,
-                [ODIN_TAIWAN_STAIRS]: true,
+                [BENNETT_MAT]: true,
+                [ODIN_MAT]: true,
                 [PAINTING_EMPRESS__MAT]: true,
                 [PAINTING_GODDESS__MAT]: true,
             },
@@ -168,11 +168,11 @@ export default [
                 [TAIWAN_STAIRS_BACKDROP]: true,
             },
             [BUBBLE]: {
-                // [DREAM_STAIRS]: true,
+                [DREAM_STAIRS]: true,
             },
             [CARDBOARD]: {
-                [BENNETT_TAIWAN_GATE]: true,
-                [ODIN_TAIWAN_GATE]: true,
+                [BENNETT_STAIRS]: true,
+                [ODIN_STAIRS]: true,
                 [PAINTING_EMPRESS__STAIRS]: true,
                 [PAINTING_GODDESS__STAIRS]: true,
             },
@@ -201,10 +201,10 @@ export default [
                 [MOUNTAIN_TAIWAN_BACKDROP]: true,
             },
             [BUBBLE]: {
-                // [DREAM_GATE]: true,
+                [DREAM_GATE]: true,
             },
             [CARDBOARD]: {
-                [BENNETT_ODIN_RICKSHAW]: true,
+                [BENNETT_ODIN_GATE]: true,
             },
             [CUTOUT]: {
                 [TAIWAN_SHRUB]: true,
@@ -237,11 +237,11 @@ export default [
                 [SHORE_RICKSHAW_BACKDROP]: true,
             },
             [BUBBLE]: {
-                // [DREAM_RICKSHAW]: true,
+                [DREAM_RICKSHAW]: true,
             },
             [CARDBOARD]: {
-                [BENNETT_SHORE]: true,
-                [ODIN_SHORE]: true,
+                [BENNETT_RICKSHAW]: true,
+                [ODIN_RICKSHAW]: true,
             },
             [FLAT]: {
                 [RICKSHAW_TOWN]: true,
@@ -264,10 +264,10 @@ export default [
                 [SHORE_BUOY_BACKDROP]: true,
             },
             [BUBBLE]: {
-                // [DREAM_SHORE]: true,
+                [DREAM_SHORE]: true,
             },
             [CARDBOARD]: {
-                [BENNETT_ODIN_BUOY]: true,
+                [BENNETT_ODIN_SHORE]: true,
             },
             [CUTOUT]: {
                 [YELLOW_TAPED_GRILL]: true,
@@ -291,10 +291,10 @@ export default [
                 },
             },
             [BUBBLE]: {
-                // [DREAM_BUOY]: true,
+                [DREAM_BUOY]: true,
             },
             [CARDBOARD]: {
-                [BENNETT_ODIN_DEPTHS]: true,
+                [BENNETT_ODIN_BUOY]: true,
                 [SEA_SERPENT_LEFT]: true,
                 [SEA_SERPENT_RIGHT]: true,
             },
@@ -323,10 +323,10 @@ export default [
                 [OCEAN_BOTTOM_FAR]: true,
             },
             [BUBBLE]: {
-                // [DREAM_DEPTHS]: true,
+                [DREAM_DEPTHS]: true,
             },
             [CARDBOARD]: {
-                [BENNETT_ODIN_OCEAN_FLOOR]: true,
+                [BENNETT_ODIN_DEPTHS]: true,
             },
             [FLAT]: {
                 [OCEAN_BOTTOM_MIDDLE]: true,
@@ -350,11 +350,11 @@ export default [
                 [OCEAN_FLOOR_FAR]: true,
             },
             [BUBBLE]: {
-                // [DREAM_OCEAN_FLOOR]: true,
+                [DREAM_OCEAN_FLOOR]: true,
             },
             [CARDBOARD]: {
-                [BENNETT_MAT]: true,
-                [ODIN_MAT]: true,
+                [BENNETT_OCEAN_FLOOR]: true,
+                [ODIN_OCEAN_FLOOR]: true,
             },
             [PANEL]: {
                 [OCEAN_CAVE_INTERIOR]: true,

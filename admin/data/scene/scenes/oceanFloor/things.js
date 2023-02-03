@@ -5,8 +5,8 @@ import {
 } from '../../../../../src/constants/scene/things'
 import { DREAM_OCEAN_FLOOR } from '../../../../../src/constants/scene/things/bubbles'
 import {
-    BENNETT_MAT,
-    ODIN_MAT,
+    BENNETT_OCEAN_FLOOR,
+    ODIN_OCEAN_FLOOR,
 } from '../../../../../src/constants/scene/things/cardboards'
 import {
     OCEAN_CAVE_INTERIOR,
@@ -16,17 +16,18 @@ import {
 export default {
     [BUBBLE]: {
         [DREAM_OCEAN_FLOOR]: {
-            yIndex: 5,
-            xPosition: 5.5,
-        },
-    },
-    [CARDBOARD]: {
-        [BENNETT_MAT]: {
             yIndex: 2,
             xPosition: 2.6,
             scaleFactor: 0.8,
         },
-        [ODIN_MAT]: {
+    },
+    [CARDBOARD]: {
+        [BENNETT_OCEAN_FLOOR]: {
+            yIndex: 2,
+            xPosition: 2.6,
+            scaleFactor: 0.8,
+        },
+        [ODIN_OCEAN_FLOOR]: {
             yIndex: 2,
             xPosition: 0.8,
             scaleFactor: 0.8,

@@ -6,7 +6,7 @@ import {
     FLAT,
 } from '../../../../../src/constants/scene/things'
 import { DREAM_GATE } from '../../../../../src/constants/scene/things/bubbles'
-import { BENNETT_ODIN_RICKSHAW } from '../../../../../src/constants/scene/things/cardboards'
+import { BENNETT_ODIN_GATE } from '../../../../../src/constants/scene/things/cardboards'
 import {
     TAIWAN_SHRUB,
     TAIWAN_TREE,
@@ -21,12 +21,13 @@ import {
 export default {
     [BUBBLE]: {
         [DREAM_GATE]: {
-            yIndex: 5,
-            xPosition: 5.5,
+            yIndex: 2,
+            xPosition: 6.75,
+            scaleFactor: 0.9,
         },
     },
     [CARDBOARD]: {
-        [BENNETT_ODIN_RICKSHAW]: {
+        [BENNETT_ODIN_GATE]: {
             yIndex: 2,
             xPosition: 6.75,
             scaleFactor: 0.9,

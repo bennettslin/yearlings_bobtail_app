@@ -22,7 +22,7 @@ import {
 import {
     SEA_SERPENT_LEFT,
     SEA_SERPENT_RIGHT,
-    BENNETT_ODIN_DEPTHS,
+    BENNETT_ODIN_BUOY,
     EARTH,
     DOGS_ROCKET,
     DOGS_SPACE_STATION,
@@ -88,7 +88,7 @@ export default {
         [LIZ_THOUGHT_REUNION]: BUBBLE_DEFAULT,
     },
     [CARDBOARD]: {
-        [BENNETT_ODIN_DEPTHS]: {
+        [BENNETT_ODIN_BUOY]: {
             wires: [
                 { x: 0.57, y: 0.5 },
                 { x: 0.7 },
