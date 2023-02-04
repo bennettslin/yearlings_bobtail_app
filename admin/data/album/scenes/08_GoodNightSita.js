@@ -58,7 +58,6 @@ import {
     LAMPPOST__LIZ_GATE,
     MUSEUM_DISPLAY,
     SANDBAGS,
-    STAGE_LIGHTS,
     TRAFFIC_LIGHT_FRONT,
 } from '../../../../src/constants/scene/things/cutouts'
 import {
@@ -168,7 +167,6 @@ export default [
             },
             [CUTOUT]: {
                 [SANDBAGS]: true,
-                [STAGE_LIGHTS]: true,
             },
             [FIXTURE]: {
                 [MANNEQUIN]: true,

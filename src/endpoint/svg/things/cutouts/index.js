@@ -52,7 +52,6 @@ import rosebushSlantedSingle from '../../../../assets/svgs/cutouts/rosebushSlant
 import sandbags from '../../../../assets/svgs/cutouts/sandbags'
 import shoppingCart from '../../../../assets/svgs/cutouts/shoppingCart'
 import signpost from '../../../../assets/svgs/cutouts/signpost'
-import stageLights from '../../../../assets/svgs/cutouts/stageLights'
 import steamPipes from '../../../../assets/svgs/cutouts/steamPipes'
 import stinkPlant from '../../../../assets/svgs/cutouts/stinkPlant'
 import storageBoxes from '../../../../assets/svgs/cutouts/storageBoxes'
@@ -157,7 +156,6 @@ import {
     SANDBAGS,
     SHOPPING_CART,
     SIGNPOST,
-    STAGE_LIGHTS,
     STEAM_PIPES,
     STINK_PLANT,
     STORAGE_BOXES,
@@ -273,7 +271,6 @@ export default {
     [SANDBAGS]: sandbags,
     [SHOPPING_CART]: shoppingCart,
     [SIGNPOST]: signpost,
-    [STAGE_LIGHTS]: stageLights,
     [STEAM_PIPES]: steamPipes,
     [STINK_PLANT]: stinkPlant,
     [STORAGE_BOXES]: storageBoxes,
