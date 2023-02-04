@@ -4,7 +4,10 @@ import {
     PANEL,
 } from '../../../../../src/constants/scene/things'
 import { STEAM_PIPES } from '../../../../../src/constants/scene/things/cutouts'
-import { PUSH_BROOM__TUNNEL } from '../../../../../src/constants/scene/things/fixtures'
+import {
+    STEPLADDER,
+    PUSH_BROOM,
+} from '../../../../../src/constants/scene/things/fixtures'
 import {
     SHADOW_MONGOL,
     SHADOW_VIKING_FAR,
@@ -19,7 +22,10 @@ export default {
         },
     },
     [FIXTURE]: {
-        [PUSH_BROOM__TUNNEL]: {
+        [STEPLADDER]: {
+            yIndex: 1,
+        },
+        [PUSH_BROOM]: {
             yIndex: 1,
             xPosition: 4,
         },

@@ -61,7 +61,8 @@ import {
     TELEVISION,
 } from '../../../../src/constants/scene/things/cutouts'
 import {
-    PUSH_BROOM__TUNNEL,
+    STEPLADDER,
+    PUSH_BROOM,
     EVIAN_BOTTLES,
 } from '../../../../src/constants/scene/things/fixtures'
 import {
@@ -181,7 +182,8 @@ export default [
                 [STEAM_PIPES]: true,
             },
             [FIXTURE]: {
-                [PUSH_BROOM__TUNNEL]: true,
+                [STEPLADDER]: true,
+                [PUSH_BROOM]: true,
             },
             [PANEL]: {
                 [SHADOW_MONGOL]: true,

@@ -6,11 +6,7 @@ import {
     SANDBAGS,
     STAGE_LIGHTS,
 } from '../../../../../src/constants/scene/things/cutouts'
-import {
-    PUSH_BROOM__BACKSTAGE,
-    STEPLADDER,
-    MANNEQUIN,
-} from '../../../../../src/constants/scene/things/fixtures'
+import { MANNEQUIN } from '../../../../../src/constants/scene/things/fixtures'
 
 export default {
     [CUTOUT]: {
@@ -25,17 +21,9 @@ export default {
         },
     },
     [FIXTURE]: {
-        [STEPLADDER]: {
-            yIndex: 1,
-            xPosition: 6,
-        },
         [MANNEQUIN]: {
             yIndex: 1,
             xPosition: 7.5,
-        },
-        [PUSH_BROOM__BACKSTAGE]: {
-            yIndex: 1,
-            xPosition: 9,
         },
     },
 }

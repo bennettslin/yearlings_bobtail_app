@@ -69,8 +69,6 @@ import {
 } from '../../../../src/constants/scene/things/doors'
 import {
     MANNEQUIN,
-    PUSH_BROOM__BACKSTAGE,
-    STEPLADDER,
 } from '../../../../src/constants/scene/things/fixtures'
 import {
     GO_KART_TRACK,
@@ -173,8 +171,6 @@ export default [
                 [STAGE_LIGHTS]: true,
             },
             [FIXTURE]: {
-                [PUSH_BROOM__BACKSTAGE]: true,
-                [STEPLADDER]: true,
                 [MANNEQUIN]: true,
             },
         },
