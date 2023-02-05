@@ -1,5 +1,5 @@
 .house#{$suffix} {
-    .roofBelow { fill: hsl($HUE_MAGIC, 20%, 43%); }
+    .roofBelow { fill: hsl($HUE_ROOF, 20%, 43%); }
     .roofSide { fill: hsl($HUE_ROOF, 20%, 50%); }
     .roofTop { fill: hsl($HUE_ROOF, 20%, 54%); }
     .beam { fill: hsl(49, 10%, 49%); }
