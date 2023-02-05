@@ -72,6 +72,7 @@ import THINGS_LIZ_BED, {
     THINGS_LIZ_BED_VEGAN,
 } from './lizBed/things'
 import THINGS_LIZ_COUCH, {
+    THINGS_LIZ_COUCH_GOLDEN,
     THINGS_LIZ_COUCH_TCHOTCHKES,
     THINGS_LIZ_COUCH_OPENING,
     THINGS_LIZ_COUCH_DEFENDING,
@@ -88,10 +89,7 @@ import THINGS_STEAM_TUNNEL from './steamTunnel/things'
 import THINGS_CEMETERY from './cemetery/things'
 import THINGS_STATION_WAGON from './stationWagon/things'
 import THINGS_ATTIC from './attic/things'
-import THINGS_OAKLAND_HOUSES, {
-    THINGS_OAKLAND_HOUSES_GARRYOWEN,
-    THINGS_OAKLAND_HOUSES_GOLDEN,
-} from './oaklandHouses/things'
+import THINGS_OAKLAND_HOUSES from './oaklandHouses/things'
 import THINGS_OAKLAND_RESIDENTIAL from './oaklandResidential/things'
 import THINGS_OAKLAND_COMMERCIAL from './oaklandCommercial/things'
 import THINGS_OAKLAND_PUBLIC from './oaklandPublic/things'
@@ -180,6 +178,7 @@ export default [
     THINGS_LIZ_BED_LOOK_BACK,
     THINGS_LIZ_BED_VEGAN,
     THINGS_LIZ_COUCH,
+    THINGS_LIZ_COUCH_GOLDEN,
     THINGS_LIZ_COUCH_TCHOTCHKES,
     THINGS_LIZ_COUCH_OPENING,
     THINGS_LIZ_COUCH_DEFENDING,
@@ -194,8 +193,6 @@ export default [
     THINGS_STATION_WAGON,
     THINGS_ATTIC,
     THINGS_OAKLAND_HOUSES,
-    THINGS_OAKLAND_HOUSES_GARRYOWEN,
-    THINGS_OAKLAND_HOUSES_GOLDEN,
     THINGS_BASEMENT_SOFA,
     THINGS_OAKLAND_RESIDENTIAL,
     THINGS_OAKLAND_COMMERCIAL,

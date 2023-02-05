@@ -8,7 +8,7 @@ import {
     PANEL,
 } from '../../../../../src/constants/scene/things'
 import {
-    THOUGHT_MEDIUM__DEATHBED,
+    THOUGHT_MEDIUM,
     THOUGHT_SMALL,
 } from '../../../../../src/constants/scene/things/backdrops'
 import {
@@ -42,7 +42,7 @@ import {
 
 export default {
     [BACKDROP]: {
-        [THOUGHT_MEDIUM__DEATHBED]: {
+        [THOUGHT_MEDIUM]: {
             yIndex: 0,
             xPosition: 3.25,
         },

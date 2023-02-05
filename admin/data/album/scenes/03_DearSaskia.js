@@ -35,11 +35,11 @@ import {
     THOUGHT_LARGE__RIGHT,
 } from '../../../../src/constants/scene/things/backdrops'
 import {
-    BUBBLE_LARGE__LEFT,
+    BUBBLE_LARGE__SCHOOLBUS,
     BUBBLE_LARGE__RIGHT,
-    BUBBLE_MEDIUM__LEFT,
+    BUBBLE_MEDIUM__SCHOOLBUS,
     BUBBLE_MEDIUM__RIGHT,
-    BUBBLE_SMALL__LEFT,
+    BUBBLE_SMALL__SCHOOLBUS,
     BUBBLE_SMALL__RIGHT,
     SKETCHBOOK__APART,
     SKETCHBOOK__TOGETHER,
@@ -167,9 +167,9 @@ export default [
                 [THOUGHT_LARGE__LEFT]: true,
             },
             [BUBBLE]: {
-                [BUBBLE_SMALL__LEFT]: true,
-                [BUBBLE_MEDIUM__LEFT]: true,
-                [BUBBLE_LARGE__LEFT]: true,
+                [BUBBLE_SMALL__SCHOOLBUS]: true,
+                [BUBBLE_MEDIUM__SCHOOLBUS]: true,
+                [BUBBLE_LARGE__SCHOOLBUS]: true,
             },
             [FIXTURE]: {
                 [BACKPACK_BENNETT]: true,

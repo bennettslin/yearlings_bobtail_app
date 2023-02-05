@@ -8,12 +8,15 @@ import {
 } from '../../../../../src/constants/scene/things'
 import {
     BUBBLE_LARGE__DISHROOM,
+    BUBBLE_LARGE__GOLDEN,
     BUBBLE_LARGE__REUNION,
     BUBBLE_LARGE__TCHOTCHKES,
     BUBBLE_MEDIUM__DISHROOM,
+    BUBBLE_MEDIUM__GOLDEN,
     BUBBLE_MEDIUM__REUNION,
     BUBBLE_MEDIUM__TCHOTCHKES,
     BUBBLE_SMALL__DISHROOM,
+    BUBBLE_SMALL__GOLDEN,
     BUBBLE_SMALL__REUNION,
     BUBBLE_SMALL__TCHOTCHKES,
     KHARI_SPEECH_ATTACK,
@@ -122,6 +125,26 @@ export default {
         [LIZ_OTTOMAN]: {
             yIndex: 5,
             xPosition: 8.5,
+        },
+    },
+}
+
+export const THINGS_LIZ_COUCH_GOLDEN = {
+    [BUBBLE]: {
+        [BUBBLE_LARGE__GOLDEN]: {
+            ...BUBBLE_LARGE_CONFIG,
+            xPosition: 1.05,
+            zOffset: 5.3,
+        },
+        [BUBBLE_MEDIUM__GOLDEN]: {
+            ...BUBBLE_MEDIUM_CONFIG,
+            xPosition: 1.3,
+            zOffset: 6.21,
+        },
+        [BUBBLE_SMALL__GOLDEN]: {
+            ...BUBBLE_SMALL_CONFIG,
+            xPosition: 1.7,
+            zOffset: 6.6,
         },
     },
 }

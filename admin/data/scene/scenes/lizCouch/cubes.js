@@ -4,10 +4,12 @@ import {
     LIZ_COUCH_DARK_KEY,
     LIZ_COUCH_NIGHT_KEY,
     LIZ_COUCH_EVENING_KEY,
+    OAKLAND_COUCH_THOUGHT_KEY,
 } from '../../../../../src/constants/scene/scenes'
 import { LIZ_COUCH_FUTURE_CUBES } from './asleep/cubes'
 import {
     DEFAULT_CLEAR_COLOUR as D,
+    GROUND_CLEAR_COLOUR as G,
     PAVEMENT_COLOUR as V,
     PAVEMENT_NIGHT_COLOUR as X,
     LIZ_GATE_COLOUR as A,
@@ -126,6 +128,26 @@ export default {
                 [Z],
             ],
             zIndices: DEFAULT_FLOOR.zIndices,
+        },
+    },
+    [OAKLAND_COUCH_THOUGHT_KEY]: {
+        floor: {
+            hslaColours: [
+                [G],
+                [G, F, F, F, F, F, F, F, F, F, F, G],
+                [G, F, F, F, F, F, F, F, F, F, F, G],
+                [G, U, U, U, F, F, F, F, F, F, F, G],
+                [G, U, U, U, F, F, F, F, F, F, F, G],
+                [G, F, F, F, F, F, F, F, F, F, F, G],
+            ],
+            zIndices: [
+                [0],
+                [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+                [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+                [0, 7, 3, 3, 1, 1, 1, 1, 1, 1, 1, 0],
+                [0, 7, 3, 3, 1, 1, 1, 1, 1, 1, 1, 0],
+                [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+            ],
         },
     },
     ...LIZ_COUCH_FUTURE_CUBES,

@@ -3,6 +3,7 @@ import {
     BACKDROP,
     BUBBLE,
     CUTOUT,
+    DOOR,
     FLAT,
     PANEL,
 } from '../../../../src/constants/scene/things'
@@ -15,6 +16,7 @@ import {
 } from '../../../../src/constants/scene/scenes'
 import {
     SEASON_AUTUMN,
+    SEASON_THOUGHT,
     TIME_DAWN,
     TIME_NIGHT,
     TIME_TWILIGHT,
@@ -47,7 +49,7 @@ import {
     OAKLAND_SIDE__LEVEL,
     OAKLAND_FRONT__HIGH,
     OAKLAND_FRONT__LOW,
-    THOUGHT_MEDIUM__GOLDEN,
+    THOUGHT_LARGE__LEFT,
 } from '../../../../src/constants/scene/things/backdrops'
 import {
     BUBBLE_SMALL__GOLDEN,
@@ -55,6 +57,8 @@ import {
     BUBBLE_LARGE__GOLDEN,
 } from '../../../../src/constants/scene/things/bubbles'
 import {
+    CAT_FOOD_DISHES,
+    CAT_LITTER_BOX,
     HINDU_SHRINE,
     TWIN_STREETLAMP__FAR,
     TWIN_STREETLAMP__MIDDLE,
@@ -84,6 +88,7 @@ import {
     RESIDENTIAL_NEAR_RIGHT,
 } from '../../../../src/constants/scene/things/flats'
 import { LIZ_COUCH__ROOM } from '../../../../src/constants/scene/things/panels'
+import { LIZ_BLINDS_INSIDE } from '../../../../src/constants/scene/things/doors'
 
 export default [
     {
@@ -119,8 +124,7 @@ export default [
                 },
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE__LEVEL]: true,
-                [THOUGHT_MEDIUM__GOLDEN]: true,
+                [THOUGHT_LARGE__LEFT]: true,
             },
             [BUBBLE]: {
                 [BUBBLE_SMALL__GOLDEN]: true,
@@ -128,19 +132,19 @@ export default [
                 [BUBBLE_LARGE__GOLDEN]: true,
             },
             [CUTOUT]: {
+                [CAT_FOOD_DISHES]: true,
+                [CAT_LITTER_BOX]: true,
                 [HINDU_SHRINE]: true,
             },
-            [FLAT]: {
-                [DISTANT_HOUSES]: true,
-                [OAKLAND_HOUSE_LEFT]: true,
-                [OAKLAND_HOUSE_RIGHT]: true,
+            [DOOR]: {
+                [LIZ_BLINDS_INSIDE]: true,
             },
             [PANEL]: {
                 [LIZ_COUCH__ROOM]: true,
             },
         },
         cubes: OAKLAND_COUCH_THOUGHT_KEY,
-        sky: { time: TIME_NIGHT, season: SEASON_AUTUMN },
+        sky: { season: SEASON_THOUGHT },
     },
     {
         unitIndex: 4,

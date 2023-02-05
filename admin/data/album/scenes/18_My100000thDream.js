@@ -53,7 +53,7 @@ import {
     MOUNTAIN_PAMPAS_BACKDROP,
     WEDDING_BACKDROP,
     GOLDEN_GATE_BACKDROP,
-    THOUGHT_MEDIUM__DEATHBED,
+    THOUGHT_MEDIUM,
 } from '../../../../src/constants/scene/things/backdrops'
 import {
     BUBBLE_SMALL__INVERSE,
@@ -240,7 +240,7 @@ export default [
                 },
             },
             [BACKDROP]: {
-                [THOUGHT_MEDIUM__DEATHBED]: true,
+                [THOUGHT_MEDIUM]: true,
             },
             [BUBBLE]: {
                 [BUBBLE_SMALL__INVERSE]: true,

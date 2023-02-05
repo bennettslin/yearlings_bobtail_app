@@ -42,7 +42,7 @@ import {
 } from '../../../../src/constants/scene/actors/miriamBennett'
 import {
     GOLDEN_GATE_BACKDROP,
-    THOUGHT_MEDIUM__DEATHBED,
+    THOUGHT_MEDIUM,
     THOUGHT_SMALL,
 } from '../../../../src/constants/scene/things/backdrops'
 import {
@@ -213,7 +213,7 @@ export default [
             },
             [BACKDROP]: {
                 [GOLDEN_GATE_BACKDROP]: true,
-                [THOUGHT_MEDIUM__DEATHBED]: true,
+                [THOUGHT_MEDIUM]: true,
             },
             [CUTOUT]: {
                 [IV_DRIP]: true,
@@ -253,7 +253,7 @@ export default [
                 },
             },
             [BACKDROP]: {
-                [THOUGHT_MEDIUM__DEATHBED]: true,
+                [THOUGHT_MEDIUM]: true,
                 [THOUGHT_SMALL]: true,
             },
             [BUBBLE]: {

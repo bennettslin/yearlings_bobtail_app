@@ -5,9 +5,9 @@ import {
     PANEL,
 } from '../../../../../src/constants/scene/things'
 import {
-    BUBBLE_SMALL__LEFT,
-    BUBBLE_MEDIUM__LEFT,
-    BUBBLE_LARGE__LEFT,
+    BUBBLE_SMALL__SCHOOLBUS,
+    BUBBLE_MEDIUM__SCHOOLBUS,
+    BUBBLE_LARGE__SCHOOLBUS,
 } from '../../../../../src/constants/scene/things/bubbles'
 import { BACKPACK_BENNETT } from '../../../../../src/constants/scene/things/fixtures'
 import {
@@ -28,17 +28,17 @@ import {
 
 export default {
     [BUBBLE]: {
-        [BUBBLE_LARGE__LEFT]: {
+        [BUBBLE_LARGE__SCHOOLBUS]: {
             ...BUBBLE_LARGE_CONFIG,
             xPosition: 1.05,
             zOffset: 5.8,
         },
-        [BUBBLE_MEDIUM__LEFT]: {
+        [BUBBLE_MEDIUM__SCHOOLBUS]: {
             ...BUBBLE_MEDIUM_CONFIG,
             xPosition: 1.3,
             zOffset: 6.71,
         },
-        [BUBBLE_SMALL__LEFT]: {
+        [BUBBLE_SMALL__SCHOOLBUS]: {
             ...BUBBLE_SMALL_CONFIG,
             xPosition: 1.7,
             zOffset: 7.1,
