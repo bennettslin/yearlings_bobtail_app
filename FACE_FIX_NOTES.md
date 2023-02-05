@@ -17,13 +17,11 @@
 * gateCode
 * walgreens
 * cemetery
-* attic (eyes)
 * sidelongHesitance
 * droppingMeats
 * celibateFreezing
 * cordSide
 * cordRear
-* horsingAround (pupils messed up)
 * dryingTears
 * blowJob
 * infirm
