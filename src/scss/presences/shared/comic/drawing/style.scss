@@ -1,6 +1,5 @@
 .drawing#{$suffix} {
     [class^=sketch] { stroke: hsla(45, 5%, 20%, 0.5); }
-    .eyeBlob { fill: hsla(45, 5%, 40%, 0.625); }
     .sketchDarkest { fill: hsla(45, 5%, 20%, 0.625); }
     .sketchDarker { fill: hsla(45, 5%, 35%, 0.625); }
     .sketchMiddle { fill: hsla(45, 5%, 50%, 0.625); }

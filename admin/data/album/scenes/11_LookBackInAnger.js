@@ -103,9 +103,6 @@ export default [
                 [MONITOR_SIDE__CROWD]: true,
                 [WALL_SPEAKER_SIDE__CROWD]: true,
             },
-            [FIXTURE]: {
-                [STAGE_MIC__CROWD]: true,
-            },
         },
         cubes: CLUB_SIDE_CROWD_KEY,
         sky: { time: TIME_NIGHT, season: SEASON_SUMMER },

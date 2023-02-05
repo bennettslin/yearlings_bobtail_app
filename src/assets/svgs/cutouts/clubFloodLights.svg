@@ -16,12 +16,12 @@
     <path d="M385.26,23.73l-.7,7.97,63.76,5.58,.7-7.97c.58-6.6-13.23-13.2-30.83-14.74-17.61-1.54-32.35,2.56-32.92,9.17Z"/>
     <path d="M481.58,22.36l-1.04,7.93,63.45,8.35,1.04-7.93c.87-6.57-12.64-13.77-30.16-16.07s-32.43,1.15-33.29,7.72Z"/>
   </g>
-  <g class="bulbGreen">
+  <g class="bulbYellow">
     <ellipse cx="129.14" cy="34.48" rx="32" ry="12" transform="translate(-2.51 11.39) rotate(-5)"/>
     <ellipse cx="320.61" cy="34.5" rx="12" ry="32" transform="translate(272.16 353.3) rotate(-87.5)"/>
     <ellipse cx="512.27" cy="34.47" rx="12" ry="32" transform="translate(411.23 537.85) rotate(-82.5)"/>
   </g>
-  <g class="bulbBlue">
+  <g class="bulbYellow">
     <ellipse cx="33.31" cy="34.47" rx="32" ry="12" transform="translate(-4.21 4.64) rotate(-7.5)"/>
     <ellipse cx="224.96" cy="34.5" rx="32" ry="12" transform="translate(-1.29 9.85) rotate(-2.5)"/>
     <ellipse cx="416.44" cy="34.48" rx="12" ry="32" transform="translate(345.79 446.33) rotate(-85)"/>

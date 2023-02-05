@@ -1,7 +1,6 @@
 .constellation#{$suffix} {
     [class^=sketch] { stroke: hsl(240, 5%, 80%); }
     .star { fill: hsla(36, 15%, 90%, 0.75); stroke: none; }
-    .eyeBlob { fill: hsla(240, 5%, 95%, 0.75); }
     .sketchDarkest { fill: hsla(240, 5%, 95%, 0.05); }
     .sketchDarker { fill: hsla(240, 5%, 95%, 0.15); }
     .sketchMiddle { fill: hsla(240, 5%, 95%, 0.25); }

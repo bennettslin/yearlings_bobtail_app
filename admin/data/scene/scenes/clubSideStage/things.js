@@ -8,10 +8,10 @@ import {
     WALL_SPEAKER_SIDE__STAGE,
 } from '../../../../../src/constants/scene/things/cutouts'
 import {
-    STAGE_MIC__STAGE,
-    KICK_DRUM,
     DRUM_THRONE,
     GUITAR_CASE_OPEN,
+    KICK_DRUM,
+    STAGE_MIC__STAGE,
 } from '../../../../../src/constants/scene/things/fixtures'
 
 export default {
