@@ -11,14 +11,14 @@ import { FLAPPER } from '../../../../../src/constants/scene/actors/stephanie'
 export default {
     [STEPHANIE]: {
         [FLAPPER]: {
-            yIndex: 2,
-            xPosition: 1.7,
+            yIndex: 3,
+            xPosition: 2.2,
         },
     },
     [BENNETT]: {
         [BACKSTAGE]: {
             yIndex: 4,
-            xPosition: 4.2,
+            xPosition: 4,
         },
     },
     [LIZ]: {

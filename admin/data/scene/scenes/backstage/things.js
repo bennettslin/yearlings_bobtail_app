@@ -31,37 +31,37 @@ export default {
     },
     [FIXTURE]: {
         [MANNEQUIN]: {
-            yIndex: 1,
-            xPosition: 7.5,
+            yIndex: 5,
+            xPosition: 0.5,
         },
     },
     [FLAT]: {
         [CURTAIN_LEG__BACK_LEFT]: {
-            yIndex: 5,
+            yIndex: 4,
             xPosition: 0,
         },
         [CURTAIN_LEG__BACK_RIGHT]: {
-            yIndex: 5,
+            yIndex: 4,
             xPosition: 11,
         },
         [CURTAIN_LEG__FRONT_LEFT]: {
-            yIndex: 3,
+            yIndex: 2,
             xPosition: 0,
         },
         [CURTAIN_LEG__FRONT_RIGHT]: {
-            yIndex: 3,
+            yIndex: 2,
             xPosition: 11,
         },
         [CURTAIN_SIDE__LEFT]: {
-            yIndex: 1,
+            yIndex: 0,
             xPosition: 0,
         },
         [CURTAIN_SIDE__RIGHT]: {
-            yIndex: 1,
+            yIndex: 0,
             xPosition: 11,
         },
         [CURTAIN_TOP]: {
-            yIndex: 1,
+            yIndex: 0,
             zOffset: 7,
         },
     },
