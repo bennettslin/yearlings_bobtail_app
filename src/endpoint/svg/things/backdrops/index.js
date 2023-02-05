@@ -14,6 +14,7 @@ import shoreBuoyBackdrop from '../../../../assets/svgs/backdrops/shoreBuoyBackdr
 import shoreRickshawBackdrop from '../../../../assets/svgs/backdrops/shoreRickshawBackdrop'
 import taiwanMountainsBackdrop from '../../../../assets/svgs/backdrops/taiwanMountainsBackdrop'
 import taiwanStairsBackdrop from '../../../../assets/svgs/backdrops/taiwanStairsBackdrop'
+import theatreSeatsBackdrop from '../../../../assets/svgs/backdrops/theatreSeatsBackdrop'
 import thoughtLarge from '../../../../assets/svgs/backdrops/thoughtLarge'
 import thoughtMedium from '../../../../assets/svgs/backdrops/thoughtMedium'
 import thoughtSmall from '../../../../assets/svgs/backdrops/thoughtSmall'
@@ -74,7 +75,7 @@ export default {
     [SHORE_RICKSHAW_BACKDROP]: shoreRickshawBackdrop,
     [TAIWAN_MOUNTAINS_BACKDROP]: taiwanMountainsBackdrop,
     [TAIWAN_STAIRS_BACKDROP]: taiwanStairsBackdrop,
-    [THEATRE_SEATS_BACKDROP]: losAngelesBackdrop,
+    [THEATRE_SEATS_BACKDROP]: theatreSeatsBackdrop,
     [THOUGHT_LARGE__LEFT]: thoughtLarge,
     [THOUGHT_LARGE__RIGHT]: thoughtLarge,
     [THOUGHT_MEDIUM__DEATHBED]: thoughtMedium,
