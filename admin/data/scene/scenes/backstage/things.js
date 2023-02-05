@@ -9,13 +9,13 @@ import {
 } from '../../../../../src/constants/scene/things/cutouts'
 import { MANNEQUIN } from '../../../../../src/constants/scene/things/fixtures'
 import {
-    CURTAIN_LEG__BACK_LEFT,
-    CURTAIN_LEG__BACK_RIGHT,
-    CURTAIN_LEG__FRONT_LEFT,
-    CURTAIN_LEG__FRONT_RIGHT,
-    CURTAIN_SIDE__LEFT,
-    CURTAIN_SIDE__RIGHT,
-    CURTAIN_TOP,
+    CURTAIN_LEG_FLAT__BACK_LEFT,
+    CURTAIN_LEG_FLAT__BACK_RIGHT,
+    CURTAIN_LEG_FLAT__FRONT_LEFT,
+    CURTAIN_LEG_FLAT__FRONT_RIGHT,
+    CURTAIN_SIDE_FLAT__LEFT,
+    CURTAIN_SIDE_FLAT__RIGHT,
+    CURTAIN_TOP_FLAT,
 } from '../../../../../src/constants/scene/things/flats'
 
 export default {
@@ -36,31 +36,31 @@ export default {
         },
     },
     [FLAT]: {
-        [CURTAIN_LEG__BACK_LEFT]: {
+        [CURTAIN_LEG_FLAT__BACK_LEFT]: {
             yIndex: 4,
             xPosition: 0,
         },
-        [CURTAIN_LEG__BACK_RIGHT]: {
+        [CURTAIN_LEG_FLAT__BACK_RIGHT]: {
             yIndex: 4,
             xPosition: 11,
         },
-        [CURTAIN_LEG__FRONT_LEFT]: {
+        [CURTAIN_LEG_FLAT__FRONT_LEFT]: {
             yIndex: 2,
             xPosition: 0,
         },
-        [CURTAIN_LEG__FRONT_RIGHT]: {
+        [CURTAIN_LEG_FLAT__FRONT_RIGHT]: {
             yIndex: 2,
             xPosition: 11,
         },
-        [CURTAIN_SIDE__LEFT]: {
+        [CURTAIN_SIDE_FLAT__LEFT]: {
             yIndex: 0,
             xPosition: 0,
         },
-        [CURTAIN_SIDE__RIGHT]: {
+        [CURTAIN_SIDE_FLAT__RIGHT]: {
             yIndex: 0,
             xPosition: 11,
         },
-        [CURTAIN_TOP]: {
+        [CURTAIN_TOP_FLAT]: {
             yIndex: 0,
             zOffset: 7,
         },
