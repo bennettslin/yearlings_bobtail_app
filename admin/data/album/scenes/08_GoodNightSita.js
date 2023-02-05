@@ -40,6 +40,7 @@ import {
     DRIVING_BACKDROP,
     OAKLAND_FRONT__HIGH,
     OAKLAND_SIDE__LEVEL,
+    THEATRE_SEATS_BACKDROP,
 } from '../../../../src/constants/scene/things/backdrops'
 import {
     BUBBLE_LARGE__GO_KART,
@@ -58,6 +59,7 @@ import {
     LAMPPOST__LIZ_GATE,
     MUSEUM_DISPLAY,
     SANDBAGS,
+    STAGE_CUTOUT,
     TRAFFIC_LIGHT_FRONT,
 } from '../../../../src/constants/scene/things/cutouts'
 import {
@@ -70,6 +72,13 @@ import {
     MANNEQUIN,
 } from '../../../../src/constants/scene/things/fixtures'
 import {
+    CURTAIN_LEG__BACK_LEFT,
+    CURTAIN_LEG__BACK_RIGHT,
+    CURTAIN_LEG__FRONT_LEFT,
+    CURTAIN_LEG__FRONT_RIGHT,
+    CURTAIN_SIDE__LEFT,
+    CURTAIN_SIDE__RIGHT,
+    CURTAIN_TOP,
     GO_KART_TRACK,
     PUBLIC_FAR__LIZ_GATE,
     PUBLIC_NEAR__LIZ_GATE,
@@ -165,11 +174,24 @@ export default [
                     },
                 },
             },
+            [BACKDROP]: {
+                [THEATRE_SEATS_BACKDROP]: true,
+            },
             [CUTOUT]: {
                 [SANDBAGS]: true,
+                [STAGE_CUTOUT]: true,
             },
             [FIXTURE]: {
                 [MANNEQUIN]: true,
+            },
+            [FLAT]: {
+                [CURTAIN_LEG__BACK_LEFT]: true,
+                [CURTAIN_LEG__BACK_RIGHT]: true,
+                [CURTAIN_LEG__FRONT_LEFT]: true,
+                [CURTAIN_LEG__FRONT_RIGHT]: true,
+                [CURTAIN_SIDE__LEFT]: true,
+                [CURTAIN_SIDE__RIGHT]: true,
+                [CURTAIN_TOP]: true,
             },
         },
         cubes: BACKSTAGE_KEY,

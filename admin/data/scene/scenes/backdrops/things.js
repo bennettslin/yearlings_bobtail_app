@@ -24,6 +24,7 @@ import {
     VALLEY_FURTHER_BACKDROP,
     VALLEY_PANORAMA_BACKDROP,
     WEDDING_BACKDROP,
+    THEATRE_SEATS_BACKDROP,
 } from '../../../../../src/constants/scene/things/backdrops'
 
 export default {
@@ -59,8 +60,8 @@ export default {
             xPosition: 3.33,
             zOffset: 2.5,
         },
-        [THOUGHT_LARGE__LEFT]: {
-        },
+        [THEATRE_SEATS_BACKDROP]: {},
+        [THOUGHT_LARGE__LEFT]: {},
         [THOUGHT_LARGE__RIGHT]: {
             flipHorizontal: true,
         },
