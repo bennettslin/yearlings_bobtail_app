@@ -14,9 +14,9 @@ import commercialMiddleLeft from '../../../../assets/svgs/flats/commercialMiddle
 import commercialMiddleRight from '../../../../assets/svgs/flats/commercialMiddleRight'
 import commercialNearLeft from '../../../../assets/svgs/flats/commercialNearLeft'
 import commercialNearRight from '../../../../assets/svgs/flats/commercialNearRight'
-import curtainLeg from '../../../../assets/svgs/flats/curtainLeg'
-import curtainSide from '../../../../assets/svgs/flats/curtainSide'
-import curtainTop from '../../../../assets/svgs/flats/curtainTop'
+import curtainLegFlat from '../../../../assets/svgs/flats/curtainLegFlat'
+import curtainSideFlat from '../../../../assets/svgs/flats/curtainSideFlat'
+import curtainTopFlat from '../../../../assets/svgs/flats/curtainTopFlat'
 import distantBuildings from '../../../../assets/svgs/flats/distantBuildings'
 import distantHouses from '../../../../assets/svgs/flats/distantHouses'
 import drivingHouseLeft from '../../../../assets/svgs/flats/drivingHouseLeft'
@@ -156,13 +156,13 @@ export default {
     [COMMERCIAL_MIDDLE_RIGHT]: commercialMiddleRight,
     [COMMERCIAL_NEAR_LEFT]: commercialNearLeft,
     [COMMERCIAL_NEAR_RIGHT]: commercialNearRight,
-    [CURTAIN_LEG_FLAT__BACK_LEFT]: curtainLeg,
-    [CURTAIN_LEG_FLAT__BACK_RIGHT]: curtainLeg,
-    [CURTAIN_LEG_FLAT__FRONT_LEFT]: curtainLeg,
-    [CURTAIN_LEG_FLAT__FRONT_RIGHT]: curtainLeg,
-    [CURTAIN_SIDE_FLAT__LEFT]: curtainSide,
-    [CURTAIN_SIDE_FLAT__RIGHT]: curtainSide,
-    [CURTAIN_TOP_FLAT]: curtainTop,
+    [CURTAIN_LEG_FLAT__BACK_LEFT]: curtainLegFlat,
+    [CURTAIN_LEG_FLAT__BACK_RIGHT]: curtainLegFlat,
+    [CURTAIN_LEG_FLAT__FRONT_LEFT]: curtainLegFlat,
+    [CURTAIN_LEG_FLAT__FRONT_RIGHT]: curtainLegFlat,
+    [CURTAIN_SIDE_FLAT__LEFT]: curtainSideFlat,
+    [CURTAIN_SIDE_FLAT__RIGHT]: curtainSideFlat,
+    [CURTAIN_TOP_FLAT]: curtainTopFlat,
     [DISTANT_BUILDINGS]: distantBuildings,
     [DISTANT_HOUSES]: distantHouses,
     [DRIVING_HOUSE_LEFT]: drivingHouseLeft,
