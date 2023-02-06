@@ -16,6 +16,17 @@
         .doorSide { fill: hsl($HUE_BENNETT_ROOM + 20, 17%, 55%); }
     }
 
+    .dimRoom &.dimRoom#{$suffix} {
+        .frameFront { fill: hsl($HUE_BENNETT_ROOM, 12%, 50%); }
+
+        .sillDark { fill: hsl($HUE_BENNETT_ROOM, 10%, 43%); }
+        .sill { fill: hsl($HUE_BENNETT_ROOM, 7%, 49%); }
+        .paneSliding { fill: hsl($HUE_BENNETT_ROOM, 9%, 41%); }
+        .paneStill { fill: hsl($HUE_BENNETT_ROOM, 6%, 47%); }
+        .blinds { fill: hsl($HUE_BENNETT_ROOM, 4%, 59%); }
+        .rail { fill: hsl($HUE_BENNETT_ROOM, 13%, 51%); }
+    }
+
     .darkRoom &.darkRoom#{$suffix} {
         .frameFront { fill: hsl($HUE_BENNETT_ROOM, 9%, 38%); }
         .doorFront { fill: hsl($HUE_BENNETT_ROOM + 20, 11%, 33%); }

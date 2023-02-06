@@ -8,6 +8,17 @@
 .oakLighter { fill: hsl(35, 25%, 72%); }
 .oakLightest { fill: hsl(35, 26%, 77%); }
 
+.dimRoom .dimRoom#{$suffix} {
+    .oakDarkest { fill: hsl(35, 11%, 31%); }
+    .oakDark { fill: hsl(35, 13%, 34%); }
+    .oakMediumDark { fill: hsl(35, 14%, 37%); }
+    .oakMedium { fill: hsl(35, 14%, 42%); }
+    .oakMediumLight { fill: hsl(35, 14%, 47%); }
+    .oakLight { fill: hsl(35, 15%, 52%); }
+    .oakLighter { fill: hsl(35, 16%, 57%); }
+    .oakLightest { fill: hsl(35, 17%, 62%); }
+}
+
 .darkRoom .darkRoom#{$suffix} {
     .oakDarkest { fill: hsl(35, 9%, 24%); }
     .oakDarker { fill: hsl(35, 10%, 26%); }

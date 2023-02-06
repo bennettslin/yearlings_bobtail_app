@@ -139,10 +139,12 @@ export default {
         [CAPTAIN_BED]: {
             yIndex: 5,
             xPosition: 7.5,
+            counterpart: CAPTAIN_BED_LIT,
         },
         [CAPTAIN_BED_LIT]: {
             yIndex: 5,
             xPosition: 7.5,
+            counterpart: CAPTAIN_BED,
         },
     },
 }

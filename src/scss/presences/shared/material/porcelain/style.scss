@@ -9,6 +9,11 @@
 // .porcelainLighter { fill: hsl(190, 28%, 92%); }
 // .porcelainLightest { fill: hsl(190, 28%, 97%); }
 
+.dimRoom .dimRoom#{$suffix} {
+    .porcelainMedium { fill: hsl(190, 12%, 62%); }
+    .porcelainMediumLight { fill: hsl(190, 12%, 67%); }
+}
+
 .darkRoom .darkRoom#{$suffix} {
     .porcelainDarkest { fill: hsl(190, 7%, 34%); }
     .porcelainDark { fill: hsl(190, 7%, 40%); }
