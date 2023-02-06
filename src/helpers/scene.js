@@ -5,6 +5,7 @@ import {
     SEASON_AUTUMN, SEASON_OCEAN_SIDE, SEASON_OCEAN_TOP, SEASON_WINTER, TIME_EVENING, TIME_NIGHT, TIME_NIGHT_TAIWAN, TIME_TWILIGHT, TIME_TWILIGHT_TAIWAN,
 } from '../constants/scene/sky'
 
+// Scenes where some presences are dimmed.
 export const getIsDimRoomScene = sceneCubesKey => {
     switch (sceneCubesKey) {
         case BEDROOM_DIM_KEY:

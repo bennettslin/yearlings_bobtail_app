@@ -15,9 +15,12 @@ import {
     GRASS_EVENING_COLOUR as I,
     GRASS_NIGHT_COLOUR as J,
     BENNETT_CARPET_COLOUR as F,
+    BENNETT_CARPET_DIM_COLOUR as K,
     BENNETT_WALL_COLOUR as W,
+    BENNETT_WALL_DIM_COLOUR as X,
     DARK_ROOM_COLOUR as Z,
     BENNETT_BED_COLOUR as U,
+    BENNETT_BED_DIM_COLOUR as Y,
 } from '../../../../../src/constants/scene/cubes/colours'
 import { d, g, k } from '../../../../../src/constants/scene/cubes/zIndices'
 import { BEDROOM_MAGIC_CUBES } from './asleep/cubes'
@@ -84,30 +87,52 @@ const STOOL_FLOOR = {
     ],
 }
 
-const BEDROOM_EVENING_AND_DIM_CONFIG = {
-    slantDirection: LEFT,
-    ceiling: DEFAULT_CEILING,
-    floor: {
-        hslaColours: [
-            [I, I, I, I, I, F, I, F, F, F, I],
-            [I, I, I, W, W, F, F, U, U, F, I],
-            [I, I, W, W, D, F, F, U, U, U, F, I],
-            [F, W, D, D, F, F, F, U, U, U, F, I],
-            [F, F, F, F, F, F, F, U, F, F, F, I],
-            [F],
-        ],
-        zIndices: DEFAULT_FLOOR.zIndices,
-    },
-}
-
 export default {
     [BEDROOM_KEY]: {
         slantDirection: LEFT,
         ceiling: DEFAULT_CEILING,
         floor: DEFAULT_FLOOR,
     },
-    [BEDROOM_EVENING_KEY]: BEDROOM_EVENING_AND_DIM_CONFIG,
-    [BEDROOM_DIM_KEY]: BEDROOM_EVENING_AND_DIM_CONFIG,
+    [BEDROOM_EVENING_KEY]: {
+        slantDirection: LEFT,
+        ceiling: DEFAULT_CEILING,
+        floor: {
+            hslaColours: [
+                [I, I, I, I, I, F, I, F, F, F, I],
+                [I, I, I, W, W, F, F, U, U, F, I],
+                [I, I, W, W, D, F, F, U, U, U, F, I],
+                [F, W, D, D, F, F, F, U, U, U, F, I],
+                [F, F, F, F, F, F, F, U, F, F, F, I],
+                [F],
+            ],
+            zIndices: DEFAULT_FLOOR.zIndices,
+        },
+    },
+    [BEDROOM_DIM_KEY]: {
+        slantDirection: LEFT,
+        ceiling: {
+            hslaColours: [
+                [D, D, D, D, D, X, D, X, X, X, D],
+                [D, D, D, X, X, X, X, X, X, X, D],
+                [D, D, X, X, X, X, X, X, X, X, X, D],
+                [X, X, X, X, X, X, X, X, X, X, X, D],
+                [X, X, X, X, X, X, X, X, X, X, X, D],
+                [X, X, X, X, X, X, X, X, X, X, X, X],
+            ],
+            zIndices: DEFAULT_CEILING.zIndices,
+        },
+        floor: {
+            hslaColours: [
+                [I, I, I, I, I, K, I, K, K, K, I],
+                [I, I, I, X, X, K, K, Y, Y, K, I],
+                [I, I, X, X, D, K, K, Y, Y, Y, K, I],
+                [K, X, D, D, K, K, K, Y, Y, Y, K, I],
+                [K, K, K, K, K, K, K, Y, K, K, K, I],
+                [K],
+            ],
+            zIndices: DEFAULT_FLOOR.zIndices,
+        },
+    },
     [BEDROOM_STOOL_KEY]: {
         slantDirection: LEFT,
         ceiling: DEFAULT_CEILING,

@@ -1,7 +1,7 @@
 import { CAPTAIN_BED_KEY } from '../../../../../src/constants/scene/scenes'
 import {
-    BENNETT_WALL_COLOUR as W,
-    BENNETT_CARPET_COLOUR as F,
+    BENNETT_WALL_DIM_COLOUR as W,
+    BENNETT_CARPET_DIM_COLOUR as F,
     DARK_ROOM_COLOUR as Z,
 } from '../../../../../src/constants/scene/cubes/colours'
 import { g } from '../../../../../src/constants/scene/cubes/zIndices'
