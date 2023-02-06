@@ -5,8 +5,8 @@ export default {
     [CHRISTOPHER_BENNETT]: {
         [BLISSFUL_GUILTY]: {
             yIndex: 4,
-            xPosition: 7.7,
-            zOffset: -0.1,
+            xPosition: 7.2,
+            zOffset: -0.175,
             layerYIndex: 5,
         },
     },
