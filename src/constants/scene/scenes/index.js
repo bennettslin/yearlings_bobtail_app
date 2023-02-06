@@ -26,6 +26,7 @@ export const OCEAN_DEPTHS_KEY = 'oceanDepths'
 export const OCEAN_FLOOR_KEY = 'oceanFloor'
 
 export const BEDROOM_KEY = 'bedroom'
+export const BEDROOM_DIM_KEY = 'bedroomDim'
 export const CAPTAIN_BED_KEY = 'captainBed'
 export const BEDROOM_EVENING_KEY = 'bedroomEvening'
 export const BEDROOM_STOOL_KEY = 'bedroomStool'

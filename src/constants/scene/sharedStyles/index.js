@@ -1,5 +1,6 @@
+export const DIM_ROOM__SHARED = 'dimRoom'
 export const DARK_ROOM_DEFAULT__SHARED = 'darkRoom'
-// This one is applied to actors and linens.
+// This applies to actors and linens that are sometimes lit.
 export const DARK_ROOM_EXTRA__SHARED = 'darkRoomExtra'
 
 export const MAGIC__SHARED = 'magic'

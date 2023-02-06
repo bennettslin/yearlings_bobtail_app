@@ -108,7 +108,7 @@ import {
     LIZ_CONDOM__SHARED,
     MIRIAM_CONDOM__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/wardrobe'
-import { DARK_ROOM_DEFAULT__SHARED, EVENING_TIME__SHARED, NIGHT_TIME__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
+import { DARK_ROOM_DEFAULT__SHARED, DIM_ROOM__SHARED, EVENING_TIME__SHARED, NIGHT_TIME__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
 
 export default {
     [BACKPACK_BENNETT]: BACKPACK__SHARED,
@@ -118,7 +118,10 @@ export default {
         BASS_CASE__SHARED,
     ],
     [BEDROOM_LAMP]: DARK_ROOM_DEFAULT__SHARED,
-    [BEETHOVEN_BUST]: DARK_ROOM_DEFAULT__SHARED,
+    [BEETHOVEN_BUST]: [
+        DARK_ROOM_DEFAULT__SHARED,
+        DIM_ROOM__SHARED,
+    ],
     [BENNETT_COUCH_LAMP]: null,
     [BENNETT_LETTERS]: null,
     [BENNETT_RECORD_PLAYER]: null,

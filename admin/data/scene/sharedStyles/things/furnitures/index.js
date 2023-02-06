@@ -9,7 +9,7 @@ import {
     LIZ_PILLOWS_PILE_REFLECTION,
     LIZ_PILLOWS_REFLECTION,
 } from '../../../../../../src/constants/scene/things/furnitures'
-import { DARK_ROOM_EXTRA__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
+import { DARK_ROOM_EXTRA__SHARED, DIM_ROOM__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
 import {
     ATTIC_LINENS__SHARED,
     BENNETT_LINENS__SHARED,
@@ -25,6 +25,7 @@ export default {
     ],
     [CAPTAIN_BED_PILLOW]: [
         DARK_ROOM_EXTRA__SHARED,
+        DIM_ROOM__SHARED,
         BENNETT_LINENS__SHARED,
     ],
     [DEATHBED_PILLOW]: HOSPITAL_LINENS__SHARED,

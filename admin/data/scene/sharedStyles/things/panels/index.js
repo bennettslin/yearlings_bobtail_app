@@ -71,7 +71,14 @@ import {
     WIDE_COUCH_BENNETT,
     WIDE_COUCH_MIRIAM,
 } from '../../../../../../src/constants/scene/things/panels'
-import { DARK_ROOM_DEFAULT__SHARED, FUTURE__SHARED, NIGHT_TIME__SHARED, PAST__SHARED, PRESENT__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
+import {
+    DARK_ROOM_DEFAULT__SHARED,
+    DIM_ROOM__SHARED,
+    FUTURE__SHARED,
+    NIGHT_TIME__SHARED,
+    PAST__SHARED,
+    PRESENT__SHARED,
+} from '../../../../../../src/constants/scene/sharedStyles'
 import { OCEAN_LIFE__SHARED } from '../../../../../../src/constants/scene/sharedStyles/animals'
 import { DRAWING__SHARED } from '../../../../../../src/constants/scene/sharedStyles/comic'
 import {
@@ -102,7 +109,10 @@ export default {
         ATTIC_LINENS__SHARED,
     ],
     [BATHTUB]: null,
-    [BEDROOM_DESK]: DARK_ROOM_DEFAULT__SHARED,
+    [BEDROOM_DESK]: [
+        DARK_ROOM_DEFAULT__SHARED,
+        DIM_ROOM__SHARED,
+    ],
     [BEDROOM_STOOL]: [
         BENNETT_LINENS__SHARED,
         DARK_ROOM_DEFAULT__SHARED,
@@ -111,7 +121,10 @@ export default {
     [BENNETT_NIGHTSTAND]: null,
     [BENNETT_RECORD_STAND]: null,
     [BUDDHA_STAND]: DARK_ROOM_DEFAULT__SHARED,
-    [CAPTAIN_BED]: DARK_ROOM_DEFAULT__SHARED,
+    [CAPTAIN_BED]: [
+        DARK_ROOM_DEFAULT__SHARED,
+        DIM_ROOM__SHARED,
+    ],
     [CAPTAIN_BED_INTERIOR]: null,
     [CAPTAIN_BED_LIT]: DARK_ROOM_DEFAULT__SHARED,
     [CAVE_SHADOWS]: DRAWING__SHARED,

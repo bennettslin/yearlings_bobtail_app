@@ -12,7 +12,7 @@ import {
 } from '../../../../src/constants/scene/things'
 import {
     BEDROOM_DARK_KEY,
-    BEDROOM_EVENING_KEY,
+    BEDROOM_DIM_KEY,
     BEDROOM_FUTURE_KEY,
     BEDROOM_KEY,
     BEDROOM_MAGIC_KEY,
@@ -31,7 +31,6 @@ import {
     TIME_MORNING,
     TIME_NIGHT,
     TIME_NOON,
-    SEASON_THOUGHT,
 } from '../../../../src/constants/scene/sky'
 import {
     ANDREW,
@@ -157,7 +156,7 @@ export default [
                 [CAPTAIN_BED_LIT]: true,
             },
         },
-        cubes: BEDROOM_EVENING_KEY,
+        cubes: BEDROOM_DIM_KEY,
         sky: { time: TIME_EVENING, season: SEASON_AUTUMN },
     },
     {
@@ -185,7 +184,7 @@ export default [
             },
         },
         cubes: CAPTAIN_BED_KEY,
-        sky: { season: SEASON_THOUGHT },
+        sky: { time: TIME_EVENING, season: SEASON_AUTUMN },
     },
     {
         unitIndex: 6,

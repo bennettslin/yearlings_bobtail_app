@@ -66,7 +66,14 @@ import {
     REATTA__SHARED,
     ALL_VEHICLES__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/vehicles'
-import { DARK_ROOM_DEFAULT__SHARED, FUTURE__SHARED, NIGHT_TIME__SHARED, PAST__SHARED, PRESENT__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
+import {
+    DARK_ROOM_DEFAULT__SHARED,
+    DIM_ROOM__SHARED,
+    FUTURE__SHARED,
+    NIGHT_TIME__SHARED,
+    PAST__SHARED,
+    PRESENT__SHARED,
+} from '../../../../../../src/constants/scene/sharedStyles'
 
 export default {
     [ALBUM_JOHNNY_HORTON]: [
@@ -106,6 +113,7 @@ export default {
     ],
     [POSTER_BLOOM_COUNTY]: [
         DARK_ROOM_DEFAULT__SHARED,
+        DIM_ROOM__SHARED,
         ALL_PEOPLE__SHARED,
         MOUNTAIN__SHARED,
     ],

@@ -6,6 +6,7 @@ import {
     BEDROOM_DARK_KEY,
     BEDROOM_STOOL_NIGHT_KEY,
     BEDROOM_EVENING_KEY,
+    BEDROOM_DIM_KEY,
 } from '../../../../../src/constants/scene/scenes'
 import {
     DEFAULT_CLEAR_COLOUR as D,
@@ -83,12 +84,30 @@ const STOOL_FLOOR = {
     ],
 }
 
+const BEDROOM_EVENING_AND_DIM_CONFIG = {
+    slantDirection: LEFT,
+    ceiling: DEFAULT_CEILING,
+    floor: {
+        hslaColours: [
+            [I, I, I, I, I, F, I, F, F, F, I],
+            [I, I, I, W, W, F, F, U, U, F, I],
+            [I, I, W, W, D, F, F, U, U, U, F, I],
+            [F, W, D, D, F, F, F, U, U, U, F, I],
+            [F, F, F, F, F, F, F, U, F, F, F, I],
+            [F],
+        ],
+        zIndices: DEFAULT_FLOOR.zIndices,
+    },
+}
+
 export default {
     [BEDROOM_KEY]: {
         slantDirection: LEFT,
         ceiling: DEFAULT_CEILING,
         floor: DEFAULT_FLOOR,
     },
+    [BEDROOM_EVENING_KEY]: BEDROOM_EVENING_AND_DIM_CONFIG,
+    [BEDROOM_DIM_KEY]: BEDROOM_EVENING_AND_DIM_CONFIG,
     [BEDROOM_STOOL_KEY]: {
         slantDirection: LEFT,
         ceiling: DEFAULT_CEILING,
@@ -102,21 +121,6 @@ export default {
                 [F],
             ],
             zIndices: STOOL_FLOOR.zIndices,
-        },
-    },
-    [BEDROOM_EVENING_KEY]: {
-        slantDirection: LEFT,
-        ceiling: DEFAULT_CEILING,
-        floor: {
-            hslaColours: [
-                [I, I, I, I, I, F, I, F, F, F, I],
-                [I, I, I, W, W, F, F, U, U, F, I],
-                [I, I, W, W, D, F, F, U, U, U, F, I],
-                [F, W, D, D, F, F, F, U, U, U, F, I],
-                [F, F, F, F, F, F, F, U, F, F, F, I],
-                [F],
-            ],
-            zIndices: DEFAULT_FLOOR.zIndices,
         },
     },
     [BEDROOM_STOOL_NIGHT_KEY]: {

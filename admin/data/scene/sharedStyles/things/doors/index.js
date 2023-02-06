@@ -56,7 +56,7 @@ import {
     WALL__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/outdoor'
 import {
-    AUTUMN__SHARED, DARK_ROOM_DEFAULT__SHARED, EVENING_TIME__SHARED, FUTURE__SHARED, MAGIC__SHARED, NIGHT_TIME__SHARED, PAST__SHARED,
+    AUTUMN__SHARED, DARK_ROOM_DEFAULT__SHARED, DIM_ROOM__SHARED, EVENING_TIME__SHARED, FUTURE__SHARED, MAGIC__SHARED, NIGHT_TIME__SHARED, PAST__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles'
 
 export default {
@@ -69,10 +69,12 @@ export default {
     [BASEMENT_DOOR_SIDE]: DOOR__SHARED,
     [BEDROOM_BLINDS]: [
         DARK_ROOM_DEFAULT__SHARED,
+        DIM_ROOM__SHARED,
         BENNETT_INSIDE__SHARED,
     ],
     [BEDROOM_BLINDS_OPEN]: [
         DARK_ROOM_DEFAULT__SHARED,
+        DIM_ROOM__SHARED,
         BENNETT_INSIDE__SHARED,
     ],
     [BEDROOM_FENCE]: [
