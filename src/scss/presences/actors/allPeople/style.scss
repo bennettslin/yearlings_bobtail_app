@@ -58,6 +58,14 @@
     .nippleEastAsian { fill: hsl(16, 26%, 49%); }
     .nippleWhiteBlood { fill: hsl(1, 26%, 49%); }
 
+    .dimRoom &.dimRoom#{$suffix} {
+        // Includes Chinese paintings and Bloom County poster.
+        .skinBlack { fill: hsl(29, 21%, 36%); }
+        .skinNordic { fill: hsl(21, 21%, 65%); }
+        .hairSandy { fill: hsl(32, 15%, 46%); }
+        .hairBlonde { fill: hsl(41, 15%, 57%); }
+    }
+
     .darkRoom &.darkRoom#{$suffix} {
         // Includes Chinese paintings and Bloom County poster.
         .lipFemaleMedium { fill: hsla(1, 12%, 34%, 0.5); }

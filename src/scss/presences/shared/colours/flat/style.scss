@@ -75,6 +75,16 @@
 .flatMaroonMedium { fill: hsl(330, 33%, 57%); }
 .flatMaroonLight { fill: hsl(330, 33%, 67%); }
 
+.dimRoom .dimRoom#{$suffix} {
+    .flatRedMedium { fill: hsl(0, 21%, 42%); }
+    .flatRedLight { fill: hsl(0, 21%, 52%); }
+    .flatOrangeMedium { fill: hsl(30, 21%, 42%); }
+    .flatGreenLight { fill: hsl(120, 21%, 52%); }
+    .flatTealLight { fill: hsl(180, 21%, 52%); }
+    .flatBlueLightest { fill: hsl(210, 21%, 62%); }
+    .flatMaroonLight { fill: hsl(330, 21%, 52%); }
+}
+
 .darkRoom .darkRoom#{$suffix} {
     .flatRedDarker { fill: hsl(0, 17%, 27%); }
     .flatRedDark { fill: hsl(0, 17%, 29%); }
