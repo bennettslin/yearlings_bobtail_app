@@ -3,7 +3,7 @@
 .bulbGreen { fill: hsl(120, 23%, 47%); }
 .bulbBlue { fill: hsl(210, 23%, 47%); }
 .bulbPurple { fill: hsl(270, 23%, 47%); }
-.bulbWhite { fill: hsla(240, 100%, 94%, 0.7); }
+.bulbWhite, .bulbWhiteDynamic { fill: hsla(240, 38%, 94%, 0.7); }
 
 .darkRoom .darkRoom#{$suffix} {
     .bulbRed { fill: hsl(0, 63%, 77%); }
@@ -11,6 +11,7 @@
     .bulbGreen { fill: hsl(120, 63%, 77%); }
     .bulbBlue { fill: hsl(210, 63%, 77%); }
     .bulbPurple { fill: hsl(270, 63%, 77%); }
+    .bulbWhiteDynamic { fill: hsla(240, 38%, 67%, 0.7); }
 }
 
 .ShW__tipsShown,
@@ -19,3 +20,5 @@
 .nightTime .nightTime#{$suffix} {
     .bulbWhite { fill: hsl(60, 100%, 90%); }
 }
+
+.bedroomLamp__bed .bulbWhiteDynamic { fill: hsl(60, 100%, 90%); }
