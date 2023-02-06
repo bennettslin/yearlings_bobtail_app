@@ -1,30 +1,35 @@
 import { CAPTAIN_BED_KEY } from '../../../../../src/constants/scene/scenes'
-
 import {
-    GROUND_CLEAR_COLOUR as G,
+    BENNETT_WALL_COLOUR as W,
     BENNETT_CARPET_COLOUR as F,
+    DARK_ROOM_COLOUR as Z,
 } from '../../../../../src/constants/scene/cubes/colours'
-import { LEFT } from '../../../../../src/constants/transition'
+import { g } from '../../../../../src/constants/scene/cubes/zIndices'
 
 export default {
     [CAPTAIN_BED_KEY]: {
-        slantDirection: LEFT,
-        floor: {
+        ceiling: {
             hslaColours: [
-                [G, G, G, G, G, G, G, F, F, G],
-                [G, G, G, G, G, F, F, F, F, G],
-                [G, G, G, G, G, G, F, F, F, F, G],
-                [G, G, G, G, G, G, F, F, F, F, G],
-                [G, G, G, G, G, G, F, F, F, F, G],
-                [G, G, G, G, G, G, G, F, F, G],
+                [W],
+                [W],
+                [Z],
             ],
             zIndices: [
-                [0, 0, 0, 0, 0, 0, 0, 1, 1, 0],
-                [0, 0, 0, 0, 0, 1, 1, 1, 1, 0],
-                [0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0],
-                [0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0],
-                [0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0],
-                [0, 0, 0, 0, 0, 0, 0, 1, 1, 0],
+                [1],
+                [1, g, g, g, g, g, g, g, g, g, g, 1],
+                [0, 0, 0, 0, 0, 8, 8, 8, 8, 8, 8, 0],
+            ],
+        },
+        floor: {
+            hslaColours: [
+                [F],
+                [F],
+                [Z],
+            ],
+            zIndices: [
+                [0],
+                [1],
+                [0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0],
             ],
         },
     },
