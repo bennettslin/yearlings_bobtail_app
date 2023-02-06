@@ -122,6 +122,8 @@ import {
     BEDROOM_DESK,
     BEDROOM_STOOL,
     CAPTAIN_BED,
+    CAPTAIN_BED_INTERIOR,
+    CAPTAIN_BED_LIT,
     PRINCIPAL_BENCH,
 } from '../../../../src/constants/scene/things/panels'
 
@@ -152,7 +154,7 @@ export default [
             },
             [PANEL]: {
                 [BEDROOM_DESK]: true,
-                [CAPTAIN_BED]: true,
+                [CAPTAIN_BED_LIT]: true,
             },
         },
         cubes: BEDROOM_EVENING_KEY,
@@ -179,6 +181,7 @@ export default [
                 [BENNETT_LETTERS]: true,
             },
             [PANEL]: {
+                [CAPTAIN_BED_INTERIOR]: true,
             },
         },
         cubes: BEDROOM_STOWAWAYS_KEY,

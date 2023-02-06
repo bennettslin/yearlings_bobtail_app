@@ -8,6 +8,8 @@ import bennettNightstand from '../../../../assets/svgs/panels/bennettNightstand'
 import bennettRecordStand from '../../../../assets/svgs/panels/bennettRecordStand'
 import buddhaStand from '../../../../assets/svgs/panels/buddhaStand'
 import captainBed from '../../../../assets/svgs/panels/captainBed'
+import captainBedInterior from '../../../../assets/svgs/panels/captainBedInterior'
+import captainBedLit from '../../../../assets/svgs/panels/captainBedLit'
 import caveShadows from '../../../../assets/svgs/panels/caveShadows'
 import conveyorBelt from '../../../../assets/svgs/panels/conveyorBelt'
 import couchShelf from '../../../../assets/svgs/panels/couchShelf'
@@ -76,6 +78,8 @@ import {
     BENNETT_RECORD_STAND,
     BUDDHA_STAND,
     CAPTAIN_BED,
+    CAPTAIN_BED_INTERIOR,
+    CAPTAIN_BED_LIT,
     CAVE_SHADOWS,
     CONVEYOR_BELT__READING,
     CONVEYOR_BELT__LANCET,
@@ -172,6 +176,8 @@ export default {
     [BENNETT_RECORD_STAND]: bennettRecordStand,
     [BUDDHA_STAND]: buddhaStand,
     [CAPTAIN_BED]: captainBed,
+    [CAPTAIN_BED_INTERIOR]: captainBedInterior,
+    [CAPTAIN_BED_LIT]: captainBedLit,
     [CAVE_SHADOWS]: caveShadows,
     [CONVEYOR_BELT__READING]: conveyorBelt,
     [CONVEYOR_BELT__LANCET]: conveyorBelt,

@@ -53,6 +53,8 @@ import {
     BEDROOM_DESK,
     BEDROOM_STOOL,
     CAPTAIN_BED,
+    CAPTAIN_BED_INTERIOR,
+    CAPTAIN_BED_LIT,
 } from '../../../../../src/constants/scene/things/panels'
 import { SKETCH_CONFIG } from '../../sharedConfigs'
 
@@ -149,6 +151,10 @@ export default {
             yIndex: 5,
             xPosition: 7.5,
         },
+        [CAPTAIN_BED_LIT]: {
+            yIndex: 5,
+            xPosition: 7.5,
+        },
     },
 }
 
@@ -214,6 +220,13 @@ export const THINGS_BEDROOM_GUILTY = {
             yIndex: 5,
             xPosition: 7.3,
             zOffset: 0.05,
+        },
+    },
+    [PANEL]: {
+        [CAPTAIN_BED_INTERIOR]: {
+            yIndex: -1,
+            xPosition: 7.5,
+            zOffset: -0.5,
         },
     },
 }
