@@ -183,13 +183,13 @@ export const THINGS_BEDROOM_GUILTY = {
     [BUBBLE]: {
         [SKETCHBOOK__DOGS_ROCKET]: {
             yIndex: 5,
-            xPosition: 3,
-            zOffset: 1.5,
+            xPosition: 2.5,
+            zOffset: 1.25,
         },
         [SKETCH_DOGS_ROCKET]: {
             ...SKETCH_CONFIG,
-            xPosition: 2.85,
-            zOffset: 2.15,
+            xPosition: 2.35,
+            zOffset: 1.9,
         },
     },
     [FIXTURE]: {
@@ -212,8 +212,8 @@ export const THINGS_BEDROOM_GUILTY = {
         },
         [BENNETT_LETTERS]: {
             yIndex: 5,
-            xPosition: 7.2,
-            zOffset: -0.05,
+            xPosition: 7.3,
+            zOffset: 0.05,
         },
     },
 }

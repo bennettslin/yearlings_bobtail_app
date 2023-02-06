@@ -31,6 +31,7 @@ import {
     TIME_MORNING,
     TIME_NIGHT,
     TIME_NOON,
+    SEASON_THOUGHT,
 } from '../../../../src/constants/scene/sky'
 import {
     ANDREW,
@@ -167,33 +168,21 @@ export default [
                     instance: BLISSFUL_GUILTY,
                 },
             },
-            [BACKDROP]: {
-                [VALLEY_FURTHER_BACKDROP]: true,
-            },
             [BUBBLE]: {
                 [SKETCHBOOK__DOGS_ROCKET]: true,
                 [SKETCH_DOGS_ROCKET]: true,
             },
-            [CARDBOARD]: {
-                [POSTER_BLOOM_COUNTY]: true,
-            },
-            [DOOR]: {
-                [BEDROOM_BLINDS]: true,
-                [BEDROOM_FENCE]: true,
-            },
             [FIXTURE]: {
                 [BEDROOM_LAMP__BED]: true,
-                [BEETHOVEN_BUST__BEDROOM]: true,
                 [LETTER_SCRAPS__BENNETT]: true,
                 [TORN_MAGAZINES__BENNETT]: true,
                 [BENNETT_LETTERS]: true,
             },
             [PANEL]: {
-                [BEDROOM_DESK]: true,
             },
         },
         cubes: BEDROOM_STOWAWAYS_KEY,
-        sky: { time: TIME_EVENING, season: SEASON_AUTUMN },
+        sky: { season: SEASON_THOUGHT },
     },
     {
         unitIndex: 6,
