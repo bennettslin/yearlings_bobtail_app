@@ -1,5 +1,4 @@
 import {
-    BUBBLE,
     CARDBOARD,
     CUTOUT,
     DOOR,
@@ -8,10 +7,6 @@ import {
     FURNITURE,
     PANEL,
 } from '../../../../../src/constants/scene/things'
-import {
-    SKETCH_DOGS_ROCKET,
-    SKETCHBOOK__DOGS_ROCKET,
-} from '../../../../../src/constants/scene/things/bubbles'
 import {
     DOGS_ROCKET,
     DOGS_SPACE_STATION,
@@ -31,17 +26,13 @@ import {
     BEDROOM_FENCE,
 } from '../../../../../src/constants/scene/things/doors'
 import {
-    BEDROOM_LAMP__BED,
     BEDROOM_LAMP__DESK,
     BEETHOVEN_BUST__BEDROOM,
-    BENNETT_LETTERS,
     BEYONDER_ENVELOPE,
     CHRISTOPHER_LETTERS,
     FLOWER_BULBS,
-    LETTER_SCRAPS__BENNETT,
     LETTER_SCRAPS__CHRISTOPHER,
     RED_ENVELOPE_MONEY,
-    TORN_MAGAZINES__BENNETT,
     TORN_MAGAZINES__CHRISTOPHER,
 } from '../../../../../src/constants/scene/things/fixtures'
 import {
@@ -53,10 +44,8 @@ import {
     BEDROOM_DESK,
     BEDROOM_STOOL,
     CAPTAIN_BED,
-    CAPTAIN_BED_INTERIOR,
     CAPTAIN_BED_LIT,
 } from '../../../../../src/constants/scene/things/panels'
-import { SKETCH_CONFIG } from '../../sharedConfigs'
 
 export default {
     [CARDBOARD]: {
@@ -181,52 +170,6 @@ export const THINGS_BEDROOM_FEARFUL = {
         [BEDROOM_SIREN]: {
             xPosition: 2,
             zOffset: 2.25,
-        },
-    },
-}
-
-export const THINGS_BEDROOM_GUILTY = {
-    [BUBBLE]: {
-        [SKETCHBOOK__DOGS_ROCKET]: {
-            yIndex: 5,
-            xPosition: 2.5,
-            zOffset: 1.25,
-        },
-        [SKETCH_DOGS_ROCKET]: {
-            ...SKETCH_CONFIG,
-            xPosition: 2.35,
-            zOffset: 1.9,
-        },
-    },
-    [FIXTURE]: {
-        [BEDROOM_LAMP__BED]: {
-            yIndex: 4,
-            xPosition: 9.3,
-            zOffset: -0.05,
-            layerYIndex: 5,
-        },
-        [LETTER_SCRAPS__BENNETT]: {
-            yIndex: 4,
-            xPosition: 6,
-            zOffset: -0.07,
-            layerYIndex: 5,
-        },
-        [TORN_MAGAZINES__BENNETT]: {
-            yIndex: 4,
-            xPosition: 5.8,
-            layerYIndex: 5,
-        },
-        [BENNETT_LETTERS]: {
-            yIndex: 5,
-            xPosition: 7.3,
-            zOffset: 0.05,
-        },
-    },
-    [PANEL]: {
-        [CAPTAIN_BED_INTERIOR]: {
-            yIndex: -1,
-            xPosition: 7.5,
-            zOffset: -0.5,
         },
     },
 }

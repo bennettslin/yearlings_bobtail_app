@@ -17,7 +17,7 @@ import {
     BEDROOM_KEY,
     BEDROOM_MAGIC_KEY,
     BEDROOM_STOOL_KEY,
-    BEDROOM_STOWAWAYS_KEY,
+    CAPTAIN_BED_KEY,
     VAN_NUYS_HALLWAY_KEY,
     VAN_NUYS_LOCKERS_KEY,
     VAN_NUYS_QUAD_KEY,
@@ -149,7 +149,7 @@ export default [
                 [CAPTAIN_BED_PILLOW]: true,
             },
             [DOOR]: {
-                [BEDROOM_BLINDS]: true,
+                [BEDROOM_BLINDS_OPEN]: true,
                 [BEDROOM_FENCE]: true,
             },
             [PANEL]: {
@@ -184,7 +184,7 @@ export default [
                 [CAPTAIN_BED_INTERIOR]: true,
             },
         },
-        cubes: BEDROOM_STOWAWAYS_KEY,
+        cubes: CAPTAIN_BED_KEY,
         sky: { season: SEASON_THOUGHT },
     },
     {

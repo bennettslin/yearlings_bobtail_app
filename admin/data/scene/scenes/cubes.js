@@ -18,6 +18,7 @@ import CUBES_BUOY from './buoy/cubes'
 import CUBES_OCEAN_DEPTHS from './oceanDepths/cubes'
 import CUBES_OCEAN_FLOOR from './oceanFloor/cubes'
 import CUBES_BEDROOM from './bedroom/cubes'
+import CUBES_CAPTAIN_BED from './captainBed/cubes'
 import CUBES_VAN_NUYS_LOCKERS from './vanNuysLockers/cubes'
 import CUBES_VAN_NUYS_QUAD from './vanNuysQuad/cubes'
 import CUBES_VAN_NUYS_HALLWAY from './vanNuysHallway/cubes'
@@ -88,6 +89,7 @@ export default {
     ...CUBES_OCEAN_DEPTHS,
     ...CUBES_OCEAN_FLOOR,
     ...CUBES_BEDROOM,
+    ...CUBES_CAPTAIN_BED,
     ...CUBES_VAN_NUYS_LOCKERS,
     ...CUBES_VAN_NUYS_QUAD,
     ...CUBES_VAN_NUYS_HALLWAY,

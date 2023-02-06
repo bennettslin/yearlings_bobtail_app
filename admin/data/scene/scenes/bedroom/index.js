@@ -1,6 +1,5 @@
 export { default as ACTORS_BEDROOM_ENRAGED } from './enraged'
 export { default as ACTORS_BEDROOM_FEARFUL } from './fearful'
-export { default as ACTORS_BEDROOM_GUILTY } from './guilty'
 export { default as ACTORS_BEDROOM_FEIGNING } from './feigning'
 export { default as ACTORS_BEDROOM_ASLEEP } from './asleep'
 export { default as ACTORS_BEDROOM_SHAKEN } from './shaken'

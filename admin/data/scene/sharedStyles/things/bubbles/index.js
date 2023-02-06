@@ -140,6 +140,7 @@ export default {
         BUSING_SHARED,
         CAFETERIA__SHARED,
         DISHROOM_SHARED,
+        LANCET_PEN__SHARED,
     ],
     [LIZ_THOUGHT_DISHROOM]: [
         BENNETT,

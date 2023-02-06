@@ -3,7 +3,6 @@ import { BEDROOM_FUTURE_CUBES } from './shaken/cubes'
 import {
     BEDROOM_KEY,
     BEDROOM_STOOL_KEY,
-    BEDROOM_STOWAWAYS_KEY,
     BEDROOM_DARK_KEY,
     BEDROOM_STOOL_NIGHT_KEY,
     BEDROOM_EVENING_KEY,
@@ -118,27 +117,6 @@ export default {
                 [F],
             ],
             zIndices: DEFAULT_FLOOR.zIndices,
-        },
-    },
-    [BEDROOM_STOWAWAYS_KEY]: {
-        slantDirection: LEFT,
-        floor: {
-            hslaColours: [
-                [G, G, G, G, G, G, G, F, F, G],
-                [G, G, G, G, G, F, F, F, F, G],
-                [G, G, G, G, G, G, F, F, F, F, G],
-                [G, G, G, G, G, G, F, F, F, F, G],
-                [G, G, G, G, G, G, F, F, F, F, G],
-                [G, G, G, G, G, G, G, F, F, G],
-            ],
-            zIndices: [
-                [0, 0, 0, 0, 0, 0, 0, 1, 1, 0],
-                [0, 0, 0, 0, 0, 1, 1, 1, 1, 0],
-                [0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0],
-                [0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0],
-                [0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0],
-                [0, 0, 0, 0, 0, 0, 0, 1, 1, 0],
-            ],
         },
     },
     [BEDROOM_STOOL_NIGHT_KEY]: {
