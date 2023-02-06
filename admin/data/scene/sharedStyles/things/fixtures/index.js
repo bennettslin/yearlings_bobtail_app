@@ -84,10 +84,7 @@ import {
     PUDDING__SHARED,
     WINE__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/food'
-import {
-    BULB__SHARED,
-    LIZ_PHONE__SHARED,
-} from '../../../../../../src/constants/scene/sharedStyles/household'
+import { LIZ_PHONE__SHARED } from '../../../../../../src/constants/scene/sharedStyles/household'
 import {
     BASS_CASE__SHARED,
     CYMBAL__SHARED,
@@ -120,10 +117,7 @@ export default {
         DARK_ROOM_DEFAULT__SHARED,
         BASS_CASE__SHARED,
     ],
-    [BEDROOM_LAMP]: [
-        BULB__SHARED,
-        DARK_ROOM_DEFAULT__SHARED,
-    ],
+    [BEDROOM_LAMP]: DARK_ROOM_DEFAULT__SHARED,
     [BEETHOVEN_BUST]: DARK_ROOM_DEFAULT__SHARED,
     [BENNETT_COUCH_LAMP]: null,
     [BENNETT_LETTERS]: null,

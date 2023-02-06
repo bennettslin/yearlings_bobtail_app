@@ -78,7 +78,6 @@ import {
     DOOR__SHARED,
     FAMILY_HOUSE__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/home'
-import { BULB__SHARED } from '../../../../../../src/constants/scene/sharedStyles/household'
 import {
     FOLIAGE__SHARED,
     FREEWAY_SIGN__SHARED,
@@ -363,7 +362,6 @@ export default {
         NIGHT_TIME__SHARED,
     ],
     [ST_JOSEPHS_CHURCH]: [
-        BULB__SHARED,
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,

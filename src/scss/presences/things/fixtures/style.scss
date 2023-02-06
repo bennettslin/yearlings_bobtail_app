@@ -16,15 +16,6 @@
     .coverFront { fill: hsla(30, 24%, 59%, 0.2); }
 }
 
-.bedroomLamp__desk {
-    // TODO: Not the best approach. Duplicate styling.
-    .bulbOn { fill: hsla(240, 100%, 94%, 0.7); }
-
-    .darkRoom &.darkRoom#{$suffix} {
-        .bulbOn { fill: hsla(240, 25%, 52%, 0.7); }
-    }
-}
-
 .keyboard {
     .bodyBottom { fill: hsl(190, 2%, 51%); }
     .bodySide { fill: hsl(190, 3%, 56%); }

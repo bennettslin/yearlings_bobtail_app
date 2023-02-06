@@ -90,7 +90,6 @@ import {
     AUTUMN__SHARED, DARK_ROOM_DEFAULT__SHARED, EVENING_TIME__SHARED, FUTURE__SHARED, MAGIC__SHARED, NIGHT_TIME__SHARED, PAST__SHARED, WINTER__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles'
 import { BENNETT_LINENS__SHARED } from '../../../../../../src/constants/scene/sharedStyles/furniture'
-import { BULB__SHARED } from '../../../../../../src/constants/scene/sharedStyles/household'
 import {
     FOLIAGE__SHARED,
     FREEWAY_SIGN__SHARED,
@@ -182,7 +181,6 @@ export default {
     [LAMPPOST]: [
         EVENING_TIME__SHARED,
         NIGHT_TIME__SHARED,
-        BULB__SHARED,
     ],
     [LEMON_TREE]: [
         FOLIAGE__SHARED,
@@ -281,10 +279,7 @@ export default {
         EVENING_TIME__SHARED,
         FOLIAGE__SHARED,
     ],
-    [TWIN_STREETLAMP]: [
-        NIGHT_TIME__SHARED,
-        BULB__SHARED,
-    ],
+    [TWIN_STREETLAMP]: NIGHT_TIME__SHARED,
     [UCLA_TREE]: [
         NIGHT_TIME__SHARED,
         FOLIAGE__SHARED,
