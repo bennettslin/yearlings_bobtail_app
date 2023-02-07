@@ -63,6 +63,7 @@ export default {
         [CURTAIN_TOP_FLAT]: {
             yIndex: 0,
             zOffset: 7,
+            layerYIndex: -1,
         },
     },
 }
