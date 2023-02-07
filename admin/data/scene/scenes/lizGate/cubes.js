@@ -39,7 +39,7 @@ export default {
         floor: {
             hslaColours: [
                 [G],
-                [V, V, V, X, X, X, X, X, V],
+                [V, X, X, X, X, X, X, X, X, X, X, V],
                 [H],
                 [A, A, A, A, A, V, V, V, A],
                 [V],

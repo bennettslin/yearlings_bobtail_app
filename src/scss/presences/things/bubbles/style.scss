@@ -9,10 +9,6 @@
     .pileTop { fill: hsl(64, 18%, 64%); }
     .albumRightBottom { fill: hsl(112, 36%, 61%); }
     .yearlingsAlbum { fill: hsl(193, 36%, 61%); }
-    .standFront { fill: hsl(58, 21%, 52%); }
-    .standSide { fill: hsl(58, 19%, 40%); }
-    .binFront { fill: hsl(58, 30%, 61%); }
-    .binSide { fill: hsl(58, 25%, 57%); }
     .mask { fill: hsl(48, 25%, 72%); }
     .albumHeld { fill: hsl(333, 34%, 62%); }
 }
@@ -30,19 +26,10 @@
 
 .khariSpeechAttack {
     .ground { fill: hsl(44, 23%, 41%); }
-    .wall { fill: hsl(198, 38%, 62%); }
-    .cutout { fill: hsl(60, 11%, 69%); }
-    .supportFront { fill: hsl(62, 19%, 69%); }
-    .supportSide { fill: hsl(63, 11%, 56%); }
-    .mount { fill: hsl(216, 6%, 53%); }
-    .shutter { fill: hsl(216, 6%, 34%); }
-    .stageLightSide { fill: hsl(215, 5%, 44%); }
-    .stageLightTop { fill: hsl(214, 6%, 47%); }
+    .wall { fill: hsl(0, 20%, 62%); }
     .stephanieShoe { fill: hsl(40, 12%, 46%); }
     .stephanieDress { fill: hsl(305, 35%, 62%); }
-    .khariPants { fill: hsl(120, 30%, 60%); }
     .khariShoe { fill: hsl(43, 13%, 31%); }
-    .khariVest { fill: hsl(72, 37%, 57%); }
 }
 
 .lizSpeechDefence {
