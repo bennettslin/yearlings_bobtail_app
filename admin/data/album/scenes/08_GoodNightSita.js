@@ -58,7 +58,6 @@ import {
     CYPRESS_SINGLE__LIZ_ENDING,
     LAMPPOST__LIZ_GATE,
     MUSEUM_DISPLAY,
-    SANDBAGS,
     STAGE_CUTOUT,
     TRAFFIC_LIGHT_FRONT,
 } from '../../../../src/constants/scene/things/cutouts'
@@ -180,7 +179,6 @@ export default [
                 [THEATRE_SEATS_BACKDROP]: true,
             },
             [CUTOUT]: {
-                [SANDBAGS]: true,
                 [STAGE_CUTOUT]: true,
             },
             [FIXTURE]: {

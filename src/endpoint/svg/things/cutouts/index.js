@@ -49,7 +49,6 @@ import rosebushDouble from '../../../../assets/svgs/cutouts/rosebushDouble'
 import rosebushSingle from '../../../../assets/svgs/cutouts/rosebushSingle'
 import rosebushSlantedDouble from '../../../../assets/svgs/cutouts/rosebushSlantedDouble'
 import rosebushSlantedSingle from '../../../../assets/svgs/cutouts/rosebushSlantedSingle'
-import sandbags from '../../../../assets/svgs/cutouts/sandbags'
 import shoppingCart from '../../../../assets/svgs/cutouts/shoppingCart'
 import signpost from '../../../../assets/svgs/cutouts/signpost'
 import stageCutout from '../../../../assets/svgs/cutouts/stageCutout'
@@ -154,7 +153,6 @@ import {
     ROSEBUSH_SINGLE_BATHROOM,
     ROSEBUSH_SLANTED_DOUBLE,
     ROSEBUSH_SLANTED_SINGLE,
-    SANDBAGS,
     SHOPPING_CART,
     SIGNPOST,
     STAGE_CUTOUT,
@@ -270,7 +268,6 @@ export default {
     [ROSEBUSH_SINGLE_BATHROOM]: rosebushSingle,
     [ROSEBUSH_SLANTED_DOUBLE]: rosebushSlantedDouble,
     [ROSEBUSH_SLANTED_SINGLE]: rosebushSlantedSingle,
-    [SANDBAGS]: sandbags,
     [SHOPPING_CART]: shoppingCart,
     [SIGNPOST]: signpost,
     [STAGE_CUTOUT]: stageCutout,

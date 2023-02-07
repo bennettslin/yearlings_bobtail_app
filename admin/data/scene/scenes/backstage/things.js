@@ -3,10 +3,7 @@ import {
     FIXTURE,
     FLAT,
 } from '../../../../../src/constants/scene/things'
-import {
-    SANDBAGS,
-    STAGE_CUTOUT,
-} from '../../../../../src/constants/scene/things/cutouts'
+import { STAGE_CUTOUT } from '../../../../../src/constants/scene/things/cutouts'
 import { MANNEQUIN } from '../../../../../src/constants/scene/things/fixtures'
 import {
     THEATRE_DRAPE_SIDE__LEFT,
@@ -22,10 +19,6 @@ import {
 
 export default {
     [CUTOUT]: {
-        [SANDBAGS]: {
-            yIndex: 1,
-            xPosition: 2.8,
-        },
         [STAGE_CUTOUT]: {
             yIndex: 5,
             xPosition: 10.5,
