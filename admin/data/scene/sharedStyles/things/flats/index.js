@@ -15,9 +15,6 @@ import {
     COMMERCIAL_MIDDLE_RIGHT,
     COMMERCIAL_NEAR_LEFT,
     COMMERCIAL_NEAR_RIGHT,
-    CURTAIN_LEG_FLAT,
-    CURTAIN_SIDE_FLAT,
-    CURTAIN_TOP_FLAT,
     DISTANT_BUILDINGS,
     DISTANT_HOUSES,
     DRIVING_HOUSE,
@@ -62,6 +59,10 @@ import {
     TAIWAN_MOUNTAIN_LEFT,
     TAIWAN_MOUNTAIN_RIGHT,
     TENNIS_COURT,
+    THEATRE_DRAPE_SIDE,
+    THEATRE_DRAPE_TOP,
+    THEATRE_LEG_SIDE,
+    THEATRE_LEG_TOP,
     VALLEY_FREEWAY,
 } from '../../../../../../src/constants/scene/things/flats'
 import { OCEAN_LIFE__SHARED } from '../../../../../../src/constants/scene/sharedStyles/animals'
@@ -160,9 +161,6 @@ export default {
         DOOR__SHARED,
         NIGHT_TIME__SHARED,
     ],
-    [CURTAIN_LEG_FLAT]: null,
-    [CURTAIN_SIDE_FLAT]: null,
-    [CURTAIN_TOP_FLAT]: null,
     [DISTANT_BUILDINGS]: [
         AUTUMN__SHARED,
         BUILDINGS__SHARED,
@@ -397,6 +395,10 @@ export default {
         TAIWAN_MOUNTAIN__SHARED,
     ],
     [TENNIS_COURT]: FOLIAGE__SHARED,
+    [THEATRE_DRAPE_SIDE]: null,
+    [THEATRE_DRAPE_TOP]: null,
+    [THEATRE_LEG_SIDE]: null,
+    [THEATRE_LEG_TOP]: null,
     [VALLEY_FREEWAY]: [
         BUILDINGS__SHARED,
         FREEWAY_SIGN__SHARED,

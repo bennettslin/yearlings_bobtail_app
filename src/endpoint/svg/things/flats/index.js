@@ -14,9 +14,10 @@ import commercialMiddleLeft from '../../../../assets/svgs/flats/commercialMiddle
 import commercialMiddleRight from '../../../../assets/svgs/flats/commercialMiddleRight'
 import commercialNearLeft from '../../../../assets/svgs/flats/commercialNearLeft'
 import commercialNearRight from '../../../../assets/svgs/flats/commercialNearRight'
-import curtainLegFlat from '../../../../assets/svgs/flats/curtainLegFlat'
-import curtainSideFlat from '../../../../assets/svgs/flats/curtainSideFlat'
-import curtainTopFlat from '../../../../assets/svgs/flats/curtainTopFlat'
+import theatreDrapeSide from '../../../../assets/svgs/flats/theatreDrapeSide'
+import theatreDrapeTop from '../../../../assets/svgs/flats/theatreDrapeTop'
+import theatreLegSide from '../../../../assets/svgs/flats/theatreLegSide'
+import theatreLegTop from '../../../../assets/svgs/flats/theatreLegTop'
 import distantBuildings from '../../../../assets/svgs/flats/distantBuildings'
 import distantHouses from '../../../../assets/svgs/flats/distantHouses'
 import drivingHouseLeft from '../../../../assets/svgs/flats/drivingHouseLeft'
@@ -81,13 +82,6 @@ import {
     COMMERCIAL_MIDDLE_RIGHT,
     COMMERCIAL_NEAR_LEFT,
     COMMERCIAL_NEAR_RIGHT,
-    CURTAIN_LEG_FLAT__BACK_LEFT,
-    CURTAIN_LEG_FLAT__BACK_RIGHT,
-    CURTAIN_LEG_FLAT__FRONT_LEFT,
-    CURTAIN_LEG_FLAT__FRONT_RIGHT,
-    CURTAIN_SIDE_FLAT__LEFT,
-    CURTAIN_SIDE_FLAT__RIGHT,
-    CURTAIN_TOP_FLAT,
     DISTANT_BUILDINGS,
     DISTANT_HOUSES,
     DRIVING_HOUSE_LEFT,
@@ -135,6 +129,15 @@ import {
     TAIWAN_MOUNTAIN_LEFT,
     TAIWAN_MOUNTAIN_RIGHT,
     TENNIS_COURT,
+    THEATRE_DRAPE_SIDE__LEFT,
+    THEATRE_DRAPE_SIDE__RIGHT,
+    THEATRE_DRAPE_TOP,
+    THEATRE_LEG_SIDE__BACK_LEFT,
+    THEATRE_LEG_SIDE__BACK_RIGHT,
+    THEATRE_LEG_SIDE__FRONT_LEFT,
+    THEATRE_LEG_SIDE__FRONT_RIGHT,
+    THEATRE_LEG_TOP__BACK,
+    THEATRE_LEG_TOP__FRONT,
     VALLEY_FREEWAY,
 } from '../../../../constants/scene/things/flats'
 
@@ -156,13 +159,6 @@ export default {
     [COMMERCIAL_MIDDLE_RIGHT]: commercialMiddleRight,
     [COMMERCIAL_NEAR_LEFT]: commercialNearLeft,
     [COMMERCIAL_NEAR_RIGHT]: commercialNearRight,
-    [CURTAIN_LEG_FLAT__BACK_LEFT]: curtainLegFlat,
-    [CURTAIN_LEG_FLAT__BACK_RIGHT]: curtainLegFlat,
-    [CURTAIN_LEG_FLAT__FRONT_LEFT]: curtainLegFlat,
-    [CURTAIN_LEG_FLAT__FRONT_RIGHT]: curtainLegFlat,
-    [CURTAIN_SIDE_FLAT__LEFT]: curtainSideFlat,
-    [CURTAIN_SIDE_FLAT__RIGHT]: curtainSideFlat,
-    [CURTAIN_TOP_FLAT]: curtainTopFlat,
     [DISTANT_BUILDINGS]: distantBuildings,
     [DISTANT_HOUSES]: distantHouses,
     [DRIVING_HOUSE_LEFT]: drivingHouseLeft,
@@ -210,5 +206,14 @@ export default {
     [TAIWAN_MOUNTAIN_LEFT]: taiwanMountainLeft,
     [TAIWAN_MOUNTAIN_RIGHT]: taiwanMountainRight,
     [TENNIS_COURT]: tennisCourt,
+    [THEATRE_DRAPE_SIDE__LEFT]: theatreDrapeSide,
+    [THEATRE_DRAPE_SIDE__RIGHT]: theatreDrapeSide,
+    [THEATRE_DRAPE_TOP]: theatreDrapeTop,
+    [THEATRE_LEG_SIDE__BACK_LEFT]: theatreLegSide,
+    [THEATRE_LEG_SIDE__BACK_RIGHT]: theatreLegSide,
+    [THEATRE_LEG_SIDE__FRONT_LEFT]: theatreLegSide,
+    [THEATRE_LEG_SIDE__FRONT_RIGHT]: theatreLegSide,
+    [THEATRE_LEG_TOP__BACK]: theatreLegTop,
+    [THEATRE_LEG_TOP__FRONT]: theatreLegTop,
     [VALLEY_FREEWAY]: valleyFreeway,
 }
