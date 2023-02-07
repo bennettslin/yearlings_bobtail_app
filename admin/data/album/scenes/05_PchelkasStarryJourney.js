@@ -160,7 +160,7 @@ export default [
         sky: { time: TIME_EVENING, season: SEASON_AUTUMN },
     },
     {
-        unitIndex: 2,
+        unitIndex: 3,
         description: `Bennett and Christopher are under his bunk bed. Christopher is injured, but happily playing. Bennett looks guilty. There is a drawing of the two as dogs.`,
         presences: {
             [ACTOR]: {
