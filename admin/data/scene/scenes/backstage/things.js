@@ -28,13 +28,14 @@ export default {
         },
         [STAGE_CUTOUT]: {
             yIndex: 5,
-            xPosition: 10,
+            xPosition: 10.5,
+            zOffset: -0.075,
         },
     },
     [FIXTURE]: {
         [MANNEQUIN]: {
             yIndex: 5,
-            xPosition: 0.5,
+            xPosition: 0.25,
         },
     },
     [FLAT]: {

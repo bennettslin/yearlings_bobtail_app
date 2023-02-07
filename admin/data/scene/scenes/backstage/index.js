@@ -12,25 +12,25 @@ export default {
     [STEPHANIE]: {
         [FLAPPER]: {
             yIndex: 3,
-            xPosition: 2.2,
+            xPosition: 2.1,
         },
     },
     [BENNETT]: {
         [BACKSTAGE]: {
             yIndex: 4,
-            xPosition: 4,
+            xPosition: 4.4,
         },
     },
     [LIZ]: {
         [BACKSTAGE]: {
             yIndex: 4,
-            xPosition: 6,
+            xPosition: 6.2,
         },
     },
     [KHARI]: {
         [DOUBLE_ALBERT]: {
             yIndex: 4,
-            xPosition: 8,
+            xPosition: 8.2,
         },
     },
 }
