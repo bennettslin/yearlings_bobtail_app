@@ -1,4 +1,12 @@
-# Face fix notes
+# General fixes
+
+## Warp
+* Straight edges as much as possible
+
+## Willy
+* In general, Willy shouldn't be so tall? Neck too long?
+
+# Face fixes
 
 ## YoungBennett
 * make all heads consistent
@@ -85,3 +93,4 @@
 
 ## Wade
 * catholicGuy
+

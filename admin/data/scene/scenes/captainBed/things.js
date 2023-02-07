@@ -48,12 +48,12 @@ export default {
         [BENNETT_LETTERS]: {
             yIndex: 5,
             xPosition: 7,
-            zOffset: -0.025,
+            zOffset: 0,
         },
     },
     [PANEL]: {
         [CAPTAIN_BED_INTERIOR]: {
-            yIndex: 1,
+            yIndex: 2,
             xPosition: 7.5,
         },
     },
