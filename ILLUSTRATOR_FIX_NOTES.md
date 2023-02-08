@@ -1,7 +1,26 @@
 # General fixes
 
 ## Warp
-* Straight edges as much as possible
+* Bennett Odin rickshaw bubble
+* Bennett Odin buoy bubble
+* Couch shelf panel
+* Club curtains
+* Cinema thought recording bubble
+* Cinema thought buying bubble
+* Theatre drapes and legs
+* Waiting thought singing bubble
+* Waiting thought studying bubble
+* Attic boxes
+* Attic television
+* Liz mantle shelf
+* Liz thought cafeteria bubbles (all three)
+* Khari attack speech bubble
+* Liz defense bubble
+* Alley trash chutes
+* Hostess stand
+
+# Needs more detail
+* Bennett buoy actor (buoy too generic)
 
 ## Willy
 * In general, Willy shouldn't be so tall? Neck too long?
