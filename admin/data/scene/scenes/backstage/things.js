@@ -9,12 +9,9 @@ import {
     THEATRE_DRAPE_SIDE__LEFT,
     THEATRE_DRAPE_SIDE__RIGHT,
     THEATRE_DRAPE_TOP,
-    THEATRE_LEG_SIDE__BACK_LEFT,
-    THEATRE_LEG_SIDE__BACK_RIGHT,
-    THEATRE_LEG_SIDE__FRONT_LEFT,
-    THEATRE_LEG_SIDE__FRONT_RIGHT,
-    THEATRE_LEG_TOP__BACK,
-    THEATRE_LEG_TOP__FRONT,
+    THEATRE_LEG_SIDE__LEFT,
+    THEATRE_LEG_SIDE__RIGHT,
+    THEATRE_LEG_TOP,
 } from '../../../../../src/constants/scene/things/flats'
 
 export default {
@@ -34,42 +31,32 @@ export default {
     [FLAT]: {
         [THEATRE_DRAPE_SIDE__LEFT]: {
             yIndex: 1,
-            xPosition: 0,
+            xPosition: -0.5,
         },
         [THEATRE_DRAPE_SIDE__RIGHT]: {
             yIndex: 1,
-            xPosition: 11,
+            xPosition: 11.5,
         },
         [THEATRE_DRAPE_TOP]: {
             yIndex: 1,
-            zOffset: 6.5,
+            zOffset: 6,
             layerYIndex: 0,
         },
-        [THEATRE_LEG_SIDE__BACK_LEFT]: {
+        [THEATRE_LEG_SIDE__LEFT]: {
             yIndex: 2,
-            xPosition: 0,
+            xPosition: -0.5,
+            flipHorizontal: true,
         },
-        [THEATRE_LEG_SIDE__BACK_RIGHT]: {
+        [THEATRE_LEG_SIDE__RIGHT]: {
             yIndex: 2,
-            xPosition: 11,
+            xPosition: 11.5,
+            flipHorizontal: true,
         },
-        [THEATRE_LEG_SIDE__FRONT_LEFT]: {
-            yIndex: 3,
-            xPosition: 0,
-        },
-        [THEATRE_LEG_SIDE__FRONT_RIGHT]: {
-            yIndex: 3,
-            xPosition: 11,
-        },
-        [THEATRE_LEG_TOP__BACK]: {
+        [THEATRE_LEG_TOP]: {
             yIndex: 2,
-            zOffset: 6.5,
+            zOffset: 6.25,
             layerYIndex: 1,
-        },
-        [THEATRE_LEG_TOP__FRONT]: {
-            yIndex: 3,
-            zOffset: 6.5,
-            layerYIndex: 2,
+            flipHorizontal: true,
         },
     },
 }
