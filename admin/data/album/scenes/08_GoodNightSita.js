@@ -17,7 +17,6 @@ import {
 } from '../../../../src/constants/scene/scenes'
 import {
     SEASON_SUMMER,
-    SEASON_STAGE,
     TIME_AFTERNOON,
     TIME_EVENING,
 } from '../../../../src/constants/scene/sky'
