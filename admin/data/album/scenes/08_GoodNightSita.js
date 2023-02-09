@@ -191,7 +191,7 @@ export default [
             },
         },
         cubes: BACKSTAGE_KEY,
-        sky: { season: SEASON_STAGE },
+        sky: { time: TIME_EVENING, season: SEASON_SUMMER },
     },
     {
         unitIndex: 11,
