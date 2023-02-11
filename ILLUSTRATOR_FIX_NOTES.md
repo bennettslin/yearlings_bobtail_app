@@ -42,14 +42,12 @@
 ## Warp
 * Bennett Odin rickshaw bubble
 * Bennett Odin buoy bubble
-* Couch shelf panel
 * Club curtains
 * Cinema thought recording bubble
 * Cinema thought buying bubble
 * Theatre drapes and legs
 * Waiting thought singing bubble
 * Waiting thought studying bubble
-* Liz mantle shelf
 * Liz thought cafeteria bubbles (all three)
 * Khari attack speech bubble
 * Liz defense bubble
