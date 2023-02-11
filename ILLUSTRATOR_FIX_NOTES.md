@@ -42,7 +42,6 @@
 ## Warp
 * Bennett Odin rickshaw bubble
 * Bennett Odin buoy bubble
-* Club curtains
 * Cinema thought recording bubble
 * Cinema thought buying bubble
 * Theatre drapes and legs

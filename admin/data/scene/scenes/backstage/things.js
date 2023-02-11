@@ -45,18 +45,15 @@ export default {
         [THEATRE_LEG_SIDE__LEFT]: {
             yIndex: 2,
             xPosition: -0.5,
-            flipHorizontal: true,
         },
         [THEATRE_LEG_SIDE__RIGHT]: {
             yIndex: 2,
             xPosition: 11.5,
-            flipHorizontal: true,
         },
         [THEATRE_LEG_TOP]: {
             yIndex: 2,
             zOffset: 6.25,
             layerYIndex: 1,
-            flipHorizontal: true,
         },
     },
 }
