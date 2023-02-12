@@ -1,5 +1,9 @@
 # General fixes
 
+## Warp
+* Cinema thought recording bubble
+* Cinema thought buying bubble
+
 ## Dreams work
 * Wooden edge on cardboards?
 * Rickshaw
@@ -7,11 +11,9 @@
     * Shore
 * Shore
     * Make bubble
-    * Warp buoy
     * Shore
 * Gate
     * Make bubble
-    * Warp rickshaw
     * Tree
     * House and fence
 * Depths
@@ -38,11 +40,6 @@
         * Odin face
     * Stairs
         * Make bubble
-
-## Warp
-* Cinema thought recording bubble
-* Cinema thought buying bubble
-* Liz thought cafeteria bubbles (all three)
 
 ## General consideration
 * Bennett buoy actor (buoy too generic)
