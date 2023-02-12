@@ -44,11 +44,11 @@ export default {
         },
         [THEATRE_LEG_SIDE__LEFT]: {
             yIndex: 2,
-            xPosition: -0.5,
+            xPosition: -0.45,
         },
         [THEATRE_LEG_SIDE__RIGHT]: {
             yIndex: 2,
-            xPosition: 11.5,
+            xPosition: 11.45,
         },
         [THEATRE_LEG_TOP]: {
             yIndex: 2,

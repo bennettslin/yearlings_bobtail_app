@@ -44,12 +44,9 @@
 * Bennett Odin buoy bubble
 * Cinema thought recording bubble
 * Cinema thought buying bubble
-* Theatre drapes and legs
 * Waiting thought singing bubble
 * Waiting thought studying bubble
 * Liz thought cafeteria bubbles (all three)
-* Khari attack speech bubble
-* Liz defense bubble
 
 ## General consideration
 * Bennett buoy actor (buoy too generic)
