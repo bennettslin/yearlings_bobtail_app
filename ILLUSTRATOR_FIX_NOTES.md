@@ -42,8 +42,6 @@
 ## Warp
 * Cinema thought recording bubble
 * Cinema thought buying bubble
-* Waiting thought singing bubble
-* Waiting thought studying bubble
 * Liz thought cafeteria bubbles (all three)
 
 ## General consideration
