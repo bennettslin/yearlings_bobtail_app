@@ -40,8 +40,6 @@
         * Make bubble
 
 ## Warp
-* Bennett Odin rickshaw bubble
-* Bennett Odin buoy bubble
 * Cinema thought recording bubble
 * Cinema thought buying bubble
 * Waiting thought singing bubble
