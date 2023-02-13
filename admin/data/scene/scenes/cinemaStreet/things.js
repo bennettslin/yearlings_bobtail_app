@@ -38,8 +38,8 @@ export default {
         },
         [CINEMA_THOUGHT_BUYING]: {
             yIndex: 5,
-            xPosition: 9.3,
-            zOffset: 1.2,
+            xPosition: 9.4,
+            zOffset: 1.25,
         },
         [CINEMA_THOUGHT_RECORDING]: {
             yIndex: 5,

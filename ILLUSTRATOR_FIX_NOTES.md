@@ -1,9 +1,5 @@
 # General fixes
 
-## Warp
-* Cinema thought recording bubble
-* Cinema thought buying bubble
-
 ## Dreams work
 * Wooden edge on cardboards?
 * Rickshaw
