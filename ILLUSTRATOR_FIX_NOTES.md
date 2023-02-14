@@ -1,5 +1,8 @@
 # General fixes
 
+## Willy
+* In general, Willy shouldn't be so tall? Neck too long?
+
 ## Dreams work
 * Wooden edge on cardboards?
 * Rickshaw
@@ -45,9 +48,6 @@
     * Background colour for Yearlings album
 * Make constellation and sketch eyes more expressive, like other bubbles
 * Reconsider pharmacy scene cel?
-
-## Willy
-* In general, Willy shouldn't be so tall? Neck too long?
 
 # Face fixes
 
