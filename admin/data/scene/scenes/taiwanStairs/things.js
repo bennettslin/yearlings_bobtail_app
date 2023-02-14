@@ -19,18 +19,19 @@ export default {
         [DREAM_STAIRS]: {
             yIndex: 1,
             xPosition: 3.75,
-            zOffset: 0.2,
+            zOffset: 0.25,
         },
     },
     [CARDBOARD]: {
         [BENNETT_STAIRS]: {
             yIndex: 1,
             xPosition: 3.75,
-            zOffset: 0.2,
+            zOffset: 0.15,
         },
         [ODIN_STAIRS]: {
             yIndex: 1,
             xPosition: 5.25,
+            zOffset: -0.05,
         },
         [PAINTING_EMPRESS__STAIRS]: {
             yIndex: 3,

@@ -15,6 +15,7 @@ export default {
         [DREAM_RICKSHAW]: {
             yIndex: 2,
             xPosition: 1.5,
+            zOffset: 0.05,
             scaleFactor: 0.8,
         },
     },
@@ -22,11 +23,13 @@ export default {
         [BENNETT_RICKSHAW]: {
             yIndex: 2,
             xPosition: 1.5,
+            zOffset: -0.05,
             scaleFactor: 0.8,
         },
         [ODIN_RICKSHAW]: {
             yIndex: 2,
             xPosition: 1,
+            zOffset: -0.05,
             scaleFactor: 0.8,
         },
     },

@@ -23,6 +23,7 @@ export default {
         [DREAM_GATE]: {
             yIndex: 2,
             xPosition: 6.75,
+            zOffset: 0.05,
             scaleFactor: 0.9,
         },
     },
@@ -30,6 +31,7 @@ export default {
         [BENNETT_ODIN_GATE]: {
             yIndex: 2,
             xPosition: 6.75,
+            zOffset: -0.05,
             scaleFactor: 0.9,
         },
     },

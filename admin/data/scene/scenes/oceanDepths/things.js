@@ -15,6 +15,7 @@ export default {
         [DREAM_DEPTHS]: {
             yIndex: 4,
             xPosition: 8,
+            zOffset: 0.05,
             scaleFactor: 0.8,
         },
     },
@@ -22,6 +23,7 @@ export default {
         [BENNETT_ODIN_DEPTHS]: {
             yIndex: 4,
             xPosition: 8,
+            zOffset: -0.05,
             scaleFactor: 0.8,
         },
     },

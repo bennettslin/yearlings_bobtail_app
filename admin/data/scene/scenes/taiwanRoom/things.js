@@ -29,20 +29,24 @@ export default {
         [DREAM_MAT_BENNETT]: {
             yIndex: 2,
             xPosition: 8.75,
+            zOffset: 0.05,
         },
         [DREAM_MAT_ODIN]: {
             yIndex: 3,
             xPosition: 2,
+            zOffset: 0.05,
         },
     },
     [CARDBOARD]: {
         [BENNETT_MAT]: {
             yIndex: 2,
             xPosition: 8.75,
+            zOffset: -0.05,
         },
         [ODIN_MAT]: {
             yIndex: 3,
             xPosition: 2,
+            zOffset: -0.05,
         },
         [PAINTING_EMPRESS__MAT]: {
             yIndex: 1,

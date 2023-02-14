@@ -17,6 +17,7 @@ export default {
         [DREAM_SHORE]: {
             yIndex: 1,
             xPosition: 8,
+            zOffset: 0.05,
             scaleFactor: 0.6,
         },
     },
@@ -24,6 +25,7 @@ export default {
         [BENNETT_ODIN_SHORE]: {
             yIndex: 1,
             xPosition: 8,
+            zOffset: -0.05,
             scaleFactor: 0.6,
         },
     },
