@@ -15,22 +15,19 @@ export default {
         [DREAM_RICKSHAW]: {
             yIndex: 2,
             xPosition: 1.5,
-            zOffset: 0.05,
-            scaleFactor: 0.8,
+            zOffset: 0.03,
         },
     },
     [CARDBOARD]: {
         [BENNETT_RICKSHAW]: {
             yIndex: 2,
             xPosition: 1.5,
-            zOffset: -0.05,
-            scaleFactor: 0.8,
+            zOffset: -0.03,
         },
         [ODIN_RICKSHAW]: {
             yIndex: 2,
             xPosition: 1,
-            zOffset: -0.05,
-            scaleFactor: 0.8,
+            zOffset: -0.03,
         },
     },
     [FLAT]: {

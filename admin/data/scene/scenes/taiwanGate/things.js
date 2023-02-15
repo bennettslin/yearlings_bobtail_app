@@ -22,17 +22,15 @@ export default {
     [BUBBLE]: {
         [DREAM_GATE]: {
             yIndex: 2,
-            xPosition: 6.75,
+            xPosition: 6.9,
             zOffset: 0.05,
-            scaleFactor: 0.9,
         },
     },
     [CARDBOARD]: {
         [BENNETT_ODIN_GATE]: {
             yIndex: 2,
-            xPosition: 6.75,
+            xPosition: 6.9,
             zOffset: -0.05,
-            scaleFactor: 0.9,
         },
     },
     [CUTOUT]: {
