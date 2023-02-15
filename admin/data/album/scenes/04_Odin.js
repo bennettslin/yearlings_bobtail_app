@@ -1,7 +1,6 @@
 import { ACTOR } from '../../../../src/constants/scene'
 import {
     BACKDROP,
-    BUBBLE,
     CARDBOARD,
     CUTOUT,
     DOOR,
@@ -41,14 +40,6 @@ import {
 } from '../../../../src/constants/scene/actors/preteenBennett'
 import { MERMAID } from '../../../../src/constants/scene/actors/sashaBennett'
 import {
-    MOUNTAIN_TAIWAN_BACKDROP,
-    OCEAN_BOTTOM_FAR,
-    OCEAN_FLOOR_FAR,
-    SHORE_BUOY_BACKDROP,
-    SHORE_RICKSHAW_BACKDROP,
-    TAIWAN_STAIRS_BACKDROP,
-} from '../../../../src/constants/scene/things/backdrops'
-import {
     DREAM_BUOY,
     DREAM_DEPTHS,
     DREAM_GATE,
@@ -58,7 +49,13 @@ import {
     DREAM_RICKSHAW,
     DREAM_SHORE,
     DREAM_STAIRS,
-} from '../../../../src/constants/scene/things/bubbles'
+    MOUNTAIN_TAIWAN_BACKDROP,
+    OCEAN_BOTTOM_FAR,
+    OCEAN_FLOOR_FAR,
+    SHORE_BUOY_BACKDROP,
+    SHORE_RICKSHAW_BACKDROP,
+    TAIWAN_STAIRS_BACKDROP,
+} from '../../../../src/constants/scene/things/backdrops'
 import {
     BENNETT_OCEAN_FLOOR,
     BENNETT_ODIN_SHORE,
@@ -127,7 +124,7 @@ export default [
                     instance: MAT,
                 },
             },
-            [BUBBLE]: {
+            [BACKDROP]: {
                 [DREAM_MAT_BENNETT]: true,
                 [DREAM_MAT_ODIN]: true,
             },
@@ -166,8 +163,6 @@ export default [
             },
             [BACKDROP]: {
                 [TAIWAN_STAIRS_BACKDROP]: true,
-            },
-            [BUBBLE]: {
                 [DREAM_STAIRS]: true,
             },
             [CARDBOARD]: {
@@ -199,8 +194,6 @@ export default [
             },
             [BACKDROP]: {
                 [MOUNTAIN_TAIWAN_BACKDROP]: true,
-            },
-            [BUBBLE]: {
                 [DREAM_GATE]: true,
             },
             [CARDBOARD]: {
@@ -235,8 +228,6 @@ export default [
             },
             [BACKDROP]: {
                 [SHORE_RICKSHAW_BACKDROP]: true,
-            },
-            [BUBBLE]: {
                 [DREAM_RICKSHAW]: true,
             },
             [CARDBOARD]: {
@@ -262,8 +253,6 @@ export default [
             },
             [BACKDROP]: {
                 [SHORE_BUOY_BACKDROP]: true,
-            },
-            [BUBBLE]: {
                 [DREAM_SHORE]: true,
             },
             [CARDBOARD]: {
@@ -290,7 +279,7 @@ export default [
                     instance: BUOY,
                 },
             },
-            [BUBBLE]: {
+            [BACKDROP]: {
                 [DREAM_BUOY]: true,
             },
             [CARDBOARD]: {
@@ -321,8 +310,6 @@ export default [
             },
             [BACKDROP]: {
                 [OCEAN_BOTTOM_FAR]: true,
-            },
-            [BUBBLE]: {
                 [DREAM_DEPTHS]: true,
             },
             [CARDBOARD]: {
@@ -348,8 +335,6 @@ export default [
             },
             [BACKDROP]: {
                 [OCEAN_FLOOR_FAR]: true,
-            },
-            [BUBBLE]: {
                 [DREAM_OCEAN_FLOOR]: true,
             },
             [CARDBOARD]: {

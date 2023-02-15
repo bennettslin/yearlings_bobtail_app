@@ -1,9 +1,9 @@
 import {
-    BUBBLE,
+    BACKDROP,
     CARDBOARD,
     PANEL,
 } from '../../../../../src/constants/scene/things'
-import { DREAM_OCEAN_FLOOR } from '../../../../../src/constants/scene/things/bubbles'
+import { DREAM_OCEAN_FLOOR } from '../../../../../src/constants/scene/things/backdrops'
 import {
     BENNETT_OCEAN_FLOOR,
     ODIN_OCEAN_FLOOR,
@@ -14,7 +14,7 @@ import {
 } from '../../../../../src/constants/scene/things/panels'
 
 export default {
-    [BUBBLE]: {
+    [BACKDROP]: {
         [DREAM_OCEAN_FLOOR]: {
             yIndex: 2,
             xPosition: 2.6,

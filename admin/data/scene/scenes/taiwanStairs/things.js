@@ -1,10 +1,10 @@
 import {
-    BUBBLE,
+    BACKDROP,
     CARDBOARD,
     CUTOUT,
     DOOR,
 } from '../../../../../src/constants/scene/things'
-import { DREAM_STAIRS } from '../../../../../src/constants/scene/things/bubbles'
+import { DREAM_STAIRS } from '../../../../../src/constants/scene/things/backdrops'
 import {
     BENNETT_STAIRS,
     ODIN_STAIRS,
@@ -15,7 +15,7 @@ import { BUDDHA_STATUE } from '../../../../../src/constants/scene/things/cutouts
 import { IRON_GATE_LOW, TAIWAN_WINDOW__STAIRS } from '../../../../../src/constants/scene/things/doors'
 
 export default {
-    [BUBBLE]: {
+    [BACKDROP]: {
         [DREAM_STAIRS]: {
             yIndex: 1,
             xPosition: 3.75,

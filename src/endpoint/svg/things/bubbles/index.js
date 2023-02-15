@@ -5,16 +5,6 @@ import cinemaThoughtBuying from '../../../../assets/svgs/bubbles/cinemaThoughtBu
 import cinemaThoughtRecording from '../../../../assets/svgs/bubbles/cinemaThoughtRecording'
 import constellationSibling from '../../../../assets/svgs/bubbles/constellationSibling'
 import constellationTarpit from '../../../../assets/svgs/bubbles/constellationTarpit'
-import dreamMatBennett from '../../../../assets/svgs/bubbles/dreamMatBennett'
-import dreamMatOdin from '../../../../assets/svgs/bubbles/dreamMatOdin'
-import dreamStairs from '../../../../assets/svgs/bubbles/dreamStairs'
-import dreamGate from '../../../../assets/svgs/bubbles/dreamGate'
-import dreamRickshaw from '../../../../assets/svgs/bubbles/dreamRickshaw'
-import dreamShore from '../../../../assets/svgs/bubbles/dreamShore'
-import dreamBuoy from '../../../../assets/svgs/bubbles/dreamBuoy'
-import dreamDepths from '../../../../assets/svgs/bubbles/dreamDepths'
-import dreamOceanFloor from '../../../../assets/svgs/bubbles/dreamOceanFloor'
-import estherSpeech from '../../../../assets/svgs/bubbles/estherSpeech'
 import khariSpeechAttack from '../../../../assets/svgs/bubbles/khariSpeechAttack'
 import lizSpeechDefence from '../../../../assets/svgs/bubbles/lizSpeechDefence'
 import lizThoughtBusing from '../../../../assets/svgs/bubbles/lizThoughtBusing'
@@ -77,16 +67,6 @@ import {
     CINEMA_THOUGHT_RECORDING,
     CONSTELLATION_SIBLING,
     CONSTELLATION_TARPIT,
-    DREAM_BUOY,
-    DREAM_DEPTHS,
-    DREAM_GATE,
-    DREAM_MAT_BENNETT,
-    DREAM_MAT_ODIN,
-    DREAM_OCEAN_FLOOR,
-    DREAM_RICKSHAW,
-    DREAM_SHORE,
-    DREAM_STAIRS,
-    ESTHER_SPEECH,
     KHARI_SPEECH_ATTACK,
     LIZ_SPEECH_DEFENCE,
     LIZ_THOUGHT_BUSING,
@@ -153,16 +133,6 @@ export default {
     [CINEMA_THOUGHT_RECORDING]: cinemaThoughtRecording,
     [CONSTELLATION_SIBLING]: constellationSibling,
     [CONSTELLATION_TARPIT]: constellationTarpit,
-    [DREAM_MAT_BENNETT]: dreamMatBennett,
-    [DREAM_MAT_ODIN]: dreamMatOdin,
-    [DREAM_STAIRS]: dreamStairs,
-    [DREAM_GATE]: dreamGate,
-    [DREAM_RICKSHAW]: dreamRickshaw,
-    [DREAM_SHORE]: dreamShore,
-    [DREAM_BUOY]: dreamBuoy,
-    [DREAM_DEPTHS]: dreamDepths,
-    [DREAM_OCEAN_FLOOR]: dreamOceanFloor,
-    [ESTHER_SPEECH]: estherSpeech,
     [KHARI_SPEECH_ATTACK]: khariSpeechAttack,
     [LIZ_SPEECH_DEFENCE]: lizSpeechDefence,
     [LIZ_THOUGHT_BUSING]: lizThoughtBusing,

@@ -1,6 +1,6 @@
 import { CUBE_Y_AXIS_LENGTH } from '../../../../../constants/cubeIndex'
 import { ACTOR } from '../../../../../constants/scene'
-import { FIXTURE, FURNITURE } from '../../../../../constants/scene/things'
+import { BACKDROP, FIXTURE, FURNITURE } from '../../../../../constants/scene/things'
 import {
     OPACITY,
     LEFT,
@@ -54,22 +54,21 @@ const getTransitionDelayPrefix = ({
         return OPACITY
     }
 
+    // If it's an actor, fixture, or furniture, it should fade in.
     if (getIsRealisticTransition(presenceType)) {
         return REALISTIC
     }
 
-    // If it has wires, it should come from the top.
-    if (hasWires) {
+    // If it's a backdrop or has wires, slide in from top.
+    if (presenceType === BACKDROP || hasWires) {
         return TOP
     }
 
-    // By default, slide from left or right, or from top if perfectly centred.
+    // Slide in from left or right, whichever is closer.
     if (xPosition < 5.5) {
         return LEFT
-    } else if (xPosition > 5.5) {
-        return RIGHT
     } else {
-        return TOP
+        return RIGHT
     }
 }
 

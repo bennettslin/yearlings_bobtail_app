@@ -1,10 +1,11 @@
 import {
+    BACKDROP,
     BUBBLE,
     CARDBOARD,
     PUPPET,
 } from '../../../../../src/constants/scene/things'
+import { DREAM_BUOY } from '../../../../../src/constants/scene/things/backdrops'
 import {
-    DREAM_BUOY,
     CINEMA_THOUGHT_BUYING,
     CINEMA_THOUGHT_RECORDING,
     THOUGHT_GO_KART,
@@ -72,9 +73,11 @@ const OPAL_COUCH_CONFIG = {
 }
 
 export default {
+    [BACKDROP]: {
+        [DREAM_BUOY]: BUBBLE_DEFAULT,
+    },
     [BUBBLE]: {
         [SKETCHBOOK]: BUBBLE_DEFAULT,
-        [DREAM_BUOY]: BUBBLE_DEFAULT,
         [CINEMA_THOUGHT_BUYING]: BUBBLE_DEFAULT,
         [CINEMA_THOUGHT_RECORDING]: BUBBLE_DEFAULT,
         [THOUGHT_GO_KART]: BUBBLE_DEFAULT,

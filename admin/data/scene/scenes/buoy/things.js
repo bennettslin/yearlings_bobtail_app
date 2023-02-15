@@ -1,9 +1,9 @@
 import {
-    BUBBLE,
+    BACKDROP,
     CARDBOARD,
     PANEL,
 } from '../../../../../src/constants/scene/things'
-import { DREAM_BUOY } from '../../../../../src/constants/scene/things/bubbles'
+import { DREAM_BUOY } from '../../../../../src/constants/scene/things/backdrops'
 import {
     BENNETT_ODIN_BUOY,
     SEA_SERPENT_LEFT,
@@ -18,7 +18,7 @@ import {
 } from '../../../../../src/constants/scene/things/panels'
 
 export default {
-    [BUBBLE]: {
+    [BACKDROP]: {
         [DREAM_BUOY]: {
             yIndex: 0,
             xPosition: 2.5,

@@ -1,9 +1,9 @@
 import {
-    BUBBLE,
+    BACKDROP,
     CARDBOARD,
     FLAT,
 } from '../../../../../src/constants/scene/things'
-import { DREAM_DEPTHS } from '../../../../../src/constants/scene/things/bubbles'
+import { DREAM_DEPTHS } from '../../../../../src/constants/scene/things/backdrops'
 import { BENNETT_ODIN_DEPTHS } from '../../../../../src/constants/scene/things/cardboards'
 import {
     OCEAN_BOTTOM_MIDDLE,
@@ -11,7 +11,7 @@ import {
 } from '../../../../../src/constants/scene/things/flats'
 
 export default {
-    [BUBBLE]: {
+    [BACKDROP]: {
         [DREAM_DEPTHS]: {
             yIndex: 4,
             xPosition: 8,

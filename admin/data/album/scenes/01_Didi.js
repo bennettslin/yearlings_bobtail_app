@@ -44,13 +44,11 @@ import {
     SNICKERING,
 } from '../../../../src/constants/scene/actors/esther'
 import {
+    ESTHER_SPEECH,
     VALLEY_CLOSER_BACKDROP,
     VALLEY_FURTHER_BACKDROP,
 } from '../../../../src/constants/scene/things/backdrops'
-import {
-    ESTHER_SPEECH,
-    // PHOTO_SCRAPBOOK,
-} from '../../../../src/constants/scene/things/bubbles'
+// import { PHOTO_SCRAPBOOK } from '../../../../src/constants/scene/things/bubbles'
 import { ALBUM_JOHNNY_HORTON } from '../../../../src/constants/scene/things/cardboards'
 import {
     FIRE_HYDRANT,
@@ -154,8 +152,6 @@ export default [
             },
             [BACKDROP]: {
                 [VALLEY_FURTHER_BACKDROP]: true,
-            },
-            [BUBBLE]: {
                 [ESTHER_SPEECH]: true,
             },
             [CUTOUT]: {

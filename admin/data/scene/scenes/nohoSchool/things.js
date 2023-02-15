@@ -1,12 +1,12 @@
 import {
-    BUBBLE,
+    BACKDROP,
     CUTOUT,
     DOOR,
     FIXTURE,
     FLAT,
     PANEL,
 } from '../../../../../src/constants/scene/things'
-import { ESTHER_SPEECH } from '../../../../../src/constants/scene/things/bubbles'
+import { ESTHER_SPEECH } from '../../../../../src/constants/scene/things/backdrops'
 import { PLAYGROUND_SLIDE } from '../../../../../src/constants/scene/things/cutouts'
 import { NURSE_DOOR } from '../../../../../src/constants/scene/things/doors'
 import {
@@ -17,7 +17,7 @@ import { NEAR_BUILDINGS } from '../../../../../src/constants/scene/things/flats'
 import { NURSE_BENCH } from '../../../../../src/constants/scene/things/panels'
 
 export default {
-    [BUBBLE]: {
+    [BACKDROP]: {
         [ESTHER_SPEECH]: {
             yIndex: 3,
             xPosition: 8.2,

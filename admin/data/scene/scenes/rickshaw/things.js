@@ -1,9 +1,9 @@
 import {
-    BUBBLE,
+    BACKDROP,
     CARDBOARD,
     FLAT,
 } from '../../../../../src/constants/scene/things'
-import { DREAM_RICKSHAW } from '../../../../../src/constants/scene/things/bubbles'
+import { DREAM_RICKSHAW } from '../../../../../src/constants/scene/things/backdrops'
 import {
     BENNETT_RICKSHAW,
     ODIN_RICKSHAW,
@@ -11,7 +11,7 @@ import {
 import { RICKSHAW_TOWN } from '../../../../../src/constants/scene/things/flats'
 
 export default {
-    [BUBBLE]: {
+    [BACKDROP]: {
         [DREAM_RICKSHAW]: {
             yIndex: 2,
             xPosition: 1.5,

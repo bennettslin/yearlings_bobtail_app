@@ -1,4 +1,14 @@
+import dreamMatBennett from '../../../../assets/svgs/backdrops/dreamMatBennett'
+import dreamMatOdin from '../../../../assets/svgs/backdrops/dreamMatOdin'
+import dreamStairs from '../../../../assets/svgs/backdrops/dreamStairs'
+import dreamGate from '../../../../assets/svgs/backdrops/dreamGate'
+import dreamRickshaw from '../../../../assets/svgs/backdrops/dreamRickshaw'
+import dreamShore from '../../../../assets/svgs/backdrops/dreamShore'
+import dreamBuoy from '../../../../assets/svgs/backdrops/dreamBuoy'
+import dreamDepths from '../../../../assets/svgs/backdrops/dreamDepths'
+import dreamOceanFloor from '../../../../assets/svgs/backdrops/dreamOceanFloor'
 import drivingBackdrop from '../../../../assets/svgs/backdrops/drivingBackdrop'
+import estherSpeech from '../../../../assets/svgs/backdrops/estherSpeech'
 import goldenGateBackdrop from '../../../../assets/svgs/backdrops/goldenGateBackdrop'
 import losAngelesBackdrop from '../../../../assets/svgs/backdrops/losAngelesBackdrop'
 import mountainBackdrop from '../../../../assets/svgs/backdrops/mountainBackdrop'
@@ -24,7 +34,17 @@ import valleyPanoramaBackdrop from '../../../../assets/svgs/backdrops/valleyPano
 import weddingBackdrop from '../../../../assets/svgs/backdrops/weddingBackdrop'
 
 import {
+    DREAM_BUOY,
+    DREAM_DEPTHS,
+    DREAM_GATE,
+    DREAM_MAT_BENNETT,
+    DREAM_MAT_ODIN,
+    DREAM_OCEAN_FLOOR,
+    DREAM_RICKSHAW,
+    DREAM_SHORE,
+    DREAM_STAIRS,
     DRIVING_BACKDROP,
+    ESTHER_SPEECH,
     GOLDEN_GATE_BACKDROP,
     LOS_ANGELES_BACKDROP,
     MOUNTAIN_PAMPAS_BACKDROP,
@@ -55,7 +75,17 @@ import {
 } from '../../../../constants/scene/things/backdrops'
 
 export default {
+    [DREAM_MAT_BENNETT]: dreamMatBennett,
+    [DREAM_MAT_ODIN]: dreamMatOdin,
+    [DREAM_STAIRS]: dreamStairs,
+    [DREAM_GATE]: dreamGate,
+    [DREAM_RICKSHAW]: dreamRickshaw,
+    [DREAM_SHORE]: dreamShore,
+    [DREAM_BUOY]: dreamBuoy,
+    [DREAM_DEPTHS]: dreamDepths,
+    [DREAM_OCEAN_FLOOR]: dreamOceanFloor,
     [DRIVING_BACKDROP]: drivingBackdrop,
+    [ESTHER_SPEECH]: estherSpeech,
     [GOLDEN_GATE_BACKDROP]: goldenGateBackdrop,
     [LOS_ANGELES_BACKDROP]: losAngelesBackdrop,
     [MOUNTAIN_PAMPAS_BACKDROP]: mountainBackdrop,

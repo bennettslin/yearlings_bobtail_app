@@ -1,10 +1,12 @@
 # General fixes
 
+## Warp
+* Look Back bubble
+
 ## Willy
 * In general, Willy shouldn't be so tall? Neck too long?
 
 ## Dreams work
-* Wooden edge on cardboards?
 * Rickshaw
     * Make bubble
     * Shore

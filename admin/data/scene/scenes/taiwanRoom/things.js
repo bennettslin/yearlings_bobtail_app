@@ -1,5 +1,5 @@
 import {
-    BUBBLE,
+    BACKDROP,
     CARDBOARD,
     CUTOUT,
     DOOR,
@@ -9,7 +9,7 @@ import {
 import {
     DREAM_MAT_BENNETT,
     DREAM_MAT_ODIN,
-} from '../../../../../src/constants/scene/things/bubbles'
+} from '../../../../../src/constants/scene/things/backdrops'
 import {
     BENNETT_MAT,
     ODIN_MAT,
@@ -25,7 +25,7 @@ import { FRIDGE_DRAWINGS } from '../../../../../src/constants/scene/things/fixtu
 import { BUDDHA_STAND } from '../../../../../src/constants/scene/things/panels'
 
 export default {
-    [BUBBLE]: {
+    [BACKDROP]: {
         [DREAM_MAT_BENNETT]: {
             yIndex: 2,
             xPosition: 8.75,

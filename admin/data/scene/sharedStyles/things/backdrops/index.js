@@ -1,5 +1,15 @@
 import {
+    DREAM_BUOY,
+    DREAM_DEPTHS,
+    DREAM_GATE,
+    DREAM_MAT_BENNETT,
+    DREAM_MAT_ODIN,
+    DREAM_OCEAN_FLOOR,
+    DREAM_RICKSHAW,
+    DREAM_SHORE,
+    DREAM_STAIRS,
     DRIVING_BACKDROP,
+    ESTHER_SPEECH,
     GOLDEN_GATE_BACKDROP,
     LOS_ANGELES_BACKDROP,
     MOUNTAIN_PAMPAS_BACKDROP,
@@ -41,7 +51,17 @@ import {
 } from '../../../../../../src/constants/scene/sharedStyles/outdoor'
 
 export default {
+    [DREAM_MAT_BENNETT]: null,
+    [DREAM_MAT_ODIN]: null,
+    [DREAM_STAIRS]: null,
+    [DREAM_GATE]: null,
+    [DREAM_RICKSHAW]: null,
+    [DREAM_SHORE]: null,
+    [DREAM_BUOY]: null,
+    [DREAM_DEPTHS]: null,
+    [DREAM_OCEAN_FLOOR]: null,
     [DRIVING_BACKDROP]: FOLIAGE__SHARED,
+    [ESTHER_SPEECH]: null,
     [GOLDEN_GATE_BACKDROP]: [
         BUILDINGS__SHARED,
         EVENING_TIME__SHARED,
