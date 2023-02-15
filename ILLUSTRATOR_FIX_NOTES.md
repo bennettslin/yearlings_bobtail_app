@@ -1,8 +1,5 @@
 # General fixes
 
-## Willy
-* In general, Willy shouldn't be so tall? Neck too long?
-
 ## Dreams work
 * Rickshaw
     * Make bubble
