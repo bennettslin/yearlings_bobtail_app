@@ -47,6 +47,22 @@
 
 # Face fixes
 
+# Use baby head for all young children
+
+## Esther
+* curious
+* snickering
+* epilogue
+* hurtConsoling
+* sobbingShielding
+
+## Anita
+* exasperated
+* concerned
+* cheering
+* epilogue
+* youngChild
+
 ## YoungBennett
 * panicked
     * make face rounder
@@ -55,6 +71,8 @@
     * make face rounder
 * bathing
     * side face problem
+* singing
+* epilogue
 * youngChild
     * widen irises
     * recenter pupils
@@ -105,12 +123,6 @@
 * infirm
 * disposingCondom
 * demonstration
-
-## Anita
-* cheering
-
-## Esther
-* youngChild
 
 ## Mother
 * present
