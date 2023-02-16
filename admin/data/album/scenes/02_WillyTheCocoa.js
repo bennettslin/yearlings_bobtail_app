@@ -70,6 +70,7 @@ import {
     CAMPFIRE,
     FIRE_HYDRANT,
     OVERPASS_SIGN_BACK,
+    RECYCLING_BIN__PORCH,
     SHOPPING_CART,
 } from '../../../../src/constants/scene/things/cutouts'
 import {
@@ -185,6 +186,7 @@ export default [
             [CUTOUT]: {
                 [CACTUS_DOUBLE__PORCH]: true,
                 [CACTUS_SINGLE__PORCH]: true,
+                [RECYCLING_BIN__PORCH]: true,
             },
             [DOOR]: {
                 [DEFAULT_FENCE_BATHROOM]: true,
