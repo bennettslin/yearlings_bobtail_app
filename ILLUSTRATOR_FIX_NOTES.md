@@ -146,9 +146,6 @@
 * jokingLaughing
 * pampas
 
-## Khari
-* concerned
-
 ## Miriam
 * make all heads consistent
 
