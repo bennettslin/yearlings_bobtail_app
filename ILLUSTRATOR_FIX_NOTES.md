@@ -1,8 +1,5 @@
 # General fixes
 
-## Easy quick
-* Lower Willy leg in porch
-
 ## Dreams work
 * Rickshaw
     * Make bubble
@@ -51,13 +48,44 @@
 # Face fixes
 
 ## YoungBennett
-* make all heads consistent
+* panicked
+    * make face rounder
+* flustered
+    * make head bigger
+    * make face rounder
+* bathing
+    * side face problem
+* youngChild
+    * widen irises
+    * recenter pupils
 
 ## PreteenBennett
-* reassuringEnchanted
+* cautious
+    * lower mouth to make chin smaller
+* panicked
+    * side face problem
+* tyingTether
+    * make chin look less bony
+* stairs
+    * make chin less prominent?
 * shore
+    * side face problem
 * mermaid
+    * make more attractive
+* oceanFloor
+    * make more attractive
+* asleep
+    * push head forward
+    * improve hairline
+* shaken
+    * improve hairline
+* stoic
+    * improve hairline
+* wistful
+    * make nose better
+    * make cheek fuller
 * sheepish
+    * make cheek fuller
 
 ## Bennett
 * solicitingOpinion
@@ -129,10 +157,14 @@
 
 ## Amy
 * squeezing
+    * make face less weird
 
 ## Stephanie
 * mingling
+    * make face less weird
+* protester
+    * make face less goofy
 
 ## Wade
 * catholicGuy
-
+    * push face back
