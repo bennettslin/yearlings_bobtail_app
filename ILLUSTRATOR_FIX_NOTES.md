@@ -164,7 +164,3 @@
     * make face less weird
 * protester
     * make face less goofy
-
-## Wade
-* catholicGuy
-    * push face back
