@@ -16,23 +16,21 @@ export default {
     [BACKDROP]: {
         [DREAM_SHORE]: {
             yIndex: 1,
-            xPosition: 8,
+            xPosition: 6.9,
             zOffset: 0.05,
-            scaleFactor: 0.6,
         },
     },
     [CARDBOARD]: {
         [BENNETT_ODIN_SHORE]: {
             yIndex: 1,
-            xPosition: 8,
+            xPosition: 7.3,
             zOffset: -0.05,
-            scaleFactor: 0.6,
         },
     },
     [CUTOUT]: {
         [YELLOW_TAPED_GRILL]: {
             yIndex: 5,
-            xPosition: 9.5,
+            xPosition: 9.75,
         },
     },
     [FLAT]: {

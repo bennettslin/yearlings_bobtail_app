@@ -11,12 +11,12 @@ export default {
         slantDirection: RIGHT,
         floor: {
             hslaColours: [
-                [K, K, K, K, K, V],
+                [K, K, K, V],
+                [K, K, K, K, V],
                 [K, K, K, K, K, K, V],
                 [K, K, K, K, K, K, K, K, V],
-                [K, K, K, K, K, K, K, K, K, K, V],
+                [K, K, K, K, K, K, K, K, K, V],
                 [K, K, K, K, K, K, K, K, K, K, K, V],
-                [K],
             ],
             zIndices: [
                 [0],

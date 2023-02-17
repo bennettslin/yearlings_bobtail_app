@@ -5,7 +5,7 @@ export default {
     [PRETEEN_BENNETT]: {
         [SHORE]: {
             yIndex: 5,
-            xPosition: 5,
+            xPosition: 3,
         },
     },
 }

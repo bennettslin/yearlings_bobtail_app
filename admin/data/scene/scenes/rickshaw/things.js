@@ -14,7 +14,7 @@ export default {
     [BACKDROP]: {
         [DREAM_RICKSHAW]: {
             yIndex: 2,
-            xPosition: 1.5,
+            xPosition: 1.3,
             zOffset: 0.03,
         },
     },
@@ -26,7 +26,7 @@ export default {
         },
         [ODIN_RICKSHAW]: {
             yIndex: 2,
-            xPosition: 1,
+            xPosition: 0.75,
             zOffset: -0.03,
         },
     },

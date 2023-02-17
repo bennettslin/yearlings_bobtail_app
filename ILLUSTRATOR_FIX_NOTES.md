@@ -1,16 +1,16 @@
 # General fixes
 
 ## Dreams work
-* Rickshaw
-    * Make bubble
-    * Shore
-* Shore
-    * Make bubble
-    * Shore
+* Gradients for all
 * Gate
-    * Make bubble
     * Tree
     * House and fence
+* Rickshaw
+    * Shore
+    * Palm trees
+* Shore
+    * Shore
+    * Palm trees
 * Depths
     * Make bubble
     * Odin face
@@ -31,10 +31,12 @@
         * https://www.instagram.com/p/CjfX6tmqR_B
 * Figure out later
     * Mat
-        * Make bubble
+        * Make bubbles
         * Odin face
     * Stairs
         * Make bubble
+
+* Invert 100,000th dream bubble
 
 ## General consideration
 * Bennett buoy actor (buoy too generic)
