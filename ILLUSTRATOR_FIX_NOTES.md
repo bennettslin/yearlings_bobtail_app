@@ -15,12 +15,6 @@
     * Make bubble
     * Odin face
     * Bushes?
-* Floor
-    * Make bubble
-    * Odin face
-    * Make Odin smaller
-    * Figure out placement with cave
-    * Captain bed background
 * Buoy
     * Make bubble
     * Odin face
@@ -35,6 +29,13 @@
         * Odin face
     * Stairs
         * Make bubble
+    * Floor
+        * Make bubble
+        * Odin face
+        * Make Odin smaller
+        * Figure out placement with cave
+        * Captain bed background
+* Resize Odin
 
 * Invert 100,000th dream bubble
 
@@ -50,13 +51,6 @@
 # Face fixes
 
 # Use baby head for all young children
-
-## Esther
-* curious
-* snickering
-* epilogue
-* hurtConsoling
-* sobbingShielding
 
 ## Anita
 * exasperated
@@ -78,6 +72,8 @@
 * youngChild
     * widen irises
     * recenter pupils
+
+## Christopher
 
 ## PreteenBennett
 * cautious

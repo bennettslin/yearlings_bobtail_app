@@ -5,7 +5,7 @@ export default {
     [PRETEEN_BENNETT]: {
         [RICKSHAW]: {
             yIndex: 5,
-            xPosition: 6,
+            xPosition: 6.5,
         },
     },
 }

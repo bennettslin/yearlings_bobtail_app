@@ -5,7 +5,7 @@ export default {
     [PRETEEN_BENNETT]: {
         [BUOY]: {
             yIndex: 5,
-            xPosition: 7,
+            xPosition: 8,
             zOffset: 2,
         },
     },
