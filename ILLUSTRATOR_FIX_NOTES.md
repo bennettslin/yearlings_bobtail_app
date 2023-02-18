@@ -50,15 +50,6 @@
 
 # Face fixes
 
-# Use baby head for all young children
-
-## Anita
-* exasperated
-* concerned
-* cheering
-* epilogue
-* youngChild
-
 ## YoungBennett
 * panicked
     * make face rounder
@@ -74,6 +65,7 @@
     * recenter pupils
 
 ## Christopher
+* all
 
 ## PreteenBennett
 * cautious
