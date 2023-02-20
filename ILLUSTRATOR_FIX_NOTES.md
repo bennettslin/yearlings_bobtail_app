@@ -50,20 +50,6 @@
 
 # Face fixes
 
-## YoungBennett
-* panicked
-    * make face rounder
-* flustered
-    * make head bigger
-    * make face rounder
-* bathing
-    * side face problem
-* singing
-* epilogue
-* youngChild
-    * widen irises
-    * recenter pupils
-
 ## Christopher
 * all
 
