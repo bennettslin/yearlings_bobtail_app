@@ -22,25 +22,23 @@ export default {
         [DREAM_BUOY]: {
             yIndex: 0,
             xPosition: 2.5,
-            scaleFactor: 0.7,
-            zOffset: 2.5,
+            zOffset: 0.7,
         },
     },
     [CARDBOARD]: {
         [SEA_SERPENT_LEFT]: {
             yIndex: 0,
-            xPosition: 0,
+            xPosition: 1,
             zOffset: 0.5,
         },
         [BENNETT_ODIN_BUOY]: {
             yIndex: 0,
-            xPosition: 2.5,
-            scaleFactor: 0.7,
-            zOffset: 2.5,
+            xPosition: 2.6,
+            zOffset: 2.8,
         },
         [SEA_SERPENT_RIGHT]: {
             yIndex: 0,
-            xPosition: 5,
+            xPosition: 4,
             zOffset: 1,
         },
     },

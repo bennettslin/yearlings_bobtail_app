@@ -19,7 +19,6 @@ export default {
             yIndex: 2,
             xPosition: 2.6,
             zOffset: 0.05,
-            scaleFactor: 0.8,
         },
     },
     [CARDBOARD]: {
@@ -27,13 +26,11 @@ export default {
             yIndex: 2,
             xPosition: 2.6,
             zOffset: -0.05,
-            scaleFactor: 0.8,
         },
         [ODIN_OCEAN_FLOOR]: {
             yIndex: 2,
             xPosition: 0.8,
             zOffset: -0.05,
-            scaleFactor: 0.8,
         },
     },
     [PANEL]: {

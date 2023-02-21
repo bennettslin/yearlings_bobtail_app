@@ -15,16 +15,13 @@ export default {
         [DREAM_DEPTHS]: {
             yIndex: 4,
             xPosition: 8,
-            zOffset: 0.05,
-            scaleFactor: 0.8,
+            zOffset: 0.15,
         },
     },
     [CARDBOARD]: {
         [BENNETT_ODIN_DEPTHS]: {
             yIndex: 4,
             xPosition: 8,
-            zOffset: -0.05,
-            scaleFactor: 0.8,
         },
     },
     [FLAT]: {
