@@ -1,7 +1,6 @@
 # General fixes
 
 ## Dreams work
-* Gradients for all
 * Gate
     * Tree
     * House and fence
