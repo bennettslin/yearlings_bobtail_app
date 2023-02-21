@@ -53,9 +53,7 @@
 * Esther
 * Anita
 * YoungBennett
-
-## Christopher
-* all
+* Christopher
 
 ## PreteenBennett
 * cautious
