@@ -17,7 +17,7 @@ export default {
     [ANITA]: {
         [EXASPERATED]: {
             yIndex: 5,
-            xPosition: 5,
+            xPosition: 4.5,
         },
     },
     [ESTHER]: {

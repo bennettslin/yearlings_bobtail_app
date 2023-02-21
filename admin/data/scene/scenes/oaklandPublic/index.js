@@ -25,7 +25,7 @@ export default {
     [ESTHER]: {
         [YOUNG_CHILD]: {
             yIndex: 2,
-            xPosition: 6.9,
+            xPosition: 6.8,
         },
     },
     [WILLY]: {
@@ -37,7 +37,7 @@ export default {
     [ANITA]: {
         [YOUNG_CHILD]: {
             yIndex: 2,
-            xPosition: 8.8,
+            xPosition: 8.9,
         },
     },
 }

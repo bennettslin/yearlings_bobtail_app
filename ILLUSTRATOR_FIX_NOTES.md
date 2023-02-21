@@ -50,6 +50,11 @@
 
 # Face fixes
 
+## Done for now
+* Esther
+* Anita
+* YoungBennett
+
 ## Christopher
 * all
 
