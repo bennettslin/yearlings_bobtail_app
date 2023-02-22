@@ -17,7 +17,7 @@ export default {
     [BACKDROP]: {
         [DREAM_OCEAN_FLOOR]: {
             yIndex: 2,
-            xPosition: 2.6,
+            xPosition: 2.2,
             zOffset: 0.05,
         },
     },
