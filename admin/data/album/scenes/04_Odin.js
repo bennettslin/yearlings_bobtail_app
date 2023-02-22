@@ -88,6 +88,7 @@ import {
     IRON_GATE,
     IRON_GATE_LOW,
     TAIWAN_CIRCLE_WINDOW,
+    TAIWAN_DOOR,
     TAIWAN_GRATE_WINDOW,
     TAIWAN_WINDOW__ROOM,
     TAIWAN_WINDOW__STAIRS,
@@ -141,6 +142,7 @@ export default [
             },
             [DOOR]: {
                 [TAIWAN_WINDOW__ROOM]: true,
+                [TAIWAN_DOOR]: true,
             },
             [FIXTURE]: {
                 [FRIDGE_DRAWINGS]: true,
