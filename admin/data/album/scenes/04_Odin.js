@@ -88,6 +88,7 @@ import {
     IRON_GATE,
     IRON_GATE_LOW,
     TAIWAN_CIRCLE_WINDOW,
+    TAIWAN_GRATE_WINDOW,
     TAIWAN_WINDOW__ROOM,
     TAIWAN_WINDOW__STAIRS,
 } from '../../../../src/constants/scene/things/doors'
@@ -176,6 +177,7 @@ export default [
             },
             [DOOR]: {
                 [IRON_GATE_LOW]: true,
+                [TAIWAN_GRATE_WINDOW]: true,
                 [TAIWAN_WINDOW__STAIRS]: true,
             },
         },

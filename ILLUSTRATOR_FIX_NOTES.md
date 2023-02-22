@@ -1,6 +1,11 @@
 # General fixes
 
 ## Dreams work
+* Stairs
+    * Separate window presences
+* Ocean
+    * Separate top and side water
+
 * Gate
     * Tree
     * House and fence

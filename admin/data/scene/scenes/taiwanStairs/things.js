@@ -12,7 +12,7 @@ import {
     PAINTING_GODDESS__STAIRS,
 } from '../../../../../src/constants/scene/things/cardboards'
 import { BUDDHA_STATUE } from '../../../../../src/constants/scene/things/cutouts'
-import { IRON_GATE_LOW, TAIWAN_WINDOW__STAIRS } from '../../../../../src/constants/scene/things/doors'
+import { IRON_GATE_LOW, TAIWAN_GRATE_WINDOW, TAIWAN_WINDOW__STAIRS } from '../../../../../src/constants/scene/things/doors'
 
 export default {
     [BACKDROP]: {
@@ -61,6 +61,11 @@ export default {
             yIndex: 1,
             xPosition: 3,
             zOffset: -3.33,
+        },
+        [TAIWAN_GRATE_WINDOW]: {
+            yIndex: 1,
+            xPosition: 3.5,
+            zOffset: 2.26,
         },
         [TAIWAN_WINDOW__STAIRS]: {
             yIndex: 3,
