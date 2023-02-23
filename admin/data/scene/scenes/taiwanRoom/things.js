@@ -95,9 +95,9 @@ export default {
     },
     [FIXTURE]: {
         [FRIDGE_DRAWINGS]: {
-            yIndex: 1,
-            xPosition: 9,
-            zOffset: 1.25,
+            yIndex: 2,
+            xPosition: 8.6,
+            zOffset: 1.1,
         },
     },
     [PANEL]: {

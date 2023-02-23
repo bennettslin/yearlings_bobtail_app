@@ -54,13 +54,23 @@
 
 # Face fixes
 
-## Done for now
-* Esther
-* Anita
-* YoungBennett
-* Christopher
+## TODO next
 
-## PreteenBennett
+### Jacob
+* flirting
+
+### Tristan
+* noogie
+
+## Done for now
+* Anita
+* Christopher
+* Esther
+* Nestor
+* Wade
+* YoungBennett
+
+### PreteenBennett
 * cautious
     * lower mouth to make chin smaller
 * panicked
@@ -88,7 +98,7 @@
 * sheepish
     * make cheek fuller
 
-## Bennett
+### Bennett
 * solicitingOpinion
 * dateEnding
     * Head too long
@@ -107,30 +117,28 @@
 * disposingCondom
 * demonstration
 
-## Mother
+### Mother
 * present
 
-## Sasha
+### Sasha
 * comfortingHumiliated
 
-## Catherine
+### Catherine
 * weeping
 * quipping
 * gopi
 
-## Mara
+### Mara
 * make all heads consistent
 
-## Jacob
-* flirting
 
-## Ana
+### Ana
 * waiting
 
-## Howie
+### Howie
 * attic
 
-## Liz
+### Liz
 * dishroomLancet
 * missionary
 * afterglowReflection
@@ -141,17 +149,14 @@
 * jokingLaughing
 * pampas
 
-## Miriam
+### Miriam
 * make all heads consistent
 
-## Tristan
-* noogie
-
-## Amy
+### Amy
 * squeezing
     * make face less weird
 
-## Stephanie
+### Stephanie
 * mingling
     * make face less weird
 * protester

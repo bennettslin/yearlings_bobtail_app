@@ -28,8 +28,8 @@ export default {
     [CARDBOARD]: {
         [SEA_SERPENT_LEFT]: {
             yIndex: 0,
-            xPosition: 1,
-            zOffset: 0.5,
+            xPosition: 1.4,
+            zOffset: 1.4,
         },
         [BENNETT_ODIN_BUOY]: {
             yIndex: 0,
@@ -38,8 +38,8 @@ export default {
         },
         [SEA_SERPENT_RIGHT]: {
             yIndex: 0,
-            xPosition: 4,
-            zOffset: 1,
+            xPosition: 3.8,
+            zOffset: 1.8,
         },
     },
     [PANEL]: {
