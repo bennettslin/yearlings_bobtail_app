@@ -28,20 +28,20 @@ export default {
     [BACKDROP]: {
         [DREAM_MAT_BENNETT]: {
             yIndex: 2,
-            xPosition: 8.75,
-            zOffset: 0.05,
+            xPosition: 7.8,
+            zOffset: 0.03,
         },
         [DREAM_MAT_ODIN]: {
             yIndex: 3,
-            xPosition: 2,
+            xPosition: 1.9,
             zOffset: 0.05,
         },
     },
     [CARDBOARD]: {
         [BENNETT_MAT]: {
             yIndex: 2,
-            xPosition: 8.75,
-            zOffset: -0.05,
+            xPosition: 7.9,
+            zOffset: -0.03,
         },
         [ODIN_MAT]: {
             yIndex: 3,
@@ -73,7 +73,7 @@ export default {
         },
         [TAIWAN_FRIDGE]: {
             yIndex: 1,
-            xPosition: 8.75,
+            xPosition: 8.3,
         },
     },
     [DOOR]: {
@@ -89,14 +89,14 @@ export default {
             layerYIndex: 5,
         },
         [TAIWAN_DOOR]: {
-            yIndex: 2,
-            xPosition: 7,
+            yIndex: 4,
+            xPosition: 8.5,
         },
     },
     [FIXTURE]: {
         [FRIDGE_DRAWINGS]: {
             yIndex: 1,
-            xPosition: 10,
+            xPosition: 9,
             zOffset: 1.25,
         },
     },

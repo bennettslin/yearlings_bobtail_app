@@ -17,21 +17,20 @@ import { IRON_GATE_LOW, TAIWAN_GRATE_WINDOW, TAIWAN_WINDOW__STAIRS } from '../..
 export default {
     [BACKDROP]: {
         [DREAM_STAIRS]: {
-            yIndex: 1,
-            xPosition: 3.75,
-            zOffset: 0.25,
+            yIndex: 2,
+            xPosition: 3.45,
         },
     },
     [CARDBOARD]: {
         [BENNETT_STAIRS]: {
-            yIndex: 1,
+            yIndex: 2,
             xPosition: 3.75,
             zOffset: 0.15,
         },
         [ODIN_STAIRS]: {
-            yIndex: 1,
+            yIndex: 2,
             xPosition: 5.25,
-            zOffset: -0.05,
+            zOffset: 0.05,
         },
         [PAINTING_EMPRESS__STAIRS]: {
             yIndex: 3,
@@ -63,14 +62,15 @@ export default {
             zOffset: -3.33,
         },
         [TAIWAN_GRATE_WINDOW]: {
-            yIndex: 1,
-            xPosition: 3.5,
-            zOffset: 2.26,
+            yIndex: 2,
+            xPosition: 3.54,
+            zOffset: -0.05,
+            layerYIndex: 1,
         },
         [TAIWAN_WINDOW__STAIRS]: {
             yIndex: 3,
             xPosition: 3.5,
-            zOffset: 2.26,
+            zOffset: 2.28,
         },
     },
 }

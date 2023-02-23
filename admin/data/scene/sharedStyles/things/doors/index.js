@@ -196,8 +196,14 @@ export default {
         NIGHT_TIME__SHARED,
         DOOR__SHARED,
     ],
-    [TAIWAN_DOOR]: null,
-    [TAIWAN_GRATE_WINDOW]: null,
+    [TAIWAN_DOOR]: [
+        DARK_ROOM_DEFAULT__SHARED,
+        DOOR__SHARED,
+    ],
+    [TAIWAN_GRATE_WINDOW]: [
+        DARK_ROOM_DEFAULT__SHARED,
+        DOOR__SHARED,
+    ],
     [TAIWAN_WINDOW]: [
         DARK_ROOM_DEFAULT__SHARED,
         DOOR__SHARED,
