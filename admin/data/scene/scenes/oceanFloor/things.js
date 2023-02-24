@@ -6,11 +6,14 @@ import {
 import { DREAM_OCEAN_FLOOR } from '../../../../../src/constants/scene/things/backdrops'
 import {
     BENNETT_OCEAN_FLOOR,
+    BUDDHA_CAVE_SHRINE,
     ODIN_OCEAN_FLOOR,
 } from '../../../../../src/constants/scene/things/cardboards'
 import {
-    OCEAN_CAVE_INTERIOR,
-    OCEAN_CAVE_EXTERIOR,
+    OCEAN_CAVE_INTERIOR_LEFT,
+    OCEAN_CAVE_INTERIOR_RIGHT,
+    OCEAN_CAVE_EXTERIOR_LEFT,
+    OCEAN_CAVE_EXTERIOR_RIGHT,
 } from '../../../../../src/constants/scene/things/panels'
 
 export default {
@@ -22,6 +25,11 @@ export default {
         },
     },
     [CARDBOARD]: {
+        [BUDDHA_CAVE_SHRINE]: {
+            yIndex: 1,
+            xPosition: 2.6,
+            zOffset: -0.05,
+        },
         [BENNETT_OCEAN_FLOOR]: {
             yIndex: 2,
             xPosition: 2.6,
@@ -34,11 +42,21 @@ export default {
         },
     },
     [PANEL]: {
-        [OCEAN_CAVE_INTERIOR]: {
+        [OCEAN_CAVE_INTERIOR_LEFT]: {
             yIndex: 1,
+            xPosition: 5.5,
         },
-        [OCEAN_CAVE_EXTERIOR]: {
+        [OCEAN_CAVE_INTERIOR_RIGHT]: {
+            yIndex: 1,
+            xPosition: 5.5,
+        },
+        [OCEAN_CAVE_EXTERIOR_LEFT]: {
             yIndex: 3,
+            xPosition: 5.5,
+        },
+        [OCEAN_CAVE_EXTERIOR_RIGHT]: {
+            yIndex: 3,
+            xPosition: 5.5,
         },
     },
 }

@@ -75,6 +75,7 @@ import {
     PAINTING_GODDESS__STAIRS,
     SEA_SERPENT_LEFT,
     SEA_SERPENT_RIGHT,
+    BUDDHA_CAVE_SHRINE,
 } from '../../../../src/constants/scene/things/cardboards'
 import {
     BUDDHA_SHRINE,
@@ -106,8 +107,10 @@ import {
 } from '../../../../src/constants/scene/things/flats'
 import {
     BUDDHA_STAND,
-    OCEAN_CAVE_EXTERIOR,
-    OCEAN_CAVE_INTERIOR,
+    OCEAN_CAVE_EXTERIOR_LEFT,
+    OCEAN_CAVE_EXTERIOR_RIGHT,
+    OCEAN_CAVE_INTERIOR_LEFT,
+    OCEAN_CAVE_INTERIOR_RIGHT,
     OCEAN_WAVES__FRONT,
     OCEAN_WAVES__MIDDLE,
     OCEAN_WAVES__MIDDLE_FRONT,
@@ -342,12 +345,15 @@ export default [
                 [DREAM_OCEAN_FLOOR]: true,
             },
             [CARDBOARD]: {
+                [BUDDHA_CAVE_SHRINE]: true,
                 [BENNETT_OCEAN_FLOOR]: true,
                 [ODIN_OCEAN_FLOOR]: true,
             },
             [PANEL]: {
-                [OCEAN_CAVE_INTERIOR]: true,
-                [OCEAN_CAVE_EXTERIOR]: true,
+                [OCEAN_CAVE_INTERIOR_LEFT]: true,
+                [OCEAN_CAVE_INTERIOR_RIGHT]: true,
+                [OCEAN_CAVE_EXTERIOR_LEFT]: true,
+                [OCEAN_CAVE_EXTERIOR_RIGHT]: true,
             },
         },
         cubes: OCEAN_FLOOR_KEY,

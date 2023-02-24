@@ -10,6 +10,7 @@ import bennettOdinGate from '../../../../assets/svgs/cardboards/bennettOdinGate'
 import bennettOdinShore from '../../../../assets/svgs/cardboards/bennettOdinShore'
 import bennettRickshaw from '../../../../assets/svgs/cardboards/bennettRickshaw'
 import bennettStairs from '../../../../assets/svgs/cardboards/bennettStairs'
+import buddhaCaveShrine from '../../../../assets/svgs/cardboards/buddhaCaveShrine'
 import clipboard from '../../../../assets/svgs/cardboards/clipboard'
 import codeBox from '../../../../assets/svgs/cardboards/codeBox'
 import corkboard from '../../../../assets/svgs/cardboards/corkboard'
@@ -56,6 +57,7 @@ import {
     BENNETT_ODIN_SHORE,
     BENNETT_RICKSHAW,
     BENNETT_STAIRS,
+    BUDDHA_CAVE_SHRINE,
     CLIPBOARD,
     CODE_BOX,
     CORKBOARD__DISHROOM,
@@ -111,6 +113,7 @@ export default {
     [BENNETT_ODIN_SHORE]: bennettOdinShore,
     [BENNETT_RICKSHAW]: bennettRickshaw,
     [BENNETT_STAIRS]: bennettStairs,
+    [BUDDHA_CAVE_SHRINE]: buddhaCaveShrine,
     [CLIPBOARD]: clipboard,
     [CODE_BOX]: codeBox,
     [CORKBOARD__DISHROOM]: corkboard,

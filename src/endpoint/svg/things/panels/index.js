@@ -30,8 +30,10 @@ import lizNightstand from '../../../../assets/svgs/panels/lizNightstand'
 import lizOttoman from '../../../../assets/svgs/panels/lizOttoman'
 import milkCrate from '../../../../assets/svgs/panels/milkCrate'
 import nurseBench from '../../../../assets/svgs/panels/nurseBench'
-import oceanCaveExterior from '../../../../assets/svgs/panels/oceanCaveExterior'
-import oceanCaveInterior from '../../../../assets/svgs/panels/oceanCaveInterior'
+import oceanCaveExteriorLeft from '../../../../assets/svgs/panels/oceanCaveExteriorLeft'
+import oceanCaveExteriorRight from '../../../../assets/svgs/panels/oceanCaveExteriorRight'
+import oceanCaveInteriorLeft from '../../../../assets/svgs/panels/oceanCaveInteriorLeft'
+import oceanCaveInteriorRight from '../../../../assets/svgs/panels/oceanCaveInteriorRight'
 import oceanWaves from '../../../../assets/svgs/panels/oceanWaves'
 import phoneCallPanel from '../../../../assets/svgs/panels/phoneCallPanel'
 import principalBench from '../../../../assets/svgs/panels/principalBench'
@@ -107,8 +109,6 @@ import {
     MILK_CRATE__MARA,
     MILK_CRATE__VEGAN,
     NURSE_BENCH,
-    OCEAN_CAVE_EXTERIOR,
-    OCEAN_CAVE_INTERIOR,
     OCEAN_WAVES__FRONT,
     OCEAN_WAVES__MIDDLE,
     OCEAN_WAVES__MIDDLE_FRONT,
@@ -162,6 +162,10 @@ import {
     SHADOW_VIKING_FAR,
     HOSPITAL_BED_INTERIOR,
     COUCH_SHELF,
+    OCEAN_CAVE_EXTERIOR_LEFT,
+    OCEAN_CAVE_EXTERIOR_RIGHT,
+    OCEAN_CAVE_INTERIOR_LEFT,
+    OCEAN_CAVE_INTERIOR_RIGHT,
 } from '../../../../constants/scene/things/panels'
 
 export default {
@@ -207,8 +211,10 @@ export default {
     [MILK_CRATE__MARA]: milkCrate,
     [MILK_CRATE__VEGAN]: milkCrate,
     [NURSE_BENCH]: nurseBench,
-    [OCEAN_CAVE_EXTERIOR]: oceanCaveExterior,
-    [OCEAN_CAVE_INTERIOR]: oceanCaveInterior,
+    [OCEAN_CAVE_EXTERIOR_LEFT]: oceanCaveExteriorLeft,
+    [OCEAN_CAVE_EXTERIOR_RIGHT]: oceanCaveExteriorRight,
+    [OCEAN_CAVE_INTERIOR_LEFT]: oceanCaveInteriorLeft,
+    [OCEAN_CAVE_INTERIOR_RIGHT]: oceanCaveInteriorRight,
     [OCEAN_WAVES__FRONT]: oceanWaves,
     [OCEAN_WAVES__MIDDLE]: oceanWaves,
     [OCEAN_WAVES__MIDDLE_FRONT]: oceanWaves,
