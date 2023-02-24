@@ -28,6 +28,7 @@ import {
     EARTH,
     DOGS_ROCKET,
     DOGS_SPACE_STATION,
+    ODIN_STAIRS,
 } from '../../../../../src/constants/scene/things/cardboards'
 import {
     GHOST_ODIN_ALLEY,
@@ -93,6 +94,12 @@ export default {
         [LIZ_THOUGHT_REUNION]: BUBBLE_DEFAULT,
     },
     [CARDBOARD]: {
+        [ODIN_STAIRS]: {
+            wires: [
+                { x: 0.115, y: 0.1 },
+                { x: 0.6, y: 0.3 },
+            ],
+        },
         [BENNETT_ODIN_BUOY]: {
             wires: [
                 { x: 0.57, y: 0.5 },

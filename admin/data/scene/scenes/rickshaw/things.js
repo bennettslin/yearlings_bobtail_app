@@ -14,19 +14,19 @@ export default {
     [BACKDROP]: {
         [DREAM_RICKSHAW]: {
             yIndex: 2,
-            xPosition: 1.3,
+            xPosition: 1.1,
             zOffset: 0.03,
         },
     },
     [CARDBOARD]: {
         [BENNETT_RICKSHAW]: {
             yIndex: 2,
-            xPosition: 1.5,
+            xPosition: 1.3,
             zOffset: -0.03,
         },
         [ODIN_RICKSHAW]: {
             yIndex: 2,
-            xPosition: 0.75,
+            xPosition: 0.5,
             zOffset: -0.03,
         },
     },

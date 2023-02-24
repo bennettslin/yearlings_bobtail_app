@@ -24,13 +24,13 @@ export default {
     [CARDBOARD]: {
         [BENNETT_STAIRS]: {
             yIndex: 2,
-            xPosition: 3.75,
-            zOffset: -1,
+            xPosition: 2.4,
+            zOffset: 0,
         },
         [ODIN_STAIRS]: {
             yIndex: 2,
-            xPosition: 4,
-            zOffset: 0.02,
+            xPosition: 4.1,
+            zOffset: 0.5,
         },
         [PAINTING_EMPRESS__STAIRS]: {
             yIndex: 3,
@@ -58,7 +58,7 @@ export default {
     [DOOR]: {
         [IRON_GATE_LOW]: {
             yIndex: 1,
-            xPosition: 3,
+            xPosition: 1,
             zOffset: -3.33,
         },
         [TAIWAN_GRATE_WINDOW]: {
@@ -70,7 +70,7 @@ export default {
         [TAIWAN_WINDOW__STAIRS]: {
             yIndex: 3,
             xPosition: 3.5,
-            zOffset: 2.28,
+            zOffset: 2.29,
         },
     },
 }
