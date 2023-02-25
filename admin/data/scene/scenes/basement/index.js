@@ -10,7 +10,6 @@ export default {
         [EATING]: {
             yIndex: 5,
             xPosition: 3.9,
-            zOffset: 0,
         },
     },
     [ANA]: {

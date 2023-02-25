@@ -19,48 +19,49 @@ import {
 export default {
     [BACKDROP]: {
         [DREAM_OCEAN_FLOOR]: {
-            yIndex: 2,
-            xPosition: 2.2,
+            yIndex: 3,
+            xPosition: 2.4,
             zOffset: 0.05,
-            hide: true,
+            layerYIndex: 4,
         },
     },
     [CARDBOARD]: {
         [BUDDHA_CAVE_SHRINE]: {
-            yIndex: 1,
-            xPosition: 2.6,
-            zOffset: -0.05,
-            hide: true,
+            yIndex: 3,
+            xPosition: 1.7,
+            layerYIndex: 4,
         },
         [BENNETT_OCEAN_FLOOR]: {
-            yIndex: 2,
-            xPosition: 2.6,
+            yIndex: 3,
+            xPosition: 3.2,
             zOffset: -0.05,
-            hide: true,
+            layerYIndex: 4,
         },
         [ODIN_OCEAN_FLOOR]: {
-            yIndex: 2,
-            xPosition: 0.8,
+            yIndex: 3,
+            xPosition: 0.7,
             zOffset: -0.05,
-            hide: true,
+            layerYIndex: 4,
         },
     },
     [PANEL]: {
+        [OCEAN_CAVE_EXTERIOR_LEFT]: {
+            yIndex: 3,
+            xPosition: 2.3,
+            layerYIndex: 4,
+        },
+        [OCEAN_CAVE_EXTERIOR_RIGHT]: {
+            yIndex: 2,
+            xPosition: 8.7,
+        },
         [OCEAN_CAVE_INTERIOR_LEFT]: {
-            yIndex: 1,
-            xPosition: 1.8,
+            yIndex: 2,
+            xPosition: 2.3,
+            layerYIndex: 3,
         },
         [OCEAN_CAVE_INTERIOR_RIGHT]: {
             yIndex: 1,
-            xPosition: 8,
-        },
-        [OCEAN_CAVE_EXTERIOR_LEFT]: {
-            yIndex: 3,
-            xPosition: 1.8,
-        },
-        [OCEAN_CAVE_EXTERIOR_RIGHT]: {
-            yIndex: 3,
-            xPosition: 8,
+            xPosition: 8.7,
         },
     },
 }

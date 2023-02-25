@@ -35,7 +35,6 @@ export default {
         [JOKING_LAUGHING]: {
             yIndex: 2,
             xPosition: 3.8,
-            zOffset: 0,
         },
     },
     [STEPHANIE]: {

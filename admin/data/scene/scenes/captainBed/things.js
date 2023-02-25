@@ -48,7 +48,6 @@ export default {
         [BENNETT_LETTERS]: {
             yIndex: 5,
             xPosition: 7,
-            zOffset: 0,
         },
     },
     [PANEL]: {

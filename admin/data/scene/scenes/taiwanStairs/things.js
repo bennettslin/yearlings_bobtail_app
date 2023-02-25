@@ -25,11 +25,10 @@ export default {
         [BENNETT_STAIRS]: {
             yIndex: 2,
             xPosition: 2.5,
-            zOffset: 0,
         },
         [ODIN_STAIRS]: {
             yIndex: 2,
-            xPosition: 4.1,
+            xPosition: 4.2,
             zOffset: 1,
         },
         [PAINTING_EMPRESS__STAIRS]: {

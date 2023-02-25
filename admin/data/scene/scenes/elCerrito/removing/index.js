@@ -10,7 +10,6 @@ export default {
         [REMOVING_PANTS]: {
             yIndex: 3,
             xPosition: 2.6,
-            zOffset: 0,
         },
     },
     [MIRIAM]: {

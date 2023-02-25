@@ -38,7 +38,7 @@ export default {
         },
         [SEA_SERPENT_RIGHT]: {
             yIndex: 0,
-            xPosition: 3.8,
+            xPosition: 3.9,
             zOffset: 1.8,
         },
     },
