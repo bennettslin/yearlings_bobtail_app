@@ -24,13 +24,13 @@ export default {
     [CARDBOARD]: {
         [BENNETT_STAIRS]: {
             yIndex: 2,
-            xPosition: 2.4,
+            xPosition: 2.5,
             zOffset: 0,
         },
         [ODIN_STAIRS]: {
             yIndex: 2,
             xPosition: 4.1,
-            zOffset: 0.5,
+            zOffset: 1,
         },
         [PAINTING_EMPRESS__STAIRS]: {
             yIndex: 3,
