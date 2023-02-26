@@ -28,7 +28,7 @@ export default {
     [CARDBOARD]: {
         [BUDDHA_CAVE_SHRINE]: {
             yIndex: 3,
-            xPosition: 1.7,
+            xPosition: 1.8,
             layerYIndex: 4,
         },
         [BENNETT_OCEAN_FLOOR]: {
