@@ -16,6 +16,7 @@ import oaklandFront from '../../../../assets/svgs/backdrops/oaklandFront'
 import oaklandSide from '../../../../assets/svgs/backdrops/oaklandSide'
 import oceanBottomFar from '../../../../assets/svgs/backdrops/oceanBottomFar'
 import oceanFloorFar from '../../../../assets/svgs/backdrops/oceanFloorFar'
+import oceanFloorNear from '../../../../assets/svgs/backdrops/oceanFloorNear'
 import pharmacyCel from '../../../../assets/svgs/backdrops/pharmacyCel'
 import roadFuture from '../../../../assets/svgs/backdrops/roadFuture'
 import roadPast from '../../../../assets/svgs/backdrops/roadPast'
@@ -55,6 +56,7 @@ import {
     OAKLAND_SIDE__LIZ_COUCH,
     OCEAN_BOTTOM_FAR,
     OCEAN_FLOOR_FAR,
+    OCEAN_FLOOR_NEAR,
     PHARMACY_CEL,
     ROAD_FUTURE,
     ROAD_PAST,
@@ -96,6 +98,7 @@ export default {
     [OAKLAND_SIDE__LIZ_COUCH]: oaklandSide,
     [OCEAN_BOTTOM_FAR]: oceanBottomFar,
     [OCEAN_FLOOR_FAR]: oceanFloorFar,
+    [OCEAN_FLOOR_NEAR]: oceanFloorNear,
     [PHARMACY_CEL]: pharmacyCel,
     [ROAD_FUTURE]: roadFuture,
     [ROAD_PAST]: roadPast,

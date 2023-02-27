@@ -52,6 +52,7 @@ import {
     MOUNTAIN_TAIWAN_BACKDROP,
     OCEAN_BOTTOM_FAR,
     OCEAN_FLOOR_FAR,
+    OCEAN_FLOOR_NEAR,
     SHORE_BUOY_BACKDROP,
     SHORE_RICKSHAW_BACKDROP,
     TAIWAN_STAIRS_BACKDROP,
@@ -342,6 +343,7 @@ export default [
             },
             [BACKDROP]: {
                 [OCEAN_FLOOR_FAR]: true,
+                [OCEAN_FLOOR_NEAR]: true,
                 [DREAM_OCEAN_FLOOR]: true,
             },
             [CARDBOARD]: {

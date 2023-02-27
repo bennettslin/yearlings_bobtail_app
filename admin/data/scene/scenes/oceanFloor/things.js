@@ -39,7 +39,7 @@ export default {
         },
         [ODIN_OCEAN_FLOOR]: {
             yIndex: 3,
-            xPosition: 0.7,
+            xPosition: 1,
             zOffset: -0.05,
             layerYIndex: 4,
         },
