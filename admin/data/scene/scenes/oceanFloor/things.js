@@ -1,7 +1,9 @@
 import {
     BACKDROP,
     CARDBOARD,
+    CUTOUT,
     PANEL,
+    PUPPET,
 } from '../../../../../src/constants/scene/things'
 import { DREAM_OCEAN_FLOOR } from '../../../../../src/constants/scene/things/backdrops'
 import {
@@ -9,12 +11,14 @@ import {
     BUDDHA_CAVE_SHRINE,
     ODIN_OCEAN_FLOOR,
 } from '../../../../../src/constants/scene/things/cardboards'
+import { OCEAN_FLOOR_PLANTS_CENTRE, OCEAN_FLOOR_PLANTS_LEFT, OCEAN_FLOOR_PLANTS_RIGHT } from '../../../../../src/constants/scene/things/cutouts'
 import {
     OCEAN_CAVE_INTERIOR_LEFT,
     OCEAN_CAVE_INTERIOR_RIGHT,
     OCEAN_CAVE_EXTERIOR_LEFT,
     OCEAN_CAVE_EXTERIOR_RIGHT,
 } from '../../../../../src/constants/scene/things/panels'
+import { OCEAN_FLOOR_FISH } from '../../../../../src/constants/scene/things/puppets'
 
 export default {
     [BACKDROP]: {
@@ -44,6 +48,21 @@ export default {
             layerYIndex: 4,
         },
     },
+    [CUTOUT]: {
+        [OCEAN_FLOOR_PLANTS_CENTRE]: {
+            yIndex: 4,
+            xPosition: 5.5,
+            layerYIndex: 5,
+        },
+        [OCEAN_FLOOR_PLANTS_LEFT]: {
+            yIndex: 5,
+            xPosition: 0,
+        },
+        [OCEAN_FLOOR_PLANTS_RIGHT]: {
+            yIndex: 5,
+            xPosition: 11,
+        },
+    },
     [PANEL]: {
         [OCEAN_CAVE_EXTERIOR_LEFT]: {
             yIndex: 3,
@@ -62,6 +81,13 @@ export default {
         [OCEAN_CAVE_INTERIOR_RIGHT]: {
             yIndex: 1,
             xPosition: 8.7,
+        },
+    },
+    [PUPPET]: {
+        [OCEAN_FLOOR_FISH]: {
+            yIndex: 5,
+            xPosition: 7,
+            zOffset: 4,
         },
     },
 }

@@ -2,6 +2,7 @@ import ghostOdinAlley from '../../../../assets/svgs/puppets/ghostOdinAlley'
 import ghostOdinCampus from '../../../../assets/svgs/puppets/ghostOdinCampus'
 import ghostOdinClub from '../../../../assets/svgs/puppets/ghostOdinClub'
 import ghostOdinDemonstration from '../../../../assets/svgs/puppets/ghostOdinDemonstration'
+import oceanFloorFish from '../../../../assets/svgs/puppets/oceanFloorFish'
 import opalCouch from '../../../../assets/svgs/puppets/opalCouch'
 import opalGazing from '../../../../assets/svgs/puppets/opalGazing'
 import peacock from '../../../../assets/svgs/puppets/peacock'
@@ -29,6 +30,7 @@ import {
     GHOST_ODIN_CAMPUS,
     GHOST_ODIN_CLUB,
     GHOST_ODIN_DEMONSTRATION,
+    OCEAN_FLOOR_FISH,
     OPAL_COUCH__FUTURE,
     OPAL_COUCH__ROOM,
     OPAL_GAZING,
@@ -58,6 +60,7 @@ export default {
     [GHOST_ODIN_CAMPUS]: ghostOdinCampus,
     [GHOST_ODIN_CLUB]: ghostOdinClub,
     [GHOST_ODIN_DEMONSTRATION]: ghostOdinDemonstration,
+    [OCEAN_FLOOR_FISH]: oceanFloorFish,
     [OPAL_COUCH__FUTURE]: opalCouch,
     [OPAL_COUCH__ROOM]: opalCouch,
     [OPAL_GAZING]: opalGazing,

@@ -40,6 +40,9 @@ import mirroredSink from '../../../../assets/svgs/cutouts/mirroredSink'
 import monitorFront from '../../../../assets/svgs/cutouts/monitorFront'
 import monitorSide from '../../../../assets/svgs/cutouts/monitorSide'
 import museumDisplay from '../../../../assets/svgs/cutouts/museumDisplay'
+import oceanFloorPlantsCentre from '../../../../assets/svgs/cutouts/oceanFloorPlantsCentre'
+import oceanFloorPlantsLeft from '../../../../assets/svgs/cutouts/oceanFloorPlantsLeft'
+import oceanFloorPlantsRight from '../../../../assets/svgs/cutouts/oceanFloorPlantsRight'
 import overpassSignBack from '../../../../assets/svgs/cutouts/overpassSignBack'
 import peachTree from '../../../../assets/svgs/cutouts/peachTree'
 import pharmacyAisle from '../../../../assets/svgs/cutouts/pharmacyAisle'
@@ -141,6 +144,9 @@ import {
     MONITOR_SIDE__CROWD,
     MONITOR_SIDE__STAGE,
     MUSEUM_DISPLAY,
+    OCEAN_FLOOR_PLANTS_CENTRE,
+    OCEAN_FLOOR_PLANTS_LEFT,
+    OCEAN_FLOOR_PLANTS_RIGHT,
     OVERPASS_SIGN_BACK,
     PEACH_TREE,
     PHARMACY_AISLE,
@@ -257,6 +263,9 @@ export default {
     [MONITOR_SIDE__CROWD]: monitorSide,
     [MONITOR_SIDE__STAGE]: monitorSide,
     [MUSEUM_DISPLAY]: museumDisplay,
+    [OCEAN_FLOOR_PLANTS_CENTRE]: oceanFloorPlantsCentre,
+    [OCEAN_FLOOR_PLANTS_LEFT]: oceanFloorPlantsLeft,
+    [OCEAN_FLOOR_PLANTS_RIGHT]: oceanFloorPlantsRight,
     [OVERPASS_SIGN_BACK]: overpassSignBack,
     [PEACH_TREE]: peachTree,
     [PHARMACY_AISLE]: pharmacyAisle,

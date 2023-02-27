@@ -7,6 +7,7 @@ import {
     FIXTURE,
     FLAT,
     PANEL,
+    PUPPET,
 } from '../../../../src/constants/scene/things'
 import {
     BUOY_KEY,
@@ -81,6 +82,9 @@ import {
 import {
     BUDDHA_SHRINE,
     BUDDHA_STATUE,
+    OCEAN_FLOOR_PLANTS_CENTRE,
+    OCEAN_FLOOR_PLANTS_LEFT,
+    OCEAN_FLOOR_PLANTS_RIGHT,
     TAIWAN_FRIDGE,
     TAIWAN_SHRUB,
     TAIWAN_TREE,
@@ -118,6 +122,7 @@ import {
     OCEAN_WAVES__MIDDLE_REAR,
     OCEAN_WAVES__REAR,
 } from '../../../../src/constants/scene/things/panels'
+import { OCEAN_FLOOR_FISH } from '../../../../src/constants/scene/things/puppets'
 
 export default [
     {
@@ -351,11 +356,19 @@ export default [
                 [BENNETT_OCEAN_FLOOR]: true,
                 [ODIN_OCEAN_FLOOR]: true,
             },
+            [CUTOUT]: {
+                [OCEAN_FLOOR_PLANTS_CENTRE]: true,
+                [OCEAN_FLOOR_PLANTS_LEFT]: true,
+                [OCEAN_FLOOR_PLANTS_RIGHT]: true,
+            },
             [PANEL]: {
                 [OCEAN_CAVE_INTERIOR_LEFT]: true,
                 [OCEAN_CAVE_INTERIOR_RIGHT]: true,
                 [OCEAN_CAVE_EXTERIOR_LEFT]: true,
                 [OCEAN_CAVE_EXTERIOR_RIGHT]: true,
+            },
+            [PUPPET]: {
+                [OCEAN_FLOOR_FISH]: true,
             },
         },
         cubes: OCEAN_FLOOR_KEY,
