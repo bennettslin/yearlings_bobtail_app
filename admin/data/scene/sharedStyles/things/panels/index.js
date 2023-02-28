@@ -81,7 +81,6 @@ import {
     PAST__SHARED,
     PRESENT__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles'
-import { OCEAN_LIFE__SHARED } from '../../../../../../src/constants/scene/sharedStyles/animals'
 import { DRAWING__SHARED } from '../../../../../../src/constants/scene/sharedStyles/comic'
 import {
     ATTIC_LINENS__SHARED,
@@ -160,14 +159,8 @@ export default {
     [NURSE_BENCH]: null,
     [OCEAN_CAVE_EXTERIOR_LEFT]: NIGHT_TIME__SHARED,
     [OCEAN_CAVE_EXTERIOR_RIGHT]: NIGHT_TIME__SHARED,
-    [OCEAN_CAVE_INTERIOR_LEFT]: [
-        NIGHT_TIME__SHARED,
-        OCEAN_LIFE__SHARED,
-    ],
-    [OCEAN_CAVE_INTERIOR_RIGHT]: [
-        NIGHT_TIME__SHARED,
-        OCEAN_LIFE__SHARED,
-    ],
+    [OCEAN_CAVE_INTERIOR_LEFT]: NIGHT_TIME__SHARED,
+    [OCEAN_CAVE_INTERIOR_RIGHT]: NIGHT_TIME__SHARED,
     [OCEAN_WAVES]: null,
     [PHONE_CALL_PANEL]: null,
     [PRINCIPAL_BENCH]: null,
