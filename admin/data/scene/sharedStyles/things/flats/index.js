@@ -35,8 +35,8 @@ import {
     OAKLAND_HOUSE_LEFT,
     OAKLAND_HOUSE_RIGHT,
     OAKLAND_SCHOOL,
-    OCEAN_BOTTOM_MIDDLE,
-    OCEAN_BOTTOM_NEAR,
+    OCEAN_ROCKS_LEFT,
+    OCEAN_ROCKS_RIGHT,
     PAMPAS_FAR,
     PUBLIC_FAR,
     PUBLIC_NEAR,
@@ -65,7 +65,6 @@ import {
     THEATRE_LEG_TOP,
     VALLEY_FREEWAY,
 } from '../../../../../../src/constants/scene/things/flats'
-import { OCEAN_LIFE__SHARED } from '../../../../../../src/constants/scene/sharedStyles/animals'
 import {
     BUILDINGS__SHARED,
     BUILDING__SHARED,
@@ -270,11 +269,8 @@ export default {
         FOLIAGE__SHARED,
         HOUSE__SHARED,
     ],
-    [OCEAN_BOTTOM_MIDDLE]: NIGHT_TIME__SHARED,
-    [OCEAN_BOTTOM_NEAR]: [
-        NIGHT_TIME__SHARED,
-        OCEAN_LIFE__SHARED,
-    ],
+    [OCEAN_ROCKS_LEFT]: NIGHT_TIME__SHARED,
+    [OCEAN_ROCKS_RIGHT]: NIGHT_TIME__SHARED,
     [PAMPAS_FAR]: [
         FOLIAGE__SHARED,
         MOUNTAIN__SHARED,

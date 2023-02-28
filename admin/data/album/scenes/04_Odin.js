@@ -51,7 +51,8 @@ import {
     DREAM_SHORE,
     DREAM_STAIRS,
     MOUNTAIN_TAIWAN_BACKDROP,
-    OCEAN_BOTTOM_FAR,
+    OCEAN_DEPTHS_FAR,
+    OCEAN_DEPTHS_NEAR,
     OCEAN_FLOOR_FAR,
     OCEAN_FLOOR_NEAR,
     SHORE_BUOY_BACKDROP,
@@ -102,8 +103,8 @@ import {
 import { FRIDGE_DRAWINGS } from '../../../../src/constants/scene/things/fixtures'
 import {
     FERRIS_WHEEL,
-    OCEAN_BOTTOM_MIDDLE,
-    OCEAN_BOTTOM_NEAR,
+    OCEAN_ROCKS_LEFT,
+    OCEAN_ROCKS_RIGHT,
     RICKSHAW_TOWN,
     ROLLER_COASTER,
     TAIWAN_HOUSES_CENTRE,
@@ -322,15 +323,16 @@ export default [
                 },
             },
             [BACKDROP]: {
-                [OCEAN_BOTTOM_FAR]: true,
+                [OCEAN_DEPTHS_FAR]: true,
+                [OCEAN_DEPTHS_NEAR]: true,
                 [DREAM_DEPTHS]: true,
             },
             [CARDBOARD]: {
                 [BENNETT_ODIN_DEPTHS]: true,
             },
             [FLAT]: {
-                [OCEAN_BOTTOM_MIDDLE]: true,
-                [OCEAN_BOTTOM_NEAR]: true,
+                [OCEAN_ROCKS_LEFT]: true,
+                [OCEAN_ROCKS_RIGHT]: true,
             },
         },
         cubes: OCEAN_DEPTHS_KEY,

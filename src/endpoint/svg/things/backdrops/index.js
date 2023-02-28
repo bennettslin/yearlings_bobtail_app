@@ -14,7 +14,8 @@ import losAngelesBackdrop from '../../../../assets/svgs/backdrops/losAngelesBack
 import mountainBackdrop from '../../../../assets/svgs/backdrops/mountainBackdrop'
 import oaklandFront from '../../../../assets/svgs/backdrops/oaklandFront'
 import oaklandSide from '../../../../assets/svgs/backdrops/oaklandSide'
-import oceanBottomFar from '../../../../assets/svgs/backdrops/oceanBottomFar'
+import oceanDepthsFar from '../../../../assets/svgs/backdrops/oceanDepthsFar'
+import oceanDepthsNear from '../../../../assets/svgs/backdrops/oceanDepthsNear'
 import oceanFloorFar from '../../../../assets/svgs/backdrops/oceanFloorFar'
 import oceanFloorNear from '../../../../assets/svgs/backdrops/oceanFloorNear'
 import pharmacyCel from '../../../../assets/svgs/backdrops/pharmacyCel'
@@ -54,7 +55,8 @@ import {
     OAKLAND_FRONT__LOW,
     OAKLAND_SIDE__LEVEL,
     OAKLAND_SIDE__LIZ_COUCH,
-    OCEAN_BOTTOM_FAR,
+    OCEAN_DEPTHS_FAR,
+    OCEAN_DEPTHS_NEAR,
     OCEAN_FLOOR_FAR,
     OCEAN_FLOOR_NEAR,
     PHARMACY_CEL,
@@ -96,7 +98,8 @@ export default {
     [OAKLAND_FRONT__LOW]: oaklandFront,
     [OAKLAND_SIDE__LEVEL]: oaklandSide,
     [OAKLAND_SIDE__LIZ_COUCH]: oaklandSide,
-    [OCEAN_BOTTOM_FAR]: oceanBottomFar,
+    [OCEAN_DEPTHS_FAR]: oceanDepthsFar,
+    [OCEAN_DEPTHS_NEAR]: oceanDepthsNear,
     [OCEAN_FLOOR_FAR]: oceanFloorFar,
     [OCEAN_FLOOR_NEAR]: oceanFloorNear,
     [PHARMACY_CEL]: pharmacyCel,
