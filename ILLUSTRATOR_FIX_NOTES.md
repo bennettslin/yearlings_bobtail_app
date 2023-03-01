@@ -1,60 +1,96 @@
 # General fixes
 
-## Dreams work
-* Stairs
-    * Separate window presences
-* Ocean
-    * Separate top and side water
-
-* Gate
-    * Tree
-    * House and fence
-* Rickshaw
-    * Shore
-    * Palm trees
-* Shore
-    * Shore
-    * Palm trees
-* Depths
-    * Make bubble
-    * Odin face
-    * Bushes?
-* Buoy
-    * Make bubble
-    * Odin face
-    * Sea serpents
-    * Bubble waves
-    * General waves
-    * Look at Mitch Leeuwe's ocean tutorial
+* Decision
+    * Cinema thought
+        * Posters
+        * Albums
+    * Ocean depths dream background
+* Sketch work
+    * Didi sketchbook
+    * Inverted 100,000th Dream bubble
+    * Cinema thought
+        * Posters
+        * Albums
+    * Ocean water surface
         * https://www.instagram.com/p/CjfX6tmqR_B
-* Figure out later
-    * Mat
-        * Make bubbles
-        * Odin face
-    * Stairs
-        * Make bubble
-    * Floor
-        * Make bubble
-        * Odin face
-        * Make Odin smaller
-        * Figure out placement with cave
+    * Ocean depths
+        * Backdrop far
+        * Backdrop near
+        * Rocks left
+        * Rocks right
+    * Ocean floor
+        * Backdrop far
+        * Backdrop near
+        * Plants left
+        * Plants centre
+        * Plants right
+        * Ocean fish
+* Illustrator trace work
+    * Didi sketchbook
+    * Inverted 100,000th Dream bubble
+    * Cinema thought
+        * Posters
+        * Albums
+    * Ocean water surface
+    * Ocean depths
+        * Backdrop far
+        * Backdrop near
+        * Rocks left
+        * Rocks right
+    * Ocean floor
+        * Backdrop far
+        * Backdrop near
+        * Plants left
+        * Plants centre
+        * Plants right
+        * Ocean fish
+* Illustrator placement work
+    * Odin faces
+        * Taiwan room
+        * Buoy
+        * Ocean depths
+        * Ocean floor
+    * Taiwan room
+        * fridge
+        * stair cubes
+    * Taiwan stairs
+        * backdrop
+            * mountains
+            * palm trees
+            * houses
+        * iron door
+        * gate cubes
+    * Taiwan gate
+        * houses
+        * tree
+        * street cubes
+    * Rickshaw
+        * backdrop
+            * mountains
+            * palm trees
+            * ocean
+            * shore
+    * Shore
+        * backdrop
+            * ocean
+    * Buoy
+        * backdrop
+            * ocean
+        * foreground
+            * ocean water surface
+    * Ocean depths
+        * (Need decision)
+    * Ocean floor
         * Captain bed background
-* Resize Odin
-
-* Invert 100,000th dream bubble
+* Make sure shared styles are correct
+    * Night colours
 
 ## General consideration
 * Bennett buoy actor (buoy too generic)
-* Cinema thought buying bubble
-    * Add poster details
-    * Add album details
-    * Background colour for Yearlings album
 * Make constellation and sketch eyes more expressive, like other bubbles
 * Reconsider pharmacy scene cel?
 
 # Face fixes
-
-## TODO next
 
 ### Jacob
 * flirting
