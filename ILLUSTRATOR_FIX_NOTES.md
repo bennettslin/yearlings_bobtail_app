@@ -1,30 +1,5 @@
 # General fixes
 
-* Decision
-    * Cinema thought
-        * Posters
-        * Albums
-    * Ocean depths dream background
-* Sketch work
-    * Didi sketchbook
-    * Inverted 100,000th Dream bubble
-    * Cinema thought
-        * Posters
-        * Albums
-    * Ocean water surface
-        * https://www.instagram.com/p/CjfX6tmqR_B
-    * Ocean depths
-        * Backdrop far
-        * Backdrop near
-        * Rocks left
-        * Rocks right
-    * Ocean floor
-        * Backdrop far
-        * Backdrop near
-        * Plants left
-        * Plants centre
-        * Plants right
-        * Ocean fish
 * Illustrator trace work
     * Didi sketchbook
     * Inverted 100,000th Dream bubble
