@@ -38,8 +38,8 @@ import oaklandFlag from '../../../../assets/svgs/flats/oaklandFlag'
 import oaklandHouseLeft from '../../../../assets/svgs/flats/oaklandHouseLeft'
 import oaklandHouseRight from '../../../../assets/svgs/flats/oaklandHouseRight'
 import oaklandSchool from '../../../../assets/svgs/flats/oaklandSchool'
-import oceanRocksLeft from '../../../../assets/svgs/flats/oceanRocksLeft'
-import oceanRocksRight from '../../../../assets/svgs/flats/oceanRocksRight'
+import oceanCavesLeft from '../../../../assets/svgs/flats/oceanCavesLeft'
+import oceanCavesRight from '../../../../assets/svgs/flats/oceanCavesRight'
 import pampasFar from '../../../../assets/svgs/flats/pampasFar'
 import publicFar from '../../../../assets/svgs/flats/publicFar'
 import publicNear from '../../../../assets/svgs/flats/publicNear'
@@ -103,8 +103,8 @@ import {
     OAKLAND_HOUSE_LEFT,
     OAKLAND_HOUSE_RIGHT,
     OAKLAND_SCHOOL,
-    OCEAN_ROCKS_LEFT,
-    OCEAN_ROCKS_RIGHT,
+    OCEAN_DEPTHS_CAVES_LEFT,
+    OCEAN_DEPTHS_CAVES_RIGHT,
     PAMPAS_FAR,
     PUBLIC_FAR__GOLDEN_CORD,
     PUBLIC_FAR__LIZ_GATE,
@@ -177,8 +177,8 @@ export default {
     [OAKLAND_HOUSE_LEFT]: oaklandHouseLeft,
     [OAKLAND_HOUSE_RIGHT]: oaklandHouseRight,
     [OAKLAND_SCHOOL]: oaklandSchool,
-    [OCEAN_ROCKS_LEFT]: oceanRocksLeft,
-    [OCEAN_ROCKS_RIGHT]: oceanRocksRight,
+    [OCEAN_DEPTHS_CAVES_LEFT]: oceanCavesLeft,
+    [OCEAN_DEPTHS_CAVES_RIGHT]: oceanCavesRight,
     [PAMPAS_FAR]: pampasFar,
     [PUBLIC_FAR__GOLDEN_CORD]: publicFar,
     [PUBLIC_FAR__LIZ_GATE]: publicFar,

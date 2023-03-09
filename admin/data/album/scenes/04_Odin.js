@@ -51,10 +51,10 @@ import {
     DREAM_SHORE,
     DREAM_STAIRS,
     MOUNTAIN_TAIWAN_BACKDROP,
-    OCEAN_DEPTHS_FAR,
-    OCEAN_DEPTHS_NEAR,
-    OCEAN_FLOOR_FAR,
-    OCEAN_FLOOR_NEAR,
+    OCEAN_DEPTHS_ROCKS,
+    OCEAN_DEPTHS_VOLCANOES,
+    OCEAN_FLOOR_ROCKS,
+    OCEAN_FLOOR_VOLCANOES,
     SHORE_BUOY_BACKDROP,
     SHORE_RICKSHAW_BACKDROP,
     TAIWAN_STAIRS_BACKDROP,
@@ -103,8 +103,8 @@ import {
 import { FRIDGE_DRAWINGS } from '../../../../src/constants/scene/things/fixtures'
 import {
     FERRIS_WHEEL,
-    OCEAN_ROCKS_LEFT,
-    OCEAN_ROCKS_RIGHT,
+    OCEAN_DEPTHS_CAVES_LEFT,
+    OCEAN_DEPTHS_CAVES_RIGHT,
     RICKSHAW_TOWN,
     ROLLER_COASTER,
     TAIWAN_HOUSES_CENTRE,
@@ -323,16 +323,16 @@ export default [
                 },
             },
             [BACKDROP]: {
-                [OCEAN_DEPTHS_FAR]: true,
-                [OCEAN_DEPTHS_NEAR]: true,
+                [OCEAN_DEPTHS_VOLCANOES]: true,
+                [OCEAN_DEPTHS_ROCKS]: true,
                 [DREAM_DEPTHS]: true,
             },
             [CARDBOARD]: {
                 [BENNETT_ODIN_DEPTHS]: true,
             },
             [FLAT]: {
-                [OCEAN_ROCKS_LEFT]: true,
-                [OCEAN_ROCKS_RIGHT]: true,
+                [OCEAN_DEPTHS_CAVES_LEFT]: true,
+                [OCEAN_DEPTHS_CAVES_RIGHT]: true,
             },
         },
         cubes: OCEAN_DEPTHS_KEY,
@@ -349,8 +349,8 @@ export default [
                 },
             },
             [BACKDROP]: {
-                [OCEAN_FLOOR_FAR]: true,
-                [OCEAN_FLOOR_NEAR]: true,
+                [OCEAN_FLOOR_VOLCANOES]: true,
+                [OCEAN_FLOOR_ROCKS]: true,
                 [DREAM_OCEAN_FLOOR]: true,
             },
             [CARDBOARD]: {

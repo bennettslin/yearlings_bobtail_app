@@ -6,8 +6,8 @@ import {
 import { DREAM_DEPTHS } from '../../../../../src/constants/scene/things/backdrops'
 import { BENNETT_ODIN_DEPTHS } from '../../../../../src/constants/scene/things/cardboards'
 import {
-    OCEAN_ROCKS_LEFT,
-    OCEAN_ROCKS_RIGHT,
+    OCEAN_DEPTHS_CAVES_LEFT,
+    OCEAN_DEPTHS_CAVES_RIGHT,
 } from '../../../../../src/constants/scene/things/flats'
 
 export default {
@@ -25,10 +25,10 @@ export default {
         },
     },
     [FLAT]: {
-        [OCEAN_ROCKS_LEFT]: {
+        [OCEAN_DEPTHS_CAVES_LEFT]: {
             yIndex: 1,
         },
-        [OCEAN_ROCKS_RIGHT]: {
+        [OCEAN_DEPTHS_CAVES_RIGHT]: {
             yIndex: 2,
         },
     },
