@@ -6,7 +6,7 @@ import {
     FIXTURE,
     PANEL,
 } from '../../../../../src/constants/scene/things'
-import { PHOTO_SCRAPBOOK } from '../../../../../src/constants/scene/things/bubbles'
+import { PHOTO_ALBUM } from '../../../../../src/constants/scene/things/bubbles'
 import { ALBUM_JOHNNY_HORTON } from '../../../../../src/constants/scene/things/cardboards'
 import {
     MIRRORED_SINK,
@@ -21,7 +21,7 @@ import { BATHTUB } from '../../../../../src/constants/scene/things/panels'
 
 export default {
     [BUBBLE]: {
-        [PHOTO_SCRAPBOOK]: {
+        [PHOTO_ALBUM]: {
             yIndex: 5,
         },
     },
