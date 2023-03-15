@@ -23,6 +23,7 @@ export default {
     [BUBBLE]: {
         [PHOTO_ALBUM]: {
             yIndex: 5,
+            zOffset: -1,
         },
     },
     [CUTOUT]: {
@@ -77,7 +78,7 @@ export const THINGS_BATHROOM_SINGING = {
     [FIXTURE]: {
         [RECORD_PLAYER_STOOL]: {
             yIndex: 4,
-            xPosition: 6.75,
+            xPosition: 7,
         },
     },
 }

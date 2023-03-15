@@ -9,13 +9,13 @@ export default {
     [YOUNG_BENNETT]: {
         [SINGING]: {
             yIndex: 2,
-            xPosition: 5.45,
+            xPosition: 5.75,
         },
     },
     [ANITA]: {
         [CHEERING]: {
             yIndex: 3,
-            xPosition: 4.05,
+            xPosition: 4.25,
             zOffset: -0.1,
             layerYIndex: 4,
         },

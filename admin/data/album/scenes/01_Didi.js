@@ -48,7 +48,7 @@ import {
     VALLEY_CLOSER_BACKDROP,
     VALLEY_FURTHER_BACKDROP,
 } from '../../../../src/constants/scene/things/backdrops'
-// import { PHOTO_ALBUM } from '../../../../src/constants/scene/things/bubbles'
+import { PHOTO_ALBUM } from '../../../../src/constants/scene/things/bubbles'
 import { ALBUM_JOHNNY_HORTON } from '../../../../src/constants/scene/things/cardboards'
 import {
     FIRE_HYDRANT,
@@ -256,7 +256,7 @@ export default [
                 [VALLEY_FURTHER_BACKDROP]: true,
             },
             [BUBBLE]: {
-                // [PHOTO_ALBUM]: true,
+                [PHOTO_ALBUM]: true,
             },
             [CARDBOARD]: {
                 [ALBUM_JOHNNY_HORTON]: true,
