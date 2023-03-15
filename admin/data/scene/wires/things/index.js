@@ -35,6 +35,7 @@ import {
     GHOST_ODIN_CAMPUS,
     GHOST_ODIN_CLUB,
     GHOST_ODIN_DEMONSTRATION,
+    OCEAN_FLOOR_FISH,
     OPAL_COUCH,
     OPAL_GAZING,
     PEACOCK,
@@ -156,6 +157,12 @@ export default {
         [PUPPET_CHRISTOPHER_END]: {},
         [PUPPET_FATHER_END]: {},
         [PUPPET_MOTHER_END]: { x: 0.4 },
+        [OCEAN_FLOOR_FISH]: {
+            wires: [
+                { x: 0.12, y: 0.3 },
+                { x: 0.78, y: 0.2 },
+            ],
+        },
         [OPAL_COUCH]: OPAL_COUCH_CONFIG,
         [OPAL_GAZING]: {
             wires: [

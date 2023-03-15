@@ -23,7 +23,7 @@ export default {
     [BUBBLE]: {
         [BUBBLE_LARGE__CINEMA]: {
             ...BUBBLE_LARGE_CONFIG,
-            xPosition: 5.35,
+            xPosition: 5.36,
             zOffset: 5.6,
         },
         [BUBBLE_MEDIUM__CINEMA]: {
@@ -34,7 +34,7 @@ export default {
         [BUBBLE_SMALL__CINEMA]: {
             ...BUBBLE_SMALL_CONFIG,
             xPosition: 4.7,
-            zOffset: 5.15,
+            zOffset: 5.12,
         },
         [CINEMA_THOUGHT_BUYING]: {
             yIndex: 5,
