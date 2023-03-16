@@ -24,7 +24,7 @@ export default {
     [BACKDROP]: {
         [DREAM_OCEAN_FLOOR]: {
             yIndex: 3,
-            xPosition: 2.4,
+            xPosition: 2.2,
             zOffset: 0.05,
             layerYIndex: 4,
         },
@@ -32,12 +32,12 @@ export default {
     [CARDBOARD]: {
         [BUDDHA_CAVE_SHRINE]: {
             yIndex: 3,
-            xPosition: 1.8,
+            xPosition: 1.7,
             layerYIndex: 4,
         },
         [BENNETT_OCEAN_FLOOR]: {
             yIndex: 3,
-            xPosition: 3.2,
+            xPosition: 3,
             zOffset: -0.05,
             layerYIndex: 4,
         },
@@ -71,7 +71,7 @@ export default {
         },
         [OCEAN_CAVE_EXTERIOR_RIGHT]: {
             yIndex: 2,
-            xPosition: 8.7,
+            xPosition: 7,
         },
         [OCEAN_CAVE_INTERIOR_LEFT]: {
             yIndex: 2,
@@ -80,7 +80,7 @@ export default {
         },
         [OCEAN_CAVE_INTERIOR_RIGHT]: {
             yIndex: 1,
-            xPosition: 8.7,
+            xPosition: 7,
         },
     },
     [PUPPET]: {

@@ -14,7 +14,7 @@ export default {
     [BACKDROP]: {
         [DREAM_DEPTHS]: {
             yIndex: 4,
-            xPosition: 7.5,
+            xPosition: 7.45,
             zOffset: 0.15,
         },
     },
@@ -26,10 +26,12 @@ export default {
     },
     [FLAT]: {
         [OCEAN_DEPTHS_CAVES_LEFT]: {
-            yIndex: 1,
+            yIndex: 5,
+            xPosition: 2.6,
         },
         [OCEAN_DEPTHS_CAVES_RIGHT]: {
-            yIndex: 2,
+            yIndex: 5,
+            xPosition: 10,
         },
     },
 }
