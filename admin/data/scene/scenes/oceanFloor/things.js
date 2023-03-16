@@ -93,8 +93,8 @@ export default {
     [PUPPET]: {
         [OCEAN_FLOOR_FISH]: {
             yIndex: 5,
-            xPosition: 7,
-            zOffset: 4,
+            xPosition: 6.5,
+            zOffset: 4.5,
         },
     },
 }
