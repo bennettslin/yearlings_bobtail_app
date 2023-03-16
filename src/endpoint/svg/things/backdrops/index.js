@@ -14,9 +14,7 @@ import losAngelesBackdrop from '../../../../assets/svgs/backdrops/losAngelesBack
 import mountainBackdrop from '../../../../assets/svgs/backdrops/mountainBackdrop'
 import oaklandFront from '../../../../assets/svgs/backdrops/oaklandFront'
 import oaklandSide from '../../../../assets/svgs/backdrops/oaklandSide'
-import oceanDepthsRocks from '../../../../assets/svgs/backdrops/oceanDepthsRocks'
 import oceanDepthsVolcanoes from '../../../../assets/svgs/backdrops/oceanDepthsVolcanoes'
-import oceanFloorRocks from '../../../../assets/svgs/backdrops/oceanFloorRocks'
 import oceanFloorVolcanoes from '../../../../assets/svgs/backdrops/oceanFloorVolcanoes'
 import pharmacyCel from '../../../../assets/svgs/backdrops/pharmacyCel'
 import roadFuture from '../../../../assets/svgs/backdrops/roadFuture'
@@ -55,9 +53,7 @@ import {
     OAKLAND_FRONT__LOW,
     OAKLAND_SIDE__LEVEL,
     OAKLAND_SIDE__LIZ_COUCH,
-    OCEAN_DEPTHS_ROCKS,
     OCEAN_DEPTHS_VOLCANOES,
-    OCEAN_FLOOR_ROCKS,
     OCEAN_FLOOR_VOLCANOES,
     PHARMACY_CEL,
     ROAD_FUTURE,
@@ -98,9 +94,7 @@ export default {
     [OAKLAND_FRONT__LOW]: oaklandFront,
     [OAKLAND_SIDE__LEVEL]: oaklandSide,
     [OAKLAND_SIDE__LIZ_COUCH]: oaklandSide,
-    [OCEAN_DEPTHS_ROCKS]: oceanDepthsRocks,
     [OCEAN_DEPTHS_VOLCANOES]: oceanDepthsVolcanoes,
-    [OCEAN_FLOOR_ROCKS]: oceanFloorRocks,
     [OCEAN_FLOOR_VOLCANOES]: oceanFloorVolcanoes,
     [PHARMACY_CEL]: pharmacyCel,
     [ROAD_FUTURE]: roadFuture,

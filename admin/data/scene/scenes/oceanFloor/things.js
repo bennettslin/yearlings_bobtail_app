@@ -2,6 +2,7 @@ import {
     BACKDROP,
     CARDBOARD,
     CUTOUT,
+    FLAT,
     PANEL,
     PUPPET,
 } from '../../../../../src/constants/scene/things'
@@ -12,6 +13,7 @@ import {
     ODIN_OCEAN_FLOOR,
 } from '../../../../../src/constants/scene/things/cardboards'
 import { OCEAN_FLOOR_PLANTS_CENTRE, OCEAN_FLOOR_PLANTS_LEFT, OCEAN_FLOOR_PLANTS_RIGHT } from '../../../../../src/constants/scene/things/cutouts'
+import { OCEAN_FLOOR_ROCKS } from '../../../../../src/constants/scene/things/flats'
 import {
     OCEAN_CAVE_INTERIOR_LEFT,
     OCEAN_CAVE_INTERIOR_RIGHT,
@@ -61,6 +63,11 @@ export default {
         [OCEAN_FLOOR_PLANTS_RIGHT]: {
             yIndex: 5,
             xPosition: 11,
+        },
+    },
+    [FLAT]: {
+        [OCEAN_FLOOR_ROCKS]: {
+            yIndex: 1,
         },
     },
     [PANEL]: {

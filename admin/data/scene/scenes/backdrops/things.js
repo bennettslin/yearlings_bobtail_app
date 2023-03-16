@@ -9,9 +9,7 @@ import {
     OAKLAND_FRONT__LOW,
     OAKLAND_SIDE__LEVEL,
     OAKLAND_SIDE__LIZ_COUCH,
-    OCEAN_DEPTHS_ROCKS,
     OCEAN_DEPTHS_VOLCANOES,
-    OCEAN_FLOOR_ROCKS,
     OCEAN_FLOOR_VOLCANOES,
     ROAD_FUTURE,
     ROAD_PAST,
@@ -45,9 +43,7 @@ export default {
         [OAKLAND_SIDE__LIZ_COUCH]: {
             zOffset: -0.5,
         },
-        [OCEAN_DEPTHS_ROCKS]: {},
         [OCEAN_DEPTHS_VOLCANOES]: {},
-        [OCEAN_FLOOR_ROCKS]: {},
         [OCEAN_FLOOR_VOLCANOES]: {},
         [ROAD_FUTURE]: {},
         [ROAD_PAST]: {

@@ -40,6 +40,8 @@ import oaklandHouseRight from '../../../../assets/svgs/flats/oaklandHouseRight'
 import oaklandSchool from '../../../../assets/svgs/flats/oaklandSchool'
 import oceanCavesLeft from '../../../../assets/svgs/flats/oceanCavesLeft'
 import oceanCavesRight from '../../../../assets/svgs/flats/oceanCavesRight'
+import oceanDepthsRocks from '../../../../assets/svgs/flats/oceanDepthsRocks'
+import oceanFloorRocks from '../../../../assets/svgs/flats/oceanFloorRocks'
 import pampasFar from '../../../../assets/svgs/flats/pampasFar'
 import publicFar from '../../../../assets/svgs/flats/publicFar'
 import publicNear from '../../../../assets/svgs/flats/publicNear'
@@ -105,6 +107,8 @@ import {
     OAKLAND_SCHOOL,
     OCEAN_DEPTHS_CAVES_LEFT,
     OCEAN_DEPTHS_CAVES_RIGHT,
+    OCEAN_DEPTHS_ROCKS,
+    OCEAN_FLOOR_ROCKS,
     PAMPAS_FAR,
     PUBLIC_FAR__GOLDEN_CORD,
     PUBLIC_FAR__LIZ_GATE,
@@ -179,6 +183,8 @@ export default {
     [OAKLAND_SCHOOL]: oaklandSchool,
     [OCEAN_DEPTHS_CAVES_LEFT]: oceanCavesLeft,
     [OCEAN_DEPTHS_CAVES_RIGHT]: oceanCavesRight,
+    [OCEAN_DEPTHS_ROCKS]: oceanDepthsRocks,
+    [OCEAN_FLOOR_ROCKS]: oceanFloorRocks,
     [PAMPAS_FAR]: pampasFar,
     [PUBLIC_FAR__GOLDEN_CORD]: publicFar,
     [PUBLIC_FAR__LIZ_GATE]: publicFar,

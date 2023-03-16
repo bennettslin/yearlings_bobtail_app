@@ -8,6 +8,7 @@ import { BENNETT_ODIN_DEPTHS } from '../../../../../src/constants/scene/things/c
 import {
     OCEAN_DEPTHS_CAVES_LEFT,
     OCEAN_DEPTHS_CAVES_RIGHT,
+    OCEAN_DEPTHS_ROCKS,
 } from '../../../../../src/constants/scene/things/flats'
 
 export default {
@@ -25,6 +26,9 @@ export default {
         },
     },
     [FLAT]: {
+        [OCEAN_DEPTHS_ROCKS]: {
+            yIndex: 1,
+        },
         [OCEAN_DEPTHS_CAVES_LEFT]: {
             yIndex: 5,
             xPosition: 2.6,

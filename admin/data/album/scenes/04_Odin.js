@@ -51,9 +51,7 @@ import {
     DREAM_SHORE,
     DREAM_STAIRS,
     MOUNTAIN_TAIWAN_BACKDROP,
-    OCEAN_DEPTHS_ROCKS,
     OCEAN_DEPTHS_VOLCANOES,
-    OCEAN_FLOOR_ROCKS,
     OCEAN_FLOOR_VOLCANOES,
     SHORE_BUOY_BACKDROP,
     SHORE_RICKSHAW_BACKDROP,
@@ -105,6 +103,8 @@ import {
     FERRIS_WHEEL,
     OCEAN_DEPTHS_CAVES_LEFT,
     OCEAN_DEPTHS_CAVES_RIGHT,
+    OCEAN_DEPTHS_ROCKS,
+    OCEAN_FLOOR_ROCKS,
     RICKSHAW_TOWN,
     ROLLER_COASTER,
     TAIWAN_HOUSES_CENTRE,
@@ -324,13 +324,13 @@ export default [
             },
             [BACKDROP]: {
                 [OCEAN_DEPTHS_VOLCANOES]: true,
-                [OCEAN_DEPTHS_ROCKS]: true,
                 [DREAM_DEPTHS]: true,
             },
             [CARDBOARD]: {
                 [BENNETT_ODIN_DEPTHS]: true,
             },
             [FLAT]: {
+                [OCEAN_DEPTHS_ROCKS]: true,
                 [OCEAN_DEPTHS_CAVES_LEFT]: true,
                 [OCEAN_DEPTHS_CAVES_RIGHT]: true,
             },
@@ -350,7 +350,6 @@ export default [
             },
             [BACKDROP]: {
                 [OCEAN_FLOOR_VOLCANOES]: true,
-                [OCEAN_FLOOR_ROCKS]: true,
                 [DREAM_OCEAN_FLOOR]: true,
             },
             [CARDBOARD]: {
@@ -362,6 +361,9 @@ export default [
                 [OCEAN_FLOOR_PLANTS_CENTRE]: true,
                 [OCEAN_FLOOR_PLANTS_LEFT]: true,
                 [OCEAN_FLOOR_PLANTS_RIGHT]: true,
+            },
+            [FLAT]: {
+                [OCEAN_FLOOR_ROCKS]: true,
             },
             [PANEL]: {
                 [OCEAN_CAVE_INTERIOR_LEFT]: true,
