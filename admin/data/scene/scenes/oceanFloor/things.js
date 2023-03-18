@@ -53,16 +53,16 @@ export default {
     [CUTOUT]: {
         [OCEAN_FLOOR_PLANTS_CENTRE]: {
             yIndex: 4,
-            xPosition: 5.5,
+            xPosition: 6,
             layerYIndex: 5,
         },
         [OCEAN_FLOOR_PLANTS_LEFT]: {
             yIndex: 5,
-            xPosition: 0,
+            xPosition: 0.25,
         },
         [OCEAN_FLOOR_PLANTS_RIGHT]: {
             yIndex: 5,
-            xPosition: 11,
+            xPosition: 10.5,
         },
     },
     [FLAT]: {
