@@ -16,6 +16,7 @@
 .dullAmberMediumLight { fill: hsl(45, 20%, 62%); }
 .dullAmberLighter { fill: hsl(45, 20%, 72%); }
 
+.dullYellowDarker { fill: hsl(60, 20%, 42%); }
 .dullYellowDark { fill: hsl(60, 20%, 47%); }
 .dullYellowMediumDark { fill: hsl(60, 20%, 52%); }
 .dullYellowMedium { fill: hsl(60, 20%, 57%); }
@@ -65,6 +66,8 @@
 .dullPurpleMediumLight { fill: hsl(270, 20%, 62%); }
 .dullPurpleLight { fill: hsl(270, 20%, 67%); }
 
+.dullMagentaDark { fill: hsl(300, 20%, 47%); }
+.dullMagentaMediumDark { fill: hsl(300, 20%, 52%); }
 .dullMagentaMedium { fill: hsl(300, 20%, 57%); }
 .dullMagentaMediumLight { fill: hsl(300, 20%, 62%); }
 .dullMagentaLight { fill: hsl(300, 20%, 67%); }
@@ -113,14 +116,30 @@
     .dullRedDarker { fill: hsl(0, 10%, 32%); }
     .dullRedDark { fill: hsl(0, 10%, 37%); }
     .dullRedMediumDark { fill: hsl(0, 10%, 42%); }
+    .dullYellowDarker { fill: hsl(60, 10%, 32%); }
+    .dullYellowMediumDark { fill: hsl(60, 10%, 42%); }
+    .dullYellowMedium { fill: hsl(60, 10%, 47%); }
+    .dullYellowMediumLight { fill: hsl(60, 10%, 52%); }
     .dullTealDark { fill: hsl(180, 10%, 37%); }
     .dullTealMedium { fill: hsl(180, 10%, 47%); }
     .dullTealLighter { fill: hsl(180, 10%, 62%); }
     .dullBlueMedium { fill: hsl(210, 10%, 47%); }
     .dullIndigoDarkest { fill: hsl(240, 10%, 27%); }
-    // .dullIndigoMediumDark { fill: hsl(240, 10%, 42%); }
-    // .dullIndigoMedium { fill: hsl(240, 10%, 47%); }
-    // .dullIndigoMediumLight { fill: hsl(240, 10%, 52%); }
+    .dullIndigoDark { fill: hsl(240, 10%, 37%); }
+    .dullIndigoMediumDark { fill: hsl(240, 10%, 42%); }
+    .dullIndigoMedium { fill: hsl(240, 10%, 47%); }
+    .dullIndigoMediumLight { fill: hsl(240, 10%, 52%); }
+    .dullPurpleDark { fill: hsl(270, 10%, 37%); }
+    .dullPurpleMediumDark { fill: hsl(270, 10%, 42%); }
+    .dullPurpleMedium { fill: hsl(270, 10%, 47%); }
+    .dullPurpleMediumLight { fill: hsl(270, 10%, 52%); }
+    .dullMagentaDark { fill: hsl(300, 10%, 37%); }
+    .dullMagentaMediumDark { fill: hsl(300, 10%, 42%); }
+    .dullMagentaMedium { fill: hsl(300, 10%, 47%); }
+    .dullMagentaMediumLight { fill: hsl(300, 10%, 52%); }
     .dullMaroonDarker { fill: hsl(330, 10%, 32%); }
     .dullMaroonDark { fill: hsl(330, 10%, 37%); }
+    .dullMaroonMediumDark { fill: hsl(330, 10%, 42%); }
+    .dullMaroonMedium { fill: hsl(330, 10%, 47%); }
+    .dullMaroonMediumLight { fill: hsl(330, 10%, 52%); }
 }
