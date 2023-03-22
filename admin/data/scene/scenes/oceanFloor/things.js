@@ -94,7 +94,7 @@ export default {
         [OCEAN_FLOOR_FISH]: {
             yIndex: 5,
             xPosition: 6.95,
-            zOffset: 4.75,
+            zOffset: 4.98,
         },
     },
 }
