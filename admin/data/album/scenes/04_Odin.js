@@ -53,6 +53,8 @@ import {
     MOUNTAIN_TAIWAN_BACKDROP,
     OCEAN_DEPTHS_VOLCANOES,
     OCEAN_FLOOR_VOLCANOES,
+    OCEAN_WAVES__FRONT,
+    OCEAN_WAVES__REAR,
     SHORE_BUOY_BACKDROP,
     SHORE_RICKSHAW_BACKDROP,
     TAIWAN_STAIRS_BACKDROP,
@@ -117,11 +119,6 @@ import {
     OCEAN_CAVE_EXTERIOR_RIGHT,
     OCEAN_CAVE_INTERIOR_LEFT,
     OCEAN_CAVE_INTERIOR_RIGHT,
-    OCEAN_WAVES__FRONT,
-    OCEAN_WAVES__MIDDLE,
-    OCEAN_WAVES__MIDDLE_FRONT,
-    OCEAN_WAVES__MIDDLE_REAR,
-    OCEAN_WAVES__REAR,
 } from '../../../../src/constants/scene/things/panels'
 import { OCEAN_FLOOR_FISH } from '../../../../src/constants/scene/things/puppets'
 
@@ -294,19 +291,14 @@ export default [
                 },
             },
             [BACKDROP]: {
+                [OCEAN_WAVES__REAR]: true,
+                [OCEAN_WAVES__FRONT]: true,
                 [DREAM_BUOY]: true,
             },
             [CARDBOARD]: {
                 [BENNETT_ODIN_BUOY]: true,
                 [SEA_SERPENT_LEFT]: true,
                 [SEA_SERPENT_RIGHT]: true,
-            },
-            [PANEL]: {
-                [OCEAN_WAVES__REAR]: true,
-                [OCEAN_WAVES__MIDDLE_REAR]: true,
-                [OCEAN_WAVES__MIDDLE]: true,
-                [OCEAN_WAVES__MIDDLE_FRONT]: true,
-                [OCEAN_WAVES__FRONT]: true,
             },
         },
         cubes: BUOY_KEY,

@@ -34,7 +34,6 @@ import oceanCaveExteriorLeft from '../../../../assets/svgs/panels/oceanCaveExter
 import oceanCaveExteriorRight from '../../../../assets/svgs/panels/oceanCaveExteriorRight'
 import oceanCaveInteriorLeft from '../../../../assets/svgs/panels/oceanCaveInteriorLeft'
 import oceanCaveInteriorRight from '../../../../assets/svgs/panels/oceanCaveInteriorRight'
-import oceanWaves from '../../../../assets/svgs/panels/oceanWaves'
 import phoneCallPanel from '../../../../assets/svgs/panels/phoneCallPanel'
 import principalBench from '../../../../assets/svgs/panels/principalBench'
 import reattaExteriorFront from '../../../../assets/svgs/panels/reattaExteriorFront'
@@ -109,11 +108,6 @@ import {
     MILK_CRATE__MARA,
     MILK_CRATE__VEGAN,
     NURSE_BENCH,
-    OCEAN_WAVES__FRONT,
-    OCEAN_WAVES__MIDDLE,
-    OCEAN_WAVES__MIDDLE_FRONT,
-    OCEAN_WAVES__MIDDLE_REAR,
-    OCEAN_WAVES__REAR,
     PHONE_CALL_PANEL,
     PRINCIPAL_BENCH,
     REATTA_EXTERIOR_FRONT,
@@ -215,11 +209,6 @@ export default {
     [OCEAN_CAVE_EXTERIOR_RIGHT]: oceanCaveExteriorRight,
     [OCEAN_CAVE_INTERIOR_LEFT]: oceanCaveInteriorLeft,
     [OCEAN_CAVE_INTERIOR_RIGHT]: oceanCaveInteriorRight,
-    [OCEAN_WAVES__FRONT]: oceanWaves,
-    [OCEAN_WAVES__MIDDLE]: oceanWaves,
-    [OCEAN_WAVES__MIDDLE_FRONT]: oceanWaves,
-    [OCEAN_WAVES__MIDDLE_REAR]: oceanWaves,
-    [OCEAN_WAVES__REAR]: oceanWaves,
     [PHONE_CALL_PANEL]: phoneCallPanel,
     [PRINCIPAL_BENCH]: principalBench,
     [REATTA_EXTERIOR_FRONT]: reattaExteriorFront,

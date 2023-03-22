@@ -16,6 +16,7 @@ import oaklandFront from '../../../../assets/svgs/backdrops/oaklandFront'
 import oaklandSide from '../../../../assets/svgs/backdrops/oaklandSide'
 import oceanDepthsVolcanoes from '../../../../assets/svgs/backdrops/oceanDepthsVolcanoes'
 import oceanFloorVolcanoes from '../../../../assets/svgs/backdrops/oceanFloorVolcanoes'
+import oceanWaves from '../../../../assets/svgs/backdrops/oceanWaves'
 import pharmacyCel from '../../../../assets/svgs/backdrops/pharmacyCel'
 import roadFuture from '../../../../assets/svgs/backdrops/roadFuture'
 import roadPast from '../../../../assets/svgs/backdrops/roadPast'
@@ -55,6 +56,8 @@ import {
     OAKLAND_SIDE__LIZ_COUCH,
     OCEAN_DEPTHS_VOLCANOES,
     OCEAN_FLOOR_VOLCANOES,
+    OCEAN_WAVES__FRONT,
+    OCEAN_WAVES__REAR,
     PHARMACY_CEL,
     ROAD_FUTURE,
     ROAD_PAST,
@@ -96,6 +99,8 @@ export default {
     [OAKLAND_SIDE__LIZ_COUCH]: oaklandSide,
     [OCEAN_DEPTHS_VOLCANOES]: oceanDepthsVolcanoes,
     [OCEAN_FLOOR_VOLCANOES]: oceanFloorVolcanoes,
+    [OCEAN_WAVES__FRONT]: oceanWaves,
+    [OCEAN_WAVES__REAR]: oceanWaves,
     [PHARMACY_CEL]: pharmacyCel,
     [ROAD_FUTURE]: roadFuture,
     [ROAD_PAST]: roadPast,

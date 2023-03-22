@@ -2,10 +2,14 @@
     .wire { stroke: hsla(348, 2%, 40%, 0.25); }
 }
 
-.oceanWaves {
-    stroke: none;
-    .ocean { fill: hsla(195, 63%, 32%, 0.04); }
-    .wave { fill: hsla(195, 63%, 47%, 0.16); }
+.oceanWaves__front {
+    .waveRidge__noStroke { fill: hsla(200, 53%, 77%, 0.5); }
+    .oceanSurface__noStroke { fill: hsla(200, 53%, 47%, 0.25); }
+}
+
+.oceanWaves__rear {
+    .waveRidge__noStroke { fill: hsla(200, 53%, 37%, 0.5); }
+    .oceanSurface__noStroke { fill: hsl(200, 53%, 47%); }
 }
 
 .phoneCallPanel {

@@ -115,8 +115,8 @@ export default {
         },
         [SEA_SERPENT_LEFT]: {
             wires: [
-                { x: 0.29, y: 0.5 },
-                { x: 0.55, y: 0.13 },
+                { x: 0.23, y: 0.5 },
+                { x: 0.6, y: 0.13 },
             ],
         },
         [SEA_SERPENT_RIGHT]: {
