@@ -1,6 +1,12 @@
+.glossyRedMediumDark { fill: hsl(0, 45%, 52%); }
+.glossyRedMedium { fill: hsl(0, 45%, 57%); }
 .glossyOrangeDark { fill: hsl(30, 45%, 47%); }
 .glossyOrangeMediumDark { fill: hsl(30, 45%, 52%); }
 .glossyOrangeMedium { fill: hsl(30, 45%, 57%); }
 .glossyOrangeMediumLight { fill: hsl(30, 45%, 62%); }
-
 .glossyYellowLight { fill: hsl(60, 45%, 67%); }
+
+.nightTime .nightTime#{$suffix} {
+    .glossyRedMediumDark { fill: hsl(0, 35%, 42%); }
+    .glossyRedMedium { fill: hsl(0, 35%, 47%); }
+}

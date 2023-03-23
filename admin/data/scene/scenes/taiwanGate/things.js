@@ -29,7 +29,7 @@ export default {
     [CARDBOARD]: {
         [BENNETT_ODIN_GATE]: {
             yIndex: 2,
-            xPosition: 6.9,
+            xPosition: 6.91,
             zOffset: -0.05,
         },
     },
