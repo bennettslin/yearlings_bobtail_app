@@ -28,7 +28,7 @@ export default {
     [BACKDROP]: {
         [DREAM_MAT_BENNETT]: {
             yIndex: 2,
-            xPosition: 7.8,
+            xPosition: 7.9,
             zOffset: 0.03,
         },
         [DREAM_MAT_ODIN]: {
