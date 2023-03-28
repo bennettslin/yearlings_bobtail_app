@@ -1,12 +1,20 @@
+// These styles must be first to prevent overriding those later in the order.
+[class^=dullPastDark] { fill: hsl($HUE_PAST, 20%, 47%); }
+[class^=dullPastMedium] { fill: hsl($HUE_PAST, 20%, 57%); }
+
 [class^=dullPastDarkest] { fill: hsl($HUE_PAST, 20%, 37%); }
-.dullPastDarker { fill: hsl($HUE_PAST, 20%, 42%); }
-.dullPastDark { fill: hsl($HUE_PAST, 20%, 47%); }
+[class^=dullPastDarker] { fill: hsl($HUE_PAST, 20%, 42%); }
+// [class^=dullPastDark] { fill: hsl($HUE_PAST, 20%, 47%); }
 .dullPastMediumDark { fill: hsl($HUE_PAST, 20%, 52%); }
-.dullPastMedium { fill: hsl($HUE_PAST, 20%, 57%); }
+// [class^=dullPastMedium] { fill: hsl($HUE_PAST, 20%, 57%); }
 .dullPastMediumLight { fill: hsl($HUE_PAST, 20%, 62%); }
 .dullPastLight { fill: hsl($HUE_PAST, 20%, 67%); }
 .dullPastLighter { fill: hsl($HUE_PAST, 20%, 72%); }
 .dullPastLightest { fill: hsl($HUE_PAST, 20%, 77%); }
+
+[class^=dullPastMediumClear] { fill: hsla($HUE_PAST, 20%, 57%, 0.75); }
+[class^=dullPastMediumClearer] { fill: hsla($HUE_PAST, 20%, 57%, 0.5); }
+[class^=dullPastMediumClearest] { fill: hsla($HUE_PAST, 20%, 57%, 0.25); }
 
 .flatPastDarkest { fill: hsl($HUE_PAST, 33%, 37%); }
 .flatPastDarker { fill: hsl($HUE_PAST, 33%, 42%); }
@@ -17,22 +25,3 @@
 .flatPastLight { fill: hsl($HUE_PAST, 33%, 67%); }
 // .flatPastLighter { fill: hsl($HUE_PAST, 33%, 72%); }
 // .flatPastLightest { fill: hsl($HUE_PAST, 33%, 77%); }
-
-// .darkRoom .darkRoom#{$suffix} {
-//     .dullPastDarker { fill: hsl($HUE_PAST, 10%, 27%); }
-//     .dullPastDark { fill: hsl($HUE_PAST, 10%, 29%); }
-//     .dullPastMediumDark { fill: hsl($HUE_PAST, 10%, 32%); }
-//     .dullPastMediumLight { fill: hsl($HUE_PAST, 10%, 39%); }
-// }
-
-// .nightTime .nightTime#{$suffix} {
-//     .dullPastDarkest { fill: hsl($HUE_PAST, 10%, 27%); }
-//     .dullPastDarker { fill: hsl($HUE_PAST, 10%, 32%); }
-//     .dullPastDark { fill: hsl($HUE_PAST, 10%, 37%); }
-//     .dullPastMediumDark { fill: hsl($HUE_PAST, 10%, 42%); }
-//     .dullPastMedium { fill: hsl($HUE_PAST, 10%, 47%); }
-//     .dullPastMediumLight { fill: hsl($HUE_PAST, 10%, 52%); }
-//     .dullPastLight { fill: hsl($HUE_PAST, 10%, 57%); }
-//     // .dullPastLighter { fill: hsl($HUE_PAST, 10%, 62%); }
-//     .flatPastLight { fill: hsl($HUE_PAST, 23%, 57%); }
-// }
