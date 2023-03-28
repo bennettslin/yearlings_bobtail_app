@@ -75,6 +75,7 @@ import {
     PAST__SHARED,
     PRESENT__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles'
+import { CONSTELLATION__SHARED } from '../../../../../../src/constants/scene/sharedStyles/comic'
 
 export default {
     [ALBUM_JOHNNY_HORTON]: [
@@ -86,7 +87,7 @@ export default {
     [ALBUM_TELEVISION]: ALL_PEOPLE__SHARED,
     [BENNETT_MAT]: null,
     [BENNETT_OCEAN_FLOOR]: null,
-    [BENNETT_ODIN_BUOY]: null,
+    [BENNETT_ODIN_BUOY]: CONSTELLATION__SHARED,
     [BENNETT_ODIN_DEPTHS]: null,
     [BENNETT_ODIN_GATE]: null,
     [BENNETT_ODIN_SHORE]: null,
