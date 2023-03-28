@@ -40,7 +40,7 @@ export default {
     [CARDBOARD]: {
         [BENNETT_MAT]: {
             yIndex: 2,
-            xPosition: 7.9,
+            xPosition: 7.98,
             zOffset: -0.03,
         },
         [ODIN_MAT]: {
