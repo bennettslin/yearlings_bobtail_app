@@ -58,7 +58,7 @@ export default {
         [TAIWAN_MOUNTAINS_BACKDROP]: {},
         [TAIWAN_STAIRS_BACKDROP]: {
             xPosition: 3.33,
-            zOffset: 2.5,
+            zOffset: 2,
         },
         [THEATRE_SEATS_BACKDROP]: {},
         [THOUGHT_LARGE__LEFT]: {},

@@ -18,7 +18,7 @@ export default {
     [BACKDROP]: {
         [DREAM_STAIRS]: {
             yIndex: 2,
-            xPosition: 3.45,
+            xPosition: 3.33,
         },
     },
     [CARDBOARD]: {
@@ -28,8 +28,8 @@ export default {
         },
         [ODIN_STAIRS]: {
             yIndex: 2,
-            xPosition: 4.1,
-            zOffset: 1,
+            xPosition: 3.6,
+            zOffset: 0.98,
         },
         [PAINTING_EMPRESS__STAIRS]: {
             yIndex: 3,
