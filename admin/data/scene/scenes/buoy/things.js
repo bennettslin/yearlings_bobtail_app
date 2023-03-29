@@ -36,7 +36,7 @@ export default {
     [CARDBOARD]: {
         [SEA_SERPENT_LEFT]: {
             yIndex: 0,
-            xPosition: 1.4,
+            xPosition: 1.1,
             zOffset: 1.4,
             layerYIndex: 5,
         },
@@ -48,7 +48,7 @@ export default {
         },
         [SEA_SERPENT_RIGHT]: {
             yIndex: 0,
-            xPosition: 3.8,
+            xPosition: 4.2,
             zOffset: 1.8,
             layerYIndex: 5,
         },
