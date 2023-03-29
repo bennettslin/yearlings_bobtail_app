@@ -1,7 +1,7 @@
 <svg viewBox="0 0 289.49 383.66">
-  <circle class="dullPastDarkerClear" cx="150.45" cy="135.71" r="12.64"/>
-  <path class="dullPastDarkerClearer" d="m164.83,105c-17.95,11.35,5.1,55.54,26.81,41.8,26.75-16.92-3.73-56.4-26.81-41.8Z"/>
-  <path class="dullPastDarkerClearest" d="m185.72,101c31.88,40.29,85.01-4.51,56.53-42.01-33.66-43.15-88.04,2.18-56.53,42.01Z"/>
+  <circle class="dullPastMediumDarkClear" cx="150.45" cy="135.71" r="12.64"/>
+  <path class="dullPastMediumDarkClearer" d="m164.83,105c-17.95,11.35,5.1,55.54,26.81,41.8,26.75-16.92-3.73-56.4-26.81-41.8Z"/>
+  <path class="dullPastMediumDarkClearest" d="m185.72,101c31.88,40.29,85.01-4.51,56.53-42.01-33.66-43.15-88.04,2.18-56.53,42.01Z"/>
   <g class="bubbleFoldLine">
     <path d="m165.46,125.8c.96-2.27,1.63-3.19,3.02-4.65"/>
     <path d="m227.7,57.37c-1.67.82-3.71,2.54-4.6,4.33"/>

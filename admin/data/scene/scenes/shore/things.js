@@ -23,7 +23,7 @@ export default {
     [CARDBOARD]: {
         [BENNETT_ODIN_SHORE]: {
             yIndex: 1,
-            xPosition: 7.3,
+            xPosition: 7.27,
             zOffset: -0.05,
         },
     },
