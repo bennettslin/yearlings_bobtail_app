@@ -28,7 +28,7 @@ export default {
         },
         [ODIN_STAIRS]: {
             yIndex: 2,
-            xPosition: 3.6,
+            xPosition: 3.75,
             zOffset: 0.98,
         },
         [PAINTING_EMPRESS__STAIRS]: {
