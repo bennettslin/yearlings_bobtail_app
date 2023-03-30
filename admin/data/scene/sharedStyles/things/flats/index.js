@@ -89,7 +89,13 @@ import {
     WALL__SHARED,
 } from '../../../../../../src/constants/scene/sharedStyles/outdoor'
 import { ALL_VEHICLES__SHARED } from '../../../../../../src/constants/scene/sharedStyles/vehicles'
-import { AUTUMN__SHARED, EVENING_TIME__SHARED, MAGIC__SHARED, NIGHT_TIME__SHARED, WINTER__SHARED } from '../../../../../../src/constants/scene/sharedStyles'
+import {
+    AUTUMN__SHARED,
+    EVENING_TIME__SHARED,
+    MAGIC__SHARED,
+    NIGHT_TIME__SHARED,
+    WINTER__SHARED,
+} from '../../../../../../src/constants/scene/sharedStyles'
 
 export default {
     [BEDROOM_BUS]: ALL_VEHICLES__SHARED,
@@ -236,16 +242,19 @@ export default {
         MAGIC__SHARED,
         HOUSE__SHARED,
         WALL__SHARED,
+        NIGHT_TIME__SHARED,
     ],
     [NOHO_HOUSE_LEFT]: [
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
+        NIGHT_TIME__SHARED,
     ],
     [NOHO_HOUSE_RIGHT]: [
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
+        NIGHT_TIME__SHARED,
     ],
     [OAKLAND_FLAG]: null,
     [OAKLAND_HOUSE_LEFT]: [

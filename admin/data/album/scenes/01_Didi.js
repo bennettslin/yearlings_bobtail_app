@@ -19,9 +19,9 @@ import {
     SEASON_PAST,
     SEASON_SPRING,
     TIME_AFTERNOON,
-    TIME_DAWN,
     TIME_MORNING,
     TIME_NOON,
+    TIME_TWILIGHT,
 } from '../../../../src/constants/scene/sky'
 import {
     ANITA,
@@ -97,7 +97,7 @@ export default [
             },
         },
         cubes: NOHO_HOUSES_KEY,
-        sky: { time: TIME_DAWN, season: SEASON_SPRING },
+        sky: { time: TIME_TWILIGHT, season: SEASON_SPRING },
     },
     {
         unitIndex: 3,

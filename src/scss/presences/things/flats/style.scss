@@ -18,11 +18,20 @@
 
 .nohoHouseLeft {
     .wallFront { fill: hsl(240, 20%, 75%); }
+
+    .nightTime &.nightTime#{$suffix} {
+        .wallFront { fill: hsl(240, 15%, 60%); }
+    }
 }
 
 .nohoHouseRight {
     .wallSide { fill: hsl(330, 20%, 66%); }
     .wallFront { fill: hsl(330, 20%, 71%); }
+
+    .nightTime &.nightTime#{$suffix} {
+        .wallSide { fill: hsl(330, 15%, 51%); }
+        .wallFront { fill: hsl(330, 15%, 56%); }
+    }
 }
 
 .oaklandSchool {

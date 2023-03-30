@@ -131,6 +131,7 @@ export default {
         FOLIAGE__SHARED,
         MAGIC__SHARED,
         MOUNTAIN__SHARED,
+        NIGHT_TIME__SHARED,
     ],
     [VALLEY_FURTHER_BACKDROP]: [
         AUTUMN__SHARED,
