@@ -6,7 +6,7 @@ export default {
         [BUOY]: {
             yIndex: 5,
             xPosition: 8,
-            zOffset: 2,
+            zOffset: 1,
         },
     },
 }
