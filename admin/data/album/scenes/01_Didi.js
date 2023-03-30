@@ -13,6 +13,7 @@ import {
     BATHROOM_KEY,
     BATHROOM_PAST_KEY,
     NOHO_HOUSES_KEY,
+    NOHO_HOUSES_NIGHT_KEY,
     NOHO_SCHOOL_KEY,
 } from '../../../../src/constants/scene/scenes'
 import {
@@ -96,7 +97,7 @@ export default [
                 [NOHO_HOUSE_RIGHT]: true,
             },
         },
-        cubes: NOHO_HOUSES_KEY,
+        cubes: NOHO_HOUSES_NIGHT_KEY,
         sky: { time: TIME_TWILIGHT, season: SEASON_SPRING },
     },
     {

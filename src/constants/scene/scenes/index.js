@@ -3,6 +3,7 @@ export const CURTAINS_KEY = 'curtains'
 export const LOGUE_KEY = 'logue'
 
 export const NOHO_HOUSES_KEY = 'nohoHouses'
+export const NOHO_HOUSES_NIGHT_KEY = 'nohoHousesNight'
 export const NOHO_SCHOOL_KEY = 'nohoSchool'
 export const BATHROOM_KEY = 'bathroom'
 export const BATHROOM_PAST_KEY = 'bathroomPast'
