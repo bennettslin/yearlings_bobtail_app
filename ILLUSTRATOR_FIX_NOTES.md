@@ -1,7 +1,6 @@
 # General fixes
 
 ## General consideration
-* Bennett buoy actor (needs froth)
 * Make constellation and sketch eyes more expressive, like other bubbles
 * Reconsider pharmacy scene cel?
 * Uncanny Valley backgrounds

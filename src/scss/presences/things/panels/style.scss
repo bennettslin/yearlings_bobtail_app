@@ -3,13 +3,13 @@
 }
 
 .oceanWaves__front {
-    .waveRidge__noStroke { fill: hsla(200, 53%, 77%, 0.5); }
-    .oceanSurface__noStroke { fill: hsla(200, 53%, 47%, 0.25); }
+    .waveRidge__noStroke { fill: hsla($HUE_OCEAN, 46%, 77%, 0.5); }
+    .oceanSurface__noStroke { fill: hsla($HUE_OCEAN, 46%, 47%, 0.25); }
 }
 
 .oceanWaves__rear {
-    .waveRidge__noStroke { fill: hsla(200, 53%, 37%, 0.5); }
-    .oceanSurface__noStroke { fill: hsl(200, 53%, 47%); }
+    .waveRidge__noStroke { fill: hsla($HUE_OCEAN, 46%, 37%, 0.5); }
+    .oceanSurface__noStroke { fill: hsl($HUE_OCEAN, 46%, 47%); }
 }
 
 .phoneCallPanel {
