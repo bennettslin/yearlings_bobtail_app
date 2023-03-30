@@ -11,6 +11,8 @@
 
     .nightTime
     &.nightTime#{$suffix} {
+        .mountainFar { fill: hsl(198, 11%, 37%); }
         .mountain { fill: hsl(198, 10%, 29%); }
+        .mountainNear { fill: hsl(198, 9%, 25%); }
     }
 }
