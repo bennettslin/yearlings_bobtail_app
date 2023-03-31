@@ -126,7 +126,7 @@ export default getFormattedSlideMetadata([
             `Here's the`,
             {
                 anchor: `full quote`,
-                href: `https://www.goodreads.com/quotes/988332-some-people-say-give-the-customers-what-they-want-but`,
+                href: `https://www.goodreads.com/quotes/988332`,
             },
             `from Steve Jobs.`,
         ],
