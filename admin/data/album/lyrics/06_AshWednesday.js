@@ -404,12 +404,12 @@ export default {
                             todo: true,
                             card: {
                                 description: [
-                                    `Her compliment is less than sincere, however, since referencing a poet studied by middle schoolers is hardly an impressive feat. And so, feeling annoyed at being made to put down the Joyce novel she was reading, Catherine amuses herself by putting`,
+                                    `Her compliment is less than sincere, however, since referencing a poet studied by middle schoolers is hardly an impressive feat. And so, feeling annoyed at being made to put down the Joyce novel she's reading, Catherine amuses herself by putting`,
                                     {
                                         isItalic: true,
                                         lyric: `me`,
                                     },
-                                    `down, for naively thinking that I can be the James Joyce of lyricists.`,
+                                    `down, for naively thinking that I could ever be the James Joyce of lyricists.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
