@@ -1251,7 +1251,7 @@ export default {
                 },
                 {
                     mixTime: `3:18:26.08`,
-                    lyric: `…and now you're left with no defenses.`,
+                    lyric: `… and now you're left with no defenses.`,
                 },
                 {
                     mixTime: `3:23:11.08`,
@@ -1350,7 +1350,7 @@ export default {
                 },
                 {
                     mixTime: `3:40:18.58`,
-                    lyric: `…when your paws were thrashed sparring with the tide,`,
+                    lyric: `… when your paws were thrashed sparring with the tide,`,
                 },
                 {
                     mixTime: `3:43:07.34`,
