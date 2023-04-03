@@ -31,11 +31,11 @@ export default {
         },
         [OCEAN_DEPTHS_CAVES_LEFT]: {
             yIndex: 5,
-            xPosition: 2.6,
+            xPosition: 2.5,
         },
         [OCEAN_DEPTHS_CAVES_RIGHT]: {
             yIndex: 5,
-            xPosition: 10,
+            xPosition: 10.1,
         },
     },
 }
