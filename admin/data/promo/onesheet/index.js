@@ -9,7 +9,14 @@ export default getFormattedSlideMetadata({
             },
         },
         {
-            paragraph: `Rock music is stagnating. Old music is killing new music, and it's not hard to see why. The current indie system for nurturing artists is badly in need of reform. The problem is, summoning the courage to reform is hard. We won't do it unless we catch the system betting on the wrong horses. And in today's artist-friendly culture, no artist will ever be seen as the wrong horse.`,
+            paragraph: [
+                `Rock music is stagnating. Old music is`,
+                {
+                    anchor: `killing new music`,
+                    href: `https://tedgioia.substack.com/p/is-old-music-killing-new-music`,
+                },
+                `, and it's not hard to see why. The current indie system for nurturing artists is badly in need of reform. The problem is, summoning the courage to reform is hard. We won't do it unless we catch the system betting on the wrong horses. And in today's artist-friendly culture, no artist will ever be seen as the wrong horse.`,
+            ],
         },
         {
             paragraph: [
@@ -23,7 +30,7 @@ export default getFormattedSlideMetadata({
         },
         {
             paragraph: [
-                `Early this century as home recording became affordable, Bobtail Yearlings singer Bennett Lin foresaw a coming renaissance. Any artist could now take pains to put out a demo so good, no label could refuse it. And each demo would raise creative standards to new heights. As he pondered this while reading James Joyce's`,
+                `Early this century as home recording became affordable, Bobtail Yearlings singer Bennett Lin foresaw a coming renaissance. Any artist could now take pains to put out a demo so good, no label could refuse it. And each demo would raise artistic standards to new heights. As he pondered this while reading James Joyce's`,
                 {
                     isItalic: true,
                     lyric: `Ulysses`,
@@ -117,7 +124,7 @@ export default getFormattedSlideMetadata({
         },
         {
             paragraph: [
-                `Bennett assumed that creative standards could only rise because barriers to entry have to stay fixed. But the system lowered the barriers instead. Artists could now self-release fully realized works to win over the masses directly. So upon its completion five years later,`,
+                `Bennett assumed that creative standards could only rise because barriers to entry necessarily stay fixed. But the system lowered the barriers instead. Artists could now self-release fully realized works to win over the people directly. So upon its completion five years later,`,
                 {
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
@@ -135,11 +142,11 @@ export default getFormattedSlideMetadata({
                     isEmphasis: true,
                     lyric: `future`,
                 },
-                `. This doesn't just free an artist to take creative risks; it awakens the very thought to do so. Had Bennett known he'd be judged on winning over the masses without label support, the idea for doublespeaker rhyme never would have come to him.`,
+                `. This doesn't just free an artist to take creative risks; it awakens the very thought to do so. Had Bennett known he'd be judged on winning over the people without label support, the idea for doublespeaker rhyme never would have come to him.`,
             ],
         },
         {
-            paragraph: `The current indie system rests on the belief that when the next artist comes along to change what music can be, the masses will lead and the labels will follow. After two decades, this has yet to happen. What if it's the labels who need to lead? And what if rock music can only be saved once we realize this?`,
+            paragraph: `The current indie system rests on the belief that when the next artist comes along to change what music can be, the people will lead and the labels will follow. After two decades, this has yet to happen. What if it's the labels who need to lead? And what if rock music can only be saved once we realize this?`,
         },
     ],
 })
