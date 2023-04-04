@@ -15,7 +15,7 @@ export default getFormattedSlideMetadata({
                     anchor: `killing new music`,
                     href: `https://tedgioia.substack.com/p/is-old-music-killing-new-music`,
                 },
-                `, and it's not hard to see why. The current indie system for nurturing artists is badly in need of reform. The problem is, summoning the courage to reform is hard. We won't do it unless we catch the system betting on the wrong horses. And in today's artist-friendly culture, no artist will ever be seen as the wrong horse.`,
+                `, and it's not hard to see why. The current indie system for nurturing artists is badly in need of reform. The problem is, summoning the courage to reform is hard. We won't do it unless we catch the system betting on the wrong horses. And in today's pro-artist culture, no artist will ever be seen as the wrong horse.`,
             ],
         },
         {
@@ -35,7 +35,7 @@ export default getFormattedSlideMetadata({
                     isItalic: true,
                     lyric: `Ulysses`,
                 },
-                `, it then dawned on him to make his demo "the`,
+                `, it dawned on him to make his demo "the`,
                 {
                     isItalic: true,
                     lyric: `Ulysses`,
@@ -124,7 +124,7 @@ export default getFormattedSlideMetadata({
         },
         {
             paragraph: [
-                `Bennett assumed that creative standards could only rise because barriers to entry necessarily stay fixed. But the system lowered the barriers instead. Artists could now self-release fully realized works to win over the people directly. So upon its completion five years later,`,
+                `Bennett assumed that artistic standards had nowhere to go but up, since barriers to entry necessarily stay fixed. But the system lowered the barriers instead! Artists could now self-release fully realized works to win over the people directly. So upon its completion five years later,`,
                 {
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
@@ -142,7 +142,7 @@ export default getFormattedSlideMetadata({
                     isEmphasis: true,
                     lyric: `future`,
                 },
-                `. This doesn't just free an artist to take creative risks; it awakens the very thought to do so. Had Bennett known he'd be judged on winning over the people without label support, the idea for doublespeaker rhyme never would have come to him.`,
+                `. This doesn't just free an artist to take creative risks; it awakens the very thought to do so. Had Bennett known he'd be judged on his ability to win over the people without label support, the idea for doublespeaker rhyme never would have come to him.`,
             ],
         },
         {
