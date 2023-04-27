@@ -35,7 +35,7 @@ export default getFormattedSlideMetadata({
                     isItalic: true,
                     lyric: `Ulysses`,
                 },
-                `, it dawned on him to make his demo "the`,
+                `, it dawned on him to make his demo the "`,
                 {
                     isItalic: true,
                     lyric: `Ulysses`,

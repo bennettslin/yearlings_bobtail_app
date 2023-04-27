@@ -177,7 +177,7 @@ export default getFormattedSlideMetadata([
                         isItalic: true,
                         lyric: `Yearling's Bobtail`,
                     },
-                    `was my attempt to create "the`,
+                    `was my attempt to create the "`,
                     {
                         isItalic: true,
                         lyric: `Ulysses`,

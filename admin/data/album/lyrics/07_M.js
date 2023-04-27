@@ -1054,7 +1054,7 @@ export default {
                                         isItalic: true,
                                         lyric: `Bobtail`,
                                     },
-                                    `, now conceived as "the`,
+                                    `, now conceived as the "`,
                                     {
                                         isItalic: true,
                                         lyric: `Ulysses`,

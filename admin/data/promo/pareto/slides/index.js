@@ -139,7 +139,7 @@ export default getFormattedSlideMetadata([
                         isItalic: true,
                         lyric: `Yearling's Bobtail`,
                     },
-                    `. Will it always be known as "the`,
+                    `. Will it always be known as the "`,
                     {
                         isItalic: true,
                         lyric: `Ulysses`,

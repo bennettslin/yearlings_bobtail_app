@@ -18,14 +18,14 @@ export default {
     // Single pages.
     [ONESHEET_SUBPATH]: getFormattedSlideMetadata({
         title: [
-            `The`,
+            `The "`,
             {
                 isItalic: true,
                 lyric: `Ulysses`,
             },
-            `of Rock Albums`,
+            `of Rock Albums"`,
         ],
-        plainTitle: `The Ulysses of Rock Albums`,
+        plainTitle: `The "Ulysses of Rock Albums"`,
         description: `Artist and project onesheet.`,
     }),
 

@@ -1496,7 +1496,7 @@ export default {
                             todo: true,
                             card: {
                                 description: [
-                                    `As a child I suffered from`,
+                                    `As a child, I suffered from`,
                                     {
                                         anchor: `night terrors`,
                                         wiki: `Night_terror`,
