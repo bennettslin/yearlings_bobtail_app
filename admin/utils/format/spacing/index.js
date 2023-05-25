@@ -1,12 +1,12 @@
-import { isString } from '../../../src/helpers/general'
+import { isString } from '../../../../src/helpers/general'
 import {
     LYRIC,
     LYRIC_CENTRE,
     LYRIC_LEFT,
     LYRIC_RIGHT,
     ANCHOR,
-} from '../../../src/constants/lyrics'
-import { hasSpecialCharacterAtIndex } from '../../../src/helpers/format'
+} from '../../../../src/constants/lyrics'
+import { hasSpecialCharacterAtIndex } from '../../../../src/helpers/format'
 
 const ARRAY_KEYS = {
     footnote: true,

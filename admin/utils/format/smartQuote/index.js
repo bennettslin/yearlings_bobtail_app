@@ -1,4 +1,5 @@
-import { isString } from '../../../src/helpers/general'
+import { isString } from '../../../../src/helpers/general'
+import { getUnbrokenEmDashText } from '../emDash'
 
 const QUOTES_CONFIGS = [
     {
@@ -74,7 +75,11 @@ const _replaceStraightWithSmartQuotes = text => {
         })
     })
 
-    return text
+    /**
+     * Running this util here for convenience. But this really isn't the
+     * best place for it.
+     */
+    return getUnbrokenEmDashText(text)
 }
 
 const _getIsLocationPath = key => (
