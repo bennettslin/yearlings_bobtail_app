@@ -15,7 +15,7 @@ export default getFormattedSlideMetadata({
                     anchor: `killing new music`,
                     href: `https://tedgioia.substack.com/p/is-old-music-killing-new-music`,
                 },
-                `, and it's not hard to see why. The current indie system for nurturing artists is badly in need of reform. The problem is, summoning the courage to reform is hard. We won't do it unless we catch the system betting on the wrong horses. And in today's pro-artist culture, no artist will ever be seen as the wrong horse.`,
+                `, and it's not hard to see why. The current indie system for nurturing artists is badly in need of reform. The problem is, summoning the courage to reform is hard. We won't do it unless we catch the system betting on the wrong horses. And in these Poptimistic times, no artist will ever be seen as the wrong horse.`,
             ],
         },
         {
@@ -40,7 +40,7 @@ export default getFormattedSlideMetadata({
                     isItalic: true,
                     lyric: `Ulysses`,
                 },
-                `of rock albums"— an album so innovative, it would change what rock music can be.`,
+                `of rock albums"— a work so innovative, it would change what rock music can be.`,
             ],
         },
         {
