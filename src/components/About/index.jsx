@@ -5,7 +5,6 @@ import AboutChild from './Child'
 import AboutTitle from './Title'
 import MailingList from './MailingList'
 import AboutContact from './Contact'
-import FollowButtons from '../FollowButtons'
 import AboutCredits from './Credits'
 
 const About = () => (
@@ -24,9 +23,6 @@ const About = () => (
         </AboutChild>
         <AboutChild {...{ header: 'Contact us' }}>
             <AboutContact />
-        </AboutChild>
-        <AboutChild {...{ header: 'Follow us' }}>
-            <FollowButtons />
         </AboutChild>
         <AboutChild {...{ header: 'Credits' }}>
             <AboutCredits />
