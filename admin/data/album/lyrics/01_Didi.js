@@ -67,7 +67,7 @@ export default {
                             anchor: `Taiwanese`,
                             wiki: `Taiwanese_Hokkien`,
                         },
-                        `we spoke at home included many Chinese words, such as`,
+                        `we spoke at home included a few Chinese words, such as`,
                         {
                             isItalic: true,
                             lyric: `didi`,
@@ -168,7 +168,7 @@ export default {
                                     description: [
                                         `In preschool, we were taught to tie our shoes by making the`,
                                         {
-                                            anchor: `bunny criss-cross the tree`,
+                                            anchor: `bunny crisscross the tree`,
                                             wiki: `Shoelace_knot`,
                                         },
                                         `. But being`,
@@ -225,7 +225,7 @@ export default {
                                 wiki: `A_Portrait_of_the_Artist_as_a_Young_Man`,
                             },
                         },
-                        `, begins in the simple prose of a child, I decided to do the same on this opening song.`,
+                        `, begins in the simple prose of a child, I decided to do the same for this opening song.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -246,7 +246,7 @@ export default {
                             anchor: `didn't want you here`,
                             todo: true,
                             card: {
-                                description: `I often tagged along with my sister, who was fiercely protective of me. But there were times when she and her friends would insist on doing girl stuff by themselves. This always left me in a panic, since I had few playmates of my own.`,
+                                description: `I often tagged along with my sister, who was fiercely protective of me. But there were times when she and her friends would insist on doing girl stuff by themselves. This left me in a panic, since I had few playmates of my own.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -382,7 +382,7 @@ export default {
                             todo: true,
                             card: {
                                 description: [
-                                    `Since I was the smallest child in my grade, the only item of clothing that fit me was a pair of girls'`,
+                                    `Since I was the smallest boy in my grade, the only item of clothing that fit me was a pair of girls'`,
                                     {
                                         anchor: `overalls`,
                                         wiki: `Overalls`,
@@ -470,7 +470,7 @@ export default {
                             todo: true,
                             card: {
                                 description: [
-                                    `Though my mother and other Taiwanese teenagers of her generation prized all things labeled American, they didn't necessarily know what that entailed. Their only exposure was through a local bootleg industry that mainly recycled the relics of America's past. And so my sister and I grew up listening to my mother's old`,
+                                    `Though my mother and other Taiwanese teenagers of her generation prized all things labeled American, they didn't necessarily know what that entailed. Their only exposure was through a local bootleg industry that recycled the relics of America's past. And so my sister and I grew up listening to my mother's old`,
                                     {
                                         anchor: `country`,
                                         wiki: `Country_music`,
