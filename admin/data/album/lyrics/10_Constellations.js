@@ -281,12 +281,12 @@ export default {
                 todo: true,
                 card: {
                     description: [
-                        `Full disclosure: I never got past the first fifty pages of`,
+                        `Full disclosure, I never got past the first fifty pages of`,
                         {
                             isItalic: true,
                             lyric: `Finnegans Wake`,
                         },
-                        `. Still, I noted how Joyce used literary puns to create multiple layers of meaning within a dreamlike setting. It seemed like the perfect device to convey a Robitussin trip, during which worlds of meaning build up and fade within the briefest of moments, and everything feels at once epic and unreal.`,
+                        `. Still, I liked how Joyce used literary puns to create multiple layers of meaning within a dreamlike setting. It seemed like the perfect device to convey a Robitussin trip, during which worlds of meaning build up and fade within the briefest of moments, and everything feels at once epic and unreal.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
