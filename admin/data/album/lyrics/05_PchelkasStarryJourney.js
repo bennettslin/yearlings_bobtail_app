@@ -130,7 +130,7 @@ export default {
                     mixTime: `0:07:05.56`,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(throatsinging, Christopher's theme)`,
+                        lyric: `(throat singing, Christopher's theme)`,
                     },
                 },
             ],
