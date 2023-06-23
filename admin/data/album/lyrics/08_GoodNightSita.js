@@ -756,7 +756,7 @@ export default {
                             anchor: `Television`,
                             wiki: `Television_(band)`,
                         },
-                        `, who are well known for the complex interplay between their two lead guitars. The lick of tumbling triplets heard here was stolen note for note from the song "Friction" off their album`,
+                        `, who are well known for the complex interplay between their two lead guitars. The lick of tumbling triplets heard here was inspired by the song "Friction" off their album`,
                         {
                             anchor: `Marquee Moon`,
                             wiki: `Marquee_Moon`,
