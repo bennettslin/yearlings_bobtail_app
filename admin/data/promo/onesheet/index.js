@@ -15,7 +15,7 @@ export default getFormattedSlideMetadata({
                     anchor: `killing new music`,
                     href: `https://tedgioia.substack.com/p/is-old-music-killing-new-music`,
                 },
-                `, and it's not hard to see why. The current indie system for nurturing artists is badly in need of reform. The problem is, summoning the courage to reform is hard. We won't do it unless we catch the system betting on the wrong horses. And in these Poptimistic times, no artist will ever be seen as the wrong horse.`,
+                `, and it's not hard to see why. The current indie system for nurturing artists is badly in need of reform. The problem is, summoning the courage to reform is hard. We won't do it unless we catch the system betting on the wrong horses. And in these artist-friendly times, no artist will ever be seen as the wrong horse.`,
             ],
         },
         {
@@ -25,7 +25,7 @@ export default getFormattedSlideMetadata({
                     isEmphasis: true,
                     lyric: `right`,
                 },
-                `horses. This happens rarely, of course, since we don't hear about rejected artists. Yet against all odds, we're now hearing about the Bobtail Yearlings. The system bet against them a decade ago. What if they were the right horse?`,
+                `horses. This rarely happens, of course, since we don't hear about rejected artists. Yet against all odds, we're now hearing about the Bobtail Yearlings. The system bet against them a decade ago. What if they were the right horse?`,
             ],
         },
         {
@@ -124,7 +124,7 @@ export default getFormattedSlideMetadata({
         },
         {
             paragraph: [
-                `Bennett assumed that artistic standards had nowhere to go but up, since barriers to entry necessarily stay fixed. But the system lowered the barriers instead! Artists could now self-release fully realized works to win over the people directly. So upon its completion five years later,`,
+                `Since barriers to entry need to stay fixed, Bennett assumed that artistic standards had nowhere to go but up. But the system lowered the barriers instead! Artists could now self-release fully realized works to win over the public directly. So upon its completion five years later,`,
                 {
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
@@ -133,7 +133,7 @@ export default getFormattedSlideMetadata({
             ],
         },
         {
-            paragraph: `But Bennett insisted his forecast wasn't wrong, just premature. To bide his time, he learned music composition, web development, and illustration, allowing him to build an audio webcomic that presents the album's story as a theatrical play. Annotations offer background context, while music scores offer insight into how the songs were written.`,
+            paragraph: `But Bennett insisted his forecast wasn't wrong, just premature. To bide his time, he learned music composition, web development, and illustration, allowing him to build an audio webcomic that presents the album's story as a theatrical play. Annotations offer background context, while music scores provide insight into how the songs were written.`,
         },
         {
             paragraph: [
@@ -142,11 +142,11 @@ export default getFormattedSlideMetadata({
                     isEmphasis: true,
                     lyric: `future`,
                 },
-                `. This doesn't just free an artist to take creative risks; it awakens the very thought to do so. Had Bennett known he'd be judged on his ability to win over the people without label support, the idea for doublespeaker rhyme never would have come to him.`,
+                `. This doesn't just free an artist to take creative risks; it awakens the very thought to do so. Had Bennett known he'd be judged on his ability to win over the public without label support, the idea for doublespeaker rhyme never would have come to him.`,
             ],
         },
         {
-            paragraph: `The current indie system rests on the belief that when the next artist comes along to change what music can be, the people will lead and the labels will follow. After two decades, this has yet to happen. What if it's the labels who need to lead? And what if rock music can only be saved once we realize this?`,
+            paragraph: `The current indie system rests on the belief that when the next artist comes along to change what music can be, the people will lead, and the labels will follow. After two decades, this has yet to happen. What if it's the labels who need to lead? And what if rock music can only be saved once we realize this?`,
         },
     ],
 })
