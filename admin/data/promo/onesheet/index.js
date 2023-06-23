@@ -10,12 +10,12 @@ export default getFormattedSlideMetadata({
         },
         {
             paragraph: [
-                `Rock music is stagnating. Old music is`,
+                `Rock is stagnating. Old music is`,
                 {
                     anchor: `killing new music`,
                     href: `https://tedgioia.substack.com/p/is-old-music-killing-new-music`,
                 },
-                `, and it's not hard to see why. The current indie system for nurturing artists is badly in need of reform. The problem is, summoning the courage to reform is hard. We won't do it unless we catch the system betting on the wrong horses. And in these artist-friendly times, no artist will ever be seen as the wrong horse.`,
+                `, and it's not hard to see why. The indie system for nurturing artists is badly in need of reform. The problem is, summoning the courage to reform is hard. We won't do it unless we catch the system betting on the wrong horses. And in these artist-friendly times, no artist will ever be seen as the wrong horse.`,
             ],
         },
         {
@@ -40,7 +40,7 @@ export default getFormattedSlideMetadata({
                     isItalic: true,
                     lyric: `Ulysses`,
                 },
-                `of rock albums"— a work so innovative, it would change what rock music can be.`,
+                `of rock albums"— a work so innovative, it would change what music can be.`,
             ],
         },
         {
@@ -146,7 +146,7 @@ export default getFormattedSlideMetadata({
             ],
         },
         {
-            paragraph: `The current indie system rests on the belief that when the next artist comes along to change what music can be, the people will lead, and the labels will follow. After two decades, this has yet to happen. What if it's the labels who need to lead? And what if rock music can only be saved once we realize this?`,
+            paragraph: `The current indie system rests on the belief that when the next artist comes along to change what music can be, the people will lead, and the labels will follow. After two decades, this has yet to happen. What if it's the labels who need to lead? And what if rock can only be saved once we realize this?`,
         },
     ],
 })
