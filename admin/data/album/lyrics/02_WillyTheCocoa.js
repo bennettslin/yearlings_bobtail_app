@@ -373,7 +373,7 @@ export default {
                             anchor: `suddenly baby shrieks`,
                             todo: true,
                             card: {
-                                description: `My brother, the baby of our family, was typically calm and quiet in demeanor. However, when made to do things he didn't enjoy or understand like sitting through a haircut, he could erupt without warning in a frenzied outburst.`,
+                                description: `My brother, the baby of our family, was typically calm and quiet in demeanor. However, when made to do things he didn't enjoy or understand, like sitting through a haircut, he could erupt without warning in a frenzied outburst.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -519,7 +519,7 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `Willy might in fact be observing that my brother has yet to outgrow his "`,
+                                        `Willy observes that my brother has yet to outgrow his "`,
                                         {
                                             anchor: `colic`,
                                             wiki: `Baby_colic`,
@@ -587,7 +587,7 @@ export default {
                             todo: true,
                             cards: [
                                 {
-                                    description: `My brother enjoyed cutting shapes of alphabet letters out of scrap paper. Since this was a creative activity that kept him occupied, my parents encouraged it and kept a pile of old magazines freshly stocked for him.`,
+                                    description: `My brother enjoyed cutting shapes of alphabet letters out of scrap paper. Since this was a creative activity that kept him occupied, my parents kept a pile of old magazines freshly stocked for him.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -622,7 +622,7 @@ export default {
                             anchor: `bearded baby`,
                             todo: true,
                             card: {
-                                description: `My brother's odd behavior frustrated me to no end, and I longed to believe he was simply displaying wisdom meant for a different world. So upon reading about changeling legends many years later, I could sympathize with those villagers in times past who told tales of grown-up trolls disguised as human children.`,
+                                description: `My brother's odd behavior frustrated me to no end, and I longed to believe he was simply displaying wisdom meant for a different world. So upon reading about changeling legends many years later, I could sympathize with those villagers in times past who told tales of grownup trolls disguised as human children.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -640,7 +640,7 @@ export default {
                             anchor: `baffled sobs`,
                             todo: true,
                             card: {
-                                description: `The hardest part about having hurt my brother was knowing he had no way to understand the cause of my anger. The times when I turned on him and inflicted physical pain would always remain without explanation. For him, it was just another part of what life was.`,
+                                description: `The hardest part about hurting my brother was knowing he had no way to understand the cause of my anger. The times when I turned on him and inflicted physical pain would always remain without explanation. For him, it was just another part of what life was.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -1030,7 +1030,7 @@ export default {
                             anchor: `how marbleless`,
                             todo: true,
                             card: {
-                                description: `Occasionally, someone would make a clumsy attempt to ease my parents' worries by claiming to envy my brother. This person might remark on how "marvelous" it must be to live without one's "marbles," for example. I always had to wonder how gladly they would embrace the greater likelihood of being a victim of violent crime as well.`,
+                                description: `Occasionally, someone would make a clumsy attempt to ease my parents' worries by claiming to envy my brother. This person might remark on how "marvelous" it must be to live without one's "marbles," for example. I had to wonder how gladly they would embrace the greater likelihood of being a victim of violent crime as well.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -1050,7 +1050,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `After my brother was diagnosed with autism, my mother went back to school to learn child development. At the dinner table, she would explain to us such concepts as "`,
+                                        `After my brother was diagnosed with autism, my mother went back to school to learn child development. At the dinner table, she would explain to us concepts such as "`,
                                         {
                                             anchor: `imprinting`,
                                             wiki: `Imprinting_(psychology)`,
@@ -1161,7 +1161,7 @@ export default {
                                             anchor: `Cub Scouts`,
                                             wiki: `Cub_Scouting_(Boy_Scouts_of_America)`,
                                         },
-                                        `, Webelos is the eldest rank and is earned by boys in the fourth or fifth grade. It stands for "We'll Be Loyal Scouts."`,
+                                        `, Webelos is the eldest rank, earned by boys in the fourth or fifth grade. It stands for "We'll Be Loyal Scouts."`,
                                     ],
                                 },
                             ],
@@ -1178,7 +1178,7 @@ export default {
                             todo: true,
                             cards: [
                                 {
-                                    description: `My mother told me not to worry, since I wasn't going to die for a long while. She then assured me that when my time finally did come, perhaps in another seventy years or so, I would have long made peace with death somehow.`,
+                                    description: `My mother told me not to worry, since I wouldn't die for a long while. She then assured me that when my time finally did come, perhaps in another seventy years or so, I would have long made peace with death somehow.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -1232,7 +1232,7 @@ export default {
                                         anchor: `lazy eye`,
                                         wiki: `Amblyopia`,
                                     },
-                                    `. Since I lacked depth perception, it was less of a struggle for me to draw on paper the things I saw in real life. Impressed by my ability, my mother insisted I was destined to be a great artist. So I always had it in my head that I would one day create a masterpiece, perhaps something like the`,
+                                    `. Since I lacked depth perception, it was less of a struggle for me to recreate on paper what I saw in real life. Impressed by my drawing ability, my mother insisted I was destined to be a great artist. So I always had it in my head that I would one day create a masterpiece, perhaps something like the`,
                                     {
                                         anchor: `Tintin`,
                                         wiki: `The_Adventures_of_Tintin`,

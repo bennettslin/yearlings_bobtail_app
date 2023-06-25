@@ -41,7 +41,8 @@ const Annotation = ({ songIndex, annotationIndex }) => {
                     onClick: selectAnnotation,
                 }}
             >
-                {`${annotationIndex}. \u201c${annotationTitle}\u201d`}
+                {/* {`${annotationIndex}. \u201c${annotationTitle}\u201d`} */}
+                {`\u00a0`}
             </div>
             {getAnnotationCardIndices(
                 songIndex,
