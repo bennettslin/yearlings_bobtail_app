@@ -122,7 +122,7 @@ export default {
                             anchor: `first semester`,
                             todo: true,
                             card: {
-                                description: `My family was spending the entire summer in Taiwan. We weren't to get back to the States until after Sasha had begun the new school year in Boston.`,
+                                description: `My family was spending the entire summer in Taiwan. We weren't to get back to the States until after Sasha began the new school year in Boston.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -136,7 +136,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: true,
                 card: {
-                    description: `I wanted the vocals for this song to sound sickly, so I held off on recording them until I came down with a cold. Which was guaranteed to happen at some point during the five years I worked on this album.`,
+                    description: `I wanted the vocals for this song to sound sickly, so I held off on recording them until I came down with a cold. Which was guaranteed to happen at some point during the five years I spent recording this album.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
@@ -156,7 +156,7 @@ export default {
                             anchor: `You'd love Taiwan`,
                             todo: true,
                             card: {
-                                description: `During a tour of the Taiwanese countryside with my cousins, I mentally noted all the things I could show to Sasha one day. I'm not sure it had to do with pride in my heritage. I just liked the idea of having something to share with someone else.`,
+                                description: `During a tour of the Taiwanese countryside with my cousins, I mentally noted all the things I could point out to Sasha one day. I'm not sure it had to do with pride in my heritage. I just liked the idea of having something to share with someone else.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -210,7 +210,7 @@ export default {
                             anchor: `keep your kid name`,
                             todo: true,
                             card: {
-                                description: `Sasha decided that in Boston she would go by her given name of Saskia. I asked if I should start calling her Saskia now as well. She said no, since it would be nice to have a reminder of which friends knew her first.`,
+                                description: `Sasha decided that in Boston, she would go by her given name. I asked if I should start calling her Saskia now as well. She said no, since it was nice to be reminded of which friends knew her first.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -306,7 +306,7 @@ export default {
                                         anchor: `pupil`,
                                         wiki: `Pupil`,
                                     },
-                                    `of her eye. She looked at me the way a teacher looks upon a pupil. I could see we were no longer on the same footing, if we ever were.`,
+                                    `of her eye. She looked at me the way a teacher looks upon a pupil. I could see we were no longer on the same footing, if we'd ever been.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -350,7 +350,7 @@ export default {
                                         anchor: `Jewish`,
                                         wiki: `Judaism`,
                                     },
-                                    `, which in turn motivated her to be a better Jew. But I could never help strengthen her faith myself, so I would always be at a disadvantage in "getting" her.`,
+                                    `, which then motivated her to be a better Jew. But I could never help strengthen her faith myself, so I would always be at a disadvantage in "getting" her.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -368,7 +368,7 @@ export default {
                             anchor: `I would have too`,
                             todo: true,
                             card: {
-                                description: `Yet if Sasha were to want me, then of course I would convert to Judaism. It made no sense to be loyal to my own cultural identity, which I had no hand in deciding.`,
+                                description: `Yet if Sasha were to want me, then of course I'd convert to Judaism. It made no sense to be loyal to my own cultural identity, which I'd had no hand in choosing.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -457,12 +457,12 @@ export default {
                                         anchor: `North Hollywood`,
                                         wiki: `North_Hollywood,_Los_Angeles`,
                                     },
-                                    `, a racially diverse and working-class neighborhood. Halfway through elementary school, my mother devised a ruse that allowed my sister and I to bus into`,
+                                    `, a racially diverse and working-class neighborhood. Halfway through elementary school, my mother devised a ruse that allowed me and my sister to bus into`,
                                     {
                                         anchor: `Sherman Oaks`,
                                         wiki: `Sherman_Oaks,_Los_Angeles`,
                                     },
-                                    `, a wealthy district with few minorities. I remember feeling out of my element, but at the time I didn't quite know why.`,
+                                    `, a wealthy district with few minorities. I remember feeling out of my element at the time, though I didn't quite know why.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -544,7 +544,7 @@ export default {
                                             anchor: `harness`,
                                             wiki: `Child_harness`,
                                         },
-                                        `for safety. As such, older children who are unable to fend for themselves might be mocked by their peers as having been kept on a tether their whole lives.`,
+                                        `for safety. As such, older children who can't fend for themselves might be mocked by their peers as having been kept on a tether their whole lives.`,
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
@@ -571,7 +571,7 @@ export default {
                             anchor: `anarchy reigns`,
                             todo: true,
                             card: {
-                                description: `It was weird to be taught in history class that anarchy devolves into tyranny, and then to wander the quad and witness this very phenomenon in action.`,
+                                description: `It was weird to be taught in history class that anarchy devolves into tyranny, only to then wander onto the quad and see this very phenomenon in action.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -616,7 +616,7 @@ export default {
                                         isItalic: true,
                                         lyric: `be`,
                                     },
-                                    `" boys, but the one naturally follows the other. It surprised me when school aides declined to intervene on behalf of the victims of bullying, as if such predation were healthy to the middle school ecosystem.`,
+                                    `" boys, but the one naturally follows the other. It surprised me when school aides declined to intervene on behalf of the victims of bullying, as if such predation were vital to the middle school ecosystem.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -658,7 +658,7 @@ export default {
                             todo: true,
                             card: {
                                 description: [
-                                    `The chokehold incident left me with a dislocated jaw. For a long time afterward, I had to keep my jaw clenched to avoid pain when speaking. This led to my odd manner of pronunciation that to this day often gets mistaken for a`,
+                                    `The chokehold incident left me with a dislocated jaw. For a long time afterward, I had to keep my jaw clenched to avoid pain when speaking. This led to my odd manner of pronunciation, which to this day gets mistaken for a`,
                                     {
                                         anchor: `Canadian accent`,
                                         wiki: `Canadian_raising`,
@@ -709,7 +709,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: true,
                 card: {
-                    description: `It's easy to write songs by playing a four-chord loop, then layering a melody on top. But my theory was that the Beatles wrote the melody and chords together at once, one measure at a time, so I tried to do the same. I was always happiest with results like the chorus here, where the music meanders for a long stretch without repeating.`,
+                    description: `It's easy to write songs by coming up with a four-chord loop, then layering a melody on top. But my theory was that the Beatles wrote the melody and chords together, one measure at a time, so I tried to do the same. I was always happiest with results like the chorus here, where the music meanders for a long stretch without repeating.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
