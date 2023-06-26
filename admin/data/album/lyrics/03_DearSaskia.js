@@ -481,7 +481,7 @@ export default {
                             todo: true,
                             card: {
                                 description: [
-                                    `Here, I recall an afternoon bus ride when Sasha sat in front of me. As her hair blew in my face, I realized that she'd matured into the next peer group. I felt like a`,
+                                    `Here, I recall an afternoon bus ride when Sasha sat in front of me. As her hair blew in my face, I felt like a`,
                                     {
                                         anchor: `papoose`,
                                         wiki: `Papoose`,
