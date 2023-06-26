@@ -160,7 +160,7 @@ export default {
                                         anchor: `kosher`,
                                         wiki: `Kashrut`,
                                     },
-                                    `. In Sasha's world, certain everyday foods weren't meant to be eaten. And so it could also be inferred that certain boys in her everyday life weren't meant to be dated.`,
+                                    `. In Sasha's world, certain everyday foods weren't meant to be eaten. So it could also be inferred that certain boys in her everyday life weren't meant to be dated.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -256,7 +256,7 @@ export default {
                                         anchor: `pastels`,
                                         wiki: `Pastel`,
                                     },
-                                    `as a gift. They were more powdery than crayons and thus ran out quickly. By the end of our trip, I had to make do with the least used colors. Which is a fitting metaphor for my overall state of discomfort throughout the trip, since I was forced to rely on my least used skills like speaking Taiwanese.`,
+                                    `as a gift. They were more powdery than crayons and thus ran out quickly. By the end of our trip, I had to make do with the least used colors. Which is a fitting metaphor for my overall state of discomfort throughout the trip, since I was forced to rely on my least used skills, like speaking Taiwanese.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -367,24 +367,28 @@ export default {
                         {
                             anchor: `salamander`,
                             todo: true,
-                            card: {
-                                description: [
-                                    `Writing doublespeaker rhyme was pretty daunting, so I would come up with random challenges for myself. One challenge for this song was to mention each of the four elementals of`,
-                                    {
-                                        anchor: `Paracelsus`,
-                                        wiki: `Paracelsus`,
-                                    },
-                                    `, the 16th-century alchemist who believed that nature is made up of four elements, each personified by a mythical creature. The`,
-                                    {
-                                        anchor: `salamander`,
-                                        wiki: `Salamanders_in_folklore`,
-                                    },
-                                    `is the elemental of fire.`,
-                                ],
-                                dotKeys: {
-                                    [SONGCRAFT]: true,
+                            cards: [
+                                {
+                                    description: [
+                                        {
+                                            anchor: `Paracelsus`,
+                                            wiki: `Paracelsus`,
+                                        },
+                                        `was a 16th-century alchemist who believed that nature is made up of four elements, each personified by a mythical creature. The`,
+                                        {
+                                            anchor: `salamander`,
+                                            wiki: `Salamanders_in_folklore`,
+                                        },
+                                        `is the elemental of fire.`,
+                                    ],
                                 },
-                            },
+                                {
+                                    description: `Writing doublespeaker rhyme was daunting, so I would come up with silly challenges, like mentioning each Paracelsian elemental.`,
+                                    dotKeys: {
+                                        [SONGCRAFT]: true,
+                                    },
+                                },
+                            ],
                         },
                         `shall await`,
                     ],
@@ -427,7 +431,7 @@ export default {
                                         anchor: `metamorphosis`,
                                         wiki: `Metamorphosis`,
                                     },
-                                    `feels as harrowing as it sounds, when breathing becomes the new drowning with no explanation or warning. Because that's what falling asleep always seemed like to me.`,
+                                    `feels as harrowing as it sounds, when breathing becomes the new drowning with no explanation or warning. Because that's what falling asleep seemed like to me.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -459,7 +463,7 @@ export default {
                                         anchor: `Styx`,
                                         wiki: `Styx`,
                                     },
-                                    `separates the realm of the living from the underworld. In my grandmother's house at night, the stairs leading down to the first floor seemed just as foreboding.`,
+                                    `separates the living from the underworld. At night in my grandmother's house, the stairs leading down to the first floor seemed just as foreboding.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -506,7 +510,7 @@ export default {
                                         anchor: `politically incorrect`,
                                         wiki: `Political_correctness`,
                                     },
-                                    `at around the same time that "`,
+                                    `around the same time that "`,
                                     {
                                         anchor: `queer`,
                                         wiki: `Queer`,
@@ -516,7 +520,7 @@ export default {
                                         anchor: `gay community`,
                                         wiki: `LGBT_community`,
                                     },
-                                    `. The latter approach always made more sense to me.`,
+                                    `. The latter tactic always made more sense to me.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -544,7 +548,7 @@ export default {
                                             anchor: `Book of Judges`,
                                             wiki: `Book_of_Judges`,
                                         },
-                                        `tells of a battle in which`,
+                                        `tells of a battle where`,
                                         {
                                             anchor: `Israelite`,
                                             wiki: `Israelites`,
@@ -617,7 +621,7 @@ export default {
                             todo: true,
                             card: {
                                 description: [
-                                    `As I wander outside in my dream, the uneven surface of the road causes a passing`,
+                                    `As I wander outside in my dream, the road's uneven surface causes a passing`,
                                     {
                                         anchor: `rickshaw`,
                                         wiki: `Rickshaw`,
@@ -742,7 +746,7 @@ export default {
                                         anchor: `Abraham`,
                                         wiki: `Abraham`,
                                     },
-                                    `, but God promised to make him into a great nation. Coming from less favored lineage myself, I could only hope for similar recompense, as I was not to marry into Sasha's house.`,
+                                    `, but God promised to make him into a great nation. Coming from a less favored lineage myself, I could only hope for similar recompense, as I was not to marry into Sasha's house.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -913,7 +917,7 @@ export default {
                                         anchor: `Zhuangzi`,
                                         wiki: `Zhuang_Zhou`,
                                     },
-                                    `, who couldn't be sure upon waking from a dream if he was then a man dreaming he was a butterfly, or now a butterfly dreaming he is a man.`,
+                                    ` who, upon waking, couldn't be sure if he was then a man dreaming he was a butterfly, or now a butterfly dreaming he is a man.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -981,7 +985,7 @@ export default {
                                         anchor: `Eris`,
                                         wiki: `Eris_(mythology)`,
                                     },
-                                    `was the Greek goddess of discord. As revenge for being denied invitation to a feast attended by the other gods, she tossed a golden apple labeled "for the fairest" into their midst. When Paris was asked to judge its rightful owner, he chose`,
+                                    `was the Greek goddess of discord. As revenge for not being invited to a feast attended by the other gods, she tossed a golden apple labeled "for the fairest" into their midst. When Paris was asked to judge its rightful owner, he chose`,
                                     {
                                         anchor: `Aphrodite`,
                                         wiki: `Aphrodite`,
@@ -1065,7 +1069,7 @@ export default {
                                         anchor: `undine`,
                                         wiki: `Undine`,
                                     },
-                                    `is a female nymph and the Paracelsian elemental of water. The term is derived from the Latin word`,
+                                    `is a female nymph and the Paracelsian elemental of water. The term originates from the Latin word`,
                                     {
                                         isItalic: true,
                                         lyric: `unda`,
@@ -1382,7 +1386,7 @@ export default {
                                         anchor: `shivah`,
                                         wiki: `Shiva_(Judaism)`,
                                     },
-                                    `refers to a period of mourning in Judaism after a family member passes away. My bad luck not to be born Jewish, in other words, has cost me any hope of spending a lifetime with Sasha from marriage until death.`,
+                                    `refers to a period of mourning in Judaism after a family member dies. My bad luck not to be born Jewish, in other words, has cost me any hope of spending a lifetime with Sasha from marriage until death.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1802,7 +1806,7 @@ export default {
                                         anchor: `The Love Song of J. Alfred Prufrock`,
                                         wiki: `The_Love_Song_of_J._Alfred_Prufrock`,
                                     },
-                                    `" examines themes of stunted growth and missed opportunities. The narrator of the poem bemoans that while the mermaids may sing, they don't sing for him. Likewise, while my resignation has turned the fearsome sea serpents into smiling mermaids, they still don't smile for me.`,
+                                    `" examines themes of stunted growth and missed opportunities. Its narrator bemoans that while the mermaids may sing, they don't sing for him. Likewise, while my resignation has turned the fearsome sea serpents into smiling mermaids, they still don't smile for me.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
