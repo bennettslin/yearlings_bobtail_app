@@ -251,12 +251,12 @@ export default {
                             todo: true,
                             card: {
                                 description: [
-                                    `When we landed in Taiwan, my aunt gave me a set of`,
+                                    `When we landed in Taiwan, my aunt presented me with a box of`,
                                     {
                                         anchor: `pastels`,
                                         wiki: `Pastel`,
                                     },
-                                    `as a gift. They were more powdery than crayons and thus ran out quickly. By the end of our trip, I had to make do with the least used colors. Which is a fitting metaphor for my overall state of discomfort throughout the trip, since I was forced to rely on my least used skills, like speaking Taiwanese.`,
+                                    `. They were more powdery than crayons and thus ran out quickly. By the end of our trip, I had to make do with the least used colors. Which is a fitting metaphor for my overall state of discomfort throughout the trip, since I was forced to rely on my least used skills, like speaking Taiwanese.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -510,7 +510,7 @@ export default {
                                         anchor: `politically incorrect`,
                                         wiki: `Political_correctness`,
                                     },
-                                    `around the same time that "`,
+                                    `at around the same time that "`,
                                     {
                                         anchor: `queer`,
                                         wiki: `Queer`,
@@ -692,7 +692,12 @@ export default {
                             todo: true,
                             card: {
                                 description: [
-                                    `The narrator in`,
+                                    `Like his namesake`,
+                                    {
+                                        anchor: `Ishmael`,
+                                        wiki: `Ishmael`,
+                                    },
+                                    `, the narrator in`,
                                     {
                                         anchor: `Herman Melville`,
                                         wiki: `Herman_Melville`,
@@ -705,12 +710,7 @@ export default {
                                             wiki: `Moby-Dick`,
                                         },
                                     },
-                                    `is an outcast like his namesake`,
-                                    {
-                                        anchor: `Ishmael`,
-                                        wiki: `Ishmael`,
-                                    },
-                                    `. While the latter was banished to the desert, the former wanders the wilderness of the ocean. It's to these metaphorical dunes of the ocean that I now flee as well.`,
+                                    `is an outcast. While the former was banished to the desert, the latter wanders the wilderness of the ocean. It's to these metaphorical dunes of the ocean that I now flee as well.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1222,17 +1222,16 @@ export default {
                             todo: true,
                             card: {
                                 description: [
-                                    `To prevent beachgoers from wading in the shark-infested waters,`,
                                     {
-                                        anchor: `barricade tape`,
+                                        anchor: `Barricade tape`,
                                         wiki: `Barricade_tape`,
                                     },
-                                    `has been tied along the`,
+                                    `has been tied between the`,
                                     {
                                         anchor: `barbecue grills`,
                                         wiki: `Barbecue_grill`,
                                     },
-                                    `that line the shore.`,
+                                    `that line the shore, to prevent beachgoers from wading in the shark-infested waters.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1306,7 +1305,7 @@ export default {
                 todo: true,
                 card: {
                     description: [
-                        `Recording vocals in doublespeaker rhyme proved to be trickier than expected. When singing, we tend to shorten or elongate syllables to adjust for phrasing and consonant clusters. And so the two voices would sound disjointed once heard together. To perform the syllables in perfect sync, I ended up devising a system of notation that looked like medieval`,
+                        `Recording vocals in doublespeaker rhyme proved to be trickier than expected. When singing, we tend to shorten or elongate syllables to adjust for phrasing and consonant clusters. And so the two voices would sound disjointed once heard together. To perform the syllables in perfect sync, I came up with a system of notation that somewhat looked like medieval`,
                         {
                             anchor: `ligature`,
                             wiki: `Ligature_(music)`,
@@ -1353,12 +1352,12 @@ export default {
                                 {
                                     // CONSIDER: Wormhole Kyon for shank? Needs to allow for multiple wormhole keys first.
                                     description: [
-                                        `Those who wander a prison yard must be on constant guard against getting`,
+                                        `Those who wander a prison yard must always be on guard against getting stabbed with a`,
                                         {
-                                            anchor: 'shivved',
+                                            anchor: 'shiv',
                                             wiki: `Shiv_(weapon)`,
                                         },
-                                        `, or stabbed by a makeshift weapon. As luck would have it, the schoolyard was already preparing me for a lifetime of such vigilance.`,
+                                        `. As luck would have it, the schoolyard was already preparing me for a lifetime of such vigilance.`,
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
@@ -1700,7 +1699,7 @@ export default {
                                         anchor: `parting the Red Sea`,
                                         wiki: `Crossing_the_Red_Sea`,
                                     },
-                                    `, he allowed them to safely cross and escape Egypt.`,
+                                    `, he allowed them to escape Egypt on foot.`,
                                 ],
                             },
                         },
@@ -1890,7 +1889,7 @@ export default {
                                         anchor: `Monday's Child`,
                                         wiki: `Monday's_Child`,
                                     },
-                                    `" is a nursery rhyme that predicts a child's fortune based on their weekday of birth. As Thursday's child, I'm promised to have "far to go," and indeed, the distance I have left to cover feels depressingly vast. Still, I'm now one day closer than when the day began…`,
+                                    `" is a nursery rhyme that predicts a child's fortune based on their weekday of birth. As Thursday's child, I'm promised to have "far to go." And indeed, the distance I have left to cover feels depressingly vast. Still, I'm now one day closer than when the day began…`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1934,7 +1933,7 @@ export default {
                             anchor: `New York City`,
                             wiki: `New_York_City`,
                         },
-                        `to regain my bearings. There, I reconnected with Sasha, and we started dating. She put me on the conversion path, while I volunteered to study Hebrew. It was exactly the all-consuming self-reinvention I was hoping for. But we didn't last. Though I really wanted to mend my old ways, my behavior lagged behind my intentions.`,
+                        `to regain my bearings. There, I reconnected with Sasha, and we started dating. She put me on the conversion path, while I volunteered to study Hebrew. It was exactly the all-consuming self-reinvention I was hoping for. But we didn't last. Though I wanted to mend my old ways, my behavior lagged behind my intentions.`,
                     ],
                     dotKeys: {
                         [AFTERWORD]: true,
