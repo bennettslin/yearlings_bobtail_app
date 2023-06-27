@@ -348,7 +348,7 @@ export default {
                             todo: true,
                             card: {
                                 description: [
-                                    `Taiwanese buildings at the time made heavy use of iron bars and stone slabs, as far as my impression goes. Even ordinary living quarters had the feel of a mausoleum adorned with`,
+                                    `Taiwanese buildings at the time made heavy use of iron bars and stone slabs, as I recall. My grandmother's house felt like a mausoleum adorned with`,
                                     {
                                         anchor: `alabaster`,
                                         wiki: `Alabaster`,
@@ -1222,16 +1222,17 @@ export default {
                             todo: true,
                             card: {
                                 description: [
+                                    `To prevent beachgoers from wading in the shark-infested waters,`,
                                     {
-                                        anchor: `Barricade tape`,
+                                        anchor: `barricade tape`,
                                         wiki: `Barricade_tape`,
                                     },
-                                    `has been tied between the`,
+                                    `has been tied onto the`,
                                     {
                                         anchor: `barbecue grills`,
                                         wiki: `Barbecue_grill`,
                                     },
-                                    `that line the shore, to prevent beachgoers from wading in the shark-infested waters.`,
+                                    `that line the shore.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1553,7 +1554,7 @@ export default {
                                         anchor: `nirvana`,
                                         wiki: `Nirvana`,
                                     },
-                                    `, release from the cycle of rebirth. But this just seemed like dying on a grander scale, which confirmed my intuition that one shouldn't want to live in the first place. So why do we?`,
+                                    `, or release from the cycle of rebirth. But this was just death on a grander scale, which confirmed my intuition that one shouldn't want to live in the first place. So why do we?`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1565,7 +1566,7 @@ export default {
                             anchor: `just play dumb`,
                             todo: true,
                             card: {
-                                description: `Neither heaven nor nirvana sounded all that pleasant, yet they were the best offers available. It just seemed to me that if we're expected to know which afterlife to strive for, then its appeal should be self-evident to even the most thickheaded child.`,
+                                description: `Neither heaven nor nirvana sounded all that pleasant, yet they were the best offers available, which confused me. Why wouldn't their appeal be self-evident to even the most thickheaded child?`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
