@@ -1,8 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import FacebookButton from './FacebookButton'
-import TwitterButton from './TwitterButton'
 import CopyUrlButton from './CopyUrlButton'
 import getDidMountHoc from '../../hocs/DidMountHoc'
 import { ANNOTATION_SOCIAL_MEDIA, OVERVIEW_LOGUE_SOCIAL_MEDIA, PROMO_PAGE_SOCIAL_MEDIA, SHELF_LEFT_SOCIAL_MEDIA } from '../../constants/socialMedia'
@@ -34,14 +32,6 @@ const ShareButtons = ({
                 ),
             }}
         >
-            {isNaN(annotationIndex) && (
-                <>
-                    {/* Allow tooltips to always be on top. */}
-                    {isShelfLeft && <TwitterButton {...{ id }} />}
-                    <FacebookButton {...{ id }} />
-                    {!isShelfLeft && <TwitterButton {...{ id }} />}
-                </>
-            )}
             <CopyUrlButton {...{ id, annotationIndex }} />
         </div>
     )

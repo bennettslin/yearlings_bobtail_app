@@ -67,7 +67,6 @@ const CopyUrlButton = ({ id, annotationIndex }) => {
 
     return (
         <Button
-            isSmallSize
             {...{
                 ref: buttonRef,
                 className: cx(
@@ -78,6 +77,7 @@ const CopyUrlButton = ({ id, annotationIndex }) => {
                 buttonIdentifier,
                 handleButtonClick,
                 handleTooltipHide: resetCopiedUrlKey,
+                isSmallSize: Boolean(annotationIndex),
             }}
         />
     )
