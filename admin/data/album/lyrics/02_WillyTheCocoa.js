@@ -57,7 +57,6 @@ export default {
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
-                        [SONGCRAFT]: true,
                     },
                 },
             },
