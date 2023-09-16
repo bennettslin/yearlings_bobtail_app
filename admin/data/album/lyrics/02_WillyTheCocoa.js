@@ -29,7 +29,7 @@ export default {
     playerStartTime: 177.396,
     mixStartTime: `0:01:03.00`,
     todo: true,
-    overview: `Willy was a mentally disabled man who wandered our neighborhood collecting recyclables. One day, some gangsters decided to pick a fight and smashed his head open with a bottle, killing him instantly. My younger brother was diagnosed with autism at this time, and in light of Willy's murder, I would lie awake fearful of what lay in my brother's future.`,
+    overview: `When my younger brother was diagnosed with autism, a neighbor told us about Willy the Cocoa, a mentally disabled man who went from door to door collecting recyclables many years prior. He was killed in a fight with some neighborhood gangsters, who smashed his head open with one of his bottles. Hearing this story affected me greatly, and I would recall it whenever I pondered my brother's likely fate.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -38,7 +38,7 @@ export default {
                 todo: true,
                 card: {
                     description: [
-                        `The kids in the neighborhood knew Willy as "the Cocoa," referring both to the`,
+                        `Willy was known as "the Cocoa," referring both to the`,
                         {
                             anchor: `Coke`,
                             wiki: `Coca-Cola`,
@@ -53,10 +53,11 @@ export default {
                             anchor: `Spanish`,
                             wiki: `Spanish_language`,
                         },
-                        `. There wasn't an official way to spell it.`,
+                        `. I'm sure there wasn't an official spelling, so I took the liberty of choosing one. Of course, I also took the liberty of having his story take place many years later, when my family lived in the neighborhood.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
+                        [SONGCRAFT]: true,
                     },
                 },
             },
@@ -246,12 +247,12 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `Willy had`,
+                                        `I imagine Willy to have`,
                                         {
                                             anchor: `microcephaly`,
                                             wiki: `Microcephaly`,
                                         },
-                                        `, a medical condition in which the brain fails to develop properly. And so his head was abnormally small in size, like the "pinheads" of`,
+                                        `, a medical condition in which the brain fails to develop properly. And so his head is abnormally small in size, like the "pinheads" of`,
                                         {
                                             anchor: `carnival sideshows`,
                                             wiki: `Sideshow`,
@@ -259,7 +260,7 @@ export default {
                                         `from bygone days.`,
                                     ],
                                     dotKeys: {
-                                        [BACKSTORY]: true,
+                                        [NARRATIVE]: true,
                                     },
                                 },
                                 {
@@ -339,7 +340,7 @@ export default {
                             anchor: `our tins and our jars`,
                             todo: true,
                             card: {
-                                description: `Like some other households in the neighborhood, my family would leave our recyclables out on the porch for Willy to collect.`,
+                                description: `Many households in the neighborhood would leave out their recyclables for Willy to collect.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -1130,7 +1131,7 @@ export default {
                             anchor: `heavy fears`,
                             todo: true,
                             card: {
-                                description: `One night soon after Willy's murder, I woke up screaming in fear of my mortality. My mother sat by my bedside to comfort me.`,
+                                description: `One night, I woke up screaming in fear of my mortality. My mother sat by my bedside to comfort me.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
