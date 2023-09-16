@@ -29,8 +29,6 @@ import scores from './main/scores'
 import tips from './main/tips'
 
 import copyUrl from './socialMedia/copyUrl'
-import facebook from './socialMedia/facebook'
-import twitter from './socialMedia/twitter'
 
 import {
     ABOUT_BUTTON_KEY,
@@ -60,8 +58,6 @@ import {
     ROOT_HOME_BUTTON_KEY,
     SCORES_BUTTON_KEY,
     SOCIAL_COPY_URL_BUTTON_KEY,
-    SOCIAL_FACEBOOK_BUTTON_KEY,
-    SOCIAL_TWITTER_BUTTON_KEY,
     SONG_REPEAT_BUTTON_KEY,
     TIPS_BUTTON_KEY,
     WORMHOLE_BUTTON_KEY,
@@ -95,8 +91,6 @@ export default {
     [ROOT_HOME_BUTTON_KEY]: rootHome,
     [SCORES_BUTTON_KEY]: scores,
     [SOCIAL_COPY_URL_BUTTON_KEY]: copyUrl,
-    [SOCIAL_FACEBOOK_BUTTON_KEY]: facebook,
-    [SOCIAL_TWITTER_BUTTON_KEY]: twitter,
     [SONG_REPEAT_BUTTON_KEY]: songRepeat,
     [TIPS_BUTTON_KEY]: tips,
     [WORMHOLE_BUTTON_KEY]: wormhole,

@@ -1,15 +1,10 @@
 import encodeUrl from 'encodeurl'
 import { getPromoUrl, getSongUrl } from '../../helpers/url'
-import { SOCIAL_FACEBOOK_BUTTON_KEY, SOCIAL_TWITTER_BUTTON_KEY } from '../../constants/buttons'
 import { PROMO_PAGE_SOCIAL_MEDIA } from '../../constants/socialMedia'
 import { APP_NAME } from '../../utils/server'
 
 const
     SOCIAL_MEDIA_URL_MAP = {
-        [SOCIAL_FACEBOOK_BUTTON_KEY]:
-        `https://www.facebook.com/sharer/sharer.php?u=`,
-        [SOCIAL_TWITTER_BUTTON_KEY]:
-        `https://twitter.com/intent/tweet?url=`,
     },
     POPUP_HEIGHT = 456,
     POPUP_WIDTH = 568,

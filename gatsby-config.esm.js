@@ -53,7 +53,6 @@ export default {
                 bucketName: getS3BucketName(),
             },
         },
-        `gatsby-plugin-twitter`,
         {
             resolve: `gatsby-plugin-webpack-bundle-analyser-v2`,
             options: {

@@ -22,8 +22,6 @@ import {
     POPUP_NEXT_BUTTON_KEY,
     SCORES_BUTTON_KEY,
     SOCIAL_COPY_URL_BUTTON_KEY,
-    SOCIAL_FACEBOOK_BUTTON_KEY,
-    SOCIAL_TWITTER_BUTTON_KEY,
     SONG_REPEAT_BUTTON_KEY,
     WORMHOLE_BUTTON_KEY,
     PROMO_BACK_BUTTON_KEY,
@@ -108,8 +106,6 @@ const TOOLTIP_TEXT_MAP = {
             [true]: 'link copied!',
         }
     },
-    [SOCIAL_FACEBOOK_BUTTON_KEY]: 'post on Facebook',
-    [SOCIAL_TWITTER_BUTTON_KEY]: 'post on Twitter',
     get tips() {
         return {
             [SHOWN]: 'tip shown',
