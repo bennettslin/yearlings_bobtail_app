@@ -32,7 +32,7 @@ export default {
     playerReferenceTime: 1751.447,
     playerStartTime: 1751.191,
     todo: true,
-    overview: `One night I went with my bassist Ana and some of our friends to get high on Robitussin and explore the steam tunnels under UCLA. I got us all to pretend that we were Vikings and Mongols and various waves of human migration throughout world history. In hindsight, the others were probably just humoring me. I wound up doing a lot of Robitussin that summer. It took a while for me to regain my grip on reality.`,
+    overview: `One night I went with my bassist Ana and some other friends to get high on Robitussin and explore the steam tunnels under UCLA. I got them all to pretend we were Vikings and Mongols and various waves of human migration throughout world history. In hindsight, they were probably just humoring me. I wound up doing a lot of Robitussin that summer. It took a while for me to regain my grip on reality.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -95,7 +95,14 @@ export default {
                             todo: true,
                             cards: [
                                 {
-                                    description: `We tread with "reverence" through the UCLA campus. Since I'm the experienced Robitussin user of the group, the others follow my lead in treating it as a mystical journey.`,
+                                    description: [
+                                        `We tread with "reverence" through the`,
+                                        {
+                                            anchor: `UCLA`,
+                                            wiki: `University_of_California,_Los_Angeles`,
+                                        },
+                                        `campus. Since I'm the experienced Robitussin user of the group, the others follow my lead in treating it as a mystical journey.`,
+                                    ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true,

@@ -1002,7 +1002,7 @@ export default {
                             anchor: `chalked the sidewalks`,
                             todo: true,
                             card: {
-                                description: `One night, my friends and I got drunk and decided to tag the streets with fluorescent sidewalk chalk. Since I didn't want anyone to crowd out my artwork, I ran ahead of the group.`,
+                                description: `One night my friends and I got drunk and decided to tag the streets with fluorescent sidewalk chalk. Since I didn't want anyone to crowd out my artwork, I ran ahead of the group.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

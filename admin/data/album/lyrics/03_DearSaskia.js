@@ -462,7 +462,7 @@ export default {
                                         anchor: `Sherman Oaks`,
                                         wiki: `Sherman_Oaks,_Los_Angeles`,
                                     },
-                                    `, a wealthy district with few minorities. I remember feeling out of my element at the time, though I didn't quite know why.`,
+                                    `, a wealthy district with fewer minorities. I remember feeling out of my element at the time, though I didn't quite know why.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,

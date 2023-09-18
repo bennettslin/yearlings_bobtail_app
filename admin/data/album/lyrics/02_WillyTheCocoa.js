@@ -29,7 +29,7 @@ export default {
     playerStartTime: 177.396,
     mixStartTime: `0:01:03.00`,
     todo: true,
-    overview: `When my younger brother was diagnosed with autism, a neighbor told us about Willy the Cocoa, a mentally disabled man who went from door to door collecting recyclables many years prior. He was killed in a fight with some neighborhood gangsters, who smashed his head open with one of his bottles. Hearing this story affected me greatly, and I would recall it whenever I pondered my brother's likely fate.`,
+    overview: `When my younger brother was diagnosed with autism, a neighbor told us about Willy the Cocoa, a mentally disabled man who went door to door collecting recyclables many years prior. Tragically, Willy was killed in a fight with neighborhood gangsters, who smashed his head open with a bottle. Hearing this story affected me greatly, and I would always recall it whenever I pondered my brother's likely fate.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -339,7 +339,7 @@ export default {
                             anchor: `our tins and our jars`,
                             todo: true,
                             card: {
-                                description: `Many households in the neighborhood would leave out their recyclables for Willy to collect.`,
+                                description: `Some households in the neighborhood would leave out their recyclables for Willy to collect.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -1130,7 +1130,7 @@ export default {
                             anchor: `heavy fears`,
                             todo: true,
                             card: {
-                                description: `One night, I woke up screaming in fear of my mortality. My mother sat by my bedside to comfort me.`,
+                                description: `One night I woke up screaming in fear of my mortality. My mother sat by my bedside to comfort me.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

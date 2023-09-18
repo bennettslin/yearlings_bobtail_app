@@ -1026,7 +1026,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `One night, Sita had a`,
+                                        `One night Sita had a`,
                                         {
                                             anchor: `hyperglycemic`,
                                             wiki: `Hyperglycemia`,
