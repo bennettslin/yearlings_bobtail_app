@@ -63,12 +63,12 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `The chords and melodies heard here originally came about from my teenage efforts to learn the songwriting secrets of the`,
+                        `As a teenager, I tried to figure out the songwriting secrets of the`,
                         {
                             anchor: `Beatles`,
                             wiki: `The_Beatles`,
                         },
-                        `. I'd never done anything with them because they sounded so overlabored, and all my fixes made them even worse. But years later, I realized that the sound of being labored to death was exactly what a song about an overwrought letter to Sasha called for.`,
+                        `, which is how I came up with the chords and melodies heard here. I had no idea what to do with them at the time; they sounded so labored, and all my fixes made them worse. But years later, I realized that the sound of being labored to death was exactly what a song about an overwrought letter to Sasha called for.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,

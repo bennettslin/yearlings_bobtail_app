@@ -1929,7 +1929,7 @@ export default {
                             isItalic: true,
                             lyric: `Yearling's Bobtail`,
                         },
-                        `wouldn't get any attention from the music press, I moved to`,
+                        `wouldn't get any attention from the indie press, I moved to`,
                         {
                             anchor: `New York City`,
                             wiki: `New_York_City`,

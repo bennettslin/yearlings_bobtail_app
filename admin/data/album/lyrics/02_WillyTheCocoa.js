@@ -29,7 +29,7 @@ export default {
     playerStartTime: 177.396,
     mixStartTime: `0:01:03.00`,
     todo: true,
-    overview: `When my younger brother was diagnosed with autism, a neighbor told us about Willy the Cocoa, a mentally disabled man who went door to door collecting recyclables many years prior. Tragically, Willy was killed in a fight with neighborhood gangsters, who smashed his head open with a bottle. Hearing this story affected me greatly, and I would always recall it whenever I pondered my brother's likely fate.`,
+    overview: `When my younger brother was diagnosed with autism, a neighbor told us about Willy the Cocoa, a mentally disabled man who'd once wandered the neighborhood collecting recyclables. Tragically, Willy was killed in a fight with some gangsters, who smashed his head open with a bottle. Hearing this story affected me greatly, and I would recall it whenever I pondered my brother's likely fate.`,
     lyricUnits: [
         {
             unitMap: {},
