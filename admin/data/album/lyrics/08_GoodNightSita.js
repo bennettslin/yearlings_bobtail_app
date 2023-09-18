@@ -22,14 +22,12 @@ export default {
     referenceDescription: `"Good" in anacrusis`,
     playerStartTime: 1346.412,
     mixStartTime: `0:01:11.89`,
-    todo: true,
     overview: `Sometime after dating Catherine and a while before meeting Mara, I hit on a university student named Sita. Nothing came of the few dates that followed, however, and I scurried away in disappointment.`,
     lyricUnits: [
         {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: `Sita and I have just walked back to her boarding house after a date. We stand in front of her gate, facing each other awkwardly. It's early in the evening, with the sky beginning to clear from a midday shower.`,
                     dotKeys: {
@@ -50,7 +48,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `In the final chapter of`,
@@ -83,7 +80,6 @@ export default {
                         `or`,
                         {
                             anchor: `should I should you`,
-                            todo: true,
                             card: {
                                 description: `At this point, I'm too flustered to form complete thoughts, let alone speak in complete sentences.`,
                                 dotKeys: {
@@ -108,7 +104,6 @@ export default {
                         `love first`,
                         {
                             anchor: `without once knowing love`,
-                            todo: true,
                             card: {
                                 description: `The women I wanted to date always preferred men with past relationship experience, which seemed bizarre to me. If everyone thought this way, then no one could ever be in a relationship. Just like no one would ever have a job if previous work experience were always needed.`,
                                 dotKeys: {
@@ -122,7 +117,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `My inability to process my thoughts into coherent speech is reflected in the herky-jerky,`,
@@ -158,7 +152,6 @@ export default {
                         `for this kid wearing no`,
                         {
                             anchor: `decoder ring`,
-                            todo: true,
                             card: {
                                 description: [
                                     `A`,
@@ -181,7 +174,6 @@ export default {
                         {
                             anchor: `Dutch courage`,
                             properNoun: true,
-                            todo: true,
                             cards: [
                                 {
                                     description: `I had an older coworker who faithfully supplied me with cheap twelve-packs. Before every date, I would down a few cans.`,
@@ -214,7 +206,6 @@ export default {
                         `wimped out to`,
                         {
                             anchor: `going Dutch`,
-                            todo: true,
                             cards: [
                                 {
                                     description: `Sita would insist on getting separate checks, despite my repeated efforts to pay for the entire date. This made me feel inadequate and no better than a sponge, based on my understanding of dating etiquette.`,
@@ -239,7 +230,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `I once had a supervisor who would blast`,
@@ -285,7 +275,6 @@ export default {
                     lyric: [
                         {
                             anchor: `nor a barnacle`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -312,7 +301,6 @@ export default {
                     mixTime: `0:23:18.66`,
                     lyric: {
                         anchor: `swept in unchartable tides`,
-                        todo: true,
                         card: {
                             description: [
                                 `The perils of being steered in unknown directions have kept me on edge throughout this date. But nearby is a`,
@@ -345,7 +333,6 @@ export default {
                         `they just`,
                         {
                             anchor: `always know to pry`,
-                            todo: true,
                             card: {
                                 description: `And no one else seems to sweat the risk of coming on too strong on a date either. They just keep the conversation flowing by pressing for more details, the way a starfish pries open an oyster resting on the seafloor.`,
                                 dotKeys: {
@@ -361,7 +348,6 @@ export default {
                         `for the`,
                         {
                             anchor: `innermost matryoshka`,
-                            todo: true,
                             card: {
                                 description: [
                                     `On our first date, I took Sita to a natural history museum. We spent some time gawking at the Russian wooden dolls known as`,
@@ -383,7 +369,6 @@ export default {
                     mixTime: `0:30:07.08`,
                     lyric: {
                         anchor: `heart of gold inside`,
-                        todo: true,
                         card: {
                             description: `Mistakes I made on one date still offered lessons I could apply toward the next. So each date felt like prying open one nesting doll to get to another, with the ultimate goal of reaching the last one whose promise proved not to be hollow.`,
                             dotKeys: {
@@ -405,7 +390,6 @@ export default {
                         `till then`,
                         {
                             anchor: `crack up another doll`,
-                            todo: true,
                             card: {
                                 description: `A friend once told me that if I can keep a woman cracking up at my jokes all night, then I'll always be good for another date. Not being very funny, I tried my best with clever quips and goofy mannerisms.`,
                                 dotKeys: {
@@ -422,7 +406,6 @@ export default {
                         `to find the`,
                         {
                             anchor: `chrysalis unchristened`,
-                            todo: true,
                             cards: [
                                 {
                                     description: `As we pass a display on the butterfly lifecycle, it occurs to me that what I seek in a partner is a chrysalis. That is, a rare specimen so new to this world that my own lack of worldliness can be considered moot.`,
@@ -442,7 +425,6 @@ export default {
                         `who'd buy this`,
                         {
                             anchor: `aping jaw`,
-                            todo: true,
                             card: {
                                 description: [
                                     `We stop by a replica of`,
@@ -487,7 +469,6 @@ export default {
                         `when`,
                         {
                             anchor: `defined by ambrosia beers`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -533,7 +514,6 @@ export default {
                         `in time are seen with`,
                         {
                             anchor: `a focus grown clear`,
-                            todo: true,
                             card: {
                                 description: [
                                     `My buzz would wear off a few hours into a date, and then I would realize I'd just constructed an elaborate backstory that could only topple under scrutiny, like a`,
@@ -568,7 +548,6 @@ export default {
                     lyric: [
                         {
                             anchor: `pidgin palaver`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -599,7 +578,6 @@ export default {
                         `hyped up like some`,
                         {
                             anchor: `disastrous play`,
-                            todo: true,
                             card: {
                                 description: `On our second date, Sita took me to see her friend act in a play, after which we met up with him backstage. In contrast to the rapport they shared, I couldn't get a word in edgewise, and I felt insecure the rest of the evening.`,
                                 dotKeys: {
@@ -616,7 +594,6 @@ export default {
                         `that starts with a`,
                         {
                             anchor: `lone ringing phone`,
-                            todo: true,
                             card: {
                                 description: `The theater goes pitch black to signal that the play has begun. As the audience falls to a hush, a rotary telephone rings onstage.`,
                                 dotKeys: {
@@ -647,7 +624,6 @@ export default {
                         `for if the`,
                         {
                             anchor: `tactic is to stall`,
-                            todo: true,
                             card: {
                                 description: `I was advised to wait three days before calling a woman back. Yet it was always agony when she invariably did the same to me.`,
                                 dotKeys: {
@@ -668,7 +644,6 @@ export default {
                         `what this`,
                         {
                             anchor: `understudy sought`,
-                            todo: true,
                             card: {
                                 description: [
                                     `Dating while low status is like being an`,
@@ -713,7 +688,6 @@ export default {
                         `then wise up and`,
                         {
                             anchor: `learn to shotgun`,
-                            todo: true,
                             card: {
                                 description: `In time I came to adopt the shotgun approach to dating, which involves hitting on anyone at any moment. It works because the math is on your side. Even if your success rate remains dismal, you're increasing the sample size, which gives you a better chance of getting at least one positive result. And one person saying yes is really all you were hoping for.`,
                                 dotKeys: {
@@ -734,7 +708,6 @@ export default {
                         `so we'll`,
                         {
                             anchor: `breeze through our parts`,
-                            todo: true,
                             card: {
                                 description: `Any time I said something witty that got a good response, I'd be sure to use it again on future attempts at hitting on someone, like an actor reprising a role. This also lessened the sting of rejection, since the less I had to prepare, the less invested I needed to feel.`,
                                 dotKeys: {
@@ -748,7 +721,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `To continue with the 70s feel for this song, I gathered ideas from the band`,
@@ -781,7 +753,6 @@ export default {
                         `though each`,
                         {
                             anchor: `kind new ultimatum`,
-                            todo: true,
                             card: {
                                 description: `Like the deals that natives were forced at gunpoint to make with settlers, Sita's proposition for us to see her friend's play offered only the illusion of choice. She was going either way. I could either tag along or stay home.`,
                                 dotKeys: {
@@ -806,7 +777,6 @@ export default {
                         `brave`,
                         {
                             anchor: `rejection into art`,
-                            todo: true,
                             card: {
                                 description: [
                                     `I learned to welcome rejection since I could always use it as subject matter for new songs. Which meant that a lifetime of getting rejected could`,
@@ -837,7 +807,6 @@ export default {
                         `but`,
                         {
                             anchor: `died unfinished`,
-                            todo: true,
                             card: {
                                 description: `Of course, there was no guarantee that such a work would ever be completed, since a satisfying ending wasn't really under my control.`,
                                 dotKeys: {
@@ -862,7 +831,6 @@ export default {
                         `hint of`,
                         {
                             anchor: `sampler cologne`,
-                            todo: true,
                             card: {
                                 description: `Whenever I spotted a lifestyle magazine that had been thrown out, I would tear out the scent strips from its cologne advertisements and add them to my pile. Then right before a date, I would rub a few strips on my neck and wrists.`,
                                 dotKeys: {
@@ -890,7 +858,6 @@ export default {
                         `always rides in`,
                         {
                             anchor: `single go-karts`,
-                            todo: true,
                             card: {
                                 description: [
                                     `On our third date, Sita and I visited a`,
@@ -913,7 +880,6 @@ export default {
                         `as we wind an`,
                         {
                             anchor: `endless flowchart`,
-                            todo: true,
                             card: {
                                 description: [
                                     `At the time, I wondered if it were possible to prepare a mental`,
@@ -936,7 +902,6 @@ export default {
                         `with every given`,
                         {
                             anchor: `answer a no`,
-                            todo: true,
                             card: {
                                 description: [
                                     `Of course, if I were never given an opening to make any decisions at all, then each date would end with me going right back to the beginning of the flowchart. And I'd be doomed to spend my life cycling through an`,
@@ -966,7 +931,6 @@ export default {
                         `and her`,
                         {
                             anchor: `veggie wishbone's short end`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -1007,7 +971,6 @@ export default {
                         `from a`,
                         {
                             anchor: `dummy steering wheel`,
-                            todo: true,
                             card: {
                                 description: `Any semblance of control that I felt on a date was an illusion. But still I would cling tightly, like a child clutching the passenger steering wheel in a twin go-kart. Too much was at stake for me to let go and embrace spontaneity.`,
                                 dotKeys: {
@@ -1028,7 +991,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `Children's songs from the 70s are a treasure trove of musical wisdom. They were composed by professionals, but then arranged for the popular styles of that time. A great example is the soundtrack for`,
@@ -1075,7 +1037,6 @@ export default {
                         `as the`,
                         {
                             anchor: `chirping crosswalks`,
-                            todo: true,
                             card: {
                                 description: [
                                     `Sita and I are still standing on the sidewalk outside her boarding house. In the distance, an electronic bird call informs the`,
@@ -1117,7 +1078,6 @@ export default {
                     mixTime: `2:04:21.72`,
                     lyric: {
                         anchor: `I sigh, "Good night."`,
-                        todo: true,
                         cards: [
                             {
                                 description: `I walked home that night determined not to let another opportunity pass without confessing my feelings to Sita. I did exactly that in a phone call a few days later. It went horribly, and I didn't hear from her again for months.`,
@@ -1137,7 +1097,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `Ambrose Bierce also wrote the short story "`,

@@ -25,7 +25,6 @@ export default {
     referenceDescription: `Spanish guitar in measure 1`,
     playerStartTime: 1131.214,
     mixStartTime: `0:02:12.00`,
-    todo: true,
     overview: `After the breakup with Catherine, I vowed to spend the next five years shaping myself into the ideal romantic prospect. Toward the end, I started attending local shows and eventually cobbled together my own band, the Yearlings. There was a fellow scenester named Mara whom I noticed from afar, and soon I grew infatuated. But Mara ended up going out with my drummer Jacob, which made band practice awkward.`,
     lyricUnits: [
         {
@@ -63,7 +62,6 @@ export default {
                             {
                                 anchor: `Maravijaya`,
                                 properNoun: true,
-                                todo: true,
                                 card: {
                                     description: [
                                         {
@@ -102,7 +100,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: `This song is one of two on this album that was originally performed by the Yearlings. At the time, I kept its meaning a secret by disguising Mara's name in various puns. But in this recording, my enunciations are exaggerated to make the puns obvious.`,
                     dotKeys: {
@@ -123,7 +120,6 @@ export default {
                         `I was a lad bent on`,
                         {
                             anchor: `learning the talents`,
-                            todo: true,
                             card: {
                                 description: `It's not that I'd done anything wrong to cause the breakup with Catherine. I just didn't have much to offer. So it seemed illogical to keep doing things the same way, as if one day I should see a dramatically different result. To secure a future chance at romance, what I needed was to take time off and build up a surplus of attractive traits. So I started with the ones that Catherine valued most.`,
                                 dotKeys: {
@@ -143,7 +139,6 @@ export default {
                         `Bit my`,
                         {
                             anchor: `sadness with patience`,
-                            todo: true,
                             card: {
                                 description: `I'd spent my formative years as a child channeling my misery into various art projects, so this was all familiar terrain for me. To build up oneself into a desirable person is really the ultimate art project, after all.`,
                                 dotKeys: {
@@ -204,7 +199,6 @@ export default {
                         `to mold me into a`,
                         {
                             anchor: `mystery mensch`,
-                            todo: true,
                             card: {
                                 description: `There was an obvious lesson to draw from the smattering of women I'd managed to attract up to this point in my life. All of them had been taken in by my appearance as an artsy loner, only to be turned off after finding that nothing of greater substance lay beneath. So my mission was simply to turn this mistaken assumption into a correct one.`,
                                 dotKeys: {
@@ -220,7 +214,6 @@ export default {
                     lyric: [
                         {
                             anchor: `No minutiae left unmastered`,
-                            todo: true,
                             card: {
                                 description: [
                                     `Though my goal was to be well versed in every important subject matter, I got the most satisfaction from showing off a random skill with seeming nonchalance. So I made sure to set aside time for purely fanciful pursuits like learning to solve a`,
@@ -260,7 +253,6 @@ export default {
                         `with`,
                         {
                             anchor: `mindful manners`,
-                            todo: true,
                             card: {
                                 description: `I also decided to stop swearing. I figured it would be a definite win with any woman like Catherine who didn't curse, while the rest would find its quaintness charming.`,
                                 dotKeys: {
@@ -276,7 +268,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Once I metamorphose`,
-                            todo: true,
                             card: {
                                 description: `Upon completion of my metamorphosis, once I "met a Mara, for" certain I was to impress her.`,
                                 dotKeys: {
@@ -308,7 +299,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Year five`,
-                            todo: true,
                             card: {
                                 description: [
                                     `The Soviet Union's`,
@@ -332,7 +322,6 @@ export default {
                         `spent her`,
                         {
                             anchor: `wishes on a friend`,
-                            todo: true,
                             card: {
                                 description: [
                                     `Toward the end of my five-year plan, the Yearlings were regularly playing local shows. I was thrilled when I first spotted Mara in the audience, thinking my hard work putting this band together was about to pay off. But it was Jacob who caught her eye. I felt like the`,
@@ -357,7 +346,6 @@ export default {
                         `while forever I'll`,
                         {
                             anchor: `hold in peace`,
-                            todo: true,
                             card: {
                                 description: `So Jacob got together with Mara without any effort, while romance for me felt no less elusive than ever. I had to come to terms with the realization that my five-year plan was a washout.`,
                                 dotKeys: {
@@ -412,7 +400,6 @@ export default {
                         `Hopes wrapped in`,
                         {
                             anchor: `marinaded confections`,
-                            todo: true,
                             card: {
                                 description: `Or, they were wrapped in my "Mara-needed confessions."`,
                                 dotKeys: {
@@ -429,7 +416,6 @@ export default {
                         `before`,
                         {
                             anchor: `tomorrow never sent`,
-                            todo: true,
                             card: {
                                 description: `Or else, these hopes were never before sent "to Mara."`,
                                 dotKeys: {
@@ -446,7 +432,6 @@ export default {
                         {
                             // NOTE: I changed to capitalised.
                             anchor: `Signed off "Love me"`,
-                            todo: true,
                             card: {
                                 description: `Back when we all still treated emails like personal letters, I would close with "Love Bennett," absent a comma out of laziness. Catherine once joked that this sounded like a command spoken in desperation.`,
                                 dotKeys: {
@@ -464,7 +449,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `Being a`,
@@ -490,7 +474,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Morphined`,
-                            todo: true,
                             card: {
                                 description: `Or, I would be a "Mara fiend," a slightly different kind of addict.`,
                                 dotKeys: {
@@ -501,7 +484,6 @@ export default {
                         `, I'll probably`,
                         {
                             anchor: `die pushing forty`,
-                            todo: true,
                             card: {
                                 description: `Like the Soviets, I needed to take in stride the failures of my first five-year plan. Having banked on rapid character growth, I couldn't cut my losses now. I had nothing to my name other than what the next five-year plan might gain for me. Or failing that, the next one after. Yet five years is a huge chunk of lifetime to mete out all at once, and I only had so many decades remaining. The occasion became ripe to reflect on my mortality.`,
                                 dotKeys: {
@@ -518,7 +500,6 @@ export default {
                         `to a`,
                         {
                             anchor: `sand castle built by low tide`,
-                            todo: true,
                             card: {
                                 description: `Compounding the failures of my first five-year plan, it was clear that in the interim I'd missed out on some crucial personal development that others had naturally come by. And there was no guarantee that another five-year plan wouldn't blindside me in the same manner. I feared a future as a stunted man-child forever chasing ambitions both infantile and futile, like building castles out of sand.`,
                                 dotKeys: {
@@ -550,7 +531,6 @@ export default {
                         `a`,
                         {
                             anchor: `mariner's child`,
-                            todo: true,
                             card: {
                                 description: `Or else, I would die as a "Mara-nursed" child.`,
                                 dotKeys: {
@@ -632,7 +612,6 @@ export default {
                         `In a`,
                         {
                             anchor: `time capsule`,
-                            todo: true,
                             card: {
                                 description: [
                                     `In my dejection, I could only envision my next five-year plan as a`,
@@ -660,7 +639,6 @@ export default {
                     lyric: [
                         {
                             anchor: `lies that marionette`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -687,7 +665,6 @@ export default {
                         `in this`,
                         {
                             anchor: `heap of twisted twine`,
-                            todo: true,
                             card: {
                                 description: `But with nothing to show after five years of diligent effort, I was now paralyzed by doubt. I knew of no other actions to undertake that might better my circumstances. And so the puppet of my future self lay motionless before me.`,
                                 dotKeys: {
@@ -715,7 +692,6 @@ export default {
                         `keeps me`,
                         {
                             anchor: `solely for a pet`,
-                            todo: true,
                             card: {
                                 description: `After Mara started dating Jacob, she continued to interact with me in the same manner, which made me realize that I'd misread her intentions all along. In retrospect, I was so unused to being treated with genial regard that it felt like being flirted with.`,
                                 dotKeys: {
@@ -732,7 +708,6 @@ export default {
                         `With her "I do,"`,
                         {
                             anchor: `my life in marriage`,
-                            todo: true,
                             card: {
                                 description: `Or else, my life in "Mara." I thought I'd chosen to leave out this particular pun, but the exaggerated pronunciation is distinctly there in the recording…`,
                                 dotKeys: {
@@ -749,7 +724,6 @@ export default {
                         `is choked down my`,
                         {
                             anchor: `no-hope chest`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -793,7 +767,6 @@ export default {
                         `Her lispy kiss unlucky for this`,
                         {
                             anchor: `chimney sweep`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -826,7 +799,6 @@ export default {
                     lyric: [
                         {
                             anchor: `indentures dumbed`,
-                            todo: true,
                             card: {
                                 description: [
                                     `Chimney sweeps were typically apprenticed as`,
@@ -856,7 +828,6 @@ export default {
                         `," I bade them`,
                         {
                             anchor: `to fare well`,
-                            todo: true,
                             card: {
                                 description: `Jacob was my friend, and I was happy that he'd found Mara. Still, I wasn't eager to stick around. So after imagining them exchanging vows of "I do," I silently offered a vow of my own to bid them "two farewell."`,
                                 dotKeys: {
@@ -885,7 +856,6 @@ export default {
                         `But then I saw the`,
                         {
                             anchor: `world's a naked baby`,
-                            todo: true,
                             card: {
                                 description: `But at some point, I realized that a social scene isn't any different from the world at large. Nothing is hidden from view, and any situation can be understood by observing its various interactions, no less than a holistic picture of the world can be pieced together by reading books on various subject matters.`,
                                 dotKeys: {
@@ -909,7 +879,6 @@ export default {
                     lyric: [
                         {
                             anchor: `to have a merry ol' laugh`,
-                            todo: true,
                             card: {
 
                                 description: `Or, to have a "Mara, you'll" laugh. In other words, everyone just does what they do, and the world is no more than the net result of all that. There's no hidden agenda; no one has it in for me. And so I can only react with good humor if the world gets in the way of what I'd intended.`,
@@ -945,7 +914,6 @@ export default {
                         `is that the`,
                         {
                             anchor: `boy who's to love her baby`,
-                            todo: true,
                             card: {
                                 description: `In short, the world is as guileless and unwitting as a newborn infant. Which means if a woman's list of ideal traits in a man includes what kind of father he'll be to her child, then she's likely to judge him by how he treats the world at large.`,
                                 dotKeys: {
@@ -971,7 +939,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Moral is`,
-                            todo: true,
                             card: {
                                 description: `Or else, while I'm "Mara-less."`,
                                 dotKeys: {
@@ -982,7 +949,6 @@ export default {
                         `it's up to me to`,
                         {
                             anchor: `be alert`,
-                            todo: true,
                             card: {
                                 description: `There was no mystery why the situation with Mara transpired as it had. It was my fault for being caught off guard. I found this thought empowering, because it meant that the Maras of the world were still attainable. It was just on me to understand what they wanted. And then I could build myself up to be exactly that.`,
                                 dotKeys: {
@@ -1006,7 +972,6 @@ export default {
                     lyric: [
                         {
                             anchor: `friends have to lie`,
-                            todo: true,
                             card: {
                                 description: `But I couldn't rely on my friends to be truthful about what I had to offer. As dear as we were to each other, they each had their own neck to protect.`,
                                 dotKeys: {
@@ -1046,7 +1011,6 @@ export default {
                                 `'s words`,
                             ],
                             properNoun: true,
-                            todo: true,
                             card: {
                                 description: [
                                     `Recognizing that what I wanted was someone like Mara, and taking stock of what was needed for me to fulfill this wish, I decided to return to what I do best. I would hole up in emotional seclusion, this time to work on a magnum opus. My next five-year plan would see me write all the lyrics, score all the parts, and perform all the tracks on`,
@@ -1090,7 +1054,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `My original plan was to take the puns one level further by recording this song in a "`,

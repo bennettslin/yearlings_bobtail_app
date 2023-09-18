@@ -27,7 +27,6 @@ export default {
     referenceDescription: `Banjo in anacrusis`,
     playerStartTime: 2107.996,
     mixStartTime: `0:01:01.40`,
-    todo: true,
     overview: `My mood changed for the worse when I drank, leading friends to joke that I had a sinister alter ego. It wasn't far from the truth. I was souring on my relationship with Sita by this point, and being drunk provided both an escape and an excuse to act out. But I really didn't like myself when this happened. I missed being the hapless kid that I still was in my head. And knowing now how to get it right, I longed for a do-over, only this time without the mess. In other words… without Sita.`,
     lyricUnits: [
         {
@@ -99,7 +98,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Brushed her off`,
-                            todo: true,
                             card: {
                                 description: `As I began to withdraw from the relationship, Sita would reach out by groveling. And stung by my conscience, I would rush to comfort her. But as my patience wore thin over time, I would lash out in passive-aggressive ways, whereupon she would grovel even further. It became all we knew of how to speak for ourselves.`,
                                 dotKeys: {
@@ -116,7 +114,6 @@ export default {
                         `with your`,
                         {
                             anchor: `crew of chefs and thieves`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -145,7 +142,6 @@ export default {
                         `Tonight the`,
                         {
                             anchor: `rubber off`,
-                            todo: true,
                             card: {
                                 description: `As our relationship went south, sex became the last bargaining chip that Sita held in the power struggle between us. Since I didn't like the feeling of wearing a condom, she would offer to go without one just to coax any small kindness out of me.`,
                                 dotKeys: {
@@ -162,7 +158,6 @@ export default {
                         `if you would`,
                         {
                             anchor: `opt for bed not street`,
-                            todo: true,
                             card: {
                                 description: [
                                     `I was tired of working extra shifts just to make the rent. So after my lease ended, I alternated between spending some nights with Sita, and other nights crashing in the`,
@@ -193,7 +188,6 @@ export default {
                         `Well`,
                         {
                             anchor: `you're not me`,
-                            todo: true,
                             card: {
                                 description: `An inside joke among my friends was to address me as Garry when I was drunk, since my uneven rambling and oafish stunts made me an altogether different person.`,
                                 dotKeys: {
@@ -209,7 +203,6 @@ export default {
                     lyric: [
                         {
                             anchor: `I can't speak`,
-                            todo: true,
                             card: {
                                 description: `But having an alter ego also absolved me of personal responsibility for my actions, which became a problem as my drunken behavior spilled into random aggression and misdemeanors.`,
                                 dotKeys: {
@@ -234,7 +227,6 @@ export default {
                         `Drunk pissed`,
                         {
                             anchor: `punks tryst,`,
-                            todo: true,
                             card: {
                                 description: [
                                     `At the time, I wore`,
@@ -256,7 +248,6 @@ export default {
                         },
                         {
                             anchor: `bustin' cars with fists`,
-                            todo: true,
                             card: {
                                 description: `Tristan was particularly hotheaded when drunk. One night after getting us kicked out of a party for a fight he started, he challenged us to see who could punch a car window and break the glass first. I didn't win.`,
                                 dotKeys: {
@@ -273,7 +264,6 @@ export default {
                         `the`,
                         {
                             anchor: `littlest fuss will incite`,
-                            todo: true,
                             cards: [
                                 {
                                     description: `After lashing out all night in a spastic fury, Tristan would be perfectly collected the next morning. I came to see that his chaotic behavior was in fact meticulously controlled, giving him a strange inner peace. So I sought to steer my drunken temper in the same direction.`,
@@ -296,7 +286,6 @@ export default {
                         `In you come, piss drunk, smug in`,
                         {
                             anchor: `smegma crust`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -324,7 +313,6 @@ export default {
                         `since`,
                         {
                             anchor: `hummers aren't love`,
-                            todo: true,
                             card: {
                                 description: [
                                     `Once when Sita protested that we couldn't have sex until after I washed up, I snidely replied that she could still give me a hummer, or`,
@@ -342,7 +330,6 @@ export default {
                         `, or so`,
                         {
                             anchor: `she's claimed`,
-                            todo: true,
                             card: {
                                 description: `Throughout our budding friendship, Sita had neglected to mention the extent of her sexual intimacy with past partners, even if it was always shy of intercourse. She tried to console me by pointing out that she never went all the way precisely because she didn't love them. She loved me, so I had won. But it still stung like crazy to find out this late, which only deepened my resentment.`,
                                 dotKeys: {
@@ -369,7 +356,6 @@ export default {
                     lyric: [
                         {
                             anchor: `buys your grief`,
-                            todo: true,
                             card: {
                                 description: `My worlds collided when I smashed a random bike in a fit of drunken rage one night. The bike turned out to belong to a scene kid who liked my music from my earliest days of playing out. He'd related so strongly to my songs about unfulfilled hopes. I was disgusted with myself for having disappointed him.`,
                                 dotKeys: {
@@ -393,7 +379,6 @@ export default {
                         `So the`,
                         {
                             anchor: `celibate you'll play`,
-                            todo: true,
                             card: {
                                 description: `Drinking made me impotent and thus impervious to Sita's advances, so I gladly drank to excess. But not having sex was also purifying in its own right, since this lent the familiar comfort of being my past lovelorn self again.`,
                                 dotKeys: {
@@ -414,7 +399,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Slammed in the well`,
-                            todo: true,
                             card: {
                                 description: `Of course, using alcohol as a spiritual cleanser isn't really sustainable, since it requires you to vomit regularly into a toilet and see your miserable reflection staring back at you in the water.`,
                                 dotKeys: {
@@ -432,7 +416,6 @@ export default {
                         `with`,
                         {
                             anchor: `choler turned up`,
-                            todo: true,
                             cards: [
                                 {
                                     description: `In Hippocratic medicine, choler is the humor that induces aggression.`,
@@ -462,7 +445,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `In traditional`,
@@ -490,7 +472,6 @@ export default {
                         `As`,
                         {
                             anchor: `claws you built from scratches`,
-                            todo: true,
                             card: {
                                 description: `Cats scratch to sharpen their claws, just like I'd learned to keep my emotional defenses sharp after a lifetime of getting scratched and clawed by bullies.`,
                                 dotKeys: {
@@ -508,7 +489,6 @@ export default {
                         `fill up a package strapped to your`,
                         {
                             anchor: `scapegirl`,
-                            todo: true,
                             card: {
                                 description: [
                                     `In Biblical times, a community would seek absolution by symbolically placing its`,
@@ -538,7 +518,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `Though I'd played violin for ten years as a child, my skills were rusty by the time I made this album. Rather than get up to speed through intense practice, I created the fiddle parts by recording just a fragment at a time and then splicing those together. To make up for my cop-out, I threw in a complicated`,
@@ -583,7 +562,6 @@ export default {
                         `you'd`,
                         {
                             anchor: `make her strip bare`,
-                            todo: true,
                             card: {
                                 description: `Sita learned early on that she could always whisk me away for some lovemaking by hovering naked beside me while shivering dramatically from the cold. But as our relationship soured, this brazen appeal to my primal and protective instincts grew tiresome, and I drew some cruel pleasure in letting her shiver for just a bit longer.`,
                                 dotKeys: {
@@ -607,7 +585,6 @@ export default {
                         `You won't always`,
                         {
                             anchor: `have her for your pet`,
-                            todo: true,
                             card: {
                                 description: `Sita's manner of prostrating herself like a pet forced me to wield an absolute power that I never asked for, which exasperated me to no end. But its endearing nature was also guaranteed to make me love her, and I did. So I never doubted that the impending breakup would be wrenching for both of us.`,
                                 dotKeys: {
@@ -624,7 +601,6 @@ export default {
                         `Someday`,
                         {
                             anchor: `she won't be there`,
-                            todo: true,
                             card: {
                                 description: `But this codependency wasn't just the foundational basis of my love for Sita. It was really all I knew of how to love, period. I would never be asked to love in this way again, certainly not by any of the carefree scenesters whom I ogled at every show. And so it wasn't just cowardice that prevented me from cutting the cord. I genuinely feared whether I could ever truly love anyone else.`,
                                 dotKeys: {
@@ -638,7 +614,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `The`,
@@ -664,7 +639,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Final trip on a tanker`,
-                            todo: true,
                             cards: [
                                 {
                                     description: `I knew I would need to stay relatively sober to start afresh with someone new. But short of being drunk, I could never muster the courage to break up with Sita. So I drank to oblivion each night, hoping to wake up one morning and discover that I was both newly single and miraculously repulsed by the taste of alcohol.`,
@@ -690,7 +664,6 @@ export default {
                         `, you'll`,
                         {
                             anchor: `drop your anchor`,
-                            todo: true,
                             card: {
                                 description: `More than anything else, I was tired of endlessly lurching from one emotional extreme to the next. Breaking up meant that I could finally drop my "anger" and keep my mood anchored in place.`,
                                 dotKeys: {
@@ -715,7 +688,6 @@ export default {
                         `aren't you the`,
                         {
                             anchor: `faltering dear`,
-                            todo: true,
                             card: {
                                 description: `And with my slate wiped clean, I could take pains to affect an endearingly awkward persona.`,
                                 dotKeys: {
@@ -740,7 +712,6 @@ export default {
                         `They told her, "Never help a`,
                         {
                             anchor: `self-abuser`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -786,7 +757,6 @@ export default {
                             `see himself`,
                             {
                                 anchor: `as well in you`,
-                                todo: true,
                                 card: {
                                     description: `But if I was capable of injuring myself, then I also wasn't likely to have any qualms about hurting someone close to me, who now knew the worst side of me as only I once did.`,
                                     dotKeys: {
@@ -809,7 +779,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `After some trial and error, I decided the counterpoint sounds best with each part occupying the same register, which allows them to blend into a single harmonic layer. At the same time, the ear can tease apart the different timbres of each instrument, as with the banjo, fiddle, and`,
@@ -835,7 +804,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Toora-loora-li`,
-                            todo: true,
                             card: {
                                 description: [
                                     `Related to the English "toodle-oo," the Irish "tooraloo" carries the same meaning of "goodbye." Nonsensical variants are prevalent in drinking songs and`,
@@ -856,7 +824,6 @@ export default {
                         `becomes someone's`,
                         {
                             anchor: `last-ditch alibi`,
-                            todo: true,
                             card: {
                                 description: `Though my friends were only joking to say it was Garry and not me who'd committed this or that act of vandalism, on some level I accepted it as the truth. And now it also wasn't me who'd drained Sita of her confidence through the years, to leave her a crumbled wreck. It must have been Garry. I wasn't there.`,
                                 dotKeys: {
@@ -900,7 +867,6 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `After`,

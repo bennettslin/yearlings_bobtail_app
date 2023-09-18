@@ -29,7 +29,6 @@ export default {
     mixStartTime: `0:03:11.10`,
     playerReferenceTime: 2298.378,
     playerStartTime: 2295.261,
-    todo: true,
     overview: `After a night out with friends, I might shuffle on to Sita's place, slip into bed with her, and quickly doze off. But one night, Sita was waiting to confront me, having discovered my plans to break up with her. In tears, she returned the gold bracelet I'd given her at the start of our relationship, and then she kicked me out. With nowhere to go, I wandered the streets until sunrise. And so began the first of our many breakups…`,
     isDoublespeaker: true,
     lyricUnits: [
@@ -37,7 +36,6 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `All through that night, I ran Sita's bracelet through my fingers as I turned over the thoughts in my head. So in writing these lyrics, I drew inspiration from famous poems that ruminate on a still-life object, like`,
@@ -73,7 +71,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: `With the breakup, I was free to rebuild my life from scratch. I could revert to the state of childlike innocence that I'd known before the relationship, before the bullying and the mail-order cult. And so here we hear the song of the white-throated sparrow, which harkens back to the happier days of my youth.`,
                     dotKeys: {
@@ -102,7 +99,6 @@ export default {
                         `safely kept with`,
                         {
                             anchor: `bread and pocket lint`,
-                            todo: true,
                             card: {
                                 description: `
                                 Before leaving the cafeteria that evening, I stashed some bread rolls in the front pockets of my jacket for munching on the go. Now clutching the bracelet, I tuck in my hands as well to keep warm.`,
@@ -124,7 +120,6 @@ export default {
                         `but`,
                         {
                             anchor: `broken`,
-                            todo: true,
                             card: {
                                 description: `When I walked into Sita's living room that night to find her seated on the couch, the bracelet lay in a mangled heap on her coffee table. I wondered if she'd damaged it on purpose. I later realized that its dozens of intricate links locked into place only once the bracelet was snug around her wrist.`,
                                 dotKeys: {
@@ -174,7 +169,6 @@ export default {
                         `So`,
                         {
                             anchor: `polite, yet resigned`,
-                            todo: true,
                             card: {
                                 description: `Having braced for that night's confrontation, Sita deftly lobbed one accusation after another. Meanwhile, I was drunk and still trying to process the situation. So I could only respond curtly, which just added to her fluster.`,
                                 dotKeys: {
@@ -207,7 +201,6 @@ export default {
                         `I'm sorry, but I`,
                         {
                             anchor: `went through your mail`,
-                            todo: true,
                             card: {
                                 description: `Confused about why I'd grown distant, Sita snooped around on my desktop computer that day and stumbled upon some emails to friends. In the emails, I spoke of a recent crush and solicited advice on breaking up gently.`,
                                 dotKeys: {
@@ -221,7 +214,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `I figured out an`,
@@ -252,7 +244,6 @@ export default {
                     lyricLeft: [
                         {
                             anchor: `Immerse the molted form`,
-                            todo: true,
                             card: {
                                 description: `With the plot to end his relationship having succeeded, the "sober" voice of the doublespeaker pair returns to resurrect the ghost of his drunken half, whom he'd meant to sacrifice all along as an unwitting accomplice.`,
                                 dotKeys: {
@@ -266,7 +257,6 @@ export default {
                         `Returned a golden cord, this`,
                         {
                             anchor: `sole belonging signed`,
-                            todo: true,
                             card: {
                                 description: `Plopped onto moonlit streets from whereabouts unknown, the "drunken" voice of the doublespeaker pair can only recollect his past crimes. As such, he believes himself to be newly released from prison, perhaps having just retrieved from storage the gold bracelet now in his hand.`,
                                 dotKeys: {
@@ -284,7 +274,6 @@ export default {
                         {
                             // NOTE: I changed "pauper's" to "paupers'."
                             anchor: `paupers' grave`,
-                            todo: true,
                             card: {
                                 description: [
                                     `Though the breakup was successful, it happened sooner than expected, forcing my sober self to scrap his plans for a clean getaway. He's now arrived at the`,
@@ -314,7 +303,6 @@ export default {
                         `torched the`,
                         {
                             anchor: `bellyaches on suttee`,
-                            todo: true,
                             card: {
                                 description: [
                                     {
@@ -334,7 +322,6 @@ export default {
                         `for the`,
                         {
                             anchor: `well-behaved on the wing`,
-                            todo: true,
                             card: {
                                 description: `Harboring no grudges, drunken me can only surmise that after serving out his sentence without complaint, he's been granted early release for good behavior.`,
                                 dotKeys: {
@@ -348,7 +335,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `In`,
@@ -395,7 +381,6 @@ export default {
                         `As I soak in spirits amidst`,
                         {
                             anchor: `wanted ads`,
-                            todo: true,
                             card: {
                                 description: [
                                     `As drunken me wanders the Oakland streets, he stops to read flyers on telephone poles posted by bands seeking new members, like a vigilante of the`,
@@ -430,7 +415,6 @@ export default {
                     lyricLeft: [
                         {
                             anchor: `Guilt pardons`,
-                            todo: true,
                             card: {
                                 description: `As my sober self observes his drunken accomplice's lack of remorse, he can only feel pity, knowing the trauma that must linger in anyone who performed this heinous act. After all, avoiding such trauma was the reason he chose not to carry out the hit himself.`,
                                 dotKeys: {
@@ -444,7 +428,6 @@ export default {
                         `still hardened against her`,
                         {
                             anchor: `fawning, misty glance`,
-                            todo: true,
                             card: {
                                 description: `With bitterness suddenly rumbling in his heart, drunken me lashes out in defiance at the boulevard's twin street lights. Their glowing lamps have revived the memory of Sita's fearful gaze at the moment he committed his crime.`,
                                 dotKeys: {
@@ -460,7 +443,6 @@ export default {
                     lyricLeft: [
                         {
                             anchor: `hatchet man`,
-                            todo: true,
                             card: {
                                 description: [
                                     `A`,
@@ -478,7 +460,6 @@ export default {
                         `past this`,
                         {
                             anchor: `avenue Möbius`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -525,7 +506,6 @@ export default {
                         `Then if`,
                         {
                             anchor: `life were real`,
-                            todo: true,
                             card: {
                                 description: `Sita's friends weren't wrong to label me fake and pretentious. My emotions didn't feel legitimate even to myself, and so I reacted to them like an actor responding to a cue. At the time, I blamed the lingering effects of Robitussin.`,
                                 dotKeys: {
@@ -540,7 +520,6 @@ export default {
                         `And if`,
                         {
                             anchor: `night were peeled`,
-                            todo: true,
                             card: {
                                 description: [
                                     `Every now and then, I would have a Robitussin`,
@@ -581,7 +560,6 @@ export default {
                         `Just that those playful`,
                         {
                             anchor: `pups with their hateful fangs`,
-                            todo: true,
                             card: {
                                 description: [
                                     `Young`,
@@ -608,7 +586,6 @@ export default {
                         `while this supposed`,
                         {
                             anchor: `dove chafing in his cage`,
-                            todo: true,
                             card: {
                                 description: [
                                     `Meanwhile, a stressed`,
@@ -638,7 +615,6 @@ export default {
                         lyric: [
                             {
                                 anchor: `Odelay`,
-                                todo: true,
                                 card: {
                                     description: [
                                         `Sometime around twilight, a strange euphoria came over me that was likely caused by dehydration. Hence the bad`,
@@ -678,7 +654,6 @@ export default {
                         `when you really thought the`,
                         {
                             anchor: `world that simple`,
-                            todo: true,
                             card: {
                                 description: `I'd given the bracelet to Sita during the first few weeks of our relationship. I was just too inexperienced at the time to show my love in any more meaningful way. Of course, she was too inexperienced to know of any other way to validate it.`,
                                 dotKeys: {
@@ -699,7 +674,6 @@ export default {
                         `the`,
                         {
                             anchor: `gesture then`,
-                            todo: true,
                             card: {
                                 description: `I'd bought the bracelet from a jewelry store in the local mall. It cost a lot relative to my hourly wage at the time. But that was all it took for Sita to recognize my earnest intentions.`,
                                 dotKeys: {
@@ -716,7 +690,6 @@ export default {
                         `Now the`,
                         {
                             anchor: `jester teeters`,
-                            todo: true,
                             card: {
                                 description: `I was stopped by a pair of police officers that night. They judged me to be harmless and sent me on my way. I've since learned that this likely wouldn't have been the experience of my Black friends, of course.`,
                                 dotKeys: {
@@ -735,7 +708,6 @@ export default {
                         lyric: [
                             {
                                 anchor: `Mush`,
-                                todo: true,
                                 card: {
                                     description: [
                                         `Marching onward without sleep, I continue to strip away the intervening years, hoping to return to the last time I'd known untroubled bliss. And so I arrive at the first song I loved as a child, Johnny Horton's "`,
@@ -796,7 +768,6 @@ export default {
                         `of gathering up the`,
                         {
                             anchor: `suttee dust`,
-                            todo: true,
                             cards: [
                                 {
                                     description: `I imagine Sita by now to be fully immolated on the burnt rubble of our ruined relationship.`,
@@ -830,7 +801,6 @@ export default {
                         `Have I just`,
                         {
                             anchor: `killed the thing I love`,
-                            todo: true,
                             card: {
                                 description: [
                                     `While in prison for homosexuality,`,
@@ -872,7 +842,6 @@ export default {
                                 lyric: `Übermensch`,
                             },
                             properNoun: true,
-                            todo: true,
                             card: {
                                 description: [
                                     `The German philosopher`,
@@ -901,7 +870,6 @@ export default {
                     lyricRight: [
                         {
                             anchor: `digging through her innie`,
-                            todo: true,
                             card: {
                                 description: [
                                     `Some`,
@@ -926,7 +894,6 @@ export default {
                         `Then the`,
                         {
                             anchor: `guardian knot`,
-                            todo: true,
                             card: {
                                 description: [
                                     `The`,
@@ -944,7 +911,6 @@ export default {
                         `of this`,
                         {
                             anchor: `frayed cord detached`,
-                            todo: true,
                             card: {
                                 description: [
                                     `In antiquity, legend held that whosoever could unravel the tightly entangled "`,
@@ -974,7 +940,6 @@ export default {
                         `each`,
                         {
                             anchor: `attack with the proper fist`,
-                            todo: true,
                             card: {
                                 description: [
                                     `Out of frustration over conflicting desires, I start punching myself in the head. Since the left hemisphere`,
@@ -995,7 +960,6 @@ export default {
                     lyricRight: [
                         {
                             anchor: `leaked the bandage`,
-                            todo: true,
                             card: {
                                 description: `With our emotional bond now severed, Sita bled both metaphorically and literally. She'd started to experiment with cutting to ease her depression.`,
                                 dotKeys: {
@@ -1025,7 +989,6 @@ export default {
                         `my`,
                         {
                             anchor: `alias drunk, in panic`,
-                            todo: true,
                             cards: [
                                 {
                                     description: `Once drunk, I always stayed drunk until I crashed. So while I was quite used to transforming into Garry, Garry was wholly unfamiliar with turning back into me.`,
@@ -1047,7 +1010,6 @@ export default {
                         `by`,
                         {
                             anchor: `trail of crumbs`,
-                            todo: true,
                             card: {
                                 description: `Fearing upheaval ahead, I wonder if it's too late to walk back the damage done. But I couldn't find my way back if I wanted to. All night I've been nibbling on the rolls in my pocket instead of dropping a breadcrumb trail. I've traded away long-term security to satisfy my short-term hunger.`,
                                 dotKeys: {
@@ -1071,7 +1033,6 @@ export default {
                         {
                             anchor: `Garry's sole witness`,
                             properNoun: true,
-                            todo: true,
                             card: {
                                 description: `Though I really wish to plead my case, I realize that the breakup will be over with sooner if I just accept my role as the villain. And so the sober me, called up to testify for his drunken half, stays silent.`,
                                 dotKeys: {
@@ -1099,7 +1060,6 @@ export default {
                         `Though, the`,
                         {
                             anchor: `master mind`,
-                            todo: true,
                             card: {
                                 description: [
                                     `In college, my wishful thinking was that I could shunt the burden of writing`,
@@ -1124,7 +1084,6 @@ export default {
                         `a bid for greatness' sake, he's sold on as`,
                         {
                             anchor: `holy war`,
-                            todo: true,
                             card: {
                                 description: [
                                     `Most of the`,
@@ -1155,7 +1114,6 @@ export default {
                         `for`,
                         {
                             anchor: `kohl-eyed`,
-                            todo: true,
                             card: {
                                 description: [
                                     {
@@ -1168,7 +1126,6 @@ export default {
                         },
                         {
                             anchor: `houris`,
-                            todo: true,
                             card: {
                                 description: [
                                     `In the`,
@@ -1193,7 +1150,6 @@ export default {
                     lyricRight: [
                         {
                             anchor: `forgo like jewelry`,
-                            todo: true,
                             card: {
                                 description: `As these things go, Sita and I had a turbulent on-again, off-again relationship for a good while longer. During one stretch when things were looking rosier than ever, she asked for the bracelet back to wear again, which I happily obliged. Somehow I'd dented it in my pocket that night, however, creating a lasting reminder that some damages can be amended but never undone.`,
                                 dotKeys: {

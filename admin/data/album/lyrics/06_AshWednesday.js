@@ -24,7 +24,6 @@ export default {
     referenceDescription: `Darbuka in anacrusis`,
     playerStartTime: 967.569,
     mixStartTime: `0:01:03.51`,
-    todo: true,
     overview: `Catherine, my first girlfriend in college, was a nice Catholic girl and high school valedictorian, who didn't take kindly to my lack of reading habit and broke up with me right before Ash Wednesday. So I ashed my own forehead that day and tried to bump into her, hoping I might get another chance if she could picture me as a good Catholic boy. It didn't work, but I did grow into a faithful reader, and I have Catherine to thank for that.`,
     lyricUnits: [
         {
@@ -63,7 +62,6 @@ export default {
                         {
                             anchor: `O Catherine! My Catherine!`,
                             properNoun: true,
-                            todo: true,
                             card: {
                                 description: [
                                     {
@@ -112,7 +110,6 @@ export default {
                     lyric: [
                         {
                             anchor: `where it commenced`,
-                            todo: true,
                             card: {
                                 description: `The relationship with Catherine began much like my friendship with Sasha had years earlier. I latched onto the first person to show me kindness in a new environment, and then I tried to make myself indispensable in small ways.`,
                                 dotKeys: {
@@ -123,7 +120,6 @@ export default {
                         `: in my`,
                         {
                             anchor: `bookless room`,
-                            todo: true,
                             card: {
                                 description: `When Catherine visited my apartment for the first time, she glanced around and remarked that she didn't see any books. "I don't read," I explained, only partly in jest.`,
                                 dotKeys: {
@@ -140,7 +136,6 @@ export default {
                         {
                             anchor: `Ulysses' tomb`,
                             properNoun: true,
-                            todo: true,
                             card: {
                                 description: [
                                     `A reference to the classic "`,
@@ -170,7 +165,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `For this song about two people who couldn't be more different, I placed`,
@@ -203,7 +197,6 @@ export default {
                         `First we`,
                         {
                             anchor: `laid Tourette's`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -245,7 +238,6 @@ export default {
                         `the`,
                         {
                             anchor: `last day she rose`,
-                            todo: true,
                             card: {
                                 description: [
                                     {
@@ -259,7 +251,6 @@ export default {
                         `up and left, hers the`,
                         {
                             anchor: `sole assent`,
-                            todo: true,
                             card: {
                                 description: `It was Catherine who wanted the breakup, not me. But she was also leaving me behind in another sense, since her "soul" was the only one awaiting "ascent."`,
                                 dotKeys: {
@@ -278,7 +269,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `The shrieking`,
@@ -320,7 +310,6 @@ export default {
                         `I purge, with a`,
                         {
                             anchor: `dirge she'd deride`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -364,7 +353,6 @@ export default {
                         `Oh Catherine,`,
                         {
                             anchor: `pressed for an opinion`,
-                            todo: true,
                             cards: [
                                 {
                                     description: `I would sometimes ask Catherine for honest feedback on my lyrics, hoping that one day I could write a song to tug on her heartstrings.`,
@@ -389,7 +377,6 @@ export default {
                         `"My,`,
                         {
                             anchor: `what wit, man`,
-                            todo: true,
                             card: {
                                 description: `I picture Catherine responding in her droll manner, with a pun that salutes my effort to channel "Walt Whitman."`,
                                 dotKeys: {
@@ -401,7 +388,6 @@ export default {
                         `,"`,
                         {
                             anchor: `putting down her Joyce`,
-                            todo: true,
                             card: {
                                 description: [
                                     `Her compliment is less than sincere, however, since referencing a poet studied by middle schoolers is hardly an impressive feat. And so, feeling annoyed at being made to put down the Joyce novel she's reading, Catherine amuses herself by putting`,
@@ -426,7 +412,6 @@ export default {
                         `with`,
                         {
                             anchor: `"Joyce" oblivious`,
-                            todo: true,
                             card: {
                                 description: [
                                     `Of course, not knowing that I couldn't be the next Joyce is why I dared to try. And so the idea began to congeal in my head that I could do for rock music what`,
@@ -448,7 +433,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `Maqam is distinguished by its`,
@@ -499,7 +483,6 @@ export default {
                         `who tried but failed to win her heart`,
                         {
                             anchor: `poised with brains`,
-                            todo: true,
                             card: {
                                 description: `Catherine undervalued the artistic strengths that I'd always counted on to cover up my many weaknesses. Which made me realize that if I were ever to be worth keeping, then I simply couldn't have any weaknesses.`,
                                 dotKeys: {
@@ -514,7 +497,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `While a major third can be divided into equal whole steps in Western music, a minor third can only be divided unequally between whole and half. But quarter tones allow a minor third to be traversed in two equal steps, creating the sensation of a squished major third. I liked how this confused my ears, and I went overboard with these rapid-fire minor-third runs on the`,
@@ -541,7 +523,6 @@ export default {
                         `And as I pace, stranded here`,
                         {
                             anchor: `outside her Shelta`,
-                            todo: true,
                             card: {
                                 description: [
                                     `The`,
@@ -581,7 +562,6 @@ export default {
                         `in`,
                         {
                             anchor: `famous raincoat`,
-                            todo: true,
                             card: {
                                 description: [
                                     `Catherine was the one who introduced me to the music of Leonard Cohen. It was her impassioned reading of his song "`,
@@ -599,7 +579,6 @@ export default {
                         },
                         {
                             anchor: `unknown to roam`,
-                            todo: true,
                             cards: [
                                 {
                                     description: `If Catherine is a figurative Traveller, then I am unwelcome to follow her itinerant community that is well-known to roam.`,
@@ -647,7 +626,6 @@ export default {
                         `my`,
                         {
                             anchor: `girl in glasses`,
-                            todo: true,
                             card: {
                                 description: [
                                     `The critic`,
@@ -664,7 +642,6 @@ export default {
                         },
                         {
                             anchor: `went clear`,
-                            todo: true,
                             card: {
                                 description: [
                                     `After Catherine cleared me from her life, my hope was to win her back by reading books. Since she loved Leonard Cohen, I started with`,
@@ -692,7 +669,6 @@ export default {
                         `—`,
                         {
                             anchor: `my Tekakwitha`,
-                            todo: true,
                             card: {
                                 description: [
                                     {
@@ -730,7 +706,6 @@ export default {
                         `for I lack the wit to spare a`,
                         {
                             anchor: `safe Algonquin abode`,
-                            todo: true,
                             card: {
                                 description: [
                                     `Kateri Tekakwitha was born to a`,
@@ -771,7 +746,6 @@ export default {
                         `Well yes, I`,
                         {
                             anchor: `faked this X`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -812,7 +786,6 @@ export default {
                         `Well no, I know it's wrong, but I did`,
                         {
                             anchor: `burn my palms`,
-                            todo: true,
                             card: {
                                 description: [
                                     `The ash used on Ash Wednesday comes from burning the palm branches that were blessed on the previous year's`,
@@ -845,7 +818,6 @@ export default {
                                 {
                                     anchor: `Catherine vaut bien une messe`,
                                     properNoun: true,
-                                    todo: true,
                                     card: {
                                         description: [
                                             {
@@ -877,7 +849,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `The rainstick, rustling papers, and tambourine mimic the sound of a wet and windy`,
@@ -908,7 +879,6 @@ export default {
                         `us wretched souls`,
                         {
                             anchor: `cursed to be born`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -962,7 +932,6 @@ export default {
                         `to wear it like a`,
                         {
                             anchor: `tragic mask`,
-                            todo: true,
                             card: {
                                 description: [
                                     `In time I came to see`,
@@ -989,7 +958,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `Originally, this three-part counterpoint for mandolins and`,
@@ -1026,7 +994,6 @@ export default {
                         `in`,
                         {
                             anchor: `spreading mole`,
-                            todo: true,
                             card: {
                                 description: [
                                     `My ash was smudged by day's end, resembling the kind of large, amorphous mole that can develop into`,
@@ -1060,7 +1027,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `While fleshing out the lyrics in this chorus, I noticed that a handful of words in the first stanza are`,

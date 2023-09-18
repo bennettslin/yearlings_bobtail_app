@@ -25,7 +25,6 @@ export default {
     referenceDescription: `Piano in measure 1`,
     mixStartTime: `0:01:22.94`,
     playerStartTime: 3332.826,
-    todo: true,
     overview: `After slogging through the day under a cloud of despair, I would crawl into bed and lie awake until exhaustion overtook me. Every night I would then dream of reuniting with Sita, only to wake in a panicked sweat as the reality came roaring back that I'd lost her forever. I lived in dread of this cruel trick played by my subconscious mind, and I had no idea when the torment would end. The answer, I feared, was never.`,
     lyricUnits: [
         {
@@ -56,7 +55,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `During the years afterward when I was trying to be good again, I kept digging further into my past to figure out where things went wrong. So for this song, I decided to revisit the sonic textures of all the other songs on the album in reverse, starting with the`,
@@ -167,7 +165,6 @@ export default {
                         `Did I`,
                         {
                             anchor: `ever live another life`,
-                            todo: true,
                             card: {
                                 description: `As dreams often go, I have no memory or even awareness of having lived another life in the intervening years. It's clear that Sita and I haven't stayed together, yet I can't recall any time spent apart. Of course, according to the Buddhist and Hindu faiths, I've lived many other lives quite literally, in past incarnations.`,
                                 dotKeys: {
@@ -410,7 +407,6 @@ export default {
                         `My hundred thousandth dream, on the`,
                         {
                             anchor: `cliffs of El Cerrito`,
-                            todo: true,
                             card: {
                                 description: [
                                     `The city of`,
@@ -442,7 +438,6 @@ export default {
                         `Why does my`,
                         {
                             anchor: `last thought`,
-                            todo: true,
                             card: {
                                 description: `As these ominous words from Sita wrench me from my bliss, I realize now that this is only a dream. And moreover, it may be my last.`,
                                 dotKeys: {
@@ -479,7 +474,6 @@ export default {
                         `She'll always`,
                         {
                             anchor: `come to take me`,
-                            todo: true,
                             cards: [
                                 {
                                     description: `I now understand that Sita is my most cherished memory. And as such, she was always going to be the one chosen by my subconscious to ease my fears as I part from this world.`,
@@ -516,7 +510,6 @@ export default {
                     lyric: [
                         {
                             anchor: `When you'll be mine`,
-                            todo: true,
                             card: {
                                 description: `If this is only a dream, then what I'm holding onto isn't really Sita, but only a memory of her. And if all I have left is a memory, then somewhere along the way I must have lost the real Sita. So as I now exit this world, I hold onto the possibility that I may find her again in the next.`,
                                 dotKeys: {
@@ -531,7 +524,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `The`,
@@ -574,7 +566,6 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: `In New York City I met Liz, with whom things ended no less painfully. So in making this audio webcomic, I was faced with a dilemma. I wanted to stay genuine to the album, given how fresh my wounds were when I'd made it, while being honest that I'd since moved on and was now devastated over a different breakup. My solution was to depict the events as a stage play, with the role of Sita played by an Indian version of Liz. The resulting character looks like neither, which should come as a relief to both.`,
                     dotKeys: {
