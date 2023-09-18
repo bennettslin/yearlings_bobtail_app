@@ -25,14 +25,18 @@ export default {
     referenceDescription: `Piano in measure 1`,
     mixStartTime: `0:01:22.94`,
     playerStartTime: 3332.826,
-    overview: `After slogging through the day under a cloud of despair, I would crawl into bed and lie awake until exhaustion overtook me. Every night I would then dream of reuniting with Sita, only to wake in a panicked sweat as the reality came roaring back that I'd lost her forever. I lived in dread of this cruel trick played by my subconscious mind, and I had no idea when the torment would end. The answer, I feared, was never.`,
+    todo: true,
+    problem: `Review one more time.`,
+    overview: `After slogging through the day under a cloud of despair, I'd crawl into bed and lie awake until exhaustion overtook me. And each night I'd dream of reuniting with Sita, only to wake in a panicked sweat as the reality came roaring back that I'd lost her forever. I lived in dread of this cruel trick played by my unconscious mind, and I had no idea when the torment would end. The answer, I feared, was never.`,
     lyricUnits: [
         {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
+                problem: `Last sentence is awkward.`,
                 card: {
-                    description: `This is the other song on the album that was an original Yearlings staple. As with "M," I changed the arrangement but kept the lyrics. I suppose it's telling of my relationship with Sita that I only ever wrote one romantic song for her, and it's about the dreams that would haunt me as an old man filled with regret for having lost her.`,
+                    description: `This is the other song on the album that was an original Yearlings staple. As with "M," I changed the arrangement but kept the lyrics. I suppose it's telling of my relationship with Sita that I only ever wrote one romantic song for her, and it happens to be about the dreams that will haunt me as an old man filled with regret for having lost her.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGCRAFT]: true,
@@ -476,7 +480,7 @@ export default {
                             anchor: `come to take me`,
                             cards: [
                                 {
-                                    description: `I now understand that Sita is my most cherished memory. And as such, she was always going to be the one chosen by my subconscious to ease my fears as I part from this world.`,
+                                    description: `I now understand that Sita is my most cherished memory. And as such, she was always going to be the one chosen by my unconscious mind to ease my fears as I part from this world.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [OBSERVATION]: true,
