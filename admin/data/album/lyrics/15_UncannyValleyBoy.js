@@ -30,12 +30,16 @@ export default {
     referenceDescription: `Acoustic guitar in measure 1`,
     mixStartTime: `0:01:18.46`,
     playerStartTime: 2722.629,
+    todo: true,
+    problem: `Too many sentences of the same length, which makes the flow choppy.`,
     overview: `Upon learning of my brother's autism, my parents were too harried to notice I was being bullied at school. In guilt, they later indulged every whim I had to find my own path. But as I got older, they grew concerned that I wasn't maturing as I went. On top of this, they were crushed when I left Sita, whom they adored. Naturally, I wasn't happy to disappoint them. Still, I had a master plan to follow, and I wasn't about to change my ways.`,
     lyricUnits: [
         {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
+                problem: `Review one more time.`,
                 cards: [
                     {
                         description: [
@@ -44,7 +48,7 @@ export default {
                                 anchor: `uncanny valley`,
                                 wiki: `Uncanny_valley`,
                             },
-                            `theorizes that as human replicas take on more lifelike characteristics, we only grow further repulsed, insofar as they remain less than convincing as actual human beings. And as I grew older while remaining less than convincing as a grownup, it was reasonable to ask if this "Valley boy" now elicited the same revulsion.`,
+                            `theorizes that we humans grow further repulsed by human replicas as they take on more lifelike characteristics, insofar as they remain less than perfectly convincing. And as I grew older while remaining less than convincing as a grownup, it was reasonable to ask if this "Valley boy" now elicited the same revulsion.`,
                         ],
                         dotKeys: {
                             [OBSERVATION]: true,
@@ -173,7 +177,7 @@ export default {
                                             wiki: `The_Giving_Tree`,
                                         },
                                     },
-                                    `is a children's book about a tree's nurturing love for a boy. As the boy grows into a man, the tree's gifts to him become increasingly self-sacrificing in nature. The story can be understood as an allegory for codependent relationships.`,
+                                    `is a children's book about a tree's nurturing love for a boy. As the boy grows into a man, the tree's gifts to him become increasingly self-sacrificing in nature. The story is understood by some as an allegory for codependent relationships.`,
                                 ],
                             },
                         },
@@ -326,8 +330,10 @@ export default {
                         `,`,
                         {
                             anchor: `earth right now your tourist store`,
+                            todo: true,
+                            problem: `Maybe too wordy, which obscures the meaning.`,
                             card: {
-                                description: `My mother tried to instill Buddhist ideals of renouncing materialism even as she filled my head with visions of becoming a great artist. The mail-order cult then piled on with the belief that I was a mere visitor to this planet. The lasting effect on my psyche was that I became unaffected by earthly concerns while working tirelessly "to restore" my "birthright" of artistic renown.`,
+                                description: `My mother instilled in me Buddhist ideals of renouncing materialism, even as she filled my head with visions of becoming a great artist. The mail-order cult then piled on with the belief that I was a mere visitor to this planet. The lasting effect on my psyche was that I became unaffected by earthly concerns while working tirelessly "to restore" my "birthright" of artistic renown.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -421,6 +427,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
+                problem: `Review one more time.`,
                 card: {
                     description: [
                         `The`,
@@ -433,7 +441,7 @@ export default {
                             anchor: `Village Green Preservation Society`,
                             wiki: `The_Kinks_Are_the_Village_Green_Preservation_Society`,
                         },
-                        `was my model for this album. As such, the songs all had to be memorable pop tunes, contain zero filler, and represent a diversity of musical styles. And each one would clock in at three minutes or so, with none over four. While there was no one-to-one mapping, this song was clearly the "`,
+                        `was my model for this album. As such, the songs all had to be memorable pop tunes, while containing zero filler and representing a diversity of musical styles. And each one would clock in at three minutes or so, with none over four. While there was no one-to-one mapping, this song was clearly the "`,
                         {
                             anchor: `Wicked Annabella`,
                             wiki: `Wicked_Annabella`,
@@ -727,6 +735,8 @@ export default {
                         `smugly prepped to`,
                         {
                             anchor: `haze the new latecomers`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
                                     `Some organizations put new recruits through degrading`,
@@ -734,7 +744,7 @@ export default {
                                         anchor: `hazing rituals`,
                                         wiki: `Hazing`,
                                     },
-                                    `. After enduring such abuse for so long myself, I finally conceded that I could't have toughened up any other way. And now I had no qualms about dishing it out to others.`,
+                                    `. After enduring such abuse for so long, I finally conceded that I could't have toughened up any other way. And now I had no qualms about dishing it out to others.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1539,7 +1549,7 @@ export default {
                                 anchor: `Maranatha`,
                                 card: {
                                     description: [
-                                        `But in my chant, the syllables gradually shift to form the holy name of Mara. And while Valmiki embraced Eastern devotion, salvation for me lies in the embrace of Western women. And so my chant ends on a phrase of Western faith. Occurring once in the`,
+                                        `But in my chant, the syllables gradually shift to form the holy name of Mara. And while Valmiki embraced Eastern devotion, salvation for me lies in the embrace of Western women. And so my chant ends on a phrase of Western faith: Occurring once in the`,
                                         {
                                             anchor: `New Testament`,
                                             wiki: `New_Testament`,
