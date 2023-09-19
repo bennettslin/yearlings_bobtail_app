@@ -111,7 +111,7 @@ export default {
                             anchor: `Odin`,
                             properNoun: true,
                             card: {
-                                description: `As a child, I didn't pay much attention to Odin. He just seemed to come with the house. So when Sita and I adopted a cat together, I was surprised by how naturally the instinct to nurture a pet came to me. Years later after my failure to nurture the relationship led to our final breakup, I thought of Odin often.`,
+                                description: `As a child, I didn't pay much attention to Odin. He just seemed to come with the house. So when Sita and I adopted a cat together, I was surprised by how naturally the instinct to nurture a pet came to me. Years later, after my failure to nurture the relationship led to our final breakup, I thought of Odin often.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -685,8 +685,10 @@ export default {
                         `"So all your`,
                         {
                             anchor: `leads have left`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `For several years, my modus operandi was to stay with Sita right up until I had another option to pursue. Each time I left, Sita would languish for a few months before summoning the courage to contact me. Upon learning that things hadn't worked out with the other woman, which they never did, she would then cajole me back. But now our situations were reversed. I had no more options coming down the pike, while Sita had met someone with whom she intended to stay.`,
+                                description: `For several years, my modus operandi was to stay with Sita right up until I had another option to pursue. Each time I left, Sita would languish for a few months before summoning the courage to contact me. Then, upon discovering that things hadn't worked out with the other woman, she'd cajole me back. But now our situations were reversed: I had no more options coming down the pike, while Sita had met someone with whom she intended to stay.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -701,8 +703,10 @@ export default {
                         `Someday you'll breathe again; for one,`,
                         {
                             anchor: `you have to`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `Overcome with jealousy and heartbreak, I had no excuse to complain. I'd caused Sita this exact torment countless times. So in our last phone conversation, I just meekly asked how she'd managed it. She replied that she didn't know. There were days when she just didn't want to live. And yet, each day would pass all the same, pushing into the next. Slowly, days would add up to weeks, then weeks would turn into months, until the excruciating pain dulled into an aching sadness.`,
+                                description: `Overcome with jealousy and heartbreak, I had no excuse to complain; I'd caused Sita this exact torment countless times. So in our last phone conversation, I just meekly asked how she'd managed it. She replied that she didn't know. There were days when she just didn't want to live— and yet, each day would pass all the same. Slowly, days added up to weeks, then weeks turned into months, until the excruciating pain dulled into an aching sadness.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -905,8 +909,10 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
+                problem: `Review one more time.`,
                 card: {
-                    description: `I stayed vegan for five years. I quit after moving to New York City because Sasha ate meat. I guess it's the nature of who I am that my personal identity will always be the first thing I jettison whenever a chance for romance is at stake. Still, these days I'm mostly vegetarian. It's both easier and healthier.`,
+                    description: `I stayed vegan for five years. But after moving to New York City, I quit because Sasha ate meat. I guess it's the nature of who I am that my personal identity will always be the first thing I jettison whenever a chance for romance is at stake. Still, these days I'm mostly vegetarian. It's both easier and healthier.`,
                     dotKeys: {
                         [AFTERWORD]: true,
                     },

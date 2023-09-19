@@ -411,6 +411,8 @@ export default {
                         `My hundred thousandth dream, on the`,
                         {
                             anchor: `cliffs of El Cerrito`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
                                     `The city of`,
@@ -418,7 +420,7 @@ export default {
                                         anchor: `El Cerrito`,
                                         wiki: `El_Cerrito,_California`,
                                     },
-                                    `has a sprawling hillside with hiking trails, secluded groves, and a view of the San Francisco Bay. In my happier days with Sita, it was a prime choice for a weekend outing.`,
+                                    `has a sprawling hillside with hiking trails, secluded groves, and a view of the San Francisco Bay. When Sita and I were together, it was our prime choice for a weekend outing.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
