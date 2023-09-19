@@ -30,7 +30,9 @@ export default {
     mixStartTime: `0:00:00.27`,
     playerReferenceTime: 2498.410,
     playerStartTime: 2496.296,
-    overview: `The on-again, off-again years gave me enough emotional distance to understand how my behavior had degenerated so quickly into cruelty. Hoping for an easy breakup, I would act up in small ways. But Sita was just as determined to work it out, and she would endure. Which then lowered the threshold for how awfully I should behave next time… and on and on. In time I came to see how thoroughly she'd tied her sense of worth to our relationship. I was fighting for me. She was fighting for us.`,
+    todo: true,
+    problem: `Make sure the "ante" sentence is correct.`,
+    overview: `The on-again, off-again years gave me enough emotional distance to understand how my behavior had degenerated so easily into cruelty. Hoping for an easy breakup, I would act up in small ways— but Sita was just as determined to work it out, and she would endure. Which then raised the ante for how awfully I should behave next time… and so on. In time I came to see how thoroughly her sense of worth was tied to our relationship. I was fighting for me. She was fighting for us.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -71,7 +73,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: `Having settled into an unhealthy power dynamic early on, Sita and I failed to grow as individuals. But I can see now that she was just waiting for me to grow up. As long as we were together, she couldn't do it on her own. And so the humming heard here is the sound of her waiting in quiet resignation.`,
+                    description: `Having settled into an unhealthy power dynamic early on, Sita and I failed to grow as individuals. But I can see now that she was just waiting for me to grow up; as long as we were together, she couldn't do it on her own. And so the humming heard here is the sound of her waiting in quiet resignation.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGCRAFT]: true,
@@ -165,8 +167,10 @@ export default {
                         `So baby, tell me then, when you`,
                         {
                             anchor: `take in her breasts`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `It scared me, far more than I let on, to gamble away the familiar warmth of Sita's love for a mere chance at romance with some new woman. I often wondered if this fear then manifested in a hormonal craving for nurture over pleasure, because I was always struck by how motherly these women's naked bodies initially felt to me.`,
+                                description: `It scared me, far more than I let on, to gamble away the familiar warmth of Sita's love for a mere chance with some new woman. I often wondered if this fear then manifested in a hormonal craving for nurture over pleasure, because I was always struck by how motherly these women's naked bodies initially felt to me.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -186,8 +190,10 @@ export default {
                         `Is it just her`,
                         {
                             anchor: `womb you bed`,
+                            todo: true,
+                            problem: `Last sentence doesn't flow well. Two "to"s in a row.`,
                             card: {
-                                description: `Of course, Sita herself was under no such illusion about my innocence. She knew full well that I just wanted to sleep with more women, to compensate for being the less sexually experienced one in our relationship.`,
+                                description: `Of course, Sita herself was under no such illusion about my innocence. She knew full well that I wanted to sleep with more women, to make up for being the less sexually experienced one in our relationship.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -243,6 +249,8 @@ export default {
                     lyric: [
                         {
                             anchor: `spurned at first`,
+                            todo: true,
+                            problem: `Make sure last sentence is clear that I'm talking about the distant past.`,
                             card: {
                                 description: `Given the seeming ease with which I could now attract other women, I grew further indignant about the endless hoops I'd been made to jump through to win Sita over.`,
                                 dotKeys: {
@@ -264,14 +272,16 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
+                problem: `Review one more time.`,
                 card: {
                     description: [
-                        `Every time we got back together, Sita would reassert our status as a couple by insisting I bring her along to see my friends, despite the humiliation of facing the very gang that had emboldened me to leave her. The circus`,
+                        `Every time we got back together, Sita would reassert our status as a couple by insisting I bring her along to see my friends— the very ones who'd emboldened me to leave her. The circus`,
                         {
                             anchor: `calliope`,
                             wiki: `Calliope_(music)`,
                         },
-                        `heard here thus captures the feeling of parading around like a sad clown once more. I created it by applying a tape-saturation effect on a melodica track.`,
+                        `heard here thus captures the humiliation of parading like a sad clown. I created it by applying a tape-saturation effect on a melodica track.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -291,8 +301,10 @@ export default {
                     lyric: [
                         {
                             anchor: `all the points`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `After Sita's initial rejection of me, we spent a year getting to know each other as friends, during which time I still tried to impress her without appearing as such. One day I solved her friend's Rubik's Cube, a skill I'd picked up during my first five-year plan. While her friend raved, I meekly shrugged, as Sita sat and smiled. I'd become a puzzle for her to solve.`,
+                                description: `After Sita initially rejected me, we spent a year getting to know each other as friends, though I still tried to impress her without appearing as such. One day I solved her friend's Rubik's Cube, a skill I'd picked up during my first five-year plan. As her friend raved, I merely shrugged, while Sita sat and smiled. I'd become a puzzle for her to solve.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -307,8 +319,10 @@ export default {
                     lyric: [
                         {
                             anchor: `plunders past`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `The sting I felt in having been initially rejected by Sita was aggravated by the later revelation of her sexual past. And all the more so since it was precisely the painful lessons she took away from these past encounters that made her wary of my initial advances. Of course, I missed the irony of being the one who would surely end up providing the most painful lesson by far.`,
+                                description: `The sting I felt in having been initially rejected by Sita was aggravated by the later revelation of her sexual past. And all the more so since it was precisely the painful lessons she took away from those past encounters that made her wary of my advances. Of course, I missed the irony of being the one who'd end up providing the most painful lesson by far.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -386,9 +400,11 @@ export default {
                         `as the sole`,
                         {
                             anchor: `keeper of his sheep herd`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
-                                    `A keeper in the sense of being the one who tends to the herd, as well as the only one to keep from`,
+                                    `A keeper in the sense of being both the one who tends to the herd, as well as the only one to keep from`,
                                     {
                                         isEmphasis: true,
                                         lyric: `among`,
@@ -472,7 +488,7 @@ export default {
                         {
                             anchor: `ticklish piglet`,
                             card: {
-                                description: `Perversely, Sita and I were at our best during the months right after getting back together. She could enjoy the knowledge of being the better woman, while I got to bask in the afterglow of my latest sexual exploit.`,
+                                description: `Perversely, Sita and I were always at our best during the month or so after getting back together. She could enjoy the knowledge of being the better woman, while I got to bask in the afterglow of my latest sexual exploit.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -510,9 +526,11 @@ export default {
                         `A`,
                         {
                             anchor: `shank's dustless silhouette`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             cards: [
                                 {
-                                    description: `During our on-and-off years, I would habitually return to Sita, promising to mend my ways. Things would be peachy for a while, after which I would run off yet again with another woman. I was like a reformed convict who might any day relapse without warning, taking with him the shank he'd left on the windowsill to collect dust.`,
+                                    description: `During our on-and-off years I would habitually return to Sita, promising to mend my ways. Things would be peachy for a while— after which I would run off with yet another woman. I was like a reformed convict who might relapse at any time without warning, taking with him the shank he'd left on the windowsill to collect dust.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [OBSERVATION]: true,
@@ -536,7 +554,7 @@ export default {
                         {
                             anchor: `severed stinger`,
                             card: {
-                                description: `At the time, I failed to appreciate what it meant for Sita to have given her virginity to me. She had to make things work because a part of me was forever lodged inside her, like a barbed stinger left under the skin after a bee sting.`,
+                                description: `At the time I failed to appreciate what it meant for Sita to have given her virginity to me. She had to make things work because a part of me was forever lodged inside her, like a barbed stinger left under the skin after a bee sting.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -552,8 +570,10 @@ export default {
                         `But other nights you'd`,
                         {
                             anchor: `lap my wound clean`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `After vaginal sex, I would go down on Sita until she reached orgasm. She mentioned this as an example of my thoughtfulness once, when I asked her what she saw in me that was worth holding onto. It seemed like proof that I had no actual redeeming qualities.`,
+                                description: `Since Sita couldn't climax through vaginal sex, I would go down on her afterward until she did. She mentioned this once as an example of my thoughtfulness, when I asked her what she saw in me that was worth holding onto. It seemed like proof that I had no truly redeeming qualities.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -640,7 +660,7 @@ export default {
                                         anchor: `honeybee`,
                                         wiki: `Honey_bee`,
                                     },
-                                    `will die after stinging someone, as its stinger is connected to vital organs. Similarly, in having given my virginity to Sita in return, I realized too late that a vital part of me could never be recovered apart from her as well.`,
+                                    `will die after stinging someone, as its stinger is connected to vital organs. Similarly, in having given my virginity to Sita in return, I realized too late that a part of me could never be recovered apart from her as well.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -651,6 +671,8 @@ export default {
                         `? Come for me? At`,
                         {
                             anchor: `thirty-three`,
+                            todo: true,
+                            problem: `Third sentence maybe runs on too much.`,
                             card: {
                                 description: [
                                     `I often joked about killing myself at`,
@@ -658,7 +680,7 @@ export default {
                                         anchor: `thirty-three`,
                                         wiki: `Chronology_of_Jesus`,
                                     },
-                                    `, the age at which Jesus was crucified. I hated the idea of getting older, and clearly this is all the time one needs to make an impact on the world. So when Sita asked me to specify the age at which I would come back for her in accordance with our little pact, I answered thirty-three. The subtext was understood.`,
+                                    `, the age at which Jesus was crucified. I hated the idea of getting older, and clearly this is all the time one needs to make an impact on the world. So when Sita asked me to specify the age at which I might come back for her in accordance with our little pact, I answered thirty-three. The subtext was understood.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -709,8 +731,10 @@ export default {
                         `, your`,
                         {
                             anchor: `fear of never dying`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `I also hadn't settled the issue of whether an afterlife was even preferable. Though Sita had no ready answers, she invited me to perform Hindu worship with her, which supplemented what I was learning in my religious studies courses. I found comfort in Hinduism's sprawling pantheon of deities and avatars. It just seemed like the more details there are to learn, the more ways there are to get lost in the divine.`,
+                                description: `I also hadn't settled the issue of whether an afterlife was even preferable. Though Sita had no ready answers, she taught me her Hindu beliefs, which supplemented what I was learning in my religious studies courses. I found comfort in Hinduism's sprawling pantheon of deities and avatars. It just seemed like the more details there are to learn, the more ways there are to get lost in the divine.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -720,8 +744,10 @@ export default {
                         `, and`,
                         {
                             anchor: `sadness for what it was`,
+                            todo: true,
+                            problem: `Doesn't flow well into last sentence.`,
                             card: {
-                                description: `As friends, Sita and I got along well because we were both sad people. But in hindsight, my sadness was a product of circumstance, whether from bullying in my youth, or from loneliness as I got older. Sita, on the other hand, suffered from clinical depression. And as I learned to be proactive in dealing with my moods, I grew impatient with her for being incapable of the same.`,
+                                description: `As friends, Sita and I got along well because we were both sad people. But in hindsight, my sadness was a product of circumstance, whether from bullying in my youth, or from loneliness as I got older. Sita, on the other hand, suffered from clinical depression. And as I learned to be proactive in dealing with my moods, I grew impatient with her for being incapable of doing the same.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -743,6 +769,8 @@ export default {
                                 `'s your priority`,
                             ],
                             properNoun: true,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
                                     `As I continued to work on`,
@@ -750,7 +778,7 @@ export default {
                                         isItalic: true,
                                         lyric: `Bobtail`,
                                     },
-                                    `, my night terrors grew less frequent, and my misery subsided. Recognizing this boon for what it was, I became further subsumed in my ambitions, which made me even more inattentive to Sita's needs.`,
+                                    `, my night terrors grew infrequent, and my misery subsided. Seeing this for the boon it was, I became further subsumed in my ambitions, which made me even less attentive to Sita's needs.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -766,7 +794,7 @@ export default {
                         {
                             anchor: `I'll gladly wait`,
                             card: {
-                                description: `But Sita encouraged my artistic pretensions, believing them to reflect positively on her as well. Though she was uninterested in the local scene, she still enjoyed being seen as the one going home with me after a show.`,
+                                description: `But Sita encouraged my artistic pretensions, believing them to reflect positively on her as well. Though she was uninterested in the local scene, she still enjoyed being the one to go home with me after a show.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -781,8 +809,10 @@ export default {
                         `And darling, don't you worry, these were only`,
                         {
                             anchor: `practice cuts`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `When Sita first asked about the scars on my forearm, I replied wryly that they were just for practice. Years later when I expressed concern after she'd tried cutting for herself, she replied with the same assurance. The message was clear that I was the cause in more ways than one.`,
+                                description: `When Sita first asked about the scars on my forearm, I wryly replied that they were just for practice. Years later, when I expressed concern after she'd tried cutting for herself, she gave me the same assurance. The message was clear: I was the cause in more ways than one.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
