@@ -39,6 +39,8 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
+                problem: `Last sentence should make it more clear that Miriam planned to break up with me. Also, avoid two "with"s in a row.`,
                 card: {
                     description: `Once when I was a child, a playmate asked if I knew what cremation was. I didn't, but I assumed it must be fun and tasty. Of course, the horrifying truth was revealed to me a moment later. I thought this was the perfect metaphor for a song about the seemingly innocent day trip that ended with Miriam breaking up with me.`,
                     dotKeys: {
@@ -169,6 +171,8 @@ export default {
                     lyricRight: [
                         {
                             anchor: `Atavist`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
                                     `An`,
@@ -176,7 +180,7 @@ export default {
                                         anchor: `atavism`,
                                         wiki: `Atavism`,
                                     },
-                                    `is a genetic trait that resurfaces after several generations. Though I wasn't autistic myself, it still lurked in my genes, ready to spring at any time on my children, on my grandchildren, on my grandchildren's children…`,
+                                    `is a genetic trait that resurfaces after several generations. Though I wasn't autistic myself, it still lurked in my genes, ready to spring at any time on my children. Or else, on my grandchildren. Or on their children…`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -257,6 +261,8 @@ export default {
                         `an everlasting`,
                         {
                             anchor: `doublespeaker`,
+                            todo: true,
+                            problem: `Just sounds awkward in general. Maybe there's a better word than "discrepancy."`,
                             card: {
                                 description: `While I did my best to adopt an angelic personality, my reputation preceded me by that point. Miriam knew about the drunken incidents. And I must have known that she knew. But I never volunteered an explanation for the discrepancy, and she never asked for one. I guess she just accepted it as part of the adventure.`,
                                 dotKeys: {
@@ -356,6 +362,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
+                problem: `Just doesn't flow too well.`,
                 card: {
                     description: `My original plan for this song was to use doublespeaker rhyme to contrast Miriam's inner thoughts with mine. But I kept forgetting which column of lyrics was whose, making me realize there wasn't any real distinction. We were of the same mind that the relationship would fail. One of us just had a better idea of when.`,
                     dotKeys: {
@@ -455,6 +463,8 @@ export default {
                         `Though, she`,
                         {
                             anchor: `ponders the children`,
+                            todo: true,
+                            problem: `Final sentence needs to sound more clear.`,
                             card: {
                                 description: [
                                     `My mother once advised me not to have children, given my brother's autism and my father's`,
@@ -474,9 +484,11 @@ export default {
                     lyricRight: [
                         {
                             anchor: `Trophy bronzed`,
+                            todo: true,
+                            problem: `Does the last sentence even make sense? What is this bigger thing it grew into, exactly?`,
                             cards: [
                                 {
-                                    description: `The first time I had sex with a woman other than Sita, I left the used condom on my nightstand for days. Like a proud parent who bronzes their baby's shoes, I was awestruck that this tiny thing I'd squirted out had grown into something so much bigger.`,
+                                    description: `The first time I had sex with a woman other than Sita, I left the used condom on my nightstand for days. Like a proud parent who bronzes their baby's shoes, I was awestruck that this tiny thing I'd squirted out had grown into something bigger.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [OBSERVATION]: true,
@@ -525,7 +537,7 @@ export default {
                         {
                             anchor: `unforeskinned virgin`,
                             card: {
-                                description: `I learned a long time ago not to wear identity markers or hold personal convictions that would limit the size of my dating pool. I think this is why I've never gotten a tattoo. I needed to be a blank slab for each new woman to shape me into whatever she liked. So here I imagine that before dating Miriam, I'd reset myself to a default state of being sexually inexperienced and having an intact foreskin.`,
+                                description: `I learned a long time ago not to wear identity markers or hold personal convictions that would limit the size of my dating pool. I think this is why I've never gotten a tattoo. I needed to be a blank slab for each new woman to shape into whatever she liked. So here I imagine that before dating Miriam, I'd reset myself to a default state of being sexually inexperienced and having an intact foreskin.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -542,7 +554,7 @@ export default {
                             anchor: `self-servicing cleric surgeon`,
                             card: {
                                 description: [
-                                    `But while my drunken self is being forcibly converted to the faith of his sober half, this internal conflict remains unseen to others, who can only watch in bewilderment as I perform`,
+                                    `But while my drunken self is being forcibly converted to the faith of his sober half, this internal conflict remains unseen by others, who can only watch in bewilderment as I perform`,
                                     {
                                         anchor: `circumcision`,
                                         wiki: `Circumcision`,
@@ -583,7 +595,7 @@ export default {
                         {
                             anchor: `kissed off, she purges up`,
                             card: {
-                                description: `Upon bringing me to orgasm, Miriam sucks up the ejaculate and leans over the car door to spit it out. But in this innocent act, I can't help but read a hidden message. Namely, that the genes in my defective sperm must never be allowed to mingle with hers.`,
+                                description: `After bringing me to orgasm, Miriam leans over the car door to spit out my semen. But in this innocent act, I can't help but read a hidden message. Namely, that the genes in my defective sperm are forbidden to mingle with hers.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -598,7 +610,7 @@ export default {
                             anchor: `worn puppet`,
                             cards: [
                                 {
-                                    description: `The condom sits motionless on the car seat, like a puppet so full of life just moments before. But having brought me to a place I otherwise wouldn't have gone, it has no other use and can now be discarded.`,
+                                    description: `The condom sits motionless on the car seat, like a puppet so full of life just moments before. But having taken me to a place I otherwise couldn't have gone, it has no other use and can now be discarded.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -756,6 +768,8 @@ export default {
                         `it`,
                         {
                             anchor: `hums a typo`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
                                     `Like a typo, Miriam's involvement with me was a simple mistake she could easily correct. And in the same vein as a "`,
@@ -763,7 +777,7 @@ export default {
                                         anchor: `Type O`,
                                         wiki: `Blood_type`,
                                     },
-                                    `," the universal blood donor, I was eager to give of myself to all other women, but only one who was already my own was able to give as much back.`,
+                                    `," the universal blood donor, I was eager to give of myself to all other women, but only one was willing to give as much back.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -773,9 +787,11 @@ export default {
                         },
                         {
                             anchor: `fragile ex`,
+                            todo: true,
+                            problem: `Kind of wordy in general. Make sure this can be easily understood.`,
                             card: {
                                 description: [
-                                    `Knowing the kind of fragile ex-boyfriend I was sure to be, Miriam had to be delicate in breaking up with me. But of course it needed to be done, given what horrors might be lurking in my genetic makeup. Perhaps I'm a carrier of "`,
+                                    `Miriam was delicate in breaking up with me, knowing the kind of fragile ex-boyfriend I was sure to be. But of course it had to be done, given the horrors lurking in my genetic makeup. Who knew— perhaps I was a carrier of "`,
                                     {
                                         anchor: `Fragile X`,
                                         wiki: `Fragile_X_syndrome`,
@@ -854,7 +870,7 @@ export default {
                         {
                             anchor: `in her pool`,
                             card: {
-                                description: `Lying sedated on my deathbed, I see Miriam lounging by a swimming pool, eternally radiant in her youth. I exhaust my last breath to wish her well, but she doesn't hear me and plunges into the deep end.`,
+                                description: `Lying sedated on my deathbed, I see Miriam lounging by a swimming pool, radiant in her youth. I exhaust my last breath to wish her well, but she doesn't hear me and plunges into the deep end.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -874,6 +890,8 @@ export default {
                         `"`,
                         {
                             anchor: `Bless her`,
+                            todo: true,
+                            problem: `This one and the next are together trying to convey an idea that I still don't think is quite there. Like, the idea of Buddhism seems to come out of nowhere? How is it related, exactly? If articulated correctly, this could be one of my best points, so really think it through.`,
                             card: {
                                 description: [
                                     `The title of the play`,
@@ -900,6 +918,8 @@ export default {
                         {
                             anchor: `Godspeed`,
                             properNoun: true,
+                            todo: true,
+                            problem: `See above.`,
                             cards: [
                                 {
                                     description: `To compound my insecurities as a child about being raised Buddhist, my complexion was different from that of everyone else in Sasha's world. And so my inferiority complex failed to distinguish between carrying faulty genes, following a faulty faith, and being of a faulty race. They all seemed to derive from a single congenital defect at the core of my being.`,
