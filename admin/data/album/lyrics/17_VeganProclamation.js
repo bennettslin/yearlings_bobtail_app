@@ -40,14 +40,16 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
+                problem: `Review one more time.`,
                 card: {
                     description: [
-                        `While Sita was a lifelong vegetarian due to her Hindu upbringing, she also held strong convictions about animal rights that led her to go`,
+                        `While Sita was a lifelong vegetarian due to her Hindu upbringing, she also held strong beliefs about animal rights that led her to go`,
                         {
                             anchor: `vegan`,
                             wiki: `Veganism`,
                         },
-                        `during our relationship. I supported her decision by helping her to avoid animal products. After we stopped speaking to each other, I became vegan as well, which was the first step toward liking myself again.`,
+                        `during our relationship. After we stopped speaking to each other, I went vegan as well, which was the first step toward liking myself again.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -70,8 +72,10 @@ export default {
                                 `"If you're just starting out, you need to decide right now: Either you stick with quality vinyl, or you buy only the bargain bin LPs. You`,
                                 {
                                     anchor: `can't have both`,
+                                    todo: true,
+                                    problem: `Review one more time.`,
                                     card: {
-                                        description: `A friend offered me this advice when I bought a turntable. And as it turns out, what's true for vinyl records holds just as well for life decisions. I couldn't have two selves— one to earn praise for kindness, the other to take the blame for my selfish desires. A single hurtful deed taints everything else. It isn't possible to be both kinds of people at once.`,
+                                        description: `A friend offered me this advice when I bought a turntable. But as it turns out, what's true for vinyl records holds just as well for life decisions. I couldn't have two selves, with one to earn praise for my kindness, and the other to take the blame for my selfish desires. A single hurtful deed corrupts everything else; I knew this now. It isn't possible to be both kinds of people at once.`,
                                         dotKeys: {
                                             [BACKSTORY]: true,
                                             [OBSERVATION]: true,
@@ -198,7 +202,7 @@ export default {
                                         anchor: `Eve`,
                                         wiki: `Eve`,
                                     },
-                                    `by taking one of Adam's ribs. By contrast, my own promise to sacrifice for Sita proved to be a false rib. So she could never be truly alive with me, even as she felt unworthy to begin life anew with someone else.`,
+                                    `by taking one of Adam's ribs. By contrast, my own promise to sacrifice for Sita proved to be a false rib. That is to say, she could never truly be alive with me, even as she felt unworthy to begin life anew with someone else.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -311,7 +315,7 @@ export default {
                                             anchor: `purr to cope`,
                                             wiki: `Purr`,
                                         },
-                                        `with distress, and looking back, she realized her kitten had thought it was being crushed to death. She lived in guilt ever since.`,
+                                        `with distress, and looking back, she realized her kitten thought it was being crushed to death. She lived in guilt ever since.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -446,7 +450,7 @@ export default {
                                             anchor: `metal cages`,
                                             wiki: `Gestation_crate`,
                                         },
-                                        `too small for them to move around. Stressed by their living conditions, they engage in self-destructive behavior like chewing on the cage bars. The sole purpose of their suffering is to produce piglets for slaughter. Then once they grow too weak, they too are slaughtered.`,
+                                        `too small for them to move around. Stressed by their living conditions, they engage in self-destructive behavior like chewing on the cage bars. The sole purpose of their suffering is to produce piglets for slaughter, and then once they grow weak, they too are slaughtered.`,
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
