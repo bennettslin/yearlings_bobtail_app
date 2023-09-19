@@ -29,7 +29,7 @@ export default {
     mixStartTime: `0:03:11.10`,
     playerReferenceTime: 2298.378,
     playerStartTime: 2295.261,
-    overview: `After a night out with friends, I might shuffle on to Sita's place, slip into bed with her, and quickly doze off. But one night, Sita was waiting to confront me, having discovered my plans to break up with her. In tears, she returned the gold bracelet I'd given her at the start of our relationship, and then she kicked me out. With nowhere to go, I wandered the streets until sunrise. And so began the first of our many breakups…`,
+    overview: `After a night out with friends, I might shuffle on to Sita's place, slip into bed with her, and quickly doze off. But one night, Sita was awake and waiting to confront me, having discovered my plans to break up with her. In tears, she returned the gold bracelet I'd given her at the start of our relationship, and then she kicked me out. With nowhere to go, I wandered the streets until sunrise. And so began the first of our many breakups…`,
     isDoublespeaker: true,
     lyricUnits: [
         {
@@ -38,7 +38,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `All through that night, I ran Sita's bracelet through my fingers as I turned over the thoughts in my head. So in writing these lyrics, I drew inspiration from famous poems that ruminate on a still-life object, like`,
+                        `All through that night, I ran Sita's bracelet through my fingers as I turned over the thoughts in my head. So to write these lyrics, I drew inspiration from famous poems that ruminate on a still-life object, like`,
                         {
                             anchor: `John Keats`,
                             wiki: `John_Keats`,
@@ -71,6 +71,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
+                problem: `Second sentence should be more clear that I wasn't reverting to a time just before, but *way* before.`,
                 card: {
                     description: `With the breakup, I was free to rebuild my life from scratch. I could revert to the state of childlike innocence that I'd known before the relationship, before the bullying and the mail-order cult. And so here we hear the song of the white-throated sparrow, which harkens back to the happier days of my youth.`,
                     dotKeys: {
@@ -101,7 +103,7 @@ export default {
                             anchor: `bread and pocket lint`,
                             card: {
                                 description: `
-                                Before leaving the cafeteria that evening, I stashed some bread rolls in the front pockets of my jacket for munching on the go. Now clutching the bracelet, I tuck in my hands as well to keep warm.`,
+                                Before leaving the cafeteria that evening, I stashed some bread rolls in the front pockets of my jacket to munch on the go. Now clutching the bracelet, I tuck in my hands as well to keep warm.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -121,7 +123,7 @@ export default {
                         {
                             anchor: `broken`,
                             card: {
-                                description: `When I walked into Sita's living room that night to find her seated on the couch, the bracelet lay in a mangled heap on her coffee table. I wondered if she'd damaged it on purpose. I later realized that its dozens of intricate links locked into place only once the bracelet was snug around her wrist.`,
+                                description: `When I walked into Sita's living room that night to find her seated on the couch, the bracelet lay in a mangled heap on her coffee table. I wondered if she'd damaged it on purpose. I later realized that its dozens of intricate links would lock into place only once the bracelet was snug around her wrist.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -144,7 +146,7 @@ export default {
                             anchor: `Johnny Horton`,
                             wiki: `Johnny_Horton`,
                         },
-                        `. His records were the first I ever owned, as they were handed down to me by my mother who adored him in her teenybopper years. None of my classmates had ever heard of him, until one day, I met another kid whose Taiwanese mother had the same obsession. So I guess Horton was big in Taiwan. But he probably never knew this, having died in a car accident at the peak of his fame.`,
+                        `. His records were the first I ever owned, as they were handed down to me by my mother who adored him in her teenybopper years. None of my classmates had ever heard of him, until one day I met another kid whose Taiwanese mother had the same obsession. So I guess Horton was big in Taiwan. But he probably never knew this, having died in a car accident at the peak of his fame.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -170,7 +172,7 @@ export default {
                         {
                             anchor: `polite, yet resigned`,
                             card: {
-                                description: `Having braced for that night's confrontation, Sita deftly lobbed one accusation after another. Meanwhile, I was drunk and still trying to process the situation. So I could only respond curtly, which just added to her fluster.`,
+                                description: `Having braced for that night's confrontation, Sita lobbed one accusation after another. Meanwhile, I was drunk and still processing the situation. So I could only respond curtly, which added to her fluster.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -201,6 +203,8 @@ export default {
                         `I'm sorry, but I`,
                         {
                             anchor: `went through your mail`,
+                            todo: true,
+                            problem: `Can probably be improved. Instead of breaking up the sentences as they are now, put the break instead between snooping around and stumbling.`,
                             card: {
                                 description: `Confused about why I'd grown distant, Sita snooped around on my desktop computer that day and stumbled upon some emails to friends. In the emails, I spoke of a recent crush and solicited advice on breaking up gently.`,
                                 dotKeys: {
@@ -323,7 +327,7 @@ export default {
                         {
                             anchor: `well-behaved on the wing`,
                             card: {
-                                description: `Harboring no grudges, drunken me can only surmise that after serving out his sentence without complaint, he's been granted early release for good behavior.`,
+                                description: `Harboring no grudges, drunken me can only surmise that he's been granted early release for good behavior, after serving out his sentence without complaint.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -335,6 +339,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
+                problem: `This can flow better in general.`,
                 card: {
                     description: [
                         `In`,
@@ -360,7 +366,7 @@ export default {
                             anchor: `Newspeak`,
                             wiki: `Newspeak`,
                         },
-                        `. And all through that night, I needed to make sense of the breakup by reconciling the contradictions in my head. So this song uses doublespeaker rhyme— which I'd named partly for its Orwellian undertone— to depict the inner conflict between my sober self and his drunken alter ego.`,
+                        `. And all through that night, I needed to make sense of the breakup by reconciling the contradictions in my head. So this song uses doublespeaker rhyme— which I named partly for its Orwellian undertone— to depict the inner conflict between my sober self and his drunken alter ego.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -416,7 +422,7 @@ export default {
                         {
                             anchor: `Guilt pardons`,
                             card: {
-                                description: `As my sober self observes his drunken accomplice's lack of remorse, he can only feel pity, knowing the trauma that must linger in anyone who performed this heinous act. After all, avoiding such trauma was the reason he chose not to carry out the hit himself.`,
+                                description: `As my sober self observes his drunken accomplice's lack of remorse, he can only feel pity, knowing the trauma that must linger in anyone who performed such a heinous act. After all, avoiding such trauma was the reason he chose not to carry out the hit himself.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -506,8 +512,10 @@ export default {
                         `Then if`,
                         {
                             anchor: `life were real`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `Sita's friends weren't wrong to label me fake and pretentious. My emotions didn't feel legitimate even to myself, and so I reacted to them like an actor responding to a cue. At the time, I blamed the lingering effects of Robitussin.`,
+                                description: `Sita's friends weren't wrong to label me fake. My emotions didn't feel legitimate even to myself; I reacted to them like an actor responding to a cue. At the time, I blamed it on the lingering effects of Robitussin.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -520,6 +528,8 @@ export default {
                         `And if`,
                         {
                             anchor: `night were peeled`,
+                            todo: true,
+                            problem: `Just feels like it can be worded slightly better.`,
                             card: {
                                 description: [
                                     `Every now and then, I would have a Robitussin`,
@@ -560,6 +570,8 @@ export default {
                         `Just that those playful`,
                         {
                             anchor: `pups with their hateful fangs`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
                                     `Young`,
@@ -567,7 +579,7 @@ export default {
                                         anchor: `carnivores`,
                                         wiki: `Carnivore`,
                                     },
-                                    `have an instinct to tear flesh with their jaws, so they reflexively soften their bites during rough play. And knowing now what it truly means to inflict harm, I realized the bullies held back their blows the same way, believing their cruelty to be in good fun.`,
+                                    `have an instinct to tear flesh with their jaws, so they reflexively soften their bites during rough play. And knowing now what it truly means to inflict harm, I realized that the bullies held back their blows as well, believing it was all in good fun.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -690,8 +702,10 @@ export default {
                         `Now the`,
                         {
                             anchor: `jester teeters`,
+                            todo: true,
+                            problem: `Consider whether there's a more diplomatic way of making this point.`,
                             card: {
-                                description: `I was stopped by a pair of police officers that night. They judged me to be harmless and sent me on my way. I've since learned that this likely wouldn't have been the experience of my Black friends, of course.`,
+                                description: `I was stopped by a pair of police officers that night. They judged me to be harmless and sent me on my way. I've since learned that this might not have been the outcome for my Black friends, of course.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -708,6 +722,8 @@ export default {
                         lyric: [
                             {
                                 anchor: `Mush`,
+                                todo: true,
+                                problem: `Not sure stripping away is the idea I want to evoke.`,
                                 card: {
                                     description: [
                                         `Marching onward without sleep, I continue to strip away the intervening years, hoping to return to the last time I'd known untroubled bliss. And so I arrive at the first song I loved as a child, Johnny Horton's "`,
@@ -961,7 +977,7 @@ export default {
                         {
                             anchor: `leaked the bandage`,
                             card: {
-                                description: `With our emotional bond now severed, Sita bled both metaphorically and literally. She'd started to experiment with cutting to ease her depression.`,
+                                description: `With our emotional bond now severed, Sita bled both metaphorically and literally: She'd started to experiment with cutting to ease her depression.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -1011,7 +1027,7 @@ export default {
                         {
                             anchor: `trail of crumbs`,
                             card: {
-                                description: `Fearing upheaval ahead, I wonder if it's too late to walk back the damage done. But I couldn't find my way back if I wanted to. All night I've been nibbling on the rolls in my pocket instead of dropping a breadcrumb trail. I've traded away long-term security to satisfy my short-term hunger.`,
+                                description: `Fearing upheaval ahead, I wonder if it's too late to walk back the damage done. But I couldn't find my way back if I wanted to: All night I've been nibbling on the rolls in my pocket instead of dropping a breadcrumb trail. I've traded away long-term security to satisfy my short-term hunger.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -1033,8 +1049,10 @@ export default {
                         {
                             anchor: `Garry's sole witness`,
                             properNoun: true,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `Though I really wish to plead my case, I realize that the breakup will be over with sooner if I just accept my role as the villain. And so the sober me, called up to testify for his drunken half, stays silent.`,
+                                description: `Though I wish to plead my case, the breakup will be over with sooner if I just accept my role as the villain. And so the sober me, called up to testify for his drunken half, stays silent.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -1150,6 +1168,8 @@ export default {
                     lyricRight: [
                         {
                             anchor: `forgo like jewelry`,
+                            todo: true,
+                            problem: `Second sentence can be phrased better?`,
                             card: {
                                 description: `As these things go, Sita and I had a turbulent on-again, off-again relationship for a good while longer. During one stretch when things were looking rosier than ever, she asked for the bracelet back to wear again, which I happily obliged. Somehow I'd dented it in my pocket that night, however, creating a lasting reminder that some damages can be amended but never undone.`,
                                 dotKeys: {
