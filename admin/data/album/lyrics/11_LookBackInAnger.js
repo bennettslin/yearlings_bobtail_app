@@ -37,6 +37,8 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
+                problem: `First sentence runs on.`,
                 card: {
                     description: [
                         {
@@ -74,6 +76,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
+                problem: `Make it more clear that he would first arrange the plateware like a drum set.`,
                 card: {
                     description: [
                         `A fellow dishroom worker named Owen had a`,
@@ -81,7 +85,7 @@ export default {
                             anchor: `four-track cassette recorder`,
                             wiki: `Portastudio`,
                         },
-                        `, and some nights we would go back to his place to twiddle with it. Owen would tap out these intricate yet impromptu rhythms on plateware he'd swiped from the cafeteria. I did my best to conjure his spirit here, minus the impromptu part, of course.`,
+                        `, and some nights we would go back to his place and twiddle with it. Owen would tap out these intricate yet impromptu rhythms on plateware he'd swiped from the cafeteria. I did my best to conjure his spirit here, minus the impromptu part, of course.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -230,14 +234,16 @@ export default {
                         `Now your`,
                         {
                             anchor: `sapling cut`,
+                            todo: true,
+                            problem: `Sentence kind of runs on. Make clear that ring can be seen only because it's exposed by gaping wounds.`,
                             card: {
                                 description: [
-                                    `A sapling that survives the winter will be rewarded with its first`,
+                                    `Upon surviving the winter, a sapling is rewarded with its first`,
                                     {
                                         anchor: `tree ring`,
                                         wiki: `Dendrochronology`,
                                     },
-                                    `, which will be visible through any gaping wounds it suffered along the way.`,
+                                    `, which will then be visible to all through any gaping wounds it suffered along the way.`,
                                 ],
                             },
                         },
@@ -319,6 +325,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
+                problem: `Review one more time.`,
                 card: {
                     description: [
                         `When I asked Owen to recommend some good lyricists, he pointed me to`,
@@ -326,12 +334,8 @@ export default {
                             anchor: `Nas`,
                             wiki: `Nas`,
                         },
-                        `. I hadn't paid much attention to`,
-                        {
-                            anchor: `hip hop`,
-                            wiki: `Hip_hop`,
-                        },
-                        `up to that point, as I assumed it was too far removed from my own songwriting approach to offer wisdom. I've since corrected this oversight, but back when it was my lone point of reference for rap music,`,
+                        `. I hadn't paid much attention to rappers up to that point, as I assumed their songwriting approach was too far removed from my own to offer wisdom. I've since corrected this oversight, but back when
+                        `,
                         {
                             isItalic: true,
                             lyric: {
@@ -339,7 +343,12 @@ export default {
                                 wiki: `Illmatic`,
                             },
                         },
-                        `offered great pointers on the flexibility of`,
+                        `was my lone point of reference for`,
+                        {
+                            anchor: `hip hop`,
+                            wiki: `Hip_hop`,
+                        },
+                        `, Nas offered great pointers on the flexibility of`,
                         {
                             anchor: `internal rhyme`,
                             wiki: `Internal_rhyme`,
@@ -363,6 +372,8 @@ export default {
                     lyric: [
                         {
                             anchor: `Feeble feeder fish`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
                                     `The pecking order in a tank of`,
@@ -370,7 +381,7 @@ export default {
                                         anchor: `feeder fish`,
                                         wiki: `Feeder_fish`,
                                     },
-                                    `is deceptive, since the ones who are least fit are also the least likely to be sold as prey, and therefore end up living the longest. In retrospect, high school worked the same way. All the time I'd spent focusing on pet projects left me unfit to defend my place in the social hierarchy. But the artistic skills I'd developed as a result were now keeping me from being eaten alive in the real world.`,
+                                    `is deceptive, since the ones who are least fit are also the least likely to be sold as prey, and so they end up living the longest. In retrospect, high school worked the same way. All the time I'd spent working on pet projects left me unfit to defend my place in the social hierarchy. But the artistic skills I'd developed as a result were now keeping me from being eaten alive in the real world.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -391,8 +402,10 @@ export default {
                         `You wished a`,
                         {
                             anchor: `cancer nibbled off`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `It was therapeutic enough to write songs about my own disappointments and dysfunctions. It felt crazy that others would credit me with giving voice to theirs as well, and that I should be granted a higher status because of it.`,
+                                description: `It was therapeutic enough to write songs about my own disappointments and dysfunctions. It felt crazy that others would credit me with giving voice to theirs as well, and that they should love me for it.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -468,6 +481,8 @@ export default {
                         `With hair of`,
                         {
                             anchor: `maraschino red`,
+                            todo: true,
+                            problem: `Consider phrase order. Mention cherry color before mentioning that it matches?`,
                             card: {
                                 description: [
                                     `Having sworn to be ready when the next Mara shows up in my life, I notice that the latecomer's hair color matches "Mara's sheen of" red, with the brightness of a`,
@@ -492,8 +507,10 @@ export default {
                         `"`,
                         {
                             anchor: `Great show`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `The best time to hit on someone is right after you've played a set, since they've just spent the last half hour unconsciously putting you at the center of their universe. So as expected, the redheaded woman is quite flirtatious when we chat.`,
+                                description: `The best time to hit on someone is right after you've played a set, since they've just spent the last half hour making you the center of their universe. And sure enough, I find the redheaded woman to be flirtatious when we finally chat.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -520,8 +537,10 @@ export default {
                         `and you were`,
                         {
                             anchor: `fine when you had none`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `Things were finally looking up, so it confused me that a quiet bitterness should still remain. I suspect it's because I felt indignant for my younger self, who'd been kept for so long in the dark about how much better life could be.`,
+                                description: `Things were looking up for me, so I found it confusing to still feel a quiet bitterness inside. I suspect it's because I felt indignant for my younger self, who'd been kept in the dark for so long about how much better life could be.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -589,6 +608,8 @@ export default {
                         `reading`,
                         {
                             anchor: `His obit not a bang`,
+                            todo: true,
+                            problem: `Last sentence runs on a bit.`,
                             card: {
                                 description: `But my appraisal was based on reason, not malice. If the Christian god were the one true God, then it made no sense why he would entrust the dissemination of his message to the tormentors of those he hoped to reach.`,
                                 dotKeys: {
@@ -679,8 +700,10 @@ export default {
                     lyric: [
                         {
                             anchor: `only to crack`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `Yet even as reason disproved the faiths of my tormentors, it also discredited my own as a Beyonder. When so many rival claims to the truth abound, what sane person would stay loyal to a belief that promises zero community and only endless grief?`,
+                                description: `Yet even as reason disproved the beliefs of those who bullied me, it also discredited my own as a Beyonder. Because with so many rival claims to the truth out there, what sane person would stay loyal to a faith that promises zero community and only endless grief?`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -691,7 +714,7 @@ export default {
                         {
                             anchor: `sprawled where they stood`,
                             card: {
-                                description: `And while every beatdown I suffered was a serious blow to my mental state, the bullies continued to enjoy greater happiness and social standing. My belief as a Beyonder couldn't survive the harsh realization that nature favors its bullies.`,
+                                description: `And while every beatdown I suffered was a serious blow to my mental state, the bullies continued to enjoy greater happiness and social standing. My faith as a Beyonder couldn't survive the harsh realization that nature favors its bullies.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -719,7 +742,7 @@ export default {
                         {
                             anchor: `right to take what's theirs`,
                             card: {
-                                description: `As opportunities for social advancement opened up for me, I could look back and even sympathize with the bullies by putting myself in their shoes. After all, in a world that roots for the strong, who wouldn't readily take all the means available to avoid being weak?`,
+                                description: `As opportunities for social advancement opened up for me, I could look back and even sympathize with the bullies by putting myself in their shoes. After all, in a world that roots for the strong, who wouldn't accept all the means available to avoid being weak?`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -758,8 +781,10 @@ export default {
                         `also weep for`,
                         {
                             anchor: `poor, poor bears`,
+                            todo: true,
+                            problem: `Sentence runs on.`,
                             card: {
-                                description: `His wife Alison then sighs in response, "Poor, poor bears," acknowledging that he, a bear in their mutual fantasy, is just as much a victim complying within a power dynamic over which neither possesses much control.`,
+                                description: `His wife Alison then sighs in response, "Poor, poor bears," acknowledging that he, a bear in their mutual fantasy, is just as much a victim, complying within a power dynamic over which neither possesses much control.`,
                                 dotKeys: {
                                     [REFERENCE]: true,
                                 },
