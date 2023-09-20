@@ -29,7 +29,9 @@ export default {
     playerStartTime: 1932.102,
     // This is a magic number adjusted by ear. In the mix, it's actually 41.66.
     mixSamplingFrequency: 41.64,
-    overview: `With the Yearlings becoming a fixture in the local scene, I started to command more attention than I'd ever known, particularly from women. Yet even as my misery abated, a lingering resentment still simmered beneath. I also began to regret my relationship with Sita, which now felt like a decision I'd been coerced to make under deprived conditions from which I was now free.`,
+    todo: true,
+    problem: `Last sentence might run on.`,
+    overview: `With the Yearlings becoming a fixture in the local scene, I started to command more attention than I'd ever known, particularly from women. Yet even as my misery abated, a resentment simmered beneath. I also began to regret my relationship with Sita, which now felt like a decision I'd been coerced to make, under deprived conditions from which I was now free.`,
     lyricUnits: [
         {
             unitMap: {},
