@@ -27,7 +27,9 @@ export default {
     referenceDescription: `Banjo in anacrusis`,
     playerStartTime: 2107.996,
     mixStartTime: `0:01:01.40`,
-    overview: `My mood changed for the worse when I drank, leading friends to joke that I had a sinister alter ego. It wasn't far from the truth. I was souring on my relationship with Sita by this point, and being drunk provided both an escape and an excuse to act out. But I really didn't like myself when this happened. I missed being the hapless kid that I still was in my head. And knowing now how to get it right, I longed for a do-over, only this time without the mess. In other words… without Sita.`,
+    todo: true,
+    problem: `Review one more time.`,
+    overview: `My mood would change for the worse when I drank, leading friends to joke that I had a sinister alter ego. And yet it wasn't far from the truth. I was souring on my relationship with Sita by this point, and being drunk provided both an escape and an excuse to act out. But I really didn't like myself when this happened. I missed being the hapless kid I still was in my head. And knowing now how to get it right, I longed for a do-over, only this time without the mess. In other words… without Sita.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -98,8 +100,10 @@ export default {
                     lyric: [
                         {
                             anchor: `Brushed her off`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `As I began to withdraw from the relationship, Sita would reach out by groveling. And stung by my conscience, I would rush to comfort her. But as my patience wore thin over time, I would lash out in passive-aggressive ways, whereupon she would grovel even further. It became all we knew of how to speak for ourselves.`,
+                                description: `As I withdrew from the relationship, Sita would reach out by groveling. And each time I would rush to comfort her, stung by my conscience. But as my patience wore thin, I would lash out in passive-aggressive ways— whereupon she would grovel even further. It became all we knew of how to speak for ourselves.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -122,7 +126,7 @@ export default {
                                             anchor: `crust punks`,
                                             wiki: `Gutter_punk`,
                                         },
-                                        `who were friends of Ana's. Every so often, half of us would go out to pilfer groceries, while the other half would cook whatever we brought back into a meal for all to share. I was always in the thieving group.`,
+                                        `who were friends of Ana's. Every so often, half of us would go out to pilfer groceries, while the other half would cook whatever was brought back into a meal for all to share. I was always in the thieving group.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -160,7 +164,7 @@ export default {
                             anchor: `opt for bed not street`,
                             card: {
                                 description: [
-                                    `I was tired of working extra shifts just to make the rent. So after my lease ended, I alternated between spending some nights with Sita, and other nights crashing in the`,
+                                    `I was tired of working extra shifts just to pay the rent. So after my lease ended, I alternated between spending some nights with Sita, and others crashing in the`,
                                     {
                                         anchor: `punk house`,
                                         wiki: `Punk_house`,
@@ -313,6 +317,8 @@ export default {
                         `since`,
                         {
                             anchor: `hummers aren't love`,
+                            todo: true,
+                            problem: `Needs to be clear. Right now it sounds like Sita is protesting against the sex itself, rather than against my not showering.`,
                             card: {
                                 description: [
                                     `Once when Sita protested that we couldn't have sex until after I washed up, I snidely replied that she could still give me a hummer, or`,
@@ -330,8 +336,10 @@ export default {
                         `, or so`,
                         {
                             anchor: `she's claimed`,
+                            todo: true,
+                            problem: `Make sure wording in second sentence is clear.`,
                             card: {
-                                description: `Throughout our budding friendship, Sita had neglected to mention the extent of her sexual intimacy with past partners, even if it was always shy of intercourse. She tried to console me by pointing out that she never went all the way precisely because she didn't love them. She loved me, so I had won. But it still stung like crazy to find out this late, which only deepened my resentment.`,
+                                description: `Throughout our budding friendship, Sita had neglected to mention her sexual intimacy with past partners, even if it was always shy of intercourse. When I found out, she tried to console me by pointing out that she never went all the way because she didn't love them. She loved me, which meant I'd won. But it still stung like crazy to find out so late, and this deepened my resentment.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -356,6 +364,8 @@ export default {
                     lyric: [
                         {
                             anchor: `buys your grief`,
+                            todo: true,
+                            problem: `Too many "my"s in a row!`,
                             card: {
                                 description: `My worlds collided when I smashed a random bike in a fit of drunken rage one night. The bike turned out to belong to a scene kid who liked my music from my earliest days of playing out. He'd related so strongly to my songs about unfulfilled hopes. I was disgusted with myself for having disappointed him.`,
                                 dotKeys: {
@@ -380,7 +390,7 @@ export default {
                         {
                             anchor: `celibate you'll play`,
                             card: {
-                                description: `Drinking made me impotent and thus impervious to Sita's advances, so I gladly drank to excess. But not having sex was also purifying in its own right, since this lent the familiar comfort of being my past lovelorn self again.`,
+                                description: `Drinking made me impotent and thus impervious to Sita's advances, so I gladly drank to excess. But not having sex was also purifying in its own right, since this lent the familiar comfort of being my lovelorn self again.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -399,8 +409,10 @@ export default {
                     lyric: [
                         {
                             anchor: `Slammed in the well`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `Of course, using alcohol as a spiritual cleanser isn't really sustainable, since it requires you to vomit regularly into a toilet and see your miserable reflection staring back at you in the water.`,
+                                description: `Of course, using alcohol as a spiritual cleanser isn't really sustainable, since it requires you to vomit into a toilet and see your miserable reflection in the water staring back at you.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -452,7 +464,7 @@ export default {
                             anchor: `counterpoint`,
                             wiki: `Counterpoint`,
                         },
-                        `, melodies are laid atop one another, and the chord progression is a byproduct of the harmonies they form in sequence. But since the chords for this song were established first, the reverse approach was called for. I assigned each note in a chord to a different part. Then for every part, I shaped its sequence of assigned notes into an unassuming counter-melody.`,
+                        `, melodies are laid atop one another, and the chord progression is a byproduct of the harmonies they form in sequence. But since the chords for this song were established first, the reverse approach was called for. I assigned each note in a chord to a different part. Then for each part, I shaped its sequence of assigned notes into an unassuming counter-melody.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -489,6 +501,8 @@ export default {
                         `fill up a package strapped to your`,
                         {
                             anchor: `scapegirl`,
+                            todo: true,
+                            problem: `First sentence just seems like it could be worded a little better.`,
                             card: {
                                 description: [
                                     `In Biblical times, a community would seek absolution by symbolically placing its`,
@@ -518,9 +532,11 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
+                problem: `Review one more time.`,
                 card: {
                     description: [
-                        `Though I'd played violin for ten years as a child, my skills were rusty by the time I made this album. Rather than get up to speed through intense practice, I created the fiddle parts by recording just a fragment at a time and then splicing those together. To make up for my cop-out, I threw in a complicated`,
+                        `Though I'd played violin for ten years as a child, my skills were rusty by the time I made this album. Rather than get up to speed through intense practice, I created the fiddle parts by recording a fragment at a time, and then splicing those takes together. To make up for my cop-out, I threw in a complicated`,
                         {
                             anchor: `glissando`,
                             wiki: `Glissando`,
@@ -562,8 +578,10 @@ export default {
                         `you'd`,
                         {
                             anchor: `make her strip bare`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `Sita learned early on that she could always whisk me away for some lovemaking by hovering naked beside me while shivering dramatically from the cold. But as our relationship soured, this brazen appeal to my primal and protective instincts grew tiresome, and I drew some cruel pleasure in letting her shiver for just a bit longer.`,
+                                description: `Sita learned early on that she could always whisk me away for some lovemaking by hovering naked beside me while shivering dramatically from the cold. But as our relationship soured, this brazen appeal to both my primal and protective instincts grew tiresome, and I drew some cruel pleasure in letting her shiver for just a bit longer.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -585,6 +603,8 @@ export default {
                         `You won't always`,
                         {
                             anchor: `have her for your pet`,
+                            todo: true,
+                            problem: `First sentence is too wordy. It doesn't need to include the pet part. Just give the whole thing more thought.`,
                             card: {
                                 description: `Sita's manner of prostrating herself like a pet forced me to wield an absolute power that I never asked for, which exasperated me to no end. But its endearing nature was also guaranteed to make me love her, and I did. So I never doubted that the impending breakup would be wrenching for both of us.`,
                                 dotKeys: {
@@ -602,7 +622,7 @@ export default {
                         {
                             anchor: `she won't be there`,
                             card: {
-                                description: `But this codependency wasn't just the foundational basis of my love for Sita. It was really all I knew of how to love, period. I would never be asked to love in this way again, certainly not by any of the carefree scenesters whom I ogled at every show. And so it wasn't just cowardice that prevented me from cutting the cord. I genuinely feared whether I could ever truly love anyone else.`,
+                                description: `But this codependency wasn't just the foundational basis of my love for Sita. It was really all I knew of how to love, period. I would never be asked to love in this way again— certainly not by any of the carefree scenesters whom I ogled at every show. And so it wasn't just cowardice that prevented me from cutting the cord. I genuinely feared whether I could ever truly love anyone else.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -639,9 +659,11 @@ export default {
                     lyric: [
                         {
                             anchor: `Final trip on a tanker`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             cards: [
                                 {
-                                    description: `I knew I would need to stay relatively sober to start afresh with someone new. But short of being drunk, I could never muster the courage to break up with Sita. So I drank to oblivion each night, hoping to wake up one morning and discover that I was both newly single and miraculously repulsed by the taste of alcohol.`,
+                                    description: `I knew I had to stay relatively sober to start afresh with someone new. But short of being drunk, I could never muster the courage to break up with Sita. So I drank to oblivion each night, hoping to wake one morning and discover that, by some miracle, I was both newly single and repulsed by the taste of alcohol.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -712,6 +734,8 @@ export default {
                         `They told her, "Never help a`,
                         {
                             anchor: `self-abuser`,
+                            todo: true,
+                            problem: `Does it flow right?`,
                             cards: [
                                 {
                                     description: [
@@ -757,8 +781,10 @@ export default {
                             `see himself`,
                             {
                                 anchor: `as well in you`,
+                                todo: true,
+                                problem: `Review one more time.`,
                                 card: {
-                                    description: `But if I was capable of injuring myself, then I also wasn't likely to have any qualms about hurting someone close to me, who now knew the worst side of me as only I once did.`,
+                                    description: `But if I was capable of injuring myself, then I also wasn't likely to have qualms about hurting anyone close to me, who now knew the worst side of me as only I once did.`,
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                     },
@@ -781,7 +807,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `After some trial and error, I decided the counterpoint sounds best with each part occupying the same register, which allows them to blend into a single harmonic layer. At the same time, the ear can tease apart the different timbres of each instrument, as with the banjo, fiddle, and`,
+                        `After some trial and error, I decided the counterpoint sounds best with each part occupying the same register, as this allows them to blend into a single harmonic layer. At the same time, the ear can tease apart the different timbres of each instrument, as with the banjo, fiddle, and`,
                         {
                             anchor: `tin whistle`,
                             wiki: `Tin_whistle`,
@@ -825,7 +851,7 @@ export default {
                         {
                             anchor: `last-ditch alibi`,
                             card: {
-                                description: `Though my friends were only joking to say it was Garry and not me who'd committed this or that act of vandalism, on some level I accepted it as the truth. And now it also wasn't me who'd drained Sita of her confidence through the years, to leave her a crumbled wreck. It must have been Garry. I wasn't there.`,
+                                description: `Though my friends were only joking to say it was Garry and not me who'd committed this or that act of vandalism, on some level I accepted it as the truth. And now it also wasn't me who'd drained Sita of her confidence through the years, leaving her a crumbled wreck. It must have been Garry. I wasn't there.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -867,6 +893,8 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
+                problem: `Second sentence sounds kind of weird. Even though it's obvious, make it clear that it was my drinking from the box, rather than the box itself, that calmed my nerves. Don't force the reader to make this logical leap themselves.`,
                 card: {
                     description: [
                         `After`,
