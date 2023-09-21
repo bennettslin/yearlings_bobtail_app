@@ -22,7 +22,7 @@ export default {
     referenceDescription: `"Good" in anacrusis`,
     playerStartTime: 1346.412,
     mixStartTime: `0:01:11.89`,
-    overview: `Sometime after dating Catherine and a while before meeting Mara, I hit on a university student named Sita. Nothing came of the few dates that followed, however, and I scurried away in disappointment.`,
+    overview: `Sometime after dating Catherine and a while before meeting Mara, I hit on a fellow college student named Sita. Nothing came of the few dates that followed, however, and I scurried away in disappointment.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -48,6 +48,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
+                problem: `Last sentence runs on.`,
                 card: {
                     description: [
                         `In the final chapter of`,
@@ -60,7 +62,7 @@ export default {
                             anchor: `stream of consciousness`,
                             wiki: `Stream_of_consciousness`,
                         },
-                        `. I borrowed this literary technique to capture the torrent of unspoken thoughts rushing through my head as Sita extends her good wishes before I depart.`,
+                        `. I borrowed this literary technique to capture the unspoken thoughts rushing through my head as Sita extends her good wishes before I depart.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -104,8 +106,10 @@ export default {
                         `love first`,
                         {
                             anchor: `without once knowing love`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `The women I wanted to date always preferred men with past relationship experience, which seemed bizarre to me. If everyone thought this way, then no one could ever be in a relationship. Just like no one would ever have a job if previous work experience were always needed.`,
+                                description: `The women I liked always preferred to date men who'd been in a relationship before, which seemed bizarre to me. If everyone thought this way, then no one could ever be in a relationship— just like no one would ever have a job if previous work experience were always needed.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -119,7 +123,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `My inability to process my thoughts into coherent speech is reflected in the herky-jerky,`,
+                        `My inability to process thoughts into coherent speech is reflected in the herky-jerky,`,
                         {
                             anchor: `syncopated`,
                             wiki: `Syncopation`,
@@ -152,6 +156,8 @@ export default {
                         `for this kid wearing no`,
                         {
                             anchor: `decoder ring`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
                                     `A`,
@@ -159,7 +165,7 @@ export default {
                                         anchor: `secret decoder ring`,
                                         wiki: `Secret_decoder_ring`,
                                     },
-                                    `is a toy purchased through the mail that allows children to decipher encrypted messages. It would've been handy to wear one on a date, since I was constantly teasing out hidden meanings in the most basic exchanges.`,
+                                    `is a toy purchased through the mail that allows children to decipher encrypted messages. It would've been handy to wear one on a date, since I was always trying to tease out hidden meanings in the most basic exchanges.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -174,9 +180,11 @@ export default {
                         {
                             anchor: `Dutch courage`,
                             properNoun: true,
+                            todo: true,
+                            problem: `Review one more time.`,
                             cards: [
                                 {
-                                    description: `I had an older coworker who faithfully supplied me with cheap twelve-packs. Before every date, I would down a few cans.`,
+                                    description: `As a college student, I would ask older coworkers to buy beer for me. So I always had a stack of twelve-packs in my room, and before every date, I would down a few cans.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -220,7 +228,7 @@ export default {
                                             anchor: `go Dutch`,
                                             wiki: `Going_Dutch`,
                                         },
-                                        `means to split the cost of a meal. After all, stinginess was another intrinsic failing ascribed to the Dutch.`,
+                                        `means to split the cost of a meal. After all, stinginess was another character defect ascribed to the Dutch.`,
                                     ],
                                 },
                             ],
@@ -230,6 +238,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
+                problem: `I should mention the cafeteria job here. Otherwise, it's out of context.`,
                 card: {
                     description: [
                         `I once had a supervisor who would blast`,
@@ -301,24 +311,26 @@ export default {
                     mixTime: `0:23:18.66`,
                     lyric: {
                         anchor: `swept in unchartable tides`,
+                        todo: true,
+                        problem: `Maybe make it more about imagining myself as a barnacle or sponge.`,
                         card: {
                             description: [
-                                `The perils of being steered in unknown directions have kept me on edge throughout this date. But nearby is a`,
+                                `The fear of being steered in unknown directions has kept me on edge throughout this date. But nearby is a`,
                                 {
                                     anchor: `storm drain`,
                                     wiki: `Storm_drain`,
                                 },
-                                `that flows into the ocean, and I'm reminded of the many sea creatures that simply go where the current takes them. Surely I can be as unflappable as a`,
+                                `that flows into the ocean, and I'm reminded of the`,
                                 {
-                                    anchor: `barnacle`,
+                                    anchor: `barnacles`,
                                     wiki: `Barnacle`,
                                 },
-                                `or a`,
+                                `,`,
                                 {
-                                    anchor: `sponge`,
+                                    anchor: `sponges`,
                                     wiki: `Sponge`,
                                 },
-                                `?`,
+                                `, and other sea creatures who simply go where the current takes them.`,
                             ],
                             dotKeys: {
                                 [NARRATIVE]: true,
@@ -333,6 +345,8 @@ export default {
                         `they just`,
                         {
                             anchor: `always know to pry`,
+                            todo: true,
+                            problem: `There's just something awkward about the way it is now.`,
                             card: {
                                 description: `And no one else seems to sweat the risk of coming on too strong on a date either. They just keep the conversation flowing by pressing for more details, the way a starfish pries open an oyster resting on the seafloor.`,
                                 dotKeys: {
@@ -348,6 +362,8 @@ export default {
                         `for the`,
                         {
                             anchor: `innermost matryoshka`,
+                            todo: true,
+                            problem: `Make this the fictional present. Make it clear that I'm standing there remembering.`,
                             card: {
                                 description: [
                                     `On our first date, I took Sita to a natural history museum. We spent some time gawking at the Russian wooden dolls known as`,
@@ -390,6 +406,8 @@ export default {
                         `till then`,
                         {
                             anchor: `crack up another doll`,
+                            todo: true,
+                            problem: `This isn't really the point I want to make. Make it more earnest, about me trying my best.`,
                             card: {
                                 description: `A friend once told me that if I can keep a woman cracking up at my jokes all night, then I'll always be good for another date. Not being very funny, I tried my best with clever quips and goofy mannerisms.`,
                                 dotKeys: {
@@ -406,6 +424,8 @@ export default {
                         `to find the`,
                         {
                             anchor: `chrysalis unchristened`,
+                            todo: true,
+                            problem: `Phrase this better. Don't use the word "moot."`,
                             cards: [
                                 {
                                     description: `As we pass a display on the butterfly lifecycle, it occurs to me that what I seek in a partner is a chrysalis. That is, a rare specimen so new to this world that my own lack of worldliness can be considered moot.`,
@@ -425,6 +445,8 @@ export default {
                         `who'd buy this`,
                         {
                             anchor: `aping jaw`,
+                            todo: true,
+                            problem: `Oh boy. This can be better as well. Make clear this was a hoax in the field of paleontology. "Paleontological hoax" by itself isn't clear.`,
                             card: {
                                 description: [
                                     `We stop by a replica of`,
@@ -469,6 +491,8 @@ export default {
                         `when`,
                         {
                             anchor: `defined by ambrosia beers`,
+                            todo: true,
+                            problem: `Make it clear that I only considered basing my sense of humor on his. Then I had to scrap the thought because I'm just not someone who can think of clever things to say on the fly.`,
                             cards: [
                                 {
                                     description: [
@@ -514,6 +538,8 @@ export default {
                         `in time are seen with`,
                         {
                             anchor: `a focus grown clear`,
+                            todo: true,
+                            problem: `I just don't like this. Also, two "would"s in a row, if without the contraction.`,
                             card: {
                                 description: [
                                     `My buzz would wear off a few hours into a date, and then I would realize I'd just constructed an elaborate backstory that could only topple under scrutiny, like a`,

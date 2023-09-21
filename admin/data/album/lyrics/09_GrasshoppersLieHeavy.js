@@ -28,7 +28,7 @@ export default {
     referenceDescription: `"L." in anacrusis`,
     mixStartTime: `0:01:29.52`,
     playerStartTime: 1478.233,
-    overview: `I worked my way through college as a dishwasher in a cafeteria, which is how I met Sita. After I scared her off, we didn't speak for months. But she eventually reached out again, and we became friends. As I got off to a rocky start with playing live shows, and as I continued to struggle with dating women, Sita lent her moral support, though a part of me always wanted something more. At some point, she started to like me back. I'm still not sure how.`,
+    overview: `I worked my way through college as a dishwasher in a dorm cafeteria, which is how I met Sita. After I scared her off, we didn't speak for months. But she eventually reached out again, and we became friends. As I got off to a rocky start with playing live shows, and as I continued to struggle with dating women, Sita lent her moral support, though a part of me always wanted something more. At some point, she started to like me back. I'm still not sure how.`,
     isDoublespeaker: true,
     lyricUnits: [
         {
@@ -236,7 +236,7 @@ export default {
                         {
                             anchor: `dull dishroom days`,
                             card: {
-                                description: `I got a job washing dishes at a university cafeteria. The work was uneventful and offered no social interaction, but that was its appeal to me. At the start of the shift, I could read a book while the dishes piled up, then clean them all at once in a mad rush. As it got busy, I would switch to writing song lyrics in my head.`,
+                                description: `I got a job washing dishes at a dorm cafeteria. The work was uneventful and offered no social interaction, but that was its appeal to me. At the start of the shift, I could read a book while the dishes piled up, then clean them all at once in a mad rush. As it got busy, I would switch to writing song lyrics in my head.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
