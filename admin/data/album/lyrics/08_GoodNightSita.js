@@ -106,8 +106,6 @@ export default {
                         `love first`,
                         {
                             anchor: `without once knowing love`,
-                            todo: true,
-                            problem: `Review one more time.`,
                             card: {
                                 description: `The women I liked always preferred to date men who'd been in a relationship before, which seemed bizarre to me. If everyone thought this way, then no one could ever be in a relationship— just like no one would ever have a job if previous work experience were always needed.`,
                                 dotKeys: {
@@ -165,7 +163,7 @@ export default {
                                         anchor: `secret decoder ring`,
                                         wiki: `Secret_decoder_ring`,
                                     },
-                                    `is a toy purchased through the mail that allows children to decipher encrypted messages. It would've been handy to wear one on a date, since I was always trying to tease out hidden meanings in the most basic exchanges.`,
+                                    `is a toy purchased through the mail that allows children to decipher encrypted messages. It would've been handy to wear one on a date, since I was always trying to tease out hidden meanings from the most basic exchanges.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -184,7 +182,7 @@ export default {
                             problem: `Review one more time.`,
                             cards: [
                                 {
-                                    description: `As a college student, I would ask older coworkers to buy beer for me. So I always had a stack of twelve-packs in my room, and before every date, I would down a few cans.`,
+                                    description: `As a college student, I would ask older coworkers to buy twelve-packs of cheap beer for me, which allowed me to keep a stack in my room. So before every date, I would down a few cans.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -574,6 +572,8 @@ export default {
                     lyric: [
                         {
                             anchor: `pidgin palaver`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             cards: [
                                 {
                                     description: [
@@ -582,7 +582,7 @@ export default {
                                             anchor: `pidgins`,
                                             wiki: `Pidgin`,
                                         },
-                                        `, or impromptu languages that arose to facilitate trade between colonists and natives. Their exchanges were peppered with expressions of goodwill to make up for inevitable miscommunication, which aptly describes my first conversations with Sita.`,
+                                        `, or impromptu languages that arose to facilitate trade between colonists and natives. Such exchanges required words of goodwill to make up for inevitable miscommunication, much like my conversations with Sita on this date.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -604,8 +604,10 @@ export default {
                         `hyped up like some`,
                         {
                             anchor: `disastrous play`,
+                            todo: true,
+                            problem: `Again, make this the fictional present.`,
                             card: {
-                                description: `On our second date, Sita took me to see her friend act in a play, after which we met up with him backstage. In contrast to the rapport they shared, I couldn't get a word in edgewise, and I felt insecure the rest of the evening.`,
+                                description: `On our second date, Sita took me to see her friend act in a play, after which we met up with him backstage. Given the rapport they shared, I struggled to get a word in edgewise, leaving me to feel insecure the rest of the evening.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -677,7 +679,7 @@ export default {
                                         anchor: `understudy`,
                                         wiki: `Understudy`,
                                     },
-                                    `, a performer in theater who serves as a replacement on short notice. You undertake all the same preparation yet see little of the same action. So I decided to be proactive and branch out, like a freelancer without a steady gig advertising on a`,
+                                    `, a performer in theater who serves as a replacement on short notice. You undertake all the same preparation yet see little of the same action. So I decided to be proactive and branch out, like a freelancer without steady gigs advertising on a`,
                                     {
                                         anchor: `cork board`,
                                         wiki: `Bulletin_board`,
@@ -734,8 +736,10 @@ export default {
                         `so we'll`,
                         {
                             anchor: `breeze through our parts`,
+                            todo: true,
+                            problem: `There's a better way to say this that's more clear. Maybe move "future attempts at hitting on someone" to the second sentence.`,
                             card: {
-                                description: `Any time I said something witty that got a good response, I'd be sure to use it again on future attempts at hitting on someone, like an actor reprising a role. This also lessened the sting of rejection, since the less I had to prepare, the less invested I needed to feel.`,
+                                description: `Any time I said something witty that got a good response, I'd be sure to use it again on future attempts at hitting on someone, like an actor reprising a role. This also lessened the sting of rejection, since the less I had to prepare, the less invested I felt.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -805,7 +809,7 @@ export default {
                             anchor: `rejection into art`,
                             card: {
                                 description: [
-                                    `I learned to welcome rejection since I could always use it as subject matter for new songs. Which meant that a lifetime of getting rejected could`,
+                                    `I learned to welcome rejection since I could always use it as subject matter for new songs. Which meant that a lifetime of getting rejected can`,
                                     {
                                         isItalic: true,
                                         lyric: `itself`,
@@ -834,7 +838,7 @@ export default {
                         {
                             anchor: `died unfinished`,
                             card: {
-                                description: `Of course, there was no guarantee that such a work would ever be completed, since a satisfying ending wasn't really under my control.`,
+                                description: `Of course, there's no guarantee that such a work will ever be completed, since a satisfying ending isn't really under the artist's control.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -858,7 +862,7 @@ export default {
                         {
                             anchor: `sampler cologne`,
                             card: {
-                                description: `Whenever I spotted a lifestyle magazine that had been thrown out, I would tear out the scent strips from its cologne advertisements and add them to my pile. Then right before a date, I would rub a few strips on my neck and wrists.`,
+                                description: `Whenever I spotted a men's lifestyle magazine lying in a recycling bin, I would tear out the scent strips from its cologne advertisements and add them to my pile. Then right before a date, I would rub a few strips on my neck and wrists.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -884,6 +888,8 @@ export default {
                         `always rides in`,
                         {
                             anchor: `single go-karts`,
+                            todo: true,
+                            problem: `This should be the fictional present.`,
                             card: {
                                 description: [
                                     `On our third date, Sita and I visited a`,
@@ -908,7 +914,7 @@ export default {
                             anchor: `endless flowchart`,
                             card: {
                                 description: [
-                                    `At the time, I wondered if it were possible to prepare a mental`,
+                                    `At the time I often fantasized about preparing a mental`,
                                     {
                                         anchor: `flowchart`,
                                         wiki: `Flowchart`,
@@ -957,6 +963,8 @@ export default {
                         `and her`,
                         {
                             anchor: `veggie wishbone's short end`,
+                            todo: true,
+                            problem: `This can remain a genuine memory from the past, but make sure it's compatible with the others that have been changed to fictional presents.`,
                             cards: [
                                 {
                                     description: [
@@ -997,8 +1005,10 @@ export default {
                         `from a`,
                         {
                             anchor: `dummy steering wheel`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `Any semblance of control that I felt on a date was an illusion. But still I would cling tightly, like a child clutching the passenger steering wheel in a twin go-kart. Too much was at stake for me to let go and embrace spontaneity.`,
+                                description: `Any semblance of control that I felt on a date was an illusion. But I would grip it tightly all the same, like a child clutching the passenger steering wheel in a twin go-kart. There was just too much at stake for me to ever let go and embrace spontaneity.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -1019,7 +1029,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `Children's songs from the 70s are a treasure trove of musical wisdom. They were composed by professionals, but then arranged for the popular styles of that time. A great example is the soundtrack for`,
+                        `Children's songs from the 70s are a treasure trove of musical wisdom. They were composed by professionals, but then arranged for the popular styles of their time. A great example is the soundtrack for`,
                         {
                             anchor: `The New Mickey Mouse Club`,
                             wiki: `The_Mickey_Mouse_Club`,
