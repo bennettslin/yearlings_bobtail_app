@@ -31,7 +31,7 @@ export default {
     mixStartTime: `0:01:18.60`,
     playerReferenceTime: 1751.447,
     playerStartTime: 1751.191,
-    overview: `One night I went with my bassist Ana and some other friends to get high on Robitussin and explore the steam tunnels under UCLA. I got them all to pretend we were Vikings and Mongols and various waves of human migration throughout world history. In hindsight, they were probably just humoring me. I wound up doing a lot of Robitussin that summer. It took a while for me to regain my grip on reality.`,
+    overview: `One night I went with my bassist Ana and some other friends to get high on Robitussin and explore the steam tunnels under UCLA. I got them to pretend we were all Vikings and Mongols and various waves of human migration in world history. In hindsight, they were probably just humoring me. I wound up doing a lot of Robitussin that summer. It took a while for me to regain my grip on reality.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -57,7 +57,7 @@ export default {
                             anchor: `closed-eye hallucinations`,
                             wiki: `Closed-eye_hallucination`,
                         },
-                        `, which are vivid images projected onto the backdrop of your eyelids. When they get too intense, you simply open your eyes, and they vanish. At the time, I called them "constellations."`,
+                        `, which are vivid images projected onto the backdrop of your eyelids. When they get too intense, you simply open your eyes, and they vanish. At the time I called them "constellations."`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -194,7 +194,7 @@ export default {
                                             anchor: `plagues`,
                                             wiki: `Plagues_of_Egypt`,
                                         },
-                                        `that God visited upon Egypt. And with our stomachs full of Robitussin, we are spared any chance of having flu symptoms.`,
+                                        `that God visited upon Egypt. And with our stomachs full of Robitussin, we're spared any chance of having flu symptoms.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -233,7 +233,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `Ana's friends Howie and Tomer were seasoned drug users but had never taken Robitussin before. Given that it's sold`,
+                                        `Ana's friends Howie and Tomer were seasoned drug users but hadn't taken Robitussin before. Given that it's sold`,
                                         {
                                             anchor: `over the counter`,
                                             wiki: `Over-the-counter_drug`,
@@ -278,7 +278,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `Full disclosure, I never got past the first fifty pages of`,
+                        `Full disclosure: I never got past the first fifty pages of`,
                         {
                             isItalic: true,
                             lyric: `Finnegans Wake`,
@@ -487,7 +487,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `We are literally "high men," and since the others are trying Robitussin for the`,
+                                        `We're literally "high men," and since the others are trying Robitussin for the`,
                                         {
                                             anchor: `first time`,
                                             wiki: `Virginity`,
@@ -681,9 +681,11 @@ export default {
                         {
                             anchor: `Drinkhis Khan, once Toomujin`,
                             properNoun: true,
+                            todo: true,
+                            problem: `Review one more time.`,
                             cards: [
                                 {
-                                    description: `I'd just taken Robitussin a day or two ago, and each trip really destroys you for a good while. So earlier tonight, I was hesitant to take it again so soon. But now the "drink is gone," and with "too much in," I've forgotten my concerns.`,
+                                    description: `Every Robitussin trip destroys you for a good while, and I'd just taken one a day or two ago. So earlier tonight, I was hesitant to do it again so soon. But now the "drink is gone," and with "too much in," I've forgotten my concerns.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true,
@@ -1024,6 +1026,8 @@ export default {
                         `,`,
                         {
                             anchor: `our-youn' invedas`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
                                     `Although the "`,
@@ -1031,7 +1035,7 @@ export default {
                                         anchor: `Aryans`,
                                         wiki: `Aryan`,
                                     },
-                                    `" mentioned "in the Vedas" were a noble class based on religious distinction, 19th-century Western scholars postulated they were a light-skinned race that had conquered and civilized the local populations. While this theory has been debunked, the origin of the Indo-European people is still a matter of wide debate. And so "to sum up," I must put this "unsolved query" to rest, before the others lose their minds.`,
+                                    `" mentioned "in the Vedas" were a noble class based on religious distinction, 19th-century Western scholars portrayed them as a light-skinned race who'd conquered and civilized the local populations. While this theory has been debunked, the origin of the Indo-Aryans is still a matter of debate. And so "to sum up," I must put this "unsolved query" to rest, before the others lose their minds.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1108,7 +1112,7 @@ export default {
                                     description: [
                                         `Spent from the "Arabian" battles that ended with their`,
                                         {
-                                            anchor: `conquest by the Arabs`,
+                                            anchor: `defeat to the Muslims`,
                                             wiki: `Muslim_conquest_of_Persia`,
                                         },
                                         `, the Persians were then`,
@@ -1195,7 +1199,7 @@ export default {
                             properNoun: true,
                             cards: [
                                 {
-                                    description: `Taking in the "calm air," we are "sitting in car wet," as we guzzle the remaining Evian bottles that Howie's dad had bought in bulk and left in the trunk.`,
+                                    description: `Taking in the "calm air," we're now "sitting in car wet," as we guzzle down the remaining Evian bottles that Howie's parents had bought in bulk and left in the trunk.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true,
@@ -1371,9 +1375,11 @@ export default {
                     lyric: [
                         {
                             anchor: `herows— ourauras left`,
+                            todo: true,
+                            problem: `Too many pronouns make the last sentence confusing. Leave out the shaman.`,
                             cards: [
                                 {
-                                    description: `Wishing to respect the dead, we've left "our auras" as history's "heroes" behind in the car.`,
+                                    description: `Wishing to respect the dead, we've left behind "our auras" as history's "heroes."`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true,
