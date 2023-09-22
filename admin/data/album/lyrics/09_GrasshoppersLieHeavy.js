@@ -35,6 +35,8 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
+                problem: `Two "which"s in a row.`,
                 cards: [
                     {
                         description: [
@@ -99,9 +101,11 @@ export default {
                             `L.A. to the Bay,`,
                             {
                                 anchor: `pompous autumn waits`,
+                                todo: true,
+                                problem: `Review one more time.`,
                                 cards: [
                                     {
-                                        description: `In high school, I carried on as the same wretched nobody that I'd been in middle school. It just didn't seem possible to remake myself into someone new while surrounded by all the same classmates. But all the while I was crafting my future identity as a self-assured artist, which was raring to go as soon as I could leave Los Angeles.`,
+                                        description: `In high school, I carried on as the same wretched nobody I'd been in middle school. It just didn't seem possible to remake myself into someone new while surrounded by all the same classmates. But all the while I was crafting my future identity as a self-assured artist, which was raring to go as soon as I could leave Los Angeles.`,
                                         dotKeys: {
                                             [BACKSTORY]: true,
                                             [OBSERVATION]: true,
@@ -158,13 +162,15 @@ export default {
                         `and their`,
                         {
                             anchor: `molls perched on pedestals`,
+                            todo: true,
+                            problem: `Not sure this makes the point clear that their contempt for me was harder to stomach than the bullies' contempt for me was.`,
                             card: {
                                 description: [
                                     {
                                         anchor: `Gun molls`,
                                         wiki: `Gun_moll`,
                                     },
-                                    `, the female companions of famous mobsters, were both romanticized by society and feared for their exploits. Likewise, I desired the girls who hung out with the boys who bullied me. But this made their contempt harder to stomach.`,
+                                    `, the female companions of famous mobsters, were both romanticized by society and feared for their exploits. Likewise, I desired the girls who hung out with the boys who bullied me, but this made their contempt harder to stomach.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -235,8 +241,10 @@ export default {
                         `death of`,
                         {
                             anchor: `dull dishroom days`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `I got a job washing dishes at a dorm cafeteria. The work was uneventful and offered no social interaction, but that was its appeal to me. At the start of the shift, I could read a book while the dishes piled up, then clean them all at once in a mad rush. As it got busy, I would switch to writing song lyrics in my head.`,
+                                description: `My job washing dishes was uneventful and offered no social interaction, but it had its upsides. At the start of the shift, I could read a book while the dishes piled up, then clean them all at once in a mad rush. When it got busy, I would switch to writing lyrics in my head.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -250,8 +258,10 @@ export default {
                         `stalled by`,
                         {
                             anchor: `keys left on dumbwaiter trays`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `The students would bus their trays in carriages attached to a conveyor, which would then transport the trays into the dishroom. Every so often, someone would accidentally leave a personal item and come downstairs to retrieve it. I got a kick when that happened. The students were always grateful, and sometimes they were cute.`,
+                                description: `The students would bus their trays in carriages attached to a conveyor, which would then transport the trays into the dishroom. Every so often, someone would accidentally leave a personal item on their tray and come downstairs to retrieve it. I got a kick whenever this happened. They were always grateful, and sometimes they were cute.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -279,6 +289,8 @@ export default {
                         `to`,
                         {
                             anchor: `fetch her lancet pen`,
+                            todo: true,
+                            problem: `Review switch to narrative.`,
                             card: {
                                 description: [
                                     `Being a`,
@@ -286,15 +298,15 @@ export default {
                                         anchor: `diabetic`,
                                         wiki: `Diabetes`,
                                     },
-                                    `, Sita regularly checked her blood sugar level before meals by pricking her finger with a`,
+                                    `, Sita regularly checks her blood sugar level before meals by pricking her finger with a`,
                                     {
                                         anchor: `lancing device`,
                                         wiki: `Blood_glucose_monitoring`,
                                     },
-                                    `. That day, she forgot to take it with her after busing her tray.`,
+                                    `. She forgets to take it with her today after busing her tray.`,
                                 ],
                                 dotKeys: {
-                                    [BACKSTORY]: true,
+                                    [NARRATIVE]: true,
                                 },
                             },
                         },
@@ -307,11 +319,19 @@ export default {
                         `and stunned, by`,
                         {
                             anchor: `reflex you asked`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             cards: [
                                 {
-                                    description: `By then, I was mostly on autopilot when it came to hitting on random women in random situations. But taken aback by Sita's looks, I was determined not to screw this one up. So after handing back the lancet pen, I tried to engage her in smart conversation before asking for a date.`,
+                                    description: `By then, I was mostly on autopilot when it came to hitting on random women in random places.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
+                                    },
+                                },
+                                {
+                                    description: `Taken aback by Sita's looks, I'm determined not to screw this one up. So after handing back her lancet pen, I try to engage in small talk before asking her on a date.`,
+                                    dotKeys: {
+                                        [NARRATIVE]: true,
                                     },
                                 },
                             ],
@@ -325,18 +345,28 @@ export default {
                         `At first she hedged, but then`,
                         {
                             anchor: `laying qualms to rest`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             cards: [
                                 {
                                     description: [
-                                        `It was well known to the students that the cafeteria hired most of its workers through a`,
+                                        `It was known to the students that most of the cafeteria's workers were hired through a`,
                                         {
                                             anchor: `vocational rehabilitation`,
                                             wiki: `Vocational_rehabilitation`,
                                         },
-                                        `program. For this reason, along with feeling ambushed, Sita was hesitant to say yes. But as we chatted, I won her over with my taste in literature and familiarity with the alternative culture.`,
+                                        `program.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
+                                    },
+                                },
+                                {
+                                    description: [
+                                        `Unsure of my background, and still feeling ambushed, Sita hesitates. But as we chat, I win her over with my taste in literature and familiarity with the alternative culture.`,
+                                    ],
+                                    dotKeys: {
+                                        [NARRATIVE]: true,
                                     },
                                 },
                                 {
@@ -353,6 +383,8 @@ export default {
                         {
                             anchor: `Schwa stickers`,
                             properNoun: true,
+                            todo: true,
+                            problem: `Review one more time.`,
                             cards: [
                                 {
                                     description: [
@@ -360,7 +392,7 @@ export default {
                                             anchor: `Schwa`,
                                             wiki: `Schwa_(art)`,
                                         },
-                                        `is the artwork of William Barker. In the 90s, his oblong alien heads began popping up in the underground press. A friend who worked at a record store gave me a few stickers, which I randomly affixed to my belongings.`,
+                                        `is the artwork of Bill Barker. In the 90s, his oblong alien heads began popping up in the underground press. I knew nothing about it at the time, but a friend gave me a few stickers, which I randomly affixed to my belongings.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -376,7 +408,7 @@ export default {
                             anchor: `sci-fi paperback`,
                             cards: [
                                 {
-                                    description: `At the time, I was obsessed with Dick's stories of altered states and dystopian worlds. I often walked around with one of his novels visibly nestled under my arm.`,
+                                    description: `At the time, I was obsessed with Dick's stories of altered states and dystopian worlds. I always tried to be seen with one of his novels nestled under my arm.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -405,9 +437,9 @@ export default {
                             anchor: `nosebleed`,
                             cards: [
                                 {
-                                    description: `When I picked Sita up on our first date, my nose started to bleed. This prompted me to recount some fights in middle school that ended with me suffering a bloody nose.`,
+                                    description: `On my first date with Sita, my nose starts to bleed. This prompts me to recount some fights in middle school that ended with me suffering a bloody nose.`,
                                     dotKeys: {
-                                        [BACKSTORY]: true,
+                                        [NARRATIVE]: true,
                                     },
                                 },
                                 {
@@ -420,7 +452,7 @@ export default {
                             anchor: `bare-knuckle defeats`,
                             cards: [
                                 {
-                                    description: `Sita seemed intrigued by my rough-and-tumble past, despite my honest admission that these were literal beatdowns in which I never threw a single punch.`,
+                                    description: `Sita was intrigued by my rough-and-tumble past, despite my honest admission that these were literal beatdowns in which I never threw a single punch.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -471,8 +503,10 @@ export default {
                         `Then just like the drift,`,
                         {
                             anchor: `she disappeared`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `Shortly after our third date, I called Sita to tell her I was in love with her. She admitted that she didn't feel the same way, yet wanted to remain friends. We hung up with the understanding that I would continue to invite her out for casual excursions. But I felt so dejected that I gave up altogether on seeing her again.`,
+                                description: `Shortly after our first few dates, I called Sita to tell her I was in love with her. She admitted that she didn't feel the same way, yet wanted to remain friends. We hung up with the understanding that we would continue to hang out casually. But I felt so dejected that I decided never to see her again.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -660,6 +694,8 @@ export default {
                     lyric: [
                         {
                             anchor: `Phantom limbs`,
+                            todo: true,
+                            problem: `Grammar is incorrect. I was in giddy hope, not the amputation.`,
                             card: {
                                 description: [
                                     `A`,
@@ -667,7 +703,7 @@ export default {
                                         anchor: `phantom limb`,
                                         wiki: `Phantom_limb`,
                                     },
-                                    `is the sensation that a missing limb is still responsive. And having spent those last weeks of the summer in giddy hope, an amputation is now what it feels like to face the coming weekend alone.`,
+                                    `is the sensation that a missing limb is still responsive. And having spent these last weeks of summer in giddy hope, an amputation is now what it feels like to face the coming weekend alone.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
