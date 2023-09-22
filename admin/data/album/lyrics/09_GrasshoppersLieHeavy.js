@@ -695,7 +695,7 @@ export default {
                         {
                             anchor: `Phantom limbs`,
                             todo: true,
-                            problem: `Grammar is incorrect. I was in giddy hope, not the amputation.`,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
                                     `A`,
@@ -703,11 +703,10 @@ export default {
                                         anchor: `phantom limb`,
                                         wiki: `Phantom_limb`,
                                     },
-                                    `is the sensation that a missing limb is still responsive. And having spent these last weeks of summer in giddy hope, an amputation is now what it feels like to face the coming weekend alone.`,
+                                    `is the sensation that a missing limb is still responsive. And after I've spent these last weeks of summer in giddy hope, an amputation is what it feels like now to face the coming weekend alone.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
-                                    [OBSERVATION]: true,
                                 },
                             },
                         },
@@ -720,18 +719,19 @@ export default {
                         `them`,
                         {
                             anchor: `tripped on runner's high`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
-                                    `After a grueling shift, I would make the long slog back home while feeling dead tired in all my limbs. So if I were to be passed by a nighttime jogger feeling the euphoria of a`,
+                                    `After a grueling shift, I make the long slog back home, all the while feeling dead tired in all my limbs. So it's hard to feel gracious as I'm passed by a nighttime jogger who's clearly feeling the euphoria of a`,
                                     {
                                         anchor: `runner's high`,
                                         wiki: `Neurobiological_effects_of_physical_exercise`,
                                     },
-                                    `, it would have been hard to feel gracious.`,
+                                    `.`,
                                 ],
                                 dotKeys: {
-                                    [BACKSTORY]: true,
-                                    [OBSERVATION]: true,
+                                    [NARRATIVE]: true,
                                 },
                             },
                         },
@@ -744,20 +744,29 @@ export default {
                         `Below the`,
                         {
                             anchor: `window of your Walkman`,
-                            card: {
-                                description: [
-                                    `In those days, I often carried a`,
-                                    {
-                                        anchor: `Walkman`,
-                                        wiki: `Walkman`,
+                            todo: true,
+                            problem: `Review one more time.`,
+                            cards: [
+                                {
+                                    description: [
+                                        `In those days, I often carried a`,
+                                        {
+                                            anchor: `Walkman`,
+                                            wiki: `Walkman`,
+                                        },
+                                        `wherever I went.`,
+                                    ],
+                                    dotKeys: {
+                                        [BACKSTORY]: true,
                                     },
-                                    `wherever I went. So after wishing pratfalls upon others, I could just pretend to be absorbed in my music, like a child ducking beneath a window after pulling a prank.`,
-                                ],
-                                dotKeys: {
-                                    [BACKSTORY]: true,
-                                    [OBSERVATION]: true,
                                 },
-                            },
+                                {
+                                    description: `After picturing the jogger to have taken a pratfall, I pretend to be absorbed in my music, like a child ducking beneath a window after pulling a prank.`,
+                                    dotKeys: {
+                                        [NARRATIVE]: true,
+                                    },
+                                },
+                            ],
                         },
                         `you hide.`,
                     ],
@@ -816,6 +825,8 @@ export default {
                         `"Hey, you know`,
                         {
                             anchor: `you're my password`,
+                            todo: true,
+                            problem: `Don't need to be so specific, since it's the fictional present. Just say my name, or my birthday, or whatever.`,
                             card: {
                                 description: `As I enter the passcode for the gate, Sita breaks the ice by mentioning that a topic we'd once discussed was the basis for a password she recently created.`,
                                 dotKeys: {
@@ -845,7 +856,7 @@ export default {
                         {
                             anchor: `locks your arm`,
                             card: {
-                                description: `Seeing Sita shiver from the cold, I invite her to warm up inside my apartment. In response, she gladly tucks her hand under my arm. Of course, this doesn't mean what I want it to mean. And so I feel like an escaped convict who's just been recaptured and put in handcuffs.`,
+                                description: `Seeing Sita shiver from the cold, I invite her to warm up inside my apartment, whereupon she gladly tucks her hand under my arm. Of course, this doesn't mean what I want it to mean. And so I feel like an escaped convict who's just been recaptured and put in handcuffs.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -871,7 +882,7 @@ export default {
                         {
                             anchor: `returned to your guard`,
                             card: {
-                                description: `And just like that, I'm once again on guard, as I was on our first few dates. I'm second-guessing everything I say, like a prisoner conversing with a jail guard.`,
+                                description: `And just like that, I'm once again on guard, much like I was on our first few dates. I'm second-guessing everything I say, like a prisoner conversing with a jail guard.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -895,7 +906,7 @@ export default {
                         {
                             anchor: `gingerbread prison`,
                             card: {
-                                description: `Since a platonic friendship with Sita can never fulfill me, I find the thought instantly depressing. And yet… it's also kind of sweet to nibble on.`,
+                                description: `Since a platonic friendship with Sita can never fulfill me, I find the thought depressing. And yet… it's also kind of sweet to nibble on.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -912,7 +923,7 @@ export default {
                         {
                             anchor: `never full, you're fed`,
                             card: {
-                                description: `Like a tired fugitive relieved to come back to a warm bed and regular meals, I have to concede that even if we're just friends, it's still better than the cold, bleak alternative.`,
+                                description: `Like a tired fugitive relieved to come back to a warm bed and regular meals, I finally concede that mere friendship is still better than the cold, bleak alternative.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -946,7 +957,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `Lying on my bed is an open jar of`,
+                                        `On my bed lies an open jar of`,
                                         {
                                             anchor: `Vaseline`,
                                             wiki: `Vaseline`,
@@ -1000,7 +1011,7 @@ export default {
                                 wiki: `Nevermind`,
                             },
                         },
-                        `is when`,
+                        `for me is when`,
                         {
                             anchor: `Kurt Cobain`,
                             wiki: `Kurt_Cobain`,
@@ -1027,15 +1038,15 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `One night Sita had a`,
+                                        `One night Sita has a`,
                                         {
                                             anchor: `hyperglycemic`,
                                             wiki: `Hyperglycemia`,
                                         },
-                                        `episode. I drove her to the emergency room and sat in the waiting area as she was being examined.`,
+                                        `episode. I drive her to the emergency room and sit in the waiting area as she's being examined.`,
                                     ],
                                     dotKeys: {
-                                        [BACKSTORY]: true,
+                                        [NARRATIVE]: true,
                                     },
                                 },
                                 {
@@ -1057,7 +1068,7 @@ export default {
                             anchor: `bright to your gloom`,
                             cards: [
                                 {
-                                    description: `As we became friends, what I stood to gain from Sita was obvious. Less so was what she gained from me, given my moody temperament. But in time I came to see that her cheery nature masked a lingering depression, which gave me an opening to win her over with simple, kind gestures.`,
+                                    description: `As we became friends, what I stood to gain from Sita was obvious. Less so was what she gained from me, given my moody temperament. But in time I came to see that her cheery nature masked a lingering depression, which gave me an opening to win her over with kind gestures.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -1157,6 +1168,8 @@ export default {
                         },
                         {
                             anchor: `with a ring`,
+                            todo: true,
+                            problem: `Make it more like the exchange of vows and rings with a belle.`,
                             cards: [
                                 {
                                     description: `Having dozed off, I'm roused by the ringing of a bell to indicate that a patient has been released from care and is returning to the waiting area.`,
@@ -1186,7 +1199,7 @@ export default {
                         {
                             anchor: `white gown`,
                             card: {
-                                description: `White gowns are commonly worn in both wedding ceremonies and hospitals.`,
+                                description: `White gowns are commonly worn in both hospitals and wedding ceremonies.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -1203,7 +1216,7 @@ export default {
                             anchor: `cheek unveiled`,
                             cards: [
                                 {
-                                    description: `Glancing up, I'm startled to find Sita hovering over me with a cheeky smile. Having quietly unclasped her purse from my grip, she returns to the treatment area, but not before inadvertently flashing some "cheek" from beneath her revealing hospital gown.`,
+                                    description: `Glancing up, I'm startled to find Sita hovering over me with a cheeky smile. Having quietly unclasped her purse from my grip, she returns to the treatment area, but not before inadvertently flashing some "cheek" from beneath her hospital gown.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true,
@@ -1234,7 +1247,7 @@ export default {
                         {
                             anchor: `She loves you`,
                             card: {
-                                description: `It took a long while for Sita and I to be fully comfortable with each other. At the start of our yearlong friendship, we mostly just studied together at the library. Then slowly, short treks through campus progressed into long strolls around the neighborhood, which soon led up to leaning in closer on the couch. It all happened so fast toward the end that I was still processing what exactly triggered it.`,
+                                description: `It took a long while for Sita and I to be fully comfortable with each other. At the start of our yearlong friendship, we mostly just studied together at the library. Then slowly, short treks through campus progressed into long strolls around the neighborhood, which soon led up to leaning in closer on the couch. It all happened so fast toward the end that I was still processing what triggered it.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -1257,11 +1270,19 @@ export default {
                         `You`,
                         {
                             anchor: `stand unsure`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             cards: [
                                 {
-                                    description: `The night we decided to have sex, I was overcome with a wary unease that I couldn't explain. As Sita lay naked while comforting me with her gaze, I stood forlornly by the bedside for what seemed like several minutes.`,
+                                    description: `The night we decided to have sex, I was overcome with a wary unease that I couldn't explain.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
+                                    },
+                                },
+                                {
+                                    description: `As Sita lies naked and comforts me with her gaze, I stand forlornly by the bedside.`,
+                                    dotKeys: {
+                                        [NARRATIVE]: true,
                                     },
                                 },
                                 {
@@ -1283,7 +1304,7 @@ export default {
                         {
                             anchor: `hard-on in a sleeve`,
                             card: {
-                                description: `Pointing to the condom on my erection, Sita lightens the mood by feigning to agree with a past self-assessment of mine that I wear my "heart on" my sleeve.`,
+                                description: `Pointing to the condom on my erection, Sita lightens the mood by feigning to agree with a past assessment of mine that I wear my "heart on" my sleeve.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -1300,7 +1321,7 @@ export default {
                         {
                             anchor: `how's that compromise`,
                             card: {
-                                description: `Having taken such pains to tuck away my emotions for so long, I was now hesitant to compromise the safety of this position. I just didn't want to feel vulnerable again, and I had so little faith that my desires wouldn't backfire on me as they had the first time I revealed them.`,
+                                description: `Having taken such pains to tuck away my emotions for so long, I was now hesitant to compromise the safety of my current position. I just didn't want to feel vulnerable again, and I had so little faith that my desires wouldn't backfire on me as they had the first time I revealed them.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -1405,7 +1426,7 @@ export default {
                         {
                             anchor: `pure lose to pure`,
                             card: {
-                                description: `Sita and I were both virgins, which made it easier to lower my defenses. I had to remind myself that neither of us knew what we were doing.`,
+                                description: `Sita and I were both virgins, which made it easier for me to lower my defenses. I had to remind myself that neither of us knew what we were doing.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -1482,6 +1503,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
+                problem: `Review one more time. Should a cat have a "who" or "that" pronoun?`,
                 card: {
                     description: [
                         `The French expression`,
@@ -1492,7 +1515,7 @@ export default {
                                 wiki: `La_petite_mort`,
                             },
                         },
-                        `, which translates to "the little death," refers to a feeling of melancholic transcendence after orgasm. So as the chords continue to rise, the lead guitar plays a falling riff, before everything cuts away to Odin's theme, a reminder of the house cat that passed away in my youth.`,
+                        `, which translates to "the little death," refers to a feeling of melancholic transcendence after orgasm. So as the chords continue to rise, the lead guitar plays a falling riff, until everything cuts away to Odin's theme, a reminder of the house cat who passed away in my youth.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
