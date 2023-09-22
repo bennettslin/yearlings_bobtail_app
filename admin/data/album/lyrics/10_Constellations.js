@@ -1429,6 +1429,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
+                problem: `Still doesn't flow very well.`,
                 card: {
                     description: [
                         `On solo trips, I would play on my`,
@@ -1485,7 +1487,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: `If the lyrics for this second chorus seem out of place given the noticeable lack of literary puns, it's because they're a carryover from a previous incarnation of this song. But I liked them enough to keep them, and they perfectly capture my moment of clarity at the cemetery.`,
+                    description: `If the lyrics for this second chorus seem out of place given the noticeable lack of literary puns, it's because they're a carryover from a previous incarnation of this song. I liked them enough to keep them, and they perfectly capture my moment of clarity at the cemetery.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGCRAFT]: true,
@@ -1531,6 +1533,8 @@ export default {
                         {
                             // NOTE: I changed from ha'nt.
                             anchor: `hant'd by sober-trooth tiedgirl`,
+                            todo: true,
+                            problem: `Sentence runs on.`,
                             card: {
                                 description: [
                                     `As I envision a "`,
@@ -1568,9 +1572,11 @@ export default {
                         lyric: [
                             {
                                 anchor: `sunk in tarpid lies`,
+                                todo: true,
+                                problem: `Review one more time.`,
                                 cards: [
                                     {
-                                        description: `My mastodon lies sunk in a "tar pit," just as I'm sinking in all my "torpid" lies explaining to Sita why I don't spend more nights with her.`,
+                                        description: `My mastodon lies sunk in a "tar pit," just as I'm sinking in all my "torpid" lies to Sita explaining why I don't spend more nights with her.`,
                                         dotKeys: {
                                             [NARRATIVE]: true,
                                             [PUN]: true,
@@ -1720,6 +1726,8 @@ export default {
                             // NOTE: Changing from Nunavutter.
                             anchor: `Noworse and Nunavetter`,
                             properNoun: true,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
                                     `Our Inuit tribe has now ventured all the way to`,
@@ -1727,7 +1735,7 @@ export default {
                                         anchor: `Nunavut`,
                                         wiki: `Nunavut`,
                                     },
-                                    `, the northernmost territory of Canada. Yet with the Norse making a reappearance in my thoughts, I realize that even our fantasies must circle back and cover old ground, just like the humdrum lives from which we're trying to escape. So as the "Norse" encounter the "Nunavutters," we end the night as we'd begun it, "no worse and none the better."`,
+                                    `, the northernmost territory of Canada. Yet with the Norse making a reappearance in my thoughts, I realize that even our fantasies must circle back and cover old ground, just like the humdrum lives from which we try to escape. So as the "Norse" encounter the "Nunavutters," we end the night as we'd begun it, "no worse and none the better."`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1904,7 +1912,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `For a song about recreational drug use, I naturally turned to the Beatles in their`,
+                        `For a song about recreational drug use, I naturally turned to the Beatles during their`,
                         {
                             anchor: `psychedelic`,
                             wiki: `Psychedelic_rock`,
@@ -1995,6 +2003,8 @@ export default {
                         {
                             anchor: `come unsated`,
                             properNoun: true,
+                            todo: true,
+                            problem: `Rewrite the second sentence to avoid two past tenses of the past.`,
                             card: {
                                 description: `Howie is downstairs in "anguish" over still being "buzzed," as he quenches his innards by downing cups of water. He'd opted for a large bottle of Robitussin earlier that night, thinking the small one I recommended wouldn't be enough.`,
                                 dotKeys: {
@@ -2110,15 +2120,21 @@ export default {
                         `…`,
                         {
                             anchor: `"Rejoyce!" bellow the`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             cards: [
                                 {
                                     description: [
-                                        `"'Rejoice!' bellow the reverends." Stuck with nothing to watch but early-morning`,
+                                        `"'Rejoice!' bellow the reverends." Stuck with nothing to watch but`,
+                                        {
+                                            anchor: `public-access`,
+                                            wiki: `Public-access_television`,
+                                        },
                                         {
                                             anchor: `televangelists`,
                                             wiki: `Televangelism`,
                                         },
-                                        `, it occurs to me that every religion's early spirit eventually degrades into orthodoxy and routine, as does every person's youthful spirit in their later years. But in the meantime, we're just halfway through summer, and more nights of Robitussin await…`,
+                                        `, I realize that every religion's early spirit eventually degrades into orthodoxy and routine, as does every person's youthful spirit in their later years. But in the meantime, we're just halfway through summer, and more nights of Robitussin await…`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
