@@ -1457,7 +1457,7 @@ export default {
                                         anchor: `temples`,
                                         wiki: `Temple_(anatomy)`,
                                     },
-                                    `. And possibly to her figurative ones as well.`,
+                                    `. But possibly to her figurative ones as well.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1515,7 +1515,7 @@ export default {
                                 wiki: `La_petite_mort`,
                             },
                         },
-                        `, which translates to "the little death," refers to a feeling of melancholic transcendence after orgasm. So as the chords continue to rise, the lead guitar plays a falling riff, until everything cuts away to Odin's theme, a reminder of the house cat who passed away in my youth.`,
+                        `, or "the little death," refers to a feeling of melancholic transcendence after orgasm. So as the chords continue to rise, the lead guitar plays a falling riff, until everything cuts away to Odin's theme, a reminder of the house cat who passed away in my youth.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
