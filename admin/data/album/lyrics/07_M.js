@@ -1046,7 +1046,7 @@ export default {
                             problem: `Review one more time.`,
                             card: {
                                 description: [
-                                    `Recognizing my wish to be with someone like Mara, and taking stock of what was needed to fulfill it, I decided to return to what I do best. I would hole up in emotional seclusion, this time to work on a magnum opus. My next five-year plan would see me write all the lyrics, score all the parts, and perform all the tracks on`,
+                                    `Recognizing my wish to be with someone like Mara, and taking stock of what was needed to fulfill it, I decided to return to what I do best, and hole up in seclusion— this time to work on a magnum opus. My next five-year plan would see me write all the lyrics, score all the parts, and perform all the tracks on`,
                                     {
                                         isItalic: true,
                                         lyric: `Bobtail`,
@@ -1087,14 +1087,16 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
+                problem: `Review one more time.`,
                 card: {
                     description: [
-                        `My original plan for this song was to take the puns one level further by recording it in a "`,
+                        `My original plan was to record this song in a "`,
                         {
                             anchor: `Mara-iachi`,
                             wiki: `Mariachi`,
                         },
-                        `" style. But I decided it wouldn't fit the song's tempo and scrapped it. Still, it gave me an idea to model the outro after the`,
+                        `" style— taking the puns one level further. But I decided it wouldn't fit the song's natural tempo and scrapped it. Still, it gave me an idea to model the outro after the`,
                         {
                             anchor: `Los Lobos`,
                             wiki: `Los_Lobos`,
