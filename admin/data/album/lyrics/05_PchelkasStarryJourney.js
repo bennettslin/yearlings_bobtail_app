@@ -1443,7 +1443,7 @@ export default {
                             anchor: `supported living`,
                             wiki: `Supported_living`,
                         },
-                        `agency.`,
+                        `agency. When asked how old he is, he still answers "seven."`,
                     ],
                     dotKeys: {
                         [AFTERWORD]: true,

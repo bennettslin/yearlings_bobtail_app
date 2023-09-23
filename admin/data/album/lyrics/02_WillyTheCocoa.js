@@ -74,6 +74,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
+                problem: `"Heist" might not be the right word, because something was switched, not stolen.`,
                 card: {
                     description: [
                         `In the past, a disabled child was sometimes thought to be a troll in disguise known as a`,
@@ -81,7 +83,7 @@ export default {
                             anchor: `changeling`,
                             wiki: `Changeling`,
                         },
-                        `, who'd been left in place of a stolen human infant. I wanted this song to sound like a band of woodland trolls in secluded revelry after pulling off such a heist. I figured their style would be like the swamp rock of`,
+                        `, who'd been left in place of a stolen human infant. I wanted this song to sound like a band of woodland trolls celebrating a recent heist in secluded revelry. I figured their style would be like the swamp rock of`,
                         {
                             anchor: `Creedence Clearwater Revival`,
                             wiki: `Creedence_Clearwater_Revival`,
@@ -146,8 +148,10 @@ export default {
                         `in`,
                         {
                             anchor: `tarred pavement mirage`,
+                            todo: true,
+                            problem: `Be more clear that the jagged peaks are like fangs.`,
                             card: {
-                                description: `In the mirages created by the summer heat, the reflections of the Valley's surrounding mountains point downward. One could playfully suggest that their jagged peaks had caused the asphalt cracks.`,
+                                description: `In the mirages created by the summer heat, the reflections of the Valley's surrounding mountains point downward. One could playfully suggest that their jagged peaks caused the asphalt to crack.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -173,7 +177,7 @@ export default {
                             anchor: `dying coyote's jaw`,
                             cards: [
                                 {
-                                    description: `Every so often, a coyote would wander down from the hillside and get hit by traffic. Its body might then lie decomposing for days.`,
+                                    description: `Every so often, a coyote would wander from the hillside and get hit by traffic. Its body might then lie decomposing for days.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -199,7 +203,7 @@ export default {
                             anchor: `root progression`,
                             wiki: `Root_(chord)`,
                         },
-                        `here traces a zigzag in which a minor-third drop from one measure is followed by a whole-step rise to the next. At the cadence of each line, the melodicas hurry to catch up by squeezing a warped version of this descending pattern into a single measure.`,
+                        `here traces a zigzag in which a minor-third drop from one measure is followed by a whole-step rise to the next. At the cadence of each line, the melodicas catch up by squeezing a warped version of this descending pattern into a single measure.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -244,12 +248,12 @@ export default {
                                             anchor: `microcephaly`,
                                             wiki: `Microcephaly`,
                                         },
-                                        `, a medical condition in which the brain fails to develop properly. And so his head is abnormally small in size, like the "pinheads" of`,
+                                        `, a medical condition in which the brain stops growing after birth. And so his head is unusually small, like the`,
                                         {
-                                            anchor: `carnival sideshows`,
+                                            anchor: `sideshow`,
                                             wiki: `Sideshow`,
                                         },
-                                        `from bygone days.`,
+                                        `"pinheads" of bygone days.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -276,7 +280,7 @@ export default {
                             {
                                 anchor: `Chilled cola's free`,
                                 card: {
-                                    description: `Willy eagerly awaits the complementary soft drink that comes with his reimbursement at the recycling center.`,
+                                    description: `Willy eagerly awaits the complimentary soft drink that comes with his reimbursement at the recycling center.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -469,6 +473,8 @@ export default {
                         `he croaks, stroking`,
                         {
                             anchor: `creepers on his cheek`,
+                            todo: true,
+                            problem: `Is there a simpler way to say this?`,
                             card: {
                                 description: `Of course, it should be no surprise if Willy is immune to the enchantment that disguises my brother's true form. After all, Willy may be a changeling himself, as evinced by his own unkempt facial hair.`,
                                 dotKeys: {
@@ -556,7 +562,7 @@ export default {
                                         anchor: `X-Ray Specs`,
                                         wiki: `X-Ray_Specs_(novelty)`,
                                     },
-                                    `, which purportedly allow the wearer to see through objects, I've just received them in the mail and am now trying them on.`,
+                                    `— which purportedly allow the wearer to see through objects— I'm now trying them on.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -574,7 +580,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `Unfortunately, the comic book I was reading on the floor just a minute ago has somehow made its way into my brother's scrap pile.`,
+                                    description: `Unfortunately, the comic book I was reading on the floor just a moment ago has somehow made its way into my brother's scrap pile.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -618,7 +624,7 @@ export default {
                         {
                             anchor: `baffled sobs`,
                             card: {
-                                description: `The hardest part about hurting my brother was knowing he had no way to understand the cause of my anger. The times when I turned on him and inflicted physical pain would always remain without explanation. For him, it was just another part of what life was.`,
+                                description: `The hardest thing about hurting my brother was knowing he had no way to understand the cause of my anger. The times when I turned on him and inflicted physical pain would always remain without explanation. For him, it was just another part of what life was.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -729,7 +735,7 @@ export default {
                             anchor: `Hit this witch`,
                             cards: [
                                 {
-                                    description: `In some legends, beating a changeling badly enough will cause it to tire of its charade and return the stolen child. These legends reflect the historical reality that sickly children were often abused to death, if not killed outright. So if Willy is a changeling, then it seems predestined that he should meet a violent end.`,
+                                    description: `In some legends, beating a changeling badly enough will cause it to tire of its charade and return the stolen child. This reflects the historical reality that sickly children were often abused to death, if not killed outright. So if Willy is a changeling, then it seems predestined that he should meet a violent end.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [OBSERVATION]: true,
@@ -844,7 +850,7 @@ export default {
                                         anchor: `flower bulb`,
                                         wiki: `Ornamental_bulbous_plant`,
                                     },
-                                    `plucked from its stalk. But once planted in the earth, the bulb can grow a new stem and bloom again.`,
+                                    `plucked from its stalk. But once planted in the earth, bulbs can grow new stems and bloom again.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -902,7 +908,7 @@ export default {
                                         anchor: `Greek mythology`,
                                         wiki: `Greek_mythology`,
                                     },
-                                    `. By softening the soil, the mulch gives new life to our flower beds. And perhaps Willy will do the same for our neighborhood, by softening the "asphalt" beneath which his body had lain.`,
+                                    `. By softening the soil, the mulch gives new life to our flower beds. And perhaps Willy will do the same for our neighborhood, by softening the "asphalt" beneath which his body once lay.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -972,7 +978,7 @@ export default {
                             anchor: `whammy bar`,
                             wiki: `Vibrato_systems_for_guitar`,
                         },
-                        `at the same time. Since either of these can bend pitch on its own, it makes no sense to combine them. Which is exactly why a troll guitarist would.`,
+                        `at the same time. Since either of these can bend pitch on its own, it makes no sense to combine them. Which is exactly why a troll guitarist would do so.`,
                     ],
                     dotKeys: {
                         [OBSERVATION]: true,
@@ -1168,7 +1174,7 @@ export default {
                             anchor: `needle done`,
                             cards: [
                                 {
-                                    description: `My mother tells me that my life is a patchwork onto which I'll continue to sew new experiences. In turn, the insights gained from these experiences may inform and enrich my art.`,
+                                    description: `My mother tells me that my life is a patchwork onto which I'll continue to sew new experiences. In turn, the insights gained from these experiences will inform and enrich my art.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -1181,6 +1187,8 @@ export default {
                         `, you'll write this`,
                         {
                             anchor: `book of yours`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
                                     `I wore an eyepatch as a child to correct my`,
@@ -1188,7 +1196,7 @@ export default {
                                         anchor: `lazy eye`,
                                         wiki: `Amblyopia`,
                                     },
-                                    `. Since I lacked depth perception, it was less of a struggle for me to recreate on paper what I saw in real life. Impressed by my drawing ability, my mother insisted I was destined to be a great artist. So I always had it in my head that I would one day create a masterpiece, perhaps something like the`,
+                                    `. Since I lacked depth perception, it was less of a struggle for me to recreate on paper what I saw in real life. Impressed by my drawing ability, my mother insisted that I was destined to be a great artist. So I always had it in my head that I would one day create a masterpiece, perhaps something like the`,
                                     {
                                         anchor: `Tintin`,
                                         wiki: `The_Adventures_of_Tintin`,
@@ -1229,7 +1237,7 @@ export default {
                             properNoun: true,
                             card: {
                                 description: [
-                                    `My favorite word as a child was "bobtail." I was just so proud of myself the day I realized that the line "Bells on bobtail ring," from the song "`,
+                                    `My favorite word as a child was "bobtail." I was just so proud of myself the day I realized that the line, "Bells on bobtail ring," from the song "`,
                                     {
                                         anchor: `Jingle Bells`,
                                         wiki: `Jingle_Bells`,
