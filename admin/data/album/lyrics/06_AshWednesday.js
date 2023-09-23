@@ -24,7 +24,9 @@ export default {
     referenceDescription: `Darbuka in anacrusis`,
     playerStartTime: 967.569,
     mixStartTime: `0:01:03.51`,
-    overview: `Catherine, my first girlfriend in college, was a nice Catholic girl and high school valedictorian, who didn't take kindly to my lack of reading habit and broke up with me right before Ash Wednesday. So I ashed my own forehead that day and tried to bump into her, hoping I might get another chance if she could picture me as a good Catholic boy. It didn't work, but I did grow into a faithful reader, and I have Catherine to thank for that.`,
+    todo: true,
+    problem: `Review one more time.`,
+    overview: `My first girlfriend in college was Catherine, a nice Catholic girl and high school valedictorian, who didn't take kindly to my lack of reading habit and broke up with me right before Ash Wednesday. So I ashed my own forehead that day and tried to bump into her, hoping that if she could picture me as a good Catholic boy, I might get another chance. It didn't work, but I did grow into a lifelong reader, and I have Catherine to thank for that.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -111,7 +113,7 @@ export default {
                         {
                             anchor: `where it commenced`,
                             card: {
-                                description: `The relationship with Catherine began much like my friendship with Sasha had years earlier. I latched onto the first person to show me kindness in a new environment, and then I tried to make myself indispensable in small ways.`,
+                                description: `The relationship with Catherine began much like my friendship with Sasha had years earlier: I latched onto the first female to show me kindness in a new environment, and then I made myself indispensable in small ways.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -136,6 +138,8 @@ export default {
                         {
                             anchor: `Ulysses' tomb`,
                             properNoun: true,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
                                     `A reference to the classic "`,
@@ -151,7 +155,7 @@ export default {
                                             wiki: `Ulysses_(novel)`,
                                         },
                                     },
-                                    `, which Catherine was reading at the time. Our relationship was probably doomed once I made that remark, since having an illiterate boyfriend would surely be the death of her.`,
+                                    `, which Catherine was reading at the time. Our relationship was likely doomed once I made this remark, since having an illiterate boyfriend would surely be the death of her.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -167,7 +171,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `For this song about two people who couldn't be more different, I placed`,
+                        `For a song about two people who couldn't be any more different, I placed`,
                         {
                             anchor: `Arabic maqam`,
                             wiki: `Arabic_maqam`,
@@ -177,7 +181,7 @@ export default {
                             anchor: `Renaissance polyphony`,
                             wiki: `Polyphony`,
                         },
-                        `in the final chorus.`,
+                        `in the lone chorus at the end.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -240,11 +244,12 @@ export default {
                             anchor: `last day she rose`,
                             card: {
                                 description: [
+                                    `He`,
                                     {
-                                        anchor: `Jesus rose`,
+                                        anchor: `then rose`,
                                         wiki: `Resurrection_of_Jesus`,
                                     },
-                                    `as well on the third day.`,
+                                    `on the third day.`,
                                 ],
                             },
                         },
@@ -322,7 +327,7 @@ export default {
                                     ],
                                 },
                                 {
-                                    description: `Up to that point, I thought of songwriting as just a matter of coming up with melodies and chords. But Catherine appreciated music for its lyrics, and because mine at the time were of the nonsensical variety, she wasn't impressed by any of my songs that I played for her.`,
+                                    description: `Up until then, I'd thought of songwriting as just a matter of coming up with melodies and chords. But Catherine appreciated music for its lyrics. And because mine at the time were of the nonsensical variety, she wasn't impressed by any of my songs that I played for her.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -355,7 +360,7 @@ export default {
                             anchor: `pressed for an opinion`,
                             cards: [
                                 {
-                                    description: `I would sometimes ask Catherine for honest feedback on my lyrics, hoping that one day I could write a song to tug on her heartstrings.`,
+                                    description: `Every so often I would ask Catherine for feedback on my lyrics, hoping that one day I could write a song to tug at her heartstrings.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -388,14 +393,16 @@ export default {
                         `,"`,
                         {
                             anchor: `putting down her Joyce`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
-                                    `Her compliment is less than sincere, however, since referencing a poet studied by middle schoolers is hardly an impressive feat. And so, feeling annoyed at being made to put down the Joyce novel she's reading, Catherine amuses herself by putting`,
+                                    `Her compliment is less than sincere, however, since referencing a poet studied by middle schoolers is hardly an impressive feat. And so, annoyed at being made to put down the Joyce novel she's reading, Catherine amuses herself by putting`,
                                     {
                                         isItalic: true,
                                         lyric: `me`,
                                     },
-                                    `down, for naively thinking that I could ever be the James Joyce of lyricists.`,
+                                    `down— for thinking I could be the James Joyce of lyricists.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -412,9 +419,11 @@ export default {
                         `with`,
                         {
                             anchor: `"Joyce" oblivious`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
-                                    `Of course, not knowing that I couldn't be the next Joyce is why I dared to try. And so the idea began to congeal in my head that I could do for rock music what`,
+                                    `Of course, not knowing I couldn't be the next Joyce is why I dared to try. And so the idea began to congeal in my head that I could do for rock music what`,
                                     {
                                         isItalic: true,
                                         lyric: `Ulysses`,
@@ -483,8 +492,10 @@ export default {
                         `who tried but failed to win her heart`,
                         {
                             anchor: `poised with brains`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `Catherine undervalued the artistic strengths that I'd always counted on to cover up my many weaknesses. Which made me realize that if I were ever to be worth keeping, then I simply couldn't have any weaknesses.`,
+                                description: `Catherine undervalued the artistic strengths I'd always counted on to cover up my many weaknesses. Which made me realize that if I were ever to be worth keeping, then I simply couldn't have any weaknesses.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -499,7 +510,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `While a major third can be divided into equal whole steps in Western music, a minor third can only be divided unequally between whole and half. But quarter tones allow a minor third to be traversed in two equal steps, creating the sensation of a squished major third. I liked how this confused my ears, and I went overboard with these rapid-fire minor-third runs on the`,
+                        `While a major third can be divided into equal whole steps in Western music, a minor third can only be divided unequally, between a whole step and a half. But quarter tones allow a minor third to be traversed in two equal steps, creating the sensation of a squished major third. I liked how this confused my ears, so I went overboard with these rapid-fire minor-third runs on the`,
                         {
                             anchor: `Dobro`,
                             wiki: `Dobro`,
@@ -540,12 +551,7 @@ export default {
                                         anchor: `Shelta`,
                                         wiki: `Shelta`,
                                     },
-                                    `, a cryptic language intended to exclude outsiders from comprehension. Catherine was part`,
-                                    {
-                                        anchor: `Irish`,
-                                        wiki: `Ireland`,
-                                    },
-                                    `, though not a Traveller. Either way, I was stuck outside her "shelter."`,
+                                    `, a cryptic language intended to exclude outsiders from comprehension. Catherine wasn't a Traveller, but I was stuck outside her "shelter" all the same.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -581,7 +587,7 @@ export default {
                             anchor: `unknown to roam`,
                             cards: [
                                 {
-                                    description: `If Catherine is a figurative Traveller, then I am unwelcome to follow her itinerant community that is well-known to roam.`,
+                                    description: `If Catherine is a figurative Traveller, then I'm unwelcome to follow her itinerant community, which is well known to roam.`,
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                     },
@@ -603,12 +609,12 @@ export default {
                                             anchor: `birth control`,
                                             wiki: `Birth_control`,
                                         },
-                                        `. We had no need for condoms since Catherine had vowed not to engage in`,
+                                        `. We had no need for them due to Catherine's vow not to engage in`,
                                         {
                                             anchor: `premarital sex`,
                                             wiki: `Premarital_sex`,
                                         },
-                                        `, though I always held out the hope.`,
+                                        `.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -669,6 +675,8 @@ export default {
                         `—`,
                         {
                             anchor: `my Tekakwitha`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
                                     {
@@ -685,12 +693,12 @@ export default {
                                         isItalic: true,
                                         lyric: `Beautiful Losers`,
                                     },
-                                    `, so I assumed that "go clear" was also a reference to the legend that her`,
+                                    `, so I assumed that going clear was also a reference to the legend that upon her death, her`,
                                     {
                                         anchor: `smallpox`,
                                         wiki: `Smallpox`,
                                     },
-                                    `scars miraculously vanished upon her death.`,
+                                    `scars miraculously vanished.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -706,6 +714,8 @@ export default {
                         `for I lack the wit to spare a`,
                         {
                             anchor: `safe Algonquin abode`,
+                            todo: true,
+                            problem: `Last sentence runs on a bit.`,
                             card: {
                                 description: [
                                     `Kateri Tekakwitha was born to a`,
@@ -718,7 +728,7 @@ export default {
                                         anchor: `Algonquin`,
                                         wiki: `Algonquin_people`,
                                     },
-                                    `woman taken from a village raided by his tribe. Dorothy Parker was a member of the`,
+                                    `woman who was taken away from her village. Dorothy Parker was a member of the`,
                                     {
                                         anchor: `Algonquin Round Table`,
                                         wiki: `Algonquin_Round_Table`,
@@ -761,7 +771,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `Catherine insisted on going no further than heavy petting, so I would fake "the sex" for myself by masturbating afterward.`,
+                                    description: `Since Catherine insisted on going no further than heavy petting, I would fake "the sex" for myself by masturbating afterward.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [PUN]: true,
@@ -793,7 +803,7 @@ export default {
                                         anchor: `Palm Sunday`,
                                         wiki: `Palm_Sunday`,
                                     },
-                                    `. But my ash came from a discarded cigarette that was still lit, so the palms I burned were the literal palms of my hands.`,
+                                    `. But my ash came from a discarded cigarette that was still lit, so I ended up burning the literal palms of my hands.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -834,7 +844,7 @@ export default {
                                                 isItalic: true,
                                                 lyric: `Paris vaut bien une messe`,
                                             },
-                                            `," or "Paris is well worth a Mass," implying that spiritual allegiances may be dictated by earthly ambitions. Similarly, I would have happily turned Catholic if that could get Catherine to stay.`,
+                                            `"— or "Paris is well worth a Mass"— implying that earthly ambitions take precedence over spiritual allegiances. Similarly, I would have happily converted if that could get Catherine to stay.`,
                                         ],
                                         dotKeys: {
                                             [OBSERVATION]: true,
@@ -879,6 +889,8 @@ export default {
                         `us wretched souls`,
                         {
                             anchor: `cursed to be born`,
+                            todo: true,
+                            problem: `Can the same thing be said with slightly fewer words? Are "should," "just," and "ends up" really needed?`,
                             cards: [
                                 {
                                     description: [
@@ -932,6 +944,8 @@ export default {
                         `to wear it like a`,
                         {
                             anchor: `tragic mask`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
                                     `In time I came to see`,
@@ -944,7 +958,7 @@ export default {
                                         anchor: `tragedy`,
                                         wiki: `Tragedy`,
                                     },
-                                    `as two sides of the same coin. After all, any misfortune can be turned into a song, writing a song calls for taking the broader view, and any misfortune viewed broadly enough will reveal its comic underbelly. So I was always happier with a negative outcome than with none at all. But this made everything I do feel like a stage act.`,
+                                    `as two sides of the same coin. After all, any misfortune can be turned into a song; writing a song calls for taking the broader view; and viewed broadly enough, every misfortune reveals a comic underbelly. So I was always happier with a negative outcome than with none at all. But this made everything I do feel like a stage act.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -958,6 +972,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
+                problem: `First sentence can be phrased better.`,
                 card: {
                     description: [
                         `Originally, this three-part counterpoint for mandolins and`,
@@ -1034,7 +1050,7 @@ export default {
                             anchor: `homophones`,
                             wiki: `Homophone`,
                         },
-                        `of their counterparts in the second. Like "mourn" with "morn," and "born" with "borne." So I challenged myself to make the two stanzas match phonetically when possible, which later gave me the idea for doublespeaker rhyme.`,
+                        `of their counterparts in the second. Like "mourn" with "morn," and "born" with "borne." So I challenged myself to make the two stanzas match phonetically as much as possible, which later gave me the idea for doublespeaker rhyme.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
