@@ -276,12 +276,12 @@ export default {
                 problem: `Review one more time.`,
                 card: {
                     description: [
-                        `Every time we got back together, Sita would reassert our status as a couple by insisting I bring her along to see my friends— the very ones who'd emboldened me to leave her. The circus`,
+                        `Every time we got back together, Sita would reassert our status as a couple by insisting I bring her along to see my friends— the very same ones who'd emboldened me to leave her. The circus`,
                         {
                             anchor: `calliope`,
                             wiki: `Calliope_(music)`,
                         },
-                        `heard here thus captures the humiliation of parading like a sad clown. I created it by applying a tape-saturation effect on a melodica track.`,
+                        `heard here thus captures the humiliation of parading around like a sad clown. I created it by applying a tape-saturation effect on a melodica track.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,

@@ -34,7 +34,9 @@ export default {
     mixStartTime: `0:02:06.00`,
     playerReferenceTime: 559.438,
     playerStartTime: 555.277,
-    overview: `Taiwan showed me how different life would have been had my parents not immigrated to America. Yet I was still worlds away from what Sasha needed me to be. Life seemed as infinitely fluid as it was immovably fixed, and I wasn't sure which extreme terrified me more. Our house cat Odin died of old age later that summer, just as I was seeking spiritual answers for my mortality. And yet, the eternal life promised by faith seemed no less terrifying than the finality of death.`,
+    todo: true,
+    problem: `Review one more time.`,
+    overview: `Taiwan showed me how different life would have been had my parents not immigrated to America— yet I was still worlds away from what Sasha needed me to be. Life seemed as infinitely fluid as it was immovably fixed, and I wasn't sure which extreme terrified me more. Our house cat Odin died of old age that summer, just as I was seeking spiritual explanations for my mortality. And yet, the eternal life promised by faith seemed no less terrifying than the finality of death.`,
     isDoublespeaker: true,
     lyricUnits: [
         {
@@ -81,6 +83,8 @@ export default {
                     lyricRight: [
                         {
                             anchor: `By lot`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             cards: [
                                 {
                                     description: `Lots are drawn by chance to decide an outcome, and it was my lot not to be born a Jew.`,
@@ -110,7 +114,7 @@ export default {
                                             anchor: `his wife`,
                                             wiki: `Lot's_wife`,
                                         },
-                                        `looked back, she was turned into a pillar of salt. This story can be interpreted as a cautionary tale warning the faithful not to cohabit with the fallen.`,
+                                        `looked back, she was turned into a pillar of salt. This story can be interpreted as a cautionary tale that the faithful should not cohabit with the fallen.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -126,8 +130,10 @@ export default {
                     lyricLeft: [
                         {
                             anchor: `hiding place of retreat`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `The "asleep" voice in the doublespeaker set narrates a dream that confusedly melds the familiar setting of Los Angeles with the foreign sights of Taiwan. The dream begins with me crawling out from the dusty space beneath my bed at home. Having been absorbed in my drawings, I'd stayed down there well into nighttime.`,
+                                description: `The "asleep" voice in the doublespeaker set narrates a dream that confusedly melds the familiar setting of Los Angeles with the foreign sights of Taiwan. The dream begins with me crawling out from the dusty space beneath my bed at home. Absorbed in my drawings, I've been down there well into nighttime.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -155,7 +161,7 @@ export default {
                                         anchor: `kosher`,
                                         wiki: `Kashrut`,
                                     },
-                                    `. In Sasha's world, certain everyday foods weren't meant to be eaten. So it could also be inferred that certain boys in her everyday life weren't meant to be dated.`,
+                                    `. In Sasha's world, certain everyday foods weren't meant to be eaten. So it could be inferred that certain boys in her everyday life weren't meant to be dated.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -209,6 +215,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
+                problem: `First sentence isn't quite right.`,
                 card: {
                     description: [
                         `For this song, I wanted to capture the disorienting cycle between days spent living among the foreign and nights spent dreaming of the familiar. So I used a literary technique I invented called doublespeaker rhyme, in which two sets of lyrics that rhyme syllable for syllable are panned hard into opposite speakers in the recording. It's the audio version of a cinematic`,
@@ -241,6 +249,8 @@ export default {
                         `you drew with`,
                         {
                             anchor: `crayons least whittled`,
+                            todo: true,
+                            problem: `Too many sentences of the same length. Two "trip"s in a row.`,
                             card: {
                                 description: [
                                     `When we landed in Taiwan, my aunt presented me with a box of`,
@@ -336,7 +346,7 @@ export default {
                             anchor: `alabaster balustrade`,
                             card: {
                                 description: [
-                                    `Taiwanese buildings at the time made heavy use of iron bars and stone slabs, as I recall. My grandmother's house felt like a mausoleum adorned with`,
+                                    `As I recall, Taiwanese buildings at the time made heavy use of iron bars and stone slabs. My grandmother's house felt like a mausoleum adorned with`,
                                     {
                                         anchor: `alabaster`,
                                         wiki: `Alabaster`,
@@ -370,7 +380,7 @@ export default {
                                     ],
                                 },
                                 {
-                                    description: `Writing doublespeaker rhyme was daunting, so I would come up with silly challenges, like mentioning each Paracelsian elemental.`,
+                                    description: `Writing doublespeaker rhyme was daunting, so I would come up with silly challenges, like being sure to mention every Paracelsian elemental.`,
                                     dotKeys: {
                                         [SONGCRAFT]: true,
                                     },
@@ -386,8 +396,10 @@ export default {
                         `baby steps inch towards`,
                         {
                             anchor: `crevice rays`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `My grandmother's house at night was pitch black. When I woke to use the bathroom, I had to tiptoe to the door with only a sliver of moonlight peeking in from underneath to guide me.`,
+                                description: `My grandmother's house at night was pitch black. When I woke to use the bathroom, I had to tiptoe to the door, guided by only a sliver of moonlight peeking in from underneath.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -447,7 +459,7 @@ export default {
                                         anchor: `Styx`,
                                         wiki: `Styx`,
                                     },
-                                    `separates the living from the underworld. At night in my grandmother's house, the stairs leading down to the first floor seemed just as foreboding.`,
+                                    `separates the living from the underworld. And at night in my grandmother's house, the stairs leading down to the first floor seemed just as foreboding.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -529,12 +541,12 @@ export default {
                                             anchor: `Book of Judges`,
                                             wiki: `Book_of_Judges`,
                                         },
-                                        `tells of a battle where`,
+                                        `tells of a battle in which`,
                                         {
                                             anchor: `Israelite`,
                                             wiki: `Israelites`,
                                         },
-                                        `warriors scoured the plains after their victory, asking stragglers to pronounce the`,
+                                        `warriors scoured the plains afterward, asking stragglers to pronounce the`,
                                         {
                                             anchor: `Hebrew`,
                                             wiki: `Hebrew_language`,
@@ -574,6 +586,8 @@ export default {
                         `As you plummet down from`,
                         {
                             anchor: `couplets past`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
                                     `In poetry, a`,
@@ -581,7 +595,7 @@ export default {
                                         anchor: `couplet`,
                                         wiki: `Couplet`,
                                     },
-                                    `is a pair of lines that share the same meter and typically rhyme. Sasha and I were never a couple, of course. But perhaps we were a couplet?`,
+                                    `is a pair of lines that share the same meter and typically rhyme. As children, Sasha and I were never a couple, of course. But perhaps we were a couplet?`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -720,7 +734,7 @@ export default {
                                         anchor: `Abraham`,
                                         wiki: `Abraham`,
                                     },
-                                    `, but God promised to make him into a great nation. Coming from a less favored lineage myself, I could only hope for similar recompense, as I was not to marry into Sasha's house.`,
+                                    `. Still, God promised to make him into a great nation. Coming from a less favored lineage myself, I could only hope for similar recompense, as I was not to marry into Sasha's house.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1128,12 +1142,12 @@ export default {
                             anchor: `guard's whistle`,
                             card: {
                                 description: [
-                                    `Wandering the beach in my dream, I notice a steel whistle that was likely dropped in the sand by a`,
+                                    `Wandering the beach in my dream, I notice a steel whistle in the sand that was likely dropped by a`,
                                     {
                                         anchor: `lifeguard`,
                                         wiki: `Lifeguard`,
                                     },
-                                    `. Its shrill cry to warn of danger is now forever silenced. An omen, perhaps, that some dangers come without warning.`,
+                                    `. Its shrill cry to warn of danger is now forever silenced— an omen, perhaps, that some dangers come without warning.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1147,6 +1161,8 @@ export default {
                         `you see the`,
                         {
                             anchor: `jarred sibyl`,
+                            todo: true,
+                            problem: `Last sentence seems too wordy, but alternatives also seem weird.`,
                             card: {
                                 description: [
                                     `The`,
@@ -1249,7 +1265,7 @@ export default {
                         {
                             anchor: `didn't impart warmth`,
                             card: {
-                                description: `But also like cellophane, Sasha couldn't reflect warmth where none was present. If I couldn't be the better person in dealing with the bullies, then there came a point when she would need to keep her distance from me as well.`,
+                                description: `But also like cellophane, Sasha couldn't reflect warmth where none was present. If I couldn't be the better person in dealing with the bullies, there came a point when she would need to keep her distance from me as well.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -1288,7 +1304,7 @@ export default {
                         {
                             anchor: `Buoy bobs`,
                             card: {
-                                description: `In my dream, I see myself adrift on a buoy as it bobs in an ocean filled with sea serpents. But who's to say that this "boy" isn't also bobbing through life, oblivious to dangers lurking everywhere?`,
+                                description: `In my dream, I see myself adrift on a buoy as it bobs in an ocean filled with sea serpents. But who's to say this "boy" isn't also bobbing through life, oblivious to the dangers lurking everywhere?`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -1308,12 +1324,12 @@ export default {
                                 {
                                     // CONSIDER: Wormhole Kyon for shank? Needs to allow for multiple wormhole keys first.
                                     description: [
-                                        `Those who wander a prison yard must always be on guard against getting stabbed with a`,
+                                        `Those who wander a prison yard must always be on guard against getting`,
                                         {
-                                            anchor: 'shiv',
+                                            anchor: 'shivved',
                                             wiki: `Shiv_(weapon)`,
                                         },
-                                        `. As luck would have it, the schoolyard was already preparing me for a lifetime of such vigilance.`,
+                                        `. Luckily, the schoolyard was already preparing me for a lifetime of such vigilance.`,
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
@@ -1586,7 +1602,7 @@ export default {
                                         anchor: `Aesop's fable`,
                                         wiki: `Aesop's_Fables`,
                                     },
-                                    `, but only because the hare falls asleep. Similarly, while tortoises live for over a century, I had them beat in longevity so long as I didn't sleep on choosing the right faith.`,
+                                    `, but only because the hare falls asleep. Similarly, while tortoises live for over a century, I had them beat in longevity— so long as I didn't sleep on choosing the right faith.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1859,6 +1875,8 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
+                problem: `Too many short sentences of the same length?`,
                 card: {
                     description: [
                         `As it became clear that`,
