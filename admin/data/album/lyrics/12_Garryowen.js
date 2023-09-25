@@ -532,8 +532,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
-                problem: `Review one more time.`,
                 card: {
                     description: [
                         `Though I'd played violin for ten years as a child, my skills were rusty by the time I made this album. Rather than get up to speed through intense practice, I created the fiddle parts by recording a fragment at a time, and then splicing those takes together. To make up for my cop-out, I threw in a complicated`,

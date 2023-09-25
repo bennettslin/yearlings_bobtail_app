@@ -170,7 +170,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `It scared me, far more than I let on, to gamble away the familiar warmth of Sita's love for a mere chance with some new woman. I often wondered if this fear then manifested in a hormonal craving for nurture over pleasure, because I was always struck by how motherly these women's naked bodies initially felt to me.`,
+                                description: `It scared me, far more than I let on, to gamble away the familiar warmth of Sita's love for a mere chance to date some new woman. I often wondered if this fear then manifested in a hormonal craving for nurture over pleasure, because I was always struck by how motherly these women's naked bodies initially felt to me.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -276,12 +276,12 @@ export default {
                 problem: `Review one more time.`,
                 card: {
                     description: [
-                        `Every time we got back together, Sita would reassert our status as a couple by insisting I bring her along to see my friends— the very same ones who'd emboldened me to leave her. The circus`,
+                        `Every time we got back together, Sita would reassert our status as a couple by insisting that I bring her along to see my friends— the very same ones who'd emboldened me to leave her. And so the circus`,
                         {
                             anchor: `calliope`,
                             wiki: `Calliope_(music)`,
                         },
-                        `heard here thus captures the humiliation of parading around like a sad clown. I created it by applying a tape-saturation effect on a melodica track.`,
+                        `heard here captures the humiliation of parading around like a sad clown once more. I created it by applying a tape-saturation effect on a melodica track.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -304,7 +304,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `After Sita initially rejected me, we spent a year getting to know each other as friends, though I still tried to impress her without appearing as such. One day I solved her friend's Rubik's Cube, a skill I'd picked up during my first five-year plan. As her friend raved, I merely shrugged, while Sita sat and smiled. I'd become a puzzle for her to solve.`,
+                                description: `After Sita initially rejected me, we spent a year getting to know each other as friends, though I still tried to impress her without appearing as such. One day I solved her friend's Rubik's Cube, a skill I'd picked up during my first five-year plan. As her friend raved, I casually shrugged, while Sita sat and smiled. I'd become a puzzle for her to solve.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -322,7 +322,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `The sting I felt in having been initially rejected by Sita was aggravated by the later revelation of her sexual past. And all the more so since it was precisely the painful lessons she took away from those past encounters that made her wary of my advances. Of course, I missed the irony of being the one who'd end up providing the most painful lesson by far.`,
+                                description: `The sting I felt in having once been rejected by Sita was aggravated by the later revelation of her sexual past. And all the more so since it was precisely the painful lessons she drew from those past encounters that made her wary of my initial advances. Of course, I missed the irony of being the one who'd end up providing the most painful lesson by far.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -769,8 +769,6 @@ export default {
                                 `'s your priority`,
                             ],
                             properNoun: true,
-                            todo: true,
-                            problem: `Review one more time.`,
                             card: {
                                 description: [
                                     `As I continued to work on`,
@@ -812,7 +810,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `When Sita first asked about the scars on my forearm, I wryly replied that they were just for practice. Years later, when I expressed concern after she'd tried cutting for herself, she gave me the same assurance. The message was clear: I was the cause in more ways than one.`,
+                                description: `When Sita first asked about the scars on my forearm, I wryly replied that they were just for practice. Years later, when I expressed concern after she'd tried cutting for herself, she gave me the same assurance. The message was clear that I was the cause in more ways than one.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
