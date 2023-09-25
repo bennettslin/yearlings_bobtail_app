@@ -60,7 +60,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 todo: true,
-                problem: `Review one more time.`,
+                problem: `Reverse order of sounding labored and not knowing what to do with it.`,
                 card: {
                     description: [
                         `As a teenager, I tried to figure out the songwriting secrets of the`,

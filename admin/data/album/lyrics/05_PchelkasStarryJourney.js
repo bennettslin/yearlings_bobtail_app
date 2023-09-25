@@ -37,7 +37,9 @@ export default {
     mixStartTime: `0:01:27.02`,
     playerReferenceTime: 756.159,
     playerStartTime: 755.661,
-    overview: `At the height of my years of getting bullied, a strange letter arrived with the promise of spiritual answers. After I sent the requested payments, it was revealed to me that I belonged to a race of interstellar beings, and my mission was to shut myself off from the world. I did so by adopting an unresponsive manner like my brother, which made me feel a psychic bond with him. But as my sanity chipped away, I gradually realized I was in a mail-order cult.`,
+    todo: true,
+    problem: `Review one more time.`,
+    overview: `As my years of getting bullied grew unbearable, a strange letter arrived in the mail with promises of spiritual answers. After I sent the requested payments, it was revealed to me that I belonged to a race of interstellar beings, and my mission was to shut myself off from the world. I did so by adopting an unresponsive manner like my brother, which made me feel a psychic bond with him. But as my sanity chipped away, I came to realize I was in a mail-order cult.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -91,7 +93,7 @@ export default {
                                             anchor: `bodybuilding`,
                                             wiki: `Bodybuilding`,
                                         },
-                                        `course advertised in a comic book— only to find out it's Charles Axis who bullies him. This absurd revelation sums up my mood whenever I reflect on where my own adventures in`,
+                                        `course advertised in a comic book— only to find out it's Charles Axis who bullies him. This absurd revelation sums up my mood when I reflect on where my own adventures in`,
                                         {
                                             anchor: `mail order`,
                                             wiki: `Mail_order`,
@@ -112,7 +114,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: `I wanted a kid to recite this line, but no one I knew had one at the time. So I had my sister do it while feigning a child's voice.`,
+                    description: `I wanted a child to recite this line, but no one I knew had children at the time. So I had my sister do it in her best child's voice.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
@@ -151,12 +153,12 @@ export default {
                             anchor: `Tuva`,
                             wiki: `Tuva`,
                         },
-                        `is a federal state of Russia, I also added`,
+                        `is a federal state of Russia, I added`,
                         {
                             anchor: `throat singing`,
                             wiki: `Tuvan_throat_singing`,
                         },
-                        `, where overtones in a lone voice sound like accompaniment by a second voice. I liked the implication that my brother sings with me in spirit.`,
+                        `, where overtones in a lone voice sound like accompaniment by a second one. I liked the implication that my brother sings with me in spirit.`,
                     ],
                     dotKeys: {
                         [OBSERVATION]: true,
@@ -185,7 +187,7 @@ export default {
                         {
                             anchor: `hit your baby brother`,
                             card: {
-                                description: `The times when I physically hurt my brother were actually rare. They just cast a long shadow in my memory. Since he could never understand or acknowledge my remorse, I could never truly feel forgiven.`,
+                                description: `The times when I physically hurt my brother were actually rare. They just cast a long shadow in my memory. Since he could never understand or acknowledge my remorse, I could never feel truly forgiven.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -341,8 +343,10 @@ export default {
                         `they'll catch you by`,
                         {
                             anchor: `your cape`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `I was well liked in elementary school despite being small in stature and absorbed in my art projects. Not only was I harmless and unassuming, but I readily drew cartoon figures for anyone who asked. But the traits that once made me a hero now marked me as easy prey in middle school, and I was ill-prepared.`,
+                                description: `I was well liked in elementary school, despite being small for my age and absorbed in my art projects. Not only was I harmless and unassuming, I would happily draw cartoon figures for those who asked. But the traits that once made me a hero now marked me as easy prey in middle school, and I was ill-prepared.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -407,7 +411,7 @@ export default {
                             anchor: `tired of being the weakling`,
                             card: {
                                 description: [
-                                    `In a well-known comic book advertisement at the time, a scrawny guy takes revenge on a bully after learning to build up his muscles, all thanks to`,
+                                    `In a well-known comic book ad at the time, a scrawny guy takes revenge on a bully after learning to build up his muscles, all thanks to`,
                                     {
                                         anchor: `Charles Atlas`,
                                         wiki: `Charles_Atlas`,
@@ -437,7 +441,7 @@ export default {
                         {
                             anchor: `send-away offers`,
                             card: {
-                                description: `Since I had few friends in middle school, I would amuse myself by sending away for free samples. As a result, I got flooded with junk mail, which exposed me to even more offers. Then one day, I received a letter from RI Research, Special Human Being Laboratory.`,
+                                description: `Since I had few friends in middle school, I would amuse myself by sending away for free samples offered in the back pages of my comic books. As a result, I got flooded with junk mail, which exposed me to even more offers. Then one day, I received a letter from RI Research, Special Human Being Laboratory.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -489,8 +493,10 @@ export default {
                         `"`,
                         {
                             anchor: `Are you a Beyonder`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `According to RI Research, Beyonders are an ancient race of beings born from the stars and scattered across the universe with no memory of their true origin. Those who made it to Earth adopted the likeness of human beings, yet they're beset by a nagging disquiet that they do not truly belong.`,
+                                description: `According to RI Research, Beyonders are an ancient race of beings who were born from the stars and scattered across the universe. Those who made it to Earth adopted the likeness of human beings. Yet even with no memory of their origins, they're beset by a quiet discomfort that they don't truly belong.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -505,6 +511,8 @@ export default {
                         `Do you often feel like a`,
                         {
                             anchor: `wanderer lost`,
+                            todo: true,
+                            problem: `First sentence could be better. Maybe avoid "elude."`,
                             card: {
                                 description: `The letter addressed my yearning for acceptance and spoke to my frustration that this desire should so elude me. Having hit all the right nerves, it then shared hopeful news: RI Research believed that I might be a Beyonder. And now, after searching for so long, they'd found me.`,
                                 dotKeys: {
@@ -521,6 +529,8 @@ export default {
                         `But`,
                         {
                             anchor: `waiting for Goddard`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             cards: [
                                 {
                                     description: [
@@ -538,7 +548,7 @@ export default {
                                             anchor: `liquid-fueled rocket`,
                                             wiki: `Liquid-propellant_rocket`,
                                         },
-                                        `. Unfortunately in my case, I couldn't wait for a more promising age to arrive on its own. Middle school was brutal and felt endless, and I needed answers right then.`,
+                                        `. But in my case, I couldn't wait for a more promising age to arrive on its own. Middle school was brutal and felt endless; I needed answers right then.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -755,8 +765,10 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
+                problem: `Review one more time.`,
                 card: {
-                    description: `The sound of rocket circuitry in the background was made by banging an electric guitar against a carpet floor while bending its whammy bar. It took countless tries, and I kept having to retune because the tuning would get messed up each time.`,
+                    description: `To make the sound of rocket circuitry heard here, I banged an electric guitar against a carpet floor while bending its whammy bar. It took countless tries, and I kept having to retune because the guitar would go out of tune each time.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
@@ -802,8 +814,10 @@ export default {
                         `one they'll find only once we build the`,
                         {
                             anchor: `mothership`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `To appear legitimate, the letters were peppered with pseudo-scientific terms, as they promised to keep me abreast of ongoing technological developments. This included spacecraft that would allow us to make contact with extraplanetary kin.`,
+                                description: `To appear legitimate, the letters threw scientific terms around as they promised to keep me abreast of ongoing technological developments. This included constructing a spacecraft that would allow us to make contact with our extraplanetary kin.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -845,12 +859,12 @@ export default {
                                 wiki: `Genghis_Blues`,
                             },
                         },
-                        `. Within a week I was able to sound out the`,
+                        `. Within a week I was sounding out the`,
                         {
                             anchor: `main partials`,
                             wiki: `Harmonic_series_(music)`,
                         },
-                        `, which impressed her greatly. My life ever since has been all about recapturing that moment.`,
+                        `, which impressed her greatly. Ever since, my life has been all about recapturing the glory of that moment.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -885,7 +899,7 @@ export default {
                         {
                             anchor: `act the dunce`,
                             card: {
-                                description: `By failing to acknowledge or respond to fellow students, I came across as an imbecile.`,
+                                description: `By failing to acknowledge or respond to my classmates, I came across as an idiot.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -903,19 +917,21 @@ export default {
                         `twin friars`,
                         {
                             anchor: `cast here in pollens`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
-                                    `In Greek mythology, "`,
+                                    `"`,
                                     {
                                         anchor: `Castor and Pollux`,
                                         wiki: `Castor_and_Pollux`,
                                     },
-                                    `" were twin brothers fathered by Zeus. Pollux was immortal; Castor was not. After Castor's death, Pollux pleaded with Zeus to let him share his immortality with his twin. And so they were transformed into the constellation`,
+                                    `" were twin half-brothers in Greek mythology. While Pollux was the son of Zeus, Castor was fathered by a mortal. So Zeus transformed them both into the constellation`,
                                     {
                                         anchor: `Gemini`,
                                         wiki: `Gemini_(constellation)`,
                                     },
-                                    `. Similarly, I felt as if my brother were sharing his autism with me, along with its spiritual answers.`,
+                                    `, thus allowing Pollux to share his immortality with his twin. Similarly, I felt as if my brother were sharing his autism with me, along with its spiritual answers.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -949,7 +965,7 @@ export default {
                         {
                             anchor: `murdered for their virtue`,
                             card: {
-                                description: `My ordeal was made more bearable if I could tie it to a greater purpose. But ironically, behaving like my suffering had meaning only invited further abuse.`,
+                                description: `My ordeal was made more bearable if I could tie it to a greater purpose. But ironically, behaving like my suffering had any meaning only invited further abuse.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -1013,7 +1029,7 @@ export default {
                                         anchor: `cryptogram`,
                                         wiki: `Cryptogram`,
                                     },
-                                    `gives away fewer clues and is thus more difficult to solve. In the same vein, by not speaking or expressing emotion, I gave the bullies fewer openings to provoke a response from me. And the less they then bothered to try.`,
+                                    `gives away fewer clues and is thus more difficult to solve. In the same vein, by not speaking or expressing emotion, I gave the bullies fewer openings to provoke a response from me. And the less they would bother to try.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1036,7 +1052,7 @@ export default {
                                         anchor: `Achilles`,
                                         wiki: `Achilles`,
                                     },
-                                    `was invulnerable everywhere on his body except for his heel. In the same way, I might have had the strength to remain stoic forever, if not for my one weakness of craving acceptance by others.`,
+                                    `was invulnerable everywhere on his body except for his heel. In the same way, I might have had the strength to remain stoic forever, if not for my weakness of craving acceptance by others.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -1059,12 +1075,12 @@ export default {
                                         anchor: `spy`,
                                         wiki: `Espionage`,
                                     },
-                                    `'s success hinges upon staying hidden, their exploits will never be known until they've been captured and executed by`,
+                                    `'s success hinges upon staying hidden, their exploits will never be known until they've been captured and executed by a`,
                                     {
                                         anchor: `firing squad`,
                                         wiki: `Execution_by_firing_squad`,
                                     },
-                                    `. Similarly, my desire to be part of a friendly squad eventually led me to open up, thus sabotaging all my previous efforts to be unresponsive.`,
+                                    `. Similarly, my desire to be part of a friendly squad eventually led me to open up, thus sabotaging all my previous efforts at being unresponsive.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -1318,7 +1334,7 @@ export default {
                             anchor: `Xiao Xiang`,
                             properNoun: true,
                             card: {
-                                description: `Mushka means "little fly" in Russian, and by coincidence, my brother's Chinese name, Xiao Xiang, literally means "little fly." (Though in his case, the second word is a verb, not a noun.) Incidentally, Pchelka means "little bee," which maybe also makes sense, given that my name starts with the letter B?`,
+                                description: `Mushka means "little fly" in Russian, and by coincidence, my brother's Chinese name, Xiao Xiang, literally means "little fly"— though in his case, the second word is a verb, not a noun. Incidentally, Pchelka means "little bee," which maybe also makes sense, given that my name starts with the letter B?`,
                                 dotKeys: {
                                     [REFERENCE]: true,
                                     [PUN]: true,
@@ -1341,7 +1357,7 @@ export default {
                                         anchor: `whales`,
                                         wiki: `Whale`,
                                     },
-                                    `is called a pod. Because I wanted to belong to a social group, I couldn't ditch my "whales," and so I sought out a metaphorical escape pod.`,
+                                    `is called a pod. Because I wanted to belong to a social group, I couldn't ditch my "whales," and so I sought a metaphorical escape pod.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -1355,6 +1371,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
+                problem: `Last sentence should make it clear that these were separate effects.`,
                 card: {
                     description: [
                         {
@@ -1402,8 +1420,10 @@ export default {
                         `Mushka,`,
                         {
                             anchor: `per their bargain`,
+                            todo: true,
+                            problem: `Not sure I'm being clear that I was just as confused as anyone else what would prompt me to behave in that manner for that whole year.`,
                             card: {
-                                description: `Though I faked autism for only a year or so, the social repercussions lasted much longer, since I was now and forever the kid who once did that really weird thing. It's not that I lacked the will to repair my standing. But I was as baffled as anyone else about the psychological forces that prompted such behavior in the first place. And there were no guide books instructing me where to go from there.`,
+                                description: `Though I faked autism for only a year or so, the social repercussions lasted much longer, since I was now and forever the kid who did that really weird thing once. It's not that I lacked the will to repair my standing. But I was just as confused as anyone else about the inner workings of my psyche, and there were no guide books instructing me where to go from there.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
