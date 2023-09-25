@@ -59,6 +59,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
+                problem: `Review one more time.`,
                 card: {
                     description: [
                         `As a teenager, I tried to figure out the songwriting secrets of the`,
@@ -66,7 +68,7 @@ export default {
                             anchor: `Beatles`,
                             wiki: `The_Beatles`,
                         },
-                        `, which is how I came up with the chords and melodies heard here. I had no idea what to do with them at the time; they sounded so labored, and all my fixes made them worse. But years later, I realized that the sound of being labored to death was exactly what a song about an overwrought letter to Sasha called for.`,
+                        `, which is how I came up with the music heard here. I wasn't sure what to do with it at the time; the chords and melodies sounded so labored, and all my fixes made it worse. But years later, I realized that the sound of being labored to death was exactly what a song about an overwrought letter to Sasha called for.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
