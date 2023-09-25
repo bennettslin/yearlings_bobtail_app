@@ -38,9 +38,11 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
+                problem: `Review one more time.`,
                 card: {
                     description: [
-                        `My parents immigrated from`,
+                        `My parents came from`,
                         {
                             anchor: `Taiwan`,
                             wiki: `Taiwan`,
@@ -50,12 +52,12 @@ export default {
                             anchor: `China`,
                             wiki: `China`,
                         },
-                        `that was invaded by`,
+                        `. When the`,
                         {
                             anchor: `Chinese Nationalists`,
                             wiki: `Kuomintang`,
                         },
-                        `in 1949. Upon taking over, the Nationalists made`,
+                        `took over in 1949, they made`,
                         {
                             anchor: `Mandarin Chinese`,
                             wiki: `Mandarin_Chinese`,
@@ -113,7 +115,7 @@ export default {
                                 wiki: `Pet_Sounds`,
                             },
                         },
-                        `. And so here the introduction begins with an`,
+                        `. And so the introduction begins with an`,
                         {
                             anchor: `autoharp`,
                             wiki: `Autoharp`,
@@ -292,6 +294,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
+                problem: `Are "lurch" and "quick" the words I want?`,
                 card: {
                     description: [
                         `I wanted this song to capture the flurry of activity and transience of emotion that a child experiences over the course of a day. So as the rhythm lurches to and from a`,
@@ -347,7 +351,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `The nurse placed my soiled pants in a grocery bag for me to take home. The bag may or may not have been from`,
+                                        `The nurse placed my soiled pants in a shopping bag for me to take home. The bag may or may not have been from`,
                                         {
                                             anchor: `Safeway`,
                                             wiki: `Safeway_Inc.`,
@@ -408,7 +412,7 @@ export default {
                         {
                             anchor: `been in the bath`,
                             card: {
-                                description: `My mother picked me up and dropped me off at home with my grandparents, who lived with us. I remember taking a long while to bathe myself.`,
+                                description: `My mother picked me up from school and took me home. I remember taking a long while to bathe myself.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -457,6 +461,8 @@ export default {
                         `with your`,
                         {
                             anchor: `sheriff's badge and gun`,
+                            todo: true,
+                            problem: `First sentence runs on.`,
                             card: {
                                 description: [
                                     `Though my mother and other Taiwanese teenagers of her generation prized all things labeled American, they didn't necessarily know what that entailed. Their only exposure was through a local bootleg industry that recycled the relics of America's past. And so my sister and I grew up listening to my mother's old`,
@@ -498,7 +504,7 @@ export default {
                         {
                             anchor: `girls' mirrors`,
                             card: {
-                                description: `My sister used to cut out pictures of pop stars from teenybopper magazines and tape them to our bathroom mirror.`,
+                                description: `My sister used to cut out pictures of pop stars from teenybopper magazines and tape them to her mirror.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -639,7 +645,7 @@ export default {
                             anchor: `octatonic collection`,
                             wiki: `Octatonic_scale`,
                         },
-                        `. The song now ends on G\u2011flat, the remaining major triad, to suggest the excitement of undiscovered vistas awaiting a young child.`,
+                        `. The song now ends on G\u2011flat, the fourth and remaining major triad, to suggest the excitement of undiscovered vistas awaiting a young child.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
