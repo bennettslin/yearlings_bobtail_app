@@ -38,7 +38,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 todo: true,
-                problem: `First sentence runs on.`,
+                problem: `Review one more time.`,
                 card: {
                     description: [
                         {
@@ -53,7 +53,7 @@ export default {
                                 wiki: `Look_Back_in_Anger`,
                             },
                         },
-                        `is a theatrical play set in postwar England, about a disgruntled young man of the working class who hurls his rage at his long-suffering wife. It hit unnervingly close to home when I read it.`,
+                        `, a theatrical play set in postwar England, centers on a disgruntled young man of the working class who hurls rage at his long-suffering wife. It hit unnervingly close to home when I read it.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -334,7 +334,7 @@ export default {
                             anchor: `Nas`,
                             wiki: `Nas`,
                         },
-                        `. I hadn't paid much attention to rappers up to that point, as I assumed their songwriting approach was too far removed from my own to offer wisdom. I've since corrected this oversight, but back when
+                        `. I hadn't paid much attention to rappers up to that point, as I assumed their songwriting approach was too far removed from my own to offer much wisdom. I've since corrected this oversight, but back when
                         `,
                         {
                             isItalic: true,
