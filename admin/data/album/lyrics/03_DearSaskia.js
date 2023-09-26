@@ -30,7 +30,9 @@ export default {
     playerStartTime: 384.329,
     // This is a magic number adjusted by ear. In the mix, it's actually 44.96.
     mixSamplingFrequency: 45.39,
-    overview: `Sasha was a childhood friend as well as my first crush. The strength she drew from her Jewish identity fascinated me, but it also clued me in on a cruel paradox. Namely, that no good comes from longing to share in someone's faith and roots, which stay strong precisely by not being shared. Sasha moved away during middle school at the peak of my struggles with bullies. That summer, I wrote her a letter on a family trip to Taiwan.`,
+    todo: true,
+    problem: `Decide if the em-dash really is the best way to break up those two statements.`,
+    overview: `Sasha was a childhood friend as well as my first crush. The strength she drew from her Jewish identity fascinated me, but it also clued me in on a cruel paradox— namely, that nothing ever comes from longing to share in someone's faith and roots, which stay strong precisely by not being shared. Sasha moved away during middle school at the peak of my struggles with bullies. That summer, I wrote her a letter on a family trip to Taiwan.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -60,7 +62,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 todo: true,
-                problem: `Reverse order of sounding labored and not knowing what to do with it.`,
+                problem: `Make it more about being untalented and ripping off the Beatles, and feeling shame.`,
                 card: {
                     description: [
                         `As a teenager, I tried to figure out the songwriting secrets of the`,
@@ -119,8 +121,10 @@ export default {
                         `your`,
                         {
                             anchor: `first semester`,
+                            todo: true,
+                            problem: `I'm not sure the grammar is correct here.`,
                             card: {
-                                description: `My family was spending the entire summer in Taiwan. We weren't to get back to the States until after Sasha began the new school year in Boston.`,
+                                description: `My family was spending the entire summer in Taiwan. We weren't to get back to the States until after Sasha had begun the new school year in Boston.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -151,8 +155,10 @@ export default {
                     lyric: [
                         {
                             anchor: `You'd love Taiwan`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `During a tour of the Taiwanese countryside with my cousins, I mentally noted all the things I could point out to Sasha one day. I'm not sure it had to do with pride in my heritage. I just liked the idea of having something to share with someone else.`,
+                                description: `On a tour of the Taiwanese countryside with my cousins, I mentally noted all the things I could point out to Sasha one day. It wasn't out of sudden pride in my heritage; I just liked the idea of having something unique to share with someone else.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -177,7 +183,7 @@ export default {
                         {
                             anchor: `giant's house`,
                             card: {
-                                description: `In my most vivid memory from that trip, we stood in the middle of a lush valley. The ground around us was entirely level, the enclosing mountains rose nearly vertically, and their peaks disappeared into a translucent blanket of clouds stretched across the sky. I felt like a tiny guest in a giant house.`,
+                                description: `In my most vivid memory from that trip, we stood in the middle of a lush valley. The ground around us was entirely level, the surrounding mountains rose nearly vertically, and their peaks disappeared into a translucent blanket of clouds that stretched across the sky. I felt like a tiny guest in a giant house.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -204,7 +210,7 @@ export default {
                         {
                             anchor: `keep your kid name`,
                             card: {
-                                description: `Sasha decided that in Boston, she would go by her given name. I asked if I should start calling her Saskia now as well. She said no, since it was nice to be reminded of which friends knew her first.`,
+                                description: `Sasha decided that once in Boston, she would go by her given name. I asked if I should start calling her Saskia as well. She said no, since it was nice to be reminded of which friends knew her first.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -307,6 +313,8 @@ export default {
                         `, a`,
                         {
                             anchor: `pet petrified`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
                                     `Petrified by the thought of losing Sasha, I felt like a`,
@@ -314,7 +322,7 @@ export default {
                                         anchor: `pupa`,
                                         wiki: `Pupa`,
                                     },
-                                    `petrified into a fossil before it had a chance to molt.`,
+                                    `that had petrified into a fossil before it ever got a chance to molt.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -625,7 +633,7 @@ export default {
                         {
                             anchor: `jaw was stuck`,
                             card: {
-                                description: `Here, I refer to another incident when a bully snuck up from behind and put me in a chokehold as I waited for the school bus.`,
+                                description: `Here, I refer to an incident when a bully snuck up from behind and put me in a chokehold as I waited for the bus.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -634,9 +642,11 @@ export default {
                         `, so now I`,
                         {
                             anchor: `talk Canuck`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
-                                    `The chokehold incident left me with a dislocated jaw. For a long time afterward, I had to keep my jaw clenched to avoid pain when speaking. This led to my odd manner of pronunciation, which to this day gets mistaken for a`,
+                                    `The chokehold incident actually did happen, and it left me with a dislocated jaw. For a long time afterward, I had to keep my jaw clenched to avoid pain when speaking. This led to my odd manner of pronunciation, which to this day gets mistaken for a`,
                                     {
                                         anchor: `Canadian accent`,
                                         wiki: `Canadian_raising`,
@@ -671,8 +681,10 @@ export default {
                         `Anyway, I'm feeling healed. Still,`,
                         {
                             anchor: `hugging hurts`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `It's more typical to downplay one's injuries to avoid the humiliation of getting beaten up. But here I play them up to mask my emotional hurt, as I explain to Sasha why I winced when we hugged on that last day.`,
+                                description: `Of course, it's more typical to downplay one's injuries, to avoid the humiliation of having been beaten up. But here I play them up to mask my emotional hurt, as I explain to Sasha why I winced when we hugged on that last day.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -684,8 +696,10 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
+                problem: `Review one more time.`,
                 card: {
-                    description: `It's easy to write songs by coming up with a four-chord loop, then layering a melody on top. But my theory was that the Beatles wrote the melody and chords together, one measure at a time, so I tried to do the same. I was always happiest with results like the chorus here, where the music meanders for a long stretch without repeating.`,
+                    description: `It's easy to write songs by coming up with a four-chord loop, then layering a melody on top. But my theory was that the Beatles wrote the melody and chords together in single, discrete units, one measure at a time— so I tried to do the same. I was always happiest with results like the chorus here, where the music wanders for long stretches without ever looping back, sometimes resulting in odd numbers of measures.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
@@ -812,7 +826,7 @@ export default {
                             isItalic: true,
                             lyric: `Bobtail Method`,
                         },
-                        `that distills all the wisdom I'd gathered over the years from studying the Beatles. My hope was that this would finally get me taken seriously. Unfortunately, the promo copies I sent out were met with the same radio silence. I'll still release`,
+                        `that distilled all the wisdom I'd gathered over the years from studying the Beatles. My hope was that this would finally get me taken seriously. Unfortunately, the promo copies I sent out were met with the same radio silence. I'll still release`,
                         {
                             isItalic: true,
                             lyric: `Bobtail Method`,
