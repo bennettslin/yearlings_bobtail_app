@@ -144,7 +144,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `I'd spent my childhood channeling my misery into various art projects, so this was all familiar terrain for me. To build yourself up into a desirable person is really the ultimate art project, after all.`,
+                                description: `I'd spent my childhood channeling my misery into various art projects, so this was all familiar terrain for me. To build yourself up into a desirable person is simply the ultimate art project, after all.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -206,7 +206,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `There was an obvious lesson to draw from the smattering of women whom I'd managed to attract up to this point in my life. All of them had been taken in by my appearance as an artsy loner, only to be turned off after finding that nothing of greater substance lay beneath. So my mission was to turn this mistaken assumption into a correct one.`,
+                                description: `I'd managed to attract a smattering of women up to this point in my life, which allowed me to see a pattern. All of them had been taken in by my appearance as an artsy loner, only to be turned off after finding that nothing of greater substance lay beneath. So my mission was to turn this mistaken assumption into a correct one.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -342,7 +342,7 @@ export default {
                                         anchor: `bottled genie`,
                                         wiki: `Jinn`,
                                     },
-                                    `of Arabian folklore, with good fortunes to bestow upon others but only freedom from self-imposed isolation to hope for myself.`,
+                                    `of Arabian folklore, with good fortunes to bestow upon others but only freedom from isolation to hope for myself.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
