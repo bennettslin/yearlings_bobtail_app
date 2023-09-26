@@ -659,7 +659,7 @@ export default {
                             problem: `Review one more time.`,
                             cards: [
                                 {
-                                    description: `I knew I had to stay relatively sober to start afresh with someone new. But short of being drunk, I could never muster the courage to break up with Sita. So I drank to oblivion each night, hoping to wake one morning and discover that, by some miracle, I was both newly single and repulsed by the taste of alcohol.`,
+                                    description: `I knew I had to stay relatively sober to start afresh with someone new. But short of being drunk, I could never muster the courage to break up with Sita. So I drank to oblivion each night, hoping I might wake one morning to discover that, by some miracle, I was both newly single and repulsed by the taste of alcohol.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -780,7 +780,7 @@ export default {
                                 todo: true,
                                 problem: `Review one more time.`,
                                 card: {
-                                    description: `But if I was capable of injuring myself, then I also wasn't likely to have qualms about hurting anyone close to me, who now knew the worst side of me as only I once did.`,
+                                    description: `But if I was capable of hurting myself, then I also wouldn't have qualms about hurting anyone close to me, who now knew the worst side of me as only I once did.`,
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                     },

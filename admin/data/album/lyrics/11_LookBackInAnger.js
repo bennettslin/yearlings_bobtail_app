@@ -510,7 +510,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `The best time to hit on someone is right after you've played a set, since they've just spent the last half hour making you the center of their universe. And sure enough, I find the redheaded woman to be flirtatious when we finally chat.`,
+                                description: `The best time to hit on someone is right after you've played a set, since they've just spent the last hour or so making you the center of their universe. And sure enough, I find the redheaded woman to be flirtatious when we finally chat.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -540,7 +540,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `Things were looking up for me, so I found it confusing to still feel a quiet bitterness inside. I suspect it's because I felt indignant for my younger self, who'd been kept in the dark for so long about how much better life could be.`,
+                                description: `Things were finally looking up for me, so I was confused to still feel a quiet bitterness inside. I suspect it's because I felt indignant for my younger self, who'd been kept in the dark for so long about how much better life could be.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -703,7 +703,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `Yet even as reason disproved the beliefs of those who bullied me, it also discredited my own as a Beyonder. Because with so many rival claims to the truth out there, what sane person would stay loyal to a faith that promises zero community and only endless grief?`,
+                                description: `Yet even as reason disproved the beliefs of those who bullied me, it also discredited my own as a Beyonder. After all, with so many rival claims to the truth out there, what sane person would stay loyal to a faith that offers no community and only endless grief?`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
