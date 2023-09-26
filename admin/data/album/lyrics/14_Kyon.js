@@ -170,7 +170,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `It scared me, far more than I let on, to gamble away the familiar warmth of Sita's love for a mere chance to date some other woman. I often wondered if this fear then manifested in a hormonal craving for nurture over pleasure, because I was always struck by how motherly these women's naked bodies initially felt to me.`,
+                                description: `It scared me, far more than I let on, to gamble away the familiar warmth of Sita's love for a mere chance to date some other woman. I sometimes wondered if this fear then manifested in a hormonal craving for nurture over pleasure, because I was always struck by how motherly these women's naked bodies initially felt to me.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -191,9 +191,9 @@ export default {
                         {
                             anchor: `womb you bed`,
                             todo: true,
-                            problem: `Last sentence doesn't flow well. Two "to"s in a row.`,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `Of course, Sita herself was under no such illusion about my innocence. She knew full well that I wanted to sleep with more women, to make up for being the less sexually experienced one in our relationship.`,
+                                description: `Of course, Sita herself was under no such illusion about my innocence. She knew full well that my desire to sleep with more women was rooted in the insecurity I felt as the less sexually experienced one in our relationship.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -320,7 +320,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `The sting I felt in having once been rejected by Sita was aggravated by the later revelation of her sexual past. And all the more so since it was precisely the painful lessons she drew from those past encounters that made her wary of my initial advances. Of course, I missed the irony of being the one who'd end up providing the most painful lesson by far.`,
+                                description: `The sting I felt in having once been rejected by Sita was aggravated by the later revelation of her sexual past. And all the more so since it was precisely the painful lessons she drew from those past encounters that made her wary of my initial advances. Of course, the irony was lost on me that I'd end up providing the most painful lesson by far.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -402,12 +402,12 @@ export default {
                             problem: `Review one more time.`,
                             card: {
                                 description: [
-                                    `A keeper in the sense of being both the one who tends to the herd, as well as the only one to keep from`,
+                                    `A keeper in the sense of being the one who tends to the herd, as well as the only one to keep from`,
                                     {
                                         isEmphasis: true,
                                         lyric: `among`,
                                     },
-                                    `the herd. Resigned to my infidelity, Sita could only hope that her permissiveness might earn her a privileged position amid all the other women I desired.`,
+                                    `the herd. Resigned to my infidelity, Sita could only hope that her permissiveness might earn her a privileged place amid all the other women I desired.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -745,7 +745,7 @@ export default {
                             todo: true,
                             problem: `Doesn't flow well into last sentence.`,
                             card: {
-                                description: `As friends, Sita and I got along well because we were both sad people. But in hindsight, my sadness was a product of circumstance, whether from bullying in my youth, or from loneliness as I got older. Sita, on the other hand, suffered from clinical depression. And as I learned to be proactive in dealing with my moods, I grew impatient with her for being incapable of doing the same.`,
+                                description: `As friends, Sita and I got along well because we were both sad people. But in hindsight, my sadness was a product of circumstance, whether from being bullied in my youth, or out of loneliness as I got older. Sita, on the other hand, suffered from clinical depression. And as I learned to be proactive in dealing with my moods, I grew impatient with her for being incapable of doing the same.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
