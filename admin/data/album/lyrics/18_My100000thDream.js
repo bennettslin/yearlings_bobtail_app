@@ -411,8 +411,6 @@ export default {
                         `My hundred thousandth dream, on the`,
                         {
                             anchor: `cliffs of El Cerrito`,
-                            todo: true,
-                            problem: `Review one more time.`,
                             card: {
                                 description: [
                                     `The city of`,

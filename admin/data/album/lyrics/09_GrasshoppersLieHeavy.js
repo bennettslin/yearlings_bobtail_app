@@ -105,7 +105,7 @@ export default {
                                 problem: `Review one more time.`,
                                 cards: [
                                     {
-                                        description: `In high school, I carried on as the same wretched nobody I'd been in middle school. It just didn't seem possible to remake myself into someone new while surrounded by all the same classmates. But all the while I was crafting my future identity as a self-assured artist, which was raring to go as soon as I could leave Los Angeles.`,
+                                        description: `In high school, I carried on as the same wretched nobody I'd been in middle school. It just didn't seem possible to remake myself into someone new while surrounded by all the same classmates. But all the while I was crafting my future identity as a self-assured artist, and it was raring to go as soon as I could leave Los Angeles.`,
                                         dotKeys: {
                                             [BACKSTORY]: true,
                                             [OBSERVATION]: true,
@@ -350,12 +350,12 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `It was known to the students that most of the cafeteria's workers were hired through a`,
+                                        `While the cafeteria never announced its practice of hiring workers through a`,
                                         {
                                             anchor: `vocational rehabilitation`,
                                             wiki: `Vocational_rehabilitation`,
                                         },
-                                        `program.`,
+                                        `program, this was easy enough to infer. A handful were past members of Asian gangs, and I must admit, the thought entertained me that I might be mistaken as one of them.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -363,7 +363,7 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `Unsure of my background, and still feeling ambushed, Sita hesitates. But as we chat, I win her over with my taste in literature and familiarity with the alternative culture.`,
+                                        `Unsure of my background and still feeling ambushed, Sita hesitates. But as we chat, I win her over with my clear love for reading and knowledge of literature.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -392,10 +392,16 @@ export default {
                                             anchor: `Schwa`,
                                             wiki: `Schwa_(art)`,
                                         },
-                                        `is the artwork of Bill Barker. In the 90s, his oblong alien heads began popping up in the underground press. I knew nothing about it at the time, but a friend gave me a few stickers, which I randomly affixed to my belongings.`,
+                                        `is the underground artwork of Bill Barker. In the 90s, stickers of his oblong alien heads mysteriously began to show up on newspaper racks and street signs. Truth be told, I had no idea what it was about at the time; in those days, there was no way to find out.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
+                                    },
+                                },
+                                {
+                                    description: `Affixed to my belongings are stickers of underground art, which also serve to reassure Sita that I'm a fellow college student and not a reformed gangster.`,
+                                    dotKeys: {
+                                        [NARRATIVE]: true,
                                     },
                                 },
                                 {

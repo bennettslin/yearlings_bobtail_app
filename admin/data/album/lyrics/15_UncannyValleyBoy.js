@@ -48,7 +48,7 @@ export default {
                                 anchor: `uncanny valley`,
                                 wiki: `Uncanny_valley`,
                             },
-                            `theorizes that we humans grow further repulsed by human replicas as they take on more lifelike characteristics, insofar as they remain less than perfectly convincing. And as I grew older while remaining less than convincing as a grownup, it was reasonable to ask if this "Valley boy" now elicited the same revulsion.`,
+                            `theorizes that we humans grow further repulsed by human replicas as they take on more lifelike characteristics, insofar as they still remain less than perfectly convincing to us. And as I grew older while remaining unconvincing as a grownup, it was reasonable to ask if this "Valley boy" now elicited the same revulsion.`,
                         ],
                         dotKeys: {
                             [OBSERVATION]: true,
@@ -441,7 +441,7 @@ export default {
                             anchor: `Village Green Preservation Society`,
                             wiki: `The_Kinks_Are_the_Village_Green_Preservation_Society`,
                         },
-                        `was my model for this album. As such, the songs all had to be memorable pop tunes, while containing zero filler and representing a diversity of musical styles. And each one would clock in at three minutes or so, with none over four. While there was no one-to-one mapping, this song was clearly the "`,
+                        `served as a model for this album. As such, the songs all had to be memorable pop tunes, while containing zero filler and representing a variety of musical styles. And each one would clock in at three minutes or so, with none over four. While there was no one-to-one mapping, this song was clearly the "`,
                         {
                             anchor: `Wicked Annabella`,
                             wiki: `Wicked_Annabella`,
@@ -744,7 +744,7 @@ export default {
                                         anchor: `hazing rituals`,
                                         wiki: `Hazing`,
                                     },
-                                    `. After enduring such abuse for so long, I finally conceded that I could't have toughened up any other way. And now I had no qualms about dishing it out to others.`,
+                                    `to toughen them up. After dealing with similar abuse for so long, I finally conceded that I would't have toughened up otherwise either. And now I had no qualms about dishing it out to others.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,

@@ -264,7 +264,7 @@ export default {
                             todo: true,
                             problem: `Just sounds awkward in general. Maybe there's a better word than "discrepancy."`,
                             card: {
-                                description: `While I did my best to adopt an angelic personality, my reputation preceded me by that point. Miriam knew about the drunken incidents. And I must have known that she knew. But I never volunteered an explanation for the discrepancy, and she never asked for one. I guess she just accepted it as part of the adventure.`,
+                                description: `While I did my best to adopt an innocent persona, my reputation preceded me by that point. Miriam knew about the drunken incidents. And I must have known that she knew. But I never volunteered an explanation for the discrepancy, and she never asked for one. I guess she just accepted it as part of the adventure.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

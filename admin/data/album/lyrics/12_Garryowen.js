@@ -576,8 +576,6 @@ export default {
                         `you'd`,
                         {
                             anchor: `make her strip bare`,
-                            todo: true,
-                            problem: `Review one more time.`,
                             card: {
                                 description: `Sita learned early on that she could always whisk me away for some lovemaking by hovering naked beside me while shivering dramatically from the cold. But as our relationship soured, this brazen appeal to both my primal and protective instincts grew tiresome, and I drew some cruel pleasure in letting her shiver for just a bit longer.`,
                                 dotKeys: {

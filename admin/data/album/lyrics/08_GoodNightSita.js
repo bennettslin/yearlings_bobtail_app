@@ -914,7 +914,7 @@ export default {
                             anchor: `endless flowchart`,
                             card: {
                                 description: [
-                                    `At the time I often fantasized about preparing a mental`,
+                                    `At the time, I often fantasized about preparing a mental`,
                                     {
                                         anchor: `flowchart`,
                                         wiki: `Flowchart`,

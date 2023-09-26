@@ -57,7 +57,7 @@ export default {
                             anchor: `closed-eye hallucinations`,
                             wiki: `Closed-eye_hallucination`,
                         },
-                        `, which are vivid images projected onto the backdrop of your eyelids. When they get too intense, you simply open your eyes, and they vanish. At the time I called them "constellations."`,
+                        `, which are vivid images projected onto the backdrop of your eyelids. When they get too intense, you simply open your eyes, and they vanish. At the time, I called them "constellations."`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
