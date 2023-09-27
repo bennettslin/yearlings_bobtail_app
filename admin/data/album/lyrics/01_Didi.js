@@ -295,15 +295,15 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 todo: true,
-                problem: `Are "lurch" and "quick" the words I want?`,
+                problem: `Review one more time.`,
                 card: {
                     description: [
-                        `I wanted this song to capture the flurry of activity and transience of emotion that a child experiences over the course of a day. So as the rhythm lurches to and from a`,
+                        `I wanted this song to capture the flurry of activity and transience of emotion that a child experiences over the course of a day. So as the rhythm jumps in and out of a`,
                         {
                             anchor: `half-time beat`,
                             wiki: `Half-time_(music)`,
                         },
-                        `, the chord progression quickly modulates between the`,
+                        `, the chord progression swiftly modulates between the`,
                         {
                             anchor: `distantly related keys`,
                             wiki: `Closely_related_key`,

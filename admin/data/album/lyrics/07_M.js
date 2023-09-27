@@ -27,7 +27,7 @@ export default {
     mixStartTime: `0:02:12.00`,
     todo: true,
     problem: `Too many sentences of the same length?`,
-    overview: `After the breakup with Catherine, I vowed to spend the next five years shaping myself into the ideal romantic prospect. I started attending local shows and eventually cobbled together my own band, the Yearlings. There was a fellow scenester named Mara whom I noticed from afar, and soon I grew infatuated. But Mara ended up going out with my drummer Jacob, which made band practice awkward.`,
+    overview: `After the breakup with Catherine, I vowed to spend the next five years shaping myself into the ideal romantic prospect. By the fifth year, I'd cobbled together my own band, the Yearlings, and we were playing local shows. There was a fellow scenester named Mara whom I noticed from afar, and soon I grew infatuated. But Mara ended up going out with my drummer Jacob, which made band practice awkward.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -144,7 +144,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `I'd spent my childhood channeling my misery into various art projects, so this was all familiar terrain for me. To build yourself up into a desirable person is simply the ultimate art project, after all.`,
+                                description: `I'd spent my childhood channeling my misery into various art projects, so this was all familiar terrain for me. To build yourself up into a desirable person is really just one more art project, after all.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -206,7 +206,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `I'd managed to attract a smattering of women up to this point in my life, which allowed me to see a pattern. All of them had been taken in by my appearance as an artsy loner, only to be turned off after finding that nothing of greater substance lay beneath. So my mission was to turn this mistaken assumption into a correct one.`,
+                                description: `I'd managed to attract a smattering of women up to this point in my life, which allowed me to see a pattern: All of them had been taken in by my appearance as an artsy loner, only to be turned off after finding that nothing of greater substance lay beneath. So my mission was to turn this mistaken assumption into a correct one.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -263,7 +263,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `I also decided to stop swearing. I figured it would be a definite win with women like Catherine who preferred their men to be wholesome, while the rest would find its quaintness charming.`,
+                                description: `I also decided to stop swearing. I figured it would be a definite win with women like Catherine, who need their men to be wholesome, while all others would find its quaintness charming.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -317,7 +317,7 @@ export default {
                                         anchor: `first five-year plan`,
                                         wiki: `First_five-year_plan`,
                                     },
-                                    `was also its most brutal, as the forced industrialization of an agrarian society led to widespread famine and death. Similarly, given how far behind I was starting out and how much ground I needed to cover, it was naive to think that my own five-year plan for accelerated growth could be free of unintended consequences.`,
+                                    `was also its most brutal, as the forced industrialization of agrarian societies led to widespread famine and death. Similarly, given how far behind I was starting out, it was naive to think that my own five-year plan for accelerated growth could be free of unintended consequences.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -360,9 +360,9 @@ export default {
                         {
                             anchor: `hold in peace`,
                             todo: true,
-                            problem: `There's definitely a simpler way to phrase the last sentence.`,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `So Jacob got together with Mara without any effort, while romance for me felt no less elusive than ever. I had to come to terms with the realization that my five-year plan was a washout.`,
+                                description: `So Jacob got together with Mara without any effort, while romance for me felt no less elusive than ever. I thus came to realize that my five-year plan was a washout.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -516,9 +516,9 @@ export default {
                         {
                             anchor: `sand castle built by low tide`,
                             todo: true,
-                            problem: `First sentence and last sentence seem complex for what they're trying to say.`,
+                            problem: `Last sentence still needs work.`,
                             card: {
-                                description: `Compounding the failures of my first five-year plan, it was clear that in the interim I'd missed out on some crucial personal development that others had naturally come by. And there was no guarantee that another five-year plan wouldn't blindside me in the same manner. I feared a future as a stunted man-child forever chasing ambitions both infantile and futile, like building castles out of sand.`,
+                                description: `Beyond the immediate failures of my first five-year plan, I'd clearly missed out on some personal development that others had naturally come by. And there was no guarantee that another five-year plan wouldn't blindside me in the same manner. I saw my future self as a stunted man-child, forever chasing ambitions both infantile and futile, like building castles out of sand.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -630,15 +630,15 @@ export default {
                         {
                             anchor: `time capsule`,
                             todo: true,
-                            problem: `Sentence runs on.`,
+                            problem: `Revised, but still not written well.`,
                             card: {
                                 description: [
-                                    `In dejection, I could only envision my next five-year plan as a`,
+                                    `In my dejection, I could only envision the next five-year plan as a`,
                                     {
                                         anchor: `time capsule`,
                                         wiki: `Time_capsule`,
                                     },
-                                    `in which to bury hopes that might one day be rediscovered by a sympathetic audience.`,
+                                    `of sorts. This would allow me to express my frustrations to a sympathetic future audience.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -712,7 +712,7 @@ export default {
                         {
                             anchor: `solely for a pet`,
                             todo: true,
-                            problem: `Make this more about the ways of cool kids in a social scene being foreign to me.`,
+                            problem: `Make this more about the ways of cool kids in a social scene being foreign to me, and this is a mixed blessing because it meant I was part of a social scene.`,
                             card: {
                                 description: `After Mara started dating Jacob, she continued to interact with me in the same manner, which made me realize that I'd misread her intentions all along. In retrospect, I was so unused to being treated with genial regard that it felt like being flirted with.`,
                                 dotKeys: {
@@ -1091,12 +1091,12 @@ export default {
                 problem: `Review one more time.`,
                 card: {
                     description: [
-                        `My original plan was to record this song in a "`,
+                        `My original plan was to take the puns one step further by recording this song in a "`,
                         {
                             anchor: `Mara-iachi`,
                             wiki: `Mariachi`,
                         },
-                        `" style— taking the puns one level further. But I decided it wouldn't fit the song's natural tempo and scrapped it. Still, it gave me an idea to model the outro after the`,
+                        `" style. But I decided it wouldn't fit the song's natural tempo and scrapped it. Still, it gave me an idea to model the outro after the`,
                         {
                             anchor: `Los Lobos`,
                             wiki: `Los_Lobos`,
