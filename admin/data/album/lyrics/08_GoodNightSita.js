@@ -29,7 +29,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: `Sita and I have just walked back to her boarding house after a date. We stand in front of her gate, facing each other awkwardly. It's early in the evening, with the sky beginning to clear from a midday shower.`,
+                    description: `It's early in the evening, with the sky beginning to clear from a midday shower. Sita and I have just walked back to her boarding house after a date. We stand in front of her gate, facing each other awkwardly.`,
                     dotKeys: {
                         [NARRATIVE]: true,
                     },
@@ -158,12 +158,11 @@ export default {
                             problem: `Review one more time.`,
                             card: {
                                 description: [
-                                    `A`,
                                     {
-                                        anchor: `secret decoder ring`,
+                                        anchor: `Secret decoder rings`,
                                         wiki: `Secret_decoder_ring`,
                                     },
-                                    `is a toy purchased through the mail that allows children to decipher encrypted messages. It would've been handy to wear one on a date, since I was always trying to tease out hidden meanings from the most basic exchanges.`,
+                                    `were promotional toys in the 60s that allowed children to decipher a television program's encrypted messages. Oftentimes, what they revealed was a preview of the next episode. It would've been handy to wear one on a date, since I was always trying to tease out hidden messages from the most basic exchanges to reveal what would happen next.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,

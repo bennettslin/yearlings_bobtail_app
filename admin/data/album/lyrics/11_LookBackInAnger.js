@@ -510,7 +510,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `The best time to hit on someone is right after you've played a set, since they've just spent the last hour or so making you the center of their universe. And sure enough, I find the redheaded woman to be flirtatious when we finally chat.`,
+                                description: `The best time to hit on someone is right after you've played a set, since they've just spent the last hour making you the center of their universe. So sure enough, I find the redheaded woman to be flirtatious when we finally chat.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -538,7 +538,7 @@ export default {
                         {
                             anchor: `fine when you had none`,
                             todo: true,
-                            problem: `Review one more time.`,
+                            problem: `Two "feel"s in a row.`,
                             card: {
                                 description: `Things were finally looking up for me, so I was confused to still feel a quiet bitterness inside. I suspect it's because I felt indignant for my younger self, who'd been kept in the dark for so long about how much better life could be.`,
                                 dotKeys: {
@@ -784,7 +784,7 @@ export default {
                             todo: true,
                             problem: `Sentence runs on.`,
                             card: {
-                                description: `His wife Alison then sighs in response, "Poor, poor bears," acknowledging that he, a bear in their mutual fantasy, is just as much a victim, complying within a power dynamic over which neither possesses much control.`,
+                                description: `His wife Alison then sighs in response, "Poor, poor bears." She recognizes that he, a bear in their mutual fantasy, is just as much a victim, complying within a power dynamic over which neither possesses much control.`,
                                 dotKeys: {
                                     [REFERENCE]: true,
                                 },

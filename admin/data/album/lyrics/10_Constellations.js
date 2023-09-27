@@ -312,7 +312,7 @@ export default {
                                             anchor: `Walgreens`,
                                             wiki: `Walgreens`,
                                         },
-                                        `" pharmacy to procure our Robitussin.`,
+                                        `" drugstore to procure our Robitussin.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -864,6 +864,8 @@ export default {
                         {
                             anchor: `Indus-trail sewerce`,
                             properNoun: true,
+                            todo: true,
+                            problem: `Update based on new research.`,
                             card: {
                                 description: [
                                     `As we wind through "industrial sewers" pretending to be Mughal invaders, I explain the problem with the`,
@@ -887,6 +889,8 @@ export default {
                         `,`,
                         {
                             anchor: `questurns Indo Hairapins`,
+                            todo: true,
+                            problem: `Update based on new research.`,
                             card: {
                                 description: [
                                     `Our "quest turns into hairpins" as we wind our way down labyrinthine pathways. All the while, I blather on about "questions" surrounding the "`,
@@ -916,6 +920,8 @@ export default {
                         {
                             anchor: `Forsi ahuro`,
                             properNoun: true,
+                            todo: true,
+                            problem: `Update based on new research.`,
                             card: {
                                 description: [
                                     `In the`,
@@ -970,6 +976,8 @@ export default {
                         {
                             anchor: `Sensegreat deva's day shone`,
                             properNoun: true,
+                            todo: true,
+                            problem: `Update based on new research.`,
                             card: {
                                 description: [
                                     `Moreover, in "Sanskrit," the word for a Vedic deity is "`,
@@ -1027,7 +1035,7 @@ export default {
                         {
                             anchor: `our-youn' invedas`,
                             todo: true,
-                            problem: `Review one more time.`,
+                            problem: `Update based on new research.`,
                             card: {
                                 description: [
                                     `Although the "`,
@@ -1035,7 +1043,12 @@ export default {
                                         anchor: `Aryans`,
                                         wiki: `Aryan`,
                                     },
-                                    `" mentioned "in the Vedas" were a noble class based on religious distinction, 19th-century Western scholars portrayed them as a light-skinned race who'd conquered and civilized the local populations. While this theory has been debunked, the origin of the Indo-Aryans is still a matter of debate. And so "to sum up," I must put this "unsolved query" to rest, before the others lose their minds.`,
+                                    `" mentioned "in the Vedas" were a noble class based on religious distinction, 19th-century Western scholars theorized that the`,
+                                    {
+                                        anchor: `Indo-Aryans`,
+                                        wiki: `Indo-Aryan_peoples`,
+                                    },
+                                    `were a light-skinned race who'd conquered and civilized the local populations. The question of whether this was an invasion or a migration is still a matter of scholarly debate. And so "to sum up," I must put this "unsolved query" to rest, before the others lose their minds.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1735,7 +1748,7 @@ export default {
                                         anchor: `Nunavut`,
                                         wiki: `Nunavut`,
                                     },
-                                    `, the northernmost territory of Canada. Yet with the Norse making a reappearance in my thoughts, I realize that even our fantasies must circle back and cover old ground, just like the humdrum lives from which we try to escape. So as the "Norse" encounter the "Nunavutters," we end the night as we'd begun it, "no worse and none the better."`,
+                                    `, the northernmost territory of Canada. Yet with the Norse making a reappearance in my thoughts, I realize that even our fantasies must circle back and cover old ground, just like our humdrum lives from which we try to escape. So as the "Norse" encounter the "Nunavutters," we end the night as we'd begun it, "no worse and none the better."`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -2004,14 +2017,22 @@ export default {
                             anchor: `come unsated`,
                             properNoun: true,
                             todo: true,
-                            problem: `Rewrite the second sentence to avoid two past tenses of the past.`,
-                            card: {
-                                description: `Howie is downstairs in "anguish" over still being "buzzed," as he quenches his innards by downing cups of water. He'd opted for a large bottle of Robitussin earlier that night, thinking the small one I recommended wouldn't be enough.`,
-                                dotKeys: {
-                                    [NARRATIVE]: true,
-                                    [PUN]: true,
+                            problem: `Review one more time.`,
+                            cards: [
+                                {
+                                    description: `That night at the drugstore, I advised everyone to get the small bottle of Robitussin. We then lined up at separate checkouts to avoid attracting suspicion. When Howie finally rejoined us, we found out he'd gone back for the large bottle, thinking the small one wouldn't be enough.`,
+                                    dotKeys: {
+                                        [BACKSTORY]: true,
+                                    },
                                 },
-                            },
+                                {
+                                    description: `Howie is downstairs in "anguish" over still being "buzzed," as he quenches his innards by downing cups of water.`,
+                                    dotKeys: {
+                                        [NARRATIVE]: true,
+                                        [PUN]: true,
+                                    },
+                                },
+                            ],
                         },
                         `find`,
                         {
