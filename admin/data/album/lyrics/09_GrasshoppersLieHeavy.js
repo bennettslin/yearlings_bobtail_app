@@ -36,11 +36,11 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 todo: true,
-                problem: `Two "which"s in a row.`,
+                problem: `Review one more time.`,
                 cards: [
                     {
                         description: [
-                            `During this time, I was reading a lot of`,
+                            `During this time, I read a lot of`,
                             {
                                 anchor: `Philip K. Dick`,
                                 wiki: `Philip_K._Dick`,
@@ -53,12 +53,12 @@ export default {
                                     wiki: `The_Man_in_the_High_Castle`,
                                 },
                             },
-                            `, which tells of an alternate history in which the`,
+                            `, which imagines an`,
                             {
-                                anchor: `Axis powers`,
+                                anchor: `Axis victory`,
                                 wiki: `Axis_powers`,
                             },
-                            `had won`,
+                            `in`,
                             {
                                 anchor: `World War II`,
                                 wiki: `World_War_II`,
@@ -261,7 +261,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `The students would bus their trays in carriages attached to a conveyor, which would then transport the trays into the dishroom. Every so often, someone would accidentally leave a personal item on their tray and come downstairs to retrieve it. I got a kick whenever this happened. They were always grateful, and sometimes they were cute.`,
+                                description: `The students would bus their trays in carriages attached to a conveyor, which would then transport the trays into the dishroom. Every so often, someone would accidentally leave a personal item on their tray and come downstairs to retrieve it. I got a kick when this happened. They were always grateful, and sometimes they were cute.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -290,25 +290,35 @@ export default {
                         {
                             anchor: `fetch her lancet pen`,
                             todo: true,
-                            problem: `Review switch to narrative.`,
-                            card: {
-                                description: [
-                                    `Being a`,
-                                    {
-                                        anchor: `diabetic`,
-                                        wiki: `Diabetes`,
+                            problem: `Review one more time.`,
+                            cards: [
+                                {
+                                    description: [
+                                        `As a`,
+                                        {
+                                            anchor: `diabetic`,
+                                            wiki: `Diabetes`,
+                                        },
+                                        `, Sita was required to monitor her blood sugar level every so often.`,
+                                    ],
+                                    dotKeys: {
+                                        [BACKSTORY]: true,
                                     },
-                                    `, Sita regularly checks her blood sugar level before meals by pricking her finger with a`,
-                                    {
-                                        anchor: `lancing device`,
-                                        wiki: `Blood_glucose_monitoring`,
-                                    },
-                                    `. She forgets to take it with her today after busing her tray.`,
-                                ],
-                                dotKeys: {
-                                    [NARRATIVE]: true,
                                 },
-                            },
+                                {
+                                    description: [
+                                        `Before eating her meal, Sita used her`,
+                                        {
+                                            anchor: `lancing device`,
+                                            wiki: `Blood_glucose_monitoring`,
+                                        },
+                                        `to prick her finger. But now after busing her tray, she forgets to take it with her.`,
+                                    ],
+                                    dotKeys: {
+                                        [NARRATIVE]: true,
+                                    },
+                                },
+                            ],
                         },
                         `,`,
                     ],
@@ -350,12 +360,12 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `While the cafeteria never announced its practice of hiring workers through a`,
+                                        `While the cafeteria never announced its partnership with a`,
                                         {
                                             anchor: `vocational rehabilitation`,
                                             wiki: `Vocational_rehabilitation`,
                                         },
-                                        `program, this was easy enough to infer. A handful were past members of Asian gangs, and I must admit, the thought entertained me that I might be mistaken as one of them.`,
+                                        `program, this was easy enough to infer. A handful of workers were past members of Asian gangs, and I must admit, the thought entertained me to be mistaken as one of them.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -399,7 +409,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `Affixed to my belongings are stickers of underground art, which also serve to reassure Sita that I'm a fellow college student and not a reformed gangster.`,
+                                    description: `Affixed to my belongings are stickers of underground art, which also serve to reassure Sita that I'm not a former gangster.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -443,7 +453,7 @@ export default {
                             anchor: `nosebleed`,
                             cards: [
                                 {
-                                    description: `On my first date with Sita, my nose starts to bleed. This prompts me to recount some fights in middle school that ended with me suffering a bloody nose.`,
+                                    description: `On my first date with Sita, I get a nosebleed. This prompts me to recount some fights in middle school that ended with me suffering a bloody nose.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
