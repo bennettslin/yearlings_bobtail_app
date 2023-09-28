@@ -31,7 +31,9 @@ export default {
     mixStartTime: `0:01:18.60`,
     playerReferenceTime: 1751.447,
     playerStartTime: 1751.191,
-    overview: `One night I went with my bassist Ana and some other friends to get high on Robitussin and explore the steam tunnels under UCLA. I got them to pretend we were all Vikings and Mongols and various waves of human migration in world history. In hindsight, they were probably just humoring me. I wound up doing a lot of Robitussin that summer. It took a while for me to regain my grip on reality.`,
+    todo: true,
+    problem: `Review one more time.`,
+    overview: `One night I went with my bassist Ana and some of our friends to get high on Robitussin and explore the steam tunnels under UCLA. I got us all to pretend we were Vikings and Mongols and various waves of human migration in world history. In hindsight, the others were probably just humoring me. I did so much Robitussin that summer, it took me a long while to regain my grip on reality.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -685,7 +687,7 @@ export default {
                             problem: `Review one more time.`,
                             cards: [
                                 {
-                                    description: `Every Robitussin trip destroys you for a good while, and I'd just taken one a day or two ago. So earlier tonight, I was hesitant to do it again so soon. But now the "drink is gone," and with "too much in," I've forgotten my concerns.`,
+                                    description: `Earlier tonight, I was hesitant to do Robitussin with the others, since I'd already done it the night before, and each trip destroys you for a good while. But now the "drink is gone," and with "too much in," I've forgotten my concerns.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true,
@@ -865,20 +867,25 @@ export default {
                             anchor: `Indus-trail sewerce`,
                             properNoun: true,
                             todo: true,
-                            problem: `Update based on new research.`,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
-                                    `As we wind through "industrial sewers" pretending to be Mughal invaders, I explain the problem with the`,
+                                    `As we make our way down "industrial sewers," I explain the`,
                                     {
                                         anchor: `Aryan Invasion`,
                                         wiki: `Indo-Aryan_migration`,
                                     },
-                                    `theory. Proposed by 19th-century Western scholars, the theory holds that`,
+                                    `theory, which I examined in a recent term paper. Proposed by 19th-century Western scholars, it posits that`,
                                     {
                                         anchor: `Indian`,
                                         wiki: `India`,
                                     },
-                                    `civilization was brought by invaders from the north, who were the "Indus trail source."`,
+                                    `civilization was brought by invaders from the north, who carved a trail leading to the "source" of the`,
+                                    {
+                                        anchor: `Indus`,
+                                        wiki: `Indus_River`,
+                                    },
+                                    `river.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -890,20 +897,20 @@ export default {
                         {
                             anchor: `questurns Indo Hairapins`,
                             todo: true,
-                            problem: `Update based on new research.`,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
-                                    `Our "quest turns into hairpins" as we wind our way down labyrinthine pathways. All the while, I blather on about "questions" surrounding the "`,
-                                    {
-                                        anchor: `Indo-Harappan`,
-                                        wiki: `Indus_Valley_Civilisation`,
-                                    },
-                                    `" civilization that may be answered by studying the evolution of the "`,
+                                    `Our "quest turns into hairpins" as we wind through narrow pathways. All the while, I blather on about the "questions" brought up by later scholars, who rejected the colonialism of past scholarship. Instead, they pointed to the evolution of the "`,
                                     {
                                         anchor: `Indo-European`,
                                         wiki: `Indo-European_languages`,
                                     },
-                                    `" language family.`,
+                                    `" language family to argue for the "`,
+                                    {
+                                        anchor: `Indo-Harappan`,
+                                        wiki: `Indus_Valley_Civilisation`,
+                                    },
+                                    `" civilization's homegrown origins.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -921,7 +928,7 @@ export default {
                             anchor: `Forsi ahuro`,
                             properNoun: true,
                             todo: true,
-                            problem: `Update based on new research.`,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
                                     `In the`,
@@ -965,7 +972,7 @@ export default {
                                         anchor: `Avesta`,
                                         wiki: `Avesta`,
                                     },
-                                    `, it's likely that the apostates left the Indian subcontinent and migrated westward to the Iranian basin, rather than the other way around.`,
+                                    `, these later scholars posited that the apostates left the Indian subcontinent and migrated westward to the Iranian basin, rather than the other way around.`,
                                 ],
                                 dotKeys: {
                                     [PUN]: true,
@@ -977,7 +984,7 @@ export default {
                             anchor: `Sensegreat deva's day shone`,
                             properNoun: true,
                             todo: true,
-                            problem: `Update based on new research.`,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
                                     `Moreover, in "Sanskrit," the word for a Vedic deity is "`,
@@ -996,7 +1003,7 @@ export default {
                                             wiki: `Daeva`,
                                         },
                                     },
-                                    `refers to a demon. Thus, whether one "foresees a hero" or "senses great devastation" depends on which side of the schism one ended up on.`,
+                                    `is a demon. Thus, whether one "foresees a hero" or "senses great devastation" depends on which side of the schism one ended up on.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1012,9 +1019,11 @@ export default {
                     lyric: [
                         {
                             anchor: `To soma up`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
-                                    `In the Vedas,`,
+                                    `The Vedas mention a drink called`,
                                     {
                                         isItalic: true,
                                         lyric: {
@@ -1022,7 +1031,7 @@ export default {
                                             wiki: `Soma_(drink)`,
                                         },
                                     },
-                                    `is a ritual drink prepared from an unknown botanical substance believed by scholars to have psychedelic properties. The Avesta refers to it as`,
+                                    `that was prepared from an unknown plant believed by some scholars to have psychedelic properties. In the Avesta, it's known as`,
                                     {
                                         isItalic: true,
                                         lyric: `haoma`,
@@ -1035,20 +1044,15 @@ export default {
                         {
                             anchor: `our-youn' invedas`,
                             todo: true,
-                            problem: `Update based on new research.`,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
-                                    `Although the "`,
+                                    `Some recent scholarship has returned to the theory that the "`,
                                     {
                                         anchor: `Aryans`,
                                         wiki: `Aryan`,
                                     },
-                                    `" mentioned "in the Vedas" were a noble class based on religious distinction, 19th-century Western scholars theorized that the`,
-                                    {
-                                        anchor: `Indo-Aryans`,
-                                        wiki: `Indo-Aryan_peoples`,
-                                    },
-                                    `were a light-skinned race who'd conquered and civilized the local populations. The question of whether this was an invasion or a migration is still a matter of scholarly debate. And so "to sum up," I must put this "unsolved query" to rest, before the others lose their minds.`,
+                                    `" mentioned "in the Vedas" came from the north. However, it discredits the colonialist notion that they were "invaders," as no evidence of wars has been found. And so "to sum up," I put this "unsolved query" to rest, before the others lose their minds.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1389,7 +1393,7 @@ export default {
                         {
                             anchor: `herows— ourauras left`,
                             todo: true,
-                            problem: `Too many pronouns make the last sentence confusing. Leave out the shaman.`,
+                            problem: `Review one more time.`,
                             cards: [
                                 {
                                     description: `Wishing to respect the dead, we've left behind "our auras" as history's "heroes."`,
@@ -1405,12 +1409,7 @@ export default {
                                             anchor: `Inuits`,
                                             wiki: `Inuit`,
                                         },
-                                        `of the Arctic regions, migrated to the Americas by boat. So if an Inuit`,
-                                        {
-                                            anchor: `shaman`,
-                                            wiki: `Shamanism`,
-                                        },
-                                        `were to tell the story of a seafaring ancestor, they might describe how "he rows" with the "auroras," or`,
+                                        `of the Arctic regions, migrated to the Americas by boat. So in telling the story of a seafaring ancestor, they might describe how "he rows" with the "auroras," or`,
                                         {
                                             anchor: `aurora borealis`,
                                             wiki: `Aurora`,
@@ -1446,12 +1445,12 @@ export default {
                 problem: `Still doesn't flow very well.`,
                 card: {
                     description: [
-                        `On solo trips, I would play on my`,
+                        `On solo trips, I would sometimes keep playing on my`,
                         {
                             anchor: `Super Nintendo`,
                             wiki: `Super_Nintendo_Entertainment_System`,
                         },
-                        `until the Robitussin kicked in. And sometimes I would just keep playing, even as my mind began to wander in search of metaphysical truths. So for years afterward, every vintage arcade sound that I heard seemed to hide a spiritual message, which my sober ears just couldn't suss out.`,
+                        `, even after the Robitussin kicked in and my mind began to wander in search of metaphysical truths. So for years afterward, every vintage arcade sound seemed to hide a spiritual message that my sober ears just couldn't suss out.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -2155,7 +2154,7 @@ export default {
                                             anchor: `televangelists`,
                                             wiki: `Televangelism`,
                                         },
-                                        `, I realize that every religion's early spirit eventually degrades into orthodoxy and routine, as does every person's youthful spirit in their later years. But in the meantime, we're just halfway through summer, and more nights of Robitussin await…`,
+                                        `, I observe that every religion's pioneering spirit eventually degrades into convention and routine, as does every person's youthful outlook. But in the meantime, we're just halfway through summer, and more nights of Robitussin await…`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,

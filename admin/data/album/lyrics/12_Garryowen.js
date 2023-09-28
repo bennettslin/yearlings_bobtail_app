@@ -143,7 +143,8 @@ export default {
                 {
                     mixTime: `0:23:00.69`,
                     lyric: [
-                        `Tonight the`,
+                        // NOTE: I added a comma here.
+                        `Tonight, the`,
                         {
                             anchor: `rubber off`,
                             card: {

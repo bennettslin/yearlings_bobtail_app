@@ -63,7 +63,7 @@ export default {
                                 anchor: `World War II`,
                                 wiki: `World_War_II`,
                             },
-                            `. Curiously, the characters in this book are engrossed in their own alternate history novel called`,
+                            `. Curiously, the characters in this story are engrossed in their own alternate history novel called`,
                             {
                                 isItalic: true,
                                 lyric: `The Grasshopper Lies Heavy`,

@@ -27,14 +27,14 @@ export const ORDERED_DOT_KEYS = [
 export const DOT_KEYS_COUNT = ORDERED_DOT_KEYS.length
 
 export const DOT_DESCRIPTIONS = {
-    [BACKSTORY]: 'What took place before.',
-    [NARRATIVE]: 'The story as it happens.',
-    [OBSERVATION]: 'Just my two cents.',
-    [PUN]: 'Both the "literary" and "bad" variety.',
-    [REFERENCE]: 'Link to a Wikipedia page.',
-    [SONGCRAFT]: 'How the music was made.',
-    [WORMHOLE]: 'Portal to another song.',
-    [AFTERWORD]: 'My life since then.',
+    [BACKSTORY]: `What actually happened in the past.`,
+    [NARRATIVE]: `The story told by the music, with artistic license.`,
+    [OBSERVATION]: `Just my two cents.`,
+    [PUN]: `Both the "literary" and "bad" variety.`,
+    [REFERENCE]: `Link to a Wikipedia page.`,
+    [SONGCRAFT]: `How I wrote and recorded the music.`,
+    [WORMHOLE]: `Portal to another song.`,
+    [AFTERWORD]: `Where things are now, for anyone interested.`,
 }
 
 export const EMPTY_DOT_KEYS = getObjectFromBit({
