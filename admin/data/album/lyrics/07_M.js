@@ -27,7 +27,7 @@ export default {
     mixStartTime: `0:02:12.00`,
     todo: true,
     problem: `Too many sentences of the same length?`,
-    overview: `After the breakup with Catherine, I vowed to spend the next five years shaping myself into the ideal romantic prospect. By the fifth year, I'd cobbled together my own band, the Yearlings, and we were playing local shows. There was a fellow scenester named Mara whom I noticed from afar, and soon I grew infatuated. But Mara ended up going out with my drummer Jacob, which made band practice awkward.`,
+    overview: `After the breakup with Catherine, I vowed to spend the next five years shaping myself into the ideal romantic prospect. I began to attend local shows, and by the fifth year, I was playing out with my own band, the Yearlings. There was a fellow scenester named Mara whom I noticed from afar, and I soon grew infatuated. But Mara ended up going out with my drummer Jacob, which made band practice awkward.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -122,8 +122,10 @@ export default {
                         `I was a lad bent on`,
                         {
                             anchor: `learning the talents`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `It's not that I'd done anything wrong to cause the breakup with Catherine; I just didn't have much to offer. So it seemed illogical to keep doing things the same way, as if one day I should see a dramatically different result. To secure a future chance at romance, what I needed was to take time off and build up a surplus of attractive traits. So I started with the ones that Catherine valued most.`,
+                                description: `It's not that I'd done anything wrong to cause the breakup with Catherine; I just had little to offer. And it seemed illogical to keep doing things the same way, as if I should one day see dramatically different results. So to secure a future chance at romance, I decided to take time off and build up a surplus of attractive traits, starting with the ones that Catherine valued most.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -144,7 +146,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `I'd spent my childhood channeling my misery into various art projects, so this was all familiar terrain for me. To build yourself up into a desirable person is really just one more art project, after all.`,
+                                description: `This was actually familiar terrain for me. After all, I'd spent my childhood channeling misery into various art projects— and building yourself up into a desirable person is really just the ultimate art project.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -204,7 +206,7 @@ export default {
                         {
                             anchor: `mystery mensch`,
                             todo: true,
-                            problem: `Review one more time.`,
+                            problem: `Mention having a sister.`,
                             card: {
                                 description: `I'd managed to attract a smattering of women up to this point in my life, which allowed me to see a pattern: All of them had been taken in by my appearance as an artsy loner, only to be turned off after finding that nothing of greater substance lay beneath. So my mission was to turn this mistaken assumption into a correct one.`,
                                 dotKeys: {
