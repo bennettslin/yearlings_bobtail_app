@@ -40,12 +40,6 @@ export default {
                 cards: [
                     {
                         description: [
-                            `During this time, I read a lot of`,
-                            {
-                                anchor: `Philip K. Dick`,
-                                wiki: `Philip_K._Dick`,
-                            },
-                            `novels such as`,
                             {
                                 isItalic: true,
                                 lyric: {
@@ -53,15 +47,20 @@ export default {
                                     wiki: `The_Man_in_the_High_Castle`,
                                 },
                             },
-                            `, which imagines an`,
+                            `is an alternate history novel by`,
                             {
-                                anchor: `Axis victory`,
-                                wiki: `Axis_powers`,
+                                anchor: `Philip K. Dick`,
+                                wiki: `Philip_K._Dick`,
                             },
-                            `in`,
+                            `that imagines`,
                             {
                                 anchor: `World War II`,
                                 wiki: `World_War_II`,
+                            },
+                            `ending with an`,
+                            {
+                                anchor: `Axis victory`,
+                                wiki: `Axis_powers`,
                             },
                             `. Curiously, the characters in this story are engrossed in their own alternate history novel called`,
                             {
@@ -73,7 +72,7 @@ export default {
                                 anchor: `Allies`,
                                 wiki: `Allies_of_World_War_II`,
                             },
-                            `had won.`,
+                            `won.`,
                         ],
                         dotKeys: {
                             [BACKSTORY]: true,
@@ -105,7 +104,7 @@ export default {
                                 problem: `Review one more time.`,
                                 cards: [
                                     {
-                                        description: `In high school, I carried on as the same wretched nobody I'd been in middle school. It just didn't seem possible to remake myself into someone new while surrounded by all the same classmates. But all the while I was crafting my future identity as a self-assured artist, and it was raring to go as soon as I could leave Los Angeles.`,
+                                        description: `In high school, I carried on as the same wretched nobody that I was in middle school. It just didn't seem possible to remake myself into someone new while surrounded by all the same classmates. But all the while, I was crafting my future identity as a self-assured artist, and it was raring to go as soon as I could leave Los Angeles.`,
                                         dotKeys: {
                                             [BACKSTORY]: true,
                                             [OBSERVATION]: true,
@@ -241,8 +240,7 @@ export default {
                         `death of`,
                         {
                             anchor: `dull dishroom days`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: `My job washing dishes was uneventful and offered no social interaction, but it had its upsides. At the start of the shift, I could read a book while the dishes piled up, then clean them all at once in a mad rush. When it got busy, I would switch to writing lyrics in my head.`,
                                 dotKeys: {
@@ -261,7 +259,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `The students would bus their trays in carriages attached to a conveyor, which would then transport the trays into the dishroom. Every so often, someone would accidentally leave a personal item on their tray and come downstairs to retrieve it. I got a kick when this happened. They were always grateful, and sometimes they were cute.`,
+                                description: `The students would bus their trays on carriages attached to a conveyor that led into the dishroom. Every so often, one of them would accidentally leave a personal item on their tray and come downstairs to retrieve it. I got a kick whenever this happened. They were always grateful, and sometimes they were cute.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -710,8 +708,7 @@ export default {
                     lyric: [
                         {
                             anchor: `Phantom limbs`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: [
                                     `A`,
@@ -719,7 +716,7 @@ export default {
                                         anchor: `phantom limb`,
                                         wiki: `Phantom_limb`,
                                     },
-                                    `is the sensation that a missing limb is still responsive. And after I've spent these last weeks of summer in giddy hope, an amputation is what it feels like now to face the coming weekend alone.`,
+                                    `is the sensation that a missing limb is still responsive. And after I've spent these last weeks of summer in giddy hope, an amputation is what it feels like to face the coming weekend alone.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1296,7 +1293,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `As Sita lies naked and comforts me with her gaze, I stand forlornly by the bedside.`,
+                                    description: `As Sita lies naked on the bed and comforts me with her gaze, I stand forlornly by the bedside.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -1531,7 +1528,7 @@ export default {
                                 wiki: `La_petite_mort`,
                             },
                         },
-                        `, or "the little death," refers to a feeling of melancholic transcendence after orgasm. So as the chords continue to rise, the lead guitar plays a falling riff, until everything cuts away to Odin's theme, a reminder of the house cat who passed away in my youth.`,
+                        `, or "the little death," refers to a feeling of melancholic transcendence after orgasm. So as the chords continue to rise, the lead guitar plays a falling riff, and then everything cuts away to Odin's theme, a reminder of the house cat who passed away in my youth.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,

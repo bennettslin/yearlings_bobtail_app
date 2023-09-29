@@ -155,7 +155,7 @@ export default {
                         {
                             anchor: `decoder ring`,
                             todo: true,
-                            problem: `Review one more time.`,
+                            problem: `Improve last sentence.`,
                             card: {
                                 description: [
                                     {
@@ -181,7 +181,7 @@ export default {
                             problem: `Review one more time.`,
                             cards: [
                                 {
-                                    description: `As a college student, I would ask older coworkers to buy twelve-packs of cheap beer for me, which allowed me to keep a stack in my room. So before every date, I would down a few cans.`,
+                                    description: `As a college student, I would ask older coworkers to buy cheap beer for me, which allowed me to keep a stack of twelve-packs in my room. So before every date, I would down a few cans.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -678,7 +678,7 @@ export default {
                                         anchor: `understudy`,
                                         wiki: `Understudy`,
                                     },
-                                    `, a performer in theater who serves as a replacement on short notice. You undertake all the same preparation yet see little of the same action. So I decided to be proactive and branch out, like a freelancer without steady gigs advertising on a`,
+                                    `, a performer in theater who serves as a replacement on short notice. You undertake all the same preparation, while seeing little of the same action. So I decided to be proactive and branch out, like a freelancer without steady gigs advertising on a`,
                                     {
                                         anchor: `cork board`,
                                         wiki: `Bulletin_board`,

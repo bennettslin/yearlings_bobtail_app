@@ -681,7 +681,8 @@ export default {
                         `Anyway, I'm feeling healed. Still,`,
                         {
                             anchor: `hugging hurts`,
-                            review: true,
+                            todo: true,
+                            problem: `Is the first sentence clear in what I'm trying to say?`,
                             card: {
                                 description: `Of course, to avoid the humiliation of having been beaten up, I typically downplayed my injuries. But here I play them up to mask my emotional hurt, as I explain to Sasha why I winced when we hugged on that last day.`,
                                 dotKeys: {

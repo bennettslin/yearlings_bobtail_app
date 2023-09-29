@@ -125,7 +125,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `It's not that I'd done anything wrong to cause the breakup with Catherine; I just had little to offer. And it seemed illogical to keep doing things the same way, as if I should one day see dramatically different results. So to secure a future chance at romance, I decided to take time off and build up a surplus of attractive traits, starting with the ones that Catherine valued most.`,
+                                description: `It's not that I'd done anything wrong to make Catherine break up with me; I just didn't have much to offer. As such, it seemed illogical to pursue the next relationship in the same manner. To secure my future chances, I needed to take time off and build up a surplus of attractive traits. And so I started with the ones that Catherine valued most.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -146,7 +146,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `This was actually familiar terrain for me. After all, I'd spent my childhood channeling misery into various art projects— and building yourself up into a desirable person is really just the ultimate art project.`,
+                                description: `Luckily, this was familiar terrain for me. After all, I'd spent my childhood learning to channel misery into various art projects. And building yourself up into a desirable person is really just the ultimate art project.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -265,7 +265,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `I also decided to stop swearing. I figured it would be a definite win with women like Catherine, who need their men to be wholesome, while all others would find its quaintness charming.`,
+                                description: `Catherine didn't like to hear swear words, so I decided to stop swearing as well. I figured this would be a definite win with women like her, while all others would find its quaintness charming.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

@@ -151,7 +151,7 @@ export default {
                             todo: true,
                             problem: `Be more clear that the jagged peaks are like fangs.`,
                             card: {
-                                description: `In the mirages created by the summer heat, the reflections of the Valley's surrounding mountains point downward. One could playfully suggest that their jagged peaks caused the asphalt to crack.`,
+                                description: `In the mirages created by the summer heat, the reflections of the Valley's surrounding mountains point downward. One could playfully suggest that their jagged peaks are what caused the asphalt to crack.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },

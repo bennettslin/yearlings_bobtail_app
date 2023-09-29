@@ -180,7 +180,7 @@ export default {
                                         anchor: `atavism`,
                                         wiki: `Atavism`,
                                     },
-                                    `is a genetic trait that resurfaces after several generations. Though I wasn't autistic myself, it still lurked in my genes, ready to spring at any time on my children. Or else, on my grandchildren. Or on their children…`,
+                                    `is a genetic trait that resurfaces after several generations. Though I didn't have autism myself, it still lurked in my genes, ready to spring on my children. Or else, on my grandchildren. Or on their children…`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -772,7 +772,7 @@ export default {
                             problem: `Review one more time.`,
                             card: {
                                 description: [
-                                    `Like a typo, Miriam's involvement with me was a simple mistake she could easily correct. And in the same vein as a "`,
+                                    `Like a typo, Miriam's involvement with me was a mistake she could easily correct. And like a "`,
                                     {
                                         anchor: `Type O`,
                                         wiki: `Blood_type`,
