@@ -1497,7 +1497,7 @@ export default {
                         {
                             anchor: `holed up hostage`,
                             card: {
-                                description: `And yet the thought of being stuck with a soul forever, an inescapable fate promised by the faiths of my classmates, felt no less disturbing.`,
+                                description: `Yet the thought of being stuck with a soul forever, an inescapable fate promised by the faiths of my classmates, felt no less disturbing.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

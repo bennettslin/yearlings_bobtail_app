@@ -29,7 +29,7 @@ export default {
     mixStartTime: `0:01:01.40`,
     todo: true,
     problem: `Review one more time.`,
-    overview: `My mood would change for the worse when I drank, leading friends to joke that I had a sinister alter ego. And yet it wasn't far from the truth. I was souring on my relationship with Sita by this point, and being drunk provided both an escape and an excuse to act out. But I really didn't like myself when this happened. I missed being the hapless kid I still was in my head. And knowing now how to get it right, I longed for a do-over, only this time without the mess. In other words… without Sita.`,
+    overview: `My mood would change for the worse when I drank, leading friends to joke that I had a sinister alter ego. And yet… it wasn't far from the truth. I was souring on my relationship with Sita by this point, and being drunk provided both an escape and an excuse to act out. But I really didn't like myself when this happened. I missed being the hapless kid I still was in my head. And knowing now how to get it right, I longed for a do-over, only this time without the mess. In other words… without Sita.`,
     lyricUnits: [
         {
             unitMap: {},

@@ -38,8 +38,7 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
-                problem: `Review one more time.`,
+                review: true,
                 card: {
                     description: [
                         `My parents came from`,
@@ -294,16 +293,15 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
-                problem: `Review one more time.`,
+                review: true,
                 card: {
                     description: [
-                        `I wanted this song to capture the flurry of activity and transience of emotion that a child experiences over the course of a day. So as the rhythm jumps in and out of a`,
+                        `I wanted this song to capture the flurry of activity and transience of emotion that a child experiences in a single day. So as the rhythm jumps in and out of a`,
                         {
                             anchor: `half-time beat`,
                             wiki: `Half-time_(music)`,
                         },
-                        `, the chord progression swiftly modulates between the`,
+                        `, the chord progression endlessly modulates between the`,
                         {
                             anchor: `distantly related keys`,
                             wiki: `Closely_related_key`,
@@ -462,10 +460,10 @@ export default {
                         {
                             anchor: `sheriff's badge and gun`,
                             todo: true,
-                            problem: `First sentence runs on.`,
+                            problem: `Keep working on before review.`,
                             card: {
                                 description: [
-                                    `Though my mother and other Taiwanese teenagers of her generation prized all things labeled American, they didn't necessarily know what that entailed. Their only exposure was through a local bootleg industry that recycled the relics of America's past. And so my sister and I grew up listening to my mother's old`,
+                                    `Like other Taiwanese teenagers of her generation, my mother prized all things labeled American. Yet they didn't exactly know what that entailed, since their only exposure was through a bootleg industry that recycled the relics of America's past. And so my sister and I grew up listening to my mother's old`,
                                     {
                                         anchor: `country`,
                                         wiki: `Country_music`,

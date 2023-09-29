@@ -189,7 +189,7 @@ export default {
                         {
                             anchor: `womb you bed`,
                             todo: true,
-                            problem: `Review one more time.`,
+                            problem: `Last sentence runs on.`,
                             card: {
                                 description: `Of course, Sita herself was under no such illusion about my innocence. She knew full well that my desire to sleep with more women was rooted in the insecurity I felt as the less sexually experienced one in our relationship.`,
                                 dotKeys: {

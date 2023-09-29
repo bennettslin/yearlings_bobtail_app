@@ -322,7 +322,7 @@ export default {
                                         anchor: `pupa`,
                                         wiki: `Pupa`,
                                     },
-                                    `that had petrified into a fossil before it ever got a chance to molt.`,
+                                    `that petrified into a fossil before it got a chance to molt.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -646,7 +646,7 @@ export default {
                             problem: `Review one more time.`,
                             card: {
                                 description: [
-                                    `The chokehold incident actually did happen, and it left me with a dislocated jaw. For a long time afterward, I had to keep my jaw clenched to avoid pain when speaking. This led to my odd manner of pronunciation, which to this day gets mistaken for a`,
+                                    `The chokehold incident actually did happen, and it left me with a dislocated jaw. So for a long time afterward, I had to clench my jaw to avoid pain when speaking, which led to an odd manner of pronunciation that some to this day mistake for a`,
                                     {
                                         anchor: `Canadian accent`,
                                         wiki: `Canadian_raising`,
@@ -681,10 +681,9 @@ export default {
                         `Anyway, I'm feeling healed. Still,`,
                         {
                             anchor: `hugging hurts`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
-                                description: `Of course, it's more typical to downplay one's injuries, to avoid the humiliation of having been beaten up. But here I play them up to mask my emotional hurt, as I explain to Sasha why I winced when we hugged on that last day.`,
+                                description: `Of course, to avoid the humiliation of having been beaten up, I typically downplayed my injuries. But here I play them up to mask my emotional hurt, as I explain to Sasha why I winced when we hugged on that last day.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -699,7 +698,7 @@ export default {
                 todo: true,
                 problem: `Review one more time.`,
                 card: {
-                    description: `It's easy to write songs by coming up with a four-chord loop, then layering a melody on top. But my theory was that the Beatles wrote the melody and chords together in single, discrete units, one measure at a time— so I tried to do the same. I was always happiest with results like the chorus here, where the music wanders for long stretches without ever looping back, sometimes resulting in odd numbers of measures.`,
+                    description: `It's easy to write songs by coming up with a four-chord loop, then layering a melody on top. But my theory was that the Beatles wrote the melody and chords together as a single, inseparable whole, one measure at a time— so I aspired to do the same. I was always happiest with results like the chorus here, where the music wanders for a long stretch without looping back, resulting in an odd number of measures.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
