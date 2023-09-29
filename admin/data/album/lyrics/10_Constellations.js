@@ -683,8 +683,7 @@ export default {
                         {
                             anchor: `Drinkhis Khan, once Toomujin`,
                             properNoun: true,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             cards: [
                                 {
                                     description: `Earlier tonight, I was hesitant to do Robitussin with the others, since I'd already done it the night before, and each trip destroys you for a good while. But now the "drink is gone," and with "too much in," I've forgotten my concerns.`,
@@ -866,8 +865,7 @@ export default {
                         {
                             anchor: `Indus-trail sewerce`,
                             properNoun: true,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: [
                                     `As we make our way down "industrial sewers," I explain the`,
@@ -896,8 +894,7 @@ export default {
                         `,`,
                         {
                             anchor: `questurns Indo Hairapins`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: [
                                     `Our "quest turns into hairpins" as we wind through narrow pathways. All the while, I blather on about the "questions" brought up by later scholars, who rejected the colonialism of past scholarship. Instead, they pointed to the evolution of the "`,
@@ -927,8 +924,7 @@ export default {
                         {
                             anchor: `Forsi ahuro`,
                             properNoun: true,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: [
                                     `In the`,
@@ -983,8 +979,7 @@ export default {
                         {
                             anchor: `Sensegreat deva's day shone`,
                             properNoun: true,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: [
                                     `Moreover, in "Sanskrit," the word for a Vedic deity is "`,
@@ -1019,8 +1014,7 @@ export default {
                     lyric: [
                         {
                             anchor: `To soma up`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: [
                                     `The Vedas mention a drink called`,
@@ -1043,8 +1037,7 @@ export default {
                         `,`,
                         {
                             anchor: `our-youn' invedas`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: [
                                     `Some recent scholarship has returned to the theory that the "`,

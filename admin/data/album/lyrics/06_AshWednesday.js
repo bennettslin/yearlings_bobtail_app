@@ -136,10 +136,10 @@ export default {
                     mixTime: `0:10:14.39`,
                     lyric: [
                         {
-                            anchor: `Ulysses' tomb`,
+                            // NOTE: I changed from Ulysses'.
+                            anchor: `Ulysses's tomb`,
                             properNoun: true,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: [
                                     `A reference to the classic "`,
@@ -393,8 +393,7 @@ export default {
                         `,"`,
                         {
                             anchor: `putting down her Joyce`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: [
                                     `Her compliment is less than sincere, however, since referencing a poet studied by middle schoolers is hardly an impressive feat. And so, annoyed at being made to put down the Joyce novel she's reading, Catherine amuses herself by putting`,
@@ -423,7 +422,7 @@ export default {
                             problem: `Review one more time.`,
                             card: {
                                 description: [
-                                    `Of course, not knowing I couldn't be the next Joyce is why I dared to try. And so the idea began to congeal in my head that I could do for rock music what`,
+                                    `Of course, not knowing I couldn't be the next Joyce is why I dared to try. And so the idea began to congeal in my head of doing for rock music what`,
                                     {
                                         isItalic: true,
                                         lyric: `Ulysses`,
