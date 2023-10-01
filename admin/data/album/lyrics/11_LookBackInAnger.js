@@ -348,12 +348,12 @@ export default {
                             anchor: `hip hop`,
                             wiki: `Hip_hop`,
                         },
-                        `, Nas offered great pointers on the flexibility of`,
+                        `, it gave me great pointers on the flexibility of`,
                         {
                             anchor: `internal rhyme`,
                             wiki: `Internal_rhyme`,
                         },
-                        `, which I used in these verses.`,
+                        `.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -381,7 +381,7 @@ export default {
                                         anchor: `feeder fish`,
                                         wiki: `Feeder_fish`,
                                     },
-                                    `is deceptive, since the ones who are least fit are also the least likely to be sold as prey, and so they end up living the longest. In retrospect, high school worked the same way. All the time I'd spent working on pet projects left me unfit to defend my place in the social hierarchy. But the artistic skills I'd developed as a result were now keeping me from being eaten alive in the real world.`,
+                                    `is deceptive, since the least fit are also least likely to be sold as prey, and so they live the longest. In retrospect, high school worked the same way. All the time I'd spent working on art projects left me unfit to defend my place in the social hierarchy. But the skills I developed as a result were now keeping me from being eaten alive in the real world.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -482,15 +482,15 @@ export default {
                         {
                             anchor: `maraschino red`,
                             todo: true,
-                            problem: `Consider phrase order. Mention cherry color before mentioning that it matches?`,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
-                                    `Having sworn to be ready when the next Mara shows up in my life, I notice that the latecomer's hair color matches "Mara's sheen of" red, with the brightness of a`,
+                                    `Having sworn to be ready when the next Mara shows up in my life, I notice that the latecomer's hair is colored like a`,
                                     {
                                         anchor: `maraschino cherry`,
                                         wiki: `Maraschino_cherry`,
                                     },
-                                    `.`,
+                                    `— and matches "Mara's sheen of" red.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -510,7 +510,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `The best time to hit on someone is right after you've played a set, since they've just spent the last hour making you the center of their universe. So sure enough, I find the redheaded woman to be flirtatious when we finally chat.`,
+                                description: `The best time to hit on someone is right after you've played a set, when they've just spent the last hour making you the center of their universe. So sure enough, I find the redheaded woman to be flirtatious when we finally chat.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -540,7 +540,7 @@ export default {
                             todo: true,
                             problem: `Two "feel"s in a row.`,
                             card: {
-                                description: `Things were finally looking up for me, so I was confused to still feel a quiet bitterness inside. I suspect it's because I felt indignant for my younger self, who'd been kept in the dark for so long about how much better life could be.`,
+                                description: `Things were finally looking up for me, so I was confused to still feel a quiet bitterness inside. I suspect it's because I was indignant for my younger self, who'd been kept in the dark for so long about how much better life could be.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -758,6 +758,8 @@ export default {
                         `So if you're weeping for`,
                         {
                             anchor: `poor squirrels`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
                                     `In the final scene of `,
@@ -765,7 +767,7 @@ export default {
                                         isItalic: true,
                                         lyric: `Look Back in Anger`,
                                     },
-                                    `, the protagonist Jimmy pictures his wife as a squirrel and sighs, "Poor squirrels," recognizing that his abusive tirades keep her in a neurotic and submissive state.`,
+                                    `, the protagonist Jimmy pictures his wife as a squirrel and sighs, "Poor squirrels," recognizing that his abusive tirades keep her stuck in a neurotic and submissive state.`,
                                 ],
                                 dotKeys: {
                                     [REFERENCE]: true,

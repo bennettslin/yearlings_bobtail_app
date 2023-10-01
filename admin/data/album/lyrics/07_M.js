@@ -27,7 +27,7 @@ export default {
     mixStartTime: `0:02:12.00`,
     todo: true,
     problem: `Too many sentences of the same length?`,
-    overview: `After the breakup with Catherine, I vowed to spend the next five years shaping myself into the ideal romantic prospect. I began to attend local shows, and by the fifth year, I was playing out with my own band, the Yearlings. There was a fellow scenester named Mara whom I noticed from afar, and I soon grew infatuated. But Mara ended up going out with my drummer Jacob, which made band practice awkward.`,
+    overview: `After the breakup with Catherine, I vowed to spend the next five years shaping myself into the ideal romantic prospect. I began to attend local shows during this time, and by the fifth year, I'd cobbled together my own band, the Yearlings. There was a fellow scenester named Mara whom I noticed from afar, and I soon grew infatuated. But Mara ended up going out with my drummer Jacob, which made band practice awkward.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -122,10 +122,9 @@ export default {
                         `I was a lad bent on`,
                         {
                             anchor: `learning the talents`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
-                                description: `It's not that I'd done anything wrong to make Catherine break up with me; I just didn't have much to offer. As such, it seemed illogical to pursue the next relationship in the same manner. To secure my future chances, I needed to take time off and build up a surplus of attractive traits. And so I started with the ones that Catherine valued most.`,
+                                description: `It's not that I'd done anything wrong to make Catherine break up with me; I just didn't have much to offer. As such, it seemed illogical to pursue the next relationship in the same manner. To secure my future chances, I needed to take time off and build up a surplus of attractive traits. So I started with the ones that Catherine valued most.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -146,7 +145,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `Luckily, this was familiar terrain for me. After all, I'd spent my childhood learning to channel misery into various art projects. And building yourself up into a desirable person is really just the ultimate art project.`,
+                                description: `Luckily, this was familiar terrain for me, since I'd already spent my childhood learning to channel misery into various art projects. Remaking yourself into a desirable person, after all, is really just the ultimate art project.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -206,7 +205,7 @@ export default {
                         {
                             anchor: `mystery mensch`,
                             todo: true,
-                            problem: `Mention having a sister.`,
+                            problem: `The benefit of having a popular older sister in high school is that I knew…`,
                             card: {
                                 description: `I'd managed to attract a smattering of women up to this point in my life, which allowed me to see a pattern: All of them had been taken in by my appearance as an artsy loner, only to be turned off after finding that nothing of greater substance lay beneath. So my mission was to turn this mistaken assumption into a correct one.`,
                                 dotKeys: {
@@ -265,7 +264,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `Catherine didn't like to hear swear words, so I decided to stop swearing as well. I figured this would be a definite win with women like her, while all others would find its quaintness charming.`,
+                                description: `Catherine didn't like to hear swear words, so I decided to stop swearing as well. I figured this would be a definite win with others like her, while the rest would find its quaintness charming.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -310,8 +309,7 @@ export default {
                     lyric: [
                         {
                             anchor: `Year five`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: [
                                     `The Soviet Union's`,
@@ -336,10 +334,10 @@ export default {
                         {
                             anchor: `wishes on a friend`,
                             todo: true,
-                            problem: `Review one more time.`,
+                            problem: `Needs to make it more clear that when Mara was finally in the audience, I was thrilled.`,
                             card: {
                                 description: [
-                                    `Toward the end of my five-year plan, the Yearlings were regularly playing local shows. One day I was thrilled to spot Mara in the audience. But it was Jacob who caught her eye. I felt like the`,
+                                    `Toward the end of my five-year plan, the Yearlings were regularly playing local shows. I was thrilled to spot Mara in the audience. But it was Jacob who caught her eye. I felt like the`,
                                     {
                                         anchor: `bottled genie`,
                                         wiki: `Jinn`,
@@ -1044,8 +1042,7 @@ export default {
                                 `'s words`,
                             ],
                             properNoun: true,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: [
                                     `Recognizing my wish to be with someone like Mara, and taking stock of what was needed to fulfill it, I decided to return to what I do best, and hole up in seclusion— this time to work on a magnum opus. My next five-year plan would see me write all the lyrics, score all the parts, and perform all the tracks on`,
@@ -1089,8 +1086,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
-                problem: `Review one more time.`,
+                review: true,
                 card: {
                     description: [
                         `My original plan was to take the puns one step further by recording this song in a "`,

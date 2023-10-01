@@ -72,9 +72,9 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 todo: true,
-                problem: `Second sentence should be more clear that I wasn't reverting to a time just before, but *way* before.`,
+                problem: `Review one more time.`,
                 card: {
-                    description: `With the breakup, I was free to rebuild my life from scratch. I could revert to the state of childlike innocence that I'd known before the relationship, before the bullying and the mail-order cult. And so here we hear the song of the white-throated sparrow, which harkens back to the happier days of my youth.`,
+                    description: `With the breakup, I could revert to the state of childlike innocence that I'd known long ago— not just before the relationship, but before the bullying and the mail-order cult as well. So here we hear the white-throated sparrow, which harkens back to the happiest days of my childhood.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGCRAFT]: true,
@@ -204,9 +204,9 @@ export default {
                         {
                             anchor: `went through your mail`,
                             todo: true,
-                            problem: `Can probably be improved. Instead of breaking up the sentences as they are now, put the break instead between snooping around and stumbling.`,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `Confused about why I'd grown distant, Sita snooped around on my desktop computer that day and stumbled upon some emails to friends. In the emails, I spoke of a recent crush and solicited advice on breaking up gently.`,
+                                description: `Confused over why I'd grown distant, Sita snooped around on my desktop computer earlier that day. In doing so, she stumbled upon some emails to friends— one in which I spoke of a recent crush on another woman, and another soliciting advice on how to break up gently.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -340,7 +340,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 todo: true,
-                problem: `This can flow better in general.`,
+                problem: `Review one more time.`,
                 card: {
                     description: [
                         `In`,
@@ -356,17 +356,17 @@ export default {
                                 wiki: `Nineteen_Eighty-Four`,
                             },
                         },
-                        `, the citizens are forced to engage in`,
+                        `, the citizens engage in contradictory`,
                         {
                             anchor: `doublethink`,
                             wiki: `Doublethink`,
                         },
-                        `to accept the propaganda of`,
+                        `to understand the propaganda of`,
                         {
                             anchor: `Newspeak`,
                             wiki: `Newspeak`,
                         },
-                        `. And all through that night, I needed to make sense of the breakup by reconciling the contradictions in my head. So this song uses doublespeaker rhyme— which I named partly for its Orwellian undertone— to depict the inner conflict between my sober self and his drunken alter ego.`,
+                        `. Similarly, to understand the breakup, I had to reconcile the contradictions in my head. So this song uses doublespeaker rhyme— which I named partly for its Orwellian undertone— to depict the inner conflict between my sober self and drunken alter ego.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -515,7 +515,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `Sita's friends weren't wrong to label me fake. My emotions didn't feel legitimate even to myself; I reacted to them like an actor responding to a cue. At the time, I blamed it on the lingering effects of Robitussin.`,
+                                description: `Sita's friends weren't wrong to label me fake. My emotions didn't feel legitimate even to myself; I responded to them like an actor reacting to a cue. At the time, I blamed it on the lingering effects of Robitussin.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -529,7 +529,7 @@ export default {
                         {
                             anchor: `night were peeled`,
                             todo: true,
-                            problem: `Just feels like it can be worded slightly better.`,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
                                     `Every now and then, I would have a Robitussin`,
@@ -537,12 +537,12 @@ export default {
                                         anchor: `flashback`,
                                         wiki: `Flashback_(psychology)`,
                                     },
-                                    `where I would trail off and stare into the distance. When a friend asked what it was like, I said it was like`,
+                                    `, causing me to trail off and stare into the distance. When a friend asked what it felt like, I said it was like`,
                                     {
                                         anchor: `Colorforms`,
                                         wiki: `Colorforms`,
                                     },
-                                    `being peeled off my eyeballs to present the illusion of a scene unfolding in time.`,
+                                    `rapidly peeling off my eyeballs to present the illusion of a scene unfolding in time.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -579,9 +579,10 @@ export default {
                                         anchor: `carnivores`,
                                         wiki: `Carnivore`,
                                     },
-                                    `have an instinct to tear flesh with their jaws, so they reflexively soften their bites during rough play. And knowing now what it truly means to inflict harm, I realized that the bullies held back their blows as well, believing it was all in good fun.`,
+                                    `have an instinct to tear flesh with their jaws, so they reflexively soften their bites during rough play. And knowing now what it truly means to inflict harm, I realize that the bullies held back their blows as well, believing it was all in good fun.`,
                                 ],
                                 dotKeys: {
+                                    [NARRATIVE]: true,
                                     [OBSERVATION]: true,
                                 },
                             },
@@ -703,9 +704,9 @@ export default {
                         {
                             anchor: `jester teeters`,
                             todo: true,
-                            problem: `Consider whether there's a more diplomatic way of making this point.`,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `I was stopped by a pair of police officers that night. They judged me to be harmless and sent me on my way. I've since learned that this might not have been the outcome for my Black friends, of course.`,
+                                description: `I was stopped by a pair of police officers that night. They judged me to be harmless and sent me on my way. I've since learned that this might not have been the outcome for some of my other friends, of course.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -1169,9 +1170,9 @@ export default {
                         {
                             anchor: `forgo like jewelry`,
                             todo: true,
-                            problem: `Second sentence can be phrased better?`,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `As these things go, Sita and I had a turbulent on-again, off-again relationship for a good while longer. During one stretch when things were looking rosier than ever, she asked for the bracelet back to wear again, which I happily obliged. Somehow I'd dented it in my pocket that night, however, creating a lasting reminder that some damages can be amended but never undone.`,
+                                description: `Sita and I had a turbulent on-again, off-again relationship for a good while longer. During one stretch when things were rosier than ever, she wanted to wear the bracelet again and asked for it back, which I happily obliged. Somehow I'd dented it in my pocket that night, however, creating a lasting reminder that some damages can be amended but never undone.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

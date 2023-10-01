@@ -75,7 +75,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 todo: true,
-                problem: `"Heist" might not be the right word, because something was switched, not stolen.`,
+                problem: `Can't think of a better word than "heist." Review if this is indeed the case.`,
                 card: {
                     description: [
                         `In the past, a disabled child was sometimes thought to be a troll in disguise known as a`,
@@ -83,7 +83,7 @@ export default {
                             anchor: `changeling`,
                             wiki: `Changeling`,
                         },
-                        `, who'd been left in place of a stolen human infant. I wanted this song to sound like a band of woodland trolls celebrating a recent heist in secluded revelry. I figured their style would be like the swamp rock of`,
+                        `, who'd been left in place of a stolen human infant. So I wanted this song to sound like a band of woodland trolls celebrating a recent heist in secluded revelry. I figured their style would be like the swamp rock of`,
                         {
                             anchor: `Creedence Clearwater Revival`,
                             wiki: `Creedence_Clearwater_Revival`,
