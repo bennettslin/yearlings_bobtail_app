@@ -422,12 +422,7 @@ export default {
                             problem: `Review one more time.`,
                             card: {
                                 description: [
-                                    `Of course, not knowing I couldn't be the next Joyce is why I dared to try. And so the idea began to congeal in my head of doing for rock music what`,
-                                    {
-                                        isItalic: true,
-                                        lyric: `Ulysses`,
-                                    },
-                                    `had done for English literature.`,
+                                    `Of course, not knowing I couldn't be the next Joyce is why I dared to try. And so the thought was planted in my head that I could do for rock music what he'd done for English literature.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -494,7 +489,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `Catherine undervalued the artistic strengths I'd always counted on to cover up my many weaknesses. Which made me realize that if I were ever to be worth keeping, then I simply couldn't have any weaknesses.`,
+                                description: `Catherine undervalued the artistic strengths I'd always counted on to cover up my many weaknesses. Which meant if I were ever to be worth keeping, then I simply couldn't have any weaknesses.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

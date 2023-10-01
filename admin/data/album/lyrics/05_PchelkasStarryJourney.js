@@ -343,8 +343,7 @@ export default {
                         `they'll catch you by`,
                         {
                             anchor: `your cape`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: `I was well liked in elementary school, despite being small for my age and absorbed in my art projects. Not only was I harmless and unassuming, I would happily draw cartoon figures for those who asked. But the traits that once made me a hero now marked me as easy prey in middle school, and I was ill-prepared.`,
                                 dotKeys: {
@@ -529,8 +528,7 @@ export default {
                         `But`,
                         {
                             anchor: `waiting for Goddard`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             cards: [
                                 {
                                     description: [
@@ -768,7 +766,7 @@ export default {
                 todo: true,
                 problem: `Review one more time.`,
                 card: {
-                    description: `To make the sound of rocket circuitry heard here, I banged an electric guitar against a carpet floor while bending its whammy bar. It took countless tries, and I kept having to retune because the guitar would go out of tune each time.`,
+                    description: `To make the sound of rocket circuitry heard here, I banged an electric guitar against a carpet floor while bending its whammy bar. It took countless tries, and I had to retune each time because the guitar would go out of tune.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
@@ -817,7 +815,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `To appear legitimate, the letters threw scientific terms around as they promised to keep me abreast of ongoing technological developments. This included constructing a spacecraft that would allow us to make contact with our extraplanetary kin.`,
+                                description: `To appear legitimate, the letters threw scientific terms around as they promised to update me on technological developments. This included constructing a spacecraft that would allow us Beyonders to make contact with our extraplanetary kin.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
