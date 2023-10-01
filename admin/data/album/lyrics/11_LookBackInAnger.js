@@ -334,7 +334,12 @@ export default {
                             anchor: `Nas`,
                             wiki: `Nas`,
                         },
-                        `. I hadn't paid much attention to rappers up to that point, as I assumed their songwriting approach was too far removed from my own to offer much wisdom. I've since corrected this oversight, but back when
+                        `. I'd paid little attention to`,
+                        {
+                            anchor: `hip hop`,
+                            wiki: `Hip_hop`,
+                        },
+                        `at that point, as I assumed its approach to songwriting was too far removed from my own to offer much wisdom. I've since corrected this oversight, but back when
                         `,
                         {
                             isItalic: true,
@@ -343,12 +348,7 @@ export default {
                                 wiki: `Illmatic`,
                             },
                         },
-                        `was my lone point of reference for`,
-                        {
-                            anchor: `hip hop`,
-                            wiki: `Hip_hop`,
-                        },
-                        `, it gave me great pointers on the flexibility of`,
+                        `was my lone point of reference, it gave me great pointers on the flexibility of`,
                         {
                             anchor: `internal rhyme`,
                             wiki: `Internal_rhyme`,
@@ -381,7 +381,7 @@ export default {
                                         anchor: `feeder fish`,
                                         wiki: `Feeder_fish`,
                                     },
-                                    `is deceptive, since the least fit are also least likely to be sold as prey, and so they live the longest. In retrospect, high school worked the same way. All the time I'd spent working on art projects left me unfit to defend my place in the social hierarchy. But the skills I developed as a result were now keeping me from being eaten alive in the real world.`,
+                                    `is deceptive: Since the least fit are also least likely to be sold as prey, they actually live the longest. In retrospect, high school worked the same way. All the time I'd spent working on art projects left me unfit to defend my place in the social hierarchy. But the skills I developed as a result were now keeping me from being eaten alive in the real world.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -403,9 +403,9 @@ export default {
                         {
                             anchor: `cancer nibbled off`,
                             todo: true,
-                            problem: `Review one more time.`,
+                            problem: `I just don't like how it is right now.`,
                             card: {
-                                description: `It was therapeutic enough to write songs about my own disappointments and dysfunctions. It felt crazy that others would credit me with giving voice to theirs as well, and that they should love me for it.`,
+                                description: `It was therapeutic enough to write songs about my own disappointments and dysfunctions. It felt crazy that others would credit me with giving voice to theirs as well, and that they should admire me for it.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -485,12 +485,12 @@ export default {
                             problem: `Review one more time.`,
                             card: {
                                 description: [
-                                    `Having sworn to be ready when the next Mara shows up in my life, I notice that the latecomer's hair is colored like a`,
+                                    `Having sworn to be ready when the next Mara comes along, I notice that the latecomer's hair is colored like a`,
                                     {
                                         anchor: `maraschino cherry`,
                                         wiki: `Maraschino_cherry`,
                                     },
-                                    `— and matches "Mara's sheen of" red.`,
+                                    `— which matches "Mara's sheen of" red.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -507,8 +507,7 @@ export default {
                         `"`,
                         {
                             anchor: `Great show`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: `The best time to hit on someone is right after you've played a set, when they've just spent the last hour making you the center of their universe. So sure enough, I find the redheaded woman to be flirtatious when we finally chat.`,
                                 dotKeys: {
@@ -537,8 +536,7 @@ export default {
                         `and you were`,
                         {
                             anchor: `fine when you had none`,
-                            todo: true,
-                            problem: `Two "feel"s in a row.`,
+                            review: true,
                             card: {
                                 description: `Things were finally looking up for me, so I was confused to still feel a quiet bitterness inside. I suspect it's because I was indignant for my younger self, who'd been kept in the dark for so long about how much better life could be.`,
                                 dotKeys: {
@@ -609,9 +607,9 @@ export default {
                         {
                             anchor: `His obit not a bang`,
                             todo: true,
-                            problem: `Last sentence runs on a bit.`,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `But my appraisal was based on reason, not malice. If the Christian god were the one true God, then it made no sense why he would entrust the dissemination of his message to the tormentors of those he hoped to reach.`,
+                                description: `But my appraisal was based on reason, not malice. If the Christian god were the one true God, why would he trust his message to be spread by the tormentors of those he hoped to reach?`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -703,7 +701,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `Yet even as reason disproved the beliefs of those who bullied me, it also discredited my own as a Beyonder. After all, with so many rival claims to the truth out there, what sane person would stay loyal to a faith that offers no community and only endless grief?`,
+                                description: `Yet even as reason disproved the beliefs of my bullies, it also discredited my own as a Beyonder. After all, with so many rival claims to the truth, who would stay loyal to a faith that offers no community, and only endless grief?`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -767,7 +765,7 @@ export default {
                                         isItalic: true,
                                         lyric: `Look Back in Anger`,
                                     },
-                                    `, the protagonist Jimmy pictures his wife as a squirrel and sighs, "Poor squirrels," recognizing that his abusive tirades keep her stuck in a neurotic and submissive state.`,
+                                    `, the protagonist pictures his wife as a squirrel and sighs, "Poor squirrels," acknowledging that his abusive tirades keep her trapped in a neurotic state.`,
                                 ],
                                 dotKeys: {
                                     [REFERENCE]: true,
@@ -786,7 +784,7 @@ export default {
                             todo: true,
                             problem: `Sentence runs on.`,
                             card: {
-                                description: `His wife Alison then sighs in response, "Poor, poor bears." She recognizes that he, a bear in their mutual fantasy, is just as much a victim, complying within a power dynamic over which neither possesses much control.`,
+                                description: `His wife then sighs in response, "Poor, poor bears." She recognizes that he, a bear in their mutual fantasy, is also a victim, complying within a power dynamic over which neither possesses much control.`,
                                 dotKeys: {
                                     [REFERENCE]: true,
                                 },

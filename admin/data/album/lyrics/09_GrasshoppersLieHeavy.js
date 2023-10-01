@@ -35,8 +35,7 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
-                problem: `Review one more time.`,
+                review: true,
                 cards: [
                     {
                         description: [
@@ -59,10 +58,10 @@ export default {
                             },
                             `having ended with an`,
                             {
-                                anchor: `Axis victory`,
+                                anchor: `Axis`,
                                 wiki: `Axis_powers`,
                             },
-                            `. Curiously, the characters in this story are engrossed in their own alternate history novel called`,
+                            `victory. Curiously, the characters in this story are engrossed in their own alternate history novel called`,
                             {
                                 isItalic: true,
                                 lyric: `The Grasshopper Lies Heavy`,

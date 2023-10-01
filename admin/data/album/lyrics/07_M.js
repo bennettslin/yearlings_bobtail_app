@@ -145,7 +145,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `Luckily, this was familiar terrain for me, since I'd already spent my childhood learning to channel misery into various art projects. Remaking yourself into a desirable person, after all, is really just the ultimate art project.`,
+                                description: `Luckily, this was familiar terrain for me, since I'd already spent my childhood learning to channel misery into various art projects. After all, remaking yourself into a desirable person is really just the ultimate art project.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -261,8 +261,7 @@ export default {
                         `with`,
                         {
                             anchor: `mindful manners`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: `Catherine didn't like to hear swear words, so I decided to stop swearing as well. I figured this would be a definite win with others like her, while the rest would find its quaintness charming.`,
                                 dotKeys: {
