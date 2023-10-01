@@ -463,7 +463,7 @@ export default {
                             problem: `Keep working on before review.`,
                             card: {
                                 description: [
-                                    `Like other Taiwanese teenagers of her generation, my mother prized all things labeled American. Yet they didn't exactly know what that entailed, since their only exposure was through a bootleg industry that recycled the relics of America's past. And so my sister and I grew up listening to my mother's old`,
+                                    `Like other Taiwanese teenagers of her generation, my mother prized all things labeled American, despite not knowing exactly what that entailed. Their only exposure was through a bootleg industry that recycled the relics of America's past. And so my sister and I grew up listening to my mother's old`,
                                     {
                                         anchor: `country`,
                                         wiki: `Country_music`,

@@ -57,7 +57,7 @@ export default {
                                 anchor: `World War II`,
                                 wiki: `World_War_II`,
                             },
-                            `ending with an`,
+                            `having ended with an`,
                             {
                                 anchor: `Axis victory`,
                                 wiki: `Axis_powers`,
@@ -100,8 +100,7 @@ export default {
                             `L.A. to the Bay,`,
                             {
                                 anchor: `pompous autumn waits`,
-                                todo: true,
-                                problem: `Review one more time.`,
+                                review: true,
                                 cards: [
                                     {
                                         description: `In high school, I carried on as the same wretched nobody that I was in middle school. It just didn't seem possible to remake myself into someone new while surrounded by all the same classmates. But all the while, I was crafting my future identity as a self-assured artist, and it was raring to go as soon as I could leave Los Angeles.`,
@@ -256,8 +255,7 @@ export default {
                         `stalled by`,
                         {
                             anchor: `keys left on dumbwaiter trays`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: `The students would bus their trays on carriages attached to a conveyor that led into the dishroom. Every so often, one of them would accidentally leave a personal item on their tray and come downstairs to retrieve it. I got a kick whenever this happened. They were always grateful, and sometimes they were cute.`,
                                 dotKeys: {
@@ -297,21 +295,24 @@ export default {
                                             anchor: `diabetic`,
                                             wiki: `Diabetes`,
                                         },
-                                        `, Sita was required to monitor her blood sugar level every so often.`,
+                                        `, Sita had to monitor her`,
+                                        {
+                                            anchor: `blood sugar level`,
+                                            wiki: `Blood_glucose_monitoring`,
+                                        },
+                                        `. So before meals, she would draw blood from her finger by pricking it with a`,
+                                        {
+                                            anchor: `lancing device`,
+                                            wiki: `Blood_lancet`,
+                                        },
+                                        `.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
                                 },
                                 {
-                                    description: [
-                                        `Before eating her meal, Sita used her`,
-                                        {
-                                            anchor: `lancing device`,
-                                            wiki: `Blood_glucose_monitoring`,
-                                        },
-                                        `to prick her finger. But now after busing her tray, she forgets to take it with her.`,
-                                    ],
+                                    description: `Lost in thought, Sita forgets to take her lancing device with her after busing her tray.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -327,8 +328,7 @@ export default {
                         `and stunned, by`,
                         {
                             anchor: `reflex you asked`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             cards: [
                                 {
                                     description: `By then, I was mostly on autopilot when it came to hitting on random women in random places.`,
@@ -337,7 +337,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `Taken aback by Sita's looks, I'm determined not to screw this one up. So after handing back her lancet pen, I try to engage in small talk before asking her on a date.`,
+                                    description: `In awe of Sita's beauty, I'm determined not to screw this one up. So after handing back her lancing device, I engage in small talk before asking her on a date.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -353,8 +353,7 @@ export default {
                         `At first she hedged, but then`,
                         {
                             anchor: `laying qualms to rest`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             cards: [
                                 {
                                     description: [
@@ -371,7 +370,7 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `Unsure of my background and still feeling ambushed, Sita hesitates. But as we chat, I win her over with my clear love for reading and knowledge of literature.`,
+                                        `Unsure of my background and still feeling ambushed, Sita hesitates. But as we chat, I win her over with my love for reading and knowledge of literature.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -400,14 +399,14 @@ export default {
                                             anchor: `Schwa`,
                                             wiki: `Schwa_(art)`,
                                         },
-                                        `is the underground artwork of Bill Barker. In the 90s, stickers of his oblong alien heads mysteriously began to show up on newspaper racks and street signs. Truth be told, I had no idea what it was about at the time; in those days, there was no way to find out.`,
+                                        `is the underground artwork of Bill Barker. In the 90s, stickers of his oblong alien heads began to show up on newspaper racks and street signs. Truth be told, it was all a mystery to me. In those days, the Web didn't explain most things, and I wasn't in the habit of checking if it did.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
                                 },
                                 {
-                                    description: `Affixed to my belongings are stickers of underground art, which also serve to reassure Sita that I'm not a former gangster.`,
+                                    description: `Affixed to my belongings are stickers of underground art, which reassure Sita further that I'm not a former gangster.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -517,8 +516,7 @@ export default {
                         `Then just like the drift,`,
                         {
                             anchor: `she disappeared`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: `Shortly after our first few dates, I called Sita to tell her I was in love with her. She admitted that she didn't feel the same way, yet wanted to remain friends. We hung up with the understanding that we would continue to hang out casually. But I felt so dejected that I decided never to see her again.`,
                                 dotKeys: {
@@ -732,16 +730,15 @@ export default {
                         `them`,
                         {
                             anchor: `tripped on runner's high`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: [
-                                    `After a grueling shift, I make the long slog back home, all the while feeling dead tired in all my limbs. So it's hard to feel gracious as I'm passed by a nighttime jogger who's clearly feeling the euphoria of a`,
+                                    `Having completed a grueling shift, I'm feeling dead tired in all my limbs as I make my way back home. So when a nighttime jogger`,
                                     {
-                                        anchor: `runner's high`,
+                                        anchor: `cheerily`,
                                         wiki: `Neurobiological_effects_of_physical_exercise`,
                                     },
-                                    `.`,
+                                    `calls out that he's about to pass from behind, I find it hard to be gracious.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -757,8 +754,7 @@ export default {
                         `Below the`,
                         {
                             anchor: `window of your Walkman`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             cards: [
                                 {
                                     description: [
@@ -774,7 +770,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `After picturing the jogger to have taken a pratfall, I pretend to be absorbed in my music, like a child ducking beneath a window after pulling a prank.`,
+                                    description: `Imagining the jogger to take a pratfall, I pretend to be absorbed in my music, like a child ducking beneath a window after pulling a prank.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },

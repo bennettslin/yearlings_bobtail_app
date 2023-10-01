@@ -240,6 +240,8 @@ export default {
                         `his`,
                         {
                             anchor: `pinhead in its shadow`,
+                            todo: true,
+                            problem: `Both cards are now narratives.`,
                             cards: [
                                 {
                                     description: [
