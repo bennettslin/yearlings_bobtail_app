@@ -180,7 +180,7 @@ export default {
                                         anchor: `atavism`,
                                         wiki: `Atavism`,
                                     },
-                                    `is a genetic trait that resurfaces after several generations. Though I didn't have autism myself, it still lurked in my genes, ready to spring on my children. Or else, on my grandchildren. Or on their children…`,
+                                    `is a genetic trait that resurfaces after several generations. Though I didn't have autism myself, it still lurked in my genes, ready to spring upon my children. Or else, upon my grandchildren. Or upon their children…`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -228,6 +228,8 @@ export default {
                         {
                             // NOTE: I added a hyphen in the lyrics as well.
                             anchor: `inner lotus-eater`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
                                     `In the`,
@@ -243,7 +245,7 @@ export default {
                                         anchor: `lotus-eaters`,
                                         wiki: `Lotus-eaters`,
                                     },
-                                    `were islanders who whiled away their days eating the narcotic fruit of the lotus. Odysseus could only look upon them with curious pity. Similarly, while Miriam would comment on how much I drank, she never made judgments. In hindsight, it's because she, like Odysseus, was keeping her distance.`,
+                                    `were islanders who whiled away their days eating the narcotic fruit of the lotus. Odysseus could only look upon them with curious pity. Similarly, though Miriam would comment on how much I drank, she never judged me for it. In hindsight, it's because she, like Odysseus, was keeping her distance.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -262,7 +264,7 @@ export default {
                         {
                             anchor: `doublespeaker`,
                             todo: true,
-                            problem: `Just sounds awkward in general. Maybe there's a better word than "discrepancy."`,
+                            problem: `Just sounds awkward in general. Maybe there's a better word than "discrepancy." Maybe talk about her knowing friends who knew?`,
                             card: {
                                 description: `While I did my best to adopt an innocent persona, my reputation preceded me by that point. Miriam knew about the drunken incidents. And I must have known that she knew. But I never volunteered an explanation for the discrepancy, and she never asked for one. I guess she just accepted it as part of the adventure.`,
                                 dotKeys: {
@@ -363,9 +365,9 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 todo: true,
-                problem: `Just doesn't flow too well.`,
+                problem: `Review one more time.`,
                 card: {
-                    description: `My original plan for this song was to use doublespeaker rhyme to contrast Miriam's inner thoughts with mine. But I kept forgetting which column of lyrics was whose, making me realize there wasn't any real distinction. We were of the same mind that the relationship would fail. One of us just had a better idea of when.`,
+                    description: `I chose doublespeaker rhyme for this song because my original plan was to contrast Miriam's inner thoughts with mine. But after I kept forgetting which column of lyrics belonged to whom, I realized there was no contrast to show. We were of the same mind that the relationship would fail. One of us just had a better idea of when.`,
                     dotKeys: {
                         [OBSERVATION]: true,
                         [SONGCRAFT]: true,
@@ -768,8 +770,7 @@ export default {
                         `it`,
                         {
                             anchor: `hums a typo`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: [
                                     `Like a typo, Miriam's involvement with me was a mistake she could easily correct. And like a "`,
