@@ -899,7 +899,7 @@ export default {
                             isItalic: true,
                             lyric: `Yearling's Bobtail`,
                         },
-                        `was rejected by every last indie label, I got so depressed that I went on a months-long bender. Eventually I kept a box of wine by my bed to calm my nerves in the middle of the night. One day upon skipping my morning beers, I sensed my bedroom walls conspiring to attack me. I learned that this was the onset of`,
+                        `was rejected by every last indie label, I got so depressed that I went on a months-long bender. Eventually I had to keep a box of wine by my bed to calm my nerves in the middle of the night. One day upon skipping my morning beers, I sensed my bedroom walls conspiring to attack me. I learned that this was the onset of`,
                         {
                             anchor: `delirium tremens`,
                             wiki: `Delirium_tremens`,

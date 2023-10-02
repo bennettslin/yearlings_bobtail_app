@@ -422,7 +422,7 @@ export default {
                             problem: `Review one more time.`,
                             card: {
                                 description: [
-                                    `Of course, not knowing I couldn't be the next Joyce is why I dared to try. And so the thought was planted in my head that I could do for rock music what he'd done for English literature.`,
+                                    `Of course, not knowing I couldn't be the next Joyce is why I dared to try. And so I began to think that I could do for rock music what Joyce had done for English literature.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -486,8 +486,7 @@ export default {
                         `who tried but failed to win her heart`,
                         {
                             anchor: `poised with brains`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: `Catherine undervalued the artistic strengths I'd always counted on to cover up my many weaknesses. Which meant if I were ever to be worth keeping, then I simply couldn't have any weaknesses.`,
                                 dotKeys: {

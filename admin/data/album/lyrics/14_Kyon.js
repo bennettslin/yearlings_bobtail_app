@@ -191,7 +191,7 @@ export default {
                             todo: true,
                             problem: `Last sentence runs on.`,
                             card: {
-                                description: `Of course, Sita herself was under no such illusion about my innocence. She knew full well that my desire to sleep with more women was rooted in the insecurity I felt as the less sexually experienced one in our relationship.`,
+                                description: `Of course, Sita herself had no such illusions about my innocence. She knew that my desire to sleep with other women was rooted in the insecurity I felt in being the less sexually experienced one in our relationship.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -248,9 +248,9 @@ export default {
                         {
                             anchor: `spurned at first`,
                             todo: true,
-                            problem: `Make sure last sentence is clear that I'm talking about the distant past.`,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `Given the seeming ease with which I could now attract other women, I grew further indignant about the endless hoops I'd been made to jump through to win Sita over.`,
+                                description: `Given the seeming ease with which I could now attract other women, I grew indignant about all the hoops I'd been made to jump through to finally win Sita over.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -300,7 +300,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `After Sita initially rejected me, we spent a year getting to know each other as friends, though I still tried to impress her without appearing as such. One day I solved her friend's Rubik's Cube, a skill I'd picked up during my first five-year plan. As her friend raved, I casually shrugged, while Sita sat and smiled. I'd become a puzzle for her to solve.`,
+                                description: `During that year when Sita and I got to know each other as friends, I still tried to impress her without appearing as such. One time, I solved her friend's Rubik's Cube— a skill I'd picked up during my first five-year plan. As her friend raved, I casually shrugged, while Sita sat and smiled. I'd become a puzzle for her to solve.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -315,8 +315,7 @@ export default {
                     lyric: [
                         {
                             anchor: `plunders past`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: `The sting I felt in having once been rejected by Sita was aggravated by the later revelation of her sexual past. And all the more so since it was precisely the painful lessons she drew from those past encounters that made her wary of my initial advances. Of course, the irony was lost on me that I'd end up providing the most painful lesson by far.`,
                                 dotKeys: {
@@ -405,7 +404,7 @@ export default {
                                         isEmphasis: true,
                                         lyric: `among`,
                                     },
-                                    `the herd. Resigned to my infidelity, Sita could only hope that her permissiveness might earn her a privileged place amid all the other women I desired.`,
+                                    `the herd. Resigned to my disloyalty, Sita could only hope that her permissiveness might earn her a privileged place amid all the other women I desired.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -569,7 +568,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `Since Sita couldn't climax through vaginal sex, I would go down on her afterward until she did. She mentioned this once as an example of my thoughtfulness, when I asked her what she saw in me that was worth holding onto. It seemed like proof that I had no truly redeeming qualities.`,
+                                description: `I would go down on Sita after vaginal sex, as this was the only way for her to climax. She mentioned this once as an example of my thoughtfulness, when I asked her what she saw in me that was worth holding onto. It seemed like proof that I didn't actually have any redeeming qualities.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -668,7 +667,7 @@ export default {
                         {
                             anchor: `thirty-three`,
                             todo: true,
-                            problem: `Third sentence maybe runs on too much.`,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
                                     `I often joked about killing myself at`,
@@ -676,7 +675,7 @@ export default {
                                         anchor: `thirty-three`,
                                         wiki: `Chronology_of_Jesus`,
                                     },
-                                    `, the age at which Jesus was crucified. I hated the idea of getting older, and clearly this is all the time one needs to make an impact on the world. So when Sita asked me to specify the age at which I might come back for her in accordance with our little pact, I answered thirty-three. The subtext was understood.`,
+                                    `, the age at which Jesus was crucified. I hated the idea of getting older, and clearly this is all the time one needs to make an impact on the world. So when Sita asked me to specify the age at which I might come back for her, in accordance with our little pact, I answered thirty-three. The subtext was understood.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -730,7 +729,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `I also hadn't settled the issue of whether an afterlife was even preferable. Though Sita had no ready answers, she taught me her Hindu beliefs, which supplemented what I was learning in my religious studies courses. I found comfort in Hinduism's sprawling pantheon of deities and avatars. It just seemed like the more details there are to learn, the more ways there are to get lost in the divine.`,
+                                description: `I also hadn't settled the issue of whether an afterlife was even preferable. Though Sita had no ready answers, she taught me her Hindu beliefs, which supplemented what I was studying in my religious studies courses. I found comfort in Hinduism's sprawling pantheon of deities and avatars. It just seemed like the more details there are to learn, the more ways there are to get lost in the divine.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -741,9 +740,9 @@ export default {
                         {
                             anchor: `sadness for what it was`,
                             todo: true,
-                            problem: `Doesn't flow well into last sentence.`,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `As friends, Sita and I got along well because we were both sad people. But in hindsight, my sadness was a product of circumstance, whether from being bullied in my youth, or out of loneliness as I got older. Sita, on the other hand, suffered from clinical depression. And as I learned to be proactive in dealing with my moods, I grew impatient with her for being incapable of doing the same.`,
+                                description: `As friends, Sita and I got along well because we were both sad people. But whereas my depression was a product of circumstance— whether from being bullied as a child, or out of loneliness as I got older— hers was clinical. So as I learned to be proactive in dealing with my moods, I grew impatient with her for being incapable of doing the same.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

@@ -145,7 +145,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `Luckily, this was familiar terrain for me, since I'd already spent my childhood learning to channel misery into various art projects. After all, remaking yourself into a desirable person is really just the ultimate art project.`,
+                                description: `Luckily, this was familiar terrain for me. After all, I'd spent my childhood channeling misery into various art projects, and remaking yourself into a desirable person is really just the ultimate art project.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -517,7 +517,7 @@ export default {
                             todo: true,
                             problem: `Last sentence still needs work.`,
                             card: {
-                                description: `Beyond the immediate failures of my first five-year plan, I'd clearly missed out on some personal development that others had naturally come by. And there was no guarantee that another five-year plan wouldn't blindside me in the same manner. I saw my future self as a stunted man-child, forever chasing ambitions both infantile and futile, like building castles out of sand.`,
+                                description: `Beyond the immediate failures of my first five-year plan, I'd clearly missed out on some personal development that others had naturally come by. And there was no guarantee that another five-year plan wouldn't blindside me in the same manner. I saw my future as a stunted man-child, forever chasing ambitions both infantile and futile, like building castles out of sand.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
