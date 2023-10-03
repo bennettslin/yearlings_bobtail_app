@@ -250,7 +250,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `Given the seeming ease with which I could now attract other women, I grew indignant about all the hoops I'd been made to jump through to finally win Sita over.`,
+                                description: `Given the seeming ease with which I could now attract other women, I grew further indignant about all the hoops I'd been made to jump through when first trying to win Sita over.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -297,8 +297,7 @@ export default {
                     lyric: [
                         {
                             anchor: `all the points`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: `During that year when Sita and I got to know each other as friends, I still tried to impress her without appearing as such. One time, I solved her friend's Rubik's Cube— a skill I'd picked up during my first five-year plan. As her friend raved, I casually shrugged, while Sita sat and smiled. I'd become a puzzle for her to solve.`,
                                 dotKeys: {
@@ -396,7 +395,7 @@ export default {
                         {
                             anchor: `keeper of his sheep herd`,
                             todo: true,
-                            problem: `Review one more time.`,
+                            problem: `Last sentence is too wordy.`,
                             card: {
                                 description: [
                                     `A keeper in the sense of being the one who tends to the herd, as well as the only one to keep from`,
@@ -525,7 +524,7 @@ export default {
                             problem: `Review one more time.`,
                             cards: [
                                 {
-                                    description: `During our on-and-off years I would habitually return to Sita, promising to mend my ways. Things would be peachy for a while— after which I would run off with yet another woman. I was like a reformed convict who might relapse at any time without warning, taking with him the shank he'd left on the windowsill to collect dust.`,
+                                    description: `During those on-and-off years, I would habitually return to Sita, with a promise to mend my ways. Things would be peachy for a while— and then I would run off with yet another woman. I was like a reformed convict who might relapse at any time without warning, taking with him the shank he'd left on the windowsill to collect dust.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [OBSERVATION]: true,
@@ -568,7 +567,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `I would go down on Sita after vaginal sex, as this was the only way for her to climax. She mentioned this once as an example of my thoughtfulness, when I asked her what she saw in me that was worth holding onto. It seemed like proof that I didn't actually have any redeeming qualities.`,
+                                description: `Sita was unable to climax through vaginal sex, so I would go down on her afterward. She mentioned this once as an example of my thoughtfulness, when I asked her what she saw in me that was worth holding onto. It seemed like proof that I didn't have any actual redeeming qualities.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -675,7 +674,7 @@ export default {
                                         anchor: `thirty-three`,
                                         wiki: `Chronology_of_Jesus`,
                                     },
-                                    `, the age at which Jesus was crucified. I hated the idea of getting older, and clearly this is all the time one needs to make an impact on the world. So when Sita asked me to specify the age at which I might come back for her, in accordance with our little pact, I answered thirty-three. The subtext was understood.`,
+                                    `, the age at which Jesus was crucified. I hated the idea of getting older, and clearly this is all the time you need to make an impact on the world. So when Sita asked me to specify the age at which I might come back for her, in accordance with our little pact, I answered thirty-three. The subtext was understood.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,

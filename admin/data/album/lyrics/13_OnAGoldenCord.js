@@ -203,8 +203,7 @@ export default {
                         `I'm sorry, but I`,
                         {
                             anchor: `went through your mail`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: `Confused over why I'd grown distant, Sita snooped around on my desktop computer earlier that day. In doing so, she stumbled upon some emails to friends— one in which I spoke of a recent crush on another woman, and another soliciting advice on how to break up gently.`,
                                 dotKeys: {
@@ -515,7 +514,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `Sita's friends weren't wrong to label me fake. My emotions didn't feel legitimate even to myself; I responded to them like an actor reacting to a cue. At the time, I blamed it on the lingering effects of Robitussin.`,
+                                description: `Sita's friends weren't wrong to label me fake. My emotions didn't feel legitimate even to myself; I responded to them the way an actor responds to a cue. At the time, I blamed it on the lingering effects of Robitussin.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -528,8 +527,7 @@ export default {
                         `And if`,
                         {
                             anchor: `night were peeled`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: [
                                     `Every now and then, I would have a Robitussin`,

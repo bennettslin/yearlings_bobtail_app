@@ -85,7 +85,7 @@ export default {
                             anchor: `four-track cassette recorder`,
                             wiki: `Portastudio`,
                         },
-                        `, and some nights we would go back to his place and twiddle with it. Owen would tap out these intricate yet impromptu rhythms on plateware he'd swiped from the cafeteria. I did my best to conjure his spirit here, minus the impromptu part, of course.`,
+                        `, and some nights we would go back to his place and twiddle with it. Using dishware he'd swiped from the cafeteria, Owen would arrange a makeshift drum set and then tap out these intricate rhythms. I tried my best to conjure his spirit here.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
