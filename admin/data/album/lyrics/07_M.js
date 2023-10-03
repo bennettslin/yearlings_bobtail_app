@@ -378,7 +378,12 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `Back when I was learning to play the banjo, I would strum the motions of`,
+                        `Back when I was learning to play the`,
+                        {
+                            anchor: `banjo`,
+                            wiki: `Banjo`,
+                        },
+                        `, I would strum the motions of`,
                         {
                             anchor: `Earl Scruggs`,
                             wiki: `Earl_Scruggs`,

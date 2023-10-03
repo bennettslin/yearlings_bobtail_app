@@ -24,8 +24,7 @@ export default {
     referenceDescription: `Darbuka in anacrusis`,
     playerStartTime: 967.569,
     mixStartTime: `0:01:03.51`,
-    todo: true,
-    problem: `Review one more time.`,
+    review: true,
     overview: `My first girlfriend in college was Catherine, a nice Catholic girl and high school valedictorian, who didn't take kindly to my lack of reading habit and broke up with me right before Ash Wednesday. So I ashed my own forehead that day and tried to bump into her, hoping that if she could picture me as a good Catholic boy, I might get another chance. It didn't work, but I did grow into a habitual reader, and I have Catherine to thank for that.`,
     lyricUnits: [
         {
@@ -422,7 +421,7 @@ export default {
                             problem: `Review one more time.`,
                             card: {
                                 description: [
-                                    `Of course, not knowing I couldn't be the next Joyce is why I dared to try. And so I began to think that I could do for rock music what Joyce had done for English literature.`,
+                                    `Of course, not knowing that I couldn't be the next Joyce is why I dared to try. And so I began to dream that I could do for rock music what Joyce had done for English literature.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -686,12 +685,12 @@ export default {
                                         isItalic: true,
                                         lyric: `Beautiful Losers`,
                                     },
-                                    `, so I assumed that going clear was also a reference to the legend that upon her death, her`,
+                                    `, so I assumed that going clear was also a reference to the legend that her`,
                                     {
                                         anchor: `smallpox`,
                                         wiki: `Smallpox`,
                                     },
-                                    `scars miraculously vanished.`,
+                                    `scars miraculously vanished upon her death.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -708,7 +707,7 @@ export default {
                         {
                             anchor: `safe Algonquin abode`,
                             todo: true,
-                            problem: `Last sentence runs on a bit.`,
+                            problem: `Last sentence runs on a bit. Maybe make it about Catherine not ever introducing me to her friends.`,
                             card: {
                                 description: [
                                     `Kateri Tekakwitha was born to a`,
@@ -726,7 +725,7 @@ export default {
                                         anchor: `Algonquin Round Table`,
                                         wiki: `Algonquin_Round_Table`,
                                     },
-                                    `, a social circle of New York City writers known for their clever wit and wordplay. And so here I joke that Catherine must have feared I would take her away from her smart circle of friends, being too dimwitted as I was to ever be allowed to meet them.`,
+                                    `, a social circle of New York City writers known for their wit and wordplay. And so here I joke that Catherine must have feared I would take her away from her smart circle of friends, being too dimwitted as I was to ever be allowed to meet them.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -883,16 +882,16 @@ export default {
                         {
                             anchor: `cursed to be born`,
                             todo: true,
-                            problem: `Can the same thing be said with slightly fewer words? Are "should," "just," and "ends up" really needed?`,
+                            problem: `Review one more time.`,
                             cards: [
                                 {
                                     description: [
-                                        `It always confused me why the Catholic Church should extend its`,
+                                        `I never understood why the Catholic Church extends its`,
                                         {
                                             anchor: `pro-life stance`,
                                             wiki: `Catholic_Church_and_abortion`,
                                         },
-                                        `to the unborn of other faiths. After all, this just ends up trading the certainty of an`,
+                                        `to the unborn of other faiths. After all, this trades away the certainty of an`,
                                         {
                                             anchor: `aborted fetus`,
                                             wiki: `Abortion`,
@@ -951,7 +950,7 @@ export default {
                                         anchor: `tragedy`,
                                         wiki: `Tragedy`,
                                     },
-                                    `as two sides of the same coin. After all, any misfortune can be turned into a song; writing a song calls for taking the broader view; and viewed broadly enough, every misfortune reveals a comic underbelly. So I was always happier with a negative outcome than with none at all. But this made everything I do feel like a stage act.`,
+                                    `as two sides of the same coin. After all, any tragic situation can be turned into a song; writing a song calls for taking the broader view; and all things viewed broadly will reveal a comic underbelly. So I was always preferred a negative outcome over none at all. But then this made everything I do feel like a stage act.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -966,20 +965,15 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 todo: true,
-                problem: `First sentence can be phrased better.`,
+                problem: `"Them" in first sentence is unclear.`,
                 card: {
                     description: [
-                        `Originally, this three-part counterpoint for mandolins and`,
-                        {
-                            anchor: `banjo`,
-                            wiki: `Banjo`,
-                        },
-                        `kept drowning out the vocals because they shared the same register. I solved the problem by`,
+                        `I hadn't formally studied composition by this point, so I didn't realize that scoring this three-part counterpoint in the same register as the vocals would crowd them out. I solved the problem by`,
                         {
                             anchor: `pitch shifting`,
                             wiki: `Pitch_shift`,
                         },
-                        `the instruments up an octave. This also gave the sound a metallic sheen, which suits the ambience of a rain-soaked evening.`,
+                        `the instruments up an octave. This turned out to give the sound a ghostly sheen, which fits the ambience of a rain-soaked evening.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
