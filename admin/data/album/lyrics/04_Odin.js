@@ -114,7 +114,7 @@ export default {
                                             anchor: `his wife`,
                                             wiki: `Lot's_wife`,
                                         },
-                                        `looked back, she was turned into a pillar of salt. This story can be interpreted as a cautionary tale that the faithful should not cohabit with the fallen.`,
+                                        `looked back, she was turned into a pillar of salt. This story can be interpreted as a cautionary tale for the faithful not to cohabit with the fallen.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -133,7 +133,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `The "asleep" voice in the doublespeaker set narrates a dream that confusedly melds the familiar setting of Los Angeles with the foreign sights of Taiwan. The dream begins with me crawling out from the dusty space beneath my bed at home. Absorbed in my drawings, I've been down there well into nighttime.`,
+                                description: `The "asleep" voice in the doublespeaker set narrates a dream that melds the familiar setting of Los Angeles with the foreign sights of Taiwan. Having been absorbed in my drawings well into nighttime, I crawl out from the dusty space beneath my bed at home.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -216,10 +216,10 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 todo: true,
-                problem: `First sentence isn't quite right.`,
+                problem: `Review one more time.`,
                 card: {
                     description: [
-                        `For this song, I wanted to capture the disorienting cycle between days spent living among the foreign and nights spent dreaming of the familiar. So I used a literary technique I invented called doublespeaker rhyme, in which two sets of lyrics that rhyme syllable for syllable are panned hard into opposite speakers in the recording. It's the audio version of a cinematic`,
+                        `For this song, I wanted to capture the disorienting cycle of days spent among the foreign and nights dreaming of the familiar. So I used a literary technique of my invention called doublespeaker rhyme, in which two sets of lyrics that rhyme syllable for syllable are panned hard into opposite speakers in the recording. It's the audio version of a cinematic`,
                         {
                             anchor: `split screen`,
                             wiki: `Split_screen_(video_production)`,
@@ -250,7 +250,7 @@ export default {
                         {
                             anchor: `crayons least whittled`,
                             todo: true,
-                            problem: `Too many sentences of the same length. Two "trip"s in a row.`,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
                                     `When we landed in Taiwan, my aunt presented me with a box of`,
@@ -258,7 +258,7 @@ export default {
                                         anchor: `pastels`,
                                         wiki: `Pastel`,
                                     },
-                                    `. They were more powdery than crayons and thus ran out quickly. By the end of our trip, I had to make do with the least used colors. Which is a fitting metaphor for my overall state of discomfort throughout the trip, since I was forced to rely on my least used skills, like speaking Taiwanese.`,
+                                    `. They were more powdery than crayons and thus ran out quickly, so I eventually had to make do with the least used colors. I thought this was a fitting metaphor for my overall state of discomfort there, since I was forced to rely on my least used skills, like speaking Taiwanese.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -399,7 +399,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `My grandmother's house at night was pitch black. When I woke to use the bathroom, I had to tiptoe to the door, guided by only a sliver of moonlight peeking in from underneath.`,
+                                description: `At night in my grandmother's house, the room I slept in was pitch black. So whenever I woke to use the bathroom, I would tiptoe to the door, guided by a sliver of moonlight peeking in from underneath.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -586,8 +586,7 @@ export default {
                         `As you plummet down from`,
                         {
                             anchor: `couplets past`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: [
                                     `In poetry, a`,
@@ -1162,7 +1161,7 @@ export default {
                         {
                             anchor: `jarred sibyl`,
                             todo: true,
-                            problem: `Last sentence seems too wordy, but alternatives also seem weird.`,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
                                     `The`,
@@ -1183,7 +1182,7 @@ export default {
                                             wiki: `The_Waste_Land`,
                                         },
                                     },
-                                    `begins with an epigraph in which the Sibyl, hanging in a jar, is asked what she wants most. She replies that what she wants most is to die.`,
+                                    `begins with an epigraph in which the Sibyl, hanging in a jar, is asked what she wants. She replies that she wants to die.`,
                                 ],
                             },
                         },
@@ -1876,7 +1875,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 todo: true,
-                problem: `Too many short sentences of the same length?`,
+                problem: `Be direct about alcoholism.`,
                 card: {
                     description: [
                         `As it became clear that`,
@@ -1889,7 +1888,7 @@ export default {
                             anchor: `New York City`,
                             wiki: `New_York_City`,
                         },
-                        `to regain my bearings. There, I reconnected with Sasha, and we started dating. She put me on the conversion path, while I volunteered to study Hebrew. It was exactly the all-consuming self-reinvention I was hoping for. But we didn't last. Though I wanted to mend my old ways, my behavior lagged behind my intentions.`,
+                        `to regain my bearings. There, Sasha and I reconnected, and we started dating. She put me on the conversion path, while I volunteered to study Hebrew. But… we didn't last. Though I'd really hoped to reinvent myself, my behavior lagged behind my intentions.`,
                     ],
                     dotKeys: {
                         [AFTERWORD]: true,
