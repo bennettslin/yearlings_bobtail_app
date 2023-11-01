@@ -671,6 +671,8 @@ export default {
                         `what this`,
                         {
                             anchor: `understudy sought`,
+                            todo: true,
+                            problem: `Last sentence phrasing is awkward.`,
                             card: {
                                 description: [
                                     `Dating while low status is like being an`,

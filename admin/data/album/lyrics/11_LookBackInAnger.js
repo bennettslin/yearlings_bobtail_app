@@ -42,18 +42,18 @@ export default {
                 card: {
                     description: [
                         {
-                            anchor: `John Osborne`,
-                            wiki: `John_Osborne`,
-                        },
-                        `'s`,
-                        {
                             isItalic: true,
                             lyric: {
                                 anchor: `Look Back in Anger`,
                                 wiki: `Look_Back_in_Anger`,
                             },
                         },
-                        `, a theatrical play set in postwar England, centers on a disgruntled young man of the working class who hurls rage at his long-suffering wife. It hit unnervingly close to home when I read it.`,
+                        `is a theatrical play by`,
+                        {
+                            anchor: `John Osborne`,
+                            wiki: `John_Osborne`,
+                        },
+                        `. Set in postwar England, it centers on a disgruntled young working-class man who hurls rage at his long-suffering wife. It hit unnervingly close to home when I read it.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -325,8 +325,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
-                problem: `Review one more time.`,
+                review: true,
                 card: {
                     description: [
                         `When I asked Owen to recommend some good lyricists, he pointed me to`,
@@ -339,7 +338,7 @@ export default {
                             anchor: `hip hop`,
                             wiki: `Hip_hop`,
                         },
-                        `at that point, as I assumed its approach to songwriting was too far removed from my own to offer much wisdom. I've since corrected this oversight, but back when
+                        `at that point, thinking its approach to songwriting was too far removed from my own to offer much wisdom. I've since corrected this oversight, but back when
                         `,
                         {
                             isItalic: true,
@@ -348,7 +347,7 @@ export default {
                                 wiki: `Illmatic`,
                             },
                         },
-                        `was my lone point of reference, it gave me great pointers on the flexibility of`,
+                        `was my lone point of reference for rap music, it gave me great pointers on the flexibility of`,
                         {
                             anchor: `internal rhyme`,
                             wiki: `Internal_rhyme`,
@@ -372,8 +371,7 @@ export default {
                     lyric: [
                         {
                             anchor: `Feeble feeder fish`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: [
                                     `The pecking order in a tank of`,
@@ -381,7 +379,7 @@ export default {
                                         anchor: `feeder fish`,
                                         wiki: `Feeder_fish`,
                                     },
-                                    `is deceptive: Since the least fit are also least likely to be sold as prey, they actually live the longest. In retrospect, high school worked the same way. All the time I'd spent working on art projects left me unfit to defend my place in the social hierarchy. But the skills I developed as a result were now keeping me from being eaten alive in the real world.`,
+                                    `is deceptive: Since the least fit are also least likely to be sold as prey, they end up living the longest. In retrospect, high school worked the same way. All the time I'd spent working on art projects left me unfit to defend my place in the social hierarchy. But the skills I'd developed as a result were now keeping me from being eaten alive in the real world.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
