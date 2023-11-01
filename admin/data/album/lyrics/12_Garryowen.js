@@ -337,10 +337,9 @@ export default {
                         `, or so`,
                         {
                             anchor: `she's claimed`,
-                            todo: true,
-                            problem: `Make sure wording in second sentence is clear.`,
+                            review: true,
                             card: {
-                                description: `Throughout our budding friendship, Sita had neglected to mention her sexual intimacy with past partners, even if it was always shy of intercourse. When I found out, she tried to console me by pointing out that she never went all the way because she didn't love them. She loved me, which meant I'd won. But it still stung like crazy to find out so late, and this deepened my resentment.`,
+                                description: `Throughout our budding friendship, Sita had neglected to mention her sexual intimacy with past partners, even if it was always shy of intercourse. When I found out, she tried to console me by pointing out that she never went all the way with them because she didn't love them. She loved me, which meant I'd won. But it still stung like crazy to find out so late, and this deepened my resentment.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -366,9 +365,9 @@ export default {
                         {
                             anchor: `buys your grief`,
                             todo: true,
-                            problem: `Too many "my"s in a row!`,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `My worlds collided when I smashed a random bike in a fit of drunken rage one night. The bike turned out to belong to a scene kid who liked my music from my earliest days of playing out. He'd related so strongly to my songs about unfulfilled hopes. I was disgusted with myself for having disappointed him.`,
+                                description: `My worlds collided when I smashed a random bike one night in a drunken fit. As it turns out, the bike belonged to a scene kid who'd liked the Yearlings since our early days. He'd related so much to my songs about unfulfilled hopes. I was disgusted with myself for having disappointed him.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -503,15 +502,15 @@ export default {
                         {
                             anchor: `scapegirl`,
                             todo: true,
-                            problem: `First sentence just seems like it could be worded a little better.`,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
-                                    `In Biblical times, a community would seek absolution by symbolically placing its`,
+                                    `In Biblical times, a community would absolve its sins by ritually placing them`,
                                     {
-                                        anchor: `sins on a goat`,
+                                        anchor: `on a goat`,
                                         wiki: `Scapegoat`,
                                     },
-                                    `that was then cast into the desert. Banishing Sita from my life would serve a similar purpose. Without her around to cast judgment, I would no longer need to be absolved of my hypocrisy.`,
+                                    `that was then cast into the desert. Banishing Sita from my life was meant to serve the same purpose: Without her around to cast judgment, I no longer needed to atone for my hypocrisy.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -732,7 +731,7 @@ export default {
                         {
                             anchor: `self-abuser`,
                             todo: true,
-                            problem: `Does it flow right?`,
+                            problem: `Review one more time.`,
                             cards: [
                                 {
                                     description: [
@@ -741,7 +740,7 @@ export default {
                                             anchor: `cutting myself`,
                                             wiki: `Self-harm`,
                                         },
-                                        `to deal with depression. Early in our friendship, Sita took interest in my scars, which I interpreted to be a morbid fascination with my troubled past. I later came to see that she was just sympathizing with a fellow depressive, one whose coping mechanisms were curiously different from her own.`,
+                                        `to deal with depression. Early in our friendship, Sita took interest in my scars, which I interpreted as a morbid fascination with my troubled past. But I later came to see that she was just sympathizing with a fellow depressive, one whose coping mechanisms were curiously different from her own.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,

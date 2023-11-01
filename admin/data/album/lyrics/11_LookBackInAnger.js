@@ -479,8 +479,7 @@ export default {
                         `With hair of`,
                         {
                             anchor: `maraschino red`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: [
                                     `Having sworn to be ready when the next Mara comes along, I notice that the latecomer's hair is colored like a`,
