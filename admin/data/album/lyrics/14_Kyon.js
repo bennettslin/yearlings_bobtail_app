@@ -191,7 +191,7 @@ export default {
                             todo: true,
                             problem: `Last sentence runs on.`,
                             card: {
-                                description: `Of course, Sita herself had no such illusions about my innocence. She knew that my desire to sleep with other women was rooted in the insecurity I felt in being the less sexually experienced one in our relationship.`,
+                                description: `Of course, Sita herself had no such illusions about my innocence. She knew my desire to sleep with other women was rooted in the insecurity I felt as the less sexually experienced one in our relationship.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -247,8 +247,7 @@ export default {
                     lyric: [
                         {
                             anchor: `spurned at first`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: `Given the seeming ease with which I could now attract other women, I grew further indignant about all the hoops I'd been made to jump through when first trying to win Sita over.`,
                                 dotKeys: {
@@ -395,15 +394,15 @@ export default {
                         {
                             anchor: `keeper of his sheep herd`,
                             todo: true,
-                            problem: `Last sentence is too wordy.`,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
-                                    `A keeper in the sense of being the one who tends to the herd, as well as the only one to keep from`,
+                                    `A keeper in the sense of being the one who tends to the herd, as well as the only one worth keeping from`,
                                     {
                                         isEmphasis: true,
                                         lyric: `among`,
                                     },
-                                    `the herd. Resigned to my disloyalty, Sita could only hope that her permissiveness might earn her a privileged place amid all the other women I desired.`,
+                                    `the herd. Resigned to my disloyalty, Sita could only hope for her permissiveness to set her apart from all the other women I desired.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -564,8 +563,7 @@ export default {
                         `But other nights you'd`,
                         {
                             anchor: `lap my wound clean`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: `Sita was unable to climax through vaginal sex, so I would go down on her afterward. She mentioned this once as an example of my thoughtfulness, when I asked her what she saw in me that was worth holding onto. It seemed like proof that I didn't have any actual redeeming qualities.`,
                                 dotKeys: {
@@ -674,7 +672,7 @@ export default {
                                         anchor: `thirty-three`,
                                         wiki: `Chronology_of_Jesus`,
                                     },
-                                    `, the age at which Jesus was crucified. I hated the idea of getting older, and clearly this is all the time you need to make an impact on the world. So when Sita asked me to specify the age at which I might come back for her, in accordance with our little pact, I answered thirty-three. The subtext was understood.`,
+                                    `, the age at which Jesus was crucified. I hated the idea of getting older, and clearly this is all the time you need to make an impact on the world. So when Sita asked me to specify the age at which I would come back for her in accordance with our little pact, I answered thirty-three. The subtext was understood.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -741,7 +739,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `As friends, Sita and I got along well because we were both sad people. But while my depression was a product of circumstance— whether from being bullied as a child, or out of loneliness as I got older— hers was clinical. So as I learned to be proactive in dealing with my moods, I grew impatient with her for being incapable of doing the same.`,
+                                description: `As friends, Sita and I got along because we were both sad people. But while my depression was simply rooted in circumstance— whether from being bullied as a child, or out of loneliness as I got older— hers was clinical. And as I learned to be proactive in dealing with my moods, I grew impatient with her for being incapable of doing the same.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

@@ -1512,7 +1512,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 todo: true,
-                problem: `Review one more time. Should a cat have a "who" or "that" pronoun?`,
+                problem: `Should a cat have a "who" or "that" pronoun?`,
                 card: {
                     description: [
                         `The French expression`,
