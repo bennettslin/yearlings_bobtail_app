@@ -33,7 +33,7 @@ export default getFormattedSlideMetadata([
                 paragraph: `The Pareto principle tells us that 20% of the causes account for 80% of the effects. For example, 20% of the people own 80% of the wealth. This happens because society is lopsided. Wealth comes from luck and privilege, which are distributed unevenly across the population.`,
             },
             {
-                paragraph: `As individuals, we each have our unique strengths and weaknesses, which makes us lopsided as well. Let's say you're working on a project. Thanks to your strengths, just 20% of your effort gets you 80% of the way there. It's practically done! But no… the remaining 20% of the work is now where you're weakest. And that will take another 80% of your effort.`,
+                paragraph: `As individuals, we each have our unique strengths and weaknesses, which make us lopsided as well. Let's say you're working on a project. Thanks to your strengths, just 20% of your effort gets you 80% of the way there. It's practically done! But no… the remaining 20% of the work is now where you're weakest. And that will take another 80% of your effort.`,
             },
         ],
         footnote: [
@@ -71,7 +71,7 @@ export default getFormattedSlideMetadata([
         title: `The 5x rule of interdependence`,
         body: [
             {
-                paragraph: `Here's the value proposition. Since an interdependent band doesn't need to spend any effort on their area of weakness, they can redirect it back onto their area of strength. So instead of a mere 20% of their effort, the artistic side of every project now gets the full 100%— a fivefold increase!`,
+                paragraph: `Here's the value proposition. Since an interdependent band doesn't need to spend any effort on their area of weakness, they can redirect it back into their area of strength. So instead of a mere 20% of their effort, the artistic side of every project now gets the full 100%— a fivefold increase!`,
             },
             {
                 paragraph: `This fivefold increase in effort would make a band five times more talented, and improve their art five times over. Let's call this the 5x rule of interdependence. Based on this rule, we can expect the best interdependent bands to be five times better than the best indie artists.`,
