@@ -399,7 +399,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `At night in my grandmother's house, the room I slept in was pitch black. So whenever I woke to use the bathroom, I would tiptoe to the door, guided by a sliver of moonlight peeking in from underneath.`,
+                                description: `My grandmother's house at night was pitch black. So whenever I woke to use the bathroom, I had to tiptoe to the door, guided only by a sliver of moonlight peeking in from underneath.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -1160,8 +1160,7 @@ export default {
                         `you see the`,
                         {
                             anchor: `jarred sibyl`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: [
                                     `The`,

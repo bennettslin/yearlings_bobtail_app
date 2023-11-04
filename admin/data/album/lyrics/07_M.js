@@ -142,10 +142,9 @@ export default {
                         `Bit my`,
                         {
                             anchor: `sadness with patience`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
-                                description: `Luckily, this was familiar terrain for me. After all, I'd spent my childhood channeling misery into various art projects, and remaking yourself into a desirable person is really just the ultimate art project.`,
+                                description: `Luckily, this was familiar terrain for me. After all, I'd spent my childhood channeling misery into various art projects. And remaking yourself into a desirable person is really just the ultimate art project.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

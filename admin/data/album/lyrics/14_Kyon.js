@@ -741,7 +741,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `As friends, Sita and I got along well because we were both sad people. But whereas my depression was a product of circumstance— whether from being bullied as a child, or out of loneliness as I got older— hers was clinical. So as I learned to be proactive in dealing with my moods, I grew impatient with her for being incapable of doing the same.`,
+                                description: `As friends, Sita and I got along well because we were both sad people. But while my depression was a product of circumstance— whether from being bullied as a child, or out of loneliness as I got older— hers was clinical. So as I learned to be proactive in dealing with my moods, I grew impatient with her for being incapable of doing the same.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

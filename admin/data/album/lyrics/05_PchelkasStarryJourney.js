@@ -766,7 +766,7 @@ export default {
                 todo: true,
                 problem: `Review one more time.`,
                 card: {
-                    description: `To make the sound of rocket circuitry heard here, I banged an electric guitar against a carpet floor while bending its whammy bar. It took countless tries, and I had to retune each time because the guitar would go out of tune.`,
+                    description: `To make the sound of rocket circuitry heard here, I banged an electric guitar against a carpet floor while bending its whammy bar. It took countless tries, and I had to retune each time because the guitar kept going flat.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
