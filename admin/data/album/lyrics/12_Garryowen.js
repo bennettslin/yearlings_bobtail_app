@@ -103,7 +103,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `As I withdrew from the relationship, Sita would reach out by groveling. And each time I would rush to comfort her, stung by my conscience. But as my patience wore thin, I would lash out in passive-aggressive ways— whereupon she would grovel even further. It became all we knew of how to speak for ourselves.`,
+                                description: `As I withdrew from the relationship, Sita would reach out by groveling. And each time I would rush to comfort her, stung by my conscience. But as time went on, my patience wore thin, causing me to lash out in passive-aggressive ways— which then compelled her to grovel even further. It became all we knew of how to speak for ourselves.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -364,8 +364,7 @@ export default {
                     lyric: [
                         {
                             anchor: `buys your grief`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: `My worlds collided when I smashed a random bike one night in a drunken fit. As it turns out, the bike belonged to a scene kid who'd liked the Yearlings since our early days. He'd related so much to my songs about unfulfilled hopes. I was disgusted with myself for having disappointed him.`,
                                 dotKeys: {
@@ -410,7 +409,7 @@ export default {
                         {
                             anchor: `Slammed in the well`,
                             todo: true,
-                            problem: `Review one more time.`,
+                            problem: `Make point that this isn't sustainable as a source of spiritual renewal. It becomes a cliche after the first time.`,
                             card: {
                                 description: `Of course, using alcohol as a spiritual cleanser isn't really sustainable, since it requires you to vomit into a toilet and see your miserable reflection in the water staring back at you.`,
                                 dotKeys: {
@@ -510,7 +509,7 @@ export default {
                                         anchor: `on a goat`,
                                         wiki: `Scapegoat`,
                                     },
-                                    `that was then cast into the desert. Banishing Sita from my life was meant to serve the same purpose: Without her around to cast judgment, I no longer needed to atone for my hypocrisy.`,
+                                    `that was then cast into the desert. Banishing Sita from my life was meant to serve the same purpose: Without her around to cast judgment, there would be no need to atone for my hypocrisy.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -600,9 +599,9 @@ export default {
                         {
                             anchor: `have her for your pet`,
                             todo: true,
-                            problem: `First sentence is too wordy. It doesn't need to include the pet part. Just give the whole thing more thought.`,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `Sita's manner of prostrating herself like a pet forced me to wield an absolute power that I never asked for, which exasperated me to no end. But its endearing nature was also guaranteed to make me love her, and I did. So I never doubted that the impending breakup would be wrenching for both of us.`,
+                                description: `Sita's manner of prostrating herself exasperated me to no end, as it forced me to wield power that I never asked for. But its endearing nature was also guaranteed to make me love her, and I did. So I never doubted that the impending breakup would be wrenching for both of us.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -659,7 +658,7 @@ export default {
                             problem: `Review one more time.`,
                             cards: [
                                 {
-                                    description: `I knew I had to stay relatively sober to start afresh with someone new. But short of being drunk, I could never muster the courage to break up with Sita. So I drank to oblivion each night, hoping I might wake one morning to discover that, by some miracle, I was both newly single and repulsed by the taste of alcohol.`,
+                                    description: `I knew I had to stay relatively sober to start afresh with someone new. But short of being drunk, I could never muster the courage to break up with Sita. So I drank to oblivion each night, hoping to wake one morning and discover that, by some miracle, I was both newly single and repulsed by the taste of alcohol.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -730,8 +729,7 @@ export default {
                         `They told her, "Never help a`,
                         {
                             anchor: `self-abuser`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             cards: [
                                 {
                                     description: [
@@ -740,7 +738,7 @@ export default {
                                             anchor: `cutting myself`,
                                             wiki: `Self-harm`,
                                         },
-                                        `to deal with depression. Early in our friendship, Sita took interest in my scars, which I interpreted as a morbid fascination with my troubled past. But I later came to see that she was just sympathizing with a fellow depressive, one whose coping mechanisms were curiously different from her own.`,
+                                        `to deal with depression. Early in our friendship, Sita took interest in my scars, which I interpreted to be a morbid fascination with my troubled past. But I later came to see that she was just sympathizing with a fellow depressive, one whose coping mechanisms were curiously different from her own.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -780,7 +778,7 @@ export default {
                                 todo: true,
                                 problem: `Review one more time.`,
                                 card: {
-                                    description: `But if I was capable of hurting myself, then I also wouldn't have qualms about hurting anyone close to me, who now knew the worst side of me as only I once did.`,
+                                    description: `But if I was capable of hurting myself, then I also wouldn't have any qualms about hurting those close to me, who now knew the worst side of me as only I once did.`,
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                     },
