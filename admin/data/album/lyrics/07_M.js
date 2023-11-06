@@ -26,7 +26,7 @@ export default {
     playerStartTime: 1131.214,
     mixStartTime: `0:02:12.00`,
     todo: true,
-    problem: `Too many sentences of the same length?`,
+    problem: `Review one more time.`,
     overview: `After the breakup with Catherine, I vowed to spend the next five years shaping myself into the ideal romantic prospect. I began to attend local shows during this time, and by the fifth year, I'd cobbled together my own band, the Yearlings. There was a fellow scenester named Mara whom I noticed from afar, and I soon grew infatuated. But Mara ended up going out with my drummer Jacob, which made band practice awkward.`,
     lyricUnits: [
         {
@@ -204,7 +204,7 @@ export default {
                         {
                             anchor: `mystery mensch`,
                             todo: true,
-                            problem: `The benefit of having a popular older sister in high school is that I knew…`,
+                            problem: `Having an older sister who was popular, I knew of a few girls in high school…`,
                             card: {
                                 description: `I'd managed to attract a smattering of women up to this point in my life, which allowed me to see a pattern: All of them had been taken in by my appearance as an artsy loner, only to be turned off after finding that nothing of greater substance lay beneath. So my mission was to turn this mistaken assumption into a correct one.`,
                                 dotKeys: {
@@ -332,10 +332,10 @@ export default {
                         {
                             anchor: `wishes on a friend`,
                             todo: true,
-                            problem: `Needs to make it more clear that when Mara was finally in the audience, I was thrilled.`,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
-                                    `Toward the end of my five-year plan, the Yearlings were regularly playing local shows. I was thrilled to spot Mara in the audience. But it was Jacob who caught her eye. I felt like the`,
+                                    `Toward the end of my five-year plan, the Yearlings were regularly playing local shows. I was thrilled the day Mara showed up in the audience— but it was Jacob who caught her eye. I felt like the`,
                                     {
                                         anchor: `bottled genie`,
                                         wiki: `Jinn`,
@@ -519,9 +519,9 @@ export default {
                         {
                             anchor: `sand castle built by low tide`,
                             todo: true,
-                            problem: `Last sentence still needs work.`,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `Beyond the immediate failures of my first five-year plan, I'd clearly missed out on some personal development that others had naturally come by. And there was no guarantee that another five-year plan wouldn't blindside me in the same manner. I saw my future as a stunted man-child, forever chasing ambitions both infantile and futile, like building castles out of sand.`,
+                                description: `Beyond the immediate failures of my first five-year plan, I'd clearly missed out on some personal development that others had naturally come by. And there was no guarantee that another five-year plan wouldn't blindside me in the same manner. I saw my future as a stunted man-child, forever chasing ambitions both infantile and futile— like building castles out of sand.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
