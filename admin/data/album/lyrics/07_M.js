@@ -27,7 +27,7 @@ export default {
     mixStartTime: `0:02:12.00`,
     todo: true,
     problem: `Review one more time.`,
-    overview: `After the breakup with Catherine, I vowed to spend the next five years shaping myself into the ideal romantic prospect. I began to attend local shows during this time, and by the fifth year, I'd cobbled together my own band, the Yearlings. There was a fellow scenester named Mara whom I noticed from afar, and I soon grew infatuated. But Mara ended up going out with my drummer Jacob, which made band practice awkward.`,
+    overview: `After the breakup with Catherine, I vowed to spend the next five years shaping myself into the ideal romantic prospect, which included getting involved in the local scene. So I cobbled together my own band, the Yearlings, and by the fifth year, we were playing house parties and small venues. I soon grew infatuated with a fellow scenester named Mara, whom I noticed from afar. But Mara ended up going out with my drummer Jacob, which made band practice awkward.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -335,7 +335,7 @@ export default {
                             problem: `Review one more time.`,
                             card: {
                                 description: [
-                                    `Toward the end of my five-year plan, the Yearlings were regularly playing local shows. I was thrilled the day Mara showed up in the audience— but it was Jacob who caught her eye. I felt like the`,
+                                    `Toward the end of my five-year plan, the Yearlings began playing local shows. I was thrilled the day Mara showed up in the audience— but it was Jacob who caught her eye. I felt like the`,
                                     {
                                         anchor: `bottled genie`,
                                         wiki: `Jinn`,
@@ -360,7 +360,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `So Jacob got together with Mara without any effort, while romance for me felt no less elusive than ever. I thus came to realize that my five-year plan was a washout.`,
+                                description: `So Jacob got together with Mara without any effort, while romance for me felt no less elusive than ever. I thus had to admit that my five-year plan was a washout.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -518,8 +518,7 @@ export default {
                         `to a`,
                         {
                             anchor: `sand castle built by low tide`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: `Beyond the immediate failures of my first five-year plan, I'd clearly missed out on some personal development that others had naturally come by. And there was no guarantee that another five-year plan wouldn't blindside me in the same manner. I saw my future as a stunted man-child, forever chasing ambitions both infantile and futile— like building castles out of sand.`,
                                 dotKeys: {
@@ -882,8 +881,10 @@ export default {
                         `But then I saw the`,
                         {
                             anchor: `world's a naked baby`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `But at some point, I realized that a social scene isn't any different from the world at large. Nothing is hidden from view, and any situation can be understood by observing its various interactions, no less than a holistic picture of the world can be pieced together by reading books on various subject matters.`,
+                                description: `But at some point, I realized that a social scene isn't any different from the world at large, in that nothing is hidden from view. Every situation can be understood by observing people's actions and reading their intentions, much like a holistic picture of the world can be pieced together by reading books on all the important subject matters.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -909,7 +910,7 @@ export default {
                             problem: `Review one more time.`,
                             card: {
 
-                                description: `Or, to have a "Mara, you'll" laugh. In other words, everyone just does what they do, and the world is no more than the sum total of that. There's no hidden agenda; no one has it in for me. And so I can only react with good humor if the world gets in the way of my best laid plans.`,
+                                description: `Or, to have a "Mara, you'll" laugh. In other words, everyone does what you would expect them to do, given what you can expect them to want— and a social scene is simply the sum total of all that. No one gets in the way of your best laid plans just to spite you. And so you can only react with good humor when it happens.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [PUN]: true,
@@ -945,7 +946,7 @@ export default {
                             todo: true,
                             problem: `Last sentence runs on.`,
                             card: {
-                                description: `In short, the world is as guileless and unwitting as a newborn infant. Which means if a woman's list of ideal traits in a man includes what kind of father he'll be to her child, then she's likely to judge him by how he treats the world at large.`,
+                                description: `In short, the world is as innocent and unwitting as a newborn infant. So if a woman's list of ideal traits in a man includes what kind of father he'll be to her child, then she's likely to judge him by how he treats the world at large.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -982,7 +983,7 @@ export default {
                             todo: true,
                             problem: `Make sure this is really saying what I want it to say.`,
                             card: {
-                                description: `It was no mystery why the situation with Mara transpired as it had. I'd simply misread it, and that was my fault. I found this thought empowering, because it meant that the Maras of the world were still attainable. It was just on me to understand what they wanted. And then I could build myself up to offer exactly that.`,
+                                description: `It was no mystery why the situation with Mara transpired as it had. I'd simply misread it, and that was my fault. I found this thought empowering, because it meant the Maras of the world were still attainable. It was just on me to better understand what they wanted— and then I could build myself up to be exactly that.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
