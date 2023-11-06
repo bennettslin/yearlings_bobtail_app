@@ -75,7 +75,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 todo: true,
-                problem: `Can't think of a better word than "heist." Review if this is indeed the case.`,
+                problem: `Can't think of a better word than "heist." Review if this is indeed the case. Probably words are too complex as well.`,
                 card: {
                     description: [
                         `In the past, a disabled child was sometimes thought to be a troll in disguise known as a`,
@@ -1198,7 +1198,7 @@ export default {
                                         anchor: `lazy eye`,
                                         wiki: `Amblyopia`,
                                     },
-                                    `. Since I lacked depth perception, it wasn't a struggle for me to recreate on paper what I saw in real life. Impressed by my drawing skills, my mother insisted that I was destined to be a great artist. And so the idea was planted in my head that I might create a masterpiece someday, perhaps along the lines of the`,
+                                    `. Since I lacked depth perception, it wasn't a struggle for me to recreate on paper what I saw in real life. Impressed by my drawing skills, my mother insisted that I'd become a great artist. And so the idea was planted in my head that I might create a masterpiece someday, perhaps along the lines of the`,
                                     {
                                         anchor: `Tintin`,
                                         wiki: `The_Adventures_of_Tintin`,
