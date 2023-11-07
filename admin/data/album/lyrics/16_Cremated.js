@@ -262,9 +262,9 @@ export default {
                         {
                             anchor: `doublespeaker`,
                             todo: true,
-                            problem: `Just sounds awkward in general. Maybe there's a better word than "discrepancy." Maybe talk about her knowing friends who knew?`,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `While I tried my best to adopt an innocent persona, my reputation preceded me by that point. Miriam surely knew about the drunken incidents. And I must have known that she knew. But I never volunteered an explanation for the discrepancy, and she never asked for one. I guess she just accepted it as part of the adventure.`,
+                                description: `Though I tried to adopt an innocent persona, Miriam must have known about the drunken incidents. My reputation preceded me by that point, and we had friends in common. Still, I never bothered to explain the discrepancy, and she never asked me to. I think she just accepted it as part of the adventure.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

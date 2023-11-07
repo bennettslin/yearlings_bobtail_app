@@ -886,7 +886,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 todo: true,
-                problem: `Second sentence sounds kind of weird. Even though it's obvious, make it clear that it was my drinking from the box, rather than the box itself, that calmed my nerves. Don't force the reader to make this logical leap themselves.`,
+                problem: `Review one more time.`,
                 card: {
                     description: [
                         `After`,
@@ -894,7 +894,7 @@ export default {
                             isItalic: true,
                             lyric: `Yearling's Bobtail`,
                         },
-                        `was rejected by every last indie label, I got so depressed that I went on a months-long bender. Eventually I had to keep a box of wine by my bed to calm my nerves in the middle of the night. One day upon skipping my morning beers, I sensed my bedroom walls conspiring to attack me. I learned that this was the onset of`,
+                        `was rejected by every last indie label, I got so depressed that I went on a months-long bender. Eventually I kept a box of wine by my bed, which I would sip from throughout the night to calm my nerves. One day after skipping my morning beers, I sensed my bedroom walls conspiring to attack me. I learned that this was the onset of`,
                         {
                             anchor: `delirium tremens`,
                             wiki: `Delirium_tremens`,

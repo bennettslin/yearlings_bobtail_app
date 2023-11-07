@@ -720,10 +720,10 @@ export default {
                             {
                                 anchor: `Mush`,
                                 todo: true,
-                                problem: `Not sure stripping away is the idea I want to evoke.`,
+                                problem: `Not sure sifting is the idea I want to evoke.`,
                                 card: {
                                     description: [
-                                        `Marching onward without sleep, I continue to strip away the intervening years, hoping to return to the last time I'd known untroubled bliss. And so I arrive at the first song I loved as a child, Johnny Horton's "`,
+                                        `Marching onward without sleep, I continue to sift through the intervening years, hoping to return to the last time I'd known untroubled bliss. And so I arrive at the first song I loved as a child, Johnny Horton's "`,
                                         {
                                             anchor: `North to Alaska`,
                                             wiki: `North_to_Alaska_(song)`,

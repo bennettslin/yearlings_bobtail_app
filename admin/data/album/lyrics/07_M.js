@@ -640,7 +640,7 @@ export default {
                                         anchor: `time capsule`,
                                         wiki: `Time_capsule`,
                                     },
-                                    `of sorts. This would allow me to express my frustrations to a sympathetic future audience.`,
+                                    `that would allow me to express my frustrations to a sympathetic future audience.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
