@@ -62,7 +62,7 @@ export default {
                             anchor: `stream of consciousness`,
                             wiki: `Stream_of_consciousness`,
                         },
-                        `. I borrowed this literary technique to capture the unspoken thoughts rushing through my head as Sita extends her good wishes before I depart.`,
+                        `. I borrowed this literary technique to capture the torrent of unspoken thoughts rushing through my head as Sita extends her good wishes before I depart.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -309,7 +309,7 @@ export default {
                     lyric: {
                         anchor: `swept in unchartable tides`,
                         todo: true,
-                        problem: `Maybe make it more about imagining myself as a barnacle or sponge.`,
+                        problem: `Review one more time.`,
                         card: {
                             description: [
                                 `The fear of being steered in unknown directions has kept me on edge throughout this date. But nearby is a`,
@@ -317,7 +317,7 @@ export default {
                                     anchor: `storm drain`,
                                     wiki: `Storm_drain`,
                                 },
-                                `that flows into the ocean, and I'm reminded of the`,
+                                `that flows into the ocean, and I'm reminded of all the`,
                                 {
                                     anchor: `barnacles`,
                                     wiki: `Barnacle`,
@@ -327,7 +327,7 @@ export default {
                                     anchor: `sponges`,
                                     wiki: `Sponge`,
                                 },
-                                `, and other sea creatures who simply go where the current takes them.`,
+                                `, and other creatures who calmly go wherever the current takes them.`,
                             ],
                             dotKeys: {
                                 [NARRATIVE]: true,
@@ -345,7 +345,7 @@ export default {
                             todo: true,
                             problem: `There's just something awkward about the way it is now.`,
                             card: {
-                                description: `And no one else seems to sweat the risk of coming on too strong on a date either. They just keep the conversation flowing by pressing for more details, the way a starfish pries open an oyster resting on the seafloor.`,
+                                description: `And my friends don't sweat the risk of coming on too strong on a date either. They just keep the conversation flowing by pressing for more details, the way a starfish pries open an oyster resting on the seafloor.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },

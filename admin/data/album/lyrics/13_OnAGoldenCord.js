@@ -1046,8 +1046,7 @@ export default {
                         {
                             anchor: `Garry's sole witness`,
                             properNoun: true,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: `Though I wish to plead my case, the breakup will be over with sooner if I just accept my role as the villain. And so the sober me, called up to testify for his drunken half, stays silent.`,
                                 dotKeys: {
@@ -1168,7 +1167,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `Sita and I had a turbulent on-again, off-again relationship for a good while longer. During one stretch when things were rosier than ever, she wanted to wear the bracelet again and asked for it back, which I happily obliged. Somehow I'd dented it in my pocket that night, however, creating a lasting reminder that some damages can be amended but never undone.`,
+                                description: `Sita and I had a turbulent on-again, off-again relationship for a good while longer. During one stretch when things were rosier than ever, she asked for the bracelet back to wear again, which I happily obliged. Somehow I'd dented it in my pocket that night, however— a lasting reminder that some damages can be amended but never undone.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

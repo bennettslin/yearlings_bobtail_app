@@ -322,7 +322,7 @@ export default {
                                         anchor: `pupa`,
                                         wiki: `Pupa`,
                                     },
-                                    `that petrified into a fossil before it got a chance to molt.`,
+                                    `that petrified into a fossil before it ever had a chance to molt.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -646,7 +646,7 @@ export default {
                             problem: `Review one more time.`,
                             card: {
                                 description: [
-                                    `The chokehold incident actually did happen, and it left me with a dislocated jaw. So for a long time afterward, I had to clench my jaw to avoid pain when speaking, which led to an odd manner of pronunciation that some to this day mistake for a`,
+                                    `The chokehold incident actually happened, and it left me with a dislocated jaw. For a long time afterward, I had to clench my jaw to avoid pain when speaking, which led to an odd manner of pronunciation that some to this day mistake for a`,
                                     {
                                         anchor: `Canadian accent`,
                                         wiki: `Canadian_raising`,
@@ -699,7 +699,7 @@ export default {
                 todo: true,
                 problem: `Review one more time.`,
                 card: {
-                    description: `It's easy to write songs by coming up with a four-chord loop, then layering a melody on top. But my theory was that the Beatles wrote the melody and chords together as a single, inseparable whole, one measure at a time— so I aspired to do the same. I was always happiest with results like the chorus here, where the music wanders for a long stretch without looping back, resulting in an odd number of measures.`,
+                    description: `It's easy to write songs by coming up with a four-chord loop, then layering a melody on top. But my theory was that the Beatles wrote the melody and chords together as a single, inseparable whole, one measure at a time— and so I aspired to do the same. I was always happiest with results like the chorus here, where the music wanders for a long stretch without looping back, resulting in an odd number of measures.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },

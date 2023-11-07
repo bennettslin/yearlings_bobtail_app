@@ -114,7 +114,7 @@ export default {
                                             anchor: `his wife`,
                                             wiki: `Lot's_wife`,
                                         },
-                                        `looked back, she was turned into a pillar of salt. This story can be interpreted as a cautionary tale for the faithful not to cohabit with the fallen.`,
+                                        `looked back, she was turned into a pillar of salt. This story can be interpreted as a cautionary tale, warning the faithful not to cohabit with the fallen.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -130,8 +130,7 @@ export default {
                     lyricLeft: [
                         {
                             anchor: `hiding place of retreat`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: `The "asleep" voice in the doublespeaker set narrates a dream that melds the familiar setting of Los Angeles with the foreign sights of Taiwan. Having been absorbed in my drawings well into nighttime, I crawl out from the dusty space beneath my bed at home.`,
                                 dotKeys: {

@@ -1198,7 +1198,7 @@ export default {
                                         anchor: `lazy eye`,
                                         wiki: `Amblyopia`,
                                     },
-                                    `. Since I lacked depth perception, it wasn't a struggle for me to recreate on paper what I saw in real life. Impressed by my drawing skills, my mother insisted that I'd become a great artist. And so the idea was planted in my head that I might create a masterpiece someday, perhaps along the lines of the`,
+                                    `. Since I lacked depth perception, it wasn't a struggle for me to recreate on paper what I saw in real life. Impressed by my drawing skills, my mother insisted that I'd become a great artist. And so the idea was planted in my head that I might create a masterpiece someday, perhaps something along the lines of the`,
                                     {
                                         anchor: `Tintin`,
                                         wiki: `The_Adventures_of_Tintin`,

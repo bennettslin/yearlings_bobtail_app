@@ -402,7 +402,7 @@ export default {
                                         isEmphasis: true,
                                         lyric: `among`,
                                     },
-                                    `the herd. Resigned to my disloyalty, Sita could only hope for her permissiveness to set her apart from all the other women I desired.`,
+                                    `the herd. Resigned to my disloyalty, Sita could only hope that her permissiveness might set her apart from all the other women I desired.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -672,7 +672,7 @@ export default {
                                         anchor: `thirty-three`,
                                         wiki: `Chronology_of_Jesus`,
                                     },
-                                    `, the age at which Jesus was crucified. I hated the idea of getting older, and clearly this is all the time you need to make an impact on the world. So when Sita asked me to specify the age at which I would come back for her in accordance with our little pact, I answered thirty-three. The subtext was understood.`,
+                                    `, the age at which Jesus was crucified. I hated the idea of getting older, and clearly this is all the time you need to make an impact on the world. So when Sita asked me to specify at what age I would come back for her in accordance with our little pact, I answered thirty-three. The subtext was understood.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -739,7 +739,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `As friends, Sita and I got along because we were both sad people. But while my depression was simply rooted in circumstance— whether from being bullied as a child, or out of loneliness as I got older— hers was clinical. And as I learned to be proactive in dealing with my moods, I grew impatient with her for being incapable of doing the same.`,
+                                description: `As friends, Sita and I got along because we were both sad people. But while my depression was simply rooted in circumstance— whether from being bullied as a child, or out of loneliness as I got older— hers was clinical. So as I learned to deal with my moods, I grew impatient with her for lacking the same initiative.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -802,7 +802,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `When Sita first asked about the scars on my forearm, I wryly replied that they were just for practice. Years later, when I expressed concern after she'd tried cutting for herself, she gave me the same assurance. The message was clear that I was the cause in more ways than one.`,
+                                description: `When Sita first asked about the scars on my forearm, I replied with dry wit that they were just for practice. Years later, when I expressed concern after she'd tried cutting for herself, she gave me the same assurance. The message was clear that I was the cause in more ways than one.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
