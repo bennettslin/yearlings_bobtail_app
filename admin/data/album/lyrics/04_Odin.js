@@ -257,7 +257,7 @@ export default {
                                         anchor: `pastels`,
                                         wiki: `Pastel`,
                                     },
-                                    `. They were more powdery than crayons and thus ran out quickly, so I eventually had to make do with the least used colors. I thought this was a fitting metaphor for my overall state of discomfort there, since I was forced to rely on my least used skills, like speaking Taiwanese.`,
+                                    `. They were more powdery than crayons and thus ran out quickly, so eventually I had to make do with the least used colors. I thought this was a fitting metaphor for my overall state of discomfort there, since I was forced to rely on my least used skills, like speaking Taiwanese.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -398,7 +398,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `My grandmother's house at night was pitch black. So whenever I woke to use the bathroom, I had to tiptoe to the door, guided only by a sliver of moonlight peeking in from underneath.`,
+                                description: `My grandmother's house at night was pitch black. So whenever I woke to use the bathroom, I had to tiptoe to the bedroom door, guided only by a sliver of moonlight peeking in from underneath.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

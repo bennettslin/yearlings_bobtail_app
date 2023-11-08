@@ -32,7 +32,7 @@ export default {
     mixSamplingFrequency: 45.39,
     todo: true,
     problem: `Decide if this is the best way to break up those two statements.`,
-    overview: `Sasha was a childhood friend, as well as my first crush. The strength she drew from her Jewish identity fascinated me, but it also clued me in on a cruel paradox: Namely, that nothing ever comes from longing to share in someone's faith and roots, which stay strong precisely by not being shared. Sasha moved away during middle school, at the peak of my struggles with bullies. That summer, I wrote her a letter on a family trip to Taiwan.`,
+    overview: `Sasha was a childhood friend, as well as my first crush. The strength she drew from her Jewish identity fascinated me, but it also clued me in on a cruel paradox— namely, that nothing ever comes from longing to share in someone's faith and roots, which stay strong precisely by not being shared. Sasha moved away during middle school, at the peak of my struggles with bullies. That summer, I wrote her a letter on a family trip to Taiwan.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -156,9 +156,9 @@ export default {
                         {
                             anchor: `You'd love Taiwan`,
                             todo: true,
-                            problem: `Review one more time.`,
+                            problem: `Make this about having something to share comparable to what Sasha had.`,
                             card: {
-                                description: `On a tour of the Taiwanese countryside with my cousins, I mentally noted all the things I could point out to Sasha one day. It wasn't out of sudden pride in my heritage; I just liked the idea of having something unique to share with someone else.`,
+                                description: `On a tour of the Taiwanese countryside with my cousins, I mentally noted all the things I could point out to Sasha one day. I suspect it wasn't out of pride in my heritage; I just liked the idea of having something unique to share with someone else.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -646,7 +646,7 @@ export default {
                             problem: `Review one more time.`,
                             card: {
                                 description: [
-                                    `The chokehold incident actually happened, and it left me with a dislocated jaw. For a long time afterward, I had to clench my jaw to avoid pain when speaking, which led to an odd manner of pronunciation that some to this day mistake for a`,
+                                    `The chokehold incident actually did happen, and it left me with a dislocated jaw. For a long time afterward, I had to clench my jaw to avoid pain when speaking, which led to an odd manner of pronunciation that some to this day mistake for a`,
                                     {
                                         anchor: `Canadian accent`,
                                         wiki: `Canadian_raising`,
@@ -699,7 +699,7 @@ export default {
                 todo: true,
                 problem: `Review one more time.`,
                 card: {
-                    description: `It's easy to write songs by coming up with a four-chord loop, then layering a melody on top. But my theory was that the Beatles wrote the melody and chords together as a single, inseparable whole, one measure at a time— and so I aspired to do the same. I was always happiest with results like the chorus here, where the music wanders for a long stretch without looping back, resulting in an odd number of measures.`,
+                    description: `It's easy to write songs by coming up with a four-chord loop, then layering a melody on top. But my theory was that the Beatles wrote the melody and chords together, one measure at a time, as an indivisible whole— and so I aspired to do the same. I was always happiest with results like the chorus here, where the music wanders for a long stretch without looping back, resulting in an odd number of measures.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },

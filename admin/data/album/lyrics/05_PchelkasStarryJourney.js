@@ -38,8 +38,8 @@ export default {
     playerReferenceTime: 756.159,
     playerStartTime: 755.661,
     todo: true,
-    problem: `Review one more time.`,
-    overview: `As my years of getting bullied grew unbearable, a strange letter arrived in the mail with promises of spiritual answers. After I sent the requested payments, it was revealed to me that I belonged to a race of interstellar beings, and my mission was to shut myself off from the world. I did so by adopting an unresponsive manner like my brother, which made me feel a psychic bond with him. But as my sanity chipped away, I came to realize I was in a mail-order cult.`,
+    problem: `Say for a year I felt a psychic bond with him.`,
+    overview: `As my years of getting bullied grew unbearable, a strange letter arrived in the mail with promises of spiritual answers. After I sent the requested payment, it was revealed to me that I belonged to a race of interstellar beings, and my mission was to shut myself off from the world. I did so by adopting an unresponsive manner like my brother, which made me feel a psychic bond with him. But as my sanity chipped away, I came to realize I was in a mail-order cult.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -763,8 +763,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
-                problem: `Review one more time.`,
+                review: true,
                 card: {
                     description: `To make the sound of rocket circuitry heard here, I banged an electric guitar against a carpet floor while bending its whammy bar. It took countless tries, and I had to retune each time because the guitar kept going flat.`,
                     dotKeys: {
@@ -815,7 +814,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `To appear legitimate, the letters threw scientific terms around as they promised to update me on technological developments. This included constructing a spacecraft that would allow us Beyonders to make contact with our extraplanetary kin.`,
+                                description: `To appear legitimate, the letters threw scientific terms around as they promised to update me on technological developments. This included construction of a spacecraft that would allow us Beyonders to make contact with our extraplanetary kin.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -915,8 +914,7 @@ export default {
                         `twin friars`,
                         {
                             anchor: `cast here in pollens`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: [
                                     `"`,

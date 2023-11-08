@@ -417,8 +417,7 @@ export default {
                         `with`,
                         {
                             anchor: `"Joyce" oblivious`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: [
                                     `Of course, not knowing that I couldn't be the next Joyce is why I dared to try. And so I began to dream that I could do for rock music what Joyce had done for English literature.`,
@@ -690,7 +689,7 @@ export default {
                                         anchor: `smallpox`,
                                         wiki: `Smallpox`,
                                     },
-                                    `scars miraculously vanished upon her death.`,
+                                    `scars vanished miraculously upon her death.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -891,12 +890,12 @@ export default {
                                             anchor: `pro-life stance`,
                                             wiki: `Catholic_Church_and_abortion`,
                                         },
-                                        `to the unborn of other faiths. After all, this trades away the certainty of an`,
+                                        `to the unborn of other faiths. After all, this just trades away the certainty of an`,
                                         {
                                             anchor: `aborted fetus`,
                                             wiki: `Abortion`,
                                         },
-                                        `going to heaven for the likelihood of a living child going to hell.`,
+                                        `going to heaven, for the likelihood of a living child going to hell.`,
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
@@ -950,7 +949,7 @@ export default {
                                         anchor: `tragedy`,
                                         wiki: `Tragedy`,
                                     },
-                                    `as two sides of the same coin. After all, any tragic situation can be turned into a song; writing a song calls for taking the broader view; and all things viewed broadly will reveal a comic underbelly. So I was always preferred a negative outcome over none at all. But then this made everything I do feel like a stage act.`,
+                                    `as two sides of the same coin. After all, every tragic situation can be made into a song; writing a song calls for taking the broader view; and anything viewed broadly will reveal its comic underbelly. So I was always preferred a negative outcome to none at all. But then this made everything I do feel like a stage act.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
