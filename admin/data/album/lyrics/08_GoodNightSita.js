@@ -371,7 +371,7 @@ export default {
                                     `that nest one inside another.`,
                                 ],
                                 dotKeys: {
-                                    [BACKSTORY]: true,
+                                    [NARRATIVE]: true,
                                 },
                             },
                         },
@@ -965,16 +965,16 @@ export default {
                         {
                             anchor: `veggie wishbone's short end`,
                             todo: true,
-                            problem: `This can remain a genuine memory from the past, but make sure it's compatible with the others that have been changed to fictional presents.`,
+                            problem: `Review one more time.`,
                             cards: [
                                 {
                                     description: [
-                                        `The date started at a`,
+                                        `On one date, Sita took me to a`,
                                         {
                                             anchor: `vegetarian`,
                                             wiki: `Vegetarianism`,
                                         },
-                                        `restaurant, where Sita ordered a dish that resembled a chicken breast. When we cracked its sesame-stick`,
+                                        `restaurant, where I ordered a dish that resembled a chicken breast. When we cracked its sesame-stick`,
                                         {
                                             anchor: `wishbone`,
                                             wiki: `Furcula`,

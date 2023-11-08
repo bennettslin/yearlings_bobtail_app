@@ -27,7 +27,7 @@ export default {
     mixStartTime: `0:02:12.00`,
     todo: true,
     problem: `Review one more time.`,
-    overview: `After the breakup with Catherine, I vowed to spend the next five years shaping myself into the ideal romantic prospect, which included getting involved in the local scene. So I cobbled together my own band, the Yearlings, and by the fifth year, we were playing house parties and small venues. I soon grew infatuated with a fellow scenester named Mara, whom I noticed from afar. But Mara ended up going out with my drummer Jacob, which made band practice awkward.`,
+    overview: `After the breakup with Catherine, I vowed to spend the next five years shaping myself into the ideal romantic prospect. This included getting involved in the local scene, so I started cobbling together my own band, the Yearlings. By the fifth year, we were playing house parties and small venues. I soon grew infatuated with a fellow scenester named Mara, whom I noticed from afar. But Mara ended up going out with my drummer Jacob, which made band practice awkward.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -331,11 +331,10 @@ export default {
                         `spent her`,
                         {
                             anchor: `wishes on a friend`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: [
-                                    `Toward the end of my five-year plan, the Yearlings began playing local shows. I was thrilled the day Mara showed up in the audience— but it was Jacob who caught her eye. I felt like the`,
+                                    `Toward the end of my five-year plan, the Yearlings began to play local shows. I was thrilled the day Mara showed up in the audience— but it was Jacob who caught her eye. I felt like the`,
                                     {
                                         anchor: `bottled genie`,
                                         wiki: `Jinn`,
@@ -357,10 +356,9 @@ export default {
                         `while forever I'll`,
                         {
                             anchor: `hold in peace`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
-                                description: `So Jacob got together with Mara without any effort, while romance for me felt no less elusive than ever. I thus had to admit that my five-year plan was a washout.`,
+                                description: `So Jacob got together with Mara without any real effort, while romance for me felt no less elusive than ever. I thus had to admit that my five-year plan was a washout.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
