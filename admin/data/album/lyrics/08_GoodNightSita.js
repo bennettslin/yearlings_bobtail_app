@@ -155,14 +155,14 @@ export default {
                         {
                             anchor: `decoder ring`,
                             todo: true,
-                            problem: `Improve last sentence.`,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
                                     {
                                         anchor: `Secret decoder rings`,
                                         wiki: `Secret_decoder_ring`,
                                     },
-                                    `were promotional toys in the 60s that allowed children to decipher a television program's encrypted messages. Oftentimes, what they revealed was a preview of the next episode. It would've been handy to wear one on a date, since I was always trying to tease out hidden messages from the most basic exchanges to reveal what would happen next.`,
+                                    `were promotional toys in the 60s that allowed children to decipher a television program's encrypted messages. Oftentimes, what they revealed was a preview of the next episode. So it would have been nice to wear one on a date, and have it give me previews of what was to happen next.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -236,10 +236,10 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 todo: true,
-                problem: `I should mention the cafeteria job here. Otherwise, it's out of context.`,
+                problem: `Review one more time.`,
                 card: {
                     description: [
-                        `I once had a supervisor who would blast`,
+                        `Back when I worked as a dishwasher, my supervisor would blast`,
                         {
                             anchor: `Michael Jackson`,
                             wiki: `Michael_Jackson`,
@@ -249,7 +249,7 @@ export default {
                             anchor: `Don't Stop 'Til You Get Enough`,
                             wiki: `Don't_Stop_'Til_You_Get_Enough`,
                         },
-                        `" in the home stretch of every dishroom shift. Ever since, I've associated this song with the idea of psyching myself up to have fun when I'm not really having fun. So I borrowed its sound to convey where my head was at during those first few dates with Sita. Hence the palm-muted electric guitars, rubbery`,
+                        `" in the home stretch of every shift. Ever since, I've associated this song with the idea of psyching myself up to have fun when I'm not really having fun. So I borrowed its sound to convey where my head was at during those first few dates with Sita— hence the palm-muted electric guitars, rubbery`,
                         {
                             anchor: `bass`,
                             wiki: `Bass_guitar`,
@@ -339,9 +339,9 @@ export default {
                 {
                     mixTime: `0:25:29.53`,
                     lyric: [
-                        `they just`,
+                        `they just always`,
                         {
-                            anchor: `always know to pry`,
+                            anchor: `know to pry`,
                             todo: true,
                             problem: `There's just something awkward about the way it is now.`,
                             card: {
