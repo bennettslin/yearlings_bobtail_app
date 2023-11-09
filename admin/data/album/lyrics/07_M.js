@@ -27,7 +27,7 @@ export default {
     mixStartTime: `0:02:12.00`,
     todo: true,
     problem: `Review one more time.`,
-    overview: `After the breakup with Catherine, I vowed to spend the next five years shaping myself into the ideal romantic prospect. This included getting involved in the local scene, so I started cobbling together my own band, the Yearlings. By the fifth year, we were playing house parties and small venues. I soon grew infatuated with a fellow scenester named Mara, whom I noticed from afar. But Mara ended up going out with my drummer Jacob, which made band practice awkward.`,
+    overview: `After the breakup with Catherine, I vowed to spend the next five years shaping myself into the ideal romantic prospect— which included getting involved in the local scene. So I started cobbling together my own band, the Yearlings, and by the fifth year, we were playing house parties and small venues. I soon grew infatuated with a fellow scenester named Mara, whom I noticed from afar. But Mara ended up going out with my drummer Jacob, which made band practice awkward.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -879,8 +879,7 @@ export default {
                         `But then I saw the`,
                         {
                             anchor: `world's a naked baby`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: `But at some point, I realized that a social scene isn't any different from the world at large, in that nothing is hidden from view. Every situation can be understood by observing people's actions and reading their intentions, much like a holistic picture of the world can be pieced together by reading books on all the important subject matters.`,
                                 dotKeys: {
@@ -908,7 +907,7 @@ export default {
                             problem: `Review one more time.`,
                             card: {
 
-                                description: `Or, to have a "Mara, you'll" laugh. In other words, everyone does what you would expect them to do, given what you can expect them to want— and a social scene is simply the sum total of all that. No one gets in the way of your best laid plans just to spite you. And so you can only react with good humor when it happens.`,
+                                description: `Or, to have a "Mara, you'll" laugh. In short, everyone just does what you would expect them to do, given what you can expect them to want— and a social scene is simply the sum total of all that. No one gets in the way of your best laid plans just to spite you. And so you can only react with good humor when it happens.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [PUN]: true,
@@ -942,9 +941,9 @@ export default {
                         {
                             anchor: `boy who's to love her baby`,
                             todo: true,
-                            problem: `Last sentence runs on.`,
+                            problem: `Last sentence runs on. Maybe don't use "in other words" after "in short."`,
                             card: {
-                                description: `In short, the world is as innocent and unwitting as a newborn infant. So if a woman's list of ideal traits in a man includes what kind of father he'll be to her child, then she's likely to judge him by how he treats the world at large.`,
+                                description: `In other words, the world is as innocent and unwitting as a newborn infant. So if a woman's list of ideal traits in a man includes what kind of father he'll be to her child, then she's likely to judge him by how he treats the world at large.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },

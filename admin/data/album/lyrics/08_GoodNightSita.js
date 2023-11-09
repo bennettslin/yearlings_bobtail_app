@@ -162,7 +162,7 @@ export default {
                                         anchor: `Secret decoder rings`,
                                         wiki: `Secret_decoder_ring`,
                                     },
-                                    `were promotional toys in the 60s that allowed children to decipher a television program's encrypted messages. Oftentimes, what they revealed was a preview of the next episode. So it would have been nice to wear one on a date, and have it give me previews of what was to happen next.`,
+                                    `were promotional toys in the 60s that allowed children to decipher a television program's encrypted messages. Oftentimes, what they revealed was a preview of the next episode. So it would have been nice to wear one on a date, and have it give me a preview of what was to happen next.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -235,8 +235,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
-                problem: `Review one more time.`,
+                review: true,
                 card: {
                     description: [
                         `Back when I worked as a dishwasher, my supervisor would blast`,
@@ -360,15 +359,15 @@ export default {
                         {
                             anchor: `innermost matryoshka`,
                             todo: true,
-                            problem: `Make this the fictional present. Make it clear that I'm standing there remembering.`,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
-                                    `On our first date, I took Sita to a natural history museum. We spent some time gawking at the Russian wooden dolls known as`,
+                                    `Standing in front of Sita's gate, I recall our first date, when we went to a natural history museum and gawked at the Russian nesting dolls known as`,
                                     {
                                         anchor: `matryoshkas`,
                                         wiki: `Matryoshka_doll`,
                                     },
-                                    `that nest one inside another.`,
+                                    `.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
