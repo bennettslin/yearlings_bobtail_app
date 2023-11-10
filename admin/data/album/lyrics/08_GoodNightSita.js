@@ -49,7 +49,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 todo: true,
-                problem: `Last sentence runs on.`,
+                problem: `Review one more time.`,
                 card: {
                     description: [
                         `In the final chapter of`,
@@ -62,7 +62,7 @@ export default {
                             anchor: `stream of consciousness`,
                             wiki: `Stream_of_consciousness`,
                         },
-                        `. I borrowed this literary technique to capture the torrent of unspoken thoughts rushing through my head as Sita extends her good wishes before I depart.`,
+                        `. I borrowed this literary technique to capture the torrent of thoughts rushing through my head as Sita wishes me well before I depart.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -162,7 +162,7 @@ export default {
                                         anchor: `Secret decoder rings`,
                                         wiki: `Secret_decoder_ring`,
                                     },
-                                    `were promotional toys in the 60s that allowed children to decipher a television program's encrypted messages. Oftentimes, what they revealed was a preview of the next episode. So it would have been nice to wear one on a date, and have it give me a preview of what was to happen next.`,
+                                    `were promotional toys in the 60s that allowed children to decipher a television program's encrypted messages. Oftentimes, what they revealed was a preview of the next episode. Similarly, I would have liked it if every date ended with a preview of the next one.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -181,7 +181,7 @@ export default {
                             problem: `Review one more time.`,
                             cards: [
                                 {
-                                    description: `As a college student, I would ask older coworkers to buy cheap beer for me, which allowed me to keep a stack of twelve-packs in my room. So before every date, I would down a few cans.`,
+                                    description: `During my college years, I would ask older coworkers to buy cheap beer for me, which enabled me to keep a stack of twelve-packs in my room. Before every date, I would down a few cans.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -326,7 +326,7 @@ export default {
                                     anchor: `sponges`,
                                     wiki: `Sponge`,
                                 },
-                                `, and other creatures who calmly go wherever the current takes them.`,
+                                `, and other creatures who calmly go where the current takes them.`,
                             ],
                             dotKeys: {
                                 [NARRATIVE]: true,
@@ -342,10 +342,11 @@ export default {
                         {
                             anchor: `know to pry`,
                             todo: true,
-                            problem: `There's just something awkward about the way it is now.`,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `And my friends don't sweat the risk of coming on too strong on a date either. They just keep the conversation flowing by pressing for more details, the way a starfish pries open an oyster resting on the seafloor.`,
+                                description: `And none of my friends treat dating as a nerve-racking ordeal either. They just keep the conversation going by pressing for more details, the way a starfish pries open an oyster resting on the ocean floor.`,
                                 dotKeys: {
+                                    [NARRATIVE]: true,
                                     [OBSERVATION]: true,
                                 },
                             },
@@ -362,7 +363,7 @@ export default {
                             problem: `Review one more time.`,
                             card: {
                                 description: [
-                                    `Standing in front of Sita's gate, I recall our first date, when we went to a natural history museum and gawked at the Russian nesting dolls known as`,
+                                    `Flashback to our first date, when Sita and I have arrived at a natural history museum. We begin by strolling past a display of Russian nesting dolls, known as`,
                                     {
                                         anchor: `matryoshkas`,
                                         wiki: `Matryoshka_doll`,
@@ -421,10 +422,10 @@ export default {
                         {
                             anchor: `chrysalis unchristened`,
                             todo: true,
-                            problem: `Phrase this better. Don't use the word "moot."`,
+                            problem: `Review one more time.`,
                             cards: [
                                 {
-                                    description: `As we pass a display on the butterfly lifecycle, it occurs to me that what I seek in a partner is a chrysalis. That is, a rare specimen so new to this world that my own lack of worldliness can be considered moot.`,
+                                    description: `As we pass a display on the butterfly lifecycle, it occurs to me that what I seek in a partner is a chrysalis— that is to say, someone so new to this world that my own lack of worldliness could be made irrelevant.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [OBSERVATION]: true,
@@ -603,11 +604,11 @@ export default {
                         {
                             anchor: `disastrous play`,
                             todo: true,
-                            problem: `Again, make this the fictional present.`,
+                            problem: `This should be a flashback in the present tense.`,
                             card: {
-                                description: `On our second date, Sita took me to see her friend act in a play, after which we met up with him backstage. Given the rapport they shared, I struggled to get a word in edgewise, leaving me to feel insecure the rest of the evening.`,
+                                description: `I next recall our second date, when Sita took me to see her friend act in a play. Afterward, we met up with him backstage. Given the rapport they shared, I struggled to get a word in edgewise, and this left me feeling insecure the rest of the evening.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true,
+                                    [NARRATIVE]: true,
                                     [OBSERVATION]: true,
                                 },
                             },
@@ -671,15 +672,15 @@ export default {
                         {
                             anchor: `understudy sought`,
                             todo: true,
-                            problem: `Last sentence phrasing is awkward.`,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
-                                    `Dating while low status is like being an`,
+                                    `An`,
                                     {
                                         anchor: `understudy`,
                                         wiki: `Understudy`,
                                     },
-                                    `, a performer in theater who serves as a replacement on short notice. You undertake all the same preparation, while seeing little of the same action. So I decided to be proactive and branch out, like a freelancer without steady gigs advertising on a`,
+                                    `is a performer in theater who serves as a replacement on short notice. It's much like dating while low status, where you undertake all the same preparation while seeing little of the same action. So at some point, I decided to seek out opportunities by branching out, like a freelancer posting their phone number on a`,
                                     {
                                         anchor: `cork board`,
                                         wiki: `Bulletin_board`,
@@ -978,7 +979,7 @@ export default {
                                             anchor: `wishbone`,
                                             wiki: `Furcula`,
                                         },
-                                        `, Sita got the longer end. Needless to say, my wish wasn't granted.`,
+                                        `, she got the longer end. Needless to say, my wish wasn't granted.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
