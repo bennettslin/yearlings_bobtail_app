@@ -401,9 +401,9 @@ export default {
                         {
                             anchor: `crack up another doll`,
                             todo: true,
-                            problem: `This isn't really the point I want to make. Make it more earnest, about me trying my best.`,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `A friend once told me that if I can keep a woman cracking up at my jokes all night, then I'll always be good for another date. Not being very funny, I tried my best with clever quips and goofy mannerisms.`,
+                                description: `A friend once told me that if I can keep a woman cracking up all night, then I'll always be good for another date. Not being quick-witted, I tried to achieve this by having goofy mannerisms.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -422,7 +422,7 @@ export default {
                             problem: `Review one more time.`,
                             cards: [
                                 {
-                                    description: `As we pass a display on the butterfly lifecycle, it occurs to me that what I seek in a partner is a chrysalis— that is to say, someone so new to this world that my own lack of worldliness would be irrelevant.`,
+                                    description: `As we pass a display on the butterfly lifecycle, it occurs to me that what I seek in a partner is a chrysalis— that is to say, someone so new to this world that my own lack of worldliness wouldn't need to be an issue.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [OBSERVATION]: true,
@@ -440,7 +440,7 @@ export default {
                         {
                             anchor: `aping jaw`,
                             todo: true,
-                            problem: `Oh boy. This can be better as well. Make clear this was a hoax in the field of paleontology. "Paleontological hoax" by itself isn't clear.`,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
                                     `We stop by a replica of`,
@@ -448,12 +448,12 @@ export default {
                                         anchor: `Piltdown Man`,
                                         wiki: `Piltdown_Man`,
                                     },
-                                    `, a paleontological hoax in which the oversized jaw of an`,
+                                    `, a paleontological hoax in which an`,
                                     {
                                         anchor: `orangutan`,
                                         wiki: `Orangutan`,
                                     },
-                                    `was attached to the cranium of a modern human. Meanwhile, in my efforts to convince Sita that I might be her missing link, I'm hoping the words escaping my mouth don't betray the undersized volume of my head.`,
+                                    `'s oversized jaw was attached to a modern human's skull. Meanwhile, in attempting to impress Sita, I have to hope that the words escaping my mouth don't betray the undersized volume of my head.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -486,7 +486,7 @@ export default {
                         {
                             anchor: `defined by ambrosia beers`,
                             todo: true,
-                            problem: `Make it clear that I only considered basing my sense of humor on his. Then I had to scrap the thought because I'm just not someone who can think of clever things to say on the fly.`,
+                            problem: `Review one more time.`,
                             cards: [
                                 {
                                     description: [
@@ -507,7 +507,7 @@ export default {
                                             anchor: `Ambrose Bierce`,
                                             wiki: `Ambrose_Bierce`,
                                         },
-                                        `" wrote a collection of cynical definitions called`,
+                                        `" wrote a collection of satirical definitions called`,
                                         {
                                             isItalic: true,
                                             lyric: {
@@ -515,7 +515,7 @@ export default {
                                                 wiki: `The_Devil's_Dictionary`,
                                             },
                                         },
-                                        `. In hindsight, it probably wasn't the best idea to base my sense of humor on the work of a 19th-century American satirist.`,
+                                        `. I tried to adopt this brand of humor for a bit, but I wasn't cynical enough to pull it off.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -601,12 +601,11 @@ export default {
                         {
                             anchor: `disastrous play`,
                             todo: true,
-                            problem: `This should be a flashback in the present tense.`,
+                            problem: `Still too disjointed.`,
                             card: {
-                                description: `I next recall our second date, when Sita took me to see her friend act in a play. Afterward, we met up with him backstage. Given the rapport they shared, I struggled to get a word in edgewise, and this left me feeling insecure the rest of the evening.`,
+                                description: `On our second date, Sita takes me to see her friend act in a play. While we chat with him beforehand, I struggle to get a word in edgewise, which leaves me feeling insecure.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
-                                    [OBSERVATION]: true,
                                 },
                             },
                         },
@@ -648,8 +647,10 @@ export default {
                         `for if the`,
                         {
                             anchor: `tactic is to stall`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `I was advised to wait three days before calling a woman back. Yet it was always agony when she invariably did the same to me.`,
+                                description: `My friends would advise me to wait three days before calling a woman back. And yet, it was always agony when she invariably did the same to me.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -669,26 +670,33 @@ export default {
                         {
                             anchor: `understudy sought`,
                             todo: true,
-                            problem: `Review one more time.`,
-                            card: {
-                                description: [
-                                    `An`,
-                                    {
-                                        anchor: `understudy`,
-                                        wiki: `Understudy`,
-                                    },
-                                    `is a performer in theater who serves as a replacement on short notice. It's much like dating while low status, where you undertake all the same preparation while seeing little of the same action. So at some point, I decided to seek out opportunities by branching out, like a freelancer posting their phone number on a`,
-                                    {
-                                        anchor: `cork board`,
-                                        wiki: `Bulletin_board`,
-                                    },
-                                    `.`,
-                                ],
-                                dotKeys: {
-                                    [BACKSTORY]: true,
-                                    [OBSERVATION]: true,
+                            problem: `Good enough?`,
+                            cards: [
+                                {
+                                    description: [
+                                        `In theater, an`,
+                                        {
+                                            anchor: `understudy`,
+                                            wiki: `Understudy`,
+                                        },
+                                        `is a performer who serves as a replacement on short notice.`,
+                                    ],
                                 },
-                            },
+                                {
+                                    description: [
+                                        `Dating while low status is like being an understudy: You undertake all the same preparation, yet see little of the same action. So at some point, I decided to be proactive and seek out opportunities, like a freelancer advertising on a`,
+                                        {
+                                            anchor: `cork board`,
+                                            wiki: `Bulletin_board`,
+                                        },
+                                        `.`,
+                                    ],
+                                    dotKeys: {
+                                        [BACKSTORY]: true,
+                                        [OBSERVATION]: true,
+                                    },
+                                },
+                            ],
                         },
                         `from his number`,
                     ],
@@ -714,8 +722,10 @@ export default {
                         `then wise up and`,
                         {
                             anchor: `learn to shotgun`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `In time I came to adopt the shotgun approach to dating, which involves hitting on anyone at any moment. It works because the math is on your side. Even if your success rate remains dismal, you're increasing the sample size, which gives you a better chance of getting at least one positive result. And one person saying yes is really all you were hoping for.`,
+                                description: `In time I came to adopt the shotgun approach to dating, which involves hitting on anyone at any moment. It works because the math is on your side. Even if your success rate remains dismal, you're increasing the sample size, which gives you a better chance of having at least one person say yes to a date. And, of course, one yes is all you're really hoping for.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -735,9 +745,9 @@ export default {
                         {
                             anchor: `breeze through our parts`,
                             todo: true,
-                            problem: `There's a better way to say this that's more clear. Maybe move "future attempts at hitting on someone" to the second sentence.`,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `Any time I said something witty that got a good response, I'd be sure to use it again on future attempts at hitting on someone, like an actor reprising a role. This also lessened the sting of rejection, since the less I had to prepare, the less invested I felt.`,
+                                description: `Any time I said something witty that got a good response, I'd be sure to say it again on future dates with different women, like an actor reprising a role. This then eased the sting of rejection, since the less I needed to prepare, the less I had to feel was at stake.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -887,18 +897,18 @@ export default {
                         {
                             anchor: `single go-karts`,
                             todo: true,
-                            problem: `This should be the fictional present.`,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
-                                    `On our third date, Sita and I visited a`,
+                                    `On our third date, Sita and I visit a`,
                                     {
                                         anchor: `go-kart raceway`,
                                         wiki: `Kart_racing`,
                                     },
-                                    `. There was a twin go-kart available, presumably to seat a parent and child side by side. In jest, I gestured for Sita to hop in. She laughed and declined.`,
+                                    `. There's a twin go-kart available, presumably to seat a parent and child side by side. In jest, I gesture for Sita to hop in with me. She laughs and declines.`,
                                 ],
                                 dotKeys: {
-                                    [BACKSTORY]: true,
+                                    [NARRATIVE]: true,
                                 },
                             },
                         },
@@ -1003,9 +1013,9 @@ export default {
                         {
                             anchor: `dummy steering wheel`,
                             todo: true,
-                            problem: `Review one more time.`,
+                            problem: `Keep working on this.`,
                             card: {
-                                description: `Any semblance of control that I felt on a date was an illusion. But I would grip it tightly all the same, like a child clutching the passenger steering wheel in a twin go-kart. There was just too much at stake for me to ever let go and embrace spontaneity.`,
+                                description: `Any semblance of being in control on a date was an illusion. But I would grip it tightly all the same, like a child clutching the passenger steering wheel in a twin go-kart. There was just too much at stake for me to ever let go and embrace spontaneity.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
