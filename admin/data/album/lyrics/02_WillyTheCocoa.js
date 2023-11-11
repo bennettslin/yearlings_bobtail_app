@@ -36,22 +36,12 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `Willy was known as "the Cocoa," referring both to the`,
-                        {
-                            anchor: `Coke`,
-                            wiki: `Coca-Cola`,
-                        },
-                        `bottles he collected and to his seeming a bit cuckoo and`,
+                        `Willy was known as "the Cocoa," referring both to the Coke bottles he collected and to his seeming a bit cuckoo and`,
                         {
                             isItalic: true,
                             lyric: `loco`,
                         },
-                        `, or "crazy" in`,
-                        {
-                            anchor: `Spanish`,
-                            wiki: `Spanish_language`,
-                        },
-                        `. I'm sure there wasn't an official spelling, so I took the liberty of choosing one. Of course, I also took the liberty of having his story take place many years later, when my family lived in the neighborhood.`,
+                        `, or "crazy" in Spanish. I'm sure there wasn't an official spelling, so I took the liberty of choosing one. Of course, I also took the liberty of having his story take place many years later, when my family lived in the neighborhood.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -128,17 +118,7 @@ export default {
                                         anchor: `San Fernando Valley`,
                                         wiki: `San_Fernando_Valley`,
                                     },
-                                    `of`,
-                                    {
-                                        anchor: `Los Angeles`,
-                                        wiki: `Los_Angeles`,
-                                    },
-                                    `, where wide boulevards stretch endlessly along a`,
-                                    {
-                                        anchor: `grid plan`,
-                                        wiki: `Grid_plan`,
-                                    },
-                                    `, and mountains block the horizon on all sides.`,
+                                    `of Los Angeles, where wide boulevards stretch endlessly along a grid plan, and mountains block the horizon on all sides.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -196,14 +176,16 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
+                problem: `Review one more time.`,
                 card: {
                     description: [
                         `The`,
                         {
-                            anchor: `root progression`,
+                            anchor: `root`,
                             wiki: `Root_(chord)`,
                         },
-                        `here traces a zigzag in which a minor-third drop from one measure is followed by a whole-step rise to the next. At the cadence of each line, the melodicas catch up by squeezing a warped version of this descending pattern into a single measure.`,
+                        `of the chord progression here traces a zigzag in which a minor-third drop from one measure is followed by a whole-step rise to the next. At the cadence of each line, the melodicas catch up by squeezing a warped version of this descending pattern into a single measure.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -250,12 +232,7 @@ export default {
                                             anchor: `microcephaly`,
                                             wiki: `Microcephaly`,
                                         },
-                                        `, a medical condition in which the brain stops growing after birth. And so his head is unusually small, like the`,
-                                        {
-                                            anchor: `sideshow`,
-                                            wiki: `Sideshow`,
-                                        },
-                                        `"pinheads" of bygone days.`,
+                                        `, a medical condition in which the brain stops growing after birth. And so his head is unusually small, like the sideshow "pinheads" of bygone days.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -893,6 +870,8 @@ export default {
                         `that saw this`,
                         {
                             anchor: `mulch soften asphodel`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
                                     `We plant`,
@@ -900,17 +879,12 @@ export default {
                                         anchor: `asphodels`,
                                         wiki: `Asphodelus`,
                                     },
-                                    `, a popular garden plant named after the immortal flower that populates a`,
+                                    `, a popular garden plant named after the immortal flower that populates the`,
                                     {
-                                        anchor: `section of the underworld`,
-                                        wiki: `Asphodel_Meadows`,
+                                        anchor: `underworld`,
+                                        wiki: `Greek_underworld`,
                                     },
-                                    `in`,
-                                    {
-                                        anchor: `Greek mythology`,
-                                        wiki: `Greek_mythology`,
-                                    },
-                                    `. By softening the soil, the mulch gives new life to our flower beds. And perhaps Willy will do the same for our neighborhood, by softening the "asphalt" beneath which his body once lay.`,
+                                    `in Greek mythology. By softening the soil, the mulch gives new life to our flower beds. And perhaps Willy will do the same for our neighborhood, by softening the "asphalt" beneath which his body once lay.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -963,24 +937,21 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
+                problem: `Review one more time.`,
                 card: {
                     description: [
-                        `To play the`,
+                        `To play the electric guitar riff heard here, I used both a`,
                         {
-                            anchor: `electric guitar`,
-                            wiki: `Electric_guitar`,
-                        },
-                        `riff heard here, I used both a`,
-                        {
-                            anchor: `slide`,
-                            wiki: `Steel_bar`,
+                            anchor: `glass slide`,
+                            wiki: `Slide_guitar`,
                         },
                         `and the`,
                         {
                             anchor: `whammy bar`,
                             wiki: `Vibrato_systems_for_guitar`,
                         },
-                        `at the same time. Since either of these can bend pitch on its own, it makes no sense to combine them. Which is exactly why a troll guitarist would do so.`,
+                        `at the same time. Since either of these can bend pitch on its own, it makes no sense to combine them— which is exactly why a troll guitarist would do so.`,
                     ],
                     dotKeys: {
                         [OBSERVATION]: true,

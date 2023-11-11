@@ -46,22 +46,12 @@ export default {
                             anchor: `Taiwan`,
                             wiki: `Taiwan`,
                         },
-                        `, an island off the coast of`,
+                        `, an island off the coast of China. When the`,
                         {
-                            anchor: `China`,
-                            wiki: `China`,
-                        },
-                        `. When the`,
-                        {
-                            anchor: `Chinese Nationalists`,
+                            anchor: `Nationalists`,
                             wiki: `Kuomintang`,
                         },
-                        `took over in 1949, they made`,
-                        {
-                            anchor: `Mandarin Chinese`,
-                            wiki: `Mandarin_Chinese`,
-                        },
-                        `the official language. So the`,
+                        `took over in 1949, they made Mandarin Chinese the official language. So the`,
                         {
                             anchor: `Taiwanese`,
                             wiki: `Taiwanese_Hokkien`,
@@ -163,19 +153,7 @@ export default {
                             anchor: `tie his shoes`,
                             cards: [
                                 {
-                                    description: [
-                                        `In preschool, we were taught to tie our shoes by making the`,
-                                        {
-                                            anchor: `bunny crisscross the tree`,
-                                            wiki: `Shoelace_knot`,
-                                        },
-                                        `. But being`,
-                                        {
-                                            anchor: `left-handed`,
-                                            wiki: `Handedness`,
-                                        },
-                                        `, I was never clear on which hand should hold the bunny. My shoelaces always came undone as a result.`,
-                                    ],
+                                    description: `In preschool, we were taught to tie our shoes by making the bunny crisscross the tree. But being left-handed, I was never clear on which hand should hold the bunny. My shoelaces always came undone as a result.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -204,12 +182,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `My ambition for this album was to do for`,
-                        {
-                            anchor: `rock music`,
-                            wiki: `Rock_music`,
-                        },
-                        `what`,
+                        `My ambition for this album was to do for rock music what`,
                         {
                             anchor: `James Joyce`,
                             wiki: `James_Joyce`,
@@ -298,10 +271,10 @@ export default {
                     description: [
                         `I wanted this song to capture the flurry of activity and transience of emotion that a child experiences in a single day. So as the rhythm jumps in and out of a`,
                         {
-                            anchor: `half-time beat`,
+                            anchor: `half-time`,
                             wiki: `Half-time_(music)`,
                         },
-                        `, the chord progression endlessly modulates between the`,
+                        `beat, the chord progression endlessly modulates between the`,
                         {
                             anchor: `distantly related keys`,
                             wiki: `Closely_related_key`,
@@ -375,17 +348,7 @@ export default {
                             anchor: `decked in overalls`,
                             card: {
                                 description: [
-                                    `Since I was the smallest boy in my grade, the only item of clothing that fit me was a pair of girls'`,
-                                    {
-                                        anchor: `overalls`,
-                                        wiki: `Overalls`,
-                                    },
-                                    `from the`,
-                                    {
-                                        anchor: `lost and found`,
-                                        wiki: `Lost_and_found`,
-                                    },
-                                    `closet.`,
+                                    `Since I was the smallest boy in my grade, the only item of clothing that fit me was a pair of girls' overalls from the lost-and-found closet.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -463,17 +426,7 @@ export default {
                             problem: `Keep working on before review.`,
                             card: {
                                 description: [
-                                    `Like other Taiwanese teenagers of her generation, my mother prized all things labeled American, despite not knowing exactly what that entailed. Their only exposure was through a bootleg industry that recycled the relics of America's past. And so my sister and I grew up listening to my mother's old`,
-                                    {
-                                        anchor: `country`,
-                                        wiki: `Country_music`,
-                                    },
-                                    `records and sharing her fondness for old`,
-                                    {
-                                        anchor: `Westerns`,
-                                        wiki: `Western_(genre)`,
-                                    },
-                                    `.`,
+                                    `Like other Taiwanese teenagers of her generation, my mother prized all things labeled American, despite not knowing exactly what that entailed. Their only exposure was through a bootleg industry that recycled the relics of America's past. And so my sister and I grew up listening to my mother's old country records and sharing her fondness for old Western movies.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -543,17 +496,7 @@ export default {
                             anchor: `thumb pianos`,
                             wiki: `Mbira`,
                         },
-                        `that characterize`,
-                        {
-                            anchor: `children's music`,
-                            wiki: `Children's_music`,
-                        },
-                        `, I dampened the lead`,
-                        {
-                            anchor: `guitar`,
-                            wiki: `Guitar`,
-                        },
-                        `strings by wrapping strips of tissue around them near the bridge.`,
+                        `that characterize children's music, I dampened the lead guitar strings by wrapping strips of tissue around them near the bridge.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -657,12 +600,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `As home studios became more affordable in the early 00s, I sensed that a wave of artists would soon take the field of`,
-                        {
-                            anchor: `music recording`,
-                            wiki: `Sound_recording_and_reproduction`,
-                        },
-                        `to new heights, as`,
+                        `As home studios became more affordable in the early 00s, I sensed that a wave of artists would soon take the field of music recording to new heights, as`,
                         {
                             anchor: `Brian Wilson`,
                             wiki: `Brian_Wilson`,

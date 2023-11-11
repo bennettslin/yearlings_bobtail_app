@@ -240,7 +240,7 @@ export default {
                                 description: [
                                     `Sasha is prepped in more than one sense, since she's preparing to begin enrollment at a`,
                                     {
-                                        anchor: `preparatory school`,
+                                        anchor: `prep school`,
                                         wiki: `College-preparatory_school`,
                                     },
                                     `in Boston.`,
@@ -341,12 +341,7 @@ export default {
                             anchor: `he's getting you`,
                             card: {
                                 description: [
-                                    `Every boy that Sasha crushed on was`,
-                                    {
-                                        anchor: `Jewish`,
-                                        wiki: `Judaism`,
-                                    },
-                                    `, which then motivated her to be a better Jew. But I could never help strengthen her faith myself, so I would always be at a disadvantage in "getting" her.`,
+                                    `Every boy that Sasha crushed on was Jewish, which then motivated her to be a better Jew. But I could never help strengthen her faith myself, so I would always be at a disadvantage in "getting" her.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -530,12 +525,7 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `Some overprotective parents strap their toddlers into a`,
-                                        {
-                                            anchor: `harness`,
-                                            wiki: `Child_harness`,
-                                        },
-                                        `for safety. As such, older children who can't fend for themselves might be mocked by their peers as having been kept on a tether their whole lives.`,
+                                        `Some overprotective parents strap their toddlers into a harness for safety. As such, older children who can't fend for themselves might be mocked by their peers as having been kept on a tether their whole lives.`,
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
@@ -651,12 +641,7 @@ export default {
                                         anchor: `Canadian accent`,
                                         wiki: `Canadian_raising`,
                                     },
-                                    `.`,
-                                    {
-                                        anchor: `Canadians`,
-                                        wiki: `Canada`,
-                                    },
-                                    `, of course, are affectionately known as`,
+                                    `. Canadians, of course, are affectionately known as`,
                                     {
                                         anchor: `Canucks`,
                                         wiki: `Canuck`,
@@ -742,12 +727,7 @@ export default {
                                         anchor: `opossum`,
                                         wiki: `Opossum`,
                                     },
-                                    `will remain comatose to create the impression of being dead, an act known as`,
-                                    {
-                                        anchor: `playing possum`,
-                                        wiki: `Apparent_death`,
-                                    },
-                                    `. Similarly, my only recourse in the coming years is to stay unresponsive to threats and hope for the best.`,
+                                    `will remain comatose to create the impression of being dead. Similarly, my only recourse in the coming years is to stay unresponsive to threats and hope for the best.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
