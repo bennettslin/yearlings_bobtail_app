@@ -153,8 +153,7 @@ export default {
                         `for this kid wearing no`,
                         {
                             anchor: `decoder ring`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: [
                                     {
@@ -356,8 +355,7 @@ export default {
                         `for the`,
                         {
                             anchor: `innermost matryoshka`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: [
                                     `Flashback to our first date, when Sita and I have arrived at a natural history museum. We begin by strolling past a display of Russian nesting dolls, known as`,
@@ -403,7 +401,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `A friend once told me that if I can keep a woman cracking up all night, then I'll always be good for another date. Not being quick-witted, I tried to achieve this by having goofy mannerisms.`,
+                                description: `A friend once told me that if I can keep a woman cracking up all night, then I'll always be good for another date. Not being quick-witted, I just hoped for the best with my goofy mannerisms.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -670,7 +668,7 @@ export default {
                         {
                             anchor: `understudy sought`,
                             todo: true,
-                            problem: `Good enough?`,
+                            problem: `Review one more time.`,
                             cards: [
                                 {
                                     description: [
@@ -683,14 +681,7 @@ export default {
                                     ],
                                 },
                                 {
-                                    description: [
-                                        `Dating while low status is like being an understudy: You undertake all the same preparation, yet see little of the same action. So at some point, I decided to be proactive and seek out opportunities, like a freelancer advertising on a`,
-                                        {
-                                            anchor: `cork board`,
-                                            wiki: `Bulletin_board`,
-                                        },
-                                        `.`,
-                                    ],
+                                    description: `Dating while low status is like being an understudy, in that you undertake all the same preparation, yet see little of the same action. So I needed to be proactive and seek out more opportunities, like a freelancer posting their phone number on a cork board.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [OBSERVATION]: true,
@@ -725,7 +716,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `In time I came to adopt the shotgun approach to dating, which involves hitting on anyone at any moment. It works because the math is on your side. Even if your success rate remains dismal, you're increasing the sample size, which gives you a better chance of having at least one person say yes to a date. And, of course, one yes is all you're really hoping for.`,
+                                description: `In time I came to adopt the shotgun approach to dating, which involves hitting on anyone at any moment. It works because the math is on your side. Even if your success rate remains dismal, you're increasing the sample size, which gives you a better chance of having at least one person say yes to a date. And, of course, one yes is all you need.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -896,8 +887,7 @@ export default {
                         `always rides in`,
                         {
                             anchor: `single go-karts`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: [
                                     `On our third date, Sita and I visit a`,
