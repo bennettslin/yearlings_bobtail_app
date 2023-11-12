@@ -179,24 +179,14 @@ export default {
                             problem: `Review one more time.`,
                             cards: [
                                 {
-                                    description: `During my college years, I would ask older coworkers to buy cheap beer for me, which is how I was able to keep a stack of twelve-packs in my room. And before every date, I would down a few cans.`,
+                                    description: `During my college years, I would ask older coworkers to buy me twelve-packs of cheap beer, which I then lugged back to my apartment. So before every date, I would down a few cans.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
                                 },
                                 {
                                     description: [
-                                        `Due to trade rivalries between the`,
-                                        {
-                                            anchor: `British`,
-                                            wiki: `United_Kingdom`,
-                                        },
-                                        `and`,
-                                        {
-                                            anchor: `Dutch`,
-                                            wiki: `Netherlands`,
-                                        },
-                                        `in the 17th century, several idioms in the English language employ the term "Dutch" as a pejorative.`,
+                                        `Due to trade rivalries between the British and Dutch in the 17th century, several idioms in the English language employ the term "Dutch" as a pejorative.`,
                                         {
                                             anchor: `Dutch courage`,
                                             wiki: `Dutch_courage`,
@@ -308,12 +298,7 @@ export default {
                         review: true,
                         card: {
                             description: [
-                                `The fear of being steered in unknown directions has kept me on edge throughout this date. But nearby is a`,
-                                {
-                                    anchor: `storm drain`,
-                                    wiki: `Storm_drain`,
-                                },
-                                `that flows into the ocean, and I'm reminded of all the`,
+                                `The fear of being steered in unknown directions has kept me on edge throughout this date. But nearby is a storm drain that flows into the ocean, and I'm reminded of all the`,
                                 {
                                     anchor: `barnacles`,
                                     wiki: `Barnacle`,
@@ -399,7 +384,7 @@ export default {
                         {
                             anchor: `crack up another doll`,
                             todo: true,
-                            problem: `Relate this to leaning into Catherine's sense of humor.`,
+                            problem: `Relate this to leaning into Catherine's sense of humor. Unfortunately, puns are more likely to drawn groans rather than laughs.`,
                             card: {
                                 description: `A friend once told me that if I can keep a woman cracking up all night, then I'll always be good for another date. Not being quick-witted, I just hoped for the best with my goofy mannerisms.`,
                                 dotKeys: {
@@ -446,12 +431,7 @@ export default {
                                         anchor: `Piltdown Man`,
                                         wiki: `Piltdown_Man`,
                                     },
-                                    `, a paleontological hoax in which an`,
-                                    {
-                                        anchor: `orangutan`,
-                                        wiki: `Orangutan`,
-                                    },
-                                    `'s oversized jaw was attached to a modern human's skull. Meanwhile, in my attempts to impress Sita, I have to hope that the words escaping my mouth don't betray the undersized volume of my head.`,
+                                    `, a paleontological hoax in which an orangutan's oversized jaw was attached to a modern human's skull. Meanwhile, in my attempts to impress Sita, I have to hope that the words escaping my mouth don't betray the undersized volume of my head.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -567,16 +547,16 @@ export default {
                         {
                             anchor: `pidgin palaver`,
                             todo: true,
-                            problem: `Review one more time.`,
+                            problem: `Does this really say what I want it to?`,
                             cards: [
                                 {
                                     description: [
-                                        `Stopping to rest our feet in a gallery devoted to Native American history, we learn about the development of`,
+                                        `Stopping to rest our feet in a gallery devoted to Native American history, we learn about`,
                                         {
                                             anchor: `pidgins`,
                                             wiki: `Pidgin`,
                                         },
-                                        `, or impromptu languages that arose to facilitate trade between colonists and natives. Such exchanges required words of goodwill to make up for inevitable miscommunication, much like my conversations with Sita on this date.`,
+                                        `, or impromptu languages that arise to ease trade between colonists and natives. Such exchanges required words of goodwill to make up for inevitable miscommunication, much like my conversations with Sita on this date.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -601,7 +581,7 @@ export default {
                             todo: true,
                             problem: `Still too disjointed.`,
                             card: {
-                                description: `On our second date, Sita takes me to see her friend act in a play. While we chat with him beforehand, I struggle to get a word in edgewise, which leaves me feeling insecure.`,
+                                description: `For our second date, Sita takes me to see her friend act in a play. Before it begins, we chat with him backstage. Given their rapport, I struggle to get a word in edgewise, which leaves me feeling insecure.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -680,7 +660,7 @@ export default {
                                     ],
                                 },
                                 {
-                                    description: `Dating while low status is like being an understudy, in that you undertake all the same preparation, yet see little of the same action. So I needed to be proactive and seek out more opportunities, like a freelancer posting their phone number on a cork board.`,
+                                    description: `Dating while low status is like being an understudy, in that you undertake all the same preparation, yet see little of the same action. At some point, then, I decided to seek out more opportunities, like a freelancer advertising on a cork board.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [OBSERVATION]: true,
