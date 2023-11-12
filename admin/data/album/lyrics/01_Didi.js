@@ -51,12 +51,7 @@ export default {
                             anchor: `Nationalists`,
                             wiki: `Kuomintang`,
                         },
-                        `took over in 1949, they made Mandarin Chinese the official language. So the`,
-                        {
-                            anchor: `Taiwanese`,
-                            wiki: `Taiwanese_Hokkien`,
-                        },
-                        `we spoke at home included a few Chinese words, such as`,
+                        `took over in 1949, they made Mandarin Chinese the official language. So the Taiwanese we spoke at home included a few Chinese words, such as`,
                         {
                             isItalic: true,
                             lyric: `didi`,

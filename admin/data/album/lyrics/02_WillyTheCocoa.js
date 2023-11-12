@@ -1005,16 +1005,7 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `Since an "`,
-                                        {
-                                            anchor: `imp`,
-                                            wiki: `Imp`,
-                                        },
-                                        {
-                                            anchor: `runt`,
-                                            wiki: `Runt`,
-                                        },
-                                        `" is literally the weakest member in a litter of troll infants, it's surely the one that a troll parent would try to replace with a stolen human child.`,
+                                        `Since an "imp runt" is literally the weakest member in a litter of troll infants, it's surely the one that a troll parent would try to replace with a stolen human child.`,
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
