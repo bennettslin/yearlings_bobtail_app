@@ -760,17 +760,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `At our middle school, students who completed two years of`,
-                                        {
-                                            anchor: `French`,
-                                            wiki: `French_language`,
-                                        },
-                                        `were eligible to attend a summer program in the city of`,
-                                        {
-                                            anchor: `Paris`,
-                                            wiki: `Paris`,
-                                        },
-                                        `. This excited Sasha, and so it excited me as well.`,
+                                        `At our middle school, students who completed two years of French were eligible to attend a summer program in the city of Paris. This excited Sasha, and so it excited me as well.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -813,14 +803,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: [
-                        `Since the`,
-                        {
-                            anchor: `drum`,
-                            wiki: `Drum_kit`,
-                        },
-                        `parts I scored for this song were far more advanced than what I could play, I had to try several workarounds. I ended up recording the kick, snare, and toms in separate takes from the cymbals.`,
-                    ],
+                    description: `Since the drum parts I scored for this song were far more advanced than what I could play, I had to try several workarounds. I ended up recording the kick, snare, and toms in separate takes from the cymbals.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
@@ -1195,17 +1178,7 @@ export default {
                             anchor: `yellow-taped grills`,
                             card: {
                                 description: [
-                                    `To prevent beachgoers from wading in the shark-infested waters,`,
-                                    {
-                                        anchor: `barricade tape`,
-                                        wiki: `Barricade_tape`,
-                                    },
-                                    `has been tied onto the`,
-                                    {
-                                        anchor: `barbecue grills`,
-                                        wiki: `Barbecue_grill`,
-                                    },
-                                    `that line the shore.`,
+                                    `To prevent beachgoers from wading in the shark-infested waters, barricade tape has been tied onto the barbecue grills that line the shore.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1726,17 +1699,7 @@ export default {
                             anchor: `his litter`,
                             card: {
                                 description: [
-                                    `It isn't just Odin's unused`,
-                                    {
-                                        anchor: `cat litter`,
-                                        wiki: `Litter_box`,
-                                    },
-                                    `that was swept aside. Gone is any chance for him to sire a`,
-                                    {
-                                        anchor: `litter`,
-                                        wiki: `Litter_(zoology)`,
-                                    },
-                                    `of his own.`,
+                                    `It isn't just Odin's unused cat litter that was swept aside. Gone is any chance for him to sire a litter of his own.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1775,18 +1738,7 @@ export default {
                             anchor: `Thursday's child`,
                             properNoun: true,
                             card: {
-                                description: [
-                                    {
-                                        anchor: `Wednesday`,
-                                        wiki: `Wednesday`,
-                                    },
-                                    `means "Odin's day" in Old English, and I was born on a`,
-                                    {
-                                        anchor: `Thursday`,
-                                        wiki: `Thursday`,
-                                    },
-                                    `. So my day literally begins where Odin's day ends.`,
-                                ],
+                                description: `Wednesday means "Odin's day" in Old English, and I was born on a Thursday . So my day literally begins where Odin's day ends.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -1881,12 +1833,7 @@ export default {
                             isItalic: true,
                             lyric: `Yearling's Bobtail`,
                         },
-                        `wouldn't get any attention from the indie press, I moved to`,
-                        {
-                            anchor: `New York City`,
-                            wiki: `New_York_City`,
-                        },
-                        `to regain my bearings. There, Sasha and I reconnected, and we started dating. She put me on the conversion path, while I volunteered to study Hebrew. But… we didn't last. Though I'd really hoped to reinvent myself, my behavior lagged behind my intentions.`,
+                        `wouldn't get any attention from the indie press, I moved to New York City to regain my bearings. There, Sasha and I reconnected, and we started dating. She put me on the conversion path, while I volunteered to study Hebrew. But… we didn't last. Though I'd really hoped to reinvent myself, my behavior lagged behind my intentions.`,
                     ],
                     dotKeys: {
                         [AFTERWORD]: true,
