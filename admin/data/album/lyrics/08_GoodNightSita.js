@@ -650,6 +650,13 @@ export default {
                             problem: `Review one more time.`,
                             cards: [
                                 {
+                                    description: `Dating while low status is like being an understudy, in that you undertake all the same preparation, yet see little of the same action. And so I needed to proactively seek out opportunities, like a freelancer advertising their services on a cork board.`,
+                                    dotKeys: {
+                                        [BACKSTORY]: true,
+                                        [OBSERVATION]: true,
+                                    },
+                                },
+                                {
                                     description: [
                                         `In theater, an`,
                                         {
@@ -658,13 +665,6 @@ export default {
                                         },
                                         `is a performer who serves as a replacement on short notice.`,
                                     ],
-                                },
-                                {
-                                    description: `Dating while low status is like being an understudy, in that you undertake all the same preparation, yet see little of the same action. And so I needed to proactively seek out opportunities, like a freelancer advertising their services on a cork board.`,
-                                    dotKeys: {
-                                        [BACKSTORY]: true,
-                                        [OBSERVATION]: true,
-                                    },
                                 },
                             ],
                         },

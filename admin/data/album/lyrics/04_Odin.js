@@ -109,12 +109,7 @@ export default {
                                             anchor: `Sodom`,
                                             wiki: `Sodom_and_Gomorrah`,
                                         },
-                                        `. When`,
-                                        {
-                                            anchor: `his wife`,
-                                            wiki: `Lot's_wife`,
-                                        },
-                                        `looked back, she was turned into a pillar of salt. This story can be interpreted as a cautionary tale, warning the faithful not to cohabit with the fallen.`,
+                                        `. When his wife looked back, she was turned into a pillar of salt. This story can be interpreted as a cautionary tale, warning the faithful not to cohabit with the fallen.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -150,12 +145,7 @@ export default {
                                         isItalic: true,
                                         lyric: `Tref`,
                                     },
-                                    `is`,
-                                    {
-                                        anchor: `Yiddish`,
-                                        wiki: `Yiddish`,
-                                    },
-                                    `for anything that isn't`,
+                                    `is Yiddish for anything that isn't`,
                                     {
                                         anchor: `kosher`,
                                         wiki: `Kashrut`,
@@ -190,12 +180,7 @@ export default {
                             anchor: `Indifferent galaxies`,
                             card: {
                                 description: [
-                                    `The`,
-                                    {
-                                        anchor: `Buddhism`,
-                                        wiki: `Buddhism`,
-                                    },
-                                    `of my upbringing didn't make much sense to me, partly because it clashed with the various faiths of my classmates. At the same time, it didn't make any more sense for them to be right, and my parents wrong. So with all beliefs equally suspect, I could only conceive of the universe as a limitless stretch of cold, empty space, in which we live and die to no greater concern.`,
+                                    `The Buddhism of my upbringing didn't make much sense to me, partly because it clashed with the various faiths of my classmates. At the same time, it didn't make any more sense for them to be right, and my parents wrong. So with all beliefs equally suspect, I could only conceive of the universe as a limitless stretch of cold, empty space, in which we live and die to no greater concern.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -412,17 +397,7 @@ export default {
                             anchor: `trading breath's bliss`,
                             card: {
                                 description: [
-                                    `Like most`,
-                                    {
-                                        anchor: `amphibians`,
-                                        wiki: `Amphibian`,
-                                    },
-                                    `,`,
-                                    {
-                                        anchor: `salamanders`,
-                                        wiki: `Salamander`,
-                                    },
-                                    `begin life underwater, then lose their gills and develop lungs to live on land. I always wondered if this process of`,
+                                    `Like most amphibians, salamanders begin life underwater, then lose their gills and develop lungs to live on land. I always wondered if this process of`,
                                     {
                                         anchor: `metamorphosis`,
                                         wiki: `Metamorphosis`,
@@ -493,27 +468,7 @@ export default {
                             anchor: `oriental`,
                             card: {
                                 description: [
-                                    `The word "`,
-                                    {
-                                        anchor: `Oriental`,
-                                        wiki: `Orient`,
-                                    },
-                                    `" wasn't a pejorative when I was growing up. It's even printed on my birth certificate. It became`,
-                                    {
-                                        anchor: `politically incorrect`,
-                                        wiki: `Political_correctness`,
-                                    },
-                                    `at around the same time that "`,
-                                    {
-                                        anchor: `queer`,
-                                        wiki: `Queer`,
-                                    },
-                                    `" was being reclaimed by the`,
-                                    {
-                                        anchor: `gay community`,
-                                        wiki: `LGBT_community`,
-                                    },
-                                    `. The latter tactic always made more sense to me.`,
+                                    `The word "Oriental" wasn't a pejorative when I was growing up. It's even printed on my birth certificate. It became politically incorrect at around the same time that "queer" was being reclaimed by the gay community. The latter tactic always made more sense to me.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -540,17 +495,7 @@ export default {
                                             anchor: `Book of Judges`,
                                             wiki: `Book_of_Judges`,
                                         },
-                                        `tells of a battle in which`,
-                                        {
-                                            anchor: `Israelite`,
-                                            wiki: `Israelites`,
-                                        },
-                                        `warriors scoured the plains afterward, asking stragglers to pronounce the`,
-                                        {
-                                            anchor: `Hebrew`,
-                                            wiki: `Hebrew_language`,
-                                        },
-                                        `word for a stream. Because the enemy tribe lacked the "sh" sound in their dialect, they would out themselves by pronouncing the word as "sibboleth," just as I do here in the recording.`,
+                                        `tells of a battle in which Israelite warriors scoured the plains afterward, asking stragglers to pronounce the Hebrew word for a stream. Because the enemy tribe lacked the "sh" sound in their dialect, they would out themselves by pronouncing the word as "sibboleth," just as I do here in the recording.`,
                                     ],
                                 ],
                                 dotKeys: {
@@ -846,17 +791,7 @@ export default {
                                         anchor: `The apple of one's eye`,
                                         wiki: `Apple_of_my_eye`,
                                     },
-                                    `" is an`,
-                                    {
-                                        anchor: `Old English`,
-                                        wiki: `Old_English`,
-                                    },
-                                    `misreading of a`,
-                                    {
-                                        anchor: `Biblical Hebrew`,
-                                        wiki: `Biblical_Hebrew`,
-                                    },
-                                    `idiom that more accurately translates to "the ball of one's eye." My hope that I could be the object of Sasha's affection was based on a similar misreading.`,
+                                    `" is an Old English misreading of a Biblical Hebrew idiom that more accurately translates to "the ball of one's eye." My hope that I could be the object of Sasha's affection was based on a similar misreading.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -907,17 +842,7 @@ export default {
                                         anchor: `Adam`,
                                         wiki: `Adam`,
                                     },
-                                    `ate the`,
-                                    {
-                                        anchor: `forbidden fruit`,
-                                        wiki: `Forbidden_fruit`,
-                                    },
-                                    `of knowledge, a piece lodged in his throat to mark all his descendants with a reminder of their`,
-                                    {
-                                        anchor: `original sin`,
-                                        wiki: `Original_sin`,
-                                    },
-                                    `. Similarly, my knowledge of where I stood with Sasha left me to feel a permanent lump in my throat.`,
+                                    `ate the forbidden fruit of knowledge, a piece lodged in his throat to mark all his descendants with a reminder of their original sin. Similarly, my knowledge of where I stood with Sasha left me to feel a permanent lump in my throat.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -985,12 +910,7 @@ export default {
                                         anchor: `Humane Society`,
                                         wiki: `The_Humane_Society_of_the_United_States`,
                                     },
-                                    `, which offers pet`,
-                                    {
-                                        anchor: `cremation`,
-                                        wiki: `Cremation`,
-                                    },
-                                    `services.`,
+                                    `, which offers pet cremation services.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -1061,12 +981,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `Hope was all that remained in`,
-                                        {
-                                            anchor: `Pandora's box`,
-                                            wiki: `Pandora's_box`,
-                                        },
-                                        `. But upon having the hard truths of the world revealed to me by Sasha, I'm left to feel as hopeless as ever.`,
+                                        `Hope was all that remained in Pandora's box. But upon having the hard truths of the world revealed to me by Sasha, I'm left to feel as hopeless as ever.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -1123,12 +1038,7 @@ export default {
                             anchor: `guard's whistle`,
                             card: {
                                 description: [
-                                    `Wandering the beach in my dream, I notice a steel whistle in the sand that was likely dropped by a`,
-                                    {
-                                        anchor: `lifeguard`,
-                                        wiki: `Lifeguard`,
-                                    },
-                                    `. Its shrill cry to warn of danger is now forever silenced— an omen, perhaps, that some dangers come without warning.`,
+                                    `Wandering the beach in my dream, I notice a steel whistle in the sand that was likely dropped by a lifeguard. Its shrill cry to warn of danger is now forever silenced— an omen, perhaps, that some dangers come without warning.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1347,12 +1257,7 @@ export default {
                             anchor: `pulled your floater away`,
                             card: {
                                 description: [
-                                    `Pining after Sasha was like trying to stare at an off-center`,
-                                    {
-                                        anchor: `floater`,
-                                        wiki: `Floater`,
-                                    },
-                                    `on the surface of my eye. Despite my frantic efforts to bring us closer, her inner world always remained a fixed distance apart from me.`,
+                                    `Pining after Sasha was like trying to stare at an off-center floater on the surface of my eye. Despite my frantic efforts to bring us closer, her inner world always remained a fixed distance apart from me.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1437,17 +1342,7 @@ export default {
                             anchor: `day to die`,
                             card: {
                                 description: [
-                                    `As a child, I suffered from`,
-                                    {
-                                        anchor: `night terrors`,
-                                        wiki: `Night_terror`,
-                                    },
-                                    `related to my fear of death. My mother tried to comfort me with the promise of`,
-                                    {
-                                        anchor: `reincarnation`,
-                                        wiki: `Reincarnation`,
-                                    },
-                                    `, but this only filled me with greater dread. It wasn't just death that frightened me; it was a lifetime of hurtling toward it. All that reincarnation offered was more rounds of the same.`,
+                                    `As a child, I suffered from night terrors related to my fear of death. My mother tried to comfort me with the promise of reincarnation, but this only filled me with greater dread. It wasn't just death that frightened me; it was a lifetime of hurtling toward it. All that reincarnation offered was more rounds of the same.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -1562,15 +1457,10 @@ export default {
                             anchor: `defeat of tortoise`,
                             card: {
                                 description: [
-                                    `The`,
-                                    {
-                                        anchor: `tortoise defeats the hare`,
-                                        wiki: `The_Tortoise_and_the_Hare`,
-                                    },
-                                    `in`,
+                                    `The tortoise defeats the hare in`,
                                     {
                                         anchor: `Aesop's fable`,
-                                        wiki: `Aesop's_Fables`,
+                                        wiki: `The_Tortoise_and_the_Hare`,
                                     },
                                     `, but only because the hare falls asleep. Similarly, while tortoises live for over a century, I had them beat in longevity— so long as I didn't sleep on choosing the right faith.`,
                                 ],
@@ -1626,12 +1516,7 @@ export default {
                                         anchor: `Moses`,
                                         wiki: `Moses`,
                                     },
-                                    `led the Israelites out of slavery. By`,
-                                    {
-                                        anchor: `parting the Red Sea`,
-                                        wiki: `Crossing_the_Red_Sea`,
-                                    },
-                                    `, he allowed them to escape Egypt on foot.`,
+                                    `led the Israelites out of slavery. By parting the Red Sea, he allowed them to escape Egypt on foot.`,
                                 ],
                             },
                         },
