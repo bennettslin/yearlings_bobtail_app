@@ -322,7 +322,7 @@ export default {
                                         anchor: `pupa`,
                                         wiki: `Pupa`,
                                     },
-                                    `that petrified into a fossil before it ever had a chance to molt.`,
+                                    `that petrified into a fossil before it had a chance to molt.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -632,8 +632,7 @@ export default {
                         `, so now I`,
                         {
                             anchor: `talk Canuck`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: [
                                     `The chokehold incident actually did happen, and it left me with a dislocated jaw. For a long time afterward, I had to clench my jaw to avoid pain when speaking, which led to an odd manner of pronunciation that some to this day mistake for a`,
@@ -681,8 +680,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
-                problem: `Review one more time.`,
+                review: true,
                 card: {
                     description: `It's easy to write songs by coming up with a four-chord loop, then layering a melody on top. But my theory was that the Beatles wrote the melody and chords together, one measure at a time, as an indivisible whole— and so I aspired to do the same. I was always happiest with results like the chorus here, where the music wanders for a long stretch without looping back, resulting in an odd number of measures.`,
                     dotKeys: {

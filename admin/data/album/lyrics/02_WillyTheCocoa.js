@@ -1169,7 +1169,7 @@ export default {
                                         anchor: `lazy eye`,
                                         wiki: `Amblyopia`,
                                     },
-                                    `. Since I lacked depth perception, it wasn't a struggle for me to recreate on paper what I saw in real life. Impressed by my drawing skills, my mother insisted that I was destined to be a great artist. This planted the idea in my head that I might one day create a masterpiece— perhaps something like the`,
+                                    `. Since I lacked depth perception, it wasn't a struggle for me to recreate on paper what I saw in real life. Impressed by my drawing skills, my mother insisted that I was destined to be a great artist. So I always figured that one day I would create a masterpiece— perhaps something like the`,
                                     {
                                         anchor: `Tintin`,
                                         wiki: `The_Adventures_of_Tintin`,
