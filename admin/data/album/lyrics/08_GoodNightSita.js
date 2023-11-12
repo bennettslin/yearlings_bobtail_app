@@ -179,7 +179,7 @@ export default {
                             problem: `Review one more time.`,
                             cards: [
                                 {
-                                    description: `During my college years, I would ask older coworkers to buy me twelve-packs of cheap beer, which I then lugged back to my apartment. So before every date, I would down a few cans.`,
+                                    description: `During my college years, I would ask older coworkers to buy me twelve-packs of cheap beer, which I then lugged back to my apartment. So I always had some on hand, and before every date, I would down a few cans.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -384,9 +384,9 @@ export default {
                         {
                             anchor: `crack up another doll`,
                             todo: true,
-                            problem: `Relate this to leaning into Catherine's sense of humor. Unfortunately, puns are more likely to drawn groans rather than laughs.`,
+                            problem: `Keep working on this.`,
                             card: {
-                                description: `A friend once told me that if I can keep a woman cracking up all night, then I'll always be good for another date. Not being quick-witted, I just hoped for the best with my goofy mannerisms.`,
+                                description: `A friend once told me that if I can keep a woman cracking up, then I'll always be good for another date. My sense of humor was largely shaped to cater to Catherine's love of clever puns, however, and puns tend to draw groans, not laughs. So I tried my best with goofy mannerisms.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -431,7 +431,7 @@ export default {
                                         anchor: `Piltdown Man`,
                                         wiki: `Piltdown_Man`,
                                     },
-                                    `, a paleontological hoax in which an orangutan's oversized jaw was attached to a modern human's skull. Meanwhile, in my attempts to impress Sita, I have to hope that the words escaping my mouth don't betray the undersized volume of my head.`,
+                                    `, a paleontological hoax in which the oversized jaw of an orangutan was attached to a human skull. Meanwhile, in my attempts to impress Sita, I have to hope that the words coming from my mouth don't betray the undersized volume of my head.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -464,7 +464,7 @@ export default {
                         {
                             anchor: `defined by ambrosia beers`,
                             todo: true,
-                            problem: `Connect this to Catherine's sense of humor.`,
+                            problem: `Connect this to Catherine's sense of humor. Always on the lookout for literary sources of clever humor, but the jokes were both too cynical and outdated to give me pointers.`,
                             cards: [
                                 {
                                     description: [
@@ -579,7 +579,7 @@ export default {
                         {
                             anchor: `disastrous play`,
                             todo: true,
-                            problem: `Still too disjointed.`,
+                            problem: `Review one more time.`,
                             card: {
                                 description: `For our second date, Sita takes me to see her friend act in a play. Before it begins, we chat with him backstage. Given their rapport, I struggle to get a word in edgewise, which leaves me feeling insecure.`,
                                 dotKeys: {
@@ -660,7 +660,7 @@ export default {
                                     ],
                                 },
                                 {
-                                    description: `Dating while low status is like being an understudy, in that you undertake all the same preparation, yet see little of the same action. At some point, then, I decided to seek out more opportunities, like a freelancer advertising on a cork board.`,
+                                    description: `Dating while low status is like being an understudy, in that you undertake all the same preparation, yet see little of the same action. And so I needed to proactively seek out opportunities, like a freelancer advertising their services on a cork board.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [OBSERVATION]: true,
@@ -981,9 +981,9 @@ export default {
                         {
                             anchor: `dummy steering wheel`,
                             todo: true,
-                            problem: `Keep working on this.`,
+                            problem: `Keep working on this. I'm contradicting myself by saying that too much is at stake. Maybe make this a narrative about the current date.`,
                             card: {
-                                description: `Any semblance of being in control on a date was an illusion. But I would grip it tightly all the same, like a child clutching the passenger steering wheel in a twin go-kart. There was just too much at stake for me to ever let go and embrace spontaneity.`,
+                                description: `Any semblance of being in control on a date was always an illusion. But I would still grip it tightly, like a child clutching the passenger steering wheel in a twin go-kart. There was just too much at stake for me to ever let go and embrace spontaneity.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
