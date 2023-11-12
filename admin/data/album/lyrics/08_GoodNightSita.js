@@ -179,7 +179,7 @@ export default {
                             problem: `Review one more time.`,
                             cards: [
                                 {
-                                    description: `During my college years, I would ask older coworkers to buy cheap beer for me, which enabled me to keep a stack of twelve-packs in my room. Before every date, I would down a few cans.`,
+                                    description: `During my college years, I would ask older coworkers to buy cheap beer for me, which is how I was able to keep a stack of twelve-packs in my room. And before every date, I would down a few cans.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -399,7 +399,7 @@ export default {
                         {
                             anchor: `crack up another doll`,
                             todo: true,
-                            problem: `Review one more time.`,
+                            problem: `Relate this to leaning into Catherine's sense of humor.`,
                             card: {
                                 description: `A friend once told me that if I can keep a woman cracking up all night, then I'll always be good for another date. Not being quick-witted, I just hoped for the best with my goofy mannerisms.`,
                                 dotKeys: {
@@ -420,7 +420,7 @@ export default {
                             problem: `Review one more time.`,
                             cards: [
                                 {
-                                    description: `As we pass a display on the butterfly lifecycle, it occurs to me that what I seek in a partner is a chrysalis— that is to say, someone so new to this world that my own lack of worldliness wouldn't need to be an issue.`,
+                                    description: `As we pass a display on the butterfly lifecycle, it occurs to me that what I seek in a partner is a chrysalis— that is to say, someone so new to this world that my own lack of worldliness wouldn't have to be an issue.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [OBSERVATION]: true,
@@ -451,7 +451,7 @@ export default {
                                         anchor: `orangutan`,
                                         wiki: `Orangutan`,
                                     },
-                                    `'s oversized jaw was attached to a modern human's skull. Meanwhile, in attempting to impress Sita, I have to hope that the words escaping my mouth don't betray the undersized volume of my head.`,
+                                    `'s oversized jaw was attached to a modern human's skull. Meanwhile, in my attempts to impress Sita, I have to hope that the words escaping my mouth don't betray the undersized volume of my head.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -484,7 +484,7 @@ export default {
                         {
                             anchor: `defined by ambrosia beers`,
                             todo: true,
-                            problem: `Review one more time.`,
+                            problem: `Connect this to Catherine's sense of humor.`,
                             cards: [
                                 {
                                     description: [
@@ -645,8 +645,7 @@ export default {
                         `for if the`,
                         {
                             anchor: `tactic is to stall`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: `My friends would advise me to wait three days before calling a woman back. And yet, it was always agony when she invariably did the same to me.`,
                                 dotKeys: {
@@ -713,8 +712,7 @@ export default {
                         `then wise up and`,
                         {
                             anchor: `learn to shotgun`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: `In time I came to adopt the shotgun approach to dating, which involves hitting on anyone at any moment. It works because the math is on your side. Even if your success rate remains dismal, you're increasing the sample size, which gives you a better chance of having at least one person say yes to a date. And, of course, one yes is all you need.`,
                                 dotKeys: {
