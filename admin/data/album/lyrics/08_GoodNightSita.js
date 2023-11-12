@@ -175,8 +175,7 @@ export default {
                         {
                             anchor: `Dutch courage`,
                             properNoun: true,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             cards: [
                                 {
                                     description: `During my college years, I would ask older coworkers to buy me twelve-packs of cheap beer, which I then lugged back to my apartment. So I always had some on hand, and before every date, I would down a few cans.`,
@@ -405,7 +404,7 @@ export default {
                             problem: `Review one more time.`,
                             cards: [
                                 {
-                                    description: `As we pass a display on the butterfly lifecycle, it occurs to me that what I seek in a partner is a chrysalis— that is to say, someone so new to this world that my own lack of worldliness wouldn't have to be an issue.`,
+                                    description: `As we pass a display on the butterfly lifecycle, it occurs to me that what I seek in a partner is a chrysalis— that is to say, someone so new to this world that my own lack of worldliness wouldn't be an issue.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [OBSERVATION]: true,
@@ -581,7 +580,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `For our second date, Sita takes me to see her friend act in a play. Before it begins, we chat with him backstage. Given their rapport, I struggle to get a word in edgewise, which leaves me feeling insecure.`,
+                                description: `For our second date, Sita takes me to see her friend act in a play. Before it begins, we chat with him backstage. But I struggle to get a word in edgewise, given their rapport, and this leaves me feeling insecure afterward.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -650,7 +649,7 @@ export default {
                             problem: `Review one more time.`,
                             cards: [
                                 {
-                                    description: `Dating while low status is like being an understudy, in that you undertake all the same preparation, yet see little of the same action. And so I needed to proactively seek out opportunities, like a freelancer advertising their services on a cork board.`,
+                                    description: `Dating while low status is like being an understudy, in that you undertake all the same preparation, yet see little of the same action. So I had to be proactive and seek out opportunities, like a freelancer posting on a cork board.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [OBSERVATION]: true,
@@ -716,7 +715,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `Any time I said something witty that got a good response, I'd be sure to say it again on future dates with different women, like an actor reprising a role. This then eased the sting of rejection, since the less I needed to prepare, the less I had to feel was at stake.`,
+                                description: `Any time I said something witty that got a good response, I'd be sure to say it again on future dates with different women, like an actor reprising a role. This then eased the sting of rejection, since the less I prepared, the less I felt was at stake.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

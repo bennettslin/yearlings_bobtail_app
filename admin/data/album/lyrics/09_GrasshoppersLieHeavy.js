@@ -284,8 +284,7 @@ export default {
                         `to`,
                         {
                             anchor: `fetch her lancet pen`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             cards: [
                                 {
                                     description: [
@@ -294,12 +293,7 @@ export default {
                                             anchor: `diabetic`,
                                             wiki: `Diabetes`,
                                         },
-                                        `, Sita had to monitor her`,
-                                        {
-                                            anchor: `blood sugar level`,
-                                            wiki: `Blood_glucose_monitoring`,
-                                        },
-                                        `. So before meals, she would draw blood from her finger by pricking it with a`,
+                                        `, Sita had to monitor her blood sugar level. So before meals, she would draw blood from her finger by pricking it with a`,
                                         {
                                             anchor: `lancing device`,
                                             wiki: `Blood_lancet`,
@@ -389,8 +383,7 @@ export default {
                         {
                             anchor: `Schwa stickers`,
                             properNoun: true,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             cards: [
                                 {
                                     description: [
