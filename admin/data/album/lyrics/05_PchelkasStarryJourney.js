@@ -47,12 +47,11 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `Pchelka and Mushka were dogs sent into orbit under the`,
                         {
-                            anchor: `Soviet space program`,
+                            anchor: `Pchelka and Mushka`,
                             wiki: `Soviet_space_dogs`,
                         },
-                        `. In this allegorical retelling, I imagine myself as Pchelka and my brother as Mushka.`,
+                        `were dogs sent into orbit under the Soviet space program. In this allegorical retelling, I imagine myself as Pchelka and my brother as Mushka.`,
                     ],
                     dotKeys: {
                         [OBSERVATION]: true,
@@ -88,17 +87,7 @@ export default {
                                                 wiki: `Beautiful_Losers`,
                                             },
                                         },
-                                        `, the character F. tires of getting bullied at the beach. So he signs up for the Charles Axis`,
-                                        {
-                                            anchor: `bodybuilding`,
-                                            wiki: `Bodybuilding`,
-                                        },
-                                        `course advertised in a comic book— only to find out it's Charles Axis who bullies him. This absurd revelation sums up my mood when I reflect on where my own adventures in`,
-                                        {
-                                            anchor: `mail order`,
-                                            wiki: `Mail_order`,
-                                        },
-                                        `ended up taking me.`,
+                                        `, the character F. tires of getting bullied at the beach. So he signs up for the Charles Axis bodybuilding course advertised in a comic book— only to find out it's Charles Axis who bullies him. This absurd revelation sums up my mood when I reflect on where my own adventures in mail order ended up taking me.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -138,24 +127,14 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `In keeping with the`,
-                        {
-                            anchor: `Russian`,
-                            wiki: `Russia`,
-                        },
-                        `theme of dogs in space for this song, two frenetically plucked mandolins capture the essence of the`,
+                        `In keeping with the Russian theme of dogs in space for this song, two frenetically plucked mandolins capture the essence of the`,
                         {
                             anchor: `balalaika`,
                             wiki: `Balalaika`,
                         },
-                        `. Since`,
+                        `. Since Tuva is part of Russia, I added`,
                         {
-                            anchor: `Tuva`,
-                            wiki: `Tuva`,
-                        },
-                        `is a federal state of Russia, I added`,
-                        {
-                            anchor: `throat singing`,
+                            anchor: `Tuvan throat singing`,
                             wiki: `Tuvan_throat_singing`,
                         },
                         `, where overtones in a lone voice sound like accompaniment by a second one. I liked the implication that my brother sings with me in spirit.`,
@@ -293,12 +272,7 @@ export default {
                                             anchor: `white-throated sparrow`,
                                             wiki: `White-throated_sparrow`,
                                         },
-                                        `was in breeding season, and we heard its song everywhere. I found the sound haunting and longed to hear it again ever afterward. "Poor Sam Peabody" is a mnemonic used by`,
-                                        {
-                                            anchor: `birdwatchers`,
-                                            wiki: `Birdwatching`,
-                                        },
-                                        `to mimic the song's cadence and pitch.`,
+                                        `was in breeding season, and we heard its song everywhere. I found the sound haunting and longed to hear it again ever afterward. "Poor Sam Peabody" is a mnemonic used by birdwatchers to mimic the song's cadence and pitch.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -536,17 +510,7 @@ export default {
                                             anchor: `Robert Goddard`,
                                             wiki: `Robert_H._Goddard`,
                                         },
-                                        `ushered in the`,
-                                        {
-                                            anchor: `Space Age`,
-                                            wiki: `Space_Age`,
-                                        },
-                                        `by inventing the`,
-                                        {
-                                            anchor: `liquid-fueled rocket`,
-                                            wiki: `Liquid-propellant_rocket`,
-                                        },
-                                        `. But in my case, I couldn't wait for a more promising age to arrive on its own. Middle school was brutal and felt endless; I needed answers right then.`,
+                                        `ushered in the Space Age by inventing the liquid-fueled rocket. But in my case, I couldn't wait for a more promising age to arrive on its own. Middle school was brutal and felt endless; I needed answers right then.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -610,17 +574,7 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `Didi and Gogo are the respective pet names of`,
-                                        {
-                                            anchor: `Vladimir`,
-                                            wiki: `Vladimir_(Waiting_for_Godot)`,
-                                        },
-                                        `and`,
-                                        {
-                                            anchor: `Estragon`,
-                                            wiki: `Estragon`,
-                                        },
-                                        `, the two tramps who are still waiting for Godot at the end of Beckett's play.`,
+                                        `Didi and Gogo are the respective pet names of Vladimir and Estragon, the two tramps who are still waiting for Godot by the end of Beckett's play.`,
                                     ],
                                 },
                             ],
@@ -658,12 +612,12 @@ export default {
                                         anchor: `Huntsville, Alabama`,
                                         wiki: `Huntsville,_Alabama`,
                                     },
-                                    `is where the`,
+                                    `is where the largest`,
                                     {
-                                        anchor: `largest NASA center`,
-                                        wiki: `Marshall_Space_Flight_Center`,
+                                        anchor: `NASA`,
+                                        wiki: `NASA`,
                                     },
-                                    `is located.`,
+                                    `center is located.`,
                                 ],
                             },
                         },
@@ -676,6 +630,8 @@ export default {
                         `dragged to sled by`,
                         {
                             anchor: `hunter's belt`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             cards: [
                                 {
                                     description: `Sadly, a belt can be used to instill obedience in wayward animals.`,
@@ -695,17 +651,12 @@ export default {
                                             anchor: `Canis Minor`,
                                             wiki: `Canis_Minor`,
                                         },
-                                        `, or "greater dog" and "lesser dog," are said to follow that of`,
+                                        `, meaning "greater dog" and "lesser dog," are said to follow that of`,
                                         {
                                             anchor: `Orion`,
-                                            wiki: `Orion_(constellation)`,
-                                        },
-                                        `, named after`,
-                                        {
-                                            anchor: `the hunter`,
                                             wiki: `Orion_(mythology)`,
                                         },
-                                        `in Greek mythology. Orion can be identified in the sky by three stars in a row that represent the hunter's belt.`,
+                                        `, the hunter in Greek mythology. In the night sky, Orion can be identified by the three stars in a row that represent his belt.`,
                                     ],
                                 },
                             ],
@@ -856,9 +807,9 @@ export default {
                                 wiki: `Genghis_Blues`,
                             },
                         },
-                        `. Within a week I was sounding out the`,
+                        `. Within a week I was sounding out the main`,
                         {
-                            anchor: `main partials`,
+                            anchor: `partials`,
                             wiki: `Harmonic_series_(music)`,
                         },
                         `, which impressed her greatly. Ever since, my life has been all about recapturing the glory of that moment.`,
@@ -986,12 +937,7 @@ export default {
                                         anchor: `Omerta`,
                                         wiki: `Omertà`,
                                     },
-                                    `is the`,
-                                    {
-                                        anchor: `Mafia`,
-                                        wiki: `American_Mafia`,
-                                    },
-                                    `'s code of silence that discourages cooperation with authorities. I'm sure I wasn't the first kid who noticed parallels between the unspoken rules of the schoolyard and those of the criminal world.`,
+                                    `is the Mafia's code of silence that discourages cooperation with authorities. I'm sure I wasn't the first kid who noticed parallels between the unspoken rules of the schoolyard and those of the criminal world.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1066,17 +1012,7 @@ export default {
                             anchor: `spies who get to feel love`,
                             card: {
                                 description: [
-                                    `Since a`,
-                                    {
-                                        anchor: `spy`,
-                                        wiki: `Espionage`,
-                                    },
-                                    `'s success hinges upon staying hidden, their exploits will never be known until they've been captured and executed by a`,
-                                    {
-                                        anchor: `firing squad`,
-                                        wiki: `Execution_by_firing_squad`,
-                                    },
-                                    `. Similarly, my desire to be part of a friendly squad eventually led me to open up, thus sabotaging all my previous efforts at being unresponsive.`,
+                                    `Since a spy's success hinges upon staying hidden, their exploits will never be known until they've been captured and executed by a firing squad. Similarly, my desire to be part of a friendly squad eventually led me to open up, thus sabotaging all my previous efforts at being unresponsive.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -1120,17 +1056,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `Here, I imagine Pchelka and Mushka as`,
-                                        {
-                                            anchor: `sled dogs`,
-                                            wiki: `Sled_dog`,
-                                        },
-                                        `in the Russian`,
-                                        {
-                                            anchor: `tundra`,
-                                            wiki: `Tundra`,
-                                        },
-                                        `.`,
+                                        `Here, I imagine Pchelka and Mushka as sled dogs in the Russian tundra .`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -1138,17 +1064,7 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `Upon their arrival in the`,
-                                        {
-                                            anchor: `New World`,
-                                            wiki: `New_World`,
-                                        },
-                                        `, the`,
-                                        {
-                                            anchor: `French`,
-                                            wiki: `France`,
-                                        },
-                                        `learned the practice of dog sledding from the natives. They would command their dog teams to move by shouting "`,
+                                        `Upon their arrival in the New World, the French learned the practice of dog sledding from the natives. They would command their dog teams to move by shouting "`,
                                         {
                                             isItalic: true,
                                             lyric: `marche`,
@@ -1169,12 +1085,7 @@ export default {
                             properNoun: true,
                             card: {
                                 description: [
-                                    `While Pchelka and Mushka successfully spent a day in orbit aboard`,
-                                    {
-                                        anchor: `Sputnik 6`,
-                                        wiki: `Korabl-Sputnik_3`,
-                                    },
-                                    `, there was an error upon reentry. To prevent the spacecraft from landing in hostile territory, the Soviets made it self-destruct, killing all aboard. But in my retelling, I as Pchelka somehow manage to avoid the sad fate that my brother as Mushka could not.`,
+                                    `While Pchelka and Mushka successfully spent a day in orbit, there was an error upon reentry. To prevent the spacecraft from landing in hostile territory, the Soviets made it self-destruct, killing all onboard. But in my retelling, I as Pchelka somehow manage to avoid the sad fate that my brother as Mushka could not.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1192,17 +1103,7 @@ export default {
                             anchor: `his slaughter`,
                             card: {
                                 description: [
-                                    `I wrote this song during the peak of my activism with the`,
-                                    {
-                                        anchor: `animal rights movement`,
-                                        wiki: `Animal_rights_movement`,
-                                    },
-                                    `, which takes a dim view of`,
-                                    {
-                                        anchor: `sled dog racing`,
-                                        wiki: `Sled_dog_racing`,
-                                    },
-                                    `. Not only are dogs routinely abandoned or killed when they outlive their usefulness, but the race itself is grueling enough to cause death by overexertion.`,
+                                    `I wrote this song during the peak of my activism with the animal rights movement, which takes a dim view of sled dog racing. Not only are dogs routinely abandoned or killed when they outlive their usefulness, but the race itself is grueling enough to cause death by overexertion.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1214,12 +1115,7 @@ export default {
                             anchor: `undying dawn`,
                             card: {
                                 description: [
-                                    `During summer in the`,
-                                    {
-                                        anchor: `Arctic`,
-                                        wiki: `Arctic`,
-                                    },
-                                    `, the`,
+                                    `During summer in the Arctic, the`,
                                     {
                                         anchor: `sun never sets`,
                                         wiki: `Midnight_sun`,
@@ -1260,12 +1156,7 @@ export default {
                                         anchor: `Iditarod`,
                                         wiki: `Iditarod_Trail_Sled_Dog_Race`,
                                     },
-                                    `" is an annual sled dog race held in`,
-                                    {
-                                        anchor: `Alaska`,
-                                        wiki: `Alaska`,
-                                    },
-                                    `. Some mushers use a whip to keep the pack disciplined.`,
+                                    `" is an annual sled dog race held in Alaska. Some mushers use a whip to keep the pack disciplined.`,
                                 ],
                                 dotKeys: {
                                     [PUN]: true,
@@ -1288,12 +1179,7 @@ export default {
                                         anchor: `pentobarbital`,
                                         wiki: `Pentobarbital`,
                                     },
-                                    `injection is the most humane means of`,
-                                    {
-                                        anchor: `euthanasia`,
-                                        wiki: `Euthanasia`,
-                                    },
-                                    `. No such kindness was prepared for Laika, whose death by heat exhaustion had been expected all along.`,
+                                    `injection is the most humane means of euthanasia. No such kindness was prepared for Laika, whose death by heat exhaustion had been expected all along.`,
                                 ],
                             },
                         },
@@ -1348,12 +1234,7 @@ export default {
                             anchor: `needed the pod`,
                             card: {
                                 description: [
-                                    `A group of`,
-                                    {
-                                        anchor: `whales`,
-                                        wiki: `Whale`,
-                                    },
-                                    `is called a pod. Because I wanted to belong to a social group, I couldn't ditch my "whales," and so I sought a metaphorical escape pod.`,
+                                    `A group of whales is called a pod. Because I wanted to belong to a social group, I couldn't ditch my "whales," and so I sought a metaphorical escape pod.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -1431,12 +1312,7 @@ export default {
                             anchor: `can't ever return`,
                             card: {
                                 description: [
-                                    `I'd grown disillusioned with RI Research by this point anyway, as the letters inexplicably began to take on`,
-                                    {
-                                        anchor: `Christian`,
-                                        wiki: `Christianity`,
-                                    },
-                                    `overtones. It's not that I held Christianity to be conclusively false. It was just incongruous with all the previous talk of extraterrestrial origins.`,
+                                    `I'd grown disillusioned with RI Research by this point anyway, as the letters inexplicably began to take on Christian overtones. It's not that I held Christianity to be conclusively false. It was just incongruous with all the previous talk of extraterrestrial origins.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -1454,12 +1330,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `My brother currently lives in his own apartment and gets round-the-clock care through a`,
-                        {
-                            anchor: `supported living`,
-                            wiki: `Supported_living`,
-                        },
-                        `agency. When asked how old he is, he still answers "seven."`,
+                        `My brother currently lives in his own apartment and gets round-the-clock care through a supported living agency. When asked how old he is, he still answers "seven."`,
                     ],
                     dotKeys: {
                         [AFTERWORD]: true,
