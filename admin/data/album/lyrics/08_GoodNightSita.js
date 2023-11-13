@@ -383,9 +383,9 @@ export default {
                         {
                             anchor: `crack up another doll`,
                             todo: true,
-                            problem: `Keep working on this.`,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `A friend once told me that if I can keep a woman cracking up, then I'll always be good for another date. My sense of humor was largely shaped to cater to Catherine's love of clever puns, however, and puns tend to draw groans, not laughs. So I tried my best with goofy mannerisms.`,
+                                description: `A friend once told me that if I can keep a woman cracking up at my jokes, then I'll always be good for another date. Unfortunately, my humor at the time was shaped around Catherine's fondness for clever puns— which tend to draw groans from everyone else.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -404,7 +404,7 @@ export default {
                             problem: `Review one more time.`,
                             cards: [
                                 {
-                                    description: `As we pass a display on the butterfly lifecycle, it occurs to me that what I seek in a partner is a chrysalis— that is to say, someone so new to this world that my own lack of worldliness wouldn't be an issue.`,
+                                    description: `As we pass a display on the butterfly lifecycle, it occurs to me that I seek a partner who's like a chrysalis— in other words, someone so new to this world that my own lack of worldliness wouldn't have to be an issue.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [OBSERVATION]: true,
@@ -463,7 +463,7 @@ export default {
                         {
                             anchor: `defined by ambrosia beers`,
                             todo: true,
-                            problem: `Connect this to Catherine's sense of humor. Always on the lookout for literary sources of clever humor, but the jokes were both too cynical and outdated to give me pointers.`,
+                            problem: `Keep working on this.`,
                             cards: [
                                 {
                                     description: [
@@ -492,7 +492,7 @@ export default {
                                                 wiki: `The_Devil's_Dictionary`,
                                             },
                                         },
-                                        `. I tried to adopt this brand of humor for a bit, but I wasn't cynical enough to pull it off.`,
+                                        `. My hope in reading literary humor of this sort was to eventually match Catherine in wit.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -510,10 +510,10 @@ export default {
                         {
                             anchor: `a focus grown clear`,
                             todo: true,
-                            problem: `I just don't like this. Also, two "would"s in a row, if without the contraction.`,
+                            problem: `Maybe a little better.`,
                             card: {
                                 description: [
-                                    `My buzz would wear off a few hours into a date, and then I would realize I'd just constructed an elaborate backstory that could only topple under scrutiny, like a`,
+                                    `A few hours into a date, my buzz would wear off. I would then realize that everything I'd just been saying might topple under scrutiny, like a`,
                                     {
                                         anchor: `totem pole`,
                                         wiki: `Totem_pole`,
@@ -546,7 +546,7 @@ export default {
                         {
                             anchor: `pidgin palaver`,
                             todo: true,
-                            problem: `Does this really say what I want it to?`,
+                            problem: `Review one more time.`,
                             cards: [
                                 {
                                     description: [
@@ -555,7 +555,7 @@ export default {
                                             anchor: `pidgins`,
                                             wiki: `Pidgin`,
                                         },
-                                        `, or impromptu languages that arise to ease trade between colonists and natives. Such exchanges required words of goodwill to make up for inevitable miscommunication, much like my conversations with Sita on this date.`,
+                                        `, or impromptu languages that arise between colonists and natives. Their exchanges required words of goodwill to make up for any misunderstandings, much like my conversations with Sita on this date.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -580,7 +580,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `For our second date, Sita takes me to see her friend act in a play. Before it begins, we chat with him backstage. But I struggle to get a word in edgewise, given their rapport, and this leaves me feeling insecure afterward.`,
+                                description: `On our second date, Sita and I go to see her friend act in a play. Before taking our seats, we chat with him backstage. I struggle to get a word in edgewise, however, which leaves me feeling insecure afterward.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -715,7 +715,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `Any time I said something witty that got a good response, I'd be sure to say it again on future dates with different women, like an actor reprising a role. This then eased the sting of rejection, since the less I prepared, the less I felt was at stake.`,
+                                description: `Any time I said something witty that got a good response, I'd be sure to say it again on a future date with a different woman, like an actor reprising a role. This then eased the sting of rejection, since the less I had to prepare, the less I needed to feel was at stake.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -837,8 +837,10 @@ export default {
                         `hint of`,
                         {
                             anchor: `sampler cologne`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `Whenever I spotted a men's lifestyle magazine lying in a recycling bin, I would tear out the scent strips from its cologne advertisements and add them to my pile. Then right before a date, I would rub a few strips on my neck and wrists.`,
+                                description: `Whenever I spotted a men's lifestyle magazine that someone had thrown away, I would tear out the scent strips from its cologne advertisements and add them to my pile. Then right before a date, I would rub a few onto my neck and wrists.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -980,10 +982,11 @@ export default {
                         {
                             anchor: `dummy steering wheel`,
                             todo: true,
-                            problem: `Keep working on this. I'm contradicting myself by saying that too much is at stake. Maybe make this a narrative about the current date.`,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `Any semblance of being in control on a date was always an illusion. But I would still grip it tightly, like a child clutching the passenger steering wheel in a twin go-kart. There was just too much at stake for me to ever let go and embrace spontaneity.`,
+                                description: `Like a child clutching the passenger steering wheel in a twin go-kart, I hold onto the hope that my words and actions are capable of steering this date in the direction I'd like.`,
                                 dotKeys: {
+                                    [NARRATIVE]: true,
                                     [OBSERVATION]: true,
                                 },
                             },
