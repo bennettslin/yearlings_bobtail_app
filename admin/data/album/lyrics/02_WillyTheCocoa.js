@@ -176,8 +176,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
-                problem: `Review one more time.`,
+                review: true,
                 card: {
                     description: [
                         `The`,
@@ -951,7 +950,7 @@ export default {
                             anchor: `whammy bar`,
                             wiki: `Vibrato_systems_for_guitar`,
                         },
-                        `at the same time. Since either of these can bend pitch on its own, it makes no sense to combine them— which is exactly why a troll guitarist would do so.`,
+                        `at the same time. Since either of these can bend the pitch on its own, it makes no sense to combine them— which is exactly why a troll guitarist would do so.`,
                     ],
                     dotKeys: {
                         [OBSERVATION]: true,
@@ -1151,8 +1150,7 @@ export default {
                         `, you'll write this`,
                         {
                             anchor: `book of yours`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: [
                                     `I wore an eyepatch as a child to correct my`,

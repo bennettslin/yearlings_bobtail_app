@@ -404,7 +404,7 @@ export default {
                             problem: `Review one more time.`,
                             cards: [
                                 {
-                                    description: `As we pass a display on the butterfly lifecycle, it occurs to me that I seek a partner who's like a chrysalis— in other words, someone so new to this world that my own lack of worldliness wouldn't have to be an issue.`,
+                                    description: `As we pass a display on the butterfly lifecycle, it occurs to me that what I'm hoping to find is a chrysalis— in other words, someone so new to this world that my own lack of worldliness wouldn't need to be an issue.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [OBSERVATION]: true,
@@ -421,8 +421,7 @@ export default {
                         `who'd buy this`,
                         {
                             anchor: `aping jaw`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: [
                                     `We stop by a replica of`,
@@ -555,7 +554,7 @@ export default {
                                             anchor: `pidgins`,
                                             wiki: `Pidgin`,
                                         },
-                                        `, or impromptu languages that arise between colonists and natives. Their exchanges required words of goodwill to make up for any misunderstandings, much like my conversations with Sita on this date.`,
+                                        `, or impromptu languages that arose between colonists and natives. Their exchanges required words of goodwill to make up for any misunderstandings, much like my conversations with Sita on this date.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -577,8 +576,7 @@ export default {
                         `hyped up like some`,
                         {
                             anchor: `disastrous play`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: `On our second date, Sita and I go to see her friend act in a play. Before taking our seats, we chat with him backstage. I struggle to get a word in edgewise, however, which leaves me feeling insecure afterward.`,
                                 dotKeys: {
@@ -647,25 +645,20 @@ export default {
                             anchor: `understudy sought`,
                             todo: true,
                             problem: `Review one more time.`,
-                            cards: [
-                                {
-                                    description: `Dating while low status is like being an understudy, in that you undertake all the same preparation, yet see little of the same action. So I had to be proactive and seek out opportunities, like a freelancer posting on a cork board.`,
-                                    dotKeys: {
-                                        [BACKSTORY]: true,
-                                        [OBSERVATION]: true,
+                            card: {
+                                description: [
+                                    `As an`,
+                                    {
+                                        anchor: `understudy`,
+                                        wiki: `Understudy`,
                                     },
+                                    `in theater, you undertake all the same preparation, yet see little of the same action— and this is what it's like trying to date while low status as well. So I needed to be proactive and seek out opportunities, like a freelancer posting on a cork board.`,
+                                ],
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                    [OBSERVATION]: true,
                                 },
-                                {
-                                    description: [
-                                        `In theater, an`,
-                                        {
-                                            anchor: `understudy`,
-                                            wiki: `Understudy`,
-                                        },
-                                        `is a performer who serves as a replacement on short notice.`,
-                                    ],
-                                },
-                            ],
+                            },
                         },
                         `from his number`,
                     ],

@@ -322,7 +322,7 @@ export default {
                                         anchor: `pupa`,
                                         wiki: `Pupa`,
                                     },
-                                    `that petrified into a fossil before it had a chance to molt.`,
+                                    `that had petrified into a fossil before it ever got a chance to molt.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
