@@ -776,7 +776,7 @@ export default {
                                 todo: true,
                                 problem: `Review one more time.`,
                                 card: {
-                                    description: `But if I was capable of hurting myself, then I also wouldn't have any qualms about hurting those close to me, who now knew the worst side of me as only I once did.`,
+                                    description: `But if I was capable of hurting myself, then I also wouldn't have any qualms about hurting those close to me— who now knew the worst side of me as only I once did.`,
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                     },

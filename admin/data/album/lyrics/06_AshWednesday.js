@@ -949,7 +949,7 @@ export default {
                                         anchor: `tragedy`,
                                         wiki: `Tragedy`,
                                     },
-                                    `as two sides of the same coin. After all, every tragic situation can be made into a song; writing a song calls for taking the broader view; and anything viewed broadly will reveal its comic underbelly. So I was always preferred a negative outcome to none at all. But then this made everything I do feel like a stage act.`,
+                                    `as two sides of the same coin. After all, every tragic situation can be made into a song; writing a song calls for taking the broader view; and anything viewed broadly will reveal its comic underbelly. So I always preferred a negative outcome to none at all— but then this made my whole life feel like a stage act.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,

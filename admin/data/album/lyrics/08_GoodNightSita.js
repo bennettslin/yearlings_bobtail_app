@@ -509,10 +509,10 @@ export default {
                         {
                             anchor: `a focus grown clear`,
                             todo: true,
-                            problem: `Maybe a little better.`,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
-                                    `A few hours into a date, my buzz would wear off. I would then realize that everything I'd just been saying might topple under scrutiny, like a`,
+                                    `My buzz would wear off a few hours into a date, forcing me to realize that everything I'd just been saying might topple under scrutiny, like a`,
                                     {
                                         anchor: `totem pole`,
                                         wiki: `Totem_pole`,
@@ -705,8 +705,7 @@ export default {
                         `so we'll`,
                         {
                             anchor: `breeze through our parts`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: `Any time I said something witty that got a good response, I'd be sure to say it again on a future date with a different woman, like an actor reprising a role. This then eased the sting of rejection, since the less I had to prepare, the less I needed to feel was at stake.`,
                                 dotKeys: {
