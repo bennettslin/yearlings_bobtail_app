@@ -404,7 +404,7 @@ export default {
                             problem: `Review one more time.`,
                             cards: [
                                 {
-                                    description: `As we pass a display on the butterfly lifecycle, it occurs to me that what I'm hoping to find is a chrysalis— in other words, someone so new to this world that my own lack of worldliness wouldn't need to be an issue.`,
+                                    description: `As we pass a display on the butterfly lifecycle, it occurs to me that I'm hoping to find a chrysalis— in other words, someone so new to this world that my own lack of worldliness wouldn't need to be an issue.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [OBSERVATION]: true,
@@ -508,8 +508,7 @@ export default {
                         `in time are seen with`,
                         {
                             anchor: `a focus grown clear`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: [
                                     `My buzz would wear off a few hours into a date, forcing me to realize that everything I'd just been saying might topple under scrutiny, like a`,
@@ -549,12 +548,12 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `Stopping to rest our feet in a gallery devoted to Native American history, we learn about`,
+                                        `Stopping to rest in a gallery devoted to Native American history, we learn about`,
                                         {
                                             anchor: `pidgins`,
                                             wiki: `Pidgin`,
                                         },
-                                        `, or impromptu languages that arose between colonists and natives. Their exchanges required words of goodwill to make up for any misunderstandings, much like my conversations with Sita on this date.`,
+                                        `, or impromptu languages that historically arose between colonists and natives. Their exchanges required words of goodwill to make up for any misunderstandings, much like my conversations with Sita on this date.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -652,7 +651,7 @@ export default {
                                         anchor: `understudy`,
                                         wiki: `Understudy`,
                                     },
-                                    `in theater, you undertake all the same preparation, yet see little of the same action— and this is what it's like trying to date while low status as well. So I needed to be proactive and seek out opportunities, like a freelancer posting on a cork board.`,
+                                    `in theater, you undertake all the same preparation, yet see little of the same action— which is what dating while low status is like as well. So I needed to be proactive and seek out opportunities, like a freelancer posting on a cork board.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -829,8 +828,7 @@ export default {
                         `hint of`,
                         {
                             anchor: `sampler cologne`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: `Whenever I spotted a men's lifestyle magazine that someone had thrown away, I would tear out the scent strips from its cologne advertisements and add them to my pile. Then right before a date, I would rub a few onto my neck and wrists.`,
                                 dotKeys: {
