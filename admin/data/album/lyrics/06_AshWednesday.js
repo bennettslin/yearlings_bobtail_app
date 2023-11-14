@@ -42,12 +42,7 @@ export default {
                             anchor: `Lent`,
                             wiki: `Lent`,
                         },
-                        `, a period of fasting observed by Christians to memorialize the forty days that`,
-                        {
-                            anchor: `Jesus`,
-                            wiki: `Jesus`,
-                        },
-                        `spent fasting in the desert.`,
+                        `, a period of fasting observed by Christians to memorialize the forty days that Jesus spent fasting in the desert.`,
                     ],
                 },
             },
@@ -74,12 +69,7 @@ export default {
                                         anchor: `O Captain! My Captain!`,
                                         wiki: `O_Captain!_My_Captain!`,
                                     },
-                                    `" upon hearing of`,
-                                    {
-                                        anchor: `Abraham Lincoln`,
-                                        wiki: `Abraham_Lincoln`,
-                                    },
-                                    `'s assassination. I'm not sure why I chose this reference. I might have spent a long while whimpering to myself, "Oh, Catherine…"`,
+                                    `" upon hearing of Abraham Lincoln's assassination. I'm not sure why I chose this reference. I might have spent a long while whimpering to myself, "Oh, Catherine…"`,
                                 ],
                                 dotKeys: {
                                     [PUN]: true,
@@ -91,12 +81,12 @@ export default {
                             anchor: `futile trip`,
                             card: {
                                 description: [
-                                    `I moved to the`,
+                                    `I moved to the San Francisco Bay Area to attend college at`,
                                     {
-                                        anchor: `San Francisco Bay Area`,
-                                        wiki: `San_Francisco_Bay_Area`,
+                                        anchor: `UC Berkeley`,
+                                        wiki: `University_of_California,_Berkeley`,
                                     },
-                                    `to attend college. There I met Catherine, a fellow freshman, in a class on European folklore.`,
+                                    `. There I met Catherine, a fellow freshman, in a class on European folklore.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -141,9 +131,9 @@ export default {
                             review: true,
                             card: {
                                 description: [
-                                    `A reference to the classic "`,
+                                    `A reference to the classic "Who's buried in`,
                                     {
-                                        anchor: `Who's buried in Grant's tomb`,
+                                        anchor: `Grant's tomb`,
                                         wiki: `Grant's_Tomb`,
                                     },
                                     `?" riddle, of course, but also to the James Joyce novel`,
@@ -215,14 +205,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: [
-                                        `Jesus was laid "to rest" on the day of`,
-                                        {
-                                            anchor: `his crucifixion`,
-                                            wiki: `Crucifixion_of_Jesus`,
-                                        },
-                                        `.`,
-                                    ],
+                                    description: `Jesus was laid "to rest" on the day of his crucifixion.`,
                                     dotKeys: {
                                         [PUN]: true,
                                     },
@@ -242,14 +225,10 @@ export default {
                         {
                             anchor: `last day she rose`,
                             card: {
-                                description: [
-                                    `He`,
-                                    {
-                                        anchor: `then rose`,
-                                        wiki: `Resurrection_of_Jesus`,
-                                    },
-                                    `on the third day.`,
-                                ],
+                                description: `Jesus then rose on the third day.`,
+                                dotKeys: {
+                                    [PUN]: true,
+                                },
                             },
                         },
                         `up and left, hers the`,
@@ -316,6 +295,12 @@ export default {
                             anchor: `dirge she'd deride`,
                             cards: [
                                 {
+                                    description: `Up until then, I'd thought of songwriting as just a matter of coming up with melodies and chords. But Catherine appreciated music for its lyrics. And because mine at the time were of the nonsensical variety, she wasn't impressed by any of my songs that I played for her.`,
+                                    dotKeys: {
+                                        [BACKSTORY]: true,
+                                    },
+                                },
+                                {
                                     description: [
                                         `A`,
                                         {
@@ -324,12 +309,6 @@ export default {
                                         },
                                         `is a song of lament.`,
                                     ],
-                                },
-                                {
-                                    description: `Up until then, I'd thought of songwriting as just a matter of coming up with melodies and chords. But Catherine appreciated music for its lyrics. And because mine at the time were of the nonsensical variety, she wasn't impressed by any of my songs that I played for her.`,
-                                    dotKeys: {
-                                        [BACKSTORY]: true,
-                                    },
                                 },
                             ],
                         },
@@ -532,12 +511,7 @@ export default {
                                         anchor: `Irish Travellers`,
                                         wiki: `Irish_Travellers`,
                                     },
-                                    `are a predominantly`,
-                                    {
-                                        anchor: `Catholic`,
-                                        wiki: `Catholic_Church`,
-                                    },
-                                    `ethnic group. They speak`,
+                                    `are a predominantly Catholic ethnic group. They speak`,
                                     {
                                         anchor: `Shelta`,
                                         wiki: `Shelta`,
@@ -585,27 +559,7 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `"Raincoat" is a slang term for`,
-                                        {
-                                            anchor: `condoms`,
-                                            wiki: `Condom`,
-                                        },
-                                        `, which might be unknown to "`,
-                                        {
-                                            anchor: `Rome`,
-                                            wiki: `Rome`,
-                                        },
-                                        `" given the Catholic Church's stance against`,
-                                        {
-                                            anchor: `birth control`,
-                                            wiki: `Birth_control`,
-                                        },
-                                        `. We had no need for them due to Catherine's vow not to engage in`,
-                                        {
-                                            anchor: `premarital sex`,
-                                            wiki: `Premarital_sex`,
-                                        },
-                                        `.`,
+                                        `"Raincoat" is a slang term for condoms, which might be unknown to "Rome" given the Catholic Church's stance against birth control. We had no need for them due to Catherine's vow not to engage in premarital sex.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -674,12 +628,7 @@ export default {
                                         anchor: `Kateri Tekakwitha`,
                                         wiki: `Kateri_Tekakwitha`,
                                     },
-                                    `, baptized as Saint Catherine, was the Catholic Church's first`,
-                                    {
-                                        anchor: `Native American`,
-                                        wiki: `Native_Americans_in_the_United_States`,
-                                    },
-                                    `saint. Her story figures prominently in`,
+                                    `, baptized as Saint Catherine, was the Catholic Church's first Native American saint. Her story figures prominently in`,
                                     {
                                         isItalic: true,
                                         lyric: `Beautiful Losers`,
@@ -750,12 +699,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `On Ash Wednesday, the priest smears ash in the shape of a`,
-                                        {
-                                            anchor: `cross`,
-                                            wiki: `Cross`,
-                                        },
-                                        `on each parishioner's forehead. But since I'd ashed myself without the benefit of a mirror, mine was slanted like the letter X.`,
+                                        `On Ash Wednesday, the priest smears ash in the shape of a cross on each parishioner's forehead. But since I'd ashed myself without the benefit of a mirror, mine was slanted like the letter X.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -825,12 +769,7 @@ export default {
                                                 anchor: `Henry IV of France`,
                                                 wiki: `Henry_IV_of_France`,
                                             },
-                                            `was born a`,
-                                            {
-                                                anchor: `Protestant`,
-                                                wiki: `Protestantism`,
-                                            },
-                                            `but converted to Catholicism to gain the royal crown. He's reputed to have said, "`,
+                                            `was born a Protestant but converted to Catholicism to gain the royal crown. He's reputed to have said, "`,
                                             {
                                                 isItalic: true,
                                                 lyric: `Paris vaut bien une messe`,
@@ -885,17 +824,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `I never understood why the Catholic Church extends its`,
-                                        {
-                                            anchor: `pro-life stance`,
-                                            wiki: `Catholic_Church_and_abortion`,
-                                        },
-                                        `to the unborn of other faiths. After all, this just trades away the certainty of an`,
-                                        {
-                                            anchor: `aborted fetus`,
-                                            wiki: `Abortion`,
-                                        },
-                                        `going to heaven, for the likelihood of a living child going to hell.`,
+                                        `I never understood why the Catholic Church extends its pro-life stance to the unborn of other faiths. After all, this just trades away the certainty of an aborted fetus going to heaven, for the likelihood of a living child going to hell.`,
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
@@ -939,17 +868,7 @@ export default {
                             problem: `Review one more time.`,
                             card: {
                                 description: [
-                                    `In time I came to see`,
-                                    {
-                                        anchor: `comedy`,
-                                        wiki: `Comedy`,
-                                    },
-                                    `and`,
-                                    {
-                                        anchor: `tragedy`,
-                                        wiki: `Tragedy`,
-                                    },
-                                    `as two sides of the same coin. After all, every tragic situation can be made into a song; writing a song calls for taking the broader view; and anything viewed broadly will reveal its comic underbelly. So I always preferred a negative outcome to none at all— but then this made my whole life feel like a stage act.`,
+                                    `In time I came to see comedy and tragedy as two sides of the same coin. After all, every tragic situation can be made into a song; writing a song calls for taking the broader view; and anything viewed broadly will reveal its comic underbelly. So I always preferred a negative outcome to none at all— but then this made my whole life feel like a stage act.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
