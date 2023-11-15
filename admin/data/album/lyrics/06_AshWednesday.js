@@ -58,6 +58,8 @@ export default {
                         {
                             anchor: `O Catherine! My Catherine!`,
                             properNoun: true,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
                                     {
@@ -69,14 +71,14 @@ export default {
                                         anchor: `O Captain! My Captain!`,
                                         wiki: `O_Captain!_My_Captain!`,
                                     },
-                                    `" upon hearing of Abraham Lincoln's assassination. I'm not sure why I chose this reference. I might have spent a long while whimpering to myself, "Oh, Catherine…"`,
+                                    `" upon hearing of Abraham Lincoln's assassination. I'm not sure why I chose this reference. I might have spent a long while after the breakup whimpering, "Oh Catherine…"`,
                                 ],
                                 dotKeys: {
                                     [PUN]: true,
                                 },
                             },
                         },
-                        `our`,
+                        `Our`,
                         {
                             anchor: `futile trip`,
                             card: {

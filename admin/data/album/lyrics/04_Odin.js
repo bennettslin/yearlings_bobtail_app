@@ -837,12 +837,7 @@ export default {
                                         anchor: `Adam's apple`,
                                         wiki: `Adam's_apple`,
                                     },
-                                    `." And so an apocryphal tale began that when`,
-                                    {
-                                        anchor: `Adam`,
-                                        wiki: `Adam`,
-                                    },
-                                    `ate the forbidden fruit of knowledge, a piece lodged in his throat to mark all his descendants with a reminder of their original sin. Similarly, my knowledge of where I stood with Sasha left me to feel a permanent lump in my throat.`,
+                                    `." And so an apocryphal tale began that when Adam ate the forbidden fruit of knowledge, a piece lodged in his throat to mark all his descendants with a reminder of their original sin. Similarly, my knowledge of where I stood with Sasha left me to feel a permanent lump in my throat.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -930,12 +925,7 @@ export default {
                                         anchor: `Pandora`,
                                         wiki: `Pandora`,
                                     },
-                                    `was the first human woman. Upon opening a box given to her by`,
-                                    {
-                                        anchor: `Zeus`,
-                                        wiki: `Zeus`,
-                                    },
-                                    `as a wedding gift, she unwittingly released all the evils that now plague humanity.`,
+                                    `was the first human woman. Upon opening a box given to her by Zeus as a wedding gift, she unwittingly released all the evils that now plague humanity.`,
                                 ],
                             },
                         },
@@ -1257,7 +1247,12 @@ export default {
                             anchor: `pulled your floater away`,
                             card: {
                                 description: [
-                                    `Pining after Sasha was like trying to stare at an off-center floater on the surface of my eye. Despite my frantic efforts to bring us closer, her inner world always remained a fixed distance apart from me.`,
+                                    `Pining after Sasha was like trying to stare at an off-center`,
+                                    {
+                                        anchor: `floater`,
+                                        wiki: `Floater`,
+                                    },
+                                    `on the surface of my eye. Despite my frantic efforts to bring us closer, her inner world always remained a fixed distance apart from me.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1511,12 +1506,7 @@ export default {
                                         anchor: `Book of Exodus`,
                                         wiki: `Book_of_Exodus`,
                                     },
-                                    `tells of how`,
-                                    {
-                                        anchor: `Moses`,
-                                        wiki: `Moses`,
-                                    },
-                                    `led the Israelites out of slavery. By parting the Red Sea, he allowed them to escape Egypt on foot.`,
+                                    `tells of how Moses led the Israelites out of slavery. By parting the Red Sea, he allowed them to escape Egypt on foot.`,
                                 ],
                             },
                         },

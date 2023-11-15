@@ -195,12 +195,7 @@ export default {
                             anchor: `from our chest`,
                             card: {
                                 description: [
-                                    `In the Book of Genesis, God gave life to`,
-                                    {
-                                        anchor: `Eve`,
-                                        wiki: `Eve`,
-                                    },
-                                    `by taking one of Adam's ribs. By contrast, my own promise to sacrifice for Sita proved to be a false rib. That is to say, she could never truly be alive with me, even as she felt unworthy to begin life anew with someone else.`,
+                                    `In the Book of Genesis, God gave life to Eve by taking one of Adam's ribs. By contrast, my own promise to sacrifice for Sita proved to be a false rib. That is to say, she could never truly be alive with me, even as she felt unworthy to begin life anew with someone else.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,

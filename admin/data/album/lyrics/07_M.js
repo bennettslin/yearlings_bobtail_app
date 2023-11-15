@@ -73,22 +73,12 @@ export default {
                                                 wiki: `Maravijaya_attitude`,
                                             },
                                         },
-                                        `, or "victory over`,
+                                        `, or "victory over Mara" in Sanskrit, is the seated posture of the Buddha as he fends off temptation from the demon`,
                                         {
                                             anchor: `Mara`,
                                             wiki: `Mara_(demon)`,
                                         },
-                                        `" in`,
-                                        {
-                                            anchor: `Sanskrit`,
-                                            wiki: `Sanskrit`,
-                                        },
-                                        `, is the seated posture of the`,
-                                        {
-                                            anchor: `Buddha`,
-                                            wiki: `Gautama_Buddha`,
-                                        },
-                                        `as he fends off temptation from the demon Mara, who personifies death. Like the Buddha, I had to summon otherworldly reserves of self-denial to get through band practice after Jacob and Mara started dating.`,
+                                        `, who personifies death. Like the Buddha, I had to summon otherworldly reserves of self-denial to get through band practice after Jacob and Mara started dating.`,
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
@@ -170,12 +160,7 @@ export default {
                                         anchor: `five-year plans`,
                                         wiki: `Five-year_plans_for_the_national_economy_of_the_Soviet_Union`,
                                     },
-                                    `of the`,
-                                    {
-                                        anchor: `Soviet Union`,
-                                        wiki: `Soviet_Union`,
-                                    },
-                                    `were centrally organized mandates for rapid economic development. Five years thus seemed like the optimal time frame to carry out my own plan for rapid character growth.`,
+                                    `of the Soviet Union were centrally organized mandates for rapid economic development. Five years thus seemed like the optimal time frame to carry out my own plan for rapid character growth.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -245,12 +230,7 @@ export default {
                             anchor: `music cred`,
                             card: {
                                 description: [
-                                    `I always detected a whiff of disdain from the`,
-                                    {
-                                        anchor: `Berkeley`,
-                                        wiki: `Berkeley,_California`,
-                                    },
-                                    `record store clerks who rang up my purchases. With my quest for self-betterment, I overcame my intimidation and began to ask them for recommended listening.`,
+                                    `I always detected a whiff of disdain from the record store clerks who rang up my purchases. But with my quest for self-betterment, I overcame my intimidation and began to ask them for recommended listening.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -310,12 +290,7 @@ export default {
                             review: true,
                             card: {
                                 description: [
-                                    `The Soviet Union's`,
-                                    {
-                                        anchor: `first five-year plan`,
-                                        wiki: `First_five-year_plan`,
-                                    },
-                                    `was also its most brutal, as the forced industrialization of agrarian societies led to widespread famine and death. Similarly, given how far behind I was starting out, it was naive to think that my own five-year plan for accelerated growth could be free of unintended consequences.`,
+                                    `The Soviet Union's first five-year plan was also its most brutal, as the forced industrialization of agrarian societies led to widespread famine and death. Similarly, given how far behind I was starting out, it was naive to think that my own five-year plan for accelerated growth could be free of unintended consequences.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -375,27 +350,12 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `Back when I was learning to play the`,
-                        {
-                            anchor: `banjo`,
-                            wiki: `Banjo`,
-                        },
-                        `, I would strum the motions of`,
+                        `Back when I was learning to play the banjo, I would strum the motions of`,
                         {
                             anchor: `Earl Scruggs`,
                             wiki: `Earl_Scruggs`,
                         },
-                        `'s`,
-                        {
-                            anchor: `three-finger roll`,
-                            wiki: `Scruggs_style`,
-                        },
-                        `on my thigh wherever I went. From there, it crossed over to my guitar fingerpicking technique, as can be heard on the`,
-                        {
-                            anchor: `Spanish guitar`,
-                            wiki: `Classical_guitar`,
-                        },
-                        `here.`,
+                        `'s three-finger roll on my thigh wherever I went. From there, it crossed over to my guitar fingerpicking technique, as can be heard on the Spanish guitar here.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -585,17 +545,7 @@ export default {
                                         anchor: `Sun Myung Moon`,
                                         wiki: `Sun_Myung_Moon`,
                                     },
-                                    `, is known for its aggressive`,
-                                    {
-                                        anchor: `proselytism`,
-                                        wiki: `Proselytism`,
-                                    },
-                                    `, as well as its`,
-                                    {
-                                        anchor: `mass weddings`,
-                                        wiki: `Blessing_ceremony_of_the_Unification_Church`,
-                                    },
-                                    `in which thousands of congregants are paired off with perfect strangers. Whenever a Moonie accosted me on campus, the thought would amuse me that I could just accept their invitation, and my struggle to find a romantic partner would be over in an instant.`,
+                                    `, is known for its aggressive proselytism, as well as its mass weddings in which thousands of congregants are paired off with perfect strangers. Whenever a Moonie accosted me on campus, the thought would amuse me that I could just accept their invitation, and my struggle to find a romantic partner would be over in an instant.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -798,12 +748,7 @@ export default {
                                             anchor: `chimney sweep`,
                                             wiki: `Chimney_sweep`,
                                         },
-                                        `will bring good luck to a bride. But in the`,
-                                        {
-                                            anchor: `Victorian era`,
-                                            wiki: `Victorian_era`,
-                                        },
-                                        `, the children who cleared soot from chimneys were neglected orphans. Whatever fortunes they imparted to others, only a lifetime of ill health awaited themselves. Likewise, I'd helped introduce Mara to Jacob, and now it was on me to get on with my wretched life.`,
+                                        `will bring good luck to a bride. But in the Victorian era, the children who cleared soot from chimneys were neglected orphans. Whatever fortunes they imparted to others, only a lifetime of ill health awaited themselves. Likewise, I'd helped introduce Mara to Jacob, and now it was on me to get on with my wretched life.`,
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
