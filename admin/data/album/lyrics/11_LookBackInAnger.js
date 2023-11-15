@@ -238,7 +238,7 @@ export default {
                             problem: `Sentence kind of runs on. Make clear that ring can be seen only because it's exposed by gaping wounds.`,
                             card: {
                                 description: [
-                                    `Upon surviving the winter, a sapling is rewarded with its first`,
+                                    `Upon surviving the winter, a sapling is awarded its first`,
                                     {
                                         anchor: `tree ring`,
                                         wiki: `Dendrochronology`,
@@ -779,9 +779,9 @@ export default {
                         {
                             anchor: `poor, poor bears`,
                             todo: true,
-                            problem: `Sentence runs on.`,
+                            problem: `Sentence runs on. The power dynamic between them.`,
                             card: {
-                                description: `His wife then sighs in response, "Poor, poor bears." She recognizes that he, a bear in their mutual fantasy, is also a victim, complying within a power dynamic over which neither possesses much control.`,
+                                description: `His wife then sighs in response, "Poor, poor bears." She recognizes that he, a bear in their mutual fantasy, is no less a victim, complying with a power dynamic over which neither possesses much control.`,
                                 dotKeys: {
                                     [REFERENCE]: true,
                                 },

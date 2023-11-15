@@ -160,14 +160,14 @@ export default {
                         {
                             anchor: `molls perched on pedestals`,
                             todo: true,
-                            problem: `Not sure this makes the point clear that their contempt for me was harder to stomach than the bullies' contempt for me was.`,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
                                     {
                                         anchor: `Gun molls`,
                                         wiki: `Gun_moll`,
                                     },
-                                    `, the female companions of famous mobsters, were both romanticized by society and feared for their exploits. Likewise, I desired the girls who hung out with the boys who bullied me, but this made their contempt harder to stomach.`,
+                                    `, the female companions of famous mobsters, were both romanticized by society and feared for their exploits. Likewise, I desired the girls who hung out with the boys who bullied me, even as their contempt for me was harder to stomach.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -827,9 +827,9 @@ export default {
                         {
                             anchor: `you're my password`,
                             todo: true,
-                            problem: `Don't need to be so specific, since it's the fictional present. Just say my name, or my birthday, or whatever.`,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `As I enter the passcode for the gate, Sita breaks the ice by mentioning that a topic we'd once discussed was the basis for a password she recently created.`,
+                                description: `As I enter the passcode for the gate, Sita breaks the ice by mentioning that something she remembered about me was the basis for a password she recently created.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -1170,7 +1170,7 @@ export default {
                         {
                             anchor: `with a ring`,
                             todo: true,
-                            problem: `Make it more like the exchange of vows and rings with a belle.`,
+                            problem: `Review one more time.`,
                             cards: [
                                 {
                                     description: `Having dozed off, I'm roused by the ringing of a bell to indicate that a patient has been released from care and is returning to the waiting area.`,
@@ -1179,7 +1179,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `The momentous occasion of a wedding may leave the groom in a daze, to be roused only by the exchange of vows and a "belle" with a ring.`,
+                                    description: `The momentous occasion of a wedding may leave the groom in a daze, to be roused only by the exchange of vows and rings with a "belle."`,
                                     dotKeys: {
                                         [PUN]: true,
                                         [OBSERVATION]: true,
@@ -1505,7 +1505,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 todo: true,
-                problem: `Should a cat have a "who" or "that" pronoun?`,
+                problem: `Review one more time.`,
                 card: {
                     description: [
                         `The French expression`,

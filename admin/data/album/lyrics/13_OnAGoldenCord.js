@@ -720,15 +720,15 @@ export default {
                             {
                                 anchor: `Mush`,
                                 todo: true,
-                                problem: `Not sure sifting is the idea I want to evoke.`,
+                                problem: `First sentence has two gerunds. Make it clear that this is about songwriting.`,
                                 card: {
                                     description: [
-                                        `Marching onward without sleep, I continue to sift through the intervening years, hoping to return to the last time I'd known untroubled bliss. And so I arrive at the first song I loved as a child, Johnny Horton's "`,
+                                        `Marching onward without sleep, I sift through my past, trying to recall the last time I'd known untroubled bliss. And so I arrive at the first song I loved as a child, Johnny Horton's "`,
                                         {
                                             anchor: `North to Alaska`,
                                             wiki: `North_to_Alaska_(song)`,
                                         },
-                                        `," in which backup singers call out to their sled dogs, and wooden bowls evoke the clip-clopping of a horse's gait.`,
+                                        `," in which backup singers call out to their sled dogs, and wooden bowls imitate the clip-clopping of a horse's gait.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -1167,7 +1167,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `Sita and I had a turbulent on-again, off-again relationship for a good while longer. During one stretch when things were rosier than ever, she asked for the bracelet back to wear again, which I happily obliged. Somehow I'd dented it in my pocket that night, however— a lasting reminder that some damages can be amended but never undone.`,
+                                description: `Sita and I had a turbulent on-again, off-again relationship for a good while longer. During one stretch when things were rosier than ever, she asked for the bracelet back to wear again, which I happily obliged. Somehow I'd dented it in my pocket that night, however— a lasting reminder that some damages can be amended, but never undone.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
