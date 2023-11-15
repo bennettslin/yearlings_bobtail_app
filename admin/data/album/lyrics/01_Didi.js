@@ -418,10 +418,10 @@ export default {
                         {
                             anchor: `sheriff's badge and gun`,
                             todo: true,
-                            problem: `Keep working on before review.`,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
-                                    `Like other Taiwanese teenagers of her generation, my mother prized all things labeled American, despite not knowing exactly what that entailed. Their only exposure was through a bootleg industry that recycled the relics of America's past. And so my sister and I grew up listening to my mother's old country records and sharing her fondness for old Western movies.`,
+                                    `Like other Taiwanese teenagers of her generation, my mother prized all things labeled American, despite not knowing exactly what that entailed. Their only means of access was through a local bootleg industry that recycled the relics of America's past. And so my sister and I grew up listening to my mother's old country records and sharing her fondness for classic Western movies.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,

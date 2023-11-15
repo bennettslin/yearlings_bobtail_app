@@ -476,7 +476,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `According to RI Research, Beyonders are an ancient race of beings who were born from the stars and scattered across the universe. Those who made it to Earth adopted the likeness of human beings. Yet even with no memory of their origins, they're beset by a quiet discomfort that they don't truly belong.`,
+                                description: `According to RI Research, Beyonders are an ancient race of beings who were born from the stars and then scattered across the universe. Those who made it to Earth adopted the likeness of human beings. Yet even with no memory of their origins, they're beset by a quiet discomfort that they don't truly belong.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -658,12 +658,12 @@ export default {
                                             anchor: `Canis Minor`,
                                             wiki: `Canis_Minor`,
                                         },
-                                        `, meaning "greater dog" and "lesser dog," are said to follow that of`,
+                                        `mean "greater dog" and "lesser dog," respectively. They're said to follow that of`,
                                         {
                                             anchor: `Orion`,
                                             wiki: `Orion_(mythology)`,
                                         },
-                                        `, the hunter in Greek mythology. In the night sky, Orion can be identified by the three stars in a row that represent his belt.`,
+                                        `, the hunter in Greek mythology, which can be identified by the three stars in a row representing his belt.`,
                                     ],
                                 },
                             ],
@@ -1256,7 +1256,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 todo: true,
-                problem: `Last sentence should make it clear that these were separate effects.`,
+                problem: `Review one more time.`,
                 card: {
                     description: [
                         {
@@ -1268,7 +1268,7 @@ export default {
                             anchor: `Space Oddity`,
                             wiki: `Space_Oddity`,
                         },
-                        `" closes with a free-form instrumental outro that evokes the sound of failing radio transmissions. I aimed for a similar effect by scraping the strings of an electric guitar against the pickup, and by bouncing a metal rod on a single string near the bridge.`,
+                        `" closes with an instrumental outro that evokes the idea of failing radio transmissions. To get the same effect, I scraped the strings of an electric guitar against the pickup, and then I added the sound of a metal rod bouncing on a single string near the bridge.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -1305,9 +1305,9 @@ export default {
                         {
                             anchor: `per their bargain`,
                             todo: true,
-                            problem: `Not sure I'm being clear that I was just as confused as anyone else what would prompt me to behave in that manner for that whole year.`,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `Though I faked autism for only a year or so, the social repercussions lasted much longer, since I was now and forever the kid who did that really weird thing once. It's not that I lacked the will to repair my standing. But I was just as confused as anyone else about the inner workings of my psyche, and there were no guide books instructing me where to go from there.`,
+                                description: `Though I faked autism only for a year or so, the social repercussions lasted much longer, since I was now and forever known as the kid who did that really weird thing once. It's not that I lacked the will to repair my standing. But I was just as confused as anyone else about what had possessed me, and there were no guide books instructing me where to go from there.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

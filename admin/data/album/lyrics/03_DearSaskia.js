@@ -313,8 +313,7 @@ export default {
                         `, a`,
                         {
                             anchor: `pet petrified`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: [
                                     `Petrified by the thought of losing Sasha, I felt like a`,

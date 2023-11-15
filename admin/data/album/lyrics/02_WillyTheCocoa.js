@@ -65,7 +65,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 todo: true,
-                problem: `Can't think of a better word than "heist." Review if this is indeed the case. Probably words are too complex as well.`,
+                problem: `Review one more time.`,
                 card: {
                     description: [
                         `In the past, a disabled child was sometimes thought to be a troll in disguise known as a`,
@@ -73,7 +73,7 @@ export default {
                             anchor: `changeling`,
                             wiki: `Changeling`,
                         },
-                        `, who'd been left in place of a stolen human infant. So I wanted this song to sound like a band of woodland trolls celebrating a recent heist in secluded revelry. I figured their style would be like the swamp rock of`,
+                        `, who'd been left in place of a stolen human infant. So I wanted this song to sound like a band of trolls in revelry after pulling off such a heist. I figured their style would be like the swamp rock of`,
                         {
                             anchor: `Creedence Clearwater Revival`,
                             wiki: `Creedence_Clearwater_Revival`,
@@ -869,8 +869,7 @@ export default {
                         `that saw this`,
                         {
                             anchor: `mulch soften asphodel`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: [
                                     `We plant`,
@@ -936,8 +935,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
-                problem: `Review one more time.`,
+                review: true,
                 card: {
                     description: [
                         `To play the electric guitar riff heard here, I used both a`,

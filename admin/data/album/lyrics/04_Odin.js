@@ -109,7 +109,7 @@ export default {
                                             anchor: `Sodom`,
                                             wiki: `Sodom_and_Gomorrah`,
                                         },
-                                        `. When his wife looked back, she was turned into a pillar of salt. This story can be interpreted as a cautionary tale, warning the faithful not to cohabit with the fallen.`,
+                                        `. When his wife looked back, she was turned into a pillar of salt. This story can be seen as a cautionary tale, warning the faithful not to cohabit with the fallen.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -242,7 +242,7 @@ export default {
                                         anchor: `pastels`,
                                         wiki: `Pastel`,
                                     },
-                                    `. They were more powdery than crayons and thus ran out quickly, so eventually I had to make do with the least used colors. I thought this was a fitting metaphor for my overall state of discomfort there, since I was forced to rely on my least used skills, like speaking Taiwanese.`,
+                                    `. They crumbled more easily than crayons and thus ran out quickly, so eventually I had to make do with the least used colors. I thought this was a fitting metaphor for my state of discomfort there, since I had to rely on my least used skills, like speaking Taiwanese.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -380,8 +380,7 @@ export default {
                         `baby steps inch towards`,
                         {
                             anchor: `crevice rays`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: `My grandmother's house at night was pitch black. So whenever I woke to use the bathroom, I had to tiptoe to the bedroom door, guided only by a sliver of moonlight peeking in from underneath.`,
                                 dotKeys: {
