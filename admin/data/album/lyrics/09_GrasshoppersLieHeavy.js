@@ -51,27 +51,12 @@ export default {
                                 anchor: `Philip K. Dick`,
                                 wiki: `Philip_K._Dick`,
                             },
-                            `that imagines`,
-                            {
-                                anchor: `World War II`,
-                                wiki: `World_War_II`,
-                            },
-                            `having ended with an`,
-                            {
-                                anchor: `Axis`,
-                                wiki: `Axis_powers`,
-                            },
-                            `victory. Curiously, the characters in this story are engrossed in their own alternate history novel called`,
+                            `that imagines World War II having ended with an Axis victory. Curiously, the characters in this story are engrossed in their own alternate history novel called`,
                             {
                                 isItalic: true,
                                 lyric: `The Grasshopper Lies Heavy`,
                             },
-                            `, in which the`,
-                            {
-                                anchor: `Allies`,
-                                wiki: `Allies_of_World_War_II`,
-                            },
-                            `won.`,
+                            `, in which the Allies won.`,
                         ],
                         dotKeys: {
                             [BACKSTORY]: true,
@@ -534,17 +519,7 @@ export default {
                             anchor: `stagefright ignites`,
                             card: {
                                 description: [
-                                    `During this time, I began performing at`,
-                                    {
-                                        anchor: `singer-songwriter`,
-                                        wiki: `Singer-songwriter`,
-                                    },
-                                    `nights hosted by local`,
-                                    {
-                                        anchor: `coffee shops`,
-                                        wiki: `Coffeehouse`,
-                                    },
-                                    `. My first few attempts were a disaster, but I learned to conquer my stagefright with just the right amount of alcohol.`,
+                                    `During this time, I began performing at singer-songwriter nights hosted by local coffee shops. My first few attempts were a disaster, but I learned to conquer my stagefright with just the right amount of alcohol.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -1337,12 +1312,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `The ascending chord progression of this coda initially suggests a blossoming relationship. Toward the end, it symbolizes`,
-                        {
-                            anchor: `sexual climax`,
-                            wiki: `Orgasm`,
-                        },
-                        `.`,
+                        `The ascending chord progression of this coda initially suggests a blossoming relationship. Toward the end, it symbolizes sexual climax.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
