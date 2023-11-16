@@ -144,8 +144,7 @@ export default {
                         `and their`,
                         {
                             anchor: `molls perched on pedestals`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: [
                                     {
@@ -1154,7 +1153,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `The momentous occasion of a wedding may leave the groom in a daze, to be roused only by the exchange of vows and rings with a "belle."`,
+                                    description: `The momentous occasion of a wedding may leave the groom in a daze, to be roused only by the exchange of wedding rings with a "belle."`,
                                     dotKeys: {
                                         [PUN]: true,
                                         [OBSERVATION]: true,
@@ -1246,8 +1245,7 @@ export default {
                         `You`,
                         {
                             anchor: `stand unsure`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             cards: [
                                 {
                                     description: `The night we decided to have sex, I was overcome with a wary unease that I couldn't explain.`,
