@@ -58,8 +58,7 @@ export default {
                         {
                             anchor: `O Catherine! My Catherine!`,
                             properNoun: true,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: [
                                     {
@@ -622,8 +621,7 @@ export default {
                         `—`,
                         {
                             anchor: `my Tekakwitha`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: [
                                     {
@@ -826,7 +824,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `I never understood why the Catholic Church extends its pro-life stance to the unborn of other faiths. After all, this just trades away the certainty of an aborted fetus going to heaven, for the likelihood of a living child going to hell.`,
+                                        `I never understood why the Catholic Church extends its pro-life stance to the unborn of other faiths. After all, this just trades away the certainty of an aborted fetus going to heaven, for a living child's likelihood of going to hell.`,
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
@@ -866,8 +864,7 @@ export default {
                         `to wear it like a`,
                         {
                             anchor: `tragic mask`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: [
                                     `In time I came to see comedy and tragedy as two sides of the same coin. After all, every tragic situation can be made into a song; writing a song calls for taking the broader view; and anything viewed broadly will reveal its comic underbelly. So I always preferred a negative outcome to none at all— but then this made my whole life feel like a stage act.`,
@@ -885,10 +882,15 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 todo: true,
-                problem: `"Them" in first sentence is unclear.`,
+                problem: `Review one more time.`,
                 card: {
                     description: [
-                        `I hadn't formally studied composition by this point, so I didn't realize that scoring this three-part counterpoint in the same register as the vocals would crowd them out. I solved the problem by`,
+                        `I hadn't formally studied composition by this point, so I didn't realize that the vocals would get crowded out by adding a three-part counterpoint in the same `,
+                        {
+                            anchor: `register`,
+                            wiki: `Register_(music)`,
+                        },
+                        `. I solved the problem by`,
                         {
                             anchor: `pitch shifting`,
                             wiki: `Pitch_shift`,
