@@ -189,9 +189,9 @@ export default {
                         {
                             anchor: `mystery mensch`,
                             todo: true,
-                            problem: `Having an older sister who was popular, I knew of a few girls in high school…`,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `I'd managed to attract a smattering of women up to this point in my life, which allowed me to see a pattern: All of them had been taken in by my appearance as an artsy loner, only to be turned off after finding that nothing of greater substance lay beneath. So my mission was to turn this mistaken assumption into a correct one.`,
+                                description: `Unlike me, my older sister was popular in high school. So she was always had the latest gossip, including which girls crushed on me from afar, and she would tell me. As such, I knew that my image as an artsy loner held some mystique. My mission at this point, then, was simply to ensure that something of actual substance lay beneath.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
