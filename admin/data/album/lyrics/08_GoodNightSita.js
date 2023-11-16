@@ -235,17 +235,7 @@ export default {
                             anchor: `Don't Stop 'Til You Get Enough`,
                             wiki: `Don't_Stop_'Til_You_Get_Enough`,
                         },
-                        `" in the home stretch of every shift. Ever since, I've associated this song with the idea of psyching myself up to have fun when I'm not really having fun. So I borrowed its sound to convey where my head was at during those first few dates with Sita— hence the palm-muted electric guitars, rubbery`,
-                        {
-                            anchor: `bass`,
-                            wiki: `Bass_guitar`,
-                        },
-                        `trills, and ample`,
-                        {
-                            anchor: `cowbell`,
-                            wiki: `Cowbell_(instrument)`,
-                        },
-                        `.`,
+                        `" in the home stretch of every shift. Ever since, I've associated this song with the idea of psyching myself up to have fun when I'm not really having fun. So I borrowed its sound to convey where my head was at during those first few dates with Sita— hence the palm-muted electric guitars, rubbery bass trills, and ample cowbell.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -859,10 +849,10 @@ export default {
                                 description: [
                                     `On our third date, Sita and I visit a`,
                                     {
-                                        anchor: `go-kart raceway`,
+                                        anchor: `go-kart`,
                                         wiki: `Kart_racing`,
                                     },
-                                    `. There's a twin go-kart available, presumably to seat a parent and child side by side. In jest, I gesture for Sita to hop in with me. She laughs and declines.`,
+                                    `raceway. There's a twin go-kart available, presumably to seat a parent and child side by side. In jest, I gesture for Sita to hop in with me. She laughs and declines.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -901,12 +891,7 @@ export default {
                             anchor: `answer a no`,
                             card: {
                                 description: [
-                                    `Of course, if I were never given an opening to make any decisions at all, then each date would end with me going right back to the beginning of the flowchart. And I'd be doomed to spend my life cycling through an`,
-                                    {
-                                        anchor: `infinite loop`,
-                                        wiki: `Infinite_loop`,
-                                    },
-                                    `of polite rejections.`,
+                                    `Of course, if I were never given an opening to make any decisions at all, then each date would end with me going right back to the beginning of the flowchart. And I'd be doomed to spend my life cycling through an infinite loop of polite rejections.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -932,17 +917,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `On one date, Sita took me to a`,
-                                        {
-                                            anchor: `vegetarian`,
-                                            wiki: `Vegetarianism`,
-                                        },
-                                        `restaurant, where I ordered a dish that resembled a chicken breast. When we cracked its sesame-stick`,
-                                        {
-                                            anchor: `wishbone`,
-                                            wiki: `Furcula`,
-                                        },
-                                        `, she got the longer end. Needless to say, my wish wasn't granted.`,
+                                        `On one date, Sita took me to a vegetarian restaurant, where I ordered a dish that resembled a chicken breast. When we cracked its sesame-stick wishbone, she got the longer end. Needless to say, my wish wasn't granted.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -999,12 +974,7 @@ export default {
                             anchor: `The New Mickey Mouse Club`,
                             wiki: `The_Mickey_Mouse_Club`,
                         },
-                        `, a`,
-                        {
-                            anchor: `disco-inflected`,
-                            wiki: `Disco`,
-                        },
-                        `70s revival of the original 50s show. In particular, the song "Let's Go Day" gave me the idea to play portamento quarter notes on an`,
+                        `, a disco 70s revival of the original 50s show. In particular, the song "Let's Go Day" gave me the idea to play portamento quarter notes on an`,
                         {
                             anchor: `analog synthesizer`,
                             wiki: `Analog_synthesizer`,
@@ -1040,12 +1010,7 @@ export default {
                             anchor: `chirping crosswalks`,
                             card: {
                                 description: [
-                                    `Sita and I are still standing on the sidewalk outside her boarding house. In the distance, an electronic bird call informs the`,
-                                    {
-                                        anchor: `visually impaired`,
-                                        wiki: `Visual_impairment`,
-                                    },
-                                    `that the street is safe to cross.`,
+                                    `Sita and I are still standing on the sidewalk outside her boarding house. In the distance, an electronic bird call informs the visually impaired that the street is safe to cross.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
