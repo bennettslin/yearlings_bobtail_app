@@ -4,16 +4,16 @@
     .sclera { fill: hsl(216, 16%, 88%); }
     .pupil { fill: hsla(0, 0%, 0%, 0.5); }
 
-    .irisDarkBrown { fill: hsl(36, 21%, 42%); }
-    .irisBrown { fill: hsl(42, 19%, 47%); }
+    .irisDarkBrown { fill: hsl(36, 17%, 40%); }
+    .irisBrown { fill: hsl(42, 18%, 43%); }
     .irisAmber { fill: hsl(56, 21%, 52%); }
     .irisHazel { fill: hsl(71, 20%, 52%); }
     .irisGreen { fill: hsl(104, 15%, 52%); }
     .irisBlue { fill: hsl(204, 15%, 57%); }
 
     [class^=lipFemaleDark] { fill: hsla(2, 21%, 41%, 0.55); }
-    [class^=lipFemaleBrown] { fill: hsla(2, 24%, 44%, 0.52); }
-    [class^=lipFemaleMedium] { fill: hsla(1, 27%, 51%, 0.5); }
+    [class^=lipFemaleBrown] { fill: hsla(2, 24%, 43%, 0.52); }
+    [class^=lipFemaleMedium] { fill: hsla(1, 27%, 50%, 0.5); }
     [class^=lipFemaleLight] { fill: hsla(1, 33%, 58%, 0.5); }
 
     .lipMaleDark__noStroke { fill: hsla(2, 15%, 41%, 0.45); }
@@ -31,8 +31,8 @@
 
     .skinBlack { fill: hsl(29, 31%, 48%); }
     .skinIndian { fill: hsl(21, 33%, 52%); }
-    .skinFilipino { fill: hsl(28, 42%, 57%); }
-    .skinLatino { fill: hsl(24, 42%, 62%); }
+    .skinFilipino { fill: hsl(28, 40%, 57%); }
+    .skinLatino { fill: hsl(24, 40%, 59%); }
     .skinEastAsian { fill: hsl(29, 45%, 68%); }
     .skinAshkenazi { fill: hsl(22, 46%, 70%); }
     .skinGallic { fill: hsl(19, 46%, 74%); }
@@ -68,7 +68,7 @@
 
     .darkRoom &.darkRoom#{$suffix} {
         // Includes Chinese paintings and Bloom County poster.
-        .lipFemaleMedium { fill: hsla(1, 12%, 34%, 0.5); }
+        .lipFemaleMedium { fill: hsla(1, 12%, 33%, 0.5); }
         .skinBlack { fill: hsl(29, 18%, 32%); }
         .skinEastAsian { fill: hsl(29, 18%, 40%); }
         .skinNordic { fill: hsl(21, 18%, 46%); }
@@ -77,7 +77,7 @@
     }
 
     .darkRoomExtra &.darkRoomExtra#{$suffix} {
-        [class^=lipFemaleBrown] { fill: hsla(2, 11%, 22%, 0.52); }
+        [class^=lipFemaleBrown] { fill: hsla(2, 11%, 21%, 0.52); }
         .lipMaleMedium__noStroke { fill: hsla(1, 11%, 34%, 0.4); }
         .teeth { fill: hsl(40, 13%, 42%); }
         .skinIndian { fill: hsl(21, 18%, 31%); }
