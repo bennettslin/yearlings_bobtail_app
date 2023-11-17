@@ -549,12 +549,7 @@ export default {
                                             wiki: `German_battleship_Tirpitz`,
                                         },
                                     },
-                                    `were sister battleships of the`,
-                                    {
-                                        anchor: `German navy`,
-                                        wiki: `Kriegsmarine`,
-                                    },
-                                    `in World War II. In this allegory, Sita and I fight for the Axis, since they were the heroes of history in`,
+                                    `were sister battleships of the German navy in World War II. In this allegory, Sita and I fight for the Axis, since they were the heroes of history in`,
                                     {
                                         isItalic: true,
                                         lyric: `The Man in the High Castle`,
@@ -696,7 +691,8 @@ export default {
                         `them`,
                         {
                             anchor: `tripped on runner's high`,
-                            review: true,
+                            todo: true,
+                            problem: `Mention euphoria so I can link a wiki to it.`,
                             card: {
                                 description: [
                                     `Having completed a grueling shift, I'm feeling dead tired in all my limbs as I make my way back home. So when a nighttime jogger`,
