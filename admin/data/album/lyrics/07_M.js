@@ -114,7 +114,7 @@ export default {
                             anchor: `learning the talents`,
                             review: true,
                             card: {
-                                description: `It's not that I'd done anything wrong to make Catherine break up with me; I just didn't have much to offer. As such, it seemed illogical to pursue the next relationship in the same manner. To secure my future chances, I needed to take time off and build up a surplus of attractive traits. So I started with the ones that Catherine valued most.`,
+                                description: `It's not that I'd done anything wrong to make Catherine break up with me; I just didn't have much to offer. For this reason, it seemed illogical to pursue the next relationship in the same manner. To secure my future chances, I needed to take time off and build up a surplus of attractive traits. So I started with the ones that Catherine valued most.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -189,9 +189,9 @@ export default {
                         {
                             anchor: `mystery mensch`,
                             todo: true,
-                            problem: `Review one more time.`,
+                            problem: `The gossip is the crushes, not the girls.`,
                             card: {
-                                description: `Unlike me, my older sister was popular in high school. So she was always had the latest gossip, including which girls crushed on me from afar, and she would tell me. As such, I knew that my image as an artsy loner held some mystique. My mission at this point, then, was simply to ensure that something of actual substance lay beneath.`,
+                                description: `Unlike me, my older sister was popular in high school, so she always had the latest gossip to tell me— including the handful of girls who crushed on me from afar. As such, I knew I could lean on my appearance as an artsy loner. My mission at this point was simply to ensure that something of substance lay beneath the mystique.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
