@@ -1385,8 +1385,7 @@ export default {
                     lyric: [
                         {
                             anchor: `herows— ourauras left`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             cards: [
                                 {
                                     description: `Wishing to respect the dead, we've left behind "our auras" as history's "heroes."`,
@@ -1581,7 +1580,7 @@ export default {
                                 problem: `Review one more time.`,
                                 cards: [
                                     {
-                                        description: `My mastodon lies sunk in a "tar pit," just as I'm sinking in all my "torpid" lies to Sita explaining why I don't spend more nights with her.`,
+                                        description: `My mastodon lies sunk in a "tar pit," just as I'm sinking in all my "torpid" lies explaining to Sita why I don't spend more nights with her.`,
                                         dotKeys: {
                                             [NARRATIVE]: true,
                                             [PUN]: true,
@@ -1731,8 +1730,7 @@ export default {
                             // NOTE: Changing from Nunavutter.
                             anchor: `Noworse and Nunavetter`,
                             properNoun: true,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: [
                                     `Our Inuit tribe has now ventured all the way to`,
@@ -1768,7 +1766,7 @@ export default {
                                                 anchor: `Europeans into the Americas`,
                                                 wiki: `European_colonization_of_the_Americas`,
                                             },
-                                            `precipitated their rise to global power, just as it brought disease and ruin to the native populations. Similarly, while the day begins for many, it's now over for us, and we "leave as the red sun" arrives.`,
+                                            `precipitated their rise to global power, just as it brought disease and ruin to the native populations. Similarly, while the day begins for many, it's now ending for us, and we "leave as the red sun" arrives.`,
                                         ],
                                         dotKeys: {
                                             [NARRATIVE]: true,
@@ -2012,7 +2010,7 @@ export default {
                             problem: `Review one more time.`,
                             cards: [
                                 {
-                                    description: `That night at the drugstore, I advised everyone to get the small bottle of Robitussin. We then lined up at separate checkouts to avoid attracting suspicion. When Howie finally rejoined us, we found out he'd gone back for the large bottle, thinking the small one wouldn't be enough.`,
+                                    description: `That night at the drugstore, I advised everyone to get the small bottle of Robitussin. We then lined up at separate checkouts to avoid attracting suspicion. When Howie finally rejoined us, we saw that he'd gone back for the large bottle, thinking the small one wouldn't be enough.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -2133,8 +2131,7 @@ export default {
                         `…`,
                         {
                             anchor: `"Rejoyce!" bellow the`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             cards: [
                                 {
                                     description: [
@@ -2147,7 +2144,7 @@ export default {
                                             anchor: `televangelists`,
                                             wiki: `Televangelism`,
                                         },
-                                        `, I observe that every religion's pioneering spirit eventually degrades into convention and routine, as does every person's youthful outlook. But in the meantime, we're just halfway through summer, and more nights of Robitussin await…`,
+                                        `, I observe that every religion's pioneering spirit eventually degrades into convention and routine— as does every person's youthful outlook. But in the meantime, we're just halfway through summer, and more nights of Robitussin await…`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,

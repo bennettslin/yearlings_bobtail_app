@@ -1149,7 +1149,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `The momentous occasion of a wedding may leave the groom in a daze, to be roused only by the exchange of wedding rings with a "belle."`,
+                                    description: `The momentous occasion of a wedding may leave the groom in a daze, to be roused only by exchanging wedding rings with a "belle."`,
                                     dotKeys: {
                                         [PUN]: true,
                                         [OBSERVATION]: true,

@@ -42,18 +42,18 @@ export default {
                 card: {
                     description: [
                         {
+                            anchor: `John Osborne`,
+                            wiki: `John_Osborne`,
+                        },
+                        `'s`,
+                        {
                             isItalic: true,
                             lyric: {
                                 anchor: `Look Back in Anger`,
                                 wiki: `Look_Back_in_Anger`,
                             },
                         },
-                        `is a theatrical play by`,
-                        {
-                            anchor: `John Osborne`,
-                            wiki: `John_Osborne`,
-                        },
-                        `. Set in postwar England, it centers on a disgruntled young working-class man who hurls rage at his long-suffering wife. It hit unnervingly close to home when I read it.`,
+                        `is a theatrical play set in postwar England, that centers on a disgruntled young working-class man who hurls rage at his long-suffering wife. It hit unnervingly close to home when I read it.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -606,7 +606,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `But my appraisal was based on reason, not malice. If the Christian god were the one true God, why would he trust his message to be spread by the tormentors of those he hoped to reach?`,
+                                description: `But my appraisal was based on reason, not malice. If the Christian god were the one true God, then why would he trust his message to be spread by the tormentors of those he hoped to reach?`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -698,7 +698,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `Yet even as reason disproved the beliefs of my bullies, it also discredited my own as a Beyonder. After all, with so many rival claims to the truth, who would stay loyal to a faith that offers no community, and only endless grief?`,
+                                description: `Yet even as reason disproved the beliefs of my bullies, it also discredited my own as a Beyonder. After all, with so many rival claims to the truth, who would stay loyal to a faith that offers no community and only endless grief?`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -762,7 +762,7 @@ export default {
                                         isItalic: true,
                                         lyric: `Look Back in Anger`,
                                     },
-                                    `, the protagonist pictures his wife as a squirrel and sighs, "Poor squirrels," acknowledging that his abusive tirades keep her trapped in a neurotic state.`,
+                                    `, the protagonist pictures his wife as a squirrel and sighs, "Poor squirrels," acknowledging that his abusive tirades keep her trapped in a helpless state.`,
                                 ],
                                 dotKeys: {
                                     [REFERENCE]: true,
