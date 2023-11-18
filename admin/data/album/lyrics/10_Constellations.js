@@ -156,12 +156,7 @@ export default {
                             anchor: `whispures a low sigh, bein'`,
                             card: {
                                 description: [
-                                    `"Heaven's manna was pure psilocybin." During this time, I was intrigued by the role played by`,
-                                    {
-                                        anchor: `psychedelic drugs`,
-                                        wiki: `Psychedelic_drug`,
-                                    },
-                                    `throughout history. Though textbooks naturally failed to provide this information, it was readily available in the alternative bookstores around Berkeley. One theory is that`,
+                                    `"Heaven's manna was pure psilocybin." During this time, I was intrigued by the role played by psychedelic drugs throughout history. Though textbooks naturally failed to provide this information, it was readily available in the alternative bookstores around Berkeley. One theory is that`,
                                     {
                                         anchor: `manna`,
                                         wiki: `Manna`,
@@ -191,12 +186,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `The Israelites, being of "the" exempt, were spared the`,
-                                        {
-                                            anchor: `plagues`,
-                                            wiki: `Plagues_of_Egypt`,
-                                        },
-                                        `that God visited upon Egypt. And with our stomachs full of Robitussin, we're spared any chance of having flu symptoms.`,
+                                        `The Israelites, being of "the" exempt, were spared the plagues that God visited upon Egypt. And with our stomachs full of Robitussin, we're spared any chance of having flu symptoms.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -235,12 +225,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `Ana's friends Howie and Tomer were seasoned drug users but hadn't taken Robitussin before. Given that it's sold`,
-                                        {
-                                            anchor: `over the counter`,
-                                            wiki: `Over-the-counter_drug`,
-                                        },
-                                        `, they'd assumed its effects would be weaker than those of prescribed painkillers like "`,
+                                        `Ana's friends Howie and Tomer were seasoned drug users but hadn't taken Robitussin before. Given that it's sold over the counter, they'd assumed its effects would be weaker than those of prescribed painkillers like "`,
                                         {
                                             anchor: `Vicodin`,
                                             wiki: `Hydrocodone/paracetamol`,
@@ -259,12 +244,7 @@ export default {
                                             anchor: `Vikings`,
                                             wiki: `Vikings`,
                                         },
-                                        `were Norse seafarers who expanded outward from`,
-                                        {
-                                            anchor: `Scandinavia`,
-                                            wiki: `Scandinavia`,
-                                        },
-                                        `beginning in the 8th century. Like them, we've left the comfort of our dens to explore new vistas.`,
+                                        `were Norse seafarers who expanded outward from Scandinavia beginning in the 8th century. Like them, we've left the comfort of our dens to explore new vistas.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -328,12 +308,7 @@ export default {
                                             anchor: `Valkyries`,
                                             wiki: `Valkyrie`,
                                         },
-                                        `" in`,
-                                        {
-                                            anchor: `Norse mythology`,
-                                            wiki: `Norse_mythology`,
-                                        },
-                                        `were noble maidens who escorted fallen warriors from the battlefield.`,
+                                        `" in Norse mythology were noble maidens who escorted fallen warriors from the battlefield.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -425,12 +400,7 @@ export default {
                                             anchor: `Kalevala`,
                                             wiki: `Kalevala`,
                                         },
-                                        `" is the national epic poem of`,
-                                        {
-                                            anchor: `Finland`,
-                                            wiki: `Finland`,
-                                        },
-                                        `.`,
+                                        `" is the national epic poem of Finland.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -466,11 +436,7 @@ export default {
                                 },
                                 {
                                     description: [
-                                        {
-                                            anchor: `Finnish`,
-                                            wiki: `Finnish_language`,
-                                        },
-                                        `belongs to the "`,
+                                        `Finnish belongs to the "`,
                                         {
                                             anchor: `Finno-Ugric`,
                                             wiki: `Finno-Ugric_languages`,
@@ -489,12 +455,12 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `We're literally "high men," and since the others are trying Robitussin for the`,
+                                        `We're literally "high men," and since the others are trying Robitussin for the first time, it also "laps our`,
                                         {
-                                            anchor: `first time`,
-                                            wiki: `Virginity`,
+                                            anchor: `hymen`,
+                                            wiki: `Hymen`,
                                         },
-                                        `, it also "laps our hymen."`,
+                                        `."`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -544,17 +510,7 @@ export default {
                                             anchor: `Magyars`,
                                             wiki: `Hungarians`,
                                         },
-                                        `" are a Finno-Ugric people who "migrated" from the`,
-                                        {
-                                            anchor: `Ural Mountains`,
-                                            wiki: `Ural_Mountains`,
-                                        },
-                                        `and established the nation of`,
-                                        {
-                                            anchor: `Hungary`,
-                                            wiki: `Hungary`,
-                                        },
-                                        `.`,
+                                        `" are a Finno-Ugric people who "migrated" from the East and established the nation of Hungary.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -766,12 +722,7 @@ export default {
                                             anchor: `Tamerlane`,
                                             wiki: `Timur`,
                                         },
-                                        `" continued the Turko-Mongol expansion into`,
-                                        {
-                                            anchor: `Central Asia`,
-                                            wiki: `Central_Asia`,
-                                        },
-                                        `. Though not born from the seed of Genghis Khan directly, he laid out the case for his legitimacy by tracing lineage to a common ancestor.`,
+                                        `" continued the Turko-Mongol expansion into Central Asia. Though not born from the seed of Genghis Khan directly, he laid out the case for his legitimacy by tracing lineage to a common ancestor.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -798,22 +749,7 @@ export default {
                                             anchor: `Mughals`,
                                             wiki: `Mughal_Empire`,
                                         },
-                                        `,`,
-                                        {
-                                            anchor: `Muslim`,
-                                            wiki: `Islam`,
-                                        },
-                                        `descendants of Tamerlane, must have regaled themselves with tales of "how he" led the feat that precipitated their`,
-                                        {
-                                            anchor: `conquest of South Asia`,
-                                            wiki: `Muslim_conquests_in_the_Indian_subcontinent`,
-                                        },
-                                        `and its`,
-                                        {
-                                            anchor: `Hindu`,
-                                            wiki: `Hinduism`,
-                                        },
-                                        `populations.`,
+                                        `, Muslim descendants of Tamerlane, must have regaled themselves with tales of "how he" led the feat that precipitated their conquest of South Asia and its Hindu populations.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -873,12 +809,7 @@ export default {
                                         anchor: `Aryan Invasion`,
                                         wiki: `Indo-Aryan_migration`,
                                     },
-                                    `theory, which I examined in a recent term paper. Proposed by 19th-century Western scholars, it posits that`,
-                                    {
-                                        anchor: `Indian`,
-                                        wiki: `India`,
-                                    },
-                                    `civilization was brought by invaders from the north, who carved a trail leading to the "source" of the`,
+                                    `theory, which I examined in a recent term paper. Proposed by 19th-century Western scholars, it posits that Indian civilization was brought by invaders from the north, who carved a trail leading to the "source" of the`,
                                     {
                                         anchor: `Indus`,
                                         wiki: `Indus_River`,
@@ -924,20 +855,11 @@ export default {
                         {
                             anchor: `Forsi ahuro`,
                             properNoun: true,
-                            review: true,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
-                                    `In the`,
-                                    {
-                                        anchor: `Iranian`,
-                                        wiki: `Iran`,
-                                    },
-                                    `language of "`,
-                                    {
-                                        anchor: `Farsi`,
-                                        wiki: `Persian_language`,
-                                    },
-                                    `," the word for a deity is "`,
+                                    `In Persian, or "Farsi," the word for a deity is "`,
                                     {
                                         isItalic: true,
                                         lyric: {
@@ -1120,17 +1042,7 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `Spent from the "Arabian" battles that ended with their`,
-                                        {
-                                            anchor: `defeat to the Muslims`,
-                                            wiki: `Muslim_conquest_of_Persia`,
-                                        },
-                                        `, the Persians were then`,
-                                        {
-                                            anchor: `subjugated by the Mongols`,
-                                            wiki: `Mongol_conquest_of_Khwarezmia`,
-                                        },
-                                        `, the next enemy at their doorstep.`,
+                                        `Spent from the "Arabian" battles that ended with their defeat to the Muslims, the Persians were then subjugated by the Mongols, the next enemy at their doorstep.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -1227,12 +1139,7 @@ export default {
                                             anchor: `Khmer`,
                                             wiki: `Khmer_people`,
                                         },
-                                        `" nation of what is now present-day`,
-                                        {
-                                            anchor: `Cambodia`,
-                                            wiki: `Cambodia`,
-                                        },
-                                        `.`,
+                                        `" nation of what is now present-day Cambodia.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -1288,12 +1195,7 @@ export default {
                             properNoun: true,
                             card: {
                                 description: [
-                                    `The`,
-                                    {
-                                        anchor: `Americas`,
-                                        wiki: `Americas`,
-                                    },
-                                    `were first settled by northeast Asian populations who gladly "forfeited the tundra's`,
+                                    `The Americas were first settled by northeast Asian populations who gladly "forfeited the tundra's`,
                                     {
                                         anchor: `Siberian`,
                                         wiki: `Siberia`,
@@ -1551,12 +1453,7 @@ export default {
                                         anchor: `mastodon`,
                                         wiki: `Mastodon`,
                                     },
-                                    `," I'm "haunted by the sober truth" that my relationship with Sita has devolved into`,
-                                    {
-                                        anchor: `codependency`,
-                                        wiki: `Codependency`,
-                                    },
-                                    `, and I'm beginning to tire of it.`,
+                                    `," I'm "haunted by the sober truth" that my relationship with Sita has devolved into codependency, and I'm beginning to tire of it.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1625,10 +1522,10 @@ export default {
                                     description: [
                                         `As Robitussin is a`,
                                         {
-                                            anchor: `dissociative drug`,
+                                            anchor: `dissociative`,
                                             wiki: `Dissociative`,
                                         },
-                                        `, I start to detach from myself. In doing so, I catch a glimpse of how superficial my aspirations are, and how "hollow" the local "scene" is in which I desire recognition.`,
+                                        `drug , I start to detach from myself. In doing so, I catch a glimpse of how superficial my aspirations are, and how "hollow" the local "scene" is in which I desire recognition.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -1761,12 +1658,7 @@ export default {
                                 cards: [
                                     {
                                         description: [
-                                            `The arrival of`,
-                                            {
-                                                anchor: `Europeans into the Americas`,
-                                                wiki: `European_colonization_of_the_Americas`,
-                                            },
-                                            `precipitated their rise to global power, just as it brought disease and ruin to the native populations. Similarly, while the day begins for many, it's now ending for us, and we "leave as the red sun" arrives.`,
+                                            `The arrival of Europeans into the Americas precipitated their rise to global power, just as it brought disease and ruin to the native populations. Similarly, while the day begins for many, it's now ending for us, and we "leave as the red sun" arrives.`,
                                         ],
                                         dotKeys: {
                                             [NARRATIVE]: true,
@@ -1785,12 +1677,7 @@ export default {
                                                 anchor: `Erik the Red`,
                                                 wiki: `Erik_the_Red`,
                                             },
-                                            `, who established Norse settlements in`,
-                                            {
-                                                anchor: `Greenland`,
-                                                wiki: `Greenland`,
-                                            },
-                                            `.`,
+                                            `, who established Norse settlements in Greenland.`,
                                         ],
                                     },
                                 ],
@@ -1915,12 +1802,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `For a song about recreational drug use, I naturally turned to the Beatles during their`,
-                        {
-                            anchor: `psychedelic`,
-                            wiki: `Psychedelic_rock`,
-                        },
-                        `period for ideas. "`,
+                        `For a song about recreational drug use, I naturally turned to the Beatles during their psychedelic period for ideas. "`,
                         {
                             anchor: `Tomorrow Never Knows`,
                             wiki: `Tomorrow_Never_Knows`,
@@ -1930,12 +1812,7 @@ export default {
                             anchor: `tape loop`,
                             wiki: `Tape_loop`,
                         },
-                        `to imitate a`,
-                        {
-                            anchor: `seagull`,
-                            wiki: `Gull`,
-                        },
-                        `'s cry, which I tried to recreate by pinching off the airstream blown through the window of a recorder. The result wasn't what I'd hoped for, but as background texture, it contributes nicely to the overall atmosphere.`,
+                        `to imitate a seagull's cry, which I tried to recreate by pinching off the airstream blown through the window of a recorder. The result wasn't what I'd hoped for, but as background texture, it contributes nicely to the overall atmosphere.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -1990,12 +1867,7 @@ export default {
                                         anchor: `ruffs`,
                                         wiki: `Ruff_(clothing)`,
                                     },
-                                    `around their necks resemble the neck fringes seen on`,
-                                    {
-                                        anchor: `vultures`,
-                                        wiki: `Vulture`,
-                                    },
-                                    `, or "buzzards," as they are colloquially known.`,
+                                    `around their necks resemble the neck fringes seen on vultures, or "buzzards," as they're colloquially known.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -2028,6 +1900,8 @@ export default {
                         {
                             anchor: `Rumspring`,
                             properNoun: true,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
                                     `"`,
@@ -2040,12 +1914,7 @@ export default {
                                         anchor: `Amish`,
                                         wiki: `Amish`,
                                     },
-                                    `teenagers are encouraged to explore the secular world of the "English," as the non-Amish are called, in the hope that this will strengthen their faith. Though it means "running around" in`,
-                                    {
-                                        anchor: `Pennsylvania Dutch`,
-                                        wiki: `Pennsylvania_German_language`,
-                                    },
-                                    `, I like the image of us dipping into a literal "rum spring." In any case, the spring of our youth, in both the literal and metaphorical sense, is running dry.`,
+                                    `teenagers are encouraged to explore the secular world of the "English," as the non-Amish are called, in order to test their faith. Though it means "running around" in the Amish tongue, I like the image of us dipping into a literal "rum spring." In any case, the spring of our youth, in both the literal and metaphorical sense, is running dry.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -2069,12 +1938,7 @@ export default {
                                         anchor: `Deseret`,
                                         wiki: `Deseret_alphabet`,
                                     },
-                                    `" is an alphabet developed by the early`,
-                                    {
-                                        anchor: `Mormons`,
-                                        wiki: `Mormons`,
-                                    },
-                                    `. As it had once filled their mouths, a "desert" now fills ours.`,
+                                    `" is an alphabet developed by the early Mormons. As it had once filled their mouths, a "desert" now fills ours.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -2110,15 +1974,10 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `"Black Latter-Day Saints to head." The Mormon Church, also known as the`,
-                                        {
-                                            anchor: `Latter-Day Saints`,
-                                            wiki: `The_Church_of_Jesus_Christ_of_Latter-day_Saints`,
-                                        },
-                                        `, originally did not allow its`,
+                                        `"Black Latter-Day Saints to head." The Mormon Church, also known as the Latter-Day Saints, originally didn't allow its`,
                                         {
                                             anchor: `Black members`,
-                                            wiki: `Black_people_and_Mormonism`,
+                                            wiki: `Black_Mormons`,
                                         },
                                         `to attain priesthood. This policy was reversed in 1978.`,
                                     ],
