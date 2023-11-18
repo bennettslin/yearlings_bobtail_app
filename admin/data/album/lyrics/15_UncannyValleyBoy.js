@@ -48,7 +48,7 @@ export default {
                                 anchor: `uncanny valley`,
                                 wiki: `Uncanny_valley`,
                             },
-                            `theorizes that we humans grow further repulsed by human replicas as they take on more lifelike characteristics, insofar as they still remain less than perfectly convincing to us. And as I grew older while remaining unconvincing as a grownup, it was reasonable to ask if this "Valley boy" now elicited the same revulsion.`,
+                            `theorizes that people grow further repulsed by human replicas as they take on more lifelike characteristics, insofar as they remain less than perfectly convincing. And as I grew older while remaining less than convincing as a grownup, it was reasonable to ask if this "Valley boy" now drew the same revulsion.`,
                         ],
                         dotKeys: {
                             [OBSERVATION]: true,
@@ -441,12 +441,12 @@ export default {
                             anchor: `Village Green Preservation Society`,
                             wiki: `The_Kinks_Are_the_Village_Green_Preservation_Society`,
                         },
-                        `served as a model for this album. As such, the songs all had to be memorable pop tunes, while containing zero filler and representing a variety of musical styles. And each one would clock in at three minutes or so, with none over four. While there was no one-to-one mapping, this song was clearly the "`,
+                        `served as a model for this album. As such, the songs all had to be memorable pop tunes representing a variety of musical styles, with each one clocking in at three to four minutes. While there was no one-to-one mapping, this song was clearly my "`,
                         {
                             anchor: `Wicked Annabella`,
                             wiki: `Wicked_Annabella`,
                         },
-                        `" of the bunch. So I borrowed its sound of low notes played on crunchy electric guitars.`,
+                        `." So I went for the same sound of low notes played on crunchy electric guitars.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -744,7 +744,7 @@ export default {
                                         anchor: `hazing rituals`,
                                         wiki: `Hazing`,
                                     },
-                                    `to toughen them up. After dealing with similar abuse for so long, I finally conceded that I would't have toughened up otherwise either. And now I had no qualms about dishing it out to others.`,
+                                    `to toughen them up. Having dealt with such abuse for so long, I finally conceded that I wouldn't have toughened up in any other way either. And now I had no qualms about dishing it out to others.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,

@@ -42,7 +42,7 @@ export default {
                 todo: true,
                 problem: `Review one more time.`,
                 card: {
-                    description: `Once when I was a child, a playmate asked if I knew what cremation was. I didn't, but I assumed it must be fun and tasty. Of course, the horrifying truth was revealed to me a moment later. I thought this was the perfect metaphor for a song about the seemingly innocent day trip planned by Miriam to end with our breakup.`,
+                    description: `Once when I was a child, a playmate asked if I knew what cremation was. I didn't, but I assumed it must be fun and tasty. Of course, the horrifying truth was revealed to me a moment later. I thought this was the perfect metaphor for a song about the seemingly innocent day trip that Miriam had planned out to end with our breakup.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [OBSERVATION]: true,
@@ -264,7 +264,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `Though I tried to adopt an innocent persona, Miriam must have known about the drunken incidents. My reputation preceded me by that point, and we had friends in common. Still, I never bothered to explain the discrepancy, and she never asked me to. I think she just accepted it as part of the adventure.`,
+                                description: `Though I tried to adopt an innocent persona, Miriam must have known about the drunken incidents. My reputation preceded me by that point, and we had friends in common. Still, I never offered an explanation for the discrepancy, and she never asked for one. I think she just accepted it as part of the adventure.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -365,7 +365,7 @@ export default {
                 todo: true,
                 problem: `Review one more time.`,
                 card: {
-                    description: `I chose doublespeaker rhyme for this song because my original plan was to contrast Miriam's inner thoughts with mine. But after I kept forgetting which column of lyrics belonged to whom, I realized there was no contrast to show. We were of the same mind that the relationship would fail. One of us just had a better idea of when.`,
+                    description: `I chose doublespeaker rhyme for this song because my original plan was to contrast Miriam's inner thoughts with mine. But after forgetting several times which column of lyrics was whose, I realized there was no contrast to show. We both knew that the relationship would fail. One of us just had a better idea of when.`,
                     dotKeys: {
                         [OBSERVATION]: true,
                         [SONGCRAFT]: true,

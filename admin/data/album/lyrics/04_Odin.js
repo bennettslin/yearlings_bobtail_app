@@ -109,7 +109,7 @@ export default {
                                             anchor: `Sodom`,
                                             wiki: `Sodom_and_Gomorrah`,
                                         },
-                                        `. When his wife looked back, she was turned into a pillar of salt. This story can be seen as a cautionary tale, warning the faithful not to cohabit with the fallen.`,
+                                        `. When his wife looked back, she was turned into a pillar of salt. Some see this as a cautionary tale for the faithful not to cohabit with the fallen.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -233,8 +233,7 @@ export default {
                         `you drew with`,
                         {
                             anchor: `crayons least whittled`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: [
                                     `When we landed in Taiwan, my aunt presented me with a box of`,

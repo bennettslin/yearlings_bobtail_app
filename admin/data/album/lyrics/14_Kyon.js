@@ -397,7 +397,12 @@ export default {
                             problem: `Review one more time.`,
                             card: {
                                 description: [
-                                    `A keeper in the sense of being the one who tends to the herd, as well as the only one worth keeping from`,
+                                    `A keeper in the sense of being both the one who tends`,
+                                    {
+                                        isEmphasis: true,
+                                        lyric: `to`,
+                                    },
+                                    `the herd, and the only one worth keeping from`,
                                     {
                                         isEmphasis: true,
                                         lyric: `among`,
@@ -523,7 +528,7 @@ export default {
                             problem: `Review one more time.`,
                             cards: [
                                 {
-                                    description: `During those on-and-off years, I would habitually return to Sita, with a promise to mend my ways. Things would be peachy for a while— and then I would run off with yet another woman. I was like a reformed convict who might relapse at any time without warning, taking with him the shank he'd left on the windowsill to collect dust.`,
+                                    description: `During those on-and-off years, I would habitually return to Sita with a promise to mend my ways. Things would be peachy for a while— after which I would run off with yet another woman. I was like a reformed convict who might relapse at any time without warning, taking with him the shank that he'd left on the windowsill to collect dust.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [OBSERVATION]: true,
@@ -725,7 +730,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `I also hadn't settled the issue of whether an afterlife was even preferable. Though Sita had no ready answers, she taught me her Hindu beliefs, which supplemented what I was studying in my religious studies courses. I found comfort in Hinduism's sprawling pantheon of deities and avatars. It just seemed like the more details there are to learn, the more ways there are to get lost in the divine.`,
+                                description: `I also hadn't settled the issue of whether an afterlife was even preferable. Though Sita had no ready answers, she taught me her Hindu beliefs, which supplemented what I was learning in my religious studies courses. I found comfort in Hinduism's sprawling pantheon of deities and avatars. It just seemed like the more details there are to learn, the more ways there are to get lost in the divine.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -738,7 +743,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `As friends, Sita and I got along because we were both sad people. But while my depression was simply rooted in circumstance— whether from being bullied as a child, or out of loneliness as I got older— hers was clinical. So as I learned to deal with my moods, I grew impatient with her for lacking the same initiative.`,
+                                description: `As friends, Sita and I got along well because we were both sad people. Her depression was clinical, however, whereas mine was simply rooted in circumstance— whether from being bullied as a child, or out of loneliness as I got older. And so I got better at dealing with my spells— but then I grew impatient with her for being incapable of the same.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -801,7 +806,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `When Sita first asked about the scars on my forearm, I replied with dry wit that they were just for practice. Years later, when I expressed concern after she'd tried cutting for herself, she gave me the same assurance. The message was clear that I was the cause in more ways than one.`,
+                                description: `Back when Sita and I were just friends, she once asked about the scars on my forearm. I replied with dry wit that they were just for practice. Years later when I expressed concern after she'd tried cutting for herself, she gave me the same assurance. The message was clear that I was the cause in more ways than one.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

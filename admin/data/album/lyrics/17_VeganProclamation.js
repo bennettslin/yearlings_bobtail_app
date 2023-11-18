@@ -70,10 +70,9 @@ export default {
                                 `"If you're just starting out, you need to decide right now: Either you stick with quality vinyl, or you buy only the bargain bin LPs. You`,
                                 {
                                     anchor: `can't have both`,
-                                    todo: true,
-                                    problem: `Review one more time.`,
+                                    review: true,
                                     card: {
-                                        description: `A friend offered me this advice when I was looking to buy a used turntable. And as it turns out, what's true for vinyl records holds just as well for life decisions. I couldn't have two selves, with one to earn praise for my kindness, and the other to take the blame for my selfish desires. A single hurtful deed corrupts everything else. I knew this now.`,
+                                        description: `A friend offered me this advice when I was looking to buy a used turntable— and as it turns out, what's true for vinyl records holds just as well for life decisions. I couldn't have two selves, with one to earn praise for my kindness, and the other to take the blame for my selfish desires. A single hurtful deed corrupts everything else. I knew this now.`,
                                         dotKeys: {
                                             [BACKSTORY]: true,
                                             [OBSERVATION]: true,
@@ -681,7 +680,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `For several years, my modus operandi was to stay with Sita right up until I had another option to pursue. Each time I left, Sita would languish for a few months before mustering the courage to contact me. Then, upon hearing that things hadn't worked out with the other woman, she'd cajole me back. But now the situation was reversed: I had no more options coming down the pike, while Sita had fallen in love with someone else.`,
+                                description: `For years, my habit was to stay with Sita right up until I had another option to pursue. Each time I left, Sita would languish for a few months before finding the courage to contact me. Then, upon hearing that things hadn't worked out with the other woman, she'd gently persuade me to come back. But now our situations were reversed: I had no more options coming down the pike, while Sita had fallen in love with someone else.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -699,7 +698,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `Overcome with jealousy and heartbreak, I had no excuse to complain; I'd caused Sita this exact torment countless times. So in our last phone conversation, I just meekly asked how she managed it. She replied that she didn't know. There were days when she just didn't want to live— and yet, each day would pass all the same. Slowly, days added up to weeks, then weeks turned into months, until the excruciating pain dulled into an aching sadness.`,
+                                description: `Overcome with jealousy and heartbreak, I had no excuse to complain; I'd caused Sita this same torment countless times. So in our last phone conversation, I just asked how she'd managed it. She replied that she didn't know. There were days when she didn't want to live— yet each day would pass all the same. Then days added up to weeks, and weeks turned into months, until the excruciating pain dulled into an aching sadness.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
