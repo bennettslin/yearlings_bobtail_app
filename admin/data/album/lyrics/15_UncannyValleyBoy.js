@@ -333,7 +333,7 @@ export default {
                             todo: true,
                             problem: `Maybe too wordy, which obscures the meaning.`,
                             card: {
-                                description: `My mother instilled in me Buddhist ideals of renouncing materialism, even as she filled my head with visions of becoming a great artist. The mail-order cult then piled on with the belief that I was a mere visitor to this planet. The lasting effect on my psyche was that I became unaffected by earthly concerns while working tirelessly "to restore" my "birthright" of artistic renown.`,
+                                description: `My mother filled my head with visions of being a great artist, while instilling her Buddhist ideal of renouncing materialism. The mail-order cult then piled on with the belief that I was a mere visitor to this planet. So the lasting effect on my psyche was that I became unaffected by earthly concerns, while working tirelessly "to restore" my "birthright" of artistic renown.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,

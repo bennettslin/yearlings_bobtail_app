@@ -191,7 +191,7 @@ export default {
                             todo: true,
                             problem: `Last sentence runs on.`,
                             card: {
-                                description: `Of course, Sita herself had no such illusions about my innocence. She knew my desire to sleep with other women was rooted in the insecurity I felt as the less sexually experienced one in our relationship.`,
+                                description: `Of course, Sita herself had no such illusions about my innocence. She knew that my desire to sleep with other women was rooted in my insecurity as the less sexually experienced one in our relationship.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

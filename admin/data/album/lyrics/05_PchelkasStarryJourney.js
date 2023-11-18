@@ -1307,7 +1307,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `Though I faked autism only for a year or so, the social repercussions lasted much longer, since I was now and forever known as the kid who did that really weird thing once. It's not that I lacked the will to repair my standing. But I was just as confused as anyone else about what had possessed me, and there were no guide books instructing me where to go from there.`,
+                                description: `Though I faked autism only for a year or so, the social repercussions lasted much longer, since I was now and forever the kid who did that really weird thing once. It's not that I lacked the will to repair my standing. But I was just as confused as anyone else about what had possessed me, and there were no guide books instructing me where to go from there.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

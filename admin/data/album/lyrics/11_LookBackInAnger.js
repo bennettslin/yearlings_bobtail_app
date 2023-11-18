@@ -695,8 +695,7 @@ export default {
                     lyric: [
                         {
                             anchor: `only to crack`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: `Yet even as reason disproved the beliefs of my bullies, it also discredited my own as a Beyonder. After all, with so many rival claims to the truth, who would stay loyal to a faith that offers no community and only endless grief?`,
                                 dotKeys: {
@@ -753,8 +752,7 @@ export default {
                         `So if you're weeping for`,
                         {
                             anchor: `poor squirrels`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: [
                                     `In the final scene of `,

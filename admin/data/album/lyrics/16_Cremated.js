@@ -464,16 +464,9 @@ export default {
                         {
                             anchor: `ponders the children`,
                             todo: true,
-                            problem: `Final sentence needs to sound more clear.`,
+                            problem: `Final sentence needs to sound more clear. If the women I dated considered these issues as well?`,
                             card: {
-                                description: [
-                                    `My mother once advised me not to have children, given my brother's autism and my father's`,
-                                    {
-                                        anchor: `Asperger syndrome`,
-                                        wiki: `Asperger_syndrome`,
-                                    },
-                                    `. I often wondered if the women I dated had this same thought when judging my desirability as a long-term partner.`,
-                                ],
+                                description: `My mother once advised me not to have children, given the autism that runs in our genes, and the difficulties she faced in raising my brother as a result. I often wondered if the women I dated had this same thought when judging my desirability as a lifelong partner.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

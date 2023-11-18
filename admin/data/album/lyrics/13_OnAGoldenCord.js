@@ -712,7 +712,7 @@ export default {
                                 problem: `First sentence has two gerunds. Make it clear that this is about songwriting.`,
                                 card: {
                                     description: [
-                                        `Marching onward without sleep, I sift through my past, trying to recall the last time I'd known untroubled bliss. And so I arrive at the first song I loved as a child, Johnny Horton's "`,
+                                        `Marching onward without sleep, I sift through my past, trying to recall the last time I'd known untroubled bliss. And so we arrive at the first song I loved as a child, Johnny Horton's "`,
                                         {
                                             anchor: `North to Alaska`,
                                             wiki: `North_to_Alaska_(song)`,
