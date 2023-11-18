@@ -653,7 +653,7 @@ export default {
                         {
                             anchor: `Final trip on a tanker`,
                             todo: true,
-                            problem: `Review one more time.`,
+                            problem: `Maybe find another idiom, to avoid the "to" in "to oblivion."`,
                             cards: [
                                 {
                                     description: `I knew I had to stay relatively sober to start afresh with someone new. But short of being drunk, I could never muster the courage to break up with Sita. So I drank to oblivion each night, hoping to wake one morning and discover that, by some miracle, I was both newly single and repulsed by the taste of alcohol.`,

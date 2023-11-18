@@ -509,8 +509,7 @@ export default {
                         `Then if`,
                         {
                             anchor: `life were real`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: `Sita's friends weren't wrong to label me fake. My emotions didn't feel legitimate even to myself; I responded to them the way an actor responds to a cue. At the time, I blamed it on the lingering effects of Robitussin.`,
                                 dotKeys: {
@@ -570,12 +569,7 @@ export default {
                             problem: `Review one more time.`,
                             card: {
                                 description: [
-                                    `Young`,
-                                    {
-                                        anchor: `carnivores`,
-                                        wiki: `Carnivore`,
-                                    },
-                                    `have an instinct to tear flesh with their jaws, so they reflexively soften their bites during rough play. And knowing now what it truly means to inflict harm, I realize that the bullies held back their blows as well, believing it was all in good fun.`,
+                                    `Young wolves have an instinct to tear flesh with their jaws, so they reflexively soften their bites during rough play. And knowing now what it truly means to inflict harm, I realize that the bullies held back their blows as well, believing it was all in good fun.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -597,12 +591,7 @@ export default {
                             anchor: `dove chafing in his cage`,
                             card: {
                                 description: [
-                                    `Meanwhile, a stressed`,
-                                    {
-                                        anchor: `dove`,
-                                        wiki: `Columbidae`,
-                                    },
-                                    `will peck a cagemate to death, oblivious to the deadly nature of its beak. And similarly, in seeing myself as the victim and tending only to my needs, I ended up causing Sita far more trauma than I myself had ever received at the hands of the bullies.`,
+                                    `Meanwhile, a stressed dove will peck a cagemate to death, oblivious to the deadly nature of its beak. And similarly, in seeing myself as the victim and tending only to my needs, I ended up causing Sita far more trauma than I myself had ever received at the hands of the bullies.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,

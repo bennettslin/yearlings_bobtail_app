@@ -663,8 +663,7 @@ export default {
                         `? Come for me? At`,
                         {
                             anchor: `thirty-three`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: [
                                     `I often joked about killing myself at`,
