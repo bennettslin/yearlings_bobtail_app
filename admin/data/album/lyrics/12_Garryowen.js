@@ -442,6 +442,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
+                    // NOTE: Counterpoint is mentioned earlier in Ash Wednesday.
                     description: [
                         `In traditional`,
                         {

@@ -476,7 +476,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `According to RI Research, Beyonders are an ancient race of beings who were born from the stars and then scattered across the universe. Those who made it to Earth adopted the likeness of human beings. Yet even with no memory of their origins, they're beset by a quiet discomfort that they don't truly belong.`,
+                                description: `According to RI Research, Beyonders are an ancient race of beings who were born from the stars and then strewn across the universe. Those who made it to Earth adopted the likeness of human beings. Yet even with no memory of their origins, they're beset by a quiet discomfort that they don't truly belong.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -658,12 +658,12 @@ export default {
                                             anchor: `Canis Minor`,
                                             wiki: `Canis_Minor`,
                                         },
-                                        `mean "greater dog" and "lesser dog," respectively. They're said to follow that of`,
+                                        `mean "greater dog" and "lesser dog," respectively. They're said to follow`,
                                         {
                                             anchor: `Orion`,
                                             wiki: `Orion_(mythology)`,
                                         },
-                                        `, the hunter in Greek mythology, which can be identified by the three stars in a row representing his belt.`,
+                                        `, the hunter in Greek mythology, who can be identified in the night sky by three stars in a row that make up his belt.`,
                                     ],
                                 },
                             ],
@@ -772,7 +772,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `To appear legitimate, the letters threw scientific terms around as they promised to update me on technological developments. This included construction of a spacecraft that would allow us Beyonders to make contact with our extraplanetary kin.`,
+                                description: `To appear legitimate, the letters threw around scientific terms as they promised to update me on technological developments. This included construction of a spacecraft that would allow us Beyonders to make contact with our extraplanetary kin.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -1255,8 +1255,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
-                problem: `Review one more time.`,
+                review: true,
                 card: {
                     description: [
                         {
@@ -1307,7 +1306,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `Though I faked autism only for a year or so, the social repercussions lasted much longer, since I was now and forever known as that kid who did the really weird thing once. It's not that I lacked the will to repair my standing. But I was just as confused as anyone else about what had possessed me, and there were no guide books instructing me where to go from there.`,
+                                description: `Though I faked autism only for a year or so, the social repercussions lasted much longer, since I was now and forever that kid who did the really weird thing once. It's not that I lacked the will to repair my standing. But I was just as confused as anyone else about what had possessed me, and there were no guide books instructing me where to go from there.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

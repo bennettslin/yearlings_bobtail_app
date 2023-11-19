@@ -872,7 +872,7 @@ export default {
                                         anchor: `Vedic`,
                                         wiki: `Vedas`,
                                     },
-                                    `texts of ancient India,`,
+                                    `texts of ancient India, an`,
                                     {
                                         isItalic: true,
                                         lyric: {
@@ -880,7 +880,7 @@ export default {
                                             wiki: `Asura`,
                                         },
                                     },
-                                    `refers to a demon, suggesting that a rift occurred among the`,
+                                    `is a demon, suggesting that a rift occurred among the`,
                                     {
                                         anchor: `Indo-Iranians`,
                                         wiki: `Indo-Iranians`,
@@ -1473,8 +1473,7 @@ export default {
                         lyric: [
                             {
                                 anchor: `sunk in tarpid lies`,
-                                todo: true,
-                                problem: `Review one more time.`,
+                                review: true,
                                 cards: [
                                     {
                                         description: `My mastodon lies sunk in a "tar pit," just as I'm sinking in all my "torpid" lies explaining to Sita why I don't spend more nights with her.`,

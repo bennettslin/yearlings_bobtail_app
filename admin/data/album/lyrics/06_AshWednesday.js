@@ -883,6 +883,7 @@ export default {
                 todo: true,
                 problem: `Review one more time.`,
                 card: {
+                    // NOTE: Counterpoint is a wiki later in Garryowen.
                     description: [
                         `I hadn't formally studied composition by this point, so I didn't realize that the vocals would get crowded out by having a three-part counterpoint in the same `,
                         {
@@ -894,7 +895,7 @@ export default {
                             anchor: `pitch shifting`,
                             wiki: `Pitch_shift`,
                         },
-                        `the instruments up an octave. This turned out to give the sound a ghostly sheen, which fits the ambience of a rain-soaked evening.`,
+                        `the instruments up an octave. This gives the sound a ghostly sheen, which nicely fits the ambience of a rain-soaked evening.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
