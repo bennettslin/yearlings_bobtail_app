@@ -107,12 +107,7 @@ export default {
                             anchor: `flagboy last fell`,
                             card: {
                                 description: [
-                                    `During the`,
-                                    {
-                                        anchor: `Civil War`,
-                                        wiki: `American_Civil_War`,
-                                    },
-                                    `, a`,
+                                    `During the Civil War, a`,
                                     {
                                         anchor: `color bearer`,
                                         wiki: `Standard-bearer`,
@@ -333,12 +328,7 @@ export default {
                             anchor: `Nas`,
                             wiki: `Nas`,
                         },
-                        `. I'd paid little attention to`,
-                        {
-                            anchor: `hip hop`,
-                            wiki: `Hip_hop`,
-                        },
-                        `at that point, thinking its approach to songwriting was too far removed from my own to offer much wisdom. I've since corrected this oversight, but back when
+                        `. I'd paid little attention to hip hop at that point, thinking its approach to songwriting was too far removed from my own to offer much wisdom. I've since corrected this oversight, but back when
                         `,
                         {
                             isItalic: true,
@@ -457,12 +447,7 @@ export default {
                             anchor: `jigsawed life`,
                             card: {
                                 description: [
-                                    `You typically work on a`,
-                                    {
-                                        anchor: `jigsaw puzzle`,
-                                        wiki: `Jigsaw_puzzle`,
-                                    },
-                                    `by first connecting the edge pieces, then building inward. So as the latecomer squeezes her way into the center of the crowd, I wonder if she's the long-awaited final piece to the sprawling puzzle of my life.`,
+                                    `You typically work on a jigsaw puzzle by first connecting the edge pieces, then building inward. So as the latecomer squeezes her way into the center of the crowd, I wonder if she's the long-awaited final piece to the sprawling puzzle of my life.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -635,12 +620,7 @@ export default {
                             anchor: `peasant discontented`,
                             card: {
                                 description: [
-                                    `The better my life got, the more unsatisfied I became. I was like the peasants of the`,
-                                    {
-                                        anchor: `French Revolution`,
-                                        wiki: `French_Revolution`,
-                                    },
-                                    `, who only grew further agitated after each attempt by the ruling elite to appease them. Not only did they grumble at such paltry improvements to their lives, but they were then emboldened to make new demands. This phenomenon is known as the`,
+                                    `The better my life got, the more unsatisfied I became. I was like the peasants of the French Revolution, who only grew further agitated after each attempt by the ruling elite to appease them. Not only did they grumble at such paltry improvements to their lives, but they were then emboldened to make new demands. This phenomenon is known as the`,
                                     {
                                         anchor: `Tocqueville paradox`,
                                         wiki: `Tocqueville_effect`,
@@ -841,12 +821,7 @@ export default {
                             anchor: `unscrew a Bud`,
                             card: {
                                 description: [
-                                    `I end up relinquishing my chance to know the redheaded woman. It's after`,
-                                    {
-                                        anchor: `last call`,
-                                        wiki: `Last_call_(bar_term)`,
-                                    },
-                                    `, and I would need a few more`,
+                                    `I end up relinquishing my chance to know the redheaded woman. It's after last call, and I would need a few more`,
                                     {
                                         anchor: `Budweisers`,
                                         wiki: `Budweiser`,

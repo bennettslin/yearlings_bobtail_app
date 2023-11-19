@@ -748,14 +748,7 @@ export default {
                                  */
                                 /**
                                 {
-                                    description: [
-                                        `While the term "self-abuse" can refer to literal`,
-                                        {
-                                            anchor: `self-harm,`,
-                                            wiki: `Self-harm`
-                                        },
-                                        `it's also used in religious circles to describe masturbation. Toward the end, I masturbated frequently to lower my sex drive, hoping that this would strengthen my resolve to break up with Sita.`
-                                    ],
+                                    description: `While the term "self-abuse" can refer to literal self-harm, it's also used in religious circles to describe masturbation. Toward the end, I masturbated frequently to lower my sex drive, hoping that this would strengthen my resolve to break up with Sita.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [PUN]: true
