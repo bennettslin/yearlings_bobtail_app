@@ -1268,7 +1268,7 @@ export default {
                             anchor: `Space Oddity`,
                             wiki: `Space_Oddity`,
                         },
-                        `" closes with an instrumental outro that evokes the idea of failing radio transmissions. To get the same effect, I scraped the strings of an electric guitar against the pickup, and then I added the sound of a metal rod bouncing on a single string near the bridge.`,
+                        `" closes with an instrumental outro that evokes the idea of failing radio transmissions. To get the same effect, I scraped the strings of an electric guitar against the pickup. I also added the sound of a metal rod bouncing on a single string near the bridge.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -1307,7 +1307,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `Though I faked autism only for a year or so, the social repercussions lasted much longer, since I was now and forever the kid who did that really weird thing once. It's not that I lacked the will to repair my standing. But I was just as confused as anyone else about what had possessed me, and there were no guide books instructing me where to go from there.`,
+                                description: `Though I faked autism only for a year or so, the social repercussions lasted much longer, since I was now and forever known as that kid who did the really weird thing once. It's not that I lacked the will to repair my standing. But I was just as confused as anyone else about what had possessed me, and there were no guide books instructing me where to go from there.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

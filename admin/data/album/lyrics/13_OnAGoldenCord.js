@@ -569,10 +569,10 @@ export default {
                             problem: `Review one more time.`,
                             card: {
                                 description: [
-                                    `Young wolves have an instinct to tear flesh with their jaws, so they reflexively soften their bites during rough play. And knowing now what it truly means to inflict harm, I realize that the bullies held back their blows as well, believing it was all in good fun.`,
+                                    `Young wolves have an instinct to tear flesh with their jaws, so they reflexively soften their bites during rough play. And knowing now what it truly means to inflict harm, I realized that the bullies held back their blows as well, believing it was all in good fun.`,
                                 ],
                                 dotKeys: {
-                                    [NARRATIVE]: true,
+                                    [BACKSTORY]: true,
                                     [OBSERVATION]: true,
                                 },
                             },
@@ -594,6 +594,7 @@ export default {
                                     `Meanwhile, a stressed dove will peck a cagemate to death, oblivious to the deadly nature of its beak. And similarly, in seeing myself as the victim and tending only to my needs, I ended up causing Sita far more trauma than I myself had ever received at the hands of the bullies.`,
                                 ],
                                 dotKeys: {
+                                    [BACKSTORY]: true,
                                     [OBSERVATION]: true,
                                 },
                             },

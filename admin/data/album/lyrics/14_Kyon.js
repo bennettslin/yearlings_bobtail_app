@@ -393,8 +393,7 @@ export default {
                         `as the sole`,
                         {
                             anchor: `keeper of his sheep herd`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: [
                                     `A keeper in the sense of being both the one who tends`,
@@ -743,7 +742,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `As friends, Sita and I got along well because we were both sad people. Her depression was clinical, however, whereas mine was simply rooted in circumstance— whether from being bullied as a child, or out of loneliness as I got older. And so I got better at dealing with my spells— but then I grew impatient with her for being incapable of the same.`,
+                                description: `As friends, Sita and I got along well because we were both sad people. But whereas my depression was simply rooted in circumstance— whether from being bullied as a child, or out of loneliness as I got older— hers was clinical. And as I got better at dealing with my spells, I grew impatient with her for being incapable of the same.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

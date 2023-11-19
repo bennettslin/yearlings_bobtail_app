@@ -451,20 +451,8 @@ export default {
                         {
                             anchor: `defined by ambrosia beers`,
                             todo: true,
-                            problem: `Keep working on this.`,
+                            problem: `Review one more time.`,
                             cards: [
-                                {
-                                    description: [
-                                        {
-                                            anchor: `Ambrosia`,
-                                            wiki: `Ambrosia`,
-                                        },
-                                        `was the food of the Greek gods, just as beer made me feel omnipotent.`,
-                                    ],
-                                    dotKeys: {
-                                        [OBSERVATION]: true,
-                                    },
-                                },
                                 {
                                     description: [
                                         `"`,
@@ -480,11 +468,23 @@ export default {
                                                 wiki: `The_Devil's_Dictionary`,
                                             },
                                         },
-                                        `. My hope in reading literary humor of this sort was to eventually match Catherine in wit.`,
+                                        `. I was always on the lookout for literary humor of this sort back then, in the hope that reading enough of it would allow me to match Catherine in wit.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [PUN]: true,
+                                    },
+                                },
+                                {
+                                    description: [
+                                        {
+                                            anchor: `Ambrosia`,
+                                            wiki: `Ambrosia`,
+                                        },
+                                        `was the food of the Greek gods, just as beer made me feel omnipotent.`,
+                                    ],
+                                    dotKeys: {
+                                        [OBSERVATION]: true,
                                     },
                                 },
                             ],
@@ -639,7 +639,7 @@ export default {
                                         anchor: `understudy`,
                                         wiki: `Understudy`,
                                     },
-                                    `in theater, you undertake all the same preparation, yet see little of the same action— and this is what dating while low status is like as well. So I needed to be proactive and seek out opportunities, like a freelancer posting on a cork board.`,
+                                    `in theater, you undertake all the same preparation, only to see little of the same action— which is what dating while low status is like as well. And so I needed to make my own opportunities, like a freelancer posting on a cork board.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
