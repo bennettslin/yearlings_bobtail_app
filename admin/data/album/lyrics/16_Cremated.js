@@ -464,9 +464,9 @@ export default {
                         {
                             anchor: `ponders the children`,
                             todo: true,
-                            problem: `Final sentence needs to sound more clear. If the women I dated considered these issues as well?`,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `My mother once advised me not to have children, given the autism that runs in our genes, and the difficulties she faced in raising my brother as a result. I often wondered if the women I dated had this same thought when judging my desirability as a lifelong partner.`,
+                                description: `My mother once advised me not to have children, given the autism that runs in our genes, and the difficulties she faced in raising my brother as a result. I often wondered if the women I dated also considered these issues when judging my desirability as a lifelong partner.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -478,10 +478,17 @@ export default {
                         {
                             anchor: `Trophy bronzed`,
                             todo: true,
-                            problem: `Does the last sentence even make sense? What is this bigger thing it grew into, exactly?`,
+                            problem: `Review one more time.`,
                             cards: [
                                 {
-                                    description: `The first time I had sex with a woman other than Sita, I left the used condom on my nightstand for days. Like a proud parent who bronzes their baby's shoes, I was awestruck that this tiny thing I'd squirted out had grown into something bigger.`,
+                                    description: [
+                                        `The first time I had sex with a woman other than Sita, I left the used condom on my nightstand for days. Like a proud parent who`,
+                                        {
+                                            anchor: `bronzes`,
+                                            wiki: `Bronzing`,
+                                        },
+                                        `their baby's shoes, I was just awestruck that this tiny thing I'd squirted out could grow into something bigger.`,
+                                    ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [OBSERVATION]: true,
@@ -780,10 +787,10 @@ export default {
                         {
                             anchor: `fragile ex`,
                             todo: true,
-                            problem: `Kind of wordy in general. Make sure this can be easily understood.`,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
-                                    `Miriam was delicate in breaking up with me, knowing the kind of fragile ex-boyfriend I was sure to be. But of course it had to be done, given the horrors lurking in my genetic makeup. Who knew— perhaps I was a carrier of "`,
+                                    `Miriam was delicate in breaking up with me, knowing the kind of fragile ex-boyfriend I was sure to be. But it had to be done, because who knew what horrors lurked in my genetic makeup? Perhaps I was a carrier of "`,
                                     {
                                         anchor: `Fragile X`,
                                         wiki: `Fragile_X_syndrome`,
