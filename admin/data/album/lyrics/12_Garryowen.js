@@ -42,12 +42,7 @@ export default {
                             isItalic: true,
                             lyric: `Ulysses`,
                         },
-                        `, Garryowen is a menacing dog owned by a vulgar`,
-                        {
-                            anchor: `Irish nationalist`,
-                            wiki: `Irish_nationalism`,
-                        },
-                        `. It seemed like a fitting eponym for my drunken self at the time.`,
+                        `, Garryowen is a menacing dog owned by a vulgar Irish nationalist. It seemed like a fitting eponym for my drunken self at the time.`,
                     ],
                     dotKeys: {
                         [OBSERVATION]: true,
@@ -319,15 +314,10 @@ export default {
                         {
                             anchor: `hummers aren't love`,
                             todo: true,
-                            problem: `Needs to be clear. Right now it sounds like Sita is protesting against the sex itself, rather than against my not showering.`,
+                            problem: `Needs to be clear. Right now it sounds like Sita is protesting against the sex itself, rather than against my not showering. Also put blowjob in another card, explaining why I never understood hummer as a slang term?`,
                             card: {
                                 description: [
-                                    `Once when Sita protested that we couldn't have sex until after I washed up, I snidely replied that she could still give me a hummer, or`,
-                                    {
-                                        anchor: `blowjob`,
-                                        wiki: `Fellatio`,
-                                    },
-                                    `, since this didn't count as sex in her view.`,
+                                    `Once when Sita protested that we couldn't have sex until after I washed up, I snidely replied that she could still give me a hummer, or blowjob, since this didn't count as sex in her view.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -436,12 +426,7 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `Much like I wouldn't have recognized myself wearing an "`,
-                                        {
-                                            anchor: `upturned collar`,
-                                            wiki: `Upturned_collar`,
-                                        },
-                                        `," the angry drunk I saw in my reflection didn't mesh with my self-image as a wide-eyed kid who meant well. At some point, I vowed to make a clean break and start over.`,
+                                        `Much like I wouldn't have recognized myself wearing an "upturned collar," the angry drunk I saw in my reflection didn't mesh with my self-image as a wide-eyed kid who meant well. At some point, I vowed to make a clean break and start over.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
