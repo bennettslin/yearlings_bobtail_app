@@ -48,7 +48,7 @@ export default {
                                 anchor: `uncanny valley`,
                                 wiki: `Uncanny_valley`,
                             },
-                            `theorizes that people grow further repulsed by human replicas as they take on more lifelike characteristics, insofar as they remain less than perfectly convincing. And as I grew older while remaining less than convincing as a grownup, it was reasonable to ask if this "Valley boy" now drew the same revulsion.`,
+                            `theorizes that our nature is to grow further repulsed by human replicas as they take on more lifelike characteristics, insofar as they remain less than perfectly convincing to us. And as I grew older while remaining unconvincing as a grownup, it was reasonable to ask if this "Valley boy" now drew the same revulsion.`,
                         ],
                         dotKeys: {
                             [OBSERVATION]: true,
