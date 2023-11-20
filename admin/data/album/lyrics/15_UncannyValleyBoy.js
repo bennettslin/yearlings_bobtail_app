@@ -218,17 +218,7 @@ export default {
                                             wiki: `The_Monster_at_the_End_of_This_Book:_Starring_Lovable,_Furry_Old_Grover`,
                                         },
                                     },
-                                    `,`,
-                                    {
-                                        anchor: `Sesame Street`,
-                                        wiki: `Sesame_Street`,
-                                    },
-                                    `'s`,
-                                    {
-                                        anchor: `Grover`,
-                                        wiki: `Grover`,
-                                    },
-                                    `tries to prevent the reader from turning to the last page of the book, fearful of the monster lying in wait. As it turns out, the only monster present at the end is Grover himself, much to his embarrassment.`,
+                                    `, Sesame Street's Grover tries to prevent the reader from turning to the last page of the book, fearful of the monster lying in wait. As it turns out, the only monster present at the end is Grover himself, much to his embarrassment.`,
                                 ],
                             },
                         },
@@ -314,12 +304,7 @@ export default {
                             anchor: `Upon purchase of a queen's ship`,
                             card: {
                                 description: [
-                                    `RI Research promised that I could rise above the bullies once a spaceship was funded by my payments. And so I learned to bide my time, building toward and awaiting corrective justice. I was like "a pawn" in`,
-                                    {
-                                        anchor: `chess`,
-                                        wiki: `Chess`,
-                                    },
-                                    `that "perches over queenship" as it clambers toward the opposite end of the chessboard.`,
+                                    `RI Research promised that I could rise above the bullies once a spaceship was funded by my payments. And so I learned to bide my time, building toward and awaiting corrective justice. I was like "a pawn" in chess that "perches over queenship" as it clambers toward the opposite end of the chessboard.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -470,12 +455,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `In`,
-                                        {
-                                            anchor: `Greek drama`,
-                                            wiki: `Theatre_of_ancient_Greece`,
-                                        },
-                                        `,`,
+                                        `In Greek drama,`,
                                         {
                                             anchor: `hamartia`,
                                             wiki: `Hamartia`,
@@ -647,12 +627,7 @@ export default {
                                         anchor: `shell game`,
                                         wiki: `Shell_game`,
                                     },
-                                    `is a swindle in which a pea is placed under one of three nutshells that are then shuffled in plain view. Having recognized life to be an endless series of shell games, I vowed never to get suckered again. And knowing now that the pea gets misplaced through`,
-                                    {
-                                        anchor: `sleight of hand`,
-                                        wiki: `Sleight_of_hand`,
-                                    },
-                                    `, I could even do some grifting myself.`,
+                                    `is a swindle in which a pea is placed under one of three nutshells that are then shuffled in plain view. Having recognized life to be an endless series of shell games, I vowed never to get suckered again. And knowing now that the pea gets misplaced through sleight of hand, I could even do some grifting myself.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -681,12 +656,7 @@ export default {
                             anchor: `Scattered your beans`,
                             card: {
                                 description: [
-                                    `The nightmare began with me scattering magic beans all around the neighborhood. It was clearly based on the English`,
-                                    {
-                                        anchor: `fairy tale`,
-                                        wiki: `Fairy_tale`,
-                                    },
-                                    `"`,
+                                    `The nightmare began with me scattering magic beans all around the neighborhood. It was clearly based on the English fairy tale "`,
                                     {
                                         anchor: `Jack and the Beanstalk`,
                                         wiki: `Jack_and_the_Beanstalk`,
@@ -741,10 +711,10 @@ export default {
                                 description: [
                                     `Some organizations put new recruits through degrading`,
                                     {
-                                        anchor: `hazing rituals`,
+                                        anchor: `hazing`,
                                         wiki: `Hazing`,
                                     },
-                                    `to toughen them up. Having dealt with such abuse for so long, I finally conceded that I wouldn't have toughened up in any other way either. And now I had no qualms about dishing it out to others.`,
+                                    `rituals to toughen them up. Having dealt with such abuse for so long, I finally conceded that I wouldn't have toughened up in any other way either. And now I had no qualms about dishing it out to others.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -858,12 +828,7 @@ export default {
                             anchor: `testifiers' lore`,
                             card: {
                                 description: [
-                                    `After slaying Ravana, Rama made Sita walk through`,
-                                    {
-                                        anchor: `sacrificial flames`,
-                                        wiki: `Trial_by_ordeal`,
-                                    },
-                                    `to prove she'd kept chaste throughout her abduction. Sita complied and escaped from this "test of fire" unharmed.`,
+                                    `After slaying Ravana, Rama made Sita walk through sacrificial flames to prove she'd kept chaste throughout her abduction. Sita complied and escaped from this "test of fire" unharmed.`,
                                 ],
                                 dotKeys: {
                                     [PUN]: true,
@@ -1057,14 +1022,10 @@ export default {
                                     },
                                 },
                                 {
-                                    description: [
-                                        `While chanting Rama's name, Ratnakar's concentration was so intense that an`,
-                                        {
-                                            anchor: `anthill`,
-                                            wiki: `Ant_colony`,
-                                        },
-                                        `formed over him, and he remained undisturbed for years. And so he came to be known as Valmiki, from the Sanskrit word for "anthill."`,
-                                    ],
+                                    description: `While chanting Rama's name, Ratnakar's concentration was so intense that an anthill formed over him, and he remained undisturbed for years. And so he came to be known as Valmiki, from the Sanskrit word for "anthill."`,
+                                    dotKeys: {
+                                        [REFERENCE]: true,
+                                    },
                                 },
                             ],
                         },
@@ -1124,12 +1085,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `The endless one-upmanship wasn't just petty. It was exhausting to counter every perceived slight with one of my own. I wanted life to be like a`,
-                                        {
-                                            anchor: `marathon`,
-                                            wiki: `Marathon`,
-                                        },
-                                        `that rewards patience and resolve, traits that I possessed in spades.`,
+                                        `The endless one-upmanship wasn't just petty. It was exhausting to counter every perceived slight with one of my own. I wanted life to be like a marathon that rewards patience and resolve, traits that I possessed in spades.`,
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
@@ -1549,12 +1505,7 @@ export default {
                                 anchor: `Maranatha`,
                                 card: {
                                     description: [
-                                        `But in my chant, the syllables gradually shift to form the holy name of Mara. And while Valmiki embraced Eastern devotion, salvation for me lies in the embrace of Western women. And so my chant ends on a phrase of Western faith: Occurring once in the`,
-                                        {
-                                            anchor: `New Testament`,
-                                            wiki: `New_Testament`,
-                                        },
-                                        `,`,
+                                        `But in my chant, the syllables gradually shift to form the holy name of Mara. And while Valmiki embraced Eastern devotion, salvation for me lies in the embrace of Western women. And so my chant ends on a phrase of Western faith: Occurring once in the New Testament,`,
                                         {
                                             isItalic: true,
                                             lyric: {
@@ -1562,12 +1513,7 @@ export default {
                                                 wiki: `Maranatha`,
                                             },
                                         },
-                                        `is`,
-                                        {
-                                            anchor: `Aramaic`,
-                                            wiki: `Aramaic`,
-                                        },
-                                        `for "our Lord has come."`,
+                                        `is Aramaic for "our Lord has come."`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
