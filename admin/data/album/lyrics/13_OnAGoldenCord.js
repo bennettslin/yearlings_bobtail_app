@@ -353,17 +353,7 @@ export default {
                                 wiki: `Nineteen_Eighty-Four`,
                             },
                         },
-                        `, the citizens engage in contradictory`,
-                        {
-                            anchor: `doublethink`,
-                            wiki: `Doublethink`,
-                        },
-                        `to understand the propaganda of`,
-                        {
-                            anchor: `Newspeak`,
-                            wiki: `Newspeak`,
-                        },
-                        `. Similarly, to understand the breakup, I had to reconcile the contradictions in my head. So this song uses doublespeaker rhyme— which I named partly for its Orwellian undertone— to depict the inner conflict between my sober self and drunken alter ego.`,
+                        `, the citizens engage in contradictory doublethink to understand the propaganda of Newspeak. Similarly, to understand the breakup, I had to reconcile the contradictions in my head. So this song uses doublespeaker rhyme— which I named partly for its Orwellian undertone— to depict the inner conflict between my sober self and drunken alter ego.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -386,12 +376,7 @@ export default {
                             anchor: `wanted ads`,
                             card: {
                                 description: [
-                                    `As drunken me wanders the Oakland streets, he stops to read flyers on telephone poles posted by bands seeking new members, like a vigilante of the`,
-                                    {
-                                        anchor: `Old West`,
-                                        wiki: `American_frontier`,
-                                    },
-                                    `scanning a town's`,
+                                    `As drunken me wanders the Oakland streets, he stops to read flyers on telephone poles posted by bands seeking new members, like a vigilante of the Old West scanning a town's`,
                                     {
                                         anchor: `wanted posters`,
                                         wiki: `Wanted_poster`,
@@ -400,7 +385,6 @@ export default {
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
-                                    [OBSERVATION]: true,
                                     [PUN]: true,
                                 },
                             },
@@ -527,12 +511,7 @@ export default {
                             review: true,
                             card: {
                                 description: [
-                                    `Every now and then, I would have a Robitussin`,
-                                    {
-                                        anchor: `flashback`,
-                                        wiki: `Flashback_(psychology)`,
-                                    },
-                                    `, causing me to trail off and stare into the distance. When a friend asked what it felt like, I said it was like`,
+                                    `Every now and then, I would have a Robitussin flashback, causing me to trail off and stare into the distance. When a friend asked what it felt like, I said it was like`,
                                     {
                                         anchor: `Colorforms`,
                                         wiki: `Colorforms`,
@@ -874,14 +853,7 @@ export default {
                         {
                             anchor: `digging through her innie`,
                             card: {
-                                description: [
-                                    `Some`,
-                                    {
-                                        anchor: `belly buttons`,
-                                        wiki: `Navel`,
-                                    },
-                                    `go in, while others stick out. During sex, Sita and I would engage in baby talk and refer to our respective parts as her "innie" and my "outie."`,
-                                ],
+                                description: `Some belly buttons go in, while others stick out. During sex, Sita and I would engage in baby talk and refer to our respective parts as her "innie" and my "outie."`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -944,14 +916,7 @@ export default {
                         {
                             anchor: `attack with the proper fist`,
                             card: {
-                                description: [
-                                    `Out of frustration over conflicting desires, I start punching myself in the head. Since the left hemisphere`,
-                                    {
-                                        anchor: `controls the body's right side`,
-                                        wiki: `Contralateral_brain`,
-                                    },
-                                    `, and the right hemisphere, the left, it's as if each half of my brain attacks the other using the one fist under its command.`,
-                                ],
+                                description: `Out of frustration over conflicting desires, I start punching myself in the head. Since the left hemisphere controls the body's right side, and the right hemisphere the left, it's as if each half of my brain attacks the other using the one fist under its command.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -1065,14 +1030,7 @@ export default {
                         {
                             anchor: `master mind`,
                             card: {
-                                description: [
-                                    `In college, my wishful thinking was that I could shunt the burden of writing`,
-                                    {
-                                        anchor: `term papers`,
-                                        wiki: `Term_paper`,
-                                    },
-                                    `onto my drunken self. Once drunk, however, I felt like a slave taking orders from a master, and I would do the work poorly or not at all. Somehow this became my strategy for dealing with the burden of breaking up with Sita.`,
-                                ],
+                                description: `In college, my wishful thinking was that I could shunt the burden of writing term papers onto my drunken self. Once drunk, however, I felt like a slave taking orders from a master, and I would do the work poorly or not at all. Somehow this became my strategy for dealing with the burden of breaking up with Sita.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -1132,12 +1090,7 @@ export default {
                             anchor: `houris`,
                             card: {
                                 description: [
-                                    `In the`,
-                                    {
-                                        anchor: `Quran`,
-                                        wiki: `Quran`,
-                                    },
-                                    `, the`,
+                                    `In the Quran, the`,
                                     {
                                         anchor: `houris`,
                                         wiki: `Houri`,
