@@ -44,12 +44,7 @@ export default {
                             isItalic: true,
                             lyric: `Kyon`,
                         },
-                        `is the`,
-                        {
-                            anchor: `Hindi`,
-                            wiki: `Hindi`,
-                        },
-                        `word for "why." After Sita and I started dating, I studied Hindi for several years, which allowed me to converse with her family in their native language. I also got course credit for it as a religious studies major.`,
+                        `is the Hindi word for "why." After Sita and I started dating, I studied Hindi for several years, which allowed me to converse with her family in their native language. I also got course credit for it as a religious studies major.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -376,12 +371,7 @@ export default {
                             anchor: `knight-errant`,
                             card: {
                                 description: [
-                                    `In`,
-                                    {
-                                        anchor: `medieval romance`,
-                                        wiki: `Chivalric_romance`,
-                                    },
-                                    `, a`,
+                                    `In medieval romance, a`,
                                     {
                                         anchor: `knight-errant`,
                                         wiki: `Knight-errant`,
@@ -669,14 +659,7 @@ export default {
                             anchor: `thirty-three`,
                             review: true,
                             card: {
-                                description: [
-                                    `I often joked about killing myself at`,
-                                    {
-                                        anchor: `thirty-three`,
-                                        wiki: `Chronology_of_Jesus`,
-                                    },
-                                    `, the age at which Jesus was crucified. I hated the idea of getting older, and clearly this is all the time you need to make an impact on the world. So when Sita asked me to specify at what age I would come back for her in accordance with our little pact, I answered thirty-three. The subtext was understood.`,
-                                ],
+                                description: `I often joked about killing myself at thirty-three, the age at which Jesus was crucified. I hated the idea of getting older, and clearly this is all the time you need to make an impact on the world. So when Sita asked me to specify at what age I would come back for her in accordance with our little pact, I answered thirty-three. The subtext was understood.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
