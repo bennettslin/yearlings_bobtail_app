@@ -1698,7 +1698,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 todo: true,
-                problem: `Be direct about alcoholism.`,
+                problem: `Review one more time.`,
                 card: {
                     description: [
                         `As it became clear that`,
@@ -1706,7 +1706,7 @@ export default {
                             isItalic: true,
                             lyric: `Yearling's Bobtail`,
                         },
-                        `wouldn't get any attention from the indie press, I moved to New York City to regain my bearings. There, Sasha and I reconnected and started dating. She put me on the conversion path, while I volunteered to study Hebrew. But… we didn't last. Though I'd really hoped to reinvent myself, my behavior lagged behind my intentions.`,
+                        `wouldn't get any attention from the indie press, I moved to New York City to regain my bearings. There, Sasha and I reconnected, and we started dating. She put me on the conversion path, while I volunteered to study Hebrew. But we didn't last. Though I tried hard to reinvent myself once more, it was no longer possible to do so while still drinking heavily. Life had changed.`,
                     ],
                     dotKeys: {
                         [AFTERWORD]: true,

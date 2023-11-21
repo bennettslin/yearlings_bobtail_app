@@ -517,7 +517,7 @@ export default {
                             problem: `Review one more time.`,
                             cards: [
                                 {
-                                    description: `During those on-and-off years, I would habitually return to Sita with a promise to mend my ways. Things would be peachy for a while— after which I would run off with yet another woman. I was like a reformed convict who might relapse at any time without warning, taking with him the shank that he'd left on the windowsill to collect dust.`,
+                                    description: `During those on-and-off years, I would habitually return to Sita with a promise to mend my ways. Things would be peachy for a while— after which I would run off with yet another woman. I was like a reformed convict who might relapse at any time, taking with him the shank that he'd left on the windowsill to collect dust.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [OBSERVATION]: true,

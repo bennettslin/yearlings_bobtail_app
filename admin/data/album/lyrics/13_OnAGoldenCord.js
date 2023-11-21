@@ -544,8 +544,7 @@ export default {
                         `Just that those playful`,
                         {
                             anchor: `pups with their hateful fangs`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: [
                                     `Young wolves have an instinct to tear flesh with their jaws, so they reflexively soften their bites during rough play. And knowing now what it truly means to inflict harm, I realized that the bullies held back their blows as well, believing it was all in good fun.`,
@@ -689,10 +688,10 @@ export default {
                             {
                                 anchor: `Mush`,
                                 todo: true,
-                                problem: `First sentence has two gerunds. Make it clear that this is about songwriting.`,
+                                problem: `Review one more time.`,
                                 card: {
                                     description: [
-                                        `Marching onward without sleep, I sift through my past, trying to recall the last time I'd known untroubled bliss. And so we arrive at the first song I loved as a child, Johnny Horton's "`,
+                                        `As I march onward without sleep, I sift through my past trying to recall the last time I'd known untroubled bliss. And so the music here evokes the first song I loved as a child, Johnny Horton's "`,
                                         {
                                             anchor: `North to Alaska`,
                                             wiki: `North_to_Alaska_(song)`,
@@ -1110,7 +1109,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `Sita and I had a turbulent on-again, off-again relationship for a good while longer. During one stretch when things were rosier than ever, she asked for the bracelet back to wear again, which I happily obliged. Somehow I'd dented it in my pocket that night, however— a lasting reminder that some damages can be amended, but never undone.`,
+                                description: `Sita and I had a turbulent on-again, off-again relationship for a good while longer. During one stretch when things were rosier than ever, she asked to have the bracelet back to wear again, and I happily obliged. Somehow I'd dented it in my pocket that night, however— a lasting reminder that some damages can be amended, but never undone.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

@@ -131,7 +131,7 @@ export default {
                             todo: true,
                             problem: `Be more clear that the jagged peaks are like fangs.`,
                             card: {
-                                description: `In the mirages created by the summer heat, the reflections of the Valley's surrounding mountains point downward. One could playfully suggest that their jagged peaks are what caused the asphalt to crack.`,
+                                description: `In the mirages created by the summer heat, the reflections of the Valley's surrounding mountains point downward. So one could playfully suggest that their jagged peaks, biting down like fangs, had caused the asphalt to crack.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -222,8 +222,14 @@ export default {
                         {
                             anchor: `pinhead in its shadow`,
                             todo: true,
-                            problem: `Both cards are now narratives.`,
+                            problem: `Review one more time.`,
                             cards: [
+                                {
+                                    description: `Willy peers through an empty beer bottle, the top of which is tapered like the outline of his skull.`,
+                                    dotKeys: {
+                                        [NARRATIVE]: true,
+                                    },
+                                },
                                 {
                                     description: [
                                         `I imagine Willy to have`,
@@ -233,15 +239,6 @@ export default {
                                         },
                                         `, a medical condition in which the brain stops growing after birth. And so his head is unusually small, like the sideshow "pinheads" of bygone days.`,
                                     ],
-                                    dotKeys: {
-                                        [NARRATIVE]: true,
-                                    },
-                                },
-                                {
-                                    description: `Willy peers through an empty beer bottle, the top of which is tapered like the outline of his skull.`,
-                                    dotKeys: {
-                                        [NARRATIVE]: true,
-                                    },
                                 },
                             ],
                         },
@@ -454,7 +451,7 @@ export default {
                             todo: true,
                             problem: `Is there a simpler way to say this?`,
                             card: {
-                                description: `Of course, it should be no surprise if Willy is immune to the enchantment that disguises my brother's true form. After all, Willy may be a changeling himself, as evinced by his own unkempt facial hair.`,
+                                description: `Of course, it's no surprise if Willy can see through the enchantment that disguises my brother's true form. After all, Willy may be a changeling himself, as evinced by his own unkempt facial hair.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,

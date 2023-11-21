@@ -665,9 +665,9 @@ export default {
                         {
                             anchor: `hugging hurts`,
                             todo: true,
-                            problem: `Is the first sentence clear in what I'm trying to say?`,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `Of course, to avoid the humiliation of having been beaten up, I typically downplayed my injuries. But here I play them up to mask my emotional hurt, as I explain to Sasha why I winced when we hugged on that last day.`,
+                                description: `To avoid feeling humiliated after getting beaten up, I was more likely to downplay my injuries, of course. But here I play them up to mask my emotional hurt, as I explain to Sasha why I winced when we hugged on that last day.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },

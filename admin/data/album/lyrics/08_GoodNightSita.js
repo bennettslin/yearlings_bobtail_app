@@ -468,7 +468,7 @@ export default {
                                                 wiki: `The_Devil's_Dictionary`,
                                             },
                                         },
-                                        `. I was always on the lookout for literary humor of this sort back then, in the hope that reading enough of it would allow me to match Catherine in wit.`,
+                                        `. I was always on the lookout for literary humor of this sort, in the hope that reading enough of it would allow me to match Catherine in wit.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -639,7 +639,7 @@ export default {
                                         anchor: `understudy`,
                                         wiki: `Understudy`,
                                     },
-                                    `in theater, you undertake all the same preparation, only to see little of the same action— which is what dating while low status is like as well. And so I needed to make my own opportunities, like a freelancer posting on a cork board.`,
+                                    `in theater, you undertake all the same preparation, only to see little of the same action— which is what dating while low status feels like as well. And so I needed to make my own opportunities, like a freelancer posting on a cork board.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,

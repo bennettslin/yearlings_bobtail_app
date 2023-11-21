@@ -48,7 +48,7 @@ export default {
                                 anchor: `uncanny valley`,
                                 wiki: `Uncanny_valley`,
                             },
-                            `theorizes that our nature is to grow further repulsed by human replicas as they take on more lifelike characteristics, insofar as they remain less than perfectly convincing to us. And as I grew older while remaining unconvincing as a grownup, it was reasonable to ask if this "Valley boy" now drew the same revulsion.`,
+                            `theorizes that as human replicas take on more lifelike characteristics, we grow further repulsed by them, right up until they become perfectly convincing to us. And as I grew older while remaining unconvincing as a grownup, it was reasonable to ask if this "Valley boy" now drew the same revulsion.`,
                         ],
                         dotKeys: {
                             [OBSERVATION]: true,
@@ -709,12 +709,12 @@ export default {
                             problem: `Review one more time.`,
                             card: {
                                 description: [
-                                    `Some organizations put new recruits through degrading`,
+                                    `Some groups put newcomers through degrading rituals, known as`,
                                     {
                                         anchor: `hazing`,
                                         wiki: `Hazing`,
                                     },
-                                    `rituals to toughen them up. Having dealt with such abuse for so long, I finally conceded that I wouldn't have toughened up in any other way either. And now I had no qualms about dishing it out to others.`,
+                                    `, to toughen them up. Having dealt with such abuse for so long, I finally conceded that I wouldn't have toughened up in any other way either. And now I had no qualms about dishing it out to others.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,

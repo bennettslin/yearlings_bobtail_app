@@ -421,7 +421,7 @@ export default {
                             problem: `Review one more time.`,
                             card: {
                                 description: [
-                                    `Like many other Taiwanese teenagers of her generation, my mother prized all things labeled American, despite not knowing exactly what that entailed. Their only means of access was through a local bootleg industry that recycled the relics of America's past. And so my sister and I grew up listening to my mother's old country records and sharing her fondness for classic Western movies.`,
+                                    `Like many other Taiwanese teenagers of her generation, my mother prized all things labeled American, despite not knowing exactly what that entailed. Back then, their only means of access was through a local bootleg industry that recycled the relics of America's past. And so my sister and I grew up listening to my mother's old country records and sharing her fondness for classic Western movies.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,

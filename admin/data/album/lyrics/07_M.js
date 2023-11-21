@@ -27,7 +27,7 @@ export default {
     mixStartTime: `0:02:12.00`,
     todo: true,
     problem: `Review one more time.`,
-    overview: `After the breakup with Catherine, I vowed to spend the next five years shaping myself into the ideal romantic prospect— which included getting involved in the local scene. So I started cobbling together my own band, the Yearlings, and by the fifth year, we were playing house parties and small venues. I soon grew infatuated with a fellow scenester named Mara, whom I noticed from afar. But Mara ended up going out with my drummer Jacob, which made band practice awkward.`,
+    overview: `After the breakup with Catherine, I vowed to spend the next five years shaping myself into the ideal romantic prospect. This included getting involved in the local scene, so I started cobbling together my own band, the Yearlings, and by the fifth year, we were playing house parties and small venues. I soon grew infatuated with a fellow scenester named Mara, whom I noticed from afar. But Mara ended up going out with my drummer Jacob, which made band practice awkward.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -189,9 +189,9 @@ export default {
                         {
                             anchor: `mystery mensch`,
                             todo: true,
-                            problem: `The gossip is the crushes, not the girls. Lean on the mystique of my appearance to attract women.`,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `Unlike me, my older sister was popular in high school, so she always had the latest gossip to tell me— including the handful of girls who crushed on me from afar. As such, I knew I could lean on my appearance as an artsy loner. My mission at this point was simply to ensure that something of substance lay beneath the mystique.`,
+                                description: `Unlike me, my older sister was popular in high school. So she always had the latest gossip to tell me, like anytime a girl crushed on me from afar— which wasn't often, but it did happen. As such, I knew there was some mystique to my image as an artsy loner. My mission now was simply to ensure that something of actual substance lay beneath.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

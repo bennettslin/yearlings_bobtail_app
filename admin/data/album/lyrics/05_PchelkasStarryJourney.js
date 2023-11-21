@@ -663,7 +663,7 @@ export default {
                                             anchor: `Orion`,
                                             wiki: `Orion_(mythology)`,
                                         },
-                                        `, the hunter in Greek mythology, who can be identified in the night sky by three stars in a row that make up his belt.`,
+                                        `, the hunter in Greek mythology, who can be identified in the night sky by the three stars in a row that make up his belt.`,
                                     ],
                                 },
                             ],
@@ -1303,8 +1303,7 @@ export default {
                         `Mushka,`,
                         {
                             anchor: `per their bargain`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: `Though I faked autism only for a year or so, the social repercussions lasted much longer, since I was now and forever that kid who did the really weird thing once. It's not that I lacked the will to repair my standing. But I was just as confused as anyone else about what had possessed me, and there were no guide books instructing me where to go from there.`,
                                 dotKeys: {

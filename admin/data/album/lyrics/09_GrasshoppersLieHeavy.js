@@ -796,8 +796,7 @@ export default {
                         `"Hey, you know`,
                         {
                             anchor: `you're my password`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: `As I enter the passcode for the gate, Sita breaks the ice by mentioning that something she remembered about me was the basis for a password she recently created.`,
                                 dotKeys: {
@@ -1139,8 +1138,7 @@ export default {
                         },
                         {
                             anchor: `with a ring`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             cards: [
                                 {
                                     description: `Having dozed off, I'm roused by the ringing of a bell to indicate that a patient has been released from care and is returning to the waiting area.`,

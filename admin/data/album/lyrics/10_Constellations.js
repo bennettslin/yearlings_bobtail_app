@@ -1877,8 +1877,7 @@ export default {
                         {
                             anchor: `come unsated`,
                             properNoun: true,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             cards: [
                                 {
                                     description: `That night at the drugstore, I advised everyone to get the small bottle of Robitussin. We then lined up at separate checkouts to avoid attracting suspicion. When Howie finally rejoined us, we saw that he'd gone back for the large bottle, thinking the small one wouldn't be enough.`,
@@ -1899,8 +1898,7 @@ export default {
                         {
                             anchor: `Rumspring`,
                             properNoun: true,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: [
                                     `"`,
