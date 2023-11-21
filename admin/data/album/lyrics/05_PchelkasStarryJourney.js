@@ -1180,6 +1180,7 @@ export default {
                         {
                             anchor: `pentobarbitone syringe`,
                             card: {
+                                // NOTE: Euthanasia has a wiki in Cremated.
                                 description: [
                                     `A`,
                                     {

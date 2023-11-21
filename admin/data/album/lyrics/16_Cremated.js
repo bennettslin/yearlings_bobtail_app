@@ -300,12 +300,7 @@ export default {
                             anchor: `beaten wit and id`,
                             card: {
                                 description: [
-                                    `Like the`,
-                                    {
-                                        anchor: `id`,
-                                        wiki: `Id,_ego_and_super-ego`,
-                                    },
-                                    `in`,
+                                    `Like the id in`,
                                     {
                                         anchor: `Freudian psychology`,
                                         wiki: `Freud's_psychoanalytic_theories`,
@@ -327,12 +322,7 @@ export default {
                             anchor: `pinkish slip`,
                             card: {
                                 description: [
-                                    `Miriam is wearing a silky pink undergarment under her skirt. Of course, a`,
-                                    {
-                                        anchor: `pink slip`,
-                                        wiki: `Termination_of_employment`,
-                                    },
-                                    `is also a notice to an employee that they're getting laid off…`,
+                                    `Miriam is wearing a silky pink undergarment under her skirt. Of course, a pink slip is also a notice to an employee that they're getting laid off…`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -427,12 +417,7 @@ export default {
                             anchor: `at each other's throats`,
                             card: {
                                 description: [
-                                    `Some`,
-                                    {
-                                        anchor: `comedy duos`,
-                                        wiki: `Double_act`,
-                                    },
-                                    `like`,
+                                    `Some comedy duos like`,
                                     {
                                         anchor: `Abbott and Costello`,
                                         wiki: `Abbott_and_Costello`,
@@ -675,11 +660,12 @@ export default {
                             anchor: `twitching sword`,
                             card: {
                                 description: [
+                                    `Dubbing refers to the`,
                                     {
-                                        anchor: `Dubbing`,
+                                        anchor: `replacement of an actor's voice`,
                                         wiki: `Dubbing_(filmmaking)`,
                                     },
-                                    `refers to the replacement of an actor's voice in film, but also to the ritual of`,
+                                    `in film, but also to the ritual of`,
                                     {
                                         anchor: `conferring knighthood`,
                                         wiki: `Accolade`,
@@ -747,13 +733,14 @@ export default {
                         {
                             anchor: `will not retract`,
                             card: {
+                                // NOTE: Euthanasia is mentioned in Pchelka.
                                 description: [
-                                    `Some record players lack an auto-return function, so the needle will coast in the lead-out groove until it's manually lifted. Also, during euthanasia, the needle is left in the vein as the`,
+                                    `Some record players lack an auto-return function, so the needle will coast in the lead-out groove until it's manually lifted. Also, during`,
                                     {
-                                        anchor: `barbiturate`,
-                                        wiki: `Barbiturate`,
+                                        anchor: `euthanasia`,
+                                        wiki: `Euthanasia`,
                                     },
-                                    `is slowly injected.`,
+                                    `, the needle is left in the vein as the sedative is slowly injected.`,
                                 ],
                             },
                         },
