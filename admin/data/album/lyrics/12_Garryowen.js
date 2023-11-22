@@ -639,10 +639,10 @@ export default {
                         {
                             anchor: `Final trip on a tanker`,
                             todo: true,
-                            problem: `Maybe find another idiom, to avoid the "to" in "to oblivion."`,
+                            problem: `Review one more time.`,
                             cards: [
                                 {
-                                    description: `I knew I had to stay relatively sober to start afresh with someone new. But short of being drunk, I could never muster the courage to break up with Sita. So I drank to oblivion each night, hoping to wake one morning and discover that, by some miracle, I was both newly single and repulsed by the taste of alcohol.`,
+                                    description: `I knew I had to stay relatively sober to start afresh with someone new. Yet short of being drunk, I could never muster the courage to break up with Sita. So I drank myself into a stupor each night, hoping to wake one morning and discover that, by some miracle, I was both newly single and repulsed by the taste of alcohol.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -872,7 +872,7 @@ export default {
                             isItalic: true,
                             lyric: `Yearling's Bobtail`,
                         },
-                        `was rejected by every last indie label, I got so depressed that I went on a months-long bender. Eventually I kept a box of wine by my bed, which I would sip from throughout the night to calm my nerves. One day after skipping my morning beers, I sensed my bedroom walls conspiring to attack me. I learned that this was the onset of`,
+                        `was rejected by every last indie label, I got so depressed that I went on a months-long bender. Eventually I kept a box of wine by my bed, and I would sip from it throughout the night to calm my nerves. One day after skipping my morning beers, I felt like my bedroom walls were conspiring to attack me. I learned that this was the onset of`,
                         {
                             anchor: `delirium tremens`,
                             wiki: `Delirium_tremens`,

@@ -687,8 +687,7 @@ export default {
                         lyric: [
                             {
                                 anchor: `Mush`,
-                                todo: true,
-                                problem: `Review one more time.`,
+                                review: true,
                                 card: {
                                     description: [
                                         `As I march onward without sleep, I sift through my past trying to recall the last time I'd known untroubled bliss. And so the music here evokes the first song I loved as a child, Johnny Horton's "`,

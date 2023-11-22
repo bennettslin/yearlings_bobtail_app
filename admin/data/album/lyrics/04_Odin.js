@@ -83,8 +83,7 @@ export default {
                     lyricRight: [
                         {
                             anchor: `By lot`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             cards: [
                                 {
                                     description: `Lots are drawn by chance to decide an outcome, and it was my lot not to be born a Jew.`,
@@ -203,7 +202,7 @@ export default {
                 problem: `Review one more time.`,
                 card: {
                     description: [
-                        `For this song, I wanted to capture the disorienting cycle of days spent among the foreign and nights dreaming of the familiar. So I used a literary technique of my invention called doublespeaker rhyme, in which two sets of lyrics that rhyme syllable for syllable are panned hard into opposite speakers in the recording. It's the audio version of a cinematic`,
+                        `For this song, I wanted to capture the disorienting cycle of spending days among the foreign and nights dreaming of the familiar. So I used a literary technique of my invention called doublespeaker rhyme, in which two sets of lyrics that rhyme syllable for syllable are panned hard into opposite speakers in the recording. It's the audio version of a cinematic`,
                         {
                             anchor: `split screen`,
                             wiki: `Split_screen_(video_production)`,

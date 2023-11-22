@@ -35,7 +35,8 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                review: true,
+                todo: true,
+                problem: `Review one more time.`,
                 cards: [
                     {
                         description: [
@@ -51,7 +52,7 @@ export default {
                                 anchor: `Philip K. Dick`,
                                 wiki: `Philip_K._Dick`,
                             },
-                            `that imagines World War II having ended with an Axis victory. Curiously, the characters in this story are engrossed in their own alternate history novel called`,
+                            `that imagines if World War II had ended with an Axis victory. Curiously, the characters in this story are engrossed in their own alternate history novel called`,
                             {
                                 isItalic: true,
                                 lyric: `The Grasshopper Lies Heavy`,

@@ -27,7 +27,7 @@ export default {
     mixStartTime: `0:02:12.00`,
     todo: true,
     problem: `Review one more time.`,
-    overview: `After the breakup with Catherine, I vowed to spend the next five years shaping myself into the ideal romantic prospect. This included getting involved in the local scene, so I started cobbling together my own band, the Yearlings, and by the fifth year, we were playing house parties and small venues. I soon grew infatuated with a fellow scenester named Mara, whom I noticed from afar. But Mara ended up going out with my drummer Jacob, which made band practice awkward.`,
+    overview: `After the breakup with Catherine, I vowed to spend the next five years shaping myself into the ideal romantic prospect. This included getting involved in the local scene, so I cobbled together my own band, the Yearlings, and by the fifth year, we were playing house parties and small venues. I soon grew infatuated with a fellow scenester named Mara, whom I noticed from afar. But Mara ended up going out with my drummer Jacob, which made band practice awkward.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -188,8 +188,7 @@ export default {
                         `to mold me into a`,
                         {
                             anchor: `mystery mensch`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: `Unlike me, my older sister was popular in high school. So she always had the latest gossip to tell me, like anytime a girl crushed on me from afar— which wasn't often, but it did happen. As such, I knew there was some mystique to my image as an artsy loner. My mission now was simply to ensure that something of actual substance lay beneath.`,
                                 dotKeys: {
@@ -696,7 +695,7 @@ export default {
                         {
                             anchor: `no-hope chest`,
                             todo: true,
-                            problem: `Review one more time.`,
+                            problem: `I just don't like the use of figurative and literal here.`,
                             cards: [
                                 {
                                     description: [

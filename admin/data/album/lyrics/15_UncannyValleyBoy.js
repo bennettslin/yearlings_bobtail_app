@@ -31,8 +31,8 @@ export default {
     mixStartTime: `0:01:18.46`,
     playerStartTime: 2722.629,
     todo: true,
-    problem: `Too many sentences of the same length, which makes the flow choppy.`,
-    overview: `Upon learning of my brother's autism, my parents were too harried to notice I was being bullied at school. In guilt, they later indulged every whim I had to find my own path. But as I got older, they grew concerned that I wasn't maturing as I went. On top of this, they were crushed when I left Sita, whom they adored. Naturally, I wasn't happy to disappoint them. Still, I had a master plan to follow, and I wasn't about to change my ways.`,
+    problem: `Review one more time.`,
+    overview: `Upon learning of my brother's autism, my parents were too harried to notice I was being bullied at school. In guilt, they later indulged every whim I had to find my own path. But as I got older, they grew concerned that I wasn't maturing as I went, and they were further crushed when I left Sita, whom they adored. Naturally, I wasn't happy to disappoint them. Still, I had a master plan to follow, and I wasn't about to change my ways.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -48,7 +48,7 @@ export default {
                                 anchor: `uncanny valley`,
                                 wiki: `Uncanny_valley`,
                             },
-                            `theorizes that as human replicas take on more lifelike characteristics, we grow further repulsed by them, right up until they become perfectly convincing to us. And as I grew older while remaining unconvincing as a grownup, it was reasonable to ask if this "Valley boy" now drew the same revulsion.`,
+                            `theorizes that as human replicas take on more lifelike characteristics, we grow further repulsed, insofar as they remain less than perfectly convincing. And as I grew older while remaining less than convincing as a grownup, it was reasonable to ask if this "Valley boy" now drew the same revulsion.`,
                         ],
                         dotKeys: {
                             [OBSERVATION]: true,

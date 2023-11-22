@@ -53,7 +53,7 @@ export default {
                                 wiki: `Look_Back_in_Anger`,
                             },
                         },
-                        `is a theatrical play set in postwar England, that centers on a disgruntled young working-class man who hurls rage at his long-suffering wife. It hit unnervingly close to home when I read it.`,
+                        `, a theatrical play set in postwar England, is about a disgruntled young man of the working class who hurls rage at his long-suffering wife. It hit unnervingly close to home when I read it.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -732,7 +732,8 @@ export default {
                         `So if you're weeping for`,
                         {
                             anchor: `poor squirrels`,
-                            review: true,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
                                     `In the final scene of `,
@@ -740,7 +741,7 @@ export default {
                                         isItalic: true,
                                         lyric: `Look Back in Anger`,
                                     },
-                                    `, the protagonist pictures his wife as a squirrel and sighs, "Poor squirrels," acknowledging that his abusive tirades keep her trapped in a helpless state.`,
+                                    `, the protagonist Jimmy pictures his wife as a squirrel and sighs, "Poor squirrels," acknowledging that he keeps her trapped in a helpless state with his abusive tirades.`,
                                 ],
                                 dotKeys: {
                                     [REFERENCE]: true,
@@ -759,7 +760,7 @@ export default {
                             todo: true,
                             problem: `Sentence runs on. The power dynamic between them.`,
                             card: {
-                                description: `His wife then sighs in response, "Poor, poor bears." She recognizes that he, a bear in their mutual fantasy, is no less a victim, complying with a power dynamic over which neither possesses much control.`,
+                                description: `His wife Alison then sighs in response, "Poor, poor bears." She recognizes that he, a bear in their mutual fantasy, is a victim as well, complying with a power dynamic over which neither possesses much control.`,
                                 dotKeys: {
                                     [REFERENCE]: true,
                                 },

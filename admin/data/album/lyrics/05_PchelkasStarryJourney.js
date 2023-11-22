@@ -637,8 +637,7 @@ export default {
                         `dragged to sled by`,
                         {
                             anchor: `hunter's belt`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             cards: [
                                 {
                                     description: `Sadly, a belt can be used to instill obedience in wayward animals.`,

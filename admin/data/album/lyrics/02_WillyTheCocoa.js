@@ -73,7 +73,7 @@ export default {
                             anchor: `changeling`,
                             wiki: `Changeling`,
                         },
-                        `, who'd been left in place of a stolen human infant. So I wanted this song to sound like a band of trolls in revelry after pulling off such a heist. I figured their style would be like the swamp rock of`,
+                        `, who'd been left in place of a stolen human infant. So I wanted this song to sound like a band of trolls celebrating after a recent heist. I figured their style would be like the swamp rock of`,
                         {
                             anchor: `Creedence Clearwater Revival`,
                             wiki: `Creedence_Clearwater_Revival`,
@@ -221,8 +221,7 @@ export default {
                         `his`,
                         {
                             anchor: `pinhead in its shadow`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             cards: [
                                 {
                                     description: `Willy peers through an empty beer bottle, the top of which is tapered like the outline of his skull.`,

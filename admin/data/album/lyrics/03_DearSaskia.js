@@ -667,7 +667,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `To avoid feeling humiliated after getting beaten up, I was more likely to downplay my injuries, of course. But here I play them up to mask my emotional hurt, as I explain to Sasha why I winced when we hugged on that last day.`,
+                                description: `To avoid feeling humiliated after getting beaten up, I'm more likely to downplay my injuries, of course. But here I play them up to mask my emotional hurt, as I explain to Sasha why I winced when we hugged on that last day.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
