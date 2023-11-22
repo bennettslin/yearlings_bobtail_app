@@ -591,7 +591,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `But my appraisal was based on reason, not malice. If the Christian god were the one true God, then why would he trust his message to be spread by the tormentors of those he hoped to reach?`,
+                                description: `But my appraisal was based on reason, not malice. If the Christian god were the one true God, then why would he trust his message to be spread by the very tormentors of those he hoped to reach?`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -758,9 +758,9 @@ export default {
                         {
                             anchor: `poor, poor bears`,
                             todo: true,
-                            problem: `Sentence runs on. The power dynamic between them.`,
+                            problem: `Sentence runs on. Not sure it makes sense now.`,
                             card: {
-                                description: `His wife Alison then sighs in response, "Poor, poor bears." She recognizes that he, a bear in their mutual fantasy, is a victim as well, complying with a power dynamic over which neither possesses much control.`,
+                                description: `His wife Alison then sighs in response, "Poor, poor bears." She recognizes that he, a bear in their mutual fantasy, is just as much a victim, complying within his role in the power dynamic between them.`,
                                 dotKeys: {
                                     [REFERENCE]: true,
                                 },
