@@ -859,7 +859,7 @@ export default {
                             problem: `Review one more time.`,
                             card: {
                                 description: [
-                                    `In Persian, or "Farsi," the word for a deity is "`,
+                                    `In Persian, or "Farsi," the "`,
                                     {
                                         isItalic: true,
                                         lyric: {
@@ -867,7 +867,7 @@ export default {
                                             wiki: `Ahura`,
                                         },
                                     },
-                                    `." But in the`,
+                                    `" is a deity. But in the`,
                                     {
                                         anchor: `Vedic`,
                                         wiki: `Vedas`,
@@ -880,17 +880,17 @@ export default {
                                             wiki: `Asura`,
                                         },
                                     },
-                                    `is a demon, suggesting that a rift occurred among the`,
+                                    `is a demon— suggesting that a religious rift occurred among the`,
                                     {
                                         anchor: `Indo-Iranians`,
                                         wiki: `Indo-Iranians`,
                                     },
-                                    `based on religious differences. And because the Vedas precede the Persian`,
+                                    `. And because the Vedas precede the Persian`,
                                     {
                                         anchor: `Avesta`,
                                         wiki: `Avesta`,
                                     },
-                                    `, these later scholars posited that the apostates left the Indian subcontinent and migrated westward to the Iranian basin, rather than the other way around.`,
+                                    `, these later scholars posited that the migrants must have left the Indian subcontinent and settled in the Iranian basin, rather than the other way around.`,
                                 ],
                                 dotKeys: {
                                     [PUN]: true,

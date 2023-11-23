@@ -37,8 +37,7 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
-                problem: `Review one more time.`,
+                review: true,
                 card: {
                     description: [
                         {
@@ -77,7 +76,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 todo: true,
-                problem: `Make it more clear that he would first arrange the plateware like a drum set.`,
+                problem: `Make it more clear that he would first arrange the plateware like a drum set. Mention silverware for drum.`,
                 card: {
                     description: [
                         `A fellow dishroom worker named Owen had a`,

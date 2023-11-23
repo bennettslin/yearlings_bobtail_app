@@ -32,7 +32,7 @@ export default {
     playerStartTime: 2722.629,
     todo: true,
     problem: `Review one more time.`,
-    overview: `Upon learning of my brother's autism, my parents were too harried to notice I was being bullied at school. In guilt, they later indulged every whim I had to find my own path. But as I got older, they grew concerned that I wasn't maturing as I went, and they were further crushed when I left Sita, whom they adored. Naturally, I wasn't happy to disappoint them. Still, I had a master plan to follow, and I wasn't about to change my ways.`,
+    overview: `Upon learning of my brother's autism, my parents were too harried to notice I was being bullied at school. In guilt, they later indulged every whim I had to find my own path. But as I got older, they grew concerned that I wasn't maturing as I went— and they were crushed when I left Sita, whom they adored. Naturally, I wasn't happy to disappoint them. Still, I had a master plan to follow, and I wasn't about to change my ways.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -48,7 +48,7 @@ export default {
                                 anchor: `uncanny valley`,
                                 wiki: `Uncanny_valley`,
                             },
-                            `theorizes that as human replicas take on more lifelike characteristics, we grow further repulsed, insofar as they remain less than perfectly convincing. And as I grew older while remaining less than convincing as a grownup, it was reasonable to ask if this "Valley boy" now drew the same revulsion.`,
+                            `theorizes that as human replicas take on more lifelike characteristics, we grow further repulsed, insofar as they remain less than perfectly convincing to us. And as I grew older while remaining less than convincing as a grownup, it was reasonable to ask if this "Valley boy" now drew the same revulsion.`,
                         ],
                         dotKeys: {
                             [OBSERVATION]: true,
@@ -318,7 +318,7 @@ export default {
                             todo: true,
                             problem: `Maybe too wordy, which obscures the meaning.`,
                             card: {
-                                description: `My mother filled my head with visions of being a great artist, while instilling her Buddhist ideal of renouncing materialism. The mail-order cult then piled on with the belief that I was a mere visitor to this planet. So the lasting effect on my psyche was that I became unaffected by earthly concerns, while working tirelessly "to restore" my "birthright" of artistic renown.`,
+                                description: `My mother filled my head with visions of being a great artist, even as she instilled her Buddhist ideal of renouncing materialism. The mail-order cult then piled on with the belief that I was a mere visitor to this planet. So the lasting effect on my psyche was that I became unaffected by earthly concerns, while working tirelessly "to restore" my "birthright" of artistic renown.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -709,12 +709,12 @@ export default {
                             problem: `Review one more time.`,
                             card: {
                                 description: [
-                                    `Some groups put newcomers through degrading rituals, known as`,
+                                    `Some groups put newcomers through`,
                                     {
-                                        anchor: `hazing`,
+                                        anchor: `degrading rituals`,
                                         wiki: `Hazing`,
                                     },
-                                    `, to toughen them up. Having dealt with such abuse for so long, I finally conceded that I wouldn't have toughened up in any other way either. And now I had no qualms about dishing it out to others.`,
+                                    `to toughen them up. Having dealt with such abuse for so long, I finally conceded that I wouldn't have toughened up in any other way either. And now I had no qualms about dishing it out to others.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,

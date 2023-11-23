@@ -450,8 +450,7 @@ export default {
                         `when`,
                         {
                             anchor: `defined by ambrosia beers`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             cards: [
                                 {
                                     description: [
@@ -468,7 +467,7 @@ export default {
                                                 wiki: `The_Devil's_Dictionary`,
                                             },
                                         },
-                                        `. I was always on the lookout for literary humor of this sort, in the hope that reading enough of it would allow me to match Catherine in wit.`,
+                                        `. I was always on the lookout for literary humor of this sort, in the hope that absorbing enough of it would allow me to match Catherine in wit.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -639,7 +638,7 @@ export default {
                                         anchor: `understudy`,
                                         wiki: `Understudy`,
                                     },
-                                    `in theater, you undertake all the same preparation, only to see little of the same action— which is what dating while low status feels like as well. And so I needed to make my own opportunities, like a freelancer posting on a cork board.`,
+                                    `in theater, you undertake all the same preparation, only to see little of the same action— which is what dating feels like as well when you're low status. And so I needed to create my own opportunities, like a freelancer posting on a cork board.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -947,7 +946,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `Like a child clutching the passenger steering wheel in a twin go-kart, I hold onto the hope that my words and actions are capable of steering this date in the direction I'd like.`,
+                                description: `Like a child clutching the passenger steering wheel in a twin go-kart, I naively hold onto the hope that my words and actions can steer this date in a direction I'd like.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,

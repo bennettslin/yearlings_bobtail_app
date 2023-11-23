@@ -57,7 +57,7 @@ export default {
                                 isItalic: true,
                                 lyric: `The Grasshopper Lies Heavy`,
                             },
-                            `, in which the Allies won.`,
+                            `, in which the Allies had won.`,
                         ],
                         dotKeys: {
                             [BACKSTORY]: true,
