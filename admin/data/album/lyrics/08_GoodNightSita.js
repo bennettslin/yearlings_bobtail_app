@@ -638,7 +638,7 @@ export default {
                                         anchor: `understudy`,
                                         wiki: `Understudy`,
                                     },
-                                    `in theater, you undertake all the same preparation, only to see little of the same action— which is what dating feels like as well when you're low status. And so I needed to create my own opportunities, like a freelancer posting on a cork board.`,
+                                    `in theater, you undertake all the same preparation, only to see little of the same action. And when you're low status, this is what dating feels like as well. So I needed to create my own opportunities, like a freelancer posting on a cork board.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -943,8 +943,7 @@ export default {
                         `from a`,
                         {
                             anchor: `dummy steering wheel`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: `Like a child clutching the passenger steering wheel in a twin go-kart, I naively hold onto the hope that my words and actions can steer this date in a direction I'd like.`,
                                 dotKeys: {

@@ -68,12 +68,12 @@ export default {
                 problem: `Review one more time.`,
                 card: {
                     description: [
-                        `In the past, a disabled child was sometimes thought to be a troll in disguise known as a`,
+                        `In the past, a disabled child was thought to be a troll in disguise known as a`,
                         {
                             anchor: `changeling`,
                             wiki: `Changeling`,
                         },
-                        `, who'd been left in place of a stolen human infant. So I wanted this song to sound like a band of trolls celebrating after a recent heist. I figured their style would be like the swamp rock of`,
+                        `, who'd been left in place of a stolen human infant. So I wanted this song to sound like a band of trolls celebrating after having pulled off such a heist. I figured their style would be like the swamp rock of`,
                         {
                             anchor: `Creedence Clearwater Revival`,
                             wiki: `Creedence_Clearwater_Revival`,

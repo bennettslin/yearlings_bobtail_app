@@ -473,8 +473,7 @@ export default {
                         `"`,
                         {
                             anchor: `Are you a Beyonder`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: `According to RI Research, Beyonders are an ancient race of beings who were born from the stars and then strewn across the universe. Those who made it to Earth adopted the likeness of human beings. Yet even with no memory of their origins, they're beset by a quiet discomfort that they don't truly belong.`,
                                 dotKeys: {
