@@ -460,8 +460,7 @@ export default {
                     lyricRight: [
                         {
                             anchor: `Trophy bronzed`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             cards: [
                                 {
                                     description: [

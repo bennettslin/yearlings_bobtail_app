@@ -645,8 +645,7 @@ export default {
                         `"So all your`,
                         {
                             anchor: `leads have left`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: `For years, my habit was to stay with Sita right up until I had another option to pursue. Each time I left, Sita would languish for a few months before finding the courage to contact me. Then, upon hearing that things hadn't worked out with the other woman, she'd gently persuade me to come back. But now our situations were reversed: I had no more options coming down the pike, while Sita had fallen in love with someone else.`,
                                 dotKeys: {
@@ -666,7 +665,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `Overcome with jealousy and heartbreak, I had no excuse to complain; I'd caused Sita this same torment countless times. So in our last phone conversation, I just asked how she'd managed it. She replied that she didn't know. There were days when she didn't want to live— yet each day would pass all the same. Then days added up to weeks, and weeks turned into months, until the excruciating pain dulled into an aching sadness.`,
+                                description: `Overcome with jealousy and heartbreak, I had no excuse to complain; I'd caused Sita this same torment countless times. So in our last phone conversation, I just asked her meekly how she'd managed it. She replied that she didn't know. There were days when she didn't want to live— yet each day would pass all the same. Then gradually, days added up to weeks, and weeks turned into months, until the excruciating pain dulled into an aching sadness.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -870,9 +869,9 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 todo: true,
-                problem: `Mention nut allergies.`,
+                problem: `Review one more time.`,
                 card: {
-                    description: `I stayed vegan for five years. But after moving to New York City, I quit because Sasha ate meat. I guess it's the nature of who I am that my personal identity will always be the first thing I jettison whenever a chance for romance is at stake. Still, these days I'm mostly vegetarian. It's both easier and healthier.`,
+                    description: `I stayed vegan for five years. But after moving to New York City, I quit because Sasha ate meat. I guess it's the nature of who I am that my personal identity will always be the first thing I jettison whenever a chance for romance is at stake. And truth be told, being vegan was always kind of rough, given my peanut and tree nut allergies. Still, these days I'm mostly vegetarian. It's both easier and healthier.`,
                     dotKeys: {
                         [AFTERWORD]: true,
                     },
