@@ -142,27 +142,12 @@ export default {
                             anchor: `furor`,
                             card: {
                                 description: [
-                                    `Or else, our "`,
-                                    {
-                                        anchor: `Führer`,
-                                        wiki: `Führer`,
-                                    },
-                                    `," a German title of leadership strongly associated with`,
+                                    `Or else, our "Führer," a German title of leadership strongly associated with`,
                                     {
                                         anchor: `Adolf Hitler`,
                                         wiki: `Adolf_Hitler`,
                                     },
-                                    `. For animal rights proponents, the parallels between`,
-                                    {
-                                        anchor: `factory farming`,
-                                        wiki: `Intensive_animal_farming`,
-                                    },
-                                    `and the`,
-                                    {
-                                        anchor: `Holocaust`,
-                                        wiki: `The_Holocaust`,
-                                    },
-                                    `are obvious, however impolitic the comparison might be.`,
+                                    `. For animal rights proponents, the parallels between factory farming and the Holocaust are obvious, however impolitic the comparison might be.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -210,17 +195,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `As a child, I sat with my mother as we watched an old`,
-                        {
-                            anchor: `World War I`,
-                            wiki: `World_War_I`,
-                        },
-                        `movie. After the battle, the camera panned across a motionless scene of bombed houses and dead bodies while a lone`,
-                        {
-                            anchor: `gramophone`,
-                            wiki: `Phonograph`,
-                        },
-                        `, preserved amid the wreckage, played a sappy Italian`,
+                        `As a child, I sat with my mother as we watched an old World War I movie. After the battle, the camera panned across a motionless scene of bombed houses and dead bodies while a lone gramophone, preserved amid the wreckage, played a sappy Italian`,
                         {
                             anchor: `parlor song`,
                             wiki: `Parlour_music`,
@@ -301,14 +276,7 @@ export default {
                             anchor: `battered kitten purrs`,
                             cards: [
                                 {
-                                    description: [
-                                        `Sita had her own story to tell about mistreating a first pet. Upon receiving a kitten as a child, she hugged it so hard it began to purr. Taking this as a sign of its contentment, she hugged it even harder. Years later, she learned that cats also`,
-                                        {
-                                            anchor: `purr to cope`,
-                                            wiki: `Purr`,
-                                        },
-                                        `with distress, and looking back, she realized her kitten thought it was being crushed to death. She lived in guilt ever since.`,
-                                    ],
+                                    description: `Sita had her own story to tell about mistreating a first pet. Upon receiving a kitten as a child, she hugged it so hard it began to purr. Taking this as a sign of its contentment, she hugged it even harder. Years later, she learned that cats also purr to cope with distress, and looking back, she realized her kitten thought it was being crushed to death. She lived in guilt ever since.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },

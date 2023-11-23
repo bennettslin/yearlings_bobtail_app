@@ -60,14 +60,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: [
-                        `During the years afterward when I was trying to be good again, I kept digging further into my past to figure out where things went wrong. So for this song, I decided to revisit the sonic textures of all the other songs on the album in reverse, starting with the`,
-                        {
-                            anchor: `piano`,
-                            wiki: `Piano`,
-                        },
-                        `from "Vegan Proclamation."`,
-                    ],
+                    description: `During the years afterward when I was trying to be good again, I kept digging further into my past to figure out where things went wrong. So for this song, I decided to revisit the sonic textures of all the other songs on the album in reverse, starting with the piano from "Vegan Proclamation."`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGCRAFT]: true,
@@ -239,12 +232,7 @@ export default {
                                             anchor: `Pampas`,
                                             wiki: `Pampas`,
                                         },
-                                        `, the grassy lowlands that span the southern end of`,
-                                        {
-                                            anchor: `South America`,
-                                            wiki: `South_America`,
-                                        },
-                                        `.`,
+                                        `, the grassy lowlands that span the southern end of South America.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -270,12 +258,7 @@ export default {
                                         anchor: `Krishna`,
                                         wiki: `Krishna`,
                                     },
-                                    `. I don't have a good explanation for what they're doing in`,
-                                    {
-                                        anchor: `Argentina`,
-                                        wiki: `Argentina`,
-                                    },
-                                    `. When I wrote these lyrics, I didn't think I'd need one.`,
+                                    `. I don't have a good explanation for what they're doing in Argentina. When I wrote these lyrics, I didn't think I'd need one.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
