@@ -30,8 +30,8 @@ export default {
     // This is a magic number adjusted by ear. In the mix, it's actually 41.66.
     mixSamplingFrequency: 41.64,
     todo: true,
-    problem: `Last sentence might run on.`,
-    overview: `With the Yearlings becoming a fixture in the local scene, I started to command more attention than I'd ever known, particularly from women. Yet even as my misery abated, a resentment simmered beneath. I also began to regret my relationship with Sita, which now felt like a decision I'd been coerced to make, under deprived conditions from which I was now free.`,
+    problem: `Review one more time.`,
+    overview: `With the Yearlings becoming a fixture in the local scene, I started to command more attention than I'd ever known, particularly from women. Yet my misery didn't fade; it just simmered into a quiet resentment. I also began to regret getting into a relationship with Sita, which now felt like a decision I'd been coerced to make, under deprived conditions from which I was now free.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -76,7 +76,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 todo: true,
-                problem: `Make it more clear that he would first arrange the plateware like a drum set. Mention silverware for drum.`,
+                problem: `Review one more time.`,
                 card: {
                     description: [
                         `A fellow dishroom worker named Owen had a`,
@@ -84,7 +84,7 @@ export default {
                             anchor: `four-track cassette recorder`,
                             wiki: `Portastudio`,
                         },
-                        `, and some nights we would go back to his place and twiddle with it. Using dishware he'd swiped from the cafeteria, Owen would arrange a makeshift drum set and then tap out these intricate rhythms. I tried my best to conjure his spirit here.`,
+                        `, and some nights we'd go back to his place and twiddle with it. For drum tracks, Owen would place books and dishware on the carpet floor and then tap out these intricate rhythms, which always impressed me. So I tried my best to conjure his spirit here.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -229,15 +229,15 @@ export default {
                         {
                             anchor: `sapling cut`,
                             todo: true,
-                            problem: `Sentence kind of runs on. Make clear that ring can be seen only because it's exposed by gaping wounds.`,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
-                                    `Upon surviving the winter, a sapling is awarded its first`,
+                                    `Upon surviving the winter, a sapling will be awarded its first`,
                                     {
                                         anchor: `tree ring`,
                                         wiki: `Dendrochronology`,
                                     },
-                                    `, which will then be visible to all through any gaping wounds it suffered along the way.`,
+                                    `. And if it suffered any gaping wounds along the way, then this ring will be visible to all.`,
                                 ],
                             },
                         },
@@ -390,9 +390,9 @@ export default {
                         {
                             anchor: `cancer nibbled off`,
                             todo: true,
-                            problem: `I just don't like how it is right now.`,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `It was therapeutic enough to write songs about my own disappointments and dysfunctions. It felt crazy that others would credit me with giving voice to theirs as well, and that they should admire me for it.`,
+                                description: `It was therapeutic enough to write songs about my own disappointments and dysfunctions. It seemed like a gift, then, that others would credit me with giving voice to theirs as well, and that they should admire me for it.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -590,7 +590,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `But my appraisal was based on reason, not malice. If the Christian god were the one true God, then why would he trust his message to be spread by the very tormentors of those he hoped to reach?`,
+                                description: `But my appraisal was based on reason, not resentment. If the Christian god were the one true God, then why would he trust his message to be spread by the very tormentors of those he hoped to reach?`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -759,7 +759,7 @@ export default {
                             todo: true,
                             problem: `Sentence runs on. Not sure it makes sense now.`,
                             card: {
-                                description: `His wife Alison then sighs in response, "Poor, poor bears." She recognizes that he, a bear in their mutual fantasy, is just as much a victim, complying within his role in the power dynamic between them.`,
+                                description: `His wife Alison then sighs in response, "Poor, poor bears." She recognizes that he, a bear in their mutual fantasy, is no less helpless as he complies with his role in the power dynamic between them.`,
                                 dotKeys: {
                                     [REFERENCE]: true,
                                 },

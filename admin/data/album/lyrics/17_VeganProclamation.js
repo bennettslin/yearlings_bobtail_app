@@ -868,8 +868,7 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
-                problem: `Review one more time.`,
+                review: true,
                 card: {
                     description: `I stayed vegan for five years. But after moving to New York City, I quit because Sasha ate meat. I guess it's the nature of who I am that my personal identity will always be the first thing I jettison whenever a chance for romance is at stake. And truth be told, being vegan was always kind of rough, given my peanut and tree nut allergies. Still, these days I'm mostly vegetarian. It's both easier and healthier.`,
                     dotKeys: {
