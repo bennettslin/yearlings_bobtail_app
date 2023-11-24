@@ -513,8 +513,7 @@ export default {
                         `A`,
                         {
                             anchor: `shank's dustless silhouette`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             cards: [
                                 {
                                     description: `During those on-and-off years, I would habitually return to Sita with a promise to mend my ways. Things would be peachy for a while— after which I would run off with yet another woman. I was like a reformed convict who might relapse at any time, taking with him the shank that he'd left on the windowsill to collect dust.`,
@@ -712,7 +711,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `I also hadn't settled the issue of whether an afterlife was even preferable. Though Sita had no ready answers, she taught me her Hindu beliefs, which supplemented what I was learning in my religious studies courses. I found comfort in Hinduism's sprawling pantheon of deities and avatars. It just seemed like the more details there are to learn, the more ways there are to get lost in the divine.`,
+                                description: `I also hadn't settled the issue of whether an afterlife was actually preferable. Though Sita had no ready answers, she taught me her Hindu beliefs, which supplemented what I was learning in my religious studies courses. I found comfort in Hinduism's sprawling pantheon of deities and avatars. It just seemed like the more details there are to learn, the more ways there are to get lost in the divine.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -786,7 +785,7 @@ export default {
                         {
                             anchor: `practice cuts`,
                             todo: true,
-                            problem: `Review one more time.`,
+                            problem: `The first time Sita asked about the scars on my forearm.`,
                             card: {
                                 description: `Back when Sita and I were just friends, she once asked about the scars on my forearm. I replied with dry wit that they were just for practice. Years later when I expressed concern after she'd tried cutting for herself, she gave me the same assurance. The message was clear that I was the cause in more ways than one.`,
                                 dotKeys: {

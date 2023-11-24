@@ -1105,10 +1105,9 @@ export default {
                     lyricRight: [
                         {
                             anchor: `forgo like jewelry`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
-                                description: `Sita and I had a turbulent on-again, off-again relationship for a good while longer. During one stretch when things were rosier than ever, she asked to have the bracelet back to wear again, and I happily obliged. Somehow I'd dented it in my pocket that night, however— a lasting reminder that some damages can be amended, but never undone.`,
+                                description: `Sita and I had a turbulent on-again, off-again relationship for a good while longer. During one stretch when things were rosier than ever, she asked to have the bracelet back to wear again, and I happily obliged. Somehow I'd dented it in my pocket that night, however— a lasting reminder that some damages can be mended, but never undone.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

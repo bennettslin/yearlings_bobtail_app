@@ -29,7 +29,7 @@ export default {
     mixStartTime: `0:01:01.40`,
     todo: true,
     problem: `Review one more time.`,
-    overview: `My mood would change for the worse when I drank, leading friends to joke that I had a sinister alter ego. And yet, it wasn't far from the truth. I was souring on my relationship with Sita by this point, and being drunk provided both an escape and an excuse to act out. But I really didn't like myself when this happened; I missed being the hapless kid I still was in my head. And knowing now how to get it right, I longed for a do-over, only this time without the mess. In other words… without Sita.`,
+    overview: `My mood would change for the worse when I drank, leading friends to joke that I had a sinister alter ego. Yet it wasn't far from the truth. I was souring on my relationship with Sita by this point, and being drunk provided both an escape and an excuse to act out. But I really didn't like myself when this happened; I missed being the hapless kid I was before. And knowing now how to get it right, I longed for a do-over— only this time without the mess. In other words… without Sita.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -871,7 +871,7 @@ export default {
                             isItalic: true,
                             lyric: `Yearling's Bobtail`,
                         },
-                        `was rejected by every last indie label, I got so depressed that I went on a months-long bender. Eventually I kept a box of wine by my bed, which I would sip from throughout the night to calm my nerves. One day after skipping my morning beers, I felt like my bedroom walls were conspiring to attack me. I learned that this was the onset of`,
+                        `was rejected by every last indie label, I got so depressed that I went on a months-long bender. Eventually I kept a box of wine by my bed, and I would sip from it throughout the night to calm my nerves. One day after skipping my morning beers, I felt like my bedroom walls were conspiring to attack me. I learned that this was the onset of`,
                         {
                             anchor: `delirium tremens`,
                             wiki: `Delirium_tremens`,

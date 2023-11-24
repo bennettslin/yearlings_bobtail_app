@@ -29,8 +29,7 @@ export default {
     playerStartTime: 1932.102,
     // This is a magic number adjusted by ear. In the mix, it's actually 41.66.
     mixSamplingFrequency: 41.64,
-    todo: true,
-    problem: `Review one more time.`,
+    review: true,
     overview: `With the Yearlings becoming a fixture in the local scene, I started to command more attention than I'd ever known, particularly from women. Yet my misery didn't fade; it just simmered into a quiet resentment. I also began to regret getting into a relationship with Sita, which now felt like a decision I'd been coerced to make, under deprived conditions from which I was now free.`,
     lyricUnits: [
         {
@@ -75,8 +74,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
-                problem: `Review one more time.`,
+                review: true,
                 card: {
                     description: [
                         `A fellow dishroom worker named Owen had a`,
@@ -237,7 +235,7 @@ export default {
                                         anchor: `tree ring`,
                                         wiki: `Dendrochronology`,
                                     },
-                                    `. And if it suffered any gaping wounds along the way, then this ring will be visible to all.`,
+                                    `. And if it suffers any gaping wounds along the way, then this new ring will be visible to all.`,
                                 ],
                             },
                         },
@@ -587,8 +585,7 @@ export default {
                         `reading`,
                         {
                             anchor: `His obit not a bang`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: `But my appraisal was based on reason, not resentment. If the Christian god were the one true God, then why would he trust his message to be spread by the very tormentors of those he hoped to reach?`,
                                 dotKeys: {
@@ -731,8 +728,7 @@ export default {
                         `So if you're weeping for`,
                         {
                             anchor: `poor squirrels`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: [
                                     `In the final scene of `,
