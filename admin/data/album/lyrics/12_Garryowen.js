@@ -96,9 +96,9 @@ export default {
                         {
                             anchor: `Brushed her off`,
                             todo: true,
-                            problem: `Review one more time.`,
+                            problem: `I just don't like this as it is.`,
                             card: {
-                                description: `As I withdrew from the relationship, Sita would reach out by groveling. And each time I would rush to comfort her, stung by my conscience. But as time went on, my patience wore thin, causing me to lash out in passive-aggressive ways— which then compelled her to grovel even further. It became all we knew of how to speak for ourselves.`,
+                                description: `Anytime I began to grow distant, Sita would reach out by groveling, and I'd rush back to comfort her, stung by my conscience. But as time went on, my patience wore thin, and I would lash out in passive-aggressive ways— whereupon she'd grovel even further. It became all we knew of how to speak for ourselves.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -288,6 +288,12 @@ export default {
                             anchor: `smegma crust`,
                             cards: [
                                 {
+                                    description: `My personal hygiene would be put on hold for days while I stayed at the punk house. But even once back at Sita's place, I would dawdle a bit before showering, since she was powerless to entice me with sex until I did.`,
+                                    dotKeys: {
+                                        [BACKSTORY]: true,
+                                    },
+                                },
+                                {
                                     description: [
                                         {
                                             anchor: `Smegma`,
@@ -295,12 +301,6 @@ export default {
                                         },
                                         `is the smelly gunk that builds up on unwashed genitals.`,
                                     ],
-                                },
-                                {
-                                    description: `My personal hygiene would be put on hold for days while I stayed at the punk house. But even once back at Sita's place, I would dawdle a bit before showering, since she was powerless to entice me with sex until I did.`,
-                                    dotKeys: {
-                                        [BACKSTORY]: true,
-                                    },
                                 },
                             ],
                         },
@@ -314,28 +314,23 @@ export default {
                         {
                             anchor: `hummers aren't love`,
                             todo: true,
-                            problem: `Needs to be clear. Right now it sounds like Sita is protesting against the sex itself, rather than against my not showering. Also put blowjob in another card, explaining why I never understood hummer as a slang term?`,
-                            card: {
-                                description: [
-                                    `Once when Sita protested that we couldn't have sex until after I washed up, I snidely replied that she could still give me a hummer, or blowjob, since this didn't count as sex in her view.`,
-                                ],
-                                dotKeys: {
-                                    [BACKSTORY]: true,
+                            problem: `Review one more time.`,
+                            cards: [
+                                {
+                                    description: `Throughout our budding friendship, Sita had neglected to mention her sexual intimacy with past partners, even if it was always shy of intercourse. When I found out, she tried to console me by pointing out that she never went all the way with them because she didn't love them. She loved me, which meant I'd won. But it still stung like crazy to find out so late, and this deepened my resentment.`,
+                                    dotKeys: {
+                                        [BACKSTORY]: true,
+                                    },
                                 },
-                            },
-                        },
-                        `, or so`,
-                        {
-                            anchor: `she's claimed`,
-                            review: true,
-                            card: {
-                                description: `Throughout our budding friendship, Sita had neglected to mention her sexual intimacy with past partners, even if it was always shy of intercourse. When I found out, she tried to console me by pointing out that she never went all the way with them because she didn't love them. She loved me, which meant I'd won. But it still stung like crazy to find out so late, and this deepened my resentment.`,
-                                dotKeys: {
-                                    [BACKSTORY]: true,
+                                {
+                                    description: `A hummer is a blowjob in which the giver stimulates the penis further by humming to create vibrations. Of course, this technique can also be used to arouse the vulva.`,
+                                    dotKeys: {
+                                        [REFERENCE]: true,
+                                    },
                                 },
-                            },
+                            ],
                         },
-                        `…`,
+                        `, or so she's claimed…`,
                     ],
                 },
             ],

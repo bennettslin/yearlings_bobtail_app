@@ -184,9 +184,9 @@ export default {
                         {
                             anchor: `womb you bed`,
                             todo: true,
-                            problem: `Last sentence runs on.`,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `Of course, Sita herself had no such illusions about my innocence. She knew that my desire to sleep with other women was rooted in the insecurity I felt as the less sexually experienced one in our relationship.`,
+                                description: `Of course, Sita herself had no such illusions about my innocence. She knew I chafed at being the less sexually experienced one in our relationship, and that this was the basis for my desire to sleep with other women.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -787,7 +787,7 @@ export default {
                             todo: true,
                             problem: `The first time Sita asked about the scars on my forearm.`,
                             card: {
-                                description: `Back when Sita and I were just friends, she once asked about the scars on my forearm. I replied with dry wit that they were just for practice. Years later when I expressed concern after she'd tried cutting for herself, she gave me the same assurance. The message was clear that I was the cause in more ways than one.`,
+                                description: `When Sita first asked me about the scars on my forearm, I replied with dry wit that they were just for practice. Years later when I expressed concern after she'd tried cutting for herself, she gave me the same assurance. The message was clear that I was the cause in more ways than one.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
