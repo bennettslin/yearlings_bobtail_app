@@ -27,8 +27,7 @@ export default {
     referenceDescription: `Banjo in anacrusis`,
     playerStartTime: 2107.996,
     mixStartTime: `0:01:01.40`,
-    todo: true,
-    problem: `Review one more time.`,
+    review: true,
     overview: `My mood would change for the worse when I drank, leading friends to joke that I had a sinister alter ego. Yet it wasn't far from the truth. I was souring on my relationship with Sita by this point, and being drunk provided both an escape and an excuse to act out. But I really didn't like myself when this happened; I missed being the hapless kid I was before. And knowing now how to get it right, I longed for a do-over— only this time without the mess. In other words… without Sita.`,
     lyricUnits: [
         {
@@ -312,23 +311,25 @@ export default {
                     lyric: [
                         `since`,
                         {
-                            anchor: `hummers aren't love`,
+                            anchor: `hummers`,
                             todo: true,
                             problem: `Review one more time.`,
-                            cards: [
-                                {
-                                    description: `Throughout our budding friendship, Sita had neglected to mention her sexual intimacy with past partners, even if it was always shy of intercourse. When I found out, she tried to console me by pointing out that she never went all the way with them because she didn't love them. She loved me, which meant I'd won. But it still stung like crazy to find out so late, and this deepened my resentment.`,
-                                    dotKeys: {
-                                        [BACKSTORY]: true,
-                                    },
+                            card: {
+                                description: `A hummer is a blowjob in which the giver stimulates the penis further by humming to create vibrations. Of course, this technique can be used to arouse the vulva as well.`,
+                                dotKeys: {
+                                    [REFERENCE]: true,
                                 },
-                                {
-                                    description: `A hummer is a blowjob in which the giver stimulates the penis further by humming to create vibrations. Of course, this technique can also be used to arouse the vulva.`,
-                                    dotKeys: {
-                                        [REFERENCE]: true,
-                                    },
+                            },
+                        },
+                        {
+                            anchor: `aren't love`,
+                            review: true,
+                            card: {
+                                description: `Throughout our budding friendship, Sita had neglected to mention her sexual intimacy with past partners, even if it was always shy of intercourse. When I found out, she tried to console me by pointing out that she never went all the way with them because she didn't love them. She loved me, which meant I'd won. But it still stung like crazy to find out so late, and this deepened my resentment.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true,
                                 },
-                            ],
+                            },
                         },
                         `, or so she's claimed…`,
                     ],

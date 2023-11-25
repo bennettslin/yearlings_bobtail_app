@@ -32,7 +32,7 @@ export default {
     playerStartTime: 2722.629,
     todo: true,
     problem: `Review one more time.`,
-    overview: `Upon learning of my brother's autism, my parents were too harried to notice I was being bullied at school. In guilt, they later indulged every whim I had to find my own path. But as I got older, they grew concerned that I wasn't maturing as I went— and they were crushed when I left Sita, whom they adored. Naturally, I wasn't happy to disappoint them. Still, I had a master plan to follow, and I wasn't about to change my ways.`,
+    overview: `Upon learning of my brother's autism, my parents were too harried to notice I was being bullied at school. In guilt, they later indulged every whim I had to find my own path. But as I failed to mature even as I got older, they grew concerned, and they were particularly crushed when I left Sita, whom they adored. Naturally, I wasn't happy to disappoint them. Still, I had a master plan to follow, and I wasn't about to change my ways.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -415,7 +415,7 @@ export default {
                 problem: `Review one more time.`,
                 card: {
                     description: [
-                        `The`,
+                        `I went with the`,
                         {
                             anchor: `Kinks`,
                             wiki: `The_Kinks`,
@@ -425,7 +425,7 @@ export default {
                             anchor: `Village Green Preservation Society`,
                             wiki: `The_Kinks_Are_the_Village_Green_Preservation_Society`,
                         },
-                        `served as a model for this album. As such, the songs all had to be memorable pop tunes representing a variety of musical styles, with each one clocking in at three to four minutes. While there was no one-to-one mapping, this song was clearly my "`,
+                        `as a rough model for this album. So all my songs had to be accessible pop tunes representing a variety of musical styles, with each one clocking in at around three minutes. While there's no one-to-one mapping, this song is clearly my "`,
                         {
                             anchor: `Wicked Annabella`,
                             wiki: `Wicked_Annabella`,
@@ -713,7 +713,7 @@ export default {
                                         anchor: `degrading rituals`,
                                         wiki: `Hazing`,
                                     },
-                                    `to toughen them up. Having dealt with such abuse for so long, I finally conceded that I wouldn't have toughened up in any other way either. And now I had no qualms about dishing it out to others.`,
+                                    `to toughen them up. And having dealt with such abuse for so long, I finally conceded that I wouldn't have toughened up any other way either. But now I had few misgivings about dishing it out to others.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,

@@ -711,7 +711,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `I also hadn't settled the issue of whether an afterlife was actually preferable. Though Sita had no ready answers, she taught me her Hindu beliefs, which supplemented what I was learning in my religious studies courses. I found comfort in Hinduism's sprawling pantheon of deities and avatars. It just seemed like the more details there are to learn, the more ways there are to get lost in the divine.`,
+                                description: `I also hadn't settled the issue of whether an afterlife was actually preferable. Though Sita had no ready answers, she taught me her Hindu beliefs, which reinforced what I was learning in my religious studies courses. I found comfort in Hinduism's sprawling pantheon of deities and avatars. It just seemed like the more details there are to learn, the more ways there are to get lost in the divine.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -724,7 +724,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `As friends, Sita and I got along well because we were both sad people. But whereas my depression was simply rooted in circumstance— whether from being bullied as a child, or out of loneliness as I got older— hers was clinical. And as I got better at dealing with my spells, I grew impatient with her for being incapable of the same.`,
+                                description: `As friends, Sita and I got along well because we were both sad people. But in hindsight, my depression was rooted in circumstance— whether from being bullied as a child, or out of loneliness as I got older. Hers, on the other hand, was clinical. And as I got better at dealing with my spells, I grew impatient with her for being incapable of the same.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

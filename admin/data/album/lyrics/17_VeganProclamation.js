@@ -662,8 +662,7 @@ export default {
                         `Someday you'll breathe again; for one,`,
                         {
                             anchor: `you have to`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: `Overcome with jealousy and heartbreak, I had no excuse to complain; I'd caused Sita this same torment countless times. So in our last phone conversation, I just asked her meekly how she'd managed it. She replied that she didn't know. There were days when she didn't want to live— yet each day would pass all the same. Then gradually, days added up to weeks, and weeks turned into months, until the excruciating pain dulled into an aching sadness.`,
                                 dotKeys: {

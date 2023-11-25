@@ -353,7 +353,7 @@ export default {
                 todo: true,
                 problem: `Review one more time.`,
                 card: {
-                    description: `I chose doublespeaker rhyme for this song because my original plan was to contrast Miriam's inner thoughts with mine. But I kept forgetting which column of lyrics was whose, making me realize there was no real contrast to show. We both knew that the relationship would fail. One of us just had a better idea of when.`,
+                    description: `I chose doublespeaker rhyme for this song because my original plan was to contrast Miriam's inner thoughts with mine. But I kept forgetting which column of lyrics was whose, making me realize there was no real contrast to show. We were of the same mind that the relationship would fail. One of us just had a better idea of when.`,
                     dotKeys: {
                         [OBSERVATION]: true,
                         [SONGCRAFT]: true,
@@ -874,7 +874,7 @@ export default {
                         {
                             anchor: `Bless her`,
                             todo: true,
-                            problem: `This one and the next are together trying to convey an idea that I still don't think is quite there. Like, the idea of Buddhism seems to come out of nowhere? How is it related, exactly? If articulated correctly, this could be one of my best points, so really think it through.`,
+                            problem: `This one and the next are together trying to convey an idea that I still don't think is quite there. Like, the idea of Buddhism seems to come out of nowhere? How is it related, exactly? If articulated correctly, this could be one of my best points, so really think it through. Should be about White women.`,
                             card: {
                                 description: [
                                     `The title of the play`,

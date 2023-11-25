@@ -64,8 +64,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
-                problem: `Review one more time.`,
+                review: true,
                 card: {
                     description: [
                         `In the past, a disabled child was thought to be a troll in disguise known as a`,
