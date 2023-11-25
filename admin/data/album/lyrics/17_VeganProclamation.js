@@ -760,7 +760,33 @@ export default {
                 },
                 {
                     mixTime: `3:22:15.78`,
-                    lyric: `And can we start as children? Would we want to then?`,
+                    lyric: [
+                        `And can we`,
+                        {
+                            anchor: `start as children`,
+                            todo: true,
+                            problem: `Review one more time.`,
+                            card: {
+                                description: [
+                                    `I first recorded this song on Owen's four-track. In those days, my lyrics were mostly mumbled phrases off the top of my head. Since I was always hoping to write the next "`,
+                                    {
+                                        anchor: `Stardust`,
+                                        wiki: `Stardust_(1927_song)`,
+                                    },
+                                    `" by`,
+                                    {
+                                        anchor: `Hoagy Carmichael`,
+                                        wiki: `Hoagy_Carmichael`,
+                                    },
+                                    `, I must have thrown the word "stardust" in there, because Owen really liked the line "Can we start as children?" I didn't have the heart to tell him that he'd misheard it, so I kept it.`,
+                                ],
+                                dotKeys: {
+                                    [SONGCRAFT]: true,
+                                },
+                            },
+                        },
+                        `? Would we want to then?`,
+                    ],
                 },
                 {
                     mixTime: `3:30:13.20`,

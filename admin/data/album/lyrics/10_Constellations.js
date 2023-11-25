@@ -1,4 +1,5 @@
 import {
+    AFTERWORD,
     BACKSTORY,
     NARRATIVE,
     OBSERVATION,
@@ -2041,6 +2042,20 @@ export default {
                     },
                 },
             ],
+        },
+        {
+            unitMap: {},
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                problem: `Review one more time.`,
+                card: {
+                    description: `Ana now runs a dog collar business called Paco Collars that's doing quite well. I ran into Howie and Tomer at a party recently, and they both remember that night fondly.`,
+                    dotKeys: {
+                        [AFTERWORD]: true,
+                    },
+                },
+            },
         },
     ],
 }

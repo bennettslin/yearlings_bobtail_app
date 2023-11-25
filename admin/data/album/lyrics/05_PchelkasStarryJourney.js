@@ -1334,7 +1334,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `My brother currently lives in his own apartment and gets round-the-clock care through a supported living agency. When asked how old he is, he still answers "seven."`,
+                        `My brother currently lives in his own place and gets round-the-clock care through a supported living agency. When asked how old he is, he still answers "seven."`,
                     ],
                     dotKeys: {
                         [AFTERWORD]: true,
