@@ -1215,12 +1215,39 @@ export default {
                     lyric: [
                         {
                             anchor: `She loves you`,
-                            card: {
-                                description: `It took a long while for Sita and I to be fully comfortable with each other. At the start of our yearlong friendship, we mostly just studied together at the library. Then slowly, short treks through campus progressed into long strolls around the neighborhood, which soon led up to leaning in closer on the couch. It all happened so fast toward the end that I was still processing what triggered it.`,
-                                dotKeys: {
-                                    [BACKSTORY]: true,
+                            todo: true,
+                            problem: `Review one more time.`,
+                            cards: [
+                                {
+                                    description: `It took a long while for Sita and I to be fully comfortable with each other. At the start of our yearlong friendship, we mostly just studied together at the library. Then slowly, short treks through campus progressed into long strolls around the neighborhood, which soon led up to leaning in closer on the couch. It all happened so fast toward the end that I was still processing what triggered it.`,
+                                    dotKeys: {
+                                        [BACKSTORY]: true,
+                                    },
                                 },
-                            },
+                                {
+                                    description: [
+                                        `A reference to perhaps my`,
+                                        {
+                                            anchor: `favorite Beatles song`,
+                                            wiki: `She_Loves_You`,
+                                        },
+                                        `. During troubled times with Sita in our later years, I always felt like`,
+                                        {
+                                            anchor: `John Lennon`,
+                                            wiki: `John_Lennon`,
+                                        },
+                                        `and`,
+                                        {
+                                            anchor: `Paul McCartney`,
+                                            wiki: `Paul_McCartney`,
+                                        },
+                                        `were grabbing me by the collar, trying to smack sense into me.`,
+                                    ],
+                                    dotKeys: {
+                                        [OBSERVATION]: true,
+                                    },
+                                },
+                            ],
                         },
                         `…`,
                     ],
