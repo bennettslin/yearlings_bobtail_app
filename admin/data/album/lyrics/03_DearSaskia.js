@@ -31,7 +31,7 @@ export default {
     // This is a magic number adjusted by ear. In the mix, it's actually 44.96.
     mixSamplingFrequency: 45.39,
     todo: true,
-    problem: `Decide if this is the best way to break up those two statements.`,
+    problem: `Review one more time.`,
     overview: `Sasha was a childhood friend, as well as my first crush. The strength she drew from her Jewish identity fascinated me, but it also clued me in on a cruel paradox— namely, that nothing ever comes from longing to share in someone's faith and roots, which stay strong precisely by not being shared. Sasha moved away during middle school, at the peak of my struggles with bullies. That summer, I wrote her a letter on a family trip to Taiwan.`,
     lyricUnits: [
         {
@@ -437,6 +437,8 @@ export default {
                         `One`,
                         {
                             anchor: `bus seat`,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
                                     `My family lived in`,
@@ -449,7 +451,7 @@ export default {
                                         anchor: `Sherman Oaks`,
                                         wiki: `Sherman_Oaks,_Los_Angeles`,
                                     },
-                                    `, a wealthy district with fewer minorities. I remember feeling out of my element at the time, though I didn't quite know why.`,
+                                    `, a wealthy district with fewer minorities. I remember feeling out of my element, though at the time I didn't quite know why.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,

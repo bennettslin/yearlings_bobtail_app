@@ -239,9 +239,10 @@ export default {
                         `with`,
                         {
                             anchor: `mindful manners`,
-                            review: true,
+                            todo: true,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `Catherine didn't like to hear swear words, so I decided to stop swearing as well. I figured this would be a definite win with others like her, while the rest would find its quaintness charming.`,
+                                description: `Catherine didn't like it when I swore, so I decided to give up swearing as well. I figured this would be a definite win with other women like her, while the rest would find its quaintness charming.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
