@@ -36,7 +36,7 @@ export default {
     playerStartTime: 555.277,
     todo: true,
     problem: `Review one more time.`,
-    overview: `Taiwan showed me how different life would have been had my parents not immigrated to America, yet I was still worlds away from what Sasha needed me to be. Life seemed as infinitely fluid as it was immovably fixed, and I wasn't sure which extreme terrified me more. Later that summer, our house cat Odin died of old age, just as I was seeking spiritual explanations for my mortality. And yet, the eternal life promised by faith seemed no less terrifying than the finality of death.`,
+    overview: `Taiwan showed me how different life would have been had my parents not immigrated to America. And yet, I was still worlds away from what Sasha needed me to be. Life seemed as infinitely fluid as it was immovably fixed, and I wasn't sure which extreme terrified me more. Later that summer, our house cat Odin died of old age, just as I was seeking spiritual explanations for my mortality. And yet, the eternal life promised by faith seemed no less terrifying than the finality of death.`,
     isDoublespeaker: true,
     lyricUnits: [
         {

@@ -186,7 +186,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `Of course, Sita herself had no such illusions about my innocence. She knew I chafed at being the less sexually experienced one in our relationship, and that this was the basis for my desire to sleep with other women.`,
+                                description: `Of course, Sita herself had no such illusions about my innocence. She knew I chafed at being the one who was less sexually experienced in our relationship, and that this was the basis for my desire to sleep with other women.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -708,10 +708,9 @@ export default {
                         `, your`,
                         {
                             anchor: `fear of never dying`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
-                                description: `I also hadn't settled the issue of whether an afterlife was actually preferable. Though Sita had no ready answers, she taught me her Hindu beliefs, which reinforced what I was learning in my religious studies courses. I found comfort in Hinduism's sprawling pantheon of deities and avatars. It just seemed like the more details there are to learn, the more ways there are to get lost in the divine.`,
+                                description: `I also hadn't settled the issue of whether an afterlife was actually preferable. Though Sita had no ready answers, she taught me her Hindu beliefs, which reinforced what I was learning in my religious studies courses. I found comfort in Hinduism's sprawling pantheon of avatars and deities. It just seemed like the more details there are to learn, the more ways there are to get lost in the divine.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

@@ -226,8 +226,7 @@ export default {
                         `Now your`,
                         {
                             anchor: `sapling cut`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: [
                                     `Upon surviving the winter, a sapling will be awarded its first`,
