@@ -1231,7 +1231,7 @@ export default {
                                             anchor: `favorite Beatles song`,
                                             wiki: `She_Loves_You`,
                                         },
-                                        `. During troubled times with Sita in our later years, I always felt like`,
+                                        `. During my troubled years with Sita, I always felt like`,
                                         {
                                             anchor: `John Lennon`,
                                             wiki: `John_Lennon`,

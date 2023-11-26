@@ -447,9 +447,9 @@ export default {
                         {
                             anchor: `creepers on his cheek`,
                             todo: true,
-                            problem: `Is there a simpler way to say this?`,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `Of course, it's no surprise if Willy can see through the enchantment that disguises my brother's true form. After all, Willy may be a changeling himself, as evinced by his own unkempt facial hair.`,
+                                description: `Of course, it's no surprise if Willy isn't fooled by my brother's disguise. After all, Willy may be a changeling himself, as evinced by his own unkempt facial hair.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
