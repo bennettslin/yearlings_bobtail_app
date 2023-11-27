@@ -30,8 +30,7 @@ export default {
     playerStartTime: 384.329,
     // This is a magic number adjusted by ear. In the mix, it's actually 44.96.
     mixSamplingFrequency: 45.39,
-    todo: true,
-    problem: `Review one more time.`,
+    review: true,
     overview: `Sasha was a childhood friend, as well as my first crush. The strength she drew from her Jewish identity fascinated me, but it also clued me in on a cruel paradox— namely, that nothing ever comes from longing to share in someone's faith and roots, which stay strong precisely by not being shared. Sasha moved away during middle school, at the peak of my struggles with bullies. That summer, I wrote her a letter on a family trip to Taiwan.`,
     lyricUnits: [
         {
@@ -62,7 +61,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 todo: true,
-                problem: `Make it more about being untalented and ripping off the Beatles, and feeling shame.`,
+                problem: `Review one more time.`,
                 card: {
                     description: [
                         `As a teenager, I tried to figure out the songwriting secrets of the`,
@@ -70,7 +69,7 @@ export default {
                             anchor: `Beatles`,
                             wiki: `The_Beatles`,
                         },
-                        `, which is how I came up with the music heard here. I wasn't sure what to do with it at the time; the chords and melodies sounded so labored, and all my fixes made it worse. But years later, I realized that the sound of being labored to death was exactly what a song about an overwrought letter to Sasha called for.`,
+                        `, and to put my theories into practice, I came up with the melodies and chords now stitched together here. For so long, I never made use of them; all I could hear was me trying and failing to match the Beatles. But years later, I realized that the sound of trying too hard was exactly what a song about an overwrought letter to Sasha called for.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -122,7 +121,7 @@ export default {
                         {
                             anchor: `first semester`,
                             todo: true,
-                            problem: `I'm not sure the grammar is correct here.`,
+                            problem: `Review one more time.`,
                             card: {
                                 description: `My family was spending the entire summer in Taiwan. We weren't to get back to the States until after Sasha had begun the new school year in Boston.`,
                                 dotKeys: {
@@ -437,8 +436,7 @@ export default {
                         `One`,
                         {
                             anchor: `bus seat`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: [
                                     `My family lived in`,
@@ -451,7 +449,7 @@ export default {
                                         anchor: `Sherman Oaks`,
                                         wiki: `Sherman_Oaks,_Los_Angeles`,
                                     },
-                                    `, a wealthy district with fewer minorities. I remember feeling out of my element, though at the time I didn't quite know why.`,
+                                    `, a wealthy district with fewer minorities. I remember feeling out of my element, but at the time I didn't quite know why.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,

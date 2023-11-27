@@ -315,9 +315,9 @@ export default {
                         {
                             anchor: `earth right now your tourist store`,
                             todo: true,
-                            problem: `Maybe too wordy, which obscures the meaning.`,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `My mother filled my head with visions of being a great artist, even as she instilled her Buddhist ideal of renouncing materialism. The mail-order cult then piled on with the belief that I was a mere visitor to this planet. So the lasting effect on my psyche was that I became unaffected by earthly concerns, while working tirelessly "to restore" my "birthright" of artistic renown.`,
+                                description: `My mother filled my head with visions of being a great artist, along with Buddhist ideals to renounce materialism. The mail-order cult then told me that I was a mere visitor to this planet. And so a lifelong belief was formed that I must work tirelessly "to restore" my "birthright" of artistic renown, unaffected by earthly concerns.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,

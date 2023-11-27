@@ -128,9 +128,9 @@ export default {
                         {
                             anchor: `tarred pavement mirage`,
                             todo: true,
-                            problem: `Be more clear that the jagged peaks are like fangs.`,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `In the mirages created by the summer heat, the reflections of the Valley's surrounding mountains point downward. So one could playfully suggest that their jagged peaks, biting down like fangs, had caused the asphalt to crack.`,
+                                description: `In the mirages created by the summer heat, the reflections of the Valley's surrounding mountains point downward. So one could playfully suggest that their jagged peaks are like fangs, biting into the asphalt and causing it to crack.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -446,8 +446,7 @@ export default {
                         `he croaks, stroking`,
                         {
                             anchor: `creepers on his cheek`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: `Of course, it's no surprise if Willy isn't fooled by my brother's disguise. After all, Willy may be a changeling himself, as evinced by his own unkempt facial hair.`,
                                 dotKeys: {

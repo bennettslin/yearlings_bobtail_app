@@ -183,8 +183,7 @@ export default {
                         `Is it just her`,
                         {
                             anchor: `womb you bed`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: `Of course, Sita herself had no such illusions about my innocence. She knew I chafed at being the one who was less sexually experienced in our relationship, and that this was the basis for my desire to sleep with other women.`,
                                 dotKeys: {

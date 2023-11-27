@@ -312,8 +312,7 @@ export default {
                         `since`,
                         {
                             anchor: `hummers`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: `A hummer is a blowjob in which the giver stimulates the penis further by humming to create vibrations. Of course, this technique can be used to arouse the vulva as well.`,
                                 dotKeys: {

@@ -692,15 +692,15 @@ export default {
                         {
                             anchor: `tripped on runner's high`,
                             todo: true,
-                            problem: `Mention euphoria so I can link a wiki to it.`,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
-                                    `Having completed a grueling shift, I'm feeling dead tired in all my limbs as I make my way back home. So when a nighttime jogger`,
+                                    `Having completed a grueling shift, I'm feeling dead tired in all my limbs as I make my way back home. So when a nighttime jogger calls out with`,
                                     {
-                                        anchor: `cheerily`,
+                                        anchor: `euphoric cheer`,
                                         wiki: `Neurobiological_effects_of_physical_exercise`,
                                     },
-                                    `calls out that he's about to pass from behind, I find it hard to be gracious.`,
+                                    `that he's about to pass from behind, I find it hard to be gracious.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1215,8 +1215,7 @@ export default {
                     lyric: [
                         {
                             anchor: `She loves you`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             cards: [
                                 {
                                     description: `It took a long while for Sita and I to be fully comfortable with each other. At the start of our yearlong friendship, we mostly just studied together at the library. Then slowly, short treks through campus progressed into long strolls around the neighborhood, which soon led up to leaning in closer on the couch. It all happened so fast toward the end that I was still processing what triggered it.`,
