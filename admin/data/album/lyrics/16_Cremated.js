@@ -353,7 +353,7 @@ export default {
                 todo: true,
                 problem: `Review one more time.`,
                 card: {
-                    description: `I chose doublespeaker rhyme for this song because my original plan was to contrast Miriam's inner thoughts with mine. But I kept forgetting which column of lyrics was whose, making me realize there was no real contrast to show. We were of the same mind that the relationship would fail. One of us just had a better idea of when.`,
+                    description: `I chose to use doublespeaker rhyme for this song because my original plan was to contrast Miriam's inner thoughts with mine. But I kept forgetting which column of lyrics was whose, making me realize there was no real contrast to show. We were of the same mind that the relationship would fail. One of us just had a better idea of when.`,
                     dotKeys: {
                         [OBSERVATION]: true,
                         [SONGCRAFT]: true,
