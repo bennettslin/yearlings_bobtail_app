@@ -60,8 +60,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
-                problem: `Review one more time.`,
+                review: true,
                 card: {
                     description: [
                         `As a teenager, I tried to figure out the songwriting secrets of the`,
@@ -120,8 +119,7 @@ export default {
                         `your`,
                         {
                             anchor: `first semester`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: `My family was spending the entire summer in Taiwan. We weren't to get back to the States until after Sasha had begun the new school year in Boston.`,
                                 dotKeys: {

@@ -1446,15 +1446,15 @@ export default {
                                 description: [
                                     `As I envision a "`,
                                     {
-                                        anchor: `saber-toothed tiger`,
-                                        wiki: `Smilodon`,
-                                    },
-                                    `" "hunting" down a "`,
-                                    {
                                         anchor: `mastodon`,
                                         wiki: `Mastodon`,
                                     },
-                                    `," I'm "haunted by the sober truth" that my relationship with Sita has devolved into codependency, and I'm beginning to tire of it.`,
+                                    `" "hunted" by a "`,
+                                    {
+                                        anchor: `saber-toothed tiger`,
+                                        wiki: `Smilodon`,
+                                    },
+                                    `," I'm "haunted by the sober truth" that my relationship with Sita has devolved into an unhealthy codependency.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

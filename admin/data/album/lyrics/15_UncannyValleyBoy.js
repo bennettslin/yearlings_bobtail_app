@@ -317,7 +317,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `My mother filled my head with visions of being a great artist, along with Buddhist ideals to renounce materialism. The mail-order cult then told me that I was a mere visitor to this planet. And so a lifelong belief was formed that I must work tirelessly "to restore" my "birthright" of artistic renown, unaffected by earthly concerns.`,
+                                description: `My mother enthralled me with visions of being a great artist, even as she instilled her Buddhist ideal to renounce materialism. The mail-order cult then told me that I was a mere visitor to this planet. And so a belief formed in my head that I must work tirelessly "to restore" my "birthright" of artistic renown, unaffected by earthly concerns.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,

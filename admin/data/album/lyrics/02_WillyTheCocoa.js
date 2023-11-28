@@ -130,7 +130,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `In the mirages created by the summer heat, the reflections of the Valley's surrounding mountains point downward. So one could playfully suggest that their jagged peaks are like fangs, biting into the asphalt and causing it to crack.`,
+                                description: `In the mirages created by the summer heat, the reflections of the Valley's surrounding mountains point downward. So one could playfully suggest that their jagged peaks are like fangs biting into the asphalt.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -318,6 +318,7 @@ export default {
                 {
                     mixTime: `0:42:11.25`,
                     lyric: [
+                        // NOTE: Any re-recording should say "Mama."
                         `Saluting Mummy doing some`,
                         {
                             anchor: `haircutting to the sun`,
@@ -1057,6 +1058,7 @@ export default {
                                 },
                             },
                         },
+                        // NOTE: Any re-recording should say "Mama."
                         `, Mummy laughs,`,
                     ],
                 },
@@ -1095,9 +1097,11 @@ export default {
                         `Son,`,
                         {
                             anchor: `seventy years`,
+                            todo: true,
+                            problem: `Make sure grammar is correct.`,
                             cards: [
                                 {
-                                    description: `My mother told me not to worry, since I wouldn't die for a long while. She then assured me that when my time finally did come, perhaps in another seventy years or so, I would have long made peace with death somehow.`,
+                                    description: `My mother told me not to worry, since I wasn't going to die for a long while. She then assured me that when my time is finally up, perhaps once I reach seventy, I'll have long made peace with death somehow.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },

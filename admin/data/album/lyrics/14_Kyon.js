@@ -785,7 +785,7 @@ export default {
                             todo: true,
                             problem: `The first time Sita asked about the scars on my forearm.`,
                             card: {
-                                description: `When Sita first asked me about the scars on my forearm, I replied with dry wit that they were just for practice. Years later when I expressed concern after she'd tried cutting for herself, she gave me the same assurance. The message was clear that I was the cause in more ways than one.`,
+                                description: `When Sita first asked about the scars on my forearm, I replied with dry wit that they were just for practice. Years later, when I expressed concern after she'd tried cutting for herself, she gave me the same assurance. The message was clear that I was the cause in more ways than one.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
