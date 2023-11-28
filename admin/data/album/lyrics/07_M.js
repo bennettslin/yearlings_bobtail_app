@@ -27,7 +27,7 @@ export default {
     mixStartTime: `0:02:12.00`,
     todo: true,
     problem: `Review one more time.`,
-    overview: `After the breakup with Catherine, I vowed to spend the next five years shaping myself into the ideal romantic prospect, and this included getting involved in the local scene. So I cobbled together my own band, the Yearlings, and by the fifth year, we were playing house parties and small venues. I soon grew infatuated with a fellow scenester named Mara, whom I noticed from afar. But Mara ended up going out with my drummer Jacob, which made band practice awkward.`,
+    overview: `After the breakup with Catherine, I vowed to spend the next five years shaping myself into the ideal romantic prospect, which included getting involved in the local scene. So I cobbled together my own band, the Yearlings, and by the fifth year, we were playing house parties and small venues. I soon grew infatuated with a fellow scenester named Mara, whom I noticed from afar. But Mara ended up going out with my drummer Jacob, which made band practice awkward.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -239,8 +239,7 @@ export default {
                         `with`,
                         {
                             anchor: `mindful manners`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: `Catherine didn't like it when I swore, so I decided to give up swearing as well. I figured this would be a definite win with other women like her, while the rest would find its quaintness charming.`,
                                 dotKeys: {

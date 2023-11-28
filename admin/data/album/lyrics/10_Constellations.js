@@ -1441,7 +1441,7 @@ export default {
                             // NOTE: I changed from ha'nt.
                             anchor: `hant'd by sober-trooth tiedgirl`,
                             todo: true,
-                            problem: `Sentence runs on.`,
+                            problem: `Review one more time.`,
                             card: {
                                 description: [
                                     `As I envision a "`,
@@ -1454,7 +1454,7 @@ export default {
                                         anchor: `saber-toothed tiger`,
                                         wiki: `Smilodon`,
                                     },
-                                    `," I'm "haunted by the sober truth" that my relationship with Sita has devolved into an unhealthy codependency.`,
+                                    `," I'm "haunted by the sober truth" that my relationship with Sita is devolving into an unhealthy codependency.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
