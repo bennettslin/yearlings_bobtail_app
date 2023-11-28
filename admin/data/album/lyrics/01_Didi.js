@@ -417,8 +417,7 @@ export default {
                         `with your`,
                         {
                             anchor: `sheriff's badge and gun`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: [
                                     `Like many other Taiwanese teenagers of her generation, my mother prized all things labeled American, despite not knowing exactly what that label entailed. Back then, their only source for imports was a local bootleg industry that combed through the relics of America's past. And so my sister and I grew up listening to my mother's old country records and sharing her fondness for classic Western films.`,

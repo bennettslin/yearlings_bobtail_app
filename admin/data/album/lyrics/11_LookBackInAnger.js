@@ -754,7 +754,7 @@ export default {
                             todo: true,
                             problem: `Sentence runs on. Not sure it makes sense now.`,
                             card: {
-                                description: `His wife Alison then sighs in response, "Poor, poor bears." She recognizes that he, a bear in their mutual fantasy, is no less helpless as he complies with his role in the power dynamic between them.`,
+                                description: `His wife Alison then sighs in response, "Poor, poor bears." She recognizes that he, a bear in their mutual fantasy, is just as helpless to question his role in the power dynamic between them.`,
                                 dotKeys: {
                                     [REFERENCE]: true,
                                 },

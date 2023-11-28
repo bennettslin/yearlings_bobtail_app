@@ -691,8 +691,7 @@ export default {
                         `them`,
                         {
                             anchor: `tripped on runner's high`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: [
                                     `Having completed a grueling shift, I'm feeling dead tired in all my limbs as I make my way back home. So when a nighttime jogger calls out with`,

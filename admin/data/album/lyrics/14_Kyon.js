@@ -31,8 +31,8 @@ export default {
     playerReferenceTime: 2498.410,
     playerStartTime: 2496.296,
     todo: true,
-    problem: `Make sure the "ante" sentence is correct.`,
-    overview: `The on-again, off-again years gave me enough emotional distance to understand how my behavior had degenerated so easily into cruelty. Hoping for an easy breakup, I would act up in small ways— but Sita was just as determined to work it out, and she would endure. Which then raised the ante for how awfully I should behave next time… and so on. In time I came to see how thoroughly her sense of worth was tied to our relationship. I was fighting for me. She was fighting for us.`,
+    problem: `Review one more time.`,
+    overview: `The on-again, off-again years gave me enough emotional distance to understand how my behavior had degenerated so easily into cruelty. Hoping for an easy breakup, I would act up in small ways— but Sita was just as determined to work it out, and she would endure. Which then raised the limit for how awfully I should behave next time… and on and on. In time I came to see how thoroughly her sense of worth was tied to our relationship. I was fighting for me. She was fighting for us.`,
     lyricUnits: [
         {
             unitMap: {},
