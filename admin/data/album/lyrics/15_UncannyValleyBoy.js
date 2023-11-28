@@ -32,7 +32,7 @@ export default {
     playerStartTime: 2722.629,
     todo: true,
     problem: `Review one more time.`,
-    overview: `Upon learning of my brother's autism, my parents were too harried to notice I was being bullied at school. In guilt, they later indulged every whim I had to find my own path. But as I failed to mature even as I got older, they grew concerned, and they were particularly crushed when I left Sita, whom they adored. Naturally, I wasn't happy to disappoint them. Still, I had a master plan to follow, and I wasn't about to change my ways.`,
+    overview: `Upon learning of my brother's autism, my parents were too harried to notice I was being bullied at school. In guilt, they later indulged every whim I had to find my own path. But it wasn't assuring that I failed to mature even as I grew older, and they were particularly crushed when I left Sita, whom they adored. Naturally, I wasn't happy to disappoint them. Still, I had a master plan to follow, and I wasn't about to change my ways.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -317,7 +317,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `My mother enthralled me with visions of being a great artist, even as she instilled her Buddhist ideal to renounce materialism. The mail-order cult then told me that I was a mere visitor to this planet. And so a belief formed in my head that I must work tirelessly "to restore" my "birthright" of artistic renown, unaffected by earthly concerns.`,
+                                description: `My mother enthralled me with visions of being a great artist, while also instilling the Buddhist ideal to renounce materialism. The mail-order cult then told me that I was a mere visitor to this planet. And so a belief formed in my head that I must work tirelessly "to restore" my "birthright" of artistic renown, unaffected by earthly concerns.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,

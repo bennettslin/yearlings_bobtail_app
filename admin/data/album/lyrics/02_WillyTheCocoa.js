@@ -130,7 +130,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `In the mirages created by the summer heat, the reflections of the Valley's surrounding mountains point downward. So one could playfully suggest that their jagged peaks are like fangs biting into the asphalt.`,
+                                description: `In the mirages created by the summer heat, the reflections of the Valley's surrounding mountains point downward. So one could playfully suggest that their jagged peaks are like fangs biting down on the asphalt.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -1098,7 +1098,7 @@ export default {
                         {
                             anchor: `seventy years`,
                             todo: true,
-                            problem: `Make sure grammar is correct.`,
+                            problem: `Review one more time.`,
                             cards: [
                                 {
                                     description: `My mother told me not to worry, since I wasn't going to die for a long while. She then assured me that when my time is finally up— perhaps once I reach seventy— I'll have long made peace with death somehow.`,

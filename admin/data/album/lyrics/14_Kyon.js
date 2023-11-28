@@ -31,7 +31,7 @@ export default {
     playerReferenceTime: 2498.410,
     playerStartTime: 2496.296,
     todo: true,
-    problem: `Review one more time.`,
+    problem: `First sentence is confusing. I wasn't actually observant *during* those years.`,
     overview: `The on-again, off-again years gave me enough emotional distance to understand how my behavior had degenerated so easily into cruelty. Hoping for an easy breakup, I would act up in small ways— but Sita was just as determined to work it out, and she would endure. Which then raised the limit for how awfully I should behave next time… and on and on. In time I came to see how thoroughly her sense of worth was tied to our relationship. I was fighting for me. She was fighting for us.`,
     lyricUnits: [
         {
@@ -783,9 +783,9 @@ export default {
                         {
                             anchor: `practice cuts`,
                             todo: true,
-                            problem: `The first time Sita asked about the scars on my forearm.`,
+                            problem: `Review one more time.`,
                             card: {
-                                description: `When Sita first asked about the scars on my forearm, I replied with dry wit that they were just for practice. Years later, when I expressed concern after she'd tried cutting for herself, she gave me the same assurance. The message was clear that I was the cause in more ways than one.`,
+                                description: `The first time Sita asked about the scars on my forearm, I merely replied with playful assurance that they were just for practice. Years later when I expressed concern after she'd tried cutting for herself, she gave me the same line. The message was clear that I was the cause in more ways than one.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
