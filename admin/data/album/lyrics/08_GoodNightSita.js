@@ -638,7 +638,7 @@ export default {
                                         anchor: `understudy`,
                                         wiki: `Understudy`,
                                     },
-                                    `in theater, you undertake all the same preparation, only to see little of the same action— and this is what dating while low status is like as well. So I needed to create my own opportunities, like a freelancer posting on a cork board in search of new gigs.`,
+                                    `in theater, you undertake all the same preparation, only to see little of the same action— and this is what dating while low status is like as well. So I needed to create my own opportunities, like a freelancer posting on a cork board, in search of new gigs.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
