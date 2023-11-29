@@ -127,8 +127,7 @@ export default {
                         `in`,
                         {
                             anchor: `tarred pavement mirage`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: `In the mirages created by the summer heat, the reflections of the Valley's surrounding mountains point downward. So one could playfully suggest that their jagged peaks are like fangs biting down on the asphalt.`,
                                 dotKeys: {

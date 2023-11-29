@@ -39,7 +39,7 @@ export default {
     playerStartTime: 755.661,
     todo: true,
     problem: `Review one more time.`,
-    overview: `As my years of getting bullied grew unbearable, a strange letter arrived in the mail with promises of spiritual answers. After I sent the requested payment, it was revealed to me that I belonged to a race of interstellar beings, and my mission was to shut myself off from the world. I did so by adopting an unresponsive manner like my brother, which made me feel a stronger psychic bond with him. But as my sanity chipped away, I came to realize I was in a mail-order cult.`,
+    overview: `As my years of getting bullied grew unbearable, a strange letter arrived in the mail with promises of spiritual answers. After I sent the requested payment, it was revealed to me that I belonged to a race of interstellar beings, and my mission was to shut myself off from the world. I did so by adopting an unresponsive manner like my brother, which made me feel a strong psychic bond with him. But as my sanity chipped away, I came to realize I was in a mail-order cult.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -493,7 +493,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `The letter addressed my yearning for acceptance and deplored the injustice that such a basic need should stay unmet. Having hit all the right nerves, it then shared hopeful news: RI Research believed I might be a Beyonder. And now, after searching for so long, they'd found me.`,
+                                description: `The letter addressed my yearning for acceptance and deplored the injustice that this basic need should stay unmet. Having hit all the right nerves, it then shared hopeful news: RI Research believed I might be a Beyonder. And now, after searching for so long, they'd found me.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -743,7 +743,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `I sobbed when the follow-up letter arrived, confirming I was a Beyonder. While it was a relief to finally have an explanation for my torment, the last thing I wanted was the burden of being different from everyone else.`,
+                                description: `I sobbed when the follow-up letter arrived to confirm I was a Beyonder. While it was a relief to finally have an explanation for my torment, the last thing I wanted was the burden of being different from everyone else.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

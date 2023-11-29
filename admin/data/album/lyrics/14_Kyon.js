@@ -785,7 +785,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `The first time Sita asked about the scars on my forearm, I merely replied with playful assurance that they were just for practice. Years later when I expressed concern after she'd tried cutting for herself, she gave me the same line. The message was clear that I was the cause in more ways than one.`,
+                                description: `The first time Sita asked about the scars on my forearm, I merely replied with playful assurance that they were only for practice. Years later when I expressed concern after she'd tried cutting for herself, she gave me the same line. The message was clear that I was the cause in more ways than one.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

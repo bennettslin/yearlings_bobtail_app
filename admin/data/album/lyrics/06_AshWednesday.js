@@ -881,11 +881,11 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 todo: true,
-                problem: `Review one more time.`,
+                problem: `Make it clear that I'd already recorded all the tracks.`,
                 card: {
                     // NOTE: Counterpoint is a wiki later in Garryowen.
                     description: [
-                        `I hadn't formally studied composition by this point, so I didn't realize that the vocals would get drowned out by having a three-part counterpoint in the same`,
+                        `I hadn't formally studied composition by this point, so I didn't realize that this three-part counterpoint would drown out the vocals by occupying the same`,
                         {
                             anchor: `register`,
                             wiki: `Register_(music)`,
