@@ -7,8 +7,10 @@ export default {
      * song to repeat itself without the player ending first.
      */
     playerStartTime: 3576.7,
+    todo: true,
+    problem: `I just don't like it anymore. Redo most of it.`,
     overview: [
-        `Thanks for listening! It really means a lot. So what do I hope to gain by creating this audio webcomic, a decade after the album was finished? In short, I'm still looking for help, whether in the form of a traditional record deal, or some modern arrangement devised by forward-thinking Zoomers. The notion that an artist can start by realizing a bold vision, and`,
+        `Thanks for listening! It means a lot. So what do I hope to gain by creating this audio webcomic, an entire decade after the album was finished? In brief, I'm still looking for help, whether in the form of a traditional record deal, or some modern arrangement devised by forward-thinking Gen Zers. The notion that an artist can start by realizing a bold vision, and`,
         {
             isEmphasis: true,
             lyric: `then`,

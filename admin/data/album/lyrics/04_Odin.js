@@ -550,6 +550,7 @@ export default {
                     lyricLeft: [
                         `till a`,
                         {
+                            // NOTE: Add a bike bell sound in re-recording.
                             anchor: `rickshaw hiccoughs`,
                             card: {
                                 description: [
