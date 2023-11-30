@@ -629,8 +629,7 @@ export default {
                         `what this`,
                         {
                             anchor: `understudy sought`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: [
                                     `As an`,

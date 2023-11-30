@@ -866,7 +866,7 @@ export default {
                             isItalic: true,
                             lyric: `Yearling's Bobtail`,
                         },
-                        `was rejected by every last indie label, I got so depressed that I went on a months-long bender. Eventually I kept a box of wine by my bed, and I would sip from it throughout the night to calm my nerves. One day after skipping my morning beers, I felt like my bedroom walls were conspiring to attack me. I learned that this was the onset of`,
+                        `was rejected by every last indie label, I got so depressed that I went on a months-long bender. Before long, waking up sober would make me feel agitated. So to calm my nerves, I began to sip from a box of wine by my bed throughout the night. One day after skipping my morning beers, I felt like my bedroom walls were conspiring to attack me. I learned that this was the onset of`,
                         {
                             anchor: `delirium tremens`,
                             wiki: `Delirium_tremens`,

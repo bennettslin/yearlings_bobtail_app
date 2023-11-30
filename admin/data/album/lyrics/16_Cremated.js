@@ -353,7 +353,7 @@ export default {
                 todo: true,
                 problem: `Review one more time.`,
                 card: {
-                    description: `I chose to use doublespeaker rhyme for this song because my original plan was to contrast Miriam's inner thoughts with mine. But I kept forgetting which column of lyrics was whose, making me realize there was no real contrast to show. We both knew that the relationship would fail; one of us just had a better idea of when.`,
+                    description: `I chose to use doublespeaker rhyme for this song because my original plan was to contrast Miriam's inner thoughts with mine. But I kept forgetting which column of lyrics was whose, which made me realize there was no real contrast to show. We both knew the relationship would fail; one of us just had a better idea of when.`,
                     dotKeys: {
                         [OBSERVATION]: true,
                         [SONGCRAFT]: true,
@@ -770,8 +770,7 @@ export default {
                         },
                         {
                             anchor: `fragile ex`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: [
                                     `Miriam was delicate in breaking up with me, knowing the kind of fragile ex-boyfriend I was sure to be. But still it had to be done, because who knew what horrors lurked in my genetic makeup? Perhaps I was a carrier of "`,

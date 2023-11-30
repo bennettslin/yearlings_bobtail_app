@@ -1100,7 +1100,7 @@ export default {
                             problem: `Review one more time.`,
                             cards: [
                                 {
-                                    description: `My mother told me not to worry, since I wasn't going to die for a long while. She then assured me that when my time is finally up— perhaps once I reach seventy— I'll have long made peace with death somehow.`,
+                                    description: `My mother told me not to worry, since I wasn't going to die for a long while. She then assured me that once my time is finally up— perhaps when I'm seventy— I'll have long made peace with death somehow.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
