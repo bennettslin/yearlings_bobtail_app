@@ -95,7 +95,7 @@ export default {
                         {
                             anchor: `Brushed her off`,
                             todo: true,
-                            problem: `I just don't like this as it is.`,
+                            problem: `Revise. I just don't like this as it is.`,
                             card: {
                                 description: `Anytime I began to grow distant, Sita would reach out by groveling, and I'd rush back to comfort her, stung by my conscience. But as time went on, my patience wore thin, and I would lash out in passive-aggressive ways— whereupon she'd grovel even further. It became all we knew of how to speak for ourselves.`,
                                 dotKeys: {
@@ -394,7 +394,7 @@ export default {
                         {
                             anchor: `Slammed in the well`,
                             todo: true,
-                            problem: `Make point that this isn't sustainable as a source of spiritual renewal. It becomes a cliche after the first time.`,
+                            problem: `Revise. Make point that this isn't sustainable as a source of spiritual renewal. It becomes a cliche after the first time.`,
                             card: {
                                 description: `Of course, using alcohol as a spiritual cleanser isn't really sustainable, since it requires you to vomit into a toilet and see your miserable reflection in the water staring back at you.`,
                                 dotKeys: {

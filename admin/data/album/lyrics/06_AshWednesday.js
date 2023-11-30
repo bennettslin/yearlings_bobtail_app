@@ -655,7 +655,7 @@ export default {
                         {
                             anchor: `safe Algonquin abode`,
                             todo: true,
-                            problem: `Last sentence runs on a bit. Maybe make it about Catherine not ever introducing me to her friends.`,
+                            problem: `Revise. Last sentence runs on a bit. Maybe make it about Catherine not ever introducing me to her friends.`,
                             card: {
                                 description: [
                                     `Kateri Tekakwitha was born to a`,
@@ -881,21 +881,21 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 todo: true,
-                problem: `Make it clear that I'd already recorded all the tracks.`,
+                problem: `Review.`,
                 card: {
                     // NOTE: Counterpoint is a wiki later in Garryowen.
                     description: [
-                        `I hadn't formally studied composition by this point, so I didn't realize that this three-part counterpoint would drown out the vocals by occupying the same`,
+                        `I hadn't formally studied composition by this point, so I scored this three-part counterpoint in the vocal`,
                         {
                             anchor: `register`,
                             wiki: `Register_(music)`,
                         },
-                        `. I solved the problem by`,
+                        `, not knowing the instruments would drown out my voice. To avoid redoing the tracks, I`,
                         {
-                            anchor: `pitch shifting`,
+                            anchor: `pitch shifted`,
                             wiki: `Pitch_shift`,
                         },
-                        `the instruments up an octave. This also gives the sound a ghostly sheen, which nicely fits the ambience of a rain-soaked evening.`,
+                        `them up an octave. This gave them a ghostly sheen, which I think fits the ambience of a rain-soaked evening quite nicely.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,

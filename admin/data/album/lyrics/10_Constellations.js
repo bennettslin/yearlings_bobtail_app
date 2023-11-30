@@ -1337,7 +1337,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 todo: true,
-                problem: `Still doesn't flow very well.`,
+                problem: `Revise. Still doesn't flow very well.`,
                 card: {
                     description: [
                         `On solo trips, I would sometimes keep playing on my`,

@@ -27,7 +27,7 @@ export default {
     mixStartTime: `0:02:12.00`,
     todo: true,
     problem: `Review one more time.`,
-    overview: `After the breakup with Catherine, I vowed to spend the next five years shaping myself into the ideal romantic prospect. This included getting involved in the local scene, so I cobbled together my own band, the Yearlings. By the fifth year, we were playing house parties and small venues. I soon grew infatuated with a fellow scenester named Mara, whom I noticed from afar. But Mara ended up going out with my drummer Jacob, which made band practice awkward.`,
+    overview: `After the breakup with Catherine, I vowed to spend the next five years shaping myself into the ideal romantic prospect. So I got involved in the local scene and eventually cobbled together my own band, the Yearlings. By the fifth year, we were playing house parties and small venues. I grew infatuated with a fellow scenester named Mara, whom I noticed from afar. But Mara ended up going out with my drummer Jacob, which made band practice awkward.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -579,7 +579,7 @@ export default {
                         {
                             anchor: `time capsule`,
                             todo: true,
-                            problem: `Revised, but still not written well.`,
+                            problem: `Revise. Still not written well.`,
                             card: {
                                 description: [
                                     `In my dejection, I could only envision the next five-year plan as a`,
@@ -661,7 +661,7 @@ export default {
                         {
                             anchor: `solely for a pet`,
                             todo: true,
-                            problem: `Make this more about The ways of belonging to a social scene were still so foreign to me. And yet, at this point, I did belong to one.`,
+                            problem: `Revise. Make this more about The ways of belonging to a social scene were still so foreign to me. And yet, at this point, I did belong to one.`,
                             card: {
                                 description: `After Mara started dating Jacob, she continued to interact with me in the same manner, which made me realize that I'd misread her intentions all along. In retrospect, I was so unused to being treated with genial regard that it felt like being flirted with.`,
                                 dotKeys: {
@@ -695,7 +695,7 @@ export default {
                         {
                             anchor: `no-hope chest`,
                             todo: true,
-                            problem: `I just don't like the use of figurative and literal here.`,
+                            problem: `Revise. I just don't like the use of figurative and literal here.`,
                             cards: [
                                 {
                                     description: [
@@ -885,7 +885,7 @@ export default {
                         {
                             anchor: `boy who's to love her baby`,
                             todo: true,
-                            problem: `Last sentence runs on. Maybe don't use "in other words" after "in short."`,
+                            problem: `Revise. Last sentence runs on. Maybe don't use "in other words" after "in short."`,
                             card: {
                                 description: `In other words, the world is as innocent and unwitting as a newborn infant. So if a woman's list of ideal traits in a man includes what kind of father he'll be to her child, then she's likely to judge him by how he treats the world at large.`,
                                 dotKeys: {
@@ -922,7 +922,7 @@ export default {
                         {
                             anchor: `be alert`,
                             todo: true,
-                            problem: `Make sure this is really saying what I want it to say.`,
+                            problem: `Revise. Make sure this is really saying what I want it to say.`,
                             card: {
                                 description: `It was no mystery why the situation with Mara transpired as it had. I'd simply misread it, and that was my fault. I found this thought empowering, because it meant the Maras of the world were still attainable. It was just on me to better understand what they wanted— and then I could build myself up to be exactly that.`,
                                 dotKeys: {
@@ -947,7 +947,7 @@ export default {
                         {
                             anchor: `friends have to lie`,
                             todo: true,
-                            problem: `I don't think I like what this is saying. I don't really like the neck phrase. Make sure it flows from the previous one.`,
+                            problem: `Revise. I don't think I like what this is saying. I don't really like the neck phrase. Make sure it flows from the previous one.`,
                             card: {
                                 description: `But I couldn't rely on my friends to be truthful about what I had to offer. As dear as we were to each other, they each had their own neck to protect.`,
                                 dotKeys: {

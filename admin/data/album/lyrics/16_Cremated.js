@@ -873,7 +873,7 @@ export default {
                         {
                             anchor: `Bless her`,
                             todo: true,
-                            problem: `This one and the next are together trying to convey an idea that I still don't think is quite there. Like, the idea of Buddhism seems to come out of nowhere? How is it related, exactly? If articulated correctly, this could be one of my best points, so really think it through. Should be about White women.`,
+                            problem: `Revise. This one and the next are together trying to convey an idea that I still don't think is quite there. Like, the idea of Buddhism seems to come out of nowhere? How is it related, exactly? If articulated correctly, this could be one of my best points, so really think it through. Should be about White women.`,
                             card: {
                                 description: [
                                     `The title of the play`,
@@ -901,7 +901,7 @@ export default {
                             anchor: `Godspeed`,
                             properNoun: true,
                             todo: true,
-                            problem: `See above.`,
+                            problem: `Revise. See above.`,
                             cards: [
                                 {
                                     description: `To compound my insecurities as a child about being raised Buddhist, my complexion was different from that of everyone else in Sasha's world. And so my inferiority complex failed to distinguish between carrying faulty genes, following a faulty faith, and being of a faulty race. They all seemed to derive from a single congenital defect at the core of my being.`,

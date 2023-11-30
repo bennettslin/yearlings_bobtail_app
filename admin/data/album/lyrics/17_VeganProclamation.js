@@ -765,7 +765,7 @@ export default {
                         {
                             anchor: `start as children`,
                             todo: true,
-                            problem: `Review one more time.`,
+                            problem: `Revise. Needs to be more about needing a placeholder lyric.`,
                             card: {
                                 description: [
                                     `I first recorded this song on Owen's four-track. In those days, my lyrics were mostly mumbled phrases off the top of my head. Since I was always hoping to write the next "`,

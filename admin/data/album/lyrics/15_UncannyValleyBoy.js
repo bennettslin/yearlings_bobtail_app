@@ -414,7 +414,7 @@ export default {
                 problem: `Review one more time.`,
                 card: {
                     description: [
-                        `I went with the`,
+                        `The`,
                         {
                             anchor: `Kinks`,
                             wiki: `The_Kinks`,
@@ -424,12 +424,12 @@ export default {
                             anchor: `Village Green Preservation Society`,
                             wiki: `The_Kinks_Are_the_Village_Green_Preservation_Society`,
                         },
-                        `as a rough model for this album. So all my songs had to be accessible pop tunes representing a variety of musical styles, with each one clocking in at around three minutes. While there's no one-to-one mapping, this song is clearly my "`,
+                        `served as a rough model for this album. So all my songs had to be accessible pop tunes representing a variety of musical styles, with each one clocking in at around three minutes. While there's no one-to-one mapping, this song is clearly the "`,
                         {
                             anchor: `Wicked Annabella`,
                             wiki: `Wicked_Annabella`,
                         },
-                        `." So I went for the same sound of low notes played on crunchy electric guitars.`,
+                        `" of the bunch. So I went for the same feel of low notes played on crunchy electric guitars.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
