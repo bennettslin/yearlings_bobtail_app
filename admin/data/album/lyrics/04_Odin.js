@@ -126,7 +126,7 @@ export default {
                             anchor: `hiding place of retreat`,
                             review: true,
                             card: {
-                                description: `The "asleep" voice in the doublespeaker set narrates a dream that melds the familiar setting of Los Angeles with the foreign sights of Taiwan. Having been absorbed in my drawings well into nighttime, I crawl out from the dusty space beneath my bed at home.`,
+                                description: `The "asleep" voice of the doublespeaker pair narrates a dream that melds the familiar setting of Los Angeles with the foreign sights of Taiwan. Having been absorbed in my drawings well into nighttime, I crawl out from the dusty space beneath my bed at home.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -255,7 +255,7 @@ export default {
                         {
                             anchor: `ruminate on these riddles`,
                             card: {
-                                description: `The "awake" voice in the doublespeaker set echoes my thoughts as I lie on the floor mat, unable to sleep. The vastness of the universe, while terrifying, also suggests unlimited possibilities. Yet somehow, being with Sasha isn't one of them.`,
+                                description: `The "awake" voice of the doublespeaker pair echoes my thoughts as I lie on the floor mat, unable to sleep. The vastness of the universe, while terrifying, also suggests unlimited possibilities. Yet somehow, being with Sasha isn't one of them.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
