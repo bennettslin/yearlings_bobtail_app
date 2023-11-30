@@ -9,6 +9,6 @@ export default {
             isItalic: true,
             lyric: `Yearling's Bobtail`,
         },
-        `was seen as a mere vanity project and ignored by the indie labels and press. Since then, I've struggled to bring this complex and dense work to the public, given that I remain a complete unknown. I'm hoping that having spent another seven years to make this audio webcomic will finally do the trick!`,
+        `was seen as a mere vanity project and ignored by the indie labels and press. Since then, I've struggled to bring this complex and dense work to the public, given that I remain a complete unknown. Hopefully, the seven additional years I spent making this audio webcomic will finally do the trick!`,
     ],
 }

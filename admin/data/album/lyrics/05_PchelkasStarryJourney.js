@@ -37,8 +37,7 @@ export default {
     mixStartTime: `0:01:27.02`,
     playerReferenceTime: 756.159,
     playerStartTime: 755.661,
-    todo: true,
-    problem: `Review one more time.`,
+    review: true,
     overview: `As my years of getting bullied grew unbearable, a strange letter arrived in the mail with promises of spiritual answers. After I sent the requested payment, it was revealed to me that I belonged to a race of interstellar beings, and my mission was to shut myself off from the world. I did so by adopting an unresponsive manner like my brother, which made me feel a strong psychic bond with him. But as my sanity chipped away, I came to realize I was in a mail-order cult.`,
     lyricUnits: [
         {
@@ -740,8 +739,7 @@ export default {
                         `Is this`,
                         {
                             anchor: `too much at once`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: `I sobbed when the follow-up letter arrived to confirm I was a Beyonder. While it was a relief to finally have an explanation for my torment, the last thing I wanted was the burden of being different from everyone else.`,
                                 dotKeys: {
