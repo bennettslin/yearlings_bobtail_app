@@ -34,12 +34,14 @@ export default {
     playerStartTime: 1751.191,
     todo: true,
     problem: `Review one more time.`,
-    overview: `One night I went with my bassist Ana and some of our friends to get high on Robitussin and explore the steam tunnels under UCLA. I got us all to pretend we were Vikings and Mongols and various waves of human migration in world history. In hindsight, the others were probably just humoring me. I did so much Robitussin that summer, it took me a long while to regain my grip on reality.`,
+    overview: `One night I went with my bassist Ana and some of our friends to get high on Robitussin while exploring the steam tunnels under UCLA. I got us all to pretend that we were Vikings, Mongols, and various waves of human migration throughout world history. In hindsight, the others were probably just humoring me. I did so much Robitussin that summer, it took me a long while to regain my grip on reality.`,
     lyricUnits: [
         {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
+                problem: `Review.`,
                 card: {
                     description: [
                         `I first tried Robitussin earlier that summer after reading of its narcotic effects in`,
@@ -60,7 +62,7 @@ export default {
                             anchor: `closed-eye hallucinations`,
                             wiki: `Closed-eye_hallucination`,
                         },
-                        `, which are vivid images projected onto the backdrop of your eyelids. When they get too intense, you simply open your eyes, and they vanish. At the time, I called them "constellations."`,
+                        `that get projected onto the back of your eyelids. If they get too intense, you simply open your eyes. At the time, I called them "constellations."`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -498,7 +500,7 @@ export default {
                             properNoun: true,
                             cards: [
                                 {
-                                    description: `Cut back to the present scene. Howie and Tomer promise to "make yours my grate," as they share their knowledge of the hidden grates that lead down to the UCLA steam tunnels.`,
+                                    description: `Cut back to the present scene. Tomer promises to "make yours my grate," as he shares his knowledge of the hidden grates that lead down to the UCLA steam tunnels.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true,
@@ -1337,15 +1339,15 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 todo: true,
-                problem: `Revise. Still doesn't flow very well.`,
+                problem: `Review.`,
                 card: {
                     description: [
-                        `On solo trips, I would sometimes keep playing on my`,
+                        `On solo trips, I would play on my`,
                         {
-                            anchor: `Super Nintendo`,
-                            wiki: `Super_Nintendo_Entertainment_System`,
+                            anchor: `NES`,
+                            wiki: `Nintendo_Entertainment_System`,
                         },
-                        `, even after the Robitussin kicked in and my mind began to wander in search of metaphysical truths. So for years afterward, every vintage arcade sound seemed to hide a spiritual message that my sober ears just couldn't suss out.`,
+                        `while waiting for the Robitussin to kick in. And sometimes I would just keep playing, even as my mind began to wander in search of metaphysical truths. So for years afterward, any vintage arcade sound might trigger a flashback, and I'd prepare to embark on a mystical journey.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
