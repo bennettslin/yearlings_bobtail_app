@@ -1096,8 +1096,7 @@ export default {
                         `Son,`,
                         {
                             anchor: `seventy years`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             cards: [
                                 {
                                     description: `My mother told me not to worry, since I wasn't going to die for a long while. She then assured me that once my time is finally up— perhaps when I'm seventy— I'll have long made peace with death somehow.`,

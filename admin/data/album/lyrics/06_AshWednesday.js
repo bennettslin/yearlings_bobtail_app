@@ -885,17 +885,17 @@ export default {
                 card: {
                     // NOTE: Counterpoint is a wiki later in Garryowen.
                     description: [
-                        `I hadn't formally studied composition by this point, so I scored this three-part counterpoint in the vocal`,
+                        `I hadn't formally studied composition by this point, so when I scored this three-part counterpoint in the vocal`,
                         {
                             anchor: `register`,
                             wiki: `Register_(music)`,
                         },
-                        `, not knowing the instruments would drown out my voice. To avoid redoing the tracks, I`,
+                        `, I didn't know the instruments would drown out my voice. To avoid redoing the tracks, I`,
                         {
                             anchor: `pitch shifted`,
                             wiki: `Pitch_shift`,
                         },
-                        `them up an octave. This gave them a ghostly sheen, which I think fits the ambience of a rain-soaked evening quite nicely.`,
+                        `them up an octave. This then gave them a ghostly sheen, which fits the ambience of a rain-soaked evening quite nicely.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
