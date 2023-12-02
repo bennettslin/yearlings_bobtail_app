@@ -806,17 +806,17 @@ export default {
                             problem: `Review.`,
                             card: {
                                 description: [
-                                    `As we make our way down "industrial sewers," I explain the`,
-                                    {
-                                        anchor: `Aryan Invasion`,
-                                        wiki: `Indo-Aryan_migration`,
-                                    },
-                                    `theory that I wrote about in a recent term paper. Proposed by 19th-century Western scholars, it posits that Indian civilization was brought by invaders from the north, who carved a trail leading to the "source" of the`,
+                                    `As we make our way down "industrial sewers," I excitedly explain the subject of a term paper I once wrote. In the 19th century, Western scholars proposed that Indian civilization was brought by invaders from the north, who carved a trail leading to the "source" of the`,
                                     {
                                         anchor: `Indus`,
                                         wiki: `Indus_River`,
                                     },
-                                    `river.`,
+                                    `river. This theory became known as the`,
+                                    {
+                                        anchor: `Aryan Invasion`,
+                                        wiki: `Indo-Aryan_migration`,
+                                    },
+                                    `.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -830,7 +830,7 @@ export default {
                             review: true,
                             card: {
                                 description: [
-                                    `Our "quest turns into hairpins" as we wind through narrow pathways. All the while, I blather on about the "questions" brought up by later scholars, who rejected the colonialism of past scholarship. Instead, they pointed to the evolution of the "`,
+                                    `Our "quest turns into hairpins" as we wind through narrow pathways. All the while, I babble on about the "questions" brought up by later scholars, who rejected the colonialism of past scholarship. Instead, they pointed to the evolution of the "`,
                                     {
                                         anchor: `Indo-European`,
                                         wiki: `Indo-European_languages`,
@@ -858,7 +858,7 @@ export default {
                             anchor: `Forsi ahuro`,
                             properNoun: true,
                             todo: true,
-                            problem: `Revise. Connect logic more thoroughly that the apostates established their religion later.`,
+                            problem: `Review.`,
                             card: {
                                 description: [
                                     `In the Iranian tongue of "Farsi," the "`,
@@ -892,7 +892,7 @@ export default {
                                         anchor: `Indo-Iranians`,
                                         wiki: `Indo-Iranians`,
                                     },
-                                    `. And because the Vedas predate the Avesta, these later scholars posited that the migrants must have left the Indian subcontinent and settled in the Iranian basin, rather than the other way around.`,
+                                    `. And because the Vedas predate the Avesta, these later scholars argued that if any migration took place, it was from the Indian subcontinent into the Iranian basin, rather than the other way around.`,
                                 ],
                                 dotKeys: {
                                     [PUN]: true,
@@ -938,10 +938,16 @@ export default {
                     lyric: [
                         {
                             anchor: `To soma up`,
-                            review: true,
+                            todo: true,
+                            problem: `Review.`,
                             card: {
                                 description: [
-                                    `The Vedas mention a drink called`,
+                                    `We migrate onward through the steam tunnels while high on Robitussin, just as the`,
+                                    {
+                                        anchor: `Aryans`,
+                                        wiki: `Aryan`,
+                                    },
+                                    `before us drank`,
                                     {
                                         isItalic: true,
                                         lyric: {
@@ -949,13 +955,17 @@ export default {
                                             wiki: `Soma_(drink)`,
                                         },
                                     },
-                                    `that was prepared from an unknown plant believed by some scholars to have psychedelic properties. In the Avesta, it's known as`,
+                                    `, a ritual drink mentioned in the Vedas that held psychedelic properties. In the Avesta, it's known as`,
                                     {
                                         isItalic: true,
                                         lyric: `haoma`,
                                     },
                                     `.`,
                                 ],
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [PUN]: true,
+                                },
                             },
                         },
                         `,`,
@@ -964,14 +974,7 @@ export default {
                             todo: true,
                             problem: `Review.`,
                             card: {
-                                description: [
-                                    `Recent scholarship has returned to the theory that the "`,
-                                    {
-                                        anchor: `Aryans`,
-                                        wiki: `Aryan`,
-                                    },
-                                    `" mentioned "in the Vedas" came from the north. However, it discredits the colonialist notion that they were "invaders," as no evidence has been found of any wars. And so "to sum up," I put this "unsolved query" to rest, before the others lose their minds.`,
-                                ],
+                                description: `Recent scholarship has returned to the theory that the "Aryans" mentioned "in the Vedas" came from the north. However, it discredits the colonialist assumption that this amounted to an invasion, as no evidence of war has been uncovered. And so "to sum up," I put this "unsolved query" to rest, before the others lose their minds.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -980,8 +983,10 @@ export default {
                         },
                         {
                             anchor: `unsolft quarry rest`,
+                            todo: true,
+                            problem: `Review.`,
                             card: {
-                                description: `"Our young invaders" arrive at a clearing where dirt from the ground has been shaped into makeshift benches. Pausing for a breather, we rest on this "soft quarry."`,
+                                description: `"Our young invaders" have arrived at a clearing where dirt from the ground has been shaped into makeshift benches. Pausing for a bit, we rest on this "soft quarry."`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,

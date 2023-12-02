@@ -44,7 +44,12 @@ export default {
                             isItalic: true,
                             lyric: `Kyon`,
                         },
-                        `is the Hindi word for "why." After Sita and I started dating, I studied Hindi for several years, which allowed me to converse with her family in their native language. I also got course credit for it as a religious studies major.`,
+                        `is the Hindi word for "why." After Sita and I started dating, I studied Hindi for several years, which allowed me to converse with her family in their native language. I also got course credit for it as a`,
+                        {
+                            anchor: `religious studies`,
+                            wiki: `Religious_studies`,
+                        },
+                        `major.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,

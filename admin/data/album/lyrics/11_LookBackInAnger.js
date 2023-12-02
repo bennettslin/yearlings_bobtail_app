@@ -177,7 +177,6 @@ export default {
                         },
                         {
                             anchor: `lunched soundless`,
-                            properNoun: true,
                             card: {
                                 description: [
                                     `In the`,
