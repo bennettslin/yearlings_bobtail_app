@@ -4,7 +4,7 @@ export default {
     todo: true,
     problem: `Review one more time.`,
     overview: [
-        `Hi, I'm Bennett! A long while back, I went through a horrible breakup. So I spent the next five years writing all the songs and recording all the parts for`,
+        `Hi, I'm Bennett! A long while back, I went through an awful breakup. I then spent the next five years writing all the songs and recording all the parts for`,
         {
             isItalic: true,
             lyric: `Yearling's Bobtail`,

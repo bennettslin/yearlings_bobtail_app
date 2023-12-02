@@ -32,9 +32,8 @@ export default {
     mixStartTime: `0:01:18.60`,
     playerReferenceTime: 1751.447,
     playerStartTime: 1751.191,
-    todo: true,
-    problem: `Review one more time.`,
-    overview: `One night I went with my bassist Ana and some of our friends to get high on Robitussin while exploring the steam tunnels under UCLA. I got us all to pretend that we were Vikings, Mongols, and various waves of human migration throughout world history. In hindsight, the others were probably just humoring me. I ended up doing so much Robitussin that summer, it took me a long while to regain my grip on reality.`,
+    review: true,
+    overview: `One night I went with my bassist Ana and some of our friends to get high on Robitussin while exploring the steam tunnels under UCLA. I got us all to pretend that we were Vikings, Mongols, and various waves of human migration throughout world history. In hindsight, the others were probably just humoring me. I ended up doing so much Robitussin that summer, it took me a while to regain my grip on reality.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -803,7 +802,8 @@ export default {
                         {
                             anchor: `Indus-trail sewerce`,
                             properNoun: true,
-                            review: true,
+                            todo: true,
+                            problem: `Review.`,
                             card: {
                                 description: [
                                     `As we make our way down "industrial sewers," I explain the`,
@@ -811,7 +811,7 @@ export default {
                                         anchor: `Aryan Invasion`,
                                         wiki: `Indo-Aryan_migration`,
                                     },
-                                    `theory, which I examined in a recent term paper. Proposed by 19th-century Western scholars, it posits that Indian civilization was brought by invaders from the north, who carved a trail leading to the "source" of the`,
+                                    `theory that I wrote about in a recent term paper. Proposed by 19th-century Western scholars, it posits that Indian civilization was brought by invaders from the north, who carved a trail leading to the "source" of the`,
                                     {
                                         anchor: `Indus`,
                                         wiki: `Indus_River`,
@@ -858,10 +858,10 @@ export default {
                             anchor: `Forsi ahuro`,
                             properNoun: true,
                             todo: true,
-                            problem: `Review one more time.`,
+                            problem: `Connect logic more thoroughly that the apostates established their religion later.`,
                             card: {
                                 description: [
-                                    `In Persian, or "Farsi," the "`,
+                                    `In the Iranian tongue of "Farsi," the "`,
                                     {
                                         isItalic: true,
                                         lyric: {
@@ -869,7 +869,12 @@ export default {
                                             wiki: `Ahura`,
                                         },
                                     },
-                                    `" is a deity. But in the`,
+                                    `" is an`,
+                                    {
+                                        anchor: `Avestan`,
+                                        wiki: `Avesta`,
+                                    },
+                                    `deity. But in the`,
                                     {
                                         anchor: `Vedic`,
                                         wiki: `Vedas`,
@@ -887,12 +892,7 @@ export default {
                                         anchor: `Indo-Iranians`,
                                         wiki: `Indo-Iranians`,
                                     },
-                                    `. And because the Vedas precede the Persian`,
-                                    {
-                                        anchor: `Avesta`,
-                                        wiki: `Avesta`,
-                                    },
-                                    `, these later scholars posited that the migrants must have left the Indian subcontinent and settled in the Iranian basin, rather than the other way around.`,
+                                    `. And because the Vedas predate the Avesta, these later scholars posited that the migrants must have left the Indian subcontinent and settled in the Iranian basin, rather than the other way around.`,
                                 ],
                                 dotKeys: {
                                     [PUN]: true,
@@ -961,15 +961,16 @@ export default {
                         `,`,
                         {
                             anchor: `our-youn' invedas`,
-                            review: true,
+                            todo: true,
+                            problem: `Review.`,
                             card: {
                                 description: [
-                                    `Some recent scholarship has returned to the theory that the "`,
+                                    `Recent scholarship has returned to the theory that the "`,
                                     {
                                         anchor: `Aryans`,
                                         wiki: `Aryan`,
                                     },
-                                    `" mentioned "in the Vedas" came from the north. However, it discredits the colonialist notion that they were "invaders," as no evidence of wars has been found. And so "to sum up," I put this "unsolved query" to rest, before the others lose their minds.`,
+                                    `" mentioned "in the Vedas" came from the north. However, it discredits the colonialist notion that they were "invaders," as no evidence has been found of any wars. And so "to sum up," I put this "unsolved query" to rest, before the others lose their minds.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1044,7 +1045,17 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `Spent from the "Arabian" battles that ended with their defeat to the Muslims, the Persians were then subjugated by the Mongols, the next enemy at their doorstep.`,
+                                        `Spent from the "`,
+                                        {
+                                            anchor: `Arabian`,
+                                            wiki: `Arabs`,
+                                        },
+                                        `" battles that ended with their defeat to the Muslims, the`,
+                                        {
+                                            anchor: `Persians`,
+                                            wiki: `Persians`,
+                                        },
+                                        `were then subjugated by the Mongols, the next enemy at their doorstep.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,

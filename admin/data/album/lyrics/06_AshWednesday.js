@@ -673,7 +673,7 @@ export default {
                                         anchor: `Algonquin Round Table`,
                                         wiki: `Algonquin_Round_Table`,
                                     },
-                                    `, a social circle of New York City writers known for their clever wit. So the reason Catherine broke up with me, I jokingly presume here, is that I was taking her away from her smart circle of friends, being too dimwitted as I was to ever be allowed to meet them.`,
+                                    `, a social circle of New York City writers known for their clever wit. So the reason Catherine broke up with me— I jokingly presume— is that I was taking her away from her smart circle of friends, being too dimwitted as I was to ever be allowed to meet them.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
