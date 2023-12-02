@@ -34,7 +34,7 @@ export default {
     playerStartTime: 1751.191,
     todo: true,
     problem: `Review one more time.`,
-    overview: `One night I went with my bassist Ana and some of our friends to get high on Robitussin while exploring the steam tunnels under UCLA. I got us all to pretend that we were Vikings, Mongols, and various waves of human migration throughout world history. In hindsight, the others were probably just humoring me. I did so much Robitussin that summer, it took me a long while to regain my grip on reality.`,
+    overview: `One night I went with my bassist Ana and some of our friends to get high on Robitussin while exploring the steam tunnels under UCLA. I got us all to pretend that we were Vikings, Mongols, and various waves of human migration throughout world history. In hindsight, the others were probably just humoring me. I ended up doing so much Robitussin that summer, it took me a long while to regain my grip on reality.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -62,7 +62,7 @@ export default {
                             anchor: `closed-eye hallucinations`,
                             wiki: `Closed-eye_hallucination`,
                         },
-                        `that get projected onto the back of your eyelids. If they get too intense, you simply open your eyes. At the time, I called them "constellations."`,
+                        `that are projected onto the back of your eyelids. If they get too intense, you can just open your eyes. At the time, I called them "constellations."`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -1347,7 +1347,7 @@ export default {
                             anchor: `NES`,
                             wiki: `Nintendo_Entertainment_System`,
                         },
-                        `while waiting for the Robitussin to kick in. And sometimes I would just keep playing, even as my mind began to wander in search of metaphysical truths. So for years afterward, any vintage arcade sound might trigger a flashback, and I'd prepare to embark on a mystical journey.`,
+                        `while waiting for the Robitussin to kick in. And sometimes I would just keep playing, even as my mind began to wander in search of metaphysical truths. So for years afterward, any vintage arcade sound might trigger a flashback, and I'd mentally prepare to embark on a mystical journey.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -1442,8 +1442,7 @@ export default {
                         {
                             // NOTE: I changed from ha'nt.
                             anchor: `hant'd by sober-trooth tiedgirl`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: [
                                     `As I envision a "`,

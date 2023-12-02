@@ -885,7 +885,7 @@ export default {
                 card: {
                     // NOTE: Counterpoint is a wiki later in Garryowen.
                     description: [
-                        `I hadn't formally studied composition by this point, so when I scored this three-part counterpoint in the vocal`,
+                        `I hadn't formally studied composition up to this point, so when I scored this three-part counterpoint in the vocal`,
                         {
                             anchor: `register`,
                             wiki: `Register_(music)`,

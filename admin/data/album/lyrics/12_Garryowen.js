@@ -866,17 +866,17 @@ export default {
                             isItalic: true,
                             lyric: `Yearling's Bobtail`,
                         },
-                        `was rejected by every last indie label, I got so depressed that I went on a months-long bender. Before long, waking up sober would make me feel agitated. So to calm my nerves, I began to sip from a box of wine by my bed throughout the night. One day after skipping my morning beers, I felt like my bedroom walls were conspiring to attack me. I learned that this was the onset of`,
+                        `was rejected by every last indie label, I got so depressed that I went on a months-long bender. Before long, I kept a box of wine at my bedside to calm my nerves during the night. One day upon skipping my morning beers, I sensed my bedroom walls conspiring to attack me— a warning sign of`,
                         {
                             anchor: `delirium tremens`,
                             wiki: `Delirium_tremens`,
                         },
-                        `and started attending`,
+                        `, I was told. I attended my first`,
                         {
                             anchor: `Alcoholics Anonymous`,
                             wiki: `Alcoholics_Anonymous`,
                         },
-                        `meetings. The paranoia lasted a week. I haven't had a drink since.`,
+                        `meeting that evening. The paranoia lasted a week. I haven't had a drink since.`,
                     ],
                     dotKeys: {
                         [AFTERWORD]: true,

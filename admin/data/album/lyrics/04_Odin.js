@@ -36,7 +36,7 @@ export default {
     playerStartTime: 555.277,
     todo: true,
     problem: `Review one more time.`,
-    overview: `Taiwan showed me how different I would have turned out if my parents hadn't come to America— yet I was still worlds away from what Sasha needed me to be. Life seemed both infinitely fluid and immovably fixed, and I wasn't sure which extreme terrified me more. Later that summer when our house cat Odin died of old age, I sought spiritual explanations for my mortality. Obviously, the finality of death was terrifying— and yet the eternal life promised by faith didn't feel any less so.`,
+    overview: `Taiwan showed me how different I would have turned out if my parents hadn't come to America— yet I was still worlds away from what Sasha needed me to be. Life seemed both infinitely fluid and immovably fixed, and I wasn't sure which extreme frightened me more. Later that summer when our house cat Odin died of old age, I sought spiritual explanations for my mortality. The finality of death was terrifying, of course— and yet the eternal life promised by faith didn't feel any less so.`,
     isDoublespeaker: true,
     lyricUnits: [
         {
@@ -202,7 +202,7 @@ export default {
                 problem: `Review one more time.`,
                 card: {
                     description: [
-                        `For this song, I wanted to capture the disorienting cycle of days spent among the foreign and nights dreaming of the familiar. So I used a literary technique of my invention called doublespeaker rhyme, in which two columns of lyrics are made to rhyme syllable for syllable and then split between opposite speakers in the recording. It's the audio version of a cinematic`,
+                        `For this song, I wanted to capture the disorienting cycle of days spent among the foreign and nights dreaming of the familiar. So I used a literary technique of my invention called doublespeaker rhyme, in which two columns of lyrics are made to rhyme syllable for syllable and then separated into opposite speakers in the recording. It's the audio version of a cinematic`,
                         {
                             anchor: `split screen`,
                             wiki: `Split_screen_(video_production)`,
