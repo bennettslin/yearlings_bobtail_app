@@ -858,7 +858,7 @@ export default {
                             anchor: `Forsi ahuro`,
                             properNoun: true,
                             todo: true,
-                            problem: `Connect logic more thoroughly that the apostates established their religion later.`,
+                            problem: `Revise. Connect logic more thoroughly that the apostates established their religion later.`,
                             card: {
                                 description: [
                                     `In the Iranian tongue of "Farsi," the "`,
