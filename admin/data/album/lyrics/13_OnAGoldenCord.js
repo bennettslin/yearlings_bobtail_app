@@ -670,7 +670,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `I was stopped by a pair of police officers that night. They judged me to be harmless and sent me on my way. I've since learned that this might not have been the outcome for some of my other friends, of course.`,
+                                description: `I was stopped by a pair of police officers that night. They judged me to be harmless and sent me on my way. I'm aware that might not have been the outcome for others.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

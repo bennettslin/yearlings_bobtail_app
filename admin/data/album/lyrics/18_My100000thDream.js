@@ -27,7 +27,7 @@ export default {
     playerStartTime: 3332.826,
     todo: true,
     problem: `Review one more time.`,
-    overview: `After slogging through the day under a cloud of despair, I would crawl into bed and lie awake until exhaustion overtook me. I would then dream of reuniting with Sita, only to wake in a panicked sweat as the reality came roaring back that I'd lost her forever. I lived in dread of this vicious prank played each night by my unconscious mind, and I had no idea when the torment would end. The answer, I feared, was never.`,
+    overview: `After slogging through the day under a cloud of despair, I would crawl into bed each night and lie awake until exhaustion overtook me. I would then dream of reuniting with Sita, only to wake in a panicked sweat as the reality came roaring back that I'd lost her forever. I lived in dread of this vicious prank played by my unconscious mind, and I had no idea when the torment would end. The answer, I feared, was never.`,
     lyricUnits: [
         {
             unitMap: {},

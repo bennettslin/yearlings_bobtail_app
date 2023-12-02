@@ -965,6 +965,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
+                problem: `Review.`,
                 card: {
                     description: [
                         `The highlight of`,
@@ -985,7 +987,12 @@ export default {
                             anchor: `Kurt Cobain`,
                             wiki: `Kurt_Cobain`,
                         },
-                        `kicks the last third of "Lounge Act" into high gear by singing the same melody an octave higher. I'd always wanted to recreate this effect but could never do so, since the melodies I write tend to span my whole vocal range. So when I realized the melody for this chorus stays within a single register throughout, I made it work.`,
+                        `kicks the last third of "`,
+                        {
+                            anchor: `Lounge Act`,
+                            wiki: `Lounge_Act`,
+                        },
+                        `" into high gear by singing the same melody an octave higher. I'd always wanted to recreate this effect but could never do so, since the melodies I write tend to span my whole vocal range. So when I noticed that the melody for this chorus stays within a single octave throughout, I made it work.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,

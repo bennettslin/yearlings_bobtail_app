@@ -414,7 +414,7 @@ export default {
                 problem: `Review one more time.`,
                 card: {
                     description: [
-                        `The`,
+                        `I used the`,
                         {
                             anchor: `Kinks`,
                             wiki: `The_Kinks`,
@@ -424,7 +424,7 @@ export default {
                             anchor: `Village Green Preservation Society`,
                             wiki: `The_Kinks_Are_the_Village_Green_Preservation_Society`,
                         },
-                        `served as a rough template for this album. So all my songs had to be accessible pop tunes representing a variety of musical styles, with each one clocking in at around three minutes. While there's no one-to-one mapping, this song is clearly the "`,
+                        `as a rough template for this album. This meant each song had to have a well-crafted hook, represent a unique musical style, and clock in at three minutes. There's no one-to-one mapping, but this song is clearly the "`,
                         {
                             anchor: `Wicked Annabella`,
                             wiki: `Wicked_Annabella`,

@@ -655,7 +655,7 @@ export default {
                         {
                             anchor: `safe Algonquin abode`,
                             todo: true,
-                            problem: `Revise. Last sentence runs on a bit. Maybe make it about Catherine not ever introducing me to her friends.`,
+                            problem: `Review.`,
                             card: {
                                 description: [
                                     `Kateri Tekakwitha was born to a`,
@@ -673,7 +673,7 @@ export default {
                                         anchor: `Algonquin Round Table`,
                                         wiki: `Algonquin_Round_Table`,
                                     },
-                                    `, a social circle of New York City writers known for their wit and wordplay. And so here I joke that Catherine must have feared I would take her away from her smart circle of friends, being too dimwitted as I was to ever be allowed to meet them.`,
+                                    `, a social circle of New York City writers known for their clever wit. So the reason Catherine broke up with me, I whimsically presume, is that I was taking her away from her smart circle of friends, being too dimwitted as I was to ever be allowed to meet them.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -890,7 +890,7 @@ export default {
                             anchor: `register`,
                             wiki: `Register_(music)`,
                         },
-                        `, I didn't know the instruments would drown out my voice. To avoid redoing the tracks, I`,
+                        `, I didn't realize the instruments would drown out my voice. To avoid redoing the tracks, I`,
                         {
                             anchor: `pitch shifted`,
                             wiki: `Pitch_shift`,
