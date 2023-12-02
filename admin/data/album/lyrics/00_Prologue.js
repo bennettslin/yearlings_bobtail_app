@@ -14,6 +14,6 @@ export default {
             isItalic: true,
             lyric: `Yearling's Bobtail`,
         },
-        `as a vanity project. Since then, I've struggled to bring this complex and dense work to the public, given that I remain a complete unknown. Hopefully, the seven additional years I spent coding and illustrating this audio webcomic will finally do the trick!`,
+        `as a vanity project. Since then, I've struggled to bring this complex and dense work to the public, given that I remain a complete unknown. Hopefully, the seven additional years I've now spent coding, illustrating, and annotating this audio webcomic will do the trick!`,
     ],
 }

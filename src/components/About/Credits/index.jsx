@@ -7,9 +7,9 @@ const AboutCredits = () => (
             className: 'AboutCredits',
         }}
     >
-        {`Album written, composed, and performed by Bennett Lin.`}
+        {`Album composed, written, and performed by Bennett Lin.`}
         <br />
-        {'Website annotated, illustrated, and coded by Bennett Lin.'}
+        {'Website coded, illustrated, and annotated by Bennett Lin.'}
     </div>
 )
 
