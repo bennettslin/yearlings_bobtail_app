@@ -492,7 +492,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `The letter addressed my yearning for acceptance and spoke to my frustration that this basic need should remain unmet. Having hit all the right nerves, it then shared hopeful news: RI Research believed I might be a Beyonder. And now, after searching for so long, they'd found me.`,
+                                description: `The letter addressed my yearning for acceptance, and then hit all the right nerves by speaking to my frustration that this basic need should remain unmet. It then shared hopeful news: RI Research believed I might be a Beyonder. And now, after searching for so long, they'd found me.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

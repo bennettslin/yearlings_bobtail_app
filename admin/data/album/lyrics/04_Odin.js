@@ -201,7 +201,7 @@ export default {
                 problem: `Revise. Phrase it better.`,
                 card: {
                     description: [
-                        `For this song, I wanted to capture the disorienting cycle of days spent among the foreign and nights dreaming of the familiar. So I used a literary technique of my invention called doublespeaker rhyme, in which two columns of lyrics are made to rhyme syllable for syllable, with each one isolated to a single speaker in the recording. It's the audio version of a cinematic`,
+                        `For this song, I wanted to capture the disorienting cycle of days spent among the foreign and nights dreaming of the familiar. So I used a literary technique of my invention called doublespeaker rhyme, in which two columns of lyrics are made to rhyme syllable for syllable, and then isolated to separate speakers in the stereo mix. It's the audio version of a cinematic`,
                         {
                             anchor: `split screen`,
                             wiki: `Split_screen_(video_production)`,

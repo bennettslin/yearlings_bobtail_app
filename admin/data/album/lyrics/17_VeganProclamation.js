@@ -765,10 +765,10 @@ export default {
                         {
                             anchor: `start as children`,
                             todo: true,
-                            problem: `Revise. Needs to be more about needing a placeholder lyric.`,
+                            problem: `Review.`,
                             card: {
                                 description: [
-                                    `I first recorded this song on Owen's four-track. In those days, my lyrics were mostly mumbled phrases off the top of my head. Since I was always hoping to write the next "`,
+                                    `I first recorded this song on Owen's four-track. There were no lyrics yet, so for the vocal track, I just mumbled some random phrases. I must have thrown the word "stardust" in there— given that I was always hoping to write the next "`,
                                     {
                                         anchor: `Stardust`,
                                         wiki: `Stardust_(1927_song)`,
@@ -778,7 +778,7 @@ export default {
                                         anchor: `Hoagy Carmichael`,
                                         wiki: `Hoagy_Carmichael`,
                                     },
-                                    `, I must have thrown the word "stardust" in there, because Owen really liked the line "Can we start as children?" I didn't have the heart to tell him that he'd misheard it, so I kept it.`,
+                                    `— because Owen misheard one of the lines as "Can we start as children?" He really liked it, so I kept it in this final version.`,
                                 ],
                                 dotKeys: {
                                     [SONGCRAFT]: true,
