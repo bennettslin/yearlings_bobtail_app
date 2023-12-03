@@ -97,7 +97,7 @@ export default {
                             todo: true,
                             problem: `Revise. I just don't like this as it is.`,
                             card: {
-                                description: `Anytime I began to grow distant, Sita would reach out by groveling, and I'd rush back to comfort her, stung by my conscience. But as time went on, my patience wore thin, and I would lash out in passive-aggressive ways— whereupon she'd grovel even further. It became all we knew of how to speak for ourselves.`,
+                                description: `Anytime I began to grow distant, Sita would reach out by groveling. I'd then rush back to comfort her, stung by my conscience. But as time went on, my patience wore thin, and I would lash out in passive-aggressive ways— whereupon she'd grovel even further. It became all we knew of how to speak for ourselves.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

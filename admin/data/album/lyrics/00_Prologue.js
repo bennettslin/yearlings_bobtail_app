@@ -1,8 +1,7 @@
 export default {
     title: 'prologue',
     isLogue: true,
-    todo: true,
-    problem: `Review one more time.`,
+    review: true,
     overview: [
         `Hi, I'm Bennett! A long while back, I went through an awful breakup. I then spent the next five years writing all the songs and recording all the parts for`,
         {

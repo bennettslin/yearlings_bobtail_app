@@ -448,7 +448,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `My mother once advised me not to have children, given the autism that runs in our genes, and her difficulties in raising my brother. I often wondered if the women I dated, before weighing my desirability as a lifelong partner, first pictured themselves giving this talk to their own child.`,
+                                description: `My mother once advised me not to have children, given the autism that runs in our genes, and her difficulties in raising my brother. I often wondered if the women I dated, in weighing my desirability as a lifelong partner, first pictured themselves giving this talk to their own child.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

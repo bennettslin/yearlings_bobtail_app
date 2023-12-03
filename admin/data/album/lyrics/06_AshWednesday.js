@@ -654,8 +654,7 @@ export default {
                         `for I lack the wit to spare a`,
                         {
                             anchor: `safe Algonquin abode`,
-                            todo: true,
-                            problem: `Review.`,
+                            review: true,
                             card: {
                                 description: [
                                     `Kateri Tekakwitha was born to a`,
@@ -885,12 +884,12 @@ export default {
                 card: {
                     // NOTE: Counterpoint is a wiki later in Garryowen.
                     description: [
-                        `I hadn't formally studied composition up to this point, so when I scored this three-part counterpoint in the vocal`,
+                        `I hadn't formally studied composition up to this point, so I scored this three-part counterpoint in the same`,
                         {
                             anchor: `register`,
                             wiki: `Register_(music)`,
                         },
-                        `, I didn't realize the instruments would drown out my voice. To avoid redoing the tracks, I`,
+                        `as the vocals, not realizing the instruments would drown out my voice. To avoid redoing the tracks, I`,
                         {
                             anchor: `pitch shifted`,
                             wiki: `Pitch_shift`,
