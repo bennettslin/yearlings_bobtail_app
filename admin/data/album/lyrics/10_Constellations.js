@@ -802,8 +802,7 @@ export default {
                         {
                             anchor: `Indus-trail sewerce`,
                             properNoun: true,
-                            todo: true,
-                            problem: `Review.`,
+                            review: true,
                             card: {
                                 description: [
                                     `As we make our way down "industrial sewers," I excitedly explain the subject of a term paper I once wrote. In the 19th century, Western scholars proposed that Indian civilization was brought by invaders from the north, who carved a trail leading to the "source" of the`,
@@ -857,8 +856,7 @@ export default {
                         {
                             anchor: `Forsi ahuro`,
                             properNoun: true,
-                            todo: true,
-                            problem: `Review.`,
+                            review: true,
                             card: {
                                 description: [
                                     `In the Iranian tongue of "Farsi," the "`,
@@ -942,12 +940,7 @@ export default {
                             problem: `Review.`,
                             card: {
                                 description: [
-                                    `We migrate onward through the steam tunnels while high on Robitussin, just as the`,
-                                    {
-                                        anchor: `Aryans`,
-                                        wiki: `Aryan`,
-                                    },
-                                    `before us drank`,
+                                    `We migrate onward while high on Robitussin, just like the Indo-Iranians drank`,
                                     {
                                         isItalic: true,
                                         lyric: {
@@ -971,10 +964,16 @@ export default {
                         `,`,
                         {
                             anchor: `our-youn' invedas`,
-                            todo: true,
-                            problem: `Review.`,
+                            review: true,
                             card: {
-                                description: `Recent scholarship has returned to the theory that the "Aryans" mentioned "in the Vedas" came from the north. However, it discredits the colonialist assumption that this amounted to an invasion, as no evidence of war has been uncovered. And so "to sum up," I put this "unsolved query" to rest, before the others lose their minds.`,
+                                description: [
+                                    `Recent scholarship has returned to the theory that the "`,
+                                    {
+                                        anchor: `Aryans`,
+                                        wiki: `Aryan`,
+                                    },
+                                    `" mentioned "in the Vedas" came from the north. However, it discredits the colonialist assumption that this amounted to an invasion, as no evidence of war has been uncovered. And so "to sum up," I put this "unsolved query" to rest, before the others lose their minds.`,
+                                ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -983,8 +982,7 @@ export default {
                         },
                         {
                             anchor: `unsolft quarry rest`,
-                            todo: true,
-                            problem: `Review.`,
+                            review: true,
                             card: {
                                 description: `"Our young invaders" have arrived at a clearing where dirt from the ground has been shaped into makeshift benches. Pausing for a bit, we rest on this "soft quarry."`,
                                 dotKeys: {
