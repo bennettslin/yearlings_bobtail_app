@@ -36,7 +36,7 @@ export default {
                 todo: true,
                 problem: `Review one more time.`,
                 card: {
-                    description: `This is the other song on the album that was an original Yearlings staple. As with "M," I changed the arrangement but kept the lyrics. I suppose it's telling of my relationship with Sita that I only ever wrote one romantic song for her, and it's about the regrets that will haunt me as an old man for having lost her long ago.`,
+                    description: `This is the other song on the album that was an original Yearlings staple. As with "M," I changed the arrangement but kept the lyrics. I suppose it's telling of my relationship with Sita that I only ever wrote one romantic song for her, and it's about the dreams that will haunt me as an old man, in having lost her long ago.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [OBSERVATION]: true,

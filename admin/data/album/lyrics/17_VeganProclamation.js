@@ -764,8 +764,7 @@ export default {
                         `And can we`,
                         {
                             anchor: `start as children`,
-                            todo: true,
-                            problem: `Review.`,
+                            review: true,
                             card: {
                                 description: [
                                     `I first recorded this song on Owen's four-track. There were no lyrics yet, so for the vocal track, I just mumbled some random phrases. I must have thrown the word "stardust" in there— given that I was always hoping to write the next "`,
@@ -778,7 +777,7 @@ export default {
                                         anchor: `Hoagy Carmichael`,
                                         wiki: `Hoagy_Carmichael`,
                                     },
-                                    `— because Owen misheard one of the lines as "Can we start as children?" He really liked it, so I kept it in this final version.`,
+                                    `— because Owen misheard the line as "Can we start as children?" He really liked it, so I kept it in this final version.`,
                                 ],
                                 dotKeys: {
                                     [SONGCRAFT]: true,

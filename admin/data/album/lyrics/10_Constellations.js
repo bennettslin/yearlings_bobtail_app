@@ -936,8 +936,7 @@ export default {
                     lyric: [
                         {
                             anchor: `To soma up`,
-                            todo: true,
-                            problem: `Review.`,
+                            review: true,
                             card: {
                                 description: [
                                     `We migrate onward while high on Robitussin, just like the Indo-Iranians drank`,
@@ -948,7 +947,7 @@ export default {
                                             wiki: `Soma_(drink)`,
                                         },
                                     },
-                                    `, a ritual drink mentioned in the Vedas that held psychedelic properties. In the Avesta, it's known as`,
+                                    `, a psychedelic drink mentioned in the Vedas. In the Avesta, it's known as`,
                                     {
                                         isItalic: true,
                                         lyric: `haoma`,
