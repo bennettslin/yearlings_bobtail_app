@@ -27,7 +27,7 @@ export default {
     playerStartTime: 3332.826,
     todo: true,
     problem: `Review one more time.`,
-    overview: `After slogging through the day under a cloud of despair, I would crawl into bed each night and lie awake until exhaustion overtook me. I would then dream of reuniting with Sita, only to wake in a panicked sweat as the reality came roaring back that I'd lost her forever. I lived in dread of this vicious prank played by my unconscious mind, and I had no idea when the torment would end. The answer, I feared, was never.`,
+    overview: `After slogging through the day under a cloud of despair, I would crawl into bed and lie awake until exhaustion overtook me. That night I would dream of happily reuniting with Sita, only to wake in a panicked sweat as the reality came roaring back that I'd lost her forever. I lived in dread of this cruel prank played by my unconscious mind, and I had no idea when the torment would end. The answer, I feared, was never.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -36,7 +36,7 @@ export default {
                 todo: true,
                 problem: `Review one more time.`,
                 card: {
-                    description: `This is the other song on the album that was an original Yearlings staple. As with "M," I changed the arrangement but kept the lyrics. I suppose it's telling of my relationship with Sita that I only ever wrote one romantic song for her, and it's about the dreams that will haunt me as an old man, in having lost her long ago.`,
+                    description: `This is the other song on the album that was an original Yearlings staple. As with "M," I changed the arrangement but kept the lyrics. I suppose it's telling of my relationship with Sita that I only ever wrote one romantic song for her, and it's about the regrets that will haunt me as an old man in having lost her long ago.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [OBSERVATION]: true,

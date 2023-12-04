@@ -31,8 +31,8 @@ export default {
     playerReferenceTime: 2498.410,
     playerStartTime: 2496.296,
     todo: true,
-    problem: `Revise. First sentence is confusing. Make it clear that I was able to observe once I was with those other women.`,
-    overview: `It's easy to understand now how my behavior so quickly degenerated into cruelty. Hoping for an easy breakup, I would act up in small ways— but Sita was just as determined to work it out, and she would endure. Which then raised the limit for how awfully I should behave next time… and on and on. In time I came to see how thoroughly her sense of worth was tied to our relationship. I was fighting for me. She was fighting for us.`,
+    problem: `Revise. Is it raised or lowered?`,
+    overview: `Though it shamed me to say so, I understood even then how my behavior had degenerated so quickly into cruelty. Hoping for an easy breakup, I would act up in small ways— but Sita was just as determined to work it out, and she would endure. Which then raised the limit for how awfully I should behave next time… and on and on. In time I came to see how thoroughly her sense of worth was tied to our relationship. I was fighting for me. She was fighting for us.`,
     lyricUnits: [
         {
             unitMap: {},

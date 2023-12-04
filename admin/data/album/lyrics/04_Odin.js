@@ -201,7 +201,7 @@ export default {
                 problem: `Review.`,
                 card: {
                     description: [
-                        `For this song, I wanted to capture the disorienting cycle of days spent among the foreign and nights dreaming of the familiar. And so I invented doublespeaker rhyme, a literary technique in which two columns of lyrics, written to rhyme syllable for syllable, are sung in harmony. It sounds best if each voice is isolated to an opposite speaker in the stereo mix, like an audio version of a cinematic`,
+                        `For this song, I wanted to capture the disorienting cycle of days spent among the foreign and nights dreaming of the familiar. And so I invented doublespeaker rhyme, a literary technique in which two columns of lyrics, made to rhyme syllable for syllable, are sung in harmony. It sounds best if each voice is isolated to an opposite speaker in the stereo mix, like an audio version of the cinematic`,
                         {
                             anchor: `split screen`,
                             wiki: `Split_screen_(video_production)`,

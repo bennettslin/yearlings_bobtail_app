@@ -1082,7 +1082,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `The endless one-upmanship wasn't just petty. It was exhausting to counter every perceived slight with one of my own. I wanted life to be like a marathon that rewards patience and resolve, traits that I possessed in spades.`,
+                                        `The endless one-upmanship wasn't just petty. It was exhausting to counter every perceived slight with one of my own. I wanted life to be like a marathon that rewards patience and resolve, traits that I possess in spades.`,
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
@@ -1456,7 +1456,7 @@ export default {
                                             isItalic: true,
                                             lyric: `Bildungsroman`,
                                         },
-                                        `is the main character's moral and psychological growth from youth to adulthood. Without it, there is no story to be told, a point that my parents hint at here.`,
+                                        `is the main character's moral and psychological growth from youth to adulthood. Without it, there's no story to be told— a point that my parents hint at here.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,

@@ -114,19 +114,26 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
+                problem: `Review`,
                 card: {
                     description: [
-                        `A`,
+                        `In freshman year, I took a`,
                         {
-                            anchor: `Shepard tone`,
+                            anchor: `psychoacoustics`,
+                            wiki: `Psychoacoustics`,
+                        },
+                        `seminar that went over my head. But I did learn about`,
+                        {
+                            anchor: `Shepard tones`,
                             wiki: `Shepard_tone`,
                         },
-                        `is an auditory illusion in which a tone moves steadily up or down in pitch yet remains fixed within the same register. A steady decline seemed like an apt metaphor for my breakup with Miriam, so I included two Shepard tones here. One is a low bass that descends in discrete half steps, while the other is a high treble that descends in a perpetual glissando. Since I didn't know how to code at the time, both were made by splicing together`,
+                        `, an auditory illusion in which a tone moves steadily up or down in pitch while remaining fixed in the same register. A steady decline seemed like a good way to describe my relationship with Miriam, so I included two Shepard tones here: a low bass that descends in discrete half steps, and a high treble that descends in a perpetual glissando. Since I didn't know how to code at the time, both were made by splicing together`,
                         {
                             anchor: `pure tones`,
                             wiki: `Pure_tone`,
                         },
-                        `produced on a synthesizer.`,
+                        `played on a synthesizer.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -446,9 +453,9 @@ export default {
                         {
                             anchor: `ponders the children`,
                             todo: true,
-                            problem: `Review one more time.`,
+                            problem: `Review.`,
                             card: {
-                                description: `My mother once advised me not to have children, given the autism that runs in our genes, and her difficulties in raising my brother. I often wondered if the women I dated, in weighing my desirability as a lifelong partner, first pictured themselves giving this talk to their own child.`,
+                                description: `My mother once advised me not to have children, given the autism that runs in our genes, and her difficulties in raising my brother as a result. I always wondered if the women I dated ever pictured themselves giving this talk to their own child, and then, in doing so, downgraded my worth as a lifelong partner.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -794,14 +801,16 @@ export default {
                         `With his`,
                         {
                             anchor: `vinyl, exit`,
+                            todo: true,
+                            problem: `Review.`,
                             card: {
                                 description: [
-                                    `After Miriam helps me to my "final exit," a euphemism used by proponents of`,
+                                    `After Miriam helps me to my "final exit"— a euphemism used by proponents of`,
                                     {
                                         anchor: `assisted suicide`,
                                         wiki: `Assisted_suicide`,
                                     },
-                                    `, I imagine her helping herself to my record collection, which she'll trade for cash at a record store.`,
+                                    `— I imagine her helping herself to my record collection, which she'll trade for cash at a record store.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -860,8 +869,10 @@ export default {
                         `, hears not a`,
                         {
                             anchor: `worrisome`,
+                            todo: true,
+                            problem: `Review.`,
                             card: {
-                                description: `After the breakup with Miriam, I only had good wishes for her, which surprised me given how competitive and selfish I was around Sita. But I came away knowing that a woman like Miriam could want me, even if just for a while. I didn't have that before, so it felt like an amazing bargain.`,
+                                description: `After the breakup with Miriam, I only had good wishes for her. This surprised me, given how selfish I was with Sita. But I came away knowing that a woman like Miriam could want me, even if just for a while. I didn't have that before, so it felt like an amazing bargain.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -872,7 +883,7 @@ export default {
                         {
                             anchor: `Bless her`,
                             todo: true,
-                            problem: `Revise. This one and the next are together trying to convey an idea that I still don't think is quite there. Like, the idea of Buddhism seems to come out of nowhere? How is it related, exactly? If articulated correctly, this could be one of my best points, so really think it through. Should be about White women.`,
+                            problem: `Revise. This one and the next are together trying to convey an idea that I still don't think is quite there. Like, the idea of Buddhism seems to come out of nowhere? How is it related, exactly? If articulated correctly, this could be one of my best points, so really think it through. Should be about White women. The Buddhas I was told to pray to literally seemed like inferior gods, which then made me feel like the inferior creation.`,
                             card: {
                                 description: [
                                     `The title of the play`,

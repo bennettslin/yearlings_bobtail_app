@@ -95,9 +95,9 @@ export default {
                         {
                             anchor: `Brushed her off`,
                             todo: true,
-                            problem: `Revise. I just don't like this as it is.`,
+                            problem: `Revise. I just don't like this as it is. It's too complicated. I grew distant, she groveled. That's really it.`,
                             card: {
-                                description: `Anytime I began to grow distant, Sita would reach out by groveling. I'd then rush back to comfort her, stung by my conscience. But as time went on, my patience wore thin, and I would lash out in passive-aggressive ways— whereupon she'd grovel even further. It became all we knew of how to speak for ourselves.`,
+                                description: `Anytime I began to grow distant, Sita would reach out by groveling. I would then rush back to comfort her, stung by my conscience. But as my patience wore thin, I began to barb this comfort in passive-aggressive ways— whereupon she would grovel even further. It became all we knew of how to speak for ourselves.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

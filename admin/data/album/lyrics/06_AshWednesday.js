@@ -884,12 +884,12 @@ export default {
                 card: {
                     // NOTE: Counterpoint is a wiki later in Garryowen.
                     description: [
-                        `I hadn't formally studied composition up to this point, so I scored this three-part counterpoint in the same`,
+                        `I hadn't formally studied composition up to this point, so I didn't realize the instruments would drown out my voice when I scored this three-part counterpoint in the vocal`,
                         {
                             anchor: `register`,
                             wiki: `Register_(music)`,
                         },
-                        `as the vocals, not realizing the instruments would drown out my voice. To avoid redoing the tracks, I`,
+                        `. To avoid redoing the tracks, I`,
                         {
                             anchor: `pitch shifted`,
                             wiki: `Pitch_shift`,
