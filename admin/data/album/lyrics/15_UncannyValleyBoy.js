@@ -31,8 +31,8 @@ export default {
     mixStartTime: `0:01:18.46`,
     playerStartTime: 2722.629,
     todo: true,
-    problem: `Review one more time.`,
-    overview: `Upon learning of my brother's autism, my parents were too harried to notice I was being bullied at school. In guilt, they later indulged every whim I had to find my own path. But it didn't assure them that I failed to mature even as I got older, and they were crushed when I left Sita, whom they adored. Naturally, I wasn't happy to disappoint them. Still, I had a master plan to follow, and I wasn't about to change my ways.`,
+    problem: `Review.`,
+    overview: `Upon learning of my brother's autism, my parents were too harried to notice I was being bullied at school. In guilt, they later indulged every whim I had to find my own path. But it didn't assure them that I failed to mature even as I got older, and they were especially crushed when I left Sita, whom they adored. Naturally, I wasn't happy to disappoint them. Still, I had a master plan to follow, and I wasn't about to change my ways.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -424,7 +424,7 @@ export default {
                             anchor: `Village Green Preservation Society`,
                             wiki: `The_Kinks_Are_the_Village_Green_Preservation_Society`,
                         },
-                        `as a rough template for this album. This meant each song had to have well-crafted hooks, represent a unique musical style, and clock in at three minutes. There's no one-to-one mapping, but this song is clearly the "`,
+                        `as a rough template for this album. This meant each song had to be built on a well-crafted hook and reflect a unique musical style, while clocking in at three minutes. There's no one-to-one mapping, but this song is clearly the "`,
                         {
                             anchor: `Wicked Annabella`,
                             wiki: `Wicked_Annabella`,

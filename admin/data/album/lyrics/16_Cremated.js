@@ -114,16 +114,15 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
-                problem: `Review`,
+                review: true,
                 card: {
                     description: [
-                        `In freshman year, I took a`,
+                        `In freshman year, I took a seminar on`,
                         {
                             anchor: `psychoacoustics`,
                             wiki: `Psychoacoustics`,
                         },
-                        `seminar that went over my head. But I did learn about`,
+                        `that went over my head. But I did learn about`,
                         {
                             anchor: `Shepard tones`,
                             wiki: `Shepard_tone`,
@@ -801,8 +800,7 @@ export default {
                         `With his`,
                         {
                             anchor: `vinyl, exit`,
-                            todo: true,
-                            problem: `Review.`,
+                            review: true,
                             card: {
                                 description: [
                                     `After Miriam helps me to my "final exit"— a euphemism used by proponents of`,
@@ -872,7 +870,7 @@ export default {
                             todo: true,
                             problem: `Review.`,
                             card: {
-                                description: `After the breakup with Miriam, I only had good wishes for her. This surprised me, given how selfish I was with Sita. But I came away knowing that a woman like Miriam could want me, even if just for a while. I didn't have that before, so it felt like an amazing bargain.`,
+                                description: `After the breakup with Miriam, I only had good wishes for her— which surprised me, given how selfish I was with Sita. But I came away with the knowledge that I could date someone like Mara, even if just for a while. I didn't have that before, so it felt like an amazing bargain.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
