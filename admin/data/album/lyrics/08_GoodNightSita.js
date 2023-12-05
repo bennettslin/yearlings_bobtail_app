@@ -375,7 +375,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `A friend once told me that if I can keep a woman cracking up at my jokes, then I'll always be good for another date. But my humor at the time was all about clever puns, given Catherine's fondness for them— and puns tend to draw groans from most everyone else.`,
+                                description: `A friend once told me that if I can keep a woman cracking up at my jokes, then I'll always be good for another date. Unfortunately, my humor at the time was all about clever puns, thanks to Catherine's fondness for them— and puns tend to draw groans from most everyone else.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,

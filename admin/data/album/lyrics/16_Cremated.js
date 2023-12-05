@@ -32,7 +32,7 @@ export default {
     mixStartTime: `-0:00:02.88`,
     playerReferenceTime: 2951.729,
     playerStartTime: 2926.829,
-    overview: `While I can't deny that dating White women helped silence the nagging feeling I had of being genetically inferior, I honestly didn't seek them out. A case in point is Miriam, whom I met at a Yearlings show. She was the storybook ending that my ego had been waiting for: cute, hip, and drawn to me through no effort on my part. We lasted a few months. I always did wonder if she was just slumming it with me.`,
+    overview: `While I can't deny that dating White women helped silence the nagging feeling I had of being genetically inferior, I honestly didn't seek them out. A case in point is Miriam, whom I met at a Yearlings show. She was the storybook ending that my ego had been waiting for: cute, hip, and drawn to me through no effort on my part. We lasted a few months. I always did wonder if she was slumming it with me.`,
     isDoublespeaker: true,
     lyricUnits: [
         {
@@ -454,7 +454,7 @@ export default {
                             todo: true,
                             problem: `Review.`,
                             card: {
-                                description: `My mother once advised me not to have children, given the autism that runs in our genes, and her difficulties in raising my brother as a result. I always wondered if the women I dated ever pictured themselves giving this talk to their own child, and then, in doing so, downgraded my worth as a lifelong partner.`,
+                                description: `My mother once advised me not to have children, given the autism that runs in our genes, and her difficulties in raising my brother as a result. I always wondered if the women I dated ever pictured themselves giving such a talk to their own child, and if this then downgraded my worth as a lifelong partner in their eyes.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

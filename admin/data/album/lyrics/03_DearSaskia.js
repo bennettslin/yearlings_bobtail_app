@@ -155,7 +155,7 @@ export default {
                             todo: true,
                             problem: `Revise. Make this about having something to share comparable to what Sasha had.`,
                             card: {
-                                description: `On a tour of the Taiwanese countryside with my cousins, I mentally noted all the things I could point out to Sasha one day. I suspect it wasn't out of pride in my heritage; I just liked the idea of having something unique to share with someone else.`,
+                                description: `On a tour of the Taiwanese countryside with my cousins, I mentally noted all the things I could point out to Sasha one day. It wasn't out of pride in my heritage; I just liked the idea of having something unique to share with someone else.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

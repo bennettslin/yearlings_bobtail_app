@@ -879,8 +879,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
-                problem: `Review.`,
+                review: true,
                 card: {
                     // NOTE: Counterpoint is a wiki later in Garryowen.
                     description: [
@@ -894,7 +893,7 @@ export default {
                             anchor: `pitch shifted`,
                             wiki: `Pitch_shift`,
                         },
-                        `them up an octave. This then gave them a ghostly sheen, which fits the ambience of a rain-soaked evening quite nicely.`,
+                        `them up an octave. This also gave them a ghostly sheen, which fits the ambience of a rain-soaked evening quite nicely.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
