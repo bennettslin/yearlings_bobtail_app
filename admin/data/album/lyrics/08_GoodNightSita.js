@@ -372,8 +372,7 @@ export default {
                         `till then`,
                         {
                             anchor: `crack up another doll`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: `A friend once told me that if I can keep a woman cracking up at my jokes, then I'll always be good for another date. My humor at the time was all about clever puns, though, thanks to Catherine's fondness for them— and puns tend to draw groans from most everyone else.`,
                                 dotKeys: {

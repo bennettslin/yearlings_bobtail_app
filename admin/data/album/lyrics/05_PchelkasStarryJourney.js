@@ -489,8 +489,7 @@ export default {
                         `Do you often feel like a`,
                         {
                             anchor: `wanderer lost`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: `The letter acknowledged my yearning for acceptance and spoke to my frustration that this basic human need should go unmet. Having hit all the right nerves, it then shared hopeful news: RI Research believed I might be a Beyonder. And now, after searching for so long, they'd found me.`,
                                 dotKeys: {
