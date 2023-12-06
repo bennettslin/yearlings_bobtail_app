@@ -153,9 +153,9 @@ export default {
                         {
                             anchor: `You'd love Taiwan`,
                             todo: true,
-                            problem: `Revise. Make this about having something to share comparable to what Sasha had.`,
+                            problem: `Review.`,
                             card: {
-                                description: `On a tour of the Taiwanese countryside with my cousins, I mentally noted all the things I could point out to Sasha one day. It wasn't out of pride in my heritage; I just liked the idea of having something unique to share with someone else.`,
+                                description: `On a tour of the Taiwanese countryside with my cousins, I mentally noted all the things I could point out to Sasha one day. I'm not sure I felt any real pride in my roots; it was just all I knew at the time of what can make someone more interesting to someone else.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
