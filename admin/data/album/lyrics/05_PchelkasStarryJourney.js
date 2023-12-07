@@ -769,7 +769,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `The letters promised to update me on new technological developments, including the construction of spacecraft that would allow Beyonders to make contact with their extraplanetary kin.`,
+                                description: `The letters promised to update me on new developments, including the construction of spacecraft that would allow Beyonders to make contact with their extraplanetary kin.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

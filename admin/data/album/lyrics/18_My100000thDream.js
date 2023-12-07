@@ -27,7 +27,7 @@ export default {
     playerStartTime: 3332.826,
     todo: true,
     problem: `Review.`,
-    overview: `Each night I dreamt of reuniting with Sita— only to wake in a panicked sweat as the reality came roaring back that I'd lost her forever. I lived in such fear of this cruel prank played by my unconscious mind, I refused to crawl into bed until exhaustion overtook me— even as my waking hours offered nothing but thoughts of despair. I had no idea when this daily torment would end. The answer, I feared, was never.`,
+    overview: `Every night I dreamt of reuniting with Sita, only to wake in a panicked sweat as the reality came roaring back that I'd lost her forever. I lived in such dread of this cruel trick played by my unconscious mind, I would refuse to sleep until exhaustion overtook me— even as my waking hours offered only thoughts of despair. I had no idea when this daily torment would end. The answer, I feared, was never.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -36,7 +36,7 @@ export default {
                 todo: true,
                 problem: `Review one more time.`,
                 card: {
-                    description: `This is the other song on the album that was an original Yearlings staple. As with "M," I changed the arrangement but kept the lyrics. I suppose it's telling of my relationship with Sita that I only ever wrote one romantic song for her, and it's about the regrets I'll feel as an old man for having lost her long ago.`,
+                    description: `This is the other song on the album that was an original Yearlings staple. As with "M," I changed the arrangement but kept the lyrics. I suppose it's telling of my relationship with Sita that I only ever wrote one romantic song for her, and it's about the regrets I'll feel as an old man in having lost her long ago.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [OBSERVATION]: true,

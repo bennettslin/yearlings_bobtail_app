@@ -155,7 +155,7 @@ export default {
                             todo: true,
                             problem: `Review.`,
                             card: {
-                                description: `On a tour of the Taiwanese countryside with my cousins, I mentally noted all the things I could point out to Sasha one day. I'm not sure I felt any real pride in my roots; it was just all I knew of what can make one ordinary child more interesting to any other.`,
+                                description: `On a tour of the Taiwanese countryside with my cousins, I mentally noted all the things I could point out to Sasha one day. I'm not sure I felt any real pride in my roots; it was just all I knew of what can make one ordinary child more interesting to another.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
