@@ -870,7 +870,7 @@ export default {
                             todo: true,
                             problem: `Review.`,
                             card: {
-                                description: `It surprised me that I only had good wishes for Miriam after we broke up, given how combative I was with Sita. But I came away knowing I was indeed worthy of dating the Maras of the world. I didn't have this certainty before, so I guess it felt like a decent bargain.`,
+                                description: `It surprised me that I only had good wishes for Miriam after we broke up, given how combative I was with Sita. But I came away knowing I was indeed worthy of dating the Maras of the world. I didn't have this certainty before, so it felt like an amazing bargain.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

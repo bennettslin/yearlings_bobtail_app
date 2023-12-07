@@ -766,8 +766,7 @@ export default {
                         `one they'll find only once we build the`,
                         {
                             anchor: `mothership`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
                                 description: `The letters promised to update me on new developments, including the construction of spacecraft that would allow Beyonders to make contact with their extraplanetary kin.`,
                                 dotKeys: {
