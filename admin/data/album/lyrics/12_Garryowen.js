@@ -97,7 +97,7 @@ export default {
                             todo: true,
                             problem: `Revise. I just don't like this as it is. It's too complicated. I grew distant, she groveled. That's really it.`,
                             card: {
-                                description: `Anytime I began to grow distant, Sita would reach out by groveling. I would then rush back to comfort her, stung by my conscience. But as my patience wore thin, I began to barb this comfort in passive-aggressive ways— whereupon she would grovel even further. It became all we knew of how to speak for ourselves.`,
+                                description: `Anytime I began to grow distant, Sita would reach out by groveling. I would then rush back to comfort her, stung by my conscience. But as my patience wore thin, I would lace this comfort with passive-aggressive swipes— whereupon she would grovel even further. It became all we knew of how to speak for ourselves.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -374,7 +374,7 @@ export default {
                         {
                             anchor: `celibate you'll play`,
                             card: {
-                                description: `Drinking made me impotent and thus impervious to Sita's advances, so I gladly drank to excess. But not having sex was also purifying in its own right, since this lent the familiar comfort of being my lovelorn self again.`,
+                                description: `Drinking made me impotent and thus impervious to Sita's advances, so I gladly drank to excess. And not having sex was also purifying in its own right, since this lent the familiar comfort of being my lovelorn self again.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -394,9 +394,9 @@ export default {
                         {
                             anchor: `Slammed in the well`,
                             todo: true,
-                            problem: `Revise. Make point that this isn't sustainable as a source of spiritual renewal. It becomes a cliche after the first time.`,
+                            problem: `Review.`,
                             card: {
-                                description: `Of course, using alcohol as a spiritual cleanser isn't really sustainable, since it requires you to vomit into a toilet and see your miserable reflection in the water staring back at you.`,
+                                description: `But vomiting into a toilet, and then seeing your reflection in the water staring miserably back at you, only works as a spiritual cleanser the first time. After that, it's a cliche.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

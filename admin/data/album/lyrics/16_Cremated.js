@@ -454,7 +454,7 @@ export default {
                             todo: true,
                             problem: `Review.`,
                             card: {
-                                description: `My mother once advised me not to have children, given the autism that runs in our genes, and her difficulties in raising my brother as a result. I always wondered if the women I dated ever pictured themselves giving such a talk to their own child, and if this then downgraded my worth as a lifelong partner in their eyes.`,
+                                description: `My mother once advised me not to have children, given the autism that runs in our genes, and her difficulties in raising my brother as a result. I always wondered if the women I dated ever worried about giving this talk to their own child, and if this then downgraded my worth as a lifelong partner in their eyes.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -870,7 +870,7 @@ export default {
                             todo: true,
                             problem: `Review.`,
                             card: {
-                                description: `After the breakup with Miriam, I only had good wishes for her— which surprised me, given how selfish I was with Sita. But I came away with the knowledge that I could date someone like Mara, even if just for a while. I didn't have that before, so it felt like an amazing bargain.`,
+                                description: `After the breakup with Miriam, I only had good wishes for her— which surprised me, given how selfish I was with Sita. But I came away knowing I was indeed worthy of dating the Maras of the world. I didn't have that certainty before, so it felt like an amazing deal.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

@@ -30,8 +30,7 @@ export default {
     mixStartTime: `0:00:00.27`,
     playerReferenceTime: 2498.410,
     playerStartTime: 2496.296,
-    todo: true,
-    problem: `Review.`,
+    review: true,
     overview: `It shames me to say so, but even then I could see how my behavior was slowly degenerating into cruelty. Hoping for an easy breakup, I would act up in small ways— but Sita was just as determined to work it out, and she'd endure. So then I'd behave even more obnoxiously the next time… and on and on. In time I came to see how thoroughly her sense of worth was tied to our relationship. I was fighting for me. She was fighting for us.`,
     lyricUnits: [
         {
@@ -725,9 +724,9 @@ export default {
                         {
                             anchor: `sadness for what it was`,
                             todo: true,
-                            problem: `Review one more time.`,
+                            problem: `Review.`,
                             card: {
-                                description: `As friends, Sita and I got along well because we were both sad people. But in hindsight, my depression was rooted in circumstance— whether from being bullied as a child, or out of loneliness as I got older. Hers, on the other hand, was clinical. And as I got better at dealing with my spells, I grew impatient with her for being incapable of the same.`,
+                                description: `Back when we were just friends, Sita and I got along well because we were both sad people. In hindsight, though, my sadness was rooted in circumstance— whether from being bullied as a child, or out of loneliness as I grew older— and so I got better at dealing with my spells. But Sita suffered from clinical depression, which meant she couldn't easily do the same.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

@@ -769,7 +769,7 @@ export default {
                             todo: true,
                             problem: `Review one more time.`,
                             card: {
-                                description: `To appear legitimate, the letters threw around scientific terms as they promised to update me on technological developments. This included construction of a spacecraft that would allow us Beyonders to make contact with our extraplanetary kin.`,
+                                description: `The letters promised to update me on new technological developments, including the construction of spacecraft that would allow Beyonders to make contact with their extraplanetary kin.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
