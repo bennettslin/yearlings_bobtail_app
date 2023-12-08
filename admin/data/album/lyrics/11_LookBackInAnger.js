@@ -751,9 +751,9 @@ export default {
                         {
                             anchor: `poor, poor bears`,
                             todo: true,
-                            problem: `Revise. Sentence runs on. Not sure it makes sense now.`,
+                            problem: `Review.`,
                             card: {
-                                description: `His wife Alison then sighs in response, "Poor, poor bears." She recognizes that he, a bear in their mutual fantasy, is no less trapped in the power dynamic between them.`,
+                                description: `His wife Alison then sighs in response, "Poor, poor bears." She recognizes that he, a bear in their mutual fantasy, is just as much an unwitting victim in the power dynamic between them.`,
                                 dotKeys: {
                                     [REFERENCE]: true,
                                 },
