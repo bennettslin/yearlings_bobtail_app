@@ -27,7 +27,7 @@ export default {
     playerStartTime: 3332.826,
     todo: true,
     problem: `Review.`,
-    overview: `Every night I dreamt of reuniting with Sita, only to wake in a panicked sweat as the reality came roaring back that I'd lost her forever. I lived in such dread of this cruel trick played by my unconscious mind, I would refuse to sleep until exhaustion overtook me— even as my waking hours offered only thoughts of despair. I had no idea when this daily torment would end. The answer, I feared, was never.`,
+    overview: `Every night I dreamt of reuniting with Sita, only to wake in a panicked sweat as the reality came roaring back that I'd lost her forever. I lived in such dread of this cruel trick played by my unconscious mind, I would put off sleep until exhaustion overtook me— even as my waking hours offered only thoughts of despair. I had no idea when this daily torment would end. The answer, I feared, was never.`,
     lyricUnits: [
         {
             unitMap: {},

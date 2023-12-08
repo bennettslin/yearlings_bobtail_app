@@ -867,8 +867,7 @@ export default {
                         `, hears not a`,
                         {
                             anchor: `worrisome`,
-                            todo: true,
-                            problem: `Review.`,
+                            review: true,
                             card: {
                                 description: `It surprised me that I only had good wishes for Miriam after we broke up, given how combative I was with Sita. But I came away knowing I was indeed worthy of dating the Maras of the world. I didn't have this certainty before, so it felt like an amazing bargain.`,
                                 dotKeys: {
