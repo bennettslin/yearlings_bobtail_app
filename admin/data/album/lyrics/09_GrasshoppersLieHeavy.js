@@ -1043,7 +1043,7 @@ export default {
                             anchor: `bright to your gloom`,
                             cards: [
                                 {
-                                    description: `As we became friends, what I stood to gain from Sita was obvious. Less so was what she gained from me, given my moody temperament. But in time I came to see that her cheery nature masked a lingering depression, which gave me an opening to win her over with kind gestures.`,
+                                    description: `As we became friends, what I stood to gain from Sita was obvious. Less so was what she gained from me, given my moody temperament. But in time I came to see that her pleasant nature masked a lingering depression, which gave me an opening to win her over with kind gestures.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
