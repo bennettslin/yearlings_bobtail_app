@@ -454,7 +454,7 @@ export default {
                             todo: true,
                             problem: `Review.`,
                             card: {
-                                description: `My mother once advised me not to have children, given the autism that runs in our genes, and her difficulties in raising my brother as a result. I had to wonder if Miriam pictured herself giving this talk to her own child, and then downgraded my worth as a lifelong partner in doing so.`,
+                                description: `My mother once advised me not to have children, given the autism that runs in our genes, and her difficulties in raising my brother as a result. I always wondered if each woman I dated would picture herself giving this talk to her own child, causing my worth as a lifelong partner to then plummet.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
