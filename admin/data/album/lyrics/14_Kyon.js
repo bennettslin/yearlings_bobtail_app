@@ -726,7 +726,7 @@ export default {
                             todo: true,
                             problem: `Review.`,
                             card: {
-                                description: `Back when we were just friends, Sita and I got along well because we were both sad people. In hindsight, though, my sadness was rooted in circumstance— whether from being bullied as a child, or out of loneliness as I grew older— and so I got better at dealing with my spells. But Sita suffered from clinical depression, which meant she couldn't easily do the same.`,
+                                description: `Back when Sita and I were just friends, we got along well because we were both sad people. In hindsight, though, my sadness was simply rooted in circumstance— whether from being bullied as a child, or out of loneliness later on. Sita, on the other hand, had clinical depression. So over time, I got better at dealing with my spells— but then I grew impatient with her for being incapable of the same.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
