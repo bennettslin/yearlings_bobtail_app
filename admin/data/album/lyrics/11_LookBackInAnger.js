@@ -386,9 +386,9 @@ export default {
                         {
                             anchor: `cancer nibbled off`,
                             todo: true,
-                            problem: `Revise. Make it a different observation. Talk about being grateful to Catherine.`,
+                            problem: `Review.`,
                             card: {
-                                description: `It was therapeutic enough to write songs about my own disappointments and dysfunctions. It seemed like a gift, then, that others would credit me with giving voice to theirs as well, and that they should admire me for it.`,
+                                description: `After Catherine shamed me into writing intelligible lyrics, my songs began to reflect in earnest my disappointments and dysfunctions. Every now and again, someone would tell me how much one of my lines meant to them, which always threw me for a loop, since I myself hadn't learned to appreciate lyrics in any natural way.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
