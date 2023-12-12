@@ -578,7 +578,7 @@ export default {
                         {
                             anchor: `time capsule`,
                             todo: true,
-                            problem: `Revise. Still not written well.`,
+                            problem: `Revise. Make it more about not having any sympathetic ears today, so hoping for a sympathetic future audience tomorrow.`,
                             card: {
                                 description: [
                                     `In my dejection, I could only envision the next five-year plan as a`,

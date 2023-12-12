@@ -386,9 +386,9 @@ export default {
                         {
                             anchor: `cancer nibbled off`,
                             todo: true,
-                            problem: `Review.`,
+                            problem: `Review. More about listening for meaning in lyrics.`,
                             card: {
-                                description: `After Catherine shamed me into writing intelligible lyrics, my songs began to reflect in earnest my disappointments and dysfunctions. Every now and again, someone would tell me how much one of my lines meant to them, which always threw me for a loop, since I myself hadn't learned to appreciate lyrics in any natural way.`,
+                                description: `After Catherine shamed me into writing intelligible lyrics, my songs began to earnestly reflect my disappointments and dysfunctions. Every now and again, someone would tell me how much one of my lines meant to them, which always threw me for a loop, since I myself hadn't learned to appreciate lyrics in any natural way.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

@@ -1350,8 +1350,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
-                problem: `Review.`,
+                review: true,
                 card: {
                     description: [
                         `On solo trips, I would play on my`,
@@ -1359,7 +1358,7 @@ export default {
                             anchor: `NES`,
                             wiki: `Nintendo_Entertainment_System`,
                         },
-                        `while waiting for the Robitussin to kick in. And sometimes I would keep playing, even as my mind began to wander on its mystical journey. So for years afterward, every 8-bit arcade sound seemed to hide some metaphysical truth that my sober ears just couldn't suss out.`,
+                        `while waiting for the Robitussin to kick in. And sometimes I would just keep playing, even as my mind began to wander on its mystical journey. So for years afterward, every 8-bit arcade sound seemed to hide some metaphysical truth that my sober ears just couldn't suss out.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
