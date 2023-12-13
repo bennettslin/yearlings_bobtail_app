@@ -703,7 +703,7 @@ export default {
                                             anchor: `hope chest`,
                                             wiki: `Hope_chest`,
                                         },
-                                        `stored the assorted dishware and linens gathered by a young woman in preparation for married life. By keeping my feelings of hopelessness close to my literal chest, I was also sealing off this figurative chest of mine.`,
+                                        `stored the assorted dishware and linens gathered by a young woman in preparation for married life. So by keeping my feelings of hopelessness close to one chest, I was also sealing off another.`,
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,

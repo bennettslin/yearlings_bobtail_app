@@ -386,9 +386,9 @@ export default {
                         {
                             anchor: `cancer nibbled off`,
                             todo: true,
-                            problem: `Review. More about listening for meaning in lyrics.`,
+                            problem: `Review.`,
                             card: {
-                                description: `After Catherine shamed me into writing intelligible lyrics, my songs began to earnestly reflect my disappointments and dysfunctions. Every now and again, someone would tell me how much one of my lines meant to them, which always threw me for a loop, since I myself hadn't learned to appreciate lyrics in any natural way.`,
+                                description: `It was therapeutic enough to write songs about my own disappointments. So I was always surprised when others would credit me with giving voice to theirs as well, and that I should be granted any higher status because of it.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -750,8 +750,7 @@ export default {
                         `also weep for`,
                         {
                             anchor: `poor, poor bears`,
-                            todo: true,
-                            problem: `Review.`,
+                            review: true,
                             card: {
                                 description: `His wife Alison then sighs in response, "Poor, poor bears." She recognizes that he, a bear in their mutual fantasy, is just as much an unwitting victim in the power dynamic between them.`,
                                 dotKeys: {
