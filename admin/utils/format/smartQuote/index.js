@@ -70,8 +70,11 @@ const _replaceStraightWithSmartQuotes = text => {
                 // Or it's preceded by a double quote. Just "'Rejoice!'…"
                 text[indexOfCharacter - 1] === '"' ||
 
-                // ... or it's preceded by an opening parenthesis.
-                text[indexOfCharacter - 1] === '('
+                // ... or by an opening parenthesis…
+                text[indexOfCharacter - 1] === '(' ||
+
+                // ... or by a bracket. (Only here for consistency.)
+                text[indexOfCharacter - 1] === '['
             ) ? openingSmartQuote : closingSmartQuote
 
             text = _replaceCharacterAtIndex(text, indexOfCharacter, newCharacter)
