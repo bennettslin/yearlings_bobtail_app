@@ -38,20 +38,21 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                review: true,
+                todo: true,
+                problem: `Revise. Mention Japanese colony.`,
                 card: {
                     description: [
-                        `My parents came from`,
+                        `My parents come from`,
                         {
                             anchor: `Taiwan`,
                             wiki: `Taiwan`,
                         },
-                        `, an island off the coast of China. When the`,
+                        `, an island off the coast of China. After the`,
                         {
                             anchor: `Nationalists`,
                             wiki: `Kuomintang`,
                         },
-                        `took over in 1949, they made Mandarin Chinese the official language. So the Taiwanese we spoke at home included a few Chinese words, such as`,
+                        `invaded and took over in 1949, Mandarin Chinese became the official language. So the Taiwanese we spoke at home included a few Chinese words, such as`,
                         {
                             isItalic: true,
                             lyric: `didi`,
