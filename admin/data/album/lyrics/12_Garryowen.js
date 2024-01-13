@@ -396,7 +396,7 @@ export default {
                             todo: true,
                             problem: `Review.`,
                             card: {
-                                description: `But vomiting into a toilet, and then seeing your miserable reflection in the water staring back at you, only works as a spiritual cleanser the first time. After that, it's a cliche.`,
+                                description: `But vomiting into a toilet, and then seeing your miserable reflection in the water staring back at you, only works as a wake-up call the first time. After that, it's a cliche.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
