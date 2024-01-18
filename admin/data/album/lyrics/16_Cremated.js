@@ -451,8 +451,7 @@ export default {
                         `Though, she`,
                         {
                             anchor: `ponders the children`,
-                            todo: true,
-                            problem: `Review.`,
+                            review: true,
                             card: {
                                 description: `My mother once advised me not to have children, given the autism that runs in our genes, and her difficulties in raising my brother as a result. But by this reasoning, no woman should even want me as a lifetime partner to begin with.`,
                                 dotKeys: {

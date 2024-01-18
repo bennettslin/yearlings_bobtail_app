@@ -723,8 +723,7 @@ export default {
                         `, and`,
                         {
                             anchor: `sadness for what it was`,
-                            todo: true,
-                            problem: `Review.`,
+                            review: true,
                             card: {
                                 description: `Back when Sita and I were just friends, we got along well because we were both sad people. But in hindsight, my sadness was simply rooted in circumstance— whether from being bullied as a child, or out of loneliness later on. Sita, on the other hand, suffered from clinical depression. So over time, I got better at dealing with my spells— but then I grew impatient with her for not doing the same.`,
                                 dotKeys: {
