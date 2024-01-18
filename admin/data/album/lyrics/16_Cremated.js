@@ -454,7 +454,7 @@ export default {
                             todo: true,
                             problem: `Review.`,
                             card: {
-                                description: `My mother once advised me not to have children, given the autism that runs in our genes, and her difficulties in raising my brother as a result. But for the women I dated, the same reasoning would advise them not to accept me as a lifetime partner at all.`,
+                                description: `My mother once advised me not to have children, given the autism that runs in our genes, and her difficulties in raising my brother as a result. But by this reasoning, no woman should even want me as a lifetime partner to begin with.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

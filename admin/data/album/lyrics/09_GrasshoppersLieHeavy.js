@@ -347,7 +347,7 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `Unsure of my background and still feeling ambushed, Sita hesitates. But as we chat, I win her over with my love for reading and knowledge of literature.`,
+                                        `Unsure of my background and still feeling ambushed, Sita hesitates. But as we chat, I win her over with my passion for reading and knowledge of literature.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,

@@ -27,21 +27,29 @@ export default {
     playerStartTime: 3332.826,
     todo: true,
     problem: `Review.`,
-    overview: `Every night I dreamt of reuniting with Sita, only to wake in a panicked sweat as the reality came roaring back that I'd lost her forever. I lived in such dread of this cruel trick played by my unconscious mind, I would put off sleep until exhaustion overtook me— even as my waking hours offered only thoughts of despair. I had no idea when this daily torment would end. The answer, I feared, was never.`,
+    overview: `Every night I dreamt of getting back together with Sita, only to wake in a panicked sweat as the reality came roaring back that I'd lost her forever. I dreaded this cruel trick played by my unconscious mind, and I would put off sleep until exhaustion overtook me— even as my waking hours offered only thoughts of despair. I had no idea when this daily torment would end. The answer, I feared, was never.`,
     lyricUnits: [
         {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 todo: true,
-                problem: `Review one more time.`,
-                card: {
-                    description: `This is the other song on the album that was an original Yearlings staple. As with "M," I changed the arrangement but kept the lyrics. I suppose it's telling of my relationship with Sita that I only ever wrote one romantic song for her, and it's about the dreams that will haunt me as an old man filled with regret for having lost her long ago.`,
-                    dotKeys: {
-                        [BACKSTORY]: true,
-                        [OBSERVATION]: true,
+                problem: `Revise. Make it more about having a hidden meaning.`,
+                cards: [
+                    {
+                        description: `I once read that we typically have four dreams per night. Over a lifetime of seventy years, that's about a hundred thousand dreams. So here I am, dreaming the very last dream I'll ever dream.`,
+                        dotKeys: {
+                            [NARRATIVE]: true,
+                            [OBSERVATION]: true,
+                        },
                     },
-                },
+                    {
+                        wormhole: {
+                            wormholeKey: `seventy_years`,
+                            wormholePrefix: FORESHADOW_OF_WORMHOLE_PREFIX,
+                        },
+                    },
+                ],
             },
         },
         {
@@ -60,9 +68,15 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: `During the years afterward when I was trying to be good again, I kept digging further into my past to figure out where things went wrong. So for this song, I decided to revisit the sonic textures of all the other songs on the album in reverse, starting with the piano from "Vegan Proclamation."`,
+                    description: [
+                        `This is the other song on the album that was originally a Yearlings staple. I wrote it after Sita complained that none of our songs were about her. As with "M," I kept the true meaning of its lyrics a secret, but it was probably obvious just the same. After all, if my last dream as an old man is about her, this only has any real impact if we`,
+                        {
+                            isEmphasis: true,
+                            lyric: `hadn't`,
+                        },
+                        `stayed together.`,
+                    ],
                     dotKeys: {
-                        [BACKSTORY]: true,
                         [SONGCRAFT]: true,
                     },
                 },
@@ -75,28 +89,7 @@ export default {
             mainVerses: [
                 {
                     mixTime: `0:16:00.00`,
-                    lyric: [
-                        `My`,
-                        {
-                            anchor: `hundred thousandth dream`,
-                            cards: [
-                                {
-                                    description: `I read once that we typically have four dreams per night. Over a lifetime of seventy years, that's about a hundred thousand dreams. So here I am, dreaming the very last dream I'll ever dream.`,
-                                    dotKeys: {
-                                        [NARRATIVE]: true,
-                                        [OBSERVATION]: true,
-                                    },
-                                },
-                                {
-                                    wormhole: {
-                                        wormholeKey: `seventy_years`,
-                                        wormholePrefix: FORESHADOW_OF_WORMHOLE_PREFIX,
-                                    },
-                                },
-                            ],
-                        },
-                        `, I bumped into my Sita.`,
-                    ],
+                    lyric: `My hundred thousandth dream, I bumped into my Sita.`,
                 },
                 {
                     mixTime: `0:22:06.66`,
@@ -137,11 +130,15 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
+                problem: `Revise. Combine the two.`,
                 card: {
                     description: [
+                        `During the years afterward when I was trying to be good again, I kept digging further into my past to figure out where things went wrong. So for this song, I decided to revisit the sonic textures of all the other songs on the album in reverse, starting with the piano from "Vegan Proclamation."`,
                         `We segue into this first verse with the arpeggiated chords from "Cremated," followed by the slide guitar and natural harmonics heard in "On a Golden Cord."`,
                     ],
                     dotKeys: {
+                        [BACKSTORY]: true,
                         [SONGCRAFT]: true,
                     },
                 },
