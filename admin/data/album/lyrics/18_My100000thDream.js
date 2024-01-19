@@ -34,22 +34,21 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 todo: true,
-                problem: `Revise. Make it more about having a hidden meaning.`,
-                cards: [
-                    {
-                        description: `I once read that we typically have four dreams per night. Over a lifetime of seventy years, that's about a hundred thousand dreams. So here I am, dreaming the very last dream I'll ever dream.`,
-                        dotKeys: {
-                            [NARRATIVE]: true,
-                            [OBSERVATION]: true,
+                problem: `Review.`,
+                card: {
+                    description: [
+                        `This is the other song on the album that was a Yearlings original. I wrote it after Sita complained that I didn't have any romantic songs about her. As with "M," I kept its true meaning a secret, but I probably wasn't fooling anyone. After all, the  emotional impact of its lyrics lay precisely in my certainty that Sita and I`,
+                        {
+                            isEmphasis: true,
+                            lyric: `weren't`,
                         },
+                        `going to stay together.`,
+                    ],
+                    dotKeys: {
+                        [BACKSTORY]: true,
+                        [SONGCRAFT]: true,
                     },
-                    {
-                        wormhole: {
-                            wormholeKey: `seventy_years`,
-                            wormholePrefix: FORESHADOW_OF_WORMHOLE_PREFIX,
-                        },
-                    },
-                ],
+                },
             },
         },
         {
@@ -67,16 +66,12 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
+                problem: `Review.`,
                 card: {
-                    description: [
-                        `This is the other song on the album that was originally a Yearlings staple. I wrote it after Sita complained that none of our songs were about her. As with "M," I kept the true meaning of its lyrics a secret, but it was probably obvious just the same. After all, if my last dream as an old man is about her, this only has any real impact if we`,
-                        {
-                            isEmphasis: true,
-                            lyric: `hadn't`,
-                        },
-                        `stayed together.`,
-                    ],
+                    description: `During the years afterward when I was trying to be a good person again, I kept digging further into my past to figure out where things went wrong. So for this song, I decided to revisit the sonic texture of every other song in reverse, starting with the piano from "Vegan Proclamation."`,
                     dotKeys: {
+                        [BACKSTORY]: true,
                         [SONGCRAFT]: true,
                     },
                 },
@@ -89,7 +84,28 @@ export default {
             mainVerses: [
                 {
                     mixTime: `0:16:00.00`,
-                    lyric: `My hundred thousandth dream, I bumped into my Sita.`,
+                    lyric: [
+                        `My`,
+                        {
+                            anchor: `hundred thousandth dream`,
+                            cards: [
+                                {
+                                    description: `I once read that we typically have four dreams per night. Over a lifetime of seventy years, that's about a hundred thousand dreams. So here I am, dreaming the very last dream I'll ever dream.`,
+                                    dotKeys: {
+                                        [NARRATIVE]: true,
+                                        [OBSERVATION]: true,
+                                    },
+                                },
+                                {
+                                    wormhole: {
+                                        wormholeKey: `seventy_years`,
+                                        wormholePrefix: FORESHADOW_OF_WORMHOLE_PREFIX,
+                                    },
+                                },
+                            ],
+                        },
+                        `, I bumped into my Sita.`,
+                    ],
                 },
                 {
                     mixTime: `0:22:06.66`,
@@ -131,14 +147,10 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 todo: true,
-                problem: `Revise. Combine the two.`,
+                problem: `Review.`,
                 card: {
-                    description: [
-                        `During the years afterward when I was trying to be good again, I kept digging further into my past to figure out where things went wrong. So for this song, I decided to revisit the sonic textures of all the other songs on the album in reverse, starting with the piano from "Vegan Proclamation."`,
-                        `We segue into this first verse with the arpeggiated chords from "Cremated," followed by the slide guitar and natural harmonics heard in "On a Golden Cord."`,
-                    ],
+                    description: `This first verse now leads with the arpeggiated chords heard in "Cremated," followed by the slide guitar and natural harmonics from "On a Golden Cord."`,
                     dotKeys: {
-                        [BACKSTORY]: true,
                         [SONGCRAFT]: true,
                     },
                 },

@@ -89,7 +89,8 @@
 
 .fontSize__lyricMultipleColumns {
 
-    $fontSize__bothColumnsShown: 0.95em;
+    // TODO: Check if line with "pulled your floater away" is still a concern.
+    $fontSize__bothColumnsShown: 0.935em;
 
     // Make font sizes smaller when showing both columns.
     .DW__desktopWidth
