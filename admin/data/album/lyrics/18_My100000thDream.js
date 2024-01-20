@@ -26,23 +26,23 @@ export default {
     mixStartTime: `0:01:22.94`,
     playerStartTime: 3332.826,
     todo: true,
-    problem: `Review.`,
-    overview: `Every night I dreamt of getting back together with Sita, only to wake in a panicked sweat as the reality came roaring back that I'd lost her forever. I dreaded this cruel trick played by my unconscious mind, and I would put off sleep until exhaustion overtook me— even as my waking hours offered only thoughts of despair. I had no idea when this daily torment would end. The answer, I feared, was never.`,
+    problem: `Revise. Instead of "waking hours," just say "staying awake" or something.`,
+    overview: `Every night I dreamt of getting back together with Sita, only to wake in a panicked sweat as the reality came roaring back that I'd lost her forever. I lived in such dread of this cruel trick played by my unconscious mind, I would put off sleep until exhaustion overtook me— and yet my waking hours offered only thoughts of despair. I had no idea when this daily torment would end. The answer, I feared, was never.`,
     lyricUnits: [
         {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 todo: true,
-                problem: `Review.`,
+                problem: `Revise. Grammar might still be off.`,
                 card: {
                     description: [
-                        `This is the other song on the album that was a Yearlings original. I wrote it after Sita complained that I didn't have any romantic songs about her. As with "M," I kept its true meaning a secret, but I probably wasn't fooling anyone. After all, the  emotional impact of its lyrics lay precisely in my certainty that Sita and I`,
+                        `This is the other song on the album that was a Yearlings original. After Sita complained that I didn't have any romantic songs about her, I feigned to write one, though it's actually a wistful remembrance of our time together. I kept this true meaning a secret, but as with "M," I probably wasn't fooling anyone. After all, the lyrics only make sense if we`,
                         {
                             isEmphasis: true,
                             lyric: `weren't`,
                         },
-                        `going to stay together.`,
+                        `going to stay together forever.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -66,8 +66,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
-                problem: `Review.`,
+                review: true,
                 card: {
                     description: `During the years afterward when I was trying to be a good person again, I kept digging further into my past to figure out where things went wrong. So for this song, I decided to revisit the sonic texture of every other song in reverse, starting with the piano from "Vegan Proclamation."`,
                     dotKeys: {
@@ -146,8 +145,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
-                problem: `Review.`,
+                review: true,
                 card: {
                     description: `This first verse now leads with the arpeggiated chords heard in "Cremated," followed by the slide guitar and natural harmonics from "On a Golden Cord."`,
                     dotKeys: {
