@@ -34,16 +34,9 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 todo: true,
-                problem: `Revise. Grammar might still be off.`,
+                problem: `Review.`,
                 card: {
-                    description: [
-                        `This is the other song on the album that was a Yearlings original. After Sita complained that I didn't have any romantic songs about her, I feigned to write one, though it's actually a wistful remembrance of our time together. I kept this true meaning a secret, but as with "M," I probably wasn't fooling anyone. After all, the lyrics only make sense if we`,
-                        {
-                            isEmphasis: true,
-                            lyric: `weren't`,
-                        },
-                        `going to stay together forever.`,
-                    ],
+                    description: `This is the other song on the album that was originally performed by the Yearlings. I wrote it to please Sita after she complained that I didn't have any romantic songs about her— although it's actually a wistful remembrance of our time together, given my certainty that we would eventually break up. I kept its true meaning a secret, of course, but as with "M," I probably wasn't fooling anyone.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGCRAFT]: true,
