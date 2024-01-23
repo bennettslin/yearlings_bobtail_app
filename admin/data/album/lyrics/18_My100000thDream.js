@@ -36,7 +36,7 @@ export default {
                 todo: true,
                 problem: `Review.`,
                 card: {
-                    description: `This is the other song on the album that was originally performed by the Yearlings. I wrote it to please Sita after she complained that I didn't have any romantic songs about her— although it's actually a wistful remembrance of our time together, given my certainty that we would eventually break up. I kept its true meaning a secret, of course, but as with "M," I probably wasn't fooling anyone.`,
+                    description: `This is the other song on the album that was originally performed by the Yearlings. I wrote it to please Sita after she complained that I didn't have any romantic songs about her— although it's actually a wistful remembrance of our time together, given my certainty that we would eventually break up. I kept this true meaning a secret, of course, but as with "M," I probably wasn't fooling anyone.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGCRAFT]: true,

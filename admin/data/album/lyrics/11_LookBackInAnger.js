@@ -386,7 +386,7 @@ export default {
                         {
                             anchor: `cancer nibbled off`,
                             todo: true,
-                            problem: `Review.`,
+                            problem: `Revise. Make it more about knowing I was whining.`,
                             card: {
                                 description: `It was therapeutic enough to write songs about my own disappointments. So I was always surprised when others would credit me with giving voice to theirs as well, and that I should be granted a higher status because of it.`,
                                 dotKeys: {
