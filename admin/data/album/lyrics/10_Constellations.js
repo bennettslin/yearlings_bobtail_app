@@ -417,8 +417,7 @@ export default {
                     lyric: [
                         `We ride as`,
                         {
-                            // NOTE: I changed from "Finnugreec tongue."
-                            anchor: `Finnugreec-tongue`,
+                            anchor: `Finnugreec tongue`,
                             properNoun: true,
                             cards: [
                                 {
@@ -1814,7 +1813,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `For a song about recreational drug use, I naturally turned to the Beatles during their psychedelic period for ideas. "`,
+                        `For a song about recreational drug use, I naturally sought ideas from the Beatles during their psychedelic period. "`,
                         {
                             anchor: `Tomorrow Never Knows`,
                             wiki: `Tomorrow_Never_Knows`,
@@ -1893,7 +1892,7 @@ export default {
                             review: true,
                             cards: [
                                 {
-                                    description: `That night at the drugstore, I advised everyone to get the small bottle of Robitussin. We then lined up at separate checkouts to avoid attracting suspicion. When Howie finally rejoined us, we saw that he'd gone back for the large bottle, thinking the small one wouldn't be enough.`,
+                                    description: `That night at the drugstore, I advised everyone to get the small bottle of Robitussin. We then lined up at separate checkouts to avoid attracting suspicion. When Howie finally rejoined us, we saw that he'd gone back for the large bottle thinking the small one wouldn't be enough.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
