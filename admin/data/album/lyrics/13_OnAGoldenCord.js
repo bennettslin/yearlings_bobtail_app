@@ -667,10 +667,9 @@ export default {
                         `Now the`,
                         {
                             anchor: `jester teeters`,
-                            todo: true,
-                            problem: `Review one more time.`,
+                            review: true,
                             card: {
-                                description: `I was stopped by a pair of police officers that night. They judged me to be harmless and sent me on my way. I'm aware this might not have been the outcome for others.`,
+                                description: `I was stopped by a pair of police officers that night. They judged me to be harmless and sent me on my way. I'm aware this might not have been the outcome for some of my friends, of course.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

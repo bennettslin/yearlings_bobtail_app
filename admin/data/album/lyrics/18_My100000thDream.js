@@ -25,18 +25,16 @@ export default {
     referenceDescription: `Piano in measure 1`,
     mixStartTime: `0:01:22.94`,
     playerStartTime: 3332.826,
-    todo: true,
-    problem: `Revise. Instead of "waking hours," just say "staying awake" or something.`,
-    overview: `Every night I dreamt of getting back together with Sita, only to wake in a panicked sweat as the reality came roaring back that I'd lost her forever. I lived in such dread of this cruel trick played by my unconscious mind, I would put off sleep until exhaustion overtook me— and yet my waking hours offered only thoughts of despair. I had no idea when this daily torment would end. The answer, I feared, was never.`,
+    review: true,
+    overview: `Each night I dreamt of happily reuniting with Sita, only to wake in panic as the reality set in that I'd lost her forever. I lived in such dread of this cruel trick played by my unconscious mind, I refused to sleep until exhaustion overtook me— even as my conscious mind could only dwell in despair. I had no idea when this torment would end. The answer, I feared, was never.`,
     lyricUnits: [
         {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
-                problem: `Review.`,
+                review: true,
                 card: {
-                    description: `This is the other song on the album that was originally performed by the Yearlings. I wrote it to please Sita after she complained that I didn't have any romantic songs about her— although it's actually a wistful remembrance of our time together, given my certainty that we would eventually break up. I kept this true meaning a secret, of course, but as with "M," I probably wasn't fooling anyone.`,
+                    description: `This is the other song on the album that was originally performed by the Yearlings. I wrote it to please Sita after she complained that I didn't have any romantic songs about her— although it's actually a wistful remembrance of our time together, given my certainty that we would soon break up. I kept this part of its meaning a secret, of course, but as with "M," I probably wasn't fooling anyone.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGCRAFT]: true,
