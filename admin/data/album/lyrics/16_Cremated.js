@@ -878,8 +878,7 @@ export default {
                         `"`,
                         {
                             anchor: `Bless her`,
-                            todo: true,
-                            problem: `Review.`,
+                            review: true,
                             card: {
                                 description: [
                                     {
@@ -911,8 +910,7 @@ export default {
                         {
                             anchor: `Godspeed`,
                             properNoun: true,
-                            todo: true,
-                            problem: `Review.`,
+                            review: true,
                             cards: [
                                 {
                                     description: `To add to my insecurities as a child about being raised Buddhist, I also looked different from everyone else in Sasha's world. And so my inferiority complex failed to distinguish between carrying faulty genes, belonging to a faulty faith, and being of a faulty race. They all seemed to derive from a single defect at the core of my being.`,
