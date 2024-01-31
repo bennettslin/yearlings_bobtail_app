@@ -879,10 +879,9 @@ export default {
                         {
                             anchor: `Bless her`,
                             todo: true,
-                            problem: `Revise. This one and the next are together trying to convey an idea that I still don't think is quite there. Like, the idea of Buddhism seems to come out of nowhere? How is it related, exactly? If articulated correctly, this could be one of my best points, so really think it through. Should be about White women. The Buddhas I was told to pray to literally seemed like inferior gods, which then made me feel like the inferior creation.`,
+                            problem: `Review.`,
                             card: {
                                 description: [
-                                    `The title of the play`,
                                     {
                                         isItalic: true,
                                         lyric: {
@@ -890,7 +889,12 @@ export default {
                                             wiki: `Children_of_a_Lesser_God_(play)`,
                                         },
                                     },
-                                    `, which centers on a deaf woman, suggests that being disabled is like living in a world created by an inferior deity. But I interpreted it differently as a child. Given the autism that ran in my family, which correlated in my mind with our foreign way of worship, I assumed it meant that the disabled`,
+                                    `, a theatrical play by`,
+                                    {
+                                        anchor: `Mark Medoff`,
+                                        wiki: `Mark_Medoff`,
+                                    },
+                                    `, centers on a young deaf woman. While its title suggests that being disabled is like living in a world created by an inferior deity, I interpreted it differently as a child. Given the autism that runs in my family, and its correlation in my mind with our foreign way of worship, I had to assume that the disabled`,
                                     {
                                         isEmphasis: true,
                                         lyric: `themselves`,
@@ -898,6 +902,7 @@ export default {
                                     `are the inferior creations.`,
                                 ],
                                 dotKeys: {
+                                    [BACKSTORY]: true,
                                     [OBSERVATION]: true,
                                 },
                             },
@@ -907,10 +912,10 @@ export default {
                             anchor: `Godspeed`,
                             properNoun: true,
                             todo: true,
-                            problem: `Revise. See above.`,
+                            problem: `Review.`,
                             cards: [
                                 {
-                                    description: `To compound my insecurities as a child about being raised Buddhist, my complexion was different from that of everyone else in Sasha's world. And so my inferiority complex failed to distinguish between carrying faulty genes, following a faulty faith, and being of a faulty race. They all seemed to derive from a single congenital defect at the core of my being.`,
+                                    description: `To add to my insecurities as a child about being raised Buddhist, I also looked different from everyone else in Sasha's world. And so my inferiority complex failed to distinguish between carrying faulty genes, belonging to a faulty faith, and being of a faulty race. They all seemed to derive from a single defect at the core of my being.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [OBSERVATION]: true,
