@@ -296,7 +296,14 @@ export default {
                             anchor: `all the points`,
                             review: true,
                             card: {
-                                description: `During that year when Sita and I got to know each other as friends, I still tried to impress her without appearing as such. One time, I solved her friend's Rubik's Cube— a skill I'd picked up during my first five-year plan. As her friend raved, I casually shrugged, while Sita sat and smiled. I'd become a puzzle for her to solve.`,
+                                description: [
+                                    `During that year when Sita and I got to know each other as friends, I still tried to impress her without appearing as such. One time, I solved her friend's`,
+                                    {
+                                        anchor: `Rubik's Cube`,
+                                        wiki: `Rubik's_Cube`,
+                                    },
+                                    `— a skill I'd picked up during my first five-year plan. As her friend raved, I casually shrugged, while Sita sat and smiled. I'd become a puzzle for her to solve.`,
+                                ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

@@ -206,10 +206,10 @@ export default {
                             anchor: `No minutia left unmastered`,
                             card: {
                                 description: [
-                                    `Though my goal was to be well versed in every important subject matter, I got the most satisfaction from showing off a random skill with seeming nonchalance. So I made sure to set aside time for purely fanciful pursuits, like learning to solve a`,
+                                    `Though my goal was to be well versed in every important subject matter, I got the most satisfaction from showing off a random skill with seeming nonchalance. So I made sure to set aside time for purely fanciful pursuits, like memorizing the`,
                                     {
-                                        anchor: `Rubik's Cube`,
-                                        wiki: `Rubik's_Cube`,
+                                        anchor: `periodic table`,
+                                        wiki: `Periodic_table`,
                                     },
                                     `.`,
                                 ],
