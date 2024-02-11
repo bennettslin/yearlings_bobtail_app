@@ -42,6 +42,7 @@ const _replaceStraightWithSmartQuotes = text => {
                 (
                     // It's an opening quote if it's the first character.
                     indexOfCharacter === 0 &&
+
                     /**
                      * And the second character isn't an "s." This is just
                      * because of "Bobtail's" in Kyon.
@@ -57,10 +58,10 @@ const _replaceStraightWithSmartQuotes = text => {
                     // And the second character also isn't a space.
                     text[indexOfCharacter + 1] !== ' '
                 ) || (
-                    // Or it's not the first character...
+                    // Or it's not the first character…
                     indexOfCharacter &&
 
-                    // And it's preceded by a space...
+                    // And it's preceded by a space…
                     text[indexOfCharacter - 1] === ' '
                 ) ||
 
@@ -70,11 +71,18 @@ const _replaceStraightWithSmartQuotes = text => {
                 // Or it's preceded by a double quote. Just "'Rejoice!'…"
                 text[indexOfCharacter - 1] === '"' ||
 
-                // ... or by an opening parenthesis…
+                // … or by an opening parenthesis…
                 text[indexOfCharacter - 1] === '(' ||
 
-                // ... or by a bracket. (Only here for consistency.)
+                // … or by a bracket. (Only here for consistency.)
                 text[indexOfCharacter - 1] === '['
+
+            ) && !(
+                // And it isn't a contracted decade.
+                !isNaN(text[indexOfCharacter + 1]) &&
+                text[indexOfCharacter + 2] === '0' &&
+                text[indexOfCharacter + 3] === 's'
+
             ) ? openingSmartQuote : closingSmartQuote
 
             text = _replaceCharacterAtIndex(text, indexOfCharacter, newCharacter)
