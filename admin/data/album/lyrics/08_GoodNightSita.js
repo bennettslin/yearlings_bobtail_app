@@ -160,7 +160,7 @@ export default {
                                         anchor: `Secret decoder rings`,
                                         wiki: `Secret_decoder_ring`,
                                     },
-                                    `were promotional toys in the 60s that allowed children to decipher a television program's encrypted messages. Oftentimes, what they revealed was a preview of the next episode. Similarly, I would have liked to have every date end with a preview of the next one.`,
+                                    `were promotional toys in the '60s that allowed children to decipher a television program's encrypted messages. Oftentimes, what they revealed was a preview of the next episode. Similarly, I would have liked to have every date end with a preview of the next one.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -705,7 +705,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `To continue with the 70s feel for this song, I gathered ideas from the band`,
+                        `To continue with the '70s feel for this song, I gathered ideas from the band`,
                         {
                             anchor: `Television`,
                             wiki: `Television_(band)`,
@@ -965,12 +965,12 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `Children's songs from the 70s are a treasure trove of musical wisdom. They were composed by professionals, but then arranged for the popular styles of their time. A great example is the soundtrack for`,
+                        `Children's songs from the '70s are a treasure trove of musical wisdom. They were composed by professionals, but then arranged for the popular styles of their time. A great example is the soundtrack for`,
                         {
                             anchor: `The New Mickey Mouse Club`,
                             wiki: `The_Mickey_Mouse_Club`,
                         },
-                        `, a disco 70s revival of the original 50s show. In particular, the song "Let's Go Day" gave me the idea to play portamento quarter notes on an`,
+                        `, a disco '70s revival of the original '50s show. In particular, the song "Let's Go Day" gave me the idea to play portamento quarter notes on an`,
                         {
                             anchor: `analog synthesizer`,
                             wiki: `Analog_synthesizer`,

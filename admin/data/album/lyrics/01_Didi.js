@@ -594,7 +594,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `As home studios became more affordable in the early 00s, I sensed that a wave of artists would soon take the field of music recording to new heights, as`,
+                        `As home studios became more affordable in the early '00s, I sensed that a wave of artists would soon take the field of music recording to new heights, as`,
                         {
                             anchor: `Brian Wilson`,
                             wiki: `Brian_Wilson`,

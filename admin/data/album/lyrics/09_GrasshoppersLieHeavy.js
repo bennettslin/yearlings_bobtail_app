@@ -375,7 +375,7 @@ export default {
                                             anchor: `Schwa`,
                                             wiki: `Schwa_(art)`,
                                         },
-                                        `is the underground artwork of Bill Barker. In the 90s, stickers of his oblong alien heads began to show up on newspaper racks and street signs. Truth be told, it was all a mystery to me. In those days, the Web didn't explain most things, and I wasn't in the habit of checking if it did.`,
+                                        `is the underground artwork of Bill Barker. In the '90s, stickers of his oblong alien heads began to show up on newspaper racks and street signs. Truth be told, it was all a mystery to me. In those days, the Web didn't explain most things, and I wasn't in the habit of checking if it did.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,

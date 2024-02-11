@@ -696,7 +696,7 @@ export default {
                                         anchor: `New Age`,
                                         wiki: `New_Age`,
                                     },
-                                    `belief in the 70s. Like Beyonders, star people have no recollection of their stellar origins. The letters from RI Research undoubtedly drew their material from this body of thought.`,
+                                    `belief in the '70s. Like Beyonders, star people have no recollection of their stellar origins. The letters from RI Research undoubtedly drew their material from this body of thought.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
