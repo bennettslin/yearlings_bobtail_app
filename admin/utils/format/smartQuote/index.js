@@ -34,6 +34,10 @@ const _replaceStraightWithSmartQuotes = text => {
         openingSmartQuote,
         closingSmartQuote,
     }) => {
+        if (typeof text !== 'string') {
+            return text
+        }
+
         const indicesOfCharacter =
             _getAllIndicesOfCharacter(text, straightQuote)
 
