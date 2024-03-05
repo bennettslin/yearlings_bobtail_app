@@ -226,14 +226,16 @@ export default {
                         `Drunk pissed`,
                         {
                             anchor: `punks tryst,`,
+                            todo: true,
+                            problem: `Review.`,
                             card: {
                                 description: [
-                                    `At the time, I wore`,
+                                    `I wore`,
                                     {
                                         anchor: `baseball tees`,
                                         wiki: `Raglan_sleeve`,
                                     },
-                                    `and was still baby-faced enough to be mistaken for a middle schooler. Tristan, one of the punks in the thieving group, liked our ragtag look and referred to us as the`,
+                                    `back then, thinking it could appeal to the most women by alienating the fewest subcultures. On top of that, I was still baby-faced enough to be mistaken for a middle schooler. Tristan, one of the punks in the thieving group, liked our ragtag look and referred to us as the`,
                                     {
                                         anchor: `Young Ones`,
                                         wiki: `The_Young_Ones_(TV_series)`,
