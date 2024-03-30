@@ -950,8 +950,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
-                problem: `Review`,
+                review: true,
                 card: {
                     description: [
                         `While fleshing out the lyrics in this chorus, I noticed that a handful of words in the first stanza are`,
