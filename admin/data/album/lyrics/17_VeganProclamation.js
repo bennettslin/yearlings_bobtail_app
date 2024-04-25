@@ -364,7 +364,7 @@ export default {
                                         ],
                                     },
                                 },
-                                `. Because if we can't ever be`,
+                                `. Because, if we can't ever be`,
                                 {
                                     anchor: `known to be dead`,
                                     card: {
