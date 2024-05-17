@@ -1,7 +1,8 @@
 export default {
     title: 'prologue',
     isLogue: true,
-    review: true,
+    todo: true,
+    problem: `Revise. Yearling's Bobtail should follow completion for clarity.`,
     overview: [
         `Hi, I'm Bennett! A long while back, I went through an awful breakup. I then spent the next five years writing all the songs and recording all the parts for`,
         {

@@ -950,7 +950,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                review: true,
+                todo: true,
+                problem: `Review.`,
                 card: {
                     description: [
                         `While fleshing out the lyrics in this chorus, I noticed that a handful of words in the first stanza are`,
@@ -958,7 +959,7 @@ export default {
                             anchor: `homophones`,
                             wiki: `Homophone`,
                         },
-                        `of their counterparts in the second. Like "mourn" with "morn," and "born" with "borne." So I tried to make the two stanzas match phonetically wherever possible, which I think gave me the idea for doublespeaker rhyme later on.`,
+                        `of their counterparts in the second. Like "mourn" with "morn," and "born" with "borne." So I tried to make the two stanzas match phonetically wherever possible, which gave me the idea for doublespeaker rhyme later on.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
