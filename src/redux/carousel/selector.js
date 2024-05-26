@@ -6,6 +6,7 @@ import { mapSelectedDotsBit } from '../dots/selector'
 import { mapIsLyricLogue } from '../lyric/selector'
 import { mapIsOverlayShown } from '../overlay/selector'
 import { mapIsOverviewShown } from '../overview/selector'
+import { mapIsSliderTouched } from '../slider/selector'
 import { mapIsTipsShown } from '../tips/selector'
 import {
     mapIsCarouselShown,
@@ -30,6 +31,7 @@ const getMapIsCarouselOrNavShowable = checkForNav => createSelector(
     mapIsTipsShown,
     mapIsLyricExpanded,
     mapIsActivated,
+    mapIsSliderTouched,
     (
         isCarouselNotShowable,
         isOverlayShown,
@@ -37,6 +39,7 @@ const getMapIsCarouselOrNavShowable = checkForNav => createSelector(
         isTipsShown,
         isLyricExpanded,
         isActivated,
+        isSliderTouched,
     ) => getIsCarouselOrNavShowable({
         checkForNav,
         isCarouselNotShowable,
@@ -45,6 +48,7 @@ const getMapIsCarouselOrNavShowable = checkForNav => createSelector(
         isTipsShown,
         isLyricExpanded,
         isActivated,
+        isSliderTouched,
     }),
 )
 

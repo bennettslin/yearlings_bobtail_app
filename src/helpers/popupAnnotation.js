@@ -9,6 +9,8 @@ export const getIsPopupAnnotationShown = ({
     canCarouselNavMount,
     isOverlayingAnnotation,
     isWikiShown,
+    isActivated,
+    isSliderTouched,
 
 }) => {
     // First determine if *any* popup annotation is shown.
@@ -33,7 +35,9 @@ export const getIsPopupAnnotationShown = ({
         !isScoreShown &&
         !isAboutShown &&
         !isPromoShown &&
-        !isWikiShown
+        !isWikiShown &&
+        !isActivated &&
+        !isSliderTouched
 
     /**
      * Then determine if *this* popup annotation is shown. Popup annotation

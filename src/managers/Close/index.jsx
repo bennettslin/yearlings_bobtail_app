@@ -194,6 +194,7 @@ const CloseHandler = forwardRef((props, ref) => {
         if (isSliderMoving || isActivated) {
             closeJustTopmost()
             closeMainSections({
+                exemptAnnotation: true,
                 exemptActivatedVerse: true,
                 exemptLyric: true,
             })

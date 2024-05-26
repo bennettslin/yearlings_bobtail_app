@@ -52,6 +52,7 @@
     );
 
     .DW__desktopWidth
+    .RW__carouselAndNavShowable
     .ShW__annotationShown.ShW__carouselShown
     & {
         mask-image: $gradient__lyric__desktopCarousel;

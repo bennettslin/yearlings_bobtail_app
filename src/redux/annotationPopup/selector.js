@@ -1,6 +1,7 @@
 import { createSelector } from 'reselect'
 import { getIsOverlayingAnnotation } from '../../helpers/main'
 import { getIsPopupAnnotationShown } from '../../helpers/popupAnnotation'
+import { mapIsActivated } from '../activated/selector'
 import { mapIsPhoneWidth } from '../device/selector'
 import { mapIsSongChangeDone } from '../entrance/selector'
 import { mapLyricAnnotationIndex } from '../lyric/selector'
@@ -13,6 +14,7 @@ import {
 } from '../toggle/selector'
 import { mapCanCarouselNavMount } from '../viewport/selector'
 import { mapIsWikiShown } from '../wiki/selector'
+import { mapIsSliderTouched } from '../slider/selector'
 
 export const mapIsOverlayingAnnotation = createSelector(
     mapIsPhoneWidth,
@@ -36,6 +38,8 @@ export const getMapIsPopupAnnotationShown = inMain => createSelector(
     mapCanCarouselNavMount,
     mapIsOverlayingAnnotation,
     mapIsWikiShown,
+    mapIsActivated,
+    mapIsSliderTouched,
     (
         isSongChangeDone,
         lyricAnnotationIndex,
@@ -46,6 +50,8 @@ export const getMapIsPopupAnnotationShown = inMain => createSelector(
         canCarouselNavMount,
         isOverlayingAnnotation,
         isWikiShown,
+        isActivated,
+        isSliderTouched,
     ) => getIsPopupAnnotationShown({
         inMain,
         isSongChangeDone,
@@ -57,5 +63,7 @@ export const getMapIsPopupAnnotationShown = inMain => createSelector(
         canCarouselNavMount,
         isOverlayingAnnotation,
         isWikiShown,
+        isActivated,
+        isSliderTouched,
     }),
 )

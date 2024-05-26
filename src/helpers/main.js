@@ -76,6 +76,7 @@ export const getIsCarouselOrNavShowable = ({
     isTipsShown,
     isLyricExpanded,
     isActivated,
+    isSliderTouched,
 }) => (
     (
         // If checking for carousel, cannot be in logue and must have dots.
@@ -85,5 +86,6 @@ export const getIsCarouselOrNavShowable = ({
     !isOverviewShown &&
     !isTipsShown &&
     !isLyricExpanded &&
-    !isActivated
+    !isActivated &&
+    !isSliderTouched
 )
