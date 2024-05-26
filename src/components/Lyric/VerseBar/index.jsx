@@ -1,9 +1,10 @@
 // Component to show selected verse when scrolled above or below window height.
-import React, { memo } from 'react'
+import React, { memo, useRef } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
 import cx from 'classnames'
 import getDidMountHoc from '../../../hocs/DidMountHoc'
+import StopPropagationDispatcher from '../../../dispatchers/StopPropagation'
 import Verse from '../../Verse'
 import { getVerse } from '../../../endpoint/album/verses'
 import { updateIsAutoScroll } from '../../../redux/toggle/action'
@@ -42,12 +43,14 @@ const VerseBarContainer = ({
 }) => {
     const
         dispatch = useDispatch(),
+        stopPropagation = useRef(),
         isLyricLogue = useSelector(mapIsLyricLogue),
         isVerseBarShown = useSelector(getMapIsVerseBarShown(isAbove))
 
-    const onClick = () => {
+    const onClick = e => {
         logEvent('VerseBar')
         if (isVerseBarShown) {
+            stopPropagation.current(e)
             dispatch(updateIsAutoScroll(true))
         }
     }
@@ -80,6 +83,7 @@ const VerseBarContainer = ({
             >
                 <VerseBar />
             </div>
+            <StopPropagationDispatcher {...{ ref: stopPropagation }} />
         </div>
     )
 }
