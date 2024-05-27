@@ -11,6 +11,7 @@ import AnnotationCard from './Card'
 import { getAnnotationCardIndices } from '../../endpoint/album/cards'
 import './style'
 import { ANNOTATION_SOCIAL_MEDIA } from '../../constants/socialMedia'
+import AnnotationToggleButton from './ToggleButton'
 
 const Annotation = ({
     didMount,
@@ -78,12 +79,21 @@ const Annotation = ({
                         }}
                     />
                 ))}
-                <ShareButtons
+                <div
                     {...{
-                        id: ANNOTATION_SOCIAL_MEDIA,
-                        annotationIndex,
+                        className: cx(
+                            'Annotation__footer',
+                        ),
                     }}
-                />
+                >
+                    <ShareButtons
+                        {...{
+                            id: ANNOTATION_SOCIAL_MEDIA,
+                            annotationIndex,
+                        }}
+                    />
+                    <AnnotationToggleButton />
+                </div>
             </div>
             <StopPropagationDispatcher {...{ ref: stopPropagation }} />
         </>

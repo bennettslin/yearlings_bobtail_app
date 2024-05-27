@@ -1,4 +1,5 @@
 import about from './main/about'
+import annotationToggle from './annotationToggle'
 import audioPlay from './audio/audioPlay'
 import audioPrevious from './audio/audioPrevious'
 import audioNext from './audio/audioNext'
@@ -32,6 +33,7 @@ import copyUrl from './socialMedia/copyUrl'
 
 import {
     ABOUT_BUTTON_KEY,
+    ANNOTATION_TOGGLE_BUTTON_KEY,
     AUDIO_FAST_FORWARD_BUTTON_KEY,
     AUDIO_NEXT_BUTTON_KEY,
     AUDIO_PLAY_BUTTON_KEY,
@@ -65,6 +67,7 @@ import {
 
 export default {
     [ABOUT_BUTTON_KEY]: about,
+    [ANNOTATION_TOGGLE_BUTTON_KEY]: annotationToggle,
     [AUDIO_FAST_FORWARD_BUTTON_KEY]: audioFastForward,
     [AUDIO_NEXT_BUTTON_KEY]: audioNext,
     [AUDIO_PLAY_BUTTON_KEY]: audioPlay,

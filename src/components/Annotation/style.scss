@@ -2,6 +2,7 @@
 @import '../../scss/constants/annotation';
 @import '../../scss/constants/border';
 @import '../../scss/constants/colour';
+@import '../../scss/constants/icon';
 @import '../../scss/constants/popup';
 @import '../../scss/constants/responsive';
 @import '../../scss/constants/shadow';
@@ -21,6 +22,15 @@
 
 .Annotation__cardField {
     border-radius: $borderRadius__narrow;
+}
+
+.Annotation__footer {
+    margin-top: $MARGIN_THIN * 2;
+
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .boxShadow__annotation,

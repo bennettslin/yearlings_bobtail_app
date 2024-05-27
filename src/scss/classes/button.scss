@@ -35,7 +35,7 @@
     fill: $colour__interact__bold;
 }
 
-.ButtonIcon__carouselNav {
+.ButtonIcon__carouselNav, .ButtonIcon__annotationToggle {
     fill: $colour__close;
     .cardBack { fill: $colour__annotation__dark; }
     .cardFront { fill: $colour__annotation; }

@@ -1,6 +1,7 @@
 import { getTitleForSong } from '../../endpoint/album/songs'
 import {
     ABOUT_BUTTON_KEY,
+    ANNOTATION_TOGGLE_BUTTON_KEY,
     AUDIO_NEXT_BUTTON_KEY,
     AUDIO_PREVIOUS_BUTTON_KEY,
     AUDIO_FAST_FORWARD_BUTTON_KEY,
@@ -45,6 +46,12 @@ import {
 
 const TOOLTIP_TEXT_MAP = {
     [ABOUT_BUTTON_KEY]: 'about this album',
+    get [ANNOTATION_TOGGLE_BUTTON_KEY]() {
+        return {
+            [false]: 'show in carousel',
+            [true]: 'show in popup',
+        }
+    },
     get [SONG_REPEAT_BUTTON_KEY]() {
         return {
             [false]: 'continued play',

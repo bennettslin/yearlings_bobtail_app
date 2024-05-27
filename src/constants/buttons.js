@@ -1,4 +1,5 @@
 export const ABOUT_BUTTON_KEY = 'about'
+export const ANNOTATION_TOGGLE_BUTTON_KEY = 'annotationToggle'
 export const AUDIO_NEXT_BUTTON_KEY = 'audioNext'
 export const AUDIO_PLAY_BUTTON_KEY = 'audioPlay'
 export const AUDIO_PREVIOUS_BUTTON_KEY = 'audioPrevious'
