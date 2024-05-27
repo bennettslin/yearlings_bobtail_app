@@ -24,7 +24,7 @@ const CarouselNavDispatcher = forwardRef((props, ref) => {
         isCarouselExpanded = useSelector(mapIsCarouselExpanded),
         isNavExpanded = useSelector(mapIsNavExpanded)
 
-    const dispatchCarouselNav = () => {
+    const dispatchCarouselNav = fromAnnotation => {
         if (!canCarouselNavMount) {
             return
         }
@@ -42,6 +42,13 @@ const CarouselNavDispatcher = forwardRef((props, ref) => {
                 selectedAnnotationIndex ||
                 accessedAnnotationIndex,
             ))
+
+        /**
+         * If carousel is expanded and we're toggling the selected annotation,
+         * then show the selected annotation as a popup.
+         */
+        } else if (fromAnnotation && isCarouselExpanded) {
+            dispatch(updateIsCarouselExpanded(false))
 
         /**
          * Otherwise, just toggle nav. Carousel will not show when nav is

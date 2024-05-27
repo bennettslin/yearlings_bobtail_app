@@ -1,35 +1,41 @@
-import React, { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import React, { useRef } from 'react'
+import PropTypes from 'prop-types'
+import { useSelector } from 'react-redux'
 import Button from '../../Button'
-import { toggleIsSongRepeatOn } from '../../../redux/session/action'
-import { mapIsSongRepeatOn } from '../../../redux/session/selector'
+import CarouselNavDispatcher from '../../../dispatchers/CarouselNav'
+import { mapIsCarouselExpanded } from '../../../redux/toggle/selector'
+import { mapCanCarouselNavMount } from '../../../redux/viewport/selector'
 import { ANNOTATION_TOGGLE_KEY } from '../../../constants/access'
 import { ANNOTATION_TOGGLE_BUTTON_KEY } from '../../../constants/buttons'
 
-const AnnotationToggleButton = () => {
+const AnnotationToggleButton = ({ isSelected }) => {
     const
-        dispatch = useDispatch(),
-        isSongRepeatOn = useSelector(mapIsSongRepeatOn)
+        dispatchCarouselNav = useRef(),
+        canCarouselNavMount = useSelector(mapCanCarouselNavMount),
+        isCarouselExpanded = useSelector(mapIsCarouselExpanded)
 
-    const handleSongRepeatClick = () => {
-        dispatch(toggleIsSongRepeatOn())
+    const handleButtonClick = () => {
+        dispatchCarouselNav.current(true)
     }
 
-    useEffect(() => {
-        logState('isSongRepeatOn', isSongRepeatOn)
-    }, [isSongRepeatOn])
-
-    return (
-        <Button
-            isSmallSize
-            {...{
-                buttonName: ANNOTATION_TOGGLE_BUTTON_KEY,
-                accessKey: ANNOTATION_TOGGLE_KEY,
-                buttonOption: isSongRepeatOn,
-                handleButtonClick: handleSongRepeatClick,
-            }}
-        />
+    return canCarouselNavMount && isSelected && (
+        <>
+            <Button
+                isSmallSize
+                {...{
+                    buttonName: ANNOTATION_TOGGLE_BUTTON_KEY,
+                    accessKey: ANNOTATION_TOGGLE_KEY,
+                    buttonOption: isCarouselExpanded,
+                    handleButtonClick,
+                }}
+            />
+            <CarouselNavDispatcher {...{ ref: dispatchCarouselNav }} />
+        </>
     )
+}
+
+AnnotationToggleButton.propTypes = {
+    isSelected: PropTypes.bool.isRequired,
 }
 
 export default AnnotationToggleButton

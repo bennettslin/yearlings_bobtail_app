@@ -92,7 +92,7 @@ const Annotation = ({
                             annotationIndex,
                         }}
                     />
-                    <AnnotationToggleButton />
+                    <AnnotationToggleButton{...{ isSelected }} />
                 </div>
             </div>
             <StopPropagationDispatcher {...{ ref: stopPropagation }} />
