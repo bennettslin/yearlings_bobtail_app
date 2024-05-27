@@ -5,7 +5,7 @@ import Button from '../../Button'
 import CarouselNavDispatcher from '../../../dispatchers/CarouselNav'
 import { mapIsCarouselExpanded } from '../../../redux/toggle/selector'
 import { mapCanCarouselNavMount } from '../../../redux/viewport/selector'
-import { ANNOTATION_TOGGLE_KEY } from '../../../constants/access'
+// import { ANNOTATION_TOGGLE_KEY } from '../../../constants/access'
 import { ANNOTATION_TOGGLE_BUTTON_KEY } from '../../../constants/buttons'
 
 const AnnotationToggleButton = ({ isSelected }) => {
@@ -24,7 +24,7 @@ const AnnotationToggleButton = ({ isSelected }) => {
                 isSmallSize
                 {...{
                     buttonName: ANNOTATION_TOGGLE_BUTTON_KEY,
-                    accessKey: ANNOTATION_TOGGLE_KEY,
+                    // accessKey: ANNOTATION_TOGGLE_KEY,
                     buttonOption: isCarouselExpanded,
                     handleButtonClick,
                 }}
