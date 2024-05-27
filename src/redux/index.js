@@ -95,7 +95,10 @@ export const getAlbumReducers = ({
             initialVerseIndex,
             initialAnnotationIndex,
         }),
-        [OPTION_STORE]: getOptionReducer(initialSongIndex),
+        [OPTION_STORE]: getOptionReducer({
+            initialSongIndex,
+            initialAnnotationIndex,
+        }),
         [PLAYERS_STORE]: PlayersReducer,
         [PROMO_STORE]: getPromoReducer({
             initialPitchIndices: getInitialPitchIndices(pathname),

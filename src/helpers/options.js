@@ -93,6 +93,7 @@ export const getIsTipsShownNext = ({
 
 export const getOverviewTipsForNewSong = ({
     isSelectedLogue,
+    initialAnnotationIndex,
     selectedOverviewOption,
     selectedTipsOption,
 
@@ -109,11 +110,16 @@ export const getOverviewTipsForNewSong = ({
             selectedTipsOption: HIDDEN,
         },
     } : {
-        // If just hidden, show when now in new song.
-        ...selectedOverviewOption === HIDDEN && {
+        /**
+         * If just now hidden, show when now in new song.
+         *
+         * Unless there's an initial annotation index, in which case we'll keep
+         * it hidden.
+         */
+        ...selectedOverviewOption === HIDDEN && !initialAnnotationIndex && {
             selectedOverviewOption: SHOWN,
         },
-        ...selectedTipsOption === HIDDEN && {
+        ...selectedTipsOption === HIDDEN && !initialAnnotationIndex && {
             selectedTipsOption: SHOWN,
         },
     },

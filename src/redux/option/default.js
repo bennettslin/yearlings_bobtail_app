@@ -6,16 +6,19 @@ import {
 } from '../../constants/store'
 import { getSongIsLogue } from '../../endpoint/album/songs'
 
-const
-    STORED_OVERVIEW_OPTION = getOptionFromStorage(SELECTED_OVERVIEW_OPTION),
-    STORED_TIPS_OPTION = getOptionFromStorage(SELECTED_TIPS_OPTION)
+export const getOptionDefaults = ({
+    initialSongIndex,
+    initialAnnotationIndex,
 
-export const getOptionDefaults = initialSongIndex => ({
-    ...getOverviewTipsForNewSong({
-        isSelectedLogue: getSongIsLogue(initialSongIndex),
-        selectedOverviewOption: STORED_OVERVIEW_OPTION,
-        selectedTipsOption: STORED_TIPS_OPTION,
+}) => getOverviewTipsForNewSong({
+    isSelectedLogue: getSongIsLogue(initialSongIndex),
+    initialAnnotationIndex,
+    selectedOverviewOption: getOptionFromStorage({
+        key: SELECTED_OVERVIEW_OPTION,
+        initialAnnotationIndex,
     }),
-    isForcedShownOverview: false,
-    isSongShownOverview: false,
+    selectedTipsOption: getOptionFromStorage({
+        key: SELECTED_TIPS_OPTION,
+        initialAnnotationIndex,
+    }),
 })

@@ -7,6 +7,7 @@ import { INITIAL_DOTS_BIT } from '../../helpers/dot'
 import { FULL_DOTS_BIT } from '../../constants/dots'
 import {
     SHOWN,
+    HIDDEN,
     GENERAL_OPTIONS,
     VOLUME_DEFAULT,
     VOLUME_MIN,
@@ -79,16 +80,23 @@ export const getStoredVolumeIndex = () => {
     return savedVolumeIndex
 }
 
-export const getOptionFromStorage = key => {
+export const getOptionFromStorage = ({
+    key,
+    initialAnnotationIndex,
+}) => {
     const
         storedOption = getWindowStorage()[key],
         savedOption =
             GENERAL_OPTIONS.some(option => option === storedOption) ?
                 storedOption :
-                SHOWN
+                SHOWN,
+        // If there is an initial annotation index, preemptively hide option.
+        finalOption = initialAnnotationIndex && (savedOption === SHOWN) ?
+            HIDDEN :
+            savedOption
 
     // This only saves upon initial retrieval.
-    setInStorage(key, savedOption)
+    setInStorage(key, finalOption)
     return savedOption
 }
 
