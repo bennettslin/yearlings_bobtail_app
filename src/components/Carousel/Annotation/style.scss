@@ -22,12 +22,11 @@ $MARGIN_CAROUSEL_ANNOTATION: $MARGIN_THIN * 2.5;
         flex-direction: column;
 
         /**
-         * Allow room for the annotation title. Then add additional padding to
-         * accommodate box shadow.
+         * This is purely eyeballed. Allows room for the annotation title and
+         * toggle button highlights when hovered.
          */
         padding-top:
-            $height__annotationTitle
-            + $MARGIN_THIN * 2;
+            $height__annotationTitle * 4;
     }
 
     .DW__userAgentDesktop
