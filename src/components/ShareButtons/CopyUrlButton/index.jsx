@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import ReactTooltip from 'react-tooltip'
 import Button from '../../Button'
 import { mapSelectedPitchSlideIndex, mapSelectedPromoKey } from '../../../redux/promo/selector'
-import { mapSelectedSongIndex } from '../../../redux/selected/selector'
+import { mapSelectedAnnotationIndex, mapSelectedSongIndex } from '../../../redux/selected/selector'
 import { updateCopiedUrlKey } from '../../../redux/session/action'
 import { getMapIsCopiedUrlKey } from '../../../redux/session/selector'
 import {
@@ -14,18 +14,19 @@ import {
 } from './helper'
 import { SOCIAL_COPY_URL_BUTTON_KEY } from '../../../constants/buttons'
 
-const CopyUrlButton = ({ id, annotationIndex }) => {
+const CopyUrlButton = ({ id }) => {
     const
         dispatch = useDispatch(),
         buttonRef = useRef(),
         copiedUrlRef = useRef(),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
+        selectedAnnotationIndex = useSelector(mapSelectedAnnotationIndex),
         selectedPromoKey = useSelector(mapSelectedPromoKey),
         selectedPitchIndex = useSelector(mapSelectedPitchSlideIndex),
         buttonIdentifier = getCopyUrlButtonIdentifier({
             socialMediaId: id,
             songIndex: selectedSongIndex,
-            annotationIndex,
+            annotationIndex: selectedAnnotationIndex,
         }),
         tooltipId = `${SOCIAL_COPY_URL_BUTTON_KEY}${Number.isFinite(buttonIdentifier) ? buttonIdentifier : ''}`,
         isCopiedUrl = useSelector(getMapIsCopiedUrlKey(tooltipId)),
@@ -43,7 +44,7 @@ const CopyUrlButton = ({ id, annotationIndex }) => {
         copyUrlToClipboard({
             socialMediaId: id,
             songIndex: selectedSongIndex,
-            annotationIndex,
+            annotationIndex: selectedAnnotationIndex,
             promoKey: selectedPromoKey,
             pitchIndex: selectedPitchIndex,
         })
@@ -84,7 +85,6 @@ const CopyUrlButton = ({ id, annotationIndex }) => {
 
 CopyUrlButton.propTypes = {
     id: PropTypes.string.isRequired,
-    annotationIndex: PropTypes.number,
 }
 
 export default CopyUrlButton

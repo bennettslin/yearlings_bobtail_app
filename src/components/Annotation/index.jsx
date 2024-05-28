@@ -8,10 +8,9 @@ import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
 import ShareButtons from '../ShareButtons'
 import AnnotationHeader from './Header'
 import AnnotationCard from './Card'
+import AnnotationToggleButton from './ToggleButton'
 import { getAnnotationCardIndices } from '../../endpoint/album/cards'
 import './style'
-import { ANNOTATION_SOCIAL_MEDIA } from '../../constants/socialMedia'
-import AnnotationToggleButton from './ToggleButton'
 
 const Annotation = ({
     didMount,
@@ -97,12 +96,7 @@ const Annotation = ({
                                 ),
                             }}
                         >
-                            <ShareButtons
-                                {...{
-                                    id: ANNOTATION_SOCIAL_MEDIA,
-                                    annotationIndex,
-                                }}
-                            />
+                            <ShareButtons />
                         </div>
                     </>
                 )}
