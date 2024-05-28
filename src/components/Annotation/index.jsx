@@ -55,7 +55,21 @@ const Annotation = ({
                         },
                     }}
                 />
-
+                <div
+                    {...{
+                        className: cx(
+                            'Annotation__buttons',
+                        ),
+                    }}
+                >
+                    <ShareButtons
+                        {...{
+                            id: ANNOTATION_SOCIAL_MEDIA,
+                            annotationIndex,
+                        }}
+                    />
+                    <AnnotationToggleButton{...{ isSelected }} />
+                </div>
                 <AnnotationHeader
                     {...{
                         inCarousel,
@@ -64,7 +78,6 @@ const Annotation = ({
                         annotationIndex,
                     }}
                 />
-
                 {getAnnotationCardIndices(
                     serverClientSongIndex,
                     annotationIndex,
@@ -79,21 +92,6 @@ const Annotation = ({
                         }}
                     />
                 ))}
-                <div
-                    {...{
-                        className: cx(
-                            'Annotation__footer',
-                        ),
-                    }}
-                >
-                    <ShareButtons
-                        {...{
-                            id: ANNOTATION_SOCIAL_MEDIA,
-                            annotationIndex,
-                        }}
-                    />
-                    <AnnotationToggleButton{...{ isSelected }} />
-                </div>
             </div>
             <StopPropagationDispatcher {...{ ref: stopPropagation }} />
         </>

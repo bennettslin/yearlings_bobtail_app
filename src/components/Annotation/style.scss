@@ -15,7 +15,7 @@
     flex-direction: column;
 
     padding:
-        $PADDING_POPUP_CONTENT_WIDE * 1.5
+        $PADDING_POPUP_CONTENT_WIDE * 1.75
         $PADDING_POPUP_CONTENT_WIDE
         $PADDING_POPUP_CONTENT_WIDE * 0.5;
 }
@@ -24,13 +24,18 @@
     border-radius: $borderRadius__narrow;
 }
 
-.Annotation__footer {
-    margin-top: $MARGIN_THIN * 2;
+.Annotation__buttons {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
 
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
+
+    padding: $MARGIN_THIN * 2 $margin__thick;
 }
 
 .boxShadow__annotation,
