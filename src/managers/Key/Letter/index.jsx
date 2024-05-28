@@ -51,6 +51,7 @@ import {
     SPACE,
     META_ARROW_UP,
     META_ARROW_DOWN,
+    ANNOTATION_TOGGLE_KEY,
 } from '../../../constants/access'
 import { HIDDEN } from '../../../constants/options'
 import { mapIsOverviewShown } from '../../../redux/overview/selector'
@@ -133,6 +134,9 @@ const LetterManager = forwardRef((props, ref) => {
                 break
             case CAROUSEL_TOGGLE_KEY:
                 keyWasRegistered = dispatchCarouselNav.current()
+                break
+            case ANNOTATION_TOGGLE_KEY:
+                keyWasRegistered = dispatchCarouselNav.current(true)
                 break
             case DOTS_SLIDE_TOGGLE_KEY:
                 keyWasRegistered = dispatchDotsSlide.current()
