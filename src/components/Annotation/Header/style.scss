@@ -9,7 +9,9 @@
     left: 0;
     width: 100%;
 
+    // Top and height should match for argyle pattern to stay aligned.
     top: -$PADDING_POPUP_CONTENT_WIDE - $MARGIN_THIN * 2;
+    height: $PADDING_POPUP_CONTENT_WIDE + $MARGIN_THIN * 2;
 
     /**
      * In carousel, annotation titles are given a height so that the top cards
