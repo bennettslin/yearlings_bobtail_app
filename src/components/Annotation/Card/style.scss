@@ -14,10 +14,7 @@
 
 .AnnotationCardContainer__shown {
     max-height: 500px; // Arbitrary large number.
-
-    &:not(:first-child) {
-        margin-top: $padding__annotationCard;
-    }
+    margin-top: $MARGIN_THIN * 2;
 
     opacity: 1;
     border-radius: $borderRadius__narrow;

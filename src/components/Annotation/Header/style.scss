@@ -1,4 +1,6 @@
 @import '../../../scss/constants/annotation';
+@import '../../../scss/constants/icon';
+@import '../../../scss/constants/popup';
 @import '../../../scss/constants/transition';
 
 .AnnotationHeader {
@@ -7,8 +9,7 @@
     left: 0;
     width: 100%;
 
-    top: -$height__annotationTitle;
-    height: $height__annotationTitle;
+    top: -$PADDING_POPUP_CONTENT_WIDE - $MARGIN_THIN * 2;
 
     /**
      * In carousel, annotation titles are given a height so that the top cards
@@ -20,9 +21,7 @@
     .DW__userAgentDesktop
     .ShW__canTransitionAfterSongChange
     & {
-        transition:
-            height $transitionDuration__default,
-            opacity $transitionDuration__default;
+        transition: opacity $transitionDuration__default;
     }
 }
 
