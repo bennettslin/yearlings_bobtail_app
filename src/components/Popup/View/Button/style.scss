@@ -3,8 +3,6 @@
 @import '../../../../scss/constants/popup';
 @import '../../../../scss/constants/zIndex';
 
-$offset__popupButton: 0.75;
-
 .PopupViewButton {
     position: absolute;
     z-index: $zIndex__popupButton;

@@ -23,18 +23,19 @@
     border-radius: $borderRadius__narrow;
 }
 
-.Annotation__buttons {
+.Annotation__button {
     position: absolute;
-    width: 100%;
-    top: 0;
+    top: -$LENGTH_ICON * $offset__popupButton;
+}
+
+.Annotation__buttonLeft {
     left: 0;
+    padding-left: $MARGIN_THIN;
+}
 
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: $MARGIN_THIN * 2 $margin__thick;
+.Annotation__buttonRight {
+    right: 0;
+    padding-right: $MARGIN_THIN;
 }
 
 .boxShadow__annotation,

@@ -55,21 +55,6 @@ const Annotation = ({
                         },
                     }}
                 />
-                <div
-                    {...{
-                        className: cx(
-                            'Annotation__buttons',
-                        ),
-                    }}
-                >
-                    <ShareButtons
-                        {...{
-                            id: ANNOTATION_SOCIAL_MEDIA,
-                            annotationIndex,
-                        }}
-                    />
-                    <AnnotationToggleButton{...{ isSelected }} />
-                </div>
                 <AnnotationHeader
                     {...{
                         inCarousel,
@@ -92,6 +77,35 @@ const Annotation = ({
                         }}
                     />
                 ))}
+                {isSelected && (
+                    <>
+                        <div
+                            {...{
+                                className: cx(
+                                    'Annotation__button',
+                                    'Annotation__buttonLeft',
+                                ),
+                            }}
+                        >
+                            <AnnotationToggleButton {...{ isSelected }} />
+                        </div>
+                        <div
+                            {...{
+                                className: cx(
+                                    'Annotation__button',
+                                    'Annotation__buttonRight',
+                                ),
+                            }}
+                        >
+                            <ShareButtons
+                                {...{
+                                    id: ANNOTATION_SOCIAL_MEDIA,
+                                    annotationIndex,
+                                }}
+                            />
+                        </div>
+                    </>
+                )}
             </div>
             <StopPropagationDispatcher {...{ ref: stopPropagation }} />
         </>

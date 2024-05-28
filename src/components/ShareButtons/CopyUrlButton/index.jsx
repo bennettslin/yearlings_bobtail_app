@@ -77,7 +77,7 @@ const CopyUrlButton = ({ id, annotationIndex }) => {
                 buttonIdentifier,
                 handleButtonClick,
                 handleTooltipHide: resetCopiedUrlKey,
-                isSmallSize: Boolean(annotationIndex),
+                // isSmallSize: Boolean(annotationIndex),
             }}
         />
     )

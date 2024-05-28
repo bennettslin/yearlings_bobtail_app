@@ -1,5 +1,4 @@
 import React, { useRef } from 'react'
-import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import Button from '../../Button'
 import CarouselNavDispatcher from '../../../dispatchers/CarouselNav'
@@ -8,7 +7,7 @@ import { mapCanCarouselNavMount } from '../../../redux/viewport/selector'
 // import { ANNOTATION_TOGGLE_KEY } from '../../../constants/access'
 import { ANNOTATION_TOGGLE_BUTTON_KEY } from '../../../constants/buttons'
 
-const AnnotationToggleButton = ({ isSelected }) => {
+const AnnotationToggleButton = () => {
     const
         dispatchCarouselNav = useRef(),
         canCarouselNavMount = useSelector(mapCanCarouselNavMount),
@@ -18,10 +17,9 @@ const AnnotationToggleButton = ({ isSelected }) => {
         dispatchCarouselNav.current(true)
     }
 
-    return canCarouselNavMount && isSelected && (
+    return canCarouselNavMount && (
         <>
             <Button
-                isSmallSize
                 {...{
                     buttonName: ANNOTATION_TOGGLE_BUTTON_KEY,
                     // accessKey: ANNOTATION_TOGGLE_KEY,
@@ -32,10 +30,6 @@ const AnnotationToggleButton = ({ isSelected }) => {
             <CarouselNavDispatcher {...{ ref: dispatchCarouselNav }} />
         </>
     )
-}
-
-AnnotationToggleButton.propTypes = {
-    isSelected: PropTypes.bool.isRequired,
 }
 
 export default AnnotationToggleButton
