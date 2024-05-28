@@ -65,11 +65,11 @@ $offset__popupButton: 0.75;
 }
 
 .PopupViewButton__side {
-
+        
     .DW__desktopWidth
     & {
         // Buttons on top so they don't shift regardless of content height.
-        top: -$LENGTH_ICON_LARGE * $offset__popupButton;
+        top: $LENGTH_ICON_LARGE * $offset__popupButton;
     }
 
     .DW__tabletWidth
@@ -83,16 +83,6 @@ $offset__popupButton: 0.75;
         bottom: -$LENGTH_ICON_LARGE_MINI * $offset__popupButton;
     }
 
-    .DW__phoneWidth
-    & {
-        bottom: -$LENGTH_ICON * $offset__popupButton;
-    }
-
-    .DW__desktopWidth
-    & {
-        top: $PADDING_POPUP_CONTENT_WIDE;
-    }
-
     .DW__tabletWidth
     &.PopupViewButton__displaysInOverlay {
         top: calc(50% - #{$LENGTH_ICON_LARGE_TABLET} * 0.5);
@@ -101,6 +91,11 @@ $offset__popupButton: 0.75;
     .DW__miniWidth
     &.PopupViewButton__displaysInOverlay {
         top: calc(50% - #{$LENGTH_ICON_LARGE_MINI} * 0.5);
+    }
+
+    .DW__phoneWidth
+    & {
+        bottom: -$LENGTH_ICON * $offset__popupButton;
     }
 }
 
