@@ -10,6 +10,7 @@ import AnnotationHeader from './Header'
 import AnnotationCard from './Card'
 import AnnotationToggleButton from './ToggleButton'
 import { getAnnotationCardIndices } from '../../endpoint/album/cards'
+import { SOCIAL_COPY_URL_BUTTON_KEY } from '../../constants/buttons'
 import './style'
 
 const Annotation = ({
@@ -96,7 +97,7 @@ const Annotation = ({
                                 ),
                             }}
                         >
-                            <ShareButtons />
+                            <ShareButtons {...{ id: SOCIAL_COPY_URL_BUTTON_KEY }} />
                         </div>
                     </>
                 )}

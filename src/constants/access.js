@@ -1,5 +1,6 @@
 export const ABOUT_ALBUM_TOGGLE_KEY = 'a'
 export const OVERVIEW_TOGGLE_KEY = 'b'
+export const COPY_URL_KEY = 'c'
 export const DOTS_SLIDE_TOGGLE_KEY = 'd'
 export const LYRIC_COLUMN_TOGGLE_KEY = 'e'
 export const NEXT_SONG_KEY = 'f'

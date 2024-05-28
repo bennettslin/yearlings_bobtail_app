@@ -1,61 +1,39 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import ReactTooltip from 'react-tooltip'
+import CopyUrlDispatcher from '../../../dispatchers/CopyUrl'
 import Button from '../../Button'
-import { mapSelectedPitchSlideIndex, mapSelectedPromoKey } from '../../../redux/promo/selector'
 import { mapSelectedAnnotationIndex, mapSelectedSongIndex } from '../../../redux/selected/selector'
-import { updateCopiedUrlKey } from '../../../redux/session/action'
 import { getMapIsCopiedUrlKey } from '../../../redux/session/selector'
-import {
-    copyUrlToClipboard,
-    getCopyUrlButtonIdentifier,
-} from './helper'
+import { getCopyUrlButtonIdentifier } from './helper'
+import { COPY_URL_KEY } from '../../../constants/access'
 import { SOCIAL_COPY_URL_BUTTON_KEY } from '../../../constants/buttons'
 
 const CopyUrlButton = ({ id }) => {
     const
-        dispatch = useDispatch(),
         buttonRef = useRef(),
         copiedUrlRef = useRef(),
+        copyUrlDispatcher = useRef(),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         selectedAnnotationIndex = useSelector(mapSelectedAnnotationIndex),
-        selectedPromoKey = useSelector(mapSelectedPromoKey),
-        selectedPitchIndex = useSelector(mapSelectedPitchSlideIndex),
         buttonIdentifier = getCopyUrlButtonIdentifier({
             socialMediaId: id,
             songIndex: selectedSongIndex,
             annotationIndex: selectedAnnotationIndex,
         }),
-        tooltipId = `${SOCIAL_COPY_URL_BUTTON_KEY}${Number.isFinite(buttonIdentifier) ? buttonIdentifier : ''}`,
-        isCopiedUrl = useSelector(getMapIsCopiedUrlKey(tooltipId)),
-        [copyTimeoutId, setCopyTimeoutId] = useState(-1)
+        urlKey = `${SOCIAL_COPY_URL_BUTTON_KEY}${buttonIdentifier || ''}`,
+        isCopiedUrl = useSelector(getMapIsCopiedUrlKey(urlKey))
 
     copiedUrlRef.current = isCopiedUrl
 
-    const resetCopiedUrlKey = () => {
-        if (copiedUrlRef.current) {
-            dispatch(updateCopiedUrlKey())
-        }
+    const handleButtonClick = () => {
+        copyUrlDispatcher.current.copyUrl(urlKey)
     }
 
-    const handleButtonClick = () => {
-        copyUrlToClipboard({
-            socialMediaId: id,
-            songIndex: selectedSongIndex,
-            annotationIndex: selectedAnnotationIndex,
-            promoKey: selectedPromoKey,
-            pitchIndex: selectedPitchIndex,
-        })
-
-        clearTimeout(copyTimeoutId)
-        dispatch(updateCopiedUrlKey(tooltipId))
-
-        setCopyTimeoutId(setTimeout(
-            resetCopiedUrlKey,
-            1500,
-        ))
+    const handleTooltipHide = () => {
+        copyUrlDispatcher.current.resetCopiedUrl(urlKey)
     }
 
     useEffect(() => {
@@ -67,19 +45,23 @@ const CopyUrlButton = ({ id }) => {
     }, [isCopiedUrl])
 
     return (
-        <Button
-            {...{
-                ref: buttonRef,
-                className: cx(
-                    'CopyUrlButton',
-                ),
-                buttonName: SOCIAL_COPY_URL_BUTTON_KEY,
-                buttonOption: isCopiedUrl,
-                buttonIdentifier,
-                handleButtonClick,
-                handleTooltipHide: resetCopiedUrlKey,
-            }}
-        />
+        <>
+            <Button
+                {...{
+                    ref: buttonRef,
+                    className: cx(
+                        'CopyUrlButton',
+                    ),
+                    buttonName: SOCIAL_COPY_URL_BUTTON_KEY,
+                    accessKey: COPY_URL_KEY,
+                    buttonOption: isCopiedUrl,
+                    buttonIdentifier,
+                    handleButtonClick,
+                    handleTooltipHide,
+                }}
+            />
+            <CopyUrlDispatcher {...{ ref: copyUrlDispatcher }} />
+        </>
     )
 }
 

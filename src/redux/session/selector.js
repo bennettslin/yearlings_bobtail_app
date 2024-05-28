@@ -24,6 +24,10 @@ export const mapEarColumnIndex = (
     { [SESSION_STORE]: { earColumnIndex } },
 ) => earColumnIndex
 
+export const mapCopiedUrlKey = (
+    { [SESSION_STORE]: { copiedUrlKey } },
+) => copiedUrlKey
+
 export const getMapIsCopiedUrlKey = urlKey => (
     { [SESSION_STORE]: { copiedUrlKey } },
 ) => urlKey === copiedUrlKey
