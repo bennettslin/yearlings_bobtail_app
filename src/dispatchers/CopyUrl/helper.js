@@ -1,20 +1,19 @@
-import { PROMO_PAGE_SOCIAL_MEDIA } from '../../constants/socialMedia'
 import { getPromoUrl, getSongUrl } from '../../helpers/url'
 
 export const copyUrlToClipboard = ({
-    urlKey,
-    songIndex,
-    annotationIndex,
+    isPromoShown,
     promoKey,
     pitchIndex,
+    songIndex,
+    annotationIndex,
 
 }) => {
-    const url = urlKey === PROMO_PAGE_SOCIAL_MEDIA ?
-        getPromoUrl(promoKey, pitchIndex) :
-        getSongUrl({
-            songIndex,
-            annotationIndex,
-        })
-
-    navigator.clipboard.writeText(url)
+    navigator.clipboard.writeText(
+        isPromoShown ?
+            getPromoUrl(promoKey, pitchIndex) :
+            getSongUrl({
+                songIndex,
+                annotationIndex,
+            }),
+    )
 }

@@ -26,13 +26,12 @@ const CopyUrlButton = ({ id }) => {
             socialMediaId: id,
             songIndex: selectedSongIndex,
             annotationIndex: selectedAnnotationIndex,
-        }),
-        urlKey = `${SOCIAL_COPY_URL_BUTTON_KEY}${buttonIdentifier || ''}`
+        })
 
     copiedUrlRef.current = isCopiedUrl
 
     const handleButtonClick = () => {
-        copyUrlDispatcher.current.copyUrl(urlKey)
+        copyUrlDispatcher.current.copyUrl()
     }
 
     const handleTooltipHide = () => {

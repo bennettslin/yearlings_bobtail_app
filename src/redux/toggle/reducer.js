@@ -1,16 +1,16 @@
 // Reducers for toggle buttons and options.
 import { hasKey } from '../../helpers/action'
 import { mapIsLyricExpandable } from '../lyricExpand/selector'
+import { mapCanScoreMount } from '../viewport/selector'
+import { getToggleDefaults } from './default'
 import {
     TOGGLE_STORE,
     SELECTED_STORE,
     VIEWPORT_STORE,
 } from '../../constants/store'
-import { TOGGLE_DEFAULTS } from './default'
-import { mapCanScoreMount } from '../viewport/selector'
 
-export default (
-    state = TOGGLE_DEFAULTS,
+export const getToggleReducer = ({ isPromoPage = false } = {}) => (
+    state = getToggleDefaults(isPromoPage),
     { type, payload },
 ) => {
     switch (type) {

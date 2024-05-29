@@ -11,16 +11,18 @@ import {
     mapSelectedSongIndex,
 } from '../../redux/selected/selector'
 import { mapIsCopiedUrl } from '../../redux/session/selector'
+import { mapIsPromoShown } from '../../redux/toggle/selector'
 import { copyUrlToClipboard } from './helper'
 
 const CopyUrlDispatcher = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
         copiedUrlRef = useRef(),
-        selectedSongIndex = useSelector(mapSelectedSongIndex),
-        selectedAnnotationIndex = useSelector(mapSelectedAnnotationIndex),
+        isPromoShown = useSelector(mapIsPromoShown),
         selectedPromoKey = useSelector(mapSelectedPromoKey),
         selectedPitchIndex = useSelector(mapSelectedPitchSlideIndex),
+        selectedSongIndex = useSelector(mapSelectedSongIndex),
+        selectedAnnotationIndex = useSelector(mapSelectedAnnotationIndex),
         isCopiedUrl = useSelector(mapIsCopiedUrl),
         [copyTimeoutId, setCopyTimeoutId] = useState(-1)
 
@@ -32,20 +34,20 @@ const CopyUrlDispatcher = forwardRef((props, ref) => {
         }
     }
 
-    const copyUrl = urlKey => {
+    const copyUrl = () => {
         copyUrlToClipboard({
-            urlKey,
-            songIndex: selectedSongIndex,
-            annotationIndex: selectedAnnotationIndex,
+            isPromoShown,
             promoKey: selectedPromoKey,
             pitchIndex: selectedPitchIndex,
+            songIndex: selectedSongIndex,
+            annotationIndex: selectedAnnotationIndex,
         })
 
         clearTimeout(copyTimeoutId)
         dispatch(updateIsCopiedUrl(true))
 
         setCopyTimeoutId(setTimeout(
-            () => resetCopiedUrl(urlKey),
+            () => resetCopiedUrl(),
             1750,
         ))
     }

@@ -20,7 +20,7 @@ import ScrollLyricReducer from './scrollLyric/reducer'
 import { getSelectedReducer } from './selected/reducer'
 import { getSessionReducer } from './session/reducer'
 import SliderReducer from './slider/reducer'
-import ToggleReducer from './toggle/reducer'
+import { getToggleReducer } from './toggle/reducer'
 import VerseBarsReducer from './verseBars/reducer'
 import { getViewportReducer } from './viewport/reducer'
 
@@ -119,7 +119,7 @@ export const getAlbumReducers = ({
             initialAnnotationIndex,
         }),
         [SLIDER_STORE]: SliderReducer,
-        [TOGGLE_STORE]: ToggleReducer,
+        [TOGGLE_STORE]: getToggleReducer(),
         [VERSE_BARS_STORE]: VerseBarsReducer,
         [VIEWPORT_STORE]: getViewportReducer({
             windowHeight,
@@ -143,6 +143,7 @@ export const getPromoReducers = ({
         isPromoPage: true,
     }),
     [SESSION_STORE]: getSessionReducer({ isPromoPage: true }),
+    [TOGGLE_STORE]: getToggleReducer({ isPromoPage: true }),
     [VIEWPORT_STORE]: getViewportReducer({
         windowHeight,
         windowWidth,
