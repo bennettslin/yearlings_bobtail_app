@@ -11,6 +11,7 @@ import {
 import { mapIsCopiedUrl } from '../../../redux/session/selector'
 import { getTooltipPlacement } from './helper'
 import { IS_USER_AGENT_DESKTOP } from '../../../constants/device'
+import { COPY_URL_BUTTON_KEY } from '../../../constants/buttons'
 import './style'
 
 const Tooltip = ({
@@ -24,6 +25,9 @@ const Tooltip = ({
         isDesktopWidth = useSelector(mapIsDesktopWidth),
         isPhoneOrMiniWidth = useSelector(mapIsPhoneOrMiniWidth),
         isCopiedUrl = useSelector(mapIsCopiedUrl),
+        isTooltipForCopiedUrl =
+            buttonName === COPY_URL_BUTTON_KEY &&
+            isCopiedUrl,
         tooltipId = `${buttonName}${buttonIdentifier || ''}`
 
     /**
@@ -34,7 +38,7 @@ const Tooltip = ({
         !IS_USER_AGENT_DESKTOP ||
         isPhoneOrMiniWidth ||
         isAccessOn ||
-        isCopiedUrl
+        isTooltipForCopiedUrl
     ) && (
         <ReactTooltip
             {...{
@@ -46,7 +50,9 @@ const Tooltip = ({
                 effect: 'solid',
                 delayShow: isCopiedUrl ? 0 : 750,
                 delayHide: isCopiedUrl ? 500 : 250,
-                type: isCopiedUrl ? 'success' : 'light',
+                type: isTooltipForCopiedUrl ?
+                    'success' :
+                    'light',
                 place: getTooltipPlacement({
                     buttonName,
                     isDesktopWidth,
