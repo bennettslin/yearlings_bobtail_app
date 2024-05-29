@@ -12,7 +12,7 @@ import {
 import { mapIsCopiedUrl } from '../../../redux/session/selector'
 import { getCopyUrlButtonIdentifier } from './helper'
 import { COPY_URL_KEY } from '../../../constants/access'
-import { SOCIAL_COPY_URL_BUTTON_KEY } from '../../../constants/buttons'
+import { COPY_URL_BUTTON_KEY } from '../../../constants/buttons'
 
 const CopyUrlButton = ({ id }) => {
     const
@@ -54,7 +54,7 @@ const CopyUrlButton = ({ id }) => {
                     className: cx(
                         'CopyUrlButton',
                     ),
-                    buttonName: SOCIAL_COPY_URL_BUTTON_KEY,
+                    buttonName: COPY_URL_BUTTON_KEY,
                     accessKey: COPY_URL_KEY,
                     buttonOption: isCopiedUrl,
                     buttonIdentifier,

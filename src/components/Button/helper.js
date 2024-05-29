@@ -22,7 +22,7 @@ import {
     POPUP_PREVIOUS_BUTTON_KEY,
     POPUP_NEXT_BUTTON_KEY,
     SCORES_BUTTON_KEY,
-    SOCIAL_COPY_URL_BUTTON_KEY,
+    COPY_URL_BUTTON_KEY,
     SONG_REPEAT_BUTTON_KEY,
     WORMHOLE_BUTTON_KEY,
     PROMO_BACK_BUTTON_KEY,
@@ -107,7 +107,7 @@ const TOOLTIP_TEXT_MAP = {
     [POPUP_PREVIOUS_BUTTON_KEY]: 'previous annotation',
     [POPUP_NEXT_BUTTON_KEY]: 'next annotation',
     [SCORES_BUTTON_KEY]: 'score',
-    get [SOCIAL_COPY_URL_BUTTON_KEY]() {
+    get [COPY_URL_BUTTON_KEY]() {
         return {
             [false]: 'copy link to clipboard',
             [true]: 'link copied!',

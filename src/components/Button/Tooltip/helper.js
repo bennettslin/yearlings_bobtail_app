@@ -13,7 +13,7 @@ import {
     LYRIC_SCROLL_BUTTON_KEY,
     OVERVIEW_BUTTON_KEY,
     SCORES_BUTTON_KEY,
-    SOCIAL_COPY_URL_BUTTON_KEY,
+    COPY_URL_BUTTON_KEY,
     SONG_REPEAT_BUTTON_KEY,
     TIPS_BUTTON_KEY,
 } from '../../../constants/buttons'
@@ -47,7 +47,7 @@ export const getTooltipPlacement = ({
         case SONG_REPEAT_BUTTON_KEY:
         case LYRIC_SCROLL_BUTTON_KEY:
         case SCORES_BUTTON_KEY:
-        case SOCIAL_COPY_URL_BUTTON_KEY:
+        case COPY_URL_BUTTON_KEY:
         case TIPS_BUTTON_KEY:
             return TOOLTIP_LEFT
         case ABOUT_BUTTON_KEY:
