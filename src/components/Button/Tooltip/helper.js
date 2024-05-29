@@ -18,22 +18,19 @@ import {
     TIPS_BUTTON_KEY,
 } from '../../../constants/buttons'
 
+const TOOLTIP_BOTTOM = 'bottom'
 const TOOLTIP_LEFT = 'left'
 const TOOLTIP_RIGHT = 'right'
 
 export const getTooltipPlacement = ({
     buttonName,
     isDesktopWidth,
-}) => {
 
+}) => {
     if (isDesktopWidth) {
         switch (buttonName) {
             case LYRIC_EAR_BUTTON_KEY:
                 return TOOLTIP_LEFT
-            case AUDIO_PREVIOUS_BUTTON_KEY:
-            case AUDIO_PLAY_BUTTON_KEY:
-            case AUDIO_NEXT_BUTTON_KEY:
-            case SONG_REPEAT_BUTTON_KEY:
             case SCORES_BUTTON_KEY:
             case TIPS_BUTTON_KEY:
                 return TOOLTIP_RIGHT
@@ -45,9 +42,10 @@ export const getTooltipPlacement = ({
         case AUDIO_PLAY_BUTTON_KEY:
         case AUDIO_NEXT_BUTTON_KEY:
         case SONG_REPEAT_BUTTON_KEY:
+            return TOOLTIP_BOTTOM
+        case COPY_URL_BUTTON_KEY:
         case LYRIC_SCROLL_BUTTON_KEY:
         case SCORES_BUTTON_KEY:
-        case COPY_URL_BUTTON_KEY:
         case TIPS_BUTTON_KEY:
             return TOOLTIP_LEFT
         case ABOUT_BUTTON_KEY:

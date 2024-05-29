@@ -52,11 +52,15 @@ $padding__menuChild__desktop: $margin__thick * 2;
     justify-content: space-between;
 
     /**
-     * This allows the about tooltip to show above the banner and filmstrip,
-     * despite being lower in stacking order.
+     * This allows the about tooltip to show above the banner filmstrip. The
+     * tooltip no longer seems to care about the stacking order, and the
+     * original styling using flex ordering also no longer has an effect? I'm
+     * confused, but I have no time to investigate.
      */
+    flex-direction: row-reverse;
+
     .AboutToggle {
-        order: 1;
+        order: 3;
         margin-right: $padding__menuChild__mobile;
 
         .DW__tabletOrDesktopWidth
@@ -66,7 +70,7 @@ $padding__menuChild__desktop: $margin__thick * 2;
     }
     .BannerFilmstrip { order: 2; }
     .Audio {
-        order: 3;
+        order: 1;
         margin-left: $padding__menuChild__mobile;
 
         .DW__tabletOrDesktopWidth

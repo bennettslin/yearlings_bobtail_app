@@ -45,7 +45,7 @@ import {
 } from '../../constants/options'
 
 const TOOLTIP_TEXT_MAP = {
-    [ABOUT_BUTTON_KEY]: 'about this album',
+    [ABOUT_BUTTON_KEY]: 'about the album',
     get [ANNOTATION_TOGGLE_BUTTON_KEY]() {
         return {
             [false]: 'show in carousel',
@@ -106,7 +106,7 @@ const TOOLTIP_TEXT_MAP = {
     [POPUP_CLOSE_BUTTON_KEY]: 'close popup',
     [POPUP_PREVIOUS_BUTTON_KEY]: 'previous annotation',
     [POPUP_NEXT_BUTTON_KEY]: 'next annotation',
-    [SCORES_BUTTON_KEY]: 'score',
+    [SCORES_BUTTON_KEY]: 'music score',
     get [COPY_URL_BUTTON_KEY]() {
         return {
             [false]: 'copy link to clipboard',
