@@ -4,15 +4,12 @@
 * Illustrator icon for single annotation
 
 ### Good fixes
-* Access for copy url
-    * Fix separate success tooltip showing in left shelf
-    * Verify works in all use cases
+* Annotations allow command click?
+* "Floater" problem again
 
 ### Consider doing
 * Final carousel annotation and annotation toggle logic
 
-* Good fixes
-    * Annotations allow command click?
-    * "Floater" problem again
+### Annotation fixes
 * First Nations wiki
-* Cop wiki
+* Cop annotation

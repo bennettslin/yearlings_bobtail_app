@@ -1,27 +1,25 @@
 import React, { forwardRef, useImperativeHandle, useRef } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { mapSelectedPromoKey } from '../../../../redux/promo/selector'
+import { useDispatch } from 'react-redux'
 import {
     ARROW_LEFT,
     ARROW_RIGHT,
+    COPY_URL_KEY,
     PROMO_TOGGLE_KEY,
 } from '../../../../constants/access'
-import { getIsPromoHomepage } from '../../../../helpers/promo'
 import { resetPromo } from '../../../../redux/promo/action'
+import CopyUrlDispatcher from '../../../../dispatchers/CopyUrl'
 import PitchDispatcher from '../../../../dispatchers/Pitch'
 
 const PromoNavigation = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
-        dispatchPitch = useRef(),
-        selectedPromoKey = useSelector(mapSelectedPromoKey)
+        copyUrlDispatcher = useRef(),
+        dispatchPitch = useRef()
 
     const navigateChildPromo = keyName => {
-        if (getIsPromoHomepage(selectedPromoKey)) {
-            return false
-        }
-
         switch (keyName) {
+            case COPY_URL_KEY:
+                return copyUrlDispatcher.current.copyUrl()
             case PROMO_TOGGLE_KEY:
                 dispatch(resetPromo())
                 return true
@@ -51,7 +49,10 @@ const PromoNavigation = forwardRef((props, ref) => {
 
     useImperativeHandle(ref, () => navigatePromo)
     return (
-        <PitchDispatcher {...{ ref: dispatchPitch }} />
+        <>
+            <CopyUrlDispatcher {...{ ref: copyUrlDispatcher }} />
+            <PitchDispatcher {...{ ref: dispatchPitch }} />
+        </>
     )
 })
 
