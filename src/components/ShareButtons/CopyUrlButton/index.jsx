@@ -5,8 +5,11 @@ import { useSelector } from 'react-redux'
 import ReactTooltip from 'react-tooltip'
 import CopyUrlDispatcher from '../../../dispatchers/CopyUrl'
 import Button from '../../Button'
-import { mapSelectedAnnotationIndex, mapSelectedSongIndex } from '../../../redux/selected/selector'
-import { getMapIsCopiedUrlKey } from '../../../redux/session/selector'
+import {
+    mapSelectedAnnotationIndex,
+    mapSelectedSongIndex,
+} from '../../../redux/selected/selector'
+import { mapIsCopiedUrl } from '../../../redux/session/selector'
 import { getCopyUrlButtonIdentifier } from './helper'
 import { COPY_URL_KEY } from '../../../constants/access'
 import { SOCIAL_COPY_URL_BUTTON_KEY } from '../../../constants/buttons'
@@ -18,13 +21,13 @@ const CopyUrlButton = ({ id }) => {
         copyUrlDispatcher = useRef(),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         selectedAnnotationIndex = useSelector(mapSelectedAnnotationIndex),
+        isCopiedUrl = useSelector(mapIsCopiedUrl),
         buttonIdentifier = getCopyUrlButtonIdentifier({
             socialMediaId: id,
             songIndex: selectedSongIndex,
             annotationIndex: selectedAnnotationIndex,
         }),
-        urlKey = `${SOCIAL_COPY_URL_BUTTON_KEY}${buttonIdentifier || ''}`,
-        isCopiedUrl = useSelector(getMapIsCopiedUrlKey(urlKey))
+        urlKey = `${SOCIAL_COPY_URL_BUTTON_KEY}${buttonIdentifier || ''}`
 
     copiedUrlRef.current = isCopiedUrl
 
@@ -33,7 +36,7 @@ const CopyUrlButton = ({ id }) => {
     }
 
     const handleTooltipHide = () => {
-        copyUrlDispatcher.current.resetCopiedUrl(urlKey)
+        copyUrlDispatcher.current.resetCopiedUrl()
     }
 
     useEffect(() => {

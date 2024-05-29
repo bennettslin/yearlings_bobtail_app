@@ -1,7 +1,7 @@
 // Singleton to copy URL.
 import { forwardRef, useImperativeHandle, useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { updateCopiedUrlKey } from '../../redux/session/action'
+import { updateIsCopiedUrl } from '../../redux/session/action'
 import {
     mapSelectedPitchSlideIndex,
     mapSelectedPromoKey,
@@ -10,7 +10,7 @@ import {
     mapSelectedAnnotationIndex,
     mapSelectedSongIndex,
 } from '../../redux/selected/selector'
-import { mapCopiedUrlKey } from '../../redux/session/selector'
+import { mapIsCopiedUrl } from '../../redux/session/selector'
 import { copyUrlToClipboard } from './helper'
 
 const CopyUrlDispatcher = forwardRef((props, ref) => {
@@ -21,14 +21,14 @@ const CopyUrlDispatcher = forwardRef((props, ref) => {
         selectedAnnotationIndex = useSelector(mapSelectedAnnotationIndex),
         selectedPromoKey = useSelector(mapSelectedPromoKey),
         selectedPitchIndex = useSelector(mapSelectedPitchSlideIndex),
-        copiedUrlKey = useSelector(mapCopiedUrlKey),
+        isCopiedUrl = useSelector(mapIsCopiedUrl),
         [copyTimeoutId, setCopyTimeoutId] = useState(-1)
 
-    copiedUrlRef.current = copiedUrlKey
+    copiedUrlRef.current = isCopiedUrl
 
-    const resetCopiedUrl = urlKey => {
-        if (urlKey === copiedUrlRef.current) {
-            dispatch(updateCopiedUrlKey())
+    const resetCopiedUrl = () => {
+        if (copiedUrlRef.current) {
+            dispatch(updateIsCopiedUrl())
         }
     }
 
@@ -42,7 +42,7 @@ const CopyUrlDispatcher = forwardRef((props, ref) => {
         })
 
         clearTimeout(copyTimeoutId)
-        dispatch(updateCopiedUrlKey(urlKey))
+        dispatch(updateIsCopiedUrl(true))
 
         setCopyTimeoutId(setTimeout(
             () => resetCopiedUrl(urlKey),

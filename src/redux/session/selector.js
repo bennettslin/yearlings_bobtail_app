@@ -28,6 +28,6 @@ export const mapCopiedUrlKey = (
     { [SESSION_STORE]: { copiedUrlKey } },
 ) => copiedUrlKey
 
-export const getMapIsCopiedUrlKey = urlKey => (
-    { [SESSION_STORE]: { copiedUrlKey } },
-) => urlKey === copiedUrlKey
+export const mapIsCopiedUrl = (
+    { [SESSION_STORE]: { isCopiedUrl } },
+) => isCopiedUrl

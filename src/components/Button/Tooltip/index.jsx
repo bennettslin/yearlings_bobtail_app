@@ -3,27 +3,28 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import ReactTooltip from 'react-tooltip'
-import { getTooltipPlacement } from './helper'
-import { IS_USER_AGENT_DESKTOP } from '../../../constants/device'
 import { mapIsAccessOn } from '../../../redux/access/selector'
 import {
     mapIsDesktopWidth,
     mapIsPhoneOrMiniWidth,
 } from '../../../redux/device/selector'
-import { getMapIsCopiedUrlKey } from '../../../redux/session/selector'
+import { mapIsCopiedUrl } from '../../../redux/session/selector'
+import { getTooltipPlacement } from './helper'
+import { IS_USER_AGENT_DESKTOP } from '../../../constants/device'
 import './style'
 
 const Tooltip = ({
     buttonName,
     buttonIdentifier,
     handleTooltipHide,
+
 }) => {
     const
         isAccessOn = useSelector(mapIsAccessOn),
         isDesktopWidth = useSelector(mapIsDesktopWidth),
         isPhoneOrMiniWidth = useSelector(mapIsPhoneOrMiniWidth),
-        tooltipId = `${buttonName}${buttonIdentifier || ''}`,
-        isCopiedUrl = useSelector(getMapIsCopiedUrlKey(tooltipId))
+        isCopiedUrl = useSelector(mapIsCopiedUrl),
+        tooltipId = `${buttonName}${buttonIdentifier || ''}`
 
     /**
      * If it's a narrow viewport or a mobile device, always allow the tooltip

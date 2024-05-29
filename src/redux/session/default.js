@@ -20,8 +20,8 @@ export const getSessionDefaults = ({
     isPromoPage,
 
 }) => ({
-    // Promo page just has copied URL key.
-    copiedUrlKey: '',
+    // For resetting the tooltip.
+    isCopiedUrl: false,
 
     ...!isPromoPage && {
         ...SESSION_WIKI_DEFAULTS,
