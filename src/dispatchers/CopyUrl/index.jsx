@@ -50,6 +50,8 @@ const CopyUrlDispatcher = forwardRef((props, ref) => {
             () => resetCopiedUrl(),
             1750,
         ))
+
+        return true
     }
 
     useImperativeHandle(ref, () => ({
