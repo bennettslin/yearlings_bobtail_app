@@ -33,7 +33,7 @@ const Button = forwardRef(({
     isBrightHover,
     buttonOption,
     handleButtonClick,
-    handleTooltipHide,
+    // handleTooltipHide,
     hasCharacterShadowLight,
     buttonCharacter,
     hasTitleShadowLight,
@@ -157,7 +157,7 @@ const Button = forwardRef(({
                     {...{
                         buttonName,
                         buttonIdentifier,
-                        handleTooltipHide,
+                        // handleTooltipHide,
                     }}
                 />
             )}
@@ -191,7 +191,7 @@ Button.propTypes = {
     buttonTitle: PropTypes.any,
     buttonIdentifier: PropTypes.any,
     handleButtonClick: PropTypes.func.isRequired,
-    handleTooltipHide: PropTypes.func,
+    // handleTooltipHide: PropTypes.func,
     children: PropTypes.any,
 }
 

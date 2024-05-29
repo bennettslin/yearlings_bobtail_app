@@ -47,7 +47,7 @@ const CopyUrlDispatcher = forwardRef((props, ref) => {
         dispatch(updateIsCopiedUrl(true))
 
         setCopyTimeoutId(setTimeout(
-            () => resetCopiedUrl(),
+            resetCopiedUrl,
             1750,
         ))
 
@@ -56,7 +56,7 @@ const CopyUrlDispatcher = forwardRef((props, ref) => {
 
     useImperativeHandle(ref, () => ({
         copyUrl,
-        resetCopiedUrl,
+        // resetCopiedUrl,
     }))
     return null
 })

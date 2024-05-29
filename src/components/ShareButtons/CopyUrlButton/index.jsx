@@ -1,8 +1,8 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useRef } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
-import ReactTooltip from 'react-tooltip'
+// import ReactTooltip from 'react-tooltip'
 import CopyUrlDispatcher from '../../../dispatchers/CopyUrl'
 import Button from '../../Button'
 import {
@@ -16,7 +16,7 @@ import { COPY_URL_BUTTON_KEY } from '../../../constants/buttons'
 
 const CopyUrlButton = ({ id }) => {
     const
-        buttonRef = useRef(),
+        // buttonRef = useRef(),
         copiedUrlRef = useRef(),
         copyUrlDispatcher = useRef(),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
@@ -34,23 +34,32 @@ const CopyUrlButton = ({ id }) => {
         copyUrlDispatcher.current.copyUrl()
     }
 
-    const handleTooltipHide = () => {
-        copyUrlDispatcher.current.resetCopiedUrl()
-    }
+    /**
+     * TODO: Leave this code for now, in case I want to revisit. If not,
+     * tooltip hide functionality is used nowhere else and can be deleted.
+     * resetCopiedUrl function is no longer passed by dispatcher as well.
+     */
+    // const handleTooltipHide = () => {
+    //     copyUrlDispatcher.current.resetCopiedUrl()
+    // }
 
-    useEffect(() => {
-        if (isCopiedUrl) {
-            ReactTooltip.show(buttonRef.current)
-        } else {
-            ReactTooltip.hide(buttonRef.current)
-        }
-    }, [isCopiedUrl])
+    /**
+     * TODO: Leave this code for now, in case I want to revisit having tooltip
+     * show success message when url is copied.
+     */
+    // useEffect(() => {
+    //     if (isCopiedUrl) {
+    //         ReactTooltip.show(buttonRef.current)
+    //     } else {
+    //         ReactTooltip.hide(buttonRef.current)
+    //     }
+    // }, [isCopiedUrl])
 
     return (
         <>
             <Button
                 {...{
-                    ref: buttonRef,
+                    // ref: buttonRef,
                     className: cx(
                         'CopyUrlButton',
                     ),
@@ -59,7 +68,7 @@ const CopyUrlButton = ({ id }) => {
                     buttonOption: isCopiedUrl,
                     buttonIdentifier,
                     handleButtonClick,
-                    handleTooltipHide,
+                    // handleTooltipHide,
                 }}
             />
             <CopyUrlDispatcher {...{ ref: copyUrlDispatcher }} />
