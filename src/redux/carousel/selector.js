@@ -13,6 +13,7 @@ import {
     mapIsLyricExpanded,
     mapIsNavExpanded,
 } from '../toggle/selector'
+import { mapIsAnnotationShown } from '../selected/selector'
 
 // It's more semantically clear to say when carousel is *not* showable.
 export const mapIsCarouselNotShowable = createSelector(
@@ -55,8 +56,18 @@ const getMapIsCarouselOrNavShowable = checkForNav => createSelector(
 // Needed for right shelf.
 export const mapIsCarouselAndNavShowable = getMapIsCarouselOrNavShowable()
 
-// Needed for carousel toggle, carousel nav, and nav.
+// Needed for carousel and nav.
 export const mapIsNavShowable = getMapIsCarouselOrNavShowable(true)
+
+// Only show carousel toggle when nav is showable but no annotation is selected.
+export const mapIsCarouselToggleShowable = createSelector(
+    mapIsNavShowable,
+    mapIsAnnotationShown,
+    (
+        isNavShowable,
+        isAnnotationShown,
+    ) => isNavShowable && !isAnnotationShown,
+)
 
 export const mapIsOnlyNavShowable = createSelector(
     mapIsCarouselAndNavShowable,

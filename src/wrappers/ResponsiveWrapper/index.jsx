@@ -7,6 +7,7 @@ import { getSingleShownEarColumnKey } from './helper'
 import {
     mapIsNavShowable,
     mapIsCarouselAndNavShowable,
+    mapIsCarouselToggleShowable,
 } from '../../redux/carousel/selector'
 import { mapIsEarShown } from '../../redux/ear/selector'
 import { mapIsLyricExpandable } from '../../redux/lyricExpand/selector'
@@ -22,6 +23,7 @@ const ResponsiveWrapper = ({ didMount, children }) => {
         earColumnIndex = useSelector(mapEarColumnIndex),
         isNavShowable = useSelector(mapIsNavShowable),
         isCarouselAndNavShowable = useSelector(mapIsCarouselAndNavShowable),
+        isCarouselToggleShowable = useSelector(mapIsCarouselToggleShowable),
         isEarShown = useSelector(mapIsEarShown),
 
         // TODO: Make this a selector.
@@ -42,6 +44,8 @@ const ResponsiveWrapper = ({ didMount, children }) => {
                             'RW__navIconStatic',
                         isNavShowable &&
                             'RW__navShowable',
+                        isCarouselToggleShowable &&
+                            'RW__carouselToggleShowable',
                         isCarouselAndNavShowable &&
                             'RW__carouselAndNavShowable',
                         singleShownEarColumnKey ?

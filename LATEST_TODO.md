@@ -14,16 +14,17 @@
         * Button has nav icon ✅
     * Clicking away hides carousel ✅
         * Escape does same ✅
-* When carousel is shown and annotation is selected
-    * Only annotation toggle button shown
+* When carousel is shown and annotation is selected ✅
+    * Only annotation toggle button shown ✅
         * Button has single annotation icon placeholder ✅
     * Clicking away unselects annotation but leaves carousel ✅
         * Escape does same ✅
-* When popup annotation is shown
-    * Only annotation toggle button shown
+* When popup annotation is shown ✅
+    * Only annotation toggle button shown ✅
         * Button has carousel icon ✅
     * Clicking away unselects annotation and dismisses popup ✅
         * Escape does same ✅
+* Clicking on unselected annotation shouldn't hide carousel
 * Single key determines all logic
     * Hook up access logic
 * Test logic is correct when carousel nav is mounted
