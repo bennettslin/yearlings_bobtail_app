@@ -62,9 +62,9 @@ import { mapIsTipsShown } from '../../../redux/tips/selector'
 import {
     mapIsAboutShown,
     mapIsAudioOptionsExpanded,
+    mapIsCarouselExpanded,
     mapIsDotsSlideShown,
     mapIsLyricExpanded,
-    mapIsNavExpanded,
     mapIsPromoShown,
     mapIsScoreShown,
 } from '../../../redux/toggle/selector'
@@ -89,9 +89,9 @@ const LetterManager = forwardRef((props, ref) => {
         isAboutShown = useSelector(mapIsAboutShown),
         isAnnotationShown = useSelector(mapIsAnnotationShown),
         isAudioOptionsExpanded = useSelector(mapIsAudioOptionsExpanded),
+        isCarouselExpanded = useSelector(mapIsCarouselExpanded),
         isDotsSlideShown = useSelector(mapIsDotsSlideShown),
         isLyricExpanded = useSelector(mapIsLyricExpanded),
-        isNavExpanded = useSelector(mapIsNavExpanded),
         isOverviewShown = useSelector(mapIsOverviewShown),
         isPromoShown = useSelector(mapIsPromoShown),
         isScoreShown = useSelector(mapIsScoreShown),
@@ -225,7 +225,7 @@ const LetterManager = forwardRef((props, ref) => {
         } else if (isDotsSlideShown) {
             dispatchDotsSlide.current(false)
 
-        // Close annotation popup.
+        // Deselect annotation, whether in carousel or popup.
         } else if (isAnnotationShown) {
             dispatch(updateSelectedStore({ selectedAnnotationIndex: 0 }))
 
@@ -233,8 +233,11 @@ const LetterManager = forwardRef((props, ref) => {
         } else if (isLyricExpanded) {
             dispatchLyricExpand.current(false)
 
-        // Hide nav.
-        } else if (isNavExpanded) {
+        /**
+         * Collapse both carousel and nav. Note that if annotation is shown,
+         * annotation will be deselected, but carousel will remain expanded.
+         */
+        } else if (isCarouselExpanded) {
             // When nav is expanded, collapse both carousel and nav.
             dispatch(updateIsCarouselExpanded())
             dispatch(updateIsNavExpanded())

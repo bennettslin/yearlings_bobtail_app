@@ -40,20 +40,20 @@ const CloseHandler = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
         dispatchPromo = useRef(),
-        isActivated = useSelector(mapIsActivated),
-        isOverviewShown = useSelector(mapIsOverviewShown),
-        isTipsShown = useSelector(mapIsTipsShown),
-        isAnnotationShown = useSelector(mapIsAnnotationShown),
-        isWikiShown = useSelector(mapIsWikiShown),
-        isSliderMoving = useSelector(mapIsSliderMoving),
         isAboutShown = useSelector(mapIsAboutShown),
+        isActivated = useSelector(mapIsActivated),
+        isAnnotationShown = useSelector(mapIsAnnotationShown),
         isAudioOptionsExpanded = useSelector(mapIsAudioOptionsExpanded),
         isCarouselExpanded = useSelector(mapIsCarouselExpanded),
         isDotsSlideShown = useSelector(mapIsDotsSlideShown),
         isLyricExpanded = useSelector(mapIsLyricExpanded),
         isNavExpanded = useSelector(mapIsNavExpanded),
+        isOverviewShown = useSelector(mapIsOverviewShown),
         isPromoShown = useSelector(mapIsPromoShown),
         isScoreShown = useSelector(mapIsScoreShown),
+        isSliderMoving = useSelector(mapIsSliderMoving),
+        isTipsShown = useSelector(mapIsTipsShown),
+        isWikiShown = useSelector(mapIsWikiShown),
         [didMount, setDidMount] = useState(false)
 
     const closeJustTopmost = ({
@@ -263,8 +263,8 @@ const CloseHandler = forwardRef((props, ref) => {
     const closeForBodyClick = () => {
         if (!closeJustTopmost()) {
             closeMainSections({
-                // When nav is expanded, collapse both carousel and nav.
-                exemptCarousel: !isNavExpanded,
+                // Leave carousel expanded only if annotation is shown.
+                exemptCarousel: isAnnotationShown,
                 exemptLyric: true,
 
                 // If clicking to dismiss tips, leave overview shown.
