@@ -7,7 +7,7 @@ import {
 } from '../../redux/toggle/action'
 import { mapAccessedAnnotationIndex } from '../../redux/access/selector'
 import { mapIsCarouselNotShowable } from '../../redux/carousel/selector'
-import { mapSelectedAnnotationIndex } from '../../redux/selected/selector'
+import { mapIsAnnotationShown, mapSelectedAnnotationIndex } from '../../redux/selected/selector'
 import {
     mapIsCarouselExpanded,
     mapIsNavExpanded,
@@ -21,19 +21,17 @@ const CarouselNavDispatcher = forwardRef((props, ref) => {
         isCarouselNotShowable = useSelector(mapIsCarouselNotShowable),
         canCarouselNavMount = useSelector(mapCanCarouselNavMount),
         selectedAnnotationIndex = useSelector(mapSelectedAnnotationIndex),
+        isAnnotationShown = useSelector(mapIsAnnotationShown),
         isCarouselExpanded = useSelector(mapIsCarouselExpanded),
         isNavExpanded = useSelector(mapIsNavExpanded)
 
-    const dispatchCarouselNav = fromAnnotation => {
-        if (!canCarouselNavMount) {
-            return
+    const dispatchCarouselNav = () => {
+        if (!canCarouselNavMount || isCarouselNotShowable) {
+            return false
         }
 
-        /**
-         * If carousel is showable and neither carousel nor nav is expanded,
-         * expand carousel.
-         */
-        if (!isCarouselNotShowable && !isCarouselExpanded && !isNavExpanded) {
+        // If neither carousel nor nav is expanded, expand carousel.
+        if (!isCarouselExpanded) {
             dispatch(updateIsCarouselExpanded(true))
 
             // Also scroll to selected or accessed annotation.
@@ -44,18 +42,15 @@ const CarouselNavDispatcher = forwardRef((props, ref) => {
             ))
 
         /**
-         * If carousel is expanded and we're toggling the selected annotation,
-         * then show the selected annotation as a popup.
+         * If carousel is expanded but no annotation is selected, then toggle
+         * between carousel and nav.
          */
-        } else if (fromAnnotation && isCarouselExpanded) {
-            dispatch(updateIsCarouselExpanded(false))
-
-        /**
-         * Otherwise, just toggle nav. Carousel will not show when nav is
-         * expanded.
-         */
-        } else {
+        } else if (isCarouselExpanded && !isAnnotationShown) {
             dispatch(updateIsNavExpanded(!isNavExpanded))
+
+        // Otherwise, toggle between carousel and annotation popup.
+        } else {
+            dispatch(updateIsCarouselExpanded(!isCarouselExpanded))
         }
 
         return true

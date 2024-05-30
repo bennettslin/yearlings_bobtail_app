@@ -1,45 +1,12 @@
 # Latest todo
 
-### Carousel nav logic
-* When nothing is shown ✅
-    * Only carousel nav button shown ✅
-        * Button has carousel nav icon ✅
-* When nav is shown ✅
-    * Only carousel nav button shown ✅
-        * Button has carousel icon ✅
-    * Clicking away hides nav ✅
-        * Escape does same ✅
-* When carousel is shown ✅
-    * Only carousel nav button shown ✅
-        * Button has nav icon ✅
-    * Clicking away hides carousel ✅
-        * Escape does same ✅
-* When carousel is shown and annotation is selected ✅
-    * Only annotation toggle button shown ✅
-        * Button has single annotation icon placeholder ✅
-    * Clicking away unselects annotation but leaves carousel ✅
-        * Escape does same ✅
-* When popup annotation is shown ✅
-    * Only annotation toggle button shown ✅
-        * Button has carousel icon ✅
-    * Clicking away unselects annotation and dismisses popup ✅
-        * Escape does same ✅
-* Clicking on unselected annotation shouldn't hide carousel ✅
-* Single key determines all logic
-    * Hook up access logic
-* Test logic is correct when carousel nav is mounted
-    * For access
-    * For button
-* Test logic is correct when carousel nav isn't mounted
-    * For access
-    * For button
-
-
 ### Must do
-* Illustrator icon for single annotation
+* Illustrator
+    * Icon for single annotation
+    * Update icon for carousel nav
+    * Update icon for success copied
 
 ### Good fixes
-* Annotation directions can be on selected carousel annotation itself as well
 * Tooltip changes
     * Carousel nav tooltip texts should be more clear?
 * Upgrade React tooltip?

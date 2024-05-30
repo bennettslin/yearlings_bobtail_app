@@ -14,7 +14,7 @@ const AnnotationToggleButton = () => {
         isCarouselExpanded = useSelector(mapIsCarouselExpanded)
 
     const handleButtonClick = () => {
-        dispatchCarouselNav.current(true)
+        dispatchCarouselNav.current()
     }
 
     return canCarouselNavMount && (
