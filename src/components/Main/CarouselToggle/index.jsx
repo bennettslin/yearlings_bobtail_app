@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux'
 import cx from 'classnames'
 import CarouselNavDispatcher from '../../../dispatchers/CarouselNav'
 import Button from '../../Button'
+import CarouselAccess from '../../Carousel/Access'
 import TipsHand from '../../Tips/Hand'
 import { CAROUSEL_TOGGLE_KEY } from '../../../constants/access'
 import { CAROUSEL_NAV_BUTTON_KEY } from '../../../constants/buttons'
@@ -26,6 +27,7 @@ const CarouselToggle = () => {
         <div className={cx(
             'CarouselToggle',
         )}>
+            <CarouselAccess />
             <Button
                 isLargeSize
                 {...{

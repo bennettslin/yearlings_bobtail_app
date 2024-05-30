@@ -6,7 +6,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import PageSongIndexContext from '../../contexts/PageSongIndex'
 import getDidMountHoc from '../../hocs/DidMountHoc'
-import CarouselAccess from './Access'
 import CarouselScroll from './Scroll'
 import { updateEntranceStore } from '../../redux/entrance/action'
 import { scrollCarouselForSongSelect } from '../../redux/scrollCarousel/action'
@@ -59,7 +58,6 @@ const Carousel = ({ didMount, pageSongIndex }) => {
                     }}
                 >
                     <CarouselScroll />
-                    <CarouselAccess />
                 </div>
             </CSSTransition>
         </PageSongIndexContext.Provider>

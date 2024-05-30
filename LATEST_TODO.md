@@ -1,8 +1,9 @@
 # Latest todo
 
 ### Today
-* Don't show access key left and right directions for carousel when annotation is selected
-* Carousel access keys need to be above carousel nav toggle
+* Stylistically position carousel access keys
+* Rename CarouselAccess to horizontal direction
+* Rename Lyric Access to vertical direction
 * Prep desk for Illustrator work
 * Heck, put up vocal booth?
 
