@@ -108,10 +108,7 @@ export const getCanCarouselAccessShow = ({
     isLyricExpanded,
 
 }) => Boolean(
-    /**
-     * Must have at least one selected dot, and no selected
-     * annotation.
-     */
+    // Must have at least one selected dot, and no selected annotation.
     selectedDotsBit &&
     !isLyricLogue,
     !lyricAnnotationIndex &&
