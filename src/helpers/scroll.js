@@ -100,7 +100,7 @@ export const getSafeScrollChild = ({
 
 export const getCanCarouselAccessShow = ({
     inLyric,
-    isCarouselShown,
+    isNavExpanded,
     selectedDotsBit,
     isLyricLogue,
     lyricAnnotationIndex,
@@ -108,19 +108,17 @@ export const getCanCarouselAccessShow = ({
     isLyricExpanded,
 
 }) => Boolean(
-    // Must have at least one selected dot, and no selected annotation.
-    selectedDotsBit &&
     !isLyricLogue &&
     !lyricAnnotationIndex &&
+    selectedDotsBit &&
+    !isDotsSlideShown && (
 
-    // Don't show in carousel if carousel is not shown.
-    (inLyric || isCarouselShown) && (
-        (
-            // Must not have dots section open...
-            !isDotsSlideShown
-        ) || (
-            // ... or else have lyric expanded.
-            isLyricExpanded
+        inLyric ? (
+            // If in lyric…
+            !isNavExpanded
+        ) : (
+            // If in carousel…
+            !isLyricExpanded
         )
     ),
 )
