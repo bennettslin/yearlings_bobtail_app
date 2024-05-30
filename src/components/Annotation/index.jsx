@@ -20,14 +20,13 @@ const Annotation = ({
     isSelected,
     serverClientSongIndex,
     annotationIndex,
+    handleAnnotationClick,
 
 }) => {
     const stopPropagation = useRef()
 
     const onClick = e => {
-        if (isSelected) {
-            stopPropagation.current(e)
-        }
+        handleAnnotationClick({ e, annotationIndex })
     }
 
     // If in popup, annotation won't always exist.
@@ -114,6 +113,7 @@ Annotation.propTypes = {
     isSelected: PropTypes.bool.isRequired,
     serverClientSongIndex: PropTypes.number.isRequired,
     annotationIndex: PropTypes.number.isRequired,
+    handleAnnotationClick: PropTypes.func.isRequired,
 }
 
 export default memo(getDidMountHoc(getSongServerClientHoc(Annotation)))

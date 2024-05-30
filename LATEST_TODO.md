@@ -24,7 +24,8 @@
         * Button has carousel icon ✅
     * Clicking away unselects annotation and dismisses popup ✅
         * Escape does same ✅
-* Clicking on unselected annotation shouldn't hide carousel
+* Clicking on unselected annotation shouldn't hide carousel ✅
+* Nav can also show access direction keys
 * Single key determines all logic
     * Hook up access logic
 * Test logic is correct when carousel nav is mounted

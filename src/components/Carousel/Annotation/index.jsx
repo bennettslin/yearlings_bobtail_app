@@ -18,6 +18,7 @@ const CarouselAnnotation = forwardRef(({
     didMount,
     serverClientSongIndex,
     annotationIndex,
+    handleAnnotationClick,
 }, ref) => {
     const
         isAccessed = useSelector(getMapIsAnnotationAccessed(annotationIndex)),
@@ -62,6 +63,7 @@ const CarouselAnnotation = forwardRef(({
                     isAccessed,
                     isSelected,
                     annotationIndex,
+                    handleAnnotationClick,
                 }}
             />
         </div>
@@ -72,6 +74,7 @@ CarouselAnnotation.propTypes = {
     didMount: PropTypes.bool.isRequired,
     serverClientSongIndex: PropTypes.number.isRequired,
     annotationIndex: PropTypes.number.isRequired,
+    handleAnnotationClick: PropTypes.func.isRequired,
 }
 
 export default memo(getDidMountHoc(getSongServerClientHoc(CarouselAnnotation)))

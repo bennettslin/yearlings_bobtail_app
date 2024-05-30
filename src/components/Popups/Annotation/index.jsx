@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState, memo } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import getDidMountHoc from '../../../hocs/DidMountHoc'
+import StopPropagationDispatcher from '../../../dispatchers/StopPropagation'
 import AnnotationDispatcher from '../../../handlers/Annotation/Dispatcher'
 import Annotation from '../../Annotation'
 import Popup from '../../Popup'
@@ -15,6 +16,7 @@ import { mapLyricAnnotationIndex } from '../../../redux/lyric/selector'
 
 const AnnotationPopup = ({ didMount, inMain }) => {
     const
+        stopPropagation = useRef(),
         dispatchAnnotation = useRef(),
         lyricAnnotationIndex = useSelector(mapLyricAnnotationIndex),
         isOverlayingAnnotation = useSelector(mapIsOverlayingAnnotation),
@@ -29,6 +31,10 @@ const AnnotationPopup = ({ didMount, inMain }) => {
 
     const handleNextClick = () => {
         dispatchAnnotation.current.direction(1)
+    }
+
+    const handleAnnotationClick = ({ e }) => {
+        stopPropagation.current(e)
     }
 
     const onExited = () => {
@@ -65,9 +71,13 @@ const AnnotationPopup = ({ didMount, inMain }) => {
             <Annotation
                 isAccessed
                 isSelected
-                {...{ annotationIndex: popupAnnotationIndex }}
+                {...{
+                    annotationIndex: popupAnnotationIndex,
+                    handleAnnotationClick,
+                }}
             />
             <AnnotationDispatcher {...{ ref: dispatchAnnotation }} />
+            <StopPropagationDispatcher {...{ ref: stopPropagation }} />
         </Popup>
     )
 }
