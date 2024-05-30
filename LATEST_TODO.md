@@ -1,7 +1,8 @@
 # Latest todo
 
 ### Today
-* Don't show access key left and right directions for carousel or lyrics when annotation is selected, or when nav is selected
+* Don't show access key left and right directions for lyrics when nav is selected
+* Don't show access key left and right directions for carousel when annotation is selected
 * Do show access key left and right directions for carousel when nav is selected
 * Prep desk for Illustrator work
 * Heck, put up vocal booth?

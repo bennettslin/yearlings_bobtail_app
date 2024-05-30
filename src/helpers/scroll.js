@@ -110,7 +110,7 @@ export const getCanCarouselAccessShow = ({
 }) => Boolean(
     // Must have at least one selected dot, and no selected annotation.
     selectedDotsBit &&
-    !isLyricLogue,
+    !isLyricLogue &&
     !lyricAnnotationIndex &&
 
     // Don't show in carousel if carousel is not shown.
