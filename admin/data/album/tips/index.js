@@ -34,7 +34,7 @@ export default [
     {
         // Dear Saskia
         type: DOTS,
-        description: `Each annotation falls under one or more categories. Click a category button to show or hide all annotations for that category.`,
+        description: `Behind every annotation are colored "dots" that each represent a different theme. Select any dot in this panel to show all annotations for its theme.`,
     },
     {
         // Odin
@@ -89,7 +89,7 @@ export default [
     {
         // Kyon?
         type: TIPS,
-        description: `To prevent tips from showing at the start of each new song, click the light bulb once or twice until it is no longer in the socket.`,
+        description: `To prevent a new tip from showing at the start of each song, click the light bulb twice until it is no longer in the socket.`,
     },
     {
         // Uncanny Valley Boy
@@ -99,7 +99,7 @@ export default [
     {
         // Cremated
         type: NAV,
-        description: `On wide screens, you can show the nav menu by clicking the carousel button once or twice. Then click any snowglobe button to have the audio jump to that song.`,
+        description: `On wide screens, you can show the navigation menu by clicking the carousel button twice. Then click any snowglobe to select that song.`,
     },
     {
         // Vegan Proclamation
@@ -109,7 +109,7 @@ export default [
     {
         // My 100,000th Dream
         type: OVERVIEW,
-        description: `To prevent the narrative overview from showing at the start of each new song, click the Bennett button once or twice until he is wearing headphones.`,
+        description: `To prevent Bennett from speaking at the start of each song, click him twice until he is wearing headphones.`,
     },
     null,
 ]

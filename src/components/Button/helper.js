@@ -1,3 +1,5 @@
+import React from 'react'
+import { getTitleForAlbum } from '../../endpoint/album/title'
 import { getTitleForSong } from '../../endpoint/album/songs'
 import {
     ABOUT_BUTTON_KEY,
@@ -45,7 +47,12 @@ import {
 } from '../../constants/options'
 
 const TOOLTIP_TEXT_MAP = {
-    [ABOUT_BUTTON_KEY]: 'about the album',
+    [ABOUT_BUTTON_KEY]: (
+        <>
+            {'about\u00a0'}
+            <i>{getTitleForAlbum()}</i>
+        </>
+    ),
     get [ANNOTATION_TOGGLE_BUTTON_KEY]() {
         return {
             [false]: 'show in carousel',
@@ -79,7 +86,7 @@ const TOOLTIP_TEXT_MAP = {
     },
     [CAROUSEL_PREVIOUS_BUTTON_KEY]: 'previous annotation',
     [CAROUSEL_NEXT_BUTTON_KEY]: 'next annotation',
-    [DOTS_SLIDE_BUTTON_KEY]: 'annotation categories',
+    [DOTS_SLIDE_BUTTON_KEY]: 'thematic dots',
     get lyricEar() {
         return {
             [LYRIC_LEFT]: 'left speaker',
@@ -96,9 +103,9 @@ const TOOLTIP_TEXT_MAP = {
     [LYRIC_SCROLL_BUTTON_KEY]: 'auto scroll lyrics',
     get overview() {
         return {
-            [SHOWN]: 'song overview shown',
-            [HIDDEN]: 'song overview hidden',
-            [DISABLED]: 'song overviews disabled',
+            [SHOWN]: 'Bennett speaking',
+            [HIDDEN]: 'Bennett silent',
+            [DISABLED]: 'Bennett muted',
         }
     },
     [PAGINATION_PREVIOUS_BUTTON_KEY]: 'previous pitch page',

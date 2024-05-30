@@ -11,11 +11,12 @@ import {
 import { getTooltipPlacement } from './helper'
 import { IS_USER_AGENT_DESKTOP } from '../../../constants/device'
 import './style'
+import { getTooltipText } from '../helper'
 
 const Tooltip = ({
     buttonName,
     buttonIdentifier,
-    // handleTooltipHide,
+    buttonOption,
 
 }) => {
     const
@@ -48,16 +49,23 @@ const Tooltip = ({
                     buttonName,
                     isDesktopWidth,
                 }),
-                // afterHide: handleTooltipHide,
             }}
-        />
+        >
+            {getTooltipText({
+                buttonName,
+                buttonOption,
+            })}
+        </ReactTooltip>
     )
 }
 
 Tooltip.propTypes = {
     buttonName: PropTypes.string.isRequired,
     buttonIdentifier: PropTypes.any,
-    // handleTooltipHide: PropTypes.func,
+    buttonOption: PropTypes.oneOfType([
+        PropTypes.bool,
+        PropTypes.string,
+    ]),
 }
 
 export default memo(Tooltip)

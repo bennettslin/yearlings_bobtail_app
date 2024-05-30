@@ -11,10 +11,7 @@ import Tooltip from './Tooltip'
 import AccessLetter from '../Access/Letter'
 import { ENTER } from '../../constants/access'
 import { CHILD_ACCESS_PREFIX } from '../../constants/prefixes'
-import {
-    getIsTooltipEnabled,
-    getTooltipText,
-} from './helper'
+import { getIsTooltipEnabled } from './helper'
 import './style'
 
 const Button = forwardRef(({
@@ -33,7 +30,6 @@ const Button = forwardRef(({
     isBrightHover,
     buttonOption,
     handleButtonClick,
-    // handleTooltipHide,
     hasCharacterShadowLight,
     buttonCharacter,
     hasTitleShadowLight,
@@ -100,10 +96,7 @@ const Button = forwardRef(({
                 ),
                 ...isTooltipEnabled && {
                     'data-for': `${buttonName}${buttonIdentifier || ''}`,
-                    'data-tip': getTooltipText({
-                        buttonName,
-                        buttonOption,
-                    }),
+                    'data-tip': '',
                 },
                 onClick,
             }}
@@ -157,7 +150,7 @@ const Button = forwardRef(({
                     {...{
                         buttonName,
                         buttonIdentifier,
-                        // handleTooltipHide,
+                        buttonOption,
                     }}
                 />
             )}
@@ -191,7 +184,6 @@ Button.propTypes = {
     buttonTitle: PropTypes.any,
     buttonIdentifier: PropTypes.any,
     handleButtonClick: PropTypes.func.isRequired,
-    // handleTooltipHide: PropTypes.func,
     children: PropTypes.any,
 }
 

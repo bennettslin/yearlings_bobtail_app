@@ -9,15 +9,14 @@
         * Button has carousel icon ✅
     * Clicking away hides nav ✅
         * Escape does same ✅
-* When carousel is shown
+* When carousel is shown ✅
     * Only carousel nav button shown ✅
         * Button has nav icon ✅
     * Clicking away hides carousel ✅
         * Escape does same ✅
-
 * When carousel is shown and annotation is selected
     * Only annotation toggle button shown
-        * Button has single annotation icon placeholder
+        * Button has single annotation icon placeholder ✅
     * Clicking away unselects annotation but leaves carousel ✅
         * Escape does same ✅
 * When popup annotation is shown
@@ -26,8 +25,6 @@
     * Clicking away unselects annotation and dismisses popup ✅
         * Escape does same ✅
 * Single key determines all logic
-    * Decide on single key
-        * Reconsider "u" and "i" for scenes (opening dev tools is annoying)
     * Hook up access logic
 * Test logic is correct when carousel nav is mounted
     * For access
@@ -41,6 +38,9 @@
 * Illustrator icon for single annotation
 
 ### Good fixes
+* Tooltip changes
+    * Carousel nav tooltip texts should be more clear?
+* Upgrade React tooltip?
 * Annotations allow command click?
 * "Floater" problem again
 
