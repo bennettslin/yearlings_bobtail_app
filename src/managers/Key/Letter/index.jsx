@@ -32,7 +32,6 @@ import {
 } from '../../../redux/session/action'
 import {
     ABOUT_ALBUM_TOGGLE_KEY,
-    ANNOTATION_TOGGLE_KEY,
     AUDIO_PLAY_KEY,
     CAROUSEL_TOGGLE_KEY,
     COPY_URL_KEY,
@@ -144,9 +143,6 @@ const LetterManager = forwardRef((props, ref) => {
             case ABOUT_ALBUM_TOGGLE_KEY:
                 dispatch(toggleIsAboutShown())
                 keyWasRegistered = true
-                break
-            case ANNOTATION_TOGGLE_KEY:
-                keyWasRegistered = dispatchCarouselNav.current(true)
                 break
             case CAROUSEL_TOGGLE_KEY:
                 keyWasRegistered = dispatchCarouselNav.current()

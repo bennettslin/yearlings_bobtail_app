@@ -25,7 +25,6 @@
     * Clicking away unselects annotation and dismisses popup ✅
         * Escape does same ✅
 * Clicking on unselected annotation shouldn't hide carousel ✅
-* Nav can also show access direction keys
 * Single key determines all logic
     * Hook up access logic
 * Test logic is correct when carousel nav is mounted
@@ -40,9 +39,11 @@
 * Illustrator icon for single annotation
 
 ### Good fixes
+* Annotation directions can be on selected carousel annotation itself as well
 * Tooltip changes
     * Carousel nav tooltip texts should be more clear?
 * Upgrade React tooltip?
+* Nav can also show access direction keys
 * Annotations allow command click?
 * "Floater" problem again
 
