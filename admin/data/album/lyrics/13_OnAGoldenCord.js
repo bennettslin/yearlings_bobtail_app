@@ -337,7 +337,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                review: true,
+                todo: true,
+                problem: `Review.`,
                 card: {
                     description: [
                         `In`,
@@ -353,7 +354,7 @@ export default {
                                 wiki: `Nineteen_Eighty-Four`,
                             },
                         },
-                        `, the citizens engage in contradictory doublethink to understand the propaganda of Newspeak. Similarly, to understand the breakup, I had to reconcile the contradictions in my head. So this song uses doublespeaker rhyme— which I named partly for its Orwellian undertone— to depict the inner conflict between my sober self and drunken alter ego.`,
+                        `, the citizens engage in contradictory doublethink to understand the propaganda of Newspeak. Similarly, to understand the breakup, I had to reconcile the contradictions in my head. So this song uses doublespeaker rhyme— which I named partly for its Orwellian undertone— to depict the inner conflict between my sober self and my drunken alter ego.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
