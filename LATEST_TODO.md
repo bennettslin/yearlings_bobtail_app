@@ -1,9 +1,5 @@
 # Latest todo
 
-### Annotation fixes
-* First Nations wiki
-* Cop annotation
-
 ### Today
 * Prep desk for Illustrator work
 

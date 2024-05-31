@@ -1260,7 +1260,7 @@ export default {
                                     `"Forced" to leave their Asian homelands due to scarce resources, these groups are now known in Canada as the "`,
                                     {
                                         anchor: `First Nations`,
-                                        wiki: `First_Nations`,
+                                        wiki: `First_Nations_in_Canada`,
                                     },
                                     `."`,
                                 ],
