@@ -1,7 +1,6 @@
 # Latest todo
 
 ### Today
-* Rename CarouselAccess to horizontal direction
 * Rename Lyric Access to vertical direction
 * Prep desk for Illustrator work
 * Heck, put up vocal booth?

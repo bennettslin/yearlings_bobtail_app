@@ -9,7 +9,7 @@ import LyricAccess from './Access'
 import LyricHelmet from './Helmet'
 import LyricScroll from './Scroll'
 import LyricToggles from './Toggles'
-import CarouselAccess from '../Carousel/Access'
+import HorizontalAccessLetters from '../Access/DirectionLetters/Horizontal'
 import { scrollLyricForSongSelect } from '../../redux/scrollLyric/action'
 import { mapIsSongChangeDone } from '../../redux/entrance/selector'
 import { CAROUSEL_LYRICS_ENTERED_AFTER_SONG_CHANGE_DONE_DURATION } from '../../constants/entrance'
@@ -63,7 +63,7 @@ const Lyric = forwardRef(({ didMount, pageSongIndex }, ref) => {
                     <LyricToggles />
                     <LyricToggles isBottomRight />
                     <LyricAccess />
-                    <CarouselAccess inLyric />
+                    <HorizontalAccessLetters inLyric />
                 </div>
             </CSSTransition>
         </PageSongIndexContext.Provider>

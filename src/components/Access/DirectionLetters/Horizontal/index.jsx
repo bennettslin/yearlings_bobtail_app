@@ -1,12 +1,12 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
-import AccessLetters from '../../Access/Letters'
-import { getMapCanCarouselAccessShow } from '../../../redux/scroll/selector'
-import { ARROW_LEFT, ARROW_RIGHT } from '../../../constants/access'
+import AccessLetters from '../../Letters'
+import { getMapCanCarouselAccessShow } from '../../../../redux/scroll/selector'
+import { ARROW_LEFT, ARROW_RIGHT } from '../../../../constants/access'
 import './style'
 
-const CarouselAccess = ({ inLyric }) => {
+const HorizontalAccessLetters = ({ inLyric }) => {
     const canCarouselAccessShow = useSelector(
         getMapCanCarouselAccessShow(inLyric),
     )
@@ -26,8 +26,8 @@ const CarouselAccess = ({ inLyric }) => {
     )
 }
 
-CarouselAccess.propTypes = {
+HorizontalAccessLetters.propTypes = {
     inLyric: PropTypes.bool,
 }
 
-export default CarouselAccess
+export default HorizontalAccessLetters
