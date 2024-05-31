@@ -1,21 +1,3 @@
-@import '../../../scss/constants/icon';
-@import '../../../scss/constants/lyric';
-
 .AccessLetters__carousel {
-    left: $MARGIN_THIN;
-
-    .DW__desktopWidth
-    & {
-        bottom:
-            $margin__scrollBar
-            + $LENGTH_ICON_LARGE
-            + $MARGIN_THIN * 2;
-    }
-
-    .DW__mobileWidth
-    & {
-        top:
-            $LENGTH_ICON_LARGE
-            + $MARGIN_THIN * 2;
-    }
+    position: relative;
 }

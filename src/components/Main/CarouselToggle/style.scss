@@ -11,7 +11,9 @@
     padding: $MARGIN_THIN;
 
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: $MARGIN_THIN;
 
     margin-left: -$width__overviewToggle;
 
@@ -51,5 +53,6 @@
     & {
         top: 0;
         bottom: auto;
+        flex-direction: column-reverse;
     }
 }
