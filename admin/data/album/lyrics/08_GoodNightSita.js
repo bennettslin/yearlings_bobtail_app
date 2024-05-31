@@ -1068,7 +1068,7 @@ export default {
                             anchor: `An Occurrence at Owl Creek Bridge`,
                             wiki: `An_Occurrence_at_Owl_Creek_Bridge`,
                         },
-                        `," a short story famous for its twist ending, when a seemingly long span of time is revealed to have passed in an instant. Likewise, the near entirety of this song, in which I've recollected every date with Sita thus far, turns out to have been sandwiched between the briefest exchange of farewells.`,
+                        `," a short story famous for its twist ending, where a seemingly long span of time is revealed to have passed in an instant. Likewise, the near entirety of this song, during which I've recalled every date with Sita thus far, turns out to have taken place within a brief exchange of farewells.`,
                     ],
                     dotKeys: {
                         [NARRATIVE]: true,

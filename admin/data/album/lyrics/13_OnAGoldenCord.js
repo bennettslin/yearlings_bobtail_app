@@ -354,7 +354,7 @@ export default {
                                 wiki: `Nineteen_Eighty-Four`,
                             },
                         },
-                        `, the citizens engage in contradictory doublethink to understand the propaganda of Newspeak. Similarly, to understand the breakup, I had to reconcile the contradictions in my head. So this song uses doublespeaker rhyme— which I named partly for its Orwellian undertone— to depict the inner conflict between my sober self and my drunken alter ego.`,
+                        `, people engage in contradictory doublethink in order to understand the propaganda of Newspeak. Similarly, to make sense of the breakup, I had to reconcile the contradictions in my head. So this song uses doublespeaker rhyme— which I named partly for its Orwellian undertone— to depict the inner conflict between my sober self and my drunken alter ego.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -668,8 +668,7 @@ export default {
                         `Now the`,
                         {
                             anchor: `jester teeters`,
-                            todo: true,
-                            problem: `Review.`,
+                            review: true,
                             card: {
                                 description: `I was stopped by a pair of police officers that night. They judged me to be harmless and sent me on my way.`,
                                 dotKeys: {

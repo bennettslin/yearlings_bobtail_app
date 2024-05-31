@@ -1,5 +1,7 @@
 # Latest todo
 
+* Allow for paragraphs in logue overviews?
+
 ### Today
 * Prep desk for Illustrator work
 
