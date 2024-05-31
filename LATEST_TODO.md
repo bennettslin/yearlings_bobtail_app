@@ -1,15 +1,18 @@
 # Latest todo
 
+### Annotation fixes
+* First Nations wiki
+* Cop annotation
+
 ### Today
-* Rename Lyric Access to vertical direction
 * Prep desk for Illustrator work
-* Heck, put up vocal booth?
 
 ### Must do
 * Illustrator
     * Icon for single annotation
     * Update icon for carousel nav
     * Update icon for success copied
+    * Bindis?
 
 ### Good fixes
 * Tooltip changes
@@ -17,7 +20,3 @@
 * Upgrade React tooltip?
 * Annotations allow command click?
 * "Floater" problem again
-
-### Annotation fixes
-* First Nations wiki
-* Cop annotation
