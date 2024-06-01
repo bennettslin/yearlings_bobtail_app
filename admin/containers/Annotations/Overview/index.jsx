@@ -2,10 +2,17 @@
 import React from 'react'
 import cx from 'classnames'
 import Texts from '../../../../src/components/Texts'
-import { getOverviewForSong } from '../../../../src/endpoint/album/songs'
+import {
+    getOverviewForSong,
+    getSongIsLogue,
+} from '../../../../src/endpoint/album/songs'
+import './style'
 
 const Overview = ({ songIndex }) => {
-    const overview = getOverviewForSong(songIndex)
+    const
+        overview = getOverviewForSong(songIndex),
+        // Logue overviews are wrapped in additional array.
+        texts = getSongIsLogue(songIndex) ? overview : [overview]
 
     return (
         <div
@@ -28,16 +35,16 @@ const Overview = ({ songIndex }) => {
                 <div
                     {...{
                         className: cx(
-                            'Overview',
+                            'OverviewText',
                             'fontSize__verse',
                         ),
                     }}
                 >
-                    <Texts
-                        {...{
-                            text: overview,
-                        }}
-                    />
+                    {texts.map((text, index) => (
+                        <p {...{ key: index }}>
+                            <Texts {...{ text }} />
+                        </p>
+                    ))}
                 </div>
             </div>
         </div>

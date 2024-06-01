@@ -12,9 +12,10 @@ import getSongServerClientHoc from '../../../hocs/SongHoc'
 import './style'
 
 const OverviewText = ({ serverClientSongIndex }) => {
-    const texts = getSongIsLogue(serverClientSongIndex) ?
-        [getOverviewForSong(serverClientSongIndex)] :
-        [getOverviewForSong(serverClientSongIndex)]
+    const
+        overview = getOverviewForSong(serverClientSongIndex),
+        // Logue overviews are wrapped in additional array.
+        texts = getSongIsLogue(serverClientSongIndex) ? overview : [overview]
 
     return (
         <div
@@ -24,13 +25,9 @@ const OverviewText = ({ serverClientSongIndex }) => {
                 ),
             }}
         >
-            {texts.map(text => (
-                <p>
-                    <Texts
-                        {...{
-                            text,
-                        }}
-                    />
+            {texts.map((text, index) => (
+                <p {...{ key: index }}>
+                    <Texts {...{ text }} />
                 </p>
             ))}
             {getSongIsLogue(serverClientSongIndex) && (

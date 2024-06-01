@@ -1,6 +1,6 @@
 # Latest todo
 
-* Allow for paragraphs in logue overviews?
+* Nav doesn't show in logues
 
 ### Today
 * Prep desk for Illustrator work
