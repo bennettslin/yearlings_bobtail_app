@@ -1,11 +1,5 @@
 # Latest todo
 
-* Good todo
-    * Test carousel, nav, annotations, logues.
-
-### Today
-* Prep desk for Illustrator work
-
 ### Must do
 * Illustrator
     * Icon for single annotation

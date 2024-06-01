@@ -2,6 +2,7 @@ import { createSelector } from 'reselect'
 import { mapIsHeightlessLyric } from '../viewport/selector'
 import { FOCUS_STORE } from '../../constants/store'
 import { mapIsActivated } from '../activated/selector'
+import { mapIsSelectedLogue } from '../selected/selector'
 import {
     mapIsAboutShown,
     mapIsLyricExpanded,
@@ -17,17 +18,23 @@ export const mapQueuedFocus = (
 ) => queuedFocus
 
 export const mapCanNavigateByKey = createSelector(
+    mapIsSelectedLogue,
     mapIsAboutShown,
+    mapIsNavExpanded,
     mapIsPromoShown,
     mapIsScoreShown,
     mapIsWikiShown,
     (
+        isSelectedLogue,
         isAboutShown,
+        isNavExpanded,
         isPromoShown,
         isScoreShown,
         isWikiShown,
     ) => getCanNavigateByKey({
+        isSelectedLogue,
         isAboutShown,
+        isNavExpanded,
         isPromoShown,
         isScoreShown,
         isWikiShown,
