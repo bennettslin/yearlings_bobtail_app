@@ -25,14 +25,16 @@ export default {
     referenceDescription: `Piano in measure 1`,
     mixStartTime: `0:01:22.94`,
     playerStartTime: 3332.826,
-    review: true,
+    todo: true,
+    problem: `Revise`,
     overview: `Each night I dreamt of happily reuniting with Sita, only to wake in panic as the reality set in that I'd lost her forever. I lived in such dread of this cruel trick played by my unconscious mind, I refused to sleep until exhaustion overtook me— even as my conscious mind could only dwell in despair. I had no idea when this torment would end. The answer, I feared, was never.`,
     lyricUnits: [
         {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                review: true,
+                todo: true,
+                problem: `Revise`,
                 card: {
                     description: `This is the other song on the album that was originally performed by the Yearlings. I wrote it to please Sita after she complained that I didn't have any romantic songs about her— although it's actually a wistful remembrance of our time together, given my certainty that we would soon break up. I kept this part of its meaning a secret, of course, but as with "M," I probably wasn't fooling anyone.`,
                     dotKeys: {
@@ -59,7 +61,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 review: true,
                 card: {
-                    description: `During the years afterward when I was trying to be a good person again, I kept digging further into my past to figure out where things went wrong. So for this song, I decided to revisit the sonic texture of every other song in reverse, starting with the piano from "Vegan Proclamation."`,
+                    description: `During the years afterward when I was trying to be a good person again, I kept digging further into my past to figure out where things went wrong. So for this song, I decided to revisit the sonic textures of every other song in reverse, starting with the piano from "Vegan Proclamation."`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGCRAFT]: true,
@@ -112,6 +114,7 @@ export default {
                         {
                             anchor: `El Torito`,
                             properNoun: true,
+                            review: true,
                             card: {
                                 description: [
                                     `Sita worked as a hostess at`,
@@ -119,7 +122,7 @@ export default {
                                         anchor: `El Torito`,
                                         wiki: `El_Torito`,
                                     },
-                                    `, a Mexican chain restaurant. I would sometimes pick her up after her shift.`,
+                                    `, a Mexican chain restaurant. Sometimes I'd pick her up after her shift.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -358,8 +361,10 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
+                problem: `Revise`,
                 card: {
-                    description: `The chord progression heard in this bridge, which I call Sita's theme, comes from the bridge in "Grasshoppers Lie Heavy." Musical texture is provided by the arpeggiated Spanish guitar from "M," followed by the melodicas evoking brass fanfare heard in "Pchelka's Starry Journey."`,
+                    description: `The chord progression for this bridge, which I call Sita's theme, comes from the bridge in "Grasshoppers Lie Heavy." Musical texture is provided by the arpeggiated Spanish guitar from "M," followed by the melodicas that evoke brass fanfare heard in "Pchelka's Starry Journey."`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
@@ -392,6 +397,7 @@ export default {
                         `My hundred thousandth dream, on the`,
                         {
                             anchor: `cliffs of El Cerrito`,
+                            review: true,
                             card: {
                                 description: [
                                     `The city of`,
@@ -399,7 +405,7 @@ export default {
                                         anchor: `El Cerrito`,
                                         wiki: `El_Cerrito,_California`,
                                     },
-                                    `has a sprawling hillside with hiking trails, secluded groves, and a view of the San Francisco Bay. When Sita and I were together, it was our prime choice for a weekend outing.`,
+                                    `has a sprawling hillside with hiking trails, secluded groves, and a view of the San Francisco Bay. Back when Sita and I were together, it was our prime choice for a weekend outing.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
