@@ -1,20 +1,20 @@
 import React, { useRef } from 'react'
 import PropTypes from 'prop-types'
 import Annotation from '../Annotation'
-import { getSongsNotLoguesCount } from '../../../../src/endpoint/album/songs'
+import { getSongIsLogue, getSongsAndLoguesCount } from '../../../../src/endpoint/album/songs'
 import { getShownAnnotationIndices } from '../helpers'
 import Overview from '../Overview'
 
 const AnnotationSongColumn = ({ songIndex, showAll }) => {
     const
         songColumnElement = useRef(),
-        hue = (songIndex - 1) / getSongsNotLoguesCount() * 360,
+        hue = (songIndex - 1) / getSongsAndLoguesCount() * 360,
         shownAnnotationIndices = getShownAnnotationIndices({
             songIndex,
             showAll,
         })
 
-    return shownAnnotationIndices.length ? (
+    return shownAnnotationIndices.length || getSongIsLogue(songIndex) ? (
         <div
             {...{
                 ref: songColumnElement,

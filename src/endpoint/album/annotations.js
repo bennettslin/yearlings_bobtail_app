@@ -48,12 +48,12 @@ export const getTitleForAnnotation = (songIndex, annotationIndex) => {
 }
 
 export const getTodoForAnnotation = (songIndex, annotationIndex) => {
-    const { annotationTodos } = getSong(songIndex)
+    const { annotationTodos = [] } = getSong(songIndex)
     return annotationTodos[annotationIndex - 1]
 }
 
 export const getAnnotationTodoCountForSong = songIndex => {
-    const { annotationTodos } = getSong(songIndex)
+    const { annotationTodos = [] } = getSong(songIndex)
     return annotationTodos.filter(todo => todo).length
 }
 

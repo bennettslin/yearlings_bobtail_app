@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import AnnotationSongHeader from '../AnnotationSongHeader'
 import { getArrayOfLength } from '../../../../src/helpers/general'
-import { getSongsNotLoguesCount } from '../../../../src/endpoint/album/songs'
+import { getSongsAndLoguesCount } from '../../../../src/endpoint/album/songs'
 
 const TempGlobalHeader = ({ showAll }) => {
     return (
@@ -16,11 +16,11 @@ const TempGlobalHeader = ({ showAll }) => {
                 ),
             }}
         >
-            {getArrayOfLength(getSongsNotLoguesCount()).map(index => (
+            {getArrayOfLength(getSongsAndLoguesCount()).map(index => (
                 <AnnotationSongHeader
                     {...{
                         key: index,
-                        songIndex: index + 1,
+                        songIndex: index,
                         showAll,
                     }}
                 />
