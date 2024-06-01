@@ -30,9 +30,10 @@ const CarouselNavDispatcher = forwardRef((props, ref) => {
             return false
         }
 
-        // If neither carousel nor nav is expanded, expand carousel.
+        // If carousel is possible and not expanded, expand carousel.
         if (!isCarouselNotPossible && !isCarouselExpanded) {
             dispatch(updateIsCarouselExpanded(true))
+            dispatch(updateIsNavExpanded(false))
 
             // Also scroll to selected or accessed annotation.
             dispatch(scrollCarouselToAnnotation(
@@ -52,8 +53,9 @@ const CarouselNavDispatcher = forwardRef((props, ref) => {
             )
         ) {
             dispatch(updateIsNavExpanded(!isNavExpanded))
+            dispatch(updateIsCarouselExpanded(false))
 
-        // Otherwise, toggle between carousel and annotation popup.
+        // Otherwise, just toggle between carousel and annotation popup.
         } else {
             dispatch(updateIsCarouselExpanded(!isCarouselExpanded))
         }

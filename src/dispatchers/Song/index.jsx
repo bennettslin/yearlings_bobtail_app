@@ -105,6 +105,7 @@ const SongDispatcher = forwardRef((props, ref) => {
             },
         }))
 
+        // Assume after song is selected, user no longer wants nav shown.
         dispatch(updateIsNavExpanded())
 
         return true
