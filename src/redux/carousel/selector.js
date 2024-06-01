@@ -15,8 +15,8 @@ import {
 } from '../toggle/selector'
 import { mapIsAnnotationShown } from '../selected/selector'
 
-// It's more semantically clear to say when carousel is *not* showable.
-export const mapIsCarouselNotShowable = createSelector(
+// It's more semantically clear to say when carousel is *not* possible.
+export const mapIsCarouselNotPossible = createSelector(
     mapIsLyricLogue,
     mapSelectedDotsBit,
     (
@@ -26,7 +26,7 @@ export const mapIsCarouselNotShowable = createSelector(
 )
 
 const getMapIsCarouselOrNavShowable = checkForNav => createSelector(
-    mapIsCarouselNotShowable,
+    mapIsCarouselNotPossible,
     mapIsOverlayShown,
     mapIsOverviewShown,
     mapIsTipsShown,
@@ -34,7 +34,7 @@ const getMapIsCarouselOrNavShowable = checkForNav => createSelector(
     mapIsActivated,
     mapIsSliderTouched,
     (
-        isCarouselNotShowable,
+        isCarouselNotPossible,
         isOverlayShown,
         isOverviewShown,
         isTipsShown,
@@ -43,7 +43,7 @@ const getMapIsCarouselOrNavShowable = checkForNav => createSelector(
         isSliderTouched,
     ) => getIsCarouselOrNavShowable({
         checkForNav,
-        isCarouselNotShowable,
+        isCarouselNotPossible,
         isOverlayShown,
         isOverviewShown,
         isTipsShown,
@@ -59,7 +59,7 @@ export const mapIsCarouselAndNavShowable = getMapIsCarouselOrNavShowable()
 // Needed for carousel and nav.
 export const mapIsNavShowable = getMapIsCarouselOrNavShowable(true)
 
-// Only show carousel toggle when nav is showable but no annotation is selected.
+// Show carousel toggle when nav is showable but no annotation is selected.
 export const mapIsCarouselToggleShowable = createSelector(
     mapIsNavShowable,
     mapIsAnnotationShown,
@@ -69,25 +69,16 @@ export const mapIsCarouselToggleShowable = createSelector(
     ) => isNavShowable && !isAnnotationShown,
 )
 
-export const mapIsOnlyNavShowable = createSelector(
-    mapIsCarouselAndNavShowable,
-    mapIsNavShowable,
-    (
-        isCarouselNavShowable,
-        isNavShowable,
-    ) => isNavShowable && !isCarouselNavShowable,
-)
-
 export const mapCarouselNavIdentifier = createSelector(
-    mapIsCarouselNotShowable,
+    mapIsCarouselNotPossible,
     mapIsCarouselShown,
     mapIsNavExpanded,
     (
-        isCarouselNotShowable,
+        isCarouselNotPossible,
         isCarouselShown,
         isNavExpanded,
     ) => getCarouselNavIdentifier({
-        isCarouselNotShowable,
+        isCarouselNotPossible,
         isCarouselShown,
         isNavExpanded,
     }),

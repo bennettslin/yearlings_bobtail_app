@@ -18,7 +18,7 @@ export const VOLUME_DEFAULT = 10
 export const VOLUME_MAX = 20
 
 export const getCarouselNavIdentifier = ({
-    isCarouselNotShowable,
+    isCarouselNotPossible,
     isCarouselShown,
     isNavExpanded,
 
@@ -27,12 +27,12 @@ export const getCarouselNavIdentifier = ({
         return SHOW_NAV_NEXT
 
     } else if (isNavExpanded) {
-        return isCarouselNotShowable ?
+        return isCarouselNotPossible ?
             CLOSE_NAV_NEXT :
             SHOW_CAROUSEL_FROM_NAV
 
     } else {
-        return isCarouselNotShowable ?
+        return isCarouselNotPossible ?
             SHOW_NAV_NEXT :
             SHOW_CAROUSEL_NAV_NEXT
     }

@@ -70,7 +70,7 @@ export const getIsOverlayShown = ({
 
 export const getIsCarouselOrNavShowable = ({
     checkForNav,
-    isCarouselNotShowable,
+    isCarouselNotPossible,
     isOverlayShown,
     isOverviewShown,
     isTipsShown,
@@ -80,7 +80,7 @@ export const getIsCarouselOrNavShowable = ({
 }) => (
     (
         // If checking for carousel, cannot be in logue and must have dots.
-        checkForNav || !isCarouselNotShowable
+        checkForNav || !isCarouselNotPossible
     ) &&
     !isOverlayShown &&
     !isOverviewShown &&
