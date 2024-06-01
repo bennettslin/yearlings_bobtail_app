@@ -23,6 +23,7 @@ import {
     mapIsLyricExpanded,
     mapIsDotsSlideShown,
     mapIsNavExpanded,
+    mapIsCarouselExpanded,
 } from '../toggle/selector'
 import {
     mapWindowWidth,
@@ -50,25 +51,28 @@ export const getMapAlignForScroll = isCarousel => createSelector(
 
 export const getMapCanCarouselAccessShow = inLyric => createSelector(
     mapSelectedDotsBit,
-    mapIsLyricLogue,
     mapLyricAnnotationIndex,
+    mapIsLyricLogue,
     mapIsDotsSlideShown,
     mapIsLyricExpanded,
+    mapIsCarouselExpanded,
     mapIsNavExpanded,
     (
         selectedDotsBit,
-        isLyricLogue,
         lyricAnnotationIndex,
+        isLyricLogue,
         isDotsSlideShown,
         isLyricExpanded,
+        isCarouselExpanded,
         isNavExpanded,
     ) => getCanCarouselAccessShow({
         inLyric,
         selectedDotsBit,
-        isLyricLogue,
         lyricAnnotationIndex,
+        isLyricLogue,
         isDotsSlideShown,
         isLyricExpanded,
+        isCarouselExpanded,
         isNavExpanded,
     }),
 )

@@ -1,11 +1,9 @@
 # Latest todo
 
 * Nav bugs
-    * Access direction letters should show in logue when nav is expanded.
     * Access direction should work in logue when nav is expanded.
 
 * Good todo
-    * When selecting new song, dismiss nav.
     * Test carousel, nav, annotations, logues.
 
 ### Today
