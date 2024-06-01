@@ -1,5 +1,4 @@
 export const getCanNavigateByKey = ({
-    isSelectedLogue,
     isAboutShown,
     isPromoShown,
     isScoreShown,
@@ -10,7 +9,6 @@ export const getCanNavigateByKey = ({
     }
 
     return (
-        !isSelectedLogue &&
         !isAboutShown &&
         !isScoreShown &&
         !isWikiShown

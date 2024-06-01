@@ -154,7 +154,6 @@ const KeyManager = forwardRef((props, ref) => {
             handleLetter.current.escape(e)
 
         } else {
-
             _handleKeyRegister({
                 e,
                 keyName,

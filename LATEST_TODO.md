@@ -1,8 +1,5 @@
 # Latest todo
 
-* Nav bugs
-    * Access direction should work in logue when nav is expanded.
-
 * Good todo
     * Test carousel, nav, annotations, logues.
 
