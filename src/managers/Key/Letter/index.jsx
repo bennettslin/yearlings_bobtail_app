@@ -64,6 +64,7 @@ import {
     mapIsCarouselExpanded,
     mapIsDotsSlideShown,
     mapIsLyricExpanded,
+    mapIsNavExpanded,
     mapIsPromoShown,
     mapIsScoreShown,
 } from '../../../redux/toggle/selector'
@@ -91,6 +92,7 @@ const LetterManager = forwardRef((props, ref) => {
         isCarouselExpanded = useSelector(mapIsCarouselExpanded),
         isDotsSlideShown = useSelector(mapIsDotsSlideShown),
         isLyricExpanded = useSelector(mapIsLyricExpanded),
+        isNavExpanded = useSelector(mapIsNavExpanded),
         isOverviewShown = useSelector(mapIsOverviewShown),
         isPromoShown = useSelector(mapIsPromoShown),
         isScoreShown = useSelector(mapIsScoreShown),
@@ -233,7 +235,7 @@ const LetterManager = forwardRef((props, ref) => {
          * Collapse both carousel and nav. Note that if annotation is shown,
          * annotation will be deselected, but carousel will remain expanded.
          */
-        } else if (isCarouselExpanded) {
+        } else if (isCarouselExpanded || isNavExpanded) {
             // When nav is expanded, collapse both carousel and nav.
             dispatch(updateIsCarouselExpanded())
             dispatch(updateIsNavExpanded())
