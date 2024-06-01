@@ -1059,8 +1059,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
-                problem: `Review.`,
+                review: true,
                 card: {
                     description: [
                         `Ambrose Bierce also wrote "`,

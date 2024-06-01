@@ -1,6 +1,7 @@
 // Section to show song overview.
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
+import cx from 'classnames'
 import PromoLink from '../../PromoLink'
 import Texts from '../../Texts'
 import {
@@ -8,19 +9,36 @@ import {
     getSongIsLogue,
 } from '../../../endpoint/album/songs'
 import getSongServerClientHoc from '../../../hocs/SongHoc'
+import './style'
 
-const OverviewText = ({ serverClientSongIndex }) => (
-    <>
-        <Texts
+const OverviewText = ({ serverClientSongIndex }) => {
+    const texts = getSongIsLogue(serverClientSongIndex) ?
+        [getOverviewForSong(serverClientSongIndex)] :
+        [getOverviewForSong(serverClientSongIndex)]
+
+    return (
+        <div
             {...{
-                text: getOverviewForSong(serverClientSongIndex),
+                className: cx(
+                    'OverviewText',
+                ),
             }}
-        />
-        {getSongIsLogue(serverClientSongIndex) && (
-            <PromoLink />
-        )}
-    </>
-)
+        >
+            {texts.map(text => (
+                <p>
+                    <Texts
+                        {...{
+                            text,
+                        }}
+                    />
+                </p>
+            ))}
+            {getSongIsLogue(serverClientSongIndex) && (
+                <PromoLink />
+            )}
+        </div>
+    )
+}
 
 OverviewText.propTypes = {
     serverClientSongIndex: PropTypes.number.isRequired,

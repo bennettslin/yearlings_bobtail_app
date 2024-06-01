@@ -1,7 +1,6 @@
 import React, { useRef } from 'react'
 import Anchor from '../Anchor'
 import AlbumPromoDispatcher from '../../dispatchers/Promo/Album'
-import './style'
 
 const PromoLink = () => {
     const dispatchPromo = useRef()
