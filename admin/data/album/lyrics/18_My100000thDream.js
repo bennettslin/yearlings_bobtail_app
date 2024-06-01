@@ -27,16 +27,16 @@ export default {
     playerStartTime: 3332.826,
     todo: true,
     problem: `Revise`,
-    overview: `Each night I dreamt of happily reuniting with Sita, only to wake in panic as the reality set in that I'd lost her forever. I lived in such dread of this cruel trick played by my unconscious mind, I refused to sleep until exhaustion overtook me— even as my conscious mind could only dwell in despair. I had no idea when this torment would end. The answer, I feared, was never.`,
+    overview: `Each night I dreamt of happily reuniting with Sita, only to wake in panic as the reality set in that I'd lost her forever. I lived in such dread of this cruel trick played by my unconscious mind, I would stay up until exhaustion overtook me— even as my conscious mind could only dwell in despair. I had no idea when this torment would end. The answer, I feared, was never.`,
     lyricUnits: [
         {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 todo: true,
-                problem: `Revise`,
+                problem: `Review.`,
                 card: {
-                    description: `This is the other song on the album that was originally performed by the Yearlings. I wrote it to please Sita after she complained that I didn't have any romantic songs about her— although it's actually a wistful remembrance of our time together, given my certainty that we would soon break up. I kept this part of its meaning a secret, of course, but as with "M," I probably wasn't fooling anyone.`,
+                    description: `This is the other song on the album that was originally performed by the Yearlings. I wrote it to please Sita after she complained that I didn't have any romantic songs about her. In truth, it's a wistful remembrance of our time together, given my certainty that we would soon break up. I kept this part of its meaning a secret, of course— but as with "M," I probably wasn't fooling anyone.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGCRAFT]: true,
@@ -362,9 +362,9 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 todo: true,
-                problem: `Revise`,
+                problem: `Review.`,
                 card: {
-                    description: `The chord progression for this bridge, which I call Sita's theme, comes from the bridge in "Grasshoppers Lie Heavy." Musical texture is provided by the arpeggiated Spanish guitar from "M," followed by the melodicas that evoke brass fanfare heard in "Pchelka's Starry Journey."`,
+                    description: `This bridge shares the same chord progression with the one in "Grasshoppers Lie Heavy." First the Spanish guitar from "M" plays some arpeggios, after which the melodicas from "Pchelka's Starry Journey" evoke the sound of brass fanfare.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
