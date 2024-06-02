@@ -1,4 +1,5 @@
 # Latest todo
+* Store text-justify in state?
 
 ### Must do
 * Illustrator

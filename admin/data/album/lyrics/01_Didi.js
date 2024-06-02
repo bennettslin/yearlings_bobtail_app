@@ -209,8 +209,9 @@ export default {
                         `Didi, you've been following, I`,
                         {
                             anchor: `didn't want you here`,
+                            review: true,
                             card: {
-                                description: `I often tagged along with my sister, who was fiercely protective of me. But there were times when she and her friends would insist on doing girl stuff by themselves. This left me in a panic, since I had few playmates of my own.`,
+                                description: `I often tagged along with my sister, who was fiercely protective of me. But there were times when she and her friends would insist on doing girl stuff by themselves. This always left me in a panic, since I had few playmates of my own.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
