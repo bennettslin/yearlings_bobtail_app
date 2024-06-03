@@ -3,6 +3,7 @@ import { setBoolInStorage } from '../../utils/storage'
 import {
     TOGGLE_STORE,
     IS_CAROUSEL_EXPANDED,
+    IS_TEXT_JUSTIFIED,
 } from '../../constants/store'
 
 export const toggleIsAboutShown = () => ({
@@ -65,6 +66,15 @@ export const updateIsScoreShown = (isScoreShown = false) => ({
     type: TOGGLE_STORE,
     payload: { isScoreShown },
 })
+
+export const updateIsTextJustified = (isTextJustified = false) => {
+    setBoolInStorage(IS_TEXT_JUSTIFIED, isTextJustified)
+
+    return ({
+        type: TOGGLE_STORE,
+        payload: { isTextJustified },
+    })
+}
 
 /**
  * This is only ever used for admin purposes and may be removed at any time.

@@ -52,6 +52,7 @@ import {
     SCORE_TOGGLE_KEY,
     SONG_REPEAT_TOGGLE_KEY,
     SPACE,
+    TEXT_JUSTIFIED_KEY,
     TIPS_TOGGLE_KEY,
 } from '../../../constants/access'
 import { HIDDEN } from '../../../constants/options'
@@ -69,6 +70,7 @@ import {
     mapIsScoreShown,
 } from '../../../redux/toggle/selector'
 import { mapIsWikiShown } from '../../../redux/wiki/selector'
+import TextJustifiedDispatcher from '../../../dispatchers/TextJustified'
 
 const LetterManager = forwardRef((props, ref) => {
     const
@@ -86,6 +88,7 @@ const LetterManager = forwardRef((props, ref) => {
         dispatchScore = useRef(),
         dispatchSong = useRef(),
         dispatchTips = useRef(),
+        dispatchTextJustified = useRef(),
         isAboutShown = useSelector(mapIsAboutShown),
         isAnnotationShown = useSelector(mapIsAnnotationShown),
         isAudioOptionsExpanded = useSelector(mapIsAudioOptionsExpanded),
@@ -179,6 +182,9 @@ const LetterManager = forwardRef((props, ref) => {
             case TIPS_TOGGLE_KEY:
                 keyWasRegistered = dispatchTips.current()
                 break
+            case TEXT_JUSTIFIED_KEY:
+                keyWasRegistered = dispatchTextJustified.current()
+                break
             default:
                 keyWasRegistered = false
                 break
@@ -266,6 +272,7 @@ const LetterManager = forwardRef((props, ref) => {
             <ScoreDispatcher {...{ ref: dispatchScore }} />
             <SongDispatcher {...{ ref: dispatchSong }} />
             <TipsDispatcher {...{ ref: dispatchTips }} />
+            <TextJustifiedDispatcher {...{ ref: dispatchTextJustified }} />
         </>
     )
 

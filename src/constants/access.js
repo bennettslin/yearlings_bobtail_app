@@ -15,6 +15,7 @@ export const PREVIOUS_SONG_KEY = 'r'
 export const SCORE_TOGGLE_KEY = 's'
 export const TIPS_TOGGLE_KEY = 't'
 export const LYRIC_SCROLL_TOGGLE_KEY = 'v'
+export const TEXT_JUSTIFIED_KEY = 'x'
 export const ABOUT_ALBUM_TOGGLE_KEY = 'y'
 export const PROMO_TOGGLE_KEY = 'z'
 
