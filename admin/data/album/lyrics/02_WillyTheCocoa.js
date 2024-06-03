@@ -28,7 +28,8 @@ export default {
     referenceDescription: `Keyboards in anacrusis`,
     playerStartTime: 177.396,
     mixStartTime: `0:01:03.00`,
-    overview: `When my younger brother was diagnosed with autism, a neighbor told us about Willy the Cocoa, a mentally disabled man who'd once wandered the neighborhood collecting recyclables. Tragically, Willy was killed in a fight with some gangsters, who smashed his head open with a bottle. Hearing this story affected me greatly, and I would recall it whenever I pondered my brother's likely fate.`,
+    review: true,
+    overview: `After my younger brother was diagnosed with autism, a neighbor told us about Willy the Cocoa, a mentally disabled man who'd once wandered the neighborhood collecting recyclables. Tragically, Willy was killed in a fight with some gangsters, who smashed his head open with a bottle. Hearing this story affected me greatly, and I would recall it whenever I pondered my brother's likely fate.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -65,19 +66,21 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 review: true,
+                todo: true,
+                problem: `Review.`,
                 card: {
                     description: [
-                        `In the past, a disabled child was thought to be a troll in disguise known as a`,
+                        `In the past, a disabled child was sometimes thought to be a`,
                         {
                             anchor: `changeling`,
                             wiki: `Changeling`,
                         },
-                        `, who'd been left in place of a stolen human infant. So I wanted this song to sound like a band of trolls celebrating after having pulled off such a heist. I figured their style would be like the swamp rock of`,
+                        `— namely, a troll in disguise who'd been left in place of a stolen human infant. So I wanted this song to sound like a band of trolls celebrating after having pulled off such a heist. Since I figured their style would be like the swamp rock of`,
                         {
                             anchor: `Creedence Clearwater Revival`,
                             wiki: `Creedence_Clearwater_Revival`,
                         },
-                        `, so I used`,
+                        `, I used`,
                         {
                             anchor: `melodicas`,
                             wiki: `Melodica`,
@@ -422,14 +425,16 @@ export default {
                         `Oh ma'am, I`,
                         {
                             anchor: `see your kid with whiskers`,
+                            todo: true,
+                            problem: `Review.`,
                             card: {
                                 description: [
-                                    `Noting my brother's distaste for haircuts, Willy jokingly predicts that my brother will sport an unshaven look as an adult. But in many legends, the changeling is a full-grown troll who is perhaps centuries old. So Willy's phrasing invites the possibility that my brother, being a changeling, in fact`,
+                                    `Noting my brother's distaste for haircuts, Willy jokingly predicts that he'll go unshaven as an adult. But Willy's curious phrasing invites the possibility that my brother, in fact,`,
                                     {
                                         isEmphasis: true,
                                         lyric: `already`,
                                     },
-                                    `wears a beard.`,
+                                    `wears a beard. After all, in some legends the changeling is a full-grown troll— one who might even be centuries old.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -446,9 +451,10 @@ export default {
                         `he croaks, stroking`,
                         {
                             anchor: `creepers on his cheek`,
-                            review: true,
+                            todo: true,
+                            problem: `Review.`,
                             card: {
-                                description: `Of course, it's no surprise if Willy isn't fooled by my brother's disguise. After all, Willy may be a changeling himself, as evinced by his own unkempt facial hair.`,
+                                description: `Of course, it should be no surprise if Willy isn't fooled by my brother's disguise: Judging by his own unkempt facial hair, Willy just might be a changeling himself.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -784,9 +790,11 @@ export default {
                             `Shelled skull has freed`,
                             {
                                 anchor: `unsalvaged soul`,
+                                todo: true,
+                                problem: `Review.`,
                                 cards: [
                                     {
-                                        description: `To justify the abuse of sickly children, religious doctrine in the past often claimed that such children were devoid of souls.`,
+                                        description: `To justify the abuse of sickly children, religious doctrine in the past typically claimed that they were devoid of souls.`,
                                         dotKeys: {
                                             [REFERENCE]: true,
                                         },
@@ -892,13 +900,15 @@ export default {
                     lyric: [
                         {
                             anchor: `Baby bluebonnets`,
+                            todo: true,
+                            problem: `Review.`,
                             card: {
                                 description: [
                                     {
                                         anchor: `Bluebonnets`,
                                         wiki: 'Bluebonnet_(plant)',
                                     },
-                                    `are another popular flower in our garden, and a "blue bonnet" is what my mother has tucked my brother's head in to protect him from the sun. But after Willy's murder, I have to wonder how protected my brother is against other things.`,
+                                    `are another popular flower in our garden— and a "blue bonnet" is what my mother has tucked my brother's head in, to protect him from the sun. But after Willy's murder, I have to wonder how well protected my brother is against other things.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1191,9 +1201,10 @@ export default {
                                 `'s cover`,
                             ],
                             properNoun: true,
+                            review: true,
                             card: {
                                 description: [
-                                    `My favorite word as a child was "bobtail." I was just so proud of myself the day I realized that the line, "Bells on bobtail ring," from the song "`,
+                                    `My favorite word as a child was "bobtail." I was just so proud of myself the day I realized that the line "bells on bobtail ring," from the song "`,
                                     {
                                         anchor: `Jingle Bells`,
                                         wiki: `Jingle_Bells`,
