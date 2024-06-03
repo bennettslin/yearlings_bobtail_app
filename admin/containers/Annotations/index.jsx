@@ -9,6 +9,7 @@ import {
     mapSelectedAnnotationIndex,
     mapSelectedSongIndex,
 } from '../../../src/redux/selected/selector'
+import { mapIsTextJustified } from '../../../src/redux/toggle/selector'
 import { getBoolFromStorage, setBoolInStorage } from '../../../src/utils/storage'
 import './style'
 
@@ -18,7 +19,8 @@ const TempGlobalAnnotations = () => {
     const
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         selectedAnnotationIndex = useSelector(mapSelectedAnnotationIndex),
-        [showAll, setShowAll] = useState(getBoolFromStorage(SHOW_ALL_ANNOTATIONS_KEY))
+        [showAll, setShowAll] = useState(getBoolFromStorage(SHOW_ALL_ANNOTATIONS_KEY)),
+        isTextJustified = useSelector(mapIsTextJustified)
 
     const toggleShowTodos = () => {
         setShowAll(!showAll)
@@ -44,6 +46,7 @@ const TempGlobalAnnotations = () => {
             {...{
                 className: cx(
                     'TempGlobalAnnotations',
+                    isTextJustified && 'textJustified',
                     'font__text',
                 ),
             }}

@@ -56,6 +56,11 @@
         width: $width__annotationCard__phone;
         max-width: $width__annotationCard__phone;
     }
+
+    .RW__textJustified
+    & {
+        text-align: justify;
+    }
 }
 
 .AnnotationCard__backstory {

@@ -14,6 +14,7 @@ import { mapIsLyricExpandable } from '../../redux/lyricExpand/selector'
 import { mapShowShrunkNavIcon } from '../../redux/nav/selector'
 import { mapEarColumnIndex } from '../../redux/session/selector'
 import { mapIsHeightlessLyric } from '../../redux/viewport/selector'
+import { mapIsTextJustified } from '../../redux/toggle/selector'
 
 const ResponsiveWrapper = ({ didMount, children }) => {
     const
@@ -25,6 +26,7 @@ const ResponsiveWrapper = ({ didMount, children }) => {
         isCarouselAndNavShowable = useSelector(mapIsCarouselAndNavShowable),
         isCarouselToggleShowable = useSelector(mapIsCarouselToggleShowable),
         isEarShown = useSelector(mapIsEarShown),
+        isTextJustified = useSelector(mapIsTextJustified),
 
         // TODO: Make this a selector.
         singleShownEarColumnKey = getSingleShownEarColumnKey({
@@ -56,6 +58,7 @@ const ResponsiveWrapper = ({ didMount, children }) => {
                         isLyricExpandable ?
                             'RW__lyricExpandable' :
                             'RW__lyricNotExpandable',
+                        isTextJustified && 'RW__textJustified',
                         'abF',
                     ),
                 },

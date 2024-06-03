@@ -114,6 +114,11 @@ $width__tempGlobalAnnotationColumn:
 .TempGlobalAnnotationCard {
     margin-top: $padding__annotationCard;
     background-color: #eff;
+
+    .textJustified
+    & {
+        text-align: justify;
+    }
 }
 
 .TempGlobalAnnotationCard__dotKeys {
