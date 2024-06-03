@@ -66,8 +66,6 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 review: true,
-                todo: true,
-                problem: `Review.`,
                 card: {
                     description: [
                         `In the past, a disabled child was sometimes thought to be a`,
@@ -425,8 +423,7 @@ export default {
                         `Oh ma'am, I`,
                         {
                             anchor: `see your kid with whiskers`,
-                            todo: true,
-                            problem: `Review.`,
+                            review: true,
                             card: {
                                 description: [
                                     `Noting my brother's distaste for haircuts, Willy jokingly predicts that he'll go unshaven as an adult. But Willy's curious phrasing invites the possibility that my brother, in fact,`,
@@ -451,8 +448,7 @@ export default {
                         `he croaks, stroking`,
                         {
                             anchor: `creepers on his cheek`,
-                            todo: true,
-                            problem: `Review.`,
+                            review: true,
                             card: {
                                 description: `Of course, it should be no surprise if Willy isn't fooled by my brother's disguise: Judging by his own unkempt facial hair, Willy just might be a changeling himself.`,
                                 dotKeys: {
@@ -790,8 +786,7 @@ export default {
                             `Shelled skull has freed`,
                             {
                                 anchor: `unsalvaged soul`,
-                                todo: true,
-                                problem: `Review.`,
+                                review: true,
                                 cards: [
                                     {
                                         description: `To justify the abuse of sickly children, religious doctrine in the past typically claimed that they were devoid of souls.`,
@@ -900,8 +895,7 @@ export default {
                     lyric: [
                         {
                             anchor: `Baby bluebonnets`,
-                            todo: true,
-                            problem: `Review.`,
+                            review: true,
                             card: {
                                 description: [
                                     {
