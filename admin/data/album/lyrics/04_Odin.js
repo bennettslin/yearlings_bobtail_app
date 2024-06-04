@@ -19,6 +19,7 @@ import {
     IS_UNIT_DOT,
     RESPONSE,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Odin',
@@ -33,7 +34,8 @@ export default {
     mixStartTime: `0:02:06.00`,
     playerReferenceTime: 559.438,
     playerStartTime: 555.277,
-    overview: `Taiwan showed me how different I would have turned out if my parents hadn't come to America— yet I was still worlds away from what Sasha needed me to be. Life seemed both infinitely fluid and immovably fixed, and I wasn't sure which extreme frightened me more. Later that summer when our house cat Odin died of old age, I sought spiritual explanations for my mortality. The finality of death was terrifying, after all— and yet, the eternal life promised by faith didn't feel any less so.`,
+    todo: REVIEW,
+    overview: `Taiwan showed me how differently I might have turned out if my parents hadn't come to America— yet I was still worlds away from what Sasha needed me to be. Life seemed both infinitely fluid and immovably fixed, and I wasn't sure which extreme frightened me more. Later that summer when our house cat Odin died of old age, I sought spiritual explanations for my mortality. The finality of death was terrifying, after all— and yet, the eternal life promised by faith didn't feel any less so.`,
     isDoublespeaker: true,
     lyricUnits: [
         {
@@ -133,6 +135,7 @@ export default {
                         `trifling`,
                         {
                             anchor: `tref must reseed the earth`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     {
@@ -144,7 +147,7 @@ export default {
                                         anchor: `kosher`,
                                         wiki: `Kashrut`,
                                     },
-                                    `. In Sasha's world, certain everyday foods weren't meant to be eaten. So it could be inferred that certain boys in her everyday life weren't meant to be dated.`,
+                                    `. In Sasha's world, certain everyday foods weren't meant to be eaten. So one could also infer that certain boys in her everyday life weren't meant to be dated.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -160,6 +163,7 @@ export default {
                         `This`,
                         {
                             anchor: `fridge's gallery in web's wake`,
+                            todo: REVIEW,
                             card: {
                                 description: `The cobwebs trailing from my clothes happen to snag some drawings of mine that were attached to the refrigerator, causing them to scatter onto the floor.`,
                                 dotKeys: {
@@ -383,6 +387,7 @@ export default {
                         {
                             // TODO: Metamorphosis wormhole?
                             anchor: `trading breath's bliss`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Like most amphibians, salamanders begin life underwater, then lose their gills and develop lungs to live on land. I always wondered if this process of`,
@@ -390,7 +395,7 @@ export default {
                                         anchor: `metamorphosis`,
                                         wiki: `Metamorphosis`,
                                     },
-                                    `feels as harrowing as it sounds, when breathing becomes the new drowning with no explanation or warning. Because that's what falling asleep seemed like to me.`,
+                                    `feels as harrowing as it sounds, when breathing becomes the new drowning with no explanation or warning. Because that's what falling asleep felt like to me.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -454,9 +459,10 @@ export default {
                         },
                         {
                             anchor: `oriental`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `The word "Oriental" wasn't a pejorative when I was growing up. It's even printed on my birth certificate. It became politically incorrect at around the same time that "queer" was being reclaimed by the gay community. The latter tactic always made more sense to me.`,
+                                    `The word "Oriental" wasn't considered offensive when I was growing up. It's even printed on my birth certificate. It became politically incorrect at around the same time that "queer" was being reclaimed by the gay community. The latter tactic always made more sense to me.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -470,6 +476,7 @@ export default {
                         `proves`,
                         {
                             anchor: `shibboleth`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     [
@@ -518,6 +525,7 @@ export default {
                         `As you plummet down from`,
                         {
                             anchor: `couplets past`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In poetry, a`,
@@ -589,9 +597,10 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     // TODO: Or bottled butterfly and jarred sibyl.
-                    description: `While the two doublespeaker voices seem to operate independently, they plant subtle ideas along each other's path, much as our conscious thoughts affect our dreams and vice versa. In this stanza, for example, the mention of a staircase by the "asleep" voice precedes the plummeting spoken of by the "awake" voice.`,
+                    description: `While the two doublespeaker voices seem to operate independently, they plant subtle ideas along each other's path— much as our conscious thoughts affect our dreams, and vice versa. In this stanza, for example, the mention of a staircase by the "asleep" voice precedes the plummeting spoken of by the "awake" voice.`,
                     dotKeys: {
                         [OBSERVATION]: true,
                         [SONGCRAFT]: true,
@@ -658,6 +667,7 @@ export default {
                         `that was`,
                         {
                             anchor: `safe for a heathen`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Being an illegitimate son, Ishmael wasn't to inherit the house of`,
@@ -665,7 +675,7 @@ export default {
                                         anchor: `Abraham`,
                                         wiki: `Abraham`,
                                     },
-                                    `. Still, God promised to make him into a great nation. Coming from a less favored lineage myself, I could only hope for similar recompense, as I was not to marry into Sasha's house.`,
+                                    `. Still, God promised to make him into a great nation. And coming from a less favored lineage myself, I could only hope for similar recompense, as I was not to marry into Sasha's house.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -735,8 +745,9 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
-                    description: `Since the drum parts I scored for this song were far more advanced than what I could play, I had to try several workarounds. I ended up recording the kick, snare, and toms in separate takes from the cymbals.`,
+                    description: `Since the drum parts I scored for this song were far more advanced than what I could play at the time, I had to try several workarounds. I ended up recording the kick, snare, and toms in separate takes from the cymbals.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
@@ -767,6 +778,7 @@ export default {
                         `would the`,
                         {
                             anchor: `rondel of her eye`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `A`,
@@ -779,7 +791,7 @@ export default {
                                         anchor: `The apple of one's eye`,
                                         wiki: `Apple_of_my_eye`,
                                     },
-                                    `" is an Old English misreading of a Biblical Hebrew idiom that more accurately translates to "the ball of one's eye." My hope that I could be the object of Sasha's affection was based on a similar misreading.`,
+                                    `" is an Old English misreading of a Biblical Hebrew idiom that more accurately translates to "the ball of one's eye." And my hope, that I could be the object of Sasha's affection, was based on a similar misreading.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -818,6 +830,7 @@ export default {
                         `be`,
                         {
                             anchor: `stored in this neck`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Due to another misreading, the phrase "man's swelling" in Biblical Hebrew entered the Western lexicon as "`,
@@ -825,7 +838,7 @@ export default {
                                         anchor: `Adam's apple`,
                                         wiki: `Adam's_apple`,
                                     },
-                                    `." And so an apocryphal tale began that when Adam ate the forbidden fruit of knowledge, a piece lodged in his throat to mark all his descendants with a reminder of their original sin. Similarly, my knowledge of where I stood with Sasha left me to feel a permanent lump in my throat.`,
+                                    `." And so an apocryphal tale began that when Adam ate the forbidden fruit of knowledge, a piece lodged in his throat to mark all his descendants with a reminder of their original sin. Similarly, my knowledge of where I stood with Sasha left me with a permanent lump in my throat.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -920,6 +933,7 @@ export default {
                         `that come undone by`,
                         {
                             anchor: `undine`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The`,
@@ -956,10 +970,11 @@ export default {
                         `where its`,
                         {
                             anchor: `hopeless rests`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
-                                        `Hope was all that remained in Pandora's box. But upon having the hard truths of the world revealed to me by Sasha, I'm left to feel as hopeless as ever.`,
+                                        `Hope was all that remained in Pandora's box. But upon having the hard truths of the world revealed to me by Sasha, I can only feel as hopeless as ever.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -1121,8 +1136,9 @@ export default {
                     lyricRight: [
                         {
                             anchor: `didn't impart warmth`,
+                            todo: REVIEW,
                             card: {
-                                description: `But also like cellophane, Sasha couldn't reflect warmth where none was present. If I couldn't be the better person in dealing with the bullies, there came a point when she would need to keep her distance from me as well.`,
+                                description: `But also like cellophane, Sasha couldn't reflect warmth where none was present. If I couldn't be the better person in dealing with the bullies, then there came a point when she'd need to keep her distance from me as well.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -1134,9 +1150,10 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
-                        `Recording vocals in doublespeaker rhyme proved to be trickier than expected. When singing, we tend to shorten or elongate syllables to adjust for phrasing and consonant clusters. And so the two voices would sound disjointed once heard together. To perform the syllables in perfect sync, I came up with a system of notation that somewhat looked like medieval`,
+                        `Recording vocals in doublespeaker rhyme proved to be trickier than expected, because when we sing, we tend to shorten or elongate syllables to adjust for phrasing and consonant clusters. And so the two voices would sound disjointed once heard together. To perform the syllables in perfect sync, I came up with a system of notation that somewhat looked like medieval`,
                         {
                             anchor: `ligature`,
                             wiki: `Ligature_(music)`,
@@ -1160,8 +1177,9 @@ export default {
                     lyricLeft: [
                         {
                             anchor: `Buoy bobs`,
+                            todo: REVIEW,
                             card: {
-                                description: `In my dream, I see myself adrift on a buoy as it bobs in an ocean filled with sea serpents. But who's to say this "boy" isn't also bobbing through life, oblivious to the dangers lurking everywhere?`,
+                                description: `In my dream, I see myself adrift on a buoy as it bobs in an ocean filled with sea serpents. But who's to say that this "boy" isn't also bobbing through life, oblivious to the dangers lurking everywhere?`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -1201,6 +1219,7 @@ export default {
                     ],
                     lyricRight: {
                         anchor: `shivaree towards shivah seat`,
+                        todo: REVIEW,
                         cards: [
                             {
                                 description: [
@@ -1213,7 +1232,7 @@ export default {
                                         anchor: `shivah`,
                                         wiki: `Shiva_(Judaism)`,
                                     },
-                                    `refers to a period of mourning in Judaism after a family member dies. My bad luck not to be born Jewish, in other words, has cost me any hope of spending a lifetime with Sasha from marriage until death.`,
+                                    `refers to a period of mourning in Judaism after a family member dies. In other words, my bad luck not to be born Jewish has cost me any hope of spending a lifetime with Sasha from marriage until death.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1322,9 +1341,10 @@ export default {
                         `when your`,
                         {
                             anchor: `day to die`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `As a child, I suffered from night terrors related to my fear of death. My mother tried to comfort me with the promise of reincarnation, but this only filled me with greater dread. It wasn't just death that frightened me; it was a lifetime of hurtling toward it. All that reincarnation offered was more rounds of the same.`,
+                                    `As a child, I suffered from night terrors related to my fear of death. My mother tried to comfort me with the promise of reincarnation— but this simply filled me with greater dread. Because it wasn't just death that frightened me; it was a lifetime of hurtling toward it. All that reincarnation offered was more rounds of the same.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -1343,8 +1363,9 @@ export default {
                         `Can a`,
                         {
                             anchor: `holed up hostage`,
+                            todo: REVIEW,
                             card: {
-                                description: `Yet the thought of being stuck with a soul forever, an inescapable fate promised by the faiths of my classmates, felt no less disturbing.`,
+                                description: `Yet the thought of being stuck with a soul forever, an inescapable fate promised by the faiths of my classmates, seemed no less disturbing.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -1359,6 +1380,7 @@ export default {
                         `pray for`,
                         {
                             anchor: `soulless solace`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The end goal of Buddhism is`,
@@ -1366,7 +1388,7 @@ export default {
                                         anchor: `nirvana`,
                                         wiki: `Nirvana`,
                                     },
-                                    `, or release from the cycle of rebirth. But this was just death on a grander scale, which confirmed my intuition that one shouldn't want to live in the first place. So why do we?`,
+                                    `— or release from the cycle of rebirth. But this was just death on a grander scale, which confirmed my intuition that one shouldn't want to live in the first place. So why do we?`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1416,9 +1438,10 @@ export default {
                         `But for a`,
                         {
                             anchor: `fetus force-fed`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Most maddening of all, one has no say in being brought into this world to begin with. Given how distressing the certainty of death must always be, it just seemed like there should be an option to opt out of this whole mess.`,
+                                    description: `Most maddening of all, one has no say in being brought into this world to begin with. It just seemed like there should be a way to opt out of this whole mess, given how distressing the certainty of death must always be.`,
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                     },
@@ -1437,6 +1460,7 @@ export default {
                         `Yet your`,
                         {
                             anchor: `defeat of tortoise`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The tortoise defeats the hare in`,
@@ -1444,7 +1468,7 @@ export default {
                                         anchor: `Aesop's fable`,
                                         wiki: `The_Tortoise_and_the_Hare`,
                                     },
-                                    `, but only because the hare falls asleep. Similarly, while tortoises live for over a century, I had them beat in longevity— so long as I didn't sleep on choosing the right faith.`,
+                                    `, but only because the hare falls asleep. Similarly, while tortoises live for over a century, I had them beat in longevity— so long as I chose the right faith.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1486,6 +1510,7 @@ export default {
                         `Though no`,
                         {
                             anchor: `slave parts these seas`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The`,
@@ -1648,6 +1673,7 @@ export default {
                         `has a`,
                         {
                             anchor: `mile less far to go`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `"`,
