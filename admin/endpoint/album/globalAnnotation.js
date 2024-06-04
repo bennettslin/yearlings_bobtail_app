@@ -5,9 +5,9 @@ export const getGlobalAnnotationCount = () => {
     return globalAnnotationIndicesList.length
 }
 
-export const getGlobalAnnotationDoneCount = () => {
-    const { globalAnnotationDoneCount } = getAlbum()
-    return globalAnnotationDoneCount
+export const getGlobalAnnotationTodosCount = () => {
+    const { globalAnnotationTodosCount } = getAlbum()
+    return globalAnnotationTodosCount
 }
 
 const _getMetadataForGlobalAnnotation = globalIndex => {

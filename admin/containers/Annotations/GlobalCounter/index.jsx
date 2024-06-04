@@ -4,7 +4,7 @@ import cx from 'classnames'
 import Button from '../../../../src/components/Button'
 import {
     getGlobalAnnotationCount,
-    getGlobalAnnotationDoneCount,
+    getGlobalAnnotationTodosCount,
 } from '../../../endpoint/album/globalAnnotation'
 import { getSongsAndLoguesCount, getTodosCountForAlbumOverviews } from '../../../../src/endpoint/album/songs'
 
@@ -12,8 +12,7 @@ const GlobalCounter = ({ toggleShowTodos }) => {
     const
         totalCount = getGlobalAnnotationCount() + getSongsAndLoguesCount(),
         todoCount =
-            totalCount -
-            getGlobalAnnotationDoneCount() +
+            getGlobalAnnotationTodosCount() +
             getTodosCountForAlbumOverviews(),
         percentage = parseInt(
             todoCount / totalCount * 100,
