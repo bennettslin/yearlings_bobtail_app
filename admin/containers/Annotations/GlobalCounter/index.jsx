@@ -19,8 +19,6 @@ const GlobalCounter = ({ toggleShowTodos }) => {
             todoCount / totalCount * 100,
         )
 
-    console.log('hi', getTodosCountForAlbumOverviews())
-
     return (
         <div
             {...{

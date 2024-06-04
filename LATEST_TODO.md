@@ -1,7 +1,7 @@
 # Latest todo
+* Fix todo count logic, should be 27 annotation todos
+* Put todo logic in admin
 * Have different color for revise and review
-
-* Put all todo logic in admin
 
 ### Must do
 * Illustrator
