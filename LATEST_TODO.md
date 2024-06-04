@@ -1,5 +1,4 @@
 # Latest todo
-* Have different color for revise and review
 
 ### Must do
 * Illustrator
