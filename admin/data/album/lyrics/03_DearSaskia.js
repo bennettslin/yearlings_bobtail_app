@@ -30,7 +30,6 @@ export default {
     playerStartTime: 384.329,
     // This is a magic number adjusted by ear. In the mix, it's actually 44.96.
     mixSamplingFrequency: 45.39,
-    review: true,
     overview: `Sasha was a childhood friend, as well as my first crush. The strength she drew from her Jewish identity fascinated me, but it also clued me in on a cruel paradox— namely, that nothing ever comes from longing to share in someone's faith and roots, which stay strong precisely by not being shared. Sasha moved away during middle school, at the peak of my struggles with bullies. That summer, I wrote her a letter on a family trip to Taiwan.`,
     lyricUnits: [
         {
@@ -119,7 +118,6 @@ export default {
                         `your`,
                         {
                             anchor: `first semester`,
-                            review: true,
                             card: {
                                 description: `My family was spending the entire summer in Taiwan. We weren't to get back to the States until after Sasha had begun the new school year in Boston.`,
                                 dotKeys: {
@@ -313,7 +311,6 @@ export default {
                         `, a`,
                         {
                             anchor: `pet petrified`,
-                            review: true,
                             card: {
                                 description: [
                                     `Petrified by the thought of losing Sasha, I felt like a`,
@@ -439,7 +436,6 @@ export default {
                         `One`,
                         {
                             anchor: `bus seat`,
-                            review: true,
                             card: {
                                 description: [
                                     `My family lived in`,
@@ -634,7 +630,6 @@ export default {
                         `, so now I`,
                         {
                             anchor: `talk Canuck`,
-                            review: true,
                             card: {
                                 description: [
                                     `The chokehold incident actually did happen, and it left me with a dislocated jaw. For a long time afterward, I had to clench my jaw to avoid pain when speaking, which led to an odd manner of pronunciation that some to this day mistake for a`,
@@ -681,7 +676,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                review: true,
                 card: {
                     description: `It's easy to write songs by coming up with a four-chord loop, then layering a melody on top. But my theory was that the Beatles wrote the melody and chords together, one measure at a time, as an indivisible whole— and so I aspired to do the same. I was always happiest with results like the chorus here, where the music wanders for a long stretch without looping back, resulting in an odd number of measures.`,
                     dotKeys: {

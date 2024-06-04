@@ -57,7 +57,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                review: true,
                 card: {
                     description: `During the years afterward when I was trying to be a good person again, I kept digging further into my past to figure out where things went wrong. So for this song, I decided to revisit the sonic textures of every other song in reverse, starting with the piano from "Vegan Proclamation."`,
                     dotKeys: {
@@ -112,7 +111,6 @@ export default {
                         {
                             anchor: `El Torito`,
                             properNoun: true,
-                            review: true,
                             card: {
                                 description: [
                                     `Sita worked as a hostess at`,
@@ -137,7 +135,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                review: true,
                 card: {
                     description: `This first verse now leads with the arpeggiated chords heard in "Cremated," followed by the slide guitar and natural harmonics from "On a Golden Cord."`,
                     dotKeys: {
@@ -394,7 +391,6 @@ export default {
                         `My hundred thousandth dream, on the`,
                         {
                             anchor: `cliffs of El Cerrito`,
-                            review: true,
                             card: {
                                 description: [
                                     `The city of`,

@@ -31,14 +31,12 @@ export default {
     mixStartTime: `0:01:18.60`,
     playerReferenceTime: 1751.447,
     playerStartTime: 1751.191,
-    review: true,
     overview: `One night I went with my bassist Ana and some of our friends to get high on Robitussin while exploring the steam tunnels under UCLA. I got us all to pretend that we were Vikings, Mongols, and various waves of human migration throughout world history. In hindsight, the others were probably just humoring me. I ended up doing so much Robitussin that summer, it took me a while to regain my grip on reality.`,
     lyricUnits: [
         {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                review: true,
                 card: {
                     description: [
                         `I first tried Robitussin earlier that summer after reading of its narcotic effects in`,
@@ -638,7 +636,6 @@ export default {
                         {
                             anchor: `Drinkhis Khan, once Toomujin`,
                             properNoun: true,
-                            review: true,
                             cards: [
                                 {
                                     description: `Earlier tonight, I was hesitant to do Robitussin with the others, since I'd already done it the night before, and each trip destroys you for a good while. But now the "drink is gone," and with "too much in," I've forgotten my concerns.`,
@@ -800,7 +797,6 @@ export default {
                         {
                             anchor: `Indus-trail sewerce`,
                             properNoun: true,
-                            review: true,
                             card: {
                                 description: [
                                     `As we make our way down "industrial sewers," I excitedly explain the subject of a term paper I once wrote. In the 19th century, Western scholars proposed that Indian civilization was brought by invaders from the north, who carved a trail leading to the "source" of the`,
@@ -824,7 +820,6 @@ export default {
                         `,`,
                         {
                             anchor: `questurns Indo Hairapins`,
-                            review: true,
                             card: {
                                 description: [
                                     `Our "quest turns into hairpins" as we wind through narrow pathways. All the while, I babble on about the "questions" brought up by later scholars, who rejected the colonialism of past scholarship. Instead, they pointed to the evolution of the "`,
@@ -854,7 +849,6 @@ export default {
                         {
                             anchor: `Forsi ahuro`,
                             properNoun: true,
-                            review: true,
                             card: {
                                 description: [
                                     `In the Iranian tongue of "Farsi," the "`,
@@ -899,7 +893,6 @@ export default {
                         {
                             anchor: `Sensegreat deva's day shone`,
                             properNoun: true,
-                            review: true,
                             card: {
                                 description: [
                                     `Moreover, in "Sanskrit," the word for a Vedic deity is "`,
@@ -934,7 +927,6 @@ export default {
                     lyric: [
                         {
                             anchor: `To soma up`,
-                            review: true,
                             card: {
                                 description: [
                                     `We migrate onward while high on Robitussin, just like the Indo-Iranians drank`,
@@ -961,7 +953,6 @@ export default {
                         `,`,
                         {
                             anchor: `our-youn' invedas`,
-                            review: true,
                             card: {
                                 description: [
                                     `Recent scholarship has returned to the theory that the "`,
@@ -979,7 +970,6 @@ export default {
                         },
                         {
                             anchor: `unsolft quarry rest`,
-                            review: true,
                             card: {
                                 description: `"Our young invaders" have arrived at a clearing where dirt from the ground has been shaped into makeshift benches. Pausing for a bit, we rest on this "soft quarry."`,
                                 dotKeys: {
@@ -1300,7 +1290,6 @@ export default {
                     lyric: [
                         {
                             anchor: `herows— ourauras left`,
-                            review: true,
                             cards: [
                                 {
                                     description: `Wishing to respect the dead, we've left behind "our auras" as history's "heroes."`,
@@ -1348,7 +1337,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                review: true,
                 card: {
                     description: [
                         `On solo trips, I would play on my`,
@@ -1451,7 +1439,6 @@ export default {
                         {
                             // NOTE: I changed from ha'nt.
                             anchor: `hant'd by sober-trooth tiedgirl`,
-                            review: true,
                             card: {
                                 description: [
                                     `As I envision a "`,
@@ -1484,7 +1471,6 @@ export default {
                         lyric: [
                             {
                                 anchor: `sunk in tarpid lies`,
-                                review: true,
                                 cards: [
                                     {
                                         description: `My mastodon lies sunk in a "tar pit," just as I'm sinking in all my "torpid" lies explaining to Sita why I don't spend more nights with her.`,
@@ -1637,7 +1623,6 @@ export default {
                             // NOTE: Changing from Nunavutter.
                             anchor: `Noworse and Nunavetter`,
                             properNoun: true,
-                            review: true,
                             card: {
                                 description: [
                                     `Our Inuit tribe has now ventured all the way to`,
@@ -1888,7 +1873,6 @@ export default {
                         {
                             anchor: `come unsated`,
                             properNoun: true,
-                            review: true,
                             cards: [
                                 {
                                     description: `That night at the drugstore, I advised everyone to get the small bottle of Robitussin. We then lined up at separate checkouts to avoid attracting suspicion. When Howie finally rejoined us, we saw that he'd gone back for the large bottle thinking the small one wouldn't be enough.`,
@@ -1909,7 +1893,6 @@ export default {
                         {
                             anchor: `Rumspring`,
                             properNoun: true,
-                            review: true,
                             card: {
                                 description: [
                                     `"`,
@@ -1998,7 +1981,6 @@ export default {
                         `…`,
                         {
                             anchor: `"Rejoyce!" bellow the`,
-                            review: true,
                             cards: [
                                 {
                                     description: [
@@ -2057,7 +2039,6 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                review: true,
                 card: {
                     description: `Ana now runs a dog collar business called Paco Collars that's doing quite well. I ran into Howie and Tomer at a party recently, and they both remember that night fondly.`,
                     dotKeys: {

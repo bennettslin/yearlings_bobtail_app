@@ -27,7 +27,6 @@ export default {
     referenceDescription: `Keyboards in anacrusis`,
     playerStartTime: 177.396,
     mixStartTime: `0:01:03.00`,
-    review: true,
     overview: `After my younger brother was diagnosed with autism, a neighbor told us about Willy the Cocoa, a mentally disabled man who'd once wandered the neighborhood collecting recyclables. Tragically, Willy was killed in a fight with some gangsters, who smashed his head open with a bottle. Hearing this story affected me greatly, and I would recall it whenever I pondered my brother's likely fate.`,
     lyricUnits: [
         {
@@ -64,7 +63,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                review: true,
                 card: {
                     description: [
                         `In the past, a disabled child was sometimes thought to be a`,
@@ -127,7 +125,6 @@ export default {
                         `in`,
                         {
                             anchor: `tarred pavement mirage`,
-                            review: true,
                             card: {
                                 description: `In the mirages created by the summer heat, the reflections of the Valley's surrounding mountains point downward. So one could playfully suggest that their jagged peaks are like fangs biting down on the asphalt.`,
                                 dotKeys: {
@@ -174,7 +171,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                review: true,
                 card: {
                     description: [
                         `The`,
@@ -219,7 +215,6 @@ export default {
                         `his`,
                         {
                             anchor: `pinhead in its shadow`,
-                            review: true,
                             cards: [
                                 {
                                     description: `Willy peers through an empty beer bottle, the top of which is tapered like the outline of his skull.`,
@@ -422,7 +417,6 @@ export default {
                         `Oh ma'am, I`,
                         {
                             anchor: `see your kid with whiskers`,
-                            review: true,
                             card: {
                                 description: [
                                     `Noting my brother's distaste for haircuts, Willy jokingly predicts that he'll go unshaven as an adult. But Willy's curious phrasing invites the possibility that my brother, in fact,`,
@@ -447,7 +441,6 @@ export default {
                         `he croaks, stroking`,
                         {
                             anchor: `creepers on his cheek`,
-                            review: true,
                             card: {
                                 description: `Of course, it should be no surprise if Willy isn't fooled by my brother's disguise: Judging by his own unkempt facial hair, Willy just might be a changeling himself.`,
                                 dotKeys: {
@@ -785,7 +778,6 @@ export default {
                             `Shelled skull has freed`,
                             {
                                 anchor: `unsalvaged soul`,
-                                review: true,
                                 cards: [
                                     {
                                         description: `To justify the abuse of sickly children, religious doctrine in the past typically claimed that they were devoid of souls.`,
@@ -865,7 +857,6 @@ export default {
                         `that saw this`,
                         {
                             anchor: `mulch soften asphodel`,
-                            review: true,
                             card: {
                                 description: [
                                     `We plant`,
@@ -894,7 +885,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Baby bluebonnets`,
-                            review: true,
                             card: {
                                 description: [
                                     {
@@ -932,7 +922,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                review: true,
                 card: {
                     description: [
                         `To play the electric guitar riff heard here, I used both a`,
@@ -1099,7 +1088,6 @@ export default {
                         `Son,`,
                         {
                             anchor: `seventy years`,
-                            review: true,
                             cards: [
                                 {
                                     description: `My mother told me not to worry, since I wasn't going to die for a long while. She then assured me that once my time is finally up— perhaps when I'm seventy— I'll have long made peace with death somehow.`,
@@ -1147,7 +1135,6 @@ export default {
                         `, you'll write this`,
                         {
                             anchor: `book of yours`,
-                            review: true,
                             card: {
                                 description: [
                                     `I wore an eyepatch as a child to correct my`,
@@ -1194,7 +1181,6 @@ export default {
                                 `'s cover`,
                             ],
                             properNoun: true,
-                            review: true,
                             card: {
                                 description: [
                                     `My favorite word as a child was "bobtail." I was just so proud of myself the day I realized that the line "bells on bobtail ring," from the song "`,

@@ -71,7 +71,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                review: true,
                 card: {
                     description: `With the breakup, I could revert to the state of childlike innocence that I'd known long ago— not just before the relationship, but before the bullying and the mail-order cult as well. So here we hear the white-throated sparrow, which harkens back to the happiest days of my childhood.`,
                     dotKeys: {
@@ -202,7 +201,6 @@ export default {
                         `I'm sorry, but I`,
                         {
                             anchor: `went through your mail`,
-                            review: true,
                             card: {
                                 description: `Confused over why I'd grown distant, Sita snooped around on my desktop computer earlier that day. In doing so, she stumbled upon some emails to friends— one in which I spoke of a recent crush on another woman, and another soliciting advice on how to break up gently.`,
                                 dotKeys: {
@@ -493,7 +491,6 @@ export default {
                         `Then if`,
                         {
                             anchor: `life were real`,
-                            review: true,
                             card: {
                                 description: `Sita's friends weren't wrong to label me fake. My emotions didn't feel legitimate even to myself; I responded to them the way an actor responds to a cue. At the time, I blamed it on the lingering effects of Robitussin.`,
                                 dotKeys: {
@@ -508,7 +505,6 @@ export default {
                         `And if`,
                         {
                             anchor: `night were peeled`,
-                            review: true,
                             card: {
                                 description: [
                                     `Every now and then, I would have a Robitussin flashback, causing me to trail off and stare into the distance. When a friend asked what it felt like, I said it was like`,
@@ -544,7 +540,6 @@ export default {
                         `Just that those playful`,
                         {
                             anchor: `pups with their hateful fangs`,
-                            review: true,
                             card: {
                                 description: [
                                     `Young wolves have an instinct to tear flesh with their jaws, so they reflexively soften their bites during rough play. And knowing now what it truly means to inflict harm, I realized that the bullies held back their blows as well, believing it was all in good fun.`,
@@ -667,7 +662,6 @@ export default {
                         `Now the`,
                         {
                             anchor: `jester teeters`,
-                            review: true,
                             card: {
                                 description: `I was stopped by a pair of police officers that night. They judged me to be harmless and sent me on my way.`,
                                 dotKeys: {
@@ -686,7 +680,6 @@ export default {
                         lyric: [
                             {
                                 anchor: `Mush`,
-                                review: true,
                                 card: {
                                     description: [
                                         `As I march onward without sleep, I sift through my past trying to recall the last time I'd known untroubled bliss. And so the music here evokes the first song I loved as a child, Johnny Horton's "`,
@@ -998,7 +991,6 @@ export default {
                         {
                             anchor: `Garry's sole witness`,
                             properNoun: true,
-                            review: true,
                             card: {
                                 description: `Though I wish to plead my case, the breakup will be over with sooner if I just accept my role as the villain. And so the sober me, called up to testify for his drunken half, stays silent.`,
                                 dotKeys: {
@@ -1104,7 +1096,6 @@ export default {
                     lyricRight: [
                         {
                             anchor: `forgo like jewelry`,
-                            review: true,
                             card: {
                                 description: `Sita and I had a turbulent on-again, off-again relationship for a good while longer. During one stretch when things were rosier than ever, she asked to have the bracelet back to wear again, and I happily obliged. Somehow I'd dented it in my pocket that night, however— a lasting reminder that some damages can be mended, but never undone.`,
                                 dotKeys: {

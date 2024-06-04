@@ -25,7 +25,6 @@ export default {
     referenceDescription: `Spanish guitar in measure 1`,
     playerStartTime: 1131.214,
     mixStartTime: `0:02:12.00`,
-    review: true,
     overview: `After Catherine broke up with me, I vowed to spend the next five years shaping myself into the ideal romantic prospect. So I got involved in the local scene while putting together my own band, the Yearlings, and by the fifth year, we were playing house parties and small venues. I soon grew infatuated with a fellow scenester named Mara, whom I noticed from afar. But Mara ended up going out with my drummer Jacob, which made band practice awkward.`,
     lyricUnits: [
         {
@@ -111,7 +110,6 @@ export default {
                         `I was a lad bent on`,
                         {
                             anchor: `learning the talents`,
-                            review: true,
                             card: {
                                 description: `It's not that I'd done anything wrong to make Catherine break up with me; I just didn't have much to offer. For this reason, it seemed illogical to pursue the next relationship in the same manner. To secure my future chances, I needed to take time off and build up a surplus of attractive traits. So I started with the ones that Catherine valued most.`,
                                 dotKeys: {
@@ -131,7 +129,6 @@ export default {
                         `Bit my`,
                         {
                             anchor: `sadness with patience`,
-                            review: true,
                             card: {
                                 description: `Luckily, this was familiar terrain for me. After all, I'd spent my childhood channeling misery into various art projects. And remaking yourself into a desirable person is really just the ultimate art project.`,
                                 dotKeys: {
@@ -187,7 +184,6 @@ export default {
                         `to mold me into a`,
                         {
                             anchor: `mystery mensch`,
-                            review: true,
                             card: {
                                 description: `Unlike me, my older sister was popular in high school. So she always had the latest gossip to tell me, like anytime a girl crushed on me from afar— which wasn't often, but it did happen. As such, I knew there was some mystique to my image as an artsy loner. My mission now was simply to ensure that something of actual substance lay beneath.`,
                                 dotKeys: {
@@ -238,7 +234,6 @@ export default {
                         `with`,
                         {
                             anchor: `mindful manners`,
-                            review: true,
                             card: {
                                 description: `Catherine didn't like it when I swore, so I decided to give up swearing as well. I figured this would be a definite win with other women like her, while the rest would find its quaintness charming.`,
                                 dotKeys: {
@@ -285,7 +280,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Year five`,
-                            review: true,
                             card: {
                                 description: [
                                     `The Soviet Union's first five-year plan was also its most brutal, as the forced industrialization of agrarian societies led to widespread famine and death. Similarly, given how far behind I was starting out, it was naive to think that my own five-year plan for accelerated growth could be free of unintended consequences.`,
@@ -304,7 +298,6 @@ export default {
                         `spent her`,
                         {
                             anchor: `wishes on a friend`,
-                            review: true,
                             card: {
                                 description: [
                                     `Toward the end of my five-year plan, the Yearlings began to play local shows. I was thrilled the day Mara showed up in the audience— but it was Jacob who caught her eye. I felt like the`,
@@ -329,7 +322,6 @@ export default {
                         `while forever I'll`,
                         {
                             anchor: `hold in peace`,
-                            review: true,
                             card: {
                                 description: `So Jacob got together with Mara without any real effort, while romance for me felt no less elusive than ever. I thus had to admit that my five-year plan was a washout.`,
                                 dotKeys: {
@@ -474,7 +466,6 @@ export default {
                         `to a`,
                         {
                             anchor: `sand castle built by low tide`,
-                            review: true,
                             card: {
                                 description: `Beyond the immediate failures of my first five-year plan, I'd clearly missed out on some personal development that others had naturally come by. And there was no guarantee that another five-year plan wouldn't blindside me in the same manner. I saw my future as a stunted man-child, forever chasing ambitions both infantile and futile— like building castles out of sand.`,
                                 dotKeys: {
@@ -822,7 +813,6 @@ export default {
                         `But then I saw the`,
                         {
                             anchor: `world's a naked baby`,
-                            review: true,
                             card: {
                                 description: `But at some point, I realized that a social scene isn't any different from the world at large, in that nothing is hidden from view. Every situation can be understood by observing people's actions and reading their intentions, much like a holistic picture of the world can be pieced together by reading books on all the important subject matters.`,
                                 dotKeys: {
@@ -985,7 +975,6 @@ export default {
                                 `'s words`,
                             ],
                             properNoun: true,
-                            review: true,
                             card: {
                                 description: [
                                     `Recognizing my wish to be with someone like Mara, and taking stock of what was needed to fulfill it, I decided to return to what I do best, and hole up in seclusion— this time to work on a magnum opus. My next five-year plan would see me write all the lyrics, score all the parts, and perform all the tracks on`,
@@ -1029,7 +1018,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                review: true,
                 card: {
                     description: [
                         `My original plan was to take the puns one step further by recording this song in a "`,

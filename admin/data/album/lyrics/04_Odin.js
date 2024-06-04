@@ -33,7 +33,6 @@ export default {
     mixStartTime: `0:02:06.00`,
     playerReferenceTime: 559.438,
     playerStartTime: 555.277,
-    review: true,
     overview: `Taiwan showed me how different I would have turned out if my parents hadn't come to America— yet I was still worlds away from what Sasha needed me to be. Life seemed both infinitely fluid and immovably fixed, and I wasn't sure which extreme frightened me more. Later that summer when our house cat Odin died of old age, I sought spiritual explanations for my mortality. The finality of death was terrifying, after all— and yet, the eternal life promised by faith didn't feel any less so.`,
     isDoublespeaker: true,
     lyricUnits: [
@@ -81,7 +80,6 @@ export default {
                     lyricRight: [
                         {
                             anchor: `By lot`,
-                            review: true,
                             cards: [
                                 {
                                     description: `Lots are drawn by chance to decide an outcome, and it was my lot not to be born a Jew.`,
@@ -122,7 +120,6 @@ export default {
                     lyricLeft: [
                         {
                             anchor: `hiding place of retreat`,
-                            review: true,
                             card: {
                                 description: `The "asleep" voice of the doublespeaker pair narrates a dream that melds the familiar setting of Los Angeles with the foreign sights of Taiwan. Having been absorbed in my drawings well into nighttime, I crawl out from the dusty space beneath my bed at home.`,
                                 dotKeys: {
@@ -196,7 +193,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                review: true,
                 card: {
                     description: [
                         `For this song, I wanted to capture the disorienting cycle of days spent among the foreign and nights dreaming of the familiar. And so I invented doublespeaker rhyme, a literary technique in which two columns of lyrics, written to rhyme syllable for syllable, are sung in harmony. Each voice is then isolated to an opposite speaker in the stereo mix, creating the audio version of a cinematic`,
@@ -229,7 +225,6 @@ export default {
                         `you drew with`,
                         {
                             anchor: `crayons least whittled`,
-                            review: true,
                             card: {
                                 description: [
                                     `When we landed in Taiwan, my aunt presented me with a box of`,
@@ -375,7 +370,6 @@ export default {
                         `baby steps inch towards`,
                         {
                             anchor: `crevice rays`,
-                            review: true,
                             card: {
                                 description: `My grandmother's house at night was pitch black. So whenever I woke to use the bathroom, I had to tiptoe to the bedroom door, guided only by a sliver of moonlight peeking in from underneath.`,
                                 dotKeys: {
@@ -524,7 +518,6 @@ export default {
                         `As you plummet down from`,
                         {
                             anchor: `couplets past`,
-                            review: true,
                             card: {
                                 description: [
                                     `In poetry, a`,
@@ -1037,7 +1030,6 @@ export default {
                         `you see the`,
                         {
                             anchor: `jarred sibyl`,
-                            review: true,
                             card: {
                                 description: [
                                     `The`,
@@ -1694,7 +1686,6 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                review: true,
                 card: {
                     description: [
                         `As it became clear that`,

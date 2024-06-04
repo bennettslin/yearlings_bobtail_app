@@ -38,7 +38,6 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                review: true,
                 card: {
                     description: `Once when I was a child, a playmate asked if I knew what cremation was. I didn't, but I assumed it must be fun and tasty. Of course, the horrifying truth was revealed to me a moment later. I thought this was the perfect metaphor for a song about the seemingly innocent day trip that Miriam had planned out to end with our breakup.`,
                     dotKeys: {
@@ -113,7 +112,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                review: true,
                 card: {
                     description: [
                         `In freshman year, I took a seminar on`,
@@ -175,7 +173,6 @@ export default {
                     lyricRight: [
                         {
                             anchor: `Atavist`,
-                            review: true,
                             card: {
                                 description: [
                                     `An`,
@@ -231,7 +228,6 @@ export default {
                         {
                             // NOTE: I added a hyphen in the lyrics as well.
                             anchor: `inner lotus-eater`,
-                            review: true,
                             card: {
                                 description: [
                                     `In the`,
@@ -265,7 +261,6 @@ export default {
                         `an everlasting`,
                         {
                             anchor: `doublespeaker`,
-                            review: true,
                             card: {
                                 description: `Though I tried to adopt an innocent persona, Miriam must have known about the drunken incidents. My reputation preceded me by that point, and we had friends in common. Still, I never offered an explanation for the discrepancy, and she never asked for one. I think she just accepted it as part of the adventure.`,
                                 dotKeys: {
@@ -355,7 +350,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                review: true,
                 card: {
                     description: `I chose to use doublespeaker rhyme for this song because my original plan was to contrast Miriam's inner thoughts with mine. But I kept forgetting which column of lyrics was whose, which made me realize there was no real contrast to show. We both knew the relationship would fail; one of us just had a better idea of when.`,
                     dotKeys: {
@@ -450,7 +444,6 @@ export default {
                         `Though, she`,
                         {
                             anchor: `ponders the children`,
-                            review: true,
                             card: {
                                 description: `My mother once advised me not to have children, given the autism that runs in our genes, and her difficulties in raising my brother as a result. But by this reasoning, no woman should even want me as a lifetime partner to begin with.`,
                                 dotKeys: {
@@ -463,7 +456,6 @@ export default {
                     lyricRight: [
                         {
                             anchor: `Trophy bronzed`,
-                            review: true,
                             cards: [
                                 {
                                     description: [
@@ -755,7 +747,6 @@ export default {
                         `it`,
                         {
                             anchor: `hums a typo`,
-                            review: true,
                             card: {
                                 description: [
                                     `Like a typo, Miriam's involvement with me was a mistake she could easily correct. And like a "`,
@@ -773,7 +764,6 @@ export default {
                         },
                         {
                             anchor: `fragile ex`,
-                            review: true,
                             card: {
                                 description: [
                                     `Miriam was delicate in breaking up with me, knowing the kind of fragile ex-boyfriend I was sure to be. But still it had to be done, because who knew what horrors lurked in my genetic makeup? Perhaps I was a carrier of "`,
@@ -798,7 +788,6 @@ export default {
                         `With his`,
                         {
                             anchor: `vinyl, exit`,
-                            review: true,
                             card: {
                                 description: [
                                     `After Miriam helps me to my "final exit"— a euphemism used by proponents of`,
@@ -865,7 +854,6 @@ export default {
                         `, hears not a`,
                         {
                             anchor: `worrisome`,
-                            review: true,
                             card: {
                                 description: `It surprised me that I only had good wishes for Miriam after we broke up, given how combative I was with Sita. But I came away knowing I was indeed worthy of dating the Maras of the world. I didn't have this certainty before, so it felt like an amazing bargain.`,
                                 dotKeys: {
@@ -877,7 +865,6 @@ export default {
                         `"`,
                         {
                             anchor: `Bless her`,
-                            review: true,
                             card: {
                                 description: [
                                     {
@@ -909,7 +896,6 @@ export default {
                         {
                             anchor: `Godspeed`,
                             properNoun: true,
-                            review: true,
                             cards: [
                                 {
                                     description: `To add to my insecurities as a child about being raised Buddhist, I also looked different from everyone else in Sasha's world. And so my inferiority complex failed to distinguish between carrying faulty genes, belonging to a faulty faith, and being of a faulty race. They all seemed to derive from a single defect at the core of my being.`,

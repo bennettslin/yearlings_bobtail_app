@@ -29,14 +29,12 @@ export default {
     playerStartTime: 1932.102,
     // This is a magic number adjusted by ear. In the mix, it's actually 41.66.
     mixSamplingFrequency: 41.64,
-    review: true,
     overview: `With the Yearlings becoming a fixture in the local scene, I started to command more attention than I'd ever known, particularly from women. Yet my misery didn't fade; it just simmered into a quiet resentment. I also began to regret getting into a relationship with Sita, which now felt like a decision I'd been coerced to make, under deprived conditions from which I was now free.`,
     lyricUnits: [
         {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                review: true,
                 card: {
                     description: [
                         {
@@ -74,7 +72,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                review: true,
                 card: {
                     description: [
                         `A fellow dishroom worker named Owen had a`,
@@ -225,7 +222,6 @@ export default {
                         `Now your`,
                         {
                             anchor: `sapling cut`,
-                            review: true,
                             card: {
                                 description: [
                                     `Upon surviving the winter, a sapling will be awarded its first`,
@@ -315,7 +311,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                review: true,
                 card: {
                     description: [
                         `When I asked Owen to recommend some good lyricists, he pointed me to`,
@@ -356,7 +351,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Feeble feeder fish`,
-                            review: true,
                             card: {
                                 description: [
                                     `The pecking order in a tank of`,
@@ -459,7 +453,6 @@ export default {
                         `With hair of`,
                         {
                             anchor: `maraschino red`,
-                            review: true,
                             card: {
                                 description: [
                                     `Having sworn to be ready when the next Mara comes along, I notice that the latecomer's hair is colored like a`,
@@ -484,7 +477,6 @@ export default {
                         `"`,
                         {
                             anchor: `Great show`,
-                            review: true,
                             card: {
                                 description: `The best time to hit on someone is right after you've played a set, when they've just spent the last hour making you the center of their universe. So sure enough, I find the redheaded woman to be flirtatious when we finally chat.`,
                                 dotKeys: {
@@ -513,7 +505,6 @@ export default {
                         `and you were`,
                         {
                             anchor: `fine when you had none`,
-                            review: true,
                             card: {
                                 description: `Things were finally looking up for me, so I was confused to still feel a quiet bitterness inside. I suspect it's because I was indignant for my younger self, who'd been kept in the dark for so long about how much better life could be.`,
                                 dotKeys: {
@@ -583,7 +574,6 @@ export default {
                         `reading`,
                         {
                             anchor: `His obit not a bang`,
-                            review: true,
                             card: {
                                 description: `But my appraisal was based on reason, not resentment. If the Christian god were the one true God, then why would he trust his message to be spread by the very tormentors of those he hoped to reach?`,
                                 dotKeys: {
@@ -669,7 +659,6 @@ export default {
                     lyric: [
                         {
                             anchor: `only to crack`,
-                            review: true,
                             card: {
                                 description: `Yet even as reason disproved the beliefs of my bullies, it also discredited my own as a Beyonder. After all, with so many rival claims to the truth, who would stay loyal to a faith that offers no community and only endless grief?`,
                                 dotKeys: {
@@ -726,7 +715,6 @@ export default {
                         `So if you're weeping for`,
                         {
                             anchor: `poor squirrels`,
-                            review: true,
                             card: {
                                 description: [
                                     `In the final scene of `,
@@ -750,7 +738,6 @@ export default {
                         `also weep for`,
                         {
                             anchor: `poor, poor bears`,
-                            review: true,
                             card: {
                                 description: `His wife Alison then sighs in response, "Poor, poor bears." She recognizes that he, a bear in their mutual fantasy, is just as much an unwitting victim in the power dynamic between them.`,
                                 dotKeys: {

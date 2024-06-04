@@ -34,7 +34,6 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                review: true,
                 cards: [
                     {
                         description: [
@@ -83,7 +82,6 @@ export default {
                             `L.A. to the Bay,`,
                             {
                                 anchor: `pompous autumn waits`,
-                                review: true,
                                 cards: [
                                     {
                                         description: `In high school, I carried on as the same wretched nobody that I was in middle school. It just didn't seem possible to remake myself into someone new while surrounded by all the same classmates. But all the while, I was crafting my future identity as a self-assured artist, and it was raring to go as soon as I could leave Los Angeles.`,
@@ -143,7 +141,6 @@ export default {
                         `and their`,
                         {
                             anchor: `molls perched on pedestals`,
-                            review: true,
                             card: {
                                 description: [
                                     {
@@ -221,7 +218,6 @@ export default {
                         `death of`,
                         {
                             anchor: `dull dishroom days`,
-                            review: true,
                             card: {
                                 description: `My job washing dishes was uneventful and offered no social interaction, but it had its upsides. At the start of the shift, I could read a book while the dishes piled up, then clean them all at once in a mad rush. When it got busy, I would switch to writing lyrics in my head.`,
                                 dotKeys: {
@@ -237,7 +233,6 @@ export default {
                         `stalled by`,
                         {
                             anchor: `keys left on dumbwaiter trays`,
-                            review: true,
                             card: {
                                 description: `The students would bus their trays on carriages attached to a conveyor that led into the dishroom. Every so often, one of them would accidentally leave a personal item on their tray and come downstairs to retrieve it. I got a kick whenever this happened. They were always grateful, and sometimes they were cute.`,
                                 dotKeys: {
@@ -267,7 +262,6 @@ export default {
                         `to`,
                         {
                             anchor: `fetch her lancet pen`,
-                            review: true,
                             cards: [
                                 {
                                     description: [
@@ -304,7 +298,6 @@ export default {
                         `and stunned, by`,
                         {
                             anchor: `reflex you asked`,
-                            review: true,
                             cards: [
                                 {
                                     description: `By then, I was mostly on autopilot when it came to hitting on random women in random places.`,
@@ -329,7 +322,6 @@ export default {
                         `At first she hedged, but then`,
                         {
                             anchor: `laying qualms to rest`,
-                            review: true,
                             cards: [
                                 {
                                     description: [
@@ -366,7 +358,6 @@ export default {
                         {
                             anchor: `Schwa stickers`,
                             properNoun: true,
-                            review: true,
                             cards: [
                                 {
                                     description: [
@@ -491,7 +482,6 @@ export default {
                         `Then just like the drift,`,
                         {
                             anchor: `she disappeared`,
-                            review: true,
                             card: {
                                 description: `Shortly after our first few dates, I called Sita to tell her I was in love with her. She admitted that she didn't feel the same way, yet wanted to remain friends. We hung up with the understanding that we would continue to hang out casually. But I felt so dejected that I decided never to see her again.`,
                                 dotKeys: {
@@ -666,7 +656,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Phantom limbs`,
-                            review: true,
                             card: {
                                 description: [
                                     `A`,
@@ -690,7 +679,6 @@ export default {
                         `them`,
                         {
                             anchor: `tripped on runner's high`,
-                            review: true,
                             card: {
                                 description: [
                                     `Having completed a grueling shift, I'm feeling dead tired in all my limbs as I make my way back home. So when a nighttime jogger calls out with`,
@@ -714,7 +702,6 @@ export default {
                         `Below the`,
                         {
                             anchor: `window of your Walkman`,
-                            review: true,
                             cards: [
                                 {
                                     description: [
@@ -794,7 +781,6 @@ export default {
                         `"Hey, you know`,
                         {
                             anchor: `you're my password`,
-                            review: true,
                             card: {
                                 description: `As I enter the passcode for the gate, Sita breaks the ice by mentioning that something she remembered about me was the basis for a password she recently created.`,
                                 dotKeys: {
@@ -964,7 +950,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                review: true,
                 card: {
                     description: [
                         `The highlight of`,
@@ -1142,7 +1127,6 @@ export default {
                         },
                         {
                             anchor: `with a ring`,
-                            review: true,
                             cards: [
                                 {
                                     description: `Having dozed off, I'm roused by the ringing of a bell to indicate that a patient has been released from care and is returning to the waiting area.`,
@@ -1219,7 +1203,6 @@ export default {
                     lyric: [
                         {
                             anchor: `She loves you`,
-                            review: true,
                             cards: [
                                 {
                                     description: `It took a long while for Sita and I to be fully comfortable with each other. At the start of our yearlong friendship, we mostly just studied together at the library. Then slowly, short treks through campus progressed into long strolls around the neighborhood, which soon led up to leaning in closer on the couch. It all happened so fast toward the end that I was still processing what triggered it.`,
@@ -1269,7 +1252,6 @@ export default {
                         `You`,
                         {
                             anchor: `stand unsure`,
-                            review: true,
                             cards: [
                                 {
                                     description: `The night we decided to have sex, I was overcome with a wary unease that I couldn't explain.`,
@@ -1496,7 +1478,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                review: true,
                 card: {
                     description: [
                         `The French expression`,

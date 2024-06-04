@@ -37,7 +37,6 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                review: true,
                 card: {
                     description: [
                         `My parents come from`,
@@ -208,7 +207,6 @@ export default {
                         `Didi, you've been following, I`,
                         {
                             anchor: `didn't want you here`,
-                            review: true,
                             card: {
                                 description: `I often tagged along with my sister, who was fiercely protective of me. But there were times when she and her friends would insist on doing girl stuff by themselves. This always left me in a panic, since I had few playmates of my own.`,
                                 dotKeys: {
@@ -261,7 +259,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                review: true,
                 card: {
                     description: [
                         `I wanted this song to capture the flurry of activity and transience of emotion that a child experiences in a single day. So as the rhythm jumps in and out of a`,
@@ -417,7 +414,6 @@ export default {
                         `with your`,
                         {
                             anchor: `sheriff's badge and gun`,
-                            review: true,
                             card: {
                                 description: [
                                     `Like many other Taiwanese teenagers of her generation, my mother prized all things labeled American, despite not knowing exactly what that label entailed. Back then, their only source for imports was a local bootleg industry that combed through the relics of America's past. And so my sister and I grew up listening to my mother's old country records and sharing her fondness for classic Western films.`,

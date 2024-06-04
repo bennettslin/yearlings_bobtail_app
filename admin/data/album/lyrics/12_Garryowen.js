@@ -27,7 +27,6 @@ export default {
     referenceDescription: `Banjo in anacrusis`,
     playerStartTime: 2107.996,
     mixStartTime: `0:01:01.40`,
-    review: true,
     overview: `My mood would change for the worse when I drank, leading friends to joke that I had a sinister alter ego. Yet it wasn't far from the truth. I was souring on my relationship with Sita by this point, and being drunk provided both an escape and an excuse to act out. But I really didn't like myself when this happened; I missed being the hapless kid I was before. And knowing now how to get it right, I longed for a do-over— only this time without the mess. In other words… without Sita.`,
     lyricUnits: [
         {
@@ -313,7 +312,6 @@ export default {
                         `since`,
                         {
                             anchor: `hummers`,
-                            review: true,
                             card: {
                                 description: `A hummer is a blowjob in which the giver stimulates the penis further by humming to create vibrations. Of course, this technique can be used to arouse the vulva as well.`,
                                 dotKeys: {
@@ -323,7 +321,6 @@ export default {
                         },
                         {
                             anchor: `aren't love`,
-                            review: true,
                             card: {
                                 description: `Throughout our budding friendship, Sita had neglected to mention her sexual intimacy with past partners, even if it was always shy of intercourse. When I found out, she tried to console me by pointing out that she never went all the way with them because she didn't love them. She loved me, which meant I'd won. But it still stung like crazy to find out so late, and this deepened my resentment.`,
                                 dotKeys: {
@@ -350,7 +347,6 @@ export default {
                     lyric: [
                         {
                             anchor: `buys your grief`,
-                            review: true,
                             card: {
                                 description: `My worlds collided when I smashed a random bike one night in a drunken fit. As it turns out, the bike belonged to a scene kid who'd liked the Yearlings since our early days. He'd related so much to my songs about unfulfilled hopes. I was disgusted with myself for having disappointed him.`,
                                 dotKeys: {
@@ -481,7 +477,6 @@ export default {
                         `fill up a package strapped to your`,
                         {
                             anchor: `scapegirl`,
-                            review: true,
                             card: {
                                 description: [
                                     `In Biblical times, a community would absolve its sins by ritually placing them`,
@@ -578,7 +573,6 @@ export default {
                         `You won't always`,
                         {
                             anchor: `have her for your pet`,
-                            review: true,
                             card: {
                                 description: `Sita's manner of prostrating herself exasperated me to no end, as it forced me to wield power that I never asked for. But its endearing nature was also guaranteed to make me love her, and I did. So I never doubted that the impending breakup would be wrenching for both of us.`,
                                 dotKeys: {
@@ -633,7 +627,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Final trip on a tanker`,
-                            review: true,
                             cards: [
                                 {
                                     description: `I knew I had to stay relatively sober to start afresh with someone new. Yet short of being drunk, I could never muster the courage to break up with Sita. So I drank myself into a stupor each night, hoping to wake one morning and discover that, by some miracle, I was both newly single and repulsed by the taste of alcohol.`,
@@ -707,7 +700,6 @@ export default {
                         `They told her, "Never help a`,
                         {
                             anchor: `self-abuser`,
-                            review: true,
                             cards: [
                                 {
                                     description: [
@@ -746,7 +738,6 @@ export default {
                             `see himself`,
                             {
                                 anchor: `as well in you`,
-                                review: true,
                                 card: {
                                     description: `But if I was capable of hurting myself, then I also wouldn't have any qualms about hurting those close to me— who now knew the worst side of me as only I once did.`,
                                     dotKeys: {
@@ -857,7 +848,6 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                review: true,
                 card: {
                     description: [
                         `After`,

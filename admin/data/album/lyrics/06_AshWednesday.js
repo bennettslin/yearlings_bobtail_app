@@ -23,7 +23,6 @@ export default {
     referenceDescription: `Darbuka in anacrusis`,
     playerStartTime: 967.569,
     mixStartTime: `0:01:03.51`,
-    review: true,
     overview: `My first girlfriend in college was Catherine, a nice Catholic girl and high school valedictorian, who didn't take kindly to my lack of reading habit and broke up with me right before Ash Wednesday. So I ashed my own forehead that day and tried to bump into her, hoping that if she could picture me as a good Catholic boy, I might get another chance. It didn't work, but I did grow into a habitual reader, and I have Catherine to thank for that.`,
     lyricUnits: [
         {
@@ -57,7 +56,6 @@ export default {
                         {
                             anchor: `O Catherine! My Catherine!`,
                             properNoun: true,
-                            review: true,
                             card: {
                                 description: [
                                     {
@@ -128,7 +126,6 @@ export default {
                             // NOTE: I changed from Ulysses'.
                             anchor: `Ulysses's tomb`,
                             properNoun: true,
-                            review: true,
                             card: {
                                 description: [
                                     `A reference to the classic "Who's buried in`,
@@ -371,7 +368,6 @@ export default {
                         `,"`,
                         {
                             anchor: `putting down her Joyce`,
-                            review: true,
                             card: {
                                 description: [
                                     `Her compliment is less than sincere, however, since referencing a poet studied by middle schoolers is hardly an impressive feat. And so, annoyed at being made to put down the Joyce novel she's reading, Catherine amuses herself by putting`,
@@ -396,7 +392,6 @@ export default {
                         `with`,
                         {
                             anchor: `"Joyce" oblivious`,
-                            review: true,
                             card: {
                                 description: [
                                     `Of course, not knowing that I couldn't be the next Joyce is why I dared to try. And so I began to dream that I could do for rock music what Joyce had done for English literature.`,
@@ -463,7 +458,6 @@ export default {
                         `who tried but failed to win her heart`,
                         {
                             anchor: `poised with brains`,
-                            review: true,
                             card: {
                                 description: `Catherine undervalued the artistic strengths I'd always counted on to cover up my many weaknesses. Which meant if I were ever to be worth keeping, then I simply couldn't have any weaknesses.`,
                                 dotKeys: {
@@ -620,7 +614,6 @@ export default {
                         `—`,
                         {
                             anchor: `my Tekakwitha`,
-                            review: true,
                             card: {
                                 description: [
                                     {
@@ -653,7 +646,6 @@ export default {
                         `for I lack the wit to spare a`,
                         {
                             anchor: `safe Algonquin abode`,
-                            review: true,
                             card: {
                                 description: [
                                     `Kateri Tekakwitha was born to a`,
@@ -817,7 +809,6 @@ export default {
                         `us wretched souls`,
                         {
                             anchor: `cursed to be born`,
-                            review: true,
                             cards: [
                                 {
                                     description: [
@@ -861,7 +852,6 @@ export default {
                         `to wear it like a`,
                         {
                             anchor: `tragic mask`,
-                            review: true,
                             card: {
                                 description: [
                                     `In time I came to see comedy and tragedy as two sides of the same coin. After all, every tragic situation can be made into a song; writing a song calls for taking the broader view; and anything viewed broadly will reveal its comic underbelly. So I always preferred a negative outcome to none at all— but then this made my whole life feel like a stage act.`,
@@ -878,7 +868,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                review: true,
                 card: {
                     // NOTE: Counterpoint is a wiki later in Garryowen.
                     description: [
@@ -949,7 +938,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                review: true,
                 card: {
                     description: [
                         `While fleshing out the lyrics in this chorus, I noticed that a handful of words in the first stanza are`,

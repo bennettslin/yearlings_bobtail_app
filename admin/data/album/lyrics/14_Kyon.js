@@ -29,7 +29,6 @@ export default {
     mixStartTime: `0:00:00.27`,
     playerReferenceTime: 2498.410,
     playerStartTime: 2496.296,
-    review: true,
     overview: `It shames me to say so, but even then I could see how my behavior was slowly degenerating into cruelty. Hoping for an easy breakup, I would act up in small ways— but Sita was just as determined to work it out, and she'd endure. So then I'd behave even more obnoxiously the next time… and on and on. In time I came to see how thoroughly her sense of worth was tied to our relationship. I was fighting for me. She was fighting for us.`,
     lyricUnits: [
         {
@@ -186,7 +185,6 @@ export default {
                         `Is it just her`,
                         {
                             anchor: `womb you bed`,
-                            review: true,
                             card: {
                                 description: `Of course, Sita herself had no such illusions about my innocence. She knew I chafed at being the one who was less sexually experienced in our relationship, and that this was the basis for my desire to sleep with other women.`,
                                 dotKeys: {
@@ -244,7 +242,6 @@ export default {
                     lyric: [
                         {
                             anchor: `spurned at first`,
-                            review: true,
                             card: {
                                 description: `Given the seeming ease with which I could now attract other women, I grew further indignant about all the hoops I'd been made to jump through when first trying to win Sita over.`,
                                 dotKeys: {
@@ -293,7 +290,6 @@ export default {
                     lyric: [
                         {
                             anchor: `all the points`,
-                            review: true,
                             card: {
                                 description: [
                                     `During that year when Sita and I got to know each other as friends, I still tried to impress her without appearing as such. One time, I solved her friend's`,
@@ -317,7 +313,6 @@ export default {
                     lyric: [
                         {
                             anchor: `plunders past`,
-                            review: true,
                             card: {
                                 description: `The sting I felt in having once been rejected by Sita was aggravated by the later revelation of her sexual past. And all the more so since it was precisely the painful lessons she drew from those past encounters that made her wary of my initial advances. Of course, the irony was lost on me that I'd end up providing the most painful lesson by far.`,
                                 dotKeys: {
@@ -392,7 +387,6 @@ export default {
                         `as the sole`,
                         {
                             anchor: `keeper of his sheep herd`,
-                            review: true,
                             card: {
                                 description: [
                                     `A keeper in the sense of being both the one who tends`,
@@ -522,7 +516,6 @@ export default {
                         `A`,
                         {
                             anchor: `shank's dustless silhouette`,
-                            review: true,
                             cards: [
                                 {
                                     description: `During those on-and-off years, I would habitually return to Sita with a promise to mend my ways. Things would be peachy for a while— after which I would run off with yet another woman. I was like a reformed convict who might relapse at any time, taking with him the shank that he'd left on the windowsill to collect dust.`,
@@ -565,7 +558,6 @@ export default {
                         `But other nights you'd`,
                         {
                             anchor: `lap my wound clean`,
-                            review: true,
                             card: {
                                 description: `Sita was unable to climax through vaginal sex, so I would go down on her afterward. She mentioned this once as an example of my thoughtfulness, when I asked her what she saw in me that was worth holding onto. It seemed like proof that I didn't have any actual redeeming qualities.`,
                                 dotKeys: {
@@ -665,7 +657,6 @@ export default {
                         `? Come for me? At`,
                         {
                             anchor: `thirty-three`,
-                            review: true,
                             card: {
                                 description: `I often joked about killing myself at thirty-three, the age at which Jesus was crucified. I hated the idea of getting older, and clearly this is all the time you need to make an impact on the world. So when Sita asked me to specify at what age I would come back for her in accordance with our little pact, I answered thirty-three. The subtext was understood.`,
                                 dotKeys: {
@@ -717,7 +708,6 @@ export default {
                         `, your`,
                         {
                             anchor: `fear of never dying`,
-                            review: true,
                             card: {
                                 description: `I also hadn't settled the issue of whether an afterlife was actually preferable. Though Sita had no ready answers, she taught me her Hindu beliefs, which reinforced what I was learning in my religious studies courses. I found comfort in Hinduism's sprawling pantheon of avatars and deities. It just seemed like the more details there are to learn, the more ways there are to get lost in the divine.`,
                                 dotKeys: {
@@ -729,7 +719,6 @@ export default {
                         `, and`,
                         {
                             anchor: `sadness for what it was`,
-                            review: true,
                             card: {
                                 description: `Back when Sita and I were just friends, we got along well because we were both sad people. But in hindsight, my sadness was simply rooted in circumstance— whether from being bullied as a child, or out of loneliness later on. Sita, on the other hand, suffered from clinical depression. So over time, I got better at dealing with my spells— but then I grew impatient with her for not doing the same.`,
                                 dotKeys: {
@@ -791,7 +780,6 @@ export default {
                         `And darling, don't you worry, these were only`,
                         {
                             anchor: `practice cuts`,
-                            review: true,
                             card: {
                                 description: `The first time Sita asked about the scars on my forearm, I wryly assured her that they were just for practice. Years later when I expressed concern after she'd tried cutting for herself, she gave me the same line. The message was clear that I was the cause in more ways than one.`,
                                 dotKeys: {

@@ -69,7 +69,6 @@ export default {
                                 `"If you're just starting out, you need to decide right now: Either you stick with quality vinyl, or you buy only the bargain bin LPs. You`,
                                 {
                                     anchor: `can't have both`,
-                                    review: true,
                                     card: {
                                         description: `A friend offered me this advice when I was looking to buy a used turntable— and as it turns out, what's true for vinyl records holds just as well for life decisions. I couldn't have two selves, with one to earn praise for my kindness, and the other to take the blame for my selfish desires. A single hurtful deed corrupts everything else. I knew this now.`,
                                         dotKeys: {
@@ -644,7 +643,6 @@ export default {
                         `"So all your`,
                         {
                             anchor: `leads have left`,
-                            review: true,
                             card: {
                                 description: `For years, my habit was to stay with Sita right up until I had another option to pursue. Each time I left, Sita would languish for a few months before finding the courage to contact me. Then, upon hearing that things hadn't worked out with the other woman, she'd gently persuade me to come back. But now our situations were reversed: I had no more options coming down the pike, while Sita had fallen in love with someone else.`,
                                 dotKeys: {
@@ -661,7 +659,6 @@ export default {
                         `Someday you'll breathe again; for one,`,
                         {
                             anchor: `you have to`,
-                            review: true,
                             card: {
                                 description: `Overcome with jealousy and heartbreak, I had no excuse to complain; I'd caused Sita this same torment countless times. So in our last phone conversation, I just asked her meekly how she'd managed it. She replied that she didn't know. There were days when she didn't want to live— yet each day would pass all the same. Then gradually, days added up to weeks, and weeks turned into months, until the excruciating pain dulled into an aching sadness.`,
                                 dotKeys: {
@@ -763,7 +760,6 @@ export default {
                         `And can we`,
                         {
                             anchor: `start as children`,
-                            review: true,
                             card: {
                                 description: [
                                     `I first recorded this song on Owen's four-track. There were no lyrics yet, so for the vocal track, I just mumbled some random phrases. I must have thrown the word "stardust" in there— given that I was always hoping to write the next "`,
@@ -891,7 +887,6 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                review: true,
                 card: {
                     description: `I stayed vegan for five years. But after moving to New York City, I quit because Sasha ate meat. I guess it's the nature of who I am that my personal identity will always be the first thing I jettison whenever a chance for romance is at stake. And truth be told, being vegan was always kind of rough, given my peanut and tree nut allergies. Still, these days I'm mostly vegetarian. It's both easier and healthier.`,
                     dotKeys: {

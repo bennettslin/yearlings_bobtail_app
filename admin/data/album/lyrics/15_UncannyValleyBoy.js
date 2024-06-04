@@ -29,14 +29,12 @@ export default {
     referenceDescription: `Acoustic guitar in measure 1`,
     mixStartTime: `0:01:18.46`,
     playerStartTime: 2722.629,
-    review: true,
     overview: `Upon learning of my brother's autism, my parents were too harried to notice I was being bullied at school. In guilt, they later indulged every whim I had to find my own path. But it didn't assure them that I failed to mature even as I got older, and they were especially crushed when I left Sita, whom they adored. Naturally, I wasn't happy to disappoint them. Still, I had a master plan to follow, and I wasn't about to change my ways.`,
     lyricUnits: [
         {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                review: true,
                 cards: [
                     {
                         description: [
@@ -312,7 +310,6 @@ export default {
                         `,`,
                         {
                             anchor: `earth right now your tourist store`,
-                            review: true,
                             card: {
                                 description: `My mother enthralled me with visions of being a great artist, while also instilling the Buddhist ideal to renounce materialism. The mail-order cult then told me that I was a mere visitor to this planet. And so a belief formed in my head that I must work tirelessly "to restore" my "birthright" of artistic renown, unaffected by earthly concerns.`,
                                 dotKeys: {
@@ -408,7 +405,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                review: true,
                 card: {
                     description: [
                         `I used the`,
@@ -700,7 +696,6 @@ export default {
                         `smugly prepped to`,
                         {
                             anchor: `haze the new latecomers`,
-                            review: true,
                             card: {
                                 description: [
                                     `Some groups put newcomers through`,

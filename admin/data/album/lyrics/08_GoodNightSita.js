@@ -47,7 +47,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                review: true,
                 card: {
                     description: [
                         `In the final chapter of`,
@@ -152,7 +151,6 @@ export default {
                         `for this kid wearing no`,
                         {
                             anchor: `decoder ring`,
-                            review: true,
                             card: {
                                 description: [
                                     {
@@ -174,7 +172,6 @@ export default {
                         {
                             anchor: `Dutch courage`,
                             properNoun: true,
-                            review: true,
                             cards: [
                                 {
                                     description: `During my college years, I would ask older coworkers to buy me twelve-packs of cheap beer, which I then lugged back to my apartment. So I always had some on hand, and before every date, I would down a few cans.`,
@@ -221,7 +218,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                review: true,
                 card: {
                     description: [
                         `Back when I worked as a dishwasher, my supervisor would blast`,
@@ -283,7 +279,6 @@ export default {
                     mixTime: `0:23:18.66`,
                     lyric: {
                         anchor: `swept in unchartable tides`,
-                        review: true,
                         card: {
                             description: [
                                 `The fear of being steered in unknown directions has kept me on edge throughout this date. But nearby is a storm drain that flows into the ocean, and I'm reminded of all the`,
@@ -311,7 +306,6 @@ export default {
                         `they just always`,
                         {
                             anchor: `know to pry`,
-                            review: true,
                             card: {
                                 description: `And none of my friends treat dating as a nerve-racking ordeal either. They just keep the conversation going by pressing for more details, the way a starfish pries open an oyster resting on the ocean floor.`,
                                 dotKeys: {
@@ -328,7 +322,6 @@ export default {
                         `for the`,
                         {
                             anchor: `innermost matryoshka`,
-                            review: true,
                             card: {
                                 description: [
                                     `Flashback to our first date, when Sita and I have arrived at a natural history museum. We begin by strolling past a display of Russian nesting dolls, known as`,
@@ -371,7 +364,6 @@ export default {
                         `till then`,
                         {
                             anchor: `crack up another doll`,
-                            review: true,
                             card: {
                                 description: `A friend once told me that if I can keep a woman cracking up at my jokes, then I'll always be good for another date. My humor at the time was all about clever puns, though, thanks to Catherine's fondness for them— and puns tend to draw groans from most everyone else.`,
                                 dotKeys: {
@@ -388,7 +380,6 @@ export default {
                         `to find the`,
                         {
                             anchor: `chrysalis unchristened`,
-                            review: true,
                             cards: [
                                 {
                                     description: `As we pass a display on the butterfly lifecycle, it occurs to me that what I'm hoping to find is a chrysalis— in other words, someone so new to this world that my own lack of worldliness wouldn't need to be an issue.`,
@@ -408,7 +399,6 @@ export default {
                         `who'd buy this`,
                         {
                             anchor: `aping jaw`,
-                            review: true,
                             card: {
                                 description: [
                                     `We stop by a replica of`,
@@ -448,7 +438,6 @@ export default {
                         `when`,
                         {
                             anchor: `defined by ambrosia beers`,
-                            review: true,
                             cards: [
                                 {
                                     description: [
@@ -494,7 +483,6 @@ export default {
                         `in time are seen with`,
                         {
                             anchor: `a focus grown clear`,
-                            review: true,
                             card: {
                                 description: [
                                     `My buzz would wear off a few hours into a date, forcing me to realize that everything I'd just been saying might topple under scrutiny, like a`,
@@ -529,7 +517,6 @@ export default {
                     lyric: [
                         {
                             anchor: `pidgin palaver`,
-                            review: true,
                             cards: [
                                 {
                                     description: [
@@ -560,7 +547,6 @@ export default {
                         `hyped up like some`,
                         {
                             anchor: `disastrous play`,
-                            review: true,
                             card: {
                                 description: `On our second date, Sita and I go to see her friend act in a play. Before taking our seats, we chat with him backstage. I struggle to get a word in edgewise, however, which leaves me feeling insecure afterward.`,
                                 dotKeys: {
@@ -606,7 +592,6 @@ export default {
                         `for if the`,
                         {
                             anchor: `tactic is to stall`,
-                            review: true,
                             card: {
                                 description: `My friends would advise me to wait three days before calling a woman back. And yet, it was always agony when she invariably did the same to me.`,
                                 dotKeys: {
@@ -627,7 +612,6 @@ export default {
                         `what this`,
                         {
                             anchor: `understudy sought`,
-                            review: true,
                             card: {
                                 description: [
                                     `As an`,
@@ -667,7 +651,6 @@ export default {
                         `then wise up and`,
                         {
                             anchor: `learn to shotgun`,
-                            review: true,
                             card: {
                                 description: `In time I came to adopt the shotgun approach to dating, which involves hitting on anyone at any moment. It works because the math is on your side. Even if your success rate remains dismal, you're increasing the sample size, which gives you a better chance of having at least one person say yes to a date. And, of course, one yes is all you need.`,
                                 dotKeys: {
@@ -688,7 +671,6 @@ export default {
                         `so we'll`,
                         {
                             anchor: `breeze through our parts`,
-                            review: true,
                             card: {
                                 description: `Any time I said something witty that got a good response, I'd be sure to say it again on a future date with a different woman, like an actor reprising a role. This then eased the sting of rejection, since the less I had to prepare, the less I needed to feel was at stake.`,
                                 dotKeys: {
@@ -812,7 +794,6 @@ export default {
                         `hint of`,
                         {
                             anchor: `sampler cologne`,
-                            review: true,
                             card: {
                                 description: `Whenever I spotted a men's lifestyle magazine that someone had thrown away, I would tear out the scent strips from its cologne advertisements and add them to my pile. Then right before a date, I would rub a few onto my neck and wrists.`,
                                 dotKeys: {
@@ -840,7 +821,6 @@ export default {
                         `always rides in`,
                         {
                             anchor: `single go-karts`,
-                            review: true,
                             card: {
                                 description: [
                                     `On our third date, Sita and I visit a`,
@@ -909,7 +889,6 @@ export default {
                         `and her`,
                         {
                             anchor: `veggie wishbone's short end`,
-                            review: true,
                             cards: [
                                 {
                                     description: [
@@ -940,7 +919,6 @@ export default {
                         `from a`,
                         {
                             anchor: `dummy steering wheel`,
-                            review: true,
                             card: {
                                 description: `Like a child clutching the passenger steering wheel in a twin go-kart, I naively hold onto the hope that my words and actions can steer this date in a direction I'd like.`,
                                 dotKeys: {
@@ -1058,7 +1036,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                review: true,
                 card: {
                     description: [
                         `Ambrose Bierce also wrote "`,

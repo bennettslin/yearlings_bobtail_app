@@ -36,7 +36,6 @@ export default {
     mixStartTime: `0:01:27.02`,
     playerReferenceTime: 756.159,
     playerStartTime: 755.661,
-    review: true,
     overview: `As my years of getting bullied grew unbearable, a strange letter arrived in the mail with promises of spiritual answers. After I sent the requested payment, it was revealed to me that I belonged to a race of interstellar beings, and my mission was to shut myself off from the world. I did so by adopting an unresponsive manner like my brother, which made me feel a strong psychic bond with him. But as my sanity chipped away, I came to realize I was in a mail-order cult.`,
     lyricUnits: [
         {
@@ -322,7 +321,6 @@ export default {
                         `they'll catch you by`,
                         {
                             anchor: `your cape`,
-                            review: true,
                             card: {
                                 description: `I was well liked in elementary school, despite being small for my age and absorbed in my art projects. Not only was I harmless and unassuming, I would happily draw cartoon figures for those who asked. But the traits that once made me a hero now marked me as easy prey in middle school, and I was ill-prepared.`,
                                 dotKeys: {
@@ -471,7 +469,6 @@ export default {
                         `"`,
                         {
                             anchor: `Are you a Beyonder`,
-                            review: true,
                             card: {
                                 description: `According to RI Research, Beyonders are an ancient race of beings who were born from the stars and then strewn across the universe. Those who made it to Earth adopted the likeness of human beings. Yet even with no memory of their origins, they're beset by a quiet discomfort that they don't truly belong.`,
                                 dotKeys: {
@@ -488,7 +485,6 @@ export default {
                         `Do you often feel like a`,
                         {
                             anchor: `wanderer lost`,
-                            review: true,
                             card: {
                                 description: `The letter acknowledged my yearning for acceptance and spoke to my frustration that this basic human need should go unmet. Having hit all the right nerves, it then shared hopeful news: RI Research believed I might be a Beyonder. And now, after searching for so long, they'd found me.`,
                                 dotKeys: {
@@ -505,7 +501,6 @@ export default {
                         `But`,
                         {
                             anchor: `waiting for Goddard`,
-                            review: true,
                             cards: [
                                 {
                                     description: [
@@ -633,7 +628,6 @@ export default {
                         `dragged to sled by`,
                         {
                             anchor: `hunter's belt`,
-                            review: true,
                             cards: [
                                 {
                                     description: `Sadly, a belt can be used to instill obedience in wayward animals.`,
@@ -716,7 +710,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                review: true,
                 card: {
                     description: `To make the sound of rocket circuitry heard here, I banged an electric guitar against a carpet floor while bending its whammy bar. It took countless tries, and I had to retune each time because the guitar kept going flat.`,
                     dotKeys: {
@@ -737,7 +730,6 @@ export default {
                         `Is this`,
                         {
                             anchor: `too much at once`,
-                            review: true,
                             card: {
                                 description: `I sobbed when the follow-up letter arrived to confirm I was a Beyonder. While it was a relief to finally have an explanation for my torment, the last thing I wanted was the burden of being different from everyone else.`,
                                 dotKeys: {
@@ -765,7 +757,6 @@ export default {
                         `one they'll find only once we build the`,
                         {
                             anchor: `mothership`,
-                            review: true,
                             card: {
                                 description: `The letters promised to update me on new developments, including the construction of spacecraft that would allow Beyonders to make contact with their extraplanetary kin.`,
                                 dotKeys: {
@@ -867,7 +858,6 @@ export default {
                         `twin friars`,
                         {
                             anchor: `cast here in pollens`,
-                            review: true,
                             card: {
                                 description: [
                                     `"`,
@@ -1251,7 +1241,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                review: true,
                 card: {
                     description: [
                         {
@@ -1299,7 +1288,6 @@ export default {
                         `Mushka,`,
                         {
                             anchor: `per their bargain`,
-                            review: true,
                             card: {
                                 description: `Though I faked autism only for a year or so, the social repercussions lasted much longer, since I was now and forever that kid who did the really weird thing once. It's not that I lacked the will to repair my standing. But I was just as confused as anyone else about what had possessed me, and there were no guide books instructing me where to go from there.`,
                                 dotKeys: {
