@@ -67,7 +67,7 @@ export default {
                             anchor: `Beatles`,
                             wiki: `The_Beatles`,
                         },
-                        `, and to put my theories into practice, I came up with the melodies and chords now stitched together here. For so long, I never made use of them; all I could hear was me trying and failing to match the Beatles. But years later, I realized that the sound of trying too hard was exactly what a song about an overwrought letter to Sasha called for.`,
+                        `— and to put theory into practice, I came up with the melodies and chords now pieced together here. For so long, I made no use of them; all I could hear was me trying and failing to match the Beatles. But years later, I realized that the sound of trying too hard was exactly what a song about an overwrought letter to Sasha called for.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -133,7 +133,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: REVIEW,
                 card: {
-                    description: `I wanted the vocals for this song to sound sickly, so I held off on recording them until I came down with a cold. Which was guaranteed to happen at some point during the five years I spent recording this album.`,
+                    description: `I wanted the vocals for this song to sound sickly, so I held off on recording them until I came down with a cold, which was sure to happen at some point during the five years I spent recording this album.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
@@ -153,7 +153,7 @@ export default {
                             anchor: `You'd love Taiwan`,
                             todo: REVIEW,
                             card: {
-                                description: `On a tour of the Taiwanese countryside with my cousins, I mentally noted all the things I could point out to Sasha one day. I'm not sure I felt any real pride in my roots; it was just all I knew of what can make one ordinary child more interesting to another.`,
+                                description: `On a tour of the Taiwanese countryside with my cousins, I mentally noted all the things I could point out to Sasha one day. I'm not sure I felt any real pride in my roots; it was just all I knew of what could make one ordinary child more interesting to another.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -179,7 +179,7 @@ export default {
                             anchor: `giant's house`,
                             todo: REVIEW,
                             card: {
-                                description: `In my most vivid memory from that trip, we stood in the middle of a lush valley. The ground around us was entirely level, the surrounding mountains rose nearly vertically, and their peaks disappeared into a translucent blanket of clouds that stretched across the sky. I felt like a tiny guest in a giant house.`,
+                                description: `In my most vivid memory from that trip, we stood in the middle of a lush valley. The ground around us was entirely level; the surrounding mountains rose nearly vertically; and their peaks disappeared into a translucent blanket of clouds that stretched across the sky. I felt like a tiny guest in a giant house.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -205,7 +205,6 @@ export default {
                         `I should`,
                         {
                             anchor: `keep your kid name`,
-                            todo: REVIEW,
                             card: {
                                 description: `Sasha decided that once in Boston, she would go by her given name. I asked if I should start calling her Saskia from now on as well. She said no, since it was nice to be reminded of which friends knew her first.`,
                                 dotKeys: {
@@ -300,7 +299,7 @@ export default {
                                         anchor: `pupil`,
                                         wiki: `Pupil`,
                                     },
-                                    `of her eye. She looked at me the way a teacher looks upon a pupil. I could see we were no longer on the same footing, if we'd ever been.`,
+                                    `of her eye. She looked at me the way a teacher looks upon a pupil. I could sense that we were no longer on the same footing— if we'd ever been.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -335,7 +334,6 @@ export default {
                         `with you raving over how`,
                         {
                             anchor: `he's getting you`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Every boy that Sasha crushed on was Jewish, which then motivated her to be a better Jew. But since I could never help strengthen her faith myself, I would always be at a disadvantage in "getting" her.`,
@@ -354,7 +352,6 @@ export default {
                         `staying kosher. Though, you know,`,
                         {
                             anchor: `I would have too`,
-                            todo: REVIEW,
                             card: {
                                 description: `Yet if Sasha were to want me, then of course I'd convert to Judaism. It made no sense to be loyal to my own cultural identity, which I'd had no hand in choosing.`,
                                 dotKeys: {
@@ -664,7 +661,7 @@ export default {
                             anchor: `hugging hurts`,
                             todo: REVIEW,
                             card: {
-                                description: `To avoid feeling humiliated after getting beaten up, it's more common to downplay one's injuries, of course. But here I play them up to mask my emotional hurt, as I explain to Sasha why I winced when we hugged on that last day.`,
+                                description: `To avoid the humiliation of getting beaten up, it's more common to downplay one's injuries, of course. But here I play them up to mask my emotional hurt, as I explain to Sasha why I winced when we hugged on that last day.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -790,22 +787,17 @@ export default {
                 todo: REVIEW,
                 card: {
                     description: [
-                        `After releasing`,
+                        `After sending out promo copies of`,
                         {
                             isItalic: true,
                             lyric: `Yearling's Bobtail`,
                         },
-                        `, I was confused by the lack of interest from the indie labels and press. So I wrote a songwriting lesson book called`,
+                        `, I was confused by the lack of interest from the indie labels and press. So I wrote`,
                         {
                             isItalic: true,
                             lyric: `Bobtail Method`,
                         },
-                        `that distilled all the wisdom I'd gathered over the years from studying the Beatles. My hope was that this would finally get me taken seriously; unfortunately, the promo copies I sent out were met with the same radio silence. I'll still release`,
-                        {
-                            isItalic: true,
-                            lyric: `Bobtail Method`,
-                        },
-                        `as an app one day.`,
+                        `, a songwriting book that distills all the wisdom I'd gathered over the years from studying the Beatles, in the hope that this would finally get me taken seriously. Unfortunately, it was met with the same radio silence.`,
                     ],
                     dotKeys: {
                         [AFTERWORD]: true,

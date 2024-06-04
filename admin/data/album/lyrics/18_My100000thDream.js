@@ -32,7 +32,6 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: `This is the other song on the album that was originally performed by the Yearlings. I wrote it to please Sita after she complained that I didn't have any romantic songs about her. In truth, it's more of a wistful remembrance of our relationship, given my certainty at the time that we would break up. I kept this part of its meaning a secret, of course— but as with "M," I probably wasn't fooling anyone.`,
                     dotKeys: {
