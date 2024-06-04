@@ -1,5 +1,7 @@
 # Latest todo
-* Access keys for annotation dashboard
+* Show or hide annotation based on todo
+* Have different color for revise and review
+* Have flags for revise and review instead of todo
 
 ### Must do
 * Illustrator
