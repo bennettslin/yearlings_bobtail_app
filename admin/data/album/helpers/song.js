@@ -13,8 +13,9 @@ const _addIsLogue = (songIndex, song) => {
 }
 
 const _addOverview = (songIndex, song) => {
-    const { overview } = albumLyrics[songIndex]
+    const { overview, todo } = albumLyrics[songIndex]
     song.overview = overview
+    song.todo = todo
 }
 
 const _addPathAndTitle = (songIndex, song) => {

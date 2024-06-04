@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import PropTypes from 'prop-types'
 import Annotation from '../Annotation'
-import { getSongIsLogue, getSongsAndLoguesCount } from '../../../../src/endpoint/album/songs'
+import { getSongsAndLoguesCount, getTodoForSongOverview } from '../../../../src/endpoint/album/songs'
 import { getShownAnnotationIndices } from '../helpers'
 import Overview from '../Overview'
 
@@ -12,9 +12,10 @@ const AnnotationSongColumn = ({ songIndex, showAll }) => {
         shownAnnotationIndices = getShownAnnotationIndices({
             songIndex,
             showAll,
-        })
+        }),
+        hasOverviewTodo = getTodoForSongOverview(songIndex)
 
-    return shownAnnotationIndices.length || getSongIsLogue(songIndex) ? (
+    return showAll || shownAnnotationIndices.length || hasOverviewTodo ? (
         <div
             {...{
                 ref: songColumnElement,
@@ -24,7 +25,9 @@ const AnnotationSongColumn = ({ songIndex, showAll }) => {
                 },
             }}
         >
-            <Overview {...{ songIndex }} />
+            {(showAll || hasOverviewTodo) && (
+                <Overview {...{ songIndex }} />
+            )}
             {shownAnnotationIndices.map(annotationIndex => (
                 <Annotation
                     {...{

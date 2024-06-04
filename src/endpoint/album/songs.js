@@ -84,3 +84,7 @@ export const getEarStatusForSong = songIndex => {
         isDoublespeaker,
     }
 }
+
+export const getTodoForSongOverview = songIndex => (
+    Boolean(getSong(songIndex).todo)
+)
