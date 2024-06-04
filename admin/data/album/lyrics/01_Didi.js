@@ -5,7 +5,6 @@ import {
     REFERENCE,
     SONGCRAFT,
 } from '../../../../src/constants/dots'
-
 import {
     VERSES,
     PRECHORUS,

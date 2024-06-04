@@ -1,8 +1,9 @@
+import { REVISE } from '../../../containers/Annotations/constants/todos'
+
 export default {
     title: 'prologue',
     isLogue: true,
-    todo: true,
-    problem: `Revise.`,
+    todo: REVISE,
     overview: [
         [
             `Hi, I'm Bennett! A long time ago, while going through a difficult breakup, I set out to make`,

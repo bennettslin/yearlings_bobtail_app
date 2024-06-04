@@ -6,7 +6,6 @@ import {
     REFERENCE,
     SONGCRAFT,
 } from '../../../../src/constants/dots'
-
 import {
     REFRAIN,
     VERSES,

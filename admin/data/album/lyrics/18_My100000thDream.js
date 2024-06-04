@@ -5,7 +5,6 @@ import {
     OBSERVATION,
     SONGCRAFT,
 } from '../../../../src/constants/dots'
-
 import {
     VERSES,
     CHORUS,
@@ -15,6 +14,7 @@ import {
     FORESHADOW_OF_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'My 100,000th Dream',
@@ -25,16 +25,14 @@ export default {
     referenceDescription: `Piano in measure 1`,
     mixStartTime: `0:01:22.94`,
     playerStartTime: 3332.826,
-    todo: true,
-    problem: `Revise`,
+    todo: REVISE,
     overview: `Each night I dreamt of happily reuniting with Sita, only to wake in panic as the reality set in that I'd lost her forever. I lived in such dread of this cruel trick played by my unconscious mind, I would stay up until exhaustion overtook me— even as my conscious mind could only dwell in despair. I had no idea when this torment would end. The answer, I feared, was never.`,
     lyricUnits: [
         {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
-                problem: `Review.`,
+                todo: REVIEW,
                 card: {
                     description: `This is the other song on the album that was originally performed by the Yearlings. I wrote it to please Sita after she complained that I didn't have any romantic songs about her. In truth, it's more of a wistful remembrance of our relationship, given my certainty at the time that we would break up. I kept this part of its meaning a secret, of course— but as with "M," I probably wasn't fooling anyone.`,
                     dotKeys: {
@@ -361,8 +359,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
-                problem: `Review.`,
+                todo: REVIEW,
                 card: {
                     description: `This bridge shares the same chord progression with the one in "Grasshoppers Lie Heavy." It starts with the Spanish guitar from "M" playing arpeggios; the melodicas from "Pchelka's Starry Journey" then follow to evoke the sound of brass fanfare.`,
                     dotKeys: {

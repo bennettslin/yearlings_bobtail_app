@@ -1,3 +1,5 @@
+import { REVISE } from '../../../containers/Annotations/constants/todos'
+
 export default {
     title: 'epilogue',
     isLogue: true,
@@ -7,8 +9,8 @@ export default {
      * song to repeat itself without the player ending first.
      */
     playerStartTime: 3576.7,
-    todo: true,
-    problem: `Revise. I just don't like it anymore. Redo most of it.`,
+    todo: REVISE,
+    problem: `I just don't like it anymore. Redo most of it.`,
     overview: [
         [
             `Thanks for listening! It means a lot. So what do I hope to gain by creating this audio webcomic, an entire decade after the album was finished? In brief, I'm still looking for help, whether in the form of a traditional record deal, or some modern arrangement devised by forward-thinking Gen Zers. The notion that an artist can start by realizing a bold vision, and`,

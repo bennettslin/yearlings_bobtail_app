@@ -5,7 +5,6 @@ import {
     PUN,
     SONGCRAFT,
 } from '../../../../src/constants/dots'
-
 import {
     VERSES,
     PRECHORUS,

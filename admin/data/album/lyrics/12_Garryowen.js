@@ -6,7 +6,6 @@ import {
     REFERENCE,
     SONGCRAFT,
 } from '../../../../src/constants/dots'
-
 import {
     REFRAIN,
     VERSES,
@@ -17,6 +16,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Garryowen',
@@ -94,8 +94,8 @@ export default {
                     lyric: [
                         {
                             anchor: `Brushed her off`,
-                            todo: true,
-                            problem: `Revise. I just don't like this as it is. It's too complicated. I grew distant, she groveled. That's really it.`,
+                            todo: REVISE,
+                            problem: `I just don't like this as it is. It's too complicated. I grew distant, she groveled. That's really it.`,
                             card: {
                                 description: `Anytime I began to grow distant, Sita would reach out by groveling. I would then rush back to comfort her, stung by my conscience. But as my patience wore thin, I would lace this comfort with passive-aggressive swipes— whereupon she would grovel even further. It became all we knew of how to speak for ourselves.`,
                                 dotKeys: {
@@ -226,8 +226,7 @@ export default {
                         `Drunk pissed`,
                         {
                             anchor: `punks tryst,`,
-                            todo: true,
-                            problem: `Review.`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `I wore`,
@@ -395,8 +394,7 @@ export default {
                     lyric: [
                         {
                             anchor: `Slammed in the well`,
-                            todo: true,
-                            problem: `Review.`,
+                            todo: REVIEW,
                             card: {
                                 description: `But vomiting into a toilet, and then seeing your miserable reflection in the water staring back at you, only works as a wake-up call the first time. After that, it's a cliche.`,
                                 dotKeys: {

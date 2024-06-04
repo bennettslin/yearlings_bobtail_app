@@ -6,7 +6,6 @@ import {
     AFTERWORD,
     SONGCRAFT,
 } from '../../../../src/constants/dots'
-
 import {
     VERSES,
     PRECHORUS,
@@ -14,6 +13,7 @@ import {
     REFRAIN,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Dear Saskia',
@@ -60,8 +60,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
-                problem: `Review.`,
+                todo: REVIEW,
                 card: {
                     description: [
                         `As a teenager, I tried to figure out the songwriting secrets of the`,
@@ -134,8 +133,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
-                problem: `Review.`,
+                todo: REVIEW,
                 card: {
                     description: `I wanted the vocals for this song to sound sickly, so I held off on recording them until I came down with a cold. Which was guaranteed to happen at some point during the five years I spent recording this album.`,
                     dotKeys: {
@@ -155,8 +153,7 @@ export default {
                     lyric: [
                         {
                             anchor: `You'd love Taiwan`,
-                            todo: true,
-                            problem: `Review.`,
+                            todo: REVIEW,
                             card: {
                                 description: `On a tour of the Taiwanese countryside with my cousins, I mentally noted all the things I could point out to Sasha one day. I'm not sure I felt any real pride in my roots; it was just all I knew of what can make one ordinary child more interesting to another.`,
                                 dotKeys: {
@@ -182,8 +179,7 @@ export default {
                         `of some`,
                         {
                             anchor: `giant's house`,
-                            todo: true,
-                            problem: `Review.`,
+                            todo: REVIEW,
                             card: {
                                 description: `In my most vivid memory from that trip, we stood in the middle of a lush valley. The ground around us was entirely level, the surrounding mountains rose nearly vertically, and their peaks disappeared into a translucent blanket of clouds that stretched across the sky. I felt like a tiny guest in a giant house.`,
                                 dotKeys: {
@@ -211,8 +207,7 @@ export default {
                         `I should`,
                         {
                             anchor: `keep your kid name`,
-                            todo: true,
-                            problem: `Review.`,
+                            todo: REVIEW,
                             card: {
                                 description: `Sasha decided that once in Boston, she would go by her given name. I asked if I should start calling her Saskia from now on as well. She said no, since it was nice to be reminded of which friends knew her first.`,
                                 dotKeys: {
@@ -299,8 +294,7 @@ export default {
                     lyric: [
                         {
                             anchor: `your pupil's pupal fly`,
-                            todo: true,
-                            problem: `Review.`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Reflecting on my feelings for Sasha, I recall our last day together, when I caught my reflection in the`,
@@ -344,8 +338,7 @@ export default {
                         `with you raving over how`,
                         {
                             anchor: `he's getting you`,
-                            todo: true,
-                            problem: `Review.`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Every boy that Sasha crushed on was Jewish, which then motivated her to be a better Jew. But since I could never help strengthen her faith myself, I would always be at a disadvantage in "getting" her.`,
@@ -364,8 +357,7 @@ export default {
                         `staying kosher. Though, you know,`,
                         {
                             anchor: `I would have too`,
-                            todo: true,
-                            problem: `Review.`,
+                            todo: REVIEW,
                             card: {
                                 description: `Yet if Sasha were to want me, then of course I'd convert to Judaism. It made no sense to be loyal to my own cultural identity, which I'd had no hand in choosing.`,
                                 dotKeys: {
@@ -675,8 +667,7 @@ export default {
                         `Anyway, I'm feeling healed. Still,`,
                         {
                             anchor: `hugging hurts`,
-                            todo: true,
-                            problem: `Review.`,
+                            todo: REVIEW,
                             card: {
                                 description: `To avoid feeling humiliated after getting beaten up, it's more common to downplay one's injuries, of course. But here I play them up to mask my emotional hurt, as I explain to Sasha why I winced when we hugged on that last day.`,
                                 dotKeys: {
@@ -802,8 +793,7 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
-                problem: `Review.`,
+                todo: REVIEW,
                 card: {
                     description: [
                         `After releasing`,

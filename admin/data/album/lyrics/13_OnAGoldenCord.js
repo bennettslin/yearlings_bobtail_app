@@ -5,7 +5,6 @@ import {
     PUN,
     SONGCRAFT,
 } from '../../../../src/constants/dots'
-
 import {
     VERSES,
     CHORUS,
@@ -15,6 +14,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'On a Golden Cord',
@@ -337,8 +337,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
-                problem: `Review.`,
+                todo: REVIEW,
                 card: {
                     description: [
                         `In`,
