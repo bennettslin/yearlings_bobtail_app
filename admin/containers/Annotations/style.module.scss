@@ -1,0 +1,6 @@
+@import './style.scss';
+
+// Sass constants are uppercase when exported to JavaScript.
+:export {
+    WIDTH_TEMP_GLOBAL_ANNOTATION_COLUMN: $WIDTH_TEMP_GLOBAL_ANNOTATION_COLUMN;
+}

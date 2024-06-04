@@ -21,7 +21,7 @@ $padding__tempGlobalAnnotationSongColumn: 15px;
 $width__tempGlobalAnnotation:
     $width__tempGlobalAnnotationCard + $padding__tempGlobalAnnotation * 2;
 
-$width__tempGlobalAnnotationColumn:
+$WIDTH_TEMP_GLOBAL_ANNOTATION_COLUMN:
     $width__tempGlobalAnnotation + $padding__tempGlobalAnnotationSongColumn * 2;
 
 .TempGlobalAnnotations {
@@ -58,12 +58,11 @@ $width__tempGlobalAnnotationColumn:
 }
 
 .TempGlobalColumns {
-    width: $width__tempGlobalAnnotationColumn * 20;
     overflow-y: hidden;
 }
 
 .TempGlobalAnnotationSongHeader {
-    min-width: $width__tempGlobalAnnotationColumn;
+    min-width: $WIDTH_TEMP_GLOBAL_ANNOTATION_COLUMN;
     justify-content: space-around;
 }
 
@@ -71,7 +70,7 @@ $width__tempGlobalAnnotationColumn:
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: $width__tempGlobalAnnotationColumn;
+    min-width: $WIDTH_TEMP_GLOBAL_ANNOTATION_COLUMN;
     padding: $padding__tempGlobalAnnotationSongColumn;
     padding-top:
         $height__globalHeader

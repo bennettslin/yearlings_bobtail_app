@@ -4,6 +4,9 @@ import cx from 'classnames'
 import AnnotationSongColumn from '../AnnotationSongColumn'
 import { getArrayOfLength } from '../../../../src/helpers/general'
 import { getSongsAndLoguesCount } from '../../../../src/endpoint/album/songs'
+import { WIDTH_TEMP_GLOBAL_ANNOTATION_COLUMN } from '../style.module'
+import { getJsFromSass } from '../../../../src/helpers/format'
+import { getSongsWithTodosCount } from '../helpers'
 
 const TempGlobalColumns = ({ showAll }) => {
     return (
@@ -14,6 +17,12 @@ const TempGlobalColumns = ({ showAll }) => {
                     'TempGlobalAnnotations__row',
                     'abF',
                 ),
+                style: {
+                    width: `${
+                        getJsFromSass(WIDTH_TEMP_GLOBAL_ANNOTATION_COLUMN) *
+                        getSongsWithTodosCount(showAll)
+                    }px`,
+                },
             }}
         >
             {getArrayOfLength(getSongsAndLoguesCount()).map(index => (

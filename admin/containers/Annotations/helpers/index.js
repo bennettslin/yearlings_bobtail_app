@@ -32,3 +32,13 @@ export const getShownAnnotationIndices = ({ songIndex, showAll }) => (
         getTodoForAnnotation(songIndex, annotationIndex)
     ))
 )
+
+export const getSongsWithTodosCount = showAll => (
+    getArrayOfLength(getSongsAndLoguesCount()).reduce((count, songIndex) => (
+        count + (
+            showAll ||
+            getHasTodoForSongOverview(songIndex) ||
+            Boolean(getShownAnnotationIndices({ songIndex }).length)
+        )
+    ), 0)
+)
