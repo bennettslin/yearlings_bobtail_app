@@ -1,11 +1,11 @@
 import React, { useRef } from 'react'
 import PropTypes from 'prop-types'
 import Annotation from '../Annotation'
+import { getSongsAndLoguesCount } from '../../../../src/endpoint/album/songs'
 import {
-    getSongsAndLoguesCount,
     getHasTodoForSongOverview,
-} from '../../../../src/endpoint/album/songs'
-import { getShownAnnotationIndices } from '../helpers'
+    getShownAnnotationIndices,
+} from '../helpers'
 import Overview from '../Overview'
 
 const AnnotationSongColumn = ({ songIndex, showAll }) => {

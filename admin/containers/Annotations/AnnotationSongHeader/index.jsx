@@ -1,9 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { getIndexedTitleForSong, getSongsAndLoguesCount, getHasTodoForSongOverview } from '../../../../src/endpoint/album/songs'
-import { getAnnotationCountForSong, getAnnotationTodoCountForSong } from '../../../../src/endpoint/album/annotations'
-import { getShownAnnotationIndices } from '../helpers'
+import {
+    getIndexedTitleForSong,
+    getSongsAndLoguesCount,
+} from '../../../../src/endpoint/album/songs'
+import { getAnnotationCountForSong } from '../../../../src/endpoint/album/annotations'
+import {
+    getAnnotationTodoCountForSong,
+    getHasTodoForSongOverview,
+    getShownAnnotationIndices,
+} from '../helpers'
 
 const AnnotationSongHeader = ({ songIndex, showAll }) => {
     const

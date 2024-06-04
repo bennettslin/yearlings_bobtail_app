@@ -17,6 +17,22 @@ export const getSongNotLogueIndices = () => (
     getArrayOfLength(getSongsNotLoguesCount(), 1)
 )
 
+export const getSong = songIndex => (
+    getAlbum().songs[songIndex]
+)
+
+export const getSongIsPrologue = songIndex => (
+    songIndex === 0
+)
+
+export const getSongIsEpilogue = songIndex => (
+    songIndex === getSongsAndLoguesCount() - 1
+)
+
+export const getSongIsLogue = songIndex => (
+    getSongIsPrologue(songIndex) || getSongIsEpilogue(songIndex)
+)
+
 export const getIsSongValid = songIndex => {
     const songIndices = getSongIndices(songIndex)
     return songIndices.some(index => index === songIndex)
@@ -33,22 +49,6 @@ export const getStartingIndexForBook = bookIndex => {
 
 export const getBookForSongIndex = songIndex => (
     songIndex < getStartingIndexForBook(1) ? 0 : 1
-)
-
-export const getSong = songIndex => (
-    getAlbum().songs[songIndex]
-)
-
-export const getSongIsPrologue = songIndex => (
-    songIndex === 0
-)
-
-export const getSongIsEpilogue = songIndex => (
-    songIndex === getSongsAndLoguesCount() - 1
-)
-
-export const getSongIsLogue = songIndex => (
-    getSongIsPrologue(songIndex) || getSongIsEpilogue(songIndex)
 )
 
 export const getFullPathForSong = songIndex => (
@@ -84,13 +84,3 @@ export const getEarStatusForSong = songIndex => {
         isDoublespeaker,
     }
 }
-
-export const getHasTodoForSongOverview = songIndex => (
-    Boolean(getSong(songIndex).todo)
-)
-
-export const getTodosCountForAlbumOverviews = () => (
-    getArrayOfLength(getSongsAndLoguesCount()).reduce((count, songIndex) => (
-        count + getHasTodoForSongOverview(songIndex)
-    ), 0)
-)

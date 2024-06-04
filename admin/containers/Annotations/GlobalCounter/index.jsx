@@ -6,7 +6,8 @@ import {
     getGlobalAnnotationCount,
     getGlobalAnnotationTodosCount,
 } from '../../../endpoint/album/globalAnnotation'
-import { getSongsAndLoguesCount, getTodosCountForAlbumOverviews } from '../../../../src/endpoint/album/songs'
+import { getSongsAndLoguesCount } from '../../../../src/endpoint/album/songs'
+import { getTodosCountForAlbumOverviews } from '../helpers'
 
 const GlobalCounter = ({ toggleShowTodos }) => {
     const

@@ -3,12 +3,10 @@ import React from 'react'
 import cx from 'classnames'
 import { useDispatch } from 'react-redux'
 import AnnotationCard from '../AnnotationCard'
-import {
-    getTitleForAnnotation,
-    getTodoForAnnotation,
-} from '../../../../src/endpoint/album/annotations'
+import { getTitleForAnnotation } from '../../../../src/endpoint/album/annotations'
 import { getAnnotationCardIndices } from '../../../../src/endpoint/album/cards'
 import { updateSelectedStore } from '../../../../src/redux/selected/action'
+import { getTodoForAnnotation } from '../helpers'
 
 const Annotation = ({ songIndex, annotationIndex }) => {
     const

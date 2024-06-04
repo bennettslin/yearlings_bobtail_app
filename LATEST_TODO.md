@@ -1,5 +1,4 @@
 # Latest todo
-* Put todo logic in admin
 * Have different color for revise and review
 
 ### Must do
