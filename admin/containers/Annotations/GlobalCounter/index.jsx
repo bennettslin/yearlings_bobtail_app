@@ -6,14 +6,20 @@ import {
     getGlobalAnnotationCount,
     getGlobalAnnotationDoneCount,
 } from '../../../endpoint/album/globalAnnotation'
+import { getSongsAndLoguesCount, getTodosCountForAlbumOverviews } from '../../../../src/endpoint/album/songs'
 
 const GlobalCounter = ({ toggleShowTodos }) => {
     const
-        totalCount = getGlobalAnnotationCount(),
-        todoCount = totalCount - getGlobalAnnotationDoneCount(),
+        totalCount = getGlobalAnnotationCount() + getSongsAndLoguesCount(),
+        todoCount =
+            totalCount -
+            getGlobalAnnotationDoneCount() +
+            getTodosCountForAlbumOverviews(),
         percentage = parseInt(
             todoCount / totalCount * 100,
         )
+
+    console.log('hi', getTodosCountForAlbumOverviews())
 
     return (
         <div

@@ -1,22 +1,25 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { getIndexedTitleForSong, getSongIsLogue, getSongsAndLoguesCount } from '../../../../src/endpoint/album/songs'
+import { getIndexedTitleForSong, getSongsAndLoguesCount, getHasTodoForSongOverview } from '../../../../src/endpoint/album/songs'
 import { getAnnotationCountForSong, getAnnotationTodoCountForSong } from '../../../../src/endpoint/album/annotations'
 import { getShownAnnotationIndices } from '../helpers'
 
 const AnnotationSongHeader = ({ songIndex, showAll }) => {
     const
         hue = (songIndex - 1) / getSongsAndLoguesCount() * 360,
-        totalCount = getAnnotationCountForSong(songIndex),
-        todoCount = getAnnotationTodoCountForSong(songIndex),
+        getHasOverviewTodo = getHasTodoForSongOverview(songIndex),
+        todoCount =
+            getAnnotationTodoCountForSong(songIndex) +
+            getHasOverviewTodo,
+        totalCount = getAnnotationCountForSong(songIndex) + 1,
         percentageDone = parseInt(todoCount / totalCount * 100),
         shownAnnotationIndices = getShownAnnotationIndices({
             songIndex,
             showAll,
         })
 
-    return shownAnnotationIndices.length || getSongIsLogue(songIndex) ? (
+    return showAll || shownAnnotationIndices.length || getHasOverviewTodo ? (
         <div
             {...{
                 className: cx(

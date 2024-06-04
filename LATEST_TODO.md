@@ -1,7 +1,7 @@
 # Latest todo
 * Have different color for revise and review
-* Have flags for revise and review instead of todo
-* Show or hide overview based on todo
+
+* Put all todo logic in admin
 
 ### Must do
 * Illustrator

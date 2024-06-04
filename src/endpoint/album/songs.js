@@ -85,6 +85,12 @@ export const getEarStatusForSong = songIndex => {
     }
 }
 
-export const getTodoForSongOverview = songIndex => (
+export const getHasTodoForSongOverview = songIndex => (
     Boolean(getSong(songIndex).todo)
+)
+
+export const getTodosCountForAlbumOverviews = () => (
+    getArrayOfLength(getSongsAndLoguesCount()).reduce((count, songIndex) => (
+        count + getHasTodoForSongOverview(songIndex)
+    ), 0)
 )
