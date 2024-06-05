@@ -1,30 +1,18 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import cx from 'classnames'
-import Button from '../../../../src/components/Button'
 import {
-    getAnnotationsCount,
-    getAnnotationReviewsCount,
-    getAnnotationRevisionsCount,
-    getAnnotationTodosCount,
-    getOverviewReviewsCount,
-    getOverviewRevisionsCount,
-    getOverviewTodosCount,
+    getTotalOverviewsAndAnnotationsCount,
+    getTotalTodosCount,
+    getTotalReviewsCount,
+    getTotalRevisionsCount,
 } from '../../../endpoint/album/todos'
-import { getSongsAndLoguesCount } from '../../../../src/endpoint/album/songs'
 
-const TodoCounter = ({ toggleShowTodos }) => {
+const TodoCounter = () => {
     const
-        totalCount = getAnnotationsCount() + getSongsAndLoguesCount(),
-        todosCount =
-            getAnnotationTodosCount() +
-            getOverviewTodosCount(),
-        reviewsCount =
-            getAnnotationReviewsCount() +
-            getOverviewReviewsCount(),
-        revisionsCount =
-            getAnnotationRevisionsCount() +
-            getOverviewRevisionsCount(),
+        totalCount = getTotalOverviewsAndAnnotationsCount(),
+        todosCount = getTotalTodosCount(),
+        reviewsCount = getTotalReviewsCount(),
+        revisionsCount = getTotalRevisionsCount(),
         percentage = parseInt(
             todosCount / totalCount * 100,
         )
@@ -40,23 +28,9 @@ const TodoCounter = ({ toggleShowTodos }) => {
                 ),
             }}
         >
-            <span>
-                {revisionsCount} / {reviewsCount} / {totalCount} ({percentage}%)
-            </span>
-            <Button
-                {...{
-                    // This gives it the wormhole colour styling.
-                    className: 'TodoCounter__button',
-                    buttonName: 'TodoCounter__button',
-                    handleButtonClick: toggleShowTodos,
-                }}
-            />
+            {revisionsCount} / {reviewsCount} / {totalCount} ({percentage}%)
         </div>
     )
-}
-
-TodoCounter.propTypes = {
-    toggleShowTodos: PropTypes.func.isRequired,
 }
 
 export default TodoCounter

@@ -8,35 +8,33 @@ import { getSongsWithTodosCount } from '../../../endpoint/album/todos'
 import { getJsFromSass } from '../../../../src/helpers/format'
 import { WIDTH_TODO_ANNOTATION_COLUMN } from '../style.module'
 
-const TodoColumns = ({ showAll }) => {
-    return (
-        <div
-            {...{
-                className: cx(
-                    'TodoColumns',
-                    'TodoAnnotations__row',
-                    'abF',
-                ),
-                style: {
-                    width: `${
-                        getJsFromSass(WIDTH_TODO_ANNOTATION_COLUMN) *
-                        getSongsWithTodosCount(showAll)
-                    }px`,
-                },
-            }}
-        >
-            {getArrayOfLength(getSongsAndLoguesCount()).map(index => (
-                <TodoSongColumn
-                    {...{
-                        key: index,
-                        songIndex: index,
-                        showAll,
-                    }}
-                />
-            ))}
-        </div>
-    )
-}
+const TodoColumns = ({ showAll }) => (
+    <div
+        {...{
+            className: cx(
+                'TodoColumns',
+                'TodoAnnotations__row',
+                'abF',
+            ),
+            style: {
+                width: `${
+                    getJsFromSass(WIDTH_TODO_ANNOTATION_COLUMN) *
+                    getSongsWithTodosCount(showAll)
+                }px`,
+            },
+        }}
+    >
+        {getArrayOfLength(getSongsAndLoguesCount()).map(index => (
+            <TodoSongColumn
+                {...{
+                    key: index,
+                    songIndex: index,
+                    showAll,
+                }}
+            />
+        ))}
+    </div>
+)
 
 TodoColumns.propTypes = {
     showAll: PropTypes.bool.isRequired,
