@@ -2,12 +2,12 @@ import { REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export const addAdminMetadata = (annotationsList, album) => {
     const
-        globalAnnotationIndicesList = [],
-        globalAnnotationTodos = []
+        todoAnnotationIndicesList = [],
+        todoAnnotationTodos = []
 
-    let globalAnnotationTodosCount = 0
-    let globalAnnotationReviewsCount = 0
-    let globalAnnotationRevisionsCount = 0
+    let todoAnnotationTodosCount = 0
+    let todoAnnotationReviewsCount = 0
+    let todoAnnotationRevisionsCount = 0
 
     annotationsList.forEach((annotations, songIndex) => {
         if (annotations) {
@@ -15,18 +15,18 @@ export const addAdminMetadata = (annotationsList, album) => {
                 const { annotationIndex } = annotation
 
                 if (annotation.todo) {
-                    globalAnnotationTodosCount += 1
+                    todoAnnotationTodosCount += 1
                 }
 
                 if (annotation.todo === REVIEW) {
-                    globalAnnotationReviewsCount += 1
+                    todoAnnotationReviewsCount += 1
                 } else if (annotation.todo === REVISE) {
-                    globalAnnotationRevisionsCount += 1
+                    todoAnnotationRevisionsCount += 1
                 }
 
-                globalAnnotationTodos.push(annotation.todo)
+                todoAnnotationTodos.push(annotation.todo)
 
-                globalAnnotationIndicesList.push({
+                todoAnnotationIndicesList.push({
                     songIndex,
                     annotationIndex,
                 })
@@ -34,9 +34,9 @@ export const addAdminMetadata = (annotationsList, album) => {
         }
     })
 
-    album.globalAnnotationIndicesList = globalAnnotationIndicesList
-    album.globalAnnotationTodos = globalAnnotationTodos
-    album.globalAnnotationTodosCount = globalAnnotationTodosCount
-    album.globalAnnotationReviewsCount = globalAnnotationReviewsCount
-    album.globalAnnotationRevisionsCount = globalAnnotationRevisionsCount
+    album.todoAnnotationIndicesList = todoAnnotationIndicesList
+    album.todoAnnotationTodos = todoAnnotationTodos
+    album.todoAnnotationTodosCount = todoAnnotationTodosCount
+    album.todoAnnotationReviewsCount = todoAnnotationReviewsCount
+    album.todoAnnotationRevisionsCount = todoAnnotationRevisionsCount
 }

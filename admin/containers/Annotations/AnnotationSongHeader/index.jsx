@@ -40,7 +40,7 @@ const AnnotationSongHeader = ({ songIndex, showAll }) => {
         <div
             {...{
                 className: cx(
-                    'TempGlobalAnnotationSongHeader',
+                    'TodoAnnotationSongHeader',
                     'textShadow__light',
                     'font__heading',
                     'fCC',

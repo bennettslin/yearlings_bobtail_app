@@ -13,7 +13,7 @@ import {
 } from '../../../endpoint/album/todos'
 import { getSongsAndLoguesCount } from '../../../../src/endpoint/album/songs'
 
-const GlobalCounter = ({ toggleShowTodos }) => {
+const TodoCounter = ({ toggleShowTodos }) => {
     const
         totalCount = getAnnotationsCount() + getSongsAndLoguesCount(),
         todosCount =
@@ -33,7 +33,7 @@ const GlobalCounter = ({ toggleShowTodos }) => {
         <div
             {...{
                 className: cx(
-                    'TempGlobalCounter',
+                    'TodoCounter',
                     'textShadow__light',
                     'font__heading',
                     'fCC',
@@ -46,8 +46,8 @@ const GlobalCounter = ({ toggleShowTodos }) => {
             <Button
                 {...{
                     // This gives it the wormhole colour styling.
-                    className: 'TempGlobalCounter__button',
-                    buttonName: 'TempGlobalCounter__button',
+                    className: 'TodoCounter__button',
+                    buttonName: 'TodoCounter__button',
                     handleButtonClick: toggleShowTodos,
                 }}
             />
@@ -55,8 +55,8 @@ const GlobalCounter = ({ toggleShowTodos }) => {
     )
 }
 
-GlobalCounter.propTypes = {
+TodoCounter.propTypes = {
     toggleShowTodos: PropTypes.func.isRequired,
 }
 
-export default GlobalCounter
+export default TodoCounter

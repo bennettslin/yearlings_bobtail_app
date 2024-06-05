@@ -6,20 +6,20 @@ import { getArrayOfLength } from '../../../../src/helpers/general'
 import { getSongsAndLoguesCount } from '../../../../src/endpoint/album/songs'
 import { getSongsWithTodosCount } from '../../../endpoint/album/todos'
 import { getJsFromSass } from '../../../../src/helpers/format'
-import { WIDTH_TEMP_GLOBAL_ANNOTATION_COLUMN } from '../style.module'
+import { WIDTH_TODO_ANNOTATION_COLUMN } from '../style.module'
 
-const TempGlobalColumns = ({ showAll }) => {
+const TodoColumns = ({ showAll }) => {
     return (
         <div
             {...{
                 className: cx(
-                    'TempGlobalColumns',
-                    'TempGlobalAnnotations__row',
+                    'TodoColumns',
+                    'TodoAnnotations__row',
                     'abF',
                 ),
                 style: {
                     width: `${
-                        getJsFromSass(WIDTH_TEMP_GLOBAL_ANNOTATION_COLUMN) *
+                        getJsFromSass(WIDTH_TODO_ANNOTATION_COLUMN) *
                         getSongsWithTodosCount(showAll)
                     }px`,
                 },
@@ -38,8 +38,8 @@ const TempGlobalColumns = ({ showAll }) => {
     )
 }
 
-TempGlobalColumns.propTypes = {
+TodoColumns.propTypes = {
     showAll: PropTypes.bool.isRequired,
 }
 
-export default TempGlobalColumns
+export default TodoColumns

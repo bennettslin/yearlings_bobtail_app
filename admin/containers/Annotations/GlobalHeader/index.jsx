@@ -5,13 +5,13 @@ import AnnotationSongHeader from '../AnnotationSongHeader'
 import { getArrayOfLength } from '../../../../src/helpers/general'
 import { getSongsAndLoguesCount } from '../../../../src/endpoint/album/songs'
 
-const TempGlobalHeader = ({ showAll }) => {
+const TodoHeader = ({ showAll }) => {
     return (
         <div
             {...{
                 className: cx(
-                    'TempGlobalHeader',
-                    'TempGlobalAnnotations__row',
+                    'TodoHeader',
+                    'TodoAnnotations__row',
                     'abF',
                 ),
             }}
@@ -29,8 +29,8 @@ const TempGlobalHeader = ({ showAll }) => {
     )
 }
 
-TempGlobalHeader.propTypes = {
+TodoHeader.propTypes = {
     showAll: PropTypes.bool.isRequired,
 }
 
-export default TempGlobalHeader
+export default TodoHeader

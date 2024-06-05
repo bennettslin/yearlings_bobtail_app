@@ -1,6 +1,3 @@
-# Overviews
-* Include overviews in global annotations
-
 # Correct dot categories
 * Annotations have correct dots
 

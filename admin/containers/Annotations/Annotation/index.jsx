@@ -26,17 +26,17 @@ const Annotation = ({ songIndex, annotationIndex }) => {
         <div
             {...{
                 className: cx(
-                    'TempGlobalAnnotation',
-                    annotationTodo === REVISE && 'TempGlobalAnnotation__revise',
-                    annotationTodo === REVIEW && 'TempGlobalAnnotation__review',
-                    `TempGlobalAnnotation-${songIndex}-${annotationIndex}`,
+                    'TodoAnnotation',
+                    annotationTodo === REVISE && 'TodoAnnotation__revise',
+                    annotationTodo === REVIEW && 'TodoAnnotation__review',
+                    `TodoAnnotation-${songIndex}-${annotationIndex}`,
                 ),
             }}
         >
             <div
                 {...{
                     className: cx(
-                        'TempGlobalAnnotationHeader',
+                        'TodoAnnotationHeader',
                     ),
                     onClick: selectAnnotation,
                 }}

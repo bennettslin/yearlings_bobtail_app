@@ -33,10 +33,10 @@ const AnnotationCard = ({
         )
 
     return (
-        <div className="TempGlobalAnnotationCard">
+        <div className="TodoAnnotationCard">
             {/* Set to true to show dot categories as text. */}
             {false && (
-                <div className="TempGlobalAnnotationCard__dotKeys">
+                <div className="TodoAnnotationCard__dotKeys">
                     {ORDERED_DOT_KEYS.filter(dotKey => (
                         dotKeys[dotKey]
                     )).join(', ')}
@@ -50,7 +50,7 @@ const AnnotationCard = ({
                 />
             )}
             {description && (
-                <div className="TempGlobalAnnotationCard__description">
+                <div className="TodoAnnotationCard__description">
                     <Texts {...{ text: description }} />
                 </div>
             )}

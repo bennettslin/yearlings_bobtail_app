@@ -13,23 +13,23 @@ export const getAnnotationTodo = (songIndex, annotationIndex) => {
 }
 
 export const getAnnotationsCount = () => {
-    const { globalAnnotationIndicesList } = getAlbum()
-    return globalAnnotationIndicesList.length
+    const { todoAnnotationIndicesList } = getAlbum()
+    return todoAnnotationIndicesList.length
 }
 
 export const getAnnotationTodosCount = () => {
-    const { globalAnnotationTodosCount } = getAlbum()
-    return globalAnnotationTodosCount
+    const { todoAnnotationTodosCount } = getAlbum()
+    return todoAnnotationTodosCount
 }
 
 export const getAnnotationReviewsCount = () => {
-    const { globalAnnotationReviewsCount } = getAlbum()
-    return globalAnnotationReviewsCount
+    const { todoAnnotationReviewsCount } = getAlbum()
+    return todoAnnotationReviewsCount
 }
 
 export const getAnnotationRevisionsCount = () => {
-    const { globalAnnotationRevisionsCount } = getAlbum()
-    return globalAnnotationRevisionsCount
+    const { todoAnnotationRevisionsCount } = getAlbum()
+    return todoAnnotationRevisionsCount
 }
 
 export const getAnnotationTodosCountForSong = songIndex => {

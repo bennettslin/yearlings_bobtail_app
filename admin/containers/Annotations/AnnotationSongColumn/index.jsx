@@ -22,7 +22,7 @@ const AnnotationSongColumn = ({ songIndex, showAll }) => {
         <div
             {...{
                 ref: songColumnElement,
-                className: 'TempGlobalAnnotationSongColumn',
+                className: 'TodoAnnotationSongColumn',
                 style: {
                     backgroundColor: `hsl(${hue}, 25%, 45%)`,
                 },

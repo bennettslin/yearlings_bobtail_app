@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import scrollIntoView from 'scroll-into-view'
-import GlobalCounter from './GlobalCounter'
+import TodoCounter from './TodoCounter'
 import GlobalHeader from './GlobalHeader'
 import GlobalColumns from './GlobalColumns'
 import TextJustifiedDispatcher from '../../../src/dispatchers/TextJustified'
@@ -18,7 +18,7 @@ import './style'
 
 const SHOW_ALL_ANNOTATIONS_KEY = 'showAllAnnotations'
 
-const TempGlobalAnnotations = () => {
+const TodoAnnotations = () => {
     const
         focusElement = useRef(),
         dispatchTextJustified = useRef(),
@@ -50,7 +50,7 @@ const TempGlobalAnnotations = () => {
 
         if (selectedSongIndex && selectedAnnotationIndex) {
             const element = document.querySelector(
-                `.TempGlobalAnnotation-${selectedSongIndex}-${selectedAnnotationIndex}`,
+                `.TodoAnnotation-${selectedSongIndex}-${selectedAnnotationIndex}`,
             )
 
             setTimeout(() => {
@@ -66,7 +66,7 @@ const TempGlobalAnnotations = () => {
             {...{
                 ref: focusElement,
                 className: cx(
-                    'TempGlobalAnnotations',
+                    'TodoAnnotations',
                     isTextJustified && 'textJustified',
                     'font__text',
                 ),
@@ -76,10 +76,10 @@ const TempGlobalAnnotations = () => {
         >
             <GlobalColumns {...{ showAll }} />
             <GlobalHeader {...{ showAll }} />
-            <GlobalCounter {...{ toggleShowTodos }} />
+            <TodoCounter {...{ toggleShowTodos }} />
             <TextJustifiedDispatcher {...{ ref: dispatchTextJustified }} />
         </div>
     )
 }
 
-export default TempGlobalAnnotations
+export default TodoAnnotations
