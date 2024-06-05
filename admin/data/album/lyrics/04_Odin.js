@@ -165,7 +165,7 @@ export default {
                             anchor: `fridge's gallery in web's wake`,
                             todo: REVIEW,
                             card: {
-                                description: `The cobwebs trailing from my clothes happen to snag some drawings of mine that were attached to the refrigerator, causing them to scatter onto the floor.`,
+                                description: `The cobwebs trailing from my clothes happen to stick to some of my drawings that were attached to the refrigerator, causing them to scatter onto the floor.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -390,7 +390,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `Like most amphibians, salamanders begin life underwater, then lose their gills and develop lungs to live on land. I always wondered if this process of`,
+                                    `Like most amphibians, salamanders begin life underwater; they then lose their gills and develop lungs to live on land. I always wondered if this process of`,
                                     {
                                         anchor: `metamorphosis`,
                                         wiki: `Metamorphosis`,
@@ -462,7 +462,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `The word "Oriental" wasn't considered offensive when I was growing up. It's even printed on my birth certificate. It became politically incorrect at around the same time that "queer" was being reclaimed by the gay community. The latter tactic always made more sense to me.`,
+                                    `Even though "Oriental" is printed on my birth certificate, the word became politically incorrect at the same time that "queer" was being reclaimed by the gay community. The latter tactic always made more sense to me.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -480,17 +480,17 @@ export default {
                             card: {
                                 description: [
                                     [
-                                        `A`,
-                                        {
-                                            anchor: `shibboleth`,
-                                            wiki: `Shibboleth`,
-                                        },
-                                        `is any signifier that distinguishes an ingroup. The`,
+                                        `The`,
                                         {
                                             anchor: `Book of Judges`,
                                             wiki: `Book_of_Judges`,
                                         },
-                                        `tells of a battle in which Israelite warriors scoured the plains afterward, asking stragglers to pronounce the Hebrew word for a stream. Because the enemy tribe lacked the "sh" sound in their dialect, they would out themselves by pronouncing the word as "sibboleth," just as I do here in the recording.`,
+                                        `tells of a battle in which Israelite warriors scoured the plains afterward, asking stragglers to pronounce "`,
+                                        {
+                                            anchor: `shibboleth`,
+                                            wiki: `Shibboleth`,
+                                        },
+                                        `," the Hebrew word for a stream. Because the enemy tribe lacked the "sh" sound in their dialect, they outed themselves by pronouncing it as "sibboleth," just like I do here in the recording.`,
                                     ],
                                 ],
                                 dotKeys: {
@@ -533,7 +533,7 @@ export default {
                                         anchor: `couplet`,
                                         wiki: `Couplet`,
                                     },
-                                    `is a pair of lines that share the same meter and typically rhyme. As children, Sasha and I were never a couple, of course. But perhaps we were a couplet?`,
+                                    `is a pair of lines that share the same meter and end in rhyme. As children, Sasha and I were never a couple, of course. But perhaps we were a couplet?`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -941,7 +941,7 @@ export default {
                                         anchor: `undine`,
                                         wiki: `Undine`,
                                     },
-                                    `is a female nymph and the Paracelsian elemental of water. The term originates from the Latin word`,
+                                    `, a female nymph, is the Paracelsian elemental of water. The term originates from the Latin word`,
                                     {
                                         isItalic: true,
                                         lyric: `unda`,
@@ -1681,7 +1681,7 @@ export default {
                                         anchor: `Monday's Child`,
                                         wiki: `Monday's_Child`,
                                     },
-                                    `" is a nursery rhyme that predicts a child's fortune based on their weekday of birth. As Thursday's child, I'm promised to have "far to go." And indeed, the distance I have left to cover feels depressingly vast. Still, I'm now one day closer than when the day began…`,
+                                    `" is a nursery rhyme that predicts a child's fortune based on their weekday of birth. As someone born on a Thursday, then, I'm promised to have "far to go"— and indeed, the distance I have left to cover feels vast. Still, I'm now one day closer than when the day began…`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
