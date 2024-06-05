@@ -33,7 +33,7 @@ $WIDTH_TODO_ANNOTATION_COLUMN:
 }
 
 .TodoCounter,
-.TodoHeader {
+.TodoHeaders {
     z-index: 100;
 }
 
@@ -52,7 +52,7 @@ $WIDTH_TODO_ANNOTATION_COLUMN:
     background-color: #bff;
 }
 
-.TodoHeader {
+.TodoHeaders {
     height: $height__todoHeader;
     font-size: $fontSize__todoAnnotation;
 }
@@ -61,12 +61,12 @@ $WIDTH_TODO_ANNOTATION_COLUMN:
     overflow-y: hidden;
 }
 
-.TodoAnnotationSongHeader {
+.TodoSongHeader {
     min-width: $WIDTH_TODO_ANNOTATION_COLUMN;
     justify-content: space-around;
 }
 
-.TodoAnnotationSongColumn {
+.TodoSongColumn {
     display: flex;
     flex-direction: column;
     align-items: center;

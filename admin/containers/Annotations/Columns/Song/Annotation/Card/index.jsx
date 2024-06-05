@@ -1,13 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Texts from '../../../../src/components/Texts'
-import { ORDERED_DOT_KEYS } from '../../../../src/constants/dots'
+import Texts from '../../../../../../../src/components/Texts'
+import { ORDERED_DOT_KEYS } from '../../../../../../../src/constants/dots'
 import {
     getDescriptionForAnnotationCard,
     getDotKeysForAnnotationCard,
     getDotsBitForAnnotationCard,
-} from '../../../../src/endpoint/album/cards'
-import DotSequence from '../../../../src/components/DotSequence'
+} from '../../../../../../../src/endpoint/album/cards'
+import DotSequence from '../../../../../../../src/components/DotSequence'
 
 const AnnotationCard = ({
     songIndex,

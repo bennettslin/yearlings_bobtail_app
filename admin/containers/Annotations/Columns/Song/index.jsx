@@ -1,14 +1,14 @@
 import React, { useRef } from 'react'
 import PropTypes from 'prop-types'
-import Annotation from '../Annotation'
-import { getSongsAndLoguesCount } from '../../../../src/endpoint/album/songs'
+import TodoOverview from './Overview'
+import TodoAnnotation from './Annotation'
+import { getSongsAndLoguesCount } from '../../../../../src/endpoint/album/songs'
 import {
     getHasOverviewTodo,
     getShownAnnotationIndices,
-} from '../../../endpoint/album/todos'
-import Overview from '../Overview'
+} from '../../../../endpoint/album/todos'
 
-const AnnotationSongColumn = ({ songIndex, showAll }) => {
+const TodoSongColumn = ({ songIndex, showAll }) => {
     const
         songColumnElement = useRef(),
         hue = (songIndex - 1) / getSongsAndLoguesCount() * 360,
@@ -22,17 +22,17 @@ const AnnotationSongColumn = ({ songIndex, showAll }) => {
         <div
             {...{
                 ref: songColumnElement,
-                className: 'TodoAnnotationSongColumn',
+                className: 'TodoSongColumn',
                 style: {
                     backgroundColor: `hsl(${hue}, 25%, 45%)`,
                 },
             }}
         >
             {(showAll || hasOverviewTodo) && (
-                <Overview {...{ songIndex }} />
+                <TodoOverview {...{ songIndex }} />
             )}
             {shownAnnotationIndices.map(annotationIndex => (
-                <Annotation
+                <TodoAnnotation
                     {...{
                         key: annotationIndex,
                         songIndex,
@@ -44,9 +44,9 @@ const AnnotationSongColumn = ({ songIndex, showAll }) => {
     ) : null
 }
 
-AnnotationSongColumn.propTypes = {
+TodoSongColumn.propTypes = {
     songIndex: PropTypes.number.isRequired,
     showAll: PropTypes.bool.isRequired,
 }
 
-export default AnnotationSongColumn
+export default TodoSongColumn

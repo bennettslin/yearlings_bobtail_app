@@ -4,8 +4,8 @@ import cx from 'classnames'
 import {
     getIndexedTitleForSong,
     getSongsAndLoguesCount,
-} from '../../../../src/endpoint/album/songs'
-import { getAnnotationCountForSong } from '../../../../src/endpoint/album/annotations'
+} from '../../../../../src/endpoint/album/songs'
+import { getAnnotationCountForSong } from '../../../../../src/endpoint/album/annotations'
 import {
     getAnnotationReviewsCountForSong,
     getAnnotationRevisionsCountForSong,
@@ -14,9 +14,9 @@ import {
     getHasOverviewRevision,
     getHasOverviewTodo,
     getShownAnnotationIndices,
-} from '../../../endpoint/album/todos'
+} from '../../../../endpoint/album/todos'
 
-const AnnotationSongHeader = ({ songIndex, showAll }) => {
+const TodoSongHeader = ({ songIndex, showAll }) => {
     const
         hue = (songIndex - 1) / getSongsAndLoguesCount() * 360,
         hasOverviewTodo = getHasOverviewTodo(songIndex),
@@ -40,7 +40,7 @@ const AnnotationSongHeader = ({ songIndex, showAll }) => {
         <div
             {...{
                 className: cx(
-                    'TodoAnnotationSongHeader',
+                    'TodoSongHeader',
                     'textShadow__light',
                     'font__heading',
                     'fCC',
@@ -60,9 +60,9 @@ const AnnotationSongHeader = ({ songIndex, showAll }) => {
     ) : null
 }
 
-AnnotationSongHeader.propTypes = {
+TodoSongHeader.propTypes = {
     songIndex: PropTypes.number.isRequired,
     showAll: PropTypes.bool.isRequired,
 }
 
-export default AnnotationSongHeader
+export default TodoSongHeader

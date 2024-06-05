@@ -1,14 +1,14 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
 import cx from 'classnames'
-import Texts from '../../../../src/components/Texts'
+import Texts from '../../../../../../src/components/Texts'
 import {
     getOverviewForSong,
     getSongIsLogue,
-} from '../../../../src/endpoint/album/songs'
+} from '../../../../../../src/endpoint/album/songs'
 import './style'
 
-const Overview = ({ songIndex }) => {
+const TodoOverview = ({ songIndex }) => {
     const
         overview = getOverviewForSong(songIndex),
         // Logue overviews are wrapped in additional array.
@@ -51,4 +51,4 @@ const Overview = ({ songIndex }) => {
     )
 }
 
-export default Overview
+export default TodoOverview

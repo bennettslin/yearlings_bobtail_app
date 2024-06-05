@@ -1,32 +1,23 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import AnnotationSongColumn from '../AnnotationSongColumn'
+import TodoSongHeader from './Song'
 import { getArrayOfLength } from '../../../../src/helpers/general'
 import { getSongsAndLoguesCount } from '../../../../src/endpoint/album/songs'
-import { getSongsWithTodosCount } from '../../../endpoint/album/todos'
-import { getJsFromSass } from '../../../../src/helpers/format'
-import { WIDTH_TODO_ANNOTATION_COLUMN } from '../style.module'
 
-const TodoColumns = ({ showAll }) => {
+const TodoHeaders = ({ showAll }) => {
     return (
         <div
             {...{
                 className: cx(
-                    'TodoColumns',
+                    'TodoHeaders',
                     'TodoAnnotations__row',
                     'abF',
                 ),
-                style: {
-                    width: `${
-                        getJsFromSass(WIDTH_TODO_ANNOTATION_COLUMN) *
-                        getSongsWithTodosCount(showAll)
-                    }px`,
-                },
             }}
         >
             {getArrayOfLength(getSongsAndLoguesCount()).map(index => (
-                <AnnotationSongColumn
+                <TodoSongHeader
                     {...{
                         key: index,
                         songIndex: index,
@@ -38,8 +29,8 @@ const TodoColumns = ({ showAll }) => {
     )
 }
 
-TodoColumns.propTypes = {
+TodoHeaders.propTypes = {
     showAll: PropTypes.bool.isRequired,
 }
 
-export default TodoColumns
+export default TodoHeaders

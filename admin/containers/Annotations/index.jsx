@@ -2,9 +2,9 @@ import React, { useEffect, useRef, useState } from 'react'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import scrollIntoView from 'scroll-into-view'
-import TodoCounter from './TodoCounter'
-import GlobalHeader from './GlobalHeader'
-import GlobalColumns from './GlobalColumns'
+import TodoHeaders from './Headers'
+import TodoColumns from './Columns'
+import TodoCounter from './Counter'
 import TextJustifiedDispatcher from '../../../src/dispatchers/TextJustified'
 import {
     mapSelectedAnnotationIndex,
@@ -74,8 +74,8 @@ const TodoAnnotations = () => {
                 onKeyDown,
             }}
         >
-            <GlobalColumns {...{ showAll }} />
-            <GlobalHeader {...{ showAll }} />
+            <TodoColumns {...{ showAll }} />
+            <TodoHeaders {...{ showAll }} />
             <TodoCounter {...{ toggleShowTodos }} />
             <TextJustifiedDispatcher {...{ ref: dispatchTextJustified }} />
         </div>

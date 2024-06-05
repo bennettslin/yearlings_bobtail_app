@@ -1,7 +1,6 @@
 # Latest todo
 * Finish flagging revisions in Odin
 * Reviews and revisions in Pchelka
-* Nest global components
 * Combine helpers in logic rather than in components
 * Allow annotations to be clicked in dashboard
 

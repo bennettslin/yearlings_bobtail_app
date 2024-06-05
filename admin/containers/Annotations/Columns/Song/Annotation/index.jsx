@@ -2,14 +2,14 @@
 import React from 'react'
 import cx from 'classnames'
 import { useDispatch } from 'react-redux'
-import AnnotationCard from '../AnnotationCard'
-import { getTitleForAnnotation } from '../../../../src/endpoint/album/annotations'
-import { getAnnotationCardIndices } from '../../../../src/endpoint/album/cards'
-import { updateSelectedStore } from '../../../../src/redux/selected/action'
-import { getAnnotationTodo } from '../../../endpoint/album/todos'
-import { REVIEW, REVISE } from '../constants/todos'
+import TodoAnnotationCard from './Card'
+import { getTitleForAnnotation } from '../../../../../../src/endpoint/album/annotations'
+import { getAnnotationCardIndices } from '../../../../../../src/endpoint/album/cards'
+import { updateSelectedStore } from '../../../../../../src/redux/selected/action'
+import { getAnnotationTodo } from '../../../../../endpoint/album/todos'
+import { REVIEW, REVISE } from '../../../constants/todos'
 
-const Annotation = ({ songIndex, annotationIndex }) => {
+const TodoAnnotation = ({ songIndex, annotationIndex }) => {
     const
         dispatch = useDispatch(),
         annotationTitle = getTitleForAnnotation(songIndex, annotationIndex),
@@ -49,7 +49,7 @@ const Annotation = ({ songIndex, annotationIndex }) => {
                 annotationIndex,
 
             ).map(cardIndex => (
-                <AnnotationCard
+                <TodoAnnotationCard
                     {...{
                         key: cardIndex,
                         songIndex,
@@ -62,4 +62,4 @@ const Annotation = ({ songIndex, annotationIndex }) => {
     )
 }
 
-export default Annotation
+export default TodoAnnotation
