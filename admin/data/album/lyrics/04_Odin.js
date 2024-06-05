@@ -165,7 +165,7 @@ export default {
                             anchor: `fridge's gallery in web's wake`,
                             todo: REVIEW,
                             card: {
-                                description: `The cobwebs trailing from my clothes happen to stick to some of my drawings that were attached to the refrigerator, causing them to scatter onto the floor.`,
+                                description: `The cobwebs trailing from my clothes happen to stick to some drawings of mine that my mother had attached to the refrigerator, causing them to scatter onto the floor.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -462,7 +462,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `Even though "Oriental" is printed on my birth certificate, the word became politically incorrect at the same time that "queer" was being reclaimed by the gay community. The latter tactic always made more sense to me.`,
+                                    `The word "Oriental" wasn't offensive when I was growing up; it's even printed on my birth certificate. It became politically incorrect at the same time that "queer" was being reclaimed by the gay community. The latter tactic always made more sense to me.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -1232,7 +1232,7 @@ export default {
                                         anchor: `shivah`,
                                         wiki: `Shiva_(Judaism)`,
                                     },
-                                    `refers to a period of mourning in Judaism after a family member dies. In other words, my bad luck not to be born Jewish has cost me any hope of spending a lifetime with Sasha from marriage until death.`,
+                                    `refers to a period of mourning in Judaism after a family member dies. In other words, my bad luck not to be born Jewish has cost me any hope of spending a lifetime with Sasha, from marriage until death.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1344,7 +1344,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `As a child, I suffered from night terrors related to my fear of death. My mother tried to comfort me with the promise of reincarnation— but this simply filled me with greater dread. Because it wasn't just death that frightened me; it was a lifetime of hurtling toward it. All that reincarnation offered was more rounds of the same.`,
+                                    `As a child, I suffered from night terrors related to my fear of death. My mother tried to comfort me with the promise of reincarnation— but this simply filled me with greater dread. It wasn't just death that frightened me; it was a lifetime of hurtling toward it. And all that reincarnation offered was more rounds of the same.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -1365,7 +1365,7 @@ export default {
                             anchor: `holed up hostage`,
                             todo: REVIEW,
                             card: {
-                                description: `Yet the thought of being stuck with a soul forever, an inescapable fate promised by the faiths of my classmates, seemed no less disturbing.`,
+                                description: `Yet the thought of being stuck with a soul forever— a fate promised by the faiths of my classmates— seemed no less disturbing.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -1513,12 +1513,12 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `The`,
+                                    `In the`,
                                     {
                                         anchor: `Book of Exodus`,
                                         wiki: `Book_of_Exodus`,
                                     },
-                                    `tells of how Moses led the Israelites out of slavery. By parting the Red Sea, he allowed them to escape Egypt on foot.`,
+                                    `, Moses leads the Israelites out of slavery by parting the Red Sea, allowing them to escape Egypt on foot.`,
                                 ],
                             },
                         },

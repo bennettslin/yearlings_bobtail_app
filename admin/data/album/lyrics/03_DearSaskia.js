@@ -67,7 +67,7 @@ export default {
                             anchor: `Beatles`,
                             wiki: `The_Beatles`,
                         },
-                        `— and to put theory into practice, I came up with the melodies and chords now pieced together here. For so long, I made no use of them; all I could hear was me trying and failing to match the Beatles. But years later, I realized that the sound of trying too hard was exactly what a song about an overwrought letter to Sasha called for.`,
+                        `— and to put theory into practice, I came up with the melodies and chords now pieced together here. For so long, I didn't make use of them; all I could hear was me trying and failing to match the Beatles. But years later, I realized that the sound of trying too hard was exactly what an overwrought letter to Sasha called for.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -133,7 +133,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: REVIEW,
                 card: {
-                    description: `I wanted the vocals for this song to sound sickly, so I held off on recording them until I came down with a cold, which was sure to happen at some point during the five years I spent recording this album.`,
+                    description: `I wanted the vocals for this song to sound sickly, so I held off on recording them until I came down with a cold.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
@@ -299,7 +299,7 @@ export default {
                                         anchor: `pupil`,
                                         wiki: `Pupil`,
                                     },
-                                    `of her eye. She looked at me the way a teacher looks upon a pupil. I could sense that we were no longer on the same footing— if we'd ever been.`,
+                                    `of her eye. As she looked at me the way a teacher looks upon a pupil, I could sense that we were no longer on the same footing— if we'd ever been.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -797,7 +797,7 @@ export default {
                             isItalic: true,
                             lyric: `Bobtail Method`,
                         },
-                        `, a songwriting book that distills all the wisdom I'd gathered over the years from studying the Beatles, in the hope that this would finally get me taken seriously. Unfortunately, it was met with the same radio silence.`,
+                        `— a songwriting book that distills all the wisdom I'd gathered over the years from studying the Beatles— in the hope that this would get me taken seriously. Unfortunately, it was met with the same radio silence.`,
                     ],
                     dotKeys: {
                         [AFTERWORD]: true,
