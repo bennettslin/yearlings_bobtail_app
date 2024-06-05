@@ -1,9 +1,13 @@
+import { REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+
 export const addAdminMetadata = (annotationsList, album) => {
     const
         globalAnnotationIndicesList = [],
         globalAnnotationTodos = []
 
     let globalAnnotationTodosCount = 0
+    let globalAnnotationReviewsCount = 0
+    let globalAnnotationRevisionsCount = 0
 
     annotationsList.forEach((annotations, songIndex) => {
         if (annotations) {
@@ -12,6 +16,12 @@ export const addAdminMetadata = (annotationsList, album) => {
 
                 if (annotation.todo) {
                     globalAnnotationTodosCount += 1
+                }
+
+                if (annotation.todo === REVIEW) {
+                    globalAnnotationReviewsCount += 1
+                } else if (annotation.todo === REVISE) {
+                    globalAnnotationRevisionsCount += 1
                 }
 
                 globalAnnotationTodos.push(annotation.todo)
@@ -27,4 +37,6 @@ export const addAdminMetadata = (annotationsList, album) => {
     album.globalAnnotationIndicesList = globalAnnotationIndicesList
     album.globalAnnotationTodos = globalAnnotationTodos
     album.globalAnnotationTodosCount = globalAnnotationTodosCount
+    album.globalAnnotationReviewsCount = globalAnnotationReviewsCount
+    album.globalAnnotationRevisionsCount = globalAnnotationRevisionsCount
 }
