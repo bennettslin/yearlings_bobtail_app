@@ -1,4 +1,5 @@
 # Latest todo
+* Have separate counts for revise and review todos
 
 ### Must do
 * Illustrator
