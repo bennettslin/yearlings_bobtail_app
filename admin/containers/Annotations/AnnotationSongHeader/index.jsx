@@ -10,7 +10,7 @@ import {
     getAnnotationTodoCountForSong,
     getHasTodoForSongOverview,
     getShownAnnotationIndices,
-} from '../helpers'
+} from '../../../endpoint/album/todos'
 
 const AnnotationSongHeader = ({ songIndex, showAll }) => {
     const

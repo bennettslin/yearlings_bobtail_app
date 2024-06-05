@@ -5,7 +5,7 @@ import { getSongsAndLoguesCount } from '../../../../src/endpoint/album/songs'
 import {
     getHasTodoForSongOverview,
     getShownAnnotationIndices,
-} from '../helpers'
+} from '../../../endpoint/album/todos'
 import Overview from '../Overview'
 
 const AnnotationSongColumn = ({ songIndex, showAll }) => {

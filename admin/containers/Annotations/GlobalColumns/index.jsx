@@ -4,9 +4,9 @@ import cx from 'classnames'
 import AnnotationSongColumn from '../AnnotationSongColumn'
 import { getArrayOfLength } from '../../../../src/helpers/general'
 import { getSongsAndLoguesCount } from '../../../../src/endpoint/album/songs'
-import { WIDTH_TEMP_GLOBAL_ANNOTATION_COLUMN } from '../style.module'
+import { getSongsWithTodosCount } from '../../../endpoint/album/todos'
 import { getJsFromSass } from '../../../../src/helpers/format'
-import { getSongsWithTodosCount } from '../helpers'
+import { WIDTH_TEMP_GLOBAL_ANNOTATION_COLUMN } from '../style.module'
 
 const TempGlobalColumns = ({ showAll }) => {
     return (

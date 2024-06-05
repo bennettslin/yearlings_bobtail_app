@@ -1,9 +1,20 @@
-import { getAnnotationIndices } from '../../../../src/endpoint/album/annotations'
+import { getAlbum } from '../../../src/endpoint/builds'
+import { getAnnotationIndices } from '../../../src/endpoint/album/annotations'
 import {
     getSong,
     getSongsAndLoguesCount,
-} from '../../../../src/endpoint/album/songs'
-import { getArrayOfLength } from '../../../../src/helpers/general'
+} from '../../../src/endpoint/album/songs'
+import { getArrayOfLength } from '../../../src/helpers/general'
+
+export const getGlobalAnnotationCount = () => {
+    const { globalAnnotationIndicesList } = getAlbum()
+    return globalAnnotationIndicesList.length
+}
+
+export const getGlobalAnnotationTodosCount = () => {
+    const { globalAnnotationTodosCount } = getAlbum()
+    return globalAnnotationTodosCount
+}
 
 export const getHasTodoForSongOverview = songIndex => (
     Boolean(getSong(songIndex).todo)
