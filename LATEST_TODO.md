@@ -1,5 +1,6 @@
 # Latest todo
 * Have separate counts for revise and review todos
+* Allow annotations to be clicked in dashboard
 
 ### Must do
 * Illustrator

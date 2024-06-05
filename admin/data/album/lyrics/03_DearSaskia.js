@@ -13,7 +13,6 @@ import {
     REFRAIN,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Dear Saskia',
@@ -59,7 +58,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `As a teenager, I tried to figure out the songwriting secrets of the`,
@@ -131,7 +129,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: `I wanted the vocals for this song to sound sickly, so I held off on recording them until I came down with a cold.`,
                     dotKeys: {
@@ -151,7 +148,6 @@ export default {
                     lyric: [
                         {
                             anchor: `You'd love Taiwan`,
-                            todo: REVIEW,
                             card: {
                                 description: `On a tour of the Taiwanese countryside with my cousins, I mentally noted all the things I could point out to Sasha one day. I'm not sure I felt any real pride in my roots; it was just all I knew of what could make one ordinary child more interesting to another.`,
                                 dotKeys: {
@@ -177,7 +173,6 @@ export default {
                         `of some`,
                         {
                             anchor: `giant's house`,
-                            todo: REVIEW,
                             card: {
                                 description: `In my most vivid memory from that trip, we stood in the middle of a lush valley. The ground around us was entirely level; the surrounding mountains rose nearly vertically; and their peaks disappeared into a translucent blanket of clouds that stretched across the sky. I felt like a tiny guest in a giant house.`,
                                 dotKeys: {
@@ -291,7 +286,6 @@ export default {
                     lyric: [
                         {
                             anchor: `your pupil's pupal fly`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Reflecting on my feelings for Sasha, I recall our last day together, when I caught my reflection in the`,
@@ -659,7 +653,6 @@ export default {
                         `Anyway, I'm feeling healed. Still,`,
                         {
                             anchor: `hugging hurts`,
-                            todo: REVIEW,
                             card: {
                                 description: `To avoid the humiliation of getting beaten up, it's more common to downplay one's injuries, of course. But here I play them up to mask my emotional hurt, as I explain to Sasha why I winced when we hugged on that last day.`,
                                 dotKeys: {
@@ -784,7 +777,6 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `After sending out promo copies of`,
