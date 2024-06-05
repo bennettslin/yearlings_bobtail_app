@@ -7,7 +7,11 @@ import {
 } from '../../../../src/endpoint/album/songs'
 import { getAnnotationCountForSong } from '../../../../src/endpoint/album/annotations'
 import {
+    getAnnotationReviewsCountForSong,
+    getAnnotationRevisionsCountForSong,
     getAnnotationTodosCountForSong,
+    getHasOverviewReview,
+    getHasOverviewRevision,
     getHasOverviewTodo,
     getShownAnnotationIndices,
 } from '../../../endpoint/album/todos'
@@ -20,6 +24,12 @@ const AnnotationSongHeader = ({ songIndex, showAll }) => {
         todosCount =
             getAnnotationTodosCountForSong(songIndex) +
             hasOverviewTodo,
+        reviewsCount =
+            getAnnotationReviewsCountForSong(songIndex) +
+            getHasOverviewReview(songIndex),
+        revisionsCount =
+            getAnnotationRevisionsCountForSong(songIndex) +
+            getHasOverviewRevision(songIndex),
         percentageDone = parseInt(todosCount / totalCount * 100),
         shownAnnotationIndices = getShownAnnotationIndices({
             songIndex,
@@ -44,7 +54,7 @@ const AnnotationSongHeader = ({ songIndex, showAll }) => {
                 {getIndexedTitleForSong(songIndex)}
             </span>
             <span>
-                {todosCount} / {totalCount} ({percentageDone}%)
+                {revisionsCount} / {reviewsCount} / {totalCount} ({percentageDone}%)
             </span>
         </div>
     ) : null

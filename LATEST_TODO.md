@@ -1,5 +1,7 @@
 # Latest todo
-* Have separate counts for revise and review todos
+* Finish flagging revisions in Odin
+* Reviews and revisions in Pchelka
+* Combine helpers in logic rather than in components.
 * Allow annotations to be clicked in dashboard
 
 ### Must do
@@ -7,7 +9,7 @@
     * Icon for single annotation
     * Update icon for carousel nav
     * Update icon for success copied
-    * Bindis?
+    * bindis?
 
 ### Good fixes
 * Tooltip changes

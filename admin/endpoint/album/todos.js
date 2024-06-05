@@ -55,6 +55,14 @@ export const getHasOverviewTodo = songIndex => (
     Boolean(getOverviewTodo(songIndex))
 )
 
+export const getHasOverviewReview = songIndex => (
+    getOverviewTodo(songIndex) === REVIEW
+)
+
+export const getHasOverviewRevision = songIndex => (
+    getOverviewTodo(songIndex) === REVISE
+)
+
 export const getOverviewTodosCount = () => (
     getArrayOfLength(getSongsAndLoguesCount()).reduce((count, songIndex) => (
         count + getHasOverviewTodo(songIndex)
@@ -63,13 +71,13 @@ export const getOverviewTodosCount = () => (
 
 export const getOverviewReviewsCount = () => (
     getArrayOfLength(getSongsAndLoguesCount()).reduce((count, songIndex) => (
-        count + (getOverviewTodo(songIndex) === REVIEW)
+        count + getHasOverviewReview(songIndex)
     ), 0)
 )
 
 export const getOverviewRevisionsCount = () => (
     getArrayOfLength(getSongsAndLoguesCount()).reduce((count, songIndex) => (
-        count + (getOverviewTodo(songIndex) === REVISE)
+        count + getHasOverviewRevision(songIndex)
     ), 0)
 )
 
