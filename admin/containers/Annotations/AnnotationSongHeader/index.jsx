@@ -7,26 +7,26 @@ import {
 } from '../../../../src/endpoint/album/songs'
 import { getAnnotationCountForSong } from '../../../../src/endpoint/album/annotations'
 import {
-    getAnnotationTodoCountForSong,
-    getHasTodoForSongOverview,
+    getAnnotationTodosCountForSong,
+    getSongHasOverviewTodo,
     getShownAnnotationIndices,
 } from '../../../endpoint/album/todos'
 
 const AnnotationSongHeader = ({ songIndex, showAll }) => {
     const
         hue = (songIndex - 1) / getSongsAndLoguesCount() * 360,
-        getHasOverviewTodo = getHasTodoForSongOverview(songIndex),
-        todoCount =
-            getAnnotationTodoCountForSong(songIndex) +
-            getHasOverviewTodo,
+        hasOverviewTodo = getSongHasOverviewTodo(songIndex),
         totalCount = getAnnotationCountForSong(songIndex) + 1,
-        percentageDone = parseInt(todoCount / totalCount * 100),
+        todosCount =
+            getAnnotationTodosCountForSong(songIndex) +
+            hasOverviewTodo,
+        percentageDone = parseInt(todosCount / totalCount * 100),
         shownAnnotationIndices = getShownAnnotationIndices({
             songIndex,
             showAll,
         })
 
-    return showAll || shownAnnotationIndices.length || getHasOverviewTodo ? (
+    return showAll || shownAnnotationIndices.length || hasOverviewTodo ? (
         <div
             {...{
                 className: cx(
@@ -44,7 +44,7 @@ const AnnotationSongHeader = ({ songIndex, showAll }) => {
                 {getIndexedTitleForSong(songIndex)}
             </span>
             <span>
-                {todoCount} / {totalCount} ({percentageDone}%)
+                {todosCount} / {totalCount} ({percentageDone}%)
             </span>
         </div>
     ) : null

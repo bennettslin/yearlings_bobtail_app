@@ -7,53 +7,53 @@ import {
 import { getArrayOfLength } from '../../../src/helpers/general'
 import { REVIEW, REVISE } from '../../containers/Annotations/constants/todos'
 
-export const getGlobalAnnotationCount = () => {
+export const getAnnotationsCount = () => {
     const { globalAnnotationIndicesList } = getAlbum()
     return globalAnnotationIndicesList.length
 }
 
-export const getGlobalAnnotationTodosCount = () => {
+export const getAnnotationTodosCount = () => {
     const { globalAnnotationTodosCount } = getAlbum()
     return globalAnnotationTodosCount
 }
 
-export const getGlobalAnnotationReviewsCount = () => {
+export const getAnnotationReviewsCount = () => {
     const { globalAnnotationReviewsCount } = getAlbum()
     return globalAnnotationReviewsCount
 }
 
-export const getGlobalAnnotationRevisionsCount = () => {
+export const getAnnotationRevisionsCount = () => {
     const { globalAnnotationRevisionsCount } = getAlbum()
     return globalAnnotationRevisionsCount
 }
 
-export const getHasTodoForSongOverview = songIndex => (
+export const getSongHasOverviewTodo = songIndex => (
     Boolean(getSong(songIndex).todo)
 )
 
-export const getHasReviewForSongOverview = songIndex => (
+export const getSongHasOverviewReview = songIndex => (
     Boolean(getSong(songIndex).todo === REVIEW)
 )
 
-export const getHasRevisionForSongOverview = songIndex => (
+export const getSongHasOverviewRevision = songIndex => (
     Boolean(getSong(songIndex).todo === REVISE)
 )
 
-export const getTodosCountForAlbumOverviews = () => (
+export const getOverviewTodosCount = () => (
     getArrayOfLength(getSongsAndLoguesCount()).reduce((count, songIndex) => (
-        count + getHasTodoForSongOverview(songIndex)
+        count + getSongHasOverviewTodo(songIndex)
     ), 0)
 )
 
-export const getReviewsCountForAlbumOverviews = () => (
+export const getOverviewReviewsCount = () => (
     getArrayOfLength(getSongsAndLoguesCount()).reduce((count, songIndex) => (
-        count + getHasReviewForSongOverview(songIndex)
+        count + getSongHasOverviewReview(songIndex)
     ), 0)
 )
 
-export const getRevisionsCountForAlbumOverviews = () => (
+export const getOverviewRevisionsCount = () => (
     getArrayOfLength(getSongsAndLoguesCount()).reduce((count, songIndex) => (
-        count + getHasRevisionForSongOverview(songIndex)
+        count + getSongHasOverviewRevision(songIndex)
     ), 0)
 )
 
@@ -62,7 +62,7 @@ export const getTodoForAnnotation = (songIndex, annotationIndex) => {
     return annotationTodos[annotationIndex - 1]
 }
 
-export const getAnnotationTodoCountForSong = songIndex => {
+export const getAnnotationTodosCountForSong = songIndex => {
     const { annotationTodos = [] } = getSong(songIndex)
     return annotationTodos.filter(todo => todo).length
 }
@@ -79,7 +79,7 @@ export const getSongsWithTodosCount = showAll => (
     getArrayOfLength(getSongsAndLoguesCount()).reduce((count, songIndex) => (
         count + (
             showAll ||
-            getHasTodoForSongOverview(songIndex) ||
+            getSongHasOverviewTodo(songIndex) ||
             Boolean(getShownAnnotationIndices({ songIndex }).length)
         )
     ), 0)

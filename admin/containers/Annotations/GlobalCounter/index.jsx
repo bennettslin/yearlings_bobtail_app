@@ -3,30 +3,30 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import Button from '../../../../src/components/Button'
 import {
-    getGlobalAnnotationCount,
-    getGlobalAnnotationReviewsCount,
-    getGlobalAnnotationRevisionsCount,
-    getGlobalAnnotationTodosCount,
-    getReviewsCountForAlbumOverviews,
-    getRevisionsCountForAlbumOverviews,
-    getTodosCountForAlbumOverviews,
+    getAnnotationsCount,
+    getAnnotationReviewsCount,
+    getAnnotationRevisionsCount,
+    getAnnotationTodosCount,
+    getOverviewReviewsCount,
+    getOverviewRevisionsCount,
+    getOverviewTodosCount,
 } from '../../../endpoint/album/todos'
 import { getSongsAndLoguesCount } from '../../../../src/endpoint/album/songs'
 
 const GlobalCounter = ({ toggleShowTodos }) => {
     const
-        totalCount = getGlobalAnnotationCount() + getSongsAndLoguesCount(),
-        todoCount =
-            getGlobalAnnotationTodosCount() +
-            getTodosCountForAlbumOverviews(),
+        totalCount = getAnnotationsCount() + getSongsAndLoguesCount(),
+        todosCount =
+            getAnnotationTodosCount() +
+            getOverviewTodosCount(),
         reviewsCount =
-            getGlobalAnnotationReviewsCount() +
-            getReviewsCountForAlbumOverviews(),
+            getAnnotationReviewsCount() +
+            getOverviewReviewsCount(),
         revisionsCount =
-            getGlobalAnnotationRevisionsCount() +
-            getRevisionsCountForAlbumOverviews(),
+            getAnnotationRevisionsCount() +
+            getOverviewRevisionsCount(),
         percentage = parseInt(
-            todoCount / totalCount * 100,
+            todosCount / totalCount * 100,
         )
 
     return (
