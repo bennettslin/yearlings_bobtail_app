@@ -5,38 +5,23 @@ import {
     getIndexedTitleForSong,
     getSongsAndLoguesCount,
 } from '../../../../../src/endpoint/album/songs'
-import { getAnnotationCountForSong } from '../../../../../src/endpoint/album/annotations'
 import {
-    getAnnotationReviewsCountForSong,
-    getAnnotationRevisionsCountForSong,
-    getAnnotationTodosCountForSong,
-    getHasOverviewReview,
-    getHasOverviewRevision,
-    getHasOverviewTodo,
-    getShownAnnotationIndices,
+    getCountForSong,
+    getReviewsCountForSong,
+    getRevisionsCountForSong,
+    getTodosCountForSong,
 } from '../../../../endpoint/album/todos'
 
 const TodoSongHeader = ({ songIndex, showAll }) => {
     const
         hue = (songIndex - 1) / getSongsAndLoguesCount() * 360,
-        hasOverviewTodo = getHasOverviewTodo(songIndex),
-        totalCount = getAnnotationCountForSong(songIndex) + 1,
-        todosCount =
-            getAnnotationTodosCountForSong(songIndex) +
-            hasOverviewTodo,
-        reviewsCount =
-            getAnnotationReviewsCountForSong(songIndex) +
-            getHasOverviewReview(songIndex),
-        revisionsCount =
-            getAnnotationRevisionsCountForSong(songIndex) +
-            getHasOverviewRevision(songIndex),
-        percentageDone = parseInt(todosCount / totalCount * 100),
-        shownAnnotationIndices = getShownAnnotationIndices({
-            songIndex,
-            showAll,
-        })
+        totalCount = getCountForSong(songIndex),
+        todosCount = getTodosCountForSong(songIndex),
+        reviewsCount = getReviewsCountForSong(songIndex),
+        revisionsCount = getRevisionsCountForSong(songIndex),
+        percentageDone = parseInt(todosCount / totalCount * 100)
 
-    return showAll || shownAnnotationIndices.length || hasOverviewTodo ? (
+    return showAll || todosCount ? (
         <div
             {...{
                 className: cx(

@@ -1,7 +1,7 @@
 import React from 'react'
 import cx from 'classnames'
 import {
-    getTotalOverviewsAndAnnotationsCount,
+    getTotalCount,
     getTotalTodosCount,
     getTotalReviewsCount,
     getTotalRevisionsCount,
@@ -9,7 +9,7 @@ import {
 
 const TodoCounter = () => {
     const
-        totalCount = getTotalOverviewsAndAnnotationsCount(),
+        totalCount = getTotalCount(),
         todosCount = getTotalTodosCount(),
         reviewsCount = getTotalReviewsCount(),
         revisionsCount = getTotalRevisionsCount(),
