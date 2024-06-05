@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Annotation from '../Annotation'
 import { getSongsAndLoguesCount } from '../../../../src/endpoint/album/songs'
 import {
-    getSongHasOverviewTodo,
+    getHasOverviewTodo,
     getShownAnnotationIndices,
 } from '../../../endpoint/album/todos'
 import Overview from '../Overview'
@@ -12,7 +12,7 @@ const AnnotationSongColumn = ({ songIndex, showAll }) => {
     const
         songColumnElement = useRef(),
         hue = (songIndex - 1) / getSongsAndLoguesCount() * 360,
-        hasOverviewTodo = getSongHasOverviewTodo(songIndex),
+        hasOverviewTodo = getHasOverviewTodo(songIndex),
         shownAnnotationIndices = getShownAnnotationIndices({
             songIndex,
             showAll,

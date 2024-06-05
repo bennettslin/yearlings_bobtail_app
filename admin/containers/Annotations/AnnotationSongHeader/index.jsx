@@ -8,14 +8,14 @@ import {
 import { getAnnotationCountForSong } from '../../../../src/endpoint/album/annotations'
 import {
     getAnnotationTodosCountForSong,
-    getSongHasOverviewTodo,
+    getHasOverviewTodo,
     getShownAnnotationIndices,
 } from '../../../endpoint/album/todos'
 
 const AnnotationSongHeader = ({ songIndex, showAll }) => {
     const
         hue = (songIndex - 1) / getSongsAndLoguesCount() * 360,
-        hasOverviewTodo = getSongHasOverviewTodo(songIndex),
+        hasOverviewTodo = getHasOverviewTodo(songIndex),
         totalCount = getAnnotationCountForSong(songIndex) + 1,
         todosCount =
             getAnnotationTodosCountForSong(songIndex) +

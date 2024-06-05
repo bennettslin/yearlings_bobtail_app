@@ -6,14 +6,14 @@ import AnnotationCard from '../AnnotationCard'
 import { getTitleForAnnotation } from '../../../../src/endpoint/album/annotations'
 import { getAnnotationCardIndices } from '../../../../src/endpoint/album/cards'
 import { updateSelectedStore } from '../../../../src/redux/selected/action'
-import { getTodoForAnnotation } from '../../../endpoint/album/todos'
+import { getAnnotationTodo } from '../../../endpoint/album/todos'
 import { REVIEW, REVISE } from '../constants/todos'
 
 const Annotation = ({ songIndex, annotationIndex }) => {
     const
         dispatch = useDispatch(),
         annotationTitle = getTitleForAnnotation(songIndex, annotationIndex),
-        annotationTodo = getTodoForAnnotation(songIndex, annotationIndex)
+        annotationTodo = getAnnotationTodo(songIndex, annotationIndex)
 
     const selectAnnotation = () => {
         dispatch(updateSelectedStore({
