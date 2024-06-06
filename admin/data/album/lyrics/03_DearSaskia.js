@@ -347,7 +347,6 @@ export default {
                         `staying kosher. Though, you know,`,
                         {
                             anchor: `I would have too`,
-                            todo: REVIEW,
                             card: {
                                 description: `Yet if Sasha were to want me, then of course I would convert to Judaism. It made no sense to be loyal to my own cultural identity, which I'd had no hand in choosing.`,
                                 dotKeys: {

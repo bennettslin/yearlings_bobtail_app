@@ -161,9 +161,9 @@ export default {
                         `This`,
                         {
                             anchor: `fridge's gallery in web's wake`,
-                            todo: REVISE,
+                            todo: REVIEW,
                             card: {
-                                description: `The cobwebs trailing from my clothes happen to stick to some drawings of mine that were attached to the refrigerator, causing them to scatter onto the floor.`,
+                                description: `The cobwebs trailing from my clothes happen to cling to some of my drawings that I'd attached to the refrigerator, causing them to scatter onto the floor.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -385,15 +385,15 @@ export default {
                         {
                             // TODO: Metamorphosis wormhole?
                             anchor: `trading breath's bliss`,
-                            todo: REVISE,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `Like most amphibians, salamanders begin life underwater; they then lose their gills and develop lungs to live on land. I always wondered if this process of`,
+                                    `As an amphibian, salamanders undergo`,
                                     {
                                         anchor: `metamorphosis`,
                                         wiki: `Metamorphosis`,
                                     },
-                                    `feels as harrowing as it sounds, when breathing becomes the new drowning with no explanation or warning. Because that's what falling asleep felt like to me.`,
+                                    `— they begin life underwater, but then lose their gills and develop lungs to live on land. So breathing becomes the new drowning, and vice versa— which is what falling asleep has always felt like to me.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -458,9 +458,10 @@ export default {
                         {
                             anchor: `oriental`,
                             todo: REVISE,
+                            problem: `I say "it" twice in a row.`,
                             card: {
                                 description: [
-                                    `The word "Oriental" wasn't offensive when I was growing up; it's even printed on my birth certificate. It became politically incorrect at the same time that "queer" was being reclaimed by the gay community. The latter tactic always made more sense to me.`,
+                                    `When I was growing up, "Oriental" was just another word; it's even printed on my birth certificate. It became offensive at around the same time that "queer" was being reclaimed by the gay community. The latter approach always made more sense to me.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -475,6 +476,7 @@ export default {
                         {
                             anchor: `shibboleth`,
                             todo: REVISE,
+                            problem: `Just doesn't flow well.`,
                             card: {
                                 description: [
                                     [
@@ -483,12 +485,17 @@ export default {
                                             anchor: `Book of Judges`,
                                             wiki: `Book_of_Judges`,
                                         },
-                                        `tells of a battle in which Israelite warriors scoured the plains afterward, asking stragglers to pronounce "`,
+                                        `tells of a battle between two Israelite tribes. Afterward, the victors demanded of every straggler to say "`,
                                         {
                                             anchor: `shibboleth`,
                                             wiki: `Shibboleth`,
                                         },
-                                        `," the Hebrew word for a stream. Because the enemy tribe lacked the "sh" sound in their dialect, they outed themselves by pronouncing it as "sibboleth," just like I do here in the recording.`,
+                                        `," the Hebrew word for a river. Because the enemy tribe pronounced the letter`,
+                                        {
+                                            isItalic: true,
+                                            lyric: `shin`,
+                                        },
+                                        `differently in their dialect, they would out themselves by saying "sibboleth," just like I do here in the recording.`,
                                     ],
                                 ],
                                 dotKeys: {
@@ -523,7 +530,6 @@ export default {
                         `As you plummet down from`,
                         {
                             anchor: `couplets past`,
-                            todo: REVISE,
                             card: {
                                 description: [
                                     `In poetry, a`,
@@ -665,6 +671,7 @@ export default {
                         {
                             anchor: `safe for a heathen`,
                             todo: REVISE,
+                            problem: `Too wordy, parts are out of order.`,
                             card: {
                                 description: [
                                     `Being an illegitimate son, Ishmael wasn't to inherit the house of`,
@@ -742,7 +749,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: `Since the drum parts that I scored for this song were more advanced than what I could play at the time, I had to try several workarounds. I ended up recording the kick, snare, and toms in separate takes from the cymbals.`,
                     dotKeys: {
@@ -776,6 +782,7 @@ export default {
                         {
                             anchor: `rondel of her eye`,
                             todo: REVISE,
+                            problem: `Last sentence has too many commas.`,
                             card: {
                                 description: [
                                     `A`,
@@ -835,7 +842,7 @@ export default {
                                         anchor: `Adam's apple`,
                                         wiki: `Adam's_apple`,
                                     },
-                                    `." And so arose an apocryphal tale that when Adam ate the forbidden fruit of knowledge, a piece lodged in his throat to mark all his descendants with a reminder of their original sin. Similarly, my knowledge of where I stood with Sasha left me with a permanent lump in my throat.`,
+                                    `." And so arose an apocryphal tale that when Adam ate the forbidden fruit of knowledge, a piece lodged in his throat to mark all his descendants with a reminder of their original sin. Similarly, my knowledge of where I stood with Sasha left me to feel a permanent lump in my throat.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -930,7 +937,6 @@ export default {
                         `that come undone by`,
                         {
                             anchor: `undine`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The`,
@@ -967,7 +973,6 @@ export default {
                         `where its`,
                         {
                             anchor: `hopeless rests`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -1134,6 +1139,7 @@ export default {
                         {
                             anchor: `didn't impart warmth`,
                             todo: REVISE,
+                            problem: `Two "could"s in a row.`,
                             card: {
                                 description: `But also like cellophane, Sasha couldn't reflect warmth where none was present. If I couldn't be the better person in dealing with the bullies, then there came a point when she'd need to keep her distance from me as well.`,
                                 dotKeys: {
@@ -1148,6 +1154,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 todo: REVISE,
+                problem: `First sentence is too wordy.`,
                 card: {
                     description: [
                         `Recording vocals in doublespeaker rhyme proved to be trickier than expected, because when we sing, we tend to shorten or elongate syllables to adjust for phrasing and consonant clusters. And so the two voices would sound disjointed once heard together. To perform the syllables in perfect sync, I came up with a system of notation that somewhat looked like medieval`,
@@ -1174,7 +1181,6 @@ export default {
                     lyricLeft: [
                         {
                             anchor: `Buoy bobs`,
-                            todo: REVIEW,
                             card: {
                                 description: `In my dream, I see myself adrift on a buoy as it bobs in an ocean filled with sea serpents. But who can say that this "boy" isn't also bobbing through life, oblivious to dangers lurking everywhere?`,
                                 dotKeys: {
