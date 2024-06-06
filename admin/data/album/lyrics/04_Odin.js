@@ -1230,7 +1230,7 @@ export default {
                                         anchor: `Shivaree`,
                                         wiki: `Charivari`,
                                     },
-                                    `is a European folk custom in which a raucous crowd serenades a newlywed couple, while`,
+                                    `is a European folk custom in which a raucous crowd serenades a newlywed couple; and`,
                                     {
                                         anchor: `sitting shivah`,
                                         wiki: `Shiva_(Judaism)`,
@@ -1344,10 +1344,10 @@ export default {
                         `when your`,
                         {
                             anchor: `day to die`,
-                            todo: REVISE,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `As a child, I suffered from night terrors related to my fear of death. My mother tried to comfort me with the promise of reincarnation— but this simply filled me with greater dread. Because it wasn't just death that frightened me; it was a lifetime of hurtling toward it. And all that reincarnation offered was more rounds of the same.`,
+                                    `As a child, I suffered from night terrors related to my fear of death. My mother tried to comfort me with the promise of reincarnation— but this only filled me with greater dread. Because it wasn't just death itself that frightened me; it was a lifetime of hurtling toward it. And all that reincarnation offered was more rounds of the same.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -1401,7 +1401,7 @@ export default {
                             anchor: `just play dumb`,
                             todo: REVIEW,
                             card: {
-                                description: `Neither heaven nor nirvana sounded all that pleasant, yet they were the best offers available, which confused me. Why wouldn't their appeal be self-evident even to a thickheaded child?`,
+                                description: `Neither heaven nor nirvana sounded all that pleasant, yet these were the best offers available— which confused me. After all, shouldn't their appeal be self-evident even to a thickheaded child?`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -1461,7 +1461,7 @@ export default {
                         `Yet your`,
                         {
                             anchor: `defeat of tortoise`,
-                            todo: REVISE,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The tortoise defeats the hare in`,
@@ -1469,7 +1469,7 @@ export default {
                                         anchor: `Aesop's fable`,
                                         wiki: `The_Tortoise_and_the_Hare`,
                                     },
-                                    `, but only because the hare falls asleep. Similarly, while tortoises live for over a century, I had them beat in longevity— so long as I chose the right faith.`,
+                                    `, but only because the hare falls asleep. Similarly, while tortoises can live for over a century, I had them beat in longevity— so long as I chose the right faith.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1673,7 +1673,7 @@ export default {
                         `has a`,
                         {
                             anchor: `mile less far to go`,
-                            todo: REVISE,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `"`,
