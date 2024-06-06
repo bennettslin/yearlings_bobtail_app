@@ -1133,7 +1133,7 @@ export default {
                     lyricRight: [
                         {
                             anchor: `didn't impart warmth`,
-                            todo: REVIEW,
+                            todo: REVISE,
                             card: {
                                 description: `But also like cellophane, Sasha couldn't reflect warmth where none was present. If I couldn't be the better person in dealing with the bullies, then there came a point when she'd need to keep her distance from me as well.`,
                                 dotKeys: {
@@ -1147,7 +1147,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
+                todo: REVISE,
                 card: {
                     description: [
                         `Recording vocals in doublespeaker rhyme proved to be trickier than expected, because when we sing, we tend to shorten or elongate syllables to adjust for phrasing and consonant clusters. And so the two voices would sound disjointed once heard together. To perform the syllables in perfect sync, I came up with a system of notation that somewhat looked like medieval`,
@@ -1338,7 +1338,7 @@ export default {
                         `when your`,
                         {
                             anchor: `day to die`,
-                            todo: REVIEW,
+                            todo: REVISE,
                             card: {
                                 description: [
                                     `As a child, I suffered from night terrors related to my fear of death. My mother tried to comfort me with the promise of reincarnation— but this simply filled me with greater dread. Because it wasn't just death that frightened me; it was a lifetime of hurtling toward it. And all that reincarnation offered was more rounds of the same.`,
@@ -1395,7 +1395,7 @@ export default {
                             anchor: `just play dumb`,
                             todo: REVIEW,
                             card: {
-                                description: `Neither heaven nor nirvana sounded all that pleasant, yet they were the best offers available, which confused me. Why wouldn't their appeal be self-evident to even the most thickheaded child?`,
+                                description: `Neither heaven nor nirvana sounded all that pleasant, yet they were the best offers available, which confused me. Why wouldn't their appeal be self-evident even to a thickheaded child?`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -1455,7 +1455,7 @@ export default {
                         `Yet your`,
                         {
                             anchor: `defeat of tortoise`,
-                            todo: REVIEW,
+                            todo: REVISE,
                             card: {
                                 description: [
                                     `The tortoise defeats the hare in`,
@@ -1667,7 +1667,7 @@ export default {
                         `has a`,
                         {
                             anchor: `mile less far to go`,
-                            todo: REVIEW,
+                            todo: REVISE,
                             card: {
                                 description: [
                                     `"`,

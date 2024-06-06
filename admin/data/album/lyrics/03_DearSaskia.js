@@ -13,6 +13,7 @@ import {
     REFRAIN,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Dear Saskia',
@@ -346,8 +347,9 @@ export default {
                         `staying kosher. Though, you know,`,
                         {
                             anchor: `I would have too`,
+                            todo: REVIEW,
                             card: {
-                                description: `Yet if Sasha were to want me, then of course I'd convert to Judaism. It made no sense to be loyal to my own cultural identity, which I'd had no hand in choosing.`,
+                                description: `Yet if Sasha were to want me, then of course I would convert to Judaism. It made no sense to be loyal to my own cultural identity, which I'd had no hand in choosing.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

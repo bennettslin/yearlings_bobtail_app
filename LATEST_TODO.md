@@ -1,6 +1,8 @@
 # Latest todo
-* Finish flagging revisions in Odin
-* Reviews and revisions in Pchelka
+* Make them all revises
+    * Put problem with any revise
+
+# Tomorrow todo
 * Allow annotations to be clicked in dashboard
 
 ### Must do
