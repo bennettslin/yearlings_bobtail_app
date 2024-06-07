@@ -8,7 +8,7 @@ import {
     getSongsAndLoguesCount,
 } from '../../../src/endpoint/album/songs'
 import { getArrayOfLength } from '../../../src/helpers/general'
-import { REVIEW, REVISE } from '../../containers/Annotations/constants/todos'
+import { REDO, REVIEW, REVISE } from '../../containers/Annotations/constants/todos'
 
 export const getHasOverviewTodo = (songIndex, key) => (
     key ?
@@ -37,12 +37,15 @@ const _getAnnotationTodosCount = key => {
         todoAnnotationTodosCount,
         todoAnnotationReviewsCount,
         todoAnnotationRevisionsCount,
+        todoAnnotationRedosCount,
     } = getAlbum()
     switch (key) {
         case REVIEW:
             return todoAnnotationReviewsCount
         case REVISE:
             return todoAnnotationRevisionsCount
+        case REDO:
+            return todoAnnotationRedosCount
     }
     return todoAnnotationTodosCount
 }
@@ -57,6 +60,10 @@ export const getTotalReviewsCount = () => (
 
 export const getTotalRevisionsCount = () => (
     _getOverviewTodosCount(REVISE) + _getAnnotationTodosCount(REVISE)
+)
+
+export const getTotalRedosCount = () => (
+    _getOverviewTodosCount(REDO) + _getAnnotationTodosCount(REDO)
 )
 
 export const getCountForSong = songIndex => (
@@ -87,6 +94,11 @@ export const getReviewsCountForSong = songIndex => (
 export const getRevisionsCountForSong = songIndex => (
     getHasOverviewTodo(songIndex, REVISE) +
     _getAnnotationTodosCountForSong(songIndex, REVISE)
+)
+
+export const getRedosCountForSong = songIndex => (
+    getHasOverviewTodo(songIndex, REDO) +
+    _getAnnotationTodosCountForSong(songIndex, REDO)
 )
 
 export const getSongsWithTodosCount = showAll => (

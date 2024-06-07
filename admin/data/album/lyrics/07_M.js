@@ -14,7 +14,7 @@ import {
     FLASHBACK_TO_WORMHOLE_PREFIX,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
-import { REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REDO, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'M',
@@ -568,7 +568,7 @@ export default {
                         `In a`,
                         {
                             anchor: `time capsule`,
-                            todo: REVISE,
+                            todo: REDO,
                             problem: `Make it more about not having any sympathetic ears today, so hoping for a sympathetic future audience tomorrow.`,
                             card: {
                                 description: [
@@ -650,7 +650,7 @@ export default {
                         `keeps me`,
                         {
                             anchor: `solely for a pet`,
-                            todo: REVISE,
+                            todo: REDO,
                             problem: `Make this more about The ways of belonging to a social scene were still so foreign to me. And yet, at this point, I did belong to one.`,
                             card: {
                                 description: `After Mara started dating Jacob, she continued to interact with me in the same manner, which made me realize that I'd misread her intentions all along. In retrospect, I was so unused to being treated with genial regard that it felt like being flirted with.`,
@@ -684,7 +684,7 @@ export default {
                         `is choked down my`,
                         {
                             anchor: `no-hope chest`,
-                            todo: REVISE,
+                            todo: REDO,
                             problem: `I just don't like the use of figurative and literal here.`,
                             cards: [
                                 {
@@ -872,7 +872,7 @@ export default {
                         `is that the`,
                         {
                             anchor: `boy who's to love her baby`,
-                            todo: REVISE,
+                            todo: REDO,
                             problem: `Last sentence runs on. Maybe don't use "in other words" after "in short."`,
                             card: {
                                 description: `In other words, the world is as innocent and unwitting as a newborn infant. So if a woman's list of ideal traits in a man includes what kind of father he'll be to her child, then she's likely to judge him by how he treats the world at large.`,
@@ -909,7 +909,7 @@ export default {
                         `it's up to me to`,
                         {
                             anchor: `be alert`,
-                            todo: REVISE,
+                            todo: REDO,
                             problem: `Make sure this is really saying what I want it to say.`,
                             card: {
                                 description: `It was no mystery why the situation with Mara transpired as it had. I'd simply misread it, and that was my fault. I found this thought empowering, because it meant the Maras of the world were still attainable. It was just on me to better understand what they wanted— and then I could build myself up to be exactly that.`,
@@ -934,7 +934,7 @@ export default {
                     lyric: [
                         {
                             anchor: `friends have to lie`,
-                            todo: REVISE,
+                            todo: REDO,
                             problem: `I don't think I like what this is saying. I don't really like the neck phrase. Make sure it flows from the previous one.`,
                             card: {
                                 description: `But I couldn't rely on my friends to be truthful about what I had to offer. As dear as we were to each other, they each had their own neck to protect.`,

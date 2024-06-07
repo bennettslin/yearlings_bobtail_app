@@ -1,5 +1,4 @@
 # Latest todo
-* Have separate redo and revise flags, but bunch them together?
 * Audit M
 
 # Tomorrow todo

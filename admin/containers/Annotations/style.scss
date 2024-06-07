@@ -90,8 +90,12 @@ $WIDTH_TODO_ANNOTATION_COLUMN:
     }
 }
 
-.TodoAnnotation__revise {
+.TodoAnnotation__redo {
     background-color: #ecc;
+}
+
+.TodoAnnotation__revise {
+    background-color: #eca;
 }
 
 .TodoAnnotation__review {

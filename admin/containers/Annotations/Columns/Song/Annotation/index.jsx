@@ -7,7 +7,7 @@ import { getTitleForAnnotation } from '../../../../../../src/endpoint/album/anno
 import { getAnnotationCardIndices } from '../../../../../../src/endpoint/album/cards'
 import { updateSelectedStore } from '../../../../../../src/redux/selected/action'
 import { getAnnotationTodo } from '../../../../../endpoint/album/todos'
-import { REVIEW, REVISE } from '../../../constants/todos'
+import { REDO, REVIEW, REVISE } from '../../../constants/todos'
 
 const TodoAnnotation = ({ songIndex, annotationIndex }) => {
     const
@@ -27,6 +27,7 @@ const TodoAnnotation = ({ songIndex, annotationIndex }) => {
             {...{
                 className: cx(
                     'TodoAnnotation',
+                    annotationTodo === REDO && 'TodoAnnotation__redo',
                     annotationTodo === REVISE && 'TodoAnnotation__revise',
                     annotationTodo === REVIEW && 'TodoAnnotation__review',
                     `TodoAnnotation-${songIndex}-${annotationIndex}`,

@@ -7,6 +7,7 @@ import {
 } from '../../../../../src/endpoint/album/songs'
 import {
     getCountForSong,
+    getRedosCountForSong,
     getReviewsCountForSong,
     getRevisionsCountForSong,
     getTodosCountForSong,
@@ -19,6 +20,7 @@ const TodoSongHeader = ({ songIndex, showAll }) => {
         todosCount = getTodosCountForSong(songIndex),
         reviewsCount = getReviewsCountForSong(songIndex),
         revisionsCount = getRevisionsCountForSong(songIndex),
+        redosCount = getRedosCountForSong(songIndex),
         percentageDone = parseInt(todosCount / totalCount * 100)
 
     return showAll || todosCount ? (
@@ -39,7 +41,7 @@ const TodoSongHeader = ({ songIndex, showAll }) => {
                 {getIndexedTitleForSong(songIndex)}
             </span>
             <span>
-                {revisionsCount} / {reviewsCount} / {totalCount} ({percentageDone}%)
+                {redosCount} / {revisionsCount} / {reviewsCount} / {totalCount} ({percentageDone}%)
             </span>
         </div>
     ) : null

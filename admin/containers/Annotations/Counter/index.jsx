@@ -5,6 +5,7 @@ import {
     getTotalTodosCount,
     getTotalReviewsCount,
     getTotalRevisionsCount,
+    getTotalRedosCount,
 } from '../../../endpoint/album/todos'
 
 const TodoCounter = () => {
@@ -13,6 +14,7 @@ const TodoCounter = () => {
         todosCount = getTotalTodosCount(),
         reviewsCount = getTotalReviewsCount(),
         revisionsCount = getTotalRevisionsCount(),
+        redosCount = getTotalRedosCount(),
         percentage = parseInt(
             todosCount / totalCount * 100,
         )
@@ -28,7 +30,7 @@ const TodoCounter = () => {
                 ),
             }}
         >
-            {revisionsCount} / {reviewsCount} / {totalCount} ({percentage}%)
+            {redosCount} / {revisionsCount} / {reviewsCount} / {totalCount} ({percentage}%)
         </div>
     )
 }

@@ -1,4 +1,4 @@
-import { REVISE } from '../../../containers/Annotations/constants/todos'
+import { REDO } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'epilogue',
@@ -9,7 +9,7 @@ export default {
      * song to repeat itself without the player ending first.
      */
     playerStartTime: 3576.7,
-    todo: REVISE,
+    todo: REDO,
     problem: `I just don't like it anymore. Redo most of it.`,
     overview: [
         [
