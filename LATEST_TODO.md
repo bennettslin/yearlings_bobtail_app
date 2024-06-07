@@ -1,7 +1,6 @@
 # Latest todo
-* Make them all revises
-    * Put problem with any revise
-* Audit Ash Wednesday
+* Fix wrong double quote in "Catherine vaut bien une messe"
+* Audit M
 
 # Tomorrow todo
 * Allow annotations to be clicked in dashboard

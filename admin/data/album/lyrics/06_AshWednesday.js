@@ -13,6 +13,7 @@ import {
     IS_UNIT_DOT,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
+import { REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Ash Wednesday',
@@ -23,6 +24,8 @@ export default {
     referenceDescription: `Darbuka in anacrusis`,
     playerStartTime: 967.569,
     mixStartTime: `0:01:03.51`,
+    todo: REVISE,
+    problem: `Is first sentence too wordy?`,
     overview: `My first girlfriend in college was Catherine, a nice Catholic girl and high school valedictorian, who didn't take kindly to my lack of reading habit and broke up with me right before Ash Wednesday. So I ashed my own forehead that day and tried to bump into her, hoping that if she could picture me as a good Catholic boy, I might get another chance. It didn't work, but I did grow into a habitual reader, and I have Catherine to thank for that.`,
     lyricUnits: [
         {
@@ -99,6 +102,8 @@ export default {
                     lyric: [
                         {
                             anchor: `where it commenced`,
+                            todo: REVISE,
+                            problem: `Make it more like I tried to.`,
                             card: {
                                 description: `The relationship with Catherine began much like my friendship with Sasha had years earlier: I latched onto the first female to show me kindness in a new environment, and then I made myself indispensable in small ways.`,
                                 dotKeys: {
@@ -155,6 +160,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVISE,
+                problem: `Go back to using juxtapose.`,
                 card: {
                     description: [
                         `For a song about two people who couldn't be any more different, I placed`,
@@ -221,8 +228,9 @@ export default {
                         `the`,
                         {
                             anchor: `last day she rose`,
+                            todo: REVIEW,
                             card: {
-                                description: `Jesus then rose on the third day.`,
+                                description: `He then rose on the third day.`,
                                 dotKeys: {
                                     [PUN]: true,
                                 },
@@ -231,8 +239,9 @@ export default {
                         `up and left, hers the`,
                         {
                             anchor: `sole assent`,
+                            todo: REVIEW,
                             card: {
-                                description: `It was Catherine who wanted the breakup, not me. But she was also leaving me behind in another sense, since her "soul" was the only one awaiting "ascent."`,
+                                description: `It was Catherine who wanted the breakup, not me. But she was also leaving me behind in another sense, as her "soul" was the only one awaiting "ascent."`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -290,9 +299,10 @@ export default {
                         `I purge, with a`,
                         {
                             anchor: `dirge she'd deride`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Up until then, I'd thought of songwriting as just a matter of coming up with melodies and chords. But Catherine appreciated music for its lyrics. And because mine at the time were of the nonsensical variety, she wasn't impressed by any of my songs that I played for her.`,
+                                    description: `Up until then, I'd thought of songwriting as just a matter of combining chords and melodies. But Catherine valued music for its lyrics— and because mine at the time were of the nonsensical variety, she was rarely impressed by any song that I played for her.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -333,6 +343,8 @@ export default {
                         `Oh Catherine,`,
                         {
                             anchor: `pressed for an opinion`,
+                            todo: REVISE,
+                            problem: `I don't like how the sentence is phrased.`,
                             cards: [
                                 {
                                     description: `Every so often I would ask Catherine for feedback on my lyrics, hoping that one day I could write a song to tug at her heartstrings.`,
@@ -368,6 +380,7 @@ export default {
                         `,"`,
                         {
                             anchor: `putting down her Joyce`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Her compliment is less than sincere, however, since referencing a poet studied by middle schoolers is hardly an impressive feat. And so, annoyed at being made to put down the Joyce novel she's reading, Catherine amuses herself by putting`,
@@ -375,7 +388,7 @@ export default {
                                         isItalic: true,
                                         lyric: `me`,
                                     },
-                                    `down— for thinking I could be the James Joyce of lyricists.`,
+                                    `down— for thinking that I could be the James Joyce of lyricists.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -408,6 +421,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
                         `Maqam is distinguished by its`,
@@ -425,7 +439,7 @@ export default {
                             anchor: `counter-melody`,
                             wiki: `Counter-melody`,
                         },
-                        `, I scored two separate parts, the second one with the instrument detuned by a quarter step. I then`,
+                        `, I scored two separate parts, with the instrument in the second one detuned a quarter step. I then`,
                         {
                             anchor: `overdubbed`,
                             wiki: `Overdubbing`,
@@ -458,6 +472,8 @@ export default {
                         `who tried but failed to win her heart`,
                         {
                             anchor: `poised with brains`,
+                            todo: REVISE,
+                            problem: `Try to make it more eloquent.`,
                             card: {
                                 description: `Catherine undervalued the artistic strengths I'd always counted on to cover up my many weaknesses. Which meant if I were ever to be worth keeping, then I simply couldn't have any weaknesses.`,
                                 dotKeys: {
@@ -472,9 +488,10 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
-                        `While a major third can be divided into equal whole steps in Western music, a minor third can only be divided unequally, between a whole step and a half. But quarter tones allow a minor third to be traversed in two equal steps, creating the sensation of a squished major third. I liked how this confused my ears, so I went overboard with these rapid-fire minor-third runs on the`,
+                        `While a major third gets divided into two whole steps in Western music, a minor third can only be divided between a whole and a half. But quarter tones allow a minor third to be traversed in two equal steps, creating the sensation of a squished major third. I liked how this confused my ears, so I went overboard with these rapid-fire minor-third runs on the`,
                         {
                             anchor: `Dobro`,
                             wiki: `Dobro`,
@@ -498,6 +515,8 @@ export default {
                         `And as I pace, stranded here`,
                         {
                             anchor: `outside her Shelta`,
+                            todo: REVISE,
+                            problem: `Too many short sentences. Mention again that Catherine is part Irish? Makes the connection to Joyce more obvious.`,
                             card: {
                                 description: [
                                     `The`,
@@ -527,9 +546,10 @@ export default {
                         `in`,
                         {
                             anchor: `famous raincoat`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `Catherine was the one who introduced me to the music of Leonard Cohen. It was her impassioned reading of his song "`,
+                                    `Catherine was the one who introduced me to the works of Leonard Cohen. It was her impassioned reading of his song "`,
                                     {
                                         anchor: `Famous Blue Raincoat`,
                                         wiki: `Famous_Blue_Raincoat`,
@@ -544,6 +564,8 @@ export default {
                         },
                         {
                             anchor: `unknown to roam`,
+                            todo: REVISE,
+                            problem: `First sentence, resolve plural term and the concept of being unknown.`,
                             cards: [
                                 {
                                     description: `If Catherine is a figurative Traveller, then I'm unwelcome to follow her itinerant community, which is well known to roam.`,
@@ -553,7 +575,7 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `"Raincoat" is a slang term for condoms, which might be unknown to "Rome" given the Catholic Church's stance against birth control. We had no need for them due to Catherine's vow not to engage in premarital sex.`,
+                                        `"Raincoat" is slang for condoms, which are unknown to "Rome" given the Catholic Church's stance against birth control. We had no need for them due to Catherine's vow not to engage in premarital sex.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -646,6 +668,8 @@ export default {
                         `for I lack the wit to spare a`,
                         {
                             anchor: `safe Algonquin abode`,
+                            todo: REVISE,
+                            problem: `Make clear whom "her" is referring to in the first sentence.`,
                             card: {
                                 description: [
                                     `Kateri Tekakwitha was born to a`,
@@ -658,12 +682,12 @@ export default {
                                         anchor: `Algonquin`,
                                         wiki: `Algonquin_people`,
                                     },
-                                    `woman who was taken away from her village. Dorothy Parker was a member of the`,
+                                    `woman who was taken away from her village; while Dorothy Parker was a member of the`,
                                     {
                                         anchor: `Algonquin Round Table`,
                                         wiki: `Algonquin_Round_Table`,
                                     },
-                                    `, a social circle of New York City writers known for their clever wit. So the reason Catherine broke up with me— I jokingly presume— is that I was taking her away from her smart circle of friends, being too dimwitted as I was to ever be allowed to meet them.`,
+                                    `, a social circle of New York City writers known for their clever wit. So the reason Catherine broke up with me— I presume in jest— is that I was taking her away from her smart circle of friends, being too dimwitted as I was to ever be allowed to meet them.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -868,6 +892,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVISE,
+                problem: `Don't say fit, as the next annotation says fitting.`,
                 card: {
                     // NOTE: Counterpoint is a wiki later in Garryowen.
                     description: [
@@ -876,7 +902,7 @@ export default {
                             anchor: `register`,
                             wiki: `Register_(music)`,
                         },
-                        `, I didn't realize the instruments would drown out my voice. To avoid redoing the tracks, I`,
+                        `, I didn't realize that the instruments would drown out my voice. To avoid redoing the tracks, I`,
                         {
                             anchor: `pitch shifted`,
                             wiki: `Pitch_shift`,
@@ -938,6 +964,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
                         `While fleshing out the lyrics in this chorus, I noticed that a handful of words in the first stanza are`,
@@ -945,7 +972,7 @@ export default {
                             anchor: `homophones`,
                             wiki: `Homophone`,
                         },
-                        `of their counterparts in the second. Like "mourn" with "morn," and "born" with "borne." So I tried to make the two stanzas match phonetically wherever possible, which gave me the idea for doublespeaker rhyme later on.`,
+                        `of their counterparts in the second. Like "mourn" with "morn," and "born" with "borne." So I tried to make the two stanzas match phonetically wherever possible, giving me the idea for doublespeaker rhyme later on.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
