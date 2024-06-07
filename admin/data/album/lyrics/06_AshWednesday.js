@@ -228,7 +228,6 @@ export default {
                         `the`,
                         {
                             anchor: `last day she rose`,
-                            todo: REVIEW,
                             card: {
                                 description: `He then rose on the third day.`,
                                 dotKeys: {
@@ -239,7 +238,6 @@ export default {
                         `up and left, hers the`,
                         {
                             anchor: `sole assent`,
-                            todo: REVIEW,
                             card: {
                                 description: `It was Catherine who wanted the breakup, not me. But she was also leaving me behind in another sense, as her "soul" was the only one awaiting "ascent."`,
                                 dotKeys: {
@@ -302,7 +300,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Up until then, I'd thought of songwriting as just a matter of combining chords and melodies. But Catherine valued music for its lyrics— and because mine at the time were of the nonsensical variety, she was rarely impressed by any song that I played for her.`,
+                                    description: `Up until then, I'd thought of songwriting as just a matter of combining chords and melodies. But Catherine valued music for its lyrics— and because mine at the time were of the nonsensical variety, she was rarely impressed by any song of mine that I played for her.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -380,7 +378,6 @@ export default {
                         `,"`,
                         {
                             anchor: `putting down her Joyce`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Her compliment is less than sincere, however, since referencing a poet studied by middle schoolers is hardly an impressive feat. And so, annoyed at being made to put down the Joyce novel she's reading, Catherine amuses herself by putting`,
@@ -388,7 +385,7 @@ export default {
                                         isItalic: true,
                                         lyric: `me`,
                                     },
-                                    `down— for thinking that I could be the James Joyce of lyricists.`,
+                                    `down— for thinking I could be the James Joyce of lyricists.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -421,7 +418,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `Maqam is distinguished by its`,
@@ -488,7 +484,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `While a major third gets divided into two whole steps in Western music, a minor third can only be divided between a whole and a half. But quarter tones allow a minor third to be traversed in two equal steps, creating the sensation of a squished major third. I liked how this confused my ears, so I went overboard with these rapid-fire minor-third runs on the`,
@@ -546,7 +541,6 @@ export default {
                         `in`,
                         {
                             anchor: `famous raincoat`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Catherine was the one who introduced me to the works of Leonard Cohen. It was her impassioned reading of his song "`,
@@ -972,7 +966,7 @@ export default {
                             anchor: `homophones`,
                             wiki: `Homophone`,
                         },
-                        `of their counterparts in the second. Like "mourn" with "morn," and "born" with "borne." So I tried to make the two stanzas match phonetically wherever possible, giving me the idea for doublespeaker rhyme later on.`,
+                        `of their counterparts in the second. Like "mourn" with "morn," and "born" with "borne." So I tried to make the two stanzas match phonetically wherever possible, which then gave me the idea for doublespeaker rhyme later on.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
