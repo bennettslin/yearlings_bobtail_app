@@ -24,9 +24,8 @@ export default {
     referenceDescription: `Darbuka in anacrusis`,
     playerStartTime: 967.569,
     mixStartTime: `0:01:03.51`,
-    todo: REVISE,
-    problem: `Is first sentence too wordy?`,
-    overview: `My first girlfriend in college was Catherine, a nice Catholic girl and high school valedictorian, who didn't take kindly to my lack of reading habit and broke up with me right before Ash Wednesday. So I ashed my own forehead that day and tried to bump into her, hoping that if she could picture me as a good Catholic boy, I might get another chance. It didn't work, but I did grow into a habitual reader, and I have Catherine to thank for that.`,
+    todo: REVIEW,
+    overview: `My first girlfriend in college was Catherine, a nice Catholic girl and high school valedictorian. We were very different people, partly due to my lack of reading habit, and as such, she broke up with me the evening before Ash Wednesday. So the next morning I ashed my own forehead and tried to bump into her, hoping that if she could picture me as a good Catholic boy, I might be given another chance. It didn't work, but I did grow into a habitual reader, and I have Catherine to thank for that.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -102,10 +101,9 @@ export default {
                     lyric: [
                         {
                             anchor: `where it commenced`,
-                            todo: REVISE,
-                            problem: `Make it more like I tried to.`,
+                            todo: REVIEW,
                             card: {
-                                description: `The relationship with Catherine began much like my friendship with Sasha had years earlier: I latched onto the first female to show me kindness in a new environment, and then I made myself indispensable in small ways.`,
+                                description: `The relationship with Catherine began like my friendship with Sasha had years earlier: I latched onto the first cute female to show me kindness in a new environment, and then I tried to make myself indispensable in small ways.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -160,11 +158,10 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVISE,
-                problem: `Go back to using juxtapose.`,
+                todo: REVIEW,
                 card: {
                     description: [
-                        `For a song about two people who couldn't be any more different, I placed`,
+                        `For a song about two people who couldn't be any more different, I juxtaposed`,
                         {
                             anchor: `Arabic maqam`,
                             wiki: `Arabic_maqam`,
@@ -174,7 +171,7 @@ export default {
                             anchor: `Renaissance polyphony`,
                             wiki: `Polyphony`,
                         },
-                        `in the lone chorus at the end.`,
+                        `in the chorus at the end.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,

@@ -1,5 +1,5 @@
 # Latest todo
-* See if other projects need smart quote fix
+* Have separate redo and revise flags, but bunch them together?
 * Audit M
 
 # Tomorrow todo
@@ -18,3 +18,4 @@
 * Upgrade React tooltip?
 * Annotations allow command click?
 * "Floater" problem again
+* See if other projects need smart quote fix

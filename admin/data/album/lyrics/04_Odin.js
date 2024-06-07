@@ -19,7 +19,7 @@ import {
     IS_UNIT_DOT,
     RESPONSE,
 } from '../../../../src/constants/lyrics'
-import { REVISE } from '../../../containers/Annotations/constants/todos'
+import { REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Odin',
@@ -455,11 +455,10 @@ export default {
                         },
                         {
                             anchor: `oriental`,
-                            todo: REVISE,
-                            problem: `I say "it" twice in a row.`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `When I was growing up, "Oriental" was just another word; it's even printed on my birth certificate. It became offensive at around the same time that "queer" was being reclaimed by the gay community. The latter approach always made more sense to me.`,
+                                    `When I was growing up, no one would think twice to say "Oriental"; it's even written on my birth certificate. The word became offensive at around the same time that "queer" was being reclaimed by the gay community. The latter approach always made more sense to me.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -473,8 +472,7 @@ export default {
                         `proves`,
                         {
                             anchor: `shibboleth`,
-                            todo: REVISE,
-                            problem: `Just doesn't flow well.`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     [
@@ -483,7 +481,7 @@ export default {
                                             anchor: `Book of Judges`,
                                             wiki: `Book_of_Judges`,
                                         },
-                                        `tells of a battle between two Israelite tribes. Afterward, the victors demanded of every straggler to say "`,
+                                        `tells of a battle that arose between two Israelite tribes, after which the victors demanded of any survivor to say "`,
                                         {
                                             anchor: `shibboleth`,
                                             wiki: `Shibboleth`,
@@ -677,7 +675,7 @@ export default {
                                         anchor: `Abraham`,
                                         wiki: `Abraham`,
                                     },
-                                    `. Still, God promised to make him into a great nation. And coming from a less favored lineage myself, I could only hope for similar recompense, as I was not to marry into Sasha's house.`,
+                                    `; still, God promised to make him into a great nation. And since I was not to marry into Sasha's house, given my own disfavored lineage, I could only hope for similar recompense.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
