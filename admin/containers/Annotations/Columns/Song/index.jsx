@@ -8,17 +8,17 @@ import {
     getShownAnnotationIndices,
 } from '../../../../endpoint/album/todos'
 
-const TodoSongColumn = ({ songIndex, showAll }) => {
+const TodoSongColumn = ({ songIndex, areDoneTodosHidden }) => {
     const
         songColumnElement = useRef(),
         hue = (songIndex - 1) / getSongsAndLoguesCount() * 360,
         hasOverviewTodo = getHasOverviewTodo(songIndex),
         shownAnnotationIndices = getShownAnnotationIndices({
             songIndex,
-            showAll,
+            areDoneTodosHidden,
         })
 
-    return showAll || shownAnnotationIndices.length || hasOverviewTodo ? (
+    return !areDoneTodosHidden || shownAnnotationIndices.length || hasOverviewTodo ? (
         <div
             {...{
                 ref: songColumnElement,
@@ -28,7 +28,7 @@ const TodoSongColumn = ({ songIndex, showAll }) => {
                 },
             }}
         >
-            {(showAll || hasOverviewTodo) && (
+            {(!areDoneTodosHidden || hasOverviewTodo) && (
                 <TodoOverview {...{ songIndex }} />
             )}
             {shownAnnotationIndices.map(annotationIndex => (
@@ -46,7 +46,7 @@ const TodoSongColumn = ({ songIndex, showAll }) => {
 
 TodoSongColumn.propTypes = {
     songIndex: PropTypes.number.isRequired,
-    showAll: PropTypes.bool.isRequired,
+    areDoneTodosHidden: PropTypes.bool.isRequired,
 }
 
 export default TodoSongColumn

@@ -5,7 +5,7 @@ import TodoSongHeader from './Song'
 import { getArrayOfLength } from '../../../../src/helpers/general'
 import { getSongsAndLoguesCount } from '../../../../src/endpoint/album/songs'
 
-const TodoHeaders = ({ showAll }) => (
+const TodoHeaders = ({ areDoneTodosHidden }) => (
     <div
         {...{
             className: cx(
@@ -20,7 +20,7 @@ const TodoHeaders = ({ showAll }) => (
                 {...{
                     key: index,
                     songIndex: index,
-                    showAll,
+                    areDoneTodosHidden,
                 }}
             />
         ))}
@@ -28,7 +28,7 @@ const TodoHeaders = ({ showAll }) => (
 )
 
 TodoHeaders.propTypes = {
-    showAll: PropTypes.bool.isRequired,
+    areDoneTodosHidden: PropTypes.bool.isRequired,
 }
 
 export default TodoHeaders

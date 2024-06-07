@@ -16,7 +16,7 @@ import { getBoolFromStorage, setBoolInStorage } from '../../../src/utils/storage
 import { CAROUSEL_TOGGLE_KEY, TEXT_JUSTIFIED_KEY } from '../../../src/constants/access'
 import './style'
 
-const SHOW_ALL_ANNOTATIONS_KEY = 'showAllAnnotations'
+const DONE_TODOS_HIDDEN_KEY = 'showAllAnnotations'
 
 const TodoAnnotations = () => {
     const
@@ -24,12 +24,12 @@ const TodoAnnotations = () => {
         dispatchTextJustified = useRef(),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         selectedAnnotationIndex = useSelector(mapSelectedAnnotationIndex),
-        [showAll, setShowAll] = useState(getBoolFromStorage(SHOW_ALL_ANNOTATIONS_KEY)),
+        [areDoneTodosHidden, setHideDoneTodos] = useState(getBoolFromStorage(DONE_TODOS_HIDDEN_KEY)),
         isTextJustified = useSelector(mapIsTextJustified)
 
-    const toggleShowTodos = () => {
-        setShowAll(!showAll)
-        setBoolInStorage(SHOW_ALL_ANNOTATIONS_KEY, !showAll)
+    const toggleDoneTodosHidden = () => {
+        setHideDoneTodos(!areDoneTodosHidden)
+        setBoolInStorage(DONE_TODOS_HIDDEN_KEY, !areDoneTodosHidden)
     }
 
     const onKeyDown = e => {
@@ -37,7 +37,7 @@ const TodoAnnotations = () => {
 
         switch (keyName) {
             case CAROUSEL_TOGGLE_KEY:
-                toggleShowTodos()
+                toggleDoneTodosHidden()
                 break
             case TEXT_JUSTIFIED_KEY:
                 dispatchTextJustified.current()
@@ -74,9 +74,9 @@ const TodoAnnotations = () => {
                 onKeyDown,
             }}
         >
-            <TodoColumns {...{ showAll }} />
-            <TodoHeaders {...{ showAll }} />
-            <TodoCounter {...{ toggleShowTodos }} />
+            <TodoColumns {...{ areDoneTodosHidden }} />
+            <TodoHeaders {...{ areDoneTodosHidden }} />
+            <TodoCounter {...{ areDoneTodosHidden }} />
             <TextJustifiedDispatcher {...{ ref: dispatchTextJustified }} />
         </div>
     )

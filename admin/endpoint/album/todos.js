@@ -50,10 +50,6 @@ const _getAnnotationTodosCount = key => {
     return todoAnnotationTodosCount
 }
 
-export const getTotalTodosCount = () => (
-    _getOverviewTodosCount() + _getAnnotationTodosCount()
-)
-
 export const getTotalReviewsCount = () => (
     _getOverviewTodosCount(REVIEW) + _getAnnotationTodosCount(REVIEW)
 )
@@ -81,11 +77,6 @@ const _getAnnotationTodosCountForSong = (songIndex, key) => {
     ), 0)
 }
 
-export const getTodosCountForSong = songIndex => (
-    getHasOverviewTodo(songIndex) +
-    _getAnnotationTodosCountForSong(songIndex)
-)
-
 export const getReviewsCountForSong = songIndex => (
     getHasOverviewTodo(songIndex, REVIEW) +
     _getAnnotationTodosCountForSong(songIndex, REVIEW)
@@ -101,19 +92,22 @@ export const getRedosCountForSong = songIndex => (
     _getAnnotationTodosCountForSong(songIndex, REDO)
 )
 
-export const getSongsWithTodosCount = showAll => (
+export const getSongsWithTodosCount = areDoneTodosHidden => (
     getArrayOfLength(getSongsAndLoguesCount()).reduce((count, songIndex) => (
         count + (
-            showAll ||
-            Boolean(getTodosCountForSong(songIndex))
+            !areDoneTodosHidden ||
+            Boolean(
+                getHasOverviewTodo(songIndex) +
+                _getAnnotationTodosCountForSong(songIndex),
+            )
         )
     ), 0)
 )
 
-export const getShownAnnotationIndices = ({ songIndex, showAll }) => (
+export const getShownAnnotationIndices = ({ songIndex, areDoneTodosHidden }) => (
     getAnnotationIndices(songIndex).filter(annotationIndex => (
         // Only show annotations left todo.
-        showAll ||
+        !areDoneTodosHidden ||
         getAnnotationTodo(songIndex, annotationIndex)
     ))
 )

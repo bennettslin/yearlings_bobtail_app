@@ -8,7 +8,7 @@ import { getSongsWithTodosCount } from '../../../endpoint/album/todos'
 import { getJsFromSass } from '../../../../src/helpers/format'
 import { WIDTH_TODO_ANNOTATION_COLUMN } from '../style.module'
 
-const TodoColumns = ({ showAll }) => (
+const TodoColumns = ({ areDoneTodosHidden }) => (
     <div
         {...{
             className: cx(
@@ -19,7 +19,7 @@ const TodoColumns = ({ showAll }) => (
             style: {
                 width: `${
                     getJsFromSass(WIDTH_TODO_ANNOTATION_COLUMN) *
-                    getSongsWithTodosCount(showAll)
+                    getSongsWithTodosCount(areDoneTodosHidden)
                 }px`,
             },
         }}
@@ -29,7 +29,7 @@ const TodoColumns = ({ showAll }) => (
                 {...{
                     key: index,
                     songIndex: index,
-                    showAll,
+                    areDoneTodosHidden,
                 }}
             />
         ))}
@@ -37,7 +37,7 @@ const TodoColumns = ({ showAll }) => (
 )
 
 TodoColumns.propTypes = {
-    showAll: PropTypes.bool.isRequired,
+    areDoneTodosHidden: PropTypes.bool.isRequired,
 }
 
 export default TodoColumns

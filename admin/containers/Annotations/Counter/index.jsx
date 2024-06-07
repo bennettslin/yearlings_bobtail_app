@@ -1,23 +1,19 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import cx from 'classnames'
 import {
     getTotalCount,
-    getTotalTodosCount,
     getTotalReviewsCount,
     getTotalRevisionsCount,
     getTotalRedosCount,
 } from '../../../endpoint/album/todos'
 
-const TodoCounter = () => {
+const TodoCounter = ({ areDoneTodosHidden }) => {
     const
         totalCount = getTotalCount(),
-        todosCount = getTotalTodosCount(),
         reviewsCount = getTotalReviewsCount(),
         revisionsCount = getTotalRevisionsCount(),
-        redosCount = getTotalRedosCount(),
-        percentage = parseInt(
-            todosCount / totalCount * 100,
-        )
+        redosCount = getTotalRedosCount()
 
     return (
         <div
@@ -30,9 +26,17 @@ const TodoCounter = () => {
                 ),
             }}
         >
-            {redosCount} / {revisionsCount} / {reviewsCount} / {totalCount} ({percentage}%)
+            {
+                areDoneTodosHidden ?
+                    `redo: ${redosCount} / revise: ${revisionsCount} / review: ${reviewsCount}` :
+                    `total: ${totalCount}`
+            }
         </div>
     )
+}
+
+TodoCounter.propTypes = {
+    areDoneTodosHidden: PropTypes.bool.isRequired,
 }
 
 export default TodoCounter

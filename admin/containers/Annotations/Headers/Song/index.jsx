@@ -10,20 +10,17 @@ import {
     getRedosCountForSong,
     getReviewsCountForSong,
     getRevisionsCountForSong,
-    getTodosCountForSong,
 } from '../../../../endpoint/album/todos'
 
-const TodoSongHeader = ({ songIndex, showAll }) => {
+const TodoSongHeader = ({ songIndex, areDoneTodosHidden }) => {
     const
         hue = (songIndex - 1) / getSongsAndLoguesCount() * 360,
         totalCount = getCountForSong(songIndex),
-        todosCount = getTodosCountForSong(songIndex),
         reviewsCount = getReviewsCountForSong(songIndex),
         revisionsCount = getRevisionsCountForSong(songIndex),
-        redosCount = getRedosCountForSong(songIndex),
-        percentageDone = parseInt(todosCount / totalCount * 100)
+        redosCount = getRedosCountForSong(songIndex)
 
-    return showAll || todosCount ? (
+    return !areDoneTodosHidden || reviewsCount || revisionsCount || redosCount ? (
         <div
             {...{
                 className: cx(
@@ -41,7 +38,11 @@ const TodoSongHeader = ({ songIndex, showAll }) => {
                 {getIndexedTitleForSong(songIndex)}
             </span>
             <span>
-                {redosCount} / {revisionsCount} / {reviewsCount} / {totalCount} ({percentageDone}%)
+                {
+                    areDoneTodosHidden ?
+                        `${redosCount} / ${revisionsCount} / ${reviewsCount}` :
+                        `total: ${totalCount}`
+                }
             </span>
         </div>
     ) : null
@@ -49,7 +50,7 @@ const TodoSongHeader = ({ songIndex, showAll }) => {
 
 TodoSongHeader.propTypes = {
     songIndex: PropTypes.number.isRequired,
-    showAll: PropTypes.bool.isRequired,
+    areDoneTodosHidden: PropTypes.bool.isRequired,
 }
 
 export default TodoSongHeader
