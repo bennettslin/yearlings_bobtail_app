@@ -37,14 +37,14 @@ export default {
     mixStartTime: `0:01:27.02`,
     playerReferenceTime: 756.159,
     playerStartTime: 755.661,
-    todo: REVIEW,
+    todo: REVISE,
+    problem: `Mission could be in separate sentence?`,
     overview: `As my years of getting bullied grew unbearable, a strange letter arrived in the mail with promises of spiritual answers. After I sent the requested payment, it was revealed to me that I belonged to a race of interstellar beings, and my mission was to shut myself off from the world. I did so by adopting an unresponsive manner like my brother, which made me feel a psychic bond with him. But as my sanity chipped away, I came to realize that I was in a mail-order cult…`,
     lyricUnits: [
         {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         {
@@ -88,7 +88,7 @@ export default {
                                                 wiki: `Beautiful_Losers`,
                                             },
                                         },
-                                        `, the character F. tires of getting bullied at the beach. So he signs up for the Charles Axis bodybuilding course advertised in a comic book— only to find out it's Charles Axis who bullies him. This absurd revelation sums up my mood whenever I reflect on where my own adventures in mail order ended up taking me.`,
+                                        `, the character F. tires of getting bullied at the beach. So he signs up for the Charles Axis bodybuilding course advertised in a comic book— only to find out that it's Charles Axis who bullies him. This absurd revelation perfectly sums up my mood whenever I reflect on where my own misadventures in mail order ended up taking me.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -127,6 +127,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 todo: REVISE,
+                problem: `First sentence is a little weird.`,
                 card: {
                     description: [
                         `In keeping with the theme of Russian dogs in space, two frenetically plucked mandolins capture the essence of the`,
@@ -169,7 +170,7 @@ export default {
                             anchor: `hit your baby brother`,
                             todo: REVIEW,
                             card: {
-                                description: `The times when I physically hurt my brother were actually rare. They just cast a long shadow in my memory. Since he could never understand or even acknowledge my remorse, I could never truly feel forgiven.`,
+                                description: `The times when I physically hurt my brother were actually rare. They just cast a long shadow in my memory. Since he could never understand or even acknowledge my remorse, I couldn't ever feel forgiven.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -201,6 +202,7 @@ export default {
                         {
                             anchor: `buy a fortress`,
                             todo: REVISE,
+                            problem: `Order of ideas, flow of words.`,
                             card: {
                                 description: `Since I was born in November, I had the option to ask for a combined birthday and Christmas gift. I always liked to hole up somewhere and work on projects undisturbed, so one year I asked my parents for a life-size wooden fort. Unfortunately, some toys were too pricey to count for even two gifts.`,
                                 dotKeys: {
@@ -234,6 +236,7 @@ export default {
                         {
                             anchor: `beneath your captain bed`,
                             todo: REVISE,
+                            problem: `Say the other side sat flush against the wall, with empty space beneath.`,
                             card: {
                                 description: [
                                     `I slept in a`,
@@ -258,6 +261,7 @@ export default {
                         {
                             anchor: `didn't hear a peep`,
                             todo: REVISE,
+                            problem: `First sentence needs to be better.`,
                             card: {
                                 description: `My brother would sit beside me for hours while playing by himself, without once speaking or interacting. It was a strange closeness we shared.`,
                                 dotKeys: {
@@ -278,7 +282,7 @@ export default {
                         lyric: [
                             {
                                 anchor: `Poor Sam Peabody`,
-                                todo: REVISE,
+                                todo: REVIEW,
                                 card: {
                                     description: [
                                         `When my family visited Canada one late summer, the`,
@@ -286,7 +290,7 @@ export default {
                                             anchor: `white-throated sparrow`,
                                             wiki: `White-throated_sparrow`,
                                         },
-                                        `was in breeding season, and we heard its song everywhere. I found the sound haunting and longed to hear it again ever afterward. "Poor Sam Peabody" is a mnemonic used by birdwatchers to mimic the song's cadence and pitch.`,
+                                        `was in breeding season. I found its whistle haunting and longed to hear it again ever afterward. "Poor Sam Peabody" is a mnemonic used by birdwatchers to mimic the cadence and pitch.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -313,7 +317,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Unfortunately, shrill protests against getting bullied are about as effective as the bleating of a calf being led to slaughter.`,
+                                    description: `Unfortunately, shrill protests against getting bullied are as effective as the bleating of a calf being led to slaughter.`,
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                     },
@@ -334,7 +338,7 @@ export default {
                             anchor: `your cape`,
                             todo: REVIEW,
                             card: {
-                                description: `I was well liked in elementary school, despite being small for my age and absorbed in my art projects. Not only was I harmless and unassuming, I would readily draw cartoon figures for those who asked. But the traits that once made me a hero now marked me as easy prey in middle school, and I was ill-prepared.`,
+                                description: `Despite being small for my age and absorbed in my art projects, I was well liked in elementary school. Not only was I harmless and unassuming, I would readily draw cartoon figures for those who asked. But the traits that once made me a hero now marked me as easy prey in middle school, and I was ill-prepared.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -356,7 +360,7 @@ export default {
                             anchor: `learn to kick it back`,
                             todo: REVIEW,
                             card: {
-                                description: `The most popular kids in middle school were the ones least concerned about being liked. This ran counter to my understanding that anything worth pursuing should be done wholeheartedly. Yet trying things their way didn't make me any more likable either.`,
+                                description: `The most popular kids in middle school were the ones who were least concerned about being liked, which ran counter to my understanding that anything worth having should be pursued wholeheartedly. Yet trying things their way didn't make me any more likable either.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -379,8 +383,9 @@ export default {
                         {
                             anchor: `Feigning sick`,
                             todo: REVISE,
+                            problem: `Too many short sentences in a row.`,
                             card: {
-                                description: `In earlier years, I was proud of my perfect attendance record. After the bullying began, I would skip school by faking illness. My mother noticed the change, but she trusted me enough not to press the issue.`,
+                                description: `In earlier years, I was proud of my perfect attendance record. But after the bullying began, I would skip school by faking illness. My mother noticed the change, but she trusted me enough not to press the issue.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -402,12 +407,12 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `In a well-known comic book ad at the time, a scrawny guy takes revenge on a bully after learning to build up his muscles, all thanks to`,
+                                    `In a well-known comic book ad at the time, a scrawny guy takes revenge on a bully after bulking up— all thanks to`,
                                     {
                                         anchor: `Charles Atlas`,
                                         wiki: `Charles_Atlas`,
                                     },
-                                    `'s bodybuilding guide.`,
+                                    `'s free bodybuilding guide.`,
                                 ],
                             },
                         },
@@ -433,7 +438,7 @@ export default {
                             anchor: `send-away offers`,
                             todo: REVIEW,
                             card: {
-                                description: `Since I had no friends in middle school, I would amuse myself by sending away for free samples offered in the back pages of my comic books. As a result, I got flooded with junk mail, which exposed me to even more offers. Then one day, I received a letter from RI Research, Special Human Being Laboratory.`,
+                                description: `Since I had no friends in middle school, I would amuse myself by sending away for free samples offered in the back pages of my comic books. As a result, I got flooded with junk mail— which exposed me to even more offers. Then one day, I received a letter from RI Research, Special Human Being Laboratory.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -459,7 +464,7 @@ export default {
                                         anchor: `red envelopes`,
                                         wiki: `Red_envelope`,
                                     },
-                                    `as a gift. My parents always insisted that this money must be saved for college. But desperate for answers, I blew it all on my correspondence with RI Research.`,
+                                    `as a gift. My parents always insisted that we had to save it all for college. But desperate for answers, I blew my entire savings on my correspondence with RI Research.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -486,9 +491,9 @@ export default {
                         `"`,
                         {
                             anchor: `Are you a Beyonder`,
-                            todo: REVISE,
+                            todo: REVIEW,
                             card: {
-                                description: `According to RI Research, Beyonders are an ancient race of beings who were born from the stars and then scattered across the universe. Those who made it to Earth adopted the likeness of human beings. Yet even with no memory of their origins, they're beset by a quiet discomfort that they don't truly belong.`,
+                                description: `According to RI Research, Beyonders are an ancient race of astral beings who were scattered across the universe. The ones who made it to Earth adopted the outer likeness of humans, whereupon they lost all memory of their stellar origins. Yet even so, they're beset by a silent discomfort that they don't truly belong.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -503,7 +508,8 @@ export default {
                         `Do you often feel like a`,
                         {
                             anchor: `wanderer lost`,
-                            todo: REVIEW,
+                            todo: REVISE,
+                            problem: `First sentence repeats the same idea.`,
                             card: {
                                 description: `The letter acknowledged my yearning for acceptance and spoke to my frustration that this basic need should go unmet. Having hit all the right nerves, it then shared hopeful news: RI Research believed that I might be a Beyonder— and now, after searching for so long, they'd found me.`,
                                 dotKeys: {
@@ -605,7 +611,7 @@ export default {
                         `Till`,
                         {
                             anchor: `in hunger they were led`,
-                            todo: REVISE,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Some of the dogs chosen for the Soviet space program were strays found on the streets of Moscow. This includes`,
@@ -613,7 +619,7 @@ export default {
                                         anchor: `Laika`,
                                         wiki: `Laika`,
                                     },
-                                    `, the first dog in orbit, whose death was intentional as her spacecraft wasn't designed to return. I could sympathize with Laika's plight of being helplessly thrust from one desperate circumstance to the next.`,
+                                    `, the first dog in orbit, whose death was intentional as her spacecraft wasn't designed to return. As a child, I could sympathize with Laika's plight of being thrust from one desperate circumstance to the next.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -698,10 +704,10 @@ export default {
                         {
                             anchor: `roots unknown to them`,
                             todo: REVISE,
-                            problem: `Too many similar length sentences.`,
+                            problem: `Too many similar length sentences. Change sentence order. Mention RI Research first, then mention that I didn't know it at the time?`,
                             card: {
                                 description: [
-                                    `I didn't know this at the time, but the notion of`,
+                                    `The notion of`,
                                     {
                                         anchor: `star people`,
                                         wiki: `Star_people_(New_Age_belief)`,
@@ -711,7 +717,7 @@ export default {
                                         anchor: `New Age`,
                                         wiki: `New_Age`,
                                     },
-                                    `belief in the '70s. Like Beyonders, star people have no recollection of their stellar origins. The letters from RI Research undoubtedly drew their material from this body of thought.`,
+                                    `belief, though I didn't know this at the time. Like Beyonders, star people have no memory of their astral origins. In retrospect, RI Research must have drawn their material from this body of thought.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -799,7 +805,8 @@ export default {
                         `But till then, here's`,
                         {
                             anchor: `how you're to live`,
-                            todo: REVIEW,
+                            todo: REVISE,
+                            problem: `Just phrase it better.`,
                             card: {
                                 description: `The letters cautioned me to keep myself separate from society. I realized my brother had been doing this all along, so I adopted a stoic composure like his.`,
                                 dotKeys: {
@@ -958,7 +965,7 @@ export default {
                                         anchor: `Omerta`,
                                         wiki: `Omertà`,
                                     },
-                                    `is the Mafia's code of silence, which discourages cooperation with authorities. I'm sure I wasn't the first kid who noticed similarities between the unspoken rules of the schoolyard and those of the criminal world.`,
+                                    `is the Mafia's code of silence, which discourages cooperation with authorities. I'm sure I wasn't the first kid who noticed similarities between the unspoken rules of the schoolyard and those of the criminal underworld.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -993,7 +1000,7 @@ export default {
                                         anchor: `cryptogram`,
                                         wiki: `Cryptogram`,
                                     },
-                                    `, the fewer clues it gives away, and thus the more difficult it is to solve. In the same vein, by not speaking or expressing emotion, I gave the bullies fewer openings to provoke a response from me. And the less they would bother to try.`,
+                                    `, the fewer clues it gives away, and thus the more difficult it is to solve. In the same vein, by not speaking or expressing emotion, I gave the bullies fewer openings to provoke a response from me— and then the less they bothered to try.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1264,7 +1271,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `A group of whales is called a pod. Because I wanted to belong to a social group, I couldn't ditch my "whales"— and thus I sought a metaphorical escape pod.`,
+                                    `A group of whales is known as a pod. Because I wanted to belong to a social group, I couldn't ditch my "whales"— and thus I sought a metaphorical escape pod.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -1311,7 +1318,7 @@ export default {
                             anchor: `hopped on drugs`,
                             todo: REVIEW,
                             card: {
-                                description: `Eventually a classmate accused me of taking drugs, and I got sent to the principal's office. When my mother came to pick me up, she chewed out the principal for suspecting that I could do such a thing. Since I was more responsive around authority figures, he agreed that the accusation didn't make sense and dropped it.`,
+                                description: `Eventually a classmate accused me of taking drugs, and I got sent to the principal's office. When my mother came to pick me up, she chewed out the principal for suspecting that I could do such a thing. Since I was more responsive around authority figures, he agreed that the accusation didn't make sense, and dropped it.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

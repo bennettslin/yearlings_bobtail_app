@@ -26,6 +26,7 @@ export default {
     mixStartTime: `0:01:22.94`,
     playerStartTime: 3332.826,
     todo: REVISE,
+    problem: `Phrasing is still off.`,
     overview: `Each night I dreamt of happily reuniting with Sita, only to wake in panic as the reality set in that I'd lost her forever. I lived in such dread of this cruel trick played by my unconscious mind, I would stay up until exhaustion overtook me— even as my conscious mind could only dwell in despair. I had no idea when this torment would end. The answer, I feared, was never.`,
     lyricUnits: [
         {
