@@ -13,7 +13,7 @@ import './style'
 const Anchor = forwardRef(({
     didMount,
     className,
-    href,
+    link,
     alwaysPointer,
     neverDeselects,
     isAnnotationTitle,
@@ -93,8 +93,8 @@ const Anchor = forwardRef(({
                         className,
                     ),
                 },
-                ...href && {
-                    href,
+                ...link && {
+                    href: link,
                     target: '_blank',
                 },
                 onClick,
@@ -120,7 +120,7 @@ const Anchor = forwardRef(({
                         isWikiAnchor,
                         neverDeselects:
                             neverDeselects ||
-                            Boolean(href) ||
+                            Boolean(link) ||
                             alwaysPointer,
                         text,
                         textConfig,
@@ -142,7 +142,7 @@ const Anchor = forwardRef(({
 Anchor.propTypes = {
     didMount: PropTypes.bool.isRequired,
     className: PropTypes.string,
-    href: PropTypes.string,
+    link: PropTypes.string,
     alwaysPointer: PropTypes.bool,
     neverDeselects: PropTypes.bool,
     isAnnotationTitle: PropTypes.bool,

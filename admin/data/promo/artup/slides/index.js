@@ -55,7 +55,7 @@ export default getFormattedSlideMetadata([
             `More on the`,
             {
                 anchor: `network effect`,
-                href: `https://en.wikipedia.org/wiki/Network_effect`,
+                link: `https://en.wikipedia.org/wiki/Network_effect`,
             },
             `.`,
         ],
@@ -74,7 +74,7 @@ export default getFormattedSlideMetadata([
             `More on`,
             {
                 anchor: `economies of scale`,
-                href: `https://en.wikipedia.org/wiki/Economies_of_scale`,
+                link: `https://en.wikipedia.org/wiki/Economies_of_scale`,
             },
             `.`,
         ],
@@ -93,7 +93,7 @@ export default getFormattedSlideMetadata([
             `This point is taken from Paul Graham's essay "`,
             {
                 anchor: `Startup = Growth`,
-                href: `http://www.paulgraham.com/growth.html`,
+                link: `http://www.paulgraham.com/growth.html`,
             },
             `."`,
         ],
@@ -126,7 +126,7 @@ export default getFormattedSlideMetadata([
             `Here's the`,
             {
                 anchor: `full quote`,
-                href: `https://www.goodreads.com/quotes/988332`,
+                link: `https://www.goodreads.com/quotes/988332`,
             },
             `from Steve Jobs.`,
         ],

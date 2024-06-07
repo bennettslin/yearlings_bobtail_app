@@ -108,7 +108,7 @@ const _replaceStraightWithSmartQuotes = text => {
 
 const _getIsLocationPath = key => (
     // Don't format anything that is part of a url path.
-    key === 'href' ||
+    key === 'link' ||
     key === 'wiki'
 )
 
