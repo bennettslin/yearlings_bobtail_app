@@ -1117,7 +1117,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `While Pchelka and Mushka successfully spent a day in orbit, there was an error upon reentry. To prevent the spacecraft from landing in hostile territory, the Soviets made it self-destruct, killing all onboard. But in this retelling, I as Pchelka somehow manage to avoid the sad fate that my brother as Mushka could not.`,
+                                    `While Pchelka and Mushka successfully spent a day in orbit, there was an error upon reentry. To prevent the spacecraft from landing in hostile territory, the Soviets had it self-destruct, killing all onboard. But in my retelling, I as Pchelka somehow manage to avoid the sad fate that my brother as Mushka could not.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1265,7 +1265,6 @@ export default {
                         `I couldn't ditch my wails, I`,
                         {
                             anchor: `needed the pod`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `A group of whales is known as a pod. Because I wanted to belong to a social group, I couldn't ditch my "whales"— and thus I sought a metaphorical escape pod.`,
@@ -1313,7 +1312,6 @@ export default {
                         `"Kids say you're`,
                         {
                             anchor: `hopped on drugs`,
-                            todo: REVIEW,
                             card: {
                                 description: `Eventually a classmate accused me of taking drugs, and I got sent to the principal's office. When my mother came to pick me up, she chewed out the principal for suspecting that I could do such a thing. Since I was more responsive around authority figures, he agreed that the accusation didn't make sense, and dropped it.`,
                                 dotKeys: {
@@ -1330,9 +1328,8 @@ export default {
                         `Mushka,`,
                         {
                             anchor: `per their bargain`,
-                            todo: REVIEW,
                             card: {
-                                description: `Though I faked autism only for a year or so, the social repercussions lasted much longer, since I was now and forever the kid who did that really weird thing once. It's not that I lacked the will to repair my standing. But I was just as confused as anyone else about what had possessed me, and there were no guide books instructing me where to go from there.`,
+                                description: `Though I faked autism for only a year or so, the social repercussions lasted much longer, since I was now and forever the kid who did that really weird thing once. It's not that I lacked the will to repair my standing. But I was just as confused as anyone else about what had possessed me, and there were no guide books instructing me where to go from there.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -1342,7 +1339,8 @@ export default {
                         `, I`,
                         {
                             anchor: `can't ever return`,
-                            todo: REVIEW,
+                            todo: REVISE,
+                            problem: `Not overtones, but overt.`,
                             card: {
                                 description: [
                                     `Regardless, I'd grown disillusioned with RI Research by this point, as the letters were starting to take on Christian overtones. It's not that I held Christianity to be definitively false. It was just incongruous with all the previous talk of extraterrestrial origins.`,
