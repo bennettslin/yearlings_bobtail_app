@@ -468,7 +468,7 @@ export default {
                             todo: REVISE,
                             problem: `Try to make it more eloquent.`,
                             card: {
-                                description: `Catherine undervalued the artistic strengths I'd always counted on to cover up my many weaknesses. Which meant if I were ever to be worth keeping, then I simply couldn't have any weaknesses.`,
+                                description: `Catherine undervalued the artistic strengths I'd always counted on to cover up my countless weaknesses. Which meant if I were ever to be worth keeping, then I simply couldn't have any weaknesses.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -507,8 +507,7 @@ export default {
                         `And as I pace, stranded here`,
                         {
                             anchor: `outside her Shelta`,
-                            todo: REVISE,
-                            problem: `Too many short sentences. Mention again that Catherine is part Irish? Makes the connection to Joyce more obvious.`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The`,
@@ -516,12 +515,12 @@ export default {
                                         anchor: `Irish Travellers`,
                                         wiki: `Irish_Travellers`,
                                     },
-                                    `are a predominantly Catholic ethnic group. They speak`,
+                                    `, a largely Catholic ethnic group, speak a secret language known as`,
                                     {
                                         anchor: `Shelta`,
                                         wiki: `Shelta`,
                                     },
-                                    `, a cryptic language intended to exclude outsiders from comprehension. Catherine wasn't a Traveller, but I was stuck outside her "shelter" all the same.`,
+                                    `that was historically meant to exclude outsiders. Catherine was only part Irish, and not a Traveller— but I was stuck outside her "shelter" all the same.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -555,18 +554,17 @@ export default {
                         },
                         {
                             anchor: `unknown to roam`,
-                            todo: REVISE,
-                            problem: `First sentence, resolve plural term and the concept of being unknown.`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `If Catherine is a figurative Traveller, then I'm unwelcome to follow her itinerant community, which is well known to roam.`,
+                                    description: `If Catherine is a figurative Traveller, then I'm unwelcome to follow her wandering community, which is well known to roam.`,
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                     },
                                 },
                                 {
                                     description: [
-                                        `"Raincoat" is slang for condoms, which are unknown to "Rome" given the Catholic Church's stance against birth control. We had no need for them due to Catherine's vow not to engage in premarital sex.`,
+                                        `"Raincoat" is slang for a condom, the benefit of which is unknown to "Rome," given the Catholic Church's stance against birth control. Since Catherine had vowed not to engage in premarital sex, we never needed to use one.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -659,8 +657,7 @@ export default {
                         `for I lack the wit to spare a`,
                         {
                             anchor: `safe Algonquin abode`,
-                            todo: REVISE,
-                            problem: `Make clear whom "her" is referring to in the first sentence.`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Kateri Tekakwitha was born to a`,
@@ -673,12 +670,12 @@ export default {
                                         anchor: `Algonquin`,
                                         wiki: `Algonquin_people`,
                                     },
-                                    `woman who was taken away from her village; while Dorothy Parker was a member of the`,
+                                    `woman who was taken from her own people; while Dorothy Parker was a member of the`,
                                     {
                                         anchor: `Algonquin Round Table`,
                                         wiki: `Algonquin_Round_Table`,
                                     },
-                                    `, a social circle of New York City writers known for their clever wit. So the reason Catherine broke up with me— I presume in jest— is that I was taking her away from her smart circle of friends, being too dimwitted as I was to ever be allowed to meet them.`,
+                                    `, a social circle famous for their intellectual wit. And so the reason Catherine broke up with me— I presume in jest— is that I was taking her away from her smart circle of friends, being too dimwitted as I was to ever be allowed to meet them.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -883,8 +880,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVISE,
-                problem: `Don't say fit, as the next annotation says fitting.`,
+                todo: REVIEW,
                 card: {
                     // NOTE: Counterpoint is a wiki later in Garryowen.
                     description: [
@@ -898,7 +894,7 @@ export default {
                             anchor: `pitch shifted`,
                             wiki: `Pitch_shift`,
                         },
-                        `them up an octave. This also gave them a ghostly sheen, which fits the ambience of a rain-soaked evening quite nicely.`,
+                        `them up an octave. This then gave them a ghostly sheen, which enhances the ambience of a rain-soaked evening.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
