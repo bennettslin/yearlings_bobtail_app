@@ -72,7 +72,6 @@ export default {
                             `"But F., that man is the`,
                             {
                                 anchor: `worst nuisance on the beach`,
-                                todo: REVIEW,
                                 card: {
                                     description: [
                                         `In a humorous passage from`,
@@ -168,9 +167,8 @@ export default {
                         `"Why'd you`,
                         {
                             anchor: `hit your baby brother`,
-                            todo: REVIEW,
                             card: {
-                                description: `The times when I physically hurt my brother were actually rare. They just cast a long shadow in my memory. Since he could never understand or even acknowledge my remorse, I couldn't ever feel forgiven.`,
+                                description: `The times when I physically hurt my brother were actually rare. They just cast a long shadow in my memory. Since he could never understand or even acknowledge my remorse, I could never feel forgiven.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -290,7 +288,7 @@ export default {
                                             anchor: `white-throated sparrow`,
                                             wiki: `White-throated_sparrow`,
                                         },
-                                        `was in breeding season. I found its whistle haunting and longed to hear it again ever afterward. "Poor Sam Peabody" is a mnemonic used by birdwatchers to mimic the cadence and pitch.`,
+                                        `was in breeding season. I found its birdsong haunting and longed to hear it again ever afterward. "Poor Sam Peabody" is a mnemonic used by birdwatchers to mimic its cadence and pitch.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -314,7 +312,6 @@ export default {
                         `Oh brother, when all you`,
                         {
                             anchor: `know is bleat`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `Unfortunately, shrill protests against getting bullied are as effective as the bleating of a calf being led to slaughter.`,
@@ -336,7 +333,8 @@ export default {
                         `they'll catch you by`,
                         {
                             anchor: `your cape`,
-                            todo: REVIEW,
+                            todo: REVISE,
+                            problem: `It's not despite, but because of.`,
                             card: {
                                 description: `Despite being small for my age and absorbed in my art projects, I was well liked in elementary school. Not only was I harmless and unassuming, I would readily draw cartoon figures for those who asked. But the traits that once made me a hero now marked me as easy prey in middle school, and I was ill-prepared.`,
                                 dotKeys: {
@@ -358,7 +356,8 @@ export default {
                         `till you`,
                         {
                             anchor: `learn to kick it back`,
-                            todo: REVIEW,
+                            todo: REVISE,
+                            problem: `Make connection more clear, having most friends.`,
                             card: {
                                 description: `The most popular kids in middle school were the ones who were least concerned about being liked, which ran counter to my understanding that anything worth having should be pursued wholeheartedly. Yet trying things their way didn't make me any more likable either.`,
                                 dotKeys: {
@@ -407,7 +406,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `In a well-known comic book ad at the time, a scrawny guy takes revenge on a bully after bulking up— all thanks to`,
+                                    `In a well-known comic book ad at the time, a scrawny guy takes his revenge on a bully by bulking up— all thanks to`,
                                     {
                                         anchor: `Charles Atlas`,
                                         wiki: `Charles_Atlas`,
@@ -436,7 +435,6 @@ export default {
                         `Soon`,
                         {
                             anchor: `send-away offers`,
-                            todo: REVIEW,
                             card: {
                                 description: `Since I had no friends in middle school, I would amuse myself by sending away for free samples offered in the back pages of my comic books. As a result, I got flooded with junk mail— which exposed me to even more offers. Then one day, I received a letter from RI Research, Special Human Being Laboratory.`,
                                 dotKeys: {
@@ -464,7 +462,7 @@ export default {
                                         anchor: `red envelopes`,
                                         wiki: `Red_envelope`,
                                     },
-                                    `as a gift. My parents always insisted that we had to save it all for college. But desperate for answers, I blew my entire savings on my correspondence with RI Research.`,
+                                    `as a gift. My parents always insisted that we save it all for college. But desperate for answers, I blew my savings on my correspondence with RI Research.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -491,9 +489,10 @@ export default {
                         `"`,
                         {
                             anchor: `Are you a Beyonder`,
-                            todo: REVIEW,
+                            todo: REVISE,
+                            problem: `Whereupon is too big a word.`,
                             card: {
-                                description: `According to RI Research, Beyonders are an ancient race of astral beings who were scattered across the universe. The ones who made it to Earth adopted the outer likeness of humans, whereupon they lost all memory of their stellar origins. Yet even so, they're beset by a silent discomfort that they don't truly belong.`,
+                                description: `According to RI Research, Beyonders are an ancient race of astral beings who were scattered across the universe. Those who made it to Earth adopted the likeness of humans, whereupon they lost all memory of their origins. Yet even so, they're beset by a silent discomfort that they don't truly belong.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -611,7 +610,6 @@ export default {
                         `Till`,
                         {
                             anchor: `in hunger they were led`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Some of the dogs chosen for the Soviet space program were strays found on the streets of Moscow. This includes`,
@@ -836,7 +834,7 @@ export default {
                             anchor: `partials`,
                             wiki: `Harmonic_series_(music)`,
                         },
-                        `, which impressed her greatly. My life ever since has been all about recapturing the glory of that moment.`,
+                        `, which impressed her greatly. I've been trying to recapture the glory of that moment ever since.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -958,7 +956,6 @@ export default {
                         `as`,
                         {
                             anchor: `omerta`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     {
@@ -1000,7 +997,7 @@ export default {
                                         anchor: `cryptogram`,
                                         wiki: `Cryptogram`,
                                     },
-                                    `, the fewer clues it gives away, and thus the more difficult it is to solve. In the same vein, by not speaking or expressing emotion, I gave the bullies fewer openings to provoke a response from me— and then the less they bothered to try.`,
+                                    `, the fewer clues it gives away, and thus the more difficult it is to solve. In the same vein, by not speaking or expressing emotion, I gave the bullies fewer openings to provoke a response from me— and the less they then bothered to try.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1024,7 +1021,7 @@ export default {
                                         anchor: `Achilles`,
                                         wiki: `Achilles`,
                                     },
-                                    `was invulnerable everywhere on his body except for his heel. In the same way, I might have had the strength to remain stoic forever, if not for my weakness of craving the acceptance of others.`,
+                                    `was invulnerable everywhere on his body except for his heel. In the same way, I might have had the strength to remain stoic forever, if not for my fatal weakness of craving the acceptance of others.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
