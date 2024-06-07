@@ -53,8 +53,9 @@ const _replaceStraightWithSmartQuotes = text => {
                      */
                     text[indexOfCharacter + 1] !== 's' &&
 
-                    // And the second character also isn't a colon.
+                    // And the second character also isn't a colon or em-dash.
                     text[indexOfCharacter + 1] !== ':' &&
+                    text[indexOfCharacter + 1] !== '—' &&
 
                     // And it isn't a parenthesis, in the onesheet.
                     text[indexOfCharacter + 1] !== ')' &&

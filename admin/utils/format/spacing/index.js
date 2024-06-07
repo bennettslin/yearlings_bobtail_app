@@ -49,6 +49,7 @@ const _prependWithSpaceIfNeeded = text => {
         text.startsWith(`'s`) ||
         text.startsWith(`" `) ||
         text.startsWith(`":`) ||
+        text.startsWith(`"—`) ||
         text.startsWith(`")`) ||
         text.startsWith(`)`) ||
         text.startsWith(`'`) ||

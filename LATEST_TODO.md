@@ -1,5 +1,5 @@
 # Latest todo
-* Fix wrong double quote in "Catherine vaut bien une messe"
+* See if other projects need smart quote fix
 * Audit M
 
 # Tomorrow todo
