@@ -1,9 +1,6 @@
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
-
 export default {
     title: 'prologue',
     isLogue: true,
-    todo: REVIEW,
     overview: [
         [
             `Hi, I'm Bennett! A long while back, after going through a horrible breakup, I set out to make an epic double album examining what had led up to my life at that point, from growing up with an autistic brother to joining a mail-order cult. So I hunkered down to write all the songs and record all the parts— and five years later,`,

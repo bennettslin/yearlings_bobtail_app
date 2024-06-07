@@ -19,7 +19,7 @@ import {
     IS_UNIT_DOT,
     RESPONSE,
 } from '../../../../src/constants/lyrics'
-import { REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Odin',
@@ -161,7 +161,6 @@ export default {
                         `This`,
                         {
                             anchor: `fridge's gallery in web's wake`,
-                            todo: REVIEW,
                             card: {
                                 description: `The cobwebs trailing from my clothes happen to cling to some of my drawings that I'd attached to the refrigerator, causing them to scatter onto the floor.`,
                                 dotKeys: {
@@ -385,7 +384,6 @@ export default {
                         {
                             // TODO: Metamorphosis wormhole?
                             anchor: `trading breath's bliss`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `As an amphibian, salamanders undergo`,
@@ -834,7 +832,6 @@ export default {
                         `be`,
                         {
                             anchor: `stored in this neck`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Due to another misreading, the phrase "man's swelling" in Biblical Hebrew entered the Western lexicon as "`,
@@ -1222,7 +1219,6 @@ export default {
                     ],
                     lyricRight: {
                         anchor: `shivaree towards shivah seat`,
-                        todo: REVIEW,
                         cards: [
                             {
                                 description: [
@@ -1344,7 +1340,6 @@ export default {
                         `when your`,
                         {
                             anchor: `day to die`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `As a child, I suffered from night terrors related to my fear of death. My mother tried to comfort me with the promise of reincarnation— but this only filled me with greater dread. Because it wasn't just death itself that frightened me; it was a lifetime of hurtling toward it. And all that reincarnation offered was more rounds of the same.`,
@@ -1399,7 +1394,6 @@ export default {
                         `and`,
                         {
                             anchor: `just play dumb`,
-                            todo: REVIEW,
                             card: {
                                 description: `Neither heaven nor nirvana sounded all that pleasant, yet these were the best offers available— which confused me. After all, shouldn't their appeal be self-evident even to a thickheaded child?`,
                                 dotKeys: {
@@ -1461,7 +1455,8 @@ export default {
                         `Yet your`,
                         {
                             anchor: `defeat of tortoise`,
-                            todo: REVIEW,
+                            todo: REVISE,
+                            problem: `I like provided that I end up choosing.`,
                             card: {
                                 description: [
                                     `The tortoise defeats the hare in`,
@@ -1673,7 +1668,6 @@ export default {
                         `has a`,
                         {
                             anchor: `mile less far to go`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `"`,

@@ -17,7 +17,6 @@ import {
     FLASHBACK_TO_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Willy the Cocoa',
@@ -1182,7 +1181,6 @@ export default {
                                 `'s cover`,
                             ],
                             properNoun: true,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `My favorite word as a child was "bobtail." I was just so proud of myself the day I realized that the line "Bells on bobtail ring," from the song "`,
