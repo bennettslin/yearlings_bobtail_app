@@ -24,6 +24,22 @@ $width__todoAnnotation:
 $WIDTH_TODO_ANNOTATION_COLUMN:
     $width__todoAnnotation + $padding__todoAnnotationSongColumn * 2;
 
+.colour__todo {
+    background-color: hsla(240, 0%, 65%, 0.7);
+}
+
+.colour__redo {
+    background-color: #ebb;
+}
+
+.colour__revise {
+    background-color: #eeb;
+}
+
+.colour__review {
+    background-color: #beb;
+}
+
 .TodoAnnotations {
     font-size: 1.1em; // Same as root container
 }
@@ -45,11 +61,6 @@ $WIDTH_TODO_ANNOTATION_COLUMN:
     padding: $padding__todoAnnotation;
     border-top-left-radius: $padding__todoAnnotationSongColumn;
     font-size: $fontSize__todoAnnotation;
-}
-
-.TodoCounter__button {
-    margin-left: $padding__todoAnnotation;
-    background-color: #bff;
 }
 
 .TodoHeaders {
@@ -79,7 +90,6 @@ $WIDTH_TODO_ANNOTATION_COLUMN:
 }
 
 .TodoAnnotation {
-    background-color: #cec;
     border-radius: $padding__annotationCard;
     padding: $padding__todoAnnotation;
     width: $width__todoAnnotation;
@@ -88,18 +98,6 @@ $WIDTH_TODO_ANNOTATION_COLUMN:
     &:not(:first-child) {
         margin-top: $padding__todoAnnotation;
     }
-}
-
-.TodoAnnotation__redo {
-    background-color: #ecc;
-}
-
-.TodoAnnotation__revise {
-    background-color: #eca;
-}
-
-.TodoAnnotation__review {
-    background-color: #eec;
 }
 
 .TodoAnnotationHeader,

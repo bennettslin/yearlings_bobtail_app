@@ -27,9 +27,10 @@ const TodoAnnotation = ({ songIndex, annotationIndex }) => {
             {...{
                 className: cx(
                     'TodoAnnotation',
-                    annotationTodo === REDO && 'TodoAnnotation__redo',
-                    annotationTodo === REVISE && 'TodoAnnotation__revise',
-                    annotationTodo === REVIEW && 'TodoAnnotation__review',
+                    'colour__todo',
+                    annotationTodo === REDO && 'colour__redo',
+                    annotationTodo === REVISE && 'colour__revise',
+                    annotationTodo === REVIEW && 'colour__review',
                     `TodoAnnotation-${songIndex}-${annotationIndex}`,
                 ),
             }}

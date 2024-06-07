@@ -10,10 +10,14 @@ import {
 import { getArrayOfLength } from '../../../src/helpers/general'
 import { REDO, REVIEW, REVISE } from '../../containers/Annotations/constants/todos'
 
+export const getOverviewTodo = songIndex => (
+    getSong(songIndex).todo
+)
+
 export const getHasOverviewTodo = (songIndex, key) => (
     key ?
-        getSong(songIndex).todo === key :
-        Boolean(getSong(songIndex).todo)
+        getOverviewTodo(songIndex) === key :
+        Boolean(getOverviewTodo(songIndex))
 )
 
 export const getAnnotationTodo = (songIndex, annotationIndex) => {

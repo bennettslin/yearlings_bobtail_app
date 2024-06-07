@@ -1,3 +1,16 @@
+@import '../../../../../../src/scss/constants/border';
+
+.TodoOverviewContainer {
+    padding: 10px;
+
+    border-radius: $borderRadius__wider;
+    box-shadow: 0 2px 2px 2px rgba(75, 75, 100, 0.4);
+}
+
+.OverviewPopupViewContent {
+    box-shadow: 0 1px 1px 1px rgba(75, 75, 100, 0.4);
+}
+
 .OverviewText {
     display: flex;
     flex-direction: column;

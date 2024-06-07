@@ -1,8 +1,10 @@
 # Latest todo
-* Audit M
-
-# Tomorrow todo
 * Allow annotations to be clicked in dashboard
+    * Change hrefProp to something else
+    * Always have href on Anchor tag
+    * Prevent wiki href by default, programmatically show wiki
+    * When Command key is pressed, disable Javascript
+* Audit M
 
 ### Must do
 * Illustrator
