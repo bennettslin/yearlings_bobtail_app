@@ -264,7 +264,7 @@ export default {
                             anchor: `BART`,
                             wiki: `Bay_Area_Rapid_Transit`,
                         },
-                        `trains braking in a subway tunnel beneath the sidewalk. I made the tracks by overblowing individual pitches and then splicing those together to form descending`,
+                        `trains braking in a subway tunnel below the sidewalk. I made the tracks by overblowing individual pitches and then splicing those together to form descending`,
                         {
                             anchor: `arpeggios`,
                             wiki: `Arpeggio`,

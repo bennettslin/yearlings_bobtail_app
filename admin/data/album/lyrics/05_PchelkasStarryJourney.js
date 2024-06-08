@@ -37,9 +37,8 @@ export default {
     mixStartTime: `0:01:27.02`,
     playerReferenceTime: 756.159,
     playerStartTime: 755.661,
-    todo: REVISE,
-    problem: `Mission could be in separate sentence?`,
-    overview: `As my years of getting bullied grew unbearable, a strange letter arrived in the mail with promises of spiritual answers. After I sent the requested payment, it was revealed to me that I belonged to a race of interstellar beings, and my mission was to shut myself off from the world. I did so by adopting an unresponsive manner like my brother, which made me feel a psychic bond with him. But as my sanity chipped away, I came to realize that I was in a mail-order cult…`,
+    todo: REVIEW,
+    overview: `As my years of getting bullied grew unbearable, a strange letter arrived in the mail with promises of spiritual answers. After I sent the requested payment, it was revealed to me that I belonged to a race of interstellar beings. I was also given a mission: to shut myself off from the world. I did so by adopting an unresponsive manner like my brother, which made me feel a psychic bond with him. But as my sanity chipped away, I came to realize that I was in a mail-order cult…`,
     lyricUnits: [
         {
             unitMap: {},
@@ -125,18 +124,17 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVISE,
-                problem: `First sentence is a little weird.`,
+                todo: REVIEW,
                 card: {
                     description: [
-                        `In keeping with the theme of Russian dogs in space, two frenetically plucked mandolins capture the essence of the`,
+                        `In keeping with the theme of Russian dogs in space, two palm-muted mandolins capture the frenetic pulse of the`,
                         {
                             anchor: `balalaika`,
                             wiki: `Balalaika`,
                         },
-                        `. Since Tuva is a republic of Russia, I added`,
+                        `. Since Tuva is a republic of Russia, I also added`,
                         {
-                            anchor: `Tuvan throat singing`,
+                            anchor: `throat singing`,
                             wiki: `Tuvan_throat_singing`,
                         },
                         `, where overtones in a lone voice sound like accompaniment by a second one. I liked the implication that my brother sings with me in spirit.`,
@@ -199,10 +197,9 @@ export default {
                         `when you wanted to`,
                         {
                             anchor: `buy a fortress`,
-                            todo: REVISE,
-                            problem: `Order of ideas, flow of words.`,
+                            todo: REVIEW,
                             card: {
-                                description: `Since I was born in November, I had the option to ask for a combined birthday and Christmas gift. I always liked to hole up somewhere and work on projects undisturbed, so one year I asked my parents for a life-size wooden fort. Unfortunately, some toys were too pricey to count for even two gifts.`,
+                                description: `Since I liked to hole up and work on projects undisturbed, one year I asked my parents for a life-size wooden fort as a combined birthday and Christmas present. Unfortunately, some toys were too pricey to even count for two gifts.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -233,8 +230,7 @@ export default {
                         `You stowed away`,
                         {
                             anchor: `beneath your captain bed`,
-                            todo: REVISE,
-                            problem: `Say the other side sat flush against the wall, with empty space beneath.`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `I slept in a`,
@@ -242,7 +238,7 @@ export default {
                                         anchor: `captain bed`,
                                         wiki: `Storage_bed`,
                                     },
-                                    `that lay atop a dresser on one side. There was nothing beneath on the other side, which sat flush against the wall. By crawling through its cabinet door and squeezing past the flimsy back panel, I could access the hidden space behind the dresser.`,
+                                    `that lay atop a dresser on one side, while the other side sat flush against the wall. The dresser was half as deep as the bed was wide, creating a spacious hideout that I could access by crawling through its cabinet door and squeezing past the flimsy back panel.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -258,10 +254,9 @@ export default {
                         `We`,
                         {
                             anchor: `didn't hear a peep`,
-                            todo: REVISE,
-                            problem: `First sentence needs to be better.`,
+                            todo: REVIEW,
                             card: {
-                                description: `My brother would sit beside me for hours while playing by himself, without once speaking or interacting. It was a strange closeness we shared.`,
+                                description: `My brother would play by himself while sitting beside me for hours, never once speaking or interacting. It was a strange closeness we shared.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -332,10 +327,9 @@ export default {
                         `they'll catch you by`,
                         {
                             anchor: `your cape`,
-                            todo: REVISE,
-                            problem: `It's not despite, but because of.`,
+                            todo: REVIEW,
                             card: {
-                                description: `Despite being small for my age and absorbed in my art projects, I was well liked in elementary school. Not only was I harmless and unassuming, I would readily draw cartoon figures for those who asked. But the traits that once made me a hero now marked me as easy prey in middle school, and I was ill-prepared.`,
+                                description: `In elementary school, I was well liked. Being small for my age, I was harmless and unassuming; and because I was always drawing in my notebooks, I would happily draw an animal or cartoon figure for anyone who asked. But the traits that once made me a hero now marked me as easy prey in middle school, and I was ill-prepared.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -355,10 +349,9 @@ export default {
                         `till you`,
                         {
                             anchor: `learn to kick it back`,
-                            todo: REVISE,
-                            problem: `Make connection more clear, having most friends.`,
+                            todo: REVIEW,
                             card: {
-                                description: `The most popular kids in middle school were the ones who were least concerned about being liked, which ran counter to my understanding that anything worth having should be pursued wholeheartedly. Yet trying things their way didn't make me any more likable either.`,
+                                description: `The most popular kids in middle school were also the least concerned about being liked, which ran counter to my understanding that anything worth having should be pursued wholeheartedly. Yet trying things their way didn't make me any more likable either.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -380,10 +373,9 @@ export default {
                     lyric: [
                         {
                             anchor: `Feigning sick`,
-                            todo: REVISE,
-                            problem: `Too many short sentences in a row.`,
+                            todo: REVIEW,
                             card: {
-                                description: `In earlier years, I was proud of my perfect attendance record. But after the bullying began, I would skip school by faking illness. My mother noticed the change, but she trusted me enough not to press the issue.`,
+                                description: `In earlier years, I was proud of my perfect attendance record. Once the bullying began, however, I would skip school by faking illness. My mother noticed the change, but she trusted me enough not to press the issue.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -460,7 +452,7 @@ export default {
                                         anchor: `red envelopes`,
                                         wiki: `Red_envelope`,
                                     },
-                                    `as a gift. My parents always insisted that it all had to be saved for college. But desperate for answers, I blew my entire savings on my correspondence with RI Research.`,
+                                    `as a gift. My parents insisted that all of it needed to be saved for college. But desperate for answers, I blew my entire savings on my correspondence with RI Research.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -487,10 +479,9 @@ export default {
                         `"`,
                         {
                             anchor: `Are you a Beyonder`,
-                            todo: REVISE,
-                            problem: `Whereupon is too big a word.`,
+                            todo: REVIEW,
                             card: {
-                                description: `According to RI Research, Beyonders are an ancient race of astral beings who were scattered across the universe. Those who made it to Earth adopted the likeness of humans, whereupon they lost all memory of their origins. Yet even so, they're beset by a silent discomfort that they don't truly belong.`,
+                                description: `According to RI Research, Beyonders are an ancient race of astral beings who were scattered across the universe. The ones who made it to Earth adopted the outer likeness of humans, after which they lost all memory of their origins. Yet even so, they're beset by a silent discomfort that they don't truly belong.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -505,10 +496,9 @@ export default {
                         `Do you often feel like a`,
                         {
                             anchor: `wanderer lost`,
-                            todo: REVISE,
-                            problem: `First sentence repeats the same idea.`,
+                            todo: REVIEW,
                             card: {
-                                description: `The letter acknowledged my yearning for acceptance and spoke to my frustration that this basic need should go unmet. Having hit all the right nerves, it then shared hopeful news: RI Research believed that I might be a Beyonder— and now, after searching for so long, they'd found me.`,
+                                description: `The letter spoke to my frustration that my yearning for acceptance should go unfulfilled. Having hit all the right nerves, it then shared hopeful news: RI Research believed that I might be a Beyonder. And now— after searching for so long— they'd found me.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -713,7 +703,7 @@ export default {
                                         anchor: `New Age`,
                                         wiki: `New_Age`,
                                     },
-                                    `belief, though I didn't know this at the time. Like Beyonders, star people have no memory of their astral origins. In retrospect, RI Research must have drawn their material from this body of thought.`,
+                                    `belief, though I didn't know this at the time. Like Beyonders, star people have no memory of their astral origins. In retrospect, RI Research must have drawn some of their material from this body of thought.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -1052,7 +1042,7 @@ export default {
                             problem: `Use complete sentences.`,
                             cards: [
                                 {
-                                    description: `But this only exposed me to greater scrutiny, as I was now forced to explain my past behavior.`,
+                                    description: `But opening up only exposed me to greater scrutiny, as I was now forced to explain my past behavior.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -1335,11 +1325,10 @@ export default {
                         `, I`,
                         {
                             anchor: `can't ever return`,
-                            todo: REVISE,
-                            problem: `Not overtones, but overt.`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `Regardless, I'd grown disillusioned with RI Research by this point, as the letters were starting to take on Christian overtones. It's not that I held Christianity to be definitively false. It was just incongruous with all the previous talk of extraterrestrial origins.`,
+                                    `Regardless, I'd grown disillusioned with RI Research by this point, as the letters became overtly Christian in their message. It's not that I held Christianity to be conclusively false; it was just incongruous with all the previous talk of extraterrestrial origins.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,

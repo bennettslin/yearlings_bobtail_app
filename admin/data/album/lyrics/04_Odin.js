@@ -122,7 +122,7 @@ export default {
                         {
                             anchor: `hiding place of retreat`,
                             card: {
-                                description: `The "asleep" voice of the doublespeaker pair narrates a dream that melds the familiar setting of Los Angeles with the foreign sights of Taiwan. Having been absorbed in my drawings well into nighttime, I crawl out from the dusty space beneath my bed at home.`,
+                                description: `The "asleep" voice of the doublespeaker pair narrates a dream that melds the familiar setting of Los Angeles with the foreign sights of Taiwan. Having been absorbed in my drawings well into nighttime, I crawl out from the dusty space underneath my bed at home.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -372,7 +372,7 @@ export default {
                         {
                             anchor: `crevice rays`,
                             card: {
-                                description: `My grandmother's house at night was pitch black. So whenever I woke to use the bathroom, I had to tiptoe to the bedroom door, guided only by a sliver of moonlight peeking in from underneath.`,
+                                description: `My grandmother's house at night was pitch black. So whenever I woke to use the bathroom, I had to tiptoe to the bedroom door, guided only by a sliver of moonlight peeking in from beneath.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

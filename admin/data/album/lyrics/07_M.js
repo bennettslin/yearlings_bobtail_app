@@ -188,7 +188,7 @@ export default {
                             anchor: `mystery mensch`,
                             todo: REVIEW,
                             card: {
-                                description: `Unlike me, my older sister was popular in high school. So she always had the latest gossip to tell me, like anytime a girl crushed on me from afar— which wasn't often, but it did happen. And thus, I knew there was some mystique to my image as an artsy loner. My mission now was simply to ensure that something of actual substance lay beneath.`,
+                                description: `Unlike me, my older sister was popular in high school. So she always had the latest gossip to tell me, like anytime a girl crushed on me from afar— which wasn't often, but it did happen. And thus, I knew there was some mystique to my image as an artsy loner. My mission now was to ensure that something of actual substance lay underneath.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
