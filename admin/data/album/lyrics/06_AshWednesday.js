@@ -158,7 +158,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `For a song about two people who couldn't be any more different, I juxtaposed`,
@@ -294,10 +293,9 @@ export default {
                         `I purge, with a`,
                         {
                             anchor: `dirge she'd deride`,
-                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Up until then, I'd thought of songwriting as just a matter of combining chords and melodies. But Catherine valued music for its lyrics— and because mine at the time were of the nonsensical variety, she was rarely impressed by any song of mine that I played for her.`,
+                                    description: `Up until then, I'd thought of songwriting as just a matter of combining chords and melodies. But Catherine valued music for its lyrics— and because mine at the time were of the nonsensical variety, she was never impressed by any song of mine that I played for her.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -520,7 +518,7 @@ export default {
                                         anchor: `Shelta`,
                                         wiki: `Shelta`,
                                     },
-                                    `that was historically meant to exclude outsiders. Catherine was only part Irish, and not a Traveller— but I was stuck outside her "shelter" all the same.`,
+                                    `that was historically intended to exclude outsiders. Catherine was only part Irish— and not a Traveller— but I was stuck outside her "shelter" all the same.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -554,7 +552,8 @@ export default {
                         },
                         {
                             anchor: `unknown to roam`,
-                            todo: REVIEW,
+                            todo: REVISE,
+                            problem: `Don't reiterate roam. Make comparison with me being a homebody.`,
                             cards: [
                                 {
                                     description: `If Catherine is a figurative Traveller, then I'm unwelcome to follow her wandering community, which is well known to roam.`,
@@ -657,7 +656,6 @@ export default {
                         `for I lack the wit to spare a`,
                         {
                             anchor: `safe Algonquin abode`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Kateri Tekakwitha was born to a`,
@@ -880,7 +878,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     // NOTE: Counterpoint is a wiki later in Garryowen.
                     description: [
@@ -894,7 +891,7 @@ export default {
                             anchor: `pitch shifted`,
                             wiki: `Pitch_shift`,
                         },
-                        `them up an octave. This then gave them a ghostly sheen, which enhances the ambience of a rain-soaked evening.`,
+                        `them up an octave. This then gave them a ghostly sheen, which enhances the mood of a rain-soaked evening.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -951,7 +948,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `While fleshing out the lyrics in this chorus, I noticed that a handful of words in the first stanza are`,
