@@ -112,7 +112,6 @@ export default {
                         `I was a lad bent on`,
                         {
                             anchor: `learning the talents`,
-                            todo: REVIEW,
                             card: {
                                 description: `It's not that I'd done anything wrong to make Catherine break up with me; I just didn't have much to offer. For this reason, it seemed illogical to pursue my next relationship in the same manner. To secure all future chances, I needed to take time off and build up a surplus of attractive traits. So I started with the ones that Catherine valued most.`,
                                 dotKeys: {
@@ -189,7 +188,7 @@ export default {
                             anchor: `mystery mensch`,
                             todo: REVIEW,
                             card: {
-                                description: `Unlike me, my older sister was popular in high school. So she always had the latest gossip to tell me, like anytime a girl crushed on me from afar— which wasn't often, but it did happen. Thus, I knew there was some mystique to my image as an artsy loner. My mission now was simply to ensure that something of actual substance lay beneath.`,
+                                description: `Unlike me, my older sister was popular in high school. So she always had the latest gossip to tell me, like anytime a girl crushed on me from afar— which wasn't often, but it did happen. And thus, I knew there was some mystique to my image as an artsy loner. My mission now was simply to ensure that something of actual substance lay beneath.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -290,7 +289,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Year five`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The Soviet Union's first five-year plan was also its most brutal, as the forced industrialization of its agrarian societies led to widespread famine and death. Similarly, given how far behind I was starting out, it was naive to think that my own five-year plan for accelerated growth could be free of unintended consequences.`,
@@ -309,7 +307,6 @@ export default {
                         `spent her`,
                         {
                             anchor: `wishes on a friend`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Toward the end of my five-year plan, the Yearlings began to play local shows. I was thrilled the day Mara showed up in the audience— but it was Jacob who caught her eye. I felt like the`,
@@ -427,7 +424,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `Being a`,
@@ -463,9 +459,8 @@ export default {
                         `, I'll probably`,
                         {
                             anchor: `die pushing forty`,
-                            todo: REVIEW,
                             card: {
-                                description: `Like the Soviets, I needed to take in stride the failures of my first five-year plan. Having banked on rapid character growth, I couldn't cut my losses now; I had nothing to my name other than what the next five-year plan might gain for me. Or failing that, the next one after… Yet five years is a serious chunk of lifetime to parcel out all at once! And I only had so many decades remaining. The occasion, then, was ripe to reflect on my mortality…`,
+                                description: `Like the Soviets, I needed to take in stride the failures of my first five-year plan. Having banked on rapid character growth, I couldn't cut my losses now; I had nothing to my name other than what the next five-year plan might gain for me. Or failing that, the next one after… Yet five years is a serious chunk of lifetime to parcel out all at once, and I only had so many decades remaining. The occasion, then, was ripe to reflect on my mortality…`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -837,7 +832,7 @@ export default {
                             anchor: `world's a naked baby`,
                             todo: REVIEW,
                             card: {
-                                description: `But at some point, I realized that a social scene isn't any different from the world at large, in that nothing is hidden from view. Any situation can be understood by observing everyone's actions and reading their intentions, much like a holistic picture of the world can be pieced together by reading books on all the important subject matters.`,
+                                description: `But at some point, I realized that a social scene is no different from the world at large, in that little is hidden from view. Any situation can be understood by reading everyone's intentions and observing their actions, much like a holistic picture of the world can be pieced together by reading books written by those who've observed it.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
