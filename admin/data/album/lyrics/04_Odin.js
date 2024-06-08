@@ -458,7 +458,12 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `When I was growing up, no one thought twice to say "Oriental"; it's even written on my birth certificate. The word became offensive at around the same time that "queer" was being reclaimed by the gay community. The latter approach always made more sense to me.`,
+                                    `When I was growing up, no one thought twice to say "Oriental"; it's even printed on my birth certificate. The word was made offensive at around the same time that "queer" was reclaimed by the gay community. The latter approach always made more sense to me: Why wouldn't you want there to be`,
+                                    {
+                                        isItalic: true,
+                                        lyric: `fewer`,
+                                    },
+                                    `slurs to hurt you?`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -472,7 +477,6 @@ export default {
                         `proves`,
                         {
                             anchor: `shibboleth`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     [
@@ -481,7 +485,7 @@ export default {
                                             anchor: `Book of Judges`,
                                             wiki: `Book_of_Judges`,
                                         },
-                                        `tells of a battle that arose between two Israelite tribes, after which the victors demanded of any survivor to say "`,
+                                        `tells of a battle that arose between two Israelite tribes, after which the victors demanded of any straggler to say "`,
                                         {
                                             anchor: `shibboleth`,
                                             wiki: `Shibboleth`,

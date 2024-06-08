@@ -1,4 +1,5 @@
 # Latest todo
+* Write to Ross Barkan
 * Allow annotations to be clicked in dashboard
     * Change hrefProp to something else
     * Always have href on Anchor tag

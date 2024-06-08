@@ -280,7 +280,6 @@ export default {
                         lyric: [
                             {
                                 anchor: `Poor Sam Peabody`,
-                                todo: REVIEW,
                                 card: {
                                     description: [
                                         `When my family visited Canada one late summer, the`,
@@ -403,7 +402,6 @@ export default {
                         `"Are you`,
                         {
                             anchor: `tired of being the weakling`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In a well-known comic book ad at the time, a scrawny guy takes his revenge on a bully by bulking up— all thanks to`,
@@ -462,7 +460,7 @@ export default {
                                         anchor: `red envelopes`,
                                         wiki: `Red_envelope`,
                                     },
-                                    `as a gift. My parents always insisted that we save it all for college. But desperate for answers, I blew my savings on my correspondence with RI Research.`,
+                                    `as a gift. My parents always insisted that it all had to be saved for college. But desperate for answers, I blew my entire savings on my correspondence with RI Research.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -818,7 +816,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `I decided to learn Tuvan throat singing after my first girlfriend Catherine took me to see a documentary called`,
@@ -997,7 +994,7 @@ export default {
                                         anchor: `cryptogram`,
                                         wiki: `Cryptogram`,
                                     },
-                                    `, the fewer clues it gives away, and thus the more difficult it is to solve. In the same vein, by not speaking or expressing emotion, I gave the bullies fewer openings to provoke a response from me— and the less they then bothered to try.`,
+                                    `, the fewer clues it gives away, and thus the more difficult it is to solve. In the same vein, the more stoic my composure, the fewer openings I gave the bullies to provoke a response from me— and the less they then bothered to try.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1013,7 +1010,6 @@ export default {
                         `But`,
                         {
                             anchor: `every hero has a heel`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The Greek hero`,
@@ -1117,7 +1113,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `While Pchelka and Mushka successfully spent a day in orbit, there was an error upon reentry. To prevent the spacecraft from landing in hostile territory, the Soviets had it self-destruct, killing all onboard. But in my retelling, I as Pchelka somehow manage to avoid the sad fate that my brother as Mushka could not.`,
+                                    `Though Pchelka and Mushka successfully went into orbit, there was a problem with their reentry. To prevent the spacecraft from landing in hostile territory, the Soviets had it self-destruct, killing all onboard. But in this song's retelling, I as Pchelka somehow manage to avoid the sad fate that my brother as Mushka could not.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

@@ -13,6 +13,7 @@ import {
     REFRAIN,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Dear Saskia',
@@ -497,6 +498,7 @@ export default {
                         `untied this "`,
                         {
                             anchor: `tetherboy`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -514,7 +516,7 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `Some overprotective parents strap their toddlers into a harness for safety. As such, older children who can't fend for themselves might be mocked by their peers as having been kept on a tether their whole lives.`,
+                                        `Some overprotective parents strap their toddlers into a safety harness. For this reason, older children who can't fend for themselves might be mocked by their peers as having been kept on a tether their whole lives.`,
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,

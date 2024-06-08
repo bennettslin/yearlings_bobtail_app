@@ -25,7 +25,7 @@ export default {
     playerStartTime: 967.569,
     mixStartTime: `0:01:03.51`,
     todo: REVIEW,
-    overview: `My first girlfriend in college was Catherine, a nice Catholic girl and high school valedictorian. We were very different people, partly due to my lack of reading habit, and as such, she broke up with me the evening before Ash Wednesday. So the next morning I ashed my own forehead and tried to bump into her, hoping that if she could picture me as a good Catholic boy, I might be given another chance. It didn't work, but I did grow into a habitual reader, and I have Catherine to thank for that.`,
+    overview: `My first girlfriend in college was Catherine, a nice Catholic girl and high school valedictorian. We were very different people, partly due to my lack of reading habit, and eventually she broke up with me— the night before Ash Wednesday. So the next morning I ashed my own forehead and tried to bump into her, hoping that if she could picture me as a good Catholic boy, I might be given another chance. It didn't work, but I did grow into a habitual reader, and I have Catherine to thank for that.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -103,7 +103,7 @@ export default {
                             anchor: `where it commenced`,
                             todo: REVIEW,
                             card: {
-                                description: `The relationship with Catherine began like my friendship with Sasha had years earlier: I latched onto the first cute female to show me kindness in a new environment, and then I tried to make myself indispensable in small ways.`,
+                                description: `The relationship with Catherine began like my friendship with Sasha had a decade earlier: I latched onto the first female to show me kindness in a new environment, and then I tried to make myself indispensable in small ways.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -171,7 +171,7 @@ export default {
                             anchor: `Renaissance polyphony`,
                             wiki: `Polyphony`,
                         },
-                        `in the chorus at the end.`,
+                        `in the lone chorus at the end.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,

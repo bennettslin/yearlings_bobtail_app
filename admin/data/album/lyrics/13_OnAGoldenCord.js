@@ -257,8 +257,9 @@ export default {
                         `Returned a golden cord, this`,
                         {
                             anchor: `sole belonging signed`,
+                            todo: REVIEW,
                             card: {
-                                description: `Plopped onto moonlit streets from whereabouts unknown, the "drunken" voice of the doublespeaker pair can only recollect his past crimes. As such, he believes himself to be newly released from prison, perhaps having just retrieved from storage the gold bracelet now in his hand.`,
+                                description: `Plopped onto moonlit streets from whereabouts unknown, the "drunken" voice of the doublespeaker pair can only recollect his past crimes. And so he believes himself to be newly released from prison— having just retrieved from storage the gold bracelet now in his hand.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
