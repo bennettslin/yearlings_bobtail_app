@@ -458,7 +458,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `When I was growing up, no one would think twice to say "Oriental"; it's even written on my birth certificate. The word became offensive at around the same time that "queer" was being reclaimed by the gay community. The latter approach always made more sense to me.`,
+                                    `When I was growing up, no one thought twice to say "Oriental"; it's even written on my birth certificate. The word became offensive at around the same time that "queer" was being reclaimed by the gay community. The latter approach always made more sense to me.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,

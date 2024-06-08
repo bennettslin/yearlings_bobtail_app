@@ -14,7 +14,7 @@ import {
     FLASHBACK_TO_WORMHOLE_PREFIX,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
-import { REDO, REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REDO, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'M',
@@ -25,7 +25,9 @@ export default {
     referenceDescription: `Spanish guitar in measure 1`,
     playerStartTime: 1131.214,
     mixStartTime: `0:02:12.00`,
-    overview: `After Catherine broke up with me, I vowed to spend the next five years shaping myself into the ideal romantic prospect. So I got involved in the local scene while putting together my own band, the Yearlings, and by the fifth year, we were playing house parties and small venues. I soon grew infatuated with a fellow scenester named Mara, whom I noticed from afar. But Mara ended up going out with my drummer Jacob, which made band practice awkward.`,
+    todo: REVISE,
+    problem: `Change order of Mara sentence?`,
+    overview: `After Catherine broke up with me, I vowed to spend the next five years shaping myself into the ideal romantic prospect. So I got involved in the local scene while putting together my own band, the Yearlings; by the fifth year, we were playing house parties and small venues. I grew infatuated with a fellow scenester named Mara, whom I noticed from afar. But Mara ended up going out with my drummer Jacob, which made band practice awkward.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -110,8 +112,9 @@ export default {
                         `I was a lad bent on`,
                         {
                             anchor: `learning the talents`,
+                            todo: REVIEW,
                             card: {
-                                description: `It's not that I'd done anything wrong to make Catherine break up with me; I just didn't have much to offer. For this reason, it seemed illogical to pursue the next relationship in the same manner. To secure my future chances, I needed to take time off and build up a surplus of attractive traits. So I started with the ones that Catherine valued most.`,
+                                description: `It's not that I'd done anything wrong to make Catherine break up with me; I just didn't have much to offer. For this reason, it seemed illogical to pursue my next relationship in the same manner. To secure all future chances, I needed to take time off and build up a surplus of attractive traits. So I started with the ones that Catherine valued most.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -234,6 +237,8 @@ export default {
                         `with`,
                         {
                             anchor: `mindful manners`,
+                            todo: REVISE,
+                            problem: `Be more clear what I mean by women like her.`,
                             card: {
                                 description: `Catherine didn't like it when I swore, so I decided to give up swearing as well. I figured this would be a definite win with other women like her, while the rest would find its quaintness charming.`,
                                 dotKeys: {
@@ -249,6 +254,8 @@ export default {
                     lyric: [
                         {
                             anchor: `Once I metamorphose`,
+                            todo: REVISE,
+                            problem: `Make this a complete sentence.`,
                             card: {
                                 description: `Upon completion of my metamorphosis, once I "met a Mara, for" certain I was to impress her.`,
                                 dotKeys: {
@@ -262,6 +269,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVISE,
+                problem: `Break up sentence by switching order.`,
                 card: {
                     description: `I abandoned my plan to pack the lyrics with M words after this stanza proved how unfeasible it would be to write an entire song in this manner.`,
                     dotKeys: {
@@ -280,9 +289,10 @@ export default {
                     lyric: [
                         {
                             anchor: `Year five`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `The Soviet Union's first five-year plan was also its most brutal, as the forced industrialization of agrarian societies led to widespread famine and death. Similarly, given how far behind I was starting out, it was naive to think that my own five-year plan for accelerated growth could be free of unintended consequences.`,
+                                    `The Soviet Union's first five-year plan was also its most brutal, as the forced industrialization of its agrarian societies led to widespread famine and death. Similarly, given how far behind I was starting out, it was naive to think that my own five-year plan for accelerated growth could be free of unintended consequences.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -298,6 +308,7 @@ export default {
                         `spent her`,
                         {
                             anchor: `wishes on a friend`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Toward the end of my five-year plan, the Yearlings began to play local shows. I was thrilled the day Mara showed up in the audience— but it was Jacob who caught her eye. I felt like the`,
@@ -305,7 +316,7 @@ export default {
                                         anchor: `bottled genie`,
                                         wiki: `Jinn`,
                                     },
-                                    `of Arabian folklore, with good fortunes to bestow upon others but only freedom from isolation to hope for myself.`,
+                                    `of Arabian folklore, with good fortunes to bestow upon others but only freedom from isolation to grant myself.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -415,6 +426,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
                         `Being a`,
@@ -422,7 +434,7 @@ export default {
                             anchor: `cowpunk`,
                             wiki: `Cowpunk`,
                         },
-                        `band, the Yearlings would perform this song at breakneck speed. But I moderated the tempo in this recording to make the lyrics intelligible. Even so, my drumming skills weren't up to par. So I recorded the drum tracks at a lower tape speed, which brought them to the proper tempo upon normal playback.`,
+                        `band, the Yearlings would perform this song at breakneck speed— but I moderated the tempo in this recording to make the lyrics intelligible. Even so, my drumming skills weren't up to par. So I recorded the drum tracks at a lower tape speed, which brought them to the proper tempo upon normal playback.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -450,8 +462,9 @@ export default {
                         `, I'll probably`,
                         {
                             anchor: `die pushing forty`,
+                            todo: REVIEW,
                             card: {
-                                description: `Like the Soviets, I needed to take in stride the failures of my first five-year plan. Having banked on rapid character growth, I couldn't cut my losses now. I had nothing to my name other than what the next five-year plan might gain for me. Or failing that, the next one after. Yet five years is a huge chunk of lifetime to mete out all at once, and I only had so many decades remaining. The occasion became ripe to reflect on my mortality.`,
+                                description: `Like the Soviets, I needed to take in stride the failures of my first five-year plan. Having banked on rapid character growth, I couldn't cut my losses now; I had nothing to my name other than what the next five-year plan might gain for me. Or failing that, the next one after… Yet five years is a serious chunk of lifetime to parcel out all at once! And I only had so many decades remaining. The occasion, then, was ripe to reflect on my mortality…`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -522,6 +535,8 @@ export default {
                         {
                             anchor: `Moonie wedding`,
                             properNoun: true,
+                            todo: REVISE,
+                            problem: `Make clear that I'm saying the children will be made in America.`,
                             card: {
                                 description: [
                                     `The`,
@@ -597,6 +612,8 @@ export default {
                     lyric: [
                         {
                             anchor: `lies that marionette`,
+                            todo: REVISE,
+                            problem: `Work on last sentence. Switch order so that it only proved to be a lie in hindsight.`,
                             cards: [
                                 {
                                     description: [
@@ -737,7 +754,7 @@ export default {
                                             anchor: `chimney sweep`,
                                             wiki: `Chimney_sweep`,
                                         },
-                                        `will bring good luck to a bride. But in the Victorian era, the children who cleared soot from chimneys were neglected orphans. Whatever fortunes they imparted to others, only a lifetime of ill health awaited themselves. Likewise, I'd helped introduce Mara to Jacob, and now it was on me to get on with my wretched life.`,
+                                        `will bring good luck to a bride. But in the Victorian era, the children who cleared soot from chimneys were neglected orphans; whatever fortunes they imparted to others, only a lifetime of ill health awaited themselves. Likewise, I'd helped introduce Mara to Jacob, and now it was on me to get on with my wretched life.`,
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
@@ -756,6 +773,8 @@ export default {
                     lyric: [
                         {
                             anchor: `indentures dumbed`,
+                            todo: REVISE,
+                            problem: `I don't like was to remain. Better way to phrase last sentence as well?`,
                             card: {
                                 description: [
                                     `Chimney sweeps were typically apprenticed as`,
@@ -785,6 +804,8 @@ export default {
                         `," I bade them`,
                         {
                             anchor: `to fare well`,
+                            todo: REVISE,
+                            problem: `Tense is weird.`,
                             card: {
                                 description: `Jacob was my friend, and I was happy that he'd found Mara. Still, I wasn't eager to stick around. So after imagining them to exchange vows of "I do," I silently offered a vow of my own to bid them "two farewell."`,
                                 dotKeys: {
@@ -813,8 +834,9 @@ export default {
                         `But then I saw the`,
                         {
                             anchor: `world's a naked baby`,
+                            todo: REVIEW,
                             card: {
-                                description: `But at some point, I realized that a social scene isn't any different from the world at large, in that nothing is hidden from view. Every situation can be understood by observing people's actions and reading their intentions, much like a holistic picture of the world can be pieced together by reading books on all the important subject matters.`,
+                                description: `But at some point, I realized that a social scene isn't any different from the world at large, in that nothing is hidden from view. Any situation can be understood by observing everyone's actions and reading their intentions, much like a holistic picture of the world can be pieced together by reading books on all the important subject matters.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -836,10 +858,11 @@ export default {
                     lyric: [
                         {
                             anchor: `to have a merry ol' laugh`,
-                            todo: REVIEW,
+                            todo: REVISE,
+                            problem: `Last sentence, make clear that you can only react with good humor when your plans fall apart.`,
                             card: {
 
-                                description: `Or, to have a "Mara, you'll" laugh. In short, everyone just does what you would expect them to do, given what you can expect them to want— and a social scene is simply the sum total of all that. No one gets in the way of your best laid plans just to spite you. And so you can only react with good humor when it happens.`,
+                                description: `Or, to have a "Mara, you'll" laugh. In short, everyone does what you would expect them to do, given what you can expect them to want— and a social scene is simply the sum total of all that. No one gets in the way of your best laid plans just to spite you. And so you can only react with good humor when it happens.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [PUN]: true,
