@@ -188,7 +188,7 @@ export default {
                             anchor: `mystery mensch`,
                             todo: REVIEW,
                             card: {
-                                description: `Unlike me, my older sister was popular in high school. So she always had the latest gossip to tell me, like anytime a girl crushed on me from afar— which wasn't often, but it did happen. And thus, I knew there was some mystique to my image as an artsy loner. My mission now was to ensure that something of actual substance lay underneath.`,
+                                description: `Unlike me, my older sister was popular in high school. So she always had the latest gossip to tell me, like anytime a girl crushed on me from afar— which wasn't often, but it did happen. And thus, I knew there was some mystique to my image as an artsy loner; my mission now was simply to ensure that something of actual substance lay beneath.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -830,7 +830,8 @@ export default {
                         `But then I saw the`,
                         {
                             anchor: `world's a naked baby`,
-                            todo: REVIEW,
+                            todo: REVISE,
+                            problem: `Go back to saying important subject matters.`,
                             card: {
                                 description: `But at some point, I realized that a social scene is no different from the world at large, in that little is hidden from view. Any situation can be understood by reading everyone's intentions and observing their actions, much like a holistic picture of the world can be pieced together by reading books written by those who've observed it.`,
                                 dotKeys: {

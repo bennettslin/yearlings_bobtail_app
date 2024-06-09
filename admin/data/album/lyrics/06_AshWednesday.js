@@ -25,7 +25,7 @@ export default {
     playerStartTime: 967.569,
     mixStartTime: `0:01:03.51`,
     todo: REVIEW,
-    overview: `My first girlfriend in college was Catherine, a nice Catholic girl and high school valedictorian. We were very different people, partly due to my lack of reading habit, and eventually she broke up with me— the night before Ash Wednesday. So the next morning I ashed my own forehead and tried to bump into her, hoping that if she could picture me as a good Catholic boy, I might be given another chance. It didn't work, but I did grow into a habitual reader, and I have Catherine to thank for that.`,
+    overview: `My first girlfriend in college was Catherine, a nice Catholic girl and high school valedictorian. We were very different people, partly due to my lack of reading habit, and eventually she broke up with me— the night before Ash Wednesday. So the next morning I ashed my own forehead and tried to bump into her, hoping that if she could picture me as a good Catholic boy, then I might get another chance. It didn't work, but I did grow into a habitual reader, and I have Catherine to thank for that.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -101,7 +101,6 @@ export default {
                     lyric: [
                         {
                             anchor: `where it commenced`,
-                            todo: REVIEW,
                             card: {
                                 description: `The relationship with Catherine began like my friendship with Sasha had a decade earlier: I latched onto the first female to show me kindness in a new environment, and then I tried to make myself indispensable in small ways.`,
                                 dotKeys: {
@@ -465,7 +464,7 @@ export default {
                             anchor: `poised with brains`,
                             todo: REVIEW,
                             card: {
-                                description: `Catherine undervalued the artistic strengths that I'd been counting on to cover up my many weaknesses. This meant if I were ever to be worth keeping, then I simply couldn't have any weaknesses.`,
+                                description: `Catherine undervalued the artistic strengths that I'd always counted on to cover up my many weaknesses. Which meant if I were ever to be worth keeping, then I simply couldn't have any weaknesses.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -504,7 +503,6 @@ export default {
                         `And as I pace, stranded here`,
                         {
                             anchor: `outside her Shelta`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The`,
