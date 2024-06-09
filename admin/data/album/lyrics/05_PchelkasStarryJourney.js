@@ -791,10 +791,9 @@ export default {
                         `But till then, here's`,
                         {
                             anchor: `how you're to live`,
-                            todo: REVISE,
-                            problem: `Just phrase it better.`,
+                            todo: REVIEW,
                             card: {
-                                description: `The letters cautioned me to keep myself separate from society. I realized my brother had been doing this all along, so I adopted a stoic composure like his.`,
+                                description: `The letters cautioned me to keep myself separate from society. I realized that my brother had been doing this all along, and so I adopted a stoic composure like his.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
