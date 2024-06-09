@@ -13,7 +13,6 @@ import {
     REFRAIN,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Dear Saskia',
@@ -498,7 +497,6 @@ export default {
                         `untied this "`,
                         {
                             anchor: `tetherboy`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [

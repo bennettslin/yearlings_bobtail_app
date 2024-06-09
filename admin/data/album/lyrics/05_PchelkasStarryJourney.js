@@ -38,7 +38,7 @@ export default {
     playerReferenceTime: 756.159,
     playerStartTime: 755.661,
     todo: REVIEW,
-    overview: `As my years of getting bullied grew unbearable, a strange letter arrived in the mail with promises of spiritual answers. After I sent the requested payment, it was revealed to me that I belonged to a race of interstellar beings. I was also given a mission: to shut myself off from the world. I did so by adopting an unresponsive manner like my brother, which made me feel a psychic bond with him. But as my sanity chipped away, I came to realize that I was in a mail-order cult…`,
+    overview: `As my years of getting bullied grew unbearable, a strange letter arrived in the mail with promises of spiritual answers. After I sent the requested payment, it was revealed to me that I belonged to an ancient race of astral beings. I was also given a mission: to shut myself off from the world. I did so by adopting an unresponsive manner like my brother, which made me feel a psychic bond with him. But as my sanity chipped away, I came to realize that I was in a mail-order cult…`,
     lyricUnits: [
         {
             unitMap: {},
@@ -124,7 +124,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `In keeping with the theme of Russian dogs in space, two palm-muted mandolins capture the frenetic pulse of the`,
@@ -197,7 +196,6 @@ export default {
                         `when you wanted to`,
                         {
                             anchor: `buy a fortress`,
-                            todo: REVIEW,
                             card: {
                                 description: `Since I liked to hole up and work on projects undisturbed, one year I asked my parents for a life-size wooden fort as a combined birthday and Christmas present. Unfortunately, some toys were too pricey to even count for two gifts.`,
                                 dotKeys: {
@@ -230,7 +228,8 @@ export default {
                         `You stowed away`,
                         {
                             anchor: `beneath your captain bed`,
-                            todo: REVIEW,
+                            todo: REVISE,
+                            problem: `Say which allowed for a spacious hideout behind it.`,
                             card: {
                                 description: [
                                     `I slept in a`,
@@ -254,7 +253,6 @@ export default {
                         `We`,
                         {
                             anchor: `didn't hear a peep`,
-                            todo: REVIEW,
                             card: {
                                 description: `My brother would play by himself while sitting beside me for hours, never once speaking or interacting. It was a strange closeness we shared.`,
                                 dotKeys: {
@@ -327,9 +325,10 @@ export default {
                         `they'll catch you by`,
                         {
                             anchor: `your cape`,
-                            todo: REVIEW,
+                            todo: REVISE,
+                            problem: `Still doesn't flow well.`,
                             card: {
-                                description: `In elementary school, I was well liked. Being small for my age, I was harmless and unassuming; and because I was always drawing in my notebooks, I would happily draw an animal or cartoon figure for anyone who asked. But the traits that once made me a hero now marked me as easy prey in middle school, and I was ill-prepared.`,
+                                description: `In elementary school, I was well liked. Being small for my age, I was harmless and unassuming; and because I was always drawing in my notebooks, I would happily draw animals and cartoon figures for those who asked. But the traits that once made me a hero now marked me as easy prey in middle school, and I was ill-prepared.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -351,7 +350,7 @@ export default {
                             anchor: `learn to kick it back`,
                             todo: REVIEW,
                             card: {
-                                description: `The most popular kids in middle school were also the least concerned about being liked, which ran counter to my understanding that anything worth having should be pursued wholeheartedly. Yet trying things their way didn't make me any more likable either.`,
+                                description: `The most popular kids in middle school were also the least concerned about being liked, which ran counter to my understanding that anything worth achieving should be pursued wholeheartedly. Yet trying things their way didn't make me any more likable either.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -373,7 +372,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Feigning sick`,
-                            todo: REVIEW,
                             card: {
                                 description: `In earlier years, I was proud of my perfect attendance record. Once the bullying began, however, I would skip school by faking illness. My mother noticed the change, but she trusted me enough not to press the issue.`,
                                 dotKeys: {
@@ -452,7 +450,7 @@ export default {
                                         anchor: `red envelopes`,
                                         wiki: `Red_envelope`,
                                     },
-                                    `as a gift. My parents insisted that all of it needed to be saved for college. But desperate for answers, I blew my entire savings on my correspondence with RI Research.`,
+                                    `as a gift. My parents insisted that we save it all for college. But desperate for answers, I blew my entire savings on my correspondence with RI Research.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -481,7 +479,7 @@ export default {
                             anchor: `Are you a Beyonder`,
                             todo: REVIEW,
                             card: {
-                                description: `According to RI Research, Beyonders are an ancient race of astral beings who were scattered across the universe. The ones who made it to Earth adopted the outer likeness of humans, after which they lost all memory of their origins. Yet even so, they're beset by a silent discomfort that they don't truly belong.`,
+                                description: `According to RI Research, Beyonders are an ancient race of astral beings who were scattered across the universe. The ones who made it to Earth adopted the outer likeness of humans, after which they lost all memory of their stellar origins. Yet even so, they're beset by a silent discomfort that they don't truly belong.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -496,7 +494,8 @@ export default {
                         `Do you often feel like a`,
                         {
                             anchor: `wanderer lost`,
-                            todo: REVIEW,
+                            todo: REVISE,
+                            problem: `First sentence is still weird.`,
                             card: {
                                 description: `The letter spoke to my frustration that my yearning for acceptance should go unfulfilled. Having hit all the right nerves, it then shared hopeful news: RI Research believed that I might be a Beyonder. And now— after searching for so long— they'd found me.`,
                                 dotKeys: {
@@ -703,7 +702,7 @@ export default {
                                         anchor: `New Age`,
                                         wiki: `New_Age`,
                                     },
-                                    `belief, though I didn't know this at the time. Like Beyonders, star people have no memory of their astral origins. In retrospect, RI Research must have drawn some of their material from this body of thought.`,
+                                    `belief, though I didn't know this at the time. Like Beyonders, star people have no memory of their stellar origins. In retrospect, RI Research must have drawn some of their material from this body of thought.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -791,7 +790,8 @@ export default {
                         `But till then, here's`,
                         {
                             anchor: `how you're to live`,
-                            todo: REVIEW,
+                            todo: REVISE,
+                            problem: `Make it clear I modeled mine on his.`,
                             card: {
                                 description: `The letters cautioned me to keep myself separate from society. I realized that my brother had been doing this all along, and so I adopted a stoic composure like his.`,
                                 dotKeys: {
@@ -975,7 +975,6 @@ export default {
                         `We knew the`,
                         {
                             anchor: `shortest ciphers`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The shorter the`,
@@ -1099,7 +1098,6 @@ export default {
                         {
                             anchor: `Mushka`,
                             properNoun: true,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Though Pchelka and Mushka successfully went into orbit, there was a problem with their reentry. To prevent the spacecraft from landing in hostile territory, the Soviets had it self-destruct, killing all onboard. But in this song's retelling, I as Pchelka somehow manage to avoid the sad fate that my brother as Mushka could not.`,
@@ -1327,7 +1325,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `Regardless, I'd grown disillusioned with RI Research by this point, as the letters became overtly Christian in their message. It's not that I held Christianity to be conclusively false; it was just incongruous with all the previous talk of extraterrestrial origins.`,
+                                    `Regardless, I'd grown disillusioned with RI Research by this point, as their letters had become overtly Christian in tone. It's not that I held Christianity to be conclusively false; it was just incongruous with all the previous talk of stellar origins.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,

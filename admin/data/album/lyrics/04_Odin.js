@@ -463,7 +463,7 @@ export default {
                                         isItalic: true,
                                         lyric: `fewer`,
                                     },
-                                    `slurs to hurt you?`,
+                                    `slurs available to hurt you?`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
