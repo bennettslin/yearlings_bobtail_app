@@ -66,9 +66,7 @@ import {
     LIZ_GATE_OUTSIDE,
     LIZ_GATE_OUTSIDE_OPEN,
 } from '../../../../src/constants/scene/things/doors'
-import {
-    MANNEQUIN,
-} from '../../../../src/constants/scene/things/fixtures'
+import { MANNEQUIN } from '../../../../src/constants/scene/things/fixtures'
 import {
     GO_KART_TRACK,
     PUBLIC_FAR__LIZ_GATE,
