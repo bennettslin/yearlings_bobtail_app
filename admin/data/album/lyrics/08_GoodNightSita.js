@@ -11,6 +11,7 @@ import {
     POSTCHORUS,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Good Night, Sita',
@@ -27,8 +28,9 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
-                    description: `It's early in the evening, with the sky beginning to clear from a midday shower. Sita and I have just walked back to her boarding house after a date. We stand in front of her gate, facing each other awkwardly.`,
+                    description: `It's early in the evening, with the sky beginning to clear from a midday shower. Sita and I have just walked back to her boarding house after a date. We now face each other awkwardly in front of her gate.`,
                     dotKeys: {
                         [NARRATIVE]: true,
                     },
@@ -116,9 +118,10 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
-                        `My inability to process thoughts into coherent speech is reflected in the herky-jerky,`,
+                        `My inability to translate thoughts into coherent speech is reflected in the herky-jerky,`,
                         {
                             anchor: `syncopated`,
                             wiki: `Syncopation`,
@@ -172,9 +175,10 @@ export default {
                         {
                             anchor: `Dutch courage`,
                             properNoun: true,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `During my college years, I would ask older coworkers to buy me twelve-packs of cheap beer, which I then lugged back to my apartment. So I always had some on hand, and before every date, I would down a few cans.`,
+                                    description: `During my college years, I would ask older coworkers to buy me twelve-packs of cheap beer, which I would then lug back to my apartment. So I always had some on hand, and before every date, I would down a few cans.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -343,8 +347,9 @@ export default {
                     mixTime: `0:30:07.08`,
                     lyric: {
                         anchor: `heart of gold inside`,
+                        todo: REVIEW,
                         card: {
-                            description: `Mistakes I made on one date still offered lessons I could apply toward the next. So each date felt like prying open one nesting doll to get to another, with the ultimate goal of reaching the last one whose promise proved not to be hollow.`,
+                            description: `Mistakes made on one date still offered lessons that I could apply toward the next. So each date felt like prying open one nesting doll to get to another, with the ultimate goal of reaching the last one whose promise proved not to be hollow.`,
                             dotKeys: {
                                 [OBSERVATION]: true,
                             },
@@ -364,8 +369,10 @@ export default {
                         `till then`,
                         {
                             anchor: `crack up another doll`,
+                            todo: REVISE,
+                            problem: `Switch order? Mention Catherine's fondness for them?`,
                             card: {
-                                description: `A friend once told me that if I can keep a woman cracking up at my jokes, then I'll always be good for another date. My humor at the time was all about clever puns, though, thanks to Catherine's fondness for them— and puns tend to draw groans from most everyone else.`,
+                                description: `A friend once told me that if I can keep a woman cracking up at my jokes, then I'll always be good for another date. My humor at the time was all about clever puns, though, thanks to Catherine's fondness for them— and puns tend to draw groans from everyone else.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -380,9 +387,10 @@ export default {
                         `to find the`,
                         {
                             anchor: `chrysalis unchristened`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `As we pass a display on the butterfly lifecycle, it occurs to me that what I'm hoping to find is a chrysalis— in other words, someone so new to this world that my own lack of worldliness wouldn't need to be an issue.`,
+                                    description: `As we pass a display on the butterfly lifecycle, it occurs to me that what I'm hoping to find is a chrysalis— in other words, someone so new to this world that my own lack of worldliness wouldn't be an issue.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [OBSERVATION]: true,
@@ -483,9 +491,11 @@ export default {
                         `in time are seen with`,
                         {
                             anchor: `a focus grown clear`,
+                            todo: REVISE,
+                            problem: `Run on sentence.`,
                             card: {
                                 description: [
-                                    `My buzz would wear off a few hours into a date, forcing me to realize that everything I'd just been saying might topple under scrutiny, like a`,
+                                    `My buzz would wear off a few hours into a date, causing me to suddenly realize that everything I'd just been saying might topple under scrutiny, like a`,
                                     {
                                         anchor: `totem pole`,
                                         wiki: `Totem_pole`,
@@ -517,6 +527,7 @@ export default {
                     lyric: [
                         {
                             anchor: `pidgin palaver`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -525,7 +536,7 @@ export default {
                                             anchor: `pidgins`,
                                             wiki: `Pidgin`,
                                         },
-                                        `, or impromptu languages that historically arose between colonists and natives. Their exchanges required words of goodwill to make up for any misunderstandings, much like my conversations with Sita on this date.`,
+                                        `, or impromptu languages that historically arose between colonists and natives. Their exchanges were peppered with words of goodwill to make up for inevitable misunderstandings, much like my conversations with Sita on this date.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -547,8 +558,9 @@ export default {
                         `hyped up like some`,
                         {
                             anchor: `disastrous play`,
+                            todo: REVIEW,
                             card: {
-                                description: `On our second date, Sita and I go to see her friend act in a play. Before taking our seats, we chat with him backstage. I struggle to get a word in edgewise, however, which leaves me feeling insecure afterward.`,
+                                description: `On our second date, Sita and I go to see her friend act in a play. Before taking our seats, we chat with him backstage. I struggle to get a word in edgewise, however, and this leaves me feeling insecure afterward.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -592,8 +604,9 @@ export default {
                         `for if the`,
                         {
                             anchor: `tactic is to stall`,
+                            todo: REVIEW,
                             card: {
-                                description: `My friends would advise me to wait three days before calling a woman back. And yet, it was always agony when she invariably did the same to me.`,
+                                description: `My friends would advise me to wait three days before calling a woman back. Yet it was always agony when she invariably did the same to me.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -651,8 +664,9 @@ export default {
                         `then wise up and`,
                         {
                             anchor: `learn to shotgun`,
+                            todo: REVIEW,
                             card: {
-                                description: `In time I came to adopt the shotgun approach to dating, which involves hitting on anyone at any moment. It works because the math is on your side. Even if your success rate remains dismal, you're increasing the sample size, which gives you a better chance of having at least one person say yes to a date. And, of course, one yes is all you need.`,
+                                description: `In time I adopted the shotgun approach to dating, which involves hitting on anyone at any moment. It works by putting the math on your side: Even if your success rate remains dismal, you're increasing the sample size, which gives you a better chance of having at least one person say yes to a date. And, of course, one yes is all you need.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -671,8 +685,10 @@ export default {
                         `so we'll`,
                         {
                             anchor: `breeze through our parts`,
+                            todo: REVISE,
+                            problem: `Make it more about keeping it for another date, in case it didn't work out with this one.`,
                             card: {
-                                description: `Any time I said something witty that got a good response, I'd be sure to say it again on a future date with a different woman, like an actor reprising a role. This then eased the sting of rejection, since the less I had to prepare, the less I needed to feel was at stake.`,
+                                description: `Any time I said something witty that got a good response, I'd be sure to say it again on a future date with someone else, like an actor reprising a role. This then eased the sting of rejection, since the less I had to prepare, the less I felt was at stake.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -684,14 +700,15 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
-                        `To continue with the '70s feel for this song, I gathered ideas from the band`,
+                        `To continue with the '70s feel of this song, I gathered ideas from`,
                         {
                             anchor: `Television`,
                             wiki: `Television_(band)`,
                         },
-                        `, who are well known for the complex interplay between their two lead guitars. The lick of tumbling triplets heard here was inspired by the song "Friction" off their album`,
+                        `, a band well known for the complex interplay between their two lead guitarists. The tumbling triplets heard here was inspired by the song "Friction" off their album`,
                         {
                             anchor: `Marquee Moon`,
                             wiki: `Marquee_Moon`,
@@ -716,8 +733,9 @@ export default {
                         `though each`,
                         {
                             anchor: `kind new ultimatum`,
+                            todo: REVIEW,
                             card: {
-                                description: `Like the deals that natives were forced at gunpoint to make with settlers, Sita's proposition for us to see her friend's play offered only the illusion of choice. She was going either way. I could either tag along or stay home.`,
+                                description: `Like the deals that natives were forced at gunpoint to make with settlers, Sita's proposition for us to see her friend's play offered only the illusion of choice. She was going either way; I could either tag along or stay home.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -794,8 +812,9 @@ export default {
                         `hint of`,
                         {
                             anchor: `sampler cologne`,
+                            todo: REVIEW,
                             card: {
-                                description: `Whenever I spotted a men's lifestyle magazine that someone had thrown away, I would tear out the scent strips from its cologne advertisements and add them to my pile. Then right before a date, I would rub a few onto my neck and wrists.`,
+                                description: `Whenever I spotted a men's lifestyle magazine that someone had thrown away, I would tear out the scent strips from its cologne ads and add them to my pile. Then right before a date, I would rub a few onto my wrists.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -919,8 +938,9 @@ export default {
                         `from a`,
                         {
                             anchor: `dummy steering wheel`,
+                            todo: REVIEW,
                             card: {
-                                description: `Like a child clutching the passenger steering wheel in a twin go-kart, I naively hold onto the hope that my words and actions can steer this date in a direction I'd like.`,
+                                description: `Like a child clutching the passenger steering wheel in a twin go-kart, I naively hold onto the hope that my words and actions can steer this date in a direction to my liking.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -940,14 +960,15 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
-                        `Children's songs from the '70s are a treasure trove of musical wisdom. They were composed by professionals, but then arranged for the popular styles of their time. A great example is the soundtrack for`,
+                        `Children's songs from the '70s are a treasure trove of musical wisdom: They were composed by professionals, but then arranged for the popular styles of those times. One example is the soundtrack for`,
                         {
                             anchor: `The New Mickey Mouse Club`,
                             wiki: `The_Mickey_Mouse_Club`,
                         },
-                        `, a disco '70s revival of the original '50s show. In particular, the song "Let's Go Day" gave me the idea to play portamento quarter notes on an`,
+                        `, a disco-inflected revival of the original '50s show. In particular, the song "Let's Go Day" gave me the idea to play portamento quarter notes on an`,
                         {
                             anchor: `analog synthesizer`,
                             wiki: `Analog_synthesizer`,
@@ -1017,9 +1038,10 @@ export default {
                     mixTime: `2:04:21.72`,
                     lyric: {
                         anchor: `I sigh, "Good night."`,
+                        todo: REVIEW,
                         cards: [
                             {
-                                description: `I walked home that night determined not to let another opportunity pass without confessing my feelings to Sita. I did exactly that in a phone call a few days later. It went horribly, and I didn't hear from her again for months.`,
+                                description: `I walked home that evening determined not to let another opportunity pass without confessing my feelings to Sita. A few days later, I did exactly that in a phone call. It went horribly, and I didn't hear from her again for months.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

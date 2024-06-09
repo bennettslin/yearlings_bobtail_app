@@ -1,4 +1,5 @@
 # Latest todo
+* Remember, *start* the day with Grasshoppers audit
 * Write to Ross Barkan
 * Allow annotations to be clicked in dashboard
     * Change hrefProp to something else
