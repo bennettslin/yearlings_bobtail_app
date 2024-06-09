@@ -463,10 +463,9 @@ export default {
                         `who tried but failed to win her heart`,
                         {
                             anchor: `poised with brains`,
-                            todo: REVISE,
-                            problem: `Try to make it more eloquent.`,
+                            todo: REVIEW,
                             card: {
-                                description: `Catherine undervalued the artistic strengths I'd always counted on to cover up my countless weaknesses. Which meant if I were ever to be worth keeping, then I simply couldn't have any weaknesses.`,
+                                description: `Catherine undervalued the artistic strengths that I'd been counting on to cover up my many weaknesses. This meant if I were ever to be worth keeping, then I simply couldn't have any weaknesses.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
