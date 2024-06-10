@@ -13,7 +13,7 @@ import {
     IS_UNIT_DOT,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
-import { REVISE } from '../../../containers/Annotations/constants/todos'
+import { REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Ash Wednesday',
@@ -334,22 +334,14 @@ export default {
                         `Oh Catherine,`,
                         {
                             anchor: `pressed for an opinion`,
-                            todo: REVISE,
-                            problem: `I don't like how the sentence is phrased.`,
-                            cards: [
-                                {
-                                    description: `Every so often I would ask Catherine for feedback on my lyrics, hoping that one day I could write a song to tug at her heartstrings.`,
-                                    dotKeys: {
-                                        [BACKSTORY]: true,
-                                    },
+                            todo: REVIEW,
+                            card: {
+                                description: `Feeling sheepish that Catherine thought so little of my songs, I was committed to writing one that could tug at her heartstrings someday. So in this scenario, I imagine myself asking her for a critique of the very lyrics you're listening to now.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                    [NARRATIVE]: true,
                                 },
-                                {
-                                    description: `In this scenario, I imagine myself asking Catherine for a critique of the very lyrics I'm writing for this song.`,
-                                    dotKeys: {
-                                        [NARRATIVE]: true,
-                                    },
-                                },
-                            ],
+                            },
                         },
                         `, sighed,`,
                     ],
@@ -548,10 +540,10 @@ export default {
                         {
                             anchor: `unknown to roam`,
                             todo: REVISE,
-                            problem: `Don't reiterate roam. Make comparison with me being a homebody.`,
+                            problem: `Make comparison with me being a homebody.`,
                             cards: [
                                 {
-                                    description: `If Catherine is a figurative Traveller, then I'm unwelcome to follow her wandering community, which is well known to roam.`,
+                                    description: `If Catherine is a Traveller in spirit, then perhaps she left me to rejoin her wandering community.`,
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                     },

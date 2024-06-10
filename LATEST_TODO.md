@@ -13,6 +13,7 @@
     * Update icon for carousel nav
     * Update icon for success copied
     * bindis?
+    * Schwa sticker
 
 ### Good fixes
 * Tooltip changes

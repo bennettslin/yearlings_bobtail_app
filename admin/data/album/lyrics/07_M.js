@@ -236,10 +236,9 @@ export default {
                         `with`,
                         {
                             anchor: `mindful manners`,
-                            todo: REVISE,
-                            problem: `Don't repeat swearing.`,
+                            todo: REVIEW,
                             card: {
-                                description: `Catherine didn't like it when I swore, so I decided to give up swearing as well. I figured this would be a definite win with any other woman like her, while all the rest would find its quaintness charming.`,
+                                description: `Catherine didn't like it when I swore, so I decided to give that up as well. I figured it would be a definite win with any other woman like her, while all the rest would find its quaintness charming.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -270,7 +269,7 @@ export default {
                 todo: REVISE,
                 problem: `Break up sentence by switching order.`,
                 card: {
-                    description: `I abandoned my plan to pack the lyrics with M words after this stanza proved how unfeasible it would be to write an entire song in this manner.`,
+                    description: `I abandoned my plan to pack the lyrics with M words, once this stanza proved how unfeasible it would be to write an entire song in this manner.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
@@ -529,8 +528,7 @@ export default {
                         {
                             anchor: `Moonie wedding`,
                             properNoun: true,
-                            todo: REVISE,
-                            problem: `Make clear that I'm saying the children will be made in America.`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The`,
@@ -543,7 +541,7 @@ export default {
                                         anchor: `Sun Myung Moon`,
                                         wiki: `Sun_Myung_Moon`,
                                     },
-                                    `, is known for its aggressive proselytism, as well as its mass weddings in which thousands of congregants are paired off with perfect strangers. Whenever a Moonie accosted me on campus, the thought would amuse me that I could just accept their invitation, and my struggle to find a romantic partner would be over in an instant.`,
+                                    `, is known for its aggressive proselytism, as well as its mass weddings in which thousands of congregants are paired off with perfect strangers. Whenever a Moonie accosted me on campus, the thought would amuse me that I could simply accept their invitation, and my struggle to find a romantic partner would be over in an instant.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -560,8 +558,9 @@ export default {
                         {
                             anchor: `"Made in America" signs`,
                             properNoun: true,
+                            todo: REVIEW,
                             card: {
-                                description: `To promote cross-cultural harmony, the pairings in these mass weddings are often international by design. Which means my Moonie bride might be a foreigner who cleverly joined the church just to start a family in America. And if so, I would be a fool to believe my "maiden Mara co-signs" the marriage license in good faith.`,
+                                description: `To promote cross-cultural harmony, the pairings in these mass weddings are often international by design. Which means my Moonie bride might be a foreigner who cleverly joined the church to ensure her children will be born in America. And if so, I would be a fool to believe my "maiden Mara co-signs" the marriage license in good faith.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [PUN]: true,
@@ -606,17 +605,16 @@ export default {
                     lyric: [
                         {
                             anchor: `lies that marionette`,
-                            todo: REVISE,
-                            problem: `Work on last sentence. Switch order so that it only proved to be a lie in hindsight.`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
-                                        `There was comfort in having all my priorities settled in advance by a five-year plan. Since I always knew with certainty the right course of action, I could undertake it with conviction. I was like a`,
+                                        `There was comfort in having all my priorities settled in advance by a five-year plan: Since I always knew with certainty the right course of action, I could undertake it with conviction, like a`,
                                         {
                                             anchor: `marionette`,
                                             wiki: `Marionette`,
                                         },
-                                        `being made to posture by the hidden hand of my younger self. Of course, I eagerly donned these strings only because I believed my younger self's lies, that a "Mara you'll net" by doing so.`,
+                                        `being made to posture by the hidden hand of my younger self. Of course, I eagerly donned these strings only because I believed my younger self's promise that a "Mara you'll net" by doing so— which later proved to be a lie.`,
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
@@ -634,10 +632,12 @@ export default {
                         `in this`,
                         {
                             anchor: `heap of twisted twine`,
+                            todo: REVIEW,
                             card: {
-                                description: `But with nothing to show after five years of diligent effort, I was now paralyzed by doubt. I knew of no other actions to take that might better my circumstances. And so the puppet of my future self lay motionless before me.`,
+                                description: `But with little to show after five years of diligent effort, I was now paralyzed by doubt— and I knew of no other course of action to take. So the puppet of my future self lay motionless before me, already ensnared by the very "net" that was meant to snag me a romantic partner.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
+                                    [PUN]: true,
                                 },
                             },
                         },
