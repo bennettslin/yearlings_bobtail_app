@@ -38,7 +38,7 @@ export default {
     playerReferenceTime: 756.159,
     playerStartTime: 755.661,
     todo: REVIEW,
-    overview: `As my years of getting bullied grew unbearable, a strange letter arrived in the mail with promises of spiritual answers. After I sent the requested payment, it was revealed to me that I belonged to an ancient race of astral beings. I was also given a mission: to shut myself off from the world. I did so by adopting an unresponsive manner like my brother, which made me feel a psychic bond with him. But as my sanity chipped away, I came to realize that I was in a mail-order cult…`,
+    overview: `As my years of getting bullied grew unbearable, a strange letter arrived in the mail with promises of spiritual answers. After I sent the requested payment, it was revealed to me that I belonged to a race of interstellar beings. I was also given a mission: to shut myself off from the world. I did so by adopting an unresponsive manner like my brother, which made me feel a psychic bond with him. But as my sanity chipped away, I came to realize that I was in a mail-order cult…`,
     lyricUnits: [
         {
             unitMap: {},
@@ -348,7 +348,8 @@ export default {
                         `till you`,
                         {
                             anchor: `learn to kick it back`,
-                            todo: REVIEW,
+                            todo: REVISE,
+                            problem: `Make it less about being worth it to do it wholeheartedly, and more like it can only ever be done wholeheartedly.`,
                             card: {
                                 description: `The most popular kids in middle school were also the least concerned about being liked, which ran counter to my understanding that anything worth achieving should be pursued wholeheartedly. Yet trying things their way didn't make me any more likable either.`,
                                 dotKeys: {
@@ -450,7 +451,7 @@ export default {
                                         anchor: `red envelopes`,
                                         wiki: `Red_envelope`,
                                     },
-                                    `as a gift. My parents insisted that we save it all for college. But desperate for answers, I blew my entire savings on my correspondence with RI Research.`,
+                                    `as a gift. My parents always insisted that we save it all for college. But desperate for answers, I blew my savings on my correspondence with RI Research.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -479,7 +480,7 @@ export default {
                             anchor: `Are you a Beyonder`,
                             todo: REVIEW,
                             card: {
-                                description: `According to RI Research, Beyonders are an ancient race of astral beings who were scattered across the universe. The ones who made it to Earth adopted the outer likeness of humans, after which they lost all memory of their stellar origins. Yet even so, they're beset by a silent discomfort that they don't truly belong.`,
+                                description: `According to RI Research, Beyonders are an ancient race of astral beings who were scattered across the universe. The ones who came to Earth adopted the likeness of humans, after which they lost all memory of their stellar origins. Yet even so, they're beset by a silent discomfort that they don't truly belong.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -1325,7 +1326,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `Regardless, I'd grown disillusioned with RI Research by this point, as their letters had become overtly Christian in tone. It's not that I held Christianity to be conclusively false; it was just incongruous with all the previous talk of stellar origins.`,
+                                    `Regardless, I'd grown disillusioned with RI Research by this point, as the letters had become overtly Christian in tone. It's not that I held Christianity to be conclusively false; it was just incongruous with all the previous talk of stellar origins.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
