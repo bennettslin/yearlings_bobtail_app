@@ -13,7 +13,7 @@ import {
     IS_UNIT_DOT,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
-import { REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Ash Wednesday',
@@ -24,7 +24,6 @@ export default {
     referenceDescription: `Darbuka in anacrusis`,
     playerStartTime: 967.569,
     mixStartTime: `0:01:03.51`,
-    todo: REVIEW,
     overview: `My first girlfriend in college was Catherine, a nice Catholic girl and high school valedictorian. We were very different people, partly due to my lack of reading habit, and eventually she broke up with me— the night before Ash Wednesday. So the next morning I ashed my own forehead and tried to bump into her, hoping that if she could picture me as a good Catholic boy, then I might get another chance. It didn't work, but I did grow into a habitual reader, and I have Catherine to thank for that.`,
     lyricUnits: [
         {
@@ -462,7 +461,6 @@ export default {
                         `who tried but failed to win her heart`,
                         {
                             anchor: `poised with brains`,
-                            todo: REVIEW,
                             card: {
                                 description: `Catherine undervalued the artistic strengths that I'd always counted on to cover up my many weaknesses. Which meant if I were ever to be worth keeping, then I simply couldn't have any weaknesses.`,
                                 dotKeys: {

@@ -1,4 +1,5 @@
 # Latest todo
+* Rethink I would contraction
 * Review latest revisions
 * Write to Ross Barkan
 * Allow annotations to be clicked in dashboard

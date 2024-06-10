@@ -30,7 +30,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: REVIEW,
                 card: {
-                    description: `It's early in the evening, with the sky beginning to clear from a midday shower. Sita and I have just walked back to her boarding house after a date. We now face each other awkwardly in front of her gate.`,
+                    description: `It's early in the evening, with the sky beginning to clear after a midday shower. Sita and I have just walked back to her boarding house after a date. We now face each other awkwardly in front of her gate.`,
                     dotKeys: {
                         [NARRATIVE]: true,
                     },
@@ -118,7 +118,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `My inability to translate thoughts into coherent speech is reflected in the herky-jerky,`,
@@ -185,7 +184,7 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `Due to trade rivalries between the British and Dutch in the 17th century, several idioms in the English language employ the term "Dutch" as a pejorative.`,
+                                        `Due to trade rivalries between the British and Dutch in the 17th century, several idioms in the English language employ "Dutch" as a pejorative.`,
                                         {
                                             anchor: `Dutch courage`,
                                             wiki: `Dutch_courage`,
@@ -347,7 +346,6 @@ export default {
                     mixTime: `0:30:07.08`,
                     lyric: {
                         anchor: `heart of gold inside`,
-                        todo: REVIEW,
                         card: {
                             description: `Mistakes made on one date still offered lessons that I could apply toward the next. So each date felt like prying open one nesting doll to get to another, with the ultimate goal of reaching the last one whose promise proved not to be hollow.`,
                             dotKeys: {
@@ -387,7 +385,6 @@ export default {
                         `to find the`,
                         {
                             anchor: `chrysalis unchristened`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `As we pass a display on the butterfly lifecycle, it occurs to me that what I'm hoping to find is a chrysalis— in other words, someone so new to this world that my own lack of worldliness wouldn't be an issue.`,
@@ -527,7 +524,6 @@ export default {
                     lyric: [
                         {
                             anchor: `pidgin palaver`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -558,7 +554,6 @@ export default {
                         `hyped up like some`,
                         {
                             anchor: `disastrous play`,
-                            todo: REVIEW,
                             card: {
                                 description: `On our second date, Sita and I go to see her friend act in a play. Before taking our seats, we chat with him backstage. I struggle to get a word in edgewise, however, and this leaves me feeling insecure afterward.`,
                                 dotKeys: {
@@ -604,9 +599,10 @@ export default {
                         `for if the`,
                         {
                             anchor: `tactic is to stall`,
-                            todo: REVIEW,
+                            todo: REVISE,
+                            problem: `Make clear that doing the same means waiting to call back.`,
                             card: {
-                                description: `My friends would advise me to wait three days before calling a woman back. Yet it was always agony when she invariably did the same to me.`,
+                                description: `My friends always advised me to wait three days before calling a woman back. Yet it was always agony when she invariably did the same to me.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -666,7 +662,7 @@ export default {
                             anchor: `learn to shotgun`,
                             todo: REVIEW,
                             card: {
-                                description: `In time I adopted the shotgun approach to dating, which involves hitting on anyone at any moment. It works by putting the math on your side: Even if your success rate remains dismal, you're increasing the sample size, which gives you a better chance of having at least one person say yes to a date. And, of course, one yes is all you need.`,
+                                description: `In time I adopted the shotgun approach to dating, which involves hitting on anyone at any moment. It works by putting the math on your side: Even if your success rate remains dismal, you're increasing the sample size, which then gives you a better chance of having a woman say yes to a date. And, of course, one yes is all you need.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -700,7 +696,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `To continue with the '70s feel of this song, I gathered ideas from`,
@@ -733,7 +728,6 @@ export default {
                         `though each`,
                         {
                             anchor: `kind new ultimatum`,
-                            todo: REVIEW,
                             card: {
                                 description: `Like the deals that natives were forced at gunpoint to make with settlers, Sita's proposition for us to see her friend's play offered only the illusion of choice. She was going either way; I could either tag along or stay home.`,
                                 dotKeys: {
@@ -814,7 +808,7 @@ export default {
                             anchor: `sampler cologne`,
                             todo: REVIEW,
                             card: {
-                                description: `Whenever I spotted a men's lifestyle magazine that someone had thrown away, I would tear out the scent strips from its cologne ads and add them to my pile. Then right before a date, I would rub a few onto my wrists.`,
+                                description: `Whenever I spotted a men's lifestyle magazine that had been thrown out, I would tear out the scent strips from its cologne ads and add them to my pile. Then right before a date, I would rub a few onto my wrists.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -940,7 +934,7 @@ export default {
                             anchor: `dummy steering wheel`,
                             todo: REVIEW,
                             card: {
-                                description: `Like a child clutching the passenger steering wheel in a twin go-kart, I naively hold onto the hope that my words and actions can steer this date in a direction to my liking.`,
+                                description: `Like a child clutching the passenger steering wheel in a twin go-kart, I naively hold onto the hope of steering this date in a direction to my liking.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -960,7 +954,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `Children's songs from the '70s are a treasure trove of musical wisdom: They were composed by professionals, but then arranged for the popular styles of those times. One example is the soundtrack for`,
@@ -1041,7 +1034,7 @@ export default {
                         todo: REVIEW,
                         cards: [
                             {
-                                description: `I walked home that evening determined not to let another opportunity pass without confessing my feelings to Sita. A few days later, I did exactly that in a phone call. It went horribly, and I didn't hear from her again for months.`,
+                                description: `I walked home that evening determined not to let another opportunity pass without confessing my feelings to Sita. A few days later, I did exactly that in a phone call. It went horribly, and I didn't speak to her again for a good while.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
