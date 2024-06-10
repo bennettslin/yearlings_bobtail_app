@@ -238,9 +238,9 @@ export default {
                         {
                             anchor: `mindful manners`,
                             todo: REVISE,
-                            problem: `Be more clear what I mean by women like her.`,
+                            problem: `Don't repeat swearing.`,
                             card: {
-                                description: `Catherine didn't like it when I swore, so I decided to give up swearing as well. I figured this would be a definite win with other women like her, while the rest would find its quaintness charming.`,
+                                description: `Catherine didn't like it when I swore, so I decided to give up swearing as well. I figured this would be a definite win with any other woman like her, while all the rest would find its quaintness charming.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -254,10 +254,9 @@ export default {
                     lyric: [
                         {
                             anchor: `Once I metamorphose`,
-                            todo: REVISE,
-                            problem: `Make this a complete sentence.`,
+                            todo: REVIEW,
                             card: {
-                                description: `Upon completion of my metamorphosis, once I "met a Mara, for" certain I was to impress her.`,
+                                description: `Or, once I "met a Mara, for" certain I would be to impress her— having completed my metamorphosis.`,
                                 dotKeys: {
                                     [PUN]: true,
                                 },
