@@ -14,7 +14,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'On a Golden Cord',
@@ -259,7 +259,7 @@ export default {
                             anchor: `sole belonging signed`,
                             todo: REVIEW,
                             card: {
-                                description: `Plopped onto moonlit streets from whereabouts unknown, the "drunken" voice of the doublespeaker pair can only recollect his past crimes. And so he believes himself to be newly released from prison— having just retrieved from storage the gold bracelet now in his hand.`,
+                                description: `Plopped onto moonlit streets from whereabouts unknown, the "drunken" voice can only recollect his past crimes. And so he believes himself to be newly released from prison— perhaps having just retrieved from storage the bracelet now in his hand.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -336,7 +336,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
+                todo: REVISE,
+                problem: `This description is inaccurate. Use the wiki entry for doublethink.`,
                 card: {
                     description: [
                         `In`,

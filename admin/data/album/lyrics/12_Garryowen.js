@@ -225,7 +225,8 @@ export default {
                         `Drunk pissed`,
                         {
                             anchor: `punks tryst,`,
-                            todo: REVIEW,
+                            todo: REVISE,
+                            problem: `First sentence is still off.`,
                             card: {
                                 description: [
                                     `I wore`,
@@ -392,7 +393,7 @@ export default {
                             anchor: `Slammed in the well`,
                             todo: REVIEW,
                             card: {
-                                description: `But vomiting into a toilet, and then seeing your miserable reflection in the water staring back at you, only works as a wake-up call the first time. After that, it's a cliche.`,
+                                description: `But vomiting into a toilet, and then seeing your reflection in the water staring back at you miserably, only works as a wake-up call the first time. After that, it's a cliche.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

@@ -294,7 +294,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `During that year when Sita and I got to know each other as friends, I still tried to impress her without appearing to do so. One time, I solved her friend's`,
+                                    `During that year when Sita and I got to know each other as friends, I still tried to impress her without appearing to do such. One time, I solved her friend's`,
                                     {
                                         anchor: `Rubik's Cube`,
                                         wiki: `Rubik's_Cube`,
