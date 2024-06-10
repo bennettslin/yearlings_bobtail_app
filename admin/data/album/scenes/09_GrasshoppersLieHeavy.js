@@ -27,6 +27,7 @@ import {
     TIME_NOON,
     TIME_NIGHT,
     SEASON_SUMMER,
+    SEASON_AUTUMN,
     SEASON_WINTER,
     SEASON_LOVE,
 } from '../../../../src/constants/scene/sky'
@@ -338,7 +339,7 @@ export default [
             },
         },
         cubes: BENNETT_GATE_KEY,
-        sky: { time: TIME_NIGHT, season: SEASON_WINTER },
+        sky: { time: TIME_NIGHT, season: SEASON_AUTUMN },
     },
     {
         unitIndex: 10,
@@ -375,7 +376,7 @@ export default [
             },
         },
         cubes: BENNETT_GATE_KEY,
-        sky: { time: TIME_NIGHT, season: SEASON_WINTER },
+        sky: { time: TIME_NIGHT, season: SEASON_AUTUMN },
     },
     {
         unitIndex: 11,
@@ -410,7 +411,7 @@ export default [
             },
         },
         cubes: BENNETT_BED_DARK_KEY,
-        sky: { time: TIME_NIGHT, season: SEASON_WINTER },
+        sky: { time: TIME_NIGHT, season: SEASON_AUTUMN },
     },
     {
         unitIndex: 12,
@@ -450,7 +451,7 @@ export default [
             },
         },
         cubes: BENNETT_BED_KEY,
-        sky: { time: TIME_NIGHT, season: SEASON_WINTER },
+        sky: { time: TIME_NIGHT, season: SEASON_AUTUMN },
     },
     {
         unitIndex: 13,
