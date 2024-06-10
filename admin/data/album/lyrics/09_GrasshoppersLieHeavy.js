@@ -29,7 +29,7 @@ export default {
     mixStartTime: `0:01:29.52`,
     playerStartTime: 1478.233,
     todo: REVIEW,
-    overview: `I worked my way through college as a dishwasher in a campus cafeteria, which is how I met Sita. After I scared her off, we didn't speak for months. But she eventually reached out again, and we became friends. As I got off to a rocky start with playing live shows, and as I continued to struggle with dating women, Sita lent her moral support, though a part of me always wanted something more. At some point, she started to like me back. I'm still not sure how.`,
+    overview: `I worked my way through college as a dishwasher in a campus cafeteria, which is how I met Sita. After I scared her off, we didn't speak for months. But she eventually reached out again, and we became friends. As I got off to a rocky start with playing live shows, Sita lent her moral support— though a part of me always wanted something more. At some point, she started to like me back. I'm still not sure how.`,
     isDoublespeaker: true,
     lyricUnits: [
         {
@@ -220,7 +220,6 @@ export default {
                         `death of`,
                         {
                             anchor: `dull dishroom days`,
-                            todo: REVIEW,
                             card: {
                                 description: `My job washing dishes was uneventful and offered no social interaction, but it had its upsides. At the start of the shift, I could read a book while the dishes piled up, and then clean them all at once in a mad rush. When it got busy, I would switch to writing lyrics in my head.`,
                                 dotKeys: {
@@ -361,7 +360,6 @@ export default {
                         {
                             anchor: `Schwa stickers`,
                             properNoun: true,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -389,7 +387,6 @@ export default {
                         `attached to your`,
                         {
                             anchor: `sci-fi paperback`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `At the time, I was obsessed with Dick's stories of altered states and dystopian worlds. I almost always had one of his novels nestled under my arm.`,
@@ -434,7 +431,6 @@ export default {
                         `spurs tales of`,
                         {
                             anchor: `bare-knuckle defeats`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `Sita was intrigued by my rough-and-tumble past, despite my honest admission that these were literal beatdowns in which I'd never thrown a single punch.`,
@@ -471,7 +467,6 @@ export default {
                         `Her`,
                         {
                             anchor: `show played in mimes`,
-                            todo: REVIEW,
                             card: {
                                 description: `The world of dating was awash in silent cues that, as far as I knew, no one could be expected to deduce on their own. So I desperately wanted everything to be spelled out, and it baffled me to be alone in feeling this way.`,
                                 dotKeys: {
@@ -491,7 +486,7 @@ export default {
                             anchor: `she disappeared`,
                             todo: REVIEW,
                             card: {
-                                description: `Shortly after our first few dates, I called Sita to tell her I was in love with her. She admitted that she didn't feel the same way yet wanted to remain friends. We hung up with the understanding that we would continue to hang out casually. But I felt so dejected that I decided never to see her again.`,
+                                description: `Shortly after our first few dates, I called Sita to tell her I was in love with her. She admitted that she didn't feel the same way, yet wanted to remain friends. We hung up with the understanding that we would continue to hang out casually. But I felt so dejected that I decided never to see her again.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -567,7 +562,6 @@ export default {
                         `But`,
                         {
                             anchor: `no convert's missed`,
-                            todo: REVIEW,
                             card: {
                                 description: `RI Research understood that I would grow disillusioned, which is why they asked for the largest payment upfront. The last few letters were so sloppily written, it even felt like they were shooing me away by that point. And now Sita's departure from my life seemed like proof that I was once again a sucker for the perfect scam.`,
                                 dotKeys: {
@@ -848,9 +842,10 @@ export default {
                         `,`,
                         {
                             anchor: `returned to your guard`,
-                            todo: REVIEW,
+                            todo: REVISE,
+                            problem: `Too many likes in a row?`,
                             card: {
-                                description: `And just like that, I'm once again on guard, much like I was on our first few dates. I'm now second-guessing everything I say, like a prisoner conversing with a jail guard.`,
+                                description: `And just like that, I'm once again on guard, much like I was on our first few dates. Like a prisoner conversing with a jail guard, I find myself second-guessing everything I say.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -873,8 +868,9 @@ export default {
                         `In her`,
                         {
                             anchor: `gingerbread prison`,
+                            todo: REVIEW,
                             card: {
-                                description: `Since a platonic friendship with Sita can never fulfill me, I find the thought depressing. And yet… it's also kind of sweet to nibble on.`,
+                                description: `Since a platonic friendship with Sita can never fulfill me, I find the thought depressing. Yet… it's also kind of sweet to nibble on.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -892,7 +888,7 @@ export default {
                             anchor: `never full, you're fed`,
                             todo: REVIEW,
                             card: {
-                                description: `Like a tired fugitive relieved to come back to a warm bed and regular meals, I finally concede that mere friendship is better than the cold, bleak alternative.`,
+                                description: `And so I concede that mere friendship is still better than the cold, bleak alternative, the way a tired fugitive feels relieved to come back to a warm bed and regular meals.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -1221,7 +1217,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `It took a whole year for Sita and I to be fully comfortable with each other. At the start of our friendship, we mostly just studied together at the library. But slowly, short treks through campus progressed into long strolls around the neighborhood, which then led up to leaning in closer on the couch. It all happened so fast toward the end that I was still processing what triggered it.`,
+                                    description: `It took a whole year for Sita and I to be fully comfortable with each other. At the start of our friendship, we mostly just studied together at the library. But slowly, short treks through campus progressed into long strolls around the neighborhood, which led up to leaning in closer on the couch. It all happened so fast toward the end that I was still processing what triggered it.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -1233,7 +1229,7 @@ export default {
                                             anchor: `favorite Beatles song`,
                                             wiki: `She_Loves_You`,
                                         },
-                                        `. During my troubled years with Sita later on, it always made me feel like`,
+                                        `. During my troubled moments with Sita, it felt like`,
                                         {
                                             anchor: `John Lennon`,
                                             wiki: `John_Lennon`,
@@ -1318,7 +1314,7 @@ export default {
                             anchor: `how's that compromise`,
                             todo: REVIEW,
                             card: {
-                                description: `Having taken such pains to tuck away my emotions for so long, I was now hesitant to compromise the safety of this position. I just didn't want to feel vulnerable again, and I had so little faith that my desires wouldn't backfire on me as they had the first time I revealed them.`,
+                                description: `Having taken such pains to tuck away my emotions for so long, I was now hesitant to compromise the safety of this position. I just didn't want to feel vulnerable again, and I had so little faith that my desires wouldn't backfire on me as they did the first time I revealed them.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -1442,7 +1438,6 @@ export default {
                         `You`,
                         {
                             anchor: `stroke her temples`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Referring to her literal`,
@@ -1496,7 +1491,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `The French expression`,
