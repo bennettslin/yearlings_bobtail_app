@@ -443,7 +443,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Red pouches unspent`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In Asian cultures, children receive money in`,
@@ -478,7 +477,6 @@ export default {
                         `"`,
                         {
                             anchor: `Are you a Beyonder`,
-                            todo: REVIEW,
                             card: {
                                 description: `According to RI Research, Beyonders are an ancient race of astral beings who were scattered across the universe. The ones who came to Earth adopted the likeness of humans, after which they lost all memory of their stellar origins. Yet even so, they're beset by a silent discomfort that they don't truly belong.`,
                                 dotKeys: {

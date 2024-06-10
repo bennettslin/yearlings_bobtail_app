@@ -1,5 +1,8 @@
 # Latest todo
-* Rethink I would contraction
+* I would
+    * "I'd" to express intent
+    * "I would" to convey habitual behavior
+* Season in Grasshoppers
 * Review latest revisions
 * Write to Ross Barkan
 * Allow annotations to be clicked in dashboard

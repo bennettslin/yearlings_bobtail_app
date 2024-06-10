@@ -14,7 +14,7 @@ import {
     FORESHADOW_OF_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'My 100,000th Dream',

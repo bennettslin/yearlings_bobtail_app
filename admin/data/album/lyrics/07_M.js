@@ -255,7 +255,7 @@ export default {
                             anchor: `Once I metamorphose`,
                             todo: REVIEW,
                             card: {
-                                description: `Or, once I "met a Mara, for" certain I'd be to impress her— having completed my metamorphosis.`,
+                                description: `Or, once I "met a Mara, for" certain I would be to impress her— after completing my metamorphosis.`,
                                 dotKeys: {
                                     [PUN]: true,
                                 },
