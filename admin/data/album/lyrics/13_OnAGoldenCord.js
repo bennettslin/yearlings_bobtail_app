@@ -920,8 +920,9 @@ export default {
                     lyricRight: [
                         {
                             anchor: `leaked the bandage`,
+                            todo: REVIEW,
                             card: {
-                                description: `With our emotional bond now severed, Sita bled both metaphorically and literally: She'd started to experiment with cutting to ease her depression.`,
+                                description: `With our emotional bond now severed, Sita bled both metaphorically and literally: She'd begun to experiment with cutting to ease her depression.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

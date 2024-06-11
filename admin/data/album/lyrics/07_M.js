@@ -661,10 +661,9 @@ export default {
                         `keeps me`,
                         {
                             anchor: `solely for a pet`,
-                            todo: REDO,
-                            problem: `Make this more about The ways of belonging to a social scene were still so foreign to me. And yet, at this point, I did belong to one.`,
+                            todo: REVIEW,
                             card: {
-                                description: `After Mara started dating Jacob, she continued to interact with me in the same manner, which made me realize that I'd misread her intentions all along. In retrospect, I was so unused to being treated with genial regard that it felt like being flirted with.`,
+                                description: `After Mara started going out with Jacob, she continued to interact with me in the same flirtatious manner, which made me realize that I'd misread her intentions all along. The ways of a social scene were just so new to me… And yet, I found this thought inspiring, not frustrating— as it meant I finally belonged to one.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -828,10 +827,9 @@ export default {
                         `But then I saw the`,
                         {
                             anchor: `world's a naked baby`,
-                            todo: REVISE,
-                            problem: `Go back to saying important subject matters.`,
+                            todo: REVIEW,
                             card: {
-                                description: `But at some point, I realized that a social scene is no different from the world at large, in that little is hidden from view. Any situation can be understood by reading everyone's intentions and observing their actions, much like a holistic picture of the world can be pieced together by reading books written by those who've observed it.`,
+                                description: `But at some point, I realized that a social scene is no different from the world at large, in that little is hidden from view. Any situation can be understood by reading everyone's intentions and observing their actions, much like a holistic picture of the world emerges after reading books on all the important subject matters.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -853,11 +851,10 @@ export default {
                     lyric: [
                         {
                             anchor: `to have a merry ol' laugh`,
-                            todo: REVISE,
-                            problem: `Last sentence, make clear that you can only react with good humor when your plans fall apart.`,
+                            todo: REVIEW,
                             card: {
 
-                                description: `Or, to have a "Mara, you'll" laugh. In short, everyone does what you would expect them to do, given what you can expect them to want— and a social scene is simply the sum total of all that. No one gets in the way of your best laid plans just to spite you. And so you can only react with good humor when it happens.`,
+                                description: `Or, to have a "Mara, you'll" laugh. In short, everyone else does what you would expect them to do, given what you can expect them to want— and a social scene is simply the sum total of all that. No one gets in your way just to spite you— which means you can only react with good humor when your best-laid plans fall apart.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [PUN]: true,

@@ -228,8 +228,7 @@ export default {
                         `You stowed away`,
                         {
                             anchor: `beneath your captain bed`,
-                            todo: REVISE,
-                            problem: `Say which allowed for a spacious hideout behind it.`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `I slept in a`,
@@ -237,7 +236,7 @@ export default {
                                         anchor: `captain bed`,
                                         wiki: `Storage_bed`,
                                     },
-                                    `that lay atop a dresser on one side, while the other side sat flush against the wall. The dresser was half as deep as the bed was wide, creating a spacious hideout that I could access by crawling through its cabinet door and squeezing past the flimsy back panel.`,
+                                    `that lay atop a dresser on one side, while the other side sat flush against the wall. The dresser was only half as deep as the bed was wide, creating ample space behind it for a hideout. I would squeeze my way in by crawling through its cabinet door and pushing back the flimsy back panel.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -325,10 +324,9 @@ export default {
                         `they'll catch you by`,
                         {
                             anchor: `your cape`,
-                            todo: REVISE,
-                            problem: `Still doesn't flow well.`,
+                            todo: REVIEW,
                             card: {
-                                description: `In elementary school, I was well liked. Being small for my age, I was harmless and unassuming; and because I was always drawing in my notebooks, I would happily draw animals and cartoon figures for those who asked. But the traits that once made me a hero now marked me as easy prey in middle school, and I was ill-prepared.`,
+                                description: `In elementary school, everyone liked me. Being small for my age, I was pampered even by other boys; and being absorbed in my sketchbooks, I would happily make any detailed drawing for those who asked. But the traits that once made me a hero now marked me as easy prey in middle school, and I was ill-prepared.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
