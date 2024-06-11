@@ -183,12 +183,12 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `Due to 17th-century trade rivalries between the British and Dutch, several idioms in the English language employ "Dutch" as a pejorative.`,
+                                        `Several idioms in the English language disparage the Dutch, due to their trade rivalries with the British in the 17th century.`,
                                         {
                                             anchor: `Dutch courage`,
                                             wiki: `Dutch_courage`,
                                         },
-                                        `refers to misplaced confidence gained from drinking alcohol.`,
+                                        `refers to false confidence gained from drinking alcohol.`,
                                     ],
                                 },
                             ],
@@ -661,7 +661,7 @@ export default {
                             anchor: `learn to shotgun`,
                             todo: REVIEW,
                             card: {
-                                description: `In time I adopted the shotgun approach to dating, which involves hitting on anyone at any moment. It works by putting the math on your side: Even if your success rate remains dismal, you've just increased the sample size, which now gives you a better chance for a woman to say yes. And, of course, one yes to a date is all you need.`,
+                                description: `In time I adopted the shotgun approach to dating, which involves hitting on anyone at any moment. It works by putting the math on your side: Even though your success rate remains dismal, you've increased the sample size, which now gives you a better chance of having a woman say yes. And, of course, one yes to a date is all you need.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -807,7 +807,7 @@ export default {
                             anchor: `sampler cologne`,
                             todo: REVIEW,
                             card: {
-                                description: `Whenever I spotted a men's lifestyle magazine that had been thrown out, I would tear out the scent strips from its cologne ads and add them to my pile. Then right before a date, I would rub a few onto my neck and wrists.`,
+                                description: `Whenever I spotted a men's lifestyle magazine in some neighbor's recycling bin, I would tear out the scent strips from its cologne ads and add them to my pile. Then right before a date, I would rub a few onto my neck and wrists.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -931,7 +931,6 @@ export default {
                         `from a`,
                         {
                             anchor: `dummy steering wheel`,
-                            todo: REVIEW,
                             card: {
                                 description: `Like a child clutching the passenger steering wheel in a twin go-kart, I naively hold onto the hope of guiding this date in a direction to my liking.`,
                                 dotKeys: {
@@ -1030,7 +1029,6 @@ export default {
                     mixTime: `2:04:21.72`,
                     lyric: {
                         anchor: `I sigh, "Good night."`,
-                        todo: REVIEW,
                         cards: [
                             {
                                 description: `I walked home that evening determined not to let another moment pass without confessing my feelings to Sita. A few days later, I did just that in a phone call. It went horribly, and I didn't speak to her again for a good while.`,
