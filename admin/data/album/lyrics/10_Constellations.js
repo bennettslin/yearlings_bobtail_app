@@ -17,6 +17,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Constellations!',
@@ -31,12 +32,15 @@ export default {
     mixStartTime: `0:01:18.60`,
     playerReferenceTime: 1751.447,
     playerStartTime: 1751.191,
-    overview: `One night I went with my bassist Ana and some of our friends to get high on Robitussin while exploring the steam tunnels under UCLA. I got us all to pretend that we were Vikings, Mongols, and various waves of human migration throughout world history. In hindsight, the others were probably just humoring me. I ended up doing so much Robitussin that summer, it took me a while to regain my grip on reality.`,
+    todo: REVISE,
+    problem: `I say that Howie and Tomer are Ana's friends below. Make this consistent.`,
+    overview: `One night I went with my bassist Ana and some of our friends to get high on Robitussin while exploring the steam tunnels under UCLA. I got us all to pretend that we were Vikings, Mongols, and various waves of human migration throughout world history. In hindsight, they were probably just humoring me. I ended up doing so much Robitussin that summer, it took me a while to regain my grip on reality.`,
     lyricUnits: [
         {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
                         `I first tried Robitussin earlier that summer after reading of its narcotic effects in`,
@@ -57,7 +61,7 @@ export default {
                             anchor: `closed-eye hallucinations`,
                             wiki: `Closed-eye_hallucination`,
                         },
-                        `that are projected onto the back of your eyelids. If they get too intense, you can just open your eyes. At the time, I called them "constellations."`,
+                        `that are projected onto the back of your eyelids. If they ever get too intense, you can just open your eyes. At the time, I called them "constellations."`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -534,6 +538,7 @@ export default {
                         },
                         {
                             anchor: `psealed off drains`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `The entrance to the steam tunnels is hidden "among old, sealed-off drains."`,
@@ -554,7 +559,7 @@ export default {
                                             anchor: `crystal meth`,
                                             wiki: `Methamphetamine`,
                                         },
-                                        `, however, pseudoephedrine is no longer available over the counter.`,
+                                        `, however, it's no longer included in over-the-counter medicines.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -797,9 +802,10 @@ export default {
                         {
                             anchor: `Indus-trail sewerce`,
                             properNoun: true,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `As we make our way down "industrial sewers," I excitedly explain the subject of a term paper I once wrote. In the 19th century, Western scholars proposed that Indian civilization was brought by invaders from the north, who carved a trail leading to the "source" of the`,
+                                    `As we make our way down "industrial sewers," I excitedly explain the subject of a term paper I just wrote. In the 19th century, Western scholars proposed that Indian civilization was brought by invaders from the north, who carved a trail leading to the "source" of the`,
                                     {
                                         anchor: `Indus`,
                                         wiki: `Indus_River`,
