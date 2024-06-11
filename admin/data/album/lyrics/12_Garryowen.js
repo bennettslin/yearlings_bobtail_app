@@ -391,7 +391,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Slammed in the well`,
-                            todo: REVIEW,
                             card: {
                                 description: `But vomiting into a toilet, and then seeing your reflection in the water staring back at you miserably, only works as a wake-up call the first time. After that, it's a cliche.`,
                                 dotKeys: {
@@ -655,7 +654,7 @@ export default {
                             anchor: `drop your anchor`,
                             todo: REVIEW,
                             card: {
-                                description: `More than anything else, I was tired of endlessly lurching from one emotional extreme to the next. Breaking up meant I could finally drop my "anger" and keep my mood anchored in place.`,
+                                description: `More than anything else, I was tired of endlessly lurching from one emotional extreme to the next. Breaking up meant that I could finally drop my "anger" and keep my mood anchored in place.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,

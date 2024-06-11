@@ -259,7 +259,7 @@ export default {
                             anchor: `sole belonging signed`,
                             todo: REVIEW,
                             card: {
-                                description: `Plopped onto moonlit streets from whereabouts unknown, the "drunken" voice can only recollect his past crimes. And so he believes himself to be newly released from prison— perhaps having just retrieved from storage the bracelet now in his hand.`,
+                                description: `Plopped onto moonlit streets from whereabouts unknown, my "drunken" voice can only recollect his past crimes. And so he believes himself to be newly released from prison— perhaps having just retrieved from storage the bracelet now in his hand.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -920,7 +920,6 @@ export default {
                     lyricRight: [
                         {
                             anchor: `leaked the bandage`,
-                            todo: REVIEW,
                             card: {
                                 description: `With our emotional bond now severed, Sita bled both metaphorically and literally: She'd begun to experiment with cutting to ease her depression.`,
                                 dotKeys: {
