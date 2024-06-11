@@ -959,6 +959,7 @@ export default {
                         `,`,
                         {
                             anchor: `our-youn' invedas`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Recent scholarship has returned to the theory that the "`,
@@ -966,7 +967,7 @@ export default {
                                         anchor: `Aryans`,
                                         wiki: `Aryan`,
                                     },
-                                    `" mentioned "in the Vedas" came from the north. However, it discredits the colonialist assumption that this amounted to an invasion, as no evidence of war has been uncovered. And so "to sum up," I put this "unsolved query" to rest, before the others lose their minds.`,
+                                    `" mentioned "in the Vedas" came from the north. However, it discredits the colonialist assumption that this amounted to an invasion, as no evidence of war has been uncovered. And so "to sum up," I put this "unsolved query" to rest before the others lose their minds.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1190,8 +1191,9 @@ export default {
                     lyric: [
                         {
                             anchor: `Pour sod, fourfeit tundr`,
+                            todo: REVIEW,
                             card: {
-                                description: `In the car, Howie and Tomer swap tales from their high school days, bemoaning the "poor sod" who had sod poured on him from "four feet under."`,
+                                description: `In the car, Howie and Tomer swap tales from their high school days, bemoaning the "poor sod" who had sod poured on him as he lay "four feet under."`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -1202,6 +1204,8 @@ export default {
                         {
                             anchor: `Siburial plains`,
                             properNoun: true,
+                            todo: REVISE,
+                            problem: `Don't need to repeat what's in the next annotation.`,
                             card: {
                                 description: [
                                     `The Americas were first settled by northeast Asian populations who gladly "forfeited the tundra's`,
@@ -1209,7 +1213,7 @@ export default {
                                         anchor: `Siberian`,
                                         wiki: `Siberia`,
                                     },
-                                    `plains," which would have otherwise served as their "burial" grounds.`,
+                                    `plains," which would otherwise have served as their "burial" grounds.`,
                                 ],
                                 dotKeys: {
                                     [PUN]: true,
@@ -1527,7 +1531,7 @@ export default {
                                             anchor: `dissociative`,
                                             wiki: `Dissociative`,
                                         },
-                                        `drug , I start to detach from myself. In doing so, I catch a glimpse of how superficial my aspirations are, and how "hollow" the local "scene" is in which I desire recognition.`,
+                                        `drug, I start to detach from myself. In doing so, I catch a glimpse of how superficial my aspirations are, and how "hollow" the local "scene" is in which I desire recognition.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -1568,8 +1572,9 @@ export default {
                         },
                         {
                             anchor: `toughtim rite`,
+                            todo: REVIEW,
                             card: {
-                                description: `Having now achieved a full out-of-body experience, I gaze down upon my drugged-out self. Set against the familiar backdrop of Los Angeles, this degrading sight reminds me that in having scuttled off to the Bay Area, I'm shirking my duty to care for my autistic brother. My sister, on the other hand, lives nearby. Guilt-ridden, I sarcastically note that "brother and sister taught him right."`,
+                                description: `Having now achieved a full out-of-body experience, I gaze down upon my drugged-out self. Set against the familiar backdrop of Los Angeles, this degrading sight reminds me that in having scuttled off to the Bay Area, I'm shirking my duty to care for my autistic brother. My sister, on the other hand, lives nearby. Racked with guilt, I sarcastically note that "brother and sister taught him right."`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -1721,8 +1726,9 @@ export default {
                         `I have`,
                         {
                             anchor: `left to mine`,
+                            todo: REVIEW,
                             card: {
-                                description: `At the peak of my dissociation, I mine through "memories," unable to separate the collective memories of the world from those that are mine alone.`,
+                                description: `At the peak of my dissociation, I mine through the world's collective "memories," unable to separate them from those that are mine alone.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -1769,6 +1775,8 @@ export default {
                         `,`,
                         {
                             anchor: `in-som'umiak`,
+                            todo: REVISE,
+                            problem: `The use of wreaked kind of sounds weird.`,
                             card: {
                                 description: [
                                     `Meanwhile, sensing disaster afoot, our brave Inuit tribe flees to safety "in some`,
@@ -1776,7 +1784,7 @@ export default {
                                         anchor: `umiak`,
                                         wiki: `Umiak`,
                                     },
-                                    `," a boat made of whalebone and sealskin, as we skim through icy channels wreaked by a "snowy blitz."`,
+                                    `"— a boat made of sealskin and whalebone— as we skim through icy channels wreaked by a "snowy blitz."`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1832,6 +1840,8 @@ export default {
                         `Then pounds`,
                         {
                             anchor: `arrhythmetic heart`,
+                            todo: REVISE,
+                            problem: `Is the connection with math and counting clear?`,
                             card: {
                                 description: [
                                     `"`,
@@ -1839,7 +1849,7 @@ export default {
                                         anchor: `Arrhythmia`,
                                         wiki: `Cardiac_arrhythmia`,
                                     },
-                                    `," or an irregular heartbeat, is one downside of taking Robitussin. As the psychedelic effects wear off, I grow paranoid and perform "arithmetic" in my head, hoping my pulse becomes more stable with each passing minute.`,
+                                    `," or an irregular heartbeat, is one downside of taking Robitussin. As the psychedelic effects wear off, I grow paranoid and perform "arithmetic" in my head, hoping that my pulse becomes more stable with each passing minute.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1856,6 +1866,7 @@ export default {
                         {
                             anchor: `Enguished buzzereds`,
                             properNoun: true,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In the historical narrative still playing in my head, the "`,
@@ -1868,7 +1879,7 @@ export default {
                                         anchor: `ruffs`,
                                         wiki: `Ruff_(clothing)`,
                                     },
-                                    `around their necks resemble the neck fringes seen on vultures, or "buzzards," as they're colloquially known.`,
+                                    `around their necks resemble the neck fringes seen on vultures— or "buzzards," as they're colloquially known.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
