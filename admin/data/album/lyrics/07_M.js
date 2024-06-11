@@ -238,7 +238,7 @@ export default {
                             anchor: `mindful manners`,
                             todo: REVIEW,
                             card: {
-                                description: `Catherine didn't like it when I swore, so I decided to give that up as well. I figured it would be a definite win with any other woman like her, while all the rest would find its quaintness charming.`,
+                                description: `Catherine didn't like it when I swore, so I gave that up as well. I figured this would be a definite win with any other woman like her, while the rest would find its quaintness charming.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -254,7 +254,7 @@ export default {
                             anchor: `Once I metamorphose`,
                             todo: REVIEW,
                             card: {
-                                description: `Or, once I "met a Mara, for" certain I would be to impress her— after completing my metamorphosis.`,
+                                description: `Or, once I "met a Mara, for" certain I'll be to impress her— after completing my metamorphosis.`,
                                 dotKeys: {
                                     [PUN]: true,
                                 },
@@ -528,7 +528,6 @@ export default {
                         {
                             anchor: `Moonie wedding`,
                             properNoun: true,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The`,
@@ -560,7 +559,7 @@ export default {
                             properNoun: true,
                             todo: REVIEW,
                             card: {
-                                description: `To promote cross-cultural harmony, the pairings in these mass weddings are often international by design. Which means my Moonie bride might be a foreigner who cleverly joined the church to ensure her children will be born in America. And if so, I would be a fool to believe my "maiden Mara co-signs" the marriage license in good faith.`,
+                                description: `To promote cross-cultural harmony, the pairings in these mass weddings are often international by design. Which means my Moonie bride might be a foreigner who joined the church just to ensure that her children will be born in America. And if so, I would be a fool to believe my "maiden Mara co-signs" the marriage license in good faith.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [PUN]: true,
@@ -609,12 +608,12 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `There was comfort in having all my priorities settled in advance by a five-year plan: Since I always knew with certainty the right course of action, I could undertake it with conviction, like a`,
+                                        `There was comfort in having all my priorities settled in advance by a five-year plan: Since I always knew with certainty the right course of action, I could undertake it with conviction— like a`,
                                         {
                                             anchor: `marionette`,
                                             wiki: `Marionette`,
                                         },
-                                        `being made to posture by the hidden hand of my younger self. Of course, I eagerly donned these strings only because I believed my younger self's promise that a "Mara you'll net" by doing so— which later proved to be a lie.`,
+                                        `being guided by the hidden hand of my younger self. Of course, it was only in the belief that a "Mara you'll net" by doing so, which now proved to be a lie.`,
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
@@ -634,7 +633,7 @@ export default {
                             anchor: `heap of twisted twine`,
                             todo: REVIEW,
                             card: {
-                                description: `But with little to show after five years of diligent effort, I was now paralyzed by doubt— and I knew of no other course of action to take. So the puppet of my future self lay motionless before me, already ensnared by the very "net" that was meant to snag me a romantic partner.`,
+                                description: `So with little to show after five years of diligent effort, I felt paralyzed by doubt— and I knew of no other path to take. The puppet of my future self lay motionless before me, already ensnared by the very "net" that was meant to snag me a romantic partner.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [PUN]: true,
@@ -663,7 +662,7 @@ export default {
                             anchor: `solely for a pet`,
                             todo: REVIEW,
                             card: {
-                                description: `After Mara started going out with Jacob, she continued to interact with me in the same flirtatious manner, which made me realize that I'd misread her intentions all along. The ways of a social scene were just so new to me… And yet, I found this thought inspiring, not frustrating— as it meant I finally belonged to one.`,
+                                description: `After Mara started going out with Jacob, she continued to interact with me in the same flirtatious manner, which made me realize that I'd misread her intentions all along. The ways of a social scene were just so new to me… Yet even so, I couldn't help but feel inspired— as this meant I finally belonged to one.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -829,7 +828,7 @@ export default {
                             anchor: `world's a naked baby`,
                             todo: REVIEW,
                             card: {
-                                description: `But at some point, I realized that a social scene is no different from the world at large, in that little is hidden from view. Any situation can be understood by reading everyone's intentions and observing their actions, much like a holistic picture of the world emerges after reading books on all the important subject matters.`,
+                                description: `But at some point, I realized that a social scene is no different from the world at large, in that little is hidden from view. So any situation can be understood simply by reading everyone else's intentions and observing their actions, much like a holistic picture of the world emerges after reading books on all the important subject matters.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -851,7 +850,6 @@ export default {
                     lyric: [
                         {
                             anchor: `to have a merry ol' laugh`,
-                            todo: REVIEW,
                             card: {
 
                                 description: `Or, to have a "Mara, you'll" laugh. In short, everyone else does what you would expect them to do, given what you can expect them to want— and a social scene is simply the sum total of all that. No one gets in your way just to spite you— which means you can only react with good humor when your best-laid plans fall apart.`,

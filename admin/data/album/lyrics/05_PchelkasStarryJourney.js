@@ -38,7 +38,7 @@ export default {
     playerReferenceTime: 756.159,
     playerStartTime: 755.661,
     todo: REVIEW,
-    overview: `As my years of getting bullied grew unbearable, a strange letter arrived in the mail with promises of spiritual answers. After I sent the requested payment, it was revealed to me that I belonged to a race of interstellar beings. I was also given a mission: to shut myself off from the world. I did so by adopting an unresponsive manner like my brother, which made me feel a psychic bond with him. But as my sanity chipped away, I came to realize that I was in a mail-order cult…`,
+    overview: `As my years of getting bullied grew unbearable, a strange letter arrived in the mail with promises of spiritual answers. Once I sent the requested payment, it was revealed to me that I belonged to a race of interstellar beings. I was also given a mission: to shut myself off from the world. I did so by adopting an unresponsive manner like my brother, which made me feel a psychic bond with him. But as my sanity chipped away, I came to realize that I was in a mail-order cult…`,
     lyricUnits: [
         {
             unitMap: {},
@@ -236,7 +236,7 @@ export default {
                                         anchor: `captain bed`,
                                         wiki: `Storage_bed`,
                                     },
-                                    `that lay atop a dresser on one side, while the other side sat flush against the wall. The dresser was only half as deep as the bed was wide, creating ample space behind it for a hideout. I would squeeze my way in by crawling through its cabinet door and pushing back the flimsy back panel.`,
+                                    `that lay atop a dresser on one side, while the other side sat flush against the wall. The dresser was only half as deep as the bed was wide, leaving ample space for a hideout. To reach it, I would crawl through a cabinet door and squeeze past the flimsy back panel.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -326,7 +326,7 @@ export default {
                             anchor: `your cape`,
                             todo: REVIEW,
                             card: {
-                                description: `In elementary school, everyone liked me. Being small for my age, I was pampered even by other boys; and being absorbed in my sketchbooks, I would happily make any detailed drawing for those who asked. But the traits that once made me a hero now marked me as easy prey in middle school, and I was ill-prepared.`,
+                                description: `In elementary school, everyone liked me. Being small for my age, I was pampered even by other boys; and being absorbed in my sketchbooks, I was admired for my skills and would happily draw anything for all who asked. But the traits that once made me a hero now marked me as easy prey in middle school, and I was ill-prepared.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -1319,7 +1319,6 @@ export default {
                         `, I`,
                         {
                             anchor: `can't ever return`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Regardless, I'd grown disillusioned with RI Research by this point, as the letters had become overtly Christian in tone. It's not that I held Christianity to be conclusively false; it was just incongruous with all the previous talk of stellar origins.`,

@@ -336,7 +336,7 @@ export default {
                             anchor: `pressed for an opinion`,
                             todo: REVIEW,
                             card: {
-                                description: `Feeling sheepish that Catherine thought so little of my songs, I was committed to writing one that could tug at her heartstrings someday. So in this scenario, I imagine myself asking her for a critique of the very lyrics you're listening to now.`,
+                                description: `Feeling sheepish that Catherine thought so little of my songs, I held onto the hope of writing one that could tug at her heartstrings someday. So in this scenario, I imagine myself asking her for a critique of the very lyrics you're listening to now.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [NARRATIVE]: true,
