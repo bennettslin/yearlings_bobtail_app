@@ -486,7 +486,7 @@ export default {
                             anchor: `she disappeared`,
                             todo: REVIEW,
                             card: {
-                                description: `Shortly after our first few dates, I called Sita to tell her I was in love with her. She admitted that she didn't feel the same way, yet wanted to remain friends. We hung up with the understanding that we would continue to hang out casually. But I felt so dejected that I decided never to see her again.`,
+                                description: `Shortly after our first few dates, I called Sita to tell her I was in love with her. She admitted that she didn't feel the same way, yet wanted to remain friends. We hung up with the understanding that we would continue to hang out casually— but I felt so dejected, I quietly decided never to see her again.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -845,7 +845,7 @@ export default {
                             todo: REVISE,
                             problem: `Too many likes in a row?`,
                             card: {
-                                description: `And just like that, I'm once again on guard, much like I was on our first few dates. Like a prisoner conversing with a jail guard, I find myself second-guessing everything I say.`,
+                                description: `And just like that, I'm once again on guard, much like I was on our first few dates. Like an inmate conversing with a jail guard, I find myself second-guessing everything I say.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -870,7 +870,7 @@ export default {
                             anchor: `gingerbread prison`,
                             todo: REVIEW,
                             card: {
-                                description: `Since a platonic friendship with Sita can never fulfill me, I find the thought depressing. Yet… it's also kind of sweet to nibble on.`,
+                                description: `Since being just friends with Sita will never fulfill me, I find the idea depressing. And yet… it's also kind of sweet to nibble on.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -888,7 +888,7 @@ export default {
                             anchor: `never full, you're fed`,
                             todo: REVIEW,
                             card: {
-                                description: `And so I concede that mere friendship is still better than the cold, bleak alternative, the way a tired fugitive feels relieved to come back to a warm bed and regular meals.`,
+                                description: `And so I concede that mere friendship is still better than the cold, bleak alternative, the way a tired fugitive feels relieved to come back to regular meals and the warm bed of a jail cell.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -1217,7 +1217,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `It took a whole year for Sita and I to be fully comfortable with each other. At the start of our friendship, we mostly just studied together at the library. But slowly, short treks through campus progressed into long strolls around the neighborhood, which led up to leaning in closer on the couch. It all happened so fast toward the end that I was still processing what triggered it.`,
+                                    description: `It took a whole year for Sita and I to be fully comfortable with each other. At the start of our friendship, we mostly just studied together at the library. But slowly, short treks through campus progressed into long strolls around the neighborhood, which then led to leaning in closer on the couch. Toward the end, it all happened so fast that I was still processing what triggered it.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -1239,7 +1239,7 @@ export default {
                                             anchor: `Paul McCartney`,
                                             wiki: `Paul_McCartney`,
                                         },
-                                        `were grabbing me by the collar, trying to smack some sense into me.`,
+                                        `were grabbing me by the collar to smack some sense into me.`,
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
@@ -1314,7 +1314,7 @@ export default {
                             anchor: `how's that compromise`,
                             todo: REVIEW,
                             card: {
-                                description: `Having taken such pains to tuck away my emotions for so long, I was now hesitant to compromise the safety of this position. I just didn't want to feel vulnerable again, and I had so little faith that my desires wouldn't backfire on me as they did the first time I revealed them.`,
+                                description: `Having taken such pains to tuck away my emotions for so long, I was now hesitant to compromise the safety of this position. I just didn't want to feel vulnerable again, and I had no faith that my desires wouldn't backfire on me like they did the first time I revealed them.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
