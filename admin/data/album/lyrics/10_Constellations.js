@@ -61,7 +61,7 @@ export default {
                             anchor: `closed-eye hallucinations`,
                             wiki: `Closed-eye_hallucination`,
                         },
-                        `that are projected onto the back of your eyelids. If they ever get too intense, you can just open your eyes. At the time, I called them "constellations."`,
+                        `that are projected onto the back of your eyelids; if they ever get too intense, you can just open your eyes. At the time, I called them "constellations."`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -554,12 +554,12 @@ export default {
                                             anchor: `pseudoephedrine`,
                                             wiki: `Pseudoephedrine`,
                                         },
-                                        `," a nasal decongestant. Because it's the main ingredient used to make`,
+                                        `," a nasal decongestant. It's no longer included in over-the-counter medicines, however, given that it's the main ingredient used to make`,
                                         {
                                             anchor: `crystal meth`,
                                             wiki: `Methamphetamine`,
                                         },
-                                        `, however, it's no longer included in over-the-counter medicines.`,
+                                        `.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -802,7 +802,6 @@ export default {
                         {
                             anchor: `Indus-trail sewerce`,
                             properNoun: true,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `As we make our way down "industrial sewers," I excitedly explain the subject of a term paper I just wrote. In the 19th century, Western scholars proposed that Indian civilization was brought by invaders from the north, who carved a trail leading to the "source" of the`,
@@ -959,7 +958,6 @@ export default {
                         `,`,
                         {
                             anchor: `our-youn' invedas`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Recent scholarship has returned to the theory that the "`,
@@ -1193,7 +1191,7 @@ export default {
                             anchor: `Pour sod, fourfeit tundr`,
                             todo: REVIEW,
                             card: {
-                                description: `In the car, Howie and Tomer swap tales from their high school days, bemoaning the "poor sod" who had sod poured on him as he lay "four feet under."`,
+                                description: `In the car, Howie and Tomer swap tales from their high school days, culminating with the day they poured sod on the "poor sod" who now lies "four feet under."`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -1574,7 +1572,7 @@ export default {
                             anchor: `toughtim rite`,
                             todo: REVIEW,
                             card: {
-                                description: `Having now achieved a full out-of-body experience, I gaze down upon my drugged-out self. Set against the familiar backdrop of Los Angeles, this degrading sight reminds me that in having scuttled off to the Bay Area, I'm shirking my duty to care for my autistic brother. My sister, on the other hand, lives nearby. Racked with guilt, I sarcastically note that "brother and sister taught him right."`,
+                                description: `Having now achieved a full out-of-body experience, I gaze down upon my drugged-out self. Set against the familiar backdrop of Los Angeles, this degrading sight reminds me that in scuttling off to the Bay Area, I've shirked my duty to care for my autistic brother. My sister, on the other hand, lives nearby. Guilt-ridden, I sarcastically note that "brother and sister taught him right."`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -1726,7 +1724,6 @@ export default {
                         `I have`,
                         {
                             anchor: `left to mine`,
-                            todo: REVIEW,
                             card: {
                                 description: `At the peak of my dissociation, I mine through the world's collective "memories," unable to separate them from those that are mine alone.`,
                                 dotKeys: {
@@ -1866,7 +1863,6 @@ export default {
                         {
                             anchor: `Enguished buzzereds`,
                             properNoun: true,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In the historical narrative still playing in my head, the "`,
