@@ -15,6 +15,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'क्यों? (Kyon?)',
@@ -438,16 +439,17 @@ export default {
                         `to`,
                         {
                             anchor: `spring forward on a fallback`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Then once my later years as a womanizer proved to be unfulfilling, I would surely return to her, my fallback option, with relief rather than reluctance.`,
+                                    description: `Then once my later years as a womanizer proved to be unfulfilling, surely I'd return to her— my fallback option— with relief rather than reluctance.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
                                 },
                                 {
                                     description: [
-                                        `The passage of time is suggested here by a classic mnemonic for`,
+                                        `The steady passage of time is suggested here by a classic mnemonic for`,
                                         {
                                             anchor: `daylight saving`,
                                             wiki: `Daylight_saving_time`,
@@ -657,8 +659,9 @@ export default {
                         `? Come for me? At`,
                         {
                             anchor: `thirty-three`,
+                            todo: REVIEW,
                             card: {
-                                description: `I often joked about killing myself at thirty-three, the age at which Jesus was crucified. I hated the idea of getting older, and clearly this is all the time you need to make an impact on the world. So when Sita asked me to specify at what age I would come back for her in accordance with our little pact, I answered thirty-three. The subtext was understood.`,
+                                description: `I often joked about killing myself at thirty-three, the age at which Jesus was crucified. I hated the idea of getting older, and clearly this is all the time you need to make an impact on the world. So when Sita asked me to specify at what age I'd come back for her in accordance with our pact, I answered thirty-three. The subtext was understood.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

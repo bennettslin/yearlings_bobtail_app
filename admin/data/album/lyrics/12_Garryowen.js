@@ -589,8 +589,9 @@ export default {
                         `Someday`,
                         {
                             anchor: `she won't be there`,
+                            todo: REVIEW,
                             card: {
-                                description: `But this codependency wasn't just the foundational basis of my love for Sita. It was really all I knew of how to love, period. I would never be asked to love in this way again— certainly not by any of the carefree scenesters whom I ogled at every show. And so it wasn't just cowardice that prevented me from cutting the cord. I genuinely feared whether I could ever truly love anyone else.`,
+                                description: `But this codependency wasn't just the foundational basis of my love for Sita; it was all I knew of how to love, period. I'd never be asked to love in this way again— certainly not by any of the carefree scenesters whom I ogled at every show. And so it wasn't just cowardice that prevented me from cutting the cord; I genuinely feared whether I could ever truly love anyone else.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

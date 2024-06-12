@@ -562,8 +562,9 @@ export default {
                         `But`,
                         {
                             anchor: `no convert's missed`,
+                            todo: REVIEW,
                             card: {
-                                description: `RI Research understood that I would grow disillusioned, which is why they asked for the largest payment upfront. The last few letters were so sloppily written, it even felt like they were shooing me away by that point. And now Sita's departure from my life seemed like proof that I was once again a sucker for the perfect scam.`,
+                                description: `RI Research understood that I'd soon grow disillusioned, which is why they asked for the largest payment upfront. The last few letters were so sloppily written, it even felt like they were shooing me away by that point. And now Sita's departure from my life seemed like proof that I was once again a sucker for the perfect scam.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
