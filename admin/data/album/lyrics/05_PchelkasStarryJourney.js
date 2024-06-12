@@ -347,9 +347,9 @@ export default {
                         {
                             anchor: `learn to kick it back`,
                             todo: REVISE,
-                            problem: `Make it less about being worth it to do it wholeheartedly, and more like it can only ever be done wholeheartedly.`,
+                            problem: `Make it more about having friends, to make it clear that's what I'm referring to.`,
                             card: {
-                                description: `The most popular kids in middle school were also the least concerned about being liked, which ran counter to my understanding that anything worth achieving should be pursued wholeheartedly. Yet trying things their way didn't make me any more likable either.`,
+                                description: `The most popular kids in middle school were the ones least concerned about being liked, which ran counter to my intuition that whatever I desired must be pursued wholeheartedly. Yet trying things their way didn't make me any more likable either…`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -494,7 +494,7 @@ export default {
                             todo: REVISE,
                             problem: `First sentence is still weird.`,
                             card: {
-                                description: `The letter spoke to my frustration that my yearning for acceptance should go unfulfilled. Having hit all the right nerves, it then shared hopeful news: RI Research believed that I might be a Beyonder. And now— after searching for so long— they'd found me.`,
+                                description: `The letter spoke to my frustration that my yearning for acceptance should go unfulfilled. Having hit all the right nerves, it then shared hopeful news: RI Research believed that I might be a Beyonder. And now, after searching for so long, they'd found me.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -685,21 +685,20 @@ export default {
                         `Beyonders bleed the most, their`,
                         {
                             anchor: `roots unknown to them`,
-                            todo: REVISE,
-                            problem: `Too many similar length sentences. Change sentence order. Mention RI Research first, then mention that I didn't know it at the time?`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `The notion of`,
+                                    `In retrospect, RI Research likely drew their material from the notion of`,
                                     {
                                         anchor: `star people`,
                                         wiki: `Star_people_(New_Age_belief)`,
                                     },
-                                    `was a popular`,
+                                    `, which was a popular`,
                                     {
                                         anchor: `New Age`,
                                         wiki: `New_Age`,
                                     },
-                                    `belief, though I didn't know this at the time. Like Beyonders, star people have no memory of their stellar origins. In retrospect, RI Research must have drawn some of their material from this body of thought.`,
+                                    `belief in the '70s— though I had no way to know this as a child. Like Beyonders, star people came to Earth and then lost all memory of their stellar origins.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -790,7 +789,7 @@ export default {
                             todo: REVISE,
                             problem: `Make it clear I modeled mine on his.`,
                             card: {
-                                description: `The letters cautioned me to keep myself separate from society. I realized that my brother had been doing this all along, and so I adopted a stoic composure like his.`,
+                                description: `The letters cautioned me to keep myself separate from society. I realized that my brother had been doing this all along, and so I adopted a stoic composure modeled on his.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

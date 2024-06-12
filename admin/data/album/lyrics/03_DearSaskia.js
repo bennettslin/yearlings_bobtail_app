@@ -329,9 +329,10 @@ export default {
                         `with you raving over how`,
                         {
                             anchor: `he's getting you`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `Every boy that Sasha crushed on was Jewish, which then motivated her to be a better Jew. But since I could never help strengthen her faith myself, I would always be at a disadvantage in "getting" her.`,
+                                    `Every boy that Sasha crushed on was Jewish, which then motivated her to be a better Jew. But since I couldn't help strengthen her faith myself, I was at a disadvantage in "getting" her.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,

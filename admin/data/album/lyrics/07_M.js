@@ -252,8 +252,9 @@ export default {
                     lyric: [
                         {
                             anchor: `Once I metamorphose`,
+                            todo: REVIEW,
                             card: {
-                                description: `Or, once I "met a Mara, for" certain I would be to impress her— after completing my metamorphosis.`,
+                                description: `Or, once I "met a Mara, for" certain I'd be to impress her— after completing my metamorphosis.`,
                                 dotKeys: {
                                     [PUN]: true,
                                 },
@@ -445,8 +446,9 @@ export default {
                     lyric: [
                         {
                             anchor: `Morphined`,
+                            todo: REVIEW,
                             card: {
-                                description: `Or, I would be a "Mara fiend"— a slightly different kind of addict.`,
+                                description: `Or, I'd be a "Mara fiend"— a slightly different kind of addict.`,
                                 dotKeys: {
                                     [PUN]: true,
                                 },
@@ -502,8 +504,9 @@ export default {
                         `a`,
                         {
                             anchor: `mariner's child`,
+                            todo: REVIEW,
                             card: {
-                                description: `Or else, I would die as a "Mara-nursed" child.`,
+                                description: `Or else, I'd die as a "Mara-nursed" child.`,
                                 dotKeys: {
                                     [PUN]: true,
                                 },
@@ -558,7 +561,7 @@ export default {
                             properNoun: true,
                             todo: REVIEW,
                             card: {
-                                description: `To promote cross-cultural harmony, the pairings in these mass weddings are often international by design. Which means my Moonie bride might be a foreigner who joined the church just to ensure that her children will be born in America. And if so, I would be a fool to believe my "maiden Mara co-signs" the marriage license in good faith.`,
+                                description: `To promote cross-cultural harmony, the pairings in these mass weddings are often international by design. Which means my Moonie bride might be a foreigner who joined the church just to ensure that her children will be born in America. And if so, I'd be a fool to think my "maiden Mara co-signs" the marriage license in good faith.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [PUN]: true,

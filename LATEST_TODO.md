@@ -1,6 +1,6 @@
 # Latest todo
-* Begin by revising
 * Revisit "I would"
+* Revisit "_ould have"?
 * Reviews
 * Audit Garryowen
 * Write to Ross Barkan

@@ -17,6 +17,7 @@ import {
     FLASHBACK_TO_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Willy the Cocoa',
@@ -608,7 +609,8 @@ export default {
                     lyric: [
                         `You'd learn him good, when`,
                         {
-                            anchor: `smarts he could've took`,
+                            // NOTE: I decided not to contract "could've."
+                            anchor: `smarts he could have took`,
                             cards: [
                                 {
                                     description: `I grew up puzzling over why my brother was born with autism and I wasn't, when our circumstances were no different. It wasn't far-fetched to suppose that every mother's womb starts out with a fixed supply of mental capacity to dole out to each child, and I'd selfishly taken my brother's share.`,
@@ -1135,6 +1137,7 @@ export default {
                         `, you'll write this`,
                         {
                             anchor: `book of yours`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `I wore an eyepatch as a child to correct my`,
@@ -1142,7 +1145,7 @@ export default {
                                         anchor: `lazy eye`,
                                         wiki: `Amblyopia`,
                                     },
-                                    `. Since I lacked depth perception, it wasn't a struggle for me to recreate on paper what I saw in real life. Impressed by my drawing skills, my mother insisted that I was destined to be a great artist. So I always figured that one day I would create a masterpiece— perhaps something like the`,
+                                    `, which meant I lacked stereo vision. As a result, I was terrible at sports— but great at drawing, since I could easily recreate on paper what I saw in real life. Impressed by my skills, my mother insisted that I was destined to be a great artist. So I always figured that someday I'd create a masterpiece— perhaps something like the`,
                                     {
                                         anchor: `Tintin`,
                                         wiki: `The_Adventures_of_Tintin`,
@@ -1181,6 +1184,7 @@ export default {
                                 `'s cover`,
                             ],
                             properNoun: true,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `My favorite word as a child was "bobtail." I was just so proud of myself the day I realized that the line "Bells on bobtail ring," from the song "`,
@@ -1193,7 +1197,7 @@ export default {
                                         isItalic: true,
                                         lyric: `Bobtail`,
                                     },
-                                    `became my catchall title for the great artistic work I would one day create.`,
+                                    `became my catchall title for the great artistic work that I'd one day create.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
