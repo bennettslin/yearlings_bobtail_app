@@ -347,10 +347,11 @@ export default {
                     lyric: [
                         `staying kosher. Though, you know,`,
                         {
-                            anchor: `I would have too`,
+                            // NOTE: I decided to contract from "would have."
+                            anchor: `I would've too`,
                             todo: REVIEW,
                             card: {
-                                description: `Yet if Sasha had wanted me, then of course I would have converted to Judaism. It made no sense to be loyal to my own cultural identity, which I'd had no hand in choosing.`,
+                                description: `Yet if Sasha had wanted me, then of course I would've converted to Judaism. It made no sense to be loyal to my own cultural identity, which I'd had no hand in choosing.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

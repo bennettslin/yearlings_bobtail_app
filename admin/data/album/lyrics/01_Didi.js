@@ -456,7 +456,8 @@ export default {
                 },
                 {
                     mixTime: `1:58:14.30`,
-                    lyric: `They'll say, who now could have ever figured`,
+                    // NOTE: I decided to contract from "could have."
+                    lyric: `They'll say, who now could've ever figured`,
                 },
                 {
                     mixTime: `2:01:09.04`,

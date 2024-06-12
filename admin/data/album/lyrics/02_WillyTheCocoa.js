@@ -609,8 +609,7 @@ export default {
                     lyric: [
                         `You'd learn him good, when`,
                         {
-                            // NOTE: I decided not to contract "could've."
-                            anchor: `smarts he could have took`,
+                            anchor: `smarts he could've took`,
                             cards: [
                                 {
                                     description: `I grew up puzzling over why my brother was born with autism and I wasn't, when our circumstances were no different. It wasn't far-fetched to suppose that every mother's womb starts out with a fixed supply of mental capacity to dole out to each child, and I'd selfishly taken my brother's share.`,

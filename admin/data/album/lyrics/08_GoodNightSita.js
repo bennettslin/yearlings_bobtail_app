@@ -152,13 +152,14 @@ export default {
                         `for this kid wearing no`,
                         {
                             anchor: `decoder ring`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     {
                                         anchor: `Secret decoder rings`,
                                         wiki: `Secret_decoder_ring`,
                                     },
-                                    `were promotional toys in the '60s that allowed children to decipher a television program's encrypted messages. Oftentimes, what they revealed was a preview of the next episode. Similarly, I would have liked to have every date end with a preview of the next one.`,
+                                    `were promotional toys in the '60s that allowed children to decipher a television program's encrypted messages. Oftentimes, what they revealed was a preview of the next episode. Similarly, I would've liked to have every date end with a preview of the next one.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
