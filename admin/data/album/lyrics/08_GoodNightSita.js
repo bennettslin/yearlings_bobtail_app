@@ -491,7 +491,7 @@ export default {
                             problem: `Run on sentence.`,
                             card: {
                                 description: [
-                                    `My buzz would wear off a few hours into a date, causing me to suddenly realize that everything I'd just been saying might topple under scrutiny, like a`,
+                                    `My buzz would wear off a few hours into a date, causing me to realize that everything I'd been saying might topple under scrutiny, like a`,
                                     {
                                         anchor: `totem pole`,
                                         wiki: `Totem_pole`,

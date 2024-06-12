@@ -1,11 +1,14 @@
 # Latest todo
+* Begin by revising
+* Revisit "I would"
+* Reviews
+* Audit Garryowen
 * Write to Ross Barkan
 * Allow annotations to be clicked in dashboard
     * Change hrefProp to something else
     * Always have href on Anchor tag
     * Prevent wiki href by default, programmatically show wiki
     * When Command key is pressed, disable Javascript
-* Audit Good Night, Sita
 
 ### Must do
 * Illustrator

@@ -16,7 +16,7 @@ import {
     FORESHADOW_OF_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REDO } from '../../../containers/Annotations/constants/todos'
+import { REDO, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Look Back in Anger',
@@ -29,6 +29,8 @@ export default {
     playerStartTime: 1932.102,
     // This is a magic number adjusted by ear. In the mix, it's actually 41.66.
     mixSamplingFrequency: 41.64,
+    todo: REVISE,
+    problem: `Revisit. I just don't like it.`,
     overview: `With the Yearlings becoming a fixture in the local scene, I started to command more attention than I'd ever known, particularly from women. Yet my misery didn't fade; it just simmered into a quiet resentment. I also began to regret getting into a relationship with Sita, which now felt like a decision I'd been coerced to make, under deprived conditions from which I was now free.`,
     lyricUnits: [
         {
@@ -72,6 +74,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVISE,
+                problem: `Sentence order. Say he tapped rhythms on books and dishware placed on the floor.`,
                 card: {
                     description: [
                         `A fellow dishroom worker named Owen had a`,
@@ -121,6 +125,7 @@ export default {
                     lyric: [
                         {
                             anchor: `dragging aglets held`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -129,7 +134,7 @@ export default {
                                             anchor: `aglet`,
                                             wiki: `Aglet`,
                                         },
-                                        `is the plastic tip at the end of a shoelace. Since I never learned to tie my shoelaces properly, they were always coming undone. So anyone bent on seeing me trip and fall had the ready means to make it happen.`,
+                                        `is the plastic tip at the end of a shoelace. Since I never learned to tie my shoelaces properly, they often came undone. So anyone bent on seeing me trip and fall had the ready means to make it happen.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -222,6 +227,7 @@ export default {
                         `Now your`,
                         {
                             anchor: `sapling cut`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Upon surviving the winter, a sapling will be awarded its first`,
@@ -229,13 +235,14 @@ export default {
                                         anchor: `tree ring`,
                                         wiki: `Dendrochronology`,
                                     },
-                                    `. And if it suffers any gaping wounds along the way, then this new ring will be visible to all.`,
+                                    `. And if it suffered any gaping wounds along the way, then this new ring will be visible to all.`,
                                 ],
                             },
                         },
                         `says you've`,
                         {
                             anchor: `past ring one`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `A`,
@@ -243,7 +250,7 @@ export default {
                                         anchor: `promise ring`,
                                         wiki: `Pre-engagement_ring`,
                                     },
-                                    `signifies long-term commitment to another person. And of course, after years of struggle, I'm finally in my first committed relationship.`,
+                                    `signifies long-term commitment to another. And of course, after years of struggle, I'm finally in my first committed relationship.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -259,8 +266,9 @@ export default {
                         `yet— if adding up— then`,
                         {
                             anchor: `for more you'd vie`,
+                            todo: REVIEW,
                             card: {
-                                description: `But though it was a struggle, I did make it. Which means I can do it again. So why wouldn't I try? After all, each new relationship is like another tree ring, a testament to one's resilience and continued growth.`,
+                                description: `But though it was a struggle, I did make it— which means I can do it again. So why wouldn't I try? After all, each new relationship is like another tree ring, a testament to one's resilience and continued growth.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -276,6 +284,7 @@ export default {
                         {
                             anchor: `Valley of death`,
                             properNoun: true,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Like the six hundred who rode into the valley of death in`,
@@ -288,7 +297,7 @@ export default {
                                         anchor: `The Charge of the Light Brigade`,
                                         wiki: `The_Charge_of_the_Light_Brigade_(poem)`,
                                     },
-                                    `," I'd bravely accepted that mine was "not to reason why," but simply "to do and die" during my own wartime years in the San Fernando Valley.`,
+                                    `," I'd bravely accepted that mine was "not to reason why," but simply "to do and die" during my own years of strife in the San Fernando Valley.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -298,8 +307,9 @@ export default {
                         `you rode, so on`,
                         {
                             anchor: `spite you thrive`,
+                            todo: REVIEW,
                             card: {
-                                description: `But this casual view of my own hardship is what later enabled me to justify the pain I caused Sita.`,
+                                description: `But this casual view of my own hardship is what enabled me to justify the pain I later caused to Sita.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -410,15 +420,16 @@ export default {
                         `She braves the crowd`,
                         {
                             anchor: `filled first from sides`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `A few songs into my band's set, I watch from onstage as an attractive woman and her friends make their way through a packed room.`,
+                                    description: `A few songs into my band's set, I watch from onstage as an attractive woman and her friends make their way through the packed room.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
                                 },
                                 {
-                                    description: `At small venues with minimal seating, the first audience members to arrive usually congregate alongside the walls.`,
+                                    description: `At small venues with minimal seating, the first audience members to arrive usually congregate along the walls.`,
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                     },
@@ -453,14 +464,15 @@ export default {
                         `With hair of`,
                         {
                             anchor: `maraschino red`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `Having sworn to be ready when the next Mara comes along, I notice that the latecomer's hair is colored like a`,
+                                    `Having sworn to be ready when the next Mara comes along, I notice that the latecomer's hair is the color of`,
                                     {
-                                        anchor: `maraschino cherry`,
+                                        anchor: `maraschino cherries`,
                                         wiki: `Maraschino_cherry`,
                                     },
-                                    `— which matches "Mara's sheen of" red.`,
+                                    `— matching "Mara's sheen of" red.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -477,8 +489,9 @@ export default {
                         `"`,
                         {
                             anchor: `Great show`,
+                            todo: REVIEW,
                             card: {
-                                description: `The best time to hit on someone is right after you've played a set, when they've just spent the last hour making you the center of their universe. So sure enough, I find the redheaded woman to be flirtatious when we finally chat.`,
+                                description: `The best time to hit on someone is right after your set, since they've just spent the last hour making you the center of their attention. And sure enough, I find the redhead to be flirtatious when we finally chat.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -505,8 +518,9 @@ export default {
                         `and you were`,
                         {
                             anchor: `fine when you had none`,
+                            todo: REVIEW,
                             card: {
-                                description: `Things were finally looking up for me, so I was confused to still feel a quiet bitterness inside. I suspect it's because I was indignant for my younger self, who'd been kept in the dark for so long about how much better life could be.`,
+                                description: `Things were finally looking up for me, so I was confused to feel a lingering bitterness inside. I suspect it's because I was indignant for my younger self, who'd been kept in the dark for so long about how much better life could be.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -554,8 +568,9 @@ export default {
                         `When`,
                         {
                             anchor: `religious kids mocked`,
+                            todo: REVIEW,
                             card: {
-                                description: `Some of the bullies were regular churchgoers, which had the predictable effect of discrediting their faith in my view.`,
+                                description: `Some of the bullies were regular churchgoers, which then discredited their faith in my view.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -640,8 +655,9 @@ export default {
                         `and thus secure,`,
                         {
                             anchor: `must turn the cheek`,
+                            todo: REVIEW,
                             card: {
-                                description: `The letters from RI Research instructed me not to confront the bullies. Instead, I was to turn the other cheek, as Jesus had done, and take my abuse in stride. My exalted place in the universe necessarily asked of me to be the bigger person.`,
+                                description: `The letters from RI Research instructed me not to confront the bullies. Instead, I was to turn the other cheek, as Jesus had done, and take my abuse in stride. My exalted place in the universe necessarily required of me to be the bigger person.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -698,8 +714,9 @@ export default {
                         `weren't they`,
                         {
                             anchor: `right to take what's theirs`,
+                            todo: REVIEW,
                             card: {
-                                description: `As opportunities for social advancement opened up for me, I could look back and even sympathize with the bullies by putting myself in their shoes. After all, in a world that roots for the strong, who wouldn't accept all the means available to avoid being weak?`,
+                                description: `As opportunities for social advancement opened up for me, I could look back and sympathize with the bullies by putting myself in their shoes. After all, in a world that roots for the strong, who wouldn't accept every means available to avoid being weak?`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -715,6 +732,7 @@ export default {
                         `So if you're weeping for`,
                         {
                             anchor: `poor squirrels`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In the final scene of `,
@@ -722,7 +740,7 @@ export default {
                                         isItalic: true,
                                         lyric: `Look Back in Anger`,
                                     },
-                                    `, the protagonist Jimmy pictures his wife as a squirrel and sighs, "Poor squirrels," acknowledging that he keeps her trapped in a helpless state with his abusive tirades.`,
+                                    `, the protagonist Jimmy pictures his wife as a squirrel and sighs, "Poor squirrels," acknowledging that he keeps her trapped in a helpless state with his tirades.`,
                                 ],
                                 dotKeys: {
                                     [REFERENCE]: true,
@@ -762,8 +780,9 @@ export default {
                         {
                             anchor: `Red and friends`,
                             properNoun: true,
+                            todo: REVIEW,
                             card: {
-                                description: `The redheaded woman and her friends stick around as my bandmates and I load our gear into the van. During my chat with her between sets, I left open the possibility that we might all hang out after the show.`,
+                                description: `The redhead and her friends loiter as my bandmates and I load our gear into Jacob's van. During my chat with her between sets, I dangled the possibility that we might all hang out after the show.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -782,8 +801,9 @@ export default {
                         `Drunk, you'd`,
                         {
                             anchor: `claim you've never loved`,
+                            todo: REVIEW,
                             card: {
-                                description: `My first songs for the band were about being unlucky in love. So as my life improved, I needed to drink further amounts of alcohol to carry on with the lie that I was still the same inexperienced kid who wrote them.`,
+                                description: `The first songs I wrote for the band were all about being unlucky in love. So as my life improved, I needed to drink further amounts of alcohol to carry on with the lie that I was still the same inexperienced kid who wrote them.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -799,14 +819,15 @@ export default {
                         `but it's too late to`,
                         {
                             anchor: `unscrew a Bud`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `I end up relinquishing my chance to know the redheaded woman. It's after last call, and I would need a few more`,
+                                    `I end up relinquishing my chance to know the redhead. It's after last call, and I'd need a few more`,
                                     {
                                         anchor: `Budweisers`,
                                         wiki: `Budweiser`,
                                     },
-                                    `in me to reach the desired level of affability. But it's also too late to present myself as someone who isn't already sexually involved with his best friend. I can't just unscrew a "bud" at will.`,
+                                    `in me to reach the desired level of affability. But it's also too late to present myself as someone who isn't sexually involved with his best friend. I can't just unscrew a "bud" at will.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -834,9 +855,10 @@ export default {
                         `'cause when you`,
                         {
                             anchor: `beg it never comes`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `There's no excuse for not looking out for yourself. I knew this now. So while I was justifiably angry`,
+                                    `There's no excuse for not looking out for yourself; I knew this now. So while I was justifiably angry`,
                                     {
                                         isEmphasis: true,
                                         lyric: `for`,
