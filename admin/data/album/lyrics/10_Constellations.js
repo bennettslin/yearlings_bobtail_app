@@ -40,7 +40,6 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `I first tried Robitussin earlier that summer after reading of its narcotic effects in`,
@@ -554,12 +553,12 @@ export default {
                                             anchor: `pseudoephedrine`,
                                             wiki: `Pseudoephedrine`,
                                         },
-                                        `," a nasal decongestant. It's no longer included in over-the-counter medicines, however, given that it's the main ingredient used to make`,
+                                        `," a nasal decongestant. Given that it's the main ingredient used to make`,
                                         {
                                             anchor: `crystal meth`,
                                             wiki: `Methamphetamine`,
                                         },
-                                        `.`,
+                                        `, however, it's no longer included in over-the-counter medicines.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -1191,7 +1190,7 @@ export default {
                             anchor: `Pour sod, fourfeit tundr`,
                             todo: REVIEW,
                             card: {
-                                description: `In the car, Howie and Tomer swap tales from their high school days, culminating with the day they poured sod on the "poor sod" who now lies "four feet under."`,
+                                description: `In the car, Howie and Tomer swap tales from their high school days, culminating with the day they had to pour sod on the "poor sod" who now lies "four feet under."`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -1572,7 +1571,7 @@ export default {
                             anchor: `toughtim rite`,
                             todo: REVIEW,
                             card: {
-                                description: `Having now achieved a full out-of-body experience, I gaze down upon my drugged-out self. Set against the familiar backdrop of Los Angeles, this degrading sight reminds me that in scuttling off to the Bay Area, I've shirked my duty to care for my autistic brother. My sister, on the other hand, lives nearby. Guilt-ridden, I sarcastically note that "brother and sister taught him right."`,
+                                description: `Having now achieved a full out-of-body experience, I gaze down upon my drugged-out self. Set against the familiar backdrop of Los Angeles, this degrading sight reminds me that in having scuttled off to the Bay Area, I'm shirking my duty to care for my autistic brother. My sister, on the other hand, lives nearby. Guilt-ridden, I sarcastically note that "brother and sister taught him right."`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
