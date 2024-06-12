@@ -19,7 +19,7 @@ import {
     IS_UNIT_DOT,
     RESPONSE,
 } from '../../../../src/constants/lyrics'
-import { REVISE } from '../../../containers/Annotations/constants/todos'
+import { REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Odin',
@@ -669,8 +669,7 @@ export default {
                         `that was`,
                         {
                             anchor: `safe for a heathen`,
-                            todo: REVISE,
-                            problem: `Too wordy, parts are out of order.`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Being an illegitimate son, Ishmael wasn't to inherit the house of`,
@@ -678,7 +677,7 @@ export default {
                                         anchor: `Abraham`,
                                         wiki: `Abraham`,
                                     },
-                                    `; still, God promised to make him into a great nation. And since I was not to marry into Sasha's house, given my own disfavored lineage, I could only hope for similar recompense.`,
+                                    `; still, God promised to make him into a great nation. And I could only hope for similar amends, since my own disfavored lineage meant that I wasn't to marry into Sasha's house.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -780,8 +779,7 @@ export default {
                         `would the`,
                         {
                             anchor: `rondel of her eye`,
-                            todo: REVISE,
-                            problem: `Last sentence has too many commas.`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `A`,
@@ -794,7 +792,7 @@ export default {
                                         anchor: `the apple of one's eye`,
                                         wiki: `Apple_of_my_eye`,
                                     },
-                                    `" is an Old English misreading of a Biblical Hebrew idiom that more accurately translates to "the ball of one's eye." And my hope, that I could be the object of Sasha's affection, was based on a similar misreading.`,
+                                    `" is an Old English misreading of a Biblical Hebrew idiom that more accurately translates to "the ball of one's eye." Similarly, it was only by misreading Sasha's intentions that I could ever hope to be the object of her affection.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1139,7 +1137,7 @@ export default {
                             todo: REVISE,
                             problem: `Two "could"s in a row.`,
                             card: {
-                                description: `But also like cellophane, Sasha couldn't reflect warmth where none was present. If I couldn't be the better person in dealing with the bullies, then there came a point when she'd need to keep her distance from me as well.`,
+                                description: `But also like cellophane, Sasha couldn't reflect warmth where none was present. In other words, if I couldn't deal gracefully with the bullies, then there came a point where she'd need to keep her distance from me as well.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -1151,16 +1149,15 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVISE,
-                problem: `First sentence is too wordy.`,
+                todo: REVIEW,
                 card: {
                     description: [
-                        `Recording vocals in doublespeaker rhyme proved to be trickier than expected. When we sing, we tend to shorten or elongate syllables to adjust for phrasing and consonant clusters. And so the two voices would sound disjointed once heard together. To perform the syllables in perfect sync, I came up with a system of notation that somewhat looked like medieval`,
+                        `As it turns out, recording vocals in doublespeaker rhyme is trickier than you'd expect. When singing, we don't break up our phrases evenly; instead, we'll shorten a syllable or delay its onset to account for consonant clusters and the like. So each voice in a doublespeaker pair might sound fine on its own— but disjointed when heard together. To perform them in sync, I came up with a system of notation that resembled medieval`,
                         {
                             anchor: `ligature`,
                             wiki: `Ligature_(music)`,
                         },
-                        `.`,
+                        `from afar.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -1456,8 +1453,7 @@ export default {
                         `Yet your`,
                         {
                             anchor: `defeat of tortoise`,
-                            todo: REVISE,
-                            problem: `I like provided that I end up choosing.`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The tortoise defeats the hare in`,
@@ -1465,7 +1461,7 @@ export default {
                                         anchor: `Aesop's fable`,
                                         wiki: `The_Tortoise_and_the_Hare`,
                                     },
-                                    `, but only because the hare falls asleep. Similarly, while tortoises can live for over a century, I had them beat in longevity— so long as I chose the right faith.`,
+                                    `, but only because the hare falls asleep. Similarly, while tortoises live for over a century, I had them beat in longevity— so long as I chose the right faith.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
