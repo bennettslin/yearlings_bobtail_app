@@ -789,9 +789,9 @@ export default {
                                         anchor: `rondel`,
                                         wiki: `Rondel_(poem)`,
                                     },
-                                    `is a verse form that originated in French poetry, but it can also refer to any round object, like a ball. "`,
+                                    `is a verse form that originated in French poetry, but it can also refer to any round object, like a ball; while "`,
                                     {
-                                        anchor: `The apple of one's eye`,
+                                        anchor: `the apple of one's eye`,
                                         wiki: `Apple_of_my_eye`,
                                     },
                                     `" is an Old English misreading of a Biblical Hebrew idiom that more accurately translates to "the ball of one's eye." And my hope, that I could be the object of Sasha's affection, was based on a similar misreading.`,
@@ -1155,7 +1155,7 @@ export default {
                 problem: `First sentence is too wordy.`,
                 card: {
                     description: [
-                        `Recording vocals in doublespeaker rhyme proved to be trickier than expected, because when we sing, we tend to shorten or elongate syllables to adjust for phrasing and consonant clusters. And so the two voices would sound disjointed once heard together. To perform the syllables in perfect sync, I came up with a system of notation that somewhat looked like medieval`,
+                        `Recording vocals in doublespeaker rhyme proved to be trickier than expected. When we sing, we tend to shorten or elongate syllables to adjust for phrasing and consonant clusters. And so the two voices would sound disjointed once heard together. To perform the syllables in perfect sync, I came up with a system of notation that somewhat looked like medieval`,
                         {
                             anchor: `ligature`,
                             wiki: `Ligature_(music)`,

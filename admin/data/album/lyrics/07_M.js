@@ -27,7 +27,7 @@ export default {
     mixStartTime: `0:02:12.00`,
     todo: REVISE,
     problem: `Change order of Mara sentence?`,
-    overview: `After Catherine broke up with me, I vowed to spend the next five years shaping myself into the ideal romantic prospect. So I got involved in the local scene while putting together my own band, the Yearlings; by the fifth year, we were playing house parties and small venues. I grew infatuated with a fellow scenester named Mara, whom I noticed from afar. But Mara ended up going out with my drummer Jacob, which made band practice awkward.`,
+    overview: `After Catherine broke up with me, I vowed to spend the next five years shaping myself into the ideal romantic prospect. So I got involved in the local scene while putting together my own band, the Yearlings; by the fifth year, we were playing house parties and small venues. I grew infatuated with a fellow scenester named Mara, whom I noticed from afar. But she ended up going out with my drummer Jacob, which made band practice awkward.`,
     lyricUnits: [
         {
             unitMap: {},
