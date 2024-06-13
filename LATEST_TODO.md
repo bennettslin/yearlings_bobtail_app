@@ -1,7 +1,9 @@
 # Latest todo
-* Review Look Back in Anger
+* Begin with revisions
+* Go through reviews
 * Look into "who would" and other pronouns?
-* Audit Garryowen
+* Look into ", then" instead of ", and then"?
+* Audit Golden Cord
 * Write to Ross Barkan
 * Allow annotations to be clicked in dashboard
     * Change hrefProp to something else

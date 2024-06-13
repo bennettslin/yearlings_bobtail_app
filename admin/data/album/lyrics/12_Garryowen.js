@@ -27,12 +27,15 @@ export default {
     referenceDescription: `Banjo in anacrusis`,
     playerStartTime: 2107.996,
     mixStartTime: `0:01:01.40`,
-    overview: `My mood would change for the worse when I drank, leading friends to joke that I had a sinister alter ego. Yet it wasn't far from the truth. I was souring on my relationship with Sita by this point, and being drunk provided both an escape and an excuse to act out. But I really didn't like myself when this happened; I missed being the hapless kid I was before. And knowing now how to get it right, I longed for a do-over— only this time without the mess. In other words… without Sita.`,
+    todo: REVIEW,
+    overview: `My mood would change for the worse when I drank, leading friends to joke that I had a sinister alter ego. It wasn't far from the truth: I was souring on my relationship with Sita by this point, and being drunk provided both an escape and an excuse to act out. But I really didn't like myself when this happened; I missed being the hapless kid I was before. And knowing now how to get it right, I longed for a do-over— only this time without the mess. In other words… without Sita.`,
     lyricUnits: [
         {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVISE,
+                problem: `Make it more clear that I adopted it for my drunken alter ego.`,
                 card: {
                     description: [
                         `In`,
@@ -156,9 +159,11 @@ export default {
                         `if you would`,
                         {
                             anchor: `opt for bed not street`,
+                            todo: REVISE,
+                            problem: `For clarity, don't need to say alternate.`,
                             card: {
                                 description: [
-                                    `I was tired of working extra shifts just to pay the rent. So after my lease ended, I alternated between spending some nights with Sita, and others crashing in the`,
+                                    `I was tired of working extra shifts just to pay rent. So after my lease ended, I alternated between spending some nights with Sita, and others crashing in the`,
                                     {
                                         anchor: `punk house`,
                                         wiki: `Punk_house`,
@@ -186,6 +191,8 @@ export default {
                         `Well`,
                         {
                             anchor: `you're not me`,
+                            todo: REVISE,
+                            problem: `Do I need adjectives?`,
                             card: {
                                 description: `An inside joke among my friends was to address me as Garry when I was drunk, since my uneven rambling and oafish stunts made me an altogether different person.`,
                                 dotKeys: {
@@ -248,8 +255,9 @@ export default {
                         },
                         {
                             anchor: `bustin' cars with fists`,
+                            todo: REVIEW,
                             card: {
-                                description: `Tristan was particularly hotheaded when drunk. One night after getting us kicked out of a party for a fight he started, he challenged us to see who could punch a car window and break the glass first. I didn't win.`,
+                                description: `Tristan was particularly hotheaded when drunk. One night after getting us kicked out of a party for a fight that he'd started, he challenged us to see who could punch a car window and break the glass. I didn't win.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -322,8 +330,9 @@ export default {
                         },
                         {
                             anchor: `aren't love`,
+                            todo: REVIEW,
                             card: {
-                                description: `Throughout our budding friendship, Sita had neglected to mention her sexual intimacy with past partners, even if it was always shy of intercourse. When I found out, she tried to console me by pointing out that she never went all the way with them because she didn't love them. She loved me, which meant I'd won. But it still stung like crazy to find out so late, and this deepened my resentment.`,
+                                description: `Throughout our budding friendship, Sita had neglected to mention her sexual intimacy with past partners, even if it was always shy of intercourse. When I found out, she tried to console me by pointing out that she never went all the way because she didn't love them. She loved me, which meant I'd won. But it still stung like crazy to find out so late, and this deepened my resentment.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -348,8 +357,9 @@ export default {
                     lyric: [
                         {
                             anchor: `buys your grief`,
+                            todo: REVIEW,
                             card: {
-                                description: `My worlds collided when I smashed a random bike one night in a drunken fit. As it turns out, the bike belonged to a scene kid who'd liked the Yearlings since our early days. He'd related so much to my songs about unfulfilled hopes. I was disgusted with myself for having disappointed him.`,
+                                description: `My worlds collided when I smashed a random bike one night in a drunken fit. As it turns out, the bike belonged to a scene kid who'd liked the Yearlings since our early days. He'd related so much to my songs about unfulfilled hopes; I was disgusted with myself for having disappointed him.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -408,6 +418,8 @@ export default {
                         `with`,
                         {
                             anchor: `choler turned up`,
+                            todo: REVISE,
+                            problem: `Say reflected in the water.`,
                             cards: [
                                 {
                                     description: `In Hippocratic medicine, choler is the humor that induces aggression.`,
@@ -432,6 +444,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     // NOTE: Counterpoint is mentioned earlier in Ash Wednesday.
                     description: [
@@ -440,7 +453,7 @@ export default {
                             anchor: `counterpoint`,
                             wiki: `Counterpoint`,
                         },
-                        `, melodies are laid atop one another, and the chord progression is a byproduct of the harmonies they form in sequence. But since the chords for this song were established first, the reverse approach was called for. I assigned each note in a chord to a different part. Then for each part, I shaped its sequence of assigned notes into an unassuming counter-melody.`,
+                        `, melodies are laid atop one another, and the chord progression is a byproduct of the harmonies they form in sequence. But since the chords for this song were established first, the reverse approach was called for: I assigned each note in a chord to a different part— and then for each part, I shaped the sequence of those notes into an unassuming counter-melody.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -460,8 +473,9 @@ export default {
                         `As`,
                         {
                             anchor: `claws you built from scratches`,
+                            todo: REVIEW,
                             card: {
-                                description: `Cats scratch to sharpen their claws, just like I'd learned to keep my emotional defenses sharp after a lifetime of getting scratched and clawed by bullies.`,
+                                description: `Cats scratch to sharpen their claws, much like I'd learned to keep my emotional defenses sharp after a lifetime of getting scratched and clawed by bullies.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [PUN]: true,
@@ -477,6 +491,7 @@ export default {
                         `fill up a package strapped to your`,
                         {
                             anchor: `scapegirl`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In Biblical times, a community would absolve its sins by ritually placing them`,
@@ -484,7 +499,7 @@ export default {
                                         anchor: `on a goat`,
                                         wiki: `Scapegoat`,
                                     },
-                                    `that was then cast into the desert. Banishing Sita from my life was meant to serve the same purpose: Without her around to cast judgment, there would be no need to atone for my hypocrisy.`,
+                                    `that was then cast into the desert. Banishing Sita from my life would serve the same purpose: Without her around to cast judgment, I had no need to atone for my hypocrisy.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -573,8 +588,9 @@ export default {
                         `You won't always`,
                         {
                             anchor: `have her for your pet`,
+                            todo: REVIEW,
                             card: {
-                                description: `Sita's manner of prostrating herself exasperated me to no end, as it forced me to wield power that I never asked for. But its endearing nature was also guaranteed to make me love her, and I did. So I never doubted that the impending breakup would be wrenching for both of us.`,
+                                description: `Sita's manner of prostrating herself exasperated me to no end, as it forced me to wield power that I hadn't asked for. Yet its endearing nature was also guaranteed to make me love her, and I did. So I never doubted that the impending breakup would be wrenching for both of us.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -603,6 +619,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
                         `The`,
@@ -610,7 +627,7 @@ export default {
                             anchor: `bagpipes`,
                             wiki: `Bagpipes`,
                         },
-                        `heard here evoke a funeral procession to mark the death of the relationship. I mimicked the sound by overdubbing multiple takes of a two-part harmony on the melodica, with one part acting as the chanter and the other as the drone.`,
+                        `heard here evoke a funeral procession to mark the death of our relationship. I mimicked the sound by overdubbing multiple takes of a two-part harmony on the melodica, with one part acting as the chanter and the other as the drone.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -740,8 +757,9 @@ export default {
                             `see himself`,
                             {
                                 anchor: `as well in you`,
+                                todo: REVIEW,
                                 card: {
-                                    description: `But if I was capable of hurting myself, then I also wouldn't have any qualms about hurting those close to me— who now knew the worst side of me as only I once did.`,
+                                    description: `And yet, if I was capable of hurting myself, then I'd also have no qualms about hurting those close to me— who now knew the worst side of me as only I once did.`,
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                     },
@@ -807,8 +825,9 @@ export default {
                         `becomes someone's`,
                         {
                             anchor: `last-ditch alibi`,
+                            todo: REVIEW,
                             card: {
-                                description: `Though my friends were only joking to say it was Garry and not me who'd committed this or that act of vandalism, on some level I accepted it as the truth. And now it also wasn't me who'd drained Sita of her confidence through the years, leaving her a crumbled wreck. It must have been Garry. I wasn't there.`,
+                                description: `Though my friends were only joking to say it was Garry and not me who'd committed this or that act of vandalism, on some level I accepted it as the truth. And now it also wasn't me who'd drained Sita of her confidence through the years, leaving her a crumbled wreck. It must have been Garry; I wasn't there.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -850,6 +869,7 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
                         `After`,
@@ -867,7 +887,7 @@ export default {
                             anchor: `Alcoholics Anonymous`,
                             wiki: `Alcoholics_Anonymous`,
                         },
-                        `meeting that evening. The paranoia lasted a week. I haven't drank since.`,
+                        `meeting that evening. The paranoia lasted a week; I haven't drank since.`,
                     ],
                     dotKeys: {
                         [AFTERWORD]: true,
