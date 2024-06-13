@@ -1,5 +1,6 @@
 # Latest todo
-* Reviews
+* Review Look Back in Anger
+* Look into "who would" and other pronouns?
 * Audit Garryowen
 * Write to Ross Barkan
 * Allow annotations to be clicked in dashboard

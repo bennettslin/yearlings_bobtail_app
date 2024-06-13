@@ -128,17 +128,20 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
+                                    description: `Since I never learned to tie my shoelaces properly, they were always coming undone. So anyone bent on seeing me trip and fall had the ready means to make it happen.`,
+                                    dotKeys: {
+                                        [BACKSTORY]: true,
+                                    },
+                                },
+                                {
                                     description: [
                                         `An`,
                                         {
                                             anchor: `aglet`,
                                             wiki: `Aglet`,
                                         },
-                                        `is the plastic tip at the end of a shoelace. Since I never learned to tie my shoelaces properly, they often came undone. So anyone bent on seeing me trip and fall had the ready means to make it happen.`,
+                                        `is the plastic tip at the end of a shoelace.`,
                                     ],
-                                    dotKeys: {
-                                        [BACKSTORY]: true,
-                                    },
                                 },
                                 {
                                     wormhole: {
@@ -227,7 +230,6 @@ export default {
                         `Now your`,
                         {
                             anchor: `sapling cut`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Upon surviving the winter, a sapling will be awarded its first`,
@@ -242,7 +244,6 @@ export default {
                         `says you've`,
                         {
                             anchor: `past ring one`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `A`,
@@ -266,7 +267,6 @@ export default {
                         `yet— if adding up— then`,
                         {
                             anchor: `for more you'd vie`,
-                            todo: REVIEW,
                             card: {
                                 description: `But though it was a struggle, I did make it— which means I can do it again. So why wouldn't I try? After all, each new relationship is like another tree ring, a testament to one's resilience and continued growth.`,
                                 dotKeys: {
@@ -287,7 +287,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `Like the six hundred who rode into the valley of death in`,
+                                    `Like the six hundred who rode into the Valley of Death in`,
                                     {
                                         anchor: `Alfred Tennyson`,
                                         wiki: `Alfred,_Lord_Tennyson`,
@@ -309,7 +309,7 @@ export default {
                             anchor: `spite you thrive`,
                             todo: REVIEW,
                             card: {
-                                description: `But this casual view of my own hardship is what enabled me to justify the pain I later caused to Sita.`,
+                                description: `But this casual view of my own hardship is what enabled me to justify the pain I caused to Sita.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -420,7 +420,6 @@ export default {
                         `She braves the crowd`,
                         {
                             anchor: `filled first from sides`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `A few songs into my band's set, I watch from onstage as an attractive woman and her friends make their way through the packed room.`,
@@ -467,12 +466,12 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `Having sworn to be ready when the next Mara comes along, I notice that the latecomer's hair is the color of`,
+                                    `Having sworn to be ready when the next Mara comes along, I notice that the latecomer's hair, which is the color of`,
                                     {
                                         anchor: `maraschino cherries`,
                                         wiki: `Maraschino_cherry`,
                                     },
-                                    `— matching "Mara's sheen of" red.`,
+                                    `, matches "Mara's sheen of" red.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -491,7 +490,7 @@ export default {
                             anchor: `Great show`,
                             todo: REVIEW,
                             card: {
-                                description: `The best time to hit on someone is right after your set, since they've just spent the last hour making you the center of their attention. And sure enough, I find the redhead to be flirtatious when we finally chat.`,
+                                description: `The best time to hit on someone is right after your set, when they've just spent the last hour making you the center of their attention. And sure enough, I find the redhead to be flirtatious when we finally chat.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -568,7 +567,6 @@ export default {
                         `When`,
                         {
                             anchor: `religious kids mocked`,
-                            todo: REVIEW,
                             card: {
                                 description: `Some of the bullies were regular churchgoers, which then discredited their faith in my view.`,
                                 dotKeys: {
@@ -657,7 +655,7 @@ export default {
                             anchor: `must turn the cheek`,
                             todo: REVIEW,
                             card: {
-                                description: `The letters from RI Research instructed me not to confront the bullies. Instead, I was to turn the other cheek, as Jesus had done, and take my abuse in stride. My exalted place in the universe necessarily required of me to be the bigger person.`,
+                                description: `The letters from RI Research instructed me not to confront my tormentors; instead, I was to take my abuse in stride. Given my exalted place in the universe, it was on me to be the bigger person.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -675,8 +673,9 @@ export default {
                     lyric: [
                         {
                             anchor: `only to crack`,
+                            todo: REVIEW,
                             card: {
-                                description: `Yet even as reason disproved the beliefs of my bullies, it also discredited my own as a Beyonder. After all, with so many rival claims to the truth, who would stay loyal to a faith that offers no community and only endless grief?`,
+                                description: `Yet even as reason disproved the beliefs of my bullies, it also discredited my own as a Beyonder. With so many rival claims to the truth, who would stay loyal to a faith that offers no community and only endless grief?`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -716,7 +715,14 @@ export default {
                             anchor: `right to take what's theirs`,
                             todo: REVIEW,
                             card: {
-                                description: `As opportunities for social advancement opened up for me, I could look back and sympathize with the bullies by putting myself in their shoes. After all, in a world that roots for the strong, who wouldn't accept every means available to avoid being weak?`,
+                                description: [
+                                    `As opportunities for social advancement opened up for me, I could look back and even sympathize with the bullies by putting myself in their shoes. After all, in a world that roots for the strong, who`,
+                                    {
+                                        isItalic: true,
+                                        lyric: `wouldn't`,
+                                    },
+                                    `accept every means available to avoid being weak?`,
+                                ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -732,7 +738,6 @@ export default {
                         `So if you're weeping for`,
                         {
                             anchor: `poor squirrels`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In the final scene of `,
@@ -782,7 +787,7 @@ export default {
                             properNoun: true,
                             todo: REVIEW,
                             card: {
-                                description: `The redhead and her friends loiter as my bandmates and I load our gear into Jacob's van. During my chat with her between sets, I dangled the possibility that we might all hang out after the show.`,
+                                description: `The redhead and her friends loiter as my bandmates and I load our gear into Jacob's van. During my chat with her between sets, I left open the possibility that we might all hang out after the show.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -801,7 +806,8 @@ export default {
                         `Drunk, you'd`,
                         {
                             anchor: `claim you've never loved`,
-                            todo: REVIEW,
+                            todo: REVISE,
+                            problem: `Don't need to say write twice.`,
                             card: {
                                 description: `The first songs I wrote for the band were all about being unlucky in love. So as my life improved, I needed to drink further amounts of alcohol to carry on with the lie that I was still the same inexperienced kid who wrote them.`,
                                 dotKeys: {
@@ -819,7 +825,6 @@ export default {
                         `but it's too late to`,
                         {
                             anchor: `unscrew a Bud`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `I end up relinquishing my chance to know the redhead. It's after last call, and I'd need a few more`,
@@ -855,7 +860,6 @@ export default {
                         `'cause when you`,
                         {
                             anchor: `beg it never comes`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `There's no excuse for not looking out for yourself; I knew this now. So while I was justifiably angry`,

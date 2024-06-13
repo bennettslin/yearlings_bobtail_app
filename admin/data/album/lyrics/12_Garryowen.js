@@ -655,7 +655,7 @@ export default {
                             anchor: `drop your anchor`,
                             todo: REVIEW,
                             card: {
-                                description: `More than anything else, I was tired of endlessly lurching from one emotional extreme to the next. Breaking up meant that I could finally drop my "anger" and keep my mood anchored in place.`,
+                                description: `More than anything else, I was tired of lurching from one emotional extreme to the next. Breaking up meant that I could finally drop my "anger" and keep my mood anchored in place.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
