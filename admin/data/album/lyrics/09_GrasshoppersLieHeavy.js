@@ -484,7 +484,6 @@ export default {
                         `Then just like the drift,`,
                         {
                             anchor: `she disappeared`,
-                            todo: REVIEW,
                             card: {
                                 description: `Shortly after our first few dates, I called Sita to tell her I was in love with her. She admitted that she didn't feel the same way, yet wanted to remain friends. We hung up with the understanding that we would continue to hang out casually— but I felt so dejected, I quietly decided never to see her again.`,
                                 dotKeys: {
@@ -564,7 +563,7 @@ export default {
                             anchor: `no convert's missed`,
                             todo: REVIEW,
                             card: {
-                                description: `RI Research understood that I'd soon grow disillusioned, which is why they asked for the largest payment upfront. The last few letters were so sloppily written, it even felt like they were shooing me away by that point. And now Sita's departure from my life seemed like proof that I was once again a sucker for the perfect scam.`,
+                                description: `RI Research understood that I'd soon grow disillusioned, which is why they asked for the largest payment upfront. Their last few letters were so sloppily written, it even felt like they were shooing me away by that point. And now Sita's departure from my life seemed like proof that I was once again a sucker for the perfect scam.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -871,7 +870,7 @@ export default {
                             anchor: `gingerbread prison`,
                             todo: REVIEW,
                             card: {
-                                description: `Since being just friends with Sita will never fulfill me, I find the idea depressing. And yet… it's also kind of sweet to nibble on.`,
+                                description: `Since being just friends with Sita will never fulfill me, I find the idea depressing. Yet… it's also kind of sweet to nibble on.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -889,7 +888,7 @@ export default {
                             anchor: `never full, you're fed`,
                             todo: REVIEW,
                             card: {
-                                description: `And so I concede that mere friendship is still better than the cold, bleak alternative, the way a tired fugitive feels relieved to come back to regular meals and the warm bed of a jail cell.`,
+                                description: `And so I concede that mere friendship is still better than the cold, bleak alternative— the way a tired fugitive feels relieved to come back to regular meals and the warm bed of a jail cell.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -1240,7 +1239,7 @@ export default {
                                             anchor: `Paul McCartney`,
                                             wiki: `Paul_McCartney`,
                                         },
-                                        `were grabbing me by the collar to smack some sense into me.`,
+                                        `were grabbing me by the collar, trying to smack some sense into me.`,
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
@@ -1315,7 +1314,7 @@ export default {
                             anchor: `how's that compromise`,
                             todo: REVIEW,
                             card: {
-                                description: `Having taken such pains to tuck away my emotions for so long, I was now hesitant to compromise the safety of this position. I just didn't want to feel vulnerable again, and I had no faith that my desires wouldn't backfire on me like they did the first time I revealed them.`,
+                                description: `Having taken such pains to tuck away my emotions for so long, I was now hesitant to compromise the safety of this position. I just didn't want to feel vulnerable again, and I had no faith that my desires wouldn't backfire on me— as they did the first time I revealed them.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
