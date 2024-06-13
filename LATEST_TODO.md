@@ -1,6 +1,5 @@
 # Latest todo
-* Begin with revisions
-* Go through reviews
+* Show todo totals
 * Look into "who would" and other pronouns?
 * Look into ", then" instead of ", and then"?
 * Audit Golden Cord

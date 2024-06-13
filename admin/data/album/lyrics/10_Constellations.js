@@ -1569,7 +1569,6 @@ export default {
                         },
                         {
                             anchor: `toughtim rite`,
-                            todo: REVIEW,
                             card: {
                                 description: `Having now achieved a full out-of-body experience, I gaze down upon my drugged-out self. Set against the familiar backdrop of Los Angeles, this degrading sight reminds me that in having scuttled off to the Bay Area, I'm shirking my duty to care for my autistic brother. My sister, on the other hand, lives nearby. Guilt-ridden, I sarcastically note that "brother and sister taught him right."`,
                                 dotKeys: {

@@ -128,7 +128,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Since I never learned to tie my shoelaces properly, they were always coming undone. So anyone bent on seeing me trip and fall had the ready means to make it happen.`,
+                                    description: `Since I never learned to tie my shoelaces properly, they were always coming undone. So anyone bent on seeing me trip and fall had the ready means to make this happen.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -284,7 +284,6 @@ export default {
                         {
                             anchor: `Valley of death`,
                             properNoun: true,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Like the six hundred who rode into the Valley of Death in`,
@@ -309,7 +308,7 @@ export default {
                             anchor: `spite you thrive`,
                             todo: REVIEW,
                             card: {
-                                description: `But this casual view of my own hardship is what enabled me to justify the pain I caused to Sita.`,
+                                description: `But this casual view of my own hardship is what enabled me to justify the pain that I caused to Sita.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
