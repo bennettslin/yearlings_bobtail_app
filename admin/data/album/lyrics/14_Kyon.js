@@ -442,7 +442,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Then once my later years as a womanizer proved to be unfulfilling, surely I'd return to her— my fallback option— with relief rather than reluctance.`,
+                                    description: `Then once my later years as a womanizer proved to be unfulfilling, I'd surely return to her— my fallback option— with relief rather than reluctance.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -661,7 +661,7 @@ export default {
                             anchor: `thirty-three`,
                             todo: REVIEW,
                             card: {
-                                description: `I often joked about killing myself at thirty-three, the age at which Jesus was crucified. I hated the idea of getting older, and clearly this is all the time you need to make an impact on the world. So when Sita asked me to specify at what age I'd come back for her in accordance with our pact, I answered thirty-three. The subtext was understood.`,
+                                description: `I often joked about killing myself at thirty-three— the age at which Jesus was crucified. I hated the idea of getting older, and clearly this is all the time you need to make an impact on the world. So when Sita asked me to specify the age at which I'd come back for her in accordance with our pact, I answered thirty-three. The subtext was understood.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

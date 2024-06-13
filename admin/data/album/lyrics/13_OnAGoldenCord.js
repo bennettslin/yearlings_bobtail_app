@@ -244,8 +244,9 @@ export default {
                     lyricLeft: [
                         {
                             anchor: `Immerse the molted form`,
+                            todo: REVIEW,
                             card: {
-                                description: `With the plot to end his relationship having succeeded, the "sober" voice of the doublespeaker pair returns to resurrect the ghost of his drunken half, whom he'd meant to sacrifice all along as an unwitting accomplice.`,
+                                description: `With the plot to end his relationship having succeeded, the sober voice of the doublespeaker pair returns to resurrect the ghost of his drunken half, whom he'd meant to sacrifice all along as an unwitting accomplice.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -259,7 +260,7 @@ export default {
                             anchor: `sole belonging signed`,
                             todo: REVIEW,
                             card: {
-                                description: `Plopped onto moonlit streets from whereabouts unknown, my "drunken" voice can only recollect his past crimes. And so he believes himself to be newly released from prison— perhaps having just retrieved from storage the bracelet now in his hand.`,
+                                description: `Plopped onto moonlit streets from whereabouts unknown, my drunken self can only recollect his past crimes. And so he believes himself to be newly released from prison— perhaps having just retrieved from storage the bracelet now in his hand.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
