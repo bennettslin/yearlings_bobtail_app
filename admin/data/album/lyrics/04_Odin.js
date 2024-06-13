@@ -677,7 +677,7 @@ export default {
                                         anchor: `Abraham`,
                                         wiki: `Abraham`,
                                     },
-                                    `; still, God promised to make him into a great nation. And I could only hope for similar amends, since my own disfavored lineage meant that I wasn't to marry into Sasha's house.`,
+                                    `; still, God promised to make him into a great nation. And since I wasn't to marry into Sasha's house— given my own disfavored lineage— I could only hope for similar amends.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -792,7 +792,7 @@ export default {
                                         anchor: `the apple of one's eye`,
                                         wiki: `Apple_of_my_eye`,
                                     },
-                                    `" is an Old English misreading of a Biblical Hebrew idiom that more accurately translates to "the ball of one's eye." Similarly, it was only by misreading Sasha's intentions that I could ever hope to be the object of her affection.`,
+                                    `" is an Old English misreading of a Biblical Hebrew idiom that more accurately translates to "the ball of one's eye." Similarly, it was only by misreading Sasha's intentions— or substituting my own— that I could hope to be the object of her affection.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1152,7 +1152,7 @@ export default {
                 todo: REVIEW,
                 card: {
                     description: [
-                        `As it turns out, recording vocals in doublespeaker rhyme is trickier than you'd expect. When singing, we don't break up our phrases evenly; instead, we'll shorten a syllable or delay its onset to account for consonant clusters and the like. So each voice in a doublespeaker pair might sound fine on its own— but disjointed when heard together. To perform them in sync, I came up with a system of notation that resembled medieval`,
+                        `As it turns out, recording vocals in doublespeaker rhyme is trickier than you'd expect. When singing, we don't break up our phrases evenly; instead, we shorten syllables and delay their onset to account for consonant clusters and such. So each voice in a doublespeaker pair might sound fine on its own— but disjointed when heard together. To perform them in sync, then, I came up with a system of notation that resembled medieval`,
                         {
                             anchor: `ligature`,
                             wiki: `Ligature_(music)`,
@@ -1453,7 +1453,6 @@ export default {
                         `Yet your`,
                         {
                             anchor: `defeat of tortoise`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The tortoise defeats the hare in`,
