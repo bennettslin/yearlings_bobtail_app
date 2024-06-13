@@ -1137,7 +1137,7 @@ export default {
                             todo: REVISE,
                             problem: `Two "could"s in a row.`,
                             card: {
-                                description: `But also like cellophane, Sasha couldn't reflect warmth where none was present. In other words, if I couldn't deal gracefully with the bullies, then there came a point where she'd need to keep her distance from me as well.`,
+                                description: `But also like cellophane, Sasha couldn't reflect warmth where none was present. In other words, if I couldn't deal gracefully with the bullies, then there came a point where she'd have to keep her distance from me as well.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
