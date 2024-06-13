@@ -329,7 +329,6 @@ export default {
                         `with you raving over how`,
                         {
                             anchor: `he's getting you`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Every boy that Sasha crushed on was Jewish, which then motivated her to be a better Jew. But since I couldn't help strengthen her faith myself, I was at a disadvantage in "getting" her.`,
@@ -349,7 +348,6 @@ export default {
                         {
                             // NOTE: I decided to contract from "would have."
                             anchor: `I would've too`,
-                            todo: REVIEW,
                             card: {
                                 description: `Yet if Sasha had wanted me, then of course I would've converted to Judaism. It made no sense to be loyal to my own cultural identity, which I'd had no hand in choosing.`,
                                 dotKeys: {
