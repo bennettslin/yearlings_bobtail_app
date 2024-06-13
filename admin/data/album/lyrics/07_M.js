@@ -238,7 +238,7 @@ export default {
                             anchor: `mindful manners`,
                             todo: REVIEW,
                             card: {
-                                description: `Catherine didn't like it when I swore, so I gave that up as well. I figured this would be a definite win with any other woman like her, while the rest would find its quaintness charming.`,
+                                description: `Catherine didn't like it when I swore. I figured that giving it up would be a definite win with any other woman like her, while the rest would find the quaintness charming.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -252,7 +252,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Once I metamorphose`,
-                            todo: REVIEW,
                             card: {
                                 description: `Or, once I "met a Mara, for" certain I'd be to impress her— after completing my metamorphosis.`,
                                 dotKeys: {
@@ -446,7 +445,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Morphined`,
-                            todo: REVIEW,
                             card: {
                                 description: `Or, I'd be a "Mara fiend"— a slightly different kind of addict.`,
                                 dotKeys: {
@@ -504,7 +502,6 @@ export default {
                         `a`,
                         {
                             anchor: `mariner's child`,
-                            todo: REVIEW,
                             card: {
                                 description: `Or else, I'd die as a "Mara-nursed" child.`,
                                 dotKeys: {
@@ -561,7 +558,7 @@ export default {
                             properNoun: true,
                             todo: REVIEW,
                             card: {
-                                description: `To promote cross-cultural harmony, the pairings in these mass weddings are often international by design. Which means my Moonie bride might be a foreigner who joined the church just to ensure that her children will be born in America. And if so, I'd be a fool to think my "maiden Mara co-signs" the marriage license in good faith.`,
+                                description: `To promote cross-cultural harmony, the pairings in these mass weddings are often international by design. Which means my Moonie bride might be a foreigner who joined the church just to ensure that her children will be born in America. And if so, then I'd be a fool to think my "maiden Mara co-signs" the marriage license in good faith.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [PUN]: true,

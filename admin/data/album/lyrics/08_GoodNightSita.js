@@ -152,7 +152,6 @@ export default {
                         `for this kid wearing no`,
                         {
                             anchor: `decoder ring`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     {
