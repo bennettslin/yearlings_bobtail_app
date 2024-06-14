@@ -562,7 +562,6 @@ export default {
                         `But`,
                         {
                             anchor: `no convert's missed`,
-                            todo: REVIEW,
                             card: {
                                 description: `RI Research understood that I'd soon grow disillusioned, which is why they asked for the largest payment upfront. Their last few letters were so sloppily written, it even felt like they were shooing me away by that point. And now Sita's departure from my life seemed like proof that I was once again a sucker for the perfect scam.`,
                                 dotKeys: {
@@ -869,7 +868,6 @@ export default {
                         `In her`,
                         {
                             anchor: `gingerbread prison`,
-                            todo: REVIEW,
                             card: {
                                 description: `Since being just friends with Sita will never fulfill me, I find the idea depressing. Yet… it's also kind of sweet to nibble on.`,
                                 dotKeys: {
@@ -887,7 +885,6 @@ export default {
                         `Though`,
                         {
                             anchor: `never full, you're fed`,
-                            todo: REVIEW,
                             card: {
                                 description: `And so I concede that mere friendship is still better than the cold, bleak alternative— the way a tired fugitive feels relieved to come back to regular meals and the warm bed of a jail cell.`,
                                 dotKeys: {
@@ -1230,7 +1227,7 @@ export default {
                                             anchor: `favorite Beatles song`,
                                             wiki: `She_Loves_You`,
                                         },
-                                        `. During my troubled moments with Sita, it felt like`,
+                                        `. During troubled times with Sita later on, it felt like`,
                                         {
                                             anchor: `John Lennon`,
                                             wiki: `John_Lennon`,
