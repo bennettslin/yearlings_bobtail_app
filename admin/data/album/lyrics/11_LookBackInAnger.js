@@ -308,7 +308,7 @@ export default {
                             anchor: `spite you thrive`,
                             todo: REVIEW,
                             card: {
-                                description: `But this casual view of my own hardship is what enabled me to justify the pain that I caused to Sita.`,
+                                description: `But this casual view of my own hardship is what allowed me to justify the pain that I'd later cause to Sita.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -465,12 +465,12 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `Having sworn to be ready when the next Mara comes along, I notice that the latecomer's hair, which is the color of`,
+                                    `Having sworn to be ready when the next Mara comes along, I notice that the latecomer's hair is the color of`,
                                     {
                                         anchor: `maraschino cherries`,
                                         wiki: `Maraschino_cherry`,
                                     },
-                                    `, matches "Mara's sheen of" red.`,
+                                    `— matching "Mara's sheen of" red.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -489,7 +489,7 @@ export default {
                             anchor: `Great show`,
                             todo: REVIEW,
                             card: {
-                                description: `The best time to hit on someone is right after your set, when they've just spent the last hour making you the center of their attention. And sure enough, I find the redhead to be flirtatious when we finally chat.`,
+                                description: `The best time to hit on someone is right after your set, since they've just spent the last hour making you the center of their attention. And sure enough, I find the redhead to be a bit flirtatious when we finally chat.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -518,7 +518,7 @@ export default {
                             anchor: `fine when you had none`,
                             todo: REVIEW,
                             card: {
-                                description: `Things were finally looking up for me, so I was confused to feel a lingering bitterness inside. I suspect it's because I was indignant for my younger self, who'd been kept in the dark for so long about how much better life could be.`,
+                                description: `Things were finally looking up for me, so I was confused to feel a residual bitterness inside. I suspect it's because I was indignant for my younger self, who'd been kept in the dark for so long about how much better life could be.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -654,7 +654,7 @@ export default {
                             anchor: `must turn the cheek`,
                             todo: REVIEW,
                             card: {
-                                description: `The letters from RI Research instructed me not to confront my tormentors; instead, I was to take my abuse in stride. Given my exalted place in the universe, it was on me to be the bigger person.`,
+                                description: `The letters from RI Research instructed me not to confront my tormentors. Instead, I was to take my abuse in stride, as my exalted place in the universe required of me to be the bigger person.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -674,7 +674,7 @@ export default {
                             anchor: `only to crack`,
                             todo: REVIEW,
                             card: {
-                                description: `Yet even as reason disproved the beliefs of my bullies, it also discredited my own as a Beyonder. With so many rival claims to the truth, who would stay loyal to a faith that offers no community and only endless grief?`,
+                                description: `Yet even as reason disproved the beliefs of my bullies, it also discredited my own as a Beyonder. Because, with so many rival claims to the truth, who would stay loyal to a faith that offers no community and only endless grief?`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -715,7 +715,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `As opportunities for social advancement opened up for me, I could look back and even sympathize with the bullies by putting myself in their shoes. After all, in a world that roots for the strong, who`,
+                                    `As opportunities for social advancement opened up for me, I could look back and sympathize with the bullies by putting myself in their shoes. After all, in a world that roots for the strong, who`,
                                     {
                                         isItalic: true,
                                         lyric: `wouldn't`,
@@ -784,7 +784,6 @@ export default {
                         {
                             anchor: `Red and friends`,
                             properNoun: true,
-                            todo: REVIEW,
                             card: {
                                 description: `The redhead and her friends loiter as my bandmates and I load our gear into Jacob's van. During my chat with her between sets, I left open the possibility that we might all hang out after the show.`,
                                 dotKeys: {

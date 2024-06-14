@@ -1222,12 +1222,12 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `A reference to perhaps my`,
+                                        `A reference to what's perhaps my`,
                                         {
                                             anchor: `favorite Beatles song`,
                                             wiki: `She_Loves_You`,
                                         },
-                                        `. During troubled times with Sita later on, it felt like`,
+                                        `. During my troubled years with Sita later on, it felt like`,
                                         {
                                             anchor: `John Lennon`,
                                             wiki: `John_Lennon`,
