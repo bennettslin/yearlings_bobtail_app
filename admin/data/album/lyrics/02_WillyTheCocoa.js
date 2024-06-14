@@ -1144,7 +1144,7 @@ export default {
                                         anchor: `lazy eye`,
                                         wiki: `Amblyopia`,
                                     },
-                                    `, which meant I grew up lacking stereo vision. As a result, I was terrible at sports— but excellent at drawing, since I could easily recreate on paper what I saw in real life. Impressed by my skills, my mother insisted that I was destined to be a great artist. So I always figured that someday I'd create a masterpiece— perhaps something akin to the`,
+                                    `, and as a result, I lacked stereo vision. This meant I was terrible at sports— but excellent at drawing, since I could easily recreate on paper what I saw in real life. Impressed by my skills, my mother insisted that I was destined to be a great artist. So I always figured that I'd create a masterpiece someday— perhaps something akin to the`,
                                     {
                                         anchor: `Tintin`,
                                         wiki: `The_Adventures_of_Tintin`,
@@ -1191,7 +1191,7 @@ export default {
                                         anchor: `Jingle Bells`,
                                         wiki: `Jingle_Bells`,
                                     },
-                                    `," isn't a jumble of nonsense as so many nursery rhymes are. In any case,`,
+                                    `," isn't a jumble of nonsense like so many nursery rhymes are. In any case,`,
                                     {
                                         isItalic: true,
                                         lyric: `Bobtail`,

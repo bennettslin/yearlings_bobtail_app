@@ -19,7 +19,7 @@ import {
     IS_UNIT_DOT,
     RESPONSE,
 } from '../../../../src/constants/lyrics'
-import { REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Odin',
@@ -669,7 +669,6 @@ export default {
                         `that was`,
                         {
                             anchor: `safe for a heathen`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Being an illegitimate son, Ishmael wasn't to inherit the house of`,
@@ -779,7 +778,6 @@ export default {
                         `would the`,
                         {
                             anchor: `rondel of her eye`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `A`,
@@ -1149,10 +1147,9 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
-                        `As it turns out, recording vocals in doublespeaker rhyme is trickier than you'd expect. When singing, we don't break up our phrases evenly; instead, we shorten syllables and delay their onset to account for consonant clusters and such. So each voice in a doublespeaker pair might sound fine on its own— but disjointed when heard together. To perform them in sync, then, I came up with a system of notation that resembled medieval`,
+                        `As it turns out, recording vocals in doublespeaker rhyme is trickier than you'd expect. When singing, we don't break up our phrases evenly; instead, we shorten syllables or delay their onset to account for consonant clusters and such. So each voice in a doublespeaker pair might sound fine on its own— but disjointed when heard together. To perform them in sync, then, I came up with a system of notation that resembled medieval`,
                         {
                             anchor: `ligature`,
                             wiki: `Ligature_(music)`,

@@ -228,7 +228,6 @@ export default {
                         `You stowed away`,
                         {
                             anchor: `beneath your captain bed`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `I slept in a`,
@@ -326,7 +325,7 @@ export default {
                             anchor: `your cape`,
                             todo: REVIEW,
                             card: {
-                                description: `In elementary school, everyone liked me. Being small for my age, I was pampered even by other boys; and though I was absorbed in my sketchbooks, I would happily draw any animal or cartoon figure for those who asked. But the traits that once made me a hero now marked me as easy prey in middle school, and I was ill-prepared.`,
+                                description: `In elementary school, everyone liked me. Being small for my age, I was pampered even by other boys; and though I was absorbed in my sketchbooks, I would happily draw animals and cartoon figures for those who asked. But the traits that once made me a hero now marked me as easy prey in middle school, and I was ill-prepared.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
