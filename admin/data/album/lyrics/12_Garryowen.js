@@ -27,7 +27,6 @@ export default {
     referenceDescription: `Banjo in anacrusis`,
     playerStartTime: 2107.996,
     mixStartTime: `0:01:01.40`,
-    todo: REVIEW,
     overview: `My mood would change for the worse when I drank, leading friends to joke that I had a sinister alter ego. It wasn't far from the truth: I was souring on my relationship with Sita by this point, and being drunk provided both an escape and an excuse to act out. But I really didn't like myself when this happened; I missed being the hapless kid I was before. And knowing now how to get it right, I longed for a do-over— only this time without the mess. In other words… without Sita.`,
     lyricUnits: [
         {
@@ -332,7 +331,7 @@ export default {
                             anchor: `aren't love`,
                             todo: REVIEW,
                             card: {
-                                description: `Throughout our budding friendship, Sita had neglected to mention her sexual intimacy with past partners, even if it was always shy of intercourse. When I found out, she tried to console me by pointing out that she never went all the way because she didn't love them. She loved me, which meant I'd won. But it still stung like crazy to find out so late, and this deepened my resentment.`,
+                                description: `Throughout our budding friendship, Sita had neglected to mention her sexual intimacy with past partners, even if it was always shy of intercourse. When I found out, she tried to console me by pointing out that she never went all the way because she didn't love them. She loved me— which meant I'd won. But it still stung like crazy to find out so late, and this deepened my resentment.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -499,7 +498,7 @@ export default {
                                         anchor: `on a goat`,
                                         wiki: `Scapegoat`,
                                     },
-                                    `that was then cast into the desert. Banishing Sita from my life would serve the same purpose: Without her around to cast judgment, I had no need to atone for my hypocrisy.`,
+                                    `that was then cast into the desert. Banishing Sita from my life would serve the same purpose: Without her around to cast judgment, I'd have no need to atone for my hypocrisy.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -590,7 +589,7 @@ export default {
                             anchor: `have her for your pet`,
                             todo: REVIEW,
                             card: {
-                                description: `Sita's manner of prostrating herself exasperated me to no end, as it forced me to wield power that I hadn't asked for. Yet its endearing nature was also guaranteed to make me love her, and I did. So I never doubted that the impending breakup would be wrenching for both of us.`,
+                                description: `Sita's manner of prostrating herself exasperated me to no end, as it forced me to wield power that I hadn't asked for. Yet its endearing nature was also guaranteed to make me love her— and I did. So I never doubted that the eventual breakup would be wrenching for both of us.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -605,7 +604,6 @@ export default {
                         `Someday`,
                         {
                             anchor: `she won't be there`,
-                            todo: REVIEW,
                             card: {
                                 description: `But this codependency wasn't just the foundational basis of my love for Sita; it was all I knew of how to love, period. I'd never be asked to love in this way again— certainly not by any of the carefree scenesters whom I ogled at every show. And so it wasn't just cowardice that prevented me from cutting the cord; I genuinely feared whether I could ever truly love anyone else.`,
                                 dotKeys: {
@@ -627,7 +625,7 @@ export default {
                             anchor: `bagpipes`,
                             wiki: `Bagpipes`,
                         },
-                        `heard here evoke a funeral procession to mark the death of our relationship. I mimicked the sound by overdubbing multiple takes of a two-part harmony on the melodica, with one part acting as the chanter and the other as the drone.`,
+                        `heard here evoke a funeral procession to mark the death of my relationship with Sita. I mimicked the sound by overdubbing multiple takes of a two-part harmony on the melodica— with one part acting as the chanter, and the other as the drone.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -670,7 +668,6 @@ export default {
                         `, you'll`,
                         {
                             anchor: `drop your anchor`,
-                            todo: REVIEW,
                             card: {
                                 description: `More than anything else, I was tired of lurching from one emotional extreme to the next. Breaking up meant that I could finally drop my "anger" and keep my mood anchored in place.`,
                                 dotKeys: {
@@ -719,34 +716,19 @@ export default {
                         `They told her, "Never help a`,
                         {
                             anchor: `self-abuser`,
-                            cards: [
-                                {
-                                    description: [
-                                        `I had an intermittent habit of`,
-                                        {
-                                            anchor: `cutting myself`,
-                                            wiki: `Self-harm`,
-                                        },
-                                        `to deal with depression. Early in our friendship, Sita took interest in my scars, which I interpreted to be a morbid fascination with my troubled past. But I later came to see that she was just sympathizing with a fellow depressive, one whose coping mechanisms were curiously different from her own.`,
-                                    ],
-                                    dotKeys: {
-                                        [BACKSTORY]: true,
+                            card: {
+                                description: [
+                                    `I had an intermittent habit of`,
+                                    {
+                                        anchor: `cutting myself`,
+                                        wiki: `Self-harm`,
                                     },
+                                    `to deal with depression. Early in our friendship, Sita took interest in my scars, which I interpreted to be a morbid fascination with my troubled past. But I later came to see that she was just sympathizing with a fellow depressive, one whose coping mechanisms were curiously different from her own.`,
+                                ],
+                                dotKeys: {
+                                    [BACKSTORY]: true,
                                 },
-                                /**
-                                 * NOTE: This obscures the greater point of
-                                 * self-harm, so I'm leaving it out for now.
-                                 */
-                                /**
-                                {
-                                    description: `While the term "self-abuse" can refer to literal self-harm, it's also used in religious circles to describe masturbation. Toward the end, I masturbated frequently to lower my sex drive, hoping that this would strengthen my resolve to break up with Sita.`,
-                                    dotKeys: {
-                                        [BACKSTORY]: true,
-                                        [PUN]: true
-                                    }
-                                }
-                                **/
-                            ],
+                            },
                         },
                     ],
                 },
@@ -757,7 +739,6 @@ export default {
                             `see himself`,
                             {
                                 anchor: `as well in you`,
-                                todo: REVIEW,
                                 card: {
                                     description: `And yet, if I was capable of hurting myself, then I'd also have no qualms about hurting those close to me— who now knew the worst side of me as only I once did.`,
                                     dotKeys: {
@@ -825,7 +806,6 @@ export default {
                         `becomes someone's`,
                         {
                             anchor: `last-ditch alibi`,
-                            todo: REVIEW,
                             card: {
                                 description: `Though my friends were only joking to say it was Garry and not me who'd committed this or that act of vandalism, on some level I accepted it as the truth. And now it also wasn't me who'd drained Sita of her confidence through the years, leaving her a crumbled wreck. It must have been Garry; I wasn't there.`,
                                 dotKeys: {
