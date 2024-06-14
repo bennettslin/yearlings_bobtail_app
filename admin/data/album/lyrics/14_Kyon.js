@@ -659,7 +659,6 @@ export default {
                         `? Come for me? At`,
                         {
                             anchor: `thirty-three`,
-                            todo: REVIEW,
                             card: {
                                 description: `I often joked about killing myself at thirty-three— the age at which Jesus was crucified. I hated the idea of getting older, and clearly this is all the time you need to make an impact on the world. So when Sita asked me to specify the age at which I'd come back for her in accordance with our pact, I answered thirty-three. The subtext was understood.`,
                                 dotKeys: {

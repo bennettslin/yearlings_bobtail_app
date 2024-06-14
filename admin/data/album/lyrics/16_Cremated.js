@@ -339,7 +339,7 @@ export default {
                             anchor: `good for anecdotes`,
                             todo: REVIEW,
                             card: {
-                                description: `Though Miriam was entertained by my character, it wasn't in a way that one should hope for. I was to be the oddball ex-boyfriend in a tale of her misspent youth, not the life companion who'd one day hear all about it.`,
+                                description: `Though Miriam was entertained by my character, it wasn't in a way that one should hope for. I was to be the oddball ex-boyfriend in a tale of her misspent youth— not the life companion who'd one day hear all about it.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

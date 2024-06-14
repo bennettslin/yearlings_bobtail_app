@@ -238,7 +238,7 @@ export default {
                             anchor: `mindful manners`,
                             todo: REVIEW,
                             card: {
-                                description: `Catherine didn't like it when I swore. I figured that giving it up would be a definite win with any other woman like her, while the rest would find the quaintness charming.`,
+                                description: `I also decided to give up swearing. I figured this would be a definite win with any other woman like Catherine, while the rest would find its quaintness charming.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -558,7 +558,7 @@ export default {
                             properNoun: true,
                             todo: REVIEW,
                             card: {
-                                description: `To promote cross-cultural harmony, the pairings in these mass weddings are often international by design. Which means my Moonie bride might be a foreigner who joined the church just to ensure that her children will be born in America. And if so, then I'd be a fool to think my "maiden Mara co-signs" the marriage license in good faith.`,
+                                description: `To promote cross-cultural harmony, the pairings in these mass weddings are often international by design. So my Moonie bride might very well be a foreigner who joined the church just to ensure that her children will be born in America. In which case, I'd be a fool to think my "maiden Mara co-signs" the marriage license in good faith.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [PUN]: true,
@@ -632,7 +632,7 @@ export default {
                             anchor: `heap of twisted twine`,
                             todo: REVIEW,
                             card: {
-                                description: `So with little to show after five years of diligent effort, I felt paralyzed by doubt— and I knew of no other path to take. The puppet of my future self lay motionless before me, already ensnared by the very "net" that was meant to snag me a romantic partner.`,
+                                description: `So with little to show after five years of diligent effort, I was now paralyzed by doubt— and I knew of no other path to take. The puppet of my future self lay motionless before me, already ensnared by the very "net" that was meant to snag me a romantic partner.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [PUN]: true,

@@ -661,7 +661,7 @@ export default {
                             anchor: `learn to shotgun`,
                             todo: REVIEW,
                             card: {
-                                description: `In time I adopted the shotgun approach to dating, which involves hitting on anyone at any moment. It works by putting the math on your side: Even though your success rate remains dismal, you've increased the sample size, which now gives you a better chance of having a woman say yes. And, of course, one yes to a date is all you need.`,
+                                description: `In time I adopted the shotgun approach to dating, which involves hitting on anyone at any moment. It works by putting the math on your side: Even though your success rate remains dismal, you're expanding the sample size, which increases your chances of getting a woman to say yes. And, of course, one yes to a date is all you need.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -805,7 +805,6 @@ export default {
                         `hint of`,
                         {
                             anchor: `sampler cologne`,
-                            todo: REVIEW,
                             card: {
                                 description: `Whenever I spotted a men's lifestyle magazine in some neighbor's recycling bin, I would tear out the scent strips from its cologne ads and add them to my pile. Then right before a date, I would rub a few onto my neck and wrists.`,
                                 dotKeys: {
