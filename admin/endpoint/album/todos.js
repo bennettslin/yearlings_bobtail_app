@@ -54,6 +54,10 @@ const _getAnnotationTodosCount = key => {
     return todoAnnotationTodosCount
 }
 
+export const getTotalTodosCount = () => (
+    _getOverviewTodosCount() + _getAnnotationTodosCount()
+)
+
 export const getTotalReviewsCount = () => (
     _getOverviewTodosCount(REVIEW) + _getAnnotationTodosCount(REVIEW)
 )
@@ -80,6 +84,11 @@ const _getAnnotationTodosCountForSong = (songIndex, key) => {
         )
     ), 0)
 }
+
+export const getTodosCountForSong = songIndex => (
+    getHasOverviewTodo(songIndex) +
+    _getAnnotationTodosCountForSong(songIndex)
+)
 
 export const getReviewsCountForSong = songIndex => (
     getHasOverviewTodo(songIndex, REVIEW) +

@@ -6,11 +6,13 @@ import {
     getTotalReviewsCount,
     getTotalRevisionsCount,
     getTotalRedosCount,
+    getTotalTodosCount,
 } from '../../../endpoint/album/todos'
 
 const TodoCounter = ({ areDoneTodosHidden }) => {
     const
         totalCount = getTotalCount(),
+        totalTodosCount = getTotalTodosCount(),
         reviewsCount = getTotalReviewsCount(),
         revisionsCount = getTotalRevisionsCount(),
         redosCount = getTotalRedosCount()
@@ -28,7 +30,7 @@ const TodoCounter = ({ areDoneTodosHidden }) => {
         >
             {
                 areDoneTodosHidden ?
-                    `redo: ${redosCount} / revise: ${revisionsCount} / review: ${reviewsCount}` :
+                    `redo: ${redosCount} / revise: ${revisionsCount} / review: ${reviewsCount} / total: ${totalTodosCount}` :
                     `total: ${totalCount}`
             }
         </div>

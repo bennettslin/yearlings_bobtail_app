@@ -10,12 +10,14 @@ import {
     getRedosCountForSong,
     getReviewsCountForSong,
     getRevisionsCountForSong,
+    getTodosCountForSong,
 } from '../../../../endpoint/album/todos'
 
 const TodoSongHeader = ({ songIndex, areDoneTodosHidden }) => {
     const
         hue = (songIndex - 1) / getSongsAndLoguesCount() * 360,
         totalCount = getCountForSong(songIndex),
+        totalTodosCount = getTodosCountForSong(songIndex),
         reviewsCount = getReviewsCountForSong(songIndex),
         revisionsCount = getRevisionsCountForSong(songIndex),
         redosCount = getRedosCountForSong(songIndex)
@@ -40,7 +42,7 @@ const TodoSongHeader = ({ songIndex, areDoneTodosHidden }) => {
             <span>
                 {
                     areDoneTodosHidden ?
-                        `${redosCount} / ${revisionsCount} / ${reviewsCount}` :
+                        `${redosCount} / ${revisionsCount} / ${reviewsCount} / ${totalTodosCount}` :
                         totalCount
                 }
             </span>
