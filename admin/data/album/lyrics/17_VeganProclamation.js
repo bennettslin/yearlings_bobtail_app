@@ -17,6 +17,7 @@ import {
     FORESHADOW_OF_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Vegan Proclamation',
@@ -400,6 +401,7 @@ export default {
                         `Torn straps`,
                         {
                             anchor: `unsalvaged sows`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -408,7 +410,7 @@ export default {
                                             anchor: `metal cages`,
                                             wiki: `Gestation_crate`,
                                         },
-                                        `too small for them to move around. Stressed by their living conditions, they engage in self-destructive behavior like chewing on the cage bars. The sole purpose of their suffering is to produce piglets for slaughter, and then once they grow weak, they too are slaughtered.`,
+                                        `too small for them to move around. Stressed by their living conditions, they engage in self-destructive behavior like chewing on the cage bars. The sole purpose of their suffering is to produce piglets for slaughter; then once they grow weak, they too are slaughtered.`,
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,

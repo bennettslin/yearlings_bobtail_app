@@ -100,8 +100,9 @@ export default {
                     lyric: [
                         {
                             anchor: `where it commenced`,
+                            todo: REVIEW,
                             card: {
-                                description: `The relationship with Catherine began like my friendship with Sasha had a decade earlier: I latched onto the first female to show me kindness in a new environment, and then I tried to make myself indispensable in small ways.`,
+                                description: `The relationship with Catherine began like my friendship with Sasha had a decade earlier: I latched onto the first cute person to show me kindness in a new environment, and then made myself indispensable in small ways.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

@@ -220,8 +220,9 @@ export default {
                         `death of`,
                         {
                             anchor: `dull dishroom days`,
+                            todo: REVIEW,
                             card: {
-                                description: `My job washing dishes was uneventful and offered no social interaction, but it had its upsides. At the start of the shift, I could read a book while the dishes piled up, and then clean them all at once in a mad rush. When it got busy, I would switch to writing lyrics in my head.`,
+                                description: `My job washing dishes was uneventful and offered no social interaction, but it had its upsides. At the start of the shift, I would read a book while the dishes piled up, and then clean them all at once in a mad rush. When it got busy, I would switch to writing lyrics in my head.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

@@ -14,7 +14,7 @@ import {
     FORESHADOW_OF_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVISE } from '../../../containers/Annotations/constants/todos'
+import { REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'My 100,000th Dream',
@@ -356,8 +356,9 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
-                    description: `This bridge shares the same chord progression with the one in "Grasshoppers Lie Heavy." It starts with the Spanish guitar from "M" playing arpeggios, and then the melodicas from "Pchelka's Starry Journey" follow to evoke the sound of brass fanfare.`,
+                    description: `This bridge shares the same chord progression with the one in "Grasshoppers Lie Heavy." It starts with the Spanish guitar from "M" playing arpeggios, and then the melodicas from "Pchelka's Starry Journey" come in to evoke the sound of brass fanfare.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
