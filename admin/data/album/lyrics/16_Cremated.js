@@ -15,6 +15,7 @@ import {
     IS_UNIT_DOT,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Cremated',
@@ -336,8 +337,9 @@ export default {
                         `sinking ship, maybe`,
                         {
                             anchor: `good for anecdotes`,
+                            todo: REVIEW,
                             card: {
-                                description: `Though Miriam was entertained by my character, it wasn't in a way that one should hope for. I was to be the oddball ex-boyfriend in a tale of her misspent youth, not the life companion who would one day hear all about it.`,
+                                description: `Though Miriam was entertained by my character, it wasn't in a way that one should hope for. I was to be the oddball ex-boyfriend in a tale of her misspent youth, not the life companion who'd one day hear all about it.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

@@ -13,6 +13,7 @@ import {
     REFRAIN,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Dear Saskia',
@@ -200,8 +201,9 @@ export default {
                         `I should`,
                         {
                             anchor: `keep your kid name`,
+                            todo: REVIEW,
                             card: {
-                                description: `Sasha decided that once in Boston, she would go by her given name. I asked if I should start calling her Saskia from now on as well. She said no, since it was nice to be reminded of which friends knew her first.`,
+                                description: `Sasha decided that once in Boston, she'd go by her given name. I asked if I should start calling her Saskia from now on as well. She said no, since it was nice to be reminded of which friends knew her first.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

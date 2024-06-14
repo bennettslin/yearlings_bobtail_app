@@ -1,7 +1,6 @@
 # Latest todo
 * Do some reviews
 * Audit Kyon?
-* Look into "who would" and other pronouns?
 * Look into ", then" instead of ", and then"?
 * Write to Ross Barkan
 * Allow annotations to be clicked in dashboard
