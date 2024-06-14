@@ -1,8 +1,9 @@
 # Latest todo
+* Do some reviews
 * Show todo totals
+* Audit Kyon?
 * Look into "who would" and other pronouns?
 * Look into ", then" instead of ", and then"?
-* Audit Golden Cord
 * Write to Ross Barkan
 * Allow annotations to be clicked in dashboard
     * Change hrefProp to something else
