@@ -176,19 +176,19 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `During my college years, I would ask older coworkers to buy me twelve-packs of cheap beer, which I would then lug back to my apartment. So I always had some on hand, and before every date, I would down a few cans.`,
+                                    description: `During my college years, I would ask older coworkers to buy me twelve-packs of cheap beer. So I always had a ready supply in my apartment, and before every date, I would down a few cans.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
                                 },
                                 {
                                     description: [
-                                        `Several idioms in the English language disparage the Dutch, due to their trade rivalries with the British in the 17th century.`,
+                                        `Several idioms in the English language trace their origin to 17th-century trade rivalries between the British and the Dutch. For example, false confidence gained from drinking alcohol is known as`,
                                         {
                                             anchor: `Dutch courage`,
                                             wiki: `Dutch_courage`,
                                         },
-                                        `refers to false confidence gained from drinking alcohol.`,
+                                        `.`,
                                     ],
                                 },
                             ],
@@ -661,7 +661,7 @@ export default {
                             anchor: `learn to shotgun`,
                             todo: REVIEW,
                             card: {
-                                description: `In time I adopted the shotgun approach to dating, which involves hitting on anyone at any moment. It works by putting the math on your side: Even though your success rate remains dismal, you're expanding the sample size, which increases your chances of getting a woman to say yes. And, of course, one yes to a date is all you need.`,
+                                description: `In time I adopted the shotgun approach to dating, which involves hitting on anyone at any moment. It works by putting the math on your side: Even if your success rate remains dismal, you're expanding the sample size, which then increases your chances of getting a woman to say yes. And of course, one yes to a date is all you need.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

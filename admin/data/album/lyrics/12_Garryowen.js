@@ -256,7 +256,7 @@ export default {
                             anchor: `bustin' cars with fists`,
                             todo: REVIEW,
                             card: {
-                                description: `Tristan was particularly hotheaded when drunk. One night after getting us kicked out of a party for a fight that he'd started, he challenged us to see who could punch a car window and break the glass. I didn't win.`,
+                                description: `Tristan was particularly hotheaded when drunk. One night after starting a fight and getting us kicked out of a party as a result, we roamed the streets until he challenged us to see who could punch a car window and break the glass. I didn't win.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -331,7 +331,7 @@ export default {
                             anchor: `aren't love`,
                             todo: REVIEW,
                             card: {
-                                description: `Throughout our budding friendship, Sita had neglected to mention her sexual intimacy with past partners, even if it was always shy of intercourse. When I found out, she tried to console me by pointing out that she never went all the way because she didn't love them. She loved me— which meant I'd won. But it still stung like crazy to find out so late, and this deepened my resentment.`,
+                                description: `Throughout our budding friendship, Sita had neglected to mention her sexual intimacy with past partners. When I found out, she tried to console me by pointing out that she never went all the way because she didn't love them; she loved me— which meant I'd won. But it still stung to find out so late, and this deepened my resentment.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -358,7 +358,7 @@ export default {
                             anchor: `buys your grief`,
                             todo: REVIEW,
                             card: {
-                                description: `My worlds collided when I smashed a random bike one night in a drunken fit. As it turns out, the bike belonged to a scene kid who'd liked the Yearlings since our early days. He'd related so much to my songs about unfulfilled hopes; I was disgusted with myself for having disappointed him.`,
+                                description: `My worlds collided when I smashed a random bike one night in a drunken fit. As it turns out, the bike belonged to a scene kid who'd liked the Yearlings since our early days. He related so much to my songs about unfulfilled hopes; I was disgusted with myself for having disappointed him.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -452,7 +452,7 @@ export default {
                             anchor: `counterpoint`,
                             wiki: `Counterpoint`,
                         },
-                        `, melodies are laid atop one another, and the chord progression is a byproduct of the harmonies they form in sequence. But since the chords for this song were established first, the reverse approach was called for: I assigned each note in a chord to a different part— and then for each part, I shaped the sequence of those notes into an unassuming counter-melody.`,
+                        `, melodies are laid atop one another, and the chord progression is simply a byproduct of the harmonies they form in sequence. But since the chords for this song were established first, I took the reverse approach of assigning each note in a chord to a different part, and then shaping the sequence of notes for each part into an unassuming counter-melody.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -587,7 +587,6 @@ export default {
                         `You won't always`,
                         {
                             anchor: `have her for your pet`,
-                            todo: REVIEW,
                             card: {
                                 description: `Sita's manner of prostrating herself exasperated me to no end, as it forced me to wield power that I hadn't asked for. Yet its endearing nature was also guaranteed to make me love her— and I did. So I never doubted that the eventual breakup would be wrenching for both of us.`,
                                 dotKeys: {
@@ -617,7 +616,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `The`,
@@ -849,7 +847,6 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `After`,

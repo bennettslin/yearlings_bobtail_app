@@ -128,7 +128,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Since I never learned to tie my shoelaces properly, they were always coming undone. So anyone bent on seeing me trip and fall had the ready means to make this happen.`,
+                                    description: `Since I never learned to tie my shoelaces properly, they were always coming undone. So if anyone was bent on seeing me trip and fall, they had the ready means to make it happen.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -308,7 +308,7 @@ export default {
                             anchor: `spite you thrive`,
                             todo: REVIEW,
                             card: {
-                                description: `But this casual view of my own hardship is what allowed me to justify the pain that I'd later cause to Sita.`,
+                                description: `But this casual view of my own hardship is what allowed me to justify the pain I'd later cause to Sita.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -489,7 +489,7 @@ export default {
                             anchor: `Great show`,
                             todo: REVIEW,
                             card: {
-                                description: `The best time to hit on someone is right after your set, since they've just spent the last hour making you the center of their attention. And sure enough, I find the redhead to be a bit flirtatious when we finally chat.`,
+                                description: `The best time to hit on someone is right after your set, since they've just spent the last hour making you the center of their attention. And sure enough, I find the redhead to be flirtatious when we chat.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -518,7 +518,7 @@ export default {
                             anchor: `fine when you had none`,
                             todo: REVIEW,
                             card: {
-                                description: `Things were finally looking up for me, so I was confused to feel a residual bitterness inside. I suspect it's because I was indignant for my younger self, who'd been kept in the dark for so long about how much better life could be.`,
+                                description: `Things were finally looking up for me, so I was confused that a lingering bitterness remained. I suspect it's because I felt indignant for my younger self, who'd been kept in the dark for so long about how much better life could be.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -654,7 +654,7 @@ export default {
                             anchor: `must turn the cheek`,
                             todo: REVIEW,
                             card: {
-                                description: `The letters from RI Research instructed me not to confront my tormentors. Instead, I was to take my abuse in stride, as my exalted place in the universe required of me to be the bigger person.`,
+                                description: `The letters from RI Research instructed me not to confront my tormentors. Instead, I was to take my abuse in stride— for my exalted place in the universe required of me to be the bigger person.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -672,7 +672,6 @@ export default {
                     lyric: [
                         {
                             anchor: `only to crack`,
-                            todo: REVIEW,
                             card: {
                                 description: `Yet even as reason disproved the beliefs of my bullies, it also discredited my own as a Beyonder. Because, with so many rival claims to the truth, who would stay loyal to a faith that offers no community and only endless grief?`,
                                 dotKeys: {
@@ -712,7 +711,6 @@ export default {
                         `weren't they`,
                         {
                             anchor: `right to take what's theirs`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `As opportunities for social advancement opened up for me, I could look back and sympathize with the bullies by putting myself in their shoes. After all, in a world that roots for the strong, who`,

@@ -1,7 +1,6 @@
 # Latest todo
 * Write to Ross Barkan
-* Do some revisions
-* Do some reviews
+* Review "that"
 * Am I being clear on the difference between Bobtail and Yearling's Bobtail?
 * Audit Uncanny Valley
 * Allow annotations to be clicked in dashboard

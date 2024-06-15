@@ -553,12 +553,12 @@ export default {
                                             anchor: `pseudoephedrine`,
                                             wiki: `Pseudoephedrine`,
                                         },
-                                        `," a nasal decongestant. Given that it's the main ingredient used to make`,
+                                        `," a nasal decongestant. But given that this is the main ingredient used to make`,
                                         {
                                             anchor: `crystal meth`,
                                             wiki: `Methamphetamine`,
                                         },
-                                        `, however, it's no longer included in over-the-counter medicines.`,
+                                        `, it's no longer included in over-the-counter medicines.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -1190,7 +1190,7 @@ export default {
                             anchor: `Pour sod, fourfeit tundr`,
                             todo: REVIEW,
                             card: {
-                                description: `In the car, Howie and Tomer swap tales from their high school days, culminating with the day they had to pour sod on the "poor sod" who now lies "four feet under."`,
+                                description: `In the car, Howie and Tomer swap tales from their high school days, culminating in the day they poured sod on the "poor sod" who now lies "four feet under."`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,

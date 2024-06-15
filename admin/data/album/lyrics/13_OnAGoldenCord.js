@@ -151,7 +151,7 @@ export default {
                             anchor: `Johnny Horton`,
                             wiki: `Johnny_Horton`,
                         },
-                        `. His records were the first that I owned, as they were handed down to me by my mother, who adored him in her teenybopper years. None of my classmates had ever heard of him, until one day I met another kid whose Taiwanese mother had the same obsession. So I guess Horton was big in Taiwan. But he probably never knew this, having died in a car accident at the peak of his fame.`,
+                        `. His records were the first that I owned, as they were handed down to me by my mother, who adored him in her teenybopper years. None of my classmates had ever heard of him, until one day I met another kid whose Taiwanese mother had the same obsession. So I guess Horton was big in Taiwan— but he probably never knew this, having died in a car accident at the peak of his fame.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -382,7 +382,6 @@ export default {
                         `As I soak in spirits amidst`,
                         {
                             anchor: `wanted ads`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `As drunken me wanders the Oakland streets, he stops to read flyers on telephone poles posted by those seeking bandmates, like a vigilante of the Old West scanning a town's`,
@@ -413,7 +412,7 @@ export default {
                             anchor: `Guilt pardons`,
                             todo: REVIEW,
                             card: {
-                                description: `As my sober self observes his drunken accomplice's lack of remorse, he can only feel pity, knowing the trauma that must surely linger in one who performed such a heinous act. After all, avoiding such trauma is the reason he chose not to carry out the hit himself.`,
+                                description: `My sober self observes his drunken accomplice's lack of remorse and can only feel pity, knowing the trauma that must surely linger in one who undertook such a heinous act. After all, avoiding such trauma is the reason he chose not to carry out the hit himself.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -1081,7 +1080,7 @@ export default {
                                         anchor: `9/11 hijackers`,
                                         wiki: `September_11_attacks`,
                                     },
-                                    `were unaware that it was a suicide mission, having prepared instead to speak publicly on their religious motives. Similarly, my drunken half was sold on all the benefits of breaking up with Sita, unaware that the one being sacrificed on this mission would be him.`,
+                                    `were unaware that it was a suicide mission, having prepared instead to speak publicly on their religious motives. Similarly, my drunken half was sold on all the benefits of breaking up with Sita, unaware that the one being sacrificed on this mission was him.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

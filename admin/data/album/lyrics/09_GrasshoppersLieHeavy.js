@@ -220,9 +220,8 @@ export default {
                         `death of`,
                         {
                             anchor: `dull dishroom days`,
-                            todo: REVIEW,
                             card: {
-                                description: `My job washing dishes was uneventful and offered no social interaction, but it had its upsides. At the start of the shift, I would read a book while the dishes piled up, and then clean them all at once in a mad rush. When it got busy, I would switch to writing lyrics in my head.`,
+                                description: `My job as a dishwasher was uneventful and offered no social interaction, but it had its upsides. At the start of the shift, I would read a book while the dishes piled up, and then clean them all at once in a mad rush. When it got busy, I would switch to writing lyrics in my head.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -1222,7 +1221,7 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `A reference to what's perhaps my`,
+                                        `A clear reference to my`,
                                         {
                                             anchor: `favorite Beatles song`,
                                             wiki: `She_Loves_You`,
@@ -1312,7 +1311,7 @@ export default {
                             anchor: `how's that compromise`,
                             todo: REVIEW,
                             card: {
-                                description: `Having taken such pains to tuck away my emotions for so long, I was now hesitant to compromise the safety of this position. I just didn't want to feel vulnerable again, and I had no faith that my desires wouldn't backfire on me— as they did the first time I revealed them.`,
+                                description: `Having taken such pains to tuck away my emotions for so long, I was now hesitant to compromise the safety of this position. I just didn't want to feel vulnerable again, and I couldn't be sure that my desires wouldn't backfire on me— as they had the first time I revealed them.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
