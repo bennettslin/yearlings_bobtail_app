@@ -15,7 +15,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'क्यों? (Kyon?)',
@@ -30,7 +30,9 @@ export default {
     mixStartTime: `0:00:00.27`,
     playerReferenceTime: 2498.410,
     playerStartTime: 2496.296,
-    overview: `It shames me to say so, but even then I could see how my behavior was slowly degenerating into cruelty. Hoping for an easy breakup, I would act up in small ways— but Sita was just as determined to work it out, and she'd endure. So then I'd behave even more obnoxiously the next time… and on and on. In time I came to see how thoroughly her sense of worth was tied to our relationship. I was fighting for me. She was fighting for us.`,
+    todo: REVISE,
+    problem: `Revert to making original point.`,
+    overview: `Though it shames me to say so, even then I could see that my behavior was slowly degenerating into cruelty. What puzzled me was how this had happened. In hindsight, I can see why. Hoping for an easy breakup, I would act up in small ways— but Sita was just as determined to work it out, and she'd endure. So then I'd behave even more obnoxiously the next time… and on and on. In time I came to see how thoroughly her sense of worth was tied to our relationship. I was fighting for me. She was fighting for us.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -70,8 +72,10 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVISE,
+                problem: `Probably as she waits is better phrasing.`,
                 card: {
-                    description: `Having settled into an unhealthy power dynamic early on, Sita and I failed to grow as individuals. But I can see now that she was just waiting for me to grow up; as long as we were together, she couldn't do it on her own. And so the humming heard here is the sound of her waiting in quiet resignation.`,
+                    description: `Having settled into an unhealthy power dynamic early on, Sita and I failed to grow as individuals. But I can see now that she was waiting for me to grow up— because as long as we were together, she couldn't do it on her own. And so the humming heard here is the sound of her waiting in quiet resignation.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGCRAFT]: true,
@@ -118,8 +122,9 @@ export default {
                         `history shed, having`,
                         {
                             anchor: `never grown your horns`,
+                            todo: REVIEW,
                             card: {
-                                description: `Of course, my continual desire to leave Sita was also driven by shame. Having left her before, any kindness I showed her now could only be viewed as atonement for past crimes. My role in this relationship was to be forever penitent, whereas I could just start over with someone new, untainted by sin.`,
+                                description: `Of course, my desire to leave Sita was also driven by shame. Having left her before, any kindness I showed her now would have to be viewed as penitence— whereas I could just start over with someone new, untainted by my past sins.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -145,8 +150,9 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
-                    description: `I wanted this song to speak from Sita's perspective, but in retrospect, my portrayal might be a bit one-dimensional. I was just self-absorbed in my guilt when I wrote it, and my primary purpose was to beat myself up over what my stupidity had cost me.`,
+                    description: `I wanted this song to speak from Sita's perspective, but in hindsight, my portrayal is a bit one-dimensional. I was just self-absorbed in my guilt when I wrote it, and my primary purpose was to beat myself up over what my stupidity had cost me.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
@@ -165,8 +171,10 @@ export default {
                         `So baby, tell me then, when you`,
                         {
                             anchor: `take in her breasts`,
+                            todo: REVISE,
+                            problem: `Be more tactful, talk about wanting to be mothered instead of saying their bodies were motherly.`,
                             card: {
-                                description: `It scared me, far more than I let on, to gamble away the familiar warmth of Sita's love for a mere chance to date some other woman. I sometimes wondered if this fear then manifested in a hormonal craving for nurture over pleasure, because I was always struck by how motherly these women's naked bodies initially felt to me.`,
+                                description: `It scared me, far more than I let on, to gamble away the familiar warmth of Sita's love for a mere chance to date some other woman. I had to wonder if this fear would then manifest in a hormonal craving for nurture, because I was always struck by how motherly these women's naked bodies initially felt to me.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -186,8 +194,9 @@ export default {
                         `Is it just her`,
                         {
                             anchor: `womb you bed`,
+                            todo: REVIEW,
                             card: {
-                                description: `Of course, Sita herself had no such illusions about my innocence. She knew I chafed at being the one who was less sexually experienced in our relationship, and that this was the basis for my desire to sleep with other women.`,
+                                description: `Of course, Sita herself had no such illusions about my innocence. She knew I chafed at being the less sexually experienced one in our relationship, and that this was the basis for my desire to sleep with other women.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -203,6 +212,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
                         `My relationship with Sita was like a ship swaying in perilous waters. This notion is captured in the music by both the`,
@@ -210,7 +220,7 @@ export default {
                             anchor: `compound meter`,
                             wiki: `Metre_(music)`,
                         },
-                        `and the vacillation between unrelated chords separated by a`,
+                        `and the vacillation between unrelated chords whose roots are separated by a`,
                         {
                             anchor: `tritone`,
                             wiki: `Tritone`,
@@ -243,8 +253,9 @@ export default {
                     lyric: [
                         {
                             anchor: `spurned at first`,
+                            todo: REVIEW,
                             card: {
-                                description: `Given the seeming ease with which I could now attract other women, I grew further indignant about all the hoops I'd been made to jump through when first trying to win Sita over.`,
+                                description: `Given the seeming ease with which I could now attract women, I grew further indignant about all the hoops I'd been made to jump through when first trying to win Sita over.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -264,6 +275,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVISE,
+                problem: `Could flow better?`,
                 card: {
                     description: [
                         `Every time we got back together, Sita would reassert our status as a couple by insisting that I bring her along to see my friends— the very same ones who'd emboldened me to leave her. And so the circus`,
@@ -314,8 +327,9 @@ export default {
                     lyric: [
                         {
                             anchor: `plunders past`,
+                            todo: REVIEW,
                             card: {
-                                description: `The sting I felt in having once been rejected by Sita was aggravated by the later revelation of her sexual past. And all the more so since it was precisely the painful lessons she drew from those past encounters that made her wary of my initial advances. Of course, the irony was lost on me that I'd end up providing the most painful lesson by far.`,
+                                description: `The sting I felt in having once been rejected by Sita was aggravated by the later revelation of her sexual past. And all the more so, since it was precisely the painful lessons she drew from those past encounters that made her wary of my initial advances. Of course, the irony was lost on me that I'd end up providing the most painful lesson by far…`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -331,8 +345,9 @@ export default {
                         `But dear,`,
                         {
                             anchor: `let's make a pact`,
+                            todo: REVIEW,
                             card: {
-                                description: `Sita knew it was just a matter of time before I wanted the same mature, slow-burning love that she did. So after each breakup, she would make me promise to consider rekindling what we once had, whenever I should long for it again.`,
+                                description: `Sita knew it was just a matter of time before I'd want the same slow-burning love that she did. So after each breakup, she would make me promise to consider rekindling what we once had, whenever I should long for it again.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -388,6 +403,7 @@ export default {
                         `as the sole`,
                         {
                             anchor: `keeper of his sheep herd`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `A keeper in the sense of being both the one who tends`,
@@ -395,7 +411,7 @@ export default {
                                         isEmphasis: true,
                                         lyric: `to`,
                                     },
-                                    `the herd, and the only one worth keeping from`,
+                                    `the herd, as well as the only one worth keeping from`,
                                     {
                                         isEmphasis: true,
                                         lyric: `among`,
@@ -417,6 +433,8 @@ export default {
                         `And when sobered by the`,
                         {
                             anchor: `time lapse`,
+                            todo: REVISE,
+                            problem: `Needs to be clear that this is about remembrance. Maybe change the phrasing order.`,
                             cards: [
                                 {
                                     description: `Sita anticipated that my philandering years would whiz by in a flash as the pursuit of other women grew repetitive, imprinting few standout memories.`,
@@ -495,8 +513,9 @@ export default {
                         `Bursting belly told by`,
                         {
                             anchor: `extra holes`,
+                            todo: REVIEW,
                             card: {
-                                description: `Notches can be carved in one's belt to support a girth distended from overfeeding. They might also tally sexual conquests.`,
+                                description: `Notches can be carved in one's belt to support a belly distended from overfeeding. They might also tally sexual conquests.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -572,6 +591,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVISE,
+                problem: `Maybe shorten first sentence.`,
                 card: {
                     description: [
                         `In the second half of the song, the meter switches to`,
@@ -603,6 +624,8 @@ export default {
                         `Besides, a`,
                         {
                             anchor: `you-shaped pussing sore`,
+                            todo: REVISE,
+                            problem: `Should second sentence be complete?`,
                             card: {
                                 description: `Or else, "U-shaped." Yet more imagery comparing vaginal penetration to an inflicted lesion. I think I was feeling both guilty and horny when I wrote these lyrics.`,
                                 dotKeys: {
@@ -766,8 +789,9 @@ export default {
                         },
                         {
                             anchor: `I'll gladly wait`,
+                            todo: REVIEW,
                             card: {
-                                description: `But Sita encouraged my artistic pretensions, believing them to reflect positively on her as well. Though she was uninterested in the local scene, she still enjoyed being the one to go home with me after a show.`,
+                                description: `But Sita encouraged my artistic pretensions, believing them to reflect positively on her as well. Though she was uninterested in the local scene, she still enjoyed being seen as the one going home with me after a show.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

@@ -1,7 +1,10 @@
 # Latest todo
-* Do some reviews
-* Audit Kyon?
+* Have separate status for just accept for now?
 * Write to Ross Barkan
+* Do some revisions
+* Do some reviews
+* Am I being clear on the difference between Bobtail and Yearling's Bobtail?
+* Audit Uncanny Valley
 * Allow annotations to be clicked in dashboard
     * Change hrefProp to something else
     * Always have href on Anchor tag
