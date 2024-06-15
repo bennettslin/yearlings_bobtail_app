@@ -325,7 +325,7 @@ export default {
                             anchor: `your cape`,
                             todo: REVIEW,
                             card: {
-                                description: `In elementary school, everyone liked me. Being small for my age, I was pampered even by other boys; and though I was absorbed in my sketchbooks, I would happily draw animals and cartoon figures for those who asked. But the traits that once made me a hero now marked me as easy prey in middle school, and I was ill-prepared.`,
+                                description: `Everyone liked me in elementary school. Being small for my age, I was pampered even by other boys; and though I was absorbed in my sketchbooks, I would happily draw animals and cartoon figures for those who asked. But the traits that once made me a hero now marked me as easy prey in middle school, and I was ill-prepared.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -687,17 +687,17 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `In retrospect, RI Research likely drew their material from the notion of`,
+                                    `RI Research likely drew their material from the notion of`,
                                     {
                                         anchor: `star people`,
                                         wiki: `Star_people_(New_Age_belief)`,
                                     },
-                                    `, which was a`,
+                                    `, a`,
                                     {
                                         anchor: `New Age`,
                                         wiki: `New_Age`,
                                     },
-                                    `belief in the '70s— though as a child, I had no way of knowing this. Like Beyonders, star people came to Earth and then lost all memory of their stellar origins.`,
+                                    `belief in the '70s— though as a child, I had no way of knowing this. Like Beyonders, star people lost all memory of their stellar origins once they came to Earth.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,

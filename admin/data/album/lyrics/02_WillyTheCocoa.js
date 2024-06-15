@@ -1139,12 +1139,12 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `I wore an eyepatch as a child to correct my`,
+                                    `As a child, I wore an eyepatch to correct my`,
                                     {
                                         anchor: `lazy eye`,
                                         wiki: `Amblyopia`,
                                     },
-                                    `, and as a result, I lacked stereo vision. This meant I was terrible at sports— but excellent at drawing, since I could easily recreate on paper what I saw in real life. Impressed by my skills, my mother insisted that I was destined to be a great artist. So I always figured that I'd create a masterpiece someday— perhaps something akin to the`,
+                                    `, which prevented me from seeing in stereo vision. This meant I was terrible at sports— but excellent at drawing, since I could easily recreate on paper what I saw in real life. Impressed by my skills, my mother insisted that I was destined to become a great artist. So I always figured that I'd create a masterpiece someday— perhaps something akin to the`,
                                     {
                                         anchor: `Tintin`,
                                         wiki: `The_Adventures_of_Tintin`,
