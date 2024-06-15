@@ -8,6 +8,7 @@ import {
 import {
     getCountForSong,
     getRedosCountForSong,
+    getRestsCountForSong,
     getReviewsCountForSong,
     getRevisionsCountForSong,
     getTodosCountForSong,
@@ -18,6 +19,7 @@ const TodoSongHeader = ({ songIndex, areDoneTodosHidden }) => {
         hue = (songIndex - 1) / getSongsAndLoguesCount() * 360,
         totalCount = getCountForSong(songIndex),
         totalTodosCount = getTodosCountForSong(songIndex),
+        restsCount = getRestsCountForSong(songIndex),
         reviewsCount = getReviewsCountForSong(songIndex),
         revisionsCount = getRevisionsCountForSong(songIndex),
         redosCount = getRedosCountForSong(songIndex)
@@ -43,7 +45,7 @@ const TodoSongHeader = ({ songIndex, areDoneTodosHidden }) => {
                 {
                     areDoneTodosHidden ?
                         `${redosCount} / ${revisionsCount} / ${reviewsCount} / ${totalTodosCount}` :
-                        totalCount
+                        `${restsCount} / ${totalCount}`
                 }
             </span>
         </div>

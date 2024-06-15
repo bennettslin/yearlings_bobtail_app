@@ -11,7 +11,6 @@ import {
     addSceneMetadata,
 } from './helpers/scene'
 import { addAnnotationMetadata } from './helpers/annotation'
-import { addAdminMetadata } from './helpers/admin'
 import {
     getMaxSceneCount,
     getMaxVerseCount,
@@ -93,6 +92,5 @@ const album = {
 }
 
 addWormholeMetadata(annotationsList, album)
-addAdminMetadata(annotationsList, album)
 
 export default album

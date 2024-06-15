@@ -1,5 +1,4 @@
 # Latest todo
-* Have separate status for just accept for now?
 * Write to Ross Barkan
 * Do some revisions
 * Do some reviews

@@ -6,3 +6,6 @@ export const REVISE = 'revise'
 
 // Everything is good, I just need fresh eyes on it.
 export const REVIEW = 'review'
+
+// I still don't love it, but see no way to improve it; give it a rest for now.
+export const REST = 'rest'

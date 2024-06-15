@@ -22,7 +22,7 @@ export const registerAnnotation = ({
         annotationIndex = annotations.length + 1,
 
         // Create new annotation object to be used for the final build.
-        annotation = { todo: anchoredLyric.todo },
+        annotation = {},
         dotKeys = {}
 
     // Tell verse object its annotation anchors.
@@ -48,8 +48,6 @@ export const registerAnnotation = ({
 
     // Add formatted title to annotation.
     annotation.title = getFormattedAnnotationTitle(anchoredLyric)
-
-    annotation.todo = anchoredLyric.todo
 
     if (
         // Let annotation know if it's in a doublespeaker column.
@@ -89,5 +87,8 @@ export const registerAnnotation = ({
     delete anchoredLyric.annotation
     delete anchoredLyric.card
     delete anchoredLyric.cards
+
+    // For admin purposes.
+    annotation.todo = anchoredLyric.todo
     delete anchoredLyric.todo
 }
