@@ -162,6 +162,7 @@ export default {
                         `Rest your rump, boy, by your old`,
                         {
                             anchor: `giving tree`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     {
@@ -176,7 +177,7 @@ export default {
                                             wiki: `The_Giving_Tree`,
                                         },
                                     },
-                                    `is a children's book about a tree's nurturing love for a boy. As the boy grows into a man, the tree's gifts to him become increasingly self-sacrificing in nature. The story is understood by some as an allegory for codependent relationships.`,
+                                    `is a children's book about a tree's nurturing love for a boy. As the boy grows into a man, the tree's gifts to him become increasingly self-sacrificing in nature. The story is understood by some to be an allegory for codependent relationships.`,
                                 ],
                             },
                         },
@@ -188,16 +189,17 @@ export default {
                     lyric: [
                         {
                             anchor: `Stumped`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `In their claim to be stumped, my parents feign to be oblivious to the outcome of my story.`,
+                                    description: `In their claim to be stumped, my parents pretend to be oblivious to the outcome of my story.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true,
                                     },
                                 },
                                 {
-                                    description: `The tree finally sacrifices herself completely, allowing the boy to chop down her trunk to build a boat. When the boy returns as an old man, the tree is now but a stump and can only offer him a place to sit and rest.`,
+                                    description: `The tree finally sacrifices herself completely, allowing the boy to chop down her trunk and build a boat. When the boy returns as an old man, the tree is now but a stump and can only offer him a place to sit and rest.`,
                                     dotKeys: {
                                         [REFERENCE]: true,
                                     },
@@ -278,6 +280,7 @@ export default {
                         `to live neutered, blissfully`,
                         {
                             anchor: `and orphaned`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Being "`,
@@ -285,7 +288,7 @@ export default {
                                         anchor: `endorphined`,
                                         wiki: `Endorphins`,
                                     },
-                                    `" in my perpetually drunken state allows me to behave as a virtual orphan. I can live in denial of having parents whose expectations I fail to meet.`,
+                                    `" in my perpetually drunken state allows me to behave as a virtual orphan, as I live in denial of having parents whose expectations I fail to meet.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -314,8 +317,9 @@ export default {
                         `,`,
                         {
                             anchor: `earth right now your tourist store`,
+                            todo: REVIEW,
                             card: {
-                                description: `My mother enthralled me with visions of being a great artist, while also instilling the Buddhist ideal to renounce materialism. The mail-order cult then told me that I was a mere visitor to this planet. And so a belief formed in my head that I must work tirelessly "to restore" my "birthright" of artistic renown, unaffected by earthly concerns.`,
+                                description: `My mother enthralled me with visions of being a great artist, while instilling the Buddhist ideal of renouncing materialism; the mail-order cult then told me that I was a mere visitor to this planet. And so a belief formed in my head that I must work tirelessly "to restore" my "birthright" of artistic renown, unaffected by earthly concerns.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -328,6 +332,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVISE,
+                problem: `Not grammatically correct. My hope didn't come up with the puns.`,
                 card: {
                     description: [
                         `In coming up with the puns in this stanza, my hope was for listeners to believe they'd heard a`,
@@ -367,13 +373,14 @@ export default {
                         `till they called,`,
                         {
                             anchor: `suspecting you of huffing`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     {
                                         anchor: `Inhalants`,
                                         wiki: `Inhalant`,
                                     },
-                                    `were the scary youth trend of my middle school years. To remain unresponsive to the bullies' threats, I was slow to respond in general. Eventually, someone thought I must be huffing paint, and I got called into the principal's office.`,
+                                    `were the scary youth trend of my middle school years. To remain unresponsive to the bullies' threats, I was slow to respond in general. Eventually, someone thought I must be huffing paint, and this is why I got called into the principal's office.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -447,16 +454,26 @@ export default {
                     lyric: [
                         `So do you believe`,
                         {
-                            anchor: `your hamartia`,
+                            anchor: [
+                                `your`,
+                                {
+                                    isItalic: true,
+                                    lyric: `hamartia`,
+                                },
+                            ],
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
                                         `In Greek drama,`,
                                         {
-                                            anchor: `hamartia`,
-                                            wiki: `Hamartia`,
+                                            isItalic: true,
+                                            lyric: {
+                                                anchor: `hamartia`,
+                                                wiki: `Hamartia`,
+                                            },
                                         },
-                                        `is the tragic flaw that leads to a hero's downfall. Here, my parents ask if I recognize the telltale signs that point to mine. (I've since learned there are four syllables in the word. But my English teacher pronounced it as I have here, so I plead miseducation.)`,
+                                        `is the tragic flaw that leads to a hero's downfall. So here, my parents ask if I recognize the telltale signs that point to mine. (I've since learned there are four syllables in the word. But my English teacher pronounced it as I have here, so I plead miseducation.)`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -464,7 +481,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `My parents also allude to my former belief that I was born from the stars. Or, as they put it, that I'm "a Martian."`,
+                                    description: `My parents also allude to my former belief that I was born from the stars— or, as they put it, that I'm "a Martian."`,
                                     dotKeys: {
                                         [PUN]: true,
                                     },
@@ -544,6 +561,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
                         `As silly as the original lyrics for the chorus were, I liked them enough to keep them as a vocal`,
@@ -551,7 +569,7 @@ export default {
                             anchor: `counter-melody`,
                             wiki: `Counter-melody`,
                         },
-                        `. The original counter-melody, which I played on guitar, was then given to the lead vocals, for which I wrote new lyrics.`,
+                        `. The original counter-melody, which I'd played on guitar, was then given to the lead vocals, for which I wrote new lyrics.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -685,8 +703,9 @@ export default {
                         `Now suddenly dressed to play, you`,
                         {
                             anchor: `drowned your stutter`,
+                            todo: REVIEW,
                             card: {
-                                description: `Sometime in middle school I developed a stammer, perhaps as an unconscious way to buy time for collecting my thoughts. In college, I found that alcohol made it disappear.`,
+                                description: `I developed a stammer in middle school, perhaps as an unconscious way to buy time for collecting my thoughts. But in college, I found that alcohol made it disappear.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -701,6 +720,7 @@ export default {
                         `smugly prepped to`,
                         {
                             anchor: `haze the new latecomers`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Some groups put newcomers through`,
@@ -708,7 +728,7 @@ export default {
                                         anchor: `degrading rituals`,
                                         wiki: `Hazing`,
                                     },
-                                    `to toughen them up. And having dealt with such abuse for so long, I finally conceded that I wouldn't have toughened up any other way either. But now I had no misgivings about dishing out the same abuse to others.`,
+                                    `to toughen them up. And having dealt with such abuse for so long, I finally conceded that I wouldn't have toughened up any other way either. But now I had no misgivings about dishing out the same abuse to others…`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -775,6 +795,8 @@ export default {
                         {
                             anchor: `Rama king`,
                             properNoun: true,
+                            todo: REVISE,
+                            problem: `Don't say epic twice.`,
                             cards: [
                                 {
                                     description: `My parents might be calling me a "drama" king, in a subtle dig that everything I do is an attention-seeking act.`,
@@ -820,9 +842,10 @@ export default {
                         `, the`,
                         {
                             anchor: `testifiers' lore`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `After slaying Ravana, Rama made Sita walk through sacrificial flames to prove she'd kept chaste throughout her abduction. Sita complied and escaped from this "test of fire" unharmed.`,
+                                    `After slaying Ravana, Rama made Sita walk through sacrificial flames to prove that she'd stayed chaste throughout her abduction. Sita complied and escaped from this "test of fire" unharmed.`,
                                 ],
                                 dotKeys: {
                                     [PUN]: true,
@@ -838,6 +861,7 @@ export default {
                         `A`,
                         {
                             anchor: `nation paused`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In 1987, a`,
@@ -850,13 +874,15 @@ export default {
                                         isItalic: true,
                                         lyric: `Ramayana`,
                                     },
-                                    `began to broadcast throughout India. Each week, street markets and train stations would come to a standstill as everyone dropped what they were doing to glue themselves to the nearest television screen.`,
+                                    `was broadcast throughout India. Each week, street markets and train stations would come to a standstill as the population dropped what they were doing to glue themselves to the nearest television screen.`,
                                 ],
                             },
                         },
                         `to watch you`,
                         {
                             anchor: `fail your Sita`,
+                            todo: REVISE,
+                            problem: `Make two sentences flow together better?`,
                             card: {
                                 description: `Modern audiences may find it disgraceful that Rama's first act upon reuniting with Sita was to demand proof of her purity. I feel the same way when I look back now on my need to be the more sexually experienced partner in the relationship. It baffles me why I couldn't just be grateful for whatever circumstances needed to happen before Sita finally chose me.`,
                                 dotKeys: {
@@ -867,6 +893,8 @@ export default {
                         `on`,
                         {
                             anchor: `repeat forevermore`,
+                            todo: REVISE,
+                            problem: `Instead of failures, be more specific. Revealing my self-centeredness?`,
                             card: {
                                 description: `As I was making this album, a thought occurred to me. Like Rama, I too am now doomed to repeat my failures, as the story of how I betrayed my Sita is endlessly retold.`,
                                 dotKeys: {
@@ -895,8 +923,9 @@ export default {
                         `your idol who riled you when you saw that you`,
                         {
                             anchor: `two were tied`,
+                            todo: REVIEW,
                             card: {
-                                description: `While Sita had hoped for us to be tied in a matrimonial sense, I chafed that we were also tied in a competitive sense. Between the two of us, I had fewer past romances to speak of, and this felt like a threat.`,
+                                description: `While Sita had hoped for us to be tied in a matrimonial sense, I chafed that we were also tied in a competitive sense. Between the two of us, I had fewer past romances to speak of, and to me this felt like a threat.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -920,8 +949,9 @@ export default {
                         {
                             // NOTE: I changed "duel" to "dual" here.
                             anchor: `dual match`,
+                            todo: REVIEW,
                             card: {
-                                description: `To onlookers, Sita and I seemed like the perfect fit for each other. But to me, our relationship was a zero-sum "duel" match that only one of us could win.`,
+                                description: `To onlookers, Sita and I seemed like a perfect fit for each other. But to me, our relationship was a zero-sum "duel" match that only one of us could win.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [PUN]: true,
@@ -937,6 +967,8 @@ export default {
                         `and so one night you`,
                         {
                             anchor: `chalked the sidewalks`,
+                            todo: REVISE,
+                            problem: `Make this one in the past. Put running ahead in the present, in one of the below annotations.`,
                             card: {
                                 description: `One night my friends and I got drunk and decided to tag the streets with fluorescent sidewalk chalk. Since I didn't want anyone to crowd out my artwork, I ran ahead of the group.`,
                                 dotKeys: {
@@ -948,6 +980,7 @@ export default {
                         {
                             anchor: `Valmiki's chant`,
                             properNoun: true,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     {
@@ -959,7 +992,7 @@ export default {
                                         isItalic: true,
                                         lyric: `Ramayana`,
                                     },
-                                    `, began his early life as Ratnakar, a highway bandit. Desperate to repent, he sought counsel from a passing sage, who told him to recite the holy name of Rama. Ratnakar was so sinful, however, that he could only repeat the word`,
+                                    `, began his early life as Ratnakar, a highway bandit. Eager to repent, he sought counsel from a passing sage, who told him to recite the holy name of Rama. Ratnakar was so sinful, however, he could only repeat the word`,
                                     {
                                         isItalic: true,
                                         lyric: `mara`,
@@ -977,6 +1010,8 @@ export default {
                         `When`,
                         {
                             anchor: `wakened from the siren`,
+                            todo: REVISE,
+                            problem: `Make present tense.`,
                             cards: [
                                 {
                                     description: `Having lost sight of the group, I ended up passing out on the sidewalk. An ambulance siren jolted me awake.`,
@@ -991,7 +1026,7 @@ export default {
                                             anchor: `Sirens`,
                                             wiki: `Siren_(mythology)`,
                                         },
-                                        `" were beautiful women whose enchanting songs would lull sailors and lead them to crash against the rocky shores. But just as`,
+                                        `" were beautiful women whose enchanting songs would lull any passing sailors, leading them to crash their ships against the rocky shores. But just as`,
                                         {
                                             anchor: `Odysseus`,
                                             wiki: `Odysseus`,
@@ -1008,6 +1043,8 @@ export default {
                         `, you found spelled out in`,
                         {
                             anchor: `dead ants`,
+                            todo: REVISE,
+                            problem: `Make present tense.`,
                             cards: [
                                 {
                                     description: `My sidewalk art had killed off some ants, whose dead bodies formed an outline around what I'd drunkenly scrawled in chalk.`,
@@ -1026,6 +1063,8 @@ export default {
                         `:`,
                         {
                             anchor: `____`,
+                            todo: REVISE,
+                            problem: `Present tense. Say it wasn't meant to be a cliffhanger.`,
                             card: {
                                 description: `And what I'd scrawled was… Mara's name. No cliffhanger here. "M" just set a precedent for me to be gun-shy about mentioning her in my lyrics.`,
                                 dotKeys: {
@@ -1050,6 +1089,7 @@ export default {
                         `No`,
                         {
                             anchor: `well worn sari`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -1065,7 +1105,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `Sita's "well-worn sorries" grew tiresome, since only one of us needed to beg the other for forgiveness, and we both knew it wasn't her.`,
+                                    description: `Sita's "well-worn sorries" grew tiresome, since only one of us needed to beg the other for forgiveness— and we both knew it wasn't her.`,
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                         [PUN]: true,
@@ -1076,10 +1116,11 @@ export default {
                         `could sway you from a`,
                         {
                             anchor: `fairer marathon`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
-                                        `The endless one-upmanship wasn't just petty. It was exhausting to counter every perceived slight with one of my own. I wanted life to be like a marathon that rewards patience and resolve, traits that I possess in spades.`,
+                                        `The endless one-upmanship wasn't just petty; it was exhausting to counter every perceived slight with one of my own. I wanted life to be like a marathon that rewards patience and resolve— traits I possess in spades.`,
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
@@ -1132,6 +1173,7 @@ export default {
                         `Stubborn`,
                         {
                             anchor: `harpies`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -1140,7 +1182,7 @@ export default {
                                             anchor: `harpies`,
                                             wiki: `Harpy`,
                                         },
-                                        `were female monsters with human heads and birdlike bodies. In common parlance, a harpy is a nagging woman.`,
+                                        `were female monsters with human heads and birdlike bodies; while in common parlance, a harpy is a nagging woman.`,
                                     ],
                                 },
                                 {
@@ -1182,9 +1224,10 @@ export default {
                             `for the`,
                             {
                                 anchor: `trophy blondes`,
+                                todo: REVIEW,
                                 cards: [
                                     {
-                                        description: `To add insult to injury, all the women I left Sita for were White, which bothered her greatly. In my defense, this wasn't by design. But seeing her loss as my gain, I let her believe the worst.`,
+                                        description: `To add insult to injury, all the women I left Sita for were White, which bothered her greatly. In my defense, this wasn't by design; but seeing her loss as my gain, I let her believe the worst.`,
                                         dotKeys: {
                                             [BACKSTORY]: true,
                                         },
@@ -1217,8 +1260,9 @@ export default {
                         `what's left of what these`,
                         {
                             anchor: `faces you flip override`,
+                            todo: REVIEW,
                             card: {
-                                description: `My mother would sometimes ask what happened to the playful little boy she once knew, which made me wonder myself. I think I learned early on that for every situation there's an optimal person to be, and the key is to deftly juggle those various personas. So it made no sense to keep the original persona lying around if it served no other purpose.`,
+                                description: `My mother would sometimes ask what happened to the playful little boy she once knew, which made me wonder myself. I think I learned early on that for every situation there's an optimal person to be, and the key is to deftly juggle those various personas. So it made no sense to keep the original persona lying around once it no longer served any purpose.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -1268,8 +1312,9 @@ export default {
                             `their`,
                             {
                                 anchor: `sun tinkles light`,
+                                todo: REVIEW,
                                 card: {
-                                    description: `In the nightmare, I now ruled the neighborhood from above as a tyrant. I would shower my subjects in urine, which they lapped up as their sole means of subsistence. Now that I think about it, my brain was probably telling me to wake up and use the bathroom.`,
+                                    description: `In the nightmare, I ruled the neighborhood from above as a tyrant. I would shower my subjects in urine, which they lapped up as their sole means of subsistence. Now that I think about it, my brain was probably telling me to wake up and use the bathroom.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [OBSERVATION]: true,
@@ -1292,8 +1337,9 @@ export default {
                             `that`,
                             {
                                 anchor: `weave through the vines`,
+                                todo: REVIEW,
                                 card: {
-                                    description: `The magic beans had sprouted into thick, twisting vines that blocked out the sky as far as my helpless subjects could see.`,
+                                    description: `The magic beans had sprouted into thick, twisting vines, blocking out the sky as far as my helpless subjects could see.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -1334,8 +1380,9 @@ export default {
                                 },
                                 `'s sake`,
                             ],
+                            todo: REVIEW,
                             card: {
-                                description: `My next five-year plan, like the one before it, was meant to dramatically improve my life through an overhaul of the underlying system. Since it couldn't be left half completed, there was no point in second-guessing its logic once the work was already in progress.`,
+                                description: `My next five-year plan, like the one before it, was meant to improve my life through a dramatic overhaul of the underlying system. Since it couldn't be left half completed, there was no point in second-guessing its logic once the work was already in progress.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -1368,15 +1415,16 @@ export default {
                         lyric: [
                             {
                                 anchor: `old and subservient`,
+                                todo: REVIEW,
                                 cards: [
                                     {
-                                        description: `It wasn't until college that I understood the sacrifices my parents made for me and my siblings to lead better lives than their own. But this awareness came about through coursework rather than my own lived experiences, which just added to my guilt.`,
+                                        description: `It wasn't until college that I understood the sacrifices my parents made for me and my siblings to lead better lives than their own. But the fact that this awareness had to come about through my coursework, rather than through my own lived experiences, only added to my guilt.`,
                                         dotKeys: {
                                             [BACKSTORY]: true,
                                         },
                                     },
                                     {
-                                        description: `Among those I ruled over were my parents, now feeble and senile after a lifetime of following their "son's" bidding.`,
+                                        description: `Among those I ruled over were my parents, now feeble after a lifetime of doing their "son's" bidding.`,
                                         dotKeys: {
                                             [NARRATIVE]: true,
                                             [PUN]: true,
@@ -1522,6 +1570,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
                         `To record the gradual shift from "Rama" to "Mara" in the backing vocals, I made a`,
@@ -1529,7 +1578,7 @@ export default {
                             anchor: `click track`,
                             wiki: `Click_track`,
                         },
-                        `at a tempo sped up to arrive an eighth note ahead after seven measures. I then recorded multiple vocal tracks, taking breaths at different points each time. Heard together at once, they create the impression of a single uninterrupted take.`,
+                        `at a tempo sped up to arrive one eighth note ahead after seven measures. I then recorded multiple vocal tracks, taking breaths at different points each time. Heard together at once, they create the impression of a single uninterrupted take.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
