@@ -19,7 +19,7 @@ import {
     BACKING,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Uncanny Valley Boy',
@@ -30,7 +30,9 @@ export default {
     referenceDescription: `Acoustic guitar in measure 1`,
     mixStartTime: `0:01:18.46`,
     playerStartTime: 2722.629,
-    overview: `Upon learning of my brother's autism, my parents were too harried to notice I was being bullied at school. In guilt, they later indulged every whim I had to find my own path. But it didn't assure them that I failed to mature even as I got older, and they were especially crushed when I left Sita, whom they adored. Naturally, I wasn't happy to disappoint them. Still, I had a master plan to follow, and I wasn't about to change my ways.`,
+    todo: REVISE,
+    problem: `Too many short sentences.`,
+    overview: `Upon learning of my brother's autism, my parents were too harried to notice I was being bullied at school. In guilt, they later indulged every whim I had to find my own path. But it didn't assure them that I failed to mature even as I got older— and they were especially crushed when I left Sita, whom they adored. Naturally, I wasn't happy to disappoint them. Still, I had a master plan to follow, and I wasn't about to change my ways.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -120,6 +122,7 @@ export default {
                         `, come`,
                         {
                             anchor: `wax prophetic`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -136,7 +139,7 @@ export default {
                                                 wiki: `A_Christmas_Carol`,
                                             },
                                         },
-                                        `, my parents invite me on a magical night journey to witness the ordeals of my past, my self-serving ways at present, and the emotional devastation soon to come of it all.`,
+                                        `, my parents invite me on a magical night journey to witness the ordeals of my past; my self-serving ways at present; and the emotional devastation soon to come of it all.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,

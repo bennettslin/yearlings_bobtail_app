@@ -124,7 +124,7 @@ export default {
                             anchor: `never grown your horns`,
                             todo: REVIEW,
                             card: {
-                                description: `Of course, my desire to leave Sita was also driven by shame. Having left her before, any kindness I showed her now would have to be viewed as penitence— whereas I could just start over with someone new, untainted by my past sins.`,
+                                description: `Of course, my desire to leave Sita was also driven by shame. Having left her before, any kindness I showed now would only be viewed as penitence— whereas I could just start over with someone new, untainted by past sins.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -253,7 +253,6 @@ export default {
                     lyric: [
                         {
                             anchor: `spurned at first`,
-                            todo: REVIEW,
                             card: {
                                 description: `Given the seeming ease with which I could now attract women, I grew further indignant about all the hoops I'd been made to jump through when first trying to win Sita over.`,
                                 dotKeys: {
@@ -327,7 +326,6 @@ export default {
                     lyric: [
                         {
                             anchor: `plunders past`,
-                            todo: REVIEW,
                             card: {
                                 description: `The sting I felt in having once been rejected by Sita was aggravated by the later revelation of her sexual past. And all the more so, since it was precisely the painful lessons she drew from those past encounters that made her wary of my initial advances. Of course, the irony was lost on me that I'd end up providing the most painful lesson by far…`,
                                 dotKeys: {
@@ -347,7 +345,7 @@ export default {
                             anchor: `let's make a pact`,
                             todo: REVIEW,
                             card: {
-                                description: `Sita knew it was just a matter of time before I'd want the same slow-burning love that she did. So after each breakup, she would make me promise to consider rekindling what we once had, whenever I should long for it again.`,
+                                description: `Sita knew I'd come to want the same slow-burning love that she did; it was only a matter of time. So every time we broke up, she would make me promise to consider rekindling what we once had, whenever I should pine for it once more.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -460,7 +458,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Then once my later years as a womanizer proved to be unfulfilling, I'd surely return to her— my fallback option— with relief rather than reluctance.`,
+                                    description: `Then once my later years as a womanizer proved to be unfulfilling, surely I'd return to her— my fallback option— with relief rather than reluctance.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -513,7 +511,8 @@ export default {
                         `Bursting belly told by`,
                         {
                             anchor: `extra holes`,
-                            todo: REVIEW,
+                            todo: REVISE,
+                            problem: `Make this more clear, as notches aren't the same as holes?`,
                             card: {
                                 description: `Notches can be carved in one's belt to support a belly distended from overfeeding. They might also tally sexual conquests.`,
                                 dotKeys: {
