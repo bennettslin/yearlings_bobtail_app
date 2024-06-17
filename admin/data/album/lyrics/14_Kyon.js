@@ -124,7 +124,7 @@ export default {
                             anchor: `never grown your horns`,
                             todo: REVIEW,
                             card: {
-                                description: `Of course, my desire to leave Sita was also driven by shame. Having left her before, any kindness I showed now would be viewed as penitence— whereas I could just start over with someone new, untainted by my past sins.`,
+                                description: `Of course, my desire to leave Sita was also driven by shame. Having left her before, any kindness I showed now would always be seen as penitence— whereas I could just start over with someone new, untainted by my past sins.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -152,7 +152,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: REVIEW,
                 card: {
-                    description: `I wanted this song to speak from Sita's perspective, but in hindsight, my portrayal is a bit one-dimensional. I was just self-absorbed in my guilt when I wrote it, and my primary purpose was to beat myself up over what my stupidity had cost me.`,
+                    description: `I wanted this song to speak from Sita's perspective, but my portrayal is a bit one-dimensional. I was self-absorbed in my guilt when I wrote it, and my primary purpose was to beat myself up over what my stupidity had cost me.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
@@ -194,9 +194,8 @@ export default {
                         `Is it just her`,
                         {
                             anchor: `womb you bed`,
-                            todo: REVIEW,
                             card: {
-                                description: `Of course, Sita herself had no such illusions about my innocence. She knew I chafed at being the less sexually experienced one in our relationship, and that this was the basis for my desire to sleep with other women.`,
+                                description: `Of course, Sita herself had no such illusions about my innocence. She knew I chafed at being the less sexually experienced one in our relationship, and that this was the reason for my desire to sleep with other women.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -220,7 +219,7 @@ export default {
                             anchor: `compound meter`,
                             wiki: `Metre_(music)`,
                         },
-                        `and the vacillation between unrelated chords whose roots are separated by a`,
+                        `and the vacillation between unrelated chords, whose roots are separated by a`,
                         {
                             anchor: `tritone`,
                             wiki: `Tritone`,
@@ -345,7 +344,7 @@ export default {
                             anchor: `let's make a pact`,
                             todo: REVIEW,
                             card: {
-                                description: `Sita knew I'd come to want the same slow-burning love that she did; it was only a matter of time. So every time we broke up, she would make me promise to consider rekindling what we once had, whenever I should pine for it once more.`,
+                                description: `Sita knew I'd come to want the same slow-burning love that she did; it was only a matter of time. So every time we broke up, she would make me promise to rekindle what we once had, if I should ever pine for it once more.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -404,7 +403,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `A keeper in the sense of being both the one who tends`,
+                                    `A keeper in the sense of being the one who tends`,
                                     {
                                         isEmphasis: true,
                                         lyric: `to`,
@@ -470,7 +469,7 @@ export default {
                                             anchor: `daylight saving`,
                                             wiki: `Daylight_saving_time`,
                                         },
-                                        `. "Spring forward, fall back" reminds us to set our clocks forward every spring, and back every fall.`,
+                                        `: "Spring forward, fall back" reminds us to set our clocks forward each spring, and back each fall.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -790,7 +789,7 @@ export default {
                             anchor: `I'll gladly wait`,
                             todo: REVIEW,
                             card: {
-                                description: `But Sita encouraged my artistic pretensions, believing them to reflect positively on her as well. Though she was uninterested in the local scene, she still enjoyed being seen as the one going home with me after a show.`,
+                                description: `But Sita encouraged my artistic pretensions, believing them to reflect positively on her as well. Though she was uninterested in the local scene, she still enjoyed being the one I'd be taking home after a show.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
