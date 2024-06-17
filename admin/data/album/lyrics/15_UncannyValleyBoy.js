@@ -162,7 +162,6 @@ export default {
                         `Rest your rump, boy, by your old`,
                         {
                             anchor: `giving tree`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     {
@@ -199,7 +198,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `The tree finally sacrifices herself completely, allowing the boy to chop down her trunk and build a boat. When the boy returns as an old man, the tree is now but a stump and can only offer him a place to sit and rest.`,
+                                    description: `The tree finally sacrifices herself completely, allowing the boy to chop down her trunk so that he may build a boat. When the boy returns as an old man, the tree is now but a stump and can only offer him a place to sit and rest.`,
                                     dotKeys: {
                                         [REFERENCE]: true,
                                     },
@@ -380,7 +379,7 @@ export default {
                                         anchor: `Inhalants`,
                                         wiki: `Inhalant`,
                                     },
-                                    `were the scary youth trend of my middle school years. To remain unresponsive to the bullies' threats, I was slow to respond in general. Eventually, someone thought I must be huffing paint, and this is why I got called into the principal's office.`,
+                                    `were the scary youth trend of my middle school years. To defend against the bullies' threats, I would be slow to respond in general. At some point, a classmate thought I must be huffing paint, and this is when I got called into the principal's office.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -473,7 +472,7 @@ export default {
                                                 wiki: `Hamartia`,
                                             },
                                         },
-                                        `is the tragic flaw that leads to a hero's downfall. So here, my parents ask if I recognize the telltale signs that point to mine. (I've since learned there are four syllables in the word. But my English teacher pronounced it as I have here, so I plead miseducation.)`,
+                                        `is the tragic flaw that leads to a hero's downfall. And here, my parents ask if I recognize the telltale signs that point to mine. (I've since learned there are four syllables in the word. But my English teacher pronounced it as I have here, so I plead miseducation.)`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -720,7 +719,6 @@ export default {
                         `smugly prepped to`,
                         {
                             anchor: `haze the new latecomers`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Some groups put newcomers through`,
@@ -842,7 +840,6 @@ export default {
                         `, the`,
                         {
                             anchor: `testifiers' lore`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `After slaying Ravana, Rama made Sita walk through sacrificial flames to prove that she'd stayed chaste throughout her abduction. Sita complied and escaped from this "test of fire" unharmed.`,
@@ -874,7 +871,7 @@ export default {
                                         isItalic: true,
                                         lyric: `Ramayana`,
                                     },
-                                    `was broadcast throughout India. Each week, street markets and train stations would come to a standstill as the population dropped what they were doing to glue themselves to the nearest television screen.`,
+                                    `was broadcast across India. Each week, street markets and train stations would come to a standstill as the entire population glued themselves to the nearest television screen.`,
                                 ],
                             },
                         },
@@ -925,7 +922,7 @@ export default {
                             anchor: `two were tied`,
                             todo: REVIEW,
                             card: {
-                                description: `While Sita had hoped for us to be tied in a matrimonial sense, I chafed that we were also tied in a competitive sense. Between the two of us, I had fewer past romances to speak of, and to me this felt like a threat.`,
+                                description: `While Sita hoped for us to be tied in a matrimonial sense, I chafed that we were also tied in a competitive sense. Between the two of us, I had fewer past romances to speak of, and to me this felt like a threat.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -951,7 +948,7 @@ export default {
                             anchor: `dual match`,
                             todo: REVIEW,
                             card: {
-                                description: `To onlookers, Sita and I seemed like a perfect fit for each other. But to me, our relationship was a zero-sum "duel" match that only one of us could win.`,
+                                description: `To onlookers, Sita and I seemed like the perfect fit for each other. But to me, our relationship was a zero-sum "duel" that only one of us could win.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [PUN]: true,
@@ -992,12 +989,12 @@ export default {
                                         isItalic: true,
                                         lyric: `Ramayana`,
                                     },
-                                    `, began his early life as Ratnakar, a highway bandit. Eager to repent, he sought counsel from a passing sage, who told him to recite the holy name of Rama. Ratnakar was so sinful, however, he could only repeat the word`,
+                                    `, began his early life as Ratnakar, a highway bandit. Eager to repent, he sought counsel from a passing sage, who told him to recite the holy name of Rama. Yet Ratnakar was so sinful, he could only repeat the word`,
                                     {
                                         isItalic: true,
                                         lyric: `mara`,
                                     },
-                                    `, or "death." Still, the grace of Rama caused the syllables to shift over time, until Ratnakar was finally chanting Rama's name.`,
+                                    `, or "death." Still, the grace of Rama caused the syllables to shift over time, until finally Ratnakar was chanting Rama's name.`,
                                 ],
                             },
                         },
@@ -1089,7 +1086,6 @@ export default {
                         `No`,
                         {
                             anchor: `well worn sari`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -1116,7 +1112,6 @@ export default {
                         `could sway you from a`,
                         {
                             anchor: `fairer marathon`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -1182,7 +1177,7 @@ export default {
                                             anchor: `harpies`,
                                             wiki: `Harpy`,
                                         },
-                                        `were female monsters with human heads and birdlike bodies; while in common parlance, a harpy is a nagging woman.`,
+                                        `were female monsters with human heads and birdlike bodies; in common parlance, a harpy is a nagging woman.`,
                                     ],
                                 },
                                 {
@@ -1227,7 +1222,7 @@ export default {
                                 todo: REVIEW,
                                 cards: [
                                     {
-                                        description: `To add insult to injury, all the women I left Sita for were White, which bothered her greatly. In my defense, this wasn't by design; but seeing her loss as my gain, I let her believe the worst.`,
+                                        description: `To add insult to injury, most of the women I left Sita for were White, which bothered her greatly. In my defense, this wasn't by design; but seeing her loss as my gain, I let her believe the worst.`,
                                         dotKeys: {
                                             [BACKSTORY]: true,
                                         },
@@ -1337,7 +1332,6 @@ export default {
                             `that`,
                             {
                                 anchor: `weave through the vines`,
-                                todo: REVIEW,
                                 card: {
                                     description: `The magic beans had sprouted into thick, twisting vines, blocking out the sky as far as my helpless subjects could see.`,
                                     dotKeys: {
@@ -1382,7 +1376,7 @@ export default {
                             ],
                             todo: REVIEW,
                             card: {
-                                description: `My next five-year plan, like the one before it, was meant to improve my life through a dramatic overhaul of the underlying system. Since it couldn't be left half completed, there was no point in second-guessing its logic once the work was already in progress.`,
+                                description: `My next five-year plan, like the one before, was meant to improve my fortunes through a dramatic overhaul of the underlying system. Since it couldn't be left half completed, there was no point in second-guessing its logic once the work was already in progress.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -1418,7 +1412,7 @@ export default {
                                 todo: REVIEW,
                                 cards: [
                                     {
-                                        description: `It wasn't until college that I understood the sacrifices my parents made for me and my siblings to lead better lives than their own. But the fact that this awareness had to come about through my coursework, rather than through my own lived experiences, only added to my guilt.`,
+                                        description: `It wasn't until college that I understood the sacrifices my parents made for me and my siblings to lead better lives than their own. But this awareness had to come through coursework rather than my own lived experiences, which then added to my guilt.`,
                                         dotKeys: {
                                             [BACKSTORY]: true,
                                         },
@@ -1570,7 +1564,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `To record the gradual shift from "Rama" to "Mara" in the backing vocals, I made a`,

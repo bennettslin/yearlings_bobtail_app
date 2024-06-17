@@ -256,7 +256,7 @@ export default {
                             anchor: `bustin' cars with fists`,
                             todo: REVIEW,
                             card: {
-                                description: `Tristan was particularly hotheaded when drunk. One night after starting a fight and getting us kicked out of a party as a result, we roamed the streets until he challenged us to see who could punch a car window and break the glass. I didn't win.`,
+                                description: `Tristan was particularly hotheaded when drunk. One night after starting a fight and getting us kicked out of a party, he challenged us to see who could punch a car window and break the glass. I didn't win.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -331,7 +331,7 @@ export default {
                             anchor: `aren't love`,
                             todo: REVIEW,
                             card: {
-                                description: `Throughout our budding friendship, Sita had neglected to mention her sexual intimacy with past partners. When I found out, she tried to console me by pointing out that she never went all the way because she didn't love them; she loved me— which meant I'd won. But it still stung to find out so late, and this deepened my resentment.`,
+                                description: `Throughout our budding friendship, Sita had neglected to mention her sexual intimacy with past partners. When I found out, she tried to console me by pointing out that she never went all the way with them because she didn't love them; she loved me— which meant I'd won. But it still stung to find out so late, and this deepened my resentment.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

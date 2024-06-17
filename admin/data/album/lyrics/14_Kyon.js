@@ -124,7 +124,7 @@ export default {
                             anchor: `never grown your horns`,
                             todo: REVIEW,
                             card: {
-                                description: `Of course, my desire to leave Sita was also driven by shame. Having left her before, any kindness I showed now would only be viewed as penitence— whereas I could just start over with someone new, untainted by past sins.`,
+                                description: `Of course, my desire to leave Sita was also driven by shame. Having left her before, any kindness I showed now would be viewed as penitence— whereas I could just start over with someone new, untainted by my past sins.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

@@ -125,7 +125,6 @@ export default {
                     lyric: [
                         {
                             anchor: `dragging aglets held`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `Since I never learned to tie my shoelaces properly, they were always coming undone. So if anyone was bent on seeing me trip and fall, they had the ready means to make it happen.`,
@@ -308,7 +307,7 @@ export default {
                             anchor: `spite you thrive`,
                             todo: REVIEW,
                             card: {
-                                description: `But this casual view of my own hardship is what allowed me to justify the pain I'd later cause to Sita.`,
+                                description: `But this casual view of my own hardship is what later enabled me to justify the pain I caused to Sita.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -462,7 +461,6 @@ export default {
                         `With hair of`,
                         {
                             anchor: `maraschino red`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Having sworn to be ready when the next Mara comes along, I notice that the latecomer's hair is the color of`,
@@ -487,7 +485,6 @@ export default {
                         `"`,
                         {
                             anchor: `Great show`,
-                            todo: REVIEW,
                             card: {
                                 description: `The best time to hit on someone is right after your set, since they've just spent the last hour making you the center of their attention. And sure enough, I find the redhead to be flirtatious when we chat.`,
                                 dotKeys: {
@@ -654,7 +651,7 @@ export default {
                             anchor: `must turn the cheek`,
                             todo: REVIEW,
                             card: {
-                                description: `The letters from RI Research instructed me not to confront my tormentors. Instead, I was to take my abuse in stride— for my exalted place in the universe required of me to be the bigger person.`,
+                                description: `The letters from RI Research instructed me not to confront my tormentors. Instead, I was to take my abuse in stride, since my exalted place in the universe required of me to be the bigger person.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

@@ -1,8 +1,9 @@
 # Latest todo
-* Write to Ross Barkan
-* Review "that"
+* Some reviews and revisions
 * Am I being clear on the difference between Bobtail and Yearling's Bobtail?
-* Audit Uncanny Valley
+* Audit Cremated
+* Review BYC again
+* Write to Ross Barkan
 * Allow annotations to be clicked in dashboard
     * Change hrefProp to something else
     * Always have href on Anchor tag
