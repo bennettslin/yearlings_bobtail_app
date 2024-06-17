@@ -358,7 +358,7 @@ export default {
                             anchor: `buys your grief`,
                             todo: REVIEW,
                             card: {
-                                description: `My worlds collided when I smashed a random bike one night in a drunken fit. As it turns out, the bike belonged to a scene kid who'd liked the Yearlings since our early days. He related so much to my songs about unfulfilled hopes; I was disgusted with myself for having disappointed him.`,
+                                description: `My worlds collided when I smashed a random bike one night in a drunken fit. As it turns out, the bike belonged to a scene kid who'd liked the Yearlings since our early days. He'd related so much to my songs about unfulfilled hopes; I was disgusted with myself for having disappointed him.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -452,7 +452,7 @@ export default {
                             anchor: `counterpoint`,
                             wiki: `Counterpoint`,
                         },
-                        `, melodies are laid atop one another, and the chord progression is simply a byproduct of the harmonies they form in sequence. But since the chords for this song were established first, I took the reverse approach of assigning each note in a chord to a different part, and then shaping the sequence of notes for each part into an unassuming counter-melody.`,
+                        `, melodies are laid atop one another, and the chord progression is simply a byproduct of the harmonies they form in sequence. But since the chords for this song were established first, I took the reverse approach of assigning each note in a chord to a different part, and then shaping each part's sequence of notes into an unassuming counter-melody.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,

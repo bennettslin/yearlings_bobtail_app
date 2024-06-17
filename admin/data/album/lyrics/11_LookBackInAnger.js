@@ -305,7 +305,6 @@ export default {
                         `you rode, so on`,
                         {
                             anchor: `spite you thrive`,
-                            todo: REVIEW,
                             card: {
                                 description: `But this casual view of my own hardship is what later enabled me to justify the pain I caused to Sita.`,
                                 dotKeys: {
@@ -651,7 +650,7 @@ export default {
                             anchor: `must turn the cheek`,
                             todo: REVIEW,
                             card: {
-                                description: `The letters from RI Research instructed me not to confront my tormentors. Instead, I was to take my abuse in stride, since my exalted place in the universe required of me to be the bigger person.`,
+                                description: `The letters from RI Research instructed me not to confront my tormentors. Instead, I was to take my abuse in stride, for my exalted place in the universe required of me to be the bigger person.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

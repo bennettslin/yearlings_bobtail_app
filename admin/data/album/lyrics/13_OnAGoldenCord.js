@@ -143,7 +143,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `This song evokes the country style of my childhood hero`,
@@ -412,7 +411,7 @@ export default {
                             anchor: `Guilt pardons`,
                             todo: REVIEW,
                             card: {
-                                description: `My sober self observes his drunken accomplice's lack of remorse and can only feel pity, knowing the trauma that must surely linger in one who undertook such a heinous act. After all, avoiding such trauma is the reason he chose not to carry out the hit himself.`,
+                                description: `My sober self observes his drunken accomplice's lack of remorse and can only feel pity, knowing the trauma that must surely linger in one who committed such a heinous act. After all, avoiding such trauma is the reason he chose not to carry out the hit himself.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -506,7 +505,6 @@ export default {
                         `Then if`,
                         {
                             anchor: `life were real`,
-                            todo: REVIEW,
                             card: {
                                 description: `Sita's friends weren't wrong to label me fake. My emotions didn't feel legitimate even to myself; I reacted to them the way an actor responds to a cue. At the time, I blamed it on the lingering effects of Robitussin.`,
                                 dotKeys: {
@@ -838,7 +836,8 @@ export default {
                                 lyric: `Übermensch`,
                             },
                             properNoun: true,
-                            todo: REVIEW,
+                            todo: REVISE,
+                            problem: `Does this even make sense?`,
                             card: {
                                 description: [
                                     `The German philosopher`,
@@ -854,7 +853,7 @@ export default {
                                             wiki: `Übermensch`,
                                         },
                                     },
-                                    `, or "overhuman," as an ideal of perfection toward which humanity might strive. I equated this to my goal of becoming a great artist. But since the underlying motive for my goal was to be loved by scores of women, it then followed that the ideal version of myself could only be realized by having a cheating heart.`,
+                                    `, or "overhuman," as an ideal of perfection toward which humanity might strive. I equated this to my goal of becoming a great artist. But since my underlying motive was to date scores of women, it then followed that the ideal version of myself could only be realized by having a cheating heart.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -1080,7 +1079,7 @@ export default {
                                         anchor: `9/11 hijackers`,
                                         wiki: `September_11_attacks`,
                                     },
-                                    `were unaware that it was a suicide mission, having prepared instead to speak publicly on their religious motives. Similarly, my drunken half was sold on all the benefits of breaking up with Sita, unaware that the one being sacrificed on this mission was him.`,
+                                    `were unaware that it was a suicide mission, having prepared to speak publicly on their religious motives. Similarly, my drunken half was sold on all the benefits of breaking up with Sita, unaware that the one being sacrificed on this mission would be him.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
