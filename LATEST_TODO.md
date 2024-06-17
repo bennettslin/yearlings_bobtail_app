@@ -1,8 +1,9 @@
 # Latest todo
-* Some reviews and revisions
-* Am I being clear on the difference between Bobtail and Yearling's Bobtail?
-* Audit Cremated
 * Review BYC again
+* Audit both Vegan and Dream
+* Reviews and revisions
+* Am I being clear on the difference between Bobtail and Yearling's Bobtail?
+    * Make it an Uncanny annotation
 * Write to Ross Barkan
 * Allow annotations to be clicked in dashboard
     * Change hrefProp to something else
