@@ -176,14 +176,14 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `During my college years, I would ask older coworkers to buy me twelve-packs of cheap beer. So I always had a ready supply in my apartment, and before every date, I would down a few cans.`,
+                                    description: `During my college years, I would ask older coworkers to buy me twelve-packs of cheap beer. So I always had a ready supply in my apartment— and before every date, I would down a few cans.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
                                 },
                                 {
                                     description: [
-                                        `Several idioms in the English language trace their origin to 17th-century trade rivalries between the British and the Dutch. For example, false confidence gained from drinking alcohol is known as`,
+                                        `Several idioms in the English language trace their origin to 17th-century trade rivalries between the British and the Dutch. False confidence gained from drinking alcohol, for example, is known as`,
                                         {
                                             anchor: `Dutch courage`,
                                             wiki: `Dutch_courage`,
@@ -661,7 +661,7 @@ export default {
                             anchor: `learn to shotgun`,
                             todo: REVIEW,
                             card: {
-                                description: `In time I adopted the shotgun approach to dating, which involves hitting on anyone at any moment. It works by putting the math on your side: Even if your success rate remains dismal, you're expanding the sample size, which then increases your chances of getting a woman to say yes. And of course, one yes to a date is all you need.`,
+                                description: `In time I adopted the shotgun approach to dating, which involves hitting on anyone at any moment. It works by putting the math on your side: Even if your success rate remains dismal, you've increased the sample size, which now improves your chances of getting a woman to say yes. And of course, one yes to a date is all you need.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

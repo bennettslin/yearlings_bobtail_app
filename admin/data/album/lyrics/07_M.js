@@ -238,7 +238,7 @@ export default {
                             anchor: `mindful manners`,
                             todo: REVIEW,
                             card: {
-                                description: `I also decided to give up swearing. I figured this would be a definite win if I were to date the next Catherine, while any other woman would still find its quaintness charming.`,
+                                description: `I also decided to give up swearing. I figured this would be a definite win with the next Catherine, while any other woman would find its quaintness charming.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -558,7 +558,7 @@ export default {
                             properNoun: true,
                             todo: REVIEW,
                             card: {
-                                description: `To promote cross-cultural harmony, the pairings in these mass weddings are often international by design. So my Moonie bride might very well be a foreigner who joined the church to ensure that her children will be American by birth. In which case, I'd be a fool to think my "maiden Mara co-signs" the marriage license in good faith.`,
+                                description: `To promote cross-cultural harmony, the pairings in these mass weddings are often international by design. So my Moonie bride might very well be a foreigner who joined the church just to ensure her children will be American by birth. In which case, I'd be a fool to think my "maiden Mara co-signs" the marriage license in good faith.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [PUN]: true,
@@ -661,7 +661,7 @@ export default {
                             anchor: `solely for a pet`,
                             todo: REVIEW,
                             card: {
-                                description: `After Mara started going out with Jacob, she continued to interact with me in the same flirtatious manner, which made me realize that I'd misread her intentions all along. The ways of a social scene were just so new to me… And yet, I couldn't help but feel uplifted all the same— as this meant I finally belonged to one.`,
+                                description: `After Mara started going out with Jacob, she continued to interact with me in the same flirtatious manner, which made me realize that I'd misread her intentions all along. The ways of a social scene were just so new to me… and yet, I finally belonged to one. So I couldn't help but feel uplifted all the same.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -827,7 +827,7 @@ export default {
                             anchor: `world's a naked baby`,
                             todo: REVIEW,
                             card: {
-                                description: `But at some point, I realized that a social scene is no different from the world at large, in that little is hidden from view. So any situation can be understood by reading everyone else's intentions and observing their actions— much like a holistic picture of the world emerges after reading books on all the important subject matters.`,
+                                description: `But at some point, I realized that a social scene is no different from the world at large. Since little is hidden from view, any situation can be understood by reading everyone else's intentions and observing their actions— much like a holistic picture of the world emerges after reading books on all the important subject matters.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
