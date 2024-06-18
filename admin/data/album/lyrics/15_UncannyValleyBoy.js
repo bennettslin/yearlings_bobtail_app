@@ -122,7 +122,8 @@ export default {
                         `, come`,
                         {
                             anchor: `wax prophetic`,
-                            todo: REVIEW,
+                            todo: REVISE,
+                            problem: `Semicolons don't seem right.`,
                             cards: [
                                 {
                                     description: [
@@ -198,7 +199,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `The tree finally sacrifices herself completely, allowing the boy to chop down her trunk so that he may build a boat. When the boy returns as an old man, the tree is now but a stump and can only offer him a place to sit and rest.`,
+                                    description: `The tree finally sacrifices herself completely, allowing the boy to chop down her trunk in order to build a boat. When the boy returns as an old man, the tree is now but a stump and can only offer him a place to sit and rest.`,
                                     dotKeys: {
                                         [REFERENCE]: true,
                                     },
@@ -318,7 +319,7 @@ export default {
                             anchor: `earth right now your tourist store`,
                             todo: REVIEW,
                             card: {
-                                description: `My mother enthralled me with visions of being a great artist, while instilling the Buddhist ideal of renouncing materialism; the mail-order cult then told me that I was a mere visitor to this planet. And so a belief formed in my head that I must work tirelessly "to restore" my "birthright" of artistic renown, unaffected by earthly concerns.`,
+                                description: `My mother enthralled me with visions of being a great artist, even as she instilled Buddhist ideals of renouncing materialism; the mail-order cult then told me I was a mere visitor to this planet. And so a belief formed in my head that I must work tirelessly "to restore" my "birthright" of artistic renown, unaffected by earthly concerns.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -373,18 +374,23 @@ export default {
                         {
                             anchor: `suspecting you of huffing`,
                             todo: REVIEW,
-                            card: {
-                                description: [
-                                    {
-                                        anchor: `Inhalants`,
-                                        wiki: `Inhalant`,
+                            cards: [
+                                {
+                                    description: `To defend against the bullies' threats, I would be slow to respond in general. At some point, a classmate must have thought I was huffing paint, and this is when I got called into the principal's office.`,
+                                    dotKeys: {
+                                        [BACKSTORY]: true,
                                     },
-                                    `were the scary youth trend of my middle school years. To defend against the bullies' threats, I would be slow to respond in general. At some point, a classmate thought I must be huffing paint, and this is when I got called into the principal's office.`,
-                                ],
-                                dotKeys: {
-                                    [BACKSTORY]: true,
                                 },
-                            },
+                                {
+                                    description: [
+                                        {
+                                            anchor: `Inhalants`,
+                                            wiki: `Inhalant`,
+                                        },
+                                        `were the scary youth trend of my middle school years.`,
+                                    ],
+                                },
+                            ],
                         },
                         `,`,
                     ],
@@ -418,7 +424,7 @@ export default {
                 todo: REVIEW,
                 card: {
                     description: [
-                        `Since I used the`,
+                        `I used the`,
                         {
                             anchor: `Kinks`,
                             wiki: `The_Kinks`,
@@ -428,12 +434,12 @@ export default {
                             anchor: `Village Green Preservation Society`,
                             wiki: `The_Kinks_Are_the_Village_Green_Preservation_Society`,
                         },
-                        `as a rough template for this album, each song had to feature well-crafted hooks; represent a different musical style; and clock in at around three minutes. There's no one-to-one mapping, but this song is clearly the "`,
+                        `as a rough guide for this album. So each song had to feature well-crafted musical hooks; represent a different musical style; and clock in at around three minutes. There's no one-to-one mapping, but this song is clearly the "`,
                         {
                             anchor: `Wicked Annabella`,
                             wiki: `Wicked_Annabella`,
                         },
-                        `" of the bunch. So I went with the same feel of low notes played on crunchy electric guitars.`,
+                        `" of the bunch, which is why I went with its feel of low notes played on crunchy electric guitars.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -472,7 +478,7 @@ export default {
                                                 wiki: `Hamartia`,
                                             },
                                         },
-                                        `is the tragic flaw that leads to a hero's downfall. And here, my parents ask if I recognize the telltale signs that point to mine. (I've since learned there are four syllables in the word. But my English teacher pronounced it as I have here, so I plead miseducation.)`,
+                                        `is the tragic flaw that leads to a hero's downfall. And so my parents ask if I recognize the telltale signs that point to mine. (I've since learned there are four syllables in the word. But my English teacher pronounced it as I have here, so I plead miseducation.)`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -568,7 +574,7 @@ export default {
                             anchor: `counter-melody`,
                             wiki: `Counter-melody`,
                         },
-                        `. The original counter-melody, which I'd played on guitar, was then given to the lead vocals, for which I wrote new lyrics.`,
+                        `. The original counter-melody, then, which I'd intended to play on guitar, was given to the lead vocals, for which I wrote new lyrics.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -704,7 +710,7 @@ export default {
                             anchor: `drowned your stutter`,
                             todo: REVIEW,
                             card: {
-                                description: `I developed a stammer in middle school, perhaps as an unconscious way to buy time for collecting my thoughts. But in college, I found that alcohol made it disappear.`,
+                                description: `I developed a stammer in middle school, perhaps in an unconscious effort to buy time for collecting my thoughts. In college, I found that alcohol made it disappear.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -871,7 +877,7 @@ export default {
                                         isItalic: true,
                                         lyric: `Ramayana`,
                                     },
-                                    `was broadcast across India. Each week, street markets and train stations would come to a standstill as the entire population glued themselves to the nearest television screen.`,
+                                    `was broadcast across India. For half an hour each week, shops and train stations would be completely deserted as the entire population sat in front of their televisions.`,
                                 ],
                             },
                         },
@@ -922,7 +928,7 @@ export default {
                             anchor: `two were tied`,
                             todo: REVIEW,
                             card: {
-                                description: `While Sita hoped for us to be tied in a matrimonial sense, I chafed that we were also tied in a competitive sense. Between the two of us, I had fewer past romances to speak of, and to me this felt like a threat.`,
+                                description: `While Sita hoped for us to be tied in a matrimonial sense, I chafed to be tied in a competitive sense. Between the two of us, I had fewer past romances to speak of, and this felt like a threat.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -946,7 +952,6 @@ export default {
                         {
                             // NOTE: I changed "duel" to "dual" here.
                             anchor: `dual match`,
-                            todo: REVIEW,
                             card: {
                                 description: `To onlookers, Sita and I seemed like the perfect fit for each other. But to me, our relationship was a zero-sum "duel" that only one of us could win.`,
                                 dotKeys: {
@@ -984,7 +989,7 @@ export default {
                                         anchor: `Valmiki`,
                                         wiki: `Valmiki`,
                                     },
-                                    `, the renowned author of the`,
+                                    `, the author of the`,
                                     {
                                         isItalic: true,
                                         lyric: `Ramayana`,
@@ -1168,7 +1173,6 @@ export default {
                         `Stubborn`,
                         {
                             anchor: `harpies`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [

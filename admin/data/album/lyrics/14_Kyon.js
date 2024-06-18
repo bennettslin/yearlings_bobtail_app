@@ -122,9 +122,8 @@ export default {
                         `history shed, having`,
                         {
                             anchor: `never grown your horns`,
-                            todo: REVIEW,
                             card: {
-                                description: `Of course, my desire to leave Sita was also driven by shame. Having left her before, any kindness I showed now would always be seen as penitence— whereas I could just start over with someone new, untainted by my past sins.`,
+                                description: `Of course, my desire to leave Sita was also driven by shame. Having left her before, any kindness I showed now would only be seen as penitence— whereas I could just start over with someone new, untainted by my past sins.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -211,7 +210,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `My relationship with Sita was like a ship swaying in perilous waters. This notion is captured in the music by both the`,
@@ -342,7 +340,8 @@ export default {
                         `But dear,`,
                         {
                             anchor: `let's make a pact`,
-                            todo: REVIEW,
+                            todo: REVISE,
+                            problem: `Two times in a row.`,
                             card: {
                                 description: `Sita knew I'd come to want the same slow-burning love that she did; it was only a matter of time. So every time we broke up, she would make me promise to rekindle what we once had, if I should ever pine for it once more.`,
                                 dotKeys: {
@@ -400,7 +399,6 @@ export default {
                         `as the sole`,
                         {
                             anchor: `keeper of his sheep herd`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `A keeper in the sense of being the one who tends`,
@@ -454,7 +452,6 @@ export default {
                         `to`,
                         {
                             anchor: `spring forward on a fallback`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `Then once my later years as a womanizer proved to be unfulfilling, surely I'd return to her— my fallback option— with relief rather than reluctance.`,
