@@ -33,8 +33,9 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
-                    description: `This is the other song on the album that was originally performed by the Yearlings. I wrote it to please Sita after she complained that I didn't have any romantic songs about her. In truth, it's more of a wistful remembrance of our relationship, given my certainty at the time that we would break up. I kept this part of its meaning a secret, of course— but as with "M," I probably wasn't fooling anyone.`,
+                    description: `This is the other song on the album that was originally performed by the Yearlings. I wrote it to please Sita after she complained that I didn't have any romantic songs about her. In truth, it's more a wistful remembrance of our time together, given my certainty that we'd break up. I kept this part of its meaning a secret, of course— but as with "M," I probably wasn't fooling anyone.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGCRAFT]: true,
@@ -77,9 +78,10 @@ export default {
                         `My`,
                         {
                             anchor: `hundred thousandth dream`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `I once read that we typically have four dreams per night. Over a lifetime of seventy years, that's about a hundred thousand dreams. So here I am, dreaming the very last dream I'll ever dream.`,
+                                    description: `I once read that we have four dreams on average per night. Over a lifetime of seventy years, that's about a hundred thousand dreams. So here I am, dreaming the very last dream I'll ever dream.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [OBSERVATION]: true,
@@ -158,8 +160,9 @@ export default {
                         `Did I`,
                         {
                             anchor: `ever live another life`,
+                            todo: REVIEW,
                             card: {
-                                description: `As dreams often go, I have no memory or even awareness of having lived another life in the intervening years. It's clear that Sita and I haven't stayed together, yet I can't recall any time spent apart. Of course, according to the Buddhist and Hindu faiths, I've lived many other lives quite literally, in past incarnations.`,
+                                description: `As dreams often go, I have no memory or even awareness of having lived any other life in the intervening years. It's clear that Sita and I didn't stay together, yet I can't recall the time we spent apart. Of course, according to the Hindu and Buddhist faiths, I've lived many other lives, literally— in past incarnations.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -184,6 +187,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
                         `The pulsating`,
@@ -191,7 +195,7 @@ export default {
                             anchor: `organ`,
                             wiki: `Electric_organ`,
                         },
-                        `and slide mandolin from "Kyon?" make a reappearance in this first chorus, along with the tremolo banjo and`,
+                        `and slide mandolin from "Kyon?" return in this first chorus, along with the tremolo banjo and`,
                         {
                             anchor: `rubato`,
                             wiki: `Tempo_rubato`,
@@ -391,6 +395,8 @@ export default {
                         `My hundred thousandth dream, on the`,
                         {
                             anchor: `cliffs of El Cerrito`,
+                            todo: REVISE,
+                            problem: `Find less awkward way to say when Sita and I were together.`,
                             card: {
                                 description: [
                                     `The city of`,
@@ -422,8 +428,9 @@ export default {
                         `Why does my`,
                         {
                             anchor: `last thought`,
+                            todo: REVIEW,
                             card: {
-                                description: `As these ominous words from Sita wrench me from my bliss, I realize now that this is only a dream. And moreover, it may be my last.`,
+                                description: `As Sita's ominous words wrench me from my bliss, I begin to realize that this is only a dream. And moreover… it may be my last.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -494,8 +501,9 @@ export default {
                     lyric: [
                         {
                             anchor: `When you'll be mine`,
+                            todo: REVIEW,
                             card: {
-                                description: `If this is only a dream, then what I'm holding onto isn't really Sita, but only a memory of her. And if all I have left is a memory, then somewhere along the way I must have lost the real Sita. So as I now exit this world, I hold onto the possibility that I may find her again in the next.`,
+                                description: `If this is only a dream, then what I'm holding onto isn't really Sita, but only a memory of her. And if all I have left is a memory, then somewhere along the way I must have lost the real Sita. So now as I exit this world, I hold onto the possibility that I may find her again in the next.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -550,8 +558,10 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVISE,
+                problem: `Could there be em-dashes? What does staying genuine to the album mean?`,
                 card: {
-                    description: `In New York City I met Liz, with whom things ended no less painfully. So in making this audio webcomic, I was faced with a dilemma. I wanted to stay genuine to the album, given how fresh my wounds were when I'd made it, while being honest that I'd since moved on and was now devastated over a different breakup. My solution was to depict the events as a stage play, with the role of Sita played by an Indian version of Liz. The resulting character looks like neither, which should come as a relief to both.`,
+                    description: `In New York City I met Liz, with whom things ended no less painfully. So in making this audio webcomic, I was faced with a dilemma: I wanted to stay genuine to the album, given how fresh my wounds were when I'd made it, while being honest that I'd since moved on and was now devastated over a different breakup. My solution was to depict the events as a stage play, with the role of Sita played by an Indian version of Liz. The resulting character looks like neither, which should come as a relief to both.`,
                     dotKeys: {
                         [AFTERWORD]: true,
                     },

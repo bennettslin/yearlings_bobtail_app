@@ -1,6 +1,5 @@
 # Latest todo
-* Audit both Vegan and Dream
-* Reviews and revisions
+* Reviews starting with Kyon
 * Too many "linger"s?
 * Am I being clear on the difference between Bobtail and Yearling's Bobtail?
     * Make it an Uncanny annotation
