@@ -1223,7 +1223,6 @@ export default {
                             `for the`,
                             {
                                 anchor: `trophy blondes`,
-                                todo: REVIEW,
                                 cards: [
                                     {
                                         description: `To add insult to injury, most of the women I left Sita for were White, which bothered her greatly. In my defense, this wasn't by design; but seeing her loss as my gain, I let her believe the worst.`,
@@ -1378,7 +1377,6 @@ export default {
                                 },
                                 `'s sake`,
                             ],
-                            todo: REVIEW,
                             card: {
                                 description: `My next five-year plan, like the one before, was meant to improve my fortunes through a dramatic overhaul of the underlying system. Since it couldn't be left half completed, there was no point in second-guessing its logic once the work was already in progress.`,
                                 dotKeys: {
@@ -1416,7 +1414,7 @@ export default {
                                 todo: REVIEW,
                                 cards: [
                                     {
-                                        description: `It wasn't until college that I understood the sacrifices my parents made for me and my siblings to lead better lives than their own. But this awareness had to come through coursework rather than my own lived experiences, which then added to my guilt.`,
+                                        description: `It wasn't until college that I understood the sacrifices my parents made for me and my siblings to lead better lives than they had. But this awareness came about through my coursework rather than my own lived experiences, which then added to my guilt.`,
                                         dotKeys: {
                                             [BACKSTORY]: true,
                                         },
