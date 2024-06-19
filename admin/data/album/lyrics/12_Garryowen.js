@@ -158,11 +158,10 @@ export default {
                         `if you would`,
                         {
                             anchor: `opt for bed not street`,
-                            todo: REVISE,
-                            problem: `For clarity, don't need to say alternate.`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `I was tired of working extra shifts just to pay rent. So after my lease ended, I alternated between spending some nights with Sita, and others crashing in the`,
+                                    `I was tired of working extra shifts just to pay rent. So after my lease ended, I would spend some nights with Sita, and others crashing in the`,
                                     {
                                         anchor: `punk house`,
                                         wiki: `Punk_house`,

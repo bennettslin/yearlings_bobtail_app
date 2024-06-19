@@ -1,4 +1,5 @@
 # Latest todo
+* Revise some annotations
 * Reviews starting with Uncanny
 * Too many "linger"s?
 * Am I being clear on the difference between Bobtail and Yearling's Bobtail?

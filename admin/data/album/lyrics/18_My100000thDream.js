@@ -428,7 +428,6 @@ export default {
                         `Why does my`,
                         {
                             anchor: `last thought`,
-                            todo: REVIEW,
                             card: {
                                 description: `As Sita's ominous words wrench me from my bliss, I begin to realize that this is only a dream. And moreover… it may be my last.`,
                                 dotKeys: {
@@ -558,10 +557,9 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVISE,
-                problem: `Could there be em-dashes? What does staying genuine to the album mean?`,
+                todo: REVIEW,
                 card: {
-                    description: `In New York City I met Liz, with whom things ended no less painfully. So in making this audio webcomic, I was faced with a dilemma: I wanted to stay genuine to the album, given how fresh my wounds were when I'd made it, while being honest that I'd since moved on and was now devastated over a different breakup. My solution was to depict the events as a stage play, with the role of Sita played by an Indian version of Liz. The resulting character looks like neither, which should come as a relief to both.`,
+                    description: `In New York City I met Liz, with whom things ended no less painfully. So in making this audio webcomic, I was faced with a dilemma: I wanted to stay true to the album, given how fresh my wounds were when I'd made it— while being honest that I'd since moved on and was now hurt over a different breakup. My solution was to depict the events as a stage play, with the role of Sita played by an Indian version of Liz. The resulting character looks like neither, which should come as a relief to both.`,
                     dotKeys: {
                         [AFTERWORD]: true,
                     },

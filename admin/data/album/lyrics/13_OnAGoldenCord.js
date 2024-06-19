@@ -440,8 +440,7 @@ export default {
                     lyricLeft: [
                         {
                             anchor: `hatchet man`,
-                            todo: REVISE,
-                            problem: `I don't like nefarious.`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `A`,
@@ -449,7 +448,7 @@ export default {
                                         anchor: `hatchet man`,
                                         wiki: `Hatchet_man_(idiom)`,
                                     },
-                                    `is an underling who carries out the most disagreeable tasks of a nefarious operation.`,
+                                    `is an underling who carries out the most disagreeable tasks of a shady operation.`,
                                 ],
                             },
                         },

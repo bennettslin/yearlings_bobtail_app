@@ -341,7 +341,7 @@ export default {
                         {
                             anchor: `let's make a pact`,
                             todo: REVISE,
-                            problem: `Two times in a row.`,
+                            problem: `Two times in a row. Say my later years.`,
                             card: {
                                 description: `Sita knew I'd come to want the same slow-burning love that she did; it was only a matter of time. So every time we broke up, she would make me promise to rekindle what we once had, if I should ever pine for it once more.`,
                                 dotKeys: {
