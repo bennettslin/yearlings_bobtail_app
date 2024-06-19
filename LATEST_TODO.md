@@ -1,9 +1,8 @@
 # Latest todo
-* Reviews starting with Kyon
+* Reviews starting with Uncanny
 * Too many "linger"s?
 * Am I being clear on the difference between Bobtail and Yearling's Bobtail?
     * Make it an Uncanny annotation
-* Write to Ross Barkan
 * Allow annotations to be clicked in dashboard
     * Change hrefProp to something else
     * Always have href on Anchor tag

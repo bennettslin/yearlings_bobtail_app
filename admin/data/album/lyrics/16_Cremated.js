@@ -41,7 +41,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: REVIEW,
                 card: {
-                    description: `Once when I was a child, a playmate asked if I knew what cremation was. I didn't, but assumed it must be fun and tasty. Of course, the horrifying truth was revealed to me a moment later. I thought this was the perfect metaphor for a song about the seemingly innocent day trip that Miriam had planned out to end with our breakup.`,
+                    description: `Once when I was a child, a playmate asked if I knew what cremation was; I didn't, but assumed it must be fun and tasty. Of course, the horrifying truth was revealed to me a moment later. I thought this was the perfect metaphor for a song about the seemingly innocent day trip that Miriam had planned to end with our breakup.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [OBSERVATION]: true,
@@ -61,7 +61,6 @@ export default {
                         lyric: [
                             {
                                 anchor: `Or another`,
-                                todo: REVIEW,
                                 card: {
                                     description: `Even if I can't be with Mara, I can still be with someone like her— namely, Miriam.`,
                                     dotKeys: {
@@ -231,7 +230,6 @@ export default {
                         {
                             // NOTE: I added a hyphen in the lyrics as well.
                             anchor: `inner lotus-eater`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In the`,
@@ -281,7 +279,6 @@ export default {
                         `this`,
                         {
                             anchor: `phoenix risen limp`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In Greek mythology, the`,
@@ -559,7 +556,6 @@ export default {
                         `to remain`,
                         {
                             anchor: `inherently perfect`,
-                            todo: REVIEW,
                             card: {
                                 description: `The real purpose of having a drunken alter ego was to blame it for all my selfish desires, while remaining above reproach myself. I didn't tell Miriam this, of course— since the latest thing I selfishly desired was her.`,
                                 dotKeys: {
@@ -577,7 +573,6 @@ export default {
                         `This swarm pumped and`,
                         {
                             anchor: `kissed off, she purges up`,
-                            todo: REVIEW,
                             card: {
                                 description: `After bringing me to orgasm, Miriam leans over the car door to spit out my semen. But in this innocent act, I can't help but read a hidden message— namely, that the genes in my defective sperm must never mingle with hers.`,
                                 dotKeys: {
@@ -737,7 +732,6 @@ export default {
                         },
                         {
                             anchor: `will not retract`,
-                            todo: REVIEW,
                             card: {
                                 // NOTE: Euthanasia is mentioned in Pchelka.
                                 description: [
@@ -779,7 +773,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `Miriam was delicate in breaking up with me, knowing the kind of fragile ex-boyfriend I'd surely be. But still it had to be done, because who knew what horrors lurked in my genetic makeup? Perhaps I was a carrier of "`,
+                                    `Miriam was delicate in breaking up with me, knowing the kind of fragile ex-boyfriend I'd surely be. But still it had to be done, given the horrors that might lurk in my genetic makeup. Who knew— perhaps I was a carrier of "`,
                                     {
                                         anchor: `Fragile X`,
                                         wiki: `Fragile_X_syndrome`,
@@ -825,7 +819,6 @@ export default {
                         `Undeluded, she'll bask in`,
                         {
                             anchor: `selfish cut-off jeans`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In`,
@@ -860,7 +853,7 @@ export default {
                             anchor: `in her pool`,
                             todo: REVIEW,
                             card: {
-                                description: `Lying sedated on my deathbed, I see Miriam lounging by a swimming pool, radiant in her youth. I exhaust my last breath to wish her well— but she doesn't hear me and plunges into the deep end.`,
+                                description: `Lying sedated on my deathbed, I see Miriam lounging by a swimming pool, radiant in her youth. I expend my last breath to wish her well— but she doesn't hear me and plunges into the deep end.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -911,10 +904,11 @@ export default {
                         {
                             anchor: `Godspeed`,
                             properNoun: true,
-                            todo: REVIEW,
+                            todo: REVISE,
+                            problem: `Don't think between is the right word.`,
                             cards: [
                                 {
-                                    description: `To add to my insecurities as a child about being raised Buddhist, I also looked different from everyone else in Sasha's world. And so my inferiority complex failed to distinguish between carrying faulty genes; belonging to a faulty faith; and being of a faulty race. They all seemed to derive from a single defect at the core of my being.`,
+                                    description: `To add to my insecurities as a child about being raised Buddhist, I also looked different from everyone else in Sasha's world. And so my inferiority complex failed to distinguish between carrying faulty genes, belonging to a faulty faith, and being of a faulty race. They all seemed to derive from a single defect at the core of my being.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [OBSERVATION]: true,
@@ -1002,7 +996,6 @@ export default {
                         `this geezer's`,
                         {
                             anchor: `life support's abortive`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Based on the perceived motives of younger women who date older men, I imagine that Miriam would jump at the chance to remove me from`,
@@ -1077,7 +1070,7 @@ export default {
                             anchor: `pulls the plug`,
                             todo: REVIEW,
                             card: {
-                                description: `The cigarette lighter plug pops out, and Miriam pulls it from the dashboard socket to light her cigarette. Having satisfied me with an orgasmic "pop," she's no longer troubled to pull the plug on our relationship.`,
+                                description: `The cigarette lighter plug pops out, and Miriam pulls it from the dashboard socket to light her cigarette. Having satisfied me with an orgasmic "pop," she no longer feels troubled to pull the plug on our relationship.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -1111,7 +1104,7 @@ export default {
                                         anchor: `dromedary`,
                                         wiki: `Dromedary`,
                                     },
-                                    `, or Arabian camel, has a single hump on its back; the`,
+                                    `, or Arabian camel, has a single hump on its back. The`,
                                     {
                                         anchor: `Bactrian camel`,
                                         wiki: `Bactrian_camel`,
@@ -1132,7 +1125,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `Miriam searches for a way to deliver the bad news in the least messy way possible, like a pet owner readying the`,
+                                    `Miriam searches for a way to deliver the bad news in the least messy way possible— like a pet owner readying the`,
                                     {
                                         anchor: `pooper scooper`,
                                         wiki: `Pooper-scooper`,
@@ -1152,7 +1145,6 @@ export default {
                         `hungry carrying this groovy`,
                         {
                             anchor: `second hump`,
-                            todo: REVIEW,
                             card: {
                                 description: `By living off the fat in its hump, a camel can travel for months without eating. And in my own wanderings, the ego boost I gained from humping other women allowed me to live without the nourishment of Sita's love.`,
                                 dotKeys: {

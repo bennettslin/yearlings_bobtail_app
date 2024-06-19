@@ -238,7 +238,7 @@ export default {
                             anchor: `mindful manners`,
                             todo: REVIEW,
                             card: {
-                                description: `I also decided to give up swearing. I figured this would be a definite win with the next Catherine, while any other woman would find its quaintness charming.`,
+                                description: `I also decided to give up swearing. I figured this would be a definite win with the next Catherine, while anyone else would still find its quaintness charming.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -556,7 +556,6 @@ export default {
                         {
                             anchor: `"Made in America" signs`,
                             properNoun: true,
-                            todo: REVIEW,
                             card: {
                                 description: `To promote cross-cultural harmony, the pairings in these mass weddings are often international by design. So my Moonie bride might very well be a foreigner who joined the church just to ensure her children will be American by birth. In which case, I'd be a fool to think my "maiden Mara co-signs" the marriage license in good faith.`,
                                 dotKeys: {
