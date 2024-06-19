@@ -199,7 +199,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `The tree finally sacrifices herself completely, allowing the boy to chop down her trunk in order to build a boat. When the boy returns as an old man, the tree is now but a stump and can only offer him a place to sit and rest.`,
+                                    description: `Finally, the tree sacrifices herself completely by telling the boy to make a boat from her trunk. When the boy returns as an old man, the tree is now but a stump and can only offer him a place to sit and rest.`,
                                     dotKeys: {
                                         [REFERENCE]: true,
                                     },
@@ -283,12 +283,12 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `Being "`,
+                                    `Being perpetually drunk— or "`,
                                     {
                                         anchor: `endorphined`,
                                         wiki: `Endorphins`,
                                     },
-                                    `" in my perpetually drunken state allows me to behave as a virtual orphan, as I live in denial of having parents whose expectations I fail to meet.`,
+                                    `"— allows me to behave as a virtual orphan, as I live in denial of having parents whose expectations I fail to meet.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -319,7 +319,7 @@ export default {
                             anchor: `earth right now your tourist store`,
                             todo: REVIEW,
                             card: {
-                                description: `My mother enthralled me with visions of being a great artist, even as she instilled Buddhist ideals of renouncing materialism; the mail-order cult then told me I was a mere visitor to this planet. And so a belief formed in my head that I must work tirelessly "to restore" my "birthright" of artistic renown, unaffected by earthly concerns.`,
+                                description: `My mother enthralled me with visions of being a great artist, even as she instilled Buddhist ideals to renounce materialism; the mail-order cult then told me I was a mere visitor to this planet. And so a belief formed in my head that I must work tirelessly "to restore" my "birthright" of artistic renown, unaffected by earthly concerns.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,

@@ -72,10 +72,9 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVISE,
-                problem: `Run on sentence.`,
+                todo: REVIEW,
                 card: {
-                    description: `With the breakup, I could revert to the state of childlike innocence that I'd known long ago— not just before the relationship, but before the bullying and the mail-order cult as well. So here we hear the white-throated sparrow, which harkens back to the happiest days of my childhood.`,
+                    description: `With the breakup, I could revert to the state of innocence that I'd known as a child— not just before the relationship, but before the bullying and the mail-order cult as well. So here we hear the white-throated sparrow, which harkens back to the happiest days of my childhood.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGCRAFT]: true,
@@ -102,13 +101,11 @@ export default {
                         `safely kept with`,
                         {
                             anchor: `bread and pocket lint`,
-                            todo: REVISE,
-                            problem: `First sentence, to munch on the go sounds off.`,
+                            todo: REVIEW,
                             card: {
-                                description: `
-                                Before leaving the cafeteria that evening, I stashed some bread rolls in the front pockets of my jacket to munch on the go. Now clutching the bracelet, I tuck in my hands as well to keep warm.`,
+                                description: `The less I spent on food, the more I could spend on beer. So before leaving the cafeteria, I would swipe a few bread rolls, which were always plentiful, and stash them in the front pockets of my jacket for munching on the go.`,
                                 dotKeys: {
-                                    [NARRATIVE]: true,
+                                    [BACKSTORY]: true,
                                 },
                             },
                         },
