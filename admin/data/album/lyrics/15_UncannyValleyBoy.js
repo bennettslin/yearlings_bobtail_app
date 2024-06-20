@@ -1,4 +1,5 @@
 import {
+    AFTERWORD,
     BACKSTORY,
     NARRATIVE,
     OBSERVATION,
@@ -19,7 +20,7 @@ import {
     BACKING,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REDO, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Uncanny Valley Boy',
@@ -1598,6 +1599,20 @@ export default {
                     },
                 },
             ],
+        },
+        {
+            unitMap: {},
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: REDO,
+                problem: `Explain change of album title.`,
+                card: {
+                    description: `Placeholder text.`,
+                    dotKeys: {
+                        [AFTERWORD]: true,
+                    },
+                },
+            },
         },
     ],
 }
