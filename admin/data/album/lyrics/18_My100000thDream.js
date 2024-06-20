@@ -246,6 +246,7 @@ export default {
                         `where the`,
                         {
                             anchor: `gopis`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In Hindu mythology, the`,
@@ -258,7 +259,7 @@ export default {
                                         anchor: `Krishna`,
                                         wiki: `Krishna`,
                                     },
-                                    `. I don't have a good explanation for what they're doing in Argentina. When I wrote these lyrics, I didn't think I'd need one.`,
+                                    `. (I don't have a good explanation for what they're doing in Argentina. When I wrote these lyrics, I didn't think I'd need one.)`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

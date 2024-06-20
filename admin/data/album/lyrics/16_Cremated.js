@@ -39,7 +39,8 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
+                todo: REVISE,
+                problem: `Put "creaming myself" in here as a pun.`,
                 card: {
                     description: `Once when I was a child, a playmate asked if I knew what cremation was; I didn't, but assumed it must be fun and tasty. Of course, the horrifying truth was revealed to me a moment later. I thought this was the perfect metaphor for a song about the seemingly innocent day trip that Miriam had planned to end with our breakup.`,
                     dotKeys: {
@@ -851,7 +852,6 @@ export default {
                         `and`,
                         {
                             anchor: `in her pool`,
-                            todo: REVIEW,
                             card: {
                                 description: `Lying sedated on my deathbed, I see Miriam lounging by a swimming pool, radiant in her youth. I expend my last breath to wish her well— but she doesn't hear me and plunges into the deep end.`,
                                 dotKeys: {
@@ -1068,7 +1068,6 @@ export default {
                         `a pop, and she`,
                         {
                             anchor: `pulls the plug`,
-                            todo: REVIEW,
                             card: {
                                 description: `The cigarette lighter plug pops out, and Miriam pulls it from the dashboard socket to light her cigarette. Having satisfied me with an orgasmic "pop," she no longer feels troubled to pull the plug on our relationship.`,
                                 dotKeys: {
@@ -1096,7 +1095,6 @@ export default {
                         `Life's a dumb`,
                         {
                             anchor: `ex-dromedary`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The`,
@@ -1122,7 +1120,6 @@ export default {
                         `puff,`,
                         {
                             anchor: `preparing the scoop`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Miriam searches for a way to deliver the bad news in the least messy way possible— like a pet owner readying the`,
@@ -1145,8 +1142,9 @@ export default {
                         `hungry carrying this groovy`,
                         {
                             anchor: `second hump`,
+                            todo: REVIEW,
                             card: {
-                                description: `By living off the fat in its hump, a camel can travel for months without eating. And in my own wanderings, the ego boost I gained from humping other women allowed me to live without the nourishment of Sita's love.`,
+                                description: `By living off the fat in its hump, a camel can travel for months without eating. And in my own wanderings, the ego boost I gained from "humping" other women allowed me to live without the nourishment of Sita's love.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [PUN]: true,

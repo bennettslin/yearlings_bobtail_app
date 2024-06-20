@@ -200,7 +200,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `Finally, the tree sacrifices herself completely by telling the boy to make a boat from her trunk. When the boy returns as an old man, the tree is now but a stump and can only offer him a place to sit and rest.`,
+                                    description: `Finally, the tree sacrifices herself completely by letting the boy make a boat from her trunk. When the boy returns as an old man, the tree is now but a stump and can only offer him a place to sit and rest.`,
                                     dotKeys: {
                                         [REFERENCE]: true,
                                     },
@@ -284,12 +284,12 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `Being perpetually drunk— or "`,
+                                    `Being perpetually drunk, or "`,
                                     {
                                         anchor: `endorphined`,
                                         wiki: `Endorphins`,
                                     },
-                                    `"— allows me to behave as a virtual orphan, as I live in denial of having parents whose expectations I fail to meet.`,
+                                    `," makes me a virtual orphan, by allowing me to live in denial of having parents whose expectations I fail to meet.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -320,7 +320,7 @@ export default {
                             anchor: `earth right now your tourist store`,
                             todo: REVIEW,
                             card: {
-                                description: `My mother enthralled me with visions of being a great artist, even as she instilled Buddhist ideals to renounce materialism; the mail-order cult then told me I was a mere visitor to this planet. And so a belief formed in my head that I must work tirelessly "to restore" my "birthright" of artistic renown, unaffected by earthly concerns.`,
+                                description: `My mother enthralled me with visions of being a great artist, even as she instilled Buddhist ideals of renouncing materialism; the mail-order cult then told me I was a mere visitor to this planet. And so a belief formed in my head that I must work tirelessly "to restore" my "birthright" of artistic renown, unaffected by earthly concerns.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -377,7 +377,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `To defend against the bullies' threats, I would be slow to respond in general. At some point, a classmate must have thought I was huffing paint, and this is when I got called into the principal's office.`,
+                                    description: `To defend against the bullies' threats, I found it effective to react slowly, which then required me to react slowly to anyone in general. At some point, a classmate must have thought I was huffing paint, and this is when I got called into the principal's office.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -435,12 +435,12 @@ export default {
                             anchor: `Village Green Preservation Society`,
                             wiki: `The_Kinks_Are_the_Village_Green_Preservation_Society`,
                         },
-                        `as a rough guide for this album. So each song had to feature well-crafted musical hooks; represent a different musical style; and clock in at around three minutes. There's no one-to-one mapping, but this song is clearly the "`,
+                        `as a rough guide for this album, which meant each song had to feature well-crafted musical hooks; represent a different musical style; and clock in at around three minutes. While there's no one-to-one mapping, this song is clearly the "`,
                         {
                             anchor: `Wicked Annabella`,
                             wiki: `Wicked_Annabella`,
                         },
-                        `" of the bunch, which is why I went with its feel of low notes played on crunchy electric guitars.`,
+                        `" of the bunch, so I went with the same feel of low notes played on crunchy electric guitars.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -479,7 +479,7 @@ export default {
                                                 wiki: `Hamartia`,
                                             },
                                         },
-                                        `is the tragic flaw that leads to a hero's downfall. And so my parents ask if I recognize the telltale signs that point to mine. (I've since learned there are four syllables in the word. But my English teacher pronounced it as I have here, so I plead miseducation.)`,
+                                        `is the tragic flaw that leads to a hero's downfall. And so my parents ask if I see any telltale signs that point to mine. (I've since learned that the word has four syllables. But my English teacher pronounced it as I have here, so I plead miseducation.)`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -575,7 +575,7 @@ export default {
                             anchor: `counter-melody`,
                             wiki: `Counter-melody`,
                         },
-                        `. The original counter-melody, then, which I'd intended to play on guitar, was given to the lead vocals, for which I wrote new lyrics.`,
+                        `. So I took the original counter-melody, which I'd intended to play on guitar, and gave it to the lead vocals, for which I then wrote new lyrics.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -711,7 +711,7 @@ export default {
                             anchor: `drowned your stutter`,
                             todo: REVIEW,
                             card: {
-                                description: `I developed a stammer in middle school, perhaps in an unconscious effort to buy time for collecting my thoughts. In college, I found that alcohol made it disappear.`,
+                                description: `I developed a stammer in middle school, perhaps as an unconscious way to buy time for collecting my thoughts. But in college, I found that alcohol made it disappear.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -927,7 +927,6 @@ export default {
                         `your idol who riled you when you saw that you`,
                         {
                             anchor: `two were tied`,
-                            todo: REVIEW,
                             card: {
                                 description: `While Sita hoped for us to be tied in a matrimonial sense, I chafed to be tied in a competitive sense. Between the two of us, I had fewer past romances to speak of, and this felt like a threat.`,
                                 dotKeys: {
@@ -972,7 +971,7 @@ export default {
                             anchor: `chalked the sidewalks`,
                             todo: REVIEW,
                             card: {
-                                description: `One night my friends and I got drunk and decided to tag the streets with fluorescent sidewalk chalk.`,
+                                description: `One evening my friends and I got drunk and decided to tag the streets with fluorescent sidewalk chalk.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -994,12 +993,12 @@ export default {
                                         isItalic: true,
                                         lyric: `Ramayana`,
                                     },
-                                    `, began his early life as Ratnakar, a highway bandit. Eager to repent, he sought counsel from a passing sage, who told him to recite the holy name of Rama. Yet Ratnakar was so sinful, he could only repeat the word`,
+                                    `, began his early life as Ratnakar, a highway bandit. Eager to repent, he sought counsel one day from a passing sage, who told him to recite the holy name of Rama. But Ratnakar was so sinful, he could only say the word`,
                                     {
                                         isItalic: true,
                                         lyric: `mara`,
                                     },
-                                    `, or "death." Still, the grace of Rama caused the syllables to shift over time, until finally Ratnakar was chanting Rama's name.`,
+                                    `, or "death," over and over. Still, the grace of Rama caused the syllables to shift over time, until finally Ratnakar was chanting Rama's name.`,
                                 ],
                             },
                         },
@@ -1015,7 +1014,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Not wanting anyone to crowd out my artwork, I run ahead of the group— only to pass out where no one can see me. An ambulance siren jolts me awake.`,
+                                    description: `Not wanting anyone to crowd out my artwork, I run ahead of the group— only to pass out where no one can find me. An ambulance siren jolts me awake.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -1047,7 +1046,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `I sit up and notice that dead ants have formed an outline around what I've drunkenly scrawled in chalk. (Yes, I know chalk isn't toxic to ants, but it suits the story.)`,
+                                    description: `I sit up and notice that dead ants have been piling up all around my drunken scrawls on the sidewalk. (I know chalk is neither tasty nor toxic to ants, but it suits the story.)`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -1072,7 +1071,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `This wasn't really meant to be a cliffhanger; "M" just set a precedent for me to be gun-shy about ever mentioning Mara in my lyrics.`,
+                                    description: `This wasn't actually meant to be a cliffhanger; "M" just set a precedent for me to be gun-shy about ever mentioning Mara in my lyrics.`,
                                     dotKeys: {
                                         [SONGCRAFT]: true,
                                     },
