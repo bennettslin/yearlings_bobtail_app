@@ -514,7 +514,7 @@ export default {
                             anchor: `fine when you had none`,
                             todo: REVIEW,
                             card: {
-                                description: `Things were finally looking up for me, so I was confused that a lingering bitterness remained. I suspect it's because I felt indignant for my younger self, who'd been kept in the dark for so long about how much better life could be.`,
+                                description: `Things were finally looking up for me, so I was confused to harbor a residual bitterness. I suspect it's because I was indignant for my younger self, who'd been kept in the dark for so long about how much better life could be.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

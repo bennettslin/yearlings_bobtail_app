@@ -1,7 +1,6 @@
 # Latest todo
 * Revise some annotations
 * Reviews starting with Uncanny
-* Too many "linger"s?
 * Am I being clear on the difference between Bobtail and Yearling's Bobtail?
     * Make it an Uncanny annotation
 * Allow annotations to be clicked in dashboard

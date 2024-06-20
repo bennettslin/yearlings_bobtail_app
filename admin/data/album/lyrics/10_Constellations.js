@@ -665,6 +665,7 @@ export default {
                         `, has`,
                         {
                             anchor: `slain the teeto-Tatars`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -673,7 +674,7 @@ export default {
                                             anchor: `teeter-totter`,
                                             wiki: `Seesaw`,
                                         },
-                                        `," and any lingering protest from my inner "`,
+                                        `," and any remaining protest from my inner "`,
                                         {
                                             anchor: `teetotaler`,
                                             wiki: `Teetotalism`,
@@ -733,9 +734,10 @@ export default {
                         {
                             anchor: `Howie led the feat`,
                             properNoun: true,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Meanwhile, Howie walks as if he has "lead feet," oblivious to the lingering stiffness of his limbs.`,
+                                    description: `Meanwhile, Howie walks as if he has "lead feet," owing to the lasting stiffness in his limbs.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true,

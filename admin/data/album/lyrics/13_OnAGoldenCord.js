@@ -408,7 +408,7 @@ export default {
                             anchor: `Guilt pardons`,
                             todo: REVIEW,
                             card: {
-                                description: `My sober self observes his drunken accomplice's lack of remorse and can only feel pity, knowing the trauma that must surely linger in one who committed such a heinous act. After all, avoiding such trauma is the reason he chose not to carry out the hit himself.`,
+                                description: `My sober self observes his drunken accomplice's lack of remorse and can only feel pity, knowing the trauma that must surely dwell in one who committed such a heinous act. After all, avoiding such trauma is the reason he chose not to carry out the hit himself.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
