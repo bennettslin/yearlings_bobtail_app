@@ -969,10 +969,9 @@ export default {
                         `and so one night you`,
                         {
                             anchor: `chalked the sidewalks`,
-                            todo: REVISE,
-                            problem: `Make this one in the past. Put running ahead in the present, in one of the below annotations.`,
+                            todo: REVIEW,
                             card: {
-                                description: `One night my friends and I got drunk and decided to tag the streets with fluorescent sidewalk chalk. Since I didn't want anyone to crowd out my artwork, I ran ahead of the group.`,
+                                description: `One night my friends and I got drunk and decided to tag the streets with fluorescent sidewalk chalk.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -1012,13 +1011,12 @@ export default {
                         `When`,
                         {
                             anchor: `wakened from the siren`,
-                            todo: REVISE,
-                            problem: `Make present tense.`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Having lost sight of the group, I ended up passing out on the sidewalk. An ambulance siren jolted me awake.`,
+                                    description: `Not wanting anyone to crowd out my artwork, I run ahead of the group— only to pass out where no one can see me. An ambulance siren jolts me awake.`,
                                     dotKeys: {
-                                        [BACKSTORY]: true,
+                                        [NARRATIVE]: true,
                                     },
                                 },
                                 {
@@ -1028,12 +1026,12 @@ export default {
                                             anchor: `Sirens`,
                                             wiki: `Siren_(mythology)`,
                                         },
-                                        `" were beautiful women whose enchanting songs would lull any passing sailors, leading them to crash their ships against the rocky shores. But just as`,
+                                        `" were beautiful women whose enchanting songs would lull any passing sailors, leading them to crash their ships against the rocky shores. But much like`,
                                         {
                                             anchor: `Odysseus`,
                                             wiki: `Odysseus`,
                                         },
-                                        `resisted by having himself tied to the mast, I blocked out the siren song of Sita's love by tying myself to my artistic ambitions.`,
+                                        `, who resisted by having himself tied to a mast, I blocked out the siren song of Sita's love by tying myself to my artistic ambitions.`,
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
@@ -1045,17 +1043,16 @@ export default {
                         `, you found spelled out in`,
                         {
                             anchor: `dead ants`,
-                            todo: REVISE,
-                            problem: `Make present tense.`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `My sidewalk art had killed off some ants, whose dead bodies formed an outline around what I'd drunkenly scrawled in chalk.`,
+                                    description: `I sit up and notice that dead ants have formed an outline around what I've drunkenly scrawled in chalk. (Yes, I know chalk isn't toxic to ants, but it suits the story.)`,
                                     dotKeys: {
-                                        [BACKSTORY]: true,
+                                        [NARRATIVE]: true,
                                     },
                                 },
                                 {
-                                    description: `While chanting Rama's name, Ratnakar's concentration was so intense that an anthill formed over him, and he remained undisturbed for years. And so he came to be known as Valmiki, from the Sanskrit word for "anthill."`,
+                                    description: `While chanting Rama's name, Ratnakar's concentration was so intense that an anthill formed over him, and he remained undisturbed for years. Thus, he came to be known as Valmiki, from the Sanskrit word for "anthill."`,
                                     dotKeys: {
                                         [REFERENCE]: true,
                                     },
@@ -1065,14 +1062,21 @@ export default {
                         `:`,
                         {
                             anchor: `____`,
-                            todo: REVISE,
-                            problem: `Present tense. Say it wasn't meant to be a cliffhanger.`,
-                            card: {
-                                description: `And what I'd scrawled was… Mara's name. No cliffhanger here. "M" just set a precedent for me to be gun-shy about mentioning her in my lyrics.`,
-                                dotKeys: {
-                                    [BACKSTORY]: true,
+                            todo: REVIEW,
+                            cards: [
+                                {
+                                    description: `And what I've drunkenly scrawled is… Mara's name.`,
+                                    dotKeys: {
+                                        [NARRATIVE]: true,
+                                    },
                                 },
-                            },
+                                {
+                                    description: `This wasn't really meant to be a cliffhanger; "M" just set a precedent for me to be gun-shy about ever mentioning Mara in my lyrics.`,
+                                    dotKeys: {
+                                        [SONGCRAFT]: true,
+                                    },
+                                },
+                            ],
                         },
                         `…`,
                     ],
