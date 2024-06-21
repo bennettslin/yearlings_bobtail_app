@@ -1,6 +1,5 @@
 @import '../../scss/classes/mixin';
 @import '../../scss/constants/border';
-@import '../../scss/constants/colour';
 @import '../../scss/constants/lyric';
 
 .Verse__inLyric {
@@ -54,24 +53,4 @@
 
 .Verse__interactable {
     position: relative;
-}
-
-.Verse__noIndexColour {
-    /**
-     * These styles are for verses without a verse index, that don't need the
-     * added complexity of a VerseColour component, but still need to be styled
-     * similarly for consistency.
-     */
-
-    .TW__hidePastFutureLyrics
-    & {
-        // Default side verse.
-        background-color: $colour__neutral__light;
-    }
-
-    .TW__showPastFutureLyrics
-    & {
-        // Slider side verse.
-        background-color: $colour__neutral__dark;
-    }
 }

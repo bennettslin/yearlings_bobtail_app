@@ -1,4 +1,5 @@
 # Latest todo
+* Selecting different filmstrip cell when activated is a little wonky
 * Anchors in admin
     * Store command or control keys held in access store
     * In app, anchor prevents default by default
