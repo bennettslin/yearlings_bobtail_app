@@ -12,14 +12,6 @@ export const mapVolumeIndex = (
     { [SESSION_STORE]: { volumeIndex } },
 ) => volumeIndex
 
-export const mapSelectedWikiIndex = (
-    { [SESSION_STORE]: { selectedWikiIndex } },
-) => selectedWikiIndex
-
-export const mapWikiAnnotationIndex = (
-    { [SESSION_STORE]: { wikiAnnotationIndex } },
-) => wikiAnnotationIndex
-
 export const mapEarColumnIndex = (
     { [SESSION_STORE]: { earColumnIndex } },
 ) => earColumnIndex

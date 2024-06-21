@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import getDidMountHoc from '../../../hocs/DidMountHoc'
 import Wiki from '../../Wiki'
 import Popup from '../../Popup'
-import { updateWikiIndices } from '../../../redux/session/action'
+import { updateWikiIndices } from '../../../redux/selected/action'
 import { mapIsWikiShown } from '../../../redux/wiki/selector'
 
 const WikiPopup = ({ didMount }) => {

@@ -75,3 +75,11 @@ export const mapIsSelectedEpilogue = createSelector(
 export const mapDoBrowserBypassNavigation = (
     { [SELECTED_STORE]: { doBrowserBypassNavigation } },
 ) => doBrowserBypassNavigation
+
+export const mapSelectedWikiIndex = (
+    { [SELECTED_STORE]: { selectedWikiIndex } },
+) => selectedWikiIndex
+
+export const mapWikiAnnotationIndex = (
+    { [SELECTED_STORE]: { wikiAnnotationIndex } },
+) => wikiAnnotationIndex

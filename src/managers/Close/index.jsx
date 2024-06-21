@@ -7,8 +7,10 @@ import { useDispatch, useSelector } from 'react-redux'
 import AlbumPromoDispatcher from '../../dispatchers/Promo/Album'
 import { updateActivatedVerseIndex } from '../../redux/activated/action'
 import { updateOptionStore } from '../../redux/option/action'
-import { updateWikiIndices } from '../../redux/session/action'
-import { updateSelectedStore } from '../../redux/selected/action'
+import {
+    updateSelectedStore,
+    updateWikiIndices,
+} from '../../redux/selected/action'
 import {
     updateIsAboutShown,
     updateIsAudioOptionsExpanded,

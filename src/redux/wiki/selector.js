@@ -6,12 +6,10 @@ import {
     mapWindowWidth,
 } from '../viewport/selector'
 import {
-    mapSelectedWikiIndex,
-    mapWikiAnnotationIndex,
-} from '../session/selector'
-import {
     mapSelectedSongIndex,
     mapSelectedAnnotationIndex,
+    mapSelectedWikiIndex,
+    mapWikiAnnotationIndex,
 } from '../selected/selector'
 
 export const mapIsWikiShown = createSelector(

@@ -4,11 +4,11 @@ import AudioPlayerContext from '../../contexts/AudioPlayer'
 import { updateAccessStore } from '../../redux/access/action'
 import { resetSongChange, resetVerseChange } from '../../redux/entrance/action'
 import { updateLyricStore } from '../../redux/lyric/action'
-import { updateSelectedStore } from '../../redux/selected/action'
 import {
-    updateEarColumnIndex,
+    updateSelectedStore,
     updateWikiIndices,
-} from '../../redux/session/action'
+} from '../../redux/selected/action'
+import { updateEarColumnIndex } from '../../redux/session/action'
 import { updateIsNavExpanded } from '../../redux/toggle/action'
 import { getSongsAndLoguesCount } from '../../endpoint/album/songs'
 import { mapIsSongChangeDone } from '../../redux/entrance/selector'

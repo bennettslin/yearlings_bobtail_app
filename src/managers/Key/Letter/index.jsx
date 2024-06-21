@@ -15,7 +15,10 @@ import SongDispatcher from '../../../dispatchers/Song'
 import TipsDispatcher from '../../../dispatchers/Tips'
 import { updateAccessStore } from '../../../redux/access/action'
 import { updateActivatedVerseIndex } from '../../../redux/activated/action'
-import { updateSelectedStore } from '../../../redux/selected/action'
+import {
+    updateSelectedStore,
+    updateWikiIndices,
+} from '../../../redux/selected/action'
 import {
     toggleIsAboutShown,
     updateIsAboutShown,
@@ -25,7 +28,6 @@ import {
     updateIsNavExpanded,
 } from '../../../redux/toggle/action'
 import {
-    updateWikiIndices,
     toggleIsSongRepeatOn,
     incrementVolumeIndex,
     decrementVolumeIndex,

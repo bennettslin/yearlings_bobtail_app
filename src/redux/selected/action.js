@@ -1,5 +1,6 @@
 // Actions for song state.
 import { setInStorage } from '../../utils/storage'
+import { SELECTED_WIKI_DEFAULTS } from './default'
 import {
     hasKey,
     getDefinedOnlyPayload,
@@ -35,3 +36,14 @@ export const updateSelectedStore = payload => {
         payload: getDefinedOnlyPayload(payload, SELECTED_STORE),
     }
 }
+
+export const updateWikiIndices = ({
+    selectedWikiIndex,
+    wikiAnnotationIndex,
+} = SELECTED_WIKI_DEFAULTS) => ({
+    type: SELECTED_STORE,
+    payload: {
+        selectedWikiIndex,
+        wikiAnnotationIndex,
+    },
+})
