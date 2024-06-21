@@ -1,4 +1,12 @@
 # Latest todo
+* Anchors in admin
+    * Have admin flag
+    * Store command or control keys held in access store
+    * In app, anchor prevents default by default
+        * If command or control key is held
+            * Don't open wiki
+            * Instead, open in new tab without focus on tab
+    * In admin, just always open in new tab without focus on tab
 * Revise some annotations
 * Reviews starting with Vegan
 * Allow annotations to be clicked in dashboard
