@@ -325,10 +325,9 @@ export default {
                         `for the`,
                         {
                             anchor: `well-behaved on the wing`,
-                            todo: REVISE,
-                            problem: `Switch the order.`,
+                            todo: REVIEW,
                             card: {
-                                description: `Harboring no grudges, drunken me can only surmise that he's been granted early release for good behavior, after serving out his sentence without complaint.`,
+                                description: `Harboring no grudges, drunken me can only surmise that he served out his sentence without complaint, and has now been granted early release for good behavior.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -340,8 +339,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVISE,
-                problem: `This description is inaccurate. Use the wiki entry for doublethink.`,
+                todo: REVIEW,
                 card: {
                     description: [
                         `In`,
@@ -357,7 +355,7 @@ export default {
                                 wiki: `Nineteen_Eighty-Four`,
                             },
                         },
-                        `, the citizens of Oceania engage in doublethink to accept the contradictory propaganda of Newspeak. Similarly, to make sense of the breakup, I had to reconcile the contradictions in my head. So this song uses doublespeaker rhyme— which I named partly for its Orwellian undertone— to depict the inner conflict between my sober self and my drunken alter ego.`,
+                        `, party members must engage in doublethink to spout the contradictory propaganda of Newspeak. Similarly, to justify the breakup, I had to reconcile the contradictions in my head. So this song uses doublespeaker rhyme— which I named partly for its Orwellian undertone— to depict the inner conflict between my sober self and my drunken alter ego.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -515,16 +513,15 @@ export default {
                         `And if`,
                         {
                             anchor: `night were peeled`,
-                            todo: REVISE,
-                            problem: `It just doesn't sound good.`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `Every now and then, I would have a Robitussin flashback, causing me to trail off and stare into the distance. When a friend asked what it felt like, I said it was like`,
+                                    `Every now and then, a Robitussin flashback would cause me to trail off and stare into the distance. When a friend asked about the experience, I said it felt like`,
                                     {
                                         anchor: `Colorforms`,
                                         wiki: `Colorforms`,
                                     },
-                                    `rapidly peeling off my eyeballs to present the illusion of a scene unfolding in time.`,
+                                    `were being rapidly peeled off my eyeballs to present the illusion of a scene unfolding in time.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -692,11 +689,10 @@ export default {
                         lyric: [
                             {
                                 anchor: `Mush`,
-                                todo: REVISE,
-                                problem: `Should first sentence have a comma? Correct punctuation in second sentence?`,
+                                todo: REVIEW,
                                 card: {
                                     description: [
-                                        `As I march onward without sleep, I sift through my past trying to recall the last time I'd known untroubled bliss. And so the music here evokes the first song I loved as a child: Johnny Horton's "`,
+                                        `Marching onward without sleep, I try to recall the last time I'd known untroubled bliss. And so the music here evokes the first song I loved as a child: Johnny Horton's "`,
                                         {
                                             anchor: `North to Alaska`,
                                             wiki: `North_to_Alaska_(song)`,
@@ -754,11 +750,10 @@ export default {
                         `of gathering up the`,
                         {
                             anchor: `suttee dust`,
-                            todo: REVISE,
-                            problem: `Maybe don't need to say ruined.`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `I imagine Sita by now to be fully immolated on the burnt rubble of our ruined relationship.`,
+                                    description: `I imagine Sita to be fully immolated by now on the burnt rubble of our failed relationship.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -789,8 +784,7 @@ export default {
                         `Have I just`,
                         {
                             anchor: `killed the thing I love`,
-                            todo: REVISE,
-                            problem: `Second sentence runs on.`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `While in prison for homosexuality,`,
@@ -798,12 +792,12 @@ export default {
                                         anchor: `Oscar Wilde`,
                                         wiki: `Oscar_Wilde`,
                                     },
-                                    `witnessed the execution of a man convicted of murdering his wife. Sympathizing with the man's plight, Wilde wrote his poem "`,
+                                    `witnessed the execution of a man convicted of murdering his wife. Sympathetic to the man's plight, Wilde wrote his poem "`,
                                     {
                                         anchor: `The Ballad of Reading Gaol`,
                                         wiki: `The_Ballad_of_Reading_Gaol`,
                                     },
-                                    `," which finds a common thread tying the man's crime to his own— and to all of humanity's— with its refrain, "For each man kills the thing he loves."`,
+                                    `," whose refrain, "For each man kills the thing he loves," finds a common thread tying the man's crime to Wilde's own— and to all of humanity's.`,
                                 ],
                             },
                         },

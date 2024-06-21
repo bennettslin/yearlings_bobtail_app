@@ -200,7 +200,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `Finally, the tree sacrifices herself completely by letting the boy make a boat from her trunk. When the boy returns as an old man, the tree is now but a stump and can only offer him a place to sit and rest.`,
+                                    description: `Finally, the tree sacrifices herself completely by letting the boy make a boat from her trunk. When the boy returns as an old man, the tree is now but a stump and can only offer him a seat to rest upon.`,
                                     dotKeys: {
                                         [REFERENCE]: true,
                                     },
@@ -333,16 +333,15 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVISE,
-                problem: `Not grammatically correct. My hope didn't come up with the puns.`,
+                todo: REVIEW,
                 card: {
                     description: [
-                        `In coming up with the puns in this stanza, my hope was for listeners to believe they'd heard a`,
+                        `The idea behind the puns in this stanza was for listeners to think they'd heard a`,
                         {
                             anchor: `mondegreen`,
                             wiki: `Mondegreen`,
                         },
-                        `. But upon reflection, they would realize that the mishearing made too much sense to be inadvertent, and was likely an`,
+                        `. Then upon reflection, they'd realize the mishearing made too much sense to be inadvertent, and was likely an`,
                         {
                             anchor: `Easter egg`,
                             wiki: `Easter_egg_(media)`,
@@ -800,8 +799,7 @@ export default {
                         {
                             anchor: `Rama king`,
                             properNoun: true,
-                            todo: REVISE,
-                            problem: `Don't say epic twice.`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `My parents might be calling me a "drama" king, in a subtle dig that everything I do is an attention-seeking act.`,
@@ -812,16 +810,7 @@ export default {
                                 },
                                 {
                                     description: [
-                                        {
-                                            anchor: `Rama`,
-                                            wiki: `Rama`,
-                                        },
-                                        `is an avatar of the Hindu god`,
-                                        {
-                                            anchor: `Vishnu`,
-                                            wiki: `Vishnu`,
-                                        },
-                                        `and the hero of the`,
+                                        `The`,
                                         {
                                             isItalic: true,
                                             lyric: {
@@ -829,17 +818,27 @@ export default {
                                                 wiki: `Ramayana`,
                                             },
                                         },
-                                        `, an epic poem of ancient India. The epic recounts the marriage of Rama to`,
+                                        `, an epic poem of ancient India, recounts the marriage of`,
+                                        {
+                                            anchor: `Rama`,
+                                            wiki: `Rama`,
+                                        },
+                                        `, an avatar of the Hindu god`,
+                                        {
+                                            anchor: `Vishnu`,
+                                            wiki: `Vishnu`,
+                                        },
+                                        `, to`,
                                         {
                                             anchor: `Sita`,
                                             wiki: `Sita`,
                                         },
-                                        `, the daughter of the earth, and his battle to rescue her after she was abducted by the demon king`,
+                                        `, the goddess of devotion. After Sita is abducted by the demon king`,
                                         {
                                             anchor: `Ravana`,
                                             wiki: `Ravana`,
                                         },
-                                        `.`,
+                                        `, Rama must battle to rescue her.`,
                                     ],
                                 },
                             ],
