@@ -1,13 +1,12 @@
+.Anchor {
+    pointer-events: none;
+}
+
 .Anchor,
 .AnchorText,
 .AnchorDot {
     // Keep underline below.
     position: relative;
-    
-    .TW__showPastFutureLyrics
-    & {
-        pointer-events: none;
-    }
 }
 
 .Anchor__shown {
@@ -17,6 +16,7 @@
     &.Anchor__selectableLyric,
     &.Anchor__alwaysPointer {
         cursor: pointer;
+        pointer-events: all;
     }
 }
 

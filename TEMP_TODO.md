@@ -1,6 +1,7 @@
 # Bug
 * Can't click on popup, then mouse up on overlay. Minor issue?
-* Hovering on dotless anchor does not hover verse underneath
+* Selecting different filmstrip cell when activated is a little wonky
+    * Behavior isn't consistent with slider and activated verses
 
 # TODO
 * Make turning off popups more obvious. (Wade brought this up.)
