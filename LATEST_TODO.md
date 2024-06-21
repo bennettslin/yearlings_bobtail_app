@@ -1,6 +1,6 @@
 # Latest todo
 * Revise some annotations
-* Reviews starting with Uncanny
+* Reviews starting with Vegan
 * Allow annotations to be clicked in dashboard
     * Change hrefProp to something else
     * Always have href on Anchor tag

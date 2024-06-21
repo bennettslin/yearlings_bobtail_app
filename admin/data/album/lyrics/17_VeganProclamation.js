@@ -72,7 +72,6 @@ export default {
                                 `"If you're just starting out, you need to decide right now: Either you stick with quality vinyl, or you buy only the bargain bin LPs. You`,
                                 {
                                     anchor: `can't have both`,
-                                    todo: REVIEW,
                                     card: {
                                         description: `A friend offered me this advice when I was looking to buy a used turntable— and as it turns out, what's true for vinyl records holds just as well for life decisions. I couldn't have two selves, with one to earn praise for my kindness, and the other to take the blame for my selfish desires. A single hurtful deed corrupts everything else; I knew this now.`,
                                         dotKeys: {
@@ -109,7 +108,6 @@ export default {
                         {
                             anchor: `Odin`,
                             properNoun: true,
-                            todo: REVIEW,
                             card: {
                                 description: `As a child, I didn't pay much attention to Odin; he seemed to just come with the house. So when Sita and I adopted a cat together, I was surprised by how naturally the instinct to nurture a pet came to me. Years later, after my failure to nurture the relationship with Sita led to our final breakup, I thought of Odin often.`,
                                 dotKeys: {
@@ -183,7 +181,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `In the Book of Genesis, God gave life to Eve by taking one of Adam's ribs. By contrast, my promise to give of myself proved to be a false rib— given that Sita could never truly be alive with me, even as she felt unworthy to begin life anew with someone else.`,
+                                    `In the Book of Genesis, God gave life to Eve by giving her one of Adam's ribs. By contrast, my own promise to give of myself proved to be a false rib— given that Sita could never truly be alive with me, even as she felt unworthy to begin life anew with someone else.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
