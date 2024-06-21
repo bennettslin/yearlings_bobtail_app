@@ -1,10 +1,6 @@
 import {
     SPACE,
     ENTER,
-    // PREVIOUS_VERSE_KEY,
-    // NEXT_VERSE_KEY,
-    // PREVIOUS_SCENE_KEY,
-    // NEXT_SCENE_KEY,
     ARROW_UP,
     ARROW_DOWN,
     META_ARROW_UP,
@@ -16,15 +12,6 @@ const _getIsNavKey = keyName => (
 )
 
 export const getKeyName = e => {
-    // if (
-    //     e.altKey ||
-    //     e.ctrlKey ||
-    //     e.metaKey ||
-    //     e.shiftKey
-    // ) {
-    //     return ''
-    // }
-
     let keyName = e.key
 
     if (
