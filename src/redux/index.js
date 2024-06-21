@@ -71,6 +71,7 @@ export const getAlbumReducers = ({
     windowWidth,
     pathname,
     search,
+    isAdminPageWithStore,
 }) => {
     const {
         initialSongIndex,
@@ -79,52 +80,57 @@ export const getAlbumReducers = ({
     } = getInitialAlbumIndices(pathname, search)
 
     return combineReducers({
+        // These are still needed by admin pages.
         [ACCESS_STORE]: getAccessReducer({ initialAnnotationIndex }),
         [ACTIVATED_STORE]: ActivatedReducer,
-        [ANNOTATION_STORE]: AnnotationReducer,
-        [AUDIO_STORE]: AudioReducer,
-        [BANNER_STORE]: BannerReducer,
         [DOTS_STORE]: getDotsReducer(initialAnnotationIndex),
-        [DOTS_SLIDE_STORE]: DotsSlideReducer,
-        [ENTRANCE_STORE]: EntranceReducer,
-        [ERROR_STORE]: ErrorReducer,
-        [FOCUS_STORE]: FocusReducer,
-        [HOVER_STORE]: HoverReducer,
         [LYRIC_STORE]: getLyricReducer({
             initialSongIndex,
             initialVerseIndex,
             initialAnnotationIndex,
         }),
-        [OPTION_STORE]: getOptionReducer({
-            initialSongIndex,
-            initialAnnotationIndex,
-        }),
-        [PLAYERS_STORE]: PlayersReducer,
-        [PROMO_STORE]: getPromoReducer({
-            initialPitchIndices: getInitialPitchIndices(pathname),
-        }),
-        [SCENE_STORE]: getSceneReducer({
-            initialSongIndex,
-            initialVerseIndex,
-        }),
-        [SCROLL_CAROUSEL_STORE]: ScrollCarouselReducer,
-        [SCROLL_LYRIC_STORE]: ScrollLyricReducer,
         [SELECTED_STORE]: getSelectedReducer({
             initialSongIndex,
             initialVerseIndex,
             initialAnnotationIndex,
         }),
-        [SESSION_STORE]: getSessionReducer({
-            initialSongIndex,
-            initialAnnotationIndex,
-        }),
         [SLIDER_STORE]: SliderReducer,
         [TOGGLE_STORE]: getToggleReducer(),
-        [VERSE_BARS_STORE]: VerseBarsReducer,
-        [VIEWPORT_STORE]: getViewportReducer({
-            windowHeight,
-            windowWidth,
-        }),
+
+        // These are not needed by admin pages.
+        ...!isAdminPageWithStore && {
+            [ANNOTATION_STORE]: AnnotationReducer,
+            [AUDIO_STORE]: AudioReducer,
+            [BANNER_STORE]: BannerReducer,
+            [DOTS_SLIDE_STORE]: DotsSlideReducer,
+            [ENTRANCE_STORE]: EntranceReducer,
+            [ERROR_STORE]: ErrorReducer,
+            [FOCUS_STORE]: FocusReducer,
+            [HOVER_STORE]: HoverReducer,
+            [OPTION_STORE]: getOptionReducer({
+                initialSongIndex,
+                initialAnnotationIndex,
+            }),
+            [PLAYERS_STORE]: PlayersReducer,
+            [PROMO_STORE]: getPromoReducer({
+                initialPitchIndices: getInitialPitchIndices(pathname),
+            }),
+            [SCENE_STORE]: getSceneReducer({
+                initialSongIndex,
+                initialVerseIndex,
+            }),
+            [SCROLL_CAROUSEL_STORE]: ScrollCarouselReducer,
+            [SCROLL_LYRIC_STORE]: ScrollLyricReducer,
+            [SESSION_STORE]: getSessionReducer({
+                initialSongIndex,
+                initialAnnotationIndex,
+            }),
+            [VERSE_BARS_STORE]: VerseBarsReducer,
+            [VIEWPORT_STORE]: getViewportReducer({
+                windowHeight,
+                windowWidth,
+            }),
+        },
     })
 }
 

@@ -18,17 +18,20 @@ const getReducersIfNeeded = ({
     search,
 
 }) => {
+    const isAdminPageWithStore = getIsAdminPageWithStore(pathname)
+
     if (
         // For some reason, server side needs store for all pages.
         getIsServerSide() ||
         getIsAlbumSession(pathname) ||
-        getIsAdminPageWithStore(pathname)
+        isAdminPageWithStore
     ) {
         return getAlbumReducers({
             windowHeight,
             windowWidth,
             pathname,
             search,
+            isAdminPageWithStore,
         })
     } else if (
         getIsPromoSession(pathname) ||
