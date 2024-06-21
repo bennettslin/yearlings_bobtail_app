@@ -18,9 +18,9 @@
             background-color $transitionDuration__fast;
     }
 
-    .TW__lyricsLocked
+    .TW__showPastFutureLyrics
     &,
-    .TW__lyricsLocked
+    .TW__showPastFutureLyrics
     .Verse__notCursor.Verse__selected
     & {
         background-color: $colour__neutral__dark;
@@ -44,7 +44,7 @@
         background-color: $colour__playing__empty;
     }
 
-    .TW__lyricsLocked
+    .TW__showPastFutureLyrics
     .Verse__cursor
     & {
         background-color: $colour__access__light;

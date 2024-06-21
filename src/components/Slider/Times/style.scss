@@ -3,7 +3,7 @@
 
 .SliderTimes {
 
-    .TW__lyricsLocked
+    .TW__showPastFutureLyrics
     & {
         // When slider is moving, it's above stanzas.
         z-index: $zIndex__touchOverlay;

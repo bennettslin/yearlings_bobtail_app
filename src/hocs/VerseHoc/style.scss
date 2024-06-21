@@ -2,7 +2,7 @@
 @import '../../scss/constants/zIndex';
 
 .Verse__noIndexColour {
-    .TW__lyricsLocked
+    .TW__showPastFutureLyrics
     & {
         @include mixin__textAndLinkColours($light: true);
     }
@@ -10,14 +10,14 @@
 
 .Verse__notCursor {
     // When lyrics are locked and scrolling, all verses have light text.
-    .TW__lyricsLocked.TW__isScrolling
+    .TW__showPastFutureLyrics.TW__isScrolling
     &.Verse,
 
     // When lyrics are locked and stationary, hovered verse has dark text.
-    .TW__lyricsLocked.TW__isStationary
+    .TW__showPastFutureLyrics.TW__isStationary
     &:not(:hover),
 
-    .TW__lyricsLocked
+    .TW__showPastFutureLyrics
     &.Verse__selected {
         @include mixin__textAndLinkColours($light: true);
     }
@@ -27,7 +27,7 @@
     z-index: $zIndex__lyricChild__topMost;
     
     .PlW__isPaused
-    .TW__lyricsUnlocked
+    .TW__hidePastFutureLyrics
     & {
         @include mixin__textAndLinkColours($light: true);
     }

@@ -11,7 +11,7 @@ import {
 } from '../../redux/hover/selector'
 import {
     mapIsSliderTouched,
-    mapIsLyricsLocked,
+    mapShowPastFutureLyrics,
 } from '../../redux/slider/selector'
 
 const TouchWrapper = ({ didMount, children }) => {
@@ -21,7 +21,7 @@ const TouchWrapper = ({ didMount, children }) => {
         isAnchorMoused = useSelector(mapIsAnchorMoused),
         isScrolling = useSelector(mapIsScrolling),
         isSliderTouched = useSelector(mapIsSliderTouched),
-        isLyricsLocked = useSelector(mapIsLyricsLocked)
+        showPastFutureLyrics = useSelector(mapShowPastFutureLyrics)
 
     return (
         <div
@@ -38,9 +38,9 @@ const TouchWrapper = ({ didMount, children }) => {
                         isActivated ?
                             'TW__verseActive' :
                             'TW__verseInactive',
-                        isLyricsLocked ?
-                            'TW__lyricsLocked' :
-                            'TW__lyricsUnlocked',
+                        showPastFutureLyrics ?
+                            'TW__showPastFutureLyrics' :
+                            'TW__hidePastFutureLyrics',
                         'abF',
                     ),
                 },

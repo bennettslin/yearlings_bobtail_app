@@ -77,7 +77,7 @@ const SceneCursorStylesheets = () => (
             {...{
                 className: 'SceneCursorStylesheet__lockedBefore',
                 indices: getArrayOfLength(getMaxSceneCountForAlbum()),
-                parentPrefix: `TW__lyricsLocked .${SCENE_BEFORE_PREFIX}`,
+                parentPrefix: `TW__showPastFutureLyrics .${SCENE_BEFORE_PREFIX}`,
                 childPrefix: SCENE_CURSOR_CHILD_PREFIX,
                 getStyle: index => ({
                     'background-color': index % 2 ?
@@ -90,7 +90,7 @@ const SceneCursorStylesheets = () => (
             {...{
                 className: 'SceneCursorStylesheet__lockedAfter',
                 indices: getArrayOfLength(getMaxSceneCountForAlbum()),
-                parentPrefix: `TW__lyricsLocked .${SCENE_AFTER_PREFIX}`,
+                parentPrefix: `TW__showPastFutureLyrics .${SCENE_AFTER_PREFIX}`,
                 childPrefix: SCENE_CURSOR_CHILD_PREFIX,
                 getStyle: index => ({
                     'background-color': index % 2 ?

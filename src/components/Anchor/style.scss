@@ -4,16 +4,16 @@
     // Keep underline below.
     position: relative;
     
-    .TW__lyricsLocked
+    .TW__showPastFutureLyrics
     & {
         pointer-events: none;
     }
 }
 
 .Anchor__shown {
-    .TW__lyricsUnlocked
+    .TW__hidePastFutureLyrics
     &.Anchor__selectableNotLyric,
-    .TW__isStationary.TW__lyricsUnlocked
+    .TW__isStationary.TW__hidePastFutureLyrics
     &.Anchor__selectableLyric,
     &.Anchor__alwaysPointer {
         cursor: pointer;

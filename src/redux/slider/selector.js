@@ -22,7 +22,7 @@ export const mapSliderVerseIndex = (
     { [SLIDER_STORE]: { sliderVerseIndex } },
 ) => sliderVerseIndex
 
-export const mapIsLyricsLocked = createSelector(
+export const mapShowPastFutureLyrics = createSelector(
     mapIsActivated,
     mapIsSliderMoving,
     (

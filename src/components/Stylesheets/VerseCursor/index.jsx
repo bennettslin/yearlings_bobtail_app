@@ -50,7 +50,7 @@ const VerseCursorStylesheets = () => (
             {...{
                 className: 'VerseCursorStylesheet__lockedBefore',
                 indices: getArrayOfLength(getMaxVerseCountForAlbum()),
-                parentPrefix: `TW__lyricsLocked .${VERSE_BEFORE_PREFIX}`,
+                parentPrefix: `TW__showPastFutureLyrics .${VERSE_BEFORE_PREFIX}`,
                 childPrefix: VERSE_CURSOR_CHILD_PREFIX,
                 getStyle: index => ({
                     'background-color': index % 2 ?
@@ -63,7 +63,7 @@ const VerseCursorStylesheets = () => (
             {...{
                 className: 'VerseCursorStylesheet__lockedAfter',
                 indices: getArrayOfLength(getMaxVerseCountForAlbum()),
-                parentPrefix: `TW__lyricsLocked .${VERSE_AFTER_PREFIX}`,
+                parentPrefix: `TW__showPastFutureLyrics .${VERSE_AFTER_PREFIX}`,
                 childPrefix: VERSE_CURSOR_CHILD_PREFIX,
                 getStyle: index => ({
                     'background-color': index % 2 ?

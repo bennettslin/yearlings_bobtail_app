@@ -24,7 +24,7 @@ import {
     mapSelectedSongIndex,
     mapIsSelectedLogue,
 } from '../../../redux/selected/selector'
-import { mapIsLyricsLocked } from '../../../redux/slider/selector'
+import { mapShowPastFutureLyrics } from '../../../redux/slider/selector'
 import { getMapSongTrackerWidth } from '../../../redux/tracker/selector'
 import { CAROUSEL_LYRICS_ENTERED_AFTER_SONG_CHANGE_DONE_DURATION } from '../../../constants/entrance'
 import './style'
@@ -43,7 +43,7 @@ const SongBanner = () => {
         songTrackerWidth = useSelector(getMapSongTrackerWidth(audioTime)),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         isSelectedLogue = useSelector(mapIsSelectedLogue),
-        isLyricsLocked = useSelector(mapIsLyricsLocked),
+        showPastFutureLyrics = useSelector(mapShowPastFutureLyrics),
         canTransitionAfterVerseChange =
             useSelector(mapCanTransitionAfterVerseChange),
         [clientX, setClientX] = useState(0),
@@ -93,8 +93,8 @@ const SongBanner = () => {
     }
 
     const onMouseEnter = e => {
-        if (isLyricsLocked || getSongIsLogue(selectedSongIndex)) {
-            // Do not toggle banner hovering state.
+        // Do not toggle banner hovering state.
+        if (showPastFutureLyrics || getSongIsLogue(selectedSongIndex)) {
             return
         }
 
@@ -105,16 +105,17 @@ const SongBanner = () => {
         if (
             // If user agent desktop, banner must be hovering.
             (IS_USER_AGENT_DESKTOP && !isBannerHovering) ||
+
+            // Do not register click in logue.
             getSongIsLogue(selectedSongIndex)
         ) {
-            // Do not register click in logue.
             return
         }
 
         stopPropagation.current(e)
 
-        if (isLyricsLocked) {
-            // Do nothing if lyrics locked, but still register click.
+        // Just register click if showing past and future lyrics.
+        if (showPastFutureLyrics) {
             return
         }
 
@@ -171,7 +172,7 @@ const SongBanner = () => {
 
                     (
                         isPlaying ||
-                        isLyricsLocked
+                        showPastFutureLyrics
                     ) ?
                         'textShadow__light' :
                         'textShadow__dark',
@@ -179,7 +180,7 @@ const SongBanner = () => {
                     'dropShadow',
 
                     isBannerHovering &&
-                    !isLyricsLocked &&
+                    !showPastFutureLyrics &&
                     !isSelectedLogue &&
                         'dropShadow__lightHover',
 

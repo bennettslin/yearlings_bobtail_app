@@ -8,8 +8,6 @@
 .FilmstripCell {
     position: relative;
     width: 100%;
-    height: 100%;
-    border-radius: 1px;
 
     .DW__userAgentDesktop
     .ShW__canTransitionAfterSongChange
@@ -17,7 +15,7 @@
         transition: background-color $transitionDuration__default;
     }
 
-    .TW__lyricsLocked
+    .TW__showPastFutureLyrics
     .FilmstripScene__selected
     &.FilmstripCell__notCursor {
         background-color: $colour__neutral__dark;
@@ -25,13 +23,42 @@
 
     .FilmstripScene__interactable:hover
     & {
-        background-color: $colour__interact__medium;
+        // This needs to override odd and even styling.
+        background-color: $colour__interact__medium !important;
         box-shadow: $boxShadow__activeVerse;
     }
 
     .FilmstripScene__interactable:active
     & {
         transform: scaleY(0.9);
+    }
+}
+
+.FilmstripCell,
+.TW__showPastFutureLyrics
+.FilmstripCell__cursor {
+    top: 0;
+    height: 100%;
+    border-radius: 1px;
+}
+
+.FilmstripCell__cursor {
+    background-color: $colour__paused__empty;
+
+    box-shadow: $boxShadow__cursorVerse;
+    border-radius: $borderRadius__narrow;
+    top: -1.5px;
+    height: calc(100% + 3px);
+
+    .PlW__isPlaying
+    & {
+        background-color: $colour__playing__empty;
+    }
+
+    .TW__showPastFutureLyrics
+    & {
+        background-color: $colour__access__light;
+        box-shadow: $boxShadow__activeVerse;
     }
 }
 
@@ -42,42 +69,4 @@
      */
     width: calc(100% + #{$length__filmPerf});
     left: math.div(-$length__filmPerf, 2);
-}
-
-.FilmstripCell {
-    .FilmstripScene__selected
-    & {
-        // This takes precedence over any odd/even, before/after styling.
-        background-color: $colour__neutral__dark;
-    }
-}
-
-.FilmstripCell__cursor {
-    .TW__lyricsUnlocked
-    & {
-        background-color: $colour__paused__empty;
-    }
-
-    .PlW__isPlaying
-    & {
-        background-color: $colour__playing__empty;
-    }
-
-    .TW__lyricsLocked
-    & {
-        background-color: $colour__access__light;
-    }
-
-    .TW__verseActive
-    & {
-        box-shadow: $boxShadow__activeVerse;
-    }
-
-    .TW__verseInactive
-    & {
-        box-shadow: $boxShadow__cursorVerse;
-        border-radius: $borderRadius__narrow;
-        top: -1.5px;
-        height: calc(100% + 3px);
-    }
 }

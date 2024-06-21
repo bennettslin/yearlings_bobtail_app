@@ -5,7 +5,7 @@
     position: relative;
 
     // Specific selector to override.
-    .TW__lyricsLocked
+    .TW__showPastFutureLyrics
     .Anchor
     & {
         display: inline;
@@ -54,7 +54,7 @@
     }
 
     // Specific selector to override.
-    .TW__lyricsLocked
+    .TW__showPastFutureLyrics
     .Anchor
     & {
         display: none;

@@ -20,12 +20,12 @@
     }
 
     .PlW__song
-    .TW__lyricsUnlocked.TW__bannerHovering
+    .TW__hidePastFutureLyrics.TW__bannerHovering
     & {
         cursor: pointer;
     }
 
-    .TW__lyricsLocked
+    .TW__showPastFutureLyrics
     & {
         background-color: $colour__access__light;
     }
@@ -37,14 +37,14 @@
 
     .DW__userAgentDesktop
     .PlW__song
-    .TW__lyricsUnlocked.TW__bannerHovering
+    .TW__hidePastFutureLyrics.TW__bannerHovering
     &:hover {
         background-color: $colour__interactPause__empty;
     }
 
     .DW__userAgentDesktop
     .PlW__isPlaying
-    .TW__lyricsUnlocked.TW__bannerHovering
+    .TW__hidePastFutureLyrics.TW__bannerHovering
     &:hover {
         background-color: $colour__interactPlay__empty;
     }
@@ -54,7 +54,7 @@
 
     .DW__userAgentDesktop
     .PlW__song
-    .TW__lyricsUnlocked.TW__bannerHovering
+    .TW__hidePastFutureLyrics.TW__bannerHovering
     .SongBanner:hover
     & {
         background-color: $colour__interactPause__filled;
@@ -62,7 +62,7 @@
 
     .DW__userAgentDesktop
     .PlW__isPlaying
-    .TW__lyricsUnlocked.TW__bannerHovering
+    .TW__hidePastFutureLyrics.TW__bannerHovering
     .SongBanner:hover
     & {
         background-color: $colour__interactPlay__filled;

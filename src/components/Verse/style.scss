@@ -63,13 +63,13 @@
      * similarly for consistency.
      */
 
-    .TW__lyricsUnlocked
+    .TW__hidePastFutureLyrics
     & {
         // Default side verse.
         background-color: $colour__neutral__light;
     }
 
-    .TW__lyricsLocked
+    .TW__showPastFutureLyrics
     & {
         // Slider side verse.
         background-color: $colour__neutral__dark;
