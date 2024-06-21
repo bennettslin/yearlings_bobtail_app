@@ -1,5 +1,6 @@
 export const ACCESS_STORE = 'access'
 export const ACTIVATED_STORE = 'activated'
+export const ADMIN_STORE = 'admin'
 export const ANNOTATION_STORE = 'annotation'
 export const AUDIO_STORE = 'audio'
 export const BANNER_STORE = 'banner'

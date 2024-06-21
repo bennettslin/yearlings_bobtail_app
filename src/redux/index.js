@@ -49,6 +49,7 @@ import {
     TOGGLE_STORE,
     VERSE_BARS_STORE,
     VIEWPORT_STORE,
+    ADMIN_STORE,
 } from '../constants/store'
 import {
     getInitialAlbumIndices,
@@ -56,6 +57,7 @@ import {
     getInitialPromoPageKey,
 } from '../utils/gatsby/initial'
 import { PITCH_KEYS } from '../constants/routing'
+import { getAdminReducer } from './admin/reducer'
 
 const getInitialPitchIndices = pathname => (
     Object.fromEntries(
@@ -71,7 +73,7 @@ export const getAlbumReducers = ({
     windowWidth,
     pathname,
     search,
-    isAdminPageWithStore,
+    isReduxAdminPage,
 }) => {
     const {
         initialSongIndex,
@@ -80,9 +82,10 @@ export const getAlbumReducers = ({
     } = getInitialAlbumIndices(pathname, search)
 
     return combineReducers({
-        // These are still needed by admin pages.
+        // These are also needed by admin pages.
         [ACCESS_STORE]: getAccessReducer({ initialAnnotationIndex }),
         [ACTIVATED_STORE]: ActivatedReducer,
+        [ADMIN_STORE]: getAdminReducer(isReduxAdminPage),
         [DOTS_STORE]: getDotsReducer(initialAnnotationIndex),
         [LYRIC_STORE]: getLyricReducer({
             initialSongIndex,
@@ -98,7 +101,7 @@ export const getAlbumReducers = ({
         [TOGGLE_STORE]: getToggleReducer(),
 
         // These are not needed by admin pages.
-        ...!isAdminPageWithStore && {
+        ...!isReduxAdminPage && {
             [ANNOTATION_STORE]: AnnotationReducer,
             [AUDIO_STORE]: AudioReducer,
             [BANNER_STORE]: BannerReducer,
@@ -141,13 +144,12 @@ export const getPromoReducers = ({
 
 }) => combineReducers({
     [ACCESS_STORE]: getAccessReducer({ isPromoPage: true }),
+    [ADMIN_STORE]: getAdminReducer(),
     [PROMO_STORE]: getPromoReducer({
         initialPitchIndices: getInitialPitchIndices(pathname),
         initialPromoPage: getInitialPromoPageKey(pathname),
     }),
-    [SELECTED_STORE]: getSelectedReducer({
-        isPromoPage: true,
-    }),
+    [SELECTED_STORE]: getSelectedReducer({ isPromoPage: true }),
     [SESSION_STORE]: getSessionReducer({ isPromoPage: true }),
     [TOGGLE_STORE]: getToggleReducer({ isPromoPage: true }),
     [VIEWPORT_STORE]: getViewportReducer({

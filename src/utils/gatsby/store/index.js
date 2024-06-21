@@ -8,7 +8,7 @@ import {
     getPromoReducers,
 } from '../../../redux'
 import { getIsAlbumSession } from '../album'
-import { getIsAdminPageWithStore } from '../admin'
+import { getIsReduxAdminPage } from '../admin'
 import { getIsNotFoundPage } from '../session'
 
 const getReducersIfNeeded = ({
@@ -18,20 +18,20 @@ const getReducersIfNeeded = ({
     search,
 
 }) => {
-    const isAdminPageWithStore = getIsAdminPageWithStore(pathname)
+    const isReduxAdminPage = getIsReduxAdminPage(pathname)
 
     if (
         // For some reason, server side needs store for all pages.
         getIsServerSide() ||
         getIsAlbumSession(pathname) ||
-        isAdminPageWithStore
+        isReduxAdminPage
     ) {
         return getAlbumReducers({
             windowHeight,
             windowWidth,
             pathname,
             search,
-            isAdminPageWithStore,
+            isReduxAdminPage,
         })
     } else if (
         getIsPromoSession(pathname) ||

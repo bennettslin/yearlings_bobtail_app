@@ -5,7 +5,7 @@ export const getIsAdminPage = pathname => (
     !IS_PRODUCTION && VALID_ADMIN_PATHS[pathname]
 )
 
-export const getIsAdminPageWithStore = pathname => (
+export const getIsReduxAdminPage = pathname => (
     !IS_PRODUCTION && (
         // Annotations page needs access to selected store.
         pathname === 'annotations'
