@@ -6,13 +6,13 @@
             * Don't open wiki
             * Instead, open in new tab without focus on tab
     * In admin, just always open in new tab without focus on tab
-* Revise some annotations
-* Reviews starting with Vegan
-* Allow annotations to be clicked in dashboard
+* Legacy steps: Allow annotations to be clicked in dashboard
     * Change hrefProp to something else
     * Always have href on Anchor tag
     * Prevent wiki href by default, programmatically show wiki
     * When Command key is pressed, disable Javascript
+* Revise some annotations
+* Reviews starting with Vegan
 
 ### Must do
 * Illustrator

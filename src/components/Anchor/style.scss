@@ -3,6 +3,11 @@
 .AnchorDot {
     // Keep underline below.
     position: relative;
+    
+    .TW__lyricsLocked
+    & {
+        pointer-events: none;
+    }
 }
 
 .Anchor__shown {

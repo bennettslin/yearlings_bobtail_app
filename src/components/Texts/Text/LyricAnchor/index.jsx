@@ -18,7 +18,6 @@ import {
     mapLyricAnnotationIndex,
     getMapIsLyricAnnotation,
 } from '../../../../redux/lyric/selector'
-import { mapIsLyricsLocked } from '../../../../redux/slider/selector'
 import './style'
 
 const TextLyricAnchor = forwardRef(({
@@ -43,7 +42,6 @@ const TextLyricAnchor = forwardRef(({
         accessedWikiWormholeIndex = useSelector(mapAccessedWikiWormholeIndex),
         isSelected = useSelector(getMapIsLyricAnnotation(annotationIndex)),
         lyricAnnotationIndex = useSelector(mapLyricAnnotationIndex),
-        isLyricsLocked = useSelector(mapIsLyricsLocked),
         isWikiAnchor = Boolean(wikiIndex)
 
     let isAccessed = false
@@ -63,7 +61,7 @@ const TextLyricAnchor = forwardRef(({
     }
 
     const handleAnchorClick = e => {
-        if (isSelected || isLyricsLocked) {
+        if (isSelected) {
             return false
         }
 
@@ -84,11 +82,8 @@ const TextLyricAnchor = forwardRef(({
     }
 
     const handleAnchorMouse = isMoused => {
-        // If selected or lyrics are locked, only dispatch exit, not enter.
-        if (
-            (!isSelected && !isLyricsLocked) ||
-            !isMoused
-        ) {
+        // If selected, only dispatch exit, not enter.
+        if (!isSelected || !isMoused) {
             dispatch(updateIsAnchorMoused(isMoused))
         }
     }
