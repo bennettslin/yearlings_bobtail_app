@@ -5,6 +5,8 @@ import {
     ARROW_DOWN,
     META_ARROW_UP,
     META_ARROW_DOWN,
+    COMMAND,
+    CONTROL,
 } from '../../constants/access'
 
 const _getIsNavKey = keyName => (
@@ -16,7 +18,9 @@ export const getKeyName = e => {
 
     if (
         keyName === 'Alt' ||
-        keyName === 'Shift'
+        keyName === 'Shift' ||
+        keyName === COMMAND ||
+        keyName === CONTROL
     ) {
         return ''
     }
@@ -55,12 +59,6 @@ export const getShouldHandleOnKeyDown = keyName => {
         // Volume keys can only be handled on key down.
         keyName === META_ARROW_UP ||
         keyName === META_ARROW_DOWN ||
-
-        // But these are not nav keys, and they are handled on key down.
-        // keyName === PREVIOUS_VERSE_KEY ||
-        // keyName === NEXT_VERSE_KEY ||
-        // keyName === PREVIOUS_SCENE_KEY ||
-        // keyName === NEXT_SCENE_KEY ||
 
         // This is here just to prevent default.
         keyName === SPACE

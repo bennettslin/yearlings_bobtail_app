@@ -36,38 +36,11 @@ export const getAccessReducer = ({
         { type, payload },
     ) => {
         switch (type) {
-            case ACCESS_STORE: {
-                const {
-                        incrementedCommandKeysCount,
-                        decrementedCommandKeysCount,
-                        ...remainingPayload
-                    } = payload,
-                    newPayload = {}
-
-                if (
-                    hasKey(incrementedCommandKeysCount) ||
-                    hasKey(decrementedCommandKeysCount)
-                ) {
-                    const { commandKeysCount: prevCommandKeysCount } = state
-                    let commandKeysCount = prevCommandKeysCount
-
-                    if (incrementedCommandKeysCount) {
-                        commandKeysCount = prevCommandKeysCount + 1
-                    }
-
-                    if (decrementedCommandKeysCount) {
-                        commandKeysCount = Math.max(prevCommandKeysCount - 1, 0)
-                    }
-
-                    newPayload.commandKeysCount = commandKeysCount
-                }
-
+            case ACCESS_STORE:
                 return {
                     ...state,
-                    ...remainingPayload,
-                    ...newPayload,
+                    ...payload,
                 }
-            }
             case DOTS_STORE: {
                 const { dotIndex } = payload
                 return hasKey(dotIndex) ? {

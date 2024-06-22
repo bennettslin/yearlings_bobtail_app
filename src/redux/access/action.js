@@ -36,13 +36,3 @@ export const resetAccessedNav = () => ({
     type: ACCESS_STORE,
     payload: ACCESS_NAV_DEFAULTS,
 })
-
-export const incrementCommandKeysCount = () => ({
-    type: ACCESS_STORE,
-    payload: { incrementedCommandKeysCount: true },
-})
-
-export const decrementCommandKeysCount = () => ({
-    type: ACCESS_STORE,
-    payload: { decrementedCommandKeysCount: true },
-})

@@ -1,7 +1,6 @@
 # Latest todo
 * Wrap up anchors work
     * Ensure it works in annotation page
-    * Get rid of Redux meta keys
     * Test
 * Revise some annotations
 * Reviews starting with Vegan

@@ -1,11 +1,7 @@
 // Component that handles all user events from keyboard.
 import React, { forwardRef, useImperativeHandle, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import {
-    decrementCommandKeysCount,
-    incrementCommandKeysCount,
-    updateAccessStore,
-} from '../../redux/access/action'
+import { updateAccessStore } from '../../redux/access/action'
 import { updateIsAutoScroll } from '../../redux/toggle/action'
 import NavigationManager from './Navigation'
 import LetterManager from './Letter'
@@ -24,8 +20,6 @@ import {
     CAPS_LOCK,
     ESCAPE,
     TAB,
-    COMMAND,
-    CONTROL,
 } from '../../constants/access'
 
 const KeyManager = forwardRef((props, ref) => {
@@ -88,11 +82,6 @@ const KeyManager = forwardRef((props, ref) => {
             return false
         }
 
-        if (keyName === COMMAND || keyName === CONTROL) {
-            dispatch(incrementCommandKeysCount())
-            return false
-        }
-
         // Show key as registered in the UI.
         dispatch(updateAccessStore({ accessedKey: keyName }))
 
@@ -140,11 +129,6 @@ const KeyManager = forwardRef((props, ref) => {
             keyName === TAB ||
             keyName === CAPS_LOCK
         ) {
-            return false
-        }
-
-        if (keyName === COMMAND || keyName === CONTROL) {
-            dispatch(decrementCommandKeysCount())
             return false
         }
 
