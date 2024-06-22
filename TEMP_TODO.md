@@ -2,6 +2,7 @@
 * Can't click on popup, then mouse up on overlay. Minor issue?
 * Selecting different filmstrip cell when activated is a little wonky
     * Behavior isn't consistent with slider and activated verses
+* Accessed wiki anchor doesn't show upon load
 
 # TODO
 * Make turning off popups more obvious. (Wade brought this up.)

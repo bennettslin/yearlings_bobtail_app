@@ -11,11 +11,8 @@
 
 .Anchor__shown {
 
-    .TW__hidePastFutureLyrics
-    &.Anchor__animatableNotLyric,
-
     .TW__isStationary.TW__hidePastFutureLyrics
-    &.Anchor__animatableLyric,
+    &.Anchor__animatable,
 
     &.Anchor__alwaysPointer {
         cursor: pointer;

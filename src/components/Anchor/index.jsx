@@ -20,7 +20,6 @@ const Anchor = forwardRef(({
     isAccessed: isAccessedBeforeDesktop,
     isSelected,
     dotsBit,
-    isLyric,
     isWikiAnchor,
     text,
     textConfig,
@@ -83,12 +82,9 @@ const Anchor = forwardRef(({
                         'Anchor',
                         isShown && 'Anchor__shown',
                         alwaysPointer && 'Anchor__alwaysPointer',
-                        isAccessed && !isSelected && 'Anchor__accessed',
                         !isSelected && [
                             'Anchor__animatable',
-                            isLyric ?
-                                'Anchor__animatableLyric' :
-                                'Anchor__animatableNotLyric',
+                            isAccessed && 'Anchor__accessed',
                         ],
                         !isWikiAnchor && 'Anchor__noWrap',
                         className,
@@ -149,7 +145,6 @@ Anchor.propTypes = {
     isAnnotationTitle: PropTypes.bool,
     isAccessed: PropTypes.bool,
     isSelected: PropTypes.bool,
-    isLyric: PropTypes.bool,
     isWikiAnchor: PropTypes.bool,
     dotsBit: PropTypes.number,
     text: PropTypes.any,

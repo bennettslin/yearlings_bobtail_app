@@ -109,7 +109,6 @@ const TextLyricAnchor = forwardRef(({
                     analyticsLabel: isWikiAnchor ? 'wiki' : 'lyric',
                     isAccessed: isLyricAnchorAccessed,
                     isSelected,
-                    isLyric: !isWikiAnchor,
                     isWikiAnchor,
                     text,
                     textConfig: {

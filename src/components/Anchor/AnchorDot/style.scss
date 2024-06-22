@@ -22,10 +22,9 @@
 .DotAnchor__animatable {
     .Anchor__accessed
     &,
-    .Anchor__animatableNotLyric:hover
-    &,
+
     .TW__isStationary
-    .Anchor__animatableLyric:hover
+    .Anchor__animatable:hover
     & {
         animation: bounceHover $transitionDuration__slow;
     }
@@ -34,6 +33,7 @@
     .PaLEnter
     .Anchor__accessed
     &,
+
     .Anchor__animatable:active
     & {
         transform: scale(0.9);
