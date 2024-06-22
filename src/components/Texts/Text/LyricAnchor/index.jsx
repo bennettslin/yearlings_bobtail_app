@@ -79,7 +79,14 @@ const TextLyricAnchor = forwardRef(({
 
     const handleAnchorMouse = isMoused => {
         // If selected, only dispatch exit, not enter.
-        if (!isSelected || !isMoused) {
+        if (
+            !isWikiAnchor &&
+            (!isSelected || !isMoused)
+        ) {
+            /**
+             * This is solely to prevent hover over lyric anchor to register as
+             * hover over verse.
+             */
             dispatch(updateIsAnchorMoused(isMoused))
         }
     }
@@ -100,9 +107,9 @@ const TextLyricAnchor = forwardRef(({
                         annotationIndex &&
                             `${ANCHOR_SCROLL}__${annotationIndex}`,
 
-                        wikiIndex && `wiki__${wikiIndex}`,
+                        isWikiAnchor && `wiki__${wikiIndex}`,
                     ),
-                    analyticsLabel: wikiIndex ? 'wiki' : 'lyric',
+                    analyticsLabel: isWikiAnchor ? 'wiki' : 'lyric',
                     isAccessed: isLyricAnchorAccessed,
                     isSelected,
                     isLyric: !isWikiAnchor,
