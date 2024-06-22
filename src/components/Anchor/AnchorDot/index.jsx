@@ -33,7 +33,7 @@ const AnchorDot = ({
                         className: cx(
                             'AnchorDot',
                             isAccessed && !isSelected && 'DotAnchor__accessed',
-                            !isSelected && 'DotAnchor__animatable',
+                            !isSelected && 'AnchorDot__animatable',
                         ),
                         dotKey: selectedDotKey,
                         isAccessed,

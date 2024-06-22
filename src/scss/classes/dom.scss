@@ -2,6 +2,8 @@
 @import '../constants/font';
 
 a {
+    // Needed to override default styling when anchor becomes plain text.
+    color: $colour__text__dark;
     text-decoration: none;
 }
 

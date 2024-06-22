@@ -2,7 +2,6 @@
 * Revise five annotations
 * Review ten annotations starting with Vegan
 * Fix anchors in production
-    * Wiki anchors get unstyled when reference is deselected
     * External links don't work in promo page
     * Also alwaysPointer
 * Onesheet song links

@@ -47,7 +47,7 @@ const AnchorText = ({
                             <span
                                 {...{
                                     className: cx(
-                                        'TextAnchor__plainText',
+                                        'AnchorText__plainText',
                                     ),
                                 }}
                             >
@@ -59,14 +59,14 @@ const AnchorText = ({
                         <span
                             {...{
                                 className: cx(
-                                    'TextAnchor__linkText',
+                                    'AnchorText__linkText',
 
                                     isAccessed && !isSelected ?
-                                        'TextAnchor__linkText__accessed' :
-                                        'TextAnchor__linkText__default',
+                                        'AnchorText__linkText__accessed' :
+                                        'AnchorText__linkText__default',
 
                                     isSelected &&
-                                        'TextAnchor__linkText__selected',
+                                        'AnchorText__linkText__selected',
                                 ),
                             }}
                         >

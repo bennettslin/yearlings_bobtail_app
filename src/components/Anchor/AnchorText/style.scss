@@ -1,7 +1,7 @@
 @import '../../../scss/constants/colour';
 @import '../../../scss/constants/transition';
 
-.TextAnchor__plainText {
+.AnchorText__plainText {
     position: relative;
 
     // Specific selector to override.
@@ -17,7 +17,7 @@
     }
 }
 
-.TextAnchor__linkText {
+.AnchorText__linkText {
     /**
      * To fix a bug in Chrome where an anchor split onto a new line was unable
      * to determine the dimensions of a span on the second line, the Underline
@@ -44,7 +44,7 @@
     // "Root accessed letter Enter, child accessed letter Enter."
     .PaLEnter
     .CaLEnter
-    &.TextAnchor__linkText__accessed {
+    &.AnchorText__linkText__accessed {
         /**
         * Overly specific selectors are needed to override default link text
         * styling in cursored verse, which also has the !important flag. This
@@ -61,7 +61,7 @@
     }
 }
 
-.TextAnchor__linkText__default {
+.AnchorText__linkText__default {
     .Anchor__shown
     & {
         display: inline;
@@ -73,7 +73,7 @@
     }
 }
 
-.TextAnchor__linkText__accessed {
+.AnchorText__linkText__accessed {
     .Anchor__accessed.Anchor__shown
     & {
         display: inline;
