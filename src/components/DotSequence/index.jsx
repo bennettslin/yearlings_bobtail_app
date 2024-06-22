@@ -13,6 +13,7 @@ import './style'
 
 const DotSequence = ({
     didMount,
+    selectedDotsBit,
     dotsBit,
     inAnnotationCard,
     inTextAnchor,
@@ -40,7 +41,7 @@ const DotSequence = ({
                     <SequenceDot {...other}
                         {...{
                             key: dotKey,
-                            isShown: getDotsBitHasKey(dotsBit, dotKey),
+                            isShown: getDotsBitHasKey(selectedDotsBit, dotKey),
                             dotKey,
                             inTextAnchor,
                             inAnnotationCard,
@@ -54,6 +55,7 @@ const DotSequence = ({
 
 DotSequence.propTypes = {
     didMount: PropTypes.bool.isRequired,
+    selectedDotsBit: PropTypes.number.isRequired,
     dotsBit: PropTypes.number.isRequired,
     inAnnotationCard: PropTypes.bool,
     inTextAnchor: PropTypes.bool,

@@ -12,7 +12,7 @@ const DotSequenceParent = ({ didMount, ...props }) => {
     return didMount && (
         <DotSequence
             {...{
-                dotsBit: selectedDotsBit,
+                selectedDotsBit,
                 ...props,
             }}
         />

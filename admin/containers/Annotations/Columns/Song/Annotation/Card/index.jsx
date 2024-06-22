@@ -7,6 +7,7 @@ import {
     getDotsBitForAnnotationCard,
 } from '../../../../../../../src/endpoint/album/cards'
 import DotSequence from '../../../../../../../src/components/DotSequence'
+import { FULL_DOTS_BIT } from '../../../../../../../src/constants/dots'
 
 const AnnotationCard = ({
     didMount,
@@ -31,7 +32,10 @@ const AnnotationCard = ({
         <div className="TodoAnnotationCard">
             <DotSequence
                 inAnnotationCard
-                {...{ dotsBit }}
+                {...{
+                    dotsBit,
+                    selectedDotsBit: FULL_DOTS_BIT,
+                }}
             />
             {description && (
                 <div className="TodoAnnotationCard__description">
