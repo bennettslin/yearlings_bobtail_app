@@ -1,26 +1,21 @@
 import { getWikiWormholesForAnnotation } from '../endpoint/album/annotations'
 
 export const getWikiUrl = ({
-    selectedSongIndex,
-    selectedWikiIndex,
-    selectedAnnotationIndex,
-    wikiAnnotationIndex,
+    songIndex,
+    annotationIndex,
+    wikiIndex,
     isMobileWiki,
 
 }) => {
-    if (selectedWikiIndex) {
+    if (wikiIndex) {
         // Since annotation index is 1-based, it's invalid if 0.
         const
-            annotationIndex =
-                wikiAnnotationIndex ||
-                selectedAnnotationIndex,
-
             annotationWikiWormholes = getWikiWormholesForAnnotation(
-                selectedSongIndex,
+                songIndex,
                 annotationIndex,
             ),
 
-            partialPath = annotationWikiWormholes[selectedWikiIndex - 1],
+            partialPath = annotationWikiWormholes[wikiIndex - 1],
 
             domainPath = isMobileWiki ?
                 'https://en.m.wikipedia.org/wiki/' :

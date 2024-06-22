@@ -68,7 +68,10 @@ const AnnotationNavigation = forwardRef((props, ref) => {
 
                     // It's a wiki anchor.
                     if (isString(wikiWormholeEntity)) {
-                        dispatchWiki.current(nextWikiWormholeIndex)
+                        dispatchWiki.current(
+                            nextWikiWormholeIndex,
+                            selectedAnnotationIndex,
+                        )
 
                     // It's a wormhole index.
                     } else {

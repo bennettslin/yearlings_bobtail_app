@@ -1,6 +1,12 @@
 import { combineReducers } from 'redux'
+import {
+    getInitialAlbumIndices,
+    getInitialPitchIndex,
+    getInitialPromoPageKey,
+} from '../utils/gatsby/initial'
 import { getAccessReducer } from './access/reducer'
 import ActivatedReducer from './activated/reducer'
+import { getAdminReducer } from './admin/reducer'
 import AnnotationReducer from './annotation/reducer'
 import AudioReducer from './audio/reducer'
 import BannerReducer from './banner/reducer'
@@ -23,7 +29,6 @@ import SliderReducer from './slider/reducer'
 import { getToggleReducer } from './toggle/reducer'
 import VerseBarsReducer from './verseBars/reducer'
 import { getViewportReducer } from './viewport/reducer'
-
 import {
     ACCESS_STORE,
     ACTIVATED_STORE,
@@ -51,13 +56,7 @@ import {
     VIEWPORT_STORE,
     ADMIN_STORE,
 } from '../constants/store'
-import {
-    getInitialAlbumIndices,
-    getInitialPitchIndex,
-    getInitialPromoPageKey,
-} from '../utils/gatsby/initial'
 import { PITCH_KEYS } from '../constants/routing'
-import { getAdminReducer } from './admin/reducer'
 
 const getInitialPitchIndices = pathname => (
     Object.fromEntries(
@@ -97,7 +96,6 @@ export const getAlbumReducers = ({
             initialVerseIndex,
             initialAnnotationIndex,
         }),
-        [SLIDER_STORE]: SliderReducer,
         [TOGGLE_STORE]: getToggleReducer(),
 
         // These are not needed by admin pages.
@@ -128,6 +126,7 @@ export const getAlbumReducers = ({
                 initialSongIndex,
                 initialAnnotationIndex,
             }),
+            [SLIDER_STORE]: SliderReducer,
             [VERSE_BARS_STORE]: VerseBarsReducer,
             [VIEWPORT_STORE]: getViewportReducer({
                 windowHeight,
