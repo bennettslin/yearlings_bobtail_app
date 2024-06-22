@@ -15,6 +15,7 @@ import { getDotKeysFromBit } from '../../../helpers/dot'
 import { IS_UNIT_DOT } from '../../../constants/lyrics'
 import { getAccessibleWikiWormholesCount } from './helper'
 import {
+    getMapFirstSelectedDotKey,
     getMapHasSelectedDot,
     mapSelectedDotsBit,
 } from '../../../redux/dots/selector'
@@ -30,13 +31,14 @@ const AnnotationTitle = ({
     const
         dispatch = useDispatch(),
         stopPropagation = useRef(),
+        selectedDotsBit = useSelector(mapSelectedDotsBit),
+        selectedDotKeys = getDotKeysFromBit(selectedDotsBit),
         dotsBit = getDotsBitForAnnotation(
             serverClientSongIndex,
             annotationIndex,
         ),
         hasSelectedDot = useSelector(getMapHasSelectedDot(dotsBit)),
-        selectedDotsBit = useSelector(mapSelectedDotsBit),
-        selectedDotKeys = getDotKeysFromBit(selectedDotsBit),
+        firstSelectedDotKey = useSelector((getMapFirstSelectedDotKey(dotsBit))),
 
         accessibleWikiWormholesLength = getAccessibleWikiWormholesCount({
             songIndex: serverClientSongIndex,
@@ -94,6 +96,7 @@ const AnnotationTitle = ({
                     analyticsLabel: 'annotationTitle',
                     hasSelectedDot,
                     dotsBit,
+                    ...isDot && { firstDotKey: firstSelectedDotKey },
                     isAccessed,
                     isSelected,
                     handleAnchorClick,

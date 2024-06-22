@@ -1,10 +1,11 @@
 # Latest todo
 * Revise five annotations
 * Review ten annotations starting with Vegan
+* Dot sequence doesn't hide deselected dots
+* Unit dot shows popup annotation if carousel is shown and no previous annotation is selected
 * Onesheet song links
     * Command click should work
     * Don't select song if it's the same song
-* Unit dot shows popup annotation if carousel is shown and no previous annotation is selected
 * Test everything!
 
 ### Must do

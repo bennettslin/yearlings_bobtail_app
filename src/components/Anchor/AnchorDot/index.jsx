@@ -11,41 +11,38 @@ const AnchorDot = ({
     isSelected,
     firstDotKey,
 
-}) => {
-
-    return (
-        <>
-            {IS_USER_AGENT_DESKTOP && (
-                <Underline
-                    isDotAnchor
-                    {...{
-                        isAccessed,
-                        isSelected,
-                    }}
-                />
-            )}
-            {firstDotKey && (
-                <Dot
-                    {...{
-                        className: cx(
-                            'AnchorDot',
-                            isAccessed && !isSelected && 'DotAnchor__accessed',
-                            !isSelected && 'AnchorDot__animatable',
-                        ),
-                        dotKey: firstDotKey,
-                        isAccessed,
-                        isSelected,
-                    }}
-                />
-            )}
-        </>
-    )
-}
+}) => (
+    <>
+        {IS_USER_AGENT_DESKTOP && (
+            <Underline
+                isDotAnchor
+                {...{
+                    isAccessed,
+                    isSelected,
+                }}
+            />
+        )}
+        {firstDotKey && (
+            <Dot
+                {...{
+                    className: cx(
+                        'AnchorDot',
+                        isAccessed && !isSelected && 'DotAnchor__accessed',
+                        !isSelected && 'AnchorDot__animatable',
+                    ),
+                    dotKey: firstDotKey,
+                    isAccessed,
+                    isSelected,
+                }}
+            />
+        )}
+    </>
+)
 
 AnchorDot.propTypes = {
     isAccessed: PropTypes.bool,
     isSelected: PropTypes.bool,
-    firstDotKey: PropTypes.string,
+    firstDotKey: PropTypes.string.isRequired,
 }
 
 export default memo(AnchorDot)

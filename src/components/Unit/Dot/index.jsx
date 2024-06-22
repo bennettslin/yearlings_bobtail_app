@@ -32,7 +32,7 @@ export const UnitDot = forwardRef(({ unitIndex }, ref) => {
             dotsBit,
         } = getDotForUnit(lyricSongIndex, unitIndex),
         hasSelectedDot = useSelector(getMapHasSelectedDot(dotsBit)),
-        firstDotKey = useSelector(getMapFirstSelectedDotKey(dotsBit)),
+        firstSelectedDotKey = useSelector(getMapFirstSelectedDotKey(dotsBit)),
         isAccessed = useSelector(getMapIsAnnotationAccessed(annotationIndex)),
         isSelected = useSelector(getMapIsLyricAnnotation(annotationIndex))
 
@@ -73,7 +73,7 @@ export const UnitDot = forwardRef(({ unitIndex }, ref) => {
                     ref: setRef,
                     analyticsLabel: 'unitDot',
                     hasSelectedDot,
-                    firstDotKey,
+                    firstDotKey: firstSelectedDotKey,
                     isSelected,
                     isAccessed,
                     annotationIndex,
