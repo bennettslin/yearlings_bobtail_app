@@ -2,10 +2,13 @@
 * Revise five annotations
 * Review ten annotations starting with Vegan
 * Fix anchors in production
-    * Just clean it up in general
-    * Have two separate props, one for external links, and one for internal links
+    * Wiki anchors get hidden when reference is deselected
+    * External links don't work in promo page
     * Make neverDeselects more clear, something like canBecomePlainText
     * Also alwaysPointer
+* Onesheet song links
+    * Command click should work
+    * Don't select song if it's the same song
 
 ### Must do
 * Illustrator

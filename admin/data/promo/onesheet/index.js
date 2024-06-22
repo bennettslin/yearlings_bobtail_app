@@ -13,7 +13,7 @@ export default getFormattedSlideMetadata({
                 `Rock is stagnating. Old music is`,
                 {
                     anchor: `killing new music`,
-                    link: `https://tedgioia.substack.com/p/is-old-music-killing-new-music`,
+                    externalLink: `https://tedgioia.substack.com/p/is-old-music-killing-new-music`,
                 },
                 `, and it's not hard to see why. The indie system for nurturing artists is badly in need of reform. The problem is, summoning the courage to reform is hard. We won't do it unless we catch the system betting on the wrong horses. And in these artist-friendly times, no artist will ever be seen as the wrong horse.`,
             ],

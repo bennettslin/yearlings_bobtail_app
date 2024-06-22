@@ -13,7 +13,8 @@ import './style'
 const Anchor = forwardRef(({
     didMount,
     className,
-    link,
+    internalLink,
+    externalLink,
     alwaysPointer,
     neverDeselects,
     isAnnotationTitle,
@@ -48,7 +49,8 @@ const Anchor = forwardRef(({
          * Don't show access if in mobile, even though access behaviour is
          * still technically possible.
          */
-        isAccessed = isAccessedBeforeDesktop && IS_USER_AGENT_DESKTOP
+        isAccessed = isAccessedBeforeDesktop && IS_USER_AGENT_DESKTOP,
+        link = internalLink || externalLink
 
     const onClick = e => {
         if (isSelected) {
@@ -117,7 +119,7 @@ const Anchor = forwardRef(({
                         isWikiAnchor,
                         neverDeselects:
                             neverDeselects ||
-                            Boolean(link) ||
+                            Boolean(externalLink) ||
                             alwaysPointer,
                         text,
                         textConfig,
@@ -139,7 +141,8 @@ const Anchor = forwardRef(({
 Anchor.propTypes = {
     didMount: PropTypes.bool.isRequired,
     className: PropTypes.string,
-    link: PropTypes.string,
+    internalLink: PropTypes.string,
+    externalLink: PropTypes.string,
     alwaysPointer: PropTypes.bool,
     neverDeselects: PropTypes.bool,
     isAnnotationTitle: PropTypes.bool,

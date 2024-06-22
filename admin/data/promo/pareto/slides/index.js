@@ -40,7 +40,7 @@ export default getFormattedSlideMetadata([
             `More on the`,
             {
                 anchor: `Pareto principle`,
-                link: `https://en.wikipedia.org/wiki/Pareto_principle`,
+                externalLink: `https://en.wikipedia.org/wiki/Pareto_principle`,
             },
             `.`,
         ],
@@ -121,7 +121,7 @@ export default getFormattedSlideMetadata([
             `More on the`,
             {
                 anchor: `Slim Shady EP`,
-                link: `https://en.wikipedia.org/wiki/Slim_Shady_EP`,
+                externalLink: `https://en.wikipedia.org/wiki/Slim_Shady_EP`,
             },
             `.`,
         ],
@@ -200,7 +200,7 @@ export default getFormattedSlideMetadata([
                     isItalic: true,
                     lyric: `But What If We're Wrong?`,
                 },
-                link: `https://www.penguinrandomhouse.com/books/533521/but-what-if-were-wrong-by-chuck-klosterman`,
+                externalLink: `https://www.penguinrandomhouse.com/books/533521/but-what-if-were-wrong-by-chuck-klosterman`,
             },
             `But his argument makes it clear that indie artists, who rely heavily on fan support, will be among the first to be forgotten. No future audience ever supports an artist from its past, after all.`,
         ],
@@ -226,7 +226,7 @@ export default getFormattedSlideMetadata([
     //         `The New York Times has a great primer on`,
     //         {
     //             anchor: `Web3`,
-    //             link: `https://www.nytimes.com/interactive/2022/03/18/technology/web3-definition-internet.html`,
+    //             externalLink: `https://www.nytimes.com/interactive/2022/03/18/technology/web3-definition-internet.html`,
     //         },
     //         `.`,
     //     ],
@@ -244,12 +244,12 @@ export default getFormattedSlideMetadata([
                 paragraph: [
                     {
                         anchor: `www.bobtaildominoes.com`,
-                        link: `https://www.bobtaildominoes.com`,
+                        externalLink: `https://www.bobtaildominoes.com`,
                     },
                     { breakTag: true },
                     {
                         anchor: `US patent`,
-                        link: `https://patents.google.com/patent/US11367363B1`,
+                        externalLink: `https://patents.google.com/patent/US11367363B1`,
                     },
                 ],
             },
@@ -320,7 +320,7 @@ export default getFormattedSlideMetadata([
             {
                 paragraph: {
                     anchor: `www.bycombo.com`,
-                    link: `https://bycombo.com`,
+                    externalLink: `https://bycombo.com`,
                 },
             },
         ],
@@ -337,7 +337,7 @@ export default getFormattedSlideMetadata([
             {
                 paragraph: {
                     anchor: `www.bobtailmethod.com`,
-                    link: `https://bobtailmethod.com`,
+                    externalLink: `https://bobtailmethod.com`,
                 },
             },
         ],
@@ -375,7 +375,7 @@ export default getFormattedSlideMetadata([
                 paragraph: [
                     {
                         anchor: `Master's thesis`,
-                        link: `https://digital.lib.washington.edu/researchworks/handle/1773/23566`,
+                        externalLink: `https://digital.lib.washington.edu/researchworks/handle/1773/23566`,
                     },
                     { breakTag: true },
                     {

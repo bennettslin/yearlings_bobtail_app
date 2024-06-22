@@ -120,7 +120,7 @@ const TextLyricAnchor = forwardRef(({
                     },
                     dotsBit: isWikiAnchor ? REFERENCE_BIT : dotsBit,
                     ...isWikiAnchor && {
-                        link: getWikiUrl({
+                        internalLink: getWikiUrl({
                             songIndex: wikiSongIndex,
                             annotationIndex:
                                 wikiAnnotationIndex ||

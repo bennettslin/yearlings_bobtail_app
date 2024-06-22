@@ -38,7 +38,7 @@ const AboutTitle = ({ didMount }) => (
             >
                 <Anchor
                     {...{
-                        link: BOBTAIL_YEARLINGS_WEBSITE,
+                        externalLink: BOBTAIL_YEARLINGS_WEBSITE,
                         text: 'Bobtail Yearlings',
                         analyticsLabel: 'band',
                     }}

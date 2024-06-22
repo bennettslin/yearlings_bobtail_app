@@ -27,7 +27,7 @@ const PromoSongAnchor = ({
                     ...getIsAlbumClientSession() ? {
                         handleAnchorClick,
                     } : {
-                        link: `/${getFullPathForSong(songIndex)}`,
+                        internalLink: `/${getFullPathForSong(songIndex)}`,
                     },
                 }}
             />

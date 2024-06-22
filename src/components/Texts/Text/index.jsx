@@ -63,19 +63,19 @@ const Text = forwardRef(({
         } else {
             const {
                     anchor: text,
-                    link,
+                    externalLink,
                     promoKey,
                     songIndex: promoSongIndex,
                     annotationIndex,
                 } = textEntity,
                 { wormholeAnnotationIndex } = props
 
-            // It's an external anchor.
-            if (link) {
+            // It's an external link.
+            if (externalLink) {
                 return (
                     <Anchor
                         {...{
-                            link,
+                            externalLink,
                             text,
                             analyticsLabel: 'pitchAnchor',
                         }}
