@@ -4,7 +4,7 @@ import cx from 'classnames'
 import getDidMountHoc from '../../hocs/DidMountHoc'
 import AnchorDot from './AnchorDot'
 import AnchorText from './AnchorText'
-import DotSequence from '../DotSequence'
+import DotSequenceParent from '../DotSequence/Parent'
 import { IS_USER_AGENT_DESKTOP } from '../../constants/device'
 import './style'
 
@@ -56,10 +56,8 @@ const Anchor = forwardRef(({
         handleAnchorMouse(false)
     }
 
-    const Tag = 'a'
-
     return (
-        <Tag
+        <a
             {...{
                 ref,
                 ...didMount && {
@@ -84,7 +82,7 @@ const Anchor = forwardRef(({
             }}
         >
             {showDotSequence && hasSelectedDot && (
-                <DotSequence
+                <DotSequenceParent
                     inTextAnchor
                     {...{
                         isAccessed,
@@ -113,7 +111,7 @@ const Anchor = forwardRef(({
                     }}
                 />
             )}
-        </Tag>
+        </a>
     )
 })
 

@@ -25,10 +25,6 @@ export const getMapHasSelectedDot = dotsBit => createSelector(
     ),
 )
 
-export const getMapIsSelectedDot = dotKey => (
-    { [DOTS_STORE]: { [dotKey]: value } },
-) => value
-
 export const mapBackstoryDot = (
     { [DOTS_STORE]: { backstory } },
 ) => backstory

@@ -1,18 +1,21 @@
 // Container to show multiple dots in sequence.
-import React, { memo } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import getDidMountHoc from '../../hocs/DidMountHoc'
 import SequenceDot from './SequenceDot'
-import { getDotKeysFromBit } from '../../helpers/dot'
+import {
+    getDotKeysFromBit,
+    getDotsBitHasKey,
+} from '../../helpers/dot'
 import { ORDERED_DOT_KEYS } from '../../constants/dots'
 import './style'
 
 const DotSequence = ({
     didMount,
+    dotsBit,
     inAnnotationCard,
     inTextAnchor,
-    dotsBit,
     ...other
 
 }) => {
@@ -32,11 +35,12 @@ const DotSequence = ({
             }}
         >
             {ORDERED_DOT_KEYS.map(dotKey => (
-                // Go through all dot keys in array to ensure correct order.
+                // Go through all dots in array to ensure correct order.
                 dotKeys[dotKey] && (
                     <SequenceDot {...other}
                         {...{
                             key: dotKey,
+                            isShown: getDotsBitHasKey(dotsBit, dotKey),
                             dotKey,
                             inTextAnchor,
                             inAnnotationCard,
@@ -55,4 +59,4 @@ DotSequence.propTypes = {
     inTextAnchor: PropTypes.bool,
 }
 
-export default memo(getDidMountHoc(DotSequence))
+export default getDidMountHoc(DotSequence)

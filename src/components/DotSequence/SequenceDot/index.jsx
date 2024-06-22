@@ -5,39 +5,32 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { useSelector } from 'react-redux'
 import Dot from '../../Dot'
-import { getMapIsSelectedDot } from '../../../redux/dots/selector'
 import './style'
 
 const SequenceDot = ({
-    dotKey,
+    isShown,
     inAnnotationCard,
     inTextAnchor,
     ...other
 
-}) => {
-    const isDotShown = useSelector(getMapIsSelectedDot(dotKey))
-
-    return (
-        <Dot
-            isSequenceDot
-            {...{
-                className: cx(
-                    'SequenceDot',
-                    isDotShown && 'SequenceDot__shown',
-                    inTextAnchor && 'SequenceDot__textAnchor',
-                    inAnnotationCard && 'SequenceDot__annotationCard',
-                ),
-                dotKey,
-                ...other,
-            }}
-        />
-    )
-}
+}) => (
+    <Dot
+        isSequenceDot
+        {...{
+            className: cx(
+                'SequenceDot',
+                isShown && 'SequenceDot__shown',
+                inTextAnchor && 'SequenceDot__textAnchor',
+                inAnnotationCard && 'SequenceDot__annotationCard',
+            ),
+            ...other,
+        }}
+    />
+)
 
 SequenceDot.propTypes = {
-    dotKey: PropTypes.string.isRequired,
+    isShown: PropTypes.bool.isRequired,
     inAnnotationCard: PropTypes.bool,
     inTextAnchor: PropTypes.bool,
 }

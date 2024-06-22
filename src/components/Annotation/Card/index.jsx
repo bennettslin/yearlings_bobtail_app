@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import getDidMountHoc from '../../../hocs/DidMountHoc'
 import getSongServerClientHoc from '../../../hocs/SongHoc'
-import DotSequence from '../../DotSequence'
+import DotSequenceParent from '../../DotSequence/Parent'
 import Texts from '../../Texts'
 import AnnotationWormholes from './Wormholes'
 import {
@@ -75,7 +75,7 @@ const AnnotationCard = ({
             >
                 {description ? (
                     <>
-                        <DotSequence
+                        <DotSequenceParent
                             inAnnotationCard
                             {...{ dotsBit }}
                         />
