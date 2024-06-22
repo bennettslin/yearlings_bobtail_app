@@ -181,7 +181,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `In the Book of Genesis, God gave life to Eve by giving her one of Adam's ribs. By contrast, my own promise to give of myself proved to be a false rib— given that Sita could never truly be alive with me, even as she felt unworthy to begin life anew with someone else.`,
+                                    `In the Book of Genesis, God took one of Adam's ribs and gave life to Eve. My own promise to give of myself to Sita, however, proved to be a false rib— since she could never truly be alive with me, even as she felt unworthy to begin life anew with someone else.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -195,7 +195,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
+                todo: REVISE,
+                problem: `Don't mention camera.`,
                 card: {
                     description: [
                         `As a child, I once sat with my mother to watch an old World War I movie. After the battle, the camera panned across a motionless scene of bombed houses and dead bodies while a lone gramophone, preserved amid the wreckage, played a sappy Italian`,
@@ -493,7 +494,7 @@ export default {
                                         anchor: `Hitler Youth`,
                                         wiki: `Hitler_Youth`,
                                     },
-                                    `who's suddenly aghast at all the things he cheered for at the`,
+                                    `who's now aghast at all the things he cheered for at the`,
                                     {
                                         anchor: `Nuremberg Rallies`,
                                         wiki: `Nuremberg_Rally`,
@@ -546,7 +547,6 @@ export default {
                         `and his`,
                         {
                             anchor: `swastikas`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -585,7 +585,7 @@ export default {
                             anchor: `none by us now`,
                             todo: REVIEW,
                             card: {
-                                description: `And so, vowing never to be the cause of hurt to anyone or anything ever again, I decide to become a vegan.`,
+                                description: `And so, vowing never to cause hurt to anyone or anything ever again, I decide to become a vegan.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -790,7 +790,7 @@ export default {
                                         anchor: `Hoagy Carmichael`,
                                         wiki: `Hoagy_Carmichael`,
                                     },
-                                    `, I must have thrown the word "stardust" in there, because Owen misheard the line as "Can we start as children?" He really liked it, so I kept it in this final version.`,
+                                    `, I must have thrown the word "stardust" in there, because Owen misheard the line as, "Can we start as children?" He really liked it, so I kept it in this final version.`,
                                 ],
                                 dotKeys: {
                                     [SONGCRAFT]: true,
@@ -833,7 +833,7 @@ export default {
                                 todo: REVIEW,
                                 cards: [
                                     {
-                                        description: `With ignorance being as old as time itself, I'm comforted to know that we've always corrected our past mistakes; at the same time, it's dispiriting to know that those to come have yet to make theirs. The universe never truly learns, and I'm somewhat to blame. I had a similar thought as a child, when I wondered if I was the reason that my brother never got better. It made me realize that all I could do was love him, and then do better for him.`,
+                                        description: `With ignorance being as old as time itself, I'm comforted to know that we've always corrected our past mistakes; at the same time, it's dispiriting to know that those to come have yet to make theirs. The universe never truly learns, and I'm somewhat to blame… I had a similar thought as a child, when I wondered if I was the reason that my brother never got better. It made me realize that all I could do was love him, and then do better for him.`,
                                         dotKeys: {
                                             [NARRATIVE]: true,
                                             [OBSERVATION]: true,
@@ -863,16 +863,17 @@ export default {
                             cards: [
                                 {
                                     description: [
+                                        `As`,
                                         {
                                             anchor: `Nataraja`,
                                             wiki: `Nataraja`,
                                         },
-                                        `, or "lord of the dance" in Sanskrit, is a depiction of the Hindu god`,
+                                        `, or "lord of the dance" in Sanskrit, the Hindu god`,
                                         {
                                             anchor: `Shiva`,
                                             wiki: `Shiva`,
                                         },
-                                        `as he dances to destroy and rebuild the universe, in an endless cycle. Crushed beneath his foot lies Apasmara, symbolizing Shiva's victory over ignorance. And having caused my own share of ignorant destruction in this universe… I now commit to rebuild it.`,
+                                        `dances to destroy and rebuild the universe in an endless cycle. Crushed beneath his foot lies Apasmara, symbolizing Shiva's victory over ignorance. And having ignorantly caused my own share of destruction in this universe… I now promise to rebuild it.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -909,7 +910,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: REVIEW,
                 card: {
-                    description: `I stayed vegan for five years. But after moving to New York City, I quit because Sasha ate meat. I guess it's the nature of who I am that my personal identity will always be the first thing I jettison whenever a chance for romance is at stake. And truth be told, being vegan was always kind of rough, given my peanut and tree nut allergies. Still, these days I'm mostly vegetarian; it's both easier and healthier.`,
+                    description: `I stayed vegan for five years, but then quit after I started dating Sasha, since she ate meat. I guess the nature of who I am is that my personal identity will always be the first thing I jettison whenever a chance for romance is at stake. And truth be told, being vegan was always kind of rough, given my peanut and tree nut allergies. Still, these days I'm mostly vegetarian; it's both easier and healthier.`,
                     dotKeys: {
                         [AFTERWORD]: true,
                     },
