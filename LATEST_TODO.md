@@ -1,8 +1,6 @@
 # Latest todo
-* Revise some annotations
-* Reviews starting with Vegan
-* Production logue overview is styled weird when first loading
-    * Have custom paragraph component?
+* Revise five annotations
+* Review ten annotations starting with Vegan
 * Fix anchors in production
     * It's because of selected dots
 

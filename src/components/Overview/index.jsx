@@ -1,8 +1,9 @@
 // Section to show song overview.
-import React, { memo } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
+import getDidMountHoc from '../../hocs/DidMountHoc'
 import PageSongIndexContext from '../../contexts/PageSongIndex'
 import OverviewToggle from '../Main/OverviewToggle'
 import OverviewText from './Text'
@@ -10,7 +11,10 @@ import OverviewShareButtons from './ShareButtons'
 import { mapIsToggleInOverview } from '../../redux/overview/selector'
 import './style'
 
-const Overview = ({ pageSongIndex }) => {
+const Overview = ({
+    didMount,
+    pageSongIndex,
+}) => {
     const isToggleInOverview = useSelector(mapIsToggleInOverview)
 
     return (
@@ -24,13 +28,13 @@ const Overview = ({ pageSongIndex }) => {
                     ),
                 }}
             >
-                {isToggleInOverview &&
+                {didMount && isToggleInOverview && (
                     <OverviewToggle
                         {...{
                             className: 'Overview__toggleFloatContainer',
                         }}
                     />
-                }
+                )}
                 <OverviewText />
                 <OverviewShareButtons />
             </div>
@@ -39,7 +43,8 @@ const Overview = ({ pageSongIndex }) => {
 }
 
 Overview.propTypes = {
+    didMount: PropTypes.bool.isRequired,
     pageSongIndex: PropTypes.number,
 }
 
-export default memo(Overview)
+export default getDidMountHoc(Overview)
