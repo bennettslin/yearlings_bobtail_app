@@ -88,6 +88,7 @@ const AnnotationCard = ({
                         >
                             <Texts
                                 {...{
+                                    songIndex: serverClientSongIndex,
                                     text: description,
                                     annotationIndex,
                                 }}

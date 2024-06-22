@@ -10,15 +10,13 @@ import Anchor from '../../../Anchor'
 import { getWikiUrl } from '../../../../helpers/wiki'
 import { getMapIsLyricAnchorAccessed } from '../../../../redux/access/selector'
 import { mapIsReduxAdminPage } from '../../../../redux/admin/selector'
-import {
-    getMapIsLyricAnnotation,
-    mapLyricSongIndex,
-} from '../../../../redux/lyric/selector'
+import { getMapIsLyricAnnotation } from '../../../../redux/lyric/selector'
 import { REFERENCE_BIT } from '../../../../helpers/dot'
 import { ANCHOR_SCROLL } from '../../../../constants/scroll'
 import './style'
 
 const TextLyricAnchor = forwardRef(({
+    wikiSongIndex,
     annotationIndex,
     wikiAnnotationIndex,
     wikiIndex,
@@ -41,7 +39,6 @@ const TextLyricAnchor = forwardRef(({
             wikiAnnotationIndex,
             wikiIndex,
         })),
-        lyricSongIndex = useSelector(mapLyricSongIndex),
         isReduxAdminPage = useSelector(mapIsReduxAdminPage),
         isWikiAnchor = Boolean(wikiIndex)
 
@@ -121,11 +118,14 @@ const TextLyricAnchor = forwardRef(({
                     dotsBit: isWikiAnchor ? REFERENCE_BIT : dotsBit,
                     ...isWikiAnchor && {
                         link: getWikiUrl({
-                            songIndex: lyricSongIndex,
-                            annotationIndex: wikiAnnotationIndex || annotationIndex,
+                            songIndex: wikiSongIndex,
+                            annotationIndex:
+                                wikiAnnotationIndex ||
+                                annotationIndex,
                             wikiIndex,
                         }),
                     },
+                    alwaysPointer: isReduxAdminPage,
                     handleAnchorClick,
                     handleAnchorMouse,
                 }}
@@ -139,9 +139,10 @@ const TextLyricAnchor = forwardRef(({
 })
 
 TextLyricAnchor.propTypes = {
-    wikiIndex: PropTypes.number,
-    wikiAnnotationIndex: PropTypes.number,
+    wikiSongIndex: PropTypes.number,
     annotationIndex: PropTypes.number,
+    wikiAnnotationIndex: PropTypes.number,
+    wikiIndex: PropTypes.number,
     text: PropTypes.oneOfType([
         PropTypes.string,
         // "Bobtail's words" in M is an array.

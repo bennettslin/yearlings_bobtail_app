@@ -1,7 +1,4 @@
 # Latest todo
-* Wrap up anchors work
-    * Ensure it works in annotation page
-    * Test
 * Revise some annotations
 * Reviews starting with Vegan
 
@@ -17,6 +14,5 @@
 * Tooltip changes
     * Carousel nav tooltip texts should be more clear?
 * Upgrade React tooltip?
-* Annotations allow command click?
 * "Floater" problem again
 * See if other projects need smart quote fix
