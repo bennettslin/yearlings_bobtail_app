@@ -1,12 +1,10 @@
 import React, { forwardRef, memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { useSelector } from 'react-redux'
 import getDidMountHoc from '../../hocs/DidMountHoc'
-import DotSequence from '../DotSequence'
 import AnchorDot from './AnchorDot'
 import AnchorText from './AnchorText'
-import { getMapHasSelectedDot } from '../../redux/dots/selector'
+import DotSequence from '../DotSequence'
 import { IS_USER_AGENT_DESKTOP } from '../../constants/device'
 import './style'
 
@@ -15,11 +13,11 @@ const Anchor = forwardRef(({
     className,
     internalLink,
     externalLink,
-    alwaysPointer,
     canBePlainText,
-    isAnnotationTitle,
+    showDotSequence,
     isAccessed: isAccessedBeforeDesktop,
     isSelected,
+    hasSelectedDot,
     dotsBit,
     isWikiAnchor,
     text,
@@ -30,20 +28,8 @@ const Anchor = forwardRef(({
 
 }, ref) => {
     const
-        hasSelectedDot = useSelector(getMapHasSelectedDot(dotsBit)),
-        isTextAnchor = Boolean(text),
-
         // Anchor is shown if no dotsBit is passed, or there is a selected dot.
         isShown = !Number.isFinite(dotsBit) || hasSelectedDot,
-
-        showDotSequence =
-            isTextAnchor &&
-            !isWikiAnchor &&
-            Number.isFinite(dotsBit) &&
-            (
-                // If in mobile, only show dot sequence if annotation title.
-                IS_USER_AGENT_DESKTOP || isAnnotationTitle
-            ),
 
         /**
          * Don't show access if in mobile, even though access behaviour is
@@ -83,7 +69,6 @@ const Anchor = forwardRef(({
                     className: cx(
                         'Anchor',
                         isShown && 'Anchor__shown',
-                        alwaysPointer && 'Anchor__alwaysPointer',
                         !isSelected && [
                             'Anchor__animatable',
                             isAccessed && 'Anchor__accessed',
@@ -101,7 +86,7 @@ const Anchor = forwardRef(({
                 onMouseLeave,
             }}
         >
-            {showDotSequence && (
+            {showDotSequence && hasSelectedDot && (
                 <DotSequence
                     inTextAnchor
                     {...{
@@ -111,7 +96,7 @@ const Anchor = forwardRef(({
                     }}
                 />
             )}
-            {isTextAnchor ? (
+            {text ? (
                 <AnchorText
                     {...{
                         isAccessed,
@@ -140,9 +125,9 @@ Anchor.propTypes = {
     className: PropTypes.string,
     internalLink: PropTypes.string,
     externalLink: PropTypes.string,
-    alwaysPointer: PropTypes.bool,
     canBePlainText: PropTypes.bool,
-    isAnnotationTitle: PropTypes.bool,
+    hasSelectedDot: PropTypes.bool,
+    showDotSequence: PropTypes.bool,
     isAccessed: PropTypes.bool,
     isSelected: PropTypes.bool,
     isWikiAnchor: PropTypes.bool,

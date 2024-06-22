@@ -10,8 +10,10 @@ import Anchor from '../../../Anchor'
 import { getWikiUrl } from '../../../../helpers/wiki'
 import { getMapIsLyricAnchorAccessed } from '../../../../redux/access/selector'
 import { mapIsReduxAdminPage } from '../../../../redux/admin/selector'
+import { getMapHasSelectedDot } from '../../../../redux/dots/selector'
 import { getMapIsLyricAnnotation } from '../../../../redux/lyric/selector'
 import { REFERENCE_BIT } from '../../../../helpers/dot'
+import { IS_USER_AGENT_DESKTOP } from '../../../../constants/device'
 import { ANCHOR_SCROLL } from '../../../../constants/scroll'
 import './style'
 
@@ -33,6 +35,7 @@ const TextLyricAnchor = forwardRef(({
         dispatch = useDispatch(),
         dispatchWiki = useRef(),
         stopPropagation = useRef(),
+        hasSelectedDot = useSelector(getMapHasSelectedDot(dotsBit)),
         isSelected = useSelector(getMapIsLyricAnnotation(annotationIndex)),
         isLyricAnchorAccessed = useSelector(getMapIsLyricAnchorAccessed({
             annotationIndex,
@@ -98,7 +101,6 @@ const TextLyricAnchor = forwardRef(({
     return (
         <>
             <Anchor
-                canBePlainText
                 {...{
                     ref: setRef,
                     className: cx(
@@ -108,6 +110,7 @@ const TextLyricAnchor = forwardRef(({
                         isWikiAnchor && `wiki__${wikiIndex}`,
                     ),
                     analyticsLabel: isWikiAnchor ? 'wiki' : 'lyric',
+                    canBePlainText: !isReduxAdminPage,
                     isAccessed: isLyricAnchorAccessed,
                     isSelected,
                     isWikiAnchor,
@@ -119,6 +122,9 @@ const TextLyricAnchor = forwardRef(({
                         beginsVerse,
                         endsVerse,
                     },
+                    hasSelectedDot,
+                    // Only show dot sequence in desktop.
+                    showDotSequence: !isWikiAnchor && IS_USER_AGENT_DESKTOP,
                     dotsBit: isWikiAnchor ? REFERENCE_BIT : dotsBit,
                     ...isWikiAnchor && {
                         internalLink: getWikiUrl({
@@ -129,7 +135,6 @@ const TextLyricAnchor = forwardRef(({
                             wikiIndex,
                         }),
                     },
-                    alwaysPointer: isReduxAdminPage,
                     handleAnchorClick,
                     handleAnchorMouse,
                 }}

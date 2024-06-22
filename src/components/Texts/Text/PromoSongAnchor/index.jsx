@@ -19,7 +19,6 @@ const PromoSongAnchor = ({
     return (
         <>
             <Anchor
-                alwaysPointer
                 {...{
                     text,
                     analyticsLabel: `promoSong${songIndex}`,

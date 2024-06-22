@@ -23,7 +23,6 @@ const PromoLinkAnchor = ({
 
     return (
         <Anchor
-            alwaysPointer
             {...{
                 text,
                 analyticsLabel: promoKey,

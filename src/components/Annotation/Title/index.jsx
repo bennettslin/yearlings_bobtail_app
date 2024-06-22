@@ -14,7 +14,10 @@ import {
 import { getDotKeysFromBit } from '../../../helpers/dot'
 import { IS_UNIT_DOT } from '../../../constants/lyrics'
 import { getAccessibleWikiWormholesCount } from './helper'
-import { mapSelectedDotsBit } from '../../../redux/dots/selector'
+import {
+    getMapHasSelectedDot,
+    mapSelectedDotsBit,
+} from '../../../redux/dots/selector'
 import './style'
 
 const AnnotationTitle = ({
@@ -27,6 +30,11 @@ const AnnotationTitle = ({
     const
         dispatch = useDispatch(),
         stopPropagation = useRef(),
+        dotsBit = getDotsBitForAnnotation(
+            serverClientSongIndex,
+            annotationIndex,
+        ),
+        hasSelectedDot = useSelector(getMapHasSelectedDot(dotsBit)),
         selectedDotsBit = useSelector(mapSelectedDotsBit),
         selectedDotKeys = getDotKeysFromBit(selectedDotsBit),
 
@@ -35,11 +43,6 @@ const AnnotationTitle = ({
             annotationIndex,
             selectedDotKeys,
         }),
-
-        dotsBit = getDotsBitForAnnotation(
-            serverClientSongIndex,
-            annotationIndex,
-        ),
 
         annotationTitle = getTitleForAnnotation(
             serverClientSongIndex,
@@ -84,12 +87,12 @@ const AnnotationTitle = ({
             <Anchor
                 {...{
                     className: 'fontSize__smallTitle',
-                    ...isDot ? {
-                    } : {
-                        isAnnotationTitle: true,
+                    ...!isDot && {
+                        showDotSequence: true,
                         text: `\u201c${annotationTitle}\u201d`,
                     },
                     analyticsLabel: 'annotationTitle',
+                    hasSelectedDot,
                     dotsBit,
                     isAccessed,
                     isSelected,

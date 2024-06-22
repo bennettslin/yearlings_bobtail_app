@@ -68,6 +68,7 @@ export const UnitDot = forwardRef(({ unitIndex }, ref) => {
                 {...{
                     ref: setRef,
                     analyticsLabel: 'unitDot',
+                    hasSelectedDot,
                     dotsBit,
                     isSelected,
                     isAccessed,
