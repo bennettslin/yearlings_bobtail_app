@@ -85,7 +85,6 @@ export const getAlbumReducers = ({
         [ACCESS_STORE]: getAccessReducer({ initialAnnotationIndex }),
         [ACTIVATED_STORE]: ActivatedReducer,
         [ADMIN_STORE]: getAdminReducer(isReduxAdminPage),
-        [DOTS_STORE]: getDotsReducer(initialAnnotationIndex),
         [LYRIC_STORE]: getLyricReducer({
             initialSongIndex,
             initialVerseIndex,
@@ -104,6 +103,7 @@ export const getAlbumReducers = ({
             [AUDIO_STORE]: AudioReducer,
             [BANNER_STORE]: BannerReducer,
             [DOTS_SLIDE_STORE]: DotsSlideReducer,
+            [DOTS_STORE]: getDotsReducer(initialAnnotationIndex),
             [ENTRANCE_STORE]: EntranceReducer,
             [ERROR_STORE]: ErrorReducer,
             [FOCUS_STORE]: FocusReducer,
