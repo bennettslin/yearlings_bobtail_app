@@ -18,6 +18,7 @@ export const getAccessDefaults = initialAnnotationIndex => ({
     accessedKey: '',
     accessedAnnotationIndex: initialAnnotationIndex,
     accessedWikiWormholeIndex: 0,
+    commandKeysCount: 0,
 })
 
 export const ACCESS_PROMO_PAGE_DEFAULTS = {

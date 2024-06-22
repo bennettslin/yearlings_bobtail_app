@@ -68,3 +68,7 @@ export const getMapIsAnnotationAccessed = annotationIndex => createSelector(
         annotationIndex === accessedAnnotationIndex
     ),
 )
+
+export const mapIsCommandKeyPressed = (
+    { [ACCESS_STORE]: { commandKeysCount } },
+) => Boolean(commandKeysCount)

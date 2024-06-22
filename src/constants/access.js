@@ -34,6 +34,8 @@ export const ENTER = 'Enter'
 export const ESCAPE = 'Escape'
 export const SPACE = 'Space'
 export const TAB = 'Tab'
+export const COMMAND = 'Meta'
+export const CONTROL = 'Control'
 
 export const NAVIGATION_LEFT_KEY = '\u2190'
 export const NAVIGATION_UP_KEY = '\u2191'

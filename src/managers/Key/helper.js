@@ -16,8 +16,6 @@ export const getKeyName = e => {
 
     if (
         keyName === 'Alt' ||
-        keyName === 'Control' ||
-        keyName === 'Meta' ||
         keyName === 'Shift'
     ) {
         return ''
