@@ -50,25 +50,22 @@ const TextLyricAnchor = forwardRef(({
         // Stop propagation if anchor click is valid.
         stopPropagation.current(e)
 
-        /**
-         * If it's an admin page, or command key is pressed, allow browser to
-         * open wiki page in new tab.
-         *
-         * TODO: I've not tested this in PC.
-         */
         if (isWikiAnchor) {
+            /**
+             * If it's an admin page, or command key is pressed, allow browser
+             * to open wiki page in new tab.
+             *
+             * TODO: I've not tested this in PC.
+             */
             if (isReduxAdminPage || e.metaKey || e.ctrlKey) {
                 return
             } else {
                 e.preventDefault()
             }
-        }
 
-        if (wikiIndex) {
             return dispatchWiki.current(wikiIndex, wikiAnnotationIndex)
-        }
 
-        if (annotationIndex) {
+        } else if (annotationIndex) {
             dispatch(updateAnnotationStore({
                 queuedAnnotationIndex: annotationIndex,
                 queuedAnnotationFromLyricVerse: true,
@@ -85,7 +82,7 @@ const TextLyricAnchor = forwardRef(({
         ) {
             /**
              * This is solely to prevent hover over lyric anchor to register as
-             * hover over verse.
+             * hover over verse, for styling purposes.
              */
             dispatch(updateIsAnchorMoused(isMoused))
         }

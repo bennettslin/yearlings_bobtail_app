@@ -1,14 +1,3 @@
-// Dot colours. (No longer used.)
-// $colour__backstory: hsl($hue__backstory, $sat__light, $lum__medLight);
-// $colour__narrative: hsl($hue__narrative, $sat__lighter, $lum__medLight);
-// $colour__observation: hsl($hue__observation, $sat__lighter, $lum__medLightest);
-// $colour__pun: hsl($hue__pun, $sat__lighter, $lum__medLight);
-// $colour__reference: hsl($hue__reference, $sat__light, $lum__medLight);
-// $colour__wormhole: hsl($hue__wormhole, $sat__lighter, $lum__medLighter);
-// $colour__songcraft: hsl($hue__songcraft, $sat__lighter, $lum__medLighter);
-// $colour__afterword: hsl($hue__afterword, $sat__lighter, $lum__medLightest);
-// $colour__deselected: $colour__neutral__light;
-
 .backstory {
     .dark { fill: hsl($hue__backstory, 29%, 55%); }
     .medium { fill: hsl($hue__backstory, 39%, 65%); }
@@ -54,16 +43,3 @@
     .medium { fill: hsl(0, 0%, 70%); }
     .light { fill: hsl(0, 0%, 80%); }
 }
-// Maybe don't do...
-// .Anchor__selectableNotLyric:hover
-// .Dot,
-// .TW__isStationary
-// .Anchor__selectableLyric:hover
-// .Dot,
-// .DotsSlide__canHover
-// .DotsSlideSelect:hover
-// .Dot {
-//     .dark { fill: hsl($hue__select, 40%, 60%); }
-//     .medium { fill: hsl($hue__select, 40%, 70%); }
-//     .light { fill: hsl($hue__select, 40%, 80%); }
-// }

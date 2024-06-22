@@ -19,13 +19,13 @@
     }
 }
 
-.DotAnchor__selectable {
+.DotAnchor__animatable {
     .Anchor__accessed
     &,
-    .Anchor__selectableNotLyric:hover
+    .Anchor__animatableNotLyric:hover
     &,
     .TW__isStationary
-    .Anchor__selectableLyric:hover
+    .Anchor__animatableLyric:hover
     & {
         animation: bounceHover $transitionDuration__slow;
     }
@@ -34,7 +34,7 @@
     .PaLEnter
     .Anchor__accessed
     &,
-    .Anchor__selectable:active
+    .Anchor__animatable:active
     & {
         transform: scale(0.9);
     }

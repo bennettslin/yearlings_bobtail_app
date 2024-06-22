@@ -51,10 +51,10 @@ $width__underline__bleed: 0.125em;
 .Underline__accessed,
 .Underline__selected,
 
-.Anchor__selectableNotLyric:hover
+.Anchor__animatableNotLyric:hover
 .Underline,
 .TW__isStationary
-.Anchor__selectableLyric:hover
+.Anchor__animatableLyric:hover
 .Underline {
     height: 35%;
 }
@@ -63,10 +63,10 @@ $width__underline__bleed: 0.125em;
     &.Underline__accessed,
     &.Underline__selected,
 
-    .Anchor__selectableNotLyric:hover
+    .Anchor__animatableNotLyric:hover
     &,
     .TW__isStationary
-    .Anchor__selectableLyric:hover
+    .Anchor__animatableLyric:hover
     & {
         height: 25%;
     }
@@ -78,10 +78,10 @@ $width__underline__bleed: 0.125em;
     &.Underline__accessed,
     &.Underline__selected,
 
-    .Anchor__selectableNotLyric:hover
+    .Anchor__animatableNotLyric:hover
     &,
     .TW__isStationary
-    .Anchor__selectableLyric:hover
+    .Anchor__animatableLyric:hover
     & {
         filter: $dropShadow__small;
     }

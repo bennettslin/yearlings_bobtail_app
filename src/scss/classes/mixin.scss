@@ -54,7 +54,7 @@
         }
     }
 
-    .Anchor__selectable {
+    .Anchor__animatable {
         &:hover {
             .TextAnchor__linkText {
                 @if $light {

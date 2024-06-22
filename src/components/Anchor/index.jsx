@@ -85,9 +85,10 @@ const Anchor = forwardRef(({
                         alwaysPointer && 'Anchor__alwaysPointer',
                         isAccessed && !isSelected && 'Anchor__accessed',
                         !isSelected && [
-                            'Anchor__selectable',
-                            isLyric && 'Anchor__selectableLyric',
-                            !isLyric && 'Anchor__selectableNotLyric',
+                            'Anchor__animatable',
+                            isLyric ?
+                                'Anchor__animatableLyric' :
+                                'Anchor__animatableNotLyric',
                         ],
                         !isWikiAnchor && 'Anchor__noWrap',
                         className,
