@@ -1,8 +1,9 @@
 // Component to show single dot anchor as its own stanza.
-import React, { forwardRef, memo } from 'react'
+import React, { forwardRef, memo, useRef } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useDispatch, useSelector } from 'react-redux'
+import StopPropagationDispatcher from '../../../dispatchers/StopPropagation'
 import Anchor from '../../Anchor'
 import UnitDotParent from './Parent'
 import { getDotForUnit } from '../../../endpoint/album/units'
@@ -24,6 +25,7 @@ import './style'
 export const UnitDot = forwardRef(({ unitIndex }, ref) => {
     const
         dispatch = useDispatch(),
+        stopPropagation = useRef(),
         lyricSongIndex = useSelector(mapLyricSongIndex),
         isActivated = useSelector(mapIsActivated),
         isSliderMoving = useSelector(mapIsSliderMoving),
@@ -36,10 +38,12 @@ export const UnitDot = forwardRef(({ unitIndex }, ref) => {
         isAccessed = useSelector(getMapIsAnnotationAccessed(annotationIndex)),
         isSelected = useSelector(getMapIsLyricAnnotation(annotationIndex))
 
-    const handleAnchorClick = () => {
+    const handleAnchorClick = e => {
         if (isSelected || isSliderMoving || isActivated) {
             return false
         }
+
+        stopPropagation.current(e)
 
         dispatch(updateAnnotationStore({
             queuedAnnotationIndex: annotationIndex,
@@ -80,6 +84,7 @@ export const UnitDot = forwardRef(({ unitIndex }, ref) => {
                     handleAnchorClick,
                 }}
             />
+            <StopPropagationDispatcher {...{ ref: stopPropagation }} />
         </div>
     )
 })

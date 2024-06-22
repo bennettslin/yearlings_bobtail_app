@@ -1,10 +1,9 @@
 // Section to show title and all notes and wormholes for each annotation.
-import React, { useRef, memo } from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import getDidMountHoc from '../../hocs/DidMountHoc'
 import getSongServerClientHoc from '../../hocs/SongHoc'
-import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
 import ShareButtons from '../ShareButtons'
 import AnnotationHeader from './Header'
 import AnnotationCard from './Card'
@@ -23,86 +22,81 @@ const Annotation = ({
     handleAnnotationClick,
 
 }) => {
-    const stopPropagation = useRef()
-
     const onClick = e => {
         handleAnnotationClick({ e, annotationIndex })
     }
 
     // If in popup, annotation won't always exist.
     return annotationIndex && (
-        <>
+        <div
+            {...{
+                className: cx(
+                    'Annotation',
+                ),
+                onClick,
+            }}
+        >
             <div
                 {...{
-                    className: cx(
-                        'Annotation',
-                    ),
-                    onClick,
+                    ...didMount && {
+                        className: cx(
+                            'Annotation__cardField',
+                            'colour__annotation',
+                            'bgColour__annotation__pattern',
+                            isSelected && 'bgColour__annotation__selected',
+                            'boxShadow__annotation',
+                            'abF',
+                        ),
+                    },
                 }}
-            >
-                <div
+            />
+            <AnnotationHeader
+                {...{
+                    inCarousel,
+                    isAccessed,
+                    isSelected,
+                    annotationIndex,
+                }}
+            />
+            {getAnnotationCardIndices(
+                serverClientSongIndex,
+                annotationIndex,
+            ).map(cardIndex => (
+                <AnnotationCard
                     {...{
-                        ...didMount && {
-                            className: cx(
-                                'Annotation__cardField',
-                                'colour__annotation',
-                                'bgColour__annotation__pattern',
-                                isSelected && 'bgColour__annotation__selected',
-                                'boxShadow__annotation',
-                                'abF',
-                            ),
-                        },
-                    }}
-                />
-                <AnnotationHeader
-                    {...{
+                        key: cardIndex,
                         inCarousel,
-                        isAccessed,
                         isSelected,
                         annotationIndex,
+                        cardIndex,
                     }}
                 />
-                {getAnnotationCardIndices(
-                    serverClientSongIndex,
-                    annotationIndex,
-                ).map(cardIndex => (
-                    <AnnotationCard
+            ))}
+            {isSelected && (
+                <>
+                    <div
                         {...{
-                            key: cardIndex,
-                            inCarousel,
-                            isSelected,
-                            annotationIndex,
-                            cardIndex,
+                            className: cx(
+                                'Annotation__button',
+                                'Annotation__buttonLeft',
+                            ),
                         }}
-                    />
-                ))}
-                {isSelected && (
-                    <>
-                        <div
-                            {...{
-                                className: cx(
-                                    'Annotation__button',
-                                    'Annotation__buttonLeft',
-                                ),
-                            }}
-                        >
-                            <AnnotationToggleButton {...{ isSelected }} />
-                        </div>
-                        <div
-                            {...{
-                                className: cx(
-                                    'Annotation__button',
-                                    'Annotation__buttonRight',
-                                ),
-                            }}
-                        >
-                            <ShareButtons {...{ id: ANNOTATION_TOGGLE_BUTTON_KEY }} />
-                        </div>
-                    </>
-                )}
-            </div>
-            <StopPropagationDispatcher {...{ ref: stopPropagation }} />
-        </>
+                    >
+                        <AnnotationToggleButton {...{ isSelected }} />
+                    </div>
+                    <div
+                        {...{
+                            className: cx(
+                                'Annotation__button',
+                                'Annotation__buttonRight',
+                            ),
+                        }}
+                    >
+                        <ShareButtons {...{ id: ANNOTATION_TOGGLE_BUTTON_KEY }} />
+                    </div>
+                </>
+            )}
+        </div>
     )
 }
 
