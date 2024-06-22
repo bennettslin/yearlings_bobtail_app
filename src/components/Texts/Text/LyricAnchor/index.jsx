@@ -9,21 +9,16 @@ import WikiDispatcher from '../../../../dispatchers/Wiki'
 import Anchor from '../../../Anchor'
 import { REFERENCE_BIT } from '../../../../helpers/dot'
 import { ANCHOR_SCROLL } from '../../../../constants/scroll'
+import { getMapIsLyricAnchorAccessed } from '../../../../redux/access/selector'
 import {
-    mapIsAccessedIndexedAnchorShown,
-    mapAccessedAnnotationIndex,
-    mapAccessedWikiWormholeIndex,
-} from '../../../../redux/access/selector'
-import {
-    mapLyricAnnotationIndex,
     getMapIsLyricAnnotation,
 } from '../../../../redux/lyric/selector'
 import './style'
 
 const TextLyricAnchor = forwardRef(({
     annotationIndex,
-    wikiIndex,
     wikiAnnotationIndex,
+    wikiIndex,
     text,
     dotsBit,
     isVerseLyric,
@@ -37,28 +32,13 @@ const TextLyricAnchor = forwardRef(({
         dispatch = useDispatch(),
         dispatchWiki = useRef(),
         stopPropagation = useRef(),
-        isAccessedIndexedAnchorShown = useSelector(mapIsAccessedIndexedAnchorShown),
-        accessedAnnotationIndex = useSelector(mapAccessedAnnotationIndex),
-        accessedWikiWormholeIndex = useSelector(mapAccessedWikiWormholeIndex),
         isSelected = useSelector(getMapIsLyricAnnotation(annotationIndex)),
-        lyricAnnotationIndex = useSelector(mapLyricAnnotationIndex),
+        isLyricAnchorAccessed = useSelector(getMapIsLyricAnchorAccessed({
+            annotationIndex,
+            wikiAnnotationIndex,
+            wikiIndex,
+        })),
         isWikiAnchor = Boolean(wikiIndex)
-
-    let isAccessed = false
-
-    // TODO: Make this a selector.
-    if (isAccessedIndexedAnchorShown) {
-        if (lyricAnnotationIndex) {
-            isAccessed =
-                // Check that we're in the annotation that's selected.
-                lyricAnnotationIndex === wikiAnnotationIndex &&
-                accessedWikiWormholeIndex === wikiIndex
-
-        } else {
-            isAccessed =
-                accessedAnnotationIndex === annotationIndex
-        }
-    }
 
     const handleAnchorClick = e => {
         if (isSelected) {
@@ -107,7 +87,7 @@ const TextLyricAnchor = forwardRef(({
                         wikiIndex && `wiki__${wikiIndex}`,
                     ),
                     analyticsLabel: wikiIndex ? 'wiki' : 'lyric',
-                    isAccessed,
+                    isAccessed: isLyricAnchorAccessed,
                     isSelected,
                     isLyric: !isWikiAnchor,
                     isWikiAnchor,

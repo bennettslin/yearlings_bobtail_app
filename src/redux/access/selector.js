@@ -69,6 +69,36 @@ export const getMapIsAnnotationAccessed = annotationIndex => createSelector(
     ),
 )
 
+export const getMapIsLyricAnchorAccessed = ({
+    annotationIndex,
+    wikiAnnotationIndex,
+    wikiIndex,
+}) => createSelector(
+    mapIsAccessedIndexedAnchorShown,
+    mapLyricAnnotationIndex,
+    mapAccessedAnnotationIndex,
+    mapAccessedWikiWormholeIndex,
+    (
+        isAccessedIndexedAnchorShown,
+        lyricAnnotationIndex,
+        accessedAnnotationIndex,
+        accessedWikiWormholeIndex,
+    ) => (
+        isAccessedIndexedAnchorShown && (
+            lyricAnnotationIndex ? (
+                // Check that we're in the annotation that's selected.
+                lyricAnnotationIndex === wikiAnnotationIndex &&
+                accessedWikiWormholeIndex === wikiIndex
+            ) : accessedAnnotationIndex === annotationIndex
+        )
+    ),
+)
+
+/**
+ * FIXME: This isn't used anywhere because the logic is broken. Opening dev
+ * tools by way of shortcut, for example, registers key down of command key,
+ * but not key up.
+ */
 export const mapIsCommandKeyPressed = (
     { [ACCESS_STORE]: { commandKeysCount } },
 ) => Boolean(commandKeysCount)
