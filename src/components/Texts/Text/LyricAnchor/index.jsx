@@ -7,12 +7,15 @@ import { updateIsAnchorMoused } from '../../../../redux/hover/action'
 import StopPropagationDispatcher from '../../../../dispatchers/StopPropagation'
 import WikiDispatcher from '../../../../dispatchers/Wiki'
 import Anchor from '../../../Anchor'
-import { REFERENCE_BIT } from '../../../../helpers/dot'
-import { ANCHOR_SCROLL } from '../../../../constants/scroll'
+import { getWikiUrl } from '../../../../helpers/wiki'
 import { getMapIsLyricAnchorAccessed } from '../../../../redux/access/selector'
+import { mapIsReduxAdminPage } from '../../../../redux/admin/selector'
 import {
     getMapIsLyricAnnotation,
+    mapLyricSongIndex,
 } from '../../../../redux/lyric/selector'
+import { REFERENCE_BIT } from '../../../../helpers/dot'
+import { ANCHOR_SCROLL } from '../../../../constants/scroll'
 import './style'
 
 const TextLyricAnchor = forwardRef(({
@@ -38,6 +41,8 @@ const TextLyricAnchor = forwardRef(({
             wikiAnnotationIndex,
             wikiIndex,
         })),
+        lyricSongIndex = useSelector(mapLyricSongIndex),
+        isReduxAdminPage = useSelector(mapIsReduxAdminPage),
         isWikiAnchor = Boolean(wikiIndex)
 
     const handleAnchorClick = e => {
@@ -47,6 +52,20 @@ const TextLyricAnchor = forwardRef(({
 
         // Stop propagation if anchor click is valid.
         stopPropagation.current(e)
+
+        /**
+         * If it's an admin page, or command key is pressed, allow browser to
+         * open wiki page in new tab.
+         *
+         * TODO: I've not tested this in PC.
+         */
+        if (isWikiAnchor) {
+            if (isReduxAdminPage || e.metaKey || e.ctrlKey) {
+                return
+            } else {
+                e.preventDefault()
+            }
+        }
 
         if (wikiIndex) {
             return dispatchWiki.current(wikiIndex, wikiAnnotationIndex)
@@ -100,6 +119,13 @@ const TextLyricAnchor = forwardRef(({
                         endsVerse,
                     },
                     dotsBit: isWikiAnchor ? REFERENCE_BIT : dotsBit,
+                    ...isWikiAnchor && {
+                        link: getWikiUrl({
+                            songIndex: lyricSongIndex,
+                            annotationIndex: wikiAnnotationIndex || annotationIndex,
+                            wikiIndex,
+                        }),
+                    },
                     handleAnchorClick,
                     handleAnchorMouse,
                 }}

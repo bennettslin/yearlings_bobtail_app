@@ -4,7 +4,7 @@ export const getWikiUrl = ({
     songIndex,
     annotationIndex,
     wikiIndex,
-    isMobileWiki,
+    isMobileWiki = false,
 
 }) => {
     if (wikiIndex) {

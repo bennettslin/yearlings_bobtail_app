@@ -1,15 +1,8 @@
 # Latest todo
-* Anchors in admin
-    * In app, anchor prevents default by default
-        * If command or control key is held
-            * Don't open wiki
-            * Instead, open in new tab without focus on tab
-    * In admin, just always open in new tab without focus on tab
-* Legacy steps: Allow annotations to be clicked in dashboard
-    * Change hrefProp to something else
-    * Always have href on Anchor tag
-    * Prevent wiki href by default, programmatically show wiki
-    * When Command key is pressed, disable Javascript
+* Wrap up anchors work
+    * Ensure it works in annotation page
+    * Get rid of Redux meta keys
+    * Test
 * Revise some annotations
 * Reviews starting with Vegan
 
