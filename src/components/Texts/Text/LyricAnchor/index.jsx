@@ -127,7 +127,7 @@ const TextLyricAnchor = forwardRef(({
                     // Only show dot sequence in desktop.
                     showDotSequence: !isWikiAnchor && IS_USER_AGENT_DESKTOP,
                     dotsBit: finalDotsBit,
-                    ...isWikiAnchor && {
+                    ...isWikiAnchor && (hasSelectedDot || isReduxAdminPage) && {
                         internalLink: getWikiUrl({
                             songIndex: wikiSongIndex,
                             annotationIndex:
