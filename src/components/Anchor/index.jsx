@@ -16,7 +16,7 @@ const Anchor = forwardRef(({
     internalLink,
     externalLink,
     alwaysPointer,
-    neverDeselects,
+    canBePlainText,
     isAnnotationTitle,
     isAccessed: isAccessedBeforeDesktop,
     isSelected,
@@ -117,10 +117,7 @@ const Anchor = forwardRef(({
                         isAccessed,
                         isSelected,
                         isWikiAnchor,
-                        neverDeselects:
-                            neverDeselects ||
-                            Boolean(externalLink) ||
-                            alwaysPointer,
+                        canBePlainText,
                         text,
                         textConfig,
                     }}
@@ -144,7 +141,7 @@ Anchor.propTypes = {
     internalLink: PropTypes.string,
     externalLink: PropTypes.string,
     alwaysPointer: PropTypes.bool,
-    neverDeselects: PropTypes.bool,
+    canBePlainText: PropTypes.bool,
     isAnnotationTitle: PropTypes.bool,
     isAccessed: PropTypes.bool,
     isSelected: PropTypes.bool,

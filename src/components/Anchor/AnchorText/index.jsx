@@ -13,7 +13,7 @@ const AnchorText = ({
     isAccessed,
     isSelected,
     isWikiAnchor,
-    neverDeselects,
+    canBePlainText,
     text,
     textConfig,
 
@@ -43,7 +43,7 @@ const AnchorText = ({
                         }}
                     >
                         {/* Shown when no dot in dot sequence is selected. */}
-                        {!neverDeselects && (
+                        {canBePlainText && (
                             <span
                                 {...{
                                     className: cx(
@@ -103,7 +103,7 @@ AnchorText.propTypes = {
     isAccessed: PropTypes.bool,
     isSelected: PropTypes.bool,
     isWikiAnchor: PropTypes.bool,
-    neverDeselects: PropTypes.bool,
+    canBePlainText: PropTypes.bool,
     text: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.array,

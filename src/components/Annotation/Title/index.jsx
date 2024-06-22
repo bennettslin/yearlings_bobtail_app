@@ -82,7 +82,6 @@ const AnnotationTitle = ({
             }}
         >
             <Anchor
-                neverDeselects
                 {...{
                     className: 'fontSize__smallTitle',
                     ...isDot ? {

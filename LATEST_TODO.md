@@ -2,9 +2,8 @@
 * Revise five annotations
 * Review ten annotations starting with Vegan
 * Fix anchors in production
-    * Wiki anchors get hidden when reference is deselected
+    * Wiki anchors get unstyled when reference is deselected
     * External links don't work in promo page
-    * Make neverDeselects more clear, something like canBecomePlainText
     * Also alwaysPointer
 * Onesheet song links
     * Command click should work

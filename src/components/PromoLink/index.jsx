@@ -15,7 +15,6 @@ const PromoLink = () => {
             <div {...{ className: 'PromoLink' }}>
                 {`Interested in working with us? Visit our `}
                 <Anchor
-                    neverDeselects
                     {...{
                         text: 'promo homepage',
                         analyticsLabel: 'promo',

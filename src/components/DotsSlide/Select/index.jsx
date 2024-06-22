@@ -92,7 +92,6 @@ const DotsSlideSelect = ({
                 </Button>
 
                 <Anchor
-                    neverDeselects
                     {...{
                         isAccessed,
                         isSelected: isActivated,

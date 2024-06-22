@@ -98,6 +98,7 @@ const TextLyricAnchor = forwardRef(({
     return (
         <>
             <Anchor
+                canBePlainText
                 {...{
                     ref: setRef,
                     className: cx(
