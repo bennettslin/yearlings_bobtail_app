@@ -1,8 +1,10 @@
 # Latest todo
-* Fix anchors in production
-    * It's because of selected dots
 * Revise some annotations
 * Reviews starting with Vegan
+* Production logue overview is styled weird when first loading
+    * Have custom paragraph component?
+* Fix anchors in production
+    * It's because of selected dots
 
 ### Must do
 * Illustrator
