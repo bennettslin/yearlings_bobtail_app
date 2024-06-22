@@ -10,7 +10,10 @@ import { updateAnnotationStore } from '../../../redux/annotation/action'
 import { ANCHOR_SCROLL } from '../../../constants/scroll'
 import { getMapIsAnnotationAccessed } from '../../../redux/access/selector'
 import { mapIsActivated } from '../../../redux/activated/selector'
-import { getMapHasSelectedDot } from '../../../redux/dots/selector'
+import {
+    getMapFirstSelectedDotKey,
+    getMapHasSelectedDot,
+} from '../../../redux/dots/selector'
 import {
     mapLyricSongIndex,
     getMapIsLyricAnnotation,
@@ -29,6 +32,7 @@ export const UnitDot = forwardRef(({ unitIndex }, ref) => {
             dotsBit,
         } = getDotForUnit(lyricSongIndex, unitIndex),
         hasSelectedDot = useSelector(getMapHasSelectedDot(dotsBit)),
+        firstDotKey = useSelector(getMapFirstSelectedDotKey(dotsBit)),
         isAccessed = useSelector(getMapIsAnnotationAccessed(annotationIndex)),
         isSelected = useSelector(getMapIsLyricAnnotation(annotationIndex))
 
@@ -69,7 +73,7 @@ export const UnitDot = forwardRef(({ unitIndex }, ref) => {
                     ref: setRef,
                     analyticsLabel: 'unitDot',
                     hasSelectedDot,
-                    dotsBit,
+                    firstDotKey,
                     isSelected,
                     isAccessed,
                     annotationIndex,

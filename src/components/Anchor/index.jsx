@@ -18,6 +18,7 @@ const Anchor = forwardRef(({
     showDotSequence,
     hasSelectedDot,
     dotsBit,
+    firstDotKey,
     text,
     textConfig,
     internalLink,
@@ -102,12 +103,12 @@ const Anchor = forwardRef(({
                         textConfig,
                     }}
                 />
-            ) : (
+            ) : hasSelectedDot && (
                 <AnchorDot
                     {...{
                         isAccessed,
                         isSelected,
-                        dotsBit,
+                        firstDotKey,
                     }}
                 />
             )}
@@ -127,6 +128,7 @@ Anchor.propTypes = {
     isSelected: PropTypes.bool,
     isWikiAnchor: PropTypes.bool,
     dotsBit: PropTypes.number,
+    firstDotKey: PropTypes.string,
     text: PropTypes.any,
     textConfig: PropTypes.any,
     analyticsLabel: PropTypes.string,
