@@ -65,7 +65,7 @@ const Text = forwardRef(({
                     anchor: text,
                     link,
                     promoKey,
-                    songIndex,
+                    songIndex: promoSongIndex,
                     annotationIndex,
                 } = textEntity,
                 { wormholeAnnotationIndex } = props
@@ -92,12 +92,12 @@ const Text = forwardRef(({
                     />
                 )
 
-            } else if (songIndex) {
+            } else if (promoSongIndex) {
                 return (
                     <PromoSongAnchor
                         {...{
                             text,
-                            songIndex,
+                            songIndex: promoSongIndex,
                         }}
                     />
                 )
@@ -126,11 +126,15 @@ const Text = forwardRef(({
                 )
 
             } else {
-                const {
-                    dotsBit,
-                    wikiIndex,
-                    wikiAnnotationIndex,
-                } = textEntity
+                const
+                    {
+                        dotsBit,
+                        wikiIndex,
+                        wikiAnnotationIndex,
+                    } = textEntity,
+
+                    // This gets passed by annotation card for wiki anchors.
+                    { songIndex: wikiSongIndex } = other
 
                 return (
                     <TextLyricAnchor {...other}
@@ -138,15 +142,15 @@ const Text = forwardRef(({
                             ref,
                             text,
                             dotsBit,
-                            wikiIndex,
-
+                            wikiSongIndex,
                             /**
                              * There is only ever an annotation index passed
                              * from the verse, or a wiki annotation index
                              * passed from the annotation.
-                             */
-                            annotationIndex,
+                            */
                             wikiAnnotationIndex,
+                            annotationIndex,
+                            wikiIndex,
                         }}
                     />
                 )
@@ -161,6 +165,7 @@ const Text = forwardRef(({
 Text.propTypes = {
     // From parent.
     inVerseBar: PropTypes.bool,
+    songIndex: PropTypes.number,
     text: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.object,

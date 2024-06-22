@@ -51,7 +51,7 @@ const AnnotationCard = ({
             )}
             {description && (
                 <div className="TodoAnnotationCard__description">
-                    <Texts {...{ text: description }} />
+                    <Texts {...{ songIndex, text: description }} />
                 </div>
             )}
         </div>
