@@ -13,8 +13,6 @@ $width__underline__bleed: 0.125em;
     height: 2px;
     transform: translateY(50%);
 
-    visibility: hidden;
-
     // This is only in About.
     .font__heading
     & {
@@ -36,15 +34,13 @@ $width__underline__bleed: 0.125em;
     }
 
     // Specific selector to override.
+    .Anchor__isPlainText
+    &,
+
     .TW__showPastFutureLyrics
     .Anchor
     & {
         visibility: hidden;
-    }
-
-    .Anchor__shown
-    & {
-        visibility: visible;
     }
 }
 

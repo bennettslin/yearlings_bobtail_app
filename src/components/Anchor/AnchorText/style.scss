@@ -3,17 +3,16 @@
 
 .AnchorText__plainText {
     position: relative;
+    display: none;
 
-    // Specific selector to override.
+    // Specific selectors to override.
+    .Anchor__isPlainText
+    &,
+
     .TW__showPastFutureLyrics
     .Anchor
     & {
         display: inline;
-    }
-
-    .Anchor__shown
-    & {
-        display: none;
     }
 }
 
@@ -62,19 +61,19 @@
 }
 
 .AnchorText__linkText__default {
-    .Anchor__shown
-    & {
-        display: inline;
-    }
+    display: inline;
 
-    .Anchor__accessed.Anchor__shown
+    .Anchor__isPlainText
+    &,
+
+    .Anchor__accessed
     & {
         display: none;
     }
 }
 
 .AnchorText__linkText__accessed {
-    .Anchor__accessed.Anchor__shown
+    .Anchor__accessed:not(.Anchor__isPlainText)
     & {
         display: inline;
     }

@@ -35,15 +35,16 @@ const TextLyricAnchor = forwardRef(({
         dispatch = useDispatch(),
         dispatchWiki = useRef(),
         stopPropagation = useRef(),
-        hasSelectedDot = useSelector(getMapHasSelectedDot(dotsBit)),
+        isWikiAnchor = Boolean(wikiIndex),
+        finalDotsBit = isWikiAnchor ? REFERENCE_BIT : dotsBit,
+        hasSelectedDot = useSelector(getMapHasSelectedDot(finalDotsBit)),
         isSelected = useSelector(getMapIsLyricAnnotation(annotationIndex)),
         isLyricAnchorAccessed = useSelector(getMapIsLyricAnchorAccessed({
             annotationIndex,
             wikiAnnotationIndex,
             wikiIndex,
         })),
-        isReduxAdminPage = useSelector(mapIsReduxAdminPage),
-        isWikiAnchor = Boolean(wikiIndex)
+        isReduxAdminPage = useSelector(mapIsReduxAdminPage)
 
     const handleAnchorClick = e => {
         if (isSelected) {
@@ -125,7 +126,7 @@ const TextLyricAnchor = forwardRef(({
                     hasSelectedDot,
                     // Only show dot sequence in desktop.
                     showDotSequence: !isWikiAnchor && IS_USER_AGENT_DESKTOP,
-                    dotsBit: isWikiAnchor ? REFERENCE_BIT : dotsBit,
+                    dotsBit: finalDotsBit,
                     ...isWikiAnchor && {
                         internalLink: getWikiUrl({
                             songIndex: wikiSongIndex,

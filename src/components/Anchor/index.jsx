@@ -28,9 +28,6 @@ const Anchor = forwardRef(({
 
 }, ref) => {
     const
-        // Anchor is shown if no dotsBit is passed, or there is a selected dot.
-        isShown = !Number.isFinite(dotsBit) || hasSelectedDot,
-
         /**
          * Don't show access if in mobile, even though access behaviour is
          * still technically possible.
@@ -68,7 +65,7 @@ const Anchor = forwardRef(({
                 ...didMount && {
                     className: cx(
                         'Anchor',
-                        isShown && 'Anchor__shown',
+                        canBePlainText && !hasSelectedDot && 'Anchor__isPlainText',
                         !isSelected && [
                             'Anchor__animatable',
                             isAccessed && 'Anchor__accessed',

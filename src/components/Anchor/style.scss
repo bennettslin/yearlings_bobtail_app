@@ -1,5 +1,5 @@
 .Anchor {
-    pointer-events: none;
+    cursor: pointer,
 }
 
 .Anchor,
@@ -9,15 +9,12 @@
     position: relative;
 }
 
-.Anchor__shown {
+.Anchor__isPlainText,
 
-    .TW__isStationary.TW__hidePastFutureLyrics
-    &.Anchor__animatable,
-
-    &.Anchor__alwaysPointer {
-        cursor: pointer;
-        pointer-events: all;
-    }
+.TW__showPastFutureLyrics
+.Anchor__animatable {
+    cursor: default;
+    pointer-events: none;
 }
 
 .Anchor__noWrap {

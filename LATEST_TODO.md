@@ -2,7 +2,7 @@
 * Revise five annotations
 * Review ten annotations starting with Vegan
 * Fix anchors in production
-    * External links don't work in promo page
+    * Fonts are miscolored when showing past future lyrics
     * See if dots store is still needed for admin and promo pages
 * Onesheet song links
     * Command click should work
