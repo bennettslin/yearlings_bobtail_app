@@ -1,8 +1,6 @@
 # Latest todo
 * Revise five annotations
 * Review ten annotations starting with Vegan
-* Fix anchors in production
-    * See if dots store is still needed for admin and promo pages
 * Onesheet song links
     * Command click should work
     * Don't select song if it's the same song

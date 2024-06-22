@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Texts from '../../../../../../../src/components/Texts'
+import getDidMountHoc from '../../../../../../../src/hocs/DidMountHoc'
 import {
     getDescriptionForAnnotationCard,
     getDotsBitForAnnotationCard,
@@ -8,6 +9,7 @@ import {
 import DotSequence from '../../../../../../../src/components/DotSequence'
 
 const AnnotationCard = ({
+    didMount,
     songIndex,
     annotationIndex,
     cardIndex,
@@ -25,7 +27,7 @@ const AnnotationCard = ({
             cardIndex,
         )
 
-    return (
+    return didMount && (
         <div className="TodoAnnotationCard">
             <DotSequence
                 inAnnotationCard
@@ -41,9 +43,10 @@ const AnnotationCard = ({
 }
 
 AnnotationCard.propTypes = {
+    didMount: PropTypes.bool.isRequired,
     songIndex: PropTypes.number.isRequired,
     annotationIndex: PropTypes.number.isRequired,
     cardIndex: PropTypes.number.isRequired,
 }
 
-export default AnnotationCard
+export default getDidMountHoc(AnnotationCard)

@@ -553,6 +553,8 @@ export default {
                         {
                             anchor: `Gogo and his Didi`,
                             properNoun: true,
+                            todo: REVISE,
+                            problem: `Two reference cards.`,
                             cards: [
                                 {
                                     description: [
@@ -581,6 +583,9 @@ export default {
                                     description: [
                                         `Didi and Gogo are the respective pet names of Vladimir and Estragon, the two tramps who are still waiting for Godot by the end of Beckett's play.`,
                                     ],
+                                    dotKeys: {
+                                        [REFERENCE]: true,
+                                    },
                                 },
                             ],
                         },
