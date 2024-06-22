@@ -10,10 +10,13 @@
 }
 
 .Anchor__shown {
+
     .TW__hidePastFutureLyrics
     &.Anchor__selectableNotLyric,
+
     .TW__isStationary.TW__hidePastFutureLyrics
     &.Anchor__selectableLyric,
+
     &.Anchor__alwaysPointer {
         cursor: pointer;
         pointer-events: all;

@@ -20,16 +20,15 @@ const Underline = ({
                 'Underline',
 
                 isDotAnchor && 'Underline__isDot',
-                !isWikiAnchor && 'Underline__isNotWiki',
 
-                isWikiAnchor && isWikiFirstChild &&
-                    'Underline__isWiki__firstChild',
-                isWikiAnchor && !isWikiFirstChild &&
-                    'Underline__isWiki__notFirstChild',
-                isWikiAnchor && isWikiLastChild &&
-                    'Underline__isWiki__lastChild',
-                isWikiAnchor && !isWikiLastChild &&
-                    'Underline__isWiki__notLastChild',
+                isWikiAnchor ? [
+                    isWikiFirstChild ?
+                        'Underline__isWiki__firstChild' :
+                        'Underline__isWiki__notFirstChild',
+                    isWikiLastChild ?
+                        'Underline__isWiki__lastChild' :
+                        'Underline__isWiki__notLastChild',
+                ] : 'Underline__isNotWiki',
 
                 isAccessed && !isSelected ?
                     'Underline__accessed' :

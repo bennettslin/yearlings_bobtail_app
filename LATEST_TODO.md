@@ -5,6 +5,7 @@
     * Just clean it up in general
     * Have two separate props, one for external links, and one for internal links
     * Make neverDeselects more clear, something like canBecomePlainText
+    * Also alwaysPointer
 
 ### Must do
 * Illustrator
