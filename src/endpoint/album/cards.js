@@ -1,5 +1,5 @@
 import { getSong } from './songs'
-import { getDotKeysFromBit, WORMHOLE_BIT } from '../../helpers/dot'
+import { WORMHOLE_BIT } from '../../helpers/dot'
 import { getArrayOfLength } from '../../helpers/general'
 
 export const getAnnotationCardIndices = (songIndex, annotationIndex) => {
@@ -40,14 +40,4 @@ export const getDotsBitForAnnotationCard = (
         dotsBitsEntity
 
     return dotsBit
-}
-
-export const getDotKeysForAnnotationCard = (
-    songIndex, annotationIndex, cardIndex,
-) => {
-    const dotsBit = getDotsBitForAnnotationCard(
-        songIndex, annotationIndex, cardIndex,
-    )
-
-    return getDotKeysFromBit(dotsBit)
 }
