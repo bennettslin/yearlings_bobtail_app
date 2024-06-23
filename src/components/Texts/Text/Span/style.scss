@@ -1,14 +1,13 @@
 @import '../../../../scss/constants/zIndex';
 
-// These are the parent elements of the TextSpan component.
-// .AnnotationCard__text,
+/**
+ * Parent element of the TextSpan component. Not needed for annotation cards,
+ * as far as I can tell.
+ */
 .VerseLine {
     // Position above absolute elements.
     position: relative;
     z-index: $zIndex__verseChild__topMost;
-
-    // Fix issue with "floater" line always wrapping for some reason.
-    text-wrap: nowrap;
 }
 
 .VerseLine__lyricLeft,

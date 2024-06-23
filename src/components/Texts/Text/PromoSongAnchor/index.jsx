@@ -23,7 +23,7 @@ const PromoSongAnchor = ({
          *
          * TODO: I've not tested this in PC.
          */
-        if (!e.metaKey) {
+        if (!e.metaKey && !e.ctrlKey) {
             e.preventDefault()
         }
 
