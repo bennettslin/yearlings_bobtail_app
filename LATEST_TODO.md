@@ -14,5 +14,4 @@
 * Tooltip changes
     * Carousel nav tooltip texts should be more clear?
 * Upgrade React tooltip?
-* "Floater" problem again
 * See if other projects need smart quote fix
