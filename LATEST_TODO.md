@@ -1,5 +1,4 @@
 # Latest todo
-* Break in about page paragraphs
 * Figure out nowrap once and for all, with "Rejoyce!"
 * Break after ellipses in Constellations
 * Revise five annotations
