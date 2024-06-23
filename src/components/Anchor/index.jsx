@@ -65,10 +65,12 @@ const Anchor = forwardRef(({
                     className: cx(
                         'Anchor',
                         canBePlainText && !hasSelectedDot && 'Anchor__isPlainText',
-                        !isSelected && [
-                            'Anchor__animatable',
-                            isAccessed && 'Anchor__accessed',
-                        ],
+                        isSelected ?
+                            'Anchor__selected' :
+                            [
+                                'Anchor__animatable',
+                                isAccessed && 'Anchor__accessed',
+                            ],
                         !isWikiAnchor && 'Anchor__noWrap',
                         className,
                     ),
