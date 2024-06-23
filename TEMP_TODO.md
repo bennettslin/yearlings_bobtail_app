@@ -3,7 +3,7 @@
 * Selecting different filmstrip cell when activated is a little wonky
     * Behavior isn't consistent with slider and activated verses
 * Accessed wiki anchor doesn't show upon load
-* Command clicking to open album in new tab doesn't have correct viewport
+* Command clicking to open album in new tab doesn't have correct viewport if dev tools was open in original tab
 * Wormhole for "finally become someone" doesn't automatically scroll from Didi
 
 # TODO
