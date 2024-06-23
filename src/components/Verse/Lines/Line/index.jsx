@@ -11,6 +11,7 @@ const VerseLine = forwardRef(({
     didMount,
     columnKey,
     isTruncatable,
+    isWrappable,
     ...other
 
 }, ref) => {
@@ -41,7 +42,10 @@ const VerseLine = forwardRef(({
                             // Lyric, left, centre, right.
                             `VerseLine__${columnKey}`,
 
-                            { VerseLine__truncatable: isTruncatable },
+                            {
+                                VerseLine__truncatable: isTruncatable,
+                                VerseLine__wrappable: isWrappable,
+                            },
                         ),
                     },
                 }}
@@ -76,6 +80,7 @@ VerseLine.propTypes = {
     ]).isRequired,
 
     isTruncatable: PropTypes.bool,
+    isWrappable: PropTypes.bool,
     inVerseBar: PropTypes.bool,
     columnKey: PropTypes.string.isRequired,
 }

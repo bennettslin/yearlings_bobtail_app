@@ -3,6 +3,14 @@
 
 $margin__gutter: 15px;
 
+.VerseLine {
+    /**
+     * Fix issue with "floater" line always wrapping for some reason. Do with
+     * both left and right for consistency.
+     */
+     text-wrap: nowrap;
+}
+
 .VerseLine__lyric,
 .VerseLine__lyricLeft {
 
@@ -80,4 +88,8 @@ $margin__gutter: 15px;
     & {
         display: none;
     }
+}
+
+.VerseLine__wrappable {
+    text-wrap: wrap;
 }

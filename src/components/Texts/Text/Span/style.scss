@@ -9,12 +9,3 @@
     position: relative;
     z-index: $zIndex__verseChild__topMost;
 }
-
-.VerseLine__lyricLeft,
-.VerseLine__lyricRight {
-    /**
-     * Fix issue with "floater" line always wrapping for some reason. Do with
-     * both left and right for consistency.
-     */
-    text-wrap: nowrap;
-}

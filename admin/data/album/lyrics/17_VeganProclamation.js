@@ -65,6 +65,7 @@ export default {
             mainVerses: [
                 {
                     mixTime: null,
+                    isWrappable: true,
                     lyric: [
                         {
                             isItalic: true,
@@ -318,6 +319,7 @@ export default {
             mainVerses: [
                 {
                     mixTime: `1:08:13.89`,
+                    isWrappable: true,
                     lyric: [
                         {
                             isItalic: true,

@@ -38,12 +38,16 @@ const _addVerseLists = (verses, song) => {
             lyricCentre,
             lyricLeft,
             lyricRight,
+            isWrappable,
             lastAnnotationIndex,
             verseAnnotationIndices,
         } = verse
 
         verseLyrics.push({
-            ...lyric && { lyric },
+            ...lyric && {
+                lyric,
+                ...isWrappable && { isWrappable },
+            },
             ...lyricCentre && { lyricCentre },
             ...lyricLeft && { lyricLeft },
             ...lyricRight && { lyricRight },

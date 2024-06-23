@@ -12,12 +12,17 @@ const VerseColumnLine = forwardRef(({
     ...other
 
 }, ref) => {
+    const {
+        lyricCentre,
+        isWrappable,
+    } = verseObject
+
     let columnKey = LYRIC
 
     if (doublespeakerKey) {
         columnKey = doublespeakerKey
 
-    } else if (verseObject.lyricCentre) {
+    } else if (lyricCentre) {
         columnKey = LYRIC_CENTRE
     }
 
@@ -31,6 +36,7 @@ const VerseColumnLine = forwardRef(({
                     verseObject[LYRIC]
                 ),
                 columnKey,
+                isWrappable,
                 ...other,
             }}
         />
