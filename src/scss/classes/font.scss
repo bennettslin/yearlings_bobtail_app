@@ -89,7 +89,7 @@
 
 .fontSize__lyricMultipleColumns {
 
-    // TODO: Check if line with "pulled your floater away" is still a concern.
+    // Fix issue with "floater" line always wrapping for some reason.
     $fontSize__bothColumnsShown: 0.935em;
 
     // Make font sizes smaller when showing both columns.

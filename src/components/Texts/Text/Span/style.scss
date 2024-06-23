@@ -6,4 +6,7 @@
     // Position above absolute elements.
     position: relative;
     z-index: $zIndex__verseChild__topMost;
+
+    // Fix issue with "floater" line always wrapping for some reason.
+    text-wrap: nowrap;
 }
