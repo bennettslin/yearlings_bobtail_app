@@ -72,7 +72,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: `With the breakup, I could revert to the state of innocence that I'd known as a child— not just before the relationship, but before the bullying and the mail-order cult as well. So here we hear the white-throated sparrow, which harkens back to the happiest days of my childhood.`,
                     dotKeys: {
@@ -325,7 +324,6 @@ export default {
                         `for the`,
                         {
                             anchor: `well-behaved on the wing`,
-                            todo: REVIEW,
                             card: {
                                 description: `Harboring no grudges, drunken me can only surmise that he served out his sentence without complaint, and has now been granted early release for good behavior.`,
                                 dotKeys: {
@@ -355,7 +353,7 @@ export default {
                                 wiki: `Nineteen_Eighty-Four`,
                             },
                         },
-                        `, party members must engage in doublethink to spout the contradictory propaganda of Newspeak. Similarly, to justify the breakup, I had to reconcile the contradictions in my head. So this song uses doublespeaker rhyme— which I named partly for its Orwellian undertone— to depict the inner conflict between my sober self and my drunken alter ego.`,
+                        `, party members practice doublethink in order to spout the contradictory propaganda of Newspeak. Similarly, to justify the breakup, I had to reconcile the contradictions in my head. So this song uses doublespeaker rhyme— which I named partly for its Orwellian undertone— to depict the inner conflict between my sober self and my drunken alter ego.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
