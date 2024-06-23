@@ -1,10 +1,6 @@
 # Latest todo
 * Revise five annotations
 * Review ten annotations starting with Vegan
-* Onesheet song links
-    * Command click should work
-    * Don't select song if it's the same song
-* Test everything!
 
 ### Must do
 * Illustrator

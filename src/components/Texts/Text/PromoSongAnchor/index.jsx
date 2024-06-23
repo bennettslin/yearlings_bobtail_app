@@ -4,16 +4,32 @@ import Anchor from '../../../Anchor'
 import SongDispatcher from '../../../../dispatchers/Song'
 import { getIsAlbumClientSession } from '../../../../utils/gatsby/session'
 import { getFullPathForSong } from '../../../../endpoint/album/songs'
+import { mapSelectedSongIndex } from '../../../../redux/selected/selector'
+import { useSelector } from 'react-redux'
 
 const PromoSongAnchor = ({
     text,
     songIndex,
 
 }) => {
-    const dispatchSong = useRef()
+    const
+        dispatchSong = useRef(),
+        selectedSongIndex = useSelector(mapSelectedSongIndex)
 
-    const handleAnchorClick = () => {
-        dispatchSong.current({ selectedSongIndex: songIndex })
+    const handleAnchorClick = e => {
+        /**
+         * If command key is pressed, allow browser to open wiki page in new
+         * tab.
+         *
+         * TODO: I've not tested this in PC.
+         */
+        if (!e.metaKey) {
+            e.preventDefault()
+        }
+
+        if (songIndex !== selectedSongIndex) {
+            dispatchSong.current({ selectedSongIndex: songIndex })
+        }
     }
 
     return (
@@ -22,11 +38,10 @@ const PromoSongAnchor = ({
                 {...{
                     text,
                     analyticsLabel: `promoSong${songIndex}`,
+                    internalLink: `/${getFullPathForSong(songIndex)}`,
 
-                    ...getIsAlbumClientSession() ? {
+                    ...getIsAlbumClientSession() && {
                         handleAnchorClick,
-                    } : {
-                        internalLink: `/${getFullPathForSong(songIndex)}`,
                     },
                 }}
             />
