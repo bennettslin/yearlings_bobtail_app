@@ -912,7 +912,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: REVIEW,
                 card: {
-                    description: `I stayed vegan for five years, but then quit after I started dating Sasha, since she ate meat. I guess the nature of who I am is that my personal identity will always be the first thing I jettison whenever a chance for romance is at stake. And truth be told, being vegan was always kind of rough, given my peanut and tree nut allergies. Still, these days I'm mostly vegetarian; it's both easier and healthier.`,
+                    description: `I stayed vegan for five years, but then quit once I started dating Sasha, who ate meat. I guess it's the nature of who I am that my personal identity will always be the first thing I jettison whenever a chance for romance is at stake. And truth be told, being vegan was always kind of rough, given my peanut and tree nut allergies. Still, these days I'm mostly vegetarian; it's both easier and healthier.`,
                     dotKeys: {
                         [AFTERWORD]: true,
                     },

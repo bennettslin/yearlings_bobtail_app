@@ -1,6 +1,8 @@
 # Latest todo
+* Don't do the parentheses thing. It's just not me.
 * Revise five annotations
-* Review ten annotations starting with Vegan
+* Review annotations for songs with most to review
+    * Resolve or rest at least ten
 
 ### Must do
 * Illustrator

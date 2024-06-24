@@ -762,7 +762,7 @@ export default {
                                                 isItalic: true,
                                                 lyric: `Paris vaut bien une messe`,
                                             },
-                                            `"— or, "Paris is well worth a Mass"— implying that his earthly ambitions preceded his spiritual allegiances. Similarly, I would've converted if that could get Catherine to stay.`,
+                                            `"— or, "Paris is well worth a Mass"— implying that his earthly ambitions preceded any spiritual allegiances. Similarly, I would've converted if that could get Catherine to stay.`,
                                         ],
                                         dotKeys: {
                                             [OBSERVATION]: true,
