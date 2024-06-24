@@ -190,7 +190,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Stumped`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `In their claim to be stumped, my parents pretend to be oblivious to the outcome of my story.`,
@@ -320,7 +319,7 @@ export default {
                             anchor: `earth right now your tourist store`,
                             todo: REVIEW,
                             card: {
-                                description: `My mother enthralled me with visions of being a great artist, even as she instilled Buddhist ideals of renouncing materialism; the mail-order cult then told me I was a mere visitor to this planet. And so a belief formed in my head that I must work tirelessly "to restore" my "birthright" of artistic renown, unaffected by earthly concerns.`,
+                                description: `My mother enthralled me with visions of being a great artist, while also instilling Buddhist ideals to renounce materialism; the mail-order cult then told me I was a mere visitor to this planet. And so a belief formed in my head that I must work tirelessly "to restore" my "birthright" of artistic renown, unaffected by earthly concerns.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -336,7 +335,7 @@ export default {
                 todo: REVIEW,
                 card: {
                     description: [
-                        `The idea behind the puns in this stanza was for listeners to think they'd heard a`,
+                        `The idea behind the puns in this stanza was for listeners to think they heard a`,
                         {
                             anchor: `mondegreen`,
                             wiki: `Mondegreen`,
@@ -376,7 +375,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `To defend against the bullies' threats, I found it effective to react slowly, which then required me to react slowly to anyone in general. At some point, a classmate must have thought I was huffing paint, and this is when I got called into the principal's office.`,
+                                    description: `To defend against the bullies' threats, I found it effective to react slowly, which then required me to react slowly to anyone in general. At some point, a classmate must have thought I was huffing paint, which is how I got called into the principal's office.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -478,7 +477,7 @@ export default {
                                                 wiki: `Hamartia`,
                                             },
                                         },
-                                        `is the tragic flaw that leads to a hero's downfall. And so my parents ask if I see any telltale signs that point to mine. (I've since learned that the word has four syllables. But my English teacher pronounced it as I have here, so I plead miseducation.)`,
+                                        `is the tragic flaw that leads to a hero's downfall. And so my parents ask if I see any telltale signs that point to mine. (I've since learned that the word has four syllables. But my middle school English teacher pronounced it as I have here, so I plead miseducation.)`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -710,7 +709,7 @@ export default {
                             anchor: `drowned your stutter`,
                             todo: REVIEW,
                             card: {
-                                description: `I developed a stammer in middle school, perhaps as an unconscious way to buy time for collecting my thoughts. But in college, I found that alcohol made it disappear.`,
+                                description: `I developed a stammer in middle school, perhaps as an unconscious way to buy time for collecting my thoughts. Then in college, I found that alcohol made it disappear.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -968,7 +967,6 @@ export default {
                         `and so one night you`,
                         {
                             anchor: `chalked the sidewalks`,
-                            todo: REVIEW,
                             card: {
                                 description: `One evening my friends and I got drunk and decided to tag the streets with fluorescent sidewalk chalk.`,
                                 dotKeys: {
@@ -980,7 +978,6 @@ export default {
                         {
                             anchor: `Valmiki's chant`,
                             properNoun: true,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     {
@@ -1025,7 +1022,7 @@ export default {
                                             anchor: `Sirens`,
                                             wiki: `Siren_(mythology)`,
                                         },
-                                        `" were beautiful women whose enchanting songs would lull any passing sailors, leading them to crash their ships against the rocky shores. But much like`,
+                                        `" were beautiful women whose enchanting songs would lull passing sailors into crashing their ships against the rocky shores. But much like`,
                                         {
                                             anchor: `Odysseus`,
                                             wiki: `Odysseus`,
@@ -1061,7 +1058,8 @@ export default {
                         `:`,
                         {
                             anchor: `____`,
-                            todo: REVIEW,
+                            todo: REVISE,
+                            problem: `Say it a little differently. After not mentioning Mara anywhere in the lyrics for this entire album, I'd originally intended for this to be a fun puzzle to solve.`,
                             cards: [
                                 {
                                     description: `And what I've drunkenly scrawled is… Mara's name.`,
@@ -1070,7 +1068,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `This wasn't actually meant to be a cliffhanger; "M" just set a precedent for me to be gun-shy about ever mentioning Mara in my lyrics.`,
+                                    description: `This wasn't meant to be a cliffhanger; "M" just set a precedent for me to be gun-shy about ever mentioning Mara in my lyrics.`,
                                     dotKeys: {
                                         [SONGCRAFT]: true,
                                     },
