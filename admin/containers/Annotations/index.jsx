@@ -13,7 +13,7 @@ import {
 import { mapIsTextJustified } from '../../../src/redux/toggle/selector'
 import { getKeyName } from '../../../src/managers/Key/helper'
 import { getBoolFromStorage, setBoolInStorage } from '../../../src/utils/storage'
-import { PREVIOUS_VERSE_KEY, NEXT_VERSE_KEY } from '../../../src/constants/access'
+import { CAROUSEL_TOGGLE_KEY, TEXT_JUSTIFIED_KEY } from '../../../src/constants/access'
 import './style'
 
 const DONE_TODOS_HIDDEN_KEY = 'showAllAnnotations'
@@ -33,13 +33,17 @@ const TodoAnnotations = () => {
     }
 
     const onKeyDown = e => {
+        if (e.metaKey || e.ctrlKey) {
+            return
+        }
+
         const keyName = getKeyName(e)
 
         switch (keyName) {
-            case PREVIOUS_VERSE_KEY:
+            case CAROUSEL_TOGGLE_KEY:
                 toggleDoneTodosHidden()
                 break
-            case NEXT_VERSE_KEY:
+            case TEXT_JUSTIFIED_KEY:
                 dispatchTextJustified.current()
                 break
         }
