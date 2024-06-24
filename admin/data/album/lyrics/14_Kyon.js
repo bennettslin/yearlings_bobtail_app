@@ -170,10 +170,9 @@ export default {
                         `So baby, tell me then, when you`,
                         {
                             anchor: `take in her breasts`,
-                            todo: REVISE,
-                            problem: `Be more tactful, talk about wanting to be mothered instead of saying their bodies were motherly.`,
+                            todo: REVIEW,
                             card: {
-                                description: `It scared me, far more than I let on, to gamble away the familiar warmth of Sita's love for a mere chance to date some other woman. I had to wonder if this fear would then manifest in a hormonal craving for nurture, because I was always struck by how motherly these women's naked bodies initially felt to me.`,
+                                description: `It scared me, far more than I let on, to gamble away the warmth of Sita's love just for a chance to date some other woman. I had to wonder if this fear would then affect my hormones, because upon seeing this woman's naked body for the first time, I would always be struck by a desire to be mothered more than anything else.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -271,8 +270,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVISE,
-                problem: `Could flow better?`,
+                todo: REVIEW,
                 card: {
                     description: [
                         `Every time we got back together, Sita would reassert our status as a couple by insisting that I bring her along to see my friends— the very same ones who'd emboldened me to leave her. And so the circus`,
@@ -506,10 +504,9 @@ export default {
                         `Bursting belly told by`,
                         {
                             anchor: `extra holes`,
-                            todo: REVISE,
-                            problem: `Make this more clear, as notches aren't the same as holes?`,
+                            todo: REVIEW,
                             card: {
-                                description: `Notches can be carved in one's belt to support a belly distended from overfeeding. They might also tally sexual conquests.`,
+                                description: `Notches can be carved in one's belt to support a belly grown large through overfeeding. They might also tally sexual conquests.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },

@@ -162,7 +162,7 @@ export default {
                             anchor: `ever live another life`,
                             todo: REVIEW,
                             card: {
-                                description: `As dreams often go, I have no memory or even awareness of having lived any other life in the intervening years. It's clear that Sita and I didn't stay together, yet I can't recall the time we spent apart. Of course, according to the Hindu and Buddhist faiths, I've lived many other lives, literally— in past incarnations.`,
+                                description: `As dreams often go, I have no memory or even awareness of having lived any other life in the intervening years. It's clear that Sita and I didn't stay together, yet I can't recall the time spent apart. Of course, according to the Hindu and Buddhist faiths, I've lived many other lives, literally— in past incarnations.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -247,25 +247,32 @@ export default {
                         {
                             anchor: `gopis`,
                             todo: REVIEW,
-                            card: {
-                                description: [
-                                    `In Hindu mythology, the`,
-                                    {
-                                        anchor: `gopis`,
-                                        wiki: `Gopi`,
+                            cards: [
+                                {
+                                    description: [
+                                        `In Hindu mythology, the`,
+                                        {
+                                            anchor: `gopis`,
+                                            wiki: `Gopi`,
+                                        },
+                                        `are cow herdesses who worship the god`,
+                                        {
+                                            anchor: `Krishna`,
+                                            wiki: `Krishna`,
+                                        },
+                                        `.`,
+                                    ],
+                                    dotKeys: {
+                                        [NARRATIVE]: true,
                                     },
-                                    `are cow herdesses who worship the god`,
-                                    {
-                                        anchor: `Krishna`,
-                                        wiki: `Krishna`,
-                                    },
-                                    `. (I don't have a good explanation for what they're doing in Argentina. When I wrote these lyrics, I didn't think I'd need one.)`,
-                                ],
-                                dotKeys: {
-                                    [NARRATIVE]: true,
-                                    [SONGCRAFT]: true,
                                 },
-                            },
+                                {
+                                    description: `I don't have an explanation for what the gopis are doing in Argentina. When I wrote these lyrics, I didn't think I'd need one.`,
+                                    dotKeys: {
+                                        [SONGCRAFT]: true,
+                                    },
+                                },
+                            ],
                         },
                         `played,`,
                     ],

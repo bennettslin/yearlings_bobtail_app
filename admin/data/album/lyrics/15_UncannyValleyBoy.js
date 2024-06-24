@@ -477,7 +477,7 @@ export default {
                                                 wiki: `Hamartia`,
                                             },
                                         },
-                                        `is the tragic flaw that leads to a hero's downfall. And so my parents ask if I see any telltale signs that point to mine. (I've since learned that the word has four syllables. But my middle school English teacher pronounced it as I have here, so I plead miseducation.)`,
+                                        `is the tragic flaw that leads to a hero's downfall. And so my parents ask if I see any telltale signs that point to mine, while alluding to my former belief that I was born from the stars— or, as they put it, that I'm "a Martian."`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -485,9 +485,16 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `My parents also allude to my former belief that I was born from the stars— or, as they put it, that I'm "a Martian."`,
+                                    description: [
+                                        `I've since learned that`,
+                                        {
+                                            isItalic: true,
+                                            lyric: `hamartia`,
+                                        },
+                                        `has four syllables. But my English teacher in middle school pronounced it as I have here, so I plead miseducation.`,
+                                    ],
                                     dotKeys: {
-                                        [PUN]: true,
+                                        [SONGCRAFT]: true,
                                     },
                                 },
                             ],
@@ -1042,7 +1049,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `I sit up and notice that dead ants have been piling up all around my drunken scrawls on the sidewalk. (I know chalk is neither tasty nor toxic to ants, but it suits the story.)`,
+                                    description: `I sit up and notice that dead ants have been piling up all around my drunken scrawls on the sidewalk.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },

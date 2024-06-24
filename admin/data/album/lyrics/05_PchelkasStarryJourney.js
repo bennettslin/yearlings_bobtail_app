@@ -920,10 +920,9 @@ export default {
                         `twits daily`,
                         {
                             anchor: `murdered for their virtue`,
-                            todo: REVISE,
-                            problem: `First sentence should be reworked.`,
+                            todo: REVIEW,
                             card: {
-                                description: `My ordeal was made more bearable if I could tie it to a greater purpose. But ironically, behaving like my suffering had any meaning only invited further abuse.`,
+                                description: `My suffering was made more bearable if I could believe it was tied to a greater purpose. But behaving as such only invited further abuse.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -1021,11 +1020,10 @@ export default {
                         `The only`,
                         {
                             anchor: `spies who get to feel love`,
-                            todo: REVISE,
-                            problem: `Make first sentence more eloquent.`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `Since a spy's success hinges upon staying hidden, their exploits will never be known unless they're captured— upon which they'll be executed by a firing squad. Similarly, my desire to be part of a friendly squad eventually led me to open up, thus sabotaging all my previous efforts at being unresponsive.`,
+                                    `Since a spy's success hinges upon staying hidden, their exploits won't ever be known unless they're captured— at which point they'll face death by firing squad. And in my desire to join a friendly squad, I faced a similar dilemma. Not only would opening up sabotage my previous efforts to stay unresponsive, I would then be forced to explain my past behavior.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -1036,22 +1034,13 @@ export default {
                         `first`,
                         {
                             anchor: `unearth their own plots`,
-                            todo: REVISE,
-                            problem: `Use complete sentences.`,
-                            cards: [
-                                {
-                                    description: `But opening up only exposed me to greater scrutiny, as I was now forced to explain my past behavior.`,
-                                    dotKeys: {
-                                        [BACKSTORY]: true,
-                                    },
+                            todo: REVIEW,
+                            card: {
+                                description: `Figuratively, to reveal one's secret plans; or else literally, to dig one's own grave.`,
+                                dotKeys: {
+                                    [PUN]: true,
                                 },
-                                {
-                                    description: `Figuratively, to reveal one's secret plans. Literally, to dig one's own grave.`,
-                                    dotKeys: {
-                                        [PUN]: true,
-                                    },
-                                },
-                            ],
+                            },
                         },
                         `!`,
                     ],

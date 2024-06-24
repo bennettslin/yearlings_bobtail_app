@@ -1,5 +1,5 @@
 # Latest todo
-* Don't do the parentheses thing. It's just not me.
+* Redo one annotation
 * Revise five annotations
 * Review annotations for songs with most to review
     * Resolve or rest at least ten

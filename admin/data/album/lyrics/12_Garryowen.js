@@ -33,8 +33,7 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVISE,
-                problem: `Make it more clear that I adopted it for my drunken alter ego.`,
+                todo: REVIEW,
                 card: {
                     description: [
                         `In`,
@@ -42,7 +41,7 @@ export default {
                             isItalic: true,
                             lyric: `Ulysses`,
                         },
-                        `, Garryowen is a menacing dog owned by a vulgar Irish nationalist. It seemed like a fitting eponym for my drunken self at the time.`,
+                        `, Garryowen is a menacing dog owned by a vulgar Irish nationalist. On a whim, I gave the same name to my drunken self.`,
                     ],
                     dotKeys: {
                         [OBSERVATION]: true,

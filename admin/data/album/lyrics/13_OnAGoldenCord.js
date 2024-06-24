@@ -963,17 +963,16 @@ export default {
                         `my`,
                         {
                             anchor: `alias drunk, in panic`,
-                            todo: REVISE,
-                            problem: `Don't need to mention panic again?`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Once drunk, I always stayed drunk until I crashed. So while I was quite used to transforming into Garry, Garry was wholly unfamiliar with turning back into me.`,
+                                    description: `Once drunk, I always stayed drunk until I crashed. So while I was quite used to morphing into Garry, Garry was wholly unfamiliar with turning back into me.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
                                 },
                                 {
-                                    description: `As I sober up, panicked doubt creeps in. I question if dating woman after woman will actually fulfill me, and whether my newfound ability to attract them isn't a fluke.`,
+                                    description: `Fearing upheaval ahead, I begin to question if dating one woman after another will actually fulfill me, and whether my newfound ability to attract them isn't some fluke.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -986,10 +985,9 @@ export default {
                         `by`,
                         {
                             anchor: `trail of crumbs`,
-                            todo: REVISE,
-                            problem: `Make it flow better`,
+                            todo: REVIEW,
                             card: {
-                                description: `Fearing upheaval ahead, I wonder if it's too late to walk back the damage done. But I couldn't find my way back if I wanted to: All night I've been nibbling on the rolls in my pocket instead of dropping a breadcrumb trail. I've traded away long-term security to satisfy my short-term hunger.`,
+                                description: `But it's too late to walk back the damage done: All night I've been nibbling on the rolls in my pocket instead of dropping a breadcrumb trail. And now, having satisfied my hunger, I'm stranded and can't find my way back— as with the breakup itself.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -1011,10 +1009,9 @@ export default {
                         {
                             anchor: `Garry's sole witness`,
                             properNoun: true,
-                            todo: REVISE,
-                            problem: `Say that I know this.`,
+                            todo: REVIEW,
                             card: {
-                                description: `Though I wish to plead my case, the breakup will be over with sooner if I just accept my role as the villain. And so the sober me, called up to testify for his drunken half, stays silent.`,
+                                description: `Though I wish to plead my case, I also know this will be over with sooner if I just accept my role as the villain. And so the sober me, called up to testify for his drunken half, stays silent.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
