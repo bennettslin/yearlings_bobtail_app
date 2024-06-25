@@ -918,10 +918,9 @@ export default {
                         `each`,
                         {
                             anchor: `attack with the proper fist`,
-                            todo: REVISE,
-                            problem: `Doesn't flow well.`,
+                            todo: REVIEW,
                             card: {
-                                description: `Out of frustration over conflicting desires, I start punching myself in the head. Since the left hemisphere controls the body's right side, and the right hemisphere the left, it's as if each half of my brain attacks the other using the one fist under its command.`,
+                                description: `Out of frustration over conflicting desires, I start punching myself in the head. Since the left hemisphere controls the body's right side— and the right hemisphere, the left— it's as if each half of my brain attacks the other using the one fist under its command.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -1036,10 +1035,9 @@ export default {
                         `Though, the`,
                         {
                             anchor: `master mind`,
-                            todo: REVISE,
-                            problem: `Second sentence doesn't flow well.`,
+                            todo: REVIEW,
                             card: {
-                                description: `In college, my wishful thinking was that I could shunt the burden of writing term papers onto my drunken self. Once drunk, however, I felt like a slave taking orders from a master, and I would do the work poorly or not at all. Somehow this became my strategy for dealing with the burden of breaking up with Sita.`,
+                                description: `In college, my wishful thinking was that I could shunt the burden of writing term papers onto my drunken self. But once drunk, I would resent taking orders from my sober self, and either do the work poorly or not at all— like a slave rebelling against a master. Somehow this became my strategy for breaking up with Sita.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

@@ -581,16 +581,15 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVISE,
-                problem: `Maybe shorten first sentence.`,
+                todo: REVIEW,
                 card: {
                     description: [
-                        `In the song's second half, the meter switches to`,
+                        `To symbolize how Sita and I normalized our dysfunction, the meter switches to`,
                         {
                             anchor: `common time`,
                             wiki: `Time_signature`,
                         },
-                        `even as the chord progression remains unchanged, thus symbolizing how Sita and I came to normalize the dysfunction in our relationship. The two strands of tuplets are also more in sync, as one plays two notes for every three played by the other.`,
+                        `in the song's second half, even as the chord progression remains unchanged. The two strands of tuplets are also more in sync, as one plays two notes for every three played by the other.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,

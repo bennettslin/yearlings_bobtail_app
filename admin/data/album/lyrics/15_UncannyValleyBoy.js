@@ -31,9 +31,8 @@ export default {
     referenceDescription: `Acoustic guitar in measure 1`,
     mixStartTime: `0:01:18.46`,
     playerStartTime: 2722.629,
-    todo: REVISE,
-    problem: `Too many short sentences.`,
-    overview: `Upon learning of my brother's autism, my parents were too harried to notice I was being bullied at school. In guilt, they later indulged every whim I had to find my own path. But it didn't assure them that I failed to mature even as I got older— and they were especially crushed when I left Sita, whom they adored. Naturally, I wasn't happy to disappoint them. Still, I had a master plan to follow, and I wasn't about to change my ways.`,
+    todo: REVIEW,
+    overview: `Upon learning of my brother's autism, my parents were too harried to notice I was being bullied at school; in guilt, they later indulged every whim I had to find my own path. But it didn't assure them that I failed to mature as I got older— and they were especially crushed when I first left Sita, whom they adored. Naturally, I wasn't happy to disappoint them. Still, I had a master plan to follow, and I wasn't about to change my ways.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -123,8 +122,7 @@ export default {
                         `, come`,
                         {
                             anchor: `wax prophetic`,
-                            todo: REVISE,
-                            problem: `Semicolons don't seem right.`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -141,14 +139,14 @@ export default {
                                                 wiki: `A_Christmas_Carol`,
                                             },
                                         },
-                                        `, my parents invite me on a magical night journey to witness the ordeals of my past; my self-serving ways at present; and the emotional devastation soon to come of it all.`,
+                                        `, my parents invite me on a magical journey. Soon I'll witness the ordeals of my past, my self-serving ways at present, and the emotional devastation to come of it all.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
                                 },
                                 {
-                                    description: `It's more common to "wax poetic," meaning to become eloquent in speech. But my parents use this highbrow expression ironically, as commentary on the artificial persona I've created.`,
+                                    description: `To "wax poetic" is to become eloquent in speech. And so my parents borrow this expression ironically, to mock the artificial persona I've created.`,
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                     },
@@ -902,10 +900,9 @@ export default {
                         `on`,
                         {
                             anchor: `repeat forevermore`,
-                            todo: REVISE,
-                            problem: `Instead of failures, be more specific. Revealing my self-centeredness?`,
+                            todo: REVIEW,
                             card: {
-                                description: `As I was making this album, a thought occurred to me. Like Rama, I too am now doomed to repeat my failures, as the story of how I betrayed my Sita is endlessly retold.`,
+                                description: `As I was making this album, a thought occurred to me: Like Rama, I too am now doomed to repeat my mistakes, as the story of how I betrayed my Sita shall be endlessly retold.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
