@@ -122,9 +122,13 @@ export const getShownAnnotationIndices = ({
     songIndex,
     areDoneTodosHidden,
 }) => (
-    getAnnotationIndices(songIndex).filter(annotationIndex => (
-        // Only show annotations left todo.
-        !areDoneTodosHidden ||
-        getAnnotationTodo(songIndex, annotationIndex)
-    ))
+    getAnnotationIndices(songIndex).filter(annotationIndex => {
+        const annotationTodo = getAnnotationTodo(songIndex, annotationIndex)
+        return (
+            // Only show annotations left todo.
+            !areDoneTodosHidden || (
+                annotationTodo && annotationTodo !== REST
+            )
+        )
+    })
 )

@@ -17,7 +17,7 @@ import {
     FORESHADOW_OF_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Vegan Proclamation',
@@ -279,7 +279,8 @@ export default {
                         `and now I know why the`,
                         {
                             anchor: `battered kitten purrs`,
-                            todo: REVIEW,
+                            todo: REST,
+                            problem: `First two sentences seem short and disconnected?`,
                             cards: [
                                 {
                                     description: `Sita had her own story to tell about mistreating a first pet. Upon receiving a kitten as a child, she hugged it so hard that it began to purr. Taking this as a sign of its serenity, she hugged it even harder. Years later, she learned that cats also purr to cope with distress, and looking back, she realized that her kitten must have believed it was being crushed to death. She lived in guilt ever since.`,
@@ -328,7 +329,6 @@ export default {
                                 {
                                     anchor: `Big Crunch`,
                                     properNoun: true,
-                                    todo: REVIEW,
                                     card: {
                                         description: [
                                             `The`,
@@ -351,7 +351,6 @@ export default {
                                 `. And meanwhile, the universe is a`,
                                 {
                                     anchor: `cyanided box`,
-                                    todo: REVIEW,
                                     card: {
                                         description: [
                                             `In`,
@@ -488,7 +487,6 @@ export default {
                         `a`,
                         {
                             anchor: `lone rallied youth`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Having played shows for many years, I've seen how an audience gets whipped into a single-minded frenzy. But with that world now drifting away, I puzzle over what drew me to those crowds, and why I longed to be adored by them. I question everything I've valued up to this point, like a reformed`,
@@ -522,7 +520,7 @@ export default {
                                             wiki: `Schutzstaffel`,
                                         },
                                     },
-                                    `, the paramilitary group responsible for carrying out the Holocaust, consisted of two thunderbolts side by side. And so, wishing no more to strike anyone down with my thunder, I strike myself down instead, leaving my complacency and ego behind.`,
+                                    `, the paramilitary group responsible for carrying out the Holocaust, consists of two thunderbolts side by side. And so, wishing no more to strike anyone down with my thunder, I strike myself down instead, leaving my complacency and ego behind.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -585,7 +583,6 @@ export default {
                         `then`,
                         {
                             anchor: `none by us now`,
-                            todo: REVIEW,
                             card: {
                                 description: `And so, vowing never to cause hurt to anyone or anything ever again, I decide to become a vegan.`,
                                 dotKeys: {
@@ -779,7 +776,6 @@ export default {
                         `And can we`,
                         {
                             anchor: `start as children`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `I first recorded this song on Owen's four-track. There were no lyrics yet, so for the vocal track, I just mumbled some random phrases. Since I was always hoping to write the next "`,
@@ -835,7 +831,7 @@ export default {
                                 todo: REVIEW,
                                 cards: [
                                     {
-                                        description: `With ignorance being as old as time itself, I'm comforted to know that we've always corrected our past mistakes; at the same time, it's dispiriting to know that those to come have yet to make theirs. The universe never truly learns, and I'm somewhat to blame… I had a similar thought as a child, when I wondered if I was the reason that my brother never got better. It made me realize that all I could do was love him, and then do better for him.`,
+                                        description: `With ignorance being as old as time itself, I'm comforted to know we've always corrected our past mistakes; at the same time, it's dispiriting to remember that those to come have yet to make theirs. The universe never truly learns, and I'm partly to blame… A similar thought occurred to me as a child, when I wondered if I was the reason my brother never got better. It made me realize that all I could do was love him, and then do better for him.`,
                                         dotKeys: {
                                             [NARRATIVE]: true,
                                             [OBSERVATION]: true,
@@ -861,7 +857,6 @@ export default {
                             // NOTE: I added an "h" to Shiva.
                             anchor: `chivalry to our Shiva's feet`,
                             properNoun: true,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -912,7 +907,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: REVIEW,
                 card: {
-                    description: `I stayed vegan for five years, but then quit once I started dating Sasha, who ate meat. I guess it's the nature of who I am that my personal identity will always be the first thing I jettison whenever a chance for romance is at stake. And truth be told, being vegan was always kind of rough, given my peanut and tree nut allergies. Still, these days I'm mostly vegetarian; it's both easier and healthier.`,
+                    description: `I stayed vegan for five years, but then quit once I started dating Sasha, who ate meat. I guess it's the nature of who I am that my personal identity is the first thing I'll jettison whenever a chance for romance is at stake. And truth be told, being vegan was always somewhat rough, given my peanut and tree nut allergies. Still, these days I'm mostly vegetarian; it's both easier and healthier.`,
                     dotKeys: {
                         [AFTERWORD]: true,
                     },

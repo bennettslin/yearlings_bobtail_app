@@ -665,7 +665,6 @@ export default {
                         `, has`,
                         {
                             anchor: `slain the teeto-Tatars`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [

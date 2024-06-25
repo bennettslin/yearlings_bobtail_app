@@ -338,7 +338,6 @@ export default {
                         `But dear,`,
                         {
                             anchor: `let's make a pact`,
-                            todo: REVIEW,
                             card: {
                                 description: `Sita knew I'd come to want the same slow-burning love that she did. So every time we broke up, she would make me promise to rekindle what we once had, whenever I should pine for it once more.`,
                                 dotKeys: {

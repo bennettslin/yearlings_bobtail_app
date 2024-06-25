@@ -162,7 +162,7 @@ export default {
                             anchor: `ever live another life`,
                             todo: REVIEW,
                             card: {
-                                description: `As dreams often go, I have no memory or even awareness of having lived any other life in the intervening years. It's clear that Sita and I didn't stay together, yet I can't recall the time spent apart. Of course, according to the Hindu and Buddhist faiths, I've lived many other lives, literally— in past incarnations.`,
+                                description: `As dreams often go, I have no memory or even awareness of having lived any other life in the intervening years. It's clear that Sita and I didn't stay together, yet I can't recall our time spent apart. Of course, according to the Hindu and Buddhist faiths, I've lived many other lives, literally— in past incarnations.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -245,7 +245,6 @@ export default {
                         `where the`,
                         {
                             anchor: `gopis`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -367,7 +366,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: `This bridge shares the same chord progression with the one in "Grasshoppers Lie Heavy." It starts with arpeggiated chords played on the Spanish guitar from "M," followed by the melodicas from "Pchelka's Starry Journey" evoking the sound of brass fanfare.`,
                     dotKeys: {
