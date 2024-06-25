@@ -702,7 +702,7 @@ export default {
                                         anchor: `New Age`,
                                         wiki: `New_Age`,
                                     },
-                                    `belief in the '70s— though as a child, I had no way of knowing this. Like Beyonders, star people came to Earth and then lost all memory of their stellar origins.`,
+                                    `belief in the '70s— though as a child, I had no way to know this. Like Beyonders, star people came to Earth and then lost all memory of their stellar origins.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -1036,7 +1036,7 @@ export default {
                             anchor: `unearth their own plots`,
                             todo: REVIEW,
                             card: {
-                                description: `Figuratively, to reveal one's secret plans; or else literally, to dig one's own grave.`,
+                                description: `Figuratively, to reveal one's secret plans; and literally, to dig one's own grave.`,
                                 dotKeys: {
                                     [PUN]: true,
                                 },

@@ -375,7 +375,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `To defend against the bullies' threats, I found it effective to react slowly, which then required me to react slowly to anyone in general. At some point, a classmate must have thought I was huffing paint, which is how I got called into the principal's office.`,
+                                    description: `I would defend against the bullies' threats by reacting slowly— which then forced me to react slowly to anyone in general. At some point, a classmate must have believed I was huffing paint, and this is how I got called into the principal's office.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -1046,7 +1046,8 @@ export default {
                         `, you found spelled out in`,
                         {
                             anchor: `dead ants`,
-                            todo: REVIEW,
+                            todo: REVISE,
+                            problem: `Phrase it better, and also explain why the ants died.`,
                             cards: [
                                 {
                                     description: `I sit up and notice that dead ants have been piling up all around my drunken scrawls on the sidewalk.`,

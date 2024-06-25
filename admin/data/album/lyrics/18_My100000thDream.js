@@ -187,7 +187,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `The pulsating`,
@@ -370,7 +369,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: REVIEW,
                 card: {
-                    description: `This bridge shares the same chord progression with the one in "Grasshoppers Lie Heavy." It starts with arpeggiated chords played on the Spanish guitar from "M," followed by the sound of brass fanfare evoked by the melodicas from "Pchelka's Starry Journey."`,
+                    description: `This bridge shares the same chord progression with the one in "Grasshoppers Lie Heavy." It starts with arpeggiated chords played on the Spanish guitar from "M," followed by the melodicas from "Pchelka's Starry Journey" evoking the sound of brass fanfare.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
@@ -508,7 +507,6 @@ export default {
                     lyric: [
                         {
                             anchor: `When you'll be mine`,
-                            todo: REVIEW,
                             card: {
                                 description: `If this is only a dream, then what I'm holding onto isn't really Sita, but only a memory of her. And if all I have left is a memory, then somewhere along the way I must have lost the real Sita. So now as I exit this world, I hold onto the possibility that I may find her again in the next.`,
                                 dotKeys: {
@@ -565,7 +563,6 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: `In New York City I met Liz, with whom things ended no less painfully. So in making this audio webcomic, I was faced with a dilemma: I wanted to stay true to the album, given how fresh my wounds were when I'd made it— while being honest that I'd since moved on and was now hurt over a different breakup. My solution was to depict the events as a stage play, with the role of Sita played by an Indian version of Liz. The resulting character looks like neither, which should come as a relief to both.`,
                     dotKeys: {

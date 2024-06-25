@@ -157,7 +157,6 @@ export default {
                         `if you would`,
                         {
                             anchor: `opt for bed not street`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `I was tired of working extra shifts just to pay rent. So after my lease ended, I would spend some nights with Sita, and others crashing in the`,
@@ -491,12 +490,12 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `In Biblical times, a community would absolve its sins by ritually placing them`,
+                                    `In Biblical times, a community absolved its sins by ritually placing them`,
                                     {
                                         anchor: `on a goat`,
                                         wiki: `Scapegoat`,
                                     },
-                                    `that was then cast into the desert. Banishing Sita from my life would serve the same purpose: Without her around to cast judgment, I'd have no need to atone for my hypocrisy.`,
+                                    `that was then cast into the desert. Banishing Sita from my life served the same purpose: Without her around to cast judgment, I had no need to atone for my hypocrisy.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,

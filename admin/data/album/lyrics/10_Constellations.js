@@ -669,7 +669,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `With the familiar sensation of Robitussin having kicked in, I'm no longer wavering like a playground "`,
+                                        `With the familiar sensation of Robitussin kicking in, I'm no longer wavering like a playground "`,
                                         {
                                             anchor: `teeter-totter`,
                                             wiki: `Seesaw`,
@@ -679,7 +679,7 @@ export default {
                                             anchor: `teetotaler`,
                                             wiki: `Teetotalism`,
                                         },
-                                        `" has been killed off.`,
+                                        `" is now being killed off.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -1191,7 +1191,7 @@ export default {
                             anchor: `Pour sod, fourfeit tundr`,
                             todo: REVIEW,
                             card: {
-                                description: `In the car, Howie and Tomer swap tales from their high school days, culminating in the day they poured sod on the "poor sod" who now lies "four feet under."`,
+                                description: `In the car, Howie and Tomer swap tales from their high school days, leading up to the day they had to pour sod on the "poor sod" who now lies "four feet under."`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,

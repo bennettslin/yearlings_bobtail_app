@@ -404,7 +404,7 @@ export default {
                             anchor: `Guilt pardons`,
                             todo: REVIEW,
                             card: {
-                                description: `My sober self observes his drunken accomplice's lack of remorse and can only feel pity, knowing the trauma that must surely dwell in one who committed such a heinous act. After all, avoiding such trauma is the reason he chose not to carry out the hit himself.`,
+                                description: `My sober self observes his drunken accomplice's lack of remorse and can only feel pity, knowing the trauma that must surely dwell in one who committed such a heinous act. After all, avoiding this trauma is the reason he chose not to carry out the hit himself.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -514,12 +514,12 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `Every now and then, a Robitussin flashback would cause me to trail off and stare into the distance. When a friend asked about the experience, I said it felt like`,
+                                    `Every now and then, a Robitussin flashback would cause me to trail off and stare into the distance. When a friend asked what it felt like, I said it was like`,
                                     {
                                         anchor: `Colorforms`,
                                         wiki: `Colorforms`,
                                     },
-                                    `were being rapidly peeled off my eyeballs to present the illusion of a scene unfolding in time.`,
+                                    `being peeled off my eyeballs in quick succession to present the illusion of a scene unfolding in time.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -687,7 +687,6 @@ export default {
                         lyric: [
                             {
                                 anchor: `Mush`,
-                                todo: REVIEW,
                                 card: {
                                     description: [
                                         `Marching onward without sleep, I try to recall the last time I'd known untroubled bliss. And so the music here evokes the first song I loved as a child: Johnny Horton's "`,
@@ -751,7 +750,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `I imagine Sita to be fully immolated by now on the burnt rubble of our failed relationship.`,
+                                    description: `By now, I imagine Sita to be fully immolated on the burnt rubble of our failed relationship.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -1011,7 +1010,7 @@ export default {
                             properNoun: true,
                             todo: REVIEW,
                             card: {
-                                description: `Though I wish to plead my case, I also know this will be over with sooner if I just accept my role as the villain. And so the sober me, called up to testify for his drunken half, stays silent.`,
+                                description: `Though I wish to plead my case, I also know this will all be over with sooner if I just accept my role as the villain. And so the sober me, called up to testify for his drunken half, stays silent.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
