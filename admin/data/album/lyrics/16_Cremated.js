@@ -15,7 +15,7 @@ import {
     IS_UNIT_DOT,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
-import { REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Cremated',
@@ -39,8 +39,8 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVISE,
-                problem: `Put "creaming myself" in here as a pun.`,
+                todo: REST,
+                problem: `Put "creaming myself" in here as a pun?`,
                 card: {
                     description: `Once when I was a child, a playmate asked if I knew what cremation was; I didn't, but assumed it must be fun and tasty. Of course, the horrifying truth was revealed to me a moment later. I thought this was the perfect metaphor for a song about the seemingly innocent day trip that Miriam had planned to end with our breakup.`,
                     dotKeys: {
@@ -717,11 +717,10 @@ export default {
                     lyricCentre: [
                         {
                             anchor: `Needle done`,
-                            todo: REVISE,
-                            problem: `Make clear that I'm seeing the scenario, not seeing myself as part of the scenario.`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Having gone all the way with Miriam, I'm at peace with our inevitable breakup. As I bask in my post-coital glow, a scenario plays out in my mind of how things will end: I see myself as a terminally ill patient being put to sleep while an old record finishes playing in the background.`,
+                                    description: `Having gone all the way with Miriam, I'm at peace with our inevitable breakup. Basking in my post-coital glow, then, I picture myself as a terminally ill patient being put to sleep while an old record plays in the background.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },

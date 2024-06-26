@@ -20,7 +20,7 @@ import {
     BACKING,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REDO, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Uncanny Valley Boy',
@@ -1042,11 +1042,10 @@ export default {
                         `, you found spelled out in`,
                         {
                             anchor: `dead ants`,
-                            todo: REVISE,
-                            problem: `Phrase it better, and also explain why the ants died.`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `I sit up and notice that dead ants have been piling up all around my drunken scrawls on the sidewalk.`,
+                                    description: `I sit up and notice my drunken scrawls on the sidewalk, wondering if the chalk is toxic enough to kill some ants wandering nearby.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -1062,8 +1061,7 @@ export default {
                         `:`,
                         {
                             anchor: `____`,
-                            todo: REVISE,
-                            problem: `Say it a little differently. After not mentioning Mara anywhere in the lyrics for this entire album, I'd originally intended for this to be a fun puzzle to solve.`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `And what I've drunkenly scrawled is… Mara's name.`,
@@ -1072,7 +1070,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `This wasn't meant to be a cliffhanger; "M" just set a precedent for me to be gun-shy about ever mentioning Mara in my lyrics.`,
+                                    description: `Since Mara is never once mentioned in "M," I decided to leave her name out of the rest of the album as well.`,
                                     dotKeys: {
                                         [SONGCRAFT]: true,
                                     },
@@ -1604,10 +1602,26 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REDO,
-                problem: `Explain change of album title.`,
+                todo: REVIEW,
                 card: {
-                    description: `Placeholder text.`,
+                    description: [
+                        `Without Ana and Jacob in the band, it didn't feel right to keep referring to myself as the Yearlings. And with the Web gaining in usage, I wanted a new name that would always be first in search results. So I decided to combine two random words, like the`,
+                        {
+                            anchor: `Smashing Pumpkins`,
+                            wiki: `The_Smashing_Pumpkins`,
+                        },
+                        `. I could only think of "Bobtail Yearlings," though— in which case the album would make more sense as`,
+                        {
+                            isItalic: true,
+                            lyric: `Yearling's Bobtail`,
+                        },
+                        `. But once I realized that one`,
+                        {
+                            anchor: `acronym`,
+                            wiki: `Acronym`,
+                        },
+                        `seems to ask, "Why be?"— while the other answers with, "Be why"— this felt like approval from the heavens.`,
+                    ],
                     dotKeys: {
                         [AFTERWORD]: true,
                     },

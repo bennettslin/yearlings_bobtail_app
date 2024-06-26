@@ -1,8 +1,7 @@
 # Latest todo
+* Revise five annotations (Pchelka or M for sure)
+* Review ten annotations (Uncanny Valley and Golden Cord)
 * Redo one annotation
-* Revise five annotations
-* Review annotations for songs with most to review
-    * Resolve or rest at least ten
 
 ### Must do
 * Illustrator
