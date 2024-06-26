@@ -37,8 +37,9 @@ export default {
     mixStartTime: `0:01:27.02`,
     playerReferenceTime: 756.159,
     playerStartTime: 755.661,
-    todo: REVIEW,
-    overview: `As my years of getting bullied grew unbearable, a strange letter arrived with promises of spiritual answers. So I mailed off the requested payment, after which it was revealed to me that I belonged to a race of interstellar beings. I was also given a mission: to shut myself off from the world. I did so by adopting an unresponsive manner like my brother, which made me feel a psychic bond with him. But as my sanity chipped away, I came to realize that I was in a mail-order cult.`,
+    todo: REVISE,
+    problem: `Work on it all over again.`,
+    overview: `As my years of getting bullied grew unbearable, a strange letter arrived with promises of spiritual answers. All that was asked of me was a small payment— which I promptly mailed off. It was then revealed to me that I belonged to a race of interstellar beings, and that I had a mission to shut myself off from the world. I did so by adopting an unresponsive manner like my brother, which made me feel a psychic bond with him. But as my sanity chipped away, I came to realize that I was in a mail-order cult.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -325,7 +326,7 @@ export default {
                             anchor: `your cape`,
                             todo: REVIEW,
                             card: {
-                                description: `In elementary school, I was well liked. Being small for my age, I was pampered even by other boys; and though I was absorbed in my sketchbooks, I would draw anything for those who asked. But the traits that once made me a hero now marked me as easy prey in middle school, and I was ill-prepared.`,
+                                description: `In elementary school, I was well liked. Being small for my age, I was pampered even by other boys; and though I was absorbed in my sketchbooks, I was happy to draw anything for those who asked. But the traits that once made me a hero now marked me as easy prey in middle school, and I was ill-prepared.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -348,7 +349,7 @@ export default {
                             todo: REVISE,
                             problem: `Make it more about having friends, to make it clear that's what I'm referring to.`,
                             card: {
-                                description: `The most popular kids in middle school were the ones least concerned about being liked, which ran counter to my intuition that whatever I desired must be pursued wholeheartedly. Yet trying things their way didn't make me any more likable either…`,
+                                description: `The most popular kids in middle school were the ones who were least concerned about being liked, which ran counter to my intuition that whatever I desired must be pursued wholeheartedly. Yet trying things their way didn't make me any more likable either…`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -553,41 +554,30 @@ export default {
                         {
                             anchor: `Gogo and his Didi`,
                             properNoun: true,
-                            todo: REVISE,
-                            problem: `Two reference cards.`,
-                            cards: [
-                                {
-                                    description: [
-                                        `In Chinese,`,
-                                        {
-                                            isItalic: true,
-                                            lyric: `gogo`,
-                                        },
-                                        `means "big brother." And of course,`,
-                                        {
-                                            isItalic: true,
-                                            lyric: `didi`,
-                                        },
-                                        `here now refers to`,
-                                        {
-                                            isEmphasis: true,
-                                            lyric: `my`,
-                                        },
-                                        `little brother.`,
-                                    ],
-                                    dotKeys: {
-                                        [REFERENCE]: true,
+                            todo: REVIEW,
+                            card: {
+                                description: [
+                                    `In Chinese,`,
+                                    {
+                                        isItalic: true,
+                                        lyric: `gogo`,
                                     },
-                                },
-                                {
-                                    description: [
-                                        `Didi and Gogo are the respective pet names of Vladimir and Estragon, the two tramps who are still waiting for Godot by the end of Beckett's play.`,
-                                    ],
-                                    dotKeys: {
-                                        [REFERENCE]: true,
+                                    `means "big brother"; and of course,`,
+                                    {
+                                        isItalic: true,
+                                        lyric: `didi`,
                                     },
+                                    `here now refers to`,
+                                    {
+                                        isEmphasis: true,
+                                        lyric: `my`,
+                                    },
+                                    `little brother. But Gogo and Didi are also the respective pet names of Estragon and Vladimir, the two tramps who are still waiting for Godot by the end of Beckett's play.`,
+                                ],
+                                dotKeys: {
+                                    [REFERENCE]: true,
                                 },
-                            ],
+                            },
                         },
                         `, sauntered off…`,
                     ],
@@ -882,12 +872,12 @@ export default {
                                         anchor: `Castor and Pollux`,
                                         wiki: `Castor_and_Pollux`,
                                     },
-                                    `" were twin half-brothers in Greek mythology. While Pollux was the son of Zeus, Castor was fathered by a mortal. So Zeus transformed them both into the constellation`,
+                                    `" were twin half-brothers in Greek mythology. While Pollux was the son of Zeus, however, Castor was fathered by a mortal. So Zeus transformed them both into the constellation`,
                                     {
                                         anchor: `Gemini`,
                                         wiki: `Gemini_(constellation)`,
                                     },
-                                    `, thus allowing Pollux to share his immortality with his twin. Similarly, I felt as if my brother were sharing his autism with me, along with its spiritual answers.`,
+                                    `, allowing Pollux to share his immortality with his twin. Similarly, I felt as if my brother were sharing his autism with me, along with its spiritual answers.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,

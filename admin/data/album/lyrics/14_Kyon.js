@@ -505,7 +505,7 @@ export default {
                             anchor: `extra holes`,
                             todo: REVIEW,
                             card: {
-                                description: `Notches can be carved in one's belt to support a belly grown large through overfeeding. They might also tally sexual conquests.`,
+                                description: `Notches can be carved in one's belt to support a belly grown large by overfeeding. They might also tally sexual conquests.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
