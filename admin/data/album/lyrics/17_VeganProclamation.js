@@ -182,7 +182,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `In the Book of Genesis, God took one of Adam's ribs and gave life to Eve. My own promise to give of myself to Sita, however, proved to be a false rib— since she could never truly be alive with me, even as she felt unworthy to begin life anew with someone else.`,
+                                    `In the Book of Genesis, God took one of Adam's ribs to give life to Eve. My own promise to give of myself to Sita, however, proved to be a false rib, since she could never truly be alive with me, even as she felt unworthy to begin life anew with someone else.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -414,7 +414,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `On factory farms, breeding sows are strapped inside`,
+                                        `On factory farms, breeding sows are strapped into`,
                                         {
                                             anchor: `metal cages`,
                                             wiki: `Gestation_crate`,
@@ -831,7 +831,7 @@ export default {
                                 todo: REVIEW,
                                 cards: [
                                     {
-                                        description: `With ignorance being as old as time itself, I'm comforted to know we've always corrected our past mistakes; at the same time, it's dispiriting to remember that those to come have yet to make theirs. The universe never truly learns, and I'm partly to blame… A similar thought occurred to me as a child, when I wondered if I was the reason my brother never got better. It made me realize that all I could do was love him, and then do better for him.`,
+                                        description: `With ignorance being as old as time itself, I'm comforted to know we've always corrected our mistakes; at the same time, it's dispiriting to be reminded that those to come have yet to make theirs. The universe never truly learns, and I'm partly to blame… A similar thought occurred to me as a child, when I wondered if I was the reason my brother never got better. It made me realize that all I could do was love him, and then do better for him.`,
                                         dotKeys: {
                                             [NARRATIVE]: true,
                                             [OBSERVATION]: true,
@@ -905,7 +905,6 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: `I stayed vegan for five years, but then quit once I started dating Sasha, who ate meat. I guess it's the nature of who I am that my personal identity is the first thing I'll jettison whenever a chance for romance is at stake. And truth be told, being vegan was always somewhat rough, given my peanut and tree nut allergies. Still, these days I'm mostly vegetarian; it's both easier and healthier.`,
                     dotKeys: {

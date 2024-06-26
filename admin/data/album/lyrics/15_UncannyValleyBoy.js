@@ -1419,7 +1419,7 @@ export default {
                                 todo: REVIEW,
                                 cards: [
                                     {
-                                        description: `It wasn't until college that I understood the sacrifices my parents made for me and my siblings to lead better lives than they had. But this awareness came about through my coursework rather than my own lived experiences, which then added to my guilt.`,
+                                        description: `It wasn't until college that I understood the sacrifices my parents had made for me and my siblings to lead better lives than their own. But this awareness had to come about through my coursework, rather than my own lived experiences— which only added to my guilt.`,
                                         dotKeys: {
                                             [BACKSTORY]: true,
                                         },

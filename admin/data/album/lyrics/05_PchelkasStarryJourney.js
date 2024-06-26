@@ -910,7 +910,6 @@ export default {
                         `twits daily`,
                         {
                             anchor: `murdered for their virtue`,
-                            todo: REVIEW,
                             card: {
                                 description: `My suffering was made more bearable if I could believe it was tied to a greater purpose. But behaving as such only invited further abuse.`,
                                 dotKeys: {
@@ -1026,7 +1025,7 @@ export default {
                             anchor: `unearth their own plots`,
                             todo: REVIEW,
                             card: {
-                                description: `Figuratively, to reveal one's secret plans; and literally, to dig one's own grave.`,
+                                description: `Figuratively, to reveal one's secret plans; or literally, to dig one's own grave.`,
                                 dotKeys: {
                                     [PUN]: true,
                                 },
