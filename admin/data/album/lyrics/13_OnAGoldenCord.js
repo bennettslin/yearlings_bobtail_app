@@ -14,7 +14,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'On a Golden Cord',
@@ -30,7 +30,7 @@ export default {
     playerReferenceTime: 2298.378,
     playerStartTime: 2295.261,
     todo: REVIEW,
-    overview: `After a night out with friends, I might shuffle on to Sita's place, slip into bed with her, and quickly doze off. But one night, Sita was awake and waiting to confront me, having discovered my plans to break up with her. In tears, she returned the gold bracelet I'd given her at the start of our relationship— and then kicked me out. With nowhere to go, I wandered the streets until sunrise. And so began the first of our many breakups…`,
+    overview: `After a night out with friends, I would often shuffle on to Sita's place, slip into bed with her, and quickly doze off. But one night, Sita was awake and waiting to confront me, having discovered my plans to break up with her. In tears, she returned the gold bracelet I'd given her at the start of our relationship, and then she kicked me out. With nowhere to go, I wandered the streets until sunrise. And so began the first of our many breakups…`,
     isDoublespeaker: true,
     lyricUnits: [
         {
@@ -102,7 +102,7 @@ export default {
                             anchor: `bread and pocket lint`,
                             todo: REVIEW,
                             card: {
-                                description: `The less I spent on food, the more I could spend on beer. So before leaving the cafeteria, I would swipe a few bread rolls, which were always plentiful, and stash them in the front pockets of my jacket for munching on the go.`,
+                                description: `The less food I bought, the more money I had to spend on beer. So before leaving the cafeteria, I would swipe a few bread rolls and stash them in my jacket's front pockets.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -123,7 +123,7 @@ export default {
                             anchor: `broken`,
                             todo: REVIEW,
                             card: {
-                                description: `When I walked into Sita's living room that night to find her seated on the couch, the bracelet lay in a mangled heap on her coffee table. I wondered if she'd damaged it on purpose. But I later realized that its dozens of intricate links would only lock into place once the bracelet was snug around her wrist.`,
+                                description: `When I walked into Sita's living room that night to find her seated on the couch, the bracelet lay in a mangled heap on her coffee table. I wondered if she'd damaged it on purpose. Later I realized that its dozens of intricate links instantly lock into place once wrapped around the wrist.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -353,7 +353,7 @@ export default {
                                 wiki: `Nineteen_Eighty-Four`,
                             },
                         },
-                        `, party members practice doublethink in order to spout the contradictory propaganda of Newspeak. Similarly, to justify the breakup, I had to reconcile the contradictions in my head. So this song uses doublespeaker rhyme— which I named partly for its Orwellian undertone— to depict the inner conflict between my sober self and my drunken alter ego.`,
+                        `, the citizens must practice doublethink in order to accept the contradictory propaganda of Newspeak. Similarly, to justify the breakup, I had to reconcile the contradictions in my head. So this song uses doublespeaker rhyme— which I named partly for its Orwellian undertone— to depict the inner conflict between my sober self and my drunken alter ego.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -402,7 +402,6 @@ export default {
                     lyricLeft: [
                         {
                             anchor: `Guilt pardons`,
-                            todo: REVIEW,
                             card: {
                                 description: `My sober self observes his drunken accomplice's lack of remorse and can only feel pity, knowing the trauma that must surely dwell in one who committed such a heinous act. After all, avoiding this trauma is the reason he chose not to carry out the hit himself.`,
                                 dotKeys: {
@@ -416,10 +415,9 @@ export default {
                         `still hardened against her`,
                         {
                             anchor: `fawning, misty glance`,
-                            todo: REVISE,
-                            problem: `Two ats in a row.`,
+                            todo: REVIEW,
                             card: {
-                                description: `With bitterness suddenly rumbling in his heart, drunken me lashes out in defiance at the boulevard's twin street lights. Their glowing lamps have revived the memory of Sita's fearful gaze at the moment he committed his crime.`,
+                                description: `With bitterness suddenly rumbling in his heart, drunken me lashes out in defiance at the boulevard's twin street lights. Their glowing lamps have revived the memory of Sita's fearful gaze as he committed his crime.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -441,7 +439,7 @@ export default {
                                         anchor: `hatchet man`,
                                         wiki: `Hatchet_man_(idiom)`,
                                     },
-                                    `is an underling who carries out the most disagreeable tasks of a shady operation.`,
+                                    `is an underling who carries out the least agreeable tasks in a shady operation.`,
                                 ],
                             },
                         },
@@ -514,12 +512,12 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `Every now and then, a Robitussin flashback would cause me to trail off and stare into the distance. When a friend asked what it felt like, I said it was like`,
+                                    `Every now and then, a Robitussin flashback would cause me to trail off and stare into the distance. When a friend asked what was happening, I said it felt like`,
                                     {
                                         anchor: `Colorforms`,
                                         wiki: `Colorforms`,
                                     },
-                                    `being peeled off my eyeballs in quick succession to present the illusion of a scene unfolding in time.`,
+                                    `were being peeled off my eyeballs in quick succession, to present the illusion of a scene unfolding in time.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -747,7 +745,8 @@ export default {
                         `of gathering up the`,
                         {
                             anchor: `suttee dust`,
-                            todo: REVIEW,
+                            todo: REST,
+                            problem: `Not sure if adjectives are redundant.`,
                             cards: [
                                 {
                                     description: `By now, I imagine Sita to be fully immolated on the burnt rubble of our failed relationship.`,
@@ -789,12 +788,12 @@ export default {
                                         anchor: `Oscar Wilde`,
                                         wiki: `Oscar_Wilde`,
                                     },
-                                    `witnessed the execution of a man convicted of murdering his wife. Sympathetic to the man's plight, Wilde wrote his poem "`,
+                                    `witnessed the execution of a man convicted of murdering his wife. Sympathetic to the man's plight, Wilde wrote "`,
                                     {
                                         anchor: `The Ballad of Reading Gaol`,
                                         wiki: `The_Ballad_of_Reading_Gaol`,
                                     },
-                                    `," whose refrain, "For each man kills the thing he loves," finds a common thread tying the man's crime to Wilde's own— and to all of humanity's.`,
+                                    `," a poem whose refrain, "For each man kills the thing he loves," finds a common thread tying the man's crime to Wilde's own— and to all of humanity's.`,
                                 ],
                             },
                         },
@@ -920,7 +919,7 @@ export default {
                             anchor: `attack with the proper fist`,
                             todo: REVIEW,
                             card: {
-                                description: `Out of frustration over conflicting desires, I start punching myself in the head. Since the left hemisphere controls the body's right side— and the right hemisphere, the left— it's as if each half of my brain attacks the other using the one fist under its command.`,
+                                description: `Out of frustration over conflicting desires, I start punching myself in the head. Since the left hemisphere of the brain controls the body's right side— and the right hemisphere, the left— it's as if each attacks the other using the one fist under its command.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -961,7 +960,6 @@ export default {
                         `my`,
                         {
                             anchor: `alias drunk, in panic`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `Once drunk, I always stayed drunk until I crashed. So while I was quite used to morphing into Garry, Garry was wholly unfamiliar with turning back into me.`,
@@ -985,7 +983,7 @@ export default {
                             anchor: `trail of crumbs`,
                             todo: REVIEW,
                             card: {
-                                description: `But it's too late to walk back the damage done: All night I've been nibbling on the rolls in my pocket instead of dropping a breadcrumb trail. And now, having satisfied my hunger, I'm stranded and can't find my way back— as with the breakup itself.`,
+                                description: `But it's too late to walk back the damage done: All night I've been nibbling on the rolls in my pocket instead of dropping a breadcrumb trail. And now, having satisfied my hunger, I'm stranded and can't find my way back— much like with the breakup itself.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -1009,7 +1007,7 @@ export default {
                             properNoun: true,
                             todo: REVIEW,
                             card: {
-                                description: `Though I wish to plead my case, I also know this will all be over with sooner if I just accept my role as the villain. And so the sober me, called up to testify for his drunken half, stays silent.`,
+                                description: `Though I wish to plead my case, this will all be over with sooner if I just accept my role as the villain. And so the sober me, called up to testify for his drunken half, stays silent.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -1037,7 +1035,7 @@ export default {
                             anchor: `master mind`,
                             todo: REVIEW,
                             card: {
-                                description: `In college, my wishful thinking was that I could shunt the burden of writing term papers onto my drunken self. But once drunk, I would resent taking orders from my sober self, and either do the work poorly or not at all— like a slave rebelling against a master. Somehow this became my strategy for breaking up with Sita.`,
+                                description: `In college, my wishful thinking was that I could shunt the burden of writing term papers onto my drunken self. But once drunk, I would resent taking orders from my sober half, and either do the work poorly or not at all— like a slave rebelling against his master. Somehow this became my go-to strategy for breaking up with Sita.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -1053,7 +1051,6 @@ export default {
                         `a bid for greatness' sake, he's sold on as`,
                         {
                             anchor: `holy war`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Most of the`,

@@ -270,7 +270,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `Every time we got back together, Sita would reassert our status as a couple by insisting that I bring her along to see my friends— the very same ones who'd emboldened me to leave her. And so the circus`,
@@ -505,7 +504,7 @@ export default {
                             anchor: `extra holes`,
                             todo: REVIEW,
                             card: {
-                                description: `Notches can be carved in one's belt to support a belly grown large by overfeeding. They might also tally sexual conquests.`,
+                                description: `Extra notches can be punched in one's belt to support a belly grown large from overfeeding. When carved on a bedpost, they tally sexual conquests.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },

@@ -16,7 +16,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Garryowen',
@@ -33,7 +33,6 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `In`,
@@ -353,7 +352,7 @@ export default {
                     lyric: [
                         {
                             anchor: `buys your grief`,
-                            todo: REVIEW,
+                            todo: REST,
                             card: {
                                 description: `My worlds collided when I smashed a random bike one night in a drunken fit. As it turns out, the bike belonged to a scene kid who'd liked the Yearlings since our early days. He'd related so much to my songs about unfulfilled hopes; I was disgusted with myself for having disappointed him.`,
                                 dotKeys: {
@@ -449,7 +448,7 @@ export default {
                             anchor: `counterpoint`,
                             wiki: `Counterpoint`,
                         },
-                        `, melodies are laid atop one another, and the chord progression is simply a byproduct of the harmonies they form in sequence. But since the chords for this song were established first, I took the reverse approach of assigning each note in a chord to a different part, and then shaping each part's sequence of notes into an unassuming counter-melody.`,
+                        `, melodies are laid atop one another, and the chord progression is simply a byproduct of the harmonies they form in sequence. But since the chord progression for this song was established first, I took the reverse approach of assigning each note in a chord to a different part, and then shaping each part's sequence of notes into an unassuming counter-melody.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -471,7 +470,7 @@ export default {
                             anchor: `claws you built from scratches`,
                             todo: REVIEW,
                             card: {
-                                description: `Cats scratch to sharpen their claws, much like I'd learned to keep my emotional defenses sharp after a lifetime of getting scratched and clawed by bullies.`,
+                                description: `In the same way that cats scratch to sharpen their claws, I'd learned to keep my emotional defenses sharp after a lifetime of getting scratched and clawed by bullies.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [PUN]: true,
@@ -495,7 +494,7 @@ export default {
                                         anchor: `on a goat`,
                                         wiki: `Scapegoat`,
                                     },
-                                    `that was then cast into the desert. Banishing Sita from my life served the same purpose: Without her around to cast judgment, I had no need to atone for my hypocrisy.`,
+                                    `that was then cast into the desert. Banishing Sita from my life would serve a similar purpose: Without her around to cast judgment, I'd have no need to atone for my hypocrisy.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
