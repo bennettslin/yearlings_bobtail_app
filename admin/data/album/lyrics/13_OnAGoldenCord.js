@@ -102,7 +102,7 @@ export default {
                             anchor: `bread and pocket lint`,
                             todo: REVIEW,
                             card: {
-                                description: `The less food I bought, the more money I had to spend on beer. So before leaving the cafeteria, I would swipe a few bread rolls and stash them in my jacket's front pockets.`,
+                                description: `The less I spent on food, the more I could spend on beer. So before leaving the cafeteria, I would swipe a few bread rolls and stash them in my jacket's front pockets.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

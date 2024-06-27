@@ -1,5 +1,5 @@
 # Latest todo
-* Revise five annotations (Pchelka or M for sure)
+* Revise five annotations (Pchelka and M)
 * Review ten annotations (Uncanny Valley and Golden Cord)
 * Redo one annotation
 
@@ -12,6 +12,7 @@
     * Schwa sticker
 
 ### Good fixes
+* Direction arrows on selected annotation itself in carousel, just like in popup
 * Tooltip changes
     * Carousel nav tooltip texts should be more clear?
 * Upgrade React tooltip?
