@@ -488,10 +488,10 @@ export default {
                         {
                             anchor: `a focus grown clear`,
                             todo: REVISE,
-                            problem: `Run on sentence.`,
+                            problem: `Two I'ds in a row.`,
                             card: {
                                 description: [
-                                    `My buzz would wear off a few hours into a date, causing me to realize that everything I'd been saying might topple under scrutiny, like a`,
+                                    `A few hours into a date, my buzz would wear off. I'd then realize that everything I'd been saying might now topple under scrutiny, like a`,
                                     {
                                         anchor: `totem pole`,
                                         wiki: `Totem_pole`,
@@ -598,10 +598,9 @@ export default {
                         `for if the`,
                         {
                             anchor: `tactic is to stall`,
-                            todo: REVISE,
-                            problem: `Make clear that doing the same means waiting to call back.`,
+                            todo: REVIEW,
                             card: {
-                                description: `My friends always advised me to wait three days before calling a woman back. Yet it was always agony when she invariably did the same to me.`,
+                                description: `My friends advised me to wait three days before calling a woman. Yet it was always agony if she took more than a day to return my call.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

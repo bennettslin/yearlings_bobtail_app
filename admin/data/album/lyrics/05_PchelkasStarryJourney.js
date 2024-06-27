@@ -37,9 +37,8 @@ export default {
     mixStartTime: `0:01:27.02`,
     playerReferenceTime: 756.159,
     playerStartTime: 755.661,
-    todo: REVISE,
-    problem: `Work on it all over again.`,
-    overview: `As my years of getting bullied grew unbearable, a strange letter arrived with promises of spiritual answers. All that was asked of me was a small payment— which I promptly mailed off. It was then revealed to me that I belonged to a race of interstellar beings, and that I had a mission to shut myself off from the world. I did so by adopting an unresponsive manner like my brother, which made me feel a psychic bond with him. But as my sanity chipped away, I came to realize that I was in a mail-order cult.`,
+    todo: REVIEW,
+    overview: `As my years of getting bullied grew unbearable, a strange letter arrived from a research institute that promised spiritual answers. All they asked for was a small payment— which I quickly mailed off. It was then revealed to me that I belonged to a race of astral beings, and my mission was to shut myself off from the world. So I adopted an unresponsive manner like my brother, leading me to feel a psychic bond with him. But as my sanity chipped away, I came to realize that I was in a mail-order cult…`,
     lyricUnits: [
         {
             unitMap: {},
@@ -346,10 +345,9 @@ export default {
                         `till you`,
                         {
                             anchor: `learn to kick it back`,
-                            todo: REVISE,
-                            problem: `Make it more about having friends, to make it clear that's what I'm referring to.`,
+                            todo: REVIEW,
                             card: {
-                                description: `The most popular kids in middle school were the ones who were least concerned about being liked, which ran counter to my intuition that whatever I desired must be pursued wholeheartedly. Yet trying things their way didn't make me any more likable either…`,
+                                description: `The most popular kids in middle school were the ones who were least concerned about being liked, which ran counter to my intuition that anything worth striving for must be pursued wholeheartedly. Yet trying things their way didn't make me any more likable either…`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -491,10 +489,9 @@ export default {
                         `Do you often feel like a`,
                         {
                             anchor: `wanderer lost`,
-                            todo: REVISE,
-                            problem: `First sentence is still weird.`,
+                            todo: REVIEW,
                             card: {
-                                description: `The letter spoke to my frustration that my yearning for acceptance should go unfulfilled. Having hit all the right nerves, it then shared hopeful news: RI Research believed that I might be a Beyonder. And now, after searching for so long, they'd found me.`,
+                                description: `The letter spoke to my frustration that all my desires for acceptance should go unmet. Having hit the right nerves, it then shared hopeful news: RI Research believed that I might be a Beyonder. And now, after searching for so long, they'd found me.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

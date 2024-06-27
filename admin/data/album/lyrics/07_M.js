@@ -772,7 +772,7 @@ export default {
                                         anchor: `indentured servants`,
                                         wiki: `Indentured_servant`,
                                     },
-                                    `at a young age. But in my case, I was to remain in servitude to my five-year plans until I was an old man. By then, I'd be "in dentures" and thus unable to speak for myself.`,
+                                    `at a young age. But in my case, I would remain in servitude to my five-year plans until I was an old man. By then, I'd be "in dentures" and thus unable to speak for myself.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,

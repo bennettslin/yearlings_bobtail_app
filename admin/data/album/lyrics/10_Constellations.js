@@ -1770,16 +1770,15 @@ export default {
                         `,`,
                         {
                             anchor: `in-som'umiak`,
-                            todo: REVISE,
-                            problem: `The use of wreaked kind of sounds weird.`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `Meanwhile, sensing disaster afoot, our brave Inuit tribe flees to safety "in some`,
+                                    `Meanwhile, sensing disaster after a "snowy blitz," our brave Inuit tribe flees the icy channels "in some`,
                                     {
                                         anchor: `umiak`,
                                         wiki: `Umiak`,
                                     },
-                                    `"— a boat made of sealskin and whalebone— as we skim through icy channels wreaked by a "snowy blitz."`,
+                                    `"— a boat made of sealskin and whalebone.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1835,8 +1834,7 @@ export default {
                         `Then pounds`,
                         {
                             anchor: `arrhythmetic heart`,
-                            todo: REVISE,
-                            problem: `Is the connection with math and counting clear?`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `"`,
@@ -1844,7 +1842,7 @@ export default {
                                         anchor: `Arrhythmia`,
                                         wiki: `Cardiac_arrhythmia`,
                                     },
-                                    `," or an irregular heartbeat, is one downside of taking Robitussin. As the psychedelic effects wear off, I grow paranoid and perform "arithmetic" in my head, hoping that my pulse becomes more stable with each passing minute.`,
+                                    `," or an irregular pulse, is one downside of taking Robitussin. As the effects wear off, I grow paranoid and perform "arithmetic" by counting my heartbeats per minute, hoping the number grows stable over time.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
