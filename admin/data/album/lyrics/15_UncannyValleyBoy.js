@@ -1602,25 +1602,26 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
+                todo: REVISE,
+                problem: `In separate card, refer to difficult decision.`,
                 card: {
                     description: [
-                        `Without Ana and Jacob in the band, it didn't feel right to keep referring to myself as the Yearlings. And with the Web gaining in usage, I wanted a new name that would always be first in search results. So I decided to combine two random words, like the`,
+                        `After Ana and Jacob left the band, it didn't feel right to keep referring to myself as the Yearlings. And with the Web gaining in usage, I wanted a new name that would always be first in search results. So I decided to combine two random words, like "`,
                         {
                             anchor: `Smashing Pumpkins`,
                             wiki: `The_Smashing_Pumpkins`,
                         },
-                        `. I could only think of "Bobtail Yearlings," though— in which case the album would make more sense as`,
+                        `." But I could only think of "Bobtail Yearlings"… in which case, the album would have to be "`,
                         {
                             isItalic: true,
                             lyric: `Yearling's Bobtail`,
                         },
-                        `. But once I realized that one`,
+                        `," for symmetry's sake. Then I realized that while one`,
                         {
                             anchor: `acronym`,
                             wiki: `Acronym`,
                         },
-                        `seems to ask, "Why be?"— while the other answers with, "Be why"— this felt like approval from the heavens.`,
+                        `asks, "Why be?"— the other responds, "Be why!"— and this felt like the ghost of Beethoven giving his approval to my difficult decision.`,
                     ],
                     dotKeys: {
                         [AFTERWORD]: true,
