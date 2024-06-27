@@ -52,14 +52,16 @@ const TodoAnnotations = () => {
     useEffect(() => {
         logMount('Annotations')
 
-        if (selectedSongIndex && selectedAnnotationIndex) {
+        if (selectedSongIndex) {
             const element = document.querySelector(
-                `.TodoAnnotation-${selectedSongIndex}-${selectedAnnotationIndex}`,
+                selectedAnnotationIndex ?
+                    `.TodoAnnotation-${selectedSongIndex}-${selectedAnnotationIndex}` :
+                    `.TodoSongColumn-${selectedSongIndex}`,
             )
 
             setTimeout(() => {
                 scrollIntoView(element, { time: 100 })
-            }, 1000)
+            }, 0)
         }
 
         focusElement?.current.focus()

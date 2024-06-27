@@ -13,6 +13,7 @@
 
 ### Good fixes
 * Direction arrows on selected annotation itself in carousel, just like in popup
+* Perfectly center selected annotation in carousel
 * Tooltip changes
     * Carousel nav tooltip texts should be more clear?
 * Upgrade React tooltip?

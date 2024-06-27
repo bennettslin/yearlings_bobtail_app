@@ -1,5 +1,6 @@
 import React, { useRef } from 'react'
 import PropTypes from 'prop-types'
+import cx from 'classnames'
 import TodoOverview from './Overview'
 import TodoAnnotation from './Annotation'
 import { getSongsAndLoguesCount } from '../../../../../src/endpoint/album/songs'
@@ -22,7 +23,10 @@ const TodoSongColumn = ({ songIndex, areDoneTodosHidden }) => {
         <div
             {...{
                 ref: songColumnElement,
-                className: 'TodoSongColumn',
+                className: cx(
+                    'TodoSongColumn',
+                    `TodoSongColumn-${songIndex}`,
+                ),
                 style: {
                     backgroundColor: `hsl(${hue}, 25%, 45%)`,
                 },
