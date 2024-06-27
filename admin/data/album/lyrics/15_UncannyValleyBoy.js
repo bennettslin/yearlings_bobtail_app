@@ -20,7 +20,7 @@ import {
     BACKING,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Uncanny Valley Boy',
@@ -145,7 +145,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `To "wax poetic" is to become eloquent in speech. And so my parents borrow this expression ironically, to mock the artificial persona I've created.`,
+                                    description: `To "wax poetic" is to become eloquent in speech. And so my parents borrow this expression ironically, to mock the highbrow persona I've created.`,
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                     },
@@ -285,7 +285,7 @@ export default {
                                         anchor: `endorphined`,
                                         wiki: `Endorphins`,
                                     },
-                                    `," makes me a virtual orphan, by allowing me to live in denial of having parents whose expectations I fail to meet.`,
+                                    `," allows me to live as a virtual orphan, in denial of having parents whose expectations I fail to meet.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -316,7 +316,7 @@ export default {
                             anchor: `earth right now your tourist store`,
                             todo: REVIEW,
                             card: {
-                                description: `My mother enthralled me with visions of being a great artist, while also instilling Buddhist ideals to renounce materialism; the mail-order cult then told me I was a mere visitor to this planet. And so a belief formed in my head that I must work tirelessly "to restore" my "birthright" of artistic renown, unaffected by earthly concerns.`,
+                                description: `My mother enthralled me with visions of being a great artist, even as she instilled Buddhist ideals to renounce materialism; the mail-order cult then told me I was a mere visitor to this planet. And so a belief formed in my head that I must work tirelessly "to restore" my "birthright" of artistic renown, unaffected by earthly concerns.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -329,7 +329,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
+                todo: REST,
+                problem: `Still not 100% confident on tenses.`,
                 card: {
                     description: [
                         `The idea behind the puns in this stanza was for listeners to think they heard a`,
