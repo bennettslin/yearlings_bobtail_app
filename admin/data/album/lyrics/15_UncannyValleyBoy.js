@@ -121,7 +121,6 @@ export default {
                         `, come`,
                         {
                             anchor: `wax prophetic`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -314,7 +313,6 @@ export default {
                         `,`,
                         {
                             anchor: `earth right now your tourist store`,
-                            todo: REVIEW,
                             card: {
                                 description: `My mother enthralled me with visions of being a great artist, even as she instilled Buddhist ideals of renouncing materialism; the mail-order cult then told me I was a mere visitor to this planet. And so a belief formed in my head that I must work tirelessly "to restore" my "birthright" of artistic renown, unaffected by earthly concerns.`,
                                 dotKeys: {
@@ -578,7 +576,7 @@ export default {
                             anchor: `counter-melody`,
                             wiki: `Counter-melody`,
                         },
-                        `. So I took the original counter-melody, which I'd intended to play on guitar, and gave it to the lead vocals, for which I then wrote new lyrics.`,
+                        `. I then took the original counter-melody, which I'd intended to play on guitar, and gave it to the lead vocals, for which I wrote new lyrics.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -712,7 +710,6 @@ export default {
                         `Now suddenly dressed to play, you`,
                         {
                             anchor: `drowned your stutter`,
-                            todo: REVIEW,
                             card: {
                                 description: `I developed a stammer in middle school, perhaps as an unconscious way to buy time for collecting my thoughts. Then in college, I found that alcohol made it disappear.`,
                                 dotKeys: {
@@ -806,7 +803,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `My parents might be calling me a "drama" king, in a subtle dig that everything I do is an attention-seeking act.`,
+                                    description: `My parents might be calling me a "drama" king, in a subtle jab that everything I do is an attention-seeking act.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true,
@@ -822,7 +819,7 @@ export default {
                                                 wiki: `Ramayana`,
                                             },
                                         },
-                                        `, an epic poem of ancient India, recounts the marriage of`,
+                                        `is an epic poem of ancient India that tells of the life of`,
                                         {
                                             anchor: `Rama`,
                                             wiki: `Rama`,
@@ -832,17 +829,17 @@ export default {
                                             anchor: `Vishnu`,
                                             wiki: `Vishnu`,
                                         },
-                                        `, to`,
+                                        `. It recounts his marriage to`,
                                         {
                                             anchor: `Sita`,
                                             wiki: `Sita`,
                                         },
-                                        `, the goddess of devotion. After Sita is abducted by the demon king`,
+                                        `, the goddess of devotion, as well as his battles to rescue her after her abduction by the demon king`,
                                         {
                                             anchor: `Ravana`,
                                             wiki: `Ravana`,
                                         },
-                                        `, Rama must battle to rescue her.`,
+                                        `.`,
                                     ],
                                 },
                             ],
@@ -881,7 +878,7 @@ export default {
                                         isItalic: true,
                                         lyric: `Ramayana`,
                                     },
-                                    `was broadcast across India. For half an hour each week, shops and train stations would be completely deserted as the entire population sat in front of their televisions.`,
+                                    `was broadcast across India. For an hour each week, all the shops and train stations would be deserted as the entire population stayed at home, glued to their televisions.`,
                                 ],
                             },
                         },
@@ -902,7 +899,7 @@ export default {
                             anchor: `repeat forevermore`,
                             todo: REVIEW,
                             card: {
-                                description: `As I was making this album, a thought occurred to me: Like Rama, I too am doomed to repeat my mistakes, as the story of how I betrayed my Sita shall now be endlessly retold— and thus, in a way, relived.`,
+                                description: `As I was making this album, a thought occurred to me: Like Rama, I too am now doomed to repeat my mistakes, as the story of how I betrayed my Sita shall be endlessly retold— and thus, endlessly relived.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -1014,7 +1011,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Not wanting anyone to crowd out my artwork, I run ahead of the group— only to pass out where no one can find me. An ambulance siren jolts me awake.`,
+                                    description: `Not wanting anyone to crowd out my artwork, I run ahead of the group— only to pass out where no one can find me. Hours later, an ambulance siren jolts me awake.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -1046,7 +1043,14 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `I sit up and notice my drunken scrawls on the sidewalk, wondering if the chalk is toxic enough to kill some ants wandering nearby.`,
+                                    description: [
+                                        `I sit up and notice my drunken scrawls on the sidewalk, whimsically imagining what would have happened had I used`,
+                                        {
+                                            anchor: `ant chalk`,
+                                            wiki: `Ant_chalk`,
+                                        },
+                                        `.`,
+                                    ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -1071,7 +1075,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `Since Mara is never once mentioned in "M," I decided to leave her name out of the rest of the album as well.`,
+                                    description: `Since Mara is never directly mentioned in "M," I decided to leave her name out of the rest of the album as well.`,
                                     dotKeys: {
                                         [SONGCRAFT]: true,
                                     },
@@ -1264,7 +1268,7 @@ export default {
                             anchor: `faces you flip override`,
                             todo: REVIEW,
                             card: {
-                                description: `My mother would sometimes ask what happened to the playful little boy she once knew, which made me wonder myself. I think I learned early on that for every situation there's an optimal person to be, and the key is to deftly juggle those various personas. So it made no sense to keep the original persona lying around once it no longer served any purpose.`,
+                                description: `My mother would sometimes ask what happened to the playful little boy I'd once been— which made me wonder myself. I think I learned early on that, for every situation, there's an optimal person to be— and the key is to deftly switch between those various personas. So it made no sense to keep the original persona lying around, once it no longer served any purpose.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -1314,9 +1318,10 @@ export default {
                             `their`,
                             {
                                 anchor: `sun tinkles light`,
-                                todo: REVIEW,
+                                todo: REVISE,
+                                problem: `Still think there's a more eloquent way to say "from above as a tyrant." Two "would"s in a row.`,
                                 card: {
-                                    description: `In the nightmare, I ruled the neighborhood from above as a tyrant. I would shower my subjects in urine, which they lapped up as their sole means of subsistence. Now that I think about it, my brain was probably telling me to wake up and use the bathroom.`,
+                                    description: `In the nightmare, I ruled the neighborhood from above as a tyrant. I would shower my subjects in urine, which they would then lap up as their sole means of subsistence. Now that I think about it, my brain was probably telling me to wake up and use the bathroom.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [OBSERVATION]: true,
@@ -1418,7 +1423,7 @@ export default {
                                 todo: REVIEW,
                                 cards: [
                                     {
-                                        description: `It wasn't until college that I understood the sacrifices my parents had made for me and my siblings to lead better lives than their own. But this awareness had to come about through my coursework, rather than my own lived experiences— which only added to my guilt.`,
+                                        description: `It wasn't until college that I understood the sacrifices my parents had made for me and my siblings to lead better lives than their own. But that this awareness had to come about through my coursework, rather than my own lived experiences, only added to my guilt.`,
                                         dotKeys: {
                                             [BACKSTORY]: true,
                                         },
@@ -1617,7 +1622,7 @@ export default {
                     },
                     {
                         description: [
-                            `After Ana and Jacob left the band, it didn't feel right to keep referring to myself as the Yearlings. And with the Web gaining in usage, I wanted a new name that would always be first in search results. So I decided to combine two random words. But all I could think of was "Bobtail Yearlings"— which, for symmetry's sake, would make the album "`,
+                            `After Ana and Jacob left the band, it didn't feel right to keep referring to myself as the Yearlings. And with the Web gaining in usage, I wanted a new name that would always be first in search results, so I decided to combine two random words. But all I could think of was "Bobtail Yearlings"— which, for symmetry's sake, would make the album "`,
                             {
                                 isItalic: true,
                                 lyric: `Yearling's Bobtail`,

@@ -30,7 +30,7 @@ export default {
     playerReferenceTime: 2298.378,
     playerStartTime: 2295.261,
     todo: REVIEW,
-    overview: `After a night out with friends, I would often shuffle on to Sita's place, slip into bed with her, and quickly doze off. But one night, Sita was awake and waiting to confront me, having discovered my plans to break up with her. In tears, she returned the gold bracelet I'd given her at the start of our relationship, and then she kicked me out. With nowhere to go, I wandered the streets until sunrise. And so began the first of our many breakups…`,
+    overview: `After a night out with friends, I would often shuffle on to Sita's place, slip into bed with her, and quickly doze off. But one night, Sita was awake and waiting to confront me, having discovered my plans to break up with her. In tears, she returned the gold bracelet I'd given her at the start of our relationship, and then kicked me out. With nowhere to go, I wandered the streets until sunrise. And so began the first of our many breakups…`,
     isDoublespeaker: true,
     lyricUnits: [
         {
@@ -102,7 +102,7 @@ export default {
                             anchor: `bread and pocket lint`,
                             todo: REVIEW,
                             card: {
-                                description: `The less I spent on food, the more I could spend on beer. So before leaving the cafeteria, I would swipe a few bread rolls and stash them in my jacket's front pockets.`,
+                                description: `In those days, the less I spent on food, the more I could spend on beer. So before leaving the cafeteria, I would swipe a few bread rolls, which were always plentiful, and stash them in the front pockets of my jacket.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -123,7 +123,7 @@ export default {
                             anchor: `broken`,
                             todo: REVIEW,
                             card: {
-                                description: `When I walked into Sita's living room that night to find her seated on the couch, the bracelet lay in a mangled heap on her coffee table. I wondered if she'd damaged it on purpose. Later I realized that its dozens of intricate links instantly lock into place once wrapped around the wrist.`,
+                                description: `When I walked into Sita's living room that night to find her seated on the couch, the bracelet lay in a mangled heap on her coffee table. I wondered if she'd damaged it on purpose. I later realized that its dozens of intricate links would instantly snap into place once wrapped around the wrist.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -337,7 +337,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `In`,
@@ -417,7 +416,7 @@ export default {
                             anchor: `fawning, misty glance`,
                             todo: REVIEW,
                             card: {
-                                description: `With bitterness suddenly rumbling in his heart, drunken me lashes out in defiance at the boulevard's twin street lights. Their glowing lamps have revived the memory of Sita's fearful gaze as he committed his crime.`,
+                                description: `With bitterness suddenly rumbling in his heart, drunken me lashes out in defiance at the boulevard's twin street lights. Their glowing lamps have revived the memory of Sita's fearful gaze at the moment he committed his crime.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -431,7 +430,6 @@ export default {
                     lyricLeft: [
                         {
                             anchor: `hatchet man`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `A`,
@@ -509,7 +507,8 @@ export default {
                         `And if`,
                         {
                             anchor: `night were peeled`,
-                            todo: REVIEW,
+                            todo: REST,
+                            problem: `Second sentence runs on and doesn't flow well.`,
                             card: {
                                 description: [
                                     `Every now and then, a Robitussin flashback would cause me to trail off and stare into the distance. When a friend asked what was happening, I said it felt like`,
@@ -788,12 +787,12 @@ export default {
                                         anchor: `Oscar Wilde`,
                                         wiki: `Oscar_Wilde`,
                                     },
-                                    `witnessed the execution of a man convicted of murdering his wife. Sympathetic to the man's plight, Wilde wrote "`,
+                                    `witnessed the execution of a man convicted of murdering his wife. Sympathetic to the man's plight, Wilde wrote his poem "`,
                                     {
                                         anchor: `The Ballad of Reading Gaol`,
                                         wiki: `The_Ballad_of_Reading_Gaol`,
                                     },
-                                    `," a poem whose refrain, "For each man kills the thing he loves," finds a common thread tying the man's crime to Wilde's own— and to all of humanity's.`,
+                                    `," whose refrain, "For each man kills the thing he loves," finds a common thread tying the man's crime to Wilde's own— and to all of humanity's.`,
                                 ],
                             },
                         },
@@ -917,7 +916,6 @@ export default {
                         `each`,
                         {
                             anchor: `attack with the proper fist`,
-                            todo: REVIEW,
                             card: {
                                 description: `Out of frustration over conflicting desires, I start punching myself in the head. Since the left hemisphere of the brain controls the body's right side— and the right hemisphere, the left— it's as if each attacks the other using the one fist under its command.`,
                                 dotKeys: {
@@ -983,7 +981,7 @@ export default {
                             anchor: `trail of crumbs`,
                             todo: REVIEW,
                             card: {
-                                description: `But it's too late to walk back the damage done: All night I've been nibbling on the rolls in my pocket instead of dropping a breadcrumb trail. And now, having satisfied my hunger, I'm stranded and can't find my way back— much like with the breakup itself.`,
+                                description: `But it's too late to walk back the damage done: All night I've been nibbling on the rolls in my pocket instead of dropping a breadcrumb trail. And now, having satisfied my hunger, I'm stranded and can't find my way back.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -1007,7 +1005,7 @@ export default {
                             properNoun: true,
                             todo: REVIEW,
                             card: {
-                                description: `Though I wish to plead my case, this will all be over with sooner if I just accept my role as the villain. And so the sober me, called up to testify for his drunken half, stays silent.`,
+                                description: `Though I'd like to plead my case, I know if I just accept my role as the villain, then this will all be over with sooner. And so the sober me, called up to testify for his drunken half, stays silent.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -1035,7 +1033,7 @@ export default {
                             anchor: `master mind`,
                             todo: REVIEW,
                             card: {
-                                description: `In college, my wishful thinking was that I could shunt the burden of writing term papers onto my drunken self. But once drunk, I would resent taking orders from my sober half, and either do the work poorly or not at all— like a slave rebelling against his master. Somehow this became my go-to strategy for breaking up with Sita.`,
+                                description: `In college, my wishful thinking was that I could shunt the burden of writing term papers onto my drunken self. But once drunk, I would resent taking orders from my sober half— as any slave would— and either do the work poorly or not at all. Somehow this became my go-to strategy for breaking up with Sita.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

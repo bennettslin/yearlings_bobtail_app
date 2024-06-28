@@ -720,7 +720,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Having gone all the way with Miriam, I'm at peace with our inevitable breakup. Basking in my post-coital glow, then, I picture myself as a terminally ill patient being put to sleep while an old record plays in the background.`,
+                                    description: `Having gone all the way with Miriam, I'm at peace with our inevitable breakup. And so, basking in my post-coital glow, I picture myself as a terminally ill patient being put to sleep while an old record plays in the background.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -1141,7 +1141,6 @@ export default {
                         `hungry carrying this groovy`,
                         {
                             anchor: `second hump`,
-                            todo: REVIEW,
                             card: {
                                 description: `By living off the fat in its hump, a camel can travel for months without eating. And in my own wanderings, the ego boost I gained from "humping" other women allowed me to live without the nourishment of Sita's love.`,
                                 dotKeys: {

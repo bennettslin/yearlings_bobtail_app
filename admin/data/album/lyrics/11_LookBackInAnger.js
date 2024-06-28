@@ -82,7 +82,7 @@ export default {
                             anchor: `four-track cassette recorder`,
                             wiki: `Portastudio`,
                         },
-                        `, and some nights we'd go back to his place and twiddle with it. For drum tracks, Owen would arrange books and dishware on the carpet floor and then tap out the most intricate rhythms, which impressed me. So I tried my best to conjure his spirit here.`,
+                        `, and some nights we'd go back to his place and twiddle with it. For drum tracks, Owen would arrange books and dishware on the carpet floor and then tap out these intricate rhythms, which always impressed me. So I tried my best to conjure his spirit here.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,

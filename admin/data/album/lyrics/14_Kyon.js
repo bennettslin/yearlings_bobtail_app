@@ -779,7 +779,7 @@ export default {
                             anchor: `I'll gladly wait`,
                             todo: REVIEW,
                             card: {
-                                description: `But Sita encouraged my artistic pretensions, believing them to reflect positively on her as well. Though she was uninterested in the local scene, she still enjoyed being seen as the one going home with me after a show.`,
+                                description: `But Sita encouraged my artistic pretensions, believing them to reflect positively on her as well. Though she was uninterested in the local scene, she still enjoyed being seen as the one to go home with me after a show.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

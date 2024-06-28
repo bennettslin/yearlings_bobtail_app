@@ -18,7 +18,7 @@ import {
     REFRAIN,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 /**
  * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the
@@ -347,7 +347,7 @@ export default {
                             anchor: `learn to kick it back`,
                             todo: REVIEW,
                             card: {
-                                description: `The most popular kids in middle school were the ones who were least concerned about being liked, which ran counter to my intuition that anything worth striving for must be pursued wholeheartedly. Yet trying things their way didn't make me any more likable either…`,
+                                description: `The most popular kids in middle school were the ones least concerned about being liked, which ran counter to my intuition that anything worth striving for needs to be pursued wholeheartedly. Yet trying things their way didn't make me any more likable either…`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -569,7 +569,7 @@ export default {
                                         isEmphasis: true,
                                         lyric: `my`,
                                     },
-                                    `little brother. But Gogo and Didi are also the respective pet names of Estragon and Vladimir, the two tramps who are still waiting for Godot by the end of Beckett's play.`,
+                                    `little brother. Gogo and Didi are also the respective pet names of Estragon and Vladimir, the two tramps who are still waiting for Godot by the end of Beckett's play.`,
                                 ],
                                 dotKeys: {
                                     [REFERENCE]: true,
@@ -1009,7 +1009,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `Since a spy's success hinges upon staying hidden, their exploits won't ever be known unless they're captured— at which point they'll face death by firing squad. And in my desire to join a friendly squad, I faced a similar dilemma. Not only would opening up sabotage my previous efforts to stay unresponsive, I would then be forced to explain my past behavior.`,
+                                    `Since a spy's success hinges upon staying hidden, their exploits won't ever be known unless they're captured— at which point they'll face death by firing squad. And in my desire to join a friendly squad, I faced a similar dilemma: Not only would opening up sabotage all my previous efforts to stay unresponsive, it would then force me to explain my past behavior.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -1020,7 +1020,8 @@ export default {
                         `first`,
                         {
                             anchor: `unearth their own plots`,
-                            todo: REVIEW,
+                            todo: REST,
+                            problem: `Still not sure if this sounds best as one sentence or two.`,
                             card: {
                                 description: `Figuratively, to reveal one's secret plans; or literally, to dig one's own grave.`,
                                 dotKeys: {
