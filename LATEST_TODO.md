@@ -1,6 +1,6 @@
 # Latest todo
-* Revise five annotations (Pchelka and M)
-* Review ten annotations (Uncanny Valley and Golden Cord)
+* Revise five annotations
+* Review fifteen annotations (Uncanny Valley and Golden Cord)
 * Redo one annotation
 
 ### Must do

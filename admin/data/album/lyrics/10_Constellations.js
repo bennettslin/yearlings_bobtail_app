@@ -1773,7 +1773,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `Meanwhile, sensing disaster after a "snowy blitz," our brave Inuit tribe flees the icy channels "in some`,
+                                    `Meanwhile, sensing disaster afoot after a "snowy blitz," our brave Inuit tribe flees the icy channels "in some`,
                                     {
                                         anchor: `umiak`,
                                         wiki: `Umiak`,
@@ -1842,7 +1842,7 @@ export default {
                                         anchor: `Arrhythmia`,
                                         wiki: `Cardiac_arrhythmia`,
                                     },
-                                    `," or an irregular pulse, is one downside of taking Robitussin. As the effects wear off, I grow paranoid and perform "arithmetic" by counting my heartbeats per minute, hoping the number grows stable over time.`,
+                                    `," or an irregular pulse, is a downside of taking Robitussin. Coming down from my high, I grow paranoid that my heart will suddenly stop, and I try to count the beats per minute— but my frazzled brain struggles with basic "arithmetic."`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
