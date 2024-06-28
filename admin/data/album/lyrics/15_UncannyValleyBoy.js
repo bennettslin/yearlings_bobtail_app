@@ -138,7 +138,7 @@ export default {
                                                 wiki: `A_Christmas_Carol`,
                                             },
                                         },
-                                        `, my parents invite me on a magical journey. Soon I'll witness the ordeals of my past, my self-serving ways at present, and the emotional devastation to come of it all.`,
+                                        `, my parents invite me on a magical night journey. Soon I'll witness the ordeals of my past, my self-serving ways at present, and the emotional devastation to come of it all.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -285,7 +285,7 @@ export default {
                                         anchor: `endorphined`,
                                         wiki: `Endorphins`,
                                     },
-                                    `," allows me to live as a virtual orphan, in denial of having parents whose expectations I fail to meet.`,
+                                    `," allows me to be a virtual orphan, living in denial of having parents whose expectations I fail to meet.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -316,7 +316,7 @@ export default {
                             anchor: `earth right now your tourist store`,
                             todo: REVIEW,
                             card: {
-                                description: `My mother enthralled me with visions of being a great artist, even as she instilled Buddhist ideals to renounce materialism; the mail-order cult then told me I was a mere visitor to this planet. And so a belief formed in my head that I must work tirelessly "to restore" my "birthright" of artistic renown, unaffected by earthly concerns.`,
+                                description: `My mother enthralled me with visions of being a great artist, even as she instilled Buddhist ideals of renouncing materialism; the mail-order cult then told me I was a mere visitor to this planet. And so a belief formed in my head that I must work tirelessly "to restore" my "birthright" of artistic renown, unaffected by earthly concerns.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -373,7 +373,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `I would defend against the bullies' threats by reacting slowly— which then forced me to react slowly to anyone in general. At some point, a classmate must have believed I was huffing paint, and this is how I got called into the principal's office.`,
+                                    description: `To defend against the bullies' threats, I would react slowly, which then forced me to react slowly to anyone in general. At some point, a classmate believed I was huffing paint, and this is when I got called into the principal's office.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -902,7 +902,7 @@ export default {
                             anchor: `repeat forevermore`,
                             todo: REVIEW,
                             card: {
-                                description: `As I was making this album, a thought occurred to me: Like Rama, I too am now doomed to repeat my mistakes, as the story of how I betrayed my Sita shall be endlessly retold.`,
+                                description: `As I was making this album, a thought occurred to me: Like Rama, I too am doomed to repeat my mistakes, as the story of how I betrayed my Sita shall now be endlessly retold— and thus, in a way, relived.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },

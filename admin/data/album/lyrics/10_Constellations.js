@@ -1842,7 +1842,7 @@ export default {
                                         anchor: `Arrhythmia`,
                                         wiki: `Cardiac_arrhythmia`,
                                     },
-                                    `," or an irregular pulse, is a downside of taking Robitussin. Coming down from my high, I grow paranoid that my heart will suddenly stop, and I try to count the beats per minute— but my frazzled brain struggles with basic "arithmetic."`,
+                                    `," or an irregular pulse, is a downside of taking Robitussin. Coming down from my high, I notice that my heart will stop for a couple of seconds, which makes me nervous. So I try to count the beats per minute— but my frazzled brain struggles with basic "arithmetic."`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
