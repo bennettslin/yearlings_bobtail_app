@@ -423,11 +423,10 @@ export default {
                         `And when sobered by the`,
                         {
                             anchor: `time lapse`,
-                            todo: REVISE,
-                            problem: `Needs to be clear that this is about remembrance. Maybe change the phrasing order.`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Sita anticipated that my philandering years would whiz by in a flash as the pursuit of other women grew repetitive, imprinting few standout memories.`,
+                                    description: `Sita anticipated that my pursuit of other women would grow repetitive, causing the years to whiz by and leave me with few standout memories.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -447,9 +446,10 @@ export default {
                         `to`,
                         {
                             anchor: `spring forward on a fallback`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Then once my later years as a womanizer proved to be unfulfilling, surely I'd return to her— my fallback option— with relief rather than reluctance.`,
+                                    description: `Then once my life as a womanizer proved unfulfilling, surely I'd return to her— my fallback option— with relief rather than reluctance.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },

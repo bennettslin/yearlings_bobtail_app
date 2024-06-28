@@ -1622,7 +1622,7 @@ export default {
                     },
                     {
                         description: [
-                            `After Ana and Jacob left the band, it didn't feel right to keep referring to myself as the Yearlings. And with the Web gaining in usage, I wanted a new name that would always be first in search results, so I decided to combine two random words. But all I could think of was "Bobtail Yearlings"— which, for symmetry's sake, would make the album "`,
+                            `After Ana and Jacob left the band, it didn't feel right to keep referring to myself as the Yearlings. And with the Web gaining in usage, I wanted a new name that would always be first in search results. So I decided to combine two random words… but all I could think of was "Bobtail Yearlings." Which, for symmetry's sake, would make the album "`,
                             {
                                 isItalic: true,
                                 lyric: `Yearling's Bobtail`,

@@ -227,16 +227,15 @@ export default {
                         `Drunk pissed`,
                         {
                             anchor: `punks tryst,`,
-                            todo: REVISE,
-                            problem: `First sentence is still off.`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `I wore`,
                                     {
-                                        anchor: `baseball tees`,
+                                        anchor: `baseball T-shirts`,
                                         wiki: `Raglan_sleeve`,
                                     },
-                                    `back then, thinking that by alienating the fewest subcultures, I could appeal to the most women. I was also baby-faced enough to be mistaken for a middle schooler. Tristan, one of the punks in the thieving group, liked our ragtag look and referred to us as the`,
+                                    `back then, thinking this would alienate the fewest subcultures and thus appeal to the most women. I was also baby-faced enough to still be mistaken for a high schooler. Tristan, one of the punks in the thieving group, liked our ragtag look and referred to us as the`,
                                     {
                                         anchor: `Young Ones`,
                                         wiki: `The_Young_Ones_(TV_series)`,

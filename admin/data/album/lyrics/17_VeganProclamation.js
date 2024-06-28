@@ -660,7 +660,7 @@ export default {
                             todo: REVISE,
                             problem: `Too many short sentences.`,
                             card: {
-                                description: `For years, my habit was to stay with Sita right up until I had another option to pursue. Each time I left, Sita would languish for a few months before finding the courage to contact me. Then, upon hearing that things hadn't worked out with the other woman, she'd gently persuade me to come back. But now our situations were reversed: I had no more options coming down the pike, while Sita had fallen in love with someone else.`,
+                                description: `For years, my habit was to stay with Sita up until I had another option to pursue. Each time, Sita would languish for a few months before finding the strength to contact me; then, upon hearing that things hadn't worked out with the other woman, she would persuade me to come back. But our situations were now reversed: I had no more options coming down the pike, while Sita had fallen in love with someone else.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

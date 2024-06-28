@@ -655,8 +655,7 @@ export default {
                     lyricRight: [
                         {
                             anchor: `twitching sword`,
-                            todo: REVISE,
-                            problem: `Last sentence sounds weird.`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Dubbing refers to the`,
@@ -669,7 +668,7 @@ export default {
                                         anchor: `conferring knighthood`,
                                         wiki: `Accolade`,
                                     },
-                                    `. So now we find my drunken half, confused by the order he's been given to speak for my crimes, instead patting me erratically on the shoulder with a sharp sword.`,
+                                    `. And so, confused by the order he's been given to speak for my crimes, my drunken half clumsily pats me on the shoulder with a sharp sword.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

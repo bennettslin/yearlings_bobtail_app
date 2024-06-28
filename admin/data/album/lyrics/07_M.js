@@ -25,9 +25,8 @@ export default {
     referenceDescription: `Spanish guitar in measure 1`,
     playerStartTime: 1131.214,
     mixStartTime: `0:02:12.00`,
-    todo: REVISE,
-    problem: `Change order of Mara sentence?`,
-    overview: `After Catherine broke up with me, I vowed to spend the next five years shaping myself into the ideal romantic prospect. So I got involved in the local scene while putting together my own band, the Yearlings; by the fifth year, we were playing house parties and small venues. I grew infatuated with a fellow scenester named Mara, whom I noticed from afar. But she ended up going out with my drummer Jacob, which made band practice awkward.`,
+    todo: REVIEW,
+    overview: `After Catherine broke up with me, I vowed to spend the next five years shaping myself into the ideal romantic prospect. As part of this plan, I got involved in the local scene and eventually put together my own band, the Yearlings; by the fifth year, we were playing house parties and small clubs. I grew infatuated with a fellow scenester named Mara, whom I'd noticed from afar. But Mara ended up going out with my drummer Jacob, which made band practice awkward.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -238,7 +237,7 @@ export default {
                             anchor: `mindful manners`,
                             todo: REVIEW,
                             card: {
-                                description: `I also decided to give up swearing. I figured this would be a definite win with the next Catherine, while anyone else would still find its quaintness charming.`,
+                                description: `I also decided to give up swearing. I figured this would be a definite win with the next Catherine, while anyone else would find its quaintness charming.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -265,10 +264,9 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVISE,
-                problem: `Break up sentence by switching order.`,
+                todo: REVIEW,
                 card: {
-                    description: `I abandoned my plan to pack the lyrics with M words, once this stanza proved how unfeasible it would be to write an entire song in this manner.`,
+                    description: `I eventually abandoned my plan to pack this entire song with M words. But I'd already written this stanza by that point, and since it said everything I wanted to say, I ended up keeping it.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
