@@ -414,7 +414,6 @@ export default {
                         `still hardened against her`,
                         {
                             anchor: `fawning, misty glance`,
-                            todo: REVIEW,
                             card: {
                                 description: `With bitterness suddenly rumbling in his heart, drunken me lashes out in defiance at the boulevard's twin street lights. Their glowing lamps have revived the memory of Sita's fearful gaze at the moment he committed his crime.`,
                                 dotKeys: {
@@ -981,7 +980,7 @@ export default {
                             anchor: `trail of crumbs`,
                             todo: REVIEW,
                             card: {
-                                description: `But it's too late to walk back the damage done: All night I've been nibbling on the rolls in my pocket instead of dropping a breadcrumb trail. And now, having satisfied my hunger, I'm stranded and can't find my way back.`,
+                                description: `But it's too late to walk back the damage done: All night I've been nibbling on the rolls in my pockets instead of dropping a breadcrumb trail. And now, having satisfied my hunger, I'm stranded and can't find my way back.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -1005,7 +1004,7 @@ export default {
                             properNoun: true,
                             todo: REVIEW,
                             card: {
-                                description: `Though I'd like to plead my case, I know if I just accept my role as the villain, then this will all be over with sooner. And so the sober me, called up to testify for his drunken half, stays silent.`,
+                                description: `Though I'd like to plead my case, this will all be over with sooner if I just accept my role as the villain. And so the sober me, called up to testify for his drunken half, stays silent.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -1033,7 +1032,7 @@ export default {
                             anchor: `master mind`,
                             todo: REVIEW,
                             card: {
-                                description: `In college, my wishful thinking was that I could shunt the burden of writing term papers onto my drunken self. But once drunk, I would resent taking orders from my sober half— as any slave would— and either do the work poorly or not at all. Somehow this became my go-to strategy for breaking up with Sita.`,
+                                description: `In college, my wishful thinking was that I could shunt the burden of writing term papers onto my drunken self. But then, once drunk, I would resent taking orders from my sober half, and either do the work poorly or not at all— like a slave rebelling against his master. Somehow this became my go-to strategy for breaking up with Sita.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

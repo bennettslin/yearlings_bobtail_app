@@ -235,12 +235,12 @@ export default {
                                         anchor: `baseball T-shirts`,
                                         wiki: `Raglan_sleeve`,
                                     },
-                                    `back then, thinking this would alienate the fewest subcultures and thus appeal to the most women. I was also baby-faced enough to still be mistaken for a high schooler. Tristan, one of the punks in the thieving group, liked our ragtag look and referred to us as the`,
+                                    `back then, thinking this would alienate the fewest subcultures and thus appeal to the most women. I was also baby-faced enough to be taken for a middle schooler. Tristan, one of the punks in the thieving group, liked our ragtag look and named us the "`,
                                     {
                                         anchor: `Young Ones`,
                                         wiki: `The_Young_Ones_(TV_series)`,
                                     },
-                                    `. He was clearly our Vyvyan. I'm not sure which of the other characters he saw me as.`,
+                                    `." He was clearly our Vyvyan; I'm not sure which of the other characters he saw me as.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -251,7 +251,7 @@ export default {
                             anchor: `bustin' cars with fists`,
                             todo: REVIEW,
                             card: {
-                                description: `Tristan was particularly hotheaded when drunk. One night after we got kicked out of a party for a fight he started, he challenged us to see who could punch a car window and break the glass. I didn't win.`,
+                                description: `Tristan was particularly hotheaded when drunk. One night after getting us kicked out of a party for a fight he started, Tristan challenged us to see who could punch a random car window and break the glass first. I didn't win.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -326,7 +326,19 @@ export default {
                             anchor: `aren't love`,
                             todo: REVIEW,
                             card: {
-                                description: `Throughout our budding friendship, Sita had neglected to mention her sexual intimacy with past partners. When I found out, she tried to console me by pointing out that she never went all the way with them because she didn't love them; she loved me— which meant I'd won. But it still stung to find out so late, and this deepened my resentment.`,
+                                description: [
+                                    `Throughout our budding friendship, Sita had neglected to mention her sexual intimacy with past partners. When I found out, she tried to console me by pointing out that it was always shy of intercourse; on top of that, she never went all the way with them`,
+                                    {
+                                        isItalic: true,
+                                        lyric: `precisely`,
+                                    },
+                                    `because she hadn't loved them. She loved`,
+                                    {
+                                        isItalic: true,
+                                        lyric: `me`,
+                                    },
+                                    `— which meant I'd won. But it still stung to find out so late, and this only deepened my resentment.`,
+                                ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -447,7 +459,7 @@ export default {
                             anchor: `counterpoint`,
                             wiki: `Counterpoint`,
                         },
-                        `, melodies are laid atop one another, and the chord progression is simply a byproduct of the harmonies they form in sequence. But since the chord progression for this song was established first, I took the reverse approach of assigning each note in a chord to a different part, and then shaping each part's sequence of notes into an unassuming counter-melody.`,
+                        `, melodies are laid one atop another, and the chord progression is simply a byproduct of the harmonies they form in sequence. But since the chord progression for this song was established first, I took the reverse approach of assigning each note in a chord to a different part, and then shaping each part's sequence of notes into an unassuming counter-melody.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -469,7 +481,7 @@ export default {
                             anchor: `claws you built from scratches`,
                             todo: REVIEW,
                             card: {
-                                description: `In the same way that cats scratch to sharpen their claws, I'd learned to keep my emotional defenses sharp after a lifetime of getting scratched and clawed by bullies.`,
+                                description: `In the same way that cats scratch to sharpen their claws, I needed to stay sharp to keep from getting scratched and clawed by the bullies.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [PUN]: true,
@@ -485,7 +497,6 @@ export default {
                         `fill up a package strapped to your`,
                         {
                             anchor: `scapegirl`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In Biblical times, a community absolved its sins by ritually placing them`,
