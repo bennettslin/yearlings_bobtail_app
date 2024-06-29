@@ -2,6 +2,7 @@
 * Revise five annotations
 * Review fifteen annotations (Uncanny Valley and Golden Cord)
 * Redo one annotation
+* Logic for order of annotation cards?
 
 ### Must do
 * Illustrator

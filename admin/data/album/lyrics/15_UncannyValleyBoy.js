@@ -284,7 +284,7 @@ export default {
                                         anchor: `endorphined`,
                                         wiki: `Endorphins`,
                                     },
-                                    `," allows me to be a virtual orphan, living in denial of having parents whose expectations I fail to meet.`,
+                                    `," makes me a virtual orphan, as I live in denial of having parents whose expectations I fail to meet.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -371,7 +371,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `To defend against the bullies' threats, I would react slowly, which then forced me to react slowly to anyone in general. At some point, a classmate believed I was huffing paint, and this is when I got called into the principal's office.`,
+                                    description: `To defend against the bullies, I would react slowly to their threats— which then forced me to react slowly to anyone in general. At some point, a classmate must have believed I was huffing paint, and this is when I got called into the principal's office.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -429,12 +429,12 @@ export default {
                             anchor: `Village Green Preservation Society`,
                             wiki: `The_Kinks_Are_the_Village_Green_Preservation_Society`,
                         },
-                        `as a rough guide for this album, which meant each song had to feature well-crafted musical hooks; represent a different musical style; and clock in at around three minutes. While there's no one-to-one mapping, this song is clearly the "`,
+                        `as a rough guide for this album, which meant each song had to feature well-crafted musical hooks; represent a different musical style; and clock in at around three minutes. And while there's no one-to-one mapping, this song is clearly the "`,
                         {
                             anchor: `Wicked Annabella`,
                             wiki: `Wicked_Annabella`,
                         },
-                        `" of the bunch, so I went with the same feel of low notes played on crunchy electric guitars.`,
+                        `" of the bunch. So I went with the same feel of low notes played on crunchy electric guitars.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -473,7 +473,7 @@ export default {
                                                 wiki: `Hamartia`,
                                             },
                                         },
-                                        `is the tragic flaw that leads to a hero's downfall. And so my parents ask if I see any telltale signs that point to mine, while alluding to my former belief that I was born from the stars— or, as they put it, that I'm "a Martian."`,
+                                        `is the tragic flaw that leads to a hero's downfall. And so my parents ask if I see the telltale signs that point to mine, by alluding to my former belief that I'm an astral being— or, as they put it, "a Martian."`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -576,7 +576,7 @@ export default {
                             anchor: `counter-melody`,
                             wiki: `Counter-melody`,
                         },
-                        `. I then took the original counter-melody, which I'd intended to play on guitar, and gave it to the lead vocals, for which I wrote new lyrics.`,
+                        `. So I took the original counter-melody, which I'd intended to play on guitar, and gave it to the lead vocals, for which I then wrote new lyrics.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -819,7 +819,7 @@ export default {
                                                 wiki: `Ramayana`,
                                             },
                                         },
-                                        `is an epic poem of ancient India that tells of the life of`,
+                                        `is an epic poem of ancient India that tells the life story of`,
                                         {
                                             anchor: `Rama`,
                                             wiki: `Rama`,
@@ -865,7 +865,8 @@ export default {
                         `A`,
                         {
                             anchor: `nation paused`,
-                            todo: REVIEW,
+                            todo: REST,
+                            problem: `Not entirely comfortable with the exaggeration.`,
                             card: {
                                 description: [
                                     `In 1987, a`,
@@ -885,10 +886,9 @@ export default {
                         `to watch you`,
                         {
                             anchor: `fail your Sita`,
-                            todo: REVISE,
-                            problem: `Make two sentences flow together better?`,
+                            todo: REVIEW,
                             card: {
-                                description: `Modern audiences may find it disgraceful that Rama's first act upon reuniting with Sita was to demand proof of her purity. I feel the same way when I look back now on my need to be the more sexually experienced partner in the relationship. It baffles me why I couldn't just be grateful for whatever circumstances needed to happen before Sita finally chose me.`,
+                                description: `Modern audiences may find it disgraceful that Rama's first act upon reuniting with Sita was to demand proof of her purity. And when I look back now on my own relationship, I feel the same way about my need to be the more sexually experienced partner. It baffles me why I couldn't just be grateful for whatever circumstances had to happen before Sita finally chose me.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -897,7 +897,6 @@ export default {
                         `on`,
                         {
                             anchor: `repeat forevermore`,
-                            todo: REVIEW,
                             card: {
                                 description: `As I was making this album, a thought occurred to me: Like Rama, I too am now doomed to repeat my mistakes, as the story of how I betrayed my Sita shall be endlessly retold— and thus, endlessly relived.`,
                                 dotKeys: {
@@ -1023,7 +1022,7 @@ export default {
                                             anchor: `Sirens`,
                                             wiki: `Siren_(mythology)`,
                                         },
-                                        `" were beautiful women whose enchanting songs would lull passing sailors into crashing their ships against the rocky shores. But much like`,
+                                        `" were beautiful women whose enchanting songs would lull any passing sailors, causing them to crash against the rocky shores. But much like`,
                                         {
                                             anchor: `Odysseus`,
                                             wiki: `Odysseus`,
@@ -1056,7 +1055,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `While chanting Rama's name, Ratnakar's concentration was so intense that an anthill formed over him, and he remained undisturbed for years. Thus, he came to be known as Valmiki, from the Sanskrit word for "anthill."`,
+                                    description: `While chanting Rama's name, Ratnakar concentrated so intensely that an anthill formed around him, allowing him to remain undisturbed for years. And thus, he came to be known as Valmiki, from the Sanskrit word for "anthill."`,
                                     dotKeys: {
                                         [REFERENCE]: true,
                                     },
@@ -1075,7 +1074,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `Since Mara is never directly mentioned in "M," I decided to leave her name out of the rest of the album as well.`,
+                                    description: `This wasn't meant to be a cliffhanger. But since Mara is never directly mentioned in "M," I decided to leave her name out of the rest of the album as well.`,
                                     dotKeys: {
                                         [SONGCRAFT]: true,
                                     },
@@ -1268,7 +1267,7 @@ export default {
                             anchor: `faces you flip override`,
                             todo: REVIEW,
                             card: {
-                                description: `My mother would sometimes ask what happened to the playful little boy I'd once been— which made me wonder myself. I think I learned early on that, for every situation, there's an optimal person to be— and the key is to deftly switch between those various personas. So it made no sense to keep the original persona lying around, once it no longer served any purpose.`,
+                                description: `My mother would sometimes ask what happened to the playful little boy I'd once been— which made me wonder myself. I think I learned early on that, for every situation, there's an optimal person to be— and the key is to deftly switch between those various personas. So it made no sense to keep the original personality lying around, once it no longer served any purpose.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -1423,7 +1422,7 @@ export default {
                                 todo: REVIEW,
                                 cards: [
                                     {
-                                        description: `It wasn't until college that I understood the sacrifices my parents had made for me and my siblings to lead better lives than their own. But that this awareness had to come about through my coursework, rather than my own lived experiences, only added to my guilt.`,
+                                        description: `It wasn't until college that I understood the sacrifices my parents had made for me and my siblings to lead better lives than their own. But the fact that this awareness came about through assigned coursework, rather than my own lived experiences, only added to my guilt.`,
                                         dotKeys: {
                                             [BACKSTORY]: true,
                                         },
@@ -1612,17 +1611,7 @@ export default {
                 cards: [
                     {
                         description: [
-                            `The final movement of Beethoven's`,
-                            {
-                                anchor: `last major work`,
-                                wiki: `String_Quartet_No._16_(Beethoven)`,
-                            },
-                            `begins with a bass theme that asks, "Must it be?"— followed by a treble theme that responds, "It must be!"`,
-                        ],
-                    },
-                    {
-                        description: [
-                            `After Ana and Jacob left the band, it didn't feel right to keep referring to myself as the Yearlings. And with the Web gaining in usage, I wanted a new name that would always be first in search results. So I decided to combine two random words… but all I could think of was "Bobtail Yearlings." Which, for symmetry's sake, would make the album "`,
+                            `After Ana and Jacob left the band, it didn't feel right to keep referring to myself as the Yearlings. And with the Web gaining in usage, I wanted a new name that would always be first in search results. So I decided to combine two random words… but all I could think of was "Bobtail Yearlings"… which, for symmetry's sake, would make the album "`,
                             {
                                 isItalic: true,
                                 lyric: `Yearling's Bobtail`,
@@ -1642,6 +1631,16 @@ export default {
                         dotKeys: {
                             [AFTERWORD]: true,
                         },
+                    },
+                    {
+                        description: [
+                            `The final movement of Beethoven's`,
+                            {
+                                anchor: `last major work`,
+                                wiki: `String_Quartet_No._16_(Beethoven)`,
+                            },
+                            `begins with a bass theme that asks, "Must it be?"— followed by a treble theme that responds, "It must be!"`,
+                        ],
                     },
                 ],
             },
