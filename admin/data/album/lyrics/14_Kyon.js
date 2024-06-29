@@ -151,7 +151,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: REVIEW,
                 card: {
-                    description: `I wanted this song to speak from Sita's perspective, but my portrayal is a bit one-dimensional. I was self-absorbed in my guilt when I wrote it, and my primary purpose was to beat myself up over what my stupidity had cost me.`,
+                    description: `I wanted this song to speak from Sita's perspective, but in retrospect, my portrayal might be a bit one-dimensional. I was just self-absorbed in my guilt when I wrote it, and my main purpose was to beat myself up over what my pride had cost me.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
@@ -172,7 +172,7 @@ export default {
                             anchor: `take in her breasts`,
                             todo: REVIEW,
                             card: {
-                                description: `It scared me, far more than I let on, to gamble away the warmth of Sita's love just for a chance to date some other woman. I had to wonder if this fear would then affect my hormones, because upon seeing this woman's naked body for the first time, I would always be struck by a desire to be mothered more than anything else.`,
+                                description: `It scared me, far more than I let on, to gamble away the warmth of Sita's love just for a chance to date some other woman. I had to wonder if this fear would then affect my hormones, because upon seeing another woman's naked body for the first time, I was always struck by a desire to be mothered more than anything else.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -426,7 +426,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Sita anticipated that my pursuit of other women would grow repetitive, causing the years to whiz by and leave me with few standout memories.`,
+                                    description: `Sita anticipated that my pursuit of other women would grow repetitive, leaving few standout memories as the years whizzed by.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -449,7 +449,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Then once my life as a womanizer proved unfulfilling, surely I'd return to her— my fallback option— with relief rather than reluctance.`,
+                                    description: `Then once life as a womanizer proved to be unfulfilling, surely I'd return to her— my fallback option— with relief rather than reluctance.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -504,7 +504,7 @@ export default {
                             anchor: `extra holes`,
                             todo: REVIEW,
                             card: {
-                                description: `Extra notches can be punched in one's belt to support a belly grown large from overfeeding. When carved on a bedpost, they tally sexual conquests.`,
+                                description: `When punched in one's belt, extra notches support a belly grown large from overfeeding. When carved on a bedpost, they tally sexual conquests.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -588,7 +588,7 @@ export default {
                             anchor: `common time`,
                             wiki: `Time_signature`,
                         },
-                        `in the song's second half, even as the chord progression remains unchanged. The two strands of tuplets are also more in sync, as one plays two notes for every three played by the other.`,
+                        `in the song's second half— even as the chord progression remains unchanged. The two strands of tuplets are also more in sync, as one plays two notes for every three played by the other.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -779,7 +779,7 @@ export default {
                             anchor: `I'll gladly wait`,
                             todo: REVIEW,
                             card: {
-                                description: `But Sita encouraged my artistic pretensions, believing them to reflect positively on her as well. Though she was uninterested in the local scene, she still enjoyed being seen as the one to go home with me after a show.`,
+                                description: `But Sita encouraged my artistic pretensions, believing them to reflect positively on her as well. Though she was uninterested in the local scene, she still enjoyed being seen to go home with me after a show.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
