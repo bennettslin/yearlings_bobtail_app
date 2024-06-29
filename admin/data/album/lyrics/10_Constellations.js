@@ -749,7 +749,7 @@ export default {
                                             anchor: `Mughals`,
                                             wiki: `Mughal_Empire`,
                                         },
-                                        `, Muslim descendants of Tamerlane, must have regaled themselves with tales of "how he" led the feat that precipitated their conquest of South Asia and its Hindu populations.`,
+                                        `, Muslim descendants of Tamerlane, must have regaled themselves with tales of "how he" led their conquest of South Asia and its Hindu populations.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -1190,7 +1190,7 @@ export default {
                             anchor: `Pour sod, fourfeit tundr`,
                             todo: REVIEW,
                             card: {
-                                description: `In the car, Howie and Tomer swap tales from their high school days, leading up to the day they had to pour sod on the "poor sod" who now lies "four feet under."`,
+                                description: `In the car, Howie and Tomer swap tales from their high school days, culminating in the day they poured sod on the "poor sod" who now lies "four feet under."`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -1773,7 +1773,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `Meanwhile, sensing disaster afoot after a "snowy blitz," our brave Inuit tribe flees the icy channels "in some`,
+                                    `Meanwhile, sensing disaster afoot after a "snowy blitz," our Inuit tribe flees the icy channels "in some`,
                                     {
                                         anchor: `umiak`,
                                         wiki: `Umiak`,
@@ -1842,7 +1842,7 @@ export default {
                                         anchor: `Arrhythmia`,
                                         wiki: `Cardiac_arrhythmia`,
                                     },
-                                    `," or an irregular pulse, is a downside of taking Robitussin. Coming down from my high, I notice that my heart will stop for a couple of seconds, which makes me nervous. So I try to count the beats per minute— but my frazzled brain struggles with basic "arithmetic."`,
+                                    `," or an irregular pulse, is a downside of taking Robitussin. As I come down from my high, my heart stops every few seconds, causing me to worry. So I try to count the beats, hoping the rate stabilizes over time— but my frazzled brain struggles with basic "arithmetic."`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
