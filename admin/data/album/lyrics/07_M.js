@@ -689,8 +689,7 @@ export default {
                         `is choked down my`,
                         {
                             anchor: `no-hope chest`,
-                            todo: REDO,
-                            problem: `I just don't like the use of figurative and literal here.`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -699,7 +698,7 @@ export default {
                                             anchor: `hope chest`,
                                             wiki: `Hope_chest`,
                                         },
-                                        `stored the assorted dishware and linens gathered by a young woman in preparation for married life. So by keeping my feelings of hopelessness close to one chest, I was also sealing off another.`,
+                                        `stored the assorted dishware and linens gathered by a young woman in preparation for married life. So by keeping my despair close to one chest, I was also sealing off another.`,
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
@@ -824,7 +823,7 @@ export default {
                             anchor: `world's a naked baby`,
                             todo: REVIEW,
                             card: {
-                                description: `But at some point, I realized that a social scene is no different from the world at large. Since little is hidden from view, any situation can be understood by reading everyone else's intentions and observing their actions— much like a holistic picture of the world emerges after reading books on all the important subject matters.`,
+                                description: `But at some point, I realized something: A social scene is no different from the world at large, in that little is hidden from view. So any situation can be understood by reading everyone else's intentions and observing their actions— much like a holistic picture of the world emerges after reading books on all the important subject matters.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -846,14 +845,23 @@ export default {
                     lyric: [
                         {
                             anchor: `to have a merry ol' laugh`,
-                            card: {
+                            todo: REVIEW,
+                            cards: [
+                                {
 
-                                description: `Or, to have a "Mara, you'll" laugh. In short, everyone else does what you would expect them to do, given what you can expect them to want— and a social scene is simply the sum total of all that. No one gets in your way just to spite you— which means you can only react with good humor when your best-laid plans fall apart.`,
-                                dotKeys: {
-                                    [OBSERVATION]: true,
-                                    [PUN]: true,
+                                    description: `In short, everyone does what you would expect them to do, given what you can expect them to want— and a social scene is just the sum total of all that. No one gets in your way to spite you— which means you can only react with good humor when your best-laid plans fall apart.`,
+                                    dotKeys: {
+                                        [OBSERVATION]: true,
+                                    },
                                 },
-                            },
+                                {
+
+                                    description: `Or, to have a "Mara, you'll" laugh.`,
+                                    dotKeys: {
+                                        [PUN]: true,
+                                    },
+                                },
+                            ],
                         },
                         `.`,
                     ],
@@ -882,9 +890,9 @@ export default {
                         {
                             anchor: `boy who's to love her baby`,
                             todo: REDO,
-                            problem: `Last sentence runs on. Maybe don't use "in other words" after "in short."`,
+                            problem: `Last sentence runs on.`,
                             card: {
-                                description: `In other words, the world is as innocent and unwitting as a newborn infant. So if a woman's list of ideal traits in a man includes what kind of father he'll be to her child, then she's likely to judge him by how he treats the world at large.`,
+                                description: `The world is as unwitting as a newborn infant. So if a woman's list of ideal traits in a man includes what kind of father he'll be to her child, then she's likely to judge him by how he treats the world at large.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -921,7 +929,7 @@ export default {
                             todo: REDO,
                             problem: `Make sure this is really saying what I want it to say.`,
                             card: {
-                                description: `It was no mystery why the situation with Mara transpired as it had. I'd simply misread it, and that was my fault. I found this thought empowering, because it meant the Maras of the world were still attainable. It was just on me to better understand what they wanted— and then I could build myself up to be exactly that.`,
+                                description: `It was no mystery why the situation with Mara transpired as it had. I'd misread it, and that was my fault. I found this thought empowering, because it meant the Maras of the world were still attainable. It was just on me to better understand what they wanted— and then I could build myself up to be exactly that.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
