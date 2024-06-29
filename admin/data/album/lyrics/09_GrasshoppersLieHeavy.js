@@ -1036,7 +1036,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `As we became friends, what I stood to gain from Sita was obvious. Less so was what she gained from me, given my moody temperament. But in time I came to see that her pleasant nature masked a deep-rooted depression, which gave me an opening to win her over with kind gestures.`,
+                                    description: `As we became friends, what I stood to gain from Sita was obvious; less so was what she gained from me, given my moody temperament. But in time I came to see that her pleasant nature masked a deep-rooted depression, which gave me an opening to win her over with kind gestures.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -1222,12 +1222,12 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `A clear reference to my`,
+                                        `A reference to`,
                                         {
-                                            anchor: `favorite Beatles song`,
+                                            anchor: `one of my favorite`,
                                             wiki: `She_Loves_You`,
                                         },
-                                        `. During my troubled years with Sita later on, it felt like`,
+                                        `Beatles songs. During my troubled years with Sita later on, it felt like`,
                                         {
                                             anchor: `John Lennon`,
                                             wiki: `John_Lennon`,
@@ -1312,7 +1312,7 @@ export default {
                             anchor: `how's that compromise`,
                             todo: REVIEW,
                             card: {
-                                description: `Having taken such pains to tuck away my emotions for so long, I was now hesitant to compromise the safety of this position. I just didn't want to feel vulnerable again, and I couldn't be sure that my desires wouldn't backfire on me— as they had the first time I revealed them.`,
+                                description: `Having taken such pains to tuck away my emotions for so long, I was now hesitant to compromise the safety of this position. I just didn't want to feel vulnerable again, and I couldn't be sure that my desires wouldn't backfire on me as they had the first time I revealed them.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

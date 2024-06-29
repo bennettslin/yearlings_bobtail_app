@@ -491,7 +491,7 @@ export default {
                             anchor: `wanderer lost`,
                             todo: REVIEW,
                             card: {
-                                description: `The letter spoke to my frustration that all my desires for acceptance should go unmet. Having hit the right nerves, it then shared hopeful news: RI Research believed that I might be a Beyonder. And now, after searching for so long, they'd found me.`,
+                                description: `The letter spoke to my frustration that all my desires for acceptance should go unmet. Having hit the right nerves, it then shared hopeful news: RI Research believed I might be a Beyonder. And now, after searching for so long, they'd found me.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -569,7 +569,7 @@ export default {
                                         isEmphasis: true,
                                         lyric: `my`,
                                     },
-                                    `little brother. Gogo and Didi are also the respective pet names of Estragon and Vladimir, the two tramps who are still waiting for Godot by the end of Beckett's play.`,
+                                    `little brother. Coincidentally, Gogo and Didi are also the respective pet names of Estragon and Vladimir, the two tramps who still wait for Godot by the end of Beckett's play.`,
                                 ],
                                 dotKeys: {
                                     [REFERENCE]: true,
@@ -689,7 +689,7 @@ export default {
                                         anchor: `New Age`,
                                         wiki: `New_Age`,
                                     },
-                                    `belief in the '70s— though as a child, I had no way to know this. Like Beyonders, star people came to Earth and then lost all memory of their stellar origins.`,
+                                    `belief in the '70s— though as a child, I had no way to know this. Like Beyonders, star people lost all memory of their stellar origins once they came to Earth.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -1009,7 +1009,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `Since a spy's success hinges upon staying hidden, their exploits won't ever be known unless they're captured— at which point they'll face death by firing squad. And in my desire to join a friendly squad, I faced a similar dilemma: Not only would opening up sabotage all my previous efforts to stay unresponsive, it would then force me to explain my past behavior.`,
+                                    `Since a spy's success hinges upon staying hidden, their exploits won't ever be known unless they're captured— at which point they'll face death by firing squad. And in my desire to join a friendly squad, I faced a similar dilemma: Not only would opening up sabotage all my previous efforts to stay unresponsive, I would then be forced to explain my past behavior.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,

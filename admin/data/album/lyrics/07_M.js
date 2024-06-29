@@ -26,7 +26,7 @@ export default {
     playerStartTime: 1131.214,
     mixStartTime: `0:02:12.00`,
     todo: REVIEW,
-    overview: `After Catherine broke up with me, I vowed to spend the next five years shaping myself into the ideal romantic prospect. As part of this plan, I got involved in the local scene and eventually put together my own band, the Yearlings; by the fifth year, we were playing house parties and small clubs. I grew infatuated with a fellow scenester named Mara, whom I'd noticed from afar. But Mara ended up going out with my drummer Jacob, which made band practice awkward.`,
+    overview: `After Catherine broke up with me, I vowed to spend the next five years shaping myself into the ideal romantic prospect. As part of this plan, I got involved in the local scene and eventually put together my own band, the Yearlings; by the fifth year, we were playing house parties and small clubs. I soon grew infatuated with a scenester named Mara, whom I noticed from afar. But Mara ended up going out with my drummer Jacob, which made band practice awkward.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -237,7 +237,7 @@ export default {
                             anchor: `mindful manners`,
                             todo: REVIEW,
                             card: {
-                                description: `I also decided to give up swearing. I figured this would be a definite win with the next Catherine, while anyone else would find its quaintness charming.`,
+                                description: `I also decided to give up swearing. I figured this would be a definite win with the next Catherine, while everyone else would still find its quaintness charming.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -698,7 +698,7 @@ export default {
                                             anchor: `hope chest`,
                                             wiki: `Hope_chest`,
                                         },
-                                        `stored the assorted dishware and linens gathered by a young woman in preparation for married life. So by keeping my despair close to one chest, I was also sealing off another.`,
+                                        `stored the assorted dishware and linens gathered by a young woman in preparation for married life. By keeping my despair close to one chest, then, I was also sealing off another.`,
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,

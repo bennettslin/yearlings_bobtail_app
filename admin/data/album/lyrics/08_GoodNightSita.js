@@ -600,7 +600,7 @@ export default {
                             anchor: `tactic is to stall`,
                             todo: REVIEW,
                             card: {
-                                description: `My friends advised me to wait three days before calling a woman. Yet it was always agony if she took more than a day to return my call.`,
+                                description: `My friends advised me to wait three days before calling a woman. Yet it was always agony if she then took more than a day to return my call.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
