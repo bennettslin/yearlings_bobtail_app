@@ -183,12 +183,12 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `Several idioms in the English language trace their origin to England's trade rivalries with the Dutch in the 17th century. False confidence gained from drinking alcohol, for example, is known as`,
+                                        `Several idioms in the English language trace their origin to England's trade rivalries with the Dutch in the 17th century.`,
                                         {
                                             anchor: `Dutch courage`,
                                             wiki: `Dutch_courage`,
                                         },
-                                        `.`,
+                                        `, for example, is false confidence gained from drinking alcohol.`,
                                     ],
                                 },
                             ],
@@ -487,11 +487,10 @@ export default {
                         `in time are seen with`,
                         {
                             anchor: `a focus grown clear`,
-                            todo: REVISE,
-                            problem: `Two I'ds in a row.`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `A few hours into a date, my buzz would wear off. I'd then realize that everything I'd been saying might now topple under scrutiny, like a`,
+                                    `A few hours into a date, my buzz would wear off, forcing me to realize that everything I'd been saying might now topple under scrutiny— like a`,
                                     {
                                         anchor: `totem pole`,
                                         wiki: `Totem_pole`,

@@ -813,8 +813,7 @@ export default {
                         `She`,
                         {
                             anchor: `locks your arm`,
-                            todo: REVISE,
-                            problem: `Too many short sentences? Use of whereupon?`,
+                            todo: REVIEW,
                             card: {
                                 description: `Seeing Sita shiver from the cold, I invite her to warm up inside my apartment, whereupon she gladly tucks her hand under my arm. Of course, this doesn't mean what I want it to mean… And so I feel like an escaped convict who's just been recaptured and put in handcuffs.`,
                                 dotKeys: {
