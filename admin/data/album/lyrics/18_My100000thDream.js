@@ -81,7 +81,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `I once read that we have four dreams on average per night. Over a lifetime of seventy years, that's about a hundred thousand dreams. So here I am, dreaming the very last dream I'll ever dream.`,
+                                    description: `I once read that we have around four dreams per night. Over a lifetime of seventy years, that's about a hundred thousand dreams. So here I am, dreaming the very last dream I'll ever dream.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [OBSERVATION]: true,
@@ -160,7 +160,6 @@ export default {
                         `Did I`,
                         {
                             anchor: `ever live another life`,
-                            todo: REVIEW,
                             card: {
                                 description: `As dreams often go, I have no memory or even awareness of having lived any other life in the intervening years. It's clear that Sita and I didn't stay together, yet I can't recall our time spent apart. Of course, according to the Hindu and Buddhist faiths, I've lived many other lives, literally— in past incarnations.`,
                                 dotKeys: {

@@ -182,7 +182,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `In the Book of Genesis, God took one of Adam's ribs to give life to Eve. My own promise to give of myself to Sita, however, proved to be a false rib, since she could never truly be alive with me, even as she felt unworthy to begin life anew with someone else.`,
+                                    `In the Book of Genesis, God took one of Adam's ribs to give life to Eve. My own promise to give of myself to Sita, however, proved to be a false rib. After all, she could never truly be alive with me, even as she felt unworthy to begin life anew with someone else.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -512,7 +512,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `The insignia of the`,
+                                    `The`,
                                     {
                                         isItalic: true,
                                         lyric: {
@@ -520,7 +520,7 @@ export default {
                                             wiki: `Schutzstaffel`,
                                         },
                                     },
-                                    `, the paramilitary group responsible for carrying out the Holocaust, consists of two thunderbolts side by side. And so, wishing no more to strike anyone down with my thunder, I strike myself down instead, leaving my complacency and ego behind.`,
+                                    `, the paramilitary group responsible for carrying out the Holocaust, wore an insignia consisting of two thunderbolts side by side. And so, wishing no more to strike anyone down with my thunder, I strike myself down instead, leaving my complacency and ego behind.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -831,7 +831,7 @@ export default {
                                 todo: REVIEW,
                                 cards: [
                                     {
-                                        description: `With ignorance being as old as time itself, I'm comforted to know we've always corrected our mistakes; at the same time, it's dispiriting to be reminded that those to come have yet to make theirs. The universe never truly learns, and I'm partly to blame… A similar thought occurred to me as a child, when I wondered if I was the reason my brother never got better. It made me realize that all I could do was love him, and then do better for him.`,
+                                        description: `With ignorance being as old as time itself, I'm comforted to know we've always corrected our past mistakes; at the same time, it's dispiriting to be reminded that those to come have yet to make theirs. The universe never learns, and I'm partly to blame… A similar thought occurred to me as a child, when I wondered if I was the reason my brother never got better. It made me realize that all I could do was to love him, and then do better for him.`,
                                         dotKeys: {
                                             [NARRATIVE]: true,
                                             [OBSERVATION]: true,

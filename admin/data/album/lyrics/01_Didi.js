@@ -593,7 +593,7 @@ export default {
                 todo: REVIEW,
                 card: {
                     description: [
-                        `As home studios became more affordable in the early '00s, I sensed that a wave of artists would soon take the art of music recording to new heights, just as`,
+                        `As home studios became affordable in the early '00s, I sensed that a wave of artists would soon take the art of music recording to new heights, just as`,
                         {
                             anchor: `Brian Wilson`,
                             wiki: `Brian_Wilson`,

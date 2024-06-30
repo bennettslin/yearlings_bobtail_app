@@ -668,7 +668,7 @@ export default {
                                         anchor: `conferring knighthood`,
                                         wiki: `Accolade`,
                                     },
-                                    `. And so, confused by the order he's been given to speak for my crimes, my drunken half clumsily pats me on the shoulder with a sharp sword.`,
+                                    `. And so we find my drunken half, confused by the order he's been given to speak for my crimes, clumsily patting me on the shoulder with a sharp sword.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -716,10 +716,9 @@ export default {
                     lyricCentre: [
                         {
                             anchor: `Needle done`,
-                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Having gone all the way with Miriam, I'm at peace with our inevitable breakup. And so, basking in my post-coital glow, I picture myself as a terminally ill patient being put to sleep while an old record plays in the background.`,
+                                    description: `Having gone all the way with Miriam, I'm at peace with our inevitable breakup. Basking in my post-coital glow, then, I picture myself as a terminally ill patient being put to sleep while an old record plays in the background.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },

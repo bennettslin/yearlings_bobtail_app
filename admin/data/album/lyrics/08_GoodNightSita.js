@@ -600,7 +600,7 @@ export default {
                             anchor: `tactic is to stall`,
                             todo: REVIEW,
                             card: {
-                                description: `My friends advised me to wait three days before calling a woman. Yet it was always agony if she then took more than a day to return my call.`,
+                                description: `My friends advised me to wait three days before calling a woman. Yet it was always agony if she took more than a day to call me back.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -660,7 +660,7 @@ export default {
                             anchor: `learn to shotgun`,
                             todo: REVIEW,
                             card: {
-                                description: `In time I adopted the shotgun approach to dating, which involves hitting on anyone at any moment. It works by putting the math on your side: Even if your success rate remains dismal, you've increased the sample size, which now improves your chances of getting a woman to say yes. And of course, one yes to a date is all you need.`,
+                                description: `In time I adopted the shotgun approach to dating, which involves hitting on anyone at any moment. It works by putting the math on your side: Even if your success rate remains dismal, you're increasing the sample size, which now improves your chances for a woman to say yes. And of course, one yes to a date is all you need.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
