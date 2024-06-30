@@ -29,7 +29,7 @@ export default {
     mixStartTime: `0:01:29.52`,
     playerStartTime: 1478.233,
     todo: REVIEW,
-    overview: `I worked my way through college washing dishes in a cafeteria on campus, which is how I met Sita. After I scared her off, we didn't speak for months; but then she reached out again, and we became friends. As I got off to a rocky start with playing live shows, and as I continued to struggle with dating other women, Sita lent her moral support— even while a part of me always hoped for something more. At some point, she started liking me back. I'm still not sure how.`,
+    overview: `I worked my way through college washing dishes in a cafeteria on campus, which is how I met Sita. After I scared her off, we didn't speak for months; but then she reached out again, and we became friends. As I got off to a rocky start with playing live shows, and as I struggled with dating other women, Sita lent her moral support— though a part of me still hoped for something more. And then, at some point… she started liking me back.`,
     isDoublespeaker: true,
     lyricUnits: [
         {
@@ -658,8 +658,7 @@ export default {
                     lyric: [
                         {
                             anchor: `Phantom limbs`,
-                            todo: REVISE,
-                            problem: `This contradicts what I said earlier, that I didn't see Sita again for months.`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `A`,
@@ -667,7 +666,7 @@ export default {
                                         anchor: `phantom limb`,
                                         wiki: `Phantom_limb`,
                                     },
-                                    `is the sensation that a missing limb is still responsive. And after I've spent these last weeks of summer in giddy hope, an amputation is what it feels like to face the coming weekend alone.`,
+                                    `is the sensation that a missing limb is still responsive. And after spending those last weeks of summer in giddy hope, an amputation is what it feels like to face the coming weekend alone.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
