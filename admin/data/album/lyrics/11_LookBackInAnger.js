@@ -16,7 +16,7 @@ import {
     FORESHADOW_OF_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REDO, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REDO, REST, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Look Back in Anger',
@@ -74,7 +74,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
+                todo: REST,
+                problem: `I still think the second sentence can be better, but I can't see any way to improve it that wouldn't take up way more time than I've already spent.`,
                 card: {
                     description: [
                         `A fellow dishroom worker named Owen had a`,
@@ -647,7 +648,8 @@ export default {
                         `and thus secure,`,
                         {
                             anchor: `must turn the cheek`,
-                            todo: REVIEW,
+                            todo: REST,
+                            problem: `Does the part about my exalted place in the universe come out of nowhere? Maybe phrase it more in line with what's actually said elsewhere? Still, tabling this for now, as I've already spent too long on it relative to what it's worth.`,
                             card: {
                                 description: `The letters from RI Research instructed me not to confront my tormentors. Instead, I was to take my abuse in stride, for my exalted place in the universe required of me to be the bigger person.`,
                                 dotKeys: {

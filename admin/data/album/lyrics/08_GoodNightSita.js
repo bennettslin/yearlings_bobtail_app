@@ -176,14 +176,14 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `During my college years, I would ask older coworkers to buy me twelve-packs of cheap beer. So I always had a ready supply in my apartment— and before every date, I would down a few cans.`,
+                                    description: `During my college years, I would ask older coworkers to buy me twelve-packs of cheap beer. So I always had a ready supply in my apartment, and before every date, I would down a few cans.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
                                 },
                                 {
                                     description: [
-                                        `Several idioms in the English language trace their origin to 17th-century trade rivalries between the British and the Dutch. False confidence gained from drinking alcohol, for example, is known as`,
+                                        `Several idioms in the English language trace their origin to England's trade rivalries with the Dutch in the 17th century. False confidence gained from drinking alcohol, for example, is known as`,
                                         {
                                             anchor: `Dutch courage`,
                                             wiki: `Dutch_courage`,
@@ -600,7 +600,7 @@ export default {
                             anchor: `tactic is to stall`,
                             todo: REVIEW,
                             card: {
-                                description: `My friends advised me to wait three days before calling a woman. Yet it was always agony if she took more than a day to call me back.`,
+                                description: `My friends would advise me to wait three days before calling a woman. And yet, it was always agony when she invariably took just as long to call me back.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
