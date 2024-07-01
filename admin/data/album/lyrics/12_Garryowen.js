@@ -227,7 +227,8 @@ export default {
                         `Drunk pissed`,
                         {
                             anchor: `punks tryst,`,
-                            todo: REVIEW,
+                            todo: REST,
+                            problem: `I still think the first sentence can be phrased in a more satisfying way.`,
                             card: {
                                 description: [
                                     `I wore`,

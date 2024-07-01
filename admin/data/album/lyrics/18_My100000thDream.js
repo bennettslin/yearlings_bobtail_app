@@ -27,7 +27,7 @@ export default {
     playerStartTime: 3332.826,
     todo: REVISE,
     problem: `Phrasing is still off.`,
-    overview: `Each night I dreamt of happily reuniting with Sita, only to wake in panic as the reality set in that I'd lost her forever. I lived in such dread of this cruel trick played by my unconscious mind, I would stay up until exhaustion overtook me— even as my conscious mind could only dwell in despair. I had no idea when this torment would end. The answer, I feared, was never.`,
+    overview: `Each night I dreamt of happily reuniting with Sita, only to wake in panic as the reality came roaring back that I'd lost her forever. Then after slogging through the day under a cloud of despair, I would come home and stay awake until exhaustion overtook me, in dread of the cruel tricks soon to be played once again by my unconscious mind. I had no idea when this torment would end. The answer, I feared, was never.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -81,7 +81,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `I once read that we have around four dreams per night. Over a lifetime of seventy years, that's about a hundred thousand dreams. So here I am, dreaming the very last dream I'll ever dream.`,
+                                    description: `I once read that we have four dreams per night on average. Over a lifetime of seventy years, that's about a hundred thousand dreams. So here I am, dreaming the very last dream I'll ever dream.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [OBSERVATION]: true,

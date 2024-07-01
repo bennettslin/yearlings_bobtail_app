@@ -980,7 +980,7 @@ export default {
                             anchor: `trail of crumbs`,
                             todo: REVIEW,
                             card: {
-                                description: `But it's too late to walk back the damage done: All night I've been nibbling on the rolls in my pockets instead of dropping a breadcrumb trail. And now, having satisfied my hunger, I'm stranded and can't find my way back.`,
+                                description: `But it's too late to walk back the damage done: All night I've been munching on the rolls in my pockets instead of dropping a breadcrumb trail. And now, having satisfied my hunger, I'm stranded and can't find my way back.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -1032,7 +1032,7 @@ export default {
                             anchor: `master mind`,
                             todo: REVIEW,
                             card: {
-                                description: `In college, my wishful thinking was that I could shunt the burden of writing term papers onto my drunken self. But then, once drunk, I would resent taking orders from my sober half, and either do the work poorly or not at all— like a slave rebelling against his master. Somehow this became my go-to strategy for breaking up with Sita.`,
+                                description: `In college, my wishful thinking was that I could shunt the burden of writing term papers onto my drunken self. But then once drunk, I would resent taking orders from my sober half, and either do the work poorly or not at all— like a slave rebelling against his master. Somehow this became my go-to strategy for breaking up with Sita.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

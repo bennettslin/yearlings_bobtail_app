@@ -15,7 +15,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'क्यों? (Kyon?)',
@@ -423,7 +423,6 @@ export default {
                         `And when sobered by the`,
                         {
                             anchor: `time lapse`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `Sita anticipated that my pursuit of other women would grow repetitive, leaving few standout memories as the years whizzed by.`,
@@ -449,7 +448,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Then once life as a womanizer proved to be unfulfilling, surely I'd return to her— my fallback option— with relief rather than reluctance.`,
+                                    description: `Then once my life as a philanderer proved unfulfilling, surely I'd return to her— my fallback option— with relief rather than reluctance.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -504,7 +503,7 @@ export default {
                             anchor: `extra holes`,
                             todo: REVIEW,
                             card: {
-                                description: `When punched in one's belt, extra notches support a belly grown large from overfeeding. When carved on a bedpost, they tally sexual conquests.`,
+                                description: `When carved into one's belt, extra notches support a belly grown large from overfeeding; when carved on a bedpost, they tally sexual conquests.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -777,7 +776,8 @@ export default {
                         },
                         {
                             anchor: `I'll gladly wait`,
-                            todo: REVIEW,
+                            todo: REST,
+                            problem: `The last phrase still doesn't roll off the tongue the way I'd like it to, but I've already spent too long on it.`,
                             card: {
                                 description: `But Sita encouraged my artistic pretensions, believing them to reflect positively on her as well. Though she was uninterested in the local scene, she still enjoyed being seen to go home with me after a show.`,
                                 dotKeys: {
