@@ -284,7 +284,7 @@ export default {
                                         anchor: `endorphined`,
                                         wiki: `Endorphins`,
                                     },
-                                    `," makes me a virtual orphan, as I live in denial of having parents whose expectations I fail to meet.`,
+                                    `," allows me to live in denial of having parents whose expectations I fail to meet— a virtual orphan, if you will.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -833,7 +833,7 @@ export default {
                                             anchor: `Sita`,
                                             wiki: `Sita`,
                                         },
-                                        `, the goddess of devotion, as well as his battles to rescue her after her abduction by the demon king`,
+                                        `, the goddess of devotion, and his battles to rescue her after her abduction by the demon king`,
                                         {
                                             anchor: `Ravana`,
                                             wiki: `Ravana`,
@@ -887,7 +887,7 @@ export default {
                             anchor: `fail your Sita`,
                             todo: REVIEW,
                             card: {
-                                description: `Modern audiences may find it disgraceful that Rama's first act upon reuniting with Sita was to demand proof of her purity. And when I look back now on my own relationship, I feel the same way about my need to be the more sexually experienced partner. It baffles me why I couldn't just be grateful for whatever circumstances had to happen before Sita finally chose me.`,
+                                description: `Modern audiences may find it disgraceful that Rama's first act upon reuniting with Sita was to demand proof of her purity. And when I look back on my own relationship, I feel the same way about my need to be the more sexually experienced partner. It baffles me why I couldn't just be grateful for whatever circumstances had to happen before Sita finally chose me.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -1021,7 +1021,7 @@ export default {
                                             anchor: `Sirens`,
                                             wiki: `Siren_(mythology)`,
                                         },
-                                        `" were beautiful women whose enchanting songs would lull any passing sailors, causing them to crash against the rocky shores. But much like`,
+                                        `" were beautiful women whose enchanting songs would lull the passing sailors, causing them to crash against the rocky shores. But much like`,
                                         {
                                             anchor: `Odysseus`,
                                             wiki: `Odysseus`,

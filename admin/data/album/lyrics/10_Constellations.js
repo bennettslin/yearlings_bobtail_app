@@ -732,7 +732,6 @@ export default {
                         {
                             anchor: `Howie led the feat`,
                             properNoun: true,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `Meanwhile, Howie walks as if he has "lead feet," owing to the lasting stiffness in his limbs.`,

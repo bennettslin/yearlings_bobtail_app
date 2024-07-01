@@ -176,19 +176,19 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `During my college years, I would ask older coworkers to buy me twelve-packs of cheap beer. So I always had a ready supply in my apartment, and before every date, I would down a few cans.`,
+                                    description: `During my college years, I would ask older coworkers to buy me twelve-packs of cheap beer. So I always had a ready supply in my apartment, and before a date, I would down a few cans.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
                                 },
                                 {
                                     description: [
-                                        `Several idioms in the English language trace their origin to England's trade rivalries with the Dutch in the 17th century.`,
+                                        `Several idioms in the English language trace their origin to England's trade rivalries with the Dutch in the 17th century. For example,`,
                                         {
                                             anchor: `Dutch courage`,
                                             wiki: `Dutch_courage`,
                                         },
-                                        `, for example, is false confidence gained from drinking alcohol.`,
+                                        `is false confidence gained from drinking alcohol.`,
                                     ],
                                 },
                             ],
@@ -490,7 +490,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `A few hours into a date, my buzz would wear off, forcing me to realize that everything I'd been saying might now topple under scrutiny— like a`,
+                                    `A few hours into a date, my buzz would wear off, causing me to realize that everything I'd been saying might now topple under scrutiny— like a`,
                                     {
                                         anchor: `totem pole`,
                                         wiki: `Totem_pole`,
@@ -599,7 +599,7 @@ export default {
                             anchor: `tactic is to stall`,
                             todo: REVIEW,
                             card: {
-                                description: `My friends would advise me to wait three days before calling a woman. And yet, it was always agony when she invariably took just as long to call me back.`,
+                                description: `My friends would advise me to wait three days before calling a woman. Yet it was always agony when she took just as long to call me back.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -659,7 +659,7 @@ export default {
                             anchor: `learn to shotgun`,
                             todo: REVIEW,
                             card: {
-                                description: `In time I adopted the shotgun approach to dating, which involves hitting on anyone at any moment. It works by putting the math on your side: Even if your success rate remains dismal, you're increasing the sample size, which now improves your chances for a woman to say yes. And of course, one yes to a date is all you need.`,
+                                description: `In time I adopted the shotgun approach to dating, which involves hitting on anyone at any moment. It works by putting the math on your side: Even if your success rate remains dismal, you're increasing the sample size, which then improves your chances of someone saying yes. And one yes to a date is all you really need.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

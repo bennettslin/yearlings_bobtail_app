@@ -347,7 +347,7 @@ export default {
                             anchor: `learn to kick it back`,
                             todo: REVIEW,
                             card: {
-                                description: `The most popular kids in middle school were the ones least concerned about being liked, which ran counter to my intuition that anything worth striving for needs to be pursued wholeheartedly. Yet trying things their way didn't make me any more likable either…`,
+                                description: `The most popular kids in middle school were also the least concerned about being liked, which ran counter to my intuition that anything worth striving for needs to be pursued wholeheartedly. Yet trying things their way didn't make me any more likable either…`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -489,7 +489,8 @@ export default {
                         `Do you often feel like a`,
                         {
                             anchor: `wanderer lost`,
-                            todo: REVIEW,
+                            todo: REST,
+                            problem: `I still think there's a completely different way to write the first sentence that makes the same point and sounds better.`,
                             card: {
                                 description: `The letter spoke to my frustration that all my desires for acceptance should go unmet. Having hit the right nerves, it then shared hopeful news: RI Research believed I might be a Beyonder. And now, after searching for so long, they'd found me.`,
                                 dotKeys: {
@@ -551,7 +552,6 @@ export default {
                         {
                             anchor: `Gogo and his Didi`,
                             properNoun: true,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In Chinese,`,
@@ -1009,7 +1009,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `Since a spy's success hinges upon staying hidden, their exploits won't ever be known unless they're captured— at which point they'll face death by firing squad. And in my desire to join a friendly squad, I faced a similar dilemma: Not only would opening up sabotage all my previous efforts to stay unresponsive, I would then be forced to explain my past behavior.`,
+                                    `Since a spy's success hinges upon staying hidden, their exploits won't ever be known until they're captured— at which point they'll face death by firing squad. And in my desire to join a friendly squad, I faced a similar dilemma: Not only would opening up sabotage my previous efforts to stay unresponsive, but I would then have to explain my past behavior.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,

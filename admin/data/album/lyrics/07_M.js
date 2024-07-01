@@ -25,7 +25,6 @@ export default {
     referenceDescription: `Spanish guitar in measure 1`,
     playerStartTime: 1131.214,
     mixStartTime: `0:02:12.00`,
-    todo: REVIEW,
     overview: `After Catherine broke up with me, I vowed to spend the next five years shaping myself into the ideal romantic prospect. As part of this plan, I got involved in the local scene and eventually put together my own band, the Yearlings; by the fifth year, we were playing house parties and small clubs. I soon grew infatuated with a scenester named Mara, whom I noticed from afar. But Mara ended up going out with my drummer Jacob, which made band practice awkward.`,
     lyricUnits: [
         {
@@ -235,9 +234,8 @@ export default {
                         `with`,
                         {
                             anchor: `mindful manners`,
-                            todo: REVIEW,
                             card: {
-                                description: `I also decided to give up swearing. I figured this would be a definite win with the next Catherine, while everyone else would still find its quaintness charming.`,
+                                description: `I also decided to give up swearing. I figured this would be a definite win with the next Catherine, while everyone else would find its quaintness charming.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

@@ -29,7 +29,7 @@ export default {
     mixStartTime: `0:01:29.52`,
     playerStartTime: 1478.233,
     todo: REVIEW,
-    overview: `I worked my way through college washing dishes in a cafeteria on campus, which is how I met Sita. After I scared her off, we didn't speak for months; but then she reached out again, and we became friends. As I got off to a rocky start with playing live shows, and as I struggled with dating other women, Sita lent her moral support— though a part of me still hoped for something more. And then, at some point… she started liking me back.`,
+    overview: `I worked my way through college washing dishes in a cafeteria on campus, which is how I met Sita. After I scared her off, we didn't speak for months; but then she reached out again, and we became friends. As I got off to a rocky start with playing live shows, and as I struggled with dating other women, Sita lent her moral support— though a part of me still hoped for something more. Then, at some point… she started liking me back.`,
     isDoublespeaker: true,
     lyricUnits: [
         {
@@ -1034,7 +1034,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `As we became friends, what I stood to gain from Sita was obvious; less so was what she gained from me, given my moody temperament. But in time I came to see that her pleasant nature masked a deep-rooted depression, which gave me an opening to win her over with kind gestures.`,
+                                    description: `As we became friends, what I stood to gain from Sita was obvious; less so was what she gained from me, given my cynical temperament. But in time I came to see that her pleasant nature masked a deep-rooted depression, which gave me an opening to win her over with kind gestures.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -1210,7 +1210,6 @@ export default {
                     lyric: [
                         {
                             anchor: `She loves you`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `It took a whole year for Sita and I to be fully comfortable with each other. At the start of our friendship, we mostly just studied together at the library. But slowly, short treks through campus progressed into long strolls around the neighborhood, which then led to leaning in closer on the couch. Toward the end, it all happened so fast that I was still processing what triggered it.`,
@@ -1220,12 +1219,12 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `A reference to`,
+                                        `A reference to one of my`,
                                         {
-                                            anchor: `one of my favorite`,
+                                            anchor: `favorite Beatles songs`,
                                             wiki: `She_Loves_You`,
                                         },
-                                        `Beatles songs. During my troubled years with Sita later on, it felt like`,
+                                        `. During my troubled years with Sita later on, it felt like`,
                                         {
                                             anchor: `John Lennon`,
                                             wiki: `John_Lennon`,
@@ -1308,7 +1307,6 @@ export default {
                         `So`,
                         {
                             anchor: `how's that compromise`,
-                            todo: REVIEW,
                             card: {
                                 description: `Having taken such pains to tuck away my emotions for so long, I was now hesitant to compromise the safety of this position. I just didn't want to feel vulnerable again, and I couldn't be sure that my desires wouldn't backfire on me as they had the first time I revealed them.`,
                                 dotKeys: {
