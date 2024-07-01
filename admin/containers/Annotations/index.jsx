@@ -15,6 +15,7 @@ import { getKeyName } from '../../../src/managers/Key/helper'
 import { getBoolFromStorage, setBoolInStorage } from '../../../src/utils/storage'
 import { CAROUSEL_TOGGLE_KEY, TEXT_JUSTIFIED_KEY } from '../../../src/constants/access'
 import './style'
+import { getIsAnnotationTodoShown } from '../../endpoint/album/todos'
 
 const DONE_TODOS_HIDDEN_KEY = 'showAllAnnotations'
 
@@ -54,7 +55,15 @@ const TodoAnnotations = () => {
 
         if (selectedSongIndex) {
             const element = document.querySelector(
-                selectedAnnotationIndex ?
+                (
+                    selectedAnnotationIndex && (
+                        getIsAnnotationTodoShown(
+                            selectedSongIndex,
+                            selectedAnnotationIndex,
+                        ) ||
+                        !areDoneTodosHidden
+                    )
+                ) ?
                     `.TodoAnnotation-${selectedSongIndex}-${selectedAnnotationIndex}` :
                     `.TodoSongColumn-${selectedSongIndex}`,
             )

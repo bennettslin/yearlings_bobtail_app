@@ -33,6 +33,11 @@ export const getAnnotationTodo = (songIndex, annotationIndex) => {
     return annotationTodos[annotationIndex - 1]
 }
 
+export const getIsAnnotationTodoShown = (songIndex, annotationIndex) => {
+    const todo = getAnnotationTodo(songIndex, annotationIndex)
+    return Boolean(todo) && todo !== REST
+}
+
 const _getAnnotationTodosCountForSong = (songIndex, key) => {
     const { annotationTodos = [] } = getSong(songIndex)
     return annotationTodos.reduce((count, todo) => (
