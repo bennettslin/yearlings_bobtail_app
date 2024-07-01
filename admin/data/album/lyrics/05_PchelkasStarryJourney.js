@@ -1006,7 +1006,8 @@ export default {
                         `The only`,
                         {
                             anchor: `spies who get to feel love`,
-                            todo: REVIEW,
+                            todo: REST,
+                            problem: `I've spent too long on this already, so I'm just going to sign off on it for now. But I'm still not confidence that I've successfully explained the analogy.`,
                             card: {
                                 description: [
                                     `Since a spy's success hinges upon staying hidden, their exploits won't ever be known until they're captured— at which point they'll face death by firing squad. And in my desire to join a friendly squad, I faced a similar dilemma: Not only would opening up sabotage my previous efforts to stay unresponsive, but I would then have to explain my past behavior.`,

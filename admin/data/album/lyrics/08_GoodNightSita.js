@@ -176,7 +176,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `During my college years, I would ask older coworkers to buy me twelve-packs of cheap beer. So I always had a ready supply in my apartment, and before a date, I would down a few cans.`,
+                                    description: `During my college years, I would ask older coworkers to buy twelve-packs of cheap beer for me. So I always had a ready supply in my apartment, and before a date, I would down a few cans.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -487,7 +487,6 @@ export default {
                         `in time are seen with`,
                         {
                             anchor: `a focus grown clear`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `A few hours into a date, my buzz would wear off, causing me to realize that everything I'd been saying might now topple under scrutiny— like a`,
@@ -599,7 +598,7 @@ export default {
                             anchor: `tactic is to stall`,
                             todo: REVIEW,
                             card: {
-                                description: `My friends would advise me to wait three days before calling a woman. Yet it was always agony when she took just as long to call me back.`,
+                                description: `My friends would advise me to wait three days before calling a woman— yet it was always agony when she took just as long to call me back.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -659,7 +658,7 @@ export default {
                             anchor: `learn to shotgun`,
                             todo: REVIEW,
                             card: {
-                                description: `In time I adopted the shotgun approach to dating, which involves hitting on anyone at any moment. It works by putting the math on your side: Even if your success rate remains dismal, you're increasing the sample size, which then improves your chances of someone saying yes. And one yes to a date is all you really need.`,
+                                description: `In time I adopted the shotgun approach to dating, which involves hitting on anyone at any moment. It works by putting the math on your side: Even if your success rate remains dismal, you're increasing the sample size— which then improves your chances of someone saying yes. And one yes to a date is all you really need.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

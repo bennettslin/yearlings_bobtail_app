@@ -668,7 +668,7 @@ export default {
                                         anchor: `conferring knighthood`,
                                         wiki: `Accolade`,
                                     },
-                                    `. And so we find my drunken half, confused by the order he's been given to speak for my crimes, clumsily patting me on the shoulder with a sharp sword.`,
+                                    `. And so we find my drunken half, confused by the order he's been given to speak for my crimes, clumsily patting me on the shoulder with a sharp sword instead.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

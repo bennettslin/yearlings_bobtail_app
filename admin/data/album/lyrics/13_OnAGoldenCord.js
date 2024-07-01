@@ -30,7 +30,7 @@ export default {
     playerReferenceTime: 2298.378,
     playerStartTime: 2295.261,
     todo: REVIEW,
-    overview: `After a night out with friends, I would often shuffle on to Sita's place, slip into bed with her, and quickly doze off. But Sita was awake one night and waiting to confront me, having discovered my plans to break up with her. In tears, she returned the gold bracelet I'd given her at the start of our relationship, and then kicked me out. With nowhere to go, I wandered the streets until sunrise. And so began the first of our many breakups…`,
+    overview: `After a night out with friends, I would often shuffle on to Sita's place, slip into bed with her, and quickly doze off. But Sita was awake one night and waiting to confront me, having discovered my plans to break up with her. In tears, she returned the gold bracelet I'd given her at the start of our relationship, then kicked me out. With nowhere to go, I wandered the streets until sunrise. And so began the first of our many breakups…`,
     isDoublespeaker: true,
     lyricUnits: [
         {
@@ -1005,7 +1005,7 @@ export default {
                             properNoun: true,
                             todo: REVIEW,
                             card: {
-                                description: `Of course, I wish to plead my case— and yet, this will all be over with soon if I simply accept my role as the villain. So the sober me, called up to testify for his drunken half, stays silent.`,
+                                description: `Of course, I wish to plead my case— yet this will all be over with soon if I simply accept my role as the villain. And so the sober me, called up to testify for his drunken half, stays silent.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,

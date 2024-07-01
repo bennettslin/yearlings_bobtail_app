@@ -1031,7 +1031,6 @@ export default {
                         `Why does she play`,
                         {
                             anchor: `bright to your gloom`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `As we became friends, what I stood to gain from Sita was obvious; less so was what she gained from me, given my cynical temperament. But in time I came to see that her pleasant nature masked a deep-rooted depression, which gave me an opening to win her over with kind gestures.`,

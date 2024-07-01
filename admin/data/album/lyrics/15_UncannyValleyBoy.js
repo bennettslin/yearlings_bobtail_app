@@ -284,7 +284,7 @@ export default {
                                         anchor: `endorphined`,
                                         wiki: `Endorphins`,
                                     },
-                                    `," allows me to live in denial of having parents whose expectations I fail to meet— a virtual orphan, if you will.`,
+                                    `," allows me to live in denial of having parents whose expectations I fail to meet. Or, if you will, it makes me a virtual orphan.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -428,7 +428,7 @@ export default {
                             anchor: `Village Green Preservation Society`,
                             wiki: `The_Kinks_Are_the_Village_Green_Preservation_Society`,
                         },
-                        `as a rough guide for this album, which meant each song had to feature well-crafted musical hooks; represent a different musical style; and clock in at three minutes or so. While there's no one-to-one mapping, this song is clearly the "`,
+                        `as a rough guide for this album, which meant each song had to feature well-crafted musical hooks; represent a different musical style; and clock in at around three minutes. While there's no one-to-one mapping, this song is clearly the "`,
                         {
                             anchor: `Wicked Annabella`,
                             wiki: `Wicked_Annabella`,
@@ -472,7 +472,7 @@ export default {
                                                 wiki: `Hamartia`,
                                             },
                                         },
-                                        `is the tragic flaw that leads to a hero's downfall. And so my parents ask if I see the telltale signs that point to mine, by alluding to my former belief that I'm an astral being— or, as they put it, "a Martian."`,
+                                        `is the tragic flaw that leads to a hero's downfall. And so my parents ask if I see the telltale signs that point to mine, by alluding to my former belief that I'm an astral being— or "a Martian," as they put it.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -567,7 +567,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
+                todo: REST,
+                problem: `It seems like there's a way to phrase this that's both more clear and less convoluted. But I've already spent long enough on it as it is.`,
                 card: {
                     description: [
                         `As silly as the original lyrics for the chorus were, I liked them enough to keep them as a vocal`,
@@ -799,7 +800,8 @@ export default {
                         {
                             anchor: `Rama king`,
                             properNoun: true,
-                            todo: REVIEW,
+                            todo: REST,
+                            problem: `In the first card, the "subtle jab" phrase seems wordy. There might be some benefit to playing around with the order of phrases in that sentence to make it flow more smoothly. And in the second card, I still don't like the two "her"s in a row.`,
                             cards: [
                                 {
                                     description: `My parents might be calling me a "drama" king, in a subtle jab that everything I do is an attention-seeking act.`,
@@ -1006,7 +1008,6 @@ export default {
                         `When`,
                         {
                             anchor: `wakened from the siren`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `Not wanting anyone to crowd out my artwork, I run ahead of the group— only to pass out where no one can find me. Hours later, an ambulance siren jolts me awake.`,
@@ -1419,7 +1420,6 @@ export default {
                         lyric: [
                             {
                                 anchor: `old and subservient`,
-                                todo: REVIEW,
                                 cards: [
                                     {
                                         description: `It wasn't until college that I understood the sacrifices my parents had made for me and my siblings to lead better lives than their own. But the fact that this awareness had to come about through assigned coursework, rather than my own lived experiences, only added to my guilt.`,

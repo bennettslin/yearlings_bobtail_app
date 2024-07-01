@@ -100,8 +100,9 @@ export default {
                     lyric: [
                         {
                             anchor: `where it commenced`,
+                            todo: REVIEW,
                             card: {
-                                description: `The relationship with Catherine began like my friendship with Sasha had a decade earlier: I latched onto the first cute person to show me kindness in a new environment, and then I tried to make myself indispensable in small ways.`,
+                                description: `The relationship with Catherine began like my friendship with Sasha had a decade earlier: I latched onto the first cute person to show me kindness in a new environment, and then tried to make myself indispensable in small ways.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -762,7 +763,7 @@ export default {
                                                 isItalic: true,
                                                 lyric: `Paris vaut bien une messe`,
                                             },
-                                            `"— or, "Paris is well worth a Mass"— implying that earthly ambitions precede spiritual allegiances. Similarly, I would've converted if that could get Catherine to stay.`,
+                                            `"— or, "Paris is well worth a Mass"— implying that his earthly ambitions come before his spiritual allegiances. Similarly, I would've converted if that could get Catherine to stay.`,
                                         ],
                                         dotKeys: {
                                             [OBSERVATION]: true,
