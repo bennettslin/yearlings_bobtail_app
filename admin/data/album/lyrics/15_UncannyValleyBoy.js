@@ -368,7 +368,6 @@ export default {
                         `till they called,`,
                         {
                             anchor: `suspecting you of huffing`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `To defend against the bullies, I would react slowly to their threats— which then forced me to react slowly to anyone in general. At some point, a classmate must have believed I was huffing paint, and this is when I got called into the principal's office.`,
@@ -429,7 +428,7 @@ export default {
                             anchor: `Village Green Preservation Society`,
                             wiki: `The_Kinks_Are_the_Village_Green_Preservation_Society`,
                         },
-                        `as a rough guide for this album, which meant each song had to feature well-crafted musical hooks; represent a different musical style; and clock in at around three minutes. And while there's no one-to-one mapping, this song is clearly the "`,
+                        `as a rough guide for this album, which meant each song had to feature well-crafted musical hooks; represent a different musical style; and clock in at three minutes or so. While there's no one-to-one mapping, this song is clearly the "`,
                         {
                             anchor: `Wicked Annabella`,
                             wiki: `Wicked_Annabella`,
@@ -1039,7 +1038,6 @@ export default {
                         `, you found spelled out in`,
                         {
                             anchor: `dead ants`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -1065,7 +1063,8 @@ export default {
                         `:`,
                         {
                             anchor: `____`,
-                            todo: REVIEW,
+                            todo: REST,
+                            problem: `Maybe I'm just not used to it, given that it's just different enough from how it was before. But I don't feel 100% confident to sign off on it.`,
                             cards: [
                                 {
                                     description: `And what I've drunkenly scrawled is… Mara's name.`,
@@ -1265,7 +1264,8 @@ export default {
                         `what's left of what these`,
                         {
                             anchor: `faces you flip override`,
-                            todo: REVIEW,
+                            todo: REST,
+                            problem: `I think it's possible to give this some thought to make sure it says what I want to say in a really satisfying way, but that would take way more time than I've already spent.`,
                             card: {
                                 description: `My mother would sometimes ask what happened to the playful little boy I'd once been— which made me wonder myself. I think I learned early on that, for every situation, there's an optimal person to be— and the key is to deftly switch between those various personas. So it made no sense to keep the original personality lying around, once it no longer served any purpose.`,
                                 dotKeys: {
@@ -1422,7 +1422,7 @@ export default {
                                 todo: REVIEW,
                                 cards: [
                                     {
-                                        description: `It wasn't until college that I understood the sacrifices my parents had made for me and my siblings to lead better lives than their own. But the fact that this awareness came about through assigned coursework, rather than my own lived experiences, only added to my guilt.`,
+                                        description: `It wasn't until college that I understood the sacrifices my parents had made for me and my siblings to lead better lives than their own. But the fact that this awareness had to come about through assigned coursework, rather than my own lived experiences, only added to my guilt.`,
                                         dotKeys: {
                                             [BACKSTORY]: true,
                                         },
@@ -1607,7 +1607,6 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 cards: [
                     {
                         description: [
