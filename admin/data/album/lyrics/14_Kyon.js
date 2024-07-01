@@ -149,7 +149,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: `I wanted this song to speak from Sita's perspective, but in retrospect, my portrayal might be a bit one-dimensional. I was just self-absorbed in my guilt when I wrote it, and my main purpose was to beat myself up over what my pride had cost me.`,
                     dotKeys: {
@@ -172,7 +171,7 @@ export default {
                             anchor: `take in her breasts`,
                             todo: REVIEW,
                             card: {
-                                description: `It scared me, far more than I let on, to gamble away the warmth of Sita's love just for a chance to date some other woman. I had to wonder if this fear would then affect my hormones, because upon seeing another woman's naked body for the first time, I was always struck by a desire to be mothered more than anything else.`,
+                                description: `It scared me, far more than I let on, to gamble away the warmth of Sita's love just for a chance to date some other woman. I had to wonder, then, if this fear would somehow shift my hormones, because upon seeing another woman's naked body for the first time, I was always struck by an urge to be mothered more than anything else.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -460,7 +459,7 @@ export default {
                                             anchor: `daylight saving`,
                                             wiki: `Daylight_saving_time`,
                                         },
-                                        `: "Spring forward, fall back" reminds us to set our clocks forward each spring, and back each fall.`,
+                                        `: "Spring forward, fall back"— which reminds us to set our clocks forward each spring, and back each fall.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -501,7 +500,8 @@ export default {
                         `Bursting belly told by`,
                         {
                             anchor: `extra holes`,
-                            todo: REVIEW,
+                            todo: REST,
+                            problem: `It just seems like it could benefit from being written at a lower grade level.`,
                             card: {
                                 description: `When carved into one's belt, extra notches support a belly grown large from overfeeding; when carved on a bedpost, they tally sexual conquests.`,
                                 dotKeys: {
@@ -587,7 +587,7 @@ export default {
                             anchor: `common time`,
                             wiki: `Time_signature`,
                         },
-                        `in the song's second half— even as the chord progression remains unchanged. The two strands of tuplets are also more in sync, as one plays two notes for every three played by the other.`,
+                        `in the song's second half, even as the chord progression remains unchanged. The two strands of tuplets are also more in sync, as one plays two notes for every three played by the other.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,

@@ -33,7 +33,7 @@ export default {
     playerReferenceTime: 1751.447,
     playerStartTime: 1751.191,
     todo: REVIEW,
-    overview: `One night I went with my bassist Ana and a couple others to get high on Robitussin while exploring the steam tunnels under UCLA. I got us all to pretend we were Vikings, Mongols, and various waves of human migration throughout world history; but in hindsight, everyone else was probably just humoring me. I ended up doing so much Robitussin that summer, it took a while to regain my grip on reality.`,
+    overview: `One night I went with my bassist Ana and a couple stoners to get high on Robitussin while exploring the steam tunnels under UCLA. I got us all to pretend we were Vikings, Mongols, and various waves of human migration throughout world history; but in hindsight, everyone else was probably just humoring me. I ended up doing so much Robitussin that summer, it took a while to regain my grip on reality.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -1768,7 +1768,6 @@ export default {
                         `,`,
                         {
                             anchor: `in-som'umiak`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Meanwhile, sensing disaster afoot after a "snowy blitz," our Inuit tribe flees the icy channels "in some`,
@@ -1833,20 +1832,25 @@ export default {
                         {
                             anchor: `arrhythmetic heart`,
                             todo: REVIEW,
-                            card: {
-                                description: [
-                                    `"`,
-                                    {
-                                        anchor: `Arrhythmia`,
-                                        wiki: `Cardiac_arrhythmia`,
+                            cards: [
+                                {
+                                    description: `Coming down from my high, I notice that my heart stops every few seconds, so I count the beats per minute to see if it stabilizes over time. Unfortunately, my brain is too fried to perform even basic "arithmetic."`,
+                                    dotKeys: {
+                                        [NARRATIVE]: true,
+                                        [PUN]: true,
                                     },
-                                    `," or an irregular pulse, is a downside of taking Robitussin. As I come down from my high, my heart stops every few seconds, causing me to worry. So I try to count the beats, hoping the rate stabilizes over time— but my frazzled brain struggles with basic "arithmetic."`,
-                                ],
-                                dotKeys: {
-                                    [NARRATIVE]: true,
-                                    [PUN]: true,
                                 },
-                            },
+                                {
+                                    description: [
+                                        `"`,
+                                        {
+                                            anchor: `Arrhythmia`,
+                                            wiki: `Cardiac_arrhythmia`,
+                                        },
+                                        `," or an irregular heart rate, is one downside of taking too much Robitussin.`,
+                                    ],
+                                },
+                            ],
                         },
                         `,`,
                     ],

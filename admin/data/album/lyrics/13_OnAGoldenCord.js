@@ -30,7 +30,7 @@ export default {
     playerReferenceTime: 2298.378,
     playerStartTime: 2295.261,
     todo: REVIEW,
-    overview: `After a night out with friends, I would often shuffle on to Sita's place, slip into bed with her, and quickly doze off. But one night, Sita was awake and waiting to confront me, having discovered my plans to break up with her. In tears, she returned the gold bracelet I'd given her at the start of our relationship, and then kicked me out. With nowhere to go, I wandered the streets until sunrise. And so began the first of our many breakups…`,
+    overview: `After a night out with friends, I would often shuffle on to Sita's place, slip into bed with her, and quickly doze off. But Sita was awake one night and waiting to confront me, having discovered my plans to break up with her. In tears, she returned the gold bracelet I'd given her at the start of our relationship, and then kicked me out. With nowhere to go, I wandered the streets until sunrise. And so began the first of our many breakups…`,
     isDoublespeaker: true,
     lyricUnits: [
         {
@@ -102,7 +102,7 @@ export default {
                             anchor: `bread and pocket lint`,
                             todo: REVIEW,
                             card: {
-                                description: `In those days, the less I spent on food, the more I could spend on beer. So before leaving the cafeteria, I would swipe a few bread rolls, which were always plentiful, and stash them in the front pockets of my jacket.`,
+                                description: `In those days, I often had just enough to spend on food or beer, but not both. So before leaving the cafeteria, I would swipe a few bread rolls, which were always plentiful, and stash them in the front pockets of my jacket.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -123,7 +123,7 @@ export default {
                             anchor: `broken`,
                             todo: REVIEW,
                             card: {
-                                description: `When I walked into Sita's living room that night to find her seated on the couch, the bracelet lay in a mangled heap on her coffee table. I wondered if she'd damaged it on purpose. I later realized that its dozens of intricate links would instantly snap into place once wrapped around the wrist.`,
+                                description: `When I walked into Sita's living room that night to find her seated on the couch, the bracelet lay in a mangled heap on her coffee table. I wondered if she'd damaged it on purpose. I later realized that its dozens of intricate links would instantly snap into place once stretched out on the wrist.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -786,12 +786,12 @@ export default {
                                         anchor: `Oscar Wilde`,
                                         wiki: `Oscar_Wilde`,
                                     },
-                                    `witnessed the execution of a man convicted of murdering his wife. Sympathetic to the man's plight, Wilde wrote his poem "`,
+                                    `witnessed the execution of a man convicted of murdering his wife. Sympathetic to the man's plight, Wilde wrote "`,
                                     {
                                         anchor: `The Ballad of Reading Gaol`,
                                         wiki: `The_Ballad_of_Reading_Gaol`,
                                     },
-                                    `," whose refrain, "For each man kills the thing he loves," finds a common thread tying the man's crime to Wilde's own— and to all of humanity's.`,
+                                    `," a poem whose refrain, "For each man kills the thing he loves," finds a common thread tying the man's crime to Wilde's own— and to all of humanity's.`,
                                 ],
                             },
                         },
@@ -978,7 +978,8 @@ export default {
                         `by`,
                         {
                             anchor: `trail of crumbs`,
-                            todo: REVIEW,
+                            todo: REST,
+                            problem: `An earlier version explicitly stated that being stranded is a metaphor for the breakup itself. Is it fine to simply leave it implied?`,
                             card: {
                                 description: `But it's too late to walk back the damage done: All night I've been munching on the rolls in my pockets instead of dropping a breadcrumb trail. And now, having satisfied my hunger, I'm stranded and can't find my way back.`,
                                 dotKeys: {
@@ -1004,7 +1005,7 @@ export default {
                             properNoun: true,
                             todo: REVIEW,
                             card: {
-                                description: `Though I'd like to plead my case, this will all be over with sooner if I just accept my role as the villain. And so the sober me, called up to testify for his drunken half, stays silent.`,
+                                description: `Of course, I wish to plead my case— and yet, this will all be over with soon if I simply accept my role as the villain. So the sober me, called up to testify for his drunken half, stays silent.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -1031,8 +1032,9 @@ export default {
                         {
                             anchor: `master mind`,
                             todo: REVIEW,
+                            problem: `The point about the slave and master needs to be made, since this is the whole point of the annotation, but it all sounds fine without it, and trying to insert it somewhere just makes it all sound awkward. This is the best I can do so far, but maybe it would be good to revisit.`,
                             card: {
-                                description: `In college, my wishful thinking was that I could shunt the burden of writing term papers onto my drunken self. But then once drunk, I would resent taking orders from my sober half, and either do the work poorly or not at all— like a slave rebelling against his master. Somehow this became my go-to strategy for breaking up with Sita.`,
+                                description: `In college, I would set up conditions that would force my drunken self to write a term paper, based on the wishful thinking that it would somehow get done. But then once drunk, I would resent taking orders from my sober half, and either do the work poorly or not at all— like a slave rebelling against his master. Somehow this became my go-to strategy for breaking up with Sita.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
