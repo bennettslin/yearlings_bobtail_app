@@ -13,7 +13,7 @@ import {
     IS_UNIT_DOT,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
-import { REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Ash Wednesday',
@@ -540,22 +540,22 @@ export default {
                         },
                         {
                             anchor: `unknown to roam`,
-                            todo: REVISE,
-                            problem: `Make comparison with me being a homebody.`,
+                            todo: REVIEW,
+                            problem: `Maybe in the future, I'll enhance the analogy by pointing out that I'm a homebody.`,
                             cards: [
                                 {
-                                    description: `If Catherine is a Traveller in spirit, then perhaps she left me to rejoin her wandering community.`,
-                                    dotKeys: {
-                                        [OBSERVATION]: true,
-                                    },
-                                },
-                                {
                                     description: [
-                                        `"Raincoat" is slang for a condom, the benefit of which is unknown to "Rome," given the Catholic Church's stance against birth control. Since Catherine had vowed not to engage in premarital sex, we never needed to use one.`,
+                                        `"Raincoat" is slang for a condom, of which the benefit is unknown to "Rome," given the Catholic Church's stance against birth control. Since Catherine had vowed not to engage in premarital sex, we never needed to use one.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [PUN]: true,
+                                    },
+                                },
+                                {
+                                    description: `If Catherine is a Traveller in spirit, then perhaps she's leaving me to rejoin her wandering community.`,
+                                    dotKeys: {
+                                        [NARRATIVE]: true,
                                     },
                                 },
                             ],
@@ -763,7 +763,7 @@ export default {
                                                 isItalic: true,
                                                 lyric: `Paris vaut bien une messe`,
                                             },
-                                            `"— or, "Paris is well worth a Mass"— implying that his earthly ambitions come before his spiritual allegiances. Similarly, I would've converted if that could get Catherine to stay.`,
+                                            `"— or, "Paris is well worth a Mass"— implying that his earthly ambitions came before his spiritual allegiances. Similarly, I would've converted if that could get Catherine to stay.`,
                                         ],
                                         dotKeys: {
                                             [OBSERVATION]: true,

@@ -884,11 +884,10 @@ export default {
                         `of this`,
                         {
                             anchor: `frayed cord detached`,
-                            todo: REVISE,
-                            problem: `Last sentence is a little weird.`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `In antiquity, legend held that whosoever could unravel the tightly entangled "`,
+                                    `In antiquity, legend held that whoever could unravel the "`,
                                     {
                                         anchor: `Gordian Knot`,
                                         wiki: `Gordian_Knot`,
@@ -898,7 +897,7 @@ export default {
                                         anchor: `Alexander the Great`,
                                         wiki: `Alexander_the_Great`,
                                     },
-                                    `simply chopped it in half with his sword, after which he then went on to fulfill the prophecy. And in my own bid for greatness, I applied the same brute force to sever the cord binding me to Sita.`,
+                                    `simply chopped it in half with his sword, after which he went on to fulfill the prophecy. And so, in my own bid for greatness, I applied the same brute force to sever the cord that tied me to Sita.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,

@@ -680,7 +680,7 @@ export default {
                             todo: REVISE,
                             problem: `Make it more about keeping it for another date, in case it didn't work out with this one.`,
                             card: {
-                                description: `Any time I said something witty that got a good response, I'd be sure to say it again on a future date with someone else, like an actor reprising a role. This then eased the sting of rejection, since the less I had to prepare, the less I felt was at stake.`,
+                                description: `Any time I said something witty that got a good response, I'd be sure to say it again on a future date with someone else— like an actor reprising a role. This then eased the sting of getting rejected, since the less I had to prepare, the less I felt was at stake.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

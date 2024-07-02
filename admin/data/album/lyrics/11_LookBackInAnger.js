@@ -31,7 +31,7 @@ export default {
     mixSamplingFrequency: 41.64,
     todo: REVISE,
     problem: `Revisit. I just don't like it.`,
-    overview: `With the Yearlings becoming a fixture in the local scene, I started to command more attention than I'd ever known, particularly from women. Yet my misery didn't fade; it just simmered into a quiet resentment. I also began to regret getting into a relationship with Sita, which now felt like a decision I'd been coerced to make, under deprived conditions from which I was now free.`,
+    overview: `With the Yearlings becoming a fixture in the local scene, I began to attract more attention than I'd ever known, particularly from women. And yet, my misery didn't fade; it just simmered into a quiet resentment. I also began to regret my relationship with Sita, which now felt like a decision I'd been coerced to make, under deprived conditions from which I was now free.`,
     lyricUnits: [
         {
             unitMap: {},
