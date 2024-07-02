@@ -895,6 +895,7 @@ export default {
                         {
                             anchor: `Sensegreat deva's day shone`,
                             properNoun: true,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Moreover, in "Sanskrit," the word for a Vedic deity is "`,
@@ -913,7 +914,7 @@ export default {
                                             wiki: `Daeva`,
                                         },
                                     },
-                                    `is a demon. Thus, whether one "foresees a hero" or "senses great devastation" depends on which side of the schism one ended up on.`,
+                                    `is a demon. So whether one "foresees a hero" or "senses great devastation" depends on which side of the schism one ended up on.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
