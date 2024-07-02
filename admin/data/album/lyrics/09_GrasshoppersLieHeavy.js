@@ -29,7 +29,7 @@ export default {
     mixStartTime: `0:01:29.52`,
     playerStartTime: 1478.233,
     todo: REVIEW,
-    overview: `I worked my way through college washing dishes in a cafeteria on campus, which is how I met Sita. After I scared her off, we didn't speak for months; but then she reached out again, and we became friends. As I got off to a rocky start with playing live shows, and as I struggled with dating other women, Sita lent her moral support— though a part of me still hoped for something more. And then… she started liking me back.`,
+    overview: `I worked my way through college washing dishes in a cafeteria on campus, which is how I met Sita. After I scared her off, we didn't speak for months; but then she reached out again, and we became friends. As I got off to a rocky start with playing live shows, and as I struggled with dating other women, Sita lent her moral support— though a part of me still hoped for something more. Then somehow… she began to like me back.`,
     isDoublespeaker: true,
     lyricUnits: [
         {

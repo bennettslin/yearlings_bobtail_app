@@ -33,7 +33,7 @@ export default {
     playerReferenceTime: 1751.447,
     playerStartTime: 1751.191,
     todo: REVIEW,
-    overview: `One night I went with my bassist Ana and a couple stoners to get high on Robitussin while exploring the steam tunnels under UCLA. I got us all to pretend we were Vikings, Mongols, and various waves of human migration throughout world history; but in hindsight, everyone else was probably just humoring me. I ended up doing so much Robitussin that summer, it took a while to regain my grip on reality.`,
+    overview: `One night I went with my bassist Ana and some stoner friends to get high on Robitussin while exploring the steam tunnels under UCLA. I got us all to pretend that we were Vikings, Mongols, and various waves of human migration throughout world history; in hindsight, they were probably just humoring me. I ended up doing so much Robitussin that summer, it took a while to regain my grip on reality.`,
     lyricUnits: [
         {
             unitMap: {},

@@ -509,7 +509,8 @@ export default {
                         },
                         {
                             anchor: `strikes himself from his cloud`,
-                            todo: REVIEW,
+                            todo: REST,
+                            problem: `I'm still not confident that the second sentence flows smoothly from the first, but I've spent too long on it.`,
                             card: {
                                 description: [
                                     `The`,

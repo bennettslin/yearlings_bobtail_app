@@ -444,7 +444,6 @@ export default {
                         `to`,
                         {
                             anchor: `spring forward on a fallback`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `Then once my life as a philanderer proved unfulfilling, surely I'd return to her— my fallback option— with relief rather than reluctance.`,

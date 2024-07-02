@@ -860,21 +860,20 @@ export default {
                         `twin friars`,
                         {
                             anchor: `cast here in pollens`,
-                            todo: REVISE,
-                            problem: `Last sentence feels awkward?`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `"`,
+                                    `In Greek mythology, "`,
                                     {
                                         anchor: `Castor and Pollux`,
                                         wiki: `Castor_and_Pollux`,
                                     },
-                                    `" were twin half-brothers in Greek mythology. While Pollux was the son of Zeus, however, Castor was fathered by a mortal. So Zeus transformed them both into the constellation`,
+                                    `" were twins with separate fathers: While Pollux was the son of Zeus, Castor was fathered by a mortal. So Zeus transformed them both into the constellation`,
                                     {
                                         anchor: `Gemini`,
                                         wiki: `Gemini_(constellation)`,
                                     },
-                                    `, allowing Pollux to share his immortality with his twin. Similarly, I felt as if my brother were sharing his autism with me, along with its spiritual answers.`,
+                                    `, allowing Castor to share in his brother's immortality. Similarly, I felt as if my brother were sharing his autism with me, along with its spiritual answers.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
