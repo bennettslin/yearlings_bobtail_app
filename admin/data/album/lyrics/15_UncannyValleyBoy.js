@@ -284,7 +284,7 @@ export default {
                                         anchor: `endorphined`,
                                         wiki: `Endorphins`,
                                     },
-                                    `," allows me to live in denial of having parents whose expectations I fail to meet. Or, if you will, it makes me a virtual orphan.`,
+                                    `," makes me a virtual orphan. That is to say, it allows me to live in denial of having parents whose expectations I fail to meet.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -428,7 +428,7 @@ export default {
                             anchor: `Village Green Preservation Society`,
                             wiki: `The_Kinks_Are_the_Village_Green_Preservation_Society`,
                         },
-                        `as a rough guide for this album, which meant each song had to feature well-crafted musical hooks; represent a different musical style; and clock in at around three minutes. While there's no one-to-one mapping, this song is clearly the "`,
+                        `as a rough guide for this album, which meant each song had to feature well-crafted musical hooks; represent a different musical style; and clock in at around three minutes. There's no one-to-one mapping, but this song is clearly the "`,
                         {
                             anchor: `Wicked Annabella`,
                             wiki: `Wicked_Annabella`,
@@ -472,7 +472,7 @@ export default {
                                                 wiki: `Hamartia`,
                                             },
                                         },
-                                        `is the tragic flaw that leads to a hero's downfall. And so my parents ask if I see the telltale signs that point to mine, by alluding to my former belief that I'm an astral being— or "a Martian," as they put it.`,
+                                        `is the tragic flaw that leads to a hero's downfall. And so my parents ask if I see the telltale signs that point to mine, while alluding to my past belief that I'm an astral being— or "a Martian," as they put it.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -889,7 +889,7 @@ export default {
                             anchor: `fail your Sita`,
                             todo: REVIEW,
                             card: {
-                                description: `Modern audiences may find it disgraceful that Rama's first act upon reuniting with Sita was to demand proof of her purity. And when I look back on my own relationship, I feel the same way about my need to be the more sexually experienced partner. It baffles me why I couldn't just be grateful for whatever circumstances had to happen before Sita finally chose me.`,
+                                description: `Modern audiences may find it disgraceful that Rama's first act upon reuniting with Sita was to demand proof of her purity. And when I look back on my own relationship, I feel the same way about my need to be the more sexually experienced partner. It baffles me why I couldn't just be grateful for whatever had to happen before Sita finally chose me.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },

@@ -666,7 +666,7 @@ export default {
                                         anchor: `phantom limb`,
                                         wiki: `Phantom_limb`,
                                     },
-                                    `is the sensation that a missing limb is still responsive. And after spending those last weeks of summer in giddy hope, an amputation is what it feels like to face the coming weekend alone.`,
+                                    `is the sensation that a missing limb is still responsive. And having spent those last weeks of summer in giddy hope, an amputation is what it feels like now to face the coming weekend alone.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -812,7 +812,6 @@ export default {
                         `She`,
                         {
                             anchor: `locks your arm`,
-                            todo: REVIEW,
                             card: {
                                 description: `Seeing Sita shiver from the cold, I invite her to warm up inside my apartment, whereupon she gladly tucks her hand under my arm. Of course, this doesn't mean what I want it to mean… And so I feel like an escaped convict who's just been recaptured and put in handcuffs.`,
                                 dotKeys: {

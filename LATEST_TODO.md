@@ -1,7 +1,8 @@
 # Latest todo
 * Revise five annotations
-* Review fifteen annotations (Uncanny Valley and Golden Cord)
+* Review ten annotations (Uncanny Valley and Golden Cord)
 * Redo one annotation
+* Write to Vanessa 
 * Logic for order of annotation cards?
 
 # BYC

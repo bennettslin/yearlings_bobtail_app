@@ -655,7 +655,6 @@ export default {
                     lyricRight: [
                         {
                             anchor: `twitching sword`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Dubbing refers to the`,

@@ -264,7 +264,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: REVIEW,
                 card: {
-                    description: `I eventually abandoned my plan to pack this entire song with M words after deciding that it wouldn't sound good. I'd already written this stanza by that point, however, and since it said everything I wanted to say, I kept it.`,
+                    description: `I eventually abandoned my plan to pack this entire song with M words after deciding it just wouldn't sound good. But I'd already written this stanza by that point, and since it said everything I wanted to say, I kept it.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
@@ -687,7 +687,6 @@ export default {
                         `is choked down my`,
                         {
                             anchor: `no-hope chest`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [

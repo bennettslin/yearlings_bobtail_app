@@ -831,7 +831,7 @@ export default {
                                 todo: REVIEW,
                                 cards: [
                                     {
-                                        description: `With ignorance being as old as time itself, I'm comforted to know we've always corrected our past mistakes; at the same time, it's dispiriting to be reminded that those to come have yet to make theirs. The universe never learns, and I'm partly to blame… A similar thought occurred to me as a child, when I wondered if I was the reason my brother never got better. It made me realize that all I could do was to love him, and then do better for him.`,
+                                        description: `With ignorance being as old as time itself, I'm comforted to know that we've always corrected our past mistakes; at the same time, it's dispiriting to be reminded that those to come have yet to make theirs. The universe never learns, and I'm partly to blame… A similar thought occurred to me as a child, when I wondered if I was the reason my brother never got better. It made me realize that all I could do was to love him, and then do better for him.`,
                                         dotKeys: {
                                             [NARRATIVE]: true,
                                             [OBSERVATION]: true,

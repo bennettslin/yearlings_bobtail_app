@@ -328,7 +328,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `Throughout our budding friendship, Sita had neglected to mention her sexual intimacy with past partners. When I found out, she tried to console me by pointing out that it was always shy of intercourse; on top of that, she never went all the way with them`,
+                                    `Throughout our budding friendship, Sita had neglected to mention her sexual intimacy with past partners. When I found out, she tried to console me by pointing out that it was always shy of intercourse; and furthermore, she never went all the way with them`,
                                     {
                                         isItalic: true,
                                         lyric: `precisely`,
@@ -480,7 +480,6 @@ export default {
                         `As`,
                         {
                             anchor: `claws you built from scratches`,
-                            todo: REVIEW,
                             card: {
                                 description: `In the same way that cats scratch to sharpen their claws, I needed to stay sharp to keep from getting scratched and clawed by the bullies.`,
                                 dotKeys: {

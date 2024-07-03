@@ -37,7 +37,8 @@ export default {
     mixStartTime: `0:01:27.02`,
     playerReferenceTime: 756.159,
     playerStartTime: 755.661,
-    todo: REVIEW,
+    todo: REVISE,
+    problem: `This isn't good enough.`,
     overview: `As my years of getting bullied grew unbearable, a strange letter arrived with promises of spiritual answers. All it asked for was a small payment— which I quickly mailed off. It was then revealed to me that I belonged to a race of astral beings, and my mission was to shut myself off from the world. So I adopted an unresponsive manner like my brother, leading me to feel a psychic bond with him. But as my sanity chipped away, I came to realize that I was in a mail-order cult…`,
     lyricUnits: [
         {
@@ -860,7 +861,6 @@ export default {
                         `twin friars`,
                         {
                             anchor: `cast here in pollens`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In Greek mythology, "`,

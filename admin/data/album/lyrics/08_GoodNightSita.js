@@ -183,7 +183,12 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `Several idioms in the English language trace their origin to England's trade rivalries with the Dutch in the 17th century. For example,`,
+                                        `Several idioms in the English language trace their origin to the 17th-century`,
+                                        {
+                                            anchor: `Anglo-Dutch Wars`,
+                                            wiki: `Anglo-Dutch_Wars`,
+                                        },
+                                        `. For example,`,
                                         {
                                             anchor: `Dutch courage`,
                                             wiki: `Dutch_courage`,
@@ -596,7 +601,6 @@ export default {
                         `for if the`,
                         {
                             anchor: `tactic is to stall`,
-                            todo: REVIEW,
                             card: {
                                 description: `My friends would advise me to wait three days before calling a woman— yet it was always agony when she took just as long to call me back.`,
                                 dotKeys: {
@@ -656,9 +660,8 @@ export default {
                         `then wise up and`,
                         {
                             anchor: `learn to shotgun`,
-                            todo: REVIEW,
                             card: {
-                                description: `In time I adopted the shotgun approach to dating, which involves hitting on anyone at any moment. It works by putting the math on your side: Even if your success rate remains dismal, you're increasing the sample size— which then improves your chances of someone saying yes. And one yes to a date is all you really need.`,
+                                description: `In time I adopted the shotgun approach to dating, which involves hitting on anyone at any moment. It works by putting the math on your side: Even if your success rate remains dismal, you're increasing the sample size— which now improves your chances of someone saying yes. And one yes to a date is all you really need.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

@@ -33,7 +33,7 @@ export default {
     playerReferenceTime: 1751.447,
     playerStartTime: 1751.191,
     todo: REVIEW,
-    overview: `One night I went with my bassist Ana and some stoner friends to get high on Robitussin while exploring the steam tunnels under UCLA. I got us all to pretend that we were Vikings, Mongols, and various waves of human migration throughout world history; in hindsight, they were probably just humoring me. I ended up doing so much Robitussin that summer, it took a while to regain my grip on reality.`,
+    overview: `One night I went with my bassist Ana and some stoner friends to get high on Robitussin while exploring the steam tunnels under UCLA. I got them to pretend that we were all Vikings, Mongols, and various waves of human migration throughout world history; in hindsight, they were probably just humoring me. I ended up doing so much Robitussin that summer, it took a while to regain my grip on reality.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -895,7 +895,6 @@ export default {
                         {
                             anchor: `Sensegreat deva's day shone`,
                             properNoun: true,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Moreover, in "Sanskrit," the word for a Vedic deity is "`,
@@ -1835,7 +1834,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Coming down from my high, I notice that my heart stops every few seconds, so I count the beats per minute to see if it stabilizes over time. Unfortunately, my brain is too fried to perform even basic "arithmetic."`,
+                                    description: `Coming down from my high, I notice that my heart stops every few seconds, and so I count the beats per minute to see if it stabilizes over time. Unfortunately, my brain is too fried to perform even basic "arithmetic."`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true,
