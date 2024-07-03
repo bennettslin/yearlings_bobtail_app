@@ -36,7 +36,7 @@ export default {
     playerStartTime: 3091.413,
     todo: REVISE,
     problem: `Saying most devastating of all seems out of place. The others aren't devastating at all.`,
-    overview: `Having committed to writing and recording all the songs on my next album, I'd been burning bridges with my bandmates for some time. Since we'd stopped playing shows as a result, I had no new opportunities to meet women after Miriam left me. Most devastating of all, Sita had fallen in love with someone else; I wasn't to win her back, ever again. All I had now was myself, and I really didn't like myself much. I desperately wanted to be a good person again, but I had no idea how.`,
+    overview: `Having committed to writing and recording all the songs on my next album, I'd been burning bridges with my bandmates for some time. Since we'd stopped playing shows as a result, I had no new opportunities to meet women after Miriam left me. Most devastating of all, Sita had fallen in love with someone else; I wasn't to win her back, ever again. All I had now was myself— and I really didn't like myself very much. I desperately wanted to be a good person again, but I had no idea how.`,
     lyricUnits: [
         {
             unitMap: {},

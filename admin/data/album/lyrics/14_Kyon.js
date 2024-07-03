@@ -32,7 +32,7 @@ export default {
     playerStartTime: 2496.296,
     todo: REVISE,
     problem: `Revert to making original point.`,
-    overview: `It shames me to say so, but even then I could see that my behavior was slowly degenerating into cruelty. What puzzled me was how this had happened. In hindsight, it's because I would act up in small ways, hoping for an easy breakup— but Sita was just as determined to work it out, and she'd endure. So then I'd behave even more obnoxiously the next time… and on and on. In time I came to see how thoroughly her sense of worth was tied to our relationship. I was fighting for me. She was fighting for us.`,
+    overview: `It shames me to say so, but even then I could see that my behavior was slowly degenerating into cruelty. What puzzled me was how this had happened. In hindsight, it's because I would act up in small ways, hoping for an easy breakup— but Sita was just as determined to work it out, and she'd endure. So then I'd behave even more obnoxiously the next time… and on and on. In time I came to see how thoroughly her sense of worth was tied to our relationship. I was fighting for me; she was fighting for us.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -75,7 +75,7 @@ export default {
                 todo: REVISE,
                 problem: `Probably as she waits is better phrasing.`,
                 card: {
-                    description: `Having settled into an unhealthy power dynamic early on, Sita and I failed to grow as individuals. But I can see now that she was waiting for me to grow up— because as long as we were together, she couldn't do it on her own. And so the humming heard here is the sound of her waiting in quiet resignation.`,
+                    description: `Having settled into an unhealthy power dynamic early on, Sita and I failed to grow as individuals. But the fault was entirely mine; as long as we were together, she couldn't do it on her own. And so the humming heard here is the sound of her as she waits for me in quiet resignation.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGCRAFT]: true,
