@@ -17,7 +17,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Constellations!',
@@ -1199,16 +1199,15 @@ export default {
                         {
                             anchor: `Siburial plains`,
                             properNoun: true,
-                            todo: REVISE,
-                            problem: `Don't need to repeat what's in the next annotation.`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `The Americas were first settled by northeast Asian populations who gladly "forfeited the tundra's`,
+                                    `The Americas were first settled by north Asian populations who gladly "forfeited the tundra's`,
                                     {
                                         anchor: `Siberian`,
                                         wiki: `Siberia`,
                                     },
-                                    `plains," which would otherwise have served as their "burial" grounds.`,
+                                    `plains," which otherwise would have served as their "burial" grounds.`,
                                 ],
                                 dotKeys: {
                                     [PUN]: true,
@@ -1223,6 +1222,8 @@ export default {
                     lyric: [
                         {
                             anchor: `Upridge o' lawn`,
+                            todo: REVIEW,
+                            problem: `Just to see it for now.`,
                             cards: [
                                 {
                                     description: `We park the car and head up "a ridge of lawn."`,
@@ -1238,7 +1239,7 @@ export default {
                                             anchor: `Beringia theory`,
                                             wiki: `Beringia`,
                                         },
-                                        `, the Americas were settled by populations from north Asia who crossed "a bridge of land" connecting the two continents. When the glaciers later melted, the sea level rose, effectively causing the bridge to sink.`,
+                                        `, these first settlers were able to cross "a bridge of land" that connected the two continents. When the glaciers later melted, the sea level rose, effectively causing the bridge to sink.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -1834,7 +1835,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Coming down from my high, I notice that my heart stops every few seconds, and so I count the beats per minute to see if it stabilizes over time. Unfortunately, my brain is too fried to perform even basic "arithmetic."`,
+                                    description: `As I come down from my high, I notice that my heart stops every few seconds. Hoping that it stabilizes over time, I try to count beats per minute, but my brain is too fried to do even basic "arithmetic."`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true,
