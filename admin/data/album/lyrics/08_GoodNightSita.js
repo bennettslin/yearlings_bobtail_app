@@ -371,12 +371,11 @@ export default {
                         `till then`,
                         {
                             anchor: `crack up another doll`,
-                            todo: REVISE,
-                            problem: `Switch order? Mention Catherine's fondness for them?`,
+                            todo: REVIEW,
                             card: {
-                                description: `A friend once told me that if I can keep a woman cracking up at my jokes, then I'll always be good for another date. My humor at the time was all about clever puns, though, thanks to Catherine's fondness for them— and puns tend to draw groans from everyone else.`,
+                                description: `A friend once told me that if I can keep a woman cracking up at my jokes, then I'll always be good for another date. My sense of humor at the time was based on Catherine's fondness for bad puns, however, so this might not have been the best advice for me.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true,
+                                    [OBSERVATION]: true,
                                     [PUN]: true,
                                 },
                             },

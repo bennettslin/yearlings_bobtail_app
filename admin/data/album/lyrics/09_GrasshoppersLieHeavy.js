@@ -17,7 +17,7 @@ import {
     SOLO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Grasshoppers Lie Heavy',
@@ -29,7 +29,7 @@ export default {
     mixStartTime: `0:01:29.52`,
     playerStartTime: 1478.233,
     todo: REVIEW,
-    overview: `I worked my way through college washing dishes in a cafeteria on campus, which is how I met Sita. After I scared her off, we didn't speak for months; but then she reached out again, and we became friends. As I got off to a rocky start with playing live shows, and as I struggled with dating other women, Sita lent her moral support— though a part of me still hoped for something more. Then somehow… she began to like me back.`,
+    overview: `I worked my way through college washing dishes in a cafeteria on campus, which is how I met Sita. After I scared her off, we didn't speak for months; but then she reached out again, and we became friends. As I got off to a rocky start with playing live shows, and as I struggled with dating other women, Sita lent her moral support— though a part of me still hoped for something more. A year later… she began to like me back.`,
     isDoublespeaker: true,
     lyricUnits: [
         {
@@ -838,10 +838,9 @@ export default {
                         `,`,
                         {
                             anchor: `returned to your guard`,
-                            todo: REVISE,
-                            problem: `Too many likes in a row?`,
+                            todo: REVIEW,
                             card: {
-                                description: `And just like that, I'm once again on guard, much like I was on our first few dates. Like an inmate conversing with a jail guard, I find myself second-guessing everything I say.`,
+                                description: `And just like that, I'm once again on guard— as I was on our first few dates. Like an inmate conversing with a jail guard, I find myself second-guessing everything I say.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,

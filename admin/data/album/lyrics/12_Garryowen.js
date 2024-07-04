@@ -186,10 +186,9 @@ export default {
                         `Well`,
                         {
                             anchor: `you're not me`,
-                            todo: REVISE,
-                            problem: `Do I need adjectives?`,
+                            todo: REVIEW,
                             card: {
-                                description: `An inside joke among my friends was to address me as Garry when I was drunk, since my uneven rambling and oafish stunts made me an altogether different person.`,
+                                description: `An inside joke among my friends was to address me as Garry when I was drunk, since my energetic rambling and oafish stunts made me an altogether different person.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

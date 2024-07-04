@@ -44,7 +44,7 @@ const _getAnnotationTodosCountForSong = (songIndex, key) => {
         count + (
             key ?
                 todo === key :
-                Boolean(todo)
+                Boolean(todo) && todo !== REST
         )
     ), 0)
 }

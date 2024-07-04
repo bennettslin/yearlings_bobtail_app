@@ -757,8 +757,7 @@ export default {
                     lyric: [
                         {
                             anchor: `indentures dumbed`,
-                            todo: REVISE,
-                            problem: `I don't like was to remain. Better way to phrase last sentence as well?`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Chimney sweeps were typically apprenticed as`,
@@ -766,7 +765,7 @@ export default {
                                         anchor: `indentured servants`,
                                         wiki: `Indentured_servant`,
                                     },
-                                    `at a young age. But in my case, I would remain in servitude to my five-year plans until I was an old man. By then, I'd be "in dentures" and thus unable to speak for myself.`,
+                                    `at a young age. But in my case, I would remain in servitude to my five-year plans until I was an old man. By then, I'd be "in dentures"— and thus unable to speak for myself.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
