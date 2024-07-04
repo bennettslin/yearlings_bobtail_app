@@ -181,9 +181,7 @@ export default {
                             anchor: `from our chest`,
                             todo: REVIEW,
                             card: {
-                                description: [
-                                    `In the Book of Genesis, God took one of Adam's ribs to give life to Eve. But my own promise to give of myself proved to be a false rib, since Sita could never truly be alive with me, even as she felt unworthy to begin life anew with someone else.`,
-                                ],
+                                description: `In the Book of Genesis, God took one of Adam's ribs to give life to Eve. But my own promise to give of myself proved to be a false rib, since Sita could never truly be alive with me, even as she felt unworthy to begin life anew with someone else.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [PUN]: true,
@@ -419,7 +417,7 @@ export default {
                                             anchor: `metal cages`,
                                             wiki: `Gestation_crate`,
                                         },
-                                        `too small for them to move around. Stressed by their living conditions, they engage in self-destructive behavior like chewing on the cage bars. The sole purpose of their suffering is to produce piglets for slaughter; then once they grow weak, they too are slaughtered.`,
+                                        `too cramped for them to even turn around. Stressed by their living conditions, they engage in self-destructive behavior like chewing on the cage bars. The sole purpose of their suffering is to produce piglets for slaughter; then once they grow weak, they too are slaughtered.`,
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
@@ -660,7 +658,7 @@ export default {
                             anchor: `leads have left`,
                             todo: REVIEW,
                             card: {
-                                description: `For years, my habit was to stay with Sita right up until I had another option to pursue. Each time, Sita would languish for a few months before finding the strength to contact me; then, upon hearing that things hadn't worked out with the other woman, she would persuade me to come back. But now our situations were reversed: I had no more options coming down the pike, while Sita had fallen in love with someone else.`,
+                                description: `For years, my habit was to stay with Sita right up until I had another option to pursue. And each time, Sita would languish for a few months before finding the strength to contact me; then, upon hearing that things hadn't worked out with the other woman, she would persuade me to come back. But now our situations were reversed: I had no more options coming down the pike, while Sita had fallen in love with someone else.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

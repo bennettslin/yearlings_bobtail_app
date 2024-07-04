@@ -35,7 +35,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: REVIEW,
                 card: {
-                    description: `This is the other song on the album that was originally performed by the Yearlings. I wrote it to please Sita after she complained that I didn't have any romantic songs about her. In truth, it's more a wistful remembrance of our time together, given my certainty that we'd break up. I kept this part of its meaning a secret, of course— but as with "M," I probably wasn't fooling anyone.`,
+                    description: `This is the other song on the album that was performed by the Yearlings. I wrote it to please Sita after she kept complaining that I didn't have any romantic songs about her— though it's more a wistful remembrance of our time together, given my certainty that we'd eventually break up. Of course, I kept this part of its meaning a secret— but as with "M," I probably wasn't fooling anyone.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGCRAFT]: true,
@@ -398,8 +398,7 @@ export default {
                         `My hundred thousandth dream, on the`,
                         {
                             anchor: `cliffs of El Cerrito`,
-                            todo: REVISE,
-                            problem: `Find less awkward way to say when Sita and I were together.`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The city of`,
@@ -407,7 +406,7 @@ export default {
                                         anchor: `El Cerrito`,
                                         wiki: `El_Cerrito,_California`,
                                     },
-                                    `has a sprawling hillside with hiking trails, secluded groves, and a view of the San Francisco Bay. Back when Sita and I were together, it was our prime choice for a weekend outing.`,
+                                    `has a sprawling hillside with hiking trails, secluded groves, and a view of the San Francisco Bay. In happier times, Sita and I found it a prime location for a weekend outing.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
