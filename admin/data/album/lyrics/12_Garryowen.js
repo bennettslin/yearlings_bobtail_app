@@ -96,7 +96,7 @@ export default {
                             todo: REVISE,
                             problem: `I just don't like this as it is. It's too complicated. I grew distant, she groveled. That's really it.`,
                             card: {
-                                description: `Anytime I began to grow distant, Sita would reach out by groveling. I would then rush back to comfort her, stung by my conscience. But as my patience wore thin, I would lace this comfort with passive-aggressive swipes— whereupon she would grovel even further. It became all we knew of how to speak for ourselves.`,
+                                description: `Any time I began to grow distant, Sita would reach out by groveling. I would then rush back to comfort her, stung by my conscience. But as my patience wore thin, I would lace this comfort with passive-aggressive swipes— whereupon she would grovel even further. It became all we knew of how to speak for ourselves.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

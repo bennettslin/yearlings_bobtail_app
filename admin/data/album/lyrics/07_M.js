@@ -264,7 +264,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: REVIEW,
                 card: {
-                    description: `I eventually abandoned my plan to pack this entire song with M words after deciding that it wouldn't sound good. But I'd already written this stanza by that point, and since it said everything I wanted to say, I kept it.`,
+                    description: `I eventually abandoned my plan to pack this entire song with M words after deciding that it just wouldn't sound good. But I'd already written this stanza by that point, and since it said everything I wanted to say, I kept it.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
@@ -656,7 +656,7 @@ export default {
                             anchor: `solely for a pet`,
                             todo: REVIEW,
                             card: {
-                                description: `After Mara started going out with Jacob, she continued to interact with me in the same flirtatious manner, which made me realize that I'd misread her intentions all along. The ways of a social scene were just so new to me… And yet, I finally belonged to one— so I couldn't help but smile at the thought.`,
+                                description: `After Mara started going out with Jacob, she continued to interact with me in the same flirtatious manner, making me realize that I'd misread her intentions all along. The ways of a social scene were just so new to me— and yet, I finally belonged to one. So I couldn't help but smile at the thought.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

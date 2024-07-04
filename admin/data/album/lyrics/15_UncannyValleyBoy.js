@@ -428,7 +428,7 @@ export default {
                             anchor: `Village Green Preservation Society`,
                             wiki: `The_Kinks_Are_the_Village_Green_Preservation_Society`,
                         },
-                        `as a rough guide for this album, which meant each song had to feature well-crafted musical hooks; represent a different musical style; and clock in at around three minutes. There's no one-to-one mapping, but this song is clearly the "`,
+                        `as a rough guide for this album, which meant each song had to feature well-crafted musical hooks; represent a different musical style; and clock in at around three minutes. While there's no one-to-one mapping, this song is clearly the "`,
                         {
                             anchor: `Wicked Annabella`,
                             wiki: `Wicked_Annabella`,
@@ -472,11 +472,16 @@ export default {
                                                 wiki: `Hamartia`,
                                             },
                                         },
-                                        `is the tragic flaw that leads to a hero's downfall. And so my parents ask if I see the telltale signs that point to mine, while alluding to my past belief that I'm an astral being— or "a Martian," as they put it.`,
+                                        `is the tragic flaw that leads to a hero's downfall. And so my parents ask if I see the telltale signs that point to mine.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
-                                        [OBSERVATION]: true,
+                                    },
+                                },
+                                {
+                                    description: `My parents might also be alluding to my former belief that I'm an astral being— or, as they put it, "a Martian."`,
+                                    dotKeys: {
+                                        [PUN]: true,
                                     },
                                 },
                                 {

@@ -1199,7 +1199,6 @@ export default {
                         {
                             anchor: `Siburial plains`,
                             properNoun: true,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The Americas were first settled by north Asian populations who gladly "forfeited the tundra's`,
@@ -1222,8 +1221,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Upridge o' lawn`,
-                            todo: REVIEW,
-                            problem: `Just to see it for now.`,
                             cards: [
                                 {
                                     description: `We park the car and head up "a ridge of lawn."`,
@@ -1835,7 +1832,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `As I come down from my high, I notice that my heart stops every few seconds. Hoping that it stabilizes over time, I try to count beats per minute, but my brain is too fried to do even basic "arithmetic."`,
+                                    description: `As I come down from my high, my heart seems to stop every few seconds. Hoping that it stabilizes over time, I try to count beats per minute, but my brain is too fried to do even basic "arithmetic."`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true,

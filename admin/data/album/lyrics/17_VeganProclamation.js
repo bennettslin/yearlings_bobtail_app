@@ -182,7 +182,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `In the Book of Genesis, God took one of Adam's ribs to give life to Eve. My own promise to give of myself to Sita, however, proved to be a false rib. After all, she could never truly be alive with me, even as she felt unworthy to begin life anew with someone else.`,
+                                    `In the Book of Genesis, God took one of Adam's ribs to give life to Eve. But my own promise to give of myself proved to be a false rib, since Sita could never truly be alive with me, even as she felt unworthy to begin life anew with someone else.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -660,7 +660,7 @@ export default {
                             anchor: `leads have left`,
                             todo: REVIEW,
                             card: {
-                                description: `For years, my habit was to stay with Sita right up until I had another option to pursue. And each time, Sita would languish for a few months before finding the strength to contact me; then, upon hearing that things hadn't worked out with the other woman, she would persuade me to come back. But now our situations were reversed: I had no more options coming down the pike, while Sita had fallen in love with someone else.`,
+                                description: `For years, my habit was to stay with Sita right up until I had another option to pursue. Each time, Sita would languish for a few months before finding the strength to contact me; then, upon hearing that things hadn't worked out with the other woman, she would persuade me to come back. But now our situations were reversed: I had no more options coming down the pike, while Sita had fallen in love with someone else.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -828,7 +828,8 @@ export default {
                         [
                             {
                                 anchor: `gurgling, curls up`,
-                                todo: REVIEW,
+                                todo: REST,
+                                problem: `Still wavering on my decisions to include all the "that"s and the final "to." It's grammatically correct, of course, but maybe it flows better without them when spoken aloud?`,
                                 cards: [
                                     {
                                         description: `With ignorance being as old as time itself, I'm comforted to know that we've always corrected our past mistakes; at the same time, it's dispiriting to be reminded that those to come have yet to make theirs. The universe never learns, and I'm partly to blame… A similar thought occurred to me as a child, when I wondered if I was the reason my brother never got better. It made me realize that all I could do was to love him, and then do better for him.`,

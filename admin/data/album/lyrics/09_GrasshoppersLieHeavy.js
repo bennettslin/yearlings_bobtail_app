@@ -838,7 +838,6 @@ export default {
                         `,`,
                         {
                             anchor: `returned to your guard`,
-                            todo: REVIEW,
                             card: {
                                 description: `And just like that, I'm once again on guard— as I was on our first few dates. Like an inmate conversing with a jail guard, I find myself second-guessing everything I say.`,
                                 dotKeys: {

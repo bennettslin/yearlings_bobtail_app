@@ -81,7 +81,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `I once read that, on average, we have four dreams per night— which, over a lifetime of seventy years, is about a hundred thousand dreams. So here I am, dreaming the very last dream I'll ever dream.`,
+                                    description: `I once read that, on average, we have four dreams per night; over a lifetime of seventy years, that's about a hundred thousand dreams. So here I am, dreaming the very last dream I'll ever dream.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [OBSERVATION]: true,

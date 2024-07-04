@@ -183,12 +183,12 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `Several idioms in the English language trace their origin to the 17th-century`,
+                                        `The 17th-century`,
                                         {
                                             anchor: `Anglo-Dutch Wars`,
                                             wiki: `Anglo-Dutch_Wars`,
                                         },
-                                        `. For example,`,
+                                        ` gave the English language several idioms that disparage the Dutch. For example,`,
                                         {
                                             anchor: `Dutch courage`,
                                             wiki: `Dutch_courage`,
@@ -373,7 +373,7 @@ export default {
                             anchor: `crack up another doll`,
                             todo: REVIEW,
                             card: {
-                                description: `A friend once told me that if I can keep a woman cracking up at my jokes, then I'll always be good for another date. My sense of humor at the time was based on Catherine's fondness for bad puns, however, so this might not have been the best advice for me.`,
+                                description: `A friend once told me that if I can keep a woman cracking up at my jokes, then I'll always be good for another date. But this might not have been the best advice for me, since my sense of humor at the time was very much based on Catherine's fondness for bad puns.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [PUN]: true,

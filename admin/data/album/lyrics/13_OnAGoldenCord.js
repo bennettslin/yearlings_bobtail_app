@@ -100,9 +100,10 @@ export default {
                         `safely kept with`,
                         {
                             anchor: `bread and pocket lint`,
-                            todo: REVIEW,
+                            todo: REVISE,
+                            problem: `Make this a narrative.`,
                             card: {
-                                description: `In those days, I often had just enough to spend on either food or beer— but not both. So before leaving the cafeteria, I would swipe a few bread rolls, which were always plentiful, and stash them in the front pockets of my jacket.`,
+                                description: `In those days, I often had just enough to spend on food or beer, but not both. So before leaving the cafeteria, I would swipe a few bread rolls, which were always plentiful, and stash them in the front pockets of my jacket.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -897,7 +898,7 @@ export default {
                                         anchor: `Alexander the Great`,
                                         wiki: `Alexander_the_Great`,
                                     },
-                                    `simply chopped it in half with his sword, after which he went on to fulfill the prophecy. And so, in my own bid for greatness, I applied the same brute force to sever the cord that tied me to Sita.`,
+                                    `simply chopped it in half with his sword, before venturing forth to fulfill the prophecy. And in my own bid for greatness, I applied the same brute force to sever the cord that tied me to Sita.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1033,7 +1034,7 @@ export default {
                             todo: REVIEW,
                             problem: `The point about the slave and master needs to be made, since this is the whole point of the annotation, but it all sounds fine without it, and trying to insert it somewhere just makes it all sound awkward. This is the best I can do so far, but maybe it would be good to revisit.`,
                             card: {
-                                description: `In college, I would set up conditions that would force my drunken self to write a term paper, based on the wishful thinking that it would somehow get done. But then once drunk, I would resent taking orders from my sober half, and either do the work poorly or not at all— like a slave rebelling against his master. Somehow this became my go-to strategy for breaking up with Sita.`,
+                                description: `In college, my wishful thinking was that I could simply force my drunken self to write a term paper for me. But then once drunk, I would resent taking orders from my sober half, and either do the work poorly or not at all— like a slave rebelling against his master. Somehow this became my go-to strategy for breaking up with Sita.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

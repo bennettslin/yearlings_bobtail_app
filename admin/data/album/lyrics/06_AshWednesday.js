@@ -336,7 +336,7 @@ export default {
                             anchor: `pressed for an opinion`,
                             todo: REVIEW,
                             card: {
-                                description: `Feeling sheepish that Catherine thought so little of my songs, I held onto the hope of writing one that could tug at her heartstrings someday. So in this scenario, I imagine myself asking her for a critique of the very lyrics you're reading now.`,
+                                description: `Feeling sheepish that Catherine thought so little of my songs, I always hoped to write one that could tug at her heartstrings. So in this scenario, I imagine myself asking her for a critique of the very lyrics you're reading now.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [NARRATIVE]: true,
@@ -757,12 +757,12 @@ export default {
                                                 anchor: `Henry IV of France`,
                                                 wiki: `Henry_IV_of_France`,
                                             },
-                                            `was born a Protestant but converted to Catholicism to gain the royal crown. He's reputed to have said, "`,
+                                            `was born a Protestant but converted to Catholicism to gain the royal crown. He is reputed to have said, "`,
                                             {
                                                 isItalic: true,
                                                 lyric: `Paris vaut bien une messe`,
                                             },
-                                            `"— or, "Paris is well worth a Mass"— implying that his earthly ambitions came before his spiritual allegiances. Similarly, I would've converted if that could get Catherine to stay.`,
+                                            `"— or, "Paris is well worth a Mass"— implying that his earthly ambitions came before any spiritual loyalties. Similarly, I would've converted if that could get Catherine to stay.`,
                                         ],
                                         dotKeys: {
                                             [OBSERVATION]: true,
