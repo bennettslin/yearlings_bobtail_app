@@ -336,7 +336,7 @@ export default {
                             anchor: `pressed for an opinion`,
                             todo: REVIEW,
                             card: {
-                                description: `Feeling sheepish that Catherine thought so little of my songs, I always hoped to write one that could tug at her heartstrings. So in this scenario, I imagine myself asking her for a critique of the very lyrics you're reading now.`,
+                                description: `Feeling sheepish that Catherine thought so little of my songs, I had hopes to write one someday that could tug at her heartstrings. So in this scenario, I imagine myself asking for a critique of the very lyrics you're reading now.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [NARRATIVE]: true,
@@ -762,7 +762,7 @@ export default {
                                                 isItalic: true,
                                                 lyric: `Paris vaut bien une messe`,
                                             },
-                                            `"— or, "Paris is well worth a Mass"— implying that his earthly ambitions came before any spiritual loyalties. Similarly, I would've converted if that could get Catherine to stay.`,
+                                            `"— or, "Paris is well worth a Mass"— implying that his earthly ambitions preceded any spiritual loyalties. Similarly, I would've converted if that could get Catherine to stay.`,
                                         ],
                                         dotKeys: {
                                             [OBSERVATION]: true,

@@ -186,7 +186,6 @@ export default {
                         `Well`,
                         {
                             anchor: `you're not me`,
-                            todo: REVIEW,
                             card: {
                                 description: `An inside joke among my friends was to address me as Garry when I was drunk, since my energetic rambling and oafish stunts made me an altogether different person.`,
                                 dotKeys: {
@@ -324,7 +323,6 @@ export default {
                         },
                         {
                             anchor: `aren't love`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Throughout our budding friendship, Sita had neglected to mention her sexual intimacy with past partners. When I found out, she tried to console me by pointing out that it was always shy of intercourse; and furthermore, she never went all the way with them`,
@@ -450,7 +448,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
+                todo: REST,
+                problem: `I'm still not confident that this explanation is perfectly clear, but I've spent enough time on it as it is.`,
                 card: {
                     // NOTE: Counterpoint is mentioned earlier in Ash Wednesday.
                     description: [

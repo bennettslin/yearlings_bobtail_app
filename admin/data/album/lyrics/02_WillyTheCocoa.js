@@ -17,7 +17,6 @@ import {
     FLASHBACK_TO_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Willy the Cocoa',
@@ -1136,7 +1135,6 @@ export default {
                         `, you'll write this`,
                         {
                             anchor: `book of yours`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `I wore an eyepatch as a child to correct my`,

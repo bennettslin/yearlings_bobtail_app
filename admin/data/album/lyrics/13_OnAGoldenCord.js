@@ -898,7 +898,7 @@ export default {
                                         anchor: `Alexander the Great`,
                                         wiki: `Alexander_the_Great`,
                                     },
-                                    `simply chopped it in half with his sword, before venturing forth to fulfill the prophecy. And in my own bid for greatness, I applied the same brute force to sever the cord that tied me to Sita.`,
+                                    `simply chopped it in half with his sword, before venturing forth to fulfill the prophecy. And in my own attempts to achieve greatness, I applied the same brute force to sever the cord that tied me to Sita.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1031,8 +1031,8 @@ export default {
                         `Though, the`,
                         {
                             anchor: `master mind`,
-                            todo: REVIEW,
-                            problem: `The point about the slave and master needs to be made, since this is the whole point of the annotation, but it all sounds fine without it, and trying to insert it somewhere just makes it all sound awkward. This is the best I can do so far, but maybe it would be good to revisit.`,
+                            todo: REST,
+                            problem: `I would prefer to say "my term paper," but that's too many "my"s in a row. Also, the point about the slave and master needs to be made, since this is the whole point of the annotation, but it all sounds fine without it, and trying to insert it somewhere just makes it all sound awkward. This is the best I can do so far, but maybe it would be good to revisit.`,
                             card: {
                                 description: `In college, my wishful thinking was that I could simply force my drunken self to write a term paper for me. But then once drunk, I would resent taking orders from my sober half, and either do the work poorly or not at all— like a slave rebelling against his master. Somehow this became my go-to strategy for breaking up with Sita.`,
                                 dotKeys: {
