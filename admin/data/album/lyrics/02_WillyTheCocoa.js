@@ -377,15 +377,13 @@ export default {
                         `As`,
                         {
                             anchor: `gap-toothed coma`,
-                            cards: [
-                                {
-                                    description: `With mouth partially open, my brother wears a blank expression, right up until he feels the sensation of my mother's gap-toothed "comb" on his scalp.`,
-                                    dotKeys: {
-                                        [NARRATIVE]: true,
-                                        [PUN]: true,
-                                    },
+                            card: {
+                                description: `With mouth partially open, my brother wears a blank expression, right up until he feels the sensation of my mother's gap-toothed "comb" on his scalp.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [PUN]: true,
                                 },
-                            ],
+                            },
                         },
                         `parts his forehead,`,
                     ],

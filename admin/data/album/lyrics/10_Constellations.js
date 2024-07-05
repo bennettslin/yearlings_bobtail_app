@@ -1947,41 +1947,37 @@ export default {
                             // NOTE: I capitalised Black.
                             anchor: `Black Letter-Day`,
                             properNoun: true,
-                            cards: [
-                                {
-                                    description: [
-                                        `Holidays on a calendar are traditionally`,
-                                        {
-                                            anchor: `marked in red`,
-                                            wiki: `Red_letter_day`,
-                                        },
-                                        `ink. By contrast, the "black-letter day sensed" ahead will be just another ordinary day.`,
-                                    ],
-                                    dotKeys: {
-                                        [NARRATIVE]: true,
-                                        [PUN]: true,
+                            card: {
+                                description: [
+                                    `Holidays on a calendar are traditionally`,
+                                    {
+                                        anchor: `marked in red`,
+                                        wiki: `Red_letter_day`,
                                     },
+                                    `ink. By contrast, the "black-letter day sensed" ahead will be just another ordinary day.`,
+                                ],
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [PUN]: true,
                                 },
-                            ],
+                            },
                         },
                         {
                             anchor: `Sensed ahead`,
                             properNoun: true,
-                            cards: [
-                                {
-                                    description: [
-                                        `"Black Latter-Day Saints to head." The Mormon Church, also known as the Latter-Day Saints, originally didn't allow its`,
-                                        {
-                                            anchor: `Black members`,
-                                            wiki: `Black_Mormons`,
-                                        },
-                                        `to attain priesthood. This policy was reversed in 1978.`,
-                                    ],
-                                    dotKeys: {
-                                        [PUN]: true,
+                            card: {
+                                description: [
+                                    `"Black Latter-Day Saints to head." The Mormon Church, also known as the Latter-Day Saints, originally didn't allow its`,
+                                    {
+                                        anchor: `Black members`,
+                                        wiki: `Black_Mormons`,
                                     },
+                                    `to attain priesthood. This policy was reversed in 1978.`,
+                                ],
+                                dotKeys: {
+                                    [PUN]: true,
                                 },
-                            ],
+                            },
                         },
                         `…`,
                         {

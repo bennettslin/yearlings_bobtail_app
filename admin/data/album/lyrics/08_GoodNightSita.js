@@ -388,15 +388,13 @@ export default {
                         `to find the`,
                         {
                             anchor: `chrysalis unchristened`,
-                            cards: [
-                                {
-                                    description: `As we pass a display on the butterfly lifecycle, it occurs to me that what I'm hoping to find is a chrysalis— in other words, someone so new to this world that my own lack of worldliness wouldn't be an issue.`,
-                                    dotKeys: {
-                                        [NARRATIVE]: true,
-                                        [OBSERVATION]: true,
-                                    },
+                            card: {
+                                description: `As we pass a display on the butterfly lifecycle, it occurs to me that what I'm hoping to find is a chrysalis— in other words, someone so new to this world that my own lack of worldliness wouldn't be an issue.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [OBSERVATION]: true,
                                 },
-                            ],
+                            },
                         },
                         `to all`,
                     ],
@@ -525,22 +523,20 @@ export default {
                     lyric: [
                         {
                             anchor: `pidgin palaver`,
-                            cards: [
-                                {
-                                    description: [
-                                        `Stopping to rest in a gallery devoted to Native American history, we learn about`,
-                                        {
-                                            anchor: `pidgins`,
-                                            wiki: `Pidgin`,
-                                        },
-                                        `, or impromptu languages that historically arose between colonists and natives. Their exchanges were peppered with words of goodwill to make up for inevitable misunderstandings, much like my conversations with Sita on this date.`,
-                                    ],
-                                    dotKeys: {
-                                        [NARRATIVE]: true,
-                                        [OBSERVATION]: true,
+                            card: {
+                                description: [
+                                    `Stopping to rest in a gallery devoted to Native American history, we learn about`,
+                                    {
+                                        anchor: `pidgins`,
+                                        wiki: `Pidgin`,
                                     },
+                                    `, or impromptu languages that historically arose between colonists and natives. Their exchanges were peppered with words of goodwill to make up for inevitable misunderstandings, much like my conversations with Sita on this date.`,
+                                ],
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [OBSERVATION]: true,
                                 },
-                            ],
+                            },
                         },
                         `exchanged`,
                     ],

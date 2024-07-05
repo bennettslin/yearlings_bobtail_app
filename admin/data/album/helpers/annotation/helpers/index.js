@@ -15,7 +15,6 @@ export const registerAnnotation = ({
     annotations,
 
 }) => {
-
     // Annotation will either have an array of cards or just a single card.
     const cards = anchoredLyric.cards || [anchoredLyric.card],
 
