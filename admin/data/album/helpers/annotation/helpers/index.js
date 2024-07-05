@@ -7,6 +7,38 @@ import {
 } from '../../../../../../src/constants/lyrics'
 import { ORDERED_DOT_KEYS } from '../../../../../../src/constants/dots'
 
+// eslint-disable-next-line no-unused-vars
+const runtimeCheckCardsAreSortedByDotKeys = cards => {
+    const dotKeysNumbers = []
+    let place = 0
+
+    /**
+     * Convert every card's dot keys into a three-digit number, since no
+     * annotation card has more than three dots.
+     */
+    while (place < 3) {
+        // eslint-disable-next-line no-loop-func
+        cards.forEach((card, index) => {
+            dotKeysNumbers[index] = (dotKeysNumbers[index] || 0) * 10 + (
+                Object.keys(card.dotKeys).length < place + 1 ?
+                    ORDERED_DOT_KEYS.length :
+                    ORDERED_DOT_KEYS.findIndex(
+                        dot => dot === Object.keys(card.dotKeys)[place],
+                    )
+            )
+        })
+
+        place++
+    }
+
+    // Call out if cards aren't sorted properly.
+    if (!dotKeysNumbers.every((value, index, array) => (
+        index === 0 || value >= array[index - 1]
+    ))) {
+        console.log(cards)
+    }
+}
+
 export const registerAnnotation = ({
     verse,
     columnKey,
@@ -70,42 +102,6 @@ export const registerAnnotation = ({
         dotKeys,
     })
 
-    const cardDotKeyIndices = []
-    let place = 0
-
-    // No annotation has more than four cards
-    while (place < 4) {
-        // eslint-disable-next-line no-loop-func
-        cards.forEach((card, index) => {
-            if (cardDotKeyIndices.length < index + 1) {
-                cardDotKeyIndices.push([])
-            }
-
-            const cardDotKeysArray = Object.keys(card.dotKeys)
-
-            if (cardDotKeysArray.length < place + 1) {
-                cardDotKeyIndices[index].push(-1)
-            } else {
-                cardDotKeyIndices[index].push(
-                    ORDERED_DOT_KEYS.findIndex(dot => dot === cardDotKeysArray[place]),
-                )
-            }
-        })
-
-        const arrayOfNthPlaceIndices = cardDotKeyIndices.map(
-            // eslint-disable-next-line no-loop-func
-            dotKeysArray => dotKeysArray[place],
-        ).filter(index => index !== -1)
-
-        if (!arrayOfNthPlaceIndices.every((value, index, array) => (
-            index === 0 || value === -1 || value >= array[index - 1]
-        ))) {
-            console.log('caught one', cards, cardDotKeyIndices)
-        }
-
-        place++
-    }
-
     // Let annotation object know its cards.
     annotation.cards = cards
 
@@ -127,4 +123,7 @@ export const registerAnnotation = ({
     // For admin purposes.
     annotation.todo = anchoredLyric.todo
     delete anchoredLyric.todo
+
+    // Only every check this in runtime.
+    // runtimeCheckCardsAreSortedByDotKeys(cards)
 }

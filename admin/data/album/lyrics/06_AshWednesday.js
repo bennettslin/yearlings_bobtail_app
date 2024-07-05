@@ -681,16 +681,16 @@ export default {
                             anchor: `faked this X`,
                             cards: [
                                 {
-                                    description: `On Ash Wednesday, the priest smears ash in the shape of a cross on each parishioner's forehead. But since I'd ashed myself without the benefit of a mirror, mine was slanted like the letter X.`,
-                                    dotKeys: {
-                                        [BACKSTORY]: true,
-                                    },
-                                },
-                                {
                                     description: `Since Catherine insisted on going no further than heavy petting, I would fake "the sex" for myself by masturbating afterward.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [PUN]: true,
+                                    },
+                                },
+                                {
+                                    description: `On Ash Wednesday, the priest smears ash in the shape of a cross on each parishioner's forehead. But since I'd ashed myself without the benefit of a mirror, mine was slanted like the letter X.`,
+                                    dotKeys: {
+                                        [BACKSTORY]: true,
                                     },
                                 },
                             ],

@@ -1125,7 +1125,6 @@ export default {
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
-                                    [OBSERVATION]: true,
                                     [PUN]: true,
                                 },
                             },

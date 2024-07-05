@@ -1608,6 +1608,16 @@ export default {
                 cards: [
                     {
                         description: [
+                            `The final movement of Beethoven's`,
+                            {
+                                anchor: `last major work`,
+                                wiki: `String_Quartet_No._16_(Beethoven)`,
+                            },
+                            `begins with a bass theme that asks, "Must it be?"— followed by a treble theme that responds, "It must be!"`,
+                        ],
+                    },
+                    {
+                        description: [
                             `After Ana and Jacob left the band, it didn't feel right to keep referring to myself as the Yearlings. And with the Web gaining in usage, I wanted a new name that would always be first in search results. So I decided to combine two random words… but all I could think of was "Bobtail Yearlings"… which, for symmetry's sake, would make the album "`,
                             {
                                 isItalic: true,
@@ -1628,16 +1638,6 @@ export default {
                         dotKeys: {
                             [AFTERWORD]: true,
                         },
-                    },
-                    {
-                        description: [
-                            `The final movement of Beethoven's`,
-                            {
-                                anchor: `last major work`,
-                                wiki: `String_Quartet_No._16_(Beethoven)`,
-                            },
-                            `begins with a bass theme that asks, "Must it be?"— followed by a treble theme that responds, "It must be!"`,
-                        ],
                     },
                 ],
             },

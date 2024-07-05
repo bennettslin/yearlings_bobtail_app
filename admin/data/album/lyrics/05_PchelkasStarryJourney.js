@@ -875,7 +875,6 @@ export default {
                                     `, allowing Castor to share in his brother's immortality. Similarly, I felt as if my brother were sharing his autism with me, along with its spiritual answers.`,
                                 ],
                                 dotKeys: {
-                                    [BACKSTORY]: true,
                                     [OBSERVATION]: true,
                                     [PUN]: true,
                                 },
