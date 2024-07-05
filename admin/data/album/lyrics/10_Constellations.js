@@ -321,6 +321,12 @@ export default {
                             properNoun: true,
                             cards: [
                                 {
+                                    description: `The Walgreens aisles might be referred to as "Wal-halls," as they're stocked with generic versions of brand-name drugs, each with the prefix "Wal" in its name: Wal-Dryl, Wal-Phed… and so forth.`,
+                                    dotKeys: {
+                                        [OBSERVATION]: true,
+                                    },
+                                },
+                                {
                                     description: [
                                         `The Valkyries would bring their dead heroes to "`,
                                         {
@@ -331,12 +337,6 @@ export default {
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
-                                    },
-                                },
-                                {
-                                    description: `The Walgreens aisles might be referred to as "Wal-halls," as they're stocked with generic versions of brand-name drugs, each with the prefix "Wal" in its name: Wal-Dryl, Wal-Phed… and so forth.`,
-                                    dotKeys: {
-                                        [OBSERVATION]: true,
                                     },
                                 },
                             ],

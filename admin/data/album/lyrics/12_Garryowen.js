@@ -426,16 +426,16 @@ export default {
                             problem: `Say reflected in the water.`,
                             cards: [
                                 {
-                                    description: `In Hippocratic medicine, choler is the humor that induces aggression.`,
-                                    dotKeys: {
-                                        [REFERENCE]: true,
-                                    },
-                                },
-                                {
                                     description: `Much like I wouldn't have recognized myself wearing an "upturned collar," the angry drunk I saw in my reflection didn't mesh with my self-image as a wide-eyed kid who meant well. At some point, I vowed to make a clean break and start over.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [PUN]: true,
+                                    },
+                                },
+                                {
+                                    description: `In Hippocratic medicine, choler is the humor that induces aggression.`,
+                                    dotKeys: {
+                                        [REFERENCE]: true,
                                     },
                                 },
                             ],

@@ -5,6 +5,7 @@ import {
     LYRIC_LEFT,
     LYRIC_RIGHT,
 } from '../../../../../../src/constants/lyrics'
+import { ORDERED_DOT_KEYS } from '../../../../../../src/constants/dots'
 
 export const registerAnnotation = ({
     verse,
@@ -68,6 +69,42 @@ export const registerAnnotation = ({
         cards,
         dotKeys,
     })
+
+    const cardDotKeyIndices = []
+    let place = 0
+
+    // No annotation has more than four cards
+    while (place < 4) {
+        // eslint-disable-next-line no-loop-func
+        cards.forEach((card, index) => {
+            if (cardDotKeyIndices.length < index + 1) {
+                cardDotKeyIndices.push([])
+            }
+
+            const cardDotKeysArray = Object.keys(card.dotKeys)
+
+            if (cardDotKeysArray.length < place + 1) {
+                cardDotKeyIndices[index].push(-1)
+            } else {
+                cardDotKeyIndices[index].push(
+                    ORDERED_DOT_KEYS.findIndex(dot => dot === cardDotKeysArray[place]),
+                )
+            }
+        })
+
+        const arrayOfNthPlaceIndices = cardDotKeyIndices.map(
+            // eslint-disable-next-line no-loop-func
+            dotKeysArray => dotKeysArray[place],
+        ).filter(index => index !== -1)
+
+        if (!arrayOfNthPlaceIndices.every((value, index, array) => (
+            index === 0 || value === -1 || value >= array[index - 1]
+        ))) {
+            console.log('caught one', cards, cardDotKeyIndices)
+        }
+
+        place++
+    }
 
     // Let annotation object know its cards.
     annotation.cards = cards

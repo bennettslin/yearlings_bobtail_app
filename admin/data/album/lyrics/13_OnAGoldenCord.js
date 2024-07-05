@@ -449,6 +449,12 @@ export default {
                             anchor: `avenue Möbius`,
                             cards: [
                                 {
+                                    description: `As drunken me ambles along twisting sidewalks, revisiting the half-truths that once supported his defense, it occurs to him that perhaps there really aren't two sides to this story. Or two sides to his mind…`,
+                                    dotKeys: {
+                                        [NARRATIVE]: true,
+                                    },
+                                },
+                                {
                                     description: [
                                         `A`,
                                         {
@@ -457,12 +463,6 @@ export default {
                                         },
                                         `is a surface with only one side. It can be created by joining the ends of a half-twisted paper strip.`,
                                     ],
-                                },
-                                {
-                                    description: `As drunken me ambles along twisting sidewalks, revisiting the half-truths that once supported his defense, it occurs to him that perhaps there really aren't two sides to this story. Or two sides to his mind…`,
-                                    dotKeys: {
-                                        [NARRATIVE]: true,
-                                    },
                                 },
                             ],
                         },

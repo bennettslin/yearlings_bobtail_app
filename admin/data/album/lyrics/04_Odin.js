@@ -1613,16 +1613,6 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `The`,
-                                        {
-                                            anchor: `gnome`,
-                                            wiki: `Gnome`,
-                                        },
-                                        `, a small humanoid who lives underground, is the Paracelsian elemental of earth.`,
-                                    ],
-                                },
-                                {
-                                    description: [
                                         `Powerless to change my condition, I can only confront all that remains unknown. Like a`,
                                         {
                                             anchor: `garden gnome`,
@@ -1634,6 +1624,16 @@ export default {
                                         [NARRATIVE]: true,
                                         [OBSERVATION]: true,
                                     },
+                                },
+                                {
+                                    description: [
+                                        `The`,
+                                        {
+                                            anchor: `gnome`,
+                                            wiki: `Gnome`,
+                                        },
+                                        `, a small humanoid who lives underground, is the Paracelsian elemental of earth.`,
+                                    ],
                                 },
                             ],
                         },
