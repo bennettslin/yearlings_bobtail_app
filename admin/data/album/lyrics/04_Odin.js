@@ -174,9 +174,7 @@ export default {
                         {
                             anchor: `Indifferent galaxies`,
                             card: {
-                                description: [
-                                    `The Buddhism of my upbringing didn't make much sense to me, partly because it clashed with the various faiths of my classmates. At the same time, it didn't make any more sense for them to be right, and my parents wrong. So with all beliefs equally suspect, I could only conceive of the universe as a limitless stretch of cold, empty space, in which we live and die to no greater concern.`,
-                                ],
+                                description: `The Buddhism of my upbringing didn't make much sense to me, partly because it clashed with the various faiths of my classmates. At the same time, it didn't make any more sense for them to be right, and my parents wrong. So with all beliefs equally suspect, I could only conceive of the universe as a limitless stretch of cold, empty space, in which we live and die to no greater concern.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -478,24 +476,22 @@ export default {
                             anchor: `shibboleth`,
                             card: {
                                 description: [
-                                    [
-                                        `The`,
-                                        {
-                                            anchor: `Book of Judges`,
-                                            wiki: `Book_of_Judges`,
-                                        },
-                                        `tells of a battle that arose between two Israelite tribes, after which the victors demanded of any straggler to say "`,
-                                        {
-                                            anchor: `shibboleth`,
-                                            wiki: `Shibboleth`,
-                                        },
-                                        `," the Hebrew word for a river. Because the enemy tribe pronounced the letter`,
-                                        {
-                                            isItalic: true,
-                                            lyric: `shin`,
-                                        },
-                                        `differently in their dialect, they would out themselves by saying "sibboleth," just like I do here in the recording.`,
-                                    ],
+                                    `The`,
+                                    {
+                                        anchor: `Book of Judges`,
+                                        wiki: `Book_of_Judges`,
+                                    },
+                                    `tells of a battle that arose between two Israelite tribes, after which the victors demanded of any straggler to say "`,
+                                    {
+                                        anchor: `shibboleth`,
+                                        wiki: `Shibboleth`,
+                                    },
+                                    `," the Hebrew word for a river. Because the enemy tribe pronounced the letter`,
+                                    {
+                                        isItalic: true,
+                                        lyric: `shin`,
+                                    },
+                                    `differently in their dialect, they would out themselves by saying "sibboleth," just like I do here in the recording.`,
                                 ],
                                 dotKeys: {
                                     [SONGCRAFT]: true,
@@ -575,9 +571,7 @@ export default {
                             anchor: `missed bat mitzvahs`,
                             cards: [
                                 {
-                                    description: [
-                                        `Being in Taiwan at the time, I was unable to attend Sasha's bat mitzvah party.`,
-                                    ],
+                                    description: `Being in Taiwan at the time, I was unable to attend Sasha's bat mitzvah party.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -703,9 +697,7 @@ export default {
                             anchor: `summer trips to Paris`,
                             cards: [
                                 {
-                                    description: [
-                                        `At our middle school, students who completed two years of French were eligible to attend a summer program in the city of Paris. This excited Sasha, and so it excited me as well.`,
-                                    ],
+                                    description: `At our middle school, students who completed two years of French were eligible to attend a summer program in the city of Paris. This excited Sasha, and so it excited me as well.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -969,9 +961,7 @@ export default {
                             anchor: `hopeless rests`,
                             cards: [
                                 {
-                                    description: [
-                                        `Hope was all that remained in Pandora's box. But upon having the hard truths of the world revealed to me by Sasha, I'm left to feel as hopeless as ever.`,
-                                    ],
+                                    description: `Hope was all that remained in Pandora's box. But upon having the hard truths of the world revealed to me by Sasha, I'm left to feel as hopeless as ever.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [REFERENCE]: true,
@@ -1026,9 +1016,7 @@ export default {
                         {
                             anchor: `guard's whistle`,
                             card: {
-                                description: [
-                                    `Wandering the beach in my dream, I notice a steel whistle in the sand that was likely dropped by a lifeguard. Its shrill cry to warn of danger is now forever silenced— an omen, perhaps, that some dangers come without warning.`,
-                                ],
+                                description: `Wandering the beach in my dream, I notice a steel whistle in the sand that was likely dropped by a lifeguard. Its shrill cry to warn of danger is now forever silenced— an omen, perhaps, that some dangers come without warning.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -1075,9 +1063,7 @@ export default {
                         {
                             anchor: `yellow-taped grills`,
                             card: {
-                                description: [
-                                    `To prevent beachgoers from wading in the shark-infested waters, barricade tape has been tied onto the barbecue grills that line the shore.`,
-                                ],
+                                description: `To prevent beachgoers from wading in the shark-infested waters, barricade tape has been tied onto the barbecue grills that line the shore.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -1336,9 +1322,7 @@ export default {
                         {
                             anchor: `day to die`,
                             card: {
-                                description: [
-                                    `As a child, I suffered from night terrors related to my fear of death. My mother tried to comfort me with the promise of reincarnation— but this only filled me with greater dread. Because it wasn't just death itself that frightened me; it was a lifetime of hurtling toward it. And all that reincarnation offered was more rounds of the same.`,
-                                ],
+                                description: `As a child, I suffered from night terrors related to my fear of death. My mother tried to comfort me with the promise of reincarnation— but this only filled me with greater dread. Because it wasn't just death itself that frightened me; it was a lifetime of hurtling toward it. And all that reincarnation offered was more rounds of the same.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -1573,9 +1557,7 @@ export default {
                         {
                             anchor: `his litter`,
                             card: {
-                                description: [
-                                    `It isn't just Odin's unused cat litter that was swept aside. Gone is any chance for him to sire a litter of his own.`,
-                                ],
+                                description: `It isn't just Odin's unused cat litter that was swept aside. Gone is any chance for him to sire a litter of his own.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,

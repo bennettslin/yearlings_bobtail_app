@@ -987,9 +987,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: [
-                                        `Since an "imp runt" is literally the weakest member in a litter of troll infants, it's surely the one that a troll parent would try to replace with a stolen human child.`,
-                                    ],
+                                    description: `Since an "imp runt" is literally the weakest member in a litter of troll infants, it's surely the one that a troll parent would try to replace with a stolen human child.`,
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                     },

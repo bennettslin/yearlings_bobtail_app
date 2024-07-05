@@ -301,9 +301,7 @@ export default {
                         {
                             anchor: `Upon purchase of a queen's ship`,
                             card: {
-                                description: [
-                                    `RI Research promised that I could rise above the bullies once a spaceship was funded by my payments. And so I learned to bide my time, building toward and awaiting corrective justice. I was like "a pawn" in chess that "perches over queenship" as it clambers toward the opposite end of the chessboard.`,
-                                ],
+                                description: `RI Research promised that I could rise above the bullies once a spaceship was funded by my payments. And so I learned to bide my time, building toward and awaiting corrective justice. I was like "a pawn" in chess that "perches over queenship" as it clambers toward the opposite end of the chessboard.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -853,9 +851,7 @@ export default {
                         {
                             anchor: `testifiers' lore`,
                             card: {
-                                description: [
-                                    `After slaying Ravana, Rama made Sita walk through sacrificial flames to prove that she'd stayed chaste throughout her abduction. Sita complied and escaped from this "test of fire" unharmed.`,
-                                ],
+                                description: `After slaying Ravana, Rama made Sita walk through sacrificial flames to prove that she'd stayed chaste throughout her abduction. Sita complied and escaped from this "test of fire" unharmed.`,
                                 dotKeys: {
                                     [PUN]: true,
                                 },
@@ -1130,9 +1126,7 @@ export default {
                             anchor: `fairer marathon`,
                             cards: [
                                 {
-                                    description: [
-                                        `The endless one-upmanship wasn't just petty; it was exhausting to counter every perceived slight with one of my own. I wanted life to be like a marathon that rewards patience and resolve— traits I possess in spades.`,
-                                    ],
+                                    description: `The endless one-upmanship wasn't just petty; it was exhausting to counter every perceived slight with one of my own. I wanted life to be like a marathon that rewards patience and resolve— traits I possess in spades.`,
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                     },

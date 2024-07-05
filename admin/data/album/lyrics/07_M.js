@@ -223,9 +223,7 @@ export default {
                         {
                             anchor: `music cred`,
                             card: {
-                                description: [
-                                    `I always detected a whiff of disdain from the record store clerks who rang up my purchases. But with my quest for self-betterment, I overcame my intimidation and began to ask them for recommended listening.`,
-                                ],
+                                description: `I always detected a whiff of disdain from the record store clerks who rang up my purchases. But with my quest for self-betterment, I overcame my intimidation and began to ask them for recommended listening.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -282,9 +280,7 @@ export default {
                         {
                             anchor: `Year five`,
                             card: {
-                                description: [
-                                    `The Soviet Union's first five-year plan was also its most brutal, as the forced industrialization of its agrarian societies led to widespread famine and death. Similarly, given how far behind I was starting out, it was naive to think that my own five-year plan for accelerated growth could be free of unintended consequences.`,
-                                ],
+                                description: `The Soviet Union's first five-year plan was also its most brutal, as the forced industrialization of its agrarian societies led to widespread famine and death. Similarly, given how far behind I was starting out, it was naive to think that my own five-year plan for accelerated growth could be free of unintended consequences.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },

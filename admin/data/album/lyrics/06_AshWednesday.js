@@ -388,9 +388,7 @@ export default {
                         {
                             anchor: `"Joyce" oblivious`,
                             card: {
-                                description: [
-                                    `Of course, not knowing that I couldn't be the next Joyce is why I dared to try. And so I began to dream that I could do for rock music what Joyce had done for English literature.`,
-                                ],
+                                description: `Of course, not knowing that I couldn't be the next Joyce is why I dared to try. And so I began to dream that I could do for rock music what Joyce had done for English literature.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -543,9 +541,7 @@ export default {
                             problem: `Maybe in the future, I'll enhance the analogy by pointing out that I'm a homebody.`,
                             cards: [
                                 {
-                                    description: [
-                                        `"Raincoat" is slang for a condom, of which the benefit is unknown to "Rome," given the Catholic Church's stance against birth control. Since Catherine had vowed not to engage in premarital sex, we never needed to use one.`,
-                                    ],
+                                    description: `"Raincoat" is slang for a condom, of which the benefit is unknown to "Rome," given the Catholic Church's stance against birth control. Since Catherine had vowed not to engage in premarital sex, we never needed to use one.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [PUN]: true,
@@ -685,9 +681,7 @@ export default {
                             anchor: `faked this X`,
                             cards: [
                                 {
-                                    description: [
-                                        `On Ash Wednesday, the priest smears ash in the shape of a cross on each parishioner's forehead. But since I'd ashed myself without the benefit of a mirror, mine was slanted like the letter X.`,
-                                    ],
+                                    description: `On Ash Wednesday, the priest smears ash in the shape of a cross on each parishioner's forehead. But since I'd ashed myself without the benefit of a mirror, mine was slanted like the letter X.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -809,9 +803,7 @@ export default {
                             anchor: `cursed to be born`,
                             cards: [
                                 {
-                                    description: [
-                                        `I never understood why the Catholic Church extends its pro-life stance to the unborn of other faiths. After all, this just trades away the certainty of an aborted fetus going to heaven, for a living child's likelihood of going to hell.`,
-                                    ],
+                                    description: `I never understood why the Catholic Church extends its pro-life stance to the unborn of other faiths. After all, this just trades away the certainty of an aborted fetus going to heaven, for a living child's likelihood of going to hell.`,
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                     },
@@ -851,9 +843,7 @@ export default {
                         {
                             anchor: `tragic mask`,
                             card: {
-                                description: [
-                                    `In time I came to see comedy and tragedy as two sides of the same coin. After all, every tragic situation can be made into a song; writing a song calls for taking the broader view; and anything viewed broadly will reveal its comic underbelly. So I always preferred a negative outcome to none at all— but then this made my whole life feel like a stage act.`,
-                                ],
+                                description: `In time I came to see comedy and tragedy as two sides of the same coin. After all, every tragic situation can be made into a song; writing a song calls for taking the broader view; and anything viewed broadly will reveal its comic underbelly. So I always preferred a negative outcome to none at all— but then this made my whole life feel like a stage act.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

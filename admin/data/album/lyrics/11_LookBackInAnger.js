@@ -441,9 +441,7 @@ export default {
                         {
                             anchor: `jigsawed life`,
                             card: {
-                                description: [
-                                    `You typically work on a jigsaw puzzle by first connecting the edge pieces, then building inward. So as the latecomer squeezes her way into the center of the crowd, I wonder if she's the long-awaited final piece to the sprawling puzzle of my life.`,
-                                ],
+                                description: `You typically work on a jigsaw puzzle by first connecting the edge pieces, then building inward. So as the latecomer squeezes her way into the center of the crowd, I wonder if she's the long-awaited final piece to the sprawling puzzle of my life.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,

@@ -185,9 +185,7 @@ export default {
                             anchor: `de exempt`,
                             cards: [
                                 {
-                                    description: [
-                                        `The Israelites, being of "the" exempt, were spared the plagues that God visited upon Egypt. And with our stomachs full of Robitussin, we're spared any chance of having flu symptoms.`,
-                                    ],
+                                    description: `The Israelites, being of "the" exempt, were spared the plagues that God visited upon Egypt. And with our stomachs full of Robitussin, we're spared any chance of having flu symptoms.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true,
@@ -1655,9 +1653,7 @@ export default {
                                 properNoun: true,
                                 cards: [
                                     {
-                                        description: [
-                                            `The arrival of Europeans into the Americas precipitated their rise to global power, just as it brought disease and ruin to the native populations. Similarly, while the day begins for many, it's now ending for us, and we "leave as the red sun" arrives.`,
-                                        ],
+                                        description: `The arrival of Europeans into the Americas precipitated their rise to global power, just as it brought disease and ruin to the native populations. Similarly, while the day begins for many, it's now ending for us, and we "leave as the red sun" arrives.`,
                                         dotKeys: {
                                             [NARRATIVE]: true,
                                             [PUN]: true,

@@ -876,9 +876,7 @@ export default {
                         {
                             anchor: `answer a no`,
                             card: {
-                                description: [
-                                    `Of course, if I were never given an opening to make any decisions at all, then each date would end with me going right back to the beginning of the flowchart. And I'd be doomed to spend my life cycling through an infinite loop of polite rejections.`,
-                                ],
+                                description: `Of course, if I were never given an opening to make any decisions at all, then each date would end with me going right back to the beginning of the flowchart. And I'd be doomed to spend my life cycling through an infinite loop of polite rejections.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -901,9 +899,7 @@ export default {
                             anchor: `veggie wishbone's short end`,
                             cards: [
                                 {
-                                    description: [
-                                        `On one date, Sita took me to a vegetarian restaurant, where I ordered a dish that resembled a chicken breast. When we cracked its sesame-stick wishbone, she got the longer end. Needless to say, my wish wasn't granted.`,
-                                    ],
+                                    description: `On one date, Sita took me to a vegetarian restaurant, where I ordered a dish that resembled a chicken breast. When we cracked its sesame-stick wishbone, she got the longer end. Needless to say, my wish wasn't granted.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -992,9 +988,7 @@ export default {
                         {
                             anchor: `chirping crosswalks`,
                             card: {
-                                description: [
-                                    `Sita and I are still standing on the sidewalk outside her boarding house. In the distance, an electronic bird call informs the visually impaired that the street is safe to cross.`,
-                                ],
+                                description: `Sita and I are still standing on the sidewalk outside her boarding house. In the distance, an electronic bird call informs the visually impaired that the street is safe to cross.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },

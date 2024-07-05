@@ -1007,9 +1007,7 @@ export default {
                             todo: REST,
                             problem: `I've spent too long on this already, so I'm just going to sign off on it for now. But I'm still not confidence that I've successfully explained the analogy.`,
                             card: {
-                                description: [
-                                    `Since a spy's success hinges upon staying hidden, their exploits won't ever be known until they're captured— at which point they'll face death by firing squad. And in my desire to join a friendly squad, I faced a similar dilemma: Not only would opening up sabotage my previous efforts to stay unresponsive, but I would then have to explain my past behavior.`,
-                                ],
+                                description: `Since a spy's success hinges upon staying hidden, their exploits won't ever be known until they're captured— at which point they'll face death by firing squad. And in my desire to join a friendly squad, I faced a similar dilemma: Not only would opening up sabotage my previous efforts to stay unresponsive, but I would then have to explain my past behavior.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -1045,9 +1043,7 @@ export default {
                             anchor: `Mushing onward`,
                             cards: [
                                 {
-                                    description: [
-                                        `Here, I imagine Pchelka and Mushka as sled dogs in the Russian tundra.`,
-                                    ],
+                                    description: `Here, I imagine Pchelka and Mushka as sled dogs in the Russian tundra.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -1074,9 +1070,7 @@ export default {
                             anchor: `Mushka`,
                             properNoun: true,
                             card: {
-                                description: [
-                                    `Though Pchelka and Mushka successfully went into orbit, there was a problem with their reentry. To prevent the spacecraft from landing in hostile territory, the Soviets had it self-destruct, killing all onboard. But in this song's retelling, I as Pchelka somehow manage to avoid the sad fate that my brother as Mushka could not.`,
-                                ],
+                                description: `Though Pchelka and Mushka successfully went into orbit, there was a problem with their reentry. To prevent the spacecraft from landing in hostile territory, the Soviets had it self-destruct, killing all onboard. But in this song's retelling, I as Pchelka somehow manage to avoid the sad fate that my brother as Mushka could not.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -1092,9 +1086,7 @@ export default {
                         {
                             anchor: `his slaughter`,
                             card: {
-                                description: [
-                                    `I wrote this song during the peak of my activism with the animal rights movement, which takes a dim view of sled dog racing. Not only are dogs routinely abandoned or killed when they outlive their usefulness, but the race itself is grueling enough to cause death by overexertion.`,
-                                ],
+                                description: `I wrote this song during the peak of my activism with the animal rights movement, which takes a dim view of sled dog racing. Not only are dogs routinely abandoned or killed when they outlive their usefulness, but the race itself is grueling enough to cause death by overexertion.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -1224,9 +1216,7 @@ export default {
                         {
                             anchor: `needed the pod`,
                             card: {
-                                description: [
-                                    `A group of whales is known as a pod. Because I wanted to belong to a social group, I couldn't ditch my "whales"— and thus I sought a metaphorical escape pod.`,
-                                ],
+                                description: `A group of whales is known as a pod. Because I wanted to belong to a social group, I couldn't ditch my "whales"— and thus I sought a metaphorical escape pod.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -1298,9 +1288,7 @@ export default {
                         {
                             anchor: `can't ever return`,
                             card: {
-                                description: [
-                                    `Regardless, I'd grown disillusioned with RI Research by this point, as the letters had become overtly Christian in tone. It's not that I held Christianity to be conclusively false; it was just incongruous with all the previous talk of stellar origins.`,
-                                ],
+                                description: `Regardless, I'd grown disillusioned with RI Research by this point, as the letters had become overtly Christian in tone. It's not that I held Christianity to be conclusively false; it was just incongruous with all the previous talk of stellar origins.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -1316,9 +1304,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: [
-                        `My brother currently lives in his own place and gets round-the-clock care through a supported living agency. When asked how old he is, he still answers "seven."`,
-                    ],
+                    description: `My brother currently lives in his own place and gets round-the-clock care through a supported living agency. When asked how old he is, he still answers "seven."`,
                     dotKeys: {
                         [AFTERWORD]: true,
                     },

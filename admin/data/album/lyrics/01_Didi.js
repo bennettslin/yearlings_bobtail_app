@@ -340,9 +340,7 @@ export default {
                         {
                             anchor: `decked in overalls`,
                             card: {
-                                description: [
-                                    `Since I was the smallest boy in my grade, the only item of clothing that fit me was a pair of girls' overalls from the lost-and-found closet.`,
-                                ],
+                                description: `Since I was the smallest boy in my grade, the only item of clothing that fit me was a pair of girls' overalls from the lost-and-found closet.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -416,9 +414,7 @@ export default {
                         {
                             anchor: `sheriff's badge and gun`,
                             card: {
-                                description: [
-                                    `Like many other Taiwanese teenagers of her generation, my mother prized all things labeled American, despite not knowing exactly what that label entailed. Back then, their only source for imports was a local bootleg industry that combed through the relics of America's past. And so my sister and I grew up listening to my mother's old country records and sharing her fondness for classic Western films.`,
-                                ],
+                                description: `Like many other Taiwanese teenagers of her generation, my mother prized all things labeled American, despite not knowing exactly what that label entailed. Back then, their only source for imports was a local bootleg industry that combed through the relics of America's past. And so my sister and I grew up listening to my mother's old country records and sharing her fondness for classic Western films.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

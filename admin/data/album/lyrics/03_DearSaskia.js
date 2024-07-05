@@ -329,9 +329,7 @@ export default {
                         {
                             anchor: `he's getting you`,
                             card: {
-                                description: [
-                                    `Every boy that Sasha crushed on was Jewish, which then motivated her to be a better Jew. But since I couldn't help strengthen her faith myself, I was at a disadvantage in "getting" her.`,
-                                ],
+                                description: `Every boy that Sasha crushed on was Jewish, which then motivated her to be a better Jew. But since I couldn't help strengthen her faith myself, I was at a disadvantage in "getting" her.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -514,9 +512,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: [
-                                        `Some overprotective parents strap their toddlers into a safety harness. For this reason, older children who can't fend for themselves might be mocked by their peers as having been kept on a tether their whole lives.`,
-                                    ],
+                                    description: `Some overprotective parents strap their toddlers into a safety harness. For this reason, older children who can't fend for themselves might be mocked by their peers as having been kept on a tether their whole lives.`,
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                     },

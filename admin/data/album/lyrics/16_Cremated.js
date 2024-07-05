@@ -324,9 +324,7 @@ export default {
                         {
                             anchor: `pinkish slip`,
                             card: {
-                                description: [
-                                    `Miriam is wearing a silky pink undergarment under her skirt. Of course, a pink slip is also a notice to an employee that they're getting laid off…`,
-                                ],
+                                description: `Miriam is wearing a silky pink undergarment under her skirt. Of course, a pink slip is also a notice to an employee that they're getting laid off…`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,

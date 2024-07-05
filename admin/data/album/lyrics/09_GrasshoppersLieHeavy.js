@@ -339,9 +339,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: [
-                                        `Unsure of my background and still feeling ambushed, Sita hesitates. But as we chat, I win her over with my passion for reading and knowledge of literature.`,
-                                    ],
+                                    description: `Unsure of my background and still feeling ambushed, Sita hesitates. But as we chat, I win her over with my passion for reading and knowledge of literature.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -508,9 +506,7 @@ export default {
                         {
                             anchor: `stagefright ignites`,
                             card: {
-                                description: [
-                                    `During this time, I began performing at singer-songwriter nights hosted by local coffee shops. My first few attempts were a disaster, but I learned to conquer my stagefright with just the right amount of alcohol.`,
-                                ],
+                                description: `During this time, I began performing at singer-songwriter nights hosted by local coffee shops. My first few attempts were a disaster, but I learned to conquer my stagefright with just the right amount of alcohol.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -1318,9 +1314,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: [
-                        `The ascending chord progression of this coda initially suggests a blossoming relationship. Toward the end, it symbolizes sexual climax.`,
-                    ],
+                    description: `The ascending chord progression of this coda initially suggests a blossoming relationship. Toward the end, it symbolizes sexual climax.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
