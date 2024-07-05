@@ -14,7 +14,7 @@ import {
     FLASHBACK_TO_WORMHOLE_PREFIX,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
-import { REDO, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REDO, REST, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'M',
@@ -262,7 +262,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: REVIEW,
                 card: {
-                    description: `I eventually abandoned my plan to pack this entire song with M words after deciding that it just wouldn't sound good. But I'd already written this stanza by that point, and since it said everything I wanted to say, I kept it.`,
+                    description: `I abandoned my plan to pack this song with M words after deciding that it wouldn't sound too good. But I'd already written this stanza by that point, and since it said exactly what I wanted to say, I kept it.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
@@ -652,7 +652,7 @@ export default {
                             anchor: `solely for a pet`,
                             todo: REVIEW,
                             card: {
-                                description: `After Mara started going out with Jacob, she continued to interact with me in the same flirtatious manner, making me realize that I'd misread her intentions all along. The ways of a social scene were just so new to me— and yet, I finally belonged to one. So I couldn't help but smile at the thought.`,
+                                description: `After Mara started going out with Jacob, she continued to interact with me in the same flirtatious manner, which made me realize that I'd misread her intentions all along. The ways of a social scene were just so new to me… Yet I couldn't help but smile at this thought, since it was proof that I finally belonged to one.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -753,7 +753,8 @@ export default {
                     lyric: [
                         {
                             anchor: `indentures dumbed`,
-                            todo: REVIEW,
+                            todo: REST,
+                            problem: `Is the connection between being unable to speak and being "dumbed" obvious?`,
                             card: {
                                 description: [
                                     `Chimney sweeps were typically apprenticed as`,
@@ -1027,6 +1028,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
                         `My original plan was to take the puns one step further by recording this song in a "`,
@@ -1034,7 +1036,7 @@ export default {
                             anchor: `Mara-iachi`,
                             wiki: `Mariachi`,
                         },
-                        `" style. But I decided it wouldn't fit the song's natural tempo and scrapped it. Still, it gave me an idea to model the outro after the`,
+                        `" style. But I decided that it wouldn't fit the song's natural tempo, and scrapped it. Still, it gave me an idea to model the outro after the`,
                         {
                             anchor: `Los Lobos`,
                             wiki: `Los_Lobos`,

@@ -18,7 +18,7 @@ import {
     REFRAIN,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 /**
  * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the
@@ -38,7 +38,8 @@ export default {
     playerReferenceTime: 756.159,
     playerStartTime: 755.661,
     todo: REVIEW,
-    overview: `As my years of getting bullied grew unbearable, a strange letter arrived with promises of spiritual answers. All it asked for was a small payment— which I quickly mailed off. It was then revealed to me that I belonged to a race of astral beings, and as such, I had a mission to shut myself off from the world. So I adopted an unresponsive manner like my brother, leading me to feel a psychic bond with him. But as my sanity chipped away, I came to realize that I was in a mail-order cult…`,
+    problem: `I don't like that there's an "it" in both the second and third sentences, which refer to different things.`,
+    overview: `As my years of getting bullied grew unbearable, a strange letter arrived with promises of spiritual answers. All it asked for was a small payment, which I quickly mailed off. It was then revealed to me that I belonged to a race of astral beings— and as such, I had a mission to shut myself off from the world. So I adopted an unresponsive manner like my brother, leading me to feel a psychic bond with him. But as my sanity chipped away, I came to realize that I was in a mail-order cult…`,
     lyricUnits: [
         {
             unitMap: {},
@@ -323,7 +324,8 @@ export default {
                         `they'll catch you by`,
                         {
                             anchor: `your cape`,
-                            todo: REVIEW,
+                            todo: REST,
+                            problem: `Right now, this doesn't fully convey how much I was a "hero," which is the entire point. Ideally, it should convey that I drew really well, and thus the drawings I gave away were worthy gestures of friendship, for which any fellow child would be grateful. Also, not sure if I should specify how unathletic I was, which then explains how I became "easy prey" later on. But I've already spent so long on this…`,
                             card: {
                                 description: `In elementary school, I was well liked. Being small for my age, I was pampered even by other boys; and though I was absorbed in my sketchbooks, I was happy to draw anything for those who asked. But the traits that once made me a hero now marked me as easy prey in middle school, and I was ill-prepared.`,
                                 dotKeys: {
@@ -347,7 +349,7 @@ export default {
                             anchor: `learn to kick it back`,
                             todo: REVIEW,
                             card: {
-                                description: `The most popular kids in middle school were also the least concerned about being liked, which ran counter to my intuition that anything worth striving for needs to be pursued wholeheartedly. Yet trying things their way didn't make me any more likable either…`,
+                                description: `The most popular kids in middle school were also the least concerned about being liked, which ran counter to my intuition that anything worth striving for should be pursued wholeheartedly. Yet trying things their way didn't make me any more likable either…`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -679,17 +681,12 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `RI Research likely drew their material from the notion of`,
+                                    `I had no way to know this as a child, but RI Research likely drew their material from the notion of`,
                                     {
                                         anchor: `star people`,
                                         wiki: `Star_people_(New_Age_belief)`,
                                     },
-                                    `, a`,
-                                    {
-                                        anchor: `New Age`,
-                                        wiki: `New_Age`,
-                                    },
-                                    `belief in the '70s— though as a child, I had no way to know this. Like Beyonders, star people lost all memory of their stellar origins once they came to Earth.`,
+                                    `, a New Age belief in the '70s. Like Beyonders, star people lost all memory of their stellar origins once they came to Earth.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -777,10 +774,9 @@ export default {
                         `But till then, here's`,
                         {
                             anchor: `how you're to live`,
-                            todo: REVISE,
-                            problem: `Make it clear I modeled mine on his.`,
+                            todo: REVIEW,
                             card: {
-                                description: `The letters cautioned me to keep myself separate from society. I realized that my brother had been doing this all along, and so I adopted a stoic composure modeled on his.`,
+                                description: `The letters cautioned me to separate myself from society. I realized that my brother had been doing this all along, and so I took on an unresponsive manner based on his.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -957,6 +953,7 @@ export default {
                         `We knew the`,
                         {
                             anchor: `shortest ciphers`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The shorter the`,
@@ -964,7 +961,7 @@ export default {
                                         anchor: `cryptogram`,
                                         wiki: `Cryptogram`,
                                     },
-                                    `, the fewer clues it gives away, and thus the more difficult it is to solve. In the same vein, the more stoic my composure, the fewer openings I gave the bullies to provoke a response from me— and the less they then bothered to try.`,
+                                    `, the fewer clues it gives away, and thus the more difficult it is to solve. In the same vein, the more unresponsive my manner, the fewer openings I gave the bullies to provoke a response from me— and the less they then bothered to try.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,

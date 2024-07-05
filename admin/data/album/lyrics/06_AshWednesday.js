@@ -13,7 +13,7 @@ import {
     IS_UNIT_DOT,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Ash Wednesday',
@@ -336,7 +336,7 @@ export default {
                             anchor: `pressed for an opinion`,
                             todo: REVIEW,
                             card: {
-                                description: `Feeling sheepish that Catherine thought so little of my songs, I had hopes to write one someday that could tug at her heartstrings. So in this scenario, I imagine myself asking for a critique of the very lyrics you're reading now.`,
+                                description: `Feeling sheepish that Catherine thought so little of my songs, I hoped to write one someday that could tug at her heartstrings. So in this scenario, I imagine myself asking for a critique of the very lyrics you're reading now.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [NARRATIVE]: true,
@@ -744,7 +744,8 @@ export default {
                                 {
                                     anchor: `Catherine vaut bien une messe`,
                                     properNoun: true,
-                                    todo: REVIEW,
+                                    todo: REVISE,
+                                    problem: `"Earthly ambitions," "preceded," and "spiritual loyalties" still seems like too many big words in a row. Maybe this part can be said first, and the quote second.`,
                                     card: {
                                         description: [
                                             {

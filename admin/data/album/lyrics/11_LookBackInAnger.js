@@ -29,7 +29,8 @@ export default {
     playerStartTime: 1932.102,
     // This is a magic number adjusted by ear. In the mix, it's actually 41.66.
     mixSamplingFrequency: 41.64,
-    todo: REVIEW,
+    todo: REVISE,
+    problem: `Two "began to"s in a row. The em-dash effectively breaks up the sentence, which would sound too wordy otherwise, especially with words like "coerced" and "deprived." But at the same time, it disrupts the flow of the idea itself, which feels problematic in its own right.`,
     overview: `With the Yearlings becoming a fixture in the local scene, I began to attract more attention than I'd ever known, particularly from women. And yet, my misery didn't fade; it just simmered into a quiet resentment. I also began to regret my relationship with Sita, which now felt like a decision I'd been coerced to make— under deprived conditions from which I was now free.`,
     lyricUnits: [
         {
@@ -511,7 +512,7 @@ export default {
                             anchor: `fine when you had none`,
                             todo: REVIEW,
                             card: {
-                                description: `Things were finally looking up for me, so I was confused that a residual bitterness remained. I suspect it's because I felt indignant for my younger self, who'd been kept in the dark for so long about how much better life could be.`,
+                                description: `Things were finally looking up, so it confused me that a residual bitterness should remain. Perhaps it's because I felt indignant for my younger self, who'd been kept in the dark for so long about how much better life could be.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

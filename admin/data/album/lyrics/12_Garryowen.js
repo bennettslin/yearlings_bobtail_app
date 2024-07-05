@@ -250,7 +250,7 @@ export default {
                             anchor: `bustin' cars with fists`,
                             todo: REVIEW,
                             card: {
-                                description: `Tristan was particularly hotheaded when drunk. One night after getting us kicked out of a party for a fight he started, Tristan challenged us to see who could punch a random car window and break the glass first. I didn't win.`,
+                                description: `Tristan was particularly hotheaded when drunk. One night after getting us kicked out of a party for a fight that he started, Tristan challenged us to see who could punch a random car window and break the glass first. I didn't win.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -761,9 +761,10 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
-                        `After some trial and error, I decided the counterpoint sounds best with each part occupying the same register, as this allows them to blend into a single harmonic layer. At the same time, the ear can tease apart the different timbres of each instrument, as with the banjo, fiddle, and`,
+                        `After some trial and error, I decided that the counterpoint sounds best with each part occupying the same register, as this allows them to blend into a single harmonic layer. At the same time, the ear can tease apart the different timbres of each instrument, as with the banjo, fiddle, and`,
                         {
                             anchor: `tin whistle`,
                             wiki: `Tin_whistle`,

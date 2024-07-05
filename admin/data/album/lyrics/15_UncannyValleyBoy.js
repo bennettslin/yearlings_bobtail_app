@@ -83,8 +83,9 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
-                    description: `I wrote the music for this song a while back after waking from a horrid nightmare. The premise quickly seemed laughable, so I shelved it. But years later, I realized its gloomy chords and disjointed tempo changes would work well for a song about a nightmarish version of my parents.`,
+                    description: `I wrote the music for this song a while back after waking from a horrid nightmare. The premise quickly seemed laughable, so I shelved it. But years later, I realized that its gloomy chords and disjointed tempo changes would work well for a song about a nightmarish version of my parents.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGCRAFT]: true,
