@@ -90,7 +90,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: `This song is one of two on the album that was originally performed by the Yearlings. At the time, I kept its meaning a secret by disguising Mara's name in various puns. But in this recording, my enunciations are exaggerated to make the puns obvious.`,
                     dotKeys: {

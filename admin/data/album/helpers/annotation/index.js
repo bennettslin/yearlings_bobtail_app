@@ -119,6 +119,12 @@ const _addAnnotationLists = (annotations, song) => {
                 ) || null),
         )
 
+        annotation.cards.forEach(card => {
+            if (card.description && Array.isArray(card.description) && card.description.length === 1) {
+                console.log('got one', card.description[0])
+            }
+        })
+
         // For admin purposes.
         annotationTodos.push(annotation.todo)
     })

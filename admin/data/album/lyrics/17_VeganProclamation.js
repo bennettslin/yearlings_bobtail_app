@@ -469,7 +469,7 @@ export default {
                             todo: REVISE,
                             problem: `I haven't become vegan yet in the song. Change this to reflect that.`,
                             card: {
-                                description: `As a vegan, I became hypersensitive to anything that was a byproduct of the meat industry. Even something as commonplace as a crumpled fast food wrapper would remind me of how much our society has commoditized animal suffering.`,
+                                description: `As a vegan, I became hypersensitive to any byproduct of the meat industry. Even something as commonplace as a crumpled fast food wrapper would remind me of how much our society has commoditized animal suffering.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

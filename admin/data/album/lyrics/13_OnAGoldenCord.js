@@ -1092,8 +1092,7 @@ export default {
                         },
                         {
                             anchor: `houris`,
-                            todo: REVISE,
-                            problem: `Say that Muslims were recruited to be suicide bombers.`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In the Quran, the`,
@@ -1101,7 +1100,7 @@ export default {
                                         anchor: `houris`,
                                         wiki: `Houri`,
                                     },
-                                    `are maidens who await the faithful in paradise. This concept gained notoriety in the West when it was reported that Muslim suicide bombers were being recruited with the promise of seventy-two virgins in heaven. But given my own luckless beginnings, as well as my desire to date multiple women at great cost to myself and others, perhaps it was only my nation of birth that separated my fate from theirs.`,
+                                    `are maidens who await the faithful in paradise. This concept gained notoriety in the West when it was reported that young Muslim men were being recruited for suicide missions with the promise of seventy-two virgins in heaven. But given my own luckless beginnings, as well as my desire to date multiple women at great cost to myself and others, perhaps it was only my nation of birth that separated my fate from theirs.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
