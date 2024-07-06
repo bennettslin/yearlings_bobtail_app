@@ -260,7 +260,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: `I abandoned my plan to pack this song with M words after deciding that it wouldn't sound too good. But I'd already written this stanza by that point, and since it said exactly what I wanted to say, I kept it.`,
                     dotKeys: {
@@ -652,7 +651,7 @@ export default {
                             anchor: `solely for a pet`,
                             todo: REVIEW,
                             card: {
-                                description: `After Mara started going out with Jacob, she continued to interact with me in the same flirtatious manner, which made me realize that I'd misread her intentions all along. The ways of a social scene were just so new to me… Yet I couldn't help but smile at this thought, since it was proof that I finally belonged to one.`,
+                                description: `After Mara started going out with Jacob, she continued to interact with me in the same flirtatious manner, which made me realize that I'd misread her intentions all along. The ways of a social scene were just so new to me… And yet, I couldn't help but smile at this thought, since it was proof that I finally belonged to one.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -1028,7 +1027,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `My original plan was to take the puns one step further by recording this song in a "`,

@@ -37,8 +37,8 @@ export default {
     mixStartTime: `0:01:27.02`,
     playerReferenceTime: 756.159,
     playerStartTime: 755.661,
-    todo: REVIEW,
-    problem: `I don't like that there's an "it" in both the second and third sentences, which refer to different things.`,
+    todo: REST,
+    problem: `I don't like that there's an "it" in both the second and third sentences, which refer to different things. Also not sure if the em-dash would be better in the second sentence. But I've already spent so long on this one…`,
     overview: `As my years of getting bullied grew unbearable, a strange letter arrived with promises of spiritual answers. All it asked for was a small payment, which I quickly mailed off. It was then revealed to me that I belonged to a race of astral beings— and as such, I had a mission to shut myself off from the world. So I adopted an unresponsive manner like my brother, leading me to feel a psychic bond with him. But as my sanity chipped away, I came to realize that I was in a mail-order cult…`,
     lyricUnits: [
         {
@@ -349,7 +349,7 @@ export default {
                             anchor: `learn to kick it back`,
                             todo: REVIEW,
                             card: {
-                                description: `The most popular kids in middle school were also the least concerned about being liked, which ran counter to my intuition that anything worth striving for should be pursued wholeheartedly. Yet trying things their way didn't make me any more likable either…`,
+                                description: `The most popular kids in middle school were also the least concerned about being liked, which ran counter to my intuition that anything worth caring about should be pursued wholeheartedly. Yet trying things their way didn't make me any more likable either…`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -681,12 +681,12 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `I had no way to know this as a child, but RI Research likely drew their material from the notion of`,
+                                    `RI Research likely drew their material from the notion of`,
                                     {
                                         anchor: `star people`,
                                         wiki: `Star_people_(New_Age_belief)`,
                                     },
-                                    `, a New Age belief in the '70s. Like Beyonders, star people lost all memory of their stellar origins once they came to Earth.`,
+                                    `, a New Age belief in the '70s— though I had no way to know this as a child. Like Beyonders, star people lost all memory of their stellar origins once they arrived on Earth.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -776,7 +776,7 @@ export default {
                             anchor: `how you're to live`,
                             todo: REVIEW,
                             card: {
-                                description: `The letters cautioned me to separate myself from society. I realized that my brother had been doing this all along, and so I took on an unresponsive manner based on his.`,
+                                description: `The letters cautioned me to separate myself from society. I realized that my brother had been doing this all along, and so I adopted an unresponsive manner based on his.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -953,7 +953,6 @@ export default {
                         `We knew the`,
                         {
                             anchor: `shortest ciphers`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The shorter the`,

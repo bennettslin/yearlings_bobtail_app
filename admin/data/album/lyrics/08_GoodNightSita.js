@@ -173,7 +173,6 @@ export default {
                         {
                             anchor: `Dutch courage`,
                             properNoun: true,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `During my college years, I would ask older coworkers to purchase twelve-packs of cheap beer for me. So I always had a ready supply in my apartment, and before each date, I would down a few cans.`,
@@ -373,7 +372,7 @@ export default {
                             anchor: `crack up another doll`,
                             todo: REVIEW,
                             card: {
-                                description: `A friend once told me that if I can keep a woman cracking up at my jokes, then I'll always be good for another date. But this might not have been the best advice for me, since my sense of humor at the time was based on Catherine's fondness for bad puns.`,
+                                description: `A friend once told me that if I can keep a woman cracking up at my jokes, then I'll always be good for another date. But my humor at the time was based on Catherine's fondness for bad puns, so this might not have been the best advice for me.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [PUN]: true,
