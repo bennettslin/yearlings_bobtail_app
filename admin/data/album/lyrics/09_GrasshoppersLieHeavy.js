@@ -654,7 +654,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Phantom limbs`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `A`,

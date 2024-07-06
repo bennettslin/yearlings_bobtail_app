@@ -1184,7 +1184,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Pour sod, fourfeit tundr`,
-                            todo: REVIEW,
                             card: {
                                 description: `In the car, Howie and Tomer swap tales from their high school days, including the day they finally poured sod on the "poor sod" who now lies "four feet under."`,
                                 dotKeys: {
@@ -1827,7 +1826,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Coming down from my high, I notice that my heart stops every few seconds, so I count beats per minute to see if it gets steady over time. Unfortunately, my brain is too fried to do even basic "arithmetic."`,
+                                    description: `As I come down from my high, I notice that my heart stops every few seconds, which causes me to worry. So I try to count beats per minute, but unfortunately, my brain is too fried to do basic "arithmetic."`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true,
