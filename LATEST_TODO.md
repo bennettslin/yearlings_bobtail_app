@@ -1,6 +1,6 @@
 # Latest todo
+* Review ten annotations
 * Revise five annotations
-* Review ten annotations (Uncanny Valley and Golden Cord)
 * Redo one annotation
 * Write to Vanessa 
 

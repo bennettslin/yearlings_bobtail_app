@@ -16,7 +16,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REDO, REST, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Garryowen',
@@ -93,8 +93,8 @@ export default {
                     lyric: [
                         {
                             anchor: `Brushed her off`,
-                            todo: REVISE,
-                            problem: `I just don't like this as it is. It's too complicated. I grew distant, she groveled. That's really it.`,
+                            todo: REDO,
+                            problem: `I just don't like this as it is. So much so, that I'm calling it a full-on redo. It's too complicated. I grew distant, she groveled. That's really it.`,
                             card: {
                                 description: `Any time I began to grow distant, Sita would reach out by groveling. I would then rush back to comfort her, stung by my conscience. But as my patience wore thin, I would lace this comfort with passive-aggressive swipes— whereupon she would grovel even further. It became all we knew of how to speak for ourselves.`,
                                 dotKeys: {

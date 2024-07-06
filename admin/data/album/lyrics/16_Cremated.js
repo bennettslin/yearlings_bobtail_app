@@ -15,7 +15,7 @@ import {
     IS_UNIT_DOT,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REST, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Cremated',
