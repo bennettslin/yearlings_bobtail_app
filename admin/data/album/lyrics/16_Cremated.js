@@ -765,7 +765,8 @@ export default {
                         },
                         {
                             anchor: `fragile ex`,
-                            todo: REVIEW,
+                            todo: REVISE,
+                            problem: `It's still phrased awkwardly.`,
                             card: {
                                 description: [
                                     `Miriam was delicate in breaking up with me, knowing the kind of fragile ex-boyfriend I'd surely be. But still it had to be done, given the horrors that might lurk in my genetic makeup. Who knew— perhaps I was a carrier of "`,

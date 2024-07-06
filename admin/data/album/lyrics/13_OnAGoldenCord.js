@@ -30,7 +30,7 @@ export default {
     playerReferenceTime: 2298.378,
     playerStartTime: 2295.261,
     todo: REVIEW,
-    overview: `After a night out with friends, I would often shuffle on to Sita's place, slip into bed with her, and quickly doze off. But Sita was awake one night and waiting to confront me, having discovered my plans to break up with her. In tears, she returned the gold bracelet I'd given her at the start of our relationship, then kicked me out. With nowhere to go, I wandered the streets until sunrise. And so began the first of our many breakups…`,
+    overview: `After a night out with friends, I would often shuffle on to Sita's place, slip into bed beside her, and quickly doze off. But one night Sita was awake and waiting to confront me, having discovered my plans to break up with her. In tears, she returned the gold bracelet I'd given her at the start of our relationship— and then kicked me out. With nowhere to go, I wandered the streets until sunrise. And so began the first of our many breakups…`,
     isDoublespeaker: true,
     lyricUnits: [
         {
@@ -124,7 +124,7 @@ export default {
                             anchor: `broken`,
                             todo: REVIEW,
                             card: {
-                                description: `When I walked into Sita's living room that night to find her seated on the couch, the bracelet lay in a mangled heap on her coffee table. I wondered if she'd damaged it on purpose. I later realized that its dozens of intricate links would instantly snap into place once laid out on the wrist.`,
+                                description: `When I walked into Sita's living room that night to find her seated on the couch, the bracelet lay in a mangled heap on her coffee table. I wondered if she'd damaged it on purpose. I later realized that its dozens of intricate links instantly snap into place once laid out on the wrist.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -788,7 +788,7 @@ export default {
                                         anchor: `The Ballad of Reading Gaol`,
                                         wiki: `The_Ballad_of_Reading_Gaol`,
                                     },
-                                    `," a poem whose refrain, "For each man kills the thing he loves," finds a common thread tying the man's crime to Wilde's own— and to all of humanity's.`,
+                                    `," which finds a common thread tying the man's crime to Wilde's own— and to all of humanity's— with its refrain, "For each man kills the thing he loves."`,
                                 ],
                             },
                         },
@@ -894,7 +894,7 @@ export default {
                                         anchor: `Alexander the Great`,
                                         wiki: `Alexander_the_Great`,
                                     },
-                                    `simply chopped it in half with his sword, before venturing forth to fulfill the prophecy. And in my own attempts to achieve greatness, I applied the same brute force to sever the cord that tied me to Sita.`,
+                                    `simply chopped it in half with his sword, before setting forth to fulfill the prophecy. And in my own attempts to achieve greatness, I applied the same brute force to sever the cord that tied me to Sita.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1001,7 +1001,7 @@ export default {
                             properNoun: true,
                             todo: REVIEW,
                             card: {
-                                description: `Of course, I wish to plead my case— yet this will all be over with soon if I simply accept my role as the villain. And so the sober me, called up to testify for his drunken half, stays silent.`,
+                                description: `Of course, I wish to plead my case— yet this can all be over with sooner if I just accept my role as the villain. And so the sober me, called up to testify for his drunken half, stays silent.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -1088,7 +1088,6 @@ export default {
                         },
                         {
                             anchor: `houris`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In the Quran, the`,

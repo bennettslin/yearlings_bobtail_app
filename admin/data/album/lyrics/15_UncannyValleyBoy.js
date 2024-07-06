@@ -285,7 +285,7 @@ export default {
                                         anchor: `endorphined`,
                                         wiki: `Endorphins`,
                                     },
-                                    `," makes me a virtual orphan. That is to say, it allows me to live in denial of having parents whose expectations I fail to meet.`,
+                                    `," allows me to live as a virtual orphan, as I can now deny having parents whose expectations I fail to meet.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -470,15 +470,10 @@ export default {
                                                 wiki: `Hamartia`,
                                             },
                                         },
-                                        `is the tragic flaw that leads to a hero's downfall. And so my parents ask if I see the telltale signs that point to mine.`,
+                                        `is the tragic flaw that leads to a hero's downfall. And so my parents ask if I see the telltale signs that point to mine, while alluding to my past belief that I'm an astral being— or, as they put it, "a Martian."`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
-                                    },
-                                },
-                                {
-                                    description: `My parents might also be alluding to my former belief that I'm an astral being— or, as they put it, "a Martian."`,
-                                    dotKeys: {
                                         [PUN]: true,
                                     },
                                 },
@@ -890,7 +885,7 @@ export default {
                             anchor: `fail your Sita`,
                             todo: REVIEW,
                             card: {
-                                description: `Modern audiences may find it disgraceful that Rama's first act upon reuniting with Sita was to demand proof of her purity. And when I look back on my own relationship, I feel the same way about my need to be the more sexually experienced partner. It baffles me why I couldn't just be grateful for whatever had to happen before Sita finally chose me.`,
+                                description: `Modern audiences may find it disgraceful that Rama's first act upon reuniting with Sita was to demand proof of her chastity. And when I look back on my own relationship, I feel the same way about my need to be the more sexually experienced partner. It baffles me why I couldn't just be grateful for whatever had to happen before Sita finally chose me.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
