@@ -17,7 +17,7 @@ import {
     FORESHADOW_OF_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REST, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Vegan Proclamation',
@@ -409,7 +409,8 @@ export default {
                         `Torn straps`,
                         {
                             anchor: `unsalvaged sows`,
-                            todo: REVIEW,
+                            todo: REST,
+                            problem: `With three sentences of the same length in a row, the writing sounds stilted. The third sentence also doesn't flow smoothly from the second.`,
                             cards: [
                                 {
                                     description: [
@@ -657,7 +658,8 @@ export default {
                         `"So all your`,
                         {
                             anchor: `leads have left`,
-                            todo: REVIEW,
+                            todo: REST,
+                            problem: `With too many sentences of the same length in a row, the writing seems stilted here as well. Is it better to say, "Each time," "And each time," or something else altogether? Should second and third sentences be joined by a semicolon?`,
                             card: {
                                 description: `For years, my habit was to stay with Sita right up until I had another option to pursue. And each time, Sita would languish for a few months before finding the strength to contact me. Then, upon hearing that things hadn't worked out with the other woman, she would persuade me to come back. But now our situations were reversed: I had no more options coming down the pike, while Sita had fallen in love with someone else.`,
                                 dotKeys: {

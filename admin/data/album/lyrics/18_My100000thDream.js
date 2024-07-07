@@ -14,7 +14,7 @@ import {
     FORESHADOW_OF_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'My 100,000th Dream',
@@ -33,7 +33,6 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: `This is the other song on the album that was performed by the Yearlings. I wrote it to please Sita after she kept complaining that I didn't have any romantic songs about her— though it's more a wistful remembrance of our time together, given my certainty that we'd eventually break up. I kept this part of its meaning a secret, of course— but as with "M," I probably wasn't fooling anyone.`,
                     dotKeys: {
@@ -398,7 +397,6 @@ export default {
                         `My hundred thousandth dream, on the`,
                         {
                             anchor: `cliffs of El Cerrito`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The city of`,
