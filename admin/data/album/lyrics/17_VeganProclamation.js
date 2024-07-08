@@ -17,7 +17,7 @@ import {
     FORESHADOW_OF_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Vegan Proclamation',
@@ -34,9 +34,8 @@ export default {
     mixStartTime: `0:09:04.17`,
     playerReferenceTime: 3094.348,
     playerStartTime: 3091.413,
-    todo: REVISE,
-    problem: `Saying most devastating of all seems out of place. The others aren't devastating at all.`,
-    overview: `Having committed to writing and recording all the songs on my next album, I'd been burning bridges with my bandmates for some time. Since we'd stopped playing shows as a result, I had no new opportunities to meet women after Miriam left me. And now Sita had fallen in love with someone else; I wasn't to win her back, ever again. All I had now was myself— and I really didn't like myself very much. I desperately wanted to be a good person again, but I had no idea how.`,
+    todo: REVIEW,
+    overview: `Having committed to writing and recording every song on my next album, I'd been burning bridges with my bandmates for some time. Since we'd stopped playing shows as a result, I had few opportunities to meet women after Miriam left me. But worst of all, Sita had fallen in love with someone else; I wasn't to win her back, ever again. All I had now was myself— and I didn't like myself much at all. I desperately wanted to be a good person once more, but I had no idea how.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -179,10 +178,9 @@ export default {
                         },
                         {
                             anchor: `from our chest`,
-                            todo: REVISE,
-                            problem: `Second sentence just isn't working right now.`,
+                            todo: REVIEW,
                             card: {
-                                description: `In the Book of Genesis, God took one of Adam's ribs to give life to Eve. But my own promise to give of myself proved to be a false rib, since Sita could never truly be alive with me, even as she felt unworthy to begin life anew with someone else.`,
+                                description: `In the Book of Genesis, God took one of Adam's ribs and gave life to Eve. By contrast, my own promise to give of myself proved to be false— a false rib, if I may— for Sita could never feel alive with me, even as she felt unworthy to begin life anew with someone else.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [PUN]: true,
@@ -907,8 +905,9 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
-                    description: `I stayed vegan for five years, but then quit once I started dating Sasha, who ate meat. I guess it's the nature of who I am that my personal identity is the first thing I'll jettison whenever a chance for romance is at stake. And truth be told, being vegan was always somewhat rough, given my peanut and tree nut allergies. Still, these days I'm mostly vegetarian; it's both easier and healthier.`,
+                    description: `I stayed vegan for five years— but then quit once I started dating Sasha, who ate meat. I guess it's the nature of who I am that my personal identity is the first thing I'll jettison whenever a chance for romance is at stake. And truth be told, being vegan was always somewhat rough, given my peanut and tree nut allergies. Still, I'll happily be the first to switch to lab-grown meats— which PETA themselves advocate for.`,
                     dotKeys: {
                         [AFTERWORD]: true,
                     },

@@ -15,7 +15,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'क्यों? (Kyon?)',
@@ -72,10 +72,10 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVISE,
-                problem: `Probably as she waits is better phrasing.`,
+                todo: REST,
+                problem: `As it is, I'm less than satisfied with it because it's not clear whether "waiting" is a noun or a verb. But every other way around this problem seems to be worse, especially since "hear" and "here" are homonyms.`,
                 card: {
-                    description: `Having settled into an unhealthy power dynamic early on, Sita and I failed to grow as individuals. But the fault was entirely mine; as long as we were together, she couldn't do it on her own. And so the humming heard here is the sound of her as she waits for me in quiet resignation.`,
+                    description: `Having settled into an unhealthy power dynamic early on, Sita and I failed to grow as individuals. But the fault was entirely mine; as long as we were together, she couldn't do it on her own. And so the humming heard here is the sound of her waiting for me in quiet resignation.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGCRAFT]: true,
@@ -612,10 +612,9 @@ export default {
                         `Besides, a`,
                         {
                             anchor: `you-shaped pussing sore`,
-                            todo: REVISE,
-                            problem: `Should second sentence be complete?`,
+                            todo: REVIEW,
                             card: {
-                                description: `Or else, "U-shaped." Yet more imagery comparing vaginal penetration to an inflicted lesion. I think I was feeling both guilty and horny when I wrote these lyrics.`,
+                                description: `Or else, "U-shaped." Mind you, I'm not proud of all these analogies between vaginal penetration and an inflicted lesion— but for better or worse, I was feeling both guilty and horny when I wrote these lyrics.`,
                                 dotKeys: {
                                     [PUN]: true,
                                     [SONGCRAFT]: true,
