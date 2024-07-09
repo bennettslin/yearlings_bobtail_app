@@ -180,7 +180,7 @@ export default {
                             anchor: `from our chest`,
                             todo: REVIEW,
                             card: {
-                                description: `In the Book of Genesis, God took one of Adam's ribs and gave life to Eve. By contrast, my own promise to give of myself proved to be false— a false rib, if I may— for Sita could never feel alive with me, even as she felt unworthy to begin life anew with someone else.`,
+                                description: `In the Book of Genesis, God took one of Adam's ribs and gave life to Eve. By contrast, my own promise to give of myself proved to be false— a false rib, if you will— for Sita could never feel alive with me, even as she felt unworthy to begin life anew with someone else.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [PUN]: true,
@@ -907,7 +907,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: REVIEW,
                 card: {
-                    description: `I stayed vegan for five years— but then quit once I started dating Sasha, who ate meat. I guess it's the nature of who I am that my personal identity is the first thing I'll jettison whenever a chance for romance is at stake. And truth be told, being vegan was always somewhat rough, given my peanut and tree nut allergies. Still, I'll happily be the first to switch to lab-grown meats— which PETA themselves advocate for.`,
+                    description: `I stayed vegan for five years— but then quit once I started dating Sasha, who ate meat. I guess it's the nature of who I am that my personal identity is the first thing I'll jettison whenever a chance for romance is at stake. And truth be told, being vegan was always somewhat rough, given my peanut and tree nut allergies. But I'll happily be the first to switch to lab-grown meats— which PETA themselves advocate for.`,
                     dotKeys: {
                         [AFTERWORD]: true,
                     },

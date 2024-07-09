@@ -125,7 +125,7 @@ export default {
                             anchor: `broken`,
                             todo: REVIEW,
                             card: {
-                                description: `When I walked into Sita's living room that night to find her seated on the couch, the bracelet lay in a mangled heap on the coffee table. I wondered if she'd damaged it on purpose. I later realized that its dozens of intricate links instantly snap into place once laid out on the wrist.`,
+                                description: `When I walked into Sita's living room that night to find her seated on the couch, the bracelet lay in a mangled heap on the coffee table. I wondered if she'd damaged it on purpose. But I later realized that its dozens of intricate links instantly snap into place once laid out on the wrist.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -894,7 +894,7 @@ export default {
                                         anchor: `Alexander the Great`,
                                         wiki: `Alexander_the_Great`,
                                     },
-                                    `simply chopped it in half with his sword, and then set forth to fulfill the prophecy. And in my own attempts to achieve greatness, I applied the same brute force to sever the cord that tied me to Sita.`,
+                                    `simply chopped it in half with his sword— and then set forth to fulfill the prophecy. And in my own attempts to achieve greatness, I applied the same brute force to sever the cord that bound me to Sita.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,

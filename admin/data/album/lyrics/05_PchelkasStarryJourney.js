@@ -347,7 +347,8 @@ export default {
                         `till you`,
                         {
                             anchor: `learn to kick it back`,
-                            todo: REVIEW,
+                            todo: REST,
+                            problem: `I'm still not sure the connection is clearly being made here that being popular or liked is the thing worth caring about. But I've already spent so long on this.`,
                             card: {
                                 description: `The most popular kids in middle school were also the least concerned about being liked, which ran counter to my intuition that anything worth caring about should be pursued wholeheartedly. Yet trying things their way didn't make me any more likable either…`,
                                 dotKeys: {
@@ -678,15 +679,14 @@ export default {
                         `Beyonders bleed the most, their`,
                         {
                             anchor: `roots unknown to them`,
-                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `RI Research likely drew their material from the notion of`,
+                                    `Though I had no way to know this as a child, RI Research likely drew their material from the notion of`,
                                     {
                                         anchor: `star people`,
                                         wiki: `Star_people_(New_Age_belief)`,
                                     },
-                                    `, a New Age belief in the '70s— though I had no way to know this as a child. Like Beyonders, star people lost all memory of their stellar origins once they arrived on Earth.`,
+                                    `, a New Age belief in the '70s. Like Beyonders, star people lost all memory of their stellar origins once they arrived on Earth.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -776,7 +776,7 @@ export default {
                             anchor: `how you're to live`,
                             todo: REVIEW,
                             card: {
-                                description: `The letters cautioned me to separate myself from society. I realized that my brother had been doing this all along, and so I adopted an unresponsive manner based on his.`,
+                                description: `The letters cautioned me to separate myself from society. I realized that my brother had been doing this all along, and so I adopted an unresponsive manner similar to his.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

@@ -768,7 +768,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Given the horrors that lurked in my genetic makeup, it was understandable for Miriam to break up with me. Of course, she had to be gentle about it, knowing the kind of fragile ex-boyfriend I was sure to be.`,
+                                    description: `Given the horrors lurking in my genetic makeup, it was understandable that Miriam broke up with me. Of course, she had to be gentle about it, knowing the kind of fragile ex-boyfriend I was sure to be.`,
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                         [PUN]: true,
@@ -917,7 +917,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `My imagined scenario ends with Miriam feeling relieved to know that in her gene pool, "here's not where some lesser god has peed."`,
+                                    description: `My imagined scenario ends with Miriam feeling relieved to know that, in her gene pool, "here's not where some lesser god has peed."`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true,

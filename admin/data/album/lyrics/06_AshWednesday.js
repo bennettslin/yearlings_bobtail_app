@@ -13,7 +13,7 @@ import {
     IS_UNIT_DOT,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REST, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Ash Wednesday',
@@ -334,7 +334,6 @@ export default {
                         `Oh Catherine,`,
                         {
                             anchor: `pressed for an opinion`,
-                            todo: REVIEW,
                             card: {
                                 description: `Feeling sheepish that Catherine thought so little of my songs, I longed to write one someday that could tug at her heartstrings. So in this scenario, I imagine myself asking for a critique of the very lyrics you're reading now.`,
                                 dotKeys: {

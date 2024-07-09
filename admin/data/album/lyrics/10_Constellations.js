@@ -17,7 +17,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Constellations!',
@@ -32,7 +32,8 @@ export default {
     mixStartTime: `0:01:18.60`,
     playerReferenceTime: 1751.447,
     playerStartTime: 1751.191,
-    todo: REVIEW,
+    todo: REST,
+    problem: `I don't know why, but it still doesn't feel like "they" in the second half of the second sentence refers to "them all" in the first half. It's acceptable otherwise, I think. All things considered, I would also prefer to specify that they're Ana's stoner friends.`,
     overview: `One night I went with my bassist Ana and some stoner friends to get high on Robitussin while exploring the steam tunnels under UCLA. I got them all to pretend that we were Vikings, Mongols, and various waves of human migration throughout world history; in hindsight, they were probably just humoring me. I ended up doing so much Robitussin that summer, it took a while to regain my grip on reality.`,
     lyricUnits: [
         {
@@ -1684,9 +1685,10 @@ export default {
                         `How old are`,
                         {
                             anchor: `these mummeries`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `With my eyes still closed, my thoughts grow further disjointed. Injecting myself into world history, I see all of time collapsing into a singularity, such that everyone who's ever lived is at once dead and not dead, including me. Or is this just an endless series of silent acts we've all agreed to perform in? "Mummeries," if you will?`,
+                                    description: `With my eyes still closed, my thoughts grow further disjointed. Injecting myself into world history, I see all of time collapsing into a singularity, such that everyone who's ever lived is at once dead and not dead, including me. Or is this just an endless series of silent acts we've all agreed to perform in? "Mummeries," if I may?`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true,
@@ -1826,7 +1828,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `As I come down from my high, I notice that my heart stops every few seconds, which causes me to worry. So I try to count beats per minute, but unfortunately, my brain is too fried to do basic "arithmetic."`,
+                                    description: `Coming down from my high, I notice that my heart stops every few seconds, which causes me to worry. So I try to count beats per minute, but unfortunately, my brain is too fried to do basic "arithmetic."`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true,
