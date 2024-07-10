@@ -781,7 +781,7 @@ export default {
                                             anchor: `Fragile X`,
                                             wiki: `Fragile_X_syndrome`,
                                         },
-                                        `" is caused by a mutated X chromosome and results in mental disability.`,
+                                        `" is caused by a mutated X chromosome, which results in mental disability.`,
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
