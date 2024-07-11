@@ -15,7 +15,7 @@ import {
     IS_UNIT_DOT,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REST } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Cremated',
@@ -765,7 +765,8 @@ export default {
                         },
                         {
                             anchor: `fragile ex`,
-                            todo: REVIEW,
+                            todo: REST,
+                            problem: `I think I'm okay with the way it is now, but it's so different from how it was before, that I'd like to review it again after some time has passed.`,
                             cards: [
                                 {
                                     description: `Given the horrors lurking in my genetic makeup, it was understandable that Miriam broke up with me. Of course, she had to be gentle about it, knowing the kind of fragile ex-boyfriend I was sure to be.`,
@@ -907,7 +908,8 @@ export default {
                         {
                             anchor: `Godspeed`,
                             properNoun: true,
-                            todo: REVIEW,
+                            todo: REST,
+                            problem: `In the second card, the comma makes the sentence sound stilted. Can it be phrased better?`,
                             cards: [
                                 {
                                     description: `To add to my insecurities as a child about being raised Buddhist, I also looked different from everyone else in Sasha's world. And so my inferiority complex failed to distinguish between carrying faulty genes, belonging to a faulty faith, and being of a faulty race. They all seemed to derive from a single defect at the core of my being.`,

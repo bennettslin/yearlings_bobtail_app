@@ -83,7 +83,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
+                todo: REST,
+                problem: `Too many adjectives? But it will do for now.`,
                 card: {
                     description: `I wrote the music for this song a while back after waking from a horrid nightmare. The premise seemed laughable by day's end, however, so I quietly shelved it. But years later, I realized that its gloomy chords and moody tempo changes would work well for a song about a nightmarish version of my parents.`,
                     dotKeys: {
@@ -470,7 +471,7 @@ export default {
                                                 wiki: `Hamartia`,
                                             },
                                         },
-                                        `is the tragic flaw that leads to a hero's downfall. And so my parents ask if I see the telltale signs that point to mine, while alluding to my past belief of being born from the stars— or, as they put it, "a Martian."`,
+                                        `is the tragic flaw that leads to a hero's downfall. And so my parents ask if I see the telltale signs that point to mine, while alluding to my past belief that I was born from the stars— or, as they put it, "a Martian."`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,

@@ -613,8 +613,9 @@ export default {
                         {
                             anchor: `you-shaped pussing sore`,
                             todo: REVIEW,
+                            problem: `This may be the best that it gets, without putting in far more time and energy than I already have. Still, do revisit it once more.`,
                             card: {
-                                description: `Or else, "U-shaped." Mind you, I'm not proud of all these metaphors comparing vaginal penetration to an inflicted lesion— but for better or worse, I was feeling both guilty and horny when I wrote these lyrics.`,
+                                description: `Or else, "U-shaped." Mind you, I'm not proud of all these metaphors comparing vaginal penetration to an inflicted lesion… But for better or worse, I was feeling both guilty and horny when I wrote these lyrics.`,
                                 dotKeys: {
                                     [PUN]: true,
                                     [SONGCRAFT]: true,

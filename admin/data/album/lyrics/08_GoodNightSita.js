@@ -372,7 +372,7 @@ export default {
                             anchor: `crack up another doll`,
                             todo: REVIEW,
                             card: {
-                                description: `A friend once told me that if I can keep a woman cracking up at my jokes, then I'll always be good for another date. My humor at the time was based on Catherine's fondness for bad puns, though, so this advice didn't work for me.`,
+                                description: `A friend once told me that if I can keep a woman cracking up at my jokes, then I'll always be good for another date. But since my humor at the time was based on Catherine's fondness for bad puns, this wasn't the best advice for me.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [PUN]: true,

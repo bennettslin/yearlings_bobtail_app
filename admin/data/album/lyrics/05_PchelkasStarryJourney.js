@@ -776,7 +776,7 @@ export default {
                             anchor: `how you're to live`,
                             todo: REVIEW,
                             card: {
-                                description: `The letters cautioned me to separate myself from society. I realized that my brother had been doing this all along, so I adopted an unresponsive manner similar to his.`,
+                                description: `The letters cautioned me to separate myself from society. I realized that my brother had been doing this all along, so I adopted an unresponsive manner like his.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
