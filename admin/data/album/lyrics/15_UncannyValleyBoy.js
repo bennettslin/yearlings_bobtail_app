@@ -886,7 +886,7 @@ export default {
                             anchor: `fail your Sita`,
                             todo: REVIEW,
                             card: {
-                                description: `Modern audiences may find it disgraceful that Rama's first act upon reuniting with Sita was to demand proof of her chastity. And when I look back on my own relationship, I feel the same way about my need to be the more sexually experienced partner. It baffles me that I couldn't just be grateful for whatever needed to happen first before Sita finally chose me.`,
+                                description: `Modern audiences may find it disgraceful that Rama's first act upon reuniting with Sita was to demand proof of her chastity. And when I look back on my own relationship, I feel the same way about my need to be the more sexually experienced partner. It baffles me that I couldn't just be grateful for whatever needed to happen before Sita finally chose me.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },

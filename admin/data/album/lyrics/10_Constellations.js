@@ -1688,7 +1688,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `With my eyes still shut, my thoughts grow further disjointed. Injecting myself into world history, I see all of time collapsing into a singularity, such that everyone who's ever lived is at once dead and not dead, including me. Or is this just an endless series of silent acts we've all agreed to perform in? "Mummeries," if I may?`,
+                                    description: `With my eyes still shut, my thoughts continue to wander. Injecting myself into world history, I see all of time collapsing into a singularity, such that everyone who's ever lived is at once dead and not dead, including me. Or is this just an endless series of silent acts we've all agreed to perform in? "Mummeries," if I may?`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true,
@@ -1828,7 +1828,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `As I come down from my high, my heart seems to stop every few seconds, which causes me to worry. So I try to count beats per minute, but unfortunately, my brain is too fried to do basic "arithmetic."`,
+                                    description: `Coming down from my high, I notice that my heart stops every few seconds, which causes me to worry. So I try to count beats per minute, but unfortunately, my brain is too fried to do basic "arithmetic."`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true,

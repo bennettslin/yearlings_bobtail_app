@@ -125,7 +125,7 @@ export default {
                             anchor: `broken`,
                             todo: REVIEW,
                             card: {
-                                description: `When I walked into Sita's living room that night to find her seated on the couch, the bracelet lay in a mangled heap on the coffee table. I wondered if she'd damaged it on purpose. I later realized that its dozens of intricate links were meant to snap into place once laid out on the wrist.`,
+                                description: `When I walked into Sita's living room that night to find her seated on the couch, the bracelet lay in a mangled heap on the coffee table, which led me to wonder if she'd damaged it on purpose. I later realized that its dozens of intricate links would instantly snap into place once laid out on the wrist.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -881,7 +881,8 @@ export default {
                         `of this`,
                         {
                             anchor: `frayed cord detached`,
-                            todo: REVIEW,
+                            todo: REST,
+                            problem: `It's fine, I think. But I spent so long nitpicking over minor changes, and going back and forth between similar versions, that I'd like to revisit this one more time.`,
                             card: {
                                 description: [
                                     `In antiquity, legend held that whoever could unravel the "`,

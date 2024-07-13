@@ -15,7 +15,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REST, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'क्यों? (Kyon?)',
@@ -612,7 +612,7 @@ export default {
                         `Besides, a`,
                         {
                             anchor: `you-shaped pussing sore`,
-                            todo: REVIEW,
+                            todo: REST,
                             problem: `This may be the best that it gets, without putting in far more time and energy than I already have. Still, do revisit it once more.`,
                             card: {
                                 description: `Or else, "U-shaped." Mind you, I'm not proud of all these metaphors comparing vaginal penetration to an inflicted lesion… But for better or worse, I was feeling both guilty and horny when I wrote these lyrics.`,
