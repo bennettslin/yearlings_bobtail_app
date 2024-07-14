@@ -1688,7 +1688,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `With my eyes still shut, my thoughts continue to wander. Injecting myself into world history, I see all of time collapsing into a singularity, such that everyone who's ever lived is at once dead and not dead, including me. Or is this just an endless series of silent acts we've all agreed to perform in? "Mummeries," if I may?`,
+                                    description: `As my thoughts wander through the historical past, I see all of time collapsing into a singularity, such that everyone who's ever lived is at once dead and not dead, including me. Or is this just an endless series of silent acts we've all agreed to perform in? "Mummeries," if I may?`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true,
@@ -1825,7 +1825,8 @@ export default {
                         `Then pounds`,
                         {
                             anchor: `arrhythmetic heart`,
-                            todo: REVIEW,
+                            todo: REST,
+                            problem: `I've worked through so many versions of this that it still doesn't feel perfect. This is just the best working version so far. So I'd like to revisit it just to get fresh eyes on it.`,
                             cards: [
                                 {
                                     description: `Coming down from my high, I notice that my heart stops every few seconds, which causes me to worry. So I try to count beats per minute, but unfortunately, my brain is too fried to do basic "arithmetic."`,

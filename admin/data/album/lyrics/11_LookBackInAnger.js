@@ -16,7 +16,7 @@ import {
     FORESHADOW_OF_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REDO, REST, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REDO, REST, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Look Back in Anger',
@@ -510,7 +510,6 @@ export default {
                         `and you were`,
                         {
                             anchor: `fine when you had none`,
-                            todo: REVIEW,
                             card: {
                                 description: `Things were finally looking up, so it puzzled me that a trace of bitterness remained. I suspect it's because I felt indignant for my younger self, who'd been kept in the dark for so long about how much better life could be.`,
                                 dotKeys: {

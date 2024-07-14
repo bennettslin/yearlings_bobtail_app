@@ -649,7 +649,6 @@ export default {
                         `keeps me`,
                         {
                             anchor: `solely for a pet`,
-                            todo: REVIEW,
                             card: {
                                 description: `After Mara started going out with Jacob, she continued to interact with me in the same flirtatious manner, which made me realize that I'd misread her intentions all along. The ways of a social scene were just so new to me…`,
                                 dotKeys: {
