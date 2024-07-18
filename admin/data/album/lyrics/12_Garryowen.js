@@ -16,7 +16,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REDO, REST, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REDO, REST, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Garryowen',
@@ -225,7 +225,7 @@ export default {
                         `Drunk pissed`,
                         {
                             anchor: `punks tryst,`,
-                            todo: REST,
+                            todo: REVIEW,
                             problem: `I still think the first sentence can be phrased in a more satisfying way.`,
                             card: {
                                 description: [
@@ -234,7 +234,12 @@ export default {
                                         anchor: `baseball T-shirts`,
                                         wiki: `Raglan_sleeve`,
                                     },
-                                    `back then, thinking this would alienate the fewest subcultures and thus appeal to the most women. I was also baby-faced enough to be taken for a middle schooler. Tristan, one of the punks in the thieving group, liked our ragtag look and named us the "`,
+                                    `back then, thinking this would alienate the fewest subcultures and thus appeal to the most women. And due to what I now knew to be`,
+                                    {
+                                        anchor: `growth hormone deficiency`,
+                                        wiki: `Growth_hormone_deficiency`,
+                                    },
+                                    `, I was also baby-faced enough to be taken for a middle schooler. Tristan, one of the punks in the thieving group, liked our ragtag look and named us the "`,
                                     {
                                         anchor: `Young Ones`,
                                         wiki: `The_Young_Ones_(TV_series)`,
