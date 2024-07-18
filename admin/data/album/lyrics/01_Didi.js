@@ -17,7 +17,7 @@ import {
     FLASHBACK_TO_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: '弟弟 (Didi)',
@@ -339,8 +339,16 @@ export default {
                     lyric: [
                         {
                             anchor: `decked in overalls`,
+                            todo: REVIEW,
                             card: {
-                                description: `Since I was the smallest boy in my grade, the only item of clothing that fit me was a pair of girls' overalls from the lost-and-found closet.`,
+                                description: [
+                                    `Due to what I now know to be`,
+                                    {
+                                        anchor: `growth hormone deficiency`,
+                                        wiki: `Growth_hormone_deficiency`,
+                                    },
+                                    `, I was the smallest child in my grade. So when the nurse searched through the lost-and-found closet for something I could wear, the only item of clothing that fit me was a pair of girls' overalls.`,
+                                ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
