@@ -234,7 +234,7 @@ export default {
                                         anchor: `baseball T-shirts`,
                                         wiki: `Raglan_sleeve`,
                                     },
-                                    `back then, thinking this would alienate the fewest subcultures and thus appeal to the most women. And due to what I now knew to be`,
+                                    `back then, thinking this would alienate the fewest subcultures and thus appeal to the most women. And due to what I now know to be`,
                                     {
                                         anchor: `growth hormone deficiency`,
                                         wiki: `Growth_hormone_deficiency`,
