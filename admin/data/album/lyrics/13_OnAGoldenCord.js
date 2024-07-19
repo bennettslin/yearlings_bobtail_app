@@ -101,7 +101,6 @@ export default {
                         `safely kept with`,
                         {
                             anchor: `bread and pocket lint`,
-                            todo: REVIEW,
                             card: {
                                 description: `In those days, the less I spent on food, the more I could spend on beer. So before leaving the cafeteria, I would swipe a few bread rolls, which were always plentiful, and stash them in the front pockets of my jacket.`,
                                 dotKeys: {
@@ -124,7 +123,7 @@ export default {
                             anchor: `broken`,
                             todo: REVIEW,
                             card: {
-                                description: `When I walked into Sita's living room that night to find her seated on the couch, the bracelet lay in a mangled heap on the coffee table, which led me to wonder if she'd damaged it on purpose. I later realized that its dozens of intricate links would snap into place once laid out on the wrist.`,
+                                description: `When I walked into Sita's living room that night to find her seated on the couch, the bracelet lay in a mangled heap on the coffee table, which led me to wonder if she'd damaged it on purpose. I later realized that I'd only ever seen its dozens of intricate links neatly laid out on her wrist.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
