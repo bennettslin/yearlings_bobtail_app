@@ -1685,7 +1685,6 @@ export default {
                         `How old are`,
                         {
                             anchor: `these mummeries`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `As my mind wanders through the historical past, I see all of time collapsing into a singularity, such that everyone who's ever lived is at once dead and not dead, including me. Or is this just an endless series of silent acts we've all agreed to perform in— "mummeries," if I may?`,
