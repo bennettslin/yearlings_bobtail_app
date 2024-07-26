@@ -347,7 +347,7 @@ export default {
                                         anchor: `growth hormone deficiency`,
                                         wiki: `Growth_hormone_deficiency`,
                                     },
-                                    `, I was the smallest child in my grade. So when the nurse searched through the lost-and-found closet for something I could wear home, the only item of clothing that fit me was a pair of girls' overalls.`,
+                                    `, I was the smallest child in my grade. So when the nurse searched the lost-and-found closet for something I could wear home, all that fit me was a pair of girls' overalls.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,

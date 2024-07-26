@@ -18,7 +18,7 @@ import {
     REFRAIN,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REST } from '../../../containers/Annotations/constants/todos'
 
 /**
  * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the
@@ -774,7 +774,6 @@ export default {
                         `But till then, here's`,
                         {
                             anchor: `how you're to live`,
-                            todo: REVIEW,
                             card: {
                                 description: `The letters cautioned me to separate myself from society. Realizing that my brother had been doing this all along, I studied his unresponsive manner to fashion my own.`,
                                 dotKeys: {

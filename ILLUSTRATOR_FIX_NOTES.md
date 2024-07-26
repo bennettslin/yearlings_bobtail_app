@@ -51,6 +51,8 @@
 
 ### Bennett
 * solicitingOpinion
+* pondering
+    * Make more hunched over and lower to cover butt
 * dateEnding
     * Head too long
 * dishroomReading

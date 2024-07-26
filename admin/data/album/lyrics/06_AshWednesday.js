@@ -13,7 +13,7 @@ import {
     IS_UNIT_DOT,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
-import { REST, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Ash Wednesday',
@@ -110,8 +110,16 @@ export default {
                         `: in my`,
                         {
                             anchor: `bookless room`,
+                            todo: REVIEW,
                             card: {
-                                description: `When Catherine visited my apartment for the first time, she glanced around and remarked that she didn't see any books. "I don't read," I explained, only partly in jest.`,
+                                description: [
+                                    `When Catherine visited my apartment for the first time, she glanced around and remarked that she didn't see any books. "I don't read," I joked— though it was partly in truth. As children, my sister was the voracious bookworm and aspiring writer, so I preferred hobbies that`,
+                                    {
+                                        isItalic: true,
+                                        lyric: `didn't`,
+                                    },
+                                    `involve words, like art and music.`,
+                                ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
