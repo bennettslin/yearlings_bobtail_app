@@ -339,7 +339,8 @@ export default {
                     lyric: [
                         {
                             anchor: `decked in overalls`,
-                            todo: REVIEW,
+                            todo: REST,
+                            problem: `Not sure "all that fit me" is perfectly clear, but I wanted to avoid saying "thing" twice.`,
                             card: {
                                 description: [
                                     `Due to what I now know to be`,
