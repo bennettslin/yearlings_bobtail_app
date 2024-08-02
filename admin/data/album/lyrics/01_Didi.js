@@ -343,12 +343,12 @@ export default {
                             problem: `Not sure "all that fit me" is perfectly clear, but I wanted to avoid saying "thing" twice.`,
                             card: {
                                 description: [
-                                    `Due to what I now know to be`,
+                                    `Due to what we now know to be`,
                                     {
-                                        anchor: `growth hormone deficiency`,
+                                        anchor: `pituitary dwarfism`,
                                         wiki: `Growth_hormone_deficiency`,
                                     },
-                                    `, I was the smallest child in my grade. So when the nurse searched the lost-and-found closet for something I could wear home, all that fit me was a pair of girls' overalls.`,
+                                    `, I was the smallest child in my grade. So when the nurse looked through the lost-and-found closet for something I could wear home, all that fit me was a pair of girls' overalls.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
