@@ -17,7 +17,7 @@ import {
     SOLO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST } from '../../../containers/Annotations/constants/todos'
+import { REST, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Grasshoppers Lie Heavy',
@@ -386,6 +386,8 @@ export default {
                         `attached to your`,
                         {
                             anchor: `sci-fi paperback`,
+                            todo: REVISE,
+                            problem: `Make about pretension.`,
                             cards: [
                                 {
                                     description: `At the time, I was obsessed with Dick's stories of altered states and dystopian worlds. I almost always had one of his novels nestled under my arm.`,
