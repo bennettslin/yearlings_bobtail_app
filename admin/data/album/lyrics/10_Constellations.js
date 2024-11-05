@@ -1522,7 +1522,7 @@ export default {
                                             anchor: `dissociative`,
                                             wiki: `Dissociative`,
                                         },
-                                        `drug, I start to detach from myself. In doing so, I catch a glimpse of how superficial my aspirations are, and how "hollow" the local "scene" is in which I desire recognition.`,
+                                        `drug, I begin to detach from myself. In doing so, I catch a glimpse of how superficial my aspirations are, and how "hollow" the local "scene" is in which I desire recognition.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
