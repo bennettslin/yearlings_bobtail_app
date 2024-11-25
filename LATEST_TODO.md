@@ -2,7 +2,7 @@
 * Review ten annotations
 * Revise five annotations
 * Redo one annotation
-* Write to Vanessa 
+* Write to Vanessa Ogle
 
 # BYC
 * Review
