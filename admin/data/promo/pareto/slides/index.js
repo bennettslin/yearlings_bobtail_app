@@ -68,13 +68,13 @@ export default getFormattedSlideMetadata([
         ],
     },
     {
-        title: `The 5x rule of interdependence`,
+        title: `The 5x law of interdependence`,
         body: [
             {
                 paragraph: `Here's the value proposition. Since an interdependent band doesn't need to spend any effort on their area of weakness, they can redirect it back into their area of strength. So instead of a mere 20% of their effort, the artistic side of every project now gets the full 100%— a fivefold increase!`,
             },
             {
-                paragraph: `This fivefold increase in effort would make a band five times more talented, and improve their art five times over. Let's call this the 5x rule of interdependence. Based on this rule, we can expect the best interdependent bands to be five times better than the best indie artists.`,
+                paragraph: `This fivefold increase in effort would make a band five times more talented, and improve their art five times over. Let's call this the "5x law of interdependence." Based on this rule, we can expect the best interdependent bands to be five times better than the best indie artists.`,
             },
         ],
         footnote: `This rule isn't as provocative as it seems. The best interdependent band, after all, is the Beatles.`,
