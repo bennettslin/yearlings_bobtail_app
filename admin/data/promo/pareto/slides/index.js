@@ -52,7 +52,7 @@ export default getFormattedSlideMetadata([
                 paragraph: `If the project we're talking about is a band's album, then clearly the band's strength lies on the artistic side of it: writing and recording the music. On the other hand, they'll be weakest on the administrative side: marketing and distributing the album. Which makes sense. In the past, this is the work that a record label would have done.`,
             },
             {
-                paragraph: `Still, an indie artist will happily power through it all. 100% progress for 100% effort! Who can argue with linear efficiency?`,
+                paragraph: `Still, an indie artist will happily power through it all. 100% results for 100% effort! Who can argue with linear efficiency?`,
             },
         ],
     },
@@ -68,22 +68,22 @@ export default getFormattedSlideMetadata([
         ],
     },
     {
-        title: `The 5x law of interdependence`,
+        title: `The 4x law of interdependence`,
         body: [
             {
-                paragraph: `Here's the value proposition. Since an interdependent band doesn't need to spend any effort on their area of weakness, they can redirect it back into their area of strength. So instead of a mere 20% of their effort, the artistic side of every project now gets the full 100%— a fivefold increase!`,
+                paragraph: `Here's the value proposition. Since an interdependent band doesn't need to spend any effort on their area of weakness, they can redirect it back into their area of strength. Which means they can get 80% results for 20% effort, again and again— or 400% results for 100% effort!`,
             },
             {
-                paragraph: `This fivefold increase in effort would make a band five times more talented, and improve their art five times over. Let's call this the "5x law of interdependence." Based on this rule, we can expect the best interdependent bands to be five times better than the best indie artists.`,
+                paragraph: `This fourfold increase would make a band four times more talented, and improve their art four times over. Let's call it the "4x law of interdependence": Speaking in general, we can expect the best interdependent bands to be four times better than the best indie artists.`,
             },
         ],
-        footnote: `This rule isn't as provocative as it seems. The best interdependent band, after all, is the Beatles.`,
+        footnote: `This claim isn't as provocative as it seems. The best interdependent band, after all, is the Beatles.`,
     },
     {
         title: `Indie labels want fanbases`,
         body: [
             {
-                paragraph: `So in essence, every interdependent band promises to be five times better, in exchange for being allowed to focus solely on their strength. Let's call the terms of this promise their Pareto package deal.`,
+                paragraph: `So in essence, every interdependent band promises to be four times better, in exchange for being allowed to focus solely on their strength. Let's call the terms of this promise their Pareto package deal.`,
             },
             {
                 paragraph: [
