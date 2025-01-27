@@ -17,7 +17,7 @@ import {
     SOLO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Grasshoppers Lie Heavy',
@@ -386,11 +386,10 @@ export default {
                         `attached to your`,
                         {
                             anchor: `sci-fi paperback`,
-                            todo: REVISE,
-                            problem: `Make about pretension.`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `At the time, I was obsessed with Dick's stories of altered states and dystopian worlds. I almost always had one of his novels nestled under my arm.`,
+                                    description: `At the time, I was obsessed with Dick's stories of altered states and dystopian worlds. On campus, I often tried to be seen with one of his novels nestled under my arm.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -937,8 +936,9 @@ export default {
                         `"Shall I leave you," she says, "`,
                         {
                             anchor: `here to Philip Dick`,
+                            todo: REVIEW,
                             card: {
-                                description: `Or else, to "feel up dick." Sita lightens the awkwardness by joking that I might prefer to continue masturbating alone. At the same time, she takes a gentle jab at the bookish exterior I've crafted.`,
+                                description: `Or else, to "feel up dick." Sita lightens the awkwardness by joking that I might prefer to continue masturbating alone. At the same time, she takes a gentle jab at the bookish persona I've painstakingly crafted.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
