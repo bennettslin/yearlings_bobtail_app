@@ -1605,7 +1605,12 @@ export default {
                 cards: [
                     {
                         description: [
-                            `The final movement of Beethoven's`,
+                            `The final movement of`,
+                            {
+                                anchor: `Beethoven`,
+                                wiki: `Ludwig_van_Beethoven`,
+                            },
+                            `'s`,
                             {
                                 anchor: `last major work`,
                                 wiki: `String_Quartet_No._16_(Beethoven)`,
@@ -1625,12 +1630,7 @@ export default {
                                 anchor: `acronym`,
                                 wiki: `Acronym`,
                             },
-                            `asks, "Why be?"— the other responds, "Be why!"— and this felt like`,
-                            {
-                                anchor: `Beethoven`,
-                                wiki: `Ludwig_van_Beethoven`,
-                            },
-                            `giving his approval.`,
+                            `asks, "Why be?"— the other responds, "Be why!"— and this felt like Beethoven giving his approval.`,
                         ],
                         dotKeys: {
                             [AFTERWORD]: true,
