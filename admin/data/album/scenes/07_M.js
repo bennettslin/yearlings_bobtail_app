@@ -275,7 +275,7 @@ export default [
     },
     {
         unitIndex: 4,
-        description: `It's after a show, and the Yearlings are breaking down their set. Jacob is flirting with Mara. Bennett is selling a CD to a hipster, but is distracted by the sight of Mara.`,
+        description: `It's after a show, and the Yearlings are breaking down their set. Joi is flirting with Mara. Bennett is selling a CD to a hipster, but is distracted by the sight of Mara.`,
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
@@ -287,7 +287,7 @@ export default [
                     instance: FLIRTING,
                 },
                 [MARA]: {
-                    description: 'flirting with Jacob',
+                    description: 'flirting with Joi',
                     instance: FLIRTING,
                 },
                 [ANA]: {
@@ -319,7 +319,7 @@ export default [
     },
     {
         unitIndex: 6,
-        description: `The Yearlings are taking a break from band practise, eating burgers around a table. Mara is with them, cuddling with Jacob. Bennett is visibly agitated.`,
+        description: `The Yearlings are taking a break from band practise, eating burgers around a table. Mara is with them, cuddling with Joi. Bennett is visibly agitated.`,
         presences: {
             [ACTOR]: {
                 [BENNETT]: {

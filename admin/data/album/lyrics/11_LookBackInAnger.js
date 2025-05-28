@@ -777,7 +777,7 @@ export default {
                             anchor: `Red and friends`,
                             properNoun: true,
                             card: {
-                                description: `The redhead and her friends loiter as my bandmates and I load our gear into Jacob's van. During my chat with her between sets, I left open the possibility that we might all hang out after the show.`,
+                                description: `The redhead and her friends loiter as my bandmates and I load our gear into Joi's van. During my chat with her between sets, I left open the possibility that we might all hang out after the show.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },

@@ -12,7 +12,3 @@
 * Consolidate cards
     * Fewer cards is preferable
     * Less spelling out of references in a separate card is preferable
-* Make more gender inclusive
-    * If the general point can be made without specifying gender, do that
-    * Mention Ana and Jacob in afterwords?
-        * Ask about their pronouns

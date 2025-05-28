@@ -25,7 +25,7 @@ export default {
     referenceDescription: `Spanish guitar in measure 1`,
     playerStartTime: 1131.214,
     mixStartTime: `0:02:12.00`,
-    overview: `After Catherine broke up with me, I vowed to spend the next five years shaping myself into the ideal romantic prospect. As part of this plan, I got involved in the local scene and eventually put together my own band, the Yearlings; by the fifth year, we were playing house parties and small clubs. I soon grew infatuated with a scenester named Mara, whom I noticed from afar. But Mara ended up going out with my drummer Jacob, which made band practice awkward.`,
+    overview: `After Catherine broke up with me, I vowed to spend the next five years shaping myself into the ideal romantic prospect. As part of this plan, I got involved in the local scene and eventually put together my own band, the Yearlings; by the fifth year, we were playing house parties and small clubs. I soon grew infatuated with a scenester named Mara, whom I noticed from afar. But Mara ended up going out with my drummer Joi, which made band practice awkward.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -76,7 +76,7 @@ export default {
                                             anchor: `Mara`,
                                             wiki: `Mara_(demon)`,
                                         },
-                                        `, who personifies death. Like the Buddha, I had to summon otherworldly reserves of self-denial to get through band practice after Jacob and Mara started dating.`,
+                                        `, who personifies death. Like the Buddha, I had to summon otherworldly reserves of self-denial to get through band practice after Joi and Mara started dating.`,
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
@@ -298,7 +298,7 @@ export default {
                             anchor: `wishes on a friend`,
                             card: {
                                 description: [
-                                    `Toward the end of my five-year plan, the Yearlings began to play local shows. I was thrilled the day Mara showed up in the audience— but it was Jacob who caught her eye. I felt like the`,
+                                    `Toward the end of my five-year plan, the Yearlings began to play local shows. I was thrilled the day Mara showed up in the audience— but it was Joi who caught her eye. I felt like the`,
                                     {
                                         anchor: `bottled genie`,
                                         wiki: `Jinn`,
@@ -321,7 +321,7 @@ export default {
                         {
                             anchor: `hold in peace`,
                             card: {
-                                description: `So Jacob got together with Mara without any real effort, while romance for me felt no less elusive than ever. I thus had to admit that my five-year plan was a washout.`,
+                                description: `So Joi got together with Mara without any real effort, while romance for me felt no less elusive than ever. I thus had to admit that my five-year plan was a washout.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -652,7 +652,7 @@ export default {
                         {
                             anchor: `solely for a pet`,
                             card: {
-                                description: `After Mara started going out with Jacob, she continued to interact with me in the same flirtatious manner, which made me realize that I'd misread her intentions all along. The ways of a social scene were just so new to me…`,
+                                description: `After Mara started going out with Joi, she continued to interact with me in the same flirtatious manner, which made me realize that I'd misread her intentions all along. The ways of a social scene were just so new to me…`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -734,7 +734,7 @@ export default {
                                             anchor: `chimney sweep`,
                                             wiki: `Chimney_sweep`,
                                         },
-                                        `will bring good luck to a bride. But in the Victorian era, the children who cleared soot from chimneys were neglected orphans; whatever fortunes they imparted to others, only a lifetime of ill health awaited themselves. Likewise, I'd helped introduce Mara to Jacob, and now it was on me to get on with my wretched life.`,
+                                        `will bring good luck to a bride. But in the Victorian era, the children who cleared soot from chimneys were neglected orphans; whatever fortunes they imparted to others, only a lifetime of ill health awaited themselves. Likewise, I'd helped introduce Mara to Joi, and now it was on me to get on with my wretched life.`,
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
@@ -787,7 +787,7 @@ export default {
                             todo: REVISE,
                             problem: `Tense is weird.`,
                             card: {
-                                description: `Jacob was my friend, and I was happy that he'd found Mara. Still, I wasn't eager to stick around. So after imagining them to exchange vows of "I do," I silently offered a vow of my own to bid them "two farewell."`,
+                                description: `Joi was my friend, and I was happy that they'd found Mara. Still, I wasn't eager to stick around. So after imagining them to exchange vows of "I do," I silently offered a vow of my own to bid them "two farewell."`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,

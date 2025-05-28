@@ -197,7 +197,7 @@ export default [
                     instance: SIDELONG_HESITANCE,
                 },
                 [ANA]: {
-                    description: 'front, leaning against wall, waiting for Jacob',
+                    description: 'front, leaning against wall, waiting for Joi',
                     instance: WAITING,
                 },
                 [MARA]: {
