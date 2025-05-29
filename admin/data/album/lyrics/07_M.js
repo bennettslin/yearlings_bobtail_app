@@ -785,7 +785,7 @@ export default {
                         {
                             anchor: `to fare well`,
                             todo: REVISE,
-                            problem: `Tense is weird.`,
+                            problem: `Tense is weird. Now there's two uses of "them" pronouns.`,
                             card: {
                                 description: `Joi was my friend, and I was happy that they'd found Mara. Still, I wasn't eager to stick around. So after imagining them to exchange vows of "I do," I silently offered a vow of my own to bid them "two farewell."`,
                                 dotKeys: {
@@ -842,7 +842,7 @@ export default {
                             cards: [
                                 {
 
-                                    description: `In short, everyone does what you would expect them to do, given what you can expect them to want— and a social scene is just the sum total of all that. No one gets in your way to spite you— which means you can only react with good humor when your best-laid plans fall apart.`,
+                                    description: `In short, everyone does what you'd expect them to do, given what you can expect them to want— and a social scene is just the sum total of all that. No one gets in your way to spite you— which means you can only react with good humor when your best-laid plans fall apart.`,
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                     },
