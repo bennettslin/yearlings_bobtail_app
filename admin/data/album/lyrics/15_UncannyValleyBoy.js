@@ -1036,15 +1036,16 @@ export default {
                         `, you found spelled out in`,
                         {
                             anchor: `dead ants`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
-                                        `I sit up and notice my drunken scrawls on the sidewalk, whimsically imagining what would have happened had I used`,
+                                        `I sit up and notice my drunken scrawls on the sidewalk, imagining in whimsy what would've happened if I'd used`,
                                         {
                                             anchor: `ant chalk`,
                                             wiki: `Ant_chalk`,
                                         },
-                                        `.`,
+                                        `instead.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,

@@ -1196,6 +1196,7 @@ export default {
                         {
                             anchor: `Siburial plains`,
                             properNoun: true,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The Americas were first settled by north Asian populations who gladly "forfeited the tundra's`,
@@ -1203,7 +1204,7 @@ export default {
                                         anchor: `Siberian`,
                                         wiki: `Siberia`,
                                     },
-                                    `plains," which otherwise would have served as their "burial" grounds.`,
+                                    `plains," which otherwise would've served as their "burial" grounds.`,
                                 ],
                                 dotKeys: {
                                     [PUN]: true,

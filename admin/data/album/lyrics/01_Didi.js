@@ -17,7 +17,7 @@ import {
     FLASHBACK_TO_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: '弟弟 (Didi)',
@@ -78,9 +78,10 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
-                        `Since this song is sung from the perspective of my sister as a child, I wanted to recreate the feeling of childlike innocence heard in the opening measures of "`,
+                        `Since this song is sung from my sister's perspective as a child, I wanted to recreate the feel of childlike innocence heard in the opening measures of "`,
                         {
                             anchor: `Wouldn't It Be Nice`,
                             wiki: `Wouldn't_It_Be_Nice`,
@@ -145,9 +146,10 @@ export default {
                         `wondering to himself, who would`,
                         {
                             anchor: `tie his shoes`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `In preschool, we were taught to tie our shoes by making the bunny crisscross the tree. But being left-handed, I was never clear on which hand should hold the bunny. My shoelaces always came undone as a result.`,
+                                    description: `In preschool, we were taught to tie our shoes by making the bunny crisscross the tree. But being left-handed, I was never clear on which hand holds the bunny. My shoelaces always came undone as a result.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -174,6 +176,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
                         `My ambition for this album was to do for rock music what`,
@@ -181,7 +184,7 @@ export default {
                             anchor: `James Joyce`,
                             wiki: `James_Joyce`,
                         },
-                        `had done for modern literature. Since his semi-autobiographical first novel,`,
+                        `had done for modernist literature. Since his semi-autobiographical first novel,`,
                         {
                             isItalic: true,
                             lyric: {
@@ -208,8 +211,9 @@ export default {
                         `Didi, you've been following, I`,
                         {
                             anchor: `didn't want you here`,
+                            todo: REVIEW,
                             card: {
-                                description: `I often tagged along with my sister, who was fiercely protective of me. But there were times when she and her friends would insist on doing girl stuff by themselves. This always left me in a panic, since I had few playmates of my own.`,
+                                description: `My sister was fiercely protective of me, and I often tagged along with her wherever she went. Still, there were times when she and her friends insisted on doing girl stuff by themselves. This always left me in a panic, since I had few playmates of my own.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -339,8 +343,7 @@ export default {
                     lyric: [
                         {
                             anchor: `decked in overalls`,
-                            todo: REST,
-                            problem: `Not sure "all that fit me" is perfectly clear, but I wanted to avoid saying "thing" twice.`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Due to what we now know to be`,
@@ -348,7 +351,7 @@ export default {
                                         anchor: `pituitary dwarfism`,
                                         wiki: `Growth_hormone_deficiency`,
                                     },
-                                    `, I was the smallest child in my grade. So when the nurse looked through the lost-and-found closet for something I could wear home, all that fit me was a pair of girls' overalls.`,
+                                    `, I was the smallest child in my grade. So when the nurse looked through the lost-and-found closet for something I could wear home, the only thing that fit me was a pair of girls' overalls.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -576,9 +579,10 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
-                        `A, C, and E\u2011flat, the three keys heard thus far, also comprise three of the four major triads of an`,
+                        `A, C, and E\u2011flat, the three keys heard so far, also comprise three of the four major triads of an`,
                         {
                             anchor: `octatonic collection`,
                             wiki: `Octatonic_scale`,
