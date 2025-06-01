@@ -17,7 +17,7 @@ import {
     FLASHBACK_TO_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVISE } from '../../../containers/Annotations/constants/todos'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Willy the Cocoa',
@@ -28,9 +28,8 @@ export default {
     referenceDescription: `Keyboards in anacrusis`,
     playerStartTime: 177.396,
     mixStartTime: `0:01:03.00`,
-    todo: REVISE,
-    problem: `Specify fate as a grown man.`,
-    overview: `After my younger brother was diagnosed with autism, a neighbor told us about Willy the Cocoa, a mentally disabled man who'd once wandered the neighborhood collecting recyclables. Tragically, Willy was killed in a fight with some gangsters, who smashed his head open with a bottle. Hearing this story affected me greatly, and I would recall it whenever I pondered my brother's likely fate.`,
+    todo: REVIEW,
+    overview: `After my younger brother was diagnosed with autism, a neighbor told us about Willy the Cocoa, a mentally disabled man who'd once wandered the neighborhood collecting recyclables. Tragically, Willy was killed in a fight with some gangsters, who smashed his head open with a bottle. Hearing this story affected me greatly, and I'd recall it for years afterward when pondering my brother's likely future.`,
     lyricUnits: [
         {
             unitMap: {},

@@ -13,7 +13,6 @@ export default {
             },
             `was finished.`,
         ],
-        `When I sent out promo copies to the indie labels and press, however, they all dismissed it as a vanity project. Since then, I've struggled to bring this dense and complex work to the public, given that I remain a complete unknown. Hopefully, the seven additional years that I've now spent coding, illustrating, and annotating this audio webcomic will finally do the trick!`,
+        `When I sent out demo copies to the indie labels and press, however, they all dismissed it as a vanity project. Since then, I've struggled to bring this dense and complex work to the public, given that I remain a complete unknown. Hopefully, the seven additional years that I've now spent coding, illustrating, and annotating this audio webcomic will finally do the trick!`,
     ],
 }
-

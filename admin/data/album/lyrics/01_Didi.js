@@ -17,7 +17,7 @@ import {
     FLASHBACK_TO_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: '弟弟 (Didi)',
@@ -213,7 +213,7 @@ export default {
                             anchor: `didn't want you here`,
                             todo: REVIEW,
                             card: {
-                                description: `My sister was fiercely protective of me, and I often tagged along with her wherever she went. Still, there were times when she and her friends insisted on doing girl stuff by themselves. This always left me in a panic, since I had few playmates of my own.`,
+                                description: `My sister was fiercely protective of me, and I often tagged along with her. Still, there were times when she and her friends would insist on doing girl stuff by themselves, which always left me in a panic.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -582,12 +582,12 @@ export default {
                 todo: REVIEW,
                 card: {
                     description: [
-                        `A, C, and E\u2011flat, the three keys heard so far, also comprise three of the four major triads of an`,
+                        `The tonic triads of the three major keys heard thus far— A, C, and E\u2011flat— all belong to the same`,
                         {
                             anchor: `octatonic collection`,
                             wiki: `Octatonic_scale`,
                         },
-                        `. The song now ends on G\u2011flat, the fourth and remaining major triad, to suggest the excitement of undiscovered vistas awaiting a young child.`,
+                        `. The song now ends on the fourth and remaining major triad of that collection, G\u2011flat, to suggest the excitement of undiscovered vistas awaiting a young child.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -599,11 +599,10 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REST,
-                problem: `It says what I want it to say. I'm just not completely satisfied with it.`,
+                todo: REVIEW,
                 card: {
                     description: [
-                        `As home studios became affordable in the early '00s, I sensed that a wave of artists would soon take the art of music recording to new heights, just as`,
+                        `As home studios grew affordable in the early '00s, I sensed that a wave of artists was about to take the art of music recording to new heights, just as`,
                         {
                             anchor: `Brian Wilson`,
                             wiki: `Brian_Wilson`,
@@ -613,12 +612,17 @@ export default {
                             isItalic: true,
                             lyric: `Pet Sounds`,
                         },
-                        `. And like Wilson, these artists would do so by holding off any concerns about recreating their sound onstage. But the indie labels stood firm, insisting that serious artists build their careers on live shows. So upon completion,`,
+                        `. So I set about to join them— and thus, like Wilson, I held off any worries about how I'd recreate`,
                         {
                             isItalic: true,
                             lyric: `Yearling's Bobtail`,
                         },
-                        `was dismissed as the work of a hobbyist and fell by the wayside.`,
+                        `onstage. Upon its completion, however, I learned that the indie labels will only sign you once you can play shows`,
+                        {
+                            isItalic: true,
+                            lyric: `without`,
+                        },
+                        `their help. For this reason, then, they wrote me off as a hobbyist… and still do to this day.`,
                     ],
                     dotKeys: {
                         [AFTERWORD]: true,
