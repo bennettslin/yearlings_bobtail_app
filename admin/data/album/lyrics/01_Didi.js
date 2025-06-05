@@ -146,7 +146,6 @@ export default {
                         `wondering to himself, who would`,
                         {
                             anchor: `tie his shoes`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `In preschool, we were taught to tie our shoes by making the bunny crisscross the tree. But being left-handed, I was never clear on which hand holds the bunny. My shoelaces always came undone as a result.`,
@@ -192,7 +191,7 @@ export default {
                                 wiki: `A_Portrait_of_the_Artist_as_a_Young_Man`,
                             },
                         },
-                        `, begins in the simple prose of a child, I decided to do the same for this opening song.`,
+                        `, begins in the simple prose of a child, I decided to do the same with this opening song.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -343,7 +342,6 @@ export default {
                     lyric: [
                         {
                             anchor: `decked in overalls`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Due to what we now know to be`,
@@ -579,7 +577,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `The tonic triads of the three major keys heard thus far— A, C, and E\u2011flat— all belong to the same`,
@@ -612,7 +609,7 @@ export default {
                             isItalic: true,
                             lyric: `Pet Sounds`,
                         },
-                        `. So I set about to join them— and thus, like Wilson, I held off any worries about how I'd recreate`,
+                        `. So I set out to join them— and thus, like Wilson, I held off any worries about how I'd recreate`,
                         {
                             isItalic: true,
                             lyric: `Yearling's Bobtail`,
