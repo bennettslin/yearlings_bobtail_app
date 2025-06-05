@@ -212,7 +212,7 @@ export default {
                             anchor: `didn't want you here`,
                             todo: REVIEW,
                             card: {
-                                description: `My sister was fiercely protective of me, and I often tagged along with her. Still, there were times when she and her friends would insist on doing girl stuff by themselves, which always left me in a panic.`,
+                                description: `My sister was fiercely protective of me, and I'd often tag along with her. Still, there were times when she and her friends would insist on doing girl stuff by themselves, which always left me in a panic.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -609,12 +609,12 @@ export default {
                             isItalic: true,
                             lyric: `Pet Sounds`,
                         },
-                        `. So I set out to join them— and thus, like Wilson, I held off any worries about how I'd recreate`,
+                        `. So I committed to join them— and thus, like Wilson, I held off any worries about how I'd recreate`,
                         {
                             isItalic: true,
                             lyric: `Yearling's Bobtail`,
                         },
-                        `onstage. Upon its completion, however, I learned that the indie labels will only sign you once you can play shows`,
+                        `onstage. Upon its completion, however, I learned that the indie labels will only sign you if you can play shows`,
                         {
                             isItalic: true,
                             lyric: `without`,
