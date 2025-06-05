@@ -29,7 +29,7 @@ export default {
     playerStartTime: 177.396,
     mixStartTime: `0:01:03.00`,
     todo: REVIEW,
-    overview: `After my younger brother was diagnosed with autism, a neighbor told us about Willy the Cocoa, a mentally disabled man who'd once wandered the neighborhood collecting recyclables. Tragically, Willy was killed in a fight with some gangsters, who smashed his head open with a bottle. Hearing this story affected me greatly, and I'd recall it for years afterward when pondering my brother's likely future.`,
+    overview: `After my younger brother was diagnosed with autism, a neighbor told us about Willy the Cocoa, a mentally disabled man who'd once wandered the neighborhood collecting recyclables. Tragically, Willy was killed in a fight with some gangsters, who smashed his head open with a bottle. Hearing this story affected me greatly, and for years afterward, I'd recall it when pondering my brother's likely future.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -273,8 +273,9 @@ export default {
                         `licking lips`,
                         {
                             anchor: `he ends his stroll`,
+                            todo: REVIEW,
                             card: {
-                                description: `In most legends, the changeling is a witting participant in the deceitful replacement of a human child. As such, it takes pains to hide its true form while in the company of other humans. And so before Willy goes off to cash in his recyclables, he ends "as troll" by donning his human guise.`,
+                                description: `In most legends, the changeling is a witting participant in the deceitful replacement of a human child. As such, it takes pains to hide its true form while in the company of other humans. And so, before Willy goes off to cash in his recyclables, he ends "as troll" by donning his human guise.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -493,6 +494,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
                         `I first learned of`,
@@ -500,7 +502,7 @@ export default {
                             anchor: `autism`,
                             wiki: `Autism`,
                         },
-                        `when I overheard my parents talk about my brother's condition in their Taiwanese accents. The next day, I explained to classmates that my brother was "artistic." So I wanted the lyrics for this song to explore how a child's mishearing of adult conversation might lead to roundabout understanding.`,
+                        `when I overheard my parents talk about my brother's condition in their Taiwanese accents. The next day, I explained to classmates that my brother was "artistic." So I wanted the lyrics in this song to explore how a child's mishearing of adult conversation might lead to roundabout understanding.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -572,8 +574,9 @@ export default {
                         `the`,
                         {
                             anchor: `bearded baby`,
+                            todo: REVIEW,
                             card: {
-                                description: `My brother's odd behavior frustrated me to no end, and I longed to believe he was simply displaying wisdom meant for a different world. So upon reading about changeling legends many years later, I could sympathize with those villagers in times past who told tales of grownup trolls disguised as human children.`,
+                                description: `My brother's odd behavior frustrated me to no end, and I longed to believe he was just displaying wisdom meant for a different world. So upon reading about changeling legends many years later, I could sympathize with those villagers in times past who told tales of grownup trolls disguised as human children.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -589,8 +592,9 @@ export default {
                         `with his tummy clenched, muffling`,
                         {
                             anchor: `baffled sobs`,
+                            todo: REVIEW,
                             card: {
-                                description: `The hardest thing about hurting my brother was knowing he had no way to understand the cause of my anger. The times when I turned on him and inflicted physical pain would always remain without explanation. For him, it was just another part of what life was.`,
+                                description: `The hardest thing about hurting my brother was knowing he had no way to understand the cause of my anger. The times when I'd turned on him and inflicted physical pain would always remain without explanation. For him, it was just another part of what life was.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -778,9 +782,10 @@ export default {
                             `Shelled skull has freed`,
                             {
                                 anchor: `unsalvaged soul`,
+                                todo: REVIEW,
                                 cards: [
                                     {
-                                        description: `To justify the abuse of sickly children, religious doctrine in the past typically claimed that they were devoid of souls.`,
+                                        description: `To justify the abuse of sickly children, religious doctrine in the past often claimed that they were devoid of souls.`,
                                         dotKeys: {
                                             [REFERENCE]: true,
                                         },
@@ -922,6 +927,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
                         `To play the electric guitar riff heard here, I used both a`,
@@ -934,7 +940,7 @@ export default {
                             anchor: `whammy bar`,
                             wiki: `Vibrato_systems_for_guitar`,
                         },
-                        `at the same time. Since either of these can bend the pitch on its own, it makes no sense to combine them— which is exactly why a troll guitarist would do so.`,
+                        `at the same time. Since either of these can bend pitch on its own, it makes no sense to combine them— which is exactly why a troll guitarist would do so.`,
                     ],
                     dotKeys: {
                         [OBSERVATION]: true,
@@ -954,8 +960,9 @@ export default {
                         `But`,
                         {
                             anchor: `how marbleless`,
+                            todo: REVIEW,
                             card: {
-                                description: `Occasionally, someone would make a clumsy attempt to ease my parents' worries by claiming to envy my brother. This person might remark on how "marvelous" it must be to live without one's "marbles," for example. I had to wonder how gladly they would embrace the greater likelihood of being a victim of violent crime as well.`,
+                                description: `Occasionally, someone would make a clumsy attempt to ease my parents' worries by claiming to envy my brother. For instance, this person might remark on how "marvelous" it must be to live without one's "marbles." I had to wonder how gladly they'd embrace the greater likelihood of being a victim of violent crime as well.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -971,15 +978,16 @@ export default {
                         `being ever stuck in`,
                         {
                             anchor: `imp-runt age of mind`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
-                                        `After my brother was diagnosed with autism, my mother went back to school to learn child development. At the dinner table, she would explain to us concepts such as "`,
+                                        `After my brother was diagnosed with autism, my mother went back to school to learn child development. At the dinner table, she'd explain concepts like "`,
                                         {
                                             anchor: `imprinting`,
                                             wiki: `Imprinting_(psychology)`,
                                         },
-                                        `," the phase during which a child learns emotional attachment. She would then voice regret that she began her studies too late to help my brother.`,
+                                        `," the phase during which a child learns emotional attachment. Even so, she always felt guilty that her studies were too little, too late to help my brother.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -1003,8 +1011,9 @@ export default {
                         `Are you sick?`,
                         {
                             anchor: `I am seven`,
+                            todo: REVIEW,
                             card: {
-                                description: `My brother learned to answer the question of how old he was at age six. But even after turning seven, he still insisted on answering "six." Though we finally got him to accept that "seven" was the new correct answer, the cost in sweat and tears was so high that when he turned eight, none of us had the energy to relive the ordeal. He's been answering "seven" ever since. And so here, I imagine him as a grownup testily correcting a stranger who has the nerve to ask if he's "six."`,
+                                description: `At age six, my brother learned to answer the question of how old he was. But even after turning seven, he still insisted on answering "six." Though we finally got him to accept that "seven" was the new correct answer, the cost in sweat and tears was so high that when he turned eight, none of us had the energy to relive the ordeal. He's been answering "seven" ever since. And so here, I imagine him as a grownup testily correcting a stranger who has the nerve to ask if he's "six."`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
