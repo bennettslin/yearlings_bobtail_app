@@ -78,7 +78,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `Since this song is sung from my sister's perspective as a child, I wanted to recreate the feel of childlike innocence heard in the opening measures of "`,
@@ -210,7 +209,6 @@ export default {
                         `Didi, you've been following, I`,
                         {
                             anchor: `didn't want you here`,
-                            todo: REVIEW,
                             card: {
                                 description: `My sister was fiercely protective of me, and I'd often tag along with her. Still, there were times when she and her friends would insist on doing girl stuff by themselves, which always left me in a panic.`,
                                 dotKeys: {
@@ -614,7 +612,7 @@ export default {
                             isItalic: true,
                             lyric: `Yearling's Bobtail`,
                         },
-                        `onstage. Upon its completion, however, I learned that the indie labels will only sign you if you can play shows`,
+                        `onstage. Upon its completion, though, I learned that the indie labels will only sign you once you can play shows`,
                         {
                             isItalic: true,
                             lyric: `without`,

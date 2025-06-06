@@ -273,7 +273,6 @@ export default {
                         `licking lips`,
                         {
                             anchor: `he ends his stroll`,
-                            todo: REVIEW,
                             card: {
                                 description: `In most legends, the changeling is a witting participant in the deceitful replacement of a human child. As such, it takes pains to hide its true form while in the company of other humans. And so, before Willy goes off to cash in his recyclables, he ends "as troll" by donning his human guise.`,
                                 dotKeys: {
@@ -782,7 +781,6 @@ export default {
                             `Shelled skull has freed`,
                             {
                                 anchor: `unsalvaged soul`,
-                                todo: REVIEW,
                                 cards: [
                                     {
                                         description: `To justify the abuse of sickly children, religious doctrine in the past often claimed that they were devoid of souls.`,
