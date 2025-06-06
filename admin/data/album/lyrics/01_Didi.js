@@ -190,7 +190,7 @@ export default {
                                 wiki: `A_Portrait_of_the_Artist_as_a_Young_Man`,
                             },
                         },
-                        `, begins in the simple prose of a child, I decided to do the same with this opening song.`,
+                        `, begins in the simple prose of a child, then, I did the same with this opening song.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,

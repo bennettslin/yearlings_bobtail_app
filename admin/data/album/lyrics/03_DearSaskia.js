@@ -30,7 +30,6 @@ export default {
     playerStartTime: 384.329,
     // This is a magic number adjusted by ear. In the mix, it's actually 44.96.
     mixSamplingFrequency: 45.39,
-    todo: REVIEW,
     overview: `Sasha was a childhood friend, as well as my first crush. The strength she drew from her Jewish identity fascinated me, but it also clued me in on a cruel paradox— namely, that nothing ever comes from longing to share in someone's faith and roots, which stay strong precisely by not being shared. Sasha moved away during middle school, at the peak of my struggles with some bullies. That summer, I wrote her a letter on a family trip to Taiwan.`,
     lyricUnits: [
         {
@@ -349,7 +348,6 @@ export default {
                         {
                             // NOTE: I decided to contract from "would have."
                             anchor: `I would've too`,
-                            todo: REVIEW,
                             card: {
                                 description: `Yet if Sasha had wanted me, then of course I'd have gladly converted to Judaism. It made no sense to be loyal to my own cultural identity, which I'd had no hand in choosing.`,
                                 dotKeys: {
@@ -543,7 +541,7 @@ export default {
                             anchor: `anarchy reigns`,
                             todo: REVIEW,
                             card: {
-                                description: `It was weird to be taught in history class that anarchy devolves into tyranny, only then to wander onto the quad and see this very phenomenon in action.`,
+                                description: `It was bizarre to be taught in history class that anarchy devolves into tyranny, only to then wander onto the quad and see this very phenomenon in action.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -582,7 +580,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `Of course, it's more common to say that boys will "`,
+                                    `Of course, it's far more common to say that boys will "`,
                                     {
                                         isItalic: true,
                                         lyric: `be`,
@@ -781,7 +779,6 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `After sending out demo copies of`,
