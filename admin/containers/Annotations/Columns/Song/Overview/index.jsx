@@ -7,7 +7,7 @@ import {
     getSongIsLogue,
 } from '../../../../../../src/endpoint/album/songs'
 import { getOverviewTodo } from '../../../../../endpoint/album/todos'
-import { REDO, REVIEW, REVISE } from '../../../constants/todos'
+import { REDO, REST, REVIEW, REVISE } from '../../../constants/todos'
 import './style'
 
 const TodoOverview = ({ songIndex }) => {
@@ -26,6 +26,7 @@ const TodoOverview = ({ songIndex }) => {
                     overviewTodo === REDO && 'colour__redo',
                     overviewTodo === REVISE && 'colour__revise',
                     overviewTodo === REVIEW && 'colour__review',
+                    overviewTodo === REST && 'colour__rest',
                 ),
             }}
         >

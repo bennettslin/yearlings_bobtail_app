@@ -18,7 +18,7 @@ import {
     REFRAIN,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 /**
  * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the
@@ -72,6 +72,7 @@ export default {
                             `"But F., that man is the`,
                             {
                                 anchor: `worst nuisance on the beach`,
+                                todo: REVIEW,
                                 card: {
                                     description: [
                                         `In a humorous passage from`,
@@ -87,7 +88,7 @@ export default {
                                                 wiki: `Beautiful_Losers`,
                                             },
                                         },
-                                        `, the character F. tires of getting bullied at the beach. So he signs up for the Charles Axis bodybuilding course advertised in a comic book— only to find out that it's Charles Axis who bullies him. This absurd revelation perfectly sums up my mood whenever I reflect on where my own misadventures in mail order ended up taking me.`,
+                                        `, the character F. tires of getting bullied at the beach. So he signs up for the Charles Axis bodybuilding course advertised in a comic book— only to discover it's Charles Axis who bullies him. This absurd revelation perfectly sums up my mood whenever I reflect on where my own misadventures in mail order ended up taking me.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -102,8 +103,9 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
-                    description: `I wanted a child to recite this line, but no one I knew had children at the time. So I had my sister do it in her best child's voice.`,
+                    description: `I wanted a child to recite this line, but no one I knew had any at the time. So I had my sister do it while imitating a child's voice.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
@@ -229,6 +231,7 @@ export default {
                         `You stowed away`,
                         {
                             anchor: `beneath your captain bed`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `I slept in a`,
@@ -236,7 +239,7 @@ export default {
                                         anchor: `captain bed`,
                                         wiki: `Storage_bed`,
                                     },
-                                    `that lay atop a dresser on one side, with the other side flush against the wall. The dresser was only a few feet deep, leaving ample space behind it for a hideaway. To get inside, I would crawl through the cabinet doorway and squeeze past the flimsy back panel.`,
+                                    `that lay atop a dresser on one side, with the other side flush against the wall. The dresser was only a few feet deep, leaving ample space behind it for a hideaway. To get inside, I'd first crawl through the cabinet doorway, and then squeeze past the flimsy back panel.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -372,8 +375,9 @@ export default {
                     lyric: [
                         {
                             anchor: `Feigning sick`,
+                            todo: REVIEW,
                             card: {
-                                description: `In earlier years, I was proud of my perfect attendance record. Once the bullying began, however, I would skip school by faking illness. My mother noticed the change, but she trusted me enough not to press the issue.`,
+                                description: `In earlier years, I was proud of my perfect attendance record. Once the bullying began, however, I'd skip school by faking illness. My mother noticed the change, but she trusted me enough not to press the issue.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -423,8 +427,9 @@ export default {
                         `Soon`,
                         {
                             anchor: `send-away offers`,
+                            todo: REVIEW,
                             card: {
-                                description: `Since I had no friends in middle school, I would amuse myself by sending away for free samples offered in the back pages of my comic books. As a result, I got flooded with junk mail— which exposed me to even more offers. Then one day, I received a letter from RI Research, Special Human Being Laboratory.`,
+                                description: `Since I had no friends in middle school, I'd amuse myself by sending away for free samples offered in the back pages of my comic books. As a result, I got flooded with junk mail— which exposed me to even more offers. Then one day, I received a letter from RI Research, Special Human Being Laboratory.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -899,8 +904,9 @@ export default {
                         `twits daily`,
                         {
                             anchor: `murdered for their virtue`,
+                            todo: REVIEW,
                             card: {
-                                description: `My suffering was made more bearable if I could believe it was tied to a greater purpose. But behaving as such only invited further abuse.`,
+                                description: `My suffering was made more bearable if I could believe it was tied to a greater purpose. But ironically, behaving as such only invited further abuse.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -975,6 +981,7 @@ export default {
                         `But`,
                         {
                             anchor: `every hero has a heel`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The Greek hero`,
@@ -982,7 +989,7 @@ export default {
                                         anchor: `Achilles`,
                                         wiki: `Achilles`,
                                     },
-                                    `was invulnerable everywhere on his body except for his heel. In the same way, I might have had the strength to remain stoic forever, if not for my fatal weakness of craving the acceptance of others.`,
+                                    `was invulnerable everywhere on his body except for his heel. In the same way, I might've had the strength to remain stoic forever, if not for my fatal weakness of craving the acceptance of others.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -1001,7 +1008,7 @@ export default {
                             todo: REST,
                             problem: `I've spent too long on this already, so I'm just going to sign off on it for now. But I'm still not confidence that I've successfully explained the analogy.`,
                             card: {
-                                description: `Since a spy's success hinges upon staying hidden, their exploits won't ever be known until they're captured— at which point they'll face death by firing squad. And in my desire to join a friendly squad, I faced a similar dilemma: Not only would opening up sabotage my previous efforts to stay unresponsive, but I would then have to explain my past behavior.`,
+                                description: `Since a spy's success hinges upon staying hidden, their exploits won't be known until they've been captured— at which point they'll face death by firing squad. And in my desire to join a friendly squad, I faced a similar dilemma: Not only would opening up sabotage my previous efforts to stay unresponsive, but I would then have to explain my past behavior.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -1063,8 +1070,9 @@ export default {
                         {
                             anchor: `Mushka`,
                             properNoun: true,
+                            todo: REVIEW,
                             card: {
-                                description: `Though Pchelka and Mushka successfully went into orbit, there was a problem with their reentry. To prevent the spacecraft from landing in hostile territory, the Soviets had it self-destruct, killing all onboard. But in this song's retelling, I as Pchelka somehow manage to avoid the sad fate that my brother as Mushka could not.`,
+                                description: `Though Pchelka and Mushka successfully went into orbit, there was a problem with their reentry. To prevent the spacecraft from landing in hostile territory, the Soviets had it self-destruct, killing all onboard. But in this song's retelling, I as Pchelka somehow manage to avoid the sad fate that my brother as Mushka couldn't.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },

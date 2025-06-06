@@ -536,8 +536,9 @@ export default {
                     lyric: [
                         {
                             anchor: `reversing his stomach`,
+                            todo: REVIEW,
                             card: {
-                                description: `It seemed so vulgar that anything should have to suffer and die just to satisfy my hunger. And once I came to that conclusion, I literally couldn't stomach the taste of meat.`,
+                                description: `It seemed so vulgar that anything should need to suffer and die just to satisfy my hunger. And once I came to that conclusion, I literally couldn't stomach the taste of meat.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
