@@ -944,7 +944,8 @@ export default {
                 {
                     mixTime: `2:38:22.28`,
                     lyricLeft: `A sober plea finds the present you,`,
-                    lyricRight: `The former me might have left a clue`,
+                    // NOTE: I decided to contract from "might have."
+                    lyricRight: `The former me might've left a clue`,
                 },
                 {
                     mixTime: `2:41:14.56`,

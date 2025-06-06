@@ -57,6 +57,7 @@ export default {
                         {
                             anchor: `O Catherine! My Catherine!`,
                             properNoun: true,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     {
@@ -68,7 +69,7 @@ export default {
                                         anchor: `O Captain! My Captain!`,
                                         wiki: `O_Captain!_My_Captain!`,
                                     },
-                                    `" upon hearing of Abraham Lincoln's assassination. I'm not sure why I chose this reference. I might have spent a long while after the breakup whimpering, "Oh Catherine…"`,
+                                    `" upon hearing of Abraham Lincoln's assassination. I'm not sure why I chose this reference. I might've spent a long while after the breakup whimpering, "Oh Catherine…"`,
                                 ],
                                 dotKeys: {
                                     [PUN]: true,
@@ -196,6 +197,7 @@ export default {
                         `First we`,
                         {
                             anchor: `laid Tourette's`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -204,7 +206,7 @@ export default {
                                             anchor: `Tourette syndrome`,
                                             wiki: `Tourette_syndrome`,
                                         },
-                                        `who suffer from involuntary tics, Catherine and I might have said some unpleasant things on impulse during the breakup.`,
+                                        `who suffer from involuntary tics, Catherine and I might've said some unpleasant things on impulse during the breakup.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,

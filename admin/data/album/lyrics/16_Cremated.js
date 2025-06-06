@@ -15,7 +15,7 @@ import {
     IS_UNIT_DOT,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
-import { REST } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Cremated',
@@ -414,6 +414,7 @@ export default {
                         `not`,
                         {
                             anchor: `at each other's throats`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Some comedy duos like`,
@@ -421,7 +422,7 @@ export default {
                                         anchor: `Abbott and Costello`,
                                         wiki: `Abbott_and_Costello`,
                                     },
-                                    `famously didn't get along. This enlivened the dynamic between them onstage, but it made for tense moments when the tape stopped rolling. So while Miriam might have enjoyed watching my two halves outwit each other, she surely wanted no part of the underlying drama that animated this spectacle.`,
+                                    `famously didn't get along. This enlivened the dynamic between them onstage, but it made for tense moments when the tape stopped rolling. So while Miriam might've enjoyed watching my two halves outwit each other, she surely wanted no part of the underlying drama that animated this spectacle.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
