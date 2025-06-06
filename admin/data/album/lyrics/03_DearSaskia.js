@@ -13,6 +13,7 @@ import {
     REFRAIN,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Dear Saskia',
@@ -29,7 +30,8 @@ export default {
     playerStartTime: 384.329,
     // This is a magic number adjusted by ear. In the mix, it's actually 44.96.
     mixSamplingFrequency: 45.39,
-    overview: `Sasha was a childhood friend, as well as my first crush. The strength she drew from her Jewish identity fascinated me, but it also clued me in on a cruel paradox— namely, that nothing ever comes from longing to share in someone's faith and roots, which stay strong precisely by not being shared. Sasha moved away during middle school, at the peak of my struggles with bullies. That summer, I wrote her a letter on a family trip to Taiwan.`,
+    todo: REVIEW,
+    overview: `Sasha was a childhood friend, as well as my first crush. The strength she drew from her Jewish identity fascinated me, but it also clued me in on a cruel paradox— namely, that nothing ever comes from longing to share in someone's faith and roots, which stay strong precisely by not being shared. Sasha moved away during middle school, at the peak of my struggles with some bullies. That summer, I wrote her a letter on a family trip to Taiwan.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -58,6 +60,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REST,
+                problem: `Still don't like the fact that I'm repeating the idea of sounding like I'm trying too hard. Maybe make the first time more about simply being reminded that I tried too hard?`,
                 card: {
                     description: [
                         `As a teenager, I tried to figure out the songwriting secrets of the`,
@@ -345,8 +349,9 @@ export default {
                         {
                             // NOTE: I decided to contract from "would have."
                             anchor: `I would've too`,
+                            todo: REVIEW,
                             card: {
-                                description: `Yet if Sasha had wanted me, then of course I would've converted to Judaism. It made no sense to be loyal to my own cultural identity, which I'd had no hand in choosing.`,
+                                description: `Yet if Sasha had wanted me, then of course I'd have gladly converted to Judaism. It made no sense to be loyal to my own cultural identity, which I'd had no hand in choosing.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -536,8 +541,9 @@ export default {
                         `Oh but Sasha, if`,
                         {
                             anchor: `anarchy reigns`,
+                            todo: REVIEW,
                             card: {
-                                description: `It was weird to be taught in history class that anarchy devolves into tyranny, only to then wander onto the quad and see this very phenomenon in action.`,
+                                description: `It was weird to be taught in history class that anarchy devolves into tyranny, only then to wander onto the quad and see this very phenomenon in action.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -573,6 +579,7 @@ export default {
                         `who shrug when thus annoyed, yawning, "`,
                         {
                             anchor: `Boys will beat boys`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Of course, it's more common to say that boys will "`,
@@ -580,7 +587,7 @@ export default {
                                         isItalic: true,
                                         lyric: `be`,
                                     },
-                                    `" boys, but the one naturally follows the other. It surprised me when school aides declined to intervene on behalf of the victims of bullying, as if such predation were vital to the middle school ecosystem.`,
+                                    `" boys— but the one naturally follows the other. It surprised me whenever school aides would decline to intervene on behalf of a bully's victims, as if such predation were vital to the middle school ecosystem.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -774,9 +781,10 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
-                        `After sending out promo copies of`,
+                        `After sending out demo copies of`,
                         {
                             isItalic: true,
                             lyric: `Yearling's Bobtail`,
@@ -786,7 +794,7 @@ export default {
                             isItalic: true,
                             lyric: `Bobtail Method`,
                         },
-                        `— a songwriting book that distills all the wisdom I'd gathered over the years from studying the Beatles— in the hope that this would get me taken seriously. Unfortunately, it was met with the same radio silence.`,
+                        `— a songwriting book that distills all the wisdom I'd gathered over the years from studying the Beatles— in the hope that this would finally get me taken seriously. Unfortunately, it was met with the same radio silence.`,
                     ],
                     dotKeys: {
                         [AFTERWORD]: true,
