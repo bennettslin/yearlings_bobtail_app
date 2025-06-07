@@ -368,9 +368,10 @@ export default {
                         `till they called,`,
                         {
                             anchor: `suspecting you of huffing`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `To defend against the bullies, I would react slowly to their threats— which then forced me to react slowly to anyone in general. At some point, a classmate must have believed I was huffing paint, and this is when I got called into the principal's office.`,
+                                    description: `To defend against the bullies, I would react slowly to their threats— which then forced me to react slowly to anyone in general. At some point, a classmate must've believed I was huffing paint, and this is when I got called into the principal's office.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },

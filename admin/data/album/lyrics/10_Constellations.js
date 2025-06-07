@@ -730,6 +730,7 @@ export default {
                         {
                             anchor: `Howie led the feat`,
                             properNoun: true,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `Meanwhile, Howie walks as if he has "lead feet," owing to the lasting stiffness in his limbs.`,
@@ -745,7 +746,7 @@ export default {
                                             anchor: `Mughals`,
                                             wiki: `Mughal_Empire`,
                                         },
-                                        `, Muslim descendants of Tamerlane, must have regaled themselves with tales of "how he" led their conquest of South Asia and its Hindu populations.`,
+                                        `, Muslim descendants of Tamerlane, surely regaled themselves with tales of "how he" led them to conquer South Asia and its Hindu populations.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,

@@ -281,7 +281,7 @@ export default {
                             problem: `First two sentences seem short and disconnected?`,
                             cards: [
                                 {
-                                    description: `Sita had her own story to tell about mistreating a first pet. Upon receiving a kitten as a child, she hugged it so hard that it began to purr. Taking this as a sign of its serenity, she hugged it even harder. Years later, she learned that cats also purr to cope with distress, and looking back, she realized that her kitten must have believed it was being crushed to death. She lived in guilt ever since.`,
+                                    description: `Sita had her own story to tell about mistreating a first pet. Upon receiving a kitten as a child, she hugged it so hard that it began to purr. Taking this as a sign of its serenity, she hugged it even harder. Years later, she learned that cats also purr to cope with distress, and looking back, she realized that her kitten must've believed it was being crushed to death. She lived in guilt ever since.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -777,6 +777,7 @@ export default {
                         `And can we`,
                         {
                             anchor: `start as children`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `I first recorded this song on Owen's four-track. There were no lyrics yet, so for the vocal track, I just mumbled some random phrases. Since I was always hoping to write the next "`,
@@ -789,7 +790,7 @@ export default {
                                         anchor: `Hoagy Carmichael`,
                                         wiki: `Hoagy_Carmichael`,
                                     },
-                                    `, I must have thrown the word "stardust" in there, because Owen misheard the line as, "Can we start as children?" He really liked it, so I kept it in this final version.`,
+                                    `, I must've thrown the word "stardust" in there, because Owen misheard the line as, "Can we start as children?" He really liked it, so I kept it in this final version.`,
                                 ],
                                 dotKeys: {
                                     [SONGCRAFT]: true,
