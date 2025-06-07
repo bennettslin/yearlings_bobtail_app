@@ -13,7 +13,7 @@ import {
     REFRAIN,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Dear Saskia',
@@ -59,8 +59,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REST,
-                problem: `Still don't like the fact that I'm repeating the idea of sounding like I'm trying too hard. Maybe make the first time more about simply being reminded that I tried too hard?`,
+                todo: REVIEW,
                 card: {
                     description: [
                         `As a teenager, I tried to figure out the songwriting secrets of the`,
@@ -68,7 +67,7 @@ export default {
                             anchor: `Beatles`,
                             wiki: `The_Beatles`,
                         },
-                        `— and to put theory into practice, I came up with the melodies and chords now pieced together here. For so long, I didn't make use of them; all I could hear was me trying and failing to match the Beatles. But years later, I realized that the sound of trying too hard was exactly what an overwrought letter to Sasha called for.`,
+                        `— and to put theory into practice, I came up with the melodies and chords now pieced together here. For so long, I didn't make use of them; all I could hear was the sound of me trying too hard. But years later, I realized that this was exactly what a song about an overwrought letter to Sasha called for.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,

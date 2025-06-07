@@ -177,12 +177,12 @@ export default {
                 todo: REVIEW,
                 card: {
                     description: [
-                        `My ambition for this album was to do for rock music what`,
+
                         {
                             anchor: `James Joyce`,
                             wiki: `James_Joyce`,
                         },
-                        `had done for English literature. Since his semi-autobiographical first novel,`,
+                        `'s semi-autobiographical first novel,`,
                         {
                             isItalic: true,
                             lyric: {
@@ -190,7 +190,7 @@ export default {
                                 wiki: `A_Portrait_of_the_Artist_as_a_Young_Man`,
                             },
                         },
-                        `, begins in the simple prose of a child, then, I did the same with this opening song.`,
+                        `, begins in the simple prose of a child. Since my ambition was to do for rock music what he'd done for modern literature, I did the same by keeping the lyrics childish in this opening song of my first album.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,

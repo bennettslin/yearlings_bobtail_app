@@ -17,7 +17,7 @@ import {
     FLASHBACK_TO_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Willy the Cocoa',
@@ -493,8 +493,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REST,
-                problem: `Don't really like "so" to begin the last sentence. I'd much rather it was more like, "this gave me the idea…"`,
+                todo: REVIEW,
                 card: {
                     description: [
                         `I first learned of`,
@@ -502,7 +501,7 @@ export default {
                             anchor: `autism`,
                             wiki: `Autism`,
                         },
-                        `when I overheard my parents talk about my brother's condition in their Taiwanese accents. The next day, I explained to classmates that my brother was "artistic." So I wanted the lyrics in this song to explore how a child's mishearing of adult conversation might lead to roundabout understanding.`,
+                        `when I overheard my parents talk about my brother's condition in their Taiwanese accents. The next day, I explained to classmates that my brother was "artistic." So I wanted the lyrics in this song to convey a child's mishearing of adult conversation, and to explore how this might lead to roundabout understanding.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
