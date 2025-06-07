@@ -34,7 +34,6 @@ export default {
     mixStartTime: `0:02:06.00`,
     playerReferenceTime: 559.438,
     playerStartTime: 555.277,
-    todo: REVIEW,
     overview: `Taiwan showed me how differently I might've turned out if my parents hadn't come to America— yet I was still worlds away from what Sasha needed me to be. Life seemed both infinitely fluid and immovably fixed, and I wasn't sure which extreme frightened me more. Later that summer, when our house cat Odin died of old age, I sought spiritual explanations for my mortality. The finality of death was terrifying, after all— and yet, the eternal life promised by faith didn't feel any less so.`,
     isDoublespeaker: true,
     lyricUnits: [
@@ -135,7 +134,6 @@ export default {
                         `trifling`,
                         {
                             anchor: `tref must reseed the earth`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     {
@@ -339,7 +337,6 @@ export default {
                         `Like a`,
                         {
                             anchor: `salamander`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -385,7 +382,6 @@ export default {
                         {
                             // TODO: Metamorphosis wormhole?
                             anchor: `trading breath's bliss`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `As an amphibian, salamanders undergo`,
@@ -460,12 +456,12 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `When I was growing up, no one thought twice to say "Oriental"; it's even printed on my birth certificate. The word was made offensive at around the same time that "queer" was being reclaimed by the gay community. The latter tactic always made more sense to me: Isn't it better to have`,
+                                    `When I was growing up in the '80s, no one thought twice to say "Oriental"; it's even printed on my birth certificate. The word was made offensive at around the same time that "queer" was being reclaimed by the gay community. The latter tactic always made more sense to me: Isn't it better for there to be`,
                                     {
                                         isItalic: true,
                                         lyric: `fewer`,
                                     },
-                                    `slurs available to hurt you?`,
+                                    `slurs against you?`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -574,7 +570,6 @@ export default {
                         `still, but`,
                         {
                             anchor: `missed bat mitzvahs`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `Being in Taiwan at the time, I wasn't around to attend Sasha's bat mitzvah party.`,
@@ -748,7 +743,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: REVIEW,
                 card: {
-                    description: `Since the drum parts I'd scored for this song were more advanced than what I could play at the time, I had to try several workarounds. I ended up recording the kick, snare, and toms in separate takes from the cymbals.`,
+                    description: `Since the drum parts that I'd scored for this song were more advanced than what I could play at the time, I had to try several workarounds. I ended up recording the kick, snare, and toms in separate takes from the cymbals.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
@@ -1185,7 +1180,6 @@ export default {
                     lyricLeft: [
                         {
                             anchor: `shivering for shivs unsheathed`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     // CONSIDER: Wormhole Kyon for shank? Needs to allow for multiple wormhole keys first.
@@ -1375,7 +1369,7 @@ export default {
                                         anchor: `nirvana`,
                                         wiki: `Nirvana`,
                                     },
-                                    `— or release from the cycle of rebirth. But this was just death on a grander scale, which confirmed my intuition that no one should want to live in the first place. So why do we?`,
+                                    `— or release from the cycle of rebirth. But this was just death on a grander scale, which simply confirmed my intuition that no one should want to live in the first place. So why do we?`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1526,7 +1520,7 @@ export default {
                             anchor: `buffer zone`,
                             todo: REVIEW,
                             card: {
-                                description: `The sea then closes behind the Israelites, drowning the Egyptian army in pursuit. Sadly, the certainty of death following me at every turn can't be overcome so easily.`,
+                                description: `The sea then closes behind the Israelites, drowning the Egyptian army in pursuit. Sadly, the certainty of death following me at every turn can't be held back so easily.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [REFERENCE]: true,
@@ -1627,12 +1621,12 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `Powerless to change my circumstances, I can only confront all that remains unknown. Like a`,
+                                        `Powerless to change my circumstances, I can only accept all that remains unknown. Like a`,
                                         {
                                             anchor: `garden gnome`,
                                             wiki: `Garden_gnome`,
                                         },
-                                        `with feet firmly planted in the lawn grass, I stand motionless and grin faintly in hope for the future.`,
+                                        `with feet firmly planted in the lawn grass, then, I stand motionless and grin faintly in hope for the future.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -1665,7 +1659,7 @@ export default {
                                         anchor: `Monday's Child`,
                                         wiki: `Monday's_Child`,
                                     },
-                                    `" is a nursery rhyme that predicts a child's fortune based on their weekday of birth. As someone born on a Thursday, then, I'm promised to have "far to go"— and indeed, the distance left for me to cover feels vast. Still, I'm now one day closer than when the day began…`,
+                                    `" is a nursery rhyme that predicts a child's fortune based on the day of the week they were born. Having been born on a Thursday, then, I'm promised to have "far to go"— and indeed, the distance left for me to cover feels vast. Still, I'm now one day closer than when the day began…`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1699,7 +1693,7 @@ export default {
                 todo: REVIEW,
                 card: {
                     description: [
-                        `As it became clear that`,
+                        `Once it became clear that`,
                         {
                             isItalic: true,
                             lyric: `Yearling's Bobtail`,

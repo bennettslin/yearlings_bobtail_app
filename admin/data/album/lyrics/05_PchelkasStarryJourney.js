@@ -88,7 +88,7 @@ export default {
                                                 wiki: `Beautiful_Losers`,
                                             },
                                         },
-                                        `, the character F. tires of getting bullied at the beach. So he signs up for the Charles Axis bodybuilding course advertised in a comic book— only to discover that it's Charles Axis who bullies him. This absurd revelation perfectly sums up my mood whenever I reflect on where my own misadventures in mail order ended up taking me.`,
+                                        `, the character F. tires of getting bullied at the beach. So he signs up for the Charles Axis bodybuilding course advertised in a comic book— only to discover that it's Charles Axis who bullies him. This absurd revelation sums up my mood whenever I reflect on where my own misadventures in mail order ended up taking me.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -239,7 +239,7 @@ export default {
                                         anchor: `captain bed`,
                                         wiki: `Storage_bed`,
                                     },
-                                    `that lay atop a dresser on one side, with the other side flush against the wall. The dresser was only a few feet deep, leaving ample space behind it for a hideaway. To get inside, I'd first crawl through the cabinet doorway, and then squeeze past the flimsy back panel.`,
+                                    `that lay atop a dresser on one side, with the other side flush against the wall. The dresser was only a few feet deep, leaving ample space behind it for a hideaway. To get inside, I'd first crawl through the cabinet doorway, then squeeze past the flimsy back panel.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -377,7 +377,7 @@ export default {
                             anchor: `Feigning sick`,
                             todo: REVIEW,
                             card: {
-                                description: `In earlier years, I was proud of my perfect attendance record. Once the bullying began, however, I'd skip school by faking illness. My mother noticed the change, but she trusted me enough not to press the issue.`,
+                                description: `In earlier years, I was proud of my near-perfect attendance record. Once the bullying began, however, I'd skip school by faking illness. My mother noticed the change, but she trusted me enough not to press the issue.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -429,7 +429,7 @@ export default {
                             anchor: `send-away offers`,
                             todo: REVIEW,
                             card: {
-                                description: `Since I had no friends in middle school, I'd amuse myself by sending away for free samples offered in the back pages of my comic books. As a result, I got flooded with junk mail— which exposed me to even more offers. Then one day, I received a letter from RI Research, Special Human Being Laboratory.`,
+                                description: `Since I had no friends in middle school, I'd amuse myself by sending away for free samples advertised in the back pages of my comic books. As a result, I got flooded with junk mail— which exposed me to even more such offers. Then, one day, I received a letter from RI Research, Special Human Being Laboratory…`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -906,7 +906,7 @@ export default {
                             anchor: `murdered for their virtue`,
                             todo: REVIEW,
                             card: {
-                                description: `My suffering was made more bearable if I could believe it was tied to a greater purpose. But ironically, behaving as such only invited further abuse.`,
+                                description: `My suffering was made more bearable if I could believe it was tied to a greater purpose. But ironically, behaving as such only invited further abuse…`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -981,7 +981,6 @@ export default {
                         `But`,
                         {
                             anchor: `every hero has a heel`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The Greek hero`,
@@ -1018,10 +1017,9 @@ export default {
                         `first`,
                         {
                             anchor: `unearth their own plots`,
-                            todo: REST,
-                            problem: `Still not sure if this sounds best as one sentence or two.`,
+                            todo: REVIEW,
                             card: {
-                                description: `Figuratively, to reveal one's secret plans; or literally, to dig one's own grave.`,
+                                description: `Figuratively, to reveal one's secret plans; and literally, to dig one's own grave.`,
                                 dotKeys: {
                                     [PUN]: true,
                                 },
@@ -1070,7 +1068,6 @@ export default {
                         {
                             anchor: `Mushka`,
                             properNoun: true,
-                            todo: REVIEW,
                             card: {
                                 description: `Though Pchelka and Mushka successfully went into orbit, there was a problem with their reentry. To prevent the spacecraft from landing in hostile territory, the Soviets had it self-destruct, killing all onboard. But in this song's retelling, I as Pchelka somehow manage to avoid the sad fate that my brother as Mushka couldn't.`,
                                 dotKeys: {

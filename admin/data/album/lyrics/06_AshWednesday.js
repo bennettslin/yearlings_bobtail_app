@@ -24,7 +24,6 @@ export default {
     referenceDescription: `Darbuka in anacrusis`,
     playerStartTime: 967.569,
     mixStartTime: `0:01:03.51`,
-    todo: REVIEW,
     overview: `My first girlfriend in college was Catherine, a nice Catholic girl and high school valedictorian. Partly due to my lack of reading habit, we were very different people, and eventually she broke up with me— the night before Ash Wednesday. So the next morning I ashed my own forehead and tried to bump into her, hoping that if she could picture me as a good Catholic boy, then I might get another chance. It didn't work, but I did grow into a lifelong reader, and I have Catherine to thank for that.`,
     lyricUnits: [
         {
@@ -58,7 +57,6 @@ export default {
                         {
                             anchor: `O Catherine! My Catherine!`,
                             properNoun: true,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     {
@@ -104,7 +102,7 @@ export default {
                             anchor: `where it commenced`,
                             todo: REVIEW,
                             card: {
-                                description: `The relationship with Catherine began like my friendship with Sasha had a decade earlier: I latched onto the first cute person to show me kindness in a new environment, and then I tried to make myself indispensable in small ways.`,
+                                description: `The relationship with Catherine began like my friendship with Sasha had a decade earlier: I latched onto the first cute person to show me kindness in a new setting, and then I tried to make myself indispensable in small ways.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -113,7 +111,6 @@ export default {
                         `: in my`,
                         {
                             anchor: `bookless room`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `When Catherine visited my apartment for the first time, she glanced around and remarked that she didn't see any books. "I don't read," I joked— though it was partly in truth. As children, my sister was the voracious bookworm and aspiring writer, so I preferred hobbies that`,
@@ -199,7 +196,6 @@ export default {
                         `First we`,
                         {
                             anchor: `laid Tourette's`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -375,7 +371,6 @@ export default {
                         `,"`,
                         {
                             anchor: `putting down her Joyce`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `But her compliment is less than sincere, since referencing a poet studied by middle schoolers is hardly an impressive feat. And so, annoyed at being made to put down the Joyce novel she's reading, Catherine amuses herself by putting`,
@@ -402,7 +397,7 @@ export default {
                             anchor: `"Joyce" oblivious`,
                             todo: REVIEW,
                             card: {
-                                description: `Of course, not knowing that I couldn't be the next Joyce is why I dared to try. And so I began to dream that I could do for rock music what Joyce had done for modern literature.`,
+                                description: `Of course, not knowing that I couldn't be the next Joyce is why I dared to try. And so I began to dream of doing for rock music what Joyce had done for modern literature.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -465,7 +460,6 @@ export default {
                         `who tried but failed to win her heart`,
                         {
                             anchor: `poised with brains`,
-                            todo: REVIEW,
                             card: {
                                 description: `Catherine undervalued the artistic strengths I'd always counted on to cover up my many weaknesses. This meant if I were ever to be worth keeping someday, then I simply couldn't have any weaknesses.`,
                                 dotKeys: {
@@ -519,7 +513,7 @@ export default {
                                         anchor: `Shelta`,
                                         wiki: `Shelta`,
                                     },
-                                    `that was historically intended to exclude outsiders. Catherine wasn't actually a Traveller, but I was stuck outside her "shelter" all the same.`,
+                                    `that was historically meant to exclude outsiders. Catherine wasn't a Traveller, but I was stuck outside her "shelter" all the same.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -705,7 +699,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `On Ash Wednesday, the priest smears ash in the shape of a cross on each parishioner's forehead. But since I'd ashed myself without the benefit of a mirror, mine was slanted like the letter X.`,
+                                    description: `On Ash Wednesday, the priest smears ash in the shape of a cross on each parishioner's forehead. But I'd ashed myself without the benefit of a mirror, so mine was slanted like the letter X.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -944,7 +938,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `While fleshing out the lyrics in this chorus, I noticed that a handful of words in the first stanza are`,

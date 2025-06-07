@@ -28,7 +28,6 @@ export default {
     referenceDescription: `Keyboards in anacrusis`,
     playerStartTime: 177.396,
     mixStartTime: `0:01:03.00`,
-    todo: REVIEW,
     overview: `After my younger brother was diagnosed with autism, a neighbor told us about Willy the Cocoa, a mentally disabled man who'd once wandered the neighborhood collecting recyclables. Tragically, Willy was killed in a fight with some gangsters, who smashed his head open with a bottle. Hearing this story affected me greatly, and for years to come, I'd recall it whenever pondering my brother's likely future.`,
     lyricUnits: [
         {
@@ -501,7 +500,7 @@ export default {
                             anchor: `autism`,
                             wiki: `Autism`,
                         },
-                        `when I overheard my parents talk about my brother's condition in their Taiwanese accents. The next day, I explained to classmates that my brother was "artistic." So I wanted the lyrics in this song to convey a child's mishearing of adult conversation, and to explore how this might lead to roundabout understanding.`,
+                        `when I overheard my parents talk about my brother's diagnosis in their Taiwanese accents. The next day, I explained to classmates that my brother was "artistic." So I wanted the lyrics in this song to convey a child's mishearing of adult conversation, and to explore how this might lead to roundabout understanding.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -923,7 +922,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `To play the electric guitar riff heard here, I used both a`,
