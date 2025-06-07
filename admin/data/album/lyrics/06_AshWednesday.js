@@ -24,7 +24,8 @@ export default {
     referenceDescription: `Darbuka in anacrusis`,
     playerStartTime: 967.569,
     mixStartTime: `0:01:03.51`,
-    overview: `My first girlfriend in college was Catherine, a nice Catholic girl and high school valedictorian. We were very different people, partly due to my lack of reading habit, and eventually she broke up with me— the night before Ash Wednesday. So the next morning I ashed my own forehead and tried to bump into her, hoping that if she could picture me as a good Catholic boy, then I might get another chance. It didn't work, but I did grow into a habitual reader, and I have Catherine to thank for that.`,
+    todo: REVIEW,
+    overview: `My first girlfriend in college was Catherine, a nice Catholic girl and high school valedictorian. Partly due to my lack of reading habit, we were very different people, and eventually she broke up with me— the night before Ash Wednesday. So the next morning I ashed my own forehead and tried to bump into her, hoping that if she could picture me as a good Catholic boy, then I might get another chance. It didn't work, but I did grow into a lifelong reader, and I have Catherine to thank for that.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -101,8 +102,9 @@ export default {
                     lyric: [
                         {
                             anchor: `where it commenced`,
+                            todo: REVIEW,
                             card: {
-                                description: `The relationship with Catherine began like my friendship with Sasha had a decade earlier: I latched onto the first cute person to show me kindness in a new environment, and then tried to make myself indispensable in small ways.`,
+                                description: `The relationship with Catherine began like my friendship with Sasha had a decade earlier: I latched onto the first cute person to show me kindness in a new environment, and then I tried to make myself indispensable in small ways.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -119,7 +121,7 @@ export default {
                                         isItalic: true,
                                         lyric: `didn't`,
                                     },
-                                    `involve words, like art and music.`,
+                                    `involve words, like music and illustration.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -206,7 +208,7 @@ export default {
                                             anchor: `Tourette syndrome`,
                                             wiki: `Tourette_syndrome`,
                                         },
-                                        `who suffer from involuntary tics, Catherine and I might've said some unpleasant things on impulse during the breakup.`,
+                                        `, who suffer from involuntary tics, Catherine and I might've said some unpleasant things on impulse during the breakup.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -260,6 +262,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
                         `The shrieking`,
@@ -277,7 +280,7 @@ export default {
                             anchor: `arpeggios`,
                             wiki: `Arpeggio`,
                         },
-                        `— triplets for the soprano recorder, quadruplets for the tenor.`,
+                        `— with triplets on the soprano recorder, and quadruplets on the tenor.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -372,14 +375,15 @@ export default {
                         `,"`,
                         {
                             anchor: `putting down her Joyce`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `Her compliment is less than sincere, however, since referencing a poet studied by middle schoolers is hardly an impressive feat. And so, annoyed at being made to put down the Joyce novel she's reading, Catherine amuses herself by putting`,
+                                    `But her compliment is less than sincere, since referencing a poet studied by middle schoolers is hardly an impressive feat. And so, annoyed at being made to put down the Joyce novel she's reading, Catherine amuses herself by putting`,
                                     {
                                         isItalic: true,
                                         lyric: `me`,
                                     },
-                                    `down— for thinking I could be the James Joyce of lyricists.`,
+                                    `down— for thinking I could ever be the James Joyce of lyricists.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -460,8 +464,9 @@ export default {
                         `who tried but failed to win her heart`,
                         {
                             anchor: `poised with brains`,
+                            todo: REVIEW,
                             card: {
-                                description: `Catherine undervalued the artistic strengths that I'd always counted on to cover up my many weaknesses. Which meant if I were ever to be worth keeping, then I simply couldn't have any weaknesses.`,
+                                description: `Catherine undervalued the artistic strengths I'd always counted on to cover up my many weaknesses. This meant if I were ever to be worth keeping someday, then I simply couldn't have any weaknesses.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -500,6 +505,7 @@ export default {
                         `And as I pace, stranded here`,
                         {
                             anchor: `outside her Shelta`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The`,
@@ -512,7 +518,7 @@ export default {
                                         anchor: `Shelta`,
                                         wiki: `Shelta`,
                                     },
-                                    `that was historically intended to exclude outsiders. Catherine was only part Irish— and not a Traveller— but I was stuck outside her "shelter" all the same.`,
+                                    `that was historically intended to exclude outsiders. Catherine wasn't actually a Traveller, but I was stuck outside her "shelter" all the same.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -688,9 +694,10 @@ export default {
                         `Well yes, I`,
                         {
                             anchor: `faked this X`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Since Catherine insisted on going no further than heavy petting, I would fake "the sex" for myself by masturbating afterward.`,
+                                    description: `Since Catherine insisted on going no further than heavy petting, I had to fake "the sex" for myself by masturbating afterward.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [PUN]: true,
@@ -761,7 +768,7 @@ export default {
                                                 anchor: `Henry IV of France`,
                                                 wiki: `Henry_IV_of_France`,
                                             },
-                                            `was born a Protestant but converted to Catholicism to gain the royal crown. He is reputed to have said, "`,
+                                            `was born a Protestant but converted to Catholicism to gain the royal crown. He's reputed to have said, "`,
                                             {
                                                 isItalic: true,
                                                 lyric: `Paris vaut bien une messe`,
@@ -936,6 +943,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
                         `While fleshing out the lyrics in this chorus, I noticed that a handful of words in the first stanza are`,
@@ -943,7 +951,7 @@ export default {
                             anchor: `homophones`,
                             wiki: `Homophone`,
                         },
-                        `of their counterparts in the second. Like "mourn" with "morn," and "born" with "borne." So I tried to make the two stanzas match phonetically wherever possible, which then gave me the idea for doublespeaker rhyme later on.`,
+                        `of their counterparts in the second, like "mourn" with "morn," and "born" with "borne." So I tried to make the two stanzas match phonetically wherever possible, which then gave me the idea for doublespeaker rhyme later on.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,

@@ -356,7 +356,7 @@ export default {
                                     ],
                                 },
                                 {
-                                    description: `Writing doublespeaker rhyme was daunting, so I would come up with silly challenges, like being sure to mention every Paracelsian elemental.`,
+                                    description: `Writing doublespeaker rhyme was daunting, so I'd come up with silly challenges, like being sure to mention every Paracelsian elemental.`,
                                     dotKeys: {
                                         [SONGCRAFT]: true,
                                     },

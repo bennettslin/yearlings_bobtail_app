@@ -1008,7 +1008,7 @@ export default {
                             todo: REST,
                             problem: `I've spent too long on this already, so I'm just going to sign off on it for now. But I'm still not confidence that I've successfully explained the analogy.`,
                             card: {
-                                description: `Since a spy's success hinges upon staying hidden, their exploits won't be known until they've been captured— at which point they'll face death by firing squad. And in my desire to join a friendly squad, I faced a similar dilemma: Not only would opening up sabotage my previous efforts to stay unresponsive, but I would then have to explain my past behavior.`,
+                                description: `Since a spy's success hinges upon staying hidden, their exploits won't be known until they've been captured— at which point they'll face death by firing squad. And in my desire to join a friendly squad, I faced a similar dilemma: Not only would opening up sabotage my previous efforts to stay unresponsive, but then I'd have to explain my past behavior.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,

@@ -182,7 +182,7 @@ export default {
                             anchor: `James Joyce`,
                             wiki: `James_Joyce`,
                         },
-                        `had done for modernist literature. Since his semi-autobiographical first novel,`,
+                        `had done for English literature. Since his semi-autobiographical first novel,`,
                         {
                             isItalic: true,
                             lyric: {
