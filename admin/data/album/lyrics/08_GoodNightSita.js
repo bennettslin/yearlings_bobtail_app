@@ -152,13 +152,14 @@ export default {
                         `for this kid wearing no`,
                         {
                             anchor: `decoder ring`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     {
                                         anchor: `Secret decoder rings`,
                                         wiki: `Secret_decoder_ring`,
                                     },
-                                    `were promotional toys in the '60s that allowed children to decipher a television program's encrypted messages. Oftentimes, what they revealed was a preview of the next episode. Similarly, I would've liked to have every date end with a preview of the next one.`,
+                                    `were promotional toys in the '60s that allowed children to decipher a television program's encrypted messages. Oftentimes, what they revealed was a preview of the next episode. Similarly, it would've been nice for every date to end with a preview of the next one.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -173,9 +174,10 @@ export default {
                         {
                             anchor: `Dutch courage`,
                             properNoun: true,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `During my college years, I would ask older coworkers to purchase twelve-packs of cheap beer for me. So I always had a ready supply in my apartment, and before each date, I would down a few cans.`,
+                                    description: `During my college years, I'd ask older coworkers to buy twelve-packs of cheap beer for me, which meant I always had a ready supply in my apartment. So before each date, I'd down a few cans.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -259,6 +261,7 @@ export default {
                     lyric: [
                         {
                             anchor: `nor a barnacle`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -267,7 +270,7 @@ export default {
                                             anchor: `Nora Barnacle`,
                                             wiki: `Nora_Barnacle`,
                                         },
-                                        `" was the wife of James Joyce and his inspiration for the Molly Bloom character, whose interior monologue in turn served as an inspiration for this song.`,
+                                        `," the wife of James Joyce, served as his inspiration for the character of Molly Bloom.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -285,9 +288,10 @@ export default {
                     mixTime: `0:23:18.66`,
                     lyric: {
                         anchor: `swept in unchartable tides`,
+                        todo: REVIEW,
                         card: {
                             description: [
-                                `The fear of being steered in unknown directions has kept me on edge throughout this date. But nearby is a storm drain that flows into the ocean, and I'm reminded of all the`,
+                                `The fear of being steered in unknown directions has kept me on edge throughout this date. But nearby is a storm drain leading into the ocean, and I'm reminded of all the`,
                                 {
                                     anchor: `barnacles`,
                                     wiki: `Barnacle`,
@@ -349,8 +353,9 @@ export default {
                     mixTime: `0:30:07.08`,
                     lyric: {
                         anchor: `heart of gold inside`,
+                        todo: REVIEW,
                         card: {
-                            description: `Mistakes made on one date still offered lessons that I could apply toward the next. So each date felt like prying open one nesting doll to get to another, with the ultimate goal of reaching the last one whose promise proved not to be hollow.`,
+                            description: `Mistakes that I made on one date still offered lessons to apply toward the next. So each date felt like prying open one nesting doll to get to another, with the ultimate goal of reaching the last one whose promise proved not to be hollow.`,
                             dotKeys: {
                                 [OBSERVATION]: true,
                             },
@@ -615,6 +620,7 @@ export default {
                         `what this`,
                         {
                             anchor: `understudy sought`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `As an`,
@@ -622,7 +628,7 @@ export default {
                                         anchor: `understudy`,
                                         wiki: `Understudy`,
                                     },
-                                    `in theater, you undertake all the same preparation, only to see little of the same action— and this is what dating while low status is like as well. So I needed to create my own opportunities, like a freelancer seeking out new gigs by posting on a cork board.`,
+                                    `in theater, you undertake all the same preparation, only to see little of the same action— and this is what dating feels like as well when you're low status. So after a while, I decided to become proactive in looking for opportunities, like a freelancer posting on a cork board.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -654,8 +660,9 @@ export default {
                         `then wise up and`,
                         {
                             anchor: `learn to shotgun`,
+                            todo: REVIEW,
                             card: {
-                                description: `In time I adopted the shotgun approach to dating, which involves hitting on anyone at any moment. It works by putting the math on your side: Even if your success rate remains dismal, you're increasing the sample size— which now improves your chances of someone saying yes. And one yes to a date is all you really need.`,
+                                description: `In time I adopted the shotgun approach to dating, which involves hitting on anyone at any moment. It works by putting the math on your side: Even if your success rate remains dismal, you've now increased the sample size— which then improves your chances of someone saying yes to a date. And one yes is all you really need.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -721,8 +728,9 @@ export default {
                         `though each`,
                         {
                             anchor: `kind new ultimatum`,
+                            todo: REVIEW,
                             card: {
-                                description: `Like the deals that natives were forced at gunpoint to make with settlers, Sita's proposition for us to see her friend's play offered only the illusion of choice. She was going either way; I could either tag along or stay home.`,
+                                description: `Like the deals that natives were forced at gunpoint to make with settlers, Sita's suggestion for us to see her friend's play offered only the illusion of choice. She was going either way; I could either tag along or stay home.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -745,9 +753,10 @@ export default {
                         `brave`,
                         {
                             anchor: `rejection into art`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `I learned to welcome rejection since I could always use it as subject matter for new songs. Which meant that a lifetime of getting rejected can`,
+                                    `I learned to welcome rejection, since I could always use it as subject matter when writing new songs. Which meant a lifetime of getting rejected can`,
                                     {
                                         isItalic: true,
                                         lyric: `itself`,
@@ -799,8 +808,9 @@ export default {
                         `hint of`,
                         {
                             anchor: `sampler cologne`,
+                            todo: REVIEW,
                             card: {
-                                description: `Whenever I spotted a men's lifestyle magazine in some neighbor's recycling bin, I would tear out the scent strips from its cologne ads and add them to my pile. Then right before a date, I would rub a few onto my neck and wrists.`,
+                                description: `Whenever I spotted a men's lifestyle magazine in some neighbor's recycling bin, I'd tear out the scent strips from its cologne ads and add them to my pile. Then right before a date, I'd rub a few onto my neck and wrists.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -826,6 +836,7 @@ export default {
                         `always rides in`,
                         {
                             anchor: `single go-karts`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `On our third date, Sita and I visit a`,
@@ -833,7 +844,7 @@ export default {
                                         anchor: `go-kart`,
                                         wiki: `Kart_racing`,
                                     },
-                                    `raceway. There's a twin go-kart available, presumably to seat a parent and child side by side. In jest, I gesture for Sita to hop in with me. She laughs and declines.`,
+                                    `raceway. They have a twin go-kart available, presumably to seat a parent and child side by side. In jest, I gesture for Sita to hop in with me. She laughs and declines.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -848,6 +859,7 @@ export default {
                         `as we wind an`,
                         {
                             anchor: `endless flowchart`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `At the time, I often fantasized about preparing a mental`,
@@ -855,7 +867,7 @@ export default {
                                         anchor: `flowchart`,
                                         wiki: `Flowchart`,
                                     },
-                                    `of the myriad ways a date might unfold. I could then make one optimal decision after another to nudge the events of the evening toward my desired outcome.`,
+                                    `of the myriad ways a date might unfold. I could then make one optimal decision after another, nudging the events of the evening toward my desired outcome.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -870,8 +882,9 @@ export default {
                         `with every given`,
                         {
                             anchor: `answer a no`,
+                            todo: REVIEW,
                             card: {
-                                description: `Of course, if I were never given an opening to make any decisions at all, then each date would end with me going right back to the beginning of the flowchart. And I'd be doomed to spend my life cycling through an infinite loop of polite rejections.`,
+                                description: `Of course, if I were never given an opening to make any decisions at all, each date would end with me going right back to the beginning of the flowchart. And then I'd be doomed to spend my life cycling through an infinite loop of polite rejections.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -941,9 +954,10 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
-                        `Children's songs from the '70s are a treasure trove of musical wisdom: They were composed by professionals, but then arranged for the popular styles of those times. One example is the soundtrack for`,
+                        `Children's songs from the '70s are a wellspring of musical wisdom: They were composed by those trained in older styles, but arranged to fit the newer styles of those times. One example is the soundtrack for`,
                         {
                             anchor: `The New Mickey Mouse Club`,
                             wiki: `The_Mickey_Mouse_Club`,
@@ -982,8 +996,9 @@ export default {
                         `as the`,
                         {
                             anchor: `chirping crosswalks`,
+                            todo: REVIEW,
                             card: {
-                                description: `Sita and I are still standing on the sidewalk outside her boarding house. In the distance, an electronic bird call informs the visually impaired that the street is safe to cross.`,
+                                description: `Sita and I are still standing on the sidewalk outside her boarding house. In the distance, an electronic bird call informs the blind that the street is safe to cross.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
