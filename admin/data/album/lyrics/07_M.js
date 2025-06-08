@@ -31,8 +31,9 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
-                    description: `To avoid mentioning Mara by name, I came up with the song title "M," which I planned to explain by packing the lyrics with words that start with the letter M. I probably wasn't fooling anyone.`,
+                    description: `To avoid mentioning Mara by name, I came up with the song title "M," which I planned to explain by packing the lyrics with words that start with the letter M. I probably wasn't fooling anyone, though.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                     },
@@ -149,6 +150,7 @@ export default {
                         `in`,
                         {
                             anchor: `five years`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The`,
@@ -156,7 +158,7 @@ export default {
                                         anchor: `five-year plans`,
                                         wiki: `Five-year_plans_for_the_national_economy_of_the_Soviet_Union`,
                                     },
-                                    `of the Soviet Union were centrally organized mandates for rapid economic development. Five years thus seemed like the optimal time frame to carry out my own plan for rapid character growth.`,
+                                    `of the Soviet Union were centralized mandates for rapid economic development. Five years seemed like an optimal time frame, then, to carry out my own plan for rapid character growth.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -184,10 +186,9 @@ export default {
                         `to mold me into a`,
                         {
                             anchor: `mystery mensch`,
-                            todo: REVISE,
-                            problem: `Need to explain sister was just a year older?`,
+                            todo: REVIEW,
                             card: {
-                                description: `Unlike me, my older sister was popular in high school. So she always had the latest gossip to tell me, like anytime a girl crushed on me from afar— which wasn't often, but it did happen. And thus, I knew there was some mystique to my image as an artsy loner; my mission now was simply to ensure that something of actual substance lay beneath.`,
+                                description: `Unlike me, my older sister was popular in high school. So she always had the latest gossip to tell me, like anytime a girl crushed on me from afar— which wasn't often, but it did happen. And thus I knew there was some mystique to my image as an artsy loner; my mission now was simply to ensure that something of actual substance lay beneath.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -202,9 +203,10 @@ export default {
                         {
                             // NOTE: I changed this from minutiae.
                             anchor: `No minutia left unmastered`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `Though my goal was to be well versed in every important subject matter, I got the most satisfaction from showing off a random skill with seeming nonchalance. So I made sure to set aside time for purely fanciful pursuits, like memorizing the`,
+                                    `Though my goal was to be well versed in all important subject matters, I got the most satisfaction from showing off a random skill with seeming nonchalance. So I made sure to set aside time for purely fanciful pursuits, like memorizing the`,
                                     {
                                         anchor: `periodic table`,
                                         wiki: `Periodic_table`,
@@ -224,8 +226,9 @@ export default {
                     lyric: [
                         {
                             anchor: `music cred`,
+                            todo: REVIEW,
                             card: {
-                                description: `I always detected a whiff of disdain from the record store clerks who rang up my purchases. But with my quest for self-betterment, I overcame my intimidation and began to ask them for recommended listening.`,
+                                description: `I always detected a whiff of disdain from the record store clerks who rang up my purchases. But with my quest for self-betterment, I got over my intimidation and began to approach them for recommended listening.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -320,8 +323,9 @@ export default {
                         `while forever I'll`,
                         {
                             anchor: `hold in peace`,
+                            todo: REVIEW,
                             card: {
-                                description: `So Joi got together with Mara without any real effort, while romance for me felt no less elusive than ever. I thus had to admit that my five-year plan was a washout.`,
+                                description: `So Joi got together with Mara without any effort, while romance for me felt no less elusive than ever. I thus had to admit that my five-year plan was a washout.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -396,8 +400,9 @@ export default {
                         {
                             // NOTE: I capitalised my name.
                             anchor: `Signed off "Love me"`,
+                            todo: REVIEW,
                             card: {
-                                description: `Back when we all treated emails like personal letters, I would close with "Love Bennett," absent a comma out of laziness. Catherine once joked that this sounded like a command spoken in desperation.`,
+                                description: `Back when we still treated emails like personal letters, I would close with "Love Bennett," absent a comma out of laziness. Catherine once joked that this sounded like a command spoken in desperation.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -726,6 +731,7 @@ export default {
                         `Her lispy kiss unlucky for this`,
                         {
                             anchor: `chimney sweep`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -734,7 +740,7 @@ export default {
                                             anchor: `chimney sweep`,
                                             wiki: `Chimney_sweep`,
                                         },
-                                        `will bring good luck to a bride. But in the Victorian era, the children who cleared soot from chimneys were neglected orphans; whatever fortunes they imparted to others, only a lifetime of ill health awaited themselves. Likewise, I'd helped introduce Mara to Joi, and now it was on me to get on with my wretched life.`,
+                                        `will bring good luck to a bride. But in the Victorian era, the children who cleared soot from chimneys were neglected orphans; whatever fortunes they imparted to others, only a lifetime of ill health awaited them in turn. Likewise, I'd helped introduce Mara to Joi— and now it was on me to get on with my wretched life.`,
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
@@ -816,7 +822,7 @@ export default {
                             anchor: `world's a naked baby`,
                             todo: REVIEW,
                             card: {
-                                description: `But at some point, I realized something: A social scene is no different from the world at large, in that little is hidden from view. So any situation can be understood by reading everyone else's intentions and observing their actions— much like a holistic picture of the world emerges after reading books on all the important subject matters.`,
+                                description: `But at some point, I realized that a social scene isn't any different from the world at large, in that little is hidden from view. So any situation can be understood by reading everyone else's intentions and observing their actions— much like a holistic picture of the world emerges after reading books on all the important subject matters.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -1028,6 +1034,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
                         `My original plan was to take the puns one step further by recording this song in a "`,
@@ -1035,12 +1042,12 @@ export default {
                             anchor: `Mara-iachi`,
                             wiki: `Mariachi`,
                         },
-                        `" style. But I decided that it wouldn't fit the song's natural tempo, and scrapped it. Still, it gave me an idea to model the outro after the`,
+                        `" style. But it didn't fit the song's natural tempo, so I scrapped it. Still, it gave me an idea to model the outro after the`,
                         {
                             anchor: `Los Lobos`,
                             wiki: `Los_Lobos`,
                         },
-                        `cover version of "`,
+                        `version of "`,
                         {
                             anchor: `La Bamba`,
                             wiki: `La_Bamba_(song)`,

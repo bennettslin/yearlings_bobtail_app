@@ -896,8 +896,9 @@ export default {
                         `on`,
                         {
                             anchor: `repeat forevermore`,
+                            todo: REVIEW,
                             card: {
-                                description: `As I was making this album, a thought occurred to me: Like Rama, I too am now doomed to repeat my mistakes, as the story of how I betrayed my Sita shall be endlessly retold— and thus, endlessly relived.`,
+                                description: `As I was making this album, a thought occurred to me: Like Rama, I too am now doomed to repeat my mistakes, as the story of how I betrayed my Sita shall be endlessly retold— and thus endlessly relived.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -1053,7 +1054,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `While chanting Rama's name, Ratnakar concentrated so intensely that an anthill formed around him, allowing him to remain undisturbed for years. And thus, he came to be known as Valmiki, from the Sanskrit word for "anthill."`,
+                                    description: `While chanting Rama's name, Ratnakar concentrated so intensely that an anthill formed around him, allowing him to remain undisturbed for years. And thus he came to be known as Valmiki, from the Sanskrit word for "anthill."`,
                                     dotKeys: {
                                         [REFERENCE]: true,
                                     },
