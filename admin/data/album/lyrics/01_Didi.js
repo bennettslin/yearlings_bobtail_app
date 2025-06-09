@@ -174,7 +174,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
 
@@ -607,12 +606,7 @@ export default {
                             isItalic: true,
                             lyric: `Pet Sounds`,
                         },
-                        `. So I committed to join them— and thus, like Wilson, I held off any worries about how I'd recreate`,
-                        {
-                            isItalic: true,
-                            lyric: `Yearling's Bobtail`,
-                        },
-                        `onstage. Upon its completion, though, I learned that the indie labels will sign you only once you can play shows`,
+                        `. So I committed to join them— and thus, like Wilson, I held off any worries about how I'd recreate my sound onstage. Upon completing the album, though, I learned that the indie labels will sign you only once you can play shows`,
                         {
                             isItalic: true,
                             lyric: `without`,

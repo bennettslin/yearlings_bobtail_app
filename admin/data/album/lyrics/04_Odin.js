@@ -453,7 +453,6 @@ export default {
                         },
                         {
                             anchor: `oriental`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `When I was growing up in the '80s, no one thought twice to say "Oriental"; it's even printed on my birth certificate. The word was made offensive at around the same time that "queer" was being reclaimed by the gay community. The latter tactic always made more sense to me: Isn't it better for there to be`,
@@ -743,7 +742,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: REVIEW,
                 card: {
-                    description: `Since the drum parts that I'd scored for this song were more advanced than what I could play at the time, I had to try several workarounds. I ended up recording the kick, snare, and toms in separate takes from the cymbals.`,
+                    description: `Since the drum parts that I'd scored for this song were more advanced than what I could actually play, I had to try several workarounds. I ended up recording the kick, snare, and toms in separate takes from the cymbals.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
@@ -1325,7 +1324,6 @@ export default {
                         `when your`,
                         {
                             anchor: `day to die`,
-                            todo: REVIEW,
                             card: {
                                 description: `As a child, I suffered from night terrors related to my fear of death. My mother tried to comfort me with the promise of reincarnation— but this only filled me with even greater dread. It wasn't just death itself that frightened me; it was a lifetime of hurtling toward it. And all that reincarnation offered was more rounds of the same.`,
                                 dotKeys: {
@@ -1369,7 +1367,7 @@ export default {
                                         anchor: `nirvana`,
                                         wiki: `Nirvana`,
                                     },
-                                    `— or release from the cycle of rebirth. But this was just death on a grander scale, which simply confirmed my intuition that no one should want to live in the first place. So why do we?`,
+                                    `— or, release from the cycle of rebirth. But this was just death on a grander scale, which simply confirmed my intuition that no one should want to live in the first place. So why do we?`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1698,7 +1696,7 @@ export default {
                             isItalic: true,
                             lyric: `Yearling's Bobtail`,
                         },
-                        `wouldn't get any attention from the indie press, I moved to New York City to regain my bearings. There, Sasha and I reconnected, and we started dating. She put me on the conversion path, while I volunteered to study Hebrew. But we didn't last. Though I tried hard to reinvent myself once more, it was no longer possible to do so while also drinking heavily. Life had changed.`,
+                        `wouldn't get any attention from the indie press, I moved to New York City to regain my bearings. There, Sasha and I reconnected, and we started dating. She put me on the conversion path, while I volunteered to study Hebrew. But we didn't last. Though I tried hard to reinvent myself once more, it was no longer possible to do so while still drinking heavily. Life had changed.`,
                     ],
                     dotKeys: {
                         [AFTERWORD]: true,

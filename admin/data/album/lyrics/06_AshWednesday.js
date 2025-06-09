@@ -275,7 +275,7 @@ export default {
                             anchor: `arpeggios`,
                             wiki: `Arpeggio`,
                         },
-                        `— with triplets on the soprano recorder, and quadruplets on the tenor.`,
+                        `: triplets on the soprano recorder, and quadruplets on the tenor.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -396,7 +396,7 @@ export default {
                             anchor: `"Joyce" oblivious`,
                             todo: REVIEW,
                             card: {
-                                description: `Of course, not knowing that I couldn't be the next Joyce is why I dared to try. And so I began to dream that I could do for rock music what Joyce had done for modern literature.`,
+                                description: `Of course, not knowing that I couldn't be the next Joyce is why I dared to try. And so I began to dream of doing for rock music what Joyce had done for modern literature.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

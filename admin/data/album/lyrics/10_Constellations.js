@@ -1856,6 +1856,7 @@ export default {
                         {
                             anchor: `Enguished buzzereds`,
                             properNoun: true,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In the historical narrative still playing in my head, the "`,
@@ -1868,7 +1869,7 @@ export default {
                                         anchor: `ruffs`,
                                         wiki: `Ruff_(clothing)`,
                                     },
-                                    `around their necks resemble the neck fringes seen on vultures— or "buzzards," as they're colloquially known.`,
+                                    `around their necks resemble the neck fringes seen on vultures— known to some as "buzzards."`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
