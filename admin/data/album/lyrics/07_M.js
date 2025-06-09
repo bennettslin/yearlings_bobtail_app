@@ -157,7 +157,7 @@ export default {
                                         anchor: `five-year plans`,
                                         wiki: `Five-year_plans_for_the_national_economy_of_the_Soviet_Union`,
                                     },
-                                    `of the Soviet Union were centralized mandates for rapid economic growth. Five years thus seemed like the optimal time frame to carry out my own plan for rapid character growth.`,
+                                    `of the Soviet Union were centralized mandates for rapid economic growth. Five years thus seemed like a good time frame to carry out my own plan for rapid character growth.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -396,7 +396,6 @@ export default {
                         {
                             // NOTE: I capitalised my name.
                             anchor: `Signed off "Love me"`,
-                            todo: REVIEW,
                             card: {
                                 description: `Back when we still treated emails like personal letters, I'd close with "Love Bennett," absent a comma out of laziness. Catherine once joked that this sounded like a command spoken in desperation.`,
                                 dotKeys: {
@@ -818,7 +817,7 @@ export default {
                             anchor: `world's a naked baby`,
                             todo: REVIEW,
                             card: {
-                                description: `But at some point, I realized that a social scene isn't any different from the world at large, in that little is hidden from view. So any situation can be understood by reading everyone else's intentions and observing their actions— much like a holistic picture of the world emerges after reading books on all the important subject matters.`,
+                                description: `But at some point, I realized that a social scene isn't any different from the world at large, in that little is hidden from view. Which means any situation can be understood by reading everyone else's intentions and observing their actions— much like a holistic picture of the world emerges after reading books on all the important subject matters.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -840,7 +839,6 @@ export default {
                     lyric: [
                         {
                             anchor: `to have a merry ol' laugh`,
-                            todo: REVIEW,
                             cards: [
                                 {
 
@@ -1030,7 +1028,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `My original plan was to take the puns one step further by recording this song in a "`,

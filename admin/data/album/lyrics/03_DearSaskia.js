@@ -583,7 +583,7 @@ export default {
                                         isItalic: true,
                                         lyric: `be`,
                                     },
-                                    `" boys— but the one naturally follows the other. It surprised me when school aides declined to intervene on behalf of the bullied, as if such predation were vital to the middle school ecosystem.`,
+                                    `" boys— but the one naturally follows the other. It surprised me when school aides declined to intervene on behalf of the bullied, as if this would disturb the natural balance of the middle school ecosystem.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,

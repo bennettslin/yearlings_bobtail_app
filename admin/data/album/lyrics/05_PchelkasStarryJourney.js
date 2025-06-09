@@ -88,7 +88,7 @@ export default {
                                                 wiki: `Beautiful_Losers`,
                                             },
                                         },
-                                        `, the character F. tires of getting bullied at the beach. So he signs up for the Charles Axis bodybuilding course advertised in a comic book— only to discover that it's Charles Axis who bullies him. This absurd revelation sums up my mood whenever I reflect on where my own misadventures in mail order ended up taking me.`,
+                                        `, the character F. tires of getting bullied at the beach. So he signs up for the Charles Axis bodybuilding course advertised in a comic book— only to discover that Charles Axis is the one who bullies him. I'm reminded of it anytime I reflect on my own misadventures in mail order; in both cases, I can't help but smile at the absurdity.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -105,7 +105,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: REVIEW,
                 card: {
-                    description: `I wanted a child to recite this line, but no one I knew had any at the time. So I had my sister do it while mimicking a child's voice.`,
+                    description: `I wanted a child to recite this line, but no one I knew at the time was having them just yet. So I asked my sister to do it in a child's voice.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
