@@ -31,7 +31,6 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: `To avoid mentioning Mara by name, I came up with the song title "M," which I planned to explain by packing the lyrics with words that start with the letter M. I probably wasn't fooling anyone, though.`,
                     dotKeys: {
@@ -158,7 +157,7 @@ export default {
                                         anchor: `five-year plans`,
                                         wiki: `Five-year_plans_for_the_national_economy_of_the_Soviet_Union`,
                                     },
-                                    `of the Soviet Union were centralized mandates for rapid economic development. Five years seemed like an optimal time frame, then, to carry out my own plan for rapid character growth.`,
+                                    `of the Soviet Union were centralized mandates for rapid economic growth. Five years thus seemed like the optimal time frame to carry out my own plan for rapid character growth.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -186,7 +185,6 @@ export default {
                         `to mold me into a`,
                         {
                             anchor: `mystery mensch`,
-                            todo: REVIEW,
                             card: {
                                 description: `Unlike me, my older sister was popular in high school. So she always had the latest gossip to tell me, like anytime a girl crushed on me from afar— which wasn't often, but it did happen. And thus I knew there was some mystique to my image as an artsy loner; my mission now was simply to ensure that something of actual substance lay beneath.`,
                                 dotKeys: {
@@ -203,7 +201,6 @@ export default {
                         {
                             // NOTE: I changed this from minutiae.
                             anchor: `No minutia left unmastered`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Though my goal was to be well versed in all important subject matters, I got the most satisfaction from showing off a random skill with seeming nonchalance. So I made sure to set aside time for purely fanciful pursuits, like memorizing the`,
@@ -226,7 +223,6 @@ export default {
                     lyric: [
                         {
                             anchor: `music cred`,
-                            todo: REVIEW,
                             card: {
                                 description: `I always detected a whiff of disdain from the record store clerks who rang up my purchases. But with my quest for self-betterment, I got over my intimidation and began to approach them for recommended listening.`,
                                 dotKeys: {
@@ -402,7 +398,7 @@ export default {
                             anchor: `Signed off "Love me"`,
                             todo: REVIEW,
                             card: {
-                                description: `Back when we still treated emails like personal letters, I would close with "Love Bennett," absent a comma out of laziness. Catherine once joked that this sounded like a command spoken in desperation.`,
+                                description: `Back when we still treated emails like personal letters, I'd close with "Love Bennett," absent a comma out of laziness. Catherine once joked that this sounded like a command spoken in desperation.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

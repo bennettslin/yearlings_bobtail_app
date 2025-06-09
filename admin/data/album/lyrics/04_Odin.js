@@ -19,7 +19,7 @@ import {
     IS_UNIT_DOT,
     RESPONSE,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Odin',
@@ -1616,7 +1616,8 @@ export default {
                         `past a`,
                         {
                             anchor: `guileless garden gnome`,
-                            todo: REVIEW,
+                            todo: REVISE,
+                            problem: `Two "can only"s in a row.`,
                             cards: [
                                 {
                                     description: [
