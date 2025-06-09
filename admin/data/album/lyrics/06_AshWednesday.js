@@ -100,7 +100,6 @@ export default {
                     lyric: [
                         {
                             anchor: `where it commenced`,
-                            todo: REVIEW,
                             card: {
                                 description: `The relationship with Catherine began like my friendship with Sasha had a decade earlier: I latched onto the first cute person to show me kindness in a new setting, and then I tried to make myself indispensable in small ways.`,
                                 dotKeys: {
@@ -397,7 +396,7 @@ export default {
                             anchor: `"Joyce" oblivious`,
                             todo: REVIEW,
                             card: {
-                                description: `Of course, not knowing that I couldn't be the next Joyce is why I dared to try. And so I began to dream of doing for rock music what Joyce had done for modern literature.`,
+                                description: `Of course, not knowing that I couldn't be the next Joyce is why I dared to try. And so I began to dream that I could do for rock music what Joyce had done for modern literature.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -500,7 +499,6 @@ export default {
                         `And as I pace, stranded here`,
                         {
                             anchor: `outside her Shelta`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The`,
@@ -689,7 +687,6 @@ export default {
                         `Well yes, I`,
                         {
                             anchor: `faked this X`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `Since Catherine insisted on going no further than heavy petting, I had to fake "the sex" for myself by masturbating afterward.`,

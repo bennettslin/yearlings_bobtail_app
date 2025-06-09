@@ -743,7 +743,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: REVIEW,
                 card: {
-                    description: `Since the drum parts that I'd scored for this song were more advanced than what I could play at the time, I had to try several workarounds. I ended up recording the kick, snare, and toms in separate takes from the cymbals.`,
+                    description: `Since the drum parts that I'd scored for this song were more advanced than what I could play at the time, I tried several workarounds. I ended up recording the kick, snare, and toms in separate takes from the cymbals.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
@@ -1518,7 +1518,6 @@ export default {
                         `then returns them as a`,
                         {
                             anchor: `buffer zone`,
-                            todo: REVIEW,
                             card: {
                                 description: `The sea then closes behind the Israelites, drowning the Egyptian army in pursuit. Sadly, the certainty of death following me at every turn can't be held back so easily.`,
                                 dotKeys: {
@@ -1621,12 +1620,12 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `Powerless to change my circumstances, I can only accept all that remains unknown. Like a`,
+                                        `Powerless to change my circumstances, I can only accept all that remains unknown. And so, like a`,
                                         {
                                             anchor: `garden gnome`,
                                             wiki: `Garden_gnome`,
                                         },
-                                        `with feet firmly planted in the lawn grass, then, I stand motionless and grin faintly in hope for the future.`,
+                                        `, I can only stand motionless, with feet planted in the lawn grass, grinning faintly in hope for the future.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -1659,7 +1658,7 @@ export default {
                                         anchor: `Monday's Child`,
                                         wiki: `Monday's_Child`,
                                     },
-                                    `" is a nursery rhyme that predicts a child's fortune based on the day of the week they were born. Having been born on a Thursday, then, I'm promised to have "far to go"— and indeed, the distance left for me to cover feels vast. Still, I'm now one day closer than when the day began…`,
+                                    `" is a nursery rhyme that predicts a child's fortune based on the day of the week they were born. As Thursday's child, then, I'm promised to have "far to go"— and indeed, the distance left for me to cover feels vast. Still, I'm now one day closer than when the day began…`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

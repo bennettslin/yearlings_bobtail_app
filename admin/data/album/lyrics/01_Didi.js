@@ -190,7 +190,7 @@ export default {
                                 wiki: `A_Portrait_of_the_Artist_as_a_Young_Man`,
                             },
                         },
-                        `, begins in the simple prose of a child. Since my ambition was to do for rock music what he'd done for modern literature, I did the same by keeping the lyrics simple in this opening song of my first album.`,
+                        `, begins in the simple prose of a child. Since my ambition was to do for rock music what he'd done for modern literature, I did the same by keeping the lyrics childlike in this opening song of my first album.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,

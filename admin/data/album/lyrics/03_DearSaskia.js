@@ -538,7 +538,6 @@ export default {
                         `Oh but Sasha, if`,
                         {
                             anchor: `anarchy reigns`,
-                            todo: REVIEW,
                             card: {
                                 description: `It was bizarre to be taught in history class that anarchy descends into tyranny, only to then wander onto the quad and see this very phenomenon in action.`,
                                 dotKeys: {

@@ -231,7 +231,6 @@ export default {
                         `You stowed away`,
                         {
                             anchor: `beneath your captain bed`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `I slept in a`,
@@ -904,7 +903,6 @@ export default {
                         `twits daily`,
                         {
                             anchor: `murdered for their virtue`,
-                            todo: REVIEW,
                             card: {
                                 description: `My suffering was made more bearable if I could believe it was tied to a greater purpose. But ironically, behaving as such only invited further abuse…`,
                                 dotKeys: {
@@ -1017,7 +1015,6 @@ export default {
                         `first`,
                         {
                             anchor: `unearth their own plots`,
-                            todo: REVIEW,
                             card: {
                                 description: `Figuratively, to reveal one's secret plans; and literally, to dig one's own grave.`,
                                 dotKeys: {
