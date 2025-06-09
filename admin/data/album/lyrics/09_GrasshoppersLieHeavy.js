@@ -37,6 +37,7 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 cards: [
                     {
                         description: [
@@ -52,7 +53,7 @@ export default {
                                 anchor: `Philip K. Dick`,
                                 wiki: `Philip_K._Dick`,
                             },
-                            `that imagines if World War II had ended with an Axis victory. Curiously, the characters in this story are engrossed in their own alternate history novel called`,
+                            `that imagines World War II having ended with an Axis victory. Curiously, the characters in this story are engrossed in their own alternate history novel called`,
                             {
                                 isItalic: true,
                                 lyric: `The Grasshopper Lies Heavy`,
@@ -221,8 +222,9 @@ export default {
                         `death of`,
                         {
                             anchor: `dull dishroom days`,
+                            todo: REVIEW,
                             card: {
-                                description: `My job as a dishwasher was uneventful and offered no social interaction, but it had its upsides. At the start of the shift, I would read a book while the dishes piled up, and then clean them all at once in a mad rush. When it got busy, I would switch to writing lyrics in my head.`,
+                                description: `My job as a dishwasher was uneventful and offered no social interaction, but it had its upsides. At the start of the shift, I'd read a book while the dishes piled up, then clean them all at once in a mad rush. When it got too busy, I'd switch to writing lyrics in my head.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -236,8 +238,9 @@ export default {
                         `stalled by`,
                         {
                             anchor: `keys left on dumbwaiter trays`,
+                            todo: REVIEW,
                             card: {
-                                description: `The students would bus their trays on carriages attached to a conveyor that led into the dishroom. Every so often, one of them would accidentally leave a personal item on their tray and come downstairs to retrieve it. I got a kick whenever this happened. They were always grateful, and sometimes they were cute.`,
+                                description: `The students would bus their trays on carriages attached to a conveyor that led into the dishroom. Every so often, someone would accidentally leave a personal item on their tray and come downstairs to retrieve it. I got a kick whenever this happened. They were always grateful, and sometimes they were cute.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -265,6 +268,7 @@ export default {
                         `to`,
                         {
                             anchor: `fetch her lancet pen`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -273,7 +277,7 @@ export default {
                                             anchor: `diabetic`,
                                             wiki: `Diabetes`,
                                         },
-                                        `, Sita had to monitor her blood sugar level. So before meals, she would draw blood from her finger by pricking it with a`,
+                                        `, Sita had to monitor her blood sugar level. So before meals, she'd draw blood from her finger by pricking it with a`,
                                         {
                                             anchor: `lancing device`,
                                             wiki: `Blood_lancet`,
@@ -301,6 +305,7 @@ export default {
                         `and stunned, by`,
                         {
                             anchor: `reflex you asked`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `By then, I was mostly on autopilot when it came to hitting on random women in random places.`,
@@ -309,7 +314,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `In awe of Sita's beauty, I'm determined not to screw this one up. So after handing back her lancing device, I engage in small talk before asking her on a date.`,
+                                    description: `In awe of Sita's beauty, I'm determined not to screw this up. So after handing back her lancing device, I engage in small talk before asking her on a date.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -359,6 +364,7 @@ export default {
                         {
                             anchor: `Schwa stickers`,
                             properNoun: true,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -366,7 +372,7 @@ export default {
                                             anchor: `Schwa`,
                                             wiki: `Schwa_(art)`,
                                         },
-                                        `is the underground artwork of Bill Barker. In the '90s, stickers of his oblong alien heads began to show up on newspaper racks and street signs. Truth be told, it was all a mystery to me. In those days, the Web didn't explain most things, and I wasn't in the habit of checking if it did.`,
+                                        `is the underground artwork of Bill Barker. In the '90s, stickers of his alien heads were stuck on newspaper racks and street signs everywhere. Truth be told, it was all a mystery to me. In those days, the Web didn't explain most things, and I wasn't in the habit of checking if it did.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -386,7 +392,6 @@ export default {
                         `attached to your`,
                         {
                             anchor: `sci-fi paperback`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `At the time, I was obsessed with Dick's stories of altered states and dystopian worlds. On campus, I often tried to be seen with one of his novels nestled under my arm.`,
@@ -484,8 +489,9 @@ export default {
                         `Then just like the drift,`,
                         {
                             anchor: `she disappeared`,
+                            todo: REVIEW,
                             card: {
-                                description: `Shortly after our first few dates, I called Sita to tell her I was in love with her. She admitted that she didn't feel the same way, yet wanted to remain friends. We hung up with the understanding that we would continue to hang out casually— but I felt so dejected, I quietly decided never to see her again.`,
+                                description: `Shortly after our first few dates, I called Sita to tell her I was in love with her. She admitted that she didn't feel the same way, yet wanted to remain friends. We hung up with the understanding that we'd continue to hang out— but I felt so dejected, I quietly decided never to see her again.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -507,8 +513,9 @@ export default {
                         `Alone his first gig,`,
                         {
                             anchor: `stagefright ignites`,
+                            todo: REVIEW,
                             card: {
-                                description: `During this time, I began performing at singer-songwriter nights hosted by local coffee shops. My first few attempts were a disaster, but I learned to conquer my stagefright with just the right amount of alcohol.`,
+                                description: `During this time, I began to perform at singer-songwriter nights hosted by local coffee shops. My first few attempts were a disaster, but I learned to conquer my stagefright with just the right amount of alcohol.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -559,8 +566,9 @@ export default {
                         `But`,
                         {
                             anchor: `no convert's missed`,
+                            todo: REVIEW,
                             card: {
-                                description: `RI Research understood that I'd soon grow disillusioned, which is why they asked for the largest payment upfront. Their last few letters were so sloppily written, it even felt like they were shooing me away by that point. And now Sita's departure from my life seemed like proof that I was once again a sucker for the perfect scam.`,
+                                description: `RI Research understood that I'd soon grow disillusioned, which is why they asked for the largest payment upfront. Their last few letters were so sloppily written, it even felt like they were shooing me away by that point. And now Sita's departure from my life seemed like proof that I was a sucker for the perfect scam once again.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -612,8 +620,9 @@ export default {
                         `Tonight, just`,
                         {
                             anchor: `sour grapes, bitter sweets`,
+                            todo: REVIEW,
                             card: {
-                                description: `At the end of each shift, I would head to the dining area to scavenge enough leftovers for my next meal. Busy days were doubly cruel because after staying late and working myself to exhaustion, there would be nothing left to pick through but the withered scraps that no one else wanted.`,
+                                description: `At the end of each shift, I'd head to the dining area to scavenge enough leftovers for my next meal. Busy days were doubly cruel, then, because after staying late and working myself to exhaustion, there'd be nothing left to pick through but withered scraps.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -781,8 +790,9 @@ export default {
                         `"Hey, you know`,
                         {
                             anchor: `you're my password`,
+                            todo: REVIEW,
                             card: {
-                                description: `As I enter the passcode for the gate, Sita breaks the ice by mentioning that something she remembered about me was the basis for a password she recently created.`,
+                                description: `As I enter the passcode for the gate, Sita breaks the ice by mentioning that something she remembered about me served as the basis for a password she recently created.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -809,8 +819,9 @@ export default {
                         `She`,
                         {
                             anchor: `locks your arm`,
+                            todo: REVIEW,
                             card: {
-                                description: `Seeing Sita shiver from the cold, I invite her to warm up inside my apartment, whereupon she gladly tucks her hand under my arm. Of course, this doesn't mean what I want it to mean… And so I feel like an escaped convict who's just been recaptured and put in handcuffs.`,
+                                description: `Seeing Sita shiver from the cold, I invite her to warm up inside my apartment, whereupon she gladly tucks her hand under my arm. Of course, this doesn't mean what I want it to mean… and so I feel like an escaped convict who's just been recaptured and put in handcuffs.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -876,8 +887,9 @@ export default {
                         `Though`,
                         {
                             anchor: `never full, you're fed`,
+                            todo: REVIEW,
                             card: {
-                                description: `And so I concede that mere friendship is still better than the cold, bleak alternative— the way a tired fugitive feels relieved to come back to regular meals and the warm bed of a jail cell.`,
+                                description: `And so I concede that mere friendship is still better than the cold, bleak alternative, much like a tired fugitive feels relieved to come back to regular meals and the warm bed of a jail cell.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -887,9 +899,10 @@ export default {
                         `; so you`,
                         {
                             anchor: `hit the switch`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `With these thoughts swirling in my head, I flip the light switch on in my apartment.`,
+                                    description: `With these thoughts swirling in my head, I flip on the light switch in my apartment.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -908,15 +921,16 @@ export default {
                         `On your bed's rumpled linens, a`,
                         {
                             anchor: `lidless Vaseline sits`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
-                                        `On my bed lies an open jar of`,
+                                        `There's an open jar of`,
                                         {
                                             anchor: `Vaseline`,
                                             wiki: `Vaseline`,
                                         },
-                                        `, which I clearly used recently to masturbate with.`,
+                                        `on my bed, which can only mean I've used it recently to masturbate with.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -938,7 +952,7 @@ export default {
                             anchor: `here to Philip Dick`,
                             todo: REVIEW,
                             card: {
-                                description: `Or else, to "feel up dick." Sita lightens the awkwardness by joking that I might prefer to continue masturbating alone. At the same time, she takes a gentle jab at the bookish persona I've painstakingly crafted.`,
+                                description: `Or else, to "feel up dick." Sita lightens the awkwardness by joking that I might prefer to continue masturbating alone. At the same time, she gently jabs at the bookish persona I've painstakingly crafted.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -1128,15 +1142,16 @@ export default {
                         },
                         {
                             anchor: `with a ring`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Having dozed off, I'm roused by the ringing of a bell to indicate that a patient has been released from care and is returning to the waiting area.`,
+                                    description: `Having dozed off, I'm woken by the ringing of a bell, which indicates that a patient is being released from care and returning to the waiting area.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
                                 },
                                 {
-                                    description: `The momentous occasion of a wedding may leave the groom in a daze, to be roused only by exchanging wedding rings with a "belle."`,
+                                    description: `The momentous occasion might put the groom in a daze, to be roused only by the exchange of wedding rings with his "belle."`,
                                     dotKeys: {
                                         [PUN]: true,
                                         [OBSERVATION]: true,
@@ -1204,6 +1219,7 @@ export default {
                     lyric: [
                         {
                             anchor: `She loves you`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `It took a whole year for Sita and I to be fully comfortable with each other. At the start of our friendship, we mostly just studied together at the library. But slowly, short treks through campus progressed into long strolls around the neighborhood, which then led to leaning in closer on the couch. Toward the end, it all happened so fast that I was still processing what triggered it.`,
@@ -1213,12 +1229,12 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `A reference to one of my`,
+                                        `A reference to`,
                                         {
-                                            anchor: `favorite Beatles songs`,
+                                            anchor: `a favorite`,
                                             wiki: `She_Loves_You`,
                                         },
-                                        `. During my troubled years with Sita later on, it felt like`,
+                                        `Beatles song of mine. During my troubled years with Sita later on, it felt like`,
                                         {
                                             anchor: `John Lennon`,
                                             wiki: `John_Lennon`,
@@ -1344,7 +1360,15 @@ export default {
                         {
                             anchor: `Grace Darling's beacon`,
                             properNoun: true,
+                            todo: REVIEW,
                             cards: [
+                                {
+                                    description: `As Sita comforts me, I'm reminded that she's my "grace darling," who rescued me from a sea of loneliness.`,
+                                    dotKeys: {
+                                        [NARRATIVE]: true,
+                                        [PUN]: true,
+                                    },
+                                },
                                 {
                                     description: [
                                         {
@@ -1356,12 +1380,8 @@ export default {
                                             anchor: `tuberculosis`,
                                             wiki: `Tuberculosis`,
                                         },
-                                        `. And as Sita comforts me, I'm reminded that she's my "grace darling," who rescued me from a sea of loneliness.`,
+                                        `.`,
                                     ],
-                                    dotKeys: {
-                                        [NARRATIVE]: true,
-                                        [PUN]: true,
-                                    },
                                 },
                                 {
                                     wormhole: `gray_starling`,
