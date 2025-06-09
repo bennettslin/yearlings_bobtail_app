@@ -105,7 +105,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: REVIEW,
                 card: {
-                    description: `I wanted a child to recite this line, but no one I knew had any at the time. So I had my sister do it while imitating a child's voice.`,
+                    description: `I wanted a child to recite this line, but no one I knew had any at the time. So I had my sister do it while mimicking a child's voice.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
@@ -376,7 +376,7 @@ export default {
                             anchor: `Feigning sick`,
                             todo: REVIEW,
                             card: {
-                                description: `In earlier years, I was proud of my near-perfect attendance record. Once the bullying began, however, I'd skip school by faking illness. My mother noticed the change, but she trusted me enough not to press the issue.`,
+                                description: `In earlier years, I was proud of my near-perfect attendance record. Once the bullying began, however, I'd skip school by faking illness on a regular basis. My mother noticed the change, but trusted me enough not to press the issue.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

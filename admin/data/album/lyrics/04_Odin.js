@@ -461,7 +461,7 @@ export default {
                                         isItalic: true,
                                         lyric: `fewer`,
                                     },
-                                    `slurs against you?`,
+                                    `slurs against your kind?`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -743,7 +743,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: REVIEW,
                 card: {
-                    description: `Since the drum parts that I'd scored for this song were more advanced than what I could play at the time, I tried several workarounds. I ended up recording the kick, snare, and toms in separate takes from the cymbals.`,
+                    description: `Since the drum parts that I'd scored for this song were more advanced than what I could play at the time, I had to try several workarounds. I ended up recording the kick, snare, and toms in separate takes from the cymbals.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },

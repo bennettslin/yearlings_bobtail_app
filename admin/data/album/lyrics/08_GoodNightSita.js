@@ -270,7 +270,7 @@ export default {
                                             anchor: `Nora Barnacle`,
                                             wiki: `Nora_Barnacle`,
                                         },
-                                        `," the wife of James Joyce, served as his inspiration for the character of Molly Bloom.`,
+                                        `" was James Joyce's wife, who also served as his inspiration for the character of Molly Bloom.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -288,7 +288,6 @@ export default {
                     mixTime: `0:23:18.66`,
                     lyric: {
                         anchor: `swept in unchartable tides`,
-                        todo: REVIEW,
                         card: {
                             description: [
                                 `The fear of being steered in unknown directions has kept me on edge throughout this date. But nearby is a storm drain leading into the ocean, and I'm reminded of all the`,
@@ -355,7 +354,7 @@ export default {
                         anchor: `heart of gold inside`,
                         todo: REVIEW,
                         card: {
-                            description: `Mistakes that I made on one date still offered lessons to apply toward the next. So each date felt like prying open one nesting doll to get to another, with the ultimate goal of reaching the last one whose promise proved not to be hollow.`,
+                            description: `Mistakes that I made on one date still offered lessons to apply toward the next. So each date felt like prying open one nesting doll to get to another, with the ultimate goal being to reach the last one whose promise proved not to be hollow.`,
                             dotKeys: {
                                 [OBSERVATION]: true,
                             },
@@ -628,7 +627,7 @@ export default {
                                         anchor: `understudy`,
                                         wiki: `Understudy`,
                                     },
-                                    `in theater, you undertake all the same preparation, only to see little of the same action— and this is what dating feels like as well when you're low status. So after a while, I decided to become proactive in looking for opportunities, like a freelancer posting on a cork board.`,
+                                    `in theater, you undertake all the same preparation, only to see little of the same action— and this is what dating feels like as well when you're low status. So I needed to be proactive in looking for opportunities, like a freelancer posting on a cork board.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -728,7 +727,6 @@ export default {
                         `though each`,
                         {
                             anchor: `kind new ultimatum`,
-                            todo: REVIEW,
                             card: {
                                 description: `Like the deals that natives were forced at gunpoint to make with settlers, Sita's suggestion for us to see her friend's play offered only the illusion of choice. She was going either way; I could either tag along or stay home.`,
                                 dotKeys: {
@@ -808,7 +806,6 @@ export default {
                         `hint of`,
                         {
                             anchor: `sampler cologne`,
-                            todo: REVIEW,
                             card: {
                                 description: `Whenever I spotted a men's lifestyle magazine in some neighbor's recycling bin, I'd tear out the scent strips from its cologne ads and add them to my pile. Then right before a date, I'd rub a few onto my neck and wrists.`,
                                 dotKeys: {
@@ -998,7 +995,7 @@ export default {
                             anchor: `chirping crosswalks`,
                             todo: REVIEW,
                             card: {
-                                description: `Sita and I are still standing on the sidewalk outside her boarding house. In the distance, an electronic bird call informs the blind that the street is safe to cross.`,
+                                description: `Sita and I are still standing on the sidewalk outside her boarding house. In the distance, an electronic bird call informs the visually impaired that the street is safe to cross.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
