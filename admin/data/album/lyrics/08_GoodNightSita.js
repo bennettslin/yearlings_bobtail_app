@@ -159,7 +159,7 @@ export default {
                                         anchor: `Secret decoder rings`,
                                         wiki: `Secret_decoder_ring`,
                                     },
-                                    `were promotional toys in the '60s that allowed children to decipher a television program's encrypted messages. Oftentimes, what they revealed was a preview of the next episode. Similarly, it would've been nice for every date to end with a preview of the next one.`,
+                                    `were promotional toys in the '60s that allowed children to decipher a television program's encrypted messages. Typically, what they revealed was a preview of the next episode. So it would've been nice to wear one on a date, and be given a preview of the next.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -177,7 +177,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `During my college years, I'd ask older coworkers to buy twelve-packs of cheap beer for me, which meant I always had a ready supply in my apartment. So before each date, I'd down a few cans.`,
+                                    description: `During my college years, I'd ask older coworkers to buy twelve-packs of cheap beer for me, which meant I always had a ready supply in my apartment. Then, before each date, I'd down a few cans.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -261,7 +261,6 @@ export default {
                     lyric: [
                         {
                             anchor: `nor a barnacle`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -354,7 +353,7 @@ export default {
                         anchor: `heart of gold inside`,
                         todo: REVIEW,
                         card: {
-                            description: `Mistakes that I made on one date still offered lessons to apply toward the next. So each date felt like prying open one nesting doll to get to another, with the ultimate goal being to reach the last one whose promise proved not to be hollow.`,
+                            description: `Mistakes that I made on one date still offered lessons to apply toward the next. So each date felt like prying open one nesting doll to get to another, in the hope of reaching one at last whose promise wouldn't be hollow.`,
                             dotKeys: {
                                 [OBSERVATION]: true,
                             },
@@ -376,7 +375,7 @@ export default {
                             anchor: `crack up another doll`,
                             todo: REVIEW,
                             card: {
-                                description: `A friend once told me that if I can keep a woman cracking up at my jokes, then I'll always be good for another date. Unfortunately, my humor at the time had been warped by Catherine's fondness for bad puns.`,
+                                description: `A friend once told me that if I can keep a woman cracking up at my jokes, then I'll always be good for another date. Unfortunately, my humor by that point was built around Catherine's fondness for bad puns.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [PUN]: true,
@@ -627,7 +626,7 @@ export default {
                                         anchor: `understudy`,
                                         wiki: `Understudy`,
                                     },
-                                    `in theater, you undertake all the same preparation, only to see little of the same action— and this is what dating feels like as well when you're low status. So I needed to be proactive in looking for opportunities, like a freelancer posting on a cork board.`,
+                                    `in theater, you undertake all the same preparation, only to see little of the same action— and this is what dating feels like as well when you're low status. So I needed to be proactive in seeking out opportunities, like a freelancer posting on a cork board.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -661,7 +660,7 @@ export default {
                             anchor: `learn to shotgun`,
                             todo: REVIEW,
                             card: {
-                                description: `In time I adopted the shotgun approach to dating, which involves hitting on anyone at any moment. It works by putting the math on your side: Even if your success rate remains dismal, you've now increased the sample size— which then improves your chances of someone saying yes to a date. And one yes is all you really need.`,
+                                description: `In time I adopted the shotgun approach to dating, which involves hitting on anyone at any moment. It works by putting the math on your side: Even if your success rate remains low, you're increasing the sample size— which now improves your chances of someone saying yes to a date. And one yes is all you really need.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -751,7 +750,6 @@ export default {
                         `brave`,
                         {
                             anchor: `rejection into art`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `I learned to welcome rejection, since I could always use it as subject matter when writing new songs. Which meant a lifetime of getting rejected can`,
@@ -833,7 +831,6 @@ export default {
                         `always rides in`,
                         {
                             anchor: `single go-karts`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `On our third date, Sita and I visit a`,
@@ -859,7 +856,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `At the time, I often fantasized about preparing a mental`,
+                                    `I sometimes fantasized about mapping a mental`,
                                     {
                                         anchor: `flowchart`,
                                         wiki: `Flowchart`,
@@ -881,7 +878,7 @@ export default {
                             anchor: `answer a no`,
                             todo: REVIEW,
                             card: {
-                                description: `Of course, if I were never given an opening to make any decisions at all, each date would end with me going right back to the beginning of the flowchart. And then I'd be doomed to spend my life cycling through an infinite loop of polite rejections.`,
+                                description: `Of course, if I were never given an opening to make any decisions at all, then each date would end with me going right back to the beginning of the flowchart. And I'd be doomed to spend my life cycling through an infinite loop of polite rejections.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -951,7 +948,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `Children's songs from the '70s are a wellspring of musical wisdom: They were composed by those trained in older styles, but arranged to fit the newer styles of those times. One example is the soundtrack for`,
@@ -993,7 +989,6 @@ export default {
                         `as the`,
                         {
                             anchor: `chirping crosswalks`,
-                            todo: REVIEW,
                             card: {
                                 description: `Sita and I are still standing on the sidewalk outside her boarding house. In the distance, an electronic bird call informs the visually impaired that the street is safe to cross.`,
                                 dotKeys: {
