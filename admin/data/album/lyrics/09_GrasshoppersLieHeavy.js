@@ -566,7 +566,6 @@ export default {
                         `But`,
                         {
                             anchor: `no convert's missed`,
-                            todo: REVIEW,
                             card: {
                                 description: `RI Research understood that I'd soon grow disillusioned, which is why they asked for the largest payment upfront. Their last few letters were so sloppily written, it even felt like they were shooing me away by that point. And now Sita's departure from my life seemed like proof that I was a sucker for the perfect scam once again.`,
                                 dotKeys: {
@@ -620,7 +619,6 @@ export default {
                         `Tonight, just`,
                         {
                             anchor: `sour grapes, bitter sweets`,
-                            todo: REVIEW,
                             card: {
                                 description: `At the end of each shift, I'd head to the dining area to scavenge enough leftovers for my next meal. Busy days were doubly cruel, then, because after staying late and working myself to exhaustion, there'd be nothing left to pick through but withered scraps.`,
                                 dotKeys: {
@@ -792,7 +790,7 @@ export default {
                             anchor: `you're my password`,
                             todo: REVIEW,
                             card: {
-                                description: `As I enter the passcode for the gate, Sita breaks the ice by mentioning that something she remembered about me served as the basis for a password she recently created.`,
+                                description: `As I enter the passcode for the gate, Sita breaks the ice by mentioning that a detail she remembered about me later served as the basis for a password she created.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -821,7 +819,7 @@ export default {
                             anchor: `locks your arm`,
                             todo: REVIEW,
                             card: {
-                                description: `Seeing Sita shiver from the cold, I invite her to warm up inside my apartment, whereupon she gladly tucks her hand under my arm. Of course, this doesn't mean what I want it to mean… and so I feel like an escaped convict who's just been recaptured and put in handcuffs.`,
+                                description: `Seeing Sita shiver from the cold, I invite her to warm up in my apartment, whereupon she gladly tucks her arm under mine. Of course, this doesn't mean what I want it to mean; if anything, I feel like an escaped convict who's just been recaptured and put in handcuffs.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -889,7 +887,7 @@ export default {
                             anchor: `never full, you're fed`,
                             todo: REVIEW,
                             card: {
-                                description: `And so I concede that mere friendship is still better than the cold, bleak alternative, much like a tired fugitive feels relieved to come back to regular meals and the warm bed of a jail cell.`,
+                                description: `And so, like a tired fugitive returning to the regular meals and warm bed of a jail cell, I concede that mere friendship is better than the cold, bleak alternative.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -899,7 +897,6 @@ export default {
                         `; so you`,
                         {
                             anchor: `hit the switch`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `With these thoughts swirling in my head, I flip on the light switch in my apartment.`,
@@ -925,12 +922,12 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `There's an open jar of`,
+                                        `Lying on my bed is an open jar of`,
                                         {
                                             anchor: `Vaseline`,
                                             wiki: `Vaseline`,
                                         },
-                                        `on my bed, which can only mean I've used it recently to masturbate with.`,
+                                        `, making it clear that I've recently masturbated.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -952,7 +949,7 @@ export default {
                             anchor: `here to Philip Dick`,
                             todo: REVIEW,
                             card: {
-                                description: `Or else, to "feel up dick." Sita lightens the awkwardness by joking that I might prefer to continue masturbating alone. At the same time, she gently jabs at the bookish persona I've painstakingly crafted.`,
+                                description: `Or else, to "feel up dick." Sita lightens the awkwardness by joking that I might prefer to continue masturbating alone. At the same time, she gently jabs at the bookish persona that I've painstakingly crafted.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -1145,7 +1142,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Having dozed off, I'm woken by the ringing of a bell, which indicates that a patient is being released from care and returning to the waiting area.`,
+                                    description: `Having dozed off, I'm roused by the ringing of a bell, which indicates that a patient is being released from care and returning to the waiting area.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -1229,12 +1226,12 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `A reference to`,
+                                        `A nod to perhaps`,
                                         {
-                                            anchor: `a favorite`,
+                                            anchor: `my favorite`,
                                             wiki: `She_Loves_You`,
                                         },
-                                        `Beatles song of mine. During my troubled years with Sita later on, it felt like`,
+                                        `Beatles song. As my troubles with Sita progressed in later years, it felt like`,
                                         {
                                             anchor: `John Lennon`,
                                             wiki: `John_Lennon`,
@@ -1375,7 +1372,7 @@ export default {
                                             anchor: `Grace Darling`,
                                             wiki: `Grace_Darling`,
                                         },
-                                        `was a lighthouse keeper's daughter who rescued the survivors of a shipwreck by paddling out to sea in a rowboat. This brave feat won her renown in the Victorian era, but the consequent public exposure led to her early death by`,
+                                        `was a lighthouse keeper's daughter who rescued the survivors of a shipwreck by paddling out to sea in a rowboat. This brave feat won her renown in the Victorian era, but the ensuing public exposure led to her early death by`,
                                         {
                                             anchor: `tuberculosis`,
                                             wiki: `Tuberculosis`,
