@@ -84,7 +84,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 todo: REST,
-                problem: `Too many adjectives? But it will do for now.`,
+                problem: `Too many adjectives? But it'll do for now.`,
                 card: {
                     description: `I wrote the music for this song a while back after waking from a horrid nightmare. The premise seemed laughable by day's end, however, so I quietly shelved it. But years later, I realized that its gloomy chords and moody tempo changes would work well for a song about a nightmarish version of my parents.`,
                     dotKeys: {
