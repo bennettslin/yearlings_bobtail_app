@@ -53,7 +53,7 @@ export default {
                                 anchor: `Philip K. Dick`,
                                 wiki: `Philip_K._Dick`,
                             },
-                            `that imagines World War II having ended with an Axis victory. Curiously, the characters in this story are engrossed in their own alternate history novel called`,
+                            `that imagines if World War II had ended with an Axis victory. Curiously, the characters in this story are engrossed in their own alternate history novel called`,
                             {
                                 isItalic: true,
                                 lyric: `The Grasshopper Lies Heavy`,
@@ -224,7 +224,7 @@ export default {
                             anchor: `dull dishroom days`,
                             todo: REVIEW,
                             card: {
-                                description: `My job as a dishwasher was uneventful and offered no social interaction, but it had its upsides. At the start of the shift, I'd read a book while the dishes piled up, then clean them all at once in a mad rush. When it got too busy, I'd switch to writing lyrics in my head.`,
+                                description: `My job as a dishwasher was uneventful and offered little social interaction, but it had its upsides. At the start of the shift, I'd read a book while the dishes piled up, then clean them all at once in a mad rush. When it got too busy, I'd switch to writing lyrics in my head.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -240,7 +240,7 @@ export default {
                             anchor: `keys left on dumbwaiter trays`,
                             todo: REVIEW,
                             card: {
-                                description: `The students would bus their trays on carriages attached to a conveyor that led into the dishroom. Every so often, someone would accidentally leave a personal item on their tray and come downstairs to retrieve it. I got a kick whenever this happened. They were always grateful, and sometimes they were cute.`,
+                                description: `The students would bus their trays onto a conveyor belt that led into the dishroom. Every so often, someone would accidentally leave a personal item on their tray and come downstairs to retrieve it. I got a kick out of it whenever this happened; they were always grateful, and sometimes they were cute.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -268,7 +268,6 @@ export default {
                         `to`,
                         {
                             anchor: `fetch her lancet pen`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -314,7 +313,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `In awe of Sita's beauty, I'm determined not to screw this up. So after handing back her lancing device, I engage in small talk before asking her on a date.`,
+                                    description: `In awe of Sita's beauty, I'm determined not to screw this one up. So after handing back her lancing device, I try to engage in small talk before asking her on a date.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -372,14 +371,14 @@ export default {
                                             anchor: `Schwa`,
                                             wiki: `Schwa_(art)`,
                                         },
-                                        `is the underground artwork of Bill Barker. In the '90s, stickers of his alien heads were stuck on newspaper racks and street signs everywhere. Truth be told, it was all a mystery to me. In those days, the Web didn't explain most things, and I wasn't in the habit of checking if it did.`,
+                                        `is the underground artwork of Bill Barker. In the '90s, stickers of his alien heads were stuck on newspaper racks and street signs everywhere. Truth be told, it was all a mystery to me. The Web didn't explain most things back then, and I wasn't in the habit of checking if it did.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
                                 },
                                 {
-                                    description: `Affixed to my belongings are stickers of underground art, reassuring Sita further that I'm not a former gangster.`,
+                                    description: `Affixed to my belongings are stickers of underground art, further reassuring Sita that I'm not a gangster.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -491,7 +490,7 @@ export default {
                             anchor: `she disappeared`,
                             todo: REVIEW,
                             card: {
-                                description: `Shortly after our first few dates, I called Sita to tell her I was in love with her. She admitted that she didn't feel the same way, yet wanted to remain friends. We hung up with the understanding that we'd continue to hang out— but I felt so dejected, I quietly decided never to see her again.`,
+                                description: `Shortly after our first few dates, I called Sita to tell her I was in love with her. She admitted that she didn't feel the same way, and just wanted to be friends. We hung up with the understanding that we'd continue to hang out— but I felt so dejected, I quietly decided never to see her again.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -515,7 +514,7 @@ export default {
                             anchor: `stagefright ignites`,
                             todo: REVIEW,
                             card: {
-                                description: `During this time, I began to perform at singer-songwriter nights hosted by local coffee shops. My first few attempts were a disaster, but I learned to conquer my stagefright with just the right amount of alcohol.`,
+                                description: `During this time I began to perform at singer-songwriter nights hosted by local coffee shops. My first few attempts were a disaster, but I learned to conquer my stagefright with just the right amount of alcohol.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -790,7 +789,7 @@ export default {
                             anchor: `you're my password`,
                             todo: REVIEW,
                             card: {
-                                description: `As I enter the passcode for the gate, Sita breaks the ice by mentioning that a detail she remembered about me later served as the basis for a password she created.`,
+                                description: `As I enter the passcode for the gate, Sita breaks the ice by mentioning a detail she'd remembered about me, which served as the basis for a password she recently created.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
