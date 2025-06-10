@@ -174,7 +174,6 @@ export default {
                         {
                             anchor: `Dutch courage`,
                             properNoun: true,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `During my college years, I'd ask older coworkers to buy twelve-packs of cheap beer for me, which meant I always had a ready supply in my apartment. Then, before each date, I'd down a few cans.`,
@@ -373,7 +372,6 @@ export default {
                         `till then`,
                         {
                             anchor: `crack up another doll`,
-                            todo: REVIEW,
                             card: {
                                 description: `A friend once told me that if I can keep a woman cracking up at my jokes, then I'll always be good for another date. Unfortunately, my humor by that point was built around Catherine's fondness for bad puns.`,
                                 dotKeys: {
@@ -626,7 +624,7 @@ export default {
                                         anchor: `understudy`,
                                         wiki: `Understudy`,
                                     },
-                                    `in theater, you undertake all the same preparation, only to see little of the same action— and this is what dating feels like as well when you're low status. So I needed to be proactive in seeking out opportunities, like a freelancer posting on a cork board.`,
+                                    `in theater, you undertake all the same preparation, only to see little of the same action— and this is what dating feels like as well when you're low status. So I needed to be proactive in seeking further opportunities, like a freelancer posting on a cork board.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -660,7 +658,7 @@ export default {
                             anchor: `learn to shotgun`,
                             todo: REVIEW,
                             card: {
-                                description: `In time I adopted the shotgun approach to dating, which involves hitting on anyone at any moment. It works by putting the math on your side: Even if your success rate remains low, you're increasing the sample size— which now improves your chances of someone saying yes to a date. And one yes is all you really need.`,
+                                description: `In time I adopted the shotgun approach to dating, which involves hitting on anyone at any moment. It works by putting the math on your side: Even if your success rate remains low, you're increasing the sample size— which then improves your chances of someone saying yes to a date. And one yes is all you really need.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -853,7 +851,6 @@ export default {
                         `as we wind an`,
                         {
                             anchor: `endless flowchart`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `I sometimes fantasized about mapping a mental`,
@@ -876,7 +873,6 @@ export default {
                         `with every given`,
                         {
                             anchor: `answer a no`,
-                            todo: REVIEW,
                             card: {
                                 description: `Of course, if I were never given an opening to make any decisions at all, then each date would end with me going right back to the beginning of the flowchart. And I'd be doomed to spend my life cycling through an infinite loop of polite rejections.`,
                                 dotKeys: {
