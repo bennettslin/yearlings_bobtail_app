@@ -336,9 +336,10 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
-                        `Back when I was learning to play the banjo, I would strum the motions of`,
+                        `Back when I was learning to play the banjo, I'd strum the motions of`,
                         {
                             anchor: `Earl Scruggs`,
                             wiki: `Earl_Scruggs`,
@@ -763,7 +764,7 @@ export default {
                                         anchor: `indentured servants`,
                                         wiki: `Indentured_servant`,
                                     },
-                                    `at a young age. But in my case, I would remain in servitude to my five-year plans until I was an old man. By then, I'd be "in dentures"— and thus unable to speak for myself.`,
+                                    `at a young age. But in my case, I'd remain in servitude to my five-year plans until I was an old man. By then, I'd be "in dentures"— and thus unable to speak for myself.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,

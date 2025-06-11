@@ -30,7 +30,7 @@ export default {
     playerReferenceTime: 2298.378,
     playerStartTime: 2295.261,
     todo: REST,
-    problem: `Just not sure if "would often" is the best replacement for "might," which I would rather say but sounds weird because it doesn't convey past tense.`,
+    problem: `Just not sure if "would often" is the best replacement for "might," which I'd rather say but sounds weird because it doesn't convey past tense.`,
     overview: `After a night out with friends, I would often shuffle on to Sita's place, slip into bed beside her, and quickly doze off. But one night Sita was awake and waiting to confront me, having discovered my plans to break up with her. In tears, she returned the gold bracelet I'd given her at the start of our relationship— and then kicked me out. With nowhere to go, I wandered the streets until sunrise. And so began the first of our many breakups…`,
     isDoublespeaker: true,
     lyricUnits: [
