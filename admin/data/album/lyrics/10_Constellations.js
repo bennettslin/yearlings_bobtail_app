@@ -1443,7 +1443,6 @@ export default {
                         `The`,
                         {
                             anchor: `mistodawn`,
-                            todo: REVIEW,
                             card: {
                                 description: `The "mist of dawn" breaks, and we drive back to Howie's place. My newfound clarity ends up being short-lived, as I lean back and shut my eyes to gaze at constellations.`,
                                 dotKeys: {
@@ -1648,7 +1647,7 @@ export default {
                                         anchor: `Nunavut`,
                                         wiki: `Nunavut`,
                                     },
-                                    `, the northernmost territory of Canada. Yet with the Norse making a reappearance in my thoughts, I realize that even our fantasies circle back and cover old ground, just like the humdrum lives from which we try to escape. So as the "Norse" encounter the "Nunavutters," we end the night as we'd begun it, "no worse and none the better."`,
+                                    `, the northernmost territory of Canada. Yet with the Norse making a reappearance in my thoughts, I realize that even our fantasies circle back and cover old ground, just like the humdrum lives from which we try to escape. So as the "Norse" encounter the "Nunavutters," we end the night as we began it, "no worse and none the better."`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1667,7 +1666,6 @@ export default {
                             {
                                 anchor: `Leif as the Red's son`,
                                 properNoun: true,
-                                todo: REVIEW,
                                 cards: [
                                     {
                                         description: `The arrival of Europeans into the Americas precipitated their rise to global power, even as it brought disease and ruin to the native populations. Similarly, while the day begins for many, it's now ending for us, and we "leave as the red sun" arrives.`,
@@ -1876,7 +1874,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `In the historical narrative still playing in my head, the "`,
+                                    `In the historical narrative still playing out in my head, the "`,
                                     {
                                         anchor: `English`,
                                         wiki: `English_people`,
@@ -1897,7 +1895,6 @@ export default {
                         {
                             anchor: `come unsated`,
                             properNoun: true,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `That night at the drugstore, I advised everyone to get the small bottle of Robitussin. We then lined up at separate checkouts to avoid attracting suspicion. When Howie finally rejoined us, we saw that he'd gone back for the large bottle, thinking the small one wouldn't be enough.`,
@@ -1931,7 +1928,7 @@ export default {
                                         anchor: `Amish`,
                                         wiki: `Amish`,
                                     },
-                                    `teenagers to explore the secular world of the "English," as the non-Amish are called, in order to deepen their faith. Though it means "running around" in the Amish language, I like the image of us dipping into a literal "rum spring." In any case, the spring of our youth— in every possible sense of the phrase— is running out.`,
+                                    `teenagers to explore the secular world of the "English"— as they refer to all others— in order to ground their faith. Though it means "running around" in the Amish language, I like the image of us dipping into a literal "rum spring." In any case, the spring of our youth— in every possible sense of the phrase— is running out.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
