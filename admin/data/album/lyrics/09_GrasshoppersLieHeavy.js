@@ -37,7 +37,6 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 cards: [
                     {
                         description: [
@@ -222,7 +221,6 @@ export default {
                         `death of`,
                         {
                             anchor: `dull dishroom days`,
-                            todo: REVIEW,
                             card: {
                                 description: `My job as a dishwasher was uneventful and offered little social interaction, but it had its upsides. At the start of the shift, I'd read a book while the dishes piled up, then clean them all at once in a mad rush. When it got too busy, I'd switch to writing lyrics in my head.`,
                                 dotKeys: {
@@ -240,7 +238,7 @@ export default {
                             anchor: `keys left on dumbwaiter trays`,
                             todo: REVIEW,
                             card: {
-                                description: `The students would bus their trays onto a conveyor belt that led into the dishroom. Every so often, someone would accidentally leave a personal item on their tray and come downstairs to retrieve it. I got a kick out of it whenever this happened; they were always grateful, and sometimes they were cute.`,
+                                description: `The students would bus their trays onto a conveyor belt that led into the dishroom. Every so often, someone would accidentally leave a personal item on their tray and come downstairs to retrieve it. I got a kick out of this whenever it happened; they were always grateful, and sometimes they were cute.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -313,7 +311,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `In awe of Sita's beauty, I'm determined not to screw this one up. So after handing back her lancing device, I try to engage in small talk before asking her on a date.`,
+                                    description: `In awe of Sita's beauty, I'm determined not to screw this up. So after handing back her lancing device, I engage in small talk before asking her on a date.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -363,7 +361,6 @@ export default {
                         {
                             anchor: `Schwa stickers`,
                             properNoun: true,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -490,7 +487,7 @@ export default {
                             anchor: `she disappeared`,
                             todo: REVIEW,
                             card: {
-                                description: `Shortly after our first few dates, I called Sita to tell her I was in love with her. She admitted that she didn't feel the same way, and just wanted to be friends. We hung up with the understanding that we'd continue to hang out— but I felt so dejected, I quietly decided never to see her again.`,
+                                description: `Shortly after our first few dates, I called Sita to tell her I was in love with her. She admitted that she didn't feel the same way and just wanted to be friends. We hung up with the understanding that we'd continue to hang out— but I felt so dejected, I quietly decided never to see her again.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -512,7 +509,6 @@ export default {
                         `Alone his first gig,`,
                         {
                             anchor: `stagefright ignites`,
-                            todo: REVIEW,
                             card: {
                                 description: `During this time I began to perform at singer-songwriter nights hosted by local coffee shops. My first few attempts were a disaster, but I learned to conquer my stagefright with just the right amount of alcohol.`,
                                 dotKeys: {
@@ -789,7 +785,7 @@ export default {
                             anchor: `you're my password`,
                             todo: REVIEW,
                             card: {
-                                description: `As I enter the passcode for the gate, Sita breaks the ice by mentioning a detail she'd remembered about me, which served as the basis for a password she recently created.`,
+                                description: `As I enter the passcode for the gate, Sita breaks the ice by mentioning that a personal detail about me, which she still remembered, had served as the basis for a password she recently created.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -816,7 +812,6 @@ export default {
                         `She`,
                         {
                             anchor: `locks your arm`,
-                            todo: REVIEW,
                             card: {
                                 description: `Seeing Sita shiver from the cold, I invite her to warm up in my apartment, whereupon she gladly tucks her arm under mine. Of course, this doesn't mean what I want it to mean; if anything, I feel like an escaped convict who's just been recaptured and put in handcuffs.`,
                                 dotKeys: {
@@ -884,7 +879,6 @@ export default {
                         `Though`,
                         {
                             anchor: `never full, you're fed`,
-                            todo: REVIEW,
                             card: {
                                 description: `And so, like a tired fugitive returning to the regular meals and warm bed of a jail cell, I concede that mere friendship is better than the cold, bleak alternative.`,
                                 dotKeys: {
@@ -921,7 +915,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `Lying on my bed is an open jar of`,
+                                        `On my bed is an open jar of`,
                                         {
                                             anchor: `Vaseline`,
                                             wiki: `Vaseline`,
@@ -946,7 +940,6 @@ export default {
                         `"Shall I leave you," she says, "`,
                         {
                             anchor: `here to Philip Dick`,
-                            todo: REVIEW,
                             card: {
                                 description: `Or else, to "feel up dick." Sita lightens the awkwardness by joking that I might prefer to continue masturbating alone. At the same time, she gently jabs at the bookish persona that I've painstakingly crafted.`,
                                 dotKeys: {
@@ -1141,7 +1134,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Having dozed off, I'm roused by the ringing of a bell, which indicates that a patient is being released from care and returning to the waiting area.`,
+                                    description: `Having dozed off, I'm roused by the ringing of a bell, which indicates that a patient has been released from care and is returning to the waiting area.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -1218,7 +1211,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `It took a whole year for Sita and I to be fully comfortable with each other. At the start of our friendship, we mostly just studied together at the library. But slowly, short treks through campus progressed into long strolls around the neighborhood, which then led to leaning in closer on the couch. Toward the end, it all happened so fast that I was still processing what triggered it.`,
+                                    description: `It took a year for Sita and I to become fully comfortable with each other. At the start of our friendship, we mostly just studied together at the library. But slowly, short treks through campus extended into longer strolls around the neighborhood, which then led to leaning in closer on the couch. Toward the end, it all happened so fast that I was still processing what triggered it.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -1356,7 +1349,6 @@ export default {
                         {
                             anchor: `Grace Darling's beacon`,
                             properNoun: true,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `As Sita comforts me, I'm reminded that she's my "grace darling," who rescued me from a sea of loneliness.`,
