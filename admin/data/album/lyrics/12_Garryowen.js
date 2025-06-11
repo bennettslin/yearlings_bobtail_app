@@ -33,14 +33,15 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
-                        `In`,
+                        `In James Joyce's`,
                         {
                             isItalic: true,
                             lyric: `Ulysses`,
                         },
-                        `, Garryowen is a menacing dog owned by a vulgar Irish nationalist. On a whim, I gave the same name to my drunken self.`,
+                        `, Garryowen is a menacing dog owned by a vulgar Irish nationalist. It thus seemed like a fitting name to give my drunken self.`,
                     ],
                     dotKeys: {
                         [OBSERVATION]: true,
@@ -63,9 +64,10 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
-                        `Since I took the name of my drunken personality from James Joyce's`,
+                        `Since I took the name of my drunken personality from`,
                         {
                             isItalic: true,
                             lyric: `Ulysses`,
@@ -140,8 +142,9 @@ export default {
                         `Tonight, the`,
                         {
                             anchor: `rubber off`,
+                            todo: REVIEW,
                             card: {
-                                description: `As our relationship went south, sex became the last bargaining chip that Sita held in the power struggle between us. Since I didn't like the feeling of wearing a condom, she would offer to go without one just to coax any small kindness out of me.`,
+                                description: `As our relationship went further south, sex became the last bargaining chip that Sita held in the power struggle between us. Since I didn't like the feeling of wearing a condom, she'd offer to go without one just to coax any small kindness out of me.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -156,9 +159,10 @@ export default {
                         `if you would`,
                         {
                             anchor: `opt for bed not street`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `I was tired of working extra shifts just to pay rent. So after my lease ended, I would spend some nights with Sita, and others crashing in the`,
+                                    `I was tired of working extra shifts just to pay rent. So after my lease ended, I'd spend half my nights with Sita, and the other half crashing in the`,
                                     {
                                         anchor: `punk house`,
                                         wiki: `Punk_house`,
@@ -186,8 +190,9 @@ export default {
                         `Well`,
                         {
                             anchor: `you're not me`,
+                            todo: REVIEW,
                             card: {
-                                description: `An inside joke among my friends was to address me as Garry when I was drunk, since my energetic rambling and oafish stunts made me an altogether different person.`,
+                                description: `An inside joke among my friends was to address me as Garry when I was drunk, since my lively rambling and oafish stunts made me an altogether different person.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -288,9 +293,10 @@ export default {
                         `In you come, piss drunk, smug in`,
                         {
                             anchor: `smegma crust`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `My personal hygiene would be put on hold for days while I stayed at the punk house. But even once back at Sita's place, I would dawdle a bit before showering, since she was powerless to entice me with sex until I did.`,
+                                    description: `My personal hygiene would be put on hold for days while I stayed at the punk house. But even once back at Sita's place, I'd dawdle a bit before showering, since she was powerless to entice me with sex until I did.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -386,8 +392,9 @@ export default {
                         `So the`,
                         {
                             anchor: `celibate you'll play`,
+                            todo: REVIEW,
                             card: {
-                                description: `Drinking made me impotent and thus impervious to Sita's advances, so I gladly drank to excess. And not having sex was also purifying in its own right, since this lent the familiar comfort of being my lovelorn self again.`,
+                                description: `Drinking made me impotent and thus impervious to Sita's advances, so I gladly drank to excess. And not having sex was also purifying in its own right, as it lent the familiar comfort of being my lovelorn self again.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -406,8 +413,9 @@ export default {
                     lyric: [
                         {
                             anchor: `Slammed in the well`,
+                            todo: REVIEW,
                             card: {
-                                description: `But vomiting into a toilet, and then seeing your reflection in the water staring back at you miserably, only works as a wake-up call the first time. After that, it's a cliche.`,
+                                description: `But vomiting into a toilet, and then seeing your miserable reflection in the water staring back at you, only works as a wake-up call the first time. After that, it's a cliche.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -809,7 +817,7 @@ export default {
                             anchor: `last-ditch alibi`,
                             todo: REVIEW,
                             card: {
-                                description: `Though my friends were only joking to say it wasn't me, but Garry, who'd committed this or that act of vandalism, on some level I accepted it as the truth. And now it also wasn't me who'd drained Sita of her confidence through the years, leaving her a crumbled wreck. It must've been Garry; I wasn't there.`,
+                                description: `Though my friends were only joking to say it was Garry, not me, who'd committed this or that act of vandalism, on some level I accepted it as the truth. And now it also wasn't me who'd drained Sita of her confidence through the years, leaving her a crumbled wreck. It must've been Garry; I wasn't there.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
