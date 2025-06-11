@@ -16,7 +16,7 @@ import {
     FORESHADOW_OF_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REDO, REST, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REDO, REST, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Look Back in Anger',
@@ -181,6 +181,7 @@ export default {
                         },
                         {
                             anchor: `lunched soundless`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In the`,
@@ -188,7 +189,7 @@ export default {
                                         anchor: `First Battle of Bull Run`,
                                         wiki: `First_Battle_of_Bull_Run`,
                                     },
-                                    `, spectators picnicked on the hillside to witness what they assumed would be a quick victory. Similarly, my battles with bullies were fought and lost in full view of a lunchtime crowd.`,
+                                    `, spectators picnicked on the hillside to witness what they assumed would be a quick victory. Similarly, my battles with the bullies were fought and lost in full view of a lunchtime crowd.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -283,6 +284,7 @@ export default {
                         {
                             anchor: `Valley of death`,
                             properNoun: true,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Like the six hundred who rode into the Valley of Death in`,
@@ -295,7 +297,7 @@ export default {
                                         anchor: `The Charge of the Light Brigade`,
                                         wiki: `The_Charge_of_the_Light_Brigade_(poem)`,
                                     },
-                                    `," I'd bravely accepted that mine was "not to reason why," but simply "to do and die" during my own years of strife in the San Fernando Valley.`,
+                                    `," I'd bravely accepted that mine wasn't "to reason why," but simply "to do and die" during my own years of strife in the San Fernando Valley.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -305,8 +307,9 @@ export default {
                         `you rode, so on`,
                         {
                             anchor: `spite you thrive`,
+                            todo: REVIEW,
                             card: {
-                                description: `But this casual view of my own hardship is what later enabled me to justify the pain I caused to Sita.`,
+                                description: `This casual view of my own hardship, though, is what then enabled me to justify the pain I inflicted on Sita.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -318,6 +321,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
                         `When I asked Owen to recommend some good lyricists, he pointed me to`,
@@ -325,7 +329,7 @@ export default {
                             anchor: `Nas`,
                             wiki: `Nas`,
                         },
-                        `. I'd paid little attention to hip hop at that point, thinking its approach to songwriting was too far removed from my own to offer much wisdom. I've since corrected this oversight, but back when
+                        `. I'd paid little attention to hip hop at the time, thinking its approach to songwriting was too far removed from my own to offer much wisdom. I've since corrected this oversight, but back when
                         `,
                         {
                             isItalic: true,
@@ -358,6 +362,7 @@ export default {
                     lyric: [
                         {
                             anchor: `Feeble feeder fish`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The pecking order in a tank of`,
@@ -365,7 +370,7 @@ export default {
                                         anchor: `feeder fish`,
                                         wiki: `Feeder_fish`,
                                     },
-                                    `is deceptive: Since the least fit are also least likely to be sold as prey, they end up living the longest. In retrospect, high school worked the same way. All the time I'd spent working on art projects left me unfit to defend my place in the social hierarchy. But the skills I'd developed as a result were now keeping me from being eaten alive in the real world.`,
+                                    `is deceptive: Since the least fit are also least likely to be sold as prey, they end up living the longest. In retrospect, high school worked the same way: All the time I'd spent working on art projects left me unfit to defend my place in the social hierarchy— but the skills I'd developed as a result were now keeping me from being eaten alive in the real world.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -510,8 +515,9 @@ export default {
                         `and you were`,
                         {
                             anchor: `fine when you had none`,
+                            todo: REVIEW,
                             card: {
-                                description: `Things were finally looking up, so it puzzled me that a trace of bitterness remained. I suspect it's because I felt indignant for my younger self, who'd been kept in the dark for so long about how much better life could be.`,
+                                description: `Things were finally looking up for me, so it felt odd that a trace of bitterness remained. I suspect it's because I was angry for my younger self, who'd been kept in the dark for so long about how much better life could be.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -579,6 +585,8 @@ export default {
                         `reading`,
                         {
                             anchor: `His obit not a bang`,
+                            todo: REST,
+                            problem: `Phrase is too long.`,
                             card: {
                                 description: `But my appraisal was based on reason, not resentment. If the Christian god were the one true God, then why would he trust his message to be spread by the very tormentors of those he hoped to reach?`,
                                 dotKeys: {
@@ -607,9 +615,10 @@ export default {
                     lyric: [
                         {
                             anchor: `peasant discontented`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `The better my life got, the more unsatisfied I became. I was like the peasants of the French Revolution, who only grew further agitated after each attempt by the ruling elite to appease them. Not only did they grumble at such paltry improvements to their lives, but they were then emboldened to make new demands. This phenomenon is known as the`,
+                                    `The better my life got, the less satisfied I became. I was like the peasants of the French Revolution, who only grew further agitated after each attempt by the noble class to appease them. Not only did they grumble at such paltry improvements to their lives, they were then emboldened to make greater demands— a phenomenon now known as the`,
                                     {
                                         anchor: `Tocqueville paradox`,
                                         wiki: `Tocqueville_effect`,
@@ -666,8 +675,9 @@ export default {
                     lyric: [
                         {
                             anchor: `only to crack`,
+                            todo: REVIEW,
                             card: {
-                                description: `Yet even as reason disproved the beliefs of my bullies, it also discredited my own as a Beyonder. Because, with so many rival claims to the truth, who would stay loyal to a faith that offers no community and only endless grief?`,
+                                description: `Yet even as reason disproved the beliefs of my bullies, it also discredited my own as a Beyonder: With so many rival claims to the truth, who'd want to stay loyal to a faith that offers no community, and only endless grief?`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -677,8 +687,9 @@ export default {
                         `,`,
                         {
                             anchor: `sprawled where they stood`,
+                            todo: REVIEW,
                             card: {
-                                description: `And while every beatdown I suffered was a serious blow to my mental state, the bullies continued to enjoy greater happiness and social standing. My faith as a Beyonder couldn't survive the harsh realization that nature favors its bullies.`,
+                                description: `And while every beatdown I suffered was a serious blow to my mental state, the bullies continued to enjoy greater happiness and social standing. My faith as a Beyonder just couldn't survive the harsh realization that nature favors its bullies.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -705,9 +716,10 @@ export default {
                         `weren't they`,
                         {
                             anchor: `right to take what's theirs`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `As opportunities for social advancement opened up for me, I could look back and sympathize with the bullies by putting myself in their shoes. After all, in a world that roots for the strong, who`,
+                                    `As opportunities for social advancement now opened up for me, I could look back and sympathize with the bullies by putting myself in their shoes. After all, in a world that roots for the strong, who`,
                                     {
                                         isItalic: true,
                                         lyric: `wouldn't`,
@@ -729,6 +741,7 @@ export default {
                         `So if you're weeping for`,
                         {
                             anchor: `poor squirrels`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In the final scene of `,
@@ -736,7 +749,7 @@ export default {
                                         isItalic: true,
                                         lyric: `Look Back in Anger`,
                                     },
-                                    `, the protagonist Jimmy pictures his wife as a squirrel and sighs, "Poor squirrels," acknowledging that he keeps her trapped in a helpless state with his tirades.`,
+                                    `, the protagonist Jimmy pictures his wife as a squirrel and whimpers, "Poor squirrels," acknowledging that he keeps her trapped in a helpless state with his tirades.`,
                                 ],
                                 dotKeys: {
                                     [REFERENCE]: true,
@@ -776,8 +789,9 @@ export default {
                         {
                             anchor: `Red and friends`,
                             properNoun: true,
+                            todo: REVIEW,
                             card: {
-                                description: `The redhead and her friends loiter as my bandmates and I load our gear into Joi's van. During my chat with her between sets, I left open the possibility that we might all hang out after the show.`,
+                                description: `The redhead and her friends loiter as my bandmates and I load our gear into the van. During my earlier chat with her between sets, I left open the possibility that we might all hang out after the show.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
