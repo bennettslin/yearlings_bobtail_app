@@ -275,7 +275,7 @@ export default {
                             anchor: `arpeggios`,
                             wiki: `Arpeggio`,
                         },
-                        `: triplets on the soprano recorder, and quadruplets on the tenor.`,
+                        `— with triplets on the soprano recorder, and quadruplets on the tenor.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
