@@ -144,7 +144,7 @@ export default {
                             anchor: `Heavin' some, Ana`,
                             todo: REVIEW,
                             card: {
-                                description: `"Heaving some, Ana whispers a low sigh." The others have just learned that when you first down a whole bottle of Robitussin, you'll likely want to retch. Within a moment, though, your lungs will shrivel away, and it'll feel like you're peacefully breathing through gills underwater.`,
+                                description: `"Heaving some, Ana whispers a low sigh." The others have just learned that when you first down a whole bottle of Robitussin, you'll likely want to retch. Within a moment, though, you'll feel your lungs shrivel away, and it'll be like you're peacefully breathing through gills underwater.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -186,7 +186,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `The Israelites, being of "the" exempt, were spared the plagues that God visited upon Egypt. And similarly, with our stomachs full of Robitussin, we're spared any chance of having flu symptoms.`,
+                                    description: `The Israelites, being of "the" exempt, were spared the plagues that God inflicted upon Egypt. And similarly, with our stomachs full of Robitussin, we're spared any chance of having flu symptoms.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true,
@@ -225,7 +225,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `Ana's friends Howie and Tomer were seasoned drug users, but hadn't taken Robitussin before. Given that it's sold over the counter, they'd assumed its effects would be weaker than those of prescribed painkillers like "`,
+                                        `Ana's friends Howie and Tomer were seasoned drug users, but hadn't taken Robitussin before. Since it's sold over the counter, they'd assumed its effects would be weaker than those of prescribed painkillers like "`,
                                         {
                                             anchor: `Vicodin`,
                                             wiki: `Hydrocodone/paracetamol`,
@@ -570,7 +570,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         {
@@ -759,7 +758,6 @@ export default {
                         `of`,
                         {
                             anchor: `avatars`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In Hinduism, an`,
@@ -988,7 +986,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `Sita introduced me to`,
@@ -1027,7 +1024,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `Robitussin requires you to stay constantly hydrated, and "our`,
+                                        `Robitussin requires you to stay constantly hydrated— but "our`,
                                         {
                                             anchor: `Evian`,
                                             wiki: `Evian`,
@@ -1070,7 +1067,7 @@ export default {
                                         anchor: `Uighurs`,
                                         wiki: `Uyghurs`,
                                     },
-                                    `, a Turkic people whom they encountered in their early campaigns. And so through "a duct, we egress," or exit, the steam tunnels, but not before I feign to "abduct a Uighuress."`,
+                                    `, a Turkic people whom they encountered in their early campaigns. And so through "a duct, we egress," or exit, the steam tunnels— but first, I feign to "abduct a Uighuress."`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1134,7 +1131,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Taking in the "calm air, sitting in the car wet," we guzzle down the remaining Evian bottles that Howie's parents had bought in bulk and left in the trunk.`,
+                                    description: `Taking in the "calm air, sitting in the car wet," we guzzle down the remaining Evian bottles, which Howie's parents had bought in bulk and left in the trunk.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true,
@@ -1171,7 +1168,7 @@ export default {
                                         anchor: `scimitar`,
                                         wiki: `Scimitar`,
                                     },
-                                    `offense." Our next plan of action is to visit the grave of Adam, Howie and Tomer's high school buddy, by driving through the "cemetery fence."`,
+                                    `offense." The next plan of action is to visit the grave of Adam, Howie and Tomer's high school buddy, by driving through the "cemetery fence."`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1197,7 +1194,7 @@ export default {
                             anchor: `Pour sod, fourfeit tundr`,
                             todo: REVIEW,
                             card: {
-                                description: `In the car, Howie and Tomer swap tales from their high school years, including that somber day when they had to pour sod on the "poor sod" who now lies "four feet under."`,
+                                description: `In the car, Howie and Tomer swap tales from their high school years, culminating in that somber day when they poured sod on the "poor sod" now lying "four feet under."`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -1337,7 +1334,7 @@ export default {
                             properNoun: true,
                             todo: REVIEW,
                             card: {
-                                description: `We sigh in relief to finally spot "Adam's" grave, just as the first Americans, upon discovering a more bountiful land, perished their fears of an encroaching "autumn."`,
+                                description: `As "autumn" encroached, the first Americans surely sighed in relief to discover a bountiful land. And now we do the same, upon finally spotting "Adam's" headstone among all the other lookalikes.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -1353,12 +1350,12 @@ export default {
                 todo: REVIEW,
                 card: {
                     description: [
-                        `On solo trips, I'd play on my`,
+                        `On solo trips, I'd sometimes play on my`,
                         {
                             anchor: `NES`,
                             wiki: `Nintendo_Entertainment_System`,
                         },
-                        `while waiting for the Robitussin to kick in. And sometimes I'd just keep playing, even as my mind began to wander on its mystical journey. So for years afterward, every 8-bit arcade sound seemed to hide some metaphysical truth that my sober ears just couldn't suss out.`,
+                        `while waiting for the Robitussin to kick in. And every so often I'd keep playing, even as my mind began to wander on its mystical journey. So for years afterward, every 8-bit arcade sound seemed to hide some metaphysical truth that my sober ears just couldn't suss out.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -1639,7 +1636,6 @@ export default {
                             // NOTE: Changing from Nunavutter.
                             anchor: `Noworse and Nunavetter`,
                             properNoun: true,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Our Inuit tribe has now ventured all the way to`,
@@ -1884,7 +1880,7 @@ export default {
                                         anchor: `ruffs`,
                                         wiki: `Ruff_(clothing)`,
                                     },
-                                    `around their necks resemble the neck fringes seen on vultures— known to some as "buzzards."`,
+                                    `around their necks resemble the neck fringes seen on vultures— or, in American slang, "buzzards."`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1918,17 +1914,17 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `"`,
-                                    {
-                                        anchor: `Rumspringa`,
-                                        wiki: `Rumspringa`,
-                                    },
-                                    `" is a rite of passage that encourages`,
+                                    `The`,
                                     {
                                         anchor: `Amish`,
                                         wiki: `Amish`,
                                     },
-                                    `teenagers to explore the secular world of the "English"— as they refer to all others— in order to ground their faith. Though it means "running around" in the Amish language, I like the image of us dipping into a literal "rum spring." In any case, the spring of our youth— in every possible sense of the phrase— is running out.`,
+                                    `permit their teenagers to explore the secular world of the non-Amish— or, as they say, the "English"— in a rite of passage known as`,
+                                    {
+                                        anchor: `Rumspringa`,
+                                        wiki: `Rumspringa`,
+                                    },
+                                    `. Though it means "running around" in the Amish language, I like the image of us dipping into a literal "rum spring." In any case, the spring of our youth— in every sense of the phrase— is quickly running out.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
