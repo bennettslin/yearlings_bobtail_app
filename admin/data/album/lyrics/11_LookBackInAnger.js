@@ -189,7 +189,7 @@ export default {
                                         anchor: `First Battle of Bull Run`,
                                         wiki: `First_Battle_of_Bull_Run`,
                                     },
-                                    `, spectators picnicked on the hillside to witness what they assumed would be a quick victory. Similarly, my battles with the bullies were fought and lost in full view of a lunchtime crowd.`,
+                                    `, spectators picnicked on the hillside to witness what they assumed would be a quick Union victory. Similarly, my battles with the bullies were fought and lost in full view of a lunchtime crowd.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -297,7 +297,7 @@ export default {
                                         anchor: `The Charge of the Light Brigade`,
                                         wiki: `The_Charge_of_the_Light_Brigade_(poem)`,
                                     },
-                                    `," I'd bravely accepted that mine wasn't "to reason why," but simply "to do and die" during my own years of strife in the San Fernando Valley.`,
+                                    `," I'd bravely accepted that mine wasn't "to reason why," but simply "to do and die," throughout my own years of strife in the San Fernando Valley.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -309,7 +309,7 @@ export default {
                             anchor: `spite you thrive`,
                             todo: REVIEW,
                             card: {
-                                description: `This casual view of my own hardship, though, is what then enabled me to justify the pain I inflicted on Sita.`,
+                                description: `This casual view of my own hardship, though, is what later enabled me to justify the pain I inflicted on Sita.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -329,7 +329,7 @@ export default {
                             anchor: `Nas`,
                             wiki: `Nas`,
                         },
-                        `. I'd paid little attention to hip hop at the time, thinking its approach to songwriting was too far removed from my own to offer much wisdom. I've since corrected this oversight, but back when
+                        `. I'd paid little attention to hip hop at the time, thinking that its approach to songwriting was too far removed from my own to offer much wisdom. I've since corrected this oversight, but back when
                         `,
                         {
                             isItalic: true,
@@ -370,7 +370,7 @@ export default {
                                         anchor: `feeder fish`,
                                         wiki: `Feeder_fish`,
                                     },
-                                    `is deceptive: Since the least fit are also least likely to be sold as prey, they end up living the longest. In retrospect, high school worked the same way: All the time I'd spent working on art projects left me unfit to defend my place in the social hierarchy— but the skills I'd developed as a result were now keeping me from being eaten alive in the real world.`,
+                                    `is deceptive: Since the least fit are also least likely to be sold as prey, they end up living the longest. In retrospect, high school worked the same way: All the time I'd spent working on art projects left me unfit to defend my place in the social hierarchy— but now, the skills I'd built as a result were keeping me from being eaten alive in the real world.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -517,7 +517,7 @@ export default {
                             anchor: `fine when you had none`,
                             todo: REVIEW,
                             card: {
-                                description: `Things were finally looking up for me, so it felt odd that a trace of bitterness remained. I suspect it's because I was angry for my younger self, who'd been kept in the dark for so long about how much better life could be.`,
+                                description: `Things were now looking up for me, so it seemed odd that traces of bitterness still remained. I suspect it's because I felt angry for my younger self, who'd been kept in the dark for so long about how much better life could be.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -618,7 +618,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `The better my life got, the less satisfied I became. I was like the peasants of the French Revolution, who only grew further agitated after each attempt by the noble class to appease them. Not only did they grumble at such paltry improvements to their lives, they were then emboldened to make greater demands— a phenomenon now known as the`,
+                                    `The better my life got, the less satisfied I became. I was like the peasants of the French Revolution, who only grew further agitated after each attempt by the noble class to appease them. Not only did they grumble at such paltry improvements to their lives, they were then emboldened to make greater demands— a phenomenon known as the`,
                                     {
                                         anchor: `Tocqueville paradox`,
                                         wiki: `Tocqueville_effect`,
@@ -677,7 +677,7 @@ export default {
                             anchor: `only to crack`,
                             todo: REVIEW,
                             card: {
-                                description: `Yet even as reason disproved the beliefs of my bullies, it also discredited my own as a Beyonder: With so many rival claims to the truth, who'd want to stay loyal to a faith that offers no community, and only endless grief?`,
+                                description: `Yet even as reason disproved the beliefs of my bullies, it also discredited my own as a Beyonder: With so many rival claims to the truth, who'd stay loyal to a faith that offers no community, and only endless grief?`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -689,7 +689,7 @@ export default {
                             anchor: `sprawled where they stood`,
                             todo: REVIEW,
                             card: {
-                                description: `And while every beatdown I suffered was a serious blow to my mental state, the bullies continued to enjoy greater happiness and social standing. My faith as a Beyonder just couldn't survive the harsh realization that nature favors its bullies.`,
+                                description: `And while every beatdown I suffered was a serious blow to my mental state, the bullies continued to enjoy greater happiness and social standing. Let's face it: Nature favors its bullies. And once I came to this harsh realization… my faith as a Beyonder just couldn't survive.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -716,7 +716,6 @@ export default {
                         `weren't they`,
                         {
                             anchor: `right to take what's theirs`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `As opportunities for social advancement now opened up for me, I could look back and sympathize with the bullies by putting myself in their shoes. After all, in a world that roots for the strong, who`,
@@ -741,7 +740,6 @@ export default {
                         `So if you're weeping for`,
                         {
                             anchor: `poor squirrels`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In the final scene of `,
@@ -789,7 +787,6 @@ export default {
                         {
                             anchor: `Red and friends`,
                             properNoun: true,
-                            todo: REVIEW,
                             card: {
                                 description: `The redhead and her friends loiter as my bandmates and I load our gear into the van. During my earlier chat with her between sets, I left open the possibility that we might all hang out after the show.`,
                                 dotKeys: {
