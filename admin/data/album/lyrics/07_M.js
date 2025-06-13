@@ -571,12 +571,12 @@ export default {
                             problem: `Make it more about not having any sympathetic ears today, so hoping for a sympathetic future audience tomorrow.`,
                             card: {
                                 description: [
-                                    `In my dejection, I could only envision the next five-year plan as a`,
+                                    `With no one able to relate to my unusual predicament, and thus less able to sympathize, I could only envision my next five-year plan as a`,
                                     {
                                         anchor: `time capsule`,
                                         wiki: `Time_capsule`,
                                     },
-                                    `that would allow me to express my frustrations to a sympathetic future audience.`,
+                                    `— one that would allow me to articulate my frustrations to a sympathetic future audience.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -923,7 +923,7 @@ export default {
                             todo: REDO,
                             problem: `Make sure this is really saying what I want it to say.`,
                             card: {
-                                description: `It was no mystery why the situation with Mara transpired as it had. I'd misread it, and that was my fault. I found this thought empowering, because it meant the Maras of the world were still attainable. It was just on me to better understand what they wanted— and then I could build myself up to be exactly that.`,
+                                description: `It was no mystery why the situation with Mara happened as it did; it was no mystery why anything happened. I found this thought empowering, because it meant the Maras of the world weren't entirely out of reach. It was just on me to better understand what they wanted— and then I could build myself up to be exactly that.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -946,9 +946,9 @@ export default {
                         {
                             anchor: `friends have to lie`,
                             todo: REDO,
-                            problem: `I don't think I like what this is saying. I don't really like the neck phrase. Make sure it flows from the previous one.`,
+                            problem: `I don't think I like what this is saying. Make sure it flows from the previous one.`,
                             card: {
-                                description: `But I couldn't rely on my friends to be truthful about what I had to offer. As dear as we were to each other, they each had their own neck to protect.`,
+                                description: `But I couldn't count on my friends to tell me the entire truth. As dear as we were to each other, each of us was still looking out for ourselves.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
