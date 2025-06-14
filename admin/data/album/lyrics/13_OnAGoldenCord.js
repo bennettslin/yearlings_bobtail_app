@@ -41,17 +41,17 @@ export default {
                 todo: REVIEW,
                 card: {
                     description: [
-                        `All through the night, I ran Sita's bracelet through my fingers as I turned over the thoughts in my head. So to write these lyrics, I drew inspiration from famous poems that ruminate on a still-life object, like`,
-                        {
-                            anchor: `John Keats`,
-                            wiki: `John_Keats`,
-                        },
-                        `'s "`,
+                        `All through the night, I ran Sita's bracelet through my fingers as I turned over the thoughts in my head. To write these lyrics, then, I drew inspiration from famous poems that dwell on a still-life object, like "`,
                         {
                             anchor: `Ode on a Grecian Urn`,
                             wiki: `Ode_on_a_Grecian_Urn`,
                         },
-                        `." This also gave me a working title for the song, which I ended up keeping for lack of anything better.`,
+                        `" by`,
+                        {
+                            anchor: `John Keats`,
+                            wiki: `John_Keats`,
+                        },
+                        `. This also gave me a working title for the song, which I ended up keeping for lack of anything better.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -102,7 +102,6 @@ export default {
                         `safely kept with`,
                         {
                             anchor: `bread and pocket lint`,
-                            todo: REVIEW,
                             card: {
                                 description: `In those days, the less I spent on food, the more I could spend on beer. So before leaving the cafeteria, I'd swipe a bread roll or two, which were always plentiful, and stash them in the front pockets of my jacket.`,
                                 dotKeys: {
@@ -125,7 +124,7 @@ export default {
                             anchor: `broken`,
                             todo: REVIEW,
                             card: {
-                                description: `When I walked into Sita's living room that night to find her seated on the couch, the bracelet lay in a mangled heap on the coffee table, which led me to wonder if she'd damaged it on purpose. I later realized that I'd only ever seen it worn on her wrist, where its dozens of intricate links stayed locked in place.`,
+                                description: `When I walked into Sita's living room that night to find her seated on the couch, the bracelet lay in a mangled heap on the coffee table, leading me to wonder if she'd damaged it on purpose. I later realized that I'd only ever seen it worn on her wrist, where its dozens of intricate links stayed locked in place.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -141,7 +140,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `This song evokes the country style of my childhood hero`,
@@ -176,7 +174,7 @@ export default {
                             anchor: `polite, yet resigned`,
                             todo: REVIEW,
                             card: {
-                                description: `Having braced for that night's confrontation, Sita lobbed one accusation after another. Meanwhile, I was drunk and thus struggling to make sense of the situation. So I could only respond curtly, which added to her fluster.`,
+                                description: `Having braced for that night's confrontation, Sita lobbed one accusation after another. Meanwhile, I was drunk and still struggling to make sense of the situation. So I could only respond curtly, which added to her fluster.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -250,7 +248,6 @@ export default {
                     lyricLeft: [
                         {
                             anchor: `Immerse the molted form`,
-                            todo: REVIEW,
                             card: {
                                 description: `With the plot to end his relationship having succeeded, the sober voice of my doublespeaker pair comes back to resurrect the ghost of his drunken half, whom he'd meant to sacrifice all along as an unwitting accomplice.`,
                                 dotKeys: {
@@ -284,12 +281,12 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `Though the plot was successful, it was carried out sooner than expected, forcing my sober self to scrap his plans for a clean getaway. He now arrives at the`,
+                                    `Though the plot was successful, it was carried out sooner than expected, forcing my sober self to scrap his plan for a clean getaway. He now arrives at the`,
                                     {
                                         anchor: `paupers' grave`,
                                         wiki: `Potter's_field`,
                                     },
-                                    `where the unclaimed remains of his drunken half have been buried.`,
+                                    `where his drunken half's unclaimed remains have been buried.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -379,7 +376,6 @@ export default {
                         `As I soak in spirits amidst`,
                         {
                             anchor: `wanted ads`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `As drunken me wanders the Oakland streets, he stops to read flyers posted on telephone poles by those seeking bandmates, like a vigilante of the Old West scanning a town's`,
@@ -408,7 +404,6 @@ export default {
                     lyricLeft: [
                         {
                             anchor: `Guilt pardons`,
-                            todo: REVIEW,
                             card: {
                                 description: `My sober self observes his drunken accomplice's lack of remorse and can only feel pity, knowing the trauma that must surely dwell in one who committed such a heinous act. After all, avoiding such trauma is the reason he chose not to carry out the hit himself.`,
                                 dotKeys: {
@@ -500,7 +495,6 @@ export default {
                         `Then if`,
                         {
                             anchor: `life were real`,
-                            todo: REVIEW,
                             card: {
                                 description: `Sita's friends weren't wrong to call me fake. My emotions didn't feel legitimate even to myself; I reacted to them the way an actor responds to a cue. At the time, I blamed it on the lingering effects of Robitussin.`,
                                 dotKeys: {
@@ -671,7 +665,6 @@ export default {
                         `Now the`,
                         {
                             anchor: `jester teeters`,
-                            todo: REVIEW,
                             card: {
                                 description: `I was stopped by a pair of police officers that night, who judged me to be harmless and sent me on my way. That's one privilege of having pituitary dwarfism, I guess.`,
                                 dotKeys: {
@@ -873,7 +866,6 @@ export default {
                         `Then the`,
                         {
                             anchor: `guardian knot`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The`,
@@ -968,7 +960,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Once drunk, I always stayed drunk until I crashed. So while I was quite used to transforming into Garry, he was wholly unfamiliar with turning back into me.`,
+                                    description: `Once drunk, I always stayed drunk until I crashed— so I was quite used to transforming into Garry. He, however, was wholly unfamiliar with turning back into me.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -1012,7 +1004,6 @@ export default {
                         {
                             anchor: `Garry's sole witness`,
                             properNoun: true,
-                            todo: REVIEW,
                             card: {
                                 description: `Of course, I wish to plead my case— yet if I just accept my role as the villain, then this can all be over with sooner. And so the sober me, called up to testify for his drunken half, stays silent.`,
                                 dotKeys: {
@@ -1041,7 +1032,7 @@ export default {
                         {
                             anchor: `master mind`,
                             todo: REST,
-                            problem: `I would prefer to say "my term paper," but that's too many "my"s in a row. Also, the point about the slave and master needs to be made, since this is the whole point of the annotation, but it all sounds fine without it, and trying to insert it somewhere just makes it all sound awkward. This is the best I can do so far, but maybe it would be good to revisit.`,
+                            problem: `I'd prefer to say "my term paper," but that's too many "my"s in a row. Also, the point about the slave and master needs to be made, since this is the whole point of the annotation, but it all sounds fine without it, and trying to insert it somewhere just makes it all sound awkward. This is the best I can do so far, but maybe it would be good to revisit.`,
                             card: {
                                 description: `In college, my wishful thinking was that I could simply force my drunken self to write a term paper for me. But then once drunk, I would resent taking orders from my sober half, and either do the work poorly or not at all— like a slave rebelling against his master. Somehow this became my go-to strategy for breaking up with Sita.`,
                                 dotKeys: {
@@ -1062,12 +1053,12 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `Most of the`,
+                                    `In the immediate`,
                                     {
-                                        anchor: `9/11 hijackers`,
+                                        anchor: `wake of 9/11`,
                                         wiki: `September_11_attacks`,
                                     },
-                                    `were unaware that this was a suicide mission, having prepared to speak publicly on their religious motives. Similarly, my drunken half was sold on all the benefits of doing away with Sita, unaware that the one being sacrificed on this mission would be him.`,
+                                    `, it was believed that most of the hijackers hadn't been told it was a suicide mission. Likewise, drunken me was sold on all the perks of doing away with Sita, unaware that the one being sacrificed in exchange would be him.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1124,7 +1115,7 @@ export default {
                             anchor: `forgo like jewelry`,
                             todo: REVIEW,
                             card: {
-                                description: `Sita and I had a turbulent on-again, off-again relationship for a good while longer. During one stretch when things were rosier than ever, she asked for the bracelet back to wear again, and I happily obliged. Although, somehow I'd dented it in my pocket that night— a lasting reminder that some damages can be mended, but never undone.`,
+                                description: `Sita and I had a turbulent on-again, off-again relationship for a good while longer. During one stretch when things were rosier than ever, she asked for the bracelet back to wear again, and I happily obliged. Although, somehow I'd dented it in my pocket that night— a lasting reminder that some damages can only be mended, never undone.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
