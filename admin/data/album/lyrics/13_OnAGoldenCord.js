@@ -548,7 +548,14 @@ export default {
                             anchor: `pups with their hateful fangs`,
                             todo: REVIEW,
                             card: {
-                                description: `Young wolves tear flesh with their jaws, so their natural instinct is to soften their bites during rough play. And now, knowing what it truly meant to inflict harm, I realized that the bullies had held back their blows as well, believing it was all in good fun.`,
+                                description: [
+                                    `Since wolves tear flesh with their jaws, they learn early on to`,
+                                    {
+                                        anchor: `soften their bites`,
+                                        wiki: `Bite_inhibition`,
+                                    },
+                                    `during rough play. And now, knowing what it truly means to harm someone, I realized that the bullies had held back their blows as well, believing it was all in good fun.`,
+                                ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

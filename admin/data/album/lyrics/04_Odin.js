@@ -19,7 +19,7 @@ import {
     IS_UNIT_DOT,
     RESPONSE,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Odin',
@@ -1614,17 +1614,16 @@ export default {
                         `past a`,
                         {
                             anchor: `guileless garden gnome`,
-                            todo: REVISE,
-                            problem: `Two "can only"s in a row.`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
-                                        `Powerless to change my circumstances, I can only accept all that remains unknown. And so, like a`,
+                                        `Powerless to change my circumstances, I can only accept all that remains unknown. And so I stand motionless, like a`,
                                         {
                                             anchor: `garden gnome`,
                                             wiki: `Garden_gnome`,
                                         },
-                                        `, I can only stand motionless, with feet planted in the lawn grass, grinning faintly in hope for the future.`,
+                                        `planted on the grass, grinning faintly in hope for the future.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
