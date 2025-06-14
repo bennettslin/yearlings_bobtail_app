@@ -39,23 +39,34 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 todo: REVIEW,
-                card: {
-                    description: [
-                        {
-                            isItalic: true,
-                            lyric: `Kyon`,
+                cards: [
+                    {
+                        description: [
+                            `After Sita and I started dating, I studied Hindi for several years, which allowed me to converse with her family in their native language. As a`,
+                            {
+                                anchor: `religious studies`,
+                                wiki: `Religious_studies`,
+                            },
+                            `major, I also got course credit for it.`,
+                        ],
+                        dotKeys: {
+                            [BACKSTORY]: true,
                         },
-                        `is the Hindi word for "why." After Sita and I started dating, I studied Hindi for several years, which allowed me to converse with her family in their native language. Being a`,
-                        {
-                            anchor: `religious studies`,
-                            wiki: `Religious_studies`,
-                        },
-                        `major, I also got course credit for it.`,
-                    ],
-                    dotKeys: {
-                        [BACKSTORY]: true,
                     },
-                },
+                    {
+                        description: [
+                            `The Hindi word for "why" is`,
+                            {
+                                isItalic: true,
+                                lyric: `kyon`,
+                            },
+                            `.`,
+                        ],
+                        dotKeys: {
+                            [REFERENCE]: true,
+                        },
+                    },
+                ],
             },
         },
         {
@@ -95,7 +106,6 @@ export default {
                         `So you fled to her`,
                         {
                             anchor: `nest on this stork`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `Every time I broke up with Sita to date another woman, I'd revert to the same naive, wide-eyed persona. I just longed to relive the giddiness of puppy love, like an infant facing the world for the first time.`,
@@ -124,7 +134,6 @@ export default {
                         `history shed, having`,
                         {
                             anchor: `never grown your horns`,
-                            todo: REVIEW,
                             card: {
                                 description: `My desire to leave Sita was also driven by shame: Having left her before, any kindness I showed now would only be seen as penitence— whereas I could just start over with someone new, untainted by my past sins.`,
                                 dotKeys: {
@@ -195,7 +204,6 @@ export default {
                         `Is it just her`,
                         {
                             anchor: `womb you bed`,
-                            todo: REVIEW,
                             card: {
                                 description: `Of course, Sita herself had no such illusions about my innocence. She knew I chafed at being the less sexually experienced one in our relationship, and that this was the reason I wanted to sleep with other women.`,
                                 dotKeys: {
@@ -213,7 +221,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `My relationship with Sita was like a ship swaying in perilous waters. This notion is captured in the music by both the`,
@@ -254,7 +261,6 @@ export default {
                     lyric: [
                         {
                             anchor: `spurned at first`,
-                            todo: REVIEW,
                             card: {
                                 description: `Given the seeming ease with which I could now attract women, I grew further indignant about all the hoops I'd been made to jump through when first winning Sita over.`,
                                 dotKeys: {
@@ -303,7 +309,6 @@ export default {
                     lyric: [
                         {
                             anchor: `all the points`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `During that year when Sita and I got to know each other as friends, I still tried to impress her without seeming to. For instance, one time I solved her friend's`,
@@ -327,7 +332,6 @@ export default {
                     lyric: [
                         {
                             anchor: `plunders past`,
-                            todo: REVIEW,
                             card: {
                                 description: `The sting I felt in having once been rejected by Sita was aggravated by the later revelation of her sexual past. And all the more so, since it was precisely the painful lessons of those past encounters that made her wary of my initial advances. Of course, the irony was lost on me that I'd end up providing the most painful lesson by far…`,
                                 dotKeys: {
@@ -456,7 +460,6 @@ export default {
                         `to`,
                         {
                             anchor: `spring forward on a fallback`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `Then, once my life as a philanderer proved unfulfilling, surely I'd return to her— my fallback option— with relief rather than reluctance.`,
@@ -496,7 +499,6 @@ export default {
                         `My`,
                         {
                             anchor: `ticklish piglet`,
-                            todo: REVIEW,
                             card: {
                                 description: `Perversely, Sita and I were always at our best during the first month or so after getting back together. She could enjoy the knowledge of being the better woman, while I got to bask in the afterglow of my latest sexual exploit.`,
                                 dotKeys: {
@@ -541,7 +543,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `During those on-and-off years, I'd habitually return to Sita with a promise to mend my ways. Things would be peachy for a while— after which I'd then run off with yet another woman. I was like a reformed convict who might relapse at any time, taking with him the shank that he'd left on the windowsill to collect dust.`,
+                                    description: `During those on-and-off years, I'd habitually return to Sita with a promise to mend my ways. Things would be peachy for a while— and then I'd run off with yet another woman. I was like a reformed convict who might still relapse at any time, taking with him the shank that he'd left on the windowsill to collect dust.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [OBSERVATION]: true,
@@ -581,7 +583,6 @@ export default {
                         `But other nights you'd`,
                         {
                             anchor: `lap my wound clean`,
-                            todo: REVIEW,
                             card: {
                                 description: `Sita was unable to climax through vaginal sex alone, so I'd go down on her afterward. She mentioned this once as an example of my thoughtfulness, when I asked her what she saw in me that was worth holding onto. It seemed to be proof that I didn't actually have any redeeming qualities.`,
                                 dotKeys: {
@@ -594,7 +595,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `To symbolize how Sita and I normalized our dysfunction, the meter switches to`,
@@ -626,7 +626,6 @@ export default {
                         `Besides, a`,
                         {
                             anchor: `you-shaped pussing sore`,
-                            todo: REVIEW,
                             card: {
                                 description: `Or else, "U-shaped." Mind you, I'm not proud of all these metaphors comparing vaginal penetration to an inflicted lesion. But, for better or worse, I was feeling both guilty and horny when I wrote these lyrics.`,
                                 dotKeys: {
@@ -737,7 +736,7 @@ export default {
                             anchor: `fear of never dying`,
                             todo: REVIEW,
                             card: {
-                                description: `I also hadn't settled the issue of whether an afterlife was even preferable. Though Sita had no ready answers, she taught me her Hindu beliefs, which reinforced what I was learning in my religious studies classes. I found comfort in Hinduism's sprawling pantheon of avatars and deities. It just seemed like the more details there are to learn, the more ways there are to get lost in the divine.`,
+                                description: `I also hadn't settled the issue of whether an afterlife was even preferable. Though Sita had no ready answers, she taught me her Hindu beliefs, which reinforced what I was learning in my religious studies classes. I found comfort in Hinduism's sprawling pantheon of avatars and deities. It just seemed like the more details there are to memorize, the more ways there are to get lost in the divine.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -778,7 +777,7 @@ export default {
                                         isItalic: true,
                                         lyric: `Bobtail`,
                                     },
-                                    `, my night terrors grew infrequent, and my misery subsided. Seeing this for the boon it was, I became further subsumed in my ambitions, which then made me even less attentive to Sita's needs.`,
+                                    `, my night terrors grew infrequent, and my misery subsided. Seeing this for the boon it was, I became further subsumed by my ambitions, which then made me even less attentive to Sita's needs.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
