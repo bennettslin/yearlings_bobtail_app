@@ -32,7 +32,8 @@ export default {
     mixStartTime: `-0:00:02.88`,
     playerReferenceTime: 2951.729,
     playerStartTime: 2926.829,
-    overview: `While I can't deny that dating White women helped silence the nagging feeling I had of being genetically inferior, I honestly didn't seek them out. A case in point is Miriam, whom I met at a Yearlings show. She was the storybook ending that my ego had been waiting for: cute, hip, and drawn to me through no effort on my part. We lasted a few months. I always did wonder if she was slumming it with me.`,
+    todo: REVIEW,
+    overview: `While I can't deny that dating White women helped silence the nagging feeling I had of being genetically inferior, I honestly didn't seek them out. A case in point is Miriam, whom I met at a Yearlings show. She was the storybook ending that my ego had been waiting for: cute, hip, and drawn to me through no effort on my part. We lasted a few months; I always did wonder if she was slumming it with me.`,
     isDoublespeaker: true,
     lyricUnits: [
         {

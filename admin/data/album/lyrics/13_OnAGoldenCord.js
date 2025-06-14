@@ -41,7 +41,7 @@ export default {
                 todo: REVIEW,
                 card: {
                     description: [
-                        `All through the night, I ran Sita's bracelet through my fingers as I turned over the thoughts in my head. To write these lyrics, then, I drew inspiration from famous poems that dwell on a still-life object, like "`,
+                        `All through the night, I let Sita's bracelet run through my fingers as I turned over the thoughts in my head. To write these lyrics, then, I drew inspiration from famous poems that dwell on a still-life object, like "`,
                         {
                             anchor: `Ode on a Grecian Urn`,
                             wiki: `Ode_on_a_Grecian_Urn`,
@@ -51,7 +51,7 @@ export default {
                             anchor: `John Keats`,
                             wiki: `John_Keats`,
                         },
-                        `. This also gave me a working title for the song, which I ended up keeping for lack of anything better.`,
+                        `. This also gave me a working title for the song, which I then kept for lack of anything better.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,

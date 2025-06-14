@@ -31,7 +31,8 @@ export default {
     referenceDescription: `Acoustic guitar in measure 1`,
     mixStartTime: `0:01:18.46`,
     playerStartTime: 2722.629,
-    overview: `Upon learning of my brother's autism, my parents were too harried to notice I was being bullied at school; in guilt, they later indulged every whim I had to find my own path. But it didn't assure them that I failed to mature as I got older— and they were especially crushed when I first left Sita, whom they adored. Naturally, I wasn't happy to disappoint them. Still, I had a master plan to follow, and I wasn't about to change my ways.`,
+    todo: REVIEW,
+    overview: `Upon learning of my brother's autism, my parents were too harried to notice I was being bullied at school; in guilt, they later indulged every whim I had to find my own path. But it didn't assure them that I failed to mature as I got older— and they were especially crushed when I left Sita, whom they adored. Naturally, I wasn't happy to disappoint them. Still, I had a master plan to follow, and I wasn't about to change my ways.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -83,8 +84,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REST,
-                problem: `Too many adjectives? But it'll do for now.`,
+                todo: REVIEW,
                 card: {
                     description: `I wrote the music for this song a while back after waking from a horrid nightmare. The premise seemed laughable by day's end, however, so I quietly shelved it. But years later, I realized that its gloomy chords and moody tempo changes would work well for a song about a nightmarish version of my parents.`,
                     dotKeys: {
@@ -123,15 +123,11 @@ export default {
                         `, come`,
                         {
                             anchor: `wax prophetic`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
                                         `Like the ghosts in`,
-                                        {
-                                            anchor: `Charles Dickens`,
-                                            wiki: `Charles_Dickens`,
-                                        },
-                                        `'s`,
                                         {
                                             isItalic: true,
                                             lyric: {
@@ -139,7 +135,12 @@ export default {
                                                 wiki: `A_Christmas_Carol`,
                                             },
                                         },
-                                        `, my parents invite me on a magical night journey. Soon I'll witness the ordeals of my past, my self-serving ways at present, and the emotional devastation to come of it all.`,
+                                        `by`,
+                                        {
+                                            anchor: `Charles Dickens`,
+                                            wiki: `Charles_Dickens`,
+                                        },
+                                        `, my parents invite me on a magical night journey. Soon I'll witness the ordeals of my past; my self-serving ways at present; and the emotional devastation to come of it all.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -162,6 +163,7 @@ export default {
                         `Rest your rump, boy, by your old`,
                         {
                             anchor: `giving tree`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     {
@@ -176,7 +178,7 @@ export default {
                                             wiki: `The_Giving_Tree`,
                                         },
                                     },
-                                    `is a children's book about a tree's nurturing love for a boy. As the boy grows into a man, the tree's gifts to him become increasingly self-sacrificing in nature. The story is understood by some to be an allegory for codependent relationships.`,
+                                    `is a children's book that tells of a tree's nurturing love for a boy. As the boy grows into a man, the tree's gifts to him become increasingly self-sacrificing in nature. The story is understood by some to be an allegory for codependent relationships.`,
                                 ],
                             },
                         },
@@ -188,6 +190,7 @@ export default {
                     lyric: [
                         {
                             anchor: `Stumped`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `In their claim to be stumped, my parents pretend to be oblivious to the outcome of my story.`,
@@ -197,7 +200,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `Finally, the tree sacrifices herself completely by letting the boy make a boat from her trunk. When the boy returns as an old man, the tree is now but a stump and can only offer him a seat to rest upon.`,
+                                    description: `Finally, the tree sacrifices herself completely by letting the boy make a boat from her trunk. When the boy returns as an old man, the tree is now a mere stump, and can only offer him a seat to rest upon.`,
                                     dotKeys: {
                                         [REFERENCE]: true,
                                     },
@@ -278,7 +281,6 @@ export default {
                         `to live neutered, blissfully`,
                         {
                             anchor: `and orphaned`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Being perpetually drunk, or "`,
@@ -302,8 +304,9 @@ export default {
                     lyric: [
                         {
                             anchor: `Upon purchase of a queen's ship`,
+                            todo: REVIEW,
                             card: {
-                                description: `RI Research promised that I could rise above the bullies once a spaceship was funded by my payments. And so I learned to bide my time, building toward and awaiting corrective justice. I was like "a pawn" in chess that "perches over queenship" as it clambers toward the opposite end of the chessboard.`,
+                                description: `RI Research promised that I could rise above the bullies once a spaceship was funded by my payments; this then taught me to bide my time while laying the groundwork for corrective justice. I was like "a pawn" in chess, which "perches over queenship" as it clambers toward the far end of the chessboard.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -313,8 +316,9 @@ export default {
                         `,`,
                         {
                             anchor: `earth right now your tourist store`,
+                            todo: REVIEW,
                             card: {
-                                description: `My mother enthralled me with visions of being a great artist, even as she instilled Buddhist ideals of renouncing materialism; the mail-order cult then told me I was a mere visitor to this planet. And so a belief formed in my head that I must work tirelessly "to restore" my "birthright" of artistic renown, unaffected by earthly concerns.`,
+                                description: `My mother enthralled me with visions of being a great artist, even as she instilled Buddhist ideals of renouncing materialism; meanwhile, the mail-order cult told me I was a mere visitor to this planet. And so a belief formed in my head that I must work tirelessly "to restore" my "birthright" of artistic renown, unaffected by earthly concerns.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -327,16 +331,15 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REST,
-                problem: `Still not 100% confident on tenses.`,
+                todo: REVIEW,
                 card: {
                     description: [
-                        `The idea behind the puns in this stanza was for listeners to think they heard a`,
+                        `The idea behind the puns in this stanza was for listeners to think they'd heard a`,
                         {
                             anchor: `mondegreen`,
                             wiki: `Mondegreen`,
                         },
-                        `. Then upon reflection, they'd realize the mishearing made too much sense to be inadvertent, and was likely an`,
+                        `. Then, upon reflection, they'd realize the mishearing makes too much sense to have been accidental, and is likely an`,
                         {
                             anchor: `Easter egg`,
                             wiki: `Easter_egg_(media)`,
@@ -371,7 +374,14 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `To defend against the bullies, I would react slowly to their threats— which then forced me to react slowly to anyone in general. At some point, a classmate must've believed I was huffing paint, and this is when I got called into the principal's office.`,
+                                    description: [
+                                        `To defend against the bullies' threats, I made a point of reacting slowly— which then forced me to react slowly to`,
+                                        {
+                                            isItalic: true,
+                                            lyric: `anyone`,
+                                        },
+                                        `. At some point, my classmates must've thought I was huffing paint, and this is when I got called into the principal's office.`,
+                                    ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -396,6 +406,7 @@ export default {
                         `then we caught you`,
                         {
                             anchor: `stuffing twenties`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Since I had`,
@@ -403,7 +414,7 @@ export default {
                                         anchor: `pen pals`,
                                         wiki: `Pen_pal`,
                                     },
-                                    `as a child, my parents didn't think anything of the random envelopes I was mailing out. But after speaking to the principal, my mother grew suspicious and opened one of them to find a wad of cash inside.`,
+                                    `as a child, my parents didn't think anything of the random envelopes I was mailing out. But after having spoken to the principal, my mother became suspicious, opened one of them, and found a wad of cash.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -472,7 +483,7 @@ export default {
                                                 wiki: `Hamartia`,
                                             },
                                         },
-                                        `is the tragic flaw that leads to a hero's downfall. And so my parents ask if I see the telltale signs that point to mine, while alluding to my past belief that I was born from the stars— or, as they put it, "a Martian."`,
+                                        `is the tragic flaw that leads to a hero's downfall. And so my parents ask if I see the telltale signs that point to mine, while alluding to my past belief that I'm born from the stars— or, as they put it, "a Martian."`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -520,8 +531,9 @@ export default {
                         `you made a`,
                         {
                             anchor: `bunker that shuts airtight`,
+                            todo: REVIEW,
                             card: {
-                                description: `I learned early on to deal with problems by locking myself away, both physically and mentally. Then once sheltered, I could calmly and patiently study my situation to plot the best way forward.`,
+                                description: `I learned early on to deal with problems by locking myself away, both physically and mentally. Then, once sheltered, I could calmly study my situation in order to plot the best way forward.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -598,6 +610,7 @@ export default {
                         `But then, my`,
                         {
                             anchor: `little prince`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     {
@@ -612,7 +625,7 @@ export default {
                                             wiki: `The_Little_Prince`,
                                         },
                                     },
-                                    `is about a young prince who lives with a rose on a small planet. On his journey to Earth, the prince keenly observes the foibles of the adults he encounters. Then during his stay, a fox teaches him a poignant lesson on love and loss.`,
+                                    `is about a young prince who lives with a rose on a small planet. On his journey to Earth, the prince observes the foibles of all the adults he encounters. Then, upon arrival, he meets a fox who teaches him a poignant lesson on love and loss.`,
                                 ],
                             },
                         },
@@ -625,8 +638,9 @@ export default {
                         `safe on your`,
                         {
                             anchor: `tiny planet`,
+                            todo: REVIEW,
                             card: {
-                                description: `Like the little prince, I was also a visitor from the stars who once saw this world through guileless eyes.`,
+                                description: `Like the little prince, I was also a visitor from the stars, who once saw this world through guileless eyes.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -641,14 +655,15 @@ export default {
                         `you finally granted their`,
                         {
                             anchor: `nutshells are rigged`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `The classic`,
+                                    `In the classic scam known as a`,
                                     {
                                         anchor: `shell game`,
                                         wiki: `Shell_game`,
                                     },
-                                    `is a swindle in which a pea is placed under one of three nutshells that are then shuffled in plain view. Having recognized life to be an endless series of shell games, I vowed never to get suckered again. And knowing now that the pea gets misplaced through sleight of hand, I could even do some grifting myself.`,
+                                    `, a pea is placed beneath one of three nutshells that are then shuffled in plain view. Having recognized life to be an endless series of shell games, I vowed never to get suckered again. And now, knowing that the pea gets misplaced through sleight of hand, I could even do some grifting myself.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -710,8 +725,9 @@ export default {
                         `Now suddenly dressed to play, you`,
                         {
                             anchor: `drowned your stutter`,
+                            todo: REVIEW,
                             card: {
-                                description: `I developed a stammer in middle school, perhaps as an unconscious way to buy time for collecting my thoughts. Then in college, I found that alcohol made it disappear.`,
+                                description: `I developed a stammer in middle school, perhaps as an unconscious way to buy time for collecting my thoughts. Then, in college, I found that alcohol made it disappear.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -726,6 +742,7 @@ export default {
                         `smugly prepped to`,
                         {
                             anchor: `haze the new latecomers`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Some groups put newcomers through`,
@@ -733,7 +750,7 @@ export default {
                                         anchor: `degrading rituals`,
                                         wiki: `Hazing`,
                                     },
-                                    `to toughen them up. And having dealt with such abuse for so long, I finally conceded that I wouldn't have toughened up any other way either. But now I had no misgivings about dishing out the same abuse to others…`,
+                                    `to toughen them up. And having dealt with such abuse for so long, I finally conceded that I wouldn't have toughened up any other way. But now I had no misgivings about dishing out the same abuse to others…`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -750,24 +767,20 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
-                        `I wanted to mimic`,
-                        {
-                            anchor: `Radiohead`,
-                            wiki: `Radiohead`,
-                        },
-                        `guitarist`,
-                        {
-                            anchor: `Jonny Greenwood`,
-                            wiki: `Jonny_Greenwood`,
-                        },
-                        `'s`,
+                        `I wanted to mimic the`,
                         {
                             anchor: `tremolo`,
                             wiki: `Tremolo`,
                         },
-                        `picking on the song "Airbag" from their album`,
+                        `heard on the`,
+                        {
+                            anchor: `Radiohead`,
+                            wiki: `Radiohead`,
+                        },
+                        `song "Airbag," from their album`,
                         {
                             isItalic: true,
                             lyric: {
@@ -775,7 +788,7 @@ export default {
                                 wiki: `OK_Computer`,
                             },
                         },
-                        `. But as a left-hander who plays right-handed, I've always struggled with`,
+                        `— but as a lefty who plays right-handed, I've always struggled with`,
                         {
                             anchor: `alternate picking`,
                             wiki: `Alternate_picking`,
@@ -801,7 +814,7 @@ export default {
                             anchor: `Rama king`,
                             properNoun: true,
                             todo: REST,
-                            problem: `In the first card, the "subtle jab" phrase seems wordy. There might be some benefit to playing around with the order of phrases in that sentence to make it flow more smoothly. And in the second card, I still don't like the two "her"s in a row.`,
+                            problem: `In the first card, the "subtle jab" phrase seems wordy. There might be some benefit to playing around with the order of phrases in that sentence to make it flow more smoothly.`,
                             cards: [
                                 {
                                     description: `My parents might be calling me a "drama" king, in a subtle jab that everything I do is an attention-seeking act.`,
@@ -835,7 +848,7 @@ export default {
                                             anchor: `Sita`,
                                             wiki: `Sita`,
                                         },
-                                        `, the goddess of devotion, and his battles to rescue her after her abduction by the demon king`,
+                                        `, the goddess of devotion, and his battles to rescue her after she was abducted by the demon king`,
                                         {
                                             anchor: `Ravana`,
                                             wiki: `Ravana`,
@@ -848,8 +861,9 @@ export default {
                         `, the`,
                         {
                             anchor: `testifiers' lore`,
+                            todo: REVIEW,
                             card: {
-                                description: `After slaying Ravana, Rama made Sita walk through sacrificial flames to prove that she'd stayed chaste throughout her abduction. Sita complied and escaped from this "test of fire" unharmed.`,
+                                description: `After rescuing Sita, Rama made her step through sacrificial flames to prove that she'd stayed chaste throughout her abduction. Sita complied— and escaped from this "test of fire" unharmed.`,
                                 dotKeys: {
                                     [PUN]: true,
                                 },
@@ -864,8 +878,7 @@ export default {
                         `A`,
                         {
                             anchor: `nation paused`,
-                            todo: REST,
-                            problem: `Not entirely comfortable with the exaggeration.`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In 1987, a`,
@@ -878,7 +891,7 @@ export default {
                                         isItalic: true,
                                         lyric: `Ramayana`,
                                     },
-                                    `was broadcast across India. For an hour each week, all the shops and train stations would be deserted as the entire population stayed at home, glued to their televisions.`,
+                                    `was broadcast across India. For an hour each week, the shops and train stations would largely be deserted as the Hindu population stayed at home, glued to their televisions.`,
                                 ],
                             },
                         },
@@ -887,7 +900,7 @@ export default {
                             anchor: `fail your Sita`,
                             todo: REVIEW,
                             card: {
-                                description: `Modern audiences may find it disgraceful that Rama's first act upon reuniting with Sita was to demand proof of her chastity. And when I look back on my own relationship, I feel the same way about my need to be the more sexually experienced partner. It baffles me that I couldn't just be grateful for whatever needed to happen before Sita finally chose me.`,
+                                description: `Modern audiences may find it disgraceful that Rama's first act upon reuniting with Sita was to demand proof of her chastity. And when I look back on my own relationship, I feel the same way about my need to be the more sexually experienced partner. It baffles me that I couldn't just be grateful for whatever needed to happen first before Sita finally chose me.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
