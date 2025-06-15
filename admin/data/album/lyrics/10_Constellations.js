@@ -144,7 +144,7 @@ export default {
                             anchor: `Heavin' some, Ana`,
                             todo: REVIEW,
                             card: {
-                                description: `"Heaving some, Ana whispers a low sigh." The others have just learned that when you first down a whole bottle of Robitussin, you'll likely want to retch. Within a moment, though, you'll feel your lungs shrivel away, and it'll be like you're peacefully breathing through gills underwater.`,
+                                description: `"Heaving some, Ana whispers a low sigh." The others have just learned that when you first down a whole bottle of Robitussin, you'll likely want to retch. Within a moment, though, you'll feel your lungs shrivel away, and it'll be like you're breathing peacefully through gills underwater.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -183,7 +183,6 @@ export default {
                         `of`,
                         {
                             anchor: `de exempt`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `The Israelites, being of "the" exempt, were spared the plagues that God inflicted upon Egypt. And similarly, with our stomachs full of Robitussin, we're spared any chance of having flu symptoms.`,
@@ -221,7 +220,6 @@ export default {
                         {
                             anchor: `Viking den`,
                             properNoun: true,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -1043,12 +1041,12 @@ export default {
                                             anchor: `Arabian`,
                                             wiki: `Arabs`,
                                         },
-                                        `" battles that ended with their defeat, the`,
+                                        `" battles that ended in their defeat and eventual conversion to Islam, the`,
                                         {
                                             anchor: `Persians`,
                                             wiki: `Persians`,
                                         },
-                                        `were then subjugated by the Mongols, the next enemy at their doorstep.`,
+                                        `were then subjugated by the Mongols.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -1059,7 +1057,6 @@ export default {
                         `,`,
                         {
                             anchor: `a'duct Uighuress`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The Mongols would slay the men and seize the women of the lands they conquered. This fate was no doubt met by the`,
@@ -1131,7 +1128,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Taking in the "calm air, sitting in the car wet," we guzzle down the remaining Evian bottles, which Howie's parents had bought in bulk and left in the trunk.`,
+                                    description: `Taking in the "calm air, sitting in the car wet," we guzzle down the remaining Evian bottles that Howie's parents had bought in bulk and left in the trunk.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true,
@@ -1160,7 +1157,6 @@ export default {
                         `, to war:`,
                         {
                             anchor: `scimitary of'fence`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Feeling refreshed, we renew our "`,
@@ -1192,7 +1188,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Pour sod, fourfeit tundr`,
-                            todo: REVIEW,
                             card: {
                                 description: `In the car, Howie and Tomer swap tales from their high school years, culminating in that somber day when they poured sod on the "poor sod" now lying "four feet under."`,
                                 dotKeys: {
@@ -1334,7 +1329,7 @@ export default {
                             properNoun: true,
                             todo: REVIEW,
                             card: {
-                                description: `As "autumn" encroached, the first Americans surely sighed in relief to discover a bountiful land. And now we do the same, upon finally spotting "Adam's" headstone among all the other lookalikes.`,
+                                description: `As "autumn" encroached, the first Americans surely sighed in relief to discover a bountiful land. And now, upon finally spotting "Adam's" headstone amid a sea of lookalikes, we do the same.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -1880,7 +1875,7 @@ export default {
                                         anchor: `ruffs`,
                                         wiki: `Ruff_(clothing)`,
                                     },
-                                    `around their necks resemble the neck fringes seen on vultures— or, in American slang, "buzzards."`,
+                                    `around their necks resemble those often seen on vultures— or, in American slang, "buzzards."`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1919,12 +1914,12 @@ export default {
                                         anchor: `Amish`,
                                         wiki: `Amish`,
                                     },
-                                    `permit their teenagers to explore the secular world of the non-Amish— or, as they say, the "English"— in a rite of passage known as`,
+                                    `permit their teenagers to explore the secular world of the non-Amish— or, as they call us, the "English"— in a rite of passage known as "`,
                                     {
                                         anchor: `Rumspringa`,
                                         wiki: `Rumspringa`,
                                     },
-                                    `. Though it means "running around" in the Amish language, I like the image of us dipping into a literal "rum spring." In any case, the spring of our youth— in every sense of the phrase— is quickly running out.`,
+                                    `." Though this means "running around" in the Amish language, I like the image of us dipping into a literal "rum spring." In any case, the spring of our youth— in every sense of the phrase— is quickly running out.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
