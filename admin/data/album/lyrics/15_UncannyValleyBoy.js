@@ -900,7 +900,7 @@ export default {
                             anchor: `fail your Sita`,
                             todo: REVIEW,
                             card: {
-                                description: `Modern audiences may find it disgraceful that Rama's first act upon reuniting with Sita was to demand proof of her chastity. And when I look back on my own relationship, I feel the same way about my need to be the more sexually experienced partner. It baffles me that I couldn't just be grateful for whatever needed to happen first before Sita finally chose me.`,
+                                description: `Modern audiences may find it disgraceful that Rama's first act, upon reuniting with Sita, was to demand proof of her chastity. And when looking back, I feel the same about my own need to be the more sexually experienced partner. It baffles me that I couldn't just be grateful for whatever had to happen first before Sita finally chose me.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -1020,6 +1020,7 @@ export default {
                         `When`,
                         {
                             anchor: `wakened from the siren`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `Not wanting anyone to crowd out my artwork, I run ahead of the group— only to pass out where no one can find me. Hours later, an ambulance siren jolts me awake.`,
@@ -1029,12 +1030,12 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `In Greek mythology, the "`,
+                                        `In Greek mythology, the `,
                                         {
-                                            anchor: `Sirens`,
+                                            anchor: `sirens`,
                                             wiki: `Siren_(mythology)`,
                                         },
-                                        `" were beautiful women whose enchanting songs would lull the passing sailors, causing them to crash against the rocky shores. But much like`,
+                                        ` were beautiful women whose enchanting songs would lull the passing sailors, causing them to crash against the rocky shores. But just like`,
                                         {
                                             anchor: `Odysseus`,
                                             wiki: `Odysseus`,
@@ -1055,7 +1056,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `I sit up and notice my drunken scrawls on the sidewalk, imagining in whimsy what would've happened if I'd used`,
+                                        `I sit up and notice my drunken scrawls on the sidewalk, picturing what might've happened if I'd used`,
                                         {
                                             anchor: `ant chalk`,
                                             wiki: `Ant_chalk`,
@@ -1077,8 +1078,7 @@ export default {
                         `:`,
                         {
                             anchor: `____`,
-                            todo: REST,
-                            problem: `Maybe I'm just not used to it, given that it's just different enough from how it was before. But I don't feel 100% confident to sign off on it.`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `And what I've drunkenly scrawled is… Mara's name.`,
@@ -1087,7 +1087,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `This wasn't meant to be a cliffhanger. But since Mara is never directly mentioned in "M," I decided to leave her name out of the rest of the album as well.`,
+                                    description: `This wasn't meant to be a cliffhanger. But since Mara is never explicitly mentioned in "M," I decided to leave her name out of the rest of the album as well.`,
                                     dotKeys: {
                                         [SONGCRAFT]: true,
                                     },
@@ -1137,9 +1137,10 @@ export default {
                         `could sway you from a`,
                         {
                             anchor: `fairer marathon`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `The endless one-upmanship wasn't just petty; it was exhausting to counter every perceived slight with one of my own. I wanted life to be like a marathon that rewards patience and resolve— traits I possess in spades.`,
+                                    description: `The endless one-upmanship wasn't just petty; it was exhausting to counter every perceived slight with one of my own. I wanted life to be more like a marathon, which rewards patient resolve— a trait I possessed in spades.`,
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                     },
@@ -1230,8 +1231,9 @@ export default {
                             `…`,
                             {
                                 anchor: `traded in`,
+                                todo: REVIEW,
                                 card: {
-                                    description: `Like shiny new "bronzes" placed next to a gold trophy on the shelf, these other women were never more desirable than Sita in hindsight. They thrilled me only because I'd won them recently.`,
+                                    description: `Like shiny new "bronzes" placed next to a gold trophy on the shelf, these other women were never more desirable than Sita in hindsight. They thrilled me only because I'd won them more recently.`,
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                         [PUN]: true,
@@ -1330,9 +1332,9 @@ export default {
                             {
                                 anchor: `sun tinkles light`,
                                 todo: REVISE,
-                                problem: `Still think there's a more eloquent way to say "from above as a tyrant." Two "would"s in a row.`,
+                                problem: `Still think there's a more eloquent way to say "from above as a tyrant."`,
                                 card: {
-                                    description: `In the nightmare, I ruled the neighborhood from above as a tyrant. I would shower my subjects in urine, which they would then lap up as their sole means of subsistence. Now that I think about it, my brain was probably telling me to wake up and use the bathroom.`,
+                                    description: `In the nightmare, I ruled the neighborhood from above as a tyrant. I'd shower my subjects in urine, which they'd then lap up as their sole means of subsistence. Now that I think about it, my brain was probably telling me to wake up and use the bathroom.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [OBSERVATION]: true,
@@ -1355,8 +1357,9 @@ export default {
                             `that`,
                             {
                                 anchor: `weave through the vines`,
+                                todo: REVIEW,
                                 card: {
-                                    description: `The magic beans had sprouted into thick, twisting vines, blocking out the sky as far as my helpless subjects could see.`,
+                                    description: `The magic beans had sprouted into thick, twisting vines, blocking out the sky as far as the eye could see.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -1397,8 +1400,9 @@ export default {
                                 },
                                 `'s sake`,
                             ],
+                            todo: REVIEW,
                             card: {
-                                description: `My next five-year plan, like the one before, was meant to improve my fortunes through a dramatic overhaul of the underlying system. Since it couldn't be left half completed, there was no point in second-guessing its logic once the work was already in progress.`,
+                                description: `My next five-year plan, like the one before, was meant to improve my fortunes through a dramatic overhaul of what I had to offer. Since it couldn't be left half-finished, there was no point in second-guessing its logic while the work was still in progress.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -1431,9 +1435,10 @@ export default {
                         lyric: [
                             {
                                 anchor: `old and subservient`,
+                                todo: REVIEW,
                                 cards: [
                                     {
-                                        description: `It wasn't until college that I understood the sacrifices my parents had made for me and my siblings to lead better lives than their own. But the fact that this awareness had to come about through assigned coursework, rather than my own lived experiences, only added to my guilt.`,
+                                        description: `It wasn't until college that I understood the sacrifices my parents had made for me and my siblings to lead better lives than their own. But the fact that this awareness had to come about through assigned coursework— rather than my own lived experiences— only added to my guilt.`,
                                         dotKeys: {
                                             [BACKSTORY]: true,
                                         },
@@ -1472,6 +1477,7 @@ export default {
                                     lyric: `Bildungsroman`,
                                 },
                             ],
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `A`,
@@ -1482,17 +1488,17 @@ export default {
                                             wiki: `Bildungsroman`,
                                         },
                                     },
-                                    `is a literary coming-of-age story, of which James Joyce's`,
+                                    `is a coming-of-age story, of which James Joyce's`,
                                     {
                                         isItalic: true,
                                         lyric: `A Portrait of the Artist as a Young Man`,
                                     },
-                                    `is a notable example. My conceit for`,
+                                    `is a notable example. And Joyce, of course, was my primary inspiration for creating`,
                                     {
                                         isItalic: true,
                                         lyric: `Bobtail`,
                                     },
-                                    `was to push the boundaries of this genre into the musical realm.`,
+                                    `.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1560,9 +1566,10 @@ export default {
                             `…`,
                             {
                                 anchor: `Maranatha`,
+                                todo: REVIEW,
                                 card: {
                                     description: [
-                                        `But in my chant, the syllables gradually shift to form the holy name of Mara. And while Valmiki embraced Eastern devotion, salvation for me lies in the embrace of Western women. And so my chant ends on a phrase of Western faith: Occurring once in the New Testament,`,
+                                        `But in my chant, the syllables gradually shift to form the holy name of Mara. And while Valmiki embraced Eastern devotion, salvation for me lies in the embrace of Western women. Thus my chant ends on a phrase of Western faith: Occurring only once in the New Testament,`,
                                         {
                                             isItalic: true,
                                             lyric: {
@@ -1637,12 +1644,7 @@ export default {
                     },
                     {
                         description: [
-                            `After Ana and Joi left the band, it just didn't feel right to keep referring to myself as the Yearlings. And with the Web gaining in usage, I wanted a new name that would always be first in search results. So I decided to combine two random words… but all I could think of was "Bobtail Yearlings"… which, for symmetry's sake, would make the album "`,
-                            {
-                                isItalic: true,
-                                lyric: `Yearling's Bobtail`,
-                            },
-                            `." Then I realized that while one`,
+                            `After Ana and Joi left the band, it just didn't feel right to keep referring to myself as the Yearlings. And with the Web gaining in usage, I wanted a new name that would always be first in search results. So I decided to combine two random words… but all I could think of was "Bobtail Yearlings"… which, for symmetry's sake, would make the album "Yearling's Bobtail." Then I realized that while one`,
                             {
                                 anchor: `acronym`,
                                 wiki: `Acronym`,
