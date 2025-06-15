@@ -238,7 +238,7 @@ export default {
                             anchor: `keys left on dumbwaiter trays`,
                             todo: REVIEW,
                             card: {
-                                description: `The students would bus their trays onto a conveyor belt that led into the dishroom. Every so often, someone would accidentally leave a personal item on their tray and come downstairs to retrieve it. I got a kick out of this whenever it happened; they were always grateful, and sometimes they were cute.`,
+                                description: `The students would bus their trays onto a conveyor belt that led into the dishroom. Every so often, someone would accidentally leave a personal item on their tray, prompting them to come downstairs and retrieve it. Whenever this happened, I got a kick out of it; they were always grateful, and sometimes they were cute.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -311,7 +311,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `In awe of Sita's beauty, I'm determined not to screw this up. So after handing back her lancing device, I engage in small talk before asking her on a date.`,
+                                    description: `In awe of Sita's beauty, I'm determined not to screw this one up. So after handing back her lancing device, I try to engage in small talk before asking her on a date.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -485,7 +485,6 @@ export default {
                         `Then just like the drift,`,
                         {
                             anchor: `she disappeared`,
-                            todo: REVIEW,
                             card: {
                                 description: `Shortly after our first few dates, I called Sita to tell her I was in love with her. She admitted that she didn't feel the same way and just wanted to be friends. We hung up with the understanding that we'd continue to hang out— but I felt so dejected, I quietly decided never to see her again.`,
                                 dotKeys: {
@@ -1131,7 +1130,6 @@ export default {
                         },
                         {
                             anchor: `with a ring`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `Having dozed off, I'm roused by the ringing of a bell, which indicates that a patient has been released from care and is returning to the waiting area.`,
@@ -1208,7 +1206,6 @@ export default {
                     lyric: [
                         {
                             anchor: `She loves you`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `It took a year for Sita and I to become fully comfortable with each other. At the start of our friendship, we mostly just studied together at the library. But slowly, short treks through campus extended into longer strolls around the neighborhood, which then led to leaning in closer on the couch. Toward the end, it all happened so fast that I was still processing what triggered it.`,
