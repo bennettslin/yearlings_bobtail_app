@@ -40,10 +40,9 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REST,
-                problem: `Put "creaming myself" in here as a pun?`,
+                todo: REVIEW,
                 card: {
-                    description: `Once when I was a child, a playmate asked if I knew what cremation was; I didn't, but assumed it must be fun and tasty. Of course, the horrifying truth was revealed to me a moment later. I thought this was the perfect metaphor for a song about the seemingly innocent day trip that Miriam had planned to end with our breakup.`,
+                    description: `Once when I was a child, a playmate asked if I knew what cremation was; I didn't, but assumed it must be fun and tasty. Of course, the horrifying truth was revealed to me a moment later. I thought this was the perfect metaphor for a song about the seemingly innocent day trip that Miriam had planned out in advance to end with our breakup.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [OBSERVATION]: true,
@@ -267,7 +266,7 @@ export default {
                             anchor: `doublespeaker`,
                             todo: REVIEW,
                             card: {
-                                description: `Though I tried to adopt an innocent persona, Miriam surely knew about the drunken incidents. My reputation preceded me by that point, and we had friends in common. Still, I never offered an explanation for the discrepancy, and she never asked for one. I think she just accepted it as part of the adventure.`,
+                                description: `Though I took pains to adopt an innocent persona, Miriam surely knew about the drunken incidents. My reputation preceded me by that point, and we had friends in common. Still, I never offered an explanation for the discrepancy, and she never asked for one. I think she just accepted it as part of the adventure.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
