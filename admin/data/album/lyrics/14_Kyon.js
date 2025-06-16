@@ -38,7 +38,6 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 cards: [
                     {
                         description: [
@@ -540,7 +539,6 @@ export default {
                         `A`,
                         {
                             anchor: `shank's dustless silhouette`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `During those on-and-off years, I'd habitually return to Sita with a promise to mend my ways. Things would be peachy for a while— and then I'd run off with yet another woman. I was like a reformed convict who might still relapse at any time, taking with him the shank that he'd left on the windowsill to collect dust.`,
@@ -641,7 +639,6 @@ export default {
                     lyric: [
                         {
                             anchor: `bleeds just once`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Much like a vagina only bleeds the first time— when the`,
@@ -734,7 +731,6 @@ export default {
                         `, your`,
                         {
                             anchor: `fear of never dying`,
-                            todo: REVIEW,
                             card: {
                                 description: `I also hadn't settled the issue of whether an afterlife was even preferable. Though Sita had no ready answers, she taught me her Hindu beliefs, which reinforced what I was learning in my religious studies classes. I found comfort in Hinduism's sprawling pantheon of avatars and deities. It just seemed like the more details there are to memorize, the more ways there are to get lost in the divine.`,
                                 dotKeys: {
@@ -769,7 +765,6 @@ export default {
                                 `'s your priority`,
                             ],
                             properNoun: true,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `As I continued to work on`,
@@ -792,7 +787,6 @@ export default {
                         },
                         {
                             anchor: `I'll gladly wait`,
-                            todo: REVIEW,
                             card: {
                                 description: `But Sita encouraged my artistic pretensions, believing them to reflect positively on her as well. Though she was uninterested in the local scene, she still enjoyed being seen as the one I'd be taking home after a show.`,
                                 dotKeys: {

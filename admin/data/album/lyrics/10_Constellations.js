@@ -142,7 +142,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Heavin' some, Ana`,
-                            todo: REVIEW,
                             card: {
                                 description: `"Heaving some, Ana whispers a low sigh." The others have just learned that when you first down a whole bottle of Robitussin, you'll likely want to retch. Within a moment, though, you'll feel your lungs shrivel away, and it'll be like you're breathing peacefully through gills underwater.`,
                                 dotKeys: {
@@ -1125,7 +1124,6 @@ export default {
                         {
                             anchor: `Khlmair city Ingcar Wet`,
                             properNoun: true,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `Taking in the "calm air, sitting in the car wet," we guzzle down the remaining Evian bottles that Howie's parents had bought in bulk and left in the trunk.`,
@@ -1862,7 +1860,6 @@ export default {
                         {
                             anchor: `Enguished buzzereds`,
                             properNoun: true,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In the historical narrative still playing out in my head, the "`,
@@ -1919,7 +1916,7 @@ export default {
                                         anchor: `Rumspringa`,
                                         wiki: `Rumspringa`,
                                     },
-                                    `." Though this means "running around" in the Amish language, I like the image of us dipping into a literal "rum spring." In any case, the spring of our youth— in every sense of the phrase— is quickly running out.`,
+                                    `." Though this means "running around" in their native language, I like the image of us dipping into a literal "rum spring." In any case, the spring of our youth— in every sense of the phrase— is quickly running out.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,

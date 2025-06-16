@@ -179,7 +179,6 @@ export default {
                         },
                         {
                             anchor: `lunched soundless`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In the`,
@@ -282,7 +281,6 @@ export default {
                         {
                             anchor: `Valley of death`,
                             properNoun: true,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Like the six hundred who rode into the Valley of Death in`,
