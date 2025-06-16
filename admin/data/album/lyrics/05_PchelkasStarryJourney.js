@@ -103,7 +103,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: `I wanted a child to recite this line, but no one I knew at the time was having them just yet. So I asked my sister to do it in her best child's voice.`,
                     dotKeys: {

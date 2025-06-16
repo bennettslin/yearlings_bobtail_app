@@ -606,7 +606,7 @@ export default {
                             isItalic: true,
                             lyric: `Pet Sounds`,
                         },
-                        `. So I committed to join them— and thus, like Wilson, I held off any worries about how I'd recreate my sound onstage. Upon completing this album, though, I learned that the indie labels will sign you only once you can play shows`,
+                        `. So I committed to join them— and thus, like Wilson, I held off any worries about how I'd recreate my sound onstage. Upon completing this album, though, I learned that the indie labels will only sign you once you can play shows`,
                         {
                             isItalic: true,
                             lyric: `without`,

@@ -321,7 +321,7 @@ export default {
                             anchor: `hold in peace`,
                             todo: REVIEW,
                             card: {
-                                description: `So Joi got together with Mara without any effort, while romance for me felt no less elusive than ever. I thus had to admit that my five-year plan was a washout.`,
+                                description: `So Joi got together with Mara without any effort, while romance for me felt as elusive as ever. I thus had to admit that my five-year plan was a washout.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -336,7 +336,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `Back when I was learning to play the banjo, I'd strum the motions of`,

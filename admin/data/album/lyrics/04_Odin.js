@@ -740,7 +740,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: `Since the drum parts that I'd scored for this song were more advanced than what I could actually play, I had to try several workarounds. I ended up recording the kick, snare, and toms in separate takes from the cymbals.`,
                     dotKeys: {
@@ -1367,7 +1366,7 @@ export default {
                                         anchor: `nirvana`,
                                         wiki: `Nirvana`,
                                     },
-                                    `— or, release from the cycle of rebirth. But this was just death on a grander scale, which simply confirmed my intuition that no one should want to live in the first place. So why do we?`,
+                                    `— or, release from the cycle of rebirth. But this was just death on a grander scale, which simply confirmed my intuition that no one should want to live in the first place. So… why do we?`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1618,12 +1617,12 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `Powerless to change my circumstances, I can only accept all that remains unknown. And so I stand motionless, like a`,
+                                        `Powerless to change my circumstances, I can only accept all that's unknown. And so, like a`,
                                         {
                                             anchor: `garden gnome`,
                                             wiki: `Garden_gnome`,
                                         },
-                                        `planted on the grass, grinning faintly in hope for the future.`,
+                                        `planted on the lawn, I stand motionless and grin faintly in hope for the future.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -1656,7 +1655,7 @@ export default {
                                         anchor: `Monday's Child`,
                                         wiki: `Monday's_Child`,
                                     },
-                                    `" is a nursery rhyme that predicts a child's fortune based on the day of the week they were born. As Thursday's child, then, I'm promised to have "far to go"— and indeed, the distance left for me to cover feels vast. Still, I'm now one day closer than when the day began…`,
+                                    `" is a nursery rhyme that predicts a child's fortune based on the day of the week they were born. As one of Thursday's children, then, I'm promised to have "far to go"— and indeed, the distance left for me to cover feels vast. Still, I'm now one day closer than when I began…`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1695,7 +1694,7 @@ export default {
                             isItalic: true,
                             lyric: `Yearling's Bobtail`,
                         },
-                        `wouldn't get any attention from the indie press, I moved to New York City to regain my bearings. There, Sasha and I reconnected, and we started dating. She put me on the conversion path, while I volunteered to study Hebrew. But we didn't last. Though I tried hard to reinvent myself once more, it was no longer possible to do so while still drinking heavily. Life had changed.`,
+                        `wouldn't get any attention from the indie press, I moved to New York City to regain my bearings. There, Sasha and I reconnected, and we started dating. She put me on the conversion path, while I volunteered to study Hebrew. But we didn't last. Though I tried hard to reinvent myself once more, it was no longer possible to do so while drinking heavily. Life had changed.`,
                     ],
                     dotKeys: {
                         [AFTERWORD]: true,

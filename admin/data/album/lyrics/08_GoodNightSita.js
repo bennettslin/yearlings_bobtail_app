@@ -616,7 +616,6 @@ export default {
                         `what this`,
                         {
                             anchor: `understudy sought`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `As an`,
