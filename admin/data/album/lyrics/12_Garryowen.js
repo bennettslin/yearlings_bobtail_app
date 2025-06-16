@@ -36,12 +36,12 @@ export default {
                 todo: REVIEW,
                 card: {
                     description: [
-                        `In James Joyce's`,
+                        `In`,
                         {
                             isItalic: true,
                             lyric: `Ulysses`,
                         },
-                        `, Garryowen is a menacing dog owned by a vulgar Irish nationalist. For that reason, it seemed like a fitting name to give my drunken self.`,
+                        `, Garryowen is an aggressive dog owned by a vulgar Irish nationalist. It thus seemed like a fitting name to give my drunken self.`,
                     ],
                     dotKeys: {
                         [OBSERVATION]: true,
@@ -67,12 +67,17 @@ export default {
                 todo: REVIEW,
                 card: {
                     description: [
-                        `Naturally, I went with the feel of an`,
+                        `Since Garryowen the dog was named after a patriotic Irish`,
+                        {
+                            anchor: `marching tune`,
+                            wiki: `Garryowen_(air)`,
+                        },
+                        `, I went with the feel of an`,
                         {
                             anchor: `Irish reel`,
                             wiki: `Reel_(dance)`,
                         },
-                        `for this song.`,
+                        `here.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -137,7 +142,6 @@ export default {
                         `Tonight, the`,
                         {
                             anchor: `rubber off`,
-                            todo: REVIEW,
                             card: {
                                 description: `As our relationship went further south, sex became the last bargaining chip that Sita held in the power struggle between us. Since I didn't like the reduced sensation of wearing a condom, she'd offer to go without one just to coax any small kindness out of me.`,
                                 dotKeys: {
@@ -162,7 +166,7 @@ export default {
                                         anchor: `punk house`,
                                         wiki: `Punk_house`,
                                     },
-                                    `basement. This gave me the regular comfort of Sita's bed, while ensuring that she never had the upper hand over me.`,
+                                    `basement. This gave me the regular comfort of Sita's bed, while ensuring that she never held the upper hand over me.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -185,7 +189,6 @@ export default {
                         `Well`,
                         {
                             anchor: `you're not me`,
-                            todo: REVIEW,
                             card: {
                                 description: `An inside joke among my friends was to address me as Garry when I was drunk, since my endless rambling and oafish stunts made me an altogether different person.`,
                                 dotKeys: {
@@ -291,7 +294,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Any time I stayed at the punk house, my personal hygiene would need to be put on hold for days. But even once back at Sita's place, I'd dawdle a bit before showering, since she was powerless to entice me with sex until I did.`,
+                                    description: `Any time I stayed at the punk house, my personal hygiene would be put on hold for a few days. But even once back at Sita's place, I'd dawdle a bit before showering, since she was powerless to entice me with sex until I did.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
