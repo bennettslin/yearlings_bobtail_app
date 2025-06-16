@@ -41,7 +41,7 @@ export default {
                 todo: REVIEW,
                 card: {
                     description: [
-                        `All through the night, I let Sita's bracelet run through my fingers as I turned over the thoughts in my head. To write these lyrics, then, I drew inspiration from famous poems that dwell on a still-life object, like "`,
+                        `All through that night, I ran Sita's bracelet through my fingers as I turned over the thoughts in my head. To write these lyrics, then, I drew inspiration from famous poems that dwell on a still-life object, like "`,
                         {
                             anchor: `Ode on a Grecian Urn`,
                             wiki: `Ode_on_a_Grecian_Urn`,
@@ -122,7 +122,6 @@ export default {
                         `but`,
                         {
                             anchor: `broken`,
-                            todo: REVIEW,
                             card: {
                                 description: `When I walked into Sita's living room that night to find her seated on the couch, the bracelet lay in a mangled heap on the coffee table, leading me to wonder if she'd damaged it on purpose. I later realized that I'd only ever seen it worn on her wrist, where its dozens of intricate links stayed locked in place.`,
                                 dotKeys: {
@@ -172,7 +171,6 @@ export default {
                         `So`,
                         {
                             anchor: `polite, yet resigned`,
-                            todo: REVIEW,
                             card: {
                                 description: `Having braced for that night's confrontation, Sita lobbed one accusation after another. Meanwhile, I was drunk and still struggling to make sense of the situation. So I could only respond curtly, which added to her fluster.`,
                                 dotKeys: {
@@ -278,7 +276,6 @@ export default {
                         {
                             // NOTE: I changed "pauper's" to "paupers'."
                             anchor: `paupers' grave`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Though the plot was successful, it was carried out sooner than expected, forcing my sober self to scrap his plan for a clean getaway. He now arrives at the`,
@@ -546,7 +543,6 @@ export default {
                         `Just that those playful`,
                         {
                             anchor: `pups with their hateful fangs`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Since wolves tear flesh with their jaws, they learn early on to`,
@@ -967,7 +963,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Once drunk, I always stayed drunk until I crashed— so I was quite used to transforming into Garry. He, however, was wholly unfamiliar with turning back into me.`,
+                                    description: `Once drunk, I always stayed drunk until I crashed. So while I was quite used to transforming into Garry, he was wholly unfamiliar with turning back into me.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -1065,7 +1061,7 @@ export default {
                                         anchor: `wake of 9/11`,
                                         wiki: `September_11_attacks`,
                                     },
-                                    `, it was believed that most of the hijackers hadn't been told it was a suicide mission. Likewise, drunken me was sold on all the perks of doing away with Sita, unaware that the one being sacrificed in exchange would be him.`,
+                                    `, it was believed that most of the hijackers hadn't been told it was a suicide mission. Likewise, drunken me was sold on all the perks of doing away with Sita, unaware that the one being sacrificed in this exchange would be him.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1108,7 +1104,7 @@ export default {
                                         anchor: `houris`,
                                         wiki: `Houri`,
                                     },
-                                    `are maidens who tend to the faithful in paradise. This concept gained notoriety in the West when it was reported that young Muslim men were being recruited for suicide missions with the promise of seventy-two virgins in heaven. But given my own luckless beginnings, as well as my desire to date multiple women at great cost to myself and others, perhaps it was only my nation of birth that separated my fate from theirs.`,
+                                    `are maidens who tend to the faithful in paradise. This concept gained notoriety in the West, when it was reported that young Muslim men were being recruited for suicide missions with the promise of seventy-two virgins in heaven. But given my own luckless beginnings, as well as my desire to date multiple women at great cost to myself and others, perhaps it was only my nation of birth that separated my fate from theirs.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1120,7 +1116,6 @@ export default {
                     lyricRight: [
                         {
                             anchor: `forgo like jewelry`,
-                            todo: REVIEW,
                             card: {
                                 description: `Sita and I had a turbulent on-again, off-again relationship for a good while longer. During one stretch when things were rosier than ever, she asked for the bracelet back to wear again, and I happily obliged. Although, somehow I'd dented it in my pocket that night— a lasting reminder that some damages can only be mended, never undone.`,
                                 dotKeys: {
