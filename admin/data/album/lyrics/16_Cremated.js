@@ -33,7 +33,7 @@ export default {
     playerReferenceTime: 2951.729,
     playerStartTime: 2926.829,
     todo: REVIEW,
-    overview: `While I can't deny that dating White women helped silence the nagging feeling I had of being genetically inferior, I honestly didn't seek them out. A case in point is Miriam, whom I met at a Yearlings show. She was the storybook ending that my ego had been waiting for: cute, hip, and drawn to me through no effort on my part. We lasted a few months; I always did wonder if she was slumming it with me.`,
+    overview: `While I can't deny that dating White women helped silence the nagging feeling I had of being genetically inferior, I honestly didn't seek them out. A case in point is Miriam, whom I met at a Yearlings show. She was the storybook ending that my ego had been waiting for: cute, hip, and drawn to me through no effort on my part. We lasted a few months; I always did have to wonder if she was slumming it with me.`,
     isDoublespeaker: true,
     lyricUnits: [
         {
@@ -42,7 +42,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: REVIEW,
                 card: {
-                    description: `Once when I was a child, a playmate asked if I knew what cremation was; I didn't, but assumed it must be fun and tasty. Of course, the horrifying truth was revealed to me a moment later. I thought this was the perfect metaphor for a song about the seemingly innocent day trip that Miriam had planned out in advance to end with our breakup.`,
+                    description: `Once when I was a child, a playmate asked if I knew what cremation was; I didn't, but assumed it must be fun and tasty. Of course, the horrifying truth was revealed to me a moment later. I thought this was the perfect metaphor for a song about Miriam, and the seemingly innocent day trip that she'd planned in advance to end with our breakup.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [OBSERVATION]: true,
@@ -115,9 +115,10 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
-                        `In freshman year, I took a seminar on`,
+                        `As a freshman, I took a seminar on`,
                         {
                             anchor: `psychoacoustics`,
                             wiki: `Psychoacoustics`,
@@ -338,8 +339,9 @@ export default {
                         `sinking ship, maybe`,
                         {
                             anchor: `good for anecdotes`,
+                            todo: REVIEW,
                             card: {
-                                description: `Though Miriam was entertained by my character, it wasn't in a way that one should hope for. I was to be the oddball ex-boyfriend in a tale of her misspent youth— not the life companion who'd one day hear all about it.`,
+                                description: `Though Miriam was entertained by my character, it wasn't in a way that one should hope for. I was to be the oddball ex-boyfriend in a tale of her misspent youth— not the life partner who'd one day hear all about it.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -352,8 +354,9 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
-                    description: `I chose to use doublespeaker rhyme for this song because my original plan was to contrast Miriam's inner thoughts with mine. But I kept forgetting which column of lyrics was whose, which made me realize there was no real contrast to show. We both knew the relationship would fail; one of us just had a better idea of when.`,
+                    description: `I chose to use doublespeaker rhyme for this song because my original plan was to contrast Miriam's inner thoughts with mine. But I kept forgetting which lyrical column was whose— making me realize there wasn't any real contrast to show. We both knew the relationship would end; one of us just had a better idea of when.`,
                     dotKeys: {
                         [OBSERVATION]: true,
                         [SONGCRAFT]: true,
@@ -447,8 +450,9 @@ export default {
                         `Though, she`,
                         {
                             anchor: `ponders the children`,
+                            todo: REVIEW,
                             card: {
-                                description: `My mother once advised me not to have children, given the autism that runs in our genes, and her difficulties in raising my brother as a result. But by this reasoning, no woman should even want me as a lifetime partner to begin with.`,
+                                description: `My mother once advised me not to have children, given the autism that runs in our genes, and her difficulties in raising my brother as a result. But by this reasoning, no woman should want me as a life partner to begin with.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
