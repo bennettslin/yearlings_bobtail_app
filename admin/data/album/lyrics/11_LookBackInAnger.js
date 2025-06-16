@@ -29,7 +29,6 @@ export default {
     playerStartTime: 1932.102,
     // This is a magic number adjusted by ear. In the mix, it's actually 41.66.
     mixSamplingFrequency: 41.64,
-    todo: REVIEW,
     overview: `With the Yearlings becoming a fixture in the local scene, I began to attract more attention than I'd ever known, particularly from women. And yet, my misery didn't fade; it just simmered into a quiet resentment. I also began to regret my relationship with Sita, which now felt like a decision I'd been coerced to make— under deprived conditions from which I was now free.`,
     lyricUnits: [
         {
@@ -188,7 +187,7 @@ export default {
                                         anchor: `First Battle of Bull Run`,
                                         wiki: `First_Battle_of_Bull_Run`,
                                     },
-                                    `, spectators picnicked on the hillside to witness what they assumed would be a quick Union victory. Similarly, my battles with the bullies were fought and lost in full view of a lunchtime crowd.`,
+                                    `, spectators picnicked on the hillside to witness what they wrongly assumed would be a quick Union victory. Similarly, my battles with the bullies were fought and lost in full view of a lunchtime crowd.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -296,7 +295,7 @@ export default {
                                         anchor: `The Charge of the Light Brigade`,
                                         wiki: `The_Charge_of_the_Light_Brigade_(poem)`,
                                     },
-                                    `," I'd bravely accepted that mine wasn't "to reason why," but simply "to do and die," throughout my own years of strife in the San Fernando Valley.`,
+                                    `," I'd bravely accepted that mine wasn't "to reason why," but simply "to do and die," during my own years of strife in the San Fernando Valley.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -306,7 +305,6 @@ export default {
                         `you rode, so on`,
                         {
                             anchor: `spite you thrive`,
-                            todo: REVIEW,
                             card: {
                                 description: `This casual view of my own hardship, though, is what later enabled me to justify the pain I inflicted on Sita.`,
                                 dotKeys: {
@@ -323,7 +321,7 @@ export default {
                 todo: REVIEW,
                 card: {
                     description: [
-                        `When I asked Owen to recommend some good lyricists, he pointed me to`,
+                        `When I asked Owen to recommend some good lyricists, he directed me to`,
                         {
                             anchor: `Nas`,
                             wiki: `Nas`,
@@ -337,7 +335,7 @@ export default {
                                 wiki: `Illmatic`,
                             },
                         },
-                        `was my lone point of reference for rap music, it gave me great pointers on the flexibility of`,
+                        `was my lone point of reference for rap music, it gave me some useful tips on the flexibility of`,
                         {
                             anchor: `internal rhyme`,
                             wiki: `Internal_rhyme`,
@@ -369,7 +367,7 @@ export default {
                                         anchor: `feeder fish`,
                                         wiki: `Feeder_fish`,
                                     },
-                                    `is deceptive: Since the least fit are also least likely to be sold as prey, they end up living the longest. In retrospect, high school worked the same way: All the time I'd spent working on art projects left me unfit to defend my place in the social hierarchy— but now, the skills I'd built as a result were keeping me from being eaten alive in the real world.`,
+                                    `is deceptive: Since the least fit are also least likely to be sold as prey, they end up living the longest. In retrospect, high school worked the same way: All the time I'd spent working on art projects left me unfit to defend my place in the social hierarchy— but the skills I'd built as a result were now keeping me from being eaten alive in the real world.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -516,7 +514,7 @@ export default {
                             anchor: `fine when you had none`,
                             todo: REVIEW,
                             card: {
-                                description: `Things were now looking up for me, so it seemed odd that traces of bitterness still remained. I suspect it's because I felt angry for my younger self, who'd been kept in the dark for so long about how much better life could be.`,
+                                description: `Things were now looking up for me, so it seemed odd that a trace of bitterness still remained. I suspect it's because I felt angry for my younger self, who'd been kept in the dark for so long about how much better life could be.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -614,7 +612,6 @@ export default {
                     lyric: [
                         {
                             anchor: `peasant discontented`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The better my life got, the less satisfied I became. I was like the peasants of the French Revolution, who only grew further agitated after each attempt by the noble class to appease them. Not only did they grumble at such paltry improvements to their lives, they were then emboldened to make greater demands— a phenomenon known as the`,
@@ -674,7 +671,6 @@ export default {
                     lyric: [
                         {
                             anchor: `only to crack`,
-                            todo: REVIEW,
                             card: {
                                 description: `Yet even as reason disproved the beliefs of my bullies, it also discredited my own as a Beyonder: With so many rival claims to the truth, who'd stay loyal to a faith that offers no community, and only endless grief?`,
                                 dotKeys: {
