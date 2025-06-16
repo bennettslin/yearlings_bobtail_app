@@ -375,9 +375,10 @@ export default {
                     lyricLeft: [
                         {
                             anchor: `His god humming "Freebird,"`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `Affixed to the dashboard is an ornament of a native Hawaiian man in a grass skirt. As the stereo blares`,
+                                    `Affixed to the dashboard is an ornament of a Hawaiian man in a grass skirt. As the stereo blares`,
                                     {
                                         anchor: `Lynyrd Skynyrd`,
                                         wiki: `Lynyrd_Skynyrd`,
@@ -387,7 +388,7 @@ export default {
                                         anchor: `Freebird`,
                                         wiki: `Free_Bird`,
                                     },
-                                    `," he strums his ukulele in rhythm to the mountain god, whose rumblings tell the legend of an all-American phoenix.`,
+                                    `," he strums his ukulele in time to the mountain god, whose rumblings tell the legend of an all-American phoenix.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -404,8 +405,9 @@ export default {
                         `nods as`,
                         {
                             anchor: `she drums her toes`,
+                            todo: REVIEW,
                             card: {
-                                description: `Of course, he actually sways because Miriam, who happens to be my all-American goddess, is humming along and tapping the underside of the dashboard with her feet.`,
+                                description: `Of course, he sways only because Miriam— who happens to be my all-American goddess— is humming along while tapping the underside of the dashboard with her feet.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -426,7 +428,7 @@ export default {
                                         anchor: `Abbott and Costello`,
                                         wiki: `Abbott_and_Costello`,
                                     },
-                                    `famously didn't get along. This enlivened the dynamic between them onstage, but it made for tense moments when the tape stopped rolling. So while Miriam might've enjoyed watching my two halves outwit each other, she surely wanted no part of the underlying drama that animated this spectacle.`,
+                                    `famously didn't get along. This enlivened the dynamic between them onstage, but it made for tense moments when the tape stopped rolling. Similarly, though Miriam enjoyed watching my two halves outwit each other, she surely wanted no part of any behind-the-scenes drama.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -452,7 +454,7 @@ export default {
                             anchor: `ponders the children`,
                             todo: REVIEW,
                             card: {
-                                description: `My mother once advised me not to have children, given the autism that runs in our genes, and her difficulties in raising my brother as a result. But by this reasoning, no woman should want me as a life partner to begin with.`,
+                                description: `My mother once advised me not to have children, given the autism that runs in our genes, and her difficulties in raising my brother as a result. But by this reasoning, no woman hoping for a child should even want me as a life partner to begin with.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -500,6 +502,7 @@ export default {
                         `born from a`,
                         {
                             anchor: `forced conversion`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Historically, conquered peoples were`,
@@ -507,7 +510,7 @@ export default {
                                         anchor: `forced to adopt`,
                                         wiki: `Forced_conversion`,
                                     },
-                                    `the religious beliefs of their conquerors. More often than not, however, they simply repurposed old customs and deities to fit their new faith. And so I imagine Miriam skeptically eyeing my attempts to assimilate into her world, as traces of my corrupt ways must surely remain.`,
+                                    `the religious beliefs of their conquerors. More often than not, however, they simply repurposed old customs and deities to fit this new faith. And so I imagine Miriam skeptically eyeing my attempts to assimilate into her world, as traces of my corrupt ways must surely remain.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -520,8 +523,9 @@ export default {
                         `for some`,
                         {
                             anchor: `unforeskinned virgin`,
+                            todo: REVIEW,
                             card: {
-                                description: `I learned a long time ago not to wear identity markers or hold personal convictions that would limit the size of my dating pool. I think this is why I've never gotten a tattoo. I needed to be a blank slab for each new woman to shape into whatever she liked. So here I imagine that before dating Miriam, I'd reset myself to a default state of being sexually inexperienced and having an intact foreskin.`,
+                                description: `I learned a long time ago not to wear identity markers, or hold personal convictions that might limit the size of my dating pool. This is why I've never wanted a tattoo, I think. I needed to be a blank slab for each new woman to shape into whatever she liked. So here I imagine that, before dating Miriam, I'd reset myself to a default state of being sexually inexperienced and having an intact foreskin.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -561,8 +565,9 @@ export default {
                         `to remain`,
                         {
                             anchor: `inherently perfect`,
+                            todo: REVIEW,
                             card: {
-                                description: `The real purpose of having a drunken alter ego was to blame it for all my selfish desires, while remaining above reproach myself. I didn't tell Miriam this, of course— since the latest thing I selfishly desired was her.`,
+                                description: `The purpose of having a drunken alter ego was to blame it for all my selfish desires, while staying above reproach myself. I didn't tell Miriam this, of course— since the latest thing I selfishly desired was her.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -592,9 +597,10 @@ export default {
                         `as`,
                         {
                             anchor: `worn puppet`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `The condom sits motionless on the car seat, like a puppet so full of life just moments before. But having taken me to a place I otherwise couldn't have gone, it has no other use and can now be discarded.`,
+                                    description: `The condom sits motionless on the car seat, like a puppet so full of life just moments before. But, having taken me to a place I otherwise couldn't have gone, it has no other use and can now be discarded.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -610,6 +616,7 @@ export default {
                         `his`,
                         {
                             anchor: `offscreen person dubs`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Of course, this wouldn't be the first time I've tossed aside a puppet after it served my purpose. Like a`,
@@ -617,7 +624,7 @@ export default {
                                         anchor: `ventriloquist`,
                                         wiki: `Ventriloquism`,
                                     },
-                                    `with a dummy on his lap, I made my drunken half say all the questionable things needed to fulfill my desires, while I just sat there looking appalled.`,
+                                    `with a dummy on his lap, the sober me made his drunken half say all the questionable things needed to fulfill his desires, while he just sat there looking appalled.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -647,8 +654,9 @@ export default {
                         `which she swore when scarcely`,
                         {
                             anchor: `twenty-one`,
+                            todo: REVIEW,
                             card: {
-                                description: `Miriam was several years younger than me. So she was still eager to live it up, just as I was thinking it would be nice to settle down.`,
+                                description: `Miriam was several years younger than me. So she was still eager to live it up, just as I was thinking it would be nice to wind it down.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -659,14 +667,15 @@ export default {
                     lyricRight: [
                         {
                             anchor: `twitching sword`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `Dubbing refers to the`,
+                                    `Dubbing refers to`,
                                     {
-                                        anchor: `replacement of an actor's voice`,
+                                        anchor: `the replacement`,
                                         wiki: `Dubbing_(filmmaking)`,
                                     },
-                                    `in film, but also to the ritual of`,
+                                    `of an actor's voice in film, but also to the ritual of`,
                                     {
                                         anchor: `conferring knighthood`,
                                         wiki: `Accolade`,
