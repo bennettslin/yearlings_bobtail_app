@@ -31,7 +31,6 @@ export default {
     referenceDescription: `Acoustic guitar in measure 1`,
     mixStartTime: `0:01:18.46`,
     playerStartTime: 2722.629,
-    todo: REVIEW,
     overview: `Upon learning of my brother's autism, my parents were too harried to notice I was being bullied at school; in guilt, they later indulged every whim I had to find my own path. But it didn't assure them that I failed to mature as I got older— and they were especially crushed when I left Sita, whom they adored. Naturally, I wasn't happy to disappoint them. Still, I had a master plan to follow, and I wasn't about to change my ways.`,
     lyricUnits: [
         {
@@ -123,7 +122,6 @@ export default {
                         `, come`,
                         {
                             anchor: `wax prophetic`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -163,7 +161,6 @@ export default {
                         `Rest your rump, boy, by your old`,
                         {
                             anchor: `giving tree`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     {
@@ -190,7 +187,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Stumped`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `In their claim to be stumped, my parents pretend to be oblivious to the outcome of my story.`,
@@ -316,7 +312,6 @@ export default {
                         `,`,
                         {
                             anchor: `earth right now your tourist store`,
-                            todo: REVIEW,
                             card: {
                                 description: `My mother enthralled me with visions of being a great artist, even as she instilled Buddhist ideals of renouncing materialism; meanwhile, the mail-order cult told me I was a mere visitor to this planet. And so a belief formed in my head that I must work tirelessly "to restore" my "birthright" of artistic renown, unaffected by earthly concerns.`,
                                 dotKeys: {
@@ -531,7 +526,6 @@ export default {
                         `you made a`,
                         {
                             anchor: `bunker that shuts airtight`,
-                            todo: REVIEW,
                             card: {
                                 description: `I learned early on to deal with problems by locking myself away, both physically and mentally. Then, once sheltered, I could calmly study my situation in order to plot the best way forward.`,
                                 dotKeys: {
@@ -638,7 +632,6 @@ export default {
                         `safe on your`,
                         {
                             anchor: `tiny planet`,
-                            todo: REVIEW,
                             card: {
                                 description: `Like the little prince, I was also a visitor from the stars, who once saw this world through guileless eyes.`,
                                 dotKeys: {
@@ -767,7 +760,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `I wanted to mimic the`,
@@ -861,7 +853,6 @@ export default {
                         `, the`,
                         {
                             anchor: `testifiers' lore`,
-                            todo: REVIEW,
                             card: {
                                 description: `After rescuing Sita, Rama made her step through sacrificial flames to prove that she'd stayed chaste throughout her abduction. Sita complied— and escaped from this "test of fire" unharmed.`,
                                 dotKeys: {
@@ -878,7 +869,6 @@ export default {
                         `A`,
                         {
                             anchor: `nation paused`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In 1987, a`,
@@ -1056,7 +1046,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `I sit up and notice my drunken scrawls on the sidewalk, picturing what might've happened if I'd used`,
+                                        `I sit up and notice my drunken scrawls on the sidewalk, playfully imagining what might've happened if I'd used`,
                                         {
                                             anchor: `ant chalk`,
                                             wiki: `Ant_chalk`,
@@ -1078,7 +1068,6 @@ export default {
                         `:`,
                         {
                             anchor: `____`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `And what I've drunkenly scrawled is… Mara's name.`,
@@ -1231,7 +1220,6 @@ export default {
                             `…`,
                             {
                                 anchor: `traded in`,
-                                todo: REVIEW,
                                 card: {
                                     description: `Like shiny new "bronzes" placed next to a gold trophy on the shelf, these other women were never more desirable than Sita in hindsight. They thrilled me only because I'd won them more recently.`,
                                     dotKeys: {
@@ -1359,7 +1347,7 @@ export default {
                                 anchor: `weave through the vines`,
                                 todo: REVIEW,
                                 card: {
-                                    description: `The magic beans had sprouted into thick, twisting vines, blocking out the sky as far as the eye could see.`,
+                                    description: `The magic beans then sprouted into thick, twisting vines, blocking out the sky as far as the eye could see.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -1566,7 +1554,6 @@ export default {
                             `…`,
                             {
                                 anchor: `Maranatha`,
-                                todo: REVIEW,
                                 card: {
                                     description: [
                                         `But in my chant, the syllables gradually shift to form the holy name of Mara. And while Valmiki embraced Eastern devotion, salvation for me lies in the embrace of Western women. Thus my chant ends on a phrase of Western faith: Occurring only once in the New Testament,`,
@@ -1625,7 +1612,6 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 cards: [
                     {
                         description: [
