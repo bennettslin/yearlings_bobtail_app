@@ -325,10 +325,9 @@ export default {
                         `they'll catch you by`,
                         {
                             anchor: `your cape`,
-                            todo: REST,
-                            problem: `Right now, this doesn't fully convey how much I was a "hero," which is the entire point. Ideally, it should convey that I drew really well, and thus the drawings I gave away were worthy gestures of friendship, for which any fellow child would be grateful. Also, not sure if I should specify how unathletic I was, which then explains how I became "easy prey" later on. But I've already spent so long on this…`,
+                            todo: REVIEW,
                             card: {
-                                description: `In elementary school, I was well liked. Being small for my age, I was pampered even by other boys; and though I was absorbed in my sketchbooks, I was happy to draw anything for those who asked. But the traits that once made me a hero now marked me as easy prey in middle school, and I was ill-prepared.`,
+                                description: `In elementary school, I was well liked. Being small for my age, I was pampered even by other boys; and though I was absorbed in my sketchbooks, I was happy to draw anything for all those who asked. But the traits that once made me a hero now marked me as easy prey in middle school, and I was ill-prepared.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -351,7 +350,7 @@ export default {
                             todo: REST,
                             problem: `I'm still not sure the connection is clearly being made here that being popular or liked is the thing worth caring about. But I've already spent so long on this.`,
                             card: {
-                                description: `The most popular kids in middle school were also the least concerned about being liked, which ran counter to my intuition that anything worth caring about should be pursued wholeheartedly. Yet trying things their way didn't make me any more likable either…`,
+                                description: `The most popular kids in middle school were also the least concerned about being liked, which ran counter to my intuition that whatever I wished to achieve should be pursued wholeheartedly. And yet, trying things their way didn't make me any more likable…`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

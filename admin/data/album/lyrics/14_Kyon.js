@@ -514,8 +514,7 @@ export default {
                         `Bursting belly told by`,
                         {
                             anchor: `extra holes`,
-                            todo: REST,
-                            problem: `It just seems like it could benefit from being written at a lower grade level.`,
+                            todo: REVIEW,
                             card: {
                                 description: `When carved into one's belt, extra notches support a belly grown large from overfeeding; when carved on a bedpost, they tally sexual conquests.`,
                                 dotKeys: {
