@@ -1903,7 +1903,6 @@ export default {
                         {
                             anchor: `Rumspring`,
                             properNoun: true,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The`,

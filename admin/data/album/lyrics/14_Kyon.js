@@ -350,7 +350,7 @@ export default {
                             anchor: `let's make a pact`,
                             todo: REVIEW,
                             card: {
-                                description: `Sita knew I'd someday come to want the same enduring love that she did. So every time we broke up, she'd make me promise to rekindle what we once had, whenever I should pine for it once more.`,
+                                description: `Sita knew I'd someday come to want the same enduring love that she did. So every time we broke up, she'd make me promise to rekindle all that we once had, whenever I should pine for it once more.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -400,7 +400,7 @@ export default {
                                         anchor: `knight-errant`,
                                         wiki: `Knight-errant`,
                                     },
-                                    `seeks adventures to prove his chivalry in the name of courtly love.`,
+                                    `seeks adventures to prove his chivalry, all in the name of courtly love.`,
                                 ],
                             },
                         },

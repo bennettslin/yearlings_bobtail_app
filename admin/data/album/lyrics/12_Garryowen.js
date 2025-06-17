@@ -158,7 +158,6 @@ export default {
                         `if you would`,
                         {
                             anchor: `opt for bed not street`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `I was tired of working extra shifts just to pay rent. So after my lease ended, I'd spend half my nights with Sita, and the other half crashing in the`,
@@ -290,7 +289,6 @@ export default {
                         `In you come, piss drunk, smug in`,
                         {
                             anchor: `smegma crust`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `Any time I stayed at the punk house, my personal hygiene would be put on hold for a few days. But even once back at Sita's place, I'd dawdle a bit before showering, since she was powerless to entice me with sex until I did.`,

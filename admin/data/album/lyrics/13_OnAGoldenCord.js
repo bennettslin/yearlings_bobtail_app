@@ -957,7 +957,6 @@ export default {
                         `my`,
                         {
                             anchor: `alias drunk, in panic`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `Once drunk, I always stayed drunk until I crashed. So while I was quite used to transforming into Garry, he was wholly unfamiliar with turning back into me.`,
@@ -1050,7 +1049,6 @@ export default {
                         `a bid for greatness' sake, he's sold on as`,
                         {
                             anchor: `holy war`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In the immediate`,
@@ -1093,7 +1091,6 @@ export default {
                         },
                         {
                             anchor: `houris`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In the Quran, the`,

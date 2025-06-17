@@ -302,7 +302,6 @@ export default {
                         `and stunned, by`,
                         {
                             anchor: `reflex you asked`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `By then, I was mostly on autopilot when it came to hitting on cute women in random places.`,
