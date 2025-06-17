@@ -20,7 +20,7 @@ import {
     BACKING,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Uncanny Valley Boy',
@@ -85,7 +85,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: REVIEW,
                 card: {
-                    description: `I wrote the music for this song a while back after waking from a horrid nightmare. The premise seemed laughable by day's end, however, so I quietly shelved it. But years later, I realized that its gloomy chords and moody tempo changes would work well for a song about a nightmarish version of my parents.`,
+                    description: `I wrote the music for this song a while back after waking from a horrid nightmare. The premise seemed laughable by day's end, however, so I quietly shelved it. But years later, I realized that its gloomy chords and moody tempo changes would work well for this song, which recounts an encounter with a nightmarish version of my parents.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGCRAFT]: true,
@@ -302,7 +302,7 @@ export default {
                             anchor: `Upon purchase of a queen's ship`,
                             todo: REVIEW,
                             card: {
-                                description: `RI Research promised that I could rise above the bullies once a spaceship was funded by my payments; this then taught me to bide my time while laying the groundwork for corrective justice. I was like "a pawn" in chess, which "perches over queenship" as it clambers toward the far end of the chessboard.`,
+                                description: `RI Research promised that I could rise above the bullies once a spaceship was funded by my payments. As a result, I learned to bide my time while plotting my way toward corrective justice— much like how "a pawn perches over queenship" as it reaches the far end of the chessboard.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -326,7 +326,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `The idea behind the puns in this stanza was for listeners to think they'd heard a`,
@@ -369,14 +368,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: [
-                                        `To defend against the bullies' threats, I made a point of reacting slowly— which then forced me to react slowly to`,
-                                        {
-                                            isItalic: true,
-                                            lyric: `anyone`,
-                                        },
-                                        `. At some point, my classmates must've thought I was huffing paint, and this is when I got called into the principal's office.`,
-                                    ],
+                                    description: `To defend against the bullies' threats, I made a point of reacting slowly— which then forced me to react slowly to anyone in general. At some point, a classmate must've thought I was huffing paint, and this is when I got called into the principal's office.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -409,7 +401,7 @@ export default {
                                         anchor: `pen pals`,
                                         wiki: `Pen_pal`,
                                     },
-                                    `as a child, my parents didn't think anything of the random envelopes I was mailing out. But after having spoken to the principal, my mother became suspicious, opened one of them, and found a wad of cash.`,
+                                    `as a child, my parents didn't think much of the random envelopes I was mailing out. After speaking with the principal, however, my mother grew suspicious, opened one of them, and found a wad of cash.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -492,7 +484,7 @@ export default {
                                             isItalic: true,
                                             lyric: `hamartia`,
                                         },
-                                        `has four syllables. But my English teacher in middle school pronounced it as I have here, so I plead miseducation.`,
+                                        `has four syllables. But my English teacher in middle school pronounced it like I do here, so I plead miseducation.`,
                                     ],
                                     dotKeys: {
                                         [SONGCRAFT]: true,
@@ -604,7 +596,6 @@ export default {
                         `But then, my`,
                         {
                             anchor: `little prince`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     {
@@ -656,10 +647,9 @@ export default {
                                         anchor: `shell game`,
                                         wiki: `Shell_game`,
                                     },
-                                    `, a pea is placed beneath one of three nutshells that are then shuffled in plain view. Having recognized life to be an endless series of shell games, I vowed never to get suckered again. And now, knowing that the pea gets misplaced through sleight of hand, I could even do some grifting myself.`,
+                                    `, a pea is placed beneath one of three nutshells that are then shuffled in plain view. Having recognized life to be an endless series of such scams, I vowed never to get suckered again. And now, knowing that the pea gets misplaced through sleight of hand, I could even do some grifting myself…`,
                                 ],
                                 dotKeys: {
-                                    [BACKSTORY]: true,
                                     [OBSERVATION]: true,
                                 },
                             },
@@ -718,7 +708,6 @@ export default {
                         `Now suddenly dressed to play, you`,
                         {
                             anchor: `drowned your stutter`,
-                            todo: REVIEW,
                             card: {
                                 description: `I developed a stammer in middle school, perhaps as an unconscious way to buy time for collecting my thoughts. Then, in college, I found that alcohol made it disappear.`,
                                 dotKeys: {
@@ -743,7 +732,7 @@ export default {
                                         anchor: `degrading rituals`,
                                         wiki: `Hazing`,
                                     },
-                                    `to toughen them up. And having dealt with such abuse for so long, I finally conceded that I wouldn't have toughened up any other way. But now I had no misgivings about dishing out the same abuse to others…`,
+                                    `to toughen them up. And having dealt with such abuse for so long, I finally conceded that I wouldn't have toughened up any other way. But now I had no misgivings about dishing out the same to others…`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -890,7 +879,7 @@ export default {
                             anchor: `fail your Sita`,
                             todo: REVIEW,
                             card: {
-                                description: `Modern audiences may find it disgraceful that Rama's first act, upon reuniting with Sita, was to demand proof of her chastity. And when looking back, I feel the same about my own need to be the more sexually experienced partner. It baffles me that I couldn't just be grateful for whatever had to happen first before Sita finally chose me.`,
+                                description: `Modern audiences may find it disgraceful that Rama's first act, upon reuniting with Sita, was to demand proof of her chastity. Well, when looking back, I feel the same about my own need to be the more sexually experienced partner. It baffles me that I couldn't just be grateful for whatever had to happen first before Sita finally chose me.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -899,7 +888,6 @@ export default {
                         `on`,
                         {
                             anchor: `repeat forevermore`,
-                            todo: REVIEW,
                             card: {
                                 description: `As I was making this album, a thought occurred to me: Like Rama, I too am now doomed to repeat my mistakes, as the story of how I betrayed my Sita shall be endlessly retold— and thus endlessly relived.`,
                                 dotKeys: {
@@ -1010,7 +998,6 @@ export default {
                         `When`,
                         {
                             anchor: `wakened from the siren`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `Not wanting anyone to crowd out my artwork, I run ahead of the group— only to pass out where no one can find me. Hours later, an ambulance siren jolts me awake.`,
@@ -1042,7 +1029,6 @@ export default {
                         `, you found spelled out in`,
                         {
                             anchor: `dead ants`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -1126,7 +1112,6 @@ export default {
                         `could sway you from a`,
                         {
                             anchor: `fairer marathon`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `The endless one-upmanship wasn't just petty; it was exhausting to counter every perceived slight with one of my own. I wanted life to be more like a marathon, which rewards patient resolve— a trait I possessed in spades.`,
@@ -1319,8 +1304,6 @@ export default {
                             `their`,
                             {
                                 anchor: `sun tinkles light`,
-                                todo: REVISE,
-                                problem: `Still think there's a more eloquent way to say "from above as a tyrant."`,
                                 card: {
                                     description: `In the nightmare, I ruled the neighborhood from above as a tyrant. I'd shower my subjects in urine, which they'd then lap up as their sole means of subsistence. Now that I think about it, my brain was probably telling me to wake up and use the bathroom.`,
                                     dotKeys: {
@@ -1347,7 +1330,7 @@ export default {
                                 anchor: `weave through the vines`,
                                 todo: REVIEW,
                                 card: {
-                                    description: `The magic beans then sprouted into thick, twisting vines, blocking out the sky as far as the eye could see.`,
+                                    description: `By the end of the dream, the magic beans had sprouted into thick, twisting vines, blocking out the sky.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -1390,7 +1373,7 @@ export default {
                             ],
                             todo: REVIEW,
                             card: {
-                                description: `My next five-year plan, like the one before, was meant to improve my fortunes through a dramatic overhaul of what I had to offer. Since it couldn't be left half-finished, there was no point in second-guessing its logic while the work was still in progress.`,
+                                description: `My next five-year plan, like the one before, was meant to improve my fortunes through a dramatic overhaul of all that I had to offer. Since it couldn't be left half-finished, there was no point in second-guessing its logic while the work was still in progress.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -1432,7 +1415,7 @@ export default {
                                         },
                                     },
                                     {
-                                        description: `Among those I ruled over were my parents, now feeble after a lifetime of doing their "son's" bidding.`,
+                                        description: `Among those I ruled over in the dream were my parents, now feeble after a lifetime of doing their "son's" bidding.`,
                                         dotKeys: {
                                             [NARRATIVE]: true,
                                             [PUN]: true,
@@ -1481,7 +1464,7 @@ export default {
                                         isItalic: true,
                                         lyric: `A Portrait of the Artist as a Young Man`,
                                     },
-                                    `is a notable example. And Joyce, of course, was my primary inspiration for creating`,
+                                    `is a notable example. Joyce, of course, was my primary inspiration for creating`,
                                     {
                                         isItalic: true,
                                         lyric: `Bobtail`,
