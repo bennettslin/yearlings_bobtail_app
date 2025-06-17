@@ -33,7 +33,7 @@ export default {
     playerReferenceTime: 2951.729,
     playerStartTime: 2926.829,
     todo: REVIEW,
-    overview: `While I can't deny that dating White women helped silence the nagging feeling I had of being genetically inferior, I honestly didn't seek them out. A case in point is Miriam, whom I met at a Yearlings show. She was the storybook ending that my ego had been waiting for: cute, hip, and drawn to me through no effort on my part. We lasted a few months; I always did have to wonder if she was slumming it with me.`,
+    overview: `While I can't deny that dating White women helped silence the nagging feeling I had of being genetically inferior, I honestly didn't seek them out. A case in point is Miriam, whom I met at a Yearlings show. She was the storybook ending that my ego had been waiting for: cute, hip, and drawn to me through no effort on my part. We lasted a few months; I always did wonder if she was slumming it with me.`,
     isDoublespeaker: true,
     lyricUnits: [
         {
@@ -115,7 +115,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `As a freshman, I took a seminar on`,
@@ -339,7 +338,6 @@ export default {
                         `sinking ship, maybe`,
                         {
                             anchor: `good for anecdotes`,
-                            todo: REVIEW,
                             card: {
                                 description: `Though Miriam was entertained by my character, it wasn't in a way that one should hope for. I was to be the oddball ex-boyfriend in a tale of her misspent youth— not the life partner who'd one day hear all about it.`,
                                 dotKeys: {
@@ -354,7 +352,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: `I chose to use doublespeaker rhyme for this song because my original plan was to contrast Miriam's inner thoughts with mine. But I kept forgetting which lyrical column was whose— making me realize there wasn't any real contrast to show. We both knew the relationship would end; one of us just had a better idea of when.`,
                     dotKeys: {
@@ -565,7 +562,6 @@ export default {
                         `to remain`,
                         {
                             anchor: `inherently perfect`,
-                            todo: REVIEW,
                             card: {
                                 description: `The purpose of having a drunken alter ego was to blame it for all my selfish desires, while staying above reproach myself. I didn't tell Miriam this, of course— since the latest thing I selfishly desired was her.`,
                                 dotKeys: {
