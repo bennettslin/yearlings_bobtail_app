@@ -1132,6 +1132,7 @@ export default {
                             anchor: `with a ring`,
                             cards: [
                                 {
+                                    // NOTE: Change in recording? Make bell sound on hi-hat?
                                     description: `Having dozed off, I'm roused by the ringing of a bell, which indicates that a patient has been released from care and is returning to the waiting area.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,

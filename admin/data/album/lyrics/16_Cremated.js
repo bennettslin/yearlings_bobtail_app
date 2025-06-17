@@ -728,9 +728,10 @@ export default {
                     lyricCentre: [
                         {
                             anchor: `Needle done`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Having gone all the way with Miriam, I'm at peace with our inevitable breakup. Basking in my post-coital glow, then, I picture myself as a terminally ill patient being put to sleep while an old record plays in the background.`,
+                                    description: `Having gone all the way with Miriam, I'm at peace with our inevitable breakup. As I bask in my post-coital glow, then, I picture myself as a terminally ill patient being put to sleep while an old record plays in the background.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -763,6 +764,7 @@ export default {
                         `it`,
                         {
                             anchor: `hums a typo`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Like a typo, Miriam's involvement with me was a mistake she could easily correct. And like a "`,
@@ -770,7 +772,7 @@ export default {
                                         anchor: `Type O`,
                                         wiki: `Blood_type`,
                                     },
-                                    `," the universal blood donor, I was eager to give of myself to all other women, but only one was willing to give as much back.`,
+                                    `," the universal blood donor, I was eager to give of myself to all other women— but only one was willing to give as much back.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -871,8 +873,9 @@ export default {
                         `and`,
                         {
                             anchor: `in her pool`,
+                            todo: REVIEW,
                             card: {
-                                description: `Lying sedated on my deathbed, I see Miriam lounging by a swimming pool, radiant in her youth. I expend my last breath to wish her well— but she doesn't hear me and plunges into the deep end.`,
+                                description: `Lying sedated on my deathbed, I see Miriam lounging by a swimming pool, radiant in her youthful beauty. I expend my last breath to wish her well— but she doesn't hear me and plunges into the deep end.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -881,8 +884,9 @@ export default {
                         `, hears not a`,
                         {
                             anchor: `worrisome`,
+                            todo: REVIEW,
                             card: {
-                                description: `It surprised me that I only had good wishes for Miriam after we broke up, given how combative I was with Sita. But I came away knowing I was indeed worthy of dating the Maras of the world. I didn't have this certainty before, so it felt like an amazing bargain.`,
+                                description: `It surprised me to have only good wishes for Miriam after we broke up, given how small-minded I'd been with Sita. But I came away knowing I was indeed worthy of dating the Maras of the world. I didn't have this certainty before, so it felt like an amazing bargain.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -923,11 +927,10 @@ export default {
                         {
                             anchor: `Godspeed`,
                             properNoun: true,
-                            todo: REST,
-                            problem: `In the second card, the comma makes the sentence sound stilted. Can it be phrased better?`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `To add to my insecurities as a child about being raised Buddhist, I also looked different from everyone else in Sasha's world. And so my inferiority complex failed to distinguish between carrying faulty genes, belonging to a faulty faith, and being of a faulty race. They all seemed to derive from a single defect at the core of my being.`,
+                                    description: `To add to my insecurities as a child about being raised Buddhist, I also looked different from everyone else in Sasha's world. And so my inferiority complex failed to distinguish between carrying faulty genes; adhering to a faulty faith; and being of a faulty race. They all seemed to derive from a single defect at the core of my being.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [OBSERVATION]: true,
@@ -948,9 +951,10 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     // NOTE: Change in recording? Connect to Uncanny Valley?
-                    description: `The bouncing ping pong ball heard here mimics an alarm clock at my bedside as I fade away in my infirmity. Its ticks reverberate like the echoes of a tennis ball being volleyed back and forth, and I picture Miriam in a leisurely match with her new beau.`,
+                    description: `The bouncing ping pong ball heard here mimics an alarm clock at my bedside. As I fade away in my infirmity, its ticks reverberate like the echoes of a tennis ball being volleyed back and forth, and I picture Miriam in a leisurely match with her new beau.`,
                     dotKeys: {
                         [NARRATIVE]: true,
                         [SONGCRAFT]: true,
@@ -986,8 +990,9 @@ export default {
                         `though no worse but for`,
                         {
                             anchor: `his soreness`,
+                            todo: REVIEW,
                             card: {
-                                description: `Miriam knew how sore I'd be about the breakup, and so she gratified me with her most vigorous lovemaking yet. But with no cause to explain why my penis is now sore, I can only suppose that it's hard to keep up in my old age.`,
+                                description: `Miriam knew how sore I'd be about the breakup, and so she gratified me with her most vigorous lovemaking yet. But with no cause to explain why my penis is now sore, I can only suppose that it's hard to keep up in old age.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -1036,8 +1041,9 @@ export default {
                         `the`,
                         {
                             anchor: `cleaved horizon`,
+                            todo: REVIEW,
                             card: {
-                                description: `As we make our way downhill, the horizon appears like a cleaver splitting the sky open, with the road spilling down on us like wet cement pouring out from the rupture.`,
+                                description: `As we make our way downhill, the horizon appears like a cleaver splitting the sky open, with the road spilling down on me like wet cement pouring out from the rupture.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -1053,9 +1059,10 @@ export default {
                         `He's`,
                         {
                             anchor: `vegging with his boner shortened`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Zoned out and flaccid, I'm about to be blindsided by Miriam's true intention for today's outing.`,
+                                    description: `Zoned out and flaccid, I'll soon be blindsided by Miriam's true intention for today's outing.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -1070,8 +1077,9 @@ export default {
                     lyricRight: [
                         {
                             anchor: `Redressed`,
+                            todo: REVIEW,
                             card: {
-                                description: `As I redress by pulling my pants back up, I'm about to learn that this latest sexual escapade was meant to be redress for the bad news that Miriam has forthcoming.`,
+                                description: `As I redress by pulling my pants back up, I'm about to hear the bad news, for which this latest sexual escapade was meant as redress.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -1087,8 +1095,9 @@ export default {
                         `a pop, and she`,
                         {
                             anchor: `pulls the plug`,
+                            todo: REVIEW,
                             card: {
-                                description: `The cigarette lighter plug pops out, and Miriam pulls it from the dashboard socket to light her cigarette. Having satisfied me with an orgasmic "pop," she no longer feels troubled to pull the plug on our relationship.`,
+                                description: `The lighter plug pops out, and Miriam pulls it from the dashboard socket to light her cigarette. Having satisfied me with an orgasmic "pop," she no longer feels troubled about pulling the plug on our relationship.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -1139,14 +1148,15 @@ export default {
                         `puff,`,
                         {
                             anchor: `preparing the scoop`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `Miriam searches for a way to deliver the bad news in the least messy way possible— like a pet owner readying the`,
+                                    `Miriam searches for a way to deliver the bad news in the least messy way possible, like a pet owner readying the`,
                                     {
                                         anchor: `pooper scooper`,
                                         wiki: `Pooper-scooper`,
                                     },
-                                    `in case her pet takes a dump on the lawn.`,
+                                    `as her pet takes a dump on the lawn.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
