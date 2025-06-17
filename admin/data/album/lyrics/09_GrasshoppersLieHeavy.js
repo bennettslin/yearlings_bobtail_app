@@ -305,7 +305,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `By then, I was mostly on autopilot when it came to hitting on random women in random places.`,
+                                    description: `By then, I was mostly on autopilot when it came to hitting on cute women in random places.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -741,6 +741,7 @@ export default {
                         `Your gate code punched, when a`,
                         {
                             anchor: `looming shadow nears`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `There was a common path to the campus between my apartment and Sita's boarding house.`,
@@ -749,7 +750,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `As it happens, Sita has also been heading home at this time. Having spotted me from a distance behind, she debates whether to flag me down. As I turn to face the apartment gate, I notice her presence. A few seconds awkwardly pass, with neither of us sure what to say next.`,
+                                    description: `Sita is also heading home at this time. Having spotted me from a distance behind, she debates whether to flag me down. But once I turn to face my apartment gate, I notice her presence all the same. A few seconds awkwardly pass, with neither of us sure what to say next.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -784,7 +785,7 @@ export default {
                             anchor: `you're my password`,
                             todo: REVIEW,
                             card: {
-                                description: `As I enter the passcode for the gate, Sita breaks the ice by mentioning that a personal detail about me, which she still remembered, had served as the basis for a password she recently created.`,
+                                description: `As I enter the passcode for my gate, Sita breaks the ice by mentioning that a personal detail about me, which she still remembered, had served as the basis for a password she recently created.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },

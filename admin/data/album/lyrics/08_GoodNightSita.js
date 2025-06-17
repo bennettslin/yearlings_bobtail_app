@@ -657,7 +657,7 @@ export default {
                             anchor: `learn to shotgun`,
                             todo: REVIEW,
                             card: {
-                                description: `In time I adopted the shotgun approach to dating, which involves hitting on anyone at any moment. It works by putting the math on your side: Even if your success rate remains low, you're increasing the sample size— which then improves your chances of someone saying yes to a date. And one yes is all you really need.`,
+                                description: `In time I adopted the shotgun approach to dating, which involves hitting on anyone at any moment. It works by putting the math on your side: Even if your success rate remains low, you're increasing the sample size— which then improves your chances of someone saying yes to a date. And, of course, one yes is all you really need.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

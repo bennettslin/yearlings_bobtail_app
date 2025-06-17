@@ -1365,7 +1365,7 @@ export default {
                                         anchor: `nirvana`,
                                         wiki: `Nirvana`,
                                     },
-                                    `— or, release from the cycle of rebirth. But this was just death on a grander scale, which simply confirmed my intuition that no one should want to live in the first place. So… why do we?`,
+                                    `— or, release from the cycle of rebirth. But this is just death on a grander scale, which confirmed my intuition that no one should want to live in the first place. So… why do we?`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1646,7 +1646,6 @@ export default {
                         `has a`,
                         {
                             anchor: `mile less far to go`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `"`,

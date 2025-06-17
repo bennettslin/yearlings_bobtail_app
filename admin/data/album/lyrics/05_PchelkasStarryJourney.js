@@ -372,7 +372,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Feigning sick`,
-                            todo: REVIEW,
                             card: {
                                 description: `In earlier years, I was proud of my near-perfect attendance record. Once the bullying began, however, I'd skip school by faking illness on a regular basis. My mother noticed the change, but trusted me enough not to press the issue.`,
                                 dotKeys: {
@@ -426,7 +425,7 @@ export default {
                             anchor: `send-away offers`,
                             todo: REVIEW,
                             card: {
-                                description: `Since I had no friends in middle school, I'd amuse myself by sending away for free samples advertised in the back pages of my comic books. As a result, I got flooded with junk mail— which exposed me to even more such offers. Then, one day, I received a letter from RI Research, Special Human Being Laboratory…`,
+                                description: `Since I had no friends in middle school, I'd amuse myself by sending away for free samples advertised in the back pages of my comic books. As a result, I got flooded with junk mail— which exposed me to even more such offers. Then one day, I received a letter from RI Research, Special Human Being Laboratory…`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

@@ -157,7 +157,7 @@ export default {
                                         anchor: `five-year plans`,
                                         wiki: `Five-year_plans_for_the_national_economy_of_the_Soviet_Union`,
                                     },
-                                    `of the Soviet Union were centralized mandates for rapid economic growth. Five years thus seemed like a good time frame to carry out my own plan for rapid character growth.`,
+                                    `of the Soviet Union were centralized mandates for rapid economic growth. Five years thus seemed like a good time frame to carry out my plan for rapid character growth.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -319,7 +319,6 @@ export default {
                         `while forever I'll`,
                         {
                             anchor: `hold in peace`,
-                            todo: REVIEW,
                             card: {
                                 description: `So Joi got together with Mara without any effort, while romance for me felt as elusive as ever. I thus had to admit that my five-year plan was a washout.`,
                                 dotKeys: {

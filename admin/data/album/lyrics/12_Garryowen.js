@@ -67,7 +67,7 @@ export default {
                 todo: REVIEW,
                 card: {
                     description: [
-                        `Since Garryowen the dog was named after a patriotic Irish`,
+                        `Since the dog Garryowen was named after a patriotic Irish`,
                         {
                             anchor: `marching tune`,
                             wiki: `Garryowen_(air)`,

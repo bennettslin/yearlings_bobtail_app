@@ -396,7 +396,7 @@ export default {
                             anchor: `"Joyce" oblivious`,
                             todo: REVIEW,
                             card: {
-                                description: `Of course, not knowing that I couldn't be the next Joyce is why I dared to try. And so I began to dream of doing for rock music what Joyce had done for modern literature.`,
+                                description: `Of course, not knowing that I couldn't be the next Joyce is why I dared to try. And so I began to dream that I could do for rock music what Joyce had done for modern literature.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -555,7 +555,14 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `If Catherine is a Traveller in spirit, then perhaps she's leaving me to rejoin her wandering community.`,
+                                    description: [
+                                        `Of course, if Catherine`,
+                                        {
+                                            isItalic: true,
+                                            lyric: `were`,
+                                        },
+                                        `a Traveller, then she'd still be leaving me, to rejoin her wandering community.`,
+                                    ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
