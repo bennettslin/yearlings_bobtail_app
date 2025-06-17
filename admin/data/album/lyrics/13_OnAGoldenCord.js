@@ -29,8 +29,7 @@ export default {
     mixStartTime: `0:03:11.10`,
     playerReferenceTime: 2298.378,
     playerStartTime: 2295.261,
-    todo: REST,
-    problem: `Just not sure if "would often" is the best replacement for "might," which I'd rather say but sounds weird because it doesn't convey past tense.`,
+    todo: REVIEW,
     overview: `After a night out with friends, I'd often shuffle on to Sita's place, slip into bed beside her, and quickly doze off. But one night Sita was awake and waiting to confront me, having discovered my plans to break up with her. In tears, she returned the gold bracelet I'd given her at the start of our relationship— and then kicked me out. With nowhere to go, I wandered the streets until sunrise. And so began the first of our many breakups…`,
     isDoublespeaker: true,
     lyricUnits: [
@@ -506,8 +505,7 @@ export default {
                         `And if`,
                         {
                             anchor: `night were peeled`,
-                            todo: REST,
-                            problem: `Second sentence runs on and doesn't flow well.`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Every now and then, a Robitussin flashback would cause me to trail off and stare into the distance. When a friend asked what was happening, I said it felt like`,
@@ -515,7 +513,7 @@ export default {
                                         anchor: `Colorforms`,
                                         wiki: `Colorforms`,
                                     },
-                                    `were being peeled off my eyeballs in quick succession, to present the illusion of a scene unfolding in time.`,
+                                    `were being peeled off my eyeballs in quick succession, presenting the illusion of a scene unfolding in time.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -746,11 +744,10 @@ export default {
                         `of gathering up the`,
                         {
                             anchor: `suttee dust`,
-                            todo: REST,
-                            problem: `Not sure if adjectives are redundant.`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `By now, I imagine Sita to be fully immolated on the burnt rubble of our failed relationship.`,
+                                    description: `By now, I imagine that Sita has been fully incinerated on the ashes of our failed relationship.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },

@@ -13,7 +13,7 @@ import {
     IS_UNIT_DOT,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Ash Wednesday',
@@ -545,8 +545,7 @@ export default {
                         },
                         {
                             anchor: `unknown to roam`,
-                            todo: REST,
-                            problem: `Maybe in the future, I'll enhance the analogy by pointing out that I'm a homebody.`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `"Raincoat" is slang for a condom, of which the benefit is unknown to "Rome," given the Catholic Church's stance against birth control. Since Catherine had vowed not to engage in premarital sex, we never needed to use one.`,

@@ -615,16 +615,15 @@ export default {
                         `You seek the`,
                         {
                             anchor: `dunes once deemed a haven`,
-                            todo: REST,
-                            problem: `Technically, the namesake is the one who's named after another.`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `Like his namesake`,
+                                    `Like the Biblical`,
                                     {
                                         anchor: `Ishmael`,
                                         wiki: `Ishmael`,
                                     },
-                                    `, the narrator in`,
+                                    ` whom he was named after, the narrator in`,
                                     {
                                         anchor: `Herman Melville`,
                                         wiki: `Herman_Melville`,
@@ -637,7 +636,7 @@ export default {
                                             wiki: `Moby-Dick`,
                                         },
                                     },
-                                    `is an outcast. While the former was banished to the desert, the latter wanders the wilderness of the ocean. It's to these metaphorical dunes of the ocean that I now flee as well.`,
+                                    `is an outcast. While the former was banished to the desert, I follow the latter and wander the metaphorical dunes of the ocean.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
