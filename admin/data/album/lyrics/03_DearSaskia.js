@@ -67,7 +67,7 @@ export default {
                             anchor: `Beatles`,
                             wiki: `The_Beatles`,
                         },
-                        `— and to put theory into practice, I came up with the melodies and chords now pieced together here. For so long, I didn't make use of them; all I could hear was the sound of me trying too hard. But years later, I realized that this was exactly what a song about an overwrought letter to Sasha called for.`,
+                        `— and to put theory into practice, I came up with the melodies and chords now pieced together here. For so long, I didn't make use of them; all I could hear was me trying too hard. But years later, I realized that this was exactly what a song about an overwrought letter to Sasha should sound like.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -583,7 +583,7 @@ export default {
                                         isItalic: true,
                                         lyric: `be`,
                                     },
-                                    `" boys— but one naturally follows the other. It surprised me when school aides declined to intervene on behalf of the bullied, as if doing so would disturb the natural order of the middle school ecosystem.`,
+                                    `" boys— but one tends to follow the other. It surprised me when school aides declined to intervene on behalf of the bullied, as if doing so would disturb the natural order of the middle school ecosystem.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,

@@ -597,7 +597,7 @@ export default {
                 todo: REVIEW,
                 card: {
                     description: [
-                        `As home studios grew affordable in the early '00s, I sensed that a wave of artists was about to take the art of music recording to new heights, just as`,
+                        `As home studios grew affordable in the early '00s, I sensed that a wave of artists would soon take the art of music recording to new heights, just as`,
                         {
                             anchor: `Brian Wilson`,
                             wiki: `Brian_Wilson`,
@@ -607,7 +607,7 @@ export default {
                             isItalic: true,
                             lyric: `Pet Sounds`,
                         },
-                        `. So I committed to join them— and thus, like Wilson, I held off any worries about how I'd recreate my sound onstage. Upon completing this album, though, I learned that the indie labels will only sign you once you can play shows`,
+                        `. So I committed to join them— and thus, like Wilson, I held off any worries about recreating my sound onstage. Upon completing this album, however, I learned that the indie labels will only sign you once you can play shows`,
                         {
                             isItalic: true,
                             lyric: `without`,

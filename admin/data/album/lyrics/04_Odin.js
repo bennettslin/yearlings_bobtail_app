@@ -1357,7 +1357,6 @@ export default {
                         `pray for`,
                         {
                             anchor: `soulless solace`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The end goal of Buddhism is`,
@@ -1616,7 +1615,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `Powerless to change my circumstances, I can only accept all that's unknown. And so, like a`,
+                                        `Unable to challenge my existence, I can only accept all that's still unknown. And so, like a`,
                                         {
                                             anchor: `garden gnome`,
                                             wiki: `Garden_gnome`,
@@ -1692,7 +1691,7 @@ export default {
                             isItalic: true,
                             lyric: `Yearling's Bobtail`,
                         },
-                        `wouldn't get any attention from the indie press, I moved to New York City to regain my bearings. There, Sasha and I reconnected, and we started dating. She put me on the conversion path, while I volunteered to study Hebrew. But we didn't last. Though I tried hard to reinvent myself once more, it was no longer possible to do so while drinking heavily. Life had changed.`,
+                        `wouldn't get any attention from the indie press, I moved to New York City to regain my bearings. There, Sasha and I reconnected, and we started dating. She put me on the conversion path, while I volunteered to learn Hebrew. But we didn't last. Though I tried hard to reinvent myself once more, it was no longer possible to do so while drinking heavily. Life had changed.`,
                     ],
                     dotKeys: {
                         [AFTERWORD]: true,
