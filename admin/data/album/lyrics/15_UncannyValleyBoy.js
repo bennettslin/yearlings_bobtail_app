@@ -85,7 +85,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: REVIEW,
                 card: {
-                    description: `I wrote the music for this song a while back after waking from a horrid nightmare. The premise seemed laughable by day's end, however, so I quietly shelved it. But years later, I realized that its gloomy chords and moody tempo changes would work well for this song, which recounts an encounter with a nightmarish version of my parents.`,
+                    description: `I wrote the music for this song a while back after waking from a horrid nightmare. The premise seemed laughable by day's end, however, so I quietly shelved it. But years later, I realized that its gloomy chords and moody tempo changes would work well for this song, which tells of an encounter with a nightmarish version of my parents.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGCRAFT]: true,
@@ -302,7 +302,7 @@ export default {
                             anchor: `Upon purchase of a queen's ship`,
                             todo: REVIEW,
                             card: {
-                                description: `RI Research promised that I could rise above the bullies once a spaceship was funded by my payments. As a result, I learned to bide my time while plotting my way toward corrective justice— much like how "a pawn perches over queenship" as it reaches the far end of the chessboard.`,
+                                description: `RI Research promised that I could rise above the bullies once a spaceship was funded by my payments. As a result, I learned to bide my time while building toward corrective justice— much like how "a pawn perches over queenship" as it reaches the far end of the chessboard.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -375,11 +375,12 @@ export default {
                                 },
                                 {
                                     description: [
+                                        `During my middle school years,`,
                                         {
-                                            anchor: `Inhalants`,
+                                            anchor: `inhalants`,
                                             wiki: `Inhalant`,
                                         },
-                                        `were the scary youth trend of my middle school years.`,
+                                        `became the latest youth trend to trigger panic in the media.`,
                                     ],
                                 },
                             ],
@@ -401,7 +402,7 @@ export default {
                                         anchor: `pen pals`,
                                         wiki: `Pen_pal`,
                                     },
-                                    `as a child, my parents didn't think much of the random envelopes I was mailing out. After speaking with the principal, however, my mother grew suspicious, opened one of them, and found a wad of cash.`,
+                                    `as a child, my mother didn't think anything of the random envelopes I was mailing out. But after speaking with the principal, she became suspicious, opened one of them, and found a wad of cash.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -458,7 +459,6 @@ export default {
                                     lyric: `hamartia`,
                                 },
                             ],
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -642,7 +642,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `In the classic scam known as a`,
+                                    `In a classic scam known as the`,
                                     {
                                         anchor: `shell game`,
                                         wiki: `Shell_game`,
@@ -732,7 +732,7 @@ export default {
                                         anchor: `degrading rituals`,
                                         wiki: `Hazing`,
                                     },
-                                    `to toughen them up. And having dealt with such abuse for so long, I finally conceded that I wouldn't have toughened up any other way. But now I had no misgivings about dishing out the same to others…`,
+                                    `to toughen them up. And having dealt with such abuse for so long, I finally conceded that I wouldn't have toughened up any other way either. But now I had no misgivings about dishing out the same to others…`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -879,7 +879,7 @@ export default {
                             anchor: `fail your Sita`,
                             todo: REVIEW,
                             card: {
-                                description: `Modern audiences may find it disgraceful that Rama's first act, upon reuniting with Sita, was to demand proof of her chastity. Well, when looking back, I feel the same about my own need to be the more sexually experienced partner. It baffles me that I couldn't just be grateful for whatever had to happen first before Sita finally chose me.`,
+                                description: `Modern audiences may find it disgraceful that Rama's first act, upon reuniting with Sita, was to demand proof of her chastity. And upon looking back, I feel the same about my own need to be the more sexually experienced partner. It pains me that I couldn't just be grateful for whatever had to happen first before Sita finally chose me.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -1328,7 +1328,6 @@ export default {
                             `that`,
                             {
                                 anchor: `weave through the vines`,
-                                todo: REVIEW,
                                 card: {
                                     description: `By the end of the dream, the magic beans had sprouted into thick, twisting vines, blocking out the sky.`,
                                     dotKeys: {
@@ -1373,7 +1372,7 @@ export default {
                             ],
                             todo: REVIEW,
                             card: {
-                                description: `My next five-year plan, like the one before, was meant to improve my fortunes through a dramatic overhaul of all that I had to offer. Since it couldn't be left half-finished, there was no point in second-guessing its logic while the work was still in progress.`,
+                                description: `My next five-year plan, like the one before, was meant to improve my fortunes through a dramatic overhaul of all I had to offer. Since it couldn't be left half-finished, there was no point in second-guessing its logic while the work was still in progress.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -1409,7 +1408,7 @@ export default {
                                 todo: REVIEW,
                                 cards: [
                                     {
-                                        description: `It wasn't until college that I understood the sacrifices my parents had made for me and my siblings to lead better lives than their own. But the fact that this awareness had to come about through assigned coursework— rather than my own lived experiences— only added to my guilt.`,
+                                        description: `Once in college, I finally understood how much my parents had sacrificed for me and my siblings to lead better lives than theirs. But the fact that this awareness came about through assigned coursework— rather than my own lived experiences— only added to my guilt.`,
                                         dotKeys: {
                                             [BACKSTORY]: true,
                                         },
@@ -1464,7 +1463,7 @@ export default {
                                         isItalic: true,
                                         lyric: `A Portrait of the Artist as a Young Man`,
                                     },
-                                    `is a notable example. Joyce, of course, was my primary inspiration for creating`,
+                                    `is a notable example— and Joyce, of course, was my primary inspiration for creating`,
                                     {
                                         isItalic: true,
                                         lyric: `Bobtail`,
