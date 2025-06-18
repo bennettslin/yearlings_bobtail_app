@@ -33,7 +33,7 @@ export default {
     playerReferenceTime: 2951.729,
     playerStartTime: 2926.829,
     todo: REVIEW,
-    overview: `While I can't deny that dating White women helped silence the nagging feeling I had of being genetically inferior, I honestly didn't seek them out. A case in point is Miriam, whom I met at a Yearlings show. She was the storybook ending that my ego had been waiting for: cute, hip, and drawn to me through no effort on my part. We lasted a few months; I always did wonder if she was slumming it with me.`,
+    overview: `While I can't deny that dating White women helped silence the nagging feeling I had of being genetically inferior, I honestly didn't seek them out. A case in point is Miriam, whom I met at a Yearlings show. She was the storybook ending that my ego had been waiting for: cute, hip, and drawn to me through no effort on my part… We lasted a few months. I always did wonder if she was slumming it with me.`,
     isDoublespeaker: true,
     lyricUnits: [
         {
@@ -42,7 +42,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: REVIEW,
                 card: {
-                    description: `Once when I was a child, a playmate asked if I knew what cremation was; I didn't, but assumed it must be fun and tasty. Of course, the horrifying truth was revealed to me a moment later. I thought this was the perfect metaphor for a song about Miriam, and the seemingly innocent day trip that she'd planned in advance to end with our breakup.`,
+                    description: `Once when I was a child, a playmate asked if I knew what cremation was. I didn't, but assumed it must be fun and tasty. Of course, the horrifying truth was revealed to me a moment later. I thought this was the perfect metaphor for a song about Miriam, and the seemingly innocent day trip that she'd planned in advance to end with our breakup.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [OBSERVATION]: true,
@@ -266,7 +266,7 @@ export default {
                             anchor: `doublespeaker`,
                             todo: REVIEW,
                             card: {
-                                description: `Though I took pains to adopt an innocent persona, Miriam surely knew about the drunken incidents. My reputation preceded me by that point, and we had friends in common. Still, I never offered an explanation for the discrepancy, and she never asked for one. I think she just accepted it as part of the adventure.`,
+                                description: `Though I took pains to adopt an innocent persona, Miriam surely knew about the drunken incidents. My reputation preceded me by that point, and we had mutual friends. Still, I never offered an explanation for the discrepancy, and she never asked for one. Perhaps she just accepted it as part of the adventure?`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -375,7 +375,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `Affixed to the dashboard is an ornament of a Hawaiian man in a grass skirt. As the stereo blares`,
+                                    `Affixed to the dashboard is an ornament of a Hawaiian boy in a grass skirt. As the stereo blares`,
                                     {
                                         anchor: `Lynyrd Skynyrd`,
                                         wiki: `Lynyrd_Skynyrd`,
@@ -402,7 +402,6 @@ export default {
                         `nods as`,
                         {
                             anchor: `she drums her toes`,
-                            todo: REVIEW,
                             card: {
                                 description: `Of course, he sways only because Miriam— who happens to be my all-American goddess— is humming along while tapping the underside of the dashboard with her feet.`,
                                 dotKeys: {
@@ -425,7 +424,7 @@ export default {
                                         anchor: `Abbott and Costello`,
                                         wiki: `Abbott_and_Costello`,
                                     },
-                                    `famously didn't get along. This enlivened the dynamic between them onstage, but it made for tense moments when the tape stopped rolling. Similarly, though Miriam enjoyed watching my two halves outwit each other, she surely wanted no part of any behind-the-scenes drama.`,
+                                    `famously didn't get along. This enlivened the dynamic between them onstage, but it made for tense moments once the tape stopped rolling. Similarly, though Miriam enjoyed watching my two halves outwit each other, she surely wanted no part of any behind-the-scenes drama.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -451,7 +450,7 @@ export default {
                             anchor: `ponders the children`,
                             todo: REVIEW,
                             card: {
-                                description: `My mother once advised me not to have children, given the autism that runs in our genes, and her difficulties in raising my brother as a result. But by this reasoning, no woman hoping for a child should even want me as a life partner to begin with.`,
+                                description: `My mother once advised me not to have children, given the autism that runs in our genes, and her difficulties in raising my brother as a result. But by the same reasoning, no woman should want me as a life partner to begin with.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -507,7 +506,7 @@ export default {
                                         anchor: `forced to adopt`,
                                         wiki: `Forced_conversion`,
                                     },
-                                    `the religious beliefs of their conquerors. More often than not, however, they simply repurposed old customs and deities to fit this new faith. And so I imagine Miriam skeptically eyeing my attempts to assimilate into her world, as traces of my corrupt ways must surely remain.`,
+                                    `the religious beliefs of their conquerors. More often than not, however, they simply repurposed old customs and deities to fit this new faith. And so I imagine Miriam eyeing with skepticism my attempts to assimilate into her world, as traces of my corrupt ways must surely remain.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -522,7 +521,7 @@ export default {
                             anchor: `unforeskinned virgin`,
                             todo: REVIEW,
                             card: {
-                                description: `I learned a long time ago not to wear identity markers, or hold personal convictions that might limit the size of my dating pool. This is why I've never wanted a tattoo, I think. I needed to be a blank slab for each new woman to shape into whatever she liked. So here I imagine that, before dating Miriam, I'd reset myself to a default state of being sexually inexperienced and having an intact foreskin.`,
+                                description: `I learned long ago not to get locked into a fixed identity, which would limit the size of my dating pool. This is why I've never gotten a tattoo, I think; I needed to be a blank slab for any new woman to shape into whatever she liked. So here I imagine that, just before dating Miriam, I'd reset myself to a default state of being sexually inexperienced and having an intact foreskin.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -593,7 +592,6 @@ export default {
                         `as`,
                         {
                             anchor: `worn puppet`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `The condom sits motionless on the car seat, like a puppet so full of life just moments before. But, having taken me to a place I otherwise couldn't have gone, it has no other use and can now be discarded.`,
@@ -612,7 +610,6 @@ export default {
                         `his`,
                         {
                             anchor: `offscreen person dubs`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Of course, this wouldn't be the first time I've tossed aside a puppet after it served my purpose. Like a`,
@@ -652,7 +649,7 @@ export default {
                             anchor: `twenty-one`,
                             todo: REVIEW,
                             card: {
-                                description: `Miriam was several years younger than me. So she was still eager to live it up, just as I was thinking it would be nice to wind it down.`,
+                                description: `Miriam was a few years younger than me. So she was still eager to live it up, just as I was thinking to wind it down.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -676,7 +673,7 @@ export default {
                                         anchor: `conferring knighthood`,
                                         wiki: `Accolade`,
                                     },
-                                    `. And so we find my drunken half, confused by the order he's been given to speak for my crimes, clumsily patting me on the shoulder with a sharp sword instead.`,
+                                    `. So here we find the drunken me, confused by the order being given to speak for the crimes of his sober half, clumsily patting him on the shoulder with a sharp sword instead.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -724,7 +721,6 @@ export default {
                     lyricCentre: [
                         {
                             anchor: `Needle done`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `Having gone all the way with Miriam, I'm at peace with our inevitable breakup. As I bask in my post-coital glow, then, I picture myself as a terminally ill patient being put to sleep while an old record plays in the background.`,
