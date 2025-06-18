@@ -764,7 +764,7 @@ export default {
                                         anchor: `Type O`,
                                         wiki: `Blood_type`,
                                     },
-                                    `," the universal blood donor, I was eager to give of myself to all other women— but only one was willing to give as much back.`,
+                                    `"— the universal blood donor— I was eager to give of myself to all other women, but only one was willing to give as much back.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -867,7 +867,7 @@ export default {
                             anchor: `in her pool`,
                             todo: REVIEW,
                             card: {
-                                description: `Lying sedated on my deathbed, I see Miriam lounging by a swimming pool, radiant in her youthful beauty. I expend my last breath to wish her well— but she doesn't hear me and plunges into the deep end.`,
+                                description: `Lying sedated on my deathbed, I see Miriam lounging by a swimming pool, radiant in her youthful beauty. I expend my last breath to wish her well, but she doesn't hear me… and plunges into the deep end.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -876,7 +876,6 @@ export default {
                         `, hears not a`,
                         {
                             anchor: `worrisome`,
-                            todo: REVIEW,
                             card: {
                                 description: `It surprised me to have only good wishes for Miriam after we broke up, given how small-minded I'd been with Sita. But I came away knowing I was indeed worthy of dating the Maras of the world. I didn't have this certainty before, so it felt like an amazing bargain.`,
                                 dotKeys: {
@@ -922,7 +921,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `To add to my insecurities as a child about being raised Buddhist, I also looked different from everyone else in Sasha's world. And so my inferiority complex failed to distinguish between carrying faulty genes; adhering to a faulty faith; and being of a faulty race. They all seemed to derive from a single defect at the core of my being.`,
+                                    description: `Adding to my insecurities as a child about being raised Buddhist, I also looked different from everyone else in Sasha's world. And so my inferiority complex failed to distinguish between carrying faulty genes; adhering to a faulty faith; and being of a faulty race. They all seemed to derive from a single defect at the core of my being.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [OBSERVATION]: true,
@@ -943,7 +942,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     // NOTE: Change in recording? Connect to Uncanny Valley?
                     description: `The bouncing ping pong ball heard here mimics an alarm clock at my bedside. As I fade away in my infirmity, its ticks reverberate like the echoes of a tennis ball being volleyed back and forth, and I picture Miriam in a leisurely match with her new beau.`,
@@ -984,7 +982,7 @@ export default {
                             anchor: `his soreness`,
                             todo: REVIEW,
                             card: {
-                                description: `Miriam knew how sore I'd be about the breakup, and so she gratified me with her most vigorous lovemaking yet. But with no cause to explain why my penis is now sore, I can only suppose that it's hard to keep up in old age.`,
+                                description: `Miriam knew how sore I'd be about the breakup, so she gratified me with her most vigorous lovemaking yet. But now, with no explanation for why my penis is sore, I can only surmise that it's hard to keep up in old age.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -1035,7 +1033,7 @@ export default {
                             anchor: `cleaved horizon`,
                             todo: REVIEW,
                             card: {
-                                description: `As we make our way downhill, the horizon appears like a cleaver splitting the sky open, with the road spilling down on me like wet cement pouring out from the rupture.`,
+                                description: `As we make our way downhill, the horizon appears like a cleaver splitting the sky open, with the road spilling down on me like wet cement into a shallow grave.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -1051,7 +1049,6 @@ export default {
                         `He's`,
                         {
                             anchor: `vegging with his boner shortened`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `Zoned out and flaccid, I'll soon be blindsided by Miriam's true intention for today's outing.`,
@@ -1089,7 +1086,7 @@ export default {
                             anchor: `pulls the plug`,
                             todo: REVIEW,
                             card: {
-                                description: `The lighter plug pops out, and Miriam pulls it from the dashboard socket to light her cigarette. Having satisfied me with an orgasmic "pop," she no longer feels troubled about pulling the plug on our relationship.`,
+                                description: `The lighter plug pops out, and Miriam pulls it from the dashboard socket to light her cigarette. Having satisfied me with an orgasmic "pop," she's no longer troubled about pulling the plug on our relationship.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -1143,12 +1140,12 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `Miriam searches for a way to deliver the bad news in the least messy way possible, like a pet owner readying the`,
+                                    `Miriam searches for a way to deliver the bad news in the least messy way possible, like a pet owner clutching the`,
                                     {
                                         anchor: `pooper scooper`,
                                         wiki: `Pooper-scooper`,
                                     },
-                                    `as her pet takes a dump on the lawn.`,
+                                    `while her pet takes a dump on the lawn.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
