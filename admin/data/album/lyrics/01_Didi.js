@@ -78,6 +78,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
                         `Since this song is sung from my sister's perspective as a child, I wanted to recreate the feel of childlike innocence heard in the opening measures of "`,
@@ -98,7 +99,7 @@ export default {
                                 wiki: `Pet_Sounds`,
                             },
                         },
-                        `. And so the introduction begins with an`,
+                        `. The introduction thus begins with an`,
                         {
                             anchor: `autoharp`,
                             wiki: `Autoharp`,
