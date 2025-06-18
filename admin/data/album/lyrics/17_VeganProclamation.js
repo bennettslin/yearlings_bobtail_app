@@ -922,7 +922,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: REVIEW,
                 card: {
-                    description: `I stayed vegan for five years— but then quit once I started dating Sasha, who ate meat. I guess it's the nature of who I am that, whenever a chance for romance is at stake, my personal identity is the first thing I'll jettison. And truth be told, being vegan was always somewhat rough, given my peanut and tree nut allergies. But I'll happily be the first to switch to lab-grown meats— which PETA themselves have funded research for.`,
+                    description: `I stayed vegan for five years— but then quit once I started dating Sasha, who ate meat. I guess it's the nature of who I am that, the minute a chance for romance is at stake, my personal identity is the first thing I'll jettison. And truth be told, being vegan was always somewhat rough, given my peanut and tree nut allergies. But I'll happily be the first to switch to lab-grown meats— which PETA themselves have funded research for.`,
                     dotKeys: {
                         [AFTERWORD]: true,
                     },
