@@ -324,7 +324,7 @@ export default {
                             anchor: `Nas`,
                             wiki: `Nas`,
                         },
-                        `. I'd paid little attention to hip hop at the time, thinking that its approach to songwriting was too far removed from my own to offer much wisdom. I've since corrected this oversight, but back when
+                        `. Up until then, I'd paid little attention to hip hop, thinking that its approach to songwriting was too far removed from my own to offer much wisdom. I've since corrected this oversight, but back when
                         `,
                         {
                             isItalic: true,
@@ -357,7 +357,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Feeble feeder fish`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The pecking order in a tank of`,
@@ -510,7 +509,6 @@ export default {
                         `and you were`,
                         {
                             anchor: `fine when you had none`,
-                            todo: REVIEW,
                             card: {
                                 description: `Things were now looking up for me, so it seemed odd that a trace of bitterness still remained. I suspect it's because I felt angry for my younger self, who'd been kept in the dark for so long about how much better life could be.`,
                                 dotKeys: {
@@ -682,7 +680,7 @@ export default {
                             anchor: `sprawled where they stood`,
                             todo: REVIEW,
                             card: {
-                                description: `And while every beatdown I suffered was a serious blow to my mental state, the bullies continued to enjoy greater happiness and social standing. Let's face it: Nature favors its bullies. And once I came to this harsh realization… my faith as a Beyonder just couldn't survive.`,
+                                description: `And while every beatdown I suffered was a serious blow to my mental state, the bullies continued to enjoy greater happiness and social standing. There was no way around it: Nature favors its bullies. And once I came to this harsh realization… my faith as a Beyonder just couldn't survive.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
