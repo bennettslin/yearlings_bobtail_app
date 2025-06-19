@@ -159,7 +159,7 @@ export default {
                                         anchor: `Secret decoder rings`,
                                         wiki: `Secret_decoder_ring`,
                                     },
-                                    `were promotional toys in the '60s that allowed children to decipher a television program's encrypted messages. Typically, what they revealed was a preview of the next episode. So it would've been nice to wear one on a date, and be given a preview of the next.`,
+                                    `were promotional toys in the '60s that allowed children to decipher a television program's encrypted messages. Typically, what they revealed was a preview of the next episode— so it would've been nice to wear one on a date, and be told there'd be a next.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -352,7 +352,7 @@ export default {
                         anchor: `heart of gold inside`,
                         todo: REVIEW,
                         card: {
-                            description: `Mistakes that I made on one date still offered lessons to apply toward the next. So each date felt like prying open one nesting doll to get to another, in the hope of reaching one at last whose promise wouldn't be hollow.`,
+                            description: `Mistakes that I made on one date still offered lessons to apply toward the next. So each date felt like prying open one nesting doll to get to another, in the hope of reaching a solid one at last.`,
                             dotKeys: {
                                 [OBSERVATION]: true,
                             },
@@ -657,7 +657,7 @@ export default {
                             anchor: `learn to shotgun`,
                             todo: REVIEW,
                             card: {
-                                description: `In time I adopted the shotgun approach to dating, which involves hitting on anyone at any moment. It works by putting the math on your side: Even if your success rate remains low, you're increasing the sample size— which then improves your chances of someone saying yes to a date. And, of course, one yes is all you really need.`,
+                                description: `In time I adopted the shotgun approach to dating, which involves hitting on any and every cute person you see. It comes down to simple math: Even if your success rate remains low, you're increasing the sample size— which then improves your chances of someone saying yes to a date. And, of course, one yes is all you really need.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
