@@ -1021,12 +1021,12 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `Robitussin requires you to stay constantly hydrated— but "our`,
+                                        `Robitussin requires you to stay constantly hydrated— but we've already drank all "our`,
                                         {
                                             anchor: `Evian`,
                                             wiki: `Evian`,
                                         },
-                                        `bottles" that we brought into the steam tunnels are now empty.`,
+                                        `bottles" that we brought with us into the steam tunnels.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -1327,7 +1327,7 @@ export default {
                             properNoun: true,
                             todo: REVIEW,
                             card: {
-                                description: `As "autumn" encroached, the first Americans surely sighed in relief to discover a bountiful land. And now, upon finally spotting "Adam's" headstone amid a sea of lookalikes, we do the same.`,
+                                description: `As "autumn" encroached, the first Americans surely sighed in relief to discover a bountiful land. And now we do the same, upon finally spotting "Adam's" headstone amid a sea of lookalikes.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -1340,7 +1340,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `On solo trips, I'd sometimes play on my`,
