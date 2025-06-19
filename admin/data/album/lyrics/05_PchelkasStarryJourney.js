@@ -75,12 +75,12 @@ export default {
                                 todo: REVIEW,
                                 card: {
                                     description: [
-                                        `In a humorous passage from`,
+                                        `In`,
                                         {
                                             anchor: `Leonard Cohen`,
                                             wiki: `Leonard_Cohen`,
                                         },
-                                        `'s otherwise tragic`,
+                                        `'s novel`,
                                         {
                                             isItalic: true,
                                             lyric: {
@@ -88,7 +88,7 @@ export default {
                                                 wiki: `Beautiful_Losers`,
                                             },
                                         },
-                                        `, the character F. tires of getting bullied at the beach. So he signs up for the Charles Axis bodybuilding course advertised in a comic book— only to discover that Charles Axis is the one who bullies him. I'm reminded of it anytime I reflect on my own misadventures in mail order; in both cases, I can't help but smile at the absurdity.`,
+                                        `, the character F. tires of getting bullied at the beach. So he signs up for the Charles Axis bodybuilding course advertised in a comic book— only to discover that Charles Axis is the one who bullies him. Whenever I reflect on my own misadventures in mail order now, I'm reminded of this comical passage from an otherwise tragic story; in both cases, I can't help but laugh at the absurdity.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -327,7 +327,7 @@ export default {
                             anchor: `your cape`,
                             todo: REVIEW,
                             card: {
-                                description: `In elementary school, I was well liked. Being small for my age, I was pampered even by other boys; and though I was absorbed in my sketchbooks, I was happy to draw anything for all those who asked. But the traits that once made me a hero now marked me as easy prey in middle school, and I was ill-prepared.`,
+                                description: `In elementary school, I was well liked. Being small for my age, I was pampered even by other boys; and though I was absorbed in my sketchbooks, I was happy to draw anything for everyone who asked. But the traits that once made me a hero now marked me as easy prey in middle school, and I was ill-prepared.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -423,7 +423,6 @@ export default {
                         `Soon`,
                         {
                             anchor: `send-away offers`,
-                            todo: REVIEW,
                             card: {
                                 description: `Since I had no friends in middle school, I'd amuse myself by sending away for free samples advertised in the back pages of my comic books. As a result, I got flooded with junk mail— which exposed me to even more such offers. Then one day, I received a letter from RI Research, Special Human Being Laboratory…`,
                                 dotKeys: {
