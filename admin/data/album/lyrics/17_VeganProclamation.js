@@ -205,7 +205,7 @@ export default {
                             anchor: `parlor song`,
                             wiki: `Parlour_music`,
                         },
-                        `. The ironic contrast stuck with me, and I thought it would work well for this song.`,
+                        `. The ironic contrast stuck with me, and I thought it might work well for this song.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -472,10 +472,9 @@ export default {
                         `Through an alley strewn with`,
                         {
                             anchor: `burger shrouds`,
-                            todo: REVISE,
-                            problem: `I haven't become vegan yet in the song. Change this to reflect that.`,
+                            todo: REVIEW,
                             card: {
-                                description: `As a vegan, I became hypersensitive to any byproduct of the meat industry. Even something as commonplace as a crumpled fast food wrapper would remind me of how much our society has commoditized animal suffering.`,
+                                description: `Thanks to my vegan friends, I became hyperaware of any byproduct of the meat industry. Even something mundane, like a fast food wrapper on the sidewalk, would serve as a reminder of how we've commoditized animal suffering as a society.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
