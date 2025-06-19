@@ -787,7 +787,7 @@ export default {
                             todo: REVISE,
                             problem: `Tense is weird. Now there's two uses of "them" pronouns.`,
                             card: {
-                                description: `Joi was my friend, and I was happy that they'd found Mara. Still, I wasn't eager to stick around. So after imagining them to exchange vows of "I do," I silently offered a vow of my own to bid them "two farewell."`,
+                                description: `Joi was my friend, and I was happy they'd found Mara. Still, I wasn't eager to stick around. So after imagining the two of them exchange vows of "I do," I silently offered a vow of my own to bid them "two farewell."`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,

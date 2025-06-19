@@ -474,7 +474,7 @@ export default {
                             anchor: `burger shrouds`,
                             todo: REVIEW,
                             card: {
-                                description: `Thanks to my vegan friends, I became hyperaware of any byproduct of the meat industry. Even something mundane, like a fast food wrapper on the sidewalk, would serve as a reminder of how we've commoditized animal suffering as a society.`,
+                                description: `Thanks to my vegan friends, I was already hyperaware of how much our society has commoditized animal suffering. Even something mundane, like a fast food wrapper on the sidewalk, would serve as a reminder.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
