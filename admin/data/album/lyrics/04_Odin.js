@@ -19,7 +19,7 @@ import {
     IS_UNIT_DOT,
     RESPONSE,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Odin',
@@ -1119,10 +1119,9 @@ export default {
                     lyricRight: [
                         {
                             anchor: `didn't impart warmth`,
-                            todo: REST,
-                            problem: `There are two "couldn't"s in a row, which I'm not sure how to resolve. But, I also don't really notice it until I read it over a few times. So I'll mark this as low priority.`,
+                            todo: REVIEW,
                             card: {
-                                description: `But also like cellophane, Sasha couldn't reflect warmth where none was present. In other words, if I couldn't deal gracefully with the bullies, then there came a point where she'd need to keep her distance from me as well.`,
+                                description: `But also like cellophane, Sasha couldn't reflect warmth where none was present. In other words, if I wasn't able to deal gracefully with the bullies, then there came a point when she'd need to keep her distance from me as well.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },

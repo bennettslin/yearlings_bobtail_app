@@ -492,10 +492,9 @@ export default {
                         `Do you often feel like a`,
                         {
                             anchor: `wanderer lost`,
-                            todo: REST,
-                            problem: `I still think there's a completely different way to write the first sentence that makes the same point and sounds better.`,
+                            todo: REVIEW,
                             card: {
-                                description: `The letter spoke to my frustration that all my desires for acceptance should go unmet. Having hit the right nerves, it then shared hopeful news: RI Research believed I might be a Beyonder. And now, after searching for so long, they'd found me.`,
+                                description: `The letter acknowledged my yearning for acceptance, and spoke to my frustration that this basic human need should go unmet. Having hit the right nerves, it then shared good news: RI Research believed I might be a Beyonder— and now, after searching for so long, they'd found me.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -998,10 +997,16 @@ export default {
                         `The only`,
                         {
                             anchor: `spies who get to feel love`,
-                            todo: REST,
-                            problem: `I've spent too long on this already, so I'm just going to sign off on it for now. But I'm still not confidence that I've successfully explained the analogy.`,
+                            todo: REVIEW,
                             card: {
-                                description: `Since a spy's success hinges upon staying hidden, their exploits won't be known until they've been captured— at which point they'll face death by firing squad. And in my desire to join a friendly squad, I faced a similar dilemma: Not only would opening up sabotage my previous efforts to stay unresponsive, but then I'd have to explain my past behavior.`,
+                                description: [
+                                    `Since a spy's success hinges upon staying hidden, their exploits won't be known until they've been captured— at which point they'll face death by firing squad. And in my desire to join a friendly squad, I faced a similar dilemma: Yes, I`,
+                                    {
+                                        isItalic: true,
+                                        lyric: `could`,
+                                    },
+                                    `open up to my classmates, and thus sabotage all my previous efforts to stay unresponsive… but now I'd have to explain why I turned so weird in the first place.`,
+                                ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
