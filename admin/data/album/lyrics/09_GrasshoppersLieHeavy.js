@@ -238,7 +238,7 @@ export default {
                             anchor: `keys left on dumbwaiter trays`,
                             todo: REVIEW,
                             card: {
-                                description: `The students would bus their trays onto a conveyor belt that led into the dishroom. Every so often, someone would accidentally leave a personal item on their tray, prompting them to come downstairs and retrieve it. Whenever this happened, I got a kick out of it; they were always grateful, and sometimes they were cute.`,
+                                description: `The students would bus their trays onto a conveyor belt that led into the dishroom. Every so often someone would accidentally leave a personal item on their tray, prompting them to come downstairs and retrieve it. I got a kick out of it whenever this happened; they were always grateful, and sometimes they were cute.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -741,20 +741,12 @@ export default {
                         {
                             anchor: `looming shadow nears`,
                             todo: REVIEW,
-                            cards: [
-                                {
-                                    description: `There was a common path to the campus between my apartment and Sita's boarding house.`,
-                                    dotKeys: {
-                                        [BACKSTORY]: true,
-                                    },
+                            card: {
+                                description: `Sita is also heading home at this time. Having spotted me from a distance behind, she debates whether to flag me down. But once I turn to face my apartment gate, I notice her presence all the same. A few seconds awkwardly pass, with neither of us sure what to say next.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true,
                                 },
-                                {
-                                    description: `Sita is also heading home at this time. Having spotted me from a distance behind, she debates whether to flag me down. But once I turn to face my apartment gate, I notice her presence all the same. A few seconds awkwardly pass, with neither of us sure what to say next.`,
-                                    dotKeys: {
-                                        [NARRATIVE]: true,
-                                    },
-                                },
-                            ],
+                            },
                         },
                         `,`,
                     ],
@@ -782,7 +774,6 @@ export default {
                         `"Hey, you know`,
                         {
                             anchor: `you're my password`,
-                            todo: REVIEW,
                             card: {
                                 description: `As I enter the passcode for my gate, Sita breaks the ice by mentioning that a personal detail about me, which she still remembered, had served as the basis for a password she recently created.`,
                                 dotKeys: {
@@ -910,7 +901,6 @@ export default {
                         `On your bed's rumpled linens, a`,
                         {
                             anchor: `lidless Vaseline sits`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
