@@ -29,7 +29,6 @@ export default {
     mixStartTime: `0:03:11.10`,
     playerReferenceTime: 2298.378,
     playerStartTime: 2295.261,
-    todo: REVIEW,
     overview: `After a night out with friends, I'd often shuffle on to Sita's place, slip into bed beside her, and quickly doze off. But one night Sita was awake and waiting to confront me, having discovered my plans to break up with her. In tears, she returned the gold bracelet I'd given her at the start of our relationship— and then kicked me out. With nowhere to go, I wandered the streets until sunrise. And so began the first of our many breakups…`,
     isDoublespeaker: true,
     lyricUnits: [
@@ -40,7 +39,7 @@ export default {
                 todo: REVIEW,
                 card: {
                     description: [
-                        `All through that night, I ran Sita's bracelet through my fingers as I turned over the thoughts in my head. To write these lyrics, then, I drew inspiration from famous poems that dwell on a still-life object, like "`,
+                        `All through that night, I let Sita's bracelet run through my fingers as I turned over the thoughts in my head. To write these lyrics, then, I drew inspiration from famous poems that dwell on a still-life object, like "`,
                         {
                             anchor: `Ode on a Grecian Urn`,
                             wiki: `Ode_on_a_Grecian_Urn`,
@@ -50,7 +49,7 @@ export default {
                             anchor: `John Keats`,
                             wiki: `John_Keats`,
                         },
-                        `. This also gave me a working title for the song, which I then kept for lack of anything better.`,
+                        `. This also gave me a working title for the song, which I later kept for lack of anything better.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -505,7 +504,6 @@ export default {
                         `And if`,
                         {
                             anchor: `night were peeled`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Every now and then, a Robitussin flashback would cause me to trail off and stare into the distance. When a friend asked what was happening, I said it felt like`,
@@ -744,7 +742,6 @@ export default {
                         `of gathering up the`,
                         {
                             anchor: `suttee dust`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `By now, I imagine that Sita has been fully incinerated on the ashes of our failed relationship.`,

@@ -33,7 +33,6 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `In`,
@@ -67,17 +66,17 @@ export default {
                 todo: REVIEW,
                 card: {
                     description: [
-                        `Since the dog Garryowen was named after a patriotic Irish`,
+                        `Since`,
                         {
-                            anchor: `marching tune`,
-                            wiki: `Garryowen_(air)`,
+                            isItalic: true,
+                            lyric: `Ulysses`,
                         },
-                        `, I went with the feel of an`,
+                        `has everything to do with Ireland, I went with the feel of an`,
                         {
                             anchor: `Irish reel`,
                             wiki: `Reel_(dance)`,
                         },
-                        `here.`,
+                        `for this song.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -235,7 +234,7 @@ export default {
                                         anchor: `baseball T-shirts`,
                                         wiki: `Raglan_sleeve`,
                                     },
-                                    `back then, thinking this look was compatible with most subcultures, and thus would alienate the fewest women. I was also baby-faced enough to be taken for a middle schooler. Tristan, one of the punks in the thieving group, liked our ragtag look and named us the "`,
+                                    `back then, thinking such a look was compatible with the most subcultures, and thus would alienate the fewest women. I was also baby-faced enough to be taken for a middle schooler. Tristan, one of the punks in the thieving group, liked our ragtag look and named us the "`,
                                     {
                                         anchor: `Young Ones`,
                                         wiki: `The_Young_Ones_(TV_series)`,
