@@ -88,7 +88,7 @@ export default {
                                                 wiki: `Beautiful_Losers`,
                                             },
                                         },
-                                        `, the character F. tires of getting bullied at the beach. So he signs up for the Charles Axis bodybuilding course advertised in a comic book— only to discover that Charles Axis is the one who bullies him. Whenever I reflect on my own misadventures in mail order now, I'm reminded of this comical passage from an otherwise tragic story; in both cases, I can't help but laugh at the absurdity.`,
+                                        `, the character F. tires of getting bullied at the beach. So he signs up for the Charles Axis bodybuilding course advertised in a comic book— only to discover that it's Charles Axis who bullies him. It's a comical passage from an otherwise tragic story, and now I'm reminded of it whenever I reflect on my own misadventures in mail order; in each case, I can't help but smile at the absurdity.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -327,7 +327,7 @@ export default {
                             anchor: `your cape`,
                             todo: REVIEW,
                             card: {
-                                description: `In elementary school, I was well liked. Being small for my age, I was pampered even by other boys; and though I was absorbed in my sketchbooks, I was happy to draw anything for everyone who asked. But the traits that once made me a hero now marked me as easy prey in middle school, and I was ill-prepared.`,
+                                description: `In elementary school, I was well liked. Being small for my age, I was pampered even by other boys; and though I was absorbed in my sketchbooks, I was happy to draw anything for all those who asked. But the traits that once made me a lovable mascot now marked me as easy prey in middle school, and I was ill-prepared.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -492,7 +492,6 @@ export default {
                         `Do you often feel like a`,
                         {
                             anchor: `wanderer lost`,
-                            todo: REVIEW,
                             card: {
                                 description: `The letter acknowledged my yearning for acceptance, and spoke to my frustration that this basic human need should go unmet. Having hit the right nerves, it then shared good news: RI Research believed I might be a Beyonder— and now, after searching for so long, they'd found me.`,
                                 dotKeys: {
@@ -1005,7 +1004,7 @@ export default {
                                         isItalic: true,
                                         lyric: `could`,
                                     },
-                                    `open up to my classmates, and thus sabotage all my previous efforts to stay unresponsive… but now I'd have to explain why I turned so weird in the first place.`,
+                                    `open up to my classmates, and thus sabotage all my previous efforts to stay unresponsive… but then I'd have to explain why I turned so weird in the first place.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
