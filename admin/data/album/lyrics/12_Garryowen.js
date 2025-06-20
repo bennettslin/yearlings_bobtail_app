@@ -229,12 +229,12 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `I often wore`,
+                                    `I wore`,
                                     {
                                         anchor: `baseball T-shirts`,
                                         wiki: `Raglan_sleeve`,
                                     },
-                                    `back then, thinking such a look was compatible with the most subcultures, and thus would alienate the fewest women. I was also baby-faced enough to be taken for a middle schooler. Tristan, one of the punks in the thieving group, liked our ragtag look and named us the "`,
+                                    `back then, believing that such a look was compatible with the most subcultures, and thus would alienate the fewest women. I was also baby-faced enough to be taken for a middle schooler. Tristan, one of the punks in the thieving group, liked our ragtag look and named us the "`,
                                     {
                                         anchor: `Young Ones`,
                                         wiki: `The_Young_Ones_(TV_series)`,

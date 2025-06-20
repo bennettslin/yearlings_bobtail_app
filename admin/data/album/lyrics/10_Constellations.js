@@ -1026,7 +1026,7 @@ export default {
                                             anchor: `Evian`,
                                             wiki: `Evian`,
                                         },
-                                        `bottles" that we brought with us into the steam tunnels.`,
+                                        `bottles" that we brought into the steam tunnels with us.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -1327,7 +1327,7 @@ export default {
                             properNoun: true,
                             todo: REVIEW,
                             card: {
-                                description: `As "autumn" encroached, the first Americans surely sighed in relief to discover a bountiful land. And now we do the same, upon finally spotting "Adam's" headstone amid a sea of lookalikes.`,
+                                description: `With "autumn" encroaching, the first Americans surely sighed in relief to discover a bountiful land. And now we do the same, upon finally spotting "Adam's" headstone amid a sea of lookalikes.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,

@@ -159,7 +159,7 @@ export default {
                                         anchor: `Secret decoder rings`,
                                         wiki: `Secret_decoder_ring`,
                                     },
-                                    `were promotional toys in the '60s that allowed children to decipher a television program's encrypted messages. Typically, what they revealed was a preview of the next episode— so it would've been nice to wear one on a date, and be told there'd be a next.`,
+                                    `were promotional toys in the '60s that allowed children to decipher a television program's encrypted messages. Typically, what they revealed was a preview of the next episode— so it would've been nice to wear one on a date, and have it assure me that there'd be a next.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -655,7 +655,6 @@ export default {
                         `then wise up and`,
                         {
                             anchor: `learn to shotgun`,
-                            todo: REVIEW,
                             card: {
                                 description: `In time I adopted the shotgun approach to dating, which involves hitting on any and every cute person you see. It comes down to simple math: Even if your success rate remains low, you're increasing the sample size— which then improves your chances of someone saying yes to a date. And, of course, one yes is all you really need.`,
                                 dotKeys: {

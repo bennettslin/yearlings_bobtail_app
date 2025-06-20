@@ -742,7 +742,7 @@ export default {
                             anchor: `looming shadow nears`,
                             todo: REVIEW,
                             card: {
-                                description: `Sita is also heading home at this time. Having spotted me from a distance behind, she debates whether to flag me down. But once I turn to face my apartment gate, I notice her presence all the same. A few seconds awkwardly pass, with neither of us sure what to say next.`,
+                                description: `Sita is also heading home at this time. Having spotted me from a distance behind, she debates whether to flag me down— but once I turn to face my apartment gate, I notice her presence all the same. A few seconds awkwardly pass, with neither of us sure what to say next.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },

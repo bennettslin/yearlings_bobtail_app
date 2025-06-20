@@ -316,7 +316,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `When I asked Owen to recommend some good lyricists, he directed me to`,
@@ -680,7 +679,7 @@ export default {
                             anchor: `sprawled where they stood`,
                             todo: REVIEW,
                             card: {
-                                description: `And while every beatdown I suffered was a serious blow to my mental state, the bullies continued to enjoy greater happiness and social standing. There was no way around it: Nature favors its bullies. And once I came to this harsh realization… my faith as a Beyonder just couldn't survive.`,
+                                description: `Moreover, while every beatdown I suffered was a serious blow to my sanity, the bullies continued to enjoy greater happiness and social standing. There was no way around it: Nature favors its bullies. And once I came to this harsh realization… my faith as a Beyonder just couldn't survive.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
