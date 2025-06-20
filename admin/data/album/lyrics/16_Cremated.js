@@ -647,7 +647,6 @@ export default {
                         `which she swore when scarcely`,
                         {
                             anchor: `twenty-one`,
-                            todo: REVIEW,
                             card: {
                                 description: `Miriam was a few years younger than me. So she was still eager to live it up, just as I was thinking to wind it down.`,
                                 dotKeys: {
@@ -1084,7 +1083,6 @@ export default {
                         `a pop, and she`,
                         {
                             anchor: `pulls the plug`,
-                            todo: REVIEW,
                             card: {
                                 description: `The lighter plug pops out, and Miriam pulls it from the dashboard socket to light her cigarette. Having satisfied me with an orgasmic "pop," she's no longer troubled about pulling the plug on our relationship.`,
                                 dotKeys: {
@@ -1145,7 +1143,7 @@ export default {
                                         anchor: `pooper scooper`,
                                         wiki: `Pooper-scooper`,
                                     },
-                                    `while her pet takes a dump on the lawn.`,
+                                    `as her pet takes a dump on the lawn.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
