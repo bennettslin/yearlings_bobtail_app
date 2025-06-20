@@ -636,7 +636,7 @@ export default {
                                             wiki: `Moby-Dick`,
                                         },
                                     },
-                                    `is an outcast. While the former was banished to the desert, I follow the latter and wander the metaphorical dunes of the ocean.`,
+                                    `is an outcast. While the former was banished to the desert, I follow the latter to wander the metaphorical dunes of the ocean.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1121,7 +1121,7 @@ export default {
                             anchor: `didn't impart warmth`,
                             todo: REVIEW,
                             card: {
-                                description: `But also like cellophane, Sasha couldn't reflect warmth where none was present. In other words, if I wasn't able to deal gracefully with the bullies, then there came a point when she'd need to keep her distance from me as well.`,
+                                description: `But also like cellophane, Sasha couldn't reflect warmth where none was present. In other words, if I wasn't able to deal gracefully with the bullies… then there came a point when she'd need to keep her distance from me as well.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -1614,7 +1614,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `Unable to challenge my existence, I can only accept all that's still unknown. And so, like a`,
+                                        `Unable to challenge my existence, I can only accept all that's unknown. And so, like a`,
                                         {
                                             anchor: `garden gnome`,
                                             wiki: `Garden_gnome`,
@@ -1690,7 +1690,7 @@ export default {
                             isItalic: true,
                             lyric: `Yearling's Bobtail`,
                         },
-                        `wouldn't get any attention from the indie press, I moved to New York City to regain my bearings. There, Sasha and I reconnected, and we started dating. She put me on the conversion path, while I volunteered to learn Hebrew. But we didn't last. Though I tried hard to reinvent myself once more, it was no longer possible to do so while drinking heavily. Life had changed.`,
+                        `wouldn't get any attention from the indie press, I moved to New York City to regain my bearings. There, Sasha and I reconnected, and we started dating. She put me on the conversion path, while I volunteered to learn Hebrew. But… we didn't last. Though I tried hard to reinvent myself once more, it was no longer possible to do so while still drinking heavily. Life had changed.`,
                     ],
                     dotKeys: {
                         [AFTERWORD]: true,

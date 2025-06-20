@@ -67,7 +67,7 @@ export default {
                             anchor: `Beatles`,
                             wiki: `The_Beatles`,
                         },
-                        `— and to put theory into practice, I came up with the melodies and chords now pieced together here. For so long, I didn't make use of them; all I could hear was me trying too hard. But years later, I realized that this was exactly what a song about an overwrought letter to Sasha should sound like.`,
+                        `— and to put theory into practice, I came up with the melodies and chords now pieced together here. For so long, I didn't make use of them; all I could hear was the sound of me trying too hard. But years later, I realized that this was exactly what a song about an overwrought letter to Sasha called for.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -575,7 +575,6 @@ export default {
                         `who shrug when thus annoyed, yawning, "`,
                         {
                             anchor: `Boys will beat boys`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Of course, it's far more common to say that boys will "`,
