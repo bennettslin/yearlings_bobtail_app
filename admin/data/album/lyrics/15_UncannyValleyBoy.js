@@ -402,7 +402,7 @@ export default {
                                         anchor: `pen pals`,
                                         wiki: `Pen_pal`,
                                     },
-                                    `as a child, my mother didn't think anything of the random envelopes I was mailing out. But after speaking with the principal, she became suspicious, opened one of them, and found a wad of cash.`,
+                                    `as a child, my mother didn't think anything of the random envelopes I was mailing out. But after speaking with the principal, she became suspicious and opened one of them— to find a wad of cash inside.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -642,12 +642,12 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `In a classic scam known as the`,
+                                    `In a classic grift known as the`,
                                     {
                                         anchor: `shell game`,
                                         wiki: `Shell_game`,
                                     },
-                                    `, a pea is placed beneath one of three nutshells that are then shuffled in plain view. Having recognized life to be an endless series of such scams, I vowed never to get suckered again. And now, knowing that the pea gets misplaced through sleight of hand, I could even do some grifting myself…`,
+                                    `, a pea is placed beneath one of three nutshells that are then shuffled in plain view. Having come to see the world as an endless parade of grifters, I vowed never to get suckered again. And now, knowing that the pea gets misplaced through sleight of hand, I could even do some grifting myself…`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -732,7 +732,7 @@ export default {
                                         anchor: `degrading rituals`,
                                         wiki: `Hazing`,
                                     },
-                                    `to toughen them up. And having dealt with such abuse for so long, I finally conceded that I wouldn't have toughened up any other way either. But now I had no misgivings about dishing out the same to others…`,
+                                    `to toughen them up. And after dealing with such abuse for so long, I finally had to concede that— indeed— I wasn't likely to toughen up any other way. But now I had no misgivings about dishing out the same to others…`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -879,7 +879,7 @@ export default {
                             anchor: `fail your Sita`,
                             todo: REVIEW,
                             card: {
-                                description: `Modern audiences may find it disgraceful that Rama's first act, upon reuniting with Sita, was to demand proof of her chastity. And upon looking back, I feel the same about my own need to be the more sexually experienced partner. It pains me that I couldn't just be grateful for whatever had to happen first before Sita finally chose me.`,
+                                description: `Modern audiences may find it disgraceful that Rama's first act, upon reuniting with Sita, was to demand proof of her chastity. And when looking back, I feel the same about my own need to be the more sexually experienced partner. It pains me that I couldn't just be grateful for whatever had to happen first before Sita finally chose me.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -1372,7 +1372,7 @@ export default {
                             ],
                             todo: REVIEW,
                             card: {
-                                description: `My next five-year plan, like the one before, was meant to improve my fortunes through a dramatic overhaul of all I had to offer. Since it couldn't be left half-finished, there was no point in second-guessing its logic while the work was still in progress.`,
+                                description: `My next five-year plan, like the one before, was meant to improve my fortunes through a dramatic overhaul of all that I had to offer. Since it couldn't be left half-finished, there was no point in second-guessing its logic while the work was still in progress.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -1405,7 +1405,6 @@ export default {
                         lyric: [
                             {
                                 anchor: `old and subservient`,
-                                todo: REVIEW,
                                 cards: [
                                     {
                                         description: `Once in college, I finally understood how much my parents had sacrificed for me and my siblings to lead better lives than theirs. But the fact that this awareness came about through assigned coursework— rather than my own lived experiences— only added to my guilt.`,
@@ -1463,7 +1462,7 @@ export default {
                                         isItalic: true,
                                         lyric: `A Portrait of the Artist as a Young Man`,
                                     },
-                                    `is a notable example— and Joyce, of course, was my primary inspiration for creating`,
+                                    `is a notable example. And, of course, Joyce was my primary inspiration while creating`,
                                     {
                                         isItalic: true,
                                         lyric: `Bobtail`,
