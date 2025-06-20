@@ -350,7 +350,7 @@ export default {
                             anchor: `let's make a pact`,
                             todo: REVIEW,
                             card: {
-                                description: `Sita knew I'd someday come to want the same enduring love that she did. So every time we broke up, she'd make me promise to rekindle all that we once had, whenever I should pine for it once more.`,
+                                description: `Sita knew I'd someday come to want the same enduring love that she did. So every time we broke up, she'd make me promise to rekindle all that we once had, whenever I should start to pine for it.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -400,7 +400,7 @@ export default {
                                         anchor: `knight-errant`,
                                         wiki: `Knight-errant`,
                                     },
-                                    `seeks adventures to prove his chivalry, all in the name of courtly love.`,
+                                    `seeks adventure to prove his chivalry, all in the name of courtly love.`,
                                 ],
                             },
                         },
@@ -420,7 +420,7 @@ export default {
                                         isEmphasis: true,
                                         lyric: `among`,
                                     },
-                                    `the herd. Resigned to my disloyalty, Sita could only hope that her permissiveness might set her apart from all the other women I desired.`,
+                                    `it. Resigned to my disloyalty, Sita could only hope that her leniency might set her above every other woman I desired.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -516,7 +516,7 @@ export default {
                             anchor: `extra holes`,
                             todo: REVIEW,
                             card: {
-                                description: `When carved into one's belt, extra notches support a belly grown large from overfeeding; when carved on a bedpost, they tally sexual conquests.`,
+                                description: `When carved into one's belt, extra notches accommodate a belly that's grown large from overfeeding; when carved on a bedpost, they tally sexual conquests.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
