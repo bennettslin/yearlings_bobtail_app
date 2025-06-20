@@ -14,7 +14,7 @@ import {
     FORESHADOW_OF_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVISE } from '../../../containers/Annotations/constants/todos'
+import { REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'My 100,000th Dream',
@@ -220,15 +220,16 @@ export default {
                         {
                             anchor: `Pampas`,
                             properNoun: true,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
-                                        `Still wearing the traditional Mexican dress of her hostess uniform, Sita brings me to the`,
+                                        `Still wearing her work uniform— a traditional Mexican dress— Sita brings me to the grassy lowlands of the`,
                                         {
                                             anchor: `Pampas`,
                                             wiki: `Pampas`,
                                         },
-                                        `, the grassy lowlands that span the southern end of South America.`,
+                                        `, which span the southern end of South America.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -242,6 +243,7 @@ export default {
                         `where the`,
                         {
                             anchor: `gopis`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -262,7 +264,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `I don't have an explanation for what the gopis are doing in Argentina. When I wrote these lyrics, I didn't think I'd need one.`,
+                                    description: `I don't have an explanation for what the gopis are doing in Argentina. Back when I wrote these lyrics, I didn't think I'd need one.`,
                                     dotKeys: {
                                         [SONGCRAFT]: true,
                                     },
@@ -397,6 +399,7 @@ export default {
                         `My hundred thousandth dream, on the`,
                         {
                             anchor: `cliffs of El Cerrito`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The city of`,
@@ -404,7 +407,7 @@ export default {
                                         anchor: `El Cerrito`,
                                         wiki: `El_Cerrito,_California`,
                                     },
-                                    `has a sprawling hillside with hiking trails, secluded groves, and a view of the San Francisco Bay. In happier times, Sita and I found it to be ideal for a weekend outing.`,
+                                    `has a sprawling hillside with hiking trails, secluded groves, and a view of the San Francisco Bay. In happier times, Sita and I would drive down there for a weekend outing.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -464,9 +467,10 @@ export default {
                         `She'll always`,
                         {
                             anchor: `come to take me`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `I now understand that Sita is my most cherished memory. And as such, she was always going to be the one chosen by my unconscious mind to ease my fears as I part from this world.`,
+                                    description: `I now understand that Sita is my most cherished memory. And as such, she was always going to be the one chosen by my unconscious mind to accompany me when my time came.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [OBSERVATION]: true,
@@ -500,8 +504,9 @@ export default {
                     lyric: [
                         {
                             anchor: `When you'll be mine`,
+                            todo: REVIEW,
                             card: {
-                                description: `If this is only a dream, then what I'm holding onto isn't really Sita, but only a memory of her. And if all I have left is a memory, then somewhere along the way I must've lost the real Sita. So now as I exit this world, I hold onto the possibility that I may find her again in the next.`,
+                                description: `If this is only a dream, then what I'm holding onto isn't really Sita, but only a memory of her. And if all I have left is a memory, then somewhere along the way I must've lost the real Sita. As I exit this world, then, I cling to the hope that I might find her again in the next.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -556,6 +561,8 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVISE,
+                problem: `Should be more clear this was also a long-term relationship.`,
                 card: {
                     description: `In New York City I met Liz, with whom things ended no less painfully. So in making this audio webcomic, I was faced with a dilemma: I wanted to stay true to the album, given how fresh my wounds were when I'd made it— while being honest that I'd since moved on and was now hurt over a different breakup. My solution was to depict the events as a stage play, with the role of Sita played by an Indian version of Liz. The resulting character looks like neither, which should come as a relief to both.`,
                     dotKeys: {
