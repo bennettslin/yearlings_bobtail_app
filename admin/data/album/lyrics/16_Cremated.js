@@ -33,14 +33,13 @@ export default {
     playerReferenceTime: 2951.729,
     playerStartTime: 2926.829,
     todo: REVIEW,
-    overview: `While I can't deny that dating White women helped silence the nagging feeling I had of being genetically inferior, I honestly didn't seek them out. A case in point is Miriam, whom I met at a Yearlings show. She was the storybook ending that my ego had been waiting for: cute, hip, and drawn to me through no effort on my part… We lasted a few months. I always did wonder if she was slumming it with me.`,
+    overview: `While I can't deny that dating White women helped silence the nagging feeling I had of being genetically inferior, I honestly didn't seek them out. A case in point is Miriam, whom I met at a Yearlings show. She was the storybook ending my ego had been waiting for: cute, hip, and drawn to me through no effort on my part. Well… we lasted a few months. I always did wonder afterward if she was slumming it with me.`,
     isDoublespeaker: true,
     lyricUnits: [
         {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: `Once when I was a child, a playmate asked if I knew what cremation was. I didn't, but assumed it must be fun and tasty. Of course, the horrifying truth was revealed to me a moment later. I thought this was the perfect metaphor for a song about Miriam, and the seemingly innocent day trip that she'd planned in advance to end with our breakup.`,
                     dotKeys: {
@@ -266,7 +265,7 @@ export default {
                             anchor: `doublespeaker`,
                             todo: REVIEW,
                             card: {
-                                description: `Though I took pains to adopt an innocent persona, Miriam surely knew about the drunken incidents: My reputation preceded me by that point, and we had mutual friends. Still, I never offered an explanation for the discrepancy, and she never asked for one. Perhaps she just accepted it as part of the adventure?`,
+                                description: `Though I took pains to adopt an innocent persona, Miriam surely knew about the drunken incidents: My reputation preceded me by that point, and we had mutual friends. Still, I never offered an explanation for the discrepancy, and she never asked for one. I guess she just accepted it as part of the adventure.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -372,10 +371,9 @@ export default {
                     lyricLeft: [
                         {
                             anchor: `His god humming "Freebird,"`,
-                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `Affixed to the dashboard is an ornament of a Hawaiian boy in a grass skirt. As the stereo blares`,
+                                    `Affixed to the dashboard is an ornament of a Hawaiian man in a grass skirt. As the stereo blares`,
                                     {
                                         anchor: `Lynyrd Skynyrd`,
                                         wiki: `Lynyrd_Skynyrd`,
@@ -419,12 +417,12 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `Some comedy duos like`,
+                                    `Some comedy duos, like`,
                                     {
                                         anchor: `Abbott and Costello`,
                                         wiki: `Abbott_and_Costello`,
                                     },
-                                    `famously didn't get along. This enlivened the dynamic between them onstage, but it made for tense moments once the tape stopped rolling. Similarly, though Miriam enjoyed watching my two halves outwit each other, she surely wanted no part of any behind-the-scenes drama.`,
+                                    `, famously didn't get along. This enlivened the dynamic between them onstage, but it made for tense moments once the tape stopped rolling. Similarly, though Miriam enjoyed watching my two halves outwit each other, she surely wanted no part of any behind-the-scenes drama.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -450,7 +448,7 @@ export default {
                             anchor: `ponders the children`,
                             todo: REVIEW,
                             card: {
-                                description: `My mother once advised me not to have children, given the autism that runs in our genes, and her difficulties in raising my brother as a result. But by the same reasoning, no woman should want me as a life partner to begin with.`,
+                                description: `My mother once advised me not to have children, given the autism that runs in our genes, and her difficulties in raising my brother as a result. But by that reasoning, no woman should want me as a life partner to begin with— so why worry?`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -498,7 +496,6 @@ export default {
                         `born from a`,
                         {
                             anchor: `forced conversion`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Historically, conquered peoples were`,
@@ -521,7 +518,7 @@ export default {
                             anchor: `unforeskinned virgin`,
                             todo: REVIEW,
                             card: {
-                                description: `I learned long ago not to get locked into a fixed identity, which would limit the size of my dating pool. This is why I've never gotten a tattoo, I think; I needed to be a blank slab for any new woman to shape into whatever she liked. So here I imagine that, just before dating Miriam, I'd reset myself to a default state of being sexually inexperienced and having an intact foreskin.`,
+                                description: `I swore a long time ago not to settle into a fixed identity, which would limit the size of my dating pool. This is why I've never gotten a tattoo, I think; I needed to be a blank slab for any new woman to shape into whatever she liked. So here I imagine that, just before dating Miriam, I'd reset myself to a default state of being sexually inexperienced and having an intact foreskin.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -659,7 +656,6 @@ export default {
                     lyricRight: [
                         {
                             anchor: `twitching sword`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Dubbing refers to`,
@@ -683,8 +679,9 @@ export default {
                         `in care,`,
                         {
                             anchor: `he's anyone`,
+                            todo: REVIEW,
                             card: {
-                                description: `After all, it's not at all obvious to my drunken self that he's the dummy whose words and actions are being dictated by his sober half, rather than the other way around.`,
+                                description: `After all, it's not at all obvious to my drunken self that he's the dummy whose words and actions are being dictated by the sober me, rather than the other way around.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -755,7 +752,6 @@ export default {
                         `it`,
                         {
                             anchor: `hums a typo`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Like a typo, Miriam's involvement with me was a mistake she could easily correct. And like a "`,
@@ -866,7 +862,7 @@ export default {
                             anchor: `in her pool`,
                             todo: REVIEW,
                             card: {
-                                description: `Lying sedated on my deathbed, I see Miriam lounging by a swimming pool, radiant in her youthful beauty. I expend my last breath to wish her well, but she doesn't hear me… and plunges into the deep end.`,
+                                description: `Lying sedated on my deathbed, I see Miriam lounging by a swimming pool, radiant in her youthful beauty. I expend my last breath to wish her well, but she doesn't hear me and slips into the deep end.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -917,7 +913,6 @@ export default {
                         {
                             anchor: `Godspeed`,
                             properNoun: true,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `Adding to my insecurities as a child about being raised Buddhist, I also looked different from everyone else in Sasha's world. And so my inferiority complex failed to distinguish between carrying faulty genes; adhering to a faulty faith; and being of a faulty race. They all seemed to derive from a single defect at the core of my being.`,
@@ -979,7 +974,6 @@ export default {
                         `though no worse but for`,
                         {
                             anchor: `his soreness`,
-                            todo: REVIEW,
                             card: {
                                 description: `Miriam knew how sore I'd be about the breakup, so she gratified me with her most vigorous lovemaking yet. But now, with no explanation for why my penis is sore, I can only surmise that it's hard to keep up in old age.`,
                                 dotKeys: {
@@ -1032,7 +1026,7 @@ export default {
                             anchor: `cleaved horizon`,
                             todo: REVIEW,
                             card: {
-                                description: `As we make our way downhill, the horizon appears like a cleaver splitting the sky open, with the road spilling down on me like wet cement into a shallow grave.`,
+                                description: `As we make our way downhill, the horizon seems to split the sky open like a cleaver, causing the road to pour down on me like wet cement into a shallow grave.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -1067,7 +1061,7 @@ export default {
                             anchor: `Redressed`,
                             todo: REVIEW,
                             card: {
-                                description: `As I redress by pulling my pants back up, I'm about to hear the bad news, for which this latest sexual escapade was meant as redress.`,
+                                description: `As I redress by pulling up my pants, I'm about to hear the bad news for which our little escapade today was meant as redress.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -1135,7 +1129,6 @@ export default {
                         `puff,`,
                         {
                             anchor: `preparing the scoop`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Miriam searches for a way to deliver the bad news in the least messy way possible, like a pet owner clutching the`,
