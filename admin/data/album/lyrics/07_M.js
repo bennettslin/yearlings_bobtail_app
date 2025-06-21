@@ -594,17 +594,16 @@ export default {
                     lyric: [
                         {
                             anchor: `lies that marionette`,
-                            todo: REVISE,
-                            problem: `Last sentence is still weird.`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
-                                        `There was comfort in having all my priorities settled in advance by a five-year plan: Since I always knew with certainty the right course of action, I could undertake it with conviction— like a`,
+                                        `There was comfort in having a five-year plan settle all my priorities in advance: Since the right course of action was always the one most closely aligned with the plan, I could pursue it with conviction— like a`,
                                         {
                                             anchor: `marionette`,
                                             wiki: `Marionette`,
                                         },
-                                        `being guided by the hidden hand of my younger self. Of course, it was only in the belief that a "Mara I'll net" by doing so, which now proved to be a lie.`,
+                                        `being guided by the hidden hand of my younger self. Of course, I did so only in the belief that a "Mara you'll net" in return… which was now proving to be a lie.`,
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
