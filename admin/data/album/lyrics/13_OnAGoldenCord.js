@@ -880,8 +880,7 @@ export default {
                         `of this`,
                         {
                             anchor: `frayed cord detached`,
-                            todo: REST,
-                            problem: `It's fine, I think. But I spent so long nitpicking over minor changes, and going back and forth between similar versions, that I'd like to revisit this one more time.`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In antiquity, legend held that whoever could unravel the "`,
@@ -894,7 +893,7 @@ export default {
                                         anchor: `Alexander the Great`,
                                         wiki: `Alexander_the_Great`,
                                     },
-                                    `simply chopped it in half with his sword— and then set forth to fulfill the prophecy. And in my own attempts to achieve greatness, I applied the same brute force to sever the cord that tied me to Sita.`,
+                                    `simply chopped it in half with his sword— then set forth to fulfill the prophecy. And in my own attempts to achieve greatness, I applied the same brute force to sever the cord that tied me to Sita.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,

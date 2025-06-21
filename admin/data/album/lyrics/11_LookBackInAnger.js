@@ -72,8 +72,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REST,
-                problem: `I still think the second sentence can be better, but I can't see any way to improve it that wouldn't take up way more time than I've already spent.`,
+                todo: REVIEW,
                 card: {
                     description: [
                         `A fellow dishroom worker named Owen had a`,
@@ -81,7 +80,7 @@ export default {
                             anchor: `four-track cassette recorder`,
                             wiki: `Portastudio`,
                         },
-                        `, and some nights we'd go back to his place and twiddle with it. For drum tracks, Owen would arrange books and dishware on the carpet floor and then tap out these intricate rhythms, which always impressed me. So I tried my best to conjure his spirit here.`,
+                        `, and some nights we'd go back to his place and twiddle with it. For drum tracks, Owen would tap out these intricate rhythms on books and dishware arranged on the carpet, which always impressed me. So I tried my best to conjure his spirit here.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -577,10 +576,16 @@ export default {
                         `reading`,
                         {
                             anchor: `His obit not a bang`,
-                            todo: REST,
-                            problem: `Phrase is too long.`,
+                            todo: REVIEW,
                             card: {
-                                description: `But my appraisal was based on reason, not resentment. If the Christian god were the one true God, then why would he trust his message to be spread by the very tormentors of those he hoped to reach?`,
+                                description: [
+                                    `But my appraisal was based on reason, not resentment. After all, let's say`,
+                                    {
+                                        isItalic: true,
+                                        lyric: `you`,
+                                    },
+                                    `were the one true God. Would you trust your gospel to be spread by the very tormentors of those you hope to reach?`,
+                                ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

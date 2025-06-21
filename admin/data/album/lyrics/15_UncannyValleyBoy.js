@@ -794,11 +794,10 @@ export default {
                         {
                             anchor: `Rama king`,
                             properNoun: true,
-                            todo: REST,
-                            problem: `In the first card, the "subtle jab" phrase seems wordy. There might be some benefit to playing around with the order of phrases in that sentence to make it flow more smoothly.`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `My parents might be calling me a "drama" king, in a subtle jab that everything I do is an attention-seeking act.`,
+                                    description: `In a subtle jab, my parents might be calling me a "drama" king— implying that everything I do is just for attention.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true,

@@ -362,7 +362,7 @@ export default {
                     lyric: [
                         {
                             anchor: `buys your grief`,
-                            todo: REST,
+                            todo: REVIEW,
                             card: {
                                 description: `My worlds collided when I smashed a random bike one night in a drunken fit. As it turns out, the bike belonged to a scene kid who'd liked the Yearlings since our early days. He'd related so much to my songs about unfulfilled hopes; I was disgusted with myself for having disappointed him.`,
                                 dotKeys: {
