@@ -74,7 +74,7 @@ export default {
                                     anchor: `can't have both`,
                                     todo: REVIEW,
                                     card: {
-                                        description: `Back when I was looking to buy a used turntable, a friend offered this advice here— and as it turns out, what's true for vinyl records applies just as well to personal character. I couldn't have two separate selves: one to earn praise for my kindness, and the other to take the blame for all my selfish desires. A single hurtful deed corrupts everything else; I knew this now.`,
+                                        description: `Back when I was looking to buy a used turntable, a friend offered this advice here— and as it turns out, what's true for vinyl records applies just as well to personal character. I couldn't keep two separate selves: one to win praise for my kindness, and the other to take the blame for all my selfish desires. A single hurtful deed corrupts everything else; I knew this now.`,
                                         dotKeys: {
                                             [BACKSTORY]: true,
                                             [OBSERVATION]: true,

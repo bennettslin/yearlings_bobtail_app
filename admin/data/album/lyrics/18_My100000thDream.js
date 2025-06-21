@@ -224,7 +224,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `Still wearing her work uniform— a traditional Mexican dress— Sita brings me to the grassy lowlands of the`,
+                                        `Still wearing the traditional Mexican dress of her work uniform, Sita brings me to the grassy lowlands of the`,
                                         {
                                             anchor: `Pampas`,
                                             wiki: `Pampas`,
@@ -243,7 +243,6 @@ export default {
                         `where the`,
                         {
                             anchor: `gopis`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -407,7 +406,7 @@ export default {
                                         anchor: `El Cerrito`,
                                         wiki: `El_Cerrito,_California`,
                                     },
-                                    `has a sprawling hillside with hiking trails, secluded groves, and a view of the San Francisco Bay. In happier times, Sita and I would drive down there for a weekend outing.`,
+                                    `has a sprawling hillside with hiking trails, secluded groves, and a view of the San Francisco Bay. In happier times, Sita and I would sometimes drive down for a weekend outing.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -470,7 +469,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `I now understand that Sita is my most cherished memory. And as such, she was always going to be the one chosen by my unconscious mind to accompany me when my time came.`,
+                                    description: `I now understand that Sita is my most cherished memory. And as such, when my time came, she was always going to be the one chosen by my unconscious mind to escort me.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [OBSERVATION]: true,
@@ -506,7 +505,7 @@ export default {
                             anchor: `When you'll be mine`,
                             todo: REVIEW,
                             card: {
-                                description: `If this is only a dream, then what I'm holding onto isn't really Sita, but only a memory of her. And if all I have left is a memory, then somewhere along the way I must've lost the real Sita. As I exit this world, then, I cling to the hope that I might find her again in the next.`,
+                                description: `If this is just a dream, then what I'm holding onto isn't really Sita, but only a memory of her. And if all I have left is a memory, then somewhere along the way I must've lost the real Sita. As I exit this world, then, I cling to the hope that I might find her again in the next.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
