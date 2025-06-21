@@ -35,7 +35,7 @@ export default {
     playerReferenceTime: 3094.348,
     playerStartTime: 3091.413,
     todo: REVIEW,
-    overview: `Having committed to writing and recording every song on my next album, I'd been burning bridges with my bandmates for some time. Since we'd stopped playing shows as a result, I had few opportunities to meet women after Miriam left me. But worst of all, Sita had fallen in love with someone else; I wasn't to win her back, ever again. All I had now was myself— and I didn't like myself much at all. I desperately wanted to be a good person once more, but I had no idea how.`,
+    overview: `Having committed to writing and recording every song on my next album, I began to distance myself from the local scene— which included hanging out with my bandmates. Since we stopped playing shows as a result, I had few opportunities to meet women after Miriam left me. But now, Sita had fallen in love with someone else; I wasn't to win her back, ever again. All I had left was myself— and I didn't like myself much at all. So I desperately wanted to be a good person once more; I just had no idea how.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -74,7 +74,7 @@ export default {
                                     anchor: `can't have both`,
                                     todo: REVIEW,
                                     card: {
-                                        description: `Back when I was looking to buy a used turntable, a friend offered the advice heard here— and as it turns out, what's true for vinyl records applies just as well to personal character. I couldn't have two selves— one to earn praise for my kindness, and the other to take the blame for my selfish desires. A single hurtful deed corrupts everything else; I knew this now.`,
+                                        description: `Back when I was looking to buy a used turntable, a friend offered this advice here— and as it turns out, what's true for vinyl records applies just as well to personal character. I couldn't have two separate selves: one to earn praise for my kindness, and the other to take the blame for all my selfish desires. A single hurtful deed corrupts everything else; I knew this now.`,
                                         dotKeys: {
                                             [BACKSTORY]: true,
                                             [OBSERVATION]: true,
@@ -91,7 +91,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: REVIEW,
                 card: {
-                    description: `The previous song offered a glimpse of me in my final hours, lying in hospice and listening to old records. The crackle of a needle on vinyl now introduces the third and final song of the medley.`,
+                    description: `The previous song offered a glimpse of me in my final hours, lying in hospice and listening to old records. The crackle of a needle on vinyl now introduces the third and final song of this medley.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
@@ -110,7 +110,6 @@ export default {
                         {
                             anchor: `Odin`,
                             properNoun: true,
-                            todo: REVIEW,
                             card: {
                                 description: `As a child, I didn't pay much attention to Odin; he seemed to just come with the house. So when Sita and I adopted a cat together, I was surprised by how naturally the instinct to nurture a pet came to me. Years later, as my failure to nurture the relationship with Sita led to our final breakup, I thought of Odin often.`,
                                 dotKeys: {
@@ -181,7 +180,6 @@ export default {
                         },
                         {
                             anchor: `from our chest`,
-                            todo: REVIEW,
                             card: {
                                 description: `In the Book of Genesis, God took one of Adam's ribs and gave life to Eve. By contrast, my own promise to give of myself proved to be false— a false rib, if you will— since Sita could never feel truly alive with me, even as she felt unworthy to begin life anew with someone else.`,
                                 dotKeys: {
@@ -260,7 +258,7 @@ export default {
                             anchor: `first pets`,
                             todo: REVIEW,
                             card: {
-                                description: `It blew my mind that I could hurt Sita for so long and still live with myself. In hindsight, I just never questioned the facade of sanity she'd constructed as a means to cope. I'd allowed myself to believe that our periodic moments of intimacy, which she clung to and cherished, were all that was needed to heal all wounds and wipe the slate clean.`,
+                                description: `It blew my mind that I could hurt Sita for so long and still live with myself. In hindsight, I just never questioned the facade of sanity she'd constructed as a means to cope. I'd allowed myself to believe that our periodic moments of intimacy, which she clung to and cherished, were all that was needed to heal any wound and wipe the slate clean.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -330,7 +328,6 @@ export default {
                                 {
                                     anchor: `Big Crunch`,
                                     properNoun: true,
-                                    todo: REVIEW,
                                     card: {
                                         description: [
                                             `The`,
@@ -377,7 +374,6 @@ export default {
                                 `. Because, if we can't ever be`,
                                 {
                                     anchor: `known to be dead`,
-                                    todo: REVIEW,
                                     card: {
                                         description: `I liked the idea that if something greater than ourselves is unable to observe us, then some part of us must always live on— just like Schrödinger's abused cat.`,
                                         dotKeys: {
@@ -393,7 +389,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: `Sasha recited these lines for me over the phone. We tried several takes because she found it hard to portray them as snippets of actual conversation. I had to admit that I didn't write them with that concern in mind.`,
                     dotKeys: {
@@ -474,7 +469,7 @@ export default {
                             anchor: `burger shrouds`,
                             todo: REVIEW,
                             card: {
-                                description: `Thanks to my vegan friends, I was already hyperaware of how much our society has commoditized animal suffering. Even something mundane, like a fast food wrapper on the sidewalk, would serve as a reminder.`,
+                                description: `Thanks to my vegan friends, I was already hyperaware of how much our society has commoditized animal suffering. So even something mundane, like a fast food wrapper on the sidewalk, would serve to remind me.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -493,12 +488,12 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `Having played shows for years, I've seen how an audience gets whipped into a single-minded frenzy. But with that world now drifting away, I puzzle over what drew me to those crowds, and why I once longed to be adored by them. I question everything I've valued up to this point, like a reformed`,
+                                    `Having played shows for years, I've seen how an audience gets whipped into a single-minded frenzy. But with that world now drifting away, I puzzle over what drew me to those crowds, and why I ever longed to be adored by them. I question everything I've valued up to this point, like a reformed`,
                                     {
                                         anchor: `Hitler Youth`,
                                         wiki: `Hitler_Youth`,
                                     },
-                                    `who's now aghast at all the things he cheered for at the`,
+                                    `who's now aghast at all the things he once cheered for at the`,
                                     {
                                         anchor: `Nuremberg Rallies`,
                                         wiki: `Nuremberg_Rally`,
@@ -541,7 +536,6 @@ export default {
                     lyric: [
                         {
                             anchor: `reversing his stomach`,
-                            todo: REVIEW,
                             card: {
                                 description: `It seemed so vulgar that anything should have to suffer and die just to satisfy my hunger. And once I came to that conclusion, I literally couldn't stomach the taste of meat.`,
                                 dotKeys: {
@@ -609,7 +603,6 @@ export default {
                         `and to be`,
                         {
                             anchor: `good again`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Upon becoming a vegan, I joined`,
@@ -646,7 +639,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: REVIEW,
                 card: {
-                    description: `When Sita and I first met, she asked to hear my music. I'd just bought a multi-effects processor and played around with it, so I gave her a copy of those recordings. She really liked one in which I'd pitch-shifted my vocals an octave up, so I made it the basis for the second half of this song.`,
+                    description: `When Sita and I first met, she asked to hear my music. I'd just bought a multi-effects processor, so I gave her a copy of my recordings from playing around with it. She really liked one in which I'd pitch-shifted my vocals an octave up, so I made it the basis for the second half of this song.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGCRAFT]: true,
@@ -683,7 +676,6 @@ export default {
                         `Someday you'll breathe again; for one,`,
                         {
                             anchor: `you have to`,
-                            todo: REVIEW,
                             card: {
                                 description: `Overcome with jealousy and heartbreak, I had no excuse to complain; I'd caused Sita this same torment countless times. So in our last phone conversation, I just asked her meekly how she'd managed it. She replied that she didn't know. There were days when she didn't want to live— yet each day would pass all the same. Then gradually, days added up to weeks, and weeks turned into months, until the excruciating pain subsided into an aching sadness.`,
                                 dotKeys: {
@@ -766,7 +758,7 @@ export default {
                                             anchor: `subatomic particles`,
                                             wiki: `Subatomic_particle`,
                                         },
-                                        `that make up our bodies. With this thought wandering through my head, I then wonder if we ourselves are nothing more than the wandering thoughts of the universe.`,
+                                        `that make up our bodies. With this thought wandering around my head, I then wonder if we ourselves are nothing more than the wandering thoughts of the universe.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -786,7 +778,6 @@ export default {
                         `And can we`,
                         {
                             anchor: `start as children`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `I first recorded this song on Owen's four-track. There were no lyrics yet, so for the vocal track, I just mumbled some random phrases. Since I was always hoping to write the next "`,
@@ -823,7 +814,7 @@ export default {
                                         anchor: `white dwarf`,
                                         wiki: `White_dwarf`,
                                     },
-                                    `, the superdense remnant of an aged star, I'm reminded of the dwarf`,
+                                    `— the dense remnant of an aged star— I'm reminded of the dwarf`,
                                     {
                                         anchor: `Apasmara`,
                                         wiki: `Apasmara`,
@@ -840,7 +831,6 @@ export default {
                         [
                             {
                                 anchor: `gurgling, curls up`,
-                                todo: REVIEW,
                                 cards: [
                                     {
                                         description: `With ignorance being as old as time itself, I'm comforted to know we've always corrected our mistakes; at the same time, it's dispiriting to remember that those to come have yet to make theirs. The universe never truly learns, and I'm partly to blame… I had a similar thought as a child, when I wondered whether I was the reason my brother never got better. It made me realize that all I could do was love him, and then do better for him.`,
@@ -869,7 +859,6 @@ export default {
                             // NOTE: I added an "h" to Shiva.
                             anchor: `chivalry to our Shiva's feet`,
                             properNoun: true,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -883,7 +872,7 @@ export default {
                                             anchor: `Shiva`,
                                             wiki: `Shiva`,
                                         },
-                                        `dances to destroy and rebuild the universe in an endless cycle. Crushed beneath his foot lies Apasmara, symbolizing his victory over ignorance. And having caused my own share of ignorant destruction in this universe… I now promise to rebuild it.`,
+                                        `dances to destroy and rebuild the universe in an endless cycle. Crushed beneath his foot lies Apasmara, symbolizing victory over ignorance. And having caused my own share of ignorant destruction in this universe… I now promise to rebuild it.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
