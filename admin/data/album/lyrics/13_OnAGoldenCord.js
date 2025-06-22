@@ -39,7 +39,7 @@ export default {
                 todo: REVIEW,
                 card: {
                     description: [
-                        `All through that night, I let Sita's bracelet run through my fingers as I turned over the thoughts in my head. To write these lyrics, then, I drew inspiration from famous poems that dwell on a still-life object, like "`,
+                        `All through that night, I ran Sita's bracelet through my fingers as I turned over the thoughts in my head. To write these lyrics, then, I drew inspiration from famous poems that dwell on a still-life object, like "`,
                         {
                             anchor: `Ode on a Grecian Urn`,
                             wiki: `Ode_on_a_Grecian_Urn`,
@@ -893,7 +893,7 @@ export default {
                                         anchor: `Alexander the Great`,
                                         wiki: `Alexander_the_Great`,
                                     },
-                                    `simply chopped it in half with his sword— then set forth to fulfill the prophecy. And in my own attempts to achieve greatness, I applied the same brute force to sever the cord that tied me to Sita.`,
+                                    `simply chopped it in half with his sword— before setting forth to fulfill the prophecy. And in my own attempts to achieve greatness, I applied the same brute force to sever the cord that tied me to Sita.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
