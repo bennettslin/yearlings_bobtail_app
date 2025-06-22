@@ -350,7 +350,7 @@ export default {
                             anchor: `let's make a pact`,
                             todo: REVIEW,
                             card: {
-                                description: `Sita knew I'd someday come to want the same everlasting love that she did. So every time we broke up, she'd make me promise to rekindle all that we once had, whenever I should begin to pine for it.`,
+                                description: `Sita knew I'd someday come to want the same everlasting love that she did. So every time we broke up, she'd make me promise to rekindle all that we had, whenever I should pine for it once more.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -400,7 +400,7 @@ export default {
                                         anchor: `knight-errant`,
                                         wiki: `Knight-errant`,
                                     },
-                                    `seeks adventure to prove his chivalry, all in the name of courtly love.`,
+                                    `seeks adventure in the name of courtly love.`,
                                 ],
                             },
                         },
@@ -410,7 +410,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `A keeper, in the sense of being the one who tends`,
+                                    `A keeper in the sense of being the one who tends`,
                                     {
                                         isEmphasis: true,
                                         lyric: `to`,
@@ -514,7 +514,6 @@ export default {
                         `Bursting belly told by`,
                         {
                             anchor: `extra holes`,
-                            todo: REVIEW,
                             card: {
                                 description: `When carved into one's belt, extra notches accommodate a belly that's grown large from overfeeding; when carved on a bedpost, they tally sexual conquests.`,
                                 dotKeys: {

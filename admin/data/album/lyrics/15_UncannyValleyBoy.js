@@ -85,7 +85,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: REVIEW,
                 card: {
-                    description: `I wrote the music for this song a while back after waking from a horrid nightmare. The premise seemed laughable by day's end, however, so I quietly shelved it. But years later, I realized that its gloomy chords and moody tempo changes would work well for this song, which tells of an encounter with a nightmarish version of my parents.`,
+                    description: `I wrote the music for this song a while back after waking from a horrid nightmare. The premise seemed laughable by day's end, however, so I quietly shelved it. But years later, I realized that its gloomy chords and moody tempo changes would work well for a tale about an encounter with a nightmarish version of my parents.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGCRAFT]: true,
@@ -302,7 +302,7 @@ export default {
                             anchor: `Upon purchase of a queen's ship`,
                             todo: REVIEW,
                             card: {
-                                description: `RI Research promised that I could rise above the bullies once a spaceship was funded by my payments. As a result, I learned to bide my time while building toward corrective justice— much like how "a pawn perches over queenship" as it reaches the far end of the chessboard.`,
+                                description: `RI Research promised that I'd escape the bullies once a spaceship was funded by my payments. And so began my lifelong tendency to bide my time while building toward corrective justice— much like how "a pawn perches over queenship" as it reaches the far end of the chessboard.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -368,7 +368,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `To defend against the bullies' threats, I made a point of reacting slowly— which then forced me to react slowly to anyone in general. At some point, a classmate must've thought I was huffing paint, and this is when I got called into the principal's office.`,
+                                    description: `To defend against the bullies' threats, I made a point of reacting slowly— which then required me to react slowly to anyone in general. At some point, a classmate must've thought I was huffing paint, and this is when I got called into the principal's office.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -380,7 +380,7 @@ export default {
                                             anchor: `inhalants`,
                                             wiki: `Inhalant`,
                                         },
-                                        `became the latest youth trend to trigger panic in the media.`,
+                                        `were the latest youth trend to trigger panic in the media.`,
                                     ],
                                 },
                             ],
@@ -394,7 +394,6 @@ export default {
                         `then we caught you`,
                         {
                             anchor: `stuffing twenties`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Since I had`,
@@ -651,7 +650,7 @@ export default {
                                         anchor: `shell game`,
                                         wiki: `Shell_game`,
                                     },
-                                    `, a pea is placed beneath one of three nutshells that are then shuffled in plain view. Having come to see the world as an endless parade of grifters, I vowed never to get suckered again. And now, knowing that the pea gets misplaced through sleight of hand, I could even do some grifting myself…`,
+                                    `, a pea is placed beneath one of three nutshells, which are then shuffled in plain view. Having come to see life as an endless series of such grifts, I vowed never to get suckered again. And now, knowing that the pea gets misplaced through sleight of hand, I could even do some grifting myself…`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -736,7 +735,7 @@ export default {
                                         anchor: `degrading rituals`,
                                         wiki: `Hazing`,
                                     },
-                                    `to toughen them up. And after dealing with such abuse for so long, I finally had to concede that— indeed— I wasn't likely to toughen up any other way. But now I had no misgivings about dishing out the same to others…`,
+                                    `to toughen them up. And after dealing with such abuse for so long, I finally had to concede that, indeed— I wasn't going to toughen up any other way. But now I had no misgivings about dishing out the same to others…`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -801,7 +800,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `In a subtle jab, my parents might be calling me a "drama" king— implying that everything I do is just for attention.`,
+                                    description: `In a subtle jab, my parents call me a "drama" king— thus implying that everything I do is just for attention.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true,
@@ -882,7 +881,7 @@ export default {
                             anchor: `fail your Sita`,
                             todo: REVIEW,
                             card: {
-                                description: `Modern audiences may find it disgraceful that Rama's first act, upon reuniting with Sita, was to demand proof of her chastity. And when looking back, I feel the same about my own need to be the more sexually experienced partner. It pains me that I couldn't just be grateful for whatever had to happen first before Sita finally chose me.`,
+                                description: `Modern audiences may find it disgraceful that, after Rama reunited with Sita, his first act was to demand proof of her chastity. And when looking back, I feel the same about my own need to be the more sexually experienced partner. It pains me that I couldn't just be grateful for whatever had to happen first before Sita finally chose me.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -1375,7 +1374,7 @@ export default {
                             ],
                             todo: REVIEW,
                             card: {
-                                description: `My next five-year plan, like the one before, was meant to improve my fortunes through a dramatic overhaul of all that I had to offer. Since it couldn't be left half-finished, there was no point in second-guessing its logic while the work was still in progress.`,
+                                description: `My next five-year plan, like the one before, was meant to improve my fortunes through a dramatic overhaul of all I had to offer. Since it couldn't be left half-finished, there was no point in second-guessing its logic while the work was still in progress.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -1465,7 +1464,7 @@ export default {
                                         isItalic: true,
                                         lyric: `A Portrait of the Artist as a Young Man`,
                                     },
-                                    `is a notable example. And, of course, Joyce was my primary inspiration while creating`,
+                                    `is a notable example. And Joyce, of course, was my primary inspiration for creating`,
                                     {
                                         isItalic: true,
                                         lyric: `Bobtail`,
