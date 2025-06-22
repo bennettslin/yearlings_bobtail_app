@@ -568,6 +568,10 @@ export default {
                 todo: REST,
                 problem: `It seems like there's a way to phrase this that's both more clear and less convoluted. But I've already spent long enough on it as it is.`,
                 card: {
+                    /**
+                     * NOTE: Counter-melody is mentioned earlier in Ash
+                     * Wednesday and Garryowen.
+                     */
                     description: [
                         `As silly as the original lyrics for the chorus were, I liked them enough to keep them as a vocal`,
                         {

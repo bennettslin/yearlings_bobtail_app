@@ -420,12 +420,11 @@ export default {
                             anchor: `chromatic scale`,
                             wiki: `Chromatic_scale`,
                         },
-                        `. For each maqam`,
-                        {
-                            anchor: `counter-melody`,
-                            wiki: `Counter-melody`,
-                        },
-                        `, I scored two separate parts, with the instrument in the second one detuned a quarter step. I then`,
+                        /**
+                         * NOTE: Counter-melody is mentioned later in Garryowen,
+                         * and is a wiki later in Uncanny Valley.
+                         */
+                        `. For each maqam counter-melody, I scored two separate parts, with the instrument in the second one detuned a quarter step. I then`,
                         {
                             anchor: `overdubbed`,
                             wiki: `Overdubbing`,

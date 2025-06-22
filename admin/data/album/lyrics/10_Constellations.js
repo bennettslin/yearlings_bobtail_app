@@ -1021,7 +1021,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `Robitussin requires you to stay constantly hydrated— but we've already drank all "our`,
+                                        `Robitussin requires you to stay constantly hydrated— but we've now drank all "our`,
                                         {
                                             anchor: `Evian`,
                                             wiki: `Evian`,
@@ -1325,7 +1325,6 @@ export default {
                         {
                             anchor: `Audamn's grave`,
                             properNoun: true,
-                            todo: REVIEW,
                             card: {
                                 description: `With "autumn" encroaching, the first Americans surely sighed in relief to discover a bountiful land. And now we do the same, upon finally spotting "Adam's" headstone amid a sea of lookalikes.`,
                                 dotKeys: {

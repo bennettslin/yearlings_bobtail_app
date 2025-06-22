@@ -36,7 +36,6 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `All through that night, I ran Sita's bracelet through my fingers as I turned over the thoughts in my head. To write these lyrics, then, I drew inspiration from famous poems that dwell on a still-life object, like "`,

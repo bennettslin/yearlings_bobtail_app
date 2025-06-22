@@ -16,7 +16,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REDO, REST, REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REDO, REST, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Garryowen',
@@ -63,7 +63,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `Since`,
@@ -362,9 +361,10 @@ export default {
                     lyric: [
                         {
                             anchor: `buys your grief`,
-                            todo: REVIEW,
+                            todo: REVISE,
+                            problem: `Make it more accurate about what happened.`,
                             card: {
-                                description: `My worlds collided when I smashed a random bike one night in a drunken fit. As it turns out, the bike belonged to a scene kid who'd liked the Yearlings since our early days. He'd related so much to my songs about unfulfilled hopes; I was disgusted with myself for having disappointed him.`,
+                                description: `My worlds collided when I smashed a random bike one night in a drunken fit. As it turns out, the bike belonged to a friend of a scene kid who'd liked the Yearlings since our early days. He'd related so much to my songs about unfulfilled hopes; I was disgusted with myself for having disappointed him.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -426,7 +426,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Much like I wouldn't have recognized myself wearing an "upturned collar," the angry drunk I saw in the water didn't mesh with my self-image as a wide-eyed kid who meant well. At some point, I vowed to make a clean break and start over.`,
+                                    description: `Much like I wouldn't have recognized myself wearing an "upturned collar," the angry drunk I saw in the water didn't mesh with my self-image as a wide-eyed kid who meant well. At some point, then, I vowed to make a clean break and start over.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [PUN]: true,
@@ -446,9 +446,12 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
-                    // NOTE: Counterpoint is mentioned earlier in Ash Wednesday.
+                    /**
+                     * NOTE: Counterpoint is mentioned earlier in Ash Wednesday.
+                     * Counter-melody is mentioned earlier in Ash Wednesday,
+                     * and is a wiki later in Uncanny Valley.
+                     */
                     description: [
                         `In traditional`,
                         {

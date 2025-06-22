@@ -72,7 +72,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `A fellow dishroom worker named Owen had a`,
@@ -579,12 +578,12 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `But my appraisal was based on reason, not resentment. After all, let's say`,
+                                    `But my appraisal was based on reason, not resentment. After all, if you were the one true God, would`,
                                     {
                                         isItalic: true,
                                         lyric: `you`,
                                     },
-                                    `were the one true God. Would you trust your gospel to be spread by the very tormentors of those you hope to reach?`,
+                                    `trust your gospel to be spread by the very tormentors of those you hope to reach?`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -682,7 +681,6 @@ export default {
                         `,`,
                         {
                             anchor: `sprawled where they stood`,
-                            todo: REVIEW,
                             card: {
                                 description: `Moreover, while every beatdown I suffered was a serious blow to my sanity, the bullies continued to enjoy greater happiness and social standing. There was no way around it: Nature favors its bullies. And once I came to this harsh realization… my faith as a Beyonder just couldn't survive.`,
                                 dotKeys: {
