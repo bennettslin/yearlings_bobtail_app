@@ -11,7 +11,7 @@ import {
     POSTCHORUS,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Good Night, Sita',
@@ -352,7 +352,7 @@ export default {
                         anchor: `heart of gold inside`,
                         todo: REVIEW,
                         card: {
-                            description: `Mistakes that I made on one date still offered lessons to apply toward the next. So each date felt like prying open one nesting doll to get to another, in the hope of reaching a solid one at last.`,
+                            description: `Mistakes that I made on one date still offered lessons to apply toward the next. So each date felt like prying open one nesting doll to get to another, in the hope of reaching one that might finally prove to be solid.`,
                             dotKeys: {
                                 [OBSERVATION]: true,
                             },
@@ -675,10 +675,9 @@ export default {
                         `so we'll`,
                         {
                             anchor: `breeze through our parts`,
-                            todo: REVISE,
-                            problem: `Make it more about keeping it for another date, in case it didn't work out with this one.`,
+                            todo: REVIEW,
                             card: {
-                                description: `Any time I said something witty that got a good response, I'd be sure to say it again on a future date with someone else— like an actor reprising a role. This then eased the sting of getting rejected, since the less I had to prepare, the less I felt was at stake.`,
+                                description: `Any time I said something witty that got a good response, I'd keep it in mind to use on future dates— in case things didn't work out with the present one. This then helped me to relax, since the less I needed to prepare for any single date, the less there was at stake; like a stage actor, I could recite the same lines night after night.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

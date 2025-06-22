@@ -583,7 +583,7 @@ export default {
                                         isItalic: true,
                                         lyric: `you`,
                                     },
-                                    `trust your gospel to be spread by the very tormentors of those you hope to reach?`,
+                                    `entrust the spread of your gospel to the very tormentors of those you hope to reach?`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
