@@ -658,10 +658,9 @@ export default {
                         `"So all your`,
                         {
                             anchor: `leads have left`,
-                            todo: REST,
-                            problem: `With too many sentences of the same length in a row, the writing seems stilted here as well. Is it better to say, "Each time," "And each time," or something else altogether? Should second and third sentences be joined by a semicolon?`,
+                            todo: REVIEW,
                             card: {
-                                description: `For years, my habit was to stay with Sita right up until I had another option to pursue. And each time, Sita would languish for a few months before finding the strength to contact me. Then, upon hearing that things hadn't worked out with the other woman, she would persuade me to come back. But now our situations were reversed: I had no more options coming down the pike, while Sita had fallen in love with someone else.`,
+                                description: `For years, my habit was to stay with Sita right up until I had another option to pursue. Each time, she'd languish for a few months before finding the strength to contact me; then, upon hearing that things didn't work out with the other woman, she'd persuade me to come back. But now our situations were reversed: I had no more options coming down the pike, while Sita had fallen in love with someone else.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

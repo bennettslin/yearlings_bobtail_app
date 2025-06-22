@@ -812,7 +812,6 @@ export default {
                         `But then I saw the`,
                         {
                             anchor: `world's a naked baby`,
-                            todo: REVIEW,
                             card: {
                                 description: `But at some point, I realized that a social scene isn't any different from the world at large, in that little is hidden from view. That is to say, any situation can be understood by reading everyone else's intentions and observing their actions— much like a holistic picture of the world emerges after reading books on all the important subject matters.`,
                                 dotKeys: {
@@ -882,7 +881,7 @@ export default {
                             todo: REDO,
                             problem: `Last sentence runs on.`,
                             card: {
-                                description: `The world is as unwitting as a newborn infant. So if a woman's list of ideal traits in a man includes what kind of father he'll be to her child, then she's likely to judge him by how he treats the world at large.`,
+                                description: `Moreover, the world is as unwitting as a newborn infant. So if a woman's list of ideal traits in a man includes what kind of father he'll be to her child, then she's likely to judge him by how he treats the world at large.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },

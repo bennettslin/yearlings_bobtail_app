@@ -446,8 +446,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REST,
-                problem: `I'm still not confident that this explanation is perfectly clear, but I've spent enough time on it as it is.`,
+                todo: REVIEW,
                 card: {
                     // NOTE: Counterpoint is mentioned earlier in Ash Wednesday.
                     description: [
@@ -456,7 +455,7 @@ export default {
                             anchor: `counterpoint`,
                             wiki: `Counterpoint`,
                         },
-                        `, melodies are laid one atop another, and the chord progression is simply a byproduct of the harmonies they form in sequence. But since the chord progression for this song was established first, I took the reverse approach of assigning each note in a chord to a different part, and then shaping each part's sequence of notes into an unassuming counter-melody.`,
+                        `, melodies are laid one atop another, and any chord progression is just a byproduct of the harmonies they form in sequence. But since this is a standard rock song with a fixed progression, I took the reverse approach of assigning each note in a chord to a different part, and then shaping each part's sequence of such notes into an unassuming counter-melody.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
