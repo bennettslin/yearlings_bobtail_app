@@ -16,7 +16,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REDO, REST, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REDO, REST, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Garryowen',
@@ -233,7 +233,7 @@ export default {
                                         anchor: `baseball T-shirts`,
                                         wiki: `Raglan_sleeve`,
                                     },
-                                    `back then, believing that such a look was compatible with the most subcultures, and thus would alienate the fewest women. I was also baby-faced enough to be taken for a middle schooler. Tristan, one of the punks in the thieving group, liked our ragtag look and named us the "`,
+                                    `back then, believing such a look would alienate the fewest women, since it meshed well with the most subcultures. I was also baby-faced enough to be taken for a middle schooler. Tristan, one of the punks in the thieving group, liked our ragtag look and named us the "`,
                                     {
                                         anchor: `Young Ones`,
                                         wiki: `The_Young_Ones_(TV_series)`,
@@ -361,10 +361,9 @@ export default {
                     lyric: [
                         {
                             anchor: `buys your grief`,
-                            todo: REVISE,
-                            problem: `Make it more accurate about what happened.`,
+                            todo: REVIEW,
                             card: {
-                                description: `My worlds collided when I smashed a random bike one night in a drunken fit. As it turns out, the bike belonged to a friend of a scene kid who'd liked the Yearlings since our early days. He'd related so much to my songs about unfulfilled hopes; I was disgusted with myself for having disappointed him.`,
+                                description: `My worlds collided when I smashed a random bike one night in a drunken fit. As it turns out, the bike belonged to a friend of some scene kids who'd liked the Yearlings since our early days. They'd related so much to my songs about unfulfilled hopes; I was disgusted with myself for having disappointed them.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -426,7 +425,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Much like I wouldn't have recognized myself wearing an "upturned collar," the angry drunk I saw in the water didn't mesh with my self-image as a wide-eyed kid who meant well. At some point, then, I vowed to make a clean break and start over.`,
+                                    description: `Much like I wouldn't have recognized myself wearing an "upturned collar," the angry drunk I saw in the water didn't jibe with my self-image as a wide-eyed kid who meant well. At some point, then, I vowed to make a clean break and start over.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [PUN]: true,
