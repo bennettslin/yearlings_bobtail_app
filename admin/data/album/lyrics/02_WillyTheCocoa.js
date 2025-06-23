@@ -72,7 +72,7 @@ export default {
                             anchor: `changeling`,
                             wiki: `Changeling`,
                         },
-                        `— namely, a troll in disguise who'd been left in place of a stolen human infant. So I wanted this song to sound like a merry band of trolls in revelry after pulling off such a heist. Since I figured their style would be like the swamp rock of`,
+                        `— namely, a disguised troll who'd been left in place of a stolen human infant. So I wanted this song to sound like a merry band of trolls in revelry after pulling off such a heist. Since I figured their style would be like the swamp rock of`,
                         {
                             anchor: `Creedence Clearwater Revival`,
                             wiki: `Creedence_Clearwater_Revival`,

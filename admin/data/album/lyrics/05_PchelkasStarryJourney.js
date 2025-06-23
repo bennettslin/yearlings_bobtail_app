@@ -88,7 +88,7 @@ export default {
                                                 wiki: `Beautiful_Losers`,
                                             },
                                         },
-                                        `, the character F. tires of getting bullied at the beach. So he signs up for the Charles Axis bodybuilding course advertised in a comic book— only to discover that it's Charles Axis who bullies him. It's a comical passage from an otherwise tragic story, and now I'm reminded of it whenever I reflect on my own misadventures in mail order; in each case, I can't help but smile at the absurdity.`,
+                                        `, the character F. tires of getting bullied at the beach. So he signs up for the Charles Axis bodybuilding course advertised in a comic book— only to discover that Charles Axis is the one who bullies him. It's a humorous passage from an otherwise tragic story, and I'm reminded of it whenever I reflect on my own misadventures in mail order; in each case, I can't help but smile at the absurdity.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -325,7 +325,6 @@ export default {
                         `they'll catch you by`,
                         {
                             anchor: `your cape`,
-                            todo: REVIEW,
                             card: {
                                 description: `In elementary school, I was well liked. Being small for my age, I was pampered even by other boys; and though I was absorbed in my sketchbooks, I was happy to draw anything for all those who asked. But the traits that once made me a lovable mascot now marked me as easy prey in middle school, and I was ill-prepared.`,
                                 dotKeys: {
@@ -1004,7 +1003,7 @@ export default {
                                         isItalic: true,
                                         lyric: `could`,
                                     },
-                                    `open up to my classmates, and thus sabotage all my previous efforts to stay unresponsive… but then I'd have to explain why I turned so weird in the first place.`,
+                                    `open up to my classmates, and thus sabotage all my previous efforts to stay unresponsive… but now I'd have to explain why I turned so weird in the first place.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,

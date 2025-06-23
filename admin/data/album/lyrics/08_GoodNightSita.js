@@ -677,7 +677,7 @@ export default {
                             anchor: `breeze through our parts`,
                             todo: REVIEW,
                             card: {
-                                description: `Any time I said something witty that got a good response, I'd keep it in mind to use on future dates— in case things didn't work out with the present one. This then helped me to relax, since the less I needed to prepare for any single date, the less there was at stake; like a stage actor, I could recite the same lines night after night.`,
+                                description: `Anytime I said something witty that got a good response, I'd keep it in mind to use on future dates— in case things didn't work out with the present one. This then helped me to relax, since the less I needed to prepare for any single date, the less there was at stake; like a stage actor, I could recite the same lines night after night.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

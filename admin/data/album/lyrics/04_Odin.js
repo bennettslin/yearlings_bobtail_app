@@ -615,7 +615,6 @@ export default {
                         `You seek the`,
                         {
                             anchor: `dunes once deemed a haven`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Like the Biblical`,
@@ -1119,7 +1118,6 @@ export default {
                     lyricRight: [
                         {
                             anchor: `didn't impart warmth`,
-                            todo: REVIEW,
                             card: {
                                 description: `But also like cellophane, Sasha couldn't reflect warmth where none was present. In other words, if I wasn't able to deal gracefully with the bullies… then there came a point when she'd need to keep her distance from me as well.`,
                                 dotKeys: {
@@ -1614,7 +1612,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `Unable to challenge my existence, I can only accept all that's unknown. And so, like a`,
+                                        `Unable to challenge my existence, I can only accept all that's still unknown. And so, like a`,
                                         {
                                             anchor: `garden gnome`,
                                             wiki: `Garden_gnome`,
@@ -1682,7 +1680,6 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `Once it became clear that`,

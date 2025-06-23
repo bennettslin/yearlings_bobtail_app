@@ -270,7 +270,7 @@ export default {
                             anchor: `BART`,
                             wiki: `Bay_Area_Rapid_Transit`,
                         },
-                        `trains braking in an underground tunnel, which are often heard from above through the sidewalk grates. I made the tracks by overblowing individual pitches and then splicing them together to form descending`,
+                        `trains braking in a subway tunnel, which can be heard from above through the sidewalk grates. I made the tracks by overblowing individual pitches and then splicing them together to form descending`,
                         {
                             anchor: `arpeggios`,
                             wiki: `Arpeggio`,
@@ -408,7 +408,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `Maqam is distinguished by its`,
@@ -555,7 +554,12 @@ export default {
                                             isItalic: true,
                                             lyric: `were`,
                                         },
-                                        `a Traveller, we'd be even less compatible: After all, there's no room for a homebody like me in any wandering community.`,
+                                        `a Traveller, we'd be even`,
+                                        {
+                                            isItalic: true,
+                                            lyric: `less`,
+                                        },
+                                        `compatible: After all, there's no room for a homebody like me in any wandering community.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,

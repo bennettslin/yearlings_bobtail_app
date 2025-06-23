@@ -96,7 +96,7 @@ export default {
                             todo: REDO,
                             problem: `I just don't like this as it is. So much so, that I'm calling it a full-on redo. It's too complicated. I grew distant, she groveled. That's really it.`,
                             card: {
-                                description: `Any time I began to grow distant, Sita would reach out by groveling. I'd then rush back to comfort her, stung by my conscience. But as my patience wore thin, I'd lace this comfort with passive-aggressive swipes— whereupon she'd grovel even further. It became all we knew of how to speak for ourselves.`,
+                                description: `Anytime I began to grow distant, Sita would reach out by groveling. I'd then rush back to comfort her, stung by my conscience. But as my patience wore thin, I'd lace this comfort with passive-aggressive swipes— whereupon she'd grovel even further. It became all we knew of how to speak for ourselves.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -289,7 +289,7 @@ export default {
                             anchor: `smegma crust`,
                             cards: [
                                 {
-                                    description: `Any time I stayed at the punk house, my personal hygiene would be put on hold for a few days. But even once back at Sita's place, I'd dawdle a bit before showering, since she was powerless to entice me with sex until I did.`,
+                                    description: `Anytime I stayed at the punk house, my personal hygiene would be put on hold for a few days. But even once back at Sita's place, I'd dawdle a bit before showering, since she was powerless to entice me with sex until I did.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
