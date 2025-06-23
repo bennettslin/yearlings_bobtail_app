@@ -365,7 +365,6 @@ export default {
                         `till they called,`,
                         {
                             anchor: `suspecting you of huffing`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `To defend against the bullies' threats, I made a point of reacting slowly— which then required me to react slowly to anyone in general. At some point, a classmate must've thought I was huffing paint, and this is when I got called into the principal's office.`,
@@ -879,7 +878,6 @@ export default {
                         `to watch you`,
                         {
                             anchor: `fail your Sita`,
-                            todo: REVIEW,
                             card: {
                                 description: `Modern audiences may find it disgraceful that, after Rama reunited with Sita, his first act was to demand proof of her chastity. And when looking back, I feel the same about my own need to be the more sexually experienced partner. It pains me that I couldn't just be grateful for whatever had to happen first before Sita finally chose me.`,
                                 dotKeys: {
@@ -1372,7 +1370,6 @@ export default {
                                 },
                                 `'s sake`,
                             ],
-                            todo: REVIEW,
                             card: {
                                 description: `My next five-year plan, like the one before, was meant to improve my fortunes through a dramatic overhaul of all I had to offer. Since it couldn't be left half-finished, there was no point in second-guessing its logic while the work was still in progress.`,
                                 dotKeys: {
