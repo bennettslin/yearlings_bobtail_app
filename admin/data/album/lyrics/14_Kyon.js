@@ -83,7 +83,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: `Having settled into an unhealthy power dynamic early on, Sita and I failed to grow as individuals. But the fault was entirely mine; as long as we were together, she couldn't do it on her own. And so the humming heard here is the sound of her waiting for me in quiet resignation.`,
                     dotKeys: {
@@ -349,7 +348,7 @@ export default {
                             anchor: `let's make a pact`,
                             todo: REVIEW,
                             card: {
-                                description: `Sita knew I'd someday come to want the same everlasting love that she did. So every time we broke up, she'd make me promise to rekindle all that we had, whenever I should pine for it once more.`,
+                                description: `Sita knew I'd someday come to want the same everlasting love that she did. So every time we broke up, she'd make me promise to rekindle all that we had, whenever I should long for it once more.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -391,7 +390,6 @@ export default {
                         `to parent my`,
                         {
                             anchor: `knight-errant`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In medieval romance, a`,
@@ -406,7 +404,6 @@ export default {
                         `as the sole`,
                         {
                             anchor: `keeper of his sheep herd`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `A keeper in the sense of being the one who tends`,

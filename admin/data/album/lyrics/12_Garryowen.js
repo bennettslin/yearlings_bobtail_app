@@ -233,7 +233,7 @@ export default {
                                         anchor: `baseball T-shirts`,
                                         wiki: `Raglan_sleeve`,
                                     },
-                                    `back then, believing such a look would alienate the fewest women, since it meshed well with the most subcultures. I was also baby-faced enough to be taken for a middle schooler. Tristan, one of the punks in the thieving group, liked our ragtag look and named us the "`,
+                                    `back then, believing that this look meshed well with the most subcultures, and thus would alienate the fewest women. I was also baby-faced enough to be taken for a middle schooler. Tristan, one of the punks in the thieving group, liked our ragtag look and named us the "`,
                                     {
                                         anchor: `Young Ones`,
                                         wiki: `The_Young_Ones_(TV_series)`,
@@ -619,7 +619,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `The`,

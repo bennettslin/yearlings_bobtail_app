@@ -352,7 +352,7 @@ export default {
                         anchor: `heart of gold inside`,
                         todo: REVIEW,
                         card: {
-                            description: `Mistakes I made on one date still offered lessons that could be applied to the next. So dating felt like prying open one nesting doll to get to another, in the hope of reaching one that might prove to be solid at last.`,
+                            description: `Mistakes made on one date still offered lessons that could be applied to the next. So each date was like prying open one nesting doll to get to another, in the faith that one would eventually prove to be solid.`,
                             dotKeys: {
                                 [OBSERVATION]: true,
                             },
@@ -677,7 +677,7 @@ export default {
                             anchor: `breeze through our parts`,
                             todo: REVIEW,
                             card: {
-                                description: `Anytime I said something witty that got a good response, I'd keep it in mind to use on future dates— in case things didn't work out with the present one. This then helped me to relax, since the less I needed to prepare for any single date, the less there was at stake: Like a stage actor, I could recite the same lines night after night.`,
+                                description: `Anytime I said something witty that got a good response, I'd keep it in mind to use on future dates— in case things didn't work out with the present one. This then helped me to relax, since the less I needed to prepare for any single date, the less there was at stake. Like a stage actor, I could recite the same lines night after night.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
