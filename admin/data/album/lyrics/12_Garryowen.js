@@ -619,6 +619,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
                         `The`,
@@ -626,7 +627,12 @@ export default {
                             anchor: `bagpipes`,
                             wiki: `Bagpipes`,
                         },
-                        `heard here evoke a funeral procession to mark the death of my relationship with Sita. I mimicked the sound by overdubbing multiple takes of a two-part harmony on the melodica— with one part acting as the chanter, and the other as the drone.`,
+                        `heard here evoke a funeral procession to mark the death of my relationship with Sita. I mimicked the sound by`,
+                        {
+                            anchor: `overdubbing`,
+                            wiki: `Overdubbing`,
+                        },
+                        `multiple takes of a two-part harmony on the melodica— with one part acting as the chanter, and the other as the drone.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,

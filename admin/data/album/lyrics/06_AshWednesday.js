@@ -408,6 +408,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
                         `Maqam is distinguished by its`,
@@ -424,12 +425,7 @@ export default {
                          * NOTE: Counter-melody is mentioned later in Garryowen,
                          * and is a wiki later in Uncanny Valley.
                          */
-                        `. For each maqam counter-melody, I scored two separate parts, with the instrument in the second one detuned a quarter step. I then`,
-                        {
-                            anchor: `overdubbed`,
-                            wiki: `Overdubbing`,
-                        },
-                        `the recorded takes into a single track.`,
+                        `. For each maqam counter-melody, I scored two separate parts, with the instrument in the second one detuned a quarter step. I then combined the recorded takes into a single track.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
