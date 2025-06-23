@@ -72,7 +72,6 @@ export default {
                                 `"If you're just starting out, you need to decide right now: Either you stick with quality vinyl, or you buy only the bargain bin LPs. You`,
                                 {
                                     anchor: `can't have both`,
-                                    todo: REVIEW,
                                     card: {
                                         description: `Back when I was looking to buy a used turntable, a friend offered this advice here— and as it turns out, what's true for vinyl records applies just as well to personal character. I couldn't keep two separate selves: one to win praise for my kindness, and the other to take the blame for all my selfish desires. A single hurtful deed corrupts everything else; I knew this now.`,
                                         dotKeys: {
@@ -89,7 +88,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: `The previous song offered a glimpse of me in my final hours, lying in hospice and listening to old records. The crackle of a needle on vinyl now introduces the third and final song of this medley.`,
                     dotKeys: {
@@ -256,7 +254,6 @@ export default {
                         `Well,`,
                         {
                             anchor: `first pets`,
-                            todo: REVIEW,
                             card: {
                                 description: `It blew my mind that I could hurt Sita for so long and still live with myself. In hindsight, I just never questioned the facade of sanity she'd constructed as a means to cope. I'd allowed myself to believe that our periodic moments of intimacy, which she clung to and cherished, were all that was needed to heal any wound and wipe the slate clean.`,
                                 dotKeys: {
@@ -409,7 +406,6 @@ export default {
                         `Torn straps`,
                         {
                             anchor: `unsalvaged sows`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -639,7 +635,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: REVIEW,
                 card: {
-                    description: `When Sita and I first met, she asked to hear my music. I'd just bought a multi-effects processor, so I gave her a copy of my recordings from playing around with it. She really liked one in which I'd pitch-shifted my vocals an octave up, so I made it the basis for the second half of this song.`,
+                    description: `When Sita and I first met, she asked to hear my music. I'd just bought a multi-effects processor, so I gave her a copy of some recordings I'd made from playing around with it. She really liked one in which I'd pitch-shifted my vocals an octave up, so I made it the basis for the second half of this song.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGCRAFT]: true,
@@ -658,7 +654,6 @@ export default {
                         `"So all your`,
                         {
                             anchor: `leads have left`,
-                            todo: REVIEW,
                             card: {
                                 description: `For years, my habit was to stay with Sita right up until I had another option to pursue. Each time, she'd languish for a few months before finding the strength to contact me; then, upon hearing that things didn't work out with the other woman, she'd persuade me to come back. But now our situations were reversed: I had no more options coming down the pike, while Sita had fallen in love with someone else.`,
                                 dotKeys: {
@@ -757,7 +752,7 @@ export default {
                                             anchor: `subatomic particles`,
                                             wiki: `Subatomic_particle`,
                                         },
-                                        `that make up our bodies. With this thought wandering around my head, I then wonder if we ourselves are nothing more than the wandering thoughts of the universe.`,
+                                        `that make up our bodies. With this thought wandering through my head, I then wonder if we ourselves are nothing more than the wandering thoughts of the universe.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -805,7 +800,6 @@ export default {
                         `The`,
                         {
                             anchor: `diapered white dwarf`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `As we come upon a`,
