@@ -263,7 +263,6 @@ export default {
                         `an everlasting`,
                         {
                             anchor: `doublespeaker`,
-                            todo: REVIEW,
                             card: {
                                 description: `Though I took pains to adopt an innocent persona, Miriam surely knew about the drunken incidents: My reputation preceded me by that point, and we had mutual friends. Still, I never offered an explanation for the discrepancy, and she never asked for one. I guess she just accepted it as part of the adventure.`,
                                 dotKeys: {

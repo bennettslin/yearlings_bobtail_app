@@ -17,6 +17,7 @@ import {
     FLASHBACK_TO_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Willy the Cocoa',
@@ -63,6 +64,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
                         `In the past, a disabled child was sometimes thought to be a`,
@@ -70,7 +72,7 @@ export default {
                             anchor: `changeling`,
                             wiki: `Changeling`,
                         },
-                        `— namely, a troll in disguise who'd been left in place of a stolen human infant. So I wanted this song to sound like a band of trolls celebrating after having pulled off such a heist. Since I figured their style would be like the swamp rock of`,
+                        `— namely, a troll in disguise who'd been left in place of a stolen human infant. So I wanted this song to sound like a merry band of trolls in revelry after pulling off such a heist. Since I figured their style would be like the swamp rock of`,
                         {
                             anchor: `Creedence Clearwater Revival`,
                             wiki: `Creedence_Clearwater_Revival`,
