@@ -1827,11 +1827,10 @@ export default {
                         `Then pounds`,
                         {
                             anchor: `arrhythmetic heart`,
-                            todo: REST,
-                            problem: `I've worked through so many versions of this that it still doesn't feel perfect. This is just the best working version so far. So I'd like to revisit it just to get fresh eyes on it.`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Coming down from my high, I notice that my heart stops every few seconds, which causes me to worry. So I try to count beats per minute, but unfortunately, my brain is too fried to do basic "arithmetic."`,
+                                    description: `Coming down from my high, I notice that my heart stops every few seconds. Somewhat worried, I try to count beats per minute— but unfortunately, my brain is too fried to do basic "arithmetic."`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true,

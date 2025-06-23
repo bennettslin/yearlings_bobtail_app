@@ -83,8 +83,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REST,
-                problem: `As it is, I'm less than satisfied with it because it's not clear whether "waiting" is a noun or a verb. But every other way around this problem seems to be worse, especially since "hear" and "here" are homonyms.`,
+                todo: REVIEW,
                 card: {
                     description: `Having settled into an unhealthy power dynamic early on, Sita and I failed to grow as individuals. But the fault was entirely mine; as long as we were together, she couldn't do it on her own. And so the humming heard here is the sound of her waiting for me in quiet resignation.`,
                     dotKeys: {
