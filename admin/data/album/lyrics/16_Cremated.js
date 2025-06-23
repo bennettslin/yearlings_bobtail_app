@@ -680,7 +680,7 @@ export default {
                             anchor: `he's anyone`,
                             todo: REVIEW,
                             card: {
-                                description: `After all, it's not at all obvious to my drunken self that he's the dummy whose words and actions are being dictated by the sober me, rather than the other way around.`,
+                                description: `After all, it's not at all obvious to my drunken self that he's the dummy— the one whose actions are being dictated by his other half— rather than the other way around.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
