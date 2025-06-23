@@ -236,7 +236,6 @@ export default {
                         `stalled by`,
                         {
                             anchor: `keys left on dumbwaiter trays`,
-                            todo: REVIEW,
                             card: {
                                 description: `The students would bus their trays onto a conveyor belt that led into the dishroom. Every so often someone would accidentally leave a personal item on their tray, prompting them to come downstairs and retrieve it. I got a kick out of it whenever this happened; they were always grateful, and sometimes they were cute.`,
                                 dotKeys: {
@@ -742,7 +741,7 @@ export default {
                             anchor: `looming shadow nears`,
                             todo: REVIEW,
                             card: {
-                                description: `Sita is also heading home at this time. Having spotted me from a distance behind, she debates whether to flag me down— but once I turn to face my apartment gate, I notice her presence all the same. A few seconds awkwardly pass, with neither of us sure what to say next.`,
+                                description: `Sita is also heading home at this time. Having spotted me from a distance behind, she debates whether to flag me down… but once I turn to face my apartment gate, I notice her presence all the same. A few seconds awkwardly pass, with neither of us sure what to say next.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },

@@ -1017,7 +1017,6 @@ export default {
                         {
                             anchor: `Ourevian battles spent`,
                             properNoun: true,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [

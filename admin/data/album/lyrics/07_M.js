@@ -157,7 +157,7 @@ export default {
                                         anchor: `five-year plans`,
                                         wiki: `Five-year_plans_for_the_national_economy_of_the_Soviet_Union`,
                                     },
-                                    `of the Soviet Union were centralized mandates for rapid economic growth. Five years felt like a reasonable time frame, then, to carry out my own plan for rapid character growth.`,
+                                    `of the Soviet Union were centralized mandates for rapid economic growth. Five years thus felt like a reasonable time frame to carry out my own plan for rapid character growth.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -594,7 +594,6 @@ export default {
                     lyric: [
                         {
                             anchor: `lies that marionette`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
