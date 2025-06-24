@@ -85,7 +85,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: REVIEW,
                 card: {
-                    description: `I wrote the music for this song a while back after waking from a horrid nightmare. The premise seemed laughable by day's end, however, so I quietly shelved it. But years later, I realized that its gloomy chords and moody tempo changes would work well for a tale about an encounter with a nightmarish version of my parents.`,
+                    description: `I wrote the music for this song a while back after waking from a horrid nightmare. The premise seemed laughable by day's end, however, so I quietly shelved it. Still, I always liked its gloomy chords and moody tempo changes, and years later, I decided they'd work well for this tale about an encounter with a nightmarish version of my parents.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGCRAFT]: true,
@@ -300,7 +300,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Upon purchase of a queen's ship`,
-                            todo: REVIEW,
                             card: {
                                 description: `RI Research promised that I'd escape the bullies once a spaceship was funded by my payments. And so began my lifelong tendency to bide my time while building toward corrective justice— much like how "a pawn perches over queenship" as it reaches the far end of the chessboard.`,
                                 dotKeys: {
@@ -575,7 +574,7 @@ export default {
                             anchor: `counter-melody`,
                             wiki: `Counter-melody`,
                         },
-                        `for this chorus was originally the lead melody. I left its lyrics about the nightmare as is; however silly they were, I enjoyed their surrealism. I then took the original counter-melody, which was written for guitar, and gave it to the lead vocals.`,
+                        `for this chorus was originally the lead melody. I ended up keeping its lyrics about the nightmare; as silly as they were, I liked their surrealism. I then took the original counter-melody, which was written for guitar, and gave it to the lead vocals.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -640,7 +639,6 @@ export default {
                         `you finally granted their`,
                         {
                             anchor: `nutshells are rigged`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In a classic grift known as the`,
@@ -725,7 +723,6 @@ export default {
                         `smugly prepped to`,
                         {
                             anchor: `haze the new latecomers`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Some groups put newcomers through`,
@@ -798,7 +795,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `In a subtle jab, my parents call me a "drama" king— thus implying that everything I do is just for attention.`,
+                                    description: `In a subtle jab, my parents call me a "drama" king— thus implying that everything I do is for attention.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true,
@@ -824,12 +821,12 @@ export default {
                                             anchor: `Vishnu`,
                                             wiki: `Vishnu`,
                                         },
-                                        `. It recounts his marriage to`,
+                                        `. This includes his marriage to`,
                                         {
                                             anchor: `Sita`,
                                             wiki: `Sita`,
                                         },
-                                        `, the goddess of devotion, and his battles to rescue her after she was abducted by the demon king`,
+                                        `, goddess of devotion, and his battles to rescue her after she was abducted by the demon king`,
                                         {
                                             anchor: `Ravana`,
                                             wiki: `Ravana`,
@@ -1460,12 +1457,12 @@ export default {
                                         isItalic: true,
                                         lyric: `A Portrait of the Artist as a Young Man`,
                                     },
-                                    `is a notable example. And Joyce, of course, was my primary inspiration for creating`,
+                                    `is a notable example. My conceit, of course, was that`,
                                     {
                                         isItalic: true,
                                         lyric: `Bobtail`,
                                     },
-                                    `.`,
+                                    `might one day be just as exemplary.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
