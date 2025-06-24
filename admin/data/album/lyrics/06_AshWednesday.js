@@ -370,6 +370,7 @@ export default {
                         `,"`,
                         {
                             anchor: `putting down her Joyce`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `But her compliment is less than sincere, since referencing a poet studied by middle schoolers is hardly an impressive feat. And so, annoyed at being made to put down the Joyce novel she's reading, Catherine amuses herself by putting`,
@@ -377,7 +378,7 @@ export default {
                                         isItalic: true,
                                         lyric: `me`,
                                     },
-                                    `down— for thinking I could ever be the James Joyce of lyricists.`,
+                                    `down— for thinking I could be the James Joyce of rock.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

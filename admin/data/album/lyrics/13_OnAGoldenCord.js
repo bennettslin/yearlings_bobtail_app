@@ -975,7 +975,7 @@ export default {
                             anchor: `trail of crumbs`,
                             todo: REVIEW,
                             card: {
-                                description: `But it's too late to walk back the damage done: Rather than leaving a breadcrumb trail, I've been munching all night on the rolls in my pockets. And now, having satisfied my hunger, I'm stranded and can't find my way back.`,
+                                description: `But it's too late to walk back the damage done: Rather than leave a breadcrumb trail, I've been munching all night on the rolls in my pockets. And while I've satisfied my hunger, I'm stranded now and can't find my way back.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
