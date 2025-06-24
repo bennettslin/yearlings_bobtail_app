@@ -13,7 +13,7 @@ import {
     IS_UNIT_DOT,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
-import { REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Ash Wednesday',
@@ -756,7 +756,7 @@ export default {
                                 {
                                     anchor: `Catherine vaut bien une messe`,
                                     properNoun: true,
-                                    todo: REVISE,
+                                    todo: REVIEW,
                                     problem: `"Earthly ambitions," "preceded," and "spiritual loyalties" still seems like too many big words in a row. Maybe this part can be said first, and the quote second.`,
                                     card: {
                                         description: [
@@ -764,12 +764,12 @@ export default {
                                                 anchor: `Henry IV of France`,
                                                 wiki: `Henry_IV_of_France`,
                                             },
-                                            `was born a Protestant but converted to Catholicism to gain the royal crown. He's reputed to have said, "`,
+                                            `was born a Protestant, but converted to Catholicism to gain the royal crown. He's reputed to have said, "`,
                                             {
                                                 isItalic: true,
                                                 lyric: `Paris vaut bien une messe`,
                                             },
-                                            `"— or, "Paris is well worth a Mass"— implying that his earthly ambitions came before any spiritual loyalties. Similarly, I'd have converted if that could get Catherine to stay.`,
+                                            `"— or, "Paris is well worth a Mass"— implying that his earthly ambitions came before any spiritual loyalties. Similarly, I'd have gladly converted if that could get Catherine to stay.`,
                                         ],
                                         dotKeys: {
                                             [OBSERVATION]: true,

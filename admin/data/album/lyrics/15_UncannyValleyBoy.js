@@ -563,20 +563,19 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REST,
-                problem: `It seems like there's a way to phrase this that's both more clear and less convoluted. But I've already spent long enough on it as it is.`,
+                todo: REVIEW,
                 card: {
                     /**
                      * NOTE: Counter-melody is mentioned earlier in Ash
                      * Wednesday and Garryowen.
                      */
                     description: [
-                        `As silly as the original lyrics for the chorus were, I liked them enough to keep them as a vocal`,
+                        `The`,
                         {
                             anchor: `counter-melody`,
                             wiki: `Counter-melody`,
                         },
-                        `. So I took the original counter-melody, which I'd intended to play on guitar, and gave it to the lead vocals, for which I then wrote new lyrics.`,
+                        `for this chorus was originally the lead melody. I kept its lyrics— the ones about the nightmare— as is; however silly they were, I enjoyed their surrealism. I then took the original counter-melody, which was written for guitar, and gave it to the lead vocals.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,

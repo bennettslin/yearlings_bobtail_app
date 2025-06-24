@@ -346,10 +346,9 @@ export default {
                         `till you`,
                         {
                             anchor: `learn to kick it back`,
-                            todo: REST,
-                            problem: `I'm still not sure the connection is clearly being made here that being popular or liked is the thing worth caring about. But I've already spent so long on this.`,
+                            todo: REVIEW,
                             card: {
-                                description: `The most popular kids in middle school were also the least concerned about being liked, which ran counter to my intuition that whatever I wished to achieve should be pursued wholeheartedly. And yet, trying things their way didn't make me any more likable…`,
+                                description: `The most popular kids in middle school seemed to put the least effort into being liked, which ran counter to the one life lesson I'd learned thus far— namely, that whatever I desire must be pursued wholeheartedly. Yet trying things their way didn't make me any more likable either…`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

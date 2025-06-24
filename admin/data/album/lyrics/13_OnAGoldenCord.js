@@ -973,10 +973,9 @@ export default {
                         `by`,
                         {
                             anchor: `trail of crumbs`,
-                            todo: REST,
-                            problem: `An earlier version explicitly stated that being stranded is a metaphor for the breakup itself. Is it fine to simply leave it implied?`,
+                            todo: REVIEW,
                             card: {
-                                description: `But it's too late to walk back the damage done: All night I've been munching on the rolls in my pockets instead of dropping a breadcrumb trail. And now, having satisfied my hunger, I'm stranded and can't find my way back.`,
+                                description: `But it's too late to walk back the damage done: Rather than leaving a breadcrumb trail, I've been munching all night on the rolls in my pockets. And now, having satisfied my hunger, I'm stranded and can't find my way back.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
