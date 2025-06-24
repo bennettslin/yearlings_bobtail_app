@@ -575,7 +575,7 @@ export default {
                             anchor: `counter-melody`,
                             wiki: `Counter-melody`,
                         },
-                        `for this chorus was originally the lead melody. I kept its lyrics— the ones about the nightmare— as is; however silly they were, I enjoyed their surrealism. I then took the original counter-melody, which was written for guitar, and gave it to the lead vocals.`,
+                        `for this chorus was originally the lead melody. I kept its lyrics about the nightmare intact; as silly as they were, I enjoyed their surrealism. I then took the original counter-melody, which was written for guitar, and gave it to the lead vocals.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -733,7 +733,7 @@ export default {
                                         anchor: `degrading rituals`,
                                         wiki: `Hazing`,
                                     },
-                                    `to toughen them up. And after dealing with such abuse for so long, I finally had to concede that, indeed— I wasn't going to toughen up any other way. But now I had no misgivings about dishing out the same to others…`,
+                                    `to toughen them up. And after dealing with such abuse for so long, I finally had to concede that, indeed— I wasn't likely to toughen up any other way. But now I had no misgivings about dishing out the same to others…`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
