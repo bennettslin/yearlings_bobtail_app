@@ -360,7 +360,6 @@ export default {
                     lyric: [
                         {
                             anchor: `buys your grief`,
-                            todo: REVIEW,
                             card: {
                                 description: `My worlds collided when I smashed a random bike one night in a drunken fit. As it turns out, the bike belonged to a friend of some scene kids who'd liked the Yearlings since our early days. They'd related so much to my songs about unfulfilled hopes; I was disgusted with myself for having disappointed them.`,
                                 dotKeys: {
@@ -421,7 +420,6 @@ export default {
                         `with`,
                         {
                             anchor: `choler turned up`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `Much like I wouldn't have recognized myself wearing an "upturned collar," the angry drunk I saw in the water didn't jibe with my self-image as a wide-eyed kid who meant well. At some point, then, I vowed to make a clean break and start over.`,

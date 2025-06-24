@@ -921,7 +921,7 @@ export default {
                         {
                             anchor: `dummy steering wheel`,
                             card: {
-                                description: `Like a child clutching the passenger steering wheel in a twin go-kart, I naively hold onto the hope of guiding this date in a direction to my liking.`,
+                                description: `Like a child clutching the passenger steering wheel in a twin go-kart, I naively hold on to the hope of guiding this date in a direction to my liking.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,

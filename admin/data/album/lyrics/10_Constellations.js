@@ -1829,7 +1829,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Coming down from my high, I notice that my heart stops every few seconds. Somewhat worried, I try to count beats per minute— but unfortunately, my brain is too fried to do basic "arithmetic."`,
+                                    description: `Coming down from my high, I notice that my heart stops every few seconds, which somewhat concerns me. So I try to count beats per minute, but unfortunately, my brain is too fried to do basic "arithmetic."`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true,

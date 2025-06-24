@@ -887,12 +887,12 @@ export default {
                                         anchor: `Gordian Knot`,
                                         wiki: `Gordian_Knot`,
                                     },
-                                    `" would rule all of Asia.`,
+                                    `" would rule all of Asia. After chopping it in half with his sword,`,
                                     {
                                         anchor: `Alexander the Great`,
                                         wiki: `Alexander_the_Great`,
                                     },
-                                    `simply chopped it in half with his sword— and then set forth to fulfill the prophecy. Thus, in my own attempt to achieve greatness, I applied the same brute force to sever the cord that tied me to Sita.`,
+                                    `then went on to fulfill the prophecy. And thus, in hoping to achieve such greatness myself, I applied the same brute force to sever the cord that tied me to Sita.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -975,7 +975,7 @@ export default {
                             anchor: `trail of crumbs`,
                             todo: REVIEW,
                             card: {
-                                description: `But it's too late to walk back the damage done: Rather than leave a breadcrumb trail, I've been munching all night on the rolls in my pockets. And while I've satisfied my hunger, I'm stranded now and can't find my way back.`,
+                                description: `But it's too late to walk back the damage done: Instead of leaving a breadcrumb trail, I've been munching all night on the rolls in my pockets. And now, having satisfied my hunger, I'm stranded and can't find my way back.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
