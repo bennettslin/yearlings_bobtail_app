@@ -17,7 +17,7 @@ import {
     SOLO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Grasshoppers Lie Heavy',
@@ -28,9 +28,8 @@ export default {
     referenceDescription: `"L." in anacrusis`,
     mixStartTime: `0:01:29.52`,
     playerStartTime: 1478.233,
-    todo: REST,
-    problem: `The way the third sentence is phrased still feels kind of clunky, which disrupts the way it flows from the second. I've already spent a long time on this one, though.`,
-    overview: `I worked my way through college washing dishes in a cafeteria on campus, which is how I met Sita. After I scared her off, we didn't speak for months; but then she reached out again, and we became friends. So as I got off to a rocky start with playing live shows, and as I struggled with dating other women, Sita was there to lend her moral support— though a part of me still hoped for something more. A year later… she began to like me back.`,
+    todo: REVIEW,
+    overview: `I worked my way through college washing dishes in a cafeteria on campus, which is how I met Sita. After I scared her off, we didn't speak for months— but then she reached out again, and we slowly became friends. Her moral support was invaluable as I got off to a rocky start with playing onstage, and even as I continued to struggle with dating other women; still, a part of me never stopped hoping for something more. A year later… she began to like me back.`,
     isDoublespeaker: true,
     lyricUnits: [
         {
