@@ -861,7 +861,7 @@ export default {
                             anchor: `in her pool`,
                             todo: REVIEW,
                             card: {
-                                description: `Lying sedated on my deathbed, I see Miriam lounging by a swimming pool, radiant in her youthful beauty. I expend my last breath to wish her well, but she doesn't hear me and slips into the deep end.`,
+                                description: `Lying sedated on my deathbed, I see Miriam lounging by a swimming pool. I expend my last breath to wish her well, but she doesn't hear me and slips into the deep end.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -1025,7 +1025,7 @@ export default {
                             anchor: `cleaved horizon`,
                             todo: REVIEW,
                             card: {
-                                description: `As we make our way downhill, the horizon seems to split the sky open like a cleaver, causing the road to pour down on me like wet cement into a shallow grave.`,
+                                description: `As we make our way downhill, the horizon seems to split the sky open like a cleaver, pouring the road down on me like wet cement into a shallow grave.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
