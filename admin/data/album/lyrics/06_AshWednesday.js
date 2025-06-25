@@ -257,7 +257,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `The shrieking`,
@@ -378,7 +377,7 @@ export default {
                                         isItalic: true,
                                         lyric: `me`,
                                     },
-                                    `down— for thinking I could be the James Joyce of rock.`,
+                                    `down— for thinking I could ever be the James Joyce of lyricists.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -560,7 +559,7 @@ export default {
                                             isItalic: true,
                                             lyric: `less`,
                                         },
-                                        `compatible: After all, there's no room for a homebody like me in any wandering community.`,
+                                        `compatible: After all, there's no room for a homebody like me in any roving community.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -758,19 +757,18 @@ export default {
                                     anchor: `Catherine vaut bien une messe`,
                                     properNoun: true,
                                     todo: REVIEW,
-                                    problem: `"Earthly ambitions," "preceded," and "spiritual loyalties" still seems like too many big words in a row. Maybe this part can be said first, and the quote second.`,
                                     card: {
                                         description: [
                                             {
                                                 anchor: `Henry IV of France`,
                                                 wiki: `Henry_IV_of_France`,
                                             },
-                                            `was born a Protestant, but converted to Catholicism to gain the royal crown. He's reputed to have said, "`,
+                                            `was born a Protestant, but became a Catholic to secure the royal crown. He's reputed to have said, "`,
                                             {
                                                 isItalic: true,
                                                 lyric: `Paris vaut bien une messe`,
                                             },
-                                            `"— or, "Paris is well worth a Mass"— implying that his earthly ambitions came before any spiritual loyalties. Similarly, I'd have gladly converted if that could get Catherine to stay.`,
+                                            `"— that is, "Paris is well worth a Mass"— thus implying that his earthly ambitions preceded any spiritual loyalties. Similarly, I'd have gladly converted if that could get Catherine to stay.`,
                                         ],
                                         dotKeys: {
                                             [OBSERVATION]: true,

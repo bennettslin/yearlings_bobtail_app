@@ -466,8 +466,9 @@ export default {
                         `Her`,
                         {
                             anchor: `show played in mimes`,
+                            todo: REVIEW,
                             card: {
-                                description: `The world of dating was awash in silent cues that, as far as I knew, no one could be expected to deduce on their own. So I desperately wanted everything to be spelled out, and it baffled me to be alone in feeling this way.`,
+                                description: `The world of dating was awash in silent cues that, as far as I knew, no one could be expected to deduce on their own. So I desperately wanted everything to be put into words, and it baffled me to be alone in feeling this way.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -739,7 +740,6 @@ export default {
                         `Your gate code punched, when a`,
                         {
                             anchor: `looming shadow nears`,
-                            todo: REVIEW,
                             card: {
                                 description: `Sita is also heading home at this time. Having spotted me from a distance behind, she debates whether to flag me down… but once I turn to face my apartment gate, I notice her presence all the same. A few seconds awkwardly pass, with neither of us sure what to say next.`,
                                 dotKeys: {
@@ -928,7 +928,6 @@ export default {
                         `"Shall I leave you," she says, "`,
                         {
                             anchor: `here to Philip Dick`,
-                            todo: REVIEW,
                             card: {
                                 description: `Or else, to "feel up dick." Sita lightens the awkwardness by joking that I might prefer to continue masturbating alone. At the same time, she gently jabs at the bookish persona I've painstakingly crafted.`,
                                 dotKeys: {

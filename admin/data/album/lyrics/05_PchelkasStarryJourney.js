@@ -88,7 +88,7 @@ export default {
                                                 wiki: `Beautiful_Losers`,
                                             },
                                         },
-                                        `, the character F. tires of getting bullied at the beach. So he signs up for the Charles Axis bodybuilding course advertised in a comic book— only to discover that Charles Axis is the one who bullies him. It's a humorous passage from an otherwise tragic story, and I'm reminded of it whenever I reflect on my own misadventures in mail order; in each case, I can't help but smile at the absurdity.`,
+                                        `, the character F. tires of getting bullied at the beach. So he signs up for the Charles Axis bodybuilding course advertised in a comic book— only to discover that Charles Axis is the one who bullies him. It's such a comical passage from an otherwise tragic story, and I'm reminded of it whenever I reflect on my own misadventures in mail order; in each case, I can't help but smile at the absurdity.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -994,7 +994,6 @@ export default {
                         `The only`,
                         {
                             anchor: `spies who get to feel love`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Since a spy's success hinges upon staying hidden, their exploits won't be known until they've been captured— at which point they'll face death by firing squad. And in my desire to join a friendly squad, I faced a similar dilemma: Yes, I`,

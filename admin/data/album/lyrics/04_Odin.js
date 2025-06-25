@@ -19,7 +19,6 @@ import {
     IS_UNIT_DOT,
     RESPONSE,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Odin',
@@ -1608,7 +1607,6 @@ export default {
                         `past a`,
                         {
                             anchor: `guileless garden gnome`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
