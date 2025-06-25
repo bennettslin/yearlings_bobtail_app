@@ -348,7 +348,7 @@ export default {
                             anchor: `let's make a pact`,
                             todo: REVIEW,
                             card: {
-                                description: `Sita knew I'd someday want the same everlasting love that she did. So every time we broke up, she'd make me promise to rekindle all that we had, whenever I should begin to pine for it.`,
+                                description: `Sita knew I'd someday want the same everlasting love that she did. So every time we broke up, she'd make me promise to rekindle all that we had, whenever I should long for it once more.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

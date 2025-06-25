@@ -882,17 +882,17 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `In antiquity, legend held that whoever could unravel the "`,
+                                    `Greek legend once held that whoever could unravel the "`,
                                     {
                                         anchor: `Gordian Knot`,
                                         wiki: `Gordian_Knot`,
                                     },
-                                    `" would rule all of Asia. After chopping it in half with his sword,`,
+                                    `" would rule all of Asia. Well,`,
                                     {
                                         anchor: `Alexander the Great`,
                                         wiki: `Alexander_the_Great`,
                                     },
-                                    `then went on to fulfill the prophecy. And thus, in hoping to achieve such greatness myself, I applied the same brute force to sever the cord that tied me to Sita.`,
+                                    `simply chopped it in half with his sword… and then went on to fulfill the prophecy. In hoping to achieve such greatness myself, then, I applied the same brute force to sever the cord that tied me to Sita.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -973,7 +973,6 @@ export default {
                         `by`,
                         {
                             anchor: `trail of crumbs`,
-                            todo: REVIEW,
                             card: {
                                 description: `But it's too late to walk back the damage done: Instead of leaving a breadcrumb trail, I've been munching all night on the rolls in my pockets. And now, having satisfied my hunger, I'm stranded and can't find my way back.`,
                                 dotKeys: {

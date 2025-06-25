@@ -577,14 +577,7 @@ export default {
                             anchor: `His obit not a bang`,
                             todo: REVIEW,
                             card: {
-                                description: [
-                                    `But my appraisal was based on reason, not resentment. After all, if you were an almighty god with a gospel to spread, would`,
-                                    {
-                                        isItalic: true,
-                                        lyric: `you`,
-                                    },
-                                    `assign this task to the very tormentors of those you hope to reach?`,
-                                ],
+                                description: `But my appraisal was based on reason, not resentment. After all, if the one true God has a gospel to spread, why would he assign this job to the very tormentors of those he hopes to reach?`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -712,7 +705,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `As opportunities for social advancement now opened up for me, I could look back and sympathize with the bullies by putting myself in their shoes. After all, in a world that roots for the strong, who`,
+                                    `As opportunities for social advancement opened up for me, I could look back and sympathize with the bullies by putting myself in their shoes. After all, in a world that roots for the strong, who`,
                                     {
                                         isItalic: true,
                                         lyric: `wouldn't`,

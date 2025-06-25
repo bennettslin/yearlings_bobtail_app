@@ -228,17 +228,17 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `I wore`,
+                                    `On top of being baby-faced enough to be mistaken for a high schooler, I often wore`,
                                     {
                                         anchor: `baseball T-shirts`,
                                         wiki: `Raglan_sleeve`,
                                     },
-                                    `back then, believing that this look meshed well with the most subcultures, and thus would alienate the fewest women. I was also baby-faced enough to be taken for a middle schooler. Tristan, one of the punks in the thieving group, liked our ragtag look and named us the "`,
+                                    `back then. It was the one style that could attract both the scene kids I crushed on, and the college students I had better chances with. Tristan, one of the punks in the thieving group, liked our ragtag look and named us the "`,
                                     {
                                         anchor: `Young Ones`,
                                         wiki: `The_Young_Ones_(TV_series)`,
                                     },
-                                    `." He was clearly our Vyvyan; I'm not sure which of the other characters he saw me as.`,
+                                    `." He was clearly our Vyvyan; I'm not sure which other character he saw me as.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -249,7 +249,7 @@ export default {
                             anchor: `bustin' cars with fists`,
                             todo: REVIEW,
                             card: {
-                                description: `Tristan was particularly hotheaded when drunk. One night after starting a fight and getting us kicked out of a party, he challenged us to see who could punch a random car window and break the glass first. I didn't win.`,
+                                description: `Tristan was particularly hotheaded when drunk. One night after starting a fight at a party and getting us kicked out, he challenged us to see who could punch a random car window and break the glass first. I didn't win.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
