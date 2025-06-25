@@ -32,8 +32,8 @@ const TodoCounter = ({ areDoneTodosHidden }) => {
         >
             {
                 areDoneTodosHidden ?
-                    `redo: ${redosCount} / revise: ${revisionsCount} / review: ${reviewsCount} / total: ${totalTodosCount}` :
-                    `rest: ${restsCount} / total: ${totalCount}`
+                    `rest: ${restsCount} / redo: ${redosCount} / revise: ${revisionsCount} / review: ${reviewsCount} / total: ${totalTodosCount}` :
+                    `total: ${totalCount}`
             }
         </div>
     )

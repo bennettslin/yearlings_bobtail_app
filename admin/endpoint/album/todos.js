@@ -18,7 +18,7 @@ export const getHasOverviewTodo = (songIndex, key) => {
     return (
         key ?
             overviewTodo === key :
-            Boolean(overviewTodo && overviewTodo !== REST)
+            Boolean(overviewTodo) // && overviewTodo !== REST
     )
 }
 
@@ -35,7 +35,7 @@ export const getAnnotationTodo = (songIndex, annotationIndex) => {
 
 export const getIsAnnotationTodoShown = (songIndex, annotationIndex) => {
     const todo = getAnnotationTodo(songIndex, annotationIndex)
-    return Boolean(todo) && todo !== REST
+    return Boolean(todo) // && todo !== REST
 }
 
 const _getAnnotationTodosCountForSong = (songIndex, key) => {
@@ -44,7 +44,7 @@ const _getAnnotationTodosCountForSong = (songIndex, key) => {
         count + (
             key ?
                 todo === key :
-                Boolean(todo) && todo !== REST
+                Boolean(todo) // && todo !== REST
         )
     ), 0)
 }
@@ -132,7 +132,7 @@ export const getShownAnnotationIndices = ({
         return (
             // Only show annotations left todo.
             !areDoneTodosHidden || (
-                annotationTodo && annotationTodo !== REST
+                annotationTodo // && annotationTodo !== REST
             )
         )
     })
