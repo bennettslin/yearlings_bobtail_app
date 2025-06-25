@@ -709,6 +709,7 @@ export default {
                         `weren't they`,
                         {
                             anchor: `right to take what's theirs`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `As opportunities for social advancement now opened up for me, I could look back and sympathize with the bullies by putting myself in their shoes. After all, in a world that roots for the strong, who`,
@@ -716,7 +717,7 @@ export default {
                                         isItalic: true,
                                         lyric: `wouldn't`,
                                     },
-                                    `accept every means available to avoid being weak?`,
+                                    `pursue every means available to avoid being weak?`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
