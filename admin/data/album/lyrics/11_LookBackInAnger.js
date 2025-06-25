@@ -16,7 +16,7 @@ import {
     FORESHADOW_OF_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REDO, REST, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REDO, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Look Back in Anger',
@@ -642,10 +642,9 @@ export default {
                         `and thus secure,`,
                         {
                             anchor: `must turn the cheek`,
-                            todo: REST,
-                            problem: `Does the part about my exalted place in the universe come out of nowhere? Maybe phrase it more in line with what's actually said elsewhere? Still, tabling this for now, as I've already spent too long on it relative to what it's worth.`,
+                            todo: REVIEW,
                             card: {
-                                description: `The letters from RI Research instructed me not to confront my tormentors. Instead, I was to take my abuse in stride, for my exalted place in the universe required of me to be the bigger person.`,
+                                description: `The letters from RI Research instructed me not to confront my tormentors. Instead, I was to take my abuse in stride, for my stellar origins required me to be the bigger person.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

@@ -233,7 +233,7 @@ export default {
                                         anchor: `baseball T-shirts`,
                                         wiki: `Raglan_sleeve`,
                                     },
-                                    `back then. It was the one style that could attract both the scene kids I crushed on, and the college students I had better chances with. Tristan, one of the punks in the thieving group, liked our ragtag look and named us the "`,
+                                    `back then; it was the one style that could attract both the scene kids I crushed on, and the college women I had a better chance with. Tristan, one of the punks in the thieving group, liked our ragtag look and named us the "`,
                                     {
                                         anchor: `Young Ones`,
                                         wiki: `The_Young_Ones_(TV_series)`,
