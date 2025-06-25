@@ -517,7 +517,7 @@ export default {
                             anchor: `unforeskinned virgin`,
                             todo: REVIEW,
                             card: {
-                                description: `I swore a long time ago not to settle into a fixed identity, which would limit the size of my dating pool. This is why I've never gotten a tattoo, I think; I needed to be a blank slab for any new woman to shape into whatever she liked. So here I imagine that, just before dating Miriam, I'd reset myself to a default state of being sexually inexperienced and having an intact foreskin.`,
+                                description: `I swore long ago not to settle into a fixed identity, which would only limit the size of my dating pool. This is why I've never gotten a tattoo, I think; I needed to be a blank slab for any new woman to shape into whatever she liked. So here I imagine that, just before dating Miriam, I'd reset myself to a default state of being sexually inexperienced and having an intact foreskin.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,

@@ -35,7 +35,7 @@ export default {
     playerReferenceTime: 3094.348,
     playerStartTime: 3091.413,
     todo: REVIEW,
-    overview: `Having committed to writing and recording every song on my next album, I began to distance myself from the local scene— which included hanging out with my bandmates. Since we stopped playing shows as a result, I had few opportunities to meet women after Miriam left me. But now, Sita had fallen in love with someone else; I wasn't to win her back, ever again. All I had left was myself— and I didn't like myself much at all. So I desperately wanted to be a good person once more; I just had no idea how.`,
+    overview: `Having committed to writing and recording every song on my next album, I began to distance myself from the local scene— which included hanging out with my bandmates. Since we stopped playing shows as a result, I had few opportunities to meet women after Miriam left me. And now, Sita had fallen in love with someone else; I wasn't to win her back, ever again. All I had left was myself— and I didn't like myself all that much. I desperately wanted to be a good person once more, but I had no idea how.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -465,7 +465,7 @@ export default {
                             anchor: `burger shrouds`,
                             todo: REVIEW,
                             card: {
-                                description: `Thanks to my vegan friends, I was already hyperaware of how much our society has commoditized animal suffering. So even something mundane, like a fast food wrapper on the sidewalk, would serve to remind me.`,
+                                description: `Thanks to my vegan friends, I was already aware of how much our society commodifies animal suffering. So even something mundane, like a fast food wrapper crumpled on the sidewalk, would serve to remind me.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -481,7 +481,6 @@ export default {
                         `a`,
                         {
                             anchor: `lone rallied youth`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Having played shows for years, I've seen how an audience gets whipped into a single-minded frenzy. But with that world now drifting away, I puzzle over what drew me to those crowds, and why I ever longed to be adored by them. I question everything I've valued up to this point, like a reformed`,
@@ -633,7 +632,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: `When Sita and I first met, she asked to hear my music. I'd just bought a multi-effects processor, so I gave her a copy of some recordings I'd made from playing around with it. She really liked one in which I'd pitch-shifted my vocals an octave up, so I made it the basis for the second half of this song.`,
                     dotKeys: {
@@ -747,12 +745,12 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `Traveling with Odin beyond the galaxy, I observe that the universe is almost entirely empty space, much like the distance between`,
+                                        `Wandering with Odin beyond the galaxy, I note that the universe is almost entirely empty space, much like the distance between`,
                                         {
                                             anchor: `subatomic particles`,
                                             wiki: `Subatomic_particle`,
                                         },
-                                        `that make up our bodies. With this thought wandering through my head, I then wonder if we ourselves are nothing more than the wandering thoughts of the universe.`,
+                                        `that make up our bodies. With this thought echoing in my mind, I then wonder if we ourselves are little more than the echoing thoughts of the universe.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -902,7 +900,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: REVIEW,
                 card: {
-                    description: `I stayed vegan for five years— but then quit once I started dating Sasha, who ate meat. I guess it's the nature of who I am that, the minute a chance for romance is at stake, my personal identity is the first thing I'll jettison. And truth be told, being vegan was always somewhat rough, given my peanut and tree nut allergies. But I'll happily be the first to switch to lab-grown meats— which PETA themselves have funded research for.`,
+                    description: `I stayed vegan for five years, but then quit once I started dating Sasha, who ate meat. I guess it's the nature of who I am that, the minute a chance for romance is at stake, my personal identity is the first thing I'll jettison. And truth be told, being vegan was always somewhat rough, given my peanut and tree nut allergies. But I'll happily be the first to switch to lab-grown meats— which PETA themselves have funded research for.`,
                     dotKeys: {
                         [AFTERWORD]: true,
                     },
