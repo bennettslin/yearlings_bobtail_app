@@ -124,6 +124,6 @@ export const registerAnnotation = ({
     annotation.todo = anchoredLyric.todo
     delete anchoredLyric.todo
 
-    // Only every check this in runtime.
+    // Only ever check this in runtime.
     // runtimeCheckCardsAreSortedByDotKeys(cards)
 }

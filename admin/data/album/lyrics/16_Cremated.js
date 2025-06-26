@@ -786,10 +786,6 @@ export default {
                                         },
                                         `" is caused by a mutated X chromosome, which results in mental disability.`,
                                     ],
-                                    dotKeys: {
-                                        [OBSERVATION]: true,
-                                        [PUN]: true,
-                                    },
                                 },
                             ],
                         },
