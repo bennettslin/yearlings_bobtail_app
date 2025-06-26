@@ -110,9 +110,10 @@ export default {
                         `: in my`,
                         {
                             anchor: `bookless room`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `When Catherine visited my apartment for the first time, she glanced around and remarked that she didn't see any books. "I don't read," I joked— though it was partly in truth. As children, my sister was the voracious bookworm and aspiring writer, so I preferred hobbies that`,
+                                    `When Catherine visited my apartment for the first time, she glanced around and remarked that she didn't see any books. "I don't read," I joked— though it was partly in truth. As children, my sister was the voracious bookworm and aspiring writer, so to set myself apart, I took up hobbies that`,
                                     {
                                         isItalic: true,
                                         lyric: `didn't`,
