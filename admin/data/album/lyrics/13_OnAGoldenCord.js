@@ -14,7 +14,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'On a Golden Cord',
@@ -815,8 +815,7 @@ export default {
                                 lyric: `Übermensch`,
                             },
                             properNoun: true,
-                            todo: REVISE,
-                            problem: `Does this even make sense?`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The German philosopher`,
@@ -832,7 +831,7 @@ export default {
                                             wiki: `Übermensch`,
                                         },
                                     },
-                                    `, or "overhuman," as an ideal of perfection toward which humanity might strive. I equated this to my goal of becoming a great artist. But since my underlying motive was to date scores of women, it then followed that the ideal version of myself could only be realized by having a cheating heart.`,
+                                    `, or "overhuman," as a vision of self-realization, which I equated with my dream of becoming a renowned artist. But since my underlying motive was to date scores of women, it then followed that the best version of myself could only be realized by having a cheating heart.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,

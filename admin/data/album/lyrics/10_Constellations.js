@@ -17,7 +17,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Constellations!',
@@ -1078,10 +1078,9 @@ export default {
                     lyric: [
                         {
                             anchor: `Are Melee tapirs`,
-                            todo: REVISE,
-                            problem: `Make clear that these are make-believe swords and shields?`,
+                            todo: REVIEW,
                             card: {
-                                description: `"Our melee tapers the discourse." Having scavenged materials to make into swords and shields, we could only brandish them with playful menace inside the narrow steam tunnels. Now out in the open, we stop chattering and start battling as we make our way back to the car.`,
+                                description: `"Our melee tapers the discourse." Having scavenged the materials needed to make imaginary weapons, we could only wield them with playful menace inside the narrow steam tunnels. Now out in the open, we stop chattering and start battling as we make our way back to the car.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
