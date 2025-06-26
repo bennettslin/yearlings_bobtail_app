@@ -16,7 +16,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REDO, REST, REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REDO, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Garryowen',
@@ -809,8 +809,11 @@ export default {
                         `becomes someone's`,
                         {
                             anchor: `last-ditch alibi`,
-                            todo: REST,
-                            problem: `Revisit just to be sure. Proper grammar requires "I" instead of "me" in both sentences.`,
+                            todo: REVIEW,
+                            /**
+                             * NOTE: Proper grammar requires "I" instead of
+                             * "me" in both sentences.
+                             */
                             card: {
                                 description: `Though my friends were only joking to say it wasn't me, but Garry, who'd committed this or that act of vandalism, on some level I accepted it as the truth. And now it also wasn't me who'd drained Sita of her confidence through the years, leaving her a crumbled wreck. It must've been Garry; I wasn't there.`,
                                 dotKeys: {

@@ -503,8 +503,7 @@ export default {
                         },
                         {
                             anchor: `strikes himself from his cloud`,
-                            todo: REST,
-                            problem: `I'm still not confident that the second sentence flows smoothly from the first, but I've spent too long on it.`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The`,
@@ -515,7 +514,7 @@ export default {
                                             wiki: `Schutzstaffel`,
                                         },
                                     },
-                                    `, the paramilitary group responsible for carrying out the Holocaust, wore an insignia consisting of two thunderbolts side by side. And so, wishing no more to strike anyone down with my thunder, I strike myself down instead, leaving my complacency and ego behind.`,
+                                    `, the paramilitary group responsible for carrying out the Holocaust, wore an insignia consisting of two thunderbolts side by side. But as for me, wishing no longer to strike anyone with my thunder, I strike myself down instead, leaving my complacency and ego behind.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

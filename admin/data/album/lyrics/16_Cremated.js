@@ -15,7 +15,7 @@ import {
     IS_UNIT_DOT,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Cremated',
@@ -768,11 +768,10 @@ export default {
                         },
                         {
                             anchor: `fragile ex`,
-                            todo: REST,
-                            problem: `I think I'm okay with the way it is now, but it's so different from how it was before, that I'd like to review it again after some time has passed.`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Given the horrors lurking in my genetic makeup, it was understandable that Miriam broke up with me. Of course, she had to be gentle about it, knowing the kind of fragile ex-boyfriend I was sure to be.`,
+                                    description: `Given the horrors lurking in my genetic makeup, it was understandable why Miriam broke up with me. Even so, she had to be gentle about it, knowing the kind of fragile ex-boyfriend I was sure to be.`,
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                         [PUN]: true,

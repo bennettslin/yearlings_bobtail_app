@@ -881,7 +881,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `Greek legend once held that whoever could unravel the "`,
+                                    `Greek legend once held that whosoever could unravel the "`,
                                     {
                                         anchor: `Gordian Knot`,
                                         wiki: `Gordian_Knot`,
@@ -891,7 +891,7 @@ export default {
                                         anchor: `Alexander the Great`,
                                         wiki: `Alexander_the_Great`,
                                     },
-                                    `simply chopped it in half with his sword… and then went on to fulfill the prophecy. In hoping to achieve such greatness myself, then, I applied the same brute force to sever the cord that tied me to Sita.`,
+                                    `simply chopped it in half with his sword— and then went on to fulfill the prophecy. So in hoping to achieve such greatness myself, I applied the same brute force to sever the cord that tied me to Sita.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
