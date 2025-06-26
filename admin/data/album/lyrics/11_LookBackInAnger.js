@@ -577,7 +577,7 @@ export default {
                             anchor: `His obit not a bang`,
                             todo: REVIEW,
                             card: {
-                                description: `But my appraisal was based on reason, not resentment. After all, if the one true God has a gospel to spread, why would he assign this job to the very tormentors of those he hopes to reach?`,
+                                description: `But my appraisal was based on reason, not resentment. Because, if an almighty God truly has a gospel to spread, why would he assign this job to the very tormentors of those he hopes to reach?`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
