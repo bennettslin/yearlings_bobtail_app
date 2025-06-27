@@ -796,7 +796,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `In a subtle jab, my parents call me a "drama" king— thus implying that everything I do is for attention.`,
+                                    description: `In a subtle jab, my parents call me a "drama" king— to imply that everything I do is for attention.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true,

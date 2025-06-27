@@ -1024,7 +1024,7 @@ export default {
                             anchor: `master mind`,
                             todo: REVIEW,
                             card: {
-                                description: `In college, my wishful thinking was that I could simply force the drunken me to write my term paper. But then once drunk, I'd resent taking orders from my sober half, and either do the work poorly or not at all— like a slave rebelling against his master. Somehow this became my go-to strategy for breaking up with Sita.`,
+                                description: `In college, my wishful thinking was that I could simply force the drunken me to write my term paper. But then once drunk, I'd resent taking orders from my sober half, and either do the work poorly or not at all— like a slave rebelling against his master. Somehow this became my strategy for breaking up with Sita.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

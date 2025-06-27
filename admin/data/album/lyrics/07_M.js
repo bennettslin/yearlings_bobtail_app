@@ -14,7 +14,7 @@ import {
     FLASHBACK_TO_WORMHOLE_PREFIX,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
-import { REDO, REST, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REDO, REST, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'M',

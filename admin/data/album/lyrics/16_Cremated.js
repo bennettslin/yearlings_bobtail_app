@@ -680,7 +680,7 @@ export default {
                             anchor: `he's anyone`,
                             todo: REVIEW,
                             card: {
-                                description: `After all, it's not at all obvious to my drunken self that he's the dummy— the one whose actions are being dictated by his other half— rather than the other way around.`,
+                                description: `After all, it's not clear at all to my drunken self that he's the dummy whose actions are being dictated by his other half, rather than the other way around.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -854,7 +854,6 @@ export default {
                         `and`,
                         {
                             anchor: `in her pool`,
-                            todo: REVIEW,
                             card: {
                                 description: `Lying sedated on my deathbed, I see Miriam lounging by a swimming pool. I expend my last breath to wish her well, but she doesn't hear me and slips into the deep end.`,
                                 dotKeys: {
@@ -1018,7 +1017,6 @@ export default {
                         `the`,
                         {
                             anchor: `cleaved horizon`,
-                            todo: REVIEW,
                             card: {
                                 description: `As we make our way downhill, the horizon seems to split the sky open like a cleaver, pouring the road down on me like wet cement into a shallow grave.`,
                                 dotKeys: {

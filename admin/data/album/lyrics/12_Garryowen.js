@@ -233,7 +233,7 @@ export default {
                                         anchor: `baseball T-shirts`,
                                         wiki: `Raglan_sleeve`,
                                     },
-                                    `back then; it was the one style that could attract both the scene kids I crushed on, and the college women I had a better chance with. Tristan, one of the punks in the thieving group, liked our ragtag look and named us the "`,
+                                    `back then; it was a style that could attract both the scene kids I tended to crush on, and the college students I had a better chance with. Tristan, one of the punks in the thieving group, liked our ragtag look and named us the "`,
                                     {
                                         anchor: `Young Ones`,
                                         wiki: `The_Young_Ones_(TV_series)`,
@@ -249,7 +249,7 @@ export default {
                             anchor: `bustin' cars with fists`,
                             todo: REVIEW,
                             card: {
-                                description: `Tristan was particularly hotheaded when drunk. One night after starting a fight at a party and getting us kicked out, he challenged us to see who could punch a random car window and break the glass first. I didn't win.`,
+                                description: `Tristan was particularly hotheaded when drunk. One night after starting a fight and getting us kicked out of a party, he challenged us to see who could punch a random car window and break the glass first. I didn't win.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -815,7 +815,7 @@ export default {
                              * "me" in both sentences.
                              */
                             card: {
-                                description: `Though my friends were only joking to say it wasn't me, but Garry, who'd committed this or that act of vandalism, on some level I accepted it as the truth. And now it also wasn't me who'd drained Sita of her confidence through the years, leaving her a crumbled wreck. It must've been Garry; I wasn't there.`,
+                                description: `Though my friends were only joking to say it wasn't me, but Garry, who'd committed this or that act of vandalism, on some level I accepted it as the truth. And now it also wasn't me who'd drained Sita of her confidence through the years, to leave her a crumbled wreck. It must've been Garry; I wasn't there.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
