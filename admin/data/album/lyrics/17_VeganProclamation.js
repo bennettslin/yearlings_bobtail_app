@@ -514,7 +514,7 @@ export default {
                                             wiki: `Schutzstaffel`,
                                         },
                                     },
-                                    `, the paramilitary group responsible for carrying out the Holocaust, wore an insignia consisting of two thunderbolts side by side. But as for me, wishing no longer to strike anyone with my thunder, I strike myself down instead, leaving my complacency and ego behind.`,
+                                    `, the paramilitary group responsible for carrying out the Holocaust, wore an insignia consisting of two thunderbolts side by side. But as for me? Wishing no longer to strike anyone with my thunder, I strike myself down instead, leaving my complacency and ego behind.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -749,7 +749,7 @@ export default {
                                             anchor: `subatomic particles`,
                                             wiki: `Subatomic_particle`,
                                         },
-                                        `that make up our bodies. With this thought echoing in my mind, I then wonder if we ourselves are little more than the echoing thoughts of the universe.`,
+                                        `that make up our bodies. As this thought echoes in my mind, I then wonder if we ourselves are little more than the echoing thoughts of the universe.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -897,7 +897,6 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: `I stayed vegan for five years, but then quit once I started dating Sasha, who ate meat. I guess it's the nature of who I am that the minute a chance for romance is at stake, my personal identity is the first thing I'll jettison. And truth be told, being vegan was always somewhat rough, given my peanut and tree nut allergies. But I'll happily be the first to switch to lab-grown meats— which PETA themselves have funded research for.`,
                     dotKeys: {
