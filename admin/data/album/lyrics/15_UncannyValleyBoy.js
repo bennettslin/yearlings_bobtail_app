@@ -85,7 +85,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: REVIEW,
                 card: {
-                    description: `I wrote the music for this song a while back after waking from a horrid nightmare. The premise seemed laughable by day's end, however, so I quietly shelved it. Still, I always liked its gloomy chords and moody tempo changes, and years later, I decided they'd work well for this tale about an encounter with a nightmarish version of my parents.`,
+                    description: `I wrote the music for this song a while back after waking from an awful nightmare. The premise seemed laughable by day's end, though, so I quietly shelved it. Still, I liked its gloomy chords and moody tempo changes, and years later, I realized they'd serve well for telling about a late-night encounter with a nightmarish version of my parents.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGCRAFT]: true,
@@ -302,7 +302,7 @@ export default {
                             anchor: `Upon purchase of a queen's ship`,
                             todo: REVIEW,
                             card: {
-                                description: `RI Research promised that I'd escape my tormentors once a spaceship was funded by my payments. And so began my lifelong tendency to bide my time while building toward corrective justice— much like how "a pawn perches over queenship" as it reaches the far end of the chessboard.`,
+                                description: `RI Research promised that I'd be free of torment once a spaceship was funded by my payments. And so began my lifelong tendency to bide my time while building toward corrective justice— much like how "a pawn perches over queenship" as it reaches the far end of the chessboard.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -575,7 +575,7 @@ export default {
                             anchor: `counter-melody`,
                             wiki: `Counter-melody`,
                         },
-                        `for this chorus was originally the lead melody. I decided to keep its lyrics about the nightmare; as silly as they were, I liked their surrealism. I then took the original counter-melody, which was written for guitar, and gave it to the lead vocals.`,
+                        `for this chorus was originally the lead melody. I left its lyrics about the nightmare as is; however silly they were, I enjoyed their surrealism. I then took the original counter-melody, which was written for guitar, and gave it to the lead vocals.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -822,12 +822,12 @@ export default {
                                             anchor: `Vishnu`,
                                             wiki: `Vishnu`,
                                         },
-                                        `. This includes his marriage to`,
+                                        `. In its most engrossing passages, he battles to rescue his wife`,
                                         {
                                             anchor: `Sita`,
                                             wiki: `Sita`,
                                         },
-                                        `, goddess of devotion, and his battles to rescue her after she was abducted by the demon king`,
+                                        `, goddess of devotion, when she gets abducted by the demon king`,
                                         {
                                             anchor: `Ravana`,
                                             wiki: `Ravana`,
@@ -840,8 +840,9 @@ export default {
                         `, the`,
                         {
                             anchor: `testifiers' lore`,
+                            todo: REVIEW,
                             card: {
-                                description: `After rescuing Sita, Rama made her step through sacrificial flames to prove that she'd stayed chaste throughout her abduction. Sita complied— and escaped from this "test of fire" unharmed.`,
+                                description: `After rescuing Sita, Rama makes her go through sacrificial flames to prove that she remained chaste throughout her abduction. Sita complies— and escapes from this "test of fire" unharmed.`,
                                 dotKeys: {
                                     [PUN]: true,
                                 },
@@ -1250,7 +1251,7 @@ export default {
                             anchor: `faces you flip override`,
                             todo: REVIEW,
                             card: {
-                                description: `As I grew into a dour adolescent, my mother would ask what happened to the playful little boy I'd once been— which made me wonder myself. I think I learned early on that there's an optimal personality for each situation, and the trick is to deftly switch between them. So it makes no sense to keep one lying around, once it no longer serves any purpose.`,
+                                description: `As I grew into a dour adolescent, my mother would ask what happened to the playful little boy I'd once been— which made me wonder myself. I think I learned early on to adopt the optimal persona for every situation, and as time went by, those personas began to pile up. So it made no sense to keep any old ones lying around once they no longer served their purpose.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -1462,7 +1463,7 @@ export default {
                                         isItalic: true,
                                         lyric: `Bobtail`,
                                     },
-                                    `might one day be just as exemplary.`,
+                                    `might one day be mentioned in the same breath.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
