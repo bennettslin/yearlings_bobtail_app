@@ -815,7 +815,6 @@ export default {
                                 lyric: `Übermensch`,
                             },
                             properNoun: true,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The German philosopher`,
@@ -881,7 +880,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `Greek legend once held that whosoever could unravel the "`,
+                                    `Greek legend once held that whoever could unravel the "`,
                                     {
                                         anchor: `Gordian Knot`,
                                         wiki: `Gordian_Knot`,
@@ -1024,7 +1023,7 @@ export default {
                             anchor: `master mind`,
                             todo: REVIEW,
                             card: {
-                                description: `In college, my wishful thinking was that I could simply force the drunken me to write my term paper. But then once drunk, I'd resent taking orders from my sober half, and either do the work poorly or not at all— like a slave rebelling against his master. Somehow this became my strategy for breaking up with Sita.`,
+                                description: `In college, my wishful thinking was that I could simply force the drunken me to write my term paper. But then once drunk, I'd resent taking orders from my sober half, and either do the work poorly or not at all— like a slave rebelling against his master. Somehow this became my strategy for breaking up with Sita as well.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

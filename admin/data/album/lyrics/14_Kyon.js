@@ -15,7 +15,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REST, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'क्यों? (Kyon?)',
@@ -346,7 +346,6 @@ export default {
                         `But dear,`,
                         {
                             anchor: `let's make a pact`,
-                            todo: REVIEW,
                             card: {
                                 description: `Sita knew I'd someday want the same everlasting love that she did. So every time we broke up, she'd make me promise to rekindle all that we had, whenever I should come to pine for it.`,
                                 dotKeys: {

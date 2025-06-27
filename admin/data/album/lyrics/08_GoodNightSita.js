@@ -152,7 +152,6 @@ export default {
                         `for this kid wearing no`,
                         {
                             anchor: `decoder ring`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     {
@@ -921,7 +920,7 @@ export default {
                             anchor: `dummy steering wheel`,
                             todo: REVIEW,
                             card: {
-                                description: `Like a child clutching the passenger steering wheel in a twin go-kart, I naively cling to the hope of guiding this date in a direction to my liking.`,
+                                description: `Like a child clutching the passenger steering wheel in a twin go-kart, I naively cling to the hope of guiding this date toward my preferred outcome.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,

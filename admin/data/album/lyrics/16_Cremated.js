@@ -33,7 +33,7 @@ export default {
     playerReferenceTime: 2951.729,
     playerStartTime: 2926.829,
     todo: REVIEW,
-    overview: `While I can't deny that dating White women helped silence the nagging feeling I had of being genetically inferior, I honestly didn't seek them out. A case in point is Miriam, whom I met at a Yearlings show. She was the storybook ending my ego had been waiting for: cute, hip, and drawn to me through no effort on my part. Well… we lasted a few months. I always did wonder afterward if she was slumming it with me.`,
+    overview: `While I can't deny that dating White women helped silence the nagging feeling I had of being genetically inferior, I honestly didn't seek them out. A case in point is Miriam, whom I met at a Yearlings show. She was the storybook ending my ego had been waiting for: cute, hip, and drawn to me through no effort on my part. And then… we lasted a few months. I always did wonder afterward if she was slumming it with me.`,
     isDoublespeaker: true,
     lyricUnits: [
         {
@@ -421,7 +421,7 @@ export default {
                                         anchor: `Abbott and Costello`,
                                         wiki: `Abbott_and_Costello`,
                                     },
-                                    `, famously didn't get along. This enlivened the dynamic between them onstage, but it made for tense moments once the tape stopped rolling. Similarly, though Miriam enjoyed watching my two halves outwit each other, she surely wanted no part of any behind-the-scenes drama.`,
+                                    `, famously didn't get along, which made for tense moments behind the scenes. Similarly, though Miriam was entertained to watch my two halves outwit each other, she surely wanted no part of the inner conflict that fueled this spectacle.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -515,7 +515,6 @@ export default {
                         `for some`,
                         {
                             anchor: `unforeskinned virgin`,
-                            todo: REVIEW,
                             card: {
                                 description: `I swore long ago not to settle into a fixed identity, which would only limit the size of my dating pool. This is why I've never gotten a tattoo, I think; I needed to be a blank slab for any new woman to shape into whatever she liked. So here I imagine that, just before dating Miriam, I'd reset myself to a default state of being sexually inexperienced and having an intact foreskin.`,
                                 dotKeys: {
@@ -680,7 +679,7 @@ export default {
                             anchor: `he's anyone`,
                             todo: REVIEW,
                             card: {
-                                description: `After all, it's not clear at all to my drunken self that he's the dummy whose actions are being dictated by his other half, rather than the other way around.`,
+                                description: `After all, it's not clear at all to my drunken self that he's the dummy whose actions are dictated by his other half, rather than the other way around.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -784,7 +783,7 @@ export default {
                                             anchor: `Fragile X`,
                                             wiki: `Fragile_X_syndrome`,
                                         },
-                                        `" is caused by a mutated X chromosome, which results in mental disability.`,
+                                        `" is caused by a mutated X chromosome and results in intellectual disability.`,
                                     ],
                                 },
                             ],

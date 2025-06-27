@@ -642,7 +642,6 @@ export default {
                         `and thus secure,`,
                         {
                             anchor: `must turn the cheek`,
-                            todo: REVIEW,
                             card: {
                                 description: `The letters from RI Research instructed me not to confront my tormentors. Instead, I was to take their abuse in stride, for my stellar origins required me to be the bigger person.`,
                                 dotKeys: {
@@ -704,7 +703,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `As opportunities for social advancement opened up for me, I could look back on the bullies, and even sympathize with them by putting myself in their shoes. After all, in a world that roots for the strong, who`,
+                                    `As opportunities for social advancement started opening up, I could look back and even sympathize with the bullies by putting myself in their shoes. After all, in a world that roots for the strong, who`,
                                     {
                                         isItalic: true,
                                         lyric: `wouldn't`,

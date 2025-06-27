@@ -88,7 +88,7 @@ export default {
                                                 wiki: `Beautiful_Losers`,
                                             },
                                         },
-                                        `, the character F. tires of getting bullied at the beach. So he signs up for the Charles Axis bodybuilding course advertised in a comic book— only to discover that Charles Axis is the one who bullies him. It's such a funny passage from an otherwise tragic story, and I'm reminded of it whenever I reflect on my own misadventures in mail order; in each case, I can't help but smile at the absurdity.`,
+                                        `, the character F. tires of getting bullied at the beach. So he signs up for the Charles Axis bodybuilding course advertised in a comic book— only to discover that Charles Axis is the one who bullies him. It's a funny passage from an otherwise tragic story, and I'm reminded of it whenever I reflect on my own misadventures in mail order; in both cases, I can't help but smile at the absurdity.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -348,7 +348,14 @@ export default {
                             anchor: `learn to kick it back`,
                             todo: REVIEW,
                             card: {
-                                description: `The most popular kids in middle school seemed to put the least effort into being liked, which ran counter to the one life lesson I'd learned thus far— namely, that whatever I desire must be pursued wholeheartedly. Yet trying things their way didn't make me any more likable either…`,
+                                description: [
+                                    `The most popular kids in middle school seemed to put the`,
+                                    {
+                                        isItalic: true,
+                                        lyric: `least`,
+                                    },
+                                    `effort into being liked, which ran counter to my gut instinct. Yet trying it their way didn't make me any more likable either…`,
+                                ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

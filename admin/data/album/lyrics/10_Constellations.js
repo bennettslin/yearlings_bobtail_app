@@ -1825,7 +1825,6 @@ export default {
                         `Then pounds`,
                         {
                             anchor: `arrhythmetic heart`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `Coming down from my high, I notice that my heart stops every few seconds, which concerns me. So I try to count beats per minute, but unfortunately, my brain is too fried to do basic "arithmetic."`,
