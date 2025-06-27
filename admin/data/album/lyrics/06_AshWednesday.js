@@ -370,7 +370,6 @@ export default {
                         `,"`,
                         {
                             anchor: `putting down her Joyce`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `But her compliment is less than sincere, since referencing a poet studied by middle schoolers is hardly an impressive feat. And so, annoyed at being made to put down the Joyce novel she's reading, Catherine amuses herself by putting`,
@@ -539,7 +538,6 @@ export default {
                         },
                         {
                             anchor: `unknown to roam`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `"Raincoat" is slang for a condom, of which the benefit is unknown to "Rome," given the Catholic Church's stance against birth control. Since Catherine had vowed not to engage in premarital sex, we never needed to use one.`,
@@ -757,7 +755,6 @@ export default {
                                 {
                                     anchor: `Catherine vaut bien une messe`,
                                     properNoun: true,
-                                    todo: REVIEW,
                                     card: {
                                         description: [
                                             {

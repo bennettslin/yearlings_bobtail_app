@@ -1080,7 +1080,7 @@ export default {
                             anchor: `Are Melee tapirs`,
                             todo: REVIEW,
                             card: {
-                                description: `"Our melee tapers the discourse." Having scavenged the materials needed to make imaginary weapons, we could only wield them with playful menace inside the narrow steam tunnels. Now out in the open, we stop chattering and start battling as we make our way back to the car.`,
+                                description: `"Our melee tapers the discourse." Though we'd scavenged enough materials to make imaginary weapons, we could only wield them with playful menace inside the narrow steam tunnels. Now out in the open, we stop chattering and start battling as we make our way back to the car.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -1828,7 +1828,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Coming down from my high, I notice that my heart stops every few seconds, which somewhat concerns me. So I try to count beats per minute, but unfortunately, my brain is too fried to do basic "arithmetic."`,
+                                    description: `Coming down from my high, I notice that my heart stops every few seconds, which concerns me. So I try to count beats per minute, but unfortunately, my brain is too fried to do basic "arithmetic."`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true,

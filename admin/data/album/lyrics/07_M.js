@@ -149,7 +149,6 @@ export default {
                         `in`,
                         {
                             anchor: `five years`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The`,

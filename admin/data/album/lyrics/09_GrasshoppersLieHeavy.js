@@ -29,7 +29,7 @@ export default {
     mixStartTime: `0:01:29.52`,
     playerStartTime: 1478.233,
     todo: REVIEW,
-    overview: `I worked my way through college washing dishes in a cafeteria on campus, which is how I met Sita. After I scared her off, we didn't speak for months— but then she reached out again, and we slowly became friends. Her moral support was invaluable as I got off to a rocky start with playing onstage, and even as I continued to struggle with dating other women; still, a part of me never stopped hoping for something more. A year later… she began to like me back.`,
+    overview: `I worked my way through college washing dishes in a cafeteria on campus, which is how I met Sita. After I scared her off, we didn't speak for months— but then she reached out again, and we slowly became friends. Her moral support was invaluable as I got off to a rocky start with playing onstage, and as I continued to struggle with dating other women; still, a part of me never stopped hoping for something more. A year later… she began to like me back.`,
     isDoublespeaker: true,
     lyricUnits: [
         {
@@ -465,7 +465,6 @@ export default {
                         `Her`,
                         {
                             anchor: `show played in mimes`,
-                            todo: REVIEW,
                             card: {
                                 description: `The world of dating was awash in silent cues that, as far as I knew, no one could be expected to deduce on their own. So I desperately wanted everything to be put into words, and it baffled me to be alone in feeling this way.`,
                                 dotKeys: {

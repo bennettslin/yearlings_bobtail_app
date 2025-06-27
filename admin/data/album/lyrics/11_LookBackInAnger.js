@@ -577,7 +577,7 @@ export default {
                             anchor: `His obit not a bang`,
                             todo: REVIEW,
                             card: {
-                                description: `But my appraisal was based on reason, not resentment. Because, if an almighty God truly has a gospel to spread, why would he assign this job to the very tormentors of those he hopes to reach?`,
+                                description: `But my appraisal was based on reason, not resentment. After all, if an almighty God truly had a gospel to spread, why would he assign this job to the very tormentors of those he hopes to reach?`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -644,7 +644,7 @@ export default {
                             anchor: `must turn the cheek`,
                             todo: REVIEW,
                             card: {
-                                description: `The letters from RI Research instructed me not to confront my tormentors. Instead, I was to take my abuse in stride, for my stellar origins required me to be the bigger person.`,
+                                description: `The letters from RI Research instructed me not to confront my tormentors. Instead, I was to take their abuse in stride, for my stellar origins required me to be the bigger person.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -704,7 +704,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `As opportunities for social advancement opened up for me, I could look back and sympathize with the bullies by putting myself in their shoes. After all, in a world that roots for the strong, who`,
+                                    `As opportunities for social advancement opened up for me, I could look back on the bullies, and even sympathize with them by putting myself in their shoes. After all, in a world that roots for the strong, who`,
                                     {
                                         isItalic: true,
                                         lyric: `wouldn't`,

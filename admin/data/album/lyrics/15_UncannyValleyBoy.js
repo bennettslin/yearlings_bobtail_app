@@ -300,8 +300,9 @@ export default {
                     lyric: [
                         {
                             anchor: `Upon purchase of a queen's ship`,
+                            todo: REVIEW,
                             card: {
-                                description: `RI Research promised that I'd escape the bullies once a spaceship was funded by my payments. And so began my lifelong tendency to bide my time while building toward corrective justice— much like how "a pawn perches over queenship" as it reaches the far end of the chessboard.`,
+                                description: `RI Research promised that I'd escape my tormentors once a spaceship was funded by my payments. And so began my lifelong tendency to bide my time while building toward corrective justice— much like how "a pawn perches over queenship" as it reaches the far end of the chessboard.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,

@@ -159,7 +159,7 @@ export default {
                                         anchor: `Secret decoder rings`,
                                         wiki: `Secret_decoder_ring`,
                                     },
-                                    `were promotional toys in the '60s that allowed children to decipher a television program's encrypted messages— which often spelled out previews of the next episode. So it would've been nice to wear one on a date, and have it spell out whether there'd be a next.`,
+                                    `were promotional toys in the '60s that allowed children to decipher a television program's encrypted messages— which were often previews of the next episode. So it would've been nice to wear one on a date, and have it spell out whether there'd be a next.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -352,7 +352,7 @@ export default {
                         anchor: `heart of gold inside`,
                         todo: REVIEW,
                         card: {
-                            description: `Mistakes made on one date still offered lessons that could be applied to the next. So dating felt like prying open one nesting doll to get to another, in the hope of reaching the solid one at last.`,
+                            description: `Mistakes made on one date still offered lessons that could be applied to the next. So dating felt like prying open one nesting doll to get to another, in the hope of reaching one that was solid at last.`,
                             dotKeys: {
                                 [OBSERVATION]: true,
                             },
@@ -675,7 +675,6 @@ export default {
                         `so we'll`,
                         {
                             anchor: `breeze through our parts`,
-                            todo: REVIEW,
                             card: {
                                 description: `Anytime I said something witty that got a good response, I'd keep it in mind to use on future dates— in case things didn't work out with the present one. This then helped me to relax, since the less I needed to prepare for each new date, the less there was at stake. Like a stage actor, I could recite the same lines night after night.`,
                                 dotKeys: {
