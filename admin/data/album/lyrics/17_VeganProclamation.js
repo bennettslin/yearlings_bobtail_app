@@ -278,7 +278,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Sita had her own story to tell about mistreating a first pet: Upon receiving a kitten as a child, she hugged it so hard that it began to purr— and taking this to be a signal of mutual affection, she hugged it even harder. Years later, she learned that cats also purr to cope with distress, and looking back, she realized her kitten must've believed it was being crushed to death. She lived in guilt ever since.`,
+                                    description: `Sita had her own story to tell about mistreating a first pet: Upon receiving a kitten as a child, she hugged it so hard that it began to purr— and taking this to be a sign of shared affection, she hugged it even harder. Years later, she learned that cats also purr to cope with distress, and looking back, she realized her kitten must've believed it was being crushed to death. She lived in guilt ever since.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -502,7 +502,6 @@ export default {
                         },
                         {
                             anchor: `strikes himself from his cloud`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The`,
@@ -748,7 +747,7 @@ export default {
                                             anchor: `subatomic particles`,
                                             wiki: `Subatomic_particle`,
                                         },
-                                        `that make up our bodies. As this thought echoes in my mind, I then wonder if we ourselves are little more than the echoing thoughts of the universe.`,
+                                        `that make up our bodies. As this thought echoes in my mind, I wonder if we ourselves, then, are little more than the echoing thoughts of the universe.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,

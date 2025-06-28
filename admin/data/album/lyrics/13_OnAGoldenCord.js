@@ -877,7 +877,6 @@ export default {
                         `of this`,
                         {
                             anchor: `frayed cord detached`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Greek legend once held that whoever could unravel the "`,
@@ -1023,7 +1022,7 @@ export default {
                             anchor: `master mind`,
                             todo: REVIEW,
                             card: {
-                                description: `In college, my wishful thinking was that I could simply force the drunken me to write my term paper. But then once drunk, I'd resent taking orders from my sober half, and either do the work poorly or not at all— like a slave rebelling against his master. Somehow this became my strategy for breaking up with Sita as well.`,
+                                description: `In college, my wishful thinking was that I could simply force the drunken me to write my term paper. But then once drunk, I'd resent taking orders from my sober half, and either do the work poorly or not at all— like a slave rebelling against his master. Somehow, this then became my strategy for breaking up with Sita as well.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

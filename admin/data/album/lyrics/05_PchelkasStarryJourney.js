@@ -354,7 +354,7 @@ export default {
                                         isItalic: true,
                                         lyric: `least`,
                                     },
-                                    `effort into being liked, which ran counter to my gut instincts. Yet trying it their way didn't make me any more likable either…`,
+                                    `effort into being liked, which ran counter to all my gut instincts. Yet trying it their way didn't make me any more likable either…`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,

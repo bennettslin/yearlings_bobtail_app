@@ -677,7 +677,6 @@ export default {
                         `in care,`,
                         {
                             anchor: `he's anyone`,
-                            todo: REVIEW,
                             card: {
                                 description: `After all, it's not clear at all to my drunken self that he's the dummy whose actions are dictated by his other half, rather than the other way around.`,
                                 dotKeys: {
@@ -770,7 +769,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Given the horrors lurking in my genetic makeup, it was understandable why Miriam broke up with me. Even so, she had to be gentle about it, knowing the kind of fragile ex-boyfriend I was sure to be.`,
+                                    description: `Given the horrors lurking in my genetic makeup, it was understandable why Miriam wanted to break up with me. Even so, she had to be gentle about it, knowing the kind of fragile ex-boyfriend I was sure to be.`,
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                         [PUN]: true,

@@ -83,7 +83,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: `I wrote the music for this song a while back after waking from an awful nightmare. The premise seemed laughable by day's end, though, so I quietly shelved it. Still, I liked its gloomy chords and moody tempo changes, and years later, I realized they'd serve well for telling about a late-night encounter with a nightmarish version of my parents.`,
                     dotKeys: {
@@ -840,7 +839,6 @@ export default {
                         `, the`,
                         {
                             anchor: `testifiers' lore`,
-                            todo: REVIEW,
                             card: {
                                 description: `After rescuing Sita, Rama makes her go through sacrificial flames to prove that she remained chaste throughout her abduction. Sita complies— and escapes from this "test of fire" unharmed.`,
                                 dotKeys: {
@@ -1456,14 +1454,14 @@ export default {
                                     `is a coming-of-age story, of which James Joyce's`,
                                     {
                                         isItalic: true,
-                                        lyric: `A Portrait of the Artist as a Young Man`,
+                                        lyric: `A Portrait of the Artist`,
                                     },
-                                    `is a notable example. My conceit, of course, was that`,
+                                    `is one notable example. My conceit in making`,
                                     {
                                         isItalic: true,
                                         lyric: `Bobtail`,
                                     },
-                                    `might one day be mentioned in the same breath.`,
+                                    `, of course, was that someday it might be mentioned as another.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,

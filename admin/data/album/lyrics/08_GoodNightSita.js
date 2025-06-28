@@ -920,7 +920,7 @@ export default {
                             anchor: `dummy steering wheel`,
                             todo: REVIEW,
                             card: {
-                                description: `Like a child clutching the passenger steering wheel in a twin go-kart, I naively cling to the hope of guiding this date toward my preferred outcome.`,
+                                description: `Like a child clutching the passenger steering wheel in a twin go-kart, I naively cling to the hope of steering this date in my preferred direction.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,

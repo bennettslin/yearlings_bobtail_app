@@ -13,7 +13,6 @@ import {
     IS_UNIT_DOT,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Ash Wednesday',
@@ -110,7 +109,6 @@ export default {
                         `: in my`,
                         {
                             anchor: `bookless room`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `When Catherine visited my apartment for the first time, she glanced around and remarked that she didn't see any books. "I don't read," I joked— though it was partly in truth. As children, my sister was the voracious bookworm and aspiring writer, so I set myself apart by taking up hobbies that`,
@@ -866,7 +864,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     // NOTE: Counterpoint is a wiki later in Garryowen.
                     description: [
