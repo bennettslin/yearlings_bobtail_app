@@ -17,7 +17,7 @@ import {
     FORESHADOW_OF_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Vegan Proclamation',
@@ -275,11 +275,10 @@ export default {
                         `and now I know why the`,
                         {
                             anchor: `battered kitten purrs`,
-                            todo: REST,
-                            problem: `First two sentences seem short and disconnected?`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Sita had her own story to tell about mistreating a first pet: Upon receiving a kitten as a child, she hugged it so hard that it began to purr. Taking this as a sign of its serenity, she hugged it even harder. Years later, she learned that cats also purr to cope with distress, and looking back, she realized that her kitten must've believed it was being crushed to death. She lived in guilt ever since.`,
+                                    description: `Sita had her own story to tell about mistreating a first pet: Upon receiving a kitten as a child, she hugged it so hard that it began to purr— and taking this to be a signal of mutual affection, she hugged it even harder. Years later, she learned that cats also purr to cope with distress, and looking back, she realized her kitten must've believed it was being crushed to death. She lived in guilt ever since.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },

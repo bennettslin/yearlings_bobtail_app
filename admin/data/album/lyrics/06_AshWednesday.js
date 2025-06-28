@@ -866,6 +866,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     // NOTE: Counterpoint is a wiki later in Garryowen.
                     description: [
@@ -874,7 +875,7 @@ export default {
                             anchor: `register`,
                             wiki: `Register_(music)`,
                         },
-                        `, I didn't realize that the instruments would drown out my voice. To avoid redoing the tracks, I`,
+                        `, I didn't realize the instruments would drown out my voice. To avoid redoing the tracks, I`,
                         {
                             anchor: `pitch shifted`,
                             wiki: `Pitch_shift`,
