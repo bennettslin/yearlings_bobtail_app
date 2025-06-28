@@ -574,7 +574,7 @@ export default {
                             anchor: `counter-melody`,
                             wiki: `Counter-melody`,
                         },
-                        `for this chorus was originally the lead melody. I left its lyrics about the nightmare as is; however silly they were, I enjoyed their surrealism. I then took the original counter-melody, which was written for guitar, and gave it to the lead vocals.`,
+                        `for this chorus was originally the lead melody. As for its lyrics about the nightmare, I left them as is; however silly they were, I still enjoyed their surrealism. I then took the original counter-melody, which I'd written for guitar, and gave it to the lead vocals.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,

@@ -33,7 +33,7 @@ export default {
     playerReferenceTime: 2951.729,
     playerStartTime: 2926.829,
     todo: REVIEW,
-    overview: `While I can't deny that dating White women helped silence the nagging feeling I had of being genetically inferior, I honestly didn't seek them out. A case in point is Miriam, whom I met at a Yearlings show. She was the storybook ending my ego had been waiting for: cute, hip, and drawn to me through no effort on my part. And then… we lasted a few months. I always did wonder afterward if she was slumming it with me.`,
+    overview: `While I can't deny that dating White women helped to silence the nagging feeling I had of being genetically inferior, I honestly didn't seek them out. A case in point is Miriam, who was the storybook ending my ego had been waiting for: cute, hip, and drawn to me through little effort on my part. But as it turns out… we only lasted a few months. I had to wonder afterward if she was slumming it with me.`,
     isDoublespeaker: true,
     lyricUnits: [
         {
@@ -413,7 +413,6 @@ export default {
                         `not`,
                         {
                             anchor: `at each other's throats`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Some comedy duos, like`,
@@ -447,7 +446,7 @@ export default {
                             anchor: `ponders the children`,
                             todo: REVIEW,
                             card: {
-                                description: `My mother once advised me not to have children, given the autism that runs in our genes, and her difficulties in raising my brother as a result. But by that reasoning, no woman should want me as a life partner to begin with— so why worry?`,
+                                description: `My mother once advised me not to have children, given the autism that runs in our genes, and her difficulties in raising my brother as a result. I had to assume, then, that any woman judging me as a potential life partner would be thinking along the same lines.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -782,7 +781,7 @@ export default {
                                             anchor: `Fragile X`,
                                             wiki: `Fragile_X_syndrome`,
                                         },
-                                        `" is caused by a mutated X chromosome and results in intellectual disability.`,
+                                        `" is a genetic disorder caused by a mutated X chromosome, which results in intellectual disability.`,
                                     ],
                                 },
                             ],

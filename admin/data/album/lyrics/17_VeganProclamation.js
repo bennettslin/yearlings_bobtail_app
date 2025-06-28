@@ -35,7 +35,7 @@ export default {
     playerReferenceTime: 3094.348,
     playerStartTime: 3091.413,
     todo: REVIEW,
-    overview: `Having committed to writing and recording every song on my next album, I began to distance myself from the local scene— which included hanging out with my bandmates. Since we stopped playing shows as a result, I had few opportunities to meet women after Miriam left me. And now, Sita had fallen in love with someone else; I wasn't to win her back, ever again. All I had left was myself— and I didn't like myself all that much. I desperately wanted to be a good person once more, but I had no idea how.`,
+    overview: `Having committed to writing and recording every song on my next album, I began to drift away from the local scene— which meant hanging out less with my bandmates. Since we stopped playing shows as a result, I had few opportunities to meet women after Miriam left me. Yet this time around… there was no word from Sita. It so happened that she'd fallen in love with someone else; I wasn't to win her back, ever again. Now all I had left was myself— and I didn't like myself much at all. I desperately wanted to be a good person once more, but I had no idea how.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -278,7 +278,14 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Sita had her own story to tell about mistreating a first pet: Upon receiving a kitten as a child, she hugged it so hard that it began to purr— and taking this to be a sign of shared affection, she hugged it even harder. Years later, she learned that cats also purr to cope with distress, and looking back, she realized her kitten must've believed it was being crushed to death. She lived in guilt ever since.`,
+                                    description: [
+                                        `Sita had her own story to tell about mistreating a first pet: Upon receiving a kitten as a child, she hugged it so hard that it began to purr— and taking this as a sign of shared affection, she hugged it even harder. But years later, she learned that cats`,
+                                        {
+                                            isItalic: true,
+                                            lyric: `also`,
+                                        },
+                                        `purr to cope with distress; looking back, then, she realized her kitten must've thought it was being crushed to death. She lived in guilt ever since.`,
+                                    ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -464,7 +471,7 @@ export default {
                             anchor: `burger shrouds`,
                             todo: REVIEW,
                             card: {
-                                description: `Thanks to my vegan friends, I was already aware of how much our society commodifies animal suffering. So even something mundane, like a fast food wrapper crumpled on the sidewalk, would serve to remind me.`,
+                                description: `Thanks to my vegan friends, I was already aware of how much our society commodifies animal suffering. So even something mundane, like a crumpled fast food wrapper littered on the sidewalk, would serve to remind me.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -747,7 +754,7 @@ export default {
                                             anchor: `subatomic particles`,
                                             wiki: `Subatomic_particle`,
                                         },
-                                        `that make up our bodies. As this thought echoes in my mind, I wonder if we ourselves, then, are little more than the echoing thoughts of the universe.`,
+                                        `that make up our bodies. As this thought echoes in my mind, I then wonder if we ourselves are little more than the echoing thoughts of the universe.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
