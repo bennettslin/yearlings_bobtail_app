@@ -301,7 +301,7 @@ export default {
                             anchor: `Upon purchase of a queen's ship`,
                             todo: REVIEW,
                             card: {
-                                description: `RI Research promised that I'd be free of torment once a spaceship was funded by my payments. And so began my lifelong tendency to bide my time while building toward corrective justice— much like how "a pawn perches over queenship" as it reaches the far end of the chessboard.`,
+                                description: `RI Research promised that I'd escape my torment once a spaceship was funded by my payments. And so began my lifelong tendency to bide my time while building toward corrective justice— much like how "a pawn perches over queenship" as it reaches the far end of the chessboard.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -574,7 +574,7 @@ export default {
                             anchor: `counter-melody`,
                             wiki: `Counter-melody`,
                         },
-                        `for this chorus was originally the lead melody. As for its lyrics about the nightmare, I left them as is; however silly they were, I still enjoyed their surrealism. I then took the original counter-melody, which I'd written for guitar, and gave it to the lead vocals.`,
+                        `heard here was originally the lead melody of the chorus. I left its lyrics as they were; despite this song no longer being about the nightmare, I liked the surrealism. I then took the original counter-melody, which I'd meant to play on guitar, and gave it to the lead vocals.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -821,7 +821,7 @@ export default {
                                             anchor: `Vishnu`,
                                             wiki: `Vishnu`,
                                         },
-                                        `. In its most engrossing passages, he battles to rescue his wife`,
+                                        `. In its most famous passages, he battles to rescue his wife`,
                                         {
                                             anchor: `Sita`,
                                             wiki: `Sita`,

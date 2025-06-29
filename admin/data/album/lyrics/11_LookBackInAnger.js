@@ -577,7 +577,14 @@ export default {
                             anchor: `His obit not a bang`,
                             todo: REVIEW,
                             card: {
-                                description: `But my appraisal was based on reason, not resentment. After all, if an almighty God truly had a gospel to spread, why would he assign this job to the very tormentors of those he hopes to reach?`,
+                                description: [
+                                    `But my appraisal was based on reason, not resentment. After all, if an almighty God truly had a gospel to spread, would he`,
+                                    {
+                                        isItalic: true,
+                                        lyric: `really`,
+                                    },
+                                    `assign this job to the very tormentors of those he hopes to reach?`,
+                                ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -703,12 +710,12 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `Having moved up the social hierarchy, I could now look back on the bullies without personal judgment— even to the point of sympathizing with them. After all, in a world that roots for the strong, who`,
+                                    `Having moved up the social hierarchy, I could now look back on the bullies without passing judgment— and even begin to sympathize with them. After all, in a world that roots for the strong, who`,
                                     {
                                         isItalic: true,
                                         lyric: `wouldn't`,
                                     },
-                                    `pursue any means available to avoid being weak?`,
+                                    `accept all the means they've been given to avoid being weak?`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,

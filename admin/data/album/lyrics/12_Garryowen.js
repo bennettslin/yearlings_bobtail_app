@@ -95,7 +95,7 @@ export default {
                             anchor: `Brushed her off`,
                             todo: REVIEW,
                             card: {
-                                description: `Anytime I began to grow distant, Sita would reach out by groveling. I'd then rush back to comfort her, stung by my conscience. But gradually my patience would wear thin, and I'd lash out in passive-aggressive ways— making me hate myself for my cruelty. So to deal with my issues, I'd grow distant… whereupon she'd grovel even further. It became all we knew of how to speak for ourselves.`,
+                                description: `Anytime I began to grow distant, Sita would reach out by groveling; I'd then rush back to comfort her, stung by my conscience. But eventually my patience would wear thin, and I'd lash out in passive-aggressive ways— only to hate who I'd become. To work on myself, though, I had to grow distant… whereupon she'd grovel even further. It became all we knew of how to speak for ourselves.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

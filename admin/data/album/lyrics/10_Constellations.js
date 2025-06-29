@@ -1080,7 +1080,7 @@ export default {
                             anchor: `Are Melee tapirs`,
                             todo: REVIEW,
                             card: {
-                                description: `"Our melee tapers the discourse." Though we'd scavenged enough materials to make imaginary weapons, we could only wield them with playful menace inside the narrow steam tunnels. Now out in the open, we stop chattering and start battling as we make our way back to the car.`,
+                                description: `"Our melee tapers the discourse." Despite scavenging the materials needed for our imaginary weapons, we could only wield them with playful menace inside the narrow steam tunnels. Now out in the open, we stop chattering and start battling as we make our way back to the car.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
