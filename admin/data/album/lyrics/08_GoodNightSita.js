@@ -351,7 +351,7 @@ export default {
                         anchor: `heart of gold inside`,
                         todo: REVIEW,
                         card: {
-                            description: `Mistakes made on one date still offered lessons that could be applied to the next. So dating felt like prying open one nesting doll to get to another, in the hope of reaching one that was solid at last.`,
+                            description: `Mistakes made on one date still taught me lessons that could be applied to the next. It felt like I was prying open one nesting doll to get to another, in the hope of finally reaching one that was solid to the core.`,
                             dotKeys: {
                                 [OBSERVATION]: true,
                             },

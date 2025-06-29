@@ -354,7 +354,7 @@ export default {
                                         isItalic: true,
                                         lyric: `least`,
                                     },
-                                    `effort into being liked— which contradicted all my assumptions about how a social hierarchy works. And yet, trying it their way didn't make me any more likable…`,
+                                    `effort into being liked— which ran counter to all my assumptions about how a social hierarchy works. And yet, trying it their way didn't make me any more likable…`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
