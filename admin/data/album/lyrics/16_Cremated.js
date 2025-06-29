@@ -1048,7 +1048,6 @@ export default {
                     lyricRight: [
                         {
                             anchor: `Redressed`,
-                            todo: REVIEW,
                             card: {
                                 description: `As I redress by pulling up my pants, I'm about to hear the bad news for which our little escapade today was meant as redress.`,
                                 dotKeys: {

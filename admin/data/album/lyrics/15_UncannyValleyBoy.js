@@ -1440,7 +1440,6 @@ export default {
                                     lyric: `Bildungsroman`,
                                 },
                             ],
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `A`,

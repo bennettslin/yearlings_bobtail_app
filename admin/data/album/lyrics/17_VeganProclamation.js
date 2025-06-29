@@ -744,7 +744,6 @@ export default {
                         `The stardust marks us, Odin,`,
                         {
                             anchor: `sparks zip through our heads`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
