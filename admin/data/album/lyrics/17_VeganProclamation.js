@@ -17,7 +17,7 @@ import {
     FORESHADOW_OF_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Vegan Proclamation',
@@ -192,16 +192,15 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVISE,
-                problem: `Don't mention camera.`,
+                todo: REVIEW,
                 card: {
                     description: [
-                        `As a child, I once sat with my mother to watch an old World War I movie. After the battle, the camera panned across a motionless scene of bombed houses and dead bodies while a lone gramophone, preserved amid the wreckage, played a sappy Italian`,
+                        `As a child, I once sat with my mother to watch an old war movie. Preserved amid the wreckage after the final battle, a lone gramophone played a sappy Italian`,
                         {
                             anchor: `parlor song`,
                             wiki: `Parlour_music`,
                         },
-                        `. The ironic contrast stuck with me, and I thought it might work well for this song.`,
+                        `. The ironic contrast stuck with me, and I thought it could work well for this song.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,

@@ -703,12 +703,12 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `As opportunities for social advancement started opening up, I could look back and even sympathize with the bullies by putting myself in their shoes. After all, in a world that roots for the strong, who`,
+                                    `Having moved up the social hierarchy, I could now look back on the bullies without personal judgment— even to the point of sympathizing with them. After all, in a world that roots for the strong, who`,
                                     {
                                         isItalic: true,
                                         lyric: `wouldn't`,
                                     },
-                                    `pursue every means available to avoid being weak?`,
+                                    `pursue any means available to avoid being weak?`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -795,7 +795,7 @@ export default {
                             todo: REVISE,
                             problem: `Don't need to say write twice.`,
                             card: {
-                                description: `The first songs I wrote for the band were all about being unlucky in love. So as my life improved, I needed to drink further amounts of alcohol to carry on with the lie that I was still the same inexperienced kid who wrote them.`,
+                                description: `Our first songs were all about being unlucky in love. So as my life improved, I needed to drink further amounts of alcohol to carry on with the lie that I was still the same inexperienced kid who wrote them.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
