@@ -35,7 +35,7 @@ export default {
     playerReferenceTime: 3094.348,
     playerStartTime: 3091.413,
     todo: REVIEW,
-    overview: `Having committed to writing and recording every song on my next album, I began to drift away from the local scene— which meant hanging out less with my bandmates. Since we stopped playing shows as a result, I had few opportunities to meet women after Miriam left me. Yet this time around… there was no word from Sita. It so happened that she'd fallen in love with someone else; I wasn't to win her back, ever again. Now all I had left was myself— and I didn't like myself much at all. I desperately wanted to be a good person once more, but I had no idea how.`,
+    overview: `Having committed to writing and recording every song on my next album, I began to drift away from the local scene— which meant hanging out less with my bandmates. Since we stopped playing shows as a result, I had few opportunities to meet women after Miriam left me. Only this time around, there was no word from Sita. She'd since fallen in love with someone else; I wasn't to win her back, ever again. So all I had left was myself now… and I didn't like myself much at all. I desperately wanted to be a good person once more, but I had no idea how.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -195,12 +195,12 @@ export default {
                 todo: REVIEW,
                 card: {
                     description: [
-                        `As a child, I once sat with my mother to watch an old war movie. Preserved amid the wreckage after the final battle, a lone gramophone played a sappy Italian`,
+                        `As a child, I once sat with my mother to watch an old war movie. After one last battle, a lone gramophone, preserved amid the wreckage, played a sappy Italian`,
                         {
                             anchor: `parlor song`,
                             wiki: `Parlour_music`,
                         },
-                        `. The ironic contrast stuck with me, and I thought it could work well for this song.`,
+                        `. The ironic contrast stuck with me, and I thought it could work for this song.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -278,12 +278,12 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `Sita had her own story to tell about mistreating a first pet: Upon receiving a kitten as a child, she hugged it so hard that it began to purr— and taking this as a sign of shared affection, she hugged it even harder. But years later, she learned that cats`,
+                                        `Sita had her own story to tell about mistreating a first pet: Upon receiving a kitten as a child, she hugged it so hard that it began to purr; taking this as a sign of contentment, she then hugged it even harder. Years later, though, she learned that cats`,
                                         {
                                             isItalic: true,
                                             lyric: `also`,
                                         },
-                                        `purr to cope with distress; looking back, then, she realized her kitten must've thought it was being crushed to death. She lived in guilt ever since.`,
+                                        `purr to cope with distress— and looking back, she realized her kitten must've thought it was being crushed to death. She lived in guilt ever since.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -470,7 +470,7 @@ export default {
                             anchor: `burger shrouds`,
                             todo: REVIEW,
                             card: {
-                                description: `Thanks to my vegan friends, I was already aware of how much our society commodifies animal suffering. So even something mundane, like a crumpled fast food wrapper littered on the sidewalk, would serve to remind me.`,
+                                description: `Thanks to my vegan friends, I became aware of how much our society commodifies animal suffering. And once that was so, I saw reminders of it everywhere— for example, a crumpled fast food wrapper littered on the sidewalk.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
