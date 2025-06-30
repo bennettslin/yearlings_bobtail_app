@@ -446,7 +446,14 @@ export default {
                             anchor: `ponders the children`,
                             todo: REVIEW,
                             card: {
-                                description: `My mother once advised me not to have children, given the autism that runs in our genes, and her difficulties in raising my brother as a result. But then I had to assume that any woman, in judging me as a potential life partner, would be thinking along the same lines.`,
+                                description: [
+                                    `My mother once advised me not to have children, given the autism that runs in our genes, and her struggles with raising my brother as a result. But then I had to assume that`,
+                                    {
+                                        isItalic: true,
+                                        lyric: `any`,
+                                    },
+                                    `woman, in judging my potential as a life partner, would be thinking along the same lines.`,
+                                ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -781,7 +788,7 @@ export default {
                                             anchor: `Fragile X`,
                                             wiki: `Fragile_X_syndrome`,
                                         },
-                                        `" is a genetic disorder caused by a mutated X chromosome that results in intellectual disability.`,
+                                        `" is a genetic disorder that results in intellectual disability. It's caused by a mutated X chromosome.`,
                                     ],
                                 },
                             ],

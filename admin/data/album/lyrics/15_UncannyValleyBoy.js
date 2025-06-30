@@ -562,7 +562,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     /**
                      * NOTE: Counter-melody is mentioned earlier in Ash
@@ -792,7 +791,6 @@ export default {
                         {
                             anchor: `Rama king`,
                             properNoun: true,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `In a subtle jab, my parents call me a "drama" king— to imply that everything I do is for attention.`,

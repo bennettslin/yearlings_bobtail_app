@@ -707,7 +707,6 @@ export default {
                         `weren't they`,
                         {
                             anchor: `right to take what's theirs`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Having moved up the social hierarchy, I could now look back on the bullies without passing judgment— and even begin to sympathize with them. After all, in a world that roots for the strong, who`,

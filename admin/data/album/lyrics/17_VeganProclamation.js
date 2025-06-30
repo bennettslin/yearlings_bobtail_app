@@ -35,7 +35,7 @@ export default {
     playerReferenceTime: 3094.348,
     playerStartTime: 3091.413,
     todo: REVIEW,
-    overview: `Having committed to writing and recording every song on my next album, I began to drift away from the local scene— which meant hanging out less with my bandmates. Since we stopped playing shows as a result, I had few opportunities to meet women after Miriam left me. Only this time around, there was no word from Sita. She'd since fallen in love with someone else; I wasn't to win her back, ever again. So all I had left was myself now… and I didn't like myself much at all. I desperately wanted to be a good person once more, but I had no idea how.`,
+    overview: `Having committed to writing and recording every song on my next album, I began to drift away from the local scene— which meant hanging out less with my bandmates. Since we stopped playing shows as a result, I had few opportunities to meet new women. Yet after Miriam left me… there wasn't a word from Sita. This time around, she'd fallen in love with someone else; I wasn't to win her back, ever again. So all I had left was myself now— and I didn't like myself much at all. I desperately wanted to be a good person once more, but I had no idea how.`,
     lyricUnits: [
         {
             unitMap: {},
