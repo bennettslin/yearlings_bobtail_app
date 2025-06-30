@@ -14,7 +14,7 @@ import {
     FLASHBACK_TO_WORMHOLE_PREFIX,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
-import { REDO, REST, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REDO, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'M',
@@ -749,7 +749,7 @@ export default {
                     lyric: [
                         {
                             anchor: `indentures dumbed`,
-                            todo: REST,
+                            todo: REVISE,
                             problem: `Is the connection between being unable to speak and being "dumbed" obvious?`,
                             card: {
                                 description: [

@@ -18,7 +18,7 @@ import {
     REFRAIN,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 /**
  * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the
@@ -37,7 +37,7 @@ export default {
     mixStartTime: `0:01:27.02`,
     playerReferenceTime: 756.159,
     playerStartTime: 755.661,
-    todo: REST,
+    todo: REVISE,
     problem: `I don't like that there's an "it" in both the second and third sentences, which refer to different things. Also not sure if the em-dash would be better in the second sentence. But I've already spent so long on this one…`,
     overview: `As my years of getting bullied grew unbearable, a strange letter arrived with promises of spiritual answers. All it asked for was a small payment, which I quickly mailed off. It was then revealed to me that I belonged to a race of astral beings— and as such, I had a mission to shut myself off from the world. So I adopted an unresponsive manner like my brother, leading me to feel a psychic bond with him. But as my sanity chipped away, I came to realize that I was in a mail-order cult…`,
     lyricUnits: [

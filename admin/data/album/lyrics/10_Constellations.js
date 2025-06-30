@@ -17,7 +17,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Constellations!',
@@ -257,7 +257,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `Full disclosure: I never got past the first fifty pages of`,
+                        `Full disclosure: I never got past the first forty pages of`,
                         {
                             isItalic: true,
                             lyric: `Finnegans Wake`,
@@ -1392,10 +1392,16 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REST,
-                problem: `Don't need to make the point about seeming out of place. Just point out that the rest of the song in its previous incarnation was otherwise scrapped, but the second chorus alone worked well, precisely because of the lack of literary puns.`,
+                todo: REVIEW,
                 card: {
-                    description: `If the lyrics for this second chorus seem out of place given the noticeable lack of literary puns, it's because they're a carryover from a previous incarnation of this song. I liked them enough to keep them, and they perfectly capture my moment of clarity at the cemetery.`,
+                    description: [
+                        `The lyrics in this second chorus were the first that I wrote for this song, back when all I had was the title, and before I decided to model it after`,
+                        {
+                            isItalic: true,
+                            lyric: `Finnegans Wake`,
+                        },
+                        `. Despite their lack of literary puns, I liked them too much to toss them out. Luckily, they turned out to be perfect for capturing my moment of clarity at the cemetery.`,
+                    ],
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGCRAFT]: true,
