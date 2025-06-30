@@ -446,7 +446,7 @@ export default {
                             anchor: `ponders the children`,
                             todo: REVIEW,
                             card: {
-                                description: `My mother once advised me not to have children, given the autism that runs in our genes, and her difficulties in raising my brother as a result. I had to assume, then, that any woman judging me as a potential life partner would be thinking along the same lines.`,
+                                description: `My mother once advised me not to have children, given the autism that runs in our genes, and her difficulties in raising my brother as a result. But then I had to assume that any woman, in judging me as a potential life partner, would be thinking along the same lines.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
