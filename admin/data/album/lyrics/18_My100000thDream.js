@@ -14,7 +14,7 @@ import {
     FORESHADOW_OF_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'My 100,000th Dream',
@@ -25,8 +25,9 @@ export default {
     referenceDescription: `Piano in measure 1`,
     mixStartTime: `0:01:22.94`,
     playerStartTime: 3332.826,
-    todo: REVIEW,
-    overview: `Each night I dreamt of happily reuniting with Sita, only to wake in panic as the reality came roaring back that she was truly gone forever. I'd then slog through the day under a cloud of despair, only to come home at night and lie awake until exhaustion overtook me— in dread of the cruel tricks to be played yet again by my unconscious mind. I had no idea when this torment would end. The answer, I feared, was never.`,
+    todo: REVISE,
+    problem: `It's just not good enough still.`,
+    overview: `Each night I dreamt of happily reuniting with Sita, only to wake in panic as the reality came roaring back that she was gone forever. After slogging through the day under a cloud of despair, I'd then come home, crawl into bed, and lie awake until exhaustion overtook me— in dread of the cruel tricks to be played yet again by my unconscious mind. I had no idea when this torment would end. The answer, I feared, was never.`,
     lyricUnits: [
         {
             unitMap: {},

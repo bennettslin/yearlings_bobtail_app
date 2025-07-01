@@ -33,7 +33,7 @@ export default {
     playerReferenceTime: 2951.729,
     playerStartTime: 2926.829,
     todo: REVIEW,
-    overview: `While I can't deny that dating White women helped to silence the nagging feeling I had of being genetically inferior, I honestly didn't seek them out. A case in point is Miriam, who was the storybook ending my ego had been waiting for: cute, hip, and drawn to me through no effort on my part. Well, as it turns out… we lasted a few months. I always did wonder afterward if she was slumming it with me.`,
+    overview: `While I can't deny that dating White women helped to silence the nagging feeling I had of being genetically inferior, I honestly didn't seek them out. A case in point is Miriam, who was the storybook ending my ego had been waiting for: cute, hip, and drawn to me through no effort on my part. But as it turns out… we lasted a few months. I always did wonder afterward if she was slumming it with me.`,
     isDoublespeaker: true,
     lyricUnits: [
         {
@@ -450,9 +450,9 @@ export default {
                                     `My mother once advised me not to have children, given the autism that runs in our genes, and her struggles with raising my brother as a result. But then I had to assume that`,
                                     {
                                         isItalic: true,
-                                        lyric: `any`,
+                                        lyric: `every`,
                                     },
-                                    `woman, in judging my potential as a life partner, would be thinking along the same lines.`,
+                                    `woman, in judging my worth as a life partner, would be thinking along the same lines.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -788,7 +788,7 @@ export default {
                                             anchor: `Fragile X`,
                                             wiki: `Fragile_X_syndrome`,
                                         },
-                                        `" is a genetic disorder that results in intellectual disability. It's caused by a mutated X chromosome.`,
+                                        `" is a genetic disorder that results in intellectual disability; it's caused by a mutated X chromosome.`,
                                     ],
                                 },
                             ],
