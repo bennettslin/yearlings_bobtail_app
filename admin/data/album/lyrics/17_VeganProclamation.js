@@ -35,7 +35,7 @@ export default {
     playerReferenceTime: 3094.348,
     playerStartTime: 3091.413,
     todo: REVIEW,
-    overview: `Having committed to writing and recording every song on my next album, I began to drift away from the local scene— which meant hanging out less with my bandmates. Since we stopped playing shows as a result, I had few opportunities to meet new women. Yet after Miriam left me… there wasn't a word from Sita this time around. She'd fallen in love with someone else; I wasn't to win her back, ever again. So all I had left was myself now— and I didn't like myself much at all. I desperately wanted to be a good person once more, but I had no idea how.`,
+    overview: `Having committed to working on the album alone, I began to drift away from the local scene. And since the Yearlings stopped playing shows as a result, I had few opportunities to meet new women after Miriam left me. Yet this time around… there was no word from Sita. She'd fallen in love with someone else; I wasn't to win her back, ever again. Now all I had was myself— and I didn't like myself much at all. I desperately wanted to be a good person once more, but I had no idea how.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -195,12 +195,12 @@ export default {
                 todo: REVIEW,
                 card: {
                     description: [
-                        `As a child, I once sat with my mother to watch an old war movie. After one last battle, a lone gramophone, preserved amid the wreckage, played a sappy Italian`,
+                        `As a child, I once sat with my mother to watch an old war movie. After one last battle, a lone gramophone, preserved amid the wreckage, played a sappy`,
                         {
                             anchor: `parlor song`,
                             wiki: `Parlour_music`,
                         },
-                        `. The ironic contrast stuck with me, and I thought it could work for this song.`,
+                        `. The ironic contrast stuck with me, and I thought it could work well for this song.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -278,7 +278,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `Sita had her own story to tell about mistreating a first pet: Upon receiving a kitten as a child, she hugged it so hard that it began to purr; taking this as a sign of contentment, she then hugged it even harder. Years later, though, she learned that cats`,
+                                        `Sita had her own story to tell about mistreating a first pet: Upon receiving a kitten as a child, she hugged it so hard that it began to purr; taking this as a sign of its serenity, she then hugged it even harder. Years later, though, she learned that cats`,
                                         {
                                             isItalic: true,
                                             lyric: `also`,

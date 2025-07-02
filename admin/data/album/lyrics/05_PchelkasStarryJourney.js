@@ -18,7 +18,7 @@ import {
     REFRAIN,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REVISE } from '../../../containers/Annotations/constants/todos'
 
 /**
  * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the
@@ -72,7 +72,6 @@ export default {
                             `"But F., that man is the`,
                             {
                                 anchor: `worst nuisance on the beach`,
-                                todo: REVIEW,
                                 card: {
                                     description: [
                                         `In`,

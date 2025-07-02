@@ -578,7 +578,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `But my appraisal was based on reason, not resentment. After all, if an almighty God truly had a gospel to spread, would he`,
+                                    `But my appraisal was based on reason, not resentment. After all, if an almighty God truly had a gospel to spread… would he`,
                                     {
                                         isItalic: true,
                                         lyric: `really`,

@@ -17,6 +17,7 @@ import {
     FLASHBACK_TO_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: '弟弟 (Didi)',
@@ -173,6 +174,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
 
@@ -188,7 +190,7 @@ export default {
                                 wiki: `A_Portrait_of_the_Artist_as_a_Young_Man`,
                             },
                         },
-                        `, begins in the simple prose of a child. Since my ambition was to do for rock music what he'd done for modern literature, I did the same by keeping the lyrics childlike in this opening song of my first album.`,
+                        `, begins in the simple prose of a child. Since my ambition was to do for rock music what he'd done for modern literature, I did the same by keeping the lyrics childlike in this opening song of our first album.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,

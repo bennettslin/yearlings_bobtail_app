@@ -33,7 +33,7 @@ export default {
     playerReferenceTime: 2951.729,
     playerStartTime: 2926.829,
     todo: REVIEW,
-    overview: `While I can't deny that dating White women helped to silence the nagging feeling I had of being genetically inferior, I honestly didn't seek them out. A case in point is Miriam, who was the storybook ending my ego had been waiting for: cute, hip, and drawn to me through no effort on my part. But as it turns out… we lasted a few months. I always did wonder afterward if she was slumming it with me.`,
+    overview: `While I can't deny that dating White women helped to silence the nagging feeling I had of being genetically inferior, I honestly didn't seek them out. A case in point is Miriam, who was the storybook ending my ego had been waiting for: cute, hip, and drawn to me through no effort on my part. Well, as it turns out… we lasted a few months. I always did wonder afterward if she was slumming it with me.`,
     isDoublespeaker: true,
     lyricUnits: [
         {
@@ -444,7 +444,6 @@ export default {
                         `Though, she`,
                         {
                             anchor: `ponders the children`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `My mother once advised me not to have children, given the autism that runs in our genes, and her struggles with raising my brother as a result. But then I had to assume that`,
@@ -772,7 +771,6 @@ export default {
                         },
                         {
                             anchor: `fragile ex`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `Given the horrors lurking in my genetic makeup, it was understandable why Miriam wanted to break up with me. Even so, she had to be gentle about it, knowing the kind of fragile ex-boyfriend I was sure to be.`,

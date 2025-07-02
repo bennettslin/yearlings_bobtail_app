@@ -1400,7 +1400,7 @@ export default {
                             isItalic: true,
                             lyric: `Finnegans Wake`,
                         },
-                        `. Despite their lack of literary puns, I liked them too much to toss them out. Luckily, they turned out to be perfect for capturing my moment of clarity at the cemetery.`,
+                        `. Despite their lack of literary puns, I liked them too much to toss them out. Luckily, they turned out to work perfectly for capturing my moment of clarity at the cemetery.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
