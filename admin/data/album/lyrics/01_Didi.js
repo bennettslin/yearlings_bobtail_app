@@ -177,12 +177,11 @@ export default {
                 todo: REVIEW,
                 card: {
                     description: [
-
                         {
                             anchor: `James Joyce`,
                             wiki: `James_Joyce`,
                         },
-                        `'s semi-autobiographical first novel,`,
+                        `'s first novel,`,
                         {
                             isItalic: true,
                             lyric: {
@@ -190,7 +189,7 @@ export default {
                                 wiki: `A_Portrait_of_the_Artist_as_a_Young_Man`,
                             },
                         },
-                        `, begins in the simple prose of a child. Since my ambition was to do for rock music what he'd done for modern literature, I did the same by keeping the lyrics childlike in this opening song of our first album.`,
+                        `, begins in the prose of a child. Since my ambition was to do for rock music what he'd done for modern literature, I did the same by keeping the lyrics simple in this opening song of my band's first album.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,

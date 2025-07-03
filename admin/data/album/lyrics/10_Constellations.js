@@ -1743,9 +1743,10 @@ export default {
                     lyric: [
                         {
                             anchor: `Pullar switch`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Back at Howie's place, I'm crashing on a couch in his attic. There's an old black-and-white television in front of me, and I "pull the" switch to turn it on.`,
+                                    description: `Back at Howie's place, I'm crashing on a couch in his attic. There's an old black-and-white television set in front of me, and I "pull the" switch to turn it on.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true,

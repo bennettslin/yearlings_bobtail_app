@@ -195,7 +195,7 @@ export default {
                 todo: REVIEW,
                 card: {
                     description: [
-                        `As a child, I once sat with my mother to watch an old war movie. After one last battle, a lone gramophone, preserved amid the wreckage, played a sappy`,
+                        `As a child, I once sat with my mother to watch an old war movie on television. After the battle, a lone gramophone, preserved amid the wreckage, played a sappy`,
                         {
                             anchor: `parlor song`,
                             wiki: `Parlour_music`,

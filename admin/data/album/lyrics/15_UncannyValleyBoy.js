@@ -853,6 +853,7 @@ export default {
                         `A`,
                         {
                             anchor: `nation paused`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In 1987, a`,
@@ -865,7 +866,7 @@ export default {
                                         isItalic: true,
                                         lyric: `Ramayana`,
                                     },
-                                    `was broadcast across India. For an hour each week, the shops and train stations would largely be deserted as the Hindu population stayed at home, glued to their televisions.`,
+                                    `was broadcast across India. For an hour each week, the shops and train stations would largely be deserted as the Hindu population stayed at home, glued to their television sets.`,
                                 ],
                             },
                         },
