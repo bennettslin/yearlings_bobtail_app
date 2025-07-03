@@ -853,7 +853,6 @@ export default {
                         `A`,
                         {
                             anchor: `nation paused`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In 1987, a`,

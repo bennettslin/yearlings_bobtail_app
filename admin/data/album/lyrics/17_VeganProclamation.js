@@ -192,7 +192,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `As a child, I once sat with my mother to watch an old war movie on television. After the battle, a lone gramophone, preserved amid the wreckage, played a sappy`,

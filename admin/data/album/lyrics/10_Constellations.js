@@ -1400,7 +1400,7 @@ export default {
                             isItalic: true,
                             lyric: `Finnegans Wake`,
                         },
-                        `. Despite their lack of literary puns, I liked them too much to toss them out. Luckily, they turned out to work perfectly for capturing my moment of clarity at the cemetery.`,
+                        `. Rather than toss them out, I realized their lack of literary puns could be said to convey my moment of clarity at the cemetery.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -1743,7 +1743,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Pullar switch`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `Back at Howie's place, I'm crashing on a couch in his attic. There's an old black-and-white television set in front of me, and I "pull the" switch to turn it on.`,
