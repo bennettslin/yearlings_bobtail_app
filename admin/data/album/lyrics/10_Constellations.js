@@ -1080,7 +1080,7 @@ export default {
                             anchor: `Are Melee tapirs`,
                             todo: REVIEW,
                             card: {
-                                description: `"Our melee tapers the discourse." Despite scavenging the materials needed for our imaginary weapons, we could only wield them with playful menace inside the narrow steam tunnels. Now out in the open, we stop chattering and start battling as we make our way back to the car.`,
+                                description: `Though we'd scavenged all the materials needed to make our imaginary weapons, we could only brandish them with playful menace inside the narrow steam tunnels. Now out in the open, "our melee tapers the discourse," as we stop chattering and start battling on our way back to the car.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -1400,7 +1400,7 @@ export default {
                             isItalic: true,
                             lyric: `Finnegans Wake`,
                         },
-                        `. Rather than toss them out, I realized their lack of literary puns could be said to convey my moment of clarity at the cemetery.`,
+                        `. Luckily, there was no need to scrap them: As it turns out, their absence of literary puns was perfect for capturing my moment of clarity at the cemetery.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,

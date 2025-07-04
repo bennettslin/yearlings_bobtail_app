@@ -189,7 +189,7 @@ export default {
                                 wiki: `A_Portrait_of_the_Artist_as_a_Young_Man`,
                             },
                         },
-                        `, opens in childlike prose. Since my dream was to do for rock music what he'd done for modern literature, I did likewise by keeping the lyrics simple in this opening song of my band's first album.`,
+                        `, opens in childlike prose. Since my dream was to do for rock music what he'd done for modern literature, I had my band's first album do the same with this opening song.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
