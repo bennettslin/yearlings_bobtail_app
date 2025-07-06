@@ -273,7 +273,6 @@ export default {
                         `and now I know why the`,
                         {
                             anchor: `battered kitten purrs`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [

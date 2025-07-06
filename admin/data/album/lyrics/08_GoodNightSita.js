@@ -351,7 +351,7 @@ export default {
                         anchor: `heart of gold inside`,
                         todo: REVIEW,
                         card: {
-                            description: `Mistakes made on one date still offered lessons that could be applied to the next— like prying open one nesting doll to get to another, in the hope of reaching one that's solid at last.`,
+                            description: `Mistakes made on one date still offered lessons that could be applied to the next. It was like prying open one nesting doll to get to another, in the hope of finally reaching one that's solid.`,
                             dotKeys: {
                                 [OBSERVATION]: true,
                             },

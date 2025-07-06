@@ -1392,7 +1392,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `The lyrics in this second chorus were the first that I wrote for this song, back when all I had was the title, and before I decided to model it after`,
