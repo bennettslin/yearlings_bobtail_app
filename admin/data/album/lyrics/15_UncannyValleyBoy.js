@@ -301,7 +301,7 @@ export default {
                             anchor: `Upon purchase of a queen's ship`,
                             todo: REVIEW,
                             card: {
-                                description: `RI Research promised that I'd escape my torment once a spaceship was funded by my payments. And so began my lifelong tendency to bide my time while building toward corrective justice— much like how "a pawn perches over queenship" as it reaches the far end of the chessboard.`,
+                                description: `RI Research promised I could escape my torment once a spaceship was funded by my payments. And so began my lifelong tendency to bide my time while building toward corrective justice— much like how "a pawn perches over queenship" as it reaches the far end of the chessboard.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -1247,7 +1247,7 @@ export default {
                             anchor: `faces you flip override`,
                             todo: REVIEW,
                             card: {
-                                description: `As I grew into a dour adolescent, my mother would ask what happened to the playful little boy I'd once been— which made me wonder myself. I think I learned early on to adopt the optimal persona for every situation, and as time went by, those personas began to pile up. So it made no sense to keep any old ones lying around once they no longer served their purpose.`,
+                                description: `As I grew into a dour adolescent, my mother would ask what happened to the playful little boy I'd once been— which made me wonder myself. I think I just learned early on to adopt the optimal persona for every situation, and as time went by, those personas began to pile up. So it made no sense to keep any old ones lying around once they no longer served their purpose.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

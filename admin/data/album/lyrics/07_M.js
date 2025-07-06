@@ -941,7 +941,7 @@ export default {
                             todo: REDO,
                             problem: `I don't think I like what this is saying. Make sure it flows from the previous one.`,
                             card: {
-                                description: `But I couldn't count on my friends to tell me the entire truth. As dear as we were to each other, each of us was still looking out for ourselves.`,
+                                description: `But I couldn't count on my friends to tell me the plain truth. As dear as we were to each other, each of us was still looking out for ourselves.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
