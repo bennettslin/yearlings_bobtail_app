@@ -83,8 +83,9 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
-                    description: `I wrote the music for this song a while back after waking from an awful nightmare. The premise seemed laughable by day's end, though, so I quietly shelved it. Still, I liked its gloomy chords and moody tempo changes, and years later, I realized they'd serve well for telling about a late-night encounter with a nightmarish version of my parents.`,
+                    description: `I wrote the music for this song a while back after waking from an awful nightmare. The premise seemed laughable by day's end, though, so I quietly shelved it. Still, I liked its gloomy chords and moody tempo changes, and years later, I decided they'd serve well for telling about a late-night encounter with a nightmarish version of my parents.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGCRAFT]: true,
@@ -301,7 +302,7 @@ export default {
                             anchor: `Upon purchase of a queen's ship`,
                             todo: REVIEW,
                             card: {
-                                description: `RI Research promised I could escape my torment once a spaceship was funded by my payments. And so began my lifelong tendency to bide my time while building toward corrective justice— much like how "a pawn perches over queenship" as it reaches the far end of the chessboard.`,
+                                description: `RI Research promised I could escape the torment once a spaceship was funded by my payments. And so began my lifelong tendency to bide my time while building toward corrective justice— much like how "a pawn perches over queenship" as it reaches the far end of the chessboard.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -1247,7 +1248,7 @@ export default {
                             anchor: `faces you flip override`,
                             todo: REVIEW,
                             card: {
-                                description: `As I grew into a dour adolescent, my mother would ask what happened to the playful little boy I'd once been— which made me wonder myself. I think I just learned early on to adopt the optimal persona for every situation, and as time went by, those personas began to pile up. So it made no sense to keep any old ones lying around once they no longer served their purpose.`,
+                                description: `As I grew into a dour adolescent, my mother would ask what happened to the playful little boy I'd once been, which then made me wonder myself. I think I learned early on to adopt the optimal persona for every situation— and as time went by, those personas began to pile up. So it made no sense to keep any old ones lying around once they no longer served their purpose.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

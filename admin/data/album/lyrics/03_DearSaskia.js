@@ -67,7 +67,7 @@ export default {
                             anchor: `Beatles`,
                             wiki: `The_Beatles`,
                         },
-                        `— and to put theory into practice, I came up with the melodies and chords now pieced together here. For so long, I didn't make use of them; all I could hear was the sound of me trying too hard. But years later, I realized this was exactly what I was after, in writing a song about an overwrought letter to Sasha.`,
+                        `— and to put theory into practice, I came up with the melodies and chords now pieced together here. For so long, I found them too embarrassing to use; all I could hear in them was the sound of me trying too hard. But years later, in writing a song about an overwrought letter to Sasha, I realized this was exactly what it should sound like.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
