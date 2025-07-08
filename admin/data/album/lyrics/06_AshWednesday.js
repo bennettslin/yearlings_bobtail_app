@@ -13,6 +13,7 @@ import {
     IS_UNIT_DOT,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Ash Wednesday',
@@ -297,9 +298,10 @@ export default {
                         `I purge, with a`,
                         {
                             anchor: `dirge she'd deride`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Up until then, I'd thought of songwriting as just a matter of combining chords and melodies. But Catherine valued music for its lyrics— and because mine at the time were of the nonsensical variety, she was never impressed by any song of mine that I played for her.`,
+                                    description: `Up until then, I'd thought of songwriting as just a matter of composing melodies and chords. But Catherine valued music for its lyrics— and because mine at the time were of the nonsensical variety, she wasn't impressed by any of my songs that I played for her.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
