@@ -67,7 +67,7 @@ export default {
                             anchor: `Beatles`,
                             wiki: `The_Beatles`,
                         },
-                        `— and to put theory into practice, I came up with the melodies and chords now pieced together here. For so long, I found them too embarrassing to use; all I could hear in them was the sound of me trying too hard. But years later, in writing a song about an overwrought letter to Sasha, I realized this was exactly what it should sound like.`,
+                        `— and to put theory into practice, I came up with the chords and melodies now pieced together here. For so long, I found them too embarrassing to use; all I could hear in them was the sound of me trying too hard. But years later, in writing a song about an overwrought letter to Sasha, I realized this was exactly what it should sound like.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -665,8 +665,9 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
-                    description: `It's easy to write songs by coming up with a four-chord loop, then layering a melody on top. But my theory was that the Beatles wrote the melody and chords together, one measure at a time, as an indivisible whole— and so I aspired to do the same. I was always happiest with results like the chorus here, where the music wanders for a long stretch without looping back, resulting in an odd number of measures.`,
+                    description: `It's easy to write songs by coming up with a four-chord loop, then layering a melody on top. But my theory was that the Beatles wrote the chords and melodies together, one measure at a time, as an indivisible whole— and so I aspired to do the same. I was always happiest with results like the chorus here, where the music wanders for a long stretch without looping back, resulting in an odd number of measures.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },
