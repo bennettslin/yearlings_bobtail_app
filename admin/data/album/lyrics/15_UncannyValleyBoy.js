@@ -83,9 +83,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
-                    description: `I wrote the music for this song a while back after waking from an awful nightmare. The premise seemed laughable by day's end, though, so I quietly shelved it. Still, I liked its gloomy chords and moody tempo changes, and years later, I decided they'd serve well for telling about a late-night encounter with a nightmarish version of my parents.`,
+                    description: `I wrote the music for this song a while back after waking from an awful nightmare. The premise seemed laughable by day's end, though, so I quietly shelved it. Still, I liked its gloomy chords and moody tempo changes, and years later, I realized they'd serve well for telling about a late-night encounter with a nightmarish version of my parents.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGCRAFT]: true,
@@ -300,7 +299,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Upon purchase of a queen's ship`,
-                            todo: REVIEW,
                             card: {
                                 description: `RI Research promised I could escape the torment once a spaceship was funded by my payments. And so began my lifelong tendency to bide my time while building toward corrective justice— much like how "a pawn perches over queenship" as it reaches the far end of the chessboard.`,
                                 dotKeys: {

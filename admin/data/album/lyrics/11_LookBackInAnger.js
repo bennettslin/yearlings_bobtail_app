@@ -578,12 +578,12 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `But my appraisal was based on reason, not resentment. After all, if you were an almighty God with a gospel to spread, would`,
+                                    `But my appraisal was based on reason, not resentment. Because, think about it: If`,
                                     {
                                         isItalic: true,
                                         lyric: `you`,
                                     },
-                                    `entrust this job to the very tormentors of those you hope to reach?`,
+                                    ` were an almighty God, and you had a gospel to spread, would you entrust this job to the very tormentors of those you hope to reach?`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,

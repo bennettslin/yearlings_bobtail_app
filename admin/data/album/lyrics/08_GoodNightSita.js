@@ -11,7 +11,6 @@ import {
     POSTCHORUS,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Good Night, Sita',
@@ -349,7 +348,6 @@ export default {
                     mixTime: `0:30:07.08`,
                     lyric: {
                         anchor: `heart of gold inside`,
-                        todo: REVIEW,
                         card: {
                             description: `Mistakes made on one date still offered lessons that could be applied to the next. It was like prying open one nesting doll to get to another, in the hope of reaching one that's solid at last.`,
                             dotKeys: {
