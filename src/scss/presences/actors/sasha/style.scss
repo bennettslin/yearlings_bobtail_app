@@ -1,8 +1,8 @@
 .sasha#{$suffix} {
     .sashaHairTie { fill: hsl(102, 41%, 57%); }
     .sashaShirt { fill: hsl(187, 40%, 78%); }
-    .birthrightLight { fill: hsl(197, 32%, 55%); }
-    .birthrightDark { fill: hsl(215, 32%, 38%); }
+    // .birthrightLight { fill: hsl(197, 32%, 55%); }
+    // .birthrightDark { fill: hsl(215, 32%, 38%); }
 
     .sashaPants { fill: hsl(44, 27%, 59%); }
     .sashaSock { fill: hsl(102, 27%, 65%); }
@@ -12,8 +12,8 @@
     &.past#{$suffix} {
         .sashaHairTie { fill: hsl($HUE_PAST, 41%, 57%); }
         .sashaShirt { fill: hsl($HUE_PAST, 40%, 78%); }
-        .birthrightLight { fill: hsl($HUE_PAST, 32%, 55%); }
-        .birthrightDark { fill: hsl($HUE_PAST, 32%, 38%); }
+        // .birthrightLight { fill: hsl($HUE_PAST, 32%, 55%); }
+        // .birthrightDark { fill: hsl($HUE_PAST, 32%, 38%); }
         .sashaPants { fill: hsl($HUE_PAST, 27%, 59%); }
         .sashaSock { fill: hsl($HUE_PAST, 27%, 65%); }
         .sashaShoe { fill: hsl($HUE_PAST, 7%, 48%); }
