@@ -90,7 +90,9 @@ export default {
                     mixTime: `0:05:18.75`,
                     lyric: [
                         {
-                            anchor: `reverends, paused`,
+                            // NOTE: I changed from "reverends."
+                            anchor: `reverendse, paused`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -99,7 +101,7 @@ export default {
                                             anchor: `UCLA`,
                                             wiki: `University_of_California,_Los_Angeles`,
                                         },
-                                        `campus. Since I'm the experienced Robitussin user of the group, the others follow my lead in treating it as a mystical journey.`,
+                                        `campus. Since I'm the only one who's done Robitussin before, the others follow my lead in treating it as a mystical journey.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -115,7 +117,7 @@ export default {
                                                 wiki: `Finnegans_Wake`,
                                             },
                                         },
-                                        `, James Joyce's ambitious final novel, opens with the line, "riverrun, past Eve and Adam's." So I figured this song could start there as well.`,
+                                        `, James Joyce's final novel, opens with the line, "riverrun, past Eve and Adam's." So I figured this song could start there as well.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -1986,17 +1988,19 @@ export default {
                         `…`,
                         {
                             anchor: `"Rejoyce!" bellow the`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
                                         `"'Rejoice!' bellow the reverends." Stuck with nothing to watch but`,
                                         {
-                                            anchor: `public-access`,
-                                            wiki: `Public-access_television`,
-                                        },
-                                        {
                                             anchor: `televangelists`,
                                             wiki: `Televangelism`,
+                                        },
+                                        `on`,
+                                        {
+                                            anchor: `public access`,
+                                            wiki: `Public-access_television`,
                                         },
                                         `, I observe that every religion's pioneering spirit eventually degrades into convention and routine— as does every person's youthful outlook. But in the meantime, we're just halfway through summer, and more nights of Robitussin await…`,
                                     ],
@@ -2012,7 +2016,7 @@ export default {
                                             isItalic: true,
                                             lyric: `Finnegans Wake`,
                                         },
-                                        `to wrap back onto the first, so I "re-Joyced" by indulging in the same conceit.`,
+                                        `to wrap back onto the first, so I "re-Joyced" by having this song end the same way.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
