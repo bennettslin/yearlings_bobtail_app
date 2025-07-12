@@ -35,7 +35,7 @@ export default {
     playerReferenceTime: 3094.348,
     playerStartTime: 3091.413,
     todo: REVIEW,
-    overview: `Having committed to working on the album alone, I began to drift away from the local scene. And since the Yearlings stopped playing shows as a result, I had few opportunities to meet new women after Miriam left me. Yet this time around… there was no word from Sita. She'd fallen in love with someone else; I wasn't to win her back, ever again. Now all I had was myself— and I didn't like myself much at all. I desperately wanted to be a good person once more, but I had no idea how.`,
+    overview: `Having committed to working on the album alone, I began to drift away from the local scene. As a result, the band stopped playing shows— which meant I had few opportunities to meet new women. Yet after Miriam left me… there was no word from Sita this time around. She'd fallen in love with someone else; I wasn't to win her back, ever again. Now all I had was myself— and I didn't like myself much at all. I desperately wanted to be a good person once more, but I had no idea how.`,
     lyricUnits: [
         {
             unitMap: {},
