@@ -30,7 +30,7 @@ export default {
     // This is a magic number adjusted by ear. In the mix, it's actually 41.66.
     mixSamplingFrequency: 41.64,
     todo: REVIEW,
-    overview: `With the band becoming a fixture in the local scene, I began to command more attention than I'd ever known, particularly from women. And yet, my misery didn't fade; it just simmered into a quiet resentment. I also began to regret my relationship with Sita, which now felt like a decision I'd been coerced to make— under deprived conditions from which I was now free.`,
+    overview: `With the band becoming a fixture in the local scene, I began to command more attention than I'd ever known, particularly from women. And yet, my misery didn't fade; it just simmered into a quiet resentment. I also began to regret my relationship with Sita, which now felt like a decision I'd been coerced to make, under deprived conditions from which I'd since escaped.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -578,14 +578,7 @@ export default {
                             anchor: `His obit not a bang`,
                             todo: REVIEW,
                             card: {
-                                description: [
-                                    `But my appraisal was based on reason, not resentment. Because, if`,
-                                    {
-                                        isItalic: true,
-                                        lyric: `you`,
-                                    },
-                                    ` were an almighty God hoping to reach me with your gospel… why would you choose my tormentors, of all people, to be your messengers?`,
-                                ],
+                                description: `But my appraisal was based on reason, not resentment. After all, if an almighty God were truly hoping to reach me with his gospel… why would he choose my tormentors, of all people, to be its messengers?`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

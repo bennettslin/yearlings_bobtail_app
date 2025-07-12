@@ -92,7 +92,6 @@ export default {
                         {
                             // NOTE: I changed from "reverends."
                             anchor: `reverendse, paused`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -1082,7 +1081,7 @@ export default {
                             anchor: `Are Melee tapirs`,
                             todo: REVIEW,
                             card: {
-                                description: `Despite scavenging all the materials for our make-believe weapons, we could only brandish them inside the narrow steam tunnels. Now out in the open, "our melee tapers the discourse," as we stop chattering and start battling all the way back to Howie's car.`,
+                                description: `Despite scavenging all the materials for our make-believe weapons, we could do no more than brandish them within the narrow steam tunnels. Now out in the open, "our melee tapers the discourse"— that is, we stop chattering and start battling— lasting all the way back to Howie's car.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -1988,7 +1987,6 @@ export default {
                         `…`,
                         {
                             anchor: `"Rejoyce!" bellow the`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
