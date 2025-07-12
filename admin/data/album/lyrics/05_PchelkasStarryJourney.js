@@ -18,7 +18,7 @@ import {
     REFRAIN,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVISE } from '../../../containers/Annotations/constants/todos'
+import { REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 /**
  * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the
@@ -72,6 +72,7 @@ export default {
                             `"But F., that man is the`,
                             {
                                 anchor: `worst nuisance on the beach`,
+                                todo: REVIEW,
                                 card: {
                                     description: [
                                         `In`,
@@ -87,7 +88,7 @@ export default {
                                                 wiki: `Beautiful_Losers`,
                                             },
                                         },
-                                        `, the character F. tires of getting bullied at the beach. So he signs up for the Charles Axis bodybuilding course advertised in a comic book— only to discover that Charles Axis is the one who bullies him. It's a funny passage from an otherwise tragic story, and I'm reminded of it any time I reflect on my own misadventures in mail order; in each case, I can't help but smile at the absurdity.`,
+                                        `, the character F. tires of getting bullied at the beach. So he signs up for the Charles Axis bodybuilding course advertised in a comic book— only to discover that Charles Axis is the one who bullies him. It's a funny passage from an otherwise tragic story, and I'm reminded of it anytime I reflect on my own misadventures in mail order; in each case, I can't help but smile at the absurdity.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
