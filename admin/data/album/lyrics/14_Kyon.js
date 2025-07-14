@@ -15,7 +15,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVISE } from '../../../containers/Annotations/constants/todos'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'क्यों? (Kyon?)',
@@ -30,10 +30,14 @@ export default {
     mixStartTime: `0:00:00.27`,
     playerReferenceTime: 2498.410,
     playerStartTime: 2496.296,
-    todo: REVISE,
-    problem: `Revert to making original point.`,
+    todo: REVIEW,
     overview: [
-        `Though it shames me to say so, even then I could see that my behavior was degenerating into cruelty. What wasn't so clear to me was why. In hindsight, it's because I'd act up in small ways, hoping for an easy breakup— but Sita was just as determined to work it out, and she'd endure. So then I'd behave even more obnoxiously the next time… and on and on. In time I came to see how thoroughly her sense of worth was tied to our relationship. I was fighting for me; she was fighting for us.`,
+        `Though it shames me to say this, even then I could see that my behavior had degenerated into cruelty; what wasn't yet clear was`,
+        {
+            isEmphasis: true,
+            lyric: `why`,
+        },
+        `. In hindsight, it started with me acting up in small ways, hoping for an easy breakup— but since Sita was no less determined to work it out, she'd endure. Which meant I had to behave even more obnoxiously the next time… and on it went. In time I came to see how thoroughly her self-worth was tied to our relationship. I was fighting for me; she was fighting for us.`,
     ],
     lyricUnits: [
         {
