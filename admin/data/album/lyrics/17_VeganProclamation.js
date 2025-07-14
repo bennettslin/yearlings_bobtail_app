@@ -35,7 +35,7 @@ export default {
     playerReferenceTime: 3094.348,
     playerStartTime: 3091.413,
     todo: REVIEW,
-    overview: `Having committed to working on the album alone, I began to drift away from the local scene. As a result, the band stopped playing shows— which meant I had few opportunities to meet new women after Miriam left me. Yet this time around… there was no word from Sita. She'd fallen in love with someone else; I wasn't to win her back, ever again. Now all I had was myself— and I didn't like myself much at all. I desperately wanted to be a good person once more, but I had no idea how.`,
+    overview: `Having committed to working on the album on my own, I began to drift away from the local scene. As a result, the band stopped playing shows— so after Miriam left me, I had few opportunities to meet new women. Yet this time around, there was no word from Sita. She'd fallen in love with someone else; I wasn't to come back to her, ever again. Now all I had was myself— and I didn't like myself much at all. I desperately wanted to be a good person once more, but I had no idea how…`,
     lyricUnits: [
         {
             unitMap: {},
@@ -468,7 +468,7 @@ export default {
                             anchor: `burger shrouds`,
                             todo: REVIEW,
                             card: {
-                                description: `Thanks to my vegan friends, I became aware of how much our society commodifies animal suffering. And once that was so, I saw reminders of it everywhere— for example, a crumpled fast food wrapper littered on the sidewalk.`,
+                                description: `Thanks to my vegan friends, I became aware of how much our society commodifies animal suffering. And once this was so, I saw reminders of it everywhere— in a fast food wrapper crumpled on the sidewalk, for instance.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

@@ -1081,7 +1081,7 @@ export default {
                             anchor: `Are Melee tapirs`,
                             todo: REVIEW,
                             card: {
-                                description: `After scavenging the materials for our imaginary weapons, we could only wield them with playful menace inside the cramped steam tunnels. Now out in the open, "our melee tapers the discourse"— that is, we stop chattering and start battling— all the way back to Howie's car.`,
+                                description: `"Our melee tapers the discourse." Though we'd scavenged enough materials to make imaginary weapons, the steam tunnels were too cramped for us to do much more than brandish them. Now out in the open, we stop chattering and start battling on our way back to Howie's car.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
