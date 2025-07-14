@@ -605,7 +605,7 @@ export default {
                         },
                         `. So I committed to join them— and thus, like Wilson, I held off any worries about recreating my sound onstage. Upon completing this album, however, I learned that the indie labels will only sign you once you can play shows`,
                         {
-                            isItalic: true,
+                            isEmphasis: true,
                             lyric: `without`,
                         },
                         `their help. For this reason, then, they wrote me off as a hobbyist… and still do to this day.`,

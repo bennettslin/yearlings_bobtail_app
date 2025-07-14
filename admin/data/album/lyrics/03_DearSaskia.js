@@ -577,7 +577,7 @@ export default {
                                 description: [
                                     `Of course, it's far more common to say that boys will "`,
                                     {
-                                        isItalic: true,
+                                        isEmphasis: true,
                                         lyric: `be`,
                                     },
                                     `" boys— but one tends to follow the other. It surprised me when school aides declined to intervene on behalf of the bullied, as if doing so would disturb the natural order of the middle school ecosystem.`,

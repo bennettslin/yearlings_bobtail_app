@@ -32,7 +32,9 @@ export default {
     playerStartTime: 2496.296,
     todo: REVISE,
     problem: `Revert to making original point.`,
-    overview: `It shames me to say so, but even then I could see that my behavior had degenerated into cruelty. What wasn't so clear was how it came to happen. In hindsight, it's because I'd act up in small ways, hoping for an easy breakup— but Sita was just as determined to work it out, and she'd endure. So then I'd behave even more obnoxiously the next time… and on and on. In time I came to see how thoroughly her sense of worth was tied to our relationship. I was fighting for me; she was fighting for us.`,
+    overview: [
+        `Though it shames me to say so, even then I could see that my behavior was degenerating into cruelty. What wasn't so clear to me was why. In hindsight, it's because I'd act up in small ways, hoping for an easy breakup— but Sita was just as determined to work it out, and she'd endure. So then I'd behave even more obnoxiously the next time… and on and on. In time I came to see how thoroughly her sense of worth was tied to our relationship. I was fighting for me; she was fighting for us.`,
+    ],
     lyricUnits: [
         {
             unitMap: {},

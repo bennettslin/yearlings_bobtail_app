@@ -448,7 +448,7 @@ export default {
                                 description: [
                                     `My mother once advised me not to have children, given the autism that runs in our genes, and her struggles with raising my brother as a result. But then I had to assume that`,
                                     {
-                                        isItalic: true,
+                                        isEmphasis: true,
                                         lyric: `every`,
                                     },
                                     `woman, in judging my worth as a life partner, would be thinking along the same lines.`,

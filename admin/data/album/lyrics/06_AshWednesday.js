@@ -113,7 +113,7 @@ export default {
                                 description: [
                                     `When Catherine visited my apartment for the first time, she glanced around and remarked that she didn't see any books. "I don't read," I joked— though it was partly in truth. As children, my sister was the voracious bookworm and aspiring writer, so I set myself apart by taking up hobbies that`,
                                     {
-                                        isItalic: true,
+                                        isEmphasis: true,
                                         lyric: `didn't`,
                                     },
                                     `involve words, like music and illustration.`,
@@ -372,7 +372,7 @@ export default {
                                 description: [
                                     `But her compliment is less than sincere, since referencing a poet studied by middle schoolers is hardly an impressive feat. And so, annoyed at being made to put down the Joyce novel she's reading, Catherine amuses herself by putting`,
                                     {
-                                        isItalic: true,
+                                        isEmphasis: true,
                                         lyric: `me`,
                                     },
                                     `down— for thinking I could ever be the James Joyce of lyricists.`,
@@ -548,12 +548,12 @@ export default {
                                     description: [
                                         `Of course, if Catherine`,
                                         {
-                                            isItalic: true,
+                                            isEmphasis: true,
                                             lyric: `were`,
                                         },
                                         `a Traveller, we'd be even`,
                                         {
-                                            isItalic: true,
+                                            isEmphasis: true,
                                             lyric: `less`,
                                         },
                                         `compatible: After all, there's no room for a homebody like me in any roving community.`,

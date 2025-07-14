@@ -349,7 +349,7 @@ export default {
                                 description: [
                                     `The most popular kids in middle school seemed to put the`,
                                     {
-                                        isItalic: true,
+                                        isEmphasis: true,
                                         lyric: `least`,
                                     },
                                     `effort into being liked— which ran counter to all my assumptions about how a social hierarchy works. And yet, trying it their way didn't make me any more likable…`,
@@ -1003,7 +1003,7 @@ export default {
                                 description: [
                                     `Since a spy's success hinges upon staying hidden, their exploits won't be known until they've been captured— at which point they'll face death by firing squad. And in my desire to join a friendly squad, I faced a similar dilemma: Yes, I`,
                                     {
-                                        isItalic: true,
+                                        isEmphasis: true,
                                         lyric: `could`,
                                     },
                                     `open up to my classmates, and thus sabotage all my previous efforts to stay unresponsive… but now I'd have to explain why I turned so weird in the first place.`,

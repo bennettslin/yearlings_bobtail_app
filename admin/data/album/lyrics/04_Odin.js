@@ -456,7 +456,7 @@ export default {
                                 description: [
                                     `When I was growing up in the '80s, no one thought twice to say "Oriental"; it's even printed on my birth certificate. The word was made offensive at around the same time that "queer" was being reclaimed by the gay community. The latter tactic always made more sense to me: Isn't it better for there to be`,
                                     {
-                                        isItalic: true,
+                                        isEmphasis: true,
                                         lyric: `fewer`,
                                     },
                                     `slurs against your kind?`,

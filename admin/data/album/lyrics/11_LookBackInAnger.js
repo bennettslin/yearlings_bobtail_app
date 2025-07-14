@@ -703,7 +703,7 @@ export default {
                                 description: [
                                     `Having moved up the social hierarchy, I could now look back on the bullies without passing judgment— and even begin to sympathize with them. After all, in a world that roots for the strong, who`,
                                     {
-                                        isItalic: true,
+                                        isEmphasis: true,
                                         lyric: `wouldn't`,
                                     },
                                     `accept all the means they've been given to avoid being weak?`,

@@ -321,12 +321,12 @@ export default {
                                 description: [
                                     `Throughout our budding friendship, Sita had neglected to mention her sexual intimacy with past partners. When I found out, she tried to console me by pointing out that it was always shy of intercourse; and furthermore, she never went all the way with them`,
                                     {
-                                        isItalic: true,
+                                        isEmphasis: true,
                                         lyric: `precisely`,
                                     },
                                     `because she hadn't loved them. She loved`,
                                     {
-                                        isItalic: true,
+                                        isEmphasis: true,
                                         lyric: `me`,
                                     },
                                     `— which meant I'd won. But it still stung to find out so late, and this only deepened my resentment.`,

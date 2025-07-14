@@ -745,7 +745,7 @@ export default {
                                 description: [
                                     `I learned to welcome rejection, since I could always use it as subject matter when writing new songs. Which meant a lifetime of getting rejected can`,
                                     {
-                                        isItalic: true,
+                                        isEmphasis: true,
                                         lyric: `itself`,
                                     },
                                     `be a work of art.`,

@@ -278,7 +278,7 @@ export default {
                                     description: [
                                         `Sita had her own story to tell about mistreating a first pet: Upon receiving a kitten as a child, she hugged it so hard that it began to purr; taking this as a sign of its serenity, she then hugged it even harder. Years later, though, she learned that cats`,
                                         {
-                                            isItalic: true,
+                                            isEmphasis: true,
                                             lyric: `also`,
                                         },
                                         `purr to cope with distress— and looking back, she realized her kitten must've thought it was being crushed to death. She lived in guilt ever since.`,
