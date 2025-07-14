@@ -30,7 +30,7 @@ export default {
     // This is a magic number adjusted by ear. In the mix, it's actually 41.66.
     mixSamplingFrequency: 41.64,
     todo: REVIEW,
-    overview: `With the band becoming a fixture in the local scene, I began to command more attention than I'd ever known, particularly from women. And yet, my misery didn't fade; it just simmered into a quiet resentment. I also began to regret my relationship with Sita, which now felt like a decision I'd been coerced to make, under deprived conditions from which I'd since escaped.`,
+    overview: `With the band becoming a fixture in the local scene, I began to command more attention than I'd ever known, particularly from women. And yet, my misery didn't fade; it just simmered into a quiet resentment. I also began to regret my relationship with Sita, which now felt like a decision I'd been coerced into making, under deprived conditions from which I'd since been set free.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -576,7 +576,6 @@ export default {
                         `reading`,
                         {
                             anchor: `His obit not a bang`,
-                            todo: REVIEW,
                             card: {
                                 description: `But my appraisal was based on reason, not resentment. After all, if an almighty God were truly hoping to reach me with his gospel… why would he choose my tormentors, of all people, to be its messengers?`,
                                 dotKeys: {

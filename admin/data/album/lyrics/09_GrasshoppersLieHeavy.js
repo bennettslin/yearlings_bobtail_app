@@ -17,7 +17,6 @@ import {
     SOLO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Grasshoppers Lie Heavy',
@@ -28,7 +27,6 @@ export default {
     referenceDescription: `"L." in anacrusis`,
     mixStartTime: `0:01:29.52`,
     playerStartTime: 1478.233,
-    todo: REVIEW,
     overview: `I worked my way through college washing dishes in a cafeteria on campus, which is how I met Sita. After I scared her off, we didn't speak for months— but then she reached out again, and we gradually became friends. As such, she was there for me throughout my rocky start with playing onstage; and anytime I needed to vent about my ongoing struggle to date others, she'd lend a sympathetic ear. Still, a part of me kept hoping for something more. A year later… she began to like me back.`,
     isDoublespeaker: true,
     lyricUnits: [
