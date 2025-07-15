@@ -38,7 +38,7 @@ export default {
     playerReferenceTime: 756.159,
     playerStartTime: 755.661,
     todo: REVIEW,
-    overview: `As my years of getting bullied grew unbearable, a strange letter arrived with promises of spiritual answers. All it asked for was a small payment— which I quickly mailed off. The truth was then revealed to me in the next letter: I belonged to a race of astral beings, and my mission was to shut myself off from the world. I did so by adopting an unresponsive manner like my brother's, leading me to feel a psychic bond with him. But as my sanity chipped away, I came to realize that I was in a mail-order cult…`,
+    overview: `As my years of getting bullied grew unbearable, a strange letter arrived with promises of spiritual answers. All it asked for was a small payment— which I quickly mailed off. The truth was then revealed to me in the next letter: I belonged to a race of astral beings, and my mission was to shut myself off from this world. I did so by adopting an unresponsive manner like my brother's, leading me to feel a psychic bond with him. But as my sanity chipped away, I came to realize I was in a mail-order cult…`,
     lyricUnits: [
         {
             unitMap: {},

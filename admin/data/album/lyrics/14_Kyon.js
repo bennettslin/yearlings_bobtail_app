@@ -37,7 +37,7 @@ export default {
             isEmphasis: true,
             lyric: `why`,
         },
-        `. In hindsight, it started with me acting up in small ways, hoping for an easy breakup— but since Sita was no less determined to work it out, she'd endure. Which meant I had to behave even more obnoxiously the next time… and on it went. In time I came to see how thoroughly her self-worth was tied to our relationship. I was fighting for me; she was fighting for us.`,
+        `. In hindsight, it started with me acting up in small ways, hoping for an easy breakup— but since Sita was no less determined to make it work, she'd endure. This meant I had to behave even more obnoxiously the next time… and on it went. In time I came to see how thoroughly her self-worth was tied to our relationship. I was fighting for me; she was fighting for us.`,
     ],
     lyricUnits: [
         {

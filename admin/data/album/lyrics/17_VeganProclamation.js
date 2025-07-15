@@ -17,7 +17,6 @@ import {
     FORESHADOW_OF_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Vegan Proclamation',
@@ -34,7 +33,6 @@ export default {
     mixStartTime: `0:09:04.17`,
     playerReferenceTime: 3094.348,
     playerStartTime: 3091.413,
-    todo: REVIEW,
     overview: `Having committed to working on the next album alone, I began to drift away from the local scene. As a result, the band stopped playing shows— so after Miriam left me, I had few opportunities to meet new women. Yet this time around, there was no word from Sita. She'd fallen in love with someone else; I wasn't to get back with her, ever again. Now all I had was myself— and I didn't like myself much at all. I desperately wanted to be a good person once more, but I had no idea how…`,
     lyricUnits: [
         {
