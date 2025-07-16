@@ -32,7 +32,7 @@ export default {
     playerStartTime: 2496.296,
     todo: REVIEW,
     overview: [
-        `Though it shames me to say this, even then I could see that my behavior had slid into cruelty; what wasn't so clear was`,
+        `Though it shames me to say this, even then I could see that my behavior had slid into cruelty; what wasn't yet clear was`,
         {
             isEmphasis: true,
             lyric: `why`,

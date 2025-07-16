@@ -33,7 +33,7 @@ export default {
     playerReferenceTime: 2951.729,
     playerStartTime: 2926.829,
     todo: REVIEW,
-    overview: `If I'm to be honest, dating White women did help to subdue my lifelong feeling of being genetically inferior, yes— but I really didn't seek them out. A case in point is Miriam, who was the storybook ending my ego had been waiting for: cute, hip, and drawn to me through no effort on my part. As it turns out, though… we only lasted a few months. I've wondered ever since if she was just slumming it with me.`,
+    overview: `If I'm to be honest, then yes, dating White women did help to subdue my lifelong feeling of being genetically inferior— but I really didn't seek them out. A case in point is Miriam, who was the storybook ending my ego had been waiting for: cute, hip, and drawn to me through no effort on my part. As it turns out, though… we only lasted a few months. I've wondered ever since if she was just slumming it with me.`,
     isDoublespeaker: true,
     lyricUnits: [
         {
