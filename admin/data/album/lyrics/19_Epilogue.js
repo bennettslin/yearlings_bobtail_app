@@ -19,7 +19,7 @@ export default {
                 isItalic: true,
                 lyric: `n`,
             },
-            `"— to get the public to care. Young folks have never known any other paradigm, of course. But I refuse to accept it— and not just because I come from an older generation; it's objectively a waste of everyone's unique strengths!`,
+            `"— to get the public to care. Young folks have never known any other paradigm, of course, but I refuse to accept it— and not just because I come from an older generation. It's objectively a waste of everyone's unique strengths!`,
         ],
         [
             `The notion that an artist can start by realizing a bold vision, and`,
