@@ -35,6 +35,9 @@ const _appendWithSpaceIfNeeded = text => {
         text.endsWith('("') ||
         text.endsWith('(') ||
 
+        // In epilogue overview.
+        text.endsWith(`-`) ||
+
         text.endsWith(`…`)
     ) {
         return text

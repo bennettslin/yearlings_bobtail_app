@@ -2,7 +2,7 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import PromoLink from '../../PromoLink'
+// import PromoLink from '../../PromoLink'
 import Texts from '../../Texts'
 import {
     getOverviewForSong,
@@ -30,9 +30,9 @@ const OverviewText = ({ serverClientSongIndex }) => {
                     <Texts {...{ text }} />
                 </p>
             ))}
-            {getSongIsLogue(serverClientSongIndex) && (
+            {/* {getSongIsLogue(serverClientSongIndex) && (
                 <PromoLink />
-            )}
+            )} */}
         </div>
     )
 }
