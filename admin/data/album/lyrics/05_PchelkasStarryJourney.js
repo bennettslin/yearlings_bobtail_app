@@ -18,7 +18,6 @@ import {
     REFRAIN,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 /**
  * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the
@@ -37,7 +36,6 @@ export default {
     mixStartTime: `0:01:27.02`,
     playerReferenceTime: 756.159,
     playerStartTime: 755.661,
-    todo: REVIEW,
     overview: `As my years of getting bullied grew unbearable, a strange letter arrived with promises of spiritual answers. All it asked for was a small payment— which I quickly mailed off. The truth was then revealed to me: I belonged to a race of astral beings, and my mission was to shut myself off from this world. I did so by adopting a withdrawn manner like my brother's, which led me to feel a psychic bond with him— even as it chipped away at my sanity. In time I came to realize I was in a mail-order cult…`,
     lyricUnits: [
         {

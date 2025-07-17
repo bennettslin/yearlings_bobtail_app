@@ -15,7 +15,6 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'क्यों? (Kyon?)',
@@ -30,7 +29,6 @@ export default {
     mixStartTime: `0:00:00.27`,
     playerReferenceTime: 2498.410,
     playerStartTime: 2496.296,
-    todo: REVIEW,
     overview: [
         `Though it shames me to say this, even then I could see that my behavior had slid into cruelty; what wasn't yet clear was`,
         {
