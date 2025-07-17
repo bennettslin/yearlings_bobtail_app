@@ -12,7 +12,30 @@ export default {
     todo: REDO,
     problem: `I just don't like it anymore. Redo most of it.`,
     overview: [
-        `Thanks for listening! It means a lot. So what do I hope to gain by creating this audio webcomic, an entire decade after the album was finished? In brief, I'm still looking for help, whether in the form of a traditional record deal, or some modern arrangement devised by forward-thinking Gen Zers.`,
+        `Thanks for listening! So… what do I hope to gain by putting out this audio webcomic, almost two decades after the album itself was made? In brief, I'm still looking for help— whether in the form of a traditional record deal, or some modern arrangement devised by forward-thinking partners.`,
+        [
+            `With the indie takeover of music, it's now on the`,
+            {
+                isEmphasis: true,
+                lyric: `artist`,
+            },
+            `to go "from zero to one"— that is, to make themselves known. Only then does a`,
+            {
+                isEmphasis: true,
+                lyric: `partner`,
+            },
+            `help to take them "from one to`,
+            {
+                isItalic: true,
+                lyric: `n`,
+            },
+            `"— to get the public to care. Young folks don't question this way of thinking, of course, since it's all they've known. But I've never accepted it— and not just because I'm of an older generation; it's objectively the`,
+            {
+                isEmphasis: true,
+                lyric: `worst`,
+            },
+            `use of everyone's strengths!`,
+        ],
         [
             `The notion that an artist can start by realizing a bold vision, and`,
             {

@@ -74,7 +74,9 @@ const _addSpaceToArrayOrEntity = ({
     } else if (isString(nextEntity)) {
         // Add space to the next entity.
         nextEntity = _prependWithSpaceIfNeeded(nextEntity)
-    } else {
+
+    // Prevent this from happening in logue overviews.
+    } else if (!Array.isArray(previousEntity) && !Array.isArray(nextEntity)) {
         // Add lone space to the array.
         newArray.push(' ')
     }
