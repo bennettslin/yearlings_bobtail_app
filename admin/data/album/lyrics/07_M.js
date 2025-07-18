@@ -568,12 +568,12 @@ export default {
                             problem: `Make it more about not having any sympathetic ears today, so hoping for a sympathetic future audience tomorrow.`,
                             card: {
                                 description: [
-                                    `With no one around me able to relate to my predicament, I could only envision my next five-year plan as a`,
+                                    `With no one around able to relate to my predicament, I could only envision my next five-year plan as a`,
                                     {
                                         anchor: `time capsule`,
                                         wiki: `Time_capsule`,
                                     },
-                                    `— one that would allow me to articulate my frustrations to a sympathetic future audience.`,
+                                    `— one that would allow me to articulate my frustrations to a sympathetic future audience. test`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
