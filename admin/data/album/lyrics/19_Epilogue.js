@@ -26,12 +26,12 @@ export default {
                 isEmphasis: true,
                 lyric: `partner`,
             },
-            `made the artist known, and then put it on the`,
+            `made an artist known, and then put it on the`,
             {
                 isEmphasis: true,
                 lyric: `artist`,
             },
-            `to get the public to care. So can we return to this older paradigm? Yes! It just needs to happen again once. This is why I've spent half my life making`,
+            `to get the public to care. So can we return to this older paradigm? Yes! It just needs to happen again once. This is why I've spent half my life working on`,
             {
                 isItalic: true,
                 lyric: `Yearling's Bobtail`,
@@ -41,7 +41,7 @@ export default {
                 isItalic: true,
                 lyric: `n`,
             },
-            ` project. Perhaps you can help to take us from zero to one!`,
+            ` project. And now, I'd love your help in taking us from zero to one!`,
         ],
     ],
 }
