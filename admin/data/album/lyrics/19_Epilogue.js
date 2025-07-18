@@ -18,7 +18,7 @@ export default {
                 isItalic: true,
                 lyric: `n`,
             },
-            `"— to make the public care. Young folks haven't known any other paradigm, of course… but I've never accepted it. And not just because I'm from an earlier time; it's a waste of everyone's strengths!`,
+            `"— to make the public care. Young folks know of no other paradigm, of course… but I still refuse to accept it. And not just because I'm from an earlier time; it's a waste of everyone's strengths!`,
         ],
         [
             `Let's face it: Music was better when the`,
@@ -41,7 +41,7 @@ export default {
                 isItalic: true,
                 lyric: `n`,
             },
-            ` project. Now with your help, the Bobtail Yearlings can go from zero to one!`,
+            `project. And with your help, the Bobtail Yearlings can now go from zero to one!`,
         ],
     ],
 }

@@ -14,7 +14,7 @@ import {
     FLASHBACK_TO_WORMHOLE_PREFIX,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
-import { REDO, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REDO, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'M',
@@ -564,16 +564,15 @@ export default {
                         `In a`,
                         {
                             anchor: `time capsule`,
-                            todo: REDO,
-                            problem: `Make it more about not having any sympathetic ears today, so hoping for a sympathetic future audience tomorrow.`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `With no one around able to relate to my predicament, I could only envision my next five-year plan as a`,
+                                    `With none of my friends able to relate to my predicament, I envisioned my next five-year plan as a`,
                                     {
                                         anchor: `time capsule`,
                                         wiki: `Time_capsule`,
                                     },
-                                    `— one that would allow me to articulate my frustrations to a sympathetic future audience. test`,
+                                    `of sorts— one that would let me voice my frustrations to a sympathetic future audience.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -749,16 +748,15 @@ export default {
                     lyric: [
                         {
                             anchor: `indentures dumbed`,
-                            todo: REVISE,
-                            problem: `Is the connection between being unable to speak and being "dumbed" obvious?`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `Chimney sweeps were typically apprenticed as`,
+                                    `Just as chimney sweeps were often`,
                                     {
-                                        anchor: `indentured servants`,
+                                        anchor: `indentured`,
                                         wiki: `Indentured_servant`,
                                     },
-                                    `at a young age. But in my case, I was to remain in servitude to my five-year plans until I was an old man. By then I'd be "in dentures," rendering me dumb— that is, unable to speak for myself.`,
+                                    `at a young age, I was to spend a lifetime in servitude to my five-year plans. By the time I was free, then, I'd be an old man "in dentures," and thus unable to speak for myself— or dumb, in a metaphorical sense.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -780,10 +778,9 @@ export default {
                         `," I bade them`,
                         {
                             anchor: `to fare well`,
-                            todo: REVISE,
-                            problem: `Tense is weird. Now there's two uses of "them" pronouns.`,
+                            todo: REVIEW,
                             card: {
-                                description: `Joi was my friend, and I was happy they'd found Mara. Still, I wasn't eager to stick around. So after imagining the two of them exchanging vows of "I do," I silently offered a vow of my own to bid them "two farewell."`,
+                                description: `I was happy that Joi had found Mara; still, I wasn't eager to stick around. So after imagining them exchanging vows of "I do," I silently offered a vow of my own, and bid them "two farewell."`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
