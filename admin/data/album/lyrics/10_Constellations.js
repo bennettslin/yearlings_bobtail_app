@@ -17,6 +17,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Constellations!',
@@ -31,7 +32,8 @@ export default {
     mixStartTime: `0:01:18.60`,
     playerReferenceTime: 1751.447,
     playerStartTime: 1751.191,
-    overview: `One night I went with my bassist Ana and their stoner friends to get high on Robitussin while exploring the steam tunnels under UCLA. I got us all to pretend we were Vikings, Mongols, and various other waves of human migration throughout world history; in hindsight, I think the others were just humoring me. I ended up doing so much Robitussin that summer, it took a while to regain my grip on reality.`,
+    todo: REVIEW,
+    overview: `One night I went with my bassist Ana and some stoner friends to get high on Robitussin while exploring the steam tunnels under UCLA. I got us all to pretend we were Vikings, Mongols, and various other waves of human migration throughout world history; in hindsight, I think the others were just humoring me. I ended up doing so much Robitussin that summer, it took a while to regain my grip on reality.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -219,10 +221,11 @@ export default {
                         {
                             anchor: `Viking den`,
                             properNoun: true,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
-                                        `Ana's friends Howie and Tomer were seasoned drug users, but hadn't taken Robitussin before. Since it's sold over the counter, they'd assumed its effects would be weaker than those of prescribed painkillers like "`,
+                                        `Our friends Howie and Tomer were seasoned drug users, but hadn't taken Robitussin before. Since it's sold over the counter, they'd assumed its effects would be weaker than those of prescribed painkillers like "`,
                                         {
                                             anchor: `Vicodin`,
                                             wiki: `Hydrocodone/paracetamol`,
