@@ -791,9 +791,9 @@ export default {
                         {
                             anchor: `claim you've never loved`,
                             todo: REVISE,
-                            problem: `Don't need to say write twice.`,
+                            problem: `Run on sentence.`,
                             card: {
-                                description: `Our first songs were all about being unlucky in love. So as my life improved, I needed to drink further amounts of alcohol to carry on with the lie that I was still the same inexperienced kid who wrote them.`,
+                                description: `Our first songs were all about being unlucky in love. As my life improved, then, I needed to drink further amounts of alcohol to carry on with the lie that I was still the same inexperienced kid who wrote them.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
