@@ -33,7 +33,7 @@ export default {
     playerReferenceTime: 1751.447,
     playerStartTime: 1751.191,
     todo: REVIEW,
-    overview: `One night I went with my bassist Ana and some stoner friends to get high on Robitussin while exploring the steam tunnels under UCLA. I got us all to pretend we were Vikings, Mongols, and various other waves of human migration throughout world history; in hindsight, I think the others were just humoring me. I ended up doing so much Robitussin that summer, it took a while to regain my grip on reality.`,
+    overview: `One night I went with my bassist Ana and some stoner friends to get high on Robitussin while exploring the steam tunnels under UCLA. I got them to pretend we were Vikings, Mongols, and various other waves of human migration throughout world history; in hindsight, they might've just been humoring me. I ended up doing so much Robitussin that summer, it took a while to regain my grip on reality.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -221,7 +221,6 @@ export default {
                         {
                             anchor: `Viking den`,
                             properNoun: true,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
