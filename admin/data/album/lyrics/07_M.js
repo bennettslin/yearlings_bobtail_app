@@ -564,7 +564,6 @@ export default {
                         `In a`,
                         {
                             anchor: `time capsule`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `With none of my friends able to relate to my predicament, I envisioned my next five-year plan as a`,

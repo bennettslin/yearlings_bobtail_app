@@ -41,7 +41,7 @@ export default {
                 isItalic: true,
                 lyric: `n`,
             },
-            `project. And with your help, the Bobtail Yearlings can now go from zero to one!`,
+            `project. Now with your help, the Bobtail Yearlings can go from zero to one!`,
         ],
     ],
 }
