@@ -17,7 +17,6 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Constellations!',
@@ -32,7 +31,6 @@ export default {
     mixStartTime: `0:01:18.60`,
     playerReferenceTime: 1751.447,
     playerStartTime: 1751.191,
-    todo: REVIEW,
     overview: `One night I went with my bassist Ana and some stoner friends to get high on Robitussin. As we explored the steam tunnels underneath UCLA, I got us all to pretend we were Vikings, Mongols, and various waves of human migration and conquest throughout world history; in hindsight, the others might've just been humoring me. I did so much Robitussin that summer, it took a while to regain my grip on reality.`,
     lyricUnits: [
         {
