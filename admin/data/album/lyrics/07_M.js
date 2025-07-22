@@ -755,7 +755,7 @@ export default {
                                         anchor: `indentured`,
                                         wiki: `Indentured_servant`,
                                     },
-                                    `at a young age, I was to spend a lifetime in servitude to my five-year plans. By the time I was free, then, I'd be "in dentures," and thus unable to speak for myself— or dumb, in a metaphorical sense.`,
+                                    `at a young age, I was to spend a lifetime in servitude to my five-year plans, not to be freed until I was an old man. By then, I'd be "in dentures," and thus unable to speak for myself— or dumb, in a metaphorical sense.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
