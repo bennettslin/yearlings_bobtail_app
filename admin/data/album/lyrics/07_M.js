@@ -777,7 +777,6 @@ export default {
                         `," I bade them`,
                         {
                             anchor: `to fare well`,
-                            todo: REVIEW,
                             card: {
                                 description: `I was happy that Joi had found Mara; still, I wasn't eager to stick around. So as I pictured them exchanging vows of "I do," I made a silent vow of my own, and bid them "two farewell."`,
                                 dotKeys: {
