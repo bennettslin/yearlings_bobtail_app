@@ -755,7 +755,7 @@ export default {
                                         anchor: `indentured`,
                                         wiki: `Indentured_servant`,
                                     },
-                                    `at a young age, I was to spend a lifetime in servitude to my five-year plans, not to be freed until I was an old man. By then, I'd be "in dentures," and thus unable to speak for myself— or dumb, in a metaphorical sense.`,
+                                    `at a young age, I was to spend a lifetime in servitude to my five-year plans, not to be free until I was an old man. By then, I'd be "in dentures," and thus unable to speak for myself— or, too dumb, in a metaphorical sense.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -874,7 +874,7 @@ export default {
                             todo: REDO,
                             problem: `Last sentence runs on.`,
                             card: {
-                                description: `Moreover, the world is as unwitting as a newborn infant. So if a woman's list of ideal traits in a man includes what kind of father he'll be to her child, then she's likely to judge him by how he treats the world at large.`,
+                                description: `Moreover, the world is as unwitting as a newborn infant. So if a woman's list of requirements for me as a partner includes the kind of father I'll be to her future child, then she's likely to judge me by how I treat the world at large.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -911,7 +911,14 @@ export default {
                             todo: REDO,
                             problem: `Make sure this is really saying what I want it to say.`,
                             card: {
-                                description: `It was no mystery why the situation with Mara happened as it did; it was no mystery why anything happened. I found this thought empowering, because it meant the Maras of the world weren't entirely out of reach. It was just on me to better understand what they wanted— and then I could build myself up to be exactly that.`,
+                                description: [
+                                    `It was no mystery why the situation ended up happening the way it did; it was no mystery why`,
+                                    {
+                                        isEmphasis: true,
+                                        lyric: `anything`,
+                                    },
+                                    `happened. I found this thought reassuring, because it meant the Maras of the world weren't entirely out of reach. It was just on me to better understand what they wanted— and then I could build myself up to be exactly that.`,
+                                ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
