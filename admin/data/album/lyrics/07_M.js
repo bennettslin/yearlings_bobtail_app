@@ -871,10 +871,9 @@ export default {
                         `is that the`,
                         {
                             anchor: `boy who's to love her baby`,
-                            todo: REDO,
-                            problem: `Last sentence runs on.`,
+                            todo: REVIEW,
                             card: {
-                                description: `Moreover, the world is as unwitting as a newborn infant. So if a woman's list of requirements for me as a partner includes the kind of father I'll be to her future child, then she's likely to judge me by how I treat the world at large.`,
+                                description: `Moreover, the world is as unwitting as a newborn infant. So if a woman's list of priorities in a partner includes what kind of father he'll be to her future child, then she's likely to judge him by how he treats the world at large.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -908,16 +907,20 @@ export default {
                         `it's up to me to`,
                         {
                             anchor: `be alert`,
-                            todo: REDO,
-                            problem: `Make sure this is really saying what I want it to say.`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `It was no mystery why the situation ended up happening the way it did; it was no mystery why`,
+                                    `It wasn't a mystery why things ended up as they did; it's no mystery how`,
                                     {
                                         isEmphasis: true,
                                         lyric: `anything`,
                                     },
-                                    `happened. I found this thought reassuring, because it meant the Maras of the world weren't entirely out of reach. It was just on me to better understand what they wanted— and then I could build myself up to be exactly that.`,
+                                    `happens. I found this thought reassuring, since it meant the Maras of the world`,
+                                    {
+                                        isEmphasis: true,
+                                        lyric: `weren't`,
+                                    },
+                                    `out of reach. It was just on me to understand what they wanted— and then to build myself up to be exactly that.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -943,7 +946,7 @@ export default {
                             todo: REDO,
                             problem: `I don't think I like what this is saying. Make sure it flows from the previous one.`,
                             card: {
-                                description: `But I couldn't count on my friends to tell me the plain truth. As dear as we were to each other, each of us was still looking out for ourselves.`,
+                                description: `But I couldn't count on my friends to tell me what I was missing. As dear as we were to each other, each of us was still looking out for ourselves.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
