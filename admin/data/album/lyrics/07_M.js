@@ -755,7 +755,7 @@ export default {
                                         anchor: `indentured`,
                                         wiki: `Indentured_servant`,
                                     },
-                                    `at a young age, I was to spend a lifetime in servitude to my five-year plans. Yet, even once freed, I'd be an old man "in dentures," and thus no more able to speak for myself. Or to put it another way, I'd have traded the figurative dumbness of youth for the literal dumbness of old age.`,
+                                    `at a young age, I was to spend a lifetime in servitude to my five-year plans. Yet, even once freed, I'd be an old man "in dentures," and thus no more able to speak for myself. Or to put it another way, I'd simply have traded the figurative dumbness of youth for the literal dumbness of old age.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
