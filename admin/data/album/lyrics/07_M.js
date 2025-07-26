@@ -14,7 +14,7 @@ import {
     FLASHBACK_TO_WORMHOLE_PREFIX,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
-import { REDO, REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'M',
@@ -755,7 +755,7 @@ export default {
                                         anchor: `indentured`,
                                         wiki: `Indentured_servant`,
                                     },
-                                    `" at a young age, I was to spend a lifetime in servitude to my five-year plans. Yet, even once freed, I'd be an old man "in dentures," and thus no more able to speak for myself. That is to say, I'd have gone straight from being figuratively "dumb" in my youth, to being literally so in old age.`,
+                                    `" at a young age, I was to spend a lifetime in servitude to my five-year plans. Yet, even once freed, I'd be an old man "in dentures," and thus no more able to speak for myself. Or, to put it another way, I'd have gone straight from being figuratively "dumb" in my youth, to being literally so in old age.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -906,6 +906,7 @@ export default {
                         `it's up to me to`,
                         {
                             anchor: `be alert`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `It wasn't a mystery, then, how things ended up as they did; it's no mystery why`,
@@ -918,7 +919,7 @@ export default {
                                         isEmphasis: true,
                                         lyric: `weren't`,
                                     },
-                                    `out of reach. It was just on me to understand what they wanted— and then to build myself up to be exactly that.`,
+                                    `out of reach; I just had to revise my theories on what they wanted— and then build myself up to be exactly that.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -941,10 +942,9 @@ export default {
                     lyric: [
                         {
                             anchor: `friends have to lie`,
-                            todo: REDO,
-                            problem: `I don't think I like what this is saying. Make sure it flows from the previous one.`,
+                            todo: REVIEW,
                             card: {
-                                description: `But I couldn't count on my friends to tell me what I was missing. As dear as we were to each other, each of us was still looking out for ourselves.`,
+                                description: `But I couldn't count on my friends to tell me where I was currently lacking; indeed, this was my problem the whole time. Whether out of kindness, or just to keep the peace, some truths would always be left for me to figure out.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
