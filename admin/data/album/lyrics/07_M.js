@@ -750,12 +750,12 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `Just as chimney sweeps were`,
+                                    `Much like a chimney sweep "`,
                                     {
                                         anchor: `indentured`,
                                         wiki: `Indentured_servant`,
                                     },
-                                    `at a young age, I was to spend a lifetime in servitude to my five-year plans. Yet, even once freed, I'd be an old man "in dentures," and thus no more able to speak for myself. Or to put it another way, I'd simply have traded the figurative dumbness of youth for the literal dumbness of old age.`,
+                                    `" at a young age, I was to spend a lifetime in servitude to my five-year plans. Yet, even once freed, I'd be an old man "in dentures," and thus no more able to speak for myself. That is to say, I'd have gone straight from being figuratively "dumb" in my youth, to being literally so in old age.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -906,7 +906,6 @@ export default {
                         `it's up to me to`,
                         {
                             anchor: `be alert`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `It wasn't a mystery, then, how things ended up as they did; it's no mystery why`,
