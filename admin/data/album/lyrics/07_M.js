@@ -750,12 +750,12 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `Just as chimney sweeps were often`,
+                                    `Just as chimney sweeps were`,
                                     {
                                         anchor: `indentured`,
                                         wiki: `Indentured_servant`,
                                     },
-                                    `at a young age, I was to spend a lifetime in servitude to my five-year plans, not to be free until I was an old man. By then, I'd be "in dentures," and thus unable to speak for myself— or, too dumb, in a metaphorical sense.`,
+                                    `at a young age, I was to spend a lifetime in servitude to my five-year plans. Yet, even once freed, I'd be an old man "in dentures," and thus no more able to speak for myself. Or to put it another way, I'd have traded the figurative dumbness of youth for the literal dumbness of old age.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -871,7 +871,6 @@ export default {
                         `is that the`,
                         {
                             anchor: `boy who's to love her baby`,
-                            todo: REVIEW,
                             card: {
                                 description: `Moreover, the world is as unwitting as a newborn infant. So if a woman's list of priorities in a partner includes what kind of father he'll be to her future child, then she's likely to judge him by how he treats the world at large.`,
                                 dotKeys: {
@@ -910,7 +909,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `It wasn't a mystery why things ended up as they did; it's no mystery how`,
+                                    `It wasn't a mystery, then, how things ended up as they did; it's no mystery why`,
                                     {
                                         isEmphasis: true,
                                         lyric: `anything`,
