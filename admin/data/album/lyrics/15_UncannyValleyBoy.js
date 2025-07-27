@@ -20,7 +20,7 @@ import {
     BACKING,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Uncanny Valley Boy',
@@ -212,7 +212,7 @@ export default {
                                         isItalic: true,
                                         lyric: {
                                             anchor: `The Monster at the End of This Book`,
-                                            wiki: `The_Monster_at_the_End_of_This_Book:_Starring_Lovable,_Furry_Old_Grover`,
+                                            wiki: `The_Monster_at_the_End_of_This_Book`,
                                         },
                                     },
                                     `, Sesame Street's Grover tries to prevent the reader from turning to the last page of the book, fearful of the monster lying in wait. As it turns out, the only monster present at the end is Grover himself, much to his embarrassment.`,
@@ -310,6 +310,8 @@ export default {
                         `,`,
                         {
                             anchor: `earth right now your tourist store`,
+                            todo: REVISE,
+                            problem: `Spell out pun in its entirety to make it more clear.`,
                             card: {
                                 description: `My mother enthralled me with visions of being a great artist, even as she instilled Buddhist ideals of renouncing materialism; meanwhile, the mail-order cult told me I was a mere visitor to this planet. And so a belief formed in my head that I must work tirelessly "to restore" my "birthright" of artistic renown, unaffected by earthly concerns.`,
                                 dotKeys: {

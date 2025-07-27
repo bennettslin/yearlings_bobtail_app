@@ -19,6 +19,7 @@ import {
     IS_UNIT_DOT,
     RESPONSE,
 } from '../../../../src/constants/lyrics'
+import { REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Odin',
@@ -133,6 +134,8 @@ export default {
                         `trifling`,
                         {
                             anchor: `tref must reseed the earth`,
+                            todo: REVISE,
+                            problem: `There needs to be a better word than dated, to avoid confusion.`,
                             card: {
                                 description: [
                                     {

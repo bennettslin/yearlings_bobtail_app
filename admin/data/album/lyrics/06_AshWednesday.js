@@ -13,6 +13,7 @@ import {
     IS_UNIT_DOT,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Ash Wednesday',
@@ -864,6 +865,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     // NOTE: Counterpoint is a wiki later in Garryowen.
                     description: [
@@ -877,7 +879,7 @@ export default {
                             anchor: `pitch shifted`,
                             wiki: `Pitch_shift`,
                         },
-                        `them up an octave. This then gave them a ghostly sheen, which enhances the mood of a rain-soaked evening.`,
+                        `them up an octave. This now gives them a ghostly sheen, which suits the mood of a rain-soaked evening.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
