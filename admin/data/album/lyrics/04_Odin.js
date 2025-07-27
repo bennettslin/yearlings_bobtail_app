@@ -19,7 +19,7 @@ import {
     IS_UNIT_DOT,
     RESPONSE,
 } from '../../../../src/constants/lyrics'
-import { REVISE } from '../../../containers/Annotations/constants/todos'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Odin',
@@ -134,8 +134,7 @@ export default {
                         `trifling`,
                         {
                             anchor: `tref must reseed the earth`,
-                            todo: REVISE,
-                            problem: `There needs to be a better word than dated, to avoid confusion.`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     {
@@ -147,7 +146,7 @@ export default {
                                         anchor: `kosher`,
                                         wiki: `Kashrut`,
                                     },
-                                    `. In Sasha's world, certain everyday foods weren't meant to be eaten. So one could also infer that certain boys in her everyday life weren't meant to be dated…`,
+                                    `. In Sasha's world, certain everyday foods weren't meant to be eaten. So one could also infer that certain boys in her everyday life weren't the kind she was meant to date…`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
