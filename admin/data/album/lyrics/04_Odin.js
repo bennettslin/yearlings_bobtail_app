@@ -19,6 +19,7 @@ import {
     IS_UNIT_DOT,
     RESPONSE,
 } from '../../../../src/constants/lyrics'
+import { REST } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Odin',
@@ -1117,6 +1118,8 @@ export default {
                     lyricRight: [
                         {
                             anchor: `didn't impart warmth`,
+                            todo: REST,
+                            problem: `If instead of where in first sentence, and where instead of when in second?`,
                             card: {
                                 description: `But also like cellophane, Sasha couldn't reflect warmth where none was present. In other words, if I wasn't able to deal gracefully with the bullies… then there came a point when she'd need to keep her distance from me as well.`,
                                 dotKeys: {
@@ -1228,6 +1231,8 @@ export default {
                         `has`,
                         {
                             anchor: `pulled your floater away`,
+                            todo: REST,
+                            problem: `Inner makes it sound like her inner thoughts, not her social world.`,
                             card: {
                                 description: [
                                     `Pining after Sasha was like trying to stare at an off-center`,
@@ -1251,6 +1256,8 @@ export default {
                         `you frame`,
                         {
                             anchor: `silhouettes of torn rides`,
+                            todo: REST,
+                            problem: `I'm still a kid in this song, so speaking about the time of my youth sounds weird.`,
                             card: {
                                 description: [
                                     `Watching the waves rise and fall in the ocean, I recall the`,
