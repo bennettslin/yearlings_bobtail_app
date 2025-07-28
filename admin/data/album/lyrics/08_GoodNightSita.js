@@ -11,6 +11,7 @@ import {
     POSTCHORUS,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Good Night, Sita',
@@ -172,9 +173,10 @@ export default {
                         {
                             anchor: `Dutch courage`,
                             properNoun: true,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `During my college years, I'd ask older coworkers to buy twelve-packs of cheap beer for me, which meant I always had a ready supply in my apartment. Then, before each date, I'd down a few cans.`,
+                                    description: `During my college years, I'd ask older coworkers to buy twelve-packs of cheap beer for me; as a result, I always had a ready supply in my apartment. Before each date, then, I'd down a few cans.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -385,8 +387,9 @@ export default {
                         `to find the`,
                         {
                             anchor: `chrysalis unchristened`,
+                            todo: REVIEW,
                             card: {
-                                description: `As we pass a display on the butterfly lifecycle, it occurs to me that what I'm hoping to find is a chrysalis— in other words, someone so new to this world that my own lack of worldliness wouldn't be an issue.`,
+                                description: `As we pass a display on the butterfly lifecycle, it occurs to me that what I'm hoping to find is a chrysalis— in other words, someone so new to this world that my own lack of worldliness won't be an issue.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -520,6 +523,7 @@ export default {
                     lyric: [
                         {
                             anchor: `pidgin palaver`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Stopping to rest in a gallery devoted to Native American history, we learn about`,
@@ -527,7 +531,7 @@ export default {
                                         anchor: `pidgins`,
                                         wiki: `Pidgin`,
                                     },
-                                    `, or impromptu languages that historically arose between colonists and natives. Their exchanges were peppered with words of goodwill to make up for inevitable misunderstandings, much like my conversations with Sita on this date.`,
+                                    `, or impromptu languages that arose between colonists and natives. To make up for inevitable misunderstandings, they'd fill their exchanges with words of goodwill, just as Sita and I have been doing on this date.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -741,9 +745,10 @@ export default {
                         `brave`,
                         {
                             anchor: `rejection into art`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `I learned to welcome rejection, since I could always use it as subject matter when writing new songs. Which meant a lifetime of getting rejected can`,
+                                    `I eventually learned to welcome rejection, since I could always use it as subject matter when writing new songs. Which meant a lifetime of getting rejected can`,
                                     {
                                         isEmphasis: true,
                                         lyric: `itself`,
