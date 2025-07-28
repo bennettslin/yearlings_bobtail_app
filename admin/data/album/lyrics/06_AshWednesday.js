@@ -879,7 +879,7 @@ export default {
                             anchor: `pitch shifted`,
                             wiki: `Pitch_shift`,
                         },
-                        `them up an octave. This now gives them a ghostly sheen, which suits the mood of a rain-soaked evening.`,
+                        `them up an octave. This now gives them a ghostly sheen, which suits the mood of a rain-soaked evening, I'd say.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
