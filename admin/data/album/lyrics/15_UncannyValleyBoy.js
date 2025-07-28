@@ -310,9 +310,8 @@ export default {
                         `,`,
                         {
                             anchor: `earth right now your tourist store`,
-                            todo: REVIEW,
                             card: {
-                                description: `My mother enthralled me with visions of being a great artist, even as she instilled Buddhist ideals of renouncing materialism; meanwhile, the mail-order cult told me I was a mere visitor to this planet. And so a belief formed in my head that artistic renown was my "birthright," which I was now "to restore"— unaffected by earthly concerns.`,
+                                description: `My mother enthralled me with visions of being a great artist, even as she instilled Buddhist ideals of renouncing materialism; meanwhile, the mail-order cult told me I was a mere visitor to this planet. And so a belief formed in my head that artistic renown was my "birthright," which I was now "to restore," unaffected by earthly concerns.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,

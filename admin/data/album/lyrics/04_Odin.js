@@ -19,7 +19,6 @@ import {
     IS_UNIT_DOT,
     RESPONSE,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Odin',
@@ -134,7 +133,6 @@ export default {
                         `trifling`,
                         {
                             anchor: `tref must reseed the earth`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     {

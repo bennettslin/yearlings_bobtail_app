@@ -13,7 +13,6 @@ import {
     REFRAIN,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Dear Saskia',
@@ -619,7 +618,6 @@ export default {
                         `, so now I`,
                         {
                             anchor: `talk Canuck`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The chokehold incident actually did happen, and left me with a dislocated jaw. For a long time afterward, I had to clench my jaw to avoid pain when speaking, which led to an odd manner of pronunciation that some to this day mistake for a`,
