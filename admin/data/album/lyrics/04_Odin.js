@@ -19,7 +19,7 @@ import {
     IS_UNIT_DOT,
     RESPONSE,
 } from '../../../../src/constants/lyrics'
-import { REST } from '../../../containers/Annotations/constants/todos'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Odin',
@@ -1118,10 +1118,9 @@ export default {
                     lyricRight: [
                         {
                             anchor: `didn't impart warmth`,
-                            todo: REST,
-                            problem: `If instead of where in first sentence, and where instead of when in second?`,
+                            todo: REVIEW,
                             card: {
-                                description: `But also like cellophane, Sasha couldn't reflect warmth where none was present. In other words, if I wasn't able to deal gracefully with the bullies… then there came a point when she'd need to keep her distance from me as well.`,
+                                description: `But also like cellophane, Sasha couldn't reflect warmth if none was present. In other words, if I wasn't able to deal gracefully with the bullies, then there came a point where she'd need to keep her distance from me as well.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -1231,8 +1230,7 @@ export default {
                         `has`,
                         {
                             anchor: `pulled your floater away`,
-                            todo: REST,
-                            problem: `Inner makes it sound like her inner thoughts, not her social world.`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Pining after Sasha was like trying to stare at an off-center`,
@@ -1240,7 +1238,7 @@ export default {
                                         anchor: `floater`,
                                         wiki: `Floater`,
                                     },
-                                    `on the surface of my eye. Despite my frantic efforts to bring us closer, her inner world always remained a fixed distance apart from me.`,
+                                    `on the surface of my eye. Despite my frantic efforts to bring us closer, her world would always remain a fixed distance apart from mine.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1256,16 +1254,15 @@ export default {
                         `you frame`,
                         {
                             anchor: `silhouettes of torn rides`,
-                            todo: REST,
-                            problem: `I'm still a kid in this song, so speaking about the time of my youth sounds weird.`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `Watching the waves rise and fall in the ocean, I recall the`,
+                                    `Looking out into the ocean, I recall the`,
                                     {
-                                        anchor: `traveling carnivals`,
+                                        anchor: `traveling carnival`,
                                         wiki: `Traveling_carnival`,
                                     },
-                                    `that came to town in my youth. Every summer, their amusement rides would rise up to reshape the skyline. And yet, they're now being dissembled in my memories with the transience of ocean waves.`,
+                                    `that once came into town every summer. Its amusement rides would ascend to tower above the skyline, only then to be just as quickly disassembled— like the rise and fall of ocean waves.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
