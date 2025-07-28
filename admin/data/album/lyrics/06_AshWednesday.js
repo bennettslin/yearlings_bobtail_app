@@ -13,6 +13,7 @@ import {
     IS_UNIT_DOT,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Ash Wednesday',
@@ -23,7 +24,8 @@ export default {
     referenceDescription: `Darbuka in anacrusis`,
     playerStartTime: 967.569,
     mixStartTime: `0:01:03.51`,
-    overview: `My first girlfriend in college was Catherine, a nice Catholic girl and high school valedictorian. Partly due to my lack of reading habit, we were very different people, and eventually she broke up with me— the night before Ash Wednesday. So the next morning I ashed my own forehead and tried to bump into her, hoping that if she could picture me as a good Catholic boy, then I might get another chance. It didn't work, but I did grow into a lifelong reader, and I have Catherine to thank for that.`,
+    todo: REVIEW,
+    overview: `My first girlfriend in college was Catherine, a nice Catholic girl and high school valedictorian. We were very different people, partly due to my lack of reading habit, and eventually she broke up with me— the night before Ash Wednesday. So the next morning I ashed my own forehead and tried to bump into her, hoping that if she could picture me as a good Catholic boy, then I might get another chance. It didn't work, but I did grow into a lifelong reader, and I have Catherine to thank for that.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -450,8 +452,9 @@ export default {
                         `who tried but failed to win her heart`,
                         {
                             anchor: `poised with brains`,
+                            todo: REVIEW,
                             card: {
-                                description: `Catherine undervalued the artistic strengths I'd always counted on to cover up my many weaknesses. This meant if I were ever to be worth keeping someday, then I simply couldn't have any weaknesses.`,
+                                description: `Catherine undervalued the artistic strengths I'd always counted on to cover up my many weaknesses. So if I were to be worth keeping someday, then I simply couldn't have any weaknesses.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
