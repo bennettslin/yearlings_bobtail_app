@@ -14,6 +14,7 @@ import {
     FLASHBACK_TO_WORMHOLE_PREFIX,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'M',
@@ -277,8 +278,9 @@ export default {
                     lyric: [
                         {
                             anchor: `Year five`,
+                            todo: REVIEW,
                             card: {
-                                description: `The Soviet Union's first five-year plan was also its most brutal, as the forced industrialization of its agrarian societies led to widespread famine and death. Similarly, given how far behind I was starting out, it was naive to think that my own five-year plan for accelerated growth could be free of unintended consequences.`,
+                                description: `The Soviet Union's first five-year plan was also its most brutal, as the forced industrialization of all its agrarian societies led to widespread famine and death. Similarly, given how far behind I was starting out, it was naive in hindsight to think my own plan for accelerated growth could be free of unintended consequences.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -445,8 +447,9 @@ export default {
                         `, I'll probably`,
                         {
                             anchor: `die pushing forty`,
+                            todo: REVIEW,
                             card: {
-                                description: `Like the Soviets, I needed to take in stride the failures of my first five-year plan. Having banked on rapid character growth, I couldn't cut my losses now; I had nothing to my name other than what the next five-year plan might gain for me. Or failing that, the next one after… Yet five years is a serious chunk of lifetime to parcel out all at once, and I only had so many decades remaining. The occasion, then, was ripe to reflect on my mortality…`,
+                                description: `Like the Soviets, I needed to take in stride the failures of my first five-year plan. Having banked on rapid character growth, I couldn't cut my losses now; I had nothing to my name other than what the next five-year plan might gain for me. Or failing that, the next one after… Yet five years is a serious chunk of lifetime to parcel out all at once, and I only had so many decades remaining. The occasion, then, was ripe to reflect on my mortality.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -461,8 +464,9 @@ export default {
                         `to a`,
                         {
                             anchor: `sand castle built by low tide`,
+                            todo: REVIEW,
                             card: {
-                                description: `Beyond the immediate failures of my first five-year plan, I'd clearly missed out on some personal development that others had naturally come by. And there was no guarantee that another five-year plan wouldn't blindside me in the same manner. I saw my future as a stunted man-child, forever chasing ambitions both infantile and futile— like building castles out of sand.`,
+                                description: `Beyond the immediate failures of my first five-year plan, I'd clearly missed out on some personal development that others had naturally come by. And I had no guarantee that another five-year plan wouldn't blindside me in the same manner. I pondered my fate as a stunted man-child, then, forever chasing ambitions both infantile and futile— such as building castles out of sand.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
