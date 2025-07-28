@@ -20,7 +20,7 @@ import {
     BACKING,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Uncanny Valley Boy',
@@ -310,10 +310,9 @@ export default {
                         `,`,
                         {
                             anchor: `earth right now your tourist store`,
-                            todo: REVISE,
-                            problem: `Spell out pun in its entirety to make it more clear.`,
+                            todo: REVIEW,
                             card: {
-                                description: `My mother enthralled me with visions of being a great artist, even as she instilled Buddhist ideals of renouncing materialism; meanwhile, the mail-order cult told me I was a mere visitor to this planet. And so a belief formed in my head that I must work tirelessly "to restore" my "birthright" of artistic renown, unaffected by earthly concerns.`,
+                                description: `My mother enthralled me with visions of being a great artist, even as she instilled Buddhist ideals of renouncing materialism; meanwhile, the mail-order cult told me I was a mere visitor to this planet. And so a belief formed in my head that artistic renown was my "birthright," which I was now "to restore"— unaffected by earthly concerns.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -1248,7 +1247,7 @@ export default {
                             anchor: `faces you flip override`,
                             todo: REVIEW,
                             card: {
-                                description: `As I grew into a dour adolescent, my mother would ask what happened to the playful little boy I'd once been, which then made me wonder myself. I think I learned early on to adopt the optimal persona for every situation— and as time went by, those personas began to pile up. So it made no sense to keep any old ones lying around once they no longer served their purpose.`,
+                                description: `As I grew into a dour teenager, my mother would ask what happened to the playful little boy I'd once been— which then made me wonder myself. I think I learned early on to adopt the optimal persona for every situation— and as time went by, those personas began to pile up. So it made no sense to keep any old ones lying around once they no longer served their purpose.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
