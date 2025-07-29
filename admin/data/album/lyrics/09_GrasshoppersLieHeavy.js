@@ -17,7 +17,7 @@ import {
     SOLO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Grasshoppers Lie Heavy',
@@ -107,17 +107,17 @@ export default {
                 todo: REVIEW,
                 card: {
                     description: [
-                        `Just as`,
+                        `Much like`,
                         {
                             isItalic: true,
                             lyric: `The Grasshopper Lies Heavy`,
                         },
-                        `offers its fictional readers a reality that differs vastly from the one they know, this song is a self-contained narrative that offers a vastly different ending from the album as a whole. Like Dick, I wanted to explore the`,
+                        `offers its fictional readers a reality that differs vastly from their own, this song encloses a narrative whose ending is vastly different from that of the album as a whole. Like Dick, I wanted to explore the`,
                         {
                             anchor: `meta-referential`,
                             wiki: `Meta-reference`,
                         },
-                        `possibilities of a story within a story. And so, hidden in this song's lyrics are references to every other song on the album. On this website, the links connecting two songs through such a reference are called wormholes.`,
+                        `possibilities of a story within a story. And so, scattered throughout this song's lyrics are hidden references to every other song on the album. In this webcomic, the links connecting two songs through such a reference are called wormholes.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -326,8 +326,8 @@ export default {
                         `At first she hedged, but then`,
                         {
                             anchor: `laying qualms to rest`,
-                            todo: REST,
-                            problem: `This is different from vocational rehabilitation. Reconsider this annotation and the next one in light of this fact.`,
+                            todo: REVISE,
+                            problem: `Make clear I felt a rush of solidarity that reminded me of my past as a Beyonder.`,
                             cards: [
                                 {
                                     description: [
@@ -336,7 +336,7 @@ export default {
                                             anchor: `vocational rehabilitation`,
                                             wiki: `Vocational_rehabilitation`,
                                         },
-                                        `program, this was easy enough to infer. A handful of workers were past members of Asian gangs, and I must admit, the thought entertained me to be mistaken as one of them.`,
+                                        `program, this was easy enough to infer. Oftentimes every other worker in the dishroom was mentally disabled, which meant I'd sometimes get mistaken as one of them. This always pleased me.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -362,7 +362,7 @@ export default {
                         {
                             anchor: `Schwa stickers`,
                             properNoun: true,
-                            todo: REST,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -377,7 +377,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `Affixed to my belongings are stickers of underground art, further reassuring Sita that I'm not a gangster.`,
+                                    description: `Affixed to my belongings are stickers of underground art, further reassuring Sita that I'm a college student like her.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
