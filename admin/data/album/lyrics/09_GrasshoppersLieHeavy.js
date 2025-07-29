@@ -336,7 +336,7 @@ export default {
                                             anchor: `vocational rehabilitation`,
                                             wiki: `Vocational_rehabilitation`,
                                         },
-                                        `program, this was easy enough to infer. Oftentimes every other worker in the dishroom was mentally disabled, which meant I'd sometimes get mistaken as one of them. This always pleased me.`,
+                                        `program, this was easy enough to infer. Oftentimes every other worker in the dishroom was mentally disabled, so sometimes I'd get mistaken as one of them. This always pleased me, as it gave me the same rush of solidarity I felt in my Beyonder days.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -617,8 +617,9 @@ export default {
                         `Tonight, just`,
                         {
                             anchor: `sour grapes, bitter sweets`,
+                            todo: REVIEW,
                             card: {
-                                description: `At the end of each shift, I'd head to the dining area to scavenge enough leftovers for my next meal. Busy days were doubly cruel, then, because after staying late and working myself to exhaustion, there'd be nothing left to pick through but withered scraps.`,
+                                description: `At the end of each shift, I'd head to the serving area to scavenge enough leftovers for my next meal. Busy days were doubly cruel, then, because after staying late and working myself to exhaustion, there'd be nothing left to pick through but withered scraps.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
