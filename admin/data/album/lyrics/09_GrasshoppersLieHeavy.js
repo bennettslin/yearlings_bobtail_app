@@ -17,7 +17,7 @@ import {
     SOLO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Grasshoppers Lie Heavy',
@@ -941,11 +941,20 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REST,
-                problem: `First sentence is too long.`,
+                todo: REVIEW,
                 card: {
                     description: [
-                        `The highlight of`,
+                        `In the final third of "`,
+                        {
+                            anchor: `Lounge Act`,
+                            wiki: `Lounge_Act`,
+                        },
+                        `,"`,
+                        {
+                            anchor: `Kurt Cobain`,
+                            wiki: `Kurt_Cobain`,
+                        },
+                        `sings the same melody an octave higher, kicking it into high gear. Since this is the highlight of`,
                         {
                             anchor: `Nirvana`,
                             wiki: `Nirvana_(band)`,
@@ -958,17 +967,7 @@ export default {
                                 wiki: `Nevermind`,
                             },
                         },
-                        `for me is when`,
-                        {
-                            anchor: `Kurt Cobain`,
-                            wiki: `Kurt_Cobain`,
-                        },
-                        `kicks the last third of "`,
-                        {
-                            anchor: `Lounge Act`,
-                            wiki: `Lounge_Act`,
-                        },
-                        `" into high gear by singing the same melody an octave higher. I'd always wanted to recreate this effect but could never do so, since the melodies I write tend to span my whole vocal range. So when I noticed that the melody for this chorus stays within a single octave throughout, I made it work.`,
+                        `for me, I'd always planned to recreate the effect; unfortunately, the melodies I write tend to span my whole vocal range. So when I noticed that the melody for this chorus stays within a single octave throughout, I made it work.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
