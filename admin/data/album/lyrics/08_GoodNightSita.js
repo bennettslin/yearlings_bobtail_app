@@ -176,7 +176,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `During my college years, I'd ask older coworkers to buy twelve-packs of cheap beer for me; as a result, I always had a ready supply in my apartment. Then, before each date, I'd down a few cans.`,
+                                    description: `During my college years, I'd ask older coworkers to buy twelve-packs of cheap beer for me; as a result, I always had a ready supply in my apartment. Before each date, then, I'd down a few cans.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -746,7 +746,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `I eventually learned to welcome rejection, since I could always use it as subject matter when writing new songs. Which meant a lifetime of getting rejected can`,
+                                    `I eventually learned to welcome rejection, since I could always use it as subject matter when writing new songs. Which, in turn, meant a lifetime of getting rejected can`,
                                     {
                                         isEmphasis: true,
                                         lyric: `itself`,

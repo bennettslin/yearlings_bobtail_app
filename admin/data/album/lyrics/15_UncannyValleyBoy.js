@@ -1246,7 +1246,7 @@ export default {
                             anchor: `faces you flip override`,
                             todo: REVIEW,
                             card: {
-                                description: `As I grew into a dour teenager, my mother would ask what happened to the playful little boy I'd been before… which made me wonder myself. In retrospect, I think I learned to adopt the ideal persona for each given situation— and as time went on, those personas began to pile up. So it made no sense to keep one lying around if it no longer served its purpose.`,
+                                description: `As I grew into a sullen adolescent, my mother would ask what happened to the playful little boy I'd been before… which then made me wonder myself. In retrospect, I think I learned to take on the optimal persona for each given situation— and as time went on, they began to pile up. It made no sense, then, to keep an old persona lying around once it no longer served its purpose.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
