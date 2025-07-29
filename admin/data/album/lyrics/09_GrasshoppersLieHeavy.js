@@ -17,7 +17,7 @@ import {
     SOLO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Grasshoppers Lie Heavy',
@@ -323,24 +323,23 @@ export default {
                         `At first she hedged, but then`,
                         {
                             anchor: `laying qualms to rest`,
-                            todo: REVISE,
-                            problem: `Make clear I felt a rush of solidarity that reminded me of my past as a Beyonder.`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
-                                        `While the cafeteria never announced its partnership with a`,
+                                        `The cafeteria partnered with a`,
                                         {
                                             anchor: `vocational rehabilitation`,
                                             wiki: `Vocational_rehabilitation`,
                                         },
-                                        `program, this was easy enough to infer. Oftentimes every other worker in the dishroom was mentally disabled, so sometimes I'd get mistaken as one of them. This always pleased me, as it gave me the same rush of solidarity I felt in my Beyonder days.`,
+                                        `program that brought over workers who were mentally disabled. Since they were usually placed in the dishroom, I'd sometimes get mistaken as one of them. This always tickled me, as I'd feel the same rush of solidarity from my days as a Beyonder.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
                                 },
                                 {
-                                    description: `Unsure of my background and still feeling ambushed, Sita hesitates. But as we chat, I win her over with my passion for reading and knowledge of literature.`,
+                                    description: `Unsure of my background, and feeling slightly ambushed, Sita hesitates. As we chat, however, I win her over with my knowledge of literature.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
