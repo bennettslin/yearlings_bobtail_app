@@ -1120,7 +1120,7 @@ export default {
                             anchor: `didn't impart warmth`,
                             todo: REVIEW,
                             card: {
-                                description: `But also like cellophane, Sasha couldn't reflect warmth where none was present. In other words, if I wasn't able to deal gracefully with the bullies, then a time would come when she'd need to keep her distance from me as well.`,
+                                description: `But also like cellophane, Sasha couldn't reflect warmth where none was present. In other words, if I wasn't able to deal gracefully with the bullies, then there'd come a time when she'd need to keep her distance from me as well.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -1262,7 +1262,7 @@ export default {
                                         anchor: `traveling carnival`,
                                         wiki: `Traveling_carnival`,
                                     },
-                                    `that once came into town every summer. Its amusement rides would ascend to tower above the skyline, only then to be just as quickly disassembled— like the rise and fall of ocean waves.`,
+                                    `that once came into town every summer. Its amusement rides would suddenly tower above the skyline, only then to be just as quickly disassembled— like the rise and fall of ocean waves.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

@@ -176,7 +176,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `During my college years, I'd ask older coworkers to buy twelve-packs of cheap beer for me; as a result, I always had a ready supply in my apartment. Before each date, then, I'd down a few cans.`,
+                                    description: `During my college years, I'd ask older coworkers to buy twelve-packs of cheap beer for me; as a result, I always had a ready supply in my apartment. Then, before each date, I'd down a few cans.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
