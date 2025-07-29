@@ -19,7 +19,6 @@ import {
     IS_UNIT_DOT,
     RESPONSE,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Odin',
@@ -1118,7 +1117,6 @@ export default {
                     lyricRight: [
                         {
                             anchor: `didn't impart warmth`,
-                            todo: REVIEW,
                             card: {
                                 description: `But also like cellophane, Sasha couldn't reflect warmth where none was present. In other words, if I wasn't able to deal gracefully with the bullies, then there'd come a time when she'd need to keep her distance from me as well.`,
                                 dotKeys: {
@@ -1230,7 +1228,6 @@ export default {
                         `has`,
                         {
                             anchor: `pulled your floater away`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Pining after Sasha was like trying to stare at an off-center`,
@@ -1254,7 +1251,6 @@ export default {
                         `you frame`,
                         {
                             anchor: `silhouettes of torn rides`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Looking out into the ocean, I recall the`,

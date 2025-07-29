@@ -387,7 +387,6 @@ export default {
                         `to find the`,
                         {
                             anchor: `chrysalis unchristened`,
-                            todo: REVIEW,
                             card: {
                                 description: `As we pass a display on the butterfly lifecycle, it occurs to me that what I'm hoping to find is a chrysalis— in other words, someone so new to this world that my own lack of worldliness won't be an issue.`,
                                 dotKeys: {
@@ -523,7 +522,6 @@ export default {
                     lyric: [
                         {
                             anchor: `pidgin palaver`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Stopping to rest in a gallery devoted to Native American history, we learn about`,

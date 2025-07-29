@@ -83,7 +83,6 @@ export default {
                             `L.A. to the Bay,`,
                             {
                                 anchor: `pompous autumn waits`,
-                                todo: REVIEW,
                                 cards: [
                                     {
                                         description: `In high school, I carried on as the same wretched nobody I'd been in middle school. It just didn't seem possible to remake myself into someone new while surrounded by the same classmates. But all the while, I was constructing my future persona as a self-assured artist, and it was raring to go as soon as I could leave Los Angeles.`,
@@ -104,7 +103,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `Much like`,
@@ -236,7 +234,6 @@ export default {
                         `stalled by`,
                         {
                             anchor: `keys left on dumbwaiter trays`,
-                            todo: REVIEW,
                             card: {
                                 description: `The students would bus their trays onto a conveyor belt that led into the dishroom. Every so often someone would accidentally leave a personal item on their tray, prompting them to come downstairs and retrieve it. I got a kick out of this whenever it happened; they were always grateful, and sometimes they were cute.`,
                                 dotKeys: {
@@ -362,7 +359,6 @@ export default {
                         {
                             anchor: `Schwa stickers`,
                             properNoun: true,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -523,7 +519,6 @@ export default {
                         `With no`,
                         {
                             anchor: `sister ship`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The`,
@@ -565,7 +560,7 @@ export default {
                             anchor: `no convert's missed`,
                             todo: REVIEW,
                             card: {
-                                description: `RI Research understood that I'd soon grow disillusioned, which is why they asked for the largest payment upfront. Their last few letters were so sloppily written, it even felt like they were shooing me away by that point. Now Sita's departure from my life seemed like proof that I'd fallen for the perfect scam once again.`,
+                                description: `RI Research understood that I'd soon grow disillusioned, which is why they asked for the largest payment upfront. Their last few letters were so sloppily written, it even felt like they were shooing me away by that point. And now Sita's departure from my life seemed like proof that I'd fallen for the perfect scam once again.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -617,7 +612,6 @@ export default {
                         `Tonight, just`,
                         {
                             anchor: `sour grapes, bitter sweets`,
-                            todo: REVIEW,
                             card: {
                                 description: `At the end of each shift, I'd head to the serving area to scavenge enough leftovers for my next meal. Busy days were doubly cruel, then, because after staying late and working myself to exhaustion, there'd be nothing left to pick through but withered scraps.`,
                                 dotKeys: {
@@ -779,7 +773,6 @@ export default {
                         `"Hey, you know`,
                         {
                             anchor: `you're my password`,
-                            todo: REVIEW,
                             card: {
                                 description: `As I enter the passcode for my gate, Sita breaks the ice by mentioning that a personal detail about me, which she still remembers, had served as the basis for a password she recently created.`,
                                 dotKeys: {
@@ -858,7 +851,6 @@ export default {
                         `In her`,
                         {
                             anchor: `gingerbread prison`,
-                            todo: REVIEW,
                             card: {
                                 description: `Since just being friends with Sita will never fulfill me, I find the idea depressing. Yet… it's also kind of sweet to nibble on.`,
                                 dotKeys: {
