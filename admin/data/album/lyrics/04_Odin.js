@@ -1120,7 +1120,7 @@ export default {
                             anchor: `didn't impart warmth`,
                             todo: REVIEW,
                             card: {
-                                description: `But also like cellophane, Sasha couldn't reflect warmth if none was present. In other words, if I wasn't able to deal gracefully with the bullies, then there came a point where she'd need to keep her distance from me as well.`,
+                                description: `But also like cellophane, Sasha couldn't reflect warmth where none was present. In other words, if I wasn't able to deal gracefully with the bullies, then a time would come when she'd need to keep her distance from me as well.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },

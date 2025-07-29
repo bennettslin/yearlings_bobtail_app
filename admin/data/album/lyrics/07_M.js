@@ -280,7 +280,7 @@ export default {
                             anchor: `Year five`,
                             todo: REVIEW,
                             card: {
-                                description: `The Soviet Union's first five-year plan was also its most brutal, as the forced industrialization of all its agrarian societies led to widespread famine and death. Similarly, given how far behind I was starting out, it was naive in hindsight to think my own plan for accelerated growth could be free of unintended consequences.`,
+                                description: `The Soviet Union's first five-year plan was also its most brutal, as the forced industrialization of its many agrarian societies led to widespread famine and death. Similarly, given how far behind I was starting out, it was naive in hindsight to think my own plan for accelerated growth could be free of unintended consequences.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -466,7 +466,7 @@ export default {
                             anchor: `sand castle built by low tide`,
                             todo: REVIEW,
                             card: {
-                                description: `Beyond the immediate failures of my first five-year plan, I'd clearly missed out on some personal development that others had naturally come by. And I had no guarantee that another five-year plan wouldn't blindside me in the same manner. I pondered my fate as a stunted man-child, then, forever chasing ambitions both infantile and futile— such as building castles out of sand.`,
+                                description: `Beyond the immediate failures of my first five-year plan, I'd clearly missed out on some personal development that others had naturally come by. And I had no guarantee that another five-year plan wouldn't blindside me in the same manner. I pondered my fate as a stunted man-child, then, forever chasing ambitions both infantile and futile— like building castles out of sand.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

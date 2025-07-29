@@ -17,6 +17,7 @@ import {
     SOLO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Grasshoppers Lie Heavy',
@@ -82,9 +83,10 @@ export default {
                             `L.A. to the Bay,`,
                             {
                                 anchor: `pompous autumn waits`,
+                                todo: REVIEW,
                                 cards: [
                                     {
-                                        description: `In high school, I carried on as the same wretched nobody that I was in middle school. It just didn't seem possible to remake myself into someone new while surrounded by all the same classmates. But all the while, I was crafting my future identity as a self-assured artist, and it was raring to go as soon as I could leave Los Angeles.`,
+                                        description: `In high school, I carried on as the same wretched nobody I'd been in middle school. It just didn't seem possible to remake myself into someone new while surrounded by the same classmates. But all the while, I was constructing my future persona as a self-assured artist, and it was raring to go as soon as I could leave Los Angeles.`,
                                         dotKeys: {
                                             [BACKSTORY]: true,
                                             [OBSERVATION]: true,
@@ -102,6 +104,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
                         `Just as`,
@@ -114,7 +117,7 @@ export default {
                             anchor: `meta-referential`,
                             wiki: `Meta-reference`,
                         },
-                        `possibilities of a story within a story. And so hidden in this song's lyrics are references to every other song on the album. On this website, the links connecting two songs through such a reference are called wormholes.`,
+                        `possibilities of a story within a story. And so, hidden in this song's lyrics are references to every other song on the album. On this website, the links connecting two songs through such a reference are called wormholes.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -233,8 +236,9 @@ export default {
                         `stalled by`,
                         {
                             anchor: `keys left on dumbwaiter trays`,
+                            todo: REVIEW,
                             card: {
-                                description: `The students would bus their trays onto a conveyor belt that led into the dishroom. Every so often someone would accidentally leave a personal item on their tray, prompting them to come downstairs and retrieve it. I got a kick out of it whenever this happened; they were always grateful, and sometimes they were cute.`,
+                                description: `The students would bus their trays onto a conveyor belt that led into the dishroom. Every so often someone would accidentally leave a personal item on their tray, prompting them to come downstairs and retrieve it. I got a kick out of this whenever it happened; they were always grateful, and sometimes they were cute.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -322,6 +326,8 @@ export default {
                         `At first she hedged, but then`,
                         {
                             anchor: `laying qualms to rest`,
+                            todo: REST,
+                            problem: `This is different from vocational rehabilitation. Reconsider this annotation and the next one in light of this fact.`,
                             cards: [
                                 {
                                     description: [
@@ -356,6 +362,7 @@ export default {
                         {
                             anchor: `Schwa stickers`,
                             properNoun: true,
+                            todo: REST,
                             cards: [
                                 {
                                     description: [
@@ -516,6 +523,7 @@ export default {
                         `With no`,
                         {
                             anchor: `sister ship`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The`,
@@ -526,7 +534,7 @@ export default {
                                             wiki: `German_battleship_Bismarck`,
                                         },
                                     },
-                                    `and the`,
+                                    `and`,
                                     {
                                         isItalic: true,
                                         lyric: {
@@ -555,8 +563,9 @@ export default {
                         `But`,
                         {
                             anchor: `no convert's missed`,
+                            todo: REVIEW,
                             card: {
-                                description: `RI Research understood that I'd soon grow disillusioned, which is why they asked for the largest payment upfront. Their last few letters were so sloppily written, it even felt like they were shooing me away by that point. And now Sita's departure from my life seemed like proof that I was a sucker for the perfect scam once again.`,
+                                description: `RI Research understood that I'd soon grow disillusioned, which is why they asked for the largest payment upfront. Their last few letters were so sloppily written, it even felt like they were shooing me away by that point. Now Sita's departure from my life seemed like proof that I'd fallen for the perfect scam once again.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -769,8 +778,9 @@ export default {
                         `"Hey, you know`,
                         {
                             anchor: `you're my password`,
+                            todo: REVIEW,
                             card: {
-                                description: `As I enter the passcode for my gate, Sita breaks the ice by mentioning that a personal detail about me, which she still remembered, had served as the basis for a password she recently created.`,
+                                description: `As I enter the passcode for my gate, Sita breaks the ice by mentioning that a personal detail about me, which she still remembers, had served as the basis for a password she recently created.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -847,8 +857,9 @@ export default {
                         `In her`,
                         {
                             anchor: `gingerbread prison`,
+                            todo: REVIEW,
                             card: {
-                                description: `Since being just friends with Sita will never fulfill me, I find the idea depressing. Yet… it's also kind of sweet to nibble on.`,
+                                description: `Since just being friends with Sita will never fulfill me, I find the idea depressing. Yet… it's also kind of sweet to nibble on.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -938,6 +949,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REST,
+                problem: `First sentence is too long.`,
                 card: {
                     description: [
                         `The highlight of`,
