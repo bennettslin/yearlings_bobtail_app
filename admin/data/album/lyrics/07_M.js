@@ -14,7 +14,6 @@ import {
     FLASHBACK_TO_WORMHOLE_PREFIX,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'M',
@@ -446,7 +445,6 @@ export default {
                         `, I'll probably`,
                         {
                             anchor: `die pushing forty`,
-                            todo: REVIEW,
                             card: {
                                 description: `Like the Soviets, I needed to take in stride the failures of my first five-year plan. Having banked on rapid character growth, I couldn't cut my losses now; I had nothing to my name other than what the next five-year plan might gain for me. Or failing that, the next one after… Yet five years is a serious chunk of lifetime to parcel out all at once, and I only had so many decades remaining. The occasion was thus ripe to reflect on my mortality.`,
                                 dotKeys: {

@@ -323,7 +323,6 @@ export default {
                         `At first she hedged, but then`,
                         {
                             anchor: `laying qualms to rest`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -557,7 +556,6 @@ export default {
                         `But`,
                         {
                             anchor: `no convert's missed`,
-                            todo: REVIEW,
                             card: {
                                 description: `RI Research understood that I'd soon grow disillusioned, which is why they asked for the largest payment upfront. Their last few letters were so sloppily written, it even felt like they were shooing me away by that point. And now Sita's departure from my life seemed like proof that I'd fallen for the perfect scam once again.`,
                                 dotKeys: {
@@ -927,7 +925,6 @@ export default {
                         `"Shall I leave you," she says, "`,
                         {
                             anchor: `here to Philip Dick`,
-                            todo: REVIEW,
                             card: {
                                 description: `Or else, to "feel up dick." Sita lightens the awkwardness by joking that I might prefer to continue masturbating alone. At the same time, she gently jabs at the bookish persona I've painstakingly constructed.`,
                                 dotKeys: {
@@ -955,7 +952,7 @@ export default {
                             anchor: `Kurt Cobain`,
                             wiki: `Kurt_Cobain`,
                         },
-                        `sings the same melody an octave higher, kicking it into high gear. Since this is the highlight of`,
+                        `sings the same melody an octave higher, kicking it into high gear. Since this is the peak of`,
                         {
                             anchor: `Nirvana`,
                             wiki: `Nirvana_(band)`,
@@ -968,7 +965,7 @@ export default {
                                 wiki: `Nevermind`,
                             },
                         },
-                        `for me, I'd always dreamt of recreating the effect; unfortunately, the melodies I write tend to span my whole vocal range. So when I noticed that the melody for this chorus never ventures beyond a single octave, I transposed the song's key, allowing me to sing it in two different registers.`,
+                        `for me, I'd always wanted to recreate the same effect; unfortunately, the melodies I write tend to span my whole vocal range. So when I noticed that the melody for this chorus never ventures beyond a single octave, I transposed the song's key, allowing me to sing the first chorus at the bottom of my vocal range, and the second one at the very top.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,

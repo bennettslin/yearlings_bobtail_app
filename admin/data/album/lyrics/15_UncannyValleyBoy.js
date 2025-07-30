@@ -20,7 +20,6 @@ import {
     BACKING,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Uncanny Valley Boy',
@@ -121,7 +120,6 @@ export default {
                         `, come`,
                         {
                             anchor: `wax prophetic`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -1245,9 +1243,8 @@ export default {
                         `what's left of what these`,
                         {
                             anchor: `faces you flip override`,
-                            todo: REVIEW,
                             card: {
-                                description: `As I grew into a sullen adolescent, my mother would ask what happened to the playful little boy I'd been before… which then made me wonder myself. In retrospect, I think I learned to take on the optimal persona for each given situation— and as time went on, they began to pile up. It made no sense, then, to keep an old persona lying around once it no longer served its purpose.`,
+                                description: `As I grew into a sullen adolescent, my mother would ask what happened to the playful little boy I'd been before… which then made me wonder myself. In retrospect, I think I learned to take on the optimal persona for each given situation— and as time went on, they began to pile up. It made no sense, then, to keep an old persona lying around once it no longer served any purpose.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

@@ -17,6 +17,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Constellations!',
@@ -153,14 +154,15 @@ export default {
                         },
                         {
                             anchor: `whispures a low sigh, bein'`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `"Heaven's manna was pure psilocybin." During this time, I was intrigued by the role played by psychedelic drugs throughout history. Though textbooks naturally failed to provide this information, it was readily available in the alternative bookstores around Berkeley. One theory is that`,
+                                    `"Heaven's manna was pure psilocybin." During this time, I became intrigued by the role played by psychedelic drugs in ancient history. Though textbooks failed to provide this information, it was readily available in the underground bookstores around Berkeley. One theory holds that`,
                                     {
                                         anchor: `manna`,
                                         wiki: `Manna`,
                                     },
-                                    `from heaven was a`,
+                                    `from heaven was actually a`,
                                     {
                                         anchor: `psilocybin mushroom`,
                                         wiki: `Psilocybin_mushroom`,
@@ -364,6 +366,7 @@ export default {
                     lyric: [
                         {
                             anchor: `Quouffs uppraissed`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Not all bottles of Robitussin will get you high. The ones to avoid are those containing`,
@@ -371,7 +374,7 @@ export default {
                                         anchor: `guaifenesin`,
                                         wiki: `Guaifenesin`,
                                     },
-                                    `, which is an expectorant. So we "upraise" our "quaffs" to "appraise" them, looking specifically for the medicinal property that keeps "coughs suppressed."`,
+                                    `— an expectorant. So we "upraise" our "quaffs" to "appraise" them, looking specifically for the medicinal property that keeps "coughs suppressed."`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -517,9 +520,10 @@ export default {
                         `, from`,
                         {
                             anchor: `among ol'`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `The Magyars share genetic ancestry with the "`,
+                                    `The Magyars share distant origins with the "`,
                                     {
                                         anchor: `Mongols`,
                                         wiki: `Mongols`,
@@ -635,6 +639,8 @@ export default {
                         {
                             anchor: `Drinkhis Khan, once Toomujin`,
                             properNoun: true,
+                            todo: REST,
+                            problem: `First sentence runs on.`,
                             cards: [
                                 {
                                     description: `Earlier tonight, I was hesitant to do Robitussin with the others, since I'd already done it the night before, and each trip destroys you for a good while. But now the "drink is gone," and with "too much in," I've forgotten my concerns.`,
@@ -702,6 +708,7 @@ export default {
                         {
                             anchor: `Tomer-layin' the seed`,
                             properNoun: true,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `Tomer jokingly drops crumbs of dirt as if laying a trail of seeds. I observe that these seeds will sprout into the nations of our descendants in the lands we conquer.`,
@@ -717,7 +724,7 @@ export default {
                                             anchor: `Tamerlane`,
                                             wiki: `Timur`,
                                         },
-                                        `" continued the Turko-Mongol expansion into Central Asia. Though not born from the seed of Genghis Khan directly, he laid out the case for his legitimacy by tracing lineage to a common ancestor.`,
+                                        `" continued the Turko-Mongol expansion into Central Asia. Though not born directly from the seed of Genghis Khan, he laid out the case for his legitimacy by tracing lineage to a common ancestor.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -796,9 +803,10 @@ export default {
                         {
                             anchor: `Indus-trail sewerce`,
                             properNoun: true,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `As we make our way down "industrial sewers," I excitedly explain the subject of a term paper I just wrote. In the 19th century, Western scholars proposed that Indian civilization was brought by invaders from the north, who carved a trail leading to the "source" of the`,
+                                    `As we make our way down "industrial sewers," I excitedly explain the subject of a term paper I'd just written. In the 19th century, Western scholars proposed that Indian civilization was brought by invaders from the north, who carved a trail leading to the "source" of the`,
                                     {
                                         anchor: `Indus`,
                                         wiki: `Indus_River`,
@@ -806,7 +814,7 @@ export default {
                                     `river. This theory became known as the`,
                                     {
                                         anchor: `Aryan Invasion`,
-                                        wiki: `Indo-Aryan_migration`,
+                                        wiki: `Indo-Aryan_migrations`,
                                     },
                                     `.`,
                                 ],
@@ -892,9 +900,10 @@ export default {
                         {
                             anchor: `Sensegreat deva's day shone`,
                             properNoun: true,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `Moreover, in "Sanskrit," the word for a Vedic deity is "`,
+                                    `Furthermore, in "Sanskrit," the word for a Vedic deity is "`,
                                     {
                                         isItalic: true,
                                         lyric: {
@@ -910,7 +919,7 @@ export default {
                                             wiki: `Daeva`,
                                         },
                                     },
-                                    `is a demon. So whether one "foresees a hero" or "senses great devastation" depends on which side of the schism one ended up on.`,
+                                    `is a demon. So whether you "foresee a hero" or "sense great devastation" depends on which side of the schism you ended up on.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -983,6 +992,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
                         `Sita introduced me to`,
@@ -990,7 +1000,7 @@ export default {
                             anchor: `Bollywood`,
                             wiki: `Bollywood`,
                         },
-                        `movies, which are a gold mine of musical ideas. The chords for the refrain and verse in this song were borrowed from the title track of one of our favorites,`,
+                        `movies, which are a gold mine of musical ideas. To compose the refrain and verse for this song, I borrowed chord progressions from the title track of one of our favorites,`,
                         {
                             isItalic: true,
                             lyric: {
@@ -1055,6 +1065,7 @@ export default {
                         `,`,
                         {
                             anchor: `a'duct Uighuress`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The Mongols would slay the men and seize the women of the lands they conquered. This fate was no doubt met by the`,
@@ -1062,7 +1073,7 @@ export default {
                                         anchor: `Uighurs`,
                                         wiki: `Uyghurs`,
                                     },
-                                    `, a Turkic people whom they encountered in their early campaigns. And so through "a duct, we egress," or exit, the steam tunnels— but first, I feign to "abduct a Uighuress."`,
+                                    `, a Turkic people whom they encountered in their early campaigns. And so, through "a duct, we egress," or exit, the steam tunnels— but first, I feign to "abduct a Uighuress."`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1433,8 +1444,9 @@ export default {
                         `The`,
                         {
                             anchor: `mistodawn`,
+                            todo: REVIEW,
                             card: {
-                                description: `The "mist of dawn" breaks, and we drive back to Howie's place. My newfound clarity ends up being short-lived, as I lean back and shut my eyes to gaze at constellations.`,
+                                description: `The "mist of dawn" breaks, and we drive back to Howie's place. My newfound clarity proves to be short-lived, as I lean back and shut my eyes to gaze at constellations.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -1445,9 +1457,10 @@ export default {
                         {
                             // NOTE: I changed from ha'nt.
                             anchor: `hant'd by sober-trooth tiedgirl`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `As I envision a "`,
+                                    `Envisioning a "`,
                                     {
                                         anchor: `mastodon`,
                                         wiki: `Mastodon`,
@@ -1477,6 +1490,7 @@ export default {
                         lyric: [
                             {
                                 anchor: `sunk in tarpid lies`,
+                                todo: REVIEW,
                                 cards: [
                                     {
                                         description: `My mastodon lies sunk in a "tar pit," just as I'm sinking in all my "torpid" lies explaining to Sita why I don't spend more nights with her.`,
@@ -1487,11 +1501,12 @@ export default {
                                     },
                                     {
                                         description: [
+                                            `Back in the day, my favorite place to visit on a field trip was the`,
                                             {
-                                                anchor: `Tar pits`,
-                                                wiki: `Tar_pit`,
+                                                anchor: `La Brea Tar Pits`,
+                                                wiki: `La_Brea_Tar_Pits`,
                                             },
-                                            `occur when natural asphalt leaks to the surface from underground. Preserving wood and bone, they're rich sources of paleontological discovery.`,
+                                            `, which were formed by asphalt seeping up from underground over tens of thousands of years. By preserving bones and some plants, they became rich sources of discovery for paleontologists.`,
                                         ],
                                     },
                                     {
@@ -1551,6 +1566,8 @@ export default {
                         },
                         {
                             anchor: `broughtour ancister`,
+                            todo: REST,
+                            problem: `Flow between first and second sentences is off.`,
                             card: {
                                 description: [
                                     `In the epic vision playing out in my mind, our little group is now an Inuit tribe, and the mastodon has become our spirit animal. We've "brought our ancestral`,
@@ -1901,6 +1918,7 @@ export default {
                         {
                             anchor: `Rumspring`,
                             properNoun: true,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The`,
@@ -1913,7 +1931,7 @@ export default {
                                         anchor: `Rumspringa`,
                                         wiki: `Rumspringa`,
                                     },
-                                    `." Though this means "running around" in their native language, I like the image of us dipping into a literal "rum spring." In any case, the spring of our youth— in every sense of the phrase— is quickly running out.`,
+                                    `." Though this means "running around" in their native tongue, I like the image of us dipping into a literal "rum spring." In any case, the spring of our youth— in every sense of the phrase— is quickly running out.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1950,6 +1968,7 @@ export default {
                             // NOTE: I capitalised Black.
                             anchor: `Black Letter-Day`,
                             properNoun: true,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Holidays on a calendar are traditionally`,
@@ -1957,7 +1976,7 @@ export default {
                                         anchor: `marked in red`,
                                         wiki: `Red_letter_day`,
                                     },
-                                    `ink. By contrast, the "black-letter day sensed" ahead will be just another ordinary day.`,
+                                    `ink. By contrast, then, the "black-letter day sensed" ahead will be just another ordinary day.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

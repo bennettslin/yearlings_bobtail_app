@@ -11,7 +11,6 @@ import {
     POSTCHORUS,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Good Night, Sita',
@@ -173,7 +172,6 @@ export default {
                         {
                             anchor: `Dutch courage`,
                             properNoun: true,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `During my college years, I'd ask older coworkers to buy twelve-packs of cheap beer for me; as a result, I always had a ready supply in my apartment. Before each date, then, I'd down a few cans.`,
@@ -743,7 +741,6 @@ export default {
                         `brave`,
                         {
                             anchor: `rejection into art`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `I eventually learned to welcome rejection, since I could always use it as subject matter when writing new songs. But this, in turn, meant a lifetime of getting rejected can`,
