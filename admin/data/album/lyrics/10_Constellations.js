@@ -806,12 +806,12 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `As we make our way down "industrial sewers," I excitedly explain the subject of a term paper I'd just written. In the 19th century, Western scholars proposed that Indian civilization was brought by invaders from the north, who carved a trail leading to the "source" of the`,
+                                    `As we make our way down "industrial sewers," I excitedly explain the subject of a term paper I'd recently written. In the 19th century, Western scholars proposed that Indian civilization was brought by invaders from the north, who carved a trail leading to the "source" of the`,
                                     {
                                         anchor: `Indus`,
                                         wiki: `Indus_River`,
                                     },
-                                    `river. This theory became known as the`,
+                                    `river— a theory that became known as the`,
                                     {
                                         anchor: `Aryan Invasion`,
                                         wiki: `Indo-Aryan_migrations`,

@@ -16,6 +16,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Garryowen',
@@ -153,6 +154,7 @@ export default {
                         `if you would`,
                         {
                             anchor: `opt for bed not street`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `I was tired of working extra shifts just to pay rent. So after my lease ended, I'd spend half my nights with Sita, and the other half crashing in the`,
@@ -160,7 +162,7 @@ export default {
                                         anchor: `punk house`,
                                         wiki: `Punk_house`,
                                     },
-                                    `basement. This gave me the regular comfort of Sita's bed, while ensuring that she never held the upper hand over me.`,
+                                    `basement. This gave me the regular comfort of Sita's bed, while ensuring that she never had the upper hand over me.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -378,8 +380,9 @@ export default {
                         `So the`,
                         {
                             anchor: `celibate you'll play`,
+                            todo: REVIEW,
                             card: {
-                                description: `Drinking made me impotent and thus impervious to Sita's advances, so I gladly drank to excess. And not having sex was also purifying in its own right, as it lent the familiar comfort of being my lovelorn self again.`,
+                                description: `Drinking made me impotent and thus impervious to Sita's advances, so I gladly drank to excess. But not having sex was also purifying in its own right, as it lent the familiar comfort of being my lovelorn self again.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -398,8 +401,9 @@ export default {
                     lyric: [
                         {
                             anchor: `Slammed in the well`,
+                            todo: REVIEW,
                             card: {
-                                description: `But vomiting into a toilet, and then seeing your miserable reflection in the water staring back at you, only works as a wake-up call the first time. After that, it's a cliche.`,
+                                description: `Still, vomiting into a toilet, and then seeing your reflection in the water staring back at you in misery, only works as a wake-up call the first time. After that, it's a cliche.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -486,6 +490,7 @@ export default {
                         `fill up a package strapped to your`,
                         {
                             anchor: `scapegirl`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In Biblical times, a community absolved its sins by ritually placing them`,
@@ -493,7 +498,7 @@ export default {
                                         anchor: `on a goat`,
                                         wiki: `Scapegoat`,
                                     },
-                                    `that was then cast into the desert. Banishing Sita from my life would serve a similar purpose: Without her around to cast judgment, I'd have no need to atone for my hypocrisy.`,
+                                    `that was then cast into the desert. Well, banishing Sita from my life served a similar purpose: Without her around to cast judgment, I'd have no need to atone for my hypocrisy.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -559,6 +564,8 @@ export default {
                         `you'd`,
                         {
                             anchor: `make her strip bare`,
+                            todo: REST,
+                            problem: `First sentence is too long.`,
                             card: {
                                 description: `Sita learned early on that she could always whisk me away for some lovemaking by hovering naked beside me while shivering dramatically from the cold. But as our relationship soured, this brazen appeal to both my primal and protective instincts grew tiresome, and I drew some cruel pleasure in letting her shiver for just a bit longer.`,
                                 dotKeys: {
@@ -666,8 +673,9 @@ export default {
                         `, you'll`,
                         {
                             anchor: `drop your anchor`,
+                            todo: REVIEW,
                             card: {
-                                description: `More than anything else, I was tired of lurching from one emotional extreme to the next. Breaking up meant that I could finally drop my "anger" and keep my mood anchored in place.`,
+                                description: `More than anything else, I was tired of lurching from one emotional extreme to the next. Breaking up meant I could drop my "anger" and keep my mood anchored in place.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -737,8 +745,16 @@ export default {
                             `see himself`,
                             {
                                 anchor: `as well in you`,
+                                todo: REVIEW,
                                 card: {
-                                    description: `And yet, if I was capable of hurting myself, then I'd also have no qualms about hurting those close to me— who now knew the worst side of me as only I once did.`,
+                                    description: [
+                                        `Yet if I was capable of hurting myself, then I'd`,
+                                        {
+                                            isEmphasis: true,
+                                            lyric: `also`,
+                                        },
+                                        `have zero qualms about hurting those close to me, who now knew the worst side of me as only I once did.`,
+                                    ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                     },
