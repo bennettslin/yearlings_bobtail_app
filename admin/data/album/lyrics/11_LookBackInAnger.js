@@ -16,7 +16,7 @@ import {
     FORESHADOW_OF_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REDO, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REDO, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Look Back in Anger',
@@ -262,8 +262,9 @@ export default {
                         `yet— if adding up— then`,
                         {
                             anchor: `for more you'd vie`,
+                            todo: REVIEW,
                             card: {
-                                description: `But though it was a struggle, I did make it— which means I can do it again. So why wouldn't I try? After all, each new relationship is like another tree ring, a testament to one's resilience and continued growth.`,
+                                description: `But, though it was a struggle, I did make it— which means I can do it again. So why wouldn't I try? After all, each new relationship is like another tree ring, a testament to one's resilience and continued growth.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -301,8 +302,9 @@ export default {
                         `you rode, so on`,
                         {
                             anchor: `spite you thrive`,
+                            todo: REVIEW,
                             card: {
-                                description: `This casual view of my own hardship, though, is what later enabled me to justify the pain I inflicted on Sita.`,
+                                description: `This casual view of my own hardship, however, is what later enabled me to justify the pain I inflicted on Sita.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -660,8 +662,9 @@ export default {
                     lyric: [
                         {
                             anchor: `only to crack`,
+                            todo: REVIEW,
                             card: {
-                                description: `Yet even as reason disproved the beliefs of my bullies, it also discredited my own as a Beyonder: With so many rival claims to the truth, who'd stay loyal to a faith that offers no community, and only endless grief?`,
+                                description: `Yet even as reason disproved the beliefs of my bullies, it also discredited my own as a Beyonder: After all, with so many rival claims to the truth, who'd stay loyal to a faith that offers no community, and only endless grief?`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -699,9 +702,10 @@ export default {
                         `weren't they`,
                         {
                             anchor: `right to take what's theirs`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `Having moved up the social hierarchy, I could now look back on the bullies without passing judgment— and even begin to sympathize with them. After all, in a world that roots for the strong, who`,
+                                    `Having moved up the social hierarchy, I could now look back on the bullies without passing judgment— and even begin to sympathize with them. Because, in a world that roots for the strong, who`,
                                     {
                                         isEmphasis: true,
                                         lyric: `wouldn't`,
