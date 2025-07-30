@@ -746,7 +746,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `I eventually learned to welcome rejection, since I could always use it as subject matter when writing new songs. Which, in turn, meant a lifetime of getting rejected can`,
+                                    `I eventually learned to welcome rejection, since I could always use it as subject matter when writing new songs. But this, in turn, meant a lifetime of getting rejected can`,
                                     {
                                         isEmphasis: true,
                                         lyric: `itself`,
