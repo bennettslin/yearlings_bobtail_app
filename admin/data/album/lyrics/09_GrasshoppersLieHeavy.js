@@ -332,14 +332,14 @@ export default {
                                             anchor: `vocational rehabilitation`,
                                             wiki: `Vocational_rehabilitation`,
                                         },
-                                        `program that brought over workers who were mentally disabled. Since they were usually placed in the dishroom, I'd sometimes get mistaken as one of them. This always tickled me, as it gave me the same rush of solidarity I'd once felt as a Beyonder.`,
+                                        `program that brought over workers who were mentally disabled. Since they were usually placed in the dishroom, I'd sometimes get mistaken as one of them. This tickled me, as it gave me the same rush of solidarity I'd once felt as a Beyonder.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
                                 },
                                 {
-                                    description: `Unsure of my background, and feeling slightly ambushed, Sita hesitates. As we chat, however, I win her over with my knowledge of literature.`,
+                                    description: `Unsure of my background, and feeling slightly ambushed, Sita hesitates. As we chat, though, I win her over with my knowledge of literature.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -968,7 +968,7 @@ export default {
                                 wiki: `Nevermind`,
                             },
                         },
-                        `for me, I'd always planned to recreate the effect; unfortunately, the melodies I write tend to span my whole vocal range. So when I noticed that the melody for this chorus never ventures beyond a single octave, I transposed the song's key, allowing me to sing it in two different registers.`,
+                        `for me, I'd always dreamt of recreating the effect; unfortunately, the melodies I write tend to span my whole vocal range. So when I noticed that the melody for this chorus never ventures beyond a single octave, I transposed the song's key, allowing me to sing it in two different registers.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
