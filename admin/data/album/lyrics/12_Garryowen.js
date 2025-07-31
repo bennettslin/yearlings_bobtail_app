@@ -16,7 +16,6 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Garryowen',
@@ -154,7 +153,6 @@ export default {
                         `if you would`,
                         {
                             anchor: `opt for bed not street`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `I was tired of working extra shifts just to pay rent. So after my lease ended, I'd spend half my nights with Sita, and the other half crashing in the`,
@@ -380,7 +378,6 @@ export default {
                         `So the`,
                         {
                             anchor: `celibate you'll play`,
-                            todo: REVIEW,
                             card: {
                                 description: `Drinking made me impotent and thus impervious to Sita's advances, so I gladly drank to excess. But not having sex was also purifying in its own right, as it lent the familiar comfort of being my lovelorn self again.`,
                                 dotKeys: {
@@ -401,7 +398,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Slammed in the well`,
-                            todo: REVIEW,
                             card: {
                                 description: `Still, vomiting into a toilet— while catching your reflection in the water staring back at you in misery— only works as a wake-up call the first time. After that, it's a cliche.`,
                                 dotKeys: {
@@ -490,7 +486,6 @@ export default {
                         `fill up a package strapped to your`,
                         {
                             anchor: `scapegirl`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In Biblical times, a community absolved its sins by ritually placing them`,
@@ -564,7 +559,6 @@ export default {
                         `you'd`,
                         {
                             anchor: `make her strip bare`,
-                            todo: REVIEW,
                             card: {
                                 description: `Sita learned early on that, by hovering naked beside me while shivering dramatically from the cold, she could always whisk me away for some lovemaking. But as our relationship soured, this brazen appeal to both my primal and protective instincts grew tiresome, and I drew some cruel pleasure in letting her shiver for just a bit longer.`,
                                 dotKeys: {
@@ -672,7 +666,6 @@ export default {
                         `, you'll`,
                         {
                             anchor: `drop your anchor`,
-                            todo: REVIEW,
                             card: {
                                 description: `More than anything else, I was tired of lurching from one emotional extreme to the next. Breaking up meant I could drop my "anger" and keep my mood anchored in place.`,
                                 dotKeys: {
@@ -744,7 +737,6 @@ export default {
                             `see himself`,
                             {
                                 anchor: `as well in you`,
-                                todo: REVIEW,
                                 card: {
                                     description: [
                                         `Yet if I was capable of hurting myself, then I'd`,
