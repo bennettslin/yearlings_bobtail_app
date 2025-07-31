@@ -16,7 +16,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Garryowen',
@@ -403,7 +403,7 @@ export default {
                             anchor: `Slammed in the well`,
                             todo: REVIEW,
                             card: {
-                                description: `Still, vomiting into a toilet, and then seeing your reflection in the water staring back at you in misery, only works as a wake-up call the first time. After that, it's a cliche.`,
+                                description: `Still, vomiting into a toilet— while catching your reflection in the water staring back at you in misery— only works as a wake-up call the first time. After that, it's a cliche.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -498,7 +498,7 @@ export default {
                                         anchor: `on a goat`,
                                         wiki: `Scapegoat`,
                                     },
-                                    `that was then cast into the desert. Well, banishing Sita from my life served a similar purpose: Without her around to cast judgment, I'd have no need to atone for my hypocrisy.`,
+                                    `that was then cast into the desert. And banishing Sita from my life served a similar purpose: Without her around to cast judgment, I'd have no need to atone for my hypocrisy.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -564,10 +564,9 @@ export default {
                         `you'd`,
                         {
                             anchor: `make her strip bare`,
-                            todo: REST,
-                            problem: `First sentence is too long.`,
+                            todo: REVIEW,
                             card: {
-                                description: `Sita learned early on that she could always whisk me away for some lovemaking by hovering naked beside me while shivering dramatically from the cold. But as our relationship soured, this brazen appeal to both my primal and protective instincts grew tiresome, and I drew some cruel pleasure in letting her shiver for just a bit longer.`,
+                                description: `Sita learned early on that, by hovering naked beside me while shivering dramatically from the cold, she could always whisk me away for some lovemaking. But as our relationship soured, this brazen appeal to both my primal and protective instincts grew tiresome, and I drew some cruel pleasure in letting her shiver for just a bit longer.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -753,7 +752,7 @@ export default {
                                             isEmphasis: true,
                                             lyric: `also`,
                                         },
-                                        `have zero qualms about hurting those close to me, who now knew the worst side of me as only I once did.`,
+                                        `have zero qualms about hurting those close to me— who now knew the worst side of me as only I once did.`,
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,

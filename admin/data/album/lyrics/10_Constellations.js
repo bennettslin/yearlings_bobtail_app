@@ -17,7 +17,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Constellations!',
@@ -639,11 +639,10 @@ export default {
                         {
                             anchor: `Drinkhis Khan, once Toomujin`,
                             properNoun: true,
-                            todo: REST,
-                            problem: `First sentence runs on.`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Earlier tonight, I was hesitant to do Robitussin with the others, since I'd already done it the night before, and each trip destroys you for a good while. But now the "drink is gone," and with "too much in," I've forgotten my concerns.`,
+                                    description: `Each Robitussin trip destroys you for a good while, and I'd already done it the night before. So earlier tonight, I was hesitant to take it with the others. But now the "drink is gone," and with "too much in," I've forgotten my concerns.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true,
@@ -1501,7 +1500,7 @@ export default {
                                     },
                                     {
                                         description: [
-                                            `Back in the day, my favorite place to visit on a field trip was the`,
+                                            `Back in the day, my favorite place for a school field trip was the`,
                                             {
                                                 anchor: `La Brea Tar Pits`,
                                                 wiki: `La_Brea_Tar_Pits`,
