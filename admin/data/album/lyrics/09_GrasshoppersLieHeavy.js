@@ -965,7 +965,7 @@ export default {
                                 wiki: `Nevermind`,
                             },
                         },
-                        `for me, I'd always wanted to recreate the same effect; unfortunately, the melodies I write tend to span my whole vocal range. So when I noticed that the melody for this chorus never ventures beyond a single octave, I transposed the song's key, allowing me to sing the first chorus at the bottom of my vocal range, and the second one at the very top.`,
+                        `for me, I'd always wanted to recreate the same effect; unfortunately, the melodies I write tend to span my whole vocal range. So when I noticed that the melody for this chorus never ventures beyond a single octave, I transposed the song's key, allowing me to sing the first chorus at the bottom of my vocal range, and the second one at the top.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
