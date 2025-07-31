@@ -1566,16 +1566,15 @@ export default {
                         },
                         {
                             anchor: `broughtour ancister`,
-                            todo: REST,
-                            problem: `Flow between first and second sentences is off.`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `In the epic vision playing out in my mind, our little group is now an Inuit tribe, and the mastodon has become our spirit animal. We've "brought our ancestral`,
+                                    `In the epic vision playing out in my mind, our little group is now an Inuit tribe. As such, we've "brought our ancestral`,
                                     {
                                         anchor: `totems`,
                                         wiki: `Totem`,
                                     },
-                                    `and rites" to our new homeland.`,
+                                    `and rites" to our new homeland— with its native mastodon becoming our spirit animal.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
