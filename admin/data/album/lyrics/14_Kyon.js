@@ -15,6 +15,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'क्यों? (Kyon?)',
@@ -162,9 +163,11 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
-                    description: `I wanted this song to speak from Sita's perspective, but in retrospect, my portrayal might be a bit one-dimensional. I was just self-absorbed in my guilt when I wrote it, and my main purpose was to beat myself up over what my pride had cost me.`,
+                    description: `I wanted to speak from Sita's perspective, but in hindsight, my portrayal of her might be a bit one-dimensional. She was never so helpless; in fact, she once admitted that she was worse in some ways, for she'd willingly damaged my psyche, whereas I'd only unwittingly damaged hers. Still, I was too self-absorbed in guilt when I wrote these lyrics, and my primary intent was to beat myself up over what my ego had cost me.`,
                     dotKeys: {
+                        [BACKSTORY]: true,
                         [SONGCRAFT]: true,
                     },
                 },
@@ -559,8 +562,16 @@ export default {
                         `your`,
                         {
                             anchor: `severed stinger`,
+                            todo: REVIEW,
                             card: {
-                                description: `At the time, I failed to appreciate what it meant for Sita to have given her virginity to me. She had to make things work because a part of me was forever lodged inside her, like a barbed stinger left under the skin after a bee sting.`,
+                                description: [
+                                    `At the time, I failed to appreciate what it meant for Sita to have given me her virginity. She`,
+                                    {
+                                        isEmphasis: true,
+                                        lyric: `had`,
+                                    },
+                                    `to make things work, now that a part of me was forever lodged inside her— like a barbed stinger left under the skin after a bee sting.`,
+                                ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -576,8 +587,16 @@ export default {
                         `But other nights you'd`,
                         {
                             anchor: `lap my wound clean`,
+                            todo: REVIEW,
                             card: {
-                                description: `Sita was unable to climax through vaginal sex alone, so I'd go down on her afterward. She mentioned this once as an example of my thoughtfulness, when I asked her what she saw in me that was worth holding onto. It seemed to be proof that I didn't actually have any redeeming qualities.`,
+                                description: [
+                                    `Sita was unable to climax through vaginal sex alone, so I'd go down on her afterward. She mentioned this once as an example of my attentiveness, when I asked what she saw in me that was worth holding onto. But it just seemed like proof that I didn't have any`,
+                                    {
+                                        isEmphasis: true,
+                                        lyric: `truly`,
+                                    },
+                                    `redeeming qualities.`,
+                                ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -675,8 +694,9 @@ export default {
                         `? Come for me? At`,
                         {
                             anchor: `thirty-three`,
+                            todo: REVIEW,
                             card: {
-                                description: `I often joked about killing myself at thirty-three— the age at which Jesus was crucified. I hated the idea of getting older, and clearly this is all the time you need to make an impact on the world. So when Sita asked me to specify the age at which I'd come back for her in accordance with our pact, I answered thirty-three. The subtext was understood.`,
+                                description: `I often joked about killing myself at thirty-three— the age at which Jesus was crucified. I hated the idea of getting older, and clearly this is all the time you need to change the world. So when Sita asked me to specify at what age I'd come back for her— in accordance with our little pact— I answered thirty-three. The subtext was understood.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
