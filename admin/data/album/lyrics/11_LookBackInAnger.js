@@ -16,7 +16,7 @@ import {
     FORESHADOW_OF_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REDO, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REDO, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Look Back in Anger',
@@ -791,10 +791,9 @@ export default {
                         `Drunk, you'd`,
                         {
                             anchor: `claim you've never loved`,
-                            todo: REVISE,
-                            problem: `Run on sentence.`,
+                            todo: REVIEW,
                             card: {
-                                description: `Our first songs were all about being unlucky in love. As my life improved, then, I needed to drink further amounts of alcohol to carry on with the lie that I was still the same inexperienced kid who wrote them.`,
+                                description: `Our first songs were all about being unlucky in love. As my life improved, then, it felt weird to carry on like I was still the same inexperienced kid who wrote them.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,

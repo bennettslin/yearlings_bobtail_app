@@ -1482,7 +1482,7 @@ export default {
                                 todo: REVIEW,
                                 cards: [
                                     {
-                                        description: `My mastodon lies sunk in a "tar pit," just as I'm sinking in all my "torpid" lies explaining to Sita why I don't spend more nights with her.`,
+                                        description: `While my mastodon lies sunk in a "tar pit," I'm sinking in all my "torpid" lies explaining to Sita why I don't spend more nights with her.`,
                                         dotKeys: {
                                             [NARRATIVE]: true,
                                             [PUN]: true,
