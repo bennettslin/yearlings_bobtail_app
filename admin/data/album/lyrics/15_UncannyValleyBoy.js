@@ -20,6 +20,7 @@ import {
     BACKING,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Uncanny Valley Boy',
@@ -36,6 +37,7 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 cards: [
                     {
                         description: [
@@ -44,7 +46,7 @@ export default {
                                 anchor: `uncanny valley`,
                                 wiki: `Uncanny_valley`,
                             },
-                            `theorizes that as human replicas take on more lifelike characteristics, we grow further repulsed, insofar as they remain less than perfectly convincing to us. And as I grew older while remaining less than convincing as a grownup, it was reasonable to ask if this "Valley boy" now drew the same revulsion.`,
+                            `is a notion that as human replicas take on more lifelike characteristics, we grow further repulsed, insofar as they remain less than perfectly convincing to us. And as I grew older while remaining less than convincing as a grownup, it was reasonable to ask if this "Valley boy" now drew the same revulsion.`,
                         ],
                         dotKeys: {
                             [OBSERVATION]: true,
@@ -185,6 +187,7 @@ export default {
                     lyric: [
                         {
                             anchor: `Stumped`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `In their claim to be stumped, my parents pretend to be oblivious to the outcome of my story.`,
@@ -194,7 +197,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `Finally, the tree sacrifices herself completely by letting the boy make a boat from her trunk. When the boy returns as an old man, the tree is now a mere stump, and can only offer him a seat to rest upon.`,
+                                    description: `Finally, the tree sacrifices herself completely by letting the boy make a boat from her trunk. When the boy returns as an old man, the tree— now just a stump— can only offer him a seat to rest upon.`,
                                     dotKeys: {
                                         [REFERENCE]: true,
                                     },
@@ -204,6 +207,7 @@ export default {
                         `, I ponder the`,
                         {
                             anchor: `forespoken monster`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In`,
@@ -214,7 +218,7 @@ export default {
                                             wiki: `The_Monster_at_the_End_of_This_Book`,
                                         },
                                     },
-                                    `, Sesame Street's Grover tries to prevent the reader from turning to the last page of the book, fearful of the monster lying in wait. As it turns out, the only monster present at the end is Grover himself, much to his embarrassment.`,
+                                    `, Sesame Street's Grover tries to prevent the reader from turning to the last page of the book, fearful of the monster lying in wait. As it turns out, however, the only monster present at the end is Grover himself— much to his embarrassment.`,
                                 ],
                             },
                         },
@@ -252,14 +256,15 @@ export default {
                         `And you, for a future,`,
                         {
                             anchor: `sold your whole fortune`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `My parents lament that my opportunism has made me a future "soldier of" fortune, or`,
+                                    `My parents lament that my opportunism has made me a future "soldier of" fortune— or,`,
                                     {
                                         anchor: `mercenary`,
                                         wiki: `Mercenary`,
                                     },
-                                    `, as I squander everything good I have with Sita to chase unsavory and foolhardy pursuits.`,
+                                    `— as I squander everything good I have with Sita to chase unsavory and foolhardy pursuits.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1158,6 +1163,7 @@ export default {
                         `Stubborn`,
                         {
                             anchor: `harpies`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -1166,7 +1172,7 @@ export default {
                                             anchor: `harpies`,
                                             wiki: `Harpy`,
                                         },
-                                        `were female monsters with human heads and birdlike bodies. And in common parlance, a harpy is a nagging woman.`,
+                                        `were female monsters with human heads and birdlike bodies; as such, the harpy became a nagging woman in common parlance.`,
                                     ],
                                 },
                                 {
@@ -1394,9 +1400,10 @@ export default {
                         lyric: [
                             {
                                 anchor: `old and subservient`,
+                                todo: REVIEW,
                                 cards: [
                                     {
-                                        description: `Once in college, I finally understood how much my parents had sacrificed for me and my siblings to lead better lives than theirs. But the fact that this awareness came about through assigned coursework— rather than my own lived experiences— only added to my guilt.`,
+                                        description: `In college, I finally understood how much my parents had sacrificed for me and my siblings to lead better lives than they did. But the fact that this appreciation had to come about through assigned coursework— rather than my own lived experiences— only added to my guilt.`,
                                         dotKeys: {
                                             [BACKSTORY]: true,
                                         },

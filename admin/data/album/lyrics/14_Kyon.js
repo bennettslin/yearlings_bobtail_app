@@ -165,7 +165,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: REVIEW,
                 card: {
-                    description: `I wanted to speak from Sita's perspective, but in hindsight, my portrayal of her might be a bit one-dimensional. She was never so helpless; in fact, she once admitted that she was worse in some ways, for she'd willingly damaged my psyche, whereas I'd only unwittingly damaged hers. Still, I was too self-absorbed in guilt when I wrote these lyrics, and my primary intent was to beat myself up over what my ego had cost me.`,
+                    description: `I wanted to speak from Sita's perspective, but in hindsight, my portrayal of her might be a bit one-dimensional. She was never so helpless; in fact, she once admitted that she felt like the worse partner, for she'd willingly damaged my psyche— whereas I'd only unwittingly damaged hers. Still, I was too self-absorbed in guilt when I wrote these lyrics, and my primary intent was to beat myself up over what my ego had cost me.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGCRAFT]: true,
@@ -757,8 +757,9 @@ export default {
                         `, and`,
                         {
                             anchor: `sadness for what it was`,
+                            todo: REVIEW,
                             card: {
-                                description: `Back when Sita and I were just friends, we got along well because we were both sad people. But in hindsight, my sadness was simply rooted in circumstance— whether from being bullied as a child, or out of loneliness later on. Sita, on the other hand, suffered from clinical depression. So over time, I got better at dealing with my spells— but then I grew impatient with her for not doing the same.`,
+                                description: `Back when Sita and I were just friends, we got along well because we were both sad people. But in retrospect, my sadness was simply rooted in circumstance— whether from being bullied as a child, or out of loneliness later on. Sita, on the other hand, suffered from clinical depression. So over time, I got better at dealing with my spells— but then I grew impatient with her for not doing the same.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
