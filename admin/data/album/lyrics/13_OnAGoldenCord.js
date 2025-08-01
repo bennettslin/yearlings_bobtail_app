@@ -14,6 +14,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'On a Golden Cord',
@@ -199,8 +200,9 @@ export default {
                         `I'm sorry, but I`,
                         {
                             anchor: `went through your mail`,
+                            todo: REVIEW,
                             card: {
-                                description: `Confused over why I'd grown distant, Sita snooped around on my desktop computer earlier that day. In doing so, she stumbled upon some emails to friends— one in which I spoke of a recent crush on another woman, and another soliciting advice on how to break up gently.`,
+                                description: `Confused over why I'd grown distant, Sita snooped around on my desktop computer earlier that day. In doing so, she stumbled upon some emails to friends— one in which I'd spoken of a recent crush on another woman, and another one soliciting advice on how to break up gently.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -212,6 +214,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
                         `I figured out an`,
@@ -224,7 +227,7 @@ export default {
                             anchor: `natural harmonic`,
                             wiki: `Guitar_harmonics`,
                         },
-                        `. I didn't account for the need to quickly move my fingers from one end of the fretboard to the other, however, so I had to record each part in multiple short takes.`,
+                        `. However, I didn't account for the need to quickly move my fingers from one end of the fretboard to the other, so I had to record each part in multiple short takes.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -301,13 +304,14 @@ export default {
                         `torched the`,
                         {
                             anchor: `bellyaches on suttee`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     {
                                         anchor: `Suttee`,
                                         wiki: `Sati_(practice)`,
                                     },
-                                    `is an outdated Hindu custom in which a widow commits suicide by throwing herself onto her husband's funeral pyre. Likewise, sober me knew he could be rid of Sita if he just killed off the one she loved, pushing her to venture further into the darkness to chase after the nothingness that remained.`,
+                                    `is an outdated Hindu custom in which a widow commits suicide by throwing herself onto her husband's funeral pyre. Likewise, sober me knew he could be rid of Sita if he just killed off the one she loved, pushing her to venture out further into the darkness to chase after the nothingness that remained.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -666,6 +670,7 @@ export default {
                                 description: `I was stopped by a pair of police officers that night, who judged me to be harmless and sent me on my way. That's one privilege of having pituitary dwarfism, I guess.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
+                                    [OBSERVATION]: true,
                                 },
                             },
                         },
@@ -740,9 +745,10 @@ export default {
                         `of gathering up the`,
                         {
                             anchor: `suttee dust`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `By now, I imagine that Sita has been fully incinerated on the ashes of our failed relationship.`,
+                                    description: `By now, I imagine Sita to be fully incinerated on the ashes of our failed relationship.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -859,6 +865,7 @@ export default {
                         `Then the`,
                         {
                             anchor: `guardian knot`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The`,
@@ -866,7 +873,7 @@ export default {
                                         anchor: `umbilical cord`,
                                         wiki: `Umbilical_cord`,
                                     },
-                                    `passes sustenance from a mother to her fetus inside the womb. But after birth, it shrivels and falls off to reveal the child's navel. So in sustaining each other through locked navels, Sita became my guardian, and I hers.`,
+                                    `passes sustenance from a mother to her fetus inside the womb. But after birth, it shrivels and falls off to reveal the child's navel. So in sustaining each other through locked navels, Sita became my guardian— and I, hers.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
