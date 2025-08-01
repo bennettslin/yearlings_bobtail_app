@@ -16,7 +16,7 @@ import {
     FORESHADOW_OF_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REDO, REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REDO } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Look Back in Anger',
@@ -660,7 +660,6 @@ export default {
                     lyric: [
                         {
                             anchor: `only to crack`,
-                            todo: REVIEW,
                             card: {
                                 description: `Yet even as reason disproved the beliefs of my bullies, it also discredited my own as a Beyonder. Because, with so many rival claims to the truth, who'd stay loyal to a faith that offers no community, and only endless grief?`,
                                 dotKeys: {
@@ -791,7 +790,6 @@ export default {
                         `Drunk, you'd`,
                         {
                             anchor: `claim you've never loved`,
-                            todo: REVIEW,
                             card: {
                                 description: `Our first songs were all about being unlucky in love. As my life improved, then, it felt weird to carry on like I was still the same inexperienced kid who wrote them.`,
                                 dotKeys: {

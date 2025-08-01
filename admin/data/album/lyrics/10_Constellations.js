@@ -17,7 +17,6 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Constellations!',
@@ -92,7 +91,6 @@ export default {
                         {
                             // NOTE: I changed from "reverends."
                             anchor: `reverendse, paused`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -1479,7 +1477,6 @@ export default {
                         lyric: [
                             {
                                 anchor: `sunk in tarpid lies`,
-                                todo: REVIEW,
                                 cards: [
                                     {
                                         description: `While my mastodon lies sunk in a "tar pit," I'm sinking in all my "torpid" lies explaining to Sita why I don't spend more nights with her.`,

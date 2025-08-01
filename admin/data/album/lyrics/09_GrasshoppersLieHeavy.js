@@ -17,7 +17,6 @@ import {
     SOLO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Grasshoppers Lie Heavy',
@@ -939,7 +938,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `In the final third of "`,
