@@ -1172,7 +1172,7 @@ export default {
                                             anchor: `harpies`,
                                             wiki: `Harpy`,
                                         },
-                                        `were female monsters with human heads and birdlike bodies; as such, the harpy became a nagging woman in common parlance.`,
+                                        `were female monsters with human heads and birdlike bodies; the term now refers to nagging women in common parlance.`,
                                     ],
                                 },
                                 {
