@@ -887,7 +887,7 @@ export default {
                                             wiki: `Children_of_a_Lesser_God_(play)`,
                                         },
                                     },
-                                    `is a theatrical play about a young deaf woman. The title suggests that being disabled is like living in a world created by an inferior deity; as a child, though, I interpreted it differently. Given the autism that runs in my family, and its correlation in my mind with our foreign way of worship, I had to assume that the disabled`,
+                                    `is a theatrical play about a young deaf woman. While the title suggests that being disabled amounts to living in a world created by an inferior deity, I interpreted it differently as a child. Given the autism that runs in my family, and its correlation in my mind with our foreign way of worship, I had to assume that the disabled`,
                                     {
                                         isEmphasis: true,
                                         lyric: `themselves`,

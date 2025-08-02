@@ -16,6 +16,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Garryowen',
@@ -222,6 +223,7 @@ export default {
                         `Drunk pissed`,
                         {
                             anchor: `punks tryst,`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `On top of being baby-faced enough to be mistaken for a high schooler, I often wore`,
@@ -229,7 +231,7 @@ export default {
                                         anchor: `baseball T-shirts`,
                                         wiki: `Raglan_sleeve`,
                                     },
-                                    `back then; it was a style that could attract both the scene kids I tended to crush on, and the college students I had a better chance with. Tristan, one of the punks in the thieving group, liked our ragtag look and named us the "`,
+                                    `back then; it was a style that could attract both the scenesters I tended to crush on, and the college students I had a better chance with. Tristan, one of the punks in the thieving group, liked our ragtag look and named us the "`,
                                     {
                                         anchor: `Young Ones`,
                                         wiki: `The_Young_Ones_(TV_series)`,

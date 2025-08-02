@@ -16,7 +16,7 @@ import {
     FORESHADOW_OF_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REDO } from '../../../containers/Annotations/constants/todos'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Look Back in Anger',
@@ -382,10 +382,16 @@ export default {
                         `You wished a`,
                         {
                             anchor: `cancer nibbled off`,
-                            todo: REDO,
-                            problem: `Make it more about knowing I was whining.`,
+                            todo: REVIEW,
                             card: {
-                                description: `It was therapeutic enough to write songs about my own disappointments. So I was always surprised when others would credit me with giving voice to theirs as well, and that I should be granted a higher status because of it.`,
+                                description: [
+                                    `There were times when a local punk would tell me how much they related to my music. This always surprised me, given that they tended to skew older, and thus seemed far more mature than us scene kids. It made me realize that maybe`,
+                                    {
+                                        isEmphasis: true,
+                                        lyric: `no one`,
+                                    },
+                                    `really knows what they're doing.`,
+                                ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
