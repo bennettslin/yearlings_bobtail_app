@@ -15,6 +15,7 @@ import {
     IS_UNIT_DOT,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Cremated',
@@ -74,9 +75,10 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
-                        `The first line of this song was originally the last line of the previous one, before I got the idea to chain them together as a`,
+                        `As is evident from the score, the first line of this song was originally the last line of the previous one, before I got the idea to chain them together as a`,
                         {
                             anchor: `medley`,
                             wiki: `Medley_(music)`,
@@ -875,6 +877,7 @@ export default {
                         `"`,
                         {
                             anchor: `Bless her`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     {
@@ -884,12 +887,7 @@ export default {
                                             wiki: `Children_of_a_Lesser_God_(play)`,
                                         },
                                     },
-                                    `, a theatrical play by`,
-                                    {
-                                        anchor: `Mark Medoff`,
-                                        wiki: `Mark_Medoff`,
-                                    },
-                                    `, centers on a young deaf woman. While its title suggests that being disabled is like living in a world created by an inferior deity, I interpreted it differently as a child. Given the autism that runs in my family, and its correlation in my mind with our foreign way of worship, I had to assume that the disabled`,
+                                    `is a theatrical play about a young deaf woman. The title suggests that being disabled is like living in a world created by an inferior deity; as a child, though, I interpreted it differently. Given the autism that runs in my family, and its correlation in my mind with our foreign way of worship, I had to assume that the disabled`,
                                     {
                                         isEmphasis: true,
                                         lyric: `themselves`,
