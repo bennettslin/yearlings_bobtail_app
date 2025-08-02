@@ -14,7 +14,6 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'On a Golden Cord',
@@ -200,7 +199,6 @@ export default {
                         `I'm sorry, but I`,
                         {
                             anchor: `went through your mail`,
-                            todo: REVIEW,
                             card: {
                                 description: `Confused over why I'd grown distant, Sita snooped around on my desktop computer earlier that day. In doing so, she stumbled upon some emails to friends— one in which I'd spoken of a recent crush on another woman, and another one soliciting advice on how to break up gently.`,
                                 dotKeys: {
@@ -214,7 +212,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `I figured out an`,
@@ -304,7 +301,6 @@ export default {
                         `torched the`,
                         {
                             anchor: `bellyaches on suttee`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     {
@@ -745,7 +741,6 @@ export default {
                         `of gathering up the`,
                         {
                             anchor: `suttee dust`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `By now, I imagine Sita to be fully incinerated on the ashes of our failed relationship.`,
@@ -865,7 +860,6 @@ export default {
                         `Then the`,
                         {
                             anchor: `guardian knot`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The`,

@@ -37,7 +37,6 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 cards: [
                     {
                         description: [
@@ -187,7 +186,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Stumped`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `In their claim to be stumped, my parents pretend to be oblivious to the outcome of my story.`,
@@ -207,7 +205,6 @@ export default {
                         `, I ponder the`,
                         {
                             anchor: `forespoken monster`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In`,
@@ -256,7 +253,6 @@ export default {
                         `And you, for a future,`,
                         {
                             anchor: `sold your whole fortune`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `My parents lament that my opportunism has made me a future "soldier of" fortune— or,`,
@@ -1169,10 +1165,10 @@ export default {
                                     description: [
                                         `In Greek mythology, the`,
                                         {
-                                            anchor: `harpies`,
+                                            anchor: `harpy`,
                                             wiki: `Harpy`,
                                         },
-                                        `were female monsters with human heads and birdlike bodies; the term now refers to nagging women in common parlance.`,
+                                        `was a female creature with a human head and birdlike body; in common parlance, the term now refers to a nagging woman.`,
                                     ],
                                 },
                                 {
@@ -1403,7 +1399,7 @@ export default {
                                 todo: REVIEW,
                                 cards: [
                                     {
-                                        description: `In college, I finally understood how much my parents had sacrificed for me and my siblings to lead better lives than they did. But the fact that this appreciation had to come about through assigned coursework— rather than my own lived experiences— only added to my guilt.`,
+                                        description: `In college, I finally understood how much my parents had sacrificed for me and my siblings to lead better lives than theirs. But the fact that this awareness had to come about through assigned coursework— rather than my own lived experiences— only added to my guilt.`,
                                         dotKeys: {
                                             [BACKSTORY]: true,
                                         },

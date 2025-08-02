@@ -15,7 +15,6 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'क्यों? (Kyon?)',
@@ -163,7 +162,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: `I wanted to speak from Sita's perspective, but in hindsight, my portrayal of her might be a bit one-dimensional. She was never so helpless; in fact, she once admitted that she felt like the worse partner, for she'd willingly damaged my psyche— whereas I'd only unwittingly damaged hers. Still, I was too self-absorbed in guilt when I wrote these lyrics, and my primary intent was to beat myself up over what my ego had cost me.`,
                     dotKeys: {
@@ -562,7 +560,6 @@ export default {
                         `your`,
                         {
                             anchor: `severed stinger`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `At the time, I failed to appreciate what it meant for Sita to have given me her virginity. She`,
@@ -587,7 +584,6 @@ export default {
                         `But other nights you'd`,
                         {
                             anchor: `lap my wound clean`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Sita was unable to climax through vaginal sex alone, so I'd go down on her afterward. She mentioned this once as an example of my attentiveness, when I asked what she saw in me that was worth holding onto. But it just seemed like proof that I didn't have any`,
@@ -694,7 +690,6 @@ export default {
                         `? Come for me? At`,
                         {
                             anchor: `thirty-three`,
-                            todo: REVIEW,
                             card: {
                                 description: `I often joked about killing myself at thirty-three— the age at which Jesus was crucified. I hated the idea of getting older, and clearly this is all the time you need to change the world. So when Sita asked me to specify at what age I'd come back for her— in accordance with our little pact— I answered thirty-three. The subtext was understood.`,
                                 dotKeys: {
@@ -757,7 +752,6 @@ export default {
                         `, and`,
                         {
                             anchor: `sadness for what it was`,
-                            todo: REVIEW,
                             card: {
                                 description: `Back when Sita and I were just friends, we got along well because we were both sad people. But in retrospect, my sadness was simply rooted in circumstance— whether from being bullied as a child, or out of loneliness later on. Sita, on the other hand, suffered from clinical depression. So over time, I got better at dealing with my spells— but then I grew impatient with her for not doing the same.`,
                                 dotKeys: {
