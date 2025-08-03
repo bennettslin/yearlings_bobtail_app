@@ -78,7 +78,7 @@ export default {
                 todo: REVIEW,
                 card: {
                     description: [
-                        `As is evident from the score, the first line of this song was originally the last line of the previous one, before I got the idea to chain them together as a`,
+                        `As is evident from the score, the first line of this song was originally the last line of the previous one, before I got the idea to chain the last few songs together as a`,
                         {
                             anchor: `medley`,
                             wiki: `Medley_(music)`,
@@ -230,15 +230,13 @@ export default {
                         {
                             // NOTE: I added a hyphen in the lyrics as well.
                             anchor: `inner lotus-eater`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In the`,
                                     {
                                         isItalic: true,
-                                        lyric: {
-                                            anchor: `Odyssey`,
-                                            wiki: `Odyssey`,
-                                        },
+                                        lyric: `Odyssey`,
                                     },
                                     `, the`,
                                     {

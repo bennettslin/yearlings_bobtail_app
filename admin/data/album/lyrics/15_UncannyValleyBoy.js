@@ -991,6 +991,7 @@ export default {
                         `When`,
                         {
                             anchor: `wakened from the siren`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `Not wanting anyone to crowd out my artwork, I run ahead of the group— only to pass out where no one can find me. Hours later, an ambulance siren jolts me awake.`,
@@ -1000,12 +1001,20 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `In Greek mythology, the `,
+                                        `In the`,
+                                        {
+                                            isItalic: true,
+                                            lyric: {
+                                                anchor: `Odyssey`,
+                                                wiki: `Odyssey`,
+                                            },
+                                        },
+                                        `, the`,
                                         {
                                             anchor: `sirens`,
                                             wiki: `Siren_(mythology)`,
                                         },
-                                        ` were beautiful women whose enchanting songs would lull the passing sailors, causing them to crash against the rocky shores. But just like`,
+                                        `were female creatures whose enchanting songs would lull the passing sailors, causing them to crash on the rocky shores. But just like`,
                                         {
                                             anchor: `Odysseus`,
                                             wiki: `Odysseus`,
@@ -1168,7 +1177,7 @@ export default {
                                             anchor: `harpy`,
                                             wiki: `Harpy`,
                                         },
-                                        `was a female creature with a human head and birdlike body; in common parlance, the term now refers to a nagging woman.`,
+                                        `is a female monster with a human head and birdlike body; in common parlance, the term now refers to a nagging woman.`,
                                     ],
                                 },
                                 {
@@ -1396,7 +1405,6 @@ export default {
                         lyric: [
                             {
                                 anchor: `old and subservient`,
-                                todo: REVIEW,
                                 cards: [
                                     {
                                         description: `In college, I finally understood how much my parents had sacrificed for me and my siblings to lead better lives than theirs. But the fact that this awareness had to come about through assigned coursework— rather than my own lived experiences— only added to my guilt.`,

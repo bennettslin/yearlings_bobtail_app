@@ -16,7 +16,6 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Garryowen',
@@ -223,7 +222,6 @@ export default {
                         `Drunk pissed`,
                         {
                             anchor: `punks tryst,`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `On top of being baby-faced enough to be mistaken for a high schooler, I often wore`,
