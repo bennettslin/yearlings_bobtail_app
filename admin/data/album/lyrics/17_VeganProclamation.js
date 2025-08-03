@@ -17,7 +17,6 @@ import {
     FORESHADOW_OF_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Vegan Proclamation',
@@ -667,7 +666,6 @@ export default {
                         `Someday you'll breathe again; for one,`,
                         {
                             anchor: `you have to`,
-                            todo: REVIEW,
                             card: {
                                 description: `Overcome with jealousy and heartbreak, I had no excuse to complain; I'd caused Sita this same torment countless times. So in our last phone conversation, I just asked her meekly how she'd managed it. She replied that she didn't know. There were days when she didn't want to live— yet each day would pass all the same. Then gradually, days added up to weeks, and weeks turned into months, until the excruciating pain mellowed into an aching sadness.`,
                                 dotKeys: {

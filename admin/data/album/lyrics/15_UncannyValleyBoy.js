@@ -1177,7 +1177,7 @@ export default {
                                             anchor: `harpy`,
                                             wiki: `Harpy`,
                                         },
-                                        `is a female monster with a human head and birdlike body; in common parlance, the term now refers to a nagging woman.`,
+                                        `is a female monster with a human head and birdlike body; in common parlance, the term refers to a nagging woman.`,
                                     ],
                                 },
                                 {

@@ -385,7 +385,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `There were times when a local punk would tell me how much they related to my music. This always surprised me, given that they tended to skew older, and thus seemed far more mature than us scene kids. It made me realize that maybe`,
+                                    `There were a few times when a local punk told me how much they related to my songs about unrequited love. This surprised me, given that the punks skewed older, and thus seemed far more mature than us scene kids. It made me wonder if`,
                                     {
                                         isEmphasis: true,
                                         lyric: `no one`,

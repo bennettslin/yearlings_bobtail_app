@@ -230,7 +230,6 @@ export default {
                         {
                             // NOTE: I added a hyphen in the lyrics as well.
                             anchor: `inner lotus-eater`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In the`,
@@ -882,10 +881,10 @@ export default {
                                         isItalic: true,
                                         lyric: {
                                             anchor: `Children of a Lesser God`,
-                                            wiki: `Children_of_a_Lesser_God_(play)`,
+                                            wiki: `Children_of_a_Lesser_God_(film)`,
                                         },
                                     },
-                                    `is a theatrical play about a young deaf woman. While the title suggests that being disabled amounts to living in a world created by an inferior deity, I interpreted it differently as a child. Given the autism that runs in my family, and its correlation in my mind with our foreign way of worship, I had to assume that the disabled`,
+                                    `is a movie about a young deaf woman. While its title suggests that being disabled is like living in a world created by an inferior deity, I interpreted it differently as a child. Given the autism that runs in my family, and its correlation in my mind with our foreign way of worship, I had to assume that the disabled`,
                                     {
                                         isEmphasis: true,
                                         lyric: `themselves`,
