@@ -16,6 +16,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Garryowen',
@@ -243,8 +244,9 @@ export default {
                         },
                         {
                             anchor: `bustin' cars with fists`,
+                            todo: REVIEW,
                             card: {
-                                description: `Tristan was particularly hotheaded when drunk. One night after starting a fight and getting us kicked out of a party, he challenged us to see who could punch a random car window and break the glass first. I didn't win.`,
+                                description: `Tristan was particularly hotheaded when drunk. One night after starting a fight that got us all kicked out of a party, he challenged us to see who could punch a random car window and break the glass first. I didn't win.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
