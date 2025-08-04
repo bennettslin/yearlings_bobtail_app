@@ -75,7 +75,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `As is evident from the score, the first line of this song was originally the last line of the previous one, before I got the idea to chain the last few songs together as a`,

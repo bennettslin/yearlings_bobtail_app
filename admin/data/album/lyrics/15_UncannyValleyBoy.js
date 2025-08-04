@@ -994,7 +994,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Not wanting anyone to crowd out my artwork, I run ahead of the group— only to pass out where no one can find me. Hours later, an ambulance siren jolts me awake.`,
+                                    description: `Not wanting anyone to crowd out my artwork, I run ahead of the group— only to pass out drunk where no one can find me. Hours later, an ambulance siren jolts me awake.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -1168,7 +1168,6 @@ export default {
                         `Stubborn`,
                         {
                             anchor: `harpies`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
