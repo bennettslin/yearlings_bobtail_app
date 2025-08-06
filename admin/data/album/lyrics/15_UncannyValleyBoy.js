@@ -20,7 +20,6 @@ import {
     BACKING,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Uncanny Valley Boy',
@@ -991,7 +990,6 @@ export default {
                         `When`,
                         {
                             anchor: `wakened from the siren`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `Not wanting anyone to crowd out my artwork, I run ahead of the group— only to pass out drunk where no one can find me. Hours later, an ambulance siren jolts me awake.`,
