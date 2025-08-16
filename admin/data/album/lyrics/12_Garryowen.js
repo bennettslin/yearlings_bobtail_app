@@ -246,7 +246,7 @@ export default {
                             anchor: `bustin' cars with fists`,
                             todo: REVIEW,
                             card: {
-                                description: `Tristan was particularly hotheaded when drunk. One night after starting a fight that got us all kicked out of a party, he came up with a challenge to see who could punch out a random car window first. I didn't win.`,
+                                description: `Tristan was particularly hotheaded when drunk. One night after starting a fight that got us all kicked out of a party, he challenged us to see who could punch out a random car window first. I didn't win.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
