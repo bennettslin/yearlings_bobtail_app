@@ -14,7 +14,6 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'On a Golden Cord',
@@ -99,7 +98,6 @@ export default {
                         `safely kept with`,
                         {
                             anchor: `bread and pocket lint`,
-                            todo: REVIEW,
                             card: {
                                 description: `The less I spent on food in those days, the more I had left over to spend on beer. So before leaving the cafeteria, I'd swipe a couple of bread rolls and stash them in the front pockets of my jacket.`,
                                 dotKeys: {
