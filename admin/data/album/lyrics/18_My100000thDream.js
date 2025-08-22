@@ -363,6 +363,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: `This bridge shares the same chord progression with the one in "Grasshoppers Lie Heavy." It starts with arpeggiated chords played on the Spanish guitar from "M," followed by the melodicas from "Pchelka's Starry Journey" that evoke the sound of brass fanfare.`,
                     dotKeys: {
