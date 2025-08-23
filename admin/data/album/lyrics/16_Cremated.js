@@ -15,6 +15,7 @@ import {
     IS_UNIT_DOT,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
+import { REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Cremated',
@@ -317,8 +318,10 @@ export default {
                     lyricLeft: [
                         {
                             anchor: `pinkish slip`,
+                            todo: REVISE,
+                            problem: `Maybe throw a "laid" pun in here?`,
                             card: {
-                                description: `Miriam is wearing a silky pink undergarment under her skirt. Of course, a pink slip is also a notice to an employee that they're getting laid off…`,
+                                description: `Miriam is wearing a silky pink undergarment under her skirt. Of course, a pink slip is also a notice given to an employee when they're getting laid off…`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -495,6 +498,7 @@ export default {
                         `born from a`,
                         {
                             anchor: `forced conversion`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Historically, conquered peoples were`,
@@ -502,7 +506,7 @@ export default {
                                         anchor: `forced to adopt`,
                                         wiki: `Forced_conversion`,
                                     },
-                                    `the religious beliefs of their conquerors. More often than not, however, they simply repurposed old customs and deities to fit this new faith. And so I imagine Miriam eyeing with skepticism my attempts to assimilate into her world, as traces of my corrupt ways must surely remain.`,
+                                    `the religious beliefs of their conquerors. More often than not, however, they simply repurposed old customs and deities to fit this new faith. And so I imagine Miriam skeptically eyeing my attempts to assimilate into her world— since traces of my corrupt ways must surely remain.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -654,6 +658,8 @@ export default {
                     lyricRight: [
                         {
                             anchor: `twitching sword`,
+                            todo: REVISE,
+                            problem: `"His" and "him" refer to different people.`,
                             card: {
                                 description: [
                                     `Dubbing refers to`,
@@ -677,8 +683,16 @@ export default {
                         `in care,`,
                         {
                             anchor: `he's anyone`,
+                            todo: REVIEW,
                             card: {
-                                description: `After all, it's not clear at all to my drunken self that he's the dummy whose actions are dictated by his other half, rather than the other way around.`,
+                                description: [
+                                    `After all, it's not clear to my drunken self that`,
+                                    {
+                                        isEmphasis: true,
+                                        lyric: `he's`,
+                                    },
+                                    `the dummy whose actions are dictated by his other half, rather than the other way around.`,
+                                ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -861,8 +875,9 @@ export default {
                         `, hears not a`,
                         {
                             anchor: `worrisome`,
+                            todo: REVIEW,
                             card: {
-                                description: `It surprised me to have only good wishes for Miriam after we broke up, given how small-minded I'd been with Sita. But I came away knowing I was indeed worthy of dating the Maras of the world. I didn't have this certainty before, so it felt like an amazing bargain.`,
+                                description: `It surprised me to have only good wishes for Miriam after we broke up, given how small-minded I'd been with Sita. But I came away knowing I was indeed worthy of dating the Maras of the world; I didn't have this certainty before, so it felt like an amazing bargain.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -942,8 +957,9 @@ export default {
                         `The`,
                         {
                             anchor: `seat hurt`,
+                            todo: REVIEW,
                             card: {
-                                description: `Somehow I threw out my back while reclining the seat with Miriam on top of me. Perhaps it's a sign that I'm getting on in years.`,
+                                description: `With Miriam on top of me, I somehow threw out my back while reclining the seat. Perhaps it's a sign that I'm getting on in years.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -959,8 +975,9 @@ export default {
                         `though no worse but for`,
                         {
                             anchor: `his soreness`,
+                            todo: REVIEW,
                             card: {
-                                description: `Miriam knew how sore I'd be about the breakup, so she gratified me with her most vigorous lovemaking yet. But now, with no explanation for why my penis is sore, I can only surmise that it's hard to keep up in old age.`,
+                                description: `Miriam knew how sore I'd be about the breakup, so she gratified me with her most vigorous lovemaking yet. But with no explanation now for why my penis is sore, I can only surmise that it's hard to keep up in old age.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
