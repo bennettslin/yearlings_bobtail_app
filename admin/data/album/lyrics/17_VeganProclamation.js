@@ -17,7 +17,7 @@ import {
     FORESHADOW_OF_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Vegan Proclamation',
@@ -177,7 +177,6 @@ export default {
                         },
                         {
                             anchor: `from our chest`,
-                            todo: REVIEW,
                             card: {
                                 description: `In the Book of Genesis, God took one of Adam's ribs and gave life to Eve. By contrast, my own promise to give of myself proved to be false— a false rib, if you will— given that Sita could never feel truly alive with me, even as she felt unworthy to begin life anew with someone else.`,
                                 dotKeys: {
@@ -252,7 +251,8 @@ export default {
                         `Well,`,
                         {
                             anchor: `first pets`,
-                            todo: REVIEW,
+                            todo: REVISE,
+                            problem: `First two sentences can be written more smoothly.`,
                             card: {
                                 description: `It astounded me that I could hurt Sita like I had, and still live with myself. In hindsight, I just never questioned the facade of sanity that she'd constructed as a means to cope. I'd allowed myself to believe that our periodic moments of intimacy, which she clung to and cherished, were all that was needed to heal any wound and wipe the slate clean.`,
                                 dotKeys: {
@@ -359,17 +359,17 @@ export default {
                                                 anchor: `quantum theory`,
                                                 wiki: `Quantum_mechanics`,
                                             },
-                                            `, a particle exists in all its possible states at once. To explain the problem of applying this concept to larger objects,`,
+                                            `, a particle can be said to exist in all its possible states at once. To demonstrate the problem with this interpretation,`,
                                             {
                                                 anchor: `Erwin Schrödinger`,
                                                 wiki: `Erwin_Schrödinger`,
                                             },
-                                            `proposed a famous thought experiment known as`,
+                                            `proposed a thought experiment known as`,
                                             {
                                                 anchor: `Schrödinger's cat`,
                                                 wiki: `Schrödinger's_cat`,
                                             },
-                                            `: We imagine a cat sealed inside a steel chamber, where it stands equal chances of surviving, or else being killed by cyanide. Since we can't observe the outcome, we must regard the cat as being simultaneously dead and alive.`,
+                                            `: We imagine a cat sealed inside a steel chamber containing a vial of poison, where it stands equal chances of surviving or being killed. Since we can't observe the outcome, we must regard the cat as being simultaneously dead and alive.`,
                                         ],
                                     },
                                 },
@@ -584,7 +584,7 @@ export default {
                             anchor: `none by us now`,
                             todo: REVIEW,
                             card: {
-                                description: `And so, vowing never to cause hurt to anyone or anything ever again, I decide to go vegan.`,
+                                description: `And so, vowing never to harm anyone or anything ever again, I decide to go vegan.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -611,7 +611,7 @@ export default {
                                         anchor: `People for the Ethical Treatment of Animals`,
                                         wiki: `People_for_the_Ethical_Treatment_of_Animals`,
                                     },
-                                    `, an animal rights organization. For several years I volunteered my time with them, which included taking part in their demonstrations.`,
+                                    `, an animal rights organization. For several years, I volunteered with them by handing out flyers and taking part in demonstrations.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -676,7 +676,7 @@ export default {
                             anchor: `you have to`,
                             todo: REVIEW,
                             card: {
-                                description: `Overcome with jealousy and heartbreak, I had no excuse to complain; I'd caused Sita this same torment countless times. So in our last phone conversation, I just asked her meekly how she'd managed it. She replied that she didn't know. There were days when she didn't want to live… yet each day would pass all the same. Then gradually, days added up to weeks, and weeks turned into months— until the excruciating pain mellowed into an aching sadness.`,
+                                description: `For all my jealousy and heartbreak, I still had no right to complain; I'd caused Sita this same torment countless times. So in our last phone conversation, I just asked her meekly how she'd managed it. She replied that she didn't know. There were days when she didn't want to live— yet each day would pass all the same. Then gradually, days added up to weeks, and weeks turned into months… until the excruciating pain mellowed into an aching sadness.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -804,7 +804,6 @@ export default {
                         `The`,
                         {
                             anchor: `diapered white dwarf`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `As we come upon a`,
@@ -832,7 +831,7 @@ export default {
                                 todo: REVIEW,
                                 cards: [
                                     {
-                                        description: `With ignorance being as old as time itself, I'm comforted to know that we've always fixed our mistakes; at the same time, it's dispiriting to remember that those to come have yet to make theirs. The universe never truly learns, and I'm partly to blame… I had a similar thought as a child, when I wondered whether I was the reason my brother never got better. It made me realize that all I can do is love him, and then do better for him.`,
+                                        description: `With ignorance being as old as time itself, I'm comforted to know that we've always fixed our mistakes; at the same time, it's dispiriting to remember that those to come have yet to make theirs. The universe never truly learns, and I'm partly to blame… I had a similar thought as a child, when I wondered whether I was the reason my brother never got better. It made me realize that all I could do was love him, and then do better for him.`,
                                         dotKeys: {
                                             [NARRATIVE]: true,
                                             [OBSERVATION]: true,
@@ -872,7 +871,7 @@ export default {
                                             anchor: `Shiva`,
                                             wiki: `Shiva`,
                                         },
-                                        `dances to destroy and rebuild the universe in an endless cycle. Crushed beneath his foot lies Apasmara— a symbol of victory over ignorance. And now, having caused my own share of ignorant destruction in this universe… I commit to rebuilding it.`,
+                                        `dances to destroy and rebuild the universe in an endless cycle. Crushed beneath his foot lies Apasmara— a symbol of his victory over ignorance. And now, having caused my share of ignorant destruction in this universe… I commit to rebuilding it.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -907,7 +906,6 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: `I stayed vegan for five years— but then quit once I started dating Sasha, who ate meat. I guess it's the nature of who I am that, the minute a chance for romance is at stake, my personal identity is the first thing I'll jettison. And truth be told, being vegan was always somewhat rough, given my peanut and tree nut allergies. But I'll happily be the first to switch to lab-grown meats— which PETA themselves have funded research for.`,
                     dotKeys: {
