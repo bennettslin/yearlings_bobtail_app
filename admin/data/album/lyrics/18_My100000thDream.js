@@ -57,7 +57,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: REVIEW,
                 card: {
-                    description: `During the years afterward when I was trying to be a good person again, I kept digging further into my past to figure out how things had gone wrong. So for this song, I decided to revisit the sonic textures of every other song in reverse, starting with the piano from "Vegan Proclamation."`,
+                    description: `During the years afterward when I was trying to be a good person again, I kept digging further into my past to figure out how things had gone wrong. And so this song revisits the sounds of every other song on the album in reverse, starting with the piano from "Vegan Proclamation."`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGCRAFT]: true,
@@ -79,7 +79,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `I once read that the average person has four dreams per night; over a lifetime of seventy years, then, that's about a hundred thousand dreams. So here I am… dreaming the very last dream I'll ever dream.`,
+                                    description: `I once read that the average person has four dreams per night; over a lifetime of seventy years, then, that's about a hundred thousand dreams. So here I am now… dreaming the very last dream I'll ever dream.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [OBSERVATION]: true,
@@ -363,7 +363,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: `This bridge shares the same chord progression with the one in "Grasshoppers Lie Heavy." It starts with arpeggiated chords played on the Spanish guitar from "M," followed by the melodicas from "Pchelka's Starry Journey" that evoke the sound of brass fanfare.`,
                     dotKeys: {
@@ -429,7 +428,6 @@ export default {
                         `Why does my`,
                         {
                             anchor: `last thought`,
-                            todo: REVIEW,
                             card: {
                                 description: `As Sita's ominous words wrench me from my bliss, I begin to realize that this is all just a dream. And moreover… it might be my last.`,
                                 dotKeys: {
@@ -466,7 +464,6 @@ export default {
                         `She'll always`,
                         {
                             anchor: `come to take me`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `I now understand that Sita is my most cherished memory. And thus, when my time came, she was always going to be the one chosen by my unconscious mind to escort me.`,
