@@ -20,6 +20,7 @@ import {
     BACKING,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Uncanny Valley Boy',
@@ -30,7 +31,8 @@ export default {
     referenceDescription: `Acoustic guitar in measure 1`,
     mixStartTime: `0:01:18.46`,
     playerStartTime: 2722.629,
-    overview: `Upon learning of my brother's autism, my parents were too harried to notice I was being bullied at school; in guilt, they later indulged every whim I had to find my own path. But it didn't assure them that I failed to mature as I got older— and they were especially crushed when I left Sita, whom they adored. Naturally, I wasn't happy to disappoint them. Still, I had a master plan to follow, and I wasn't about to change my ways.`,
+    todo: REVIEW,
+    overview: `Upon learning of my brother's autism, my parents were too harried to notice I was being bullied at school; in guilt, they later indulged every whim I had to find my own path. But it didn't assure them that I failed to mature as I got older— and they were crushed when I left Sita, whom they adored. Naturally, I wasn't happy to disappoint them. Still, I had a master plan to follow, and I wasn't about to change my ways.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -410,6 +412,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
                         `I used the`,
@@ -422,7 +425,7 @@ export default {
                             anchor: `Village Green Preservation Society`,
                             wiki: `The_Kinks_Are_the_Village_Green_Preservation_Society`,
                         },
-                        `as a rough guide for this album, which meant each song had to feature well-crafted musical hooks; represent a different musical style; and clock in at around three minutes. While there's no one-to-one mapping, this song is clearly the "`,
+                        `as a template for this album, which meant each song had to feature well-crafted musical hooks; represent a different musical style; and clock in at around three minutes. While there's no one-to-one mapping, this song is clearly the "`,
                         {
                             anchor: `Wicked Annabella`,
                             wiki: `Wicked_Annabella`,
@@ -454,6 +457,7 @@ export default {
                                     lyric: `hamartia`,
                                 },
                             ],
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -479,7 +483,7 @@ export default {
                                             isItalic: true,
                                             lyric: `hamartia`,
                                         },
-                                        `has four syllables. But my English teacher in middle school pronounced it like I do here, so I plead miseducation.`,
+                                        `has four syllables. But my English teacher in middle school pronounced it as I have here, so I plead miseducation.`,
                                     ],
                                     dotKeys: {
                                         [SONGCRAFT]: true,
@@ -560,6 +564,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REST,
+                problem: `First two sentences could flow a little better.`,
                 card: {
                     /**
                      * NOTE: Counter-melody is mentioned earlier in Ash
@@ -620,8 +626,9 @@ export default {
                         `safe on your`,
                         {
                             anchor: `tiny planet`,
+                            todo: REVIEW,
                             card: {
-                                description: `Like the little prince, I was also a visitor from the stars, who once saw this world through guileless eyes.`,
+                                description: `Like the little prince, I too was a visitor from the stars, who once saw this world through guileless eyes.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -636,6 +643,7 @@ export default {
                         `you finally granted their`,
                         {
                             anchor: `nutshells are rigged`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In a classic grift known as the`,
@@ -643,7 +651,7 @@ export default {
                                         anchor: `shell game`,
                                         wiki: `Shell_game`,
                                     },
-                                    `, a pea is placed beneath one of three nutshells, which are then shuffled in plain view. Having come to see life as an endless series of such grifts, I vowed never to get suckered again. And now, knowing that the pea gets misplaced through sleight of hand, I could even do some grifting myself…`,
+                                    `, a pea is placed beneath one of three nutshells that are then shuffled in plain view. Having come to see life as an endless series of such grifts, I vowed never to get suckered again. And now, knowing that the pea gets misplaced through sleight of hand, I could even do some grifting myself…`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -744,6 +752,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
                         `I wanted to mimic the`,
@@ -756,7 +765,7 @@ export default {
                             anchor: `Radiohead`,
                             wiki: `Radiohead`,
                         },
-                        `song "Airbag," from their album`,
+                        `song "Airbag" from their album`,
                         {
                             isItalic: true,
                             lyric: {
@@ -851,6 +860,7 @@ export default {
                         `A`,
                         {
                             anchor: `nation paused`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In 1987, a`,
@@ -863,7 +873,7 @@ export default {
                                         isItalic: true,
                                         lyric: `Ramayana`,
                                     },
-                                    `was broadcast across India. For an hour each week, the shops and train stations would largely be deserted as the Hindu population stayed at home, glued to their television sets.`,
+                                    `was broadcast across India. For an hour each week, the shops and train stations would largely be deserted as the Hindu population stayed at home, glued to their sets.`,
                                 ],
                             },
                         },
@@ -1029,10 +1039,11 @@ export default {
                         `, you found spelled out in`,
                         {
                             anchor: `dead ants`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
-                                        `I sit up and notice my drunken scrawls on the sidewalk, playfully imagining what might've happened if I'd used`,
+                                        `I sit up and notice my drunken scrawls on the sidewalk, playfully imagining what would've happened if I'd used`,
                                         {
                                             anchor: `ant chalk`,
                                             wiki: `Ant_chalk`,
@@ -1112,9 +1123,10 @@ export default {
                         `could sway you from a`,
                         {
                             anchor: `fairer marathon`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `The endless one-upmanship wasn't just petty; it was exhausting to counter every perceived slight with one of my own. I wanted life to be more like a marathon, which rewards patient resolve— a trait I possessed in spades.`,
+                                    description: `The endless one-upmanship wasn't just petty; it was exhausting to counter every perceived slight with one of my own. I wanted life to be more like a marathon, which rewards patient resolve— a trait I possess in spades.`,
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                     },
@@ -1251,8 +1263,9 @@ export default {
                         `what's left of what these`,
                         {
                             anchor: `faces you flip override`,
+                            todo: REVIEW,
                             card: {
-                                description: `As I grew into a sullen adolescent, my mother would ask what happened to the playful little boy I'd been before… which then made me wonder myself. In retrospect, I think I learned to take on the optimal persona for each given situation— and as time went on, they began to pile up. It made no sense, then, to keep an old persona lying around once it no longer served any purpose.`,
+                                description: `As I grew into a sullen adolescent, my mother would ask what happened to the playful little boy I'd been before… which then made me wonder myself. In retrospect, I think I learned to take on the optimal persona for each given situation— and as time went on, these personas began to pile up. It made no sense, then, to keep an old one lying around if it no longer served any purpose.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -1479,6 +1492,7 @@ export default {
                         `shouldn't you first be sure you've`,
                         {
                             anchor: `finally become someone`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -1487,7 +1501,7 @@ export default {
                                             isItalic: true,
                                             lyric: `Bildungsroman`,
                                         },
-                                        `is the main character's moral and psychological growth from youth to adulthood. Without it, there's no story to be told— a point that my parents hint at here.`,
+                                        `is the main character's moral and psychological growth, from youth to adulthood. Without it, there's no story to be told— a point that my parents hint at here.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
