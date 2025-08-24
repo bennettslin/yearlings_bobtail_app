@@ -32,7 +32,7 @@ export default {
     mixStartTime: `0:01:18.46`,
     playerStartTime: 2722.629,
     todo: REVIEW,
-    overview: `Upon learning of my brother's autism, my parents were too harried to notice I was being bullied at school; in guilt, they later indulged every whim I had to find my own path. But it didn't assure them that I failed to mature as I got older— and they were crushed when I left Sita, whom they adored. Naturally, I wasn't happy to disappoint them. Still, I had a master plan to follow, and I wasn't about to change my ways.`,
+    overview: `Upon learning of my brother's autism, my parents were too harried to notice I was being bullied at school; in guilt, they later indulged every whim I had to find my own path. But it didn't assure them that I failed to mature as I got older— and they were crushed when I left Sita, whom they adored. Naturally, I wasn't happy to disappoint them. Still, I had a master plan to follow, and I wasn't about to change my ways…`,
     lyricUnits: [
         {
             unitMap: {},
@@ -415,7 +415,7 @@ export default {
                 todo: REVIEW,
                 card: {
                     description: [
-                        `I used the`,
+                        `The`,
                         {
                             anchor: `Kinks`,
                             wiki: `The_Kinks`,
@@ -425,7 +425,7 @@ export default {
                             anchor: `Village Green Preservation Society`,
                             wiki: `The_Kinks_Are_the_Village_Green_Preservation_Society`,
                         },
-                        `as a template for this album, which meant each song had to feature well-crafted musical hooks; represent a different musical style; and clock in at around three minutes. While there's no one-to-one mapping, this song is clearly the "`,
+                        `served as my template for this album, which meant each song had to feature well-crafted musical hooks; represent a distinct musical style; and clock in at around three minutes. While there's no one-to-one mapping, this song is clearly the "`,
                         {
                             anchor: `Wicked Annabella`,
                             wiki: `Wicked_Annabella`,
@@ -457,7 +457,6 @@ export default {
                                     lyric: `hamartia`,
                                 },
                             ],
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -626,7 +625,6 @@ export default {
                         `safe on your`,
                         {
                             anchor: `tiny planet`,
-                            todo: REVIEW,
                             card: {
                                 description: `Like the little prince, I too was a visitor from the stars, who once saw this world through guileless eyes.`,
                                 dotKeys: {
@@ -643,7 +641,6 @@ export default {
                         `you finally granted their`,
                         {
                             anchor: `nutshells are rigged`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In a classic grift known as the`,
@@ -752,7 +749,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `I wanted to mimic the`,
@@ -860,7 +856,6 @@ export default {
                         `A`,
                         {
                             anchor: `nation paused`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In 1987, a`,
@@ -1039,7 +1034,6 @@ export default {
                         `, you found spelled out in`,
                         {
                             anchor: `dead ants`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -1123,7 +1117,6 @@ export default {
                         `could sway you from a`,
                         {
                             anchor: `fairer marathon`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `The endless one-upmanship wasn't just petty; it was exhausting to counter every perceived slight with one of my own. I wanted life to be more like a marathon, which rewards patient resolve— a trait I possess in spades.`,
@@ -1265,7 +1258,7 @@ export default {
                             anchor: `faces you flip override`,
                             todo: REVIEW,
                             card: {
-                                description: `As I grew into a sullen adolescent, my mother would ask what happened to the playful little boy I'd been before… which then made me wonder myself. In retrospect, I think I learned to take on the optimal persona for each given situation— and as time went on, these personas began to pile up. It made no sense, then, to keep an old one lying around if it no longer served any purpose.`,
+                                description: `As I grew into a sullen adolescent, my mother would ask what happened to the playful little boy I'd been before… which then made me wonder myself. In retrospect, I think I learned to take on the optimal persona for each given situation— and as time went on, these personas began to pile up. It made no sense, then, to keep an old one lying around if it no longer served its purpose.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -1492,7 +1485,6 @@ export default {
                         `shouldn't you first be sure you've`,
                         {
                             anchor: `finally become someone`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
