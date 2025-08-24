@@ -15,6 +15,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'क्यों? (Kyon?)',
@@ -162,8 +163,9 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
-                    description: `I wanted to speak from Sita's perspective, but in hindsight, my portrayal of her might be a bit one-dimensional. She was never so helpless; in fact, she once admitted that she felt like the worse partner, for she'd willingly damaged my psyche— whereas I'd only unwittingly damaged hers. Still, I was too self-absorbed in guilt when I wrote these lyrics, and my primary intent was to beat myself up over what my ego had cost me.`,
+                    description: `I wanted this song to speak from Sita's perspective, but in hindsight, my portrayal of her is a bit one-dimensional. In truth, she wasn't so helpless; she even admitted once to feeling like the worse partner, for she'd willingly damaged my psyche— whereas I'd only unwittingly damaged hers. Still, I was too self-absorbed in guilt when I wrote these lyrics, and my primary intent was to beat myself up over what my ego had cost me.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGCRAFT]: true,
@@ -183,8 +185,9 @@ export default {
                         `So baby, tell me then, when you`,
                         {
                             anchor: `take in her breasts`,
+                            todo: REVIEW,
                             card: {
-                                description: `It scared me, far more than I let on, to gamble away the warmth of Sita's love just for a chance to date some other woman. I had to wonder if this fear would then affect my hormones, because upon seeing another woman's naked body for the first time, I was always struck by an urge to be mothered more than anything else.`,
+                                description: `It scared me, far more than I let on, to gamble away the warmth of Sita's love for a mere chance to date someone new. I then had to wonder if this fear would change my hormones, because upon seeing another woman's naked body for the first time, I was always struck by an urge to be mothered more than anything else.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -221,14 +224,15 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
-                        `My relationship with Sita was like a ship swaying in perilous waters. This notion is captured in the music by both the`,
+                        `My relationship with Sita was like a sailboat swaying in perilous waters. This notion is captured in the music by the`,
                         {
                             anchor: `compound meter`,
                             wiki: `Metre_(music)`,
                         },
-                        `and the vacillation between unrelated chords, whose roots are separated by a`,
+                        `, as well as the vacillation between unrelated chords separated by a`,
                         {
                             anchor: `tritone`,
                             wiki: `Tritone`,
@@ -238,7 +242,7 @@ export default {
                             anchor: `tuplets`,
                             wiki: `Tuplet`,
                         },
-                        `symbolize our inability to find common ground— with one playing eight notes per beat, and the other nine. I created the tracks by splicing together single notes plucked on a mandolin.`,
+                        `symbolize our inability to reach common ground— with one playing eight notes per beat, and the other nine. To create the tracks, I spliced together single notes plucked on a mandolin.`,
                     ],
                     dotKeys: {
                         [OBSERVATION]: true,
@@ -349,8 +353,9 @@ export default {
                         `But dear,`,
                         {
                             anchor: `let's make a pact`,
+                            todo: REVIEW,
                             card: {
-                                description: `Sita knew I'd someday want the same everlasting love that she did. So every time we broke up, she'd make me promise to rekindle all that we had, whenever I should come to pine for it.`,
+                                description: `Sita knew I'd someday want the same everlasting love that she did. So every time we broke up, she'd make me promise to rekindle all that we had, whenever I should begin to pine for it.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -512,8 +517,9 @@ export default {
                         `Bursting belly told by`,
                         {
                             anchor: `extra holes`,
+                            todo: REVIEW,
                             card: {
-                                description: `When carved into one's belt, extra notches accommodate a belly that's grown large from overfeeding; when carved on a bedpost, they tally sexual conquests.`,
+                                description: `When carved into one's belt, extra notches accommodate a belly that's grown large through overfeeding; when carved on a bedpost, they tally sexual conquests.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -690,6 +696,8 @@ export default {
                         `? Come for me? At`,
                         {
                             anchor: `thirty-three`,
+                            todo: REST,
+                            problem: `While it becomes clear from context that "this" refers to 33 years, it still takes a second to make that jump, I think?`,
                             card: {
                                 description: `I often joked about killing myself at thirty-three— the age at which Jesus was crucified. I hated the idea of getting older, and clearly this is all the time you need to change the world. So when Sita asked me to specify at what age I'd come back for her— in accordance with our little pact— I answered thirty-three. The subtext was understood.`,
                                 dotKeys: {
@@ -813,8 +821,9 @@ export default {
                         `And darling, don't you worry, these were only`,
                         {
                             anchor: `practice cuts`,
+                            todo: REVIEW,
                             card: {
-                                description: `The first time Sita asked about the scars on my forearm, I wryly assured her that they were just for practice. Years later when I expressed concern after she'd tried cutting for herself, she gave me the same line. The message was clear that I was the cause in more ways than one.`,
+                                description: `The first time Sita asked about the scars on my forearm, I wryly assured her that they were just for practice. Years later, when I expressed concern after she'd tried cutting for herself, she gave me the same line. The message was clear that I was the cause in more ways than one.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
