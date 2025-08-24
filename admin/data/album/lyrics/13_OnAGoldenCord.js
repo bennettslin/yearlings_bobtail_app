@@ -14,6 +14,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'On a Golden Cord',
@@ -167,8 +168,9 @@ export default {
                         `So`,
                         {
                             anchor: `polite, yet resigned`,
+                            todo: REVIEW,
                             card: {
-                                description: `Having braced for that night's confrontation, Sita lobbed one accusation after another. Meanwhile, I was drunk and still struggling to make sense of the situation. So I could only respond curtly, which added to her fluster.`,
+                                description: `Having braced for that night's confrontation, Sita lobbed one accusation after another; meanwhile, I was drunk and still struggling to make sense of the situation. So I could only respond curtly, which added to her fluster.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -212,6 +214,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REST,
+                problem: `First sentence goes for too long without punctuation.`,
                 card: {
                     description: [
                         `I figured out an`,
@@ -369,9 +373,10 @@ export default {
                         `As I soak in spirits amidst`,
                         {
                             anchor: `wanted ads`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `As drunken me wanders the Oakland streets, he stops to read flyers posted on telephone poles by those seeking bandmates, like a vigilante of the Old West scanning a town's`,
+                                    `As drunken me wanders the Oakland streets, he stops to read flyers posted on telephone poles by those seeking bandmates— like a vigilante of the Old West scanning a town's`,
                                     {
                                         anchor: `wanted posters`,
                                         wiki: `Wanted_poster`,
@@ -564,8 +569,9 @@ export default {
                         `while this supposed`,
                         {
                             anchor: `dove chafing in his cage`,
+                            todo: REVIEW,
                             card: {
-                                description: `Meanwhile, a stressed dove will peck a cagemate to death, oblivious to the deadly nature of its beak. And similarly, in seeing myself as the victim and tending only to my needs, I ended up causing Sita far more trauma than I myself had ever received at the hands of the bullies.`,
+                                description: `Meanwhile, a stressed hen will peck a cagemate to death, oblivious to the deadly nature of its beak. And similarly, in seeing myself as the victim and tending only to my needs, I ended up causing Sita far more trauma than I myself had ever received at the hands of the bullies.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -587,9 +593,10 @@ export default {
                         lyric: [
                             {
                                 anchor: `Odelay`,
+                                todo: REVIEW,
                                 card: {
                                     description: [
-                                        `Sometime around twilight, a strange euphoria came over me that was likely caused by dehydration. Hence the bad`,
+                                        `Sometime around twilight, a strange euphoria came over me that was likely caused by alcohol-induced dehydration. Hence the bad`,
                                         {
                                             anchor: `yodeling`,
                                             wiki: `Yodeling`,
@@ -626,8 +633,9 @@ export default {
                         `when you really thought the`,
                         {
                             anchor: `world that simple`,
+                            todo: REVIEW,
                             card: {
-                                description: `I'd given the bracelet to Sita during the first few weeks of our relationship. I was just too inexperienced at the time to show my love in any more meaningful way. Of course, she was too inexperienced to know of any other way to validate it.`,
+                                description: `I'd given the bracelet to Sita during the first few weeks of our relationship. At the time, I was just too inexperienced to show my love in any more meaningful way. Of course, she was too inexperienced to know of any other way to validate it.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -646,8 +654,9 @@ export default {
                         `the`,
                         {
                             anchor: `gesture then`,
+                            todo: REVIEW,
                             card: {
-                                description: `I'd bought the bracelet from a jewelry store in the local mall. It cost a lot relative to my hourly wage at the time. But that was all it took for Sita to recognize my earnest intentions.`,
+                                description: `The bracelet, which I'd bought from a jewelry store in the local mall, cost a lot relative to my wage at the time. Still, that was all it took to signal my earnest intentions.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -662,8 +671,9 @@ export default {
                         `Now the`,
                         {
                             anchor: `jester teeters`,
+                            todo: REVIEW,
                             card: {
-                                description: `I was stopped by a pair of police officers that night, who judged me to be harmless and sent me on my way. That's one privilege of having pituitary dwarfism, I guess.`,
+                                description: `After I was stopped by a pair of police officers that night, they judged me to be harmless and sent me on my way. That's one privilege of having pituitary dwarfism, I guess.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -843,8 +853,9 @@ export default {
                     lyricRight: [
                         {
                             anchor: `digging through her innie`,
+                            todo: REVIEW,
                             card: {
-                                description: `Some belly buttons go in, while others stick out. During sex, Sita and I would engage in baby talk and refer to our respective parts as her "innie" and my "outie."`,
+                                description: `Some belly buttons go in, while others stick out. During sex, Sita and I would engage in baby talk, referring to our respective parts as her "innie" and my "outie."`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -970,8 +981,9 @@ export default {
                         `by`,
                         {
                             anchor: `trail of crumbs`,
+                            todo: REVIEW,
                             card: {
-                                description: `But it's too late to walk back the damage done: Instead of leaving a breadcrumb trail, I've been munching all night on the rolls in my pockets. And now, having satisfied my hunger, I'm stranded and can't find my way back.`,
+                                description: `But it's too late to walk back the damage done: Instead of leaving a breadcrumb trail, I've been munching all night on the rolls in my pockets— and now, having satisfied my hunger, I'm stranded and can't find my way back.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -1098,8 +1110,9 @@ export default {
                     lyricRight: [
                         {
                             anchor: `forgo like jewelry`,
+                            todo: REVIEW,
                             card: {
-                                description: `Sita and I had a turbulent on-again, off-again relationship for a good while longer. During one stretch when things were rosier than ever, she asked for the bracelet back to wear again, and I happily obliged. Although, somehow I'd dented it in my pocket that night— a lasting reminder that some damages can only be mended, never undone.`,
+                                description: `Sita and I had a turbulent on-again, off-again relationship for a good while longer. During one stretch when things were rosier than ever, she asked for the bracelet back to wear again, and I happily obliged. Somehow I'd dented it in my pocket that night, however— a lasting reminder that some damages can only be mended, never undone.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
