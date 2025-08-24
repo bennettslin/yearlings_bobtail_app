@@ -875,7 +875,7 @@ export default {
                             anchor: `worrisome`,
                             todo: REVIEW,
                             card: {
-                                description: `Given how small-minded I'd been with Sita, it surprised me to have only good wishes for Miriam after we broke up. In retrospect, it's because I came away knowing I was indeed worthy of dating the Maras of the world; I didn't have this certainty before, so it felt like a fair bargain.`,
+                                description: `Given how small-minded I'd been with Sita, it felt odd to have only good wishes for Miriam after we broke up. But it's because I came away knowing I was indeed worthy of dating the Maras of the world; I didn't have this certainty before, so it felt like an amazing bargain.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -955,7 +955,6 @@ export default {
                         `The`,
                         {
                             anchor: `seat hurt`,
-                            todo: REVIEW,
                             card: {
                                 description: `Somehow I managed to throw out my back a moment ago, with Miriam straddling me as I reclined the seat. Perhaps it's a sign that I'm getting on in years.`,
                                 dotKeys: {
@@ -973,7 +972,6 @@ export default {
                         `though no worse but for`,
                         {
                             anchor: `his soreness`,
-                            todo: REVIEW,
                             card: {
                                 description: `Miriam knew how sore I'd be about the breakup, so she gratified me with her most vigorous lovemaking yet. But now with no explanation for why my crotch is sore, I can only surmise that it's hard to keep up in old age.`,
                                 dotKeys: {

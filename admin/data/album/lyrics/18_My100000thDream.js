@@ -14,7 +14,6 @@ import {
     FORESHADOW_OF_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'My 100,000th Dream',
@@ -55,7 +54,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: `During the years afterward when I was trying to be a good person again, I kept digging further into my past to figure out how things had gone wrong. And so this song revisits the sounds of every other song on the album in reverse, starting with the piano from "Vegan Proclamation."`,
                     dotKeys: {
@@ -76,7 +74,6 @@ export default {
                         `My`,
                         {
                             anchor: `hundred thousandth dream`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `I once read that the average person has four dreams per night; over a lifetime of seventy years, then, that's about a hundred thousand dreams. So here I am now… dreaming the very last dream I'll ever dream.`,

@@ -582,7 +582,6 @@ export default {
                         `then`,
                         {
                             anchor: `none by us now`,
-                            todo: REVIEW,
                             card: {
                                 description: `And so, vowing never to harm anyone or anything ever again, I decide to go vegan.`,
                                 dotKeys: {
@@ -603,7 +602,6 @@ export default {
                         `and to be`,
                         {
                             anchor: `good again`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Upon becoming a vegan, I joined`,
@@ -676,7 +674,7 @@ export default {
                             anchor: `you have to`,
                             todo: REVIEW,
                             card: {
-                                description: `For all my jealousy and heartbreak, I still had no right to complain; I'd caused Sita this same torment countless times. So in our last phone conversation, I just asked her meekly how she'd managed it. She replied that she didn't know. There were days when she didn't want to live— yet each day would pass all the same. Then gradually, days added up to weeks, and weeks turned into months… until the excruciating pain mellowed into an aching sadness.`,
+                                description: `For all my jealousy and heartbreak, I knew I had no right to complain; I'd caused Sita this same torment countless times. So in our last phone conversation, I just asked her meekly how she'd managed it. She replied that she didn't know. There were days when she didn't want to live— yet each day would pass all the same. Then gradually, days added up to weeks, and weeks turned into months… until the excruciating pain mellowed into an aching sadness.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -828,7 +826,6 @@ export default {
                         [
                             {
                                 anchor: `gurgling, curls up`,
-                                todo: REVIEW,
                                 cards: [
                                     {
                                         description: `With ignorance being as old as time itself, I'm comforted to know that we've always fixed our mistakes; at the same time, it's dispiriting to remember that those to come have yet to make theirs. The universe never truly learns, and I'm partly to blame… I had a similar thought as a child, when I wondered whether I was the reason my brother never got better. It made me realize that all I could do was love him, and then do better for him.`,
@@ -871,7 +868,7 @@ export default {
                                             anchor: `Shiva`,
                                             wiki: `Shiva`,
                                         },
-                                        `dances to destroy and rebuild the universe in an endless cycle. Crushed beneath his foot lies Apasmara— a symbol of his victory over ignorance. And now, having caused my share of ignorant destruction in this universe… I commit to rebuilding it.`,
+                                        `dances to destroy and rebuild the universe in an endless cycle. Crushed beneath his foot lies Apasmara— a symbol of victory over ignorance. And now, having caused my own share of ignorant destruction in this universe… I commit to rebuilding it.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
