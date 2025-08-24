@@ -165,7 +165,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: REVIEW,
                 card: {
-                    description: `I wanted this song to speak from Sita's perspective, but in hindsight, my portrayal of her is a bit one-dimensional. In truth, she wasn't so helpless; she even admitted once to feeling like the worse partner, for she'd willingly damaged my psyche— whereas I'd only unwittingly damaged hers. Still, I was too self-absorbed in guilt when I wrote these lyrics, and my primary intent was to beat myself up over what my ego had cost me.`,
+                    description: `I wanted this song to speak from Sita's perspective, but my portrayal of her ended up being a bit one-dimensional. In truth, she wasn't so helpless; she even admitted once to feeling like the worse partner, for she'd willingly damaged my psyche— whereas I'd only unwittingly damaged hers. Still, I was self-absorbed in guilt when I wrote these lyrics, and my main intent was to beat myself up over what my ego had cost me.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGCRAFT]: true,
@@ -185,7 +185,6 @@ export default {
                         `So baby, tell me then, when you`,
                         {
                             anchor: `take in her breasts`,
-                            todo: REVIEW,
                             card: {
                                 description: `It scared me, far more than I let on, to gamble away the warmth of Sita's love for a mere chance to date someone new. I then had to wonder if this fear would change my hormones, because upon seeing another woman's naked body for the first time, I was always struck by an urge to be mothered more than anything else.`,
                                 dotKeys: {
@@ -227,7 +226,7 @@ export default {
                 todo: REVIEW,
                 card: {
                     description: [
-                        `My relationship with Sita was like a sailboat swaying in perilous waters. This notion is captured in the music by the`,
+                        `My relationship with Sita was like a rowboat swaying in perilous waters. This notion is captured in the music by the`,
                         {
                             anchor: `compound meter`,
                             wiki: `Metre_(music)`,
@@ -355,7 +354,7 @@ export default {
                             anchor: `let's make a pact`,
                             todo: REVIEW,
                             card: {
-                                description: `Sita knew I'd someday want the same everlasting love that she did. So every time we broke up, she'd make me promise to rekindle all that we had, whenever I should begin to pine for it.`,
+                                description: `Sita knew I'd someday want the same everlasting love that she did. So every time we broke up, she'd make me promise to rekindle all that we had, if I should one day come to pine for it.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -517,7 +516,6 @@ export default {
                         `Bursting belly told by`,
                         {
                             anchor: `extra holes`,
-                            todo: REVIEW,
                             card: {
                                 description: `When carved into one's belt, extra notches accommodate a belly that's grown large through overfeeding; when carved on a bedpost, they tally sexual conquests.`,
                                 dotKeys: {
@@ -821,7 +819,6 @@ export default {
                         `And darling, don't you worry, these were only`,
                         {
                             anchor: `practice cuts`,
-                            todo: REVIEW,
                             card: {
                                 description: `The first time Sita asked about the scars on my forearm, I wryly assured her that they were just for practice. Years later, when I expressed concern after she'd tried cutting for herself, she gave me the same line. The message was clear that I was the cause in more ways than one.`,
                                 dotKeys: {
