@@ -17,7 +17,7 @@ import {
     FORESHADOW_OF_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REST } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Vegan Proclamation',
@@ -251,7 +251,7 @@ export default {
                         `Well,`,
                         {
                             anchor: `first pets`,
-                            todo: REVISE,
+                            todo: REST,
                             problem: `First two sentences can be written more smoothly.`,
                             card: {
                                 description: `It astounded me that I could hurt Sita like I had, and still live with myself. In hindsight, I just never questioned the facade of sanity that she'd constructed as a means to cope. I'd allowed myself to believe that our periodic moments of intimacy, which she clung to and cherished, were all that was needed to heal any wound and wipe the slate clean.`,
@@ -351,7 +351,8 @@ export default {
                                 `. And meanwhile, the universe is a`,
                                 {
                                     anchor: `cyanided box`,
-                                    todo: REVIEW,
+                                    todo: REST,
+                                    problem: `Make first two sentences flow together. Maybe just explain cat without linking to Schrodinger.`,
                                     card: {
                                         description: [
                                             `In`,
@@ -672,7 +673,6 @@ export default {
                         `Someday you'll breathe again; for one,`,
                         {
                             anchor: `you have to`,
-                            todo: REVIEW,
                             card: {
                                 description: `For all my jealousy and heartbreak, I knew I had no right to complain; I'd caused Sita this same torment countless times. So in our last phone conversation, I just asked her meekly how she'd managed it. She replied that she didn't know. There were days when she didn't want to live— yet each day would pass all the same. Then gradually, days added up to weeks, and weeks turned into months… until the excruciating pain mellowed into an aching sadness.`,
                                 dotKeys: {
@@ -854,7 +854,6 @@ export default {
                             // NOTE: I added an "h" to Shiva.
                             anchor: `chivalry to our Shiva's feet`,
                             properNoun: true,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [

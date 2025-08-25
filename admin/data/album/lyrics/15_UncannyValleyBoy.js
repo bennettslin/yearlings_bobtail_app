@@ -31,7 +31,6 @@ export default {
     referenceDescription: `Acoustic guitar in measure 1`,
     mixStartTime: `0:01:18.46`,
     playerStartTime: 2722.629,
-    todo: REVIEW,
     overview: `Upon learning of my brother's autism, my parents were too harried to notice I was being bullied at school; in guilt, they later indulged every whim I had to find my own path. But it didn't assure them that I failed to mature as I got older— and they were crushed when I left Sita, whom they adored. Naturally, I wasn't happy to disappoint them. Still, I had a master plan to follow, and I wasn't about to change my ways…`,
     lyricUnits: [
         {
@@ -412,7 +411,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `The`,
@@ -1258,7 +1256,7 @@ export default {
                             anchor: `faces you flip override`,
                             todo: REVIEW,
                             card: {
-                                description: `As I grew into a sullen adolescent, my mother would ask what happened to the playful little boy I'd been before… which then made me wonder myself. In retrospect, I think I learned to take on the optimal persona for each given situation— and as time went on, these personas began to pile up. It made no sense, then, to keep an old one lying around if it no longer served its purpose.`,
+                                description: `As I grew into a sullen adolescent, my mother would ask what happened to the playful little boy I'd been before… which then made me wonder myself. In retrospect, I think I learned to take on the optimal persona for each given situation— and as time went on, these personas started piling up. So it made no sense to keep an old one lying around once it no longer served any purpose.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

@@ -229,6 +229,7 @@ export default {
                         {
                             // NOTE: I added a hyphen in the lyrics as well.
                             anchor: `inner lotus-eater`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In the`,
@@ -241,7 +242,7 @@ export default {
                                         anchor: `lotus-eaters`,
                                         wiki: `Lotus-eaters`,
                                     },
-                                    `were islanders who whiled away their days eating the narcotic fruit of the lotus; Odysseus could only look upon them with curious pity. Similarly, though Miriam would comment on how much I drank, she never judged me for it. In hindsight, it's because she, like Odysseus, was keeping her distance.`,
+                                    `were islanders who'd while away their days eating the narcotic fruit of the lotus; Odysseus could only look upon them with curious pity. Similarly, though Miriam would comment on how much I drank, she never judged me for it. In hindsight, it's because she, like Odysseus, was keeping her distance.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -875,7 +876,7 @@ export default {
                             anchor: `worrisome`,
                             todo: REVIEW,
                             card: {
-                                description: `Given how small-minded I'd been with Sita, it felt odd to have only good wishes for Miriam after we broke up. But it's because I came away knowing I was indeed worthy of dating the Maras of the world; I didn't have this certainty before, so it felt like an amazing bargain.`,
+                                description: `Given how self-centered I was with Sita, it seemed odd to only have good wishes for Miriam after we broke up. But it's because I came away knowing I was indeed worthy of dating the Maras of the world; I didn't have this certainty before, so it felt like an amazing bargain.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
