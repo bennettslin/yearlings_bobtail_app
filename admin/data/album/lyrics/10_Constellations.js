@@ -17,6 +17,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REST, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Constellations!',
@@ -31,7 +32,9 @@ export default {
     mixStartTime: `0:01:18.60`,
     playerReferenceTime: 1751.447,
     playerStartTime: 1751.191,
-    overview: `One night I went with my bassist Ana and some stoner friends to get high on Robitussin. As we explored the steam tunnels underneath UCLA, I got us all to pretend we were Vikings, Mongols, and various waves of human migration and conquest throughout world history; in hindsight, the others might've just been humoring me. I did so much Robitussin that summer, it took a while to regain my grip on reality.`,
+    todo: REVISE,
+    problem: `Make clear I'm on a summer break back home.`,
+    overview: `One night I went out to get high on Robitussin with my bassist Ana and some of our stoner friends. As we explored the steam tunnels underneath UCLA, I got us all to pretend we were Vikings, Mongols, and various waves of human migration and conquest throughout world history; in hindsight, the others might've just been humoring me. I did so much Robitussin that summer, it took a while to regain my grip on reality.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -283,10 +286,11 @@ export default {
                         {
                             anchor: `Walkyriens`,
                             properNoun: true,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
-                                        `Flashback to earlier that night, when we've arrived at a "`,
+                                        `Flashback to earlier that night: We've just arrived at a "`,
                                         {
                                             anchor: `Walgreens`,
                                             wiki: `Walgreens`,
@@ -364,9 +368,10 @@ export default {
                     lyric: [
                         {
                             anchor: `Quouffs uppraissed`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `Not all bottles of Robitussin will get you high. The ones to avoid are those containing`,
+                                    `Not all bottles of Robitussin will get you high; the ones to avoid are those containing`,
                                     {
                                         anchor: `guaifenesin`,
                                         wiki: `Guaifenesin`,
@@ -382,9 +387,10 @@ export default {
                         `, this`,
                         {
                             anchor: `boundless Kalevalley ends`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `The San Fernando Valley is the quintessential "Cali valley." In my youth, the days until I could leave this sprawling wasteland felt endless. But on this summer break back home, escape is now instantaneous with the power of Robitussin.`,
+                                    description: `The San Fernando Valley is the quintessential "Cali valley." In high school, I counted the days until I could leave this sprawling wasteland. But now escape is instantaneous… with the power of Robitussin.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true,
@@ -448,10 +454,11 @@ export default {
                         {
                             anchor: `Lapps are highmen`,
                             properNoun: true,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
-                                        `We're literally "high men," and since the others are trying Robitussin for the first time, it also "laps our`,
+                                        `We're literally "high men"— and since the others are trying Robitussin for the first time, it also "laps our`,
                                         {
                                             anchor: `hymen`,
                                             wiki: `Hymen`,
@@ -755,6 +762,7 @@ export default {
                         `of`,
                         {
                             anchor: `avatars`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In Hinduism, an`,
@@ -762,7 +770,7 @@ export default {
                                         anchor: `avatar`,
                                         wiki: `Avatar`,
                                     },
-                                    `is the earthly incarnation of a deity. Some avatars are believed to have been historical figures whose exploits predated written tradition.`,
+                                    `is the earthly incarnation of a deity. Some avatars are believed to have been historical figures whose exploits predate written tradition.`,
                                 ],
                             },
                         },
@@ -819,9 +827,10 @@ export default {
                         `,`,
                         {
                             anchor: `questurns Indo Hairapins`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `Our "quest turns into hairpins" as we wind through narrow pathways. All the while, I babble on about the "questions" brought up by later scholars, who rejected the colonialism of past scholarship. Instead, they pointed to the evolution of the "`,
+                                    `Our "quest turns into hairpins," as we wind through narrow pathways. All the while, I babble on about the "questions" brought up by later scholars who rejected the colonialism of past scholarship. Instead, they pointed to the evolution of the "`,
                                     {
                                         anchor: `Indo-European`,
                                         wiki: `Indo-European_languages`,
@@ -1017,15 +1026,16 @@ export default {
                         {
                             anchor: `Ourevian battles spent`,
                             properNoun: true,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
-                                        `Robitussin requires you to stay constantly hydrated— but we've now drank all "our`,
+                                        `Robitussin requires you to stay hydrated— but we've now drank all "our`,
                                         {
                                             anchor: `Evian`,
                                             wiki: `Evian`,
                                         },
-                                        `bottles" that we brought into the steam tunnels with us.`,
+                                        `bottles" that we took into the steam tunnels with us.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -1055,6 +1065,8 @@ export default {
                         `,`,
                         {
                             anchor: `a'duct Uighuress`,
+                            todo: REST,
+                            problem: `Change spelling of "Uighuress" in lyric? Use "y" spelling in annotation?`,
                             card: {
                                 description: [
                                     `The Mongols would slay the men and seize the women of the lands they conquered. This fate was no doubt met by the`,
@@ -1078,8 +1090,9 @@ export default {
                     lyric: [
                         {
                             anchor: `Are Melee tapirs`,
+                            todo: REVIEW,
                             card: {
-                                description: `Earlier we'd scavenged some materials to make imaginary weapons, but the steam tunnels were too cramped for us to do more than brandish them. Now out in the open, "our melee tapers the discourse"— that is, the chattering stops and the battling starts— as we head back to Howie's car.`,
+                                description: `Earlier we'd scavenged some materials to make imaginary weapons, but the steam tunnels were too cramped for us to do more than brandish them. Now out in the open, "our melee tapers the discourse"— that is, our chattering stops and the battling starts— as we head back to Howie's car.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -1152,6 +1165,8 @@ export default {
                         `, to war:`,
                         {
                             anchor: `scimitary of'fence`,
+                            todo: REST,
+                            problem: `"Adam, Howie" sounds like the beginning of a list.`,
                             card: {
                                 description: [
                                     `Feeling refreshed, we renew our "`,
@@ -1195,9 +1210,10 @@ export default {
                         {
                             anchor: `Siburial plains`,
                             properNoun: true,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `The Americas were first settled by north Asian populations who gladly "forfeited the tundra's`,
+                                    `The Americas were first settled by Northeast Asian groups who gladly "forfeited the tundra's`,
                                     {
                                         anchor: `Siberian`,
                                         wiki: `Siberia`,
@@ -1266,9 +1282,10 @@ export default {
                         `But`,
                         {
                             anchor: `past a cross Bearing Straight`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `We navigate by "bearing straight" past a cross-shaped headstone, just as those before us had "passed across the`,
+                                    `After passing a headstone shaped like a cross, we navigate by "bearing straight"— just as those before us had "passed across the`,
                                     {
                                         anchor: `Bering Strait`,
                                         wiki: `Bering_Strait`,
@@ -1336,11 +1353,12 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
-                        `On solo trips, I'd sometimes play on my`,
+                        `On solo trips, I'd often play on my old childhood`,
                         {
-                            anchor: `NES`,
+                            anchor: `Famicom`,
                             wiki: `Nintendo_Entertainment_System`,
                         },
                         `while waiting for the Robitussin to kick in. And every so often I'd keep playing, even as my mind began to wander on its mystical journey. So for years afterward, every 8-bit arcade sound seemed to hide some metaphysical truth that my sober ears just couldn't suss out.`,
@@ -1433,6 +1451,8 @@ export default {
                         `The`,
                         {
                             anchor: `mistodawn`,
+                            todo: REST,
+                            problem: `Specify Howie's parents' place?`,
                             card: {
                                 description: `The "mist of dawn" breaks, and we drive back to Howie's place. My newfound clarity proves to be short-lived, as I lean back and shut my eyes to gaze at constellations.`,
                                 dotKeys: {
@@ -1477,6 +1497,7 @@ export default {
                         lyric: [
                             {
                                 anchor: `sunk in tarpid lies`,
+                                todo: REVIEW,
                                 cards: [
                                     {
                                         description: `While my mastodon lies sunk in a "tar pit," I'm sinking in all my "torpid" lies explaining to Sita why I don't spend more nights with her.`,
@@ -1492,7 +1513,7 @@ export default {
                                                 anchor: `La Brea Tar Pits`,
                                                 wiki: `La_Brea_Tar_Pits`,
                                             },
-                                            `, which were formed by crude oil seeping up from underground over tens of thousands of years. By preserving bones and a few plants, they're now rich sources of discovery for paleontologists.`,
+                                            `, which were formed by crude oil seeping up from underground over tens of thousands of years. Having preserved bones and some plants, they're now rich sources of discovery for paleontologists.`,
                                         ],
                                     },
                                     {
@@ -1520,6 +1541,7 @@ export default {
                         {
                             anchor: `Hollowscene`,
                             properNoun: true,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -1528,7 +1550,7 @@ export default {
                                             anchor: `dissociative`,
                                             wiki: `Dissociative`,
                                         },
-                                        `drug, I begin to detach from myself. In doing so, I catch a glimpse of how superficial my aspirations are, and how "hollow" the local "scene" is in which I desire recognition.`,
+                                        `drug, I begin to detach from myself. In doing so, I catch a glimpse of how superficial my aspirations are, given how "hollow" the local "scene" is in which I desire recognition.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -1569,8 +1591,9 @@ export default {
                         },
                         {
                             anchor: `toughtim rite`,
+                            todo: REVIEW,
                             card: {
-                                description: `Having now achieved a full out-of-body experience, I gaze down upon my drugged-out self. Set against the familiar backdrop of Los Angeles, this degrading sight reminds me that in having scuttled off to the Bay Area, I'm shirking my duty to care for my autistic brother. My sister, on the other hand, lives nearby. Guilt-ridden, I sarcastically note that "brother and sister taught him right."`,
+                                description: `Having now achieved a full out-of-body experience, I gaze down upon my drugged-out self. Set against the familiar backdrop of Los Angeles, this degrading sight reminds me that, in having scuttled off to the Bay Area, I'm shirking my duty to care for my autistic brother. My sister, on the other hand, lives nearby. Guilt-ridden, I sarcastically note that "brother and sister taught him right."`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -1656,9 +1679,10 @@ export default {
                             {
                                 anchor: `Leif as the Red's son`,
                                 properNoun: true,
+                                todo: REVIEW,
                                 cards: [
                                     {
-                                        description: `The arrival of Europeans into the Americas precipitated their rise to global power, even as it brought disease and ruin to the native populations. Similarly, while the day begins for many, it's now ending for us, and we "leave as the red sun" arrives.`,
+                                        description: `The arrival of Europeans in the Americas hastened their rise to global power, even as it brought disease and ruin to the native populations. Similarly, while the day begins for many, it's now ending for us, and we "leave as the red sun" arrives.`,
                                         dotKeys: {
                                             [NARRATIVE]: true,
                                             [PUN]: true,
@@ -1691,9 +1715,10 @@ export default {
                         `How old are`,
                         {
                             anchor: `these mummeries`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `As my mind wanders through the historical past, I see all of time collapsing into a singularity, such that everyone who's ever lived is at once dead and not dead, including me. Or is this just an endless series of silent acts we've all agreed to perform in— "mummeries," if I may?`,
+                                    description: `As my mind wanders through the historical past, I see all of time collapsing into a singularity, such that everyone who's ever lived is at once dead and not dead— including me. Or is this just an endless series of silent acts we've all agreed to perform in— "mummeries," if I may?`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true,
@@ -1742,9 +1767,10 @@ export default {
                     lyric: [
                         {
                             anchor: `Pullar switch`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Back at Howie's place, I'm crashing on a couch in his attic. There's an old black-and-white television set in front of me, and I "pull the" switch to turn it on.`,
+                                    description: `Back at Howie's place, I'm crashing on a couch in the attic. There's an old black-and-white television set in front of me, and I "pull the" switch to turn it on.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true,
@@ -1799,6 +1825,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
                         `For a song about recreational drug use, I naturally sought ideas from the Beatles during their psychedelic period. "`,
@@ -1811,7 +1838,7 @@ export default {
                             anchor: `tape loop`,
                             wiki: `Tape_loop`,
                         },
-                        `to imitate a seagull's cry, which I tried to recreate by pinching off the airstream blown through the window of a recorder. The result wasn't what I'd hoped for, but as background texture, it contributes nicely to the overall atmosphere.`,
+                        `to imitate a seagull's cry, which I tried to recreate by pinching off the airstream blown through the window of a recorder. The result wasn't what I'd hoped for… but as background texture, it contributes nicely to the overall atmosphere.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -1830,9 +1857,10 @@ export default {
                         `Then pounds`,
                         {
                             anchor: `arrhythmetic heart`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Coming down from my high, I notice that my heart stops every few seconds, which concerns me. So I try to count beats per minute, but unfortunately, my brain is too fried to do basic "arithmetic."`,
+                                    description: `Coming down from my high, I notice that my heart stops every few seconds, which concerns me. So I try to count beats per minute— but sadly, my brain is too fried to do basic "arithmetic."`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true,
