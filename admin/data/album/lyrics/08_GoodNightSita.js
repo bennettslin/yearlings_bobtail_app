@@ -11,6 +11,7 @@ import {
     POSTCHORUS,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Good Night, Sita',
@@ -327,9 +328,10 @@ export default {
                         `for the`,
                         {
                             anchor: `innermost matryoshka`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `Flashback to our first date, when Sita and I have arrived at a natural history museum. We begin by strolling past a display of Russian nesting dolls, known as`,
+                                    `Flashback to our first date, when Sita and I have arrived at a natural history museum: We begin by strolling past a display of Russian nesting dolls, known as`,
                                     {
                                         anchor: `matryoshkas`,
                                         wiki: `Matryoshka_doll`,
