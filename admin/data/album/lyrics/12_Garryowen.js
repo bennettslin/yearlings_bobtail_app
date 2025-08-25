@@ -16,6 +16,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Garryowen',
@@ -317,14 +318,15 @@ export default {
                         },
                         {
                             anchor: `aren't love`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `Throughout our budding friendship, Sita had neglected to mention her sexual intimacy with past partners. When I found out, she tried to console me by pointing out that it was always shy of intercourse; and furthermore, she never went all the way with them`,
+                                    `Throughout our budding friendship, Sita had neglected to mention her sexual intimacy with past partners. When I found out, she tried to console me by pointing out that it was always shy of intercourse; and furthermore, this was`,
                                     {
                                         isEmphasis: true,
                                         lyric: `precisely`,
                                     },
-                                    `because she hadn't loved them. She loved`,
+                                    `because she never loved them. She loved`,
                                     {
                                         isEmphasis: true,
                                         lyric: `me`,
@@ -469,6 +471,8 @@ export default {
                         `As`,
                         {
                             anchor: `claws you built from scratches`,
+                            todo: REST,
+                            problem: `This isn't actually what the lyric means. Rather, I got scratched, and so I built up defenses.`,
                             card: {
                                 description: `In the same way that cats scratch to sharpen their claws, I needed to stay sharp to keep from getting scratched and clawed by the bullies.`,
                                 dotKeys: {
@@ -486,6 +490,7 @@ export default {
                         `fill up a package strapped to your`,
                         {
                             anchor: `scapegirl`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In Biblical times, a community absolved its sins by ritually placing them`,
@@ -493,7 +498,7 @@ export default {
                                         anchor: `on a goat`,
                                         wiki: `Scapegoat`,
                                     },
-                                    `that was then cast into the desert. And banishing Sita from my life served a similar purpose: Without her around to cast judgment, I'd have no need to atone for my hypocrisy.`,
+                                    `that was then cast into the desert. Well, banishing Sita from my life served a similar purpose: Without her around to cast judgment, I no longer needed to atone for my hypocrisy.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -559,8 +564,9 @@ export default {
                         `you'd`,
                         {
                             anchor: `make her strip bare`,
+                            todo: REVIEW,
                             card: {
-                                description: `Sita learned early on that, by hovering naked beside me while shivering dramatically from the cold, she could always whisk me away for some lovemaking. But as our relationship soured, this brazen appeal to both my primal and protective instincts grew tiresome, and I drew some cruel pleasure in letting her shiver for just a bit longer.`,
+                                description: `Sita learned early on that, by hovering naked beside me while shivering dramatically from the cold, she could always whisk me away for some lovemaking. But as our relationship soured, this brazen appeal to both my primal and protective instincts grew tiresome— and I drew some cruel pleasure in letting her shiver for just a bit longer.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -641,9 +647,10 @@ export default {
                     lyric: [
                         {
                             anchor: `Final trip on a tanker`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `I knew I had to stay relatively sober to start afresh with someone new. Yet short of being drunk, I could never muster the courage to break up with Sita. So I drank myself into a stupor each night, hoping to wake one morning and discover that, by some miracle, I was both newly single and repulsed by the taste of alcohol.`,
+                                    description: `I knew I had to stay relatively sober to start afresh with another woman; yet, short of being drunk, I could never muster the courage to break it off with Sita. So each night I'd drink myself into a stupor, hoping to wake one morning and discover that— miracle of miracles— I was both newly single and repulsed by the taste of alcohol.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -737,14 +744,15 @@ export default {
                             `see himself`,
                             {
                                 anchor: `as well in you`,
+                                todo: REVIEW,
                                 card: {
                                     description: [
-                                        `Yet if I was capable of hurting myself, then I'd`,
+                                        `Yet if I was capable of harming myself, then I'd`,
                                         {
                                             isEmphasis: true,
                                             lyric: `also`,
                                         },
-                                        `have zero qualms about hurting those close to me— who now knew the worst side of me as only I once did.`,
+                                        `have zero qualms about harming those close to me— who now knew the worst side of me, as only I once did.`,
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
