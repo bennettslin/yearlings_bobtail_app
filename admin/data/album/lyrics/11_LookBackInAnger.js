@@ -16,6 +16,7 @@ import {
     FORESHADOW_OF_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Look Back in Anger',
@@ -28,6 +29,8 @@ export default {
     playerStartTime: 1932.102,
     // This is a magic number adjusted by ear. In the mix, it's actually 41.66.
     mixSamplingFrequency: 41.64,
+    todo: REST,
+    problem: `Last sentence has two "which"s, two "been"s. Not so bad, but also not ideal.`,
     overview: `With the band becoming a fixture in the local scene, I began to command more attention than I'd ever known, particularly from women. And yet, my misery didn't fade; it just simmered into a quiet resentment. I also began to regret my relationship with Sita, which now felt like a decision I'd been coerced into making, under deprived conditions from which I'd since been set free.`,
     lyricUnits: [
         {
@@ -71,6 +74,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
                         `A fellow dishroom worker named Owen had a`,
@@ -78,7 +82,7 @@ export default {
                             anchor: `four-track cassette recorder`,
                             wiki: `Portastudio`,
                         },
-                        `, and some nights we'd go back to his place and twiddle with it. For drum tracks, Owen would tap out these intricate rhythms on books and dishware arranged on the carpet, which always impressed me. So I tried my best to conjure his spirit here.`,
+                        `, and some nights we'd go to his place and twiddle with it. To make drum tracks, Owen would sit cross-legged on the carpet, arrange books and dishware all around him, and then tap out these intricate rhythms. This always impressed me, so I tried my best to conjure his spirit here.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -98,6 +102,8 @@ export default {
                         `Scrambled past this hell, where`,
                         {
                             anchor: `flagboy last fell`,
+                            todo: REST,
+                            problem: `Too many words in last sentence?`,
                             card: {
                                 description: [
                                     `During the Civil War, a`,
@@ -120,9 +126,10 @@ export default {
                     lyric: [
                         {
                             anchor: `dragging aglets held`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Since I never learned to tie my shoelaces properly, they were always coming undone. So if anyone was bent on seeing me trip and fall, they had the ready means to make it happen.`,
+                                    description: `Since I never learned to tie my shoelaces properly, they were always coming undone. So if anyone were bent on seeing me trip and fall, they readily had the means to make it happen.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -196,9 +203,10 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
-                        `So as not to wake his neighbors while recording late at night, Owen would sing in muffled tones and then double track his vocals to thicken them. I wanted to recreate this effect here, so I took notes from`,
+                        `So as not to wake his neighbors while recording late at night, Owen would sing in muffled tones, and then double track his vocals to thicken them. I wanted to recreate this effect here, so I took notes from`,
                         {
                             anchor: `Elliott Smith`,
                             wiki: `Elliott_Smith`,
@@ -482,8 +490,9 @@ export default {
                         `"`,
                         {
                             anchor: `Great show`,
+                            todo: REVIEW,
                             card: {
-                                description: `The best time to hit on someone is right after your set, since they've just spent the last hour making you the center of their attention. And sure enough, I find the redhead to be flirtatious when we chat.`,
+                                description: `The best time to hit on someone is right after your set, when they've just spent the past hour making you the center of their attention. And sure enough, I find the redhead to be flirtatious when we chat.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -579,8 +588,9 @@ export default {
                         `reading`,
                         {
                             anchor: `His obit not a bang`,
+                            todo: REVIEW,
                             card: {
-                                description: `But my appraisal was based on reason, not resentment. After all, if an almighty God were truly hoping to reach me with his gospel… why would he choose my tormentors, of all people, to be its messengers?`,
+                                description: `But my appraisal was based on reason, not resentment. After all, if an almighty God were truly hoping to reach me with his gospel… then why would he pick my tormentors, of all people, to be its messengers?`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
