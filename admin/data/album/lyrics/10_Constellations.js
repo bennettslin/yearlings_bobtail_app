@@ -17,7 +17,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Constellations!',
@@ -32,9 +32,8 @@ export default {
     mixStartTime: `0:01:18.60`,
     playerReferenceTime: 1751.447,
     playerStartTime: 1751.191,
-    todo: REVISE,
-    problem: `Make clear I'm on a summer break back home.`,
-    overview: `One night I went out to get high on Robitussin with my bassist Ana and some of our stoner friends. As we explored the steam tunnels underneath UCLA, I got us all to pretend we were Vikings, Mongols, and various waves of human migration and conquest throughout world history; in hindsight, the others might've just been humoring me. I did so much Robitussin that summer, it took a while to regain my grip on reality.`,
+    todo: REVIEW,
+    overview: `One night back in Los Angeles, I went out to get high on Robitussin with my bassist Ana and some stoner friends of ours. As we explored the steam tunnels beneath UCLA, I got us all to pretend we were Vikings, Mongols, and various waves of human migration and conquest throughout world history; in hindsight, the others might've just been humoring me. I did so much Robitussin that summer, it took a while to regain my grip on reality.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -1061,17 +1060,17 @@ export default {
                         },
                         `,`,
                         {
-                            anchor: `a'duct Uighuress`,
-                            todo: REST,
-                            problem: `Change spelling of "Uighuress" in lyric? Use "y" spelling in annotation?`,
+                            // NOTE: I changed from "Uighuress."
+                            anchor: `a'duct We-yghuress`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The Mongols would slay the men and seize the women of the lands they conquered. This fate was no doubt met by the`,
                                     {
-                                        anchor: `Uighurs`,
+                                        anchor: `Uyghurs`,
                                         wiki: `Uyghurs`,
                                     },
-                                    `, a Turkic people whom they encountered in their early campaigns. And so, through "a duct, we egress," or exit, the steam tunnels— but first, I feign to "abduct a Uighuress."`,
+                                    `, a Turkic people whom they encountered in their early campaigns. And so, through "a duct, we egress," or exit, the steam tunnels— but first, I feign to "abduct a Uyghuress."`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1161,16 +1160,15 @@ export default {
                         `, to war:`,
                         {
                             anchor: `scimitary of'fence`,
-                            todo: REST,
-                            problem: `"Adam, Howie" sounds like the beginning of a list.`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `Feeling refreshed, we renew our "`,
+                                    `Feeling refreshed, we return to our "`,
                                     {
                                         anchor: `scimitar`,
                                         wiki: `Scimitar`,
                                     },
-                                    `offense." The next plan of action is to visit the grave of Adam, Howie and Tomer's high school buddy, by driving through the "cemetery fence."`,
+                                    `offense." The next plan of action is to visit the gravesite of Howie and Tomer's high school buddy Adam. But since it's after dark, we'll need to sneak over the "cemetery fence."`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1445,10 +1443,9 @@ export default {
                         `The`,
                         {
                             anchor: `mistodawn`,
-                            todo: REST,
-                            problem: `Specify Howie's parents' place?`,
+                            todo: REVIEW,
                             card: {
-                                description: `The "mist of dawn" breaks, and we drive back to Howie's place. My newfound clarity proves to be short-lived, as I lean back and shut my eyes to gaze at constellations.`,
+                                description: `The "mist of dawn" breaks, and we drive back to Howie's parents' place. My newfound clarity proves to be fleeting, as I shut my eyes to gaze at constellations.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
