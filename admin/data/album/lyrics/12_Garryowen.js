@@ -331,7 +331,7 @@ export default {
                                         isEmphasis: true,
                                         lyric: `me`,
                                     },
-                                    `— which meant I'd won. But it still stung to find out so late, and this only deepened my resentment.`,
+                                    `— and thus I won, didn't I? But it still stung to find out so late… which only deepened my resentment.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -498,7 +498,7 @@ export default {
                                         anchor: `on a goat`,
                                         wiki: `Scapegoat`,
                                     },
-                                    `that was then cast into the desert. Well, banishing Sita from my life served a similar purpose: Without her around to cast judgment, I no longer needed to atone for my hypocrisy.`,
+                                    `that was then cast into the desert. Meanwhile, banishing Sita from my life would serve the same purpose: Without her around to cast judgment, I'd no longer need to atone for my hypocrisy.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -564,7 +564,6 @@ export default {
                         `you'd`,
                         {
                             anchor: `make her strip bare`,
-                            todo: REVIEW,
                             card: {
                                 description: `Sita learned early on that, by hovering naked beside me while shivering dramatically from the cold, she could always whisk me away for some lovemaking. But as our relationship soured, this brazen appeal to both my primal and protective instincts grew tiresome— and I drew some cruel pleasure in letting her shiver for just a bit longer.`,
                                 dotKeys: {
@@ -647,7 +646,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Final trip on a tanker`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `I knew I had to stay relatively sober to start afresh with another woman; yet, short of being drunk, I could never muster the courage to break it off with Sita. So each night I'd drink myself into a stupor, hoping to wake one morning and discover that— miracle of miracles— I was both newly single and repulsed by the taste of alcohol.`,
@@ -744,7 +742,6 @@ export default {
                             `see himself`,
                             {
                                 anchor: `as well in you`,
-                                todo: REVIEW,
                                 card: {
                                     description: [
                                         `Yet if I was capable of harming myself, then I'd`,

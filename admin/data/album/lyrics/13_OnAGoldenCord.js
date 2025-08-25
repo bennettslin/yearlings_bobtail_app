@@ -652,7 +652,7 @@ export default {
                             anchor: `gesture then`,
                             todo: REVIEW,
                             card: {
-                                description: `The bracelet, which I'd bought from a jewelry store in the local mall, had cost a lot relative to my wage at the time. Still, that was all it took to signal my earnest intentions.`,
+                                description: `The bracelet, which I bought from a jewelry store in the local mall, had cost a lot relative to my wage at the time. Still, that was all it took to signal my earnest intentions.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
