@@ -165,7 +165,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: REVIEW,
                 card: {
-                    description: `I wanted this song to speak from Sita's perspective, but my portrayal of her ended up being a bit one-dimensional. In truth, she wasn't so helpless; she even admitted once to feeling like the worse partner, for she'd willingly damaged my psyche— whereas I'd only unwittingly damaged hers. Still, I was self-absorbed in guilt when I wrote these lyrics, and my main intent was to beat myself up over what my ego had cost me.`,
+                    description: `I wanted this song to speak from Sita's perspective, but I think my portrayal of her ended up a bit one-dimensional. In truth, she wasn't so helpless; she even admitted once to feeling like the worse partner, for she'd willingly damaged my psyche— whereas I'd only unwittingly damaged hers. Still, I was self-absorbed in guilt when I wrote these lyrics, and my main intent was to beat myself up over what my ego had cost me.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGCRAFT]: true,
@@ -223,7 +223,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `My relationship with Sita was like a rowboat swaying in perilous waters. This notion is captured in the music by the`,
@@ -354,7 +353,7 @@ export default {
                             anchor: `let's make a pact`,
                             todo: REVIEW,
                             card: {
-                                description: `Sita knew I'd someday want the same everlasting love that she did. So every time we broke up, she'd make me promise to rekindle all that we had, if I should one day come to pine for it.`,
+                                description: `Sita knew I'd someday want the same everlasting love that she did. So every time we broke up, she'd make me promise to rekindle what we had, should I one day come to pine for it.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
