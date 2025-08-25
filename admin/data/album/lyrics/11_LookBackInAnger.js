@@ -16,7 +16,7 @@ import {
     FORESHADOW_OF_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REST } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Look Back in Anger',
@@ -74,7 +74,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `A fellow dishroom worker named Owen had a`,
@@ -126,7 +125,6 @@ export default {
                     lyric: [
                         {
                             anchor: `dragging aglets held`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `Since I never learned to tie my shoelaces properly, they were always coming undone. So if anyone were bent on seeing me trip and fall, they readily had the means to make it happen.`,
@@ -203,7 +201,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `So as not to wake his neighbors while recording late at night, Owen would sing in muffled tones, and then double track his vocals to thicken them. I wanted to recreate this effect here, so I took notes from`,
@@ -490,7 +487,6 @@ export default {
                         `"`,
                         {
                             anchor: `Great show`,
-                            todo: REVIEW,
                             card: {
                                 description: `The best time to hit on someone is right after your set, when they've just spent the past hour making you the center of their attention. And sure enough, I find the redhead to be flirtatious when we chat.`,
                                 dotKeys: {
@@ -588,7 +584,6 @@ export default {
                         `reading`,
                         {
                             anchor: `His obit not a bang`,
-                            todo: REVIEW,
                             card: {
                                 description: `But my appraisal was based on reason, not resentment. After all, if an almighty God were truly hoping to reach me with his gospel… then why would he pick my tormentors, of all people, to be its messengers?`,
                                 dotKeys: {
