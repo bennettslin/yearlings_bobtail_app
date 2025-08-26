@@ -17,7 +17,7 @@ import {
     SOLO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REST } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Grasshoppers Lie Heavy',
@@ -35,7 +35,6 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 cards: [
                     {
                         description: [
@@ -143,7 +142,6 @@ export default {
                         `and their`,
                         {
                             anchor: `molls perched on pedestals`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     {
@@ -166,7 +164,6 @@ export default {
                         `noses in`,
                         {
                             anchor: `penny dreadfuls`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `Still, I could even the score by showing disdain for the popular books and music they consumed.`,
@@ -360,7 +357,6 @@ export default {
                         {
                             anchor: `Schwa stickers`,
                             properNoun: true,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -485,7 +481,6 @@ export default {
                         `Then just like the drift,`,
                         {
                             anchor: `she disappeared`,
-                            todo: REVIEW,
                             card: {
                                 description: `Shortly after our first few dates, I called Sita to tell her I was in love with her. She admitted that she didn't feel the same, and just wanted to be friends. We hung up with the understanding that we'd continue to hang out— but I felt so dejected, I quietly decided never to see her again.`,
                                 dotKeys: {
@@ -509,7 +504,6 @@ export default {
                         `Alone his first gig,`,
                         {
                             anchor: `stagefright ignites`,
-                            todo: REVIEW,
                             card: {
                                 description: `During this time, I began to perform at singer-songwriter nights hosted by local coffee shops. My first attempt was a disaster, but I learned to conquer my stagefright with just the right amount of alcohol.`,
                                 dotKeys: {
@@ -860,7 +854,6 @@ export default {
                         `In her`,
                         {
                             anchor: `gingerbread prison`,
-                            todo: REVIEW,
                             card: {
                                 description: `Since just being friends with Sita will never fulfill me, I find the idea depressing. And yet… it's also kind of sweet to nibble on.`,
                                 dotKeys: {
@@ -910,7 +903,6 @@ export default {
                         `On your bed's rumpled linens, a`,
                         {
                             anchor: `lidless Vaseline sits`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -953,7 +945,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `In the final third of "`,
@@ -1257,7 +1248,8 @@ export default {
                         `You`,
                         {
                             anchor: `stand unsure`,
-                            todo: REVIEW,
+                            todo: REST,
+                            problem: `I already talk about Sita comforting me in a later annotation, so don't need to frame it as comfort. Maybe use a different word than "forlorn" as well.`,
                             cards: [
                                 {
                                     description: `The night we decided to have sex, I was overcome with a wary unease that I couldn't explain.`,
@@ -1266,7 +1258,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `As Sita comforts me with her gaze while lying naked on the bed, I stand forlornly by the bedside.`,
+                                    description: `As Sita lies naked while comforting me with her gaze, I stand forlornly by the bedside.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -1289,7 +1281,6 @@ export default {
                         `you wear your`,
                         {
                             anchor: `hard-on in a sleeve`,
-                            todo: REVIEW,
                             card: {
                                 description: `Pointing to the condom on my erection, Sita lightens the mood by pretending to agree with a past assessment of mine— namely, that I wear my "heart on" my sleeve.`,
                                 dotKeys: {
@@ -1350,7 +1341,6 @@ export default {
                         {
                             anchor: `Grace Darling's beacon`,
                             properNoun: true,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `As Sita comforts me, I'm reminded that she's my "grace darling," who rescued me from a sea of loneliness.`,
@@ -1381,7 +1371,6 @@ export default {
                         `light`,
                         {
                             anchor: `fell an oar`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Or else, fell "Lenore."`,
