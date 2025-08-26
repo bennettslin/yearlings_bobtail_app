@@ -25,7 +25,6 @@ export default {
     referenceDescription: `Spanish guitar in measure 1`,
     playerStartTime: 1131.214,
     mixStartTime: `0:02:12.00`,
-    todo: REVIEW,
     overview: `After Catherine broke up with me, I decided to spend the next five years shaping myself into the ideal romantic prospect. As part of this plan, I got involved in the local scene and eventually put together my own band, the Yearlings; by the fifth year, we were playing house parties and small clubs. I soon grew infatuated with a scenester named Mara, whom I noticed from afar. But Mara ended up going out with my drummer Joi, which made band practice awkward.`,
     lyricUnits: [
         {
@@ -63,7 +62,6 @@ export default {
                             {
                                 anchor: `Maravijaya`,
                                 properNoun: true,
-                                todo: REVIEW,
                                 card: {
                                     description: [
                                         {
@@ -112,7 +110,6 @@ export default {
                         `I was a lad bent on`,
                         {
                             anchor: `learning the talents`,
-                            todo: REVIEW,
                             card: {
                                 description: `It's not that I'd done anything wrong to make Catherine break up with me; I just didn't have much to offer. For this reason, it seemed illogical to pursue my next relationship in the same manner. To secure all future chances, I needed to take time off and build up a surplus of desirable traits… So I started with the ones that Catherine valued most.`,
                                 dotKeys: {
@@ -134,7 +131,7 @@ export default {
                             anchor: `sadness with patience`,
                             todo: REVIEW,
                             card: {
-                                description: `Luckily, this was familiar terrain for me. After all, I'd spent my childhood channeling misery into various art projects. And remaking yourself into an attractive person is really just the ultimate art project.`,
+                                description: `Luckily, this was familiar terrain for me; after all, I'd spent my childhood channeling misery into various art projects. And remaking yourself into an attractive person is really just the ultimate art project.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -226,7 +223,6 @@ export default {
                     lyric: [
                         {
                             anchor: `music cred`,
-                            todo: REVIEW,
                             card: {
                                 description: `I always detected a whiff of disdain from the record store clerks who rang up my purchases. But with my quest for self-betterment, I got over my intimidation and began to ask them for recommended listening.`,
                                 dotKeys: {
@@ -237,7 +233,6 @@ export default {
                         `with`,
                         {
                             anchor: `mindful manners`,
-                            todo: REVIEW,
                             card: {
                                 description: `I also decided to give up swearing. I figured this would be a definite win with the next Catherine, while anyone else would find its quaintness charming.`,
                                 dotKeys: {
@@ -300,15 +295,16 @@ export default {
                         `spent her`,
                         {
                             anchor: `wishes on a friend`,
-                            todo: REVIEW,
+                            todo: REST,
+                            problem: `Confirm that this is indeed how genies work in folklore.`,
                             card: {
                                 description: [
-                                    `Toward the end of my five-year plan, the Yearlings began to play local shows. I was thrilled the day Mara showed up in the audience… but it was Joi who caught her eye. Like the`,
+                                    `Toward the end of my five-year plan, the Yearlings began to play local shows. I was thrilled the day Mara showed up in the audience… but it was Joi who caught her eye. I felt like the`,
                                     {
                                         anchor: `bottled genie`,
                                         wiki: `Jinn`,
                                     },
-                                    `of Arabian folklore, I had good fortunes to bestow upon others, but only freedom from isolation to grant myself.`,
+                                    `of Arabian folklore, who had many fortunes to bestow upon others, but only freedom from isolation to grant himself.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -325,7 +321,6 @@ export default {
                         `while forever I'll`,
                         {
                             anchor: `hold in peace`,
-                            todo: REVIEW,
                             card: {
                                 description: `So Joi got together with Mara without much effort, while romance for me felt as elusive as ever. I thus had to admit that my five-year plan was a washout.`,
                                 dotKeys: {
@@ -402,7 +397,6 @@ export default {
                         {
                             // NOTE: I capitalised my name.
                             anchor: `Signed off "Love me"`,
-                            todo: REVIEW,
                             card: {
                                 description: `Back when we all still treated emails like personal letters, I'd close with "Love Bennett"— omitting both a comma and a new line, out of laziness. Catherine once joked that this sounded like a command spoken in desperation.`,
                                 dotKeys: {
@@ -842,7 +836,7 @@ export default {
                             cards: [
                                 {
 
-                                    description: `In short, everyone does what you'd expect them to do, given what you can expect them to want— and a social scene is just the sum total of all that. No one gets in your way to spite you— which means you can only react with good humor, should your best-laid plans fall apart.`,
+                                    description: `In short, everyone does what you'd expect them to do, given what you can expect them to want— and a social scene is just the sum total of all that. No one gets in your way to spite you… which means you can only react with good humor, should your best-laid plans fall apart.`,
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                     },
@@ -954,7 +948,6 @@ export default {
                     lyric: [
                         {
                             anchor: `friends have to lie`,
-                            todo: REVIEW,
                             card: {
                                 description: `But I couldn't count on my friends to tell me where I was still lacking; indeed, this was my problem the entire time. Whether out of kindness, or just to keep the peace, some truths would always be left for me to figure out.`,
                                 dotKeys: {
