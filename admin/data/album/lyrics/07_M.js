@@ -404,7 +404,7 @@ export default {
                             anchor: `Signed off "Love me"`,
                             todo: REVIEW,
                             card: {
-                                description: `Back when we all still treated emails like personal letters, I'd close with "Love Bennett," omitting both a comma and a new line, out of laziness. Catherine once joked that this sounded like a command spoken in desperation.`,
+                                description: `Back when we all still treated emails like personal letters, I'd close with "Love Bennett"— omitting both a comma and a new line, out of laziness. Catherine once joked that this sounded like a command spoken in desperation.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
