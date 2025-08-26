@@ -14,7 +14,7 @@ import {
     FLASHBACK_TO_WORMHOLE_PREFIX,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'M',
@@ -63,6 +63,7 @@ export default {
                             {
                                 anchor: `Maravijaya`,
                                 properNoun: true,
+                                todo: REVIEW,
                                 card: {
                                     description: [
                                         {
@@ -72,12 +73,12 @@ export default {
                                                 wiki: `Maravijaya_attitude`,
                                             },
                                         },
-                                        `, or "victory over Mara" in Sanskrit, is the seated posture of the Buddha as he fends off temptation from the demon`,
+                                        `, or "victory over Mara" in Sanskrit, is the seated posture of the Buddha as he fends off temptation from the demon king`,
                                         {
                                             anchor: `Mara`,
                                             wiki: `Mara_(demon)`,
                                         },
-                                        `, who personifies death. Like the Buddha, I had to summon otherworldly reserves of self-denial to get through band practice after Joi and Mara started dating.`,
+                                        `, who personifies death. Like the Buddha, I had to summon unworldly reserves of self-denial to get through band practice after Joi and Mara started dating.`,
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
@@ -111,8 +112,9 @@ export default {
                         `I was a lad bent on`,
                         {
                             anchor: `learning the talents`,
+                            todo: REVIEW,
                             card: {
-                                description: `It's not that I'd done anything wrong to make Catherine break up with me; I just didn't have much to offer. For this reason, it seemed illogical to pursue my next relationship in the same manner. To secure all future chances, I needed to take time off and build up a surplus of attractive traits. So I started with the ones that Catherine valued most.`,
+                                description: `It's not that I'd done anything wrong to make Catherine break up with me; I just didn't have much to offer. For this reason, it seemed illogical to pursue my next relationship in the same manner. To secure all future chances, I needed to take time off and build up a surplus of desirable traits… So I started with the ones that Catherine valued most.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -130,8 +132,9 @@ export default {
                         `Bit my`,
                         {
                             anchor: `sadness with patience`,
+                            todo: REVIEW,
                             card: {
-                                description: `Luckily, this was familiar terrain for me. After all, I'd spent my childhood channeling misery into various art projects. And remaking yourself into a desirable person is really just the ultimate art project.`,
+                                description: `Luckily, this was familiar terrain for me. After all, I'd spent my childhood channeling misery into various art projects. And remaking yourself into an attractive person is really just the ultimate art project.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -223,8 +226,9 @@ export default {
                     lyric: [
                         {
                             anchor: `music cred`,
+                            todo: REVIEW,
                             card: {
-                                description: `I always detected a whiff of disdain from the record store clerks who rang up my purchases. But with my quest for self-betterment, I got over my intimidation and began to approach them for recommended listening.`,
+                                description: `I always detected a whiff of disdain from the record store clerks who rang up my purchases. But with my quest for self-betterment, I got over my intimidation and began to ask them for recommended listening.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -233,8 +237,9 @@ export default {
                         `with`,
                         {
                             anchor: `mindful manners`,
+                            todo: REVIEW,
                             card: {
-                                description: `I also decided to give up swearing. I figured this would be a definite win with the next Catherine, while everyone else would find its quaintness charming.`,
+                                description: `I also decided to give up swearing. I figured this would be a definite win with the next Catherine, while anyone else would find its quaintness charming.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -295,14 +300,15 @@ export default {
                         `spent her`,
                         {
                             anchor: `wishes on a friend`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `Toward the end of my five-year plan, the Yearlings began to play local shows. I was thrilled the day Mara showed up in the audience— but it was Joi who caught her eye. I felt like the`,
+                                    `Toward the end of my five-year plan, the Yearlings began to play local shows. I was thrilled the day Mara showed up in the audience… but it was Joi who caught her eye. Like the`,
                                     {
                                         anchor: `bottled genie`,
                                         wiki: `Jinn`,
                                     },
-                                    `of Arabian folklore, with good fortunes to bestow upon others but only freedom from isolation to grant myself.`,
+                                    `of Arabian folklore, I had good fortunes to bestow upon others, but only freedom from isolation to grant myself.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -319,8 +325,9 @@ export default {
                         `while forever I'll`,
                         {
                             anchor: `hold in peace`,
+                            todo: REVIEW,
                             card: {
-                                description: `So Joi got together with Mara without any effort, while romance for me felt as elusive as ever. I thus had to admit that my five-year plan was a washout.`,
+                                description: `So Joi got together with Mara without much effort, while romance for me felt as elusive as ever. I thus had to admit that my five-year plan was a washout.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -395,8 +402,9 @@ export default {
                         {
                             // NOTE: I capitalised my name.
                             anchor: `Signed off "Love me"`,
+                            todo: REVIEW,
                             card: {
-                                description: `Back when we still treated emails like personal letters, I'd close with "Love Bennett," absent a comma out of laziness. Catherine once joked that this sounded like a command spoken in desperation.`,
+                                description: `Back when we all still treated emails like personal letters, I'd close with "Love Bennett," omitting both a comma and a new line, out of laziness. Catherine once joked that this sounded like a command spoken in desperation.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -548,6 +556,8 @@ export default {
                         {
                             anchor: `"Made in America" signs`,
                             properNoun: true,
+                            todo: REST,
+                            problem: `Second sentence is a wee bit too long?`,
                             card: {
                                 description: `To promote cross-cultural harmony, the pairings in these mass weddings are often international by design. So my Moonie bride might very well be a foreigner who joined the church just to ensure her children will be American by birth. In which case, I'd be a fool to think my "maiden Mara co-signs" the marriage license in good faith.`,
                                 dotKeys: {
@@ -828,10 +838,11 @@ export default {
                     lyric: [
                         {
                             anchor: `to have a merry ol' laugh`,
+                            todo: REVIEW,
                             cards: [
                                 {
 
-                                    description: `In short, everyone does what you'd expect them to do, given what you can expect them to want— and a social scene is just the sum total of all that. No one gets in your way to spite you— which means you can only react with good humor when your best-laid plans fall apart.`,
+                                    description: `In short, everyone does what you'd expect them to do, given what you can expect them to want— and a social scene is just the sum total of all that. No one gets in your way to spite you— which means you can only react with good humor, should your best-laid plans fall apart.`,
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                     },
@@ -906,6 +917,8 @@ export default {
                         `it's up to me to`,
                         {
                             anchor: `be alert`,
+                            todo: REST,
+                            problem: `Still sounds weird to say "theories on," I think.`,
                             card: {
                                 description: [
                                     `It wasn't a mystery, then, how things ended up as they did; it's no mystery why`,
@@ -941,8 +954,9 @@ export default {
                     lyric: [
                         {
                             anchor: `friends have to lie`,
+                            todo: REVIEW,
                             card: {
-                                description: `But I couldn't count on my friends to tell me where I was currently lacking; indeed, this was my problem the whole time. Whether out of kindness, or just to keep the peace, some truths would always be left for me to figure out.`,
+                                description: `But I couldn't count on my friends to tell me where I was still lacking; indeed, this was my problem the entire time. Whether out of kindness, or just to keep the peace, some truths would always be left for me to figure out.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
