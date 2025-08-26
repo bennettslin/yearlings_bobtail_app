@@ -24,7 +24,7 @@ const TodoSongHeader = ({ songIndex, areDoneTodosHidden }) => {
         revisionsCount = getRevisionsCountForSong(songIndex),
         redosCount = getRedosCountForSong(songIndex)
 
-    return !areDoneTodosHidden || reviewsCount || revisionsCount || redosCount ? (
+    return !areDoneTodosHidden || restsCount || reviewsCount || revisionsCount || redosCount ? (
         <div
             {...{
                 className: cx(

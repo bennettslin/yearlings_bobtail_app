@@ -14,7 +14,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REST } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'On a Golden Cord',
@@ -590,7 +590,6 @@ export default {
                         lyric: [
                             {
                                 anchor: `Odelay`,
-                                todo: REVIEW,
                                 card: {
                                     description: [
                                         `Sometime around twilight, a strange euphoria came over me— most likely the result of dehydration as I sobered up. Hence the bad`,
@@ -650,7 +649,6 @@ export default {
                         `the`,
                         {
                             anchor: `gesture then`,
-                            todo: REVIEW,
                             card: {
                                 description: `The bracelet, which I bought from a jewelry store in the local mall, had cost a lot relative to my wage at the time. Still, that was all it took to signal my earnest intentions.`,
                                 dotKeys: {

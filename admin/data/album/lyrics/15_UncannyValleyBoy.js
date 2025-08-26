@@ -20,7 +20,7 @@ import {
     BACKING,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REST } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Uncanny Valley Boy',
@@ -1254,7 +1254,6 @@ export default {
                         `what's left of what these`,
                         {
                             anchor: `faces you flip override`,
-                            todo: REVIEW,
                             card: {
                                 description: `As I grew into a sullen adolescent, my mother would ask what happened to the playful little boy I'd been before… which then made me wonder myself. In retrospect, I think I learned to take on the optimal persona for each given situation— and as time went on, these personas started piling up. So it made no sense to keep an old one lying around once it no longer served any purpose.`,
                                 dotKeys: {

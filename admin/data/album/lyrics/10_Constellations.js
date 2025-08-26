@@ -17,7 +17,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Constellations!',
@@ -32,7 +32,6 @@ export default {
     mixStartTime: `0:01:18.60`,
     playerReferenceTime: 1751.447,
     playerStartTime: 1751.191,
-    todo: REVIEW,
     overview: `One night back in Los Angeles, I went out to get high on Robitussin with my bassist Ana and some stoner friends of ours. As we explored the steam tunnels beneath UCLA, I got us all to pretend we were Vikings, Mongols, and various waves of human migration and conquest throughout world history; in hindsight, the others might've just been humoring me. I did so much Robitussin that summer, it took a while to regain my grip on reality.`,
     lyricUnits: [
         {
@@ -384,10 +383,11 @@ export default {
                         `, this`,
                         {
                             anchor: `boundless Kalevalley ends`,
-                            todo: REVIEW,
+                            todo: REST,
+                            problem: `Maybe phrase it in a different way than "I'd count." It sounds weird to me right now.`,
                             cards: [
                                 {
-                                    description: `The San Fernando Valley is the quintessential "Cali valley." In high school, I'd count the days until I could leave this sprawling wasteland. But now escape is instantaneous… with the power of Robitussin.`,
+                                    description: `The San Fernando Valley is the quintessential "Cali valley." In high school, I'd count the days until I could leave this sprawling wasteland. But tonight, escape is instantaneous with the power of Robitussin.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true,
@@ -494,7 +494,6 @@ export default {
                         {
                             anchor: `Makeyars mygrate`,
                             properNoun: true,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `Cut back to the present scene: Tomer promises to "make yours my grate," as he shares his knowledge of the hidden grates that lead down to the UCLA steam tunnels.`,
@@ -767,7 +766,7 @@ export default {
                                         anchor: `avatars`,
                                         wiki: `Avatar`,
                                     },
-                                    `are the earthly incarnations of a deity. Some are believed to have been historical figures whose exploits predate written tradition.`,
+                                    `are earthly incarnations of a major deity. Some are believed to have been folk heroes whose exploits predate written tradition.`,
                                 ],
                             },
                         },
@@ -824,7 +823,6 @@ export default {
                         `,`,
                         {
                             anchor: `questurns Indo Hairapins`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `As we wind along narrow pathways, our "quest turns into hairpins." All the while, I babble on about the "questions" raised by later scholars who rejected the colonialism of their forebears. Instead, they argued for the homegrown origins of the "`,
@@ -1070,7 +1068,7 @@ export default {
                                         anchor: `Uyghurs`,
                                         wiki: `Uyghurs`,
                                     },
-                                    `, a Turkic people whom they encountered in their early campaigns. And so, through "a duct, we egress," or exit, the steam tunnels— but first, I feign to "abduct a Uyghuress."`,
+                                    `, a Turkic people whom they encountered in their early campaigns. And so, through "a duct, we egress"— which is to say, exit— the steam tunnels… but first, I feign to "abduct a Uyghuress."`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1160,7 +1158,6 @@ export default {
                         `, to war:`,
                         {
                             anchor: `scimitary of'fence`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Feeling refreshed, we return to our "`,
@@ -1275,7 +1272,6 @@ export default {
                         `But`,
                         {
                             anchor: `past a cross Bearing Straight`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `After passing a cross-shaped headstone, we navigate by "bearing straight"— just as those before us had "passed across the`,
@@ -1443,7 +1439,6 @@ export default {
                         `The`,
                         {
                             anchor: `mistodawn`,
-                            todo: REVIEW,
                             card: {
                                 description: `The "mist of dawn" breaks, and we drive back to Howie's parents' place. My newfound clarity proves to be fleeting, as I shut my eyes to gaze at constellations.`,
                                 dotKeys: {
@@ -1531,7 +1526,6 @@ export default {
                         {
                             anchor: `Hollowscene`,
                             properNoun: true,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -1754,9 +1748,10 @@ export default {
                     lyric: [
                         {
                             anchor: `Pullar switch`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Back at Howie's place, I'm crashing on a couch in the attic. There's an old black-and-white television set in front of me, and I "pull the" switch to turn it on.`,
+                                    description: `Back at Howie's parents' place, I'm crashing on a couch in the attic. There's an old black-and-white television set in front of me, and I "pull the" switch to turn it on.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true,
@@ -1814,7 +1809,7 @@ export default {
                 todo: REVIEW,
                 card: {
                     description: [
-                        `For a song about recreational drug use, I naturally sought ideas from the Beatles during their psychedelic period. "`,
+                        `For a song about recreational drug use, I naturally turned to the Beatles in their psychedelic era for musical ideas. "`,
                         {
                             anchor: `Tomorrow Never Knows`,
                             wiki: `Tomorrow_Never_Knows`,

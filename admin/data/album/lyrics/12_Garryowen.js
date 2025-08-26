@@ -331,7 +331,7 @@ export default {
                                         isEmphasis: true,
                                         lyric: `me`,
                                     },
-                                    `— and thus I won, didn't I? But it still stung to find out so late… which only deepened my resentment.`,
+                                    `— and thus I'd won, hadn't I? But it still stung to find out so late… which only deepened my resentment.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
