@@ -17,6 +17,7 @@ import {
     SOLO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Grasshoppers Lie Heavy',
@@ -34,6 +35,7 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 cards: [
                     {
                         description: [
@@ -44,12 +46,12 @@ export default {
                                     wiki: `The_Man_in_the_High_Castle`,
                                 },
                             },
-                            `is an alternate history novel by`,
+                            `, an alternate history novel by`,
                             {
                                 anchor: `Philip K. Dick`,
                                 wiki: `Philip_K._Dick`,
                             },
-                            `that imagines if World War II had ended with an Axis victory. Curiously, the characters in this story are engrossed in their own alternate history novel called`,
+                            `, imagines if World War II had ended with an Axis victory. Curiously, its characters are engrossed in their own alternate history novel called`,
                             {
                                 isItalic: true,
                                 lyric: `The Grasshopper Lies Heavy`,
@@ -141,13 +143,14 @@ export default {
                         `and their`,
                         {
                             anchor: `molls perched on pedestals`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     {
                                         anchor: `Gun molls`,
                                         wiki: `Gun_moll`,
                                     },
-                                    `, the female companions of famous mobsters, were both romanticized by society and feared for their exploits. Likewise, I desired the girls who hung out with the boys who bullied me, even if their contempt for me was harder to stomach.`,
+                                    `, the female companions of famous mobsters, were both romanticized by society and feared for their exploits. Likewise, I desired the girls who hung out with the boys who bullied me— even if their scorn for me was harder to stomach.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -163,6 +166,7 @@ export default {
                         `noses in`,
                         {
                             anchor: `penny dreadfuls`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `Still, I could even the score by showing disdain for the popular books and music they consumed.`,
@@ -172,7 +176,7 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `In 19th-century England, a market emerged for cheap and sensational novellas, which the highbrow derided as`,
+                                        `In 19th-century England, a market emerged for cheap and sensational novellas, which were derided by the highbrow as`,
                                         {
                                             anchor: `penny dreadfuls`,
                                             wiki: `Penny_dreadful`,
@@ -356,6 +360,7 @@ export default {
                         {
                             anchor: `Schwa stickers`,
                             properNoun: true,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -363,7 +368,7 @@ export default {
                                             anchor: `Schwa`,
                                             wiki: `Schwa_(art)`,
                                         },
-                                        `is the underground artwork of Bill Barker. In the '90s, stickers of his alien heads were stuck on newspaper racks and street signs everywhere. Truth be told, it was all a mystery to me. The Web didn't explain most things back then, and I wasn't in the habit of checking if it did.`,
+                                        `is the underground artwork of Bill Barker. In the '90s, stickers of his alien heads were stuck on newspaper racks and street signs everywhere. Truth be told, it was all a mystery to me; the Web didn't explain most things back then, and I wasn't in the habit of checking if it did.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -480,8 +485,9 @@ export default {
                         `Then just like the drift,`,
                         {
                             anchor: `she disappeared`,
+                            todo: REVIEW,
                             card: {
-                                description: `Shortly after our first few dates, I called Sita to tell her I was in love with her. She admitted that she didn't feel the same way and just wanted to be friends. We hung up with the understanding that we'd continue to hang out— but I felt so dejected, I quietly decided never to see her again.`,
+                                description: `Shortly after our first few dates, I called Sita to tell her I was in love with her. She admitted that she didn't feel the same, and just wanted to be friends. We hung up with the understanding that we'd continue to hang out— but I felt so dejected, I quietly decided never to see her again.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -503,8 +509,9 @@ export default {
                         `Alone his first gig,`,
                         {
                             anchor: `stagefright ignites`,
+                            todo: REVIEW,
                             card: {
-                                description: `During this time I began to perform at singer-songwriter nights hosted by local coffee shops. My first few attempts were a disaster, but I learned to conquer my stagefright with just the right amount of alcohol.`,
+                                description: `During this time, I began to perform at singer-songwriter nights hosted by local coffee shops. My first attempt was a disaster, but I learned to conquer my stagefright with just the right amount of alcohol.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -698,6 +705,8 @@ export default {
                         `Below the`,
                         {
                             anchor: `window of your Walkman`,
+                            todo: REST,
+                            problem: `Talk about recording CDs onto cassette tapes.`,
                             cards: [
                                 {
                                     description: [
@@ -713,7 +722,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `Imagining the jogger to take a pratfall, I pretend to be absorbed in my music, like a child ducking beneath a window after pulling a prank.`,
+                                    description: `Imagining the jogger to take a pratfall, I make a show of being absorbed in my music, like a child ducking beneath a window after pulling a prank.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -769,6 +778,8 @@ export default {
                         `"Hey, you know`,
                         {
                             anchor: `you're my password`,
+                            todo: REST,
+                            problem: `Tense is supposedly fine, but still sounds off to me.`,
                             card: {
                                 description: `As I enter the passcode for my gate, Sita breaks the ice by mentioning that a personal detail about me, which she still remembers, had served as the basis for a password she recently created.`,
                                 dotKeys: {
@@ -797,6 +808,8 @@ export default {
                         `She`,
                         {
                             anchor: `locks your arm`,
+                            todo: REST,
+                            problem: `Seems off somehow? Is "whereupon" too highbrow?`,
                             card: {
                                 description: `Seeing Sita shiver from the cold, I invite her to warm up in my apartment, whereupon she gladly tucks her arm under mine. Of course, this doesn't mean what I want it to mean; if anything, I feel like an escaped convict who's just been recaptured and put in handcuffs.`,
                                 dotKeys: {
@@ -847,8 +860,9 @@ export default {
                         `In her`,
                         {
                             anchor: `gingerbread prison`,
+                            todo: REVIEW,
                             card: {
-                                description: `Since just being friends with Sita will never fulfill me, I find the idea depressing. Yet… it's also kind of sweet to nibble on.`,
+                                description: `Since just being friends with Sita will never fulfill me, I find the idea depressing. And yet… it's also kind of sweet to nibble on.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -896,6 +910,7 @@ export default {
                         `On your bed's rumpled linens, a`,
                         {
                             anchor: `lidless Vaseline sits`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -904,7 +919,7 @@ export default {
                                             anchor: `Vaseline`,
                                             wiki: `Vaseline`,
                                         },
-                                        `, making it clear that I've recently masturbated.`,
+                                        `— making it clear that I've recently masturbated.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -938,6 +953,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
                         `In the final third of "`,
@@ -963,7 +979,7 @@ export default {
                                 wiki: `Nevermind`,
                             },
                         },
-                        `for me, I'd always wanted to recreate the same effect; unfortunately, the melodies I write tend to span my whole vocal range. So when I noticed that the melody for this chorus never ventures beyond a single octave, I transposed the song's key to let me sing the first chorus at the very bottom of my vocal range, and the second one at the very top.`,
+                        `for me, I'd always wanted to recreate the same effect; unfortunately, the melodies I write tend to span my whole vocal range. So when I noticed that the melody for this chorus never ventures beyond a single octave, I transposed the song's key to let me sing the first chorus at the bottom of my vocal range, and the second one at the very top.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -1241,6 +1257,7 @@ export default {
                         `You`,
                         {
                             anchor: `stand unsure`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `The night we decided to have sex, I was overcome with a wary unease that I couldn't explain.`,
@@ -1249,7 +1266,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `As Sita lies naked on the bed and comforts me with her gaze, I stand forlornly by the bedside.`,
+                                    description: `As Sita comforts me with her gaze while lying naked on the bed, I stand forlornly by the bedside.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -1272,8 +1289,9 @@ export default {
                         `you wear your`,
                         {
                             anchor: `hard-on in a sleeve`,
+                            todo: REVIEW,
                             card: {
-                                description: `Pointing to the condom on my erection, Sita lightens the mood by feigning to agree with a past assessment of mine that I wear my "heart on" my sleeve.`,
+                                description: `Pointing to the condom on my erection, Sita lightens the mood by pretending to agree with a past assessment of mine— namely, that I wear my "heart on" my sleeve.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -1332,6 +1350,7 @@ export default {
                         {
                             anchor: `Grace Darling's beacon`,
                             properNoun: true,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `As Sita comforts me, I'm reminded that she's my "grace darling," who rescued me from a sea of loneliness.`,
@@ -1346,7 +1365,7 @@ export default {
                                             anchor: `Grace Darling`,
                                             wiki: `Grace_Darling`,
                                         },
-                                        `was a lighthouse keeper's daughter who rescued the survivors of a shipwreck by paddling out to sea in a rowboat. This brave feat won her renown in the Victorian era, but the ensuing public exposure led to her early death by`,
+                                        `was a lighthouse keeper's daughter in the Victorian era, who rescued the survivors of a shipwreck by paddling out to sea in a rowboat. This brave feat won her renown, but the ensuing public exposure led to her early death by`,
                                         {
                                             anchor: `tuberculosis`,
                                             wiki: `Tuberculosis`,
@@ -1362,6 +1381,7 @@ export default {
                         `light`,
                         {
                             anchor: `fell an oar`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Or else, fell "Lenore."`,
@@ -1369,7 +1389,7 @@ export default {
                                         anchor: `Edgar Allan Poe`,
                                         wiki: `Edgar_Allan_Poe`,
                                     },
-                                    `'s wife also died from tuberculosis at a young age. Her prolonged illness likely inspired his poem "`,
+                                    `'s wife also died from tuberculosis at a young age. Her prolonged illness may have inspired his poem "`,
                                     {
                                         anchor: `The Raven`,
                                         wiki: `The_Raven`,
