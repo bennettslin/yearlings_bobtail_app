@@ -331,7 +331,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `Flashback to our first date, when Sita and I have arrived at a natural history museum: We begin by strolling past a display of Russian nesting dolls, known as`,
+                                    `Flashback to our first date, when Sita and I have arrived at a natural history museum: We start out by strolling past a display of Russian nesting dolls, known as`,
                                     {
                                         anchor: `matryoshkas`,
                                         wiki: `Matryoshka_doll`,
@@ -350,7 +350,6 @@ export default {
                     mixTime: `0:30:07.08`,
                     lyric: {
                         anchor: `heart of gold inside`,
-                        todo: REVIEW,
                         card: {
                             description: `Mistakes made on one date still offered lessons that could be applied to the next— like prying open one nesting doll to get to another, in the hope of reaching one that's solid at last.`,
                             dotKeys: {
@@ -553,7 +552,8 @@ export default {
                         `hyped up like some`,
                         {
                             anchor: `disastrous play`,
-                            todo: REVIEW,
+                            todo: REST,
+                            problem: `Not sure third sentence flows from second.`,
                             card: {
                                 description: `On our second date, Sita and I go to see her friend act in a play. Before taking our seats, we chat with him backstage. But I struggle to get a word in edgewise, which leaves me feeling insecure afterward.`,
                                 dotKeys: {
@@ -569,7 +569,8 @@ export default {
                         `that starts with a`,
                         {
                             anchor: `lone ringing phone`,
-                            todo: REVIEW,
+                            todo: REST,
+                            problem: `Add part about worst plays starting with a ringing phone.`,
                             card: {
                                 description: `The theater goes pitch black to indicate that the play has begun. As the audience falls to a hush, a rotary telephone rings onstage.`,
                                 dotKeys: {
@@ -602,7 +603,7 @@ export default {
                             anchor: `tactic is to stall`,
                             todo: REVIEW,
                             card: {
-                                description: `My friends advised me to wait three days before calling a woman— yet it was always agony when she'd take just as long to call me back.`,
+                                description: `My friends used to advise me to wait three days before calling a woman— yet it was always agony when she'd take just as long to call me back.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -629,7 +630,7 @@ export default {
                                         anchor: `understudy`,
                                         wiki: `Understudy`,
                                     },
-                                    `in theater, you undertake all the same preparation, only to see little of the same action— which is what dating feels like when you're young and low paid. So I had to be proactive in seeking further opportunities, like a freelancer posting on a cork board.`,
+                                    `in theater, you undertake all the same preparation, only to see little of the same action— which is also what dating feels like when you're young and low paid. So I had to be proactive and seek out opportunities, like a freelancer posting on a cork board.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -702,7 +703,7 @@ export default {
                             anchor: `Television`,
                             wiki: `Television_(band)`,
                         },
-                        `, a band well known for the complex interplay between their two lead guitarists. The tumbling triplets heard here were inspired by the song "Friction" off their album`,
+                        `, a band well known for the complex interplay between their two lead guitarists. The tumbling triplets heard here were inspired by their song "Friction," off the album`,
                         {
                             anchor: `Marquee Moon`,
                             wiki: `Marquee_Moon`,
@@ -754,7 +755,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `I eventually learned to welcome rejection, since I could use it as subject matter when writing new songs. This, in turn, meant a lifetime of getting rejected can`,
+                                    `I eventually learned to welcome rejection, since I could use it as subject matter to write new songs. But this, in turn, meant a lifetime of getting rejected can`,
                                     {
                                         isEmphasis: true,
                                         lyric: `itself`,
@@ -806,7 +807,6 @@ export default {
                         `hint of`,
                         {
                             anchor: `sampler cologne`,
-                            todo: REVIEW,
                             card: {
                                 description: `Whenever I spotted a men's lifestyle magazine in some neighbor's recycling bin, I'd tear out the scent strips from its cologne ads and add them to my pile. Then, before a date, I'd rub a few onto my neck and wrists.`,
                                 dotKeys: {
@@ -1024,7 +1024,6 @@ export default {
                     mixTime: `2:04:21.72`,
                     lyric: {
                         anchor: `I sigh, "Good night."`,
-                        todo: REVIEW,
                         cards: [
                             {
                                 description: `I walked home that evening determined to confess my feelings to Sita. A few days later, I did just that in a phone call. It went horribly, and I didn't speak to her again for a good while.`,
@@ -1047,12 +1046,12 @@ export default {
                 todo: REVIEW,
                 card: {
                     description: [
-                        `Ambrose Bierce also wrote "`,
+                        `Bierce also wrote "`,
                         {
                             anchor: `An Occurrence at Owl Creek Bridge`,
                             wiki: `An_Occurrence_at_Owl_Creek_Bridge`,
                         },
-                        `," a short story famous for its twist ending, in which a seemingly long span of time is revealed to have passed in an instant. Likewise, the entirety of this song, during which I've recalled every date with Sita thus far, turns out to have taken place within a brief exchange of farewells.`,
+                        `," a short story with a twist ending, in which a seemingly long span of time is revealed to have passed in an instant. And now the entirety of this song, during which I've recalled every date with Sita so far, turns out to have taken place within a brief exchange of farewells.`,
                     ],
                     dotKeys: {
                         [NARRATIVE]: true,
